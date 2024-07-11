@@ -13,7 +13,7 @@ Se soportan varios tipos de referencias de métodos:
 
 - a standard project method file path, i.e. that uses the following pattern:\
   `method.4dm`\
-  This type of reference indicates that the method file is located at the default location ("sources/{TableForms/_numTable_} | {Forms}/_formName_/"). En este caso, 4D maneja automáticamente el método formulario cuando se ejecutan operaciones en el formulario (renombrar, duplicar, copiar/pegar...)
+  This type of reference indicates that the method file is located at the default location ("sources/{TableForms/*numTable*} | {Forms}/*formName*/"). En este caso, 4D maneja automáticamente el método formulario cuando se ejecutan operaciones en el formulario (renombrar, duplicar, copiar/pegar...)
 
 - a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for form operations.
 

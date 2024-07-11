@@ -239,7 +239,7 @@ La siguiente tabla enumera los campos disponibles para cada formato (en orden al
 
 ## Historial (periodicidad)
 
-Configure los parámetros de copia de seguridad automática para el registro de las peticiones. Primero debe elegir la frecuencia (días, semanas, etc.) or the file size limit criterion by clicking on the corresponding radio button. A continuación, debe especificar el momento preciso de la copia de seguridad si es necesario.
+Configure los parámetros de copia de seguridad automática para el registro de las peticiones. Primero debe elegir la frecuencia (días, semanas, etc.) o el criterio de límite de tamaño de archivo haciendo clic en el botón de opción correspondiente. A continuación, debe especificar el momento preciso de la copia de seguridad si es necesario.
 
 - **Sin copia de seguridad**: la función de copia de seguridad programada está desactivada.
 - **Cada X hora(s)**: esta opción se utiliza para programar las copias de seguridad con una base horaria. Puede introducir un valor entre 1 y 24 .
@@ -306,7 +306,7 @@ This button is only available in projects opened with the 4D application (single
 
 El botón activa la siguiente secuencia de actualización:
 
-- The group of REST API users set in the **Read/Write** menu is removed.
+- Se elimina el grupo de usuarios de la API REST definido en el menú **Leer/Escribir**.
 - The `On REST Authentication` database method is deleted (moved into the system bin).
 - A default ["roles.json" file](../ORDA/privileges.md#rolesjson-file) is created in the [Sources folder](../Project/architecture.md#sources) of the project if it does not already exist, with its `forceLogin` attribute to `True`.
 

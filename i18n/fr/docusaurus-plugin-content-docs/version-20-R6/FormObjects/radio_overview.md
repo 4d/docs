@@ -56,38 +56,38 @@ Le style du bouton radio Barre d'outils est initialement destiné à être inté
 
 Par défaut, le style bouton Barre d'outils a un fond transparent avec un libellé au centre. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
-- _Sous Windows_ - le contour du bouton apparaît.
+- *Sous Windows* - le contour du bouton apparaît.
 
 ![](../assets/en/FormObjects/radio_toolbar.png)
 
-- _Sous macOS_ - le contour du bouton n’apparaît jamais.
+- *Sous macOS* - le contour du bouton n’apparaît jamais.
 
 ### Bevel
 
 Le style de bouton radio Bevel est similaire au comportement du style [barre d'outils](#toolbar), à la seule différence qu'il possède un arrière-plan gris clair et un contour gris. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
-- _Sous Windows_ - le contour du bouton apparaît.
+- *Sous Windows* - le contour du bouton apparaît.
 
 ![](../assets/en/FormObjects/radio_bevel.png)
 
-- _Sous macOS_ - le contour du bouton n’apparaît jamais.
+- *Sous macOS* - le contour du bouton n’apparaît jamais.
 
 ### Bevel arrondi
 
 Le style du bouton Bevel arrondi est presque identique au style [Bevel](#bevel), à l'exception des coins du bouton qui peuvent, selon le système d'exploitation, être arrondis.
 
-- _Sous Windows_ - ce bouton est identique au style [Bevel](#bevel).
+- *Sous Windows* - ce bouton est identique au style [Bevel](#bevel).
 
-- _Sous macOS_ - les coins du bouton sont arrondis.
+- *Sous macOS* - les coins du bouton sont arrondis.
   ![](../assets/en/FormObjects/roundedBevel.png)
 
 ### OS X Gradient
 
 Le style du bouton OS X Gradient est presque identique au style [Bevel](#bevel), à l'exception de son apparence qui peut, en fonction du système d'exploitation, avoir deux tons.
 
-- _Sous Windows_ - ce bouton est identique au style [Bevel](#bevel).
+- *Sous Windows* - ce bouton est identique au style [Bevel](#bevel).
 
-- _Sous macOs_ - le bouton s'affiche comme un bouton à deux tons.
+- *Sous macOs* - le bouton s'affiche comme un bouton à deux tons.
 
 ### OS X Texture
 
@@ -95,9 +95,9 @@ Le style du bouton radio OS X Textured est presque identique au style [Barre d'o
 
 Par défaut, le style OS X Textured apparaît comme :
 
-- _Sous Windows_ - un bouton en forme de barre d'outils avec une étiquette au centre et l'arrière-plan est toujours affiché.
+- *Sous Windows* - un bouton en forme de barre d'outils avec une étiquette au centre et l'arrière-plan est toujours affiché.
 
-- _Sous macOS_ - un bouton système standard affichant un changement de couleur du gris clair au gris foncé. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
+- *Sous macOS* - un bouton système standard affichant un changement de couleur du gris clair au gris foncé. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
 
 ![](../assets/en/FormObjects/OSXTextured.png)
 
@@ -107,11 +107,11 @@ Le style de bouton Office XP combine l'apparence du style [Classique](#regular) 
 
 Les couleurs (surbrillance et arrière-plan) d'un bouton au style Office XP sont basées sur les couleurs du système. En fonction du système d'exploitation, le design du bouton peut changer lorsque la souris le survole :
 
-- _Sous Windows_ - son arrière-plan n'apparaît que lorsque la souris le survole.
+- *Sous Windows* - son arrière-plan n'apparaît que lorsque la souris le survole.
 
 ![](../assets/en/FormObjects/radio_xp.png)
 
-- _Sous macOS_ - son arrière-plan est toujours affiché.
+- *Sous macOS* - son arrière-plan est toujours affiché.
 
 ### Contracter/Déployer
 

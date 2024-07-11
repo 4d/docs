@@ -205,7 +205,7 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 =METHODNAME(param1,param2,...,paramN)
 ```
 
-_methodName_ はこれらの引数を $1, $2...$N に受け取ります。
+*methodName* はこれらの引数を $1, $2...$N に受け取ります。
 
 引数を渡さない場合でも ( ) の使用は必須です:
 
@@ -213,7 +213,7 @@ _methodName_ はこれらの引数を $1, $2...$N に受け取ります。
 =METHODWITHOUTNAME()
 ```
 
-[VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) コマンドを使用して宣言したファンクションの _parameters_ コレクションを使って、引数の名前、型、数を宣言することができます。 オプションとして、_minParams_ および _maxParams_ プロパティにより、ユーザーから渡される引数の数を制御することができます。
+[VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) コマンドを使用して宣言したファンクションの *parameters* コレクションを使って、引数の名前、型、数を宣言することができます。 オプションとして、*minParams* および *maxParams* プロパティにより、ユーザーから渡される引数の数を制御することができます。
 
 サポートされている引数の型の詳細については、[VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions) コマンドの説明を参照ください。
 
@@ -221,7 +221,7 @@ _methodName_ はこれらの引数を $1, $2...$N に受け取ります。
 
 日付およびオブジェクト引数は次のように扱われます:
 
-- _jstype_ の日付は、4Dコードでは 2つのプロパティを持つ [オブジェクト](Concepts/dt_object.md) として渡されます:
+- *jstype* の日付は、4Dコードでは 2つのプロパティを持つ [オブジェクト](Concepts/dt_object.md) として渡されます:
 
 | プロパティ | タイプ  | 説明                          |
 | ----- | ---- | --------------------------- |

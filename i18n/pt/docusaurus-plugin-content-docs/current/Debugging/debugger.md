@@ -154,7 +154,7 @@ $c:=a+b
 
    El valor de la variable `$a` es ahora 1. La variable `$b` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
-3. Haga clic en el botón **Step Over** nuevamente. The program counter is now set on the line with $c:=a+b. the **Line Objects** theme displays:
+3. Haga clic en el botón **Step Over** nuevamente. O contador do programa está agora definido na linha com $c:=a+b. the **Line Objects** theme displays:
 
    | $c | Indefinido |
    | -- | ---------- |

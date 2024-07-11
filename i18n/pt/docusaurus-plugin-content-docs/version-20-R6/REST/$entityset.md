@@ -14,7 +14,7 @@ Después de [crear un conjunto de entidades]($method.md#methodentityset) mediant
 
 ## $entityset/\{entitySetID\}
 
-Recupera un conjunto de entidades existente (_p. ej._, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
+Recupera un conjunto de entidades existente (*p. ej.*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
 
 ### Descrição
 

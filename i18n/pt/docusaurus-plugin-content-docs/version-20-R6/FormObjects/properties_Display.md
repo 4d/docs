@@ -66,20 +66,20 @@ A tabela seguinte apresenta as opções disponíveis:
 | Nome do formato                                  | Cadeia JSON                             | Exemplo (sistema americano)                |
 | ------------------------------------------------ | --------------------------------------- | ------------------------------------------------------------- |
 | System date short                                | systemShort (padrão) | 03/25/20                                                      |
-| System date abbreviated _(1)_ | systemMedium                            | Wed, Mar 25, 2020                                             |
+| System date abbreviated *(1)* | systemMedium                            | Wed, Mar 25, 2020                                             |
 | System date long                                 | systemLong                              | Quarta-feira, 25 de março de 2020                             |
 | RFC 822                                          | rfc822                                  | Tue, 25 Mar 2020 22:00:00 GMT |
-| Short Century                                    | shortCentury                            | 03/25/20 pero 04/25/2032 _(2)_             |
+| Short Century                                    | shortCentury                            | 03/25/20 pero 04/25/2032 *(2)*             |
 | Internal date long                               | long                                    | March 25, 2020                                                |
-| Fecha interna abreviada _(1)_ | abbreviated                             | Mar 25, 2020                                                  |
+| Fecha interna abreviada *(1)* | abbreviated                             | Mar 25, 2020                                                  |
 | Internal date short                              | short                                   | 03/25/2020                                                    |
-| ISO Date Time _(3)_           | iso8601                                 | 2020-03-25T00:00:00           |
+| ISO Date Time *(3)*           | iso8601                                 | 2020-03-25T00:00:00           |
 
-_(1)_ Para evitar ambigüedades y de acuerdo con la práctica actual, los formatos de fecha abreviados muestran "jun" para junio y "jul" para julio. Esta particularidade só se aplica às versões francesas de 4D.
+*(1)* Para evitar ambigüedades y de acuerdo con la práctica actual, los formatos de fecha abreviados muestran "jun" para junio y "jul" para julio. Esta particularidade só se aplica às versões francesas de 4D.
 
-_(2)_ El año se muestra con dos dígitos cuando pertenece al intervalo (1930;2029), de lo contrario se mostrará con cuatro dígitos. Esto es por defecto, pero puede modificarse utilizando el comando [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html).
+*(2)* El año se muestra con dos dígitos cuando pertenece al intervalo (1930;2029), de lo contrario se mostrará con cuatro dígitos. Esto es por defecto, pero puede modificarse utilizando el comando [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html).
 
-_(3)_ El formato `ISO Date Time` corresponde a la norma XML de representación de fecha y hora (ISO8601). Seu principal objetivo é ser usado na importação/exportação de dados em formato XML e em serviços da Web.
+*(3)* El formato `ISO Date Time` corresponde a la norma XML de representación de fecha y hora (ISO8601). Seu principal objetivo é ser usado na importação/exportação de dados em formato XML e em serviços da Web.
 
 > Independentemente do formato de exibição, se o ano for inserido com dois dígitos, o 4D assume que o século é o 21º se o ano pertencer ao intervalo (00;29) e o 20º se pertencer ao intervalo (30;99). Esta es la configuración por defecto, pero puede modificarse utilizando el comando [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html).
 
@@ -399,7 +399,7 @@ Cuando una [expresión booleana](properties_Object.md#expression-type) se muestr
 
 | Nome          | Tipo de dados | Valores possíveis                                                               |
 | ------------- | ------------- | ------------------------------------------------------------------------------- |
-| booleanFormat | string        | "\<_textWhenTrue_\>;\<_textWhenFalse_\>", por ejemplo "Assigned;Unassigned" |
+| booleanFormat | string        | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", por ejemplo "Assigned;Unassigned" |
 
 #### Objectos suportados
 
@@ -584,7 +584,7 @@ Quando essa opção é selecionada, o texto passa automaticamente para a próxim
 
 #### Não selecionado para list box/Não para entrada
 
-`JSON grammar: "none"`
+`Gramática JSON: "none"`
 
 Quando esta opção é selecionada, 4D não faz nenhum retorno automático de linha e a última palavra que pode ser exibida pode ser truncada. Nas áreas de tipo de texto, são suportadas os retornos de carro:
 

@@ -77,7 +77,7 @@ Para información detallada sobre estas acciones, consulte la sección [Acciones
 
 Las casillas de selección utilizan [los estilos de botón](properties_TextAndPicture.md#button-style) para controlar la apariencia general de una casilla de selección, así como sus posibles propiedades. É possível aplicar diferentes estilos pré-definidos para caixas de seleção. Um grande número de variações podem ser obtidas combinando essas propriedades/comportamentos.
 
-Con la excepción de las [propiedades-disponibles](#supported-properties), muchos objetos casilla de selección son _estructuralmente_ idénticos. A diferença é no processamento das variáveis associadas.
+Con la excepción de las [propiedades-disponibles](#supported-properties), muchos objetos casilla de selección son *estructuralmente* idénticos. A diferença é no processamento das variáveis associadas.
 
 4D oferece caixas de seleção nos estilos predefinidos abaixo:
 
@@ -152,7 +152,7 @@ Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
 ### Bevel
 
-El estilo del botón casilla de selección Bevel combina la apariencia del estilo de botón [Clásico ](#regular) (_es decir_, un rectángulo con un título descriptivo) con el comportamiento del estilo del botón [Barra de herramientas](#toolbar-button).
+El estilo del botón casilla de selección Bevel combina la apariencia del estilo de botón [Clásico ](#regular) (*es decir*, un rectángulo con un título descriptivo) con el comportamiento del estilo del botón [Barra de herramientas](#toolbar-button).
 
 O estilo Bevel tem um fundo cinza claro com um título. Suele estar asociado a una [imagen de 4 estados](properties_TextAndPicture.md#number-of-states).
 
@@ -236,11 +236,11 @@ El estilo de botón OS X Textured es similar al estilo del botón [Bevel](#bevel
 
 Como padrão, o estilo OS X Textured aparece como:
 
-- _Windows_ - un botón sistema estándar con un fondo azul claro con un título en el centro.
+- *Windows* - un botón sistema estándar con un fondo azul claro con un título en el centro.
 
 ![](../assets/en/FormObjects/checkbox_osxtextured.png)
 
-- _macOS_ - un botón de sistema estándar. Sua altura está predefinida: não é possível ampliar ou reduzir.
+- *macOS* - un botón de sistema estándar. Sua altura está predefinida: não é possível ampliar ou reduzir.
 
 ![](../assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
@@ -264,11 +264,11 @@ El estilo de botón Office XP combina la apariencia del estilo del botón [Clás
 
 As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas nos sistemas de cores. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
-- _Windows_ - su fondo sólo aparece cuando el ratón pasa por encima. Exemplo com estados selecionado/ não selecionado/ ressaltado:
+- *Windows* - su fondo sólo aparece cuando el ratón pasa por encima. Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
 ![](../assets/en/FormObjects/checkbox_officexp.png)
 
-- _macOS_ - su fondo se muestra siempre. Exemplos com estados desmarcado/ marcado:
+- *macOS* - su fondo se muestra siempre. Exemplos com estados desmarcado/ marcado:
 
 ![](../assets/en/FormObjects/checkbox_officexp_mac.png)
 
@@ -293,11 +293,11 @@ As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas 
 
 Este estilo de caixa de seleção pode ser usado para adicionar um ícone padrão de contrair/expandir. Estes ícones são utilizados nativamente em listas hierárquicas.
 
-- _Windows_ - el icono se ve como un [+] o un [-]
+- *Windows* - el icono se ve como un [+] o un [-]
 
 ![](../assets/en/FormObjects/checkbox_collapse.png)
 
-- _macOS_ - se ve como un triángulo que apunta hacia la derecha o hacia abajo.
+- *macOS* - se ve como un triángulo que apunta hacia la derecha o hacia abajo.
 
 ![](../assets/en/FormObjects/checkbox_collapse_mac.png)
 
@@ -325,11 +325,11 @@ El estilo Contraer/Desplegar se denomina "disclosure" en la [gramática JSON del
 
 Em macOS e Windows, uma caixa de seleção com o estilo de botão "Divulgação" aparece como um botão de informação padrão, normalmente utilizado para mostrar/ocultar informação adicional. Quando usar um botão radio, o símbolo botão aponta para baixo com o valor 0 e para cima com o valor 1.
 
-- _Windows_
+- *Windows*
 
   ![](../assets/en/FormObjects/checkbox_disclosure.png)
 
-- _macOS_
+- *macOS*
 
   ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
 

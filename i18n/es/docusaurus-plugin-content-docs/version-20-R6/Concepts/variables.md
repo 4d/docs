@@ -168,17 +168,17 @@ El operador de asignación es un primer medio para crear una variable e introduc
 MyNumber:=3
 ```
 
-crea la variable _MyNumber_ y pone el número 3 en ella. Si MyNumber ya existe, entonces toma el valor 3.
+crea la variable *MyNumber* y pone el número 3 en ella. Si MyNumber ya existe, entonces toma el valor 3.
 
 > Normalmente no se recomienda crear variables sin [declarar su tipo](#declaring-variables).
 
-Por supuesto, las variables no serían muy útiles si no se pudieran obtener valores de ellas. Una vez más, se utiliza el operador de asignación. Si necesita poner el valor de MyNumber en un campo llamado [Products]Size, escribiría _MyNumber_ a la derecha del operador de asignación:
+Por supuesto, las variables no serían muy útiles si no se pudieran obtener valores de ellas. Una vez más, se utiliza el operador de asignación. Si necesita poner el valor de MyNumber en un campo llamado [Products]Size, escribiría *MyNumber* a la derecha del operador de asignación:
 
 ```4d
 [Products]Size:=MyNumber
 ```
 
-En este caso, _[Products]Size_ sería igual a 3. Este ejemplo es bastante sencillo, pero ilustra la forma fundamental en que se transfieren los datos de un lugar a otro utilizando el lenguaje.
+En este caso, *[Products]Size* sería igual a 3. Este ejemplo es bastante sencillo, pero ilustra la forma fundamental en que se transfieren los datos de un lugar a otro utilizando el lenguaje.
 
 Los valores se asignan a los elementos del array utilizando llaves ({...}):
 

@@ -28,7 +28,7 @@ The session management feature can be enabled and disabled on your 4D web server
 
 This option is selected by default in new projects. It can however be disabled by selecting the **No sessions** option, in which case the web session features are disabled (no `Session` object is available).
 
-- Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the _settings_ parameter of the [`.start()`](API/WebServerClass.md#start) function). In this case, this setting overrides the option defined in the Settings dialog box for the Web Server object (it is not stored on disk).
+- Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the *settings* parameter of the [`.start()`](API/WebServerClass.md#start) function). In this case, this setting overrides the option defined in the Settings dialog box for the Web Server object (it is not stored on disk).
 
 > The `WEB SET OPTION` command can also set the session mode for the main Web server.
 
@@ -38,7 +38,7 @@ In any cases, the setting is local to the machine; so it can be different on the
 
 ## Session implementation
 
-When [sessions are enabled](#enabling-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID__AppName_", where _AppName_ is the name of the application project. This cookie references the current web session for the application.
+When [sessions are enabled](#enabling-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID_*AppName*", where *AppName* is the name of the application project. This cookie references the current web session for the application.
 
 :::info
 
@@ -46,13 +46,13 @@ The cookie name can be get using the [`.sessionCookieName`](API/WebServerClass.m
 
 :::
 
-1. In each web client request, the Web server checks for the presence and the value of the private "4DSID__AppName_" cookie.
+1. In each web client request, the Web server checks for the presence and the value of the private "4DSID_*AppName*" cookie.
 
 2. If the cookie has a value, 4D looks for the session that created this cookie among the existing sessions; if this session is found, it is reused for the call.
 
 3. If the client request does not correspond to an already opened session:
 
-- a new session with a private "4DSID__AppName_" cookie is created on the web server
+- a new session with a private "4DSID_*AppName*" cookie is created on the web server
 - a new Guest `Session` object is created and is dedicated to the scalable web session.
 
 :::note
@@ -84,7 +84,7 @@ A scalable web session is closed when:
 
 The lifespan of an inactive cookie is 60 minutes by default, which means that the web server will automatically close inactive sessions after 60 minutes.
 
-This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the _connectionInfo_ parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command.
+This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command.
 
 When a web session is closed, if the [`Session`](API/SessionClass.md#session) command is called afterwards:
 
@@ -136,7 +136,7 @@ http://localhost:8044/authenticate.shtml
 
 > Dans un environnement de production, il est nécessaire d'utiliser une [connexion HTTPS](API/WebServerClass.md#httpsenabled) pour éviter la circulation d'informations non chiffrées sur le réseau.
 
-2. The `authenticate.shtml` page is a form containing _userId_ et _password_ input fields and sending a 4DACTION POST action:
+2. The `authenticate.shtml` page is a form containing *userId* et *password* input fields and sending a 4DACTION POST action:
 
 ```html
 <!DOCTYPE html>
@@ -153,7 +153,7 @@ http://localhost:8044/authenticate.shtml
 
 ![alt-text](../assets/en/WebServer/authenticate.png)
 
-3. The authenticate project method looks for the _userID_ person and validates the password against the hashed value already stored in the _SalesPersons_ table:
+3. The authenticate project method looks for the *userID* person and validates the password against the hashed value already stored in the *SalesPersons* table:
 
 ```4d
 var $indexUserId; $indexPassword; $userId : Integer

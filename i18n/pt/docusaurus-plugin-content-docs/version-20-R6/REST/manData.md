@@ -27,7 +27,7 @@ Add the [`$skip`]($skip.md) (to define with which entity to start) and [`$top/$l
 
 ## Criar e gerenciar conjuntos de entidades
 
-Un conjunto de entidades (también conocido como _selección de entidades_) es una colección de entidades obtenidas a través de una petición REST que se almacena en la caché de 4D Server. Usar um conjunto de entidades previne que pesquise continuamente sua aplicação pelos mesmos resultados. Acessar um conjunto de entidades é mais rápido e pode melhorar a velocidade de sua aplicação.
+Un conjunto de entidades (también conocido como *selección de entidades*) es una colección de entidades obtenidas a través de una petición REST que se almacena en la caché de 4D Server. Usar um conjunto de entidades previne que pesquise continuamente sua aplicação pelos mesmos resultados. Acessar um conjunto de entidades é mais rápido e pode melhorar a velocidade de sua aplicação.
 
 To create an entity set, call [`$method=entityset`]($method.md#methodentityset) in your REST request. As a measure of security, you can also use [`$savedfilter`]($savedfilter.md) and/or [`$savedorderby`]($savedorderby.md) when you call [`$filter`]($filter.md) and/or [`$orderby`]($orderby.md) so that if ever the entity set timed out or was removed from the server, it can be quickly retrieved with the same ID as before.
 
@@ -41,7 +41,7 @@ If you want to remove an entity set from 4D Server's cache, you can use [`$metho
 
 Se modificar qualquer dos atributos de entidade no conjunto de entidades, o valor será atualizado. Entretanto, se modificar um valor que era uma parte da pesquisa executada para criar o conjunto de entidades, não será removido do conjunto de entidades mesmo se não se enquadrar mais nos critérios de pesquisa.
 
-Qualquer entidade que apagar não será mais parte do conjunto de entidades. However, by default their reference will remain in the entity set with an _undefined_ value, and they will still be included in the entity set count. Call [`$clean`]($clean.md) on the entity set to create a new, up-to-date entity set without _undefined_ entity references.
+Qualquer entidade que apagar não será mais parte do conjunto de entidades. However, by default their reference will remain in the entity set with an *undefined* value, and they will still be included in the entity set count. Call [`$clean`]($clean.md) on the entity set to create a new, up-to-date entity set without *undefined* entity references.
 
 Se o conjunto de entidades não existir mais no cache 4D Server, será recriada com um novo timeout padrão de 10 minutos. O conjunto de entidades será renovado (certas entidades podem ser incluidas e outras podem ser removidas) já que desde a última vez que foi criada, não existe mais antes da recriação).
 
@@ -73,7 +73,7 @@ con los datos en el cuerpo de la petición: `["Paris"]`
 
 ## Selecionar atributos a obter
 
-Siempre se puede definir qué atributos devolver en la respuesta REST después de una solicitud inicial pasando su ruta en la solicitud (_por ejemplo_, `Company(1)/name,revenues/`)
+Siempre se puede definir qué atributos devolver en la respuesta REST después de una solicitud inicial pasando su ruta en la solicitud (*por ejemplo*, `Company(1)/name,revenues/`)
 
 Pode aplicar essa técnica a:
 
@@ -85,7 +85,7 @@ Pode aplicar essa técnica a:
 |                       | \{dataClass\}:\{attribute\}(value)/{att1,att2...}/ | /People:firstName(Larry)/firstName,lastName/ |
 | Seleção de entidades  | \{dataClass\}/{att1,att2...}/$entityset/\{entitySetID\}                               | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61                   |
 
-Los atributos deben estar delimitados por una coma, _i.e._, `/Employee/firstName,lastName,salary`. Os atributos de armazenamento ou relação podem ser passados.
+Los atributos deben estar delimitados por una coma, *i.e.*, `/Employee/firstName,lastName,salary`. Os atributos de armazenamento ou relação podem ser passados.
 
 ### Exemplos
 

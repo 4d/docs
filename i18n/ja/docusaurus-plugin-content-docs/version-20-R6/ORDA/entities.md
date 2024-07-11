@@ -131,7 +131,7 @@ $myEntity.save() // エンティティを保存します
  $EntitySel:=ds.Company.all().first().companyProjects // 先頭の会社に関連する Project エンティティセレクションを取得します
 ```
 
-上記の例において、_theClient_ と _companyProjects_ はどちらもプライマリーリレーション属性であり、二つのデータクラス間の直接的なリレーションを表すことに注意してください。 しかしながら、複数のレベルのリレーションを通したパスに基づいてリレーション属性をビルドすることも可能です(循環参照含む)。 たとえば、以下のようなストラクチャーの場合を考えます:
+上記の例において、*theClient* と *companyProjects* はどちらもプライマリーリレーション属性であり、二つのデータクラス間の直接的なリレーションを表すことに注意してください。 しかしながら、複数のレベルのリレーションを通したパスに基づいてリレーション属性をビルドすることも可能です(循環参照含む)。 たとえば、以下のようなストラクチャーの場合を考えます:
 
 ![](../assets/en/ORDA/entityAttributes2.png)
 
@@ -256,7 +256,7 @@ $emp:=ds.Employee.get(2) // プライマリーキーが 2 の Employee エンテ
 
 :::note
 
-エンティティが削除されると、その参照は _undefined_ の値とともにエンティティセレクションに 残ります。 この場合、[`.clean()`](API/EntitySelectionClass.md#clean) 関数を呼び出すことで、削除されたエンティティ参照が含まれないエンティティセレクションを新規に取得することができます。
+エンティティが削除されると、その参照は *undefined* の値とともにエンティティセレクションに 残ります。 この場合、[`.clean()`](API/EntitySelectionClass.md#clean) 関数を呼び出すことで、削除されたエンティティ参照が含まれないエンティティセレクションを新規に取得することができます。
 
 :::
 
@@ -269,7 +269,7 @@ $emp:=ds.Employee.get(2) // プライマリーキーが 2 の Employee エンテ
 **共有可能** なエンティティセレクションは以下のような特徴を持ちます:
 
 - 共有オブジェクトまたは共有コレクションに保存することが可能で、複数のプロセス間あるいはワーカー間で引数として受け渡しすることができます。
-- 複数の共有オブジェクトまたは共有コレクションに保存することが可能です。また、グループに属している共有オブジェクトまたは共有コレクションに保存することも可能です (つまり、_ロック識別子_ を持っていないということです)。
+- 複数の共有オブジェクトまたは共有コレクションに保存することが可能です。また、グループに属している共有オブジェクトまたは共有コレクションに保存することも可能です (つまり、*ロック識別子* を持っていないということです)。
 - 新たにエンティティを追加することはできません。 共有可能なエンティティセレクションに対してエンティティを追加しようとした場合、エラーがトリガーされます (エラー1637 - このエンティティセレクションは編集不可です)。 共有可能なエンティティセレクションに対してエンティティを追加したい場合、[`.add()`](API/EntitySelectionClass.md#add) 関数を呼び出す前に、[`.copy()`](API/EntitySelectionClass.md#copy) 関数を使用して共有不可のエンティティセレクションへと変換する必要があります。
 
 > 大多数のエンティティセレクション関数 ([`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and) 等)  は、呼び出し対象のエンティティセレクションを変更せずに新規のエンティティセレクションを返すため、共有可能なエンティティセレクションに対して使用できます。
@@ -286,7 +286,7 @@ $emp:=ds.Employee.get(2) // プライマリーキーが 2 の Employee エンテ
 新規のエンティティセレクションは次の場合に **共有可能** です:
 
 - データクラスに対して呼び出された ORDAクラス関数によって生成された場合: [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#query) 等。
-- リレーション属性をもとに生成され、[entity._attributeName_](API/EntityClass.md#attributename) (例: "company.employees") の _attributeName_ が 1対Nリレーション属性で、かつ entity 自身がエンティティセレクションに属していない場合。
+- リレーション属性をもとに生成され、[entity.*attributeName*](API/EntityClass.md#attributename) (例: "company.employees") の *attributeName* が 1対Nリレーション属性で、かつ entity 自身がエンティティセレクションに属していない場合。
 - `ck shared` オプションを指定したうえで、[entitySelection.copy()](API/EntitySelectionClass.md#copy) または `OB Copy` を使用し、明示的に共有可能としてコピーされた場合。
 
 例:
@@ -314,8 +314,8 @@ $toModify:=ds.Company.all().copy() // $toModify は追加可能です
 
 - 既存のエンティティセレクションに対して呼び出された ORDAクラス関数 ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), 等) によって生成された場合 。
 - リレーションに基づいて生成された場合:
-  - [entity._attributeName_](API/EntityClass.md#attributename) (例: "company.employees") の _attributeName_ が 1対Nリレーション属性で、かつ entity 自身がエンティティセレクションに属している場合 ([entity.getSelection()](API/EntityClass.md#getselection) エンティティセレクションと同じ特性になります)。
-  - [entitySelection._attributeName_](API/EntitySelectionClass.md#attributename) (例: "employees.employer") の _attributeName_ がリレーション属性の場合 (エンティティセレクションと同じ特性になります)。
+  - [entity.*attributeName*](API/EntityClass.md#attributename) (例: "company.employees") の *attributeName* が 1対Nリレーション属性で、かつ entity 自身がエンティティセレクションに属している場合 ([entity.getSelection()](API/EntityClass.md#getselection) エンティティセレクションと同じ特性になります)。
+  - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (例: "employees.employer") の *attributeName* がリレーション属性の場合 (エンティティセレクションと同じ特性になります)。
   - [entitySelection.extract()](API/EntitySelectionClass.md#extract) から返されるコレクションがエンティティセレクションを含む場合 (エンティティセレクションと同じ特性になります)。
 
 例:
@@ -418,7 +418,7 @@ $locals:=ds.Person.query("city = :1";"San Jose") // 個人のエンティティ�
 $localEmails:=$locals.emailAddress // メールアドレス (文字列) のコレクション
 ```
 
-このコードは _$localEmails_ 内に文字列としてのメールアドレスのコレクションを返します。
+このコードは *$localEmails* 内に文字列としてのメールアドレスのコレクションを返します。
 
 ### エンティティセレクションとリレーション属性
 
@@ -435,7 +435,7 @@ $myInvoices:=$myParts.invoiceItems.invoice
 
 ```
 
-最後の行は、$myParts エンティティセレクション内のパーツにリレートされている請求項目が少なくとも1行含まれているすべての請求書のエンティティセレクションを、_$myInvoices_ 内に返します。 エンティティセレクションのプロパティとしてリレーション属性が使用されると、返される結果は、たとえ返されるエンティティが一つだけだとしても、常に新しいエンティティセレクションとなります。 エンティティセレクションのプロパティとしてリレーション属性が使用された結果、エンティティが何も返ってこない場合には、返されるのは空のエンティティセレクションであり、null ではありません。
+最後の行は、$myParts エンティティセレクション内のパーツにリレートされている請求項目が少なくとも1行含まれているすべての請求書のエンティティセレクションを、*$myInvoices* 内に返します。 エンティティセレクションのプロパティとしてリレーション属性が使用されると、返される結果は、たとえ返されるエンティティが一つだけだとしても、常に新しいエンティティセレクションとなります。 エンティティセレクションのプロパティとしてリレーション属性が使用された結果、エンティティが何も返ってこない場合には、返されるのは空のエンティティセレクションであり、null ではありません。
 
 ## 制限付エンティティセレクション
 
@@ -533,8 +533,8 @@ Function event restrict() : cs.CustomersSelection
 | [entitySelection.minus()](../API/EntitySelectionClass.md#minus)       | フィルターに適合するエンティティのみが返されます                                                                                                                                           |
 | [dataclass.query()](../API/DataClassClass.md#query)                   |                                                                                                                                                                    |
 | [entitySelection.query()](../API/EntitySelectionClass.md#query)       |                                                                                                                                                                    |
-| [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)            | _attributeName_ が、制限されたデータクラスのリレートエンティティまたはリレートエンティティズの場合、フィルターが適用されます (エイリアスおよび計算属性も含む)                                                        |
-| [entity.attributeName](../API/EntityClass.md#attributename)                              | _attributeName_ が、制限されたデータクラスのリレートエンティティズの場合、フィルターが適用されます (エイリアスおよび計算属性も含む)                                                                     |
+| [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)            | *attributeName* が、制限されたデータクラスのリレートエンティティまたはリレートエンティティズの場合、フィルターが適用されます (エイリアスおよび計算属性も含む)                                                        |
+| [entity.attributeName](../API/EntityClass.md#attributename)                              | *attributeName* が、制限されたデータクラスのリレートエンティティズの場合、フィルターが適用されます (エイリアスおよび計算属性も含む)                                                                     |
 | [Create entity selection](../API/EntitySelectionClass.md#create-entity-selection)                        |                                                                                                                                                                    |
 
 その他の ORDA関数によるデータアクセスはフィルターを直接的にトリガーしないものの、その恩恵を受けることがあります。 たとえば、[`entity.next()`](../API/EntityClass.md#next) 関数は、すでにフィルタリングされたエンティティセレクションにおける次のエンティティを返します。 一方、制限されていないエンティティセレクションの場合、[`entity.next()`](../API/EntityClass.md#next) はフィルタリングされていないエンティティ群に対して動作します。
@@ -558,7 +558,7 @@ ORDA では、以下の二つのロックモードを提供しています:
 
 この自動機構は、"オプティミスティック・ロック" に基づいたもので、これは Webアプリケーションの場合にとくに適しています。 この概念は以下のような動作原理に基づいています:
 
-- すべてのエンティティは必ず読み書き可能な状態でロードされます。エンティティの _事前_ ロックというのはありません。
+- すべてのエンティティは必ず読み書き可能な状態でロードされます。エンティティの *事前* ロックというのはありません。
 - 各エンティティには保存されるたびにインクリメントされる内部的なロックスタンプを持っています。
 - プロセスあるいはユーザーが `entity.save()` メソッドでエンティティを保存しようとした場合、4D は保存しようとしているエンティティのスタンプの値とデータ内にあるエンティティのスタンプの値を比較します (データ編集の場合):
   - 値が合致している場合、エンティティは保存され、内部スタンプの値はインクリメントされます。

@@ -168,17 +168,17 @@ L’opérateur d’assignation est un premier moyen pour créer une variable et 
 MonNombre:=3
 ```
 
-creates the variable _MyNumber_ and puts the number 3 into it. Si MonNombre existait déjà, elle prend simplement la valeur 3.
+creates the variable *MyNumber* and puts the number 3 into it. Si MonNombre existait déjà, elle prend simplement la valeur 3.
 
 > It is usually not recommended to create variables without [declaring their type](#declaring-variables).
 
-Bien entendu, les variables ne seraient pas très utiles si vous ne pouviez pas récupérer les valeurs qu’elles contiennent. De nouveau, vous utilisez l’opérateur d’assignation. If you need to put the value of MyNumber in a field called [Products]Size, you would write _MyNumber_ on the right side of the assignment operator:
+Bien entendu, les variables ne seraient pas très utiles si vous ne pouviez pas récupérer les valeurs qu’elles contiennent. De nouveau, vous utilisez l’opérateur d’assignation. If you need to put the value of MyNumber in a field called [Products]Size, you would write *MyNumber* on the right side of the assignment operator:
 
 ```4d
 [Produits]Taille:=MonNombre
 ```
 
-In this case, _[Products]Size_ would be equal to 3. Cet exemple est plutôt simple, mais il illustre le moyen élémentaire dont vous disposez pour transférer des données d’un objet vers un autre en utilisant le langage.
+In this case, *[Products]Size* would be equal to 3. Cet exemple est plutôt simple, mais il illustre le moyen élémentaire dont vous disposez pour transférer des données d’un objet vers un autre en utilisant le langage.
 
 Vous assignez des valeurs aux éléments du tableau à l'aide d'accolades ({...}) :
 

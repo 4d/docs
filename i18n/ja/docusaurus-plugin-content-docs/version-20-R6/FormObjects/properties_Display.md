@@ -68,20 +68,20 @@ RB-1762-1
 | フォーマット                                             | JSON 文字列                               | 例                                                             |
 | -------------------------------------------------- | -------------------------------------- | ------------------------------------------------------------- |
 | System date short                                  | systemShort (デフォルト) | 20/03/25                                                      |
-| System date abbreviated _(1)_   | systemMedium                           | 2020/03/25                                                    |
+| System date abbreviated *(1)*   | systemMedium                           | 2020/03/25                                                    |
 | System date long                                   | systemLong                             | 2020年3月25日 水曜日                                                |
 | RFC 822                                            | rfc822                                 | Tue, 25 Mar 2020 22:00:00 GMT |
-| Short Century                                      | shortCentury                           | 03/25/20、ただし 04/25/2032 _(2)_              |
+| Short Century                                      | shortCentury                           | 03/25/20、ただし 04/25/2032 *(2)*              |
 | Internal date long                                 | long                                   | March 25, 2020                                                |
-| Internal date abbreviated _(1)_ | abbreviated                            | Mar 25, 2020                                                  |
+| Internal date abbreviated *(1)* | abbreviated                            | Mar 25, 2020                                                  |
 | Internal date short                                | short                                  | 03/25/2020                                                    |
-| ISO Date Time _(3)_             | iso8601                                | 2020-03-25T00:00:00           |
+| ISO Date Time *(3)*             | iso8601                                | 2020-03-25T00:00:00           |
 
-_(1)_ "June" は "Jun"、”July” は "Jul" に省略されます。
+*(1)* "June" は "Jun"、”July” は "Jul" に省略されます。
 
-_(2)_ 年は、1930年~2029年の間は2桁の数字で表示されますが、それ以外の場合は4桁で表示されます。 これはデフォルト設定ですが、[SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/ja/page392.html) コマンドで変更することができます。
+*(2)* 年は、1930年~2029年の間は2桁の数字で表示されますが、それ以外の場合は4桁で表示されます。 これはデフォルト設定ですが、[SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/ja/page392.html) コマンドで変更することができます。
 
-_(3)_ `ISO Date Time` フォーマットは XML の日付と時間表現の標準 (ISO8601) に対応します。 これは主に XML フォーマットや Web サービスのデータを読み込んだり書き出したりするために使用します。
+*(3)* `ISO Date Time` フォーマットは XML の日付と時間表現の標準 (ISO8601) に対応します。 これは主に XML フォーマットや Web サービスのデータを読み込んだり書き出したりするために使用します。
 
 > 表示フォーマットにかかわらず、年度を2 桁で入力すると、4D は年が00~29 の間であれば 21 世紀とみなし、30~99 の間であれば 20 世紀とみなします。 これはデフォルト設定ですが、[SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/ja/page392.html) コマンドで変更することができます。
 
@@ -406,7 +406,7 @@ Customized time formats can be built using several patterns described in the [**
 
 | 名称            | データタイプ | とりうる値                                                                                                           |
 | ------------- | ------ | --------------------------------------------------------------------------------------------------------------- |
-| booleanFormat | string | "\<_テキスト (true時)_\>;\<_テキスト (false時)_\>", 例: "済み;未処理" |
+| booleanFormat | string | "\<*テキスト (true時)*\>;\<*テキスト (false時)*\>", 例: "済み;未処理" |
 
 #### 対象オブジェクト
 

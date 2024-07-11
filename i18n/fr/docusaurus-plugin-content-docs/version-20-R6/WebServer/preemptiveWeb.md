@@ -5,7 +5,7 @@ title: Using preemptive web processes
 
 Le Web Server de 4D vous permet de tirer pleinement parti des ordinateurs multi-coeurs en utilisant des process Web préemptifs dans vos applications compilées. Vous pouvez configurer votre code lié au Web, y compris les balises 4D, les méthodes base Web ou les fonctions de classe REST de ORDA, afin qu'il s'exécute simultanément sur le plus grand nombre de coeurs possibles.
 
-For in-depth information on preemptive process in 4D, please refer to the _Preemptive 4D processes_ section in the [_4D Language Reference_](https://doc.4d.com).
+For in-depth information on preemptive process in 4D, please refer to the *Preemptive 4D processes* section in the [*4D Language Reference*](https://doc.4d.com).
 
 ## Disponibilité du mode préemptif pour les pocess Web
 
@@ -14,19 +14,19 @@ Le tableau suivant permet d'indiquer si l'utilisation du mode préemptif pour le
 | 4D Server           | Interprété ([associé au débogueur](../Debugging/debugging-remote.md)) | Interprété (non associé au débogueur) | Compilé       |
 | ------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------- |
 | Serveur REST        | coopératif                                                                               | preemptive                                               | preemptive    |
-| Serveur Web         | coopératif                                                                               | coopératif                                               | _web setting_ |
-| Server Web Services | coopératif                                                                               | coopératif                                               | _web setting_ |
+| Serveur Web         | coopératif                                                                               | coopératif                                               | *web setting* |
+| Server Web Services | coopératif                                                                               | coopératif                                               | *web setting* |
 
 | 4D distant/monoposte | Interprété | Compilé       |
 | -------------------- | ---------- | ------------- |
 | Serveur REST         | coopératif | preemptive    |
-| Serveur Web          | coopératif | _web setting_ |
-| Server Web Services  | coopératif | _web setting_ |
+| Serveur Web          | coopératif | *web setting* |
+| Server Web Services  | coopératif | *web setting* |
 
 - Serveur REST : gère les [fonctions de classe du modèle de données ORDA](../REST/ClassFunctions.md)
 - Serveur Web : gère les [modèles Web](templates.md), [4DACTION et les méthodes base](httpRequests.md)
 - Serveur de services Web : gère les requêtes SOAP
-- _**web setting**_ signifie que le mode préemptif dépend d'une valeur de réglage :
+- ***web setting*** signifie que le mode préemptif dépend d'une valeur de réglage :
   - when [**Scalable sessions**](sessions.md#enabling-sessions) option is selected, the [preemptive mode is automatically used](sessions.md#preemptive-mode) for web processes.
   - otherwise, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
   - regarding Web service processes (server or client), preemptive mode is supported at method level. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.en.html)) and make sure they are confirmed thread-safe by the compiler.
@@ -51,7 +51,7 @@ Tout le code 4D exécuté par le serveur Web doit être thread-safe si vous souh
 
 - [Fonctions de classe du modèle de données ORDA](../REST/ClassFunctions.md) appelées via REST
 
-Pour chacune de ces méthodes ou parties de code, le compilateur vérifiera si les règles thread-safe sont respectées, et retournera une erreur en cas de problème. Pour plus d'informations à propos des règles thread-safe, veuillez vous référer au paragraphe _Ecrire une méthode thread-safe_ dans le chapitre _Process_ du manuel de [Langage 4D](https://doc.4d.com).
+Pour chacune de ces méthodes ou parties de code, le compilateur vérifiera si les règles thread-safe sont respectées, et retournera une erreur en cas de problème. Pour plus d'informations à propos des règles thread-safe, veuillez vous référer au paragraphe *Ecrire une méthode thread-safe* dans le chapitre *Process* du manuel de [Langage 4D](https://doc.4d.com).
 
 ## Code web 4D thread-safe
 
@@ -61,8 +61,8 @@ La plupart des commandes et fonctions 4D, des méthodes base et des URL 4D sont 
 
 Toutes les commandes 4D relatives au Web sont thread-safe, à savoir :
 
-- toutes les commandes du thème _Web Server_
-- toutes les commandes du thème _Client HTTP_.
+- toutes les commandes du thème *Web Server*
+- toutes les commandes du thème *Client HTTP*.
 
 Les méthodes base ci-dessous sont thread-safe et peuvent être utilisées en mode préemptif (voir ci-dessus) : `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
 
@@ -72,16 +72,16 @@ Bien sûr, le code exécuté par ces méthodes doit aussi être thread-safe.
 
 Les URLs Web Server ci-dessous sont thread-safe et peuvent être utilisées en mode préemptif :
 
-- _4daction/_ (la méthode projet appelée doit également être à thread-safe)
-- _4dcgi/_ (les méthodes base appelées doivent également être thread-safe)
-- _4dwebtest/_
-- _4dblank/_
-- _4dstats/_
-- _4dhtmlstats/_
-- _4dcacheclear/_
-- _rest/_
-- _4dimgfield/_ (généré par `PROCESS 4D TAGS` pour les requêtes web relatives aux champs images)
-- _4dimg/_ (généré par `PROCESS 4D TAGS` pour les requêtes web sur les variables image)
+- *4daction/* (la méthode projet appelée doit également être à thread-safe)
+- *4dcgi/* (les méthodes base appelées doivent également être thread-safe)
+- *4dwebtest/*
+- *4dblank/*
+- *4dstats/*
+- *4dhtmlstats/*
+- *4dcacheclear/*
+- *rest/*
+- *4dimgfield/* (généré par `PROCESS 4D TAGS` pour les requêtes web relatives aux champs images)
+- *4dimg/* (généré par `PROCESS 4D TAGS` pour les requêtes web sur les variables image)
 
 ### Preemptive web process icon
 

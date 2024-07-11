@@ -92,12 +92,12 @@ Null は **null** の値のみをとることのできる特殊なデータタ�
 | --- | ----------------------- | ------- | -------------------------------------------------------------- | ----- |
 | 等しい | Null `=` Null           | Boolean | a.nullProp `=` b.nullProp      | true  |
 |     | Null `=` Undefined      | Boolean | a.nullProp `=` b.undefinedProp | true  |
-|     | Null `=` _scalar value_ | Boolean | a.nullProp `=` 42                              | false |
+|     | Null `=` *scalar value* | Boolean | a.nullProp `=` 42                              | false |
 | 異なる | Null `#` Null           | Boolean | a.nullProp `#` b.nullProp      | false |
 |     | Null `#` Undefined      | Boolean | a.nullProp `#` b.undefinedProp | false |
-|     | Null `#` _scalar value_ | Boolean | a.nullProp `#` 42                              | true  |
+|     | Null `#` *scalar value* | Boolean | a.nullProp `#` 42                              | true  |
 
-_スカラー値_ は、文字列、日付、時間、ブール、数値、BLOB のいずれかの型の値です。 スカラー値が宣言されている場合、その [デフォルト値](data-types.md#デフォルト値) は未定義でも null でもありません。 それ以外のデータ型 (ポインター、ピクチャー、オブジェクト、コレクション) の場合、デフォルト値は未定義または null となります。 例:
+*スカラー値* は、文字列、日付、時間、ブール、数値、BLOB のいずれかの型の値です。 スカラー値が宣言されている場合、その [デフォルト値](data-types.md#デフォルト値) は未定義でも null でもありません。 それ以外のデータ型 (ポインター、ピクチャー、オブジェクト、コレクション) の場合、デフォルト値は未定義または null となります。 例:
 
 ```4d
 var $object : Object
@@ -119,16 +119,16 @@ var $text : Text
 | --- | -------------------------------------------------- | ------- | ------------------------------------------------------------------- | ----- |
 | 等しい | Undefined `=` Undefined                            | Boolean | a.undefinedProp `=` b.undefinedProp | true  |
 |     | Undefined `=` Null                                 | Boolean | a.undefinedProp `=` c.nullProp      | true  |
-|     | Undefined `=` _その他の値_                              | Boolean | a.undefinedProp `=` 42                              | false |
+|     | Undefined `=` *その他の値*                              | Boolean | a.undefinedProp `=` 42                              | false |
 | 異なる | Undefined `#` Undefined                            | Boolean | a.undefinedProp `#` b.undefinedProp | false |
 |     | Undefined `#` Null                                 | Boolean | a.undefinedProp `#` b.nullProp      | false |
-|     | Undefined `#` _その他の値_                              | Boolean | a.undefinedProp `#` 42                              | true  |
+|     | Undefined `#` *その他の値*                              | Boolean | a.undefinedProp `#` 42                              | true  |
 | 大きい | Undefined `>` String, Date, Time, Boolean, Number  | Boolean | a.undefinedProp `>` "abc"                           | false |
 | 小さい | Undefined `<` String, Date, Time, Boolean, Number  | Boolean | a.undefinedProp `<` "abc"                           | false |
 | 以上  | Undefined `>=` String, Date, Time, Boolean, Number | Boolean | a.undefinedProp `>=` "abc"                          | false |
 | 以下  | Undefined `<=` String, Date, Time, Boolean, Number | Boolean | a.undefinedProp `<=` "abc"                          | false |
 
-_その他の値_ は、未定義でも Null でもない値を持つ任意の型の式です。
+*その他の値* は、未定義でも Null でもない値を持つ任意の型の式です。
 
 :::info
 

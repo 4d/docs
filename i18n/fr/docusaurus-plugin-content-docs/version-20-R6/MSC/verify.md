@@ -21,10 +21,10 @@ La page comporte quatre boutons d’action permettant un accès direct aux fonct
 
 ## Voir le compte rendu
 
-Quelle que soit la vérification demandée, 4D génère un fichier de compte-rendu dans le dossier `Logs` de l'application. Ce fichier liste l’ensemble des vérifications effectuées et signale chaque erreur rencontrée, le cas échéant ([OK] est affiché lorsque la vérification est correcte). It is created in XML format and is named: _ApplicationName__Verify_Log__yyyy-mm-dd hh-mm-ss_.xml where:
+Quelle que soit la vérification demandée, 4D génère un fichier de compte-rendu dans le dossier `Logs` de l'application. Ce fichier liste l’ensemble des vérifications effectuées et signale chaque erreur rencontrée, le cas échéant ([OK] est affiché lorsque la vérification est correcte). It is created in XML format and is named: *ApplicationName**Verify_Log**yyyy-mm-dd hh-mm-ss*.xml where:
 
-- _ApplicationName_ est le nom du fichier de structure sans extension, par exemple "Factures",
-- _aaaa-mm-jj hh-mm-ss_ est l'horodatage du fichier, basé sur la date et l'heure système locales au moment du lancement de l'opération de vérification, par exemple "2019-02-11 15-20-45".
+- *ApplicationName* est le nom du fichier de structure sans extension, par exemple "Factures",
+- *aaaa-mm-jj hh-mm-ss* est l'horodatage du fichier, basé sur la date et l'heure système locales au moment du lancement de l'opération de vérification, par exemple "2019-02-11 15-20-45".
 
 Lorsque vous cliquez sur le bouton **Voir le compte rendu**, 4D affiche le fichier de compte-rendu le plus récent dans le navigateur par défaut de l’ordinateur.
 

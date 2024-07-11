@@ -87,7 +87,7 @@ Por tanto, NO se llama al método base `On Web Authentication`:
 
 ### Sintaxis
 
-**On Web Authentication**( _$1_ : Text ; _$2_ : Text ; _$3_ : Text ; _$4_ : Text ; _$5_ : Text ; _$6_ : Text ) -> $0 : Boolean
+**On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ) -> $0 : Boolean
 
 | Parámetros | Tipo    |     | Descripción                                                                  |
 | ---------- | ------- | :-: | ---------------------------------------------------------------------------- |
@@ -173,7 +173,7 @@ El método base `On Web Connection` sólo se ejecuta si la conexión ha sido ace
 
 > **ADVERTENCIA**<br/>Si no se define ningún valor en $0 o si $0 no está definido en el método base `On Web Authentication`, la conexión se considera aceptada y se ejecuta el método base `On Web Connection`.
 
-> - Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. Lo mismo ocurrirá si se produce un error durante su procesamiento.
+> - Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) porque de lo contrario su ejecución será interrumpida y la conexión será rechazada. Lo mismo ocurrirá si se produce un error durante su procesamiento.
 
 ### Ejemplo
 

@@ -5,7 +5,7 @@ title: Qodly Studio for 4D
 
 :::caution Vista previa para desarrolladores
 
-Qodly Studio for 4D se encuentra actualmente en la fase **Developer Preview**. No debe utilizarse en producción.
+Qodly Studio for 4D is currently in the **Developer Preview** phase. No debe utilizarse en producción.
 
 :::
 
@@ -47,8 +47,8 @@ La resolución recomendada es 1920x1080.
 - Desarrollo: 4D v20 R2 o superior
 - Despliegue: 4D Server v20 R2 o superior
 - Qodly Studio solo funciona con proyectos 4D (no soporta bases de datos binarias).
-- Web sessions (_aka_ Scalable sessions) must [be enabled](sessions.md#enabling-web-sessions).
-- The 4D code called by Qodly forms must be [thread-safe](preemptiveWeb.md).
+- Web sessions (*aka* Scalable sessions) must [be enabled](sessions.md#enabling-web-sessions).
+- El código 4D llamado por los formularios Qodly debe ser [hilo seguro](preemptiveWeb.md).
 
 ### Acceso a Qodly Studio
 
@@ -139,7 +139,7 @@ No existe compatibilidad directa entre las aplicaciones implementadas con 4D y l
 | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
 | Ver y editar tablas (clases de datos), atributos y relaciones | Editor de estructura 4D(1)                                                                      | Qodly Studio Model Editor                                                     |
 | Páginas Qodly                                                                    | Editor de páginas Qodly Studio                                                                                     | Editor de páginas Qodly Studio                                                |
-| Formularios de escritorio                                                        | 4D IDE                                                                                                             | _not supported_                                                               |
+| Formularios de escritorio                                                        | 4D IDE                                                                                                             | *not supported*                                                               |
 | Lenguaje de programación                                                         | Lenguaje 4D con ORDA                                                                                               | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) con ORDA |
 | IDE de código                                                                    | Editor de código IDE 4D/VS Code con [extensión 4D](https://github.com/4d/4D-Analyzer-VSCode)(2) | Editor de código Qodly Studio                                                 |
 | Debugger                                                                         | Depurador 4D IDE                                                                                                   | Qodly Studio debugger                                                         |
@@ -183,7 +183,7 @@ See [this page](https://developer.qodly.com/docs/studio/rendering) for detailed 
 
 :::
 
-To enable the rendering of Qodly pages, the following options must be set.
+Para habilitar el renderizado de las páginas Qodly, se deben configurar las siguientes opciones.
 
 - La opción **Configuración** > **Web** > **Funcionalidades web** > [**Exponer como servidor REST**](../configuración/web.md#exposed-as-rest-server) del proyecto 4D debe estar activada.
 - El [servidor web 4D](webServer.md) debe estar ejecutándose.
@@ -212,7 +212,7 @@ Sus páginas Qodly están disponibles a través de la siguiente url:
 IP:port/$lib/renderer/?w=QodlyPageName
 ```
 
-...where _IP:port_ represents the address of the web server and _QodlyPageName_ is the name of the Qodly page.
+...where *IP:port* represents the address of the web server and *QodlyPageName* is the name of the Qodly page.
 
 Por ejemplo:
 

@@ -247,7 +247,7 @@ Affiche/masque le cadre de la page lorsque le [mode d'affichage de la page](#vie
 
 ## Afficher les références
 
-Affiche toutes les expressions 4D insérées dans le document 4D Write Pro comme _références_. Lorsque cette option est désactivée, les expressions 4D sont affichées sous forme de _valeurs_. Par défaut, lorsque vous insérez un champ ou une expression 4D, 4D Write Pro calcule et affiche sa valeur actuelle. Sélectionnez cette propriété si vous souhaitez savoir quel champ ou quelle expression est affiché(e). Les références de champ ou d'expression apparaissent alors dans votre document, sur fond gris.
+Affiche toutes les expressions 4D insérées dans le document 4D Write Pro comme *références*. Lorsque cette option est désactivée, les expressions 4D sont affichées sous forme de *valeurs*. Par défaut, lorsque vous insérez un champ ou une expression 4D, 4D Write Pro calcule et affiche sa valeur actuelle. Sélectionnez cette propriété si vous souhaitez savoir quel champ ou quelle expression est affiché(e). Les références de champ ou d'expression apparaissent alors dans votre document, sur fond gris.
 
 Par exemple, vous avez inséré la date courante avec un format, la date s'affiche :
 

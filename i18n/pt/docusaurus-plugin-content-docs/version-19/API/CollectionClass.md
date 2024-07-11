@@ -151,10 +151,10 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 
 
 <!-- REF #_command_.New shared collection.Params -->
-| Parâmetro  | Tipo                                                                |    | Descrição                                            |
-| ---------- | ------------------------------------------------------------------- |:--:| ---------------------------------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valores da collection compartida                     |
-| Resultados | Collection                                                          | <- | The new shared collection|<!-- END REF -->
+| Parâmetro  | Tipo                                                                |    | Descrição                                               |
+| ---------- | ------------------------------------------------------------------- |:--:| ------------------------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valores da collection compartida                        |
+| Resultados | Collection                                                          | <- | A nova coleção compartilhada|<!-- END REF -->
 
 |
 
@@ -790,9 +790,9 @@ var $c : Collection
 var $b : Boolean
 $c:=New collection
 $c.push(5;3;1;4;6;2)
-$b:=$c.every("NumberGreaterThan0") //returns true
+$b:=$c.every("NumberGreaterThan0") //retorna true
 $c.push(-1)
-$b:=$c.every("NumberGreaterThan0") //returns false
+$b:=$c.every("NumberGreaterThan0") //retorna false
 ```
 
 With the following ***NumberGreaterThan0*** method:
@@ -2455,9 +2455,9 @@ Como padrão, `.some()` testa toda a colecção. Opcionalmente pode passar o ín
  var $b : Boolean
  $c:=New collection
  $c.push(-5;-3;-1;-4;-6;-2)
- $b:=$c.some("NumberGreaterThan0") // returns false
+ $b:=$c.some("NumberGreaterThan0") // retorna false
  $c.push(1)
- $b:=$c.some("NumberGreaterThan0") // returns true
+ $b:=$c.some("NumberGreaterThan0") // retorna true
 
  $c:=New collection
  $c.push(1;-5;-3;-1;-4;-6;-2)

@@ -56,7 +56,7 @@ Eis a lista de objetos cujo valor pode ser guardado:
 | Object                                     | Valor guardado                                                                                            |
 | ------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
 | [Check Box](checkbox_overview.md)          | Valor da variável associada (0, 1, 2)                                                  |
-| [Drop-down List](dropdownList_Overview.md) | Número da linha seleccionada                                                                              |
+| [Lista suspensa](dropdownList_Overview.md) | Número da linha seleccionada                                                                              |
 | [Radio Button](radio_overview.md)          | Valor da variável associada (1, 0, True ou False para os botões, consoante o seu tipo) |
 | [Tab control](tabControl.md)               | Número da aba selecionada                                                                                 |
 
@@ -130,7 +130,7 @@ Este mecanismo tem duas vantagens:
 
 ### List box array
 
-Para un list box array, la propiedad **Variable o Expresión** normalmente contiene el nombre de la variable array definida para el list box y para cada columna. Sin embargo, puede utilizar un array de cadenas (que contenga nombres de arrays) como _dataSource_ valor de una columna list box para definir un [list box jerárquico](listbox_overview.md#hierarchical-list-boxes).
+Para un list box array, la propiedad **Variable o Expresión** normalmente contiene el nombre de la variable array definida para el list box y para cada columna. Sin embargo, puede utilizar un array de cadenas (que contenga nombres de arrays) como *dataSource* valor de una columna list box para definir un [list box jerárquico](listbox_overview.md#hierarchical-list-boxes).
 
 #### Objectos suportados
 
@@ -311,7 +311,7 @@ Existem vários tipos de cálculos disponíveis. The following table shows which
 
 Note that the calculation does not take the shown/hidden state of list box rows into account. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
 
-_Null_ no se tienen en cuenta para ningún cálculo.
+*Null* no se tienen en cuenta para ningún cálculo.
 
 If the column contains different types of values (collection-based column for example):
 

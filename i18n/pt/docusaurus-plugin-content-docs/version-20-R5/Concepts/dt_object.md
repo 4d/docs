@@ -159,7 +159,7 @@ A notação de objetos está disponível em qualquer elemento da lenguagem que p
      $val:=$myCollection[3].subvalue //elemento coleção
 ```
 
-- **4D commands** that return objects.
+- **Comandos 4D** que devolvem objectos.
   Exemplo:
 
 ```4d

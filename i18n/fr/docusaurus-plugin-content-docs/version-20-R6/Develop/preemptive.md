@@ -7,9 +7,9 @@ The compiled 4D code can be executed in **preemptive processes**. Thanks to this
 
 ## What is a preemptive process?
 
-When run in _preemptive_ mode, a process is dedicated to a CPU. Process management is then delegated to the system, which can allocate each CPU separately on a multi-core machine.
+When run in *preemptive* mode, a process is dedicated to a CPU. Process management is then delegated to the system, which can allocate each CPU separately on a multi-core machine.
 
-When run in _cooperative_ mode, all processes are managed by the parent application thread and share the same CPU, even on a multi-core machine.
+When run in *cooperative* mode, all processes are managed by the parent application thread and share the same CPU, even on a multi-core machine.
 
 As a result, in preemptive mode, overall performance of the application is improved, especially on multi-core machines, since multiple processes (threads) can truly run simultaneously. However, actual gains depend on the operations being executed. In return, since each thread is independent from the others in preemptive mode, and not managed directly by the application, there are specific constraints applied to code that you want to be compliant with preemptive use. Additionally, preemptive execution is only available in certain specific contexts.
 
@@ -88,7 +88,7 @@ Preemptive execution is only available in compiled mode.
 
 :::
 
-In compiled mode, when starting a process created by either `New process` or `CALL WORKER` commands, 4D reads the preemptive property of the process method (also named _parent_ method) and executes the process in preemptive or cooperative mode, depending on this property:
+In compiled mode, when starting a process created by either `New process` or `CALL WORKER` commands, 4D reads the preemptive property of the process method (also named *parent* method) and executes the process in preemptive or cooperative mode, depending on this property:
 
 - If the process method is thread-safe (validated during compilation), the process is executed in a preemptive thread.
 - If the process method is thread-unsafe, the process is run in a cooperative thread.

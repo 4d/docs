@@ -17,13 +17,13 @@ title: VP Get table range
 
 <!-- REF #_method_.VP Get table range.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                                   |                  |
-| ---------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                                  |                  |
-| tableName  | Text    | -> | Nome da tabela                                                              |                  |
-| onlyData   | Integer | -> | `vk table full range` (default) or `vk table data range` |                  |
-| sheet      | Integer | -> | Índice da folha (folha atual se omitida)                 |                  |
-| Resultados | Object  | <- | Intervalo que contém a tabela                                               | <!-- END REF --> |
+| Parâmetro  | Tipo    |    | Descrição                                                                  |                  |
+| ---------- | ------- | -- | -------------------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                                 |                  |
+| tableName  | Text    | -> | Nome da tabela                                                             |                  |
+| onlyData   | Integer | -> | `vk table full range` (padrão) ou `vk table data range` |                  |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)                |                  |
+| Resultados | Object  | <- | Intervalo que contém a tabela                                              | <!-- END REF --> |
 
 #### Descrição
 

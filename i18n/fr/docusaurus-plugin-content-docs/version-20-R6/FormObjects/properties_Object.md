@@ -130,7 +130,7 @@ There are two advantages with this mechanism:
 
 ### Array List Box
 
-For an array list box, the **Variable or Expression** property usually holds the name of the array variable defined for the list box, and for each column. However, you can use a string array (containing arrays names) as _dataSource_ value for a list box column to define a [hierarchical list box](listbox_overview.md#hierarchical-list-boxes).
+For an array list box, the **Variable or Expression** property usually holds the name of the array variable defined for the list box, and for each column. However, you can use a string array (containing arrays names) as *dataSource* value for a list box column to define a [hierarchical list box](listbox_overview.md#hierarchical-list-boxes).
 
 #### Objets pris en charge
 
@@ -311,7 +311,7 @@ There are several types of calculations available. The following table shows whi
 
 Automatic calculations ignore the shown/hidden state of list box rows. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
 
-_Null_ values are not taken into account for any calculations.
+*Null* values are not taken into account for any calculations.
 
 If the column contains different types of values (collection-based column for example):
 

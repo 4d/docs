@@ -80,7 +80,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 This property is used to specify the set to be used to manage highlighted records in the list box (when the **Arrays** data source is selected, a Boolean array with the same name as the list box is used).
 
-4D creates a default set named _ListBoxSetN_ where _N_ starts at 0 and is incremented according to the number of list boxes in the form. If necessary, you can modify the default set. It can be a local, process or interprocess set (we recommend using a local set, for example _$LBSet_, in order to limit network traffic). It is then maintained automatically by 4D. If the user selects one or more rows in the list box, the set is updated immediately. If you want to select one or more rows by programming, you can apply the commands of the “Sets” theme to this set.
+4D creates a default set named *ListBoxSetN* where *N* starts at 0 and is incremented according to the number of list boxes in the form. If necessary, you can modify the default set. It can be a local, process or interprocess set (we recommend using a local set, for example *$LBSet*, in order to limit network traffic). It is then maintained automatically by 4D. If the user selects one or more rows in the list box, the set is updated immediately. If you want to select one or more rows by programming, you can apply the commands of the “Sets” theme to this set.
 
 > - The highlighted status of the list box rows and the highlighted status of the table records are completely independent.
 > - If the “Highlight Set” property does not contain a name, it will not be possible to make selections in the list box.
@@ -104,7 +104,7 @@ Locked columns and static columns are two separate and independent functionaliti
 - Locked columns always stay displayed to the left of the list box; they do not scroll horizontally.
 - Static columns cannot be moved by drag and drop within the list box.
 
-> Vous pouvez définir des colonnes statiques et verrouillées par programmation, voir la section "List Box" dans le manuel _4D Language Reference_ .
+> Vous pouvez définir des colonnes statiques et verrouillées par programmation, voir la section "List Box" dans le manuel *4D Language Reference* .
 
 These properties interact as follows:
 
@@ -176,7 +176,7 @@ A 4D array controlling the display of list box rows.
 
 You can set the "hidden", "disabled" and "selectable" interface properties for each row in an array-based list box using this array. It can also be designated using the `LISTBOX SET ARRAY` command.
 
-The row control array must be of the Longint type and include the same number of rows as the list box. Each element of the _Row Control Array_ defines the interface status of its corresponding row in the list box. Three interface properties are available using constants in the "List Box" constant theme:
+The row control array must be of the Longint type and include the same number of rows as the list box. Each element of the *Row Control Array* defines the interface status of its corresponding row in the list box. Three interface properties are available using constants in the "List Box" constant theme:
 
 | Constante                | Valeur | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ------------------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

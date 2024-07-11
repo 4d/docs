@@ -15,4 +15,4 @@ See the [**Configuration of 4D SQL Server**](https://doc.4d.com/4Dv19R2/4D/19-R2
 
 ## Opções do motor SQL
 
-See the [**SQL Engine Options**](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-SQL-engine-implementation.300-5680725.en.html) paragraph on doc.4d.com.
+Ver o parágrafo [**Opções do motor SQL**](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-SQL-engine-implementation.300-5680725.en.html) em doc.4d.com.

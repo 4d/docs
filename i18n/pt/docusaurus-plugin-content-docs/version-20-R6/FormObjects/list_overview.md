@@ -16,13 +16,13 @@ O conteúdo de um objeto formulário lista hierárquica pode ser inicializado de
 - Asociar una [lista de opciones](properties_DataSource.md#choice-list) existente al objeto. A lista de opções deve ter sido definida no editor de listas no modo Desenho.
 - Asigne directamente una referencia de lista jerárquica a la [variable o expresión](properties_Object.md#variable-or-expression) asociada al objeto formulario.
 
-En ambos casos, se gestiona una lista jerárquica en tiempo de ejecución a través de su referencia _ListRef_, utilizando los comandos [lista jerárquica](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) del lenguaje 4D.
+En ambos casos, se gestiona una lista jerárquica en tiempo de ejecución a través de su referencia *ListRef*, utilizando los comandos [lista jerárquica](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) del lenguaje 4D.
 
 ## RefList e nome de objeto
 
 Una lista jerárquica es a la vez un **objeto de lenguaje** existente en memoria y un **objeto de formulario**.
 
-El **objeto de lenguaje** está referenciado por un ID interno único de tipo Entero largo, designado por _ListRef_ en el manual de Lenguaje 4D. Este ID es devuelto por los comandos que se pueden usar para crear listas: `New list`, `Copy list`, `Load list`, `BLOB to list`. Existe apenas uma instância do objeto língua na memória e qualquer modificação efetuada neste objeto é imediatamente transferida para todos os locais onde é utilizado.
+El **objeto de lenguaje** está referenciado por un ID interno único de tipo Entero largo, designado por *ListRef* en el manual de Lenguaje 4D. Este ID es devuelto por los comandos que se pueden usar para crear listas: `New list`, `Copy list`, `Load list`, `BLOB to list`. Existe apenas uma instância do objeto língua na memória e qualquer modificação efetuada neste objeto é imediatamente transferida para todos os locais onde é utilizado.
 
 El **objeto de formulario** no es necesariamente único: puede haber varias representaciones de la misma lista jerárquica en el mismo formulario o en otros diferentes. Tal como acontece com outros objetos de formulário, especifica-se o objeto na linguagem utilizando a sintaxe (\*; "ListName", etc.).
 
@@ -50,7 +50,7 @@ Debe utilizar el identificador `RefLista` con los comandos del lenguaje cuando q
 SET LIST ITEM FONT(*;"mylist1";*;thefont)
 ```
 
-> ... you are indicating that you want to modify the font of the hierarchical list item associated with the _mylist1_ form object. El comando tendrá en cuenta el elemento actual del objeto _mylist1_ para definir el elemento a modificar, pero esta modificación se trasladará a todas las representaciones de la lista en todos los procesos.
+> ... you are indicating that you want to modify the font of the hierarchical list item associated with the *mylist1* form object. El comando tendrá en cuenta el elemento actual del objeto *mylist1* para definir el elemento a modificar, pero esta modificación se trasladará a todas las representaciones de la lista en todos los procesos.
 
 ### Suporte da @
 
@@ -109,11 +109,11 @@ This principle is applied regardless of the order in which the commands are call
 You can usually work in two ways with the contents of hierarchical lists: by position or by reference.
 
 - When you work by position, 4D bases itself on the position in relation to the items of the list displayed on screen in order to identify them. The result will differ according to whether or not certain hierarchical items are expanded or collapsed. Note that in the case of multiple representations, each form object has its own configuration of expanded/collapsed items.
-- Cuando se trabaja por referencia, 4D se basa en el número de identificación _itemRef_ de los elementos de la lista. Each item can thus be specified individually, regardless of its position or its display in the hierarchical list.
+- Cuando se trabaja por referencia, 4D se basa en el número de identificación *itemRef* de los elementos de la lista. Each item can thus be specified individually, regardless of its position or its display in the hierarchical list.
 
 ### Utilização de números de referência dos items (itemRef)
 
-Cada elemento de una lista jerárquica tiene un número de referencia (_itemRef_) del tipo Entero largo. Este valor é apenas destinado ao seu próprio uso: 4D simplesmente o mantém.
+Cada elemento de una lista jerárquica tiene un número de referencia (*itemRef*) del tipo Entero largo. Este valor é apenas destinado ao seu próprio uso: 4D simplesmente o mantém.
 
 > Warning: You can use any type of Longint value as a reference number, except for 0. In fact, for most of the commands in this theme, the value 0 is used to specify the last item added to the list.
 
@@ -121,14 +121,14 @@ Seguem-se algumas sugestões para a utilização de números de referência:
 
 1. You do not need to identify each item with a unique number (beginner level).
 
-   - First example: you build a system of tabs by programming, for example, an address book. Since the system returns the number of the tab selected, you will probably not need more information than this. En este caso, no se preocupe por los números de referencia de los elementos: pase un valor cualquiera (excepto 0) en el parámetro _itemRef_. Note that for an address book system, you can predefine a list A, B, ..., Z in Design mode. You can also create it by programming in order to eliminate any letters for which there are no records.
-   - Second example: while working with a database, you progressively build a list of keywords. Puede guardar esta lista al final de cada sesión utilizando los comandos `SAVE LIST` o `LIST TO BLOB` y volver a cargarla al comienzo de cada nueva sesión utilizando el `Load list` o `BLOB to list`. You can display this list in a floating palette; when each user clicks on a keyword in the list, the item chosen is inserted into the enterable area that is selected in the foreground process. Lo importante es que sólo procese el elemento seleccionado, porque el comando `Select list items` devuelve la posición del elemento que debe procesar. Cuando se utiliza este valor de posición, se obtiene el título del elemento mediante el comando `GET LIST ITEM`. También en este caso, no es necesario identificar cada elemento individualmente; puede pasar cualquier valor (excepto 0) en el parámetro _itemRef_.
+   - First example: you build a system of tabs by programming, for example, an address book. Since the system returns the number of the tab selected, you will probably not need more information than this. En este caso, no se preocupe por los números de referencia de los elementos: pase un valor cualquiera (excepto 0) en el parámetro *itemRef*. Note that for an address book system, you can predefine a list A, B, ..., Z in Design mode. You can also create it by programming in order to eliminate any letters for which there are no records.
+   - Second example: while working with a database, you progressively build a list of keywords. Puede guardar esta lista al final de cada sesión utilizando los comandos `SAVE LIST` o `LIST TO BLOB` y volver a cargarla al comienzo de cada nueva sesión utilizando el `Load list` o `BLOB to list`. You can display this list in a floating palette; when each user clicks on a keyword in the list, the item chosen is inserted into the enterable area that is selected in the foreground process. Lo importante es que sólo procese el elemento seleccionado, porque el comando `Select list items` devuelve la posición del elemento que debe procesar. Cuando se utiliza este valor de posición, se obtiene el título del elemento mediante el comando `GET LIST ITEM`. También en este caso, no es necesario identificar cada elemento individualmente; puede pasar cualquier valor (excepto 0) en el parámetro *itemRef*.
 
 2. You need to partially identify the list items (intermediary level).\
    You use the item reference number to store information needed when you must work with the item; this point is detailed in the example of the `APPEND TO LIST` command. In this example, we use the item reference numbers to store record numbers. However, we must be able to establish a distinction between items that correspond to the [Department] records and those that correspond to the [Employees] records.
 
 3. You need to identify all the list items individually (advanced level).\
-   You program an elaborate management of hierarchical lists in which you absolutely must be able to identify each item individually at every level of the list. Uma forma simples de o fazer é manter um contador pessoal. Suponga que crea una lista _hlList_ utilizando el comando `APPEND TO LIST`. En esta etapa, se inicializa un contador _vhlCounter_ en 1. Cada vez que se llama a `APPEND TO LIST` o `INSERT IN LIST`, se incrementa este contador `(vhlCounter:=vhlCounter+1)`, y se pasa el número del contador como número de referencia del elemento. The trick consists in never decrementing the counter when you delete items — the counter can only increase. In this way, you guarantee the uniqueness of the item reference numbers. Since these numbers are of the Longint type, you can add or insert more than two billion items in a list that has been reinitialized... (however if you are working with such a great number of items, this usually means that you should use a table rather than a list.)
+   You program an elaborate management of hierarchical lists in which you absolutely must be able to identify each item individually at every level of the list. Uma forma simples de o fazer é manter um contador pessoal. Suponga que crea una lista *hlList* utilizando el comando `APPEND TO LIST`. En esta etapa, se inicializa un contador *vhlCounter* en 1. Cada vez que se llama a `APPEND TO LIST` o `INSERT IN LIST`, se incrementa este contador `(vhlCounter:=vhlCounter+1)`, y se pasa el número del contador como número de referencia del elemento. The trick consists in never decrementing the counter when you delete items — the counter can only increase. In this way, you guarantee the uniqueness of the item reference numbers. Since these numbers are of the Longint type, you can add or insert more than two billion items in a list that has been reinitialized... (however if you are working with such a great number of items, this usually means that you should use a table rather than a list.)
 
 > If you use Bitwise Operators, you can also use item reference numbers for storing information that can be put into a Longint, i.e. 2 Integers, 4-byte values or, yet again, 32 Booleans.
 

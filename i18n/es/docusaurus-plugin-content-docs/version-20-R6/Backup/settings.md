@@ -9,7 +9,7 @@ Los parámetros de copia de seguridad se definen a través de tres páginas en e
 - los archivos a incluir en cada copia de seguridad
 - las funcionalidades avanzadas permiten ejecutar tareas automáticas
 
-> Las propiedades definidas en esta caja de diálogo se escriben en el archivo _Backup.4DSettings_, guardado en la carpeta [Settings](Project/architecture.md#settings-folder).
+> Las propiedades definidas en esta caja de diálogo se escriben en el archivo *Backup.4DSettings*, guardado en la carpeta [Settings](Project/architecture.md#settings-folder).
 
 ## Backups periódicos
 
@@ -50,9 +50,9 @@ Esta área le permite determinar qué archivos y/o carpetas deben copiarse duran
 
 - **Datos**: archivo de datos de la aplicación. Cuando esta opción está marcada, los siguientes elementos se copian automáticamente al mismo tiempo que los datos:
   - el archivo de historial actual de la aplicación (si existe),
-  - la carpeta `Settings` completa situada [junto al archivo de datos](Project/architecture.md#settings-folder) (si existe), es decir, _los parámetros usuario para los datos_.
-- **Estructura**: carpetas y archivos proyecto de la aplicación. En el caso de proyectos compilados, esta opción permite hacer una copia de seguridad del archivo .4dz. Cuando esta opción está marcada, se hace una copia de seguridad automática de la carpeta completa `Settings` situada [en el mismo nivel que la carpeta Project ](Project/architecture.md#settings-folder-1), es decir, los _parámetros usuario_.
-- **Archivo de estructura usuario (sólo para bases binaria)**: _funcionalidad obsoleta_
+  - la carpeta `Settings` completa situada [junto al archivo de datos](Project/architecture.md#settings-folder) (si existe), es decir, *los parámetros usuario para los datos*.
+- **Estructura**: carpetas y archivos proyecto de la aplicación. En el caso de proyectos compilados, esta opción permite hacer una copia de seguridad del archivo .4dz. Cuando esta opción está marcada, se hace una copia de seguridad automática de la carpeta completa `Settings` situada [en el mismo nivel que la carpeta Project ](Project/architecture.md#settings-folder-1), es decir, los *parámetros usuario*.
+- **Archivo de estructura usuario (sólo para bases binaria)**: *funcionalidad obsoleta*
 - **Adjuntos**: esta área permite especificar un conjunto de archivos y/o carpetas que se respaldarán al mismo tiempo que la aplicación. Estos archivos pueden ser de cualquier tipo (documentos o plantillas de plug-ins, etiquetas, informes, imágenes, etc.). Puede definir archivos individuales o carpetas cuyo contenido se respaldará completamente. Cada elemento adjunto aparece con su ruta de acceso completa en el área "Adjuntos ".
   - **Eliminar**: retira el archivo seleccionado de la lista de archivos adjuntos.
   - **Añadir carpeta...**: muestra una caja de diálogo que permite seleccionar una carpeta para añadirla a la copia de seguridad. En el caso de una restitución, la carpeta se recuperará con su estructura interna. Puede seleccionar toda carpeta o volumen conectado a la máquina, a excepción de la carpeta que contiene los archivos de la aplicación.
@@ -70,7 +70,7 @@ Para modificar la ubicación donde se almacenan estos archivos, haga clic en el 
 
 La opción **Utilizar el archivo de historial**, cuando está marcada, indica que la aplicación utiliza un archivo de historial. La ruta del archivo de historial para el archivo de datos actual se especifica debajo de la opción. Cuando esta opción está marcada, no es posible abrir la aplicación sin un archivo de historial. Para más información sobre el archivo de historial, consulte [archivo de historial](log.md)
 
-Por defecto, todo proyecto creado con 4D utiliza un archivo de historial (opción **Utilizar archivo de historial**seleccionada en la **página General** de las **Preferencias**). El archivo de historial se llama _data.journal_ y se coloca en la carpeta Data.
+Por defecto, todo proyecto creado con 4D utiliza un archivo de historial (opción **Utilizar archivo de historial**seleccionada en la **página General** de las **Preferencias**). El archivo de historial se llama *data.journal* y se coloca en la carpeta Data.
 
 > La activación de un nuevo archivo de historial requiere una copia de seguridad previa de los datos de la aplicación. Si marca esta opción para el archivo de datos utilizado actualmente, un mensaje de advertencia le informará de que es necesario realizar una copia de seguridad. La creación del archivo de historial se pospone y se creará realmente sólo después de la siguiente copia de seguridad de la aplicación.
 

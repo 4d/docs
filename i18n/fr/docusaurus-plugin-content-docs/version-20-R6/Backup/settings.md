@@ -9,7 +9,7 @@ Les paramètres de sauvegarde sont définis sur trois pages dans la [boîte de d
 - les fichiers à inclure dans chaque sauvegarde
 - les fonctionnalités avancées permettant d'exécuter des tâches automatiques
 
-> Les propriétés définies dans cette boîte de dialogue sont écrits dans le fichier _Backup.4DSettings_, stocké dans le [dossier Settings](Project/architecture.md#settings-folder).
+> Les propriétés définies dans cette boîte de dialogue sont écrits dans le fichier *Backup.4DSettings*, stocké dans le [dossier Settings](Project/architecture.md#settings-folder).
 
 ## Périodicité
 
@@ -50,9 +50,9 @@ Cette zone permet de désigner les fichiers et/ou dossiers à copier lors de la 
 
 - **Data** : fichier de données de l'application. Lorsque cette option est cochée, les éléments suivants sont automatiquement sauvegardés en même temps que les données :
   - le fichier journal courant de l'application (le cas échéant),
-  - le dossier `Settings` complet situé [à côté du fichier de données](Project/architecture.md#settings-folder) (le cas échéant), c'est-à-dire _les paramètres utilisateur pour les données_.
-- **Structure** : fichiers et dossiers du projet d'application. Dans le cas de projets compilés, cette option permet de sauvegarder le fichier .4dz. Lorsque cette option est cochée, le dossier complet `Settings` situé [au même niveau que le dossier Project](Project/architecture.md#settings-folder-1), c'est-à-dire les _paramètres utilisateur_, est automatiquement sauvegardé.
-- **Fichier de structure utilisateur (uniquement pour les bases binaires)** : _fonctionnalité obsolète_
+  - le dossier `Settings` complet situé [à côté du fichier de données](Project/architecture.md#settings-folder) (le cas échéant), c'est-à-dire *les paramètres utilisateur pour les données*.
+- **Structure** : fichiers et dossiers du projet d'application. Dans le cas de projets compilés, cette option permet de sauvegarder le fichier .4dz. Lorsque cette option est cochée, le dossier complet `Settings` situé [au même niveau que le dossier Project](Project/architecture.md#settings-folder-1), c'est-à-dire les *paramètres utilisateur*, est automatiquement sauvegardé.
+- **Fichier de structure utilisateur (uniquement pour les bases binaires)** : *fonctionnalité obsolète*
 - **Attachments** : cette zone permet de désigner un ensemble de fichiers et/ou de dossiers à sauvegarder en même temps que l'application. Ces fichiers peuvent être de tout type (documents ou modèles de plug-ins, étiquettes, états, images, etc.). Vous pouvez désigner soit des fichiers individuels, soit des dossiers dont le contenu sera intégralement sauvegardé. Chaque élément joint est listé avec son chemin d’accès complet dans la zone “Fichiers joints”.
   - **Supprimer** : retire de la liste des fichiers joints l’élément sélectionné.
   - **Ajouter dossier...** : affiche une boîte de dialogue permettant de sélectionner un dossier à joindre à la sauvegarde. En cas de restitution, le dossier sera récupéré avec sa structure interne. Vous pouvez désigner tout dossier ou volume connecté au poste, à l’exception du dossier contenant les fichiers de l'application.
@@ -70,7 +70,7 @@ Pour modifier l’emplacement auquel ces fichiers devront être enregistrés, cl
 
 L'option **Utiliser fichier d 'historique**, lorsqu'elle est cochée, indique que l'application utilise un fichier journal. Le chemin d'accès au fichier journal pour le fichier de données courant est spécifié sous l'option. Lorsque cette option est cochée, il n’est pas possible d’ouvrir l'application sans fichier d’historique. Pour plus d'informations sur le fichier journal, veuillez consulter [fichier d'historique](log.md)
 
-Par défaut, tout projet créé avec 4D utilise un fichier d’historique (option cochée dans la **Page Général** des **Préférences** de 4D). Le fichier d’historique est nommé par défaut _data.journal_ et est placé dans le dossier Data.
+Par défaut, tout projet créé avec 4D utilise un fichier d’historique (option cochée dans la **Page Général** des **Préférences** de 4D). Le fichier d’historique est nommé par défaut *data.journal* et est placé dans le dossier Data.
 
 > L’activation d’un nouveau fichier d’historique nécessite que les données de l'application soient préalablement sauvegardées. Lorsque vous cochez cette option pour le fichier de données en cours d'utilisation, un message d'avertissement vous informe qu'une sauvegarde est nécessaire. La création du fichier d’historique est différée et ne sera effective qu’après la prochaine sauvegarde de l'application.
 

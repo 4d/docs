@@ -138,7 +138,7 @@ En esta documentación, el tipo de datos "Mixto" se utiliza para designar los di
 - collection
 - imagen(\*)
 
-_(\*) el tipo Imagen no es soportado por los métodos estadísticos tales como_ `entitySelection.max( )`.
+*(\*) el tipo Imagen no es soportado por los métodos estadísticos tales como* `entitySelection.max( )`.
 
 ## Bloqueo optimista
 

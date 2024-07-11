@@ -19,7 +19,7 @@ Une constante littérale de type date est comprise entre deux points d'exclamati
 !2015-12-31!
 ```
 
-Une date nulle s’écrit _!00-00-00!_.
+Une date nulle s’écrit *!00-00-00!*.
 
 **Astuce :** L'éditeur de code comprend un raccourci pour saisir une date nulle. Pour entrer une date nulle, tapez un point d’exclamation (!) et appuyez sur Entrée.
 

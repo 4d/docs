@@ -58,7 +58,7 @@ As ações disponíveis estão relacionadas com o recurso alvo.
 - An alias can be read as soon as the session privileges allow the access to the alias itself, even if the session privileges do no allow the access to the attributes resolving the alias.
 - A computed attribute can be accessed even if there are no permissions on the attributes upon which it is built.
 - You can assign a permission action to a singleton class (`singleton` type), in which case it will be applied to all its exposed functions, or to a singleton function (`singletonMethod` type).
-- Valores por defecto: en la implementación actual, solo _Null_ está disponible como valor por defecto.
+- Valores por defecto: en la implementación actual, solo *Null* está disponible como valor por defecto.
 - In REST [force login mode](../REST/authUsers.md/#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, whatever the permissions configuration.
 
 A definição das permissões deve ser coerente, nomeadamente:
@@ -106,7 +106,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 El archivo `roles.json` describe todos los parámetros de seguridad del proyecto.
 
-### Default file
+### Arquivo padrão
 
 When you create a project, a default `roles.json` file is created at the following location: `<project folder>/Project/Sources/`. Ver la sección [Arquitectura](../Project/architecture.md#sources).
 

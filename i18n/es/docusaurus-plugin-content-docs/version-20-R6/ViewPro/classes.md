@@ -113,7 +113,7 @@ The `.showHeader` property <!-- REF #TableOptions.showHeader.Summary -->indicate
 
 **.showResizeHandle** : Boolean<!-- END REF -->
 
-The `.showResizeHandle` property <!-- REF #TableOptions.showResizeHandle.Summary -->indicates whether to display the resize handle for tables that don't have a _source_<!-- END REF -->. Por defecto = False
+The `.showResizeHandle` property <!-- REF #TableOptions.showResizeHandle.Summary -->indicates whether to display the resize handle for tables that don't have a *source*<!-- END REF -->. Por defecto = False
 
 ### .tableColumns
 

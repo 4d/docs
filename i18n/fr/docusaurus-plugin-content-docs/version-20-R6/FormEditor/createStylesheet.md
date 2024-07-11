@@ -43,9 +43,9 @@ Bien qu'elles soient adaptées pour répondre aux besoins spécifiques des formu
 
 Chaque règle de style d'une feuille de style contient deux parties :
 
-- un _sélecteur_ - Un sélecteur définit où appliquer le style. 4D prend en charge les sélecteurs "object type", "object name", "class", "all objects", et "attribute value".
+- un *sélecteur* - Un sélecteur définit où appliquer le style. 4D prend en charge les sélecteurs "object type", "object name", "class", "all objects", et "attribute value".
 
-- une _déclaration_ - La déclaration définit le style à appliquer. Plusieurs lignes de déclaration peuvent être regroupées pour former un bloc de déclaration. Chaque ligne d'un bloc de déclaration CSS doit se terminer par un point-virgule et l'intégralité du bloc doit être entourée d'accolades.
+- une *déclaration* - La déclaration définit le style à appliquer. Plusieurs lignes de déclaration peuvent être regroupées pour former un bloc de déclaration. Chaque ligne d'un bloc de déclaration CSS doit se terminer par un point-virgule et l'intégralité du bloc doit être entourée d'accolades.
 
 ## Sélecteurs de feuilles de style
 
@@ -57,7 +57,7 @@ Spécifiez le type d'objet, puis entre accolades, déclarez le(s) style(s) à ap
 
 > Le type d'objet correspond à la propriété JSON [ type](FormObjects/properties_Object.md#type) des objets de formulaire.
 
-Dans l'exemple suivant, tous les objets du type _bouton_ afficheront du texte dans la police Helvetica Neue, d'une taille de 20 pixels :
+Dans l'exemple suivant, tous les objets du type *bouton* afficheront du texte dans la police Helvetica Neue, d'une taille de 20 pixels :
 
 ```
 button {
@@ -259,7 +259,7 @@ Les attributs répertoriés ci-dessous peuvent accepter le nom 4D ou le nom CSS.
 | `textDecoration` | `text-decoration`  |
 | `verticalAlign`  | `vertical-align`   |
 
-> 4D-specific values (_e.g._, `sunken`) are not supported when using CSS attribute names.
+> 4D-specific values (*e.g.*, `sunken`) are not supported when using CSS attribute names.
 
 #### Valeurs d'attributs spécifiques
 
@@ -337,7 +337,7 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
 > Les chemins de fichiers peuvent être relatifs ou absolus.
 >
 > - Relative paths are resolved relative to the JSON form description file.
-> - For security reasons, only filesystem paths are accepted for absolute paths. (_ex :_, "/RESOURCES", "/DATA")
+> - For security reasons, only filesystem paths are accepted for absolute paths. (*ex :*, "/RESOURCES", "/DATA")
 
 ## Voir également
 

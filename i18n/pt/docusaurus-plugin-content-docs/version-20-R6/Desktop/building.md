@@ -8,11 +8,11 @@ title: Build application overview
 O construtor de aplicações permite-lhe:
 
 - Build a compiled structure or component, without interpreted code,
-- Generar una aplicación autónoma ejecutable, _es decir_, fusionada con 4D Volume Desktop, el motor de base de datos 4D,
+- Generar una aplicación autónoma ejecutable, *es decir*, fusionada con 4D Volume Desktop, el motor de base de datos 4D,
 - Gerar aplicações diferentes a partir do mesmo banco de dados compilado mediante um projeto XML,
 - Criar aplicações cliente-servidor homogêneas,
 - Construir aplicações cliente-servidor com atualização automática de partes do cliente e do servidor.
-- Guardar sus parámetros de generación para su uso futuro (botón _Guardar los parámetros_).
+- Guardar sus parámetros de generación para su uso futuro (botón *Guardar los parámetros*).
 
 > Las aplicaciones compiladas se basan en archivos [.4dz](#build-compiled-structure) que son **de sólo lectura**. Tenga en cuenta que el uso de comandos o funciones que modifican los archivos fuente (como `CREATE INDEX` o `CREATE TABLE` (SQL)) no es posible por defecto en las aplicaciones compiladas. Sin embargo, puede crear aplicaciones específicas que soporten modificaciones locales utilizando la llave XML `PackProject` (ver [doc.4d.com](https://doc.4d.com)).
 
@@ -51,7 +51,7 @@ As chaves XML oferecem opções adicionais além daquelas exibidas na caixa de d
 
 ### Arquivo histórico
 
-Cuando se crea una aplicación, 4D genera un archivo de registro llamado _BuildApp.log.xml_ en la carpeta **Logs** del proyecto. O ficheiro de historial armazena as seguintes informações para cada compilação:
+Cuando se crea una aplicación, 4D genera un archivo de registro llamado *BuildApp.log.xml* en la carpeta **Logs** del proyecto. O ficheiro de historial armazena as seguintes informações para cada compilação:
 
 - O início e o fim da construção de objetivos,
 - O nome e o caminho de acesso completo dos ficheiros gerados,
@@ -69,7 +69,7 @@ A verificação desse arquivo pode ajudá-lo a economizar tempo durante as etapa
 
 Introduzca el nombre de la aplicación en **Nombre de la aplicación**.
 
-Especifique la carpeta para la aplicación generada en la **Carpeta de destino**. Si la carpeta especificada no existe todavía, 4D creará una carpeta _Build_.
+Especifique la carpeta para la aplicación generada en la **Carpeta de destino**. Si la carpeta especificada no existe todavía, 4D creará una carpeta *Build*.
 
 ## Página de estrutura compilada
 
@@ -81,7 +81,7 @@ Essa guia permite que você crie um arquivo de estrutura compilado padrão ou um
 
 Gera um banco de dados que contém apenas código compilado.
 
-Esta funcionalidad crea un archivo _.4dz_ en una carpeta `Compiled Database/<project name>`. For example, if you have named your application “MyProject”, 4D will create:
+Esta funcionalidad crea un archivo *.4dz* en una carpeta `Compiled Database/<project name>`. For example, if you have named your application “MyProject”, 4D will create:
 
 `<destination>/Compiled Database/MyProject/MyProject.4dz`
 
@@ -91,7 +91,7 @@ Um ficheiro .4dz é essencialmente uma versão zipada (embalada) da pasta do pro
 
 #### Incluir pastas relacionadas
 
-Cuando se marca esta opción, todas las carpetas relacionadas con el proyecto se copian en la carpeta Build como carpetas _Components_ y _Resources_. Para más información sobre estas carpetas, consulte la [descripción de la arquitectura del proyecto](Project/architecture.md).
+Cuando se marca esta opción, todas las carpetas relacionadas con el proyecto se copian en la carpeta Build como carpetas *Components* y *Resources*. Para más información sobre estas carpetas, consulte la [descripción de la arquitectura del proyecto](Project/architecture.md).
 
 ### Gerar um componente
 
@@ -99,16 +99,16 @@ Constrói um componente compilado a partir da estrutura.
 
 A [component](../Extensions/develop-components.md) is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and [installed in another 4D project](../Project/components.md#basics) (the host application project), its functionalities are accessible from the host project.
 
-Si ha llamado a su aplicación, _MiComponente_, 4D creará una carpeta _Components_ que contiene la carpeta _MiComponente.4dbase_:
+Si ha llamado a su aplicación, *MiComponente*, 4D creará una carpeta *Components* que contiene la carpeta *MiComponente.4dbase*:
 
 `<destination>/Components/MyComponent.4dbase/MyComponent.4DZ`.
 
-La carpeta _MyComponent.4dbase_ contiene:
+La carpeta *MyComponent.4dbase* contiene:
 
-- _MyComponent.4DZ_ file
-- Una carpeta _Resources_: todos los resources asociados se copian automáticamente en esta carpeta. Quaisquer outros componentes e/ou pastas de plug-ins não são copiados (um componente não pode utilizar plug-ins ou outros componentes).
+- *MyComponent.4DZ* file
+- Una carpeta *Resources*: todos los resources asociados se copian automáticamente en esta carpeta. Quaisquer outros componentes e/ou pastas de plug-ins não são copiados (um componente não pode utilizar plug-ins ou outros componentes).
 
-La carpeta _MyComponent.4dbase_ es la [carpeta del paquete del componente compilado](../Project/components.md).
+La carpeta *MyComponent.4dbase* es la [carpeta del paquete del componente compilado](../Project/components.md).
 
 ## Página Aplicação
 
@@ -137,8 +137,8 @@ It is possible to [automate the update of merged single-user applications](#auto
 
 Para construir uma aplicação independente, você deve primeiro designar a pasta que contém o arquivo da área de trabalho do volume 4D:
 
-- _Windows_ - the folder contains the 4D Volume Desktop.4DE, 4D Volume Desktop. RSR, as well as various files and folders required for its operation. Esses itens devem ser colocados no mesmo nível da pasta selecionada.
-- _macOS_ - 4D Volume Desktop se entrega en forma de un paquete de software estructurado que contiene varios archivos y carpetas genéricos.
+- *Windows* - the folder contains the 4D Volume Desktop.4DE, 4D Volume Desktop. RSR, as well as various files and folders required for its operation. Esses itens devem ser colocados no mesmo nível da pasta selecionada.
+- *macOS* - 4D Volume Desktop se entrega en forma de un paquete de software estructurado que contiene varios archivos y carpetas genéricos.
 
 Para seleccionar la carpeta 4D Volume Desktop, haga clic en el botón **[...]**. Uma caixa de diálogo aparece permitindo que você designe a pasta 4D Volume Desktop (Windows) ou pacote (macOS).
 
@@ -152,7 +152,7 @@ Esta opção permite escolher o modo de ligação entre o aplicativo mesclado e 
 
 - **Por nombre de la aplicación** (por defecto) - La aplicación 4D abre automáticamente el archivo de datos abierto más recientemente correspondiente al archivo de estructura. Isto permite-lhe mover o pacote de aplicações livremente no disco. Esta opção deve ser geralmente utilizada para aplicações fundidas, a menos que seja especificamente necessário duplicar a aplicação.
 
-- **Por ruta de la aplicación** - La aplicación 4D fusionada analizará el archivo _lastDataPath.xml_ de la aplicación e intentará abrir el archivo de datos con un atributo "executablePath" que coincida con la ruta completa de la aplicación. Se tal entrada for encontrada, o arquivo de dados correspondente (definido através do seu atributo "dataFilePath") será aberto. If such an entry is found, its corresponding data file (defined through its "dataFilePath" attribute) is opened.
+- **Por ruta de la aplicación** - La aplicación 4D fusionada analizará el archivo *lastDataPath.xml* de la aplicación e intentará abrir el archivo de datos con un atributo "executablePath" que coincida con la ruta completa de la aplicación. Se tal entrada for encontrada, o arquivo de dados correspondente (definido através do seu atributo "dataFilePath") será aberto. If such an entry is found, its corresponding data file (defined through its "dataFilePath" attribute) is opened.
 
 Para más información sobre el modo de vinculación de datos, consulte la sección [Último archivo de datos abierto](#last-data-file-opened).
 
@@ -162,27 +162,27 @@ Al hacer clic en el botón **Generar**, 4D crea automáticamente una carpeta **F
 
 Se você tiver especificado "MyProject" como o nome do aplicativo, encontrará os seguintes arquivos nessa subpasta (também conhecida como MyProject):
 
-- _Windows_
+- *Windows*
   - MyProject.exe - Seu executável e um MyProject.rsr (os recursos da aplicação)
   - Pasta 4D Extensions, pasta Resources, várias bibliotecas (DLL), pasta Native Components, pasta SASL Plugins - Arquivos necessários para a operação do aplicativo
   - Uma pasta Database - Inclui uma pasta Resources e um ficheiro MyProject.4DZ. Database folder  - Includes a Resources folder and  MyProject.4DZ file.
-    **Nota**: esta carpeta también contiene la carpeta _Default Data_, si se ha definido (ver [Gestión de archivos de datos en las aplicaciones finales](#data-file-management-in-final-applicatons).
+    **Nota**: esta carpeta también contiene la carpeta *Default Data*, si se ha definido (ver [Gestión de archivos de datos en las aplicaciones finales](#data-file-management-in-final-applicatons).
   - (Opcional) Pasta Components e/ou pasta Plugins - Contém todos os componentes e/ou arquivos de plug-in incluídos no banco de dados. Para más información sobre este punto, consulte la sección [Plugins y componentes](#plugins-and-components).
   - Pasta de licenças - Um arquivo XML com números de licença integrados ao aplicativo. Para obtener más información sobre este punto, consulte la sección [Licencias y certificados](#licenses-and-certificate).
   - Elementos adicionales añadidos a la carpeta 4D Volume Desktop, si los hay (ver [Personalizar la carpeta 4D Volume Desktop](#customizing-4d-volume-desktop-folder)).
 
 Todos estes itens devem ser mantidos na mesma pasta para que o executável possa operar.
 
-- _macOS_
+- *macOS*
   - Um pacote de software chamado MyProject.app que contém seu aplicativo e todos os itens necessários para sua operação, incluindo os plug-ins, componentes e licenças. Para más información sobre la integración de plug-ins y componentes, consulte la sección [Plugins y componentes](#plugins-and-components). Para obtener más información sobre la integración de licencias, consulte la sección [Licencias y certificados](#licenses-and-certificate). **Note**: In macOS, the [Application file](https://doc.4d.com/4Dv18R4/4D/18-R4/Application-file.301-4982855.en.html) command of the 4D language returns the pathname of the ApplicationName file (located in the Contents:macOS folder of the software package) and not that of the .comp file (Contents:Resources folder of the software package).
 
 #### Personalização da pasta 4D Volume Desktop
 
-Cuando se construye una aplicación independiente, 4D copia el contenido de la carpeta 4D Volume Desktop en la carpeta Destination > _Final Application_. Então, você será capaz de personalizar o conteúdo da pasta original de volume da área de trabalho 4D de acordo com suas necessidades. Pode, por exemplo:
+Cuando se construye una aplicación independiente, 4D copia el contenido de la carpeta 4D Volume Desktop en la carpeta Destination > *Final Application*. Então, você será capaz de personalizar o conteúdo da pasta original de volume da área de trabalho 4D de acordo com suas necessidades. Pode, por exemplo:
 
 - Instalar uma versão 4D Volume Desktop correspondente a um idioma específico;
-- Añadir una carpeta _PlugIns_ personalizada;
-- Personalizar el contenido de la carpeta _Resources_.
+- Añadir una carpeta *PlugIns* personalizada;
+- Personalizar el contenido de la carpeta *Resources*.
 
 > No macOS, o 4D Volume Desktop é fornecido na forma de um pacote de software. You can display their contents (**Control+click** on the icon) in order to be able to modify them.
 
@@ -190,13 +190,13 @@ Cuando se construye una aplicación independiente, 4D copia el contenido de la c
 
 Se o seu aplicativo autônomo for usado como um servidor Web, os arquivos e pastas exigidos pelo servidor devem ser instalados em locais específicos. Estes itens são os seguintes:
 
-- archivos _cert.pem_ y _key.pem_ (opcional): etos archivos se utilizan para las conexiones TLS y por los comandos de encriptación de datos,
+- archivos *cert.pem* y *key.pem* (opcional): etos archivos se utilizan para las conexiones TLS y por los comandos de encriptación de datos,
 - pasta raiz Web padrão.
 
 Os elementos devem ser instalados:
 
-- **En Windows**: en la subcarpeta _Final Application\MyProject\Database_.
-- **En macOS**: junto al paquete de software _MyProject.app_.
+- **En Windows**: en la subcarpeta *Final Application\MyProject\Database*.
+- **En macOS**: junto al paquete de software *MyProject.app*.
 
 ## Página cliente/servidor
 
@@ -230,7 +230,7 @@ Marque esta opção para gerar a parte do servidor da sua aplicação durante a 
 
 #### Localização do 4D Server
 
-Haga clic en el botón **[...]** y utilice la caja de diálogo _Navegar carpeta_ para localizar la aplicación 4D Server. No macOS, deve selecionar o pacote 4D Server diretamente.
+Haga clic en el botón **[...]** y utilice la caja de diálogo *Navegar carpeta* para localizar la aplicación 4D Server. No macOS, deve selecionar o pacote 4D Server diretamente.
 
 #### Versão atual
 
@@ -277,7 +277,7 @@ Esta opção permite escolher o modo de ligação entre o aplicativo mesclado e 
 
 - **Por nombre de la aplicación** (por defecto) - La aplicación 4D abre automáticamente el archivo de datos abierto más recientemente correspondiente al archivo de estructura. Isto permite-lhe mover o pacote de aplicações livremente no disco. Esta opção deve ser geralmente utilizada para aplicações fundidas, a menos que seja especificamente necessário duplicar a aplicação.
 
-- **Por ruta de la aplicación** - La aplicación 4D fusionada analizará el archivo _lastDataPath.xml_ de la aplicación e intentará abrir el archivo de datos con un atributo "executablePath" que coincida con la ruta completa de la aplicación. Se tal entrada for encontrada, o arquivo de dados correspondente (definido através do seu atributo "dataFilePath") será aberto. If such an entry is found, its corresponding data file (defined through its "dataFilePath" attribute) is opened.
+- **Por ruta de la aplicación** - La aplicación 4D fusionada analizará el archivo *lastDataPath.xml* de la aplicación e intentará abrir el archivo de datos con un atributo "executablePath" que coincida con la ruta completa de la aplicación. Se tal entrada for encontrada, o arquivo de dados correspondente (definido através do seu atributo "dataFilePath") será aberto. If such an entry is found, its corresponding data file (defined through its "dataFilePath" attribute) is opened.
 
 Para más información sobre el modo de vinculación de datos, consulte la sección [Último archivo de datos abierto](#last-data-file-opened).
 
@@ -298,7 +298,7 @@ Designa a localização no seu disco da aplicação 4D Volume Desktop a ser usad
 
 A Área de Trabalho de Volume 4D deve corresponder à plataforma atual (que também será a plataforma do aplicativo cliente). Se você deseja criar um aplicativo cliente para a plataforma "simultânea", você deve realizar uma operação de construção adicional usando uma aplicação 4D em execução nessa plataforma.
 
-Si desea que la aplicación cliente se conecte al servidor utilizando una dirección específica (distinta del nombre del servidor publicado en la subred), debe utilizar la llave XML `IPAddress` en el archivo buildapp.4DSettings. For more information about this file, refer to the description of the [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html) command. Você também pode implementar mecanismos específicos em caso de falha na conexão. También puede implementar mecanismos específicos en caso de fallo de la conexión.
+Si desea que la aplicación cliente se conecte al servidor utilizando una dirección específica (distinta del nombre del servidor publicado en la subred), debe utilizar la llave XML `IPAddress` en el archivo buildapp.4DSettings. Para obter mais informações sobre este arquivo, consulte a descrição do comando [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html). Você também pode implementar mecanismos específicos em caso de falha na conexão. También puede implementar mecanismos específicos en caso de fallo de la conexión.
 
 #### Cópia de aplicativos cliente dentro do aplicativo servidor
 
@@ -324,7 +324,7 @@ Esta funcionalidad requiere que haga clic en el botón **[...]** y designe la ub
 
 | Plataforma de servidor actual | Ficheiro obrigatório                                        | Detalhes                                                                                                                                                                                                                                                                                                                  |
 | ----------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| macOS                         | Windows 4D Volume Desktop _o_ Windows client update archive | Por defecto, se selecciona la aplicación `4D Volume Desktop` para Windows. Para seleccionar un archivo `.4darchive` previamente construido en Windows, presione **Shift** mientras hace clic en [...] |
+| macOS                         | Windows 4D Volume Desktop *o* Windows client update archive | Por defecto, se selecciona la aplicación `4D Volume Desktop` para Windows. Para seleccionar un archivo `.4darchive` previamente construido en Windows, presione **Shift** mientras hace clic en [...] |
 | Windows                       | macOS client update archive                                 | Seleccione un archivo `.4darchive` firmado previamente creado en macOS                                                                                                                                                                                                                                                    |
 
 You can build specific a `.4darchive` file on the concurrent platform by selecting only the [**Build client application**](#build-client-application) and the appropriate [**Allow automatic update...**](#copy-of-client-applications-inside-the-server-application) option.
@@ -333,7 +333,7 @@ You can build specific a `.4darchive` file on the concurrent platform by selecti
 
 A notificação de atualização da aplicação cliente é realizada automaticamente após a atualização da aplicação do servidor.
 
-It works as follows: when a new version of the client/server application is built using the application builder, the new client portion is copied as a compressed file in the **Upgrade4DClient** subfolder of the **ApplicationName** Server folder (in macOS, these folders are included in the server package). Si ha seguido el proceso de generación de una aplicación cliente multiplataforma, un archivo de actualización ._4darchive_ está disponible para cada plataforma:
+It works as follows: when a new version of the client/server application is built using the application builder, the new client portion is copied as a compressed file in the **Upgrade4DClient** subfolder of the **ApplicationName** Server folder (in macOS, these folders are included in the server package). Si ha seguido el proceso de generación de una aplicación cliente multiplataforma, un archivo de actualización .*4darchive* está disponible para cada plataforma:
 
 Para acionar notificações de atualização de aplicativo cliente, basta substituir a versão antiga do aplicativo servidor pelo novo e, em seguida, executá-lo. O resto do processo é automático.
 
@@ -356,7 +356,7 @@ Se 4D não puder realizar a atualização do aplicativo cliente, a máquina do c
 
 Existem muitas causas possíveis para este erro. Quando você receber esta mensagem, é aconselhável verificar os seguintes parâmetros primeiro:
 
-- **Nombres de ruta**: compruebe la validez de los nombres de ruta definidos en el proyecto de la aplicación a través del diálogo del Generador de aplicaciones o mediante las llaves XML (por ejemplo, _ClientMacFolderToWin_). Em particular, verifique os caminhos para as versões do 4D Volume Desktop.
+- **Nombres de ruta**: compruebe la validez de los nombres de ruta definidos en el proyecto de la aplicación a través del diálogo del Generador de aplicaciones o mediante las llaves XML (por ejemplo, *ClientMacFolderToWin*). Em particular, verifique os caminhos para as versões do 4D Volume Desktop.
 - **Privilegios lectura/escritura**: en la máquina cliente, compruebe que el usuario actual tiene derechos de acceso de escritura para la actualización de la aplicación cliente.
 
 ### Ficheiros gerados
@@ -369,18 +369,18 @@ La carpeta `<ApplicationName>Client` contiene la parte cliente de la aplicación
 
 O conteúdo dessas pastas varia dependendo da plataforma atual:
 
-- _Windows_ - Cada carpeta contiene el archivo ejecutable de la aplicación, denominado `<ApplicationName>Client.exe` para la parte cliente y `<ApplicationName>Server.exe` para la parte servidor, así como los archivos .rsr correspondientes. As pastas também contêm vários arquivos e pastas necessários para que os aplicativos funcionem e itens personalizados que podem estar na pasta de Volume 4D e no Servidor 4D.
-- _macOS_ - Cada carpeta contiene únicamente el paquete de la aplicación, denominado `<ApplicationName>Client` para la parte cliente y `<ApplicationName>Server` para la parte servidor. Cada pacote contém todos os itens necessários para que a aplicação funcione. No macOS, inicie um pacote fazendo duplo clique no mesmo.
+- *Windows* - Cada carpeta contiene el archivo ejecutable de la aplicación, denominado `<ApplicationName>Client.exe` para la parte cliente y `<ApplicationName>Server.exe` para la parte servidor, así como los archivos .rsr correspondientes. As pastas também contêm vários arquivos e pastas necessários para que os aplicativos funcionem e itens personalizados que podem estar na pasta de Volume 4D e no Servidor 4D.
+- *macOS* - Cada carpeta contiene únicamente el paquete de la aplicación, denominado `<ApplicationName>Client` para la parte cliente y `<ApplicationName>Server` para la parte servidor. Cada pacote contém todos os itens necessários para que a aplicação funcione. No macOS, inicie um pacote fazendo duplo clique no mesmo.
 
 > Os pacotes macOS construídos contêm os mesmos itens que as subpastas do Windows. Puede visualizar su contenido (**Control+clic** en el icono) para poder modificarlo.
 
-Si ha marcado la opción "Permitir la actualización automática de la aplicación cliente", se añade una subcarpeta adicional llamada _Upgrade4DClient_ en la carpeta/paquete `<ApplicationName>Server`. Esta subpasta contém o aplicativo cliente no macOS e/ou no formato Windows como um arquivo compactado. Este ficheiro é utilizado durante a atualização automática das aplicações clientes.
+Si ha marcado la opción "Permitir la actualización automática de la aplicación cliente", se añade una subcarpeta adicional llamada *Upgrade4DClient* en la carpeta/paquete `<ApplicationName>Server`. Esta subpasta contém o aplicativo cliente no macOS e/ou no formato Windows como um arquivo compactado. Este ficheiro é utilizado durante a atualização automática das aplicações clientes.
 
 #### Localização de ficheiros Web
 
 Se o servidor e/ou cliente parte do seu aplicativo clicável duplo for usado como um servidor web, os arquivos e pastas exigidos pelo servidor devem ser instalados em locais específicos. Estes itens são os seguintes:
 
-- archivos _cert.pem_ y _key.pem_ (opcional): etos archivos se utilizan para las conexiones TLS y por los comandos de encriptación de datos,
+- archivos *cert.pem* y *key.pem* (opcional): etos archivos se utilizan para las conexiones TLS y por los comandos de encriptación de datos,
 - Pasta raiz Web por defeito (WebFolder).
 
 Os elementos devem ser instalados:
@@ -397,7 +397,7 @@ Os elementos devem ser instalados:
 
 4D lhe permite incorporar uma estrutura compilada na aplicação cliente. Esta funcionalidad puede utilizarse, por ejemplo, para ofrecer a los usuarios una aplicación "portal", que da acceso a diferentes aplicaciones del servidor gracias al comando `OPEN DATABASE` que ejecuta un archivo `.4dlink`.
 
-Para activar esta funcionalidad, añada las llaves `DatabaseToEmbedInClientWinFolder` y/o `DatabaseToEmbedInClientMacFolder` en el archivo de configuración _buildApp_. Cuando una de estas llaves está presente, el proceso de generación de la aplicación cliente genera una aplicación monopuesto: la estructura compilada, en lugar del archivo _EnginedServer.4Dlink_, se coloca en la carpeta "Database".
+Para activar esta funcionalidad, añada las llaves `DatabaseToEmbedInClientWinFolder` y/o `DatabaseToEmbedInClientMacFolder` en el archivo de configuración *buildApp*. Cuando una de estas llaves está presente, el proceso de generación de la aplicación cliente genera una aplicación monopuesto: la estructura compilada, en lugar del archivo *EnginedServer.4Dlink*, se coloca en la carpeta "Database".
 
 - Se existir uma pasta de dados padrão no aplicativo de usuário único, uma licença será incorporada.
 - Se não existir uma pasta de dados padrão no aplicativo de usuário único, ela será executada sem arquivo de dados e sem licença.
@@ -405,7 +405,7 @@ Para activar esta funcionalidad, añada las llaves `DatabaseToEmbedInClientWinFo
 O cenário básico é o seguinte:
 
 1. Na caixa de diálogo da Aplicação de Construção, selecione a opção "Construir estrutura compilada" para produzir um . DZ ou .4DC para o aplicativo a ser usado em modo de usuário único.
-2. En el archivo _buildApp.4DSettings_ de la aplicación cliente-servidor, utilice la(s) siguiente(s) llave(s) xml para indicar la ruta de la carpeta que contiene la aplicación compilada monopuesto:
+2. En el archivo *buildApp.4DSettings* de la aplicación cliente-servidor, utilice la(s) siguiente(s) llave(s) xml para indicar la ruta de la carpeta que contiene la aplicación compilada monopuesto:
 
 - `DatabaseToEmbedInClientWinFolder`
 - `DatabaseToEmbedInClientMacFolder`
@@ -413,9 +413,9 @@ O cenário básico é o seguinte:
 3. Construir a aplicação cliente-servidor. Isto terá os seguintes efeitos:
 
 - toda a pasta do aplicativo do único usuário é copiada dentro da pasta "Database" do cliente mesclado
-- el archivo _EnginedServer.4Dlink_ de la carpeta "Database" no se genera
+- el archivo *EnginedServer.4Dlink* de la carpeta "Database" no se genera
 - o .4DC, .4DZ, .4DIndy arquivos da cópia do aplicativo de usuário único são renomeados usando o nome do cliente mesclado
-- la llave `PublishName` no se copia en el _info.plist_ del cliente fusionado
+- la llave `PublishName` no se copia en el *info.plist* del cliente fusionado
 - Se o aplicativo de usuário único não tiver uma pasta "Dados padrão", o cliente mesclado será executado sem dados.
 
 Automatic update 4D Server features ([Current version](#current-version) number, `SET UPDATE FOLDER` command...) work with single-user application as with standard remote application. Al conectarse, la aplicación monopuesto compara su llave `CurrentVers` con el rango de versión 4D Server. Se fora do intervalo, o aplicativo cliente atualizado será baixado do servidor e o atualizador iniciará o processo de atualização local.
@@ -424,17 +424,17 @@ Automatic update 4D Server features ([Current version](#current-version) number,
 
 Pastas de cache de cliente e servidor são usadas para armazenar elementos compartilhados como recursos ou componentes. Eles são necessários para gerenciar as trocas entre o servidor e os clientes remotos. Aplicações cliente/servidor usam caminhos padrão para as pastas de cache do sistema de cliente e servidor.
 
-Em alguns casos específicos, talvez seja necessário personalizar os nomes dessas pastas para implementar arquiteturas específicas (veja abaixo). 4D le ofrece las llaves `ClientServerSystemFolderName` y `ServerStructureFolderName` a definir en el archivo de parámetros _buildApp_.
+Em alguns casos específicos, talvez seja necessário personalizar os nomes dessas pastas para implementar arquiteturas específicas (veja abaixo). 4D le ofrece las llaves `ClientServerSystemFolderName` y `ServerStructureFolderName` a definir en el archivo de parámetros *buildApp*.
 
 #### Pasta de cache cliente
 
 Personalizar o nome da pasta de cache do lado do cliente pode ser útil quando sua aplicação do cliente é usada para se conectar a vários servidores mesclados que são similares, mas usam conjuntos de dados diferentes. Neste caso, para salvar vários downloads desnecessários de recursos locais idênticos, você pode usar a mesma pasta de cache local personalizada.
 
-- Configuración por defecto (_para cada conexión a un servidor, una carpeta caché específica se descarga/actualiza_):
+- Configuración por defecto (*para cada conexión a un servidor, una carpeta caché específica se descarga/actualiza*):
 
 ![](../assets/en/Admin/cachea.png)
 
-- Utilizando la llave `ClientServerSystemFolderName` (_se utiliza una única carpeta de caché para todos los servidores_):
+- Utilizando la llave `ClientServerSystemFolderName` (*se utiliza una única carpeta de caché para todos los servidores*):
 
 ![](../assets/en/Admin/cacheb.png)
 
@@ -442,11 +442,11 @@ Personalizar o nome da pasta de cache do lado do cliente pode ser útil quando s
 
 Personalizar o nome da pasta de cache no lado do servidor é útil quando você executa vários aplicativos de servidor idênticos criados com diferentes versões 4D no mesmo computador. Se você quiser que cada servidor use seu próprio conjunto de recursos, você precisará personalizar a pasta de cache do servidor.
 
-- Configuración por defecto (_las mismas aplicaciones servidor comparten la misma carpeta de caché_):
+- Configuración por defecto (*las mismas aplicaciones servidor comparten la misma carpeta de caché*):
 
 ![](../assets/en/Admin/cacheServera.png)
 
-- Utilizando la llave `ServerStructureFolderName` (_se utiliza una carpeta de caché dedicada para cada aplicación servidor_):
+- Utilizando la llave `ServerStructureFolderName` (*se utiliza una carpeta de caché dedicada para cada aplicación servidor*):
 
 ![](../assets/en/Admin/cacheServerb.png)
 
@@ -501,13 +501,13 @@ La página de Licencias y certificados puede utilizarse para:
 
 ### Licenças
 
-Esta aba exibe a lista de licenças de implantação disponíveis que você poderá integrar ao seu aplicativo. Por padrão, a lista está vazia. Debe añadir explícitamente su licencia _4D Developer Professional_, así como cada licencia _4D Desktop Volume_ que se vaya a utilizar en la aplicación generada. Você pode adicionar outro número de Profissional de Desenvolvedor 4D e suas licenças associadas, além da que está sendo usada atualmente.
+Esta aba exibe a lista de licenças de implantação disponíveis que você poderá integrar ao seu aplicativo. Por padrão, a lista está vazia. Debe añadir explícitamente su licencia *4D Developer Professional*, así como cada licencia *4D Desktop Volume* que se vaya a utilizar en la aplicación generada. Você pode adicionar outro número de Profissional de Desenvolvedor 4D e suas licenças associadas, além da que está sendo usada atualmente.
 
 Para eliminar o añadir una licencia, utilice los botones **[+]** y **[-]** de la parte inferior de la ventana.
 
-Al hacer clic en el botón \N-[+], aparece una caja de diálogo para abrir archivos que muestra por defecto el contenido de la carpeta _Licencias_ de su máquina. Para obtener más información sobre la ubicación de esta carpeta, consulte el comando [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html).
+Al hacer clic en el botón \N-[+], aparece una caja de diálogo para abrir archivos que muestra por defecto el contenido de la carpeta *Licencias* de su máquina. Para obtener más información sobre la ubicación de esta carpeta, consulte el comando [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html).
 
-Você deve designar os arquivos que contêm sua licença de desenvolvedor, bem como os que contém suas licenças de implantação. Estos archivos se generaron o actualizaron al adquirir la licencia _4D Developer Professional_ y las licencias _4D Desktop Volume_.
+Você deve designar os arquivos que contêm sua licença de desenvolvedor, bem como os que contém suas licenças de implantação. Estos archivos se generaron o actualizaron al adquirir la licencia *4D Developer Professional* y las licencias *4D Desktop Volume*.
 
 Depois de selecionar um arquivo, a lista indicará as características da licença que ele contém.
 
@@ -570,13 +570,13 @@ Para más información sobre el concepto de notarización, consulte [esta págin
 
 - **macOs** - cuando se crea una aplicación con doble clic, 4D se encarga de la personalización del icono. Para fazer isso, você deve criar um arquivo de ícone (tipo de icns), antes de criar o arquivo do aplicativo, e colocá-lo ao lado da pasta do projeto.
 
-> Apple, Inc. provides a specific tool for building _icns_ icon files (for more information, please refer to [Apple documentation](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2)).
+> Apple, Inc. provides a specific tool for building *icns* icon files (for more information, please refer to [Apple documentation](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2)).
 
-Su archivo de iconos debe tener el mismo nombre que el archivo del proyecto e incluir la extensión _.icns_. 4D tiene en cuenta automáticamente este archivo cuando genera la aplicación de doble clic (el archivo _.icns_ es renombrado _NomApplication.icns_ y copiado en la carpeta Resources; la entrada _CFBundleFileIcon_ del archivo _info.plist_ es actualizada).
+Su archivo de iconos debe tener el mismo nombre que el archivo del proyecto e incluir la extensión *.icns*. 4D tiene en cuenta automáticamente este archivo cuando genera la aplicación de doble clic (el archivo *.icns* es renombrado *NomApplication.icns* y copiado en la carpeta Resources; la entrada *CFBundleFileIcon* del archivo *info.plist* es actualizada).
 
-- **Windows** - Cuando se crea una aplicación con doble clic, 4D se encarga de la personalización de su icono. Para ello, debe crear un archivo de iconos (extensión _.ico_), antes de crear el archivo de la aplicación, y colocarlo junto a la carpeta del proyecto.
+- **Windows** - Cuando se crea una aplicación con doble clic, 4D se encarga de la personalización de su icono. Para ello, debe crear un archivo de iconos (extensión *.ico*), antes de crear el archivo de la aplicación, y colocarlo junto a la carpeta del proyecto.
 
-Su archivo de iconos debe tener el mismo nombre que el archivo del proyecto e incluir la extensión _.ico_. 4D leva este arquivo automaticamente em conta ao construir um aplicativo clicável duplo.
+Su archivo de iconos debe tener el mismo nombre que el archivo del proyecto e incluir la extensión *.ico*. 4D leva este arquivo automaticamente em conta ao construir um aplicativo clicável duplo.
 
 También puede definir las [llaves XML](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) específicas en el archivo buildApp.4DSettings para designar cada icono a utilizar. Estão disponíveis as seguintes chaves:
 
@@ -614,7 +614,7 @@ O local da pasta de preferências do usuário da aplicação corresponde ao cami
 userPrefs:=Get 4D folder(Pasta 4D activa)
 ```
 
-La ruta del archivo de datos se almacena en un archivo dedicado, llamado _lastDataPath.xml_.
+La ruta del archivo de datos se almacena en un archivo dedicado, llamado *lastDataPath.xml*.
 
 Graças a esta arquitetura, quando você fornece uma atualização do seu aplicativo, o arquivo de dados do usuário local (último arquivo de dados utilizado) é aberto automaticamente na primeira inicialização.
 
@@ -628,12 +628,12 @@ Isso pode ser inadequado se você quiser duplicar um aplicativo com merge destin
 
 Por conseguinte, a 4D permite ligar o caminho do arquivo de dados ao caminho da aplicação. Neste caso, o arquivo de dados será vinculado usando um caminho específico e não será apenas o último arquivo aberto. En este caso, el archivo de datos se relacionará con una ruta específica y no será simplemente el último archivo abierto.
 
-Este modo permite a você duplicar seus aplicativos mesclados sem quebrar o link para o arquivo de dados. However, with this option, if the application package is moved on the disk, the user will be prompted for a data file, since the application path will no longer match the "executablePath" attribute (after a user has selected a data file, the _lastDataPath.xml_ file is updated accordingly).
+Este modo permite a você duplicar seus aplicativos mesclados sem quebrar o link para o arquivo de dados. However, with this option, if the application package is moved on the disk, the user will be prompted for a data file, since the application path will no longer match the "executablePath" attribute (after a user has selected a data file, the *lastDataPath.xml* file is updated accordingly).
 
-_Duplication when data linked by application name:_
+*Duplication when data linked by application name:*
 ![](../assets/en/Project/datalinking1.png)
 
-_Duplication when data linked by application path:_
+*Duplication when data linked by application path:*
 ![](../assets/en/Project/datalinking2.png)
 
 Você pode selecionar o modo de ligação de dados durante o processo de construção do aplicativo. Você também pode:

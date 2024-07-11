@@ -47,7 +47,7 @@ The recommended resolution is 1920x1080.
 - Development: 4D v20 R2 or higher
 - Deployment: 4D Server v20 R2 or higher
 - Qodly Studio only works with 4D projects (binary databases are not supported).
-- Web sessions (_aka_ Scalable sessions) must [be enabled](sessions.md#enabling-web-sessions).
+- Web sessions (*aka* Scalable sessions) must [be enabled](sessions.md#enabling-web-sessions).
 - The 4D code called by Qodly forms must be [thread-safe](preemptiveWeb.md).
 
 ### Enabling access to Qodly Studio
@@ -139,7 +139,7 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | View and edit tables (dataclasses), attributes and relations | 4D Structure Editor(1)                                                                      | Qodly Studio Model Editor                                                           |
 | Qodly pages                                                                     | Qodly Studio Page Editor                                                                                       | Qodly Studio Page Editor                                                            |
-| Desktop forms                                                                   | 4D IDE                                                                                                         | _non supporté_                                                                      |
+| Desktop forms                                                                   | 4D IDE                                                                                                         | *non supporté*                                                                      |
 | Programming language                                                            | 4D Language featuring ORDA                                                                                     | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) featuring ORDA |
 | Coding IDE                                                                      | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Qodly Studio code editor                                                            |
 | Débogueur                                                                       | 4D IDE debugger                                                                                                | Qodly Studio debugger                                                               |
@@ -212,7 +212,7 @@ Your Qodly pages are available through the following url:
 IP:port/$lib/renderer/?w=QodlyPageName
 ```
 
-...where _IP:port_ represents the address of the web server and _QodlyPageName_ is the name of the Qodly page.
+...where *IP:port* represents the address of the web server and *QodlyPageName* is the name of the Qodly page.
 
 Par exemple :
 

@@ -54,7 +54,7 @@ The **dependencies.json** file references all components required in your 4D pro
 	/MyProjectRoot/Project/Sources/dependencies.json
 ```
 
-It can contain:
+Pode conter:
 
 - names of components [stored locally](#declaring-local-components) (default path or path defined in an **environment4d.json** file),
 - names of components [stored on GitHub repositories](#declaring-components-stored-on-github) (their path can be defined in this file or in an **environment4d.json** file).
@@ -72,21 +72,21 @@ The main benefits of this architecture are the following:
 
 Since components can be installed in different ways, a priority order is applied when the same component is referenced at several locations:
 
-**Higest priority**
+**Prioridade mais alta**
 
 1. Components stored in the [**Components** folder of the project](architecture.md#components).
 2. Components declared in the **dependencies.json** file.
 3. Internal User 4D components (e.g. 4D NetKit, 4D SVG...)
 
-**Lowest priority**
+**Prioridade mais baixa**
 
 ![priority](../assets/en/Project/load-sequence.png)
 
-When a component cannot be loaded because of another instance of the same component located at a higher priority level, it is given the _Overloaded_ [status](#dependency-status). The loaded component has the _Overloading_ [status](#dependency-status).
+When a component cannot be loaded because of another instance of the same component located at a higher priority level, it is given the *Overloaded* [status](#dependency-status). The loaded component has the *Overloading* [status](#dependency-status).
 
 (the **environment4d.json** declared path overrides the **dependencies.json** path to configure a local environment).
 
-### Declaring local components
+### Declarando componentes locais
 
 You declare a local component in the [**dependencies.json** file](#dependencyjson) in the following way:
 
@@ -101,7 +101,7 @@ You declare a local component in the [**dependencies.json** file](#dependencyjso
 
 ... where "myComponent1" and "myComponent2" are the name of the components to be loaded.
 
-By default, if "myComponent1" and "myComponent2" are not declared in an [environment4d.json file](#environment4djson), 4D will look for the component's package folder (_i.e._ the project root folder of the component) at the same level as your 4D project's package folder, e.g.:
+By default, if "myComponent1" and "myComponent2" are not declared in an [environment4d.json file](#environment4djson), 4D will look for the component's package folder (*i.e.* the project root folder of the component) at the same level as your 4D project's package folder, e.g.:
 
 ```
 	/MyProjectRoot/
@@ -136,7 +136,7 @@ Exemplos:
 
 :::note
 
-If a component path declared in the **environment4d.json** file is not found when the project is started, the component is not loaded and gets the _Not found_ [status](dependency-status), even if a version of the component exists next to the project's package folder.
+If a component path declared in the **environment4d.json** file is not found when the project is started, the component is not loaded and gets the *Not found* [status](dependency-status), even if a version of the component exists next to the project's package folder.
 
 :::
 
@@ -193,7 +193,7 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 
 When you create a release in GitHub, you specify a **tag** and a **version**.
 
-- **Tags** are texts that uniquely reference a release. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. For example :
+- **Tags** are texts that uniquely reference a release. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por exemplo :
 
 ```json
 {
@@ -206,7 +206,7 @@ When you create a release in GitHub, you specify a **tag** and a **version**.
 }
 ```
 
-- A release is also identified by a **version**. The versioning system used is based on the _Semantic Versioning_ concept, which is the most commonly used. Each version number is identified as follows: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
+- A release is also identified by a **version**. The versioning system used is based on the *Semantic Versioning* concept, which is the most commonly used. Each version number is identified as follows: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
 
 ```json
 {
@@ -221,7 +221,7 @@ When you create a release in GitHub, you specify a **tag** and a **version**.
 
 The version is used to define which versions can be used. A [standard semantic version](https://regex101.com/r/Ly7O1x/3/) is used. A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. The `*` can be used as a placeholder for all versions. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
 
-Here are a few examples:
+Eis alguns exemplos:
 
 - "latest": the version having the “latest” badge in GitHub releases.
 - "\*": the latest version released.
@@ -263,12 +263,12 @@ Then insert the "github" key in your [**environment4d.json**](#environment4djson
 }
 ```
 
-#### Local cache for dependencies
+#### Cache local para dependências
 
 Referenced GitHub components are downloaded in a local cache folder then loaded in your environment. The local cache folder is stored at the following location:
 
 - on macOs: `$HOME/Library/Caches/<app name>/Dependencies`
-- on Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
+- no Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
 
 ...where `<app name>` can be "4D", "4D Server", or "tool4D".
 
@@ -332,7 +332,7 @@ By default, all dependencies identified by the Dependency manager are listed, wh
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
-- **Active**: Dependencies that are loaded and can be used in the project. It includes _overloading_ dependencies, which are actually loaded. _Overloaded_ dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
+- **Active**: Dependencies that are loaded and can be used in the project. It includes *overloading* dependencies, which are actually loaded. *Overloaded* dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
 - **Inactive**: Dependencies that are not loaded in the project and are not available. There are many possible reasons for this status: missing files, version incompatibility...
 - **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
 
@@ -342,7 +342,7 @@ Dependencies requiring the developer's attention are indicated by a **status lab
 
 ![dependency-status](../assets/en/Project/dependency-conflict2.png)
 
-The following status labels are available:
+Estão disponíveis as seguintes etiquetas de status:
 
 - **Overloaded**: The dependency is not loaded because it is overloaded by another dependency with the same name at a higher [priority level](#priority).
 - **Overloading**: The dependency is loaded and is overloading one or more other dependencies with the same name at a lower [priority level](#priority).

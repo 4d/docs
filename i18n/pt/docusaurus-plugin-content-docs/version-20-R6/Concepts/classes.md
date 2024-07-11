@@ -477,19 +477,19 @@ $o.age:="Smith"  //error com a sintaxe checada
 
 Se a propriedade não for acedida, o código nunca é executado.
 
-As propriedades computadas são concebidas para tratar dados que não precisam de ser guardados na memória. São geralmente baseados em propriedades persistentes. Por exemplo, se um objeto de classe contiver como propriedade persistente o _preço bruto_ e a _taxa de IVA_, o _preço líquido_ poderia ser tratado por uma propriedade calculada.
+As propriedades computadas são concebidas para tratar dados que não precisam de ser guardados na memória. São geralmente baseados em propriedades persistentes. Por exemplo, se um objeto de classe contiver como propriedade persistente o *preço bruto* e a *taxa de IVA*, o *preço líquido* poderia ser tratado por uma propriedade calculada.
 
-No arquivo de definição de classe, as declarações de propriedade computadas usam as palavras-chave `Função` (a _getter_) e `Function set` (as _setter_), seguido pelo nome da propriedade. O nome deve estar em conformidade com as [regras de nomenclatura de propriedades](Concepts/identifiers.md#object-properties).
+No arquivo de definição de classe, as declarações de propriedade computadas usam as palavras-chave `Função` (a *getter*) e `Function set` (as *setter*), seguido pelo nome da propriedade. O nome deve estar em conformidade com as [regras de nomenclatura de propriedades](Concepts/identifiers.md#object-properties).
 
 `A função get` devolve um valor do tipo de propriedade e `A função set` recebe um parâmetro do tipo de propriedade. Ambos os argumentos devem estar em conformidade com os [parâmetros de função] padrão (#parâmetros).
 
-Quando ambas as funções são definidas, a propriedade computada é **read-write**. Se apenas uma `Function get` for definida, a propriedade computada será **somente leitura**. Neste caso, é devolvido um erro se o código tentar modificar a propriedade. Se apenas um `Function set` estiver definido, 4D devolve _undefined_ quando a propriedade é lida.
+Quando ambas as funções são definidas, a propriedade computada é **read-write**. Se apenas uma `Function get` for definida, a propriedade computada será **somente leitura**. Neste caso, é devolvido um erro se o código tentar modificar a propriedade. Se apenas um `Function set` estiver definido, 4D devolve *undefined* quando a propriedade é lida.
 
 Se as funções forem declaradas em uma [classe compartilhada](#shared-class-constructor), você pode usar a palavra-chave `shared` com elas para que elas possam ser chamadas sem [`Use. .Finalizar estrutura`](shared.md#useend-use). Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
 
-O tipo da propriedade calculada é definido pela declaração de tipo `$return` do _getter_. Pode ser de qualquer [tipo de propriedade válida](dt_object.md).
+O tipo da propriedade calculada é definido pela declaração de tipo `$return` do *getter*. Pode ser de qualquer [tipo de propriedade válida](dt_object.md).
 
-> A atribuição de _undefined_ a uma propriedade de objeto apaga seu valor enquanto preserva seu tipo. Para fazer isso, a `Function get` é chamada primeiro para recuperar o tipo de valor, em seguida, a `Function set` é chamada com um valor vazio desse tipo.
+> A atribuição de *undefined* a uma propriedade de objeto apaga seu valor enquanto preserva seu tipo. Para fazer isso, a `Function get` é chamada primeiro para recuperar o tipo de valor, em seguida, a `Function set` é chamada com um valor vazio desse tipo.
 
 #### Exemplo 1
 
@@ -746,7 +746,7 @@ $val:=$o.f() //8
 
 ```
 
-Neste exemplo, o objeto atribuído à variável $o não tem sua própria propriedade _f_, herda-o de sua classe. Uma vez que _f_ é chamado como um método de $o, o seu `This` refere-se a $o.
+Neste exemplo, o objeto atribuído à variável $o não tem sua própria propriedade *f*, herda-o de sua classe. Uma vez que *f* é chamado como um método de $o, o seu `This` refere-se a $o.
 
 ## Comandos de classe
 
@@ -827,7 +827,7 @@ A classe singleton é instanciada na primeira chamada da propriedade [`cs.<class
 
 Se você precisar instanciar um singleton com parâmetros, você também pode chamar a função [`new()`](../API/ClassClass.md#new). Nesse caso, é recomendado instanciar o singleton em algum código executado no início da aplicação.
 
-O escopo de uma instância singleton pode ser o processo atual ou todos os processos. A singleton has a unique value for the process in which it is instantiated, while a _shared_ singleton has a unique value for all processes of the application. Singletons são úteis para definir valores que precisam estar disponíveis em qualquer lugar em um aplicativo ou processo.
+O escopo de uma instância singleton pode ser o processo atual ou todos os processos. A singleton has a unique value for the process in which it is instantiated, while a *shared* singleton has a unique value for all processes of the application. Singletons são úteis para definir valores que precisam estar disponíveis em qualquer lugar em um aplicativo ou processo.
 
 Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application.
 
@@ -849,7 +849,7 @@ singleton Class Constructor()
  This.tag:=Random
 ```
 
-To use the singleton:
+Para usar o singleton:
 
 ```4d
 	//em um processo
@@ -870,7 +870,7 @@ var $myOtherSingleton := cs.ProcessTag.me
 	//$myOtherSingleton.tag = 14856
 ```
 
-### Creating a shared singleton
+### Criação de um singleton compartilhado
 
 To create a singleton shared by all processes of the application, add the `shared singleton` keywords before the [Class Constructor](#class-constructor). Por exemplo:
 
@@ -905,7 +905,7 @@ Você pode então chamar o **cs.VehicleFactory** singleton para obter um novo ve
 $vehicle:=cs.VehicleFactory.me.buildVehicle("caminhão")
 ```
 
-Como a função _buildVehicle()_ modifica o singleton **cs.VehicleFactory** (ao incrementar `This.vehicleBuilt`) você precisa adicionar a palavra-chave `shared` a ela.
+Como a função *buildVehicle()* modifica o singleton **cs.VehicleFactory** (ao incrementar `This.vehicleBuilt`) você precisa adicionar a palavra-chave `shared` a ela.
 
 #### Veja também
 

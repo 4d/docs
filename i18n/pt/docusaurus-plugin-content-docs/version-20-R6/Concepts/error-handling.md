@@ -23,7 +23,7 @@ Basicamente, há duas maneiras de lidar com erros em 4D. Pode:
 
 ## Erro ou status
 
-Muitas funções de classe 4D, tais como `entity.save()` ou `transporter.send()`, retornam um objeto de _status_. Este objecto é utilizado para armazenar erros "previsíveis" no contexto do tempo de execução, por exemplo, palavra-passe inválida, entidade bloqueada, etc., que não interrompem a execução do programa. Esta categoria de erros pode ser tratada por código normal.
+Muitas funções de classe 4D, tais como `entity.save()` ou `transporter.send()`, retornam um objeto de *status*. Este objecto é utilizado para armazenar erros "previsíveis" no contexto do tempo de execução, por exemplo, palavra-passe inválida, entidade bloqueada, etc., que não interrompem a execução do programa. Esta categoria de erros pode ser tratada por código normal.
 
 Outros erros "imprevisíveis" incluem erro de gravação em disco, falha de rede, ou em geral qualquer interrupção inesperada. Esta categoria de erros gera exceções e precisa ser tratada através de um método de manipulação de erros ou uma palavra-chave `Try()`.
 
@@ -33,7 +33,7 @@ Em 4D, todos os erros podem ser capturados e tratados por métodos específicos 
 
 Uma vez instalados, os manipuladores de erros são automaticamente chamados em modo interpretado ou compilado em caso de erro na aplicação 4D ou num dos seus componentes. Um manipulador de erros diferente pode ser chamado em função do contexto de execução (ver abaixo).
 
-Para _instalar_ um método de projeto de manipulação de erros, você só precisa chamar o [`LIGA DE ERRO CALL`](https://doc.4d. comando/4dv19/help/command/en/page155.html) com o nome do método do projeto e (opcionnalmente) escopo como parâmetros. Por exemplo:
+Para *instalar* um método de projeto de manipulação de erros, você só precisa chamar o [`LIGA DE ERRO CALL`](https://doc.4d. comando/4dv19/help/command/en/page155.html) com o nome do método do projeto e (opcionnalmente) escopo como parâmetros. Por exemplo:
 
 ```4d
 ON ERR CALL("IO_ERRORS") //Instala o método de gestão de erros
@@ -148,15 +148,15 @@ Try (expression) : any | Undefined
 
 ```
 
-_expressão_ pode ser qualquer expressão válida.
+*expressão* pode ser qualquer expressão válida.
 
-Se ocorrer um erro durante sua execução, ele será interceptado e nenhuma caixa de diálogo de erro será exibida, independentemente de um [método de tratamento de erros] (#installing-an-error-handling-method) ter sido instalado ou não antes da chamada para `Try()`. Se _expressão_ retorna um valor, `Try()` retorna o último valor avaliado, caso contrário, ele retorna `Undefined`.
+Se ocorrer um erro durante sua execução, ele será interceptado e nenhuma caixa de diálogo de erro será exibida, independentemente de um [método de tratamento de erros] (#installing-an-error-handling-method) ter sido instalado ou não antes da chamada para `Try()`. Se *expressão* retorna um valor, `Try()` retorna o último valor avaliado, caso contrário, ele retorna `Undefined`.
 
-Você pode lidar com o(s) erro(s) usando o comando [`Últimos erros`](https://doc.4d.com/4dv20/help/command/en/page1799.html). Se a _expressão_ lançar um erro em uma pilha de chamadas `Try()`, o fluxo de execução será interrompido e retornará ao último `Try()` executado (o primeiro encontrado na pilha de chamadas).
+Você pode lidar com o(s) erro(s) usando o comando [`Últimos erros`](https://doc.4d.com/4dv20/help/command/en/page1799.html). Se a *expressão* lançar um erro em uma pilha de chamadas `Try()`, o fluxo de execução será interrompido e retornará ao último `Try()` executado (o primeiro encontrado na pilha de chamadas).
 
 :::note
 
-Se um método de tratamento de erros for instalado por _expressão_, ele é chamado em caso de erro.
+Se um método de tratamento de erros for instalado por *expressão*, ele é chamado em caso de erro.
 
 :::
 
@@ -226,18 +226,18 @@ End try
 O código colocado entre as palavras-chave `Try` e `Catch` é executado primeiro e, em seguida, o fluxo depende do(s) erro(s) encontrado(s) durante essa execução.
 
 - Se nenhum erro for lançado, a execução do código continuará após a palavra-chave `End try` correspondente. O código colocado entre as palavras-chave `Catch` e `End try` não é executado.
-- Se a execução do bloco de código lançar um _erro não diferido_, o fluxo de execução é interrompido e o bloco de código `Catch` correspondente é executado.
-- Se o bloco de execução de código lançar um _erro atrasado_, o fluxo de execução continua até o final do bloco `Try` e, em seguida, executa o bloco de código `Catch` correspondente.
+- Se a execução do bloco de código lançar um *erro não diferido*, o fluxo de execução é interrompido e o bloco de código `Catch` correspondente é executado.
+- Se o bloco de execução de código lançar um *erro atrasado*, o fluxo de execução continua até o final do bloco `Try` e, em seguida, executa o bloco de código `Catch` correspondente.
 
 :::note
 
-Se um erro _deferred_ for lançado fora do bloco `Try`, a execução do código continua até o final do método ou função.
+Se um erro *deferred* for lançado fora do bloco `Try`, a execução do código continua até o final do método ou função.
 
 :::
 
 :::info
 
-Para obter mais informações sobre erros _deferred_ e _non-deferred_, consulte a descrição do comando [`throw`](https://doc.4d.com/4dv20R/help/command/pt/page1805.html).
+Para obter mais informações sobre erros *deferred* e *non-deferred*, consulte a descrição do comando [`throw`](https://doc.4d.com/4dv20R/help/command/pt/page1805.html).
 
 :::
 

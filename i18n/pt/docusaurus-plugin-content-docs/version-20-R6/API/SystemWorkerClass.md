@@ -112,7 +112,7 @@ Aqui está a sequência de chamadas de retorno:
 1. `onData` and `onDataError` are executed one or several times
 2. if called, `onError` is executed once (stops the system worker processing)
 3. if no error occured, `onResponse` is executed once
-4. `onTerminate` is always executed
+4. `onTerminate` é sempre executado uma vez
 
 #### Valor retornado
 
@@ -408,7 +408,7 @@ The `.hideWindow` property <!-- REF #SystemWorkerClass.hideWindow.Summary -->can
 
 <!-- END REF -->
 
-This property is **read-write**.
+Essa propriedade é **leitura-escrita**.
 
 <!-- REF SystemWorkerClass.pid.Desc -->
 

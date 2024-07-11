@@ -9,7 +9,7 @@ Un objeto **`4D.Function`** contiene un trozo de código que puede ser ejecutado
 - **funciones usuario**, creadas en [clases usuario](Concepts/classes.md) utilizando la [palabra clave Function](Concepts/classes.md#function).
 - **funciones de fórmula**, es decir, funciones que pueden ejecutar cualquier fórmula 4D.
 
-### Objetos Fórmula
+### Objetos fórmula
 
 Los comandos [Formula](#formula) y [Formula from string](#formula-from-string) permiten crear objetos [`4D.Function`](#about-4dfunction-objects) para ejecutar toda expresión o código 4D expresado como texto.
 
@@ -246,7 +246,7 @@ Llamar a una fórmula utilizando la notación de objetos:
 | ------------- | --------------------------- | :-: | ------------------------------------------------------------------------------------------------- |
 | formulaString | Text                        |  -> | Fórmula texto a devolver como objeto                                                              |
 | context       | Number                      |  -> | `sk execute in current database` (por defecto) o `sk execute in host database` |
-| Resultado     | 4D.Function |  <- | Objeto nativo que encapsula la fórmula                                                            |
+| Result        | 4D.Function |  <- | Objeto nativo que encapsula la fórmula                                                            |
 
 <!-- END REF -->
 

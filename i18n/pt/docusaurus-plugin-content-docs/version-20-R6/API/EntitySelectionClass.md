@@ -732,7 +732,7 @@ Então esta seleção de entidades é atualizada com produtos e se quiser compar
 
 | Release | Mudanças                     |
 | ------- | ---------------------------- |
-| 20      | Support of `dk count values` |
+| 20      | Suporte de `dk count values` |
 | 17      | Adicionado                   |
 
 </details>

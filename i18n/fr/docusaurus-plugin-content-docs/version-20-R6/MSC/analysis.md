@@ -45,7 +45,7 @@ Les informations affichées permettent d’identifier la source et le contexte d
 - **Utilisateur 4D** : nom de l’utilisateur 4D ayant effectué l’opération. Si un alias est défini pour l'utilisateur, l'alias s'affiche à la place du nom d'utilisateur 4D.
 
 - **Valeurs** : valeurs des champs de l’enregistrement en cas d’ajout ou de modification. Les valeurs sont séparées par des “;”. Seules les valeurs représentées sous forme alphanumérique sont affichées.\
-  _**Note :** Si la base de données est chiffrée et si aucune clé de données valide correspondant au fichier d'historique ouvert n'a été fournie, les valeurs chiffrées ne sont pas affichées dans cette colonne._
+  ***Note :** Si la base de données est chiffrée et si aucune clé de données valide correspondant au fichier d'historique ouvert n'a été fournie, les valeurs chiffrées ne sont pas affichées dans cette colonne.*
 
 - **Enregistrements** : numéro de l’enregistrement.
 

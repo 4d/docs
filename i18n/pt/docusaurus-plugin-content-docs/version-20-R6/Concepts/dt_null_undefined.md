@@ -92,12 +92,12 @@ When expressions of a given type are expected in your 4D code, you can make sure
 | ------------ | ----------------------- | ---------- | -------------------------------------------------------------- | ----- |
 | Igual        | Null `=` Null           | Parâmetros | a.nullProp `=` b.nullProp      | True  |
 |              | Null `=` Undefined      | Parâmetros | a.nullProp `=` b.undefinedProp | True  |
-|              | Null `=` _scalar value_ | Parâmetros | a.nullProp `=` 42                              | False |
+|              | Null `=` *scalar value* | Parâmetros | a.nullProp `=` 42                              | False |
 | Desigualdade | Null `#` Null           | Parâmetros | a.nullProp `#` b.nullProp      | False |
 |              | Null `#` Undefined      | Parâmetros | a.nullProp `#` b.undefinedProp | False |
-|              | Null `#` _scalar value_ | Parâmetros | a.nullProp `#` 42                              | True  |
+|              | Null `#` *scalar value* | Parâmetros | a.nullProp `#` 42                              | True  |
 
-_scalar values_ are values of type string, Date, Time, Boolean, number, or Blob. When declared, their [default value](data-types.md#default-values) is neither undefined nor null. Outros tipos (Ponteiro, Imagem, Objecto, Colecção) têm valor por defeito indefinido ou nulo. Ex:
+*scalar values* are values of type string, Date, Time, Boolean, number, or Blob. When declared, their [default value](data-types.md#default-values) is neither undefined nor null. Outros tipos (Ponteiro, Imagem, Objecto, Colecção) têm valor por defeito indefinido ou nulo. Ex:
 
 ```4d
 var $object : Object
@@ -119,16 +119,16 @@ Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (
 | -------------------- | -------------------------------------------------- | ---------- | ------------------------------------------------------------------- | ----- |
 | Igual                | Undefined `=` Undefined                            | Parâmetros | a.undefinedProp `=` b.undefinedProp | True  |
 |                      | Undefined `=` Null                                 | Parâmetros | a.undefinedProp `=` c.nullProp      | True  |
-|                      | Undefined `=` _outros valores_                     | Parâmetros | a.undefinedProp `=` 42                              | False |
+|                      | Undefined `=` *outros valores*                     | Parâmetros | a.undefinedProp `=` 42                              | False |
 | Desigualdade         | Undefined `#` Undefined                            | Parâmetros | a.undefinedProp `#` b.undefinedProp | False |
 |                      | Undefined `#` Null                                 | Parâmetros | a.undefinedProp `#` b.nullProp      | False |
-|                      | Undefined `#` _outros valores_                     | Parâmetros | a.undefinedProp `#` 42                              | True  |
+|                      | Undefined `#` *outros valores*                     | Parâmetros | a.undefinedProp `#` 42                              | True  |
 | Maior que            | Undefined `>` string, Date, Time, Boolean, number  | Parâmetros | a.undefinedProp `>` "abc"                           | False |
 | Menor que            | Undefined `<` string, Date, Time, Boolean, number  | Parâmetros | a.undefinedProp `<` "abc"                           | False |
 | Maior ou igual a     | Undefined `>=` string, Date, Time, Boolean, number | Parâmetros | a.undefinedProp `>=` "abc"                          | False |
 | Menor que ou igual a | Undefined `<=` string, Date, Time, Boolean, number | Parâmetros | a.undefinedProp `<=` "abc"                          | False |
 
-_other values_ are expressions of any type with a value neither Undefined nor Null.
+*other values* are expressions of any type with a value neither Undefined nor Null.
 
 :::info
 

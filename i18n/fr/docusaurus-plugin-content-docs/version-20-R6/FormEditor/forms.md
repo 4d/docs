@@ -98,7 +98,7 @@ Un formulaire multi-pages contient à la fois une page d'arrière-plan et plusie
 
 ## Formulaires hérités
 
-Les formulaires 4D peuvent utiliser et être utilisés comme «formulaires hérités», ce qui signifie que tous les objets du _Formulaire A_ peuvent être utilisés dans le _Formulaire B_. Dans ce cas, _Formulaire B_ "hérite" des objets du _Formulaire A_.
+Les formulaires 4D peuvent utiliser et être utilisés comme «formulaires hérités», ce qui signifie que tous les objets du *Formulaire A* peuvent être utilisés dans le *Formulaire B*. Dans ce cas, *Formulaire B* "hérite" des objets du *Formulaire A*.
 
 Les références à un formulaire hérité est toujours active : si un élément d'un formulaire hérité est modifié (par exemple le style des boutons), tous les formulaires qui l’utilisent seront automatiquement modifiés.
 

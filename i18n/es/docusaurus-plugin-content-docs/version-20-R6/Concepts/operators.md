@@ -42,7 +42,7 @@ Los resultados del operador dependen de los **tipos de datos** a los que se apli
 - [**Operadores de punteros**](dt_pointer.md#operadores-de-punteros)
 - [**Operadores de cadenas**](dt_string.md#operadores-de-cadenas)
 - [**Object reference operators**](dt_object.md#object-operators)
-- [**Collection reference operators**](dt_collection.md#collection-operators)
+- [**Operadores de referencia de colección**](dt_collection.md#collection-operators)
 - [**Operadores null**](dt_null_undefined.md#operadores-null)
 - [**Operadores Undefined**](dt_null_undefined.md#operadores-undefined)
 
@@ -242,7 +242,7 @@ En este caso, `$phone` almacenará un número de teléfono o la cadena "n/a".
 
 #### Ejemplo 2
 
-Dada una tabla llamada Person con un campo _name_, así como un campo _maiden name_ para las mujeres casadas.
+Dada una tabla llamada Person con un campo *name*, así como un campo *maiden name* para las mujeres casadas.
 
 El siguiente ejemplo comprueba si hay un apellido de soltera y lo almacena en una variable, de lo contrario simplemente almacena el nombre de la persona:
 
@@ -341,7 +341,7 @@ Todos los demás valores se consideran **truthy**, incluyendo:
 
 - 0 - cero numérico (Entero u otro)
 
-En 4D, la evaluación **truthy** y **falsy** refleja la **usabilidad** de un valor, lo que significa que un valor truthy existe y puede ser procesado por el código sin generar errores o resultados inesperados. La razón de ser de esto es ofrecer una forma conveniente de manejar valores _undefined_ y _null_ en objetos y colecciones, de modo que un número reducido de instrucciones [If…Else](flow-control.md#ifelseend-if) sean necesarias para evitar errores de ejecu
+En 4D, la evaluación **truthy** y **falsy** refleja la **usabilidad** de un valor, lo que significa que un valor truthy existe y puede ser procesado por el código sin generar errores o resultados inesperados. La razón de ser de esto es ofrecer una forma conveniente de manejar valores *undefined* y *null* en objetos y colecciones, de modo que un número reducido de instrucciones [If…Else](flow-control.md#ifelseend-if) sean necesarias para evitar errores de ejecu
 
 Por ejemplo, cuando se utiliza un operador en [cortocircuito OR](#short-circuit-or-operator-):
 
@@ -349,7 +349,7 @@ Por ejemplo, cuando se utiliza un operador en [cortocircuito OR](#short-circuit-
 $value:=$object.value || $defaultValue
 ```
 
-... se obtiene el valor por defecto cada vez que _$object_ no contiene la propiedad `value` O cuando es _null_. Por lo tanto, este operador comprueba la existencia o utilidad del valor en lugar de un valor específico. Obsérvese que como el valor numérico 0 existe y es utilizable, no se le da un tratamiento especial, por lo que es **truthy**.
+... se obtiene el valor por defecto cada vez que *$object* no contiene la propiedad `value` O cuando es *null*. Por lo tanto, este operador comprueba la existencia o utilidad del valor en lugar de un valor específico. Obsérvese que como el valor numérico 0 existe y es utilizable, no se le da un tratamiento especial, por lo que es **truthy**.
 
 En cuanto a los valores que representan las colecciones, los objetos o las cadenas, los valores "vacíos" se consideran como **falsy**. Es útil cuando se quiere asignar un valor por defecto cuando se encuentra un valor vacío.
 

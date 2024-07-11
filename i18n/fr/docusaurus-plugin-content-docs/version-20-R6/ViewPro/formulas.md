@@ -205,7 +205,7 @@ Les paramètres peuvent être passés aux fonctions 4D qui appellent les méthod
 =METHODNAME(param1,param2,...,paramN)
 ```
 
-These parameters are received in _methodName_ in $1, $2...$N.
+These parameters are received in *methodName* in $1, $2...$N.
 
 A noter que les ( ) sont obligatoires, même si aucun paramètre n'est passé :
 
@@ -213,7 +213,7 @@ A noter que les ( ) sont obligatoires, même si aucun paramètre n'est passé :
 =METHODWITHOUTNAME()
 ```
 
-You can declare the name, type, and number of parameters through the _parameters_ collection of the function you declared using the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) command. Optionally, you can control the number of parameters passed by the user through _minParams_ and _maxParams_ properties.
+You can declare the name, type, and number of parameters through the *parameters* collection of the function you declared using the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) command. Optionally, you can control the number of parameters passed by the user through *minParams* and *maxParams* properties.
 
 For more information on supported incoming parameter types, please refer to the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions) command description.
 
@@ -221,7 +221,7 @@ If you do not declare parameters, values can be sequentially passed to methods (
 
 Date and Object parameters are handled in the following way:
 
-- Dates in _jstype_ will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:
+- Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:
 
 | Propriété | Type | Description       |
 | --------- | ---- | ----------------- |
@@ -361,4 +361,4 @@ Pour être appelée dans une formule 4D View Pro, une méthode projet doit être
 - **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Concepts/components.md#sharing-of-project-methods)).
 - **Not in conflict** with an existing 4D View Pro spreadsheet function: if you call a project method with the same name as a 4D View Pro built-in function, the function is called.
 
-> If neither the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) nor the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see _Data Access_) is ignored in all cases.
+> If neither the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) nor the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.

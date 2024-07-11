@@ -458,7 +458,7 @@ If a file with the same name already exists in the *destinationFolder*, by defau
 
 **Valor retornado**
 
-The copied `File` object.
+O objeto `File` copiado.
 
 #### Exemplo
 

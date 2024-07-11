@@ -196,7 +196,7 @@ To disable warnings, insert the following comments before and after the code sec
   //%W+<warning number>
 ```
 
-To re-enable warnings in a code section, use the following comments:
+Para volver a habilitar las advertencias en una sección de código, utilice los siguientes comentarios:
 
 ```4d
 // Before the selected code part use

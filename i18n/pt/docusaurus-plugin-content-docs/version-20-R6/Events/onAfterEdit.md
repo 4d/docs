@@ -13,7 +13,7 @@ title: On After Edit
 
 This event can be used filter the data entry in keyboard enterable objects at the lowest level.
 
-Cuando se utiliza, este evento se genera después de cada cambio realizado en el contenido de un objeto editable, independientemente de la acción que haya provocado la modificación, _es decir_:
+Cuando se utiliza, este evento se genera después de cada cambio realizado en el contenido de un objeto editable, independientemente de la acción que haya provocado la modificación, *es decir*:
 
 - Standard editing actions which modify content like paste, cut, delete or cancel;
 - Eliminar um valor (ação semelhante a colar);

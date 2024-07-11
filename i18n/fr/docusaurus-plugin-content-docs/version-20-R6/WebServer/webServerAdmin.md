@@ -45,7 +45,7 @@ Lorsque vous sélectionnez cette commande, la page d'accueil du site Web publié
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
-Cette commande vous permet de vérifier que le serveur web, l'affichage de la page d'accueil, etc. fonctionnent correctement. La page est appelée en utilisant l'URL _localhost_, qui est le raccourci standard désignant l'adresse IP de la machine sur laquelle le navigateur web est exécuté. Cette commande prend en compte le numéro du [port de publication TCP](#http-port) spécifié dans les paramètres.
+Cette commande vous permet de vérifier que le serveur web, l'affichage de la page d'accueil, etc. fonctionnent correctement. La page est appelée en utilisant l'URL *localhost*, qui est le raccourci standard désignant l'adresse IP de la machine sur laquelle le navigateur web est exécuté. Cette commande prend en compte le numéro du [port de publication TCP](#http-port) spécifié dans les paramètres.
 
 ## Vider le cache
 
@@ -72,9 +72,9 @@ La page **Watch** (rubrique **Web**) de l'Explorateur d'exécution affiche les i
 
 ## URLs d'administration
 
-Les URL d'administration Web vous permettent de contrôler le site web publié sur votre serveur. 4D Web Server accepte quatre URLs spécifiques : _/4DSTATS_, _/4DHTMLSTATS_, /_4DCACHECLEAR_ et _/4DWEBTEST_.
+Les URL d'administration Web vous permettent de contrôler le site web publié sur votre serveur. 4D Web Server accepte quatre URLs spécifiques : */4DSTATS*, */4DHTMLSTATS*, /*4DCACHECLEAR* et */4DWEBTEST*.
 
-> _/4DSTATS_, _/4DHTMLSTATS_ et _/4DCACHECLEAR_ ne sont disponibles que pour le concepteur et l'administrateur de la base de données. Si le système de mot de passe 4D n'a pas été activé, ces URL sont disponibles pour tous les utilisateurs. /4DWEBTEST est toujours disponible.
+> */4DSTATS*, */4DHTMLSTATS* et */4DCACHECLEAR* ne sont disponibles que pour le concepteur et l'administrateur de la base de données. Si le système de mot de passe 4D n'a pas été activé, ces URL sont disponibles pour tous les utilisateurs. /4DWEBTEST est toujours disponible.
 
 ### /4DSTATS
 
@@ -94,7 +94,7 @@ Ces informations peuvent vous permettre de vérifier le fonctionnement de votre 
 
 ### /4DHTMLSTATS
 
-L'URL _/4DHTMLSTATS_ retourne les mêmes informations que l'URL _/4DSTATS_, également sous forme de tableau. La différence est que le champ **Cached objects** ne compte que les pages HTML (les fichiers d'images ne sont pas pris en compte). De plus, cette URL retourne le champ **Filtered Objects**.
+L'URL */4DHTMLSTATS* retourne les mêmes informations que l'URL */4DSTATS*, également sous forme de tableau. La différence est que le champ **Cached objects** ne compte que les pages HTML (les fichiers d'images ne sont pas pris en compte). De plus, cette URL retourne le champ **Filtered Objects**.
 
 | Élément                | Description                                                                      |
 | ---------------------- | -------------------------------------------------------------------------------- |
@@ -107,11 +107,11 @@ L'URL _/4DHTMLSTATS_ retourne les mêmes informations que l'URL _/4DSTATS_, éga
 
 ### /4DCACHECLEAR
 
-L'URL _/4DCACHECLEAR_ retire immédiatement les pages statiques et les images du cache. Il vous permet donc de "forcer" la mise à jour des pages qui ont été modifiées.
+L'URL */4DCACHECLEAR* retire immédiatement les pages statiques et les images du cache. Il vous permet donc de "forcer" la mise à jour des pages qui ont été modifiées.
 
 ### /4DWEBTEST
 
-L'URL _/4DWEBTEST_ permet de vérifier l'état du serveur web. Lorsque cette URL est appelée, 4D renvoie un fichier texte avec les champs HTTP suivants remplis :
+L'URL */4DWEBTEST* permet de vérifier l'état du serveur web. Lorsque cette URL est appelée, 4D renvoie un fichier texte avec les champs HTTP suivants remplis :
 
 | Champ HTTP | Description                                        | Exemple                                                                                                                                                                                                                                                                                                                                            |
 | ---------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -123,8 +123,8 @@ L'URL _/4DWEBTEST_ permet de vérifier l'état du serveur web. Lorsque cette URL
 
 4D vous permet de générer deux historiques de requêtes Web :
 
-- un historique de débogage, utile dans la phase de développement du serveur web (_HTTPDebugLog.txt_),
-- un journal standardisé des requêtes web, plutôt utilisé à des fins statistiques (_logweb.txt_).
+- un historique de débogage, utile dans la phase de développement du serveur web (*HTTPDebugLog.txt*),
+- un journal standardisé des requêtes web, plutôt utilisé à des fins statistiques (*logweb.txt*).
 
 Les deux fichiers journaux sont automatiquement créés dans le dossier **Logs** du projet d'application.
 
@@ -151,7 +151,7 @@ The [web log recording file](webServerConfig.md#log-recording) can be enabled us
 
 #### CLF/DLF
 
-Each line of the file represents a request, such as: _host rfc931 user \[DD/MMM/YYYY:HH:MM:SS] "request" state length_ Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+Each line of the file represents a request, such as: *host rfc931 user \[DD/MMM/YYYY:HH:MM:SS] "request" state length* Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
 
 Le format DLF (Distilled Log Format) est similaire au format CLF (Common Log format) et utilise exactement la même structure. Il ajoute simplement deux champs HTTP supplémentaires à la fin de chaque requête : Referer et User-agent. Voici la description des formats CLF/DLF (non personnalisables) :
 
@@ -209,9 +209,9 @@ Le tableau suivant répertorie les champs disponibles pour chaque format (par or
 
 #### Fréquence de backup
 
-Comme la taille d'un _logweb.txt_ fichier évoluer considérablement, il est possible de mettre en place un mécanisme d'archivage automatique. Le déclenchement d'une backup peut être basé sur une certaine période de temps (exprimée en heures, jours, semaine ou mois), ou sur la taille du fichier ; lorsque le délai fixé (ou la taille du fichier) est atteinte, 4D ferme et archive automatiquement le fichier d'historique en cours et en crée un nouveau.
+Comme la taille d'un *logweb.txt* fichier évoluer considérablement, il est possible de mettre en place un mécanisme d'archivage automatique. Le déclenchement d'une backup peut être basé sur une certaine période de temps (exprimée en heures, jours, semaine ou mois), ou sur la taille du fichier ; lorsque le délai fixé (ou la taille du fichier) est atteinte, 4D ferme et archive automatiquement le fichier d'historique en cours et en crée un nouveau.
 
-Lorsque la sauvegarde du fichier d'historique web est déclenchée, le fichier d'historique est archivé dans un dossier nommé "Archives Logweb", qui est créé au même niveau que le fichier _logweb.txt_.
+Lorsque la sauvegarde du fichier d'historique web est déclenchée, le fichier d'historique est archivé dans un dossier nommé "Archives Logweb", qui est créé au même niveau que le fichier *logweb.txt*.
 
 Le fichier archivé est renommé sur le modèle suivant : "DYYYY_MM_DD_Thh_mm_ss.txt". Par exemple, pour un fichier archivé le 4 septembre 2020 à 15h50  et 7 secondes : “D2020_09_04_T15_50_07.txt.”
 

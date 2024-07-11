@@ -134,9 +134,9 @@ Este parámetro le permite seleccionar la familia de procesadores para la cual s
 
 Se proponen dos opciones de objetivo. El resultado depende del procesador de la máquina en la que se ejecuta 4D.
 
-| _Opción_                                                                  | _en Windows Intel/AMD_                                                             | _macOS Intel_                                                                                    | _macOS Silicon_                                                                                  |
+| *Opción*                                                                  | *en Windows Intel/AMD*                                                             | *macOS Intel*                                                                                    | *macOS Silicon*                                                                                  |
 | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| **Todos los procesadores (Intel/AMD y Apple Silicon)** | Código para Intel/AMD<br/>_No es posible producir código Apple Silicon en Windows_ | Código para Apple Silicon + Código para Intel/AMD<br/>_Habrá dos códigos compilados disponibles_ | Código para Apple Silicon + Código para Intel/AMD<br/>_Habrá dos códigos compilados disponibles_ |
+| **Todos los procesadores (Intel/AMD y Apple Silicon)** | Código para Intel/AMD<br/>*No es posible producir código Apple Silicon en Windows* | Código para Apple Silicon + Código para Intel/AMD<br/>*Habrá dos códigos compilados disponibles* | Código para Apple Silicon + Código para Intel/AMD<br/>*Habrá dos códigos compilados disponibles* |
 | **Mi procesador (procesador)**                         | Código para Intel/AMD                                                              | Código para Intel/AMD                                                                            | Código para Apple Silicon                                                                        |
 
 > El objetivo de compilación Apple Silicon requiere que la aplicación **Clang** esté instalada en su máquina. Clang viene con la última versión de Xcode. Ver los [requisitos del compilador Silicon](#requirements) para más información.
@@ -196,7 +196,7 @@ To disable warnings, insert the following comments before and after the code sec
   //%W+<warning number>
 ```
 
-To re-enable warnings in a code section, use the following comments:
+Para volver a habilitar las advertencias en una sección de código, utilice los siguientes comentarios:
 
 ```4d
 // Before the selected code part use
@@ -209,7 +209,7 @@ To re-enable warnings in a code section, use the following comments:
 Only warnings with numbers can be disabled or enabled. Warning numbers are specified at the end of each message in the list of compilation errors or in the list found in the warning tab.
 Por ejemplo, para desactivar la siguiente advertencia:
 
-_1: Redefinición de la variable $a (550.10)_
+*1: Redefinición de la variable $a (550.10)*
 
 ... sólo necesita escribir los siguientes comentarios en su método 4D:
 
@@ -290,12 +290,12 @@ La longitud del archivo de errores depende del número de errores y advertencias
 La estructura del archivo de errores es la siguiente:
 
 - En la parte superior del archivo se encuentra la lista de errores y advertencias, ordenados por método y en su orden de creación en 4D.
-- En la sección _**Errores generales**_ se agrupan todas las imposibilidades de digitación y las ambigüedades de identidad. Estos errores y advertencias se listan utilizando el siguiente formato:
+- En la sección ***Errores generales*** se agrupan todas las imposibilidades de digitación y las ambigüedades de identidad. Estos errores y advertencias se listan utilizando el siguiente formato:
   - el número de línea en el método (0 indica errores generales)
   - el atributo warning indica si la anomalía detectada es una advertencia (warning="true") o un error (warning="false")
   - diagnóstico que describe el error
 
-Si su proyecto no tiene errores generales, el archivo no tendrá una sección _Errores generales_.
+Si su proyecto no tiene errores generales, el archivo no tendrá una sección *Errores generales*.
 
 Un archivo de error puede contener tres tipos de mensajes:
 
@@ -350,7 +350,7 @@ El código compilado resultante se almacena en la carpeta [DerivedData](architec
 
 ### Compilador Silicon
 
-El compilador Silicon genera código compilado nativo para los procesadores Apple Silicon, como _Apple M1_.
+El compilador Silicon genera código compilado nativo para los procesadores Apple Silicon, como *Apple M1*.
 
 El código compilado resultante se almacena en la carpeta [Libraries](architecture.md#libraries) del proyecto.
 
@@ -358,7 +358,7 @@ El código compilado resultante se almacena en la carpeta [Libraries](architectu
 
 - **Ordenador Apple**: el compilador Silicon sólo puede ejecutarse desde una máquina Apple.
 - **Arquitectura proyecto de 4D**: el compilador Silicon sólo está disponible para los desarrollos 4D que utilizan la [arquitectura proyecto](architecture.md).
-- **Herramientas Xcode o Developer**: el compilador Silicon llama al compilador de código abierto de macOS **Clang** para compilar el proyecto a partir de código C++ en el [segundo paso](#compilador-incremental) de la compilación. _clang_ requiere librerías Apple nativas, que son proporcionadas por el paquete **Xcode** o **Developer Tools**.
+- **Herramientas Xcode o Developer**: el compilador Silicon llama al compilador de código abierto de macOS **Clang** para compilar el proyecto a partir de código C++ en el [segundo paso](#compilador-incremental) de la compilación. *clang* requiere librerías Apple nativas, que son proporcionadas por el paquete **Xcode** o **Developer Tools**.
   - **Si ya tiene** Xcode o Developer Tools instalados en su ordenador, sólo tiene que asegurarse de que su versión cumple con los requisitos de 4D.
   - **Si no tiene** ninguna de estas herramientas instaladas en su ordenador, tendrá que descargar una de ellas desde el sitio web Apple Developer.
 

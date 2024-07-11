@@ -69,7 +69,7 @@ L'assignation d'objets/collections partagé(e) s à des propriétés ou élémen
 
 Reportez-vous à l'exemple 2 pour l'illustration des règles des groupes partagés.
 
-**Note :** Les groupes partagés sont gérés via une propriété interne nommée _locking identifier_. For detailed information on this value, please refer to the 4D Language Reference.
+**Note :** Les groupes partagés sont gérés via une propriété interne nommée *locking identifier*. For detailed information on this value, please refer to the 4D Language Reference.
 
 ### Lecture
 
@@ -99,15 +99,15 @@ La syntaxe de la structure `Use...End use` est la suivante :
  End use
 ```
 
-La structure `Use...End use` définit une séquence d'instructions qui exécutera des tâches sur le paramètre _Shared_object_or_Shared_collection_ sous la protection d'un sémaphore interne. _Shared_object_or_Shared_collection_ peut être tout objet partagé ou collection partagée valide.
+La structure `Use...End use` définit une séquence d'instructions qui exécutera des tâches sur le paramètre *Shared_object_or_Shared_collection* sous la protection d'un sémaphore interne. *Shared_object_or_Shared_collection* peut être tout objet partagé ou collection partagée valide.
 
 Les objets partagés et les collections partagées permettent d'établir des communications entre les process, en particulier les **process 4D préemptifs**. Ils peuvent être passés par référence en paramètre d'un process à un autre. Encadrer les modifications d'objets partagés et de collections partagées à l'aide des mots-clés `Use...End use` est obligatoire pour empêcher les accès concurrents entre les process.
 
-- Une fois que la ligne **Use** est exécutée avec succès, toutes les propriétés/éléments de _Shared_object_or_Shared_collection_ sont verrouillé(e)s en écriture pour tous les autres process jusqu'à ce que la ligne **End use** correspondante soit exécutée.
-- La séquence _statement(s)_ peut exécuter n'importe quelle modification sur les propriétés/éléments de Shared_object_or_Shared_collection sans risque d'accès concurrents.
-- Si un autre objet ou collection partagé(e) est ajouté(e) en tant que propriété du paramètre _Shared_object_or_Shared_collection_, il ou elle devient connecté(e) et appartiennent au même groupe partagé.
-- Si un autre process tente d'accéder à une propriété de _Shared_object_or_Shared_collection_ ou une propriété connectée alors qu'une séquence **Use...End use** est en cours d'exécution sur le même _Shared_object_or_Shared_collection_, il est automatiquement placé en attente jusqu'à ce que la séquence courante soit terminée.
-- La ligne **End use** déverrouille les propriétés de _Shared_object_or_Shared_collection_ et tous les objets du même groupe.
+- Une fois que la ligne **Use** est exécutée avec succès, toutes les propriétés/éléments de *Shared_object_or_Shared_collection* sont verrouillé(e)s en écriture pour tous les autres process jusqu'à ce que la ligne **End use** correspondante soit exécutée.
+- La séquence *statement(s)* peut exécuter n'importe quelle modification sur les propriétés/éléments de Shared_object_or_Shared_collection sans risque d'accès concurrents.
+- Si un autre objet ou collection partagé(e) est ajouté(e) en tant que propriété du paramètre *Shared_object_or_Shared_collection*, il ou elle devient connecté(e) et appartiennent au même groupe partagé.
+- Si un autre process tente d'accéder à une propriété de *Shared_object_or_Shared_collection* ou une propriété connectée alors qu'une séquence **Use...End use** est en cours d'exécution sur le même *Shared_object_or_Shared_collection*, il est automatiquement placé en attente jusqu'à ce que la séquence courante soit terminée.
+- La ligne **End use** déverrouille les propriétés de *Shared_object_or_Shared_collection* et tous les objets du même groupe.
 - Plusieurs structures **Use...End use** peuvent être imbriquées dans le code 4D. Toute modification d'un objet/d'une collection partagé(e) doit s'effectuer à l'intérieur d'une structure **Use...End use**.
 
 :::note

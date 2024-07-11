@@ -2044,7 +2044,7 @@ La entity selection devuelta contiene las entidades especificadas por *startFrom
 - Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la entity selection). Si el valor calculado < 0, *startFrom* toma el valor 0.
 - Si *startFrom >= length*, la función devuelve una entity selection vacía.
 - Si *end* < 0, se recalcula como *end:=end+length*.
-- If *end < startFrom* (passed or calculated values), the method does nothing.
+- Si *end < startFrom* (valores pasados o calculados), el método no hace nada.
 
 <code>.sum()</code> devuelve 0 si la entity selection está vacía.
 

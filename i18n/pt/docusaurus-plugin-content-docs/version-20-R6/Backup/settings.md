@@ -9,7 +9,7 @@ As configurações de backup são definidas através de três páginas na [caixa
 - os arquivos a incluir em cada backup
 - as funcionalidades avançadas que permitem executar tarefas automáticas
 
-> As propriedades definidas nesta caixa de diálogo são escritas no arquivo _Backup.4DSettings_, guardado na pasta [Settings](Project/architecture.md#settings-folder).
+> As propriedades definidas nesta caixa de diálogo são escritas no arquivo *Backup.4DSettings*, guardado na pasta [Settings](Project/architecture.md#settings-folder).
 
 ## Backups periódicos
 
@@ -50,9 +50,9 @@ Essa área lhe permite determinar quais os arquivos ou pastas que devem ser copi
 
 - **Dados**: Arquivo de dados do aplicativo. Quando esta opção for marcada, o arquivo de histórico do banco de dados, se existir, recebe um backup na mesma hora que os dados.
   - o arquivo de histórico atual da aplicação (se houver),
-  - a pasta completa `Settings` localizada [ao lado do arquivo de dados](Project/architecture.md#pasta-de-configurações) (se existir), ou seja os _parâmetros usuário para os dados_.
+  - a pasta completa `Settings` localizada [ao lado do arquivo de dados](Project/architecture.md#pasta-de-configurações) (se existir), ou seja os *parâmetros usuário para os dados*.
 - **Estrutura**: Pastas e arquivos do projeto da aplicação. No caso de bancos de dados compilados, essa opção permite fazer o backup do arquivo .4dz. Quando esta opção estiver marcada, uma cópia de segurança é feita automaticamente da pasta completa Settings situada no mesmo nível que a pasta Project, ou seja, os parâmetros usuário.
-- **Arquivo de estrutura usuário (só para bancos binários)**: _funcionalidade obsoleta_
+- **Arquivo de estrutura usuário (só para bancos binários)**: *funcionalidade obsoleta*
 - **Arquivos anexos**: Esta área permite especificar um conjunto de arquivos e/ou pastas para serem copiados em backup ao mesmo tempo que o aplicativo. Esses arquivos podem ser de qualquer tipo (documentos ou modelos de plug-ins, etiquetas, relatórios, imagens, etc). Pode estabelecer arquivos ou pastas individuais cujos conteúdos serão respaldados completamente. Cada elemento anexado é listado com sua rota de acesso completa na área "Anexos".
   - **Eliminar**: retira o arquivo selecionado da lista de arquivos anexos.
   - **Adicionar pasta...**: Mostra uma caixa de diálogo que permite selecionar uma pasta para adicionar à cópia de segurança. No caso de uma restauração, a pasta vai recuperar sua estrutura interna. Pode selecionar toda pasta ou volume conectado à máquina, exceto a pasta que conter os arquivos do banco de dados.
@@ -70,7 +70,7 @@ Para modificar o local onde esses arquivos são armazenados, clique no botão **
 
 A opção **Utilizar arquivo de histórico**, quando estiver marcada, indica que a aplicação utiliza um arquivo de histórico. O nome do caminho do arquivo de histórico do arquivo de dados atual é especificado abaixo da opção. Quando essa opção for marcada, não é possível abrir o banco de dados sem um arquivo de histórico. Para obter mais informações sobre o arquivo de histórico, consulte [log file](log.md)
 
-Por padrão, qualquer projeto criado com o 4D utiliza um arquivo de log (opção **Use Log File** marcada na página **General Page** das **Preferences**). El archivo de historial se llama _data.journal_ y se coloca en la carpeta Data.
+Por padrão, qualquer projeto criado com o 4D utiliza um arquivo de log (opção **Use Log File** marcada na página **General Page** das **Preferences**). El archivo de historial se llama *data.journal* y se coloca en la carpeta Data.
 
 > Ativar um novo arquivo de histórico exige que tenha sido feita anteriormente uma cópia de segurança dos dados. Quando você marcar essa opção para o arquivo de dados usado no momento, uma mensagem de aviso informará ser necessário fazer um backup. A criação dos arquivos de histórico é adiada e será feita somente depois do próximo backup do banco de dados.
 

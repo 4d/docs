@@ -69,7 +69,7 @@ SET DATABASE PARAMETER(Client Log Recording;1)
 | request                                                                        | [C/S または ORDA リクエストID](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt)、または SQLリクエストのメッセージ文字列、または `LOG EVENT` メッセージ                                                                                                                                                                                                                                                 |
 | bytes_in                                                  | 受信したバイト数                                                                                                                                                                                                                                                                                                                                                                                     |
 | bytes_out                                                 | 送信したバイト数                                                                                                                                                                                                                                                                                                                                                                                     |
-| server\_duration \| exec\_duration | ログが生成された場所によって変わります:<li>_server\_duration_ (クライアント上で生成された場合) -- サーバーがリクエストを処理し、レスポンスを返すまでにかかった時間 (マイクロ秒単位)。 以下の画像の B から F までに相当します。あるいは</li><li>_exec\_duration_ (サーバー上で生成された場合) -- サーバーがリクエストを処理するまでにかかった時間 (マイクロ秒単位)。 以下の画像の B から E までに相当します。</li> |
+| server\_duration \| exec\_duration | ログが生成された場所によって変わります:<li>*server\_duration* (クライアント上で生成された場合) -- サーバーがリクエストを処理し、レスポンスを返すまでにかかった時間 (マイクロ秒単位)。 以下の画像の B から F までに相当します。あるいは</li><li>*exec\_duration* (サーバー上で生成された場合) -- サーバーがリクエストを処理するまでにかかった時間 (マイクロ秒単位)。 以下の画像の B から E までに相当します。</li> |
 | write\_duration                                          | 次のものを送信するのにかかった時間 (μs):<li>リクエスト (クライアント上で実行された場合)。 以下の画像の A から B までに相当します。</li><li>レスポンス (サーバー上で実行された場合)。 以下の画像の E から F までに相当します。</li>                                                                                                                                                                             |
 | task_kind                                                 | プリエンプティブかコオペラティブか (それぞれ 'p' と 'c' で表される)                                                                                                                                                                                                                                                                                                                                  |
 | rtt                                                                            | クライアントがリクエストを送信してサーバーがそれを受け取るまでにかかる時間の概算 (マイクロ秒単位)。 以下の画像の Aから Dまでと Eから Hまでに相当します。<li>ServerNet ネットワークレイヤーを使用している場合にのみ計測されます。旧式ネットワークレイヤを使用していた場合には 0 が返されます。</li><li>Windows 10、あるいは Windows Server 2016 以前のバージョンの Windows においては、これを呼び出すと 0 が返されます。</li>                                                                                                                 |
@@ -259,7 +259,7 @@ SET DATABASE PARAMETER(Current process debug log recording;2+4)
 
 ### ファイルを有効化する方法
 
-_4DDiagnosticLog.txt_ ファイルは、`ERROR` (最も重要) から `TRACE` (あまり重要でない) まで、異なるレベルのメッセージをログに記録することができます。 デフォルトでは、`INFO` レベルが設定されており、エラーや予期せぬ結果などの重要なイベントのみを記録します (後述参照)。
+*4DDiagnosticLog.txt* ファイルは、`ERROR` (最も重要) から `TRACE` (あまり重要でない) まで、異なるレベルのメッセージをログに記録することができます。 デフォルトでは、`INFO` レベルが設定されており、エラーや予期せぬ結果などの重要なイベントのみを記録します (後述参照)。
 
 [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/ja/page642.html) コマンドの `Diagnostic log level` セレクターを使用して、必要に応じてメッセージのレベルを選択することができます。 あるレベルを選択すると、その上のレベル (より重要なもの) も暗黙のうちに選択されます。 次のレベルが利用可能です:
 
@@ -400,7 +400,7 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 
 ### サーバー側
 
-サーバー側の ORDAログファイルには、サーバーが処理した ORDAリクエストと、サーバーのレスポンス (任意) が記録されます。 ログ情報は、サーバーマシンのディスク上にある .jsonlファイル (デフォルトでは、_ordaRequests.jsonl_) に保存されます。
+サーバー側の ORDAログファイルには、サーバーが処理した ORDAリクエストと、サーバーのレスポンス (任意) が記録されます。 ログ情報は、サーバーマシンのディスク上にある .jsonlファイル (デフォルトでは、*ordaRequests.jsonl*) に保存されます。
 
 このログの開始方法:
 

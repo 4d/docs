@@ -98,7 +98,7 @@ Um formulário de múltiplas páginas possui tanto uma página de fundo quanto v
 
 ## Formulários herdados
 
-Los formularios 4D pueden utilizar y ser utilizados como "formularios heredados", lo que significa que todos los objetos de _Formulario A_ pueden ser utilizados en _Formulario B_. En este caso, _Formulario B_ "hereda" los objetos de _Formulario A_.
+Los formularios 4D pueden utilizar y ser utilizados como "formularios heredados", lo que significa que todos los objetos de *Formulario A* pueden ser utilizados en *Formulario B*. En este caso, *Formulario B* "hereda" los objetos de *Formulario A*.
 
 Referências a um formulário herdado estão sempre ativas: se um elemento de um formulário herdado for modificado (estilos de botão, por exemplo), todos os formulários que utilizam esse elemento serão automaticamente modificados.
 

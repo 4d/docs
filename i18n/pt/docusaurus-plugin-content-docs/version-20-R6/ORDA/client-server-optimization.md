@@ -41,7 +41,7 @@ O contexto de otimização é baseado nas seguintes implementações:
 
 ![](../assets/en/ORDA/cs-optimization-process.png)
 
-:::note Compatibility Note
+:::note Nota de compatibilidade
 
 Contexts handled in connections established through [`Open datastore`](../API/DataStoreClass.md#open-datastore) can only be used between similar main versions of 4D. For example, a 4D 20.x remote application can only use contexts of a 4D Server 20.x datastore.
 
@@ -58,7 +58,7 @@ Dado o seguinte código:
  End for each
 ```
 
-Thanks to the optimization, this request will only get data from used attributes (firstname, lastname, employer, employer.name) in _$sel_ from the second iteration of the loop.
+Thanks to the optimization, this request will only get data from used attributes (firstname, lastname, employer, employer.name) in *$sel* from the second iteration of the loop.
 
 ### Reutilizando a propriedade `context`
 

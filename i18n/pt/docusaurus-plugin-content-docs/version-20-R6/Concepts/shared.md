@@ -69,7 +69,7 @@ La asignación de objetos/colecciones compartidos a propiedades o elementos de o
 
 Consulte o exemplo 2 para ver uma ilustração das regras de grupos partilhados.
 
-**Nota:** Los grupos compartidos se gestionan a través de una propiedad interna llamada _locking identifier_. Para obter informações detalhadas sobre este valor, consulte a Referência da Linguagem 4D.
+**Nota:** Los grupos compartidos se gestionan a través de una propiedad interna llamada *locking identifier*. Para obter informações detalhadas sobre este valor, consulte a Referência da Linguagem 4D.
 
 ### Leitura
 
@@ -87,7 +87,7 @@ Llamar a `OB Copy` con un objeto compartido (o con un objeto cuyas propiedades s
 
 Tenga en cuenta que, a diferencia de los objetos compartidos estándar, el objeto `Storage` no crea un grupo compartido cuando se añaden objetos/colecciones compartidos como sus propiedades. Esta excepción permite utilizar el objeto **Storage** sin bloquear todos los objetos o colecciones compartidos conectados.
 
-For more information, refer to the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) command description.
+Para mais informações, consulte a descrição do comando [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html).
 
 ## Use... End use
 
@@ -99,15 +99,15 @@ La sintaxis de la estructura `Use...End use` es:
  End use
 ```
 
-La estructura `Use...End use` define una secuencia de instrucciones que ejecutarán tareas sobre el parámetro _Shared_object_or_Shared_collection_ bajo la protección de un semáforo interno. _Shared_object_or_Shared_collection_ puede ser cualquier objeto o colección compartido válido.
+La estructura `Use...End use` define una secuencia de instrucciones que ejecutarán tareas sobre el parámetro *Shared_object_or_Shared_collection* bajo la protección de un semáforo interno. *Shared_object_or_Shared_collection* puede ser cualquier objeto o colección compartido válido.
 
 Los objetos compartidos y las colecciones compartidas están diseñados para permitir la comunicación entre procesos, en particular, **procesos 4D preferentes**. Podem ser passados por referência como parâmetros de um processo para outro. Es obligatorio rodear las modificaciones en los objetos o colecciones compartidas con las palabras clave `Use...End use` para evitar el acceso concurrente entre procesos.
 
-- Once the **Use** line is successfully executed, all _Shared_object_or_Shared_collection_ properties/elements are locked for all other process in write access until the corresponding `End use` line is executed.
-- The _statement(s)_ sequence can execute any modification on the Shared_object_or_Shared_collection properties/elements without risk of concurrent access.
-- If another shared object or collection is added as a property of the _Shared_object_or_Shared_collection_ parameter, they become connected within the same shared group.
-- If another process tries to access one of the _Shared_object_or_Shared_collection_ properties or connected properties while a **Use...End use** sequence is being executed, it is automatically put on hold and waits until the current sequence is terminated.
-- The **End use** line unlocks the _Shared_object_or_Shared_collection_ properties and all objects of the same group.
+- Once the **Use** line is successfully executed, all *Shared_object_or_Shared_collection* properties/elements are locked for all other process in write access until the corresponding `End use` line is executed.
+- The *statement(s)* sequence can execute any modification on the Shared_object_or_Shared_collection properties/elements without risk of concurrent access.
+- If another shared object or collection is added as a property of the *Shared_object_or_Shared_collection* parameter, they become connected within the same shared group.
+- If another process tries to access one of the *Shared_object_or_Shared_collection* properties or connected properties while a **Use...End use** sequence is being executed, it is automatically put on hold and waits until the current sequence is terminated.
+- The **End use** line unlocks the *Shared_object_or_Shared_collection* properties and all objects of the same group.
 - En el código 4D se pueden anidar varias estructuras **Use...End use**. Para modificar un objeto/colección compartido, se debe llamar a la estructura **Use...End use**.
 
 :::note

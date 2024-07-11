@@ -5,9 +5,9 @@ title: Propriedades usuário
 
 4D oferece dois modos de operação para as configurações dos projetos:
 
-- **Standard** mode: all [settings](../settings/overview.md) are stored in the [_settings.4DSettings_ file at the project level](../Project/architecture.md#sources) and are applied in all cases. Este é o modo predefinido, adequado para a fase de desenvolvimento (todas as aplicações).
+- **Standard** mode: all [settings](../settings/overview.md) are stored in the [*settings.4DSettings* file at the project level](../Project/architecture.md#sources) and are applied in all cases. Este é o modo predefinido, adequado para a fase de desenvolvimento (todas as aplicações).
 
-- **User settings** mode: part of the custom settings are stored in a _settings.4DSettings_ file [in the Settings folder](../Project/architecture.md#settings-user) (for all data files) or [in the Data folder](../Project/architecture.md#settings-user-data) (for this data file) and are used instead of the structure settings. Este modo é adequado para a fase de implantação de aplicações de ambiente de trabalho. Este modo se activa mediante una opción situada en la [página Seguridad](../settings/security.md) de las Propiedades.
+- **User settings** mode: part of the custom settings are stored in a *settings.4DSettings* file [in the Settings folder](../Project/architecture.md#settings-user) (for all data files) or [in the Data folder](../Project/architecture.md#settings-user-data) (for this data file) and are used instead of the structure settings. Este modo é adequado para a fase de implantação de aplicações de ambiente de trabalho. Este modo se activa mediante una opción situada en la [página Seguridad](../settings/security.md) de las Propiedades.
 
 Ao definir as definições do utilizador, pode manter as definições personalizadas entre actualizações das suas aplicações 4D, ou gerir diferentes definições para a mesma aplicação 4D implementada em vários sites diferentes. Permite igualmente utilizar a programação para gerir os arquivos de configuração através de XML.
 
@@ -38,7 +38,7 @@ Puede acceder a estas cajas de diálogo utilizando el menú **Diseño > Propieda
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
-También puede acceder a estas cajas de diálogo utilizando el comando [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) con el selector _settingsType_ apropiado.
+También puede acceder a estas cajas de diálogo utilizando el comando [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) con el selector *settingsType* apropiado.
 
 A caixa de diálogo Configurações da estrutura é idêntica às Configurações standard e dá acesso a todas as suas propriedades (que podem ser substituídas por configurações do utilizador).
 
@@ -73,7 +73,7 @@ La siguiente tabla lista las páginas de parámetros que se encuentran en las ca
 | [Security page](../settings/security.md)                                                 | N/a                                          | N/a                                                       |
 | [Compatibility page](../settings/compatibility.md)                                       | N/a                                          | N/a                                                       |
 
-Al editar los parámetros en esta caja de diálogo, se almacenan automáticamente en el archivo _settings.4DSettings_ correspondiente (ver más abajo) o en el archivo _Backup.4DSettings_ (consulte la página [Parámetros de backup](../Backup/settings.md) para o
+Al editar los parámetros en esta caja de diálogo, se almacenan automáticamente en el archivo *settings.4DSettings* correspondiente (ver más abajo) o en el archivo *Backup.4DSettings* (consulte la página [Parámetros de backup](../Backup/settings.md) para o
 
 ## `SET DATABASE PARAMETER` y parámetros de usuario
 
@@ -93,7 +93,7 @@ O arquivo de definições do utilizador padrão é criado automaticamente e colo
 
 [`ProjectFolder/Settings/settings.4DSettings`](../Project/architecture.md#settings-user)
 
-... where _ProjectFolder_ is the name of the folder containing the project structure file.
+... where *ProjectFolder* is the name of the folder containing the project structure file.
 
 Nas aplicações fusionadas, o arquivo de definições do utilizador é colocado na seguinte localização:
 
@@ -106,7 +106,7 @@ O arquivo de definições do usuário ligado ao arquivo de dados é automaticame
 
 [`Data/Settings/settings.4DSettings`](../Project/architecture.md#settings-user-data)
 
-... where _Data_ is the name of the folder containing the current data file of the application.
+... where *Data* is the name of the folder containing the current data file of the application.
 
 > Quando o arquivo de dados estiver localizado ao mesmo nível que o arquivo da estrutura do projeto, os arquivos de definições do utilizador baseados na estrutura e nos dados partilham a mesma localização e o mesmo arquivo. El comando de menú **Propiedades usuario para el archivo de datos...** no se propone.
 
@@ -122,8 +122,8 @@ As definições podem ser guardadas em três níveis. Cada configuração defini
 
 | **Nível de prioridade**           | **Name**                                                                                                                  | **Location**                                                                                                                                                                                                 | **Comments**                                                                                                                                                                       |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 3 (mais baixo) | Definições de estrutura (ou Definições quando a função "Definições do utilizador" não estiver ativada) | _**settings.4DSettings**_ en la carpeta Sources (bases proyecto) o en la carpeta Settings al mismo nivel que el archivo de estructura (bases binarias) | Localização única quando as definições do utilizador não estão ativadas. Aplicado a todos os exemplares da aplicação.                              |
-| 2                                 | Propriedades usuário (todos os ficheiros de dados)                                                     | Archivo _**settings.4DSettings**_ en la carpeta Settings en el mismo nivel que la carpeta Project                                                                                            | Substitui as definições da estrutura. Armazenado no pacote da aplicação.                                                                           |
-| 1 (mais alto)  | Propriedades usuário (ficheiro de dados atual)                                                         | Archivo _**settings.4DSettings**_ en la carpeta Settings al mismo nivel que el archivo de datos                                                                                              | Substitui as propriedades de estrutura e as propriedades usuário. Aplicado apenas quando o arquivo de dados linkado for utilizado com a aplicação. |
+| 3 (mais baixo) | Definições de estrutura (ou Definições quando a função "Definições do utilizador" não estiver ativada) | ***settings.4DSettings*** en la carpeta Sources (bases proyecto) o en la carpeta Settings al mismo nivel que el archivo de estructura (bases binarias) | Localização única quando as definições do utilizador não estão ativadas. Aplicado a todos os exemplares da aplicação.                              |
+| 2                                 | Propriedades usuário (todos os ficheiros de dados)                                                     | Archivo ***settings.4DSettings*** en la carpeta Settings en el mismo nivel que la carpeta Project                                                                                            | Substitui as definições da estrutura. Armazenado no pacote da aplicação.                                                                           |
+| 1 (mais alto)  | Propriedades usuário (ficheiro de dados atual)                                                         | Archivo ***settings.4DSettings*** en la carpeta Settings al mismo nivel que el archivo de datos                                                                                              | Substitui as propriedades de estrutura e as propriedades usuário. Aplicado apenas quando o arquivo de dados linkado for utilizado com a aplicação. |
 
 Lembre que os arquivo de definições do utilizador contêm apenas um subconjunto de definições relevantes, enquanto o arquivo de estrutura contém todas as definições personalizadas, incluindo as definições principais.

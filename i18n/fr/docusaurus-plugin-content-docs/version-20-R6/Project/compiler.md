@@ -134,9 +134,9 @@ Ce paramètre vous permet de sélectionner la famille de processeurs pour laquel
 
 Deux options de cible sont proposées. Le résultat dépend du processeur de la machine sur laquelle 4D est exécuté.
 
-| _Option_                                                                 | _sur Windows Intel/AMD_                                                                       | _sur macOS Intel_                                                                          | _sur macOS Silicon_                                                                        |
+| *Option*                                                                 | *sur Windows Intel/AMD*                                                                       | *sur macOS Intel*                                                                          | *sur macOS Silicon*                                                                        |
 | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| **Tous les processeurs (Intel/AMD et Apple Silicon)** | Code pour Intel/AMD<br/>_Il n'est pas possible de produire du code Apple Silicon sur Windows_ | Code pour Apple Silicon + Code pour Intel/AMD<br/>_Deux codes compilés seront disponibles_ | Code pour Apple Silicon + Code pour Intel/AMD<br/>_Deux codes compilés seront disponibles_ |
+| **Tous les processeurs (Intel/AMD et Apple Silicon)** | Code pour Intel/AMD<br/>*Il n'est pas possible de produire du code Apple Silicon sur Windows* | Code pour Apple Silicon + Code pour Intel/AMD<br/>*Deux codes compilés seront disponibles* | Code pour Apple Silicon + Code pour Intel/AMD<br/>*Deux codes compilés seront disponibles* |
 | **Mon processeur (processeur)**                       | Code pour Intel/AMD                                                                           | Code pour Intel/AMD                                                                        | Code pour Apple Silicon                                                                    |
 
 > La cible de compilation Apple Silicon nécessite que l'application **Clang** soit installée sur votre machine. Clang est fournie avec la dernière version de Xcode. Voir les [pré-requis du compilateur Silicon](#requirements) pour plus d'informations.
@@ -209,7 +209,7 @@ To re-enable warnings in a code section, use the following comments:
 Only warnings with numbers can be disabled or enabled. Warning numbers are specified at the end of each message in the list of compilation errors or in the list found in the warning tab.
 Par exemple, pour désactiver le warning suivant :
 
-_1: Redefinition of variable $a (550.10)_
+*1: Redefinition of variable $a (550.10)*
 
 ... you just need to write the following comments in your 4D method:
 
@@ -290,12 +290,12 @@ Le fichier d’erreurs est plus ou moins long suivant le nombre d’erreurs et d
 Le fichier d’erreurs est structuré ainsi :
 
 - En tête de ce fichier se trouve la liste des erreurs et warnings, triée par méthode et dans leur ordre de création dans 4D.
-- Sous la rubrique _**Erreurs générales**_ sont regroupées toutes les impossibilités de typage et les ambiguïtés d’identité. Ces indications sont détaillées de la façon suivante :
+- Sous la rubrique ***Erreurs générales*** sont regroupées toutes les impossibilités de typage et les ambiguïtés d’identité. Ces indications sont détaillées de la façon suivante :
   - le numéro de ligne dans la méthode (le numéro 0 est retourné pour les erreurs générales)
   - l’attribut warning indique si l’anomalie détectée est un warning (warning="true") ou une erreur (warning="false")
   - un diagnostic sur la nature de l’erreur
 
-Si votre projet ne présente aucune erreur générale, le fichier ne comporte pas de section _Erreurs générales_.
+Si votre projet ne présente aucune erreur générale, le fichier ne comporte pas de section *Erreurs générales*.
 
 Un fichier d’erreurs peut donc comporter trois types de messages :
 
@@ -350,7 +350,7 @@ Le code compilé qui en résulte est stocké dans le dossier [DerivedData](archi
 
 ### Compilateur Silicon
 
-Le compilateur Silicon génère du code compilé natif pour les processeurs Apple Silicon tels que le _Apple M1_.
+Le compilateur Silicon génère du code compilé natif pour les processeurs Apple Silicon tels que le *Apple M1*.
 
 Le code compilé qui en résulte est stocké dans le dossier [Libraries](architecture.md#libraries) du projet.
 
@@ -358,7 +358,7 @@ Le code compilé qui en résulte est stocké dans le dossier [Libraries](archite
 
 - **Ordinateur Apple** : Le compilateur Silicon peut uniquement être lancé sur une machine Apple.
 - **Architecture projet de 4D** : Le compilateur Silicon est uniquement disponible pour les développements 4D utilisant l'[architecture projet](architecture.md).
-- **Xcode ou Developer Tools**: Le compilateur Silicon fait appel au compilateur macOS open-source **Clang** pour compiler le projet à partir du code C++ à la [deuxième étape](#compilation-incrementale) de la compilation. _clang_ nécessite des bibliothèques natives Apple, qui sont fournies soit par **Xcode** soit par **Developer Tools**.
+- **Xcode ou Developer Tools**: Le compilateur Silicon fait appel au compilateur macOS open-source **Clang** pour compiler le projet à partir du code C++ à la [deuxième étape](#compilation-incrementale) de la compilation. *clang* nécessite des bibliothèques natives Apple, qui sont fournies soit par **Xcode** soit par **Developer Tools**.
   - **Si vous avez déjà installé** Xcode ou Developer Tools sur votre ordinateur, vous devez juste vous assurer que sa version est conforme aux spécifications de 4D.
   - **Si vous n'avez pas déjà installé** l'un de ces outils sur votre machine, il vous sera nécessaire d'en télécharger un depuis le site web Apple Developer.
 

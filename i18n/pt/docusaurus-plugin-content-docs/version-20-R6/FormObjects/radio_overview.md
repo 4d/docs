@@ -56,38 +56,38 @@ O estilo de botão rádio está pensado principalmente para sua integração em 
 
 By default, the Toolbar style has a transparent background with a label in the center. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
-- _Windows_ - el botón está resaltado.
+- *Windows* - el botón está resaltado.
 
 ![](../assets/en/FormObjects/radio_toolbar.png)
 
-- _macOS_ - el resalte del botón nunca aparece.
+- *macOS* - el resalte del botón nunca aparece.
 
 ### Bevel
 
 El estilo de botón radio Bevel es similar al comportamiento del estilo [Barra de herramientas](#toolbar), excepto que tiene un fondo gris claro y un contorno gris. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
-- _Windows_ - el botón está resaltado.
+- *Windows* - el botón está resaltado.
 
 ![](../assets/en/FormObjects/radio_bevel.png)
 
-- _macOS_ - el resalte del botón nunca aparece.
+- *macOS* - el resalte del botón nunca aparece.
 
 ### Bevel arredondado
 
 El estilo de botón Bevel redondeado es casi idéntico al estilo [Bevel](#bevel), excepto que, dependiendo del sistema operativo, las esquinas del botón pueden ser redondeadas.
 
-- _Windows_ - el botón es idéntico al estilo [Bevel](#bevel).
+- *Windows* - el botón es idéntico al estilo [Bevel](#bevel).
 
-- _macOS_ - las esquinas del botón están redondeadas.
+- *macOS* - las esquinas del botón están redondeadas.
   ![](../assets/en/FormObjects/roundedBevel.png)
 
 ### OS X Gradient
 
 El estilol botón OS X Gradient es casi idéntico al estilo [Bevel](#bevel), excepto que, dependiendo del sistema operativo, puede tener una apariencia de dos tonos.
 
-- _Windows_ - el botón es idéntico al estilo [Bevel](#bevel).
+- *Windows* - el botón es idéntico al estilo [Bevel](#bevel).
 
-- _macOS_ - el botón se muestra como un botón de dos tonos.
+- *macOS* - el botón se muestra como un botón de dos tonos.
 
 ### OS X Texturizado
 
@@ -95,9 +95,9 @@ El estilo del botón radio OS X Textured es casi idéntico al estilo [Barra de h
 
 Como padrão, o estilo OS X Textured aparece como:
 
-- _Windows_ -un botón en forma de barra de herramientas con una etiqueta en el centro y el fondo se muestra siempre.
+- *Windows* -un botón en forma de barra de herramientas con una etiqueta en el centro y el fondo se muestra siempre.
 
-- _macOS_ - - un botón sistema estándar que muestra un cambio de color de gris claro a gris oscuro. Sua altura está predefinida: não é possível ampliar ou reduzir.
+- *macOS* - - un botón sistema estándar que muestra un cambio de color de gris claro a gris oscuro. Sua altura está predefinida: não é possível ampliar ou reduzir.
 
 ![](../assets/en/FormObjects/OSXTextured.png)
 
@@ -107,11 +107,11 @@ El estilo de botón Office XP combina la apariencia del estilo [Clásico](#regul
 
 As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas nos sistemas de cores. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
-- _Windows_ - su fondo sólo aparece cuando el ratón pasa por encima.
+- *Windows* - su fondo sólo aparece cuando el ratón pasa por encima.
 
 ![](../assets/en/FormObjects/radio_xp.png)
 
-- _macOS_ - su fondo se muestra siempre.
+- *macOS* - su fondo se muestra siempre.
 
 ### Contrair/expandir
 

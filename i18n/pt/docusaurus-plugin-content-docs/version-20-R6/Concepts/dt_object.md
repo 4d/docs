@@ -159,7 +159,7 @@ A notação de objetos está disponível em qualquer elemento da lenguagem que p
      $val:=$myCollection[3].subvalue //elemento coleção
 ```
 
-- **4D commands** that return objects.
+- **Comandos 4D** que devolvem objectos.
   Exemplo:
 
 ```4d
@@ -227,7 +227,7 @@ Exemplo:
  x:=vPtr->a //x=10
 ```
 
-## Object operators
+## Operadores Objeto
 
 You can use comparison operators with **object references**, which means that you can evaluate if two or more references point to the same instance of an object.
 
@@ -248,7 +248,7 @@ Based upon the code above, the comparison table is:
 
 ## Resources
 
-Objects use _resources_ such a documents, entity locks, and of course, memory. Esses recursos são mantidos enquanto os objetos precisarem. Normalmente, você não precisa se preocupar com eles, 4D libera automaticamente todos os recursos anexados a um objeto quando detecta que o objeto em si não é mais referenciado por qualquer variável ou outro objeto.
+Objects use *resources* such a documents, entity locks, and of course, memory. Esses recursos são mantidos enquanto os objetos precisarem. Normalmente, você não precisa se preocupar com eles, 4D libera automaticamente todos os recursos anexados a um objeto quando detecta que o objeto em si não é mais referenciado por qualquer variável ou outro objeto.
 
 For instance, when there is no more references to an entity on which you have set a lock with [`$entity.lock()`](../API/EntityClass.md#lock), 4D will free the memory but also automatically release the associated lock, a call to [`$entity.unlock()`](../API/EntityClass.md#unlock) is useless.
 

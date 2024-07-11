@@ -94,7 +94,7 @@ http://localhost/friends.shtml
 
 ### REST request
 
-If we not only want to _display_ data, but to _use_ it, we can use ORDA and the REST server. Thanks to the [ORDA concept](ORDA/overview.md), the `Friends` table is automatically mapped to a dataclass and is available through [REST](REST/gettingStarted.md).
+If we not only want to *display* data, but to *use* it, we can use ORDA and the REST server. Thanks to the [ORDA concept](ORDA/overview.md), the `Friends` table is automatically mapped to a dataclass and is available through [REST](REST/gettingStarted.md).
 
 1. Nous allons utiliser le serveur REST pour accéder aux données : dans la boîte de dialogue des \*\* Paramètres\*\*, sélectionnez **Web** > **Fonctionnalités Web**, et cochez l'option **Exposer en tant que serveur REST**.
 
@@ -188,8 +188,8 @@ In the above sections, we get free access to the application from web requests. 
 
 The most simple and secured way to log a user on the 4D web server is based upon the following scenario:
 
-- Users are stored in a dedicated, unexposed table (named _WebUsers_ for example)
-- The _WebUsers_ table could be [encrypted](MSC/encrypt.md) and stores the user login and a hash of their password.
+- Users are stored in a dedicated, unexposed table (named *WebUsers* for example)
+- The *WebUsers* table could be [encrypted](MSC/encrypt.md) and stores the user login and a hash of their password.
 
 1. Create a table with some fields, for example:
 

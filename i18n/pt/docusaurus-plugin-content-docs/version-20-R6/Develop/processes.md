@@ -117,7 +117,7 @@ Although they have been designed mainly for interprocess communication in the co
 
 Um worker é usado para solicitar a um processo que execute métodos projeto. Um worker consiste de:
 
-- a unique name (_warning: the name is case sensitive_), also used to name its associated process
+- a unique name (*warning: the name is case sensitive*), also used to name its associated process
 - um processo associado, que pode ou não existir em um determinado momento
 - uma caixa de mensagem
 - um método de inicialização (opcional)
@@ -138,7 +138,7 @@ Worker processes can be created on 4D Server through stored procedures: for exam
 
 A worker process is closed by a call to the [`KILL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1390.html) command, which empties the worker's message box and asks the associated process to stop processing messages and to terminate its current execution as soon as the current task is finished.
 
-The startup method of a worker is the method used to create the worker (at first use). If `CALL WORKER` is called with an empty _method_ parameter, then the startup method is automatically reused as method to execute.
+The startup method of a worker is the method used to create the worker (at first use). If `CALL WORKER` is called with an empty *method* parameter, then the startup method is automatically reused as method to execute.
 
 The main process created by 4D when opening a database for user and application modes is a worker process and can be called using `CALL WORKER`. Note that the name of the main process may vary depending on the 4D localization language, but it always has the process number 1; as a result, it's more convenient to designate it by process number instead of process name when calling `CALL WORKER`.
 

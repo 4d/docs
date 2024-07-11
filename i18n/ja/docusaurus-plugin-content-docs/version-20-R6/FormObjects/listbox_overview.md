@@ -59,7 +59,7 @@ title: リストボックス
 
 リストボックスオブジェクトはプロパティによってあらかじめ設定可能なほか、プログラムにより動的に管理することもできます。
 
-4D ランゲージにはリストボックス関連のコマンドをまとめた "リストボックス" テーマが専用に設けられていますが、"オブジェクトプロパティ" コマンドや `EDIT ITEM`、`Displayed line number` コマンドなど、ほかのテーマのコマンドも利用することができます。 詳細については _4D ランゲージリファレンスマニュアル_ の[リストボックスコマンド一覧](https://doc.4d.com/4Dv18/4D/18/List-Box-Commands-Summary.300-4505230.ja.html)を参照してください。
+4D ランゲージにはリストボックス関連のコマンドをまとめた "リストボックス" テーマが専用に設けられていますが、"オブジェクトプロパティ" コマンドや `EDIT ITEM`、`Displayed line number` コマンドなど、ほかのテーマのコマンドも利用することができます。 詳細については *4D ランゲージリファレンスマニュアル* の[リストボックスコマンド一覧](https://doc.4d.com/4Dv18/4D/18/List-Box-Commands-Summary.300-4505230.ja.html)を参照してください。
 
 ## リストボックスオブジェクト
 
@@ -104,7 +104,7 @@ LIST TO ARRAY("ListName";varCol)
 
 :::note
 
-エンティティが削除されると、その参照は _undefined_ の値とともにエンティティセレクションに 残り、リストボックスには空白の行が表示されます。 この場合、[`.clean()`](API/EntitySelectionClass.md#clean) 関数を呼び出すことで、削除されたエンティティ参照が含まれないエンティティセレクションを新規に取得することができます。
+エンティティが削除されると、その参照は *undefined* の値とともにエンティティセレクションに 残り、リストボックスには空白の行が表示されます。 この場合、[`.clean()`](API/EntitySelectionClass.md#clean) 関数を呼び出すことで、削除されたエンティティ参照が含まれないエンティティセレクションを新規に取得することができます。
 
 :::
 
@@ -201,14 +201,14 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
 | On After Keystroke   | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
-| On After Sort        | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[headerName](#追加プロパティ)</li>                                                | _複合フォーミュラはソート不可 <br/>(例: This.firstName + This.lastName)_ |
-| On Alternative Click | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       | _配列リストボックスのみ_                                                                                                                |
+| On After Sort        | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[headerName](#追加プロパティ)</li>                                                | *複合フォーミュラはソート不可 <br/>(例: This.firstName + This.lastName)* |
+| On Alternative Click | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       | *配列リストボックスのみ*                                                                                                                |
 | On Before Data Entry | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
 | On Before Keystroke  | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
 | On Begin Drag Over   | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
 | On Clicked           | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
-| On Close Detail      | <li>[row](#追加プロパティ)</li>                                                                                                                 | _カレントセレクション&命名セレクションリストボックスのみ_                                                                           |
-| On Collapse          | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       | _階層リストボックスのみ_                                                                                                                |
+| On Close Detail      | <li>[row](#追加プロパティ)</li>                                                                                                                 | *カレントセレクション&命名セレクションリストボックスのみ*                                                                           |
+| On Collapse          | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       | *階層リストボックスのみ*                                                                                                                |
 | On Column Moved      | <li>[columnName](#追加プロパティ)</li><li>[newPosition](#追加プロパティ)</li><li>[oldPosition](#追加プロパティ)</li>                                          |                                                                                                                              |
 | On Column Resize     | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[newSize](#追加プロパティ)</li><li>[oldSize](#追加プロパティ)</li>                       |                                                                                                                              |
 | On Data Change       | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
@@ -217,17 +217,17 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | On Double Clicked    | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
 | On Drag Over         | <li>[area](#追加プロパティ)</li><li>[areaName](#追加プロパティ)</li><li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li> |                                                                                                                              |
 | On Drop              | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
-| On Expand            | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       | _階層リストボックスのみ_                                                                                                                |
-| On Footer Click      | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[footerName](#追加プロパティ)</li>                                                | _配列、カレントセレクション&命名セレクションリストボックスのみ_                                                                        |
-| On Getting Focus     | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       | _追加プロパティの取得はセル編集時のみ_                                                                                                         |
+| On Expand            | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       | *階層リストボックスのみ*                                                                                                                |
+| On Footer Click      | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[footerName](#追加プロパティ)</li>                                                | *配列、カレントセレクション&命名セレクションリストボックスのみ*                                                                        |
+| On Getting Focus     | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       | *追加プロパティの取得はセル編集時のみ*                                                                                                         |
 | On Header Click      | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[headerName](#追加プロパティ)</li>                                                |                                                                                                                              |
 | On Load              |                                                                                                                                          |                                                                                                                              |
-| On Losing Focus      | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       | _追加プロパティの取得はセル編集完了時のみ_                                                                                                       |
+| On Losing Focus      | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       | *追加プロパティの取得はセル編集完了時のみ*                                                                                                       |
 | On Mouse Enter       | <li>[area](#追加プロパティ)</li><li>[areaName](#追加プロパティ)</li><li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li> |                                                                                                                              |
 | On Mouse Leave       |                                                                                                                                          |                                                                                                                              |
 | On Mouse Move        | <li>[area](#追加プロパティ)</li><li>[areaName](#追加プロパティ)</li><li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li> |                                                                                                                              |
-| On Open Detail       | <li>[row](#追加プロパティ)</li>                                                                                                                 | _カレントセレクション&命名セレクションリストボックスのみ_                                                                           |
-| On Row Moved         | <li>[newPosition](#追加プロパティ)</li><li>[oldPosition](#追加プロパティ)</li>                                                                         | _配列リストボックスのみ_                                                                                                                |
+| On Open Detail       | <li>[row](#追加プロパティ)</li>                                                                                                                 | *カレントセレクション&命名セレクションリストボックスのみ*                                                                           |
+| On Row Moved         | <li>[newPosition](#追加プロパティ)</li><li>[oldPosition](#追加プロパティ)</li>                                                                         | *配列リストボックスのみ*                                                                                                                |
 | On Selection Change  |                                                                                                                                          |                                                                                                                              |
 | On Scroll            | <li>[horizontalScroll](#追加プロパティ)</li><li>[verticalScroll](#追加プロパティ)</li>                                                                 |                                                                                                                              |
 | On Unload            |                                                                                                                                          |                                                                                                                              |
@@ -321,8 +321,8 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
 | On After Keystroke   | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
-| On After Sort        | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[headerName](#追加プロパティ)</li>                                                | _複合フォーミュラはソート不可 <br/>(例: This.firstName + This.lastName)_ |
-| On Alternative Click | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       | _配列リストボックスのみ_                                                                                                                |
+| On After Sort        | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[headerName](#追加プロパティ)</li>                                                | *複合フォーミュラはソート不可 <br/>(例: This.firstName + This.lastName)* |
+| On Alternative Click | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       | *配列リストボックスのみ*                                                                                                                |
 | On Before Data Entry | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
 | On Before Keystroke  | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
 | On Begin Drag Over   | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
@@ -333,12 +333,12 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | On Double Clicked    | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
 | On Drag Over         | <li>[area](#追加プロパティ)</li><li>[areaName](#追加プロパティ)</li><li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li> |                                                                                                                              |
 | On Drop              | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
-| On Footer Click      | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[footerName](#追加プロパティ)</li>                                                | _配列、カレントセレクション&命名セレクションリストボックスのみ_                                                                        |
-| On Getting Focus     | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       | _追加プロパティの取得はセル編集時のみ_                                                                                                         |
+| On Footer Click      | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[footerName](#追加プロパティ)</li>                                                | *配列、カレントセレクション&命名セレクションリストボックスのみ*                                                                        |
+| On Getting Focus     | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       | *追加プロパティの取得はセル編集時のみ*                                                                                                         |
 | On Header Click      | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[headerName](#追加プロパティ)</li>                                                |                                                                                                                              |
 | On Load              |                                                                                                                                          |                                                                                                                              |
-| On Losing Focus      | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       | _追加プロパティの取得はセル編集完了時のみ_                                                                                                       |
-| On Row Moved         | <li>[newPosition](#追加プロパティ)</li><li>[oldPosition](#追加プロパティ)</li>                                                                         | _配列リストボックスのみ_                                                                                                                |
+| On Losing Focus      | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       | *追加プロパティの取得はセル編集完了時のみ*                                                                                                       |
+| On Row Moved         | <li>[newPosition](#追加プロパティ)</li><li>[oldPosition](#追加プロパティ)</li>                                                                         | *配列リストボックスのみ*                                                                                                                |
 | On Scroll            | <li>[horizontalScroll](#追加プロパティ)</li><li>[verticalScroll](#追加プロパティ)</li>                                                                 |                                                                                                                              |
 | On Unload            |                                                                                                                                          |                                                                                                                              |
 
@@ -358,7 +358,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ランタイムにおいてヘッダーで発生したイベントは、[その列のオブジェクトメソッド](#オブジェクトメソッド) が受け取ります。
 
-ヘッダーに `OBJECT SET VISIBLE` コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのヘッダーが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"header3";False)` という命令の場合、指定したヘッダーだけではなく、_header3_ が属するリストボックスの全ヘッダーを非表示にします。
+ヘッダーに `OBJECT SET VISIBLE` コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのヘッダーが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"header3";False)` という命令の場合、指定したヘッダーだけではなく、*header3* が属するリストボックスの全ヘッダーを非表示にします。
 
 ### ヘッダー特有のプロパティ
 
@@ -394,7 +394,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ランタイムにおいてフッターで発生したイベントは、[その列のオブジェクトメソッド](#オブジェクトメソッド) が受け取ります。
 
-フッターに `OBJECT SET VISIBLE` コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのフッターが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"footer3";False)` という命令の場合、指定したフッターだけではなく、_footer3_ が属するリストボックスの全フッターを非表示にします。
+フッターに `OBJECT SET VISIBLE` コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのフッターが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"footer3";False)` という命令の場合、指定したフッターだけではなく、*footer3* が属するリストボックスの全フッターを非表示にします。
 
 ### フッター特有のプロパティ
 
@@ -434,7 +434,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ![](../assets/en/FormObjects/listbox_entry.png)
 
-_arrText_ 列のメソッドは以下の通りです:
+*arrText* 列のメソッドは以下の通りです:
 
 ```4d
  Case of
@@ -581,7 +581,7 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 	"rowFillSource": "UI_SetColor",
 ```
 
-_UI_SetColor_ メソッドに次のように書けます:
+*UI_SetColor* メソッドに次のように書けます:
 
 ```4d
  If(Is in set("$SampleSet"))
@@ -759,13 +759,13 @@ End if
 
 - フォームエディターのプロパティリストを使用して階層要素を手作業で設定する (または JSON フォームを編集する)。
 - フォームエディターのリストボックス管理メニューを使用して階層を生成する。
-- [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv18/4D/18/LISTBOX-SET-HIERARCHY.301-4505193.ja.html) や [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv18/4D/18/LISTBOX-GET-HIERARCHY.301-4505194.ja.html) コマンドを使用する (_4D ランゲージリファレンス_ 参照)。
+- [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv18/4D/18/LISTBOX-SET-HIERARCHY.301-4505193.ja.html) や [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv18/4D/18/LISTBOX-GET-HIERARCHY.301-4505194.ja.html) コマンドを使用する (*4D ランゲージリファレンス* 参照)。
 
 #### "階層リストボックス" プロパティによる階層化
 
-このプロパティを使用してリストボックスの階層表示を設定します。 JSON フォームにおいては、リストボックス列の [_dataSource_ プロパティの値が配列名のコレクションであるとき](properties_Object.md#配列リストボックス) に階層化します。
+このプロパティを使用してリストボックスの階層表示を設定します。 JSON フォームにおいては、リストボックス列の [*dataSource* プロパティの値が配列名のコレクションであるとき](properties_Object.md#配列リストボックス) に階層化します。
 
-_階層リストボックス_ プロパティが選択されると、追加プロパティである **Variable 1...10** が利用可能になります。これらには階層の各レベルとして使用するデータソース配列を指定します。これが _dataSource_ の値である配列名のコレクションとなります。 入力欄に値が入力されると、新しい入力欄が追加されます。 10個までの変数を指定できます。 これらの変数は先頭列に表示される階層のレベルを設定します。
+*階層リストボックス* プロパティが選択されると、追加プロパティである **Variable 1...10** が利用可能になります。これらには階層の各レベルとして使用するデータソース配列を指定します。これが *dataSource* の値である配列名のコレクションとなります。 入力欄に値が入力されると、新しい入力欄が追加されます。 10個までの変数を指定できます。 これらの変数は先頭列に表示される階層のレベルを設定します。
 
 Variable 1 は常に、リストボックスの先頭列の変数名に対応します (この 2つの値は自動でバインドされます)。 Variable 1欄は常に表示され、入力できます。 例: country。
 Variable 2 も常に表示され、入力できます。これは二番目の階層レベルを指定します。 例: regions。
@@ -884,10 +884,10 @@ Variable 2 も常に表示され、入力できます。これは二番目の階
 
 選択と同様に、`LISTBOX GET CELL POSITION` コマンドは階層リストボックスと非階層リストボックスにおいて同じ値を返します。 つまり以下の両方の例題で、`LISTBOX GET CELL POSITION` は同じ位置 (3;2) を返します。
 
-_非階層表示:_
+*非階層表示:*
 ![](../assets/en/FormObjects/hierarch9.png)
 
-_階層表示:_
+*階層表示:*
 ![](../assets/en/FormObjects/hierarch10.png)
 
 サブ階層のすべての行が隠されているとき、ブレーク行は自動で隠されます。 先の例題で 1から 3行目までが隠されていると、"Brittany" のブレーク行は表示されません。
@@ -904,10 +904,10 @@ _階層表示:_
 
 以下のリストボックスを例題とします (割り当てた配列名は括弧内に記載しています):
 
-_非階層表示:_
+*非階層表示:*
 ![](../assets/en/FormObjects/hierarch12.png)
 
-_階層表示:_
+*階層表示:*
 ![](../assets/en/FormObjects/hierarch13.png)
 
 階層モードでは `tStyle` や `tColors` 配列で変更されたスタイルは、ブレーク行に適用されません。 ブレークレベルでカラーやスタイルを変更するには、以下のステートメントを実行します:
@@ -1025,7 +1025,7 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 
 |                       | valueType                                   | text | 実数 | integer | boolean | color | event |
 | --------------------- | ------------------------------------------- | ---- | -- | ------- | ------- | ----- | ----- |
-| _属性_                  | _説明_                                        |      |    |         |         |       |       |
+| *属性*                  | *説明*                                        |      |    |         |         |       |       |
 | value                 | セルの値 (入力または出力)           | ○    | ○  | ○       |         |       |       |
 | min                   | 最小値                                         |      | ○  | ○       |         |       |       |
 | max                   | 最大値                                         |      | ○  | ○       |         |       |       |
@@ -1222,7 +1222,7 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 
 #### unitsList、unitsListName、 unitsListReference と unitReference
 
-特定の値を使用することで、セルの値に関連した単位を追加することができます (_例_: "10 cm", "20 pixels" 等)。 単位リストを定義するためには、以下の属性のどれか一つを使用します:
+特定の値を使用することで、セルの値に関連した単位を追加することができます (*例*: "10 cm", "20 pixels" 等)。 単位リストを定義するためには、以下の属性のどれか一つを使用します:
 
 - "unitsList": 利用可能な単位 (例: "cm"、"inches"、"km"、"miles"、他) を定義するのに使用する x 要素を格納した配列。 オブジェクト内で単位を定義するためには、この属性を使用します。
 - "unitsListReference": 利用可能な単位を含んだ 4Dリストへの参照。 [New list](https://doc.4d.com/4Dv18/4D/18/New-list.301-4505738.ja.html) コマンドで作成された 4D リストで単位を定義するためには、この属性を使用します。
@@ -1283,7 +1283,7 @@ OB SET($ob;"value";$entry)
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_colorValue.png)
 
-- 値がテキストの場合、そのテキストが表示されます (_例_: "value";"Automatic")。
+- 値がテキストの場合、そのテキストが表示されます (*例*: "value";"Automatic")。
 
 #### event valueType
 
@@ -1311,5 +1311,5 @@ OB SET($ob;"label";"Edit...")
   - コンボボックスエリア
   - 単位ボタン (値 x が値 x+1 へとスイッチしたとき)
   - チェックボックス (チェック/チェックなしの状態がスイッチしたとき)
-- **On Clicked**: ユーザーが、"event" _valueType_ 属性を使用して実装されたボタンをクリックした場合、`On Clicked` イベントが生成されます。 このイベントはプログラマーによって管理されます。
+- **On Clicked**: ユーザーが、"event" *valueType* 属性を使用して実装されたボタンをクリックした場合、`On Clicked` イベントが生成されます。 このイベントはプログラマーによって管理されます。
 - **On Alternative Click**: ユーザーが省略ボタン ("alternateButton" 属性) をクリックした場合、`On Alternative Click` イベントが生成されます。 このイベントはプログラマーによって管理されます。
