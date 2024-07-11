@@ -2699,7 +2699,7 @@ $colResult:=$col.query("o = :v"; {parameters: {v: $o3}})
 
 ```
 
-Example with a collection reference:
+Exemplo com uma referência de coleção:
 
 ```4d
 
