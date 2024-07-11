@@ -860,7 +860,7 @@ The callback is called with the parameter(s) passed in *param* (optional). The c
 
 A chamada de retorno recebe os seguintes parâmetros:
 
-- in *$1.value*: element value to be evaluated
+- em *$1.value*: valor do elemento a ser avaliado
 - em *$2*: param
 - em *$N...*: paramN...
 
@@ -1074,7 +1074,7 @@ The callback is called with the parameter(s) passed in *param* (optional) and an
 
 A chamada de retorno recebe os seguintes parâmetros:
 
-- in *$1.value*: element value to be evaluated
+- em *$1.value*: valor do elemento a ser avaliado
 - em *$2*: param
 - em *$N...*: paramN...
 
@@ -1161,7 +1161,7 @@ The callback is called with the parameter(s) passed in *param* (optional). The c
 
 A chamada de retorno recebe os seguintes parâmetros:
 
-- in *$1.value*: element value to be evaluated
+- em *$1.value*: valor do elemento a ser avaliado
 - em *$2*: param
 - em *$N...*: paramN...
 
@@ -1249,7 +1249,7 @@ The callback is called with the parameter(s) passed in *param* (optional). The c
 
 A chamada de retorno recebe os seguintes parâmetros:
 
-- in *$1.value*: element value to be evaluated
+- em *$1.value*: valor do elemento a ser avaliado
 - em *$2*: param
 - em *$N...*: paramN...
 
@@ -1419,7 +1419,7 @@ The callback is called with the parameter(s) passed in *param* (optional). A cha
 
 A chamada de retorno recebe os seguintes parâmetros:
 
-- in *$1.value*: element value to be evaluated
+- em *$1.value*: valor do elemento a ser avaliado
 - em *$2*: param
 - em *$N...*: paramN...
 
@@ -1910,7 +1910,7 @@ The callback is called with the parameter(s) passed in *param* (optional). A cha
 
 A chamada de retorno recebe os seguintes parâmetros:
 
-- in *$1.value*: element value to be evaluated
+- em *$1.value*: valor do elemento a ser avaliado
 - em *$2*: param
 - em *$N...*: paramN...
 
