@@ -267,7 +267,7 @@ To prevent blocking code, you can pass a maximum waiting time in seconds in the 
 
 If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
 
-The function returns the value of the `.signaled` property. Evaluating this value allows knowing if the function returned because the `.trigger( )` has been called (`.signaled` is **true**) or if the *timeout* expired (`.signaled` is **false**).
+La función devuelve el valor de la propiedad `.signaled`. Evaluating this value allows knowing if the function returned because the `.trigger( )` has been called (`.signaled` is **true**) or if the *timeout* expired (`.signaled` is **false**).
 
 > The state of a process that waits for a signal is `Waiting for internal flag`.
 
