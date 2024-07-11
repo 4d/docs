@@ -505,7 +505,7 @@ In *path*, pass a relative POSIX path to designate the file to return. A rota se
 
 **Valor retornado**
 
-A `File` object or null if *path* is invalid.
+Um objeto `File` ou null se *path* for inválido.
 
 #### Exemplo
 
