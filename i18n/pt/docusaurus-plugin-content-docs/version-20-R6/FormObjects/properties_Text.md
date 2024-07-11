@@ -181,7 +181,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 ## Expressão cor fonte
 
-`Selection and collection/entity selection type list boxes`
+`List box do tipo coleção/seleção de entidade`
 
 Utilizado para aplicar uma cor de letra personalizada a cada linha do list box. É necessário utilizar valores de cor RGB. Para más información al respecto, consulte la descripción del comando [OBJECT SET RGB COLORS](https://doc.4d.com/4dv19R/help/command/en/page628.html) en el manual Lenguaje de 4D.
 
@@ -211,7 +211,7 @@ CompanyColor:=Choose([Companies]ID;Background color;Light shadow color; Foregrou
 
 ## Expressão estilo
 
-`Selection and collection/entity selection type list boxes`
+`List box do tipo coleção/seleção de entidade`
 
 Utilizado para aplicar um estilo de carácter personalizado a cada linha do list box ou a cada célula da coluna.
 
