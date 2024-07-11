@@ -366,7 +366,7 @@ This automatic mechanism is based on the concept of "optimistic locking" which i
 *   All entities can always be loaded in read-write; there is no *a priori* "locking" of entities.
 *   Cada entidade tem um carimbo de bloqueio interno incrementado sempre que é guardado.
 *   When a user or process tries to save an entity using the `entity.save( )` method, 4D compares the stamp value of the entity to be saved with that of the entity found in the data (in the case of a modification):
-    *   When the values match, the entity is saved and the internal stamp value is incremented.
+    *   Quando os valores correspondem, a entidade é salva e o valor do marcador interno é aumentado.
     *   When the values do not match, it means that another user has modified this entity in the meantime. A gravação não é efetuada e é devolvido um erro.
 
 O diagrama seguinte ilustra o bloqueio otimista:
