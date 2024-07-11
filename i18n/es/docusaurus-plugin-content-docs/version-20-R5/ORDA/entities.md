@@ -12,7 +12,7 @@ Hay dos maneras de crear una nueva entidad en una dataclass:
 - Since entities are references to database records, you can create entities by creating records using the 4D language and then reference them with ORDA functions such as [`entity.next()`](../API/EntityClass.md#next) or [`entitySelection.first()`](../API/EntitySelectionClass.md#first).
 - You can also create an entity using the [`dataClass.new()`](../API/DataClassClass.md#new) function.
 
-Tenga en cuenta que la entidad sólo se crea en la memoria. If you want to add it to the datastore, you must call the [`entity.save()`](../API/EntityClass.md#save) function.
+Tenga en cuenta que la entidad sólo se crea en la memoria. Si desea añadirla al datastore, debe llamar a la función [`entity.save()`](../API/EntityClass.md#save).
 
 Los atributos de la entidad están disponibles directamente como propiedades del objeto entidad. Para más información, consulte [Uso de los atributos de entidad](#using-entity-attributes).
 
@@ -238,7 +238,7 @@ Puede crear un objeto de tipo [entity selection](dsMapping.md#entity-selection) 
 - Lance una búsqueda en las entidades [en una dataclass](API/DataClassClass.md#query) o en una [selección de entidades existente](API/EntitySelectionClass.md#query);
 - Using the [`.all()`](API/DataClassClass.md#all) dataclass function to select all the entities in a dataclass;
 - Using the [`Create entity selection`](../API/EntitySelectionClass.md#create-entity-selection) command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
-- Using the [`.copy()`](API/EntitySelectionClass.md#copy) function to duplicate an existing entity selection;
+- Utilizando la función [`.copy()`](API/EntitySelectionClass.md#copy) para duplicar una entity selection existente;
 - Using one of the various functions from the [Entity selection class](API/EntitySelectionClass.md) that returns a new entity selection, such as [`.or()`](API/EntitySelectionClass.md#or);
 - Utilizando un atributo de relación de tipo "related entities" (ver abajo).
 
@@ -262,7 +262,7 @@ Una entity selection **compartible** tiene las siguientes características:
 - puede almacenarse en varios objetos o colecciones compartidos, o en un objeto o colección compartido que ya pertenezca a un grupo (no tiene un \* identificador de bloqueo\*);
 - no permite la adición de nuevas entidades. Al intentar añadir una entidad a una entity selection compartibles se producirá un error (1637 - Esta entity selection no puede modificarse). To add an entity to a shareable entity selection, you must first transform it into a non-shareable entity selection using the [`.copy()`](API/EntitySelectionClass.md#copy) function, before calling [`.add()`](API/EntitySelectionClass.md#add).
 
-> Most entity selection functions (such as [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) support shareable entity selections since they do not need to alter the original entity selection (they return a new one).
+> Most entity selection functions (such as [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) soportar selecciones de entidades compartibles ya que no es necesario modificar la selección de entidades original (devuelven una nueva).
 
 Una entity selection **modificable** tiene las siguientes características:
 
@@ -554,7 +554,7 @@ El siguiente diagrama ilustra el bloqueo optimista:
 
 1. Dos procesos cargan la misma entidad.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
-2. El primer proceso modifica la entidad y valida el cambio. Se llama al método `entity.save( )`. El motor 4D compara automáticamente el valor del marcador interno de la entidad modificada con el de la entidad almacenada en los datos. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
+2. El primer proceso modifica la entidad y valida el cambio. Se llama al método `entity.save( )`. El motor 4D compara automáticamente el valor del marcador interno de la entidad modificada con el de la entidad almacenada en los datos. Dado que coinciden, la entidad se guarda y su valor de marcador se incrementa.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 
 3. El segundo proceso también modifica la entidad cargada y valida sus cambios. Se llama al método `entity.save( )`. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
 
