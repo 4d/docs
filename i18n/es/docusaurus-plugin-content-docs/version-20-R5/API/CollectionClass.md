@@ -3041,7 +3041,7 @@ In *index*, pass the position where you want the element to be removed from the 
 - Si el valor calculado < 0, *index* toma el valor 0.
 - If the calculated value > the length of the collection, *index* is set to the length.
 
-En *howMany*, pase el número de elementos a eliminar de *index*. If *howMany* is not specified, then one element is removed.
+En *howMany*, pase el número de elementos a eliminar de *index*. Si no se especifica *howMany*, se elimina un elemento.
 
 Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
 
