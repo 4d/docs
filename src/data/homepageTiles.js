@@ -72,7 +72,7 @@ const Sections = [
         <Link to="Project/overview" >
           <Translate>Project Management</Translate>
         </Link>
-         <Link to="code-editor/write-class-method" >
+         <Link to="Project/code-overview" >
           <Translate>Handling Code</Translate>
         </Link>
         <Link to="Debugging/basics" >

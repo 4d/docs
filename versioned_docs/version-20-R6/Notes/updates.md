@@ -445,7 +445,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 |Library|Current version|Updated in 4D|Comment|
 |---|---|---|----|
-|BoringSSL|0aa300b9ba9d66b914793ad18c5b469163e58905|**20 R6**|Used for QUIC|
+|BoringSSL|0aa300b|**20 R6**|Used for QUIC|
 |CEF|121|20 R5|Chromium 6167|
 |Hunspell|1.7.2|20|Used for spell checking in 4D forms and 4D Write Pro|
 |ICU|73.2|20|This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
