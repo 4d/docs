@@ -1641,7 +1641,7 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 
 #### Chaves de pesquisa autorizadas
 
-**ALL**: All messages in the mailbox.\
+**ALL**: Todas as mensagens na caixa de correio.\
 **ANSWERED**: Messages with the \Answered flag set.\
 **UNANSWERED**: Messages that do not have the \Answered flag set.\
 **DELETED**: Messages with the \Deleted flag set.\
