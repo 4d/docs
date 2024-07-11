@@ -225,7 +225,7 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 
 | プロパティ | タイプ  | 説明                          |
 | ----- | ---- | --------------------------- |
-| value | 日付   | 日付値                         |
+| value | Date | 日付値                         |
 | time  | Real | 数値 (秒単位) |
 
 - オブジェクト引数は、`オブジェクト` 内の [.value](Concepts/dt_object.md) プロパティに格納されて渡されます:
@@ -248,7 +248,7 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 
   | プロパティ | タイプ  | 説明                          |
   | ----- | ---- | --------------------------- |
-  | value | 日付   | 日付値                         |
+  | value | Date | 日付値                         |
   | time  | Real | 数値 (秒単位) |
 
 4Dメソッドが何も返さない場合は、自動的に空の文字列が返されます。
