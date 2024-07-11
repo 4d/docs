@@ -321,7 +321,7 @@ Puede añadir una interfaz a las áreas 4D View Pro para permitir a los usuarios
 
 #### Ver también
 
-[4D View Pro reference guide](../ViewPro/getting-started.md)
+[Guía de referencia de 4D View Pro](../ViewPro/getting-started.md)
 
 ---
 
