@@ -5,7 +5,7 @@ title: Notas de Lançamento
 
 ## 4D 20 R5
 
-Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-v20-R5/), the blog post that lists all new features and enhancements in 4D 20 R5.
+Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5/), the blog post that lists all new features and enhancements in 4D 20 R5.
 
 #### Destaques
 
@@ -140,7 +140,7 @@ Se suas aplicações 4D utilizam conexões TLS, é recomendado que você faça a
 - New [WebSocketServer](../API/WebSocketServerClass.md) and [WebSocketConnection](../API/WebSocketConnectionClass.md) classes to create and manage WebSocket connections from 4D.
 - Support of [`property`](../Concepts/classes.md#property) keyword in user class definitions.
 - New functions to lock/unlock the datastore: [`.flushAndLock()`](../API/DataStoreClass.md#flushandlock), [`.locked()`](../API/DataStoreClass.md#locked), [`.unlock()`](../API/DataStoreClass.md#unlock).
-- New [`.at()`](../API/EntitySelectionClass.md#at) function in the Entity selection class.
+- Nova função [`.at()`](../API/EntitySelectionClass.md#at) na classe de seleção de entidades.
 - New functions in the Collection class: [`.at()`](../API/CollectionClass.md#at), [`.first()`](../API/CollectionClass.md#first), [`.flat()`](../API/CollectionClass.md#flat), [`.flatMap()`](../API/CollectionClass.md#flatmap),[`.includes()`](../API/CollectionClass.md#includes), [`.last()`](../API/CollectionClass.md#last), [`.reduceRight()`](../API/CollectionClass.md#reduceright).
 - Code editor: enhanced [Find and replace features](../code-editor/write-class-method.md#find-and-replace).
 - New searchable "property" Language element in the [**Find in design...**](https://doc.4d.com/4Dv20/4D/20/Performing-a-search.300-6263762.en.html#6337726) dialog box.
