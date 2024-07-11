@@ -458,11 +458,11 @@ Por razones de rendimiento, recomendamos utilizar **atributos indexados** en la 
 
 :::
 
-The function must return a valid entity selection of the dataclass. No filter is applied (all entities corresponding of the initial request are returned) if:
+A função deve retornar uma seleção de entidade válida da classe de dados. No filter is applied (all entities corresponding of the initial request are returned) if:
 
 - la función devuelve **null**,
 - la función devuelve **indefinido**,
-- the function does not return a valid entity selection.
+- a função não retorna uma seleção de entidade válida.
 
 #### Exemplo
 
@@ -546,13 +546,13 @@ This automatic mechanism is based on the concept of "optimistic locking" which i
 - Todas las entidades pueden cargarse siempre en lectura-escritura; no existe el "bloqueo" _a priori_ de las entidades.
 - Cada entidade tem um carimbo de bloqueio interno incrementado sempre que é guardado.
 - Cuando un usuario o proceso intenta guardar una entidad utilizando el método `entity.save( )`, 4D compara el valor del marcador de la entidad a guardar con el de la entidad encontrada en los datos (en el caso de modificación):
-  - When the values match, the entity is saved and the internal stamp value is incremented.
+  - Quando os valores correspondem, a entidade é salva e o valor do marcador interno é aumentado.
 
   - When the values do not match, it means that another user has modified this entity in the meantime. A gravação não é efetuada e é devolvido um erro.
 
 O diagrama seguinte ilustra o bloqueio otimista:
 
-1. Two processes load the same entity.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
+1. Dois processos carregam a mesma entidade.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
 2. O primeiro processo modifica a entidade e valida a alteração. Se llama al método `entity.save( )`. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 
