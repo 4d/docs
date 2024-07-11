@@ -93,7 +93,7 @@ Specifies a variable or expression that will be assigned the collection element/
 
 Specifies a variable or expression that will be assigned a longint indicating the position of the collection element/entity selected by the user.
 
-- if no element/entity is selected, the variable or expression receives zero,
+- se nenhum elemento/entidade for selecionado, a variável ou expressão recebe zero,
 - if a single element/entity is selected, the variable or expression receives its location,
 - if multiple elements/entities are selected, the variable or expression receives the position of element/entity that was last selected.
 
