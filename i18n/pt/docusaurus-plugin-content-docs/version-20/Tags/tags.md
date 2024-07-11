@@ -235,7 +235,7 @@ This syntax iterates on each *entity* of the *entitySelection*. The code portion
 
 The *entity* parameter is an object variable of the entity selection class.
 
-The number of loops is based on the number of entities of the entity selection. At each iteration, the *entity* object variable is automatically filled with the matching entity of the entity selection.
+O número de loops é baseado no número de entidades da seleção de entidades. At each iteration, the *entity* object variable is automatically filled with the matching entity of the entity selection.
 
 #### Exemplo com uma tabela html
 
