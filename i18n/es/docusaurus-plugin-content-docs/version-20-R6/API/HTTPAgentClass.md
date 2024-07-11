@@ -79,7 +79,7 @@ HTTPAgent options will be merged with [HTTPRequest options](HTTPRequestClass.md#
 
 :::note
 
-You can request multiple servers using the same agent. In that case, each server will have its own pool of connections using the same agent options.
+Puede solicitar múltiples servidores utilizando el mismo agente. In that case, each server will have its own pool of connections using the same agent options.
 
 :::
 
@@ -97,7 +97,7 @@ var $myAgent:=4D.HTTPAgent.new($options)
 
 ```
 
-Sending a request to check the local time of any city:
+Enviando una solicitud para comprobar la hora local de cualquier ciudad:
 
 ```4d
 var $options:={}
