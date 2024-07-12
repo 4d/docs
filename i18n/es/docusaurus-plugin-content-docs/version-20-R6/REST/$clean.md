@@ -9,9 +9,9 @@ Creates a new entity set from an existing entity set but without its deleted ent
 
 `$clean` creates a new entity set containing the same entities as `entitySetID` but without references to deleted entities (if any).
 
-By default, when an entity is [deleted]($method.md#methoddelete), its reference(s) in existing entity set(s) become *undefined* but are not removed. They are also still included in the "count" property of the entity set. Calling `$clean` on the entity set returns a new, up-to-date entity set without *undefined* entity references.
+By default, when an entity is [deleted]($method.md#methoddelete), its reference(s) in existing entity set(s) become *undefined* but are not removed. También están incluidos en la propiedad "count" del conjunto de entidades. Llamar a `$clean` en el conjunto de entidades devuelve un nuevo conjunto de entidades actualizado sin referencias a entidades *undefined*.
 
-`$clean` can be followed by [`$method=entityset`]($method.md#methodentityset) to create the new entity set on the server:
+`$clean` puede ser seguido por [`$method=entityset`]($method.md#methodentityset) para crear el nuevo conjunto de entidades en el servidor:
 
 `/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$clean=true&$method=entityset`
 
@@ -21,7 +21,7 @@ By default, when an entity is [deleted]($method.md#methoddelete), its reference(
 
 `GET /rest/Speciality?$filter="ID<=3"&$method=entityset`
 
-Three entities are received and we get the entity set `DF6903FB5879404A9A818884CFC6F62A`
+Se reciben tres entidades y obtenemos el conjunto de entidades `DF6903FB5879404A9A818884CFC6F62A`
 
 ```json
 {
@@ -73,11 +73,11 @@ Three entities are received and we get the entity set `DF6903FB5879404A9A818884C
 }
 ```
 
-2. We delete the entity with `KEY=2` (see [how to delete an entity]($method.md#methoddelete)), then this request is sent:
+2. Eliminamos la entidad con `KEY=2` (ver [cómo eliminar una entidad]($method.md#methoddelete)), luego se envía esta solicitud:
 
 `GET /rest/Speciality/$entityset/DF6903FB5879404A9A818884CFC6F62A`
 
-Se devuelve el conjunto de entidades y sigue conteniendo 3 entidades. There is an undefined entity for the deleted entity (with stamp = 0):
+Se devuelve el conjunto de entidades y sigue conteniendo 3 entidades. Hay una entidad indefinida para la entidad eliminada (con sello = 0):
 
 ```json
 {

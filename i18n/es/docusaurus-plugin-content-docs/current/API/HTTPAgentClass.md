@@ -71,7 +71,7 @@ HTTPAgent options will be merged with [HTTPRequest options](HTTPRequestClass.md#
 | keepAlive              | Boolean | true                                                                                                                                              | Activates keep alive for the agent                                                              |
 | maxSockets             | Integer | 65535                                                                                                                                             | Maximum number of sockets per server                                                            |
 | maxTotalSockets        | Integer | 65535                                                                                                                                             | Maximum number of sockets for the agent                                                         |
-| timeout                | Real    | indefinido                                                                                                                                        | If defined, timeout after which an unused socket is closed                                      |
+| timeout                | Real    | indefinido                                                                                                                                        | Si se define, tiempo después del cual se cierra un socket no utilizado                          |
 | certificatesFolder     | Folder  | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Define la carpeta activa de certificados de cliente para las solicitudes que utilizan el agente |
 | minTLSVersion          | Text    | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Define la versión mínima de TLS para las solicitudes que utilizan este agente                   |
 | protocol               | Text    | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Protocol used for the requests using the agent                                                  |
@@ -79,7 +79,7 @@ HTTPAgent options will be merged with [HTTPRequest options](HTTPRequestClass.md#
 
 :::note
 
-You can request multiple servers using the same agent. In that case, each server will have its own pool of connections using the same agent options.
+Puede solicitar múltiples servidores utilizando el mismo agente. In that case, each server will have its own pool of connections using the same agent options.
 
 :::
 
@@ -97,7 +97,7 @@ var $myAgent:=4D.HTTPAgent.new($options)
 
 ```
 
-Sending a request to check the local time of any city:
+Enviando una solicitud para comprobar la hora local de cualquier ciudad:
 
 ```4d
 var $options:={}

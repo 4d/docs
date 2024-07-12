@@ -163,7 +163,7 @@ Aqui está a sequência de chamadas de retorno:
 
 4. If an error occurs, `onError` is executed once (and terminates the request)
 
-5. `onTerminate` is always executed once
+5. `onTerminate` é sempre executado uma vez
 
 #### objecto evento
 
@@ -408,7 +408,7 @@ The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnRes
 
 > Esta função é thread segura.
 
-The `.terminate()` function <!-- REF #HTTPRequestClass.terminate().Summary -->aborts the HTTP request<!-- END REF -->. It triggers the `onTerminate` event.
+The `.terminate()` function <!-- REF #HTTPRequestClass.terminate().Summary -->aborts the HTTP request<!-- END REF -->. Desencadeia o evento `onTerminate`.
 
 <!-- END REF -->
 

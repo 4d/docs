@@ -189,24 +189,24 @@ Esse botão é ativo para métodos projeto e para os métodos database:
 - On Server Startup
 - On Server Shutdown
 
-Para más información, consulte [Barra de herramientas](../code-editor/write-class-method.md#toolbar).
+Para obter mais informações, consulte [Toolbar](../code-editor/write-class-method.md#toolbar).
 
 #### Na caixa de diálogo Executar método
 
-En 4D, algunos usos típicos de la recursividad son:
+Quando você selecionar o comando **Method...** do menu **Run**, exibe o diálogo **Execute Method**.
 
 Esta caixa de diálogo lista todos os métodos de projecto da base de dados, incluindo métodos de projecto partilhados de componentes. Por outro lado, os métodos de projecto que foram declarados invisíveis não aparecerão.
 
-Para ejecutar un método proyecto, basta con seleccionar su nombre en la lista y hacer clic en **Ejecutar**. Para ejecutar un método paso a paso en modo Depuración, haga clic en **Depuración**. Para más información sobre el depurador de 4D, consulte la sección [Depuración](../Debugging/basics.md).
+Para executar um método projeto, basta selecionar o seu nome na lista e clicar em **Executar**. Para executar um método passo a passo no modo Debug, clique em **Debug**. Para mais informações sobre o depurador 4D, consulte a seção [Depuração](../Debugging/basics.md).
 
-Si marca la casilla **Nuevo proceso**, el método seleccionado se ejecuta en otro proceso. Se o método estiver executando uma tarefa demorada, como a impressão de um grande conjunto de registos, pode continuar trabalhando com a base de dados, adicionando registos a uma tabela, criando um gráfico para apresentar dados, etc. Para más información sobre los procesos, consulte [Procesos](https://doc.4d.com/4Dv19R5/4D/19-R5/Processes.300-5830912.en.html) en el manual _Lenguaje_ 4D.
+Se você marcar a caixa de seleção de **Novo Processo**, o método que você selecionou é executado em outro processo. Se o método estiver executando uma tarefa demorada, como a impressão de um grande conjunto de registos, pode continuar trabalhando com a base de dados, adicionando registos a uma tabela, criando um gráfico para apresentar dados, etc. Para mais informações sobre processos, consulte [Processes](https://doc.4d.com/4Dv19R5/4D/19-R5/Processes.300-5830912.en.html) o manual 4D _Referência de Idioma_.
 
 **Notas Servidor 4D**:
 
-- Si desea que el método se ejecute en el equipo servidor y no en el equipo cliente, seleccione la opción **En 4D Server** en el menú A ejecutar. En este caso, se crea un nuevo proceso, llamado _procedimiento almacenado_, en la máquina servidor para ejecutar el método. Essa opção pode ser usada para reduzir o tráfego de rede e otimizar o funcionamento do 4D Server, em particular para métodos que chamam dados armazenados no disco. Todos os tipos de métodos podem ser executados na máquina servidor ou noutra máquina cliente, excepto os que modificam a interface do utilizador. Neste caso, os procedimentos armazenados são ineficazes.
-- Também pode optar por executar o método noutra estação de trabalho cliente. Otras estaciones de trabajo cliente no aparecerán en el menú, a menos que hayan sido previamente "registradas" (para más información, consulte la descripción de la opción [REGISTRAR CLIENTE](https://doc.4d.com/4Dv19R5/4D/19-R5/REGISTER-CLIENT.301-5830908.
+- Se quiser que o método seja executado na máquina do servidor e não na máquina do cliente, selecione a opção On 4D Server no menu To be executed. Neste caso, é criado um novo processo, chamado stored procedure, na máquina do servidor para executar o método. Essa opção pode ser usada para reduzir o tráfego de rede e otimizar o funcionamento do 4D Server, em particular para métodos que chamam dados armazenados no disco. Todos os tipos de métodos podem ser executados na máquina servidor ou noutra máquina cliente, excepto os que modificam a interface do utilizador. Neste caso, os procedimentos armazenados são ineficazes.
+- Também pode optar por executar o método noutra estação de trabalho cliente. Outras estações de trabalho do cliente não aparecerão no menu, a menos que tenham sido previamente "registradas" (para mais informações, consulte a descrição do [CLIENTO REGISTAR](https://doc. d.com/4dv19/help/command/en/page648.html).
 
-Por defecto, está seleccionada la opción **localmente**. Com a versão 4D para um único utilizador, esta é a única opção disponível.
+Por padrão, a opção **local** está selecionada. Com a versão 4D para um único utilizador, esta é a única opção disponível.
 
 ## Métodos associados aos objetos
 
@@ -217,7 +217,7 @@ Os métodos de projecto podem chamar-se a si próprios. Por exemplo:
 
 A isto chama-se recorrência. A linguagem 4D suporta plenamente a recorrência.
 
-Aqui um exemplo simples. Digamos que tiene una tabla `[Friends and Relatives]` compuesta por este conjunto de campos extremadamente simplificado:
+Aqui um exemplo simples. Digamos que você tenha uma tabela `[Amigos e Relativas]` composta por este conjunto extremamente simplificado de campos:
 
 - `[Friends and Relatives]Name`
 - `[Friends and Relatives]ChildrensName`
@@ -258,7 +258,7 @@ Para este exemplo, assumimos que os valores nos campos são únicos (não há du
  End if
 ```
 
-con la función recursiva `Genealogy of` siguiente:
+com a função recursiva `Genealogy de` listada aqui:
 
 ```4d
   ` Genealogy of project method
@@ -274,7 +274,7 @@ con la función recursiva `Genealogy of` siguiente:
 
 Note que el método `Genealogy of` se llama a sí mismo.
 
-La primera forma es un **algoritmo iterativo**. La segunda forma es un **algoritmo recursivo**.
+A primeira forma é um **algoritmo iterativo**. A segunda via é um **algoritmo recursivo**.
 
 Ao implementar código para casos como o exemplo anterior, é importante notar que é sempre possível escrever métodos usando iteração ou recursividade. Tipicamente, a recursão fornece um código mais conciso, legível e de fácil manutenção, mas a sua utilização não é obrigatória.
 
@@ -283,4 +283,4 @@ Alguns usos típicos da recursividade em 4D são:
 - Tratar os registos dentro de tabelas que se relacionam entre si da mesma forma que no exemplo.
 - Navegar por los documentos y las carpetas del disco, utilizando los comandos `FOLDER LIST` y `DOCUMENT LIST`. Uma pasta pode conter pastas e documentos, as próprias subpastas podem conter pastas e documentos, e assim por diante.
 
-**Importante:** Las llamadas recursivas deben terminar siempre en algún punto. En el ejemplo, el método `Genealogy of` deja de llamarse a sí mismo cuando la consulta no devuelve ningún registro. Sem este teste de condição, o método chamar-se-ia indefinidamente; eventualmente, 4D retornaria um erro "Stack Full" porque deixaria de ter espaço para "empilhar" as chamadas (bem como os parâmetros e variáveis locais utilizados no método).
+**Importante:** Las llamadas recursivas deben terminar siempre en algún punto. No exemplo, o método `Genealogia de` deixa de chamar a si próprio quando a consulta não devolve registos. Sem este teste de condição, o método chamar-se-ia indefinidamente; eventualmente, 4D retornaria um erro "Stack Full" porque deixaria de ter espaço para "empilhar" as chamadas (bem como os parâmetros e variáveis locais utilizados no método).

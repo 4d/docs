@@ -12,7 +12,7 @@ Existem duas maneiras de criar uma nova entidade numa dataclass:
 - Since entities are references to database records, you can create entities by creating records using the 4D language and then reference them with ORDA functions such as [`entity.next()`](../API/EntityClass.md#next) or [`entitySelection.first()`](../API/EntitySelectionClass.md#first).
 - You can also create an entity using the [`dataClass.new()`](../API/DataClassClass.md#new) function.
 
-Tenha em atenção que a entidade só é criada na memória. If you want to add it to the datastore, you must call the [`entity.save()`](../API/EntityClass.md#save) function.
+Tenha em atenção que a entidade só é criada na memória. Se quiser adicioná-lo ao datastore, você deve chamar a função [`entity.save()`](../API/EntityClass.md#save).
 
 Os atributos da entidade estão diretamente disponíveis como propriedades do objeto entidade. Para más información, consulte [Uso de los atributos de entidad](#using-entity-attributes).
 
@@ -240,7 +240,7 @@ Puede crear un objeto de tipo [entity selection](dsMapping.md#entity-selection) 
 - Lance una búsqueda en las entidades [en una dataclass](API/DataClassClass.md#query) o en una [selección de entidades existente](API/EntitySelectionClass.md#query);
 - Using the [`.all()`](API/DataClassClass.md#all) dataclass function to select all the entities in a dataclass;
 - Using the [`Create entity selection`](../API/EntitySelectionClass.md#create-entity-selection) command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
-- Using the [`.copy()`](API/EntitySelectionClass.md#copy) function to duplicate an existing entity selection;
+- Usando a [`.copy()`](API/EntitySelectionClass.md#copy) função para duplicar uma seleção de entidade existente;
 - Using one of the various functions from the [Entity selection class](API/EntitySelectionClass.md) that returns a new entity selection, such as [`.or()`](API/EntitySelectionClass.md#or);
 - Utilizando um atributo de relação do tipo "entidades relacionadas" (ver abaixo).
 
@@ -456,7 +456,7 @@ Function event restrict() -> $result : cs.*DataClassName*Selection
 // código
 ```
 
-This function is called whenever an entity selection or an entity of the dataclass is requested. The filter is run once, when the entity selection is created.
+Esta função é chamada sempre que uma seleção de entidade ou uma entidade da classe de dados é solicitada. The filter is run once, when the entity selection is created.
 
 The filter must return an entity selection of the dataclass. Puede ser una selección de entidades creada a partir de una consulta, almacenada en el [`Storage`], etc.
 
@@ -466,11 +466,11 @@ Por razones de rendimiento, recomendamos utilizar **atributos indexados** en la 
 
 :::
 
-The function must return a valid entity selection of the dataclass. No filter is applied (all entities corresponding of the initial request are returned) if:
+A função deve retornar uma seleção de entidade válida da classe de dados. No filter is applied (all entities corresponding of the initial request are returned) if:
 
 - la función devuelve **null**,
 - la función devuelve **indefinido**,
-- the function does not return a valid entity selection.
+- a função não retorna uma seleção de entidade válida.
 
 #### Exemplo
 
@@ -554,13 +554,13 @@ This automatic mechanism is based on the concept of "optimistic locking" which i
 - Todas las entidades pueden cargarse siempre en lectura-escritura; no existe el "bloqueo" _a priori_ de las entidades.
 - Cada entidade tem um carimbo de bloqueio interno incrementado sempre que é guardado.
 - Cuando un usuario o proceso intenta guardar una entidad utilizando el método `entity.save( )`, 4D compara el valor del marcador de la entidad a guardar con el de la entidad encontrada en los datos (en el caso de modificación):
-  - When the values match, the entity is saved and the internal stamp value is incremented.
+  - Quando os valores correspondem, a entidade é salva e o valor do marcador interno é aumentado.
 
   - When the values do not match, it means that another user has modified this entity in the meantime. A gravação não é efetuada e é devolvido um erro.
 
 O diagrama seguinte ilustra o bloqueio otimista:
 
-1. Two processes load the same entity.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
+1. Dois processos carregam a mesma entidade.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
 2. O primeiro processo modifica a entidade e valida a alteração. Se llama al método `entity.save( )`. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 
@@ -585,7 +585,7 @@ Cuando se produce esta situación, puede, por ejemplo, volver a cargar la entida
 
 ### Bloqueio pessimista
 
-É possível bloquear e desbloquear entidades a pedido quando se acede aos dados. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
+É possível bloquear e desbloquear entidades a pedido quando se acede aos dados. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. A entidade só pode ser carregada no modo somente leitura nesses processos; seus valores não podem ser editados ou salvos.
 
 Esta funcionalidad se basa en dos funciones de la clase `Entity`:
 

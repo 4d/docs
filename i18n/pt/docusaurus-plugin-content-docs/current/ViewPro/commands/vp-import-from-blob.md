@@ -36,7 +36,7 @@ Os seguintes parâmetros podem ser usados no método de retorno de chamada:
 
 | Parâmetro |                               | Tipo                     | Descrição                                                                    |
 | :-------- | :---------------------------- | :----------------------- | :--------------------------------------------------------------------------- |
-| param1    |                               | text                     | The name of the 4D View Pro area object                                      |
+| param1    |                               | text                     | O nome do objeto de área 4D View Pro                                         |
 | param2    |                               | 4D. Blob | O blob importado                                                             |
 | param3    |                               | object                   | A reference to the command's *paramObj* parameter                            |
 | param4    |                               | object                   | Um objeto devolvido pelo método com uma mensagem de estado                   |

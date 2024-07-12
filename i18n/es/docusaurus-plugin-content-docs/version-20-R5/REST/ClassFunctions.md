@@ -136,7 +136,7 @@ A continuación, puede ejecutar esta petición:
 La clase de Dataclass `City` ofrece una PI que devuelve una entidad de ciudad a partir del nombre pasado en parámetro:
 
 ```
-// City class
+// ClassCity 
 
 Class extends DataClass
 

@@ -181,7 +181,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 ## Expresión color fuente
 
-`Selection and collection/entity selection type list boxes`
+`List box de tipo colección/selección de entidades`
 
 Se utiliza para aplicar un color de fuente personalizado a cada línea del list box. Debe utilizar valores de color RGB. Para más información al respecto, consulte la descripción del comando [OBJECT SET RGB COLORS](https://doc.4d.com/4dv19R/help/command/en/page628.html) en el manual Lenguaje de 4D.
 
@@ -212,7 +212,7 @@ Foreground color;Dark shadow color)
 
 ## Expresión estilo
 
-`Selection and collection/entity selection type list boxes`
+`List box de tipo colección/selección de entidades`
 
 Utilizado para aplicar un estilo de fuente personalizado a cada línea de list box o de cada celda de la columna.
 

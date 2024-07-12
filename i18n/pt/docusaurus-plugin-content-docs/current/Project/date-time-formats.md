@@ -86,7 +86,7 @@ The following table lists all supported patterns for date and time formats.
 | s       | segundo em minuto                                                        | s             | 5                                                                     |
 |         |                                                                          | ss            | 05                                                                    |
 | X       | Time Zone: ISO8601 basic hm?, with Z for 0               | X             | -08, +0530, Z                                                         |
-|         | Time Zone: ISO8601 basic hm, with Z                      | XX            | -0800, Z                                                              |
+|         | Zona de tempo: ISO8601 hm, com Z                         | XX            | -0800, Z                                                              |
 |         | Time Zone: ISO8601 extended hm, with Z                   | XXX           | -08:00, Z                                             |
 |         | Time Zone: ISO8601 basic hms?, with Z                    | XXXX          | -0800, -075258, Z                                                     |
 |         | Time Zone: ISO8601 extended hms?, with Z                 | XXXXX         | -08:00, -07:52:58, Z  |

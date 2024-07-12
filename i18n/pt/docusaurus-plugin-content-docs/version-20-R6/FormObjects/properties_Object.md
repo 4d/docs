@@ -183,9 +183,9 @@ Lista de palabras separadas por espacios que se utilizan como selectores de clas
 
 To use collection elements or entities to define the row contents of the list box.
 
-Enter an expression that returns either a collection or an entity selection. Usually, you will enter the name of a variable, a collection element or a property that contain a collection or an entity selection.
+Insira uma expressão que retorne uma coleção ou uma seleção de entidades. Usually, you will enter the name of a variable, a collection element or a property that contain a collection or an entity selection.
 
-The collection or the entity selection must be available to the form when it is loaded. Each element of the collection or each entity of the entity selection will be associated to a list box row and will be available as an object through the [`This`](../Concepts/classes.md#this) keyword:
+A coleção ou a seleção da entidade deve estar disponível para o formulário quando for carregada. Each element of the collection or each entity of the entity selection will be associated to a list box row and will be available as an object through the [`This`](../Concepts/classes.md#this) keyword:
 
 - si ha utilizado una colección de objetos, puede llamar a **This** en la expresión de la fuente de datos para acceder a cada valor de propiedad, por ejemplo `This.<propertyPath>`.
 - si ha utilizado una selección de entidades, puede llamar a **This** en la expresión de la fuente de datos para acceder a cada valor de atributo, por ejemplo `This.<attributePath>`.
@@ -239,7 +239,7 @@ Nombre del [área externa del plug-in](pluginArea_overview.md) asociada al objet
 
 #### Objectos suportados
 
-[Plug-in Area](pluginArea_overview.md)
+[Área de Plug-in](pluginArea_overview.md)
 
 ---
 

@@ -4,7 +4,7 @@
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "4D Logo",
+    "message": "4D ロゴ",
     "description": "The alt text of navbar logo"
   }
 }

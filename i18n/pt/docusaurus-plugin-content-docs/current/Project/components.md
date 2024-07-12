@@ -9,12 +9,12 @@ You can [develop](../Extensions/develop-components.md) and [build](../Desktop/bu
 
 When developing in 4D, the component files can be transparently stored in your computer or on a Github repository.
 
-## Interpreted and compiled components
+## Componentes interpretados e compilados
 
 Components can be interpreted or [compiled](../Desktop/building.md). The package folder of a component can contain:
 
 - either a Project folder (interpreted component)
-- or a .4DZ file (compiled component)
+- ou um arquivo .4DZ (componente compilado)
 
 A 4D project running in interpreted mode can use either interpreted or compiled components. A 4D project running in compiled mode cannot use interpreted components. Por isso não pode ser usado em um componente.
 
@@ -140,7 +140,7 @@ If a component path declared in the **environment4d.json** file is not found whe
 
 :::
 
-### Declaring components stored on GitHub
+### Declarando componentes armazenados no GitHub
 
 4D components available as GitHub releases can be referenced and automatically loaded in your 4D projects.
 

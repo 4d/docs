@@ -57,14 +57,14 @@ Os objetos atributos retornados contêm as seguintes propriedades:
 | fieldNumber      | integer    | Número interno do campo 4D do atributo. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | fieldType        | Integer    | Tipo de campo de banco de dados 4D do atributo. Depends on the attribute `kind`. Possible values: <li>if `.kind` = "storage": corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv20/help/command/en/page1509.html)</li><li>if `.kind` = "relatedEntity": 38 (`is object`)</li><li>if `.kind` = "relatedEntities": 42 (`is collection`)</li><li>if `.kind` = "calculated" or "alias" = same as above, depending on the resulting value (field type, relatedEntity or relatedEntities)</li>                                                                                                                                                  |
 | indexed          | Parâmetros | True se houver um índice B-tree ou Cluster B-tree no atributo. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| inverseName      | Text       | Nome do atributo que está do outro lado da relação. Returned only when `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| inverseName      | Text       | Nome do atributo que está do outro lado da relação. Retornado somente quando `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | keywordIndexed   | Parâmetros | True se houver um índice de palavras-chave no atributo. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | kind             | Text       | Categoria do atributo. Possible values:<li>"storage": storage (or scalar) attribute, i.e. attribute storing a value, not a reference to another attribute</li><li>"calculated": computed attribute, i.e. defined through a [`get` function](../ORDA/ordaClasses.md#function-get-attributename)</li><li>"alias": attribute built upon [another attribute](../ORDA/ordaClasses.md#alias-attributes-1)</li><li>"relatedEntity": N -> 1 relation attribute (reference to an entity)</li><li>"relatedEntities": 1 -> N relation attribute (reference to an entity selection)</li>  |
 | obrigatório      | Parâmetros | True se a entrada de um valor null for rejeitada para o atributo. Not returned if `.kind` = "relatedEntity" or "relatedEntities". Nota: Esta propriedade corresponde à propriedade do campo "Reject NULL value input" ao nível do banco de dados 4D. Não tem relação com a propriedade existente "Mandatory"/obrigatório que é uma opção de controle de entrada de dados para uma tabela.                                                                                                                                                                                                                                                                                                                                              |
 | name             | Text       | Nome do atributo como string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | path             | Text       | Path of [an alias attribute](../ORDA/ordaClasses.md#alias-attributes-1) based upon a relation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | readOnly         | Parâmetros | True se o atributo for apenas de leitura. For example, computed attributes without [`set` function](../ORDA/ordaClasses.md#function-set-attributename) are read-only.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| relatedDataClass | Text       | Nome dadataclass relacionada ao atributo. Returned only when `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| relatedDataClass | Text       | Nome dadataclass relacionada ao atributo. Retornado somente quando `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | type             | Text       | Tipo conceitual do valor do atributo, útil para programação genérica. Depends on the attribute `kind`. Possible values: <li>if `.kind` = "storage": "blob", "bool", "date", "image", "number", "object", or "string". "number" is returned for any numeric types including duration; "string" is returned for uuid, alpha and text attribute types; "blob" attributes are [blob objects](../Concepts/dt_blob.md#blob-type).</li><li>if `.kind` = "relatedEntity": related dataClass name</li><li>if `.kind` = "relatedEntities": related dataClass name + "Selection" suffix</li><li>if `.kind` = "calculated" or "alias": same as above, depending on the result</li> |
 | unique           | Parâmetros | True se o valor do atributo tiver que ser único. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
@@ -126,10 +126,10 @@ Considerando as propriedades de tabela abaixo:
 
 <details><summary>História</summary>
 
-| Release | Mudanças                            |
-| ------- | ----------------------------------- |
-| 17 R5   | Support of the *settings* parameter |
-| 17      | Adicionado                          |
+| Release | Mudanças                        |
+| ------- | ------------------------------- |
+| 17 R5   | Suporte do parâmetro *settings* |
+| 17      | Adicionado                      |
 
 </details>
 
@@ -229,10 +229,10 @@ $ds. Persons.clearRemoteCache()
 
 <details><summary>História</summary>
 
-| Release | Mudanças                            |
-| ------- | ----------------------------------- |
-| 17 R5   | Support of the *settings* parameter |
-| 17      | Adicionado                          |
+| Release | Mudanças                        |
+| ------- | ------------------------------- |
+| 17 R5   | Suporte do parâmetro *settings* |
+| 17      | Adicionado                      |
 
 </details>
 
@@ -281,7 +281,7 @@ Os objetos aninhados que apresentam entidades relacionadas devem conter uma prop
 
 **Stamp**
 
-Se um atributo \_\_STAMP for dado, se realiza uma comprovação com o selo no armazén de dados e se pode devolver um erro ("O selo dado não coincide com o atual para o registro# XX da tabela XXXX"). For more information, see [Entity locking](ORDA/entities.md#entity-locking).
+Se um atributo \_\_STAMP for dado, se realiza uma comprovação com o selo no armazén de dados e se pode devolver um erro ("O selo dado não coincide com o atual para o registro# XX da tabela XXXX"). Para obter mais informações, consulte [Bloqueio de Entity](ORDA/entities.md#entity-locking).
 
 **settings**
 
@@ -732,7 +732,7 @@ Os dados relativos a entidades relacionadas são armazenados na cache do objecto
 
 #### Exemplo
 
-In the following example, `$ds.Persons.all()` loads the first entity with all its attributes. Then, the request optimization is triggered, so only `firstname` and `address.city` are loaded.
+No exemplo seguinte, `$ds.Persons.all()` carrega a primeira entidade com todos os seus atributos. Then, the request optimization is triggered, so only `firstname` and `address.city` are loaded.
 
 Note that `address.city` is loaded in the cache of the `Persons` dataclass.
 
@@ -882,7 +882,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 
 The `.query()` function <!-- REF #DataClassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
 
-If no matching entities are found, an empty `EntitySelection` is returned.
+Se nenhuma entidade correspondente for encontrada, uma `EntitySelection` vazia é retornada.
 
 #### parâmetro queryString
 
@@ -910,7 +910,7 @@ onde:
 
 Fórmulas nas consultas podem receber parâmetros através de $1. This point is detailed in the **formula parameter** paragraph below.
 
-> - You can also pass directy a `formula` parameter object instead of the `queryString` parameter (recommended when formulas are more complex). See **formula parameter** paragraph below.
+> - You can also pass directy a `formula` parameter object instead of the `queryString` parameter (recommended when formulas are more complex). Ver o parágrafo **Parâmetro fórmula** mais abaixo.
 > - For security reasons, formula calls within `query()` functions can be disallowed. See `querySettings` parameter description.
 
 - **comparator**: symbol that compares *attributePath* and *value*. Os simbolos abaixo são compatíveis:
@@ -1162,7 +1162,7 @@ As an alternative to formula insertion within the *queryString* parameter (see a
 
 The formula must have been created using the [`Formula`](FunctionClass.md#formula) or [`Formula from string`](FunctionClass.md#formula-from-string) command. Nesse modo:
 
-- the *formula* is evaluated for each entity and must return true or false. Durante a execução da pesquisa, se o resultado da fórmula não for booleano, é considerado como False.
+- *formula* se avalia para cada entidade e deve devolver true ou false. Durante a execução da pesquisa, se o resultado da fórmula não for booleano, é considerado como False.
 - within the *formula*, the entity is available through the `This` object.
 - if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with `ON ERR CALL`.
 
@@ -1508,7 +1508,7 @@ Queremos desautorizar as fórmulas, por exemplo, quando el usuário introduz sua
 
 #### Veja também
 
-[`.query()`](EntitySelectionClass.md#query) for entity selections
+[`.query()`](EntitySelectionClass.md#query) para as seleções de entidade
 
 <!-- END REF -->
 

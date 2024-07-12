@@ -83,7 +83,7 @@ También puede pasar valores para todos los atributos de la entidad. Estos valor
 | __KEY       | mixto (mismo tipo que la llave primaria) | Opcional - llave primaria de la entidad                                     |
 
 - If `__KEY` is not provided, a new entity is created on the server with the given attributes.
-- If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
+- Si `__KEY` es suministrado, la entidad correspondiente a `__KEY` se carga en el servidor con los atributos dados
 
 Ver los ejemplos de [creación](#creating-an-entity) o de [actualización](#updating-an-entity) de las entidades.
 
@@ -143,7 +143,7 @@ A continuación, puede ejecutar esta petición:
 La clase de Dataclass `City` ofrece una PI que devuelve una entidad de ciudad a partir del nombre pasado en parámetro:
 
 ```
-// City class
+// ClassCity 
 
 Class extends DataClass
 

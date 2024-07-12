@@ -3091,7 +3091,7 @@ The `.resize()` function <!-- REF #collection.resize().Summary -->sets the colle
 - If *size* < collection length, exceeding elements are removed from the collection.
 - Si *size* > longitud de la colección, *size* es la nueva longitud de la colección.
 
-By default, new elements are filled will **null** values. You can specify the value to fill in added elements using the *defaultValue* parameter.
+Por defecto, los nuevos elementos se llenan con valores **null**. You can specify the value to fill in added elements using the *defaultValue* parameter.
 
 #### Ejemplo
 
@@ -3220,7 +3220,7 @@ Si la colección está vacía, este método no hace nada.
 
 #### Descripción
 
-The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). This function returns a *shallow copy* of the collection. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
+The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). Esta función devuelve una *copia superficial* de la colección. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 
 > Esta función no modifica la colección original.
 

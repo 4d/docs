@@ -511,7 +511,7 @@ Lorsqu'un objet `Session` est créé, la propriété `.storage` est vide. Puisqu
 
 Cette propriété est elle-même en **lecture seulement** mais elle retourne un objet en lecture-écriture.
 
-#### Web session example
+#### Exemple de session Web
 
 Vous voulez stocker l'adresse IP du client dans la propriété `.storage`. Vous pouvez écrire dans la méthode base `On Web Authentication` :
 
@@ -523,7 +523,7 @@ If (Session.storage.clientIP=Null) //first access
 End if
 ```
 
-#### Remote session example
+#### Exemple de session distante
 
 Vous voulez partager des données entre les process de la même session :
 

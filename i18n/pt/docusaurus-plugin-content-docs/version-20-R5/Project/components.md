@@ -7,12 +7,12 @@ A 4D component is a set of 4D code and/or 4D forms representing one or more func
 
 You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component\&type=Repositories).
 
-## Interpreted and compiled components
+## Componentes interpretados e compilados
 
 Components can be interpreted or [compiled](../Desktop/building.md). The package folder of a component can contain:
 
 - either a Project folder (interpreted component)
-- or a .4DZ file (compiled component)
+- ou um arquivo .4DZ (componente compilado)
 
 A 4D project running in interpreted mode can use either interpreted or compiled components. A 4D project running in compiled mode cannot use interpreted components. Por isso não pode ser usado em um componente.
 
@@ -118,7 +118,7 @@ The Dependencies panel lists all project dependencies, whatever their origin, i.
 
 ![dependency-origin](../assets/en/Project/dependency-origin.png)
 
-The following origins are supported:
+São suportadas as seguintes origens:
 
 | Origin tag            | Descrição                                                                      |
 | --------------------- | ------------------------------------------------------------------------------ |

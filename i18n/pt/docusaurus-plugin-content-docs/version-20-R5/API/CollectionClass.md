@@ -729,7 +729,7 @@ The `.distinct()` function <!-- REF #collection.distinct().Summary -->returns a 
 
 > Essa função não modifica a coleção original.
 
-A coleção retornada é ordenada automaticamente. **Null** values are not returned.
+A coleção retornada é ordenada automaticamente. Os valores **null** não são devolvidos.
 
 If the collection contains objects, you can pass the *propertyPath* parameter to indicate the object property whose distinct values you want to get.
 
@@ -2392,7 +2392,7 @@ var $fruits; $c2 : Collection
   //$c2=[Passion fruit,Blackberry,Orange,Banana,Apple,Grape,pear,fig]
 ```
 
-The ***sortCollection*** method:
+O método ***sortCollection***:
 
 ```4d
 var$1Object
@@ -2671,7 +2671,7 @@ Não obterá o resultado esperado porque o valor nulo será avaliado por 4D como
 $vSingles:=$colPersons.query("spouse = null") //sintaxe correta
 ```
 
-#### Object or collection reference as value
+#### Referência de objeto ou de coleção como valor
 
 You can query a collection using an object reference or a collection reference as the *value* parameter to compare. The query will match objects in the collection that refer (point to) the same **instance of** object or collection.
 
@@ -2699,7 +2699,7 @@ $colResult:=$col.query("o = :v"; {parameters: {v: $o3}})
 
 ```
 
-Example with a collection reference:
+Exemplo com uma referência de coleção:
 
 ```4d
 

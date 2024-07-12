@@ -84,7 +84,7 @@ The `authentify()` function can always be executed by a REST guest session, what
 
 The function can receive any authentication or contextual information as [parameter(s)](ClassFunctions.md#parameters) and can return any value. Since this function can only be called from a REST request, parameters must be passed through the body of the POST request.
 
-This function should contain two parts:
+Esta função deve conter duas partes:
 
 - some code to identify and authenticate the REST request sender,
 - if the authentication is successful, a call to [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) that assigns appropriate privileges to the session.

@@ -628,7 +628,7 @@ Vous pouvez obtenir la propriété `.storage` d'une session en utilisant la comm
 
 :::
 
-#### Web session example
+#### Exemple de session Web
 
 Vous voulez stocker l'adresse IP du client dans la propriété `.storage`. Vous pouvez écrire dans la méthode base `On Web Authentication` :
 
@@ -640,7 +640,7 @@ If (Session.storage.clientIP=Null) //first access
 End if
 ```
 
-#### Remote session example
+#### Exemple de session distante
 
 Vous voulez partager des données entre les process de la même session :
 

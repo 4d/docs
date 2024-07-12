@@ -193,7 +193,7 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 
 When you create a release in GitHub, you specify a **tag** and a **version**.
 
-- **Tags** are texts that uniquely reference a release. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por ejemplo:
+- **Etiquetas** son textos que hacen referencia única a una versión. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por ejemplo:
 
 ```json
 {
@@ -267,7 +267,7 @@ Then insert the "github" key in your [**environment4d.json**](#environment4djson
 
 Referenced GitHub components are downloaded in a local cache folder then loaded in your environment. La carpeta de caché local se guarda en la siguiente ubicación:
 
-- on macOs: `$HOME/Library/Caches/<app name>/Dependencies`
+- en macOs: `$HOME/Library/Caches/<app name>/Dependencies`
 - on Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
 
 ...donde `<app name>` puede ser "4D", "4D Server" o "tool4D".
@@ -296,7 +296,7 @@ A continuación se muestra el panel Dependencias. Las dependencias se ordenan po
 
 ### Origen de dependencia
 
-The Dependencies panel lists all project dependencies, whatever their origin, i.e. wherever they come from. The dependency origin is provided by the tag under its name:
+The Dependencies panel lists all project dependencies, whatever their origin, i.e. wherever they come from. El origen de la dependencia lo suministra la etiqueta bajo su nombre:
 
 ![dependency-origin](../assets/en/Project/dependency-origin.png)
 

@@ -612,7 +612,7 @@
     "description": "The ARIA label to expand the sidebar category"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "Collapse sidebar category '{label}'",
+    "message": "Fechar categoria da barra lateral '{label}'",
     "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.unlistedContent.title": {

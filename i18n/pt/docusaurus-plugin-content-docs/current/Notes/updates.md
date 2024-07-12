@@ -5,7 +5,7 @@ title: Notas de Lançamento
 
 ## 4D 20 R6
 
-Leia [**O que há de novo no 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-v20-R6/), o post do blog que lista todos os novos recursos e aprimoramentos em 4D 20 R6.
+Read [**What’s new in 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-20-R6/), the blog post that lists all new features and enhancements in 4D 20 R6.
 
 #### Destaques
 
@@ -33,7 +33,7 @@ Leia [**O que há de novo no 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-
 
 ## 4D 20 R5
 
-Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-v20-R5/), the blog post that lists all new features and enhancements in 4D 20 R5.
+Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5/), the blog post that lists all new features and enhancements in 4D 20 R5.
 
 #### Destaques
 
@@ -84,7 +84,7 @@ Leia [**O que há de novo no 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d
 
 ## 4D 20 R3
 
-Leia [**O que há de novo no 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-R3/), o post do blog que lista todos os novos recursos e aprimoramentos em 4D v20 R3.
+Read [**What’s new in 4D 20 R3**](https://blog.4d.com/en-whats-new-in-4d-20-vR3/), the blog post that lists all new features and enhancements in 4D 20 R3.
 
 #### Destaques
 
@@ -169,14 +169,14 @@ Se suas aplicações 4D utilizam conexões TLS, é recomendado que você faça a
 - New [WebSocketServer](../API/WebSocketServerClass.md) and [WebSocketConnection](../API/WebSocketConnectionClass.md) classes to create and manage WebSocket connections from 4D.
 - Support of [`property`](../Concepts/classes.md#property) keyword in user class definitions.
 - New functions to lock/unlock the datastore: [`.flushAndLock()`](../API/DataStoreClass.md#flushandlock), [`.locked()`](../API/DataStoreClass.md#locked), [`.unlock()`](../API/DataStoreClass.md#unlock).
-- New [`.at()`](../API/EntitySelectionClass.md#at) function in the Entity selection class.
+- Nova função [`.at()`](../API/EntitySelectionClass.md#at) na classe de seleção de entidades.
 - New functions in the Collection class: [`.at()`](../API/CollectionClass.md#at), [`.first()`](../API/CollectionClass.md#first), [`.flat()`](../API/CollectionClass.md#flat), [`.flatMap()`](../API/CollectionClass.md#flatmap),[`.includes()`](../API/CollectionClass.md#includes), [`.last()`](../API/CollectionClass.md#last), [`.reduceRight()`](../API/CollectionClass.md#reduceright).
 - Code editor: enhanced [Find and replace features](../code-editor/write-class-method.md#find-and-replace).
 - New searchable "property" Language element in the [**Find in design...**](https://doc.4d.com/4Dv20/4D/20/Performing-a-search.300-6263762.en.html#6337726) dialog box.
 - To simplify code, some comparison operators can now be used with [Undefined values](../Concepts/dt_null_undefined.md#undefined-operators) without generating errors.
 - Support of _headerOnly_ parameter in [`POP3Transporter.getMail()`](../API/POP3TransporterClass.md#getmail).
 - Support of `count values` option in [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) and [`collection.distinct()`](../API/CollectionClass.md#distinct) functions.
-- New [`entitySelection.distinctPaths()`](../API/EntitySelectionClass.md#distinctpaths) function.
+- Nova função [`entitySelection.distinctPaths()`](../API/EntitySelectionClass.md#distinctpaths).
 - ORDA requests logs are now available [on the server](../Debugging/debugLogFiles.md#orda-requests), new parameter for [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) function.
 - New tools for code execution in CLI: [tool4d](../Admin/cli.md#tool4d) and [4D Server in utility mode](../Admin/cli.md#4d-server-in-utility-mode).
 - [Data Explorer](../Admin/dataExplorer.md#opening-the-data-explorer): new button and display in a 4D window.
@@ -394,7 +394,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 | Biblioteca | Versão atual                              | Atualizado em 4D | Comentário                                                                                                                      |
 | ---------- | ----------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| BoringSSL  | 0aa300b9ba9d66b914793ad18c5b469163e58905  | **20 R6**        | Usado para QUIC                                                                                                                 |
+| BoringSSL  | 0aa300b                                   | **20 R6**        | Usado para QUIC                                                                                                                 |
 | CEF        | 121                                       | 20 R5            | Chromium 6167                                                                                                                   |
 | Hunspell   | 7.3.27    | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                                             |
 | ICU        | 73.2                      | 20               | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos.     |

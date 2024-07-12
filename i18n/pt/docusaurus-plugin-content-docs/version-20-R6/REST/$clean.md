@@ -9,7 +9,7 @@ Creates a new entity set from an existing entity set but without its deleted ent
 
 `$clean` creates a new entity set containing the same entities as `entitySetID` but without references to deleted entities (if any).
 
-By default, when an entity is [deleted]($method.md#methoddelete), its reference(s) in existing entity set(s) become *undefined* but are not removed. They are also still included in the "count" property of the entity set. Calling `$clean` on the entity set returns a new, up-to-date entity set without *undefined* entity references.
+By default, when an entity is [deleted]($method.md#methoddelete), its reference(s) in existing entity set(s) become *undefined* but are not removed. They are also still included in the "count" property of the entity set. Chamar `$clean` no conjunto de entidades retorna um novo conjunto de entidades atualizado, sem referências de entidades *undefined*.
 
 `$clean` can be followed by [`$method=entityset`]($method.md#methodentityset) to create the new entity set on the server:
 
@@ -21,7 +21,7 @@ By default, when an entity is [deleted]($method.md#methoddelete), its reference(
 
 `GET /rest/Speciality?$filter="ID<=3"&$method=entityset`
 
-Three entities are received and we get the entity set `DF6903FB5879404A9A818884CFC6F62A`
+Três entidades são recebidas e obtemos o conjunto de entidades `DF6903FB5879404A9A818884CFC6F62A`
 
 ```json
 {
@@ -77,7 +77,7 @@ Three entities are received and we get the entity set `DF6903FB5879404A9A818884C
 
 `GET /rest/Speciality/$entityset/DF6903FB5879404A9A818884CFC6F62A`
 
-The entity set is returned and still contains 3 entities. There is an undefined entity for the deleted entity (with stamp = 0):
+O conjunto de entidades é retornado e ainda contém 3 entidades. There is an undefined entity for the deleted entity (with stamp = 0):
 
 ```json
 {

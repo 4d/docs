@@ -268,7 +268,7 @@
     "description": "The generated-index page title for category REST API in sidebar docs"
   },
   "sidebar.docs.category.REST API.link.generated-index.description": {
-    "message": "Exposing your datastore to REST and using the REST API.",
+    "message": "Exponiendo su datastore a REST y utilizando la API REST.",
     "description": "The generated-index page description for category REST API in sidebar docs"
   },
   "sidebar.docs.category.Exposing your datastore in REST": {
