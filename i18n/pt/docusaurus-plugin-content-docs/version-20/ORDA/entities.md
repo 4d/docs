@@ -397,7 +397,7 @@ When this situation occurs, you can, for example, reload the entity from the dis
 
 ### Bloqueio pessimista
 
-É possível bloquear e desbloquear entidades a pedido quando se acede aos dados. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
+É possível bloquear e desbloquear entidades a pedido quando se acede aos dados. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. A entidade só pode ser carregada no modo somente leitura nesses processos; seus valores não podem ser editados ou salvos.
 
 This feature is based upon two methods of the `Entity` class:
 
