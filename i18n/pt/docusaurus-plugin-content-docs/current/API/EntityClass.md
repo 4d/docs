@@ -359,7 +359,7 @@ The object returned by `.drop( )` contains the following properties:
 | Propriedade                       |                                     | Tipo                   | Descrição                                                                                                                                                                                                |
 | --------------------------------- | ----------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success                           |                                     | boolean                | verdadeiro se a ação de queda for bem-sucedida, falso caso contrário.                                                                                                                    |
-|                                   |                                     |                        | ***Available only in case of error:***                                                                                                                                                   |
+|                                   |                                     |                        | ***Disponível apenas em caso de erro:***                                                                                                                                                 |
 | status(\*)     |                                     | number                 | Código de erro, ver abaixo                                                                                                                                                                               |
 | statusText(\*) |                                     | text                   | Descrição do erro, ver abaixo                                                                                                                                                                            |
 |                                   |                                     |                        | ***Available only in case of pessimistic lock error:***                                                                                                                                  |
@@ -822,8 +822,8 @@ By default if the *entitySelection* parameter is omitted, the function returns t
 
 O valor resultante é incluído entre 0 e o comprimento da selecção da entidade -1.
 
-- If the entity does not have an entity selection or does not belong to *entitySelection*, the function returns -1.
-- If *entitySelection* is Null or does not belong to the same dataclass as the entity, an error is raised.
+- Se a entidade não tiver uma selecção de entidade ou não pertencer a *entitySelection*, a função retorna -1.
+- Se *entitySelection* for Null ou não pertencer ao mesmo dataclass que a entidade, é apresentado um erro.
 
 #### Exemplo
 
@@ -969,7 +969,7 @@ The object returned by `.lock()` contains the following properties:
 | success                           |                                     | boolean                | true se a ação de bloqueio for bem sucedida (ou se a entidade já estiver bloqueada no processo atual), falso caso contrário.                                                                                                                                                                                                                              |
 |                                   |                                     |                        | ***Available only if `dk reload if stamp changed` option is used:***                                                                                                                                                                                                                                                                                                         |
 | **wasReloaded**                   |                                     | boolean                | verdadeiro se a entidade foi recarregada com sucesso, falso caso contrário.                                                                                                                                                                                                                                                                                                  |
-|                                   |                                     |                        | ***Available only in case of error:***                                                                                                                                                                                                                                                                                                                                       |
+|                                   |                                     |                        | ***Disponível apenas em caso de erro:***                                                                                                                                                                                                                                                                                                                                     |
 | status(\*)     |                                     | number                 | Código de erro, ver abaixo                                                                                                                                                                                                                                                                                                                                                                   |
 | statusText(\*) |                                     | text                   | Descrição do erro, ver abaixo                                                                                                                                                                                                                                                                                                                                                                |
 |                                   |                                     |                        | ***Available only in case of pessimistic lock error:***                                                                                                                                                                                                                                                                                                                      |
@@ -1685,7 +1685,7 @@ Neste exemplo, vemos se é necessário salvar a entidade:
 
 The `.touchedAttributes()` function <!-- REF #EntityClass.touchedAttributes().Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
 
-This applies for attributes of the [kind](DataClassClass.md#attributename) `storage` or `relatedEntity`.
+Isso se aplica para atributos [kind](DataClassClass.md#attributename) `storage` ou `relatedEntity`.
 
 No caso de uma entidade relacionada que foi tocada (touched) \*ou seja, a chave primária) o nome da entidade relacionada e sua chave primária são retornados.
 
