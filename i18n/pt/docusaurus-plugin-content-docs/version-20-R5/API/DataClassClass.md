@@ -910,7 +910,7 @@ onde:
 
 Fórmulas nas consultas podem receber parâmetros através de $1. This point is detailed in the **formula parameter** paragraph below.
 
-> - You can also pass directy a `formula` parameter object instead of the `queryString` parameter (recommended when formulas are more complex). See **formula parameter** paragraph below.
+> - You can also pass directy a `formula` parameter object instead of the `queryString` parameter (recommended when formulas are more complex). Ver o parágrafo **Parâmetro fórmula** mais abaixo.
 > - For security reasons, formula calls within `query()` functions can be disallowed. See `querySettings` parameter description.
 
 - **comparator**: symbol that compares *attributePath* and *value*. Os simbolos abaixo são compatíveis:
