@@ -268,18 +268,18 @@ O valor da expressão booleana deve poder ser modificado por um elemento dentro 
  End while
 ```
 
-Se você se encontrar em uma situação desse tipo, na qual um método fica executando de forma descontrolada, pode usar as funções de rastreamento para parar o loop e rastrear o problema. Para más información sobre el seguimiento de un método, consulte la página [Gestión de errores](error-handling.md).
+Se você se encontrar em uma situação desse tipo, na qual um método fica executando de forma descontrolada, pode usar as funções de rastreamento para parar o loop e rastrear o problema. Para saber mais informações sobre o rastreio de um método, consulte a página de [Error handling](error-handling.md).
 
 #### Exemplo
 
 ```4d
- CONFIRM("Add a new record?") //The user wants to add a record?
- While(OK=1) //Loop as long as the user wants to
-    ADD RECORD([aTable]) //Add a new record
- End while //The loop always ends with End while
+ CONFIRM("Adicionar um novo registro?") //O usuário quer adicionar um registro?
+ While(OK=1) //Loop enquanto o usuário quiser
+    ADD RECORD([aTable]) //Adiciona um novo registro
+ End while //O loop sempre termina com End while
 ```
 
-En este ejemplo, el valor de la variable sistema `OK` es definido por el comando `CONFIRM` antes de que se inicie el bucle. Si el usuario hace clic en el botón **OK** de la caja de diálogo de confirmación, la variable del sistema `OK` toma el valor 1 y se inicia el bucle. En caso contrario, la variable del sistema `OK` toma el valor 0 y se omite el bucle. Una vez se inicia el bucle, el comando `ADD RECORD` permite continuar la ejecución del bucle porque se define la variable sistema `OK` en 1 cuando el usuario guarda el registro. Cuando el usuario cancela (no guarda) el último registro, la variable del sistema `OK` toma el valor 0 y el bucle se detiene.
+Nesse exemplo, a variável de sistema `OK` é definida pelo comando `CONFIRM` antes do início do loop. Se o usuário clicar no botão **OK** na caixa de diálogo de confirmação, a variável de sistema `OK` será definida como 1 e o loop será iniciado. Senão, a variável de sistema `OK` é definida como 0 e o loop é pulado. Uma vez que o loop começa, o comando `ADD RECORD` mantém o loop em execução porque ele define a variável de sistema `OK` como 1 quando o usuário salva o registro. Quando o usuário cancela (não salva) o último registro, a variável do sistema `OK` é definida como 0 e o laço para.
 
 ## Repeat... Until
 
@@ -293,15 +293,15 @@ Repeat
 Until(Boolean_Expression)
 ```
 
-Un bucle `Repeat...Until` es similar a un bucle [While...End while](flow-control.md#whileend-while), excepto que comprueba la expresión booleana después del bucle en lugar de antes. Así, un bucle `Repeat...Until` siempre ejecuta el bucle una vez, mientras que si la expresión booleana es inicialmente False, un bucle `While...End while` no ejecuta el bucle en absoluto.
+Um loop `Repeat...Until` é similar a um loop [While...End while](flow-control.md#whileend-while), exceto que ele testa a expressão booleana depois do loop ao invés de antes. Assim, um loop `Repeat...Until` sempre executa o loop uma vez, enquanto se a expressão booleana for inicialmente Falsa, um loop `While...End while` não executa o loop de forma alguma.
 
-La otra diferencia con un bucle `Repeat...Until` es que el bucle continúa hasta que la expresión booleana sea TRUE.
+A outra diferença com um loop `Repita...Até` é que o loop continua até que a expressão booleana seja VERDADEIRA.
 
 As instruções `break` e `continue` são [descritas abaixo](#break-and-continue).
 
 #### Exemplo
 
-Compara el siguiente ejemplo con el ejemplo del bucle `While...End while`. Tenga en cuenta que la expresión booleana no necesita ser inicializada-no hay un comando `CONFIRM` para inicializar la variable `OK`.
+Compare o exemplo a seguir com o exemplo para o laço `While...End while`. Lembre que a expressão booleana não precisa ser inicializada—não há um comando `CONFIRM` para inicializar a variável `OK`.
 
 ```4d
  Repeat
