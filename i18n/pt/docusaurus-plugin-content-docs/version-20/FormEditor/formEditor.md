@@ -455,7 +455,7 @@ An attribute value defined in a style sheet can be overridden in the JSON form d
 
 ## Criação de list box
 
-You can create new entity selection list boxes quickly with the **List box builder**. The new list box can be used immediately or it can be edited via the Form Editor.
+Puede crear rápidamente nuevos list box de tipo selección de entidades con el **Generador de list box**. The new list box can be used immediately or it can be edited via the Form Editor.
 
 The List box builder lets you create and fill entity selection list boxes in a few simple operations.
 
