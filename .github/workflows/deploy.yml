@@ -10,11 +10,13 @@ jobs:
 
   gh-release:
     needs: workflow-build
-    name: 'Build and update website'
+    name: 'Deploy website'
     runs-on: ubuntu-latest
     steps:
+    - name: Download artifact
+      uses: actions/download-artifact@v4
     - name: Publish
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+        publish_dir: ./build/
