@@ -984,7 +984,7 @@ When including the optional *paramObj* parameter, the `VP EXPORT DOCUMENT` comma
 
 | Variável |               | Tipo    | Descrição                                                    |
 | -------- | ------------- | ------- | ------------------------------------------------------------ |
-| $1       |               | text    | The name of the 4D View Pro area object                      |
+| $1       |               | text    | O nome do objeto de área 4D View Pro                         |
 | $2       |               | text    | O caminho do ficheiro do objeto 4D View Pro exportado        |
 | $3       |               | object  | Uma referência ao *paramObj* do comando                      |
 | $4       |               | object  | Um objeto devolvido pelo método com uma mensagem de estado   |
