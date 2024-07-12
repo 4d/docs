@@ -140,7 +140,7 @@ If a component path declared in the **environment4d.json** file is not found whe
 
 :::
 
-### Declaring components stored on GitHub
+### Declarando componentes armazenados no GitHub
 
 4D components available as GitHub releases can be referenced and automatically loaded in your 4D projects.
 
