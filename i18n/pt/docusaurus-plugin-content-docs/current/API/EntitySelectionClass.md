@@ -297,11 +297,11 @@ The entity selection must be *alterable*, i.e. it has been created for example b
 **Adicionar uma entidade**
 
 - If the entity selection is ordered, *entity* is added at the end of the selection. Se uma referência a mesma entidade já pertencer a seleção de entidades, se duplica e se adiciona uma nova referência.
-- If the entity selection is unordered, *entity* is added anywhere in the selection, with no specific order.
+- Se a seleção da entidade não tiver ordem, *entity* é adicionada em qualquer lugar da seleção, sem uma ordem específica.
 
 **Adicionar uma seleção de entidades**
 
-- If the entity selection is ordered, its order is kept and *entitySelection* is added at the end of the selection. If references to the same entities of *entitySelection* already belong to the entity selection, they are duplicated and new references are added.
+- Se a selecção de entidades estiver ordenada, a sua ordem é mantida e *entitySelection* é adicionado no final da selecção. If references to the same entities of *entitySelection* already belong to the entity selection, they are duplicated and new references are added.
 - Se a seleção de entidade nãofor ordenada, ela fica ordenada.
 
 > For more information, please refer to the [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) section.
@@ -753,7 +753,7 @@ Então esta seleção de entidades é atualizada com produtos e se quiser compar
 
 The `.distinct()` function <!-- REF #EntitySelectionClass.distinct().Summary -->returns a collection containing only distinct (different) values from the *attributePath* in the entity selection<!-- END REF -->.
 
-A coleção retornada é ordenada automaticamente. **Null** values are not returned.
+A coleção retornada é ordenada automaticamente. Os valores **null** não são devolvidos.
 
 In the *attributePath* parameter, pass the entity attribute whose distinct values you want to get. Só valores escalares (texto, número, booleano, ou data) podemser manejados. If the *attributePath* leads to an object property that contains values of different types, they are first grouped by type and sorted afterwards. Se <em x-id="3">attributePath</em> levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
 
@@ -979,7 +979,7 @@ With this syntax, `.extract()` populates the returned collection with the *attri
 
 If several *attributePath* are given, a *targetPath* must be given for each. Only valid pairs \[*attributePath*, *targetPath*] are extracted.
 
-- Dataclass attributes with [.kind](DataClassClass.md#attributename) = "relatedEntity" are extracted as an entity.
+- Os atributos dataclass com [.kind](DataClassClass.md#attributename) = "relatedEntity" são extraídos como uma entidade.
 - Dataclass attributes with [.kind](DataClassClass.md#attributename) = "relatedEntities" are extracted as an entity selection.
 
 > As entidades de uma colecção de entidades acedidas por \[ ] não são recarregadas da base de dados.
@@ -1728,7 +1728,7 @@ The *formulaString* or *formulaObj* is executed for each entity of the entity se
 
 > Um resultado nullé sempre o menor valor.
 
-By default if you omit the *sortOrder* parameter, the resulting entity selection is sorted in ascending order. Optionnally, you can pass one of the following values in the *sortOrder* parameter:
+Como padrão, se omitir o parâmetro *sortOrder*, a seleção de entidade resultado é ordenada de forma ascendente. Optionnally, you can pass one of the following values in the *sortOrder* parameter:
 
 | Parâmetros    | Valor | Comentário                                   |
 | ------------- | ----- | -------------------------------------------- |
