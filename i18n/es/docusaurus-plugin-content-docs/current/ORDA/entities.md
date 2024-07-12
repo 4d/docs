@@ -10,7 +10,7 @@ En ORDA, se accede a los datos a través de [entidades](dsMapping.md#entity) y [
 Hay dos maneras de crear una nueva entidad en una dataclass:
 
 - Since entities are references to database records, you can create entities by creating records using the 4D language and then reference them with ORDA functions such as [`entity.next()`](../API/EntityClass.md#next) or [`entitySelection.first()`](../API/EntitySelectionClass.md#first).
-- You can also create an entity using the [`dataClass.new()`](../API/DataClassClass.md#new) function.
+- También puede crear una entidad utilizando la función [`dataClass.new()`](../API/DataClassClass.md#new).
 
 Tenga en cuenta que la entidad sólo se crea en la memoria. Si desea añadirla al datastore, debe llamar a la función [`entity.save()`](../API/EntityClass.md#save).
 
@@ -275,7 +275,7 @@ Una entity selection **compartible** tiene las siguientes características:
 Una entity selection **modificable** tiene las siguientes características:
 
 - no puede compartirse entre los procesos, ni almacenarse en un objeto o colección compartido. Si se intenta almacenar una entity selection no compartible en un objeto o colección compartido, se producirá un error (-10721 - Tipo de valor no soportado en un objeto o colección compartido);
-- it accepts the addition of new entities, i.e. it is supports the [`.add()`](API/EntitySelectionClass.md#add) function.
+- acepta la adición de nuevas entidades, es decir, soporta la función [`.add()`](API/EntitySelectionClass.md#add).
 
 #### ¿Cómo se definen?
 
@@ -334,7 +334,7 @@ $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 
 :::note Entity selections devueltas por el servidor
 
-In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. To make such an entity selection alterable on the client, you need to execute [`copy()`](API/EntitySelectionClass.md#copy) on the client side. Ejemplo:
+In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. Para que dicha selección de entidades sea modificable en el cliente, es necesario ejecutar [`copy()`](API/EntitySelectionClass.md#copy) del lado del cliente. Ejemplo:
 
 ```4d
 	//a function is always executed on the server
