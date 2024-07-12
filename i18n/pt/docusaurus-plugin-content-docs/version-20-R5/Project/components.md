@@ -118,7 +118,7 @@ The Dependencies panel lists all project dependencies, whatever their origin, i.
 
 ![dependency-origin](../assets/en/Project/dependency-origin.png)
 
-The following origins are supported:
+São suportadas as seguintes origens:
 
 | Origin tag            | Descrição                                                                      |
 | --------------------- | ------------------------------------------------------------------------------ |
