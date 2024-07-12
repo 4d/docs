@@ -86,7 +86,7 @@ When including the optional *paramObj* parameter, the command allows you to use 
 
 | Parâmetro |                               | Tipo    | Descrição                                                                    |
 | --------- | ----------------------------- | ------- | ---------------------------------------------------------------------------- |
-| param1    |                               | text    | The name of the 4D View Pro area object                                      |
+| param1    |                               | text    | O nome do objeto de área 4D View Pro                                         |
 | param2    |                               | text    | O caminho do ficheiro do objeto 4D View Pro exportado                        |
 | param3    |                               | object  | A reference to the command's *paramObj*                                      |
 | param4    |                               | object  | Um objeto devolvido pelo método com uma mensagem de estado                   |
