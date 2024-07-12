@@ -86,7 +86,7 @@ In the *server* parameter, pass an object containing the following properties:
 
 #### Resultados
 
-The function returns an [**IMAP transporter object**](#imap-transporter-object). All returned properties are **read-only**.
+The function returns an [**IMAP transporter object**](#imap-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
 
 > A ligação IMAP é automaticamente fechada quando o objecto transportador é destruído.
 
