@@ -1,7 +1,9 @@
-const {themes} = require('prism-react-renderer');
+const { themes } = require('prism-react-renderer');
 const { default: remarkGfm } = require('remark-gfm');
 const lightTheme = themes.github;
 const darkTheme = themes.palenight;
+
+const isProduction = process.env.GITHUB_REPOSITORY_OWNER === '4d';
 
 module.exports = {
   title: "4D Docs",
@@ -13,6 +15,7 @@ module.exports = {
   favicon: "img/favicon/4d.gif",
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
+  noIndex: isProduction ? false : true,
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -56,7 +59,7 @@ module.exports = {
               banner: 'none',
             },
           },
-          includeCurrentVersion: true, // false for prod only
+          includeCurrentVersion: isProduction ? false : true, // false for prod only
         },
         theme: {
           customCss: [require.resolve('./src/css/customTheme.css')],
