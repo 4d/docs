@@ -5,7 +5,7 @@ title: リリースノート
 
 ## 4D 20 R6
 
-Read [**What’s new in 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-20-R6/), the blog post that lists all new features and enhancements in 4D 20 R6.
+[**4D 20 R6 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-20-R6/): 4D 20 R6 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
 #### ハイライト
 
@@ -33,7 +33,7 @@ Read [**What’s new in 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-20-R6
 
 ## 4D 20 R5
 
-Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5/), the blog post that lists all new features and enhancements in 4D 20 R5.
+[**4D 20 R5 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-20-R5/): 4D 20 R5 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
 #### ハイライト
 
@@ -84,7 +84,7 @@ Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5
 
 ## 4D 20 R3
 
-Read [**What’s new in 4D 20 R3**](https://blog.4d.com/en-whats-new-in-4d-20-vR3/), the blog post that lists all new features and enhancements in 4D 20 R3.
+[**4D 20 R3 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20-R3/): 4D 20 R3 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
 #### ハイライト
 
