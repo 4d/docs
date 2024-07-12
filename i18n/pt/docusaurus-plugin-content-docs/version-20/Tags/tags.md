@@ -172,7 +172,7 @@ The `<!--#4DEACH-->` comment allows iterating a specified item over all values o
 The `<!--#4DEACH-->` comment can iterate through three expression types:
 
 - [collections](#--4deach-item-in-collection--): loop through each element of the collection,
-- [entity selections](#--4deach-entity-in-entityselection--): loop through each entity,
+- [seleções de entidade](#--4deach-entity-in-entityselection--): loop através de cada entidade,
 - [objects](#--4deach-property-in-object--): loop through each object property.
 
 The number of iterations is evaluated at startup and will not change during the processing. Adicionar ou remover itens durante o loop não é recomendado porque resulta em iterações faltantes ou redundantes.
@@ -231,7 +231,7 @@ The number of loops is based on the number of elements of the collection. At eac
 
 ### `<!--#4DEACH entity in entitySelection-->`
 
-This syntax iterates on each *entity* of the *entitySelection*. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each entity of the entity selection.
+Essa sintaxe itera em cada *entidade* da *seleção de entidades*. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each entity of the entity selection.
 
 The *entity* parameter is an object variable of the entity selection class.
 
