@@ -700,7 +700,7 @@ Então esta seleção de entidades é atualizada com produtos e se quiser compar
 
 The `.distinct()` function <!-- REF #EntitySelectionClass.distinct().Summary -->returns a collection containing only distinct (different) values from the *attributePath* in the entity selection<!-- END REF -->.
 
-A coleção retornada é ordenada automaticamente. **Null** values are not returned.
+A coleção retornada é ordenada automaticamente. Os valores **null** não são devolvidos.
 
 In the *attributePath* parameter, pass the entity attribute whose distinct values you want to get. Só valores escalares (texto, número, booleano, ou data) podemser manejados. If the *attributePath* leads to an object property that contains values of different types, they are first grouped by type and sorted afterwards. Se <em x-id="3">attributePath</em> levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
 
