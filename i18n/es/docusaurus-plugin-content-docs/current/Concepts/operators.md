@@ -42,7 +42,7 @@ Los resultados del operador dependen de los **tipos de datos** a los que se apli
 - [**Operadores de punteros**](dt_pointer.md#operadores-de-punteros)
 - [**Operadores de cadenas**](dt_string.md#operadores-de-cadenas)
 - [**Object reference operators**](dt_object.md#object-operators)
-- [**Collection reference operators**](dt_collection.md#collection-operators)
+- [**Operadores de referencia de colección**](dt_collection.md#collection-operators)
 - [**Operadores null**](dt_null_undefined.md#operadores-null)
 - [**Operadores Undefined**](dt_null_undefined.md#operadores-undefined)
 

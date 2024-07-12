@@ -59,10 +59,10 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>História</summary>
 
-| Release | Mudanças                            |
-| ------- | ----------------------------------- |
-| 19 R4   | New `HTTP Client log file` constant |
-| 17 R5   | Adicionado                          |
+| Release | Mudanças                              |
+| ------- | ------------------------------------- |
+| 19 R4   | Nova constante `HTTP Client log file` |
+| 17 R5   | Adicionado                            |
 
 </details>
 
@@ -498,7 +498,7 @@ If you use the *mode* (text) parameter, pass the opening mode for the file handl
 | "write"  | Cria um file handle para escrever os valores no arquivo (começando no início do conteúdo do arquivo). Se o arquivo não existir em disco, é criado. Só se pode abrir um único file handle em modo "write" no mesmo objeto File. |
 | "append" | Cria um file handle para escrever os valores no arquivo (começando no fim do conteúdo do arquivo). Se o arquivo não existir em disco, é criado. Só se pode abrir um único file handle em modo "append" no mesmo objeto File.   |
 
-> The *mode* value is case sensitive.
+> O valor de *modo* diferencia maiúsculas de minúsculas.
 
 If you use the *options* (object) parameter, you can pass more options for the file handle through the following properties (these properties can be read afterwards from the opened [file handle object](FileHandleClass)):
 

@@ -114,18 +114,18 @@ A continuación se muestra el panel Dependencias. Las dependencias se ordenan po
 
 ### Origen de dependencia
 
-The Dependencies panel lists all project dependencies, whatever their origin, i.e. wherever they come from. The dependency origin is provided by the tag under its name:
+The Dependencies panel lists all project dependencies, whatever their origin, i.e. wherever they come from. El origen de la dependencia lo suministra la etiqueta bajo su nombre:
 
 ![dependency-origin](../assets/en/Project/dependency-origin.png)
 
 Se soportan los siguientes orígenes:
 
-| Etiqueta de origen      | Descripción                                                                    |
-| ----------------------- | ------------------------------------------------------------------------------ |
-| Componente 4D           | Built-in 4D component, stored in the `Components` folder of the 4D application |
-| Source                  | Component declared in the [`dependencies.json`](#dependenciesjson) file        |
-| Entorno                 | Component declared in the [`environnement4d.json`](#environment4djson) file    |
-| Componente del proyecto | Component located in the [`Components`](architecture.md#components) folder     |
+| Etiqueta de origen      | Descripción                                                                     |
+| ----------------------- | ------------------------------------------------------------------------------- |
+| Componente 4D           | Built-in 4D component, stored in the `Components` folder of the 4D application  |
+| Source                  | Componente declarado en el archivo [`dependencies.json`](#dependenciesjson)     |
+| Entorno                 | Componente declarado en el archivo [`environnement4d.json`](#environment4djson) |
+| Componente del proyecto | Component located in the [`Components`](architecture.md#components) folder      |
 
 **Right-click** in a dependency line and select **Show on disk** to reveal the location of a dependency:
 
@@ -143,7 +143,7 @@ By default, all dependencies identified by the Dependency manager are listed, wh
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
-- **Active**: Dependencies that are loaded and can be used in the project. It includes _overloading_ dependencies, which are actually loaded. _Overloaded_ dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
+- **Activo**: dependencias que están cargadas y pueden ser utilizadas en el proyecto. It includes _overloading_ dependencies, which are actually loaded. _Overloaded_ dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
 - **Inactive**: Dependencies that are not loaded in the project and are not available. There are many possible reasons for this status: missing files, version incompatibility...
 - **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
 

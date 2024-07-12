@@ -340,7 +340,7 @@ Los atributos página se utilizan para especificar la configuración general de 
 | pageOrder       | entero largo | Las páginas del pedido se imprimen. Valores disponibles: `vk print page order auto` (por defecto), `vk print page order down then over`, `vk print page order over then down`.               |
 | pageRange       | text         | El rango de páginas a imprimir                                                                                                                                                                                                                                  |
 | qualityFactor   | entero largo | El factor de calidad para la impresión (1 - 8).  The higher the quality factor, the better the printing quality, however printing performance may be affected.<p>Default value = 2</p>                       |
-| useMax          | boolean      | Only columns and rows with data are printed.<p>Default value = true</p>                                                                                                                                                                         |
+| useMax          | boolean      | Sólo se imprimen columnas y líneas con datos.<p>Valor predeterminado = true</p>                                                                                                                                                                 |
 | zoomFactor      | real         | The amount to enlarge or reduce the printed page.<p>Default value = 1</p>                                                                                                                                                                       |
 
 ### Tamaño del papel

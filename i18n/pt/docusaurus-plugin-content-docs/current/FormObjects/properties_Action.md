@@ -112,7 +112,7 @@ São suportados vários tipos de referências de métodos:
 
 ## Linhas móveis
 
-`Array type list boxes`
+`List boxes de tipo array`
 
 Autoriza a deslocação de linhas durante a execução. Esta opção é selecionada por defeito. No está disponible para los [list box de tipo selección](listbox_overview.md#selection-list-boxes) ni para los [list box en modo jerárquico](properties_Hierarchy.md#hierarchical-list-box).
 

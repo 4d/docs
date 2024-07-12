@@ -3,7 +3,7 @@ id: sessions
 title: Sesiones web
 ---
 
-The 4D web server provides built-in features for managing **web sessions**. Creating and maintaining web sessions allows you to control and improve the user experience on your web application. When web sessions are enabled, web clients can reuse the same server context from one request to another.
+El servidor web de 4D ofrece funciones integradas para la gestión de **sesiones web**. Creating and maintaining web sessions allows you to control and improve the user experience on your web application. When web sessions are enabled, web clients can reuse the same server context from one request to another.
 
 Las sesiones web permiten:
 

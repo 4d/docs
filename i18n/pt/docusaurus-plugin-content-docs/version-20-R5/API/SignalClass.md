@@ -178,7 +178,7 @@ The `.description` property <!-- REF #SignalClass.description.Summary -->contain
 
 `.description` can be set at the creation of the signal object or at any moment. Note that since the `Signal` object is a shared object, any write-mode access to the `.description` property must be surrounded by a `Use...End use` structure.
 
-This property is **read-write**.
+Essa propriedade é **leitura-escrita**.
 
 <!-- END REF -->
 
@@ -253,7 +253,7 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 | Parâmetro  | Tipo       |    | Descrição                                   |
 | ---------- | ---------- | -- | ------------------------------------------- |
 | timeout    | Real       | -> | Tempo máximo de espera do sinal em segundos |
-| Resultados | Parâmetros | <- | State of the `.signaled` property           |
+| Resultados | Parâmetros | <- | Estado da propriedade `.signaled`           |
 
 <!-- END REF -->
 

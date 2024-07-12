@@ -98,7 +98,7 @@ Por exemplo, para definir um atributo de armazenamento:
  $name:=$entity.lastname //get the employee name, e.g. "Smith"
  $entity.lastname:="Jones" //set the employee name
 ```
-> Pictures attributes cannot be assigned directly with a given path in an entity.
+> Os atributos de imagens não podem ser atribuídos diretamente com um caminho fornecido em uma entidade.
 
 O acesso a um atributo relacionado depende do tipo de atributo. Por exemplo, com a seguinte estrutura:
 
@@ -357,7 +357,7 @@ This automatic mechanism is based on the concept of "optimistic locking" which i
 * All entities can always be loaded in read-write; there is no *a priori* "locking" of entities.
 * Cada entidade tem um carimbo de bloqueio interno incrementado sempre que é guardado.
 * When a user or process tries to save an entity using the `entity.save( )` method, 4D compares the stamp value of the entity to be saved with that of the entity found in the data (in the case of a modification):
-  * When the values match, the entity is saved and the internal stamp value is incremented.
+  * Quando os valores correspondem, a entidade é salva e o valor do marcador interno é aumentado.
   * When the values do not match, it means that another user has modified this entity in the meantime. A gravação não é efetuada e é devolvido um erro.
 
 O diagrama seguinte ilustra o bloqueio otimista:
@@ -387,7 +387,7 @@ When this situation occurs, you can, for example, reload the entity from the dis
 
 ### Bloqueio pessimista
 
-É possível bloquear e desbloquear entidades a pedido quando se acede aos dados. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
+É possível bloquear e desbloquear entidades a pedido quando se acede aos dados. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. A entidade só pode ser carregada no modo somente leitura nesses processos; seus valores não podem ser editados ou salvos.
 
 This feature is based upon two methods of the `Entity` class:
 

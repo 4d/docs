@@ -33,7 +33,7 @@ $col:=New collection //$col is initialized with an empty collection
 
 Los resultados del operador dependen de los **tipos de datos** a los que se aplican. 4D soporta diferentes operadores en tipos de datos escalares. São descritos com os tipos de dados, nas secções seguintes:
 
-- [**Logical operators**](dt_boolean.md#logical-operators) (on **boolean** expressions)
+- [**Operadores lógicos**](dt_boolean.md#logical-operators) (em expressões **booleanas**)
 - [**Date operators**](dt_date.md#date-operators)
 - [**Time operators**](dt_time.md#time-operators)
 - [**Number operators**](dt_number.md#number-operators)
@@ -194,9 +194,9 @@ $tax:=$item.taxRate && ($item.price*$item.taxRate)
 Os operadores de curto-circuito são úteis em provas como:
 
 ```4d
-If(($myObject#Null) && ($myObject.value>10))
-	//code
-End if
+Se(($myObject#Null) && ($myObject.value>10))
+	//código
+Fim se
 ```
 
 Se $myObject for nulo, o segundo argumento não é executado e, por conseguinte, não é lançado qualquer erro.

@@ -334,7 +334,7 @@ Si su servidor 4D no parece responder en el puerto definido, puede probar la dir
 Para evitar esta confusión, se recomienda utilizar la notación [ ] siempre que se combine una dirección IPv6 con un número de puerto, por ejemplo:
 
 ```code4d
-	[2001:0DB8::85a3:0:ac1f:8001]:8081 //IPv6 address with port 8081
+[2001:0DB8::85a3:0:ac1f:8001]:8081 //Dirección IPv6 con puerto 8081
 ```
 
 ## Keep Session

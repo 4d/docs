@@ -25,7 +25,7 @@ Para implementar el Asistente de tablas en su aplicación, los desarrolladores p
 
 El usuario abre el diálogo Asistente para tablas desde el elemento de menú "Insertar tabla" de la barra de herramientas y la barra lateral de la interfaz de 4D Write Pro.
 
-![](../assets/en/WritePro/tablewizard-interface.png)
+![](../assets/en/WritePro/tablewizard-interface2.png)
 
 Desde esta interfaz, el usuario puede seleccionar una plantilla o una tabla en la primera lista desplegable y un tema en la segunda.
 
@@ -37,9 +37,11 @@ Dependiendo de si el usuario selecciona un modelo o una tabla, puede ver la list
 
 ##### En líneas:
 
-![](../assets/en/WritePro/rows.PNG)
+![](../assets/en/WritePro/rows1.PNG)
 
 In the Table Wizard, the user can also define the number of header rows and extra rows (0 to 5 each), set [break rows](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6233076) (summary rows) above or below the data row, and choose to show/hide [carry-over rows](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6236686).
+
+In addition, the user has the possibility to choose the table's behavior when its datasource is empty with the following options: Show data row, Hide date row, Hide table, Show placeholder row.
 
 ##### En pantalla:
 
@@ -68,13 +70,7 @@ El archivo de plantilla permite definir lo siguiente:
 - la fórmula que devuelve una selección de entidades utilizada como fuente de datos de la tabla,
 - las fórmulas de ruptura (si se puede insertar una línea de ruptura)
 - los atributos de la clase de datos que pueden utilizarse como columnas de la tabla,
-- las fórmulas disponibles como menús contextuales dentro de líneas de ruptura, líneas de arrastre o líneas adicionales.
-
-:::info Limitación
-
-En la implementación actual (4D v20 R2), las fórmulas en saltos, fuentes de datos y menús contextuales no soportan llamadas a los métodos de la base local. Esta limitación se eliminará en la próxima versión.
-
-:::
+- the formulas available as contextual menus inside break rows, carry-over row, placeholder row or extra rows.
 
 The template file must be stored in a "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" folder within your project.
 
@@ -99,6 +95,7 @@ El archivo de plantilla en formato JSON contiene los siguientes atributos:
 | extraFormulas                        | Collection |             | Colección de objetos de fórmula aplicables a líneas adicionales                                                                                                                                                          |
 | extraFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                                                                             |
 | extraFormulas.source | Text       | x           | Formula                                                                                                                                                                                                                  |
+| placeholderFormulas                  | Collection |             | Collection of formula objects that are inserted in the placeholder row                                                                                                                                                   |
 
 :::note Francés
 
@@ -220,26 +217,27 @@ El componente 4D Write Pro Interface proporciona por defecto una lista de temas,
 
 El archivo del tema en formato JSON contiene los siguientes atributos:
 
-| Atributo | Tipo   | Obligatorio | Descripción                                                                                                                                                                                                                |
-| :------- | :----- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| default  | Object |             | Objeto que contiene el estilo por defecto aplicable a todas las líneas.                                                                                                                                    |
-| tabla    | Object |             | Objeto que contiene la definición de estilo aplicable a la tabla.                                                                                                                                          |
-| rows     | Object |             | Objeto que contiene la definición de estilo aplicable a todas las líneas.                                                                                                                                  |
-| cells    | Object |             | Objeto que contiene la definición de estilo aplicable a todas las celdas.                                                                                                                                  |
-| header1  | Object |             | Objeto que contiene la definición de estilo aplicable a la primera línea del encabezado.                                                                                                                   |
-| header2  | Object |             | Objeto que contiene la definición de estilo aplicable a la segunda línea del encabezado.                                                                                                                   |
-| header3  | Object |             | Objeto que contiene la definición de estilo aplicable a la tercera línea del encabezado.                                                                                                                   |
-| header4  | Object |             | Objeto que contiene la definición de estilo aplicable a la cuarta línea del encabezado.                                                                                                                    |
-| header5  | Object |             | Objeto que contiene la definición de estilo aplicable a la quinta línea del encabezado.                                                                                                                    |
-| headers  | Object |             | Object containing the style definition applicable to the header rows, if a specific header (like header1, header2...) no está definido. |
-| data     | Object |             | Objeto que contiene la definición de estilo aplicable a la línea de datos repetida.                                                                                                                        |
-| break1   | Object |             | Objeto que contiene la definición de estilo aplicable a la primera línea de ruptura.                                                                                                                       |
-| break2   | Object |             | Objeto que contiene la definición de estilo aplicable a la segunda línea de ruptura.                                                                                                                       |
-| break3   | Object |             | Objeto que contiene la definición de estilo aplicable a la tercera línea de ruptura.                                                                                                                       |
-| break4   | Object |             | Objeto que contiene la definición de estilo aplicable a la cuarta línea de ruptura.                                                                                                                        |
-| break5   | Object |             | Objeto que contiene la definición de estilo aplicable a la quinta línea de ruptura.                                                                                                                        |
-| breaks   | Object |             | Object containing the style definition applicable to the break rows, if a specific break (like break1, break2...) no está definido.     |
-| bcor     | Object |             | Objeto que contiene la definición de estilo aplicable a la línea de arrastre inferior.                                                                                                                     |
+| Atributo    | Tipo   | Obligatorio | Descripción                                                                                                                                                                                                                |
+| :---------- | :----- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| default     | Object |             | Objeto que contiene el estilo por defecto aplicable a todas las líneas.                                                                                                                                    |
+| tabla       | Object |             | Objeto que contiene la definición de estilo aplicable a la tabla.                                                                                                                                          |
+| rows        | Object |             | Objeto que contiene la definición de estilo aplicable a todas las líneas.                                                                                                                                  |
+| cells       | Object |             | Objeto que contiene la definición de estilo aplicable a todas las celdas.                                                                                                                                  |
+| header1     | Object |             | Objeto que contiene la definición de estilo aplicable a la primera línea del encabezado.                                                                                                                   |
+| header2     | Object |             | Objeto que contiene la definición de estilo aplicable a la segunda línea del encabezado.                                                                                                                   |
+| header3     | Object |             | Objeto que contiene la definición de estilo aplicable a la tercera línea del encabezado.                                                                                                                   |
+| header4     | Object |             | Objeto que contiene la definición de estilo aplicable a la cuarta línea del encabezado.                                                                                                                    |
+| header5     | Object |             | Objeto que contiene la definición de estilo aplicable a la quinta línea del encabezado.                                                                                                                    |
+| headers     | Object |             | Object containing the style definition applicable to the header rows, if a specific header (like header1, header2...) no está definido. |
+| data        | Object |             | Objeto que contiene la definición de estilo aplicable a la línea de datos repetida.                                                                                                                        |
+| break1      | Object |             | Objeto que contiene la definición de estilo aplicable a la primera línea de ruptura.                                                                                                                       |
+| break2      | Object |             | Objeto que contiene la definición de estilo aplicable a la segunda línea de ruptura.                                                                                                                       |
+| break3      | Object |             | Objeto que contiene la definición de estilo aplicable a la tercera línea de ruptura.                                                                                                                       |
+| break4      | Object |             | Objeto que contiene la definición de estilo aplicable a la cuarta línea de ruptura.                                                                                                                        |
+| break5      | Object |             | Objeto que contiene la definición de estilo aplicable a la quinta línea de ruptura.                                                                                                                        |
+| breaks      | Object |             | Object containing the style definition applicable to the break rows, if a specific break (like break1, break2...) no está definido.     |
+| bcor        | Object |             | Objeto que contiene la definición de estilo aplicable a la línea de arrastre inferior.                                                                                                                     |
+| placeholder | Object |             | Object containing the default style applicable to the placeholder row.                                                                                                                                     |
 
 For every attribute used in your JSON file (header, data, carry-over, summary, and extra rows), you can define the following WP attributes, mentionned with their [corresponding WP constant](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Attributes.300-6229528.en.html):
 

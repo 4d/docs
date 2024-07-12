@@ -176,12 +176,12 @@ La instrucción `return` puede utilizarse junto con la sintaxis estándar para l
 Function getValue
 	$0:=10
 	return 20
-	// returns 20
+	// retorna 20
 
 Function getValue -> $v : Integer
 	return 10
 	$v:=20 // never executed
-	// returns 10
+	// retorna 10
 ```
 
 ## Indireção dos parâmetros
@@ -210,10 +210,10 @@ Os parâmetros da função devem ser passados na ordem correta: primeiro o forma
  Result:=MySum("000";1;2;200) //"203"
 ```
 
-Observe que, mesmo que tenha declarado 0, 1 ou mais parâmetros, você sempre poderá passar o número de parâmetros que desejar. Los parámetros están todos disponibles dentro del código llamado a través de la sintaxis `${N}` y el tipo de parámetros extra es [Variant](dt_variant.md) por defecto (puede declararlos utilizando la [notación variadic](#declaring-variadic-parameters)). You just need to make sure parameters exist, thanks to the [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html) command. Por exemplo:
+Observe que, mesmo que tenha declarado 0, 1 ou mais parâmetros, você sempre poderá passar o número de parâmetros que desejar. Los parámetros están todos disponibles dentro del código llamado a través de la sintaxis `${N}` y el tipo de parámetros extra es [Variant](dt_variant.md) por defecto (puede declararlos utilizando la [notación variadic](#declaring-variadic-parameters)). Você só precisa garantir que os parâmetros existam, graças ao comando [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html). Por exemplo:
 
 ```4d
-//foo method
+//método foo
 #DECLARE($p1: Text;$p2 : Text; $p3 : Date) 
 For($i;1;Count parameters)
 	ALERT("param "+String($i)+" = "+String(${$i}))
@@ -223,7 +223,7 @@ End for
 Esta função pode ser chamada agora de várias formas:
 
 ```4d
-foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed
+foo("hello";"world";!01/01/2021!;42;?12:00:00?) //parâmetros extras foram passados
 ```
 
 > A indireção de parâmetros se gerencia melhor se respeitar a convenção abaixo: se só alguns dos parâmetros forem endereçados por indireção, devem ser passados depois dos outros.
@@ -279,13 +279,13 @@ Esse método pode ser chamado com um número variável de parâmetros Real. No c
 
 ```4d
 
-$total1:=SumNumbers // returns 0 
-$total2:=SumNumbers(1; 2; 3; 4; 5) // returns 15
-$total3:=SumNumbers(1; 2; "hello"; 4; 5) // error
+$total1:=SumNumbers // retorna 0 
+$total2:=SumNumbers(1; 2; 3; 4; 5) // retorna 15
+$total3:=SumNumbers(1; 2; "hello"; 4; 5) // erro
 
 ```
 
-:::note Compatibility Note
+:::note Nota de compatibilidade
 
 La sintaxis heredada para declarar parámetros variádicos (`C_TEXT(${4})`) sigue siendo compatible, pero ahora se prefiere la notación variable.
 
@@ -501,14 +501,12 @@ O exemplo abaixo mostra uma mensagem de texto e pode inserir o texto em um docum
 // APPEND TEXT Project Method
 // APPEND TEXT ( Text { ; Text { ; Object } } )
 // APPEND TEXT ( Message { ; Path { ; 4DWPArea } } )
- 
- #DECLARE ($message : Text; $path : Text; $wpArea : Object)
-  
+ #DECLARE($message : Text; $path : Text; $wpArea : Object)
  ALERT($message)
- If(Count parameters>=3)
+ If(Count parameters=3)
     WP SET TEXT($wpArea;$1;wk append)
  Else
-    If(Count parameters>=2)
+    If(Count parameters=2)
        TEXT TO DOCUMENT($path;$message)
     End if
  End if

@@ -7,7 +7,7 @@ Throughout your 4D projects, you might need to format date and/or time values ac
 
 4D includes a comprehensive list of patterns that you can use to create and apply customized date and time formats in your applications, in addition to default formats. Customized format patterns are supported by the following features:
 
-- the [`String`](https://doc.4d.com/4dv20R/help/command/en/page10.html) command,
+- o comando [`String`](https://doc.4d.com/4dv20R/help/command/en/page10.html),
 - the [`OBJECT SET FORMAT`](https://doc.4d.com/4dv20R/help/command/en/page236.html) and [`OBJECT Get format`](https://doc.4d.com/4dv20R/help/command/en/page894.html) commands,
 - the date and time format form object properties, available from the Property list or the [`dateFormat`](../FormObjects/properties_Display.md/#date-format) and [`timeFormat`](../FormObjects/properties_Display.md/#time-format) JSON properties.
 
@@ -53,7 +53,7 @@ The following table lists all supported patterns for date and time formats.
 |         |                                                                          | EEEE          | Tuesday                                                               |
 |         |                                                                          | EEEEE         | T                                                                     |
 |         |                                                                          | EEEEEE        | Tu                                                                    |
-| e       | local day of week                                                        | e             | 2                                                                     |
+| e       | dia da semana local                                                      | e             | 2                                                                     |
 |         |                                                                          | ee            | 02                                                                    |
 |         |                                                                          | eee           | Tue                                                                   |
 |         |                                                                          | eeee          | Tuesday                                                               |
@@ -86,7 +86,7 @@ The following table lists all supported patterns for date and time formats.
 | s       | segundo em minuto                                                        | s             | 5                                                                     |
 |         |                                                                          | ss            | 05                                                                    |
 | X       | Time Zone: ISO8601 basic hm?, with Z for 0               | X             | -08, +0530, Z                                                         |
-|         | Time Zone: ISO8601 basic hm, with Z                      | XX            | -0800, Z                                                              |
+|         | Zona de tempo: ISO8601 hm, com Z                         | XX            | -0800, Z                                                              |
 |         | Time Zone: ISO8601 extended hm, with Z                   | XXX           | -08:00, Z                                             |
 |         | Time Zone: ISO8601 basic hms?, with Z                    | XXXX          | -0800, -075258, Z                                                     |
 |         | Time Zone: ISO8601 extended hms?, with Z                 | XXXXX         | -08:00, -07:52:58, Z  |
@@ -124,7 +124,7 @@ Same remark as for `L` and `M`: `c` is for a day used alone "every tuesday") and
 
 ### Zeros à esquerda
 
-In general, when the number of letters in the formatting string is higher than the expected number, leading zeros are added. Ex: "yyyyyy" would give "001996".
+In general, when the number of letters in the formatting string is higher than the expected number, leading zeros are added. Ex: "yyyyyy" daria "001996".
 
 ### Peças localizadas
 

@@ -160,7 +160,7 @@ Designa a espessura de uma linha.
 
 ## Array controle linha
 
-`Array type list boxes`
+`List boxes de tipo array`
 
 O nome de um array para aplicar uma cor de fundo personalizada para cada linha ou coluna da list box.
 

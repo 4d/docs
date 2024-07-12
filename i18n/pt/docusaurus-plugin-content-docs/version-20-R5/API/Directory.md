@@ -458,7 +458,7 @@ If a folder with the same name already exists in the *destinationFolder*, by def
 
 **Valor retornado**
 
-The copied `Folder` object.
+O objeto `Folder` copiado.
 
 #### Exemplo
 
@@ -490,10 +490,10 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 <!-- REF #directory.file().Params -->
 
-| Parâmetro  | Tipo                     |    | Descrição                                               |
-| ---------- | ------------------------ | -- | ------------------------------------------------------- |
-| path       | Text                     | -> | Rota POSIX relativa                                     |
-| Resultados | 4D. File | <- | `File` object (null if invalid path) |
+| Parâmetro  | Tipo                     |    | Descrição                                                   |
+| ---------- | ------------------------ | -- | ----------------------------------------------------------- |
+| path       | Text                     | -> | Rota POSIX relativa                                         |
+| Resultados | 4D. File | <- | Objeto 'File' (null se caminho inválido) |
 
 <!-- END REF -->
 
@@ -505,7 +505,7 @@ In *path*, pass a relative POSIX path to designate the file to return. A rota se
 
 **Valor retornado**
 
-A `File` object or null if *path* is invalid.
+Um objeto `File` ou null se *path* for inválido.
 
 #### Exemplo
 

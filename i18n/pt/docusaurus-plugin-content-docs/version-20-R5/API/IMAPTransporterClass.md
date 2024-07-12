@@ -86,7 +86,7 @@ In the *server* parameter, pass an object containing the following properties:
 
 #### Resultados
 
-The function returns an [**IMAP transporter object**](#imap-transporter-object). All returned properties are **read-only**.
+The function returns an [**IMAP transporter object**](#imap-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
 
 > A ligação IMAP é automaticamente fechada quando o objecto transportador é destruído.
 
@@ -822,10 +822,10 @@ The `boxInfo` object returned contains the following properties:
 
 <details><summary>História</summary>
 
-| Release | Mudanças                     |
-| ------- | ---------------------------- |
-| 18 R4   | Adicionado                   |
-| 19      | Add `isSubscribed` parameter |
+| Release | Mudanças                           |
+| ------- | ---------------------------------- |
+| 18 R4   | Adicionado                         |
+| 19      | Adicionar parâmetro `isSubscribed` |
 
 </details>
 
@@ -900,9 +900,9 @@ Se a conta não contiver quaisquer caixas de correio, é devolvida uma colecçã
 
 <!-- REF #IMAPTransporterClass.getDelimiter().Params -->
 
-| Parâmetro  | Tipo |     | Descrição                     |
-| ---------- | ---- | :-: | ----------------------------- |
-| Resultados | Text |  <- | Hierarchy delimiter character |
+| Parâmetro  | Tipo |     | Descrição                           |
+| ---------- | ---- | :-: | ----------------------------------- |
+| Resultados | Text |  <- | Caractere delimitador de hierarquia |
 
 <!-- END REF -->
 
@@ -1641,7 +1641,7 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 
 #### Chaves de pesquisa autorizadas
 
-**ALL**: All messages in the mailbox.\
+**ALL**: Todas as mensagens na caixa de correio.\
 **ANSWERED**: Messages with the \Answered flag set.\
 **UNANSWERED**: Messages that do not have the \Answered flag set.\
 **DELETED**: Messages with the \Deleted flag set.\

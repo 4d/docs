@@ -124,7 +124,7 @@ title: コンポーネント
 | ------------- | --------------------------------------------------------------- |
 | 4Dコンポーネント     | 4Dアプリケーションの `Components` フォルダーに保存されているビルトインの 4Dコンポーネント          |
 | ソース           | [`dependencies.json`](#dependenciesjson) ファイルで宣言されているコンポーネント    |
-| environment   | [`environment4d.json`](#environment4djson) ファイルで宣言されているコンポーネント  |
+| 環境            | [`environment4d.json`](#environment4djson) ファイルで宣言されているコンポーネント  |
 | プロジェクトコンポーネント | [`Components`](architecture.md#components) フォルダー内に置かれているコンポーネント |
 
 依存関係の行で **右クリック** し、**ディスク上に表示** を選択すると、依存関係の保管場所が表示されます:

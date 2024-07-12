@@ -7,12 +7,12 @@ A 4D component is a set of 4D code and/or 4D forms representing one or more func
 
 You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component\&type=Repositories).
 
-## Interpreted and compiled components
+## Componentes interpretados e compilados
 
 Components can be interpreted or [compiled](../Desktop/building.md). The package folder of a component can contain:
 
 - either a Project folder (interpreted component)
-- or a .4DZ file (compiled component)
+- ou um arquivo .4DZ (componente compilado)
 
 A 4D project running in interpreted mode can use either interpreted or compiled components. A 4D project running in compiled mode cannot use interpreted components. Por isso não pode ser usado em um componente.
 
@@ -84,13 +84,13 @@ If a component path declared in the **environment4d.json** file is not found whe
 
 Since components can be installed in different ways, a priority order is applied when the same component is referenced at several locations:
 
-**Higest priority**
+**Prioridade mais alta**
 
 1. Components stored in the [**Components** folder of the project](architecture.md#components).
 2. Components declared in the **dependencies.json** file.
 3. Internal User 4D components (e.g. 4D NetKit, 4D SVG...)
 
-**Lowest priority**
+**Prioridade mais baixa**
 
 ![priority](../assets/en/Project/load-sequence.png)
 
@@ -118,7 +118,7 @@ The Dependencies panel lists all project dependencies, whatever their origin, i.
 
 ![dependency-origin](../assets/en/Project/dependency-origin.png)
 
-The following origins are supported:
+São suportadas as seguintes origens:
 
 | Origin tag            | Descrição                                                                      |
 | --------------------- | ------------------------------------------------------------------------------ |
@@ -153,7 +153,7 @@ Dependencies requiring the developer's attention are indicated by a **status lab
 
 ![dependency-status](../assets/en/Project/dependency-conflict2.png)
 
-The following status labels are available:
+Estão disponíveis as seguintes etiquetas de status:
 
 - **Overloaded**: The dependency is not loaded because it is overloaded by another dependency with the same name at a higher [priority level](#priority).
 - **Overloading**: The dependency is loaded and is overloading one or more other dependencies with the same name at a lower [priority level](#priority).

@@ -70,7 +70,7 @@ In the *server* parameter, pass an object containing the following properties:
 
 #### Resultados
 
-The function returns a [**POP3 transporter object**](#pop3-transporter-object). All returned properties are **read-only**.
+The function returns a [**POP3 transporter object**](#pop3-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
 
 > A conexão POP3 é fechada automaticamente quando o objeto transportador for destruído.
 
@@ -383,9 +383,9 @@ O método retorna **Null** se:
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                        |
-| ---------- | ---------- | :-: | -------------------------------- |
-| Resultados | Collection |  <- | Collection of `mailInfo` objects |
+| Parâmetro  | Tipo       |     | Descrição                     |
+| ---------- | ---------- | :-: | ----------------------------- |
+| Resultados | Collection |  <- | Coleção de objetos `mailInfo` |
 
 <!-- END REF -->
 

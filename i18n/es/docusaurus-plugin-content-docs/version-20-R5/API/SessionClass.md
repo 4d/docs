@@ -3,9 +3,6 @@ id: SessionClass
 title: Session
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 Los objetos de sesión son devueltos por el comando [`Session`](#session). Estos objetos ofrecen al desarrollador una interfaz que permite gestionar la sesión de usuario actual y ejecutar acciones como almacenar datos contextuales, compartir información entre procesos de sesión, lanzar procesos preferentes relacionados con la sesión o (sólo web) gestionar [privilegios](../ORDA/privileges.md).
 
 ### Tipos de sesiones
@@ -514,9 +511,7 @@ Cuando se crea un objeto `Session`, la propiedad `.storage` está vacía. Al ser
 
 Esta propiedad es **sólo lectura** en sí misma pero devuelve un objeto de lectura-escritura.
 
-<Tabs>
-
-<TabItem value="Web session example">
+#### Web session example
 
 Desea almacenar la IP del cliente en la propiedad `.storage`. Puede escribir en el método base `On Web Authentication`:
 
@@ -528,9 +523,7 @@ If (Session.storage.clientIP=Null) //first access
 End if
 ```
 
-</TabItem>
-
-<TabItem value="Remote session example">
+#### Remote session example
 
 Desea compartir datos entre procesos de la misma sesión:
 
@@ -539,10 +532,6 @@ Use (Session.storage)
  Session.storage.settings:=New shared object("property"; $value; "property2"; $value2)
 End use
 ```
-
-</TabItem>
-
-</Tabs>
 
 <!-- END REF -->
 
