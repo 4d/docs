@@ -296,7 +296,7 @@ A continuación se muestra el panel Dependencias. Las dependencias se ordenan po
 
 ### Origen de dependencia
 
-The Dependencies panel lists all project dependencies, whatever their origin, i.e. wherever they come from. The dependency origin is provided by the tag under its name:
+The Dependencies panel lists all project dependencies, whatever their origin, i.e. wherever they come from. El origen de la dependencia lo suministra la etiqueta bajo su nombre:
 
 ![dependency-origin](../assets/en/Project/dependency-origin.png)
 
