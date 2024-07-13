@@ -146,7 +146,7 @@ $c:=a+b
 
    La variable `$a` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
-2. Haga clic en el botón **Step Over**. El contador del programa se pone ahora en la línea `b:=a+1`. At this point, the **Line Objects** theme displays:
+2. Haga clic en el botón **Step Over**. El contador del programa se pone ahora en la línea `b:=a+1`. Neste ponto, o tema **Objetos linha** é exibido:
 
    | $a | 1          |
    | -- | ---------- |
