@@ -9,7 +9,7 @@ Qodly Studio for 4D is currently in the **Developer Preview** phase. Não deve s
 
 :::
 
-**Qodly Studio** is an interface builder for web applications. It provides developers with a graphical page editor to design applications running in web browsers or smartphones. It supports natively the [ORDA objects](../ORDA/overview.md).
+**Qodly Studio** é um construtor de interfaces para aplicações web. It provides developers with a graphical page editor to design applications running in web browsers or smartphones. It supports natively the [ORDA objects](../ORDA/overview.md).
 
 You can use Qodly Studio directly from your **4D environment** to build modern and sophisticated interfaces that you can easily integrate to your existing 4D projects and deploy **on premise**.
 
@@ -305,7 +305,7 @@ Se você executar o renderizador a partir do Qodly Studio e esses dois servidore
 
 ![alt-text](../assets/en/WebServer/schemes.png)
 
-3. In Qodly Studio, you click on the **Preview** icon. You are warned that the two web servers are started on different schemes, but despite this you click on the **Confirm** button.
+3. No Qodly Studio, você clica no ícone **Preview**. You are warned that the two web servers are started on different schemes, but despite this you click on the **Confirm** button.
 
 ![alt-text](../assets/en/WebServer/render-button.png)
 
