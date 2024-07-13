@@ -38,12 +38,12 @@ Los resultados del operador dependen de los **tipos de datos** a los que se apli
 - [**Time operators**](dt_time.md#time-operators)
 - [**Number operators**](dt_number.md#number-operators)
 - [**Bitwise operators**](dt_number.md#bitwise-operators) (on **long integer** expressions)
-- [**Picture operators**](dt_picture.md#picture-operators)
-- [**Pointer operators**](dt_pointer.md#pointer-operators)
+- [**Operadores em imagens**](dt_picture.md#operadores-em-imagens)
+- [**Operadores em ponteiros**](dt_pointer.md#operadores-em-ponteiros)
 - [**String operators**](dt_string.md#string-operators)
 - [**Object reference operators**](dt_object.md#object-operators)
 - [**Collection reference operators**](dt_collection.md#collection-operators)
-- [**Null operators**](dt_null_undefined.md#null-operators)
+- [**Operadores null**](dt_null_undefined.md#operadores-null)
 - [**Undefined operators**](dt_null_undefined.md#undefined-operators)
 
 ## Operadores de atribuição compostos
