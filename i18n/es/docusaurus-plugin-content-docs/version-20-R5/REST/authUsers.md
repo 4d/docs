@@ -16,7 +16,7 @@ El modo de inicio de sesión del usuario le permite controlar cómo las peticion
 
 You set the user login mode through the `forceLogin` property in the [`roles.json` file](../ORDA/privileges.md#rolesjson-file):
 
-- the **default mode** is used if the "forceLogin" property is missing or set to "false",
+- el **modo predeterminado** se utiliza si la propiedad "forceLogin" no se encuentra o se define en "false",
 - el modo **force login** se utiliza si la propiedad "forceLogin" es "true".
 
 :::caution
