@@ -18,7 +18,7 @@ Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de 
   - imagem(2)
   - collection
 
-(1) **Non-streamable objects** such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... cannot be stored in **object fields**. An error is returned if you try to do it; however, they are fully supported in **object variables** in memory.
+(1) **Non-streamable objects** such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... não pode ser armazenado em **campos objeto**. An error is returned if you try to do it; however, they are fully supported in **object variables** in memory.
 
 (\*)Quando se expõe como texto no depurador ou se exporta a JSON, as propriedades dos objetos imagem imprimem "[objeto Imagem]".
 
@@ -166,7 +166,7 @@ A notação de objetos está disponível em qualquer elemento da lenguagem que p
      $measures:=Get database measures.DB.tables
 ```
 
-- **Project methods** or **Functions** that return objects.
+- **Métodos projeto** ou **Funções** que retornam objetos.
   Exemplo:
 
 ```4d
