@@ -70,7 +70,7 @@ A mesma propriedade de contexto de otimização pode ser passada para um número
 
 > A similar mechanism is implemented for entities that are loaded, so that only used attributes are requested (see the [`dataClass.get()`](../API/DataClassClass.md#get) function).
 
-**Example with `dataClass.query()`:**
+**Exemplo com `dataClass.query()`:**
 
 ```4d
  var $sel1; $sel2; $sel3; $sel4; $querysettings; $querysettings2 : Object
