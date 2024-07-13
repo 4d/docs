@@ -2881,7 +2881,7 @@ Este exemplo permite reduzir vários elementos da coleção a um só:
  $r:=$c.reduce(Formula(Flatten)) //$r=[0,1,2,3,4,5,6,7]
 ```
 
-With the following ***Flatten*** method:
+Com o seguinte método ***Flatten***:
 
 ```4d
  If($1.accumulator=Null)
@@ -2967,7 +2967,7 @@ Este exemplo permite reduzir vários elementos da coleção a um só:
  $r:=$c.reduceRight(Formula(Flatten)) //$r=[6,7,4,5,2,3,0,1]
 ```
 
-With the following ***Flatten*** method:
+Com o seguinte método ***Flatten***:
 
 ```4d
 	//Método projeto Flatten 
@@ -3067,7 +3067,7 @@ The `.resize()` function <!-- REF #collection.resize().Summary -->sets the colle
 - If *size* < collection length, exceeding elements are removed from the collection.
 - If *size* > collection length, the collection length is increased to size.
 
-By default, new elements are filled will **null** values. You can specify the value to fill in added elements using the *defaultValue* parameter.
+Por padrão, novos elementos são preenchidos com valores **null**. You can specify the value to fill in added elements using the *defaultValue* parameter.
 
 #### Exemplo
 
