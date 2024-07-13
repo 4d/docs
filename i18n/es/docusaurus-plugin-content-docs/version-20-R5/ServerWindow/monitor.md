@@ -34,7 +34,7 @@ El área "Visión general" ofrece diferente información sobre el sistema, la ap
 
 ![](../assets/en/Admin/server-licence-failed.png)
 
-Usually, you will need to check the [**Licences Manager**](Admin/licenses.md).
+Generalmente, tendrá que verificar el [**Administrador de licencias**](Admin/licenses.md).
 
 ## Área Detalles
 
