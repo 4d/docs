@@ -58,7 +58,7 @@ El botón **Iniciar copia de seguridad** permite realizar una copia de seguridad
 
 Esta área indica la duración de registro de los archivos de historial (cuando se activan) y le permite controlar su activación.
 
-Refer to the [**Description of log files**](Debugging/debugLogFiles.md) section for details on log files.
+Consulte la sección [**Descripción de los archivos de historial**](Debugging/debugLogFiles.md) para obtener más información sobre los archivos de historial.
 
 ### Iniciar/Detener Solicitud y Depurar Registros
 

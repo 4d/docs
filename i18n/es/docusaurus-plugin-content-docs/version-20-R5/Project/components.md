@@ -23,13 +23,13 @@ A 4D project running in interpreted mode can use either interpreted or compiled 
 Para cargar un componente en su proyecto 4D, usted puede:
 
 - reference the component in the **dependencies.json** file (and, optionnally, the **environment4d.json** file)
-- or, copy the component files in the [**Components** folder of your project](architecture.md#components).
+- o copia los archivos del componente en la [carpeta **Components** de su proyecto](architecture.md#components).
 
 If the same component is installed at different locations, a [priority order] is applied.
 
 ### dependencies.json
 
-1. Reference the component name in the **dependencies.json** file of your 4D project. This manifest file must be saved in the **Sources** folder of the 4D project folder, e.g.:
+1. Reference the component name in the **dependencies.json** file of your 4D project. Este archivo de manifiesto debe ser guardado en la carpeta **Sources** de la carpeta del proyecto 4D, por ejemplo:
    ```
    /MyProjectRoot/Project/Sources/dependencies.json
    ```
@@ -127,7 +127,7 @@ Se soportan los siguientes orígenes:
 | Entorno                 | Componente declarado en el archivo [`environnement4d.json`](#environment4djson) |
 | Componente del proyecto | Component located in the [`Components`](architecture.md#components) folder      |
 
-**Right-click** in a dependency line and select **Show on disk** to reveal the location of a dependency:
+**Clic derecho** en una línea de dependencia y selecciona **Mostrar en el disco** para revelar la ubicación de una dependencia:
 
 ![dependency-show](../assets/en/Project/dependency-show.png)
 
@@ -143,8 +143,8 @@ By default, all dependencies identified by the Dependency manager are listed, wh
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
-- **Activo**: dependencias que están cargadas y pueden ser utilizadas en el proyecto. It includes _overloading_ dependencies, which are actually loaded. _Overloaded_ dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
-- **Inactive**: Dependencies that are not loaded in the project and are not available. There are many possible reasons for this status: missing files, version incompatibility...
+- **Activo**: dependencias que están cargadas y pueden ser utilizadas en el proyecto. It includes _overloading_ dependencies, which are actually loaded. Las dependencias _Overloaded_ se enumeran en el panel **Conflicts** junto con todas las dependencias en conflicto.
+- **Inactivo**: dependencias que no están cargadas en el proyecto y no están disponibles. There are many possible reasons for this status: missing files, version incompatibility...
 - **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
 
 ### Estado de dependencia
@@ -157,7 +157,7 @@ Las siguientes etiquetas de estado están disponibles:
 
 - **Overloaded**: The dependency is not loaded because it is overloaded by another dependency with the same name at a higher [priority level](#priority).
 - **Overloading**: The dependency is loaded and is overloading one or more other dependencies with the same name at a lower [priority level](#priority).
-- **Not found**: The dependency is declared in the dependencies.json file but is not found.
+- **Not found**: la dependencia está declarada en el archivo dependencies.json pero no se encuentra.
 - **Inactive**: The dependency is not loaded because it is not compatible with the project (e.g. the component is not compiled for the current platform).
 - **Duplicated**: The dependency is not loaded because another dependency with the same name exists at the same location (and is loaded).
 

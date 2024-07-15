@@ -1579,7 +1579,7 @@ searchCriteria = FLAGGED FROM "SMITH"
 
 ... returns all messages with \Flagged flag set AND sent by Smith.
 
-- You can use the **OR** or **NOT** operators as follows:
+- Você pode usar os operadores **OR** ou **NOT** da seguinte forma:
 
 ```
 searchCriteria = OR SEEN FLAGGED
@@ -1642,18 +1642,18 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 #### Chaves de pesquisa autorizadas
 
 **ALL**: Todas as mensagens na caixa de correio.\
-**ANSWERED**: Messages with the \Answered flag set.\
+**ANSWERED**: mensagens com o indicador \Answered ativo.\
 **UNANSWERED**: Messages that do not have the \Answered flag set.\
 **DELETED**: Messages with the \Deleted flag set.\
 **UNDELETED**: Messages that do not have the \Deleted flag set.\
-**DRAFT**: Messages with the \Draft flag set.\
+**DRAFT**: mensagens com o indicador \Draft ativo.\
 **UNDRAFT**: Messages that do not have the \Draft flag set.\
 **FLAGGED**: Messages with the \Flagged flag set.\
 **UNFLAGGED**: Messages that do not have the \Flagged flag set.\
 **RECENT**: Messages that have the \Recent flag set.\
-**OLD**: Messages that do not have the \Recent flag set.\
+**OLD**: mensagens que não possuem o indicador \Recent definido.\
 **SEEN**: Messages that have the \Seen flag set.\
-**UNSEEN**: Messages that do not have the \Seen flag set.\
+**UNSEEN**: Mensagens que não possuem o indicador \Seen definido.\
 **NEW**: Messages that have the \Recent flag set but not the \Seen flag. This is functionally equivalent to “(RECENT UNSEEN)”.\
 **KEYWORD *flag***: Messages with the specified keyword set.\
 **UNKEYWORD *flag***: Messages that do not have the specified keyword set.\

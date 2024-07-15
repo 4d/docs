@@ -237,7 +237,7 @@ Essa propriedade é **somente leitura**.
 
 The `.isPackage` property returns <!-- REF #directory.isPackage.Summary -->true if the folder is a package on macOS  (and exists on disk)<!-- END REF -->. .
 
-On Windows, `.isPackage` always returns **false**.
+Em Windows, `.isPackage` sempre devolve **false**.
 
 Essa propriedade é **somente leitura**.
 

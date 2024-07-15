@@ -167,7 +167,7 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 
 <!--REF file.create().Note -->
 
-**Not available for ZIP archives**<!-- END REF -->
+**Não disponível para arquivos ZIP**<!-- END REF -->
 
 <!--REF #FileClass.create().Syntax -->**.create()** : Boolean <!-- END REF -->
 
@@ -187,7 +187,7 @@ If necessary, the function creates the folder hierachy as described in the [plat
 
 **Valor retornado**
 
-- **True** if the file is created successfully;
+- **True** se o arquivo for criado com sucesso;
 - **False** if a file with the same name already exists or if an error occured.
 
 #### Exemplo
@@ -642,7 +642,7 @@ For all properties except `WinIcon`, if you pass a null or empty text as value, 
 
 For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
 
-***info* parameter object with a .plist file**
+\***Parâmetro *info* com um arquivo .plist**
 
 Each valid property set in the *info* object parameter is written in the .plist file as a key. Qualquer nome chave é aceito. Os tipos de valores são preservados sempre que possível.
 

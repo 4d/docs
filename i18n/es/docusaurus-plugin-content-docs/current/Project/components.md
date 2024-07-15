@@ -48,7 +48,7 @@ If the same component is installed at different locations, a [priority order](#p
 
 #### dependencies.json
 
-The **dependencies.json** file references all components required in your 4D project. This file must be located in the **Sources** folder of the 4D project folder, e.g.:
+El archivo **dependencies.json** hace referencia a todos los componentes requeridos en su proyecto 4D. This file must be located in the **Sources** folder of the 4D project folder, e.g.:
 
 ```
 	/MyProjectRoot/Project/Sources/dependencies.json
@@ -61,7 +61,7 @@ Puede contener:
 
 #### environment4d.json
 
-El archivo **environment4d.json** es opcional. It allows you to define **custom paths** for some or all components declared in the **dependencies.json** file. This file can be stored in your project package folder or in one of its parent folders, at any level (up to the root).
+El archivo **environment4d.json** es opcional. Permite definir **rutas personalizadas** para algunos o todos los componentes declarados en el archivo **dependencies.json**. This file can be stored in your project package folder or in one of its parent folders, at any level (up to the root).
 
 Los principales beneficios de esta arquitectura son los siguientes:
 
@@ -84,11 +84,11 @@ Since components can be installed in different ways, a priority order is applied
 
 When a component cannot be loaded because of another instance of the same component located at a higher priority level, it is given the _Overloaded_ [status](#dependency-status). The loaded component has the _Overloading_ [status](#dependency-status).
 
-(the **environment4d.json** declared path overrides the **dependencies.json** path to configure a local environment).
+(la ruta declarada en **environment4d.json** sobrescribe la ruta en **dependencies.json** para configurar un entorno local).
 
 ### Declaring local components
 
-You declare a local component in the [**dependencies.json** file](#dependencyjson) in the following way:
+Declara un componente local en el archivo [**dependencies.json**](#dependencyjson) de la siguiente manera:
 
 ```json
 {
@@ -162,7 +162,7 @@ These steps can easily be automated, with 4D code or using GitHub Actions, for e
 
 #### Declaring paths
 
-You declare a component stored on GitHub in the [**dependencies.json** file](#dependencyjson) in the following way:
+Declare un componente almacenado en GitHub en el archivo [**dependencies.json**](#dependencyjson) de la siguiente manera:
 
 ```json
 {
@@ -175,7 +175,7 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 }
 ```
 
-... where "myGitHubComponent1" is referenced and declared for the project, although "myGitHubComponent2" is only referenced. You need to declare it in the [**environment4d.json**](#environment4djson) file:
+... where "myGitHubComponent1" is referenced and declared for the project, although "myGitHubComponent2" is only referenced. Necesita declararlo en el archivo [**environment4d.json**](#environment4djson):
 
 ```json
 {
@@ -191,7 +191,7 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 
 #### Tags and versions
 
-When you create a release in GitHub, you specify a **tag** and a **version**.
+Cuando crea una versión en GitHub, especifica una **etiqueta** y una **versión**.
 
 - **Etiquetas** son textos que hacen referencia única a una versión. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por ejemplo:
 
@@ -247,7 +247,7 @@ For more information, please refer to the [GitHub token interface](https://githu
 
 :::
 
-Then insert the "github" key in your [**environment4d.json**](#environment4djson) file:
+Luego inserta la llave "github" en su archivo [**environment4d.json**](#environment4djson):
 
 ```json
 {
@@ -309,7 +309,7 @@ Las siguientes opciones de origen son posibles:
 | Entorno                           | Componente declarado en el archivo [`environnement4d.json`](#environment4djson)    |
 | Componente del proyecto           | Component located in the [`Components`](architecture.md#components) folder         |
 
-**Right-click** in a dependency line and select **Show on disk** to reveal the location of a dependency:
+**Clic derecho** en una línea de dependencia y selecciona **Mostrar en el disco** para revelar la ubicación de una dependencia:
 
 ![dependency-show](../assets/en/Project/dependency-show.png)
 
@@ -332,8 +332,8 @@ By default, all dependencies identified by the Dependency manager are listed, wh
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
-- **Activo**: dependencias que están cargadas y pueden ser utilizadas en el proyecto. It includes _overloading_ dependencies, which are actually loaded. _Overloaded_ dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
-- **Inactive**: Dependencies that are not loaded in the project and are not available. There are many possible reasons for this status: missing files, version incompatibility...
+- **Activo**: dependencias que están cargadas y pueden ser utilizadas en el proyecto. It includes _overloading_ dependencies, which are actually loaded. Las dependencias _Overloaded_ se enumeran en el panel **Conflicts** junto con todas las dependencias en conflicto.
+- **Inactivo**: dependencias que no están cargadas en el proyecto y no están disponibles. There are many possible reasons for this status: missing files, version incompatibility...
 - **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
 
 ### Estado de dependencia
@@ -346,7 +346,7 @@ Las siguientes etiquetas de estado están disponibles:
 
 - **Overloaded**: The dependency is not loaded because it is overloaded by another dependency with the same name at a higher [priority level](#priority).
 - **Overloading**: The dependency is loaded and is overloading one or more other dependencies with the same name at a lower [priority level](#priority).
-- **Not found**: The dependency is declared in the dependencies.json file but is not found.
+- **Not found**: la dependencia está declarada en el archivo dependencies.json pero no se encuentra.
 - **Inactive**: The dependency is not loaded because it is not compatible with the project (e.g. the component is not compiled for the current platform).
 - **Duplicated**: The dependency is not loaded because another dependency with the same name exists at the same location (and is loaded).
 

@@ -126,7 +126,7 @@ Define el sistema de autenticación que desea aplicar a su servidor web. Se prop
 
 Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
 
-Se recomienda utilizar la autenticación **personalizada**. See [**Authentication**](../WebServer/authentication.md) chapter in the _Web Development_ documentation.
+Se recomienda utilizar la autenticación **personalizada**. Ver el capítulo [**Autenticación**](../WebServer/authentication.md) en la documentación _Desarrollo Web_.
 
 ## Options (II)
 

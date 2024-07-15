@@ -230,7 +230,7 @@ Make sure the ["force login" mode](../REST/authUsers.md#force-login-mode) is ena
 
 ![alt-text](../assets/en/WebServer/forcelogin.png)
 
-You can also set this option directly in the [**roles.json** file](../ORDA/privileges.md#rolesjson-file).
+También puede definir esta opción directamente en el archivo [**roles.json**](../ORDA/privileges.md#rolesjson-file).
 
 You just need then to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly page. Una licencia se consumirá solo cuando el usuario esté realmente conectado.
 
