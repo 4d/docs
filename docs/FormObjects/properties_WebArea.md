@@ -96,7 +96,7 @@ The CEF engine has the following limitations:
 
 :::note
 
-You can customize CEF area parameters by creating a local [4DCEFParameters.json configuration file](webAreaOverview#4dcefparametersjson).
+You can customize CEF area parameters by creating a local [4DCEFParameters.json configuration file](webAreaOverview.md#4dcefparametersjson).
 
 :::
 
