@@ -860,7 +860,7 @@ singleton Class Constructor()
  This.tag:=Random
 ```
 
-To use the singleton:
+Para utilizar el singleton:
 
 ```4d
 	//en otro proceso
@@ -881,7 +881,7 @@ var $myOtherSingleton := cs.ProcessTag.me
 	//$myOtherSingleton.tag = 14856
 ```
 
-### Creating a shared singleton
+### Creación de un singleton compartido
 
 To create a singleton shared by all processes of the application, add the `shared singleton` keywords before the [Class Constructor](#class-constructor). Por ejemplo:
 
