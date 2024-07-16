@@ -95,7 +95,7 @@ El archivo de plantilla en formato JSON contiene los siguientes atributos:
 | extraFormulas                        | Collection |             | Colección de objetos de fórmula aplicables a líneas adicionales                                                                                                                                                          |
 | extraFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                                                                             |
 | extraFormulas.source | Text       | x           | Formula                                                                                                                                                                                                                  |
-| placeholderFormulas                  | Collection |             | Collection of formula objects that are inserted in the placeholder row                                                                                                                                                   |
+| placeholderFormulas                  | Collection |             | Colección de objetos de fórmula que se insertan en la fila del marcador de posición                                                                                                                                      |
 
 :::note Francés
 
