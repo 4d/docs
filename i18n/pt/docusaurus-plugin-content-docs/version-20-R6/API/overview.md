@@ -5,7 +5,7 @@ title: Funções e comandos de classe
 
 As funções e propriedades da classe 4D estão disponíveis através de objectos de instância de classe. Esta seção descreve a API da classe 4D incorporada, bem como os comandos de construção associados.
 
-- functions must be called on instances with the `()` operator. For example, `collection.sort()`.
+- functions must be called on instances with the `()` operator. Por exemplo, `collection.sort()`.
 - properties are accessed without parentheses, for example `file.creationTime`. You can also use the \[] syntax, for example `file["creationTime"]`.
 - comandos podem ser chamados de forma independente, com ou sem parâmetros. For example `Folder(fk database folder)`.
 
