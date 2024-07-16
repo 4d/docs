@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Arquivo de histórico
 ---
 
-Aplicações 4D podem gerar vários arquivos de histórico ou log que são úteis para depuração e otimizar sua execução. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), or [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
+Aplicações 4D podem gerar vários arquivos de histórico ou log que são úteis para depuração e otimizar sua execução. Os logs geralmente são iniciados ou parados usando seletores dos comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), ou [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) e são armazenados na [pasta Logs](Project/architecture.md#logs) do projeto.
 
 Informação gravada precisa ser analisada para detectar e corrigir os problemas. Esta seção oferece uma descrição detalhada dos arquivos de log abaixo:
 
@@ -138,7 +138,7 @@ Como iniciar esse log:
 ```4d
 
 WEB SET OPTION(Web debug log;wdl enable without body)  
-//other values are available
+//outros valores estão disponíveis
 ```
 
 Os campos abaixo são registrados tanto para Request quanto para Response:
@@ -161,7 +161,7 @@ Como iniciar esse log:
 ```4d
 
 HTTP SET OPTION(HTTP client log; HTTP enable log with all body parts)  
-//other values are available
+//outros valores estão disponíveis
 ```
 
 Os campos abaixo são registrados tanto para Request quanto para Response:
@@ -401,10 +401,10 @@ O registo ORDA do lado do servidor regista cada pedido ORDA processado pelo serv
 Como iniciar esse log:
 
 ```4d
-	//on the server
+//no servidor
 SET DATABASE PARAMETER(4D Server log recording;1)
-ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body)
-	//srl... parameter is optional
+ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body) 
+ //O parâmetro srl é opcional 
 SET DATABASE PARAMETER(4D Server log recording;0)
 ```
 
