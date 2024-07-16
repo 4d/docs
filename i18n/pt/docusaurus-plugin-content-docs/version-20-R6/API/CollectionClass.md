@@ -2681,14 +2681,14 @@ $vSingles:=$colPersons.query("spouse = null") //sintaxe correta
 
 You can query a collection using an object reference or a collection reference as the *value* parameter to compare. The query will match objects in the collection that refer (point to) the same **instance of** object or collection.
 
-The following comparators are supported:
+Os seguintes comparadores são suportados:
 
 | Comparação   | Símbolos |
 | ------------ | -------- |
 | Igual a      | =, ==    |
 | Diferente de | #, !=    |
 
-To build a query with an object or a collection reference, you must use the *querySettings* parameter syntax. Example with an object reference:
+To build a query with an object or a collection reference, you must use the *querySettings* parameter syntax. Exemplo com uma referência de objeto:
 
 ```4d
 var $o1:={a: 1}
