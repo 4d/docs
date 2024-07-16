@@ -11,27 +11,27 @@ O depurador é útil quando é necessário detetar erros ou monitorizar a execu�
 
 Há várias formas de exibir o depurador:
 
-- Haciendo clic en el botón **Trace** en [la ventana de errores de sintaxis](basics.md#syntax-error-window)
-- Usando o comando [`TRACE`](https://doc.4d.com/4dv19/help/command/en/page157.html)
-- Haciendo clic en el botón **Debug** en la ventana de ejecución del método o seleccionando **Run and debug...** en el Code Editor
-- Utilizando **Alt+Shift+Clic derecho** (Windows) o **Ctrl+Option+Cmd+Clic** (macOS) mientras se ejecuta un método, seleccionando entonces el proceso a rastrear en el menú emergente:
+- Clicar no botão **Trace** na [janela Syntax Error] (basics.md#syntax-error-window)
+- Usando o comando [`TRACE`] (https://doc.4d.com/4dv19/help/command/en/page157.html)
+- Clicando no botão **Depurar** na janela Executar método ou selecionando o botão **Executar e depurar...** no Editor de Código
+- Usando **Alt+Shift+Botão Direito** (Windows) ou **Ctrl+Option+Cmd+Click** (macOS) enquanto um método está sendo executado, em seguida, selecionando o processo para rastrear no menu pop-up:
 
 ![open-debugger](../assets/en/Debugging/openDebugger.png)
 
-- Haciendo clic en el botón **Trace** cuando se selecciona un proceso en la página de procesos del Explorador de ejecución.
+- Clicar no botão **Trace** quando um processo for selecionado na página Process (Processo) do Runtime Explorer.
 - Adicionar um ponto de interrupção na janela do Editor de código ou nas páginas Break e Catch do Explorador de execução.
 
 Quando chamada, a janela do depurador fornece o nome do método ou da função de classe que rastreia atualmente e a ação que causa o aparecimento inicial da janela do depurador. Por exemplo, na janela do depurador acima:
 
-- _Clients_BuildLogo_ es el método en que se hace seguimiento
-- La ventana del depurador apareció porque detectó una llamada al comando `C_PICTURE` y este comando fue uno de los a identificar
+- \*Clients_BuildLogo é o método que é rastreado
+- A janela do depurador apareceu porque detectou uma chamada para o comando `C_PICTURE` e este comando era um dos comandos a ser pego
 
 A exibição de uma nova janela do depurador utiliza a mesma configuração que a última janela exibida na mesma sessão. Se executar vários processos usuário, pode rastreá-los de forma independente e ter uma janela do depurador aberta para cada processo.
 
 A janela do depurador é normalmente apresentada na máquina onde o código é executado. Com uma aplicação monousuário, é sempre apresentado na máquina que executa a aplicação. Com uma aplicação cliente/servidor, é apresentado:
 
 - no 4D remoto para o código que está a ser executado localmente
-- en la máquina del servidor para el código que se ejecuta en el servidor (por ejemplo, un método con la opción **Ejecutar en el servidor**).
+- no computador do servidor para o código em execução no servidor (por exemplo, um método com a opção **executar no servidor**).
 
 > Se o servidor estiver a funcionar sem interface, não pode ser apresentada qualquer janela do depurador no servidor, pelo ser necessário utilizar o depurador remoto. Ver [Depuración desde máquinas remotas](./debugging-remote.md).
 
@@ -53,27 +53,27 @@ Interrompe o modo de rastreamento e retoma o curso normal da execução do méto
 
 Executa a linha de método atual, indicada pelo contador de programa (a seta amarela). O depurador passa para a linha seguinte.
 
-O botão Executar não entra em sub-rotinas e funções, mantém-se ao nível do método que rastreia atualmente. Si desea también rastrear las llamadas a las subrutinas y a las funciones, utilice el botón **Paso a paso detallado**.
+O botão Executar não entra em sub-rotinas e funções, mantém-se ao nível do método que rastreia atualmente. Se você quiser rastrear também as chamadas de subrotinas e funções, use o botão **Step Into**.
 
-Na depuração remota, se o método for executado no servidor, o método principal é chamado após a execução da última linha do método secundário. Si el método padre se ejecuta en el lado remoto, el botón **Step Over** tiene el mismo efecto que el botón **No Trace**.
+Na depuração remota, se o método for executado no servidor, o método principal é chamado após a execução da última linha do método secundário. Se o método pai for executado no lado remoto, o botão **Step Over** terá o mesmo efeito que o botão **No Trace**.
 
 #### Passo a passo detalhado
 
 Quando uma linha que chama outro método (sub-rotina ou função) é executada, clique neste botão para exibir o outro método e percorrê-lo.
 
-El nuevo método se convierte en el método actual (superior) en la [Ventana cadena de llamada ](#call-chain-pane) de la ventana del depurador.
+O novo método torna-se o atual (topo) método no [Chame Chain Pane](#call-chain-pane) da janela do Depurador.
 
-Cuando se ejecuta una línea que no llama a otro método, este botón tiene el mismo efecto que el botón **Ejectuar paso a paso**.
+Ao executar uma linha que não chama outro método, esse botão tem o mesmo efeito que o botão **Step Over**.
 
 #### Step Out
 
-If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
+Se estiver rastreando sub-rotinas e funções, clicar nesse botão permite executar todo o método que está sendo rastreado no momento e voltar ao método chamador. A janela do Depurador é trazida de volta ao método anterior na cadeia de chamadas. Se o método atual for o último método na cadeia de chamadas, a janela do Debugger é fechada.
 
-In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
+Na depuração remota, na execução da última linha do método, se o método for executado no servidor, o método pai será chamado. Se o método pai for executado no lado remoto, o botão **Step Over** terá o mesmo efeito que o botão **No Trace**.
 
 #### Step Into Process
 
-On execution of a line that creates a new process (i.e., calling the New process command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the Step Over button.
+Na execução de uma linha que cria um novo processo (ou seja, ao chamar o comando Novo processo), este botão abre uma nova janela do Depurador que permite rastrear o método do processo do processo recém-criado. Na execução de uma linha que não cria um novo processo, esse botão atua da mesma forma que o botão Step Over.
 
 #### Abortar
 
@@ -84,9 +84,9 @@ Interrompe a execução do método e regressa ao estado anterior ao início da e
 
 #### Abortar e editar
 
-Pausa na execução do método. El método que se está ejecutando cuando se presiona el botón **Abortar y Editar** se abre en el Editor de Código.
+Pausa na execução do método. O método que está sendo executado quando você clica no botão **Abortar e editar** é aberto no Editor de código.
 
-> **Consejo**: utilice este botón cuando sepa qué cambios son necesarios en su código, y el momento en que deben ser efectuados para proseguir con las pruebas de sus métodos. Quando terminar as alterações, volte a executar o método.
+> **Sugestão**: Utilize este botão quando você sabe quais alterações são necessárias no seu código e quando essas alterações são necessárias para prosseguir com o teste dos seus métodos. Quando terminar as alterações, volte a executar o método.
 
 #### Editar
 
@@ -94,7 +94,7 @@ Pausa na execução do método. O método executado no momento em que se clica n
 
 Se utilizar este botão para modificar um método, as modificações só entram em vigor na próxima vez que este for executado.
 
-> **Consejo:** utilice este botón cuando sepa qué cambios son necesarios en su código y cuando no interfieran con el resto del código a ejecutar o rastrear.
+> **Dica:** Use este botão quando você souber quais alterações são necessárias no seu código e quando eles não interferem com o resto do código a ser executado ou rastreado.
 
 #### Botão Salvar parâmetros
 
@@ -105,21 +105,21 @@ Salva a configuração atual da janela do depurador e a torna a configuração p
 
 Estes parâmetros são armazenados no projeto.
 
-Esta acción no está disponible en el modo de depuración remota (ver [Depuración desde máquinas remotas](./debugging-remote)).
+Essa ação não está disponível no modo de depuração remota (consulte [Depuração de máquinas remotas](./debugging-remote)).
 
 ## Janela de expressão
 
-El **panel de expresión** se muestra en la esquina superior izquierda de la ventana del depurador, debajo de la barra de herramientas de control de ejecución. Aqui um exemplo simples:
+O painel **Watch** é exibido no canto superior esquerdo da janela do depurador, abaixo da barra de ferramentas de controle de execução. Aqui um exemplo simples:
 
 ![watch-pane](../assets/en/Debugging/watchPane.png)
 
 > Este painel não está disponível no modo de depuração remota.
 
-El **panel de expresión** muestra información general útil sobre el sistema, el entorno 4D y el entorno de ejecución.
+O painel de expressão: **Watch Pane** exibe informações gerais úteis sobre o sistema, ambiente 4D e ambiente de execução.
 
-La columna **Expression** muestra los nombres de los objetos y expresiones. La columna **Valor** muestra sus valores correspondientes actuales. Clicar em qualquer valor no lado direito do painel permite-lhe modificar o valor do objeto, se tal for permitido para esse objeto.
+A coluna **Expressão** exibe os nomes dos objetos e das expressões. A coluna **Value** exibe seus valores correspondentes atuais. Clicar em qualquer valor no lado direito do painel permite-lhe modificar o valor do objeto, se tal for permitido para esse objeto.
 
-En cualquier momento, puede arrastrar y soltar temas, sublistas de temas (si las hay) y elementos de temas en el panel de expresión personalizado .
+A qualquer momento, você pode arrastar e soltar temas, sublistas de temas (se houver) e itens de temas para o [Custom Watch Pane] (#custom-watch-pane).
 
 ### Lista de expressões
 
@@ -127,7 +127,7 @@ En cualquier momento, puede arrastrar y soltar temas, sublistas de temas (si las
 
 Este tema permite-lhe acompanhar os valores dos objetos ou expressões:
 
-- utilizado en la línea de código a ejecutar (la marcada con el contador de programa-la flecha amarilla en el [Panel de Código Fuente](#source-code-pane)),
+- usado na linha de código a ser executada (aquela marcada com o contador de programas - a seta amarela no [Painel Código-fonte] (#painel código-fonte)),
 - utilizado na linha de código anterior
 
 Como a linha de código anterior é a que acabou de ser executada antes, este tema mostra os objetos ou expressões da linha atual antes e depois da execução da linha.  Digamos que executa o seguinte método:
@@ -139,29 +139,29 @@ $b:=a+1
 $c:=a+b
 ```
 
-1. Se abre una ventana Depurador con el contador del programa fijado en la línea con `a:=1`. En este punto aparece el tema **Objetos Línea**:
+1. Uma janela do depurador é aberta com o contador do programa definido para a linha com `a:=1`. Nesse momento, o tema **Line Objects** é exibido:
 
    | $a | Indefinido |
    | -- | ---------- |
 
-   La variable `$a` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
+   A variável `$a` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
 
-2. Haga clic en el botón **Step Over**. El contador del programa se pone ahora en la línea `b:=a+1`. Nesta altura, o tema mostra:
+2. Você clica no botão **Step Over**. O contador do programa está agora definido para a linha `b:=a+1`. Nesta altura, o tema mostra:
 
    | $a | 1          |
    | -- | ---------- |
    | $b | Indefinido |
 
-   El valor de la variable `$a` es ahora 1. La variable `$b` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
+   O valor da variável `$a` é agora 1. A variável `$b` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
 
-3. Haga clic en el botón **Step Over** nuevamente. O contador do programa está agora definido na linha com c:=a+b. Neste ponto, é exibido o tema Objetos de linha:
+3. Você clica no botão **Step Over** novamente. O contador do programa está agora definido na linha com c:=a+b. Neste ponto, é exibido o tema Objetos de linha:
 
    | $c | Indefinido |
    | -- | ---------- |
    | $a | 1          |
    | $b | 2          |
 
-   El valor de la variable `$b` es ahora 2. La variable `$c` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
+   O valor da variável `$b` é agora 2. A variável `$c` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
 
 #### Variáveis.
 
@@ -175,9 +175,9 @@ Este tema é composto pelos seguintes subtemas:
 | Parâmetros    | Lista dos parâmetros recebidos pelo método                        | Sim                               |
 | Self          | Ponteiro para o objeto atual, quando se rastreia um método objeto | Não                               |
 
-Os arrays, como outras variáveis, aparecem nos subtemas Interprocesso, Processo e Local, dependendo do seu escopo. O depurador apresenta os primeiros 100 elementos. Dentro de la columna **Valor**, puede modificar los valores de los elementos del array, pero no el tamaño de los arrays.
+Os arrays, como outras variáveis, aparecem nos subtemas Interprocesso, Processo e Local, dependendo do seu escopo. O depurador apresenta os primeiros 100 elementos. Dentro da coluna **Valor**, você pode modificar os valores dos elementos de matriz, mas não o tamanho das matrizes.
 
-Para mostrar los tipos de variables y sus nombres internos, haga clic derecho y marque la opción **Mostrar tipos** del menú contextual:
+Para exibir os tipos de variáveis e seus nomes internos, clique com o botão direito do mouse e marque a opção **Show Types** no menu de contexto:
 
 ![show-types-menu-item](../assets/en/Debugging/showTypes.png)
 
@@ -207,7 +207,7 @@ Este tema enumera os processos iniciados desde o início da sessão de trabalho.
 
 #### Tabela
 
-Este tema lista as tabelas e campos na base de dados 4D. Para cada elemento de la Tabla, la columna Valor muestra el tamaño de la selección actual para el proceso actual, así como el número de **registros bloqueados**.
+Este tema lista as tabelas e campos na base de dados 4D. Para cada item da Tabela, a coluna Valor exibe o tamanho da seleção atual para o processo atual, bem como o número de **registros bloqueados**.
 
 Para cada item Campo, a coluna Valor apresenta o valor do campo para o registo atual (exceto imagem e BLOB). Pode modificar os valores dos campos, mas não as informações das tabelas.
 
@@ -241,13 +241,13 @@ O menu contextual da janela de expressão oferece opções adicionais.
 
 ![context-menu](../assets/en/Debugging/contextual-menu.png)
 
-- **Contraer**: contracta todos los niveles de la lista jerárquica.
-- **Desplegar todo**: despliega todos los niveles de la lista jerárquica.
-- **Mostrar los tipos**: muestra el tipo de cada elemento (cuando es apropiado).
-- **Mostrar números de campos y tablas**: muestra el número de cada tabla o campo. Es útil si trabaja con números de tabla o de campo, o con punteros utilizando comandos como `Table` o `Field`.
-- **Mostrar los iconos**: muestra un icono que denota el tipo de objeto para cada objeto. Puede desactivar esta opción para acelerar la visualización, o simplemente porque prefiere utilizar sólo la opción **Mostrar los tipos**.
-- **Tablas y campos ordenados**: ordena las tablas y campos por orden alfabético dentro de sus respectivas listas.
-- **Mostrar los enteros en hexadecimal**: los números se suelen mostrar en notación decimal. Esta opção apresenta-os em notação hexadecimal. Nota: para introduzir um valor numérico em hexadecimal, digite 0x (zero + "x"), seguido dos dígitos hexadecimais.
+- **Recolher tudo**: Recolhe todos os níveis da lista hierárquica.
+- **Expandir tudo**: Expandir todos os níveis da lista hierárquica.
+- **Mostrar tipos**: muestra el tipo de cada elemento de la lista (cuando es apropiado).
+- \*\*Mostrar os números dos campos e das tabelas: Apresenta o número de cada tabela ou campo. Útil se trabalhar com números de tabelas ou de campos, ou com apontadores utilizando comandos como Table ou Field\`.
+- **Mostrar Ícones**: Cada objeto é precedido por um ícone que indica seu tipo. Você pode desativar essa opção para acelerar a exibição, ou apenas porque você prefere usar apenas a opção **Mostrar Tipos**.
+- **Tabelas e Campos classificados**: classifica as tabelas e os campos em ordem alfabética em suas respectivas listas.
+- **Mostrar números inteiros em hexadecimal**: Os números são normalmente apresentados em notação decimal. Esta opção apresenta-os em notação hexadecimal. Nota: para introduzir um valor numérico em hexadecimal, digite 0x (zero + "x"), seguido dos dígitos hexadecimais.
 - **Activar el seguimiento de la actividad**: activa el seguimiento de la actividad (control avanzado de la actividad interna de la aplicación) y muestra la información obtenida en los temas adicionales: **Programador**, **Web** y **Red**.
 
 ## Painel da cadeia de chamadas

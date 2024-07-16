@@ -523,7 +523,7 @@ If (Session.storage.clientIP=Null) //first access
 End if
 ```
 
-#### Remote session example
+#### Ejemplo de sesión remota
 
 Desea compartir datos entre procesos de la misma sesión:
 

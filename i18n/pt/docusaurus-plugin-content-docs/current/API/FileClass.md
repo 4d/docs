@@ -295,7 +295,7 @@ Se o ficheiro estiver atualmente aberto, o resultado depende do sistema operativ
 
 :::caution
 
-`.delete()` can delete any file on a disk. Isto inclui documentos criados com outras aplicações, bem como as próprias aplicações. `.delete()` should be used with extreme caution. A eliminação de um arquivo é uma operação permanente e não pode ser desfeita.
+`.delete()` pode apagar qualquer ficheiro num disco. Isto inclui documentos criados com outras aplicações, bem como as próprias aplicações. `.delete()` should be used with extreme caution. A eliminação de um arquivo é uma operação permanente e não pode ser desfeita.
 
 :::
 

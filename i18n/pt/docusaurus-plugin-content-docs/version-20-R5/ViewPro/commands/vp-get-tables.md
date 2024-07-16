@@ -21,7 +21,7 @@ title: VP Get tables
 | ---------- | ---------- | -- | ----------------------------------------------------------- | ---------------- |
 | vpAreaName | Text       | -> | Nome de objeto formulário área 4D View Pro                  |                  |
 | sheet      | Integer    | -> | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Collection | <- | Text collection with all table names                        | <!-- END REF --> |
+| Resultados | Collection | <- | Coleção de texto com todos os nomes das tabelas             | <!-- END REF --> |
 
 #### Descrição
 

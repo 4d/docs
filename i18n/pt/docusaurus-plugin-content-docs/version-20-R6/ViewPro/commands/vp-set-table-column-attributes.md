@@ -22,7 +22,7 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                  |                  |
 | tableName  | Text    | -> | Nome da tabela                                              |                  |
 | column     | Integer | -> | Índice da coluna na tabela                                  |                  |
-| attributes | Object  | -> | Attribute(s) to apply to the *column*    |                  |
+| attributes | Object  | -> | Atributo(s) a aplicar à *column*         |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) | <!-- END REF --> |
 
 #### Descrição

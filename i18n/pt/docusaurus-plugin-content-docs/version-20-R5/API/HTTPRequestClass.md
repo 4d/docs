@@ -155,7 +155,7 @@ Todas as funções de chamada de retorno recebem dois parâmetros de objectos:
 
 Aqui está a sequência de chamadas de retorno:
 
-1. `onHeaders` is always called once
+1. `onHeaders` é sempre chamado uma vez
 
 2. `onData` is called zero or several times (not called if the request does not have a body)
 
@@ -354,9 +354,9 @@ The `.protocol` property contains <!-- REF #HTTPRequestClass.protocol.Summary --
 
 <details><summary>História</summary>
 
-| Release | Mudanças                                                                           |
-| ------- | ---------------------------------------------------------------------------------- |
-| 19 R8   | `.headers` returns lowercase names. Nova propriedade `.rawHeaders` |
+| Release | Mudanças                                                                               |
+| ------- | -------------------------------------------------------------------------------------- |
+| 19 R8   | `.headers` devolve nomes em minúsculas. Nova propriedade `.rawHeaders` |
 
 </details>
 

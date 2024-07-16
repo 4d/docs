@@ -39,7 +39,7 @@ If the same component is installed at different locations, a [priority order] is
    /MyProjectComponentRoot/
    ```
 
-Thanks to this architecture, you can simply copy all your components at the same level as your projects and reference them in your **dependencies.json** files if necessary. In addition, you can customize the path of your components, see below.
+Thanks to this architecture, you can simply copy all your components at the same level as your projects and reference them in your **dependencies.json** files if necessary. Además, puede personalizar la ruta de sus componentes, ver abajo.
 
 The **/Sources/dependencies.json** file contents must have the following structure:
 
@@ -143,7 +143,7 @@ By default, all dependencies identified by the Dependency manager are listed, wh
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
-- **Activo**: dependencias que están cargadas y pueden ser utilizadas en el proyecto. It includes _overloading_ dependencies, which are actually loaded. Las dependencias _Overloaded_ se enumeran en el panel **Conflicts** junto con todas las dependencias en conflicto.
+- **Activo**: dependencias que están cargadas y pueden ser utilizadas en el proyecto. Incluye dependencias _overloading_, las cuales son realmente cargadas. Las dependencias _Overloaded_ se enumeran en el panel **Conflicts** junto con todas las dependencias en conflicto.
 - **Inactivo**: dependencias que no están cargadas en el proyecto y no están disponibles. There are many possible reasons for this status: missing files, version incompatibility...
 - **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
 

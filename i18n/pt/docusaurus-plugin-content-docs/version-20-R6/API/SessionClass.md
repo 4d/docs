@@ -223,9 +223,9 @@ $expiration:=Session.expirationDate //por exemplo "2021-11-05T17:10:42Z"
 
 <!-- REF #SessionClass.getPrivileges().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                                  |
-| ---------- | ---------- | :-: | ---------------------------------------------------------- |
-| Resultados | Collection |  <- | Collection of privilege names (strings) |
+| Parâmetro  | Tipo       |     | Descrição                                                    |
+| ---------- | ---------- | :-: | ------------------------------------------------------------ |
+| Resultados | Collection |  <- | Coleção de nomes de privilégios (strings) |
 
 <!-- END REF -->
 
@@ -639,7 +639,7 @@ If (Session.storage.clientIP=Null) //first access
     End use End if
 ```
 
-#### Remote session example
+#### Exemplo de sessão remota
 
 You want to share data between processes in the same session:
 

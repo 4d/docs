@@ -17,7 +17,7 @@ Para reemplazar las páginas de error predeterminadas de 4D Web Server por sus p
 
 - poner las páginas HTML personalizadas en el primer nivel de la carpeta web de la aplicación,
 
-- name the custom pages "\{statusCode\}.html" (for example, "404.html").
+- nombrar las páginas personalizadas "\{statusCode\}.html" (por ejemplo, "404.html").
 
 Puede definir una página de error por código de estado y/o una página de error genérica para un rango de errores, llamada "{number}xx.html". Por ejemplo, puede crear "4xx.html" para los errores genéricos del cliente. The 4D Web Server will first look for a \{statusCode\}.html page then, if it does not exist, a generic page.
 

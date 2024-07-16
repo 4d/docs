@@ -74,7 +74,7 @@ Para ligar o depurador de novo ao servidor:
 
 - En un cliente 4D remoto, esta opción se llama **Attach Remote Debugger At Startup**. Quando selecionado, o cliente 4D remoto tentará automaticamente anexar o depurador remoto em cada conexão subsequente com o mesmo banco de dados do 4D Server. Si el adjunto es aceptado (ver [Rejected attachment requests](#rejected-attachment-requests)), el depurador remoto se adjunta automáticamente al cliente 4D remoto y se muestra la opción **Detach Remote Debugger**.
 
-> This setting is applied per project and is stored locally in the [`.4DPreferences`](Project/architecture.md#userpreferencesusername) file.
+> Essa configuração é aplicada por projeto e é armazenada localmente no arquivo [`.4DPreferences`] (Project/architecture.md#userpreferencesusername).
 
 ## Solicitações de anexos rejeitadas
 

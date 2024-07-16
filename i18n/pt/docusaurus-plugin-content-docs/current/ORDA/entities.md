@@ -445,7 +445,7 @@ Los filtros se aplican a las **entidades**. Si desea restringir el acceso a una 
 
 ### Como definir um filtro restrito
 
-You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](dsMapping.md#dataclass-class) of the dataclass. The filter is then automatically enabled.
+You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](dsMapping.md#dataclass-class) of the dataclass. O filtro é então ativado automaticamente.
 
 ### `Function event restrict`
 
@@ -474,7 +474,7 @@ A função deve retornar uma seleção de entidade válida da classe de dados. N
 
 #### Exemplo
 
-When accessed from a web or REST request, we want the Customers dataclass to only expose customers belonging to the identified sales person. Durante la fase de autenticación, el vendedor se almacena en el objeto `Session`. Other types of requests are also handled.
+When accessed from a web or REST request, we want the Customers dataclass to only expose customers belonging to the identified sales person. Durante la fase de autenticación, el vendedor se almacena en el objeto `Session`. Outros tipos de solicitações também são tratados.
 
 ```4d
 Class extends DataClass
@@ -505,7 +505,7 @@ Function event restrict() : cs.CustomersSelection
     End if
 ```
 
-### Filter activation details
+### Detalhes de ativação do filtro
 
 Filters apply to all ORDA or REST requests executed in your 4D projects (standalone and client/server architectures). Un filtro se activa en cuanto se abre el proyecto, es decir, puede activarse en el método de base de datos `On Startup`.
 
@@ -518,7 +518,7 @@ Los filtros no se aplican a las selecciones heredadas de registros manejadas a t
 | Funções                                                                                                  | Comentário                                                                                                                                                                                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [dataclass.get()](../API/DataClassClass.md#get)                       | Si la entidad no coincide con el filtro, se devuelve `null`                                                                                                                                                                                                                                                           |
-| [entity.reload()](../API/EntityClass.md#reload)                       | Only in client/server and remote datastores                                                                                                                                                                                                                                                                           |
+| [entity.reload()](../API/EntityClass.md#reload)                       | Somente em datastores cliente/servidor e remotos                                                                                                                                                                                                                                                                      |
 | [dataclass.all()](../API/DataClassClass.md#all)                       |                                                                                                                                                                                                                                                                                                                       |
 | [dataclass.fromCollection()](../API/DataClassClass.md#fromcollection) | <li>In case of update, only entities matching the filter can be updated. If the collection refers to entities not matching the filter, they are created as new entities (if no duplicate PK error)</li><li>In case of creation, entities not matching the filter are created but will not be read after creation</li> |
 | [entitySelection.and()](../API/EntitySelectionClass.md#and)           | Only entities matching the filter are returned                                                                                                                                                                                                                                                                        |

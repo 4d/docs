@@ -248,7 +248,7 @@ The `boxInfo` object returned contains the following properties:
 
 | Release | Mudanças                          |
 | ------- | --------------------------------- |
-| 20      | Support of *headerOnly* parameter |
+| 20      | Suporte ao parâmetro *headerOnly* |
 | 18 R2   | Adicionado                        |
 
 </details>

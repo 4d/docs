@@ -150,7 +150,7 @@ Regarding components stored on GitHub, both [**dependencies.json**](#dependencie
 
 :::
 
-#### Configuring the GitHub repository
+#### Configurando o repositório GitHub
 
 To be able to directly reference and use a 4D component stored on GitHub, you need to configure the GitHub component's repository:
 
@@ -224,7 +224,7 @@ The version is used to define which versions can be used. A [standard semantic v
 Eis alguns exemplos:
 
 - "latest": the version having the “latest” badge in GitHub releases.
-- "\*": the latest version released.
+- "\*": a versão mais recente lançada.
 - "1.\*": all version of major version 1.
 - "1.2.\*": all patches of minor version 1.2.
 - "^1.2.3" or ">=1.2.3": the latest version 1, starting with the 1.2.3 version.
@@ -282,7 +282,7 @@ This file logs information such as the state of dependencies, paths, urls, loadi
 
 In an opened project, you can get information about dependencies and their current loading status in the **Dependencies** panel.
 
-To display the Dependencies panel:
+Para exibir o painel Dependências:
 
 - with 4D, select the **Design/Project Dependencies** menu item (Development environment),<br/>
   ![dependency-menu](../assets/en/Project/dependency-menu.png)
@@ -290,7 +290,7 @@ To display the Dependencies panel:
 - with 4D Server, select the **Window/Project Dependencies** menu item.<br/>
   ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
-The Dependency panel is then displayed. Dependencies are sorted by name in alphabetical order:
+O painel Dependência é então exibido. Dependencies are sorted by name in alphabetical order:
 
 ![dependency](../assets/en/Project/dependency.png)
 
@@ -300,7 +300,7 @@ The Dependencies panel lists all project dependencies, whatever their origin, i.
 
 ![dependency-origin](../assets/en/Project/dependency-origin.png)
 
-The following origins are possible:
+As seguintes origens são possíveis:
 
 | Origin tag                        | Descrição                                                                      |
 | --------------------------------- | ------------------------------------------------------------------------------ |

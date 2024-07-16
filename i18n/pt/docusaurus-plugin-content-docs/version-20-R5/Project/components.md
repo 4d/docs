@@ -100,7 +100,7 @@ When a component cannot be loaded because of another instance of the same compon
 
 In an opened project, you can get information about dependencies and their current loading status in the **Dependencies** panel.
 
-To display the Dependencies panel:
+Para exibir o painel Dependências:
 
 - with 4D, select the **Design/Project Dependencies** menu item (Development environment),<br/>
   ![dependency-menu](../assets/en/Project/dependency-menu.png)
@@ -108,7 +108,7 @@ To display the Dependencies panel:
 - with 4D Server, select the **Window/Project Dependencies** menu item.<br/>
   ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
-The Dependency panel is then displayed. Dependencies are sorted by name in alphabetical order:
+O painel Dependência é então exibido. Dependencies are sorted by name in alphabetical order:
 
 ![dependency](../assets/en/Project/dependency.png)
 

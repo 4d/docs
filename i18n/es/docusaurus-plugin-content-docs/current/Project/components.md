@@ -86,7 +86,7 @@ When a component cannot be loaded because of another instance of the same compon
 
 (la ruta declarada en **environment4d.json** sobrescribe la ruta en **dependencies.json** para configurar un entorno local).
 
-### Declaring local components
+### Declarando componentes locales
 
 Declara un componente local en el archivo [**dependencies.json**](#dependencyjson) de la siguiente manera:
 
@@ -150,12 +150,12 @@ Regarding components stored on GitHub, both [**dependencies.json**](#dependencie
 
 :::
 
-#### Configuring the GitHub repository
+#### Configuración del repositorio GitHub
 
 To be able to directly reference and use a 4D component stored on GitHub, you need to configure the GitHub component's repository:
 
 - Comprima los archivos componentes en formato ZIP.
-- Name this archive with the same name as the GitHub repository.
+- Nombre este archivo con el mismo nombre que el repositorio GitHub.
 - Integre el archivo en una [versión GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) del repositorio.
 
 These steps can easily be automated, with 4D code or using GitHub Actions, for example.
@@ -332,7 +332,7 @@ By default, all dependencies identified by the Dependency manager are listed, wh
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
-- **Activo**: dependencias que están cargadas y pueden ser utilizadas en el proyecto. It includes _overloading_ dependencies, which are actually loaded. Las dependencias _Overloaded_ se enumeran en el panel **Conflicts** junto con todas las dependencias en conflicto.
+- **Activo**: dependencias que están cargadas y pueden ser utilizadas en el proyecto. Incluye dependencias _overloading_, las cuales son realmente cargadas. Las dependencias _Overloaded_ se enumeran en el panel **Conflicts** junto con todas las dependencias en conflicto.
 - **Inactivo**: dependencias que no están cargadas en el proyecto y no están disponibles. There are many possible reasons for this status: missing files, version incompatibility...
 - **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
 

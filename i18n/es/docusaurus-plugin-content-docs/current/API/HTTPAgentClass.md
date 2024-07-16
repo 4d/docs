@@ -5,7 +5,7 @@ title: HTTPAgent
 
 The `HTTPAgent` class allows you to handle [`HTTPAgent objects`](#httpagent-object) that can be used to manage the persistence and reuse of connections to servers using the [HTTPRequest class](HTTPRequestClass.md).
 
-The `HTTPAgent` class is available from the `4D` class store. You can create a new [`HTTPAgent object`](#httpagent-object) using the [4D.HTTPAgent.new()](#4dhttpagentnew) function.
+La clase `HTTPAgent` está disponible en el class store `4D`. You can create a new [`HTTPAgent object`](#httpagent-object) using the [4D.HTTPAgent.new()](#4dhttpagentnew) function.
 
 When no agent is associated to an HTTP request, a global agent with default values is used. The default agent is the simplest form of HTTP agent, suitable for basic use cases. Custom agents are recommended for more control, at the agent level rather than for each HTTP request, over specific aspects of the connection such keep-alive settings, timeouts or TLS/SSL configurations.
 
@@ -19,7 +19,7 @@ When no agent is associated to an HTTP request, a global agent with default valu
 
 ### Objeto HTTPAgent
 
-An HTTPAgent object is a shareable object.
+Un objeto HTTPAgent es un objeto compartible.
 
 Los objetos HTTPAgent ofrecen las siguientes propiedades y funciones:
 
@@ -69,13 +69,13 @@ HTTPAgent options will be merged with [HTTPRequest options](HTTPRequestClass.md#
 | Propiedad              | Tipo    | Por defecto                                                                                                                                       | Descripción                                                                                     |
 | ---------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | keepAlive              | Boolean | true                                                                                                                                              | Activates keep alive for the agent                                                              |
-| maxSockets             | Integer | 65535                                                                                                                                             | Maximum number of sockets per server                                                            |
+| maxSockets             | Integer | 65535                                                                                                                                             | Número máximo de sockets por servidor                                                           |
 | maxTotalSockets        | Integer | 65535                                                                                                                                             | Maximum number of sockets for the agent                                                         |
 | timeout                | Real    | indefinido                                                                                                                                        | Si se define, tiempo después del cual se cierra un socket no utilizado                          |
 | certificatesFolder     | Folder  | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Define la carpeta activa de certificados de cliente para las solicitudes que utilizan el agente |
 | minTLSVersion          | Text    | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Define la versión mínima de TLS para las solicitudes que utilizan este agente                   |
-| protocol               | Text    | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Protocol used for the requests using the agent                                                  |
-| validateTLSCertificate | Boolean | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | validateTLSCertificate for the requests using the agent                                         |
+| protocol               | Text    | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Protocolo usado para las peticiones utilizando el agente                                        |
+| validateTLSCertificate | Boolean | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Validar el certificado Tls para las solicitudes que utilizan el agente                          |
 
 :::note
 
@@ -85,7 +85,7 @@ Puede solicitar múltiples servidores utilizando el mismo agente. In that case, 
 
 #### Ejemplo
 
-Creating the HTTPAgent:
+Creación del HTTPAgent:
 
 ```4d
 var $options:={}

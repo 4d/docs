@@ -376,7 +376,7 @@ If the characters typed correspond to different types of objects, the list displ
 - Nomes de tabelas
 - Nomes de campos
 - Constantes
-- Variables declared in the method
+- Variáveis declaradas no método
 - Nomes de propriedade de objeto
 - Comandos Plug-in
 - Palavras-chave 4D

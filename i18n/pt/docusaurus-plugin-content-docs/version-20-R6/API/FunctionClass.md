@@ -56,7 +56,7 @@ You can pass parameters to your formulas using the [sequential parameter syntax]
  $f.message("John") //exibe "Hello John"
 ```
 
-Or using the [.call()](#call) function:
+Ou usando a função [.call()](#call):
 
 ```4d
  var $f : Object
@@ -232,7 +232,7 @@ Chamar uma fórmula usando notação de objeto:
 
 | Release | Mudanças                                               |
 | ------- | ------------------------------------------------------ |
-| 20 R3   | Support of *context* parameter                         |
+| 20 R3   | Suporte do parâmetro *context*                         |
 | 17 R6   | Renamed New formula from string -> Formula from string |
 | 17 R3   | Adicionado                                             |
 

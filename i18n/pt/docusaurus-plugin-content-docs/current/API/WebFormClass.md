@@ -43,9 +43,9 @@ For more information, please refer to the [`.componentName` description in the Q
 
 <!-- REF #WebFormClass.disableState().Params -->
 
-| Parâmetro | Tipo   |     | Descrição                                  |
-| --------- | ------ | :-: | ------------------------------------------ |
-| state     | string |  -> | Name of state to disable from the web form |
+| Parâmetro | Tipo   |     | Descrição                                         |
+| --------- | ------ | :-: | ------------------------------------------------- |
+| state     | string |  -> | Nome do estado a ser desativado no formulário Web |
 
 <!-- END REF -->
 

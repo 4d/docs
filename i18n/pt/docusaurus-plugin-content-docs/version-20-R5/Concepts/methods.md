@@ -272,7 +272,7 @@ com a função recursiva `Genealogy de` listada aqui:
  End if
 ```
 
-Note que el método `Genealogy of` se llama a sí mismo.
+Observe o método `Genealogy of` que chama a si mesmo.
 
 A primeira forma é um **algoritmo iterativo**. A segunda via é um **algoritmo recursivo**.
 
@@ -281,6 +281,6 @@ Ao implementar código para casos como o exemplo anterior, é importante notar q
 Alguns usos típicos da recursividade em 4D são:
 
 - Tratar os registos dentro de tabelas que se relacionam entre si da mesma forma que no exemplo.
-- Navegar por los documentos y las carpetas del disco, utilizando los comandos `FOLDER LIST` y `DOCUMENT LIST`. Uma pasta pode conter pastas e documentos, as próprias subpastas podem conter pastas e documentos, e assim por diante.
+- Navegação de documentos e pastas em seu disco, usando os comandos `FOLDER LIST` e `DOCUMENT LIST`. Uma pasta pode conter pastas e documentos, as próprias subpastas podem conter pastas e documentos, e assim por diante.
 
 **Importante:** Las llamadas recursivas deben terminar siempre en algún punto. No exemplo, o método `Genealogia de` deixa de chamar a si próprio quando a consulta não devolve registos. Sem este teste de condição, o método chamar-se-ia indefinidamente; eventualmente, 4D retornaria um erro "Stack Full" porque deixaria de ter espaço para "empilhar" as chamadas (bem como os parâmetros e variáveis locais utilizados no método).
