@@ -294,7 +294,7 @@ Inicia y detiene el servidor REST. Ver [Configuración del servidor REST](../RES
 
 See [Configuring REST access](../REST/configuration.md#configuring-rest-access) to know the recommended way to control and manage REST access in your 4D projects.
 
-#### Activate REST authentication through ds.authentify() function
+#### Activar la autenticación REST mediante la función ds.authentify()
 
 Click on the **Activate REST authentication through ds.authentify() function** button to automatically upgrade your project regarding REST user access. Note that this operation cannot be reverted and may require that you modify your code (a warning dialog box is displayed when you click on the button).
 
