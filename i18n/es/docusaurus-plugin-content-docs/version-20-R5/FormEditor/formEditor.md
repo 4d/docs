@@ -324,7 +324,7 @@ Para distribuir objetos utilizando la caja de diálogo Alinear y Distribuir:
 
 4. Para realizar una distribución que utiliza el esquema estándar, haga clic en **Vista previa** o _Aplicar_.<p>En este caso, 4D realizará una distribución estándar para que los objetos estén espaciados de manera equitativa entre ellos.</p>O bien:<p>para ejecutar una distribución específica, seleccione la opción **Distribuir** (por ejemplo, si desea distribuir los objetos en función de la distancia a su lado derecho). Esta opción actúa como un interruptor. If the Distribute check box is selected, the icons located below it perform a different function:</p>
 
-- Horizontalmente, los iconos corresponden a las siguientes distribuciones: uniformemente con respecto a los lados izquierdos, centros (hor.) y los lados derecho e izquierdo de los objetos seleccionados.
+- Horizontalmente, los iconos corresponden a las siguientes distribuciones: uniformemente con respecto a los lados izquierdos, centros (hor.) y los lados derechos de los objetos seleccionados.
 - Verticalmente, los iconos corresponden a las siguientes distribuciones: uniformemente con respecto a los bordes superiores, centros (vert.) y los bordes inferiores de los objetos seleccionados.
 
 Puede previsualizar el resultado real de sus parámetros haciendo clic en el botón **Previsualización**: la operación se lleva a cabo en el editor de formularios, pero la caja de diálogo permanece en primer plano. Puede entoces **Cancelar** o **Aplicar** las modificaciones.
