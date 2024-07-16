@@ -56,7 +56,7 @@ ASSERT($status.success)
 | Parâmetro | Tipo                          |    | Descrição                                          |
 | --------- | ----------------------------- | -- | -------------------------------------------------- |
 | settings  | Object                        | -> | Parâmetros para gerar ou carregar um par de chaves |
-| result    | 4D. CryptoKey | <- | Object encapsulating an encryption key pair        |
+| result    | 4D. CryptoKey | <- | Objeto que contém um par de chaves de encriptação  |
 
 <!-- END REF -->
 
