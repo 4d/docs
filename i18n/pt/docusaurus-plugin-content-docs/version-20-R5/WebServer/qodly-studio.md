@@ -289,7 +289,7 @@ Triggering the logout action from a web user session has the following effects:
 - the associated 4D license is released,
 - the `Session.storage` is kept until the web session inactivity timeout is reached (at least one hour). During this period after a logout, if the user logs in again, the same session is used and the `Session.storage` shared object is available with its current contents.
 
-## About license usage for rendering
+## Sobre o uso da licença para renderização
 
 In default mode when any form is rendered, or in "force login" mode when a form handling data or calling a function is rendered, you must have an available license, as rendering Qodly forms targets the project database's main web server.
 
