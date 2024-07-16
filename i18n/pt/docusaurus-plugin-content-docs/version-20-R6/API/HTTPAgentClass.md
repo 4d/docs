@@ -19,7 +19,7 @@ When no agent is associated to an HTTP request, a global agent with default valu
 
 ### Objeto HTTPAgent
 
-An HTTPAgent object is a shareable object.
+Um objeto HTTPAgent é um objeto compartilhável.
 
 HTTPAgent objects provide the following properties and functions:
 
@@ -43,10 +43,10 @@ Since HTTPAgent is a shareable object, you can add one to a singleton class so y
 
 <!-- REF #4D.HTTPAgent.new().Params -->
 
-| Parâmetro  | Tipo                                              |     | Descrição                         |
-| ---------- | ------------------------------------------------- | :-: | --------------------------------- |
-| options    | Object                                            |  -> | default options for the HTTPAgent |
-| Resultados | [4D.HTTPAgent](#httpagent-object) |  <- | New HTTPAgent object              |
+| Parâmetro  | Tipo                                              |     | Descrição                      |
+| ---------- | ------------------------------------------------- | :-: | ------------------------------ |
+| options    | Object                                            |  -> | opções padrão para o HTTPAgent |
+| Resultados | [4D.HTTPAgent](#httpagent-object) |  <- | New HTTPAgent object           |
 
 <!-- END REF -->
 
