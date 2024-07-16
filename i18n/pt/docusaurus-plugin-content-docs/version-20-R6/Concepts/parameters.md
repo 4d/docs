@@ -47,7 +47,7 @@ Los valores de entrada y salida son [evaluados](#values-or-references) en el mom
 
 :::info Compatibidade
 
-Throughout the 4D documentation, you might see examples where parameters are automatically copied in sequentially numbered local variables ($0, $1, etc.) and declared using compiler directives. Ej: `C_TEXT($1;$2)`. Esta sintaxe antiga ainda é suportada, mas já não é recomendada.
+Throughout the 4D documentation, you might see examples where parameters are automatically copied in sequentially numbered local variables ($0, $1, etc.) e declarados usando as diretivas do compilador. Ej: `C_TEXT($1;$2)`. Esta sintaxe antiga ainda é suportada, mas já não é recomendada.
 
 :::
 
