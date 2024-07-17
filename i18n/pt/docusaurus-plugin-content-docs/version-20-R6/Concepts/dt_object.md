@@ -232,9 +232,9 @@ Exemplo:
 You can use comparison operators with **object references**, which means that you can evaluate if two or more references point to the same instance of an object.
 
 ```4d
-var $o1:={a: 42} //reference to an instance
-var $o2:={a: 42} //reference to a different instance
-var $o3:=$o1 //reference to the same instance
+var $o1:={a: 42} //referência a uma instância
+var $o2:={a: 42} //referência a uma instância diferente
+var $o3:=$o1 //referência à mesma instância
 ```
 
 Based upon the code above, the comparison table is:
