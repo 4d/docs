@@ -14,7 +14,7 @@ Los componentes pueden ser interpretados o [compilados](../Desktop/building.md).
 - ya sea una carpeta Proyecto (componente interpretado)
 - o un archivo .4DZ (componente compilado)
 
-A 4D project running in interpreted mode can use either interpreted or compiled components. A 4D project running in compiled mode cannot use interpreted components. En este caso, sólo se pueden utilizar componentes compilados.
+A 4D project running in interpreted mode can use either interpreted or compiled components. Un proyecto 4D que se ejecuta en modo compilado no puede utilizar componentes interpretados. En este caso, sólo se pueden utilizar componentes compilados.
 
 ## Cargando componentes
 
@@ -94,7 +94,7 @@ Since components can be installed in different ways, a priority order is applied
 
 ![priority](../assets/en/Project/load-sequence.png)
 
-When a component cannot be loaded because of another instance of the same component located at a higher priority level, it is given the _Overloaded_ [status](#dependency-status). The loaded component has the _Overloading_ [status](#dependency-status).
+When a component cannot be loaded because of another instance of the same component located at a higher priority level, it is given the _Overloaded_ [status](#dependency-status). El componente cargado tiene el [estado](#dependency-status) _Overloading_.
 
 ## Monitoreo de dependencias del proyecto
 
@@ -125,7 +125,7 @@ Se soportan los siguientes orígenes:
 | Componente 4D           | Built-in 4D component, stored in the `Components` folder of the 4D application  |
 | Source                  | Componente declarado en el archivo [`dependencies.json`](#dependenciesjson)     |
 | Entorno                 | Componente declarado en el archivo [`environnement4d.json`](#environment4djson) |
-| Componente del proyecto | Component located in the [`Components`](architecture.md#components) folder      |
+| Componente del proyecto | Componente ubicado en la carpeta [`Components`](architecture.md#components)     |
 
 **Clic derecho** en una línea de dependencia y selecciona **Mostrar en el disco** para revelar la ubicación de una dependencia:
 
