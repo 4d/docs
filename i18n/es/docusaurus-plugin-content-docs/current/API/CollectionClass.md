@@ -2830,7 +2830,7 @@ $entitySelection:=ds.Employee.query("birthDate <= :1";Current date-10950)
 
 :::info
 
-More examples of queries can be found in the `dataClass.query()` page.
+Se pueden encontrar más ejemplos de búsquedas en la página `dataClass.query()`.
 
 :::
 
@@ -3095,7 +3095,7 @@ The `.resize()` function <!-- REF #collection.resize().Summary -->sets the colle
 > Esta función modifica la colección original.
 
 - If *size* < collection length, exceeding elements are removed from the collection.
-- If *size* > collection length, the collection length is increased to size.
+- Si *size* > longitud de la colección, *size* es la nueva longitud de la colección.
 
 Por defecto, los nuevos elementos se llenan con valores **null**. You can specify the value to fill in added elements using the *defaultValue* parameter.
 
