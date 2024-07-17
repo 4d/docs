@@ -341,7 +341,7 @@ Los atributos página se utilizan para especificar la configuración general de 
 | pageRange       | text         | El rango de páginas a imprimir                                                                                                                                                                                                                                  |
 | qualityFactor   | entero largo | El factor de calidad para la impresión (1 - 8).  The higher the quality factor, the better the printing quality, however printing performance may be affected.<p>Default value = 2</p>                       |
 | useMax          | boolean      | Sólo se imprimen columnas y líneas con datos.<p>Valor predeterminado = true</p>                                                                                                                                                                 |
-| zoomFactor      | real         | The amount to enlarge or reduce the printed page.<p>Default value = 1</p>                                                                                                                                                                       |
+| zoomFactor      | real         | La cantidad para ampliar o reducir la página impresa.<p>Valor predeterminado = 1</p>                                                                                                                                                            |
 
 ### Tamaño del papel
 
