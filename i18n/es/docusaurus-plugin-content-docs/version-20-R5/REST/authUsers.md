@@ -69,7 +69,7 @@ Descriptive REST requests can be processed in web user sessions that do not requ
 
 ```4d
 exposed Function authentify({params : type}) {-> result : type}
-	// code
+	// código
 ```
 
 The `authentify()` function must be implemented in the [DataStore class](../ORDA/ordaClasses.md#datastore-class) of the project and must be called through a REST request.
