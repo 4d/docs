@@ -58,16 +58,16 @@ O comando [`New object`] (https://doc.4d.com/4dv19R/help/command/en/page1471.htm
 Exemplos:
 
 ```4d
- var $obVar : Object //declaration of an object type 4D variable
- $obVar:=New object //instantiation of an object and assignment to the 4D variable
+ var $obVar : Object //declaração de uma variável 4D do tipo objeto
+ $obVar:=New object //instanciação de um objeto e atribuição à variável 4D
  
  var $obFilled : Object 
- $obFilled:=New object("name";"Smith";"age";42) //instantiation and assignment of a prefilled object
+ $obFilled:=New object("name"; "Smith"; "age";42) //instanciação e atribuição de um objeto pré-preenchido
 ```
 
 ### `{}` operador
 
-The `{}` operator allows you to create an **object literal**. Um literal de objecto é uma lista separada por semicolunas de zero ou mais pares de nomes de propriedades e valores associados de um objecto, entre chaves (`{}`). A sintaxe literal do objecto cria objectos vazios ou preenchidos.
+O operador `{}` permite que você crie um **objeto literal**. Um literal de objecto é uma lista separada por semicolunas de zero ou mais pares de nomes de propriedades e valores associados de um objecto, entre chaves (`{}`). A sintaxe literal do objecto cria objectos vazios ou preenchidos.
 
 Since any property value is considered an expression, you can create sub-objects using `{}` in property values.  You can also create and reference **collection literals**.
 
@@ -102,7 +102,7 @@ $o:={\
 	}
 
 $o.form1()  //52
-$o.form2($o.ob2.message)  // displays Hello
+$o.form2($o.ob2.message)  // exibe Hello
 $col:=$o.col[5] //6
 ```
 
@@ -134,7 +134,7 @@ Exemplos:
 
 ```4d
      $vName:=employee["name"]
-     //or also:
+     /ou também:
      $property:="name"
 	 $vName:=employee[$property]
 
@@ -232,9 +232,9 @@ Exemplo:
 You can use comparison operators with **object references**, which means that you can evaluate if two or more references point to the same instance of an object.
 
 ```4d
-var $o1:={a: 42} //reference to an instance
-var $o2:={a: 42} //reference to a different instance
-var $o3:=$o1 //reference to the same instance
+var $o1:={a: 42} //referência a uma instância
+var $o2:={a: 42} //referência a uma instância diferente
+var $o3:=$o1 //referência à mesma instância
 ```
 
 Based upon the code above, the comparison table is:
