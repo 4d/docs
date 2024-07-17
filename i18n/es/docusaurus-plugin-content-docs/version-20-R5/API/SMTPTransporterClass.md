@@ -3,7 +3,7 @@ id: SMTPTransporterClass
 title: SMTPTransporter
 ---
 
-The `SMTPTransporter` class allows you to configure SMTP connections and send emails through *SMTP transporter* objects.
+La clase `SMTPTransporter` permite configurar conexiones SMTP y enviar correos electrónicos a través de objetos *SMTP transporter*.
 
 ### Objeto SMTP Transporter
 
@@ -128,7 +128,7 @@ La función devuelve un [**objeto SMTP transporter**](#smtp-transporter-object).
 
 #### Descripción
 
-The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summary -->creates and returns a new object of the `4D.SMTPTransporter` type<!-- END REF -->. It is identical to the [`SMTP New transporter`](#smtp-new-transporter) command (shortcut).
+The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summary -->creates and returns a new object of the `4D.SMTPTransporter` type<!-- END REF -->. Es idéntico al comando [`SMTP New transporter`](#smtp-new-transporter) (acceso directo).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 

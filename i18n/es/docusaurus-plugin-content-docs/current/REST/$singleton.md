@@ -3,9 +3,9 @@ id: singleton
 title: $singleton
 ---
 
-You can directly call exposed [functions of your shared singletons](../Concepts/classes.md#singleton-classes) through REST.
+Puede llamar directamente a [funciones de sus singletons compartidos] (../Concepts/classes.md#singleton-classes) a través de REST.
 
-Singleton functions are called in POST requests with the `$singleton` command and without `()`. For example, if you have defined a `buildVehicle()` function in the `VehicleFactory` shared singleton class, you could call it using the following request:
+Las funciones Singleton se llaman en peticiones POST con el comando `$singleton` y sin `()`. Por ejemplo, si ha definido una función `buildVehicle()` en la clase compartida singleton `VehicleFactory`, podría llamarla utilizando la siguiente petición:
 
 ```json
 /rest/$singleton/VehicleFactory/buildVehicle
@@ -21,29 +21,29 @@ $singleton:=cs.VehicleFactory.me.buildVehicle("truck")
 
 :::note
 
-Keep in mind that only functions with the [`exposed` keyword](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) can be directly called from REST requests.
+Tenga en cuenta que sólo las funciones con la [palabra clave `exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) pueden ser llamadas directamente desde peticiones REST.
 
 :::
 
 ## Llamadas de las funciones
 
-Singleton functions must always be called using REST **POST** requests (a GET request will receive an error). La sintaxis formal es:
+Las funciones Singleton deben llamarse siempre utilizando peticiones REST **POST** (una petición GET recibirá un error). La sintaxis formal es:
 
 `/rest/$singleton/SingletonClass/SingletonClassFunction`
 
-> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
+> Todo el código 4D llamado desde las peticiones REST **debe ser hilo-seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [*Utilizar proceso apropiativo*](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) es ignorado por el Servidor REST).
 
 :::info
 
-You can restrict calls to specific singleton functions by configuring appropriate privileges in the [**roles.json**](../ORDA/privileges.md#rolesjson-file) file.
+Puede restringir las llamadas a funciones singleton específicas configurando los privilegios apropiados en el archivo [**roles.json**](../ORDA/privileges.md#rolesjson-file).
 
 :::
 
 ## Parámetros
 
-Puede enviar parámetros a funciones singleton. On the server side, they will be received in the [declared parameters](../Concepts/parameters.md#declaring-parameters) of the singleton class functions.
+Puede enviar parámetros a funciones singleton. Del lado del servidor, serán recibidos en los [parámetros declarados](../Concepts/parameters.md#declaring-parameters) de las funciones clase singleton.
 
-Sending parameters to singleton functions is exactly the same as sending parameter to ORDA class functions. Please refer to [the **Parameters** paragraph of the "Calling class functions" page](ClassFunctions.md#parameters) for a detailed description.
+Enviar parámetros a funciones singleton es exactamente lo mismo que enviar parámetros a funciones de clase ORDA. Consulte [el párrafo **Parámetros** de la página "Llamada a funciones clase"](ClassFunctions.md#parameters) para obtener una descripción detallada.
 
 ## Ejemplo
 
@@ -61,7 +61,7 @@ exposed Function sayHello ($value : Text)
 
 :::note
 
-The `mySingleton` class and `sayHello` function are listed when you call the [`$catalog`]($catalog.md#singleton) command.
+La clase `mySingleton` y la función `sayHello` se listan cuando se llama al comando [`$catalog`]($catalog.md#singleton).
 
 :::
 

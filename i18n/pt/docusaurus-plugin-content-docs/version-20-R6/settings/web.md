@@ -288,31 +288,31 @@ Inicia e pára o servidor REST. Ver [Configuración del servidor REST](../REST/c
 
 :::information Obsoleto
 
-**Esta seção es obsoleta** a partir do 4D 20 R6. If the current project configuration is obsolete and needs to be upgraded, this section, including the **Activate REST authentication through ds.authentify() function** button (see below), is displayed. If your project is already compatible with the [Force login](../REST/configuration.md#configuring-rest-access) mode, the section is missing and you can ignore this paragraph.
+**Esta seção es obsoleta** a partir do 4D 20 R6. Se a configuração atual do projeto estiver obsoleta e precisar ser atualizada, essa seção, incluindo o botão **Ativar autenticação REST por meio da função ds.authentify()** (veja abaixo), será exibida. Se o seu projeto já for compatível com o modo [Force login](../REST/configuration.md#configuring-rest-access), a seção não estará presente e você poderá ignorar este parágrafo.
 
 :::
 
-See [Configuring REST access](../REST/configuration.md#configuring-rest-access) to know the recommended way to control and manage REST access in your 4D projects.
+Consulte [Configurando o acesso REST](../REST/configuration.md#configuring-rest-access) para conhecer a maneira recomendada de controlar e gerenciar o acesso REST em seus projetos 4D.
 
-#### Activate REST authentication through ds.authentify() function
+#### Ativar a autenticação REST por meio da função ds.authentify()
 
-Click on the **Activate REST authentication through ds.authentify() function** button to automatically upgrade your project regarding REST user access. Note that this operation cannot be reverted and may require that you modify your code (a warning dialog box is displayed when you click on the button).
+Clique no botão **Ativar autenticação REST por meio da função ds.authentify()** para atualizar automaticamente o projeto em relação ao acesso do usuário REST. Observe que essa operação não pode ser revertida e pode exigir que você modifique seu código (uma caixa de diálogo de aviso é exibida quando você clica no botão).
 
 :::note
 
-This button is only available in projects opened with the 4D application (single-user).
+Esse botão só está disponível em projetos abertos com a aplicação 4D (usuário único).
 
 :::
 
-The button triggers the following upgrade sequence:
+O botão aciona a seguinte sequência de atualização:
 
-- The group of REST API users set in the **Read/Write** menu is removed.
-- The `On REST Authentication` database method is deleted (moved into the system bin).
-- A default ["roles.json" file](../ORDA/privileges.md#rolesjson-file) is created in the [Sources folder](../Project/architecture.md#sources) of the project if it does not already exist, with its `forceLogin` attribute to `True`.
+- O grupo de usuários da API REST definido no menu **Leitura/Escrita** é removido.
+- O método de banco de dados `On REST Authentication` é excluído (movido para a lixeira do sistema).
+- Um arquivo padrão ["roles.json"](../ORDA/privileges.md#rolesjson-file) é criado na pasta [Sources](../Project/architecture.md#sources) do projeto, caso ainda não exista, com seu atributo `forceLogin` como `True`.
 
-Remember to restart your project after performing this upgrade.
+Lembre-se de reiniciar seu projeto após realizar essa atualização.
 
-The next step is to modify your code accordingly. [**See this blog post to know how to proceed**](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications).
+A próxima etapa é modificar seu código adequadamente. [**Veja esta postagem do blog para saber como proceder**] (https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications).
 
 ### Qodly Studio
 
@@ -324,4 +324,4 @@ Essa opção só aparece se a licença do Qodly Studio estiver ativada.
 
 :::
 
-This option enables user access to [Qodly Studio](../WebServer/qodly-studio.md) for the current project. Tenga en cuenta que el acceso global debe permitirse al [nivel de la aplicación](../Admin/webAdmin.md).
+Essa opção permite o acesso do usuário ao [Qodly Studio](../WebServer/qodly-studio.md) para o projeto atual. Tenga en cuenta que el acceso global debe permitirse al [nivel de la aplicación](../Admin/webAdmin.md).

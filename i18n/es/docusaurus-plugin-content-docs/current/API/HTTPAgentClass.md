@@ -3,11 +3,11 @@ id: HTTPAgentClass
 title: HTTPAgent
 ---
 
-The `HTTPAgent` class allows you to handle [`HTTPAgent objects`](#httpagent-object) that can be used to manage the persistence and reuse of connections to servers using the [HTTPRequest class](HTTPRequestClass.md).
+La clase `HTTPAgent` permite manejar [`HTTPAgent objects`](#httpagent-object) que pueden ser utilizados para gestionar la persistencia y reutilización de conexiones a servidores utilizando la [clase HTTPRequest](HTTPRequestClass.md).
 
-La clase `HTTPAgent` está disponible en el class store `4D`. You can create a new [`HTTPAgent object`](#httpagent-object) using the [4D.HTTPAgent.new()](#4dhttpagentnew) function.
+La clase `HTTPAgent` está disponible en el class store `4D`. Puede crear un nuevo [`objeto HTTPAgent`](#httpagent-object) utilizando la función [4D.HTTPAgent.new()](#4dhttpagentnew).
 
-When no agent is associated to an HTTP request, a global agent with default values is used. The default agent is the simplest form of HTTP agent, suitable for basic use cases. Custom agents are recommended for more control, at the agent level rather than for each HTTP request, over specific aspects of the connection such keep-alive settings, timeouts or TLS/SSL configurations.
+Cuando no hay ningún agente asociado a una petición HTTP, se utiliza un agente global con valores por defecto. El agente por defecto es la forma más simple de agente HTTP, adecuado para casos de uso básicos. Los agentes personalizados se recomiendan para tener un mayor control, a nivel de agente en lugar de para cada petición HTTP, sobre aspectos específicos de la conexión como la configuración de keep-alive, los tiempos de espera o las configuraciones TLS/SSL.
 
 <details><summary>Historia</summary>
 
@@ -31,7 +31,7 @@ Los objetos HTTPAgent ofrecen las siguientes propiedades y funciones:
 
 :::tip
 
-Since HTTPAgent is a shareable object, you can add one to a singleton class so you can use the same agent for all your requests to the same server.
+Dado que HTTPAgent es un objeto compartible, puede añadir uno a una clase singleton para poder utilizar el mismo agente para todas sus peticiones al mismo servidor.
 
 :::
 
@@ -43,43 +43,43 @@ Since HTTPAgent is a shareable object, you can add one to a singleton class so y
 
 <!-- REF #4D.HTTPAgent.new().Params -->
 
-| Parámetros | Tipo                                              |     | Descripción                       |
-| ---------- | ------------------------------------------------- | :-: | --------------------------------- |
-| options    | Object                                            |  -> | default options for the HTTPAgent |
-| Result     | [4D.HTTPAgent](#httpagent-object) |  <- | New HTTPAgent object              |
+| Parámetros | Tipo                                              |     | Descripción                            |
+| ---------- | ------------------------------------------------- | :-: | -------------------------------------- |
+| options    | Object                                            |  -> | opciones por defecto para el HTTPAgent |
+| Result     | [4D.HTTPAgent](#httpagent-object) |  <- | Nuevo objeto HTTPAgent                 |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `4D.HTTPAgent.new()` function <!-- REF #4D.HTTPAgent.new().Summary -->creates a shareable HTTPAgent object with the defined *options*, and returns a `4D.HTTPAgent` object<!-- END REF -->.
+La función `4D.HTTPAgent.new()` <!-- REF #4D.HTTPAgent.new().Summary -->crea un objeto HTTPAgent compartible con las *opciones* definidas, y devuelve un objeto `4D.HTTPAgent`<!-- END REF -->.
 
-The returned [`HTTPAgent object`](#httpagent-object) is used to customize connections to HTTP servers.
+El [`objeto HTTPAgent`] devuelto (#httpagent-object) se utiliza para personalizar las conexiones a servidores HTTP.
 
 #### Parámetro *options*
 
-In the *options* parameter, pass an object that can contain the following properties (all the properties are optional):
+En el parámetro *options*, pase un objeto que pueda contener las siguientes propiedades (todas las propiedades son opcionales):
 
 :::note
 
-HTTPAgent options will be merged with [HTTPRequest options](HTTPRequestClass.md#4dhttprequestnew) (HTTPRequest options take precedence); if no specific agent is defined, a global agent is used.
+Las opciones de HTTPAgent se fusionarán con [opciones HTTPRequest](HTTPRequestClass.md#4dhttprequestnew) (las opciones de HTTPRequest tienen preferencia); si no se define un agente específico, se utilizará un agente global.
 
 :::
 
-| Propiedad              | Tipo    | Por defecto                                                                                                                                       | Descripción                                                                                     |
-| ---------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| keepAlive              | Boolean | true                                                                                                                                              | Activates keep alive for the agent                                                              |
-| maxSockets             | Integer | 65535                                                                                                                                             | Número máximo de sockets por servidor                                                           |
-| maxTotalSockets        | Integer | 65535                                                                                                                                             | Maximum number of sockets for the agent                                                         |
-| timeout                | Real    | indefinido                                                                                                                                        | Si se define, tiempo después del cual se cierra un socket no utilizado                          |
-| certificatesFolder     | Folder  | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Define la carpeta activa de certificados de cliente para las solicitudes que utilizan el agente |
-| minTLSVersion          | Text    | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Define la versión mínima de TLS para las solicitudes que utilizan este agente                   |
-| protocol               | Text    | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Protocolo usado para las peticiones utilizando el agente                                        |
-| validateTLSCertificate | Boolean | undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Validar el certificado Tls para las solicitudes que utilizan el agente                          |
+| Propiedad              | Tipo    | Por defecto                                                                                                                                           | Descripción                                                                                     |
+| ---------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| keepAlive              | Boolean | true                                                                                                                                                  | Activa keep alive para el agente                                                                |
+| maxSockets             | Integer | 65535                                                                                                                                                 | Número máximo de sockets por servidor                                                           |
+| maxTotalSockets        | Integer | 65535                                                                                                                                                 | Número máximo de sockets para el agente                                                         |
+| timeout                | Real    | indefinido                                                                                                                                            | Si se define, tiempo después del cual se cierra un socket no utilizado                          |
+| certificatesFolder     | Folder  | undefined (ver valor por defecto en [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Define la carpeta activa de certificados de cliente para las solicitudes que utilizan el agente |
+| minTLSVersion          | Text    | undefined (ver valor por defecto en [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Define la versión mínima de TLS para las solicitudes que utilizan este agente                   |
+| protocol               | Text    | undefined (ver valor por defecto en [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Protocolo usado para las peticiones utilizando el agente                                        |
+| validateTLSCertificate | Boolean | undefined (ver valor por defecto en [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Validar el certificado Tls para las solicitudes que utilizan el agente                          |
 
 :::note
 
-Puede solicitar múltiples servidores utilizando el mismo agente. In that case, each server will have its own pool of connections using the same agent options.
+Puede solicitar múltiples servidores utilizando el mismo agente. En ese caso, cada servidor tendrá su propio grupo de conexiones utilizando las mismas opciones de agente.
 
 :::
 
@@ -89,9 +89,9 @@ Creación del HTTPAgent:
 
 ```4d
 var $options:={}
-$options.maxSockets:=5 //5 is the maximum number of sockets per server
-$options.maxTotalSockets:=10 //10 is the maximum number of sockets for the agent
-$options.validateTLSCertificate:=True //To validate the sever's certificate
+$options.maxSockets:=5 //5 es el número máximo de sockets por servidor
+$options.maxTotalSockets:=10 //10 es el número máximo de sockets para el agente
+$options.validateTLSCertificate:=True //Validar el certificado del servidor
 
 var $myAgent:=4D.HTTPAgent.new($options)
 
@@ -109,7 +109,7 @@ var $myRequest:=4D.HTTPRequest.new("http://worldtimeapi.org/api/timezone/Europe/
 
 :::note
 
-When no agent is associated to an HTTPRequest, a global agent with default values is used.
+Cuando no hay ningún agente asociado a una HTTPRequest, se utiliza un agente global con valores por defecto.
 
 :::
 
@@ -121,7 +121,7 @@ When no agent is associated to an HTTPRequest, a global agent with default value
 
 #### Descripción
 
-The `.options` property object contains <!-- REF #HTTPAgentClass.options.Summary -->the current used options of the HTTPAgent<!-- END REF -->.
+El objeto de propiedad `.options` contiene <!-- REF #HTTPAgentClass.options.Summary -->las opciones utilizadas actualmente del HTTPAgent<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -133,7 +133,7 @@ The `.options` property object contains <!-- REF #HTTPAgentClass.options.Summary
 
 #### Descripción
 
-The `.requestsCount` property contains <!-- REF #HTTPAgentClass.requestsCount.Summary -->the number of requests currently handled by the HTTPAgent<!-- END REF -->.
+La propiedad `.requestsCount` contiene <!-- REF #HTTPAgentClass.requestsCount.Summary -->el número de peticiones gestionadas actualmente por el HTTPAgent<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -145,6 +145,6 @@ The `.requestsCount` property contains <!-- REF #HTTPAgentClass.requestsCount.Su
 
 #### Descripción
 
-The `.freeSocketsCount` property contains <!-- REF #HTTPAgentClass.freeSocketsCount.Summary -->the number of free sockets from `maxSockets` associated with the HTTPAgent<!-- END REF -->.
+La propiedad `.freeSocketsCount` contiene <!-- REF #HTTPAgentClass.freeSocketsCount.Summary -->el número de sockets libres de `maxSockets` asociados al HTTPAgent<!-- END REF -->.
 
 <!-- END REF -->

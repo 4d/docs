@@ -288,31 +288,31 @@ Inicia y detiene el servidor REST. Ver [Configuración del servidor REST](../RES
 
 :::information Obsoleto
 
-**Esta sección está obsoleta** a partir de 4D 20 R6. If the current project configuration is obsolete and needs to be upgraded, this section, including the **Activate REST authentication through ds.authentify() function** button (see below), is displayed. If your project is already compatible with the [Force login](../REST/configuration.md#configuring-rest-access) mode, the section is missing and you can ignore this paragraph.
+**Esta sección está obsoleta** a partir de 4D 20 R6. Si la configuración actual del proyecto es obsoleta y debe actualizarse, se mostrará esta sección, incluido el botón **Activar la autenticación REST mediante la función ds.authentify()** (ver más abajo). Si su proyecto ya es compatible con el modo [Force login](../REST/configuration.md#configuring-rest-access), la sección no existe y puede ignorar este párrafo.
 
 :::
 
-See [Configuring REST access](../REST/configuration.md#configuring-rest-access) to know the recommended way to control and manage REST access in your 4D projects.
+Consulte [Configuring REST access](../REST/configuration.md#configuring-rest-access) para conocer la forma recomendada de controlar y gestionar el acceso REST en sus proyectos 4D.
 
 #### Activar la autenticación REST mediante la función ds.authentify()
 
-Click on the **Activate REST authentication through ds.authentify() function** button to automatically upgrade your project regarding REST user access. Note that this operation cannot be reverted and may require that you modify your code (a warning dialog box is displayed when you click on the button).
+Haga clic en el botón **Activar la autenticación REST mediante la función ds.authentify()** para actualizar automáticamente su proyecto en lo que respecta al acceso de usuarios REST. Tenga en cuenta que esta operación no puede revertirse y puede requerir que modifique su código (aparece un cuadro de diálogo de advertencia al presionar el botón).
 
 :::note
 
-This button is only available in projects opened with the 4D application (single-user).
+Este botón solo está disponible en los proyectos abiertos con la aplicación 4D (monopuesto).
 
 :::
 
 El botón activa la siguiente secuencia de actualización:
 
 - Se elimina el grupo de usuarios de la API REST definido en el menú **Leer/Escribir**.
-- The `On REST Authentication` database method is deleted (moved into the system bin).
-- A default ["roles.json" file](../ORDA/privileges.md#rolesjson-file) is created in the [Sources folder](../Project/architecture.md#sources) of the project if it does not already exist, with its `forceLogin` attribute to `True`.
+- Se elimina el método base `On REST Authentication` (se traslada a la papelera del sistema).
+- Se crea un archivo ["roles.json"](../ORDA/privileges.md#rolesjson-file) por defecto en la carpeta [Sources](../Project/architecture.md#sources) del proyecto si no existe, con su atributo `forceLogin` a `True`.
 
 Recuerde reiniciar su proyecto después de realizar esta actualización.
 
-El siguiente paso es modificar su código en consecuencia. [**See this blog post to know how to proceed**](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications).
+El siguiente paso es modificar su código en consecuencia. [**Vea esta entrada del blog para saber cómo proceder**](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications).
 
 ### Qodly Studio
 
@@ -324,4 +324,4 @@ Esta opción sólo aparece si la licencia de Qodly Studio está activa.
 
 :::
 
-This option enables user access to [Qodly Studio](../WebServer/qodly-studio.md) for the current project. Tenga en cuenta que el acceso global debe permitirse al [nivel de la aplicación](../Admin/webAdmin.md).
+Esta opción permite el acceso del usuario a [Qodly Studio](../WebServer/qodly-studio.md) para el proyecto actual. Tenga en cuenta que el acceso global debe permitirse al [nivel de la aplicación](../Admin/webAdmin.md).
