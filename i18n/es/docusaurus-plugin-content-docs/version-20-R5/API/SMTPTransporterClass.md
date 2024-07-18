@@ -189,7 +189,7 @@ The `.keepAlive` property contains <!-- REF #SMTPTransporterClass.keepAlive.Summ
 La conexión SMTP se cierra automáticamente:
 
 - when the `transporter` object is destroyed if the `.keepAlive` property is true,
-- after each `.send( )` function execution if the `.keepAlive` property is set to false.
+- después de cada función `.send( )` si la propiedad `.keepAlive` está en false.
 
 <!-- INCLUDE transporter.logFile.Desc -->
 
@@ -225,7 +225,7 @@ The `.send()` function <!-- REF #SMTPTransporterClass.send().Summary -->sends th
 
 El método crea la conexión SMTP si no está ya activa. If the `.keepAlive` property of the `transporter` object is **false**, the SMTP connection is automatically closed after the execution of `.send()`, otherwise it stays alive until the `transporter` object is destroyed. For more information, please refer to the [`SMTP New transporter`](#smtp-new-transporter) command description.
 
-In *mail*, pass a valid [`Email` object](EmailObjectClass.md#email-object) to send. Las propiedades origen (de dónde viene el correo electrónico) y destino (uno o varios destinatarios) deben incluirse, el resto de propiedades son opcionales.
+En *mail*, pase un [objeto `Email`](EmailObjectClass.md#email-object) válido para enviar. Las propiedades origen (de dónde viene el correo electrónico) y destino (uno o varios destinatarios) deben incluirse, el resto de propiedades son opcionales.
 
 #### Objeto devuelto
 
