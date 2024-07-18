@@ -29,7 +29,7 @@ If the same component is installed at different locations, a [priority order] is
 
 ### dependencies.json
 
-1. Reference the component name in the **dependencies.json** file of your 4D project. Este archivo de manifiesto debe ser guardado en la carpeta **Sources** de la carpeta del proyecto 4D, por ejemplo:
+1. Haga referencia al nombre del componente en el archivo **dependencies.json** de su proyecto 4D. Este archivo de manifiesto debe ser guardado en la carpeta **Sources** de la carpeta del proyecto 4D, por ejemplo:
    ```
    /MyProjectRoot/Project/Sources/dependencies.json
    ```
@@ -41,7 +41,7 @@ If the same component is installed at different locations, a [priority order] is
 
 Thanks to this architecture, you can simply copy all your components at the same level as your projects and reference them in your **dependencies.json** files if necessary. Además, puede personalizar la ruta de sus componentes, ver abajo.
 
-The **/Sources/dependencies.json** file contents must have the following structure:
+El contenido del archivo **/Sources/dependencies.json** debe tener la siguiente estructura:
 
 ```json
 {
@@ -86,7 +86,7 @@ Since components can be installed in different ways, a priority order is applied
 
 **Máxima prioridad**
 
-1. Components stored in the [**Components** folder of the project](architecture.md#components).
+1. Componentes almacenados en la carpeta [**Components** del proyecto](architecture.md#components).
 2. Componentes declarados en el archivo **dependencies.json**.
 3. Componentes 4D internos del usuario (por ejemplo, 4D NetKit, 4D SVG...)
 
