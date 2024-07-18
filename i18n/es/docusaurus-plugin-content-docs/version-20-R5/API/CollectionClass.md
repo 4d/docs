@@ -3039,7 +3039,7 @@ In *index*, pass the position where you want the element to be removed from the 
 
 - Si *index* < 0, se recalcula como *index:=index+length* (se considera el desplazamiento desde el final de la colección).
 - Si el valor calculado < 0, *index* toma el valor 0.
-- If the calculated value > the length of the collection, *index* is set to the length.
+- Si el valor calculado > la longitud de la colección, *index* toma el valor de la longitud.
 
 En *howMany*, pase el número de elementos a eliminar de *index*. Si no se especifica *howMany*, se elimina un elemento.
 
@@ -3088,10 +3088,10 @@ The `.resize()` function <!-- REF #collection.resize().Summary -->sets the colle
 
 > Esta función modifica la colección original.
 
-- If *size* < collection length, exceeding elements are removed from the collection.
+- Si *size* la longitud de la colección, los elementos que exceden se eliminan de la colección.
 - Si *size* > longitud de la colección, *size* es la nueva longitud de la colección.
 
-Por defecto, los nuevos elementos se llenan con valores **null**. You can specify the value to fill in added elements using the *defaultValue* parameter.
+Por defecto, los nuevos elementos se llenan con valores **null**. Puede especificar el valor a llenar en los elementos añadidos utilizando el parámetro *defaultValue*.
 
 #### Ejemplo
 
@@ -3296,11 +3296,11 @@ Puede definir los siguientes parámetros:
 
 In any case, at the point where `.some()` function encounters the first collection element returning true, it stops calling the callback and returns **true**.
 
-Por defecto, `.some()` comprueba toda la colección. Optionally, you can pass the index of an element from which to start the test in *startFrom*.
+Por defecto, `.some()` comprueba toda la colección. Opcionalmente, puede pasar el índice de un elemento desde el cual iniciar la prueba en *startFrom*.
 
 - If *startFrom* >= the collection's length, **False** is returned, which means the collection is not tested.
 
-- If *startFrom* < 0, it is considered as the offset from the end of the collection.
+- Si *startFrom* < 0, se considera como el desplazamiento desde el final de la colección.
 
 - Si *startFrom* = 0, se busca en toda la colección (por defecto).
 
