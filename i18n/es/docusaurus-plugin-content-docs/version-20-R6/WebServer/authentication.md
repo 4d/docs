@@ -61,7 +61,7 @@ A continuación, se evalúan los valores introducidos:
 
 Este modo ofrece un mayor nivel de seguridad, ya que la información de autenticación se procesa mediante un proceso unidireccional llamado hashing que hace que su contenido sea imposible de descifrar.
 
-Al igual que en el modo BASIC, los usuarios deben introducir su nombre y contraseña al conectarse. The [`On Web Authentication`](#on-web-authentication) database method is then called. Cuando se activa el modo DIGEST, el parámetro $6 (contraseña) se devuelve siempre vacío. De hecho, cuando se utiliza este modo, esta información no pasa por la red como texto claro (sin encriptar). Por lo tanto, en este caso es imprescindible evaluar las solicitudes de conexión mediante el comando `WEB Validate digest`.
+Al igual que en el modo BASIC, los usuarios deben introducir su nombre y contraseña al conectarse. A continuación, se llama al método base [`On Web Authentication`](#on-web-authentication). Cuando se activa el modo DIGEST, el parámetro $6 (contraseña) se devuelve siempre vacío. De hecho, cuando se utiliza este modo, esta información no pasa por la red como texto claro (sin encriptar). Por lo tanto, en este caso es imprescindible evaluar las solicitudes de conexión mediante el comando `WEB Validate digest`.
 
 > Debe reiniciar el servidor web para que se tengan en cuenta los cambios realizados en estos parámetros.
 
