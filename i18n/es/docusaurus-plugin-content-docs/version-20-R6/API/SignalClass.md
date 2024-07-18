@@ -33,7 +33,7 @@ In 4D, you create a new signal object by calling the [`New signal`](#new-signal)
 
 ![](../assets/en/API/signal.png)
 
-Once a signal has been released using a `signal.trigger()` call, it cannot be reused again. If you want to set another signal, you need to call the `New signal` command again.
+Once a signal has been released using a `signal.trigger()` call, it cannot be reused again. Si desea definir otra señal, debe llamar de nuevo al comando `New signal`.
 
 Since a signal object is a [shared object](Concepts/shared.md), you can use it to return results from called workers/processes, provided that you do not forget to write values within a `Use...End use` structure (see example).
 
