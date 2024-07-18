@@ -1486,7 +1486,7 @@ Una fórmula texto en *queryString* recibe un parámetro:
  $result:=(Position($exclude;This.lastname)=0)
 ```
 
-Using the same ***checkName*** method, a `Formula` object as placeholder receives a parameter:
+Utilizando el mismo método ***checkName***, un objeto `Formula` como marcador de posición recibe un parámetro:
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1553,13 +1553,13 @@ En el parámetro *settings*, pase un objeto con las siguientes propiedades:
 | timeout    | Integer | Tiempo de espera en segundos. |
 | maxEntries | Integer | Número máximo de entidades.   |
 
-`timeout` sets the timeout of the ORDA cache for the dataclass (default is 30 seconds). Una vez transcurrido el tiempo de espera, las entidades de la dataclass en la caché son consideradas como vencidas. Esto significa que:
+`timeout` define el tiempo de espera de la caché ORDA para la dataclass (por defecto es 30 segundos). Una vez transcurrido el tiempo de espera, las entidades de la dataclass en la caché son consideradas como vencidas. Esto significa que:
 
 - los datos siguen estando ahí
 - la próxima vez que se necesiten los datos, se le pedirán al servidor
 - 4D elimina automáticamente los datos caducados cuando se alcanza el número máximo de entidades
 
-Setting a `timeout` property sets a new timeout for the entities already present in the cache. Es útil cuando se trabaja con los datos que no cambian con mucha frecuencia y, por tanto, cuando no son necesarias nuevas peticiones al servidor.
+Definir la propiedad `timeout` define un nuevo timeout para las entidades ya presentes en la caché. Es útil cuando se trabaja con los datos que no cambian con mucha frecuencia y, por tanto, cuando no son necesarias nuevas peticiones al servidor.
 
 `maxEntries` define el número máximo de entidades en la caché ORDA. Por defecto es 30 000.
 
