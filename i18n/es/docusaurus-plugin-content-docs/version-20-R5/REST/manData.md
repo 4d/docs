@@ -15,7 +15,7 @@ To query data directly, you can do so using the [`$filter`]($filter.md) function
 
 Con la API REST, puede realizar todas las manipulaciones a los datos como puede hacerlo en 4D.
 
-To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
+Para añadir y modificar entidades, puede llamar a [`$method=update`]($method.md#methodupdate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
 
 Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
 
@@ -214,7 +214,7 @@ Si desea visualizar un atributo de imagen en su totalidad, escriba lo siguiente:
 
 `GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
 
-For more information about the image formats, refer to [`$imageformat`]($imageformat.md). For more information about the version parameter, refer to [`$version`]($version.md).
+For more information about the image formats, refer to [`$imageformat`]($imageformat.md). Para más información sobre el parámetro versión, consulte [`$version`]($version.md).
 
 ## Guardar un atributo BLOB en el disco
 
