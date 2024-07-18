@@ -237,7 +237,7 @@ El archivo del tema en formato JSON contiene los siguientes atributos:
 | break5      | Object |             | Objeto que contiene la definición de estilo aplicable a la quinta línea de ruptura.                                                                                                                        |
 | breaks      | Object |             | Object containing the style definition applicable to the break rows, if a specific break (like break1, break2...) no está definido.     |
 | bcor        | Object |             | Objeto que contiene la definición de estilo aplicable a la línea de arrastre inferior.                                                                                                                     |
-| placeholder | Object |             | Object containing the default style applicable to the placeholder row.                                                                                                                                     |
+| placeholder | Object |             | Objeto que contiene el estilo por defecto aplicable a la fila del marcador de posición.                                                                                                                    |
 
 For every attribute used in your JSON file (header, data, carry-over, summary, and extra rows), you can define the following WP attributes, mentionned with their [corresponding WP constant](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Attributes.300-6229528.en.html):
 

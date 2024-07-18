@@ -16,7 +16,7 @@ Los componentes pueden ser interpretados o [compilados](../Desktop/building.md).
 - ya sea una carpeta Proyecto (componente interpretado)
 - o un archivo .4DZ (componente compilado)
 
-A 4D project running in interpreted mode can use either interpreted or compiled components. A 4D project running in compiled mode cannot use interpreted components. En este caso, sólo se pueden utilizar componentes compilados.
+A 4D project running in interpreted mode can use either interpreted or compiled components. Un proyecto 4D que se ejecuta en modo compilado no puede utilizar componentes interpretados. En este caso, sólo se pueden utilizar componentes compilados.
 
 ## Cargando componentes
 
@@ -82,7 +82,7 @@ Since components can be installed in different ways, a priority order is applied
 
 ![priority](../assets/en/Project/load-sequence.png)
 
-When a component cannot be loaded because of another instance of the same component located at a higher priority level, it is given the _Overloaded_ [status](#dependency-status). The loaded component has the _Overloading_ [status](#dependency-status).
+When a component cannot be loaded because of another instance of the same component located at a higher priority level, it is given the _Overloaded_ [status](#dependency-status). El componente cargado tiene el [estado](#dependency-status) _Overloading_.
 
 (la ruta declarada en **environment4d.json** sobrescribe la ruta en **dependencies.json** para configurar un entorno local).
 
@@ -268,7 +268,7 @@ Luego inserta la llave "github" en su archivo [**environment4d.json**](#environm
 Referenced GitHub components are downloaded in a local cache folder then loaded in your environment. La carpeta de caché local se guarda en la siguiente ubicación:
 
 - en macOs: `$HOME/Library/Caches/<app name>/Dependencies`
-- on Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
+- en Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
 
 ...donde `<app name>` puede ser "4D", "4D Server" o "tool4D".
 
@@ -276,7 +276,7 @@ Referenced GitHub components are downloaded in a local cache folder then loaded 
 
 A `dependency-lock.json` file is created in the [`userPreferences` folder](architecture.md#userpreferencesusername) of your project.
 
-This file logs information such as the state of dependencies, paths, urls, loading errors, as well as other information. It could be useful for component loading management or troubleshooting.
+This file logs information such as the state of dependencies, paths, urls, loading errors, as well as other information. Podría ser útil para la gestión de la carga de componentes o la resolución de problemas.
 
 ## Monitoreo de dependencias del proyecto
 
@@ -307,7 +307,7 @@ Las siguientes opciones de origen son posibles:
 | Componente 4D                     | Componente 4D integrado, almacenado en la carpeta `Components` de la aplicación 4D |
 | dependencies.json | Componente declarado en el archivo [`dependencies.json`](#dependenciesjson)        |
 | Entorno                           | Componente declarado en el archivo [`environnement4d.json`](#environment4djson)    |
-| Componente del proyecto           | Component located in the [`Components`](architecture.md#components) folder         |
+| Componente del proyecto           | Componente ubicado en la carpeta [`Components`](architecture.md#components)        |
 
 **Clic derecho** en una línea de dependencia y selecciona **Mostrar en el disco** para revelar la ubicación de una dependencia:
 

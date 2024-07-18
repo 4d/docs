@@ -172,7 +172,7 @@ Depending on circumstances and the programming style used, warnings may be more 
 
 ![](../assets/en/Project/warnings-tab.png)
 
-This tab allows you to define which warnings should be displayed globally. From the list of all possible warnings with their types, their code and their localized label, ordered by warning code.
+Esta pestaña le permite definir qué advertencias deben mostrarse globalmente. From the list of all possible warnings with their types, their code and their localized label, ordered by warning code.
 
 To reduce the list, you can search words by warning labels and codes using the **Search in codes and labels** textbox or the magnifying glass icon on the left.
 

@@ -398,7 +398,7 @@ This function assumes that the [`.offset`](#offset) property is a number of char
 
 The `.readText()` function <!-- REF #FileHandleClass.readText().Summary -->returns text from the file, starting from the current position until the first *stopChar* string is encountered (if passed) or the end of file is reached<!-- END REF -->.
 
-La cadena de caracteres *stopChar* no se incluye en el texto devuelto. If you omit the *stopChar* parameter, the whole document text is returned.
+La cadena de caracteres *stopChar* no se incluye en el texto devuelto. Si se omite el parámetro *stopChar*, se devuelve todo el texto del documento.
 
 When this function is executed, the ([.offset](#offset)) is placed just after the *stopChar* string.
 

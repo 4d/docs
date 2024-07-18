@@ -118,7 +118,7 @@ Define el tipo de datos para la expresión mostrada. Esta propiedad se utiliza c
 - [Columnas del List box](listbox_overview.md#list-box-columns) de los tipos de selección y colección.
 - [Listas desplegables](dropdownList_Overview.md) asociadas a objetos o arrays.
 
-See also [**Expression Type**](properties_Object.md#expression-type) section.
+Ver también la sección [**Tipo de Expresión**](properties_Object.md#expression-type).
 
 #### Gramática JSON
 
@@ -205,7 +205,7 @@ Una expresión 4D que se asociará a una columna. Puede introducir:
   - Hora
   - Picture
   - Boolean\
-    You can use fields from the Master Table or from other tables.
+    Puede utilizar campos de la tabla maestra o de otras tablas.
 
 - Una **expresión 4D** (expresión simple, fórmula o método 4D). La expresión debe devolver un valor. El valor se evaluará en los eventos `On Display Detail` y `On Data Change`. El resultado de la expresión se mostrará automáticamente cuando cambie al modo Aplicación. La expresión se evaluará para cada registro de la selección (actual o temporal) de la tabla maestra (para list boxes de tipo selección), cada elemento de la colección (para list boxes de tipo colección) o cada entidad de la selección (para list boxes selección de entidades). Si está vacía, la columna no mostrará ningún resultado.
   Se soportan los siguientes tipos de expresiones:
