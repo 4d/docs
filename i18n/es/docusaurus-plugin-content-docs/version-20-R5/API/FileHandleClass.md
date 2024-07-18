@@ -5,7 +5,7 @@ title: FileHandle
 
 The `FileHandle` class has functions that allow you to sequentially read from or append contents to an opened [`File`](FileClass) object. Un manejador de archivo puede acceder a cualquier parte de un documento.
 
-File handle objects are created with the [`file.open()`](FileClass#open) function.
+Los objetos de tipo File handle se crean con la función [`file.open()`](FileClass#open).
 
 > To read or write a whole document at once, you might consider using the [file.getText()](FileClass.md#gettext) and [file.setText()](FileClass.md#settext) functions.
 
@@ -268,7 +268,7 @@ The `.offset` property returns <!-- REF #FileHandleClass.offset.Summary -->the c
 
 Setting the `.offset` will change its current value at the moment of the next read or write operation.
 
-- If the passed value is negative, the `.offset` is set to the start of the file (zero).
+- Si el valor pasado es negativo, el `.offset` se define al inicio del archivo (cero).
 - If the passed value is higher than the size of the file,  the `.offset` is set to the end of the file (size of file).
 
 Esta propiedad es **lectura-escritura**.
@@ -355,7 +355,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 The `.readLine()` function <!-- REF #FileHandleClass.readLine().Summary -->returns a line of text from the current position until an end-of-line delimiter is encountered or the end of the document is reached<!-- END REF -->.
 
-When this function is executed, the current position ([`.offset`](#offset)) is updated.
+Cuando se ejecuta esta función, se actualiza la posición actual ([`.offset`](#offset)).
 
 :::caution Atención
 
