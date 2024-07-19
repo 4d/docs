@@ -22,7 +22,7 @@ Returns [shared singletons](#singletons) (if any) and a list of the dataclasses 
 
 Cuando se llama a `$catalog`, se devuelve una lista de las clases de datos junto con dos URI para cada clase de datos en el almacén de datos de su proyecto.
 
-En esta lista sólo se muestran las clases de datos expuestas para el almacén de datos de su proyecto. For more information, please refer to [**Exposing tables and fields**](configuration.md#exposing-tables-and-fields) section.
+En esta lista sólo se muestran las clases de datos expuestas para el almacén de datos de su proyecto. Para más información, consulte la sección [**Exponer tablas y campos**](configuration.md#exposing-tables-and-fields).
 
 A continuación se describen las propiedades devueltas para cada clase de datos en el almacén de datos de su proyecto:
 
