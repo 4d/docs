@@ -34,7 +34,7 @@ Si el objeto devuelto incluye una fecha u hora, se trata como una fecha-hora y s
 - valor hora - la parte de la fecha se completa como December 30, 1899 en formato dd/MM/yyyy (30/12/1899)
 - valor fecha - la parte de la hora se completa como medianoche en formato HH:mm:ss (00:00:00)
 
-If *rangeObj* contains multiple cells or multiple ranges, the value of the first cell is returned. El comando devuelve un objeto null si la celda está vacía.
+Si *rangeObj* contiene varias celdas o varios rangos, se devuelve el valor de la primera celda. El comando devuelve un objeto null si la celda está vacía.
 
 #### Ejemplo
 
