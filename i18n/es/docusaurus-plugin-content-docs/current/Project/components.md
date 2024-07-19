@@ -36,10 +36,10 @@ Para cargar un componente en su proyecto 4D, usted puede:
 - copy the component files in the [**Components** folder of your project](architecture.md#components),
 - o, declarar el componente en el archivo **dependencies.json**.
 
-Components declared in the **dependencies.json** file can be stored at different locations:
+Los componentes declarados en el archivo **dependencies.json** pueden almacenarse en diferentes ubicaciones:
 
 - al mismo nivel que la carpeta de paquetes de su proyecto 4D: esta es la ubicación predeterminada,
-- anywhere on your machine: the component path must be declared in the **environment4d.json** file
+- en cualquier lugar de su máquina: la ruta del componente debe declararse en el archivo **environment4d.json**
 - on a GitHub repository: the component path can be declared in the **dependencies.json** file or in the **environment4d.json** file, or in both files.
 
 If the same component is installed at different locations, a [priority order](#priority) is applied.
@@ -142,7 +142,7 @@ If a component path declared in the **environment4d.json** file is not found whe
 
 ### Declarar componentes almacenados en GitHub
 
-4D components available as GitHub releases can be referenced and automatically loaded in your 4D projects.
+Los componentes 4D disponibles en GitHub pueden ser referenciados y cargados automáticamente en sus proyectos 4D.
 
 :::note
 
@@ -206,7 +206,7 @@ Cuando crea una versión en GitHub, especifica una **etiqueta** y una **versión
 }
 ```
 
-- A release is also identified by a **version**. The versioning system used is based on the _Semantic Versioning_ concept, which is the most commonly used. Cada número de versión se identifica de la siguiente manera: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
+- Una versión también se identifica por una **versión**. The versioning system used is based on the _Semantic Versioning_ concept, which is the most commonly used. Cada número de versión se identifica de la siguiente manera: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
 
 ```json
 {
