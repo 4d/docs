@@ -309,7 +309,7 @@ Por ejemplo, si declaró el campo "Name" de la tabla "People" en la estructura v
 =LEN(PEOPLE_NAME())
 ```
 
-> If a field has the same name as a [4D method](../Concepts/methods.md), it takes priority over the method.
+> Si un campo tiene el mismo nombre que un [método 4D](../Concepts/methods.md), tiene prioridad sobre el método.
 
 #### Ejemplo
 
