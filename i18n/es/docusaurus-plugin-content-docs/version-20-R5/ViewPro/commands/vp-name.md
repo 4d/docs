@@ -24,7 +24,7 @@ En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 El parámetro _rangeName_ indica un rango de celdas con nombre existente.
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet where _rangeName_ is defined. Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual o todo el libro de trabajo con las siguientes constantes:
+En el parámetro opcional _sheet_, puede designar una hoja específica donde se definirá el rango _rangeName_. Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual o todo el libro de trabajo con las siguientes constantes:
 
 - `vk current sheet`
 - `vk workbook`
