@@ -7,7 +7,7 @@ A **`4D.Function`** object contains a piece of code that can be executed from an
 
 - **native functions**, i.e. built-in functions from various 4D classes such as `collection.sort()` or `file.copyTo()`.
 - **user functions**, created in user [classes](Concepts/classes.md) using the [Function keyword](Concepts/classes.md#function).
-- **formula functions**, i.e. functions that can execute any 4D formula.
+- **funções de fórmula**, ou seja, funções que podem executar qualquer fórmula 4D.
 
 ### Objetos de formulários
 
