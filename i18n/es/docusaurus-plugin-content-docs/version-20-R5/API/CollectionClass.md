@@ -2880,7 +2880,7 @@ La retrollamada recibe los siguientes parámetros:
 
 La retrollamada define los siguientes parámetros:
 
-- *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
+- *$1.accumulator*: valor que va a ser modificado por la función y que es inicializado por *initValue*.
 - *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 #### Ejemplo 1
@@ -2965,7 +2965,7 @@ La retrollamada recibe los siguientes parámetros:
 
 La retrollamada define los siguientes parámetros:
 
-- *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
+- *$1.accumulator*: valor que va a ser modificado por la función y que es inicializado por *initValue*.
 - *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 #### Ejemplo 1
@@ -3357,7 +3357,7 @@ The `.sort()` function <!-- REF #collection.sort().Summary -->sorts the elements
 
 > Esta función modifica la colección original.
 
-If `.sort()` is called with no parameters, only scalar values (number, text, date, booleans) are sorted. Los elementos se ordenan por defecto de forma ascendente, según su tipo. Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si <em x-id="3">attributePath</em> lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
+Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo. Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si <em x-id="3">attributePath</em> lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
 
 1. null
 2. booleans
