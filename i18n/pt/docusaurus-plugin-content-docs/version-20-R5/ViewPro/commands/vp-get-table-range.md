@@ -42,7 +42,7 @@ In _sheet_, pass the index of the target sheet. Se nenhum índice for especifica
 
 > A indexação começa em 0.
 
-If _tableName_ is not found, the command returns **null**.
+Se _tableName_ não for encontrado, o comando retornará **null**.
 
 #### Veja também
 
