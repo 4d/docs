@@ -275,7 +275,7 @@ This call is accepted and as long as the authentication is not successful, `Sess
 
 When the ["force login" mode is enabled](#setting-the-force-login-mode), Qodly Studio for 4D allows you to implement a logout feature in your application.
 
-To logout the user, you just need to execute the **Logout** standard action from the Qodly page. En Qodly Studio, puede asociar esta acción estándar a un botón por ejemplo:
+Para cerrar la sesión del usuario, solo necesita ejecutar la acción estándar **Logout** desde la página Qodly. En Qodly Studio, puede asociar esta acción estándar a un botón por ejemplo:
 
 ![alt-text](../assets/en/WebServer/logout.png)
 
