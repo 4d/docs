@@ -47,7 +47,7 @@ La resolución recomendada es 1920x1080.
 - Desarrollo: 4D v20 R2 o superior
 - Despliegue: 4D Server v20 R2 o superior
 - Qodly Studio solo funciona con proyectos 4D (no soporta bases de datos binarias).
-- Web sessions (_aka_ Scalable sessions) must [be enabled](sessions.md#enabling-web-sessions).
+- Las sesiones web (_aka_ Scalable sessions) deben [estar activadas](sessions.md#enabling-web-sessions).
 - El código 4D llamado por los formularios Qodly debe ser [hilo seguro](preemptiveWeb.md).
 
 ### Acceso a Qodly Studio
@@ -150,7 +150,7 @@ No existe compatibilidad directa entre las aplicaciones implementadas con 4D y l
 
 ### Lenguaje
 
-The following commands and classes are dedicated to the server-side management of Qodly forms:
+Los siguientes comandos y clases están dedicados a la gestión del lado del servidor de los formularios Qodly:
 
 - [`Web Form`](../API/WebFormClass.md#web-form) command: returns the Qodly form as an object.
 - [`Web Event`](../API/WebFormClass.md#web-event) command: returns events triggered within Qodly form components.
@@ -200,7 +200,7 @@ When rendering Qodly forms in the Qodly Studio, the renderer will connect to the
 
 Tenga en cuenta que Qodly Studio se ejecuta a través del servidor web 4D WebAdmin. Cuando utiliza Qodly Studio como desarrollador, incluso cuando previsualiza un formulario Qodly en el estudio, está utilizando el servidor web 4D WebAdmin. Esto le permite ver, por ejemplo, clases de datos, funciones y atributos que no están expuestos como recursos REST (aparecen en gris).
 
-However, form rendering happens outside Qodly Studio, and is served by the standard 4D web server. En esta situación, su aplicación web no puede acceder a activos que no estén expuestos como recursos REST. Ver [Funciones expuestas vs no expuestas](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) y [Exponer tablas](../REST/configuration.md#exposing-tables) para más información sobre cómo exponer activos.
+Sin embargo, el renderizado del formulario ocurre fuera de Qodly Studio, y es servido por el servidor web estándar de 4D. En esta situación, su aplicación web no puede acceder a activos que no estén expuestos como recursos REST. Ver [Funciones expuestas vs no expuestas](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) y [Exponer tablas](../REST/configuration.md#exposing-tables) para más información sobre cómo exponer activos.
 
 ### Acceder a formularios Qodly
 
