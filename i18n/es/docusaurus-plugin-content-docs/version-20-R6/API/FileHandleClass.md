@@ -242,7 +242,7 @@ The `.getSize()` function <!-- REF #FileHandleClass.getSize().Summary -->returns
 
 The `.mode` property returns <!-- REF #FileHandleClass.mode.Summary -->the mode in which the file handle was created: "read", "write", or "append"<!-- END REF -->.
 
-The mode can be defined at the handle creation with the [`file.open()`](FileClass#open) function. Por defecto es "leer".
+El modo puede definirse en la creación del manejador con la función [`file.open()`](FileClass#open). Por defecto es "leer".
 
 Esta propiedad es de **solo lectura**.
 
