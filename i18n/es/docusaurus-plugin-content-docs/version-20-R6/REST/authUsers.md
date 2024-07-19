@@ -11,7 +11,7 @@ Cuando se abre una sesión de usuario web, puede manejarla a través del objeto 
 
 Una sesión se abre después de que el usuario haya iniciado sesión correctamente (ver más abajo).
 
-> - On 4D Server, opening a REST session requires that a free 4D client license is available.<br/>
+> - En 4D Server, para abrir una sesión REST es necesario disponer de una licencia gratuita cliente 4D.<br/>
 > - En 4D monopuesto, puede abrir hasta tres sesiones REST para realizar pruebas.
 
 ## Forzar el modo de inicio de sesión
@@ -24,7 +24,7 @@ The legacy login mode based upon the `On REST Authentication` database method is
 
 La secuencia de inicio de sesión del usuario es la siguiente:
 
-1. At the first REST call (for a webform call for example), a "guest" web user session is created. It has no privileges, no rights to execute requests other than [descriptive REST requests](#descriptive-rest-requests), no license consumption.\
+1. En la primera llamada REST (para una llamada webform, por ejemplo), se crea una sesión de usuario web "invitado". It has no privileges, no rights to execute requests other than [descriptive REST requests](#descriptive-rest-requests), no license consumption.\
    Descriptive REST requests are always processed by the server, even if no web user session using a license is opened. En este caso, son procesados a través de sesiones "invitado".
 
 2. You call your [`authentify()` function](#authentify) (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges. `authentify()` must be an exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class).
