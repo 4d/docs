@@ -178,7 +178,7 @@ Se pueden generar hasta 5 métodos de compilación; un método de compilación s
 - **Variables interproceso**: agrupa las declaraciones de variables interproceso;
 - **Arrays**: agrupa las declaraciones de arrays de proceso;
 - **Arrays interproceso**: agrupa las declaraciones de arrays interproceso;
-- **Métodos**: agrupa las declaraciones de parámetros de métodos (por ejemplo `C_LONGINT(mymethod;$1;$2)`) para [parámetros de métodos declarados fuera de prototipos](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
+- **Métodos**: agrupa las declaraciones de parámetros de métodos (por ejemplo `C_LONGINT(mymethod;$1;$2)`) para [parámetros de métodos declarados fuera de prototipos](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). Para más información, ver [método `Compiler_Methods`](../Concepts/parameters.md#compiler_methods-method).
 
 Puede renombrar cada uno de estos métodos en las áreas correspondientes, pero siempre irán precedidos de la etiqueta `Compilador_` (no modificable). El nombre de cada método (prefijo incluido) no debe tener más de 31 caracteres. También debe ser único y cumplir con [las reglas de 4D para nombrar métodos](Concepts/identifiers.md#project-methods).
 
