@@ -26,7 +26,7 @@ El parámetro *formula* indica un nombre de fórmula o de método 4D a asignar a
 > Si *formula* es una cadena, utilice el punto `.` como separador numérico y la coma `,` como separador de parámetros.
 > If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md) command.
 
-The optional *formatPattern* defines a [pattern](../configuring.md#cell-format) for the *formula*.
+El *formatPattern* opcional define un [pattern](../configuring.md#cell-format) para *formula*.
 
 Se elimina la fórmula en *rangeObj* sustituyéndola por una cadena vacía ("").
 
