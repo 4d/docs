@@ -468,7 +468,7 @@ Em troca, você deve se certificar neste caso de inicializar sistematicamente as
 
 ## Robots.txt
 
-Certain robots (query engines, spiders...) scroll through web servers and static pages. Se não quiser que os robôs acessem todo o seu site, você pode definir quais URLs eles não podem acessar.
+Certos robôs (motores de consulta, aranhas...) scroll through web servers and static pages. Se não quiser que os robôs acessem todo o seu site, você pode definir quais URLs eles não podem acessar.
 
 Para isso, coloque o arquivo ROBOTS.TXT na raiz do servidor. Este ficheiro deve ser estruturado da seguinte forma:
 
