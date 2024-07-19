@@ -433,12 +433,12 @@ Essa propriedade é **somente leitura**.
 
 <!-- REF #document.copyTo().Params -->
 
-| Parâmetro         | Tipo                       |     | Descrição                                   |
-| ----------------- | -------------------------- | :-: | ------------------------------------------- |
-| destinationFolder | 4D. Folder |  -> | Pasta de destino                            |
-| newName           | Text                       |  -> | Nome para a copia                           |
-| overwrite         | Integer                    |  -> | `fk overwrite` to replace existing elements |
-| Resultados        | 4D. File   |  <- | Arquivo copiado                             |
+| Parâmetro         | Tipo                       |     | Descrição                                              |
+| ----------------- | -------------------------- | :-: | ------------------------------------------------------ |
+| destinationFolder | 4D. Folder |  -> | Pasta de destino                                       |
+| newName           | Text                       |  -> | Nome para a copia                                      |
+| overwrite         | Integer                    |  -> | `fk overwrite` para substituir os elementos existentes |
+| Resultados        | 4D. File   |  <- | Arquivo copiado                                        |
 
 <!-- END REF -->
 
