@@ -144,7 +144,7 @@ Este é um exemplo típico de um worker que fixa um sinal:
  End if
 ```
 
-The ***doSomething*** method could be like:
+O método ***doSomething*** poderia ser como:
 
 ```4d
  #DECLARE ($signal : 4D.Signal)
@@ -198,7 +198,7 @@ Essa propriedade é **leitura-escrita**.
 
 #### Descrição
 
-The `.signaled` property <!-- REF #SignalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. When the signal is created, `.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
+The `.signaled` property <!-- REF #SignalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. Quando o sinal é criado, `.signaled` é **False**. It becomes **True** when the `.trigger( )` is called on the object.
 
 Essa propriedade é **somente leitura**.
 
