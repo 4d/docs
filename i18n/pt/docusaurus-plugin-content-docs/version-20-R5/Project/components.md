@@ -87,7 +87,7 @@ Since components can be installed in different ways, a priority order is applied
 **Prioridade mais alta**
 
 1. Components stored in the [**Components** folder of the project](architecture.md#components).
-2. Components declared in the **dependencies.json** file.
+2. Componentes declarados no arquivo **dependencies.json**.
 3. Internal User 4D components (e.g. 4D NetKit, 4D SVG...)
 
 **Prioridade mais baixa**
