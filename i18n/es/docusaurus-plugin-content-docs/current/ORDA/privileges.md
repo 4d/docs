@@ -9,7 +9,7 @@ Proteger los datos a la vez que se permite un acceso rápido y sencillo a los us
 
 La arquitectura de seguridad ORDA se basa en los conceptos de privilegios, acciones de permiso (read, create, etc.) y recursos.
 
-When web users or REST users get logged, their session is automatically loaded with associated privilege(s). Privileges are assigned to the session using the [`session.setPrivileges()`](../API/SessionClass.md#setprivileges) function.
+Cuando los usuarios web o REST se registran, su sesión se carga automáticamente con los privilegios asociados. Privileges are assigned to the session using the [`session.setPrivileges()`](../API/SessionClass.md#setprivileges) function.
 
 Cada solicitud de usuario enviada dentro de la sesión se evalúa en función de los privilegios definidos en el archivo `roles.json` del proyecto.
 
