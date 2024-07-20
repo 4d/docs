@@ -2362,7 +2362,7 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 Se utilizou um método, este deve definir o seguinte parâmetro:
 
-- *$1.result* (boolean): **true** if *$1.value < $1.value2*, **false** otherwise
+- *$1.result* (booleano): **true** se *$1.value < $1.value2*, **false** caso contrário
 
 #### Exemplo 1
 
@@ -3354,7 +3354,7 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 Se utilizou um método, deve definir o parâmetro seguinte:
 
-- *$1.result* (boolean): **true** if *$1.value < $1.value2*, **false** otherwise.
+- *$1.result* (booleano): **true** se *$1.value < $1.value2*, **false** caso contrário.
 
 #### Exemplo 1
 
