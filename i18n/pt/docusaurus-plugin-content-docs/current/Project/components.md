@@ -48,7 +48,7 @@ If the same component is installed at different locations, a [priority order](#p
 
 #### dependencies.json
 
-The **dependencies.json** file references all components required in your 4D project. This file must be located in the **Sources** folder of the 4D project folder, e.g.:
+O arquivo **dependencies.json** faz referência a todos os componentes necessários em seu projeto 4D. This file must be located in the **Sources** folder of the 4D project folder, e.g.:
 
 ```
 	/MyProjectRoot/Project/Sources/dependencies.json
@@ -175,7 +175,7 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 }
 ```
 
-... where "myGitHubComponent1" is referenced and declared for the project, although "myGitHubComponent2" is only referenced. You need to declare it in the [**environment4d.json**](#environment4djson) file:
+... where "myGitHubComponent1" is referenced and declared for the project, although "myGitHubComponent2" is only referenced. Você precisa declará-lo no arquivo [**environment4d.json**] (#environment4djson):
 
 ```json
 {
