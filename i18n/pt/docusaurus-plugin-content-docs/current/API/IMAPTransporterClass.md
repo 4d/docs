@@ -86,7 +86,7 @@ In the *server* parameter, pass an object containing the following properties:
 
 #### Resultados
 
-The function returns an [**IMAP transporter object**](#imap-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
+A função retorna um [**objeto transportador IMAP**](#imap-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
 
 > A ligação IMAP é automaticamente fechada quando o objecto transportador é destruído.
 
@@ -1155,7 +1155,7 @@ No primeiro parâmetro, pode passar qualquer um dos dois:
 
 The optional *updateSeen* parameter allows you to specify if the message is marked as "seen" in the mailbox. Pode passar:
 
-- **True** - to mark the message as "seen" (indicating the message has been read)
+- **True** - para marcar a mensagem como "vista" (indicando que a mensagem foi lida)
 - **False** - para deixar o status "visto" da mensagem inalterado
 
 > * The function returns an empty BLOB if *msgNumber* or msgID\* designates a non-existing message,
@@ -1666,14 +1666,14 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 **TO *string***: Messages that contain the specified string in the TO header.\
 **FROM *string***: mensagens que contêm a string especificada no cabeçalho FROM.\
 **CC *string***: Messages that contain the specified string in the CC header.\
-**BCC *string***: Messages that contain the specified string in the BCC header.\
+**BCC *string***: mensagens que contêm a string especificada no cabeçalho BCC.\
 **SUBJECT *string***: Messages that contain the specified string in the Subject header.\
 **BODY *string***: Messages that contain the specified string in the message body.\
 **TEXT *string***: Messages that contain the specified string in the header or in the message body.\
 **HEADER *field-name* *string***: Messages that have a header with the specified field-name and that contain the specified string in the field-body.\
 **UID *message-UID***: Messages with unique identifiers corresponding to the specified unique identifier set.\
-**LARGER *n***: Messages with a size larger than the specified number of bytes.\
-**SMALLER *n***: Messages with a size smaller than the specified number of bytes.\
+**LARGER *n***: mensagens com tamanho maior do que o número de bytes especificado.\
+**SMALLER *n***: mensagens com tamanho menor do que o número de bytes especificado.\
 **NOT *search-key***: Messages that do not match the specified search key.\
 **OR *search-key1* *search-key2***: Messages that match either search key.
 
