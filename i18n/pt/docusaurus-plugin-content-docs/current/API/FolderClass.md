@@ -171,7 +171,7 @@ If necessary, the function creates the folder hierachy as described in the [plat
 **Valor retornado**
 
 - **True** se a pasta for criada com sucesso;
-- **False** if a folder with the same name already exists or if an error occured.
+- **False** se já existir uma pasta com o mesmo nome ou se tiver ocorrido um erro.
 
 #### Exemplo 1
 
