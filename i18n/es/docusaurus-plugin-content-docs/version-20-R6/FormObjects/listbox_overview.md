@@ -261,7 +261,7 @@ Un list box está formado por uno o varios objetos columna que tienen propiedade
 
 ![](../assets/en/FormObjects/listbox_column.png)
 
-Puedes definir propiedades estándar (texto, color de fondo, etc.) for each column of the list box; these properties take priority over those of the list box object properties.
+Puedes definir propiedades estándar (texto, color de fondo, etc.) para cada columna del list box; estas propiedades tienen prioridad sobre las del objeto list box.
 
 > Puede definir el [tipo de expresión](properties_Object.md#expression-type) para las columnas de list box de tipo array (cadena, texto, número, fecha, hora, imagen, booleano u objeto).
 
