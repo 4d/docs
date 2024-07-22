@@ -620,7 +620,7 @@ A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. Se 
 
 > A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
-***info* parameter object with a .exe or .dll file**
+\***Parâmetro *info* com um arquivo .exe ou .dll**
 
 > A escrita de um arquivo .exe ou .dll só é possível no Windows.
 
@@ -757,7 +757,7 @@ Opcionalmente, pode designar o conjunto de caracteres a utilizar para escrever o
 
 Se uma marca de ordem de byte (BOM) existe para o conjunto de caracteres, 4D a insere no ficheiro a menos que o conjunto de caracteres usado contenha o sufixo "-no-bom" (por exemplo, "UTF-8-no-bom"). Se não especificar um conjunto de caracteres, por defeito 4D usa o conjunto de caracteres "UTF-8" sem BOM.
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. Estão disponíveis as seguintes constantes, encontradas no tema **System Documents**:
 
 | Parâmetros                    | Valor | Comentário                                                                                                                                                                                                                                            |
 | ----------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

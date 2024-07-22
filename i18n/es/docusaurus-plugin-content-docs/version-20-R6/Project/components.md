@@ -22,7 +22,7 @@ A 4D project running in interpreted mode can use either interpreted or compiled 
 
 :::note
 
-This page describes how to work with components in the **4D** and **4D Server** environments. En otros entornos, los componentes se gestionan de manera diferente:
+Esta página describe cómo trabajar con componentes en los entornos **4D** y **4D Server**. En otros entornos, los componentes se gestionan de manera diferente:
 
 - in [4D in remote mode](../Desktop/clientServer.md), components are loaded by the server and sent to the remote application.
 - in merged applications, components are [included at the build step](../Desktop/building.md#plugins--components-page).
@@ -36,10 +36,10 @@ Para cargar un componente en su proyecto 4D, usted puede:
 - copy the component files in the [**Components** folder of your project](architecture.md#components),
 - o, declarar el componente en el archivo **dependencies.json**.
 
-Components declared in the **dependencies.json** file can be stored at different locations:
+Los componentes declarados en el archivo **dependencies.json** pueden almacenarse en diferentes ubicaciones:
 
-- at the same level as your 4D project's package folder: this is the default location,
-- anywhere on your machine: the component path must be declared in the **environment4d.json** file
+- al mismo nivel que la carpeta de paquetes de su proyecto 4D: esta es la ubicación predeterminada,
+- en cualquier lugar de su máquina: la ruta del componente debe declararse en el archivo **environment4d.json**
 - on a GitHub repository: the component path can be declared in the **dependencies.json** file or in the **environment4d.json** file, or in both files.
 
 If the same component is installed at different locations, a [priority order](#priority) is applied.
@@ -48,7 +48,7 @@ If the same component is installed at different locations, a [priority order](#p
 
 #### dependencies.json
 
-El archivo **dependencies.json** hace referencia a todos los componentes requeridos en su proyecto 4D. This file must be located in the **Sources** folder of the 4D project folder, e.g.:
+El archivo **dependencies.json** hace referencia a todos los componentes requeridos en su proyecto 4D. Este archivo debe encontrarse en la carpeta **Sources** de la carpeta del proyecto 4D, por ejemplo.:
 
 ```
 	/MyProjectRoot/Project/Sources/dependencies.json
@@ -74,7 +74,7 @@ Since components can be installed in different ways, a priority order is applied
 
 **Máxima prioridad**
 
-1. Components stored in the [**Components** folder of the project](architecture.md#components).
+1. Componentes almacenados en la carpeta [**Components** del proyecto](architecture.md#components).
 2. Componentes declarados en el archivo **dependencies.json**.
 3. Componentes 4D internos del usuario (por ejemplo, 4D NetKit, 4D SVG...)
 
@@ -99,7 +99,7 @@ Declara un componente local en el archivo [**dependencies.json**](#dependencyjso
 }
 ```
 
-... where "myComponent1" and "myComponent2" are the name of the components to be loaded.
+... donde "myComponent1" y "myComponent2" son el nombre de los componentes a cargar.
 
 By default, if "myComponent1" and "myComponent2" are not declared in an [environment4d.json file](#environment4djson), 4D will look for the component's package folder (*i.e.* the project root folder of the component) at the same level as your 4D project's package folder, e.g.:
 
@@ -142,7 +142,7 @@ If a component path declared in the **environment4d.json** file is not found whe
 
 ### Declarar componentes almacenados en GitHub
 
-4D components available as GitHub releases can be referenced and automatically loaded in your 4D projects.
+Los componentes 4D disponibles en GitHub pueden ser referenciados y cargados automáticamente en sus proyectos 4D.
 
 :::note
 
@@ -158,7 +158,7 @@ To be able to directly reference and use a 4D component stored on GitHub, you ne
 - Nombre este archivo con el mismo nombre que el repositorio GitHub.
 - Integre el archivo en una [versión GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) del repositorio.
 
-These steps can easily be automated, with 4D code or using GitHub Actions, for example.
+Estos pasos pueden automatizarse fácilmente, con código 4D o utilizando GitHub Actions, por ejemplo.
 
 #### Declaring paths
 
@@ -206,7 +206,7 @@ Cuando crea una versión en GitHub, especifica una **etiqueta** y una **versión
 }
 ```
 
-- A release is also identified by a **version**. The versioning system used is based on the *Semantic Versioning* concept, which is the most commonly used. Each version number is identified as follows: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
+- Una versión también se identifica por una **versión**. The versioning system used is based on the *Semantic Versioning* concept, which is the most commonly used. Cada número de versión se identifica de la siguiente manera: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
 
 ```json
 {
@@ -239,7 +239,7 @@ If you do not specify a tag or a version, 4D automatically retrieves the "latest
 
 If you want to integrate a component located in a private repository, you need to tell 4D to use a connection token to access it.
 
-To do this, in your GitHub account, create a **classic** token with access rights to **repo**.
+Para ello, en su cuenta GitHub, cree un token **classic** con derechos de acceso a **repo**.
 
 :::note
 

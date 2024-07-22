@@ -86,7 +86,7 @@ In the *server* parameter, pass an object containing the following properties:
 
 #### Resultados
 
-The function returns an [**IMAP transporter object**](#imap-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
+A função retorna um [**objeto transportador IMAP**](#imap-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
 
 > A ligação IMAP é automaticamente fechada quando o objecto transportador é destruído.
 
@@ -1155,8 +1155,8 @@ No primeiro parâmetro, pode passar qualquer um dos dois:
 
 The optional *updateSeen* parameter allows you to specify if the message is marked as "seen" in the mailbox. Pode passar:
 
-- **True** - to mark the message as "seen" (indicating the message has been read)
-- **False** - to leave the message's "seen" status untouched
+- **True** - para marcar a mensagem como "vista" (indicando que a mensagem foi lida)
+- **False** - para deixar o status "visto" da mensagem inalterado
 
 > * The function returns an empty BLOB if *msgNumber* or msgID\* designates a non-existing message,
 > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated,
@@ -1644,19 +1644,19 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 **ALL**: Todas as mensagens na caixa de correio.\
 **ANSWERED**: mensagens com o indicador \Answered ativo.\
 **UNANSWERED**: Messages that do not have the \Answered flag set.\
-**DELETED**: Messages with the \Deleted flag set.\
+**DELETED**: mensagens com o sinalizador \Deleted ativado.\
 **UNDELETED**: Messages that do not have the \Deleted flag set.\
 **DRAFT**: mensagens com o indicador \Draft ativo.\
-**UNDRAFT**: Messages that do not have the \Draft flag set.\
-**FLAGGED**: Messages with the \Flagged flag set.\
+**UNDRAFT**: mensagens que não têm o sinalizador \Draft ativado.\
+**FLAGGED**: mensagens com o indicador \Flagged ativo.\
 **UNFLAGGED**: Messages that do not have the \Flagged flag set.\
-**RECENT**: Messages that have the \Recent flag set.\
+**RECENT**: mensagens que possuem o indicador \Recent ativado.\
 **OLD**: mensagens que não possuem o indicador \Recent definido.\
-**SEEN**: Messages that have the \Seen flag set.\
+**SEEN**: mensagens que têm o sinalizador \Seen ativo.\
 **UNSEEN**: Mensagens que não possuem o indicador \Seen definido.\
 **NEW**: Messages that have the \Recent flag set but not the \Seen flag. This is functionally equivalent to “(RECENT UNSEEN)”.\
 **KEYWORD *flag***: Messages with the specified keyword set.\
-**UNKEYWORD *flag***: Messages that do not have the specified keyword set.\
+**UNKEYWORD *flag***: mensagens que não têm a palavra-chave especificada.\
 **BEFORE *date***: Messages whose internal date is earlier than the specified date.\
 **ON *date***: Messages whose internal date is within the specified date.\
 **SINCE *date***: Messages whose internal date is within or later than the specified date.\
@@ -1664,16 +1664,16 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 **SENTON *date***: Messages whose Date header is within the specified date.\
 **SENTSINCE *date***: Messages whose Date header is within or later than the specified date.\
 **TO *string***: Messages that contain the specified string in the TO header.\
-**FROM *string***: Messages that contain the specified string in the FROM header.\
+**FROM *string***: mensagens que contêm a string especificada no cabeçalho FROM.\
 **CC *string***: Messages that contain the specified string in the CC header.\
-**BCC *string***: Messages that contain the specified string in the BCC header.\
+**BCC *string***: mensagens que contêm a string especificada no cabeçalho BCC.\
 **SUBJECT *string***: Messages that contain the specified string in the Subject header.\
 **BODY *string***: Messages that contain the specified string in the message body.\
 **TEXT *string***: Messages that contain the specified string in the header or in the message body.\
 **HEADER *field-name* *string***: Messages that have a header with the specified field-name and that contain the specified string in the field-body.\
 **UID *message-UID***: Messages with unique identifiers corresponding to the specified unique identifier set.\
-**LARGER *n***: Messages with a size larger than the specified number of bytes.\
-**SMALLER *n***: Messages with a size smaller than the specified number of bytes.\
+**LARGER *n***: mensagens com tamanho maior do que o número de bytes especificado.\
+**SMALLER *n***: mensagens com tamanho menor do que o número de bytes especificado.\
 **NOT *search-key***: Messages that do not match the specified search key.\
 **OR *search-key1* *search-key2***: Messages that match either search key.
 

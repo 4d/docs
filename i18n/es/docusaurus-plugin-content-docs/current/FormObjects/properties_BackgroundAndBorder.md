@@ -169,8 +169,8 @@ Debe introducirse el nombre de un array Entero largo. Cada elemento de este arra
 Por ejemplo, dado un list box en el que las líneas tienen un color gris/gris claro alternado, definido en las propiedades del list box. También se ha definido para el list box un array de color de fondo con el fin de cambiar a naranja claro el color de las líneas en las que al menos un valor es negativo:
 
 ```4d
- <>_BgndColors{$i}:=0x00FFD0B0 // orange
- <>_BgndColors{$i}:=-255 // default value
+ <>_BgndColors{$i}:=0x00FFD0B0 // naranja
+ <>_BgndColors{$i}:=-255 // valor por defecto
 ```
 
 ![](../assets/en/FormObjects/listbox_styles1.png)

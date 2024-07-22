@@ -320,7 +320,7 @@ The `.sendAt` property contains the <!-- REF #EmailObjectClass.sendAt.Summary --
 
 The `.sender` property contains the <!-- REF #EmailObjectClass.sender.Summary -->email source [addresse(s)](#email-addresses) of the email<!-- END REF -->.
 
-Each email you send out has both the **sender** and **[from](#from)** addresses:
+Cada e-mail que você envia tem os endereços **sender** e **[from](#from)**:
 
 - o domínio do remetente é o que o servidor de e-mail de recebimento recebe ao abrir a sessão,
 - o endereço a partir é o que o(s) destinatário(s) verá(s).

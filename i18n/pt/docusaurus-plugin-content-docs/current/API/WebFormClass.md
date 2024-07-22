@@ -7,10 +7,10 @@ The `WebForm` class contains functions and properties allowing to handle your Qo
 
 <details><summary>História</summary>
 
-| Release | Mudanças                                                                     |
-| ------- | ---------------------------------------------------------------------------- |
-| 20 R6   | Added enableState() and disableState() |
-| 20 R2   | Adicionado                                                                   |
+| Release | Mudanças                                                                       |
+| ------- | ------------------------------------------------------------------------------ |
+| 20 R6   | Adição de enableState() e disableState() |
+| 20 R2   | Adicionado                                                                     |
 
 </details>
 

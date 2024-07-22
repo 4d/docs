@@ -150,7 +150,7 @@ Todas as funções de chamada de retorno recebem dois parâmetros de objectos:
 
 | Parâmetro | Tipo                                        |
 | --------- | ------------------------------------------- |
-| $param1   | [`HTTPRequest` object](#httprequest-object) |
+| $param1   | [`Objeto HTTPRequest`](#objeto-httprequest) |
 | $param2   | [Objeto `Event`](#event-object)             |
 
 Aqui está a sequência de chamadas de retorno:

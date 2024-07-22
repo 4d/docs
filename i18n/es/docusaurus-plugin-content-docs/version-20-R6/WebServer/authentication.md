@@ -61,7 +61,7 @@ A continuación, se evalúan los valores introducidos:
 
 Este modo ofrece un mayor nivel de seguridad, ya que la información de autenticación se procesa mediante un proceso unidireccional llamado hashing que hace que su contenido sea imposible de descifrar.
 
-Al igual que en el modo BASIC, los usuarios deben introducir su nombre y contraseña al conectarse. The [`On Web Authentication`](#on-web-authentication) database method is then called. Cuando se activa el modo DIGEST, el parámetro $6 (contraseña) se devuelve siempre vacío. De hecho, cuando se utiliza este modo, esta información no pasa por la red como texto claro (sin encriptar). Por lo tanto, en este caso es imprescindible evaluar las solicitudes de conexión mediante el comando `WEB Validate digest`.
+Al igual que en el modo BASIC, los usuarios deben introducir su nombre y contraseña al conectarse. A continuación, se llama al método base [`On Web Authentication`](#on-web-authentication). Cuando se activa el modo DIGEST, el parámetro $6 (contraseña) se devuelve siempre vacío. De hecho, cuando se utiliza este modo, esta información no pasa por la red como texto claro (sin encriptar). Por lo tanto, en este caso es imprescindible evaluar las solicitudes de conexión mediante el comando `WEB Validate digest`.
 
 > Debe reiniciar el servidor web para que se tengan en cuenta los cambios realizados en estos parámetros.
 
@@ -102,12 +102,12 @@ Por tanto, NO se llama al método base `On Web Authentication`:
 Debe declarar estos parámetros de la siguiente manera:
 
 ```4d
-//On Web Authentication database method
+//Método base On Web Authentication
  
  C_TEXT($1;$2;$3;$4;$5;$6)
  C_BOOLEAN($0)
  
-//Code for the method
+//Código del método
 ```
 
 Como alternativa, puede utilizar la sintaxis [parámetros nombrados](Concepts/parameters.md#named-parameters):
@@ -173,7 +173,7 @@ El método base `On Web Connection` sólo se ejecuta si la conexión ha sido ace
 
 > **ADVERTENCIA**<br/>Si no se define ningún valor en $0 o si $0 no está definido en el método base `On Web Authentication`, la conexión se considera aceptada y se ejecuta el método base `On Web Connection`.
 
-> - Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) porque de lo contrario su ejecución será interrumpida y la conexión será rechazada. Lo mismo ocurrirá si se produce un error durante su procesamiento.
+> - No llame a ningún elemento de la interfaz en el método base `On Web Authentication` (`ALERT`, `DIALOG`, etc.) porque de lo contrario su ejecución será interrumpida y la conexión será rechazada. Lo mismo ocurrirá si se produce un error durante su procesamiento.
 
 ### Ejemplo
 

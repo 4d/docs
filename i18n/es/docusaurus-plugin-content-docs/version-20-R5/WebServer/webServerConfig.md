@@ -327,8 +327,8 @@ Si su servidor 4D no parece responder en el puerto definido, puede probar la dir
 - **Indication of port numbers**<br/> Since IPv6 notation uses colons (:), adding port numbers may lead to some confusion, for example:
 
 ```code4d
-	2001:0DB8::85a3:0:ac1f:8001 // IPv6 address
-	2001:0DB8::85a3:0:ac1f:8001:8081 // IPv6 address with port 8081
+	2001:0DB8::85a3:0:ac1f:8001 // Dirección IPv6
+	2001:0DB8::85a3:0:ac1f:8001:8081 // Dirección IPv6 con puerto 8081
 ```
 
 Para evitar esta confusión, se recomienda utilizar la notación [ ] siempre que se combine una dirección IPv6 con un número de puerto, por ejemplo:

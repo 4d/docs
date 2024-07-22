@@ -48,7 +48,7 @@ If the same component is installed at different locations, a [priority order](#p
 
 #### dependencies.json
 
-The **dependencies.json** file references all components required in your 4D project. This file must be located in the **Sources** folder of the 4D project folder, e.g.:
+O arquivo **dependencies.json** faz referência a todos os componentes necessários em seu projeto 4D. This file must be located in the **Sources** folder of the 4D project folder, e.g.:
 
 ```
 	/MyProjectRoot/Project/Sources/dependencies.json
@@ -61,7 +61,7 @@ Pode conter:
 
 #### environment4d.json
 
-The **environment4d.json** file is optional. It allows you to define **custom paths** for some or all components declared in the **dependencies.json** file. This file can be stored in your project package folder or in one of its parent folders, at any level (up to the root).
+O arquivo **environment4d.json** é opcional. It allows you to define **custom paths** for some or all components declared in the **dependencies.json** file. This file can be stored in your project package folder or in one of its parent folders, at any level (up to the root).
 
 The main benefits of this architecture are the following:
 
@@ -75,7 +75,7 @@ Since components can be installed in different ways, a priority order is applied
 **Prioridade mais alta**
 
 1. Components stored in the [**Components** folder of the project](architecture.md#components).
-2. Components declared in the **dependencies.json** file.
+2. Componentes declarados no arquivo **dependencies.json**.
 3. Internal User 4D components (e.g. 4D NetKit, 4D SVG...)
 
 **Prioridade mais baixa**
@@ -175,7 +175,7 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 }
 ```
 
-... where "myGitHubComponent1" is referenced and declared for the project, although "myGitHubComponent2" is only referenced. You need to declare it in the [**environment4d.json**](#environment4djson) file:
+... where "myGitHubComponent1" is referenced and declared for the project, although "myGitHubComponent2" is only referenced. Você precisa declará-lo no arquivo [**environment4d.json**] (#environment4djson):
 
 ```json
 {
@@ -206,7 +206,7 @@ When you create a release in GitHub, you specify a **tag** and a **version**.
 }
 ```
 
-- A release is also identified by a **version**. The versioning system used is based on the _Semantic Versioning_ concept, which is the most commonly used. Each version number is identified as follows: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
+- Uma versão também é identificada por uma **versão**. The versioning system used is based on the _Semantic Versioning_ concept, which is the most commonly used. Each version number is identified as follows: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
 
 ```json
 {
@@ -225,7 +225,7 @@ Eis alguns exemplos:
 
 - "latest": the version having the “latest” badge in GitHub releases.
 - "\*": a versão mais recente lançada.
-- "1.\*": all version of major version 1.
+- "1.\*": todas as versões da versão principal 1.
 - "1.2.\*": all patches of minor version 1.2.
 - "^1.2.3" or ">=1.2.3": the latest version 1, starting with the 1.2.3 version.
 - "~1.2.3" or ">1.2.3": the latest major version 1, starting with the version just after the 1.2.3.

@@ -91,7 +91,7 @@ Authentication on the WebAdmin web server is granted using an access key. For mo
 
 In accordance with the management of 4D projects, only the following usages are supported:
 
-- development with Qodly Studio must be done using **4D** (single-user).
+- o desenvolvimento com Qodly Studio deve ser feito usando **4D** (monousuário).
 - deployment of 4D applications powered with Qodly forms must be done using **4D Server**.
 
 ## Abertura do Qodly Studio
@@ -286,7 +286,7 @@ Para cerrar la sesión del usuario, solo necesita ejecutar la acción estándar 
 Triggering the logout action from a web user session has the following effects:
 
 - the current web user session loses its privileges, only [descriptive REST requests](../REST/authUsers.md#descriptive-rest-requests) are allowed,
-- the associated 4D license is released,
+- a licença associada ao 4D é liberada,
 - the `Session.storage` is kept until the web session inactivity timeout is reached (at least one hour). During this period after a logout, if the user logs in again, the same session is used and the `Session.storage` shared object is available with its current contents.
 
 ## Sobre o uso da licença para renderização

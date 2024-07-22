@@ -852,7 +852,7 @@ Las clases Singleton no están soportadas por las [clases ORDA](../ORDA/ordaClas
 
 ### Creating a singleton
 
-To create a singleton class, add the `singleton` keyword before [`Class Constructor`](#class-constructor). Por ejemplo:
+Para crear una clase singleton, añada la palabra clave `singleton` antes del [`Class Constructor`](#class-constructor). Por ejemplo:
 
 ```4d
 	//class: ProcessTag

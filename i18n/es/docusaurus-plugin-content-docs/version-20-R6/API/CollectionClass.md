@@ -2886,7 +2886,7 @@ La retrollamada recibe los siguientes parámetros:
 
 La retrollamada define los siguientes parámetros:
 
-- *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
+- *$1.accumulator*: valor que va a ser modificado por la función y que es inicializado por *initValue*.
 - *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 #### Ejemplo 1
@@ -2971,7 +2971,7 @@ La retrollamada recibe los siguientes parámetros:
 
 La retrollamada define los siguientes parámetros:
 
-- *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
+- *$1.accumulator*: valor que va a ser modificado por la función y que es inicializado por *initValue*.
 - *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 #### Ejemplo 1
@@ -3045,7 +3045,7 @@ In *index*, pass the position where you want the element to be removed from the 
 
 - Si *index* < 0, se recalcula como *index:=index+length* (se considera el desplazamiento desde el final de la colección).
 - Si el valor calculado < 0, *index* toma el valor 0.
-- If the calculated value > the length of the collection, *index* is set to the length.
+- Si el valor calculado > la longitud de la colección, *index* toma el valor de la longitud.
 
 En *howMany*, pase el número de elementos a eliminar de *index*. Si no se especifica *howMany*, se elimina un elemento.
 
@@ -3094,10 +3094,10 @@ The `.resize()` function <!-- REF #collection.resize().Summary -->sets the colle
 
 > Esta función modifica la colección original.
 
-- If *size* < collection length, exceeding elements are removed from the collection.
+- Si *size* la longitud de la colección, los elementos que exceden se eliminan de la colección.
 - Si *size* > longitud de la colección, *size* es la nueva longitud de la colección.
 
-Por defecto, los nuevos elementos se llenan con valores **null**. You can specify the value to fill in added elements using the *defaultValue* parameter.
+Por defecto, los nuevos elementos se llenan con valores **null**. Puede especificar el valor a llenar en los elementos añadidos utilizando el parámetro *defaultValue*.
 
 #### Ejemplo
 
@@ -3302,11 +3302,11 @@ Puede definir los siguientes parámetros:
 
 In any case, at the point where `.some()` function encounters the first collection element returning true, it stops calling the callback and returns **true**.
 
-Por defecto, `.some()` comprueba toda la colección. Optionally, you can pass the index of an element from which to start the test in *startFrom*.
+Por defecto, `.some()` comprueba toda la colección. Opcionalmente, puede pasar el índice de un elemento desde el cual iniciar la prueba en *startFrom*.
 
 - If *startFrom* >= the collection's length, **False** is returned, which means the collection is not tested.
 
-- If *startFrom* < 0, it is considered as the offset from the end of the collection.
+- Si *startFrom* < 0, se considera como el desplazamiento desde el final de la colección.
 
 - Si *startFrom* = 0, se busca en toda la colección (por defecto).
 
@@ -3363,7 +3363,7 @@ The `.sort()` function <!-- REF #collection.sort().Summary -->sorts the elements
 
 > Esta función modifica la colección original.
 
-If `.sort()` is called with no parameters, only scalar values (number, text, date, booleans) are sorted. Los elementos se ordenan por defecto de forma ascendente, según su tipo. Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si <em x-id="3">attributePath</em> lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
+Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo. Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si <em x-id="3">attributePath</em> lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
 
 1. null
 2. booleans

@@ -3,12 +3,12 @@ id: sessions
 title: Sesiones web
 ---
 
-El servidor web de 4D ofrece funciones integradas para la gestión de **sesiones web**. Creating and maintaining web sessions allows you to control and improve the user experience on your web application. When web sessions are enabled, web clients can reuse the same server context from one request to another.
+El servidor web de 4D ofrece funciones integradas para la gestión de **sesiones web**. Creating and maintaining web sessions allows you to control and improve the user experience on your web application. Cuando se activan las sesiones web, los clientes web pueden reutilizar el mismo contexto de servidor de una solicitud a otra.
 
 Las sesiones web permiten:
 
 - handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web sessions are **scalable**),
-- manage session through a `Session` object and the [Session API](API/SessionClass.md),
+- gestionar la sesión a través de un objeto `Session` y la [Session API](API/SessionClass.md),
 - store and share data between processes of a web client using the [.storage](../API/SessionClass.md#storage) of the session,
 - asociar privilegios al usuario que ejecuta la sesión.
 
@@ -102,7 +102,7 @@ You can close a session from a Qodly form using the [**logout**](qodly-studio.md
 
 Los privilegios pueden asociarse a sesiones de usuario web. En el servidor web, puede proporcionar un acceso o unas funcionalidades específicas en función de los privilegios de la sesión.
 
-You assign privileges using the [`.setPrivileges()`](API/SessionClass.md#setprivileges) function. In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/SessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **Guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
+Puedes asignar privilegios utilizando la función [`.setPrivileges()`](API/SessionClass.md#setprivileges). In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/SessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **Guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
 
 Ejemplo:
 

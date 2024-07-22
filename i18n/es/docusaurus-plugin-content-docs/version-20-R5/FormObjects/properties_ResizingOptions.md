@@ -97,7 +97,7 @@ Hay tres opciones disponibles:
 
 Cuando un objeto splitter tiene esta propiedad, los otros objetos a su derecha (splitter vertical) o debajo de él (separador horizontal) son empujados al mismo tiempo que el splitter, sin parar.
 
-Here is the result of a “pusher” splitter being moved:
+Este es el resultado de un separador "pusher" que se mueve:
 ![](../assets/en/FormObjects/splitter_pusher1.png)
 
 ![](../assets/en/FormObjects/splitter_pusher3.png)

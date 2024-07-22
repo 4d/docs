@@ -5,7 +5,7 @@ title: ZIPArchive
 
 A 4D ZIP archive is a `File` or `Folder` object containing one or more files or folders, which are compressed to be smaller than their original size. Estos archivos se crean con una extensión ".zip" y pueden utilizarse para ahorrar espacio en el disco o transferir archivos a través de medios que pueden tener limitaciones de tamaño (por ejemplo, el correo electrónico o la red).
 
-- You create a 4D ZIP archive with the [ZIP Create archive](#zip-create-archive) command.
+- Cree un archivo ZIP 4D con el comando [ZIP Create archive](#zip-create-archive).
 - 4D [`ZIPFile`](ZipFileClass.md) and [`ZIPFolder`](ZipFolderClass.md) instances are available through the [`root`](#root) property (`ZIPFolder`) of the object returned by [ZIP Read archive](#zip-read-archive) command.
 
 ### Ejemplo
@@ -156,7 +156,7 @@ Para comprimir una estructura de archivo ZIP con una contraseña y una barra de 
 
 #### Ejemplo 4
 
-You want to pass a collection of folders and files to compress to the *zipStructure* object:
+Quiere pasar una colección de carpetas y archivos para comprimir al objeto *zipStructure*:
 
 ```4d
  var $destination : 4D.File

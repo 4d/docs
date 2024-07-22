@@ -170,8 +170,8 @@ If necessary, the function creates the folder hierachy as described in the [plat
 
 **Valor retornado**
 
-- **True** if the folder is created successfully;
-- **False** if a folder with the same name already exists or if an error occured.
+- **True** se a pasta for criada com sucesso;
+- **False** se já existir uma pasta com o mesmo nome ou se tiver ocorrido um erro.
 
 #### Exemplo 1
 
@@ -294,7 +294,7 @@ When `Delete only if empty` is passed or if you omit the option parameter:
 - A pasta só é apagada se estiver vazia; caso contrário, o comando não faz nada e é gerado um erro -47.
 - Se a pasta não existir, o erro -120 é gerado.
 
-When `Delete with contents` is passed:
+Quando `Delete with contents` é passado:
 
 - A pasta, juntamente com todo o seu conteúdo, é apagada.
   **Warning**: Even when this folder and/or its contents are locked or set to read-only, if the current user has suitable access rights, the folder (and contents) is still deleted.

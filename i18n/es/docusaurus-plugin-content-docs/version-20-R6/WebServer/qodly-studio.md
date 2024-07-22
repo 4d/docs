@@ -47,7 +47,7 @@ La resolución recomendada es 1920x1080.
 - Desarrollo: 4D v20 R2 o superior
 - Despliegue: 4D Server v20 R2 o superior
 - Qodly Studio solo funciona con proyectos 4D (no soporta bases de datos binarias).
-- Web sessions (*aka* Scalable sessions) must [be enabled](sessions.md#enabling-web-sessions).
+- Las sesiones web (*aka* Scalable sessions) deben [estar activadas](sessions.md#enabling-web-sessions).
 - El código 4D llamado por los formularios Qodly debe ser [hilo seguro](preemptiveWeb.md).
 
 ### Acceso a Qodly Studio
@@ -150,7 +150,7 @@ No existe compatibilidad directa entre las aplicaciones implementadas con 4D y l
 
 ### Lenguaje
 
-The following commands and classes are dedicated to the server-side management of Qodly pages:
+Los siguientes comandos y clases están dedicados a la gestión del lado del servidor de las páginas Qodly:
 
 - [`Web Form`](../API/WebFormClass.md#web-form) command: returns the Qodly page as an object.
 - [`Web Event`](../API/WebFormClass.md#web-event) command: returns events triggered within Qodly page components.
@@ -275,7 +275,7 @@ This call is accepted and as long as the authentication is not successful, `Sess
 
 When the ["force login" mode is enabled](#setting-the-force-login-mode), Qodly Studio for 4D allows you to implement a logout feature in your application.
 
-To logout the user, you just need to execute the **Logout** standard action from the Qodly page. En Qodly Studio, puede asociar esta acción estándar a un botón por ejemplo:
+Para cerrar la sesión del usuario, solo necesita ejecutar la acción estándar **Logout** desde la página Qodly. En Qodly Studio, puede asociar esta acción estándar a un botón por ejemplo:
 
 ![alt-text](../assets/en/WebServer/logout.png)
 

@@ -43,7 +43,7 @@ El contexto de optimización se basa en las siguientes implementaciones:
 
 :::note Nota de compatibilidad
 
-Contexts handled in connections established through [`Open datastore`](../API/DataStoreClass.md#open-datastore) can only be used between similar main versions of 4D. For example, a 4D 20.x remote application can only use contexts of a 4D Server 20.x datastore.
+Contexts handled in connections established through [`Open datastore`](../API/DataStoreClass.md#open-datastore) can only be used between similar main versions of 4D. Por ejemplo, una aplicación remota 4D 20.x sólo puede utilizar contextos de un almacen de datos 4D Server 20.x.
 
 :::
 

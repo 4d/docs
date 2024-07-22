@@ -34,9 +34,9 @@ $col:=New collection //$col is initialized with an empty collection
 Los resultados del operador dependen de los **tipos de datos** a los que se aplican. 4D soporta diferentes operadores en tipos de datos escalares. São descritos com os tipos de dados, nas secções seguintes:
 
 - [**Operadores lógicos**](dt_boolean.md#logical-operators) (em expressões **booleanas**)
-- [**Date operators**](dt_date.md#date-operators)
-- [**Time operators**](dt_time.md#time-operators)
-- [**Number operators**](dt_number.md#number-operators)
+- [**Operadores de data**](dt_date.md#operadores-de-data)
+- [**Operadores de tempo**](dt_time.md#operadores-de-tempo)
+- [**Operadores de números**](dt_number.md#number-operators)
 - [**Bitwise operators**](dt_number.md#bitwise-operators) (on **long integer** expressions)
 - [**Operadores em imagens**](dt_picture.md#operadores-em-imagens)
 - [**Operadores em ponteiros**](dt_pointer.md#operadores-em-ponteiros)

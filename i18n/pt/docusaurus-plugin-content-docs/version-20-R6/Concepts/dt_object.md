@@ -69,7 +69,7 @@ Exemplos:
 
 The `{}` operator allows you to create an **object literal**. Um literal de objecto é uma lista separada por semicolunas de zero ou mais pares de nomes de propriedades e valores associados de um objecto, entre chaves (`{}`). A sintaxe literal do objecto cria objectos vazios ou preenchidos.
 
-Since any property value is considered an expression, you can create sub-objects using `{}` in property values.  You can also create and reference **collection literals**.
+Since any property value is considered an expression, you can create sub-objects using `{}` in property values.  Também é possível criar e referenciar os **literais da coleção**.
 
 Exemplos:
 
@@ -127,7 +127,7 @@ Exemplo:
      employee.name:="Smith"
 ```
 
-- using a string within square brackets:
+- usando uma cadeia de caracteres entre colchetes:
   > object["propertyName"]
 
 Exemplos:

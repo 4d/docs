@@ -93,7 +93,7 @@ You can use the [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/en/page
 FORM GOTO PAGE(arrPages)
 ```
 
-The command is executed when the [`On Clicked`](Events/onClicked.md) event occurs. You should then clear the array when the [`On Unload`](Events/onUnload.md) event occurs.
+El comando se ejecuta cuando se produce el evento [`On Clicked`](Events/onClicked.md). You should then clear the array when the [`On Unload`](Events/onUnload.md) event occurs.
 
 He aquí un ejemplo de método objeto:
 

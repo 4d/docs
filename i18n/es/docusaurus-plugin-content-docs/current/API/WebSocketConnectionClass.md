@@ -110,10 +110,10 @@ Esta propiedad es de sólo lectura.
 
 <!-- REF #WebSocketConnectionClass.terminate().Params -->
 
-| Parámetros | Tipo    |     | Descripción                                                                                          |
-| ---------- | ------- | :-: | ---------------------------------------------------------------------------------------------------- |
-| code       | Integer |  -> | Error code sent to the client (must be > 3000, otherwise the message is not sent) |
-| message    | Text    |  -> | Mensaje de error enviado al cliente                                                                  |
+| Parámetros | Tipo    |     | Descripción                                                                                                     |
+| ---------- | ------- | :-: | --------------------------------------------------------------------------------------------------------------- |
+| code       | Integer |  -> | Código de error enviado al cliente (debe ser > 3000, de lo contrario el mensaje no se envía) |
+| message    | Text    |  -> | Mensaje de error enviado al cliente                                                                             |
 
 <!-- END REF -->
 

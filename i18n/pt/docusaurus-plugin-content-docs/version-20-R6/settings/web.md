@@ -126,7 +126,7 @@ Set the authentication system that you want to apply to your Web server. São pr
 
 Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
 
-Se recomienda utilizar la autenticación **personalizada**. See [**Authentication**](../WebServer/authentication.md) chapter in the *Web Development* documentation.
+Se recomienda utilizar la autenticación **personalizada**. Veja o capítulo [**Autenticação**](../WebServer/authentication.md) na documentação *Desenvolvimento Web*.
 
 ## Opções (II)
 
@@ -288,7 +288,7 @@ Inicia e pára o servidor REST. Ver [Configuración del servidor REST](../REST/c
 
 :::information Obsoleto
 
-**Esta seção es obsoleta** a partir do 4D 20 R6. Se a configuração atual do projeto estiver obsoleta e precisar ser atualizada, essa seção, incluindo o botão **Ativar autenticação REST por meio da função ds.authentify()** (veja abaixo), será exibida. Se o seu projeto já for compatível com o modo [Force login](../REST/configuration.md#configuring-rest-access), a seção não estará presente e você poderá ignorar este parágrafo.
+**Esta seção está obsoleta** a partir de 4D 20 R6. Se a configuração atual do projeto estiver obsoleta e precisar ser atualizada, essa seção, incluindo o botão **Ativar autenticação REST por meio da função ds.authentify()** (veja abaixo), será exibida. Se o seu projeto já for compatível com o modo [Force login](../REST/configuration.md#configuring-rest-access), a seção não estará presente e você poderá ignorar este parágrafo.
 
 :::
 
