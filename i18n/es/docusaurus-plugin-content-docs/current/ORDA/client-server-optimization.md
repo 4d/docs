@@ -12,7 +12,7 @@ title: Optimización cliente/servidor
 
 Las arquitecturas de cliente/servidor ORDA que soportan la optimización son:
 
-- Server datastores accessed by 4D remote desktop applications through [**`ds`**](../API/DataStoreClass.md#ds),
+- Les datastores servidor a los que acceden las aplicaciones 4D de escritorio remoto a través de [**`ds`**](../API/DataStoreClass.md#ds),
 - [Remote datastores](remoteDatastores.md), accessed via [**`Open datastore`**](../API/DataStoreClass.md#open-datastore) (client REST requests).
 
 ## Contexto de optimización
