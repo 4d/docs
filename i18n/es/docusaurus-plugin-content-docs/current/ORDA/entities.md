@@ -9,7 +9,7 @@ En ORDA, se accede a los datos a través de [entidades](dsMapping.md#entity) y [
 
 Hay dos maneras de crear una nueva entidad en una dataclass:
 
-- Since entities are references to database records, you can create entities by creating records using the 4D language and then reference them with ORDA functions such as [`entity.next()`](../API/EntityClass.md#next) or [`entitySelection.first()`](../API/EntitySelectionClass.md#first).
+- Como las entidades son referencias a registros de la base de datos, se pueden crear entidades creando registros utilizando el lenguaje 4D y luego referenciarlos con funciones ORDA como [`entity.next()`](../API/EntityClass.md#next) o [`entitySelection.first()`](../API/EntitySelectionClass.md#first).
 - También puede crear una entidad utilizando la función [`dataClass.new()`](../API/DataClassClass.md#new).
 
 Tenga en cuenta que la entidad sólo se crea en la memoria. Si desea añadirla al datastore, debe llamar a la función [`entity.save()`](../API/EntityClass.md#save).
@@ -118,7 +118,7 @@ $entity.lastname:="Jones" //definir el nombr del empleado
 $entity.save() //guardar los cambios
 ```
 
-> Database Blob fields ([scalar blobs](Concepts/dt_blob.md) are automatically converted to and from blob object attributes ([`4D.Blob`](Concepts/dt_blob.md)) when handled through ORDA. Cuando guarde un atributo de objeto blob, tenga en cuenta que, a diferencia del tamaño del objeto blob, que sólo está limitado por la memoria disponible, el tamaño del campo blob está limitado a 2 GB.
+> Los campos Blob de las bases de datos ([blobs escalares](Concepts/dt_blob.md) se convierten automáticamente a y desde atributos de objetos blob ([`4D.Blob`](Concepts/dt_blob.md)) cuando se manejan a través de ORDA. Cuando guarde un atributo de objeto blob, tenga en cuenta que, a diferencia del tamaño del objeto blob, que sólo está limitado por la memoria disponible, el tamaño del campo blob está limitado a 2 GB.
 
 El acceso a un atributo relacionado depende del tipo de atributo. Por ejemplo, con la siguiente estructura:
 
@@ -158,15 +158,15 @@ La referencia del archivo puede ser:
 Ejemplo:
 
 ```4d
-Function createCompany($name : Text; $logo : 4D.File)
+Function createCompany($name : Texto; $logo : 4D.Fichero)
 
 	var $company : cs.CompanyEntity
 	$company:=ds.Company.new()
 
 	$company.name:=$name
-		//assignment using a file object
+		//asignación utilizando un objeto file
 	$company.logo:=$logo
-		//assignment using a path
+		//asignación utilizando una ruta
 	$company.datablob:="/RESOURCES/"+$name+"/data.bin"
 	$company.save()
 ```
@@ -227,10 +227,10 @@ Esto resulta especialmente útil cuando se importan grandes cantidades de datos 
 Puede asignar o modificar el valor de un atributo de entidad asociado "1" a partir de la dataclass "N" directamente vía el atributo relacionado. Por ejemplo, si desea modificar el atributo de nombre de una entidad Company asociada de una entidad Employee, puede escribir:
 
 ```code4d
- $emp:=ds.Employee.get(2) // load the Employee entity with primary key 2
- $emp.employer.name:="4D, Inc." //modify the name attribute of the related Company
- $emp.employer.save() //save the related attribute
-  //the related entity is updated
+ $emp:=ds.Employee.get(2) //cargar la entidad Employee con la llave primaria 2
+ $emp.employer.name:="4D, Inc." //modificar el atributo name de la empresa relacionada
+ $emp.employer.save() //guardar el atributo relacionado
+  //se actualiza la entidad relacionada
 ```
 
 ## Crear una entity selection
@@ -238,10 +238,10 @@ Puede asignar o modificar el valor de un atributo de entidad asociado "1" a part
 Puede crear un objeto de tipo [entity selection](dsMapping.md#entity-selection) de la siguiente manera:
 
 - Lance una búsqueda en las entidades [en una dataclass](API/DataClassClass.md#query) o en una [selección de entidades existente](API/EntitySelectionClass.md#query);
-- Using the [`.all()`](API/DataClassClass.md#all) dataclass function to select all the entities in a dataclass;
-- Using the [`Create entity selection`](../API/EntitySelectionClass.md#create-entity-selection) command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
+- Uso de la función dataclass [`.all()`](API/DataClassClass.md#all) para seleccionar todas las entidades de una dataclass;
+- Usando el comando [`Create entity selection`](../API/EntitySelectionClass.md#create-entity-selection) o la función [`.newSelection()`](API/DataClassClass.md#newselection) de la dataclass para crear una selección de entidades en blanco;
 - Utilizando la función [`.copy()`](API/EntitySelectionClass.md#copy) para duplicar una entity selection existente;
-- Using one of the various functions from the [Entity selection class](API/EntitySelectionClass.md) that returns a new entity selection, such as [`.or()`](API/EntitySelectionClass.md#or);
+- Utilizando una de las diversas funciones de la [clase Entity selection](API/EntitySelectionClass.md) que devuelve una nueva selección de entidades, como [`.or()`](API/EntitySelectionClass.md#or);
 - Utilizando un atributo de relación de tipo "related entities" (ver abajo).
 
 :::note
@@ -260,7 +260,7 @@ Cuando se eliminan entidades, sus referencias permanecen en la selección de ent
 
 ### Entity selections compartibles o modificables
 
-An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **alterable** (supports the [`.add()`](API/EntitySelectionClass.md#add) function, but only usable by the current process).
+Una entity selection puede ser **compartible** (legible por múltiples procesos, pero no alterable tras su creación) o **modificable** (soporta la función [`.add()`](API/EntitySelectionClass.md#add), pero sólo utilizable por el proceso actual).
 
 #### Propiedades
 
@@ -268,7 +268,7 @@ Una entity selection **compartible** tiene las siguientes características:
 
 - puede almacenarse en un objeto compartido o en una colección compartida, y puede pasarse como parámetro entre varios procesos o trabajadores;
 - puede almacenarse en varios objetos o colecciones compartidos, o en un objeto o colección compartido que ya pertenezca a un grupo (no tiene un \* identificador de bloqueo\*);
-- no permite la adición de nuevas entidades. Al intentar añadir una entidad a una entity selection compartibles se producirá un error (1637 - Esta entity selection no puede modificarse). To add an entity to a shareable entity selection, you must first transform it into a non-shareable entity selection using the [`.copy()`](API/EntitySelectionClass.md#copy) function, before calling [`.add()`](API/EntitySelectionClass.md#add).
+- no permite la adición de nuevas entidades. Al intentar añadir una entidad a una entity selection compartibles se producirá un error (1637 - Esta entity selection no puede modificarse). Para añadir una entidad a unaentity selection compartible, primero debe transformarla en una entity selection no compartible utilizando la función [`.copy()`](API/EntitySelectionClass.md#copy), antes de llamar a [`.add()`](API/EntitySelectionClass.md#add).
 
 > La mayoría de las funciones de selección de entidades (como [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) soportar selecciones de entidades compartibles ya que no es necesario modificar la selección de entidades original (devuelven una nueva).
 
@@ -284,7 +284,7 @@ La naturaleza **compartible** o **modificable** de una entity selection se defin
 Una nueva entity selection es **compartible** en los siguientes casos:
 
 - la nueva entity selection resulta de una función de clase ORDA aplicada a una dataClass: [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#query),
-- the new entity selection is based upon a relation [entity._attributeName_](API/EntityClass.md#attributename) (e.g. "company.employees") when _attributeName_ is a one-to-many related attribute but the entity does not belong to an entity selection.
+- la nueva entity selection se basa en una relación [entity._attributeName_](API/EntityClass.md#attributename) (por ejemplo, "company.employees") cuando _attributeName_ es un atributo relacionado uno a muchos pero la entidad no pertenece a una entity selection.
 - la nueva entity selection se copia explícitamente como compartible con [entitySelection.copy()](API/EntitySelectionClass.md#copy) o `OB Copy` (es decir, con la opción `ck shared`).
 
 Ejemplo:
@@ -312,8 +312,8 @@ Una nueva entity selection **hereda** de la naturaleza de la entity selection or
 
 - la nueva entity selection resulta de una de las varias funciones de clase ORDA aplicadas a una entity selection existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 - la nueva entity selection se basa en una relación:
-  - [entity._attributeName_](API/EntityClass.md#attributename) (e.g. "company.employees") when _attributeName_ is a one-to-many related attribute and the entity belongs to an entity selection (same nature as [.getSelection()](API/EntityClass.md#getselection) entity selection),
-  - [entitySelection._attributeName_](API/EntitySelectionClass.md#attributename) (e.g. "employees.employer") when _attributeName_ is a related attribute (same nature as the entity selection),
+  - [entity._attributeName_](API/EntityClass.md#attributename) (por ejemplo, "company.employees") cuando _attributeName_ es un atributo relacionado uno a muchos y la entidad pertenece a una entity selection (misma naturaleza que [.getSelection()](API/EntityClass.md#getselection)),
+  - [entitySelection._attributeName_](API/EntitySelectionClass.md#attributename) (por ejemplo, "employees.employer") cuando _attributeName_ es un atributo relacionado (misma naturaleza que la entity selection),
   - [.extract()](API/EntitySelectionClass.md#extract) cuando la colección resultante contiene selecciones de entidades (de la misma naturaleza que la entity selection).
 
 Ejemplos:
@@ -324,30 +324,30 @@ var $comp; $comp2 : cs.Company
 
 $highSal:=ds.Employee.query("salary >= :1"; 1000000)   
 
-	//$highSal is shareable because of the query on dataClass
-$comp:=$highSal.employer //$comp is shareable because $highSal is shareable
+	//$highSal es compartible debido a la consulta a la dataClass
+$comp:=$highSal.employer //$comp es compartible porque $highSal es compartible
 
 $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy()
-	//$lowSal is alterable because of the copy()
-$comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
+	//$lowSal es alterable debido a copy()
+$comp2:=$lowSal.employer //$comp2 es alterable porque $lowSal es alterable
 ```
 
 :::note Entity selections devueltas por el servidor
 
-In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. Para que dicha selección de entidades sea modificable en el cliente, es necesario ejecutar [`copy()`](API/EntitySelectionClass.md#copy) del lado del cliente. Ejemplo:
+En la arquitectura cliente/servidor, las entity selections devueltas por el servidor son siempre compartibles en el cliente, incluso si [`copy()`](API/EntitySelectionClass.md#copy) fue llamada en el servidor. Para que dicha selección de entidades sea modificable en el cliente, es necesario ejecutar [`copy()`](API/EntitySelectionClass.md#copy) del lado del cliente. Ejemplo:
 
 ```4d
-	//a function is always executed on the server
+/una función se ejecuta siempre en el servidor
 exposed Function getSome() : cs.MembersSelection
-    return This.query("ID >= :1"; 15).orderBy("ID ASC")
+    devuelve This.query("ID >= :1"; 15).orderBy("ID ASC")
 
-	//in a method, executes on the remote side
+    //en un método, se ejecuta en el lado remoto
 var $result : cs.MembersSelection
 var $alterable : Boolean
-$result:=ds.Members.getSome() //$result is shareable
+$result:=ds.Members.getSome() //$result es compartible
 $alterable:=$result.isAlterable() //False
 
-$result:=ds.Members.getSome().copy() // $result is now alterable
+$result:=ds.Members.getSome().copy() // $result es ahora alterable
 $alterable:=$result.isAlterable() // True
 ```
 
@@ -360,11 +360,11 @@ Se trabaja con dos selecciones de entidades que se quieren pasar a un proceso wo
 ```4d
 
 var $paid; $unpaid : cs.InvoicesSelection
-//We get entity selections for paid and unpaid invoices
+//Obtenemos selecciones de entidades para facturas pagadas y no pagadas
 $paid:=ds.Invoices.query("status=:1"; "Paid")
 $unpaid:=ds.Invoices.query("status=:1"; "Unpaid")
 
-//We pass entity selection references as parameters to the worker
+//Pasamos referencias de selección de entidades como parámetros al worker
 CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
 
 ```
