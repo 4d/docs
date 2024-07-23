@@ -92,7 +92,7 @@ Los valores posibles son:
 
 #### Descripción
 
-The `.authenticationMode` property contains the authentication mode used to open the session on the mail server.
+La propiedad `.authenticationMode` contiene el modo de autenticación utilizado para abrir la sesión en el servidor de correo.
 
 Por defecto, se utiliza el modo más seguro soportado por el servidor.
 
@@ -126,7 +126,7 @@ Los valores posibles son:
 
 #### Descripción
 
-The `.authenticationMode` property contains the authentication mode used to open the session on the mail server.
+La propiedad `.authenticationMode` contiene el modo de autenticación utilizado para abrir la sesión en el servidor de correo.
 
 Por defecto, se utiliza el modo más seguro soportado por el servidor.
 
