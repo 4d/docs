@@ -561,12 +561,12 @@ O diagrama seguinte ilustra o bloqueio otimista:
 Isto também pode ser ilustrado pelo seguinte código:
 
 ```4d
- $person1:=ds.Person.get(1) //Reference to entity
- $person2:=ds.Person.get(1) //Other reference to same entity
+ $person1:=ds.Person.get(1) //Referência à entidade
+ $person2:=ds.Person.get(1) //Outra referência à mesma entidade
  $person1.name:="Bill"
- $result:=$person1.save() //$result.success=true, change saved
+ $result:=$person1.save() //$result.success=true, alteração salva
  $person2.name:="William"
- $result:=$person2.save() //$result.success=false, change not saved
+ $result:=$person2.save() //$result.success=false, alteração não salva
 ```
 
 Neste exemplo, atribuímos a $person1 uma referência à entidade pessoa com uma chave de 1. De seguida, atribuímos outra referência da mesma entidade à variável $person2. Utilizando $person1, alteramos o primeiro nome da pessoa e guardamos a entidade. When we attempt to do the same thing with $person2, 4D checks to make sure the entity on disk is the same as when the reference in $person1 was first assigned. Since it isn't the same, it returns false in the success property and doesn’t save the second modification.
