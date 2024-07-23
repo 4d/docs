@@ -55,7 +55,7 @@ Este modo le permite implementar la siguiente secuencia de acceso:
 
 ### Peticiones REST descriptivas
 
-Descriptive REST requests can be processed in web user sessions that do not require licenses ("guest" sessions). Estas peticiones son:
+Las peticiones REST descriptivas pueden procesarse en sesiones de usuario web que no requieren licencias (sesiones "invitado"). Estas peticiones son:
 
 - [`/rest/$catalog`]($catalog.md) requests (e.g. `/rest/$catalog/$all`) - access to available dataclasses
 - `/rest/$catalog/authentify` - la función del almacén de datos utilizada para iniciar sesión del usuario
