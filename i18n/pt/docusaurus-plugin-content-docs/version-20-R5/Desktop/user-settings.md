@@ -52,26 +52,26 @@ La siguiente tabla lista las páginas de parámetros que se encuentran en las ca
 
 | **Página de definições de estrutura**                                                    | **Página das definições do usuário**         | **Página de Propriedades usuário para ficheiro de dados** |
 | ---------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------- |
-| [General page](../settings/general.md)                                                   | N/a                                          | N/a                                                       |
-| [Interface page](../settings/interface.md)                                               | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
-| [Compiler page](../settings/compiler.md)                                                 | N/a                                          | N/a                                                       |
+| [Página general](../settings/general.md)                                                 | N/a                                          | N/a                                                       |
+| [Página Interface](../settings/interface.md)                                             | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
+| [Página Compilador](../settings/compiler.md)                                             | N/a                                          | N/a                                                       |
 | [Database/Data storage page](../settings/database.md#data-storage)                       | N/a                                          | N/a                                                       |
-| [Database/Memory page](../settings/database.md#memory)                                   | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
-| [Backup/Scheduler page](../settings/backup.md#scheduler)                                 | N/a                                          | Idêntico às propriedades padrão                           |
-| [Backup/Configuration page](../settings/backup.md#configuration)                         | N/a                                          | Idêntico às propriedades padrão                           |
+| [Página Banco de dados/Memória](../settings/database.md#memory)                          | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
+| [Página Backup/Agendador](../settings/backup.md#scheduler)                               | N/a                                          | Idêntico às propriedades padrão                           |
+| [Página Backup/Configuração](../settings/backup.md#configuration)                        | N/a                                          | Idêntico às propriedades padrão                           |
 | [Backup/Backup & Restore page](../settings/backup.md#backup-restore) | N/a                                          | Idêntico às propriedades padrão                           |
 | [Client-server/Network options page](../settings/client-server.md#network-options)       | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
-| [Client-server/IP configuration page](../settings/client-server.md#ip-configuration)     | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
-| [Web/Configuration page](../settings/web.md#configuration)                               | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
+| [Página Cliente-Servidor/Configuração IP](../settings/client-server.md#ip-configuration) | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
+| [Página Web/Configuração](../settings/web.md#configuration)                              | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
 | [Web/Options (I) page](../settings/web.md#options)                    | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
 | [Web/Options (II) page](../settings/web.md#options-ii)                | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
 | [Web/Log (type) page](../settings/web.md#log)                         | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
 | [Web/Log (backup) page](../settings/web.md#log)                       | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
-| [Web/Web Services page](../settings/web.md#web-services)                                 | Opção de prefixação do método não disponível | Opção de prefixação do método não disponível              |
+| Página [Serviços Web](../settings/web.md#web-services)                                   | Opção de prefixação do método não disponível | Opção de prefixação do método não disponível              |
 | [Página SQL](../settings/sql.md)                                                         | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
 | [Página PHP](../settings/php.md)                                                         | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
-| [Security page](../settings/security.md)                                                 | N/a                                          | N/a                                                       |
-| [Compatibility page](../settings/compatibility.md)                                       | N/a                                          | N/a                                                       |
+| [Página Segurança](../settings/security.md)                                              | N/a                                          | N/a                                                       |
+| [Página Compatibilidade](../settings/compatibility.md)                                   | N/a                                          | N/a                                                       |
 
 Al editar los parámetros en esta caja de diálogo, se almacenan automáticamente en el archivo _settings.4DSettings_ correspondiente (ver más abajo) o en el archivo _Backup.4DSettings_ (consulte la página [Parámetros de backup](../Backup/settings.md) para o
 
