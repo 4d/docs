@@ -100,10 +100,10 @@ Parâmetros são recebidos dentro do método, na ordem que são especificados na
 
 <details><summary>História</summary>
 
-| Release | Mudanças                                            |
-| ------- | --------------------------------------------------- |
-| 17 R6   | Renamed (New formula -> Formula) |
-| 17 R3   | Adicionado                                          |
+| Release | Mudanças                                              |
+| ------- | ----------------------------------------------------- |
+| 17 R6   | Renomeado (New formula -> Formula) |
+| 17 R3   | Adicionado                                            |
 
 </details>
 
