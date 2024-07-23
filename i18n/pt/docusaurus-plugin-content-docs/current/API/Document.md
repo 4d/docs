@@ -550,7 +550,7 @@ Se o arquivo não existir no disco, um ícone em branco padrão será retornado.
 
 **Valor retornado**
 
-File icon [picture](../Concepts/picture.html).
+[Imagen](../Concepts/picture.html) do ícone de arquivo.
 
 <!-- END REF -->
 

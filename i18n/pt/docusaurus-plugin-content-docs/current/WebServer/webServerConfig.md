@@ -173,11 +173,11 @@ Para más información sobre CORS, consulte la página [Cross-origin resource sh
 
 ## Ativar HTTP
 
-| Pode ser definido com              | Nome                                                             | Comentários |
-| ---------------------------------- | ---------------------------------------------------------------- | ----------- |
-| objeto webServer                   | [`HTTPEnabled`](API/WebServerClass.md#httpenabled)               | boolean     |
-| `WEB SET OPTION`                   | `Web HTTP enabled`                                               |             |
-| Caixa de diálogos de configurações | [Configuration page/Enable HTTP](../settings/web.md#enable-http) |             |
+| Pode ser definido com              | Nome                                                              | Comentários |
+| ---------------------------------- | ----------------------------------------------------------------- | ----------- |
+| objeto webServer                   | [`HTTPEnabled`](API/WebServerClass.md#httpenabled)                | boolean     |
+| `WEB SET OPTION`                   | `Web HTTP enabled`                                                |             |
+| Caixa de diálogos de configurações | [Página Configuração/Ativar HTTP](../settings/web.md#enable-http) |             |
 
 Indica se o servidor da Web aceitará ou não conexões não seguras.
 
@@ -244,11 +244,11 @@ Passa o tamanho expresso em bytes como valor. Por defeito, o limite de compress�
 
 ## Porta HTTP
 
-| Pode ser definido com              | Nome                                                         | Comentários |
-| ---------------------------------- | ------------------------------------------------------------ | ----------- |
-| objeto webServer                   | [`HTTPPort`](API/WebServerClass.md#httpport)                 | number      |
-| `WEB SET OPTION`                   | `Web port ID`                                                |             |
-| Caixa de diálogos de configurações | [Configuration page/HTTP Port](../settings/web.md#http-port) |             |
+| Pode ser definido com              | Nome                                                              | Comentários |
+| ---------------------------------- | ----------------------------------------------------------------- | ----------- |
+| objeto webServer                   | [`HTTPPort`](API/WebServerClass.md#httpport)                      | number      |
+| `WEB SET OPTION`                   | `Web port ID`                                                     |             |
+| Caixa de diálogos de configurações | [Página de Configuração/Porta HTTP](../settings/web.md#http-port) |             |
 
 Número da porta IP (TCP) de escuta para HTTP. Por padrão, 4D publica uma aplicação web na porta Web HTTP normal (porta TCP), que é a porta 80. Se essa porta já for usada por outro serviço da web, você precisa alterar a porta HTTP usada pelo 4D para esse banco de dados.
 

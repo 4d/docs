@@ -1415,7 +1415,7 @@ Neste exemplo, se quisermos encontrar o menor salário entre todos os funcionár
 
 | Release | Mudanças                         |
 | ------- | -------------------------------- |
-| 18 R6   | Support of *keepOrder* parameter |
+| 18 R6   | Suporte do parâmetro *keepOrder* |
 | 17      | Adicionado                       |
 
 </details>

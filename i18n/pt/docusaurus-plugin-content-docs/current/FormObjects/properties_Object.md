@@ -53,12 +53,12 @@ This feature is only supported for objects that contribute to the overall geomet
 
 Eis a lista de objetos cujo valor pode ser guardado:
 
-| Object                                     | Valor guardado                                                                                            |
-| ------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| [Check Box](checkbox_overview.md)          | Valor da variável associada (0, 1, 2)                                                  |
-| [Lista suspensa](dropdownList_Overview.md) | Número da linha seleccionada                                                                              |
-| [Radio Button](radio_overview.md)          | Valor da variável associada (1, 0, True ou False para os botões, consoante o seu tipo) |
-| [Tab control](tabControl.md)               | Número da aba selecionada                                                                                 |
+| Object                                                                                                                                                | Valor guardado                                                                                            |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| [Caixa de seleção] (checkbox_overview.md) | Valor da variável associada (0, 1, 2)                                                  |
+| [Lista suspensa](dropdownList_Overview.md)                                                                                                            | Número da linha seleccionada                                                                              |
+| [Radio Button](radio_overview.md)                                                                                                                     | Valor da variável associada (1, 0, True ou False para os botões, consoante o seu tipo) |
+| [Tab control](tabControl.md)                                                                                                                          | Número da aba selecionada                                                                                 |
 
 #### Gramática JSON
 

@@ -25,7 +25,7 @@ Una fecha null es especificada por *!00-00-00!*.
 
 **Notas:**
 
-- For compatibility reasons, 4D accepts date inputs using system format with two-digit years, such as !12/04/98!. Se asume que un año de dos dígitos se encuentra en el siglo XX o en el XXI según sea mayor o menor de 30, a menos que esta configuración por defecto se haya cambiado utilizando el comando `SET DEFAULT CENTURY`.
+- Por razones de compatibilidad, 4D acepta entradas de fecha utilizando el formato del sistema con años de dos dígitos, como !12/04/98!. Se asume que un año de dos dígitos se encuentra en el siglo XX o en el XXI según sea mayor o menor de 30, a menos que esta configuración por defecto se haya cambiado utilizando el comando `SET DEFAULT CENTURY`.
 - Si ha marcado la opción "Utilizar la configuración regional del sistema" ( ver Página Métodos), debe utilizar el formato de fecha definido en su sistema. Generalmente, en un entorno estadounidense, las fechas se introducen en la forma mes/día/año, con una barra "/" que separa los valores.
 
 ## Operadores de fechas

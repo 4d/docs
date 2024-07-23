@@ -23,7 +23,7 @@ En *rangeObj*, pasa un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP C
 
 El parámetro *numberValue* especifica un valor numérico que se asignará al *rangeObj*.
 
-The optional *formatPattern* defines a [pattern](../configuring.md#cell-format) for the *numberValue* parameter.
+El *formatPattern* opcional define un [patrón](../configuring.md#cell-format) para el parámetro *numberValue*.
 
 #### Ejemplo
 

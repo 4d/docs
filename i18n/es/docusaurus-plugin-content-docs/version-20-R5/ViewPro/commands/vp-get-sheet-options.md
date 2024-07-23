@@ -25,7 +25,7 @@ En el parámetro opcional _sheet_, puede designar una hoja específica (la numer
 
 #### Objeto devuelto
 
-El método devuelve un objeto que contiene los valores actuales de todas las opciones de hoja disponibles. An option value may have been modified by the user or by the [VP SET SHEET OPTIONS](vp-set-sheet-options.md) method.
+El método devuelve un objeto que contiene los valores actuales de todas las opciones de hoja disponibles. Un valor de opción puede haber sido modificado por el usuario o por el método [VP SET SHEET OPTIONS](vp-set-sheet-options.md).
 
 To view the full list of the options, see [Sheet Options](../configuring.md#sheet-options).
 

@@ -26,7 +26,7 @@ En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 El parámetro _styleName_ permite asignar un nombre a la hoja de estilo. Si el nombre ya se utiliza dentro del mismo alcance, la nueva hoja de estilo sustituye a la existente. Tenga en cuenta que puede utilizar el mismo nombre para diferentes alcances (ver más adelante).
 
-Dentro del _styleObj_, designe la configuración de la hoja de estilo (por ejemplo, fuente, decoración del texto, alineación, bordes, etc.). For the full list of style properties, see [Style object properties](../configuring.md#style-object-properties).
+Dentro del _styleObj_, designe la configuración de la hoja de estilo (por ejemplo, fuente, decoración del texto, alineación, bordes, etc.). Para ver la lista completa de propiedades de estilo, consulte [../Propiedades de los objetos de estilo](configuring.md#style-object-properties).
 
 Puede designar dónde definir la hoja de estilo en el parámetro opcional _sheet_ utilizando el índice de la hoja (la indexación comienza en 0) o con las siguientes constantes:
 

@@ -219,7 +219,7 @@ Cuando crea una versión en GitHub, especifica una **etiqueta** y una **versión
 }
 ```
 
-La versión se utiliza para definir qué versiones se pueden utilizar. Se utiliza una [versión semántica estándar](https://regex101.com/r/Ly7O1x/3/). A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. El `*` se puede utilizar como un marcador de posición para todas las versiones. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
+La versión se utiliza para definir qué versiones se pueden utilizar. Se utiliza una [versión semántica estándar](https://regex101.com/r/Ly7O1x/3/). A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. El `*` se puede utilizar como un marcador de posición para todas las versiones. Los prefijos ~ y ^ definen versiones a partir de un número, y hasta respectivamente la siguiente versión mayor y menor.
 
 Estos son algunos ejemplos:
 

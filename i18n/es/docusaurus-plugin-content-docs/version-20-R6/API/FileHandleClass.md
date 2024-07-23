@@ -98,7 +98,7 @@ The `.breakModeRead` property returns <!-- REF #FileHandleClass.breakModeRead.Su
 
 The `.breakModeRead` property can be defined at the handle creation with the [`file.open()`](FileClass.md#open) function (see [the `.open()` function](FileClass.md#open) for more information). Por defecto es "native".
 
-> The `.breakModeRead` property always contains a text value, even if the `.open()` option was set using a number (constant).
+> La propiedad `.breakModeRead` siempre contiene un valor de texto, incluso si la opción `.open()` fue definida utilizando un número (constante).
 
 Esta propiedad es de **solo lectura**.
 
@@ -321,7 +321,7 @@ $s:=$fh.readText()
 
 The `.readBlob()` function <!-- REF #FileHandleClass.readBlob().Summary -->returns a blob a *bytes* size from the file, starting from the current position <!-- END REF -->.
 
-When this function is executed, the current position ([.offset](#offset)) is updated after the last byte read.
+Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se actualiza después del último byte leído.
 
 #### Ver también
 
@@ -359,7 +359,7 @@ Cuando se ejecuta esta función, se actualiza la posición actual ([`.offset`](#
 
 :::caution Atención
 
-This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. Para más información, consulte la [descripción de.offset](#offset).
+Esta función asume que la propiedad [`.offset`](#offset) es un número de caracteres, no un número de bytes. Para más información, consulte la [descripción de.offset](#offset).
 
 :::
 
@@ -404,7 +404,7 @@ When this function is executed, the ([.offset](#offset)) is placed just after th
 
 :::caution Atención
 
-This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. Para más información, consulte la [descripción de.offset](#offset).
+Esta función asume que la propiedad [`.offset`](#offset) es un número de caracteres, no un número de bytes. Para más información, consulte la [descripción de.offset](#offset).
 
 :::
 

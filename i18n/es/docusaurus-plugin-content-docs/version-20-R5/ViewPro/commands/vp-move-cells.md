@@ -31,7 +31,7 @@ _originRange_ y _targetRange_ pueden referirse a diferentes áreas View Pro.
 
 En _originRange_, pase un objeto rango que contenga los valores, el estilo y las celdas de la fórmula a copiar o mover. Si _originRange_ es un rango combinado, sólo se utiliza el primero.
 
-In _targetRange_, pass the range of cells where the cell values, style, and formulas will be copied or moved.
+En _targetRange_, pase el rango de celdas donde se copiarán o moverán los valores de las celdas, el estilo y las fórmulas.
 
 El parámetro _options_ tiene varias propiedades:
 

@@ -153,7 +153,7 @@ No existe compatibilidad directa entre las aplicaciones implementadas con 4D y l
 Los siguientes comandos y clases están dedicados a la gestión del lado del servidor de los formularios Qodly:
 
 - [`Web Form`](../API/WebFormClass.md#web-form) command: returns the Qodly form as an object.
-- [`Web Event`](../API/WebFormClass.md#web-event) command: returns events triggered within Qodly form components.
+- Comando [`Web Event`](../API/WebFormClass.md#web-event): devuelve los eventos desencadenados dentro de los componentes de formulario Qodly.
 - Clase [`WebForm`](../API/WebFormClass.md): funciones y propiedades para gestionar el formulario Qodly renderizado.
 - [`WebFormItem`](../API/WebFormItemClass.md) class: functions and properties to manage Qodly form components.
 
@@ -212,7 +212,7 @@ Sus formularios Qodly están disponibles a través de la siguiente url:
 IP:port/$lib/renderer/?w=QodlyFormName
 ```
 
-...where _IP:port_ represents the address of the web server and _QodlyFormName_ is the name of the Qodly form.
+...donde _IP:port_ representa la dirección del servidor web y _QodlyFormName_ es el nombre del formulario Qodly.
 
 Por ejemplo:
 

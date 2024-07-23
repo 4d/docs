@@ -162,7 +162,7 @@ Se pueden generar hasta 5 métodos de compilación; un método de compilación s
 
 Puede renombrar cada uno de estos métodos en las áreas correspondientes, pero siempre irán precedidos de la etiqueta `Compilador_` (no modificable). El nombre de cada método (prefijo incluido) no debe tener más de 31 caracteres. También debe ser único y cumplir con [las reglas de 4D para nombrar métodos](Concepts/identifiers.md#project-methods).
 
-## Warnings
+## Advertencias
 
 Las advertencias son mensajes específicos generados por el compilador cuando verifica la sintaxis. Estos mensajes están destinados a llamar su atención sobre las declaraciones que podrían llevar a errores de ejecución. No impiden la compilación.
 
@@ -189,10 +189,10 @@ You can control warnings in specific parts of your code by using special comment
 To disable warnings, insert the following comments before and after the code section where you want to disable warnings:
 
 ```4d
-// Before the selected code part use
+// Antes de la parte de código seleccionada utilice
   //%W-<warning number>
 
-// After the selected code part use
+// Después de la parte de código seleccionada utilice
   //%W+<warning number>
 ```
 

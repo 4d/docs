@@ -137,7 +137,7 @@ This item is not displayed if the dependency is inactive because its files are n
 
 :::
 
-### Filtering Dependencies
+### Filtragem de dependências
 
 By default, all dependencies identified by the Dependency manager are listed, whatever their [status](#dependency-status). You can filter the displayed dependencies according to their status by selecting the appropriate tab at the top of the Dependencies panel:
 

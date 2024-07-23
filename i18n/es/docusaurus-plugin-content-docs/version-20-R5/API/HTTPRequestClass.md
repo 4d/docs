@@ -182,7 +182,7 @@ Un objeto `event` es devuelto cuando una [función de callback](#callback-functi
 
 #### authentication object
 
-An authentication object handles the `options.serverAuthentication` or `options.proxyAuthentication` property. Puede contener las siguientes propiedades:
+Un objeto de autenticación maneja la propiedad `options.serverAuthentication` o `options.proxyAuthentication`. Puede contener las siguientes propiedades:
 
 | Propiedad  | Tipo | Descripción                                                                       | Por defecto |
 | ---------- | ---- | --------------------------------------------------------------------------------- | ----------- |

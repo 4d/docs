@@ -121,7 +121,7 @@ Esta propiedad es de sólo lectura.
 
 The `.terminate()` function <!-- REF #WebSocketConnectionClass.terminate().Summary -->forces the connection to close<!-- END REF -->.
 
-A *code* and *message* can be sent to the client during the closure to indicate the reason of the termination.
+Un *code* y un *message* pueden ser enviados al cliente durante el cierre para indicar la razón de la terminación.
 
 <!-- END REF -->
 
