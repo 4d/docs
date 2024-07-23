@@ -24,7 +24,7 @@ Con Qodly Studio, descubrirá una interfaz de usuario web totalmente nueva, se f
 
 :::info
 
-The development with Qodly Studio for 4D requires at least a [4D Silver Partner license](https://us.4d.com/4d-partner-program). Las opciones y elementos de menú de Qodly Studio no aparecerán si la licencia no está activada.
+El desarrollo con Qodly Studio para 4D requiere al menos una [licencia 4D Silver Partner](https://us.4d.com/4d-partner-program). Las opciones y elementos de menú de Qodly Studio no aparecerán si la licencia no está activada.
 
 :::
 
@@ -333,7 +333,7 @@ Para más información sobre el atributo `SameSite`, consulte [esta entrada de b
 
 Para evitar utilizar más licencias de las necesarias, recomendamos hacer una de las siguientes cosas:
 
-- Run the renderer on another browser tab (by entering the rendered URL of your Web form: `IP:port/$lib/renderer/?w=QodlyFormName`).
+- Ejecutar el renderizador en otra pestaña del navegador (introduciendo la URL renderizada de su formulario Web: `IP:port/$lib/renderer/?w=QodlyFormName`).
 - Asegúrese de que Qodly Studio y su base de datos se alcanzan en el mismo esquema URL.
 - Utilice el valor `Lax` para la [cookie de sesión](webServerConfig.md#session-cookie-samesite) del servidor web de la base de datos de su proyecto.
 
