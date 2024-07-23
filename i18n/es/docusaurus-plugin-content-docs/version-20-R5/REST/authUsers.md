@@ -14,7 +14,7 @@ Cuando se abre una sesión de usuario web, puede manejarla a través del objeto 
 
 El modo de inicio de sesión del usuario le permite controlar cómo las peticiones REST adquieren licencias 4D Client. Puedes elegir entre dos modos de inicio de sesión de usuario: "predeterminado" o "inicio de sesión forzado".
 
-You set the user login mode through the `forceLogin` property in the [`roles.json` file](../ORDA/privileges.md#rolesjson-file):
+Definee el modo de inicio de sesión del usuario a través de la propiedad `forceLogin` en el archivo [`roles.json`](../ORDA/privileges.md#rolesjson-file):
 
 - el **modo predeterminado** se utiliza si la propiedad "forceLogin" no se encuentra o se define en "false",
 - el modo **force login** se utiliza si la propiedad "forceLogin" es "true".
