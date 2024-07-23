@@ -42,7 +42,7 @@ Cuando [se habilitan las sesiones](#enabling-sessions), se implementan mecanismo
 
 :::info
 
-The cookie name can be get using the [`.sessionCookieName`](API/WebServerClass.md#sessioncookiename) property.
+El nombre de la cookie se puede obtener utilizando la propiedad [`.sessionCookieName`](API/WebServerClass.md#sessioncookiename).
 
 :::
 
@@ -108,9 +108,9 @@ Ejemplo:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
-	//Access is granted, do nothing
+	//Acceso concedido, no hacer nada
 Else
-	//Display an authentication page
+	//Mostrar una página de autenticación
 End if
 ```
 
