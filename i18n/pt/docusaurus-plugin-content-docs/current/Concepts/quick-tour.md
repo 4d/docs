@@ -371,7 +371,7 @@ Inserte `//` al principio de una línea o después de una instrucción para aña
 
 #### Comentarios en línea o multilínea (`/*comment*/`)
 
-Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Tanto los bloques de comentarios en línea como los multilínea comienzan con `/*` y terminan con `*/`.
+Contorne o conteúdo com `/*` ... `*/` characters to create inline comments or multiline comment blocks. Tanto los bloques de comentarios en línea como los multilínea comienzan con `/*` y terminan con `*/`.
 
 - Las **líneas de comentarios en línea** se pueden insertar en cualquier parte del código. Exemplo:
 
