@@ -280,7 +280,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 - [IMAP Mail](../API/IMAPTransporterClass.md), [POP3 Mail](../API/POP3TransporterClass.md) and [SMTP Mail](../API/SMTPTransporterClass.md): `authenticationMode` property enables OAuth 2.0
 - [IMAP Mail](../API/IMAPTransporterClass.md): new `.expunge()` and `.append()` functions
 - New [WebAdmin](../Admin/webAdmin.md) web server component
-- New [DataExplorer](../Admin/dataExplorer.md) interface
+- Nova interface [DataExplorer](../Admin/dataExplorer.md)
 - New web [user sessions](../WebServer/sessions.md) and [their API](../API/SessionClass.md).
 
 
