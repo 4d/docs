@@ -326,7 +326,7 @@ Component icon and location logo provide additional information:
 
 ![dependency-origin](../assets/en/Project/dependency-github.png)
 
-### Filtering Dependencies
+### Filtragem de dependências
 
 By default, all dependencies identified by the Dependency manager are listed, whatever their [status](#dependency-status). You can filter the displayed dependencies according to their status by selecting the appropriate tab at the top of the Dependencies panel:
 
