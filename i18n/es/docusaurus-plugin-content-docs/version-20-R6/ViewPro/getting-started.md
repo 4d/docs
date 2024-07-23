@@ -41,7 +41,7 @@ Las hojas de cálculo se componen de líneas y columnas. A cada línea se le aso
 
 - Para seleccionar varias celdas continuas, arrastre el ratón de un extremo a otro de la selección. También puede hacer clic en los dos extremos de la selección mientras mantiene presionada la tecla Mayús.
 
-- To select all cells in the spreadsheet, click on the cell at the top left of the area:
+- Para seleccionar todas las celdas de la hoja de cálculo, haga clic en la celda situada en la parte superior izquierda del área:
   ![](../assets/en/ViewPro/vpSelectAll.PNG)
 
 - Para seleccionar una columna, haga clic en la letra (o conjunto de letras) correspondiente.
