@@ -712,7 +712,7 @@ La función `.equal()` <!-- REF #collection.equal().Summary -->compara collectio
 
 :::note Notas
 
-- The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. No verifica la igualdad para objetos nativos.
+- La función `.equal()` solo comprueba la igualdad para los elementos de tipo cadena, booleano, número y null en las colecciones. No verifica la igualdad para objetos nativos.
 - Elements with **null** values are not equal to Undefined elements.
 
 :::
