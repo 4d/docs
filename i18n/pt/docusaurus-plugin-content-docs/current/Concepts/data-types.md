@@ -27,9 +27,9 @@ Apesar de geralmente serem equivalentes, alguns tipos de dados disponíveis no n
 | [Coleção](Concepts/dt_collection.md)                    | *                                           | Sim                     | `Collection`                                                                                                                                   | `C_COLLECTION`                                                                                                                                                               |
 | [Variant](Concepts/dt_variant.md)(2) | -                                           | Sim                     | `Variant`                                                                                                                                      | `C_VARIANT`                                                                                                                                                                  |
 
-(1) Note que ORDA maneja campos de bancos de dados através de objetos (entidades) e assim, só é compatível com tipos de dados disponíveis a esses objetos. For more information, see the [Object](Concepts/dt_object.md) data type description.
+(1) Note que ORDA maneja campos de bancos de dados através de objetos (entidades) e assim, só é compatível com tipos de dados disponíveis a esses objetos. Para obter mais informações, consulte a descrição do tipo de dados [Object] (Concepts/dt_object.md).
 
-(2) Variant is actually not a _data_ type but a _variable_ type that can contain a value of any other data type.
+(2) Na verdade, a variante não é um tipo de _dado_, mas um tipo de _variável_ que pode conter um valor de qualquer outro tipo de dado.
 
 ## Valor padrão
 
