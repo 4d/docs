@@ -126,7 +126,7 @@ El color puede ser especificado por:
 - un valor HEX - como "# ff0000"
 - un valor RVB - como "rgb (255,0,0)"
 
-You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command.
+También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
 
 #### Gramática JSON
 
