@@ -39,7 +39,7 @@ In the user login phase, license usage is disconnected from web user sessions. A
 
 All other REST requests (handling data or executing a function) will only be processed if they are executed within a web session with appropriate privileges, otherwise they return an error. To assign privileges to a web session, you need to execute the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function for the session. Executing this function triggers the 4D license consumption.
 
-### Descriptive REST requests
+### Solicitações REST descritivas
 
 Descriptive REST requests can be processed in web user sessions that do not require licenses ("guest" sessions). Essas solicitações são:
 
