@@ -152,7 +152,7 @@ Regarding components stored on GitHub, both [**dependencies.json**](#dependencie
 
 #### Configuración del repositorio GitHub
 
-To be able to directly reference and use a 4D component stored on GitHub, you need to configure the GitHub component's repository:
+Para poder referenciar y utilizar directamente un componente 4D almacenado en GitHub, es necesario configurar el repositorio del componente GitHub:
 
 - Comprima los archivos componentes en formato ZIP.
 - Nombre este archivo con el mismo nombre que el repositorio GitHub.
@@ -206,7 +206,7 @@ Cuando crea una versión en GitHub, especifica una **etiqueta** y una **versión
 }
 ```
 
-- Una versión también se identifica por una **versión**. The versioning system used is based on the *Semantic Versioning* concept, which is the most commonly used. Cada número de versión se identifica de la siguiente manera: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
+- Una versión también se identifica por una **versión**. The versioning system used is based on the *Semantic Versioning* concept, which is the most commonly used. Cada número de versión se identifica de la siguiente manera: `majorNumber.minorNumber.pathNumber`. Del mismo modo que para las etiquetas, puede indicar la versión del componente que desea utilizar en su proyecto, como en este ejemplo:
 
 ```json
 {
@@ -280,7 +280,7 @@ This file logs information such as the state of dependencies, paths, urls, loadi
 
 ## Monitoreo de dependencias del proyecto
 
-In an opened project, you can get information about dependencies and their current loading status in the **Dependencies** panel.
+En un proyecto abierto, puede obtener información sobre las dependencias y su estado de carga actual en el panel **Dependencias**.
 
 Para mostrar el panel Dependencias:
 
