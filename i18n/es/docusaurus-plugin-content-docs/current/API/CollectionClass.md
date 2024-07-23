@@ -3000,7 +3000,7 @@ Este ejemplo permite reducir varios elementos de la colección a uno solo:
 Con el siguiente método ***Flatten***:
 
 ```4d
-	//Flatten project method
+	//Método proyecto Flatten
  If($1.accumulator=Null)
     $1.accumulator:=New collection
  End if
