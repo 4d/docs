@@ -499,7 +499,7 @@ Puede escribir en el método *UI_SetColor*:
 
 ```4d
  If(Is in set("$SampleSet"))
-    $color:=0x0080C080 // green background
+    $color:=0x0080C080 // fondo verde
  Else
     $color:=lk inherited
  End if
