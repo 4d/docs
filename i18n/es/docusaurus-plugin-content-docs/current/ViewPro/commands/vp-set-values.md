@@ -18,7 +18,7 @@ title: VP SET VALUES
 
 El comando `VP SET VALUES` <!-- REF #_method_.VP SET VALUES.Summary -->asigna una colección de valores comenzando en el rango de celdas especificado<!-- END REF -->.
 
-In *rangeObj*, pass a range for the cell (created with [`VP Cell`](vp-cell.md)) whose value you want to specify. La celda definida en *rangeObj* se utiliza para determinar el punto de partida.
+En *rangeObj*, pase un rango de celda (creada con [`VP Cell`](vp-cell.md)) cuyo valor desea especificar. La celda definida en *rangeObj* se utiliza para determinar el punto de partida.
 
 > - Si *rangeObj* no es un rango de celdas, sólo se utilizará la primera celda del rango.
 > - Si *rangeObj* incluye varios rangos, sólo se utilizará la primera celda del primer rango.
