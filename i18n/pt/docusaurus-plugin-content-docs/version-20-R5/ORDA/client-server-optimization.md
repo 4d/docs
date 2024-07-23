@@ -8,7 +8,7 @@ title: Otimização cliente/servidor
 - o **contexto de otimização**
 - o **Cache ORDA**
 
-## Supported architectures
+## Arquiteturas suportadas
 
 ORDA client/server architectures that support the optimization are:
 
