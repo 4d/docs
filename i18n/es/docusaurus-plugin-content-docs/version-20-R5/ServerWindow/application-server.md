@@ -37,7 +37,7 @@ Si presiona el botón **Rechazar nuevas conexiones**:
 
 - Si presiona el botón **Aceptar nuevas conexiones**, el servidor de aplicaciones vuelve a su estado por defecto.
 
-This feature permits, for example, an administrator to carry out various maintenance operations (verification, compacting, etc.) justo después de haber iniciado el servidor. Si el administrador utiliza una conexión remota, puede estar seguro de ser el único que modifica los datos. También es posible utilizar esta función para preparar una operación de mantenimiento que requiera que no haya ninguna máquina cliente conectada.
+Esta función permite, por ejemplo, que un administrador realice diversas operaciones de mantenimiento (verificación, compactación, etc.) justo después de haber iniciado el servidor. Si el administrador utiliza una conexión remota, puede estar seguro de ser el único que modifica los datos. También es posible utilizar esta función para preparar una operación de mantenimiento que requiera que no haya ninguna máquina cliente conectada.
 
 ## Información
 
