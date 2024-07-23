@@ -97,7 +97,7 @@ The `.highlightFirstColumn` property <!-- REF #TableOptions.highlightFirstColumn
 
 **.showFooter** : Boolean<!-- END REF -->
 
-The `.showFooter` property <!-- REF #TableOptions.showFooter.Summary -->indicates whether to display a footer<!-- END REF -->. Por defecto = False
+La propiedad `.showFooter` <!-- REF #TableOptions.showFooter.Summary -->indica si se debe mostrar un pie de página<!-- END REF -->. Por defecto = False
 
 ### .showHeader
 
@@ -105,7 +105,7 @@ The `.showFooter` property <!-- REF #TableOptions.showFooter.Summary -->indicate
 
 **.showHeader** : Boolean<!-- END REF -->
 
-The `.showHeader` property <!-- REF #TableOptions.showHeader.Summary -->indicates whether to display a header<!-- END REF -->. Por defecto = True
+La propiedad `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indica si se debe mostrar un encabezado<!-- END REF -->. Por defecto = True
 
 ### .showResizeHandle
 
@@ -189,7 +189,7 @@ The `.borderLeft` property is the <!-- REF #TableStyle.borderLeft.Summary -->lef
 
 **.borderRight** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderRight` property is the <!-- REF #TableStyle.borderRight.Summary -->right border line of the table <!-- END REF -->.
+La propiedad `.borderrightt` es la <!-- REF #TableStyle.borderrightt.Summary -->línea de borde derecho de la tabla <!-- END REF -->.
 
 ### .borderBottom
 
@@ -197,7 +197,7 @@ The `.borderRight` property is the <!-- REF #TableStyle.borderRight.Summary -->r
 
 **.borderBottom** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderBottom` property is the <!-- REF #TableStyle.borderBottom.Summary -->bottom border line of the table <!-- END REF -->.
+La propiedad `.borderBottom` es la <!-- REF #TableStyle.borderBottom.Summary -->línea del borde inferior de la tabla<!-- END REF -->.
 
 ### .borderHorizontal
 
