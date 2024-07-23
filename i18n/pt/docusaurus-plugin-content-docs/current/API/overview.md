@@ -7,7 +7,7 @@ As funções e propriedades da classe 4D estão disponíveis através de objecto
 
 - functions must be called on instances with the `()` operator. Por exemplo, `collection.sort()`.
 - properties are accessed without parentheses, for example `file.creationTime`. You can also use the \[] syntax, for example `file["creationTime"]`.
-- comandos podem ser chamados de forma independente, com ou sem parâmetros. For example `Folder(fk database folder)`.
+- comandos podem ser chamados de forma independente, com ou sem parâmetros. Por exemplo, `Folder(fk database folder)`.
 
 ## Convenções de escrita
 
