@@ -98,7 +98,7 @@ When a component cannot be loaded because of another instance of the same compon
 
 ## Monitoreo de dependencias del proyecto
 
-In an opened project, you can get information about dependencies and their current loading status in the **Dependencies** panel.
+En un proyecto abierto, puede obtener información sobre las dependencias y su estado de carga actual en el panel **Dependencias**.
 
 Para mostrar el panel Dependencias:
 
