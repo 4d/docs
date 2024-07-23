@@ -318,7 +318,7 @@ Para distribuir objetos utilizando a caixa de diálogo Alinhar e distribuir:
 
 1. Seleccione os objectos que pretende distribuir.
 
-2. Seleccione el comando **Alineación** del submenú **Alinear** del menú **Objeto** o del menú contextual del editor. The following dialog box appears:![](../assets/en/FormEditor/alignmentAssistant.png)
+2. Seleccione el comando **Alineación** del submenú **Alinear** del menú **Objeto** o del menú contextual del editor. A seguinte caixa de diálogo é exibida:![](../assets/en/FormEditor/alignmentAssistant.png)
 
 3. In the Left/Right Alignment and/or Top/Bottom Alignment areas, click the standard distribution icon: ![](../assets/en/FormEditor/horizontalDistribution.png) <p>(Standard horizontal distribution icon)</p>The example area displays the results of your selection.
 
