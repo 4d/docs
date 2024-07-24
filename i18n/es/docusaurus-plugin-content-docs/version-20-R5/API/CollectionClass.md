@@ -3033,7 +3033,7 @@ The `.remove()` function <!-- REF #collection.remove().Summary -->removes one or
 
 > Esta función modifica la colección original.
 
-In *index*, pass the position where you want the element to be removed from the collection.
+En *index*, pase la posición donde quiere eliminar el elemento de la colección.
 
 > **Atención**: recuerde que los elementos de la colección están numerados desde 0. If *index* is greater than the length of the collection, actual starting index will be set to the length of the collection.
 
@@ -3298,7 +3298,7 @@ In any case, at the point where `.some()` function encounters the first collecti
 
 Por defecto, `.some()` comprueba toda la colección. Opcionalmente, puede pasar el índice de un elemento desde el cual iniciar la prueba en *startFrom*.
 
-- If *startFrom* >= the collection's length, **False** is returned, which means the collection is not tested.
+- Si *startFrom* >= la longitud de la colección, se devuelve **False**, lo que significa que no se prueba la colección.
 
 - Si *startFrom* < 0, se considera como el desplazamiento desde el final de la colección.
 
