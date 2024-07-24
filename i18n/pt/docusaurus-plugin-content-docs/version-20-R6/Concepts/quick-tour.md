@@ -21,12 +21,12 @@ Ou poderia anexar esse código a um botão em um formulário e executar o formul
 Dados podem ser colocado ou copiados de ou em variáveis, campos, elementos arrays... Colocar dados em uma variável é chamado atribuiindo os dados a uma variável e é feito com o operador de atribuição (:=). O operador de atribuição também é usado para atribuir dados para elementos campos ou arrays.
 
 ```4d
-$MyNumber:=3 //assigns 3 to MyNumber variable  
-[Products]Size:=$MyNumber //assigns MyNumber variable to [Products]Size field
-arrDays{2}:="Tuesday" //assigns "Tuesday" string to the 2nd arrDays element
-MyVar:=Length("Acme") //assigns the result of the function (4) to MyVar
-$myDate:=!2018/01/21! //assigns a date literal
-$myHour:=?08:12:55? //assigns a time literal
+$MyNumber:=3 //atribui 3 à variável MyNumber  
+[Products]Size:=$MyNumber //atribui a variável MyNumber ao campo [Products]Size
+arrDays{2}:="Tuesday" //atribui a string "Tuesday" ao segundo elemento arrDays
+MyVar:=Length("Acme") //atribui o resultado da função (4) a MyVar
+$myDate:=!2018/01/21! //atribui um literal de data
+$myHour:=?08:12:55? //atribui um literal de hora
 ```
 
 Você DEVE diferenciar o operador atribuição := dos outros operadores. Ao invés de combinar expressões a uma nova, o operador de atribuição copia o valor da expressão para a direita do operador de atribuição para a variável ou campo para a esquerda do operador.
