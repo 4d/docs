@@ -7,7 +7,7 @@ Puede llamar a [funciones de clase de modelos de datos](ORDA/ordaClasses.md) def
 
 :::note
 
-You can also call singleton functions, see [this page]($singleton.md) for more information.
+También puede llamar a funciones singleton, consulte [esta página]($singleton.md) para obtener más información.
 
 :::
 
