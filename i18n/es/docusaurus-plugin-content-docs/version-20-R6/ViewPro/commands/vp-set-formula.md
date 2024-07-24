@@ -24,7 +24,7 @@ En *rangeObj*, pasa un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP C
 El parámetro *formula* indica un nombre de fórmula o de método 4D a asignar a *rangeObj*.
 
 > Si *formula* es una cadena, utilice el punto `.` como separador numérico y la coma `,` como separador de parámetros.
-> If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md) command.
+> Si se utiliza un método 4D, debe estar permitido con el comando [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md).
 
 El *formatPattern* opcional define un [pattern](../configuring.md#cell-format) para *formula*.
 
