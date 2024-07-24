@@ -16,7 +16,7 @@ Los componentes pueden ser interpretados o [compilados](../Desktop/building.md).
 - ya sea una carpeta Proyecto (componente interpretado)
 - o un archivo .4DZ (componente compilado)
 
-A 4D project running in interpreted mode can use either interpreted or compiled components. Un proyecto 4D que se ejecuta en modo compilado no puede utilizar componentes interpretados. En este caso, sólo se pueden utilizar componentes compilados.
+Un proyecto 4D que se ejecuta en modo interpretado puede utilizar componentes interpretados o compilados. Un proyecto 4D que se ejecuta en modo compilado no puede utilizar componentes interpretados. En este caso, sólo se pueden utilizar componentes compilados.
 
 ## Cargando componentes
 
@@ -228,12 +228,12 @@ Estos son algunos ejemplos:
 - "1.\*": todas las versiones de la versión principal 1.
 - "1.2.\*": todos los parches de la versión menor 1.2.
 - "^1.2.3" or ">=1.2.3": the latest version 1, starting with the 1.2.3 version.
-- "~1.2.3" or ">1.2.3": the latest major version 1, starting with the version just after the 1.2.3.
+- "~1.2.3" o ">1.2.3": la última versión mayor 1, empezando por la versión inmediatamente posterior a la 1.2.3.
 - "<=1.2.3": la última versión hasta la 1.2.3.
 - "1.0.0 – 1.2.3" o ">=1.0.0 <=1.2.3": versión entre 1.0.0 y 1.2.3.
 - "`<1.2.3 || >=2`": versión que no está entre 1.2.3 y 2.0.0.
 
-If you do not specify a tag or a version, 4D automatically retrieves the "latest" version.
+Si no especifica una etiqueta o una versión, 4D recupera automáticamente la "última" versión.
 
 #### Private repositories
 
@@ -296,7 +296,7 @@ A continuación se muestra el panel Dependencias. Las dependencias se ordenan po
 
 ### Origen de dependencia
 
-The Dependencies panel lists all project dependencies, whatever their origin, i.e. wherever they come from. El origen de la dependencia lo suministra la etiqueta bajo su nombre:
+El panel Dependencias enumera todas las dependencias del proyecto, sea cual sea su origen, es decir, de dónde procedan. El origen de la dependencia lo suministra la etiqueta bajo su nombre:
 
 ![dependency-origin](../assets/en/Project/dependency-origin.png)
 
@@ -315,7 +315,7 @@ Las siguientes opciones de origen son posibles:
 
 :::note
 
-This item is not displayed if the dependency is inactive because its files are not found.
+Este elemento no se muestra si la relación está inactiva porque no se encuentran sus archivos.
 
 :::
 
@@ -333,7 +333,7 @@ By default, all dependencies identified by the Dependency manager are listed, wh
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
 - **Activo**: dependencias que están cargadas y pueden ser utilizadas en el proyecto. Incluye dependencias _overloading_, las cuales son realmente cargadas. Las dependencias _Overloaded_ se enumeran en el panel **Conflicts** junto con todas las dependencias en conflicto.
-- **Inactivo**: dependencias que no están cargadas en el proyecto y no están disponibles. There are many possible reasons for this status: missing files, version incompatibility...
+- **Inactivo**: dependencias que no están cargadas en el proyecto y no están disponibles. Hay muchas razones posibles para este estado: archivos que faltan, incompatibilidad de versiones...
 - **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
 
 ### Estado de dependencia
