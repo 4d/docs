@@ -58,7 +58,7 @@ Puede asignar un [objeto](Concepts/dt_object.md) que encapsule una [colección](
 
 El código de inicialización debe ejecutarse antes de que el formulario se presente al usuario.
 
-En el siguiente ejemplo, `Form.tabControl` se ha definido como [expresión](properties_Object.md#variable-or-expression) del control de pestañas. You can associate the [`gotoPage` standard action](#goto-page-action) to the form object:
+En el siguiente ejemplo, `Form.tabControl` se ha definido como [expresión](properties_Object.md#variable-or-expression) del control de pestañas. Puede asociar la [acción estándar `gotoPage`](#goto-page-action) al objeto del formulario:
 
 ```4d
 Form.tabControl:=New object
