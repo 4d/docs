@@ -40,7 +40,7 @@ Si la extensión del documento no es una extensión reconocida, como `.4vp` o `.
 
 Se devuelve un error si el parámetro `filePath` no es válido, o si el archivo falta o está mal formado.
 
-The optional *paramObj* parameter allows you to define properties for the imported document:
+El parámetro opcional *paramObj* permite definir las propiedades del documento importado:
 
 | Parámetros |                     | Tipo                        | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ---------- | ------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
