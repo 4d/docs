@@ -3,7 +3,7 @@ id: clean
 title: $clean
 ---
 
-Creates a new entity set from an existing entity set but without its deleted entities, if any (*e.g.* `$clean=true`)
+Crea un nuevo conjunto de entidades a partir de un conjunto de entidades existente pero sin sus entidades eliminadas, si las hubiera (*por ejemplo* `$clean=true`)
 
 ## Descripción
 
