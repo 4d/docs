@@ -152,7 +152,7 @@ No existe compatibilidad directa entre las aplicaciones implementadas con 4D y l
 
 Los siguientes comandos y clases están dedicados a la gestión del lado del servidor de las páginas Qodly:
 
-- [`Web Form`](../API/WebFormClass.md#web-form) command: returns the Qodly page as an object.
+- Comando [`Web Form`](../API/WebFormClass.md#web-form): devuelve la página Qodly como un objeto.
 - Comando [`Web Event`](../API/WebFormClass.md#web-event): devuelve los eventos desencadenados dentro de los componentes de página ´gQodly.
 - [`WebForm`](../API/WebFormClass.md) class: functions and properties to manage the rendered Qodly page.
 - [`WebFormItem`](../API/WebFormItemClass.md) class: functions and properties to manage Qodly page components.
@@ -200,7 +200,7 @@ When rendering Qodly forms in the Qodly Studio, the renderer will connect to the
 
 Tenga en cuenta que Qodly Studio se ejecuta a través del servidor web 4D WebAdmin. When you use Qodly Studio as a developer, even when you preview a Qodly Page in the studio, you're using the 4D WebAdmin web server. Esto le permite ver, por ejemplo, clases de datos, funciones y atributos que no están expuestos como recursos REST (aparecen en gris).
 
-However, page rendering happens outside Qodly Studio, and is served by the standard 4D web server. En esta situación, su aplicación web no puede acceder a activos que no estén expuestos como recursos REST. Ver [Funciones expuestas vs no expuestas](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) y [Exponer tablas](../REST/configuration.md#exposing-tables) para más información sobre cómo exponer activos.
+Sin embargo, el renderizado de la página ocurre fuera de Qodly Studio, y es servido por el servidor web estándar de 4D. En esta situación, su aplicación web no puede acceder a activos que no estén expuestos como recursos REST. Ver [Funciones expuestas vs no expuestas](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) y [Exponer tablas](../REST/configuration.md#exposing-tables) para más información sobre cómo exponer activos.
 
 ### Acceder a páginas Qodly
 
