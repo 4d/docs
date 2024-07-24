@@ -214,7 +214,7 @@ Si desea visualizar un atributo de imagen en su totalidad, escriba lo siguiente:
 
 `GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
 
-For more information about the image formats, refer to [`$imageformat`]($imageformat.md). Para más información sobre el parámetro versión, consulte [`$version`]($version.md).
+Para más información sobre los formatos de imagen, consulte [`$imageformat`]($imageformat.md). Para más información sobre el parámetro version, consulte [`$version`]($version.md).
 
 ## Guardar un atributo BLOB en el disco
 
