@@ -3,7 +3,7 @@ id: authUsers
 title: Usuarios y sesiones
 ---
 
-## Sessions
+## Sesiones
 
 When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), REST requests can create and use [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between web client processes, and control of user privileges.
 
@@ -25,13 +25,13 @@ El modo de inicio de sesión heredado basado en el método base `On REST Authent
 La secuencia de inicio de sesión del usuario es la siguiente:
 
 1. En la primera llamada REST (para una llamada webform, por ejemplo), se crea una sesión de usuario web "invitado". It has no privileges, no rights to execute requests other than [descriptive REST requests](#descriptive-rest-requests), no license consumption.\
-   Descriptive REST requests are always processed by the server, even if no web user session using a license is opened. En este caso, son procesados a través de sesiones "invitado".
+   Las solicitudes REST descriptivas siempre son procesadas por el servidor, aunque no se abra ninguna sesión de usuario web que utilice una licencia. En este caso, son procesados a través de sesiones "invitado".
 
 2. You call your [`authentify()` function](#authentify) (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges. `authentify()` must be an exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class).
 
 3. La petición `/rest/$catalog/authentify` se envía al servidor junto con las credenciales del usuario. This step only requires a basic login form that do not access data; it can be a [Qodly form](../WebServer/qodly-studio.md) (called via the `/rest/$getWebForm` request).
 
-4. If the user is successfully authentified, a 4D license is consumed on the server and all REST requests are accepted.
+4. Si el usuario se autentica correctamente, se consume una licencia 4D en el servidor y se aceptan todas las peticiones REST.
 
 ![alt-text](../assets/en/REST/force-login-2.jpeg)
 
