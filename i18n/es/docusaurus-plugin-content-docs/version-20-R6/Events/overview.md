@@ -22,7 +22,7 @@ Cada evento es devuelto como un objeto por el comando `FORM Event`. Por defecto,
 
 | Propiedad   | Tipo         | Descripción                                                                                                |
 | ----------- | ------------ | ---------------------------------------------------------------------------------------------------------- |
-| objectName  | text         | Name of the object triggering the event - Not included if the event is triggered by the form               |
+| objectName  | text         | Nombre del objeto que desencadena el evento - No se incluye si el evento lo desencadena el formulario      |
 | code        | entero largo | Valor numérico del evento de formulario. También devuelto por el comando `Form event code` |
 | description | text         | Nombre del evento de formulario (por ejemplo, "On After Edit")                          |
 
