@@ -294,4 +294,4 @@ For every attribute used in your JSON file (header, data, carry-over, summary, a
 
 #### Ver también
 
-[4D Write Pro - Table Wizard (tutorial video)](https://www.youtube.com/watch?v=2ChlTju-mtM)
+[4D Write Pro - Asistente para tablas (vídeo tutorial)](https://www.youtube.com/watch?v=2ChlTju-mtM)
