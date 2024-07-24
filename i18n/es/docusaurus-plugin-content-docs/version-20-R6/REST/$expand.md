@@ -3,7 +3,9 @@ id: expand
 title: $expand
 ---
 
-Expands an image stored in an Image attribute (*e.g.*, `Employee(1)/photo?$imageformat=best&$expand=photo`)<br/> or<br/> Expands an BLOB attribute to save it.
+Expande una imagen almacenada en un atributo Image (*e.g.*, `Employee(1)/photo?$imageformat=best&$expand=photo`)<br/>
+o<br/>
+Expande un atributo BLOB para guardarlo.
 
 > **Compatibilidad**: por razones de compatibilidad, $expand puede utilizarse para expandir un atributo relacional (*por ejemplo*, `Company(1)?$expand=staff` o `Employee/?$filter="firstName BEGIN a"&$expand=employer`). No obstante, se recomienda utilizar [`$attributes`]($attributes.md) para esta función.
 
@@ -13,7 +15,7 @@ Si desea visualizar un atributo de imagen en su totalidad, escriba lo siguiente:
 
 `GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
 
-For more information about the image formats, refer to [`$imageformat`]($imageformat.md). Para más información sobre el parámetro versión, consulte [`$version`]($version.md).
+Para más información sobre los formatos de imagen, consulte [`$imageformat`]($imageformat.md). Para más información sobre el parámetro version, consulte [`$version`]($version.md).
 
 ## Guardar un atributo BLOB en el disco
 
