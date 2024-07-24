@@ -1164,7 +1164,7 @@ OB SET ARRAY($ob;"unitsList";$_units)
 
 #### alternateButton
 
-Si desea añadir un botón de elipsis [...] to a cell, you just need to pass the "alternateButton" with the True value in the object. El botón se mostrará en la celda automáticamente.
+Si desea añadir un botón de elipsis [...] a una celda, basta con pasar el "alternateButton" con el valor True en el objeto. El botón se mostrará en la celda automáticamente.
 
 Cuando este botón es presionado por un usuario, se generará un evento `On Alternate Click`, y usted podrá manejarlo como quiera (vea el párrafo "Manejo de eventos" para más información).
 
