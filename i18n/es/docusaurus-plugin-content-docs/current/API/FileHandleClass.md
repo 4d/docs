@@ -396,11 +396,11 @@ Esta función asume que la propiedad [`.offset`](#offset) es un número de carac
 
 #### Descripción
 
-The `.readText()` function <!-- REF #FileHandleClass.readText().Summary -->returns text from the file, starting from the current position until the first *stopChar* string is encountered (if passed) or the end of file is reached<!-- END REF -->.
+La función `.readText()` <!-- REF #FileHandleClass.readText().Summary -->devuelve el texto del archivo, comenzando desde la posición actual hasta que se encuentre la primera cadena *stopChar* (si se ha pasado) o se llegue al final del archivo<!-- END REF -->.
 
 La cadena de caracteres *stopChar* no se incluye en el texto devuelto. Si se omite el parámetro *stopChar*, se devuelve todo el texto del documento.
 
-When this function is executed, the ([.offset](#offset)) is placed just after the *stopChar* string.
+Cuando se ejecuta esta función, ([.offset](#offset)) se coloca justo después de la cadena *stopChar*.
 
 :::caution Atención
 
@@ -408,7 +408,7 @@ Esta función asume que la propiedad [`.offset`](#offset) es un número de carac
 
 :::
 
-If the *stopChar* parameter is passed and not found, `.readText()` returns an empty string and the [.offset](#offset) is left untouched.
+Si se pasa el parámetro *stopChar* y no se encuentra, `.readText()` devuelve una cadena vacía y el [.offset](#offset) se deja intacto.
 
 > Cuando esta función se ejecuta por primera vez en un manejador de archivo, todo el contenido del documento se carga en un buffer.
 
@@ -442,9 +442,9 @@ If the *stopChar* parameter is passed and not found, `.readText()` returns an em
 
 #### Descripción
 
-The `.setSize()` function <!-- REF #FileHandleClass.setSize().Summary -->sets a new *size* in bytes for the document<!-- END REF -->.
+La función `.setSize()` <!-- REF #FileHandleClass.setSize().Summary -->define un nuevo tamaño de *size* en bytes para el documento<!-- END REF -->.
 
-If the *size* value is less than the current document size, the document content is truncated from the beginning to get the new *size* .
+Si el valor de *size* es menor que el tamaño actual del documento, el contenido del documento se trunca desde el principio para obtener el nuevo *size*.
 
 #### Ver también
 
@@ -476,9 +476,9 @@ If the *size* value is less than the current document size, the document content
 
 #### Descripción
 
-The `.writeBlob()` function <!-- REF #FileHandleClass.writeBlob().Summary -->writes *blob* into the file, starting from the current position <!-- END REF -->.
+La función `.writeBlob()` <!-- REF #FileHandleClass.writeBlob().Summary -->escribe *blob* en el archivo, comenzando desde la posición actual <!-- END REF -->.
 
-When this function is executed, the current position ([.offset](#offset)) is updated after the last byte written.
+Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se actualiza después del último byte escrito.
 
 #### Ver también
 
@@ -510,9 +510,9 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 #### Descripción
 
-The `.writeLine()` function <!-- REF #FileHandleClass.writeLine().Summary -->writes *lineOfText* content at the current position and inserts an end-of-line delimiter<!-- END REF --> (unlike the [.writeText()](#writetext) function). By default, a native end-of-line delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeWrite`](#breakmodewrite) property.
+La función `.writeLine()` <!-- REF #FileHandleClass.writeLine().Summary -->escribe contenido *lineOfText* en la posición actual e inserta un delimitador de fin de línea<!-- END REF --> (a diferencia de la función [.writeText()](#writetext)). Por defecto, se utiliza un delimitador nativo de fin de línea, pero puede definir otro delimitador cuando [abra el manejador el file handle](FileClass.md#open) definiendo la propiedad [`.breakModeWrite`](#breakmodewrite).
 
-When this function is executed, the current position ([.offset](#offset)) is updated after the end-of-line delimiter.
+Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se actualiza después del delimitador de fin de línea.
 
 #### Ver también
 
@@ -544,9 +544,9 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 #### Descripción
 
-The `.writeText()` function <!-- REF #FileHandleClass.writeText().Summary -->writes *textToWrite* content at the current position and does not insert a final end-of-line delimiter<!-- END REF --> (unlike the [.writeLine()](#writeline) function). By default, the native delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeWrite`](#breakmodewrite) property.
+La función `.writeText()` <!-- REF #FileHandleClass.writeText().Summary -->escribe el contenido de *textToWrite* en la posición actual y no inserta un delimitador de fin de línea<!-- END REF --> (a diferencia de la función [.writeLine()](#writeline)). Por defecto, se utiliza el delimitador nativo, pero puede definir otro delimitador cuando [abra el file handle](FileClass.md#open) definiendo la propiedad [`.breakModeWrite`](#breakmodewrite).
 
-When this function is executed, the current position ([.offset](#offset)) is updated after the next end-of-line delimiter.
+Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se actualiza después del siguiente delimitador de fin de línea.
 
 #### Ver también
 
