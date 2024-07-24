@@ -21,7 +21,7 @@ Definee el modo de inicio de sesión del usuario a través de la propiedad `forc
 
 :::caution
 
-If you modify this property, the server must be restarted to take the change into account.
+Si modifica esta propiedad, el servidor debe reiniciarse para tener en cuenta el cambio.
 
 :::
 
@@ -46,7 +46,7 @@ All other REST requests (handling data or executing a function) will only be pro
 
 Este modo le permite implementar la siguiente secuencia de acceso:
 
-1. En la primera llamada REST (para una llamada webform, por ejemplo), se crea una sesión de usuario web "invitado". It has no privileges, no rights to execute requests other than descriptive requests, no license consumption.
+1. En la primera llamada REST (para una llamada webform, por ejemplo), se crea una sesión de usuario web "invitado". No tiene privilegios, ni derechos para ejecutar peticiones que no sean descriptivas, ni consumo de licencias.
 2. You call your exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class) named [`authentify()`](#function-authentify) (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges.
 3. La petición `/rest/$catalog/authentify` se envía al servidor junto con las credenciales del usuario. Este paso sólo requiere un formulario de acceso básico que no acceda a datos; puede ser un formulario Qodly (llamado a través de la petición `/rest/$getWebForm`).
 4. If the user is successfully authentified, a 4D license is consumed on the server and all REST requests are accepted.
