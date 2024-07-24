@@ -78,7 +78,7 @@ The `Session` object of web sessions is available from any web process:
 - código processado a través das etiquetas 4D nas páginas semidinâmicas (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
 - os métodos projeto com o atributo "Available through 4D tags and URLs (4DACTION...)" e chamados através de 4DACTION/ urls,
 - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) database methods for mobile requests,
-- ORDA functions [called with REST requests](../REST/ClassFunctions.md).
+- Funções ORDA [chamadas com solicitações REST](../REST/ClassFunctions.md).
 
 For more information on web user sessions, please refer to the [Web Server Sessions](WebServer/sessions.md) section.
 
