@@ -86,7 +86,7 @@ La vida útil de una cookie inactiva es de 60 minutos por defecto, lo que signif
 
 This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the _connectionInfo_ parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command.
 
-When a web session is closed, if the [`Session`](API/SessionClass.md#session) command is called afterwards:
+Cuando se cierra una sesión web, si después se llama al comando [`Session`](API/SessionClass.md#session):
 
 - el objeto `Session` no contiene privilegios (es una sesión de invitado)
 - la propiedad [`.storage`](API/SessionClass.md#storage) está vacía
@@ -94,7 +94,7 @@ When a web session is closed, if the [`Session`](API/SessionClass.md#session) co
 
 :::info
 
-You can close a session from a Qodly form using the [**logout**](qodly-studio.md#logout) feature.
+Puede cerrar una sesión desde un formulario Qodly utilizando la función [**logout**](qodly-studio.md#logout).
 
 :::
 
@@ -116,7 +116,7 @@ End if
 
 :::info
 
-Privileges are implemented at the heart of the ORDA architecture to provide developers with a powerful technology for controlling access to the datastore and dataclas functions. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) page of the ORDA chapter.
+Privileges are implemented at the heart of the ORDA architecture to provide developers with a powerful technology for controlling access to the datastore and dataclas functions. Para más información, consulte la página [**Privilegios**](../ORDA/privileges.md) del capítulo ORDA.
 
 :::
 
