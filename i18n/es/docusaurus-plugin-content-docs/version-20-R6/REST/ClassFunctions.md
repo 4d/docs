@@ -190,7 +190,7 @@ El resultado es una entidad:
 La clase de entidad `CityEntity` ofrece una API:
 
 ```
-// CityEntity class
+// Clase CityEntity 
 
 Class extends Entity
 
