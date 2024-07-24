@@ -75,7 +75,7 @@ El botón **Borrar el código compilado** borra el código compilado del proyect
 
 ### Mostrar/Ocultar advertencias
 
-You can toggle the [warnings](#warnings) display in the Compiler window by clicking the **Show/Hide Warnings** button:
+Puede alternar la visualización de [advertencias](#advertencias) en la ventana del compilador haciendo clic en el botón **Mostrar/Ocultar advertencias**:
 
 ![](../assets/en/Project/compilerWin4.png)
 
@@ -184,7 +184,7 @@ The **Reset to factory settings** button sets all the warning display status che
 
 ### Disabling and enabling warnings locally
 
-You can control warnings in specific parts of your code by using special comments to disable or enable them.
+Puede controlar las advertencias en partes específicas de su código utilizando comentarios especiales para desactivarlas o activarlas.
 
 To disable warnings, insert the following comments before and after the code section where you want to disable warnings:
 
