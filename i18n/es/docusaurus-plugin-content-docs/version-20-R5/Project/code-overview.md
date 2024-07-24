@@ -153,7 +153,7 @@ _Esta opción está obsoleta. Calling code through REST calls is only supported 
 
 #### Modificar de atributos globalmente
 
-Using the "Attributes for methods" dialog box, you can modify an attribute (Invisible, Offered as a Web Service, etc.) para todos o parte de los métodos proyecto base en una sola operación. Esta funcionalidad es especialmente útil para modificar los atributos de un gran número de métodos proyecto. También puede utilizarse durante el desarrollo para aplicar rápidamente los atributos comunes a grupos de métodos similares.
+Mediante el cuadro de diálogo "Atributos de los métodos", puede modificar un atributo (Invisible, Ofrecido como servicio web, etc.) para todos o parte de los métodos proyecto base en una sola operación. Esta funcionalidad es especialmente útil para modificar los atributos de un gran número de métodos proyecto. También puede utilizarse durante el desarrollo para aplicar rápidamente los atributos comunes a grupos de métodos similares.
 
 Para la configuración global de los atributos del método:
 
