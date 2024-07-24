@@ -97,7 +97,7 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //a volume deve ser cham
 
 ```4d
 	//ERROR
-$ko:=Folder("myFolder").create() //relative pathname with constructor
+$ko:=Folder("myFolder").create() //nome do caminho relativo com construtor
 ```
 
 Si quiere manejar los archivos o las carpetas en varias ubicaciones (carpeta de proyecto, carpetas sistema, etc.), puede utilizar `filesystems` (ver arriba). Por exemplo, pode escrever:
@@ -114,9 +114,9 @@ Functions of folder objects such as [`folder.file()`](../API/FolderClass.md#file
 ```4d
 var $userImages : 4D.Folder
 var $ok : Boolean
-  //to reference a "Picture" folder within the user documents folder
+//para referenciar uma pasta "Picture" dentro da pasta de documentos do utilizador
 $userImages:=Folder(fk documents folder).folder("Pictures")
-  //to create a folder on the desktop
+  //para criar uma pasta no ambiente de trabalho
 $ok:=Folder(fk desktop folder).folder("myFolder").create()
 ```
 
