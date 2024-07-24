@@ -54,8 +54,8 @@ Si necesita ejecutar varias modificaciones en la misma colección, puede protege
 ```4d
 $col:=Storage.mySharedCollection
 Use($col)
-	$col[0]:="omega" //modifying an element requires to be performed inside Use/End use
-	$col.push("alpha") //.push() internally triggers Use/End use, but we want to do both modifications atomically
+	$col[0]:="omega" //modificar um elemento tem de ser efetuado dentro de Use/End use
+	$col.push("alpha") //.push() desencadeia internamente Use/End use, mas queremos fazer ambas as modificações atomicamente
 End Use
 ```
 
@@ -146,9 +146,9 @@ No método "HowMany", o inventário é efetuado e o objeto partilhado $inventory
 	//HowMany
  #DECLARE ($what : Text ; $inventory : Object)
 
- $count:=CountMethod($what) //method to count products
- Use($inventory) //use shared object
-    $inventory[$what]:=$count  //save the results for this item
+ $count:=CountMethod($what) //método para contar produtos
+ Use($inventory) //utilizar objeto partilhado
+    $inventory[$what]:=$count  //guardar os resultados para este item
  End use
 ```
 
@@ -160,28 +160,28 @@ Os exemplos seguintes destacam regras específicas para o tratamento de grupos p
  $ob1:=New shared object
  $ob2:=New shared object
  Use($ob1)
-    $ob1.a:=$ob2  //group 1 is created
+    $ob1.a:=$ob2  //grupo 1 é criado
  End use
 
  $ob3:=New shared object
  $ob4:=New shared object
  Use($ob3)
-    $ob3.a:=$ob4  //group 2 is created
+    $ob3.a:=$ob4  //grupo 2 é criado
  End use
 
- Use($ob1) //use an object from group 1
+ Use($ob1) //utilize um objeto do grupo 1
     $ob1.b:=$ob4  //ERROR
-  //$ob4 already belongs to another group
-  //assignment is not allowed
+  //$ob4 já pertence a outro grupo
+  //atribuição não é permitida
  End use
 
  Use($ob3)
-    $ob3.a:=Null //remove any reference to $ob4 from group 2
+    $ob3.a:=Null //remover qualquer referência a $ob4 do grupo 2
  End use
 
- Use($ob1) //use an object from group 1
+ Use($ob1) //utilizar um objeto do grupo 1
     $ob1.b:=$ob4  //ERROR
-  //$ob4 still belongs to group 2
-  //assignment is not allowed
+  //$ob4 ainda pertence ao grupo 2
+  //atribuição não é permitida
  End use
 ```
