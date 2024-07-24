@@ -24,7 +24,7 @@ En _rangeObj_, pasa un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP C
 El parámetro _formula_ indica un nombre de fórmula o de método 4D a asignar a _rangeObj_.
 
 > Si _formula_ es una cadena, utilice el punto `.` como separador numérico y la coma `,` como separador de parámetros.
-> If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md) command.
+> Si se utiliza un método 4D, debe estar permitido con el comando [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md).
 
 El _formatPattern_ opcional define un [pattern](../configuring.md#cell-format) para _formula_.
 
