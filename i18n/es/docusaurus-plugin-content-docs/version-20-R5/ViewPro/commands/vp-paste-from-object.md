@@ -27,7 +27,7 @@ title: VP PASTE FROM OBJECT
 
 The `VP PASTE FROM OBJECT` command <!-- REF #_method_.PASTE FROM OBJECT.Summary -->pastes the contents, style and formulas stored in _dataObject_ to the _rangeObj_ object<!-- END REF -->.
 
-In _rangeObj_, pass the cell range object where the values, formatting, and/or formula cells will be pasted. Si _rangeObj_ se refiere a más de una celda, sólo se utiliza la primera.
+En _rangeObj_ pase el objeto rango de celdas donde se pegarán los valores, el formato y/o las celdas de la fórmula. Si _rangeObj_ se refiere a más de una celda, sólo se utiliza la primera.
 
 En _dataObject_, pase el objeto que contiene los datos de la celda, el formato y las fórmulas a pegar.
 
