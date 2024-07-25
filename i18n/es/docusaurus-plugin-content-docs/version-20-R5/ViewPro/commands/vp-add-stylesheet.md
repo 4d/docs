@@ -35,7 +35,7 @@ Puede designar dónde definir la hoja de estilo en el parámetro opcional _sheet
 
 Si una hoja de estilo _styleName_ está definida al nivel del libro de trabajo y de la hoja, el nivel de hoja tiene prioridad sobre el nivel del libro de trabajo cuando se define la hoja de estilo.
 
-To apply the style sheet, use the [VP SET DEFAULT STYLE](vp-set-default-style.md) or [VP SET CELL STYLE](vp-set-cell-style.md) commands.
+Para aplicar la hoja de estilo, utilice los comandos [VP SET DEFAULT STYLE](vp-set-default-style.md) o [VP SET CELL STYLE](vp-set-cell-style.md).
 
 #### Ejemplo
 
