@@ -172,7 +172,7 @@ Dependiendo de las circunstancias y del estilo de programación utilizado, las a
 
 ![](../assets/en/Project/warnings-tab.png)
 
-Esta pestaña le permite definir qué advertencias deben mostrarse globalmente. From the list of all possible warnings with their types, their code and their localized label, ordered by warning code.
+Esta pestaña le permite definir qué advertencias deben mostrarse globalmente. De la lista de todas las advertencias posibles con sus tipos, su código y su etiqueta localizada, ordenadas por código de advertencia.
 
 To reduce the list, you can search words by warning labels and codes using the **Search in codes and labels** textbox or the magnifying glass icon on the left.
 
@@ -186,7 +186,7 @@ The **Reset to factory settings** button sets all the warning display status che
 
 Puede controlar las advertencias en partes específicas de su código utilizando comentarios especiales para desactivarlas o activarlas.
 
-To disable warnings, insert the following comments before and after the code section where you want to disable warnings:
+Para desactivar las advertencias, inserte los siguientes comentarios antes y después de la sección de código en la que desea desactivar las advertencias:
 
 ```4d
 // Antes de la parte de código seleccionada utilice
@@ -199,14 +199,14 @@ To disable warnings, insert the following comments before and after the code sec
 Para volver a habilitar las advertencias en una sección de código, utilice los siguientes comentarios:
 
 ```4d
-// Before the selected code part use
+// Antes de la parte de código seleccionada utilice
   //%W+<warning number>
 
-// After the selected code part use
+// Después de la parte de código seleccionada utilice
   //%W-<warning number>
 ```
 
-Sólo las advertencias con números pueden ser desactivadas o activadas. Warning numbers are specified at the end of each message in the list of compilation errors or in the list found in the warning tab.
+Sólo las advertencias con números pueden ser desactivadas o activadas. Los números de advertencia se indican al final de cada mensaje en la lista de errores de compilación o en la lista que se encuentra en la pestaña de advertencias.
 Por ejemplo, para desactivar la siguiente advertencia:
 
 _1: Redefinición de la variable $a (550.10)_
