@@ -332,16 +332,16 @@ Los atributos de orientación se utilizan para especificar la dirección del dis
 
 Los atributos página se utilizan para especificar la configuración general de impresión del documento.
 
-| Propiedad       | Tipo         | Descripción                                                                                                                                                                                                                                                     |
-| --------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| blackAndWhite   | boolean      | Impresión sólo en blanco y negro. <p>Valor por defecto = false</p><p>**Nota**: este atributo no afecta a los archivos PDF. Se mantienen los colores en los PDF.</p>                             |
-| centering       | entero largo | Como se centran los contenidos en la página impresa. Valores disponibles: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (por defecto), `vk print centering vertical` |
-| firstPageNumber | entero largo | El número de página a imprimir en la primera página. Valor por defecto = 1                                                                                                                                                                      |
-| pageOrder       | entero largo | Las páginas del pedido se imprimen. Valores disponibles: `vk print page order auto` (por defecto), `vk print page order down then over`, `vk print page order over then down`.               |
-| pageRange       | text         | El rango de páginas a imprimir                                                                                                                                                                                                                                  |
-| qualityFactor   | entero largo | El factor de calidad para la impresión (1 - 8).  The higher the quality factor, the better the printing quality, however printing performance may be affected.<p>Default value = 2</p>                       |
-| useMax          | boolean      | Sólo se imprimen columnas y líneas con datos.<p>Valor predeterminado = true</p>                                                                                                                                                                 |
-| zoomFactor      | real         | La cantidad para ampliar o reducir la página impresa.<p>Valor predeterminado = 1</p>                                                                                                                                                            |
+| Propiedad       | Tipo         | Descripción                                                                                                                                                                                                                                                                |
+| --------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| blackAndWhite   | boolean      | Impresión sólo en blanco y negro. <p>Valor por defecto = false</p><p>**Nota**: este atributo no afecta a los archivos PDF. Se mantienen los colores en los PDF.</p>                                        |
+| centering       | entero largo | Como se centran los contenidos en la página impresa. Valores disponibles: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (por defecto), `vk print centering vertical`            |
+| firstPageNumber | entero largo | El número de página a imprimir en la primera página. Valor por defecto = 1                                                                                                                                                                                 |
+| pageOrder       | entero largo | Las páginas del pedido se imprimen. Valores disponibles: `vk print page order auto` (por defecto), `vk print page order down then over`, `vk print page order over then down`.                          |
+| pageRange       | text         | El rango de páginas a imprimir                                                                                                                                                                                                                                             |
+| qualityFactor   | entero largo | El factor de calidad para la impresión (1 - 8).  Cuanto mayor sea el factor de calidad, mejor será la calidad de impresión, sin embargo, el rendimiento de impresión puede verse afectado. <p>Valor por defecto = 2</p> |
+| useMax          | boolean      | Sólo se imprimen columnas y líneas con datos.<p>Valor predeterminado = true</p>                                                                                                                                                                            |
+| zoomFactor      | real         | La cantidad para ampliar o reducir la página impresa.<p>Valor predeterminado = 1</p>                                                                                                                                                                       |
 
 ### Tamaño del papel
 
@@ -361,7 +361,7 @@ Los atributos de tamaño de papel se utilizan para especificar las dimensiones o
 
 - Si establece el tamaño del papel mediante la propiedad `kind`, puede utilizar cualquiera de los dos:
   - uno de los formatos de la [lista de formatos SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
-  - one of the formats returned by the [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html) command.
+  - uno de los formatos devueltos por el comando [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html).
     En ese caso, [`VP Get print info`](./commands/vp-get-print-info.md) devuelve el formato correspondiente con la altura y el ancho.
 
 ### Escala
