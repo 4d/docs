@@ -178,9 +178,9 @@ To reduce the list, you can search words by warning labels and codes using the *
 
 Por defecto, todos los tipos de advertencia están marcados y activados.
 
-When you modify a warning display status, the information is stored in the "warnings.json" file, placed in the project Settings folder.
+Cuando se modifica el estado de visualización de una advertencia, la información se almacena en el archivo "warnings.json", situado en la carpeta Configuración del proyecto.
 
-The **Reset to factory settings** button sets all the warning display status checkboxes to default values and deletes the "warnings.json" file.
+El botón **Restablecer parámetros de fábrica** define todas las casillas de verificación de estado de visualización de advertencias en los valores predeterminados y borra el archivo "warnings.json".
 
 ### Disabling and enabling warnings locally
 
