@@ -160,7 +160,7 @@ La carpeta Data contiene el archivo de datos y todos los archivos y carpetas rel
 
 ### `Settings` (datos del usuario)
 
-This folder contains [**user settings for data**](../Desktop/user-settings.md#user-settings-for-data-file) used for application administration.
+Esta carpeta contiene [**parámetros usuario para datos**](../Desktop/user-settings.md#user-settings-for-data-file) utilizada para la administración de aplicaciones.
 
 > Estos parámetros tienen prioridad sobre los [parámetros de usuario](#settings-user) y los [parámetros de estructura](#sources). Ver también [Prioridad de los parámetros](../Desktop/user-settings.md#priority-of-settings).
 
