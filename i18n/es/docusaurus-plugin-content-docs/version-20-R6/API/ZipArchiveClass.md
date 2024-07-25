@@ -81,7 +81,7 @@ Puede pasar un objeto 4D.File, 4D.Folder, o una estructura zip como primer pará
 | Histórico    | Collection                  | <li>una colección de objetos `4D.File` o `4D.Folder` o</li><li>una colección de objetos con las siguientes propiedades:</li><table><tr><td>Propiedad</td><td>Tipo</td><td>Descripción</td></tr><tr><td>source</td><td>4D.Archivo o 4D.Carpeta</td><td>Archivo o Carpeta</td></tr><tr><td>destino</td><td>Texto</td><td>(opcional) - Especifique una ruta de archivo relativa para cambiar la organización del contenido del archivo</td></tr><tr><td>option</td><td>number</td><td>(opcional) - `ZIP Ignore invisible files` o 0 para comprimir todo el archivo</td></tr></table>                                     |
 | retrollamada | 4D.Function | Una fórmula de retrollamada que recibirá la progresión de la compresión (0 - 100) en $1.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
-In the *destinationFile* parameter, pass a `4D.File` object describing the ZIP archive to create (name, location, etc.). Se aconseja utilizar la extensión ".zip" si quiere que el archivo ZIP sea procesado automáticamente por cualquier software.
+En el parámetro *destinationFile*, pase un objeto `4D.File` que describa el archivo ZIP a crear (nombre, ubicación, etc.). Se aconseja utilizar la extensión ".zip" si quiere que el archivo ZIP sea procesado automáticamente por cualquier software.
 
 Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive) command to access it.
 
@@ -89,11 +89,11 @@ Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive
 
 El objeto status devuelto contiene las siguientes propiedades:
 
-| Propiedad  | Tipo    | Descripción                                                                                                                                                              |
-| ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| statusText | Text    | Error message (if any):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption</li> |
-| status     | Integer | Código de estado                                                                                                                                                         |
-| success    | Boolean | True si el archivo se ha creado con éxito, si no, false                                                                                                                  |
+| Propiedad  | Tipo    | Descripción                                                                                                                                                                    |
+| ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| statusText | Text    | Mensaje de error (si lo hay):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption</li> |
+| status     | Integer | Código de estado                                                                                                                                                               |
+| success    | Boolean | True si el archivo se ha creado con éxito, si no, false                                                                                                                        |
 
 #### Ejemplo 1
 
