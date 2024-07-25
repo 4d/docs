@@ -39,7 +39,7 @@ The `.dataField` property <!-- REF #TableColumn.dataField.Summary -->contains th
 
 **.formatter** : Text<!-- END REF -->
 
-The `.formatter` property <!-- REF #TableColumn.formatter.Summary -->contains the table column's formatter<!-- END REF -->.
+La propiedad `.formatter` <!-- REF #TableColumn.formatter.Summary -->contiene el formateador de la columna de la tabla<!-- END REF -->.
 
 ### .name
 
@@ -47,7 +47,7 @@ The `.formatter` property <!-- REF #TableColumn.formatter.Summary -->contains th
 
 **.name** : Text<!-- END REF -->
 
-The `.name` property <!-- REF #TableColumn.name.Summary -->contains the table column's name<!-- END REF --> (mandatory).
+La propiedad `.name` <!-- REF #TableColumn.name.Summary -->contiene el nombre de la columna de la tabla<!-- END REF --> (obligatorio).
 
 ## TableOptions
 
@@ -181,7 +181,7 @@ The `.textDecoration` property is the <!-- REF #TableStyle.textDecoration.Summar
 
 **.borderLeft** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderLeft` property is the <!-- REF #TableStyle.borderLeft.Summary -->left border line of the table <!-- END REF -->.
+La propiedad `.borderLeft` es la línea del borde izquierdo de la tabla <!-- REF #TableStyle.borderLeft.Summary --> <!-- END REF -->.
 
 ### .borderRight
 
