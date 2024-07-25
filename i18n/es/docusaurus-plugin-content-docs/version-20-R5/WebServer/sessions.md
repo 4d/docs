@@ -9,7 +9,7 @@ Las sesiones web permiten:
 
 - handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web sessions are **scalable**),
 - gestionar la sesión a través de un objeto `Session` y la [Session API](API/SessionClass.md),
-- store and share data between processes of a web client using the [.storage](../API/SessionClass.md#storage) of the session,
+- almacenar y compartir datos entre procesos de un cliente web utilizando el [.storage](../API/SessionClass.md#storage) de la sesión,
 - asociar privilegios al usuario que ejecuta la sesión.
 
 ## Usos
@@ -73,7 +73,7 @@ Los procesos web no suelen terminar, sino que se reciclan en un fondo común par
 
 ## Almacenar y compartir información de sesión
 
-Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) property which is a [shared object](Concepts/shared.md). Esta propiedad permite compartir información entre todos los procesos manejados por la sesión.
+Cada objeto `Session` proporciona una propiedad [`.storage`](API/SessionClass.md#storage) que es un [objeto compartido](Concepts/shared.md). Esta propiedad permite compartir información entre todos los procesos manejados por la sesión.
 
 ## Fecha de caducidad de la sesión
 
