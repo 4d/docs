@@ -24,7 +24,7 @@ El modo de inicio de sesión heredado basado en el método base `On REST Authent
 
 La secuencia de inicio de sesión del usuario es la siguiente:
 
-1. En la primera llamada REST (para una llamada webform, por ejemplo), se crea una sesión de usuario web "invitado". It has no privileges, no rights to execute requests other than [descriptive REST requests](#descriptive-rest-requests), no license consumption.\
+1. En la primera llamada REST (para una llamada webform, por ejemplo), se crea una sesión de usuario web "invitado". No tiene privilegios, no tiene derechos para ejecutar solicitudes que no sean [peticiones REST descriptivas](#descriptive-rest-requests), no tiene consumo de licencia.\
    Las solicitudes REST descriptivas siempre son procesadas por el servidor, aunque no se abra ninguna sesión de usuario web que utilice una licencia. En este caso, son procesados a través de sesiones "invitado".
 
 2. You call your [`authentify()` function](#authentify) (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges. `authentify()` must be an exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class).
@@ -68,7 +68,7 @@ The `authentify()` function can always be executed by a REST guest session, what
 
 :::
 
-The function can receive any authentication or contextual information as [parameter(s)](ClassFunctions.md#parameters) and can return any value. Dado que esta función sólo puede ser llamada desde una petición REST, los parámetros deben ser pasados a través del cuerpo de la petición POST.
+La función puede recibir cualquier información de autenticación o contextual como [parámetro(s)](ClassFunctions.md#parameters) y puede devolver cualquier valor. Dado que esta función sólo puede ser llamada desde una petición REST, los parámetros deben ser pasados a través del cuerpo de la petición POST.
 
 Esta función debe contener dos partes:
 
