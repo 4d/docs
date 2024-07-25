@@ -3035,7 +3035,7 @@ The `.remove()` function <!-- REF #collection.remove().Summary -->removes one or
 
 En *index*, pase la posición donde quiere eliminar el elemento de la colección.
 
-> **Atención**: recuerde que los elementos de la colección están numerados desde 0. If *index* is greater than the length of the collection, actual starting index will be set to the length of the collection.
+> **Atención**: recuerde que los elementos de la colección están numerados desde 0. Si *index* es mayor que la longitud de la colección, el índice inicial real se definirá en la longitud de la colección.
 
 - Si *index* < 0, se recalcula como *index:=index+length* (se considera el desplazamiento desde el final de la colección).
 - Si el valor calculado < 0, *index* toma el valor 0.
@@ -3291,7 +3291,7 @@ La retrollamada recibe los siguientes parámetros:
 
 Puede definir los siguientes parámetros:
 
-- (mandatory if you used a method) *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
+- (obligatorio si se ha utilizado un método) *$1.result* (booleano): **true** si la evaluación del valor del elemento tiene éxito, **false** en caso contrario.
 - *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 In any case, at the point where `.some()` function encounters the first collection element returning true, it stops calling the callback and returns **true**.
