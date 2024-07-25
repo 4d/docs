@@ -82,7 +82,7 @@ The `authentify()` function can always be executed by a REST guest session, what
 
 :::
 
-The function can receive any authentication or contextual information as [parameter(s)](ClassFunctions.md#parameters) and can return any value. Dado que esta función sólo puede ser llamada desde una petición REST, los parámetros deben ser pasados a través del cuerpo de la petición POST.
+La función puede recibir cualquier información de autenticación o contextual como [parámetro(s)](ClassFunctions.md#parameters) y puede devolver cualquier valor. Dado que esta función sólo puede ser llamada desde una petición REST, los parámetros deben ser pasados a través del cuerpo de la petición POST.
 
 Esta función debe contener dos partes:
 
