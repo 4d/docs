@@ -306,7 +306,7 @@ The `.firstRowStripSize` property is the <!-- REF #TableThemeOptions.firstRowStr
 
 **.firstRowStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.firstRowStripStyle` property is the <!-- REF #TableThemeOptions.firstRowStripStyle.Summary -->first alternating row style<!-- END REF -->.
+La propiedad `.firstRowStripStyle` es el estilo de la primera fila alterna <!-- REF #TableThemeOptions.firstRowStripStyle.Summary --><!-- END REF -->.
 
 ### .footerRowStyle
 
