@@ -99,7 +99,7 @@ Sólo se pueden desactivar los avisos con números. Los números de advertencia 
 
 _1: Puntero en una declaración de array (518.5)_
 
-... you just need to write the following comment in a 4D method, preferably a `COMPILER_xxx` method (method compiled first):
+... sólo debe escribir el siguiente comentario en un método 4D, preferiblemente un método `COMPILER_xxx` (método compilado primero):
 
 ```4d
   //%W-518.5
