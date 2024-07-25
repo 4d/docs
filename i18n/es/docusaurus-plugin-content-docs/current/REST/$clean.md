@@ -7,7 +7,7 @@ Crea un nuevo conjunto de entidades a partir de un conjunto de entidades existen
 
 ## Descripción
 
-`$clean` creates a new entity set containing the same entities as `entitySetID` but without references to deleted entities (if any).
+`$clean` crea un nuevo conjunto de entidades que contiene las mismas entidades que `entitySetID` pero sin referencias a las entidades eliminadas (si las hubiera).
 
 By default, when an entity is [deleted]($method.md#methoddelete), its reference(s) in existing entity set(s) become *undefined* but are not removed. También están incluidos en la propiedad "count" del conjunto de entidades. Llamar a `$clean` en el conjunto de entidades devuelve un nuevo conjunto de entidades actualizado sin referencias a entidades *undefined*.
 
