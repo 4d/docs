@@ -56,9 +56,9 @@ El contenido del archivo **/Sources/dependencies.json** debe tener la siguiente 
 
 ### environment4d.json
 
-If you want to customize the location of the components that are [declared in the **dependencies.json** file](#dependenciesjson), you can use a **environment4d.json** file. This file allows you to declare the paths for the dependencies that are not stored at the same level as the project folder.
+If you want to customize the location of the components that are [declared in the **dependencies.json** file](#dependenciesjson), you can use a **environment4d.json** file. Este archivo permite declarar las rutas de las dependencias que no se almacenan en el mismo nivel que la carpeta del proyecto.
 
-You can use absolute or relative paths, expressed in POSIX syntax as described in [this paragraph](../Concepts/paths#posix-syntax). Las rutas relativas son relativas al archivo environment4d.json.
+Puede utilizar rutas absolutas o relativas, expresadas en sintaxis POSIX como se describe en [este párrafo](../Concepts/paths#posix-syntax). Las rutas relativas son relativas al archivo environment4d.json.
 
 Ejemplos:
 
