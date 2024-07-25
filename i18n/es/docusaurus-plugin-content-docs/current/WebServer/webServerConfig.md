@@ -34,9 +34,9 @@ Puede modificar el tamaño de la caché en el área **Tamaño de la caché de la
 
 ## Carpeta de certificados
 
-| Puede ajustarse con | Nombre              | Comentarios                                                                                                                                            |
-| ------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| objeto webServer    | `certificateFolder` | Text property but can be a [`4D.Folder`](API/FolderClass.md) object when used with the _settings_ parameter of the `start()` function. |
+| Puede ajustarse con | Nombre              | Comentarios                                                                                                                                                   |
+| ------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objeto webServer    | `certificateFolder` | Propiedad texto pero puede ser un objeto [`4D.Folder`](API/FolderClass.md) cuando se usa con el parámetro _settings_ de la función `start()`. |
 
 Carpeta donde se encuentran los archivos del certificado TLS para el servidor web.
 
