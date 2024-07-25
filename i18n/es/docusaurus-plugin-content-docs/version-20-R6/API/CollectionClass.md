@@ -3439,7 +3439,7 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //orden alfabétic
 
 #### Descripción
 
-The `.sum()` function <!-- REF #collection.sum().Summary -->returns the sum for all values in the collection instance<!-- END REF -->.
+La función `.sum()` <!-- REF #collection.sum().Summary --> devuelve la suma de todos los valores de la instancia de la colección<!-- END REF -->.
 
 Para el cálculo sólo se tienen en cuenta los elementos numéricos (se ignoran otros tipos de elementos).
 
