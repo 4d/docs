@@ -503,7 +503,7 @@ O mapeamento entre o objecto e a entidade é feito sobre os nomes dos atributos:
 
 *filler* pode tratar de uma entidade relacionada sob as seguintes condições:
 
-- *filler* contains the foreign key itself, or
+- *filler* contém a chave estrangeira em si, ou
 - *filler* contains a property object with the same name as the related entity, containing a single property named "\_\_KEY".
 - se a entidade relacionada não existir, ela é ignorada.
 
