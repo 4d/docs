@@ -242,7 +242,7 @@ When the legacy login mode ([deprecated as of 4D 20 R6](https://blog.4d.com/forc
 
 #### Ejemplo
 
-In a simple Qodly page with login/password inputs, a "Submit" button calls the following `authentify()` function we have implemented in the DataStore class:
+En una página simple de Qodly con entradas para login/contraseña, un botón "Enviar" llama a la siguiente función `authentify()` que hemos implementado en la clase DataStore:
 
 ```4d
 
