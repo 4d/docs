@@ -226,7 +226,7 @@ Eis alguns exemplos:
 - "latest": the version having the “latest” badge in GitHub releases.
 - "\*": a versão mais recente lançada.
 - "1.\*": todas as versões da versão principal 1.
-- "1.2.\*": all patches of minor version 1.2.
+- "1.2.\*": todos os patches da versão menor 1.2.
 - "^1.2.3" or ">=1.2.3": the latest version 1, starting with the 1.2.3 version.
 - "~1.2.3" or ">1.2.3": the latest major version 1, starting with the version just after the 1.2.3.
 - "<=1.2.3": the latest version until the 1.2.3 one.
