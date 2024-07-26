@@ -33,7 +33,7 @@ Si se instala el mismo componente en distintos lugares, se aplica un [orden de p
    ```
    /MyProjectRoot/Project/Sources/dependencies.json
    ```
-2. By default, copy the component's package folder (_i.e._ the project root folder of the component) at the same level as your 4D project's package folder, e.g.:
+2. De forma predeterminada, copia la carpeta del paquete del componente (_es decir_, la carpeta raíz del proyecto del componente) al mismo nivel que la carpeta del paquete de su proyecto de 4D, por ejemplo:
    ```
    /MyProjectRoot/
    /MyProjectComponentRoot/
