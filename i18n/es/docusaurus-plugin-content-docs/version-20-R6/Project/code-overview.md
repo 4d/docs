@@ -116,7 +116,7 @@ Los atributos de disponibilidad especifican los servicios externos que pueden ll
 
 Este atributo le permite publicar el método actual como servicio web accesible a través de peticiones SOAP. Para más información, consulte el capítulo [Publicación y uso de los servicios web](https://doc.4d.com/4Dv19R5/4D/19-R5/Publication-and-use-of-Web-Services.200-5851321.en.html). Cuando esta opción está marcada, se activa la opción **Publicado en WSDL**.
 
-In the Explorer, project methods that are offered as a Web Service are given a specific icon ![](https://doc.4d.com/4Dv19R5/picture/440512/pict440512.fr.png).
+En el Explorador, los métodos proyecto que se ofrecen como Servicio Web reciben un icono específico ![](https://doc.4d.com/4Dv19R5/picture/440512/pict440512.fr.png).
 
 **Nota:** no es posible publicar un método como servicio web si su nombre incluye caracteres que no cumplen con la nomenclatura XML (por ejemplo espacios). Si el nombre del método no cumple con esto, 4D no asigna la propiedad.
 
