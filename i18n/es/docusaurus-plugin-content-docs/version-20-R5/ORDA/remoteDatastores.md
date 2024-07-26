@@ -7,7 +7,7 @@ A **remote datastore** is a reference, on a local 4D application (4D or 4D Serve
 
 The local 4D application connects to and references the remote datastore through a call to the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command.
 
-On the remote machine, 4D opens a [session](../WebServer/sessions.md) to handle requests from the application that call `Open datastore`. Requests internally use the [REST API](../REST/gettingStarted.md), which means that they might require [available licenses](../REST/authUsers.md).
+On the remote machine, 4D opens a [session](../WebServer/sessions.md) to handle requests from the application that call `Open datastore`. Las solicitudes utilizan internamente la [API REST](../REST/gettingStarted.md), lo que significa que pueden requerir [licencias disponibles](../REST/authUsers.md).
 
 ## Utilizando sesiones web
 
