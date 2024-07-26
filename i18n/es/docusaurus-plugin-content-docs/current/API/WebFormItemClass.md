@@ -40,7 +40,7 @@ The `WebFormItem` class is detailed in the [Qodly documentation](https://develop
 
 La función `.hide()` <!-- REF #WebFormItemClass.hide().Summary -->oculta el componente<!-- END REF -->.
 
-For more information, please refer to the [`.hide()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass#hide).
+Para más información, consulte la [descripción de `.hide()` en la documentación Qodly](https://developer.qodly.com/docs/language/WebFormItemClass#hide).
 
 ### .show()
 
@@ -58,7 +58,7 @@ For more information, please refer to the [`.hide()` description in the Qodly do
 
 La función `.show()` <!-- REF #WebFormItemClass.show().Summary -->hace visible el componente<!-- END REF -->.
 
-For more information, please refer to the [`.show()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass#show).
+Para más información, consulte la [descripción de `.show()` en la documentación Qodly](https://developer.qodly.com/docs/language/WebFormItemClass#show).
 
 ### .addCSSClass()
 
