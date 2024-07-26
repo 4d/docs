@@ -26,7 +26,7 @@ El parámetro _dateValue_ indica un valor de fecha que se asignará a _rangeObj_
 
 El parámetro _timeValue_ indica un valor hora (expresado en segundos) que se asignará al _rangeObj_.
 
-El parámetro opcional _formatPattern_ define un modelo para los parámetros _dateValue_ y _timeValue_. For information on patterns and formatting characters, please refer to the [Date and time formats](../configuring.md#date-and-time-formats) section.
+El parámetro opcional _formatPattern_ define un modelo para los parámetros _dateValue_ y _timeValue_. Para obtener información sobre los modelos y los caracteres de formato, consulte la sección [Formatos fecha y hora](../configuring.md#date-and-time-formats).
 
 #### Ejemplo
 
