@@ -153,7 +153,7 @@ As of 4D 20 R6, when opening an existing project that does not contain a `roles.
 
 :::note Qodly Studio
 
-In Qodly Studio for 4D, the mode can be set using the [**Force login** option](../WebServer/qodly-studio.md#force-login) in the Privileges panel.
+En Qodly Studio for 4D, el modo se puede definir utilizando la opción [**Forzar inicio de sesión**](../WebServer/qodly-studio.md#force-login) en el panel de Privilegios.
 
 :::
 
