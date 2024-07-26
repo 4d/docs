@@ -32,7 +32,7 @@ The `VP INSERT TABLE COLUMNS` command <!-- REF #_method_.VP INSERT TABLE COLUMNS
 
 Cuando se ha insertado una columna con este comando, normalmente se modifica su contenido utilizando el comando [VP SET TABLE COLUMN ATTRIBUTES](vp-set-table-column-attributes.md).
 
-In the *insertAfter* parameter, you can pass one of the following constants to indicate if the column(s) must be inserted before or after the *column* index:
+En el parámetro *insertAfter*, puede pasar una de las siguientes constantes para indicar si la(s) columna(s) debe(n) insertarse antes o después del índice *column*:
 
 | Constante                | Valor | Descripción                                                                                               |
 | ------------------------ | ----- | --------------------------------------------------------------------------------------------------------- |
