@@ -27,7 +27,7 @@ El contexto de optimización se basa en las siguientes implementaciones:
   - [`dataClass.query()`](../API/DataClassClass.md#query)
   - [`entitySelection.query()`](../API/EntitySelectionClass.md#query)
 
-- Las solicitudes posteriores enviadas al servidor sobre la misma selección de entidades reutilizan automáticamente el contexto de optimización y sólo obtienen del servidor los atributos necesarios, lo que acelera el procesamiento. For example, in an [entity selection-based list box](#entity-selection-based-list-box), the learning phase takes place during the display of the first row. la visualización de las siguientes líneas está optimizada. Las siguientes funciones asocian automáticamente el contexto de optimización de la entity selection de origen a la entity selection devuelta:
+- Las solicitudes posteriores enviadas al servidor sobre la misma selección de entidades reutilizan automáticamente el contexto de optimización y sólo obtienen del servidor los atributos necesarios, lo que acelera el procesamiento. Por ejemplo, en un [list box de tipo entity selection](#entity-selection-based-list-box), la fase de aprendizaje tiene lugar durante la visualización de la primera línea. la visualización de las siguientes líneas está optimizada. Las siguientes funciones asocian automáticamente el contexto de optimización de la entity selection de origen a la entity selection devuelta:
   - [`entitySelection.and()`](../API/EntitySelectionClass.md#and)
   - [`entitySelection.minus()`](../API/EntitySelectionClass.md#minus)
   - [`entitySelection.or()`](../API/EntitySelectionClass.md#or)
