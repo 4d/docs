@@ -89,7 +89,7 @@ The `.highlightLastColumn` property <!-- REF #TableOptions.highlightLastColumn.S
 
 **.highlightFirstColumn** : Boolean<!-- END REF -->
 
-The `.highlightFirstColumn` property <!-- REF #TableOptions.highlightFirstColumn.Summary -->indicates whether to highlight the first column<!-- END REF -->. Por defecto = False
+La propiedad `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColumn.Summary -->indica si se debe resaltar la primera columna<!-- END REF -->. Por defecto = False
 
 ### .showFooter
 
@@ -266,7 +266,7 @@ Si Text: nombre de un [tema nativo SpreadJS](https://developer.mescius.com/sprea
 
 **.firstColumnStripSize** : Integer<!-- END REF -->
 
-The `.firstColumnStripSize` property is the <!-- REF #TableThemeOptions.firstColumnStripSize.Summary -->size of the first alternating column<!-- END REF -->. Por defecto=1
+La propiedad `.firstColumnStripSize` es el tamaño <!-- REF #TableThemeOptions.firstColumnStripSize.Summary -->de la primera columna alterna<!-- END REF -->. Por defecto=1
 
 ### .firstColumnStripStyle
 
@@ -330,7 +330,7 @@ The `.headerRowStyle` property is the <!-- REF #TableThemeOptions.headerRowStyle
 
 **.highlightFirstColumnStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.highlightFirstColumnStyle` property is the <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->style of the first column<!-- END REF -->. "highlightFirstColumn" debe ser true.
+La propiedad `.highlightFirstColumnStyle` es el estilo <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->de la primera columna<!-- END REF -->. "highlightFirstColumn" debe ser true.
 
 ### .highlightLastColumnStyle
 
