@@ -27,7 +27,7 @@ Si modifica esta propiedad, el servidor debe reiniciarse para tener en cuenta el
 
 :::note
 
-In Qodly Studio for 4D, the mode can be set using the [**Force login** option](../WebServer/qodly-studio.md#force-login) in the Privileges panel.
+En Qodly Studio for 4D, el modo se puede definir utilizando la opción [**Forzar inicio de sesión**](../WebServer/qodly-studio.md#force-login) en el panel de Privilegios.
 
 :::
 
@@ -40,7 +40,7 @@ When the default mode is enabled, you can authenticate users through the `On RES
 
 En el modo "inicio de sesión forzada", el uso de la licencia está desconectado de las sesiones de usuario web. A license is required only when the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) is executed, allowing you to control the number of used licenses.
 
-[Descriptive REST requests](#descriptive-rest-requests) are always processed by the server, even if no web user session using a license is opened. En este caso, son procesados a través de sesiones "invitado".
+Las [peticiones REST descriptivas](#descriptive-rest-requests) siempre son procesadas por el servidor, aunque no se abra una sesión usuario web que utilice una licencia. En este caso, son procesados a través de sesiones "invitado".
 
 All other REST requests (handling data or executing a function) will only be processed if they are executed within a web session with appropriate privileges, otherwise they return an error. To assign privileges to a web session, you need to execute the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function for the session. Ejecutar esta función activa el consumo de la licencia 4D.
 
