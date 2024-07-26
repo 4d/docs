@@ -604,7 +604,7 @@ Para cada atributo (estilo, color y color de fondo), se implementa una **herenci
 - para los atributos líneas: valores de atributos de columnas
 - para los atributos de la columna: valores de los atributos del list box
 
-De esta forma, si desea que un objeto herede el valor de atributo de un nivel superior, puede utilizar pasar la constante `lk inherited` (valor por defecto) al comando de definición o directamente en el elemento del array de estilo/color correspondiente. For example, given an array list box containing a standard font style with alternating colors:
+De esta forma, si desea que un objeto herede el valor de atributo de un nivel superior, puede utilizar pasar la constante `lk inherited` (valor por defecto) al comando de definición o directamente en el elemento del array de estilo/color correspondiente. Por ejemplo, dado un list box array contiene un estilo de fuente estándar con colores alternos:
 ![](../assets/en/FormObjects/listbox_styles3.png)
 
 Realiza las siguientes modificaciones:
