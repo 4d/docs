@@ -178,7 +178,7 @@ Por ejemplo, dado un list box en el que las líneas tienen un color gris/gris cl
 A continuación, quiere colorear las celdas con valores negativos en naranja oscuro. Para ello, se define un array de colores de fondo para cada columna, por ejemplo `<>_BgndColor_1`, `<>_BgndColor_2` y `<>_BgndColor_3`. Los valores de estos arrays tienen prioridad sobre los definidos en las propiedades del list box, así como los del array de color de fondo general:
 
 ```4d
- <>_BgndColorsCol_3{2}:=0x00FF8000 // dark orange
+ <>_BgndColorsCol_3{2}:=0x00FF8000 // naranja oscuro
  <>_BgndColorsCol_2{5}:=0x00FF8000
  <>_BgndColorsCol_1{9}:=0x00FF8000
  <>_BgndColorsCol_1{16}:=0x00FF8000
