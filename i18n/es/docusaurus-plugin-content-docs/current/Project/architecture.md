@@ -47,7 +47,7 @@ El archivo de desarrollo de proyecto, utilizado para designar y lanzar el proyec
 
 > En los proyectos 4D, el desarrollo se realiza con 4D y el desarrollo multiusuarios se gestiona a través de las herramientas de control de versión. 4D Server puede abrir archivos .4DProject para realizar pruebas.
 
-This text file can also contain configuration keys, in particular [`"tokenizedText": false`](../Preferences/general.md#excluding-tokens-in-existing-projects).
+Este archivo de texto también puede contener llaves de configuración, en particular [`"tokenizedText": false`](../Preferences/general.md#excluding-tokens-in-existing-projects).
 
 ### `Sources`
 
