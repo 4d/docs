@@ -31,7 +31,7 @@ The `.style` property is the <!-- REF #LineBorder.style.Summary -->[style](confi
 
 **.dataField** : Text<!-- END REF -->
 
-The `.dataField` property <!-- REF #TableColumn.dataField.Summary -->contains the table column's property name in the data context<!-- END REF -->.
+La propiedad `.dataField` <!-- REF #TableColumn.dataField.Summary -->contiene el nombre de la propiedad de la columna de la tabla en el contexto de datos<!-- END REF -->.
 
 ### .formatter
 
@@ -65,7 +65,7 @@ The `.allowAutoExpand` property <!-- REF #TableOptions.allowAutoExpand.Summary -
 
 **.bandColumns** : Boolean<!-- END REF -->
 
-The `.bandColumns` property <!-- REF #TableOptions.bandColumns.Summary -->indicates whether to display an alternating column style<!-- END REF -->. Por defecto = False
+La propiedad `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indica si se muestra un estilo de columnas alternas<!-- END REF -->. Por defecto = False
 
 ### .bandRows
 
@@ -231,7 +231,7 @@ The `.bandRows` property <!-- REF #TableTheme.bandRows.Summary -->indicates whet
 
 **.bandColumns** : Boolean<!-- END REF -->
 
-The `.bandColumns` property <!-- REF #TableTheme.bandColumns.Summary -->indicates whether to display an alternating column style<!-- END REF -->.
+La propiedad `.bandColumns` <!-- REF #TableTheme.bandColumns.Summary -->indica si se muestra un estilo de columnas alternas<!-- END REF -->.
 
 ### .highlightLastColumn
 
@@ -346,7 +346,7 @@ The `.highlightLastColumnStyle` property is the <!-- REF #TableThemeOptions.high
 
 **.lastFooterCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.lastFooterCellStyle` property is the <!-- REF #TableThemeOptions.lastFooterCellStyle.Summary -->style of the last footer cell<!-- END REF -->. "highlightLastColumn" debe ser true.
+La propiedad `.lastFooterCellStyle` es el estilo <!-- REF #TableThemeOptions.lastFooterCellStyle.Summary -->de la última celda del pie de página<!-- END REF -->. "highlightLastColumn" debe ser true.
 
 ### .lastHeaderCellStyle
 
@@ -354,7 +354,7 @@ The `.lastFooterCellStyle` property is the <!-- REF #TableThemeOptions.lastFoote
 
 **.lastHeaderCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.lastHeaderCellStyle` property is the <!-- REF #TableThemeOptions.lastHeaderCellStyle.Summary -->style of the last header cell<!-- END REF -->. "highlightLastColumn" debe ser true.
+La propiedad `.lastHeaderCellStyle` es el estilo <!-- REF #TableThemeOptions.lastHeaderCellStyle.Summary -->de la última celda de encabezado<!-- END REF -->. "highlightLastColumn" debe ser true.
 
 ### .name
 
@@ -386,7 +386,7 @@ The `.secondColumnStripStyle` property is the <!-- REF #TableThemeOptions.second
 
 **.secondRowStripSize** : Integer<!-- END REF -->
 
-The `.secondRowStripSize` property is the <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->size of the second alternating column<!-- END REF -->. Por defecto=1.
+La propiedad `.secondRowStripSize` es el tamaño <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->de la segunda columna alterna<!-- END REF -->. Por defecto=1.
 
 ### .secondRowStripStyle
 
@@ -394,7 +394,7 @@ The `.secondRowStripSize` property is the <!-- REF #TableThemeOptions.secondRowS
 
 **.secondRowStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.secondRowStripStyle` property is the <!-- REF #TableThemeOptions.secondRowStripStyle.Summary -->second alternating row style<!-- END REF -->.
+La propiedad `.secondRowStripStyle` es el estilo de la <!-- REF #TableThemeOptions.secondRowStripStyle.Summary -->segunda fila alterna<!-- END REF -->.
 
 ### .wholeTableStyle
 
