@@ -80,7 +80,7 @@ Dependiendo del área seleccionada, también están disponibles las siguientes o
 - haga clic en una celda o en un rango de celdas:
   - **Filtrar**: permite ocultar la línea mediante filtros (ver "Filtrar las líneas" en la [documentación de SpreadJS](https://developer.mescius.com/spreadjs/docs/)).
   - **Ordenar**: ordena el contenido de la columna.
-  - **Insertar comentario**: permite al usuario introducir un comentario para un área. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:\
+  - **Insertar comentario**: permite al usuario introducir un comentario para un área. Cuando se ha introducido un comentario para un área, la celda superior izquierda del área muestra un pequeño triángulo rojo:\
     ![](../assets/en/ViewPro/vpContext2.PNG)
 
 ## Utilizando los comandos de 4D View Pro
