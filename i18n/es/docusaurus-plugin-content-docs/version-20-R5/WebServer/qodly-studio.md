@@ -236,7 +236,7 @@ También puede definir esta opción directamente en el archivo [**roles.json**](
 
 :::
 
-When the "force login" mode is **disabled** (default mode), any REST request, including the rendering of an authentication Qodly form, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. When the "force login" mode is **enabled**, a simple authentication Qodly form can be rendered without consuming any license. You just need to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly form. La licencia se consume solo cuando el usuario está realmente conectado.
+When the "force login" mode is **disabled** (default mode), any REST request, including the rendering of an authentication Qodly form, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. When the "force login" mode is **enabled**, a simple authentication Qodly form can be rendered without consuming any license. Basta con implementar la función [`authentify()`](../REST/authUsers.md#function-authentify) en la clase datastore y llamarla desde el formulario de Qodly. La licencia se consume solo cuando el usuario está realmente conectado.
 
 :::info
 
@@ -246,7 +246,7 @@ Para más información, consulte [esta entrada de blog](https://blog.4d.com/impr
 
 #### Ejemplo
 
-In a simple Qodly form with login/password inputs, a "Submit" button calls the following `authentify()` function we have implemented in the DataStore class:
+En un formulario simple de Qodly con entradas para login/contraseña, un botón "Enviar" llama a la siguiente función `authentify()` que hemos implementado en la clase DataStore:
 
 ```4d
 
