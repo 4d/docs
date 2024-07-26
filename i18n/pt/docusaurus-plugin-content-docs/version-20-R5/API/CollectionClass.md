@@ -298,7 +298,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 - a coleção estiver vazia,
 - a coleção não contiver elementos numéricos,
-- *propertyPath* is not found in the collection.
+- *propertyPath* não for encontrada na collection.
 
 #### Exemplo 1
 
@@ -1482,11 +1482,11 @@ var $c; $c2 : Collection
 
 <!-- REF #collection.includes().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                     |
-| ---------- | ---------- | :-: | --------------------------------------------- |
-| toSearch   | expressão  |  -> | Expressão a pesquisar na coleção              |
-| startFrom  | Integer    |  -> | Índice onde inicia a pesquisa                 |
-| Resultados | Parâmetros |  <- | True if *toSearch* is found in the collection |
+| Parâmetro  | Tipo       |     | Descrição                                    |
+| ---------- | ---------- | :-: | -------------------------------------------- |
+| toSearch   | expressão  |  -> | Expressão a pesquisar na coleção             |
+| startFrom  | Integer    |  -> | Índice onde inicia a pesquisa                |
+| Resultados | Parâmetros |  <- | True se *toSearch* for encontrado na coleção |
 
 <!-- END REF -->
 
@@ -3413,7 +3413,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 - a coleção estiver vazia,
 - a coleção não contiver elementos numéricos,
-- *propertyPath* is not found in the collection.
+- *propertyPath* não for encontrada na collection.
 
 #### Exemplo 1
 
