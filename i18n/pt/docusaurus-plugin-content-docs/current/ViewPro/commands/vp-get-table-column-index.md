@@ -33,7 +33,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro.
 
 In *columnName*, pass the name of the table column for which you want to get the index.
 
-In *sheet*, pass the index of the target sheet. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
+Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 
 > A indexação começa em 0.
 
