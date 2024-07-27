@@ -7,12 +7,12 @@ The catalog describes all the dataclasses, attributes, and [interprocess (shared
 
 ## Sintaxis disponible
 
-| Sintaxis                                                                | Ejemplo                | Descripción                                                                                                                                       |
-| ----------------------------------------------------------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**$catalog**](#catalog)                                                | `/$catalog`            | Returns [shared singletons](#singletons) (if any) and a list of the dataclasses in your project along with two URIs            |
-| [**$catalog/$all**](#catalogall)                                        | `/$catalog/$all`       | Returns [shared singletons](#singletons) (if any) and information about all of your project's dataclasses and their attributes |
-| [**$catalog/\{dataClass\}**](#catalogdataclass)                       | `/$catalog/Employee`   | Devuelve información sobre una clase de datos y sus atributos                                                                                     |
-| [**$catalog/DataStoreClassFunction**](ClassFunctions.md#function-calls) | `/$catalog/authentify` | Ejecuta la función de la clase del datastore si existe                                                                                            |
+| Sintaxis                                                                | Ejemplo                | Descripción                                                                                                                                                    |
+| ----------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**$catalog**](#catalog)                                                | `/$catalog`            | Devuelve [shared singletons](#singletons) (si existe) y una lista de las clases de datos de su proyecto junto con dos URIs                  |
+| [**$catalog/$all**](#catalogall)                                        | `/$catalog/$all`       | Devuelve los [singletons compartidos](#singletons) (si los hay) e información sobre todas las bases de datos de su proyecto y sus atributos |
+| [**$catalog/\{dataClass\}**](#catalogdataclass)                       | `/$catalog/Employee`   | Devuelve información sobre una clase de datos y sus atributos                                                                                                  |
+| [**$catalog/DataStoreClassFunction**](ClassFunctions.md#function-calls) | `/$catalog/authentify` | Ejecuta la función de la clase del datastore si existe                                                                                                         |
 
 ## $catalog
 
@@ -57,13 +57,13 @@ A continuación se describen las propiedades devueltas para cada clase de datos 
 
 ## $catalog/$all
 
-Returns [shared singletons](#singletons) (if any) and information about all of your project's dataclasses and their attributes
+Devuelve los [singletons compartidos](#singletons) (si los hay) e información sobre todas las bases de datos de su proyecto y sus atributos
 
 ### Descripción
 
 Llamando `$catalog/$all` puede recibir información detallada sobre los atributos de cada una de las clases de datos del modelo activo del proyecto.
 
-For more information about what is returned for each dataclass and its attributes, use [`$catalog/\{dataClass\}`](#catalogdataClass).
+Para obtener más información sobre lo que se devuelve para cada clase de datos y sus atributos, utilice [`$catalog/\{dataClass\}`](#catalogdataClass).
 
 ### Ejemplo
 
@@ -180,7 +180,7 @@ Devuelve información sobre una clase de datos y sus atributos
 
 ### Descripción
 
-Calling `$catalog/\{dataClass\}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. If you want to retrieve this information for all the dataclasses in your project's datastore, use [`$catalog/$all`](#catalogall).
+La llamada de `$catalog/\{dataClass\}` para una clase de datos específica devolverá la siguiente información sobre la clase de datos y los atributos que contiene. If you want to retrieve this information for all the dataclasses in your project's datastore, use [`$catalog/$all`](#catalogall).
 
 La información que recupera se refiere a lo siguiente:
 
@@ -328,9 +328,9 @@ Puede recuperar la información relativa a una clase de datos específica.
 
 ## singletons
 
-If you have defined [interprocess (shared) singletons](../Concepts/classes.md#singleton-classes) containing at least one [exposed function](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions), a `singletons` section is added to the returned json for both the `/$catalog` and `/$catalog/$all` syntaxes. It contains the collection of singleton classes as objects with their **name** and **methods** (i.e., exposed functions).
+If you have defined [interprocess (shared) singletons](../Concepts/classes.md#singleton-classes) containing at least one [exposed function](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions), a `singletons` section is added to the returned json for both the `/$catalog` and `/$catalog/$all` syntaxes. Contiene la colección de clases singleton como objetos con su **nombre** y **métodos** (es decir, funciones expuestas).
 
-Singleton functions can be called by REST requests using the [`$singleton` command]($singleton.md).
+Las funciones Singleton pueden ser llamadas por peticiones REST utilizando el comando [`$singleton`]($singleton.md).
 
 ### Ejemplo
 

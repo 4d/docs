@@ -60,7 +60,7 @@ El mensaje se mostrará como una alerta en las máquinas remotas.
 
 ### Visualizar procesos
 
-This button can be used to directly show the processes of the user(s) selected on the [**Processes** page](processes.md) of the window. Al hacer clic en este botón, 4D Server cambia a la página Procesos e introduce los nombres de usuario seleccionados en el área de búsqueda/filtrado.
+Este botón permite mostrar directamente los procesos del usuario o usuarios seleccionados en la página [**Procesos**](processes.md) de la ventana. Al hacer clic en este botón, 4D Server cambia a la página Procesos e introduce los nombres de usuario seleccionados en el área de búsqueda/filtrado.
 
 ### Desconectar
 

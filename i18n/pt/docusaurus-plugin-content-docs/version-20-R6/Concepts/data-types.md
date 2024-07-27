@@ -33,7 +33,7 @@ Apesar de geralmente serem equivalentes, alguns tipos de dados disponíveis no n
 
 ## Valor padrão
 
-When [variables](variables.md) or [parameters](parameters.md) are typed by means of an [explicit declaration](variables.md#declaring-variables), they receive a default value, which they will keep during the session as long as they have not been assigned.
+Quando as [variáveis](variables.md) ou os [parâmetros](parameters.md) são digitados por meio de uma [declaração explícita](variables.md#declaring-variables), eles recebem um valor padrão, que manterão durante a sessão, desde que não tenham sido atribuídos.
 
 O valor por defeito depende do tipo de variável:
 
@@ -54,7 +54,7 @@ O valor por defeito depende do tipo de variável:
 
 ### Null como valor padrão
 
-Variables of type Object, Collection, Pointer, and Picture have **null** as default value, but actually get an intermediary status when declared and not assigned. They *behave like* **null** values, but with some differences, generating less errors when the code tries do access them.
+As variáveis do tipo Object, Collection, Pointer e Picture têm **null** como valor padrão, mas na verdade recebem um status intermediário quando são declaradas e não atribuídas. Eles *se comportam como* valores **null**, mas com algumas diferenças, gerar menos erros quando o código tenta acessá-los.
 
 ## Conversão de tipos de dados
 
@@ -70,8 +70,8 @@ O quadro seguinte lista os tipos de dados básicos, os tipos de dados para os qu
 | Hora                          | `String`    |             |           |            | `Bool`        |
 | Parâmetros                    |             | `Num`       |           |            |               |
 
-(1) Strings formatted in JSON can be converted into scalar data, objects, or collections, using the `JSON Parse` command.
+(1) As cadeias de caracteres formatadas em JSON podem ser convertidas em dados escalares, objetos ou coleções, usando o comando `JSON Parse`.
 
 (2) Os valores de tempo podem ser tratados como números.
 
-**Note:** In addition to the data conversions listed in this table, more sophisticated data conversions can be obtained by combining operators and other commands.
+**Nota:** Além das conversões de dados listadas nesta tabela, as conversões de dados mais sofisticadas podem ser obtidas combinando operadores e outros comandos.

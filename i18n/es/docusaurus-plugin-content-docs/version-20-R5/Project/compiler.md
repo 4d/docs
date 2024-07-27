@@ -99,7 +99,7 @@ Sólo se pueden desactivar los avisos con números. Los números de advertencia 
 
 _1: Puntero en una declaración de array (518.5)_
 
-... you just need to write the following comment in a 4D method, preferably a `COMPILER_xxx` method (method compiled first):
+... sólo debe escribir el siguiente comentario en un método 4D, preferiblemente un método `COMPILER_xxx` (método compilado primero):
 
 ```4d
   //%W-518.5
@@ -271,11 +271,11 @@ En algunos casos, puede preferir que el control de rangos no se aplique a cierta
 Para ello, debe rodear el código a excluir del control de rangos con los comentarios especiales `//%R-` y `//%R+`. El comentario `//%R-` desactiva el control de rangos y `//%R+` lo reactiva:
 
 ```4d
-  // %R-   to disable range checking
+  // %R- para desactivar el control de rangos
  
- ... //Place the code to be excluded from range checking here
+ ... //Coloque aquí el código a excluir del control de rangos
  
-  // %R+   to enable range checking again for the rest
+// %R+ para volver a reactivar el control de rangos para el resto
 ```
 
 ## Acerca de los compiladores

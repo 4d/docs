@@ -85,7 +85,7 @@ La siguiente tabla muestra las opciones disponibles:
 
 ### Formatos personalizados
 
-Customized date formats can be built using several patterns described in the [**Date and Time Formats**](../Project/date-time-formats.md) page. Por ejemplo:
+Se pueden crear formatos de fecha personalizados utilizando varios patrones descritos en la página [**Formatos de fecha y hora**](../Project/date-time-formats.md). Por ejemplo:
 
 | Modelo               | Ejemplo (sistema USA) |
 | -------------------- | ---------------------------------------- |
@@ -360,7 +360,7 @@ La siguiente tabla muestra los formatos de visualización de los campos de hora 
 
 ### Formatos personalizados
 
-Customized time formats can be built using several patterns described in the [**Date and Time Formats**](../Project/date-time-formats.md) page. Por ejemplo:
+Se pueden crear formatos de hora personalizados utilizando varios patrones descritos en la página [**Formatos de fecha y hora**](../Project/date-time-formats.md). Por ejemplo:
 
 | Modelo                                  | Ejemplo (sistema USA) |
 | --------------------------------------- | ---------------------------------------- |

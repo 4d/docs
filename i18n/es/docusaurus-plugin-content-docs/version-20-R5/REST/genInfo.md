@@ -18,7 +18,7 @@ Para obtener la colección de todas las clases de datos expuestas junto con sus 
 
 ## Información de la caché
 
-Use the [`$info`]($info.md) parameter to get information about the entity selections currently stored in 4D Server's cache as well as running user sessions.
+Utilice el parámetro [`$info`]($info.md) para obtener información sobre las selecciones de entidades actualmente almacenadas en la caché de 4D Server, así como sobre las sesiones de usuario en ejecución.
 
 ## queryPath y queryPlan
 

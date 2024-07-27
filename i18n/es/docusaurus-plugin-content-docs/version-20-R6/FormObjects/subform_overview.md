@@ -155,7 +155,7 @@ Si modifica un valor en el formulario padre o en el subformulario, se actualiza 
 En versiones anteriores a 4D v19 R5, la sincronización entre formularios padre y subformularios se gestionaba a través de **punteros**. Por ejemplo, para actualizar un objeto subformulario, podría llamar al siguiente código:
 
 ```4d
-// Subform form method
+// Método subformulario
 If (Form event code=On Bound Variable Change) 
 	ptr:=OBJECT Get pointer(Object subform container) 
 	clockValue:=ptr-> 

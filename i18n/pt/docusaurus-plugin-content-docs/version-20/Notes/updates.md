@@ -189,7 +189,7 @@ WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
 - Suporte para [operadores de atribuição compostos](../Concepts/operators.md#compound-assignment-operators), [operadores de curto-circuito](../Concepts/operators.md#short-circuit-operators) e [operador ternário](../Concepts/operators.md#ternary-operator)
 - O [Code Editor](../code-editor/overview.md) agora inclui uma ferramenta suspensa e suporta marcadores para melhorar a navegação do código.
 - Novas Preferências: [**Incluir tokens nos arquivos de origem do projeto**](../Preferences/general.md#include-tokens-in-project-source-files) e a opção [**Mostrar pranchetas**](../Preferences/methods.md#show-clipboards) na página de Métodos.
-- New REST request to [lock/unlock](../REST/$lock.md) entities.
+- Nova solicitação REST para [bloquear/desbloquear entidades](../REST/$lock.md).
 - [4D View Pro](../ViewPro/getting-started.md) capítulo adicionado com novos comandos: [VP Copy to object](../ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](../ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](../ViewPro/method-list.md#vp-paste-from-object).
 - Nova classe [SystemWorker](../API/SystemWorkerClass.md).
 - A constante `Alias selection` foi renomeada para `Allow alias files` para resolver um conflito resultante do suporte de atributos de alias no ORDA.
@@ -279,7 +279,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 - [Entity Selection Class](../API/EntitySelectionClass.md): `.average()`, `.max()` and `.min()` functions now return *undefined* if the entity selection is empty.
 - [IMAP Mail](../API/IMAPTransporterClass.md), [POP3 Mail](../API/POP3TransporterClass.md) and [SMTP Mail](../API/SMTPTransporterClass.md): `authenticationMode` property enables OAuth 2.0
 - [IMAP Mail](../API/IMAPTransporterClass.md): new `.expunge()` and `.append()` functions
-- New [WebAdmin](../Admin/webAdmin.md) web server component
+- Novo componente de servidor web [WebAdmin](../Admin/webAdmin.md)
 - Nova interface [DataExplorer](../Admin/dataExplorer.md)
 - New web [user sessions](../WebServer/sessions.md) and [their API](../API/SessionClass.md).
 

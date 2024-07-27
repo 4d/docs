@@ -7,19 +7,19 @@ Frequentemente será preciso passar dados para seus métodos. Isso é facilmente
 
 ## Visão Geral
 
-**Los parámetros** (o **argumentos**) son piezas de datos que un método o una función de clase necesita para realizar su tarea. Los términos _parámetros_ y _argumentos_ se utilizan indistintamente en este manual. Parâmetros também são passados para comandos integrados 4D. En este ejemplo, la cadena "Hello" es un argumento para el comando integrado `ALERT`:
+Os **parâmetros** (ou **argumentos**) são partes de dados que um método ou uma função de classe precisa para executar sua tarefa. Os termos _parâmetro_ e _argumento_ são usados de forma intercambiável ao longo deste manual. Parâmetros também são passados para comandos integrados 4D. Neste exemplo, a cadeia de caracteres "Hello" é um argumento para o comando interno `ALERT`:
 
 ```4d
 ALERT("Hello")
 ```
 
-Os parâmetros são passados aos métodos da mesma maneira. Por ejemplo, si una función de clase llamada `getArea()` acepta dos parámetros, una llamada a la función de clase podría verse así:
+Os parâmetros são passados aos métodos da mesma maneira. Por exemplo, se uma função de classe chamada `getArea()` aceita dois parâmetros, uma chamada para a função de classe pode se parecer com isso:
 
 ```4d
 $area:=$o.getArea(50;100)
 ```
 
-O, si un método proyecto llamado `DO_SOMETHING` acepta tres parámetros, una llamada al método podría verse así:
+Ou, se um método de projeto chamado `DO_SOMETHING` aceitar três parâmetros, uma chamada ao método poderá ter a seguinte aparência:
 
 ```4d
 Essa função é chamada da maneira abaixo:
@@ -30,12 +30,12 @@ Os parâmetros estão separados por ponto e vírgula (;).
 Os mesmos princípios são usados quando métodos forem executados através de comandos dedicados, por exemplo:
 
 ```4d
-EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
-//pass the !05/05/20! date as parameter to the SetCalendarDate  
-//in the context of a subform
+EXECUTE METHOD IN SUBFORM("Cal2"; "SetCalendarDate";*;!05/05/20!)  
+//passa a data !05/05/20! como parâmetro para SetCalendarDate  
+//no contexto de um subformulário
 ```
 
-Los datos también pueden ser **devueltos**desde métodos y funciones de clase. Por ejemplo, la siguiente línea de instrucción utiliza el comando integrado, `Length`, para devolver la longitud de una cadena. La instrucción pone el valor devuelto por `Length` en una variable llamada _MyLength_. Esta é a instrução:
+Os dados também podem ser **retornados** a partir de métodos e funções de classe. Por exemplo, a linha a seguir é uma instrução que usa o comando interno, `Length`, para retornar o comprimento de uma cadeia de caracteres. A instrução coloca o valor retornado por `Length` em uma variável chamada _MyLength_. Esta é a instrução:
 
 ```4d
 MyLength:=Length("How did I get here?")
@@ -95,13 +95,13 @@ Function getArea($width : Integer; $height : Integer)-> $area : Integer
 Todos los tipos de métodos de 4D soportan la palabra clave `#DECLARE`, incluidos los métodos base. Por ejemplo, en el método base `On Web Authentication`, puede declarar parámetros temporales:
 
 ```4d
-	// On Web Authentication database method
+	// Método  banco de dados On Web Authentication
 #DECLARE ($url : Text; $header : Text; \
   $BrowserIP : Text; $ServerIP : Text; \
   $user : Text; $password : Text) \
   -> $RequestAccepted : Boolean
 $entitySelection:=ds.User.query("login=:1"; $user)
-// Check hash password...
+// Verificar a senha hash...
 ```
 
 ### Valor retornado
@@ -124,9 +124,9 @@ Function add($x : Variant; $y : Integer): Integer
 Os parâmetros, que incluem o valor retornado, devem ser declarados apenas uma vez. Em particular, você não pode declarar o mesmo parâmetro como entrada e saída, mesmo com o mesmo tipo. Por exemplo:
 
 ```qs
-	//invalid declaration
+	//declaração inválida
 Function myTransform ($x : Integer) -> $x : Integer 
-	//error: $x is declared twice
+	//erro: $x é declarado duas vezes
 ```
 
 :::
@@ -235,7 +235,7 @@ Não é obrigatório declarar parâmetros variáveis. Los parámetros variables 
 Entretanto, para evitar erros de incompatibilidade de tipos durante a execução do código, você pode declarar um número variável de parâmetros usando a notação "..." nos protótipos de suas funções, construtores de classes e métodos (parâmetros variádicos). Você especifica o tipo do parâmetro seguindo a notação "..." com o tipo desejado.
 
 ```4d
-#DECLARE ( ... : Text ) // Undefined number of 'Text' parameters
+#DECLARE ( ... : Text ) // Número indefinido de parâmetros 'Text'
 
 ```
 
@@ -307,11 +307,11 @@ Cuando se utilizan las palabras clave `#DECLARE` o `Function`, los parámetros s
 
 ```4d
 #DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
-	// all method parameters are declared with their type
+	// todos os parâmetros do método são declarados com seu tipo
 ```
 
 ```4d
-	// On Web Connection Database Method
+// Método de banco de dados On Web Connection
 #DECLARE ($url : Text; $header : Text; \
   $BrowserIP : Text; $ServerIP : Text; \
   $user : Text; $password : Text)
@@ -319,7 +319,7 @@ Cuando se utilizan las palabras clave `#DECLARE` o `Function`, los parámetros s
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer
-	// all function parameters are declared with their type
+	// todos os parâmetros da função são declarados com seu tipo
 ```
 
 :::tip

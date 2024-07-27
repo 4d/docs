@@ -28,7 +28,7 @@ En el parámetro _options_, puede pasar las siguientes opciones de exportación,
 | includeFormatInfo    | Boolean | True (por defecto) para incluir la información del formato, en caso contrario false. La información de formato es útil en algunos casos, por ejemplo, para una exportación a SVG. Por otro lado, poner esta propiedad en False permite reducir el tiempo de exportación. |
 | includeBindingSource | Boolean | True (por defecto) para exportar los valores del contexto de datos actual como valores de celda en el objeto exportado (los contextos de datos en sí no se exportan). False en caso contrario. El enlace de la celda siempre se exporta.              |
 
-For more information on 4D View Pro objects, please refer to the [4D View Pro object](../configuring.md#4d-view-pro-object) paragraph.
+Para más información sobre los objetos 4D View Pro, consulte el párrafo [Objeto 4D View Pro](../configuring.md#4d-view-pro-object).
 
 #### Ejemplo 1
 

@@ -3,13 +3,13 @@ id: sessions
 title: Sesiones web
 ---
 
-El servidor web de 4D ofrece funciones integradas para la gestión de **sesiones web**. Creating and maintaining web sessions allows you to control and improve the user experience on your web application. Cuando se activan las sesiones web, los clientes web pueden reutilizar el mismo contexto de servidor de una solicitud a otra.
+El servidor web de 4D ofrece funciones integradas para la gestión de **sesiones web**. La creación y el mantenimiento de sesiones web le permiten controlar y mejorar la experiencia del usuario en su aplicación web. Cuando se activan las sesiones web, los clientes web pueden reutilizar el mismo contexto de servidor de una solicitud a otra.
 
 Las sesiones web permiten:
 
 - handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web sessions are **scalable**),
 - gestionar la sesión a través de un objeto `Session` y la [Session API](API/SessionClass.md),
-- store and share data between processes of a web client using the [.storage](../API/SessionClass.md#storage) of the session,
+- almacenar y compartir datos entre procesos de un cliente web utilizando el [.storage](../API/SessionClass.md#storage) de la sesión,
 - asociar privilegios al usuario que ejecuta la sesión.
 
 ## Usos
@@ -73,7 +73,7 @@ Los procesos web no suelen terminar, sino que se reciclan en un fondo común par
 
 ## Almacenar y compartir información de sesión
 
-Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) property which is a [shared object](Concepts/shared.md). Esta propiedad permite compartir información entre todos los procesos manejados por la sesión.
+Cada objeto `Session` proporciona una propiedad [`.storage`](API/SessionClass.md#storage) que es un [objeto compartido](Concepts/shared.md). Esta propiedad permite compartir información entre todos los procesos manejados por la sesión.
 
 ## Fecha de caducidad de la sesión
 
@@ -86,7 +86,7 @@ La vida útil de una cookie inactiva es de 60 minutos por defecto, lo que signif
 
 This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the _connectionInfo_ parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command.
 
-When a web session is closed, if the [`Session`](API/SessionClass.md#session) command is called afterwards:
+Cuando se cierra una sesión web, si después se llama al comando [`Session`](API/SessionClass.md#session):
 
 - el objeto `Session` no contiene privilegios (es una sesión de invitado)
 - la propiedad [`.storage`](API/SessionClass.md#storage) está vacía
@@ -94,7 +94,7 @@ When a web session is closed, if the [`Session`](API/SessionClass.md#session) co
 
 :::info
 
-You can close a session from a Qodly form using the [**logout**](qodly-studio.md#logout) feature.
+Puede cerrar una sesión desde un formulario Qodly utilizando la función [**logout**](qodly-studio.md#logout).
 
 :::
 
@@ -102,7 +102,7 @@ You can close a session from a Qodly form using the [**logout**](qodly-studio.md
 
 Los privilegios pueden asociarse a sesiones de usuario web. En el servidor web, puede proporcionar un acceso o unas funcionalidades específicas en función de los privilegios de la sesión.
 
-Puedes asignar privilegios utilizando la función [`.setPrivileges()`](API/SessionClass.md#setprivileges). In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/SessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **Guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
+Puedes asignar privilegios utilizando la función [`.setPrivileges()`](API/SessionClass.md#setprivileges). In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/SessionClass.md#hasprivilege) function. Por defecto, las sesiones nuevas no tienen ningún privilegio: son sesiones **Invitadas** (la función [`.isGuest()`](API/SessionClass.md#isguest) devuelve true).
 
 Ejemplo:
 
@@ -116,7 +116,7 @@ End if
 
 :::info
 
-Privileges are implemented at the heart of the ORDA architecture to provide developers with a powerful technology for controlling access to the datastore and dataclas functions. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) page of the ORDA chapter.
+Privileges are implemented at the heart of the ORDA architecture to provide developers with a powerful technology for controlling access to the datastore and dataclas functions. Para más información, consulte la página [**Privilegios**](../ORDA/privileges.md) del capítulo ORDA.
 
 :::
 

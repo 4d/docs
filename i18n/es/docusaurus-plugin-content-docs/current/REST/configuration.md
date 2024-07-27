@@ -74,9 +74,9 @@ Para eliminar la exposición REST de una tabla:
 
 1. Visualice el inspector de tablas en el editor de estructuras y seleccione la tabla que desea modificar.
 
-2. Uncheck the **Expose as REST resource** option:
+2. Desmarque la opción **Exponer como recurso REST**:
    ![alt-text](../assets/en/REST/table.png)
-   Do this for each table whose exposure needs to be modified.
+   Haga esto para cada tabla cuya exposición deba modificarse.
 
 ### Exponer los campos
 

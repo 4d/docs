@@ -21,7 +21,7 @@ El comando `VP SET SHEET OPTIONS` <!-- REF #_method_.VP SET SHEET OPTIONS.Summar
 
 Pase el nombre del área de 4D View Pro en *vpAreaName*. Si pasa un nombre que no existe, se devuelve un error.
 
-Pase un objeto que contenga las definiciones de las opciones a definir en el parámetro *sheetOptions*. To view the full list of the available options, see the [Sheet Options](../configuring.md#sheet-options) paragraph.
+Pase un objeto que contenga las definiciones de las opciones a definir en el parámetro *sheetOptions*. Para ver la lista completa de las opciones disponibles, consulte el párrafo [Opciones de hoja](../configuring.md#sheet-options).
 
 En el parámetro opcional *sheet*, puede designar una hoja específica (la numeración comienza en 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
 

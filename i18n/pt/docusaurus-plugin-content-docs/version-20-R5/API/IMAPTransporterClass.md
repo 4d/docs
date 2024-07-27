@@ -160,7 +160,7 @@ The `.addFlags()` function <!-- REF #IMAPTransporterClass.addFlags().Summary -->
 In the `msgIDs` parameter, you can pass either:
 
 - a *collection* containing the unique IDs of specific messages or
-- the unique ID (*text*) of a single message or
+- o ID único (*texto*) de uma mensagem ou
 - the following constant (*longint*) for all messages in the selected mailbox:
 
 | Parâmetros | Valor | Comentário                                                     |
@@ -1394,7 +1394,7 @@ The `.removeFlags()` function <!-- REF #IMAPTransporterClass.removeFlags().Summa
 In the `msgIDs` parameter, you can pass either:
 
 - a *collection* containing the unique IDs of specific messages or
-- the unique ID (*text*) of a single message or
+- o ID único (*texto*) de uma mensagem ou
 - the following constant (*longint*) for all messages in the selected mailbox:
 
 | Parâmetros | Valor | Comentário                                                     |
@@ -1685,10 +1685,10 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 
 <details><summary>História</summary>
 
-| Release | Mudanças                                     |
-| ------- | -------------------------------------------- |
-| 20      | *id*, *flags*, *permanentFlags* are returned |
-| 18 R4   | Adicionado                                   |
+| Release | Mudanças                                       |
+| ------- | ---------------------------------------------- |
+| 20      | *id*, *flags*, *permanentFlags* são retornados |
+| 18 R4   | Adicionado                                     |
 
 </details>
 

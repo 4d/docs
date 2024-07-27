@@ -27,7 +27,7 @@ En el parámetro opcional _sheet_, puede designar una hoja específica (la numer
 
 El método devuelve un objeto que contiene los valores actuales de todas las opciones de hoja disponibles. Un valor de opción puede haber sido modificado por el usuario o por el método [VP SET SHEET OPTIONS](vp-set-sheet-options.md).
 
-To view the full list of the options, see [Sheet Options](../configuring.md#sheet-options).
+Para ver la lista completa de las opciones, consulte [Opciones Hoja](../configuring.md#sheet-options).
 
 #### Ejemplo
 

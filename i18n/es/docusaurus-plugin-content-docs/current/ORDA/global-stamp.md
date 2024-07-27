@@ -26,7 +26,7 @@ No confunda el **sello de modificación global** con el **sello de entidad** int
 
 ## Configuración del seguimiento de cambios en los datos
 
-By default, the global modification stamp is not created (the [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) function returns 0. Para habilitar el seguimiento de cambios en los datos, debe añadir campos especiales y una tabla a su estructura. Puede utilizar el menú contextual del Editor de estructura para crear automáticamente todos los elementos necesarios.
+Por defecto, el marcador de modificación global no se crea (la función [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) devuelve 0. Para habilitar el seguimiento de cambios en los datos, debe añadir campos especiales y una tabla a su estructura. Puede utilizar el menú contextual del Editor de estructura para crear automáticamente todos los elementos necesarios.
 
 ### Requisitos de estructura
 

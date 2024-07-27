@@ -24,7 +24,7 @@ Con Qodly Studio, descubrirá una interfaz de usuario web totalmente nueva, se f
 
 :::info
 
-The development with Qodly Studio for 4D requires at least a [4D Silver Partner license](https://us.4d.com/4d-partner-program). Las opciones y elementos de menú de Qodly Studio no aparecerán si la licencia no está activada.
+El desarrollo con Qodly Studio para 4D requiere al menos una [licencia 4D Silver Partner](https://us.4d.com/4d-partner-program). Las opciones y elementos de menú de Qodly Studio no aparecerán si la licencia no está activada.
 
 :::
 
@@ -123,7 +123,7 @@ A continuación, se le pedirá que introduzca la [llave de acceso](../Admin/webA
 
 La documentación oficial de Qodly Studio está disponible en el [sitio web de documentación de Qodly](https://developer.qodly.com/docs/studio/overview).
 
-Puede confiar en esta documentación y sus recursos asociados para desarrollar aplicaciones web basadas en formularios Qodly. However, depending on implementation stage, 4D developers will either use Qodly Studio or 4D IDE (see [Feature comparison](#feature-comparison)).
+Puede confiar en esta documentación y sus recursos asociados para desarrollar aplicaciones web basadas en formularios Qodly. Sin embargo, dependiendo de la etapa de implementación, los desarrolladores 4D utilizarán Qodly Studio o 4D IDE (ver [Comparación de funcionalidades](#comparación-de-funcionalidades)).
 
 Code examples are provided in [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript), but since QodlyScript inherits from the 4D Language, you won't be lost. Para más información, consulte la página [De QodlyScript a Lenguaje 4D](from-qodlyscript-to-4d.md).
 
@@ -152,7 +152,7 @@ No existe compatibilidad directa entre las aplicaciones implementadas con 4D y l
 
 Los siguientes comandos y clases están dedicados a la gestión del lado del servidor de los formularios Qodly:
 
-- [`Web Form`](../API/WebFormClass.md#web-form) command: returns the Qodly form as an object.
+- Comando [`Web Form`](../API/WebFormClass.md#web-form): devuelve el formulario Qodly como un objeto.
 - Comando [`Web Event`](../API/WebFormClass.md#web-event): devuelve los eventos desencadenados dentro de los componentes de formulario Qodly.
 - Clase [`WebForm`](../API/WebFormClass.md): funciones y propiedades para gestionar el formulario Qodly renderizado.
 - [`WebFormItem`](../API/WebFormItemClass.md) class: functions and properties to manage Qodly form components.
@@ -236,17 +236,17 @@ También puede definir esta opción directamente en el archivo [**roles.json**](
 
 :::
 
-When the "force login" mode is **disabled** (default mode), any REST request, including the rendering of an authentication Qodly form, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. When the "force login" mode is **enabled**, a simple authentication Qodly form can be rendered without consuming any license. You just need to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly form. La licencia se consume solo cuando el usuario está realmente conectado.
+When the "force login" mode is **disabled** (default mode), any REST request, including the rendering of an authentication Qodly form, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. When the "force login" mode is **enabled**, a simple authentication Qodly form can be rendered without consuming any license. Basta con implementar la función [`authentify()`](../REST/authUsers.md#function-authentify) en la clase datastore y llamarla desde el formulario de Qodly. La licencia se consume solo cuando el usuario está realmente conectado.
 
 :::info
 
-For more information, refer to [this blog post](https://blog.4d.com/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) that tells the full story.
+Para más información, consulte [esta entrada de blog](https://blog.4d.com/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) que cuenta la historia completa.
 
 :::
 
 #### Ejemplo
 
-In a simple Qodly form with login/password inputs, a "Submit" button calls the following `authentify()` function we have implemented in the DataStore class:
+En un formulario simple de Qodly con entradas para login/contraseña, un botón "Enviar" llama a la siguiente función `authentify()` que hemos implementado en la clase DataStore:
 
 ```4d
 
@@ -273,11 +273,11 @@ Else
 End if
 ```
 
-This call is accepted and as long as the authentication is not successful, `Session.setPrivileges()` is not called, thus no license is consumed. Una vez que se llama a `Session.setPrivileges()`, se utiliza una licencia de cliente de 4D y luego se acepta cualquier solicitud REST.
+Esta llamada es aceptada y mientras la autenticación no tenga éxito, `Session.setPrivileges()` no es llamada, por lo que no se consume ninguna licencia. Una vez que se llama a `Session.setPrivileges()`, se utiliza una licencia de cliente de 4D y luego se acepta cualquier solicitud REST.
 
 ### Cerrar sesión
 
-When the ["force login" mode is enabled](#setting-the-force-login-mode), Qodly Studio for 4D allows you to implement a logout feature in your application.
+Cuando el modo ["forzar inicio de sesión" está activado](#setting-the-force-login-mode), Qodly Studio for 4D le permite implementar una función de cierre de sesión en su aplicación.
 
 Para cerrar la sesión del usuario, solo necesita ejecutar la acción estándar **Logout** desde el formulario Qodly. En Qodly Studio, puede asociar esta acción estándar a un botón por ejemplo:
 
@@ -285,7 +285,7 @@ Para cerrar la sesión del usuario, solo necesita ejecutar la acción estándar 
 
 Al desencadenar la acción de cierre de sesión de una sesión de usuario web, se producen los siguientes efectos:
 
-- the current web user session loses its privileges, only [descriptive REST requests](../REST/authUsers.md#descriptive-rest-requests) are allowed,
+- la sesión de usuario web actual pierde sus privilegios, sólo se permiten [peticiones REST descriptivas](../REST/authUsers.md#descriptive-rest-requests),
 - se libera la licencia asociada de 4D,
 - the `Session.storage` is kept until the web session inactivity timeout is reached (at least one hour). During this period after a logout, if the user logs in again, the same session is used and the `Session.storage` shared object is available with its current contents.
 
@@ -333,7 +333,7 @@ Para más información sobre el atributo `SameSite`, consulte [esta entrada de b
 
 Para evitar utilizar más licencias de las necesarias, recomendamos hacer una de las siguientes cosas:
 
-- Run the renderer on another browser tab (by entering the rendered URL of your Web form: `IP:port/$lib/renderer/?w=QodlyFormName`).
+- Ejecutar el renderizador en otra pestaña del navegador (introduciendo la URL renderizada de su formulario Web: `IP:port/$lib/renderer/?w=QodlyFormName`).
 - Asegúrese de que Qodly Studio y su base de datos se alcanzan en el mismo esquema URL.
 - Utilice el valor `Lax` para la [cookie de sesión](webServerConfig.md#session-cookie-samesite) del servidor web de la base de datos de su proyecto.
 

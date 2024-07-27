@@ -28,7 +28,7 @@ title: VP CREATE TABLE
 
 #### Descripción
 
-El comando `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->crea una tabla en el rango especificado<!-- END REF -->. Puede crear una tabla en un rango de celdas para facilitar la gestión y el análisis de un grupo de datos relacionados. A table typically contains related data in rows and columns, and takes advantage of a [data context](vp-set-data-context).
+El comando `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->crea una tabla en el rango especificado<!-- END REF -->. Puede crear una tabla en un rango de celdas para facilitar la gestión y el análisis de un grupo de datos relacionados. Una tabla suele contener datos relacionados en filas y columnas, y aprovecha un [contexto de datos](vp-set-data-context).
 
 ![](../../assets/en/ViewPro/vp-create-table.png)
 

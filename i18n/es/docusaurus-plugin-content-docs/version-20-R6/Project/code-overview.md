@@ -20,7 +20,7 @@ Puede crear [varios tipos de métodos](../Concepts/methods.md):
 
 ## Crear las clases
 
-A user class in 4D is defined by a specific method file (**.4dm**), stored in the [`/Project/Sources/Classes/`](../Project/architecture.md#sources) folder. El nombre del archivo es el nombre de la clase.
+Una clase usuario en 4D está definida por un archivo de método específico (**.4dm**), almacenado en la carpeta [`/Project/Sources/Classes/`](../Project/architecture.md#sources). El nombre del archivo es el nombre de la clase.
 
 Puede crear un archivo de clase desde el menú **Archivo** o la barra de herramientas (**Nuevo/Clase...**) o en la página **Métodos** de la ventana **Explorador**.
 
@@ -31,7 +31,7 @@ Para más información, consulte la sección [Clases](../Concepts/classes.md).
 Para eliminar un método o clase existente, puede:
 
 - en su disco, elimine el archivo *.4dm* de la carpeta "Sources",
-- in the 4D Explorer, select the method or class and click ![](../assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
+- en el Explorador 4D, seleccione el método y haga clic ![](../assets/en/Users/MinussNew.png) o elija **Mover a la Papelera** en el menú contextual.
 
 > Para eliminar un método objeto, seleccione **Borrar el método de objeto** en el [editor de formularios](../FormEditor/formEditor.md) (menú **Objeto** o menú contextual).
 
@@ -116,7 +116,7 @@ Los atributos de disponibilidad especifican los servicios externos que pueden ll
 
 Este atributo le permite publicar el método actual como servicio web accesible a través de peticiones SOAP. Para más información, consulte el capítulo [Publicación y uso de los servicios web](https://doc.4d.com/4Dv19R5/4D/19-R5/Publication-and-use-of-Web-Services.200-5851321.en.html). Cuando esta opción está marcada, se activa la opción **Publicado en WSDL**.
 
-In the Explorer, project methods that are offered as a Web Service are given a specific icon ![](https://doc.4d.com/4Dv19R5/picture/440512/pict440512.fr.png).
+En el Explorador, los métodos proyecto que se ofrecen como Servicio Web reciben un icono específico ![](https://doc.4d.com/4Dv19R5/picture/440512/pict440512.fr.png).
 
 **Nota:** no es posible publicar un método como servicio web si su nombre incluye caracteres que no cumplen con la nomenclatura XML (por ejemplo espacios). Si el nombre del método no cumple con esto, 4D no asigna la propiedad.
 
@@ -130,7 +130,7 @@ In the Explorer, project methods that are offered as a Web Service and published
 
 This option is used to reinforce 4D Web server security: when it is not checked, the project method cannot be executed via an HTTP request containing the special [4DACTION URL](../WebServer/httpRequests.md#4daction) used for calling 4D methods, nor the special [4DSCRIPT, 4DTEXT and 4DHTML tags](../Tags/transformation-tags.md).
 
-In the Explorer, project methods with this attribute are given a specific icon ![](https://doc.4d.com/4Dv19R5/picture/440496/pict440496.fr.png).
+En el Explorador, los métodos proyecto con este atributo reciben un icono específico ![](https://doc.4d.com/4Dv19R5/picture/440496/pict440496.fr.png).
 
 Por razones de seguridad, esta opción está desmarcada por defecto. Cada método que pueda ejecutarse utilizando las URLs y las etiquetas especiales debe indicarse individualmente.
 
@@ -153,7 +153,7 @@ Para más información, consulte [Implementación del motor SQL de 4D](https://d
 
 #### Modificar de atributos globalmente
 
-Using the "Attributes for methods" dialog box, you can modify an attribute (Invisible, Offered as a Web Service, etc.) para todos o parte de los métodos proyecto base en una sola operación. Esta funcionalidad es especialmente útil para modificar los atributos de un gran número de métodos proyecto. También puede utilizarse durante el desarrollo para aplicar rápidamente los atributos comunes a grupos de métodos similares.
+Mediante el cuadro de diálogo "Atributos de los métodos", puede modificar un atributo (Invisible, Ofrecido como servicio web, etc.) para todos o parte de los métodos proyecto base en una sola operación. Esta funcionalidad es especialmente útil para modificar los atributos de un gran número de métodos proyecto. También puede utilizarse durante el desarrollo para aplicar rápidamente los atributos comunes a grupos de métodos similares.
 
 Para la configuración global de los atributos del método:
 

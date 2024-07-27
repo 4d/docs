@@ -147,7 +147,7 @@ _italic_
 ~~strikethrough~~
 ```
 
-- The code block tag (\`4d ... `) é suportado com destaque de código 4D:
+- A tag do bloco de código (\`4d ... `) é suportado com destaque de código 4D:
 
 ````md
 ```4d

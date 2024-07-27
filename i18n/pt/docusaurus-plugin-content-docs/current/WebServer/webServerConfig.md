@@ -9,11 +9,11 @@ As configurações do servidor web 4D incluem parâmetros de segurança, portas 
 
 Há diferentes maneiras de configurar as definições do servidor web 4D, dependendo do escopo e do servidor que você deseja definir:
 
-| Localização do parâmetro                                                         | Âmbito                                                                 | Servidor Web a ser usado                                       |
-| -------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------- |
-| [webServer object](webServerObject.md)                                           | Temporário (sessão atual)                           | Qualquer servidor Web, incluindo servidores Web de componentes |
-| `WEB SET OPTION` o comando `WEB XXX`                                             | Temporário (sessão atual)                           | Servidor principal                                             |
-| [**Settings** dialog box](../settings/web.md) (**Web** pages) | Permanente (todas as sessões, armazenadas no disco) | Servidor principal                                             |
+| Localização do parâmetro                                                                      | Âmbito                                                                 | Servidor Web a ser usado                                       |
+| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------- |
+| [webServer object](webServerObject.md)                                                        | Temporário (sessão atual)                           | Qualquer servidor Web, incluindo servidores Web de componentes |
+| `WEB SET OPTION` o comando `WEB XXX`                                                          | Temporário (sessão atual)                           | Servidor principal                                             |
+| [Caixa de diálogo **Configurações**](../settings/web.md) (páginas **Web**) | Permanente (todas as sessões, armazenadas no disco) | Servidor principal                                             |
 
 > Alguns parâmetros não estão disponíveis em todos os locais.
 

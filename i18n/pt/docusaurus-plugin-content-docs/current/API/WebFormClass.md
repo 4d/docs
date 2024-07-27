@@ -56,7 +56,7 @@ The `.disableState()` function <!-- REF #WebFormClass.disableState().Summary -->
 Essa função não faz nada se:
 
 - the *state* is currently not enabled in the web form,
-- the *state* does not exist for the web form.
+- o *estado* não existe para o formulário Web.
 
 If you [enable](#enablestate) or disable several states in the same user function, all modifications are sent at the same time to the client once the function ends.
 
@@ -81,7 +81,7 @@ The `.enableState()` function <!-- REF #WebFormClass.enableState().Summary -->en
 Essa função não faz nada se:
 
 - the *state* has already been enabled on the web form,
-- the *state* does not exist for the web form.
+- o *estado* não existe para o formulário Web.
 
 If you enable or [disable](#disablestate) several states within the same user function, all modifications are sent at the same time to the client once the function ends.
 

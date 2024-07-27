@@ -75,7 +75,7 @@ El botón **Borrar el código compilado** borra el código compilado del proyect
 
 ### Mostrar/Ocultar advertencias
 
-You can toggle the [warnings](#warnings) display in the Compiler window by clicking the **Show/Hide Warnings** button:
+Puede alternar la visualización de [advertencias](#advertencias) en la ventana del compilador haciendo clic en el botón **Mostrar/Ocultar advertencias**:
 
 ![](../assets/en/Project/compilerWin4.png)
 
@@ -172,21 +172,21 @@ Dependiendo de las circunstancias y del estilo de programación utilizado, las a
 
 ![](../assets/en/Project/warnings-tab.png)
 
-Esta pestaña le permite definir qué advertencias deben mostrarse globalmente. From the list of all possible warnings with their types, their code and their localized label, ordered by warning code.
+Esta pestaña le permite definir qué advertencias deben mostrarse globalmente. De la lista de todas las advertencias posibles con sus tipos, su código y su etiqueta localizada, ordenadas por código de advertencia.
 
 To reduce the list, you can search words by warning labels and codes using the **Search in codes and labels** textbox or the magnifying glass icon on the left.
 
 Por defecto, todos los tipos de advertencia están marcados y activados.
 
-When you modify a warning display status, the information is stored in the "warnings.json" file, placed in the project Settings folder.
+Cuando se modifica el estado de visualización de una advertencia, la información se almacena en el archivo "warnings.json", situado en la carpeta Configuración del proyecto.
 
-The **Reset to factory settings** button sets all the warning display status checkboxes to default values and deletes the "warnings.json" file.
+El botón **Restablecer parámetros de fábrica** define todas las casillas de verificación de estado de visualización de advertencias en los valores predeterminados y borra el archivo "warnings.json".
 
 ### Disabling and enabling warnings locally
 
-You can control warnings in specific parts of your code by using special comments to disable or enable them.
+Puede controlar las advertencias en partes específicas de su código utilizando comentarios especiales para desactivarlas o activarlas.
 
-To disable warnings, insert the following comments before and after the code section where you want to disable warnings:
+Para desactivar las advertencias, inserte los siguientes comentarios antes y después de la sección de código en la que desea desactivar las advertencias:
 
 ```4d
 // Antes de la parte de código seleccionada utilice
@@ -199,14 +199,14 @@ To disable warnings, insert the following comments before and after the code sec
 Para volver a habilitar las advertencias en una sección de código, utilice los siguientes comentarios:
 
 ```4d
-// Before the selected code part use
+// Antes de la parte de código seleccionada utilice
   //%W+<warning number>
 
-// After the selected code part use
+// Después de la parte de código seleccionada utilice
   //%W-<warning number>
 ```
 
-Sólo las advertencias con números pueden ser desactivadas o activadas. Warning numbers are specified at the end of each message in the list of compilation errors or in the list found in the warning tab.
+Sólo las advertencias con números pueden ser desactivadas o activadas. Los números de advertencia se indican al final de cada mensaje en la lista de errores de compilación o en la lista que se encuentra en la pestaña de advertencias.
 Por ejemplo, para desactivar la siguiente advertencia:
 
 *1: Redefinición de la variable $a (550.10)*
@@ -318,11 +318,11 @@ En algunos casos, puede preferir que el control de rangos no se aplique a cierta
 Para ello, debe rodear el código a excluir del control de rangos con los comentarios especiales `//%R-` y `//%R+`. El comentario `//%R-` desactiva el control de rangos y `//%R+` lo reactiva:
 
 ```4d
-  // %R-   to disable range checking
+  // %R- para desactivar el control de rangos
  
- ... //Place the code to be excluded from range checking here
+ ... //Coloque aquí el código a excluir del control de rangos
  
-  // %R+   to enable range checking again for the rest
+// %R+ para volver a reactivar el control de rangos para el resto
 ```
 
 ## Acerca de los compiladores

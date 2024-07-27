@@ -60,7 +60,7 @@ La siguiente tabla lista las páginas de parámetros que se encuentran en las ca
 | [Página Backup/Agendador](../settings/backup.md#scheduler)                               | N/a                                          | Idêntico às propriedades padrão                           |
 | [Página Backup/Configuração](../settings/backup.md#configuration)                        | N/a                                          | Idêntico às propriedades padrão                           |
 | [Backup/Backup & Restore page](../settings/backup.md#backup-restore) | N/a                                          | Idêntico às propriedades padrão                           |
-| [Client-server/Network options page](../settings/client-server.md#network-options)       | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
+| [Página Cliente-Servidor/rede](../settings/client-server.md#network-options)             | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
 | [Página Cliente-Servidor/Configuração IP](../settings/client-server.md#ip-configuration) | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
 | [Página Web/Configuração](../settings/web.md#configuration)                              | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
 | [Web/Options (I) page](../settings/web.md#options)                    | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |

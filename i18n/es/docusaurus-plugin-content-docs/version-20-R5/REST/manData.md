@@ -214,7 +214,7 @@ Si desea visualizar un atributo de imagen en su totalidad, escriba lo siguiente:
 
 `GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
 
-For more information about the image formats, refer to [`$imageformat`]($imageformat.md). Para más información sobre el parámetro versión, consulte [`$version`]($version.md).
+Para más información sobre los formatos de imagen, consulte [`$imageformat`]($imageformat.md). Para más información sobre el parámetro version, consulte [`$version`]($version.md).
 
 ## Guardar un atributo BLOB en el disco
 
@@ -224,6 +224,6 @@ Si quiere guardar un BLOB almacenado en su clase de datos, puedes escribir lo si
 
 ## Recuperar sólo una entidad
 
-You can use the [`\{dataClass\}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. Es especialmente útil cuando se quiere hacer una búsqueda relacionada que no se crea en la llave primaria de la clase de datos. Por ejemplo, puede escribir:
+Puede utilizar la sintaxis [`\{dataClass\}:{attribute}(value)`](%7BdataClass%7D.html#dataclassattributevalue) cuando desee recuperar sólo una entidad. Es especialmente útil cuando se quiere hacer una búsqueda relacionada que no se crea en la llave primaria de la clase de datos. Por ejemplo, puede escribir:
 
 `GET  /rest/Company:companyCode("Acme001")`

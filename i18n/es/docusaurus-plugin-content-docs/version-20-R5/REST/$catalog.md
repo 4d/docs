@@ -63,7 +63,7 @@ Devuelve información sobre todas las clases de datos del proyecto y sus atribut
 
 Llamando `$catalog/$all` puede recibir información detallada sobre los atributos de cada una de las clases de datos del modelo activo del proyecto.
 
-For more information about what is returned for each dataclass and its attributes, use [`$catalog/\{dataClass\}`](#catalogdataClass).
+Para obtener más información sobre lo que se devuelve para cada clase de datos y sus atributos, utilice [`$catalog/\{dataClass\}`](#catalogdataClass).
 
 ### Ejemplo
 
@@ -180,7 +180,7 @@ Devuelve información sobre una clase de datos y sus atributos
 
 ### Descripción
 
-Calling `$catalog/\{dataClass\}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. If you want to retrieve this information for all the dataclasses in your project's datastore, use [`$catalog/$all`](#catalogall).
+La llamada de `$catalog/\{dataClass\}` para una clase de datos específica devolverá la siguiente información sobre la clase de datos y los atributos que contiene. If you want to retrieve this information for all the dataclasses in your project's datastore, use [`$catalog/$all`](#catalogall).
 
 La información que recupera se refiere a lo siguiente:
 

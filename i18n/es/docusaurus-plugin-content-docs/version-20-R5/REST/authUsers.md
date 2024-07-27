@@ -14,20 +14,20 @@ Cuando se abre una sesión de usuario web, puede manejarla a través del objeto 
 
 El modo de inicio de sesión del usuario le permite controlar cómo las peticiones REST adquieren licencias 4D Client. Puedes elegir entre dos modos de inicio de sesión de usuario: "predeterminado" o "inicio de sesión forzado".
 
-You set the user login mode through the `forceLogin` property in the [`roles.json` file](../ORDA/privileges.md#rolesjson-file):
+Definee el modo de inicio de sesión del usuario a través de la propiedad `forceLogin` en el archivo [`roles.json`](../ORDA/privileges.md#rolesjson-file):
 
 - el **modo predeterminado** se utiliza si la propiedad "forceLogin" no se encuentra o se define en "false",
 - el modo **force login** se utiliza si la propiedad "forceLogin" es "true".
 
 :::caution
 
-If you modify this property, the server must be restarted to take the change into account.
+Si modifica esta propiedad, el servidor debe reiniciarse para tener en cuenta el cambio.
 
 :::
 
 :::note
 
-In Qodly Studio for 4D, the mode can be set using the [**Force login** option](../WebServer/qodly-studio.md#force-login) in the Privileges panel.
+En Qodly Studio for 4D, el modo se puede definir utilizando la opción [**Forzar inicio de sesión**](../WebServer/qodly-studio.md#force-login) en el panel de Privilegios.
 
 :::
 
@@ -40,16 +40,16 @@ When the default mode is enabled, you can authenticate users through the `On RES
 
 En el modo "inicio de sesión forzada", el uso de la licencia está desconectado de las sesiones de usuario web. A license is required only when the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) is executed, allowing you to control the number of used licenses.
 
-[Descriptive REST requests](#descriptive-rest-requests) are always processed by the server, even if no web user session using a license is opened. En este caso, son procesados a través de sesiones "invitado".
+Las [peticiones REST descriptivas](#descriptive-rest-requests) siempre son procesadas por el servidor, aunque no se abra una sesión usuario web que utilice una licencia. En este caso, son procesados a través de sesiones "invitado".
 
 All other REST requests (handling data or executing a function) will only be processed if they are executed within a web session with appropriate privileges, otherwise they return an error. To assign privileges to a web session, you need to execute the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function for the session. Ejecutar esta función activa el consumo de la licencia 4D.
 
 Este modo le permite implementar la siguiente secuencia de acceso:
 
-1. En la primera llamada REST (para una llamada webform, por ejemplo), se crea una sesión de usuario web "invitado". It has no privileges, no rights to execute requests other than descriptive requests, no license consumption.
+1. En la primera llamada REST (para una llamada webform, por ejemplo), se crea una sesión de usuario web "invitado". No tiene privilegios, ni derechos para ejecutar peticiones que no sean descriptivas, ni consumo de licencias.
 2. You call your exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class) named [`authentify()`](#function-authentify) (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges.
 3. La petición `/rest/$catalog/authentify` se envía al servidor junto con las credenciales del usuario. Este paso sólo requiere un formulario de acceso básico que no acceda a datos; puede ser un formulario Qodly (llamado a través de la petición `/rest/$getWebForm`).
-4. If the user is successfully authentified, a 4D license is consumed on the server and all REST requests are accepted.
+4. Si el usuario se autentica correctamente, se consume una licencia 4D en el servidor y se aceptan todas las peticiones REST.
 
 ![alt-text](../assets/en/REST/force-login-2.jpeg)
 
@@ -82,7 +82,7 @@ The `authentify()` function can always be executed by a REST guest session, what
 
 :::
 
-The function can receive any authentication or contextual information as [parameter(s)](ClassFunctions.md#parameters) and can return any value. Since this function can only be called from a REST request, parameters must be passed through the body of the POST request.
+La función puede recibir cualquier información de autenticación o contextual como [parámetro(s)](ClassFunctions.md#parameters) y puede devolver cualquier valor. Dado que esta función sólo puede ser llamada desde una petición REST, los parámetros deben ser pasados a través del cuerpo de la petición POST.
 
 Esta función debe contener dos partes:
 

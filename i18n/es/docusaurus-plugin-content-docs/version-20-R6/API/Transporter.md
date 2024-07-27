@@ -213,7 +213,7 @@ The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeO
 
 #### Descripción
 
-The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summary --> the charset and encoding used for the email header<!-- END REF -->. El encabezado incluye las siguientes partes del correo electrónico:
+La propiedad `.headerCharset` contiene <!-- REF #transporter.headerCharset.Summary --> el conjunto de caracteres y la codificación utilizados para el encabezado del correo electrónico<!-- END REF -->. El encabezado incluye las siguientes partes del correo electrónico:
 
 - asunto,
 - attachment filename(s),
@@ -248,7 +248,7 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 
 #### Descripción
 
-The `.host` property contains <!-- REF #transporter.host.Summary -->the name or the IP address of the host server<!-- END REF -->. Se utiliza para las transacciones de correo (SMTP, POP3, IMAP).
+La propiedad `.host` contiene <!-- REF #transporter.host.Summary -->el nombre o la dirección IP del servidor local<!-- END REF -->. Se utiliza para las transacciones de correo (SMTP, POP3, IMAP).
 
 <!-- END REF -->
 

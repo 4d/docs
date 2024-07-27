@@ -121,7 +121,7 @@ Hay dos tipos de nombres de familias de fuentes:
 - *family-name:* El nombre de una familia de fuentes, como "times", "courier", "arial", etc.
 - *generic-family:* El nombre de una familia genérica, como "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
-You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.
+Puede configurarlo utilizando el comando [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html).
 
 #### Gramática JSON
 

@@ -53,7 +53,7 @@ This mode allows you to implement the following login sequence:
 
 ![alt-text](../assets/en/REST/force-login-2.jpeg)
 
-### Descriptive REST requests
+### Solicitações REST descritivas
 
 Descriptive REST requests can be processed in web user sessions that do not require licenses ("guest" sessions). Essas solicitações são:
 
