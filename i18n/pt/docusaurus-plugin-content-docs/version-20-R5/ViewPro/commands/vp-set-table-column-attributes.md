@@ -42,7 +42,7 @@ In the _attributes_ parameter, pass an object that contains the properties to se
 | footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                                                                                                |
 | filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                |
 
-In _sheet_, pass the index of the target sheet. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
+Em _sheet_, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 
 > A indexação começa em 0.
 
