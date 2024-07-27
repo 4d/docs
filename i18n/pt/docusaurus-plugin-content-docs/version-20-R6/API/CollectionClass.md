@@ -843,13 +843,13 @@ A recursive comparison of collections can be time-consuming if the collection is
 
 <!-- REF #collection.every().Params -->
 
-| Parâmetro  | Tipo                         |     | Descrição                                                             |
-| ---------- | ---------------------------- | :-: | --------------------------------------------------------------------- |
-| startFrom  | Integer                      |  -> | Índice para início do teste em                                        |
-| formula    | 4D. Function |  -> | Objecto fórmula                                                       |
-| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção |
-| param      | any                          |  -> | Parameter(s) to pass to *formula* or *methodName*  |
-| Resultados | Parâmetros                   |  <- | True se todos os elementos passarem o teste com sucesso               |
+| Parâmetro  | Tipo                         |     | Descrição                                                                                                                 |
+| ---------- | ---------------------------- | :-: | ------------------------------------------------------------------------------------------------------------------------- |
+| startFrom  | Integer                      |  -> | Índice para início do teste em                                                                                            |
+| formula    | 4D. Function |  -> | Objecto fórmula                                                                                                           |
+| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção                                                     |
+| param      | any                          |  -> | Parâmetro(s) a ser(em) passado(s) para *formula* ou *methodName* |
+| Resultados | Parâmetros                   |  <- | True se todos os elementos passarem o teste com sucesso                                                                   |
 
 <!-- END REF -->
 
@@ -1056,12 +1056,12 @@ Em caso de inconsistências, as regras abaixos são seguidas:
 
 <!-- REF #collection.filter().Params -->
 
-| Parâmetro  | Tipo                         |     | Descrição                                                                        |
-| ---------- | ---------------------------- | :-: | -------------------------------------------------------------------------------- |
-| formula    | 4D. Function |  -> | Objecto fórmula                                                                  |
-| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção            |
-| param      | any                          |  -> | Parameter(s) to pass to *formula* or *methodName*             |
-| Resultados | Collection                   |  <- | Nova coleção contendo elementos filtrados (cópia superficial) |
+| Parâmetro  | Tipo                         |     | Descrição                                                                                                                 |
+| ---------- | ---------------------------- | :-: | ------------------------------------------------------------------------------------------------------------------------- |
+| formula    | 4D. Function |  -> | Objecto fórmula                                                                                                           |
+| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção                                                     |
+| param      | any                          |  -> | Parâmetro(s) a ser(em) passado(s) para *formula* ou *methodName* |
+| Resultados | Collection                   |  <- | Nova coleção contendo elementos filtrados (cópia superficial)                                          |
 
 <!-- END REF -->
 
@@ -1142,13 +1142,13 @@ Se quiser filtrar elementos de acordo com seu tipo de valor:
 
 <!-- REF #collection.find().Params -->
 
-| Parâmetro  | Tipo                         |     | Descrição                                                             |
-| ---------- | ---------------------------- | :-: | --------------------------------------------------------------------- |
-| startFrom  | Integer                      |  -> | Índice onde inicia a pesquisa                                         |
-| formula    | 4D. Function |  -> | Objecto fórmula                                                       |
-| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção |
-| param      | any                          |  -> | Parameter(s) to pass to *formula* or *methodName*  |
-| Resultados | any                          |  <- | Primeiro valor encontrado ou Undefined se não encontrado              |
+| Parâmetro  | Tipo                         |     | Descrição                                                                                                                 |
+| ---------- | ---------------------------- | :-: | ------------------------------------------------------------------------------------------------------------------------- |
+| startFrom  | Integer                      |  -> | Índice onde inicia a pesquisa                                                                                             |
+| formula    | 4D. Function |  -> | Objecto fórmula                                                                                                           |
+| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção                                                     |
+| param      | any                          |  -> | Parâmetro(s) a ser(em) passado(s) para *formula* ou *methodName* |
+| Resultados | any                          |  <- | Primeiro valor encontrado ou Undefined se não encontrado                                                                  |
 
 <!-- END REF -->
 
@@ -1230,13 +1230,13 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 <!-- REF #collection.findIndex().Params -->
 
-| Parâmetro  | Tipo                         |     | Descrição                                                             |
-| ---------- | ---------------------------- | :-: | --------------------------------------------------------------------- |
-| startFrom  | Integer                      |  -> | Índice onde inicia a pesquisa                                         |
-| formula    | 4D. Function |  -> | Objecto fórmula                                                       |
-| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção |
-| param      | any                          |  -> | Parameter(s) to pass to *formula* or *methodName*  |
-| Resultados | Integer                      |  <- | Indice do primeiro valor encontrado ou -1 se não encontrado           |
+| Parâmetro  | Tipo                         |     | Descrição                                                                                                                 |
+| ---------- | ---------------------------- | :-: | ------------------------------------------------------------------------------------------------------------------------- |
+| startFrom  | Integer                      |  -> | Índice onde inicia a pesquisa                                                                                             |
+| formula    | 4D. Function |  -> | Objecto fórmula                                                                                                           |
+| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção                                                     |
+| param      | any                          |  -> | Parâmetro(s) a ser(em) passado(s) para *formula* ou *methodName* |
+| Resultados | Integer                      |  <- | Indice do primeiro valor encontrado ou -1 se não encontrado                                                               |
 
 <!-- END REF -->
 
@@ -1399,12 +1399,12 @@ $col.flat(MAXLONG)
 
 <!-- REF #collection.flatMap().Params -->
 
-| Parâmetro  | Tipo                         |     | Descrição                                                             |
-| ---------- | ---------------------------- | :-: | --------------------------------------------------------------------- |
-| formula    | 4D. Function |  -> | Objecto fórmula                                                       |
-| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção |
-| param      | any                          |  -> | Parameter(s) to pass to *formula* or *methodName*  |
-| Resultados | Collection                   |  <- | Collection of transformed values and flattened by a depth of 1        |
+| Parâmetro  | Tipo                         |     | Descrição                                                                                                                 |
+| ---------- | ---------------------------- | :-: | ------------------------------------------------------------------------------------------------------------------------- |
+| formula    | 4D. Function |  -> | Objecto fórmula                                                                                                           |
+| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção                                                     |
+| param      | any                          |  -> | Parâmetro(s) a ser(em) passado(s) para *formula* ou *methodName* |
+| Resultados | Collection                   |  <- | Collection of transformed values and flattened by a depth of 1                                                            |
 
 <!-- END REF -->
 
@@ -1892,12 +1892,12 @@ The `.length` property is initialized when the collection is created. Adicionar 
 
 <!-- REF #collection.map().Params -->
 
-| Parâmetro  | Tipo                         |     | Descrição                                                             |
-| ---------- | ---------------------------- | :-: | --------------------------------------------------------------------- |
-| formula    | 4D. Function |  -> | Objecto fórmula                                                       |
-| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção |
-| param      | any                          |  -> | Parameter(s) to pass to *formula* or *methodName*  |
-| Resultados | Collection                   |  <- | Collection de valores transformados                                   |
+| Parâmetro  | Tipo                         |     | Descrição                                                                                                                 |
+| ---------- | ---------------------------- | :-: | ------------------------------------------------------------------------------------------------------------------------- |
+| formula    | 4D. Function |  -> | Objecto fórmula                                                                                                           |
+| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção                                                     |
+| param      | any                          |  -> | Parâmetro(s) a ser(em) passado(s) para *formula* ou *methodName* |
+| Resultados | Collection                   |  <- | Collection de valores transformados                                                                                       |
 
 <!-- END REF -->
 
@@ -2628,7 +2628,7 @@ $o.parameters:={name:"Chicago")
 $c:=$myCol.query(":att=:name";$o)
 ```
 
-You can mix all argument kinds in *queryString*. A *queryString* can contain, for *propertyPath* and *value* parameters:
+É possível misturar todos os tipos de argumentos em *queryString*. A *queryString* can contain, for *propertyPath* and *value* parameters:
 
 - valores diretos (sem placeholders),
 - placeholders indexados ou com nome.
@@ -3014,7 +3014,7 @@ Em *index*, passe a posição onde deseja que o elemento seja retirado da colec�
 > **Aviso**: lembre que elementos de coleção são numerados a partir de 0. If *index* is greater than the length of the collection, actual starting index will be set to the length of the collection.
 
 - If *index* < 0, it is recalculated as *index:=index+length* (it is considered as the offset from the end of the collection).
-- If the calculated value < 0, *index* is set to 0.
+- Se o valor calculado for < 0, *index* será definido como 0.
 - If the calculated value > the length of the collection, *index* is set to the length.
 
 In *howMany*, pass the number of elements to remove from *index*. If *howMany* is not specified, then one element is removed.
