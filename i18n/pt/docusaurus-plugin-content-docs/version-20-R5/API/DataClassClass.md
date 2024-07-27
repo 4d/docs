@@ -902,7 +902,7 @@ onde:
 
 - **formula**: uma fórmula válida passada como `Text` ou `Object`. A fórmula será avaliada para cada entidade processada e deve retornar um valor booleano. Within the formula, the entity is available through the `This` object.
 
-  - **Text**: the formula string must be preceeded by the `eval()` statement, so that the query parser evaluates the expression correctly. For example: *"eval(length(This.lastname) >=30)"*
+  - **Text**: the formula string must be preceeded by the `eval()` statement, so that the query parser evaluates the expression correctly. Por exemplo: *"eval(length(This.lastname) >=30) "*
   - **Object**: the [formula object](FunctionClass.md) is passed as a **placeholder** (see below). The formula must have been created using the [`Formula`](FunctionClass.md#formula) or [`Formula from string`](FunctionClass.md#formula-from-string) command.
 
 > * Keep in mind that 4D formulas only support `&` and `|` symbols as logical operators.
@@ -977,7 +977,7 @@ Two types of placeholders can be used: **indexed placeholders** and **named plac
 | Definição | Parameters are inserted as `:paramIndex` (for example :1, :2...) in *queryString* and their corresponding values are provided by the sequence of *value* parameter(s). É possível utilizar até 128 parâmetros *value* | Parameters are inserted as `:paramName` (for example :myparam) and their values are provided in the attributes and/or parameters objects in the *querySettings* parameter |
 | Exemplo   | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                                                                                                                                                                                                                                                                 | `$o.attributes:=New object("att";"city")`<br/> `$o.parameters:=New object("name";"Chicago")`<br/> `$r:=class.query(":att=:name";$o)`                                                                         |
 
-You can mix all argument kinds in *queryString*. A *queryString* can contain, for *attributePath*, *formula* and *value* parameters:
+É possível misturar todos os tipos de argumentos em *queryString*. A *queryString* can contain, for *attributePath*, *formula* and *value* parameters:
 
 - valores diretos (sem placeholders),
 - placeholders indexados ou com nome.
