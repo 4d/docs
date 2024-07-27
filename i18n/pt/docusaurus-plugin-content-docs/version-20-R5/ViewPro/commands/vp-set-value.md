@@ -27,7 +27,7 @@ The parameter _valueObj_ is an object that includes properties for the value and
 | Propriedade | Tipo                                     | Descrição                                                                                                                                                                                               |
 | ----------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | value       | Integer, Real, Boolean, Text, Date, Null | Valor a atribuir a _rangeObj_ (exceto - hora). Passar null para apagar o conteúdo da célula.                                                         |
-| time        | Real                                     | Time value (in seconds) to assign to _rangeObj_                                                                                                                                      |
+| time        | Real                                     | Valor hora (em segundos) a atribuir a _rangeObj_                                                                                                                                     |
 | format      | Text                                     | Padrão para propriedade valor/tempo. For information on patterns and formatting characters, please refer to the [Cell Format](../configuring.md#cell-format) paragraph. |
 
 #### Exemplo
