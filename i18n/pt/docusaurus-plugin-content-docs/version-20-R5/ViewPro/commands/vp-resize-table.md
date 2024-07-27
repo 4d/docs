@@ -34,7 +34,7 @@ As regras abaixo são válidas:
   - se as linhas forem adicionadas, os dados serão excluídos,
   - se colunas forem adicionadas, dados serão mantidos e exibidos em novas colunas.
 
-If _tableName_ does not exist, nothing happens.
+Se _tableName_ não existir, não acontece nada.
 
 #### Exemplo
 
