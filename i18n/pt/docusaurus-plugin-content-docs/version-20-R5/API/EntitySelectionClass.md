@@ -149,7 +149,7 @@ Lembre que a entidade correspondente é recarregada a partir da datastore.
 
 *index* can be any number between 0 and `.length`-1.
 
-- If *index* is out of range, an error is returned.
+- Se *index* está fora do intervalo, se devolve um erro.
 - If *index* corresponds to a dropped entity, a Null value is returned.
 
 :::caution
