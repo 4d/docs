@@ -29,7 +29,7 @@ The `VP Get tables` command <!-- REF #_method_.VP Get tables.Summary -->returns 
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In *sheet*, pass the index of the target sheet. Se nenhum índice for especificado, o comando se aplica à folha atual.
+Em *sheet*, passe o índice da folha de destino. Se nenhum índice for especificado, o comando se aplica à folha atual.
 
 > A indexação começa em 0.
 
