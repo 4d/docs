@@ -29,7 +29,7 @@ The `VP MOVE CELLS` command <!-- REF #_method_.VP MOVE CELLS.Summary -->moves or
 
 *originRange* and *targetRange* can refer to different View Pro areas.
 
-In *originRange*, pass a range object containing the values, style, and formula cells to copy or move. If *originRange* is a combined range, only the first one is used.
+In *originRange*, pass a range object containing the values, style, and formula cells to copy or move. Se *originRange* for um intervalo combinado, somente o primeiro será usado.
 
 In *targetRange*, pass the range of cells where the cell values, style, and formulas will be copied or moved.
 
