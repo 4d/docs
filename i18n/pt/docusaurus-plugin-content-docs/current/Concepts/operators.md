@@ -41,7 +41,7 @@ Os resultados do operador dependem dos **tipos de dados** aos quais são aplicad
 - [**Operadores em imagens**](dt_picture.md#operadores-em-imagens)
 - [**Operadores em ponteiros**](dt_pointer.md#operadores-em-ponteiros)
 - [**Operadores de string**](dt_string.md#string-operators)
-- [**Object reference operators**](dt_object.md#object-operators)
+- [**Operadores nas referências de objetos**](dt_object.md#object-operators)
 - [**Collection reference operators**](dt_collection.md#collection-operators)
 - [**Operadores null**](dt_null_undefined.md#operadores-null)
 - [**Operadores indefinidos**](dt_null_undefined.md#undefined-operators)
@@ -90,7 +90,7 @@ São suportados os seguintes operadores de atribuição compostos:
 |               | Time \*= Number    | Number      | `$t1*=5 //$t1:=$t1*5`                                                      |
 |               | Picture \*= Number | Imagem      | `$p1*=5 //$p1:=$p1*5 (redimensionar $p1 por 5)`                            |
 
-Estos operadores se aplican a todas las [expresiones asignables](quick-tour.md#assignable-vs-non-assignable-expressions) (excepto de las imágenes como propiedades de objeto o elementos de colección).
+Esses operadores se aplicam a quaisquer [expressões atribuíveis] (quick-tour.md#assignable-vs-non-assignable-expressions) (exceto imagens como propriedades de objetos ou elementos de coleções).
 
 A operação "source `operator` value" não é estritamente equivalente a "source := source `operator` value" porque a expressão que designa a fonte (variável, campo, propriedade de objeto, elemento de coleção) é avaliada apenas uma vez. Por exemplo, em expressões como `getPointer()->+=1` o método `getPointer` é chamado apenas uma vez.
 
@@ -242,7 +242,7 @@ Nesse caso, `$phone` armazenará um número de telefone ou a cadeia de caractere
 
 #### Exemplo 2
 
-Dada una tabla llamada Person con un campo _name_, así como un campo _maiden name_ para las mujeres casadas.
+Dada uma tabela chamada Person com um campo _name_, bem como um campo _maiden name_ para mulheres casadas.
 
 O exemplo seguinte verifica se existe um nome de solteira e armazena-o numa variável; caso contrário, armazena simplesmente o nome da pessoa:
 
@@ -273,8 +273,8 @@ O operador condicional ternário permite-lhe escrever expressões condicionais d
 Aceita três operandos na seguinte ordem:
 
 - uma condição seguida de um ponto de interrogação (?)
-- una expresión a ejecutar si la condición es [truthy](#truthy-and-falsy), seguida de dos puntos (:)
-- una expresión a ejecutar si la condición es [falsy](#truthy-and-falsy)
+- uma expressão a ser executada se a condição for [truthy](#truthy-and-falsy), seguido por dois pontos (:)
+- uma expressão a ser executada se a condição for [falsa] (#truthy-and-falsy)
 
 ### Sintaxe
 
