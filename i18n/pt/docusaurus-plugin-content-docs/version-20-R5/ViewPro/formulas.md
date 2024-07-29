@@ -205,7 +205,7 @@ Parameters can be passed to 4D functions that call project methods using the fol
 =METHODNAME(param1,param2,...,paramN)
 ```
 
-These parameters are received in _methodName_ in $1, $2...$N.
+Esses parâmetros são recebidos em _methodName_ em $1, $2...$N.
 
 Observe que os ( ) são obrigatórios, mesmo que nenhum parâmetro seja passado:
 
