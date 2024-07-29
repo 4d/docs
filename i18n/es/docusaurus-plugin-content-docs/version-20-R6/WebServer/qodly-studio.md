@@ -283,7 +283,7 @@ Al desencadenar la acción de cierre de sesión de una sesión de usuario web, s
 
 - la sesión de usuario web actual pierde sus privilegios, sólo se permiten [peticiones REST descriptivas](../REST/authUsers.md#descriptive-rest-requests),
 - se libera la licencia asociada de 4D,
-- the `Session.storage` is kept until the web session inactivity timeout is reached (at least one hour). During this period after a logout, if the user logs in again, the same session is used and the `Session.storage` shared object is available with its current contents.
+- the `Session.storage` is kept until the web session inactivity timeout is reached (at least one hour). Durante este periodo tras un cierre de sesión, si el usuario vuelve a iniciar sesión, se utiliza la misma sesión y el objeto compartido `Session.storage` está disponible con su contenido actual.
 
 ## Acerca del uso de licencias para renderización
 
