@@ -48,8 +48,8 @@ Define o texto selecionado como ligeiramente inclinado para a direita.
 
 Você também pode definir essa propriedade por meio do comando [**OBJECT SET FONT STYLE**] (https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
 
-> This is normal text.<br/>
-> *This is text in italics.*
+> Este é um texto normal.<br/>
+> *Este é o texto em itálico.*
 
 #### Gramática JSON
 
