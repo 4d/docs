@@ -33,7 +33,7 @@ Indica se o servidor web vai ou não aceitar conexões seguras. Ver [Ativar HTTP
 
 Permite modificar o número da porta TCP/IP usada pelo servidor Web para as conexões HTTP seguras sobre TLS (protocolo HTTPS). Ver [Puerto HTTPS](../WebServer/webServerConfig.md#https-port).
 
-#### Allow database Access through 4DSYNC URLs
+#### Permitir o acesso ao banco de dados por meio de URLs 4DSYNC
 
 _Nota de compatibilidade_: Essa opção está [obsoleta](../WebServer/webServerConfig.md#deprecated-settings). Para acesso ao banco de dados por meio de HTTP, agora é recomendado usar as funcionalidades de armazenamento remoto do ORDA e solicitações REST.
 
@@ -47,13 +47,13 @@ Define a localização padrão dos arquivos do site e indicar o nível hierárqu
 
 Designar uma página inicial padrão para o servidor Web. Ver [Página de inicio por defecto](../WebServer/webServerConfig.md#default-home-page).
 
-## Options (I)
+## Opções (I)
 
 ### Cache
 
 #### Usar o cache Web 4D
 
-Ativar o cache da página Web. Ver [Caché](../WebServer/webServerConfig.md#cache).
+Ativar o cache da página Web. Consulte [Cache](../WebServer/webServerConfig.md#cache).
 
 #### Tamanho da cache das Páginas
 
