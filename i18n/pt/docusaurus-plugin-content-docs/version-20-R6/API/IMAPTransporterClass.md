@@ -159,7 +159,7 @@ The `.addFlags()` function <!-- REF #IMAPTransporterClass.addFlags().Summary -->
 
 In the `msgIDs` parameter, you can pass either:
 
-- a *collection* containing the unique IDs of specific messages or
+- uma *colecção* contendo as identificações únicas de mensagens específicas ou
 - o ID único (*texto*) de uma mensagem ou
 - the following constant (*longint*) for all messages in the selected mailbox:
 
@@ -1393,7 +1393,7 @@ The `.removeFlags()` function <!-- REF #IMAPTransporterClass.removeFlags().Summa
 
 In the `msgIDs` parameter, you can pass either:
 
-- a *collection* containing the unique IDs of specific messages or
+- uma *colecção* contendo as identificações únicas de mensagens específicas ou
 - o ID único (*texto*) de uma mensagem ou
 - the following constant (*longint*) for all messages in the selected mailbox:
 
@@ -1643,13 +1643,13 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 
 **ALL**: Todas as mensagens na caixa de correio.\
 **ANSWERED**: mensagens com o indicador \Answered ativo.\
-**UNANSWERED**: Messages that do not have the \Answered flag set.\
+**UNANSWERED**: mensagens que não têm o sinalizador indicador \Answered definido.\
 **DELETED**: mensagens com o sinalizador \Deleted ativado.\
-**UNDELETED**: Messages that do not have the \Deleted flag set.\
+**UNDELETED**: Mensagens que não possuem o indicador \Deleted ativado.\
 **DRAFT**: mensagens com o indicador \Draft ativo.\
 **UNDRAFT**: mensagens que não têm o sinalizador \Draft ativado.\
 **FLAGGED**: mensagens com o indicador \Flagged ativo.\
-**UNFLAGGED**: Messages that do not have the \Flagged flag set.\
+**UNFLAGGED**: mensagens que não têm o sinalizador \Flagged ativado.\
 **RECENT**: mensagens que possuem o indicador \Recent ativado.\
 **OLD**: mensagens que não possuem o indicador \Recent definido.\
 **SEEN**: mensagens que têm o sinalizador \Seen ativo.\
@@ -1710,7 +1710,7 @@ The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -
 
 > To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
 
-In the *name* parameter, pass the name of the mailbox to access. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
+No parâmetro *name*, passar o nome da caixa de correio para aceder. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
 
 The optional *state* parameter defines the type of access to the mailbox. Os valores possíveis são:
 
