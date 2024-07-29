@@ -161,7 +161,7 @@ Apenas atributos com valores diferentes estão incluídos na coleção. If no di
 
 The function applies for properties whose [kind](DataClassClass.md#attributename) is **storage** or **relatedEntity**. In case a related entity has been updated (meaning the foreign key), the name of the related entity and its primary key name are returned as *attributeName* properties (*value* and *otherValue* are empty for the related entity name).
 
-If one of the compared entities is **Null**, an error is raised.
+Se uma das entidades comparadas for **Null**, um erro é gerado.
 
 #### Exemplo 1
 
