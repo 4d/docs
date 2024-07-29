@@ -789,7 +789,7 @@ The `.equal()` function <!-- REF #collection.equal().Summary -->recursively comp
 :::note Notas
 
 - The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. It does not check equality for native objects.
-- Elements with **null** values are not equal to Undefined elements.
+- Elementos com valores **null** não são a mesma coisa que valores Undefined.
 
 :::
 
@@ -875,7 +875,7 @@ By default, `.every()` tests the whole collection. Optionally, you can pass in *
 
 - If *startFrom* >= the collection's length, **false** is returned, which means the collection is not tested.
 - If *startFrom* < 0, it is considered as the offset from the end of the collection ( *startFrom:=startFrom+length*).
-- If *startFrom* = 0, the whole collection is searched (default).
+- Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo 1
 
@@ -1016,7 +1016,7 @@ The `.fill()` function <!-- REF #collection.fill().Summary -->fills the collecti
 
 Em caso de inconsistências, as regras abaixos são seguidas:
 
-- If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection). If the calculated value is negative, *startFrom* is set to 0.
+- If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection). Se o valor calculado for negativo, *startFrom* toma o valor 0.
 - If *end* < 0 , it is recalculated as *end:=end+length*.
 - If *end* < *startFrom* (passed or calculated values), the method does nothing.
 
@@ -1175,7 +1175,7 @@ By default, `.find()` searches in the whole collection. Optionally, you can pass
 - If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
 - If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*).
   **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
-- If *startFrom* = 0, the whole collection is searched (default).
+- Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo 1
 
@@ -1243,7 +1243,7 @@ The `.findIndex()` function <!-- REF #collection.findIndex().Summary -->returns 
 Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
 
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
-- *methodName*, the name of a project method (text).
+- *methodName*, o nome de um método projeto (texto).
 
 The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for the first element fulfilling the condition. It receives an `Object` in first parameter ($1).
 
@@ -1263,7 +1263,7 @@ By default, `.findIndex()` searches in the whole collection. Optionally, you can
 - If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
 - If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*).
   **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
-- If *startFrom* = 0, the whole collection is searched (default).
+- Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo
 
@@ -1496,7 +1496,7 @@ The `.includes()` function <!-- REF #collection.includes().Summary -->returns Tr
 
 > Essa função não modifica a coleção original.
 
-In *toSearch*, pass the expression to find in the collection. Pode passar:
+Em *toSearch*, passe a expressão para encontrar na coleção. Pode passar:
 
 - um valor escalar (texto, número, booleano, data),
 - $1.result:=$1.value&gt;0
@@ -1508,7 +1508,7 @@ Optionally, you can pass the index of collection from which to start the search 
 
 - If *startFrom* >= collection's length, False is returned, which means the collection is not searched.
 - If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). Note that even if *startFrom* is negative, the collection is still searched from left to right.
-- If *startFrom* = 0, the whole collection is searched (default).
+- Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo
 
@@ -1558,7 +1558,7 @@ The `.indexOf()` function <!-- REF #collection.indexOf().Summary -->searches the
 
 > Essa função não modifica a coleção original.
 
-In *toSearch*, pass the expression to find in the collection. Pode passar:
+Em *toSearch*, passe a expressão para encontrar na coleção. Pode passar:
 
 - um valor escalar (texto, número, booleano, data),
 - $1.result:=$1.value&gt;0
@@ -1571,7 +1571,7 @@ Optionally, you can pass the index of collection from which to start the search 
 - If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
 - If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*).
   **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
-- If *startFrom* = 0, the whole collection is searched (default).
+- Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo
 
@@ -1814,7 +1814,7 @@ The `.lastIndexOf()` function <!-- REF #collection.lastIndexOf().Summary -->sear
 
 > Essa função não modifica a coleção original.
 
-In *toSearch*, pass the expression to find in the collection. Pode passar:
+Em *toSearch*, passe a expressão para encontrar na coleção. Pode passar:
 
 - um valor escalar (texto, número, booleano, data),
 - $1.result:=$1.value&gt;0
@@ -2549,7 +2549,7 @@ onde:
 
 - **propertyPath**: caminho da propriedade em que você deseja executar a consulta. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em <em x-id="3">queryString</em> ou <em x-id="3">formula</em> (":placeholder") e valor pode ser uma string ou uma coleção de strings. In case of an attribute path whose type is `Collection`, `[]` notation is used to handle all the occurences (for example `children[].age`).
 
-- **comparator**: symbol that compares *propertyPath* and *value*. Os simbolos abaixo são compatíveis:
+- **comparator**: símbolo que compara *propertyPath* e *value*. Os simbolos abaixo são compatíveis:
 
 | Comparação                               | Símbolos    | Comentário                                                                                                                                                                                                                      |
 | ---------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3011,7 +3011,7 @@ Em *index*, passe a posição onde deseja que o elemento seja retirado da colec�
 - Se o valor calculado for < 0, *index* será definido como 0.
 - If the calculated value > the length of the collection, *index* is set to the length.
 
-In *howMany*, pass the number of elements to remove from *index*. If *howMany* is not specified, then one element is removed.
+Em *howMany*, passe o número de elementos a serem removidos de *index*. If *howMany* is not specified, then one element is removed.
 
 Se tentar remover um elemento de uma coleção vazia, o método não faz nada (não é gerado qualquer erro).
 
@@ -3272,7 +3272,7 @@ By default, `.some()` tests the whole collection. Optionally, you can pass the i
 
 - If *startFrom* < 0, it is considered as the offset from the end of the collection.
 
-- If *startFrom* = 0, the whole collection is searched (default).
+- Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo
 
