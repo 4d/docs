@@ -34,7 +34,7 @@ This page describes how to work with components in the **4D** and **4D Server** 
 To load a component in your 4D project, you can either:
 
 - copy the component files in the [**Components** folder of your project](architecture.md#components),
-- or, declare the component in the **dependencies.json** file.
+- ou declare o componente no arquivo **dependencies.json**.
 
 Components declared in the **dependencies.json** file can be stored at different locations:
 
@@ -332,7 +332,7 @@ By default, all dependencies identified by the Dependency manager are listed, wh
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
-- **Active**: Dependencies that are loaded and can be used in the project. It includes *overloading* dependencies, which are actually loaded. *Overloaded* dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
+- **Active**: Dependencies that are loaded and can be used in the project. Isso inclui dependências *overloading*, que são de fato carregadas. *Overloaded* dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
 - **Inactive**: Dependencies that are not loaded in the project and are not available. There are many possible reasons for this status: missing files, version incompatibility...
 - **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
 
