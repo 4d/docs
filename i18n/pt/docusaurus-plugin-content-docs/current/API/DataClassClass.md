@@ -913,7 +913,7 @@ Fórmulas nas consultas podem receber parâmetros através de $1. This point is 
 > - You can also pass directy a `formula` parameter object instead of the `queryString` parameter (recommended when formulas are more complex). Ver o parágrafo **Parâmetro fórmula** mais abaixo.
 > - For security reasons, formula calls within `query()` functions can be disallowed. See `querySettings` parameter description.
 
-- **comparator**: symbol that compares *attributePath* and *value*. Os simbolos abaixo são compatíveis:
+- **comparator**: símbolo que compara *attributePath* e *value*. Os simbolos abaixo são compatíveis:
 
 | Comparação                               | Símbolos    | Comentário                                                                                                                                                                                                                      |
 | ---------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1173,7 +1173,7 @@ The formula must have been created using the [`Formula`](FunctionClass.md#formul
 Any *formula* called by the `query()` class function can receive parameters:
 
 - Parameters must be passed through the **args** property (object) of the *querySettings* parameter.
-- The formula receives this **args** object as a **$1** parameter.
+- A fórmula recebe esse objeto **args** como um parâmetro **$1**.
 
 Este pequeno código mostra os principios de como são passados os parâmetros aos métodos:
 
