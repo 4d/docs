@@ -243,7 +243,7 @@ On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter 
 
 **Objeto devolvido**
 
-A `4D.File` object with the `isAlias` property set to **true**.
+Um objeto `4D.File` com a propriedade `isAlias` definida como **true**.
 
 #### Exemplo
 
