@@ -33,7 +33,7 @@ This command removes rows from the *tableName* table, NOT from the sheet. O núm
 
 If the *tableName* table is bound to a [data context](vp-set-data-context.md), the command removes element(s) from the collection.
 
-If *tableName* does not exist, nothing happens.
+Se *tableName* não existir, não acontece nada.
 
 #### Exemplo
 

@@ -304,7 +304,7 @@ A `CryptoKey` deve conter uma chave **privada** válida.
 
 #### *Resultado*
 
-The utf8 representation of the *message* string.
+A representação utf8 da string *message*.
 
 <!-- END REF -->
 

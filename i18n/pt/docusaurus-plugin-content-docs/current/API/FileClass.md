@@ -86,7 +86,7 @@ The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new
 
 **File ( path { ; pathType } { ; \* })**
 
-In the *path* parameter, pass a file path string. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA/myfile.txt").
+No parâmetro *path*, passe um caminho do arquivo. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA/myfile.txt").
 
 > Only absolute pathnames are supported with the `File` command.
 
@@ -518,7 +518,7 @@ A função substitui todos os delimitadores de fim de linha originais. Por defei
 | "cr"                         | 3 (`Document with CR`)             | As quebras de linha são convertidas em CR (carriage return), o formato padrão do Mac OS                                                                                                                                            |
 | "lf"                         | 4 (`Document with LF`)             | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                                                                                             |
 
-> The *break mode as text* value is case sensitive.
+> O valor *break mode as text* diferencia maiúsculas de minúsculas.
 
 #### Exemplo
 
@@ -746,7 +746,7 @@ The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text*
 
 If the file referenced in the `File` object does not exist on the disk, it is created by the function. Quando o ficheiro já existir no disco, o seu conteúdo anterior é apagado, exceto se já estiver aberto, caso em que o seu conteúdo é bloqueado e é gerado um erro.
 
-In *text*, pass the text to write to the file. Pode ser um texto literal ("my text"), ou um campo/variável texto 4D.
+Em *text,* passe o texto a escrever no arquivo. Pode ser um texto literal ("my text"), ou um campo/variável texto 4D.
 
 Opcionalmente, pode designar o conjunto de caracteres a utilizar para escrever o conteúdo. Você pode passar também:
 

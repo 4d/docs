@@ -20,7 +20,7 @@ The `VP SET FORMULAS` command <!-- REF #_method_.VP SET FORMULAS.Summary -->assi
 
 In *rangeObj*, pass a range of the cell (created with [VP Cell](vp-cell.md)) whose formula you want to specify. If *rangeObj* includes multiple ranges, only the first range is used.
 
-The *formulasCol* is a two-dimensional collection:
+O parâmetro *formulasCol* é uma coleção bidimensional:
 
 - A coleção de primeiro nível contém subcoleções de fórmulas. Cada subcolecção define uma linha.
 - Cada subcoleção define os valores das células para a linha. Values must be text elements containing the formulas to assign to the cells.

@@ -281,7 +281,7 @@ The *headerOnly* option may not be supported by the server.
 
 O método retorna Null se:
 
-- *msgNumber* designates a non-existing message,
+- *msgNumber* determina uma mensagem não existente,
 - the message was marked for deletion using [`.delete()`](#delete).
 
 **Objeto devolvido**
@@ -345,7 +345,7 @@ The `mailInfo` object returned contains the following properties:
 
 O método retorna **Null** se:
 
-- *msgNumber* designates a non-existing message,
+- *msgNumber* determina uma mensagem não existente,
 - the message was marked for deletion using `.delete( )`.
 
 ##### Exemplo
@@ -463,7 +463,7 @@ In *msgNumber*, pass the number of the message to retrieve. This number is retur
 
 O método retorna uma BLOB vazia se:
 
-- *msgNumber* designates a non-existing message,
+- *msgNumber* determina uma mensagem não existente,
 - the message was marked for deletion using `.delete()`.
 
 **BLOB devolvido**

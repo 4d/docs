@@ -600,10 +600,10 @@ Se quiser obter todos os arquivos que não são invisíveis na pasta Documents:
 
 <!-- REF #directory.folder().Params -->
 
-| Parâmetro  | Tipo                       |    | Descrição                                                         |
-| ---------- | -------------------------- | -- | ----------------------------------------------------------------- |
-| path       | Text                       | -> | Rota POSIX relativa                                               |
-| Resultados | 4D. Folder | <- | Created folder object (null if invalid *path*) |
+| Parâmetro  | Tipo                       |    | Descrição                                                              |
+| ---------- | -------------------------- | -- | ---------------------------------------------------------------------- |
+| path       | Text                       | -> | Rota POSIX relativa                                                    |
+| Resultados | 4D. Folder | <- | Objeto pasta criado (null se *path* for inválida\*) |
 
 <!-- END REF -->
 
@@ -615,7 +615,7 @@ In *path*, pass a relative POSIX path to designate the folder to return. A rota 
 
 **Valor retornado**
 
-A `Folder` object or null if *path* is invalid.
+Um objeto `Folder` ou null se *path* for inválido.
 
 #### Exemplo
 

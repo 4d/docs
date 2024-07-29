@@ -318,10 +318,10 @@ $privileges := Session.getPrivileges()
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                        |
-| ---------- | ---------- | :-: | ------------------------------------------------ |
-| privilege  | Text       |  -> | Nome do privilegio a verificar                   |
-| Resultados | Parâmetros |  <- | True if session has *privilege*, False otherwise |
+| Parâmetro  | Tipo       |     | Descrição                                                |
+| ---------- | ---------- | :-: | -------------------------------------------------------- |
+| privilege  | Text       |  -> | Nome do privilegio a verificar                           |
+| Resultados | Parâmetros |  <- | True se a sessão tiver *privilege*, False caso contrário |
 
 <!-- END REF -->
 
