@@ -20,6 +20,9 @@ If a user attempts to execute an action and does not have the appropriate access
 
 ![schema](../assets/en/ORDA/privileges-schema.png)
 
+### See also
+
+For a detailed overview of the whole permissions architecture, please read the [**Filter access to your data with a complete system of permissions**](https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/) blog post.  
 
 
 ## Resources
@@ -158,17 +161,17 @@ The default file has the following contents:
 
 ```
 
-For a highest level of security, the "none" privilege is assigned to all permissions on the datastore, thus data access on the whole `ds` object is disabled by default. You need to allow specific permissions to each resource you want to make available from web or REST requests ([see example below](example-of-privilege-configuration)).
+For a highest level of security, the "none" privilege is assigned to all permissions in the datastore, thus data access on the whole `ds` object is disabled by default. It is recommended not to modified or use this locking privilege, but to add specific permissions to each resource you wish to make available from web or REST requests ([see example below](example-of-privilege-configuration)).
 
 :::caution
 
-When no specific parameters are defined in the `roles.json` file, accesses are not limited. This configuration allows you to develop the application without having to worry about accesses but is not recommended in production environment.
+When no specific parameters are defined in the `roles.json` file, accesses are not limited. This configuration allows you to develop the application without having to worry about accesses, but is not recommended in production environment.
 
 :::
 
 :::note Compatibility
 
-As of 4D 20 R6, when opening an existing project that does not contain a `roles.json` file or the `"forceLogin": true` settings, the **Activate REST authentication through ds.authentify() function** button is available in the [**Web Features** page of the Settings dialog box](../settings/web.md#access). This button automatically upgrades your security settings (you may have to modify your code, [see this blog post](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/)).
+In previous releases, the `roles.json` file was not created by default. As of 4D 20 R6, when opening an existing project that does not contain a `roles.json` file or the `"forceLogin": true` settings, the **Activate REST authentication through ds.authentify() function** button is available in the [**Web Features** page of the Settings dialog box](../settings/web.md#access). This button automatically upgrades your security settings (you may have to modify your code, [see this blog post](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/)).
 :::
 
 :::note Qodly Studio
@@ -230,9 +233,7 @@ End if
 
 ## Example of privilege configuration
 
-If no specific parameters are defined in the `roles.json` file, accesses are not limited. This configuration allows you to develop the application without having to worry about accesses.
-
-However, when the application is about to be deployed, a good practice is to lock all privileges and then, to configure the file to only open controlled parts to authorized sessions. To lock all privileges on all resources, put the following `roles.json` file in your project folder (it includes examples of methods):
+The good practice is to keep all data access locked by default thanks to the "none" privilege and to configure the `roles.json` file to only open controlled parts to authorized sessions. For example, to allow some accesses to guest sessions:
 
 ```json title="/Project/Sources/roles.json"
 
