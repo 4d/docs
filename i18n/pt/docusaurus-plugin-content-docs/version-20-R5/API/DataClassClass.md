@@ -455,7 +455,7 @@ The `.get()` function <!-- REF #DataClassClass.get().Summary -->queries the data
 
 In *primaryKey*, pass the primary key value of the entity to retrieve. Em <em x-id="3">primaryKey</em>, passe o valor da chave primária da entidade a recuperar Em <em x-id="3">primaryKey</em>, passe o valor da chave primária da entidade a recuperar O tipo valor deve coresponder com o tipo de chave primária estabelecido na datastore (Inteiro ou texto). You can also make sure that the primary key value is always returned as Text by using the [`.getKey()`](EntityClass.md#getkey) function with the `dk key as string` parameter.
 
-If no entity is found with *primaryKey*, a **Null** entity is returned.
+Se nenhuma entidade for encontrada com *primaryKey*, uma entidade **Null** será retornada.
 
 É aplicado o lazy loading/carregamento diferido, ou seja os dados relacionados são carregados do disco só quando pedidos.
 
