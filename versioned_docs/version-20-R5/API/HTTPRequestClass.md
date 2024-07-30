@@ -169,6 +169,14 @@ Here is the sequence of callback calls:
 4. If an error occurs, `onError` is executed once (and terminates the request)
 5. `onTerminate` is always executed once
 
+
+:::info
+
+For the callback functions to be called when you do not use [`wait()`](#wait) (asynchronous call), the process must be a [worker](../Develop/processes.md#worker-processes) created with [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NOT [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
+
+:::
+
+
 #### event object
 
 An `event` object is returned when a [callback function](#callback-functions) is called. It contains the following properties:
@@ -216,16 +224,16 @@ An authentication object handles the `options.serverAuthentication` or `options.
 
 The `HTTP Parse message` command <!-- REF #HTTP Parse message.Summary -->parses a multipart/form-data text or blob (HTTP "response" message) and extracts the content to an object. Each property of the returned object corresponds to a part of the multipart data<!-- END REF -->.
 
-:::info 
+:::info
 
 HTTP itself is a stateless communication protocol. Within this framework, clients initiate communication by sending "request" messages to servers, specifying details like method, target, headers, content, etc. Servers, in turn, respond with "response" messages that include the same details. `HTTP Parse message` parses either the "request" or the "response" message into a well-organized object.
 
 :::
 
 
-#### Example 
+#### Example
 
-In the following example, we parse the data from a text file containing HTTP requests. 
+In the following example, we parse the data from a text file containing HTTP requests.
 
 Here is the content of the file:
 
@@ -255,7 +263,7 @@ Content-ID: <item2>
 GET https://gmail.googleapis.com/gmail/v1/users/me/messages/18c1b58642b28e2b?format=raw HTTP/1.1
 
 --batch_19438756D576A14ABA87C112F56B9396--
-``` 
+```
 To parse the file:
 
 ```4d
@@ -263,7 +271,7 @@ var $message : Text:=File("/RESOURCES/HTTPrequest.txt").getText()
 var $parsedMessage : Object:=HTTP Parse message($message)
 //$parsedMessage= {
 //headers:{"User-Agent":"4D/20.4.0",...},
-//parts:[{"contentType":"application/http","contentID":"item1",...}], 
+//parts:[{"contentType":"application/http","contentID":"item1",...}],
 //requestLine:"POST /batch/gmail/v1/ HTTP/1.1"
 //}
 ```
