@@ -66,7 +66,7 @@ You can also get a reference on an open remote datastore by passing its local id
 
 > O escopo do id local do banco de dados no qual o armazen de dados foi aberto.
 
-If no *localID* datastore is found, the command returns **Null**.
+Se nenhum datastore *localID* for encontrado, o comando retornará **Null**.
 
 Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
 

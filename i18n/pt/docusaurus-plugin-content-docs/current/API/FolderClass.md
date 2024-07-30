@@ -82,7 +82,7 @@ The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-In the *path* parameter, pass a folder path string. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA").
+No parâmetro *path*, passe uma string de rotas de pasta. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA").
 
 > Only absolute pathnames are supported with the `Folder` command.
 
@@ -239,7 +239,7 @@ On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter 
 
 **Objeto devolvido**
 
-A `4D.File` object with the `isAlias` property set to **true**.
+Um objeto `4D.File` com a propriedade `isAlias` definida como **true**.
 
 #### Exemplo
 

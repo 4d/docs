@@ -245,7 +245,7 @@ Para obter informações pormenorizadas, consulte [esta publicação do blogue](
 
 ## 4D 19 R2
 
-- Um [arquivo .gitignore padrão](../Preferences/general#create-gitignore-file) pode ser criado com os novos projetos
+- A [default .gitignore file](../Preferences/general.md#create-gitignore-file) can be created with new projects
 - Nova API de classe [Blob](../API/BlobClass.md) para lidar com novos objetos [`4D.Blob`](Concepts/dt_blob.md#blob-types)
 - `Suporte a no-bom` e novos caracteres de fim de linha padrão em [`.setText()`](../API/FileClass.md#settext)
 
