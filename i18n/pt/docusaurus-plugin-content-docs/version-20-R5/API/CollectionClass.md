@@ -2622,7 +2622,7 @@ $o.parameters:={name:"Chicago")
 $c:=$myCol.query(":att=:name";$o)
 ```
 
-É possível misturar todos os tipos de argumentos em *queryString*. A *queryString* can contain, for *propertyPath* and *value* parameters:
+É possível misturar todos os tipos de argumentos em *queryString*. Uma *queryString* pode conter, para os parâmetros *propertyPath* e *value*:
 
 - valores diretos (sem placeholders),
 - placeholders indexados ou com nome.
@@ -2655,7 +2655,7 @@ $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
 $result2:=$col.query("company.name = :1";"John's Pizzas")
 ```
 
-> Using a [**collection reference** or **object reference**](#object-or-collection-reference-as-value) in the *value* parameter is not supported with this syntax. You must use the [*querySettings* parameter](#querysettings-parameter).
+> Using a [**collection reference** or **object reference**](#object-or-collection-reference-as-value) in the *value* parameter is not supported with this syntax. Você deve usar o parâmetro [*querySettings*] (#querysettings-parameter).
 
 #### Pesquisa de valores null
 
