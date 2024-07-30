@@ -355,7 +355,7 @@ ALERT($param1+" "+$param2)
 
 ## 4D 19 R2
 
-- 新規プロジェクト作成時に [デフォルトの.gitignoreファイル](../Preferences/general#gitignore-ファイルを作成する) が作成可能
+- A [default .gitignore file](../Preferences/general.md#create-gitignore-file) can be created with new projects
 - 新しい [`4D.Blob`](Concepts/dt_blob.md#blob-の種類) オブジェクトを扱うための新しい[BlobクラスAPI](../API/BlobClass.md)
 - [`.setText()`](../API/FileClass.md#settext) におけるデフォルトの改行コード (EOL) の指定と `no-bom` のサポート
 
