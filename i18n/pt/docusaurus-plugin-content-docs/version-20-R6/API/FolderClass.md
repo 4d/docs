@@ -228,7 +228,7 @@ The `.createAlias()` function <!-- REF #FolderClass.createAlias().Summary -->cre
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
-Por padrão em macOS, a função cria um pseudónimo padrão. You can also create a symbolic link by using the *aliasType* parameter. Estão disponíveis as seguintes constantes:
+Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar uma ligação simbólica utilizando o parâmetro *aliasType*. Estão disponíveis as seguintes constantes:
 
 | Parâmetros         | Valor | Comentário                                      |
 | ------------------ | ----- | ----------------------------------------------- |
