@@ -25,7 +25,7 @@ $myEntity.name:="Dupont" //assigner 'Dupont' à l'attribut 'name'
 $myEntity.firstname:="John" //assigner 'John' à l'attribut 'firstname' 
 $myEntity.save() //sauvegarder l'entité
 ```
-> Une entité est définie uniquement dans le processus où elle a été créée. Vous ne pouvez pas, par exemple, stocker une référence à une entité dans une variable interprocess et l'utiliser dans un autre processus.
+> Une entité est définie uniquement dans le process où elle a été créée. Vous ne pouvez pas, par exemple, stocker une référence à une entité dans une variable interprocess et l'utiliser dans un autre process.
 
 ## Entités et références
 
@@ -145,14 +145,14 @@ Pour attribuer une valeur directement à l'attribut "employer", vous devez passe
  $emp.save()
 ```
 
-You can also directly get the "one" related entity through its primary key value (Number or Text). Par exemple :
+Vous pouvez également obtenir directement l'entité "1" liée par le biais de sa valeur de clé primaire (nombre ou texte). Par exemple :
 
 ```4d
  $emp:=ds.Employee.new()
  $emp.lastname:="Wesson"
  $emp.employer:=ds.Company.get(2)
-  //gets the Company entity with primary key value 2
-  //assigns it to the employee
+  //on obtient l'entité Company avec la valeur de clé primaire 2
+  //on l'assigne à l'employé
  $emp.save()
 ```
 
@@ -217,7 +217,7 @@ $myComp:=ds.Company.get(2) //$myComp does not belong to an entity selection
 $employees:=$myComp.employees //$employees is shareable
 ```
 
-A new entity selection is **alterable** in the following cases:
+Une nouvelle entity selection est **modifiable** dans les cas suivants :
 
 * la nouvelle "entity selection" crée un espace vide à l'aide de la fonction [dataClass.newSelection()](API/DataClassClass.md#newselection) ou de la commande `Create entity selection`,
 * la nouvelle "entity selection" est explicitement copiée comme modifiable avec [entitySelection.copy()](API/EntitySelectionClass.md#copy) ou `OB Copy` (c'est-à-dire sans l'option `ck shared`).
@@ -230,8 +230,8 @@ $toModify:=ds.Company.all().copy() //$toModify is alterable
 
 A new entity selection **inherits** from the original entity selection nature in the following cases:
 
-* Most entity selection functions (such as [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) .
-* the new entity selection is based upon a relation:
+* la nouvelle entity selection résulte de l'une des diverses fonctions de classes ORDA appliquées à une entity selection existante ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
+* la nouvelle entity selection est basée sur une relation :
   * [entity.*attributeName*](API/EntityClass.md#attributename) (par exemple, "company.employees") lorsque *attributeName* est un attribut lié1 vers N mais que l'entity appartient à une "entity selection" (de même nature que [getSelection](API/EntityClass.md#getselection)
   * [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g. "employees.employer") lorsque *attributeName* est un attribut lié (de même nature que celle de la "entity selection"),
   * [.extract()](API/EntitySelectionClass.md#extract), lorsque la collection résultante contient des sélections d'entités (de même nature que l'entity selection'").
@@ -270,9 +270,9 @@ $alterable:=$result.isAlterable() // True
 :::
 
 
-#### Sharing an entity selection between processes (example)
+#### Partage d'une entity selection entre process (exemple)
 
-You work with two entity selections that you want to pass to a worker process so that it can send mails to appropriate persons:
+Vous travaillez avec deux entity selections que vous souhaitez transmettre à un process worker afin qu'il puisse envoyer des mails aux personnes concernées :
 
 ```4d
 
@@ -320,7 +320,7 @@ The `sendMails` method:
 
 ### Entity selections et attributs de stockage
 
-Tous les attributs de stockage (texte, numérique, booléen, date) sont disponibles en tant que propriétés des sélections d'entités et en tant qu'entités. Lorsqu'il est utilisé avec une sélection d'entité, un attribut scalaire retourne une collection de valeurs scalaires. Par exemple :
+Tous les attributs de stockage (texte, numérique, booléen, date) sont disponibles en tant que propriétés d'entity selections et propriétés d'entités. Lorsqu'il est utilisé avec une entity selection, un attribut scalaire retourne une collection de valeurs scalaires. Par exemple :
 
 ```4d
  $locals:=ds.Person.query("city = :1" ; "San Jose") //entity selection de personnes
@@ -329,9 +329,9 @@ Tous les attributs de stockage (texte, numérique, booléen, date) sont disponib
 
 Ce code retourne dans *$localEmails* une collection d'adresses e-mail sous forme de chaînes.
 
-### Entity selections et attributs de relation
+### Entity selections et attributs relationnels
 
-Outre la variété de méthodes de recherche, vous pouvez également utiliser des attributs de relation comme propriétés des sélections d'entités pour retourner de nouvelles sélections d'entités. Par exemple, considérons la structure suivante :
+En plus des multiples manières d'effectuer des recherches, vous pouvez également utiliser les attributs relationnels comme propriétés des entity selections afin de renvoyer de nouvelles entity selections. Par exemple, considérons la structure suivante :
 
 ![](../assets/en/ORDA/entitySelectionRelationAttributes.png)
 
@@ -345,7 +345,7 @@ La dernière ligne renverra, dans $myInvoices, une sélection d'entité de toute
 
 ## Verrouillage d'une entité
 
-Vous devez souvent gérer d'éventuels conflits pouvant survenir lorsque plusieurs utilisateurs ou process se chargent et tentent de modifier les mêmes entités en même temps. Le verrouillage des enregistrements est une méthodologie utilisée dans les bases de données relationnelles pour éviter les mises à jour incohérentes des données. Le concept consiste soit à verrouiller un enregistrement lors de sa lecture afin qu'aucun autre processus ne puisse le mettre à jour, soit à vérifier lors de la sauvegarde d'un enregistrement qu'un autre processus ne l'a pas modifié depuis sa lecture. Le premier est appelé **verrouillage d'enregistrement pessimiste** et garantit qu'un enregistrement modifié peut être écrit au détriment du verrouillage des enregistrements pour d'autres utilisateurs. Ce dernier est appelé **verrouillage d'enregistrement optimiste** et il échange la garantie des privilèges d'écriture sur l'enregistrement contre la flexibilité de décider des privilèges d'écriture uniquement si l'enregistrement doit être mis à jour. Dans le verrouillage d'enregistrement pessimiste, l'enregistrement est verrouillé même s'il n'est pas nécessaire de le mettre à jour. Dans le verrouillage d'enregistrement optimiste, la validité de la modification d'un enregistrement est fixée au moment de la mise à jour.
+Vous devez souvent gérer d'éventuels conflits pouvant survenir lorsque plusieurs utilisateurs ou process se chargent et tentent de modifier les mêmes entités en même temps. Le verrouillage des enregistrements est une méthodologie utilisée dans les bases de données relationnelles pour éviter les mises à jour incohérentes des données. Le concept consiste soit à verrouiller un enregistrement lors de sa lecture afin qu'aucun autre process ne puisse le mettre à jour, soit à vérifier lors de la sauvegarde d'un enregistrement qu'un autre process ne l'a pas modifié depuis sa lecture. Le premier est appelé **verrouillage d'enregistrement pessimiste** et garantit qu'un enregistrement modifié peut être écrit au détriment du verrouillage des enregistrements pour d'autres utilisateurs. Ce dernier est appelé **verrouillage d'enregistrement optimiste** et il échange la garantie des privilèges d'écriture sur l'enregistrement contre la flexibilité de décider des privilèges d'écriture uniquement si l'enregistrement doit être mis à jour. Dans le verrouillage d'enregistrement pessimiste, l'enregistrement est verrouillé même s'il n'est pas nécessaire de le mettre à jour. Dans le verrouillage d'enregistrement optimiste, la validité de la modification d'un enregistrement est évaluée au moment de la mise à jour.
 
 ORDA vous propose deux modes de verrouillage d'entité :
 
