@@ -19,7 +19,7 @@ Name (Number)
 [4D](https://doc.4d.com/4dv20/help/command/en/page1709.html) (1709)
 
 
-<a name="A"><b>A</b></a>
+<a id="A"><b>A</b></a>
 
 
 [ABORT](https://doc.4d.com/4dv20/help/command/en/page156.html) (156) - 
@@ -67,7 +67,7 @@ Name (Number)
 [Average](https://doc.4d.com/4dv20/help/command/en/page2.html) (2) - 
 
 
-<a name="B"><b>B</b></a>
+<a id="B"><b>B</b></a>
 
 
 [BACKUP](https://doc.4d.com/4dv20/help/command/en/page887.html) (887) - 
@@ -96,7 +96,7 @@ Name (Number)
 [BUILD APPLICATION](https://doc.4d.com/4dv20/help/command/en/page871.html) (871) - 
 
 
-<a name="C"><b>C</b></a>
+<a id="C"><b>C</b></a>
 
 
 [C_BLOB](https://doc.4d.com/4dv20/help/command/en/page604.html) (604) - 
@@ -203,7 +203,7 @@ Name (Number)
 [CUT NAMED SELECTION](https://doc.4d.com/4dv20/help/command/en/page334.html) (334) - 
 
 
-<a name="D"><b>D</b></a>
+<a id="D"><b>D</b></a>
 
 
 [Data file](https://doc.4d.com/4dv20/help/command/en/page490.html) (490) - 
@@ -286,7 +286,7 @@ Name (Number)
 [Dynamic pop up menu](https://doc.4d.com/4dv20/help/command/en/page1006.html) (1006) - 
 
 
-<a name="E"><b>E</b></a>
+<a id="E"><b>E</b></a>
 
 
 [EDIT ACCESS](https://doc.4d.com/4dv20/help/command/en/page281.html) (281) - 
@@ -316,7 +316,7 @@ Name (Number)
 [EXPORT TEXT](https://doc.4d.com/4dv20/help/command/en/page167.html) (167) - 
 
 
-<a name="F"><b>F</b></a>
+<a id="F"><b>F</b></a>
 
 
 [False](https://doc.4d.com/4dv20/help/command/en/page215.html) (215) - 
@@ -371,7 +371,7 @@ Name (Number)
 [Frontmost window](https://doc.4d.com/4dv20/help/command/en/page447.html) (447) - 
 
 
-<a name="G"><b>G</b></a>
+<a id="G"><b>G</b></a>
 
 
 [GENERATE CERTIFICATE REQUEST](https://doc.4d.com/4dv20/help/command/en/page691.html) (691) - 
@@ -504,7 +504,7 @@ Name (Number)
 [GRAPH SETTINGS](https://doc.4d.com/4dv20/help/command/en/page298.html) (298) - 
 
 
-<a name="H"><b>H</b></a>
+<a id="H"><b>H</b></a>
 
 
 [HIDE MENU BAR](https://doc.4d.com/4dv20/help/command/en/page432.html) (432) - 
@@ -522,7 +522,7 @@ Name (Number)
 [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) (1160) - 
 
 
-<a name="I"><b>I</b></a>
+<a id="I"><b>I</b></a>
 
 
 [IDLE](https://doc.4d.com/4dv20/help/command/en/page311.html) (311) - 
@@ -564,10 +564,12 @@ Name (Number)
 [Is table number valid](https://doc.4d.com/4dv20/help/command/en/page999.html) (999) - 
 [Is user deleted](https://doc.4d.com/4dv20/help/command/en/page616.html) (616) - 
 [Is waiting mouse up](https://doc.4d.com/4dv20/help/command/en/page1422.html) (1422) - 
+[Is window maximized](https://doc.4d.com/4dv20/help/command/en/page1830.html) (1830) -
+[Is window reduced](https://doc.4d.com/4dv20/help/command/en/page1831.html) (1831) -
 [Is Windows](https://doc.4d.com/4dv20/help/command/en/page1573.html) (1573) - 
 
 
-<a name="J"><b>J</b></a>
+<a id="J"><b>J</b></a>
 
 
 [JSON Parse](https://doc.4d.com/4dv20/help/command/en/page1218.html) (1218) - 
@@ -579,14 +581,14 @@ Name (Number)
 [JSON Validate](https://doc.4d.com/4dv20/help/command/en/page1456.html) (1456) - 
 
 
-<a name="K"><b>K</b></a>
+<a id="K"><b>K</b></a>
 
 
 [Keystroke](https://doc.4d.com/4dv20/help/command/en/page390.html) (390) - 
 [KILL WORKER](https://doc.4d.com/4dv20/help/command/en/page1390.html) (1390) - 
 
 
-<a name="L"><b>L</b></a>
+<a id="L"><b>L</b></a>
 
 
 [Last errors](https://doc.4d.com/4dv20/help/command/en/page1799.html) (1799) - 
@@ -679,7 +681,7 @@ Name (Number)
 [Lowercase](https://doc.4d.com/4dv20/help/command/en/page14.html) (14) - 
 
 
-<a name="M"><b>M</b></a>
+<a id="M"><b>M</b></a>
 
 
 [Macintosh command down](https://doc.4d.com/4dv20/help/command/en/page546.html) (546) - 
@@ -730,7 +732,7 @@ Name (Number)
 [MULTI SORT ARRAY](https://doc.4d.com/4dv20/help/command/en/page718.html) (718) - 
 
 
-<a name="N"><b>N</b></a>
+<a id="N"><b>N</b></a>
 
 
 [New collection](https://doc.4d.com/4dv20/help/command/en/page1472.html) (1472) - 
@@ -751,7 +753,7 @@ Name (Number)
 [Num](https://doc.4d.com/4dv20/help/command/en/page11.html) (11) - 
 
 
-<a name="O"><b>O</b></a>
+<a id="O"><b>O</b></a>
 
 
 [OB Class](https://doc.4d.com/4dv20/help/command/en/page1730.html) (1730) - 
@@ -892,7 +894,7 @@ Name (Number)
 [Outside call](https://doc.4d.com/4dv20/help/command/en/page328.html) (328) - 
 
 
-<a name="P"><b>P</b></a>
+<a id="P"><b>P</b></a>
 
 
 [PAGE BREAK](https://doc.4d.com/4dv20/help/command/en/page6.html) (6) - 
@@ -940,7 +942,7 @@ Name (Number)
 [PUSH RECORD](https://doc.4d.com/4dv20/help/command/en/page176.html) (176) - 
 
 
-<a name="Q"><b>Q</b></a>
+<a id="Q"><b>Q</b></a>
 
 
 [QR BLOB TO REPORT](https://doc.4d.com/4dv20/help/command/en/page771.html) (771) - 
@@ -1002,7 +1004,7 @@ Name (Number)
 [QUIT 4D](https://doc.4d.com/4dv20/help/command/en/page291.html) (291) - 
 
 
-<a name="R"><b>R</b></a>
+<a id="R"><b>R</b></a>
 
 
 [Random](https://doc.4d.com/4dv20/help/command/en/page100.html) (100) - 
@@ -1053,7 +1055,7 @@ Name (Number)
 [Round](https://doc.4d.com/4dv20/help/command/en/page94.html) (94) - 
 
 
-<a name="S"><b>S</b></a>
+<a id="S"><b>S</b></a>
 
 
 [SAVE LIST](https://doc.4d.com/4dv20/help/command/en/page384.html) (384) - 
@@ -1252,7 +1254,7 @@ Name (Number)
 [System folder](https://doc.4d.com/4dv20/help/command/en/page487.html) (487) - 
 
 
-<a name="T"><b>T</b></a>
+<a id="T"><b>T</b></a>
 
 
 [Table](https://doc.4d.com/4dv20/help/command/en/page252.html) (252) - 
@@ -1282,7 +1284,7 @@ Name (Number)
 [Type](https://doc.4d.com/4dv20/help/command/en/page295.html) (295) - 
 
 
-<a name="U"><b>U</b></a>
+<a id="U"><b>U</b></a>
 
 
 [Undefined](https://doc.4d.com/4dv20/help/command/en/page82.html) (82) - 
@@ -1298,7 +1300,7 @@ Name (Number)
 [USERS TO BLOB](https://doc.4d.com/4dv20/help/command/en/page849.html) (849) - 
 
 
-<a name="V"><b>V</b></a>
+<a id="V"><b>V</b></a>
 
 
 [Validate password](https://doc.4d.com/4dv20/help/command/en/page638.html) (638) - 
@@ -1315,7 +1317,7 @@ Name (Number)
 [VOLUME LIST](https://doc.4d.com/4dv20/help/command/en/page471.html) (471) - 
 
 
-<a name="W"><b>W</b></a>
+<a id="W"><b>W</b></a>
 
 
 [WA Back URL available](https://doc.4d.com/4dv20/help/command/en/page1026.html) (1026) - 
@@ -1461,7 +1463,7 @@ Name (Number)
 [WRITE PICTURE FILE](https://doc.4d.com/4dv20/help/command/en/page680.html) (680) - 
 
 
-<a name="X"><b>X</b></a>
+<a id="X"><b>X</b></a>
 
 
 [XML DECODE](https://doc.4d.com/4dv20/help/command/en/page1091.html) (1091) - 
@@ -1470,13 +1472,13 @@ Name (Number)
 [XML SET OPTIONS](https://doc.4d.com/4dv20/help/command/en/page1090.html) (1090) - 
 
 
-<a name="Y"><b>Y</b></a>
+<a id="Y"><b>Y</b></a>
 
 
 [Year of](https://doc.4d.com/4dv20/help/command/en/page25.html) (25) - 
 
 
-<a name="Z"><b>Z</b></a>
+<a id="Z"><b>Z</b></a>
 
 
 [ZIP Create archive](https://doc.4d.com/4dv20/help/command/en/page1640.html) (1640) - 
