@@ -124,7 +124,7 @@ var $myRange : Object
 $myRange:=VP Cells("ViewProArea";2;4;2;3) // C5 a D7
 ```
 
-You can then pass `$myRange` to another 4D View Pro method to modify these cells (for example add a border to the set of cells with [VP SET BORDER](commands/vp-set-border.md)).
+Luego, puede pasar `$myRange` a otro método 4D View Pro para modificar estas celdas (por ejemplo añadir un borde al conjunto de celdas con [VP SET BORDER](commands/vp-set-border.md)).
 
 Los objetos rango 4D View Pro se componen de varias propiedades:
 
