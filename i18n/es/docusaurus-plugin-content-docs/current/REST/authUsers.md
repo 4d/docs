@@ -29,7 +29,7 @@ La secuencia de inicio de sesión del usuario es la siguiente:
 
 2. You call your [`authentify()` function](#authentify) (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges. `authentify()` must be an exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class).
 
-3. La petición `/rest/$catalog/authentify` se envía al servidor junto con las credenciales del usuario. This step only requires a basic login form that do not access data; it can be a [Qodly form](../WebServer/qodly-studio.md) (called via the `/rest/$getWebForm` request).
+3. La petición `/rest/$catalog/authentify` se envía al servidor junto con las credenciales del usuario. Este paso sólo requiere un formulario de inicio de sesión básico que no tenga acceso a datos; puede ser un [formulario Qodly](. /WebServer/qodly-studio.md) (llamado a través de la solicitud `/rest/$getWebForm`).
 
 4. Si el usuario se autentica correctamente, se consume una licencia 4D en el servidor y se aceptan todas las peticiones REST.
 
