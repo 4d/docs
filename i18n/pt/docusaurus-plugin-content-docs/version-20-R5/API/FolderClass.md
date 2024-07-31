@@ -37,7 +37,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 | [<!-- INCLUDE #directory.fullName.Syntax -->](#fullname)<br/><!-- INCLUDE #directory.fullName.Summary -->                         |
 | [<!-- INCLUDE #directory.getIcon().Syntax -->](#geticon)<br/><!-- INCLUDE #directory.getIcon().Summary -->                        |
 | [<!-- INCLUDE #directory.hidden.Syntax -->](#hidden)<br/><!-- INCLUDE #directory.hidden.Summary -->                               |
-| [<!-- INCLUDE #directory.isAlias.Syntax -->](#isalias)<br/><!-- INCLUDE #directory.isAlias.Summary -->                            |
+| [<!-- INCLUDE #FileHandleClass.eof.Syntax -->](#eof)<br/><!-- INCLUDE #FileHandleClass.eof.Summary -->                            |
 | [<!-- INCLUDE #directory.isFile.Syntax -->](#isfile)<br/><!-- INCLUDE #directory.isFile.Summary -->                               |
 | [<!-- INCLUDE #directory.isFolder.Syntax -->](#isfolder)<br/><!-- INCLUDE #directory.isFolder.Summary -->                         |
 | [<!-- INCLUDE #directory.isPackage.Syntax -->](#ispackage)<br/><!-- INCLUDE #directory.isPackage.Summary -->                      |
@@ -57,7 +57,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 | Release | Mudanças                    |
 | ------- | --------------------------- |
-| 19 R8   | Support of `fk home folder` |
+| 19 R8   | Suporte de `fk home folder` |
 | 17 R5   | Adicionado                  |
 
 </details>
@@ -82,7 +82,7 @@ The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-In the *path* parameter, pass a folder path string. Pode utilizar uma string personalizada ou um sistema de arquivos (por exemplo, "/DATA").
+No parâmetro *path*, passe uma string de rotas de pasta. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA").
 
 > Only absolute pathnames are supported with the `Folder` command.
 
@@ -130,7 +130,7 @@ If the command is called from a component, pass the optional *parameter to get t
 
 <!-- REF #4D.Folder.new().Syntax -->
 
-**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer ) : 4D.Folder<!-- END REF -->
+**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer { ; \* } ) : 4D.Folder<!-- END REF -->
 
 #### Descrição
 
@@ -170,8 +170,8 @@ If necessary, the function creates the folder hierachy as described in the [plat
 
 **Valor retornado**
 
-- **True** if the folder is created successfully;
-- **False** if a folder with the same name already exists or if an error occured.
+- **True** se a pasta for criada com sucesso;
+- **False** se já existir uma pasta com o mesmo nome ou se tiver ocorrido um erro.
 
 #### Exemplo 1
 
@@ -239,7 +239,7 @@ On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter 
 
 **Objeto devolvido**
 
-A `4D.File` object with the `isAlias` property set to **true**.
+Um objeto `4D.File` com a propriedade `isAlias` definida como **true**.
 
 #### Exemplo
 
@@ -294,7 +294,7 @@ When `Delete only if empty` is passed or if you omit the option parameter:
 - A pasta só é apagada se estiver vazia; caso contrário, o comando não faz nada e é gerado um erro -47.
 - Se a pasta não existir, o erro -120 é gerado.
 
-When `Delete with contents` is passed:
+Quando `Delete with contents` é passado:
 
 - A pasta, juntamente com todo o seu conteúdo, é apagada.
   **Warning**: Even when this folder and/or its contents are locked or set to read-only, if the current user has suitable access rights, the folder (and contents) is still deleted.
@@ -424,7 +424,7 @@ The *newName* parameter must comply with naming rules (e.g., it must not contain
 
 **Objeto devolvido**
 
-The renamed `Folder` object.
+O objeto `Folder` renomeado.
 
 #### Exemplo
 

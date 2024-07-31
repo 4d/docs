@@ -2,5 +2,9 @@
   "title": {
     "message": "4D Documentation",
     "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "4D Logo",
+    "description": "The alt text of navbar logo"
   }
 }

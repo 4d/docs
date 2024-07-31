@@ -41,7 +41,7 @@ Las hojas de cálculo se componen de líneas y columnas. A cada línea se le aso
 
 - Para seleccionar varias celdas continuas, arrastre el ratón de un extremo a otro de la selección. También puede hacer clic en los dos extremos de la selección mientras mantiene presionada la tecla Mayús.
 
-- To select all cells in the spreadsheet, click on the cell at the top left of the area:
+- Para seleccionar todas las celdas de la hoja de cálculo, haga clic en la celda situada en la parte superior izquierda del área:
   ![](../assets/en/ViewPro/vpSelectAll.PNG)
 
 - Para seleccionar una columna, haga clic en la letra (o conjunto de letras) correspondiente.
@@ -80,7 +80,7 @@ Dependiendo del área seleccionada, también están disponibles las siguientes o
 - haga clic en una celda o en un rango de celdas:
   - **Filtrar**: permite ocultar la línea mediante filtros (ver "Filtrar las líneas" en la [documentación de SpreadJS](https://developer.mescius.com/spreadjs/docs/)).
   - **Ordenar**: ordena el contenido de la columna.
-  - **Insertar comentario**: permite al usuario introducir un comentario para un área. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:\
+  - **Insertar comentario**: permite al usuario introducir un comentario para un área. Cuando se ha introducido un comentario para un área, la celda superior izquierda del área muestra un pequeño triángulo rojo:\
     ![](../assets/en/ViewPro/vpContext2.PNG)
 
 ## Utilizando los comandos de 4D View Pro
@@ -152,4 +152,4 @@ Los objetos rango 4D View Pro se componen de varias propiedades:
 - .sjs
 - .pdf (sólo para exportación)
 
-For more details, check out the description of [VP IMPORT DOCUMENT](commands/vp-import-document.md) and [VP EXPORT DOCUMENT](commands/vp-export-document.md).
+Para más detalles, consulte la descripción de [VP IMPORT DOCUMENT](commands/vp-import-document.md) y [VP EXPORT DOCUMENT](commands/vp-export-document.md).

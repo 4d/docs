@@ -9,7 +9,7 @@ As horas são em formato de 24 horas.
 
 Um valor de Hora pode ser tratado como um número. O número retornado de uma Hora será o número de segundos desde a maia noite (00:00:00) contidos nesse valor de hora.
 
-**Nota:** en el manual de _referencia del lenguaje 4D_, los parámetros de tipo Hora en las descripciones de los comandos se llaman Hora, excepto cuando se indique lo contrario.
+**Nota:** No manual _4D Language Reference_, os parâmetros de tempo nas descrições de comandos são indicados como Time, exceto quando indicado de outra forma.
 
 ## Constantes literais de tipo hora
 
@@ -27,7 +27,7 @@ Aqui são exemplos de constantes de tipo hora:
 
 Uma hora nula se escreve ?00:00:00?
 
-**Consejo:** el Editor de código incluye un acceso directo para introducir una hora null. To type a null time, enter the question mark (?) character and press Enter.
+**Dica:** O Editor de Código inclui um atalho para inserir um horário nulo. Para digitar um tempo nulo, digite o ponto de interrogação (?) e pressione Enter.
 
 ## Operadores de horas
 
@@ -57,23 +57,23 @@ Uma hora nula se escreve ?00:00:00?
 
 ### Exemplo 1
 
-Para obtener una expresión de tipo hora a partir de una expresión que combina una expresión de hora con un número, utilice los comandos `Time` y `Time string`.
+Para obter uma expressão de tempo de uma expressão que combina uma expressão de tempo com um número, use os comandos `Hora` e `String do tempo`.
 
-Puede combinar expresiones de los tipos hora y número utilizando las funciones `Time` o `Current time`:
+Você pode combinar expressões dos tipos hora e número utilizando as funções `Time` ou `Current time`:
 
 ```4d
-	//The following line assigns to $vlSeconds the number of seconds   
-	//that will be elapsed between midnight and one hour from now
+	//A linha a seguir atribui a $vlSeconds o número de segundos   
+	//que serão decorridos entre meia-noite e uma hora a partir de agora
 $vlSeconds:=Current time+3600
-	//The following line assigns to $vHSoon the time it will be in one hour
+	//A linha a seguir atribui a $vHSoon o horário que será em uma hora
 $vhSoon:=Time(Current time+3600)
 ```
 
 A segunda linha pode ser escrita de forma mais simples:
 
 ```4d
-  // The following line assigns to $vHSoon the time it will be in one hour
- $vhSoon:=Current time+?01:00:00?
+  // A linha a seguir atribui a $vHSoon a hora que será em uma hora
+ $vhSoon:=Hora atual+?01:00:00?
 ```
 
 ### Exemplo 2
@@ -81,8 +81,8 @@ A segunda linha pode ser escrita de forma mais simples:
 O operador Modulo pode ser usado, mais concretamente, para somar tempos que considerem o formato de 24 horas:
 
 ```4d
-$t1:=?23:00:00? // It is 23:00 hours
-  // We want to add 2 and a half hours
-$t2:=$t1 +?02:30:00? // With a simple addition, $t2 is ?25:30:00?
-$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 is ?01:30:00? and it is 1:30 hour the next morning
+$t1:=?23:00? // É 23:00 horas
+  // Queremos adicionar 2 horas e meia
+$t2:=$t1 +?02:30:00? // Com uma adição simples, $t2 é ?25:30:00?
+$t2:=($t1 +? 2:30:00?)%?24:00:00? // $t2 é ?01:30:00? e é 1:30 hora na manhã seguinte
 ```

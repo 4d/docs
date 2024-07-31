@@ -56,7 +56,7 @@ ASSERT($status.success)
 | Parâmetro | Tipo                          |    | Descrição                                          |
 | --------- | ----------------------------- | -- | -------------------------------------------------- |
 | settings  | Object                        | -> | Parâmetros para gerar ou carregar um par de chaves |
-| result    | 4D. CryptoKey | <- | Object encapsulating an encryption key pair        |
+| result    | 4D. CryptoKey | <- | Objeto que contém um par de chaves de encriptação  |
 
 <!-- END REF -->
 
@@ -291,7 +291,7 @@ Definição PEM de uma chave de cifrado a carregar. Se a chave for uma chave pri
 
 The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string<!-- END REF --> using the `CryptoKey` object keys and provided *options*. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
 
-The `CryptoKey` must contain a valid **private** key.
+A `CryptoKey` deve conter uma chave **privada** válida.
 
 #### *opções*
 
@@ -304,7 +304,7 @@ The `CryptoKey` must contain a valid **private** key.
 
 #### *Resultado*
 
-The utf8 representation of the *message* string.
+A representação utf8 da string *message*.
 
 <!-- END REF -->
 
@@ -375,7 +375,7 @@ Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "
 
 The `.verify()` function <!-- REF #CryptoKey.verify().Summary -->verifies the base64 signature against the utf8 representation of *message*<!-- END REF --> using the `CryptoKey` object keys and provided *options*.
 
-The `CryptoKey` must contain a valid **public** key.
+A `CryptoKey` deve conter uma chave **pública** válida.
 
 #### *opções*
 

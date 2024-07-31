@@ -20,9 +20,9 @@ Avec une version française de 4D, une heure est structurée sous la forme heure
 Voici quelques exemples de constantes littérales de type heure :
 
 ```4d
-?00:00:00? //midnight
-?09:30:00? //9:30 am
-?13:01:59? //1 pm, 1 minute, and 59 seconds
+?00:00:00? //minuit
+?09:30:00? //9:30 du matin
+?13:01:59? //13 heures 1 minute et 59 secondes
 ```
 
 Une heure nulle s’écrit ?00:00:00?
@@ -46,13 +46,13 @@ Une heure nulle s’écrit ?00:00:00?
 |                     |                 |          | ?01:02:03? = ?01:02:04? | False                                      |
 | Inégalité           | Heure # Heure   | Boolean  | ?01:02:03? # ?01:02:04? | True                                       |
 |                     |                 |          | ?01:02:03? # ?01:02:03? | False                                      |
-| Supérieur à         | Time > Time     | Boolean  | ?01:02:04? > ?01:02:03? | True                                       |
+| Supérieur à         | Heure > Heure   | Boolean  | ?01:02:04? > ?01:02:03? | True                                       |
 |                     |                 |          | ?01:02:03? > ?01:02:03? | False                                      |
-| Inférieur à         | Time < Time     | Boolean  | ?01:02:03? < ?01:02:03? | True                                       |
+| Inférieur à         | Heure < Heure   | Boolean  | ?01:02:03? < ?01:02:03? | True                                       |
 |                     |                 |          | ?01:02:03? < ?01:02:03? | False                                      |
-| Supérieur ou égal à | Time >= Time    | Boolean  | ?01:02:03? >=?01:02:03? | True                                       |
+| Supérieur ou égal à | Heure >= Heure  | Boolean  | ?01:02:03? >=?01:02:03? | True                                       |
 |                     |                 |          | ?01:02:03? >=?01:02:03? | False                                      |
-| Inférieur ou égal à | Time <= Time    | Boolean  | ?01:02:03? <=?01:02:03? | True                                       |
+| Inférieur ou égal à | Heure <= Heure  | Boolean  | ?01:02:03? <=?01:02:03? | True                                       |
 |                     |                 |          | ?01:02:04? <=?01:02:03? | False                                      |
 
 ### Exemple 1
@@ -80,8 +80,8 @@ La seconde ligne peut également être écrite de la façon suivante :
 L'opérateur Modulo permet notamment d'ajouter des heures en tenant compte du format sur 24 heures d'une journée :
 
 ```4d
-$t1:=?23:00:00? // It is 23:00 hours
-  // We want to add 2 and a half hours
-$t2:=$t1 +?02:30:00? // With a simple addition, $t2 is ?25:30:00?
-$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 is ?01:30:00? and it is 1:30 hour the next morning
+$t1:=?23:00:00? // C'est 23:00 heures
+  // Nous voulons ajouter 2 heures et demie
+$t2:=$t1 +?02:30:00? // Avec un ajout simple, $t2 vaut ?25:30:00?
+$t2:=($t1 +? 2:30:00?)%?24:00:00? // $t2 vaut ?01:30:00? et il est 1:30 heure le lendemain matin
 ```

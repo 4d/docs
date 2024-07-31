@@ -71,9 +71,9 @@ Utilicemos como ejemplo una conexión de intranet. Supongamos que la dirección 
 | URL introducida en el navegador web  | Valor del parámetro $1   |
 | ------------------------------------ | ------------------------ |
 | 123.4.567.89                         | /                        |
-| http://123.4.567.89                  | /                        |
+| http://123.45.67.89                  | /                        |
 | 123.4.567.89/Customers               | /Customers               |
-| http://123.4.567.89/Customers/Add    | /Customers/Add           |
+| http://123.45.67.89/Customers/Add    | /Customers/Add           |
 | 123.4.567.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
 Tenga en cuenta que es libre de utilizar este parámetro a su conveniencia. 4D simplemente ignora el valor pasado más allá de la parte del host de la URL. Por ejemplo, puede establecer una convención en la que el valor "*/Customers/Add*" significa "ir directamente a añadir un nuevo registro en la tabla `[Customers]`.” Al proporcionar a los usuarios de la web una lista de posibles valores y/o marcadores por defecto, puede dar accesos directos a diferentes partes de su aplicación. De este modo, los usuarios de la web pueden acceder rápidamente a los recursos de su sitio web sin tener que recorrer toda la ruta de navegación cada vez que realicen una nueva conexión.

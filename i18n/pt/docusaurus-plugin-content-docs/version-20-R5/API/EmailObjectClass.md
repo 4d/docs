@@ -32,7 +32,7 @@ Objetos de e-mail fornecem as seguintes propriedades:
 | [<!-- INCLUDE #EmailObjectClass.comments.Syntax -->](#comments)<br/><!-- INCLUDE #EmailObjectClass.comments.Summary -->                |
 | [<!-- INCLUDE #EmailObjectClass.from.Syntax -->](#from)<br/><!-- INCLUDE #EmailObjectClass.from.Summary -->                            |
 | [<!-- INCLUDE #EmailObjectClass.headers.Syntax -->](#headers)<br/><!-- INCLUDE #EmailObjectClass.headers.Summary -->                   |
-| [<!-- INCLUDE #EmailObjectClass.htmlBody.Syntax -->](#htmlbody)<br/><!-- INCLUDE #EmailObjectClass.htmlBody.Summary -->                |
+| [<!-- INCLUDE #EmailObjectClass.comments.Syntax -->](#comments)<br/><!-- INCLUDE #EmailObjectClass.comments.Summary -->                |
 | [<!-- INCLUDE #EmailObjectClass.id.Syntax -->](#id)<br/><!-- INCLUDE #EmailObjectClass.id.Summary -->                                  |
 | [<!-- INCLUDE #EmailObjectClass.inReplyTo.Syntax -->](#inreplyto)<br/><!-- INCLUDE #EmailObjectClass.inReplyTo.Summary -->             |
 | [<!-- INCLUDE #EmailObjectClass.keywords.Syntax -->](#keywords)<br/><!-- INCLUDE #EmailObjectClass.keywords.Summary -->                |
@@ -139,7 +139,7 @@ The `.bodyStructure` object contains the following properties:
 | disposition | Text                   | Valor do campo de cabeçalho Conteúdo - Disposição da parte                                                                                                                 |
 | Línguagem   | Coleção de textos      | List of language tags, as defined in [RFC3282](https://tools.ietf.org/html/rfc3282), in the Content-Language header field of the part, if present.         |
 | location    | Text                   | URI, as defined in [RFC2557](https://tools.ietf.org/html/rfc2557), in the Content-Location header field of the part, if present.                           |
-| subParts    | Uma coleção de objetos | Body parts of each child (collection of *EmailBodyPart* objects)                                                                                        |
+| subParts    | Uma coleção de objetos | Partes do corpo de cada filho (coleção de objetos *EmailBodyPart*)                                                                                      |
 | headers     | Uma coleção de objetos | List of all header fields in the part, in the order they appear in the message (collection of *EmailHeader* objects, see [headers](#headers-) property) |
 
 ## .bodyValues
@@ -320,7 +320,7 @@ The `.sendAt` property contains the <!-- REF #EmailObjectClass.sendAt.Summary --
 
 The `.sender` property contains the <!-- REF #EmailObjectClass.sender.Summary -->email source [addresse(s)](#email-addresses) of the email<!-- END REF -->.
 
-Each email you send out has both the **sender** and **[from](#from)** addresses:
+Cada e-mail que você envia tem os endereços **sender** e **[from](#from)**:
 
 - o domínio do remetente é o que o servidor de e-mail de recebimento recebe ao abrir a sessão,
 - o endereço a partir é o que o(s) destinatário(s) verá(s).
@@ -388,7 +388,7 @@ The `MAIL Convert from MIME` command <!-- REF #_command_.MAIL Convert from MIME.
 
 > 4D follows the [JMAP specification](https://jmap.io/spec-mail.html) to format the returned email object.
 
-Pass in *mime* a valid MIME document to convert. Pode ser fornecido por qualquer servidor de correio ou aplicativo. You can pass a BLOB or a text *mime* parameter. Se o MIME vier de um arquivo, é recomendado utilizar um parâmetro BLOB para evitar problemas relacionados ao conjunto de caracteres e conversões de quebra de linha.
+Passe em *mime* um documento MIME válido para converter. Pode ser fornecido por qualquer servidor de correio ou aplicativo. Você pode passar um BLOB ou um parâmetro *mime*. Se o MIME vier de um arquivo, é recomendado utilizar um parâmetro BLOB para evitar problemas relacionados ao conjunto de caracteres e conversões de quebra de linha.
 
 #### Objeto devolvido
 

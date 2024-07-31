@@ -118,7 +118,7 @@ Para que este principio funcione en modo compilado, es imprescindible que las va
 En el código 4D, se puede acceder a las variables dinámicas utilizando un puntero obtenido con el comando `OBJECT Get pointer`. Por ejemplo:
 
 ```4d
-  // assign the time 12:00:00 to the variable for the "tstart" object
+  // asigna la hora 12:00:00 a la variable para el objeto "tstart"
  $p :=OBJECT Get pointer(Object named;"tstart")
  $p->:=?12:00:00?
 ```
@@ -153,9 +153,9 @@ Sin embargo, esta propiedad tiene una función tipográfica en los siguientes ca
 
 #### Gramática JSON
 
-| Nombre             | Tipos de datos | Valores posibles                                                                                                                                                                                                                                                                                                                     |
-| ------------------ | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| dataSourceTypeHint | string         | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li> |
+| Nombre             | Tipos de datos | Valores posibles                                                                                                                                                                                                                                                                                                                          |
+| ------------------ | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSourceTypeHint | string         | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Sólo para Array/selección list box*: "integer", "object"</li> |
 
 #### Objetos soportados
 
@@ -239,7 +239,7 @@ Nombre del [área externa del plug-in](pluginArea_overview.md) asociada al objet
 
 #### Objetos soportados
 
-[Plug-in Area](pluginArea_overview.md)
+[Área de plugin](pluginArea_overview.md)
 
 ---
 
@@ -289,7 +289,7 @@ Para la traducción de la aplicación, puede introducir una referencia XLIFF en 
 
 Esta propiedad define el tipo de cálculo que se realizará en un área [pie de columna](listbox_overview.md#list-box-footers).
 
-> The calculation for footers can also be set using the [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4dv19/help/command/en/page1140.html) 4D command.
+> El cálculo de los pies de página también puede establecerse utilizando el comando 4D [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4dv19/help/command/en/page1140.html).
 
 Hay varios tipos de cálculos disponibles. La tabla siguiente muestra los cálculos que se pueden utilizar según el tipo de datos que se encuentran en cada columna e indica el tipo afectado automáticamente por 4D a la variable de pie de página (si no está escrita por el código):
 

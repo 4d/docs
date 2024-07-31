@@ -207,7 +207,7 @@ You can move any graphic or active object in the form including fields and objec
 - Mova o objeto um píxel de cada vez utilizando as teclas de seta,
 - Mova o objeto em etapas usando as teclas de seta (etapas de 20 píxeis por padrão),
 
-Ao começar a arrastar o objeto selecionado, seus manipuladores desaparecem. 4D displays markers that show the location of the object’s boundaries in the rulers so that you can place the object exactly where you want it. Be careful not to drag a handle. Dragging a handle resizes the object. You can press the **Shift** key to carry out the move with a constraint.
+Ao começar a arrastar o objeto selecionado, seus manipuladores desaparecem. 4D displays markers that show the location of the object’s boundaries in the rulers so that you can place the object exactly where you want it. Tenha cuidado para não arrastar uma alça. Dragging a handle resizes the object. You can press the **Shift** key to carry out the move with a constraint.
 
 When the [Magnetic Grid](#using-the-magnetic-grid) is on, objects are moved in stages indicating noticeable locations.
 
@@ -455,7 +455,7 @@ An attribute value defined in a style sheet can be overridden in the JSON form d
 
 ## Criação de list box
 
-You can create new entity selection list boxes quickly with the **List box builder**. The new list box can be used immediately or it can be edited via the Form Editor.
+Puede crear rápidamente nuevos list box de tipo selección de entidades con el **Generador de list box**. The new list box can be used immediately or it can be edited via the Form Editor.
 
 The List box builder lets you create and fill entity selection list boxes in a few simple operations.
 

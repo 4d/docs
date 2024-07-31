@@ -18,9 +18,9 @@ To replace default 4D Web Server error pages with your own pages you just need t
 
 *	put custom HTML pages at the first level of the application's web folder,
 
-*	name the custom pages "{statusCode}.html" (for example, "404.html"). 
+*	name the custom pages "\{statusCode\}.html" (for example, "404.html"). 
 
-You can define one error page per status code and/or a generic error page for a range of errors, named "{number}xx.html". For example, you can create "4xx.html" for generic client errors. The 4D Web Server will first look for a {statusCode}.html page then, if it does not exist, a generic page.
+You can define one error page per status code and/or a generic error page for a range of errors, named "{number}xx.html". For example, you can create "4xx.html" for generic client errors. The 4D Web Server will first look for a \{statusCode\}.html page then, if it does not exist, a generic page.
 
 For example, when an HTTP response returns a status code 404:
 

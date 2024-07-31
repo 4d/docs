@@ -16,7 +16,7 @@ Le langage 4D prend en charge les opérateurs **binaires** et **ternaires** :
 
 Les valeurs que les opérateurs affectent sont des opérandes. Dans l'expression `1 + 2`, le symbole + est un opérateur binaire et ses deux opérandes sont les valeurs 1 et 2.
 
-## Opérateur d'assignation
+## Opérateur d'affectation
 
 **L'opérateur d'affectation** (`a:=b`) initialise ou met à jour la valeur de `a` avec la valeur de `b` :
 
@@ -41,8 +41,8 @@ Les résultats des opérateurs dépendent des **types de données** auxquels ils
 - [**Opérateurs sur les images**](dt_picture.md#operateurs-sur-les-images)
 - [**Opérateurs sur les pointeurs**](dt_pointer.md#operateurs-sur-les-pointeurs)
 - [**Opérateurs sur les chaînes**](dt_string.md#operateurs-sur-les-chaines)
-- [**Object reference operators**](dt_object.md#object-operators)
-- [**Collection reference operators**](dt_collection.md#collection-operators)
+- [**Opérateurs sur les références d'objets**](dt_object.md#operateurs-sur-les-objets)
+- [**Opérateurs sur les références de collections**](dt_collection.md#operateurs-sur-les-collections)
 - [**Opérateurs sur les Null**](dt_null_undefined.md#operateurs-sur-les-null)
 - [**Opérateurs sur les Undefined**](dt_null_undefined.md#operateurs-sur-les-undefined)
 

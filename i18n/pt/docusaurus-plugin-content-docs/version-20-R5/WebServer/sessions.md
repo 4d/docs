@@ -5,14 +5,14 @@ title: Sessões web
 
 The 4D web server provides built-in features for managing **web sessions**. Creating and maintaining web sessions allows you to control and improve the user experience on your web application. When web sessions are enabled, web clients can reuse the same server context from one request to another.
 
-Web sessions allow to:
+As sessões Web permitem:
 
 - handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web sessions are **scalable**),
 - manage session through a `Session` object and the [Session API](API/SessionClass.md),
 - store and share data between processes of a web client using the [.storage](../API/SessionClass.md#storage) of the session,
 - associate privileges to the user running the session.
 
-## Usages
+## Usos
 
 As sessões Web são usadas para:
 
@@ -71,7 +71,7 @@ Os processos Web geralmente não terminam, eles são reciclados em um pool para 
 
 :::
 
-## Storing and sharing session information
+## Armazenar e compartilhar informações de sessão
 
 Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) property which is a [shared object](Concepts/shared.md). This property allows you to share information between all processes handled by the session.
 

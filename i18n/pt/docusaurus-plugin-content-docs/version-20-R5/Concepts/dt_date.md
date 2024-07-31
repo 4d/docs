@@ -7,7 +7,7 @@ As variáveis, campos ou expressões de tipo data podem ter um intervalo entre 1
 
 Apesar do modo de representação de datas de C_DATE permitir trabalhar com datas até o ano 32 767, certas operações que passam pelo sistema impõe um limite inferior.
 
-**Nota:** en el manual de Referencia del Lenguaje 4D, los parámetros de tipo Fecha en las descripciones de los comandos se denominan Fecha, salvo que se indique lo contrario.
+\*\*Nota: No manual de referência da linguagem 4D, os parâmetros de data nas descrições de comandos são indicados como Date, exceto quando indicado de outra forma.
 
 ## Constantes literais de tipo hora
 
@@ -19,13 +19,13 @@ Uma constante literal de tipo data está cercada de sinais de exclamação (!...
 !2015-12-31!
 ```
 
-A null date is specified by _!00-00-00!_.
+Uma data nula é especificada por _!00-00-00!_.
 
-**Consejo:** el Editor de código incluye un acceso directo para introducir una fecha null. To type a null date, enter the exclamation (!) character and press Enter.
+\*\*Dica: o Editor de métodos inclui um acesso direto para introduzir uma hora nula. Para digitar uma data nula, digite a exclamação (!) e pressione Enter.
 
 **Notas:**
 
-- For compatibility reasons, 4D accepts date inputs using system format with two-digit years, such as !12/04/98!. A two-digit year is assumed to be in the 20th or 21st century based on whether it is greater or less than 30, unless this default setting has been changed using the `SET DEFAULT CENTURY` command.
+- Por motivos de compatibilidade, 4D aceita entradas de data usando o formato do sistema com dois dígitos de anos, como !12/04/98! Para ver se um ano com dois dígitos será assumido como pertencente ao século XX ou XXI depende de se ele for maior ou menor que 30, a menos que essa configuração padrão tenha sido alterada usando o comando `SET DEFAULT CENTURY`.
 - Se marcou a opção "Utilizar a configuração regional del sistema" ( ver Página Métodos), deve utilizar o formato de data definido em seu sistema. Para sistemas dos Estados Unidos, datas são digitadas no formato mês/dia/ano, com uma barra "/" separando os valores.
 
 ## Operadores de data

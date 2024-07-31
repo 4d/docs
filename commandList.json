@@ -292,6 +292,7 @@
       "filehandle": "API/FileHandleClass",
       "folder": "API/FolderClass",
       "function": "API/FunctionClass",
+      "httpagentclass": "API/HTTPAgentClass",
       "http parse message": "API/HTTPRequestClass",
       "httprequest": "API/HTTPRequestClass",
       "imaptransporter": "API/IMAPTransporterClass",

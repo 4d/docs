@@ -1175,10 +1175,10 @@ persons.lastname, persons.firstname"; "main"; 30)
 
 <details><summary>História</summary>
 
-| Release | Mudanças                                     |
-| ------- | -------------------------------------------- |
-| 20      | Server side support, new `options` parameter |
-| 17 R6   | Adicionado                                   |
+| Release | Mudanças                                              |
+| ------- | ----------------------------------------------------- |
+| 20      | Suporte do lado do servidor, novo parâmetro `options` |
+| 17 R6   | Adicionado                                            |
 
 </details>
 

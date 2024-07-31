@@ -25,7 +25,7 @@ Al escribir una fórmula, puede utilizar diferentes atajos:
 
 ![](../assets/en/ViewPro/formula2.png)
 
-También puede crear fórmulas con nombre que pueden ser llamadas a través de su nombre. To do so, enter these formulas using the [VP ADD FORMULA NAME](commands/vp-add-formula-name.md) command.
+También puede crear fórmulas con nombre que pueden ser llamadas a través de su nombre. Para hacerlo, ingresa estas fórmulas utilizando el comando [VP ADD FORMULA NAME](commands/vp-add-formula-name.md).
 
 ### Operadores y operandos
 
@@ -135,7 +135,7 @@ Las funciones personalizadas 4D permiten acceder, desde sus fórmulas 4D View Pr
 
 Las funciones personalizadas de 4D pueden recibir [parámetros](#parámetros) del área 4D View Pro y devolver valores.
 
-You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions) command. Ejemplos:
+Todas las funciones se declaran con el comando [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions). Ejemplos:
 
 ```4d
 $o:=New object
@@ -228,7 +228,7 @@ Los parámetros Fecha y Objeto se tratan de la siguiente manera:
 | value     | Fecha | Valor fecha      |
 | time      | Real  | Hora en segundos |
 
-- Objects will be passed as [object](Concepts/dt_object.md) with a  `.value` property containing the parameter:
+- Los objetos se pasarán como [object](Concepts/dt_object.md) con una propiedad `.value` que contiene el parámetro:
 
 | Propiedad | Tipo   | Descripción      |
 | --------- | ------ | ---------------- |
@@ -278,7 +278,7 @@ VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 
 ## Compatibilidad
 
-Existen soluciones alternativas para declarar campos o métodos como funciones en sus áreas 4D View Pro. Estas soluciones se mantienen por razones de compatibilidad y pueden utilizarse en casos concretos. However, using the [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions.md) command is recommended.
+Existen soluciones alternativas para declarar campos o métodos como funciones en sus áreas 4D View Pro. Estas soluciones se mantienen por razones de compatibilidad y pueden utilizarse en casos concretos. Sin embargo, se recomienda utilizar el comando [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions.md).
 
 ### Referenciación de campos mediante la estructura virtual
 
@@ -309,7 +309,7 @@ Por ejemplo, si declaró el campo "Name" de la tabla "People" en la estructura v
 =LEN(PEOPLE_NAME())
 ```
 
-> If a field has the same name as a [4D method](../Concepts/methods.md), it takes priority over the method.
+> Si un campo tiene el mismo nombre que un [método 4D](../Concepts/methods.md), tiene prioridad sobre el método.
 
 #### Ejemplo
 
@@ -351,7 +351,7 @@ Queremos imprimir el nombre de una persona en una celda del área 4D View Pro ut
 
 ### Declarar los métodos autorizados
 
-Puede llamar directamente a los métodos del proyecto 4D desde sus fórmulas 4D View Pro. For security reasons, you must declare explicitly methods that can be called by the user with the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command.
+Puede llamar directamente a los métodos del proyecto 4D desde sus fórmulas 4D View Pro. Por razones de seguridad, debe declarar explícitamente los métodos que pueden ser llamados por el usuario con el método [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md).
 
 #### Requisitos
 

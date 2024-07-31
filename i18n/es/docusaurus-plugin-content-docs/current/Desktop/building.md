@@ -7,7 +7,7 @@ title: Generador de aplicaciones
 
 El generador de aplicaciones le permite:
 
-- Build a compiled structure or component, without interpreted code,
+- Crear una estructura o componente compilado, sin código interpretado,
 - Generar una aplicación autónoma ejecutable, _es decir_, fusionada con 4D Volume Desktop, el motor de base de datos 4D,
 - Generar diferentes aplicaciones a partir de la misma estructura compilada mediante un proyecto XML,
 - Generar aplicaciones cliente-servidor homogéneas,

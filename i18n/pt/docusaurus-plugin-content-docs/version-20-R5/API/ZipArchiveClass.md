@@ -66,7 +66,7 @@ You can pass a 4D. File, a 4D. Folder, or a zip structure object as first parame
 
 - *fileToZip*: You simply pass a `4D.File` to compress.
 
-- *folderToZip*: You pass a `4D.Folder` to compress. In this case, the *options* parameter allows you to compress only the contents of the folder (i.e., exclude the enclosing folder). By default, `ZIP Create archive` will compress the folder and its contents, so that the decompressing operation will recreate a folder. If you want the decompressing operation to restore only the contents of the folder, pass the `ZIP Without enclosing folder` constant in the *options* parameter.
+- *folderToZip*: você passa um `4D.Folder` para compactar. In this case, the *options* parameter allows you to compress only the contents of the folder (i.e., exclude the enclosing folder). By default, `ZIP Create archive` will compress the folder and its contents, so that the decompressing operation will recreate a folder. If you want the decompressing operation to restore only the contents of the folder, pass the `ZIP Without enclosing folder` constant in the *options* parameter.
 
 - *zipStructure*: You pass an object describing the ZIP archive object. As propriedades abaixo estão disponíveis para definir a estrutura:
 
@@ -219,7 +219,7 @@ Pass a `4D.File` object referencing the compressed ZIP archive in the *zipFile* 
 
 If the *zipFile* is password protected, you need to use the optional *password* parameter to provide a password. Se uma senha for exigida mas não for passada, quando tentar ler os conteúdos do arquivo um erro será gerado.
 
-**Archive object**
+**Objeto arquivo**
 
 The returned `4D.ZipArchive` object contains a single [`root`](#root) property whose value is a `4D.ZipFolder` object. Esta pasta descreve todo o conteúdo do ficheiro ZIP.
 

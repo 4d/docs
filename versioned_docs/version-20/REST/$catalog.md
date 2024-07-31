@@ -13,7 +13,7 @@ The catalog describes all the dataclasses and attributes available in the datast
 |---|---|---|
 |[**$catalog**](#catalog)|`/$catalog`|Returns a list of the dataclasses in your project along with two URIs|
 |[**$catalog/$all**](#catalogall)|`/$catalog/$all`|Returns information about all of your project's dataclasses and their attributes|
-|[**$catalog/{dataClass}**](#catalogdataclass)|`/$catalog/Employee`|Returns information about a dataclass and its attributes|
+|[**$catalog/\{dataClass\}**](#catalogdataclass)|`/$catalog/Employee`|Returns information about a dataclass and its attributes|
 
 
 ## $catalog
@@ -68,7 +68,7 @@ Returns information about all of your project's dataclasses and their attributes
 
 Calling `$catalog/$all` allows you to receive detailed information about the attributes in each of the dataclasses in your project's active model.
 
-For more information about what is returned for each dataclass and its attributes, use [`$catalog/{dataClass}`](#catalogdataClass).
+For more information about what is returned for each dataclass and its attributes, use [`$catalog/\{dataClass\}`](#catalogdataClass).
 
 
 ### Example  
@@ -181,13 +181,13 @@ For more information about what is returned for each dataclass and its attribute
 ````
 
 
-## $catalog/{dataClass}
+## $catalog/\{dataClass\}
 
 Returns information about a dataclass and its attributes 
 
 ### Description   
 
-Calling `$catalog/{dataClass}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. If you want to retrieve this information for all the dataclasses in your project's datastore, use [`$catalog/$all`](#catalogall).
+Calling `$catalog/\{dataClass\}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. If you want to retrieve this information for all the dataclasses in your project's datastore, use [`$catalog/$all`](#catalogall).
 
 The information you retrieve concerns the following:
 

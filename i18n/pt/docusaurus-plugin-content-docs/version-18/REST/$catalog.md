@@ -9,11 +9,11 @@ O catálogo descreve todos os dataclasses e atributos disponíveis na datastore.
 
 ## Sintaxe disponível
 
-| Sintaxe                                       | Exemplo              | Descrição                                                                            |
-| --------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------ |
-| [**$catalog**](#catalog)                      | `/$catalog`          | Devolve uma lista dos valores de referência do seu projecto juntamente com dois URIs |
-| [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Devolve informação sobre todos os dataclasses do seu projecto e os seus atributos    |
-| [**$catalog/{dataClass}**](#catalogdataclass) | `/$catalog/Employee` | Retorna informação sobre um dataclass e os seus atributos                            |
+| Sintaxe                                           | Exemplo              | Descrição                                                                            |
+| ------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------ |
+| [**$catalog**](#catalog)                          | `/$catalog`          | Devolve uma lista dos valores de referência do seu projecto juntamente com dois URIs |
+| [**$catalog/$all**](#catalogall)                  | `/$catalog/$all`     | Devolve informação sobre todos os dataclasses do seu projecto e os seus atributos    |
+| [**$catalog/\{dataClass\}**](#catalogdataclass) | `/$catalog/Employee` | Retorna informação sobre um dataclass e os seus atributos                            |
 
 
 ## $catalog
@@ -68,7 +68,7 @@ Devolve informação sobre todos os dataclasses do seu projecto e os seus atribu
 
 Chamando `$catalog/$all` pode reciber informação detalhada sobre os atributos de cada uma das classes de dados do modelo ativo de projeto.
 
-Para saber mais sobre o que se devolve para cada classe de dados e seus atributos, utilize [`$catalog/{dataClass}`](#catalogdataClass).
+For more information about what is returned for each dataclass and its attributes, use [`$catalog/\{dataClass\}`](#catalogdataClass).
 
 
 ### Exemplo
@@ -171,13 +171,13 @@ Para saber mais sobre o que se devolve para cada classe de dados e seus atributo
 ````
 
 
-## $catalog/{dataClass}
+## $catalog/\{dataClass\}
 
 Retorna informação sobre um dataclass e os seus atributos
 
 ### Descrição
 
-Chamando `$catalog/{dataClass}` para um dataclass específico devolverá a seguinte informação sobre o dataclass e os atributos que este contém. Se quiser recuperar essa informação para todas as classes de dados do armazém de dados de seu projeto, use [`$catalog/$all`](#catalogall).
+Calling `$catalog/\{dataClass\}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. Se quiser recuperar essa informação para todas as classes de dados do armazém de dados de seu projeto, use [`$catalog/$all`](#catalogall).
 
 A informação que recupera diz respeito ao seguinte:
 

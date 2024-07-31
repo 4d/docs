@@ -13,7 +13,7 @@ Este parâmetro permite-lhe definir o filtro para a sua dataclass ou método.
 
 Um filtro é composto pelos seguintes elementos:
 
-**{attribute} {comparator} {value}**
+**\{attribute\} {comparator} {value}**
 
 Por ejemplo: `$filter="firstName=john"` donde `firstName` es el **atributo**, `=` es el **comparador** y `john` es el **valor**.
 
@@ -21,7 +21,7 @@ Por ejemplo: `$filter="firstName=john"` donde `firstName` es el **atributo**, `=
 
 A more complex filter is composed of the following elements, which joins two queries:
 
-**{attribute} {comparator} {value} {AND/OR/EXCEPT} {attribute} {comparator} {value}**
+**\{attribute\} {comparator} {value} {AND/OR/EXCEPT} \{attribute\} {comparator} {value}**
 
 Por ejemplo: `$filter="firstName=john AND salary>20000"` donde `firstName` y `salary` son atributos de la clase de datos Employee.
 
@@ -29,7 +29,7 @@ Por ejemplo: `$filter="firstName=john AND salary>20000"` donde `firstName` y `sa
 
 Também pode usar a propriedade params de 4D.
 
-**{attribute} {comparator} {placeholder} {AND/OR/EXCEPT} {attribute} {comparator} {placeholder}&$params='["{value1}","{value2}"]"'**
+**\{attribute\} {comparator} {placeholder} {AND/OR/EXCEPT} \{attribute\} {comparator} {placeholder}&$params='["{value1}","{value2}"]"'**
 
 Por ejemplo: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` donde firstName y salary son los atributos de la clase de datos Employee.
 

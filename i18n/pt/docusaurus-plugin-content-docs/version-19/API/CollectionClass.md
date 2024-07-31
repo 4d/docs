@@ -151,10 +151,10 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 
 
 <!-- REF #_command_.New shared collection.Params -->
-| Parâmetro  | Tipo                                                                |    | Descrição                                            |
-| ---------- | ------------------------------------------------------------------- |:--:| ---------------------------------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valores da collection compartida                     |
-| Resultados | Collection                                                          | <- | The new shared collection|<!-- END REF -->
+| Parâmetro  | Tipo                                                                |    | Descrição                                               |
+| ---------- | ------------------------------------------------------------------- |:--:| ------------------------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valores da collection compartida                        |
+| Resultados | Collection                                                          | <- | A nova coleção compartilhada|<!-- END REF -->
 
 |
 
@@ -700,8 +700,14 @@ Se a coleção conter objetos, pode passar o parâmetro *propertyPath* para indi
 
 A função `.equal()` <!-- REF #collection.equal().Summary -->compara a collection com a collection2 <!-- END REF -->e retorna **true** se forem idênticos (deep comparison).
 
+:::note Notas
+
+- The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. It does not check equality for native objects.
+- Elements with **null** values are not equal to Undefined elements.
+
+:::
+
 Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a avaliação diferencie maiúsculas de minúsculas e caracteres acentuados, passe a constante`ck diacritical` no parâmetro option.
-> Elementos com valores **Null** não são a mesma coisa que valores Undefined.
 
 #### Exemplo
 
@@ -784,9 +790,9 @@ var $c : Collection
 var $b : Boolean
 $c:=New collection
 $c.push(5;3;1;4;6;2)
-$b:=$c.every("NumberGreaterThan0") //returns true
+$b:=$c.every("NumberGreaterThan0") //retorna true
 $c.push(-1)
-$b:=$c.every("NumberGreaterThan0") //returns false
+$b:=$c.every("NumberGreaterThan0") //retorna false
 ```
 
 With the following ***NumberGreaterThan0*** method:
@@ -2449,9 +2455,9 @@ Como padrão, `.some()` testa toda a colecção. Opcionalmente pode passar o ín
  var $b : Boolean
  $c:=New collection
  $c.push(-5;-3;-1;-4;-6;-2)
- $b:=$c.some("NumberGreaterThan0") // returns false
+ $b:=$c.some("NumberGreaterThan0") // retorna false
  $c.push(1)
- $b:=$c.some("NumberGreaterThan0") // returns true
+ $b:=$c.some("NumberGreaterThan0") // retorna true
 
  $c:=New collection
  $c.push(1;-5;-3;-1;-4;-6;-2)

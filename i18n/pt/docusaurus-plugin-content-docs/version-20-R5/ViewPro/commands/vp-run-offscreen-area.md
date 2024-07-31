@@ -65,7 +65,7 @@ Function onEvent()
  End case
 ```
 
-The _OffscreenArea_ callback method:
+O método de retorno de chamada _OffscreenArea_:
 
 ```4d
 $o:=cs. OffscreenArea.new()
@@ -120,7 +120,7 @@ Function onEvent()
  End case
 ```
 
-The _OffscreenArea_ callback method:
+O método de retorno de chamada _OffscreenArea_:
 
 ```4d
 $o:=cs.OffscreenArea.new()

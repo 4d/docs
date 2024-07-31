@@ -9,7 +9,7 @@ Qodly Studio for 4D is currently in the **Developer Preview** phase. Não deve s
 
 :::
 
-**Qodly Studio** is an interface builder for web applications. It provides developers with a graphical form editor to design applications running in web browsers or smartphones. It supports natively the [ORDA objects](../ORDA/overview.md).
+**Qodly Studio** é um construtor de interfaces para aplicações web. It provides developers with a graphical form editor to design applications running in web browsers or smartphones. Ele suporta nativamente os [objetos ORDA](../ORDA/overview.md).
 
 You can use Qodly Studio directly from your **4D environment** to build modern and sophisticated interfaces that you can easily integrate to your existing 4D projects and deploy **on premise**.
 
@@ -91,7 +91,7 @@ Authentication on the WebAdmin web server is granted using an access key. For mo
 
 In accordance with the management of 4D projects, only the following usages are supported:
 
-- development with Qodly Studio must be done using **4D** (single-user).
+- o desenvolvimento com Qodly Studio deve ser feito usando **4D** (monousuário).
 - deployment of 4D applications powered with Qodly forms must be done using **4D Server**.
 
 ## Abertura do Qodly Studio
@@ -275,7 +275,7 @@ End if
 
 This call is accepted and as long as the authentication is not successful, `Session.setPrivileges()` is not called, thus no license is consumed. Una vez que se llama a `Session.setPrivileges()`, se utiliza una licencia de cliente de 4D y luego se acepta cualquier solicitud REST.
 
-### Logout
+### Encerrar sessão
 
 When the ["force login" mode is enabled](#setting-the-force-login-mode), Qodly Studio for 4D allows you to implement a logout feature in your application.
 
@@ -286,16 +286,16 @@ Para cerrar la sesión del usuario, solo necesita ejecutar la acción estándar 
 Triggering the logout action from a web user session has the following effects:
 
 - the current web user session loses its privileges, only [descriptive REST requests](../REST/authUsers.md#descriptive-rest-requests) are allowed,
-- the associated 4D license is released,
+- a licença associada ao 4D é liberada,
 - the `Session.storage` is kept until the web session inactivity timeout is reached (at least one hour). During this period after a logout, if the user logs in again, the same session is used and the `Session.storage` shared object is available with its current contents.
 
-## About license usage for rendering
+## Sobre o uso da licença para renderização
 
 In default mode when any form is rendered, or in "force login" mode when a form handling data or calling a function is rendered, you must have an available license, as rendering Qodly forms targets the project database's main web server.
 
 ### Esquemas URL
 
-Qodly Studio's URL scheme configuration (HTTP and HTTPS) determines how many licenses are retained when rendering Qodly forms. With the appropriate configuration, you can avoid unnecessary license retaining.
+A configuração do esquema URL de Qodly Studio (HTTP e HTTPS) determina quantas licenças são retidas ao renderizar os formulários Qodly. With the appropriate configuration, you can avoid unnecessary license retaining.
 
 As explained in the [configuration](#configuration) section, the WebAdmin web server provides a secured web access to Qodly Studio. On the other hand, the [renderer](#rendering-webforms) communicates with the 4D web server of the database using REST requests. Dessa forma, se comporta como um Cliente 4D convencional.
 
@@ -309,7 +309,7 @@ Se você executar o renderizador a partir do Qodly Studio e esses dois servidore
 
 ![alt-text](../assets/en/WebServer/schemes.png)
 
-3. In Qodly Studio, you click on the **Preview** icon. You are warned that the two web servers are started on different schemes, but despite this you click on the **Confirm** button.
+3. No Qodly Studio, você clica no ícone **Preview**. You are warned that the two web servers are started on different schemes, but despite this you click on the **Confirm** button.
 
 ![alt-text](../assets/en/WebServer/render-button.png)
 

@@ -791,15 +791,14 @@ Dans le paramètre *options*, vous pouvez passer une ou une combinaison des cons
 
 La fonction `.equal()` <!-- REF #collection.equal().Summary -->compare récursivement le contenu de la collection et de *collection2* (comparaison profonde)<!-- END REF -->et renvoie **true** si elles sont identiques.
 
-Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez que l'évaluation soit sensible à la casse ou pour différencier des caractères accentués, passez la constante `ck diacritical` dans le paramètre option.
+:::note Notes
 
-> Les éléments avec des valeurs **Null** ne sont pas égaux aux éléments Undefined.
-
-:::note
-
-Une comparaison récursive de collections peut prendre beaucoup de temps si la collection est de grande taille et comporte de nombreux niveaux. Si vous souhaitez uniquement comparer deux références de collection, vous pouvez envisager d'utiliser l'opérateur de comparaison [`=` pour les références de collection](../Concepts/dt_collection.md#collection-operators).
+- La fonction `.equal()` ne vérifie l'égalité que pour les éléments de type chaîne, booléen, nombre et null dans les collections. Elle ne vérifie pas l'égalité pour les objets natifs.
+- Les éléments avec des valeurs **null** ne sont pas égaux aux éléments Undefined.
 
 :::
+
+Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez que l'évaluation soit sensible à la casse ou pour différencier des caractères accentués, passez la constante `ck diacritical` dans le paramètre option.
 
 #### Exemple
 

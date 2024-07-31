@@ -75,9 +75,7 @@ El botón **Borrar el código compilado** borra el código compilado del proyect
 
 ### Mostrar/Ocultar advertencias
 
-Las advertencias son mensajes específicos generados por el compilador cuando verifica la sintaxis. Estos mensajes están destinados a llamar su atención sobre las declaraciones que podrían llevar a errores de ejecución. No impiden la compilación.
-
-Dependiendo de las circunstancias y del estilo de programación utilizado, estas advertencias pueden ser más o menos relevantes. Puede activar o desactivar las advertencias haciendo clic en el botón **Mostrar/Ocultar las advertencias**:
+Puede alternar la visualización de [advertencias](#advertencias) en la ventana del compilador haciendo clic en el botón **Mostrar/Ocultar advertencias**:
 
 ![](../assets/en/Project/compilerWin4.png)
 
@@ -87,27 +85,9 @@ Cuando esta opción está marcada, las advertencias (si las hay) se muestran en 
 
 Al hacer doble clic en un aviso se abre el método correspondiente.
 
-#### Desactivar las advertencias durante la compilación
-
-Puede desactivar selectivamente ciertas advertencias durante la compilación insertando el siguiente en el código de un método 4D:
-
-```4d
-  //%W-<warning number>
-```
-
-Sólo se pueden desactivar los avisos con números. Los números de advertencia se indican al final de cada mensaje en la lista de errores de compilación. Por ejemplo, para desactivar la siguiente advertencia:
-
-_1: Puntero en una declaración de array (518.5)_
-
-... you just need to write the following comment in a 4D method, preferably a `COMPILER_xxx` method (method compiled first):
-
-```4d
-  //%W-518.5
-```
-
 ## Parámetros del compilador
 
-La página "Compilador" de la caja de diálogo de Propiedades le permite definir los parámetros relacionados con la compilación del proyecto. Puede abrir directamente esta página desde la [ventana del compilador](#compiler-window) haciendo clic en el botón **Parámetros del compilador**:
+The "Compiler" tab of the Settings dialog box lets you set parameters related to project compilation. Puede abrir directamente esta página desde la [ventana del compilador](#compiler-window) haciendo clic en el botón **Parámetros del compilador**:
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -178,9 +158,76 @@ Se pueden generar hasta 5 métodos de compilación; un método de compilación s
 - **Variables interproceso**: agrupa las declaraciones de variables interproceso;
 - **Arrays**: agrupa las declaraciones de arrays de proceso;
 - **Arrays interproceso**: agrupa las declaraciones de arrays interproceso;
-- **Métodos**: agrupa las declaraciones de parámetros de métodos (por ejemplo `C_LONGINT(mymethod;$1;$2)`) para [parámetros de métodos declarados fuera de prototipos](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
+- **Métodos**: agrupa las declaraciones de parámetros de métodos (por ejemplo `C_LONGINT(mymethod;$1;$2)`) para [parámetros de métodos declarados fuera de prototipos](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). Para más información, ver [método `Compiler_Methods`](../Concepts/parameters.md#compiler_methods-method).
 
 Puede renombrar cada uno de estos métodos en las áreas correspondientes, pero siempre irán precedidos de la etiqueta `Compilador_` (no modificable). El nombre de cada método (prefijo incluido) no debe tener más de 31 caracteres. También debe ser único y cumplir con [las reglas de 4D para nombrar métodos](Concepts/identifiers.md#project-methods).
+
+## Advertencias
+
+Las advertencias son mensajes específicos generados por el compilador cuando verifica la sintaxis. Estos mensajes están destinados a llamar su atención sobre las declaraciones que podrían llevar a errores de ejecución. No impiden la compilación.
+
+Dependiendo de las circunstancias y del estilo de programación utilizado, las advertencias pueden ser más o menos relevantes. You can enable or disable warnings, in the compiler dialog, and in the code editors (4D code editor and VS Code), globally through the [warnings tab](#warnings-tab) or locally using [`//%W`](#disabling-and-enabling-warnings-locally).
+
+### Warnings tab
+
+![](../assets/en/Project/warnings-tab.png)
+
+Esta pestaña le permite definir qué advertencias deben mostrarse globalmente. De la lista de todas las advertencias posibles con sus tipos, su código y su etiqueta localizada, ordenadas por código de advertencia.
+
+To reduce the list, you can search words by warning labels and codes using the **Search in codes and labels** textbox or the magnifying glass icon on the left.
+
+Por defecto, todos los tipos de advertencia están marcados y activados.
+
+Cuando se modifica el estado de visualización de una advertencia, la información se almacena en el archivo "warnings.json", situado en la carpeta Configuración del proyecto.
+
+El botón **Restablecer parámetros de fábrica** define todas las casillas de verificación de estado de visualización de advertencias en los valores predeterminados y borra el archivo "warnings.json".
+
+### Disabling and enabling warnings locally
+
+Puede controlar las advertencias en partes específicas de su código utilizando comentarios especiales para desactivarlas o activarlas.
+
+Para desactivar las advertencias, inserte los siguientes comentarios antes y después de la sección de código en la que desea desactivar las advertencias:
+
+```4d
+// Antes de la parte de código seleccionada utilice
+  //%W-<warning number>
+
+// Después de la parte de código seleccionada utilice
+  //%W+<warning number>
+```
+
+Para volver a habilitar las advertencias en una sección de código, utilice los siguientes comentarios:
+
+```4d
+// Antes de la parte de código seleccionada utilice
+  //%W+<warning number>
+
+// Después de la parte de código seleccionada utilice
+  //%W-<warning number>
+```
+
+Sólo las advertencias con números pueden ser desactivadas o activadas. Los números de advertencia se indican al final de cada mensaje en la lista de errores de compilación o en la lista que se encuentra en la pestaña de advertencias.
+Por ejemplo, para desactivar la siguiente advertencia:
+
+_1: Redefinición de la variable $a (550.10)_
+
+... sólo necesita escribir los siguientes comentarios en su método 4D:
+
+```4d
+  var $a : Text
+  $a:="hello world"
+  
+  //%W-550.10
+  var $a : Text
+  //%W+550.10
+  
+```
+
+:::note
+
+The special warnings comments have priority over the warnings display settings set in the warning tab.
+
+:::
 
 ## Herramientas de compilación
 
@@ -234,7 +281,7 @@ tipo resultado, número de llamadas, Thread Safe o Thread Unsafe
 
 ### Archivo de errores
 
-You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. El archivo de errores se llama automáticamente `projectName_errors.xml` y se coloca en la carpeta [Logs](Project/architecture.md#logs) del proyecto.
+Puede elegir si desea o no generar un archivo de error durante la compilación utilizando la opción [**Generar archivo de error**](#generate-error-file) en los parámetros del compilador. El archivo de errores se llama automáticamente `projectName_errors.xml` y se coloca en la carpeta [Logs](Project/architecture.md#logs) del proyecto.
 
 Aunque se puede acceder a los errores directamente a través de la [ventana de compilación](#compile), puede ser útil disponer de un archivo de errores que se pueda transmitir de una máquina a otra. El archivo de errores se genera en formato XML para facilitar el análisis automático de su contenido. También permite la creación de interfaces personalizadas de visualización de errores.
 
@@ -271,11 +318,11 @@ En algunos casos, puede preferir que el control de rangos no se aplique a cierta
 Para ello, debe rodear el código a excluir del control de rangos con los comentarios especiales `//%R-` y `//%R+`. El comentario `//%R-` desactiva el control de rangos y `//%R+` lo reactiva:
 
 ```4d
-  // %R-   to disable range checking
+  // %R- para desactivar el control de rangos
  
- ... //Place the code to be excluded from range checking here
+ ... //Coloque aquí el código a excluir del control de rangos
  
-  // %R+   to enable range checking again for the rest
+// %R+ para volver a reactivar el control de rangos para el resto
 ```
 
 ## Acerca de los compiladores

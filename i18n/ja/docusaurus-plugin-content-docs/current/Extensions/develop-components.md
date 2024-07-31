@@ -102,7 +102,7 @@ EXECUTE METHOD($param)
 
 ![](../assets/en/settings/namespace.png)
 
-:::Note
+:::note
 
 _名前空間_ は、同じ名前のクラスや関数を持つ異なるコンポーネントがホストプロジェクトで使用されている場合に、競合が発生しないようにします。 コンポーネント名前空間は、[プロパティの命名規則](../Concepts/identifiers.md#オブジェクトプロパティ) に準拠する必要があります。
 

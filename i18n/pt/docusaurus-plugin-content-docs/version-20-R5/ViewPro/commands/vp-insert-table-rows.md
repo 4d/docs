@@ -17,14 +17,14 @@ title: VP INSERT TABLE ROWS
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Params -->
 
-| Parâmetro   | Tipo    |    | Descrição                                                   |                  |
-| ----------- | ------- | -- | ----------------------------------------------------------- | ---------------- |
-| vpAreaName  | Text    | -> | Nome de objeto formulário área 4D View Pro                  |                  |
-| tableName   | Text    | -> | Nome da tabela                                              |                  |
-| row         | Integer | -> | Índice na tabela da linha inicial a inserir                 |                  |
-| count       | Text    | -> | Number of rows to add (must be >0)       |                  |
-| insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` _row_   |                  |
-| sheet       | Integer | -> | Índice da folha (folha atual se omitida) | <!-- END REF --> |
+| Parâmetro   | Tipo    |    | Descrição                                                             |                  |
+| ----------- | ------- | -- | --------------------------------------------------------------------- | ---------------- |
+| vpAreaName  | Text    | -> | Nome de objeto formulário área 4D View Pro                            |                  |
+| tableName   | Text    | -> | Nome da tabela                                                        |                  |
+| row         | Integer | -> | Índice na tabela da linha inicial a inserir                           |                  |
+| count       | Text    | -> | Número de linhas a serem adicionadas (deve ser >0) |                  |
+| insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` _row_             |                  |
+| sheet       | Integer | -> | Índice da folha (folha atual se omitida)           | <!-- END REF --> |
 
 #### Descrição
 
@@ -34,7 +34,7 @@ In the _insertAfter_ parameter, you can pass one of the following constants to i
 
 | Parâmetros               | Valor | Descrição                                                                                 |
 | ------------------------ | ----- | ----------------------------------------------------------------------------------------- |
-| `vk table insert before` | 0     | Insert row(s) before the _row_ (default if omitted) |
+| `vk table insert before` | 0     | Inserir linha(s) antes de _row_ (padrão se omitido) |
 | `vk table insert after`  | 1     | Inserir linha(s) após a _row_                                          |
 
 This command inserts some rows in the _tableName_ table, NOT in the sheet. O número total de linhas da folha não é impactado pelo  comando. Dados presentes abaixo da tabela (se houver) são movidos para baixo automaticamente de acordo com o número de linhas adicionadas.

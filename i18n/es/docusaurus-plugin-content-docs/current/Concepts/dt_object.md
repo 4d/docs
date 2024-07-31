@@ -229,15 +229,15 @@ Ejemplo:
 
 ## Operadores Objeto
 
-You can use comparison operators with **object references**, which means that you can evaluate if two or more references point to the same instance of an object.
+Puede utilizar operadores de comparación con **referencias a objetos**, lo que significa que puede evaluar si dos o más referencias apuntan a la misma instancia de un objeto.
 
 ```4d
-var $o1:={a: 42} //reference to an instance
-var $o2:={a: 42} //reference to a different instance
-var $o3:=$o1 //reference to the same instance
+var $o1:={a: 42} //referencia a una instancia
+var $o2:={a: 42} //referencia a otra instancia
+var $o3:=$o1 //referencia a la misma instancia
 ```
 
-Based upon the code above, the comparison table is:
+Basándonos en el código anterior, la tabla comparativa es:
 
 | Operación   | Sintaxis              | Devuelve | Expression | Valor |
 | ----------- | --------------------- | -------- | ---------- | ----- |

@@ -16,6 +16,13 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 :::
 
 
+## 4D 19.8
+
+#### Destaques
+
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.8): list of all bugs that have been fixed in 4D 19.8.
+
+
 ## 4D 19.7
 
 #### Destaques
@@ -34,8 +41,8 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 #### Destaques
 
-- 4D 19.5 is certified on Windows 11 22H2
-- 4D 19.5 is certified on macOS Ventura (macOS 13)
+- 4D 19.5 é certificado em Windows 11 22H2
+- 4D 19.5 é certificado em macOS Ventura (macOS 13)
 - A versão SpreadJS foi actualizada (14.1.6).
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.5): list of all bugs that have been fixed in 4D 19.5.
 
@@ -58,4 +65,3 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 | ICU        | 68.1         | 18 R6            | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos. |
 | PHP        | 7.3.27       | 18 R6            |                                                                                                             |
 | libldap    | 2.4.48       | 18 R2            |                                                                                                             |
-

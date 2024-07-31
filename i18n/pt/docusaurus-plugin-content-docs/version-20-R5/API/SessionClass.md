@@ -3,9 +3,6 @@ id: SessionClass
 title: Session
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 Session objects are returned by the [`Session`](#session) command. These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web only) manage [privileges](../ORDA/privileges.md).
 
 ### Tipos de sessão
@@ -80,7 +77,7 @@ The `Session` object of web sessions is available from any web process:
 - código processado a través das etiquetas 4D nas páginas semidinâmicas (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
 - os métodos projeto com o atributo "Available through 4D tags and URLs (4DACTION...)" e chamados através de 4DACTION/ urls,
 - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) database methods for mobile requests,
-- ORDA functions [called with REST requests](../REST/ClassFunctions.md).
+- Funções ORDA [chamadas com solicitações REST](../REST/ClassFunctions.md).
 
 For more information on web user sessions, please refer to the [Web Server Sessions](WebServer/sessions.md) section.
 
@@ -221,10 +218,10 @@ $expiration:=Session.expirationDate //por exemplo "2021-11-05T17:10:42Z"
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                        |
-| ---------- | ---------- | :-: | ------------------------------------------------ |
-| privilege  | Text       |  <- | Nome do privilegio a verificar                   |
-| Resultados | Parâmetros |  <- | True if session has *privilege*, False otherwise |
+| Parâmetro  | Tipo       |     | Descrição                                                |
+| ---------- | ---------- | :-: | -------------------------------------------------------- |
+| privilege  | Text       |  <- | Nome do privilegio a verificar                           |
+| Resultados | Parâmetros |  <- | True se a sessão tiver *privilege*, False caso contrário |
 
 <!-- END REF -->
 
@@ -299,7 +296,7 @@ When this property is set, the [`.expirationDate`](#expirationdate) property is 
 
 > O valor não pode ser inferior a 60: se definir um valor inferior, o tempo de espera se eleva até 60.
 
-This property is **read write**.
+Essa propriedade é **leitura escrita**.
 
 #### Exemplo
 
@@ -354,7 +351,7 @@ The `.info` object contains the following properties:
 | hostType         | Text          | Tipo de host: "windows" ou "mac"                                                                                                          |
 | creationDateTime | Date ISO 8601 | Data e hora de criação da sessão                                                                                                                          |
 | state            | Text          | Estado da sessão: "ativa", "adiada", "em espera"                                                                                          |
-| ID               | Text          | Session UUID (same value as [`.id`](#id))                                                                                              |
+| ID               | Text          | UUID da sessão (mesmo valor que [`.id`](#id))                                                                                          |
 | persistentID     | Text          | ID persistente da sessão                                                                                                                                  |
 
 :::note
@@ -514,9 +511,7 @@ When a `Session` object is created, the `.storage` property is empty. Since it i
 
 This property is **read only** itself but it returns a read-write object.
 
-<Tabs>
-
-<TabItem value="Web session example">
+#### Exemplo de sessão na web
 
 Você deseja armazenar o IP do cliente na propriedade `.storage`. You can write in the `On Web Authentication` database method:
 
@@ -527,9 +522,7 @@ If (Session.storage.clientIP=Null) //first access
     End use End if
 ```
 
-</TabItem>
-
-<TabItem value="Remote session example">
+#### Exemplo de sessão remota
 
 You want to share data between processes in the same session:
 
@@ -538,10 +531,6 @@ Use (Session.storage)
  Session.storage.settings:=New shared object("property"; $value; "property2"; $value2)
 End use
 ```
-
-</TabItem>
-
-</Tabs>
 
 <!-- END REF -->
 

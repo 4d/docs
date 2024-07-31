@@ -144,7 +144,7 @@ Este é um exemplo típico de um worker que fixa um sinal:
  End if
 ```
 
-The ***doSomething*** method could be like:
+O método ***doSomething*** poderia ser como:
 
 ```4d
  #DECLARE ($signal : 4D.Signal)
@@ -178,7 +178,7 @@ The `.description` property <!-- REF #SignalClass.description.Summary -->contain
 
 `.description` can be set at the creation of the signal object or at any moment. Note that since the `Signal` object is a shared object, any write-mode access to the `.description` property must be surrounded by a `Use...End use` structure.
 
-This property is **read-write**.
+Essa propriedade é **leitura-escrita**.
 
 <!-- END REF -->
 
@@ -198,7 +198,7 @@ This property is **read-write**.
 
 #### Descrição
 
-The `.signaled` property <!-- REF #SignalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. When the signal is created, `.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
+The `.signaled` property <!-- REF #SignalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. Quando o sinal é criado, `.signaled` é **False**. It becomes **True** when the `.trigger( )` is called on the object.
 
 Essa propriedade é **somente leitura**.
 
@@ -253,7 +253,7 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 | Parâmetro  | Tipo       |    | Descrição                                   |
 | ---------- | ---------- | -- | ------------------------------------------- |
 | timeout    | Real       | -> | Tempo máximo de espera do sinal em segundos |
-| Resultados | Parâmetros | <- | State of the `.signaled` property           |
+| Resultados | Parâmetros | <- | Estado da propriedade `.signaled`           |
 
 <!-- END REF -->
 

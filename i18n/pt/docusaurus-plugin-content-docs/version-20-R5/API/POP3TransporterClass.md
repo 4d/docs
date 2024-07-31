@@ -25,7 +25,7 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                    |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                             |
 | [<!-- INCLUDE #POP3TransporterClass.undeleteAll().Syntax -->](#undeleteall)<br/><!-- INCLUDE #POP3TransporterClass.undeleteAll().Summary -->                  |
-| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                             |
+| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                             |
 
 <!-- REF POP3TransporterClass.POP3 New transporter.Desc -->
 
@@ -66,11 +66,11 @@ In the *server* parameter, pass an object containing the following properties:
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                      | nenhum                                                            |
 | **.password** : Text<br/>User password for authentication on the server. Not returned in *[SMTP transporter](#smtptransporterobject)* object.                                                                                                                                                                                                                                                                                                                                   | nenhum                                                            |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                               | 995                                                               |
-| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                               | nenhum                                                            |
+| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                               | nenhum                                                            |
 
 #### Resultados
 
-The function returns a [**POP3 transporter object**](#pop3-transporter-object). All returned properties are **read-only**.
+A função retorna um [**objeto POP3 transporter**](#pop3-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
 
 > A conexão POP3 é fechada automaticamente quando o objeto transportador for destruído.
 
@@ -248,7 +248,7 @@ The `boxInfo` object returned contains the following properties:
 
 | Release | Mudanças                          |
 | ------- | --------------------------------- |
-| 20      | Support of *headerOnly* parameter |
+| 20      | Suporte ao parâmetro *headerOnly* |
 | 18 R2   | Adicionado                        |
 
 </details>
@@ -281,7 +281,7 @@ The *headerOnly* option may not be supported by the server.
 
 O método retorna Null se:
 
-- *msgNumber* designates a non-existing message,
+- *msgNumber* determina uma mensagem não existente,
 - the message was marked for deletion using [`.delete()`](#delete).
 
 **Objeto devolvido**
@@ -345,7 +345,7 @@ The `mailInfo` object returned contains the following properties:
 
 O método retorna **Null** se:
 
-- *msgNumber* designates a non-existing message,
+- *msgNumber* determina uma mensagem não existente,
 - the message was marked for deletion using `.delete( )`.
 
 ##### Exemplo
@@ -383,9 +383,9 @@ O método retorna **Null** se:
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                        |
-| ---------- | ---------- | :-: | -------------------------------- |
-| Resultados | Collection |  <- | Collection of `mailInfo` objects |
+| Parâmetro  | Tipo       |     | Descrição                     |
+| ---------- | ---------- | :-: | ----------------------------- |
+| Resultados | Collection |  <- | Coleção de objetos `mailInfo` |
 
 <!-- END REF -->
 
@@ -463,7 +463,7 @@ In *msgNumber*, pass the number of the message to retrieve. This number is retur
 
 O método retorna uma BLOB vazia se:
 
-- *msgNumber* designates a non-existing message,
+- *msgNumber* determina uma mensagem não existente,
 - the message was marked for deletion using `.delete()`.
 
 **BLOB devolvido**

@@ -25,7 +25,7 @@ La propiedad de corrección ortográfica automática activa la corrección ortog
 
 Permite al usuario acceder a un menú contextual estándar en el objeto cuando se ejecuta el formulario.
 
-For a picture type [input](input_overview.md), in addition to standard editing commands (Cut, Copy, Paste and Clear), the menu contains the **Import...** command, which can be used to import a picture stored in a file, as well as the **Save as...** command, which can be used to save the picture to disk. El menú también permite modificar el formato de visualización de la imagen: se ofrecen las opciones **Truncado no centrado**, **Escalado para ajustar** y **Escalado para ajustar centrado prop.**. La modificación del [formato de visualización](properties_Display.md#picture-format) utilizando este menú es temporal; no se guarda con el registro.
+Para una imagen de tipo [entrada](input_overview.md), además de los comandos de edición estándar (Cortar, Copiar, Pegar y Borrar), el menú contiene el comando **Importar...**, que puede utilizarse para importar una imagen almacenada en un archivo, así como el comando **Guardar como...**, que puede utilizarse para guardar la imagen en el disco. El menú también permite modificar el formato de visualización de la imagen: se ofrecen las opciones **Truncado no centrado**, **Escalado para ajustar** y **Escalado para ajustar centrado prop.**. La modificación del [formato de visualización](properties_Display.md#picture-format) utilizando este menú es temporal; no se guarda con el registro.
 
 Para un tipo de texto [multiestilo](properties_Text.md#multi-style) [input](input_overview.md), además de los comandos de edición estándar, el menú contextual ofrece los siguientes comandos:
 
@@ -34,7 +34,7 @@ Para un tipo de texto [multiestilo](properties_Text.md#multi-style) [input](inpu
 - comandos para las modificaciones de estilo soportados: fuente, tamaño, estilo, color y color de fondo.
   Cuando el usuario modifica un atributo de estilo a través de este menú emergente, 4D genera el evento de formulario `On After Edit`.
 
-Para un [Área Web](webArea_overview.md), el contenido del menú depende del motor de renderizado de la plataforma. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
+Para un [Área Web](webArea_overview.md), el contenido del menú depende del motor de renderizado de la plataforma. Es posible controlar el acceso al menú contextual mediante el comando [`WA SET PREFERENCE`](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html).
 
 #### Gramática JSON
 
@@ -64,7 +64,7 @@ Cuando esta propiedad está desactivada, se desactiva todo menú emergente asoci
 
 #### Objetos soportados
 
-[4D Write Pro areas](writeProArea_overview.md) - [Check Box](checkbox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Casilla de selección](checkbox_overview.md) - [Lista jerárquica](list_overview.md) - [Área de entrada](input_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Barra de progreso](progressIndicator.md) - [Regla](ruler.md) - [Contador](stepper.md)
 
 ---
 
@@ -114,9 +114,9 @@ A continuación se presenta una tabla que explica cada una de las opciones de fi
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                                                                           |
-| ----------- | -------------- | ------------------------------------------------------------------------------------------ |
-| entryFilter | string         | <li>Entry filter code</li> or <li>Entry filter name (filter names start with &#124; )</li> |
+| Nombre      | Tipos de datos | Valores posibles                                                                                                         |
+| ----------- | -------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| entryFilter | string         | <li>Código de filtro de entrada</li> o <li>Nombre de filtro de entrada (los nombres de filtro empiezan por &#124; )</li> |
 
 #### Objetos soportados
 
@@ -144,7 +144,7 @@ Cuando se selecciona la propiedad **Enfocable** para un objeto no editable, el u
 
 #### Objetos soportados
 
-[4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Casilla de selección](checkbox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Lista jerárquica](list_overview.md) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md) - [Área de Plug-in](pluginArea_overview.md) - [Botón de opción](radio_overview.md) - [Subformulario](subform_overview.md)
 
 ---
 
@@ -175,13 +175,13 @@ Esta propiedad está disponible para [objetos de entrada](input_overview.md) que
 #### Automático
 
 - En las entradas de una línea, las palabras situadas al final de las líneas se truncan y no hay retornos de línea.
-- In multiline inputs, 4D carries out automatic line returns:\
+- En las entradas multilínea, 4D realiza retornos de línea automáticos:\
   ![](../assets/en/FormObjects/multilineAuto.png)
 
 #### No
 
 - En las entradas de una línea, las palabras situadas al final de las líneas se truncan y no hay retornos de línea.
-- Nunca hay retornos de línea: el texto siempre se muestra en una sola línea. If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified:\
+- Nunca hay retornos de línea: el texto siempre se muestra en una sola línea. Si el campo o variable Alfa o Texto contiene retornos de carro, el texto situado después del primer retorno de carro se elimina en cuanto se modifica el área:\
   ![](../assets/en/FormObjects/multilineNo.png)
 
 #### Sí
@@ -221,7 +221,7 @@ Puede utilizar una referencia XLIFF en la forma ":xliff:resname" como marcador d
 
 Sólo se pasa la referencia en el campo "Marcador de posición"; no es posible combinar una referencia con texto estático.
 
-> You can also set and get the placeholder text by programming using the [OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-PLACEHOLDER.301-4128243.en.html) and [OBJECT Get placeholder](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-Get-placeholder.301-4128249.en.html) commands.
+> También puedes definir y obtener el texto del marcador de posición por programación utilizando los comandos [OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-PLACEHOLDER.301-4128243.en.html) y [OBJECT Get placeholder](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-Get-placeholder.301-4128249.en.html).
 
 #### Gramática JSON
 
@@ -259,7 +259,7 @@ Esta propiedad mantiene la selección visible dentro del objeto después de habe
 
 Esta propiedad permite definir teclas de significado especial (atajos de teclado) para los [botones](button_overview.md), los [botones radio](radio_overview.md) y las [casillas de selección](checkbox_overview.md). Permiten al usuario utilizar el control utilizando el teclado en lugar de tener que utilizar el ratón.
 
-You can configure this option by clicking the [...] button in the Shortcuts property in the Property List.
+Puede configurar esta opción haciendo clic en [...] en la propiedad Accesos directos de la Lista de propiedades.
 
 ![](../assets/en/FormObjects/property_shortcut.png)
 
@@ -269,15 +269,15 @@ Para ver una lista de todos los métodos abreviados utilizados en el entorno Dis
 
 #### Gramática JSON
 
-| Nombre          | Tipos de datos | Valores posibles                                                                                                                                                                                                                                          |
-| --------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| shortcutAccel   | boolean        | true, false (Windows: Ctrl/macOS: Command)                                                                                                                                                             |
-| shortcutAlt     | boolean        | true, false                                                                                                                                                                                                                                               |
-| shortcutCommand | boolean        | true, false                                                                                                                                                                                                                                               |
-| shortcutControl | boolean        | true, false (macOS: Control)                                                                                                                                                                                           |
-| shortcutShift   | boolean        | true, false                                                                                                                                                                                                                                               |
-|                 |                |                                                                                                                                                                                                                                                           |
-| shortcutKey     | string         | <li>any character key: "a", "b"...</li><li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
+| Nombre          | Tipos de datos | Valores posibles                                                                                                                                                                                                                                               |
+| --------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| shortcutAccel   | boolean        | true, false (Windows: Ctrl/macOS: Command)                                                                                                                                                                  |
+| shortcutAlt     | boolean        | true, false                                                                                                                                                                                                                                                    |
+| shortcutCommand | boolean        | true, false                                                                                                                                                                                                                                                    |
+| shortcutControl | boolean        | true, false (macOS: Control)                                                                                                                                                                                                |
+| shortcutShift   | boolean        | true, false                                                                                                                                                                                                                                                    |
+|                 |                |                                                                                                                                                                                                                                                                |
+| shortcutKey     | string         | <li>toda tecla de caracter: "a", "b"...</li><li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
 
 #### Objetos soportados
 

@@ -9,15 +9,15 @@ Os nomes das classes de dados podem ser usadas diretamente nas petições REST p
 
 ## Sintaxe disponível
 
-| Sintaxe                                                                       | Exemplo                     | Descrição                                                                                          |
-| ----------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------- |
-| [**{dataClass}**](#dataClass)                                                 | `/Employee`                 | Retorna todos os dados (como padrão as primeiras 100 entidades) para a dataclass                   |
-| [**[{dataClass}({key})](%7BdataClass%7D.html#dataclasskey)/**](#dataclasskey) | `/Employee(22)`             | Retorna os dados para a entidade especifica definida pela chave primária da classe de dados        |
-| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)                | `/Employee:firstName(John)` | Retorna os dados para uma entidade na qual os valores de atributo são definidas                    |
-| [**{dataClass}/{method}**](#dataclassmethod-and-dataclasskeymethod)           | `/Employee/getHighSalaries` | Executa um método projeto e devolve um objeto ou uma coleção (o método projeto deve estar exposto) |
-| [**{dataClass}({key})/{method}**](#dataclassmethod-and-dataclasskeymethod)    | `/Employee(22)/getAge`      | Retona um valor baseado no método de entidade                                                      |
+| Sintaxe                                                                            | Exemplo                     | Descrição                                                                                          |
+| ---------------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------- |
+| [**\{dataClass\}**](#dataClass)                                                  | `/Employee`                 | Retorna todos os dados (como padrão as primeiras 100 entidades) para a dataclass                   |
+| [**\{dataClass\}({key})**](#dataclasskey)                                        | `/Employee(22)`             | Retorna os dados para a entidade especifica definida pela chave primária da classe de dados        |
+| [**\{dataClass\}:\{attribute\}(value)**](#dataclassattributevalue)             | `/Employee:firstName(John)` | Retorna os dados para uma entidade na qual os valores de atributo são definidas                    |
+| [**\{dataClass\}/\{method\}**](#dataclassmethod-and-dataclasskeymethod)        | `/Employee/getHighSalaries` | Executa um método projeto e devolve um objeto ou uma coleção (o método projeto deve estar exposto) |
+| [**\{dataClass\}({key})/\{method\}**](#dataclassmethod-and-dataclasskeymethod) | `/Employee(22)/getAge`      | Retona um valor baseado no método de entidade                                                      |
 
-## {dataClass}
+## \{dataClass\}
 
 Retorna todos os dados (como padrão as primeiras 100 entidades) para uma classe de dados específica (*por exemplo *, `Company`)
 
@@ -132,7 +132,7 @@ Retorna todas as datas para uma classe de dados específica.
 }
 ````
 
-## [{dataClass}({key})](%7BdataClass%7D.html#dataclasskey)/
+## \{dataClass\}({key})
 
 Retorna os dados para a entidade específica definida pela chave primária da classe de dados, *e.g.*, `Company(22) ou Company("IT0911AB2200")`
 
@@ -179,7 +179,7 @@ A petição abaixo retorna todos os dados públicos na dataclass Company cuja ch
 }
 ````
 
-## {dataClass}:{attribute}(value)
+## \{dataClass\}:\{attribute\}(value)
 
 Retorna os dados para uma entidade na qual os valores de atributo são definidas
 
@@ -203,7 +203,7 @@ A petição abaixo retorna todos os dados públicos do funcionário chamado "Jon
 
  `GET  /rest/Employee:lastname(Jones)`
 
-## {dataClass}/{method} e {dataClass}({key})/{method}
+## \{dataClass\}/\{method\} and \{dataClass\}({key})/\{method\}
 
 Retorna um objeto ou uma coleção baseada em um método projeto.
 
@@ -224,7 +224,7 @@ Para ser chamado em uma petição REST, um método deve:
   - **Tabela**: tabela 4D (classe de dados) na qual o método é chamado. A tabela deve ser [exposta a REST](configuration.md#exposing-tables-and-fields).
   - **Escopo/alcance**: Essa configuração é útil quando o método usar a linguagem clássica 4D e assim precisar ter um contexto de database no lado do servidor.
     - **Tabela** -para métodos aplicados para a tabela inteira (dataclass)
-    - **Registro atual** -para os métodos aplicados ao registro atual (entidade) utilizando a sintaxe `{dataClass}(key)/{method}`.
+    - **Current record** -for methods applied to the current record (entity) using the `\{dataClass\}(key)/{method}` syntax.
     - **Seleção atual** -para os métodos aplicados à seleção atual
 
 ![alt-text](../assets/en/REST/MethodProp.png)

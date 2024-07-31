@@ -429,13 +429,13 @@ Si une classe [étend](#class-extends-classname) une autre classe, les propriét
 
 :::note
 
-If you initialize a property in its declaration line with an object or a collection in a [shared class](#shared-classes), the value is automatically transformed into a shared value:
+Si vous initialisez une propriété dans sa ligne de déclaration avec un objet ou une collection dans une [classe partagée](#classes-partagees), la valeur est automatiquement transformée en une valeur partagée :
 
 ```4d
-// in a shared class
+// dans une classe partagée
 property myCollection := ["something"]
-// myCollection will be a shared collection
-// equivalent to:
+// myCollection sera une collection partagée
+// équivalent à:
 myCollection := New shared collection("something")
 ```
 
@@ -838,9 +838,9 @@ Le singleton de la classe est instancié lors du premier appel de la propriété
 
 Si vous avez besoin d'instancier un singleton avec des paramètres, vous pouvez également appeler la fonction [`new()`](../API/ClassClass.md#new). Dans ce cas, il est recommandé d'instancier le singleton dans du code exécuté au démarrage de l'application.
 
-La portée d'une instance de singleton peut être le process courant ou tous les process. Un singleton _process_ a une valeur unique pour le process dans lequel il est instancié, alors qu'un singleton _interprocess_ a une valeur unique pour tous les process de l'application. Les singletons sont utiles pour définir des valeurs qui doivent être disponibles de n'importe où dans une application ou un process.
+La portée d'une instance de singleton peut être le process courant ou tous les process. Un singleton a une valeur unique pour le process dans lequel il est instancié, tandis qu'un singleton _partagé_ a une valeur unique pour tous les process de l'application. Les singletons sont utiles pour définir des valeurs qui doivent être disponibles de n'importe où dans une application ou un process.
 
-Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application.
+Une fois instanciée, une classe singleton (et son singleton) existe aussi longtemps qu'une référence à cette classe existe quelque part dans l'application.
 
 La propriété [`.isSingleton`](../API/ClassClass.md#issingleton) des objets Class permet de savoir si la classe est un singleton.
 
@@ -850,9 +850,9 @@ Les classes Singleton ne sont pas prises en charge par [les classes ORDA](../ORD
 
 :::
 
-### Création d'un singleton process
+### Création d'un singleton
 
-Pour créer une classe singleton process, ajoutez le mot-clé `singleton` avant [`Class Constructor`](#class-constructor). Par exemple :
+Pour créer une classe singleton, ajoutez le mot-clé `singleton` devant [`Class Constructor`](#class-constructor). Par exemple :
 
 ```4d
 	//class: ProcessTag
@@ -860,7 +860,7 @@ singleton Class Constructor()
  This.tag:=Random
 ```
 
-Pour utiliser le singleton process :
+Pour utiliser le singleton :
 
 ```4d
 	//dans un process
@@ -881,9 +881,9 @@ var $myOtherSingleton := cs.ProcessTag.me
 	//$myOtherSingleton.tag = 14856
 ```
 
-### Création d'un singleton interprocess
+### Création d'un singleton partagé
 
-Pour créer un singleton interprocess, ajoutez les mots-clés `shared singleton` avant le [Class Constructor](#class-constructor). Par exemple :
+Pour créer un singleton partagé par tous les process de l'application, ajoutez les mots-clés `shared singleton` devant le [constructeur de classe](#class-constructor). Par exemple :
 
 ```4d
 //Class VehicleFactory

@@ -79,6 +79,6 @@ Tenga en cuenta que esta opción ralentiza sustancialmente la compactación e in
 - La compactación tiene en cuenta los registros de las tablas que se han puesto en la Papelera. Si hay un gran número de registros en la Papelera, esto puede ser un factor adicional que puede ralentizar la operación.
 - El uso de esta opción hace que la tabla de direcciones, y por tanto la base de datos, sea incompatible con el archivo de diario actual (si existe). Se guardará automáticamente y habrá que crear un nuevo archivo de historial la próxima vez que se inicie la aplicación.
 - Puede decidir si la tabla de direcciones necesita ser compactada comparando el número total de registros y el tamaño de la tabla de direcciones en la página [Información](information.md) del CSM.
-- The [`TRUNCATE TABLE`](https://doc.4d.com/4dv19R/help/command/en/page1051.html) command automatically resets the address table for the specified table.
+- El comando [`TRUNCATE TABLE`](https://doc.4d.com/4dv19R/help/command/en/page1051.html) restablece automáticamente la tabla de direcciones para la tabla especificada.
 
 :::

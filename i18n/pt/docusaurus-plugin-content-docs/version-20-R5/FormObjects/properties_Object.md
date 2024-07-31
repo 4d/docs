@@ -53,12 +53,12 @@ This feature is only supported for objects that contribute to the overall geomet
 
 Eis a lista de objetos cujo valor pode ser guardado:
 
-| Object                                     | Valor guardado                                                                                            |
-| ------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| [Check Box](checkbox_overview.md)          | Valor da variável associada (0, 1, 2)                                                  |
-| [Drop-down List](dropdownList_Overview.md) | Número da linha seleccionada                                                                              |
-| [Radio Button](radio_overview.md)          | Valor da variável associada (1, 0, True ou False para os botões, consoante o seu tipo) |
-| [Tab control](tabControl.md)               | Número da aba selecionada                                                                                 |
+| Object                                                                                                                                                | Valor guardado                                                                                            |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| [Caixa de seleção] (checkbox_overview.md) | Valor da variável associada (0, 1, 2)                                                  |
+| [Lista suspensa](dropdownList_Overview.md)                                                                                                            | Número da linha seleccionada                                                                              |
+| [Radio Button](radio_overview.md)                                                                                                                     | Valor da variável associada (1, 0, True ou False para os botões, consoante o seu tipo) |
+| [Tab control](tabControl.md)                                                                                                                          | Número da aba selecionada                                                                                 |
 
 #### Gramática JSON
 
@@ -98,7 +98,7 @@ Puede utilizar una [expresión](Concepts/quick-tour.md#expressions) como fuente 
 
 ### Variáveis dinâmicas
 
-You can leave it up to 4D to create variables associated with your form objects (buttons, enterable variables, check boxes, etc.) dynamically and according to your needs. Para ello, basta con dejar en blanco la propiedad "Variable o expresión" (o el campo JSON de `dataSource`).
+You can leave it up to 4D to create variables associated with your form objects (buttons, enterable variables, check boxes, etc.) dinamicamente e de acordo com suas necessidades. Para ello, basta con dejar en blanco la propiedad "Variable o expresión" (o el campo JSON de `dataSource`).
 
 When a variable is not named, when the form is loaded, 4D creates a new variable for the object, with a calculated name that is unique in the space of the process variables of the interpreter (which means that this mechanism can be used even in compiled mode). Esta variável temporária será destruída quando o formulário for fechado.
 Para que este princípio funcione em modo compilado, é imperativo que as variáveis dinâmicas sejam explicitamente tipadas. Há duas formas de o fazer:
@@ -183,9 +183,9 @@ Lista de palabras separadas por espacios que se utilizan como selectores de clas
 
 To use collection elements or entities to define the row contents of the list box.
 
-Enter an expression that returns either a collection or an entity selection. Usually, you will enter the name of a variable, a collection element or a property that contain a collection or an entity selection.
+Insira uma expressão que retorne uma coleção ou uma seleção de entidades. Usually, you will enter the name of a variable, a collection element or a property that contain a collection or an entity selection.
 
-The collection or the entity selection must be available to the form when it is loaded. Each element of the collection or each entity of the entity selection will be associated to a list box row and will be available as an object through the [`This`](../Concepts/classes.md#this) keyword:
+A coleção ou a seleção da entidade deve estar disponível para o formulário quando for carregada. Each element of the collection or each entity of the entity selection will be associated to a list box row and will be available as an object through the [`This`](../Concepts/classes.md#this) keyword:
 
 - si ha utilizado una colección de objetos, puede llamar a **This** en la expresión de la fuente de datos para acceder a cada valor de propiedad, por ejemplo `This.<propertyPath>`.
 - si ha utilizado una selección de entidades, puede llamar a **This** en la expresión de la fuente de datos para acceder a cada valor de atributo, por ejemplo `This.<attributePath>`.
@@ -239,7 +239,7 @@ Nombre del [área externa del plug-in](pluginArea_overview.md) asociada al objet
 
 #### Objectos suportados
 
-[Plug-in Area](pluginArea_overview.md)
+[Área de Plug-in](pluginArea_overview.md)
 
 ---
 

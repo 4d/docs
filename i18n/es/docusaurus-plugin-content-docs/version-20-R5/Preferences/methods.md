@@ -104,7 +104,7 @@ Le permite mostrar los números de línea por defecto en cada ventana del Editor
 
 #### Mostrar las listas
 
-Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) by default when the Code Editor window is opened. También puede mostrar u ocultar cada lista directamente desde el Editor de código.
+Le permite elegir si mostrar o no las listas de objetos (Comandos, Tablas y campos, etc.) por defecto cuando se abre la ventana del Editor de código. También puede mostrar u ocultar cada lista directamente desde el Editor de código.
 
 #### Mostrar los portapapeles
 
@@ -151,7 +151,7 @@ Define la señalización gráfica de las llaves correspondientes en el código. 
 Las siguientes opciones están disponibles:
 
 - **Ninguno**: sin señales
-- **Rectangle** (default): Braces surrounded by a black line\
+- **Rectángulo** (por defecto): llaves rodeadas por una línea negra\
   ![](../assets/en/Preferences/optionsRectangle.png)
 - **Color de fondo**: corchetes resaltados (el color se define en la página [Tema](#Teme-definition)).
 - **Negrita**: las llaves aparecen en negrita.

@@ -45,9 +45,9 @@ En el caso de un list box, por defecto se selecciona _Automático_: la columna u
 
 `List box de tipo colección y de tipo selección de entidades`
 
-Una expresión o una variable (no se pueden utilizar variables array) para aplicar un color de fondo personalizado a cada línea del list box. La expresión o la variable se evaluará para cada línea mostrada y debe devolver un valor de color RGB. For more information, refer to the description of the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command in the _4D Language Reference manual_.
+Una expresión o una variable (no se pueden utilizar variables array) para aplicar un color de fondo personalizado a cada línea del list box. La expresión o la variable se evaluará para cada línea mostrada y debe devolver un valor de color RGB. Para más información, consulte la descripción del comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) en el _Manual de Referencia del Lenguaje 4D_.
 
-You can also set this property using the [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/en/page1440.html) command with `lk background color expression` constant.
+También puede establecer esta propiedad utilizando el comando [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/en/page1440.html) con la constante `lk background color expression`.
 
 > Con los list box de tipo colección o selección de entidades, esta propiedad también puede definirse utilizando una [Meta Info Expression](properties_Text.md#meta-info-expression).
 
@@ -126,7 +126,7 @@ El color puede ser especificado por:
 - un valor HEX - como "# ff0000"
 - un valor RVB - como "rgb (255,0,0)"
 
-You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command.
+También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
 
 #### Gramática JSON
 
@@ -160,7 +160,7 @@ Designa el grosor de una línea.
 
 ## Array colores de fondo
 
-`Array type list boxes`
+`List boxes de tipo array`
 
 El nombre de un array para aplicar un color de fondo personalizado a cada línea o columna del list box.
 
@@ -169,8 +169,8 @@ Debe introducirse el nombre de un array Entero largo. Cada elemento de este arra
 Por ejemplo, dado un list box en el que las líneas tienen un color gris/gris claro alternado, definido en las propiedades del list box. También se ha definido para el list box un array de color de fondo con el fin de cambiar a naranja claro el color de las líneas en las que al menos un valor es negativo:
 
 ```4d
- <>_BgndColors{$i}:=0x00FFD0B0 // orange
- <>_BgndColors{$i}:=-255 // default value
+ <>_BgndColors{$i}:=0x00FFD0B0 // naranja
+ <>_BgndColors{$i}:=-255 // valor por defecto
 ```
 
 ![](../assets/en/FormObjects/listbox_styles1.png)
@@ -178,7 +178,7 @@ Por ejemplo, dado un list box en el que las líneas tienen un color gris/gris cl
 A continuación, quiere colorear las celdas con valores negativos en naranja oscuro. Para ello, se define un array de colores de fondo para cada columna, por ejemplo `<>_BgndColor_1`, `<>_BgndColor_2` y `<>_BgndColor_3`. Los valores de estos arrays tienen prioridad sobre los definidos en las propiedades del list box, así como los del array de color de fondo general:
 
 ```4d
- <>_BgndColorsCol_3{2}:=0x00FF8000 // dark orange
+ <>_BgndColorsCol_3{2}:=0x00FF8000 // naranja oscuro
  <>_BgndColorsCol_2{5}:=0x00FF8000
  <>_BgndColorsCol_1{9}:=0x00FF8000
  <>_BgndColorsCol_1{16}:=0x00FF8000

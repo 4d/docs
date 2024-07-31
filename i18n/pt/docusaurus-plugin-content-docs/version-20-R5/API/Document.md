@@ -433,12 +433,12 @@ Essa propriedade é **somente leitura**.
 
 <!-- REF #document.copyTo().Params -->
 
-| Parâmetro         | Tipo                       |     | Descrição                                   |
-| ----------------- | -------------------------- | :-: | ------------------------------------------- |
-| destinationFolder | 4D. Folder |  -> | Pasta de destino                            |
-| newName           | Text                       |  -> | Nome para a copia                           |
-| overwrite         | Integer                    |  -> | `fk overwrite` to replace existing elements |
-| Resultados        | 4D. File   |  <- | Arquivo copiado                             |
+| Parâmetro         | Tipo                       |     | Descrição                                              |
+| ----------------- | -------------------------- | :-: | ------------------------------------------------------ |
+| destinationFolder | 4D. Folder |  -> | Pasta de destino                                       |
+| newName           | Text                       |  -> | Nome para a copia                                      |
+| overwrite         | Integer                    |  -> | `fk overwrite` para substituir os elementos existentes |
+| Resultados        | 4D. File   |  <- | Arquivo copiado                                        |
 
 <!-- END REF -->
 
@@ -458,7 +458,7 @@ If a file with the same name already exists in the *destinationFolder*, by defau
 
 **Valor retornado**
 
-The copied `File` object.
+O objeto `File` copiado.
 
 #### Exemplo
 
@@ -550,7 +550,7 @@ Se o arquivo não existir no disco, um ícone em branco padrão será retornado.
 
 **Valor retornado**
 
-File icon [picture](../Concepts/picture.html).
+[Imagen](../Concepts/picture.html) do ícone de arquivo.
 
 <!-- END REF -->
 
@@ -626,7 +626,7 @@ Quando você executar este código:
  $txt:=$myFile.getText()
 ```
 
-... you get the following for `$txt`:
+... você obtém o seguinte para `$txt`:
 
 "id\tname\tprice\tvat\r\n3\tthé\t1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"
 

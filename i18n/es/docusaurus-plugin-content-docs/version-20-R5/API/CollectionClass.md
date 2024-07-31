@@ -63,7 +63,7 @@ Una colección se inicializa con:
 | [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceRight)<br/><!-- INCLUDE #collection.reduceRight().Summary -->       |
 | [<!-- INCLUDE #collection.remove().Syntax -->](#remove)<br/><!-- INCLUDE #collection.remove().Summary -->                      |
 | [<!-- INCLUDE #collection.resize().Syntax -->](#resize)<br/><!-- INCLUDE #collection.resize().Summary -->                      |
-| [<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)<br/><!-- INCLUDE #collection.reverse().Summary -->                   |
+| [<!-- INCLUDE #collection.orderBy().Syntax -->](#orderby)<br/><!-- INCLUDE #collection.orderBy().Summary -->                   |
 | [<!-- INCLUDE #collection.shift().Syntax -->](#shift)<br/><!-- INCLUDE #collection.shift().Summary -->                         |
 | [<!-- INCLUDE #collection.slice().Syntax -->](#slice)<br/><!-- INCLUDE #collection.slice().Summary -->                         |
 | [<!-- INCLUDE #collection.some().Syntax -->](#some)<br/><!-- INCLUDE #collection.some().Summary -->                            |
@@ -792,15 +792,14 @@ En el parámetro *options*, puede pasar una o una combinación de las siguientes
 
 La función `.equal()` <!-- REF #collection.equal().Summary -->compara recursivamente el contenido de la colección y *collection2* (comparación profunda/deep comparison)<!-- END REF --> y devuelve **true** si son idénticas.
 
-Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluación diferencie entre mayúsculas y minúsculas o que diferencie los caracteres acentuados, pase la constante `ck diacritical` en el parámetro option.
+:::note Notas
 
-> Los elementos con valores **Null** no son iguales a los elementos Undefined.
-
-:::note
-
-Una comparación recursiva de colecciones puede llevar mucho tiempo si la colección es grande y contiene numerosos niveles. Si sólo desea comparar dos referencias de colección, puede considerar utilizar el operador de comparación [`=` para las referencias de colección](../Concepts/dt_collection.md#collection-operators).
+- La función `.equal()` solo comprueba la igualdad para los elementos de tipo cadena, booleano, número y null en las colecciones. No verifica la igualdad para objetos nativos.
+- Los elementos con valores **null** no son iguales a los elementos Undefined.
 
 :::
+
+Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluación diferencie entre mayúsculas y minúsculas o que diferencie los caracteres acentuados, pase la constante `ck diacritical` en el parámetro option.
 
 #### Ejemplo
 
@@ -2597,14 +2596,14 @@ donde:
 
 - **valor**: valor a comparar con el valor actual de la propiedad de cada elemento de la colección. Puede ser cualquier valor de expresión constante que coincida con la propiedad del tipo de datos del elemento o un [**marcador de posición**](#using-placeholders).
   Al utilizar un valor constante, deben respetarse las siguientes reglas:
-  - **text** type constant can be passed with or without simple quotes (see **Using quotes** below). Para consultar una cadena dentro de otra cadena (una consulta de tipo "contiene"), utilice el símbolo de comodín (@) en el valor para aislar la cadena a buscar como se muestra en este ejemplo: "@Smith@". Las siguientes palabras claves están prohibidas para las constantes de texto: true, false.
-  - **boolean** type constants: **true** or **false** (case sensitive).
-  - **numeric** type constants: decimals are separated by a '.' (period).
+  - La constante de tipo **texto** puede pasarse con o sin comillas simples (ver **Uso de comillas** más abajo). Para consultar una cadena dentro de otra cadena (una consulta de tipo "contiene"), utilice el símbolo de comodín (@) en el valor para aislar la cadena a buscar como se muestra en este ejemplo: "@Smith@". Las siguientes palabras claves están prohibidas para las constantes de texto: true, false.
+  - Valores constantes de tipo **booleano**: **true** o **false** (Sensible a las mayúsculas y minúsculas).
+  - Valores constantes de **tipo numérico**: los decimales se separan con un '.' (punto).
   - Constantes de tipo **date**: formato "YYYY-MM-DD"
-  - **null** constant: using the "null" keyword will find **null** and **undefined** properties.
-  - in case of a query with an IN comparator, *value* must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, `"` characters must be escaped with `\`).
+  - Constantes **null**: utilizando la palabra clave "null" se encontrarán las propiedades **null** y **undefined**.
+  - en el caso de una búsqueda con un comparador IN, *value* debe ser una colección, o los valores que coincidan con el tipo de la ruta del atributo entre \[ ] separados por comas (para las cadenas, los caracteres `"` deben escaparse con `\`).
 
-- **logicalOperator**: used to join multiple conditions in the query (optional). Puede utilizar uno de los siguientes operadores lógicos (se puede utilizar el nombre o el símbolo):
+- **logicalOperator**: utilizado para unir condiciones múltiples en la búsqueda (opcional). Puede utilizar uno de los siguientes operadores lógicos (se puede utilizar el nombre o el símbolo):
 
 | Conjunción | Símbolo(s)                                          |
 | ---------- | ---------------------------------------------------------------------- |
@@ -2635,7 +2634,7 @@ Puede utilizar paréntesis en la búsqueda para dar prioridad al cálculo. Por e
 
 Se pueden utilizar dos tipos de marcadores de posición: **marcadores de posición indexados** y **marcadores de posición con nombre**.
 
-- **Marcadores de posición indexados**: los parámetros se insertan como `:paramIndex` (por ejemplo ":1", ":2"...) in *queryString* and their corresponding values are provided by the sequence of *value* parameter(s). Puede usar hasta 128 parámetros *value*.
+- **Marcadores de posición indexados**: los parámetros se insertan como `:paramIndex` (por ejemplo ":1", ":2"...) en *queryString* y sus valores correspondientes son proporcionados por la secuencia de parámetros *value*. Puede usar hasta 128 parámetros *value*.
 
 Ejemplo:
 
@@ -2658,16 +2657,16 @@ Puede mezclar todos los tipos de argumentos en *queryString*. Un *queryString* p
 - valores directos (sin marcadores),
 - marcadores indexados y/o con nombre.
 
-Using placeholders in queries **is recommended** for the following reasons:
+El uso de marcadores de posición en las búsquedas **se recomienda** por las siguientes razones:
 
 1. Evita la inserción de código malicioso: si utiliza directamente variables completadas por el usuario dentro de la cadena de búsqueda, un usuario podría modificar las condiciones de búsqueda introduciendo argumentos de búsqueda adicionales. Por ejemplo, imagine una cadena de búsqueda como:
 
 ```4d
- $vquery:="status = 'public' & name = "+myname //user enters their name
+ $vquery:="status = 'public' & name = "+myname //el usuario introduce su nombre
  $result:=$col.query($vquery)
 ```
 
-Esta búsqueda parece segura ya que se filtran los datos no públicos. However, if the user enters in the *myname* area something like *"smith OR status='private'*, the query string would be modified at the interpretation step and could return private data.
+Esta búsqueda parece segura ya que se filtran los datos no públicos. Sin embargo, si el usuario introduce en el área *myname* algo como *"smith OR status='private'*, la cadena de consulta se modificaría en el paso de interpretación y podría devolver datos privados.
 
 Cuando se utilizan marcadores de posición, no es posible anular las condiciones de seguridad:
 
@@ -2675,7 +2674,7 @@ Cuando se utilizan marcadores de posición, no es posible anular las condiciones
  $result:=$col.query("status='public' & name=:1";myname)
 ```
 
-In this case if the user enters *smith OR status='private'* in the *myname* area, it will not be interpreted in the query string, but only passed as a value. La búsqueda de una persona llamada "smith OR status='private'" simplemente fallará.
+En este caso, si el usuario introduce *smith OR status='private'* en el área *myname*, no se interpretará en la cadena de búsqueda, sino que sólo se pasará como valor. La búsqueda de una persona llamada "smith OR status='private'" simplemente fallará.
 
 2. Evita tener que preocuparse por cuestiones de formato o caracteres, especialmente cuando se manejan los parámetros *propertyPath* o *value* que pueden contener caracteres no alfanuméricos como ".", "['...
 
@@ -2825,7 +2824,7 @@ $entitySelection:=ds.Employee.query("birthDate <= :1";Current date-10950)
 
 :::info
 
-More examples of queries can be found in the `dataClass.query()` page.
+Se pueden encontrar más ejemplos de búsquedas en la página `dataClass.query()`.
 
 :::
 
@@ -2869,9 +2868,9 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o *methodName*, el nombre de un método proyecto (texto).
 
-The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
+La retrollamada toma cada elemento de la colección y realiza toda operación deseada para acumular el resultado en *$1.accumulator*, que se devuelve en *$1.value*.
 
-You can pass the value to initialize the accumulator in *initValue*. Si se omite, *$1.accumulator* empieza por *Undefined*.
+Puede pasar el valor para inicializar el acumulador en *initValue*. Si se omite, *$1.accumulator* empieza por *Undefined*.
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -2881,8 +2880,8 @@ La retrollamada recibe los siguientes parámetros:
 
 La retrollamada define los siguientes parámetros:
 
-- *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
-- *$1.stop* (boolean, optional): **true** to stop the method callback. El valor devuelto es el último calculado.
+- *$1.accumulator*: valor que va a ser modificado por la función y que es inicializado por *initValue*.
+- *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 #### Ejemplo 1
 
@@ -2954,9 +2953,9 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o *methodName*, el nombre de un método proyecto (texto).
 
-The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
+La retrollamada toma cada elemento de la colección y realiza toda operación deseada para acumular el resultado en *$1.accumulator*, que se devuelve en *$1.value*.
 
-You can pass the value to initialize the accumulator in *initValue*. Si se omite, *$1.accumulator* empieza por *Undefined*.
+Puede pasar el valor para inicializar el acumulador en *initValue*. Si se omite, *$1.accumulator* empieza por *Undefined*.
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -2966,8 +2965,8 @@ La retrollamada recibe los siguientes parámetros:
 
 La retrollamada define los siguientes parámetros:
 
-- *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
-- *$1.stop* (boolean, optional): **true** to stop the method callback. El valor devuelto es el último calculado.
+- *$1.accumulator*: valor que va a ser modificado por la función y que es inicializado por *initValue*.
+- *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 #### Ejemplo 1
 
@@ -2995,7 +2994,7 @@ Este ejemplo permite reducir varios elementos de la colección a uno solo:
 Con el siguiente método ***Flatten***:
 
 ```4d
-	//Flatten project method
+	//Método proyecto Flatten
  If($1.accumulator=Null)
     $1.accumulator:=New collection
  End if
@@ -3034,15 +3033,15 @@ The `.remove()` function <!-- REF #collection.remove().Summary -->removes one or
 
 > Esta función modifica la colección original.
 
-In *index*, pass the position where you want the element to be removed from the collection.
+En *index*, pase la posición donde quiere eliminar el elemento de la colección.
 
-> **Atención**: recuerde que los elementos de la colección están numerados desde 0. If *index* is greater than the length of the collection, actual starting index will be set to the length of the collection.
+> **Atención**: recuerde que los elementos de la colección están numerados desde 0. Si *index* es mayor que la longitud de la colección, el índice inicial real se definirá en la longitud de la colección.
 
 - Si *index* < 0, se recalcula como *index:=index+length* (se considera el desplazamiento desde el final de la colección).
 - Si el valor calculado < 0, *index* toma el valor 0.
-- If the calculated value > the length of the collection, *index* is set to the length.
+- Si el valor calculado > la longitud de la colección, *index* toma el valor de la longitud.
 
-In *howMany*, pass the number of elements to remove from *index*. If *howMany* is not specified, then one element is removed.
+En *howMany*, pase el número de elementos a eliminar de *index*. Si no se especifica *howMany*, se elimina un elemento.
 
 Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
 
@@ -3089,10 +3088,10 @@ The `.resize()` function <!-- REF #collection.resize().Summary -->sets the colle
 
 > Esta función modifica la colección original.
 
-- If *size* < collection length, exceeding elements are removed from the collection.
-- If *size* > collection length, the collection length is increased to size.
+- Si *size* la longitud de la colección, los elementos que exceden se eliminan de la colección.
+- Si *size* > longitud de la colección, *size* es la nueva longitud de la colección.
 
-By default, new elements are filled will **null** values. You can specify the value to fill in added elements using the *defaultValue* parameter.
+Por defecto, los nuevos elementos se llenan con valores **null**. Puede especificar el valor a llenar en los elementos añadidos utilizando el parámetro *defaultValue*.
 
 #### Ejemplo
 
@@ -3221,16 +3220,16 @@ Si la colección está vacía, este método no hace nada.
 
 #### Descripción
 
-The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). This function returns a *shallow copy* of the collection. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
+The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). Esta función devuelve una *copia superficial* de la colección. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 
 > Esta función no modifica la colección original.
 
-The returned collection contains the element specified by *startFrom* and all subsequent elements up to, but not including, the element specified by *end*. If only the *startFrom* parameter is specified, the returned collection contains all elements from *startFrom* to the last element of the original collection.
+La colección devuelta contiene el elemento especificado por *startFrom* y todos los elementos subsiguientes hasta, pero sin incluir, el elemento especificado por *end*. Si sólo se especifica el parámetro *startFrom*, la colección devuelta contiene todos los elementos desde *startFrom* hasta el último elemento de la colección original.
 
 - Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la colección).
 - Si el valor calculado < 0, *startFrom* toma el valor 0.
 - Si *end* < 0 , se recalcula como *end:=end+length*.
-- If *end < startFrom* (passed or calculated values), the method does nothing.
+- Si *end < startFrom* (valores pasados o calculados), el método no hace nada.
 
 #### Ejemplo
 
@@ -3292,16 +3291,16 @@ La retrollamada recibe los siguientes parámetros:
 
 Puede definir los siguientes parámetros:
 
-- (mandatory if you used a method) *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
-- *$1.stop* (boolean, optional): **true** to stop the method callback. El valor devuelto es el último calculado.
+- (obligatorio si se ha utilizado un método) *$1.result* (booleano): **true** si la evaluación del valor del elemento tiene éxito, **false** en caso contrario.
+- *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
-In any case, at the point where `.some()` function encounters the first collection element returning true, it stops calling the callback and returns **true**.
+En todo caso, en el momento en que la función `.some()` encuentra el primer elemento de la colección que devuelve true, deja de llamar a la llamada de retorno y devuelve **true**.
 
-Por defecto, `.some()` comprueba toda la colección. Optionally, you can pass the index of an element from which to start the test in *startFrom*.
+Por defecto, `.some()` comprueba toda la colección. Opcionalmente, puede pasar el índice de un elemento desde el cual iniciar la prueba en *startFrom*.
 
-- If *startFrom* >= the collection's length, **False** is returned, which means the collection is not tested.
+- Si *startFrom* >= la longitud de la colección, se devuelve **False**, lo que significa que no se prueba la colección.
 
-- If *startFrom* < 0, it is considered as the offset from the end of the collection.
+- Si *startFrom* < 0, se considera como el desplazamiento desde el final de la colección.
 
 - Si *startFrom* = 0, se busca en toda la colección (por defecto).
 
@@ -3354,11 +3353,11 @@ Quiere saber si al menos un valor de la colección es >0.
 
 #### Descripción
 
-The `.sort()` function <!-- REF #collection.sort().Summary -->sorts the elements of the original collection and also returns the sorted collection<!-- END REF --> .
+La función `.sort()` <!-- REF #collection.sort().Summary -->ordena los elementos de la colección original y además devuelve la colección ordenada<!-- END REF -->.
 
 > Esta función modifica la colección original.
 
-If `.sort()` is called with no parameters, only scalar values (number, text, date, booleans) are sorted. Los elementos se ordenan por defecto de forma ascendente, según su tipo. Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si <em x-id="3">attributePath</em> lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
+Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo. Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si <em x-id="3">attributePath</em> lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
 
 1. null
 2. booleans
@@ -3379,7 +3378,7 @@ La retrollamada recibe los siguientes parámetros:
 
 Si utilizó un método, debe definir el siguiente parámetro:
 
-- *$1.result* (boolean): **true** if *$1.value < $1.value2*, **false** otherwise.
+- *$1.result* (boolean): **true** si *$1.value < $1.value2*, **false** de lo contrario.
 
 #### Ejemplo 1
 
@@ -3434,7 +3433,7 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //orden alfabétic
 
 #### Descripción
 
-The `.sum()` function <!-- REF #collection.sum().Summary -->returns the sum for all values in the collection instance<!-- END REF -->.
+La función `.sum()` <!-- REF #collection.sum().Summary --> devuelve la suma de todos los valores de la instancia de la colección<!-- END REF -->.
 
 Para el cálculo sólo se tienen en cuenta los elementos numéricos (se ignoran otros tipos de elementos).
 

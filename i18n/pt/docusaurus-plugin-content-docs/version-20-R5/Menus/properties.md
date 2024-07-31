@@ -132,7 +132,7 @@ Estas combinações chave reservadas estão listadas na tabela seguinte:
 Atribuir um atalho de teclado no editor de menus:
 
 Seleccione o item do menu ao qual pretende atribuir um atalho de teclado.
-Click on the [...] button to the right of the "Shortcut" entry area. Aparece a seguinte janela:
+Clique no [...] button to the right of the "Shortcut" entry area. Aparece a seguinte janela:
 
 ![](../assets/en/Menus/Shortcut.png)
 

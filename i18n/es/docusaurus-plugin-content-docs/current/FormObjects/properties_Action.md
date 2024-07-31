@@ -86,7 +86,7 @@ Referencia de un método adjunto al objeto. Los métodos de objeto generalmente 
 
 Se soportan varios tipos de referencias de métodos:
 
-- a standard object method file path, i.e. that uses the following pattern:\
+- una ruta de archivo de método objeto estándar, es decir, que utilice el siguiente patrón:\
   `ObjectMethods/objectName.4dm`\
   ... where `objectName` is the actual [object name](properties_Object.md#object-name). Este tipo de referencia indica que el archivo del método se encuentra en la ubicación por defecto ("sources/forms/_formName_/ObjectMethods/"). En este caso, 4D maneja automáticamente el método objeto cuando se ejecutan operaciones en el objeto formulario (renombrar, duplicar, copiar/pegar...)
 
@@ -112,7 +112,7 @@ Se soportan varios tipos de referencias de métodos:
 
 ## Líneas desplazables
 
-`Array type list boxes`
+`List boxes de tipo array`
 
 Autoriza el desplazamiento de líneas durante la ejecución. Esta opción está seleccionada por defecto. No está disponible para los [list box de tipo selección](listbox_overview.md#selection-list-boxes) ni para los [list box en modo jerárquico](properties_Hierarchy.md#hierarchical-list-box).
 

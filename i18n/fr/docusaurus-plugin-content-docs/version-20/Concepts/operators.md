@@ -19,7 +19,7 @@ Les valeurs que les opérateurs affectent sont des opérandes. Dans l'expression
 
 
 
-## Opérateur d'assignation
+## Opérateur d'affectation
 
 **L'opérateur d'affectation** (`a:=b`) initialise ou met à jour la valeur de `a` avec la valeur de `b` :
 

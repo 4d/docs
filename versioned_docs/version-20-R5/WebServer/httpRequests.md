@@ -71,9 +71,9 @@ Let’s use an intranet connection as an example. Suppose that the IP address of
 |URL entered in web browser|Value of parameter $1|
 |---|---|
 |123.4.567.89|/ |
-|http://123.4.567.89|/ |
+|http://123.45.67.89|/ |
 |123.4.567.89/Customers|/Customers |
-|http://123.4.567.89/Customers/Add|/Customers/Add |
+|http://123.45.67.89/Customers/Add|/Customers/Add |
 |123.4.567.89/Do_This/If_OK/Do_That|/Do_This/If_OK/Do_That |
 	
 Note that you are free to use this parameter at your convenience. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.

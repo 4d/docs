@@ -73,7 +73,7 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 | Release | Mudanças                                                       |
 | ------- | -------------------------------------------------------------- |
 | 20      | Validação TLS por padrão                                       |
-| 18 R6   | Support of *automaticRedirections* and *decodeData* properties |
+| 18 R6   | Suporte às propriedades *automaticRedirections* e *decodeData* |
 
 </details>
 
@@ -150,12 +150,12 @@ Todas as funções de chamada de retorno recebem dois parâmetros de objectos:
 
 | Parâmetro | Tipo                                        |
 | --------- | ------------------------------------------- |
-| $param1   | [`HTTPRequest` object](#httprequest-object) |
+| $param1   | [`Objeto HTTPRequest`](#objeto-httprequest) |
 | $param2   | [Objeto `Event`](#event-object)             |
 
 Aqui está a sequência de chamadas de retorno:
 
-1. `onHeaders` is always called once
+1. `onHeaders` é sempre chamado uma vez
 
 2. `onData` is called zero or several times (not called if the request does not have a body)
 
@@ -163,7 +163,7 @@ Aqui está a sequência de chamadas de retorno:
 
 4. If an error occurs, `onError` is executed once (and terminates the request)
 
-5. `onTerminate` is always executed once
+5. `onTerminate` é sempre executado uma vez
 
 #### objecto evento
 
@@ -354,9 +354,9 @@ The `.protocol` property contains <!-- REF #HTTPRequestClass.protocol.Summary --
 
 <details><summary>História</summary>
 
-| Release | Mudanças                                                                           |
-| ------- | ---------------------------------------------------------------------------------- |
-| 19 R8   | `.headers` returns lowercase names. Nova propriedade `.rawHeaders` |
+| Release | Mudanças                                                                               |
+| ------- | -------------------------------------------------------------------------------------- |
+| 19 R8   | `.headers` devolve nomes em minúsculas. Nova propriedade `.rawHeaders` |
 
 </details>
 
@@ -408,7 +408,7 @@ The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnRes
 
 > Esta função é thread segura.
 
-The `.terminate()` function <!-- REF #HTTPRequestClass.terminate().Summary -->aborts the HTTP request<!-- END REF -->. It triggers the `onTerminate` event.
+The `.terminate()` function <!-- REF #HTTPRequestClass.terminate().Summary -->aborts the HTTP request<!-- END REF -->. Desencadeia o evento `onTerminate`.
 
 <!-- END REF -->
 

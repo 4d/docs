@@ -60,7 +60,7 @@ Os comandos abaixo não são compatíveis para seu uso dentro de um componente p
 **Notas:**
 
 - El comando `Current form table` devuelve `Nil` cuando se llama en el contexto de un formulario proyecto. Por isso não pode ser usado em um componente.
-- SQL data definition language commands (`CREATE TABLE`, `DROP TABLE`, etc.) cannot be used on the component project. Sin embargo, se soportan con bases de datos externas (ver el comando SQL `CREATE DATABASE`).
+- SQL data definition language commands (`CREATE TABLE`, `DROP TABLE`, etc.) não pode ser usado no projeto do componente. Sin embargo, se soportan con bases de datos externas (ver el comando SQL `CREATE DATABASE`).
 
 ## Partilhar os métodos de projeto
 
@@ -92,7 +92,7 @@ EXECUTE METHOD($param)
 > Um banco de dados de host interpretado que contém componentes interpretados pode ser compilado ou verificado quanto à sintaxe se não chamar métodos do componente interpretado. Otherwise, a warning dialog box appears when you attempt to launch the compilation or a syntax check and it will not be possible to carry out the operation.\
 > Keep in mind that an interpreted method can call a compiled method, but not the reverse, except via the use of the `EXECUTE METHOD` and `EXECUTE FORMULA` commands.
 
-## Sharing of classes
+## Compartilhamento de classes
 
 By default, component classes cannot be called from the 4D Code Editor of the host project. If you want your component classes to be exposed in the host project and its loaded components, you need to **declare a component namespace**. Additionally, you can control how component classes are suggested in the host Code Editor.
 
@@ -102,7 +102,7 @@ To allow classes of your component to be exposed in the host projects and their 
 
 ![](../assets/en/settings/namespace.png)
 
-:::Note
+:::note
 
 Un _namespace_ garantiza que no surja ningún conflicto cuando un proyecto local utilice diferentes componentes que tienen clases o funciones con nombres idénticos. Un namespace del componente debe ser compatible con [reglas de denominación de las propiedades](../Concepts/identifiers.md#object-properties).
 

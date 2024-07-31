@@ -126,7 +126,7 @@ La definición de un modelo de formato garantiza que el contenido de sus documen
 
 4D View Pro tiene formatos integrados para números, fechas, horas y texto, pero también puede crear sus propios modelos para dar formato al contenido de las celdas utilizando caracteres y códigos especiales.
 
-For example, when using the [VP SET VALUE](commands/vp-set-value.md) or [VP SET NUM VALUE](commands/vp-set-num-value.md) commands to enter amounts in an invoice, you may want the currency symbols ($, €, ¥, etc.) to be aligned regardless of the space required by the number (i.e., whether the amount is $5.00 or $5,000.00). You could use formatting characters and spectify the pattern _($\* #,##0.00_) which would display amounts as shown:
+For example, when using the [VP SET VALUE](commands/vp-set-value.md) or [VP SET NUM VALUE](commands/vp-set-num-value.md) commands to enter amounts in an invoice, you may want the currency symbols ($, €, ¥, etc.) alinearse independientemente del espacio requerido por el número (es decir, si el importe es de 5,00 $ o de 5.000,00 $). Podría utilizar caracteres de formato y espectificar el patrón _($\* #,##0.00_) que mostraría los importes como se muestra:
 
 ![](../assets/en/ViewPro/apx_vpCellFormat1.PNG)
 
@@ -332,16 +332,16 @@ Los atributos de orientación se utilizan para especificar la dirección del dis
 
 Los atributos página se utilizan para especificar la configuración general de impresión del documento.
 
-| Propiedad       | Tipo         | Descripción                                                                                                                                                                                                                                                     |
-| --------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| blackAndWhite   | boolean      | Impresión sólo en blanco y negro. <p>Default value = false</p><p>**Note**: PDFs are not affected by this attribute. Se mantienen los colores en los PDF.</p>                                    |
-| centering       | entero largo | Como se centran los contenidos en la página impresa. Valores disponibles: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (por defecto), `vk print centering vertical` |
-| firstPageNumber | entero largo | El número de página a imprimir en la primera página. Valor por defecto = 1                                                                                                                                                                      |
-| pageOrder       | entero largo | Las páginas del pedido se imprimen. Valores disponibles: `vk print page order auto` (por defecto), `vk print page order down then over`, `vk print page order over then down`.               |
-| pageRange       | text         | El rango de páginas a imprimir                                                                                                                                                                                                                                  |
-| qualityFactor   | entero largo | El factor de calidad para la impresión (1 - 8).  The higher the quality factor, the better the printing quality, however printing performance may be affected.<p>Default value = 2</p>                       |
-| useMax          | boolean      | Only columns and rows with data are printed.<p>Default value = true</p>                                                                                                                                                                         |
-| zoomFactor      | real         | The amount to enlarge or reduce the printed page.<p>Default value = 1</p>                                                                                                                                                                       |
+| Propiedad       | Tipo         | Descripción                                                                                                                                                                                                                                                                |
+| --------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| blackAndWhite   | boolean      | Impresión sólo en blanco y negro. <p>Valor por defecto = false</p><p>**Nota**: este atributo no afecta a los archivos PDF. Se mantienen los colores en los PDF.</p>                                        |
+| centering       | entero largo | Como se centran los contenidos en la página impresa. Valores disponibles: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (por defecto), `vk print centering vertical`            |
+| firstPageNumber | entero largo | El número de página a imprimir en la primera página. Valor por defecto = 1                                                                                                                                                                                 |
+| pageOrder       | entero largo | Las páginas del pedido se imprimen. Valores disponibles: `vk print page order auto` (por defecto), `vk print page order down then over`, `vk print page order over then down`.                          |
+| pageRange       | text         | El rango de páginas a imprimir                                                                                                                                                                                                                                             |
+| qualityFactor   | entero largo | El factor de calidad para la impresión (1 - 8).  Cuanto mayor sea el factor de calidad, mejor será la calidad de impresión, sin embargo, el rendimiento de impresión puede verse afectado. <p>Valor por defecto = 2</p> |
+| useMax          | boolean      | Sólo se imprimen columnas y líneas con datos.<p>Valor predeterminado = true</p>                                                                                                                                                                            |
+| zoomFactor      | real         | La cantidad para ampliar o reducir la página impresa.<p>Valor predeterminado = 1</p>                                                                                                                                                                       |
 
 ### Tamaño del papel
 
@@ -361,8 +361,8 @@ Los atributos de tamaño de papel se utilizan para especificar las dimensiones o
 
 - Si establece el tamaño del papel mediante la propiedad `kind`, puede utilizar cualquiera de los dos:
   - uno de los formatos de la [lista de formatos SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
-  - one of the formats returned by the [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html) command.
-    In that case, [`VP Get print info`](./commands/vp-get-print-info.md) returns the corresponding format with the height and width.
+  - uno de los formatos devueltos por el comando [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html).
+    En ese caso, [`VP Get print info`](./commands/vp-get-print-info.md) devuelve el formato correspondiente con la altura y el ancho.
 
 ### Escala
 
@@ -408,11 +408,11 @@ Los objetos de estilo y las hojas de estilo de 4D View Pro le permiten controlar
 
 ### Objetos de estilo & Hojas de estilo
 
-Los objetos Estilo contienen parámetros de estilo. Se pueden utilizar en una hoja de estilo o por su cuenta. Los objetos Estilo también pueden utilizarse además de una hoja de estilo, de modo que puedan definirse diferentes parámetros para rangos de celdas individuales sin que ello afecte al resto del documento. You can use style objects directly with the [VP SET CELL STYLE](commands/vp-set-cell-style.md) and [VP SET DEFAULT STYLE](commands/vp-set-default-style.md) commands. You can also use style objects when defining custom table themes using the [VP SET TABLE THEME](commands/vp-set-table-theme.md) or [VP CREATE TABLE](commands/vp-create-table.md) commands.
+Los objetos Estilo contienen parámetros de estilo. Se pueden utilizar en una hoja de estilo o por su cuenta. Los objetos Estilo también pueden utilizarse además de una hoja de estilo, de modo que puedan definirse diferentes parámetros para rangos de celdas individuales sin que ello afecte al resto del documento. Puede utilizar objetos de estilo directamente con los comandos [VP SET CELL STYLE](comandos/vp-set-cell-style.md) y [VP SET DEFAULT STYLE](comandos/vp-set-default-style.md). You can also use style objects when defining custom table themes using the [VP SET TABLE THEME](commands/vp-set-table-theme.md) or [VP CREATE TABLE](commands/vp-create-table.md) commands.
 
 Una **hoja de estilo** agrupa una combinación de propiedades en un objeto estilo para especificar el aspecto de todas las celdas de sus documentos 4D View Pro. Las hojas de estilo guardadas con el documento pueden utilizarse para definir las propiedades de una sola hoja, de varias hojas o de todo un libro de trabajo. Cuando se crea, una hoja de estilo 4D View Pro recibe un nombre que se guarda dentro de la hoja de estilo en la propiedad "name". Esto permite utilizar fácilmente una hoja de estilo y si se selecciona cuidadosamente, puede facilitar su identificación y finalidad (por ejemplo, Membrete_interno, Membrete_externo).
 
-Style sheets are created with the [VP ADD STYLESHEET](commands/vp-add-stylesheet.md) command and applied with the the [VP SET DEFAULT STYLE](commands/vp-set-default-style.md) or [VP SET CELL STYLE](commands/vp-set-cell-style.md) commands. You can  remove a style sheet with the [VP REMOVE STYLESHEET](commands/vp-remove-stylesheet.md) command.
+Style sheets are created with the [VP ADD STYLESHEET](commands/vp-add-stylesheet.md) command and applied with the the [VP SET DEFAULT STYLE](commands/vp-set-default-style.md) or [VP SET CELL STYLE](commands/vp-set-cell-style.md) commands. Puede eliminar una hoja de estilo con el comando [VP REMOVE STYLESHEET](commands/vp-remove-stylesheet.md).
 
 The [VP Get stylesheet](commands/vp-get-stylesheet.md) command can be used to return the style object of a single style sheet or you can use the [VP Get stylesheets](commands/vp-get-stylesheets.md) command to retrieve a collection of style objects for multiple style sheets.
 
@@ -484,7 +484,7 @@ Ejemplo:
 
 ## Objeto 4D View Pro
 
-El [objeto](Concepts/dt_object.md) 4D View Pro almacena todo el contenido de la hoja de cálculo. Es manejado automáticamente por 4D View Pro. You can set or get this object using the [VP IMPORT FROM OBJECT](commands/vp-import-from-object.md) or [VP Export to object](commands/vp-export-to-object.md) commands.
+El [objeto](Concepts/dt_object.md) 4D View Pro almacena todo el contenido de la hoja de cálculo. Es manejado automáticamente por 4D View Pro. Puede definir u obtener este objeto utilizando los comandos [VP IMPORT FROM OBJECT](comandos/vp-import-from-object.md) o [VP Export to object](comandos/vp-export-to-object.md).
 
 Contiene las siguientes propiedades:
 

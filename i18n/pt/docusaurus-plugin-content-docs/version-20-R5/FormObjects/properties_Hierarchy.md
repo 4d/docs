@@ -5,7 +5,7 @@ title: Hierarquia
 
 ## List box hierárquica
 
-`Array type list boxes`
+`List boxes de tipo array`
 
 Essa propriedade especifica que o list box deve ser exibido em forma hierárquica. In the JSON form, this feature is triggered [when the _dataSource_ property value is an array](properties_Object.md#hierarchical-list-box), i.e. a collection.
 

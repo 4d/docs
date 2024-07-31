@@ -17,13 +17,13 @@ title: VP Get table range
 
 <!-- REF #_method_.VP Get table range.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                                   |                  |
-| ---------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                                  |                  |
-| tableName  | Text    | -> | Nome da tabela                                                              |                  |
-| onlyData   | Integer | -> | `vk table full range` (default) or `vk table data range` |                  |
-| sheet      | Integer | -> | Índice da folha (folha atual se omitida)                 |                  |
-| Resultados | Object  | <- | Intervalo que contém a tabela                                               | <!-- END REF --> |
+| Parâmetro  | Tipo    |    | Descrição                                                                  |                  |
+| ---------- | ------- | -- | -------------------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                                 |                  |
+| tableName  | Text    | -> | Nome da tabela                                                             |                  |
+| onlyData   | Integer | -> | `vk table full range` (padrão) ou `vk table data range` |                  |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)                |                  |
+| Resultados | Object  | <- | Intervalo que contém a tabela                                              | <!-- END REF --> |
 
 #### Descrição
 
@@ -38,11 +38,11 @@ In the _onlyData_ parameter, you can pass one of the following constants to indi
 | `vk table full range` | 0     | Obtém o intervalo de células para a área da tabela com rodapé e cabeçalho (padrão se omitido) |
 | `vk table data range` | 1     | Obter o intervalo de células apenas para a área de dados da tabela                                               |
 
-In _sheet_, pass the index of the target sheet. Se nenhum índice for especificado, o comando se aplica à folha atual.
+Em _sheet_, passe o índice da folha de destino. Se nenhum índice for especificado, o comando se aplica à folha atual.
 
 > A indexação começa em 0.
 
-If _tableName_ is not found, the command returns **null**.
+Se _tableName_ não for encontrado, o comando retornará **null**.
 
 #### Veja também
 

@@ -126,7 +126,7 @@ Define el sistema de autenticación que desea aplicar a su servidor web. Se prop
 
 Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
 
-Se recomienda utilizar la autenticación **personalizada**. See [**Authentication**](../WebServer/authentication.md) chapter in the _Web Development_ documentation.
+Se recomienda utilizar la autenticación **personalizada**. Ver el capítulo [**Autenticación**](../WebServer/authentication.md) en la documentación _Desarrollo Web_.
 
 ## Options (II)
 
@@ -239,7 +239,7 @@ La siguiente tabla enumera los campos disponibles para cada formato (en orden al
 
 ## Historial (periodicidad)
 
-Configure los parámetros de copia de seguridad automática para el registro de las peticiones. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. A continuación, debe especificar el momento preciso de la copia de seguridad si es necesario.
+Configure los parámetros de copia de seguridad automática para el registro de las peticiones. Primero debe elegir la frecuencia (días, semanas, etc.) o el criterio de límite de tamaño de archivo haciendo clic en el botón de opción correspondiente. A continuación, debe especificar el momento preciso de la copia de seguridad si es necesario.
 
 - **Sin copia de seguridad**: la función de copia de seguridad programada está desactivada.
 - **Cada X hora(s)**: esta opción se utiliza para programar las copias de seguridad con una base horaria. Puede introducir un valor entre 1 y 24 .

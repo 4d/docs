@@ -16,9 +16,16 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 19
 :::
 
 
-## 4D 19.7
+## 4D 19.8
 
 #### Lo más destacado
+
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.8): list of all bugs that have been fixed in 4D 19.8.
+
+
+## 4D 19.7
+
+#### Destacados
 
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=19.7): lista de todos los bugs corregidos en 4D 19.7.
 
@@ -58,4 +65,3 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 19
 | ICU      | 68.1           | 18 R6             | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto. |
 | PHP      | 7.3.27         | 18 R6             |                                                                                                               |
 | libldap  | 2.4.48         | 18 R2             |                                                                                                               |
-

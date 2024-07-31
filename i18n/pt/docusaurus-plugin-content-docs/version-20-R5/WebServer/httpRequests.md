@@ -67,9 +67,9 @@ Vamos utilizar uma ligação intranet como exemplo. Suponha que o endereço IP d
 | URL introduzido no navegador Web                                                                                                                  | Valor do parâmetro $1                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | 123.4.567.89                                                                                      | /                                                                                     |
-| http://123.4.567.89                                                               | /                                                                                     |
+| http://123.45.67.89                                                               | /                                                                                     |
 | 123.4.567.89/Customers                                                                            | /Customers                                                                            |
-| http://123.4.567.89/Customers/Add                                                 | /Customers/Add                                                                        |
+| http://123.45.67.89/Customers/Add                                                 | /Customers/Add                                                                        |
 | 123.4.567.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
 Note que você está livre para usar este parâmetro a sua conveniência. 4D simplesmente ignora o valor passado além da parte do host da URL. Por ejemplo, puede establecer una convención en la que el valor "_/Customers/Add_" significa "ir directamente a añadir un nuevo registro en la tabla `[Customers]`.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.

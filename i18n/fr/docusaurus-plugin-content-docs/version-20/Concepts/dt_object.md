@@ -20,7 +20,7 @@ Les variables, champs ou expressions de type objet peuvent contenir des données
 
 (1) **Non-streamable objects** such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... cannot be stored in **object fields**. An error is returned if you try to do it; however, they are fully supported in **object variables** in memory.
 
-(2) When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
+(2) Lorsqu'elles sont exposées sous forme de texte dans le débogueur ou exportées en JSON, les propriétés d'objet de type image indiquent "[object Picture]".
 
 :::caution
 
@@ -124,7 +124,7 @@ Vous pouvez créer deux types d'objets :
 
 ## Propriétés
 
-You access object property values through a chain of tokens. Object properties can be accessed in two ways:
+Vous accédez aux valeurs des propriétés de l'objet à travers une chaîne de tokens. On peut accéder aux propriétés des objets de deux manières :
 
 - using a "dot" symbol: > object.propertyName
 
@@ -144,7 +144,7 @@ Exemples :
 
 ```
 
-Since an object property value can be an object or a collection, you can use a sequence of symbols to access sub-properties, for example:
+Comme la valeur d'une propriété d'objet peut elle-même être un objet ou une collection, vous pouvez utiliser une séquence de symboles pour accéder aux sous-propriétés, par exemple :
 
 ```4d
  $vAge:=employee.children[2].age
@@ -187,7 +187,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
 
 ### Valeur Null
 
-When using the objects, the **null** value is supported though the **Null** command. This command can be used to assign or compare the null value to object properties, for example:
+When using the objects, the **null** value is supported though the **Null** command. Cette commande peut être utilisée pour assigner ou comparer la valeur null aux propriétés de l'objet, par exemple :
 
 ```4d
  myObject.address.zip:=Null
@@ -196,9 +196,9 @@ When using the objects, the **null** value is supported though the **Null** comm
 
 For more information, please refer to [Null and Undefined](dt_null_undefined.md).
 
-### Valeur Indéfinie
+### Valeur Undefined
 
-L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfinie (undefined). Assigning an undefined value to an existing object property reinitializes or clears its value. L'affectation d'une valeur indéfinie à une propriété d'objet inexistante ne fait rien.
+L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfinie (undefined). Attribuer une valeur undefined à une propriété d'objet existante réinitialise ou efface sa valeur. L'affectation d'une valeur indéfinie à une propriété d'objet inexistante ne fait rien.
 
 For more information, please refer to [Null and Undefined](dt_null_undefined.md)
 
@@ -229,7 +229,7 @@ Voici un exemple :
 
 ## Resources
 
-Objects use *resources* such a documents, entity locks, and of course, memory. These resources are retained as long as objects need them. Usually, you do not have to worry about them, 4D automatically releases all resources attached to an object when it detects that the object itself is no longer referenced by any variable or other object.
+Objects use *resources* such a documents, entity locks, and of course, memory. Ces ressources sont conservées aussi longtemps que les objets en ont besoin. Généralement, vous n'avez pas à vous en soucier, 4D libère automatiquement toutes les ressources rattachées à un objet lorsqu'il détecte que l'objet lui-même n'est plus référencé par aucune variable ou autre objet.
 
 For instance, when there is no more references to an entity on which you have set a lock with [`$entity.lock()`](../API/EntityClass.md#lock), 4D will free the memory but also automatically release the associated lock, a call to [`$entity.unlock()`](../API/EntityClass.md#unlock) is useless.
 

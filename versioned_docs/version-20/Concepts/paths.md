@@ -12,23 +12,23 @@ $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 In addition, file and folder objects support `fileSystems`, which provide contextual path to main application folders.
 
 
-## Filesystem pathnames
+4D accepts several `filesystem` pathnames that designate specific 4D folders with variable location on macOS and Windows. A filesystem path is evaluated with regards to the context and is returned as an absolute path.
 
-4D accepts several `filesystem` pathnames that designate specific 4D folders with variable location on macOS and Windows. Filesystem pathnames are useful for two main reasons:
+Filesystem pathnames are useful for two main reasons:
 
 - Independence: You can move your solution from one place to another regardless of the OS, without having to worry about paths,
 - Security: No code can access elements located above the file system root on the disk (sandboxing).
 
-The following filesystem pathnames are supported: 
+The following filesystem pathnames are supported:
 
-|filesystem|Designates|
-|---|---|
-|"/DATA"|Current data folder|
-|"/LOGS"|Logs folder|
-|"/PACKAGE"|Project root folder (with or without 4dbase extension)|
-|"/PROJECT"|Project folder|
-|"/RESOURCES"|Current project resources folder|
-|"/SOURCES"|Current project sources folder|
+|filesystem|Designates|Example|
+|---|---|---|
+|"/DATA"|Current data folder|"C:\\MyApps\\Students\\Data\\"|
+|"/LOGS"|Logs folder|"C:\\MyApps\\Students\\Data\\Logs\\"|
+|"/PACKAGE"|Project root folder (with or without 4dbase extension)|"C:\\MyApps\\Students\\"|
+|"/PROJECT"|Project folder|"C:\\MyApps\\Students\\Project\\"|
+|"/RESOURCES"|Current project resources folder|"C:\\MyApps\\Resources\\"|
+|"/SOURCES"|Current project sources folder|"C:\\MyApps\\Students\\Project\\Sources\\"|
 
 ## POSIX syntax
 
@@ -43,6 +43,9 @@ With this syntax:
 In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../API/FileClass.md#file) and [`Folder`](../API/FolderClass.md#folder) commands, for example:
 
 ```4d
+var $pathFile : 4D.File
+var $pathFolder : 4D.Folder
+
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
@@ -52,7 +55,7 @@ $pathFolder:=Folder("/RESOURCES/Pictures")
 
 ## Platform-specific syntax
 
-Platform-specific syntax depends on the operating system on which the command is executed. Note that when creating a file or folder object with this syntax, you must declare it using the `fk platform path` constant as parameter. 
+Platform-specific syntax depends on the operating system on which the command is executed. Note that when creating a file or folder object with this syntax, you must declare it using the `fk platform path` constant as parameter.
 
 ### Windows
 
@@ -112,6 +115,9 @@ $okFile:=File("/DATA/Prefs/tempo.txt").create() //file created in the data folde
 Functions of folder objects such as [`folder.file()`](../API/FolderClass.md#file) and [`folder.folder()`](../API/FolderClass.md#folder-1) expect relative POSIX pathnames. For example:
 
 ```4d
+var $userImages : 4D.Folder
+var $ok : Boolean
+
   //to reference a "Picture" folder within the user documents folder
 $userImages:=Folder(fk documents folder).folder("Pictures")
   //to create a folder on the desktop
@@ -124,17 +130,14 @@ Absolute pathnames are not supported and will return errors.
 ## Examples
 
 The flexibility of file and folder functions offers you various possibilities for handling files and folders, like in the following examples:
-
 ```4d
-$f:=Folder(fk desktop folder).folder("archive/jan2019")
- 
-$f2:=Folder("/DATA/archive/jan2019").file("total.txt")
- 
-$f3:=Folder("/DATA/archive/jan2019")
- 
-$f4:=File("/DATA/info.txt")
- 
-$f5:=File("c:\\archives\\local\\jan2019.txt";fk platform path)
- 
-$f6:=File(fk backup log file)
+var $fold : 4D.Folder
+var $file : 4D.File
+
+$fold:=Folder(fk desktop folder).folder("archive/jan2019")
+$fold:=Folder("/DATA/archive/jan2019")
+$file:=Folder("/DATA/archive/jan2019").file("total.txt")
+$file:=File("/DATA/info.txt")
+$file:=File("c:\\archives\\local\\jan2019.txt";fk platform path)
+$file:=File(fk backup log file)
 ```

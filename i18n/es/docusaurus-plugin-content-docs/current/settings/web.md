@@ -82,9 +82,9 @@ Cuando se selecciona esta opción, el servidor web no ofrece ningún soporte esp
 
 En este modo, puede configurar los parámetros del servidor web adicionales:
 
-- [Maximum Concurrent Web Processes](#maximum-concurrent-web-processes)
-- [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts)
-- [Use preemptive processes](#use-preemptive-web-processes)
+- [Máximo de procesos web simultáneos](#maximum-concurrent-web-processes)
+- [Reutilización de contextos temporales (4D en modo remoto)](#reuse-temporary-contexts)
+- [Usar procesos apropiativos](#use-preemptive-web-processes)
 
 #### Sesiones antiguas (sesiones procesos únicos)
 
@@ -126,7 +126,7 @@ Define el sistema de autenticación que desea aplicar a su servidor web. Se prop
 
 Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
 
-Se recomienda utilizar la autenticación **personalizada**. See [**Authentication**](../WebServer/authentication.md) chapter in the _Web Development_ documentation.
+Se recomienda utilizar la autenticación **personalizada**. Ver el capítulo [**Autenticación**](../WebServer/authentication.md) en la documentación _Desarrollo Web_.
 
 ## Options (II)
 
@@ -166,9 +166,9 @@ El menú de formato de registro ofrece las siguientes opciones:
 
 - **Sin archivo de registro**: cuando se selecciona esta opción, 4D no generará un archivo de historial de peticiones.
 
-- **CLF (Common Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato CLF. With the CLF format, each line of the file represents a request, such as:\
-  host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length\
-  Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+- **CLF (Common Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato CLF. Con el formato CLF, cada línea del archivo representa una solicitud, como:\
+  host rfc931 user [DD/MMM/AAAA:HH:MM:SS] "request" state length\
+  Cada campo está separado por un espacio y cada línea termina con la secuencia CR/LF (character 13, character 10).
 
   - host: dirección IP del cliente (por ejemplo: "192.100.100.10)
   - rfc931: información no generada por 4D, siempre es - (un signo menos)
@@ -182,7 +182,7 @@ El menú de formato de registro ofrece las siguientes opciones:
 - longitud: tamaño de los datos devueltos (excepto el encabezado HTTP) o 0.
 
 > **Nota:** por razones de rendimiento, las operaciones se guardan en una memoria búfer por paquetes de 1Kb antes de ser escritas en el disco. Las operaciones también se escriben en disco si no se ha enviado ninguna petición cada 5 segundos.
-> The possible values of state are as follows:
+> Los posibles valores de estado son los siguientes
 > 200: OK
 > 204: No contents
 > 302: Redirection
@@ -191,7 +191,7 @@ El menú de formato de registro ofrece las siguientes opciones:
 > 401: Authentication required
 > 404: Not found
 > 500: Internal error
-> The CLF format cannot be customized.
+> El formato CLF no puede personalizarse.
 
 - **DLF (Combined Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato DLF. El formato DLF es similar al formato CLF y utiliza exactamente la misma estructura. Simplemente añade dos campos HTTP adicionales al final de cada petición: Referer y User-agent.
 
@@ -239,7 +239,7 @@ La siguiente tabla enumera los campos disponibles para cada formato (en orden al
 
 ## Historial (periodicidad)
 
-Configure los parámetros de copia de seguridad automática para el registro de las peticiones. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. A continuación, debe especificar el momento preciso de la copia de seguridad si es necesario.
+Configure los parámetros de copia de seguridad automática para el registro de las peticiones. Primero debe elegir la frecuencia (días, semanas, etc.) o el criterio de límite de tamaño de archivo haciendo clic en el botón de opción correspondiente. A continuación, debe especificar el momento preciso de la copia de seguridad si es necesario.
 
 - **Sin copia de seguridad**: la función de copia de seguridad programada está desactivada.
 - **Cada X hora(s)**: esta opción se utiliza para programar las copias de seguridad con una base horaria. Puede introducir un valor entre 1 y 24 .
@@ -286,7 +286,33 @@ Inicia y detiene el servidor REST. Ver [Configuración del servidor REST](../RES
 
 ### Acceso
 
-Esta opción especifica un grupo de usuarios 4D que está autorizado a establecer la conexión a la base 4D utilizando las peticiones REST. Ver [Configuración del acceso REST](../REST/configuration.md#configuring-rest-access).
+:::information Obsoleto
+
+**Esta sección está obsoleta** a partir de 4D 20 R6. Si la configuración actual del proyecto es obsoleta y debe actualizarse, se mostrará esta sección, incluido el botón **Activar la autenticación REST mediante la función ds.authentify()** (ver más abajo). Si su proyecto ya es compatible con el modo [Force login](../REST/configuration.md#configuring-rest-access), la sección no existe y puede ignorar este párrafo.
+
+:::
+
+Consulte [Configuring REST access](../REST/configuration.md#configuring-rest-access) para conocer la forma recomendada de controlar y gestionar el acceso REST en sus proyectos 4D.
+
+#### Activar la autenticación REST mediante la función ds.authentify()
+
+Haga clic en el botón **Activar la autenticación REST mediante la función ds.authentify()** para actualizar automáticamente su proyecto en lo que respecta al acceso de usuarios REST. Tenga en cuenta que esta operación no puede revertirse y puede requerir que modifique su código (aparece un cuadro de diálogo de advertencia al presionar el botón).
+
+:::note
+
+Este botón solo está disponible en los proyectos abiertos con la aplicación 4D (monopuesto).
+
+:::
+
+El botón activa la siguiente secuencia de actualización:
+
+- Se elimina el grupo de usuarios de la API REST definido en el menú **Leer/Escribir**.
+- Se elimina el método base `On REST Authentication` (se traslada a la papelera del sistema).
+- Se crea un archivo ["roles.json"](../ORDA/privileges.md#rolesjson-file) por defecto en la carpeta [Sources](../Project/architecture.md#sources) del proyecto si no existe, con su atributo `forceLogin` a `True`.
+
+Recuerde reiniciar su proyecto después de realizar esta actualización.
+
+El siguiente paso es modificar su código en consecuencia. [**Vea esta entrada del blog para saber cómo proceder**](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications).
 
 ### Qodly Studio
 
@@ -298,4 +324,4 @@ Esta opción sólo aparece si la licencia de Qodly Studio está activa.
 
 :::
 
-Esta opción permite al usuario acceder a [Qodly Studio](XXX) para el proyecto actual. Tenga en cuenta que el acceso global debe permitirse al [nivel de la aplicación](../Admin/webAdmin.md).
+Esta opción permite el acceso del usuario a [Qodly Studio](../WebServer/qodly-studio.md) para el proyecto actual. Tenga en cuenta que el acceso global debe permitirse al [nivel de la aplicación](../Admin/webAdmin.md).

@@ -18,7 +18,7 @@ title: VP Get formulas
 
 O comando `VP Get formulas` <!-- REF #_method_.VP Get formulas.Summary -->recupera as fórmulas de um _rangeObj_ designado<!-- END REF -->.
 
-In _rangeObj_, pass a range whose formulas you want to retrieve. If _rangeObj_ designates multiple ranges, the formula of the first range is returned. If _rangeObj_ does not contain any formulas, the command returns an empty string.
+Em _rangeObj_, passe um intervalo cujas fórmulas você deseja recuperar. If _rangeObj_ designates multiple ranges, the formula of the first range is returned. If _rangeObj_ does not contain any formulas, the command returns an empty string.
 
 A coleção devolvida é bidimensional:
 

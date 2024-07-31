@@ -710,8 +710,14 @@ Si la colección contiene objetos, puede pasar el parámetro *propertyPath* para
 
 La función `.equal()` <!-- REF #collection.equal().Summary -->compara collection con collection2 <!-- END REF -->y devuelve **true** si son idénticos (deep comparison).
 
+:::note Notas
+
+- La función `.equal()` solo comprueba la igualdad para los elementos de tipo cadena, booleano, número y null en las colecciones. No verifica la igualdad para objetos nativos.
+- Elements with **null** values are not equal to Undefined elements.
+
+:::
+
 Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluación diferencie entre mayúsculas y minúsculas o que diferencie los caracteres acentuados, pase la constante `ck diacritical` en el parámetro option.
-> Esta función no modifica la colección original.
 
 #### Ejemplo
 
@@ -1707,7 +1713,7 @@ También puede pasar un parámetro de criterios para definir cómo deben ordenar
  | ck ascending  | Longint | 0     | Los elementos se ordenan de forma ascendente (por defecto) |
  | ck descending | Longint | 1     | Los elementos se ordenan de forma descendente              |
 
- This syntax orders scalar values in the collection only (other element types such as objects or collections are returned with an internal order).
+ Esta sintaxis sólo ordena los valores escalares de la colección (otros tipos de elementos, como objetos o colecciones, se devuelven con un orden interno).
 
 Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si *attributePath* lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
 

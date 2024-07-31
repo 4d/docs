@@ -38,7 +38,7 @@ ds.webUser.save()
 
 Ver también [este ejemplo](gettingStarted.md#authenticating-users) del capítulo "Cómo comenzar".
 
-If no custom authentication is provided, 4D calls the [`On Web Authentication`](#on-web-authentication) database method (if it exists). Además de $1 y $2, sólo se facilitan las direcciones IP del navegador y del servidor ($3 y $4), el nombre de usuario y la contraseña ($5 y $6) están vacíos. El método debe devolver **True** en $0 si el usuario se autentifica con éxito, entonces se sirve el recurso solicitado, o **False** en $0 si la autenticación falló.
+Si no se proporciona autenticación personalizada, 4D llama al método base [`On Web Authentication`](#on-web-authentication) (si existe). Además de $1 y $2, sólo se facilitan las direcciones IP del navegador y del servidor ($3 y $4), el nombre de usuario y la contraseña ($5 y $6) están vacíos. El método debe devolver **True** en $0 si el usuario se autentifica con éxito, entonces se sirve el recurso solicitado, o **False** en $0 si la autenticación falló.
 
 > **Atención**: si el método de base de datos `On Web Authentication` no existe, las conexiones se aceptan automáticamente (modo de prueba).
 
@@ -61,7 +61,7 @@ A continuación, se evalúan los valores introducidos:
 
 Este modo ofrece un mayor nivel de seguridad, ya que la información de autenticación se procesa mediante un proceso unidireccional llamado hashing que hace que su contenido sea imposible de descifrar.
 
-Al igual que en el modo BASIC, los usuarios deben introducir su nombre y contraseña al conectarse. The [`On Web Authentication`](#on-web-authentication) database method is then called. Cuando se activa el modo DIGEST, el parámetro $6 (contraseña) se devuelve siempre vacío. De hecho, cuando se utiliza este modo, esta información no pasa por la red como texto claro (sin encriptar). Por lo tanto, en este caso es imprescindible evaluar las solicitudes de conexión mediante el comando `WEB Validate digest`.
+Al igual que en el modo BASIC, los usuarios deben introducir su nombre y contraseña al conectarse. A continuación, se llama al método base [`On Web Authentication`](#on-web-authentication). Cuando se activa el modo DIGEST, el parámetro $6 (contraseña) se devuelve siempre vacío. De hecho, cuando se utiliza este modo, esta información no pasa por la red como texto claro (sin encriptar). Por lo tanto, en este caso es imprescindible evaluar las solicitudes de conexión mediante el comando `WEB Validate digest`.
 
 > Debe reiniciar el servidor web para que se tengan en cuenta los cambios realizados en estos parámetros.
 
@@ -102,12 +102,12 @@ Por tanto, NO se llama al método base `On Web Authentication`:
 Debe declarar estos parámetros de la siguiente manera:
 
 ```4d
-//On Web Authentication database method
+//Método base On Web Authentication
  
  C_TEXT($1;$2;$3;$4;$5;$6)
  C_BOOLEAN($0)
  
-//Code for the method
+//Código del método
 ```
 
 Como alternativa, puede utilizar la sintaxis [parámetros nombrados](Concepts/parameters.md#named-parameters):
@@ -173,7 +173,7 @@ El método base `On Web Connection` sólo se ejecuta si la conexión ha sido ace
 
 > **ADVERTENCIA**<br/>Si no se define ningún valor en $0 o si $0 no está definido en el método base `On Web Authentication`, la conexión se considera aceptada y se ejecuta el método base `On Web Connection`.
 
-> - Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. Lo mismo ocurrirá si se produce un error durante su procesamiento.
+> - No llame a ningún elemento de la interfaz en el método base `On Web Authentication` (`ALERT`, `DIALOG`, etc.) porque de lo contrario su ejecución será interrumpida y la conexión será rechazada. Lo mismo ocurrirá si se produce un error durante su procesamiento.
 
 ### Ejemplo
 

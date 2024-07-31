@@ -19,14 +19,14 @@ title: VP SET FORMULA
 
 El comando `VP SET FORMULA` <!-- REF #_method_.VP SET FORMULA.Summary -->asigna una fórmula especificada o un método 4D a un rango de celdas designado<!-- END REF -->.
 
-In _rangeObj_, pass a range of the cell(s) (created for example with [`VP Cell`](vp-cell.md) or [`VP Column`](vp-column.md)) whose value you want to specify. Si _rangeObj_ incluye varias celdas, la fórmula especificada se vinculará en cada celda.
+En _rangeObj_, pasa un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP Cell`](vp-cell.md) o [`VP Column`](vp-column.md)) cuyo valor desea especificar. Si _rangeObj_ incluye varias celdas, la fórmula especificada se vinculará en cada celda.
 
 El parámetro _formula_ indica un nombre de fórmula o de método 4D a asignar a _rangeObj_.
 
 > Si _formula_ es una cadena, utilice el punto `.` como separador numérico y la coma `,` como separador de parámetros.
-> If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md) command.
+> Si se utiliza un método 4D, debe estar permitido con el comando [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md).
 
-The optional _formatPattern_ defines a [pattern](../configuring.md#cell-format) for the _formula_.
+El _formatPattern_ opcional define un [pattern](../configuring.md#cell-format) para _formula_.
 
 Se elimina la fórmula en _rangeObj_ sustituyéndola por una cadena vacía ("").
 

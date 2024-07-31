@@ -12,23 +12,23 @@ $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 De plus, les objets fichier et dossier prennent en charge les `fileSystems`, fournissant un chemin contextuel aux principaux dossiers de l'application.
 
 
-## Chemins des filesystem
+4D accepte plusieurs chemins de `filesystem` qui désignent des dossiers 4D spécifiques avec un emplacement variable sur macOS et Windows. A filesystem path is evaluated with regards to the context and is returned as an absolute path.
 
-4D accepte plusieurs chemins de `filesystem` qui désignent des dossiers 4D spécifiques avec un emplacement variable sur macOS et Windows. Les chemins des filesystem sont utiles pour deux raisons principales :
+Les chemins des filesystem sont utiles pour deux raisons principales :
 
 - Indépendance : Vous pouvez déplacer votre solution d'un emplacement à un autre, indépendamment du système d'exploitation, sans vous préoccuper des chemins,
 - Sécurité : Aucun code ne peut accéder aux éléments situés au-dessus de la racine des filesystem sur disque (sandboxing).
 
 Les filesystem suivants sont pris en charge :
 
-| filesystem   | Désigne                                                  |
-| ------------ | -------------------------------------------------------- |
-| "/DATA"      | Dossier data courant                                     |
-| "/LOGS"      | Dossier Logs                                             |
-| "/PACKAGE"   | Dossier racine du projet (avec ou sans extension 4dbase) |
-| "/PROJECT"   | Dossier Project                                          |
-| "/RESOURCES" | Dossier de ressources du projet courant                  |
-| "/SOURCES"   | Dossier des sources du projet courant                    |
+| filesystem   | Désigne                                                  | Exemple                                              |
+| ------------ | -------------------------------------------------------- | ---------------------------------------------------- |
+| "/DATA"      | Dossier data courant                                     | "C:\\MyApps\\Students\\Data\\"               |
+| "/LOGS"      | Dossier Logs                                             | "C:\\MyApps\\Students\\Data\\Logs\\"       |
+| "/PACKAGE"   | Dossier racine du projet (avec ou sans extension 4dbase) | "C:\\MyApps\\Students\\"                       |
+| "/PROJECT"   | Dossier Project                                          | "C:\\MyApps\\Students\\Project\\"            |
+| "/RESOURCES" | Dossier de ressources du projet courant                  | "C:\\MyApps\\Resources\\"                      |
+| "/SOURCES"   | Dossier des sources du projet courant                    | "C:\\MyApps\\Students\\Project\\Sources\\" |
 
 ## Syntaxe POSIX
 
@@ -43,6 +43,9 @@ Avec cette syntaxe :
 Dans la syntaxe POSIX, vous utiliserez généralement les chemins `filesystem` avec les commandes [`File`](../API/FileClass.md#file) et [`Folder`](../API/FolderClass.md#folder), par exemple :
 
 ```4d
+var $pathFile : 4D.File
+var $pathFolder : 4D.Folder
+
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
@@ -112,9 +115,12 @@ $okFile:=File("/DATA/Prefs/tempo.txt").create() //fichier créé dans le dossier
 Les fonctions des objets dossier telles que [`folder.file()`](../API/FolderClass.md#file) et [`folder.folder()`](../API/FolderClass.md#folder-1) attendent des noms de chemin POSIX relatifs. Par exemple :
 
 ```4d
-  //pour référencer un dossier "Picture" dans le dossier des documents de l'utilisateur
+var $userImages : 4D.Folder
+var $ok : Boolean
+
+  //to reference a "Picture" folder within the user documents folder
 $userImages:=Folder(fk documents folder).folder("Pictures")
-  //pour créer un dossier sur le bureau
+  //to create a folder on the desktop
 $ok:=Folder(fk desktop folder).folder("myFolder").create()
 ```
 
@@ -124,17 +130,14 @@ Les chemins absolus ne sont pas pris en charge et provoqueront des erreurs.
 ## Exemples
 
 La flexibilité des fonctions de fichiers et de dossiers vous offre diverses possibilités de manipulation des fichiers et des dossiers, comme dans les exemples suivants :
-
 ```4d
-$f:=Folder(fk desktop folder).folder("archive/jan2019")
+var $fold : 4D.Folder
+var $file : 4D.File
 
-$f2:=Folder("/DATA/archive/jan2019").file("total.txt")
-
-$f3:=Folder("/DATA/archive/jan2019")
-
-$f4:=File("/DATA/info.txt")
-
-$f5:=File("c:\\archives\\local\\jan2019.txt";fk platform path)
-
-$f6:=File(fk backup log file)
+$fold:=Folder(fk desktop folder).folder("archive/jan2019")
+$fold:=Folder("/DATA/archive/jan2019")
+$file:=Folder("/DATA/archive/jan2019").file("total.txt")
+$file:=File("/DATA/info.txt")
+$file:=File("c:\\archives\\local\\jan2019.txt";fk platform path)
+$file:=File(fk backup log file)
 ```

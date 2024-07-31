@@ -1,3 +1,10 @@
+const { themes } = require('prism-react-renderer');
+const { default: remarkGfm } = require('remark-gfm');
+const lightTheme = themes.github;
+const darkTheme = themes.palenight;
+
+const isProduction = process.env.GITHUB_REPOSITORY_OWNER === '4d';
+
 module.exports = {
   title: "4D Docs",
   tagline: "Documentation for 4D developers",
@@ -8,16 +15,18 @@ module.exports = {
   favicon: "img/favicon/4d.gif",
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
+  noIndex: isProduction ? false : true,
   presets: [
     [
       '@docusaurus/preset-classic',
       {
         docs: {
+          remarkPlugins: [remarkGfm],
           // Docs folder path relative to website dir.
           path: 'docs',
           routeBasePath: '/',
-		  //editUrl: 'https://github.com/4D/docs/edit/main/',
-            editUrl: function edit(info) {
+          //editUrl: 'https://github.com/4D/docs/edit/main/',
+          editUrl: function edit(info) {
             // const lang = info.locale;
             // const version = info.version;
             // const permalink = info.permalink;
@@ -26,18 +35,18 @@ module.exports = {
             const body = `Please enter your comment:`;
             return `https://github.com/4d/docs/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`
           },
-		  // Sidebars file relative to website dir.
+          // Sidebars file relative to website dir.
           sidebarPath: require.resolve('./sidebars.js'),
           versions: {
-         '20-R5': {
-              label: '20 R5 BETA',
+            '20-R6': {
+              label: '20 R6 BETA',
               banner: 'none',
             },
-		 '20-R4': {
-              label: '20 R4',
+            '20-R5': {
+              label: '20 R5',
               banner: 'none',
             },
-         '20': {
+            '20': {
               label: '20',
               banner: 'none',
             },
@@ -50,7 +59,7 @@ module.exports = {
               banner: 'none',
             },
           },
-          includeCurrentVersion: true, // false for prod only
+          includeCurrentVersion: isProduction ? false : true, // false for prod only
         },
         theme: {
           customCss: [require.resolve('./src/css/customTheme.css')],
@@ -100,24 +109,23 @@ module.exports = {
     [
       "@docusaurus/plugin-client-redirects",
       {
-        "fromExtensions":["html"],
-		createRedirects(existingPath) {
-          if (existingPath.includes('/docs'))
-			{
+        "fromExtensions": ["html"],
+        createRedirects(existingPath) {
+          if (existingPath.includes('/docs')) {
             // Redirect from /docs/en to /docs
-				return [
-					existingPath.replace('/docs', '/docs/en'),
-				];
-			}
+            return [
+              existingPath.replace('/docs', '/docs/en'),
+            ];
+          }
           return undefined; // Return a falsy value: no redirect created
-			},
-		},
+        },
+      },
     ],
   ],
-  "themeConfig": {
+  themeConfig: {
     algolia: {
-		apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
-		appId: 'OJ04C0M3CU',
+      apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
+      appId: 'OJ04C0M3CU',
       indexName: '4d',
       //contextualSearch: false
     },
@@ -127,17 +135,17 @@ module.exports = {
       },
     },
     prism: {
-      theme: require('prism-react-renderer/themes/github'),
-      darkTheme: require('prism-react-renderer/themes/palenight'),
+      theme: lightTheme,
+      darkTheme: darkTheme,
     },
-    "navbar": {
+    navbar: {
       title: "4D Documentation",
-       hideOnScroll: true,
+      hideOnScroll: true,
       logo: {
         alt: "4D Logo",
         src: "img/logohome.png",
       },
-	  items: [{
+      items: [{
         type: 'docsVersionDropdown',
         position: 'right',
       }, {
@@ -147,7 +155,7 @@ module.exports = {
       ],
     },
     //"image": "../assets/en/logohome.png",
-    "footer": {
+    footer: {
       style: 'dark',
       links: [
         {
@@ -232,5 +240,17 @@ module.exports = {
       ],
       "copyright": "© 2024 4D SAS - All rights reserved",
     },
-  }
+  },
+  markdown: {
+    format: 'md',
+    mermaid: true,
+    mdx1Compat: {
+      comments: true,
+      admonitions: true,
+      headingIds: true,
+    },
+    anchors: {
+      maintainCase: false,
+    },
+  },
 }

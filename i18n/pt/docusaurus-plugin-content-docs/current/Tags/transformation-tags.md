@@ -251,7 +251,7 @@ Essa sintaxe itera em cada _entity_ da _entitySelection_. A parte do código loc
 
 O parâmetro _entidade_ é uma variável de objeto da classe de seleção da entidade.
 
-The number of loops is based on the number of entities of the entity selection. Em cada iteração, a variável de objeto _entidade_ é automaticamente preenchida com a entidade correspondente à seleção da entidade.
+O número de loops é baseado no número de entidades da seleção de entidades. Em cada iteração, a variável de objeto _entidade_ é automaticamente preenchida com a entidade correspondente à seleção da entidade.
 
 #### Exemplo com uma tabela html
 

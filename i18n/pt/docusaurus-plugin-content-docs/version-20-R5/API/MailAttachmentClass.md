@@ -54,12 +54,12 @@ The `MAIL New attachment` command <!-- REF #_command_.MAIL New attachment.Summar
 
 Para definir o anexo, pode utilizar:
 
-- a *file*, pass a `4D.File` object containing the attachment file.
+- um *file*, passe um objeto `4D.File` contendo o arquivo anexo.
 - a *zipfile*, pass a `4D.ZipFile` object containing the attachment file.
 - a *blob*, pass a `4D.Blob` object containing the attachment itself.
 - a *path*, pass a **text** value containing the path of the attachment file, expressed with the system syntax. Pode passar um nome de rota completo ou um nome de arquivo simples (em cujo caso 4D vai pesquisar para o arquivo no mesmo diretório como o arquivo projeto).
 
-The optional *name* parameter lets you pass the name and extension to be used by the mail client to designate the attachment. If *name* is omitted and:
+The optional *name* parameter lets you pass the name and extension to be used by the mail client to designate the attachment. Se *name* for omitido e:
 
 - passar uma rota de arquivo, o nome e extensão do arquivo é usado,
 - passar um BLOB, um nome aleatório sem extensão é gerado automaticamente.

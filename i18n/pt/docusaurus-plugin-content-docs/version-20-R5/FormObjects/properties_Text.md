@@ -27,8 +27,8 @@ Define o texto selecionado para aparecer mais escuro e mais pesado.
 
 You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
 
-> This is normal text.<br/>
-> **This is bold text.**
+> Este é um texto normal.<br/>
+> **Este é um texto em negrito.**
 
 #### Gramática JSON
 
@@ -46,10 +46,10 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 Define o texto selecionado como ligeiramente inclinado para a direita.
 
-You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
+Você também pode definir essa propriedade por meio do comando [**OBJECT SET FONT STYLE**] (https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
 
-> This is normal text.<br/>
-> _This is text in italics._
+> Este é um texto normal.<br/>
+> _Este é o texto em itálico._
 
 #### Gramática JSON
 
@@ -181,7 +181,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 ## Expressão cor fonte
 
-`Selection and collection/entity selection type list boxes`
+`List box do tipo coleção/seleção de entidade`
 
 Utilizado para aplicar uma cor de letra personalizada a cada linha do list box. É necessário utilizar valores de cor RGB. Para más información al respecto, consulte la descripción del comando [OBJECT SET RGB COLORS](https://doc.4d.com/4dv19R/help/command/en/page628.html) en el manual Lenguaje de 4D.
 
@@ -211,7 +211,7 @@ CompanyColor:=Choose([Companies]ID;Background color;Light shadow color; Foregrou
 
 ## Expressão estilo
 
-`Selection and collection/entity selection type list boxes`
+`List box do tipo coleção/seleção de entidade`
 
 Utilizado para aplicar um estilo de carácter personalizado a cada linha do list box ou a cada célula da coluna.
 
@@ -299,7 +299,7 @@ Especifica uma expressão ou uma variável que será avaliada para cada linha ex
 | fontWeight          | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | textDecoration      | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | unselectable        | boolean | Designa la línea correspondiente como no seleccionable (\* es decir, \*, no es posible el resaltado). As áreas inseríveis deixam de o ser se esta opção estiver ativada, a menos que a opção "Editar com um clique" também esteja ativada. Os controlos como as caixas de verificação e as listas permanecem funcionais. Esta definição é ignorada se o modo de seleção do list box é "Nenhum". This setting is ignored if the list box selection mode is "None". |
-| disabled            | boolean | Desactiva a linha correspondente. As áreas acessíveis deixam de ser acessíveis se esta opção estiver activada. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. This setting is ignored if the list box selection mode is "None".                                                                                                                                                                                                         |
+| disabled            | boolean | Desactiva a linha correspondente. As áreas acessíveis deixam de ser acessíveis se esta opção estiver activada. Text and controls (checkboxes, lists, etc.) parecem escurecidos ou acinzentados. This setting is ignored if the list box selection mode is "None".                                                                                                                                                                                                 |
 
 A propriedade especial "célula" permite-lhe aplicar um conjunto de propriedades a uma única coluna:
 
@@ -311,7 +311,7 @@ A propriedade especial "célula" permite-lhe aplicar um conjunto de propriedades
 
 > Style settings made with this property are ignored if other style settings are already defined through expressions (_i.e._, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
-**Examples**
+**Exemplos**
 
 En un método proyecto _Color_, escriba el siguiente código:
 
@@ -414,7 +414,7 @@ Además de [áreas de texto estáticas](text.md), los objetos de texto de las [�
 
 ## Array cores de Fonte
 
-`Array type list boxes`
+`List boxes de tipo array`
 
 Permite estabelecer uma cor de fonte personalizada para cada linha do list box ou cada célula da coluna.
 
@@ -434,7 +434,7 @@ O nome do array LongInt deve ser usado. Cada elemento deste array corresponde a 
 
 ## Array estilo linha
 
-`Array type list boxes`
+`List boxes de tipo array`
 
 Permite estabelecer um estilo de fonte personalizado para cada linha do list box ou cada célula da coluna.
 

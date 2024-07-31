@@ -68,7 +68,7 @@ También puede obtener una referencia en un datastore remoto abierto pasando su 
 
 Si no se encuentra ningún datastore *localID*, el comando devuelve **Null**.
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
+Los objetos disponibles en el `cs.Datastore` son creados apartir de la base de datos objetivo en función de las [reglas generales ORDA](ORDA/dsMapping.md#reglas-generales).
 
 #### Ejemplo 1
 
@@ -97,8 +97,8 @@ Utilizando el almacén de datos principal de la base 4D:
 ```
 
 ```4d
-  //getFirst method
-  //getFirst(localID;dataclass) -> entity
+  //método getFirst
+  //getFirst(localID;dataclass) -> entidad
  #DECLARE( $localId : Text; $dataClassName : Text ) -> $entity : 4D.Entity
 
  $0:=ds($localId)[$dataClassName].all().first()
@@ -700,7 +700,7 @@ En un almacén de datos remoto:
 
 La función `.getRemoteContextInfo()` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> devuelve un objeto que contiene información sobre el contexto de optimización *contextName* en el datastore.<!-- END REF -->.
 
-For more information on how optimization contexts can be created, see [client/server optimization](../ORDA/client-server-optimization.md#optimization-context).
+Para obtener más información sobre cómo se pueden crear contextos de optimización, consulte [optimización cliente/servidor](../ORDA/client-server-optimization.md#optimization-context).
 
 #### Objeto devuelto
 
@@ -981,7 +981,7 @@ En este caso, puede llamar a esta función para deshabilitar el acceso a los dat
 Se crea un método proyecto *protectDataFile* para llamar antes de los despliegues, por ejemplo:
 
 ```4d
- ds.setAdminProtection(True) //Disables the Data Explorer data access
+ ds.setAdminProtection(True) //Desactiva el acceso a los datos del Explorador de datos
 ```
 
 #### Ver también

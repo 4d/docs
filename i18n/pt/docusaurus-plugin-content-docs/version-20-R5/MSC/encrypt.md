@@ -61,7 +61,7 @@ When an application is encrypted (see above), the Encrypt page provides several 
 Por razões de segurança, todas as operações de manutenção da cifragem exigem que seja fornecida a chave de cifragem de dado atual.
 
 - Se a chave de encriptação de dados já está carregada no enxoval 4D(1), é automaticamente reutilizada por 4D.
-- Se a chave de encriptação de dados não for encontrada, é necessário fornecê-la. The following dialog is displayed:
+- Se a chave de encriptação de dados não for encontrada, é necessário fornecê-la. O seguinte diálogo é exibido:
   ![](../assets/en/MSC/MSC_encrypt7.png)
 
 Nesta fase, tem duas opções:

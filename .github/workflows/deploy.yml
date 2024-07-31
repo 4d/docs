@@ -1,57 +1,22 @@
 name: deploy
 
 on:
-  pull_request:
-    branches: [main]
   push:
     branches: [main]
 
 jobs:
-  checks:
-    if: github.event_name != 'push'
-    runs-on: ubuntu-latest
-    name: 'Test build'
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '16.x'
-      - name: Test Build
-        run: |
-          if [ -e package-lock.json ]; then
-          npm ci
-          else
-          npm i
-          fi
-          export NODE_OPTIONS="--max-old-space-size=14336"
-          npm run build
+  workflow-build:
+    uses: ./.github/workflows/workflow-build.yml
+
   gh-release:
-    if: github.event_name != 'pull_request'
+    needs: workflow-build
+    name: 'Deploy website'
     runs-on: ubuntu-latest
-    name: 'Build and update website'
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '16.x'
-      - name: Setup config file
-        run: |
-          if [ ${{ github.repository_owner }} == 'doc4d' ]; then
-            sed -i 's/noIndex:\ false/noIndex:\ true/g' docusaurus.config.js
-          else
-            sed -i 's/includeCurrentVersion:\ true/includeCurrentVersion:\ false/g' docusaurus.config.js
-          fi
-      - name: Build
-        run: |
-          if [ -e package-lock.json ]; then
-          npm ci
-          else
-          npm i
-          fi
-          export NODE_OPTIONS="--max-old-space-size=14336"
-          npm run build
-      - name: Release to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+    - name: Download artifact
+      uses: actions/download-artifact@v4
+    - name: Publish
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build/

@@ -24,7 +24,7 @@ Gracias a esta funcionalidad, toda la lógica de negocio de su aplicación 4D pu
 
 - Si la estructura física evoluciona, basta con adaptar el código de las funciones y las aplicaciones cliente seguirán llamándolas de forma transparente.
 
-- Por defecto, todas las funciones de clase de su modelo de datos (incluidas las [funciones de atributo calculado](#computed-attributes-1)) y los [atributos alias](#alias-attributes-1) **no se exponen** a aplicaciones remotas y no se pueden llamar desde sol You must explicitly declare each public function and alias with the [`exposed`](#exposed-vs-non-exposed-functions) keyword.
+- Por defecto, todas las funciones de clase de su modelo de datos (incluidas las [funciones de atributo calculado](#computed-attributes-1)) y los [atributos alias](#alias-attributes-1) **no se exponen** a aplicaciones remotas y no se pueden llamar desde sol Debe declarar explícitamente cada función pública y alias con la palabra clave [`exposed`](#exposed-vs-non-exposed-functions).
 
 ![](../assets/en/ORDA/api.png)
 
@@ -437,19 +437,19 @@ La función `query` se ejecuta cada vez que se lanza una consulta que utiliza el
 
 > No se soportan las siguientes funcionalidades:
 >
-> - calling a `query` function on computed attributes of type Entity or Entity selection,
-> - using the `order by` keyword in the resulting query string.
+> - llamar a una función `query` en los atributos calculados de tipo Entity o Entity selection,
+> - utilizando la palabra clave `order by` en la cadena de consulta resultante.
 
 El parámetro _$event_ contiene las siguientes propiedades:
 
-| Propiedad     | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| attributeName | Text    | Nombre de atributo calculado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| dataClassName | Text    | Nombre de la clase de datos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| kind          | Text    | "query"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| value         | Variant | Valor a tratar por el atributo calculado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| operator      | Text    | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Possible values:<li>== (equal to, @ is wildcard)</li><li>=== (equal to, @ is not wildcard)</li><li>!= (not equal to, @ is wildcard)</li><li>!== (not equal to, @ is not wildcard)</li><li>< (less than)</li><li><= (less than or equal to)</li><li>> (greater than)</li><li>>= (greater than or equal to)</li><li>IN (included in)</li><li>% (contains keyword)</li> |
-| result        | Variant | Valor a tratar por el atributo calculado. Pase `Null` en esta propiedad si desea que 4D ejecute la consulta por defecto (siempre secuencialmente para los atributos calculados).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Propiedad     | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| attributeName | Text    | Nombre de atributo calculado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| dataClassName | Text    | Nombre de la clase de datos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| kind          | Text    | "query"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| value         | Variant | Valor a tratar por el atributo calculado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| operator      | Text    | Operador de búsqueda (ver también la [función de clase `query`](API/DataClassClass.md#query)). Valores posibles:<li>== (igual a, @ es un comodín)</li><li>=== (igual a, @ no es un comodín)</li><li>!= (no igual a, @ es un comodín)</li><li>!== (no igual a, @ no es un comodín)</li><li>< (menor que)</li><li><= (menor que o igual a)</li><li>> (mayor que)</li><li>>= (mayor que o igual a)</li><li>IN (incluido en)</li><li>% (contiene la palabra clave)</li> |
+| result        | Variant | Valor a tratar por el atributo calculado. Pase `Null` en esta propiedad si desea que 4D ejecute la consulta por defecto (siempre secuencialmente para los atributos calculados).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 > Si la función devuelve un valor en _$result_ y se asigna otro valor a la propiedad `$event.result`, se da prioridad a `$event.result`.
 
@@ -496,7 +496,7 @@ Function query fullName($event : Object)->$result : Object
 	$result:=New object("query"; $query; "parameters"; $parameters)
 ```
 
-> Keep in mind that using placeholders in queries based upon user text input is recommended for security reasons (see [`query()` description](API/DataClassClass.md#query)).
+> Ten en cuenta que el uso de marcadores de posición en consultas basadas en la entrada de texto del usuario es recomendado por razones de seguridad (ver la [descripción de `query()`](API/DataClassClass.md#query)).
 
 Código de llamada, por ejemplo:
 
@@ -523,16 +523,16 @@ Function query age($event : Object)->$result : Object
 	Case of 
 			
 		: ($operator="==")
-			$query:="birthday > :1 and birthday <= :2"  // after d1 and before or egal d2
+			$query:="birthday > :1 and birthday <= :2"  // después de d1 y antes o igual a d2
 			
 		: ($operator="===") 
 
-			$query:="birthday = :2"  // d2 = second calculated date (= birthday date)
+			$query:="birthday = :2"  // d2 = segunda fecha calculada (= birthday date)
 
 		: ($operator=">=")
 			$query:="birthday <= :2"
 			
-			//... other operators			
+			//... Otros operadores	
 			
 			
 	End case 
@@ -549,11 +549,11 @@ Function query age($event : Object)->$result : Object
 Código de llamada, por ejemplo:
 
 ```4d
-// people aged between 20 and 21 years (-1 day)
-$twenty:=people.query("age = 20")  // calls the "==" case
+// personas de entre 20 y 21 años (-1 día)
+$twenty:=people.query("age = 20")  // llama al case "=="
 
-// people aged 20 years today
-$twentyToday:=people.query("age === 20") // equivalent to people.query("age is 20") 
+// personas de 20 años hoy
+$twentyToday:=people.query("age === 20") // equivalente a people.query("age is 20")
 
 ```
 
@@ -633,7 +633,7 @@ Los atributos del alias son particularmente útiles para manejar las relaciones 
 
 ### Cómo definir los atributos alias
 
-You create an alias attribute in a dataclass by using the `Alias` keyword in the [**entity class**](#entity-class) of the dataclass.
+Se crea un atributo alias en una dataclass utilizando la palabra clave `Alias` en la [**clase Entity**](#entity-class) de la dataclass.
 
 ### `Alias <attributeName> <targetPath>`
 
@@ -651,7 +651,7 @@ Un alias puede ser utilizado como parte de una ruta de otro alias.
 
 Un [atributo calculado](#computed-attributes-1) puede utilizarse en una ruta alias, pero sólo como último nivel de la ruta; de lo contrario, se devuelve un error. Por ejemplo, si "fullName" es un atributo calculado, un alias con ruta "employee.fullName" es válido.
 
-> Los atributos alias de ORDA por defecto son **no expuestos**. You must add the [`exposed`](#exposed-vs-non-exposed-functions) keyword before the `Alias` keyword if you want the alias to be available to remote requests.
+> Los atributos alias de ORDA por defecto son **no expuestos**. Debe añadir la palabra clave [`exposed`](#exposed-vs-non-exposed-functions) antes de la palabra clave `Alias` si desea que el alias esté disponible para peticiones remotas.
 
 ### Uso de los atributos alias
 
@@ -678,14 +678,14 @@ Los atributos alias son de sólo lectura (excepto cuando se basan en un atributo
 
 ### Propiedades del alias
 
-Alias attribute [`kind`](../API/DataClassClass.md#attributename) is "alias".
+El atributo alias [`kind`](../API/DataClassClass.md#attributename) es "alias".
 
-An alias attribute inherits its data [`type`](../API/DataClassClass.md#attributename) property from the target attribute:
+Un atributo alias hereda su propiedad de [`type`](../API/DataClassClass.md#attributename) del atributo objetivo:
 
-- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "storage", the alias data type is of the same type,
-- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("_classname_Entity" or "_classname_Selection").
+- si el [`kind`](../API/DataClassClass.md#attributename) del atributo objetivo es "storage", el tipo de datos del alias es del mismo tipo,
+- si el [`kind`](../API/DataClassClass.md#attributename) del atributo objetivo es "relatedEntity" o "relatedEntities", el tipo de datos del alias es de tipo `4D.Entity` o `4D.EntitySelection` ("_classname_Entity" o "_classname_Selection").
 
-Alias attributes based upon relations have a specific [`path`](../API/DataClassClass.md#attributename) property, containing the path of their target attributes. Los atributos de alias basados en atributos de la misma clase de datos tienen las mismas propiedades que sus atributos de destino (y ninguna propiedad `path`).
+Los atributos alias basados en relaciones tienen una propiedad específica [`path`](../API/DataClassClass.md#attributename), que contiene la ruta de sus atributos objetivos. Los atributos de alias basados en atributos de la misma clase de datos tienen las mismas propiedades que sus atributos de destino (y ninguna propiedad `path`).
 
 ### Ejemplos
 
@@ -725,8 +725,8 @@ En la dataclass Course:
 Class extends Entity
 
 Exposed Alias courseName name //scalar 
-Exposed Alias teacherName teacher.name //scalar value
-Exposed Alias studentName student.name //scalar value
+Exposed Alias teacherName teacher.name //valor escalar
+Exposed Alias studentName student.name //valor escalar
 
 ```
 
@@ -779,7 +779,7 @@ Una función que no está expuesta no está disponible en aplicaciones remotas y
 Para permitir que una función de clase de modelo de datos sea llamada por una petición remota, debe declararla explícitamente utilizando la palabra clave `exposed`. La sintaxis formal es:
 
 ```4d
-// declare an exposed function
+// declarar una función expuesta
 exposed Function <functionName>   
 ```
 
@@ -792,7 +792,7 @@ Desea que una función expuesta utilice una función privada de una clase datacl
 ```4d
 Class extends DataClass
 
-//Public function
+//Función pública
 exposed Function registerNewStudent($student : Object) -> $status : Object
 
 var $entity : cs.StudentsEntity
@@ -803,9 +803,9 @@ $entity.school:=This.query("name=:1"; $student.schoolName).first()
 $entity.serialNumber:=This.computeSerialNumber()
 $status:=$entity.save()
 
-//Not exposed (private) function
-Function computeIDNumber()-> $id : Integer
-//compute a new ID number
+//función (privada) no expuesta
+Function computeIDNumber() -> $id : Integer
+//calcular un nuevo número de ID
 $id:=...
 
 ```
@@ -830,7 +830,7 @@ Por defecto en la arquitectura cliente/servidor, las funciones de modelo de dato
 Sin embargo, puede ocurrir que una función sea totalmente ejecutable del lado del cliente (por ejemplo, cuando procesa los datos que ya están en la caché local). En este caso, puede ahorrar peticiones al servidor y, de este modo, mejorar el rendimiento de la aplicación insertando la palabra clave `local`. La sintaxis formal es:
 
 ```4d
-// declare a function to execute locally in client/server
+// declarar una función a ejecutar localmente en cliente/servidor
 local Function <functionName>   
 ```
 
@@ -841,8 +841,8 @@ Con esta palabra clave, la función se ejecutará siempre del lado del cliente.
 Tenga en cuenta que la función funcionará incluso si eventualmente requiere acceder al servidor (por ejemplo si la caché ORDA está vencida). Sin embargo, es muy recomendable asegurarse de que la función local no accede a los datos del servidor, ya que de lo contrario la ejecución local no podría aportar ninguna ventaja en cuanto al rendimiento. Una función local que genera numerosas peticiones al servidor es menos eficiente que una función ejecutada en el servidor que sólo devolvería los valores resultantes. Por ejemplo, considere la siguiente función en la entidad Schools:
 
 ```4d
-// Get the youngest students  
-// Inappropriate use of local keyword
+// Obtener los estudiantes más jóvenes
+// Utilización inapropiada de la palabra clave local
 local Function getYoungest
 	var $0 : Object
     $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
@@ -918,7 +918,7 @@ Una clase usuario ORDA del modelo de datos se define añadiendo, en la [misma ub
 
 ![](../assets/en/ORDA/ORDA_Classes-3.png)
 
-> Por defecto, las clases ORDA vacías no se muestran en el Explorador. To show them you need to select **Show all data classes** from the Explorer's options menu:
+> Por defecto, las clases ORDA vacías no se muestran en el Explorador. Para mostrarlas, debe seleccionar **Mostrar todas las clases de datos** en el menú de opciones del Explorador:
 > ![](../assets/en/ORDA/showClass.png)
 
 Las clases de usuarios ORDA tienen un icono diferente de las otras clases. Las clases vacías se atenúan:

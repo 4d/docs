@@ -116,19 +116,19 @@ Estas opciones se aplican a los archivos de copia de seguridad principales y a l
 
 ### Restauración automática e integración de registros
 
-- **Restaurar la última copia de seguridad si la base está dañada**: cuando se marca esta opción, el programa inicia automáticamente la restauración del archivo de datos de la última copia de seguridad válida de la aplicación, si se detecta una anomalía (archivo dañado, por ejemplo) durante el lanzamiento de la aplicación. No se requiere ninguna intervención por parte del usuario; sin embargo, la operación se registra en el diario de copias de seguridad.
+#### Restaurar la última copia de seguridad si la base de datos está dañada
 
-- **Integrar los últimos registros si la base de datos está incompleta**: cuando esta opción está marcada, el programa integra automáticamente el archivo de registro actual si contiene operaciones que no están presentes en el archivo de datos. Si existe una secuencia válida de archivos .journal en el mismo repositorio, el programa integra de antemano todos los archivos .journal necesarios desde el más antiguo hasta el más actual.
+When this option is checked, the program automatically starts the restore of the data file of the last valid backup of the application, if an anomaly is detected (corrupted file, for example) during application launch. No se requiere ninguna intervención por parte del usuario; sin embargo, la operación se registra en el diario de copias de seguridad.
 
-    Esta situación se produce, por ejemplo, si se produce un corte de corriente cuando hay operaciones en la caché de datos que aún no se han escrito en el disco, o después de que se haya detectado una anomalía al abrir el archivo de datos y se haya producido una restauración.
+#### Integrar los últimos registros si la base de datos está incompleta
 
-    :::note
+When this option is checked, the program automatically integrates the current log file if it contains operations that are not present in the data file. Si existe una secuencia válida de archivos .journal en el mismo repositorio, el programa integra de antemano todos los archivos .journal necesarios desde el más antiguo hasta el más actual. Esta situación se produce, por ejemplo, si se produce un corte de corriente cuando hay operaciones en la caché de datos que aún no se han escrito en el disco, o después de que se haya detectado una anomalía al abrir el archivo de datos y se haya producido una restauración.
 
-    Esta funcionalidad implica que el programa analiza todos los archivos de registro de la carpeta de archivos de registro actual al iniciarse. Por lo tanto, por razones de rendimiento, asegúrese de que no hay archivos de registro inútiles almacenados en la carpeta.
+:::note
 
+Esta funcionalidad implica que el programa analiza todos los archivos de registro de la carpeta de archivos de registro actual al iniciarse. Por lo tanto, por razones de rendimiento, asegúrese de que no hay archivos de registro inútiles almacenados en la carpeta.
 
 :::
-
 
 El usuario no ve ninguna caja de diálogo; la operación es completamente automática. El objetivo es facilitar al máximo su uso. La operación se registra en el diario de copias de seguridad.
 

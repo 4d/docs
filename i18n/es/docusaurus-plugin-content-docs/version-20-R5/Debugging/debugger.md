@@ -321,13 +321,13 @@ El menú contextual del panel de control personalizado permite acceder al editor
 
 ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 
-For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/4D-Design-Reference.100-6750070.en.html).
+Para más información sobre el Editor de fórmulas, consulte el [Manual de referencia de Diseño 4D](https://doc.4d.com/4Dv20/4D/20.2/4D-Design-Reference.100-6750070.en.html).
 
 - **Insertar comando**: acceso directo para insertar un comando 4D como una nueva expresión.
 - **Borrar todo**: elimina todas las expresiones del panel de control personalizado.
 - **Expresiones estándar**: copia la lista de expresiones del panel de control.
 
-> This option is not available in remote debugging mode (see [Debugging from Remote Machines](#debugging-remote.md).
+> This option is not available in remote debugging mode (see [Debugging from Remote Machines](debugging-remote.md).
 
 - **Contraer todo/Expandir todo**: contrae o expande todas las listas jerárquicas.
 - **Mostrar tipos**: muestra el tipo de cada elemento de la lista (cuando es apropiado).

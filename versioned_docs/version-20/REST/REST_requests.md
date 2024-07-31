@@ -6,12 +6,12 @@ title: About REST Requests
 
 The following structures are supported for REST requests:
 
-|URI	|Resource (Input)| /? or &{filter} (Output)|
+|URI	|Resource (Input)| /? or &\{filter\} (Output)|
 |---|---|---|
-|http://{servername}:{port}/rest/	|[{dataClass}](dataClass.md)|[$filter]($filter.md), [$attributes]($attributes.md), [$skip]($skip.md), [$method=...]($method.md)...|
-| |[{dataClass}](dataClass.md)/[$entityset/{entitySetID}]($entityset.md#entitysetentitysetid)|[$method=...]($method.md)|
-| |[{dataClass}({key})](dataClass.md#dataclasskey)|[$attributes]($attributes.md)|
-| |[{dataClass}:{attribute}(value)](dataClass.md#dataclassattributevalue)||
+|http://{servername}:{port}/rest/	|[\{dataClass\}](dataClass.md)|[$filter]($filter.md), [$attributes]($attributes.md), [$skip]($skip.md), [$method=...]($method.md)...|
+| |[\{dataClass\}](dataClass.md)/[$entityset/\{entitySetID\}]($entityset.md#entitysetentitysetid)|[$method=...]($method.md)|
+| |[\{dataClass\}({key})](dataClass.md#dataclasskey)|[$attributes]($attributes.md)|
+| |[\{dataClass\}:\{attribute\}(value)](dataClass.md#dataclassattributevalue)||
 
 While all REST requests must contain the URI and Resource parameters, the Output (which filters the data returned) is optional.
 

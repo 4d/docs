@@ -15,7 +15,7 @@ title: "$filter"
 
 フィルターは次の要素で構成されます:
 
-**{attribute} {comparator} {value}**
+**\{attribute\} {comparator} {value}**
 
 たとえば `$filter="firstName=john"` の場合、`firstName` は **属性 (attribute)**、`=` は **比較演算子 (comparator)**、`john` は **値 (value)** にあたります。
 
@@ -23,7 +23,7 @@ title: "$filter"
 
 複雑なフィルターは複数の単純なフィルターの組み合わせで構成されます:
 
-**{attribute} {comparator} {value} {AND/OR/EXCEPT} {attribute} {comparator} {value}**
+**\{attribute\} {comparator} {value} {AND/OR/EXCEPT} \{attribute\} {comparator} {value}**
 
 たとえば: `$filter="firstName=john AND salary>20000"` （`firstName` および `salary` は Employee データクラスの属性です)。
 
@@ -31,7 +31,7 @@ title: "$filter"
 
 4D の paramsプロパティを使うこともできます。
 
-**{attribute} {comparator} {placeholder} {AND/OR/EXCEPT} {attribute} {comparator} {placeholder}&$params='["{value1}","{value2}"]"'**
+**\{attribute\} {comparator} {placeholder} {AND/OR/EXCEPT} \{attribute\} {comparator} {placeholder}&$params='["{value1}","{value2}"]"'**
 
 たとえば: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` (firstName および salary は Employee データクラスの属性です)。
 

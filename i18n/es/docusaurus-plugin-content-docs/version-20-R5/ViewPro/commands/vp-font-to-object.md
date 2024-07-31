@@ -22,7 +22,7 @@ El comando utilitario `VP Font to object` <!-- REF #_method_.VP Font to object.S
 
 En el parámetro _font_, pase una cadena de fuente abreviada para especificar las diferentes propiedades de una fuente (por ejemplo, "12 pt Arial"). Puede obtener más información sobre las cadenas abreviadas de fuentes [en esta página](https://www.w3schools.com/cssref/pr_font_font.asp), por ejemplo.
 
-El objeto devuelto contiene los atributos de fuente definidos como propiedades. For more information about the available properties, see the [VP Object to font](vp-object-to-font.md) command.
+El objeto devuelto contiene los atributos de fuente definidos como propiedades. Para obtener más información sobre las propiedades disponibles, consulte el comando [VP Object to font](vp-object-to-font.md).
 
 #### Ejemplo 1
 

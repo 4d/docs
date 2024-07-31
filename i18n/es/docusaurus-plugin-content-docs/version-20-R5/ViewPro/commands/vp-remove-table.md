@@ -26,7 +26,7 @@ title: VP REMOVE TABLE
 
 #### Descripción
 
-The `VP REMOVE TABLE` command <!-- REF #_method_.VP REMOVE TABLE.Summary -->removes a table<!-- END REF --> that you created with [VP CREATE TABLE](vp-create-table.md).
+El comando `VP REMOVE TABLE` <!-- REF #_method_.VP REMOVE TABLE.Summary -->elimina una tabla<!-- END REF --> que haya creado con [VP CREATE TABLE](vp-create-table.md).
 
 En _vpAreaName_, pase el nombre del área donde se encuentra la tabla a eliminar.
 

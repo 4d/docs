@@ -171,6 +171,12 @@ Esta es la secuencia de llamadas de retorno:
 
 5. `onTerminate` se ejecuta siempre una vez
 
+:::info
+
+For the callback functions to be called when you do not use [`wait()`](#wait) (asynchronous call), the process must be a [worker](../Develop/processes.md#worker-processes) created with [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NOT [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
+
+:::
+
 #### objeto evento
 
 Un objeto `event` es devuelto cuando una [función de callback](#callback-functions) es llamada. Contiene las siguientes propiedades:
@@ -182,7 +188,7 @@ Un objeto `event` es devuelto cuando una [función de callback](#callback-functi
 
 #### authentication object
 
-An authentication object handles the `options.serverAuthentication` or `options.proxyAuthentication` property. Puede contener las siguientes propiedades:
+Un objeto de autenticación maneja la propiedad `options.serverAuthentication` o `options.proxyAuthentication`. Puede contener las siguientes propiedades:
 
 | Propiedad  | Tipo | Descripción                                                                       | Por defecto |
 | ---------- | ---- | --------------------------------------------------------------------------------- | ----------- |
@@ -266,7 +272,7 @@ var $message : Text:=File("/RESOURCES/HTTPrequest.txt").getText()
 var $parsedMessage : Object:=HTTP Parse message($message)
 //$parsedMessage= {
 //headers:{"User-Agent":"4D/20.4.0",...},
-//parts:[{"contentType":"application/http","contentID":"item1",...}], 
+//parts:[{"contentType":"application/http","contentID":"item1",...}],
 //requestLine:"POST /batch/gmail/v1/ HTTP/1.1"
 //}
 ```

@@ -152,7 +152,7 @@
   },
   "theme.ErrorPageContent.tryAgain": {
     "message": "Try again",
-    "description": "The label of the button to try again when the page crashed"
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
   },
   "theme.NotFound.title": {
     "message": "Page introuvable",
@@ -545,19 +545,19 @@
     "message": "Release Notes"
   },
   "homepage.sections.core-development.langage-ref-url": {
-    "message": "https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Language-Reference.100-6817247.en.html"
+    "message": "https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Language-Reference.100-6957482.en.html"
   },
   "homepage.sections.textensions.4D-Write-Pro-Reference-url": {
-    "message": "https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Write-Pro-Reference.100-6851780.en.html"
+    "message": "https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Write-Pro-Reference.100-6993921.en.html"
   },
   "homepage.sections.textensions.4D-Progress-url": {
-    "message": "https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Progress.100-6937584.en.html"
+    "message": "https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Progress.100-7183762.en.html"
   },
   "homepage.sections.textensions.4D-SVG-Component-url": {
-    "message": "https://doc.4d.com/4Dv20R5/4D/20-R5/4D-SVG-Component.100-6938126.en.html"
+    "message": "https://doc.4d.com/4Dv20R6/4D/20-R6/4D-SVG-Component.100-7184636.en.html"
   },
   "homepage.sections.textensions.4D-Widgets-url": {
-    "message": "https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Widgets.100-6938775.en.html"
+    "message": "https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Widgets.100-7185285.en.html"
   },
   "homepage.sections.mobile-applications.4D-for-iOS-Archive-url": {
     "message": "https://developer.4d.com/4d-for-ios/docs/en/overview.html"
@@ -598,5 +598,29 @@
   },
   "Handling Code": {
     "message": "Gestion du code"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "1 item|{count} items",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
+  },
+  "theme.admonition.warning": {
+    "message": "attention",
+    "description": "The default label used for the Warning admonition (:::warning)"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "Expand sidebar category '{label}'",
+    "description": "The ARIA label to expand the sidebar category"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "Collapse sidebar category '{label}'",
+    "description": "The ARIA label to collapse the sidebar category"
+  },
+  "theme.unlistedContent.title": {
+    "message": "Unlisted page",
+    "description": "The unlisted content banner title"
+  },
+  "theme.unlistedContent.message": {
+    "message": "This page is unlisted. Search engines will not index it, and only users having a direct link can access it.",
+    "description": "The unlisted content banner message"
   }
 }

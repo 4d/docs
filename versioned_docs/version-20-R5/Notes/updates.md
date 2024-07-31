@@ -6,7 +6,7 @@ title: Release Notes
 
 ## 4D 20 R5
 
-Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-v20-R5/), the blog post that lists all new features and enhancements in 4D 20 R5.
+Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5/), the blog post that lists all new features and enhancements in 4D 20 R5.
 
 #### Highlights
 
@@ -362,7 +362,7 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 
 ## 4D 19 R2
 
-- A [default .gitignore file](../Preferences/general#create-gitignore-file) can be created with new projects
+- A [default .gitignore file](../Preferences/general.md#create-gitignore-file) can be created with new projects
 - New [Blob class API](../API/BlobClass.md) to handle new [`4D.Blob` objects](Concepts/dt_blob.md#blob-types)
 - `no-bom` support and new default end-of-line characters in [`.setText()`](../API/FileClass.md#settext)
 

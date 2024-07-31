@@ -33,7 +33,7 @@ Pour passer un BLOB à une de vos méthodes, vous pouvez aussi définir un point
 ```
 **Note pour les développeurs de plug ins 4D :** Un paramètre de type BLOB se déclare “&O” (la lettre “O” et non le chiffre “0”).
 
-## Opérateur d'assignation
+## Opérateur d'affectation
 
 Vous pouvez assigner la valeur d'un BLOB à d'autres BLOBs, comme dans l'exemple suivant.
 

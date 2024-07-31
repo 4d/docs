@@ -46,10 +46,10 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 Hace que el texto seleccionado se incline ligeramente hacia la derecha.
 
-You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
+También puede definir esta propiedad por medio del comando [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
 
-> This is normal text.<br/>
-> _This is text in italics._
+> Esto es texto normal.<br/>
+> _Este es texto en cursiva._
 
 #### Gramática JSON
 
@@ -121,7 +121,7 @@ Hay dos tipos de nombres de familias de fuentes:
 - _family-name:_ El nombre de una familia de fuentes, como "times", "courier", "arial", etc.
 - _generic-family:_ El nombre de una familia genérica, como "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
-You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.
+Puede configurarlo utilizando el comando [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html).
 
 #### Gramática JSON
 
@@ -181,7 +181,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 ## Expresión color fuente
 
-`Selection and collection/entity selection type list boxes`
+`List box de tipo colección/selección de entidades`
 
 Se utiliza para aplicar un color de fuente personalizado a cada línea del list box. Debe utilizar valores de color RGB. Para más información al respecto, consulte la descripción del comando [OBJECT SET RGB COLORS](https://doc.4d.com/4dv19R/help/command/en/page628.html) en el manual Lenguaje de 4D.
 
@@ -212,7 +212,7 @@ Foreground color;Dark shadow color)
 
 ## Expresión estilo
 
-`Selection and collection/entity selection type list boxes`
+`List box de tipo colección/selección de entidades`
 
 Utilizado para aplicar un estilo de fuente personalizado a cada línea de list box o de cada celda de la columna.
 
@@ -415,7 +415,7 @@ Además de [áreas de texto estáticas](text.md), los objetos de texto de las [�
 
 ## Array colores de fuente
 
-`Array type list boxes`
+`List boxes de tipo array`
 
 Permite definir un color de fuente personalizado para cada línea del list box o celda de la columna.
 
@@ -435,7 +435,7 @@ Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array
 
 ## Array de estilos
 
-`Array type list boxes`
+`List boxes de tipo array`
 
 Permite definir un estilo de fuente personalizado para cada línea del list box o cada celda de la columna.
 

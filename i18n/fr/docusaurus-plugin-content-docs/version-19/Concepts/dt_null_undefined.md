@@ -1,6 +1,6 @@
 ---
 id: null-undefined
-title: Null et Indefinie
+title: Null et Undefined
 ---
 
 Null et Undefined sont des types de données qui gèrent les cas où la valeur d'une expression n'est pas connue.

@@ -20,13 +20,13 @@ title: VP SET DATE TIME VALUE
 
 El comando `VP SET DATE TIME VALUE` <!-- REF #_method_.VP SET DATE TIME VALUE.Summary -->asigna un valor especificado de fecha y hora a un rango de celdas designado<!-- END REF -->.
 
-In _rangeObj_, pass a range of the cell(s) (created for example with [`VP Cell`](vp-cell.md) or [`VP Column`](vp-column.md)) whose value you want to specify. Si _rangeObj_ incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
+En _rangeObj_, pasa un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP Cell`](vp-cell.md) o [`VP Column`](vp-column.md)) cuyo valor desea especificar. Si _rangeObj_ incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
 
 El parámetro _dateValue_ indica un valor de fecha que se asignará a _rangeObj_.
 
 El parámetro _timeValue_ indica un valor hora (expresado en segundos) que se asignará al _rangeObj_.
 
-El parámetro opcional _formatPattern_ define un modelo para los parámetros _dateValue_ y _timeValue_. For information on patterns and formatting characters, please refer to the [Date and time formats](../configuring.md#date-and-time-formats) section.
+El parámetro opcional _formatPattern_ define un modelo para los parámetros _dateValue_ y _timeValue_. Para obtener información sobre los modelos y los caracteres de formato, consulte la sección [Formatos fecha y hora](../configuring.md#date-and-time-formats).
 
 #### Ejemplo
 

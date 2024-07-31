@@ -40,7 +40,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 | [<!-- INCLUDE #IMAPTransporterClass.selectBox().Syntax -->](#selectbox)<br/><!-- INCLUDE #IMAPTransporterClass.selectBox().Summary -->                              |
 | [<!-- INCLUDE #IMAPTransporterClass.subscribe().Syntax -->](#subscribe)<br/><!-- INCLUDE #IMAPTransporterClass.subscribe().Summary -->                              |
 | [<!-- INCLUDE #IMAPTransporterClass.unsubscribe().Syntax -->](#unsubscribe)<br/><!-- INCLUDE #IMAPTransporterClass.unsubscribe().Summary -->                        |
-| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                   |
+| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                   |
 
 ## IMAP New transporter
 
@@ -80,13 +80,13 @@ In the *server* parameter, pass an object containing the following properties:
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                        | nenhum                                                            |
 | .**password** : Text<br/>User password for authentication on the server. Not returned in *[IMAP transporter](#imap-transporter-object)* object.                                                                                                                                                                                                                                                                                                                                   | nenhum                                                            |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                 | 993                                                               |
-| [<!-- INCLUDE #transporter.user.Syntax -->](#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                 | nenhum                                                            |
+| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                 | nenhum                                                            |
 
 > **Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.
 
 #### Resultados
 
-The function returns an [**IMAP transporter object**](#imap-transporter-object). All returned properties are **read-only**.
+A função retorna um [**objeto transportador IMAP**](#imap-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
 
 > A ligação IMAP é automaticamente fechada quando o objecto transportador é destruído.
 
@@ -159,8 +159,8 @@ The `.addFlags()` function <!-- REF #IMAPTransporterClass.addFlags().Summary -->
 
 In the `msgIDs` parameter, you can pass either:
 
-- a *collection* containing the unique IDs of specific messages or
-- the unique ID (*text*) of a single message or
+- uma *colecção* contendo as identificações únicas de mensagens específicas ou
+- o ID único (*texto*) de uma mensagem ou
 - the following constant (*longint*) for all messages in the selected mailbox:
 
 | Parâmetros | Valor | Comentário                                                     |
@@ -822,10 +822,10 @@ The `boxInfo` object returned contains the following properties:
 
 <details><summary>História</summary>
 
-| Release | Mudanças                     |
-| ------- | ---------------------------- |
-| 18 R4   | Adicionado                   |
-| 19      | Add `isSubscribed` parameter |
+| Release | Mudanças                           |
+| ------- | ---------------------------------- |
+| 18 R4   | Adicionado                         |
+| 19      | Adicionar parâmetro `isSubscribed` |
 
 </details>
 
@@ -900,9 +900,9 @@ Se a conta não contiver quaisquer caixas de correio, é devolvida uma colecçã
 
 <!-- REF #IMAPTransporterClass.getDelimiter().Params -->
 
-| Parâmetro  | Tipo |     | Descrição                     |
-| ---------- | ---- | :-: | ----------------------------- |
-| Resultados | Text |  <- | Hierarchy delimiter character |
+| Parâmetro  | Tipo |     | Descrição                           |
+| ---------- | ---- | :-: | ----------------------------------- |
+| Resultados | Text |  <- | Caractere delimitador de hierarquia |
 
 <!-- END REF -->
 
@@ -1155,8 +1155,8 @@ No primeiro parâmetro, pode passar qualquer um dos dois:
 
 The optional *updateSeen* parameter allows you to specify if the message is marked as "seen" in the mailbox. Pode passar:
 
-- **True** - to mark the message as "seen" (indicating the message has been read)
-- **False** - to leave the message's "seen" status untouched
+- **True** - para marcar a mensagem como "vista" (indicando que a mensagem foi lida)
+- **False** - para deixar o status "visto" da mensagem inalterado
 
 > * The function returns an empty BLOB if *msgNumber* or msgID\* designates a non-existing message,
 > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated,
@@ -1393,8 +1393,8 @@ The `.removeFlags()` function <!-- REF #IMAPTransporterClass.removeFlags().Summa
 
 In the `msgIDs` parameter, you can pass either:
 
-- a *collection* containing the unique IDs of specific messages or
-- the unique ID (*text*) of a single message or
+- uma *colecção* contendo as identificações únicas de mensagens específicas ou
+- o ID único (*texto*) de uma mensagem ou
 - the following constant (*longint*) for all messages in the selected mailbox:
 
 | Parâmetros | Valor | Comentário                                                     |
@@ -1579,7 +1579,7 @@ searchCriteria = FLAGGED FROM "SMITH"
 
 ... returns all messages with \Flagged flag set AND sent by Smith.
 
-- You can use the **OR** or **NOT** operators as follows:
+- Você pode usar os operadores **OR** ou **NOT** da seguinte forma:
 
 ```
 searchCriteria = OR SEEN FLAGGED
@@ -1641,22 +1641,22 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 
 #### Chaves de pesquisa autorizadas
 
-**ALL**: All messages in the mailbox.\
-**ANSWERED**: Messages with the \Answered flag set.\
-**UNANSWERED**: Messages that do not have the \Answered flag set.\
-**DELETED**: Messages with the \Deleted flag set.\
-**UNDELETED**: Messages that do not have the \Deleted flag set.\
-**DRAFT**: Messages with the \Draft flag set.\
-**UNDRAFT**: Messages that do not have the \Draft flag set.\
-**FLAGGED**: Messages with the \Flagged flag set.\
-**UNFLAGGED**: Messages that do not have the \Flagged flag set.\
-**RECENT**: Messages that have the \Recent flag set.\
-**OLD**: Messages that do not have the \Recent flag set.\
-**SEEN**: Messages that have the \Seen flag set.\
-**UNSEEN**: Messages that do not have the \Seen flag set.\
+**ALL**: Todas as mensagens na caixa de correio.\
+**ANSWERED**: mensagens com o indicador \Answered ativo.\
+**UNANSWERED**: mensagens que não têm o sinalizador indicador \Answered definido.\
+**DELETED**: mensagens com o sinalizador \Deleted ativado.\
+**UNDELETED**: Mensagens que não possuem o indicador \Deleted ativado.\
+**DRAFT**: mensagens com o indicador \Draft ativo.\
+**UNDRAFT**: mensagens que não têm o sinalizador \Draft ativado.\
+**FLAGGED**: mensagens com o indicador \Flagged ativo.\
+**UNFLAGGED**: mensagens que não têm o sinalizador \Flagged ativado.\
+**RECENT**: mensagens que possuem o indicador \Recent ativado.\
+**OLD**: mensagens que não possuem o indicador \Recent definido.\
+**SEEN**: mensagens que têm o sinalizador \Seen ativo.\
+**UNSEEN**: Mensagens que não possuem o indicador \Seen definido.\
 **NEW**: Messages that have the \Recent flag set but not the \Seen flag. This is functionally equivalent to “(RECENT UNSEEN)”.\
 **KEYWORD *flag***: Messages with the specified keyword set.\
-**UNKEYWORD *flag***: Messages that do not have the specified keyword set.\
+**UNKEYWORD *flag***: mensagens que não têm a palavra-chave especificada.\
 **BEFORE *date***: Messages whose internal date is earlier than the specified date.\
 **ON *date***: Messages whose internal date is within the specified date.\
 **SINCE *date***: Messages whose internal date is within or later than the specified date.\
@@ -1664,16 +1664,16 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 **SENTON *date***: Messages whose Date header is within the specified date.\
 **SENTSINCE *date***: Messages whose Date header is within or later than the specified date.\
 **TO *string***: Messages that contain the specified string in the TO header.\
-**FROM *string***: Messages that contain the specified string in the FROM header.\
+**FROM *string***: mensagens que contêm a string especificada no cabeçalho FROM.\
 **CC *string***: Messages that contain the specified string in the CC header.\
-**BCC *string***: Messages that contain the specified string in the BCC header.\
+**BCC *string***: mensagens que contêm a string especificada no cabeçalho BCC.\
 **SUBJECT *string***: Messages that contain the specified string in the Subject header.\
 **BODY *string***: Messages that contain the specified string in the message body.\
 **TEXT *string***: Messages that contain the specified string in the header or in the message body.\
 **HEADER *field-name* *string***: Messages that have a header with the specified field-name and that contain the specified string in the field-body.\
 **UID *message-UID***: Messages with unique identifiers corresponding to the specified unique identifier set.\
-**LARGER *n***: Messages with a size larger than the specified number of bytes.\
-**SMALLER *n***: Messages with a size smaller than the specified number of bytes.\
+**LARGER *n***: mensagens com tamanho maior do que o número de bytes especificado.\
+**SMALLER *n***: mensagens com tamanho menor do que o número de bytes especificado.\
 **NOT *search-key***: Messages that do not match the specified search key.\
 **OR *search-key1* *search-key2***: Messages that match either search key.
 
@@ -1685,10 +1685,10 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 
 <details><summary>História</summary>
 
-| Release | Mudanças                                     |
-| ------- | -------------------------------------------- |
-| 20      | *id*, *flags*, *permanentFlags* are returned |
-| 18 R4   | Adicionado                                   |
+| Release | Mudanças                                       |
+| ------- | ---------------------------------------------- |
+| 20      | *id*, *flags*, *permanentFlags* são retornados |
+| 18 R4   | Adicionado                                     |
 
 </details>
 
@@ -1710,7 +1710,7 @@ The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -
 
 > To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
 
-In the *name* parameter, pass the name of the mailbox to access. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
+No parâmetro *name*, passar o nome da caixa de correio para aceder. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
 
 The optional *state* parameter defines the type of access to the mailbox. Os valores possíveis são:
 

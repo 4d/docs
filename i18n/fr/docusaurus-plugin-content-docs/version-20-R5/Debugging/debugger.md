@@ -327,7 +327,7 @@ For more information on the Formula Editor, see the [4D Design Reference manual]
 - **Supprimer tout** : Supprime toutes les expressions de la fenêtre de surveillance personnalisée.
 - **Expressions par défaut** : Copie la liste des expressions de la fenêtre d'expression.
 
-> Cette option n'est pas disponible en mode débogueur distant (voir [Débogage depuis des machines distantes](#debugging-remote.md).
+> This option is not available in remote debugging mode (see [Debugging from Remote Machines](debugging-remote.md).
 
 - **Contracter tout/Développer tout** : Contracte ou développe toutes les listes hiérarchiques.
 - **Montrer les types** : Affiche le type de chaque élément dans la liste (lorsque cela est pertinent).

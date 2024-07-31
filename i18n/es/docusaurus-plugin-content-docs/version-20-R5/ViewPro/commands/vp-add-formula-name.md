@@ -24,7 +24,7 @@ El comando `VP ADD FORMULA NAME` <!-- REF #_method_.VP ADD FORMULA NAME.Summary 
 
 En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-Pase la fórmula 4D View Pro que desea nombrar en _vpFormula_. For detailed information about formula syntax, see [Formulas and Functions](../formulas.md) page.
+Pase la fórmula 4D View Pro que desea nombrar en _vpFormula_. Para obtener información detallada sobre la sintaxis de las fórmulas, consulte la página [Fórmulas y funciones](../formulas.md).
 
 Pase el nuevo nombre para la fórmula en _name_. Si el nombre ya se utiliza en el mismo alcance, la nueva fórmula nombrada sustituye la existente. Tenga en cuenta que puede utilizar el mismo nombre para diferentes alcances (ver más adelante).
 

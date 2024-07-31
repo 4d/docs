@@ -20,7 +20,7 @@ El servidor web 4D crea automáticamente una carpeta raíz y una página de inic
 
 La seguridad de los datos está presente en todas las etapas de las implementaciones del servidor web 4D. Los niveles de seguridad son escalables y la configuración por defecto suele seleccionar las opciones más seguras. La seguridad del servidor web 4D se basa en los elementos siguientes:
 
-- Extended support of the [**TLS Protocol (HTTPS)**](../Admin/tls.md),
+- Soporte extendido del [**Protocolo TLS (HTTPS)**](../Admin/tls.md),
 
 - **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
 

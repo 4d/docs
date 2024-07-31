@@ -1,14 +1,14 @@
 ---
 id: client-server-optimization
-title: Client/Server Optimization
+title: Otimização cliente/servidor
 ---
 
 4D provides optimizations for ORDA requests that use entity selections or load entities in client/server architectures. Essas otimizações aceleram a execução de seu aplicativo 4D ao reduzir drasticamente o volume de informações transmitidas pela rede. Estes incluem:
 
-- the **optimization context**
+- o **contexto de otimização**
 - o **Cache ORDA**
 
-## Supported architectures
+## Arquiteturas suportadas
 
 ORDA client/server architectures that support the optimization are:
 
@@ -41,7 +41,7 @@ O contexto de otimização é baseado nas seguintes implementações:
 
 ![](../assets/en/ORDA/cs-optimization-process.png)
 
-:::note Compatibility Note
+:::note Nota de compatibilidade
 
 Contexts handled in connections established through [`Open datastore`](../API/DataStoreClass.md#open-datastore) can only be used between similar main versions of 4D. For example, a 4D 20.x remote application can only use contexts of a 4D Server 20.x datastore.
 
@@ -70,7 +70,7 @@ A mesma propriedade de contexto de otimização pode ser passada para um número
 
 > A similar mechanism is implemented for entities that are loaded, so that only used attributes are requested (see the [`dataClass.get()`](../API/DataClassClass.md#get) function).
 
-**Example with `dataClass.query()`:**
+**Exemplo com `dataClass.query()`:**
 
 ```4d
  var $sel1; $sel2; $sel3; $sel4; $querysettings; $querysettings2 : Object

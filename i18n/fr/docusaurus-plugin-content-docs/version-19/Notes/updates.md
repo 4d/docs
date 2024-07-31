@@ -16,6 +16,13 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 :::
 
 
+## 4D 19.8
+
+#### Points forts
+
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.8): list of all bugs that have been fixed in 4D 19.8.
+
+
 ## 4D 19.7
 
 #### Points forts
@@ -58,4 +65,3 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 | ICU          | 68.1             | 18 R6               | Cette mise à jour majeure entraîne une reconstruction automatique des index alphanumériques, texte et objets. |
 | PHP          | 7.3.27           | 18 R6               |                                                                                                               |
 | libldap      | 2.4.48           | 18 R2               |                                                                                                               |
-

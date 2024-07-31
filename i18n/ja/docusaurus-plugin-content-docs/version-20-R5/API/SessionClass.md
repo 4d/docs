@@ -3,9 +3,6 @@ id: SessionClass
 title: Session
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 Session オブジェクトは [`Session`](#session) コマンドによって返されます。 このオブジェクトは、カレントユーザーセッションを管理するためのインターフェースをデベロッパーに対して提供し、コンテキストデータの保存、プロセス間の情報共有、セッションに関連したプリエンプティブプロセスの開始などのアクションの実行や、[アクセス権](../ORDA/privileges.md) の管理を可能にします。
 
 ### セッションの種類
@@ -513,9 +510,7 @@ End if
 
 このプロパティは **読み取り専用** ですが、戻り値のオブジェクトは読み書き可能です。
 
-<Tabs>
-
-<TabItem value="Web session example">
+#### Webセッションの例題
 
 クライアントの IP を `.storage` プロパティに保存します。 `On Web Authentication` データベースメソッドに以下のように書けます:
 
@@ -527,9 +522,7 @@ If (Session.storage.clientIP=Null) // 最初のアクセス
 End if
 ```
 
-</TabItem>
-
-<TabItem value="Remote session example">
+#### リモートセッションの例題
 
 同じセッションのプロセス間でデータを共有したい場合:
 
@@ -538,10 +531,6 @@ Use (Session.storage)
  Session.storage.settings:=New shared object("property"; $value; "property2"; $value2)
 End use
 ```
-
-</TabItem>
-
-</Tabs>
 
 <!-- END REF -->
 

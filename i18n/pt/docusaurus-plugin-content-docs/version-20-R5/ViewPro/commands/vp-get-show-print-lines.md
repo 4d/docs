@@ -9,11 +9,11 @@ title: VP Get show print lines
 
 <!-- REF #_method_.VP Get show print lines.Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                                        |                  |
-| ---------- | ---------- | -- | ------------------------------------------------ | ---------------- |
-| vpAreaName | Text       | -> | Nome de objeto formulário área 4D View Pro       |                  |
-| sheet      | Integer    | <- | Índice da folha                                  |                  |
-| Resultado  | Parâmetros | <- | True if print lines are visible, False otherwise | <!-- END REF --> |
+| Parâmetro  | Tipo       |    | Descrição                                                           |                  |
+| ---------- | ---------- | -- | ------------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text       | -> | Nome de objeto formulário área 4D View Pro                          |                  |
+| sheet      | Integer    | <- | Índice da folha                                                     |                  |
+| Resultado  | Parâmetros | <- | True se as linhas de impressão forem visíveis, False caso contrário | <!-- END REF --> |
 
 #### Descrição
 
@@ -21,7 +21,7 @@ The `VP Get show print lines` command <!-- REF #_method_.VP Get show print lines
 
 Em _vpAreaName_, passe o nome da área 4D View Pro.
 
-In _sheet_, pass the index of the target sheet. If _sheet_ is omitted, the command applies to the current sheet.
+Em _sheet_, passe o índice da folha de destino. Se _sheet_ for omisso, o comando se aplicará à planilha atual.
 
 > A indexação começa em 0.
 

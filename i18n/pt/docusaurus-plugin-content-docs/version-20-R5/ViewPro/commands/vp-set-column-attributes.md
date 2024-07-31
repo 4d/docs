@@ -9,16 +9,16 @@ title: VP SET COLUMN ATTRIBUTES
 
 <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Params -->
 
-| Parâmetro   | Tipo   |    | Descrição                           |                  |
-| ----------- | ------ | -- | ----------------------------------- | ---------------- |
-| rangeObj    | Object | -> | Objeto intervalo                    |                  |
-| propertyObj | Object | -> | Object containing column properties | <!-- END REF --> |
+| Parâmetro   | Tipo   |    | Descrição                                   |                  |
+| ----------- | ------ | -- | ------------------------------------------- | ---------------- |
+| rangeObj    | Object | -> | Objeto intervalo                            |                  |
+| propertyObj | Object | -> | Objeto que contém as propriedades da coluna | <!-- END REF --> |
 
 #### Descrição
 
 The `VP SET COLUMN ATTRIBUTES` command <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Summary --> applies the attributes defined in the _propertyObj_ to the columns in the _rangeObj_<!-- END REF -->.
 
-In _rangeObj_, pass an object containing a range. If the range contains both columns and rows, attributes are applied only to the columns.
+Em _rangeObj_, passe um objeto que contenha um intervalo. If the range contains both columns and rows, attributes are applied only to the columns.
 
 The _propertyObj_ parameter lets you specify the attributes to apply to the columns in the _rangeObj_. Estes atributos são:
 

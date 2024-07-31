@@ -1,0 +1,9 @@
+name: deploy
+
+on:
+  pull_request:
+    branches: [main]
+    
+jobs:
+  workflow-build:
+    uses: ./.github/workflows/workflow-build.yml

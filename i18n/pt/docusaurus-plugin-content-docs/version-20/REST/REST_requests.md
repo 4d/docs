@@ -6,12 +6,12 @@ title: Sobre petições REST
 
 As estrutyuras abaixo são compatíveis com petições REST:
 
-| URI                              | Recurso                                                                                    | /? /? or &{filter} (Output)                                                |
-| -------------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
-| http://{servername}:{port}/rest/ | [{dataClass}](dataClass.md)                                                                | [{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/ |
-|                                  | [{dataClass}](dataClass.md)/[$entityset/{entitySetID}]($entityset.md#entitysetentitysetid) | [$method=...]($method.md)                                                  |
-|                                  | [[{dataClass}({key})](%7BdataClass%7D.html#dataclasskey)/](dataClass.md#dataclasskey)      | [$attributes]($attributes.md)                                              |
-|                                  | [{dataClass}:{attribute}(value)](dataClass.md#dataclassattributevalue)                     |                                                                            |
+| URI                              | Recurso                                                                                            | /? or &\{filter\} (Output)                                               |
+| -------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| http://{servername}:{port}/rest/ | [\{dataClass\}](dataClass.md)                                                                    | [{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/ |
+|                                  | [\{dataClass\}](dataClass.md)/[$entityset/\{entitySetID\}]($entityset.md#entitysetentitysetid) | [$method=...]($method.md)                                                  |
+|                                  | [\{dataClass\}({key})](dataClass.md#dataclasskey)                                                | [$attributes]($attributes.md)                                              |
+|                                  | [\{dataClass\}:\{attribute\}(value)](dataClass.md#dataclassattributevalue)                     |                                                                            |
 
 Todas as petições REST devem conter os parâmetros URI e Resource, mas o parâmetro Subresource (que filtra os dados retornados) é opcional.
 

@@ -3,7 +3,7 @@ id: client-server-optimization
 title: Optimización cliente/servidor
 ---
 
-4D provides optimizations for ORDA requests that use entity selections or load entities in client/server architectures. Estas optimizaciones aceleran la ejecución de su aplicación 4D reduciendo drásticamente el volumen de información transmitida por la red. Incluyen:
+4D ofrece optimizaciones para las peticiones ORDA que utilizan selecciones de entidades o cargan entidades en arquitecturas cliente/servidor. Estas optimizaciones aceleran la ejecución de su aplicación 4D reduciendo drásticamente el volumen de información transmitida por la red. Incluyen:
 
 - el **contexto de optimización**
 - la **caché ORDA**
@@ -12,7 +12,7 @@ title: Optimización cliente/servidor
 
 Las arquitecturas de cliente/servidor ORDA que soportan la optimización son:
 
-- Server datastores accessed by 4D remote desktop applications through [**`ds`**](../API/DataStoreClass.md#ds),
+- Les datastores servidor a los que acceden las aplicaciones 4D de escritorio remoto a través de [**`ds`**](../API/DataStoreClass.md#ds),
 - [Remote datastores](remoteDatastores.md), accessed via [**`Open datastore`**](../API/DataStoreClass.md#open-datastore) (client REST requests).
 
 ## Contexto de optimización
@@ -27,7 +27,7 @@ El contexto de optimización se basa en las siguientes implementaciones:
   - [`dataClass.query()`](../API/DataClassClass.md#query)
   - [`entitySelection.query()`](../API/EntitySelectionClass.md#query)
 
-- Las solicitudes posteriores enviadas al servidor sobre la misma selección de entidades reutilizan automáticamente el contexto de optimización y sólo obtienen del servidor los atributos necesarios, lo que acelera el procesamiento. For example, in an [entity selection-based list box](#entity-selection-based-list-box), the learning phase takes place during the display of the first row. la visualización de las siguientes líneas está optimizada. Las siguientes funciones asocian automáticamente el contexto de optimización de la entity selection de origen a la entity selection devuelta:
+- Las solicitudes posteriores enviadas al servidor sobre la misma selección de entidades reutilizan automáticamente el contexto de optimización y sólo obtienen del servidor los atributos necesarios, lo que acelera el procesamiento. Por ejemplo, en un [list box de tipo entity selection](#entity-selection-based-list-box), la fase de aprendizaje tiene lugar durante la visualización de la primera línea. la visualización de las siguientes líneas está optimizada. Las siguientes funciones asocian automáticamente el contexto de optimización de la entity selection de origen a la entity selection devuelta:
   - [`entitySelection.and()`](../API/EntitySelectionClass.md#and)
   - [`entitySelection.minus()`](../API/EntitySelectionClass.md#minus)
   - [`entitySelection.or()`](../API/EntitySelectionClass.md#or)
@@ -43,7 +43,7 @@ El contexto de optimización se basa en las siguientes implementaciones:
 
 :::note Nota de compatibilidad
 
-Contexts handled in connections established through [`Open datastore`](../API/DataStoreClass.md#open-datastore) can only be used between similar main versions of 4D. For example, a 4D 20.x remote application can only use contexts of a 4D Server 20.x datastore.
+Los contextos manejados en conexiones establecidas a través de [`Open datastore`](../API/DataStoreClass.md#open-datastore) sólo pueden ser utilizados entre las versiones principales similares de 4D. Por ejemplo, una aplicación remota 4D 20.x sólo puede utilizar contextos de un almacen de datos 4D Server 20.x.
 
 :::
 
@@ -64,7 +64,7 @@ Thanks to the optimization, this request will only get data from used attributes
 
 Puede aumentar los beneficios de la optimización utilizando la propiedad **context**. Esta propiedad hace referencia a un contexto de optimización "aprendido" para una selección de entidades. Se puede pasar como parámetro a las funciones ORDA que devuelven nuevas selecciones de entidades, de forma que las selecciones de entidades soliciten directamente al servidor los atributos utilizados y sin pasar por la fase de aprendizaje.
 
-> You can also create contexts using the [`.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) function.
+> También puede crear contextos utilizando la función [`.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo).
 
 All ORDA functions that handle entity selections support the <strong x-id="1">context</strong> property (for example <a href="../API/DataClassClass.md#query"><code>dataClass.query()</code></a> or <a href="../API/DataClassClass.md#all"><code>dataClass.all()</code></a>). All ORDA functions that handle entity selections support the **context** property (for example [`dataClass.query()`](../API/DataClassClass.md#query) or [`dataClass.all()`](../API/DataClassClass.md#all)). Tenga en cuenta, sin embargo, que un contexto se actualiza automáticamente cuando se utilizan nuevos atributos en otras partes del código. Reutilizar el mismo contexto en diferentes códigos podría sobrecargar el contexto y, por tanto, reducir su eficacia.
 

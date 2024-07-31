@@ -3,7 +3,7 @@ id: MailAttachmentClass
 title: MailAttachment
 ---
 
-Attachment objects allow referencing files within a [`Email`](EmailObjectClass.md) object. Attachment objects are created using the [`MAIL New attachment`](#mail-new-attachment) command.
+Los objetos Attachment permiten referenciar archivos en un objeto [`Email`](EmailObjectClass.md). Los objetos Attachment son creados utilizando el comando [`MAIL New attachment`](#mail-new-attachment).
 
 ### Objetos adjuntos
 
@@ -50,25 +50,25 @@ Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo l
 
 #### Descripción
 
-The `MAIL New attachment` command <!-- REF #_command_.MAIL New attachment.Summary -->allows you to create an attachment object that you can add to an [Email object](EmailObjectClass.md#email-object)<!-- END REF -->.
+El comando `MAIL New attachment` <!-- REF #_command_.MAIL New attachment.Summary -->le permite crear un objeto adjunto que puede agregar a un [objeto de Email](EmailObjectClass.md#email-object)<!-- END REF -->.
 
 Para definir el adjunto, puede utilizar:
 
-- a *file*, pass a `4D.File` object containing the attachment file.
-- a *zipfile*, pass a `4D.ZipFile` object containing the attachment file.
-- a *blob*, pass a `4D.Blob` object containing the attachment itself.
-- a *path*, pass a **text** value containing the path of the attachment file, expressed with the system syntax. Puede pasar un nombre de ruta completo o un simple nombre de archivo (en cuyo caso 4D buscará el archivo en el mismo directorio que el archivo del proyecto).
+- un *file*, pase un objeto `4D.File` que contenga el archivo adjunto.
+- un *zipfile*, pase un objeto `4D.ZipFile` que contenga el archivo adjunto.
+- un *blob*, pase un objeto `4D.Blob` que contenga el propio adjunto.
+- un *path*, pase un valor *text* que contenga la ruta del archivo adjunto, expresada con la sintaxis del sistema. Puede pasar un nombre de ruta completo o un simple nombre de archivo (en cuyo caso 4D buscará el archivo en el mismo directorio que el archivo del proyecto).
 
-The optional *name* parameter lets you pass the name and extension to be used by the mail client to designate the attachment. Si se omite *name* y:
+El parámetro opcional *name* permite pasar el nombre y la extensión que utilizará el cliente de correo para designar el archivo adjunto. Si se omite *name* y:
 
 - pasó una ruta de archivo, se utiliza el nombre y la extensión del archivo,
 - pasó un BLOB, se genera automáticamente un nombre aleatorio sin extensión.
 
-The optional *cid* parameter lets you pass an internal ID for the attachment. This ID is the value of the `Content-Id` header, it will be used in HTML messages only. The cid associates the attachment with a reference defined in the message body using an HTML tag such as `\<img src="cid:ID">`. Esto significa que el contenido del archivo adjunto (por ejemplo, una imagen) debe mostrarse dentro del mensaje en el cliente de correo. El resultado final puede variar en función del cliente de correo. You can pass an empty string in *cid* if you do not want to use this parameter.
+El parámetro opcional *cid* permite pasar un ID interno para el archivo adjunto. Este ID es el valor del encabezado `Content-Id`, se utilizará sólo en mensajes HTML. El cid asocia el archivo adjunto con una referencia definida en el cuerpo del mensaje mediante una etiqueta HTML como `\<img src="cid:ID">`. Esto significa que el contenido del archivo adjunto (por ejemplo, una imagen) debe mostrarse dentro del mensaje en el cliente de correo. El resultado final puede variar en función del cliente de correo. Puede pasar una cadena vacía en *cid* si no quiere utilizar este parámetro.
 
-You can use the optional *type* parameter to explicitly set the `content-type` of the attachment file. Por ejemplo, puede pasar una cadena que defina un tipo MIME ("video/mpeg"). Este valor de content-type se definirá para el archivo adjunto, independientemente de su extensión. For more information about MIME types, please refer to the [MIME type page on Wikipedia](https://en.wikipedia.org/wiki/MIME).
+Puede utilizar el parámetro opcional *type* para definir explícitamente el `content-type` del archivo adjunto. Por ejemplo, puede pasar una cadena que defina un tipo MIME ("video/mpeg"). Este valor de content-type se definirá para el archivo adjunto, independientemente de su extensión. Para más información sobre los tipos MIME, por favor consulte la [página tipo MIME en Wikipedia](https://en.wikipedia.org/wiki/MIME).
 
-By default, if the *type* parameter is omitted or contains an empty string, the `content-type` of the attachment file is based on its extension. Se aplican las siguientes reglas para los principales tipos MIME:
+Por defecto, si el parámetro *type* se omite o contiene una cadena vacía, el `content-type` del archivo adjunto se basa en su extensión. Se aplican las siguientes reglas para los principales tipos MIME:
 
 | Extensión | Content Type                                  |
 | --------- | --------------------------------------------- |
@@ -89,7 +89,7 @@ By default, if the *type* parameter is omitted or contains an empty string, the 
 | mp3       | audio/mpeg                                    |
 | *otro*    | application/octet-stream                      |
 
-The optional *disposition* parameter lets you pass the `content-disposition` header of the attachment. Puede pasar una de las siguientes constantes del tema constante "Mail":
+El parámetro opcional *disposition* permite pasar el encabezado `content-disposition` del archivo adjunto. Puede pasar una de las siguientes constantes del tema constante "Mail":
 
 | Constante                   | Valor        | Comentario                                                                                                                                                                                                                                                       |
 | --------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -98,8 +98,8 @@ The optional *disposition* parameter lets you pass the `content-disposition` hea
 
 Por defecto, si se omite el parámetro *disposition*:
 
-- if the *cid* parameter is used, the `Content-disposition` header is set to "inline",
-- if the *cid* parameter is not passed or empty, the `Content-disposition` header is set to "attachment".
+- si se utiliza el parámetro *cid*, el encabezado `Content-disposition` se define en "inline",
+- si el parámetro *cid* no se pasa o está vacío, el encabezado `Content-disposition` se establece en "attachment".
 
 #### Ejemplo 1
 
@@ -107,7 +107,7 @@ Desea enviar un correo electrónico con un archivo seleccionado por el usuario c
 
 ```4d
 $doc:=Select document("";"*";"Please select a file to attach";0)
-If (OK=1) //If a document was selected
+If (OK=1) //Si se ha seleccionado un documento
 
 C_OBJECT($email;$server;$transporter)
 
@@ -134,7 +134,7 @@ $email.htmlBody:="<html>"+\
 "</head>"+\
 "</html>"
 
-$transporter.send($email) //send mail
+$transporter.send($email) //enviar mail
 
 End if
 ```
@@ -195,7 +195,7 @@ $transporter.send($email)
 
 #### Descripción
 
-The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary -->creates and returns a new object of the `4D.MailAttachment` type<!-- END REF -->. It is identical to the [`MAIL New attachment`](#mail-new-attachment) command (shortcut).
+La función `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->crea y devuelve un nuevo objeto de tipo `4D.MailAttachment`<!-- END REF -->. Es idéntico al comando [`MAIL New attachment`](#mail-new-attachment) (acceso directo).
 
 ## .cid<!-- REF #MailAttachmentClass.cid.Syntax --><strong x-id="1">.cid</strong> : Text<!-- END REF -->#### Descripción
 
@@ -203,7 +203,7 @@ The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary
 
 #### Descripción
 
-The `.cid` property contains <!-- REF #MailAttachmentClass.cid.Summary --> the ID of the attachment<!-- END REF -->. Esta propiedad se utiliza sólo en los mensajes HTML. Si falta esta propiedad, el archivo se maneja como un simple adjunto (enlace).
+La propiedad `.cid` contiene <!-- REF #MailAttachmentClass.cid.Summary -->el ID del archivo adjunto<!-- END REF -->. Esta propiedad se utiliza sólo en los mensajes HTML. Si falta esta propiedad, el archivo se maneja como un simple adjunto (enlace).
 
 ## .disposition<!-- REF #MailAttachmentClass.disposition.Syntax --><strong x-id="1">.disposition</strong> : Text<!-- END REF -->#### Descripción
 
@@ -211,7 +211,7 @@ The `.cid` property contains <!-- REF #MailAttachmentClass.cid.Summary --> the I
 
 #### Descripción
 
-The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.Summary -->the value of the `Content-Disposition` header<!-- END REF -->. Hay dos valores disponibles:
+La propiedad `.disposition` contiene <!-- REF #MailAttachmentClass.disposition.Summary -->el valor del encabezado `Content-Disposition`<!-- END REF -->. Hay dos valores disponibles:
 
 - "inline": el archivo adjunto se muestra dentro del contenido del mensaje, en la ubicación "cid". La renderización depende del cliente de correo.
 - "attachment": el archivo adjunto se presenta como un enlace en el mensaje.
@@ -230,7 +230,7 @@ The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.S
 
 #### Descripción
 
-The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a `4D.Blob` object<!-- END REF -->. You can use this method with attachment objects received by the [`MAIL Convert from MIME`](EmailObjectClass.md#mail-convert-from-mime) command.
+La función `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->devuelve el contenido del objeto adjunto en un objeto `4D.Blob`<!-- END REF -->. Puede utilizar este método con objetos adjuntos recibidos por el comando [`MAIL Convert from MIME`](EmailObjectClass.md#mail-convert-from-mime).
 
 ## .name
 
@@ -238,7 +238,7 @@ The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary 
 
 #### Descripción
 
-The `.name` property contains <!-- REF #MailAttachmentClass.name.Summary -->the name and extension of the attachment<!-- END REF -->.  By default, it is the name of the file, unless another name was specified in the [`MAIL New attachment`](#mail-new-attachment) command.
+La propiedad `.name` contiene <!-- REF #MailAttachmentClass.name.Summary -->el nombre y la extensión del adjuntot<!-- END REF -->.  Por defecto, es el nombre del archivo, a menos que se haya indicado otro nombre en el comando [`MAIL New attachment`](#mail-new-attachment).
 
 ## .path
 
@@ -246,7 +246,7 @@ The `.name` property contains <!-- REF #MailAttachmentClass.name.Summary -->the 
 
 #### Descripción
 
-The `.path` property contains <!-- REF #MailAttachmentClass.path.Summary -->the POSIX path of the attachment file, if it exists<!-- END REF -->.
+La propiedad `.path` contiene <!-- REF #MailAttachmentClass.path.Summary -->la ruta POSIX del archivo adjunto, si existe<!-- END REF -->.
 
 ## .platformPath
 
@@ -262,7 +262,7 @@ The `.path` property contains <!-- REF #MailAttachmentClass.path.Summary -->the 
 
 #### Descripción
 
-The `.platformPath` property returns <!-- REF #MailAttachmentClass.platformPath.Summary -->the path of the attachment file expressed with the current platform syntax<!-- END REF -->.
+La propiedad `.platformPath` contiene <!-- REF #MailAttachmentClass.platformPath.Summary -->la ruta del archivo adjunto expresada con la sintaxis de la plataforma actual<!-- END REF -->.
 
 ## .size
 
@@ -270,7 +270,7 @@ The `.platformPath` property returns <!-- REF #MailAttachmentClass.platformPath.
 
 #### Descripción
 
-The `.size` property contains <!-- REF #MailAttachmentClass.size.Summary -->the value of the `size` header of the attachment file<!-- END REF -->. The `.size` property is returned when the MIME message defines a size header in the attachment part.
+La propiedad `.size` contiene <!-- REF #MailAttachmentClass.size.Summary -->el valor del encabezado `size` del archivo adjunto<!-- END REF -->. La propiedad `.size` se devuelve cuando el mensaje MIME define un encabezado de tamaño en la parte adjunta.
 
 ## .type
 
@@ -278,4 +278,4 @@ The `.size` property contains <!-- REF #MailAttachmentClass.size.Summary -->the 
 
 #### Descripción
 
-The `.type` property contains <!-- REF #MailAttachmentClass.type.Summary -->the `content-type` of the attachment file<!-- END REF -->. If this type is not explicitly passed to the [`MAIL New attachment`](#mail-new-attachment) command, the `content-type` is based on its file extension.
+La propiedad `.type` contiene <!-- REF #MailAttachmentClass.type.Summary -->el `content-type` del archivo adjunto<!-- END REF -->. Si este tipo no se pasa explícitamente al comando [`MAIL New attachment`](#mail-new-attachment), el `content-type` se basa en su extensión de archivo.

@@ -53,9 +53,9 @@ Este menú permite seleccionar la paleta de colores que se utilizará en la apli
 
 Los siguientes esquemas están disponibles:
 
-- **Light**: the application will use the Default Light Theme
+- **Claro**: la aplicación usará el Tema Claro Predeterminado
   ![](../assets/en/settings/light-appearance.png)
-- **Dark**: the application will use the Default Dark Theme
+- **Oscuro**: la aplicación usará el Tema Oscuro Predeterminado
   ![](../assets/en/settings/dark-appearance.png)
 - **Heredado** (por defecto): la aplicación heredará el nivel de prioridad superior (es decir, las preferencias del usuario del sistema operativo)
 

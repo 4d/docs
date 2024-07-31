@@ -17,7 +17,7 @@ title: VP REMOVE SPAN
 
 O comando `VP REMOVE SPAN` <!-- REF #_method_.VP REMOVE SPAN.Summary -->remove o span das células em _rangeObj_<!-- END REF -->.
 
-In _rangeObj_, pass a range object of the cell span. As células geradas no alcance são divididas em células individuais.
+Em _rangeObj_, passe um objeto de alcance do intervalo da célula. As células geradas no alcance são divididas em células individuais.
 
 #### Exemplo
 
@@ -26,12 +26,12 @@ Para remover todos os intervalos de células deste documento:
 ![](../../assets/en/ViewPro/cmd_vpRemoveSpan1.PNG)
 
 ```4d
- //find all cell spans
- $span:=VP Get spans(VP All("ViewProArea"))
+ //encontre todas as células fusionadas
+ $span:=VP Obter spans(VP All("ViewProArea"))
 
- 
-  //remove the cell spans
- VP REMOVE SPAN($span)
+
+  /remove a célula
+ VP SPAN($span)
 ```
 
 Resultados:

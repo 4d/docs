@@ -19,7 +19,7 @@ title: VP IMPORT FROM BLOB
 
 The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the _vpBlob_ in the 4D View Pro area _vpAreaName_ and replaces its contents<!-- END REF -->. _vpBlob_ must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](vp-export-to-blob.md) command or via the 4D View Pro interface.
 
-In _paramObj_, you can pass several properties:
+Em _paramObj_, você pode passar várias propriedades:
 
 | Propriedade         | Tipo                         | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | ------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -36,9 +36,9 @@ Os seguintes parâmetros podem ser usados no método de retorno de chamada:
 
 | Parâmetro |                               | Tipo                     | Descrição                                                                    |
 | :-------- | :---------------------------- | :----------------------- | :--------------------------------------------------------------------------- |
-| param1    |                               | text                     | The name of the 4D View Pro area object                                      |
+| param1    |                               | text                     | O nome do objeto de área 4D View Pro                                         |
 | param2    |                               | 4D. Blob | O blob importado                                                             |
-| param3    |                               | object                   | A reference to the command's _paramObj_ parameter                            |
+| param3    |                               | object                   | Uma referência ao parâmetro _paramObj_ do comando                            |
 | param4    |                               | object                   | Um objeto devolvido pelo método com uma mensagem de estado                   |
 |           | .success      | boolean                  | True se a importação for bem-sucedida, False caso contrário. |
 |           | .errorCode    | integer                  | Código de erro.                                              |

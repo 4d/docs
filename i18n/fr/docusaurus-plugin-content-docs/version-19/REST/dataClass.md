@@ -9,18 +9,18 @@ Les noms de dataclass peuvent être utilisés directement dans les requêtes RES
 
 ## Syntaxe
 
-| Syntaxe                                                                            | Exemple                                  | Description                                                                            |
-| ---------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------- |
-| [**{dataClass}**](#dataClass)                                                      | `/Employee`                              | Renvoie toutes les données (par défaut les 100 premières entités) de la dataclass      |
-| [**{dataClass}[{key}]**](#dataclasskey)                                            | `/Employee[22]`                          | Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass |
-| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)                     | `/Employee:firstName(John)`              | Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie     |
-| [**{dataClass}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)       | `/City/getCity`                          | Exécute une fonction de classe d'une dataclass                                         |
-| [**{dataClass}({EntitySelectionClassFunction}**](ClassFunctions.md#function-calls) | `/City/getPopulation/?$filter="ID<3"` | Exécute une fonction de classe d'une sélection d'entité                                |
-| [**{dataClass}[{key}]/{EntityClassFunction}**](ClassFunctions.md#function-calls)   | `City[2]/getPopulation`                  | Exécute une fonction de classe d'une entité                                            |
+| Syntaxe                                                                                | Exemple                                  | Description                                                                            |
+| -------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------- |
+| [**\{dataClass\}**](#dataClass)                                                      | `/Employee`                              | Renvoie toutes les données (par défaut les 100 premières entités) de la dataclass      |
+| [**\{dataClass\}[{key}]**](#dataclasskey)                                            | `/Employee[22]`                          | Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass |
+| [**\{dataClass\}:\{attribute\}(value)**](#dataclassattributevalue)                 | `/Employee:firstName(John)`              | Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie     |
+| [**\{dataClass\}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)       | `/City/getCity`                          | Exécute une fonction de classe d'une dataclass                                         |
+| [**\{dataClass\}({EntitySelectionClassFunction}**](ClassFunctions.md#function-calls) | `/City/getPopulation/?$filter="ID<3"` | Exécute une fonction de classe d'une sélection d'entité                                |
+| [**\{dataClass\}[{key}]/{EntityClassFunction}**](ClassFunctions.md#function-calls)   | `City[2]/getPopulation`                  | Exécute une fonction de classe d'une entité                                            |
 
 > Les appels de fonction sont détailles dans la section [Appeler des fonctions de classe ORDA](ClassFunctions.md).
 
-## {dataClass}
+## \{dataClass\}
 
 Renvoie toutes les données (par défaut, les 100 premières entités) pour une dataclass spécifique (par exemple, `Société`)
 
@@ -135,7 +135,7 @@ Retourne toutes les données d'une dataclass spécifique.
 }
 ```
 
-## {dataClass}\[{key}]
+## \{dataClass\}\[{key}]
 
 Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company[22] or Company[IT0911AB2200]`
 
@@ -143,7 +143,7 @@ Returns the data for the specific entity defined by the dataclass's primary key,
 
 En passant la dataclass et une clé, vous pouvez récupérer toutes les informations publiques de cette entité. En passant la dataclass et une clé, vous pouvez récupérer toutes les informations publiques de cette entité. Pour plus d'informations sur la définition d'une clé primaire, reportez-vous à la section **Modification de la clé primaire** dans **l'éditeur de modèle de données**.
 
-For more information about the data returned, refer to [{DataClass}](#dataclass).
+For more information about the data returned, refer to [\{dataClass\}](#dataclass).
 
 If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Par exemple :
 
@@ -182,7 +182,7 @@ La requête suivante retourne toutes les données publiques de la dataclass Comp
 }
 ```
 
-## {dataClass}:{attribute}(value)
+## \{dataClass\}:\{attribute\}(value)
 
 Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie
 

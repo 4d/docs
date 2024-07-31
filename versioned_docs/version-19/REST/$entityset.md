@@ -9,10 +9,10 @@ After [creating an entity set]($method.md#methodentityset) by using `$method=ent
 
 |Syntax|Example|Description|
 |---|---|---|
-|[**$entityset/{entitySetID}**](#entitysetentitySetID)|`/People/$entityset/0ANUMBER`|Retrieves an existing entity set|
-|[**$entityset/{entitySetID}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection)|`/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER`|Creates a new entity set from comparing existing entity sets|
+|[**$entityset/\{entitySetID\}**](#entitysetentitySetID)|`/People/$entityset/0ANUMBER`|Retrieves an existing entity set|
+|[**$entityset/\{entitySetID\}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection)|`/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER`|Creates a new entity set from comparing existing entity sets|
 
-## $entityset/{entitySetID}
+## $entityset/\{entitySetID\}
 
 Retrieves an existing entity set (*e.g.*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
 
@@ -30,7 +30,7 @@ After you create an entity set, the entity set ID is returned along with the dat
 
  `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7`
 
-## $entityset/{entitySetID}?$operator...&$otherCollection
+## $entityset/\{entitySetID\}?$operator...&$otherCollection
 
 Create another entity set based on previously created entity sets
 
@@ -41,7 +41,7 @@ Create another entity set based on previously created entity sets
 
 ### Description
 
-After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/{entitySetID}?$operator... &$otherCollection` syntax, the `$operator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. The two entity sets must be in the same dataclass.
+After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/\{entitySetID\}?$operator... &$otherCollection` syntax, the `$operator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. The two entity sets must be in the same dataclass.
 
 You can then create another entity set containing the results from this call by using the `$method=entityset` at the end of the REST request.
 

@@ -12,7 +12,7 @@ Existem duas maneiras de criar uma nova entidade numa dataclass:
 - Since entities are references to database records, you can create entities by creating records using the 4D language and then reference them with ORDA functions such as [`entity.next()`](../API/EntityClass.md#next) or [`entitySelection.first()`](../API/EntitySelectionClass.md#first).
 - You can also create an entity using the [`dataClass.new()`](../API/DataClassClass.md#new) function.
 
-Tenha em atenção que a entidade só é criada na memória. If you want to add it to the datastore, you must call the [`entity.save()`](../API/EntityClass.md#save) function.
+Tenha em atenção que a entidade só é criada na memória. Se quiser adicioná-lo ao datastore, você deve chamar a função [`entity.save()`](../API/EntityClass.md#save).
 
 Os atributos da entidade estão diretamente disponíveis como propriedades do objeto entidade. Para más información, consulte [Uso de los atributos de entidad](#using-entity-attributes).
 
@@ -240,7 +240,7 @@ Puede crear un objeto de tipo [entity selection](dsMapping.md#entity-selection) 
 - Lance una búsqueda en las entidades [en una dataclass](API/DataClassClass.md#query) o en una [selección de entidades existente](API/EntitySelectionClass.md#query);
 - Using the [`.all()`](API/DataClassClass.md#all) dataclass function to select all the entities in a dataclass;
 - Using the [`Create entity selection`](../API/EntitySelectionClass.md#create-entity-selection) command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
-- Using the [`.copy()`](API/EntitySelectionClass.md#copy) function to duplicate an existing entity selection;
+- Usando a [`.copy()`](API/EntitySelectionClass.md#copy) função para duplicar uma seleção de entidade existente;
 - Using one of the various functions from the [Entity selection class](API/EntitySelectionClass.md) that returns a new entity selection, such as [`.or()`](API/EntitySelectionClass.md#or);
 - Utilizando um atributo de relação do tipo "entidades relacionadas" (ver abaixo).
 
@@ -332,7 +332,7 @@ $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy()
 $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 ```
 
-:::note Entity selections returned from the server
+:::note Entity selections devolvidas pelo servidor
 
 In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. To make such an entity selection alterable on the client, you need to execute [`copy()`](API/EntitySelectionClass.md#copy) on the client side. Exemplo:
 
@@ -431,7 +431,7 @@ $myInvoices:=$myParts.invoiceItems.invoice
 
 La última línea devolverá en _$myInvoices_ una selección de entidades de todas las facturas que tengan al menos una partida de factura relacionada con una parte en la selección de entidades myParts. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade.
 
-## Restricting entity selections
+## Restrição de seleções de entidades
 
 In ORDA, you can create filters to restrict access to entities of any of your dataclasses. Once implemented, a filter is automatically applied whenever the entities of the dataclass are accessed either by **ORDA class functions** such as [`all()`](../API/DataClassClass.md#all) or [`query()`](../API/EntitySelectionClass.md#query), or by the [**REST API**](../category/api-dataclass) (which involves the [Data Explorer](../Admin/dataExplorer.md) and [remote datastores](remoteDatastores.md)).
 
@@ -445,7 +445,7 @@ Los filtros se aplican a las **entidades**. Si desea restringir el acceso a una 
 
 ### Como definir um filtro restrito
 
-You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](dsMapping.md#dataclass-class) of the dataclass. The filter is then automatically enabled.
+You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](dsMapping.md#dataclass-class) of the dataclass. O filtro é então ativado automaticamente.
 
 ### `Function event restrict`
 
@@ -456,7 +456,7 @@ Function event restrict() -> $result : cs.*DataClassName*Selection
 // código
 ```
 
-This function is called whenever an entity selection or an entity of the dataclass is requested. The filter is run once, when the entity selection is created.
+Esta função é chamada sempre que uma seleção de entidade ou uma entidade da classe de dados é solicitada. The filter is run once, when the entity selection is created.
 
 The filter must return an entity selection of the dataclass. Puede ser una selección de entidades creada a partir de una consulta, almacenada en el [`Storage`], etc.
 
@@ -466,15 +466,15 @@ Por razones de rendimiento, recomendamos utilizar **atributos indexados** en la 
 
 :::
 
-The function must return a valid entity selection of the dataclass. No filter is applied (all entities corresponding of the initial request are returned) if:
+A função deve retornar uma seleção de entidade válida da classe de dados. No filter is applied (all entities corresponding of the initial request are returned) if:
 
 - la función devuelve **null**,
 - la función devuelve **indefinido**,
-- the function does not return a valid entity selection.
+- a função não retorna uma seleção de entidade válida.
 
 #### Exemplo
 
-When accessed from a web or REST request, we want the Customers dataclass to only expose customers belonging to the identified sales person. Durante la fase de autenticación, el vendedor se almacena en el objeto `Session`. Other types of requests are also handled.
+When accessed from a web or REST request, we want the Customers dataclass to only expose customers belonging to the identified sales person. Durante la fase de autenticación, el vendedor se almacena en el objeto `Session`. Outros tipos de solicitações também são tratados.
 
 ```4d
 Class extends DataClass
@@ -505,7 +505,7 @@ Function event restrict() : cs.CustomersSelection
     End if
 ```
 
-### Filter activation details
+### Detalhes de ativação do filtro
 
 Filters apply to all ORDA or REST requests executed in your 4D projects (standalone and client/server architectures). Un filtro se activa en cuanto se abre el proyecto, es decir, puede activarse en el método de base de datos `On Startup`.
 
@@ -518,7 +518,7 @@ Los filtros no se aplican a las selecciones heredadas de registros manejadas a t
 | Funções                                                                                                  | Comentário                                                                                                                                                                                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [dataclass.get()](../API/DataClassClass.md#get)                       | Si la entidad no coincide con el filtro, se devuelve `null`                                                                                                                                                                                                                                                           |
-| [entity.reload()](../API/EntityClass.md#reload)                       | Only in client/server and remote datastores                                                                                                                                                                                                                                                                           |
+| [entity.reload()](../API/EntityClass.md#reload)                       | Somente em datastores cliente/servidor e remotos                                                                                                                                                                                                                                                                      |
 | [dataclass.all()](../API/DataClassClass.md#all)                       |                                                                                                                                                                                                                                                                                                                       |
 | [dataclass.fromCollection()](../API/DataClassClass.md#fromcollection) | <li>In case of update, only entities matching the filter can be updated. If the collection refers to entities not matching the filter, they are created as new entities (if no duplicate PK error)</li><li>In case of creation, entities not matching the filter are created but will not be read after creation</li> |
 | [entitySelection.and()](../API/EntitySelectionClass.md#and)           | Only entities matching the filter are returned                                                                                                                                                                                                                                                                        |
@@ -554,13 +554,13 @@ This automatic mechanism is based on the concept of "optimistic locking" which i
 - Todas las entidades pueden cargarse siempre en lectura-escritura; no existe el "bloqueo" _a priori_ de las entidades.
 - Cada entidade tem um carimbo de bloqueio interno incrementado sempre que é guardado.
 - Cuando un usuario o proceso intenta guardar una entidad utilizando el método `entity.save( )`, 4D compara el valor del marcador de la entidad a guardar con el de la entidad encontrada en los datos (en el caso de modificación):
-  - When the values match, the entity is saved and the internal stamp value is incremented.
+  - Quando os valores correspondem, a entidade é salva e o valor do marcador interno é aumentado.
 
   - When the values do not match, it means that another user has modified this entity in the meantime. A gravação não é efetuada e é devolvido um erro.
 
 O diagrama seguinte ilustra o bloqueio otimista:
 
-1. Two processes load the same entity.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
+1. Dois processos carregam a mesma entidade.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
 2. O primeiro processo modifica a entidade e valida a alteração. Se llama al método `entity.save( )`. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 
@@ -569,12 +569,12 @@ O diagrama seguinte ilustra o bloqueio otimista:
 Isto também pode ser ilustrado pelo seguinte código:
 
 ```4d
- $person1:=ds.Person.get(1) //Reference to entity
- $person2:=ds.Person.get(1) //Other reference to same entity
+ $person1:=ds.Person.get(1) //Referência à entidade
+ $person2:=ds.Person.get(1) //Outra referência à mesma entidade
  $person1.name:="Bill"
- $result:=$person1.save() //$result.success=true, change saved
+ $result:=$person1.save() //$result.success=true, alteração salva
  $person2.name:="William"
- $result:=$person2.save() //$result.success=false, change not saved
+ $result:=$person2.save() //$result.success=false, alteração não salva
 ```
 
 Neste exemplo, atribuímos a $person1 uma referência à entidade pessoa com uma chave de 1. De seguida, atribuímos outra referência da mesma entidade à variável $person2. Utilizando $person1, alteramos o primeiro nome da pessoa e guardamos a entidade. When we attempt to do the same thing with $person2, 4D checks to make sure the entity on disk is the same as when the reference in $person1 was first assigned. Since it isn't the same, it returns false in the success property and doesn’t save the second modification.
@@ -585,7 +585,7 @@ Cuando se produce esta situación, puede, por ejemplo, volver a cargar la entida
 
 ### Bloqueio pessimista
 
-É possível bloquear e desbloquear entidades a pedido quando se acede aos dados. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
+É possível bloquear e desbloquear entidades a pedido quando se acede aos dados. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. A entidade só pode ser carregada no modo somente leitura nesses processos; seus valores não podem ser editados ou salvos.
 
 Esta funcionalidad se basa en dos funciones de la clase `Entity`:
 

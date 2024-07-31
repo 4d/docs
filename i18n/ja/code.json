@@ -152,7 +152,7 @@
   },
   "theme.ErrorPageContent.tryAgain": {
     "message": "再試行",
-    "description": "The label of the button to try again when the page crashed"
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
   },
   "theme.NotFound.title": {
     "message": "ページが見つかりません",
@@ -481,7 +481,7 @@
     "description": "The explanatory text of the action for the enter key"
   },
   "theme.SearchModal.footer.selectKeyAriaLabel": {
-    "message": "Enter key",
+    "message": "Enterキー",
     "description": "The ARIA label for the Enter key button that makes the selection"
   },
   "theme.SearchModal.footer.navigateText": {
@@ -489,11 +489,11 @@
     "description": "The explanatory text of the action for the Arrow up and Arrow down key"
   },
   "theme.SearchModal.footer.navigateUpKeyAriaLabel": {
-    "message": "Arrow up",
+    "message": "上矢印キー",
     "description": "The ARIA label for the Arrow up key button that makes the navigation"
   },
   "theme.SearchModal.footer.navigateDownKeyAriaLabel": {
-    "message": "Arrow down",
+    "message": "下矢印キー",
     "description": "The ARIA label for the Arrow down key button that makes the navigation"
   },
   "theme.SearchModal.footer.closeText": {
@@ -501,7 +501,7 @@
     "description": "The explanatory text of the action for Escape key"
   },
   "theme.SearchModal.footer.closeKeyAriaLabel": {
-    "message": "Escape key",
+    "message": "Escapeキー",
     "description": "The ARIA label for the Escape key button that close the modal"
   },
   "theme.SearchModal.footer.searchByText": {
@@ -545,19 +545,19 @@
     "message": "リリースノート"
   },
   "homepage.sections.core-development.langage-ref-url": {
-    "message": "https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Language-Reference.100-6817247.ja.html"
+    "message": "https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Language-Reference.100-6957482.ja.html"
   },
   "homepage.sections.textensions.4D-Write-Pro-Reference-url": {
-    "message": "https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Write-Pro-Reference.100-6851780.ja.html"
+    "message": "https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Write-Pro-Reference.100-6993921.ja.html"
   },
   "homepage.sections.textensions.4D-Progress-url": {
-    "message": "https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Progress.100-6937584.en.html"
+    "message": "https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Progress.100-7183762.ja.html"
   },
   "homepage.sections.textensions.4D-SVG-Component-url": {
-    "message": "https://doc.4d.com/4Dv20R5/4D/20-R5/4D-SVG-Component.100-6938126.ja.html"
+    "message": "https://doc.4d.com/4Dv20R6/4D/20-R6/4D-SVG-Component.100-7184636.ja.html"
   },
   "homepage.sections.textensions.4D-Widgets-url": {
-    "message": "https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Widgets.100-6938775.en.html"
+    "message": "https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Widgets.100-7185285.ja.html"
   },
   "homepage.sections.mobile-applications.4D-for-iOS-Archive-url": {
     "message": "https://developer.4d.com/4d-for-ios/docs/ja/overview.html"
@@ -598,5 +598,29 @@
   },
   "Handling Code": {
     "message": "コードの扱い方"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "1 件|{count} 件",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
+  },
+  "theme.admonition.warning": {
+    "message": "警告",
+    "description": "The default label used for the Warning admonition (:::warning)"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "サイドバーのカテゴリ '{label} ' を開く",
+    "description": "The ARIA label to expand the sidebar category"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "サイドバーのカテゴリ '{label} ' を閉じる",
+    "description": "The ARIA label to collapse the sidebar category"
+  },
+  "theme.unlistedContent.title": {
+    "message": "リストされていないページ",
+    "description": "The unlisted content banner title"
+  },
+  "theme.unlistedContent.message": {
+    "message": "このページはリストされていません。検索エンジンはインデックスを作成せず、直リンクを知っているユーザーのみがアクセスできます。",
+    "description": "The unlisted content banner message"
   }
 }

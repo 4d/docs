@@ -7,12 +7,12 @@ Après avoir [créé un entity set]($method.md#methodentityset) à l'aide de `$m
 
 ## Syntaxe
 
-| Syntaxe                                                                                                                                                                                  | Exemple                                                                      | Description                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| [**$entityset/{entitySetID}**](#entitysetentitySetID)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | Récupère un entity set existant                                              |
-| [**$entityset/{entitySetID}?$logicOperator...&$otherCollection**](#entitysetentitysetidlogicoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND&$otherCollection=0ANUMBER` | Crée un nouvel entity set à partir de la comparaison d'entity sets existants |
+| Syntaxe                                                                                                                                                                                      | Exemple                                                                      | Description                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [**$entityset/\{entitySetID\}**](#entitysetentitySetID)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | Récupère un entity set existant                                              |
+| [**$entityset/\{entitySetID\}?$logicOperator...&$otherCollection**](#entitysetentitysetidlogicoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND&$otherCollection=0ANUMBER` | Crée un nouvel entity set à partir de la comparaison d'entity sets existants |
 
-## $entityset/{entitySetID}
+## $entityset/\{entitySetID\}
 
 Récupère un entity set existant (_e.g._, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
 
@@ -30,7 +30,7 @@ Après que vous ayez créé un entity set, l'ID de l'entity set est retourné av
 
 `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7`
 
-## $entityset/{entitySetID}?$logicOperator...&$otherCollection
+## $entityset/\{entitySetID\}?$logicOperator...&$otherCollection
 
 Créez un autre ensemble d'entités basé sur des ensembles d'entités préalablement créés
 
@@ -41,7 +41,7 @@ Créez un autre ensemble d'entités basé sur des ensembles d'entités préalabl
 
 ### Description
 
-After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/{entitySetID}?$logicOperator... &$otherCollection` syntax, the `$logicOperator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. Les deux ensembles d'entités doivent être dans la même dataclass.
+After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/\{entitySetID\}?$logicOperator... &$otherCollection` syntax, the `$logicOperator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. Les deux ensembles d'entités doivent être dans la même dataclass.
 
 Vous pouvez ensuite créer un autre entity set contenant les résultats de cet appel en utilisant le `$method=entityset` à la fin de la requête REST.
 

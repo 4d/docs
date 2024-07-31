@@ -57,14 +57,14 @@ Os objetos atributos retornados contêm as seguintes propriedades:
 | fieldNumber      | integer    | Número interno do campo 4D do atributo. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | fieldType        | Integer    | Tipo de campo de banco de dados 4D do atributo. Depends on the attribute `kind`. Possible values: <li>if `.kind` = "storage": corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv20/help/command/en/page1509.html)</li><li>if `.kind` = "relatedEntity": 38 (`is object`)</li><li>if `.kind` = "relatedEntities": 42 (`is collection`)</li><li>if `.kind` = "calculated" or "alias" = same as above, depending on the resulting value (field type, relatedEntity or relatedEntities)</li>                                                                                                                                                  |
 | indexed          | Parâmetros | True se houver um índice B-tree ou Cluster B-tree no atributo. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| inverseName      | Text       | Nome do atributo que está do outro lado da relação. Returned only when `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| inverseName      | Text       | Nome do atributo que está do outro lado da relação. Retornado somente quando `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | keywordIndexed   | Parâmetros | True se houver um índice de palavras-chave no atributo. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | kind             | Text       | Categoria do atributo. Possible values:<li>"storage": storage (or scalar) attribute, i.e. attribute storing a value, not a reference to another attribute</li><li>"calculated": computed attribute, i.e. defined through a [`get` function](../ORDA/ordaClasses.md#function-get-attributename)</li><li>"alias": attribute built upon [another attribute](../ORDA/ordaClasses.md#alias-attributes-1)</li><li>"relatedEntity": N -> 1 relation attribute (reference to an entity)</li><li>"relatedEntities": 1 -> N relation attribute (reference to an entity selection)</li>  |
 | obrigatório      | Parâmetros | True se a entrada de um valor null for rejeitada para o atributo. Not returned if `.kind` = "relatedEntity" or "relatedEntities". Nota: Esta propriedade corresponde à propriedade do campo "Reject NULL value input" ao nível do banco de dados 4D. Não tem relação com a propriedade existente "Mandatory"/obrigatório que é uma opção de controle de entrada de dados para uma tabela.                                                                                                                                                                                                                                                                                                                                              |
 | name             | Text       | Nome do atributo como string                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | path             | Text       | Path of [an alias attribute](../ORDA/ordaClasses.md#alias-attributes-1) based upon a relation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | readOnly         | Parâmetros | True se o atributo for apenas de leitura. For example, computed attributes without [`set` function](../ORDA/ordaClasses.md#function-set-attributename) are read-only.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| relatedDataClass | Text       | Nome dadataclass relacionada ao atributo. Returned only when `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| relatedDataClass | Text       | Nome dadataclass relacionada ao atributo. Retornado somente quando `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | type             | Text       | Tipo conceitual do valor do atributo, útil para programação genérica. Depends on the attribute `kind`. Possible values: <li>if `.kind` = "storage": "blob", "bool", "date", "image", "number", "object", or "string". "number" is returned for any numeric types including duration; "string" is returned for uuid, alpha and text attribute types; "blob" attributes are [blob objects](../Concepts/dt_blob.md#blob-type).</li><li>if `.kind` = "relatedEntity": related dataClass name</li><li>if `.kind` = "relatedEntities": related dataClass name + "Selection" suffix</li><li>if `.kind` = "calculated" or "alias": same as above, depending on the result</li> |
 | unique           | Parâmetros | True se o valor do atributo tiver que ser único. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
@@ -126,10 +126,10 @@ Considerando as propriedades de tabela abaixo:
 
 <details><summary>História</summary>
 
-| Release | Mudanças                            |
-| ------- | ----------------------------------- |
-| 17 R5   | Support of the *settings* parameter |
-| 17      | Adicionado                          |
+| Release | Mudanças                        |
+| ------- | ------------------------------- |
+| 17 R5   | Suporte do parâmetro *settings* |
+| 17      | Adicionado                      |
 
 </details>
 
@@ -229,10 +229,10 @@ $ds. Persons.clearRemoteCache()
 
 <details><summary>História</summary>
 
-| Release | Mudanças                            |
-| ------- | ----------------------------------- |
-| 17 R5   | Support of the *settings* parameter |
-| 17      | Adicionado                          |
+| Release | Mudanças                        |
+| ------- | ------------------------------- |
+| 17 R5   | Suporte do parâmetro *settings* |
+| 17      | Adicionado                      |
 
 </details>
 
@@ -281,7 +281,7 @@ Os objetos aninhados que apresentam entidades relacionadas devem conter uma prop
 
 **Stamp**
 
-Se um atributo \_\_STAMP for dado, se realiza uma comprovação com o selo no armazén de dados e se pode devolver um erro ("O selo dado não coincide com o atual para o registro# XX da tabela XXXX"). For more information, see [Entity locking](ORDA/entities.md#entity-locking).
+Se um atributo \_\_STAMP for dado, se realiza uma comprovação com o selo no armazén de dados e se pode devolver um erro ("O selo dado não coincide com o atual para o registro# XX da tabela XXXX"). Para obter mais informações, consulte [Bloqueio de Entity](ORDA/entities.md#entity-locking).
 
 **settings**
 
@@ -455,7 +455,7 @@ The `.get()` function <!-- REF #DataClassClass.get().Summary -->queries the data
 
 In *primaryKey*, pass the primary key value of the entity to retrieve. Em <em x-id="3">primaryKey</em>, passe o valor da chave primária da entidade a recuperar Em <em x-id="3">primaryKey</em>, passe o valor da chave primária da entidade a recuperar O tipo valor deve coresponder com o tipo de chave primária estabelecido na datastore (Inteiro ou texto). You can also make sure that the primary key value is always returned as Text by using the [`.getKey()`](EntityClass.md#getkey) function with the `dk key as string` parameter.
 
-If no entity is found with *primaryKey*, a **Null** entity is returned.
+Se nenhuma entidade for encontrada com *primaryKey*, uma entidade **Null** será retornada.
 
 É aplicado o lazy loading/carregamento diferido, ou seja os dados relacionados são carregados do disco só quando pedidos.
 
@@ -732,7 +732,7 @@ Os dados relativos a entidades relacionadas são armazenados na cache do objecto
 
 #### Exemplo
 
-In the following example, `$ds.Persons.all()` loads the first entity with all its attributes. Then, the request optimization is triggered, so only `firstname` and `address.city` are loaded.
+No exemplo seguinte, `$ds.Persons.all()` carrega a primeira entidade com todos os seus atributos. Then, the request optimization is triggered, so only `firstname` and `address.city` are loaded.
 
 Note that `address.city` is loaded in the cache of the `Persons` dataclass.
 
@@ -790,7 +790,7 @@ The entity object is created in memory and is not saved in the database until th
 
 **4D Server**: In client-server, if the primary key of the corresponding table is auto-incremented, it will be calculated when the entity is saved on the server.
 
-All attributes of the entity are initialized with the **null** value.
+Todos os atributos da entidade são inicializados com o valor **null**.
 
 > Attributes can be initialized with default values if the **Map NULL values to blank values** option is selected at the 4D database structure level.
 
@@ -882,7 +882,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 
 The `.query()` function <!-- REF #DataClassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
 
-If no matching entities are found, an empty `EntitySelection` is returned.
+Se nenhuma entidade correspondente for encontrada, uma `EntitySelection` vazia é retornada.
 
 #### parâmetro queryString
 
@@ -896,13 +896,13 @@ attributePath|formula comparator value
 
 onde:
 
-- **attributePath**: path of attribute on which you want to execute the query. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em <em x-id="3">queryString</em> ou <em x-id="3">formula</em> (":placeholder") e valor pode ser uma string ou uma coleção de strings. In case of an attribute path whose type is `Collection`, `[]` notation is used to handle all the occurences (for example `children[].age`).
+- **attributePath**: caminho de atributo no qual se pretende executar a consulta. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em <em x-id="3">queryString</em> ou <em x-id="3">formula</em> (":placeholder") e valor pode ser uma string ou uma coleção de strings. In case of an attribute path whose type is `Collection`, `[]` notation is used to handle all the occurences (for example `children[].age`).
 
 > *You cannot use directly attributes whose name contains special characters such as ".", "\[ ]", or "=", ">", "#"..., because they will be incorrectly evaluated in the query string. If you need to query on such attributes, you must consider using placeholders, which allow an extended range of characters in attribute paths (see* **Using placeholders** *below).*
 
-- **formula**: a valid formula passed as `Text` or `Object`. A fórmula será avaliada para cada entidade processada e deve retornar um valor booleano. Within the formula, the entity is available through the `This` object.
+- **formula**: uma fórmula válida passada como `Text` ou `Object`. A fórmula será avaliada para cada entidade processada e deve retornar um valor booleano. Within the formula, the entity is available through the `This` object.
 
-  - **Text**: the formula string must be preceeded by the `eval()` statement, so that the query parser evaluates the expression correctly. For example: *"eval(length(This.lastname) >=30)"*
+  - **Text**: the formula string must be preceeded by the `eval()` statement, so that the query parser evaluates the expression correctly. Por exemplo: *"eval(length(This.lastname) >=30) "*
   - **Object**: the [formula object](FunctionClass.md) is passed as a **placeholder** (see below). The formula must have been created using the [`Formula`](FunctionClass.md#formula) or [`Formula from string`](FunctionClass.md#formula-from-string) command.
 
 > * Keep in mind that 4D formulas only support `&` and `|` symbols as logical operators.
@@ -910,10 +910,10 @@ onde:
 
 Fórmulas nas consultas podem receber parâmetros através de $1. This point is detailed in the **formula parameter** paragraph below.
 
-> - You can also pass directy a `formula` parameter object instead of the `queryString` parameter (recommended when formulas are more complex). See **formula parameter** paragraph below.
+> - You can also pass directy a `formula` parameter object instead of the `queryString` parameter (recommended when formulas are more complex). Ver o parágrafo **Parâmetro fórmula** mais abaixo.
 > - For security reasons, formula calls within `query()` functions can be disallowed. See `querySettings` parameter description.
 
-- **comparator**: symbol that compares *attributePath* and *value*. Os simbolos abaixo são compatíveis:
+- **comparator**: símbolo que compara *attributePath* e *value*. Os simbolos abaixo são compatíveis:
 
 | Comparação                               | Símbolos    | Comentário                                                                                                                                                                                                                      |
 | ---------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -933,8 +933,8 @@ Fórmulas nas consultas podem receber parâmetros através de $1. This point is 
   Quando usar um valor constante, as regras abaixo devem ser respeitadas:
   - **text** type constant can be passed with or without simple quotes (see **Using quotes** below). Para pesquisar uma stirng dentro de uma string (uma pesquisa "contém") use o símbolo coringa (@) em valor para isolar a string a ser pesquisada como mostrado neste exemplo: "@Smith@". As palavras chaves abaixo são proibidas para constantes de texto: true, false.
   - **boolean** type constants: **true** or **false** (case sensitive).
-  - **numeric** type constants: decimals are separated by a '.' (period).
-  - **date** type constants: "YYYY-MM-DD" format
+  - \*\*Valores constantes de tipo **numérico**: os decimais se separam com um '.' (ponto).
+  - constantes de tipo **date**: formato "YYYY-MM-DD"
   - **null** constant: using the "null" keyword will find **null** and **undefined** properties.
   - in case of a query with an IN comparator, *value* must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, `"` characters must be escaped with `\`).
 - **logicalOperator**: used to join multiple conditions in the query (optional). Pode usaar um dos operadores lógicos abaixo (ou o nome ou o símbolo podem ser usados):
@@ -972,12 +972,12 @@ Você pode usar parênteses na consulta para dar prioridade ao cálculo. Por exe
 
 Two types of placeholders can be used: **indexed placeholders** and **named placeholders**:
 
-|           | Marcadores de posição indexados                                                                                                                                                                                                                                                                                                                       | Placeholders nomeados                                                                                                                                                                                        |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Definição | Parameters are inserted as `:paramIndex` (for example :1, :2...) in *queryString* and their corresponding values are provided by the sequence of *value* parameter(s). You can use up to 128 *value* parameters | Parameters are inserted as `:paramName` (for example :myparam) and their values are provided in the attributes and/or parameters objects in the *querySettings* parameter |
-| Exemplo   | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                                                                                                                                                                                                                                                           | `$o.attributes:=New object("att";"city")`<br/> `$o.parameters:=New object("name";"Chicago")`<br/> `$r:=class.query(":att=:name";$o)`                                                                         |
+|           | Marcadores de posição indexados                                                                                                                                                                                                                                                                                                                             | Placeholders nomeados                                                                                                                                                                                        |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Definição | Parameters are inserted as `:paramIndex` (for example :1, :2...) in *queryString* and their corresponding values are provided by the sequence of *value* parameter(s). É possível utilizar até 128 parâmetros *value* | Parameters are inserted as `:paramName` (for example :myparam) and their values are provided in the attributes and/or parameters objects in the *querySettings* parameter |
+| Exemplo   | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                                                                                                                                                                                                                                                                 | `$o.attributes:=New object("att";"city")`<br/> `$o.parameters:=New object("name";"Chicago")`<br/> `$r:=class.query(":att=:name";$o)`                                                                         |
 
-You can mix all argument kinds in *queryString*. A *queryString* can contain, for *attributePath*, *formula* and *value* parameters:
+É possível misturar todos os tipos de argumentos em *queryString*. A *queryString* can contain, for *attributePath*, *formula* and *value* parameters:
 
 - valores diretos (sem placeholders),
 - placeholders indexados ou com nome.
@@ -1146,7 +1146,7 @@ To make it possible to perform such queries, ORDA allows a special syntax: you j
 "relationAttribute.attribute = :1 AND relationAttribute{x}.attribute = :2 [AND relationAttribute{y}.attribute...]"
 ```
 
-**{x}** tells ORDA to create another reference for the relation attribute. Em seguida, ele executará internamente todas as operações de bitmap necessárias. Note that **x** can be any number **except 0**: {1}, or {2}, or {1540}... O ORDA só precisa de uma referência exclusiva na consulta para cada índice de classe.
+**{x}** informa ao ORDA para criar outra referência para o atributo de relação. Em seguida, ele executará internamente todas as operações de bitmap necessárias. Note that **x** can be any number **except 0**: {1}, or {2}, or {1540}... O ORDA só precisa de uma referência exclusiva na consulta para cada índice de classe.
 
 No nosso exemplo, seria:
 
@@ -1162,18 +1162,18 @@ As an alternative to formula insertion within the *queryString* parameter (see a
 
 The formula must have been created using the [`Formula`](FunctionClass.md#formula) or [`Formula from string`](FunctionClass.md#formula-from-string) command. Nesse modo:
 
-- the *formula* is evaluated for each entity and must return true or false. Durante a execução da pesquisa, se o resultado da fórmula não for booleano, é considerado como False.
+- *formula* se avalia para cada entidade e deve devolver true ou false. Durante a execução da pesquisa, se o resultado da fórmula não for booleano, é considerado como False.
 - within the *formula*, the entity is available through the `This` object.
 - if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with `ON ERR CALL`.
 
-> For security reasons, formula calls within `query()` functions can be disallowed. See *querySettings* parameter description.
+> For security reasons, formula calls within `query()` functions can be disallowed. Veja a descrição do parâmetro *querySettings*.
 
 #### Passar parâmetros a fórmulas
 
 Any *formula* called by the `query()` class function can receive parameters:
 
 - Parameters must be passed through the **args** property (object) of the *querySettings* parameter.
-- The formula receives this **args** object as a **$1** parameter.
+- A fórmula recebe esse objeto **args** como um parâmetro **$1**.
 
 Este pequeno código mostra os principios de como são passados os parâmetros aos métodos:
 
@@ -1184,7 +1184,7 @@ Este pequeno código mostra os principios de como são passados os parâmetros a
 
 No exemplo 3 são oferecidos mais exemplos.
 
-**4D Server**: In client/server, formulas are executed on the server. In this context, only the `querySettings.args` object is sent to the formulas.
+**4D Server**: em cliente/servidor, as fórmulas são executadas no servidor. In this context, only the `querySettings.args` object is sent to the formulas.
 
 #### Parâmetro querySettings
 
@@ -1446,7 +1446,7 @@ The formula is given as a `Formula` object through a placeholder:
  $es:=ds.Students.query(":1 and nationality='French'";$formula)
 ```
 
-Only a `Formula` object is given as criteria:
+Só se da como criterio um objeto `Formula`:
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1508,7 +1508,7 @@ Queremos desautorizar as fórmulas, por exemplo, quando el usuário introduz sua
 
 #### Veja também
 
-[`.query()`](EntitySelectionClass.md#query) for entity selections
+[`.query()`](EntitySelectionClass.md#query) para as seleções de entidade
 
 <!-- END REF -->
 

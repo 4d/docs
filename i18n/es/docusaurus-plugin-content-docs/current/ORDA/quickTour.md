@@ -65,7 +65,7 @@ Un nuevo objeto entidad contiene una "copia" de todos los atributos de su datacl
 ```code4d
 $entity.name:="ACME, inc."  
 $entity.city:="London"  
-//$entity.ID is automatically filled
+//$entity.ID se llena automáticamente
 ```
 
 Por el momento, la entidad sólo existe en la memoria. Para almacenarlo en el archivo de datos, es necesario guardarlo utilizando el método miembro `save()`:
