@@ -3,22 +3,22 @@ id: shared
 title: Objetos e coleções compartilhados
 ---
 
-**Los objetos compartidos** y **las colecciones compartidas** son [objetos](Concepts/dt_object.md) y [colecciones](Concepts/dt_collection.md) específicas cuyo contenido se comparte entre procesos. In contrast to [interprocess variables](Concepts/variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html) or [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html).
+**Objetos compartilhados** e **coleções compartilhadas** são específicos [objects](Conceps/dt_object.md) e [collections](Concepts/dt_collection.md) cujo conteúdo é compartilhado entre processos. Em contraste com [variáveis de interprocesso](Concepts/variáveis. d#interprocess-variáveis), objetos compartilhados e coleções compartilhadas têm a vantagem de ser compatíveis com **processos 4D preemptivos**: eles podem ser passados por referência para comandos como [`Novo processo`](https://doc. d.com/4dv20/help/command/en/page317.html) ou [`TODO WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html).
 
-Shared objects and shared collections are stored in standard [`Object`](dt_object.md) and [`Collection`](dt_collection.md) type variables, but must be instantiated using specific commands:
+Objetos compartilhados e coleções compartilhadas são armazenados em variáveis padrão [`Object`](dt_object.md) e [`Collection`](dt_collection.md) do tipo, mas devem ser instanciados usando comandos específicos:
 
-- to create a shared object, use the [`New shared object`](https://doc.4d.com/4dv20/help/command/en/page1471.html) command or call the [`new()`](../API/ClassClass.md#new) function of a [shared class](classes.md#shared-classes),
-- to create a shared collection, use the [`New shared collection`](../API/CollectionClass.md#new-shared-collection) command.
+- para criar um objeto compartilhado, use o comando [`Novo objeto compartilhado`](https://doc.4d.com/4dv20/help/command/en/page1471.html) ou chame a função [`new()`](../API/ClassClass.md#new) de uma [classe compartilhada](classes.md#shared-classes),
+- para criar uma coleção compartilhada, use o comando [`Nova coleção compartilhada`](../API/CollectionClass.md#new-shared-collecation).
 
 Shared objects and collections can only contain scalar values or other shared objects and collections. However, shared objects and collections can be set as properties of standard (not shared) objects or collections.
 
-Para modificar un objeto/colección compartido, se debe llamar a la estructura **Use...End use**. La lectura de un valor de objeto/colección compartido no requiere **Use...End use**.
+Para modificar um objeto/coleção compartilhada, a estrutura **Usar... Uso final** deve ser chamada. A leitura de um valor de objeto/coleção compartilhado não requer **Uso...Uso final**.
 
-A unique, global catalog returned by the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) command is always available throughout the application and its components, and can be used to store all shared objects and collections.
+Um catálogo único e global retornado pelo [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525. o comando tml) está sempre disponível em todo o aplicativo e seus componentes, e pode ser usado para armazenar todos os objetos e coleções compartilhadas.
 
 ## Utilização de objetos ou coleções compartidos
 
-Una vez instanciado con los comandos `Nuevo objeto compartido` o `Nueva colección compartida`, las propiedades y elementos del objeto compartido/colección pueden ser modificados o leídos desde cualquier proceso de la aplicación, bajo ciertas condiciones.
+Depois de instanciados com os comandos `New shared object` ou `New shared collection`, as propriedades e os elementos do objeto/coleção compartilhados podem ser modificados ou lidos em qualquer processo do aplicativo, sob determinadas condições.
 
 ### Modificação
 
@@ -33,7 +33,7 @@ Keep in mind that objects or collections set as the content of a shared object o
 
 :::
 
-All modification instructions in a shared object or collection require to be protected inside a [`Use...End use`](#use-end-use) block, otherwise an error is generated.
+Todas as instruções de modificação em um objeto compartilhado ou coleção requerem ser protegidas dentro de um bloco [`Use...End use`](#use-end-use-use), caso contrário um erro é gerado.
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")
@@ -42,7 +42,7 @@ All modification instructions in a shared object or collection require to be pro
  End Use
 ```
 
-Por comodidad, todas las [funciones colección](../API/CollectionClass.md) que modifican el objeto compartido o la colección insertan un bloque interno `Use...End use` para que no tenga que codificarlo usted mismo. Por exemplo:
+Por conveniência, todas as funções de coleção  que modificam o objeto partilhado ou a coleção inserem um bloco interno Use...End use para que não tenha de o codificar. Por exemplo:
 
 ```4d
 $col:=New shared collection()
