@@ -114,6 +114,12 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 3. エラーが発生しなかった場合、`onResponse` が 1回実行されます。
 4. `onTerminate` は常に実行されます。
 
+:::info
+
+[`wait()`](#wait) を使用しない場合 (非同期呼び出し) にコールバック関数が呼び出されるためには、そのプロセスは [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/ja/page1389.html) で作成された [ワーカー](../Develop/processes.md#ワーカープロセス) である必要があります ([`New process`](https://doc.4d.com/4dv20/help/command/ja/page317.html) は使えません)。
+
+:::
+
 #### 戻り値
 
 この関数はシステムワーカーオブジェクトを返します。このオブジェクトに対して、SystemWorker クラスの関数やプロパティを呼び出すことができます。
