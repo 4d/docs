@@ -127,7 +127,7 @@ In the *fileConstant* parameter, pass a 4D built-in or system file, using one of
 | User settings file for data       | 4     | arquivo settings.4DSettings para dados atual, guardado na pasta Preferências ao lado do arquivo de dados.                                                                                                                                                                                                                                                                                                                                                                                                |
 | Verification log file             | 5     | Log files created by the `VERIFY CURRENT DATA FILE` and `VERIFY DATA FILE` commands or the Maintenance and Security Center (MSC). Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                           |
 
-If the target *fileConstant* does not exist, a null object is returned. Não se levantam erros.
+Se o alvo *fileConstant* não existir, um objecto nulo é devolvido. Não se levantam erros.
 
 If the command is called from a component, pass the optional `*` parameter to get the path of the host database. Otherwise, if you omit the `*` parameter, a null object is always returned.
 
@@ -232,7 +232,7 @@ The `.createAlias()` function <!-- REF #FileClass.createAlias().Summary -->creat
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
-Por padrão em macOS, a função cria um pseudónimo padrão. You can also create a symbolic link by using the *aliasType* parameter. Estão disponíveis as seguintes constantes:
+Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar uma ligação simbólica utilizando o parâmetro *aliasType*. Estão disponíveis as seguintes constantes:
 
 | Parâmetros         | Valor | Comentário                                      |
 | ------------------ | ----- | ----------------------------------------------- |
