@@ -1607,7 +1607,7 @@ searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE
 
 No que diz respeito aos dois últimos exemplos, note que o resultado da pesquisa é diferente quando se remove os parênteses da primeira lista de chaves de pesquisa.
 
-- The *searchCriteria* may include the optional \[CHARSET] specification. Esta consiste na palavra "CHARSET" seguida de uma palavra registada \[CHARSET] (US ASCII, ISO-8859). It indicates the charset of the *searchCriteria* string. Therefore, you must convert the *searchCriteria* string into the specified charset if you use the \[CHARSET] specification (see the `CONVERT FROM TEXT` or `Convert to text` commands).
+- A *searchCriteria* pode incluir a especificação opcional \[CHARSET]. Esta consiste na palavra "CHARSET" seguida de uma palavra registada \[CHARSET] (US ASCII, ISO-8859). It indicates the charset of the *searchCriteria* string. Therefore, you must convert the *searchCriteria* string into the specified charset if you use the \[CHARSET] specification (see the `CONVERT FROM TEXT` or `Convert to text` commands).
   Como padrão, os códigos 4D em Quotable Printable the searchCriteria string se conter caracteres estendidos
 
 ```
@@ -1633,7 +1633,7 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 - **Search-keys with a flag value**: the flag may accept one or several keywords (including standard flags), separated by spaces.
   Example: `searchCriteria = KEYWORD \Flagged \Draft`
 
-- **Search-keys with a message set value**: Identifies a set of messages. Para números de sequência de mensagens, estes são números consecutivos de 1 até ao número total de mensagens na caixa de correio. Uma vírgula delimita números individuais; uma vírgula delimita entre dois números, inclusive.
+- **Pesquisa-chaves com um valor de conjunto de mensagens**: identifica um conjunto de mensagens. Para números de sequência de mensagens, estes são números consecutivos de 1 até ao número total de mensagens na caixa de correio. Uma vírgula delimita números individuais; uma vírgula delimita entre dois números, inclusive.
   Examples:
   `2,4:7,9,12:*` is `2,4,5,6,7,9,12,13,14,15` for a mailbox with 15 messages.
   `searchCriteria = 1:5 ANSWERED` search in message selection from message sequence number 1 to 5 for messages which have the \Answered flag set.
