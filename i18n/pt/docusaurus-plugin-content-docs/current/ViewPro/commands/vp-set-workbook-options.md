@@ -23,7 +23,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro.
 
 Em *optionObj*, passe as opções da pasta de trabalho a serem aplicadas a *vpAreaName*.
 
-If *optionObj* is empty, the command does nothing.
+Se *optionObj* estiver vazio, o comando não fará nada.
 
 As opções modificadas do livro são guardadas com o documento.
 

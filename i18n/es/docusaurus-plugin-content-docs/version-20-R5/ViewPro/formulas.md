@@ -351,7 +351,7 @@ Queremos imprimir el nombre de una persona en una celda del área 4D View Pro ut
 
 ### Declarar los métodos autorizados
 
-Puede llamar directamente a los métodos del proyecto 4D desde sus fórmulas 4D View Pro. For security reasons, you must declare explicitly methods that can be called by the user with the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command.
+Puede llamar directamente a los métodos del proyecto 4D desde sus fórmulas 4D View Pro. Por razones de seguridad, debe declarar explícitamente los métodos que pueden ser llamados por el usuario con el método [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md).
 
 #### Requisitos
 

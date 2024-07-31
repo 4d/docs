@@ -921,4 +921,4 @@ $vehicle:=cs.VehicleFactory.me.buildVehicle("トラック")
 
 #### 参照
 
-詳細に関しては、[このブログ記事](https://blog.4d.com/singleton) を参照ください。
+詳細に関しては、[このブログ記事](https://blog.4d.com/ja/singleton) を参照ください。

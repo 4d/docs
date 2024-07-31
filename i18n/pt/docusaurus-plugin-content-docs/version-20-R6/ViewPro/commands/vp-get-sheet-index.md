@@ -21,7 +21,7 @@ The `VP Get sheet index` command <!-- REF #_method_.VP Get sheet index.Summary -
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In *name*, pass the name of the sheet whose index will be returned. If no sheet named *name* is found in the document, the method returns -1.
+Em *name*, passe o nome da planilha cujo índice será retornado. If no sheet named *name* is found in the document, the method returns -1.
 
 > A indexação começa em 0.
 

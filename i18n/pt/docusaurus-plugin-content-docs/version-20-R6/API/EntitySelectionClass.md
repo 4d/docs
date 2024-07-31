@@ -441,7 +441,7 @@ The `.at()` function <!-- REF #EntitySelectionClass.at().Summary -->returns the 
 
 If *index* is negative (from -1 to -n with n : length of the entity selection), the returned entity will be based on the reverse order of the entity selection.
 
-The function returns Null if *index* is beyond entity selection limits.
+A função devolve Null se o *index* estiver para além dos limites de selecção de entidades.
 
 #### Exemplo
 

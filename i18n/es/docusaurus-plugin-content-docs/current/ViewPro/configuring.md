@@ -484,7 +484,7 @@ Ejemplo:
 
 ## Objeto 4D View Pro
 
-El [objeto](Concepts/dt_object.md) 4D View Pro almacena todo el contenido de la hoja de cálculo. Es manejado automáticamente por 4D View Pro. You can set or get this object using the [VP IMPORT FROM OBJECT](commands/vp-import-from-object.md) or [VP Export to object](commands/vp-export-to-object.md) commands.
+El [objeto](Concepts/dt_object.md) 4D View Pro almacena todo el contenido de la hoja de cálculo. Es manejado automáticamente por 4D View Pro. Puede definir u obtener este objeto utilizando los comandos [VP IMPORT FROM OBJECT](comandos/vp-import-from-object.md) o [VP Export to object](comandos/vp-export-to-object.md).
 
 Contiene las siguientes propiedades:
 
