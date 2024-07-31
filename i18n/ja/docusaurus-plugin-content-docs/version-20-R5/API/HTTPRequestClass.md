@@ -171,6 +171,12 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 
 5. `onTerminate` は常に 1回実行されます。
 
+:::info
+
+[`wait()`](#wait) を使用しない場合 (非同期呼び出し) にコールバック関数が呼び出されるためには、そのプロセスは [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/ja/page1389.html) で作成された [ワーカー](../Develop/processes.md#ワーカープロセス) である必要があります ([`New process`](https://doc.4d.com/4dv20/help/command/ja/page317.html) は使えません)。
+
+:::
+
 #### event オブジェクト
 
 `event` オブジェクトは、[コールバック関数](#コールバック関数) が呼ばれたときに返されます。 このオブジェクトには次のプロパティが含まれます:
@@ -266,7 +272,7 @@ var $message : Text:=File("/RESOURCES/HTTPrequest.txt").getText()
 var $parsedMessage : Object:=HTTP Parse message($message)
 //$parsedMessage= {
 //headers:{"User-Agent":"4D/20.4.0",...},
-//parts:[{"contentType":"application/http","contentID":"item1",...}], 
+//parts:[{"contentType":"application/http","contentID":"item1",...}],
 //requestLine:"POST /batch/gmail/v1/ HTTP/1.1"
 //}
 ```
