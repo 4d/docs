@@ -96,7 +96,7 @@ Los siguientes contenidos se envían en función del tipo de *message*:
 
 #### Descripción
 
-The `.status` property contains <!-- REF #WebSocketConnectionClass.status.Summary -->the connection status (can be "Closing", "Closed" or  "Connected")<!-- END REF -->.
+La propiedad `.status` contiene <!-- REF #WebSocketConnectionClass.status.Summary -->el estado de la conexión (puede ser "Closing", "Closed" o  "Connected")<!-- END REF -->.
 
 Esta propiedad es de sólo lectura.
 
