@@ -22,7 +22,7 @@ The `VP Name` command <!-- REF #_method_.VP Name.Summary -->returns a new range 
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-The *rangeName* parameter specifies an existing named cell range.
+O parâmetro *rangeName* especifica um intervalo de célula nomeada existente.
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where *rangeName* is defined. Se omitido, a planilha atual será utilizada por padrão. Você pode selecionar explicitamente a planilha atual ou toda a pasta de trabalho com as seguintes constantes:
 

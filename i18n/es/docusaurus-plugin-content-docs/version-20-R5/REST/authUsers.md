@@ -38,7 +38,7 @@ When the default mode is enabled, you can authenticate users through the `On RES
 
 ### Forzar el modo de inicio de sesión
 
-En el modo "inicio de sesión forzada", el uso de la licencia está desconectado de las sesiones de usuario web. A license is required only when the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) is executed, allowing you to control the number of used licenses.
+En el modo "inicio de sesión forzada", el uso de la licencia está desconectado de las sesiones de usuario web. Sólo se requiere una licencia cuando se ejecuta el comando [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges), lo que permite controlar el número de licencias utilizadas.
 
 Las [peticiones REST descriptivas](#descriptive-rest-requests) siempre son procesadas por el servidor, aunque no se abra una sesión usuario web que utilice una licencia. En este caso, son procesados a través de sesiones "invitado".
 

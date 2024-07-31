@@ -35,7 +35,7 @@ La secuencia de inicio de sesión del usuario es la siguiente:
 
 ![alt-text](../assets/en/REST/force-login-2.jpeg)
 
-En la fase de inicio de sesión del usuario, el uso de la licencia está desconectado de las sesiones de usuario web. A license is required only when the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) is executed, allowing you to control the number of used licenses.
+En la fase de inicio de sesión del usuario, el uso de la licencia está desconectado de las sesiones de usuario web. Sólo se requiere una licencia cuando se ejecuta el comando [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges), lo que permite controlar el número de licencias utilizadas.
 
 All other REST requests (handling data or executing a function) will only be processed if they are executed within a web session with appropriate privileges, otherwise they return an error. To assign privileges to a web session, you need to execute the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function for the session. Ejecutar esta función activa el consumo de la licencia 4D.
 

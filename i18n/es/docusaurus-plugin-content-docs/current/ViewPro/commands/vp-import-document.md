@@ -84,7 +84,7 @@ End if
 Desea importar un documento Microsoft Excel protegido por contraseña a un área 4D View Pro:
 
 ```4d
-	//Import code
+	//Código de importación
 var $o : Object
 $o:=New object
 $o.password:="excel123"

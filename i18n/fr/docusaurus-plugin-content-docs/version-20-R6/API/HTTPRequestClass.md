@@ -173,6 +173,12 @@ Voici la séquence des appels de callbacks :
 
 5. `onTerminate` est toujours exécuté une fois
 
+:::info
+
+For the callback functions to be called when you do not use [`wait()`](#wait) (asynchronous call), the process must be a [worker](../Develop/processes.md#worker-processes) created with [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NOT [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
+
+:::
+
 #### event object
 
 Un objet `event` est renvoyé lorsqu'une [fonction de callback](#callback-functions) est appelée. Il contient les propriétés suivantes :
@@ -268,7 +274,7 @@ var $message : Text:=File("/RESOURCES/HTTPrequest.txt").getText()
 var $parsedMessage : Object:=HTTP Parse message($message)
 //$parsedMessage= {
 //headers:{"User-Agent":"4D/20.4.0",...},
-//parts:[{"contentType":"application/http","contentID":"item1",...}], 
+//parts:[{"contentType":"application/http","contentID":"item1",...}],
 //requestLine:"POST /batch/gmail/v1/ HTTP/1.1"
 //}
 ```
