@@ -114,6 +114,12 @@ Aqui está a sequência de chamadas de retorno:
 3. if no error occured, `onResponse` is executed once
 4. `onTerminate` é sempre executado uma vez
 
+:::info
+
+For the callback functions to be called when you do not use [`wait()`](#wait) (asynchronous call), the process must be a [worker](../Develop/processes.md#worker-processes) created with [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NOT [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
+
+:::
+
 #### Valor retornado
 
 A função devolve um objecto system worker sobre o qual se pode chamar funções e propriedades da classe SystemWorker.
