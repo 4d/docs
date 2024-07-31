@@ -19,7 +19,7 @@ Webユーザーまたは RESTユーザーがログインすると、そのセッ
 
 ### 参照
 
-For a detailed overview of the whole permissions architecture, please read the [**Filter access to your data with a complete system of permissions**](https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/) blog post.
+詳細なアクセス権限アーキテクチャーの概要については、[**完全な権限システムでデータアクセスをフィルタリングする**](https://blog.4d.com/ja/filter-access-to-your-data-with-a-complete-system-of-permissions/) ブログ記事を参照ください。
 
 ## リソース
 
@@ -113,7 +113,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 ### デフォルトファイル
 
-When you create a project, a default `roles.json` file is created at the following location: `<project folder>/Project/Sources/` (see [Architecture](../Project/architecture.md#sources) section).
+プロジェクトを作成すると、デフォルトの `roles.json` ファイルが次の場所に作成されます: `<project folder>/Project/Sources/` ([アーキテクチャー](../Project/architecture.md#sources) 参照)。
 
 デフォルトのファイルには次の内容が含まれています:
 
@@ -151,17 +151,17 @@ When you create a project, a default `roles.json` file is created at the followi
 
 ```
 
-For a highest level of security, the "none" privilege is assigned to all permissions in the datastore, thus data access on the whole `ds` object is disabled by default. It is recommended not to modified or use this locking privilege, but to add specific permissions to each resource you wish to make available from web or REST requests ([see example below](example-of-privilege-configuration)).
+最高レベルのセキュリティのため、データストア ("ds") のすべての許諾アクションに "none" の権限名が割り当てられています。したがって、デフォルトでは `ds` オブジェクト全体へのデータアクセスが無効になっています。 この "none" 権限はセキュリティのため、使用も変更もしないことが推奨されています。Web や RESTリクエストから利用可能にしたい各リソースには、それ専用の権限を新たに追加することが推奨されています ([以下の例を参照](権限設定の例))。
 
 :::caution
 
-When no specific parameters are defined in the `roles.json` file, accesses are not limited. This configuration allows you to develop the application without having to worry about accesses, but is not recommended in production environment.
+`roles.json` ファイルに特定のパラメーターが定義されていない場合、アクセスは制限されません。 これにより、アクセスを気にすることなくアプリケーションを開発することができますが、本番環境では推奨されていません。
 
 :::
 
 :::note 互換性
 
-In previous releases, the `roles.json` file was not created by default. 4D 20 R6 以降、`roles.json`ファイルを含まない、または `"forceLogin": true` の設定が含まれていない既存のプロジェクトを開く場合、[設定ダイアログボックスの **Web機能** ページ](../settings/web.md#アクセス権) で **ds.authentify() 関数によって REST認証を有効化する** ボタンが利用可能になります。 This button automatically upgrades your security settings (you may have to modify your code, [see this blog post](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/)).
+以前のリリースでは、`roles.json` ファイルはデフォルトで作成されませんでした。 4D 20 R6 以降、`roles.json`ファイルを含まない、または `"forceLogin": true` の設定が含まれていない既存のプロジェクトを開く場合、[設定ダイアログボックスの **Web機能** ページ](../settings/web.md#アクセス権) で **ds.authentify() 関数によって REST認証を有効化する** ボタンが利用可能になります。 このボタンはセキュリティ設定を自動的にアップグレードします (コードを修正する必要があるかもしれません。[このブログ記事を参照ください](https://blog.4d.com/ja/force-login-becomes-default-for-all-rest-auth))。
 :::
 
 :::note Qodly Studio
@@ -220,9 +220,9 @@ End if
 
 ```
 
-## Example of privilege configuration
+## 権限設定の例
 
-The good practice is to keep all data access locked by default thanks to the "none" privilege and to configure the `roles.json` file to only open controlled parts to authorized sessions. For example, to allow some accesses to guest sessions:
+グッドプラクティスは、"none" 権限によってすべてのデータアクセスをデフォルトでロックしておき、`roles.json` ファイルを設定して、許可されたセッションにのみ限定的に一部を開放することです。 たとえば、制限されたアクセスをゲストセッションに対して許可する場合:
 
 ```json title="/Project/Sources/roles.json"
 
