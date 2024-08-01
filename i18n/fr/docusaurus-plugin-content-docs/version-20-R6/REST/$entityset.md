@@ -22,7 +22,7 @@ Cette syntaxe vos permet d'exécuter toute opération sur un entity set défini.
 
 Étant donné que les entity sets ont une durée de vie limitée (par défaut ou bien après avoir appelé `$timeout` pour définir la limite souhaitée), vous pouvez appeler `$savedfilter` et `$savedorderby` pour sauvegarder la définition du filtre et des instructions order by lorsque vous créez un entity set.
 
-When you retrieve an existing entity set stored in 4D Server's cache, you can also apply any of the following to the entity set: [`$clean`]($clean.md), [`$expand`]($expand.md), [`$filter`]($filter.md), [`$orderby`]($orderby.md), [`$skip`]($skip.md), or [`$top/$limit`]($top_$limit.md).
+Lorsque vous récupérez un entity set existant stocké dans le cache de 4D Server, vous pouvez également appliquer l'une des commandes suivantes à l'entity set : [`$clean`]($clean.md), [`$expand`]($expand.md), [`$filter`]($filter.md), [`$orderby`]($orderby.md), [`$skip`]($skip.md), ou [`$top/$limit`]($top_$limit.md).
 
 ### Exemple
 
@@ -32,16 +32,16 @@ Après que vous ayez créé un entity set, l'ID de l'entity set est retourné av
 
 ## $entityset/\{entitySetID\}?$logicOperator...&$otherCollection
 
-Créez un autre ensemble d'entités basé sur des ensembles d'entités préalablement créés
+Crée un autre entity set basé sur des entity sets préalablement créés
 
-| Paramètres       | Type   | Description                                                           |
-| ---------------- | ------ | --------------------------------------------------------------------- |
-| $logicOperator   | String | L'un des opérateurs logiques à tester avec l'autre ensemble d'entités |
-| $otherCollection | String | ID de l'ensemble d'entités                                            |
+| Paramètres       | Type   | Description                                                   |
+| ---------------- | ------ | ------------------------------------------------------------- |
+| $logicOperator   | String | L'un des opérateurs logiques à tester avec l'autre entity set |
+| $otherCollection | String | ID de l'entity set                                            |
 
 ### Description
 
-After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/\{entitySetID\}?$logicOperator... &$otherCollection` syntax, the `$logicOperator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. Les deux ensembles d'entités doivent être dans la même dataclass.
+Après avoir créé un entity set (entity set #1) en utilisant `$method=entityset`, vous pouvez ensuite créer un autre entity set en utilisant la syntaxe `$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`, la propriété `$logicOperator` (dont les valeurs sont indiquées ci-dessous), et un autre entity set (entity set #2) défini par la propriété `$otherCollection`. Les deux entity sets doivent être dans la même dataclass.
 
 Vous pouvez ensuite créer un autre entity set contenant les résultats de cet appel en utilisant le `$method=entityset` à la fin de la requête REST.
 
@@ -49,7 +49,7 @@ Voici les opérateurs logiques :
 
 | Opérateur | Description                                                                                                                                                                            |
 | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AND       | Retourne les entités communes aux deux ensembles d'entités                                                                                                                             |
+| AND       | Retourne les entités communes aux deux entity sets                                                                                                                                     |
 | OU        | Retourne les entités contenues dans les deux entity sets                                                                                                                               |
 | EXCEPT    | Retourne les entités de l'entity set #1 moins celles de l'entity set #2                                                                                                                |
 | INTERSECT | Retourne true ou false s'il existe une intersection des entités dans les deux entity sets (ce qui signifie qu'au moins une entité est commune aux deux entity sets) |
