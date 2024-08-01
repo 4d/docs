@@ -3,20 +3,20 @@ id: catalog
 title: $catalog
 ---
 
-The catalog describes all the dataclasses, attributes, and [interprocess (shared) singletons](../Concepts/classes.md#singleton-classes) available in the project.
+Le catalogue décrit l'ensemble des dataclass, attributs et [shared singletons (singletons partagés)](../Concepts/classes.md#classes-singleton) disponibles dans le projet.
 
 ## Syntaxe
 
-| Syntaxe                                                                 | Exemple                | Description                                                                                                                                       |
-| ----------------------------------------------------------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**$catalog**](#catalog)                                                | `/$catalog`            | Returns [shared singletons](#singletons) (if any) and a list of the dataclasses in your project along with two URIs            |
-| [**$catalog/$all**](#catalogall)                                        | `/$catalog/$all`       | Returns [shared singletons](#singletons) (if any) and information about all of your project's dataclasses and their attributes |
-| [**$catalog/\{dataClass\}**](#catalogdataclass)                       | `/$catalog/Employee`   | Renvoie des informations sur une dataclass et ses attributs                                                                                       |
-| [**$catalog/DataStoreClassFunction**](ClassFunctions.md#function-calls) | `/$catalog/authentify` | Exécute la fonction de datastore class authentify() si elle existe                                                             |
+| Syntaxe                                                                 | Exemple                | Description                                                                                                                                                    |
+| ----------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**$catalog**](#catalog)                                                | `/$catalog`            | Retourne les [shared singletons](#singletons) (s'il y en a) et une liste des dataclass dans votre projet ainsi que deux URIs                |
+| [**$catalog/$all**](#catalogall)                                        | `/$catalog/$all`       | Retourne les [shared singletons](#singletons) (s'il y en a) et des informations sur toutes les dataclass de votre projet et leurs attributs |
+| [**$catalog/\{dataClass\}**](#catalogdataclass)                       | `/$catalog/Employee`   | Renvoie des informations sur une dataclass et ses attributs                                                                                                    |
+| [**$catalog/DataStoreClassFunction**](ClassFunctions.md#function-calls) | `/$catalog/authentify` | Exécute la fonction de datastore class authentify() si elle existe                                                                          |
 
 ## $catalog
 
-Returns [shared singletons](#singletons) (if any) and a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass
+Retourne les [shared singletons](#singletons) (s'il y en a) et une liste des dataclass de votre projet avec chacune deux URI : un pour accéder aux informations sur sa structure et un pour récupérer les données dans la dataclass.
 
 ### Description
 
@@ -57,13 +57,13 @@ Voici une description des propriétés retournées pour chaque dataclass dans le
 
 ## $catalog/$all
 
-Returns [shared singletons](#singletons) (if any) and information about all of your project's dataclasses and their attributes
+Retourne les [shared singletons](#singletons) (s'il y en a) et des informations sur toutes les dataclass de votre projet et leurs attributs
 
 ### Description
 
 En appelant `$catalog/$all`, vous pouvez recevoir des informations détaillées sur les attributs de chacune des dataclasses du modèle de votre projet.
 
-For more information about what is returned for each dataclass and its attributes, use [`$catalog/\{dataClass\}`](#catalogdataClass).
+Pour plus d'informations sur ce qui est renvoyé pour chaque dataclass et ses attributs, utilisez [`$catalog/\dataClass\}`](#catalogdataclass).
 
 ### Exemple
 
@@ -180,7 +180,7 @@ Renvoie des informations sur une dataclass et ses attributs
 
 ### Description
 
-Calling `$catalog/\{dataClass\}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. Si vous souhaitez récupérer ces informations pour toutes les dataclasses dans le datastore de votre projet, utilisez [`$catalog/$all`](#catalogall).
+L'appel de `$catalog/\{dataClass\}` pour une dataclass spécifique renverra les informations suivantes sur la dataclass et les attributs qu'elle contient. Si vous souhaitez récupérer ces informations pour toutes les dataclasses dans le datastore de votre projet, utilisez [`$catalog/$all`](#catalogall).
 
 Les informations que vous récupérez concernent :
 
@@ -328,9 +328,9 @@ Vous pouvez récupérer les informations concernant une dataclass spécifique.
 
 ## singletons
 
-If you have defined [shared singletons](../Concepts/classes.md#singleton-classes) containing at least one [exposed function](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions), a `singletons` section is added to the returned json for both the `/$catalog` and `/$catalog/$all` syntaxes. It contains the collection of singleton classes as objects with their **name** and **methods** (i.e., exposed functions).
+Si vous avez défini des [shared singletons] (../Concepts/classes.md#singleton-classes) contenant au moins une [fonction exposée] (../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions), une section `singletons` est ajoutée au json retourné pour les syntaxes `/$catalog` et `/$catalog/$all`. Il contient la collection des classes singleton sous forme d'objets avec leur **name** et **methods** (c'est-à-dire les fonctions exposées).
 
-Singleton functions can be called by REST requests using the [`$singleton` command]($singleton.md).
+Les fonctions singleton peuvent être appelées par des requêtes REST à l'aide de la commande [`$singleton`]($singleton.md).
 
 ### Exemple
 
