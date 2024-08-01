@@ -76,7 +76,7 @@ Para más información, consulte la [descripción de `.show()` en la documentaci
 
 The `.addCSSClass` function <!-- REF #WebFormItemClass.addCSSClass().Summary -->adds the class specified in *className* to the component<!-- END REF -->.
 
-For more information, please refer to the [`.addCSSClass` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass#addcssclass).
+Para más información, consulte la [descripción de `.addCSSClass` en la documentación de Qodly](https://developer.qodly.com/docs/language/WebFormItemClass#addcssclass).
 
 ### .removeCSSClass()
 

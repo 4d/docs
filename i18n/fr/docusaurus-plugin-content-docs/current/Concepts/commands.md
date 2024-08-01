@@ -319,6 +319,7 @@ Nom (numéro)
 [FIRST RECORD](https://doc.4d.com/4dv20/help/command/en/page50.html) (50) -
 [FLUSH CACHE](https://doc.4d.com/4dv20/help/command/en/page297.html) (297) -
 [Focus object](https://doc.4d.com/4dv20/help/command/en/page278.html) (278) -
+
 [Folder](https://doc.4d.com/4dv20/help/command/en/page1567.html) (1567) -
 [FOLDER LIST](https://doc.4d.com/4dv20/help/command/en/page473.html) (473) -
 [Font file](https://doc.4d.com/4dv20/help/command/en/page1700.html) (1700) -
@@ -544,6 +545,8 @@ Nom (numéro)
 [Is table number valid](https://doc.4d.com/4dv20/help/command/en/page999.html) (999) -
 [Is user deleted](https://doc.4d.com/4dv20/help/command/en/page616.html) (616) -
 [Is waiting mouse up](https://doc.4d.com/4dv20/help/command/en/page1422.html) (1422) -
+[Is window maximized](https://doc.4d.com/4dv20R/help/command/en/page1830.html) (1830) -
+[Is window reduced](https://doc.4d.com/4dv20R/help/command/en/page1831.html) (1831) -
 [Is Windows](https://doc.4d.com/4dv20/help/command/en/page1573.html) (1573) -
 
 <a id="J"><b>J</b></a>
@@ -983,6 +986,7 @@ Nom (numéro)
 [Records in table](https://doc.4d.com/4dv20/help/command/en/page83.html) (83) -
 [REDRAW](https://doc.4d.com/4dv20/help/command/en/page174.html) (174) -
 [REDRAW WINDOW](https://doc.4d.com/4dv20/help/command/en/page456.html) (456) -
+[REDUCE RESTORE WINDOW](https://doc.4d.com/4dv20R/help/command/en/page1829.html) (1829) -
 [REDUCE SELECTION](https://doc.4d.com/4dv20/help/command/en/page351.html) (351) -
 [Refresh license](https://doc.4d.com/4dv20/help/command/en/page1336.html) (1336) -
 [REGENERATE MISSING TABLE](https://doc.4d.com/4dv20/help/command/en/page1126.html) (1126) -
@@ -1062,6 +1066,7 @@ Nom (numéro)
 [SEND VARIABLE](https://doc.4d.com/4dv20/help/command/en/page80.html) (80) -
 [Sequence number](https://doc.4d.com/4dv20/help/command/en/page244.html) (244) -
 [Session](https://doc.4d.com/4dv20/help/command/en/page1714.html) (1714) -
+[Session storage by id](https://doc.4d.com/4dv20R/help/command/en/page1839.html) (1839) -
 [SET ABOUT](https://doc.4d.com/4dv20/help/command/en/page316.html) (316) -
 [SET ALLOWED METHODS](https://doc.4d.com/4dv20/help/command/en/page805.html) (805) -
 [SET APPLICATION COLOR SCHEME](https://doc.4d.com/4dv20/help/command/en/page1762.html) (1762) -

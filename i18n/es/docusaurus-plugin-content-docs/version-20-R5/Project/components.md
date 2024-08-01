@@ -52,7 +52,7 @@ El contenido del archivo **/Sources/dependencies.json** debe tener la siguiente 
 }
 ```
 
-... where "myComponent1" and "myComponent2" are the name of the components, located at the same level as your project's package folder, that you want to be loaded in your project.
+... donde "myComponent1" y "myComponent2" son los nombres de los componentes, ubicados al mismo nivel que la carpeta de paquetes de su proyecto, que desea cargar en su proyecto.
 
 ### environment4d.json
 

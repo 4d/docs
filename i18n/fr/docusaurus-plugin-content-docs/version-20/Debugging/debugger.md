@@ -51,7 +51,7 @@ Arrêt du mode Trace et reprise du cours normal de l’exécution de la méthode
 
 #### Exécuter pas à pas
 
-The yellow arrow in the left margin of the Source Code pane is called the program counter. et le débogueur passe à la ligne suivante.
+Exécute la ligne de méthode en cours, indiquée par le compteur de programme (la flèche jaune). Le débogueur passe à la ligne suivante.
 
 Le bouton Exécuter pas à pas ne passe pas dans les sous-routines et les fonctions. Il reste au niveau de la méthode que vous êtes en train de tracer. Si vous souhaitez également tracer les appels aux sous-routines et aux fonctions, utilisez le bouton **Pas à pas détaillé**.
 
@@ -85,9 +85,9 @@ Si vous utilisez ce bouton pour modifier une méthode, les modifications ne sero
 
 > **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
 
-#### Bouton 'Enregistrer paramètres'
+#### Enregistrer paramètres
 
-Ce bouton permet de sauvegarder la configuration courante de la fenêtre du débogueur (taille et position de la fenêtre, emplacement des lignes de division et contenu de la zone d’évaluation des expressions). Elle sera alors utilisée par défaut à chaque ouverture de la base. Cela inclus :
+Ce bouton permet de sauvegarder la configuration courante de la fenêtre du débogueur (taille et position de la fenêtre, emplacement des lignes de division et contenu de la zone d’évaluation des expressions). Elle sera alors utilisée par défaut à chaque ouverture de la base. Cela inclut :
 
 * la taille et la position de la fenêtre
 * la position des lignes de division et le contenu de la zone qui évalue les expressions
@@ -225,7 +225,7 @@ Ce thème affiche des informations concernant le serveur Web principal de l'appl
 
 Les expressions contenues dans ce thème ne peuvent pas être modifiées.
 
-### Menu contextuel de la fenêtre d'évaluation
+### Menu contextuel
 
 Le menu contextuel de la fenêtre d’expression vous propose des options supplémentaires.
 
@@ -300,7 +300,7 @@ To edit an expression, click on it to select it, then click again or press **Ent
 To delete an expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard.
 > **Warning:** Be careful when you evaluate a 4D expression modifying the value of one of the System Variables (for instance, the OK variable) because the execution of the rest of the method may be altered.
 
-### Menu contextuel de la fenêtre d'évaluation
+### Menu contextuel
 
 Le menu contextuel de la fenêtre vous donne accès à l'éditeur de formule 4D et à d'autres options :
 
@@ -380,7 +380,7 @@ Par exemple :
 
 Considérons que le compteur de programme est défini sur la ligne `Si (condition This)`. Lorsque vous cliquez sur le bouton **Step over** , le compteur du programme passe directement à la ligne `DO_SOMETHING_ELSE` . Pour examiner les résultats de la ligne `DO_SOMETHING` , vous pouvez déplacer le compteur de programme sur cette ligne et l'exécuter.
 
-### Menu contexuel de la fenêtre d'évaluation du code
+### Menu contexuel
 
 Le menu contextuel de la Fenêtre d'évaluation du code donne accès à plusieurs fonctions utiles en phase d’exécution du code en mode Trace :
 
