@@ -789,7 +789,7 @@ The `boxInfo` object returned contains the following properties:
 |mailCount| Number| Number of messages in the mailbox|
 |mailRecent| Number| Number of messages with the "recent" flag (indicating new messages)|
 |id| text| Unique id of the mailbox|
-|mailUnseen| Number|Number of messages marked "unseen" (indicating messages marked unread)|
+|mailUnseen| Number|Number of messages marked "unseen"|
 
 #### Example
 
@@ -834,9 +834,9 @@ In the optional `parameters` parameter, pass an object containing values to filt
 |Property | Type| Description |
 |---|---|---|
 |isSubscribed|  Boolean |<li>**True** to return only subscribed mailboxes</li><li> **False** to return all available mailboxes</li>|
-| names      | Collection | Collection of object which containing a "name" attribute or collection of text containing the box names |
-| withBoxProperties| Boolean | If true (default): adds the selectable, inferior, and interesting attributes to the result object. If false, these attributes are omitted.|
-| withBoxInfo| Boolean | Default value is false. If true, adds the mailCount, mailRecent, and id attributes to the result object.|
+| names      | Collection | Collection of objects containing a "name" attribute or collection of texts containing the box names |
+| withBoxProperties| Boolean | If true (default): adds the `selectable`, `inferior`, and `interesting` attributes to the result object. If false, these attributes are omitted.|
+| withBoxInfo| Boolean | Default value is false. If true, adds the `mailCount`, `mailRecent`, and `id` attributes to the result object.|
 
 #### Result
 
@@ -850,7 +850,7 @@ Each object of the returned collection contains the following properties:
 |\[].interesting |Boolean  |Indicates if the mailbox has been marked "interesting" by the server: <ul><li>true - The mailbox has been marked "interesting" by the server. For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul>	Returned if withBoxProperties=true|
 | [].mailCount  | Number | Number of messages in inbox. Returned if withBoxInfo=true |
 | [].mailRecent | Number | Number of messages marked "recent" (indicating new messages). Returned if withBoxInfo=true  |
-| [].mailUnseen | Number | Number of messages marked "unseen" (indicating messages marked unread). Returned if withBoxInfo=true |
+| [].mailUnseen | Number | Number of messages marked "unseen". Returned if withBoxInfo=true |
 | [].id         | Text   | Unique mailbox identifier. Returned if withBoxInfo=true |
 
 
