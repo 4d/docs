@@ -8,22 +8,11 @@ The `CryptoKey` class in the 4D language encapsulates an asymmetric encryption k
 
 This class is available from the `4D` class store.
 
-### Example
+:::info See also
 
-The following sample code signs and verifies a message using a new ECDSA key pair, for example in order to make a ES256 JSON Web token.
+For a comprehensive overview of this class, please refer to the [**CryptoKey: encrypt, decrypt, sign, and verify!**](https://blog.4d.com/cryptokey-encrypt-decrypt-sign-and-verify/) blog post.
 
-```4d
- // Generate a new ECDSA key pair
-$key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
-
-  // Get signature as base64
-$message:="hello world"
-$signature:=$key.sign($message;New object("hash";"SHA256"))
-
-  // Verify signature
-$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
-ASSERT($status.success)
-```
+:::
 
 ### Summary
 
@@ -74,6 +63,70 @@ The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->create
 #### *CryptoKey*
 
 The returned `CryptoKey` object encapsulates an encryption key pair. It is a shared object and can therefore be used by multiple 4D processes simultaneously.
+
+#### Example 1
+
+A message is signed by a private key and the signature is verified by the corresponding public key. The following code signs and verifies a simple message signature.
+
+- Bob's side:
+
+```4d
+// Create the message
+$message:="hello world"
+Folder(fk desktop folder).file("message.txt").setText($message)
+
+// Create a key
+$type:=New object("type";"RSA")
+$key:=4D.CryptoKey.new($type)
+
+// Get the public key and save it
+Folder(fk desktop folder).file("public.pem").setText($key.getPublicKey())
+
+// Get signature as base64 and save it
+Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
+
+/*Bob sends the message, the public key and the signature to Alice*/
+```
+
+- Alice's side:
+
+```4d
+// Get message, public key & signature
+$message:=Folder(fk desktop folder).file("message.txt").getText()
+$publicKey:=Folder(fk desktop folder).file("public.pem").getText()
+$signature:=Folder(fk desktop folder).file("signature").getText()
+
+// Create a key
+$type:=New object("type";"PEM";"pem";$publicKey)
+$key:=4D.CryptoKey.new($type)
+
+// Verify signature
+If ($key.verify($message;$signature;$type).success)
+// The signature is valid
+
+End if
+```
+
+#### Example 2
+
+The following sample code signs and verifies a message using a new ECDSA key pair, for example in order to make a ES256 JSON Web token.
+
+```4d
+ // Generate a new ECDSA key pair
+$key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
+
+  // Get signature as base64
+$message:="hello world"
+$signature:=$key.sign($message;New object("hash";"SHA256"))
+
+  // Verify signature
+$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
+ASSERT($status.success)
+```
+
+
+
+
 
 <!-- REF CryptoKey.curve -->
 ## .curve
@@ -313,7 +366,7 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 <!-- REF #CryptoKey.type.Syntax -->**.type** : Text<!-- END REF -->
 
 
-Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "ECDSA", "PEM" <!-- END REF -->. 
+Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "ECDSA", "PEM" <!-- END REF -->.
 
 
 - "RSA": an RSA key pair, using `settings.size` as [.size](#size).

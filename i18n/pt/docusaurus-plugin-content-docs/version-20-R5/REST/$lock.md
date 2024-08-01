@@ -19,7 +19,7 @@ Para desbloquear a entidade para outras sessões e processos 4D:
 /?$lock=false
 ```
 
-The [`lockKindText` property](../API/EntityClass.md#lock) is "Locked by session".
+A [propriedade `lockKindText`](../API/EntityClass.md#lock) é "Locked by session".
 
 ### Descrição
 

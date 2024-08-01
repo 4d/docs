@@ -148,9 +148,9 @@ The `EntitySelection[index]` notation <!-- REF EntitySelectionClass.index.Summar
 
 Lembre que a entidade correspondente é recarregada a partir da datastore.
 
-*index* can be any number between 0 and `.length`-1.
+*index* pode ser qualquer número entre 0 e `.length`-1.
 
-- If *index* is out of range, an error is returned.
+- Se *index* está fora do intervalo, se devolve um erro.
 - If *index* corresponds to a dropped entity, a Null value is returned.
 
 :::caution
@@ -441,7 +441,7 @@ The `.at()` function <!-- REF #EntitySelectionClass.at().Summary -->returns the 
 
 If *index* is negative (from -1 to -n with n : length of the entity selection), the returned entity will be based on the reverse order of the entity selection.
 
-The function returns Null if *index* is beyond entity selection limits.
+A função devolve Null se o *index* estiver para além dos limites de selecção de entidades.
 
 #### Exemplo
 
@@ -643,7 +643,7 @@ The `.count()` function <!-- REF #EntitySelectionClass.count().Summary -->return
 Um erro é retornado se:
 
 - *attributePath* is a related attribute,
-- *attributePath* is not found in the entity selection dataclass.
+- *attributePath* não se encontra na classe de dados da entity selection.
 
 #### Exemplo
 
@@ -780,7 +780,7 @@ The `dk count values` option is only available with storage attributes of type b
 Um erro é retornado se:
 
 - *attributePath* is a related attribute,
-- *attributePath* is not found in the entity selection dataclass.
+- *attributePath* não se encontra na classe de dados da entity selection.
 
 #### Exemplos
 
@@ -843,7 +843,7 @@ After the call, the size of the returned collection is equal to the number of di
 
 #### Exemplo
 
-You want to get all paths stored in a *fullData* object attribute:
+Você deseja obter todos os caminhos armazenados em um atributo objeto *fullData*:
 
 ```4d
 var $paths : Collection
@@ -960,7 +960,7 @@ The `.extract()` function <!-- REF #EntitySelectionClass.extract().Summary -->re
 - entidade relacionada,
 - entidades relacionadas.
 
-If *attributePath* is invalid, an empty collection is returned.
+Se *attributePath* não for válido, se devolve uma coleção vazia.
 
 Esta função aceita duas sintaxes.
 
@@ -977,7 +977,7 @@ By default, entities for which *attributePath* is *null* or undefined are ignore
 
 With this syntax, `.extract()` populates the returned collection with the *attributePath* properties. Each element of the returned collection is an object with *targetPath* properties filled with the corresponding *attributePath* properties. Null values are kept (*option* parameter is ignored with this syntax).
 
-If several *attributePath* are given, a *targetPath* must be given for each. Only valid pairs \[*attributePath*, *targetPath*] are extracted.
+If several *attributePath* are given, a *targetPath* must be given for each. Somente pares válidos \[*attributePath*, *targetPath*] são extraídos.
 
 - Os atributos dataclass com [.kind](DataClassClass.md#attributename) = "relatedEntity" são extraídos como uma entidade.
 - Dataclass attributes with [.kind](DataClassClass.md#attributename) = "relatedEntities" are extracted as an entity selection.
@@ -1468,7 +1468,7 @@ Neste exemplo, se quisermos encontrar o menor salário entre todos os funcionár
 
 | Release | Mudanças                         |
 | ------- | -------------------------------- |
-| 18 R6   | Support of *keepOrder* parameter |
+| 18 R6   | Suporte do parâmetro *keepOrder* |
 | 17      | Adicionado                       |
 
 </details>
@@ -1719,7 +1719,7 @@ The `.orderByFormula()` function <!-- REF #EntitySelectionClass.orderByFormula()
 
 > Esta função não modifica a seleção de entidades original.
 
-You can use either a *formulaString* or a *formulaObj* parameter:
+Você pode usar um parâmetro *formulaString* ou *formulaObj*:
 
 - *formulaString*: you pass a 4D expression such as "Year of(this.birthDate)".
 - *formulaObj*: pass a valid formula object created using the `Formula` or `Formula from string` command.
@@ -2160,7 +2160,7 @@ Um erro é retornado se:
 
 - *attributePath* is not a numerical or an object attribute,
 - *attributePath* is a related attribute,
-- *attributePath* is not found in the entity selection dataclass.
+- *attributePath* não se encontra na classe de dados da entity selection.
 
 #### Exemplo
 

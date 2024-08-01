@@ -13,7 +13,7 @@ Además, los objetos archivo y carpeta soportan los `fileSystems`, que ofrecen u
 
 ## Rutas de los filesystem
 
-4D acepta varios `filesystem` que designan las carpetas 4D específicas con una ubicación variable en macOS y Windows. A filesystem path is evaluated with regards to the context and is returned as an absolute path.
+4D acepta varios `filesystem` que designan las carpetas 4D específicas con una ubicación variable en macOS y Windows. Una ruta del sistema de archivos se evalúa con respecto al contexto y se devuelve como una ruta absoluta.
 
 Las rutas de los filesystem son útiles por dos razones principales:
 

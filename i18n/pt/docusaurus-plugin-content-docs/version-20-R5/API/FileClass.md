@@ -86,7 +86,7 @@ The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new
 
 **File ( path { ; pathType } { ; \* })**
 
-In the *path* parameter, pass a file path string. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA/myfile.txt").
+No parâmetro *path*, passe um caminho do arquivo. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA/myfile.txt").
 
 > Only absolute pathnames are supported with the `File` command.
 
@@ -127,7 +127,7 @@ In the *fileConstant* parameter, pass a 4D built-in or system file, using one of
 | User settings file for data       | 4     | arquivo settings.4DSettings para dados atual, guardado na pasta Preferências ao lado do arquivo de dados.                                                                                                                                                                                                                                                                                                                                                                                                |
 | Verification log file             | 5     | Log files created by the `VERIFY CURRENT DATA FILE` and `VERIFY DATA FILE` commands or the Maintenance and Security Center (MSC). Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                           |
 
-If the target *fileConstant* does not exist, a null object is returned. Não se levantam erros.
+Se o alvo *fileConstant* não existir, um objecto nulo é devolvido. Não se levantam erros.
 
 If the command is called from a component, pass the optional `*` parameter to get the path of the host database. Otherwise, if you omit the `*` parameter, a null object is always returned.
 
@@ -167,7 +167,7 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 
 <!--REF file.create().Note -->
 
-**Not available for ZIP archives**<!-- END REF -->
+**Não disponível para arquivos ZIP**<!-- END REF -->
 
 <!--REF #FileClass.create().Syntax -->**.create()** : Boolean <!-- END REF -->
 
@@ -187,7 +187,7 @@ If necessary, the function creates the folder hierachy as described in the [plat
 
 **Valor retornado**
 
-- **True** if the file is created successfully;
+- **True** se o arquivo for criado com sucesso;
 - **False** if a file with the same name already exists or if an error occured.
 
 #### Exemplo
@@ -232,7 +232,7 @@ The `.createAlias()` function <!-- REF #FileClass.createAlias().Summary -->creat
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
-Por padrão em macOS, a função cria um pseudónimo padrão. You can also create a symbolic link by using the *aliasType* parameter. Estão disponíveis as seguintes constantes:
+Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar uma ligação simbólica utilizando o parâmetro *aliasType*. Estão disponíveis as seguintes constantes:
 
 | Parâmetros         | Valor | Comentário                                      |
 | ------------------ | ----- | ----------------------------------------------- |
@@ -243,7 +243,7 @@ On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter 
 
 **Objeto devolvido**
 
-A `4D.File` object with the `isAlias` property set to **true**.
+Um objeto `4D.File` com a propriedade `isAlias` definida como **true**.
 
 #### Exemplo
 
@@ -295,7 +295,7 @@ Se o ficheiro estiver atualmente aberto, o resultado depende do sistema operativ
 
 :::caution
 
-`.delete()` can delete any file on a disk. Isto inclui documentos criados com outras aplicações, bem como as próprias aplicações. `.delete()` should be used with extreme caution. A eliminação de um arquivo é uma operação permanente e não pode ser desfeita.
+`.delete()` pode apagar qualquer ficheiro num disco. Isto inclui documentos criados com outras aplicações, bem como as próprias aplicações. `.delete()` should be used with extreme caution. A eliminação de um arquivo é uma operação permanente e não pode ser desfeita.
 
 :::
 
@@ -518,7 +518,7 @@ A função substitui todos os delimitadores de fim de linha originais. Por defei
 | "cr"                         | 3 (`Document with CR`)             | As quebras de linha são convertidas em CR (carriage return), o formato padrão do Mac OS                                                                                                                                            |
 | "lf"                         | 4 (`Document with LF`)             | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                                                                                             |
 
-> The *break mode as text* value is case sensitive.
+> O valor *break mode as text* diferencia maiúsculas de minúsculas.
 
 #### Exemplo
 
@@ -620,7 +620,7 @@ A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. Se 
 
 > A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
-***info* parameter object with a .exe or .dll file**
+\***Parâmetro *info* com um arquivo .exe ou .dll**
 
 > A escrita de um arquivo .exe ou .dll só é possível no Windows.
 
@@ -642,7 +642,7 @@ For all properties except `WinIcon`, if you pass a null or empty text as value, 
 
 For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
 
-***info* parameter object with a .plist file**
+\***Parâmetro *info* com um arquivo .plist**
 
 Each valid property set in the *info* object parameter is written in the .plist file as a key. Qualquer nome chave é aceito. Os tipos de valores são preservados sempre que possível.
 
@@ -746,7 +746,7 @@ The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text*
 
 If the file referenced in the `File` object does not exist on the disk, it is created by the function. Quando o ficheiro já existir no disco, o seu conteúdo anterior é apagado, exceto se já estiver aberto, caso em que o seu conteúdo é bloqueado e é gerado um erro.
 
-In *text*, pass the text to write to the file. Pode ser um texto literal ("my text"), ou um campo/variável texto 4D.
+Em *text,* passe o texto a escrever no arquivo. Pode ser um texto literal ("my text"), ou um campo/variável texto 4D.
 
 Opcionalmente, pode designar o conjunto de caracteres a utilizar para escrever o conteúdo. Você pode passar também:
 
@@ -757,7 +757,7 @@ Opcionalmente, pode designar o conjunto de caracteres a utilizar para escrever o
 
 Se uma marca de ordem de byte (BOM) existe para o conjunto de caracteres, 4D a insere no ficheiro a menos que o conjunto de caracteres usado contenha o sufixo "-no-bom" (por exemplo, "UTF-8-no-bom"). Se não especificar um conjunto de caracteres, por defeito 4D usa o conjunto de caracteres "UTF-8" sem BOM.
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. Estão disponíveis as seguintes constantes, encontradas no tema **System Documents**:
 
 | Parâmetros                    | Valor | Comentário                                                                                                                                                                                                                                            |
 | ----------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

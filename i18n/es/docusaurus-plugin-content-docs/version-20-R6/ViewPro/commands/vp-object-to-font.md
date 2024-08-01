@@ -30,7 +30,7 @@ En *fontObj*, pase un objeto que contenga las propiedades de la fuente. Se sopor
 
 Este objeto puede crearse con el comando [VP Font to object](vp-font-to-object.md).
 
-The returned shorthand string can be assigned to the "font" property of a cell with the [VP SET CELL STYLE](vp-set-cell-style.md), for example.
+La cadena abreviada devuelta puede asignarse a la propiedad "font" de una celda con la función [VP SET CELL STYLE](vp-set-cell-style.md), por ejemplo.
 
 #### Ejemplo
 

@@ -40,7 +40,7 @@ As funções são chamadas no objeto correspondente no datastore do servidor.
 |                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$filter`                                                        |
 |                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$orderby`                                                       |
 | [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                                                                   |
-| [Singleton class](../Concepts/classes.md#singleton-classes)        | `/rest/$singleton/SingletonClass/SingletonClassFunction` (veja [$singleton page]($singleton.md)) |
+| [Classe Singleton](../Concepts/classes.md#singleton-classes)       | `/rest/$singleton/SingletonClass/SingletonClassFunction` (veja [$singleton page]($singleton.md)) |
 
 > `/rest/\{dataClass\}/Function` can be used to call either a dataclass or an entity selection function (`/rest/\{dataClass\}` returns all entities of the DataClass as an entity selection).\
 > A função é pesquisada primeiro na classe de seleção de entidades. Se não for encontrado, é procurado na dataclass. Por outras palavras, se uma função com o mesmo nome for definida tanto na classe DataClass como na classe EntitySelection, a função da classe de dataClass nunca será executada.

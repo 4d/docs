@@ -9,11 +9,11 @@ As configurações do servidor web 4D incluem parâmetros de segurança, portas 
 
 Há diferentes maneiras de configurar as definições do servidor web 4D, dependendo do escopo e do servidor que você deseja definir:
 
-| Localização do parâmetro                                                         | Âmbito                                                                 | Servidor Web a ser usado                                       |
-| -------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------- |
-| [webServer object](webServerObject.md)                                           | Temporário (sessão atual)                           | Qualquer servidor Web, incluindo servidores Web de componentes |
-| `WEB SET OPTION` o comando `WEB XXX`                                             | Temporário (sessão atual)                           | Servidor principal                                             |
-| [**Settings** dialog box](../settings/web.md) (**Web** pages) | Permanente (todas as sessões, armazenadas no disco) | Servidor principal                                             |
+| Localização do parâmetro                                                                      | Âmbito                                                                 | Servidor Web a ser usado                                       |
+| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------- |
+| [webServer object](webServerObject.md)                                                        | Temporário (sessão atual)                           | Qualquer servidor Web, incluindo servidores Web de componentes |
+| `WEB SET OPTION` o comando `WEB XXX`                                                          | Temporário (sessão atual)                           | Servidor principal                                             |
+| [Caixa de diálogo **Configurações**](../settings/web.md) (páginas **Web**) | Permanente (todas as sessões, armazenadas no disco) | Servidor principal                                             |
 
 > Alguns parâmetros não estão disponíveis em todos os locais.
 
@@ -173,11 +173,11 @@ Para más información sobre CORS, consulte la página [Cross-origin resource sh
 
 ## Ativar HTTP
 
-| Pode ser definido com              | Nome                                                             | Comentários |
-| ---------------------------------- | ---------------------------------------------------------------- | ----------- |
-| objeto webServer                   | [`HTTPEnabled`](API/WebServerClass.md#httpenabled)               | boolean     |
-| `WEB SET OPTION`                   | `Web HTTP enabled`                                               |             |
-| Caixa de diálogos de configurações | [Configuration page/Enable HTTP](../settings/web.md#enable-http) |             |
+| Pode ser definido com              | Nome                                                              | Comentários |
+| ---------------------------------- | ----------------------------------------------------------------- | ----------- |
+| objeto webServer                   | [`HTTPEnabled`](API/WebServerClass.md#httpenabled)                | boolean     |
+| `WEB SET OPTION`                   | `Web HTTP enabled`                                                |             |
+| Caixa de diálogos de configurações | [Página Configuração/Ativar HTTP](../settings/web.md#enable-http) |             |
 
 Indica se o servidor da Web aceitará ou não conexões não seguras.
 
@@ -244,11 +244,11 @@ Passa o tamanho expresso em bytes como valor. Por defeito, o limite de compress�
 
 ## Porta HTTP
 
-| Pode ser definido com              | Nome                                                         | Comentários |
-| ---------------------------------- | ------------------------------------------------------------ | ----------- |
-| objeto webServer                   | [`HTTPPort`](API/WebServerClass.md#httpport)                 | number      |
-| `WEB SET OPTION`                   | `Web port ID`                                                |             |
-| Caixa de diálogos de configurações | [Configuration page/HTTP Port](../settings/web.md#http-port) |             |
+| Pode ser definido com              | Nome                                                              | Comentários |
+| ---------------------------------- | ----------------------------------------------------------------- | ----------- |
+| objeto webServer                   | [`HTTPPort`](API/WebServerClass.md#httpport)                      | number      |
+| `WEB SET OPTION`                   | `Web port ID`                                                     |             |
+| Caixa de diálogos de configurações | [Página de Configuração/Porta HTTP](../settings/web.md#http-port) |             |
 
 Número da porta IP (TCP) de escuta para HTTP. Por padrão, 4D publica uma aplicação web na porta Web HTTP normal (porta TCP), que é a porta 80. Se essa porta já for usada por outro serviço da web, você precisa alterar a porta HTTP usada pelo 4D para esse banco de dados.
 
@@ -468,7 +468,7 @@ Em troca, você deve se certificar neste caso de inicializar sistematicamente as
 
 ## Robots.txt
 
-Certain robots (query engines, spiders...) scroll through web servers and static pages. Se não quiser que os robôs acessem todo o seu site, você pode definir quais URLs eles não podem acessar.
+Certos robôs (motores de consulta, aranhas...) scroll through web servers and static pages. Se não quiser que os robôs acessem todo o seu site, você pode definir quais URLs eles não podem acessar.
 
 Para isso, coloque o arquivo ROBOTS.TXT na raiz do servidor. Este ficheiro deve ser estruturado da seguinte forma:
 

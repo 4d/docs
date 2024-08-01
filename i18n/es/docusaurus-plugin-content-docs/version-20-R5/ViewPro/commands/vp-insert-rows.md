@@ -17,7 +17,7 @@ title: VP INSERT ROWS
 
 El comando `VP INSERT ROWS` <!-- REF #_method_.VP INSERT ROWS.Summary -->inserta filas definidas por el _rangeObj_<!-- END REF -->.
 
-In _rangeObj_, pass an object containing a range of the starting row (the row which designates where the new row will be inserted) and the number of rows to insert. Si se omite el número de línea a insertar (no se define), se inserta una sola línea.
+En _rangeOb_j, pase un objeto que contenga un rango de la línea inicial (la línea que designa dónde se insertará la nueva línea) y el número de línea a insertar. Si se omite el número de línea a insertar (no se define), se inserta una sola línea.
 
 Las nuevas líneas se insertan directamente antes de la primera línea de _rangeObj_.
 

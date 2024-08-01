@@ -321,7 +321,7 @@ Quando os controles de aba com uma direção personalizada são exibidos no Wind
 
 #### Veja também
 
-[4D View Pro reference guide](../ViewPro/getting-started.md)
+[Guia de referência de 4D View Pro](.../ViewPro/getting-started.md)
 
 ---
 

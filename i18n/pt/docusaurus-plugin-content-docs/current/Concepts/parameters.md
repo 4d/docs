@@ -7,19 +7,19 @@ Frequentemente será preciso passar dados para seus métodos. Isso é facilmente
 
 ## Visão Geral
 
-**Los parámetros** (o **argumentos**) son piezas de datos que un método o una función de clase necesita para realizar su tarea. Los términos _parámetros_ y _argumentos_ se utilizan indistintamente en este manual. Parâmetros também são passados para comandos integrados 4D. En este ejemplo, la cadena "Hello" es un argumento para el comando integrado `ALERT`:
+Os **parâmetros** (ou **argumentos**) são partes de dados que um método ou uma função de classe precisa para executar sua tarefa. Os termos _parâmetro_ e _argumento_ são usados de forma intercambiável ao longo deste manual. Parâmetros também são passados para comandos integrados 4D. Neste exemplo, a cadeia de caracteres "Hello" é um argumento para o comando interno `ALERT`:
 
 ```4d
 ALERT("Hello")
 ```
 
-Os parâmetros são passados aos métodos da mesma maneira. Por ejemplo, si una función de clase llamada `getArea()` acepta dos parámetros, una llamada a la función de clase podría verse así:
+Os parâmetros são passados aos métodos da mesma maneira. Por exemplo, se uma função de classe chamada `getArea()` aceita dois parâmetros, uma chamada para a função de classe pode se parecer com isso:
 
 ```4d
 $area:=$o.getArea(50;100)
 ```
 
-O, si un método proyecto llamado `DO_SOMETHING` acepta tres parámetros, una llamada al método podría verse así:
+Ou, se um método de projeto chamado `DO_SOMETHING` aceitar três parâmetros, uma chamada ao método poderá ter a seguinte aparência:
 
 ```4d
 Essa função é chamada da maneira abaixo:
@@ -30,12 +30,12 @@ Os parâmetros estão separados por ponto e vírgula (;).
 Os mesmos princípios são usados quando métodos forem executados através de comandos dedicados, por exemplo:
 
 ```4d
-EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
-//pass the !05/05/20! date as parameter to the SetCalendarDate  
-//in the context of a subform
+EXECUTE METHOD IN SUBFORM("Cal2"; "SetCalendarDate";*;!05/05/20!)  
+//passa a data !05/05/20! como parâmetro para SetCalendarDate  
+//no contexto de um subformulário
 ```
 
-Los datos también pueden ser **devueltos**desde métodos y funciones de clase. Por ejemplo, la siguiente línea de instrucción utiliza el comando integrado, `Length`, para devolver la longitud de una cadena. La instrucción pone el valor devuelto por `Length` en una variable llamada _MyLength_. Esta é a instrução:
+Os dados também podem ser **retornados** a partir de métodos e funções de classe. Por exemplo, a linha a seguir é uma instrução que usa o comando interno, `Length`, para retornar o comprimento de uma cadeia de caracteres. A instrução coloca o valor retornado por `Length` em uma variável chamada _MyLength_. Esta é a instrução:
 
 ```4d
 MyLength:=Length("How did I get here?")
@@ -43,20 +43,20 @@ MyLength:=Length("How did I get here?")
 
 Qualquer subrotina pode retornar um valor. Só se pode declarar um único parámetro de saída por método ou função de classe.
 
-Los valores de entrada y salida son [evaluados](#values-or-references) en el momento de la llamada y copiados en o desde variables locales dentro de la función o método de la clase llamada. Los parámetros variables deben ser [declarados](#declaring-parameters) en el código llamado.
+Os valores de entrada e saída são [avaliados](#valores-ou-referências) no momento da chamada e copiados para ou de variáveis locais dentro da função ou método da classe chamada. Os parâmetros das variáveis devem ser [declarados] (#declaring-parameters) no código chamado.
 
 :::info Compatibidade
 
-Throughout the 4D documentation, you might see examples where parameters are automatically copied in sequentially numbered local variables ($0, $1, etc.) and declared using compiler directives. Ej: `C_TEXT($1;$2)`. Esta sintaxe antiga ainda é suportada, mas já não é recomendada.
+Ao longo da documentação 4D, você pode ver exemplos em que os parâmetros são automaticamente copiados em variáveis locais numeradas sequencialmente ($0, $1, etc.) e declarados usando as diretivas do compilador. Ex: `C_TEXT($1;$2)`. Esta sintaxe antiga ainda é suportada, mas já não é recomendada.
 
 :::
 
 ## Declaração de parâmetros
 
-Dentro de métodos ou funções de classe chamados, valores parâmetros são atribuidos à variáveis locais. Generalmente se declararan los parámetros utilizando un **nombre de parámetro** con un **tipo de parámetro**, separados por dos puntos.
+Dentro de métodos ou funções de classe chamados, valores parâmetros são atribuidos à variáveis locais. Normalmente, você declara os parâmetros usando um **nome do parâmetro** junto com um **tipo de parâmetro**, separados por dois pontos.
 
-- Para las funciones de clase, los parámetros se declaran junto con la palabra clave `Function`.
-- Para los métodos (métodos proyecto, métodos objeto formulario, métodos base y triggers), los parámetros se declaran utilizando la palabra clave `#DECLARE` al principio del código del método.
+- Para as funções de classe, os parâmetros são declarados juntamente com a palavra chave `Function`.
+- Para métodos (métodos de projeto, métodos de objeto de formulário, métodos de banco de dados e acionadores), os parâmetros são declarados usando a palavra-chave `#DECLARE` no início do código do método.
 
 Exemplos:
 
@@ -72,11 +72,11 @@ Function getArea($width : Integer; $height : Integer) -> $area : Integer
 As regras abaixo são válidas:
 
 - A linha de declaração deve ser a primeira linha do método ou código da função, senão um erro é exibido (só comentários ou quebras de linha podem preceder a declaração).
-- Los nombres de los parámetros deben comenzar con un carácter `$` y cumplir con [reglas de denominación de las propiedades](identifiers.md#object-properties).
+- Os nomes dos parâmetros devem começar com um caractere `$` e estar em conformidade com as [regras de nomeação de propriedades] (identifiers.md#object-properties).
 - Os parâmetros (e tipos) múltiplos são separados por ponto e vírgula (;).
 - Sintaxes multilinha são aceitas (usando "\\").
 
-Por ejemplo, cuando se llama a una función `getArea()` con dos parámetros:
+Por exemplo, quando você chama uma função `getArea()` com dois parâmetros:
 
 ```4d
 $area:=$o.getArea(50;100)
@@ -90,29 +90,29 @@ Function getArea($width : Integer; $height : Integer)-> $area : Integer
 	$area:=$width*$height
 ```
 
-> If the type is not defined, the parameter will be defined as [`Variant`](dt_variant.md).
+> Se o tipo não for definido, o parâmetro será definido como [`Variant`] (dt_variant.md).
 
-Todos los tipos de métodos de 4D soportan la palabra clave `#DECLARE`, incluidos los métodos base. Por ejemplo, en el método base `On Web Authentication`, puede declarar parámetros temporales:
+Todos los tipos de métodos de 4D soportan la palabra clave `#DECLARE`, incluidos los métodos base. Por exemplo, no método de database `On Web Authentication`, você pode declarar parâmetros nomeados:
 
 ```4d
-	// On Web Authentication database method
+	// Método  banco de dados On Web Authentication
 #DECLARE ($url : Text; $header : Text; \
   $BrowserIP : Text; $ServerIP : Text; \
   $user : Text; $password : Text) \
   -> $RequestAccepted : Boolean
 $entitySelection:=ds.User.query("login=:1"; $user)
-// Check hash password...
+// Verificar a senha hash...
 ```
 
 ### Valor retornado
 
-El parámetro de retorno de una función se declara añadiendo una flecha (->) y la definición del parámetro después de la lista de parámetros de entrada. Por exemplo:
+Você declara o parâmetro de retorno de uma função adicionando uma seta (->) e a definição do parâmetro após a lista de parâmetros de entrada. Por exemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-También puede declarar el parámetro de retorno añadiendo sólo `: type`, en cuyo caso puede ser manejado por un [return](#return-expression). Por exemplo:
+Também é possível declarar o parâmetro de retorno apenas acrescentando `: type`, caso em que pode ser tratado por uma [declaração de retorno](#return-expression). Por exemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -124,16 +124,16 @@ Function add($x : Variant; $y : Integer): Integer
 Os parâmetros, que incluem o valor retornado, devem ser declarados apenas uma vez. Em particular, você não pode declarar o mesmo parâmetro como entrada e saída, mesmo com o mesmo tipo. Por exemplo:
 
 ```qs
-	//invalid declaration
+	//declaração inválida
 Function myTransform ($x : Integer) -> $x : Integer 
-	//error: $x is declared twice
+	//erro: $x é declarado duas vezes
 ```
 
 :::
 
 ### Tipos de datos compatíveis
 
-With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md#using-the-var-keyword), including class objects. Por exemplo:
+Com parâmetros nomeados, você pode usar os mesmos tipos de dados que são [suportados pela palavra-chave `var`] (variables.md#using-the-var-keyword), incluindo objetos de classe. Por exemplo:
 
 ```4d
 Function saveToFile($entity : cs. ShapesEntity; $file : 4D. File)
@@ -141,13 +141,13 @@ Function saveToFile($entity : cs. ShapesEntity; $file : 4D. File)
 
 :::note
 
-Las expresiones de tablas o arrays sólo pueden pasarse [como referencia utilizando un puntero](dt_pointer.md#pointers-as-parameters-to-methods).
+As tabelas ou expressões de matriz só podem ser passadas [como referência usando um ponteiro] (dt_pointer.md#pointers-as-parameters-to-methods).
 
 :::
 
 ### Inicialização
 
-When parameters are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been assigned.
+Quando os parâmetros são declarados, eles são inicializados com o [**valor padrão correspondente ao seu tipo**] (data-types.md#default-values), que eles manterão durante a sessão, desde que não tenham sido atribuídos.
 
 ## `return {expression}`
 
@@ -159,7 +159,7 @@ When parameters are declared, they are initialized to the [**default value corre
 
 </details>
 
-La instrucción `return` finaliza la ejecución de una función o de un método y puede utilizarse para devolver una expresión a quien la llama.
+A instrução `return` encerra a execução da função ou do método e pode ser usada para retornar uma expressão ao chamador.
 
 Por exemplo, a seguinte função devolve o quadrado de seu argumento, $x, onde $x é um número.
 
@@ -168,9 +168,9 @@ Function square($x : Integer)
    return $x * $x
 ```
 
-> Internamente, `return x` ejecuta `$0:=x` o (si se declara) `myReturnValue:=x`, y devuelve al llamante. Si `return` se utiliza sin una expresión, la función o el método devuelve un valor nulo del tipo de retorno declarado (si lo hay), de lo contrario _undefined_.
+> Internamente, o `return x` executa `$0:=x` ou (se declarado) `myReturnValue:=x`, e retorna ao remetente. Se `return` for usado sem uma expressão, a função ou o método retornará um valor nulo do tipo de retorno declarado (se houver), caso contrário, _indefinido_.
 
-La instrucción `return` puede utilizarse junto con la sintaxis estándar para los [valores devueltos](#valor-devuelto) (el valor devuelto debe ser del tipo declarado). Entretanto lembre que isso finaliza imediatamente a execução de código. Por exemplo:
+A instrução `return` pode ser usada junto com a sintaxe padrão para [valores retornados](#valorretornado) (o valor retornado deve ser do tipo declarado). Entretanto lembre que isso finaliza imediatamente a execução de código. Por exemplo:
 
 ```4d
 Function getValue
@@ -186,13 +186,13 @@ Function getValue -> $v : Integer
 
 ## Indireção dos parâmetros
 
-Os métodos e funções 4D aceitam um número variável de parâmetros. You can address those parameters with a `For...End for` loop, the [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html) command and the **parameter indirection syntax**. Dentro del método, una dirección de indirección tiene el formato `${N}`, donde `N` es una expresión numérica.
+Os métodos e funções 4D aceitam um número variável de parâmetros. Você pode abordar esses parâmetros com um loop `For...End for`, o comando [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html) e a sintaxe de indireção de **parâmetro**. Dentro do método, um endereço de indireção é formatado `${N}`, onde `N` é uma expressão numérica.
 
 ### Uso de parâmetros variáveis
 
 Por exemplo, considere uma função que some os valores e devolva a soma formatada segundo um formato que se passa como parâmetro. Cada vez que chamar a esse método, o número de valores a somar pode variar. Devemos passar os valores como parâmetros ao método e o formato em forma de string dos caracteres. O número de valores pode variar de chamada a chamada.
 
-Aquí está el método, llamado `MySum`:
+Aqui está a função, chamada `MySum`:
 
 ```4d
  #DECLARE($format : Text) -> $result : Text
@@ -210,7 +210,7 @@ Os parâmetros da função devem ser passados na ordem correta: primeiro o forma
  Result:=MySum("000";1;2;200) //"203"
 ```
 
-Observe que, mesmo que tenha declarado 0, 1 ou mais parâmetros, você sempre poderá passar o número de parâmetros que desejar. Los parámetros están todos disponibles dentro del código llamado a través de la sintaxis `${N}` y el tipo de parámetros extra es [Variant](dt_variant.md) por defecto (puede declararlos utilizando la [notación variadic](#declaring-variadic-parameters)). Você só precisa garantir que os parâmetros existam, graças ao comando [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html). Por exemplo:
+Observe que, mesmo que tenha declarado 0, 1 ou mais parâmetros, você sempre poderá passar o número de parâmetros que desejar. Os parâmetros estão todos disponíveis no código chamado por meio da sintaxe `${N}` e o tipo de parâmetros extras é [Variant] (dt_variant.md) por padrão (você pode declará-los usando a [notação variadic] (#declaring-variadic-parameters)). Você só precisa garantir que os parâmetros existam, graças ao comando [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html). Por exemplo:
 
 ```4d
 //método foo
@@ -230,12 +230,12 @@ foo("hello";"world";!01/01/2021!;42;?12:00:00?) //parâmetros extras foram passa
 
 ### Declaração de parâmetros variáveis
 
-Não é obrigatório declarar parâmetros variáveis. Los parámetros variables no declarados obtienen automáticamente el tipo [Variant](dt_variant.md).
+Não é obrigatório declarar parâmetros variáveis. Os parâmetros variadic não declarados recebem automaticamente o tipo [Variant] (dt_variant.md).
 
 Entretanto, para evitar erros de incompatibilidade de tipos durante a execução do código, você pode declarar um número variável de parâmetros usando a notação "..." nos protótipos de suas funções, construtores de classes e métodos (parâmetros variádicos). Você especifica o tipo do parâmetro seguindo a notação "..." com o tipo desejado.
 
 ```4d
-#DECLARE ( ... : Text ) // Undefined number of 'Text' parameters
+#DECLARE ( ... : Text ) // Número indefinido de parâmetros 'Text'
 
 ```
 
@@ -257,7 +257,7 @@ Function myfunction (var1: Integer ; ... : Text)
 
 #### Exemplo
 
-Aquí tenemos un método llamado `SumNumbers` que devuelve el total calculado para todos los números pasados como parámetros:
+Aqui temos um método chamado `SumNumbers` que retorna o total calculado para todos os números passados como parâmetros:
 
 ```4d
 
@@ -287,31 +287,31 @@ $total3:=SumNumbers(1; 2; "hello"; 4; 5) // erro
 
 :::note Nota de compatibilidade
 
-La sintaxis heredada para declarar parámetros variádicos (`C_TEXT(${4})`) sigue siendo compatible, pero ahora se prefiere la notación variable.
+A sintaxe herdada para declarar parâmetros variádicos (`C_TEXT(${4})`) ainda é compatível, mas a notação variádica agora é a preferida.
 
 :::
 
 ## Compilação
 
-Incluso si no es obligatorio en [modo interpretado](interpreted.md), debe asegurarse de que todos los parámetros de método y función se declaren correctamente tan pronto como tenga la intención de compilar su proyecto.
+Mesmo que isso não seja obrigatório no [modo interpretado](interpreted.md), você deve se certificar de que todos os parâmetros de métodos e funções sejam declarados corretamente assim que pretender compilar o projeto.
 
 :::note
 
-You can delegate the declaration of parameters (as well as all variables) to the compiler by checking the [**Type the variable** compilation path option](../Project/compiler.md#compilation-path). No entanto, essa opção aumenta significativamente o tempo de compilação.
+Você pode delegar a declaração de parâmetros (bem como de todas as variáveis) ao compilador, marcando a opção de caminho de compilação [**Tipo da variável**](../Project/compiler.md#compilation-path). No entanto, essa opção aumenta significativamente o tempo de compilação.
 
 :::
 
 ### Parâmetros declarados em protótipos
 
-Cuando se utilizan las palabras clave `#DECLARE` o `Function`, los parámetros se declaran automáticamente y no se necesita información adicional para el compilador. Exemplos:
+Ao usar as palavras-chave `#DECLARE` ou `Function`, os parâmetros são declarados automaticamente e nenhuma informação adicional é necessária para o compilador. Exemplos:
 
 ```4d
 #DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
-	// all method parameters are declared with their type
+	// todos os parâmetros do método são declarados com seu tipo
 ```
 
 ```4d
-	// On Web Connection Database Method
+// Método de banco de dados On Web Connection
 #DECLARE ($url : Text; $header : Text; \
   $BrowserIP : Text; $ServerIP : Text; \
   $user : Text; $password : Text)
@@ -319,7 +319,7 @@ Cuando se utilizan las palabras clave `#DECLARE` o `Function`, los parámetros s
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer
-	// all function parameters are declared with their type
+	// todos os parâmetros da função são declarados com seu tipo
 ```
 
 :::tip
@@ -330,15 +330,15 @@ Declarar parâmetros em protótipos é uma boa prática, mesmo em projetos não 
 
 ### Parâmetros de método declarados fora dos protótipos
 
-Puede ocurrir que los parámetros del método no se declaren en prototipos `#DECLARE`. Essas declarações podem ser encontradas, em particular, no código 4D herdado. En este caso, debe configurar un método `Compiler_Methods` para reunir las declaraciones de estos parámetros de método.
+Pode acontecer de os parâmetros do método não serem declarados nos protótipos `#DECLARE`. Essas declarações podem ser encontradas, em particular, no código 4D herdado. Nesse caso, você deve configurar um método `Compiler_Methods` para reunir as declarações desses parâmetros de método.
 
 #### Método `Compiler_Methods`
 
-Cuando algunos parámetros de método no se declaran en prototipos `#DECLARE`, el compilador 4D necesita que los declare en un método específico utilizando una sintaxis especial:
+Quando alguns parâmetros de método não são declarados nos protótipos `#DECLARE`, o compilador 4D precisa que você os declare em um método específico usando uma sintaxe especial:
 
 - é possível agrupar todos os parâmetros de variáveis locais para métodos de projeto num ou mais métodos de projeto
-- los nombres de los métodos deben empezar por "**Compiler_**", por defecto "Compiler_Methods".
-- dentro de un método de este tipo, se predeclaran los parámetros de cada método utilizando la siguiente sintaxis: `C_XXX(nombredelmétodo;parámetro)`.
+- o(s) nome(s) do método deve iniciar com "**Compiler_**", por padrão "Compiler_Methods".
+- Dentro desse método, você predeclara os parâmetros de cada método usando a seguinte sintaxe: `C_XXX(methodName;parameter)`.
 
 Por exemplo:
 
@@ -353,7 +353,7 @@ Esta sintaxe não é executável em modo interpretado.
 
 :::
 
-You can create and fill automatically a `Compiler_Methods` method containing all your parameters declared outside prototypes using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
+Você pode criar e preencher automaticamente um método `Compiler_Methods` que contenha todos os seus parâmetros declarados fora dos protótipos usando o botão [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** na caixa de diálogo Compiler Settings.
 
 :::info
 
@@ -363,8 +363,8 @@ Alguns contextos não suportam a declaração em um método "Compiler_", portant
 
 - Triggers - O parâmetro $0 (Longint), o resultado de um trigger, será tipado pelo compilador se o parâmetro não tiver sido declarado explicitamente. Entretanto, se quiser declará-lo, deve fazer isso no próprio trigger.
 
-- Objetos formulario que aceptan el evento formulario `On Drag Over` - El parámetro $0 (Entero largo), que es el resultado del evento formulario `On Drag Over`, será digitado por el compilador si el parámetro no ha sido declarado explícitamente. Entretanto, se quiser fazer a declaração, deve fazer isso no método objeto.
-  **Nota:** el compilador no inicializa el parámetro $0. Por lo tanto, tan pronto como utilice el evento formulario `On Drag Over`, debe inicializar $0. Por exemplo:
+- Objetos de formulário que aceitam o evento de formulário `On Drag Over` - O parâmetro $0 (Longint), que é o resultado do evento de formulário `On Drag Over`, é tipado pelo compilador se o parâmetro não tiver sido declarado explicitamente. Entretanto, se quiser fazer a declaração, deve fazer isso no método objeto.
+  **Nota:** O compilador não inicializa o parâmetro $0. Portanto, logo que utilizar o evento formulário `On Drag Over`, deve inicializar $0. Por exemplo:
 
 ```4d
  C_LONGINT($0)
@@ -382,12 +382,12 @@ Alguns contextos não suportam a declaração em um método "Compiler_", portant
 
 ### Conflitos entre declarações
 
-- Si un parámetro se declara tanto en un prototipo `#DECLARE` como en un método _Compiler__, se ignora la entrada del método  _Compiler__.
-- Si un parámetro se declara tanto en un prototipo `#DECLARE` como en un método _Compiler__ pero con un tipo de datos diferente, Code Live Checker genera un error durante la verificación de sintaxis y la compilación.
+- Se um parâmetro for declarado em um protótipo `#DECLARE` e em um método _Compiler__, a entrada do método _Compiler__ será ignorada.
+- Se um parâmetro for declarado em um protótipo `#DECLARE` e em um método _Compiler__, mas com um tipo de dados diferente, o Code Live Checker gerará um erro durante a verificação de sintaxe e a compilação.
 
 ## Tipo de parámetro equivocado
 
-Llamar a un parámetro con un tipo incorrecto es un [error](error-handling.md) que impide la correcta ejecución. Por exemplo se executar os métodos
+Chamar um parâmetro com um tipo errado é um [erro] (error-handling.md) que impede a execução correta. Por exemplo se executar os métodos
 
 ```4d
 // method1
@@ -401,16 +401,16 @@ method1(42) //tipo incorrecto, texto esperado
 
 Este caso es tratado por 4D dependendo do contexto:
 
-- en [proyectos compilados](interpreted.md), se genera un error en el paso de compilación siempre que sea posible. Senão, um erro é gerado quando o método for chamado.
+- em [projetos compilados](interpreted.md), um erro é gerado na etapa de compilação sempre que possível. Senão, um erro é gerado quando o método for chamado.
 - em projetos interpretados:
-  - si el parámetro se declaró utilizando la [sintaxis nombrada](#named-parameters) (`#DECLARE` o `Function`), se genera un error cuando se llama al método.
-  - si el parámetro se declaró utilizando (`C_XXX`), no se genera ningún error, el método llamado recibe un valor vacío del tipo esperado.
+  - Se o parâmetro tiver sido declarado usando a [named syntax](#named-parameters) (`#DECLARE` ou `Function`), será gerado um erro quando o método for chamado.
+  - se o parâmetro foi declarado utilizando (`C_XXX`), não é gerado qualquer erro, o método chamado recebe um valor vazio do tipo esperado.
 
 ## Usando propriedades objeto como parâmetros nomeados
 
-La utilización de objetos como parámetros permite manejar **parámetros con nombre**. Este estilo de programação é simples, flexível e fácil de ler.
+O uso de objetos como parâmetros permite que você manipule **parâmetros nomeados**. Este estilo de programação é simples, flexível e fácil de ler.
 
-Por ejemplo, utilizando el método `CreatePerson`:
+Por exemplo, utilizando o método `CreatePerson`:
 
 ```4d
   //CreatePerson
@@ -420,7 +420,7 @@ Por ejemplo, utilizando el método `CreatePerson`:
  ALERT(String($person.Age))  
 ```
 
-En el método `ChangeAge` puede escribir:
+No método `ChangeAge` você pode escrever:
 
 ```4d
   //ChangeAge
@@ -430,13 +430,13 @@ En el método `ChangeAge` puede escribir:
  ALERT($para.Name+" is "+String($para.Age)+" years old.")
 ```
 
-Esto ofrece una poderosa manera de definir [parámetros opcionales](#optional-parameters) (ver también abajo). Para manejar os parâmetros que faltam, pode:
+Isso proporciona uma maneira eficiente de definir [parâmetros opcionais] (#optional-parameters) (veja também abaixo). Para manejar os parâmetros que faltam, pode:
 
-- verificar si se suministran todos los parámetros esperados comparándolos con el valor `Null`, o
+- verifique se todos os parâmetros esperados são fornecidos comparando-os com o valor `Null`, ou
 - pré-definir os valores dos parâmetros, ou
 - usá-los como valores vazios.
 
-En el método `ChangeAge` anterior, las propiedades Age y Name son obligatorias y producirían errores si faltaran. Para evitar isso, pode escrever:
+No método `ChangeAge` acima, as propriedades Age e Name são obrigatórias e produziriam erros se estivessem faltando. Para evitar isso, pode escrever:
 
 ```4d
   //ChangeAge
@@ -470,13 +470,13 @@ Com variáveis com nome, qualquer parâmetro pode ser opcional. No exemplo acima
 
 ## Parâmetros opcionais
 
-En el manual _Lenguaje de 4D_, los caracteres { } (llaves) indican parámetros opcionales. Por ejemplo, `ALERT (message{; okButtonTitle})` significa que el parámetro _okButtonTitle_ puede omitirse al llamar al comando. Pode fazer a chamada de duas maneiras:
+No manual Linguagem de 4D, os caracteres { } (chaves) indicam parâmetros opcionais. Por ejemplo, `ALERT (message{; okButtonTitle})` significa que el parámetro _okButtonTitle_ puede omitirse al llamar al comando. Pode fazer a chamada de duas maneiras:
 
 ```4d
 ALERT("Are you sure?";"Yes I am") //2 parameters ALERT("Time is over") //1 parameter
 ```
 
-Os métodos projeto 4D também aceitam esses parâmetros opcionais, começando pela direita. Pode declarar qualquer número de parâmetros. Si llama a un método o función con menos parámetros que los declarados, los parámetros que faltan se procesan como valores por defecto en el código llamado, [según su tipo](data-types.md#default-values). Por exemplo:
+Os métodos projeto 4D também aceitam esses parâmetros opcionais, começando pela direita. Pode declarar qualquer número de parâmetros. Se você chamar um método ou função com menos parâmetros do que o declarado, os parâmetros ausentes serão processados como valores padrão no código chamado, [de acordo com seu tipo] (data-types.md#default-values). Por exemplo:
 
 ```4d
 // función "concate" de myClass
@@ -491,9 +491,9 @@ $result:=$param1+" "+$param2
  $class.concate() // Mostra " "
 ```
 
-> Também se pode chamar um método ou função com mais parâmetros do que os declarados. Estarán disponibles en el código llamado a través de la sintaxis [${N}](#parameter-indirection-n).
+> Também se pode chamar um método ou função com mais parâmetros do que os declarados. Eles estarão disponíveis no código chamado por meio da [${N} syntax](#parameter-indirection-n).
 
-Utilizando el comando `Count parameters` desde dentro del método llamado, puede detectar el número real de parámetros y realizar diferentes operaciones dependiendo de lo que haya recibido.
+Usando o comando `Count parameters` de dentro do método chamado, você pode detectar o número real de parâmetros e executar diferentes operações, dependendo do que recebeu.
 
 O exemplo abaixo mostra uma mensagem de texto e pode inserir o texto em um documento no disco ou em uma área de 4D Write Pro:
 
@@ -518,61 +518,60 @@ Depois de adicionar este método projeto a sua aplicação, pode escrever:
 APPEND TEXT(vtSomeText) //Will only display the  message APPEND TEXT(vtSomeText;$path) //Displays text message and appends it to document at $path APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpArea
 ```
 
-> Cuando los parámetros opcionales son necesarios en sus métodos, también puede considerar el uso de [propiedades de objeto como parámetros con nombre](#using-objects-properties-as-named-parameters) que ofrecen una forma flexible de manejar un número variab
+> Quando parâmetros opcionais são necessários em seus métodos, você também pode considerar o uso de [propriedades do objeto como parâmetros com nome](#using-objects-properties-as-named-parameters), que fornecem uma maneira flexível de lidar com um número variável de parâmetros.
 
 ## Valores ou referências
 
-Cuando pasa un parámetro, 4D siempre evalúa la expresión del parámetro en el contexto del método que llama y define el **valor resultante** en las variables locales en la función de clase o la subrutina. As variáveis locais/parâmetros não são os campos, variáveis ou expressões realmente passadas pelo método chamada; eles apenas contém os valores que foram passados. The local variables/parameters are not the actual fields, variables, or expressions passed by the calling method; they only contain the values that have been passed. Por exemplo:
+Quando você passa um parâmetro, 4D sempre avalia a expressão do parâmetro no contexto do método de chamada e define o **valor resultante** para as variáveis locais na função de classe ou subrotina. As variáveis locais/parâmetros não são os campos, variáveis ou expressões realmente passadas pelo método chamada; eles apenas contém os valores que foram passados. The local variables/parameters are not the actual fields, variables, or expressions passed by the calling method; they only contain the values that have been passed. Por exemplo:
 
 ```4d
-	//Here is some code from the method MY_METHOD
-DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
-ALERT([People]Name)
+//Esta é uma parte do código do método MY_METHOD
+DO_SOMETHING([People]Name) //Suponha que o valor de [People]Name value seja "williams"
+ALERT([People]Last Name)
  
-	//Here is the code of the method DO_SOMETHING
+	//Este é o código do método DO_SOMETHING
  $1:=Uppercase($1)
  ALERT($1)
 ```
 
-La caja de alerta mostrada por `DO_SOMETHING` dirá "WILLIAMS" y la caja de alerta mostrada por `MY_METHOD` dirá "williams". El método cambió localmente el valor del parámetro $1, pero esto no afecta al valor del campo `[People]Name` pasado como parámetro por el método `MY_METHOD`.
+A caixa de alerta exibida por `DO_SOMETHING` mostrará "WILLIAMS" e a caixa de alerta exibida por `MY_METHOD` mostrará "williams". O método alterou localmente o valor do parâmetro $1, mas isso não afeta o valor do campo `[People]Name` passado como parâmetro pelo método `MY_METHOD`.
 
-Hay dos formas de hacer que el método `DO_SOMETHING` cambie el valor del campo:
+Há duas formas de fazer com que o método `DO_SOMETHING` mude o valor de campo:
 
 1. Ao invés de passar o campo para o método, passa um ponteiro para ele, por isso pode escrever:
 
 ```4d
-  //Here is some code from the method MY_METHOD
- DO_SOMETHING(->[People]Name) //Let's say [People]Name value is "williams"
+  //Esta é uma parte do código do método MY_METHOD
+ DO_SOMETHING(->[People]Name) //Suponha que o valor de [People]Name value seja "williams"
  ALERT([People]Last Name)
- 
-  //Here the code of the method DO_SOMETHING
+  //Este é o código do método DO_SOMETHING
  $1->:=Uppercase($1->)
  ALERT($1->)
 ```
 
-Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Por lo tanto, dentro del método `DO SOMETHING`, $1 ya no es el valor del campo sino un puntero al campo. El objeto **referenciado** por $1 ($1-> en el código anterior) es el campo real. Portanto, mudar o objeto referenciado vai além do escopo da subrotina, e o campo real não é afetado. Neste exemplo, as duas caixas de alerta dirão "WILLIAMS".
+Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Portanto, dentro do método `DO SOMETHING`, $1 já não é o valor do campo mas um ponteiro ao campo. O objeto **referenciado** por $1 ($1-> no código acima) é o campo real. Portanto, mudar o objeto referenciado vai além do escopo da subrotina, e o campo real não é afetado. Neste exemplo, as duas caixas de alerta dirão "WILLIAMS".
 
-2. En lugar de que el método `DO_SOMETHING` "haga algo", puede reescribir el método para que devuelva un valor. Portanto escreveria:
+2. Ao invés de ter o método `DO_SOMETHING` "fazendo algo", você pode reescrever o método para que ele retorne um valor. Portanto escreveria:
 
 ```4d
-	//Here is some code from the method MY METHOD
- [People]Name:=DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
+//Esta é uma parte do código do método MY_METHO
+ [People]Name:=DO_SOMETHING([People]Name) //Suponha que o valor de [People]Name seja "williams"
  ALERT([People]Name)
 
-	//Here the code of the method DO SOMETHING
+	//Este é o código do método DO_SOMETHING
  $0:=Uppercase($1)
  ALERT($0)
 ```
 
-Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar uma função" É descrita no parágrafo <a href="#functions">Funções</a>. Se describe en el párrafo [Valores devueltos](#returning-values).
+Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar uma função" É descrita no parágrafo <a href="#functions">Funções</a>. Isso é descrito no parágrafo [Returning values](#returning-values).
 
 ### Casos particulares: objetos e coleções
 
-Debe prestar atención al hecho de que los tipos de datos Objeto y Colección sólo pueden manejarse a través de una referencia (es decir, un _puntero_ interno).
+Deve prestar atenção ao fato de que os tipos de dados Objeto e Coleção só podem ser manejados através de uma referência (ou seja, um  ponteiro interno\*).
 
-Por consiguiente, cuando se utilizan estos tipos de datos como parámetros, `$1, $2...` no contienen _valores_ sino _referencias_. La modificación del valor de los parámetros `$1, $2...` dentro de la subrutina se propagará a cualquier lugar donde se utilice el objeto o colección fuente. Este es el mismo principio que para [los punteros](dt_pointer.md#pointers-as-parameters-to-methods), excepto que los parámetros `$1, $2...` no necesitan ser desreferenciados en la subrutina.
+Por isso, quando usar esses tipos de dados como parâmetros, `$1, $2...` não contém _valores_ mas sim _referências_. A modificação do valor dos parâmetros `$1, $2...` na sub-rotina será propagada sempre que o objeto ou a coleção de origem for usado. Este é o mesmo princípio que para [ponteiros](dt_pointer.md#pointers-as-parameters-to-methods), exceto que os parâmetros `$1, $2...` não precisam ser desreferenciados na sub-rotina.
 
-Por ejemplo, considere el método `CreatePerson` que crea un objeto y lo envía como parámetro:
+Por exemplo, considere o método `CreatePerson` que cria um objeto e o envia como parâmetro:
 
 ```4d
   //CreatePerson
@@ -582,7 +581,7 @@ Por ejemplo, considere el método `CreatePerson` que crea un objeto y lo envía 
  ALERT(String($person.Age))  
 ```
 
-El método `ChangeAge` añade 10 al atributo Age del objeto recibido
+O método `ChangeAge` adiciona 10 ao atributo Age do objeto recebido
 
 ```4d
   //ChangeAge
@@ -591,6 +590,6 @@ El método `ChangeAge` añade 10 al atributo Age del objeto recibido
  ALERT(String($person.Age))
 ```
 
-Cuando se ejecuta el método `CreatePerson`, las dos cajas de alerta dirán "50" ya que la misma referencia de objeto es manejada por ambos métodos.
+Quando você executar o método `CreatePerson`, ambas as caixas de alerta exibirão "50", pois a mesma referência de objeto é tratada por ambos os métodos.
 
-**4D Server:** cuando se pasan parámetros entre métodos que no se ejecutan en la misma máquina (utilizando por ejemplo la opción "Ejecutar en el servidor"), las referencias no son utilizables. Nestes casos, são enviadas cópias dos parâmetros de objetos e coleções ao invés de referências.
+**4D Server:** Quando os parâmetros são passados entre métodos que não são executados na mesma máquina (usando, por exemplo, a opção "Execute on Server"), as referências não podem ser usadas. Nestes casos, são enviadas cópias dos parâmetros de objetos e coleções ao invés de referências.

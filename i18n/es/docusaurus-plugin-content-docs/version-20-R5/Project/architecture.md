@@ -47,7 +47,7 @@ El archivo de desarrollo de proyecto, utilizado para designar y lanzar el proyec
 
 > En los proyectos 4D, el desarrollo se realiza con 4D y el desarrollo multiusuarios se gestiona a través de las herramientas de control de versión. 4D Server puede abrir archivos .4DProject para realizar pruebas.
 
-This text file can also contain configuration keys, in particular [`"tokenizedText": false`](../Preferences/general.md#excluding-tokens-in-existing-projects).
+Este archivo de texto también puede contener llaves de configuración, en particular [`"tokenizedText": false`](../Preferences/general.md#excluding-tokens-in-existing-projects).
 
 ### `Sources`
 
@@ -159,7 +159,7 @@ La carpeta Data contiene el archivo de datos y todos los archivos y carpetas rel
 
 ### `Settings` (datos del usuario)
 
-This folder contains [**user settings for data**](../Desktop/user-settings.md#user-settings-for-data-file) used for application administration.
+Esta carpeta contiene [**parámetros usuario para datos**](../Desktop/user-settings.md#user-settings-for-data-file) utilizada para la administración de aplicaciones.
 
 > Estos parámetros tienen prioridad sobre los [parámetros de usuario](#settings-user) y los [parámetros de estructura](#sources). Ver también [Prioridad de los parámetros](../Desktop/user-settings.md#priority-of-settings).
 
@@ -236,4 +236,4 @@ Define la carpeta raíz por defecto del servidor web 4D para las páginas, las i
 
 ## Archivo `.gitignore` (opcional)
 
-Archivo que especifica los archivos que serán ignorados por git. Puede incluir un archivo gitignore en sus proyectos utilizando la opción **Crear un archivo .gitignore** en la página **General** de las preferencias. To configure the contents of that file, see [Create `.gitignore` file](Preferences/general.md#create-gitignore-file).
+Archivo que especifica los archivos que serán ignorados por git. Puede incluir un archivo gitignore en sus proyectos utilizando la opción **Crear un archivo .gitignore** en la página **General** de las preferencias. Para configurar el contenido de ese archivo, consulte [Crear archivo `.gitignore`](Preferences/general.md#create-gitignore-file).

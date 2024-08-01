@@ -20,7 +20,7 @@ The `VP SET CURRENT SHEET` command <!-- REF #_method_.VP SET CURRENT SHEET.Summa
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In *sheet*, pass the index of the sheet to be set as current sheet. If the index passed is inferior to 0 or exceeds the number of sheets, the command does nothing.
+Em *sheet*, passe o índice da planilha a ser definida como planilha atual. If the index passed is inferior to 0 or exceeds the number of sheets, the command does nothing.
 
 > A indexação começa em 0.
 

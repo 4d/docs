@@ -337,7 +337,7 @@ The button triggers the following upgrade sequence:
 
 Remember to restart your project after performing this upgrade.
 
-The next step is to modify your code accordingly. [**See this blog post to know how to proceed**](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications).
+The next step is to modify your code accordingly. [**See this blog post to know how to proceed**](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/).
 
 
 

@@ -29,11 +29,11 @@ The `VP MOVE CELLS` command <!-- REF #_method_.VP MOVE CELLS.Summary -->moves or
 
 _originRange_ and _targetRange_ can refer to different View Pro areas.
 
-In _originRange_, pass a range object containing the values, style, and formula cells to copy or move. If _originRange_ is a combined range, only the first one is used.
+In _originRange_, pass a range object containing the values, style, and formula cells to copy or move. Se _originRange_ for um intervalo combinado, somente o primeiro será usado.
 
 In _targetRange_, pass the range of cells where the cell values, style, and formulas will be copied or moved.
 
-The _options_ parameter has several properties:
+O parâmetro _options_ tem várias propriedades:
 
 | Propriedade  | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -22,7 +22,7 @@ Como en todos los URI, el primer parámetro está delimitado por un "?" y todos 
 
 Los parámetros le permiten manipular los datos de las clases de datos en su proyecto 4D. Además de recuperar datos mediante los métodos HTTP `GET`, también se pueden añadir, actualizar y eliminar entidades de una clase de datos utilizando los métodos HTTP `POST`.
 
-If you want the data to be returned in an array instead of JSON, use the [`$asArray`]($asArray.md) parameter.
+Si desea que los datos se devuelvan en un array en lugar de en JSON, utilice el parámetro [`$asArray`]($asArray.md).
 
 ## Estado y respuesta REST
 

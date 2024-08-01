@@ -31,7 +31,7 @@ Este código:
 $pinfo:=VP Get print info("ViewProArea")
 ```
 
-... returns the print attributes of the 4D View Pro area set in the [VP SET PRINT INFO](vp-set-print-info.md) command:
+... devuelve los atributos de impresión del área de 4D View Pro definida en el comando [VP SET PRINT INFO](vp-set-print-info.md):
 
 ```4d
 {

@@ -161,7 +161,7 @@ Apenas atributos com valores diferentes estão incluídos na coleção. If no di
 
 The function applies for properties whose [kind](DataClassClass.md#attributename) is **storage** or **relatedEntity**. In case a related entity has been updated (meaning the foreign key), the name of the related entity and its primary key name are returned as *attributeName* properties (*value* and *otherValue* are empty for the related entity name).
 
-If one of the compared entities is **Null**, an error is raised.
+Se uma das entidades comparadas for **Null**, um erro é gerado.
 
 #### Exemplo 1
 
@@ -362,7 +362,7 @@ The object returned by `.drop( )` contains the following properties:
 |                                   |                                     |                        | ***Disponível apenas em caso de erro:***                                                                                                                                                 |
 | status(\*)     |                                     | number                 | Código de erro, ver abaixo                                                                                                                                                                               |
 | statusText(\*) |                                     | text                   | Descrição do erro, ver abaixo                                                                                                                                                                            |
-|                                   |                                     |                        | ***Available only in case of pessimistic lock error:***                                                                                                                                  |
+|                                   |                                     |                        | ***Disponível apenas em caso de erro de bloqueio pessimista:***                                                                                                                          |
 | LockKindText                      |                                     | text                   | "Bloqueado pelo registro"                                                                                                                                                                                |
 | lockInfo                          |                                     | object                 | Informações sobre a origem do bloqueio                                                                                                                                                                   |
 |                                   | task_id        | number                 | Parâmetros                                                                                                                                                                                               |
@@ -503,7 +503,7 @@ O mapeamento entre o objecto e a entidade é feito sobre os nomes dos atributos:
 
 *filler* pode tratar de uma entidade relacionada sob as seguintes condições:
 
-- *filler* contains the foreign key itself, or
+- *filler* contém a chave estrangeira em si, ou
 - *filler* contains a property object with the same name as the related entity, containing a single property named "\_\_KEY".
 - se a entidade relacionada não existir, ela é ignorada.
 
@@ -949,7 +949,7 @@ The `.lock()` function <!-- REF #EntityClass.lock().Summary -->puts a pessimisti
 
 Other processes will see this record as locked (the `result.success` property will contain False if they try to lock the same entity using this function). Só as funções executadas na sessão de "bloqueio" são permitidas para editar e guardar os atributos da entidade. A entidade pode ser carregada como apenas leitura por outras sessões, mas não serão capazes de introduzir e guardar valores.
 
-A record locked by `.lock()` is unlocked:
+Um registro bloqueado por `.lock()` é desbloqueado:
 
 - when the [`unlock()`](#unlock) function is called on a matching entity in the same process
 - automaticamente, quando já não é referenciado por nenhuma entidade em memória. Por exemplo, se a fechadura for colocada apenas numa referência local de uma entidade, a entidade é desbloqueada quando a função termina. Enquanto houver referências à entidade em memória, o registo permanece bloqueado.
@@ -972,7 +972,7 @@ The object returned by `.lock()` contains the following properties:
 |                                   |                                     |                        | ***Disponível apenas em caso de erro:***                                                                                                                                                                                                                                                                                                                                     |
 | status(\*)     |                                     | number                 | Código de erro, ver abaixo                                                                                                                                                                                                                                                                                                                                                                   |
 | statusText(\*) |                                     | text                   | Descrição do erro, ver abaixo                                                                                                                                                                                                                                                                                                                                                                |
-|                                   |                                     |                        | ***Available only in case of pessimistic lock error:***                                                                                                                                                                                                                                                                                                                      |
+|                                   |                                     |                        | ***Disponível apenas em caso de erro de bloqueio pessimista:***                                                                                                                                                                                                                                                                                                              |
 | lockKindText                      |                                     | text                   | "Locked by record" se trancado por um processo 4D, "Locked by session" se trancado por uma sessão REST                                                                                                                                                                                                                                                                                       |
 | lockInfo                          |                                     | object                 | Informações sobre a origem do bloqueio. Retorna propriedades dependendo da origem da trava (processo 4D ou sessão REST)                                                                                                                                                                                                                                   |
 |                                   |                                     |                        | ***Disponível só para um processo trava 4D:***                                                                                                                                                                                                                                                                                                                               |
@@ -1231,7 +1231,7 @@ The object returned by `.save()` contains the following properties:
 | Propriedade  |                                     | Tipo                   | Descrição                                                                                                                                                                                                  |
 | ------------ | ----------------------------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success      |                                     | boolean                | True se a ação salvar tiver sucesso, senão False                                                                                                                                                           |
-|              |                                     |                        | ***Available only if `dk auto merge` option is used***:                                                                                                                                    |
+|              |                                     |                        | ***Disponível apenas se a opção `dk auto merge` for usada***:                                                                                                                              |
 | autoMerged   |                                     | boolean                | True se fizer uma auto merge, senão False                                                                                                                                                                  |
 |              |                                     |                        | ***Disponível apenas em caso de erro***:                                                                                                                                                   |
 | status       |                                     | number                 | Error code, [see below](#status-and-statustext)                                                                                                                                                            |

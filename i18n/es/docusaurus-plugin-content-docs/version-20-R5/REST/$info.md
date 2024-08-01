@@ -35,8 +35,8 @@ Para obtener información sobre cómo crear una selección de entidades, consult
 
 > 4D también crea sus propias selecciones de entidades con fines de optimización, por lo que las que se crean con `$method=entityset` no son las únicas que se devuelven.
 
-> **IMPORTANT**
-> If your project is in **Controlled Admin Access Mode**, you must first log into the project as a user in the Admin group.
+> **IMPORTANTE**
+> Si su proyecto está en **Modo de acceso de administrador controlado**, primero debe iniciar sesión en el proyecto como usuario del grupo Admin.
 
 ### sessionInfo
 

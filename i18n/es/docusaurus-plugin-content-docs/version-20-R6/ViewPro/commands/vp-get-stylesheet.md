@@ -24,7 +24,7 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 En *styleName*, pase el nombre de la hoja de estilo a obtener.
 
-You can define where to get the style sheet in the optional *sheet* parameter using the sheet index (counting begins at 0) or with the following constants:
+Puede definir dónde obtener la hoja de estilo en el parámetro opcional *sheet* utilizando el índice de la hoja (la numeración comienza en 0) o con las siguientes constantes:
 
 - `vk current sheet`
 - `vk workbook`

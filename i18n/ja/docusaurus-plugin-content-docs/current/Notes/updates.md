@@ -3,6 +3,14 @@ id: updates
 title: リリースノート
 ---
 
+## 4D 20 R7
+
+Read [**What’s new in 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R7/), the blog post that lists all new features and enhancements in 4D 20 R7.
+
+#### ハイライト
+
+- List box columns and headers of type time now support the ["blankIfNull" option](../FormObjects/properties_Display.md#time-format).
+
 ## 4D 20 R6
 
 [**4D 20 R6 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-20-R6/): 4D 20 R6 の新機能と拡張機能をすべてリストアップしたブログ記事です。
@@ -355,7 +363,7 @@ ALERT($param1+" "+$param2)
 
 ## 4D 19 R2
 
-- 新規プロジェクト作成時に [デフォルトの.gitignoreファイル](../Preferences/general#gitignore-ファイルを作成する) が作成可能
+- 新規プロジェクト作成時に [デフォルトの.gitignoreファイル](../Preferences/general.md#gitignore-ファイルを作成する) が作成可能
 - 新しい [`4D.Blob`](Concepts/dt_blob.md#blob-の種類) オブジェクトを扱うための新しい[BlobクラスAPI](../API/BlobClass.md)
 - [`.setText()`](../API/FileClass.md#settext) におけるデフォルトの改行コード (EOL) の指定と `no-bom` のサポート
 

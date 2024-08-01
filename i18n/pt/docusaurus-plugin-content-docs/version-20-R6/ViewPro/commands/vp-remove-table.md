@@ -32,7 +32,7 @@ Em *vpAreaName*, passe o nome da área onde a tabela a ser removida está locali
 
 In *tableName*, pass the name of the table to remove.
 
-In *options*, you can specify additional behavior. Valores possíveis:
+Em *options*, você pode especificar o comportamento adicional. Valores possíveis:
 
 | Parâmetros            | Valor | Descrição                                   |
 | --------------------- | ----- | ------------------------------------------- |

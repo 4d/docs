@@ -377,6 +377,8 @@ Customized time formats can be built using several patterns described in the [**
 
 Por padrão, uma hora nula é exibida com zeros, por exemplo, "00:00:00". Com a opção "blankIfNull", uma hora nula é exibida como uma área vazia. A cadeia de caracteres "blankIfNull" (sensível a maiúsculas e minúsculas) deve ser combinada com o valor de formato selecionado. Ex: "MM_SS blankIfNull" ou "hh:mm aa blankIfNull"
 
+:::
+
 #### Objectos suportados
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
@@ -390,7 +392,7 @@ Cuando una [expresión booleana](properties_Object.md#expression-type) se muestr
 - un texto en un [objeto de entrada](input_overview.md)
 - un "popup"  en una [columna del list box](listbox_overview.md#list-box-columns),
 
-... pode selecionar o texto a apresentar para cada valor:
+... you can select the text to display for each value:
 
 - **Text cuando True** - el texto que se mostrará cuando el valor sea "true"
 - **Text cuando False** - el texto que se mostrará cuando el valor sea "false"
@@ -572,7 +574,7 @@ Gerencia a exibição do conteúdo quando ele excede a largura do objeto.
 
 #### Marcado para list box/Sim para entrada
 
-`JSON grammar: "normal"`
+`Gramática JSON: "normal"`
 
 Quando essa opção é selecionada, o texto passa automaticamente para a próxima linha sempre que sua largura exceder a da coluna/área, se a altura da coluna/área permitir.
 
@@ -600,7 +602,7 @@ Observe que, independentemente do valor da opção Wordwrap, a altura da linha n
 
 #### Automático para entrada (opção padrão)
 
-`JSON grammar: "automatic"`
+`Gramática JSON: "automatic"`
 
 - Em áreas de linha única, palavras localizadas no final das linhas são truncadas e não há retornos de linha.
 - Em áreas com várias linhas, 4D efetua retornos automáticos de linha.

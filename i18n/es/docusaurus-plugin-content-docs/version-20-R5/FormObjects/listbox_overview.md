@@ -204,7 +204,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | On Close Detail      | <li>[row](#propiedades adicionales)</li>                                                                                                                                                                       | _List box Selección actual y Selección temporal únicamente_                                                                                                                                    |
 | On Collapse          | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   | _List box jerárquicos únicamente_                                                                                                                                                              |
 | On Column Moved      | <li>[columnName](#additional-properties)</li><li>[newPosition](#additional-properties)</li><li>[oldPosition](#additional-properties)</li>                                                                      |                                                                                                                                                                                                |
-| On Column Resize     | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[newSize](#additional-properties)</li><li>[oldSize](#additional-properties)</li>                                     |                                                                                                                                                                                                |
+| On Column Resize     | <li>[column](#propiedades-adicionales)</li><li>[columnName](#propiedades-adicionales)</li><li>[newSize](#propiedades-adicionales)</li><li>[oldSize](#propiedades-adicionales)</li>                             |                                                                                                                                                                                                |
 | On Data Change       | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                                |
 | On Delete Action     | <li>[row](#propiedades adicionales)</li>                                                                                                                                                                       |                                                                                                                                                                                                |
 | On Display Detail    | <li>[isRowSelected](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                                                         |                                                                                                                                                                                                |
@@ -255,7 +255,7 @@ Un list box está formado por uno o varios objetos columna que tienen propiedade
 
 ![](../assets/en/FormObjects/listbox_column.png)
 
-Puedes definir propiedades estándar (texto, color de fondo, etc.) for each column of the list box; these properties take priority over those of the list box object properties.
+Puedes definir propiedades estándar (texto, color de fondo, etc.) para cada columna del list box; estas propiedades tienen prioridad sobre las del objeto list box.
 
 > Puede definir el [tipo de expresión](properties_Object.md#expression-type) para las columnas de list box de tipo array (cadena, texto, número, fecha, hora, imagen, booleano u objeto).
 
@@ -276,7 +276,7 @@ Puedes definir propiedades estándar (texto, color de fondo, etc.) for each colu
 | On Begin Drag Over   | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                                |
 | On Clicked           | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                                |
 | On Column Moved      | <li>[columnName](#additional-properties)</li><li>[newPosition](#additional-properties)</li><li>[oldPosition](#additional-properties)</li>                                                                      |                                                                                                                                                                                                |
-| On Column Resize     | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[newSize](#additional-properties)</li><li>[oldSize](#additional-properties)</li>                                     |                                                                                                                                                                                                |
+| On Column Resize     | <li>[column](#propiedades-adicionales)</li><li>[columnName](#propiedades-adicionales)</li><li>[newSize](#propiedades-adicionales)</li><li>[oldSize](#propiedades-adicionales)</li>                             |                                                                                                                                                                                                |
 | On Data Change       | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                                |
 | On Double Clicked    | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                                |
 | On Drag Over         | <li>[area](#additional-properties)</li><li>[areaName](#additional-properties)</li><li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li> |                                                                                                                                                                                                |
@@ -493,7 +493,7 @@ Puede escribir en el método _UI_SetColor_:
 
 ```4d
  If(Is in set("$SampleSet"))
-    $color:=0x0080C080 // green background
+    $color:=0x0080C080 // fondo verde
  Else
     $color:=lk inherited
  End if
@@ -604,7 +604,7 @@ Para cada atributo (estilo, color y color de fondo), se implementa una **herenci
 - para los atributos líneas: valores de atributos de columnas
 - para los atributos de la columna: valores de los atributos del list box
 
-De esta forma, si desea que un objeto herede el valor de atributo de un nivel superior, puede utilizar pasar la constante `lk inherited` (valor por defecto) al comando de definición o directamente en el elemento del array de estilo/color correspondiente. For example, given an array list box containing a standard font style with alternating colors:
+De esta forma, si desea que un objeto herede el valor de atributo de un nivel superior, puede utilizar pasar la constante `lk inherited` (valor por defecto) al comando de definición o directamente en el elemento del array de estilo/color correspondiente. Por ejemplo, dado un list box array contiene un estilo de fuente estándar con colores alternos:
 ![](../assets/en/FormObjects/listbox_styles3.png)
 
 Realiza las siguientes modificaciones:
@@ -671,7 +671,7 @@ Para definir un list box jerárquico, existen varias posibilidades:
 
 #### Propiedades del List Box jerárquico
 
-Esta propiedad especifica que el list box debe mostrarse en forma jerárquica. In the JSON form, this feature is triggered [when the column _dataSource_ property value is an array](properties_Object.md#array-list-box), i.e. a collection.
+Esta propiedad especifica que el list box debe mostrarse en forma jerárquica. En el formulario JSON, esta función se activa [cuando el valor de la propiedad _dataSource_ de la columna es un array](properties_Object.md#array-list-box), es decir, una colección.
 
 Las opciones adicionales (**Variable 1...10**) están disponibles cuando se selecciona la opción _List box jerárquico_, correspondiente a cada elemento del array _dataSource_ a utilizar como columna de ruptura. Cada vez que se introduce un valor en un campo, se añade una nueva línea. Se pueden especificar hasta 10 variables. Estas variables definen los niveles jerárquicos a mostrar en la primera columna.
 
@@ -1157,7 +1157,7 @@ OB SET ARRAY($ob;"unitsList";$_units)
 
 #### alternateButton
 
-Si desea añadir un botón de elipsis [...] to a cell, you just need to pass the "alternateButton" with the True value in the object. El botón se mostrará en la celda automáticamente.
+Si desea añadir un botón de elipsis [...] a una celda, basta con pasar el "alternateButton" con el valor True en el objeto. El botón se mostrará en la celda automáticamente.
 
 Cuando este botón es presionado por un usuario, se generará un evento `On Alternate Click`, y usted podrá manejarlo como quiera (vea el párrafo "Manejo de eventos" para más información).
 

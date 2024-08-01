@@ -144,12 +144,12 @@ Varias funciones aceptan un _propertyPath_ como parámetro. Este parámetro sign
 
 ## Collection operators
 
-You can use comparison operators with **collection references**, which means that you can evaluate if two or more references point to the same instance of a collection.
+Puede utilizar operadores de comparación con **referencias de colección**, lo que significa que puede evaluar si dos o más referencias apuntan a la misma instancia de una colección.
 
 ```4d
-var $c1:=["a";42] //reference to an instance
-var $c2:=["a";42] //reference to a different instance
-var $c3:=$c1 //reference to the same instance
+var $c1:=["a";42] //referencia a una instancia
+var $c2:=["a";42] //referencia a otra instancia
+var $c3:=$c1 //referencia a la misma instancia
 ```
 
 Basándonos en el código anterior, la tabla comparativa es:

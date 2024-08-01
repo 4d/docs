@@ -31,7 +31,7 @@ The `VP Get table column attributes` command <!-- REF #_method_.VP Get table col
 
 Em _vpAreaName_, passe o nome da área 4D View Pro.
 
-In _sheet_, pass the index of the target sheet. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
+Em _sheet_, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 
 > A indexação começa em 0.
 

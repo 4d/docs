@@ -116,7 +116,7 @@ Essas opções se aplicam aos arquivos de cópia de segurança principais e aos 
 
 ### Restauro automático e integração de registos
 
-#### Restore last backup if database is damaged
+#### Restaurar o último backup se o banco de dados estiver danificado
 
 When this option is checked, the program automatically starts the restore of the data file of the last valid backup of the application, if an anomaly is detected (corrupted file, for example) during application launch. Nenhuma intervenção do usuário é necessária, mas a operação é gravada no diário da cópia de segurança.
 

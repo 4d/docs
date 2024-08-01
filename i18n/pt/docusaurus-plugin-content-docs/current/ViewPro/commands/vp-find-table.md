@@ -26,7 +26,7 @@ title: VP Find table
 
 The `VP Find table` command <!-- REF #_method_.VP Find table.Summary -->returns the name of the table to which to the *rangeObj* cell belongs<!-- END REF -->.
 
-In *rangeObj*, pass a cell range object. Se as células designadas não pertencerem a uma tabela, o comando retornará uma string vazia.
+Em *rangeObj*, passar um objeto de intervalo de células. Se as células designadas não pertencerem a uma tabela, o comando retornará uma string vazia.
 
 If *rangeObj* is not a cell range or contains multiple ranges, the first cell of the first range is used.
 

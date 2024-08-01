@@ -390,7 +390,7 @@ Cuando una [expresión booleana](properties_Object.md#expression-type) se muestr
 - un texto en un [objeto de entrada](input_overview.md)
 - un "popup"  en una [columna del list box](listbox_overview.md#list-box-columns),
 
-... pode selecionar o texto a apresentar para cada valor:
+... you can select the text to display for each value:
 
 - **Text cuando True** - el texto que se mostrará cuando el valor sea "true"
 - **Text cuando False** - el texto que se mostrará cuando el valor sea "false"
@@ -572,7 +572,7 @@ Gerencia a exibição do conteúdo quando ele excede a largura do objeto.
 
 #### Marcado para list box/Sim para entrada
 
-`JSON grammar: "normal"`
+`Gramática JSON: "normal"`
 
 Quando essa opção é selecionada, o texto passa automaticamente para a próxima linha sempre que sua largura exceder a da coluna/área, se a altura da coluna/área permitir.
 
@@ -600,7 +600,7 @@ Observe que, independentemente do valor da opção Wordwrap, a altura da linha n
 
 #### Automático para entrada (opção padrão)
 
-`JSON grammar: "automatic"`
+`Gramática JSON: "automatic"`
 
 - Em áreas de linha única, palavras localizadas no final das linhas são truncadas e não há retornos de linha.
 - Em áreas com várias linhas, 4D efetua retornos automáticos de linha.

@@ -34,7 +34,7 @@ This page describes how to work with components in the **4D** and **4D Server** 
 To load a component in your 4D project, you can either:
 
 - copy the component files in the [**Components** folder of your project](architecture.md#components),
-- or, declare the component in the **dependencies.json** file.
+- ou declare o componente no arquivo **dependencies.json**.
 
 Components declared in the **dependencies.json** file can be stored at different locations:
 
@@ -48,7 +48,7 @@ If the same component is installed at different locations, a [priority order](#p
 
 #### dependencies.json
 
-The **dependencies.json** file references all components required in your 4D project. This file must be located in the **Sources** folder of the 4D project folder, e.g.:
+O arquivo **dependencies.json** faz referência a todos os componentes necessários em seu projeto 4D. This file must be located in the **Sources** folder of the 4D project folder, e.g.:
 
 ```
 	/MyProjectRoot/Project/Sources/dependencies.json
@@ -61,7 +61,7 @@ Pode conter:
 
 #### environment4d.json
 
-The **environment4d.json** file is optional. It allows you to define **custom paths** for some or all components declared in the **dependencies.json** file. This file can be stored in your project package folder or in one of its parent folders, at any level (up to the root).
+O arquivo **environment4d.json** é opcional. It allows you to define **custom paths** for some or all components declared in the **dependencies.json** file. This file can be stored in your project package folder or in one of its parent folders, at any level (up to the root).
 
 The main benefits of this architecture are the following:
 
@@ -75,7 +75,7 @@ Since components can be installed in different ways, a priority order is applied
 **Prioridade mais alta**
 
 1. Components stored in the [**Components** folder of the project](architecture.md#components).
-2. Components declared in the **dependencies.json** file.
+2. Componentes declarados no arquivo **dependencies.json**.
 3. Internal User 4D components (e.g. 4D NetKit, 4D SVG...)
 
 **Prioridade mais baixa**
@@ -150,7 +150,7 @@ Regarding components stored on GitHub, both [**dependencies.json**](#dependencie
 
 :::
 
-#### Configuring the GitHub repository
+#### Configurando o repositório GitHub
 
 To be able to directly reference and use a 4D component stored on GitHub, you need to configure the GitHub component's repository:
 
@@ -175,7 +175,7 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 }
 ```
 
-... where "myGitHubComponent1" is referenced and declared for the project, although "myGitHubComponent2" is only referenced. You need to declare it in the [**environment4d.json**](#environment4djson) file:
+... where "myGitHubComponent1" is referenced and declared for the project, although "myGitHubComponent2" is only referenced. Você precisa declará-lo no arquivo [**environment4d.json**] (#environment4djson):
 
 ```json
 {
@@ -206,7 +206,7 @@ When you create a release in GitHub, you specify a **tag** and a **version**.
 }
 ```
 
-- A release is also identified by a **version**. The versioning system used is based on the _Semantic Versioning_ concept, which is the most commonly used. Each version number is identified as follows: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
+- Uma versão também é identificada por uma **versão**. The versioning system used is based on the _Semantic Versioning_ concept, which is the most commonly used. Each version number is identified as follows: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
 
 ```json
 {
@@ -224,9 +224,9 @@ The version is used to define which versions can be used. A [standard semantic v
 Eis alguns exemplos:
 
 - "latest": the version having the “latest” badge in GitHub releases.
-- "\*": the latest version released.
-- "1.\*": all version of major version 1.
-- "1.2.\*": all patches of minor version 1.2.
+- "\*": a versão mais recente lançada.
+- "1.\*": todas as versões da versão principal 1.
+- "1.2.\*": todos os patches da versão menor 1.2.
 - "^1.2.3" or ">=1.2.3": the latest version 1, starting with the 1.2.3 version.
 - "~1.2.3" or ">1.2.3": the latest major version 1, starting with the version just after the 1.2.3.
 - "<=1.2.3": the latest version until the 1.2.3 one.
@@ -282,7 +282,7 @@ This file logs information such as the state of dependencies, paths, urls, loadi
 
 In an opened project, you can get information about dependencies and their current loading status in the **Dependencies** panel.
 
-To display the Dependencies panel:
+Para exibir o painel Dependências:
 
 - with 4D, select the **Design/Project Dependencies** menu item (Development environment),<br/>
   ![dependency-menu](../assets/en/Project/dependency-menu.png)
@@ -290,7 +290,7 @@ To display the Dependencies panel:
 - with 4D Server, select the **Window/Project Dependencies** menu item.<br/>
   ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
-The Dependency panel is then displayed. Dependencies are sorted by name in alphabetical order:
+O painel Dependência é então exibido. Dependencies are sorted by name in alphabetical order:
 
 ![dependency](../assets/en/Project/dependency.png)
 
@@ -300,7 +300,7 @@ The Dependencies panel lists all project dependencies, whatever their origin, i.
 
 ![dependency-origin](../assets/en/Project/dependency-origin.png)
 
-The following origins are possible:
+As seguintes origens são possíveis:
 
 | Origin tag                        | Descrição                                                                      |
 | --------------------------------- | ------------------------------------------------------------------------------ |
@@ -326,13 +326,13 @@ Component icon and location logo provide additional information:
 
 ![dependency-origin](../assets/en/Project/dependency-github.png)
 
-### Filtering Dependencies
+### Filtragem de dependências
 
 By default, all dependencies identified by the Dependency manager are listed, whatever their [status](#dependency-status). You can filter the displayed dependencies according to their status by selecting the appropriate tab at the top of the Dependencies panel:
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
-- **Active**: Dependencies that are loaded and can be used in the project. It includes _overloading_ dependencies, which are actually loaded. _Overloaded_ dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
+- **Active**: Dependencies that are loaded and can be used in the project. Isso inclui dependências _overloading_, que são de fato carregadas. _Overloaded_ dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
 - **Inactive**: Dependencies that are not loaded in the project and are not available. There are many possible reasons for this status: missing files, version incompatibility...
 - **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
 

@@ -26,7 +26,7 @@ El parámetro _formulasCol_ es una colección bidimensional:
 - Cada subcolección define los valores de las celdas para la línea. Los valores deben ser elementos textuales que contengan las fórmulas a asignar a las celdas.
 
 > Si la fórmula es una cadena, utilice el punto `.` como separador numérico y la coma `,` como separador de parámetros.
-> If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md) command.
+> Si se utiliza un método 4D, debe estar permitido con el comando [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md).
 
 Las fórmulas de _rangeObj_ se eliminan sustituyéndolas por una cadena vacía ("").
 

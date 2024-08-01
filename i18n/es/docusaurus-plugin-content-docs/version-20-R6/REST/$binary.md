@@ -7,7 +7,7 @@ Pase "true" para guardar el BLOB como documento (también debe pasar `$expand={b
 
 ## Descripción
 
-`$binary` permite guardar el BLOB como un documento.  You must also use the [`$expand`]($expand.md) command in conjunction with it.
+`$binary` permite guardar el BLOB como un documento.  También debe utilizar el comando [`$expand`]($expand.md) junto con él.
 
 Cuando haga la siguiente petición:
 

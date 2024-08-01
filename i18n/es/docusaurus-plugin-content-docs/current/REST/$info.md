@@ -9,15 +9,15 @@ Devuelve información sobre los conjuntos de entidades almacenados actualmente e
 
 Cuando llama a esta petición para su proyecto, se recupera la información en las propiedades siguientes:
 
-| Propiedad      | Tipo       | Descripción                                                                                                                                                                                                                      |
-| -------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| cacheSize      | Number     | Tamaño de la caché del servidor 4D.                                                                                                                                                                              |
-| usedCache      | Number     | Cuánto se ha utilizado de la caché de 4D Server.                                                                                                                                                                 |
-| entitySetCount | Number     | Número de selecciones de entidades.                                                                                                                                                                              |
-| entitySet      | Collection | Una colección en la que cada objeto contiene información sobre cada selección de entidades.                                                                                                                      |
-| ProgressInfo   | Collection | Una colección que contiene información sobre el indicador de progreso.                                                                                                                                           |
-| sessionInfo    | Collection | Una colección en la que cada objeto contiene información sobre cada sesión usuario.                                                                                                                              |
-| privileges     | Object     | Un objeto con una propiedad "privileges" (colección de objetos). Each object of the collection has a "privilege" property with a privilege name of the user session as value. |
+| Propiedad      | Tipo       | Descripción                                                                                                                                                                                                                                     |
+| -------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| cacheSize      | Number     | Tamaño de la caché del servidor 4D.                                                                                                                                                                                             |
+| usedCache      | Number     | Cuánto se ha utilizado de la caché de 4D Server.                                                                                                                                                                                |
+| entitySetCount | Number     | Número de selecciones de entidades.                                                                                                                                                                                             |
+| entitySet      | Collection | Una colección en la que cada objeto contiene información sobre cada selección de entidades.                                                                                                                                     |
+| ProgressInfo   | Collection | Una colección que contiene información sobre el indicador de progreso.                                                                                                                                                          |
+| sessionInfo    | Collection | Una colección en la que cada objeto contiene información sobre cada sesión usuario.                                                                                                                                             |
+| privileges     | Object     | Un objeto con una propiedad "privileges" (colección de objetos). Cada objeto de la colección tiene una propiedad "privilege" con un nombre de privilegio de la sesión de usuario como valor. |
 
 ### entitySet
 
@@ -36,8 +36,8 @@ Para obtener información sobre cómo crear una selección de entidades, consult
 
 > 4D también crea sus propias selecciones de entidades con fines de optimización, por lo que las que se crean con `$method=entityset` no son las únicas que se devuelven.
 
-> **IMPORTANT**
-> If your project is in **Controlled Admin Access Mode**, you must first log into the project as a user in the Admin group.
+> **IMPORTANTE**
+> Si su proyecto está en **Modo de acceso de administrador controlado**, primero debe iniciar sesión en el proyecto como usuario del grupo Admin.
 
 ### sessionInfo
 

@@ -5,11 +5,11 @@ title: Client-server page
 
 The Client-server pages group together parameters related to the use of the database in client-server mode. Naturally, these settings are only taken into account when the database is used in remote mode.
 
-## Network options page 
+## Network options page
 
 ### Network
 
-#### Publish database at startup 
+#### Publish database at startup
 
 This option lets you indicate whether or not the 4D Server database will appear in the list of published databases.
 
@@ -37,7 +37,7 @@ This parameter is not taken into account in custom client-server applications. I
 This option lets you change the TCP port number on which 4D Server publishes the database. This information is stored in the project and on each client machine. By default, the TCP port number used by 4D Server and 4D in remote mode is 19813.
 
 Customizing this value is necessary when you want to use several 4D applications on the same machine; in this case, you must specify a different port number for each application.
-When you modify this value from 4D Server or 4D, it is automatically passed on to all the 4D machines connected to the database. 
+When you modify this value from 4D Server or 4D, it is automatically passed on to all the 4D machines connected to the database.
 
 To update any other client machines that are not connected, you just need to enter the new port number (preceded by a colon) after the IP address of the server machine on the **Custom** tab of the connection dialog box at the time of the next connection. For example, if the new port number is 19888:
 
@@ -47,13 +47,14 @@ To update any other client machines that are not connected, you just need to ent
 
 #### 4D Server and port numbers
 
-4D Server uses three TCP ports for communications between internal servers and clients:
+4D Server uses several TCP ports for communications between internal servers and clients:
 
 -   **SQL Server**: 19812 by default (can be modified via the "SQL/Configuration" page of the Preferences).
 -   **Application Server**: 19813 by default (can be modified via the "Client-Server/Configuration" page of the Preferences, see above).
--   **DB4D Server** (database server): 19814 by default . This port number cannot be modified directly but it always consists of the application server port number + 1.\
+-   **DB4D Server** (database server): 19814 by default. This port number cannot be modified directly but it always consists of the application server port number + 1.\
     When a 4D client connects to 4D Server, it uses the TCP port of the application server (19813 or the port indicated after the colon ':' in the IP address shown in the connection dialog box). Connection to other servers via their respective ports is then automatic; it is no longer necessary to specify them.\
     Note that in the case of access via a router or a firewall, the three TCP ports must be opened explicitly.
+-   [**Remote Debugger**](../Debugging/debugging-remote.md): 19815 by default. This port number cannot be modified directly but it always consists of the application server port number + 2.
 
 #### Authentication of user with domain server
 
@@ -69,17 +70,17 @@ This drop-down box contains 3 network layer options to choose between: **legacy*
 -   **Legacy**: This former "legacy" network layer is still supported in order to ensure compatibility for databases created prior to v15. This network layer can also be enabled by programming using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html) command.
 -   **ServerNet** (by default): Enables the ServerNet network layer on the server (available since 4D v15).
 -   **QUIC** (available only in project mode): Enables the QUIC network layer on the server.
-  
+
  	 **Notes**:
 	- Selecting this option overrides the Use legacy network layer option in case it has been set using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html) command.
-	- You can know if a 4D application is running with a QUIC network layer using the [Get application info](https://doc.4d.com/4Dv20/help/command/page1599.html) command. 
+	- You can know if a 4D application is running with a QUIC network layer using the [Get application info](https://doc.4d.com/4Dv20/help/command/page1599.html) command.
 	- Since QUIC uses the UDP protocol, make sure UDP is allowed in your network security settings.
 	- QUIC automatically connects to the port 19813 for both application server and DB4D server.
 	- When the QUIC layer option is selected:
 		-	A beta message and an alert icon are displayed near the selector.
 		-	[Client-server Connections Timeout settings](#Client-Server-Connections-Timeout) are hidden
 		-	The [Encrypt Client-Server communication checkbox](#Encrypt-Client-Server-Communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is.).
-	- **Compatibility**: You need to deploy your client/server applications with 4D v20 or higher before switching to the QUIC network layer. 
+	- **Compatibility**: You need to deploy your client/server applications with 4D v20 or higher before switching to the QUIC network layer.
 
 :::note
 
@@ -129,5 +130,5 @@ The behavior of the configuration table is as follows:
 - For security reasons, only addresses that actually match a rule will be allowed to connect. In other words, if the table only contains one or more Deny rules, all addresses will be refused because none will match at least one rule. If you want to deny only certain addresses (and allow others), add an Allow * rule at the end of the table. For example:
     - Deny 192.168.* (deny all addresses beginning with 192.168)
     - Allow * (but allow all other addresses)
-        
+
 By default, no connection restrictions are applied by 4D Server: the first row of the table contains the Allow label and the * (all addresses) character.

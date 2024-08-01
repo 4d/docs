@@ -328,7 +328,7 @@ key オブジェクトには、データクラスの **プライマリーキー*
 
 ## シングルトン
 
-1つ以上の [公開関数](../ORDA/ordaClasses.md#公開vs非公開関数) を含む [インタープロセス (共有) シングルトン](../Concepts/classes.md#シングルトンクラス) を定義している場合、`/$catalog` と `/$catalog/$all` の両方の構文で、返される json に `singletons` セクションが追加されます。 コレクションの形でまとめられたシングルトンクラスは、それぞれ **name** (クラス名) と **method** (公開関数名) を持つオブジェクト要素として格納されます。
+If you have defined [shared singletons](../Concepts/classes.md#singleton-classes) containing at least one [exposed function](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions), a `singletons` section is added to the returned json for both the `/$catalog` and `/$catalog/$all` syntaxes. コレクションの形でまとめられたシングルトンクラスは、それぞれ **name** (クラス名) と **method** (公開関数名) を持つオブジェクト要素として格納されます。
 
 シングルトン関数は、[`$singleton` コマンド]($singleton.md) を使用した RESTリクエストで呼び出すことができます。
 

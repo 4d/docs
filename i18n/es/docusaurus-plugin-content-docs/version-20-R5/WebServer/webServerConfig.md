@@ -19,10 +19,10 @@ Hay diferentes maneras de configurar los parámetros del servidor web 4D, en fun
 
 ## Caché
 
-| Puede ajustarse con           | Nombre                                                                             | Comentarios |
-| ----------------------------- | ---------------------------------------------------------------------------------- | ----------- |
-| Caja de diálogo de parámetros | [Configuration page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache) |             |
-| Caja de diálogo de parámetros | [Configuration page/Page Cache Size](../settings/web.md#page-cache-size)           |             |
+| Puede ajustarse con           | Nombre                                                                                  | Comentarios |
+| ----------------------------- | --------------------------------------------------------------------------------------- | ----------- |
+| Caja de diálogo de parámetros | [Configuration page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache)      |             |
+| Caja de diálogo de parámetros | [Página de configuración/Tamaño de caché de página](../settings/web.md#page-cache-size) |             |
 
 Activa y configura la caché de las páginas web.
 
@@ -34,9 +34,9 @@ Puede modificar el tamaño de la caché en el área **Tamaño de la caché de la
 
 ## Carpeta de certificados
 
-| Puede ajustarse con | Nombre              | Comentarios                                                                                                                                            |
-| ------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| objeto webServer    | `certificateFolder` | Text property but can be a [`4D.Folder`](API/FolderClass.md) object when used with the _settings_ parameter of the `start()` function. |
+| Puede ajustarse con | Nombre              | Comentarios                                                                                                                                                   |
+| ------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objeto webServer    | `certificateFolder` | Propiedad texto pero puede ser un objeto [`4D.Folder`](API/FolderClass.md) cuando se usa con el parámetro _settings_ de la función `start()`. |
 
 Carpeta donde se encuentran los archivos del certificado TLS para el servidor web.
 
@@ -327,8 +327,8 @@ Si su servidor 4D no parece responder en el puerto definido, puede probar la dir
 - **Indication of port numbers**<br/> Since IPv6 notation uses colons (:), adding port numbers may lead to some confusion, for example:
 
 ```code4d
-	2001:0DB8::85a3:0:ac1f:8001 // IPv6 address
-	2001:0DB8::85a3:0:ac1f:8001:8081 // IPv6 address with port 8081
+	2001:0DB8::85a3:0:ac1f:8001 // Dirección IPv6
+	2001:0DB8::85a3:0:ac1f:8001:8081 // Dirección IPv6 con puerto 8081
 ```
 
 Para evitar esta confusión, se recomienda utilizar la notación [ ] siempre que se combine una dirección IPv6 con un número de puerto, por ejemplo:
@@ -475,7 +475,7 @@ Para ello, ponga el archivo ROBOTS.TXT en la raíz del servidor. Este archivo de
 
 ```4d
    User-Agent: <name>
-   Disallow: <URL> or <beginning of the URL>
+   Disallow: <URL> o <beginning of the URL>
 ```
 
 Por ejemplo:
@@ -627,5 +627,5 @@ Dos opciones le permiten definir cómo funcionan las conexiones persistentes:
 - **Número de peticiones por conexión**: permite definir el número máximo de peticiones y de respuestas capaces de viajar por una conexión persistente. Limiting the number of requests per connection allows you to prevent server flooding due to a large number of incoming requests (a technique used by hackers).<p>
   The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
 
-- **Tiempo de espera antes de desconexión**: este valor define el periodo máximo de espera (en segundos) durante el cual el servidor web mantiene una conexión TCP abierta sin recibir ninguna petición del navegador web. Once this period is over, the server closes the connection.<p>
-  If the web browser sends a request after the connection is closed, a new TCP connection is automatically created. Esta operación no es visible para el usuario.</p>
+- **Tiempo de espera antes de desconexión**: este valor define el periodo máximo de espera (en segundos) durante el cual el servidor web mantiene una conexión TCP abierta sin recibir ninguna petición del navegador web. Una vez transcurrido este periodo, el servidor cierra la conexión.<p>
+  Si el navegador envía una solicitud después de que se haya cerrado la conexión, se crea automáticamente una nueva conexión TCP. Esta operación no es visible para el usuario.</p>

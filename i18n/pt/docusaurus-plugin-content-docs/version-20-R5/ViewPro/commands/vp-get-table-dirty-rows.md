@@ -35,7 +35,7 @@ In _tableName_, pass the name of the table for which you want to get the dirty r
 
 By default, calling the command will clear the _dirty_ status from the current table. To keep this status untouched, pass `False` in the _reset_ parameter.
 
-In _sheet_, pass the index of the target sheet. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
+Em _sheet_, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 
 > A indexação começa em 0.
 

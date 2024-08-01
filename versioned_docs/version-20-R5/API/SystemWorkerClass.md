@@ -112,6 +112,14 @@ Here is the sequence of callback calls:
 3. if no error occured, `onResponse` is executed once
 4. `onTerminate` is always executed
 
+
+:::info
+
+For the callback functions to be called when you do not use [`wait()`](#wait) (asynchronous call), the process must be a [worker](../Develop/processes.md#worker-processes) created with [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NOT [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
+
+:::
+
+
 #### Returned value
 
 The function returns a system worker object on which you can call functions and properties of the SystemWorker class.

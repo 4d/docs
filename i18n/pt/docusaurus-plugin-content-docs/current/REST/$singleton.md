@@ -3,17 +3,17 @@ id: singleton
 title: $singleton
 ---
 
-You can directly call exposed [functions of your shared singletons](../Concepts/classes.md#singleton-classes) through REST.
+Você pode chamar diretamente as [funções de seus singletons compartilhados] expostas (../Concepts/classes.md#singleton-classes) por meio de REST.
 
-Singleton functions are called in POST requests with the `$singleton` command and without `()`. For example, if you have defined a `buildVehicle()` function in the `VehicleFactory` shared singleton class, you could call it using the following request:
+As funções singleton são chamadas em solicitações POST com o comando `$singleton` e sem `()`. Por exemplo, se você tiver definido uma função `buildVehicle()` na classe singleton compartilhada `VehicleFactory`, poderá chamá-la usando a seguinte solicitação:
 
 ```json
 /rest/$singleton/VehicleFactory/buildVehicle
 ```
 
-with data in the body of the POST request: ["truck"]
+com dados no corpo do pedido POST: ["truck"]
 
-In 4D language, this call is equivalent to:
+Na linguagem 4D, esta chamada é equivalente a:
 
 ```4d
 $singleton:=cs.VehicleFactory.me.buildVehicle("truck")
@@ -21,33 +21,33 @@ $singleton:=cs.VehicleFactory.me.buildVehicle("truck")
 
 :::note
 
-Keep in mind that only functions with the [`exposed` keyword](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) can be directly called from REST requests.
+Tenha em mente que somente funções com a [palavra-chave `exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) podem ser diretamente chamadas de solicitações REST.
 
 :::
 
 ## Chamadas funções
 
-Singleton functions must always be called using REST **POST** requests (a GET request will receive an error). A sintaxe formal é:
+Las funciones Singleton deben llamarse siempre utilizando peticiones **POST** (una petición GET recibirá un error). A sintaxe formal é:
 
 `/rest/$singleton/SingletonClass/SingletonClassFunction`
 
-> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
+> Todos os códigos 4D chamados de solicitações REST **devem ser thread-safe** se o projeto for executado em modo compilado. porque o servidor REST sempre usa processos preventivos neste caso (o valor da configuração [*usar processo preemptivo*](. /WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) é ignorado pelo servidor REST).
 
 :::info
 
-You can restrict calls to specific singleton functions by configuring appropriate privileges in the [**roles.json**](../ORDA/privileges.md#rolesjson-file) file.
+Você pode restringir chamadas a funções singleton específicas configurando os privilégios apropriados no arquivo [**roles.json**](../ORDA/privileges.md#rolesjson-file).
 
 :::
 
 ## Parâmetros
 
-You can send parameters to singleton functions. On the server side, they will be received in the [declared parameters](../Concepts/parameters.md#declaring-parameters) of the singleton class functions.
+Você pode enviar parâmetros para funções singleton. Del lado del servidor, serán recibidos en los [parámetros declarados](../Concepts/parameters.md#declaring-parameters) de las funciones clase singleton.
 
-Sending parameters to singleton functions is exactly the same as sending parameter to ORDA class functions. Please refer to [the **Parameters** paragraph of the "Calling class functions" page](ClassFunctions.md#parameters) for a detailed description.
+O envio de parâmetros para funções singleton é exatamente igual ao envio de parâmetros para funções de classe ORDA. Por favor, consulte [o parágrafo **Parâmetros** da página "Chamando as funções classe"](ClassFunctions.md#parameters) para uma descrição detalhada.
 
 ## Exemplo
 
-You have created a simple shared singleton with an exposed function:
+Você criou um singleton compartilhado simples com uma função exposta:
 
 ```4d
 //class mySingleton
@@ -61,7 +61,7 @@ exposed Function sayHello ($value : Text)
 
 :::note
 
-The `mySingleton` class and `sayHello` function are listed when you call the [`$catalog`]($catalog.md#singleton) command.
+A classe `mySingleton` e a função `sayHello` são listadas quando você chama o comando [`$catalog`]($catalog.md#singleton).
 
 :::
 
@@ -69,7 +69,7 @@ Pode então executar este pedido:
 
 **POST** `/rest/$singleton/mySingleton/sayHello`
 
-Body of the request: ["John"]
+Corpo da solicitação: ["John"]
 
 #### Resposta
 

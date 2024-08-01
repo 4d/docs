@@ -45,7 +45,7 @@ El comando devuelve un objeto que describe los atributos actuales de la *column*
 | footerFormula       | text    | Fórmula del pie de columna.                                                                                                     |
 | filterButtonVisible | boolean | True si se muestra el botón de filtro de la columna de la tabla, False en caso contrario.                                       |
 
-If *tableName* is not found or if *column* index is higher than the number of columns, the command returns **null**.
+Si no se encuentra *tableName* o si el índice *column* es mayor que el número de columnas, el comando devuelve **null**.
 
 #### Ejemplo
 

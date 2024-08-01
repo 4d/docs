@@ -628,7 +628,7 @@ Puede obtener la propiedad `.storage` de una sesión utilizando el comando [`Ses
 
 :::
 
-#### Web session example
+#### Ejemplo de sesión web
 
 Desea almacenar la IP del cliente en la propiedad `.storage`. Puede escribir en el método base `On Web Authentication`:
 
@@ -640,7 +640,7 @@ If (Session.storage.clientIP=Null) //first access
 End if
 ```
 
-#### Remote session example
+#### Ejemplo de sesión remota
 
 Desea compartir datos entre procesos de la misma sesión:
 

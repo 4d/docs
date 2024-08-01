@@ -86,7 +86,7 @@ El comando `Folder` <!-- REF #_command_.Folder.Summary -->crea y devuelve un nue
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-En el parámetro *path*, pase una ruta de carpeta. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA").
+En el parámetro *path*, pase una ruta de carpeta. Puede utilizar una cadena personalizada o un [sistema de archivos](../Concepts/paths.md#filesystem-pathnames) (por ejemplo, "/DATA").
 
 > Sólo se soportan los nombres de ruta absolutos con el comando `Folder`.
 

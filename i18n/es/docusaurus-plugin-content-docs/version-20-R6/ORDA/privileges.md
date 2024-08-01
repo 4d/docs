@@ -9,13 +9,17 @@ Proteger los datos a la vez que se permite un acceso rápido y sencillo a los us
 
 La arquitectura de seguridad ORDA se basa en los conceptos de privilegios, acciones de permiso (read, create, etc.) y recursos.
 
-When web users or REST users get logged, their session is automatically loaded with associated privilege(s). Privileges are assigned to the session using the [`session.setPrivileges()`](../API/SessionClass.md#setprivileges) function.
+Cuando los usuarios web o REST se registran, su sesión se carga automáticamente con los privilegios asociados. Los privilegios se asignan a la sesión mediante la función [`session.setPrivileges()`](../API/SessionClass.md#setprivileges).
 
 Cada solicitud de usuario enviada dentro de la sesión se evalúa en función de los privilegios definidos en el archivo `roles.json` del proyecto.
 
 Si un usuario intenta ejecutar una acción y no tiene los derechos de acceso adecuados, se genera un error de privilegio o, en el caso de que falte el permiso de Lectura en los atributos, no se envían.
 
 ![schema](../assets/en/ORDA/privileges-schema.png)
+
+### Ver también
+
+For a detailed overview of the whole permissions architecture, please read the [**Filter access to your data with a complete system of permissions**](https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/) blog post.
 
 ## Resources
 
@@ -50,7 +54,7 @@ Las acciones disponibles están relacionadas con el recurso de destino.
 | **update**   | Actualizar atributos en cualquier clase de datos.                                                           | Actualiza los atributos de esta clase de datos.                                                                                                                          | Actualiza el contenido de este atributo (ignorado para atributos alias).                                                    | n/a                                                                                                                                                                                                                                                                                                                           |
 | **drop**     | Borrar datos en cualquier clase de datos.                                                                   | Borrar los datos de esta clase de datos.                                                                                                                                 | Eliminar un valor no nulo para este atributo (excepto para alias y atributo calculado).                                     | n/a                                                                                                                                                                                                                                                                                                                           |
 | **execute**  | Ejecutar toda función en el proyecto (almacén de datos, clase de datos, selección de entidades, entidad) | Ejecuta cualquier función en la clase de datos. Las funciones dataclass, las funciones entidad y las funciones selección de entidades se tratan como funciones dataclass | n/a                                                                                                                                                            | Ejecutar esta función                                                                                                                                                                                                                                                                                                         |
-| **describe** | Todas las clases de datos están disponibles en /rest/$catalog API                                                           | Esta dataclass está disponible en la /rest/$catalog API                                                                                                                                  | Este atributo está disponible en la API /rest/$catalog.                                                                                        | This dataclass function is available in the /rest/$catalog API (not available with singletons)                                                                                                                                                                                                             |
+| **describe** | Todas las clases de datos están disponibles en /rest/$catalog API                                                           | Esta dataclass está disponible en la /rest/$catalog API                                                                                                                                  | Este atributo está disponible en la API /rest/$catalog.                                                                                        | Esta función de clase de datos está disponible en la API /rest/$catalog (no disponible con singletons)                                                                                                                                                                                                     |
 | **promote**  | n/a                                                                                                                         | n/a                                                                                                                                                                                      | n/a                                                                                                                                                            | Asocia un privilegio determinado durante la ejecución de la función. El privilegio se añade temporalmente a la sesión y se elimina al final de la ejecución de la función. Por seguridad, sólo se añade el privilegio al proceso que ejecuta la función, no a toda la sesión. |
 
 **Notas:**
@@ -64,7 +68,7 @@ Las acciones disponibles están relacionadas con el recurso de destino.
 La definición de permisos requiere ser coherente, en particular:
 
 - los permisos **update** y **drop** también necesitan el permiso **read** (pero **create** no lo necesita)
-- For data model functions, **promote** permission also needs **describe** permission.
+- Para las funciones del modelo de datos, el permiso **promote** también necesita el permiso **describe**.
 
 ## Privilegios y roles
 
@@ -108,11 +112,11 @@ El archivo `roles.json` describe todos los parámetros de seguridad del proyecto
 
 ### Archivo por defecto
 
-When you create a project, a default `roles.json` file is created at the following location: `<project folder>/Project/Sources/`. Ver la sección [Arquitectura](../Project/architecture.md#sources).
+When you create a project, a default `roles.json` file is created at the following location: `<project folder>/Project/Sources/` (see [Architecture](../Project/architecture.md#sources) section).
 
 El archivo por defecto tiene el siguiente contenido:
 
-```json
+```json title="/Project/Sources/roles.json"
 
 {
     "privileges": [
@@ -146,14 +150,22 @@ El archivo por defecto tiene el siguiente contenido:
 
 ```
 
+For a highest level of security, the "none" privilege is assigned to all permissions in the datastore, thus data access on the whole `ds` object is disabled by default. It is recommended not to modified or use this locking privilege, but to add specific permissions to each resource you wish to make available from web or REST requests ([see example below](example-of-privilege-configuration)).
+
+:::caution
+
+When no specific parameters are defined in the `roles.json` file, accesses are not limited. This configuration allows you to develop the application without having to worry about accesses, but is not recommended in production environment.
+
+:::
+
 :::note Compatibilidad
 
-As of 4D 20 R6, when opening an existing project that does not contain a `roles.json` file or the `"forceLogin": true` settings, the **Activate REST authentication through ds.authentify() function** button is available in the [**Web Features** page of the Settings dialog box](../settings/web.md#access). This button automatically upgrades your security settings (you may have to modify your code, [see this blog post](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications)).
+In previous releases, the `roles.json` file was not created by default. As of 4D 20 R6, when opening an existing project that does not contain a `roles.json` file or the `"forceLogin": true` settings, the **Activate REST authentication through ds.authentify() function** button is available in the [**Web Features** page of the Settings dialog box](../settings/web.md#access). This button automatically upgrades your security settings (you may have to modify your code, [see this blog post](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/)).
 :::
 
 :::note Qodly Studio
 
-In Qodly Studio for 4D, the mode can be set using the [**Force login** option](../WebServer/qodly-studio.md#force-login) in the Privileges panel.
+En Qodly Studio for 4D, el modo se puede definir utilizando la opción [**Forzar inicio de sesión**](../WebServer/qodly-studio.md#force-login) en el panel de Privilegios.
 
 :::
 
@@ -193,7 +205,7 @@ La sintaxis del archivo `roles.json` es la siguiente:
 
 El archivo `roles.json` es analizado por 4D al inicio. Debe reiniciar la aplicación si desea que se tengan en cuenta las modificaciones en este archivo.
 
-En caso de error(es) al analizar el archivo `roles.json`, 4D carga el proyecto pero desactiva la protección de acceso global - esto permite al desarrollador acceder a los archivos y solucionar el error. An error file named `Roles_Errors.json` is generated in the [`Logs` folder of the project](../Project/architecture.md#logs) and describes the error line(s). Este archivo se elimina automáticamente cuando el archivo `roles.json` deja de contener errores.
+En caso de error(es) al analizar el archivo `roles.json`, 4D carga el proyecto pero desactiva la protección de acceso global - esto permite al desarrollador acceder a los archivos y solucionar el error. Se genera un archivo de error llamado `Roles_Errors.json` en la [`carpeta Logs del proyecto`](../Project/architecture.md#logs) y describe la(s) línea(s) de error. Este archivo se elimina automáticamente cuando el archivo `roles.json` deja de contener errores.
 
 Se recomienda comprobar al inicio si existe un archivo `Roles_Errors.json` en la carpeta [Logs](../Project/architecture.md#logs), lo que significa que se ha producido un error de análisis y que los accesos no estarán limitados. Puede escribir, por ejemplo:
 
@@ -206,100 +218,98 @@ Else // you can prevent the project to open
 End if
 ```
 
-## Inicialización de privilegios para el despliegue
+## Example of privilege configuration
 
-Por defecto, si no se definen parámetros específicos en el archivo `roles.json`, los accesos no están limitados. Esta configuración le permite desarrollar la aplicación sin tener que preocuparse por los accesos.
-
-Sin embargo, cuando la aplicación está a punto de desplegarse, una buena práctica es bloquear todos los privilegios y, a continuación, configurar el archivo para que sólo abra las partes controladas a las sesiones autorizadas. Para bloquear todos los privilegios en todos los recursos, coloque el siguiente archivo `roles.json` en la carpeta de su proyecto (incluye ejemplos de métodos):
+The good practice is to keep all data access locked by default thanks to the "none" privilege and to configure the `roles.json` file to only open controlled parts to authorized sessions. For example, to allow some accesses to guest sessions:
 
 ```json title="/Project/Sources/roles.json"
+
 {
-	"privileges": [
-		{
-			"privilege": "none",
-			"includes": []
-		}
-	],
-
-	"roles": [],
-
-	"permissions": {
-		"allowed": [{
-			"applyTo": "ds",
-			"type": "datastore",
-			"read": [
-				"none"
-			],
-			"create": [
-				"none"
-			],
-			"update": [
-				"none"
-			],
-			"drop": [
-				"none"
-			],
-			"execute": [
-				"none"
-			],
-			"describe": [
-				"none"
-			],
-			"promote": [
-				"none"
-			]
-		},
-		{
-			"applyTo": "ds.loginAs",
-			"type": "method",
-			"execute": [
-					"guest"
-				]
-		},
-		{
-			"applyTo": "ds.hasPrivilege",
-			"type": "method",
-			"execute": [
-					"guest"
-				]
-		},
-		{
-			"applyTo": "ds.clearPrivileges",
-			"type": "method",
-			"execute": [
-					"guest"
-				]
-		},
-		{
-			"applyTo": "ds.isGuest",
-			"type": "method",
-			"execute": [
-					"guest"
-				]
-		},
-		{
-			"applyTo": "ds.getPrivileges",
-			"type": "method",
-			"execute": [
-					"guest"
-				]
-		},
-		{
-			"applyTo": "ds.setAllPrivileges",
-			"type": "method",
-			"execute": [
-				"guest"
-			]
-	 },
-		{
-			"applyTo": "mySingletonClass.createID",
-			"type": "singletonMethod",
-			"execute": [
-				"guest"
-			]
-	 }
-		]
-	},
-    "forceLogin": true
+  "privileges": [
+    {
+      "privilege": "none",
+      "includes": []
+    }
+  ],
+  "roles": [],
+  "permissions": {
+    "allowed": [
+      {
+        "applyTo": "ds",
+        "type": "datastore",
+        "read": [
+          "none"
+        ],
+        "create": [
+          "none"
+        ],
+        "update": [
+          "none"
+        ],
+        "drop": [
+          "none"
+        ],
+        "execute": [
+          "none"
+        ],
+        "describe": [
+          "none"
+        ],
+        "promote": [
+          "none"
+        ]
+      },
+      {
+        "applyTo": "ds.loginAs",
+        "type": "method",
+        "execute": [
+          "guest"
+        ]
+      },
+      {
+        "applyTo": "ds.hasPrivilege",
+        "type": "method",
+        "execute": [
+          "guest"
+        ]
+      },
+      {
+        "applyTo": "ds.clearPrivileges",
+        "type": "method",
+        "execute": [
+          "guest"
+        ]
+      },
+      {
+        "applyTo": "ds.isGuest",
+        "type": "method",
+        "execute": [
+          "guest"
+        ]
+      },
+      {
+        "applyTo": "ds.getPrivileges",
+        "type": "method",
+        "execute": [
+          "guest"
+        ]
+      },
+      {
+        "applyTo": "ds.setAllPrivileges",
+        "type": "method",
+        "execute": [
+          "guest"
+        ]
+      },
+      {
+        "applyTo": "mySingletonClass.createID",
+        "type": "singletonMethod",
+        "execute": [
+          "guest"
+        ]
+      }
+    ]
+  },
+  "forceLogin": true
 }
 ```

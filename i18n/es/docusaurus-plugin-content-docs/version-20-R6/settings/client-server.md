@@ -68,7 +68,7 @@ Cuando la autenticación única (SSO) está activa (ver arriba), debe llenar est
 Esta caja desplegable contiene 3 opciones de capa de red a elegir entre: **legacy**, **ServerNet** y **QUIC** (sólo en modo proyecto), que se utilizan para manejar las comunicaciones entre 4D Server y las máquinas 4D remotas (clientes).
 
 - **Legal**: esta antigua capa de red "Legal" sigue siendo soportada para garantizar la compatibilidad de las bases de datos creadas antes de la v15. Esta capa de red también puede habilitarse por programación utilizando el comando [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html).
-- **ServerNet** (by default): Enables the ServerNet network layer on the server (available since 4D v15).
+- **ServerNet** (por defecto): activa la capa de red de ServerNet en el servidor (disponible desde 4D v15).
 - **QUIC** (disponible solo en modo proyecto): activa la capa de red QUIC en el servidor.
 
   **Notas**:

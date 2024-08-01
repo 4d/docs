@@ -384,6 +384,8 @@ Customized time formats can be built using several patterns described in the [**
 
 デフォルトでは、null の時間はゼロで表示されます。例: "00:00:00"。 "blankIfNull" オプションを使用すると、null の時間は空白として表示されます。 "blankIfNull" 文字列 (文字の大小を区別) は、選択されたフォーマットの値と組み合わせて使います。 例: "MM_SS blankIfNull" または "aa hh:mm blankIfNull"
 
+:::
+
 #### 対象オブジェクト
 
 [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
@@ -397,7 +399,7 @@ Customized time formats can be built using several patterns described in the [**
 - [入力オブジェクト](input_overview.md) にテキストとして
 - [リストボックス列](listbox_overview.md#リストボックス列) に表示タイプ ["ポップアップ"](properties_Display.md#表示タイプ) を選択して
 
-... 値の代わりに表示するテキストを指定することができます:
+... you can select the text to display for each value:
 
 - **テキスト (True時)** - 値が "true" の時に表示するテキスト
 - **テキスト (False時)** - 値が "false" の時に表示するテキスト

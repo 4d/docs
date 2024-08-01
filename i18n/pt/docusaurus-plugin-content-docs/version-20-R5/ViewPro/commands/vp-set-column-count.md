@@ -21,7 +21,7 @@ The `VP SET COLUMN COUNT` command <!-- REF #_method_.VP SET COLUMN COUNT.Summary
 
 Em _vpAreaName_, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-Pass the total number of columns in the _columnCount_ parameter. _columnCount_ deve ser maior que 0.
+Passe o número total de colunas no parâmetro _columnCount_. _columnCount_ deve ser maior que 0.
 
 In the optional _sheet_ parameter, you can designate a specific spreadsheet where the _columnCount_ will be applied (counting begins at 0). Se omitido, a planilha atual será utilizada por padrão. Você pode selecionar explicitamente a planilha atual com a seguinte constante:
 

@@ -114,6 +114,12 @@ Voici la séquence des appels de callbacks :
 3. si aucune erreur ne s'est produite, `onResponse` est exécuté une fois
 4. `onTerminate` est toujours exécuté
 
+:::info
+
+Pour que les fonctions de rappel soient appelées lorsque vous n'utilisez pas [`wait()`](#wait) (appel asynchrone), le process doit être un [process worker](../Develop/processes.md#worker-processes) créé avec [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), et NON [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
+
+:::
+
 #### Valeur retournée
 
 La fonction renvoie un objet system worker sur lequel vous pouvez appeler les fonctions et les propriétés de la classe SystemWorker.

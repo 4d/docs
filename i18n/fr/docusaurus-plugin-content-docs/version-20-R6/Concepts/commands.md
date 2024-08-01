@@ -16,7 +16,7 @@ Nom (numéro)
 
 [4D](https://doc.4d.com/4dv20/help/command/en/page1709.html) (1709)
 
-<a name="A"><b>A</b></a>
+<a id="A"><b>A</b></a>
 
 [ABORT](https://doc.4d.com/4dv20/help/command/en/page156.html) (156) -
 [ABORT PROCESS BY ID](https://doc.4d.com/4dv20/help/command/en/page1634.html) (1634) -
@@ -62,7 +62,7 @@ Nom (numéro)
 [Asserted](https://doc.4d.com/4dv20/help/command/en/page1132.html) (1132) -
 [Average](https://doc.4d.com/4dv20/help/command/en/page2.html) (2) -
 
-<a name="B"><b>B</b></a>
+<a id="B"><b>B</b></a>
 
 [BACKUP](https://doc.4d.com/4dv20/help/command/en/page887.html) (887) -
 [BASE64 DECODE](https://doc.4d.com/4dv20/help/command/en/page896.html) (896) -
@@ -89,7 +89,7 @@ Nom (numéro)
 [BRING TO FRONT](https://doc.4d.com/4dv20/help/command/en/page326.html) (326) -
 [BUILD APPLICATION](https://doc.4d.com/4dv20/help/command/en/page871.html) (871) -
 
-<a name="C"><b>C</b></a>
+<a id="C"><b>C</b></a>
 
 [C_BLOB](https://doc.4d.com/4dv20/help/command/en/page604.html) (604) -
 [C_BOOLEAN](https://doc.4d.com/4dv20/help/command/en/page305.html) (305) -
@@ -194,7 +194,7 @@ Nom (numéro)
 [Current user](https://doc.4d.com/4dv20/help/command/en/page182.html) (182) -
 [CUT NAMED SELECTION](https://doc.4d.com/4dv20/help/command/en/page334.html) (334) -
 
-<a name="D"><b>D</b></a>
+<a id="D"><b>D</b></a>
 
 [Data file](https://doc.4d.com/4dv20/help/command/en/page490.html) (490) -
 [Data file encryption status](https://doc.4d.com/4dv20/help/command/en/page1609.html) (1609) -
@@ -275,7 +275,7 @@ Nom (numéro)
 [DUPLICATE RECORD](https://doc.4d.com/4dv20/help/command/en/page225.html) (225) -
 [Dynamic pop up menu](https://doc.4d.com/4dv20/help/command/en/page1006.html) (1006) -
 
-<a name="E"><b>E</b></a>
+<a id="E"><b>E</b></a>
 
 [EDIT ACCESS](https://doc.4d.com/4dv20/help/command/en/page281.html) (281) -
 [EDIT FORMULA](https://doc.4d.com/4dv20/help/command/en/page806.html) (806) -
@@ -303,7 +303,7 @@ Nom (numéro)
 [EXPORT SYLK](https://doc.4d.com/4dv20/help/command/en/page85.html) (85) -
 [EXPORT TEXT](https://doc.4d.com/4dv20/help/command/en/page167.html) (167) -
 
-<a name="F"><b>F</b></a>
+<a id="F"><b>F</b></a>
 
 [False](https://doc.4d.com/4dv20/help/command/en/page215.html) (215) -
 [Field](https://doc.4d.com/4dv20/help/command/en/page253.html) (253) -
@@ -319,6 +319,7 @@ Nom (numéro)
 [FIRST RECORD](https://doc.4d.com/4dv20/help/command/en/page50.html) (50) -
 [FLUSH CACHE](https://doc.4d.com/4dv20/help/command/en/page297.html) (297) -
 [Focus object](https://doc.4d.com/4dv20/help/command/en/page278.html) (278) -
+
 [Folder](https://doc.4d.com/4dv20/help/command/en/page1567.html) (1567) -
 [FOLDER LIST](https://doc.4d.com/4dv20/help/command/en/page473.html) (473) -
 [Font file](https://doc.4d.com/4dv20/help/command/en/page1700.html) (1700) -
@@ -356,7 +357,7 @@ Nom (numéro)
 [Frontmost process](https://doc.4d.com/4dv20/help/command/en/page327.html) (327) -
 [Frontmost window](https://doc.4d.com/4dv20/help/command/en/page447.html) (447) -
 
-<a name="G"><b>G</b></a>
+<a id="G"><b>G</b></a>
 
 [GENERATE CERTIFICATE REQUEST](https://doc.4d.com/4dv20/help/command/en/page691.html) (691) -
 [Generate digest](https://doc.4d.com/4dv20/help/command/en/page1147.html) (1147) -
@@ -487,7 +488,7 @@ Nom (numéro)
 [GRAPH](https://doc.4d.com/4dv20/help/command/en/page169.html) (169) -
 [GRAPH SETTINGS](https://doc.4d.com/4dv20/help/command/en/page298.html) (298) -
 
-<a name="H"><b>H</b></a>
+<a id="H"><b>H</b></a>
 
 [HIDE MENU BAR](https://doc.4d.com/4dv20/help/command/en/page432.html) (432) -
 [HIDE PROCESS](https://doc.4d.com/4dv20/help/command/en/page324.html) (324) -
@@ -503,7 +504,7 @@ Nom (numéro)
 [HTTP SET CERTIFICATES FOLDER](https://doc.4d.com/4dv20/help/command/en/page1306.html) (1306) -
 [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) (1160) -
 
-<a name="I"><b>I</b></a>
+<a id="I"><b>I</b></a>
 
 [IDLE](https://doc.4d.com/4dv20/help/command/en/page311.html) (311) -
 [IMAP New transporter](https://doc.4d.com/4dv20/help/command/en/page1723.html) (1723) -
@@ -544,9 +545,11 @@ Nom (numéro)
 [Is table number valid](https://doc.4d.com/4dv20/help/command/en/page999.html) (999) -
 [Is user deleted](https://doc.4d.com/4dv20/help/command/en/page616.html) (616) -
 [Is waiting mouse up](https://doc.4d.com/4dv20/help/command/en/page1422.html) (1422) -
+[Is window maximized](https://doc.4d.com/4dv20R/help/command/en/page1830.html) (1830) -
+[Is window reduced](https://doc.4d.com/4dv20R/help/command/en/page1831.html) (1831) -
 [Is Windows](https://doc.4d.com/4dv20/help/command/en/page1573.html) (1573) -
 
-<a name="J"><b>J</b></a>
+<a id="J"><b>J</b></a>
 
 [JSON Parse](https://doc.4d.com/4dv20/help/command/en/page1218.html) (1218) -
 [JSON PARSE ARRAY](https://doc.4d.com/4dv20/help/command/en/page1219.html) (1219) -
@@ -556,11 +559,12 @@ Nom (numéro)
 [JSON TO SELECTION](https://doc.4d.com/4dv20/help/command/en/page1235.html) (1235) -
 [JSON Validate](https://doc.4d.com/4dv20/help/command/en/page1456.html) (1456) -
 
-<a name="K"><b>K</b></a>
+<a id="K"><b>K</b></a>
 
-[Keystroke](https://doc.4d.com/4dv20/help/command/en/page390.html) (390) - [KILL WORKER](https://doc.4d.com/4dv20/help/command/en/page1390.html) (1390) -
+[Keystroke](https://doc.4d.com/4dv20/help/command/en/page390.html) (390) -
+[KILL WORKER](https://doc.4d.com/4dv20/help/command/en/page1390.html) (1390) -
 
-<a name="L"><b>L</b></a>
+<a id="L"><b>L</b></a>
 
 [Last errors](https://doc.4d.com/4dv20/help/command/en/page1799.html) (1799) -
 [LAST RECORD](https://doc.4d.com/4dv20/help/command/en/page200.html) (200) -
@@ -651,7 +655,7 @@ Nom (numéro)
 [LONGINT TO BLOB](https://doc.4d.com/4dv20/help/command/en/page550.html) (550) -
 [Lowercase](https://doc.4d.com/4dv20/help/command/en/page14.html) (14) -
 
-<a name="M"><b>M</b></a>
+<a id="M"><b>M</b></a>
 
 [Macintosh command down](https://doc.4d.com/4dv20/help/command/en/page546.html) (546) -
 [Macintosh control down](https://doc.4d.com/4dv20/help/command/en/page544.html) (544) -
@@ -700,7 +704,7 @@ Nom (numéro)
 [MOVE DOCUMENT](https://doc.4d.com/4dv20/help/command/en/page540.html) (540) -
 [MULTI SORT ARRAY](https://doc.4d.com/4dv20/help/command/en/page718.html) (718) -
 
-<a name="N"><b>N</b></a>
+<a id="N"><b>N</b></a>
 
 [New collection](https://doc.4d.com/4dv20/help/command/en/page1472.html) (1472) -
 [New data key](https://doc.4d.com/4dv20/help/command/en/page1611.html) (1611) -
@@ -719,7 +723,7 @@ Nom (numéro)
 [Null](https://doc.4d.com/4dv20/help/command/en/page1517.html) (1517) -
 [Num](https://doc.4d.com/4dv20/help/command/en/page11.html) (11) -
 
-<a name="O"><b>O</b></a>
+<a id="O"><b>O</b></a>
 
 [OB Class](https://doc.4d.com/4dv20/help/command/en/page1730.html) (1730) -
 [OB Copy](https://doc.4d.com/4dv20/help/command/en/page1225.html) (1225) -
@@ -858,7 +862,7 @@ Nom (numéro)
 [ORDER BY FORMULA](https://doc.4d.com/4dv20/help/command/en/page300.html) (300) -
 [Outside call](https://doc.4d.com/4dv20/help/command/en/page328.html) (328) -
 
-<a name="P"><b>P</b></a>
+<a id="P"><b>P</b></a>
 
 [PAGE BREAK](https://doc.4d.com/4dv20/help/command/en/page6.html) (6) -
 [Parse formula](https://doc.4d.com/4dv20/help/command/en/page1576.html) (1576) -
@@ -904,7 +908,7 @@ Nom (numéro)
 [Progress New](https://doc.4d.com/4dv20/help/command/en/page0.html) (0) -
 [PUSH RECORD](https://doc.4d.com/4dv20/help/command/en/page176.html) (176) -
 
-<a name="Q"><b>Q</b></a>
+<a id="Q"><b>Q</b></a>
 
 [QR BLOB TO REPORT](https://doc.4d.com/4dv20/help/command/en/page771.html) (771) -
 [QR Count columns](https://doc.4d.com/4dv20/help/command/en/page764.html) (764) -
@@ -964,7 +968,7 @@ Nom (numéro)
 [QUERY WITH ARRAY](https://doc.4d.com/4dv20/help/command/en/page644.html) (644) -
 [QUIT 4D](https://doc.4d.com/4dv20/help/command/en/page291.html) (291) -
 
-<a name="R"><b>R</b></a>
+<a id="R"><b>R</b></a>
 
 [Random](https://doc.4d.com/4dv20/help/command/en/page100.html) (100) -
 [READ ONLY](https://doc.4d.com/4dv20/help/command/en/page145.html) (145) -
@@ -982,6 +986,7 @@ Nom (numéro)
 [Records in table](https://doc.4d.com/4dv20/help/command/en/page83.html) (83) -
 [REDRAW](https://doc.4d.com/4dv20/help/command/en/page174.html) (174) -
 [REDRAW WINDOW](https://doc.4d.com/4dv20/help/command/en/page456.html) (456) -
+[REDUCE RESTORE WINDOW](https://doc.4d.com/4dv20R/help/command/en/page1829.html) (1829) -
 [REDUCE SELECTION](https://doc.4d.com/4dv20/help/command/en/page351.html) (351) -
 [Refresh license](https://doc.4d.com/4dv20/help/command/en/page1336.html) (1336) -
 [REGENERATE MISSING TABLE](https://doc.4d.com/4dv20/help/command/en/page1126.html) (1126) -
@@ -1013,7 +1018,7 @@ Nom (numéro)
 [Right click](https://doc.4d.com/4dv20/help/command/en/page712.html) (712) -
 [Round](https://doc.4d.com/4dv20/help/command/en/page94.html) (94) -
 
-<a name="S"><b>S</b></a>
+<a id="S"><b>S</b></a>
 
 [SAVE LIST](https://doc.4d.com/4dv20/help/command/en/page384.html) (384) -
 [SAVE RECORD](https://doc.4d.com/4dv20/help/command/en/page53.html) (53) -
@@ -1061,6 +1066,7 @@ Nom (numéro)
 [SEND VARIABLE](https://doc.4d.com/4dv20/help/command/en/page80.html) (80) -
 [Sequence number](https://doc.4d.com/4dv20/help/command/en/page244.html) (244) -
 [Session](https://doc.4d.com/4dv20/help/command/en/page1714.html) (1714) -
+[Session storage by id](https://doc.4d.com/4dv20R/help/command/en/page1839.html) (1839) -
 [SET ABOUT](https://doc.4d.com/4dv20/help/command/en/page316.html) (316) -
 [SET ALLOWED METHODS](https://doc.4d.com/4dv20/help/command/en/page805.html) (805) -
 [SET APPLICATION COLOR SCHEME](https://doc.4d.com/4dv20/help/command/en/page1762.html) (1762) -
@@ -1210,7 +1216,7 @@ Nom (numéro)
 [SVG SHOW ELEMENT](https://doc.4d.com/4dv20/help/command/en/page1108.html) (1108) -
 [System folder](https://doc.4d.com/4dv20/help/command/en/page487.html) (487) -
 
-<a name="T"><b>T</b></a>
+<a id="T"><b>T</b></a>
 
 [Table](https://doc.4d.com/4dv20/help/command/en/page252.html) (252) -
 [Table name](https://doc.4d.com/4dv20/help/command/en/page256.html) (256) -
@@ -1238,7 +1244,7 @@ Nom (numéro)
 [TRUNCATE TABLE](https://doc.4d.com/4dv20/help/command/en/page1051.html) (1051) -
 [Type](https://doc.4d.com/4dv20/help/command/en/page295.html) (295) -
 
-<a name="U"><b>U</b></a>
+<a id="U"><b>U</b></a>
 
 [Undefined](https://doc.4d.com/4dv20/help/command/en/page82.html) (82) -
 [UNION](https://doc.4d.com/4dv20/help/command/en/page120.html) (120) -
@@ -1252,7 +1258,7 @@ Nom (numéro)
 [User in group](https://doc.4d.com/4dv20/help/command/en/page338.html) (338) -
 [USERS TO BLOB](https://doc.4d.com/4dv20/help/command/en/page849.html) (849) -
 
-<a name="V"><b>V</b></a>
+<a id="V"><b>V</b></a>
 
 [Validate password](https://doc.4d.com/4dv20/help/command/en/page638.html) (638) -
 [VALIDATE TRANSACTION](https://doc.4d.com/4dv20/help/command/en/page240.html) (240) -
@@ -1267,7 +1273,7 @@ Nom (numéro)
 [VOLUME ATTRIBUTES](https://doc.4d.com/4dv20/help/command/en/page472.html) (472) -
 [VOLUME LIST](https://doc.4d.com/4dv20/help/command/en/page471.html) (471) -
 
-<a name="W"><b>W</b></a>
+<a id="W"><b>W</b></a>
 
 [WA Back URL available](https://doc.4d.com/4dv20/help/command/en/page1026.html) (1026) -
 [WA Create URL history menu](https://doc.4d.com/4dv20/help/command/en/page1049.html) (1049) -
@@ -1411,17 +1417,18 @@ Nom (numéro)
 [WP USE PAGE SETUP](https://doc.4d.com/4dv20/help/command/en/page1358.html) (1358) -
 [WRITE PICTURE FILE](https://doc.4d.com/4dv20/help/command/en/page680.html) (680) -
 
-<a name="X"><b>X</b></a>
+<a id="X"><b>X</b></a>
 
 [XML DECODE](https://doc.4d.com/4dv20/help/command/en/page1091.html) (1091) -
 [XML GET ERROR](https://doc.4d.com/4dv20/help/command/en/page732.html) (732) -
 [XML GET OPTIONS](https://doc.4d.com/4dv20/help/command/en/page1096.html) (1096) -
 [XML SET OPTIONS](https://doc.4d.com/4dv20/help/command/en/page1090.html) (1090) -
 
-<a name="Y"><b>Y</b></a>
+<a id="Y"><b>Y</b></a>
 
 [Year of](https://doc.4d.com/4dv20/help/command/en/page25.html) (25) -
 
-<a name="Z"><b>Z</b></a>
+<a id="Z"><b>Z</b></a>
 
-[ZIP Create archive](https://doc.4d.com/4dv20/help/command/en/page1640.html) (1640) - [ZIP Read archive](https://doc.4d.com/4dv20/help/command/en/page1637.html) (1637) -
+[ZIP Create archive](https://doc.4d.com/4dv20/help/command/en/page1640.html) (1640) -
+[ZIP Read archive](https://doc.4d.com/4dv20/help/command/en/page1637.html) (1637) -

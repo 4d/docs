@@ -7,22 +7,11 @@ La clase `CryptoKey` del lenguaje 4D encapsula un par de llaves de cifrado asim�
 
 Esta clase está disponible en el "class store" de `4D`.
 
-### Ejemplo
+:::info Ver también
 
-El siguiente código de ejemplo firma y verifica un mensaje utilizando un nuevo par de llaves ECDSA, por ejemplo para hacer un token web JSON ES256.
+For a comprehensive overview of this class, please refer to the [**CryptoKey: encrypt, decrypt, sign, and verify!**](https://blog.4d.com/cryptokey-encrypt-decrypt-sign-and-verify/) blog post.
 
-```4d
- // Generar un nuevo par de llaves ECDSA
-$key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
-
-  // Obtener la firma como base64
-$message:="hello world"
-$signature:=$key.sign($message;New object("hash";"SHA256"))
-
-  // Verificar firma
-$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
-ASSERT($status.success)
-```
+:::
 
 ### Resumen
 
@@ -64,16 +53,76 @@ La función `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crea un
 
 #### *settings*
 
-| Propiedad       | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [type](#type)   | text    | Define el tipo de clave a crear: <li>"RSA": genera un par de llaves RSA, utilizando [.size](#size) como tamaño.</li><li>"ECDSA": genera un par de llaves Elliptic Curve Digital Signature Algorithm, utilizando [.curve](#curve) como curva. Note that ECDSA keys cannot be used for encryption but only for signature.</li><li>"PEM": loads a key pair definition in PEM format, using [.pem](#pem).</li> |
-| [curve](#curve) | text    | Nombre de la curva ECDSA                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| [pem](#pem)     | text    | Definición PEM de una llave de cifrado a cargar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| [size](#size)   | integer | Tamaño de la llave RSA en bits                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Propiedad       | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| --------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [type](#type)   | text    | Define el tipo de clave a crear: <li>"RSA": genera un par de llaves RSA, utilizando [.size](#size) como tamaño.</li><li>"ECDSA": genera un par de llaves Elliptic Curve Digital Signature Algorithm, utilizando [.curve](#curve) como curva. Tenga en cuenta que las llaves ECDSA no pueden utilizarse para cifrar, sino sólo para firmar.</li><li>"PEM": carga una definición de par de llaves en formato PEM, utilizando [.pem](#pem).</li> |
+| [curve](#curve) | text    | Nombre de la curva ECDSA                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| [pem](#pem)     | text    | Definición PEM de una llave de cifrado a cargar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| [size](#size)   | integer | Tamaño de la llave RSA en bits                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 #### *CryptoKey*
 
 El objeto `CryptoKey` devuelto encapsula un par de llaves de cifrado. Es un objeto compartido y, por tanto, puede ser utilizado por varios procesos 4D simultáneamente.
+
+#### Ejemplo 1
+
+A message is signed by a private key and the signature is verified by the corresponding public key. The following code signs and verifies a simple message signature.
+
+- Bob's side:
+
+```4d
+// Create the message
+$message:="hello world"
+Folder(fk desktop folder).file("message.txt").setText($message)
+
+// Create a key
+$type:=New object("type";"RSA")
+$key:=4D.CryptoKey.new($type)
+
+// Get the public key and save it
+Folder(fk desktop folder).file("public.pem").setText($key.getPublicKey())
+
+// Get signature as base64 and save it
+Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
+
+/*Bob sends the message, the public key and the signature to Alice*/
+```
+
+- Alice's side:
+
+```4d
+// Get message, public key & signature
+$message:=Folder(fk desktop folder).file("message.txt").getText()
+$publicKey:=Folder(fk desktop folder).file("public.pem").getText()
+$signature:=Folder(fk desktop folder).file("signature").getText()
+
+// Create a key
+$type:=New object("type";"PEM";"pem";$publicKey)
+$key:=4D.CryptoKey.new($type)
+
+// Verify signature
+If ($key.verify($message;$signature;$type).success)
+// The signature is valid
+
+End if
+```
+
+#### Ejemplo 2
+
+El siguiente código de ejemplo firma y verifica un mensaje utilizando un nuevo par de llaves ECDSA, por ejemplo para hacer un token web JSON ES256.
+
+```4d
+ // Generar un nuevo par de llaves ECDSA
+$key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
+
+  // Obtener la firma como base64
+$message:="hello world"
+$signature:=$key.sign($message;New object("hash";"SHA256"))
+
+  // Verificar firma
+$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
+ASSERT($status.success)
+```
 
 <!-- REF CryptoKey.curve -->
 

@@ -58,7 +58,7 @@ Puede asignar un [objeto](Concepts/dt_object.md) que encapsule una [colección](
 
 El código de inicialización debe ejecutarse antes de que el formulario se presente al usuario.
 
-En el siguiente ejemplo, `Form.tabControl` se ha definido como [expresión](properties_Object.md#variable-or-expression) del control de pestañas. You can associate the [`gotoPage` standard action](#goto-page-action) to the form object:
+En el siguiente ejemplo, `Form.tabControl` se ha definido como [expresión](properties_Object.md#variable-or-expression) del control de pestañas. Puede asociar la [acción estándar `gotoPage`](#goto-page-action) al objeto del formulario:
 
 ```4d
 Form.tabControl:=New object
@@ -93,7 +93,7 @@ You can use the [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/en/page
 FORM GOTO PAGE(arrPages)
 ```
 
-The command is executed when the [`On Clicked`](Events/onClicked.md) event occurs. You should then clear the array when the [`On Unload`](Events/onUnload.md) event occurs.
+El comando se ejecuta cuando se produce el evento [`On Clicked`](Events/onClicked.md). You should then clear the array when the [`On Unload`](Events/onUnload.md) event occurs.
 
 He aquí un ejemplo de método objeto:
 
