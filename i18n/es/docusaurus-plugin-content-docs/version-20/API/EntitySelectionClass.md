@@ -1881,7 +1881,7 @@ Se pueden encontrar más ejemplos de búsquedas en la página [`.query()`](DataC
 
 La propiedad `.queryPath` <!-- REF #EntitySelectionClass.queryPath.Summary -->contiene una descripción detallada de la consulta tal y como fue realizada por 4D<!-- END REF -->. Esta propiedad está disponible para los objetos de tipo `EntitySelection` generados a través de búsquedas si la propiedad `"queryPath":true` fue pasada en el parámetro *querySettings* de la función [`.query()`](#query).
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.md#query) page.
+Para más información, consulte el párrafo del **parámetro querySettings** en la página Dataclass[`.query()`](DataClassClass.md#query).
 
 <!-- END REF -->
 
