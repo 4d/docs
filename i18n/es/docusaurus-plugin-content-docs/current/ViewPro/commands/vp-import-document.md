@@ -63,7 +63,7 @@ El parámetro opcional *paramObj* permite definir las propiedades del documento 
 
 - La importación de archivos en formatos .xslx, .csv y .sjs es **asíncrona**. Con estos formatos, debe utilizar el atributo `formula` si desea iniciar una acción al final del procesamiento del documento.
 - Al importar un archivo con formato Microsoft Excel a un documento 4D View Pro, algunos parámetros pueden perderse. Puede verificar su configuración con [esta lista de SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
-- For more information on the CSV format and delimiter-separated values in general, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
+- Para más información sobre el formato CSV y los valores separados por delimitadores en general, ver [este artículo en Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
 
 :::
 
