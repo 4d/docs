@@ -150,7 +150,7 @@ Le fichier par défaut a le contenu suivant :
 
 ```
 
-Pour un niveau de sécurité maximal, le privilège "none" est attribué à toutes les permissions du datastore, désactivant ainsi l'accès aux données pour tout l'objet `ds` par défaut. Il est recommandé de ne pas modifier ou utiliser ce privilège de verrouillage, mais d'ajouter des permissions spécifiques à chaque ressource que vous souhaitez rendre disponible à partir de requêtes web ou REST ([voir l'exemple ci-dessous]#exemple-de-configuration-de-privilèges)).
+Pour un niveau de sécurité maximal, le privilège "none" est attribué à toutes les permissions du datastore, désactivant ainsi l'accès aux données pour tout l'objet `ds` par défaut. It is recommended not to modified or use this locking privilege, but to add specific permissions to each resource you wish to make available from web or REST requests ([see example below](#example-of-privilege-configuration)).
 
 :::caution
 
