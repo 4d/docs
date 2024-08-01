@@ -15,7 +15,7 @@ To query data directly, you can do so using the [`$filter`]($filter.md) function
 
 Con la API REST, puede realizar todas las manipulaciones a los datos como puede hacerlo en 4D.
 
-To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
+Para añadir y modificar entidades, puede llamar a [`$method=update`]($method.md#methodupdate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
 
 Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
 
@@ -41,7 +41,7 @@ Si desea eliminar un conjunto de entidades de la caché de 4D Server, puede util
 
 Si se modifica alguno de los atributos de la entidad en el conjunto de entidades, los valores se actualizarán. Sin embargo, si se modifica un valor que formaba parte de la consulta ejecutada para crear el conjunto de entidades, no se eliminará del conjunto de entidades aunque ya no se ajuste a los criterios de búsqueda.
 
-Las entidades que elimine, por supuesto, dejarán de formar parte del conjunto de entidades. However, by default their reference will remain in the entity set with an *undefined* value, and they will still be included in the entity set count. Call [`$clean`]($clean.md) on the entity set to create a new, up-to-date entity set without *undefined* entity references.
+Las entidades que elimine, por supuesto, dejarán de formar parte del conjunto de entidades. However, by default their reference will remain in the entity set with an *undefined* value, and they will still be included in the entity set count. Llame a [`$clean`]($clean.md) en el conjunto de entidades para crear un nuevo conjunto de entidades actualizado sin referencias de entidades *undefined*.
 
 Si el conjunto de entidades ya no existe en la caché de 4D Server, se recreará con un nuevo tiempo de espera por defecto de 10 minutos. El conjunto de entidades se refrescará (pueden incluirse ciertas entidades y eliminarse otras) desde la última vez que se creó, si ya no existía antes de recrearlo.
 
@@ -216,7 +216,7 @@ Si desea visualizar un atributo de imagen en su totalidad, escriba lo siguiente:
 
 `GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
 
-For more information about the image formats, refer to [`$imageformat`]($imageformat.md). For more information about the version parameter, refer to [`$version`]($version.md).
+Para más información sobre los formatos de imagen, consulte [`$imageformat`]($imageformat.md). Para más información sobre el parámetro version, consulte [`$version`]($version.md).
 
 ## Guardar un atributo BLOB en el disco
 

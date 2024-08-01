@@ -85,7 +85,7 @@ La siguiente tabla muestra las opciones disponibles:
 
 ### Formatos personalizados
 
-Customized date formats can be built using several patterns described in the [**Date and Time Formats**](../Project/date-time-formats.md) page. Por ejemplo:
+Se pueden crear formatos de fecha personalizados utilizando varios patrones descritos en la página [**Formatos de fecha y hora**](../Project/date-time-formats.md). Por ejemplo:
 
 | Modelo               | Ejemplo (sistema USA) |
 | -------------------- | ---------------------------------------- |
@@ -360,7 +360,7 @@ La siguiente tabla muestra los formatos de visualización de los campos de hora 
 
 ### Formatos personalizados
 
-Customized time formats can be built using several patterns described in the [**Date and Time Formats**](../Project/date-time-formats.md) page. Por ejemplo:
+Se pueden crear formatos de hora personalizados utilizando varios patrones descritos en la página [**Formatos de fecha y hora**](../Project/date-time-formats.md). Por ejemplo:
 
 | Modelo                                  | Ejemplo (sistema USA) |
 | --------------------------------------- | ---------------------------------------- |
@@ -390,7 +390,7 @@ Cuando una [expresión booleana](properties_Object.md#expression-type) se muestr
 - un texto en un [objeto de entrada](input_overview.md)
 - un "popup"  en una [columna del list box](listbox_overview.md#list-box-columns),
 
-... puede seleccionar el texto que se mostrará para cada valor:
+... you can select the text to display for each value:
 
 - **Text cuando True** - el texto que se mostrará cuando el valor sea "true"
 - **Text cuando False** - el texto que se mostrará cuando el valor sea "false"

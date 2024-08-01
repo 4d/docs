@@ -64,9 +64,9 @@ Os objetos WebSocket fornecem as seguintes propriedades e funções:
 
 <details><summary>História</summary>
 
-| Release | Mudanças                                             |
-| ------- | ---------------------------------------------------- |
-| 20 R3   | Support of `headers` property in *connectionHandler* |
+| Release | Mudanças                                                |
+| ------- | ------------------------------------------------------- |
+| 20 R3   | Suporte da propriedade `headers` em *connectionHandler* |
 
 </details>
 
@@ -84,14 +84,14 @@ Os objetos WebSocket fornecem as seguintes propriedades e funções:
 
 The `4D.WebSocket.new()` function <!-- REF #4D.WebSocket.new().Summary -->creates and returns a new [`4D.WebSocket` object](#websocket-object) connected to the WebSocket server at the address you passed in *url*<!-- END REF -->. The `4D.WebSocket` object provides an API for creating and managing a WebSocket connection to a server, as well as sending and receiving data to and from the server.
 
-In *url*, pass the URL to which the WebSocket server will respond. Podem ser utilizados os seguintes padrões de URL:
+Em *url*, passe o URL ao qual o servidor WebSocket responderá. Podem ser utilizados os seguintes padrões de URL:
 
 - `ws://host[:port]path[?query]` for standard connections
 - `wss://host[:port]path[?query]` for TLS secured connections
 
 If the connection is not possible, a `null` object is returned and an error is generated (that you can intercept using a method installed with `ON ERR CALL`).
 
-### *connectionHandler* parameter
+### Parâmetro *connectionHandler*
 
 In *connectionHandler*, you can pass an object containing callback functions to be called according to connection events, as well as data type and headers to handle.
 
@@ -191,7 +191,7 @@ Esta propriedade é só de leitura.
 
 The `.send()` function <!-- REF #WebSocketClass.send().Summary -->sends *message* to the WebSocket server in the defined data type (Text, Blob, or Object)<!-- END REF -->.
 
-The following contents are sent depending on the *message* type:
+Os conteúdos seguintes são enviados em função do tipo de *message*:
 
 | Tipo   | Conteúdo                                                                                                                               |
 | ------ | -------------------------------------------------------------------------------------------------------------------------------------- |

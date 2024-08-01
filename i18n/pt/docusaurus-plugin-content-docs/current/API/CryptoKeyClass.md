@@ -7,22 +7,11 @@ The `CryptoKey` class in the 4D language encapsulates an asymmetric encryption k
 
 This class is available from the `4D` class store.
 
-### Exemplo
+:::info Veja também
 
-O código abaixo de exemplo firma e verifica uma mensagem utilizando um novo par de chaves ECDSA, por exemplo para criar um token web JSON ES256.
+For a comprehensive overview of this class, please refer to the [**CryptoKey: encrypt, decrypt, sign, and verify!**](https://blog.4d.com/cryptokey-encrypt-decrypt-sign-and-verify/) blog post.
 
-```4d
- // Generate a new ECDSA key pair
-$key:=4D. CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
-
-  // Get signature as base64
-$message:="hello world"
-$signature:=$key.sign($message;New object("hash";"SHA256"))
-
-  // Verify signature
-$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
-ASSERT($status.success)
-```
+:::
 
 ### Resumo
 
@@ -56,7 +45,7 @@ ASSERT($status.success)
 | Parâmetro | Tipo                          |    | Descrição                                          |
 | --------- | ----------------------------- | -- | -------------------------------------------------- |
 | settings  | Object                        | -> | Parâmetros para gerar ou carregar um par de chaves |
-| result    | 4D. CryptoKey | <- | Object encapsulating an encryption key pair        |
+| result    | 4D. CryptoKey | <- | Objeto que contém um par de chaves de encriptação  |
 
 <!-- END REF -->
 
@@ -74,6 +63,66 @@ The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->create
 #### *CryptoKey*
 
 The returned `CryptoKey` object encapsulates an encryption key pair. É um objeto compartido e, portanto, pode ser utilizado por vários processos 4D simultaneamente.
+
+#### Exemplo 1
+
+A message is signed by a private key and the signature is verified by the corresponding public key. The following code signs and verifies a simple message signature.
+
+- Bob's side:
+
+```4d
+// Create the message
+$message:="hello world"
+Folder(fk desktop folder).file("message.txt").setText($message)
+
+// Create a key
+$type:=New object("type";"RSA")
+$key:=4D.CryptoKey.new($type)
+
+// Get the public key and save it
+Folder(fk desktop folder).file("public.pem").setText($key.getPublicKey())
+
+// Get signature as base64 and save it
+Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
+
+/*Bob sends the message, the public key and the signature to Alice*/
+```
+
+- Alice's side:
+
+```4d
+// Get message, public key & signature
+$message:=Folder(fk desktop folder).file("message.txt").getText()
+$publicKey:=Folder(fk desktop folder).file("public.pem").getText()
+$signature:=Folder(fk desktop folder).file("signature").getText()
+
+// Create a key
+$type:=New object("type";"PEM";"pem";$publicKey)
+$key:=4D.CryptoKey.new($type)
+
+// Verify signature
+If ($key.verify($message;$signature;$type).success)
+// The signature is valid
+
+End if
+```
+
+#### Exemplo 2
+
+O código abaixo de exemplo firma e verifica uma mensagem utilizando um novo par de chaves ECDSA, por exemplo para criar um token web JSON ES256.
+
+```4d
+ // Generate a new ECDSA key pair
+$key:=4D. CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
+
+  // Get signature as base64
+$message:="hello world"
+$signature:=$key.sign($message;New object("hash";"SHA256"))
+
+  // Verify signature
+$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
+ASSERT($status.success)
+```
 
 <!-- REF CryptoKey.curve -->
 
@@ -291,7 +340,7 @@ Definição PEM de uma chave de cifrado a carregar. Se a chave for uma chave pri
 
 The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string<!-- END REF --> using the `CryptoKey` object keys and provided *options*. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
 
-The `CryptoKey` must contain a valid **private** key.
+A `CryptoKey` deve conter uma chave **privada** válida.
 
 #### *opções*
 
@@ -304,7 +353,7 @@ The `CryptoKey` must contain a valid **private** key.
 
 #### *Resultado*
 
-The utf8 representation of the *message* string.
+A representação utf8 da string *message*.
 
 <!-- END REF -->
 
@@ -375,7 +424,7 @@ Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "
 
 The `.verify()` function <!-- REF #CryptoKey.verify().Summary -->verifies the base64 signature against the utf8 representation of *message*<!-- END REF --> using the `CryptoKey` object keys and provided *options*.
 
-The `CryptoKey` must contain a valid **public** key.
+A `CryptoKey` deve conter uma chave **pública** válida.
 
 #### *opções*
 

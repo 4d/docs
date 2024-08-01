@@ -34,7 +34,7 @@ Une action de permission définie à un certain niveau est héritée par défaut
 
 :::info
 
-Les permissions contrôlent l'accès aux objets du datastore. Si vous voulez filtrer les données de lecture selon certains critères, vous pouvez envisager les [restrictions d'entity selections](entities.md#restricting-entity-selections) qui peuvent être plus appropriées dans ce cas.
+Les permissions contrôlent l'accès aux objets du datastore. Si vous voulez filtrer les données de lecture selon certains critères, vous pouvez envisager d'utiliser les [entity selections restreintes](entities.md#restricting-entity-selections) qui peuvent être plus appropriées dans ce cas.
 
 :::
 
@@ -57,7 +57,7 @@ Les actions disponibles sont liées à la ressource cible.
 - Un alias peut être lu dès que les privilèges de session permettent l'accès à l'alias lui-même, même si les privilèges de session ne permettent pas l'accès aux attributs résolvant l'alias.
 - Il est possible d'accéder à un attribut calculé même s'il n'y a pas de permissions sur les attributs sur lesquels il est construit.
 - Valeurs par défaut : dans l'implémentation actuelle, seul _Null_ est disponible en tant que valeur par défaut.
-- In REST [force login mode](../REST/authUsers.md/#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, whatever the permissions configuration.
+- En mode REST [force login](../REST/authUsers.md/#force-login-mode), la fonction [`authentify()`](../REST/authUsers.md#function-authentify) est toujours exécutable par les utilisateurs guest, quelle que soit la configuration des permissions.
 
 Le paramétrage des permissions nécessite d'être cohérent, en particulier :
 

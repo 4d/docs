@@ -17,6 +17,10 @@ Webユーザーまたは RESTユーザーがログインすると、そのセッ
 
 ![schema](../assets/en/ORDA/privileges-schema.png)
 
+### 参照
+
+詳細なアクセス権限アーキテクチャーの概要については、[**完全な権限システムでデータアクセスをフィルタリングする**](https://blog.4d.com/ja/filter-access-to-your-data-with-a-complete-system-of-permissions/) ブログ記事を参照ください。
+
 ## リソース
 
 プロジェクト内の以下の公開リソースに対して、許諾アクションと権限名を割り当てることができます (この設定をパーミッションと呼びます):
@@ -109,11 +113,11 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 ### デフォルトファイル
 
-プロジェクトを作成すると、デフォルトの `roles.json` ファイルが次の場所に作成されます: `<project folder>/Project/Sources/`。 [アーキテクチャー](../Project/architecture.md#sources) を参照ください。
+プロジェクトを作成すると、デフォルトの `roles.json` ファイルが次の場所に作成されます: `<project folder>/Project/Sources/` ([アーキテクチャー](../Project/architecture.md#sources) 参照)。
 
 デフォルトのファイルには次の内容が含まれています:
 
-```json
+```json title="/Project/Sources/roles.json"
 
 {
     "privileges": [
@@ -147,9 +151,17 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 ```
 
+最高レベルのセキュリティのため、データストア ("ds") のすべての許諾アクションに "none" の権限名が割り当てられています。したがって、デフォルトでは `ds` オブジェクト全体へのデータアクセスが無効になっています。 It is recommended not to modified or use this locking privilege, but to add specific permissions to each resource you wish to make available from web or REST requests ([see example below](#example-of-privilege-configuration)).
+
+:::caution
+
+`roles.json` ファイルに特定のパラメーターが定義されていない場合、アクセスは制限されません。 これにより、アクセスを気にすることなくアプリケーションを開発することができますが、本番環境では推奨されていません。
+
+:::
+
 :::note 互換性
 
-4D 20 R6 以降、`roles.json`ファイルを含まない、または `"forceLogin": true` の設定が含まれていない既存のプロジェクトを開く場合、[設定ダイアログボックスの **Web機能** ページ](../settings/web.md#アクセス権) で **ds.authentify() 関数によって REST認証を有効化する** ボタンが利用可能になります。 このボタンはセキュリティ設定を自動的にアップグレードします (コードを修正する必要があるかもしれません。[このブログ記事を参照ください](https://blog.4d.com/ja/force-login-becomes-default-for-all-rest-auth))。
+以前のリリースでは、`roles.json` ファイルはデフォルトで作成されませんでした。 4D 20 R6 以降、`roles.json`ファイルを含まない、または `"forceLogin": true` の設定が含まれていない既存のプロジェクトを開く場合、[設定ダイアログボックスの **Web機能** ページ](../settings/web.md#アクセス権) で **ds.authentify() 関数によって REST認証を有効化する** ボタンが利用可能になります。 このボタンはセキュリティ設定を自動的にアップグレードします (コードを修正する必要があるかもしれません。[このブログ記事を参照ください](https://blog.4d.com/ja/force-login-becomes-default-for-all-rest-auth))。
 :::
 
 :::note Qodly Studio
@@ -208,100 +220,98 @@ End if
 
 ```
 
-## 運用のための権限の初期化
+## 権限設定の例
 
-`roles.json` ファイルに特定のパラメーターが定義されていない場合のデフォルトでは、アクセスは制限されません。 これにより、アクセスを気にすることなくアプリケーションを開発することができます。
-
-しかし、実際にアプリケーションを運用する前には、まずすべての権限をロックしてから、許可されたセッションに必要な部分のみを公開するよう、ファイルを構成することが推奨されます。 すべてのリソースに対してすべての権限をロックするには、次の `roles.json` ファイルをプロジェクトフォルダーに置きます (メソッドの例が含まれています)。
+グッドプラクティスは、"none" 権限によってすべてのデータアクセスをデフォルトでロックしておき、`roles.json` ファイルを設定して、許可されたセッションにのみ限定的に一部を開放することです。 たとえば、制限されたアクセスをゲストセッションに対して許可する場合:
 
 ```json title="/Project/Sources/roles.json"
+
 {
-	"privileges": [
-		{
-			"privilege": "none",
-			"includes": []
-		}
-	],
-
-	"roles": [],
-
-	"permissions": {
-		"allowed": [{
-			"applyTo": "ds",
-			"type": "datastore",
-			"read": [
-				"none"
-			],
-			"create": [
-				"none"
-			],
-			"update": [
-				"none"
-			],
-			"drop": [
-				"none"
-			],
-			"execute": [
-				"none"
-			],
-			"describe": [
-				"none"
-			],
-			"promote": [
-				"none"
-			]
-		},
-		{
-			"applyTo": "ds.loginAs",
-			"type": "method",
-			"execute": [
-					"guest"
-				]
-		},
-		{
-			"applyTo": "ds.hasPrivilege",
-			"type": "method",
-			"execute": [
-					"guest"
-				]
-		},
-		{
-			"applyTo": "ds.clearPrivileges",
-			"type": "method",
-			"execute": [
-					"guest"
-				]
-		},
-		{
-			"applyTo": "ds.isGuest",
-			"type": "method",
-			"execute": [
-					"guest"
-				]
-		},
-		{
-			"applyTo": "ds.getPrivileges",
-			"type": "method",
-			"execute": [
-					"guest"
-				]
-		},
-		{
-			"applyTo": "ds.setAllPrivileges",
-			"type": "method",
-			"execute": [
-				"guest"
-			]
-	 },
-		{
-			"applyTo": "mySingletonClass.createID",
-			"type": "singletonMethod",
-			"execute": [
-				"guest"
-			]
-	 }
-		]
-	},
-    "forceLogin": true
+  "privileges": [
+    {
+      "privilege": "none",
+      "includes": []
+    }
+  ],
+  "roles": [],
+  "permissions": {
+    "allowed": [
+      {
+        "applyTo": "ds",
+        "type": "datastore",
+        "read": [
+          "none"
+        ],
+        "create": [
+          "none"
+        ],
+        "update": [
+          "none"
+        ],
+        "drop": [
+          "none"
+        ],
+        "execute": [
+          "none"
+        ],
+        "describe": [
+          "none"
+        ],
+        "promote": [
+          "none"
+        ]
+      },
+      {
+        "applyTo": "ds.loginAs",
+        "type": "method",
+        "execute": [
+          "guest"
+        ]
+      },
+      {
+        "applyTo": "ds.hasPrivilege",
+        "type": "method",
+        "execute": [
+          "guest"
+        ]
+      },
+      {
+        "applyTo": "ds.clearPrivileges",
+        "type": "method",
+        "execute": [
+          "guest"
+        ]
+      },
+      {
+        "applyTo": "ds.isGuest",
+        "type": "method",
+        "execute": [
+          "guest"
+        ]
+      },
+      {
+        "applyTo": "ds.getPrivileges",
+        "type": "method",
+        "execute": [
+          "guest"
+        ]
+      },
+      {
+        "applyTo": "ds.setAllPrivileges",
+        "type": "method",
+        "execute": [
+          "guest"
+        ]
+      },
+      {
+        "applyTo": "mySingletonClass.createID",
+        "type": "singletonMethod",
+        "execute": [
+          "guest"
+        ]
+      }
+    ]
+  },
+  "forceLogin": true
 }
 ```

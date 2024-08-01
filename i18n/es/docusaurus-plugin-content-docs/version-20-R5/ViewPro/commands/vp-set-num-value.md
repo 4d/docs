@@ -23,7 +23,7 @@ En _rangeObj_, pasa un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP C
 
 El parámetro _numberValue_ especifica un valor numérico que se asignará al _rangeObj_.
 
-The optional _formatPattern_ defines a [pattern](../configuring.md#cell-format) for the _numberValue_ parameter.
+El _formatPattern_ opcional define un [patrón](../configuring.md#cell-format) para el parámetro _numberValue_.
 
 #### Ejemplo
 

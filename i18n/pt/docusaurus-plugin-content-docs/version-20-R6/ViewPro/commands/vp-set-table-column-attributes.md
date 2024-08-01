@@ -22,7 +22,7 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                  |                  |
 | tableName  | Text    | -> | Nome da tabela                                              |                  |
 | column     | Integer | -> | Índice da coluna na tabela                                  |                  |
-| attributes | Object  | -> | Attribute(s) to apply to the *column*    |                  |
+| attributes | Object  | -> | Atributo(s) a aplicar à *column*         |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) | <!-- END REF --> |
 
 #### Descrição
@@ -42,7 +42,7 @@ In the *attributes* parameter, pass an object that contains the properties to se
 | footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                                                                                                |
 | filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                |
 
-In *sheet*, pass the index of the target sheet. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
+Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 
 > A indexação começa em 0.
 

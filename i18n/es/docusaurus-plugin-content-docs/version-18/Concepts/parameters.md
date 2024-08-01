@@ -364,7 +364,7 @@ En el siguiente ejemplo, el método proyecto `SEND PACKETS` acepta un parámetro
  End for
 ```
 
-La indirección de parámetros se gestiona mejor si se respeta la siguiente convención: si sólo algunos de los parámetros se dirigen por indirección, deben pasarse después de los demás. Within the method, an indirection address is formatted: $\{$i\}, where $i is a numeric variable. $\{$i\} se denomina un **parámetro genérico**.
+La indirección de parámetros se gestiona mejor si se respeta la siguiente convención: si sólo algunos de los parámetros se dirigen por indirección, deben pasarse después de los demás. Dentro del método, una dirección de indirección tiene el formato: $\{$i\}, donde $i es una variable numérica. $\{$i\} se denomina un **parámetro genérico**.
 
 Por ejemplo, considere una función que suma valores y devuelve la suma formateada según un formato que se pasa como parámetro. Cada vez que se llama a este método, el número de valores a sumar puede variar. Debemos pasar los valores como parámetros al método y el formato en forma de cadena de caracteres. El número de valores puede variar de una llamada a otra.
 

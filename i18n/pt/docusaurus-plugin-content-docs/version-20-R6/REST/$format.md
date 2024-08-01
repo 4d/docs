@@ -9,7 +9,7 @@ Defines a specific format to return data of a dataclass, (*e.g.*, `$format=looke
 
 This parameter allows you to define the format to use to return data of your dataclass.
 
-The following formats are supported:
+São suportados os seguintes formatos:
 
 | Formato  | Descrição                                                                                         |
 | -------- | ------------------------------------------------------------------------------------------------- |

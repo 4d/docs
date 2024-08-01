@@ -21,10 +21,10 @@ Un combo box se inicializa exactamente igual que una [lista desplegable](dropdow
 
 Un [objeto](Concepts/dt_object.md) encapsulando una [colección](../Concepts/dt_collection.md) puede utilizarse como fuente de datos de un combo box. El objeto debe contener las siguientes propiedades:
 
-| Propiedad      | Tipo                 | Descripción                                                                                                                                                                                                                                                           |
-| -------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `valores`      | Collection           | Obligatorio - Colección de valores escalares. Todos los valores deben ser del mismo tipo. Supported types:<li>strings</li><li>numbers</li><li>dates</li><li>times</li>If empty or not defined, the combo box is empty |
-| `currentValue` | igual que Collection | Texto introducido por el usuario                                                                                                                                                                                                                                      |
+| Propiedad      | Tipo                 | Descripción                                                                                                                                                                                                                                                                     |
+| -------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `valores`      | Collection           | Obligatorio - Colección de valores escalares. Todos los valores deben ser del mismo tipo. Tipos soportados:<li>cadenas</li><li>números</li><li>fechas</li><li>horas</li>Si está vacío o no se define, el combo box estará vacío |
+| `currentValue` | igual que Collection | Texto introducido por el usuario                                                                                                                                                                                                                                                |
 
 Si el objeto contiene otras propiedades, se ignoran.
 

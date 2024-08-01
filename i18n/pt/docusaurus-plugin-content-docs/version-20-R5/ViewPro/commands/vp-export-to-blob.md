@@ -18,7 +18,7 @@ title: VP EXPORT TO BLOB
 
 The `VP EXPORT TO BLOB` command <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->exports the _vpAreaName_ 4D View Pro document in a 4D.Blob according to the _paramObj_ options.<!-- END REF --> The exported blob is available through the export callback. A exportação e importação de áreas do 4D View Pro como blobs é rápida e eficiente em termos de memória.
 
-In _paramObj_, you can pass several properties:
+Em _paramObj_, você pode passar várias propriedades:
 
 | Propriedade             | Tipo                         | Descrição                                                                                                                                                                                                                                                                       |
 | ----------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -39,7 +39,7 @@ Os seguintes parâmetros podem ser usados no método de retorno de chamada:
 | :-------- | :---------------------------- | :---------------------- | :--------------------------------------------------------------------------- |
 | param1    |                               | text                    | O nome do objeto 4D View Pro                                                 |
 | param2    |                               | 4D.blob | O blob exportado                                                             |
-| param3    |                               | object                  | A reference to the command's _paramObj_ parameter                            |
+| param3    |                               | object                  | Uma referência ao parâmetro _paramObj_ do comando                            |
 | param4    |                               | object                  | Um objeto devolvido pelo método com uma mensagem de estado                   |
 |           | .success      | boolean                 | True se a exportação for bem sucedida, False caso contrário. |
 |           | .errorCode    | integer                 | Código de erro.                                              |

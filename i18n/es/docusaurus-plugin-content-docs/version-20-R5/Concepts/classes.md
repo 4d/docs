@@ -852,7 +852,7 @@ Las clases Singleton no están soportadas por las [clases ORDA](../ORDA/ordaClas
 
 ### Creating a singleton
 
-To create a singleton class, add the `singleton` keyword before [`Class Constructor`](#class-constructor). Por ejemplo:
+Para crear una clase singleton, añada la palabra clave `singleton` antes del [`Class Constructor`](#class-constructor). Por ejemplo:
 
 ```4d
 	//class: ProcessTag
@@ -860,7 +860,7 @@ singleton Class Constructor()
  This.tag:=Random
 ```
 
-To use the singleton:
+Para utilizar el singleton:
 
 ```4d
 	//en otro proceso
@@ -881,7 +881,7 @@ var $myOtherSingleton := cs.ProcessTag.me
 	//$myOtherSingleton.tag = 14856
 ```
 
-### Creating a shared singleton
+### Creación de un singleton compartido
 
 To create a singleton shared by all processes of the application, add the `shared singleton` keywords before the [Class Constructor](#class-constructor). Por ejemplo:
 

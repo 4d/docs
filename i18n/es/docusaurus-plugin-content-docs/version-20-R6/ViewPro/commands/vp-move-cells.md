@@ -31,7 +31,7 @@ El comando `VP MOVE CELLS` <!-- REF #_method_.VP MOVE CELLS.Summary -->mueve o c
 
 En *originRange*, pase un objeto rango que contenga los valores, el estilo y las celdas de la fórmula a copiar o mover. Si *originRange* es un rango combinado, sólo se utiliza el primero.
 
-In *targetRange*, pass the range of cells where the cell values, style, and formulas will be copied or moved.
+En *targetRange*, pase el rango de celdas donde se copiarán o moverán los valores de las celdas, el estilo y las fórmulas.
 
 El parámetro *options* tiene varias propiedades:
 

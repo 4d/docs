@@ -5,7 +5,7 @@ title: On Window Opening Denied
 
 | Code | Pode ser chamado por                           | Definição                       |
 | ---- | ---------------------------------------------- | ------------------------------- |
-| 53   | [Web Area](../FormObjects/webArea_overview.md) | Uma janela pop-up foi bloqueada |
+| 53   | [Área web](../FormObjects/webArea_overview.md) | Uma janela pop-up foi bloqueada |
 
 <details><summary>História</summary>
 

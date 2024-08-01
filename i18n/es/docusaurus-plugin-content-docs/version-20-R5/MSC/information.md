@@ -18,7 +18,7 @@ La parte central de la ventana indica el nombre y la ubicación del proyecto y d
   El comando **Copiar la ruta** copia el nombre completo de la ruta en el portapapeles como texto, utilizando los separadores de la plataforma actual.
 
 - **"Licenses" Folder** The **"Licenses" Folder** button displays the contents of the active Licenses folder in a new system window. Todos los archivos de licencia instalados en su entorno 4D están agrupados en esta carpeta, en su disco duro. Cuando se abren con un navegador web, estos archivos muestran información sobre las licencias que contienen y sus características.
-  La ubicación de la carpeta "Licenses" puede variar en función de la versión de su sistema operativo. For more information about the location of this folder, refer to the `Get 4D folder` command.
+  La ubicación de la carpeta "Licenses" puede variar en función de la versión de su sistema operativo. Para obtener más información sobre la ubicación de esta carpeta, consulte el comando `Get 4D folder`.
   _**Nota:** también puede acceder a esta carpeta desde la caja de diálogo "Actualizar licencias" (disponible en el menú Ayuda)._
 
 ## Tablas
@@ -55,5 +55,5 @@ La información se ofrece en forma gráfica:
 
 Los archivos demasiado fragmentados reducen el rendimiento del disco y, por tanto, de la base. If the occupation rate is too low, 4D will indicate this by a warning icon (which is displayed on the Information button and on the tab of the corresponding file type) and specify that compacting is necessary:![](../assets/en/MSC/MSC_infowarn.png)
 
-A warning icon is also displayed on the button of the [Compact](compact.md) page:
+También se muestra un icono de advertencia en el botón de la página [Compact](compact.md):
 ![](../assets/en/MSC/MSC_compactwarn.png)

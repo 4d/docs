@@ -557,7 +557,7 @@ La <!-- REF #WebServerClass.rootFolder.Summary -->ruta de la carpeta raíz del s
 
 <!-- REF #WebServerClass.scalableSession.Syntax -->**.scalableSession** : Boolean<!-- END REF -->
 
-Contains <!-- REF #WebServerClass.scalableSession.Summary -->`True` if scalable sessions are used in the web server, and `False` otherwise<!-- END REF -->.
+Contiene <!-- REF #WebServerClass.scalableSession.Summary -->`True` si se utilizan sesiones escalables en el servidor web, y `False` en caso contrario<!-- END REF -->.
 
 ##### Ver también
 

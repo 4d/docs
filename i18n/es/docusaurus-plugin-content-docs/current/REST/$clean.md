@@ -3,13 +3,13 @@ id: clean
 title: $clean
 ---
 
-Creates a new entity set from an existing entity set but without its deleted entities, if any (*e.g.* `$clean=true`)
+Crea un nuevo conjunto de entidades a partir de un conjunto de entidades existente pero sin sus entidades eliminadas, si las hubiera (*por ejemplo* `$clean=true`)
 
 ## Descripción
 
-`$clean` creates a new entity set containing the same entities as `entitySetID` but without references to deleted entities (if any).
+`$clean` crea un nuevo conjunto de entidades que contiene las mismas entidades que `entitySetID` pero sin referencias a las entidades eliminadas (si las hubiera).
 
-By default, when an entity is [deleted]($method.md#methoddelete), its reference(s) in existing entity set(s) become *undefined* but are not removed. También están incluidos en la propiedad "count" del conjunto de entidades. Llamar a `$clean` en el conjunto de entidades devuelve un nuevo conjunto de entidades actualizado sin referencias a entidades *undefined*.
+Por defecto, cuando una entidad es [eliminada]($method.md#methoddelete), su(s) referencia(s) en el(los) conjunto(s) de entidades existente(s) se vuelven *inexistentes* pero no se eliminan. También están incluidos en la propiedad "count" del conjunto de entidades. Llamar a `$clean` en el conjunto de entidades devuelve un nuevo conjunto de entidades actualizado sin referencias a entidades *undefined*.
 
 `$clean` puede ser seguido por [`$method=entityset`]($method.md#methodentityset) para crear el nuevo conjunto de entidades en el servidor:
 

@@ -298,7 +298,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 - a coleção estiver vazia,
 - a coleção não contiver elementos numéricos,
-- *propertyPath* is not found in the collection.
+- *propertyPath* não for encontrada na collection.
 
 #### Exemplo 1
 
@@ -392,7 +392,7 @@ The `.combine()` function <!-- REF #collection.combine().Summary -->inserts *col
 
 By default, *col2* elements are added at the end of the orginal collection. You can pass in *index* the position where you want the *col2* elements to be inserted in the collection.
 
-> **Warning**: Keep in mind that collection elements are numbered from 0.
+> **Aviso**: lembre que elementos de coleção são numerados a partir de 0.
 
 - If *index* > the length of the collection, the actual starting *index* will be set to the length of the collection.
 - If *index* < 0, it is recalculated as *index:=index+length* (it is considered as the offset from the end of the collection).
@@ -789,7 +789,7 @@ The `.equal()` function <!-- REF #collection.equal().Summary -->recursively comp
 :::note Notas
 
 - The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. It does not check equality for native objects.
-- Elements with **null** values are not equal to Undefined elements.
+- Elementos com valores **null** não são a mesma coisa que valores Undefined.
 
 :::
 
@@ -837,13 +837,13 @@ Como padrão, uma avaliação não-diacrítica é realizada. If you want the eva
 
 <!-- REF #collection.every().Params -->
 
-| Parâmetro  | Tipo                         |     | Descrição                                                             |
-| ---------- | ---------------------------- | :-: | --------------------------------------------------------------------- |
-| startFrom  | Integer                      |  -> | Índice para início do teste em                                        |
-| formula    | 4D. Function |  -> | Objecto fórmula                                                       |
-| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção |
-| param      | any                          |  -> | Parameter(s) to pass to *formula* or *methodName*  |
-| Resultados | Parâmetros                   |  <- | True se todos os elementos passarem o teste com sucesso               |
+| Parâmetro  | Tipo                         |     | Descrição                                                                                                                 |
+| ---------- | ---------------------------- | :-: | ------------------------------------------------------------------------------------------------------------------------- |
+| startFrom  | Integer                      |  -> | Índice para início do teste em                                                                                            |
+| formula    | 4D. Function |  -> | Objecto fórmula                                                                                                           |
+| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção                                                     |
+| param      | any                          |  -> | Parâmetro(s) a ser(em) passado(s) para *formula* ou *methodName* |
+| Resultados | Parâmetros                   |  <- | True se todos os elementos passarem o teste com sucesso                                                                   |
 
 <!-- END REF -->
 
@@ -875,7 +875,7 @@ By default, `.every()` tests the whole collection. Optionally, you can pass in *
 
 - If *startFrom* >= the collection's length, **false** is returned, which means the collection is not tested.
 - If *startFrom* < 0, it is considered as the offset from the end of the collection ( *startFrom:=startFrom+length*).
-- If *startFrom* = 0, the whole collection is searched (default).
+- Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo 1
 
@@ -1016,7 +1016,7 @@ The `.fill()` function <!-- REF #collection.fill().Summary -->fills the collecti
 
 Em caso de inconsistências, as regras abaixos são seguidas:
 
-- If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection). If the calculated value is negative, *startFrom* is set to 0.
+- If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection). Se o valor calculado for negativo, *startFrom* toma o valor 0.
 - If *end* < 0 , it is recalculated as *end:=end+length*.
 - If *end* < *startFrom* (passed or calculated values), the method does nothing.
 
@@ -1050,12 +1050,12 @@ Em caso de inconsistências, as regras abaixos são seguidas:
 
 <!-- REF #collection.filter().Params -->
 
-| Parâmetro  | Tipo                         |     | Descrição                                                                        |
-| ---------- | ---------------------------- | :-: | -------------------------------------------------------------------------------- |
-| formula    | 4D. Function |  -> | Objecto fórmula                                                                  |
-| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção            |
-| param      | any                          |  -> | Parameter(s) to pass to *formula* or *methodName*             |
-| Resultados | Collection                   |  <- | Nova coleção contendo elementos filtrados (cópia superficial) |
+| Parâmetro  | Tipo                         |     | Descrição                                                                                                                 |
+| ---------- | ---------------------------- | :-: | ------------------------------------------------------------------------------------------------------------------------- |
+| formula    | 4D. Function |  -> | Objecto fórmula                                                                                                           |
+| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção                                                     |
+| param      | any                          |  -> | Parâmetro(s) a ser(em) passado(s) para *formula* ou *methodName* |
+| Resultados | Collection                   |  <- | Nova coleção contendo elementos filtrados (cópia superficial)                                          |
 
 <!-- END REF -->
 
@@ -1136,13 +1136,13 @@ Se quiser filtrar elementos de acordo com seu tipo de valor:
 
 <!-- REF #collection.find().Params -->
 
-| Parâmetro  | Tipo                         |     | Descrição                                                             |
-| ---------- | ---------------------------- | :-: | --------------------------------------------------------------------- |
-| startFrom  | Integer                      |  -> | Índice onde inicia a pesquisa                                         |
-| formula    | 4D. Function |  -> | Objecto fórmula                                                       |
-| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção |
-| param      | any                          |  -> | Parameter(s) to pass to *formula* or *methodName*  |
-| Resultados | any                          |  <- | Primeiro valor encontrado ou Undefined se não encontrado              |
+| Parâmetro  | Tipo                         |     | Descrição                                                                                                                 |
+| ---------- | ---------------------------- | :-: | ------------------------------------------------------------------------------------------------------------------------- |
+| startFrom  | Integer                      |  -> | Índice onde inicia a pesquisa                                                                                             |
+| formula    | 4D. Function |  -> | Objecto fórmula                                                                                                           |
+| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção                                                     |
+| param      | any                          |  -> | Parâmetro(s) a ser(em) passado(s) para *formula* ou *methodName* |
+| Resultados | any                          |  <- | Primeiro valor encontrado ou Undefined se não encontrado                                                                  |
 
 <!-- END REF -->
 
@@ -1175,7 +1175,7 @@ By default, `.find()` searches in the whole collection. Optionally, you can pass
 - If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
 - If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*).
   **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
-- If *startFrom* = 0, the whole collection is searched (default).
+- Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo 1
 
@@ -1224,13 +1224,13 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 <!-- REF #collection.findIndex().Params -->
 
-| Parâmetro  | Tipo                         |     | Descrição                                                             |
-| ---------- | ---------------------------- | :-: | --------------------------------------------------------------------- |
-| startFrom  | Integer                      |  -> | Índice onde inicia a pesquisa                                         |
-| formula    | 4D. Function |  -> | Objecto fórmula                                                       |
-| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção |
-| param      | any                          |  -> | Parameter(s) to pass to *formula* or *methodName*  |
-| Resultados | Integer                      |  <- | Indice do primeiro valor encontrado ou -1 se não encontrado           |
+| Parâmetro  | Tipo                         |     | Descrição                                                                                                                 |
+| ---------- | ---------------------------- | :-: | ------------------------------------------------------------------------------------------------------------------------- |
+| startFrom  | Integer                      |  -> | Índice onde inicia a pesquisa                                                                                             |
+| formula    | 4D. Function |  -> | Objecto fórmula                                                                                                           |
+| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção                                                     |
+| param      | any                          |  -> | Parâmetro(s) a ser(em) passado(s) para *formula* ou *methodName* |
+| Resultados | Integer                      |  <- | Indice do primeiro valor encontrado ou -1 se não encontrado                                                               |
 
 <!-- END REF -->
 
@@ -1243,7 +1243,7 @@ The `.findIndex()` function <!-- REF #collection.findIndex().Summary -->returns 
 Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
 
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
-- *methodName*, the name of a project method (text).
+- *methodName*, o nome de um método projeto (texto).
 
 The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for the first element fulfilling the condition. It receives an `Object` in first parameter ($1).
 
@@ -1263,7 +1263,7 @@ By default, `.findIndex()` searches in the whole collection. Optionally, you can
 - If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
 - If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*).
   **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
-- If *startFrom* = 0, the whole collection is searched (default).
+- Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo
 
@@ -1393,12 +1393,12 @@ $col.flat(MAXLONG)
 
 <!-- REF #collection.flatMap().Params -->
 
-| Parâmetro  | Tipo                         |     | Descrição                                                             |
-| ---------- | ---------------------------- | :-: | --------------------------------------------------------------------- |
-| formula    | 4D. Function |  -> | Objecto fórmula                                                       |
-| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção |
-| param      | any                          |  -> | Parameter(s) to pass to *formula* or *methodName*  |
-| Resultados | Collection                   |  <- | Collection of transformed values and flattened by a depth of 1        |
+| Parâmetro  | Tipo                         |     | Descrição                                                                                                                 |
+| ---------- | ---------------------------- | :-: | ------------------------------------------------------------------------------------------------------------------------- |
+| formula    | 4D. Function |  -> | Objecto fórmula                                                                                                           |
+| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção                                                     |
+| param      | any                          |  -> | Parâmetro(s) a ser(em) passado(s) para *formula* ou *methodName* |
+| Resultados | Collection                   |  <- | Collection of transformed values and flattened by a depth of 1                                                            |
 
 <!-- END REF -->
 
@@ -1482,11 +1482,11 @@ var $c; $c2 : Collection
 
 <!-- REF #collection.includes().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                     |
-| ---------- | ---------- | :-: | --------------------------------------------- |
-| toSearch   | expressão  |  -> | Expressão a pesquisar na coleção              |
-| startFrom  | Integer    |  -> | Índice onde inicia a pesquisa                 |
-| Resultados | Parâmetros |  <- | True if *toSearch* is found in the collection |
+| Parâmetro  | Tipo       |     | Descrição                                    |
+| ---------- | ---------- | :-: | -------------------------------------------- |
+| toSearch   | expressão  |  -> | Expressão a pesquisar na coleção             |
+| startFrom  | Integer    |  -> | Índice onde inicia a pesquisa                |
+| Resultados | Parâmetros |  <- | True se *toSearch* for encontrado na coleção |
 
 <!-- END REF -->
 
@@ -1496,7 +1496,7 @@ The `.includes()` function <!-- REF #collection.includes().Summary -->returns Tr
 
 > Essa função não modifica a coleção original.
 
-In *toSearch*, pass the expression to find in the collection. Pode passar:
+Em *toSearch*, passe a expressão para encontrar na coleção. Pode passar:
 
 - um valor escalar (texto, número, booleano, data),
 - $1.result:=$1.value&gt;0
@@ -1508,7 +1508,7 @@ Optionally, you can pass the index of collection from which to start the search 
 
 - If *startFrom* >= collection's length, False is returned, which means the collection is not searched.
 - If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). Note that even if *startFrom* is negative, the collection is still searched from left to right.
-- If *startFrom* = 0, the whole collection is searched (default).
+- Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo
 
@@ -1558,7 +1558,7 @@ The `.indexOf()` function <!-- REF #collection.indexOf().Summary -->searches the
 
 > Essa função não modifica a coleção original.
 
-In *toSearch*, pass the expression to find in the collection. Pode passar:
+Em *toSearch*, passe a expressão para encontrar na coleção. Pode passar:
 
 - um valor escalar (texto, número, booleano, data),
 - $1.result:=$1.value&gt;0
@@ -1571,7 +1571,7 @@ Optionally, you can pass the index of collection from which to start the search 
 - If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
 - If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*).
   **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
-- If *startFrom* = 0, the whole collection is searched (default).
+- Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo
 
@@ -1674,7 +1674,7 @@ The `.insert()` function <!-- REF #collection.insert().Summary --> inserts *elem
 
 In *index*, pass the position where you want the element to be inserted in the collection.
 
-> **Warning**: Keep in mind that collection elements are numbered from 0.
+> **Aviso**: lembre que elementos de coleção são numerados a partir de 0.
 
 - If *index* > the length of the collection, actual starting index will be set to the length of the collection.
 - If *index* <0, it is recalculated as *index:=index+length* (it is considered as the offset from the end of the collection).
@@ -1814,7 +1814,7 @@ The `.lastIndexOf()` function <!-- REF #collection.lastIndexOf().Summary -->sear
 
 > Essa função não modifica a coleção original.
 
-In *toSearch*, pass the expression to find in the collection. Pode passar:
+Em *toSearch*, passe a expressão para encontrar na coleção. Pode passar:
 
 - um valor escalar (texto, número, booleano, data),
 - $1.result:=$1.value&gt;0
@@ -1886,12 +1886,12 @@ The `.length` property is initialized when the collection is created. Adicionar 
 
 <!-- REF #collection.map().Params -->
 
-| Parâmetro  | Tipo                         |     | Descrição                                                             |
-| ---------- | ---------------------------- | :-: | --------------------------------------------------------------------- |
-| formula    | 4D. Function |  -> | Objecto fórmula                                                       |
-| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção |
-| param      | any                          |  -> | Parameter(s) to pass to *formula* or *methodName*  |
-| Resultados | Collection                   |  <- | Collection de valores transformados                                   |
+| Parâmetro  | Tipo                         |     | Descrição                                                                                                                 |
+| ---------- | ---------------------------- | :-: | ------------------------------------------------------------------------------------------------------------------------- |
+| formula    | 4D. Function |  -> | Objecto fórmula                                                                                                           |
+| methodName | Text                         |  -> | Nome da função a qual se chama para processar os elementos da coleção                                                     |
+| param      | any                          |  -> | Parâmetro(s) a ser(em) passado(s) para *formula* ou *methodName* |
+| Resultados | Collection                   |  <- | Collection de valores transformados                                                                                       |
 
 <!-- END REF -->
 
@@ -2356,7 +2356,7 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 Se utilizou um método, este deve definir o seguinte parâmetro:
 
-- *$1.result* (boolean): **true** if *$1.value < $1.value2*, **false** otherwise
+- *$1.result* (booleano): **true** se *$1.value < $1.value2*, **false** caso contrário
 
 #### Exemplo 1
 
@@ -2431,7 +2431,7 @@ The `.pop()` function <!-- REF #collection.pop().Summary -->removes the last ele
 
 > Essa função modifica a coleção original.
 
-When applied to an empty collection, `.pop()` returns ***undefined***.
+Quando aplicado a uma coleção vazia, `.pop()` retorna ***undefined***.
 
 #### Exemplo
 
@@ -2547,9 +2547,9 @@ valor de comparação propertyPath {valor de comparação logicalOperator proper
 
 onde:
 
-- **propertyPath**: path of property on which you want to execute the query. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em <em x-id="3">queryString</em> ou <em x-id="3">formula</em> (":placeholder") e valor pode ser uma string ou uma coleção de strings. In case of an attribute path whose type is `Collection`, `[]` notation is used to handle all the occurences (for example `children[].age`).
+- **propertyPath**: caminho da propriedade em que você deseja executar a consulta. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em <em x-id="3">queryString</em> ou <em x-id="3">formula</em> (":placeholder") e valor pode ser uma string ou uma coleção de strings. In case of an attribute path whose type is `Collection`, `[]` notation is used to handle all the occurences (for example `children[].age`).
 
-- **comparator**: symbol that compares *propertyPath* and *value*. Os simbolos abaixo são compatíveis:
+- **comparator**: símbolo que compara *propertyPath* e *value*. Os simbolos abaixo são compatíveis:
 
 | Comparação                               | Símbolos    | Comentário                                                                                                                                                                                                                      |
 | ---------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -2568,8 +2568,8 @@ onde:
   Quando usar um valor constante, as regras abaixo devem ser respeitadas:
   - **text** type constant can be passed with or without simple quotes (see **Using quotes** below). Para pesquisar uma stirng dentro de uma string (uma pesquisa "contém") use o símbolo coringa (@) em valor para isolar a string a ser pesquisada como mostrado neste exemplo: "@Smith@". As palavras chaves abaixo são proibidas para constantes de texto: true, false.
   - **boolean** type constants: **true** or **false** (case sensitive).
-  - **numeric** type constants: decimals are separated by a '.' (period).
-  - **date** type constants: "YYYY-MM-DD" format
+  - \*\*Valores constantes de tipo **numérico**: os decimais se separam com um '.' (ponto).
+  - constantes de tipo **date**: formato "YYYY-MM-DD"
   - **null** constant: using the "null" keyword will find **null** and **undefined** properties.
   - in case of a query with an IN comparator, *value* must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, `"` characters must be escaped with `\`).
 
@@ -2622,7 +2622,7 @@ $o.parameters:={name:"Chicago")
 $c:=$myCol.query(":att=:name";$o)
 ```
 
-You can mix all argument kinds in *queryString*. A *queryString* can contain, for *propertyPath* and *value* parameters:
+É possível misturar todos os tipos de argumentos em *queryString*. Uma *queryString* pode conter, para os parâmetros *propertyPath* e *value*:
 
 - valores diretos (sem placeholders),
 - placeholders indexados ou com nome.
@@ -2655,7 +2655,7 @@ $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
 $result2:=$col.query("company.name = :1";"John's Pizzas")
 ```
 
-> Using a [**collection reference** or **object reference**](#object-or-collection-reference-as-value) in the *value* parameter is not supported with this syntax. You must use the [*querySettings* parameter](#querysettings-parameter).
+> Using a [**collection reference** or **object reference**](#object-or-collection-reference-as-value) in the *value* parameter is not supported with this syntax. Você deve usar o parâmetro [*querySettings*] (#querysettings-parameter).
 
 #### Pesquisa de valores null
 
@@ -2675,14 +2675,14 @@ $vSingles:=$colPersons.query("spouse = null") //sintaxe correta
 
 You can query a collection using an object reference or a collection reference as the *value* parameter to compare. The query will match objects in the collection that refer (point to) the same **instance of** object or collection.
 
-The following comparators are supported:
+Os seguintes comparadores são suportados:
 
 | Comparação   | Símbolos |
 | ------------ | -------- |
 | Igual a      | =, ==    |
 | Diferente de | #, !=    |
 
-To build a query with an object or a collection reference, you must use the *querySettings* parameter syntax. Example with an object reference:
+To build a query with an object or a collection reference, you must use the *querySettings* parameter syntax. Exemplo com uma referência de objeto:
 
 ```4d
 var $o1:={a: 1}
@@ -2719,10 +2719,10 @@ $col2:=$col.query("c = :v"; {parameters: {v: $c3}})
 
 In the *querySettings* parameter, you can pass an object containing query placeholders as objects. As propriedades abaixo são compatíveis:
 
-| Propriedade | Tipo   | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| parameters  | Object | **Named placeholders for values** used in the *queryString*. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the *queryString* (":placeholder") and value is the value to compare. Pode combinar marcadores de posição indexados (valores passados diretamente em parâmetros de valor) e valores de marcadores de posição com nome na mesma pesquisa.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| attributes  | Object | **Named placeholders for attribute paths** used in the *queryString*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate a property in an object of the collection<table><tr><th>Type</th><th>Description</th></tr><tr><td>String</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
+| Propriedade | Tipo   | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| parameters  | Object | **Named placeholders for values** used in the *queryString*. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the *queryString* (":placeholder") and value is the value to compare. Pode combinar marcadores de posição indexados (valores passados diretamente em parâmetros de valor) e valores de marcadores de posição com nome na mesma pesquisa.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| attributes  | Object | **Placeholders nomeados para os caminhos de atributos** usados na *queryString*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate a property in an object of the collection<table><tr><th>Type</th><th>Description</th></tr><tr><td>String</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
 
 > Using this parameter is mandatory if you want to query a collection [using a **collection reference** or **object reference**](#object-or-collection-reference-as-value).
 
@@ -3005,13 +3005,13 @@ The `.remove()` function <!-- REF #collection.remove().Summary -->removes one or
 
 Em *index*, passe a posição onde deseja que o elemento seja retirado da colecção.
 
-> **Warning**: Keep in mind that collection elements are numbered from 0. If *index* is greater than the length of the collection, actual starting index will be set to the length of the collection.
+> **Aviso**: lembre que elementos de coleção são numerados a partir de 0. If *index* is greater than the length of the collection, actual starting index will be set to the length of the collection.
 
 - If *index* < 0, it is recalculated as *index:=index+length* (it is considered as the offset from the end of the collection).
-- If the calculated value < 0, *index* is set to 0.
+- Se o valor calculado for < 0, *index* será definido como 0.
 - If the calculated value > the length of the collection, *index* is set to the length.
 
-In *howMany*, pass the number of elements to remove from *index*. If *howMany* is not specified, then one element is removed.
+Em *howMany*, passe o número de elementos a serem removidos de *index*. If *howMany* is not specified, then one element is removed.
 
 Se tentar remover um elemento de uma coleção vazia, o método não faz nada (não é gerado qualquer erro).
 
@@ -3272,7 +3272,7 @@ By default, `.some()` tests the whole collection. Optionally, you can pass the i
 
 - If *startFrom* < 0, it is considered as the offset from the end of the collection.
 
-- If *startFrom* = 0, the whole collection is searched (default).
+- Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo
 
@@ -3348,7 +3348,7 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 Se utilizou um método, deve definir o parâmetro seguinte:
 
-- *$1.result* (boolean): **true** if *$1.value < $1.value2*, **false** otherwise.
+- *$1.result* (booleano): **true** se *$1.value < $1.value2*, **false** caso contrário.
 
 #### Exemplo 1
 
@@ -3413,7 +3413,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 - a coleção estiver vazia,
 - a coleção não contiver elementos numéricos,
-- *propertyPath* is not found in the collection.
+- *propertyPath* não for encontrada na collection.
 
 #### Exemplo 1
 

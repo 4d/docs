@@ -23,7 +23,7 @@ En _rangeObj_, pasa un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP C
 
 El parámetro _timeValue_ indica una hora expresada en segundos que se asignará al _rangeObj_.
 
-The optional _formatPattern_ defines a [pattern](../configuring.md#cell-format) for the _timeValue_ parameter.
+El _formatPattern_ opcional define un [patrón](../configuring.md#cell-format) para el parámetro _timeValue_.
 
 #### Ejemplo
 

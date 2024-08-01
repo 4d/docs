@@ -31,7 +31,7 @@ The `VP REMOVE TABLE COLUMNS` command <!-- REF #_method_.VP REMOVE TABLE COLUMNS
 
 The command removes columns from the _tableName_ table, NOT from the sheet. O número total de colunas da folha não é impactado pelo  comando. The total number of columns of the sheet is not impacted by the command.
 
-If _tableName_ does not exist, nothing happens.
+Se _tableName_ não existir, não acontece nada.
 
 #### Exemplo
 

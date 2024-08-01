@@ -5,11 +5,11 @@ title: Client-server page
 
 The Client-server pages group together parameters related to the use of the database in client-server mode. Naturally, these settings are only taken into account when the database is used in remote mode.
 
-## Network options page 
+## Network options page
 
 ### Network
 
-#### Publish database at startup 
+#### Publish database at startup
 
 This option lets you indicate whether or not the 4D Server database will appear in the list of published databases.
 
@@ -29,7 +29,7 @@ This option lets you change the publication name of a 4D Server database, *i.e.*
 This option lets you change the TCP port number on which 4D Server publishes the database. This information is stored in the project and on each client machine. By default, the TCP port number used by 4D Server and 4D in remote mode is 19813.
 
 Customizing this value is necessary when you want to use several 4D applications on the same machine; in this case, you must specify a different port number for each application.
-When you modify this value from 4D Server or 4D, it is automatically passed on to all the 4D machines connected to the database. 
+When you modify this value from 4D Server or 4D, it is automatically passed on to all the 4D machines connected to the database.
 
 To update any other client machines that are not connected, you just need to enter the new port number (preceded by a colon) after the IP address of the server machine on the **Custom** tab of the connection dialog box at the time of the next connection. For example, if the new port number is 19888:
 
@@ -43,9 +43,10 @@ To update any other client machines that are not connected, you just need to ent
 
 -   **SQL Server**: 19812 by default (can be modified via the "SQL/Configuration" page of the Preferences).
 -   **Application Server**: 19813 by default (can be modified via the "Client-Server/Configuration" page of the Preferences, see above).
--   **DB4D Server** (database server): 19814 by default . This port number cannot be modified directly but it always consists of the application server port number + 1.\
+-   **DB4D Server** (database server): 19814 by default. This port number cannot be modified directly but it always consists of the application server port number + 1.\
     When a 4D client connects to 4D Server, it uses the TCP port of the application server (19813 or the port indicated after the colon ':' in the IP address shown in the connection dialog box). Connection to other servers via their respective ports is then automatic; it is no longer necessary to specify them.\
     Note that in the case of access via a router or a firewall, the three TCP ports must be opened explicitly.
+-   [**Remote Debugger**](../Debugging/debugging-remote.md): 19815 by default. This port number cannot be modified directly but it always consists of the application server port number + 2.
 
 #### Authentication of user with domain server
 
@@ -97,5 +98,5 @@ The behavior of the configuration table is as follows:
 - For security reasons, only addresses that actually match a rule will be allowed to connect. In other words, if the table only contains one or more Deny rules, all addresses will be refused because none will match at least one rule. If you want to deny only certain addresses (and allow others), add an Allow * rule at the end of the table. For example:
     - Deny 192.168.* (deny all addresses beginning with 192.168)
     - Allow * (but allow all other addresses)
-        
+
 By default, no connection restrictions are applied by 4D Server: the first row of the table contains the Allow label and the * (all addresses) character.

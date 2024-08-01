@@ -23,7 +23,7 @@ In *rangeObj*, pass a range for the cell (created with [`VP Cell`](vp-cell.md)) 
 > - If *rangeObj* is not a cell range, only the first cell of the range is used.
 > - If *rangeObj* includes multiple ranges, only the first cell of the first range is used.
 
-The *valuesCol* parameter is two-dimensional:
+O parâmetro *valuesCol* é bidimensional:
 
 - A coleção de primeiro nível contém subcoleções de valores. Cada subcolecção define uma linha. Passa uma coleção vazia para saltar uma linha.
 - Cada subcoleção define os valores das células para a linha. Os valores podem ser Integer, Real, Boolean, Text, Date, Null ou Object. Se o valor for um objeto, pode ter as seguintes propriedades:

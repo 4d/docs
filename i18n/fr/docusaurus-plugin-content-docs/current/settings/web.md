@@ -286,7 +286,7 @@ Démarre et stoppe le serveur REST. Voir [Configuration du serveur REST](../REST
 
 ### Accès
 
-:::information Deprecated
+:::info Deprecated
 
 **This section is deprecated** as of 4D 20 R6. If the current project configuration is obsolete and needs to be upgraded, this section, including the **Activate REST authentication through ds.authentify() function** button (see below), is displayed. If your project is already compatible with the [Force login](../REST/configuration.md#configuring-rest-access) mode, the section is missing and you can ignore this paragraph.
 
@@ -312,7 +312,7 @@ The button triggers the following upgrade sequence:
 
 Remember to restart your project after performing this upgrade.
 
-The next step is to modify your code accordingly. [**See this blog post to know how to proceed**](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications).
+The next step is to modify your code accordingly. [**See this blog post to know how to proceed**](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/).
 
 ### Qodly Studio
 

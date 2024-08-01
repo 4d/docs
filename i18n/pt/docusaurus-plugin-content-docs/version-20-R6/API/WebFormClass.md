@@ -7,10 +7,10 @@ The `WebForm` class contains functions and properties allowing to handle your Qo
 
 <details><summary>História</summary>
 
-| Release | Mudanças                                                                     |
-| ------- | ---------------------------------------------------------------------------- |
-| 20 R6   | Added enableState() and disableState() |
-| 20 R2   | Adicionado                                                                   |
+| Release | Mudanças                                                                       |
+| ------- | ------------------------------------------------------------------------------ |
+| 20 R6   | Adição de enableState() e disableState() |
+| 20 R2   | Adicionado                                                                     |
 
 </details>
 
@@ -43,9 +43,9 @@ For more information, please refer to the [`.componentName` description in the Q
 
 <!-- REF #WebFormClass.disableState().Params -->
 
-| Parâmetro | Tipo   |     | Descrição                                  |
-| --------- | ------ | :-: | ------------------------------------------ |
-| state     | string |  -> | Name of state to disable from the web form |
+| Parâmetro | Tipo   |     | Descrição                                         |
+| --------- | ------ | :-: | ------------------------------------------------- |
+| state     | string |  -> | Nome do estado a ser desativado no formulário Web |
 
 <!-- END REF -->
 
@@ -56,7 +56,7 @@ The `.disableState()` function <!-- REF #WebFormClass.disableState().Summary -->
 Essa função não faz nada se:
 
 - the *state* is currently not enabled in the web form,
-- the *state* does not exist for the web form.
+- o *estado* não existe para o formulário Web.
 
 If you [enable](#enablestate) or disable several states in the same user function, all modifications are sent at the same time to the client once the function ends.
 
@@ -81,7 +81,7 @@ The `.enableState()` function <!-- REF #WebFormClass.enableState().Summary -->en
 Essa função não faz nada se:
 
 - the *state* has already been enabled on the web form,
-- the *state* does not exist for the web form.
+- o *estado* não existe para o formulário Web.
 
 If you enable or [disable](#disablestate) several states within the same user function, all modifications are sent at the same time to the client once the function ends.
 

@@ -70,7 +70,7 @@ In the *server* parameter, pass an object containing the following properties:
 
 #### Resultados
 
-The function returns a [**POP3 transporter object**](#pop3-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
+A função retorna um [**objeto POP3 transporter**](#pop3-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
 
 > A conexão POP3 é fechada automaticamente quando o objeto transportador for destruído.
 
@@ -248,7 +248,7 @@ The `boxInfo` object returned contains the following properties:
 
 | Release | Mudanças                          |
 | ------- | --------------------------------- |
-| 20      | Support of *headerOnly* parameter |
+| 20      | Suporte ao parâmetro *headerOnly* |
 | 18 R2   | Adicionado                        |
 
 </details>
@@ -281,7 +281,7 @@ The *headerOnly* option may not be supported by the server.
 
 O método retorna Null se:
 
-- *msgNumber* designates a non-existing message,
+- *msgNumber* determina uma mensagem não existente,
 - the message was marked for deletion using [`.delete()`](#delete).
 
 **Objeto devolvido**
@@ -345,7 +345,7 @@ The `mailInfo` object returned contains the following properties:
 
 O método retorna **Null** se:
 
-- *msgNumber* designates a non-existing message,
+- *msgNumber* determina uma mensagem não existente,
 - the message was marked for deletion using `.delete( )`.
 
 ##### Exemplo
@@ -463,7 +463,7 @@ In *msgNumber*, pass the number of the message to retrieve. This number is retur
 
 O método retorna uma BLOB vazia se:
 
-- *msgNumber* designates a non-existing message,
+- *msgNumber* determina uma mensagem não existente,
 - the message was marked for deletion using `.delete()`.
 
 **BLOB devolvido**

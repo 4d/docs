@@ -161,7 +161,7 @@ Cuando está activada, la barra de fórmulas es visible debajo de la interfaz de
 
 #### Objetos soportados
 
-[4D View Pro area](viewProArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md)
 
 ---
 
@@ -317,7 +317,7 @@ Puede añadir una interfaz a las áreas 4D View Pro para permitir a los usuarios
 
 #### Objetos soportados
 
-[4D View Pro area](viewProArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md)
 
 #### Ver también
 

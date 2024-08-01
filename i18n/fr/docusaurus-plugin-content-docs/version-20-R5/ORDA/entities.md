@@ -26,7 +26,7 @@ $myEntity.firstname:="John" //assigner 'John' à l'attribut 'firstname'
 $myEntity.save() //sauvegarder l'entité
 ```
 
-> Une entité est définie uniquement dans le processus où elle a été créée. Vous ne pouvez pas, par exemple, stocker une référence à une entité dans une variable interprocess et l'utiliser dans un autre processus.
+> Une entité est définie uniquement dans le process où elle a été créée. Vous ne pouvez pas, par exemple, stocker une référence à une entité dans une variable interprocess et l'utiliser dans un autre process.
 
 ## Entités et références
 
@@ -175,13 +175,13 @@ Le fichier n'a pas besoin d'exister sur le disque au moment de l'assignation (au
 
 :::tip
 
-4D loads images and data into a local cache. If the referenced file is modified after it has been loaded, you must reassign the file so that the modification is taken into account in the application.
+4D charge les images et les données dans un cache local. Si le fichier référencé est modifié après son chargement, vous devez réaffecter le fichier pour que la modification soit prise en compte dans l'application.
 
 :::
 
 :::note
 
-File reference assignment is only supported in local mode (4D Server or 4D single-user). An error is generated if the assignment is made remotely or via a REST request.
+L'assignation de référence de fichier n'est prise en charge qu'en mode local (4D Server ou 4D mono-utilisateur). Une erreur est générée si l'assignation est effectuée à distance ou via une requête REST.
 
 :::
 
@@ -209,7 +209,7 @@ Pour attribuer une valeur directement à l'attribut "employer", vous devez passe
  $emp.save()
 ```
 
-You can also directly get the "one" related entity through its primary key value (Number or Text). Par exemple :
+Vous pouvez également obtenir directement l'entité "1" liée par le biais de sa valeur de clé primaire (nombre ou texte). Par exemple :
 
 ```4d
  $emp:=ds.Employee.new()
@@ -284,8 +284,8 @@ Voici un exemple :
 ```4d
 var $myComp : cs.CompanyEntity
 var $employees : cs.EmployeeSelection
-$myComp:=ds.Company.get(2) //$myComp does not belong to an entity selection
-$employees:=$myComp.employees //$employees is shareable
+$myComp:=ds.Company.get(2) //$myComp n'appartient pas à une entity selection
+$employees:=$myComp.employees //$employees est partageable
 ```
 
 Une nouvelle entity selection est **modifiable** dans les cas suivants :
@@ -297,13 +297,13 @@ Voici un exemple :
 
 ```4d
 var $toModify : cs.CompanySelection
-$toModify:=ds.Company.all().copy() //$toModify is alterable
+$toModify:=ds.Company.all().copy() //$toModify est modifiable
 ```
 
 Une nouvelle entity selection **hérite** de la nature de l'entity selection originale dans les cas suivants :
 
 - la nouvelle entity selection résulte de l'une des diverses fonctions des classes ORDA appliquées à une entity selection existante ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
-- the new entity selection is based upon a relation:
+- la nouvelle entity selection est basée sur une relation :
   - [entity._attributeName_](API/EntityClass.md#attributename) (par exemple "company.employees") lorsque _attributeName_ est un attribut lié de type "1-vers-N" et que l'entité appartient à une entity selection (de même nature que l'entity selection [.getSelection()](API/EntityClass.md#getselection)),
   - [entitySelection._attributeName_](API/EntitySelectionClass.md#attributename) (par exemple "employees.employer") lorsque _attributeName_ est un attribut lié (de même nature que l'entity selection),
   - [.extract()](API/EntitySelectionClass.md#extract), lorsque la collection résultante contient des sélections d'entités (de même nature que l'entity selection'").
@@ -345,9 +345,9 @@ $alterable:=$result.isAlterable() // True
 
 :::
 
-#### Sharing an entity selection between processes (example)
+#### Partage d'une entity selection entre process (exemple)
 
-You work with two entity selections that you want to pass to a worker process so that it can send mails to appropriate persons:
+Vous travaillez avec deux entity selections que vous souhaitez transmettre à un process worker afin qu'il puisse envoyer des mails aux personnes concernées :
 
 ```4d
 
@@ -395,20 +395,20 @@ La méthode `sendMails` :
 
 ### Entity selections et attributs de stockage
 
-Tous les attributs de stockage (texte, numérique, booléen, date) sont disponibles en tant que propriétés des sélections d'entités et en tant qu'entités. Lorsqu'il est utilisé avec une sélection d'entité, un attribut scalaire retourne une collection de valeurs scalaires. Par exemple :
+Tous les attributs de stockage (texte, numérique, booléen, date) sont disponibles en tant que propriétés d'entity selections et propriétés d'entités. Lorsqu'il est utilisé avec une entity selection, un attribut scalaire retourne une collection de valeurs scalaires. Par exemple :
 
 ```4d
 var $locals : cs.PersonSelection
 var $localEmails : Collection
-$locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people
-$localEmails:=$locals.emailAddress //collection of email addresses (strings)
+$locals:=ds.Person.query("city = :1" ; "San Jose") //entity selection de personnes
+$localEmails:=$locals.emailAddress //collection d'adresses mails (chaînes)
 ```
 
 Ce code retourne dans _$localEmails_ une collection d'adresses e-mail sous forme de chaînes.
 
-### Entity selections et attributs de relation
+### Entity selections et attributs relationnels
 
-Outre la variété de méthodes de recherche, vous pouvez également utiliser des attributs de relation comme propriétés des sélections d'entités pour retourner de nouvelles sélections d'entités. Par exemple, considérons la structure suivante :
+En plus des multiples manières d'effectuer des recherches, vous pouvez également utiliser les attributs relationnels comme propriétés des entity selections afin de renvoyer de nouvelles entity selections. Par exemple, considérons la structure suivante :
 
 ![](../assets/en/ORDA/entitySelectionRelationAttributes.png)
 
@@ -422,11 +422,11 @@ $myInvoices:=$myParts.invoiceItems.invoice
 
 La dernière ligne renverra dans _$myInvoices_ une entity selection de toutes les factures qui ont au moins une ligne liée à une pièce dans l'entity selection myParts. Lorsqu'un attribut relationnel est utilisé comme propriété d'une entity selection, le résultat est toujours une autre entity selection, même si une seule entité est retournée. Lorsqu'un attribut relationnel est utilisé comme propriété d'une entity selection et qu'aucune entité n'est retournée, le résultat est une entity selection vide, et non nulle.
 
-## Restricting entity selections
+## Entity selections restreintes
 
-In ORDA, you can create filters to restrict access to entities of any of your dataclasses. Une fois implémenté, un filtre est automatiquement appliqué chaque fois qu'on accède aux entités de la dataclass soit par les fonctions de classe **ORDA** telles que [`all()`](../API/DataClassClass.md#all) ou [`query()`](../API/EntitySelectionClass.md#query), soit par l'[**API REST**](../category/api-dataclass) (ce qui inclut l'[Explorateur de données](../Admin/dataExplorer.md) et les [datastores distants](remoteDatastores.md)).
+Dans ORDA, vous pouvez créer des filtres pour restreindre l'accès aux entités de n'importe quelle dataclass. Une fois implémenté, un filtre est automatiquement appliqué chaque fois qu'on accède aux entités de la dataclass soit par les fonctions de classe **ORDA** telles que [`all()`](../API/DataClassClass.md#all) ou [`query()`](../API/EntitySelectionClass.md#query), soit par l'[**API REST**](../category/api-dataclass) (ce qui inclut l'[Explorateur de données](../Admin/dataExplorer.md) et les [datastores distants](remoteDatastores.md)).
 
-A filter creates a restricted view of the data, built upon any business rules such as current session user. For example, in an application used by salespersons to make deals with their customers, you can restrict the read customers to those managed by the authenticated salesperson.
+Un filtre crée une vue restreinte des données, basée sur des règles métier telles que l'utilisateur de la session courante. Par exemple, dans une application utilisée par des vendeurs pour conclure des marchés avec leurs clients, vous pouvez limiter les clients accessibles à ceux gérés par le vendeur authentifié.
 
 :::info
 
@@ -434,9 +434,9 @@ Les filtres s'appliquent aux **entités**. Si vous souhaitez restreindre l'accè
 
 :::
 
-### How to define a restrict filter
+### Comment définir un filtre de restriction
 
-Vous créez un filtre pour une dataclass en définissant une fonction `event restrict` dans la [**classe dataclass**](dsMapping.md#classe-dataclass) de la dataclass. The filter is then automatically enabled.
+Vous créez un filtre pour une dataclass en définissant une fonction `event restrict` dans la [**classe dataclass**](dsMapping.md#classe-dataclass) de la dataclass. Le filtre est alors automatiquement activé.
 
 ### `Function event restrict`
 
@@ -447,9 +447,9 @@ Function event restrict() -> $result : cs.*DataClassName*Selection
 // code
 ```
 
-This function is called whenever an entity selection or an entity of the dataclass is requested. The filter is run once, when the entity selection is created.
+Cette fonction est appelée chaque fois qu'une entity selection ou une entité de la dataclass est demandée. Le filtre est exécuté une seule fois, lors de la création de l'entity selection.
 
-The filter must return an entity selection of the dataclass. Il peut s'agir d'une entity selection basée sur une recherche, stockée dans le [`Storage`], etc.
+Le filtre doit retourner une entity selection de la dataclass. Il peut s'agir d'une entity selection basée sur une recherche, stockée dans le [`Storage`], etc.
 
 :::note
 
@@ -457,15 +457,15 @@ Pour des raisons de performances, nous recommandons d'utiliser les **attributs i
 
 :::
 
-The function must return a valid entity selection of the dataclass. No filter is applied (all entities corresponding of the initial request are returned) if:
+La fonction doit retourner une entity selection valide de la dataclass. Aucun filtre n'est appliqué (toutes les entités correspondant à la requête initiale sont retournées) si :
 
 - la fonction retourne **null**,
 - la fonction retourne **undefined**,
-- the function does not return a valid entity selection.
+- la fonction ne retourne pas une entity selection valide.
 
 #### Exemple
 
-When accessed from a web or REST request, we want the Customers dataclass to only expose customers belonging to the identified sales person. Pendant la phase d'authentification, le vendeur est stocké dans l'objet `Session`. Other types of requests are also handled.
+Lorsqu'on y accède à partir d'une requête web ou REST, nous voulons que la dataclass Customers n'expose que les clients appartenant au vendeur identifié. Pendant la phase d'authentification, le vendeur est stocké dans l'objet `Session`. D'autres types de requêtes sont également traitées.
 
 ```4d
 Class extends DataClass
@@ -496,9 +496,9 @@ Function event restrict() : cs.CustomersSelection
     End if
 ```
 
-### Filter activation details
+### Détails de l'activation du filtre
 
-Filters apply to all ORDA or REST requests executed in your 4D projects (standalone and client/server architectures). Un filtre est activé dès que le projet est ouvert, c'est-à-dire qu'il peut être déclenché dans la méthode base `On Startup`.
+Les filtres s'appliquent à toutes les requêtes ORDA ou REST exécutées dans vos projets 4D (architectures monoposte et client/serveur). Un filtre est activé dès que le projet est ouvert, c'est-à-dire qu'il peut être déclenché dans la méthode base `On Startup`.
 
 :::info
 
@@ -509,29 +509,29 @@ Les filtres ne s'appliquent pas aux sélections d'enregistrements classiques gé
 | Fonctions                                                                                                | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [dataclass.get()](../API/DataClassClass.md#get)                       | Si l'entité ne correspond pas au filtre, `null` est renvoyé                                                                                                                                                                                                                                                                                                                                                                  |
-| [entity.reload()](../API/EntityClass.md#reload)                       | Only in client/server and remote datastores                                                                                                                                                                                                                                                                                                                                                                                  |
+| [entity.reload()](../API/EntityClass.md#reload)                       | Uniquement en client/server et datastores distants                                                                                                                                                                                                                                                                                                                                                                           |
 | [dataclass.all()](../API/DataClassClass.md#all)                       |                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | [dataclass.fromCollection()](../API/DataClassClass.md#fromcollection) | <li>En cas de mise à jour, seules les entités correspondant au filtre peuvent être mises à jour. Si la collection fait référence à des entités ne correspondant pas au filtre, elles sont créées en tant que nouvelles entités (si aucune erreur de clé primaire en double n'est détectée)</li><li>En cas de création, les entités ne correspondant pas au filtre sont créées mais ne seront pas lues après la création</li> |
-| [entitySelection.and()](../API/EntitySelectionClass.md#and)           | Only entities matching the filter are returned                                                                                                                                                                                                                                                                                                                                                                               |
-| [entitySelection.or()](../API/EntitySelectionClass.md#or)             | Only entities matching the filter are returned                                                                                                                                                                                                                                                                                                                                                                               |
-| [entitySelection.minus()](../API/EntitySelectionClass.md#minus)       | Only entities matching the filter are returned                                                                                                                                                                                                                                                                                                                                                                               |
+| [entitySelection.and()](../API/EntitySelectionClass.md#and)           | Seules les entités correspondant au filtre sont retournées                                                                                                                                                                                                                                                                                                                                                                   |
+| [entitySelection.or()](../API/EntitySelectionClass.md#or)             | Seules les entités correspondant au filtre sont retournées                                                                                                                                                                                                                                                                                                                                                                   |
+| [entitySelection.minus()](../API/EntitySelectionClass.md#minus)       | Seules les entités correspondant au filtre sont retournées                                                                                                                                                                                                                                                                                                                                                                   |
 | [dataclass.query()](../API/DataClassClass.md#query)                   |                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | [entitySelection.query()](../API/EntitySelectionClass.md#query)       |                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)            | Filtre appliqué si _attributeName_ est une entité liée ou des entités liées d'une dataclass filtrée (y compris alias ou attribut calculé)                                                                                                                                                                                                                                                                 |
 | [entity.attributeName](../API/EntityClass.md#attributename)                              | Filtre appliqué si _attributeName_ correspond aux entités liées d'une dataclass filtrée (y compris alias ou attribut calculé)                                                                                                                                                                                                                                                                             |
 | [Create entity selection](../API/EntitySelectionClass.md#create-entity-selection)                        |                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-Other ORDA functions accessing data do not directly trigger the filter, but they nevertheless benefit from it. Par exemple, la fonction [`entity.next()`](../API/EntityClass.md#next) renverra l'entité suivante dans l'entity selection déjà filtrée. D'autre part, si l'entity selection n'est pas filtrée, [`entity.next()`](../API/EntityClass.md#next) fonctionnera sur les entités non filtrées.
+Les autres fonctions ORDA accédant aux données ne déclenchent pas directement le filtre, mais elles en bénéficient néanmoins. Par exemple, la fonction [`entity.next()`](../API/EntityClass.md#next) renverra l'entité suivante dans l'entity selection déjà filtrée. En revanche, si l'entity selection n'est pas filtrée, [`entity.next()`](../API/EntityClass.md#next) fonctionnera sur les entités non filtrées.
 
 :::note
 
-If there is an error in the filter at runtime, it is thrown as if the error came from the ORDA function itself.
+Si une erreur survient dans le filtre au moment de l'exécution, elle est générée comme si elle provenait de la fonction ORDA elle-même.
 
 :::
 
 ## Verrouillage d'une entité
 
-Vous devez souvent gérer d'éventuels conflits pouvant survenir lorsque plusieurs utilisateurs ou process se chargent et tentent de modifier les mêmes entités en même temps. Le verrouillage des enregistrements est une méthodologie utilisée dans les bases de données relationnelles pour éviter les mises à jour incohérentes des données. Le concept consiste soit à verrouiller un enregistrement lors de sa lecture afin qu'aucun autre processus ne puisse le mettre à jour, soit à vérifier lors de la sauvegarde d'un enregistrement qu'un autre processus ne l'a pas modifié depuis sa lecture. Le premier est appelé **verrouillage d'enregistrement pessimiste** et garantit qu'un enregistrement modifié peut être écrit au détriment du verrouillage des enregistrements pour d'autres utilisateurs. Ce dernier est appelé **verrouillage d'enregistrement optimiste** et il échange la garantie des privilèges d'écriture sur l'enregistrement contre la flexibilité de décider des privilèges d'écriture uniquement si l'enregistrement doit être mis à jour. Dans le verrouillage d'enregistrement pessimiste, l'enregistrement est verrouillé même s'il n'est pas nécessaire de le mettre à jour. Dans le verrouillage d'enregistrement optimiste, la validité de la modification d'un enregistrement est fixée au moment de la mise à jour.
+Vous devez souvent gérer d'éventuels conflits pouvant survenir lorsque plusieurs utilisateurs ou process se chargent et tentent de modifier les mêmes entités en même temps. Le verrouillage des enregistrements est une méthodologie utilisée dans les bases de données relationnelles pour éviter les mises à jour incohérentes des données. Le concept consiste soit à verrouiller un enregistrement lors de sa lecture afin qu'aucun autre process ne puisse le mettre à jour, soit à vérifier lors de la sauvegarde d'un enregistrement qu'un autre process ne l'a pas modifié depuis sa lecture. Le premier est appelé **verrouillage d'enregistrement pessimiste** et garantit qu'un enregistrement modifié peut être écrit au détriment du verrouillage des enregistrements pour d'autres utilisateurs. Ce dernier est appelé **verrouillage d'enregistrement optimiste** et il échange la garantie des privilèges d'écriture sur l'enregistrement contre la flexibilité de décider des privilèges d'écriture uniquement si l'enregistrement doit être mis à jour. Dans le verrouillage d'enregistrement pessimiste, l'enregistrement est verrouillé même s'il n'est pas nécessaire de le mettre à jour. Dans le verrouillage d'enregistrement optimiste, la validité de la modification d'un enregistrement est évaluée au moment de la mise à jour.
 
 ORDA vous propose deux modes de verrouillage d'entité :
 

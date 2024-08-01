@@ -20,9 +20,9 @@ Una constante hora se ordena hora:minuto:segundo, con dos puntos (:) para separa
 Estos son algunos ejemplos de constantes de tipo hora:
 
 ```4d
-?00:00:00? //midnight
+?00:00:00? /medianoche
 ?09:30:00? //9:30 am
-?13:01:59? //1 pm, 1 minute, and 59 seconds
+?13:01:59? //1 pm, 1 minuto y 59 segundos
 ```
 
 Una hora nula se escribe ?00:00:00?

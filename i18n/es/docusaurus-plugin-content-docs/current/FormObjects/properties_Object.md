@@ -118,7 +118,7 @@ Para que este principio funcione en modo compilado, es imprescindible que las va
 En el código 4D, se puede acceder a las variables dinámicas utilizando un puntero obtenido con el comando `OBJECT Get pointer`. Por ejemplo:
 
 ```4d
-  // assign the time 12:00:00 to the variable for the "tstart" object
+  // asigna la hora 12:00:00 a la variable para el objeto "tstart"
  $p :=OBJECT Get pointer(Object named;"tstart")
  $p->:=?12:00:00?
 ```

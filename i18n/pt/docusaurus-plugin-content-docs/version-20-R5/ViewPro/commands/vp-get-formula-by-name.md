@@ -14,7 +14,7 @@ title: VP Get formula by name
 | vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro          |                  |
 | name       | Text   | -> | Nome do intervalo nomeado                           |                  |
 | scope      | Number | -> | Âmbito alvo (padrão=folha atual) |                  |
-| Resultados | Object | <- | Named formula or named range definition             | <!-- END REF --> |
+| Resultados | Object | <- | Definição da fórmula nomeada ou intervalo nomeado   | <!-- END REF --> |
 
 #### Descrição
 

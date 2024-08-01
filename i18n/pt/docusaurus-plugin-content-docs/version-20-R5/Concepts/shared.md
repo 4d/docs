@@ -3,22 +3,22 @@ id: shared
 title: Objetos e coleções compartilhados
 ---
 
-**Los objetos compartidos** y **las colecciones compartidas** son [objetos](Concepts/dt_object.md) y [colecciones](Concepts/dt_collection.md) específicas cuyo contenido se comparte entre procesos. In contrast to [interprocess variables](Concepts/variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html) or [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html).
+**Objetos compartilhados** e **coleções compartilhadas** são específicos [objects](Conceps/dt_object.md) e [collections](Concepts/dt_collection.md) cujo conteúdo é compartilhado entre processos. Em contraste com [variáveis de interprocesso](Concepts/variáveis. d#interprocess-variáveis), objetos compartilhados e coleções compartilhadas têm a vantagem de ser compatíveis com **processos 4D preemptivos**: eles podem ser passados por referência para comandos como [`Novo processo`](https://doc. d.com/4dv20/help/command/en/page317.html) ou [`TODO WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html).
 
-Shared objects and shared collections are stored in standard [`Object`](dt_object.md) and [`Collection`](dt_collection.md) type variables, but must be instantiated using specific commands:
+Objetos compartilhados e coleções compartilhadas são armazenados em variáveis padrão [`Object`](dt_object.md) e [`Collection`](dt_collection.md) do tipo, mas devem ser instanciados usando comandos específicos:
 
-- to create a shared object, use the [`New shared object`](https://doc.4d.com/4dv20/help/command/en/page1471.html) command or call the [`new()`](../API/ClassClass.md#new) function of a [shared class](classes.md#shared-classes),
-- to create a shared collection, use the [`New shared collection`](../API/CollectionClass.md#new-shared-collection) command.
+- para criar um objeto compartilhado, use o comando [`Novo objeto compartilhado`](https://doc.4d.com/4dv20/help/command/en/page1471.html) ou chame a função [`new()`](../API/ClassClass.md#new) de uma [classe compartilhada](classes.md#shared-classes),
+- para criar uma coleção compartilhada, use o comando [`Nova coleção compartilhada`](../API/CollectionClass.md#new-shared-collecation).
 
-Shared objects and collections can only contain scalar values or other shared objects and collections. However, shared objects and collections can be set as properties of standard (not shared) objects or collections.
+Objetos e coleções compartilhadas só podem conter valores de escala ou outros objetos e coleções compartilhadas. No entanto, objetos e coleções compartilhadas podem ser definidos como propriedades do padrão (não compartilhados) objetos ou coleções.
 
-Para modificar un objeto/colección compartido, se debe llamar a la estructura **Use...End use**. La lectura de un valor de objeto/colección compartido no requiere **Use...End use**.
+Para modificar um objeto/coleção compartilhada, a estrutura **Usar... Uso final** deve ser chamada. A leitura de um valor de objeto/coleção compartilhado não requer **Uso...Uso final**.
 
-A unique, global catalog returned by the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) command is always available throughout the application and its components, and can be used to store all shared objects and collections.
+Um catálogo único e global retornado pelo [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525. o comando tml) está sempre disponível em todo o aplicativo e seus componentes, e pode ser usado para armazenar todos os objetos e coleções compartilhadas.
 
 ## Utilização de objetos ou coleções compartidos
 
-Una vez instanciado con los comandos `Nuevo objeto compartido` o `Nueva colección compartida`, las propiedades y elementos del objeto compartido/colección pueden ser modificados o leídos desde cualquier proceso de la aplicación, bajo ciertas condiciones.
+Depois de instanciados com os comandos `New shared object` ou `New shared collection`, as propriedades e os elementos do objeto/coleção compartilhados podem ser modificados ou lidos em qualquer processo do aplicativo, sob determinadas condições.
 
 ### Modificação
 
@@ -29,11 +29,11 @@ As modificações podem ser aplicadas a objetos partilhados e coleções partilh
 
 :::note
 
-Keep in mind that objects or collections set as the content of a shared object or collection must themselves be shared.
+Tenha em mente que objetos ou coleções definidos como conteúdo de um objeto ou coleção compartilhada devem ser compartilhados.
 
 :::
 
-All modification instructions in a shared object or collection require to be protected inside a [`Use...End use`](#use-end-use) block, otherwise an error is generated.
+Todas as instruções de modificação em um objeto compartilhado ou coleção requerem ser protegidas dentro de um bloco [`Use...End use`](#use-end-use-use), caso contrário um erro é gerado.
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")
@@ -42,7 +42,7 @@ All modification instructions in a shared object or collection require to be pro
  End Use
 ```
 
-Por comodidad, todas las [funciones colección](../API/CollectionClass.md) que modifican el objeto compartido o la colección insertan un bloque interno `Use...End use` para que no tenga que codificarlo usted mismo. Por exemplo:
+Por conveniência, todas as funções de coleção  que modificam o objeto partilhado ou a coleção inserem um bloco interno Use...End use para que não tenha de o codificar. Por exemplo:
 
 ```4d
 $col:=New shared collection()
@@ -54,8 +54,8 @@ Si necesita ejecutar varias modificaciones en la misma colección, puede protege
 ```4d
 $col:=Storage.mySharedCollection
 Use($col)
-	$col[0]:="omega" //modifying an element requires to be performed inside Use/End use
-	$col.push("alpha") //.push() internally triggers Use/End use, but we want to do both modifications atomically
+	$col[0]:="omega" //modificar um elemento tem de ser efetuado dentro de Use/End use
+	$col.push("alpha") //.push() desencadeia internamente Use/End use, mas queremos fazer ambas as modificações atomicamente
 End Use
 ```
 
@@ -114,7 +114,7 @@ Los objetos compartidos y las colecciones compartidas están diseñados para per
 
 Las siguientes funciones activan automáticamente un **Use/End use** interno, haciendo innecesaria una llamada explícita a la estructura cuando se ejecuta la función:
 
-- [collection functions](../API/CollectionClass.md) that modify shared collections
+- [funções de coleção](../API/CollectionClass.md) que modificam as coleções compartilhadas
 - [funciones compartidas](classes.md#shared-functions) (definidas en [clases compartidas](classes.md#shared-classes)).
 
 :::
@@ -146,9 +146,9 @@ No método "HowMany", o inventário é efetuado e o objeto partilhado $inventory
 	//HowMany
  #DECLARE ($what : Text ; $inventory : Object)
 
- $count:=CountMethod($what) //method to count products
- Use($inventory) //use shared object
-    $inventory[$what]:=$count  //save the results for this item
+ $count:=CountMethod($what) //método para contar produtos
+ Use($inventory) //utilizar objeto partilhado
+    $inventory[$what]:=$count  //guardar os resultados para este item
  End use
 ```
 
@@ -160,28 +160,28 @@ Os exemplos seguintes destacam regras específicas para o tratamento de grupos p
  $ob1:=New shared object
  $ob2:=New shared object
  Use($ob1)
-    $ob1.a:=$ob2  //group 1 is created
+    $ob1.a:=$ob2  //grupo 1 é criado
  End use
 
  $ob3:=New shared object
  $ob4:=New shared object
  Use($ob3)
-    $ob3.a:=$ob4  //group 2 is created
+    $ob3.a:=$ob4  //grupo 2 é criado
  End use
 
- Use($ob1) //use an object from group 1
+ Use($ob1) //utilize um objeto do grupo 1
     $ob1.b:=$ob4  //ERROR
-  //$ob4 already belongs to another group
-  //assignment is not allowed
+  //$ob4 já pertence a outro grupo
+  //atribuição não é permitida
  End use
 
  Use($ob3)
-    $ob3.a:=Null //remove any reference to $ob4 from group 2
+    $ob3.a:=Null //remover qualquer referência a $ob4 do grupo 2
  End use
 
- Use($ob1) //use an object from group 1
+ Use($ob1) //utilizar um objeto do grupo 1
     $ob1.b:=$ob4  //ERROR
-  //$ob4 still belongs to group 2
-  //assignment is not allowed
+  //$ob4 ainda pertence ao grupo 2
+  //atribuição não é permitida
  End use
 ```

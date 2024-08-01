@@ -32,7 +32,7 @@ Você também pode criar fórmulas nomeadas que podem ser chamadas por seu nome.
 Todas as fórmulas têm operandos e operadores:
 
 - **Operadores**: consulte [Valores e operadores](#valores-e-operadores) abaixo.
-- **Operandos** inclui várias categorias:
+- Os **Operandos** inclui várias categorias:
   - [valores](#values-and-operators) (há suporte para 5 tipos de dados)
   - [referências a outras células](#cell-referências) (relativas, absolutas, mistas ou por nome)
   - [funções de planilha padrão](#using-functions)
@@ -205,7 +205,7 @@ Parameters can be passed to 4D functions that call project methods using the fol
 =METHODNAME(param1,param2,...,paramN)
 ```
 
-These parameters are received in _methodName_ in $1, $2...$N.
+Esses parâmetros são recebidos em _methodName_ em $1, $2...$N.
 
 Observe que os ( ) são obrigatórios, mesmo que nenhum parâmetro seja passado:
 

@@ -168,10 +168,10 @@ _italic_
 - La etiqueta del enlace es soportada:
 
 ```md
-// Case 1
+// Caso 1
 The [documentation](https://doc.4d.com) of the command ....
 
-// Case 2
+// Caso 2
 [4D blog][1]
 
 [1]: https://blog.4d.com

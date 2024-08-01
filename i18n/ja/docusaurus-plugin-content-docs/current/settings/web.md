@@ -278,7 +278,7 @@ RESTサーバーを開始/停止します。 [RESTサーバー設定](../REST/co
 
 ### アクセス権
 
-:::information 非推奨
+:::info 非推奨
 
 4D 20 R6 以降、**このセクションは非推奨** となっています。 現在のプロジェクト設定が古く、アップグレードが必要な場合は、このセクションに **ds.authentify() 関数によって REST認証を有効化する** ボタン (後述参照) が表示されます。 プロジェクトがすでに [強制ログイン](../REST/configuration.md#restアクセスの制御) モードに対応している場合にはこのセクションは存在しないため、この段落は無視してください。
 
@@ -304,7 +304,7 @@ RESTサーバーを開始/停止します。 [RESTサーバー設定](../REST/co
 
 このアップグレードをおこなった後は、プロジェクトを再起動することを忘れないでください。
 
-次のステップは、コードを適切に修正することです。 [**進め方はこのブログ記事を参照ください**](https://blog.4d.com/ja/force-login-now-is-the-default-mode-for-all-rest-authentications)。
+次のステップは、コードを適切に修正することです。 [**See this blog post to know how to proceed**](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/).
 
 ### Qodly Studio
 

@@ -7,7 +7,7 @@ A **`4D.Function`** object contains a piece of code that can be executed from an
 
 - **native functions**, i.e. built-in functions from various 4D classes such as `collection.sort()` or `file.copyTo()`.
 - **user functions**, created in user [classes](Concepts/classes.md) using the [Function keyword](Concepts/classes.md#function).
-- **formula functions**, i.e. functions that can execute any 4D formula.
+- **funções de fórmula**, ou seja, funções que podem executar qualquer fórmula 4D.
 
 ### Objetos de formulários
 
@@ -56,7 +56,7 @@ You can pass parameters to your formulas using the [sequential parameter syntax]
  $f.message("John") //exibe "Hello John"
 ```
 
-Or using the [.call()](#call) function:
+Ou usando a função [.call()](#call):
 
 ```4d
  var $f : Object
@@ -100,10 +100,10 @@ Parâmetros são recebidos dentro do método, na ordem que são especificados na
 
 <details><summary>História</summary>
 
-| Release | Mudanças                                            |
-| ------- | --------------------------------------------------- |
-| 17 R6   | Renamed (New formula -> Formula) |
-| 17 R3   | Adicionado                                          |
+| Release | Mudanças                                              |
+| ------- | ----------------------------------------------------- |
+| 17 R6   | Renomeado (New formula -> Formula) |
+| 17 R3   | Adicionado                                            |
 
 </details>
 
@@ -232,7 +232,7 @@ Chamar uma fórmula usando notação de objeto:
 
 | Release | Mudanças                                               |
 | ------- | ------------------------------------------------------ |
-| 20 R3   | Support of *context* parameter                         |
+| 20 R3   | Suporte do parâmetro *context*                         |
 | 17 R6   | Renamed New formula from string -> Formula from string |
 | 17 R3   | Adicionado                                             |
 

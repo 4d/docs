@@ -17,13 +17,13 @@ title: VP REMOVE TABLE ROWS
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                   |                  |
-| ---------- | ------- | -- | ----------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                  |                  |
-| tableName  | Text    | -> | Nome da tabela                                              |                  |
-| row        | Integer | -> | Índice na tabela da linha inicial a remover                 |                  |
-| count      | Text    | -> | Number of rows to remove (must be >0)    |                  |
-| sheet      | Integer | -> | Índice da folha (folha atual se omitida) | <!-- END REF --> |
+| Parâmetro  | Tipo    |    | Descrição                                                     |                  |
+| ---------- | ------- | -- | ------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                    |                  |
+| tableName  | Text    | -> | Nome da tabela                                                |                  |
+| row        | Integer | -> | Índice na tabela da linha inicial a remover                   |                  |
+| count      | Text    | -> | Número de linhas a remover (tem de ser >0) |                  |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)   | <!-- END REF --> |
 
 #### Descrição
 
@@ -33,7 +33,7 @@ This command removes rows from the _tableName_ table, NOT from the sheet. O núm
 
 If the _tableName_ table is bound to a [data context](vp-set-data-context.md), the command removes element(s) from the collection.
 
-If _tableName_ does not exist, nothing happens.
+Se _tableName_ não existir, não acontece nada.
 
 #### Exemplo
 

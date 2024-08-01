@@ -34,7 +34,7 @@ In the *insertAfter* parameter, you can pass one of the following constants to i
 
 | Parâmetros               | Valor | Descrição                                                                                 |
 | ------------------------ | ----- | ----------------------------------------------------------------------------------------- |
-| `vk table insert before` | 0     | Insert row(s) before the *row* (default if omitted) |
+| `vk table insert before` | 0     | Inserir linha(s) antes de *row* (padrão se omitido) |
 | `vk table insert after`  | 1     | Inserir linha(s) após a *row*                                          |
 
 This command inserts some rows in the *tableName* table, NOT in the sheet. O número total de linhas da folha não é impactado pelo  comando. Dados presentes abaixo da tabela (se houver) são movidos para baixo automaticamente de acordo com o número de linhas adicionadas.

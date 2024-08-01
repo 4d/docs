@@ -51,7 +51,7 @@ Arrêt du mode Trace et reprise du cours normal de l’exécution de la méthode
 
 #### Exécuter pas à pas
 
-The yellow arrow in the left margin of the Source Code pane is called the program counter. et le débogueur passe à la ligne suivante.
+Exécute la ligne de méthode en cours, indiquée par le compteur de programme (la flèche jaune). Le débogueur passe à la ligne suivante.
 
 Le bouton Exécuter pas à pas ne passe pas dans les sous-routines et les fonctions. Il reste au niveau de la méthode que vous êtes en train de tracer. Si vous souhaitez également tracer les appels aux sous-routines et aux fonctions, utilisez le bouton **Pas à pas détaillé**.
 
@@ -96,9 +96,9 @@ Si vous utilisez ce bouton pour modifier une méthode, les modifications ne sero
 
 > **Astuce :** Utilisez ce bouton lorsque vous savez quels changements sont requis dans votre code et quand ils n'interfèrent pas avec le reste du code à exécuter ou à tracer.
 
-#### Bouton 'Enregistrer paramètres'
+#### Enregistrer paramètres
 
-Ce bouton permet de sauvegarder la configuration courante de la fenêtre du débogueur (taille et position de la fenêtre, emplacement des lignes de division et contenu de la zone d’évaluation des expressions). Elle sera alors utilisée par défaut à chaque ouverture de la base. Cela inclus :
+Ce bouton permet de sauvegarder la configuration courante de la fenêtre du débogueur (taille et position de la fenêtre, emplacement des lignes de division et contenu de la zone d’évaluation des expressions). Elle sera alors utilisée par défaut à chaque ouverture de la base. Cela inclut :
 
 - la taille et la position de la fenêtre
 - la position des lignes de division et le contenu de la zone qui évalue les expressions
@@ -146,7 +146,7 @@ $c:=a+b
 
    La variable `$a` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
 
-2. Vous cliquez sur le bouton **Exécuter pas à pas**. Le compteur du programme est maintenant défini sur la ligne `b:=a+1`. At this point, the **Line Objects** theme displays:
+2. Vous cliquez sur le bouton **Exécuter pas à pas**. Le compteur du programme est maintenant défini sur la ligne `b:=a+1`. À ce stade, le thème **Objets courants** affiche :
 
    | $a | 1         |
    | -- | --------- |
@@ -154,7 +154,7 @@ $c:=a+b
 
    La valeur de la variable `$a` est maintenant 1. La variable `$b` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
 
-3. Vous cliquez à nouveau sur le bouton **Exécuter pas à pas**. The program counter is now set on the line with $c:=a+b. the **Line Objects** theme displays:
+3. Vous cliquez à nouveau sur le bouton **Exécuter pas à pas**. Le compteur de programme est maintenant placé sur la ligne avec $c:=a+b. Le thème **Objets courants** affiche :
 
    | $c | Undefined |
    | -- | --------- |
@@ -235,7 +235,7 @@ Ce thème affiche des informations concernant le serveur Web principal de l'appl
 
 Les expressions contenues dans ce thème ne peuvent pas être modifiées.
 
-### Menu contextuel de la fenêtre d'évaluation
+### Menu contextuel
 
 Le menu contextuel de la fenêtre d’expression vous propose des options supplémentaires.
 
@@ -288,7 +288,7 @@ Le fenêtre d'évaluation sert à évaluer les expressions. Elle est similaire a
 - pointer
 - calcul
 - commande 4D
-- method
+- méthode
 - et tout ce qui renvoie une valeur
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
@@ -311,7 +311,7 @@ Pour supprimer une expression, cliquez dessus pour la sélectionner, puis appuye
 
 > **Attention :** Soyez prudent lorsque vous évaluez une expression 4D modifiant la valeur d'une des variables système (par exemple, la variable OK) car l'exécution du reste de la méthode peut être altérée.
 
-### Menu contextuel de la fenêtre d'évaluation
+### Menu contextuel
 
 Le menu contextuel de la fenêtre vous donne accès à l'éditeur de formule 4D et à d'autres options :
 
@@ -321,13 +321,13 @@ Le menu contextuel de la fenêtre vous donne accès à l'éditeur de formule 4D 
 
 ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 
-For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html).
+Pour plus d'informations sur l'Éditeur de formules, consultez le [manuel Mode Développement](https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html).
 
 - **Insérer commande** : Raccourci pour insérer une commande 4D en tant qu'expression.
-- **Supprimer tout** : Supprime toutes les expressions de la fenêtre de surveillance personnalisée.
+- **Supprimer tout** : Supprime toutes les expressions de la fenêtre d"évaluation.
 - **Expressions par défaut** : Copie la liste des expressions de la fenêtre d'expression.
 
-> This option is not available in [remote debugging mode](debugging-remote.md).
+> Cette option n'est pas disponible en [mode débogueur distant](debugging-remote.md).
 
 - **Contracter tout/Développer tout** : Contracte ou développe toutes les listes hiérarchiques.
 - **Montrer les types** : Affiche le type de chaque élément dans la liste (lorsque cela est pertinent).
@@ -340,7 +340,7 @@ For more information on the Formula Editor, see the [4D Design Reference manual]
 
 Ce panneau affiche le code source de la méthode ou de la fonction en cours de traçage.
 
-Cette zone vous permet également d'ajouter ou de supprimer des [**break points**](breakpoints.md).
+Cette zone vous permet également d'ajouter ou de supprimer des [**points d'arrêt**](breakpoints.md).
 
 ### Infobulle
 
@@ -357,13 +357,13 @@ Cela fonctionne également avec les sélections :
 
 ### Ajout d'expressions à la fenêtre d'évaluation
 
-Vous pouvez copier n'importe quelle expression sélectionnée de la palette de code source dans le [Custom Watch Pane](#custom-watch-pane).
+Vous pouvez copier n'importe quelle expression sélectionnée depuis la fenêtre de code source vers la [fenêtre d'évaluation](#custom-watch-pane).
 
 1. Dans le volet Code Source, sélectionnez l'expression à évaluer
 2. Effectuez l'une des opérations suivantes :
    - Glissez et déposez le texte sélectionné dans la zone d'expression
    - Appuyez sur **Ctrl+D** (Windows) ou **Cmd+D** (macOS)
-   - Cliquez avec le bouton droit sur le texte sélectionné **>** **Copier dans le volet d'expression**
+   - Cliquez avec le bouton droit sur le texte sélectionné **>** **Copier dans la fenêtre d'expression**
 
 ### Compteur de programme
 
@@ -393,7 +393,7 @@ Considérons que le compteur de programme est défini sur la ligne `If (This con
 Lorsque vous cliquez sur le bouton **Exécuter pas à pas** , le compteur du programme passe directement à la ligne `DO_SOMETHING_ELSE` .
 Pour examiner les résultats de la ligne `DO_SOMETHING` , vous pouvez déplacer le compteur de programme sur cette ligne et l'exécuter.
 
-### Menu contexuel de la fenêtre d'évaluation du code
+### Menu contexuel
 
 Le menu contextuel de la Fenêtre d'évaluation du code donne accès à plusieurs fonctions utiles en phase d’exécution du code en mode Trace :
 

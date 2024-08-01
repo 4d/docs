@@ -21,7 +21,7 @@ El comando `VP SET FIELD` <!-- REF #_method_.VP SET FIELD.Summary -->asigna un c
 
 En *rangeObj*, pase un rango de la(s) celda(s) cuyo valor desea indicar. En *rangeObj*, pase un rango de la(s) celda(s) cuyo valor desea indicar.
 
-The *field* parameter specifies a 4D database [virtual field](../formulas.md#referencing-fields-using-the-virtual-structure) to be assigned to the *rangeObj*. El nombre de la estructura virtual para el *field* se puede ver en la barra de fórmulas. Si alguna de las celdas de *rangeObj* tiene contenido, se sustituirá por *field*.
+El parámetro *field* especifica un [campo virtual](../formulas.md#referencing-fields-using-the-virtual-structure) de la base de datos 4D que se asignará a *rangeObj*. El nombre de la estructura virtual para el *field* se puede ver en la barra de fórmulas. Si alguna de las celdas de *rangeObj* tiene contenido, se sustituirá por *field*.
 
 El parámetro opcional *formatPattern* define un modelo para el parámetro *field*. Puede pasar cualquier [formato personalizado] válido(../configuring.md#cell-format).
 

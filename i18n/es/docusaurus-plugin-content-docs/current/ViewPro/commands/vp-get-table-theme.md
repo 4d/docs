@@ -29,7 +29,7 @@ El comando `VP Get table theme` <!-- REF #_method_.VP Get table theme.Summary --
 
 En\* vpAreaName\*, pase el nombre del área 4D View Pro y en *tableName*, el nombre de la tabla.
 
-The command returns an object of the [cs.ViewPro.TableTheme](../classes.md#tabletheme) class with properties and values that describe the current table theme.
+El comando devuelve un objeto de la clase [cs.ViewPro.TableTheme](../classes.md#tabletheme) con propiedades y valores que describen el tema actual de la tabla.
 
 #### Ejemplo
 
