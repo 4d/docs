@@ -397,7 +397,7 @@ Customized time formats can be built using several patterns described in the [**
 - [入力オブジェクト](input_overview.md) にテキストとして
 - [リストボックス列](listbox_overview.md#リストボックス列) に表示タイプ ["ポップアップ"](properties_Display.md#表示タイプ) を選択して
 
-... 値の代わりに表示するテキストを指定することができます:
+... you can select the text to display for each value:
 
 - **テキスト (True時)** - 値が "true" の時に表示するテキスト
 - **テキスト (False時)** - 値が "false" の時に表示するテキスト
