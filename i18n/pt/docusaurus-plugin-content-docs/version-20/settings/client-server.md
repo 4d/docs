@@ -42,9 +42,10 @@ O 4D Server usa três portas TCP para comunicações entre servidores internos e
 
 -   **SQL Server**: 19812 por padrão (pode ser modificado na página "SQL/Configuration" das Preferências).
 -   **Application Server**: 19813 por padrão (pode ser modificado através da página "Cliente/Configuração" das Preferências, veja acima).
--   **DB4D Server** (servidor de banco de dados): 19814 por padrão . Esse número de porta não pode ser modificado diretamente, mas sempre consiste no número da porta do servidor de aplicação + 1.\
+-   **DB4D Server** (database server): 19814 by default. Esse número de porta não pode ser modificado diretamente, mas sempre consiste no número da porta do servidor de aplicação + 1.\
   Quando um cliente 4D se conecta ao 4D Server, ele usa a porta TCP do servidor de aplicação (19813 ou a porta indicada após os dois pontos ':' no endereço IP mostrado na caixa de diálogo de conexão). A conexão com outros servidores através de suas respectivas portas é então automaticamente; não é mais necessário especificá-los.\
   Note que, no caso de acesso via um roteador ou um firewall, as três portas TCP devem ser abertas explicitamente.
+-   [**Remote Debugger**](../Debugging/debugging-remote.md): 19815 by default. This port number cannot be modified directly but it always consists of the application server port number + 2.
 
 #### Autenticação do usuário com o servidor de domínio
 
