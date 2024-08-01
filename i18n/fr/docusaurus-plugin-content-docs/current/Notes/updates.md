@@ -3,6 +3,14 @@ id: updates
 title: Release Notes
 ---
 
+## 4D 20 R7
+
+Read [**What’s new in 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R7/), the blog post that lists all new features and enhancements in 4D 20 R7.
+
+#### Points forts
+
+- List box columns and headers of type time now support the ["blankIfNull" option](../FormObjects/properties_Display.md#time-format).
+
 ## 4D 20 R6
 
 Lisez [**Les nouveautés de 4D 20 R6**](https://blog.4d.com/fr-whats-new-in-4d-20-R6/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R6.
