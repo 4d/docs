@@ -9,7 +9,7 @@ title: CryptoKey
 
 :::info 参照
 
-For a comprehensive overview of this class, please refer to the [**CryptoKey: encrypt, decrypt, sign, and verify!**](https://blog.4d.com/cryptokey-encrypt-decrypt-sign-and-verify/) blog post.
+このクラスの包括的な概要については、[**CryptoKey: 暗号化、復号化、署名、検証！**](https://blog.4d.com/ja/cryptokey-encrypt-decrypt-sign-and-verify/) ブログ記事を参照ください。
 
 :::
 
@@ -66,43 +66,43 @@ For a comprehensive overview of this class, please refer to the [**CryptoKey: en
 
 #### 例題 1
 
-A message is signed by a private key and the signature is verified by the corresponding public key. The following code signs and verifies a simple message signature.
+メッセージが秘密鍵で署名され、その署名は対応する公開鍵で検証されます。 以下のコードは、簡単なメッセージの署名を作成し、検証するものです。
 
-- Bob's side:
+- Bob側:
 
 ```4d
-// Create the message
+// メッセージを作成します
 $message:="hello world"
 Folder(fk desktop folder).file("message.txt").setText($message)
 
-// Create a key
+// キーを作成します
 $type:=New object("type";"RSA")
 $key:=4D.CryptoKey.new($type)
 
-// Get the public key and save it
+// 公開鍵を取得して保存します
 Folder(fk desktop folder).file("public.pem").setText($key.getPublicKey())
 
-// Get signature as base64 and save it
+// 署名を base64 形式で取得して保存します
 Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
 
-/*Bob sends the message, the public key and the signature to Alice*/
+/*Bob はメッセージと公開鍵、署名を Alice に送信します*/
 ```
 
-- Alice's side:
+- Alice側:
 
 ```4d
-// Get message, public key & signature
+// メッセージと公開鍵、署名を取得します
 $message:=Folder(fk desktop folder).file("message.txt").getText()
 $publicKey:=Folder(fk desktop folder).file("public.pem").getText()
 $signature:=Folder(fk desktop folder).file("signature").getText()
 
-// Create a key
+// キーを作成します 
 $type:=New object("type";"PEM";"pem";$publicKey)
 $key:=4D.CryptoKey.new($type)
 
-// Verify signature
+// 署名を検証します
 If ($key.verify($message;$signature;$type).success)
-// The signature is valid
+// 署名は有効です
 
 End if
 ```
