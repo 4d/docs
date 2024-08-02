@@ -21,7 +21,7 @@ Supprime l'entité, la collection d'entités ou l'entity selection courante (cr�
 
 ### Description
 
-Avec `$method=delete`, vous pouvez supprimer une entité ou une collection d'entités entière. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) *(e.g.*, /Employee(22)).
+Avec `$method=delete`, vous pouvez supprimer une entité ou une collection d'entités entière. Vous pouvez définir la collection d'entités en utilisant, par exemple, [`$filter`]($filter.md) ou en en spécifiant une directement à l'aide de [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) (par exemple, /Employee(22)).
 
 Vous pouvez également supprimer les entités d'un entity set en appelant [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
 
