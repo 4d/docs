@@ -21,7 +21,7 @@ title: $method
 
 ### 説明
 
-`$method=delete` を使ってエンティティ、またはエンティティセレクションを削除します。 たとえば、[`$filter`]($filter.md) を使って定義したエンティティセレクションや、[`\{dataClass\}(\{key\})`](%7BdataClass%7D.html#dataclasskey) *(例*: /Employee(22)) のように直接特定したエンティティが対象です。
+`$method=delete` を使ってエンティティ、またはエンティティセレクションを削除します。 You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) *(e.g.*, /Employee(22)).
 
 [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid) のようにエンティティセットを呼び出して、そこに含まれるエンティティを削除することもできます。
 
@@ -134,7 +134,7 @@ RESTリクエストで定義されたリレートエンティティのコレク�
 
 ```json
 {
- 
+
     "__ENTITYSET": "/rest/Employee/$entityset/FF625844008E430B9862E5FD41C741AB",
     "__entityModel": "Employee",
     "__COUNT": 2,
@@ -170,7 +170,7 @@ RESTリクエストで定義されたリレートエンティティのコレク�
             }
         }
     ]
- 
+
 }
 ```
 
@@ -224,7 +224,7 @@ RESTリクエストで定義されたリレートエンティティのコレク�
 **POST データ:**
 
 ```json
-{ 
+{
     firstName: "John",
     lastName: "Smith"
 }
@@ -237,13 +237,13 @@ RESTリクエストで定義されたリレートエンティティのコレク�
 **POST データ:**
 
 ```json
-[{ 
+[{
     "__KEY": "309",
     "__STAMP": 5,
     "ID": "309",
     "firstName": "Penelope",
     "lastName": "Miller"
-}, { 
+}, {
     "firstName": "Ann",
     "lastName": "Jones"
 }]
@@ -255,12 +255,12 @@ RESTリクエストで定義されたリレートエンティティのコレク�
 
 ```json
 {
-    "__KEY": "622", 
-    "__STAMP": 1, 
-    "uri": "http://127.0.0.1:8081/rest/Employee(622)", 
+    "__KEY": "622",
+    "__STAMP": 1,
+    "uri": "http://127.0.0.1:8081/rest/Employee(622)",
     "__TIMESTAMP": "!!2020-04-03!!",
-    "ID": 622, 
-    "firstName": "John", 
+    "ID": 622,
+    "firstName": "John",
     "firstName": "Smith"
 }
 ```
