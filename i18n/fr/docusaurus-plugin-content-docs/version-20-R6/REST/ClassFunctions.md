@@ -1,21 +1,21 @@
 ---
 id: classFunctions
-title: Calling class functions
+title: Appel des fonctions de classe
 ---
 
 Vous pouvez appeler les [fonctions de classe](ORDA/ordaClasses.md) définies pour le modèle de données ORDA via vos requêtes REST, afin de bénéficier de l'API de l'application 4D ciblée.
 
 :::note
 
-You can also call singleton functions, see [this page]($singleton.md) for more information.
+Vous pouvez également appeler des fonctions singleton, voir [cette page]($singleton.md) pour plus d'informations.
 
 :::
 
-Les fonctions sont simplement appelées dans les requêtes POST sur l'interface ORDA appropriée, sans (). Par exemple, si vous avez défini une fonction `getCity()` dans la dataclass City, vous pouvez l'appeler à l'aide de la requête suivante :
+Les fonctions sont simplement appelées dans des requêtes POST sur l'interface ORDA appropriée, sans (). Par exemple, si vous avez défini une fonction `getCity()` dans la dataclass City, vous pouvez l'appeler à l'aide de la requête suivante :
 
 `/rest/City/getCity`
 
-avec des données contenues dans le corps de la requête POST : `["Aguada"]`
+avec des données contenues dans le body de la requête POST : `["Aguada"]`
 
 Dans le langage 4D, cet appel équivaut à :
 
@@ -31,32 +31,32 @@ Les fonctions doivent toujours être appelées à l'aide des requêtes **POST** 
 
 Les fonctions sont appelées sur l'objet correspondant au datastore du serveur.
 
-| Fonction de classe                                                 | Syntaxe                                                                                                            |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                                                            |
-| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/\{dataClass\}/DataClassClassFunction`                                                                     |
-| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/\{dataClass\}/EntitySelectionClassFunction`                                                               |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$entityset/entitySetNumber`                                    |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$filter`                                                       |
-|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$orderby`                                                      |
-| [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                                                                  |
-| [Singleton class](../Concepts/classes.md#singleton-classes)        | `/rest/$singleton/SingletonClass/SingletonClassFunction` (see [$singleton page]($singleton.md)) |
+| Fonction de classe                                                 | Syntaxe                                                                                                             |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
+| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                                                             |
+| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/\{dataClass\}/DataClassClassFunction`                                                                      |
+| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/\{dataClass\}/EntitySelectionClassFunction`                                                                |
+|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$entityset/entitySetNumber`                                     |
+|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$filter`                                                        |
+|                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$orderby`                                                       |
+| [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                                                                   |
+| [Classe singleton](../Concepts/classes.md#classes-singleton)       | `/rest/$singleton/SingletonClass/SingletonClassFunction` (voir [page $singleton]($singleton.md)) |
 
-> `/rest/\{dataClass\}/Function` can be used to call either a dataclass or an entity selection function (`/rest/\{dataClass\}` returns all entities of the DataClass as an entity selection).\
+> `/rest/\{dataClass\}/Function` peut être utilisé pour appeler une fonction de dataclass ou d'entity selection (`/rest/\{dataClass\}` renvoie toutes les entités de la dataclass en tant qu'entity selection).\
 > The function is searched in the entity selection class first. Si elle n'est pas trouvée, elle est recherchée dans la dataclass. En d'autres termes, si une fonction portant le même nom est définie à la fois dans la classe DataClass et la classe EntitySelection, la fonction de classe de dataclass ne sera jamais exécutée.
 
-> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
+> La totalité du code 4D appelé à partir de requêtes REST **doit être thread-safe** si le projet fonctionne en mode compilé, car le serveur REST utilise toujours des process préemptifs dans ce cas (la valeur du paramètre [*Utiliser un process préemptif*](../WebServer/preemptiveWeb.md#activer-le-mode-préemptif-pour-le-serveur-web) est ignorée par le serveur REST).
 
 ## Paramètres
 
-Vous pouvez envoyer des paramètres aux fonctions définies dans les classes utilisateurs ORDA. On the server side, they will be received in the [declared parameters](../Concepts/parameters.md#declaring-parameters) of the class functions.
+Vous pouvez envoyer des paramètres aux fonctions définies dans les classes utilisateurs ORDA. Côté serveur, ils seront reçus dans les [paramètres déclarés](../Concepts/parameters.md#declaration-des-parametres) des fonctions de classe.
 
 Les règles suivantes s'appliquent :
 
-- Les paramètres doivent être passés dans le **corps de la requête POST**
+- Les paramètres doivent être passés dans le **body de la requête POST**
 - Les paramètres doivent être inclus dans une collection (format JSON)
 - Tous les types de données scalaires pris en charge dans les collections JSON peuvent être passés en tant que paramètres.
-- La sélection d'entité et l'entité peuvent être passées en tant que paramètres. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
+- L'entity selection et l'entité peuvent être passées en tant que paramètres. L'objet JSON doit contenir des attributs spécifiques utilisés par le serveur REST pour assigner les données aux objets ORDA correspondants : `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
 
 See [this example](#using-an-entity-to-be-created-on-the-server) and [this example](#receiving-an-entity-selection-as-parameter).
 
@@ -82,10 +82,10 @@ Vous pouvez également transmettre des valeurs pour tous les attributs de l'enti
 | __ENTITY    | Boolean                                                              | Obligatoire - Vrai pour indiquer au serveur que le paramètre est une entité |
 | __KEY       | mixte (type identique à celui de la clé primaire) | Optionnel - clé primaire de l'entité                                        |
 
-- If `__KEY` is not provided, a new entity is created on the server with the given attributes.
-- If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
+- Si `__KEY` n'est pas fourni, une nouvelle entité est créée sur le serveur avec les attributs donnés.
+- Si `__KEY` est fourni, l'entité correspondant à `__KEY` est chargée sur le serveur avec les attributs donnés
 
-Voir les exemple de [création](#creating-an-entity) ou de [mise à jour](#updating-an-entity) des entités.
+Voir les exemples de [création](#creating-an-entity) ou de [mise à jour](#updating-an-entity) des entités.
 
 #### Paramètre d'entité associé
 
@@ -185,7 +185,7 @@ Le résultat est une entité :
 }
 ```
 
-### Utiliser une fonction de classe d'une entité
+### Utiliser une fonction de classe d'entité
 
 La classe d'entité `CityEntity` fournit une API :
 
@@ -210,7 +210,7 @@ Vous pouvez lancer cette requête :
 }
 ```
 
-### Utiliser une fonction de classe d'une entity selection
+### Utiliser une fonction de classe d'entity selection
 
 La classe d'entity selection `CityEntity` fournit une API :
 
@@ -235,7 +235,7 @@ Vous pouvez lancer cette requête :
 }
 ```
 
-### Utiliser une fonction de classe de sélection d'entité et un ensemble d'entité
+### Utiliser une fonction de classe d'entity selection et un entity set
 
 La classe `StudentsSelection` a une fonction `getAgeAverage` :
 
@@ -267,7 +267,7 @@ Une fois que vous avez créé un ensemble d'entité, vous pouvez lancer cette re
 }
 ```
 
-### Utiliser une fonction de classe de sélection d'entité et un "orderBy"
+### Utiliser une fonction de classe d'entity selection et un "orderBy"
 
 La classe `StudentsSelection` a une fonction `getLastSummary` :
 
@@ -308,7 +308,7 @@ Class extends DataClass
 exposed Function pushData($entity : Object) : Object
 	var $status : Object
 
-	$status:=checkData($entity) // $status is an object with a success boolean property
+	$status:=checkData($entity) // $status est un objet avec une propriété booléenne success
 
 	If ($status.success)
 	    $status:=$entity.save()
@@ -447,9 +447,9 @@ Class extends Entity
 exposed Function putToSchool()
 	var $1, $school , $0, $status : Object
 
-		//$1 is a Schools entity
+		//$1 est une entité school
 	$school:=$1
-		//Associate the related entity school to the current Students entity
+		//associer l'entité liée school à l'entité courante students
 	This.school:=$school
 
 	$status:=This.save()
@@ -457,7 +457,9 @@ exposed Function putToSchool()
 	$0:=$status
 ```
 
-You run this request, called on a Students entity : **POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool` Body of the request:
+Vous exécutez cette requête, appelée sur une entité Students :
+**POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool`
+Body de la requête :
 
 ```
 [{
@@ -477,7 +479,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 }
 ```
 
-### Recevoir une sélection d'entité comme paramètre
+### Recevoir une entity selection comme paramètre
 
 Dans la classe de Dataclass `Students`, la fonction `setFinalExam()` met à jour une sélection d'entité reçue ($1). Elle met à jour l'attribut *finalExam* avec la valeur reçue ($2). Elle retourne les clés primaires des entités mises à jour.
 
@@ -500,7 +502,7 @@ exposed Function setFinalExam()
 
     $keys:=New collection()
 
-      //Loop on the entity selection
+      //Boucle sur entity selection
     For each ($student;$es)
         $student.finalExam:=$examResult
         $status:=$student.save()
@@ -554,15 +556,15 @@ A l'aide de la fonction `getAgeAverage()` [définie ci-dessus](#using-an-entitys
 var $remoteDS, $newStudent, $students : Object
 var $ageAverage : Integer
 
-$remoteDS:=Open datastore(New object("hostname";"127.0.0.1:8044");"students")
+$remoteDS:=Open datastore(New object("hostname" ; "127.0.0.1:8044") ; "students")
 
-// $newStudent is a student entity to procees
+// $newStudent est une entité étudiant à traiter
 $newStudent:=...
-$students:=$remoteDS.Students.query("school.name = :1";"Math school")
-// We add an entity to the $students entity selection on the client
+$students:=$remoteDS.Students.query("school.name = :1" ; "Math school")
+// Nous ajoutons une entité à l'entity selection $students sur le client
 $students.add($newStudent)
 
-// We call a function on the StudentsSelection class returning the age average of the students in the entity selection
-// The function is executed on the server on the updated $students entity selection which included the student added from the client
+// Nous appelons une fonction de la classe StudentsSelection qui renvoie la moyenne d'âge des étudiants de l'entity selection
+// La fonction est exécutée sur le serveur dans l'entity selection $students mise à jour qui comprend l'étudiant ajouté par le client
 $ageAverage:=$students.getAgeAverage()
 ```
