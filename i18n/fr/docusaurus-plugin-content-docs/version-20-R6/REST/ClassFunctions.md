@@ -325,7 +325,7 @@ Lancez cette requête :
 
 **POST** `http://127.0.0.1:8044/rest/Students/pushData`
 
-Corps de la requête :
+Body de la requête :
 
 ```
 [{
@@ -363,7 +363,7 @@ Lancez cette requête :
 
 **POST:**`http://127.0.0.1:8044/rest/Students/pushData`
 
-Corps de la requête :
+Body de la requête :
 
 ```
 [{
@@ -401,7 +401,7 @@ Lancez cette requête :
 
 **POST:**`http://127.0.0.1:8044/rest/Students/pushData`
 
-Corps de la requête :
+Body de la requête :
 
 ```
 [{
@@ -520,7 +520,7 @@ Vous pouvez ensuite exécuter cette requête :
 
 **POST** `http://127.0.0.1:8044/rest/Students/setFinalExam`
 
-Corps de la requête :
+Body de la requête :
 
 ```
 [
