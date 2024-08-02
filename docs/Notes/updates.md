@@ -11,6 +11,7 @@ Read [**What’s new in 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 #### Highlights
 
 - List box columns and headers of type time now support the ["blankIfNull" option](../FormObjects/properties_Display.md#time-format).
+- New properties in [.getBoxInfo()](../API/IMAPTransporterClass.md#getboxinfo) and [.getBoxList()](../API/IMAPTransporterClass.md#getboxlist).
 
 
 

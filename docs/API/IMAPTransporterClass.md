@@ -785,10 +785,11 @@ The `boxInfo` object returned contains the following properties:
 
 |Property| Type| Description|
 |---|---|---|
-|name|text|Name of the mailbox
-|mailCount| number| Number of messages in the mailbox|
-|mailRecent| number| Number of messages with the "recent" flag (indicating new messages)|
+|name|Text|Name of the mailbox
+|mailCount| Number| Number of messages in the mailbox|
+|mailRecent| Number| Number of messages with the "recent" flag (indicating new messages)|
 |id| text| Unique id of the mailbox|
+|mailUnseen| Number|Number of messages marked "unseen"|
 
 #### Example
 
@@ -833,6 +834,9 @@ In the optional `parameters` parameter, pass an object containing values to filt
 |Property | Type| Description |
 |---|---|---|
 |isSubscribed|  Boolean |<li>**True** to return only subscribed mailboxes</li><li> **False** to return all available mailboxes</li>|
+| names      | Collection | Collection of objects containing a "name" attribute or collection of texts containing the box names |
+| withBoxProperties| Boolean | If true (default): adds the `selectable`, `inferior`, and `interesting` attributes to the result object. If false, these attributes are omitted.|
+| withBoxInfo| Boolean | Default value is false. If true, adds the `mailCount`, `mailRecent`, and `id` attributes to the result object.|
 
 #### Result
 
@@ -840,10 +844,15 @@ Each object of the returned collection contains the following properties:
 
 |Property|  Type|Description |
 |---|---|---|
-|\[].name|text|Name of the mailbox |
-|\[].selectable |boolean |Indicates whether or not the access rights allow the mailbox to be selected: <ul><li>true - the mailbox can be selected</li><li>false - the mailbox can not be selected</li></ul>|
-|\[].inferior |boolean |Indicates whether or not the access rights allow creating a lower hierachy in the mailbox: <ul><li>true - a lower level can be created</li><li>false - a lower level can not be created</li></ul>|
-|\[].interesting |boolean  |Indicates if the mailbox has been marked "interesting" by the server: <ul><li>true - The mailbox has been marked "interesting" by the server. For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul>|
+|\[].name|Text|Name of the mailbox. Returned if withBoxProperties=true or withBoxInfo=true |
+|\[].selectable |Boolean |Indicates whether or not the access rights allow the mailbox to be selected: <ul><li>true - the mailbox can be selected</li><li>false - the mailbox can not be selected</li></ul>	Returned if withBoxProperties=true|
+|\[].inferior |Boolean |Indicates whether or not the access rights allow creating a lower hierachy in the mailbox: <ul><li>true - a lower level can be created</li><li>false - a lower level can not be created</li></ul>	Returned if withBoxProperties=true|
+|\[].interesting |Boolean  |Indicates if the mailbox has been marked "interesting" by the server: <ul><li>true - The mailbox has been marked "interesting" by the server. For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul>	Returned if withBoxProperties=true|
+| [].mailCount  | Number | Number of messages in inbox. Returned if withBoxInfo=true |
+| [].mailRecent | Number | Number of messages marked "recent" (indicating new messages). Returned if withBoxInfo=true  |
+| [].mailUnseen | Number | Number of messages marked "unseen". Returned if withBoxInfo=true |
+| [].id         | Text   | Unique mailbox identifier. Returned if withBoxInfo=true |
+
 
 If the account does not contain any mailboxes, an empty collection is returned.
 
