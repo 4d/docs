@@ -21,7 +21,7 @@ Supprime l'entité, la collection d'entités ou l'entity selection courante (cr�
 
 ### Description
 
-Avec `$method=delete`, vous pouvez supprimer une entité ou une collection d'entités entière. Vous pouvez définir la collection d'entités en utilisant, par exemple, [`$filter`]($filter.md) ou en en spécifiant une directement à l'aide de [`\{dataClass\}(\{key\})`](%7BdataClass%7D.html#dataclasskey) (par exemple, /Employee(22)).
+Avec `$method=delete`, vous pouvez supprimer une entité ou une collection d'entités entière. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) *(e.g.*, /Employee(22)).
 
 Vous pouvez également supprimer les entités d'un entity set en appelant [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
 
@@ -134,7 +134,7 @@ Si vous souhaitez récupérer uniquement les entités relatives pour une entité
 
 ```json
 {
- 
+
     "__ENTITYSET": "/rest/Employee/$entityset/FF625844008E430B9862E5FD41C741AB",
     "__entityModel": "Employee",
     "__COUNT": 2,
@@ -170,7 +170,7 @@ Si vous souhaitez récupérer uniquement les entités relatives pour une entité
             }
         }
     ]
- 
+
 }
 ```
 
@@ -225,7 +225,7 @@ Si vous souhaitez créer une entité, vous pouvez envoyer, via POST, les attribu
 **POST data:**
 
 ```json
-{ 
+{
     firstName: "John",
     lastName: "Smith"
 }
@@ -238,13 +238,13 @@ Vous pouvez également créer et mettre à jour plusieurs entités en même temp
 **POST data:**
 
 ```json
-[{ 
+[{
     "__KEY": "309",
     "__STAMP": 5,
     "ID": "309",
     "firstName": "Penelope",
     "lastName": "Miller"
-}, { 
+}, {
     "firstName": "Ann",
     "lastName": "Jones"
 }]
@@ -256,12 +256,12 @@ Lorsque vous ajoutez ou modifiez une entité, elle vous est retournée avec les 
 
 ```json
 {
-    "__KEY": "622", 
-    "__STAMP": 1, 
-    "uri": "http://127.0.0.1:8081/rest/Employee(622)", 
+    "__KEY": "622",
+    "__STAMP": 1,
+    "uri": "http://127.0.0.1:8081/rest/Employee(622)",
     "__TIMESTAMP": "!!2020-04-03!!",
-    "ID": 622, 
-    "firstName": "John", 
+    "ID": 622,
+    "firstName": "John",
     "firstName": "Smith"
 }
 ```
