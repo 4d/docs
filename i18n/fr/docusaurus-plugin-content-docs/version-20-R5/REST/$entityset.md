@@ -32,16 +32,16 @@ Après que vous ayez créé un entity set, l'ID de l'entity set est retourné av
 
 ## $entityset/\{entitySetID\}?$operator...&$otherCollection
 
-Créez un autre ensemble d'entités basé sur des ensembles d'entités préalablement créés
+Crée un autre entity set basé sur des entity sets préalablement créés
 
-| Paramètres       | Type   | Description                                                           |
-| ---------------- | ------ | --------------------------------------------------------------------- |
-| $operator        | String | L'un des opérateurs logiques à tester avec l'autre ensemble d'entités |
-| $otherCollection | String | ID de l'ensemble d'entités                                            |
+| Paramètres       | Type   | Description                                                   |
+| ---------------- | ------ | ------------------------------------------------------------- |
+| $operator        | String | L'un des opérateurs logiques à tester avec l'autre entity set |
+| $otherCollection | String | ID de l'entity set                                            |
 
 ### Description
 
-After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/\{entitySetID\}?$operator... &$otherCollection`, la propriété `$operator` (dont les valeurs sont indiquées ci-dessous), et un autre entity set (entity set #2) défini par la propriété `$otherCollection`. Les deux ensembles d'entités doivent être dans la même dataclass.
+After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/\{entitySetID\}?$operator... &$otherCollection`, la propriété `$operator` (dont les valeurs sont indiquées ci-dessous), et un autre entity set (entity set #2) défini par la propriété `$otherCollection`. Les deux entity sets doivent être dans la même dataclass.
 
 Vous pouvez ensuite créer un autre entity set contenant les résultats de cet appel en utilisant le `$method=entityset` à la fin de la requête REST.
 
@@ -49,7 +49,7 @@ Voici les opérateurs logiques :
 
 | Opérateur | Description                                                                                                                                                                            |
 | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AND       | Retourne les entités communes aux deux ensembles d'entités                                                                                                                             |
+| AND       | Retourne les entités communes aux deux entity sets                                                                                                                                     |
 | OU        | Retourne les entités contenues dans les deux entity sets                                                                                                                               |
 | EXCEPT    | Retourne les entités de l'entity set #1 moins celles de l'entity set #2                                                                                                                |
 | INTERSECT | Retourne true ou false s'il existe une intersection des entités dans les deux entity sets (ce qui signifie qu'au moins une entité est commune aux deux entity sets) |

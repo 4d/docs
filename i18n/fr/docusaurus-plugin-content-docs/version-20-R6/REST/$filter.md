@@ -23,7 +23,7 @@ Un filtre plus complexe est composé des éléments suivants, qui joint deux req
 
 **\{attribute\} {comparator} {value} {AND/OR/EXCEPT} \{attribute\} {comparator} {value}**
 
-Par exemple : `$filter="firstName=john AND salary>20000"` où `firstName` et `salary` sont les attributs de la dataclasse "Employee".
+Par exemple : `$filter="firstName=john AND salary>20000"` où `firstName` et `salary` sont les attributs de la dataclass "Employee".
 
 ### Utiliser la propriété params
 

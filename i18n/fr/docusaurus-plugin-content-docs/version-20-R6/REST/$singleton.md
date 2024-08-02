@@ -3,17 +3,17 @@ id: singleton
 title: $singleton
 ---
 
-You can directly call exposed [functions of your shared singletons](../Concepts/classes.md#singleton-classes) through REST.
+Vous pouvez appeler directement les [fonctions exposées de vos shared singletons](../Concepts/classes.md#singleton-classes) via REST.
 
-Singleton functions are called in POST requests with the `$singleton` command and without `()`. For example, if you have defined a `buildVehicle()` function in the `VehicleFactory` shared singleton class, you could call it using the following request:
+Les fonctions singleton sont appelées dans des requêtes POST avec la commande `$singleton` et sans `()`. Par exemple, si vous avez défini une fonction `buildVehicle()` dans la classe singleton partagée `VehicleFactory`, vous pouvez l'appeler à l'aide de la requête suivante :
 
 ```json
 /rest/$singleton/VehicleFactory/buildVehicle
 ```
 
-with data in the body of the POST request: ["truck"]
+avec les données dans le body de la requête POST : ["truck"]
 
-In 4D language, this call is equivalent to:
+En langage 4D, cet appel est équivalent à :
 
 ```4d
 $singleton:=cs.VehicleFactory.me.buildVehicle("truck")
@@ -21,13 +21,13 @@ $singleton:=cs.VehicleFactory.me.buildVehicle("truck")
 
 :::note
 
-Keep in mind that only functions with the [`exposed` keyword](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) can be directly called from REST requests.
+N'oubliez pas que seules les fonctions avec le mot-clé [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) peuvent être directement appelées à partir de requêtes REST.
 
 :::
 
 ## Appeler des fonctions
 
-Singleton functions must always be called using REST **POST** requests (a GET request will receive an error). La syntaxe formelle est la suivante :
+Les fonctions Singleton doivent toujours être appelées à l'aide de requêtes REST **POST** (une requête GET recevra une erreur). La syntaxe formelle est la suivante :
 
 `/rest/$singleton/SingletonClass/SingletonClassFunction`
 
@@ -35,19 +35,19 @@ Singleton functions must always be called using REST **POST** requests (a GET re
 
 :::info
 
-You can restrict calls to specific singleton functions by configuring appropriate privileges in the [**roles.json**](../ORDA/privileges.md#rolesjson-file) file.
+Vous pouvez limiter les appels à des fonctions singleton spécifiques en configurant les privilèges appropriés dans le fichier [**roles.json**](../ORDA/privileges.md#fichier-rolesjson).
 
 :::
 
 ## Paramètres
 
-You can send parameters to singleton functions. On the server side, they will be received in the [declared parameters](../Concepts/parameters.md#declaring-parameters) of the singleton class functions.
+Vous pouvez envoyer des paramètres aux fonctions singleton. Côté serveur, ils seront reçus dans les [paramètres déclarés](../Concepts/parameters.md#declaration-des-parametres) des fonctions de la classe singleton.
 
-Sending parameters to singleton functions is exactly the same as sending parameter to ORDA class functions. Please refer to [the **Parameters** paragraph of the "Calling class functions" page](ClassFunctions.md#parameters) for a detailed description.
+L'envoi de paramètres aux fonctions singleton est exactement le même que l'envoi de paramètres aux fonctions de classe ORDA. Veuillez vous référer au [paragraphe **Paramètres** de la page "Appeler des fonctions de classe"](ClassFunctions.md#parametres) pour une description détaillée.
 
 ## Exemple
 
-You have created a simple shared singleton with an exposed function:
+Vous avez créé un singleton partagé simple avec une fonction exposée :
 
 ```4d
 //class mySingleton
@@ -61,7 +61,7 @@ exposed Function sayHello ($value : Text)
 
 :::note
 
-The `mySingleton` class and `sayHello` function are listed when you call the [`$catalog`]($catalog.md#singleton) command.
+La classe `mySingleton` et la fonction `sayHello` sont répertoriées lorsque vous appelez la commande [`$catalog`]($catalog.md#singleton).
 
 :::
 
@@ -69,7 +69,7 @@ Vous pouvez lancer cette requête :
 
 **POST** `/rest/$singleton/mySingleton/sayHello`
 
-Body of the request: ["John"]
+Body de la requête : ["John"]
 
 #### Réponse
 

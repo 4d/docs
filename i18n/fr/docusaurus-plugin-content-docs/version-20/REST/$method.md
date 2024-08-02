@@ -26,7 +26,7 @@ Supprime l'entité, la collection d'entités ou l'entity selection courante (cr�
 
 ### Description
 
-Avec `$method=delete`, vous pouvez supprimer une entité ou une collection d'entités entière. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}({key})`](%7BdataClass%7D.html#dataclasskey) *(e.g.*, /Employee(22)).
+Avec `$method=delete`, vous pouvez supprimer une entité ou une collection d'entités entière. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) *(e.g.*, /Employee(22)).
 
 You can also delete the entities in an entity set, by calling [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
 
@@ -40,7 +40,7 @@ Vous pouvez également faire une requête en utilisant $ filter :
 
  `POST  /rest/Employee?$filter="ID=11"&$method=delete`
 
-You can also delete an entity set using $entityset/\{entitySetID\}:
+Vous pouvez également supprimer un entity set en utilisant $entityset/\{entitySetID\} :
 
  `POST  /rest/Employee/$entityset/73F46BE3A0734EAA9A33CA8B14433570?$method=delete`
 
@@ -237,7 +237,7 @@ Si vous souhaitez créer une entité, vous pouvez envoyer, via POST, les attribu
 **Données POST :**
 
 ```json
-{ 
+{
     firstName: "John",
     lastName: "Smith"
 }
@@ -250,13 +250,13 @@ Vous pouvez également créer et mettre à jour plusieurs entités en même temp
 **Données POST :**
 
 ```json
-[{ 
+[{
     "__KEY": "309",
     "__STAMP": 5,
     "ID": "309",
     "firstName": "Penelope",
     "lastName": "Miller"
-}, { 
+}, {
     "firstName": "Ann",
     "lastName": "Jones"
 }]
@@ -268,12 +268,12 @@ Lorsque vous ajoutez ou modifiez une entité, elle vous est retournée avec les 
 
 ```json
 {
-    "__KEY": "622", 
-    "__STAMP": 1, 
-    "uri": "http://127.0.0.1:8081/rest/Employee(622)", 
+    "__KEY": "622",
+    "__STAMP": 1,
+    "uri": "http://127.0.0.1:8081/rest/Employee(622)",
     "__TIMESTAMP": "!!2020-04-03!!",
-    "ID": 622, 
-    "firstName": "John", 
+    "ID": 622,
+    "firstName": "John",
     "firstName": "Smith"
 }
 ```

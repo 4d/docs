@@ -8,7 +8,7 @@ title: Configuration du serveur
 Pour commencer à utiliser les fonctionnalités REST, vous devez démarrer et configurer le serveur 4D REST.
 
 > - Sur 4D Server, l'ouverture d'une session REST nécessite une licence client 4D disponible.<br/>
-> - On 4D single-user, you can open up to three REST sessions for testing purposes.
+> - Sur 4D mono-utilisateur, vous pouvez ouvrir jusqu'à trois sessions REST à des fins de test.
 > - You need to manage the [session](authUsers.md) for your requesting application.
 
 ## Démarrage du serveur REST
