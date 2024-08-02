@@ -63,7 +63,7 @@ Returns [shared singletons](#singletons) (if any) and information about all of y
 
 Llamando `$catalog/$all` puede recibir información detallada sobre los atributos de cada una de las clases de datos del modelo activo del proyecto.
 
-For more information about what is returned for each dataclass and its attributes, use [`$catalog/\{dataClass\}`](#catalogdataClass).
+For more information about what is returned for each dataclass and its attributes, use [`$catalog/\{dataClass\}`](#catalogdataclass).
 
 ### Exemplo
 
