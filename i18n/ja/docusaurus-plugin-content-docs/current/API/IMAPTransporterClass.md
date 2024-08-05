@@ -805,7 +805,7 @@ $status:=$transporter.expunge()
 | mailCount  | Number | メールボックス内のメッセージの数                                              |
 | mailRecent | Number | (新しいメッセージであることを表す) "recent" フラグがついたメッセージの数 |
 | id         | text   | メールボックスの固有ID                                                  |
-| mailUnseen | Number | Number of messages marked "unseen"                            |
+| mailUnseen | Number | "unseen" フラグがついたメッセージの数                                       |
 
 #### 例題
 
@@ -849,27 +849,27 @@ $status:=$transporter.expunge()
 
 任意の `parameters` パラメーターには、返されるメールボックスをフィルターするための値を格納したオブジェクトを渡すことができます。 以下のものを渡すことができます:
 
-| プロパティ             | タイプ        | 説明                                                                                                                                                                                                                  |
-| ----------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| isSubscribed      | Boolean    | <li>**True**: 購読しているメールボックスのみを返します。</li><li>**False**: すべての利用可能なメールボックスを返します。</li>                                                                                                                                  |
-| names             | Collection | Collection of objects containing a "name" attribute or collection of texts containing the box names                                                                                                                 |
-| withBoxProperties | Boolean    | If true (default): adds the `selectable`, `inferior`, and `interesting` attributes to the result object. If false, these attributes are omitted. |
-| withBoxInfo       | Boolean    | Default value is false. If true, adds the `mailCount`, `mailRecent`, and `id` attributes to the result object.                                                                      |
+| プロパティ             | タイプ        | 説明                                                                                                                                       |
+| ----------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| isSubscribed      | Boolean    | <li>**True**: 購読しているメールボックスのみを返します。</li><li>**False**: すべての利用可能なメールボックスを返します。</li>                                                       |
+| names             | Collection | "name" 属性を含むオブジェクトのコレクション、またはボックス名を含むテキストのコレクション                                                                                         |
+| withBoxProperties | Boolean    | true の場合 (デフォルト): 結果のオブジェクトに `selectable`、`inferior`、`interesting` 属性を追加します。 false の場合、これらの属性は省略されます。 |
+| withBoxInfo       | Boolean    | デフォルト値は false です。 true の場合、結果のオブジェクトに `mailCount`、`mailRecent`、および `id` 属性を追加します。                                                        |
 
 #### 戻り値
 
 返されるコレクションの各オブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ                                                                                | タイプ     | 説明                                                                                                                                                                                                                                                                                                                              |
-| ------------------------------------------------------------------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \[].name        | Text    | Name of the mailbox. Returned if withBoxProperties=true or withBoxInfo=true                                                                                                                                                                                                                                     |
-| \[].selectable  | Boolean | Indicates whether or not the access rights allow the mailbox to be selected: <ul><li>true - the mailbox can be selected</li><li>false - the mailbox can not be selected</li></ul>	Returned if withBoxProperties=true                                                                                            |
-| \[].inferior    | Boolean | Indicates whether or not the access rights allow creating a lower hierachy in the mailbox: <ul><li>true - a lower level can be created</li><li>false - a lower level can not be created</li></ul>	Returned if withBoxProperties=true                                                                            |
-| \[].interesting | Boolean | サーバーがメールボックスに “interesting” のマーク付けをしているかどうかを表します:<ul><li>true - メールボックスはサーバーから "interesting" のマーク付けをされています。 For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul>	Returned if withBoxProperties=true |
-| [].mailCount     | Number  | Number of messages in inbox. Returned if withBoxInfo=true                                                                                                                                                                                                                                                       |
-| [].mailRecent    | Number  | Number of messages marked "recent" (indicating new messages). Returned if withBoxInfo=true                                                                                                                                                                                                   |
-| [].mailUnseen    | Number  | Number of messages marked "unseen". Returned if withBoxInfo=true                                                                                                                                                                                                                                                |
-| [].id            | Text    | Unique mailbox identifier. Returned if withBoxInfo=true                                                                                                                                                                                                                                                         |
+| プロパティ                                                                                | タイプ     | 説明                                                                                                                                                                                                                                                                       |
+| ------------------------------------------------------------------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| \[].name        | Text    | メールボックスの名称。 withBoxProperties=true または withBoxInfo=true の場合に返されます                                                                                                                                                                                                        |
+| \[].selectable  | Boolean | アクセス権でメールボックスを選択できるかどうかを表します:<ul><li>true - メールボックスは選択可能</li><li>false - メールボックスは選択不可能</li></ul>withBoxProperties=true の場合に返されます                                                                                                                         |
+| \[].inferior    | Boolean | アクセス権でメールボックス内に下の階層レベルを作成できるかどうかを表します:<ul><li>true - 下の階層レベルは作成可能</li><li>false - 下の階層レベルは作成不可能</li></ul>withBoxProperties=true の場合に返されます                                                                                                                |
+| \[].interesting | Boolean | サーバーがメールボックスに “interesting” のマーク付けをしているかどうかを表します:<ul><li>true - メールボックスはサーバーから "interesting" のマーク付けをされています。 たとえば、メールボックスには新着メッセージが入っている場合が考えられます。</li><li>false - メールボックスはサーバーから "interesting" のマーク付けをされていません。</li></ul>withBoxProperties=true の場合に返されます |
+| [].mailCount     | Number  | 受信ボックス内のメッセージの数。 withBoxInfo=true の場合に返されます                                                                                                                                                                                                                              |
+| [].mailRecent    | Number  | (新しいメッセージであることを表す) "recent" フラグがついたメッセージの数。 withBoxInfo=true の場合に返されます                                                                                                                                                                                |
+| [].mailUnseen    | Number  | "unseen" フラグがついたメッセージの数。 withBoxInfo=true の場合に返されます                                                                                                                                                                                                                      |
+| [].id            | Text    | 一意のメールボックス識別子。 withBoxInfo=true の場合に返されます                                                                                                                                                                                                                                |
 
 アカウントにメールボックスが一つもない場合、空のコレクションが返されます。
 
