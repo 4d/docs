@@ -155,9 +155,9 @@ Há casos em que é necessário armazenar dados como um tipo e utilizá-los como
 [Products]Part Number:=String(Number)+"abc"
 ```
 
-If *Number* is 17, then *[Products]Part Number* will get the string “17abc”.
+Se *Number* for 17, então *[Products]Part Number* obterá a string "17abc".
 
-Los tipos de datos están completamente definidos en la sección [Tipos de datos](Concepts/data-types.md).
+Os tipos de dados são totalmente definidos na seção [Data Types](Concepts/data-types.md).
 
 ## Objectos e colecções
 
@@ -369,7 +369,7 @@ Insira `//` no início de uma linha ou após uma instrução para adicionar um c
  End for
 ```
 
-#### Comentarios en línea o multilínea (`/*comment*/`)
+#### Comentários em linha ou em várias linhas (`/*comment*/`)
 
 Contorne o conteúdo com `/*` ... caracteres `*/` para criar comentários em linha ou blocos de comentários de várias linhas. Ambos os blocos de comentário em linha e em várias linhas começam com `/*` e terminam com `*/`.
 

@@ -26,7 +26,7 @@ Elimina a entidade, coleção de entidades ou seleção de entidades atual (cria
 
 ### Descrição
 
-Com `$method=delete`, é possível eliminar uma entidade ou toda uma coleção de entidades. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}({key})`](%7BdataClass%7D.html#dataclasskey) *(e.g.*, /Employee(22)).
+Com `$method=delete`, é possível eliminar uma entidade ou toda uma coleção de entidades. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) *(e.g.*, /Employee(22)).
 
 You can also delete the entities in an entity set, by calling [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
 
@@ -236,7 +236,7 @@ Se você quiser criar uma entidade, poderá enviar os atributos via POST usando 
 **Dados POST:**
 
 ```json
-{ 
+{
     firstName: "John",
     lastName: "Smith"
 }
@@ -249,13 +249,13 @@ Também é possível criar e atualizar várias entidades em simultâneo, utiliza
 **Dados POST:**
 
 ```json
-[{ 
+[{
     "__KEY": "309",
     "__STAMP": 5,
     "ID": "309",
     "firstName": "Penelope",
     "lastName": "Miller"
-}, { 
+}, {
     "firstName": "Ann",
     "lastName": "Jones"
 }]
@@ -267,12 +267,12 @@ Quando se adiciona ou modifica uma entidade, esta é-lhe devolvida com os atribu
 
 ```json
 {
-    "__KEY": "622", 
-    "__STAMP": 1, 
-    "uri": "http://127.0.0.1:8081/rest/Employee(622)", 
+    "__KEY": "622",
+    "__STAMP": 1,
+    "uri": "http://127.0.0.1:8081/rest/Employee(622)",
     "__TIMESTAMP": "!!2020-04-03!!",
-    "ID": 622, 
-    "firstName": "John", 
+    "ID": 622,
+    "firstName": "John",
     "firstName": "Smith"
 }
 ```

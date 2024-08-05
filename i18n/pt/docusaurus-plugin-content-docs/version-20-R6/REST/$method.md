@@ -21,7 +21,7 @@ Elimina a entidade, coleção de entidades ou seleção de entidades atual (cria
 
 ### Descrição
 
-Con `$method=delete`, puede eliminar una entidad o una colección de entidades entera. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}({key})`](%7BdataClass%7D.html#dataclasskey) *(e.g.*, /Employee(22)).
+Con `$method=delete`, puede eliminar una entidad o una colección de entidades entera. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) *(e.g.*, /Employee(22)).
 
 You can also delete the entities in an entity set, by calling [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
 
@@ -133,7 +133,7 @@ Se pretender recuperar apenas as entidades relacionadas para uma entidade espec�
 
 ```json
 {
- 
+
     "__ENTITYSET": "/rest/Employee/$entityset/FF625844008E430B9862E5FD41C741AB",
     "__entityModel": "Employee",
     "__COUNT": 2,
@@ -169,7 +169,7 @@ Se pretender recuperar apenas as entidades relacionadas para uma entidade espec�
             }
         }
     ]
- 
+
 }
 ```
 
@@ -223,7 +223,7 @@ Se você quiser criar uma entidade, poderá enviar os atributos via POST usando 
 **POST data:**
 
 ```json
-{ 
+{
     firstName: "John",
     lastName: "Smith"
 }
@@ -236,13 +236,13 @@ Também é possível criar e atualizar várias entidades em simultâneo, utiliza
 **POST data:**
 
 ```json
-[{ 
+[{
     "__KEY": "309",
     "__STAMP": 5,
     "ID": "309",
     "firstName": "Penelope",
     "lastName": "Miller"
-}, { 
+}, {
     "firstName": "Ann",
     "lastName": "Jones"
 }]
@@ -254,12 +254,12 @@ Quando se adiciona ou modifica uma entidade, esta é-lhe devolvida com os atribu
 
 ```json
 {
-    "__KEY": "622", 
-    "__STAMP": 1, 
-    "uri": "http://127.0.0.1:8081/rest/Employee(622)", 
+    "__KEY": "622",
+    "__STAMP": 1,
+    "uri": "http://127.0.0.1:8081/rest/Employee(622)",
     "__TIMESTAMP": "!!2020-04-03!!",
-    "ID": 622, 
-    "firstName": "John", 
+    "ID": 622,
+    "firstName": "John",
     "firstName": "Smith"
 }
 ```

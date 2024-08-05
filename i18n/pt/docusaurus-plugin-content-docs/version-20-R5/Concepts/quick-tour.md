@@ -155,9 +155,9 @@ Há casos em que é necessário armazenar dados como um tipo e utilizá-los como
 [Products]Part Number:=String(Number)+"abc"
 ```
 
-If _Number_ is 17, then _[Products]Part Number_ will get the string “17abc”.
+Se _Number_ for 17, então _[Products]Part Number_ obterá a string "17abc".
 
-Los tipos de datos están completamente definidos en la sección [Tipos de datos](Concepts/data-types.md).
+Os tipos de dados são totalmente definidos na seção [Data Types](Concepts/data-types.md).
 
 ## Objectos e colecções
 
@@ -377,7 +377,7 @@ For($vCounter;1;100) //Start loop
 End for
 ```
 
-#### Comentarios en línea o multilínea (`/*comment*/`)
+#### Comentários em linha ou em várias linhas (`/*comment*/`)
 
 Contorne o conteúdo com `/*` ... caracteres `*/` para criar comentários em linha ou blocos de comentários de várias linhas. Ambos os blocos de comentário em linha e em várias linhas começam com `/*` e terminam com `*/`.
 

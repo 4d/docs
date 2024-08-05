@@ -799,10 +799,11 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
 | Propiedad  | Tipo   | Descripción                                                                                       |
 | ---------- | ------ | ------------------------------------------------------------------------------------------------- |
-| name       | text   | Nombre del buzón                                                                                  |
-| mailCount  | number | Número de mensajes en el buzón                                                                    |
-| mailRecent | number | Número de mensajes con el marcador "reciente" (que indica los mensajes nuevos) |
+| name       | Text   | Nombre del buzón                                                                                  |
+| mailCount  | Number | Número de mensajes en el buzón                                                                    |
+| mailRecent | Number | Número de mensajes con el marcador "reciente" (que indica los mensajes nuevos) |
 | id         | text   | Id. único del buzón                                                               |
+| mailUnseen | Number | Number of messages marked "unseen"                                                                |
 
 #### Ejemplo
 
@@ -846,20 +847,27 @@ La función `.getBoxList()` <!-- REF #IMAPTransporterClass.getBoxList().Summary 
 
 En el parámetro opcional `parameters`, pase un objeto que contenga valores para filtrar los buzones devueltos. Puede pasar:
 
-| Propiedad    | Tipo    | Descripción                                                                                                                                |
-| ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| isSubscribed | Boolean | <li>**True** para devolver sólo los buzones a los que se haya suscrito</li><li> **False** para devolver todos los buzones disponibles</li> |
+| Propiedad         | Tipo       | Descripción                                                                                                                                                                                                         |
+| ----------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| isSubscribed      | Boolean    | <li>**True** para devolver sólo los buzones a los que se haya suscrito</li><li> **False** para devolver todos los buzones disponibles</li>                                                                          |
+| names             | Collection | Collection of objects containing a "name" attribute or collection of texts containing the box names                                                                                                                 |
+| withBoxProperties | Boolean    | If true (default): adds the `selectable`, `inferior`, and `interesting` attributes to the result object. If false, these attributes are omitted. |
+| withBoxInfo       | Boolean    | Default value is false. If true, adds the `mailCount`, `mailRecent`, and `id` attributes to the result object.                                                                      |
 
 #### Resultado
 
 Cada objeto de la colección devuelta contiene las siguientes propiedades:
 
-| Propiedad                                                                            | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                         |
-| ------------------------------------------------------------------------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \[].name        | text    | Nombre del buzón                                                                                                                                                                                                                                                                                                                                    |
-| \[].selectable  | boolean | Indica si los derechos de acceso permiten o no seleccionar el buzón: <ul><li>true - el buzón puede ser seleccionado</li><li>false - el buzón no puede ser seleccionado</li></ul>                                                                                                                                                    |
-| \[].inferior    | boolean | Indica si los derechos de acceso permiten o no crear una jerarquía inferior en el buzón: <ul><li>true - se puede crear un nivel inferior</li><li>false - no se puede crear un nivel inferior</li></ul>                                                                                                                              |
-| \[].interesting | boolean | Indica si el buzón ha sido marcado como "interesante" por el servidor: <ul><li>true - El buzón ha sido marcado como "interesante" por el servidor. For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul> |
+| Propiedad                                                                            | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                            |
+| ------------------------------------------------------------------------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \[].name        | Text    | Name of the mailbox. Returned if withBoxProperties=true or withBoxInfo=true                                                                                                                                                                                                                                                                                            |
+| \[].selectable  | Boolean | Indicates whether or not the access rights allow the mailbox to be selected: <ul><li>true - the mailbox can be selected</li><li>false - the mailbox can not be selected</li></ul>	Returned if withBoxProperties=true                                                                                                                                                   |
+| \[].inferior    | Boolean | Indicates whether or not the access rights allow creating a lower hierachy in the mailbox: <ul><li>true - a lower level can be created</li><li>false - a lower level can not be created</li></ul>	Returned if withBoxProperties=true                                                                                                                                   |
+| \[].interesting | Boolean | Indica si el buzón ha sido marcado como "interesante" por el servidor: <ul><li>true - El buzón ha sido marcado como "interesante" por el servidor. For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul>	Returned if withBoxProperties=true |
+| [].mailCount     | Number  | Number of messages in inbox. Returned if withBoxInfo=true                                                                                                                                                                                                                                                                                                              |
+| [].mailRecent    | Number  | Number of messages marked "recent" (indicating new messages). Returned if withBoxInfo=true                                                                                                                                                                                                                                                          |
+| [].mailUnseen    | Number  | Number of messages marked "unseen". Returned if withBoxInfo=true                                                                                                                                                                                                                                                                                                       |
+| [].id            | Text    | Unique mailbox identifier. Returned if withBoxInfo=true                                                                                                                                                                                                                                                                                                                |
 
 Si la cuenta no contiene buzones, se devuelve una colección vacía.
 

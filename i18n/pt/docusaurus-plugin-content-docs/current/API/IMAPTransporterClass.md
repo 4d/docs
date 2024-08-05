@@ -799,10 +799,11 @@ The `boxInfo` object returned contains the following properties:
 
 | Propriedade | Tipo   | Descrição                                                                                   |
 | ----------- | ------ | ------------------------------------------------------------------------------------------- |
-| name        | text   | Nome da nova caixa de correio                                                               |
-| mailCount   | number | Número de mensagens na caixa de email                                                       |
-| mailRecent  | number | Número de mensagens com o marcador "recente" (indicando novas mensagens) |
+| name        | Text   | Nome da nova caixa de correio                                                               |
+| mailCount   | Number | Número de mensagens na caixa de email                                                       |
+| mailRecent  | Number | Número de mensagens com o marcador "recente" (indicando novas mensagens) |
 | id          | text   | Parâmetros                                                                                  |
+| mailUnseen  | Number | Number of messages marked "unseen"                                                          |
 
 #### Exemplo
 
@@ -846,20 +847,27 @@ The `.getBoxList()` function <!-- REF #IMAPTransporterClass.getBoxList().Summary
 
 In the optional `parameters` parameter, pass an object containing values to filter the returned mailboxes. Pode passar:
 
-| Propriedade  | Tipo       | Descrição                                                                                                  |
-| ------------ | ---------- | ---------------------------------------------------------------------------------------------------------- |
-| isSubscribed | Parâmetros | <li>**True** to return only subscribed mailboxes</li><li> **False** to return all available mailboxes</li> |
+| Propriedade       | Tipo       | Descrição                                                                                                                                                                                                           |
+| ----------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| isSubscribed      | Parâmetros | <li>**True** to return only subscribed mailboxes</li><li> **False** to return all available mailboxes</li>                                                                                                          |
+| names             | Collection | Collection of objects containing a "name" attribute or collection of texts containing the box names                                                                                                                 |
+| withBoxProperties | Parâmetros | If true (default): adds the `selectable`, `inferior`, and `interesting` attributes to the result object. If false, these attributes are omitted. |
+| withBoxInfo       | Parâmetros | Default value is false. If true, adds the `mailCount`, `mailRecent`, and `id` attributes to the result object.                                                                      |
 
 #### Resultados
 
 Cada objecto da coleção devolvida contém as seguintes propriedades:
 
-| Propriedade                                                                          | Tipo    | Descrição                                                                                                                                                                                                                                                                                                                                      |
-| ------------------------------------------------------------------------------------ | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \[].name        | text    | Nome da nova caixa de correio                                                                                                                                                                                                                                                                                                                  |
-| \[].selectable  | boolean | Indicates whether or not the access rights allow the mailbox to be selected: <ul><li>true - the mailbox can be selected</li><li>false - the mailbox can not be selected</li></ul>                                                                                                                                              |
-| \[].inferior    | boolean | Indicates whether or not the access rights allow creating a lower hierachy in the mailbox: <ul><li>true - a lower level can be created</li><li>false - a lower level can not be created</li></ul>                                                                                                                              |
-| \[].interesting | boolean | Indicates if the mailbox has been marked "interesting" by the server: <ul><li>true - The mailbox has been marked "interesting" by the server. For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul> |
+| Propriedade                                                                          | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                         |
+| ------------------------------------------------------------------------------------ | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \[].name        | Text       | Name of the mailbox. Returned if withBoxProperties=true or withBoxInfo=true                                                                                                                                                                                                                                                                                       |
+| \[].selectable  | Parâmetros | Indicates whether or not the access rights allow the mailbox to be selected: <ul><li>true - the mailbox can be selected</li><li>false - the mailbox can not be selected</li></ul>	Returned if withBoxProperties=true                                                                                                                                              |
+| \[].inferior    | Parâmetros | Indicates whether or not the access rights allow creating a lower hierachy in the mailbox: <ul><li>true - a lower level can be created</li><li>false - a lower level can not be created</li></ul>	Returned if withBoxProperties=true                                                                                                                              |
+| \[].interesting | Parâmetros | Indicates if the mailbox has been marked "interesting" by the server: <ul><li>true - The mailbox has been marked "interesting" by the server. For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul>	Returned if withBoxProperties=true |
+| [].mailCount     | Number     | Number of messages in inbox. Returned if withBoxInfo=true                                                                                                                                                                                                                                                                                                         |
+| [].mailRecent    | Number     | Number of messages marked "recent" (indicating new messages). Returned if withBoxInfo=true                                                                                                                                                                                                                                                     |
+| [].mailUnseen    | Number     | Number of messages marked "unseen". Returned if withBoxInfo=true                                                                                                                                                                                                                                                                                                  |
+| [].id            | Text       | Unique mailbox identifier. Returned if withBoxInfo=true                                                                                                                                                                                                                                                                                                           |
 
 Se a conta não contiver quaisquer caixas de correio, é devolvida uma colecção vazia.
 

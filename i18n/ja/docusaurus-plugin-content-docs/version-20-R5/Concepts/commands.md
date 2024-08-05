@@ -305,57 +305,57 @@ title: コマンド
 
 <a id="F"><b>F</b></a>
 
-[False](https://doc.4d.com/4dv20/help/command/en/page215.html) (215) -
-[Field](https://doc.4d.com/4dv20/help/command/en/page253.html) (253) -
-[Field name](https://doc.4d.com/4dv20/help/command/en/page257.html) (257) -
-[File](https://doc.4d.com/4dv20/help/command/en/page1566.html) (1566) -
-[FILTER EVENT](https://doc.4d.com/4dv20/help/command/en/page321.html) (321) -
-[FILTER KEYSTROKE](https://doc.4d.com/4dv20/help/command/en/page389.html) (389) -
-[Find in array](https://doc.4d.com/4dv20/help/command/en/page230.html) (230) -
-[Find in field](https://doc.4d.com/4dv20/help/command/en/page653.html) (653) -
-[Find in list](https://doc.4d.com/4dv20/help/command/en/page952.html) (952) -
-[Find in sorted array](https://doc.4d.com/4dv20/help/command/en/page1333.html) (1333) -
-[Find window](https://doc.4d.com/4dv20/help/command/en/page449.html) (449) -
-[FIRST RECORD](https://doc.4d.com/4dv20/help/command/en/page50.html) (50) -
-[FLUSH CACHE](https://doc.4d.com/4dv20/help/command/en/page297.html) (297) -
-[Focus object](https://doc.4d.com/4dv20/help/command/en/page278.html) (278) -
+[False](https://doc.4d.com/4dv20/help/command/ja/page215.html) (215) -
+[Field](https://doc.4d.com/4dv20/help/command/ja/page253.html) (253) -
+[Field name](https://doc.4d.com/4dv20/help/command/ja/page257.html) (257) -
+[File](https://doc.4d.com/4dv20/help/command/ja/page1566.html) (1566) -
+[FILTER EVENT](https://doc.4d.com/4dv20/help/command/ja/page321.html) (321) -
+[FILTER KEYSTROKE](https://doc.4d.com/4dv20/help/command/ja/page389.html) (389) -
+[Find in array](https://doc.4d.com/4dv20/help/command/ja/page230.html) (230) -
+[Find in field](https://doc.4d.com/4dv20/help/command/ja/page653.html) (653) -
+[Find in list](https://doc.4d.com/4dv20/help/command/ja/page952.html) (952) -
+[Find in sorted array](https://doc.4d.com/4dv20/help/command/ja/page1333.html) (1333) -
+[Find window](https://doc.4d.com/4dv20/help/command/ja/page449.html) (449) -
+[FIRST RECORD](https://doc.4d.com/4dv20/help/command/ja/page50.html) (50) -
+[FLUSH CACHE](https://doc.4d.com/4dv20/help/command/ja/page297.html) (297) -
+[Focus object](https://doc.4d.com/4dv20/help/command/ja/page278.html) (278) -
 
-[Folder](https://doc.4d.com/4dv20/help/command/en/page1567.html) (1567) -
-[FOLDER LIST](https://doc.4d.com/4dv20/help/command/en/page473.html) (473) -
-[Font file](https://doc.4d.com/4dv20/help/command/en/page1700.html) (1700) -
-[FONT LIST](https://doc.4d.com/4dv20/help/command/en/page460.html) (460) -
-[FONT STYLE LIST](https://doc.4d.com/4dv20/help/command/en/page1362.html) (1362) -
-[Form](https://doc.4d.com/4dv20/help/command/en/page1466.html) (1466) -
-[FORM Convert to dynamic](https://doc.4d.com/4dv20/help/command/en/page1570.html) (1570) -
-[FORM EDIT](https://doc.4d.com/4dv20/help/command/en/page1749.html) (1749) -
-[FORM Event](https://doc.4d.com/4dv20/help/command/en/page1606.html) (1606) -
-[Form event code](https://doc.4d.com/4dv20/help/command/en/page388.html) (388) -
-[FORM FIRST PAGE](https://doc.4d.com/4dv20/help/command/en/page250.html) (250) -
-[FORM Get color scheme](https://doc.4d.com/4dv20/help/command/en/page1761.html) (1761) -
-[FORM Get current page](https://doc.4d.com/4dv20/help/command/en/page276.html) (276) -
-[FORM GET ENTRY ORDER](https://doc.4d.com/4dv20/help/command/en/page1469.html) (1469) -
-[FORM GET HORIZONTAL RESIZING](https://doc.4d.com/4dv20/help/command/en/page1077.html) (1077) -
-[FORM GET NAMES](https://doc.4d.com/4dv20/help/command/en/page1167.html) (1167) -
-[FORM GET OBJECTS](https://doc.4d.com/4dv20/help/command/en/page898.html) (898) -
-[FORM GET PROPERTIES](https://doc.4d.com/4dv20/help/command/en/page674.html) (674) -
-[FORM GET VERTICAL RESIZING](https://doc.4d.com/4dv20/help/command/en/page1078.html) (1078) -
-[FORM GOTO PAGE](https://doc.4d.com/4dv20/help/command/en/page247.html) (247) -
-[FORM LAST PAGE](https://doc.4d.com/4dv20/help/command/en/page251.html) (251) -
-[FORM LOAD](https://doc.4d.com/4dv20/help/command/en/page1103.html) (1103) -
-[FORM NEXT PAGE](https://doc.4d.com/4dv20/help/command/en/page248.html) (248) -
-[FORM PREVIOUS PAGE](https://doc.4d.com/4dv20/help/command/en/page249.html) (249) -
-[FORM SCREENSHOT](https://doc.4d.com/4dv20/help/command/en/page940.html) (940) -
-[FORM SET ENTRY ORDER](https://doc.4d.com/4dv20/help/command/en/page1468.html) (1468) -
-[FORM SET HORIZONTAL RESIZING](https://doc.4d.com/4dv20/help/command/en/page892.html) (892) -
-[FORM SET INPUT](https://doc.4d.com/4dv20/help/command/en/page55.html) (55) -
-[FORM SET OUTPUT](https://doc.4d.com/4dv20/help/command/en/page54.html) (54) -
-[FORM SET SIZE](https://doc.4d.com/4dv20/help/command/en/page891.html) (891) -
-[FORM SET VERTICAL RESIZING](https://doc.4d.com/4dv20/help/command/en/page893.html) (893) -
-[FORM UNLOAD](https://doc.4d.com/4dv20/help/command/en/page1299.html) (1299) -
-[Formula](https://doc.4d.com/4dv20/help/command/en/page1597.html) (1597) -
-[Formula from string](https://doc.4d.com/4dv20/help/command/en/page1601.html) (1601) -
-[Frontmost process](https://doc.4d.com/4dv20/help/command/en/page327.html) (327) -
-[Frontmost window](https://doc.4d.com/4dv20/help/command/en/page447.html) (447) -
+[Folder](https://doc.4d.com/4dv20/help/command/ja/page1567.html) (1567) -
+[FOLDER LIST](https://doc.4d.com/4dv20/help/command/ja/page473.html) (473) -
+[Font file](https://doc.4d.com/4dv20/help/command/ja/page1700.html) (1700) -
+[FONT LIST](https://doc.4d.com/4dv20/help/command/ja/page460.html) (460) -
+[FONT STYLE LIST](https://doc.4d.com/4dv20/help/command/ja/page1362.html) (1362) -
+[Form](https://doc.4d.com/4dv20/help/command/ja/page1466.html) (1466) -
+[FORM Convert to dynamic](https://doc.4d.com/4dv20/help/command/ja/page1570.html) (1570) -
+[FORM EDIT](https://doc.4d.com/4dv20/help/command/ja/page1749.html) (1749) -
+[FORM Event](https://doc.4d.com/4dv20/help/command/ja/page1606.html) (1606) -
+[Form event code](https://doc.4d.com/4dv20/help/command/ja/page388.html) (388) -
+[FORM FIRST PAGE](https://doc.4d.com/4dv20/help/command/ja/page250.html) (250) -
+[FORM Get color scheme](https://doc.4d.com/4dv20/help/command/ja/page1761.html) (1761) -
+[FORM Get current page](https://doc.4d.com/4dv20/help/command/ja/page276.html) (276) -
+[FORM GET ENTRY ORDER](https://doc.4d.com/4dv20/help/command/ja/page1469.html) (1469) -
+[FORM GET HORIZONTAL RESIZING](https://doc.4d.com/4dv20/help/command/ja/page1077.html) (1077) -
+[FORM GET NAMES](https://doc.4d.com/4dv20/help/command/ja/page1167.html) (1167) -
+[FORM GET OBJECTS](https://doc.4d.com/4dv20/help/command/ja/page898.html) (898) -
+[FORM GET PROPERTIES](https://doc.4d.com/4dv20/help/command/ja/page674.html) (674) -
+[FORM GET VERTICAL RESIZING](https://doc.4d.com/4dv20/help/command/ja/page1078.html) (1078) -
+[FORM GOTO PAGE](https://doc.4d.com/4dv20/help/command/ja/page247.html) (247) -
+[FORM LAST PAGE](https://doc.4d.com/4dv20/help/command/ja/page251.html) (251) -
+[FORM LOAD](https://doc.4d.com/4dv20/help/command/ja/page1103.html) (1103) -
+[FORM NEXT PAGE](https://doc.4d.com/4dv20/help/command/ja/page248.html) (248) -
+[FORM PREVIOUS PAGE](https://doc.4d.com/4dv20/help/command/ja/page249.html) (249) -
+[FORM SCREENSHOT](https://doc.4d.com/4dv20/help/command/ja/page940.html) (940) -
+[FORM SET ENTRY ORDER](https://doc.4d.com/4dv20/help/command/ja/page1468.html) (1468) -
+[FORM SET HORIZONTAL RESIZING](https://doc.4d.com/4dv20/help/command/ja/page892.html) (892) -
+[FORM SET INPUT](https://doc.4d.com/4dv20/help/command/ja/page55.html) (55) -
+[FORM SET OUTPUT](https://doc.4d.com/4dv20/help/command/ja/page54.html) (54) -
+[FORM SET SIZE](https://doc.4d.com/4dv20/help/command/ja/page891.html) (891) -
+[FORM SET VERTICAL RESIZING](https://doc.4d.com/4dv20/help/command/ja/page893.html) (893) -
+[FORM UNLOAD](https://doc.4d.com/4dv20/help/command/ja/page1299.html) (1299) -
+[Formula](https://doc.4d.com/4dv20/help/command/ja/page1597.html) (1597) -
+[Formula from string](https://doc.4d.com/4dv20/help/command/ja/page1601.html) (1601) -
+[Frontmost process](https://doc.4d.com/4dv20/help/command/ja/page327.html) (327) -
+[Frontmost window](https://doc.4d.com/4dv20/help/command/ja/page447.html) (447) -
 
 <a id="G"><b>G</b></a>
 
@@ -506,48 +506,48 @@ title: コマンド
 
 <a id="I"><b>I</b></a>
 
-[IDLE](https://doc.4d.com/4dv20/help/command/en/page311.html) (311) -
-[IMAP New transporter](https://doc.4d.com/4dv20/help/command/en/page1723.html) (1723) -
-[IMPORT DATA](https://doc.4d.com/4dv20/help/command/en/page665.html) (665) -
-[IMPORT DIF](https://doc.4d.com/4dv20/help/command/en/page86.html) (86) -
-[IMPORT STRUCTURE](https://doc.4d.com/4dv20/help/command/en/page1310.html) (1310) -
-[IMPORT SYLK](https://doc.4d.com/4dv20/help/command/en/page87.html) (87) -
-[IMPORT TEXT](https://doc.4d.com/4dv20/help/command/en/page168.html) (168) -
-[In break](https://doc.4d.com/4dv20/help/command/en/page113.html) (113) -
-[In footer](https://doc.4d.com/4dv20/help/command/en/page191.html) (191) -
-[In header](https://doc.4d.com/4dv20/help/command/en/page112.html) (112) -
-[In transaction](https://doc.4d.com/4dv20/help/command/en/page397.html) (397) -
-[INSERT IN ARRAY](https://doc.4d.com/4dv20/help/command/en/page227.html) (227) -
-[INSERT IN BLOB](https://doc.4d.com/4dv20/help/command/en/page559.html) (559) -
-[INSERT IN LIST](https://doc.4d.com/4dv20/help/command/en/page625.html) (625) -
-[INSERT MENU ITEM](https://doc.4d.com/4dv20/help/command/en/page412.html) (412) -
-[Insert string](https://doc.4d.com/4dv20/help/command/en/page231.html) (231) -
-[Int](https://doc.4d.com/4dv20/help/command/en/page8.html) (8) -
-[INTEGER TO BLOB](https://doc.4d.com/4dv20/help/command/en/page548.html) (548) -
-[INTEGRATE MIRROR LOG FILE](https://doc.4d.com/4dv20/help/command/en/page1312.html) (1312) -
-[INTERSECTION](https://doc.4d.com/4dv20/help/command/en/page121.html) (121) -
-[INVOKE ACTION](https://doc.4d.com/4dv20/help/command/en/page1439.html) (1439) -
-[Is a list](https://doc.4d.com/4dv20/help/command/en/page621.html) (621) -
-[Is a variable](https://doc.4d.com/4dv20/help/command/en/page294.html) (294) -
-[Is compiled mode](https://doc.4d.com/4dv20/help/command/en/page492.html) (492) -
-[Is data file locked](https://doc.4d.com/4dv20/help/command/en/page716.html) (716) -
-[Is editing text](https://doc.4d.com/4dv20/help/command/en/page1744.html) (1744) -
-[Is field number valid](https://doc.4d.com/4dv20/help/command/en/page1000.html) (1000) -
-[Is field value Null](https://doc.4d.com/4dv20/help/command/en/page964.html) (964) -
-[Is in print preview](https://doc.4d.com/4dv20/help/command/en/page1198.html) (1198) -
-[Is in set](https://doc.4d.com/4dv20/help/command/en/page273.html) (273) -
-[Is license available](https://doc.4d.com/4dv20/help/command/en/page714.html) (714) -
-[Is macOS](https://doc.4d.com/4dv20/help/command/en/page1572.html) (1572) -
-[Is new record](https://doc.4d.com/4dv20/help/command/en/page668.html) (668) -
-[Is nil pointer](https://doc.4d.com/4dv20/help/command/en/page315.html) (315) -
-[Is picture file](https://doc.4d.com/4dv20/help/command/en/page1113.html) (1113) -
-[Is record loaded](https://doc.4d.com/4dv20/help/command/en/page669.html) (669) -
-[Is table number valid](https://doc.4d.com/4dv20/help/command/en/page999.html) (999) -
-[Is user deleted](https://doc.4d.com/4dv20/help/command/en/page616.html) (616) -
-[Is waiting mouse up](https://doc.4d.com/4dv20/help/command/en/page1422.html) (1422) -
-[Is window maximized](https://doc.4d.com/4dv20R/help/command/en/page1830.html) (1830) -
-[Is window reduced](https://doc.4d.com/4dv20R/help/command/en/page1831.html) (1831) -
-[Is Windows](https://doc.4d.com/4dv20/help/command/en/page1573.html) (1573) -
+[IDLE](https://doc.4d.com/4dv20/help/command/ja/page311.html) (311) -
+[IMAP New transporter](https://doc.4d.com/4dv20/help/command/ja/page1723.html) (1723) -
+[IMPORT DATA](https://doc.4d.com/4dv20/help/command/ja/page665.html) (665) -
+[IMPORT DIF](https://doc.4d.com/4dv20/help/command/ja/page86.html) (86) -
+[IMPORT STRUCTURE](https://doc.4d.com/4dv20/help/command/ja/page1310.html) (1310) -
+[IMPORT SYLK](https://doc.4d.com/4dv20/help/command/ja/page87.html) (87) -
+[IMPORT TEXT](https://doc.4d.com/4dv20/help/command/ja/page168.html) (168) -
+[In break](https://doc.4d.com/4dv20/help/command/ja/page113.html) (113) -
+[In footer](https://doc.4d.com/4dv20/help/command/ja/page191.html) (191) -
+[In header](https://doc.4d.com/4dv20/help/command/ja/page112.html) (112) -
+[In transaction](https://doc.4d.com/4dv20/help/command/ja/page397.html) (397) -
+[INSERT IN ARRAY](https://doc.4d.com/4dv20/help/command/ja/page227.html) (227) -
+[INSERT IN BLOB](https://doc.4d.com/4dv20/help/command/ja/page559.html) (559) -
+[INSERT IN LIST](https://doc.4d.com/4dv20/help/command/ja/page625.html) (625) -
+[INSERT MENU ITEM](https://doc.4d.com/4dv20/help/command/ja/page412.html) (412) -
+[Insert string](https://doc.4d.com/4dv20/help/command/ja/page231.html) (231) -
+[Int](https://doc.4d.com/4dv20/help/command/ja/page8.html) (8) -
+[INTEGER TO BLOB](https://doc.4d.com/4dv20/help/command/ja/page548.html) (548) -
+[INTEGRATE MIRROR LOG FILE](https://doc.4d.com/4dv20/help/command/ja/page1312.html) (1312) -
+[INTERSECTION](https://doc.4d.com/4dv20/help/command/ja/page121.html) (121) -
+[INVOKE ACTION](https://doc.4d.com/4dv20/help/command/ja/page1439.html) (1439) -
+[Is a list](https://doc.4d.com/4dv20/help/command/ja/page621.html) (621) -
+[Is a variable](https://doc.4d.com/4dv20/help/command/ja/page294.html) (294) -
+[Is compiled mode](https://doc.4d.com/4dv20/help/command/ja/page492.html) (492) -
+[Is data file locked](https://doc.4d.com/4dv20/help/command/ja/page716.html) (716) -
+[Is editing text](https://doc.4d.com/4dv20/help/command/ja/page1744.html) (1744) -
+[Is field number valid](https://doc.4d.com/4dv20/help/command/ja/page1000.html) (1000) -
+[Is field value Null](https://doc.4d.com/4dv20/help/command/ja/page964.html) (964) -
+[Is in print preview](https://doc.4d.com/4dv20/help/command/ja/page1198.html) (1198) -
+[Is in set](https://doc.4d.com/4dv20/help/command/ja/page273.html) (273) -
+[Is license available](https://doc.4d.com/4dv20/help/command/ja/page714.html) (714) -
+[Is macOS](https://doc.4d.com/4dv20/help/command/ja/page1572.html) (1572) -
+[Is new record](https://doc.4d.com/4dv20/help/command/ja/page668.html) (668) -
+[Is nil pointer](https://doc.4d.com/4dv20/help/command/ja/page315.html) (315) -
+[Is picture file](https://doc.4d.com/4dv20/help/command/ja/page1113.html) (1113) -
+[Is record loaded](https://doc.4d.com/4dv20/help/command/ja/page669.html) (669) -
+[Is table number valid](https://doc.4d.com/4dv20/help/command/ja/page999.html) (999) -
+[Is user deleted](https://doc.4d.com/4dv20/help/command/ja/page616.html) (616) -
+[Is waiting mouse up](https://doc.4d.com/4dv20/help/command/ja/page1422.html) (1422) -
+[Is window maximized](https://doc.4d.com/4dv20R/help/command/ja/page1830.html) (1830) -
+[Is window reduced](https://doc.4d.com/4dv20R/help/command/ja/page1831.html) (1831) -
+[Is Windows](https://doc.4d.com/4dv20/help/command/ja/page1573.html) (1573) -
 
 <a id="J"><b>J</b></a>
 
@@ -970,53 +970,53 @@ title: コマンド
 
 <a id="R"><b>R</b></a>
 
-[Random](https://doc.4d.com/4dv20/help/command/en/page100.html) (100) -
-[READ ONLY](https://doc.4d.com/4dv20/help/command/en/page145.html) (145) -
-[Read only state](https://doc.4d.com/4dv20/help/command/en/page362.html) (362) -
-[READ PICTURE FILE](https://doc.4d.com/4dv20/help/command/en/page678.html) (678) -
-[READ WRITE](https://doc.4d.com/4dv20/help/command/en/page146.html) (146) -
-[REAL TO BLOB](https://doc.4d.com/4dv20/help/command/en/page552.html) (552) -
-[RECEIVE BUFFER](https://doc.4d.com/4dv20/help/command/en/page172.html) (172) -
-[RECEIVE PACKET](https://doc.4d.com/4dv20/help/command/en/page104.html) (104) -
-[RECEIVE RECORD](https://doc.4d.com/4dv20/help/command/en/page79.html) (79) -
-[RECEIVE VARIABLE](https://doc.4d.com/4dv20/help/command/en/page81.html) (81) -
-[Record number](https://doc.4d.com/4dv20/help/command/en/page243.html) (243) -
-[Records in selection](https://doc.4d.com/4dv20/help/command/en/page76.html) (76) -
-[Records in set](https://doc.4d.com/4dv20/help/command/en/page195.html) (195) -
-[Records in table](https://doc.4d.com/4dv20/help/command/en/page83.html) (83) -
-[REDRAW](https://doc.4d.com/4dv20/help/command/en/page174.html) (174) -
-[REDRAW WINDOW](https://doc.4d.com/4dv20/help/command/en/page456.html) (456) -
-[REDUCE RESTORE WINDOW](https://doc.4d.com/4dv20R/help/command/en/page1829.html) (1829) -
-[REDUCE SELECTION](https://doc.4d.com/4dv20/help/command/en/page351.html) (351) -
-[Refresh license](https://doc.4d.com/4dv20/help/command/en/page1336.html) (1336) -
-[REGENERATE MISSING TABLE](https://doc.4d.com/4dv20/help/command/en/page1126.html) (1126) -
-[REGISTER CLIENT](https://doc.4d.com/4dv20/help/command/en/page648.html) (648) -
-[Register data key](https://doc.4d.com/4dv20/help/command/en/page1638.html) (1638) -
-[REJECT](https://doc.4d.com/4dv20/help/command/en/page38.html) (38) -
-[REJECT NEW REMOTE CONNECTIONS](https://doc.4d.com/4dv20/help/command/en/page1635.html) (1635) -
-[RELATE MANY](https://doc.4d.com/4dv20/help/command/en/page262.html) (262) -
-[RELATE MANY SELECTION](https://doc.4d.com/4dv20/help/command/en/page340.html) (340) -
-[RELATE ONE](https://doc.4d.com/4dv20/help/command/en/page42.html) (42) -
-[RELATE ONE SELECTION](https://doc.4d.com/4dv20/help/command/en/page349.html) (349) -
-[RELEASE MENU](https://doc.4d.com/4dv20/help/command/en/page978.html) (978) -
-[RELOAD EXTERNAL DATA](https://doc.4d.com/4dv20/help/command/en/page1135.html) (1135) -
-[RELOAD PROJECT](https://doc.4d.com/4dv20/help/command/en/page1739.html) (1739) -
-[REMOVE FROM SET](https://doc.4d.com/4dv20/help/command/en/page561.html) (561) -
-[REMOVE PICTURE FROM LIBRARY](https://doc.4d.com/4dv20/help/command/en/page567.html) (567) -
-[Replace string](https://doc.4d.com/4dv20/help/command/en/page233.html) (233) -
-[Request](https://doc.4d.com/4dv20/help/command/en/page163.html) (163) -
-[RESIZE FORM WINDOW](https://doc.4d.com/4dv20/help/command/en/page890.html) (890) -
-[RESOLVE ALIAS](https://doc.4d.com/4dv20/help/command/en/page695.html) (695) -
-[RESOLVE POINTER](https://doc.4d.com/4dv20/help/command/en/page394.html) (394) -
-[RESOURCE LIST](https://doc.4d.com/4dv20/help/command/en/page500.html) (500) -
-[RESOURCE TYPE LIST](https://doc.4d.com/4dv20/help/command/en/page499.html) (499) -
-[RESTART 4D](https://doc.4d.com/4dv20/help/command/en/page1292.html) (1292) -
-[RESTORE](https://doc.4d.com/4dv20/help/command/en/page918.html) (918) -
-[RESUME INDEXES](https://doc.4d.com/4dv20/help/command/en/page1294.html) (1294) -
-[RESUME PROCESS](https://doc.4d.com/4dv20/help/command/en/page320.html) (320) -
-[RESUME TRANSACTION](https://doc.4d.com/4dv20/help/command/en/page1386.html) (1386) -
-[Right click](https://doc.4d.com/4dv20/help/command/en/page712.html) (712) -
-[Round](https://doc.4d.com/4dv20/help/command/en/page94.html) (94) -
+[Random](https://doc.4d.com/4dv20/help/command/ja/page100.html) (100) -
+[READ ONLY](https://doc.4d.com/4dv20/help/command/ja/page145.html) (145) -
+[Read only state](https://doc.4d.com/4dv20/help/command/ja/page362.html) (362) -
+[READ PICTURE FILE](https://doc.4d.com/4dv20/help/command/ja/page678.html) (678) -
+[READ WRITE](https://doc.4d.com/4dv20/help/command/ja/page146.html) (146) -
+[REAL TO BLOB](https://doc.4d.com/4dv20/help/command/ja/page552.html) (552) -
+[RECEIVE BUFFER](https://doc.4d.com/4dv20/help/command/ja/page172.html) (172) -
+[RECEIVE PACKET](https://doc.4d.com/4dv20/help/command/ja/page104.html) (104) -
+[RECEIVE RECORD](https://doc.4d.com/4dv20/help/command/ja/page79.html) (79) -
+[RECEIVE VARIABLE](https://doc.4d.com/4dv20/help/command/ja/page81.html) (81) -
+[Record number](https://doc.4d.com/4dv20/help/command/ja/page243.html) (243) -
+[Records in selection](https://doc.4d.com/4dv20/help/command/ja/page76.html) (76) -
+[Records in set](https://doc.4d.com/4dv20/help/command/ja/page195.html) (195) -
+[Records in table](https://doc.4d.com/4dv20/help/command/ja/page83.html) (83) -
+[REDRAW](https://doc.4d.com/4dv20/help/command/ja/page174.html) (174) -
+[REDRAW WINDOW](https://doc.4d.com/4dv20/help/command/ja/page456.html) (456) -
+[REDUCE RESTORE WINDOW](https://doc.4d.com/4dv20R/help/command/ja/page1829.html) (1829) -
+[REDUCE SELECTION](https://doc.4d.com/4dv20/help/command/ja/page351.html) (351) -
+[Refresh license](https://doc.4d.com/4dv20/help/command/ja/page1336.html) (1336) -
+[REGENERATE MISSING TABLE](https://doc.4d.com/4dv20/help/command/ja/page1126.html) (1126) -
+[REGISTER CLIENT](https://doc.4d.com/4dv20/help/command/ja/page648.html) (648) -
+[Register data key](https://doc.4d.com/4dv20/help/command/ja/page1638.html) (1638) -
+[REJECT](https://doc.4d.com/4dv20/help/command/ja/page38.html) (38) -
+[REJECT NEW REMOTE CONNECTIONS](https://doc.4d.com/4dv20/help/command/ja/page1635.html) (1635) -
+[RELATE MANY](https://doc.4d.com/4dv20/help/command/ja/page262.html) (262) -
+[RELATE MANY SELECTION](https://doc.4d.com/4dv20/help/command/ja/page340.html) (340) -
+[RELATE ONE](https://doc.4d.com/4dv20/help/command/ja/page42.html) (42) -
+[RELATE ONE SELECTION](https://doc.4d.com/4dv20/help/command/ja/page349.html) (349) -
+[RELEASE MENU](https://doc.4d.com/4dv20/help/command/ja/page978.html) (978) -
+[RELOAD EXTERNAL DATA](https://doc.4d.com/4dv20/help/command/ja/page1135.html) (1135) -
+[RELOAD PROJECT](https://doc.4d.com/4dv20/help/command/ja/page1739.html) (1739) -
+[REMOVE FROM SET](https://doc.4d.com/4dv20/help/command/ja/page561.html) (561) -
+[REMOVE PICTURE FROM LIBRARY](https://doc.4d.com/4dv20/help/command/ja/page567.html) (567) -
+[Replace string](https://doc.4d.com/4dv20/help/command/ja/page233.html) (233) -
+[Request](https://doc.4d.com/4dv20/help/command/ja/page163.html) (163) -
+[RESIZE FORM WINDOW](https://doc.4d.com/4dv20/help/command/ja/page890.html) (890) -
+[RESOLVE ALIAS](https://doc.4d.com/4dv20/help/command/ja/page695.html) (695) -
+[RESOLVE POINTER](https://doc.4d.com/4dv20/help/command/ja/page394.html) (394) -
+[RESOURCE LIST](https://doc.4d.com/4dv20/help/command/ja/page500.html) (500) -
+[RESOURCE TYPE LIST](https://doc.4d.com/4dv20/help/command/ja/page499.html) (499) -
+[RESTART 4D](https://doc.4d.com/4dv20/help/command/ja/page1292.html) (1292) -
+[RESTORE](https://doc.4d.com/4dv20/help/command/ja/page918.html) (918) -
+[RESUME INDEXES](https://doc.4d.com/4dv20/help/command/ja/page1294.html) (1294) -
+[RESUME PROCESS](https://doc.4d.com/4dv20/help/command/ja/page320.html) (320) -
+[RESUME TRANSACTION](https://doc.4d.com/4dv20/help/command/ja/page1386.html) (1386) -
+[Right click](https://doc.4d.com/4dv20/help/command/ja/page712.html) (712) -
+[Round](https://doc.4d.com/4dv20/help/command/ja/page94.html) (94) -
 
 <a id="S"><b>S</b></a>
 
