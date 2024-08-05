@@ -301,6 +301,8 @@ The resulting object is an entity selection of Employee with duplications remove
 |entity|4D.Entity|->|Entity to be added to the entity selection|
 |entitySelection|4D.EntitySelection|->|Entity selection to be added to the original entity selection|
 |Result|4D.EntitySelection|->|Entity selection including the added *entity* or *entitySelection*|
+
+
 <!-- END REF -->
 
 
@@ -538,6 +540,8 @@ We want to obtain a list of employees whose salary is higher than the average sa
 
 
 
+
+
 <!-- REF EntitySelectionClass.contains().Desc -->
 ## .contains()   
 
@@ -595,7 +599,6 @@ If *entity* and the entity selection do not belong to the same dataclass, an err
 |Release|Changes|
 |---|---|
 |17|Added|
-
 
 </details>
 
@@ -858,7 +861,6 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 |17|Added|
 
 </details>
-
 
 <!-- REF #EntitySelectionClass.drop().Syntax -->**.drop**( { *mode* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
@@ -1697,7 +1699,6 @@ If you pass an invalid attribute path in *pathString* or *pathObject*, the funct
 
 <details><summary>History</summary>
 
-
 |Release|Changes|
 |---|---|
 |17 R6|Added|
@@ -1950,7 +1951,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 >This function only works with a remote datastore (client / server or `Open datastore` connection).
 
-The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the local ORDA cache<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
+The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the [local ORDA cache](../ORDA/client-server-optimization.md#orda-cache)<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
 
 By default, the local ORDA cache is invalidated after 30 seconds. In the context of client / server applications using both ORDA and the classic language, this method allows you to make sure a remote application will always work with the latest data.
 
@@ -2003,6 +2004,9 @@ A list box displays the Form.students entity selection and several clients work 
   // The list box content is refreshed from the database with update made by client #2
 ```
 
+#### See also
+
+[dataClass.clearRemoteCache()](DataClassClass.md#clearremotecache)
 
 <!-- END REF -->
 
@@ -2146,7 +2150,6 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 ## .sum()   
 
 <details><summary>History</summary>
-
 
 |Release|Changes|
 |---|---|

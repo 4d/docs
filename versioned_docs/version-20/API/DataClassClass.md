@@ -458,6 +458,13 @@ In the optional *settings* parameter, you can pass an object containing addition
 |---|---|---|
 |context| Text| Label for the automatic optimization context applied to the entity. This context will be used by the subsequent code that loads the entity so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization).|
 
+:::info
+
+When you call the `.get()` function **without** *settings* parameter, a request for attribute values is directly sent to the server (the [ORDA cache](../ORDA/entities.md#orda-cache) is not used). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. It may be advisable in this case to call [`reload()`](EntityClass.md#reload) to make sure the most recent data is retrieved from the server.
+
+:::
+
+
 #### Example 1  
 
 ```4d
@@ -1030,15 +1037,15 @@ ds.Class.info:
 Consider the following results:
 
 ```4d
-ds.Class.query("info.coll[].val = :1";0) 
+ds.Class.query("info.coll[].val = :1";0)
 // returns B and C
 // finds "entities with 0 in at least one val property"
 
 ds.Class.query("info.coll[].val != :1";0)
 // returns A only
 // finds "entities where all val properties are different from 0"
-// which is the equivalent to 
-ds.Class.query(not("info.coll[].val = :1";0)) 
+// which is the equivalent to
+ds.Class.query(not("info.coll[].val = :1";0))
 ```
 
 If you want to implement a query that finds entities where "at least one property is different from *value*", you need to use a special notation using a letter in the `[]`:
@@ -1056,7 +1063,7 @@ You can use any letter from the alphabet as the `[a]` notation.
 
 :::info
 
-This feature is only available in queries on dataclasses and [entity selections](EntitySelectionClass.md#query). It cannot be used in queries on [collections](CollectionClass.md#query). 
+This feature is only available in queries on dataclasses and [entity selections](EntitySelectionClass.md#query). It cannot be used in queries on [collections](CollectionClass.md#query).
 
 :::
 
