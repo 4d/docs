@@ -26,7 +26,7 @@ title: '$method'
 
 ### 説明
 
-`$method=delete` を使ってエンティティ、またはエンティティセレクションを削除します。 You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) *(e.g.*, /Employee(22)).
+`$method=delete` を使ってエンティティ、またはエンティティセレクションを削除します。 たとえば、[`$filter`]($filter.md) を使って定義したエンティティセレクションや、[`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) *(例*: /Employee(22)) のように直接特定したエンティティが対象です。
 
 [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid) のようにエンティティセットを呼び出して、そこに含まれるエンティティを削除することもできます。
 
