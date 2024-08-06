@@ -869,14 +869,14 @@ The [`.isSingleton`](../API/ClassClass.md#issingleton) property of Class objects
 
 ### Scope
 
-The scope of a singleton instance can be the current process or all processes on the machine, depending on its *shared* property. 
+The scope of a singleton instance can be the process where it is instanciated or all processes on the machine, depending on its *shared* property. 
   
-|Singleton created on|Scope if shared|Scope if not shared|
+|Singleton created on|Scope if not shared|Scope if shared|
 |---|----|---|
-|4D single-user|4D application|Process where singleton is instantiated|
-|4D Server|4D Server application machine|Process where singleton is instantiated|
-|4D remote|4D remote application machine|Process where singleton is instantiated (note: singletons are not available in the twin processes on the server)|
-
+|4D single-user|Process|4D application|
+|4D Server|Process|4D Server application machine|
+|4D remote mode|Process (note: singletons are not synchronized on the twin process)|
+4D remote application machine|
 
 Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application on the machine.
 
@@ -911,6 +911,7 @@ var $myOtherSingleton := cs.ProcessTag.me
 	//$myOtherSingleton.tag = 5425
 
 ```
+
 ```4d
 	//in another process
 var $mySingleton := cs.ProcessTag.me //First instantiation
