@@ -859,18 +859,26 @@ If the `shared` function keyword is used in a non-shared user class, it is ignor
 
 ## Singleton classes
 
-A **singleton class** is a user class that only produces a single instance. For more information on singletons, please see the [Wikipedia page about singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
+A **singleton class** is a user class that only produces a single instance. For more information on singletons, please see the [Wikipedia page about singletons](https://en.wikipedia.org/wiki/Singleton_pattern). A singleton has a unique instance for the process in which it is instantiated, while a *shared* singleton has a unique instance for all processes on the machine. Singletons are useful to define values that need to be available from anywhere in an application or process.
 
 The class singleton is instantiated at the first call of the [`cs.<class>.me`](../API/ClassClass.md#me) property. The instantiated class singleton is then always returned when the [`me`](../API/ClassClass.md#me) property is used.
 
-If you need to instantiate a singleton with parameters, you can also call the [`new()`](../API/ClassClass.md#new) function. In this case, it is recommended to instantiate the singleton in some code executed at application startup.  
-
-The scope of a singleton instance can be the current process or all processes on the machine (client, server, or single-user). A singleton has a unique value for the process in which it is instantiated, while a *shared* singleton has a unique value for all processes on the machine. Singletons are useful to define values that need to be available from anywhere in the application or process.
-
-Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application on the machine.
-
+If you need to instantiate a singleton with parameters, you can also call the [`new()`](../API/ClassClass.md#new) function. In this case, it is recommended to instantiate the singleton in some code executed at application startup.
 
 The [`.isSingleton`](../API/ClassClass.md#issingleton) property of Class objects allows to know if the class is a singleton.
+
+### Scope
+
+The scope of a singleton instance can be the current process or all processes on the machine, depending on its *shared* property. 
+  
+|Singleton created on|Scope if shared|Scope if not shared|
+|---|----|---|
+|4D single-user|4D application|Process where singleton is instantiated|
+|4D Server|4D Server application machine|Process where singleton is instantiated|
+|4D remote|4D remote application machine|Process where singleton is instantiated (note: singletons are not available in the twin processes on the server)|
+
+
+Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application on the machine.
 
 
 :::info
