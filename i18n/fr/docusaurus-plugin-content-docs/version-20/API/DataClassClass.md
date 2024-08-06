@@ -463,6 +463,13 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant d
 | --------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | context   | Text | Nom du contexte d'optimisation appliqué à l'entité. Ce contexte sera utilisé par le code qui manipule l'entité afin de bénéficier de l'optimisation. Cette fonctionnalité est [conçue pour le traitement client/serveur ORDA](ORDA/entities.md#optimisation-client-server). |
 
+:::info
+
+When you call the `.get()` function **without** *settings* parameter, a request for attribute values is directly sent to the server (the [ORDA cache](../ORDA/entities.md#orda-cache) is not used). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. It may be advisable in this case to call [`reload()`](EntityClass.md#reload) to make sure the most recent data is retrieved from the server.
+
+:::
+
+
 #### Exemple 1
 
 ```4d
@@ -1044,15 +1051,15 @@ ds.Class.info:
 Considérons les résultats suivants :
 
 ```4d
-ds.Class.query("info.coll[].val = :1";0) 
+ds.Class.query("info.coll[].val = :1";0)
 // renvoie B et C
 // trouve "entités avec 0 dans au moins une propriété val"
 
 ds.Class.query("info.coll[].val != :1";0)
 // renvoie uniquement A
 // trouve les "entités dont toutes les propriétés val sont différentes de 0"
-// ce qui est équivalent à 
-ds.Class.query(not("info.coll[].val = :1";0)) 
+// ce qui est équivalent à
+ds.Class.query(not("info.coll[].val = :1";0))
 ```
 
 Si vous souhaitez mettre en œuvre une recherche qui trouve les entités dont "au moins une propriété est différente de *value*", vous devez utiliser une notation spéciale en utilisant une lettre dans les `[]` :
