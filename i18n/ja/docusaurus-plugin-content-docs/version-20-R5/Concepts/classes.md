@@ -839,9 +839,9 @@ shared Function Bar($value : Integer)
 
 シングルトンを引数付きでインスタンス化する必要がある場合には、[`new()`](../API/ClassClass.md#new) 関数を呼び出すこともできます。 この場合、アプリケーションの起動時に実行されるコードでシングルトンをインスタンス化することが推奨されます。
 
-シングルトンインスタンスのスコープは、カレントプロセス、あるいはすべてのプロセスです。 シングルトンは、それがインスタンス化されたプロセス内で一意の値を持ち、_共有_ シングルトンは、そのアプリケーションのすべてのプロセスで一意の値を持ちます。 アプリケーションやプロセス内のどこからでも利用可能な値を定義するのにシングルトンは便利です。
+The scope of a singleton instance can be the current process or all processes on the machine (client, server, or single-user). A singleton has a unique value for the process in which it is instantiated, while a _shared_ singleton has a unique value for all processes on the machine. Singletons are useful to define values that need to be available from anywhere in the application or process.
 
-インスタンス化されると、シングルトンクラス (およびそのシングルトン) は、アプリケーション内に参照が存在する限り存在し続けます。
+Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application on the machine.
 
 クラスがシングルトンクラスかどうかは、Classオブジェクトの .[`.isSingleton`](../API/ClassClass.md#issingleton)プロパティで確認できます。
 
@@ -884,7 +884,7 @@ var $myOtherSingleton := cs.ProcessTag.me
 
 ### 共有シングルトンの作成
 
-アプリケーションの全プロセスで共有されるシングルトンを作成するには、[Class Constructor](#class-constructor) の前に `shared singleton` キーワードを追加します。 例:
+To create a singleton shared by all processes on the machine, add the `shared singleton` keywords before the [Class Constructor](#class-constructor). 例:
 
 ```4d
 // クラス: VehicleFactory
@@ -911,7 +911,7 @@ shared Function buildVehicle ($type : Text) -> $vehicle : cs.Vehicle
   This.vehicleBuilt+=1
 ```
 
-すると、**cs.VehicleFactory** シングルトンを呼び出すことで、アプリケーションのどこからでも 1行で新しい車両を取得することができます:
+You can then call the **cs.VehicleFactory** singleton to get a new vehicle from everywhere in the application on your machine with a single line:
 
 ```4d
 $vehicle:=cs.VehicleFactory.me.buildVehicle("トラック")
