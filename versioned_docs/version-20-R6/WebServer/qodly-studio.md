@@ -324,6 +324,12 @@ As explained in the [configuration](#configuration) section, the WebAdmin web se
 
 If you run the renderer from the Qodly Studio and these two web servers are not reached through the same URL scheme (HTTP or HTTPS), it might lead to wrong licence counting.
 
+:::info
+
+Using different schemes might also lead to [session](sessions.md) issues, such as losing [privileges](../ORDA/privileges.md) after a page refresh.
+
+:::
+
 #### Example
 
 1. You run the Qodly Studio on an HTTPS URL scheme (e.g. `https://127.0.0.1:7443/studio/`)
