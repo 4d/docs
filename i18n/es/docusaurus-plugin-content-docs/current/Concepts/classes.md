@@ -838,9 +838,9 @@ La clase singleton está instanciada en la primera llamada de la propiedad [`cs.
 
 Si necesita instanciar un singleton con parámetros, también puede llamar la función [`new()`](../API/ClassClass.md#new). En este caso, se recomienda instanciar el singleton en algún código ejecutado al inicio de la aplicación.
 
-El alcance de una instancia singleton puede ser el proceso actual o todos los procesos. A singleton has a unique value for the process in which it is instantiated, while a _shared_ singleton has a unique value for all processes of the application. Los singletons son útiles para definir los valores que necesitan estar disponibles desde cualquier parte de una aplicación o proceso.
+The scope of a singleton instance can be the current process or all processes on the machine (client, server, or single-user). A singleton has a unique value for the process in which it is instantiated, while a _shared_ singleton has a unique value for all processes on the machine. Singletons are useful to define values that need to be available from anywhere in the application or process.
 
-Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application.
+Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application on the machine.
 
 La propiedad [`isSingleton`](../API/ClassClass.md#issingleton) de los objetos Clase permite saber si la clase es un singleton.
 
@@ -883,7 +883,7 @@ var $myOtherSingleton := cs.ProcessTag.me
 
 ### Creación de un singleton compartido
 
-To create a singleton shared by all processes of the application, add the `shared singleton` keywords before the [Class Constructor](#class-constructor). Por ejemplo:
+To create a singleton shared by all processes on the machine, add the `shared singleton` keywords before the [Class Constructor](#class-constructor). Por ejemplo:
 
 ```4d
 //Class VehicleFactory
@@ -910,7 +910,7 @@ shared Function buildVehicle ($type : Text) -> $vehicle : cs.Vehicle
   This.vehicleBuilt+=1
 ```
 
-Luego puede llamar al singleton **cs.VehicleFactory** para obtener un nuevo vehículo desde cualquier lugar de su aplicación con una sola línea:
+You can then call the **cs.VehicleFactory** singleton to get a new vehicle from everywhere in the application on your machine with a single line:
 
 ```4d
 $vehicle:=cs.VehicleFactory.me.buildVehicle("truck")

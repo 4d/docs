@@ -103,7 +103,7 @@ _(3)_ `ISO Date Time` フォーマットは XML の日付と時間表現の標�
 :::note blankIfNull
 
 - デフォルトでは、null の日付はゼロで表示されます。例: 00/00/00。 "blankIfNull" オプションを使用すると、null の日付は空白として表示されます。 "blankIfNull" 文字列 (文字の大小を区別) は、選択されたフォーマットの値と組み合わせて使います。 例: "systemShort blankIfNull" または "LLLdd日 ee blankIfNull"。
-- [List box columns](listbox_overview.md#list-box-columns) and [list box footers](listbox_overview.md#list-box-footers) of type date always use the "blank if null" behavior (it cannot be disengaged).
+- 日付型の [リストボックスの列](listbox_overview.md#リストボックス列]) および [リストボックスのフッター](listbox_overview.md#リストボックスフッター) は常に "blankIfNull" (null値は空白表示) の振る舞いをします (解除できません)。
 
 :::
 
@@ -400,7 +400,7 @@ Customized time formats can be built using several patterns described in the [**
 - [入力オブジェクト](input_overview.md) にテキストとして
 - [リストボックス列](listbox_overview.md#リストボックス列) に表示タイプ ["ポップアップ"](properties_Display.md#表示タイプ) を選択して
 
-... you can select the text to display for each value:
+... 値の代わりに表示するテキストを指定することができます:
 
 - **テキスト (True時)** - 値が "true" の時に表示するテキスト
 - **テキスト (False時)** - 値が "false" の時に表示するテキスト

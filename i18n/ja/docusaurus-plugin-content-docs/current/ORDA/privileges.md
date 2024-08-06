@@ -151,7 +151,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 ```
 
-最高レベルのセキュリティのため、データストア ("ds") のすべての許諾アクションに "none" の権限名が割り当てられています。したがって、デフォルトでは `ds` オブジェクト全体へのデータアクセスが無効になっています。 It is recommended not to modified or use this locking privilege, but to add specific permissions to each resource you wish to make available from web or REST requests ([see example below](#example-of-privilege-configuration)).
+最高レベルのセキュリティのため、データストア ("ds") のすべての許諾アクションに "none" の権限名が割り当てられています。したがって、デフォルトでは `ds` オブジェクト全体へのデータアクセスが無効になっています。 この "none" 権限はセキュリティのため、使用も変更もしないことが推奨されています。Web や RESTリクエストから利用可能にしたい各リソースには、それ専用の権限を新たに追加することが推奨されています ([以下の例を参照](#権限設定の例))。
 
 :::caution
 

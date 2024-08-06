@@ -5,12 +5,12 @@ title: リリースノート
 
 ## 4D 20 R7
 
-Read [**What’s new in 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R7/), the blog post that lists all new features and enhancements in 4D 20 R7.
+[**4D 20 R7 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20-R7/): 4D 20 R7 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
 #### ハイライト
 
-- List box columns and headers of type time now support the ["blankIfNull" option](../FormObjects/properties_Display.md#time-format).
-- New properties in [.getBoxInfo()](../API/IMAPTransporterClass.md#getboxinfo) and [.getBoxList()](../API/IMAPTransporterClass.md#getboxlist).
+- 時間型のリストボックスの列とヘッダーは、["blankIfNull" オプション](../FormObjects/properties_Display.md#時間フォーマット) をサポートするようになりました。
+- [.getBoxInfo()](../API/IMAPTransporterClass.md#getboxinfo) および [.getBoxList()](../API/IMAPTransporterClass.md#getboxlist) に新しいプロパティが追加されました。
 
 ## 4D 20 R6
 
