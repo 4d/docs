@@ -463,6 +463,13 @@ $ds.Persons.clearRemoteCache()
 | ------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | context | Text | エンティティに適用されている自動の最適化コンテキストのラベル。 エンティティを読み込む以降のコードは、このコンテキストを使うことで最適化の恩恵を受けます。 この機能は [ORDA のクライアント/サーバー処理](ORDA/entities.md#クライアント/サーバーの最適化)を想定して設計されています。 |
 
+:::info
+
+When you call the `.get()` function **without** *settings* parameter, a request for attribute values is directly sent to the server (the [ORDA cache](../ORDA/entities.md#orda-cache) is not used). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. It may be advisable in this case to call [`reload()`](EntityClass.md#reload) to make sure the most recent data is retrieved from the server.
+
+:::
+
+
 #### 例題 1
 
 ```4d
@@ -1044,7 +1051,7 @@ ds.Class.info:
 次のような結果になります:
 
 ```4d
-ds.Class.query("info.coll[].val = :1";0) 
+ds.Class.query("info.coll[].val = :1";0)
 // B と C を返します
 // "少なくとも 1つの valプロパティ値が 0 と等しいエンティティ" を探します
 
@@ -1052,7 +1059,7 @@ ds.Class.query("info.coll[].val != :1";0)
 // A のみを返します
 // "すべての valプロパティ値が 0 と異なるエンティティ" を探します
 // これは、次のクエリと同義です: 
-ds.Class.query(not("info.coll[].val = :1";0)) 
+ds.Class.query(not("info.coll[].val = :1";0))
 ```
 
 "少なくとも 1つのプロパティが *値* と異なる" エンティティを検索するクエリを実装したい場合は、 `[]` に文字を入れた特別な表記を使用する必要があります:
