@@ -2059,7 +2059,8 @@ A list box displays the Form.students entity selection and several clients work 
 
 #### See also
 
-[`.clean()`](#clean)
+[`.clean()`](#clean)<br/>
+[dataClass.clearRemoteCache()](DataClassClass.md#clearremotecache)
 
 <!-- END REF -->
 
