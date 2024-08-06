@@ -869,16 +869,15 @@ The [`.isSingleton`](../API/ClassClass.md#issingleton) property of Class objects
 
 ### Scope
 
-The scope of a singleton instance can be the process where it is instanciated or all processes on the machine, depending on its *shared* property. 
+The scope of a singleton instance can be the process where it is instantiated or all processes on the machine, depending on its *shared* property. 
   
 |Singleton created on|Scope if not shared|Scope if shared|
 |---|----|---|
-|4D single-user|Process|4D application|
-|4D Server|Process|4D Server application machine|
-|4D remote mode|Process (note: singletons are not synchronized on the twin process)|
-4D remote application machine|
+|4D single-user|Process|Application|
+|4D Server|Process|4D Server machine|
+|4D remote mode|Process (*note*: singletons are not synchronized on the twin process)|4D remote machine|
 
-Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application on the machine.
+Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
 
 
 :::info
