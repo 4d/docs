@@ -832,17 +832,25 @@ Si le mot-clé `shared` est utilisé devant une fonction dans une classe utilisa
 
 ## Classes Singleton
 
-Une **classe singleton** est une classe utilisateur qui ne produit qu'une seule instance. Pour plus d’informations sur les singletons, veuillez consulter la [page Wikipédia sur les singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
+Une **classe singleton** est une classe utilisateur qui ne produit qu'une seule instance. Pour plus d’informations sur les singletons, veuillez consulter la [page Wikipédia sur les singletons](https://en.wikipedia.org/wiki/Singleton_pattern). A singleton has a unique instance for the process in which it is instantiated, while a _shared_ singleton has a unique instance for all processes on the machine. Les singletons sont utiles pour définir des valeurs qui doivent être disponibles de n'importe où dans une application ou un process.
 
 Le singleton de la classe est instancié lors du premier appel de la propriété [`cs.<class>.me`](../API/ClassClass.md#me). Le singleton instancié de la classe est ensuite toujours renvoyé lorsque la propriété [`me`](../API/ClassClass.md#me) est utilisée.
 
 Si vous avez besoin d'instancier un singleton avec des paramètres, vous pouvez également appeler la fonction [`new()`](../API/ClassClass.md#new). Dans ce cas, il est recommandé d'instancier le singleton dans du code exécuté au démarrage de l'application.
 
-The scope of a singleton instance can be the current process or all processes on the machine (client, server, or single-user). A singleton has a unique value for the process in which it is instantiated, while a _shared_ singleton has a unique value for all processes on the machine. Singletons are useful to define values that need to be available from anywhere in the application or process.
-
-Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application on the machine.
-
 La propriété [`.isSingleton`](../API/ClassClass.md#issingleton) des objets Class permet de savoir si la classe est un singleton.
+
+### Portée
+
+The scope of a singleton instance can be the process where it is instantiated or all processes on the machine, depending on its _shared_ property.
+
+| Singleton created on | Scope if not shared                                                                                      | Scope if shared   |
+| -------------------- | -------------------------------------------------------------------------------------------------------- | ----------------- |
+| 4D single-user       | Process                                                                                                  | Application       |
+| 4D Server            | Process                                                                                                  | 4D Server machine |
+| 4D remote mode       | Process (_note_: singletons are not synchronized on the twin process) | 4D remote machine |
+
+Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
 
 :::info
 
