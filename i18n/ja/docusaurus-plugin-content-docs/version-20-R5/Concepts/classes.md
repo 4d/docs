@@ -833,17 +833,25 @@ shared Function Bar($value : Integer)
 
 ## シングルトンクラス
 
-**シングルトンクラス** とは、インスタンスを一つのみ作成するユーザークラスです。 シングルトンに関する詳細については、[シングルトンに関する Wikipedia のページ](https://ja.wikipedia.org/wiki/Singleton_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3) を参照ください。
+**シングルトンクラス** とは、インスタンスを一つのみ作成するユーザークラスです。 シングルトンに関する詳細については、[シングルトンに関する Wikipedia のページ](https://ja.wikipedia.org/wiki/Singleton_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3) を参照ください。 A singleton has a unique instance for the process in which it is instantiated, while a _shared_ singleton has a unique instance for all processes on the machine. アプリケーションやプロセス内のどこからでも利用可能な値を定義するのにシングルトンは便利です。
 
 クラスのシングルトンは、初回の [`cs.<class>.me`](../API/ClassClass.md#me) プロパティの呼び出し時にインスタンス化されます。 インスタンス化されたクラスのシングルトンはその後、[`me`](../API/ClassClass.md#me) プロパティの使用により常に返されます。
 
 シングルトンを引数付きでインスタンス化する必要がある場合には、[`new()`](../API/ClassClass.md#new) 関数を呼び出すこともできます。 この場合、アプリケーションの起動時に実行されるコードでシングルトンをインスタンス化することが推奨されます。
 
-The scope of a singleton instance can be the current process or all processes on the machine (client, server, or single-user). A singleton has a unique value for the process in which it is instantiated, while a _shared_ singleton has a unique value for all processes on the machine. Singletons are useful to define values that need to be available from anywhere in the application or process.
-
-Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application on the machine.
-
 クラスがシングルトンクラスかどうかは、Classオブジェクトの .[`.isSingleton`](../API/ClassClass.md#issingleton)プロパティで確認できます。
+
+### スコープ
+
+The scope of a singleton instance can be the process where it is instantiated or all processes on the machine, depending on its _shared_ property.
+
+| Singleton created on | Scope if not shared                                                                                      | Scope if shared   |
+| -------------------- | -------------------------------------------------------------------------------------------------------- | ----------------- |
+| 4D シングルユーザー          | プロセス                                                                                                     | Application       |
+| 4D Server            | プロセス                                                                                                     | 4D Server machine |
+| 4D remote mode       | Process (_note_: singletons are not synchronized on the twin process) | 4D remote machine |
+
+Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
 
 :::info
 
@@ -884,7 +892,7 @@ var $myOtherSingleton := cs.ProcessTag.me
 
 ### 共有シングルトンの作成
 
-To create a singleton shared by all processes on the machine, add the `shared singleton` keywords before the [Class Constructor](#class-constructor). 例:
+マシン上の全プロセスで共有されるシングルトンを作成するには、[Class Constructor](#class-constructor) の前に `shared singleton` キーワードを追加します。 例:
 
 ```4d
 // クラス: VehicleFactory
@@ -911,7 +919,7 @@ shared Function buildVehicle ($type : Text) -> $vehicle : cs.Vehicle
   This.vehicleBuilt+=1
 ```
 
-You can then call the **cs.VehicleFactory** singleton to get a new vehicle from everywhere in the application on your machine with a single line:
+すると、**cs.VehicleFactory** シングルトンを呼び出すことで、そのマシン上でアプリケーションのどこからでも 1行で新しい車両を取得することができます:
 
 ```4d
 $vehicle:=cs.VehicleFactory.me.buildVehicle("トラック")
