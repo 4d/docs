@@ -73,7 +73,7 @@ Consulte o exemplo 2 para ver uma ilustração das regras de grupos partilhados.
 
 ### Leitura
 
-Se permite la lectura de propiedades o elementos de un objeto/colección compartida sin tener que llamar a la estructura `Use...End use`, incluso si el objeto/colección compartida está en uso por otro proceso.
+A leitura de propriedades ou elementos de um objeto/coleção compartilhado é permitida sem a necessidade de chamar a estrutura `Use...End use`, mesmo que o objeto/coleção compartilhado esteja sendo usado por outro processo.
 
 No entanto, é necessário ler um objeto/coleção partilhado dentro de `Use...End use` quando vários valores estão ligados entre si e devem ser lidos de uma só vez, por razões de coerência.
 
