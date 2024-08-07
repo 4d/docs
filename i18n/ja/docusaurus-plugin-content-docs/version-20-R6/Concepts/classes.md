@@ -833,7 +833,7 @@ shared Function Bar($value : Integer)
 
 ## シングルトンクラス
 
-**シングルトンクラス** とは、インスタンスを一つのみ作成するユーザークラスです。 シングルトンに関する詳細については、[シングルトンに関する Wikipedia のページ](https://ja.wikipedia.org/wiki/Singleton_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3) を参照ください。 A singleton has a unique instance for the process in which it is instantiated, while a *shared* singleton has a unique instance for all processes on the machine. アプリケーションやプロセス内のどこからでも利用可能な値を定義するのにシングルトンは便利です。
+**シングルトンクラス** とは、インスタンスを一つのみ作成するユーザークラスです。 シングルトンに関する詳細については、[シングルトンに関する Wikipedia のページ](https://ja.wikipedia.org/wiki/Singleton_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3) を参照ください。 シングルトンは、それがインスタンス化されたプロセスにおいて一意のインスタンスを持ち、*共有* シングルトンは、そのマシン上のすべてのプロセスにおいて一意のインスタンスを持ちます。 アプリケーションやプロセス内のどこからでも利用可能な値を定義するのにシングルトンは便利です。
 
 クラスのシングルトンは、初回の [`cs.<class>.me`](../API/ClassClass.md#me) プロパティの呼び出し時にインスタンス化されます。 インスタンス化されたクラスのシングルトンはその後、[`me`](../API/ClassClass.md#me) プロパティの使用により常に返されます。
 
@@ -843,15 +843,15 @@ shared Function Bar($value : Integer)
 
 ### スコープ
 
-The scope of a singleton instance can be the process where it is instantiated or all processes on the machine, depending on its *shared* property.
+シングルトンインスタンスのスコープは、それがインスタンス化されたプロセスで、*共有* シングルトンの場合はそのマシン上のすべてのプロセスです。
 
-| Singleton created on | Scope if not shared                                                                                      | Scope if shared   |
-| -------------------- | -------------------------------------------------------------------------------------------------------- | ----------------- |
-| 4D シングルユーザー          | プロセス                                                                                                     | Application       |
-| 4D Server            | プロセス                                                                                                     | 4D Server machine |
-| 4D remote mode       | Process (*note*: singletons are not synchronized on the twin process) | 4D remote machine |
+| シングルトンが作成された場所 | 共有されていない場合のスコープ                                                            | 共有されている場合のスコープ |
+| -------------- | -------------------------------------------------------------------------- | -------------- |
+| 4D シングルユーザー    | プロセス                                                                       | アプリケーション       |
+| 4D Server      | プロセス                                                                       | 4D Server のマシン |
+| 4Dリモートモード      | プロセス (*注意*: シングルトンは "双子" プロセス間で同期されません) | 4Dリモートのマシン     |
 
-Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
+インスタンス化されると、シングルトンクラス (およびそのシングルトン) は、マシン上で実行中のアプリケーション内に参照が存在する限り存在し続けます。
 
 :::info
 
