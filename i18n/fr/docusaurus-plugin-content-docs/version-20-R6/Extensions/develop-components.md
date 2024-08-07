@@ -11,13 +11,13 @@ Vous pouvez développer des composants 4D pour vos propres besoins et les garder
 
 - **Projet utilisé comme matrice** : Projet 4D utilisé pour le développement du composant. C'est un projet standard, sans attribut spécifique. Il constitue un seul composant.
 - **Projet hôte :** projet dans lequel un composant est installé et utilisé.
-- **Component**: Matrix project that can be compiled and [built](Desktop/building.md#build-component), [installed in the host application](../Project/components.md#basics) and whose contents are used in the host application.
+- **Composant** : Projet de matrice qui peut être compilé et [construit](Desktop/building.md#build-component), [installé dans l'application hôte](../Project/components.md#basics) et dont le contenu est utilisé dans l'application hôte.
 
 ## Principes de base
 
 La création et l’installation des composants 4D s’effectuent directement depuis 4D :
 
-- To use a component, you simply need to [install it in your application](../Project/components.md#basics).
+- Pour utiliser un composant, il suffit de [l'installer dans votre application](../Projet/composants.md#basics).
 - Un projet peut être à la fois "matrice" et "hôte", c'est-à-dire qu'un projet utilisé comme matrice peut lui-même utiliser un ou plusieurs composants. En revanche, un composant ne peut pas lui-même utiliser de "sous-composants".
 - Un composant peut appeler la plupart des éléments 4D : des classes, des fonctions, des méthodes projet, des formulaires projet, des barres de menus, des listes à choix multiples, etc. Il ne peut pas appeler des méthodes base et des triggers.
 - Il n’est pas possible d’exploiter le datastore, des tables standard ou des fichiers de données dans les composants 4D. En revanche, un composant peut créer et/ou utiliser des tables, des champs et des fichiers de données via les mécanismes des bases externes. Les bases externes sont des bases 4D indépendantes manipulées via les commandes SQL.
@@ -66,7 +66,7 @@ Les commandes suivantes ne sont pas compatibles avec une utilisation dans le cad
 
 Toutes les méthodes projet d’un projet utilisé comme matrice sont par définition incluses dans le composant (le projet est le composant), ce qui signifie qu’elles peuvent être appelées et exécutées dans le composant.
 
-En revanche, par défaut ces méthodes projet ne seront ni visibles ni appelables par le projet hôte. In the matrix project, you must explicitly designate the methods that you want to share with the host project and its components by checking the **Shared by components and host project** box in the method properties dialog box:
+En revanche, par défaut ces méthodes projet ne seront ni visibles ni appelables par le projet hôte. Dans le projet matrice, vous devez désigner explicitement les méthodes que vous souhaitez partager avec le projet hôte et ses composants en cochant la case **Partagée entre composants et projet hôte** dans la boîte de dialogue des propriétés de la méthode :
 
 ![](../assets/en/Concepts/shared-methods.png)
 
@@ -92,13 +92,13 @@ EXECUTE METHOD($param)
 > Une base hôte interprétée qui contient des composants interprétés peut être compilée ou soumise à un contrôle syntaxique si elle n'appelle pas de méthodes du composant interprété. Dans le cas contraire, une boîte de dialogue d'avertissement apparaît lorsque vous tentez de lancer la compilation ou un contrôle syntaxique et il n'est pas possible d'effectuer l'opération.\
 > Keep in mind that an interpreted method can call a compiled method, but not the reverse, except via the use of the `EXECUTE METHOD` and `EXECUTE FORMULA` commands.
 
-## Sharing of classes
+## Partage des classes
 
-By default, component classes cannot be called from the 4D Code Editor of the host project. If you want your component classes to be exposed in the host project and its loaded components, you need to **declare a component namespace**. Additionally, you can control how component classes are suggested in the host Code Editor.
+Par défaut, les classes de composants ne peuvent pas être appelées à partir de l'éditeur de code 4D du projet hôte. Si vous voulez que vos classes de composants soient exposées dans le projet hôte et ses composants chargés, vous devez **déclarer un namespace de composant**. En outre, vous pouvez contrôler la manière dont les classes de composants sont suggérées dans l'éditeur de code de l'hôte.
 
 ### Déclaration du namespace
 
-To allow classes of your component to be exposed in the host projects and their loaded components, enter a value in the [**Component namespace in the class store** option in the General page](../settings/general.md#component-namespace-in-the-class-store) of the matrix project Settings. Par défaut, l'espace est vide : les classes du composant ne sont pas disponibles en dehors du contexte du composant.
+Pour permettre aux classes de votre composant d'être exposées dans les projets hôtes et leurs composants chargés, saisissez une valeur dans l'option [**namespace du composant dans le class store** de la page Général](../settings/general.md#component-namespace-in-the-class-store) des paramètres du projet matrice. Par défaut, l'espace est vide : les classes du composant ne sont pas disponibles en dehors du contexte du composant.
 
 ![](../assets/en/settings/namespace.png)
 
@@ -108,10 +108,10 @@ Un *namespace* garantit qu'aucun conflit n'émerge lorsqu'un projet hôte utilis
 
 :::
 
-When you enter a value, you declare that component classes will be available in the [user class store (**cs**)](../Concepts/classes.md#cs) of the host project as well as its loaded components, through the `cs.<value>` namespace. Par exemple, si vous entrez "eGeometry" comme namespace, en supposant que vous avez créé une classe `Rectangle` contenant une fonction `getArea()`, une fois votre projet installé comme composant, le développeur du projet hôte peut écrire :
+Lorsque vous entrez une valeur, vous déclarez que les classes de composants seront disponibles dans le [user class store (**cs**)](../Concepts/classes.md#cs) du projet hôte ainsi que dans ses composants chargés, à travers le namespace `cs.<value>`. Par exemple, si vous entrez "eGeometry" comme namespace, en supposant que vous avez créé une classe `Rectangle` contenant une fonction `getArea()`, une fois votre projet installé comme composant, le développeur du projet hôte peut écrire :
 
 ```4d
-//in host project or one of its components
+//dans le projet hôte ou l'une de ses composantes
 var $rect: cs.eGeometry.Rectangle
 $rect:=cs.eGeometry.Rectangle.new(10;20)
 $area:=$rect.getArea()
@@ -119,13 +119,13 @@ $area:=$rect.getArea()
 
 :::info
 
-The namespace of a [compiled](#protection-of-components-compilation) component is added between parentheses after the component name in the [Component Methods page](../Concepts/components.md#using-components) of the host projects:
+Le namespace d'un composant [compilé](#protection-of-components-compilation) est ajouté entre parenthèses après le nom du composant dans la [page Méthodes composant](../Concepts/composants.md#utiliserlescomposants) des projets hôtes :
 
 ![](../assets/en/settings/namesapece-explorer.png)
 
 :::
 
-Bien entendu, il est recommandé d'utiliser un nom distinctif pour éviter tout conflit. If a user class with the same name as a component namespace already exists in the project, the user class is taken into account and the component classes are ignored.
+Bien entendu, il est recommandé d'utiliser un nom distinctif pour éviter tout conflit. Si une classe utilisateur portant le même nom que le namespace d'un composant qui existe déjà dans le projet, la classe utilisateur est prise en compte et les classes de composants sont ignorées.
 
 Les classes ORDA d'un composant ne sont pas disponibles dans le projet hôte. Par exemple, s'il existe une dataclass nommée Employees dans votre composant, vous ne pourrez pas utiliser une classe "cs.Mycomponent.Employee" dans le projet hôte.
 
