@@ -35,7 +35,7 @@ title: クライアント/サーバーの最適化
   - [`entitySelection.slice()`](../API/EntitySelectionClass.md#slice)
   - [`entitySelection.drop()`](../API/EntitySelectionClass.md#drop)
 
-- An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Reusing the context property](#reusing-the-context-property) below).
+- 既存の最適化コンテキストは、同じデータクラスの他のエンティティセレクションであればプロパティとして渡すことができるので、学習フェーズを省略して、アプリケーションをより速く実行することができます (以下の [contextプロパティの使用](#contextプロパティの使用) を参照してください)。
 
 - [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) 関数を使用して、最適化コンテキストを手動で構築することができます ([コンテキストの事前設定](#コンテキストの事前設定) 参照)。
 
@@ -79,20 +79,20 @@ title: クライアント/サーバーの最適化
  $querysettings2:=New object("context";"longList")
 
  $sel1:=ds.Employee.query("lastname = S@";$querysettings)
- $data:=extractData($sel1) // In extractData method an optimization is triggered   
- // and associated to context "shortList"
+ $data:=extractData($sel1) // extractData メソッド内で最適化がトリガーされ、
+ // コンテキスト "shortList" に紐づけられます
 
  $sel2:=ds.Employee.query("lastname = Sm@";$querysettings)
- $data:=extractData($sel2) // In extractData method the optimization associated   
- // to context "shortList" is applied
+ $data:=extractData($sel2) // extractData メソッド内で最適化がトリガーされ、
+ // コンテキスト "shortList" に紐づけられます
 
  $sel3:=ds.Employee.query("lastname = Smith";$querysettings2)
- $data:=extractDetailedData($sel3) // In extractDetailedData method an optimization  
- // is triggered and associated to context "longList"
+ $data:=extractDetailedData($sel3) // extractDetailedData メソッド内で最適化がトリガーされ、
+ // コンテキスト "longList" に紐づけられます
 
  $sel4:=ds.Employee.query("lastname = Brown";$querysettings2)
- $data:=extractDetailedData($sel4) // In extractDetailedData method the optimization  
- // associated to context "longList" is applied
+ $data:=extractDetailedData($sel4) // extractDetailedData メソッド内で最適化がトリガーされ、
+ // コンテキスト "longList" に紐づけられます
 ```
 
 ### エンティティセレクション型リストボックス
@@ -133,7 +133,7 @@ title: クライアント/サーバーの最適化
 
 キャッシュに含まれるデータは、タイムアウトに達すると期限切れとみなされます。 期限切れデータにアクセスする場合は、サーバーにリクエストが送信されます。 期限切れデータは、スペースが必要になるまでキャッシュに残ります。
 
-You can force entity selection data in the ORDA cache to expire at any moment by using the [`refresh()`](../API/EntitySelectionClass.md#refresh) function.
+[`refresh()`](../API/EntitySelectionClass.md#refresh) 関数を使用して、ORDAキャッシュにあるエンティティセレクションのデータをいつでも強制的に期限切れにすることができます。
 
 デフォルトでは、ORDAキャッシュは 4D によって透過的に処理されます。 しかし、以下の ORDAクラスの関数を使用して、その内容を制御することができます:
 
