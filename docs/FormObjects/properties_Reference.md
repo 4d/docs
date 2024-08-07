@@ -178,7 +178,6 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`showVerticalRuler`](properties_Appearance.md#show-vertical-ruler)|Displays/hides the vertical ruler when the document view is in Page view mode|true, false|
 |[`singleClickEdit`](properties_Entry.md#single-click-edit)|Enables direct passage to edit mode.|true, false|
 |[`sizingX`](properties_ResizingOptions.md#horizontal-sizing)|Specifies if the horizontal size of an object should be moved or resized when a user resizes the form.|"grow", "move", "fixed"|
-
 |[`sizingY`](properties_ResizingOptions.md#horizontal-sizing)|Specifies if the vertical size of an object should be moved or resized when a user resizes the form.|"grow", "move", "fixed"|
 |[`sortable`](properties_Action.md#sortable)| Allows sorting column data by clicking the header.|true, false|
 |[`spellcheck`](properties_Entry.md#auto-spellcheck)|Activates the spell-check for the object |true, false|  
