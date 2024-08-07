@@ -158,9 +158,9 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 任意の *settings* パラメーターには、追加オプションを格納したオブジェクトを渡すことができます。 以下のプロパティがサポートされています:
 
-| プロパティ   | タイプ  | 説明                                                                                                                                                                                                    |
-| ------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context | Text | エンティティセレクションに適用されている最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 This feature is [designed for ORDA client/server processing](../ORDA/client-server-optimization.md). |
+| プロパティ   | タイプ  | 説明                                                                                                                                                                 |
+| ------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| context | Text | エンティティセレクションに適用されている最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能は [ORDA のクライアント/サーバー処理](../ORDA/client-server-optimization.md) を想定して設計されています。 |
 
 > データクラス内の総エンティティ数を知るには、`ds.myClass.all().length` 式よりも最適化された [`getCount()`](#getcount) 関数を使用することが推奨されます。
 
@@ -223,7 +223,7 @@ $ds.Persons.clearRemoteCache()
 // Persons データクラスのキャッシュ = {timeout:30;maxEntries:30000;stamp:255;entries:[]}
 ```
 
-\####See also
+\####参照
 
 [`entitySelection.refresh()`](EntitySelectionClass.md#refresh)
 
@@ -293,9 +293,9 @@ $ds.Persons.clearRemoteCache()
 
 任意の *settings* パラメーターには、追加オプションを格納したオブジェクトを渡すことができます。 以下のプロパティがサポートされています:
 
-| プロパティ   | タイプ  | 説明                                                                                                                                                                                                    |
-| ------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context | Text | エンティティセレクションに適用されている最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 This feature is [designed for ORDA client/server processing](../ORDA/client-server-optimization.md). |
+| プロパティ   | タイプ  | 説明                                                                                                                                                                 |
+| ------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| context | Text | エンティティセレクションに適用されている最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能は [ORDA のクライアント/サーバー処理](../ORDA/client-server-optimization.md) を想定して設計されています。 |
 
 #### 例題 1
 
@@ -469,13 +469,13 @@ $ds.Persons.clearRemoteCache()
 
 任意の *settings* パラメーターには、追加オプションを格納したオブジェクトを渡すことができます。 以下のプロパティがサポートされています:
 
-| プロパティ   | タイプ  | 説明                                                                                                                                                                                                 |
-| ------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context | Text | エンティティに適用されている自動の最適化コンテキストのラベル。 エンティティを読み込む以降のコードは、このコンテキストを使うことで最適化の恩恵を受けます。 This feature is [designed for ORDA client/server processing](../ORDA/client-server-optimization.md). |
+| プロパティ   | タイプ  | 説明                                                                                                                                                              |
+| ------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context | Text | エンティティに適用されている自動の最適化コンテキストのラベル。 エンティティを読み込む以降のコードは、このコンテキストを使うことで最適化の恩恵を受けます。 この機能は [ORDA のクライアント/サーバー処理](../ORDA/client-server-optimization.md) を想定して設計されています。 |
 
 :::info
 
-When you call the `.get()` function **without** *settings* parameter, a request for attribute values is directly sent to the server (the [ORDA cache](../ORDA/client-server-optimization.md#orda-cache) is not used). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. It may be advisable in this case to call [`reload()`](EntityClass.md#reload) to make sure the most recent data is retrieved from the server.
+*settings* パラメーター**なし**で `.get()` 関数を呼び出すと、属性値のリクエストが直接サーバーに送信されます ([ORDAキャッシュ](../ORDA/client-server-optimization.md#ordaキャッシュ) は使用されません）。 一方、*settings* パラメーターを介して `context` を渡す形で `.get()` 関数を呼び出すと、コンテキストに対応する ORDAキャッシュから属性値が取得されます。 この場合、[`reload()`](EntityClass.md#reload) を呼び出して、最新のデータがサーバーから取得されていることを確認することをお勧めします。
 
 :::
 
