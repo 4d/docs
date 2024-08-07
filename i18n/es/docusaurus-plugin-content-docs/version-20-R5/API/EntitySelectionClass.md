@@ -1890,7 +1890,7 @@ Para más información, consulte el párrafo del **parámetro querySettings** en
 
 > Esta función sólo funciona con un datastore remoto (cliente/servidor o conexión `Open datastore`).
 
-The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the local ORDA cache<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
+La función `.refresh()` <!-- REF #EntitySelectionClass.refresh().Summary -->invalida inmediatamente los datos de la entidad seleccionada en la [caché local de ORDA](../ORDA/client-server-optimization.md#orda-cache)<!-- END REF --> para que la próxima vez que 4D requiera la entidad seleccionada, esta sea recargada desde la base de datos.
 
 Por defecto, la caché local de ORDA se invalida después de 30 segundos. En el contexto de las aplicaciones cliente/servidor que utilizan tanto ORDA como el lenguaje clásico, este método le permite asegurarse de que una aplicación remota siempre funcionará con los datos más recientes.
 
@@ -1940,6 +1940,10 @@ En este ejemplo, el código clásico y el código ORDA modifican los mismos dato
  Form.students.refresh() // Invalidates the ORDA cache for the Form.students entity selection
   // The list box content is refreshed from the database with update made by client #2
 ```
+
+#### Ver también
+
+[dataClass.clearRemoteCache()](DataClassClass.md#clearremotecache)
 
 <!-- END REF -->
 

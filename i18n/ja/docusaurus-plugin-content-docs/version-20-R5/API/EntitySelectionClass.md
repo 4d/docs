@@ -1890,7 +1890,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 > このメソッドはリモートデータストア (クライアント/サーバーモード、または`Open datastore` 接続) においてのみ動作します。
 
-`.refresh()` 関数は、<!-- REF #EntitySelectionClass.refresh().Summary -->ローカルの ORDAキャッシュにあるエンティティセレクションデータを即座に "無効化" します<!-- END REF -->。そのため、次に 4Dがエンティティセレクションを必要としたときにはそれがデータベースからリロードされます。
+`.refresh()` 関数は、<!-- REF #EntitySelectionClass.refresh().Summary -->[ローカルの ORDAキャッシュ](../ORDA/client-server-optimization.md#ordaキャッシュ) にあるエンティティセレクションデータを即座に "無効化" します<!-- END REF -->。そのため、次に 4Dがエンティティセレクションを必要としたときにはそれがデータベースからリロードされます。
 
 デフォルトでは、ローカルの ORDA のキャッシュは 30秒後に無効化されます。 クライアント/サーバーアプリケーションのコンテキストにおいて ORDA とクラシック言語の両方を使用している場合、このメソッドを使用することでリモートアプリケーションが必ず最新のデータを使用するようにできます。
 
@@ -1941,6 +1941,10 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
  Form.students.refresh() // Form.students エンティティセレクションの ORDAキャッシュを無効化します
   // リストボックスの中身はデータベースの内容で更新され、クライアント#2 がおこなった変更も反映します
 ```
+
+#### 参照
+
+[dataClass.clearRemoteCache()](DataClassClass.md#clearremotecache)
 
 <!-- END REF -->
 

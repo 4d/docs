@@ -832,17 +832,25 @@ Si se utiliza la palabra clave `shared` en una clase usuario no compartida, se i
 
 ## Clases Singleton
 
-Una **clase singleton** es una clase usuario que sólo produce una única instancia. Para más información sobre los singletons, por favor consulte la [página Wikipedia sobre los singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
+Una **clase singleton** es una clase usuario que sólo produce una única instancia. Para más información sobre los singletons, por favor consulte la [página Wikipedia sobre los singletons](https://en.wikipedia.org/wiki/Singleton_pattern). A singleton has a unique instance for the process in which it is instantiated, while a *shared* singleton has a unique instance for all processes on the machine. Los singletons son útiles para definir los valores que necesitan estar disponibles desde cualquier parte de una aplicación o proceso.
 
 La clase singleton está instanciada en la primera llamada de la propiedad [`cs.<class>.me`](../API/ClassClass.md#me). El singleton instanciado de la clase se devuelve siempre cuando se utiliza la propiedad [`me`](../API/ClassClass.md#me).
 
 Si necesita instanciar un singleton con parámetros, también puede llamar la función [`new()`](../API/ClassClass.md#new). En este caso, se recomienda instanciar el singleton en algún código ejecutado al inicio de la aplicación.
 
-The scope of a singleton instance can be the current process or all processes on the machine (client, server, or single-user). A singleton has a unique value for the process in which it is instantiated, while a *shared* singleton has a unique value for all processes on the machine. Singletons are useful to define values that need to be available from anywhere in the application or process.
-
-Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application on the machine.
-
 La propiedad [`isSingleton`](../API/ClassClass.md#issingleton) de los objetos Clase permite saber si la clase es un singleton.
+
+### Alcance
+
+The scope of a singleton instance can be the process where it is instantiated or all processes on the machine, depending on its *shared* property.
+
+| Singleton created on | Scope if not shared                                                                                      | Scope if shared   |
+| -------------------- | -------------------------------------------------------------------------------------------------------- | ----------------- |
+| 4D monopuesto        | Proceso                                                                                                  | Application       |
+| 4D Server            | Proceso                                                                                                  | 4D Server machine |
+| 4D remote mode       | Process (*note*: singletons are not synchronized on the twin process) | 4D remote machine |
+
+Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
 
 :::info
 

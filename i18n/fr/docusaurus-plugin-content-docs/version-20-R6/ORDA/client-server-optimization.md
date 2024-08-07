@@ -35,7 +35,7 @@ Le contexte d'optimisation est fondé sur ce qui suit :
   - [`entitySelection.slice()`](../API/EntitySelectionClass.md#slice)
   - [`entitySelection.drop()`](../API/EntitySelectionClass.md#drop)
 
-- Un contexte d'optimisation existant peut être passé en tant que propriété à une autre entity selection de la même dataclass, ce qui permet d'éviter la phase d'apprentissage et d'accélérer l'application (voir [Utilisation de la propriété context](#reusing-the-context-property) ci-dessous).
+- An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Reusing the context property](#reusing-the-context-property) below).
 
 - Vous pouvez créer des contextes d'optimisation manuellement à l'aide de la fonction [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) (voir [Préconfiguration des contextes](#preconfiguring-contexts)).
 
@@ -77,22 +77,22 @@ Une même propriété de contexte d'optimisation peut être passée à un nombre
  var $data : Collection
  $querysettings:=New object("context";"shortList")
  $querysettings2:=New object("context";"longList")
- 
+
  $sel1:=ds.Employee.query("lastname = S@";$querysettings)
- $data:=extractData($sel1) // dans la méthode extractData un contexte d'optimisation    
- // est généré et associé au contexte "shortList"
- 
+ $data:=extractData($sel1) // In extractData method an optimization is triggered   
+ // and associated to context "shortList"
+
  $sel2:=ds.Employee.query("lastname = Sm@";$querysettings)
- $data:=extractData($sel2) // dans la méthode extractData le contexte d'optimisation   
- // associé au contexte "shortList" est appliqué
- 
+ $data:=extractData($sel2) // In extractData method the optimization associated   
+ // to context "shortList" is applied
+
  $sel3:=ds.Employee.query("lastname = Smith";$querysettings2)
- $data:=extractDetailedData($sel3) // dans la méthode extractDetailedData un contexte d'optimisation  
- // est généré et associé au contexte "longList"
- 
+ $data:=extractDetailedData($sel3) // In extractDetailedData method an optimization  
+ // is triggered and associated to context "longList"
+
  $sel4:=ds.Employee.query("lastname = Brown";$querysettings2)
- $data:=extractDetailedData($sel4) // dans extractDetailedData  le contexte d'optimisation  
- // associé au contexte "longList" est appliqué
+ $data:=extractDetailedData($sel4) // In extractDetailedData method the optimization  
+ // associated to context "longList" is applied
 ```
 
 ### List box de type entity selection
@@ -132,6 +132,8 @@ Si vous souhaitez livrer des applications finales avec le plus haut niveau d'opt
 Pour des raisons d'optimisation, les données demandées au serveur via ORDA sont chargées dans le cache distant ORDA (qui est différent du cache 4D). Le cache ORDA est organisé par dataclass et expire au bout de 30 secondes.
 
 Les données contenues dans le cache sont considérées comme expirées lorsque le délai d'attente est atteint. Tout accès à des données périmées provoquera l'envoi d'une requête au serveur. Les données périmées restent dans le cache jusqu'à ce que l'on ait besoin d'espace.
+
+You can force entity selection data in the ORDA cache to expire at any moment by using the [`refresh()`](../API/EntitySelectionClass.md#refresh) function.
 
 Par défaut, le cache ORDA est géré de manière transparente par 4D. Cependant, vous pouvez contrôler son contenu en utilisant les fonctions ORDA suivantes :
 

@@ -35,7 +35,7 @@ O contexto de otimização é baseado nas seguintes implementações:
   - [`entitySelection.slice()`](../API/EntitySelectionClass.md#slice)
   - [`entitySelection.drop()`](../API/EntitySelectionClass.md#drop)
 
-- An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Using the context property](#reusing-the-context-property) below).
+- An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Reusing the context property](#reusing-the-context-property) below).
 
 - You can build optimization contexts manually using the [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) function (see [Preconfiguring contexts](#preconfiguring-contexts)).
 
@@ -77,19 +77,19 @@ A mesma propriedade de contexto de otimização pode ser passada para um número
  var $data : Collection
  $querysettings:=New object("context";"shortList")
  $querysettings2:=New object("context";"longList")
- 
+
  $sel1:=ds.Employee.query("lastname = S@";$querysettings)
  $data:=extractData($sel1) // In extractData method an optimization is triggered   
  // and associated to context "shortList"
- 
+
  $sel2:=ds.Employee.query("lastname = Sm@";$querysettings)
  $data:=extractData($sel2) // In extractData method the optimization associated   
  // to context "shortList" is applied
- 
+
  $sel3:=ds.Employee.query("lastname = Smith";$querysettings2)
  $data:=extractDetailedData($sel3) // In extractDetailedData method an optimization  
  // is triggered and associated to context "longList"
- 
+
  $sel4:=ds.Employee.query("lastname = Brown";$querysettings2)
  $data:=extractDetailedData($sel4) // In extractDetailedData method the optimization  
  // associated to context "longList" is applied
@@ -132,6 +132,8 @@ Se quiser fornecer aplicativos finais com o mais alto nível de otimização, vo
 Por motivos de otimização, os dados solicitados do servidor por meio do ORDA são carregados no cache remoto do ORDA (que é diferente do cache 4D). O cache do ORDA é organizado por classe de dados e expira após 30 segundos.
 
 Os dados contidos no cache são considerados expirados quando o tempo limite é atingido. Qualquer acesso a dados expirados enviará um pedido ao servidor. Os dados expirados permanecem na cache até que seja necessário espaço.
+
+You can force entity selection data in the ORDA cache to expire at any moment by using the [`refresh()`](../API/EntitySelectionClass.md#refresh) function.
 
 Por padrão, o cache ORDA é tratado de forma transparente pelo 4D. No entanto, você pode controlar seu conteúdo usando as seguintes funções da classe ORDA:
 

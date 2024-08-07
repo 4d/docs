@@ -158,9 +158,9 @@ Se aplica carregamento diferido/lazy loading.
 
 In the optional *settings* parameter, you can pass an object containing additional options. As propriedades abaixo são compatíveis:
 
-| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                                                                 |
-| ----------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context     | Text | Etiqueta para o contexto de otimização aplicado a seleção de entidades. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
+| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                                                           |
+| ----------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context     | Text | Etiqueta para o contexto de otimização aplicado a seleção de entidades. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. This feature is [designed for ORDA client/server processing](../ORDA/client-server-optimization.md). |
 
 > To know the total number of entities in a dataclass, it is recommended to use the [`getCount()`](#getcount) function which is more optimized than the `ds.myClass.all().length` expression.
 
@@ -220,6 +220,10 @@ $cache:=$ds. Persons.getRemoteCache()
 $ds. Persons.clearRemoteCache()
 // Cache of the Persons dataclass = {timeout:30;maxEntries:30000;stamp:255;entries:[]}
 ```
+
+\####See also
+
+[`entitySelection.refresh()`](EntitySelectionClass.md#refresh)
 
 <!-- END REF -->
 
@@ -287,9 +291,9 @@ Se um atributo \_\_STAMP for dado, se realiza uma comprovação com o selo no ar
 
 In the optional *settings* parameter, you can pass an object containing additional options. As propriedades abaixo são compatíveis:
 
-| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                                                                 |
-| ----------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context     | Text | Etiqueta para o contexto de otimização aplicado a seleção de entidades. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
+| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                                                           |
+| ----------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context     | Text | Etiqueta para o contexto de otimização aplicado a seleção de entidades. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. This feature is [designed for ORDA client/server processing](../ORDA/client-server-optimization.md). |
 
 #### Exemplo 1
 
@@ -463,9 +467,15 @@ Se nenhuma entidade for encontrada com *primaryKey*, uma entidade **Null** será
 
 In the optional *settings* parameter, you can pass an object containing additional options. As propriedades abaixo são compatíveis:
 
-| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                                                              |
-| ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| context     | Text | Etiqueta para o contexto de otimização automático aplicados à entidade. Esse contexto será usado pelo código subsequente que carrega a entidade para que se possa beneficiar da otimização. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
+| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                                                        |
+| ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| context     | Text | Etiqueta para o contexto de otimização automático aplicados à entidade. Esse contexto será usado pelo código subsequente que carrega a entidade para que se possa beneficiar da otimização. This feature is [designed for ORDA client/server processing](../ORDA/client-server-optimization.md). |
+
+:::info
+
+When you call the `.get()` function **without** *settings* parameter, a request for attribute values is directly sent to the server (the [ORDA cache](../ORDA/client-server-optimization.md#orda-cache) is not used). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. It may be advisable in this case to call [`reload()`](EntityClass.md#reload) to make sure the most recent data is retrieved from the server.
+
+:::
 
 #### Exemplo 1
 

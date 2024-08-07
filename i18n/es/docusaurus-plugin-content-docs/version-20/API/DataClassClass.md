@@ -463,6 +463,13 @@ En el parámetro opcional *settings* se puede pasar un objeto que contenga opcio
 | --------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | context   | Text | Etiqueta para el contexto de optimización automática aplicado a la entidad. Este contexto será utilizado por el código siguiente que carga la entidad para que pueda beneficiarse de la optimización. Esta funcionalidad está [diseñada para el procesamiento cliente/servidor ORDA](ORDA/entities.md#client-server-optimization). |
 
+:::info
+
+When you call the `.get()` function **without** *settings* parameter, a request for attribute values is directly sent to the server (the [ORDA cache](../ORDA/entities.md#orda-cache) is not used). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. It may be advisable in this case to call [`reload()`](EntityClass.md#reload) to make sure the most recent data is retrieved from the server.
+
+:::
+
+
 #### Ejemplo 1
 
 ```4d
@@ -1044,7 +1051,7 @@ ds.Class.info:
 Considere los siguientes resultados:
 
 ```4d
-¡ds.Class.query("info.coll[].val = :1";0) 
+ds.Class.query("info.coll[].val = :1";0)
 // devuelve B y C
 // encuentra "entidades con 0 en al menos una propiedad val"
 
@@ -1052,7 +1059,7 @@ ds.Class.query("info.coll[].val != :1";0)
 // sólo devuelve A
 // encuentra "entidades en las que todas las propiedades val son distintas de 0"
 // lo que equivale a 
-ds.Class.query(not("info.coll[].val = :1";0)) 
+ds.Class.query(not("info.coll[].val = :1";0))
 ```
 
 Si desea implementar una búsqueda que encuentre entidades en las que "al menos una propiedad sea diferente del valor **", deberá utilizar una notación especial utilizando una letra en el `[]`:

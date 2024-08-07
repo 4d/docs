@@ -1992,7 +1992,8 @@ Uma list box exibe a seleção de entidade Form.students e vários clientes trab
 
 #### Veja também
 
-[`.clean()`](#clean)
+[`.clean()`](#clean)<br/>
+[dataClass.clearRemoteCache()](DataClassClass.md#clearremotecache)
 
 <!-- END REF -->
 

@@ -133,6 +133,8 @@ title: クライアント/サーバーの最適化
 
 キャッシュに含まれるデータは、タイムアウトに達すると期限切れとみなされます。 期限切れデータにアクセスする場合は、サーバーにリクエストが送信されます。 期限切れデータは、スペースが必要になるまでキャッシュに残ります。
 
+[`refresh()`](../API/EntitySelectionClass.md#refresh) 関数を使用して、ORDAキャッシュにあるエンティティセレクションのデータをいつでも強制的に期限切れにすることができます。
+
 デフォルトでは、ORDAキャッシュは 4D によって透過的に処理されます。 しかし、以下の ORDAクラスの関数を使用して、その内容を制御することができます:
 
 - [dataClass.setRemoteCacheSettings()](../API/DataClassClass.md#setremotecachesettings)

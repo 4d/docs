@@ -1997,7 +1997,8 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 #### 参照
 
-[`.clean()`](#clean)
+[`.clean()`](#clean)<br/>
+[dataClass.clearRemoteCache()](DataClassClass.md#clearremotecache)
 
 <!-- END REF -->
 

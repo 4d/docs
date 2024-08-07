@@ -1996,7 +1996,8 @@ En este ejemplo, el código clásico y el código ORDA modifican los mismos dato
 
 #### Ver también
 
-[`.clean()`](#clean)
+[`.clean()`](#clean)<br/>
+[dataClass.clearRemoteCache()](DataClassClass.md#clearremotecache)
 
 <!-- END REF -->
 
