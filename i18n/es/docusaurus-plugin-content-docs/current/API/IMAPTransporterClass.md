@@ -803,7 +803,7 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 | mailCount  | Number | Número de mensajes en el buzón                                                                    |
 | mailRecent | Number | Número de mensajes con el marcador "reciente" (que indica los mensajes nuevos) |
 | id         | text   | Id. único del buzón                                                               |
-| mailUnseen | Number | Number of messages marked "unseen"                                                                |
+| mailUnseen | Number | Número de mensajes marcados como "unseen"                                                         |
 
 #### Ejemplo
 
