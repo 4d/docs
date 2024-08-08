@@ -182,6 +182,7 @@ module.exports =
 								"API/HTTPRequestClass",
 								"API/IMAPTransporterClass",
 								"API/MailAttachmentClass",
+								"API/OutGoingMessageClass",
 								"API/POP3TransporterClass",
 								"API/SessionClass",
 								"API/SignalClass",
