@@ -844,11 +844,11 @@ La propiedad [`isSingleton`](../API/ClassClass.md#issingleton) de los objetos Cl
 
 The scope of a singleton instance can be the process where it is instantiated or all processes on the machine, depending on its _shared_ property.
 
-| Singleton created on | Scope if not shared                                                                                      | Scope if shared   |
+| Singleton created on | Alcance si no se comparte                                                                                | Scope if shared   |
 | -------------------- | -------------------------------------------------------------------------------------------------------- | ----------------- |
 | 4D monopuesto        | Proceso                                                                                                  | Application       |
-| 4D Server            | Proceso                                                                                                  | 4D Server machine |
-| 4D remote mode       | Process (_note_: singletons are not synchronized on the twin process) | 4D remote machine |
+| 4D Server            | Proceso                                                                                                  | Máquina 4D Server |
+| Modo remoto 4D       | Process (_note_: singletons are not synchronized on the twin process) | Máquina remota 4D |
 
 Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
 
