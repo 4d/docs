@@ -59,7 +59,7 @@ La siguiente tabla muestra todos los patrones soportados para formatos de fecha 
 |         |                                                                          | eeee         | Tuesday                                                               |
 |         |                                                                          | eeeee        | T                                                                     |
 |         |                                                                          | eeeeee       | Tu                                                                    |
-| c       | stand-alone local day of week                                            | c o cc       | 2                                                                     |
+| c       | día de la semana local independiente                                     | c o cc       | 2                                                                     |
 |         |                                                                          | ccc          | Tue                                                                   |
 |         |                                                                          | cccc         | Tuesday                                                               |
 |         |                                                                          | ccccc        | T                                                                     |
