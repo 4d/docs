@@ -161,7 +161,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 :::note 互換性
 
-以前のリリースでは、`roles.json` ファイルはデフォルトで作成されませんでした。 4D 20 R6 以降、`roles.json`ファイルを含まない、または `"forceLogin": true` の設定が含まれていない既存のプロジェクトを開く場合、[設定ダイアログボックスの **Web機能** ページ](../settings/web.md#アクセス権) で **ds.authentify() 関数によって REST認証を有効化する** ボタンが利用可能になります。 このボタンはセキュリティ設定を自動的にアップグレードします (コードを修正する必要があるかもしれません。[このブログ記事を参照ください](https://blog.4d.com/ja/force-login-becomes-default-for-all-rest-auth))。
+以前のリリースでは、`roles.json` ファイルはデフォルトで作成されませんでした。 4D 20 R6 以降、`roles.json`ファイルを含まない、または `"forceLogin": true` の設定が含まれていない既存のプロジェクトを開く場合、[設定ダイアログボックスの **Web機能** ページ](../settings/web.md#アクセス権) で **ds.authentify() 関数を通しての REST認証を有効化** ボタンが利用可能になります。 このボタンはセキュリティ設定を自動的にアップグレードします (コードを修正する必要があるかもしれません。[このブログ記事を参照ください](https://blog.4d.com/ja/force-login-becomes-default-for-all-rest-auth))。
 :::
 
 :::note Qodly Studio
