@@ -54,7 +54,7 @@ Para actualizar las otras máquinas clientes que no estén conectadas, basta con
 - **DB4D Server** (database server): 19814 by default. This port number cannot be modified directly but it always consists of the application server port number + 1.\
   When a 4D client connects to 4D Server, it uses the TCP port of the application server (19813 or the port indicated after the colon ':' in the IP address shown in the connection dialog box). Connection to other servers via their respective ports is then automatic; it is no longer necessary to specify them.\
   Note that in the case of access via a router or a firewall, the three TCP ports must be opened explicitly.
-- [**Remote Debugger**](../Debugging/debugging-remote.md): 19815 by default. This port number cannot be modified directly but it always consists of the application server port number + 2.
+- [**Depurador remoto**](../Debugging/debugging-remote.md): 19815 por defecto. This port number cannot be modified directly but it always consists of the application server port number + 2.
 
 #### Autenticación del usuario con el servidor de dominio
 
