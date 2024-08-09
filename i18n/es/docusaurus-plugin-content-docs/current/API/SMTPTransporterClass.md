@@ -52,13 +52,13 @@ Los objetos SMTP Transporter se instancian con el comando [SMTP New transporter]
 
 #### Descripción
 
-The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new *[SMTP transporter](#smtp-transporter-object)* object. El objeto transportador devuelto se utilizará normalmente para el envío de correos electrónicos.
+El comando `SMTP New transporter` <!-- REF #_command_.SMTP New transporter.Summary -->configura una nueva conexión SMTP<!-- END REF --> de acuerdo con el parámetro *server* y devuelve un nuevo objeto *[SMTP transporter](#smtp-transporter-object)*. El objeto transportador devuelto se utilizará normalmente para el envío de correos electrónicos.
 
 > Este comando no abre ninguna conexión con el servidor SMTP. La conexión SMTP se abre realmente cuando se ejecuta la función [`.send()`](#send).
 >
 > La conexión SMTP se cierra automáticamente:
 >
-> - when the transporter object is destroyed if the [`keepAlive`](#keepalive) property is true (default),
+> - cuando el objeto transportador es destruido si la propiedad [`keepAlive`](#keepalive) es true (por defecto),
 > - después de cada ejecución de la función [`.send( )`](#send) si la propiedad [`keepAlive`](#keepalive) está definida en false.
 
 En el parámetro *server*, pase un objeto que contenga las siguientes propiedades:
@@ -87,12 +87,11 @@ La función devuelve un [**objeto SMTP transporter**](#smtp-transporter-object).
 
 ```4d
  $server:=New object
- $server.host:="smtp.gmail.com" //Mandatory
+ $server.host:="smtp.gmail.com" //Obligatorio
  $server.port:=465
  $server.user:="4D@gmail.com"
  $server.password:="XXXX"
- $server.logFile:="LogTest.txt" //Extended log to save in the Logs folder
-
+ $server.logFile:="LogTest.txt" //Log extendido a guardar en la carpeta Logs
  var $transporter : 4D.SMTPTransporter
  $transporter:=SMTP New transporter($server)
 
@@ -138,7 +137,7 @@ La función `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summar
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
-For information about SMTP status codes, please refer to [this page](https://www.usps.org/info/smtp_status.html).
+Para obtener información sobre los códigos de estado SMTP, por favor consulte [esta página](https://www.usps.org/info/smtp_status.html).
 
 #### Ejemplo
 
@@ -184,7 +183,7 @@ For information about SMTP status codes, please refer to [this page](https://www
 
 #### Descripción
 
-The `.keepAlive` property contains <!-- REF #SMTPTransporterClass.keepAlive.Summary -->**True** if the SMTP connection must be kept alive until the `transporter` object is destroyed<!-- END REF -->, and **False** otherwise. Por defecto, si la propiedad `keepAlive` no se ha definido en el objeto `server` (utilizado para crear el objeto `transporter` con `SMTP New transporter`), es **True**.
+La propiedad `.keepAlive` contiene <!-- REF #SMTPTransporterClass.keepAlive.Summary -->**True** si la conexión SMTP debe permanecer activa hasta que el objeto `transporter` sea destruido<!-- END REF -->, y **False** en caso contrario. Por defecto, si la propiedad `keepAlive` no se ha definido en el objeto `server` (utilizado para crear el objeto `transporter` con `SMTP New transporter`), es **True**.
 
 La conexión SMTP se cierra automáticamente:
 
@@ -219,11 +218,11 @@ La conexión SMTP se cierra automáticamente:
 
 #### Descripción
 
-The `.send()` function <!-- REF #SMTPTransporterClass.send().Summary -->sends the [*mail* object](EmailObjectClass.md#email-object) to the SMTP server defined in the `transporter` object and returns a status object<!-- END REF -->.
+La función `.send()` <!-- REF #SMTPTransporterClass.send().Summary -->envía el [*objeto mail*](EmailObjectClass.md#email-object) al servidor SMTP definido en el objeto `transporter` y devuelve un objeto estado<!-- END REF -->.
 
 > El objeto `transporter` debe haber sido creado con el comando `SMTP New transporter`.
 
-El método crea la conexión SMTP si no está ya activa. If the `.keepAlive` property of the `transporter` object is **false**, the SMTP connection is automatically closed after the execution of `.send()`, otherwise it stays alive until the `transporter` object is destroyed. Para más información, consulte la descripción del comando [`SMTP New transporter`](#smtp-new-transporter).
+El método crea la conexión SMTP si no está ya activa. Si la propiedad `.keepAlive` del objeto `transporter` es **false**, la conexión SMTP se cierra automáticamente después de la ejecución de `. end()`, de lo contrario permanece viva hasta que el objeto `transporter` sea destruido. Para más información, consulte la descripción del comando [`SMTP New transporter`](#smtp-new-transporter).
 
 En *mail*, pase un [objeto `Email`](EmailObjectClass.md#email-object) válido para enviar. Las propiedades origen (de dónde viene el correo electrónico) y destino (uno o varios destinatarios) deben incluirse, el resto de propiedades son opcionales.
 
@@ -237,7 +236,7 @@ La función devuelve un objeto que describe el estado SMTP de la operación. Est
 | status     | number  | Código de estado devuelto por el servidor SMTP (0 en caso de un problema no relacionado con el procesamiento del correo) |
 | statusText | text    | Mensaje de estado devuelto por el servidor SMTP                                                                                             |
 
-In case of an issue unrelated to the SMTP processing (e.g. a mandatory property is missing in mail), 4D generates an error that you can intercept using a method installed by the `ON ERR CALL` command. Utilice el comando `GET LAST ERROR STACK` para obtener información sobre el error.
+En caso de un problema no relacionado con el procesamiento SMTP (por ejemplo, si falta una propiedad obligatoria en el correo), 4D genera un error que puede interceptar utilizando un método instalado por el comando `ON ERR CALL`. Utilice el comando `GET LAST ERROR STACK` para obtener información sobre el error.
 
 En este caso, el objeto estado resultante contiene los siguientes valores:
 
