@@ -63,12 +63,12 @@ As ações disponíveis estão relacionadas com o recurso alvo.
 - A computed attribute can be accessed even if there are no permissions on the attributes upon which it is built.
 - Você pode atribuir uma ação de permissão a uma classe de singleton (tipo `singleton`), nesse caso ele será aplicado a todas as suas funções expostas, ou a uma função de singleton (tipo `singletonMethod`).
 - Valores por defecto: en la implementación actual, solo *Null* está disponible como valor por defecto.
-- In REST [force login mode](../REST/authUsers.md/#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, whatever the permissions configuration.
+- No REST [modo de login](../REST/authUsers.md/#force-login-mode), a [função `authentify()`](../REST/authUsers.md#function-authentify) é sempre executável por usuários convidados, independentemente da configuração das permissões.
 
 A definição das permissões deve ser coerente, nomeadamente:
 
 - los permisos **update** y **drop** también necesitan el permiso **read** (pero **create** no lo necesita)
-- For data model functions, **promote** permission also needs **describe** permission.
+- Para funções do modelo de dados, permissão de **promoção** também precisa de permissão **descrever**.
 
 ## Privilégios e roles
 
@@ -112,9 +112,9 @@ El archivo `roles.json` describe todos los parámetros de seguridad del proyecto
 
 ### Arquivo padrão
 
-When you create a project, a default `roles.json` file is created at the following location: `<project folder>/Project/Sources/` (see [Architecture](../Project/architecture.md#sources) section).
+Quando você cria um projeto, um arquivo `roles.json` padrão é criado no seguinte local: `<pasta do projeto>/Projeto/Fontes/` (consulte a seção [Arquitetura](../Projeto/arquitetura.md#fontes)).
 
-The default file has the following contents:
+O arquivo padrão tem o seguinte conteúdo:
 
 ```json title="/Project/Sources/roles.json"
 
@@ -150,17 +150,17 @@ The default file has the following contents:
 
 ```
 
-For a highest level of security, the "none" privilege is assigned to all permissions in the datastore, thus data access on the whole `ds` object is disabled by default. It is recommended not to modified or use this locking privilege, but to add specific permissions to each resource you wish to make available from web or REST requests ([see example below](example-of-privilege-configuration)).
+Para um nível máximo de segurança, o privilégio "none" é atribuído a todas as permissões no datastore, assim o acesso aos dados no objeto `ds` inteiro é desabilitado por padrão. It is recommended not to modified or use this locking privilege, but to add specific permissions to each resource you wish to make available from web or REST requests ([see example below](example-of-privilege-configuration)).
 
 :::caution
 
-When no specific parameters are defined in the `roles.json` file, accesses are not limited. This configuration allows you to develop the application without having to worry about accesses, but is not recommended in production environment.
+Quando nenhum parâmetro específico é definido no arquivo `roles.json`, os acessos não são limitados. Esta configuração permite que você desenvolva a aplicação sem se preocupar com acessos, mas não é recomendada em ambiente de produção.
 
 :::
 
 :::note Compatibidade
 
-In previous releases, the `roles.json` file was not created by default. As of 4D 20 R6, when opening an existing project that does not contain a `roles.json` file or the `"forceLogin": true` settings, the **Activate REST authentication through ds.authentify() function** button is available in the [**Web Features** page of the Settings dialog box](../settings/web.md#access). This button automatically upgrades your security settings (you may have to modify your code, [see this blog post](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/)).
+Em versões anteriores, o arquivo `roles.json` não foi criado por padrão. A partir de 4D 20 R6, ao abrir um projeto existente que não contém um `cargos. arquivo son` ou as configurações `"forceLogin": true`, a **Ativar autenticação REST através de d. Função uthentify()** está disponível na página [**Recursos Web** da caixa de diálogo Configurações](../settings/web.md#access). Este botão atualiza automaticamente suas configurações de segurança (você pode ter que modificar seu código, [veja este post de blog](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/)).
 :::
 
 :::note Qodly Studio
@@ -218,9 +218,9 @@ Else // you can prevent the project to open
 End if
 ```
 
-## Example of privilege configuration
+## Exemplo de configuração de privilégios
 
-The good practice is to keep all data access locked by default thanks to the "none" privilege and to configure the `roles.json` file to only open controlled parts to authorized sessions. For example, to allow some accesses to guest sessions:
+A boa prática é manter todo o acesso aos dados bloqueado por padrão graças ao privilégio "none" e configurar o arquivo `roles.json` para abrir apenas partes controladas para sessões autorizadas. Por exemplo, para permitir alguns acessos às sessões de convidados:
 
 ```json title="/Project/Sources/roles.json"
 
