@@ -2853,13 +2853,13 @@ Se pueden encontrar más ejemplos de búsquedas en la página `dataClass.query()
 
 <!-- REF #collection.reduce().Params -->
 
-| Parámetros | Tipo                                            |     | Descripción                                                                       |
-| ---------- | ----------------------------------------------- | :-: | --------------------------------------------------------------------------------- |
-| formula    | 4D.Function                     |  -> | Objeto fórmula                                                                    |
-| methodName | Text                                            |  -> | Nombre de un método                                                               |
-| initValue  | Text, Number, Object, Collection, Date, Boolean |  -> | Value to use as the first argument to the first call of *formula* or *methodName* |
-| param      | expresión                                       |  -> | Parámetro(s) a pasar                                           |
-| Result     | Text, Number, Object, Collection, Date, Boolean |  <- | Resultado del valor del acumulador                                                |
+| Parámetros | Tipo                                            |     | Descripción                                                                              |
+| ---------- | ----------------------------------------------- | :-: | ---------------------------------------------------------------------------------------- |
+| formula    | 4D.Function                     |  -> | Objeto fórmula                                                                           |
+| methodName | Text                                            |  -> | Nombre de un método                                                                      |
+| initValue  | Text, Number, Object, Collection, Date, Boolean |  -> | Valor a utilizar como primer argumento de la primera llamada de *formula* o *methodName* |
+| param      | expresión                                       |  -> | Parámetro(s) a pasar                                                  |
+| Result     | Text, Number, Object, Collection, Date, Boolean |  <- | Resultado del valor del acumulador                                                       |
 
 <!-- END REF -->
 
@@ -2938,13 +2938,13 @@ Con el siguiente método ***Flatten***:
 
 <!-- REF #collection.reduceRight().Params -->
 
-| Parámetros | Tipo                                            |     | Descripción                                                                       |
-| ---------- | ----------------------------------------------- | :-: | --------------------------------------------------------------------------------- |
-| formula    | 4D.Function                     |  -> | Objeto fórmula                                                                    |
-| methodName | Text                                            |  -> | Nombre de un método                                                               |
-| initValue  | Text, Number, Object, Collection, Date, Boolean |  -> | Value to use as the first argument to the first call of *formula* or *methodName* |
-| param      | expresión                                       |  -> | Parámetro(s) a pasar                                           |
-| Result     | Text, Number, Object, Collection, Date, Boolean |  <- | Resultado del valor del acumulador                                                |
+| Parámetros | Tipo                                            |     | Descripción                                                                              |
+| ---------- | ----------------------------------------------- | :-: | ---------------------------------------------------------------------------------------- |
+| formula    | 4D.Function                     |  -> | Objeto fórmula                                                                           |
+| methodName | Text                                            |  -> | Nombre de un método                                                                      |
+| initValue  | Text, Number, Object, Collection, Date, Boolean |  -> | Valor a utilizar como primer argumento de la primera llamada de *formula* o *methodName* |
+| param      | expresión                                       |  -> | Parámetro(s) a pasar                                                  |
+| Result     | Text, Number, Object, Collection, Date, Boolean |  <- | Resultado del valor del acumulador                                                       |
 
 <!-- END REF -->
 
