@@ -158,9 +158,9 @@ Se aplica carga diferida.
 
 En el parámetro opcional *settings* se puede pasar un objeto que contenga opciones adicionales. Se soporta la siguiente propiedad:
 
-| Propiedad | Tipo | Descripción                                                                                                                                                                                                                                                                                                                                                          |
-| --------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Etiqueta para el contexto de optimización aplicado a la selección de entidades. Este contexto será utilizado por el código que maneja la selección de entidades para que pueda beneficiarse de la optimización. This feature is [designed for ORDA client/server processing](../ORDA/client-server-optimization.md). |
+| Propiedad | Tipo | Descripción                                                                                                                                                                                                                                                                                                                                                                            |
+| --------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Etiqueta para el contexto de optimización aplicado a la selección de entidades. Este contexto será utilizado por el código que maneja la selección de entidades para que pueda beneficiarse de la optimización. Esta funcionalidad está [diseñada para el procesamiento cliente/servidor ORDA](../ORDA/client-server-optimization.md). |
 
 > Para conocer el número total de entidades de una dataclass, se recomienda utilizar la función [`getCount()`](#getcount) que está más optimizada que la expresión `ds.myClass.all().length`.
 
@@ -293,9 +293,9 @@ Si se da un atributo \_\_STAMP, se realiza una comprobación con el sello en el 
 
 En el parámetro opcional *settings* se puede pasar un objeto que contenga opciones adicionales. Se soporta la siguiente propiedad:
 
-| Propiedad | Tipo | Descripción                                                                                                                                                                                                                                                                                                                                                          |
-| --------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Etiqueta para el contexto de optimización aplicado a la selección de entidades. Este contexto será utilizado por el código que maneja la selección de entidades para que pueda beneficiarse de la optimización. This feature is [designed for ORDA client/server processing](../ORDA/client-server-optimization.md). |
+| Propiedad | Tipo | Descripción                                                                                                                                                                                                                                                                                                                                                                            |
+| --------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Etiqueta para el contexto de optimización aplicado a la selección de entidades. Este contexto será utilizado por el código que maneja la selección de entidades para que pueda beneficiarse de la optimización. Esta funcionalidad está [diseñada para el procesamiento cliente/servidor ORDA](../ORDA/client-server-optimization.md). |
 
 #### Ejemplo 1
 
@@ -469,9 +469,9 @@ Se aplica la carga diferida, lo que significa que los datos relacionados se carg
 
 En el parámetro opcional *settings* se puede pasar un objeto que contenga opciones adicionales. Se soporta la siguiente propiedad:
 
-| Propiedad | Tipo | Descripción                                                                                                                                                                                                                                                                                                                                                |
-| --------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Etiqueta para el contexto de optimización automática aplicado a la entidad. Este contexto será utilizado por el código siguiente que carga la entidad para que pueda beneficiarse de la optimización. This feature is [designed for ORDA client/server processing](../ORDA/client-server-optimization.md). |
+| Propiedad | Tipo | Descripción                                                                                                                                                                                                                                                                                                                                                                  |
+| --------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Etiqueta para el contexto de optimización automática aplicado a la entidad. Este contexto será utilizado por el código siguiente que carga la entidad para que pueda beneficiarse de la optimización. Esta funcionalidad está [diseñada para el procesamiento cliente/servidor ORDA](../ORDA/client-server-optimization.md). |
 
 :::info
 
