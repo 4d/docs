@@ -223,7 +223,7 @@ $ds.Persons.clearRemoteCache()
 // Persons データクラスのキャッシュ = {timeout:30;maxEntries:30000;stamp:255;entries:[]}
 ```
 
-\####参照
+#### 参照
 
 [`entitySelection.refresh()`](EntitySelectionClass.md#refresh)
 

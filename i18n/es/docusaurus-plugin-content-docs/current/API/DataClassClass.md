@@ -223,7 +223,7 @@ $ds.Persons.clearRemoteCache()
 // Caché de la dataclass Persons  = {timeout:30;maxEntries:30000;stamp:255;entries:[]}
 ```
 
-\####Ver también
+#### Ver también
 
 [`entitySelection.refresh()`](EntitySelectionClass.md#refresh)
 
