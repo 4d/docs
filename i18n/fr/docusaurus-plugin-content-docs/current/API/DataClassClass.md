@@ -158,9 +158,9 @@ Le mode lazy loading est appliqué.
 
 Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant des options supplémentaires. La propriété suivante est prise en charge :
 
-| Propriété | Type | Description                                                                                                                                                                                                                                                                                                                   |
-| --------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Nom du contexte d'optimisation appliqué à l'entity selection. Ce contexte sera utilisé par le code qui manipule l'entity selection afin de bénéficier de l'optimisation. This feature is [designed for ORDA client/server processing](../ORDA/client-server-optimization.md). |
+| Propriété | Type | Description                                                                                                                                                                                                                                                                                                                               |
+| --------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Nom du contexte d'optimisation appliqué à l'entity selection. Ce contexte sera utilisé par le code qui manipule l'entity selection afin de bénéficier de l'optimisation. Cette fonctionnalité est [conçue pour le traitement ORDA client/serveur](../ORDA/client-server-optimization.md). |
 
 > Pour connaître le nombre total d'entités dans une dataclass, il est recommandé d'utiliser la fonction [`getCount()`](#getcount) qui est plus optimisée que l'expression `ds.myClass.all().length`.
 
@@ -223,7 +223,7 @@ $ds.Persons.clearRemoteCache()
 // Cache of the Persons dataclass = {timeout:30;maxEntries:30000;stamp:255;entries:[]}
 ```
 
-\####See also
+#### Voir également
 
 [`entitySelection.refresh()`](EntitySelectionClass.md#refresh)
 
@@ -293,9 +293,9 @@ Si une propriété \_\_STAMP est fournie, une vérification est effectuée sur l
 
 Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant des options supplémentaires. La propriété suivante est prise en charge :
 
-| Propriété | Type | Description                                                                                                                                                                                                                                                                                                                   |
-| --------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Nom du contexte d'optimisation appliqué à l'entity selection. Ce contexte sera utilisé par le code qui manipule l'entity selection afin de bénéficier de l'optimisation. This feature is [designed for ORDA client/server processing](../ORDA/client-server-optimization.md). |
+| Propriété | Type | Description                                                                                                                                                                                                                                                                                                                               |
+| --------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Nom du contexte d'optimisation appliqué à l'entity selection. Ce contexte sera utilisé par le code qui manipule l'entity selection afin de bénéficier de l'optimisation. Cette fonctionnalité est [conçue pour le traitement ORDA client/serveur](../ORDA/client-server-optimization.md). |
 
 #### Exemple 1
 
@@ -463,13 +463,13 @@ Le chargement différé (lazy loading) est appliqué, ce qui signifie que les do
 
 Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant des options supplémentaires. La propriété suivante est prise en charge :
 
-| Propriété | Type | Description                                                                                                                                                                                                                                                                                               |
-| --------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Nom du contexte d'optimisation appliqué à l'entité. Ce contexte sera utilisé par le code qui manipule l'entité afin de bénéficier de l'optimisation. This feature is [designed for ORDA client/server processing](../ORDA/client-server-optimization.md). |
+| Propriété | Type | Description                                                                                                                                                                                                                                                                                                           |
+| --------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Nom du contexte d'optimisation appliqué à l'entité. Ce contexte sera utilisé par le code qui manipule l'entité afin de bénéficier de l'optimisation. Cette fonctionnalité est [conçue pour le traitement ORDA client/serveur](../ORDA/client-server-optimization.md). |
 
 :::info
 
-When you call the `.get()` function **without** *settings* parameter, a request for attribute values is directly sent to the server (the [ORDA cache](../ORDA/client-server-optimization.md#orda-cache) is not used). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. It may be advisable in this case to call [`reload()`](EntityClass.md#reload) to make sure the most recent data is retrieved from the server.
+Lorsque vous appelez la fonction `.get()` **sans** paramètre *settings*, une requête de valeur d'attribut est envoyée directement au serveur (le [cache ORDA](.. /ORDA/client-server-optimization.md#orda-cache) n'est pas utilisé). Par contre, lorsque vous appelez `.get()` **avec** un `context` passé dans le paramètre *settings*, les valeurs des attributs sont récupérées à partir du cache ORDA correspondant au contexte. Dans ce cas, il peut être conseillé d'appeler [`reload()`](EntityClass.md#reload) pour s'assurer que les données les plus récentes sont récupérées depuis le serveur.
 
 :::
 
