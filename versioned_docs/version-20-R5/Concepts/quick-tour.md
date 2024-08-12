@@ -357,7 +357,7 @@ $str:=String("hello world!")
 ```4d
 $str:=String("hello"+\
 " world"+\
-+"!")
+"!")
 ```
 
 ## Comments
