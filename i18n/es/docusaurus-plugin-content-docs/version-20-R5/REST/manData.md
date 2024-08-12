@@ -7,7 +7,7 @@ Todos [los atributos, dataclasses expuestos](configuration.md#exposing-tables-an
 
 ## Buscar datos
 
-To query data directly, you can do so using the [`$filter`]($filter.md) function. Por ejemplo, para encontrar a una persona llamada "Smith", podría escribir:
+Para consultar los datos directamente, puede hacerlo mediante la función [`$filter`]($filter.md). Por ejemplo, para encontrar a una persona llamada "Smith", podría escribir:
 
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=Smith"`
 

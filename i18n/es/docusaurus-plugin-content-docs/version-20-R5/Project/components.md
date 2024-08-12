@@ -120,12 +120,12 @@ El panel Dependencias enumera todas las dependencias del proyecto, sea cual sea 
 
 Se soportan los siguientes orígenes:
 
-| Etiqueta de origen      | Descripción                                                                     |
-| ----------------------- | ------------------------------------------------------------------------------- |
-| Componente 4D           | Built-in 4D component, stored in the `Components` folder of the 4D application  |
-| Source                  | Componente declarado en el archivo [`dependencies.json`](#dependenciesjson)     |
-| Entorno                 | Componente declarado en el archivo [`environnement4d.json`](#environment4djson) |
-| Componente del proyecto | Componente ubicado en la carpeta [`Components`](architecture.md#components)     |
+| Etiqueta de origen      | Descripción                                                                        |
+| ----------------------- | ---------------------------------------------------------------------------------- |
+| Componente 4D           | Componente 4D integrado, almacenado en la carpeta `Components` de la aplicación 4D |
+| Source                  | Componente declarado en el archivo [`dependencies.json`](#dependenciesjson)        |
+| Entorno                 | Componente declarado en el archivo [`environnement4d.json`](#environment4djson)    |
+| Componente del proyecto | Componente ubicado en la carpeta [`Components`](architecture.md#components)        |
 
 **Clic derecho** en una línea de dependencia y selecciona **Mostrar en el disco** para revelar la ubicación de una dependencia:
 

@@ -70,7 +70,7 @@ El archivo de plantilla permite definir lo siguiente:
 - la fórmula que devuelve una selección de entidades utilizada como fuente de datos de la tabla,
 - las fórmulas de ruptura (si se puede insertar una línea de ruptura)
 - los atributos de la clase de datos que pueden utilizarse como columnas de la tabla,
-- the formulas available as contextual menus inside break rows, carry-over row, placeholder row or extra rows.
+- las fórmulas disponibles como menús contextuales dentro de las filas de interrupción, fila de arrastre, fila de marcador de posición o filas adicionales.
 
 El archivo de plantillas debe ser almacenado en una carpeta "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" dentro de su proyecto.
 

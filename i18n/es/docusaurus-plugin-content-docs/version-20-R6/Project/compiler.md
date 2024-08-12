@@ -87,7 +87,7 @@ Al hacer doble clic en un aviso se abre el método correspondiente.
 
 ## Parámetros del compilador
 
-The "Compiler" tab of the Settings dialog box lets you set parameters related to project compilation. Puede abrir directamente esta página desde la [ventana del compilador](#compiler-window) haciendo clic en el botón **Parámetros del compilador**:
+La pestaña "Compilador" de la caja de diálogo Propiedades le permite definir los parámetros relacionados con la compilación del proyecto. Puede abrir directamente esta página desde la [ventana del compilador](#compiler-window) haciendo clic en el botón **Parámetros del compilador**:
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -182,7 +182,7 @@ Cuando se modifica el estado de visualización de una advertencia, la informaci�
 
 El botón **Restablecer parámetros de fábrica** define todas las casillas de verificación de estado de visualización de advertencias en los valores predeterminados y borra el archivo "warnings.json".
 
-### Disabling and enabling warnings locally
+### Desactivar y activar advertencias localmente
 
 Puede controlar las advertencias en partes específicas de su código utilizando comentarios especiales para desactivarlas o activarlas.
 
@@ -225,7 +225,7 @@ Por ejemplo, para desactivar la siguiente advertencia:
 
 :::note
 
-The special warnings comments have priority over the warnings display settings set in the warning tab.
+Los comentarios de advertencias especiales tienen prioridad sobre la configuración de la pantalla de advertencias definida en la pestaña de advertencias.
 
 :::
 

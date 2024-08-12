@@ -57,7 +57,7 @@ Este modo le permite implementar la siguiente secuencia de acceso:
 
 Las peticiones REST descriptivas pueden procesarse en sesiones de usuario web que no requieren licencias (sesiones "invitado"). Estas peticiones son:
 
-- [`/rest/$catalog`]($catalog.md) requests (e.g. `/rest/$catalog/$all`) - access to available dataclasses
+- peticiones [`/rest/$catalog`]($catalog.md) (por ejemplo, `/rest/$catalog/$all`) - acceso a las dataclasse disponibles
 - `/rest/$catalog/authentify` - la función del almacén de datos utilizada para iniciar sesión del usuario
 - `/rest/$getWebForm` - la renderización de un formulario Qodly
 
@@ -78,7 +78,7 @@ This function is the only available entry point from REST guest sessions when th
 
 :::note
 
-The `authentify()` function can always be executed by a REST guest session, whatever the [`roles.json` file](../ORDA/privileges.md#rolesjson-file) configuration.
+La función `authentify()` siempre puede ser ejecutada por una sesión de invitado de REST, independientemente de la configuración del archivo [`roles.json`](../ORDA/privileges.md#rolesjson-file).
 
 :::
 
@@ -104,7 +104,7 @@ var $user : cs.UsersEntity
 $users:=ds.Users.query("name = :1"; $credentials.name)
 $user:=$users.first()
 
-If ($user#Null) //the user is known
+If ($user#Null) //el usuario es conocido
 	If (Verify password hash($credentials.password; $user.password))
 		Session.setPrivileges("vip")
 	Else

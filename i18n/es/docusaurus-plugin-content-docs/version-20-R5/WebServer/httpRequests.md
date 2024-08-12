@@ -39,11 +39,11 @@ Por ejemplo, la URL "_a/b/c_" llamará al método base, pero "_a/b/c.html_" no l
 Debe declarar estos parámetros de la siguiente manera:
 
 ```4d
-//On Web Connection database method
+//Método base On Web Connection
  
  C_TEXT($1;$2;$3;$4;$5;$6)
  
-//Code for the method
+//Código para el métodod
 ```
 
 Como alternativa, puede utilizar la sintaxis [parámetros nombrados](Concepts/parameters.md#named-parameters):
@@ -56,7 +56,7 @@ Como alternativa, puede utilizar la sintaxis [parámetros nombrados](Concepts/pa
 
 ```
 
-> Calling a 4D command that displays an interface element (`DIALOG`, `ALERT`, etc.) no está permitido y finaliza el procesamiento del método.
+> Llamando a un comando 4D que muestra un elemento de interfaz (`DIALOG`, `ALERT`, etc.) no está permitido y finaliza el procesamiento del método.
 
 ### $1 - Datos adicionales de la URL
 
