@@ -27,7 +27,7 @@ Puede abrir el CSM en modo mantenimiento desde dos lugares:
 
 En modo estándar, un proyecto se abre. En este modo, algunas funciones de mantenimiento no están disponibles. Tiene varias posibilidades para acceder a la ventana del CSM:
 
-- Use the **Help/Maintenance Security Center** menu or the **MSC** button in the 4D toolbar:\
+- Utilice el menú **Ayuda/Centro de seguridad y mantenimiento** o el botón **CSM** en la barra de herramientas de 4D:\
   ![](../assets/en/MSC/mscicon.png)
 - Utilizar la acción estándar "Csm" que es posible asociar a un comando de menú o a un objeto de formulario.
 - Utilice el comando `OPEN SECURITY CENTER`.
