@@ -111,7 +111,7 @@ VP SET COLUMN COUNT("myVpArea";5)
 
 ### Utilización de objetos de rango
 
-Algunos comandos 4D View Pro requieren un parámetro _rangeObj_. En 4D View Pro, un rango es un objeto que hace referencia a un área en una hoja de cálculo. Esta área puede estar compuesta de una o varias celdas. Using 4D View Pro commands, you can create ranges and pass them to other commands to read from or write to specific locations in your document.
+Algunos comandos 4D View Pro requieren un parámetro _rangeObj_. En 4D View Pro, un rango es un objeto que hace referencia a un área en una hoja de cálculo. Esta área puede estar compuesta de una o varias celdas. Utilizando los comandos 4D View Pro, puede crear rangos y pasarlos a otros comandos para leer o escribir en lugares específicos de su documento.
 
 Por ejemplo, para crear un objeto rango para las siguientes celdas:
 
