@@ -10,7 +10,7 @@ Read [**What’s new in 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 #### Destacados
 
 - List box columns and headers of type time now support the ["blankIfNull" option](../FormObjects/properties_Display.md#time-format).
-- New properties in [.getBoxInfo()](../API/IMAPTransporterClass.md#getboxinfo) and [.getBoxList()](../API/IMAPTransporterClass.md#getboxlist).
+- Nuevas propiedades en [.getBoxInfo()](../API/IMAPTransporterClass.md#getboxinfo) y [.getBoxList()](../API/IMAPTransporterClass.md#getboxlist).
 
 ## 4D 20 R6
 
@@ -20,7 +20,7 @@ Lea [**Novedades en 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-20-R6/), 
 
 - Soporte de operadores de comparación en las [referencias de objeto](../Concepts/dt_object.md#operatodores-en-los-objetos) y las [referencias de colección](../Concepts/dt_collection.md#operadores-en-las-colecciones). [`collection.query()`](../API/CollectionClass.md#query) now supports [object and collection references as query values](../API/CollectionClass.md#object-or-collection-reference-as-value).
 - When a component has a [declared namespace](../Extensions/develop-components.md#declaring-the-component-namespace), its classes are now automatically shared between all loaded components in the host project via [`cs.<namespace>`](../Concepts/classes.md#cs).
-- Component manager: Support of [components stored on GitHub](../Project/components.md#declaring-components-stored-on-github).
+- Gestión de componentes: soporte de [componentes almacenados en GitHub](../Project/components.md#declaring-components-stored-on-github).
 - New [`entitySelection.clean()`](../API/EntitySelectionClass.md#clean) function and [`$clean`](../REST/$clean.md) REST API to get a new entity selection based upon the original entity selection but without its deleted entities.
 - New [`session.getPrivileges()`](../API/SessionClass.md#getprivileges) function and [`$info/privileges`](../REST/$info.md) REST API to inspect session privileges for an easier debugging.
 - Nuevo archivo [4DCEFParameters.json](../FormObjects/webArea_overview.md#4dcefparametersjson) para personalizar las áreas web anidadas de 4D.
@@ -363,7 +363,7 @@ Para obtener información detallada, consulte [esta entrada del blog](https://bl
 
 ## 4D 19 R2
 
-- A [default .gitignore file](../Preferences/general.md#create-gitignore-file) can be created with new projects
+- Se puede crear un [archivo .gitignore por defecto](../Preferences/general.md#create-gitignore-file) con nuevos proyectos
 - Nueva [API clase Blob](../API/BlobClass.md) para manejar nuevos [objetos `4D.Blob`](Concepts/dt_blob.md#blob-types)
 - compatibilidad con `no-bom` y nuevos caracteres de fin de línea por defecto en [`.setText()`](../API/FileClass.md#settext)
 
