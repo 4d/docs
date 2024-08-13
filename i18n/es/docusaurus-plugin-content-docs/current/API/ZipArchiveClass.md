@@ -219,7 +219,7 @@ The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->r
 
 Pase un objeto `4D.File` que haga referencia al archivo ZIP comprimido en el parámetro *zipFile*. The target archive file will be opened until the `ZIP Read archive` has finished executing and all contents/references have been extracted/released, then it will be closed automatically.
 
-If the *zipFile* is password protected, you need to use the optional *password* parameter to provide a password. Si se requiere una contraseña pero no se pasa al intentar leer el contenido del archivo, se genera un error.
+Si el *zipFile* está protegido por contraseña, es necesario utilizar el parámetro opcional *password* para suministrar una contraseña. Si se requiere una contraseña pero no se pasa al intentar leer el contenido del archivo, se genera un error.
 
 **Objeto archivo**
 
