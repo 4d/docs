@@ -129,9 +129,6 @@ const Sections = [
         <Link to="Admin/licenses">
           <Translate>Licenses</Translate>
         </Link>
-        <Link to="Users/overview">
-          <Translate>Access Rights</Translate>
-        </Link>
         <Link to="MSC/overview">
           <Translate>Maintenance and Security Center</Translate>
         </Link>
@@ -230,6 +227,9 @@ const Sections = [
       <div className="homepageLinks">
         <Link to="Desktop/clientServer" >
           <Translate>Client/Server</Translate>
+        </Link>
+        <Link to="Users/overview">
+          <Translate>Access Rights</Translate>
         </Link>
         <Link to="FormEditor/forms" >
           <Translate>Forms</Translate>
