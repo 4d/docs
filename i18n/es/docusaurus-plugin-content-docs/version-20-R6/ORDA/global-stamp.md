@@ -7,7 +7,7 @@ title: Utilizando el sello global
 
 4D gestiona automáticamente un **sello de modificación global** interno, útil para manejar implementaciones de seguimiento de cambios de datos, por ejemplo para monitorear la actividad, realizar copias de seguridad, ejecutar sincronizaciones incrementales
 
-El sello de modificación global es un número, siempre mantenido por 4D, incluso en caso de restauración de la base de datos, importación, etc. Note however that the stamp can be modified using the [`.setGlobalStamp()`](../API/DataStoreClass.md#setglobalstamp) function.
+El sello de modificación global es un número, siempre mantenido por 4D, incluso en caso de restauración de la base de datos, importación, etc. Note sin embargo que el sello puede ser modificado por la función [`.setGlobalStamp()`](../API/DataStoreClass.md#setglobalstamp).
 
 Una vez [configurado y habilitado el seguimiento de cambios de datos](#configuring-data-change-tracking), las siguientes acciones son ejecutadas automáticamente por 4D en cada modificación de registro (añadir, modificar, borrar):
 
@@ -81,17 +81,17 @@ Para desactivar el seguimiento de cambios de datos:
 var $oldStamp : Real
 var $tableName : Text
 var $modifiedEmps : cs.EmployeeSelection
-var $deletedEmpsInfo : cs.__DeletedRecordsSelection
+var $deletedEmpsInfo : cs. _DeletedRecordsSelection
 
 $tableName:="Employee"
-$oldStamp:=... //load the previous stamp value  
-	//from which you want to compare the current stamp
+$oldStamp:=... ///carga el valor del sello anterior  
+	///desde el cual desea comparar el sello actual
 
 If ($oldStamp # ds.getGlobalStamp())
-		//get all new or modified entities
+		//obtener todas las entidades nuevas o modificadas
 	$modifiedEmps:=ds[$tableName].query("__GlobalStamp > :1"; $oldStamp)
-		//get all deleted entities
-	$deletedEmpsInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2";\
+		//obtener todas las entidades eliminadas
+	$deletedEmpsInfo:=ds. _DeletedRecords.query("__Sello > :1 y __TableName = :2";\
 	$oldStamp; $tableName)
 End if
 ```
