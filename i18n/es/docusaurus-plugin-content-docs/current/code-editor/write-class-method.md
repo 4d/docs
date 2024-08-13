@@ -285,7 +285,7 @@ El carácter barra invertida (`\`) tiene un soporte específico en el lenguaje 4
 
 :::caution
 
-El caracter de barra invertida (`\`) se utiliza como separador en [los nombres de ruta en Windows](../Concepts/paths.md#windows). In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash with a double backslash. Por ejemplo, `C:\MyDocuments` se convertirá en `C:\\MyDocuments`. Sin embargo, si escribe `"C:\MyDocuments\New"`, 4D mostrará `"C:\\MyDocuments\New"`. En este caso, la segunda barra invertida se interpreta incorrectamente como `\N` (una [secuencia de escape](../Concepts/quick-tour.md#escape-sequences) existente). Por lo tanto, debe introducir una barra invertida doble cuando quiera insertar una barra invertida antes de un caracter que se utiliza en una de las secuencias de escape reconocidas por 4D.
+El caracter de barra invertida (`\`) se utiliza como separador en [los nombres de ruta en Windows](../Concepts/paths.md#windows). En general, 4D interpretará correctamente los nombres de ruta de Windows introducidos en el Editor de código sustituyendo la barra invertida simple por una barra invertida doble. Por ejemplo, `C:\MyDocuments` se convertirá en `C:\\MyDocuments`. Sin embargo, si escribe `"C:\MyDocuments\New"`, 4D mostrará `"C:\\MyDocuments\New"`. En este caso, la segunda barra invertida se interpreta incorrectamente como `\N` (una [secuencia de escape](../Concepts/quick-tour.md#escape-sequences) existente). Por lo tanto, debe introducir una barra invertida doble cuando quiera insertar una barra invertida antes de un caracter que se utiliza en una de las secuencias de escape reconocidas por 4D.
 
 :::
 
