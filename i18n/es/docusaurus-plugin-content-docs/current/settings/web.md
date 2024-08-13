@@ -312,7 +312,7 @@ El botón activa la siguiente secuencia de actualización:
 
 Recuerde reiniciar su proyecto después de realizar esta actualización.
 
-El siguiente paso es modificar su código en consecuencia. [**See this blog post to know how to proceed**](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/).
+El siguiente paso es modificar su código en consecuencia. [**Vea esta entrada del blog para saber cómo proceder**](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/).
 
 ### Qodly Studio
 
