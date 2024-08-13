@@ -225,8 +225,8 @@ $message:=$o.myClass.hello()
 `Class constructor` キーワードを使用してオブジェクトのプロパティを宣言することもできます (任意)。
 
 ```4d  
-//in the Rectangle.4dm file
-Class constructor ($height: Integer; $width : Integer)
+// Rectangle.4dm ファイル内
+Class constructor ($height : Integer; $width : Integer)
 This.height:=$height
 This.width:=$width
 This.name:="Rectangle"
