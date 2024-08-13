@@ -47,7 +47,7 @@ Cada objeto *dirty row* de la colección devuelta contiene las siguientes propie
 | originalItem | object  | Objeto antes de la modificación          |
 | row          | integer | Índice de la línea modificada            |
 
-If *tableName* is not found or if it does not contain a modified column, the command returns an empty collection.
+Si no se encuentra *tableName* o si no contiene una columna modificada, el comando devuelve una colección vacía.
 
 #### Ejemplo
 
