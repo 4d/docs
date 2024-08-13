@@ -302,7 +302,7 @@ This.name:="Square"
 | 10 # 20                                                                               | Boolean     | これは 2つの数値の論理比較です。 #記号は、"等しくない" を表します。 10と20は "等しくない" ため、この式は true (真) を返します。                                    |
 | "ABC" = "XYZ"                                                                         | Boolean     | これは文字列の論理比較です。 文字列は等しくないため、式は FALSE (偽) を返します。                                                                  |
 | My Picture + 50                                                                       | Picture     | この式は My Picture 変数に入っているピクチャーを右に 50ピクセル移動したピクチャーを返します。                                                                             |
-| ->[People]Name                    | ポインター       | この式は [People]Name フィールドへのポインターを返します。                                           |
+| ->[People]Name                    | Pointer     | この式は [People]Name フィールドへのポインターを返します。                                           |
 | Table (1)                                                          | Pointer     | このコマンドは一番目に定義されたテーブルへのポインターを返します。                                                                                                  |
 | JSON Parse (MyString)                                              | Object      | このコマンドは MyString が適切なフォーマットであれば、オブジェクトとして返します。                                                                                     |
 | JSON Parse (MyJSONArray)                                           | Collection  | このコマンドは MyJSONArray が適切なフォーマットであれば、コレクションとして返します。                                                                                  |
