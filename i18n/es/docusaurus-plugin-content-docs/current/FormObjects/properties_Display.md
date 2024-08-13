@@ -420,9 +420,9 @@ Las columnas booleanas también pueden mostrarse como menús emergentes. En este
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                                                                                                              |
-| ----------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| controlType | string         | <li>**number columns**: "automatic" (default) or "checkbox"</li><li>**boolean columns**: "checkbox" (default) or "popup"</li> |
+| Nombre      | Tipos de datos | Valores posibles                                                                                                                           |
+| ----------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| controlType | string         | <li>**columnas numéricas**: "automatic" (por defecto) o "checkbox"</li><li>**columnas booleanas**: "checkbox" (por defecto) o "popup"</li> |
 
 #### Objetos soportados
 
