@@ -40,14 +40,14 @@ Debe distinguir el operador de asignación := de los demás operadores. En lugar
 El lenguaje 4D es estricto con los tipos de datos, aunque se permite cierta flexibilidad en muchos casos. Por ejemplo, para crear una variable de tipo fecha, puede escribir: Se crea una variable digitada utilizando la palabra clave `var`.
 
 ```4d
-var MyDate : Date 
+var MyDate : Date
 ```
 
 La palabra clave `var` permite declarar variables objeto de un tipo de clase definido, por ejemplo:
 
 ```4d
-var myPerson : cs.Person 
-//de la clase de usuario Person
+var myPerson : cs.Person
+//variable de la clase usuario Person
 ```
 
 
@@ -205,7 +205,7 @@ Para instanciar un objeto de la clase en un método, llame la clase usuario desd
 
 ```4d  
 // en un método 4D
-$o:=cs.myClass.new() 
+$o:=cs.myClass.new()
 ```
 
 En el método clase `myClass`, utilice la instrucción `Function<methodName>` para definir la función miembro clase *methodName*. Una función miembro de clase puede recibir y devolver parámetros como todo método, y utilizar `This` como instancia del objeto.
@@ -228,10 +228,10 @@ $message:=$o.myClass.hello()
 Opcionalmente, utilice la palabra clave `Class constructor` para declarar las propiedades del objeto.
 
 ```4d  
-//en el archivo Rectangle.4dm
+//in the Rectangle.4dm file
 Class constructor ($height: Integer; $width : Integer)
 This.height:=$height
-This.width:=$width 
+This.width:=$width
 This.name:="Rectangle"
 ```
 
@@ -351,7 +351,7 @@ $str:=String("hello world!")
 ```4d
 $str:=String("hello"+\
 " world"+\
-+"!")
+"!")
 ```
 
 ## Comentarios
@@ -396,7 +396,7 @@ End for
 For ($vCounter;1;100)
 /*
 comentarios  
-    /* 
+    /*
     otros comentarios
     */
 */
@@ -425,4 +425,3 @@ En 4D, se pueden utilizar las siguientes secuencias de escape:
 En el siguiente ejemplo, el caracter **Retorno de carro** (secuencia de escape `\r`) se inserta en una sentencia para obtener un diálogo:
 
 `ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
-
