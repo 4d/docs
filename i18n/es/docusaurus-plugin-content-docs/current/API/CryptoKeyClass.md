@@ -68,7 +68,7 @@ El objeto `CryptoKey` devuelto encapsula un par de llaves de cifrado. Es un obje
 
 Un mensaje está firmado por una llave privada y la firma es verificada por la llave pública correspondiente. El siguiente código firma y verifica una firma de mensaje simple.
 
-- Bob's side:
+- Lado bob:
 
 ```4d
 // Create the message
@@ -88,7 +88,7 @@ Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
 /*Bob sends the message, the public key and the signature to Alice*/
 ```
 
-- Alice's side:
+- Lado Alice:
 
 ```4d
 // Get message, public key & signature
