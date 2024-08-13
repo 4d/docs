@@ -15,7 +15,7 @@ You can use Qodly Studio directly from your **4D environment** to build modern a
 
 Qodly Studio también puede utilizarse en la [**plataforma Qodly Cloud**](https://qodly.com), dedicada al desarrollo de aplicaciones profesionales web.
 
-With Qodly Studio, you will discover a totally new web UI, get familiar with the concept of Qodly Sources, and learn how to:
+Con Qodly Studio, descubrirá una interfaz de usuario web totalmente nueva, se familiarizará con el concepto de fuentes Qodly y aprenderá a:
 
 - create Qodly pages by placing components on a canvas
 - mapear componentes a datos
@@ -175,7 +175,7 @@ Puede desarrollar con Qodly Studio mientras su ordenador no esté conectado a In
 
 ### Activación del renderizado
 
-Qodly Studio encapsulates Qodly pages, including layout, data connections, and event-driven logic, in a structured JSON file. Este archivo JSON es procesado sobre la marcha por el renderizador **Qodly** para servir una página web completamente funcional.
+Qodly Studio encapsula las páginas Qodly, incluyendo el diseño, las conexiones de datos y la lógica basada en eventos, en un archivo JSON estructurado. Este archivo JSON es procesado sobre la marcha por el renderizador **Qodly** para servir una página web completamente funcional.
 
 :::info
 
