@@ -66,4 +66,4 @@ Este botón permite mostrar directamente los procesos del usuario o usuarios sel
 
 Este botón puede utilizarse para forzar al usuario(s) seleccionado a desconectarse. When you click on this button, a warning dialog box appears so that you can confirm or cancel this operation (hold down **Alt** key while clicking on the **Drop user** button to disconnect the selected user(s) directly without displaying the confirmation dialog box).
 
-> You can perfom the same action for remote users with the [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html) command.
+> Puede realizar la misma acción para usuarios remotos con el comando [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html).

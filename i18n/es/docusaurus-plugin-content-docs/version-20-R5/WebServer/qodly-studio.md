@@ -175,7 +175,7 @@ Puede desarrollar con Qodly Studio mientras su ordenador no esté conectado a In
 
 ### Activación del renderizado
 
-Qodly Studio encapsulates Qodly forms, including layout, data connections, and event-driven logic, in a structured JSON file. Este archivo JSON es procesado sobre la marcha por el renderizador **Qodly** para servir una página web completamente funcional.
+Qodly Studio encapsula los formularios de Qodly, incluyendo el diseño, las conexiones de datos y la lógica basada en eventos, en un archivo JSON estructurado. Este archivo JSON es procesado sobre la marcha por el renderizador **Qodly** para servir una página web completamente funcional.
 
 :::info
 
@@ -236,7 +236,7 @@ También puede definir esta opción directamente en el archivo [**roles.json**](
 
 :::
 
-When the "force login" mode is **disabled** (default mode), any REST request, including the rendering of an authentication Qodly form, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. When the "force login" mode is **enabled**, a simple authentication Qodly form can be rendered without consuming any license. Basta con implementar la función [`authentify()`](../REST/authUsers.md#function-authentify) en la clase datastore y llamarla desde el formulario de Qodly. La licencia se consume solo cuando el usuario está realmente conectado.
+When the "force login" mode is **disabled** (default mode), any REST request, including the rendering of an authentication Qodly form, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. Cuando el modo "forzar inicio de sesión" está **activado**, se puede mostrar un formulario Qodly de autenticación simple sin consumir ninguna licencia. Basta con implementar la función [`authentify()`](../REST/authUsers.md#function-authentify) en la clase datastore y llamarla desde el formulario de Qodly. La licencia se consume solo cuando el usuario está realmente conectado.
 
 :::info
 

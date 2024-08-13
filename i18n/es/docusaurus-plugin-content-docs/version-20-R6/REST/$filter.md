@@ -43,7 +43,7 @@ Para más información sobre cómo consultar datos en 4D, consulte la documentac
 > For example, you can write the following when passing a value with a quote when using the *params* property:\
 > `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 >
-> If you pass the value directly, you can write the following:
+> Si pasa el valor directamente, puede escribir lo siguiente:
 > `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
 
 ## Atributo

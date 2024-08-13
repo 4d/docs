@@ -103,7 +103,7 @@ Esta operación elimina toda la codificación del archivo de datos. Si ya no des
 1. Haga clic en **Desencriptar todos los datos**.
 2. Introduzca la llave de encriptación de datos actual ( ver Suministrar la llave de encriptación de datos actual).
 
-The data file is fully decrypted and a confirmation message is displayed:
+El archivo de datos se descifra completamente y se muestra un mensaje de confirmación:
 ![](../assets/en/MSC/MSC_encrypt10.png)
 
 > Una vez descifrado el archivo de datos, el estado de cifrado de las tablas no coincide con sus atributos Encriptables. Para restablecer un estado coincidente, debe anular la selección de todos los atributos **Encriptable** al nivel de la estructura de la base.

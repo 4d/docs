@@ -92,7 +92,7 @@ $content:="[\"Toni\",\"Dickey\"]"
 $statusCode:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/Employee/findPerson";$content;$response)
 ```
 
-Method calls are detailed in the [\{dataClass\}](%7BdataClass%7D.html#dataclassmethod-and-dataclasskeymethod) section.
+Las llamadas de métodos se detallan en la sección [\{dataClass\}](%7BdataClass%7D.html#dataclassmethod-and-dataclasskeymethod).
 
 ## Selección de atributos a obtener
 

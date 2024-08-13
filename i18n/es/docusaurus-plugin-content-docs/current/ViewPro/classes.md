@@ -205,7 +205,7 @@ La propiedad `.borderBottom` es la <!-- REF #TableStyle.borderBottom.Summary -->
 
 **.borderHorizontal** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderHorizontal` property is the <!-- REF #TableStyle.borderHorizontal.Summary -->horizontal border line of the table <!-- END REF -->.
+La propiedad `.borderHorizontal` es la <!-- REF #TableStyle.borderHorizontal.Summary -->línea de borde horizontal de la tabla <!-- END REF -->.
 
 ### .borderVertical
 
@@ -314,7 +314,7 @@ La propiedad `.firstRowStripStyle` es el estilo de la primera fila alterna <!-- 
 
 **.footerRowStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.footerRowStyle` property is the <!-- REF #TableThemeOptions.footerRowStyle.Summary -->default style of the footer area<!-- END REF -->.
+La propiedad `.footerRowStyle` es el <!-- REF #TableThemeOptions.footerRowStyle.Summary -->estilo predeterminado del área del pie de página<!-- END REF -->.
 
 ### .headerRowStyle
 
@@ -322,7 +322,7 @@ The `.footerRowStyle` property is the <!-- REF #TableThemeOptions.footerRowStyle
 
 **.headerRowStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.headerRowStyle` property is the <!-- REF #TableThemeOptions.headerRowStyle.Summary -->default style of the header area<!-- END REF -->.
+La propiedad `.headerRowStyle` es el estilo predeterminado<!-- REF #TableThemeOptions.headerRowStyle.Summary --> del área de encabezado<!-- END REF -->.
 
 ### .highlightFirstColumnStyle
 
@@ -402,4 +402,4 @@ La propiedad `.secondRowStripStyle` es el estilo de la <!-- REF #TableThemeOptio
 
 **.wholeTableStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.wholeTableStyle` property is the <!-- REF #TableThemeOptions.wholeTableStyle.Summary -->default style of the data area<!-- END REF -->.
+La propiedad `.wholeTableStyle` es el <!-- REF #TableThemeOptions.wholeTableStyle.Summary -->estilo predeterminado del área de datos<!-- END REF -->.

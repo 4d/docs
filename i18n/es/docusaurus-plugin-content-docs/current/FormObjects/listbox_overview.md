@@ -728,7 +728,7 @@ Si este list box se muestra en forma jerárquica (los tres primeros arrays está
 
 ![](../assets/en/FormObjects/hierarch2.png)
 
-Los arrays no se ordenan antes de construir la jerarquía. If, for example, an array contains the data AAABBAACC, the hierarchy obtained is:
+Los arrays no se ordenan antes de construir la jerarquía. Si, por ejemplo, un array contiene los datos AAABBAACC, la jerarquía obtenida es:
 \>    A
 \>    B
 \>    A

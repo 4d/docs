@@ -28,7 +28,7 @@ La siguiente tabla indica si el modo apropiativo se utiliza o está disponible, 
 - Servidor de servicios web: gestiona las peticiones SOAP
 - ***web setting*** significa que el modo apropiativo depende de un valor de configuración:
   - when [**Scalable sessions**](sessions.md#enabling-sessions) option is selected, the [preemptive mode is automatically used](sessions.md#preemptive-mode) for web processes.
-  - otherwise, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
+  - en caso contrario, se tendrá en cuenta la opción [**Utilizar procesos apropiativos**](webServerConfig.md#use-preemptive-processes).
   - en lo que respecta a los procesos de servicios web (servidor o cliente), se soporta el modo apropiativo a nivel del método. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.en.html)) and make sure they are confirmed thread-safe by the compiler.
 
 ## Escribir código servidor web hilo seguro

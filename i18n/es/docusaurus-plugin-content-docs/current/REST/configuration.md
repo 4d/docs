@@ -26,7 +26,7 @@ Por defecto, los accesos REST están abiertos a todos los usuarios, lo que obvia
 Puede configurar los accesos REST de una de las siguientes maneras:
 
 - (recommended) enable the **force login** mode and create an [`authentify()`](authUsers.md#authentify) datastore class function to authenticate users and assign privileges to their web session (see [User login modes](authUsers.md#user-login-modes)).
-- assign a **Read/Write** user group to REST services in the "**Web** > **Web Features**" page of the Structure Settings;
+- asignar un grupo de usuarios **Lectura/Escritura** a los servicios REST en la página "**Web** > **Funcionalidades web**" de los Parámetros de estructura;
 - escribir un método base `On REST Authentication` para interceptar y manejar cada petición REST inicial.
 
 :::info Importante

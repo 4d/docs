@@ -44,7 +44,7 @@ En el parámetro opcional *options*, puede especificar qué pegar en el rango de
 
 Se tienen en cuenta las opciones de pegado definidas en las [opciones del libro de trabajo](vp-set-workbook-options.md).
 
-If *options* refers to a paste option not present in the copied object (e.g. formulas), the command does nothing.
+Si *options* se refiere a una opción de pegado que no está presente en el objeto copiado (por ejemplo, fórmulas), el comando no hace nada.
 
 #### Ejemplo
 

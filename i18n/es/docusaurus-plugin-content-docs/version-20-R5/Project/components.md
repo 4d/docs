@@ -72,7 +72,7 @@ Ejemplos:
 }
 ```
 
-The **environment4d.json** file can be stored in your project package folder or in one of its parent folders, at any level (up to the root). The benefit of this architecture is that you can store this environment file in a parent folder of your projects and decide not to commit it, allowing you to have your local component organization.
+El archivo **environment4d.json** se puede almacenar en la carpeta del paquete de su proyecto o en una de sus carpetas padre, en cualquier nivel (hasta la raíz). The benefit of this architecture is that you can store this environment file in a parent folder of your projects and decide not to commit it, allowing you to have your local component organization.
 
 :::note
 
