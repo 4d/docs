@@ -34,8 +34,8 @@ En macOS, además de la posición estándar (arriba), los controles de las pesta
 		"top": 160,	 
 		"width": 100,	
 		"height": 20,	
-		"labelsPlacement": "bottom"	//define the direction
-	}
+		"labelsPlacement": "bottom"/define la dirección
+}
 ```
 
 ## Añadir etiquetas a un control de pestañas
@@ -87,7 +87,7 @@ Puede crear un array Texto que contenga los nombres de cada página del formular
 
 ### Comando FORM GOTO PAGE
 
-You can use the [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/en/page247.html) command in the tab control’s method:
+Puede utilizar el comando [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/en/page247.html) en el método del control de tabulación:
 
 ```4d
 FORM GOTO PAGE(arrPages)
