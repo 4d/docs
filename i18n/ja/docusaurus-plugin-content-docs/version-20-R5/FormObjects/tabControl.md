@@ -119,7 +119,7 @@ FORM GOTO PAGE(arrPages)
 [タイプ](properties_Object.md#タイプ) -
 [オブジェクト名](properties_Object.md#オブジェクト名) -
 [変数あるいは式](properties_Object.md#変数あるいは式) -
-[式の型](properties_Object.md#式の型) -
+[式の型](properties_Object.md#式の型式タイプ) -
 [値を記憶](properties_Object.md#値を記憶) -
 [CSSクラス](properties_Object.md#cssクラス) -
 [選択リスト](properties_DataSource.md#選択リスト-静的リスト) -
