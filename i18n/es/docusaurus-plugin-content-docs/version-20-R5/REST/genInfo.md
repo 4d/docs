@@ -22,7 +22,7 @@ Utilice el parámetro [`$info`]($info.md) para obtener información sobre las se
 
 ## queryPath y queryPlan
 
-Las selecciones de entidades generadas a través de búsquedas pueden tener las dos propiedades siguientes: `queryPlan` y `queryPath`. To calculate and return these properties, you just need to add [`$queryPlan`]($queryplan.md) and/or [`$queryPath`]($querypath.md) in the REST request.
+Las selecciones de entidades generadas a través de búsquedas pueden tener las dos propiedades siguientes: `queryPlan` y `queryPath`. Para calcular y devolver estas propiedades, basta con añadir [`$queryPlan`]($queryplan.md) y/o [`$queryPath`]($querypath.md) en la petición REST.
 
 Por ejemplo:
 

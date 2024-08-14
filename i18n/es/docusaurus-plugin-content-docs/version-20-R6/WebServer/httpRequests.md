@@ -49,7 +49,7 @@ Debe declarar estos parámetros de la siguiente manera:
 Como alternativa, puede utilizar la sintaxis [parámetros nombrados](Concepts/parameters.md#named-parameters):
 
 ```4d
-// On Web Connection database method
+// Método base On Web Connection
 #DECLARE ($url : Text; $header : Text; \
   $BrowserIP : Text; $ServerIP : Text; \
   $user : Text; $password : Text)

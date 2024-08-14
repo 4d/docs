@@ -7,7 +7,7 @@ La API de la clase `WebSocketConnection` te permite gestionar conexiones WebSock
 
 :::info
 
-For an overview and some examples of the WebSocket server implementation in 4D, please refer to the [`WebSocketServer` class](WebSocketServerClass.md).
+Para una visión general y algunos ejemplos de la implementación del servidor WebSocket en 4D, por favor consulte la clase [`WebSocketServer` class](WebSocketServerClass.md).
 
 :::
 

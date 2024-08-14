@@ -29,7 +29,7 @@ El comando `VP SET TABLE THEME` <!-- REF #_method_.VP SET TABLE THEME.Summary --
 
 En _vpAreaName_, pase el nombre del área 4D View Pro y en _tableName_, el nombre de la tabla a modificar.
 
-In the _options_ parameter, pass an object of the [`cs.ViewPro.TableTheme` class](../classes.md#tabletheme) that contains the theme properties to modify.
+En el parámetro _options_, pase un objeto de la [clase`cs.ViewPro.TableTheme`](../classes.md#tabletheme) que contenga las propiedades del tema a modificar.
 
 #### Ejemplo 1
 

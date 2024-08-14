@@ -224,7 +224,7 @@ Para ser llamado en una petición REST, un método debe:
   - **Tabla**: la tabla 4D (es decir, la clase de datos) sobre la que se llama al método. La tabla debe ser [expuesta a REST](configuration.md#exposing-tables-and-fields).
   - **Alcance**: este ajuste es útil cuando el método utiliza el lenguaje clásico de 4D y, por tanto, necesita tener un contexto de base de datos del lado del servidor.
     - **Tabla** -para los métodos aplicados a toda la tabla (dataclass)
-    - **Current record** -for methods applied to the current record (entity) using the `\{dataClass\}(key)/{method}` syntax.
+    - **Registro actual** -para los métodos aplicados al registro actual (entidad) utilizando la sintaxis `\{dataClass\}(key)/{method}`.
     - **Selección actual** -para los métodos aplicados a la selección actual
 
 ![alt-text](../assets/en/REST/MethodProp.png)

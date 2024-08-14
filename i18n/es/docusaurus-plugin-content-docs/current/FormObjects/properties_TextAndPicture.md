@@ -244,7 +244,7 @@ Cada opción precisa la relación entre el botón y el menú emergente asociado:
 
 :::info
 
-Refer to the [`On Alternative Click` event description](../Events/onAlternativeClick.md) for more information on the handling of events in this case.
+Consulte la descripción del evento [`On Alternative Click`](../Events/onAlternativeClick.md) para más información sobre la gestión de eventos en este caso.
 
 :::
 

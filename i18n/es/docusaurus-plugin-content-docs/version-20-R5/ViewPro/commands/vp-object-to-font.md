@@ -16,7 +16,7 @@ title: VP Object to font
 
 #### Descripción
 
-The `VP Object to font` command <!-- REF #_method_.VP Object to font.Summary -->returns a font shorthand string from _fontObj_<!-- END REF -->.
+El comando `VP Object to font` <!-- REF #_method_.VP Object to font.Summary -->devuelve una cadena abreviada de fuente a partir de _fontObj_<!-- END REF -->.
 
 En _fontObj_, pase un objeto que contenga las propiedades de la fuente. Se soportan las siguientes propiedades:
 

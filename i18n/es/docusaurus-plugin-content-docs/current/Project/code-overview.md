@@ -9,7 +9,7 @@ El IDE de 4D le ofrece varias funcionalidades para crear, editar, exportar o eli
 
 ## Creación de métodos
 
-A method in 4D is stored in a **.4dm** file located in the appropriate folder of the [`/Project/Sources/`](../Project/architecture.md#sources) folder.
+Un método en 4D se almacena en un archivo **.4dm** ubicado en la carpeta apropiada de la carpeta [`/Project/Sources/`](../Project/architecture.md#sources).
 
 Puede crear [varios tipos de métodos](../Concepts/methods.md):
 
