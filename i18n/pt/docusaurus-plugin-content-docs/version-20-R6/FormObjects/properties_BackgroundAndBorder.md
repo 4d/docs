@@ -7,6 +7,8 @@ title: Fundo e margem
 
 Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma caixa de listagem. Por defecto, *Automático* está seleccionado: la columna utiliza el color de fondo alternativo definido en el nivel del list box.
 
+You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command.
+
 #### Gramática JSON
 
 | Nome          | Tipo de dados | Valores possíveis                              |
@@ -25,6 +27,8 @@ Define a cor de fundo de um objeto.
 
 En el caso de un list box, por defecto se selecciona *Automático*: la columna utiliza el color de fondo definido al nivel del list box.
 
+You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command.
+
 #### Gramática JSON
 
 | Nome | Tipo de dados | Valores possíveis                              |
@@ -33,7 +37,7 @@ En el caso de un list box, por defecto se selecciona *Automático*: la columna u
 
 #### Objectos suportados
 
-[Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
+[Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
 
 #### Veja também
 
