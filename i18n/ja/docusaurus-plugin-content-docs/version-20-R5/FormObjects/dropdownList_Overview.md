@@ -175,7 +175,7 @@ Form.myDrop.index //3
 [データタイプ (式の型)](properties_DataSource.md#データタイプ-式の型) -
 [データタイプ (リスト)](properties_DataSource.md#データタイプ-リスト) -
 [日付フォーマット](properties_Display.md#日付フォーマット) -
-[式の型](properties_Object.md#式の型) -
+[式の型](properties_Object.md#式の型式タイプ) -
 [フォーカス可](properties_Entry.md#フォーカス可) -
 [フォント](properties_Text.md#フォント) -
 [フォントカラー](properties_Text.md#フォントカラー) -
