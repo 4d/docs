@@ -38,7 +38,7 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
+[階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [楕円](shapes_overview.md#楕円) - [四角](shapes_overview.md#四角) - [テキストエリア](text.md)
 
 #### 参照
 
@@ -219,4 +219,4 @@ title: 背景色と境界線
 
 #### 参照
 
-[背景色/塗りカラー](#背景色-塗りカラー)
+[背景色/塗りカラー](#背景色塗りカラー)
