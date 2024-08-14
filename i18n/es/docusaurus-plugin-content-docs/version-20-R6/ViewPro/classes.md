@@ -81,7 +81,7 @@ The `.bandRows` property <!-- REF #TableOptions.bandRows.Summary -->indicates wh
 
 **.highlightLastColumn** : Boolean<!-- END REF -->
 
-The `.highlightLastColumn` property <!-- REF #TableOptions.highlightLastColumn.Summary -->indicates whether to highlight the last column<!-- END REF -->. Por defecto = False
+La propiedad `.highlightLastColumn` <!-- REF #TableOptions.highlightLastColumn.Summary -->indica si se debe resaltar la última columna<!-- END REF -->. Por defecto = False
 
 ### .highlightFirstColumn
 
@@ -239,7 +239,7 @@ La propiedad `.bandColumns` <!-- REF #TableTheme.bandColumns.Summary -->indica s
 
 **.highlightLastColumn** : Boolean<!-- END REF -->
 
-The `.highlightLastColumn` property <!-- REF #TableTheme.highlightLastColumn.Summary -->indicates whether to highlight the last column<!-- END REF -->.
+La propiedad `.highlightLastColumn` <!-- REF #TableTheme.highlightLastColumn.Summary -->indica si se debe resaltar la última columna<!-- END REF -->.
 
 ### .highlightFirstColumn
 
@@ -282,7 +282,7 @@ The `.firstColumnStripStyle` property is the <!-- REF #TableThemeOptions.firstCo
 
 **.firstFooterCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.firstFooterCellStyle` property is the <!-- REF #TableThemeOptions.firstFooterCellStyle.Summary -->style of the first footer cell<!-- END REF -->. "highlightFirstColumn" debe ser true.
+La propiedad `.firstFooterCellStyle` es el estilo <!-- REF #TableThemeOptions.firstFooterCellStyle.Summary -->de la primera celda del pie de página<!-- END REF -->. "highlightFirstColumn" debe ser true.
 
 ### .firstHeaderCellStyle
 
@@ -290,7 +290,7 @@ The `.firstFooterCellStyle` property is the <!-- REF #TableThemeOptions.firstFoo
 
 **.firstHeaderCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.firstHeaderCellStyle` property is the <!-- REF #TableThemeOptions.firstHeaderCellStyle.Summary -->style of the first header cell<!-- END REF -->. "highlightFirstColumn" debe ser true.
+La propiedad `.firstHeaderCellStyle` es el estilo <!-- REF #TableThemeOptions.firstHeaderCellStyle.Summary -->de la primera celda del encabezado<!-- END REF -->. "highlightFirstColumn" debe ser true.
 
 ### .firstRowStripSize
 
@@ -298,7 +298,7 @@ The `.firstHeaderCellStyle` property is the <!-- REF #TableThemeOptions.firstHea
 
 **.firstRowStripSize** : Integer<!-- END REF -->
 
-The `.firstRowStripSize` property is the <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->size of the first alternating column<!-- END REF -->. Por defecto=1.
+La propiedad `.firstRowStripSize` es el tamaño <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->de la primera columna alterna<!-- END REF -->. Por defecto=1.
 
 ### .firstRowStripStyle
 
@@ -338,7 +338,7 @@ La propiedad `.highlightFirstColumnStyle` es el estilo <!-- REF #TableThemeOptio
 
 **.highlightLastColumnStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.highlightLastColumnStyle` property is the <!-- REF #TableThemeOptions.highlightLastColumnStyle.Summary -->style of the last column<!-- END REF -->. "highlightLastColumn" debe ser true.
+La propiedad `.highlightLastColumnStyle` es el estilo <!-- REF #TableThemeOptions.highlightLastColumnStyle.Summary -->de la última columna<!-- END REF -->. "highlightLastColumn" debe ser true.
 
 ### .lastFooterCellStyle
 
