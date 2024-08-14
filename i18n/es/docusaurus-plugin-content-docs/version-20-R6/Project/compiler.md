@@ -49,7 +49,7 @@ Si modifica su proyecto en modo interpretado, debe recompilarlo para que sus mod
 
 ## Características de la ventana del compilador
 
-In addition to the [**Compile** button](#compile), the Compiler window provides additional features that are useful during the project development phase.
+Además del [botón **Compilar**](#compile), la ventana Compilador ofrece otras funcionalidades útiles durante la fase de desarrollo del proyecto.
 
 ### Verificar la sintaxis
 
