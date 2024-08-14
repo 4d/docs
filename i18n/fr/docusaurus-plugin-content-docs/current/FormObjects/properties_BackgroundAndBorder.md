@@ -7,6 +7,8 @@ title: Fond et bordure
 
 Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box. Par défaut, _Automatique_ est sélectionné : la colonne utilise la couleur de fond alternative définie au niveau de la list box.
 
+You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command.
+
 #### Grammaire JSON
 
 | Nom           | Type de données | Valeurs possibles                                                        |
@@ -25,6 +27,8 @@ Définit la couleur de fond d'un objet.
 
 Dans le cas d'une list box, par défaut _Automatique_ est sélectionné : la colonne utilise la couleur de fond définie au niveau de la list box.
 
+You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command.
+
 #### Grammaire JSON
 
 | Nom          | Type de données | Valeurs possibles                          |
@@ -33,7 +37,7 @@ Dans le cas d'une list box, par défaut _Automatique_ est sélectionné : la col
 
 #### Objets pris en charge
 
-[Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
+[Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
 
 #### Voir également
 
