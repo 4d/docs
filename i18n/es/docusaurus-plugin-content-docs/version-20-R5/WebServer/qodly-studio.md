@@ -155,7 +155,7 @@ Los siguientes comandos y clases están dedicados a la gestión del lado del ser
 - Comando [`Web Form`](../API/WebFormClass.md#web-form): devuelve el formulario Qodly como un objeto.
 - Comando [`Web Event`](../API/WebFormClass.md#web-event): devuelve los eventos desencadenados dentro de los componentes de formulario Qodly.
 - Clase [`WebForm`](../API/WebFormClass.md): funciones y propiedades para gestionar el formulario Qodly renderizado.
-- [`WebFormItem`](../API/WebFormItemClass.md) class: functions and properties to manage Qodly form components.
+- Clase [`WebFormItem`](../API/WebFormItemClass.md): funciones y propiedades para gestionar los componentes del formulario Qodly.
 
 ### Uso métodos proyecto
 
@@ -190,7 +190,7 @@ Para habilitar el renderizado de formularios Qodly, deben configurarse las sigui
 
 :::note
 
-[Renderer buttons](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) are not available if the configuration options are not activated.
+[Los botones de renderización](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) no están disponibles si las opciones de configuración no están activas.
 
 :::
 
