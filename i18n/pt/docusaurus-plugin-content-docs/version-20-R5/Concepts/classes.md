@@ -838,8 +838,8 @@ The scope of a singleton instance can be the process where it is instantiated or
 | Singleton created on | Scope if not shared                                                                                      | Scope if shared   |
 | -------------------- | -------------------------------------------------------------------------------------------------------- | ----------------- |
 | 4D usuário único     | Processo                                                                                                 | Application       |
-| 4D Server            | Processo                                                                                                 | 4D Server machine |
-| 4D remote mode       | Process (_note_: singletons are not synchronized on the twin process) | 4D remote machine |
+| 4D Server            | Processo                                                                                                 | Máquina 4D Server |
+| Modo remoto 4D       | Process (_note_: singletons are not synchronized on the twin process) | Máquina remota 4D |
 
 Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
 
