@@ -832,7 +832,7 @@ Si le mot-clé `shared` est utilisé devant une fonction dans une classe utilisa
 
 ## Classes Singleton
 
-Une **classe singleton** est une classe utilisateur qui ne produit qu'une seule instance. Pour plus d’informations sur les singletons, veuillez consulter la [page Wikipédia sur les singletons](https://en.wikipedia.org/wiki/Singleton_pattern). A singleton has a unique instance for the process in which it is instantiated, while a _shared_ singleton has a unique instance for all processes on the machine. Les singletons sont utiles pour définir des valeurs qui doivent être disponibles de n'importe où dans une application ou un process.
+Une **classe singleton** est une classe utilisateur qui ne produit qu'une seule instance. Pour plus d’informations sur les singletons, veuillez consulter la [page Wikipédia sur les singletons](https://en.wikipedia.org/wiki/Singleton_pattern). Un singleton a une instance unique pour le process dans lequel il est instancié, tandis qu'un singleton _partagé_ a une instance unique pour tous les process de la machine. Les singletons sont utiles pour définir des valeurs qui doivent être disponibles de n'importe où dans une application ou un process.
 
 Le singleton de la classe est instancié lors du premier appel de la propriété [`cs.<class>.me`](../API/ClassClass.md#me). Le singleton instancié de la classe est ensuite toujours renvoyé lorsque la propriété [`me`](../API/ClassClass.md#me) est utilisée.
 
@@ -842,15 +842,15 @@ La propriété [`.isSingleton`](../API/ClassClass.md#issingleton) des objets Cla
 
 ### Portée
 
-The scope of a singleton instance can be the process where it is instantiated or all processes on the machine, depending on its _shared_ property.
+La portée d'une instance de singleton peut être le process dans lequel elle est instanciée ou tous les process de la machine, en fonction de sa propriété _shared_.
 
-| Singleton created on | Scope if not shared                                                                                      | Scope if shared   |
-| -------------------- | -------------------------------------------------------------------------------------------------------- | ----------------- |
-| 4D single-user       | Process                                                                                                  | Application       |
-| 4D Server            | Process                                                                                                  | 4D Server machine |
-| 4D remote mode       | Process (_note_: singletons are not synchronized on the twin process) | 4D remote machine |
+| Singleton créé sur | Portée si non partagé                                                                                                | Portée si partagé  |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| 4D single-user     | Process                                                                                                              | Application        |
+| 4D Server          | Process                                                                                                              | Machine 4D Server  |
+| 4D mode distant    | Process (_note_: les singletons ne sont pas synchronisés sur les process jumeaux) | Machine 4D distant |
 
-Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
+Une fois instanciée, une classe singleton (et son singleton) existe aussi longtemps qu'une référence à cette classe existe quelque part dans l'application sur le poste.
 
 :::info
 
@@ -891,7 +891,7 @@ var $myOtherSingleton := cs.ProcessTag.me
 
 ### Création d'un singleton partagé
 
-To create a singleton shared by all processes on the machine, add the `shared singleton` keywords before the [Class Constructor](#class-constructor). Par exemple :
+Pour créer un singleton partagé par tous les process sur la machine, ajoutez les mots-clés `shared singleton` devant le [constructeur de classe](#class-constructor). Par exemple :
 
 ```4d
 //Class VehicleFactory
@@ -918,7 +918,7 @@ shared Function buildVehicle ($type : Text) -> $vehicle : cs.Vehicle
   This.vehicleBuilt+=1
 ```
 
-You can then call the **cs.VehicleFactory** singleton to get a new vehicle from everywhere in the application on your machine with a single line:
+Vous pouvez alors appeler le singleton **cs.VehicleFactory** pour obtenir un nouveau véhicule depuis n'importe où dans votre application sur le poste avec une seule ligne :
 
 ```4d
 $vehicle:=cs.VehicleFactory.me.buildVehicle("truck")
