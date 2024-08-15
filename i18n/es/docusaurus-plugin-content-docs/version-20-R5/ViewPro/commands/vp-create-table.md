@@ -45,7 +45,7 @@ En _source_, puede pasar un nombre de propiedad de un [data context](vp-set-data
 - Si no especifica una _source_, el comando crea una tabla vacía con el tamaño definido en _rangeObj_.
 - Si la _source_ especificada no se puede mostrar completamente en el documento, no se crea ninguna tabla.
 
-In the _options_ parameter, pass an object of the [`cs.ViewPro.TableOptions` class](../classes.md#tableoptions) that contains the table properties to set.
+En el parámetro _options_, pase un objeto de la clase [`cs.ViewPro.TableOptions`](../classes.md#tableoptions) que contenga las propiedades de la tabla a definir.
 
 Dentro del objeto _options_, la colección _tableColumns_ determina la estructura de las columnas de la tabla. La longitud de la colección _tableColumns_ debe ser igual al recuento de columnas del rango:
 
