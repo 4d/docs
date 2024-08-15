@@ -20,7 +20,7 @@ El comando `VP SET VALUE` <!-- REF #_method_.VP SET VALUE.Summary -->asigna un v
 
 The command allows you to use a generic code to set and format the types of values in _rangeObj_, whereas other commands, such as [`VP SET TEXT VALUE`](vp-set-text-value.md) and [`VP SET NUM VALUE`](vp-set-num-value.md), reduce the values to specific types.
 
-In _rangeObj_, pass a range of the cell(s) (created for example with [`VP Cell`](vp-cell) or [`VP Column`](vp-column.md)) whose value you want to specify. Si _rangeObj_ incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
+En _rangeObj_, pasa un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP Cell`](vp-cell) o [`VP Column`](vp-column.md)) cuyo valor desea especificar. Si _rangeObj_ incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
 
 El parámetro _valueObj_ es un objeto que incluye propiedades para el valor y el [formato](../configuring.md#cell-format) a asignar a _rangeObj_. Puede contener las siguientes propiedades:
 
