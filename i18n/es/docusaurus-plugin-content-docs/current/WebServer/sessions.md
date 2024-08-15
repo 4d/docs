@@ -61,7 +61,7 @@ La creación de una sesión web para una petición REST puede requerir que una l
 
 :::
 
-The `Session` object of the current session can then be accessed through the [`Session`](API/SessionClass.md#session) command in the code of any web processes.
+Se puede acceder al objeto `Session` de la sesión actual a través del comando [`Session`](API/SessionClass.md#session) en el código de todo proceso web.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
