@@ -3500,7 +3500,7 @@ Si la colección contiene objetos, pasa el parámetro *propertyPath* para indica
 
 #### Descripción
 
-The `.unshift()` function <!-- REF #collection.unshift().Summary -->inserts the given *value*(s) at the beginning of the collection <!-- END REF -->and returns the modified collection.
+La función `.unshift()` <!-- REF #collection.unshift().Summary -->inserta el *valor*(es) dado al principio de la colección <!-- END REF -->y devuelve la colección modificada.
 
 > Esta función modifica la colección original.
 
