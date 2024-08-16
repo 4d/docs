@@ -182,7 +182,7 @@ When you modify a warning display status, the information is stored in the "warn
 
 The **Reset to factory settings** button sets all the warning display status checkboxes to default values and deletes the "warnings.json" file.
 
-### Disabling and enabling warnings locally
+### Desativar e ativar avisos localmente
 
 You can control warnings in specific parts of your code by using special comments to disable or enable them.
 
