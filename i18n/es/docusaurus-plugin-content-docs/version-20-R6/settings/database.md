@@ -88,13 +88,13 @@ Utilice los parámetros de esta pestaña para configurar la memoria caché de la
   - **Percentage of available memory used for cache**: Percentage of the remaining memory allocated to the cache by default.\
     To obtain the size allocated by default to the cache, simply perform the following calculation: (Physical memory -- Physical memory to be reserved) X Percentage of the memory used for the cache. En el modo adaptativo, el tamaño de la memoria caché varía dinámicamente en función de las necesidades de la aplicación y del sistema. Puede definir los límites utilizando las siguientes dos opciones:
   - **Tamaño mínimo**: cantidad mínima de memoria que debe reservarse para la caché. Este valor no puede ser inferior a 100 MB.
-  - **Tamaño máximo**: cantidad máxima de memoria que puede utilizar la caché. This value is virtually unlimited.\\
-    Setting limits is particularly useful for databases that are distributed on machines for which you do not know the memory configuration a priori. En este caso, los límites definidos permiten garantizar un rendimiento mínimo en todos los casos. El siguiente diagrama ilustra este comportamiento:
+  - **Tamaño máximo**: cantidad máxima de memoria que puede utilizar la caché. Este valor es prácticamente ilimitado.\\
+    Definir límites es especialmente útil para bases distribuidas en máquinas de las que no se conoce a priori la configuración de memoria. En este caso, los límites definidos permiten garantizar un rendimiento mínimo en todos los casos. El siguiente diagrama ilustra este comportamiento:
 
-  Example for calculating cache memory:
-  *Physical memory to reserve = 256 MB
-  Percentage of the available memory used for the cache = 50%
-  Maximum size = 1 GB Minimum size = 128 MB*
+  Ejemplo de cálculo de la memoria caché:
+  *Memoria física a reservar = 256 MB
+  Porcentaje de la memoria disponible utilizado para la caché = 50%
+  Tamaño máximo = 1 GB Tamaño mínimo = 128 MB*
 
   ![](../assets/en/settings/memory-maximum-size.png)
 
