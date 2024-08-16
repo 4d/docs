@@ -32,7 +32,7 @@ Puede configurar los accesos REST de una de las siguientes maneras:
 :::info Importante
 
 - Se recomienda no habilitar simultáneamente diferentes características de control de acceso REST para evitar conflictos.
-- If an `On REST Authentication` database method has been defined, any setting made using the "Read/Write" menu on the **Web** > **Web Features** page of the Structure Settings is ignored.
+- Si se ha definido un método base `On REST Authentication`, se ignorará cualquier ajuste realizado mediante el menú "Lectura/Escritura" de la página **Web** > **Funcionalidades web** de los Parámetros de estructura.
 
 :::
 
@@ -47,7 +47,7 @@ Por defecto, el menú muestra `\<Anyone>`, lo que significa que los accesos REST
 ### Método base On REST Authentication
 
 El método base `On REST Authentication` le ofrece una forma personalizada de controlar la apertura de sesiones REST en 4D. Este método base se llama automáticamente cuando se abre una nueva sesión a través de una solicitud REST. Cuando se recibe una [solicitud para abrir una sesión REST](authUsers.md), los identificadores de conexión se ofrecen en el encabezado de la solicitud. Se llama al método base `On REST Authentication` para poder evaluar estos identificadores. Puede utilizar la lista de usuarios de la aplicación 4D o puede utilizar su propia tabla de identificadores.
-For more information, refer to the `On REST Authentication` database method [documentation](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html).
+Para más información, consulte la [documentación](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html) del método base `On REST Authentication`.
 
 ## Exponer tablas y campos
 
