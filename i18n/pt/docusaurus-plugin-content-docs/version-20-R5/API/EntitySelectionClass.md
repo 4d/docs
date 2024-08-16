@@ -622,10 +622,10 @@ Se quisermos encontrar o número total de empregados para uma empresa sem contar
 
 <!-- REF #EntitySelectionClass.copy().Params -->
 
-| Parâmetro  | Tipo                                |     | Descrição                                                        |
-| ---------- | ----------------------------------- | :-: | ---------------------------------------------------------------- |
-| option     | Integer                             |  -> | `ck shared`: return a shareable entity selection |
-| Resultados | 4D. EntitySelection |  <- | Cópia da entity selection                                        |
+| Parâmetro  | Tipo                                |     | Descrição                                                                   |
+| ---------- | ----------------------------------- | :-: | --------------------------------------------------------------------------- |
+| option     | Integer                             |  -> | `ck shared`: retorna uma seleção de entidade compartilhável |
+| Resultados | 4D. EntitySelection |  <- | Cópia da entity selection                                                   |
 
 <!-- END REF -->
 
@@ -1102,7 +1102,7 @@ O seguinte código genérico duplica todas as entidades da entity selection:
 
 <!-- END REF -->
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
+> **Modo avançado:** Essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
