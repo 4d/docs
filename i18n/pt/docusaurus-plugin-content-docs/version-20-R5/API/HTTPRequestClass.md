@@ -307,7 +307,7 @@ The `.encoding` property contains <!-- REF #HTTPRequestClass.encoding.Summary --
 
 The `.errors` property contains <!-- REF #HTTPRequestClass.errors.Summary -->the collection of all the errors if at least one error has been triggered<!-- END REF -->.
 
-Here is the contents of the `.errors` property:
+Aqui está o conteúdo da propriedade `.errors`:
 
 | Propriedade |                                                                                           | Tipo       | Descrição                                            |
 | ----------- | ----------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------- |
@@ -372,7 +372,7 @@ The `.protocol` property contains <!-- REF #HTTPRequestClass.protocol.Summary --
 
 The `.response` property contains <!-- REF #HTTPRequestClass.response.Summary -->the response to the request if it has received at least the status code, undefined otherwise<!-- END REF -->.
 
-A `response` object is a non-sharable object. Contém as seguintes propriedades:
+Um objeto `response` é um objeto não compartilhável. Contém as seguintes propriedades:
 
 | Propriedade                 | Tipo         | Descrição                                                                                                                                                                                                                                                                                                                                                             |
 | --------------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
