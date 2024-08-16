@@ -712,6 +712,6 @@ Se a pasta não existir no disco, se devolve um icone vazio como padrão.
 
 **Valor retornado**
 
-Folder icon [picture](Concepts/dt_picture.md).
+[Imagem](Concepts/dt_picture.md) do ícone da pasta.
 
 <!-- END REF -->
