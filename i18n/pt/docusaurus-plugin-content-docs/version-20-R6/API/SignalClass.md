@@ -124,7 +124,7 @@ Since the signal object is a shared object, it can also be used to maintain user
 
 **Valor retornado**
 
-A new [`4D.Signal` object](#signal-object).
+Um novo [objeto `4D.Signal`](#signal-object).
 
 #### Exemplo
 
