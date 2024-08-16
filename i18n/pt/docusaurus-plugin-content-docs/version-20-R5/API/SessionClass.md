@@ -396,7 +396,7 @@ The `.isGuest()` function <!-- REF #SessionClass.isGuest().Summary -->returns Tr
 
 #### Exemplo
 
-In the `On Web Connection` database method:
+No método base `On Web Connection`:
 
 ```4d
 If (Session.isGuest())
