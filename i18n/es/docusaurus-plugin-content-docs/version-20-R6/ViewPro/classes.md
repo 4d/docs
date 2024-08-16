@@ -113,7 +113,7 @@ La propiedad `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indica s
 
 **.showResizeHandle** : Boolean<!-- END REF -->
 
-The `.showResizeHandle` property <!-- REF #TableOptions.showResizeHandle.Summary -->indicates whether to display the resize handle for tables that don't have a *source*<!-- END REF -->. Por defecto = False
+La propiedad `.showResizeHandle` <!-- REF #TableOptions.showResizeHandle.Summary -->indica si se debe mostrar el manejador de redimensionamiento para las tablas que no tienen un *source*<!-- END REF -->. Por defecto = False
 
 ### .tableColumns
 
