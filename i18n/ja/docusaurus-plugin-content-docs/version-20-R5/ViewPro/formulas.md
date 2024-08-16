@@ -161,7 +161,7 @@ $o.DRIVERS_LICENCE.parameters:=New collection
 $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 ```
 
-> [4D View Pro: Use 4D formulas in your spreadsheet (英文ブログ記事)](https://blog.4d.com/4d-view-pro-use-4d-formulas-in-your-spreadsheet/) も参照ください。
+> [4D View Pro: 4D のフォーミュラをスプレッドシートで使用する](https://blog.4d.com/ja/4d-view-pro-use-4d-formulas-in-your-spreadsheet/) も参照ください。
 
 ### Hello World 例題
 
