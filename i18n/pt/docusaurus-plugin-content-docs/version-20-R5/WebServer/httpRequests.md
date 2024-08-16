@@ -56,7 +56,7 @@ Como alternativa, puede utilizar la sintaxis [parámetros nombrados](Concepts/pa
 
 ```
 
-> Calling a 4D command that displays an interface element (`DIALOG`, `ALERT`, etc.) is not allowed and ends the method processing.
+> Calling a 4D command that displays an interface element (`DIALOG`, `ALERT`, etc.) não é permitido e encerra o processamento do método.
 
 ### $1 - Dados extra do URL
 
