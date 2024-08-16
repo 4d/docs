@@ -33,7 +33,7 @@ En Qodly Studio for 4D, el modo se puede definir utilizando la opción [**Forzar
 
 ### Modo por defecto
 
-In the default mode, any REST request is processed in a web user session that automatically consumes a license (the web user session is created if it does not already exist). Puede utilizar este modo simple si no necesita controlar cuántas licencias se conservan en el servidor.
+En el modo predeterminado, toda petición REST se procesa en una sesión usuario web que consume automáticamente una licencia (la sesión usuario web se crea si aún no existe). Puede utilizar este modo simple si no necesita controlar cuántas licencias se conservan en el servidor.
 Cuando el modo por defecto está activado, puede autenticar usuarios a través del método base `On REST Authentication` (ver más abajo).
 
 ### Forzar el modo de inicio de sesión
