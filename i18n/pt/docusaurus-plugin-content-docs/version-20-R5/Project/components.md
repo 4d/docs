@@ -9,7 +9,7 @@ You can [develop](../Extensions/develop-components.md) and [build](../Desktop/bu
 
 ## Componentes interpretados e compilados
 
-Components can be interpreted or [compiled](../Desktop/building.md). The package folder of a component can contain:
+Components can be interpreted or [compiled](../Desktop/building.md). A pasta do pacote de um componente pode conter:
 
 - either a Project folder (interpreted component)
 - ou um arquivo .4DZ (componente compilado)
@@ -96,7 +96,7 @@ Since components can be installed in different ways, a priority order is applied
 
 When a component cannot be loaded because of another instance of the same component located at a higher priority level, it is given the _Overloaded_ [status](#dependency-status). The loaded component has the _Overloading_ [status](#dependency-status).
 
-## Monitoring Project Dependencies
+## Monitoramento das dependências do projeto
 
 In an opened project, you can get information about dependencies and their current loading status in the **Dependencies** panel.
 
