@@ -113,7 +113,7 @@ La propiedad `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indica s
 
 **.showResizeHandle** : Boolean<!-- END REF -->
 
-The `.showResizeHandle` property <!-- REF #TableOptions.showResizeHandle.Summary -->indicates whether to display the resize handle for tables that don't have a *source*<!-- END REF -->. Por defecto = False
+La propiedad `.showResizeHandle` <!-- REF #TableOptions.showResizeHandle.Summary -->indica si se debe mostrar el manejador de redimensionamiento para las tablas que no tienen un *source*<!-- END REF -->. Por defecto = False
 
 ### .tableColumns
 
@@ -247,7 +247,7 @@ La propiedad `.highlightLastColumn` <!-- REF #TableTheme.highlightLastColumn.Sum
 
 **.highlightFirstColumn** : Boolean<!-- END REF -->
 
-The `.highlightFirstColumn` property <!-- REF #TableTheme.highlightFirstColumn.Summary -->indicates whether to highlight the first column<!-- END REF -->.
+La propiedad `.highlightFirstColumn` <!-- REF #TableTheme.highlightFirstColumn.Summary -->indica si se debe resaltar la primera columna<!-- END REF -->.
 
 ### .theme
 

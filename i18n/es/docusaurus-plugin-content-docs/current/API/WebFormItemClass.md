@@ -94,4 +94,4 @@ Para más información, consulte la [descripción de `.addCSSClass` en la docume
 
 La función `.removeCSSClass()` <!-- REF #WebFormItemClass.removeCSSClass().Summary -->elimina la clase especificada en *className* del componente<!-- END REF -->.
 
-For more information, please refer to the [`.removeCSSClass()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass#removecssclass).
+Para más información, consulte la [descripción de `.removeCSSClass()` en la documentación de Qodly](https://developer.qodly.com/docs/language/WebFormItemClass#removecssclass).

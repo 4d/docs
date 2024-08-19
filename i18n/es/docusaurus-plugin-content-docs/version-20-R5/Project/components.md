@@ -39,7 +39,7 @@ Si se instala el mismo componente en distintos lugares, se aplica un [orden de p
    /MyProjectComponentRoot/
    ```
 
-Thanks to this architecture, you can simply copy all your components at the same level as your projects and reference them in your **dependencies.json** files if necessary. Además, puede personalizar la ruta de sus componentes, ver abajo.
+Gracias a esta arquitectura, puede simplemente copiar todos sus componentes al mismo nivel que sus proyectos y referenciarlos en sus archivos **dependencies.json** si es necesario. Además, puede personalizar la ruta de sus componentes, ver abajo.
 
 El contenido del archivo **/Sources/dependencies.json** debe tener la siguiente estructura:
 
@@ -56,7 +56,7 @@ El contenido del archivo **/Sources/dependencies.json** debe tener la siguiente 
 
 ### environment4d.json
 
-If you want to customize the location of the components that are [declared in the **dependencies.json** file](#dependenciesjson), you can use a **environment4d.json** file. Este archivo permite declarar las rutas de las dependencias que no se almacenan en el mismo nivel que la carpeta del proyecto.
+Si desea personalizar la ubicación de los componentes que están [declarados en el archivo **dependencies.json**](#dependenciesjson), puede utilizar un archivo **environment4d.json**. Este archivo permite declarar las rutas de las dependencias que no se almacenan en el mismo nivel que la carpeta del proyecto.
 
 Puede utilizar rutas absolutas o relativas, expresadas en sintaxis POSIX como se describe en [este párrafo](../Concepts/paths#posix-syntax). Las rutas relativas son relativas al archivo environment4d.json.
 

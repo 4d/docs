@@ -22,7 +22,7 @@ The legacy login mode based upon the `On REST Authentication` database method is
 
 :::
 
-The user login sequence is the following:
+A sequência de login do usuário é a seguinte:
 
 1. At the first REST call (for a Qodly page call for example), a "guest" web user session is created. It has no privileges, no rights to execute requests other than [descriptive REST requests](#descriptive-rest-requests), no license consumption.\
    Descriptive REST requests are always processed by the server, even if no web user session using a license is opened. In this case, they are processed through "guest" sessions.

@@ -68,9 +68,9 @@ For more information on web form states, please refer to [developer.qodly.com](h
 
 <!-- REF #WebFormClass.enableState().Params -->
 
-| Parâmetro | Tipo   |     | Descrição                               |
-| --------- | ------ | :-: | --------------------------------------- |
-| state     | string |  -> | Name of state to enable on the web form |
+| Parâmetro | Tipo   |     | Descrição                                      |
+| --------- | ------ | :-: | ---------------------------------------------- |
+| state     | string |  -> | Nome do estado a ser ativado no formulário Web |
 
 <!-- END REF -->
 

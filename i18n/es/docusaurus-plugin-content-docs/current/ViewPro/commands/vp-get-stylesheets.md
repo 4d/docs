@@ -17,7 +17,7 @@ title: VP Get stylesheets
 
 #### Descripción
 
-The `VP Get stylesheets` command <!-- REF #_method_.VP Get stylesheets.Summary -->returns the collection of defined style sheet objects from the designated *sheet*<!-- END REF -->.
+El comando `VP Get stylesheets` <!-- REF #_method_.VP Get stylesheets.Summary -->devuelve la colección de objetos de hojas de estilo definidos de la *sheet* designada<!-- END REF -->.
 
 En *vpAreaName*, pase el nombre de la propiedad del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 

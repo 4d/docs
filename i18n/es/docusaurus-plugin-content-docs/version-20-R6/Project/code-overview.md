@@ -124,7 +124,7 @@ En el Explorador, los métodos proyecto que se ofrecen como Servicio Web reciben
 
 Este atributo sólo está disponible si el atributo "Servicio Web" está marcado. Permite incluir el método actual en el WSDL de la aplicación 4D. Para obtener más información al respecto, consulte [Generación del WSDL](https://doc.4d.com/4Dv19R5/4D/19-R5/Publishing-a-Web-Service-with-4D.300-5851558.en.html#502689).
 
-In the Explorer, project methods that are offered as a Web Service and published in WSDL are given a specific icon ![](https://doc.4d.com/4Dv19R5/picture/440526/pict440526.fr.png).
+En el Explorador, los métodos proyecto que se ofrecen como Servicio Web y se publican en WSDL reciben un icono específico ![](https://doc.4d.com/4Dv19R5/picture/440526/pict440526.fr.png).
 
 #### Etiquetas 4D y URLs (4DACTION...)
 

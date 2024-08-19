@@ -468,7 +468,7 @@ Em troca, você deve se certificar neste caso de inicializar sistematicamente as
 
 ## Robots.txt
 
-Certos robôs (motores de consulta, aranhas...) scroll through web servers and static pages. Se não quiser que os robôs acessem todo o seu site, você pode definir quais URLs eles não podem acessar.
+Certos robôs (motores de consulta, aranhas...) navegar por servidores web e páginas estáticas. Se não quiser que os robôs acessem todo o seu site, você pode definir quais URLs eles não podem acessar.
 
 Para isso, coloque o arquivo ROBOTS.TXT na raiz do servidor. Este ficheiro deve ser estruturado da seguinte forma:
 
@@ -627,4 +627,4 @@ Duas opções permitem que você defina como funcionam as conexões persistentes
   The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
 
 - **Tiempo de espera antes de desconexión**: este valor define el periodo máximo de espera (en segundos) durante el cual el servidor web mantiene una conexión TCP abierta sin recibir ninguna petición del navegador web. Once this period is over, the server closes the connection.<p>
-  If the web browser sends a request after the connection is closed, a new TCP connection is automatically created. This operation is not visible for the user.</p>
+  If the web browser sends a request after the connection is closed, a new TCP connection is automatically created. Esta operação não é visível para o usuário.</p>

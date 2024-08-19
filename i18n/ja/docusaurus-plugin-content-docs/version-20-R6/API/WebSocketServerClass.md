@@ -82,7 +82,7 @@ Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
 
 :::tip クライアントサイド JS
 
-WebSocket 接続を処理するクライアントサイドの Javascriptコードの例については、[このブログの記事](https://blog.4d.com/websocket-server/) を参照ください。
+WebSocket 接続を処理するクライアントサイドの Javascriptコードの例については、[このブログの記事](https://blog.4d.com/ja/new-built-in-websocket-server/) を参照ください。
 
 :::
 

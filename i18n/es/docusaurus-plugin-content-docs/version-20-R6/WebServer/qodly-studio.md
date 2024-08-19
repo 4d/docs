@@ -190,7 +190,7 @@ Para habilitar el renderizado de las páginas Qodly, se deben configurar las sig
 
 :::note
 
-[Renderer buttons](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) are not available if the configuration options are not activated.
+[Los botones de renderización](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) no están disponibles si las opciones de configuración no están activas.
 
 :::
 
@@ -222,7 +222,7 @@ https://www.myWebSite.com/$lib/renderer/?w=welcome
 
 ## Forzar inicio de sesión
 
-With Qodly Studio for 4D, the ["force login" mode](../REST/authUsers.md#force-login-mode) allows you to control the number of opened web sessions that require 4D Client licenses. También puede [cerrar la sesión](#logout) del usuario en cualquier momento para disminuir el número de licencias retenidas.
+Con Qodly Studio for 4D, el modo ["forzar login"](../REST/authUsers.md#force-login-mode) le permite controlar el número de sesiones web abiertas que requieren licencias 4D Client. También puede [cerrar la sesión](#logout) del usuario en cualquier momento para disminuir el número de licencias retenidas.
 
 ### Configuración
 

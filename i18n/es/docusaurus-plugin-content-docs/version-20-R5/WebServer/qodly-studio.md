@@ -155,7 +155,7 @@ Los siguientes comandos y clases están dedicados a la gestión del lado del ser
 - Comando [`Web Form`](../API/WebFormClass.md#web-form): devuelve el formulario Qodly como un objeto.
 - Comando [`Web Event`](../API/WebFormClass.md#web-event): devuelve los eventos desencadenados dentro de los componentes de formulario Qodly.
 - Clase [`WebForm`](../API/WebFormClass.md): funciones y propiedades para gestionar el formulario Qodly renderizado.
-- [`WebFormItem`](../API/WebFormItemClass.md) class: functions and properties to manage Qodly form components.
+- Clase [`WebFormItem`](../API/WebFormItemClass.md): funciones y propiedades para gestionar los componentes del formulario Qodly.
 
 ### Uso métodos proyecto
 
@@ -190,7 +190,7 @@ Para habilitar el renderizado de formularios Qodly, deben configurarse las sigui
 
 :::note
 
-[Renderer buttons](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) are not available if the configuration options are not activated.
+[Los botones de renderización](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) no están disponibles si las opciones de configuración no están activas.
 
 :::
 
@@ -222,7 +222,7 @@ https://www.myWebSite.com/$lib/renderer/?w=welcome
 
 ## Forzar inicio de sesión
 
-With Qodly Studio for 4D, you can use the ["force login" mode](../REST/authUsers.md#force-login-mode) to control the number of opened web sessions that require 4D Client licenses. También puede [cerrar la sesión](#logout) del usuario en cualquier momento para disminuir el número de licencias retenidas.
+Con Qodly Studio for 4D, puede utilizar el modo ["forzar inicio de sesión"](../REST/authUsers.md#force-login-mode) para controlar el número de sesiones web abiertas que requieren licencias 4D Client. También puede [cerrar la sesión](#logout) del usuario en cualquier momento para disminuir el número de licencias retenidas.
 
 ### Definir el modo de inicio de sesión forzado
 

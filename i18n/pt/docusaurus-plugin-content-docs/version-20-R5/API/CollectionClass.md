@@ -788,7 +788,7 @@ The `.equal()` function <!-- REF #collection.equal().Summary -->recursively comp
 
 :::note Notas
 
-- The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. It does not check equality for native objects.
+- The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. Ele não verifica a igualdade dos objetos nativos.
 - Elementos com valores **null** não são a mesma coisa que valores Undefined.
 
 :::
@@ -856,7 +856,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 - or *methodName*, the name of a project method (text).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for every element fulfilling the test. It receives an `Object` in first parameter ($1).
+The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for every element fulfilling the test. Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -871,7 +871,7 @@ Pode definir o(s) seguinte(s) parâmetro(s):
 
 In all cases, at the point when the `.every()` function encounters the first collection element evaluated to **false**, it stops calling the callback and returns **false**.
 
-By default, `.every()` tests the whole collection. Optionally, you can pass in *startFrom* the index of the element from which to start the test.
+Por padrão, `.every()` testa toda a coleção. Optionally, you can pass in *startFrom* the index of the element from which to start the test.
 
 - If *startFrom* >= the collection's length, **false** is returned, which means the collection is not tested.
 - If *startFrom* < 0, it is considered as the offset from the end of the collection ( *startFrom:=startFrom+length*).
@@ -1157,7 +1157,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 - or *methodName*, the name of a project method (text).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for the first element fulfilling the condition. It receives an `Object` in first parameter ($1).
+The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for the first element fulfilling the condition. Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -1245,7 +1245,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 - *methodName*, o nome de um método projeto (texto).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for the first element fulfilling the condition. It receives an `Object` in first parameter ($1).
+The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for the first element fulfilling the condition. Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -1415,7 +1415,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 - or *methodName*, the name of a project method (text).
 
-The callback is called with the parameter(s) passed in *param* (optional). A chamada de retorno é chamada com o(s) parâmetro(s) aprovado(s) em <em x-id="3">param</em> (opcional). It receives an `Object` in first parameter ($1).
+The callback is called with the parameter(s) passed in *param* (optional). A chamada de retorno é chamada com o(s) parâmetro(s) aprovado(s) em <em x-id="3">param</em> (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -1906,7 +1906,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 - or *methodName*, the name of a project method (text).
 
-The callback is called with the parameter(s) passed in *param* (optional). A chamada de retorno é chamada com o(s) parâmetro(s) aprovado(s) em <em x-id="3">param</em> (opcional). It receives an `Object` in first parameter ($1).
+The callback is called with the parameter(s) passed in *param* (optional). A chamada de retorno é chamada com o(s) parâmetro(s) aprovado(s) em <em x-id="3">param</em> (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -2547,7 +2547,7 @@ valor de comparação propertyPath {valor de comparação logicalOperator proper
 
 onde:
 
-- **propertyPath**: caminho da propriedade em que você deseja executar a consulta. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em <em x-id="3">queryString</em> ou <em x-id="3">formula</em> (":placeholder") e valor pode ser uma string ou uma coleção de strings. In case of an attribute path whose type is `Collection`, `[]` notation is used to handle all the occurences (for example `children[].age`).
+- **propertyPath**: caminho da propriedade em que você deseja executar a consulta. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em <em x-id="3">queryString</em> ou <em x-id="3">formula</em> (":placeholder") e valor pode ser uma string ou uma coleção de strings. No caso de um caminho de atributo cujo tipo é `Collection`, a notação `[]` é usada para lidar todas as ocorrências (por exemplo `children[].age`).
 
 - **comparator**: símbolo que compara *propertyPath* e *value*. Os simbolos abaixo são compatíveis:
 
@@ -2989,11 +2989,11 @@ Com o seguinte método ***Flatten***:
 
 <!-- REF #collection.remove().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                                         |
-| ---------- | ---------- | :-: | ----------------------------------------------------------------- |
-| index      | Integer    |  -> | Elemento no qual que se inicia a eliminação                       |
-| howMany    | Integer    |  -> | Número de elementos a eliminar, ou 1 elemento se omitir           |
-| Resultados | Collection |  <- | Original collection without removed element(s) |
+| Parâmetro  | Tipo       |     | Descrição                                               |
+| ---------- | ---------- | :-: | ------------------------------------------------------- |
+| index      | Integer    |  -> | Elemento no qual que se inicia a eliminação             |
+| howMany    | Integer    |  -> | Número de elementos a eliminar, ou 1 elemento se omitir |
+| Resultados | Collection |  <- | Colección original sem elementos eliminados             |
 
 <!-- END REF -->
 
@@ -3251,7 +3251,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 - or *methodName*, the name of a project method (text).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for every element fulfilling the test. It receives an `Object` in first parameter ($1).
+The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for every element fulfilling the test. Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 

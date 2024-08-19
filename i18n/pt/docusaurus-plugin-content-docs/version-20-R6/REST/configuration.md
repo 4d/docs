@@ -19,7 +19,7 @@ A mensagem de aviso "Atenção, verifique os privilégios de acesso" é exibida 
 
 > Deve reiniciar a aplicação 4D para que as suas alterações tenham efeito.
 
-## Controlling REST access
+## Controle do acesso REST
 
 Como padrão, acessos REST são abertos a todos os usuários que são obviamente não configurados para razões de segurança e também para controlar uso de licenças de cliente.
 

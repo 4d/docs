@@ -350,7 +350,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 19
 - Nuevos temas oscuros y claros por defecto en [Preferencias del editor de código](../Preferences/methods.md#theme-list).
 - [Compilación nativa](../Project/compiler.md#compiler-methods-for) para procesadores Silicon.
 - La propiedad [Cálculo de variables](../FormObjects/properties_Object.md#cálculo-de-variables) ahora es compatible con las columnas list box de la selección de entidades.
-- Nueva página [CLI]completa (../Admin/cli.md).
+- Nueva página completada [CLI](../Admin/cli.md).
 
 ### 4D 18 R6
 

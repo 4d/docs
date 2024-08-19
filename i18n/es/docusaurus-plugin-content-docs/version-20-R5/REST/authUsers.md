@@ -7,7 +7,7 @@ When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (r
 
 Cuando se abre una sesión de usuario web, puede manejarla a través del objeto `Session` y la [Session API](API/SessionClass.md). Las siguientes peticiones REST reutilizan la misma cookie de sesión.
 
-> - On 4D Server, opening a REST session might require that a free 4D client license is available, depending on the [user login mode](#user-login-modes).<br/>
+> - En el servidor 4D, abrir una sesión REST puede requerir que esté disponible una licencia gratuita del cliente 4D, dependiendo del [modo de inicio de sesión del usuario](#modos-inicio-sesión-usuario).<br/>
 > - En 4D monopuesto, puede abrir hasta tres sesiones REST para realizar pruebas.
 
 ## Modos de inicio de sesión de usuario
@@ -33,7 +33,7 @@ En Qodly Studio for 4D, el modo se puede definir utilizando la opción [**Forzar
 
 ### Modo por defecto
 
-In the default mode, any REST request is processed in a web user session that automatically consumes a license (the web user session is created if it does not already exist). Puede utilizar este modo simple si no necesita controlar cuántas licencias se conservan en el servidor.
+En el modo predeterminado, toda petición REST se procesa en una sesión usuario web que consume automáticamente una licencia (la sesión usuario web se crea si aún no existe). Puede utilizar este modo simple si no necesita controlar cuántas licencias se conservan en el servidor.
 Cuando el modo por defecto está activado, puede autenticar usuarios a través del método base `On REST Authentication` (ver más abajo).
 
 ### Forzar el modo de inicio de sesión
@@ -42,7 +42,7 @@ En el modo "inicio de sesión forzada", el uso de la licencia está desconectado
 
 Las [peticiones REST descriptivas](#descriptive-rest-requests) siempre son procesadas por el servidor, aunque no se abra una sesión usuario web que utilice una licencia. En este caso, son procesados a través de sesiones "invitado".
 
-All other REST requests (handling data or executing a function) will only be processed if they are executed within a web session with appropriate privileges, otherwise they return an error. To assign privileges to a web session, you need to execute the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function for the session. Ejecutar esta función activa el consumo de la licencia 4D.
+All other REST requests (handling data or executing a function) will only be processed if they are executed within a web session with appropriate privileges, otherwise they return an error. Para asignar privilegios a una sesión web, debe ejecutar la función [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) para la sesión. Ejecutar esta función activa el consumo de la licencia 4D.
 
 Este modo le permite implementar la siguiente secuencia de acceso:
 

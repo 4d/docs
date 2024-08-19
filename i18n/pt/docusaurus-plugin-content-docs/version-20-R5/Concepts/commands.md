@@ -655,7 +655,7 @@ Nome (Número)
 [LONGINT TO BLOB](https://doc.4d.com/4dv20/help/command/en/page550.html) (550) -
 [Lowercase](https://doc.4d.com/4dv20/help/command/en/page14.html) (14) -
 
-<a id="M"><b>M</b></a>
+<a id="M"><b>L</b></a>
 
 [Macintosh command down](https://doc.4d.com/4dv20/help/command/en/page546.html) (546) -
 [Macintosh control down](https://doc.4d.com/4dv20/help/command/en/page544.html) (544) -

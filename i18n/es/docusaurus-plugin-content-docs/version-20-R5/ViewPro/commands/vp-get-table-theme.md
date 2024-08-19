@@ -25,7 +25,7 @@ title: VP Get table theme
 
 #### Descripción
 
-El comando `VP Get table theme` <!-- REF #_method_.VP Get table theme.Summary -->devuelve los valores actuales de las propiedades del tema de la tabla _tableName_<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](vp-create-table.md) or [`VP SET TABLE THEME`](vp-set-table-theme.md) commands, or through the interface.
+El comando `VP Get table theme` <!-- REF #_method_.VP Get table theme.Summary -->devuelve los valores actuales de las propiedades del tema de la tabla _tableName_<!-- END REF -->. Se puede definir un tema de tabla utilizando los comandos [`VP CREATE TABLE`](vp-create-table.md) o [`VP SET TABLE THEME`](vp-set-table-theme.md), o a través de la interfaz.
 
 En\* vpAreaName\*, pase el nombre del área 4D View Pro y en _tableName_, el nombre de la tabla.
 

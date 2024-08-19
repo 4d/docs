@@ -186,7 +186,7 @@ See [this page](https://developer.qodly.com/docs/studio/rendering) for detailed 
 To enable the rendering of Qodly forms, the following options must be set.
 
 - The 4D project's **Settings** > **Web** > **Web Features** > [**Expose as REST server**](../settings/web.md#exposed-as-rest-server) option must be activated.
-- The [4D web server](webServer.md) must be running.
+- O [servidor Web 4D] (webServer.md) deve estar em execução.
 
 :::note
 

@@ -111,9 +111,9 @@ Las solicitudes posteriores al servidor enviadas por las funciones de navegació
 Por ejemplo, el siguiente código carga la entidad seleccionada y permite navegar en la selección de entidades. Las entidades se cargan en un contexto separado y el contexto inicial del list box se deja intacto:
 
 ```4d
- $myEntity:=Form.currentElement //current item expression
-  //... do something
- $myEntity:=$myEntity.next() //loads the next entity using the same context
+ $myEntity:=Form.currentElement //expresión del elemento actual
+  //... hacer algo
+ $myEntity:=$myEntity.next() //carga la siguiente entidad utilizando el mismo contexto
 ```
 
 ### Preconfiguración de contextos
@@ -133,7 +133,7 @@ Por razones de optimización, los datos solicitados al servidor a través de ORD
 
 Los datos contenidos en la caché se consideran caducados cuando se alcanza el tiempo de espera. Todo acceso a los datos caducados enviará una petición al servidor. Los datos caducados permanecen en la caché hasta que se necesite el espacio.
 
-You can force entity selection data in the ORDA cache to expire at any moment by using the [`refresh()`](../API/EntitySelectionClass.md#refresh) function.
+Puede forzar que los datos de la selección de entidades en la caché ORDA expiren en cualquier momento utilizando la función [`refresh()`](../API/EntitySelectionClass.md#refresh).
 
 Por defecto, la caché ORDA es manejada de forma transparente por 4D. Sin embargo, puede controlar su contenido utilizando las siguientes funciones de la clase ORDA:
 

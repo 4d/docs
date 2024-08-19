@@ -664,7 +664,7 @@ As chaves primárias podem ser números (Inteiro) ou strings. You can "force" th
 
 <!-- END REF -->
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
+> **Modo avançado:** Essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
@@ -1234,7 +1234,7 @@ The object returned by `.save()` contains the following properties:
 |              |                                     |                        | ***Disponível apenas se a opção `dk auto merge` for usada***:                                                                                                                              |
 | autoMerged   |                                     | boolean                | True se fizer uma auto merge, senão False                                                                                                                                                                  |
 |              |                                     |                        | ***Disponível apenas em caso de erro***:                                                                                                                                                   |
-| status       |                                     | number                 | Error code, [see below](#status-and-statustext)                                                                                                                                                            |
+| status       |                                     | number                 | Código de erro, [veja abaixo](#status-and-statustext)                                                                                                                                                      |
 | statusText   |                                     | text                   | Description of the error, [see below](#status-and-statustext)                                                                                                                                              |
 |              |                                     |                        | ***Disponível apenas em caso de erro de bloqueio pessimista***:                                                                                                                            |
 | lockKindText |                                     | text                   | "Bloqueado pelo registro"                                                                                                                                                                                  |
@@ -1302,7 +1302,7 @@ Updating an entity without `dk auto merge` option:
 
 #### Exemplo 3
 
-Updating an entity with `dk auto merge` option:
+Atualização de uma entidade com a opção `dk auto merge`:
 
 ```4d
  var $status : Object
@@ -1522,7 +1522,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 #### Exemplo
 
-Extracting some properties of `relatedEntities`:
+Extração de algumas propriedades de `relatedEntities`:
 
 ```4d
  employeeObject:=employeeSelected.toObject("firstName, directReports.lastName")
@@ -1591,7 +1591,7 @@ Retorna:
 
 #### Exemplo 3
 
-Extracting some properties of a `relatedEntity`:
+Extração de algumas propriedades de `relatedEntity`:
 
 ```4d
  $col:=New collection
@@ -1728,7 +1728,7 @@ Se nenhum atributo de entidade for tocado, o método retorna uma coleção vazia
 
 Nesse modo:
 
-- firstName and lastName have a `storage` kind
+- firstName and lastName tem um tipo `storage`
 - employer tem um tipo 'relatedEntity'
 - employerID é a chave estrangeira da entidade relacionada employer
 

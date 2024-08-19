@@ -384,7 +384,7 @@ Cada elemento da coleção é um objeto com as seguintes propriedades:
 | [].message             | text   | Descrição do erro 4D                                 |
 | [ ].componentSignature | text   | Assinatura da componente interna que devolveu o erro |
 
-If no error occured, `.errors` is undefined.
+Se não ocorrer nenhum erro, `.errors` será undefined.
 
 <!-- END REF -->
 

@@ -69,18 +69,18 @@ The `IMAP New transporter` command <!-- REF #_command_.IMAP New transporter.Summ
 
 In the *server* parameter, pass an object containing the following properties:
 
-| *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Valor padrão (se omitido)                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                                                                                                                                                                                                                                                                     | False                                                             |
-| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[IMAP transporter](#imap-transporter-object)* object. | nenhum                                                            |
-| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                       | o modo de autenticação mais seguro disponível no servidor é usado |
-| [<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<br/><!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->                                                                                                                                                                                                                                                                                                                                                                               | 300                                                               |
-| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                          | 30                                                                |
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                 | *mandatory*                                                       |
-| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                        | nenhum                                                            |
-| .**password** : Text<br/>User password for authentication on the server. Not returned in *[IMAP transporter](#imap-transporter-object)* object.                                                                                                                                                                                                                                                                                                                                   | nenhum                                                            |
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                 | 993                                                               |
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                 | nenhum                                                            |
+| *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Valor padrão (se omitido)                      |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                                                                                                                                                                                                                                                                        | False                                                             |
+| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Text string or token object representing OAuth2 authorization credentials. Usado somente com OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[IMAP transporter](#imap-transporter-object)* object. | nenhum                                                            |
+| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                          | o modo de autenticação mais seguro disponível no servidor é usado |
+| [<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<br/><!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->                                                                                                                                                                                                                                                                                                                                                                                  | 300                                                               |
+| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                             | 30                                                                |
+| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                    | *mandatory*                                                       |
+| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                           | nenhum                                                            |
+| .**password** : Text<br/>User password for authentication on the server. Not returned in *[IMAP transporter](#imap-transporter-object)* object.                                                                                                                                                                                                                                                                                                                                      | nenhum                                                            |
+| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                    | 993                                                               |
+| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                    | nenhum                                                            |
 
 > **Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.
 
@@ -157,7 +157,7 @@ The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summa
 
 The `.addFlags()` function <!-- REF #IMAPTransporterClass.addFlags().Summary -->adds flags to the `msgIDs` for the specified `keywords`<!-- END REF -->.
 
-In the `msgIDs` parameter, you can pass either:
+No parâmetro `msgIDs`, você pode passar qualquer um deles:
 
 - uma *colecção* contendo as identificações únicas de mensagens específicas ou
 - o ID único (*texto*) de uma mensagem ou
@@ -351,12 +351,12 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 
 <!-- REF #IMAPTransporterClass.copy().Params -->
 
-| Parâmetro      | Tipo       |     | Descrição                                                                   |
-| -------------- | ---------- | :-: | --------------------------------------------------------------------------- |
-| msgsIDs        | Collection |  -> | Coleção de identificadores únicos de mensagens (strings) |
-| allMsgs        | Integer    |  -> | `IMAP all`: All messages in the selected mailbox            |
-| destinationBox | Text       |  -> | Caixa de correio para receber mensagens copiadas                            |
-| Resultados     | Object     |  <- | Estado da operação anexada                                                  |
+| Parâmetro      | Tipo       |     | Descrição                                                                      |
+| -------------- | ---------- | :-: | ------------------------------------------------------------------------------ |
+| msgsIDs        | Collection |  -> | Coleção de identificadores únicos de mensagens (strings)    |
+| allMsgs        | Integer    |  -> | `IMAP all`: todas as mensagens na caixa de correio selecionada |
+| destinationBox | Text       |  -> | Caixa de correio para receber mensagens copiadas                               |
+| Resultados     | Object     |  <- | Estado da operação anexada                                                     |
 
 <!-- END REF -->
 
@@ -531,11 +531,11 @@ End if
 
 <!-- REF #IMAPTransporterClass.delete().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                                                   |
-| ---------- | ---------- | :-: | --------------------------------------------------------------------------- |
-| msgsIDs    | Collection |  -> | Coleção de identificadores únicos de mensagens (strings) |
-| allMsgs    | Integer    |  -> | `IMAP all`: All messages in the selected mailbox            |
-| Resultados | Object     |  <- | Estado da operação apagada                                                  |
+| Parâmetro  | Tipo       |     | Descrição                                                                      |
+| ---------- | ---------- | :-: | ------------------------------------------------------------------------------ |
+| msgsIDs    | Collection |  -> | Coleção de identificadores únicos de mensagens (strings)    |
+| allMsgs    | Integer    |  -> | `IMAP all`: todas as mensagens na caixa de correio selecionada |
+| Resultados | Object     |  <- | Estado da operação apagada                                                     |
 
 <!-- END REF -->
 
@@ -803,7 +803,7 @@ The `boxInfo` object returned contains the following properties:
 | mailCount   | Number | Número de mensagens na caixa de email                                                       |
 | mailRecent  | Number | Número de mensagens com o marcador "recente" (indicando novas mensagens) |
 | id          | text   | Parâmetros                                                                                  |
-| mailUnseen  | Number | Number of messages marked "unseen"                                                          |
+| mailUnseen  | Number | Número de mensagens marcadas como "unseen"                                                  |
 
 #### Exemplo
 
@@ -847,12 +847,12 @@ The `.getBoxList()` function <!-- REF #IMAPTransporterClass.getBoxList().Summary
 
 In the optional `parameters` parameter, pass an object containing values to filter the returned mailboxes. Pode passar:
 
-| Propriedade       | Tipo       | Descrição                                                                                                                                                                                                           |
-| ----------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| isSubscribed      | Parâmetros | <li>**True** to return only subscribed mailboxes</li><li> **False** to return all available mailboxes</li>                                                                                                          |
-| names             | Collection | Collection of objects containing a "name" attribute or collection of texts containing the box names                                                                                                                 |
-| withBoxProperties | Parâmetros | If true (default): adds the `selectable`, `inferior`, and `interesting` attributes to the result object. If false, these attributes are omitted. |
-| withBoxInfo       | Parâmetros | Default value is false. If true, adds the `mailCount`, `mailRecent`, and `id` attributes to the result object.                                                                      |
+| Propriedade       | Tipo       | Descrição                                                                                                                                                                                                                 |
+| ----------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| isSubscribed      | Parâmetros | <li>**True** to return only subscribed mailboxes</li><li> **False** to return all available mailboxes</li>                                                                                                                |
+| names             | Collection | Collection of objects containing a "name" attribute or collection of texts containing the box names                                                                                                                       |
+| withBoxProperties | Parâmetros | If true (default): adds the `selectable`, `inferior`, and `interesting` attributes to the result object. Se for false, esses atributos serão omitidos. |
+| withBoxInfo       | Parâmetros | O valor padrão é false. If true, adds the `mailCount`, `mailRecent`, and `id` attributes to the result object.                                                                            |
 
 #### Resultados
 
@@ -864,10 +864,10 @@ Cada objecto da coleção devolvida contém as seguintes propriedades:
 | \[].selectable  | Parâmetros | Indicates whether or not the access rights allow the mailbox to be selected: <ul><li>true - the mailbox can be selected</li><li>false - the mailbox can not be selected</li></ul>	Returned if withBoxProperties=true                                                                                                                                              |
 | \[].inferior    | Parâmetros | Indicates whether or not the access rights allow creating a lower hierachy in the mailbox: <ul><li>true - a lower level can be created</li><li>false - a lower level can not be created</li></ul>	Returned if withBoxProperties=true                                                                                                                              |
 | \[].interesting | Parâmetros | Indicates if the mailbox has been marked "interesting" by the server: <ul><li>true - The mailbox has been marked "interesting" by the server. For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul>	Returned if withBoxProperties=true |
-| [].mailCount     | Number     | Number of messages in inbox. Returned if withBoxInfo=true                                                                                                                                                                                                                                                                                                         |
-| [].mailRecent    | Number     | Number of messages marked "recent" (indicating new messages). Returned if withBoxInfo=true                                                                                                                                                                                                                                                     |
-| [].mailUnseen    | Number     | Number of messages marked "unseen". Returned if withBoxInfo=true                                                                                                                                                                                                                                                                                                  |
-| [].id            | Text       | Unique mailbox identifier. Returned if withBoxInfo=true                                                                                                                                                                                                                                                                                                           |
+| [].mailCount     | Number     | Número de mensagens na caixa de entrada. Retornado se withBoxInfo=true                                                                                                                                                                                                                                                                                            |
+| [].mailRecent    | Number     | Number of messages marked "recent" (indicating new messages). Retornado se withBoxInfo=true                                                                                                                                                                                                                                                    |
+| [].mailUnseen    | Number     | Número de mensagens marcadas como "unseen". Retornado se withBoxInfo=true                                                                                                                                                                                                                                                                                         |
+| [].id            | Text       | Identificador exclusivo da caixa de correio. Retornado se withBoxInfo=true                                                                                                                                                                                                                                                                                        |
 
 Se a conta não contiver quaisquer caixas de correio, é devolvida uma colecção vazia.
 
@@ -1220,12 +1220,12 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 
 <!-- REF #IMAPTransporterClass.move().Params -->
 
-| Parâmetro      | Tipo       |     | Descrição                                                                   |
-| -------------- | ---------- | :-: | --------------------------------------------------------------------------- |
-| msgsIDs        | Collection |  -> | Coleção de identificadores únicos de mensagens (strings) |
-| allMsgs        | Integer    |  -> | `IMAP all`: All messages in the selected mailbox            |
-| destinationBox | Text       |  -> | Caixa de correio para receber mensagens movimentadas                        |
-| Resultados     | Object     |  <- | Estado da operação de mudança                                               |
+| Parâmetro      | Tipo       |     | Descrição                                                                      |
+| -------------- | ---------- | :-: | ------------------------------------------------------------------------------ |
+| msgsIDs        | Collection |  -> | Coleção de identificadores únicos de mensagens (strings)    |
+| allMsgs        | Integer    |  -> | `IMAP all`: todas as mensagens na caixa de correio selecionada |
+| destinationBox | Text       |  -> | Caixa de correio para receber mensagens movimentadas                           |
+| Resultados     | Object     |  <- | Estado da operação de mudança                                                  |
 
 <!-- END REF -->
 
@@ -1399,7 +1399,7 @@ A função devolve uma colecção de cordas (identificações únicas).
 
 The `.removeFlags()` function <!-- REF #IMAPTransporterClass.removeFlags().Summary -->removes flags from the `msgIDs` for the specified `keywords`<!-- END REF -->.
 
-In the `msgIDs` parameter, you can pass either:
+No parâmetro `msgIDs`, você pode passar qualquer um deles:
 
 - uma *colecção* contendo as identificações únicas de mensagens específicas ou
 - o ID único (*texto*) de uma mensagem ou

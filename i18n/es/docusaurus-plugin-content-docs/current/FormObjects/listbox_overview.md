@@ -413,7 +413,7 @@ La gestión de selecciones es diferente dependiendo de si el list box se basa en
 
 ```4d
  ARRAY BOOLEAN(tBListBox;10)
-  //tBListBox is the name of the list box variable in the form
+  //tBListBox es el nombre de la variable asociada al list box en el formulario
  If(tBListBox{1}=True)
     tBListBox{1}:=False
  Else

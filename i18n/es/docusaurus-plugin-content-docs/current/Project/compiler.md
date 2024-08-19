@@ -174,7 +174,7 @@ Dependiendo de las circunstancias y del estilo de programación utilizado, las a
 
 Esta pestaña le permite definir qué advertencias deben mostrarse globalmente. De la lista de todas las advertencias posibles con sus tipos, su código y su etiqueta localizada, ordenadas por código de advertencia.
 
-To reduce the list, you can search words by warning labels and codes using the **Search in codes and labels** textbox or the magnifying glass icon on the left.
+Para reducir la lista, puede buscar palabras por etiquetas de advertencia y códigos utilizandola caja de texto **Buscar en códigos y etiquetas** o el icono de la lupa de la izquierda.
 
 Por defecto, todos los tipos de advertencia están marcados y activados.
 

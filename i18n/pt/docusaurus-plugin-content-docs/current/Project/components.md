@@ -11,7 +11,7 @@ When developing in 4D, the component files can be transparently stored in your c
 
 ## Componentes interpretados e compilados
 
-Components can be interpreted or [compiled](../Desktop/building.md). The package folder of a component can contain:
+Components can be interpreted or [compiled](../Desktop/building.md). A pasta do pacote de um componente pode conter:
 
 - either a Project folder (interpreted component)
 - ou um arquivo .4DZ (componente compilado)
@@ -116,7 +116,7 @@ If you do not want to benefit from the **dependencies.json** architecture, you c
 
 :::
 
-#### Customizing component paths
+#### Personalizando caminhos dos componentes
 
 If you want to customize the location of local components, you declare the paths for the dependencies that are not stored at the same level as the project folder in the [**environment4d.json**](#environment4djson) file.
 
@@ -154,7 +154,7 @@ Regarding components stored on GitHub, both [**dependencies.json**](#dependencie
 
 To be able to directly reference and use a 4D component stored on GitHub, you need to configure the GitHub component's repository:
 
-- Compress the component files in ZIP format.
+- Compacte os arquivos de componentes no formato ZIP.
 - Name this archive with the same name as the GitHub repository.
 - Integrate the archive into a [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) of the repository.
 
@@ -278,7 +278,7 @@ A `dependency-lock.json` file is created in the [`userPreferences` folder](archi
 
 This file logs information such as the state of dependencies, paths, urls, loading errors, as well as other information. It could be useful for component loading management or troubleshooting.
 
-## Monitoring Project Dependencies
+## Monitoramento das dependências do projeto
 
 In an opened project, you can get information about dependencies and their current loading status in the **Dependencies** panel.
 

@@ -486,7 +486,7 @@ O Verificador de código ao vivo é ativado enquanto você insere o código. Whe
 
 Você pode formatar a linha atual (sem avançar para a próxima linha) pressionando a tecla **Enter** no teclado numérico. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line.
 
-The Code Live Checker checks for:
+O Code Live Checker verifica se:
 
 - erros básicos de sintaxe (operadores errados, erros de ortografia e similares)
 - a estrutura das declarações (`If`, `End if` e assim por diante)

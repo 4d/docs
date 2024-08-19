@@ -5,7 +5,7 @@ title: Notas del lanzamiento
 
 :::tip
 
-Read [**What’s new in 4D 19**](https://blog.4d.com/en-whats-new-in-4d-v19/), the blog post that lists all new features and enhancements in 4D 19 LTS.
+Lea las [**novedades de 4D 19**](https://blog.4d.com/en-whats-new-in-4d-v19/), la entrada del blog que lista todas las nuevas funcionalidades y mejoras en 4D 19 LTS.
 
 :::
 
