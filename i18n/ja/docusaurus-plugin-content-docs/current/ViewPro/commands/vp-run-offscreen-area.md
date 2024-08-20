@@ -129,4 +129,4 @@ $result:=VP Run offscreen area($o)
 
 #### 参照
 
-[ブログ記事 (英文): End of document loading](https://blog.4d.com/4d-view-pro-end-of-document-loading/)
+[ブログ記事: 4D View Pro:ドキュメントの読み込み終了](https://blog.4d.com/ja/4d-view-pro-end-of-document-loading/)
