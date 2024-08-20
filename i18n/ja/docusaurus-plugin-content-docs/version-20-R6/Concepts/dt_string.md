@@ -37,27 +37,24 @@ title: 文字列
 
 ## 文字列演算子
 
-| 演算                         | シンタックス           | 戻り値     | 式                                         | 値                            |
-| -------------------------- | ---------------- | ------- | ----------------------------------------- | ---------------------------- |
-| 連結 (結合) | String + String  | String  | "abc" + "def"                             | "abcdef"                     |
-| 繰り返し                       | String \* Number | String  | "ab" \* 3                                 | "ababab"                     |
-| 等しい                        | String = String  | Boolean | "abc" = "abc"                             | true                         |
-|                            |                  |         | "abc" = "abd"                             | false                        |
-| 異なる                        | String # String  | Boolean | "abc" # "abd"                             | true                         |
-|                            |                  |         | "abc" # "abc"                             | false                        |
-| 大きい                        | 文字列 > 文字列        | Boolean | "abd" > "abc"                             | true                         |
-|                            |                  |         | "abc" > "abc"                             | false                        |
-| 小さい                        | 文字列 < 文字列        | Boolean | "abc" < "abd"                             | true                         |
-|                            |                  |         | "abc" < "abc"                             | false                        |
-| 以上                         | 文字列 >= 文字列       | Boolean | "abd" >= "abc"                            | true                         |
-|                            |                  |         | "abc" >= "abd"                            | false                        |
-| 以下                         | String <= String | Boolean | "abc" <= "abd"                            | true                         |
-|                            |                  |         | "abd" <= "abc"                            | false                        |
-| キーワードを含む                   | String % String  | Boolean | "Alpha Bravo" % "Bravo"                   | true                         |
-|                            |                  |         | "Alpha Bravo" % "ravo"                    | false                        |
-|                            | Picture % String | Boolean | Picture_expr % "Mer" | true (\*) |
-
-(\*) キーワード "Mer" がピクチャー式 (フィールドまたは変数) に格納されたピクチャーの IPTC/Keywords メタデータに含まれている場合。
+| 演算                         | シンタックス           | 戻り値     | 式                       | 値        |
+| -------------------------- | ---------------- | ------- | ----------------------- | -------- |
+| 連結 (結合) | String + String  | String  | "abc" + "def"           | "abcdef" |
+| 繰り返し                       | String \* Number | String  | "ab" \* 3               | "ababab" |
+| 等しい                        | String = String  | Boolean | "abc" = "abc"           | true     |
+|                            |                  |         | "abc" = "abd"           | false    |
+| 異なる                        | String # String  | Boolean | "abc" # "abd"           | true     |
+|                            |                  |         | "abc" # "abc"           | false    |
+| 大きい                        | 文字列 > 文字列        | Boolean | "abd" > "abc"           | true     |
+|                            |                  |         | "abc" > "abc"           | false    |
+| 小さい                        | 文字列 < 文字列        | Boolean | "abc" < "abd"           | true     |
+|                            |                  |         | "abc" < "abc"           | false    |
+| 以上                         | 文字列 >= 文字列       | Boolean | "abd" >= "abc"          | true     |
+|                            |                  |         | "abc" >= "abd"          | false    |
+| 以下                         | String <= String | Boolean | "abc" <= "abd"          | true     |
+|                            |                  |         | "abd" <= "abc"          | false    |
+| キーワードを含む                   | String % String  | Boolean | "Alpha Bravo" % "Bravo" | true     |
+|                            |                  |         | "Alpha Bravo" % "ravo"  | false    |
 
 ## 文字列比較の詳細
 
@@ -165,14 +162,14 @@ End if
 それ以外の場合には、式内で使用される文字列参照記号は、参照する文字を1文字の独立した文字列として返します。 例:
 
 ```4d
-// 以下の例は vtText の最後の文字が "@" であるかをテストします。
+//The following example tests if the last character of vtText is an At sign "@"
  If(vtText#"")
     If(Character code(Substring(vtText;Length(vtText);1))=At sign)
   //...
     End if
  End if
 
-  // 文字参照記号を使用し、よりシンプルに記述できます:
+  //Using the character reference syntax, you would write in a simpler manner:
  If(vtText#"")
     If(Character code(vtText[[Length(vtText)]])=At sign)
   // ...
@@ -203,9 +200,9 @@ End if
 以下のプロジェクトメソッドは、文字列内の各単語の先頭文字を大文字に変換し、結果の文字列を返します。
 
 ```4d
-  // Capitalize_text プロジェクトメソッド
-  // Capitalize_text ( Text ) -> Text
-  // Capitalize_text ( Source text ) -> Capitalized Text
+  //Capitalize_text project method
+  //Capitalize_text ( Text ) -> Text
+  //Capitalize_text ( Source text ) -> Capitalized text
 
  $0:=$1
  $vlLen:=Length($0)
