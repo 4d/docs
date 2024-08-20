@@ -21,7 +21,7 @@ El método base `On Web Connection` se llama automáticamente cuando el servidor
 
 Por ejemplo, la URL "_a/b/c_" llamará al método base, pero "_a/b/c.html_" no llamará al método base si la página "c.html" existe en la subcarpeta "a/b" del [WebFolder](webServerConfig.md#root-folder).
 
-> The request should have previously been accepted by the [`On Web Authentication`](authentication.md#on-web-authentication) database method (if it exists) and the web server must be launched.
+> La petición debe haber sido aceptada previamente por el método base [`On Web Authentication`](authentication.md#on-web-authentication) de la base (si existe) y el servidor web debe lanzarse.
 
 ### Sintaxis
 
