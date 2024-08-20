@@ -3,18 +3,18 @@ id: picture
 title: Picture
 ---
 
-A Picture field, variable or expression can be any Windows or Macintosh picture. In general, this includes any picture that can be put on the pasteboard or read from the disk using 4D commands such as `READ PICTURE FILE`. 
+A Picture field, variable or expression can be any Windows or Macintosh picture. In general, this includes any picture that can be put on the pasteboard or read from the disk using 4D commands such as `READ PICTURE FILE`.
 
-4D uses native APIs to encode (write) and decode (read) picture fields and variables under both Windows and macOS. These implementations provide access to numerous native formats, including the RAW format, currently used by digital cameras. 
+4D uses native APIs to encode (write) and decode (read) picture fields and variables under both Windows and macOS. These implementations provide access to numerous native formats, including the RAW format, currently used by digital cameras.
 
-*	on Windows, 4D uses WIC (Windows Imaging Component). 
+*	on Windows, 4D uses WIC (Windows Imaging Component).
 *	on macOS, 4D uses ImageIO.
 
 WIC and ImageIO permit the use of metadata in pictures. Two commands, `SET PICTURE METADATA` and `GET PICTURE METADATA`, let you benefit from metadata in your developments.
 
 ## Picture Codec IDs  
 
-4D supports natively a wide set of [picture formats](FormEditor/pictures.md#native-formats-supported), such as .jpeg, .png, or .svg. 
+4D supports natively a wide set of [picture formats](FormEditor/pictures.md#native-formats-supported), such as .jpeg, .png, or .svg.
 
 Picture formats recognized by 4D are returned by the `PICTURE CODEC LIST` command as picture Codec IDs.  They can be returned in the following forms:
 
@@ -24,7 +24,7 @@ Picture formats recognized by 4D are returned by the `PICTURE CODEC LIST` comman
 The form returned for each format will depend on the way the Codec is recorded at the operating system level. Note that the list of available codecs for reading and writing can be different since encoding codecs may require specific licenses.
 
 Most of the [4D picture management commands](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.en.html) can receive a Codec ID as a parameter. It is therefore imperative to use the system ID returned by the `PICTURE CODEC LIST` command.
-Picture formats recognized by 4D are returned by the `PICTURE CODEC LIST` command. 
+Picture formats recognized by 4D are returned by the `PICTURE CODEC LIST` command.
 
 
 
@@ -41,6 +41,8 @@ Picture formats recognized by 4D are returned by the `PICTURE CODEC LIST` comman
 |Resizing	|Picture * Number	|Picture	|Resize Picture by Number ratio|
 |Horizontal scaling	|Picture *+ Number	|Picture	|Resize Picture horizontally by Number ratio|
 |Vertical scaling	|Picture *&#124; Number	|Picture	|Resize Picture vertically by Number ratio|
+|Contains keyword |Picture % String |Boolean |Returns true if the string is associated with the picture stored in the picture expression. See `GET PICTURE KEYWORDS`|
+
 
 **Notes :**  
 

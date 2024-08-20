@@ -54,9 +54,6 @@ The following escape sequences can be used within strings:
 |   |||"abd" <= "abc" |False|
 |Contains keyword |String % String |Boolean  |"Alpha Bravo" % "Bravo" |True|
 |   |||"Alpha Bravo" % "ravo" |False|
-| |Picture % String |Boolean |Picture_expr % "Mer" |True (*)|
-
-(*) If the keyword "Mer" is associated with the picture stored in the picture expression (field or variable).
 
 ## String comparisons
 
@@ -169,7 +166,7 @@ Otherwise, if the character reference symbols appear within an expression, they 
   //...
     End if
  End if
- 
+
   //Using the character reference syntax, you would write in a simpler manner:
  If(vtText#"")
     If(Character code(vtText[[Length(vtText)]])=At sign)
@@ -204,7 +201,7 @@ The following project method capitalizes the first character of each word of the
   //Capitalize_text project method
   //Capitalize_text ( Text ) -> Text
   //Capitalize_text ( Source text ) -> Capitalized text
- 
+
  $0:=$1
  $vlLen:=Length($0)
  If($vlLen>0)
