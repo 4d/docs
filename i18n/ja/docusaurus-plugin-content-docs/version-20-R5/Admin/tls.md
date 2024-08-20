@@ -65,7 +65,7 @@ TLS は公開鍵暗号化技術を用います。これは、暗号化と復号�
 
 4D は以下の標準的な暗号化形式の証明書をサポートしています:
 
-- [**RSA**](https://ja.wikipedia.org/wiki/RSA%E6%9A%97%E5%8F%B7))
+- [**RSA**](https://ja.wikipedia.org/wiki/RSA%E6%9A%97%E5%8F%B7)
 - [**ECDSA**](https://ja.wikipedia.org/wiki/%E6%A5%95%E5%86%86%E6%9B%B2%E7%B7%9ADSA)
 
 :::info 互換性
