@@ -29,17 +29,19 @@ A maioria dos [comandos de gerenciamento de imagens 4D](https://doc.4d.com/4Dv18
 
 ## Operadores de imagem
 
-| Operação                | Sintaxe                | Retorna | Ação                                                                                                                                                                       |
-| ----------------------- | ---------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Concatenação horizontal | Foto1 + Foto2          | Imagem  | Adicionar Pict2 à direita da Pict1                                                                                                                                         |
-| Concatenação vertical   | Pict1 / Pict2          | Imagem  | Acrescentar Pict2 ao fundo de Pict1                                                                                                                                        |
-| Sobreposição exclusiva  | Pict1 & Pict2          | Imagem  | Sobrepõe Pict2 no topo de Pict1 (Pict2 em primeiro plano). Produz o mesmo resultado que `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)`                              |
-| Sobreposição inclusiva  | Pict1 &#124; Pict2     | Imagem  | Sobrepõe Pict2 em Pict1 e devolve a máscara resultante se ambas as imagens tiverem o mesmo tamanho. Produz o mesmo resultado que `$equal:=Fotos iguais(Pict1;Pict2;Pict3)` |
-| Movimento horizontal    | Imagem + Número        | Imagem  | Mover imagem horizontalmente número pixels                                                                                                                                 |
-| Movimento vertical      | Imagem / Número        | Imagem  | Mover imagem em pixels do número vertical                                                                                                                                  |
-| Redimensionamento       | Imagem * Número        | Imagem  | Redimensionar imagem por proporção número                                                                                                                                  |
-| Escala horizontal       | Imagem *+ Número       | Imagem  | Redimensionar imagem horizontalmente por relação numérica                                                                                                                  |
-| Escala vertical         | Picture *&#124; Number | Imagem  | Redimensionar imagem por proporção número                                                                                                                                  |
+| Operação                | Sintaxe                | Retorna    | Ação                                                                                                                                                                       |
+| ----------------------- | ---------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Concatenação horizontal | Foto1 + Foto2          | Imagem     | Adicionar Pict2 à direita da Pict1                                                                                                                                         |
+| Concatenação vertical   | Pict1 / Pict2          | Imagem     | Acrescentar Pict2 ao fundo de Pict1                                                                                                                                        |
+| Sobreposição exclusiva  | Pict1 & Pict2          | Imagem     | Sobrepõe Pict2 no topo de Pict1 (Pict2 em primeiro plano). Produz o mesmo resultado que `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)`                              |
+| Sobreposição inclusiva  | Pict1 &#124; Pict2     | Imagem     | Sobrepõe Pict2 em Pict1 e devolve a máscara resultante se ambas as imagens tiverem o mesmo tamanho. Produz o mesmo resultado que `$equal:=Fotos iguais(Pict1;Pict2;Pict3)` |
+| Movimento horizontal    | Imagem + Número        | Imagem     | Mover imagem horizontalmente número pixels                                                                                                                                 |
+| Movimento vertical      | Imagem / Número        | Imagem     | Mover imagem em pixels do número vertical                                                                                                                                  |
+| Redimensionamento       | Imagem * Número        | Imagem     | Redimensionar imagem por proporção número                                                                                                                                  |
+| Escala horizontal       | Imagem *+ Número       | Imagem     | Redimensionar imagem horizontalmente por relação numérica                                                                                                                  |
+| Escala vertical         | Picture *&#124; Number | Imagem     | Redimensionar imagem por proporção número                                                                                                                                  |
+| Contém palavra chave    | Picture % String       | Parâmetros | Returns true if the string is associated with the picture stored in the picture expression. See `GET PICTURE KEYWORDS`                                                     |
+
 
 **Notas:**
 
