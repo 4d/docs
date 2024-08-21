@@ -185,7 +185,7 @@ Para utilizar elementos de colección o entidades para definir el contenido de l
 
 Introduzca una expresión que devuelva una colección o una selección de entidades. Normalmente, introducirá el nombre de una variable, un elemento de una colección o una propiedad que contenga una colección o una selección de entidades.
 
-La colección o la selección de entidades debe estar disponible para el formulario cuando se carga. Each element of the collection or each entity of the entity selection will be associated to a list box row and will be available as an object through the [`This`](../Concepts/classes.md#this) keyword:
+La colección o la selección de entidades debe estar disponible para el formulario cuando se carga. Cada elemento de la colección o cada entidad de la selección de entidades se asociará a una fila del list box y estará disponible como objeto a través de la palabra clave [`This`](../Concepts/classes.md#this):
 
 - si ha utilizado una colección de objetos, puede llamar a **This** en la expresión de la fuente de datos para acceder a cada valor de propiedad, por ejemplo `This.<propertyPath>`.
 - si ha utilizado una selección de entidades, puede llamar a **This** en la expresión de la fuente de datos para acceder a cada valor de atributo, por ejemplo `This.<attributePath>`.
