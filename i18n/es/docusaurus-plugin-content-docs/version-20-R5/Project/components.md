@@ -72,7 +72,7 @@ Ejemplos:
 }
 ```
 
-El archivo **environment4d.json** se puede almacenar en la carpeta del paquete de su proyecto o en una de sus carpetas padre, en cualquier nivel (hasta la raíz). The benefit of this architecture is that you can store this environment file in a parent folder of your projects and decide not to commit it, allowing you to have your local component organization.
+El archivo **environment4d.json** se puede almacenar en la carpeta del paquete de su proyecto o en una de sus carpetas padre, en cualquier nivel (hasta la raíz). El beneficio de esta arquitectura es que usted puede almacenar este archivo de entorno en una carpeta padre de sus proyectos y decidir no comprometerlo, permitiéndole tener su organización local de componentes.
 
 :::note
 
