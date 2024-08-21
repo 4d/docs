@@ -108,7 +108,7 @@ The Qodly Studio page is available when the [WebAdmin web server is running](../
 
 There are two ways to access Qodly Studio:
 
-* from your 4D single-user application, go to **Design** > **Qodly Studio...**.
+* from your 4D single-user application, go to **Design** > **Qodly Studio...** or, from your 4D Server application, go to **Window** > **Qodly Studio...** 
 If the WebAdmin web server is already running, depending on its configuration, your default browser opens at `IPaddress:HTTPPort/studio` or `IPaddress:HTTPSPort/studio`. Otherwise, you will be prompted if you want to start the WebAdmin web server first.
 
 * on a browser, with the WebAdmin web server running (launched from 4D or 4D Server), enter the following address:
