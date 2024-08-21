@@ -69,8 +69,6 @@ La asignación de objetos/colecciones compartidos a propiedades o elementos de o
 
 Consulte el ejemplo 2 para ver una ilustración de las reglas de los grupos compartidos.
 
-**Nota:** Los grupos compartidos se gestionan a través de una propiedad interna llamada _locking identifier_. Para obtener información detallada sobre este valor, consulte la Referencia del Lenguaje 4D.
-
 ### Lectura
 
 Se permite la lectura de propiedades o elementos de un objeto/colección compartida sin tener que llamar a la estructura `Use...End use`, incluso si el objeto/colección compartida está en uso por otro proceso.
