@@ -54,9 +54,6 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 |                     |                  |          | "abd" <= "abc"          | False    |
 | Contient mot-clé    | Chaîne % Chaîne  | Boolean  | "Alpha Bravo" % "Bravo" | True     |
 |                     |                  |          | "Alpha Bravo" % "ravo"  | False    |
-|                     | Image % Chaîne   | Boolean  | Expr_image % "Mer"      | True (*) |
-
-(*) Si le mot-clé "Mer" a été associé à l'image stockée dans l'expression image (champ ou variable).
 
 ## Comparaisons de chaînes
 

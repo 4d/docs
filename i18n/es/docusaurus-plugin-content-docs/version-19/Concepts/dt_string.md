@@ -54,9 +54,6 @@ Las siguientes secuencias de escape pueden utilizarse dentro de las cadenas:
 |                        |                  |          | "abd" <= "abc"          | False    |
 | Contiene palabra clave | Cadena % Cadena  | Boolean  | "Alpha Bravo" % "Bravo" | True     |
 |                        |                  |          | "Alpha Bravo" % "ravo"  | False    |
-|                        | Imagen % Cadena  | Boolean  | Picture_expr % "Mer"    | True (*) |
-
-(*) Si la palabra clave "Mer" está asociada a la imagen almacenada en la expresión imagen (campo o variable).
 
 ## Comparaciones de cadenas
 

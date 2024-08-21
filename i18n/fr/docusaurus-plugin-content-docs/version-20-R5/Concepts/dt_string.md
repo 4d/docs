@@ -36,27 +36,24 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 
 ## Opérateurs sur les chaînes
 
-| Opération           | Syntaxe          | Retourne | Expression                              | Valeur                       |
-| ------------------- | ---------------- | -------- | --------------------------------------- | ---------------------------- |
-| Concaténation       | Chaîne + Chaîne  | String   | "abc" + "def"                           | "abcdef"                     |
-| Répétition          | Chaîne \* Nombre | String   | "ab" \* 3                               | "ababab"                     |
-| Egalité             | Chaîne = Chaîne  | Boolean  | "abc" = "abc"                           | True                         |
-|                     |                  |          | "abc" = "abd"                           | False                        |
-| Inégalité           | Chaîne # Chaîne  | Boolean  | "abc" # "abd"                           | True                         |
-|                     |                  |          | "abc" # "abc"                           | False                        |
-| Supérieur à         | Chaîne > Chaîne  | Boolean  | "abd" > "abc"                           | True                         |
-|                     |                  |          | "abc" > "abc"                           | False                        |
-| Inférieur à         | Chaîne < Chaîne  | Boolean  | "abc" < "abd"                           | True                         |
-|                     |                  |          | "abc" < "abc"                           | False                        |
-| Supérieur ou égal à | Chaîne >= Chaîne | Boolean  | "abd" >= "abc"                          | True                         |
-|                     |                  |          | "abc" >= "abd"                          | False                        |
-| Inférieur ou égal à | Chaîne <= Chaîne | Boolean  | "abc" <= "abd"                          | True                         |
-|                     |                  |          | "abd" <= "abc"                          | False                        |
-| Contient mot-clé    | Chaîne % Chaîne  | Boolean  | "Alpha Bravo" % "Bravo"                 | True                         |
-|                     |                  |          | "Alpha Bravo" % "ravo"                  | False                        |
-|                     | Image % Chaîne   | Boolean  | Expr_image % "Mer" | True (\*) |
-
-(\*) Si le mot-clé "Mer" a été associé à l'image stockée dans l'expression image (champ ou variable).
+| Opération           | Syntaxe          | Retourne | Expression              | Valeur   |
+| ------------------- | ---------------- | -------- | ----------------------- | -------- |
+| Concaténation       | Chaîne + Chaîne  | String   | "abc" + "def"           | "abcdef" |
+| Répétition          | Chaîne \* Nombre | String   | "ab" \* 3               | "ababab" |
+| Egalité             | Chaîne = Chaîne  | Boolean  | "abc" = "abc"           | True     |
+|                     |                  |          | "abc" = "abd"           | False    |
+| Inégalité           | Chaîne # Chaîne  | Boolean  | "abc" # "abd"           | True     |
+|                     |                  |          | "abc" # "abc"           | False    |
+| Supérieur à         | Chaîne > Chaîne  | Boolean  | "abd" > "abc"           | True     |
+|                     |                  |          | "abc" > "abc"           | False    |
+| Inférieur à         | Chaîne < Chaîne  | Boolean  | "abc" < "abd"           | True     |
+|                     |                  |          | "abc" < "abc"           | False    |
+| Supérieur ou égal à | Chaîne >= Chaîne | Boolean  | "abd" >= "abc"          | True     |
+|                     |                  |          | "abc" >= "abd"          | False    |
+| Inférieur ou égal à | Chaîne <= Chaîne | Boolean  | "abc" <= "abd"          | True     |
+|                     |                  |          | "abd" <= "abc"          | False    |
+| Contient mot-clé    | Chaîne % Chaîne  | Boolean  | "Alpha Bravo" % "Bravo" | True     |
+|                     |                  |          | "Alpha Bravo" % "ravo"  | False    |
 
 ## Comparaisons de chaînes
 
@@ -163,14 +160,14 @@ End if
 Lorsque les symboles d'indice de chaîne apparaissent dans une expression, ils retournent le caractère auquel ils font référence sous la forme d'une chaîne d'un caractère. Par exemple :
 
 ```4d
-//L'exemple suivant teste si le dernier caractère de vtText est un signe "@"
+//The following example tests if the last character of vtText is an At sign "@"
  If(vtText#"")
     If(Character code(Substring(vtText;Length(vtText);1))=At sign)
   //...
     End if
  End if
- 
-  //En utilisant la syntaxe de référence des caractères, vous écririez d'une manière plus simple :
+
+  //Using the character reference syntax, you would write in a simpler manner:
  If(vtText#"")
     If(Character code(vtText[[Length(vtText)]])=At sign)
   // ...
@@ -204,7 +201,7 @@ La méthode projet suivante ajoute une lettre capitale à tous les mots du texte
   //Capitalize_text project method
   //Capitalize_text ( Text ) -> Text
   //Capitalize_text ( Source text ) -> Capitalized text
- 
+
  $0:=$1
  $vlLen:=Length($0)
  If($vlLen>0)

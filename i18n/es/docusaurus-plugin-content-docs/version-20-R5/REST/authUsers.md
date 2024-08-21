@@ -42,7 +42,7 @@ En el modo "inicio de sesión forzada", el uso de la licencia está desconectado
 
 Las [peticiones REST descriptivas](#descriptive-rest-requests) siempre son procesadas por el servidor, aunque no se abra una sesión usuario web que utilice una licencia. En este caso, son procesados a través de sesiones "invitado".
 
-All other REST requests (handling data or executing a function) will only be processed if they are executed within a web session with appropriate privileges, otherwise they return an error. Para asignar privilegios a una sesión web, debe ejecutar la función [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) para la sesión. Ejecutar esta función activa el consumo de la licencia 4D.
+Todas las demás peticiones REST (manejando datos o ejecutando una función) sólo serán procesadas si son ejecutadas dentro de una sesión web con privilegios apropiados, de lo contrario devuelven un error. Para asignar privilegios a una sesión web, debe ejecutar la función [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) para la sesión. Ejecutar esta función activa el consumo de la licencia 4D.
 
 Este modo le permite implementar la siguiente secuencia de acceso:
 

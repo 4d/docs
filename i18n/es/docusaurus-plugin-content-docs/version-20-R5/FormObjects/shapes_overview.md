@@ -57,8 +57,8 @@ La propiedad JSON `startPoint` define a partir de qué coordenada dibujar la lí
 		"top": 40,
 		"width": 100,
 		"height": 80,
-		"startPoint": "topLeft", //first direction
-		"strokeDashArray": "6 2" //dashed
+		"startPoint": "topLeft", //primera dirección
+		"strokeDashArray": "6 2" //línea de guiones
 		}
 ```
 
@@ -71,10 +71,10 @@ Resultado:
 		"left": 20,
 		"top": 40,
 		"width": 100,
-		"height": 80,
-		"startPoint": "bottomLeft", //2nd direction
-		"strokeDashArray": "6 2" //dashed
-		}
+		"altura": 80,
+		"startPoint": "bottomLeft", //2ª dirección
+		"strokeDashArray": "6 2" //discontinua
+}
 ```
 
 Resultado:
