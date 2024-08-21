@@ -37,7 +37,7 @@ El contexto de optimización se basa en las siguientes implementaciones:
 
 - An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Reusing the context property](#reusing-the-context-property) below).
 
-- You can build optimization contexts manually using the [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) function (see [Preconfiguring contexts](#preconfiguring-contexts)).
+- Puede crear contextos de optimización manualmente mediante la función [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) (consulte [Preconfiguración de contextos](#preconfiguring-contexts)).
 
 ![](../assets/en/ORDA/cs-optimization-process.png)
 
@@ -66,7 +66,7 @@ Puede aumentar los beneficios de la optimización utilizando la propiedad **cont
 
 > También puede crear contextos utilizando la función [`.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo).
 
-All ORDA functions that handle entity selections support the <strong x-id="1">context</strong> property (for example <a href="../API/DataClassClass.md#query"><code>dataClass.query()</code></a> or <a href="../API/DataClassClass.md#all"><code>dataClass.all()</code></a>). All ORDA functions that handle entity selections support the **context** property (for example [`dataClass.query()`](../API/DataClassClass.md#query) or [`dataClass.all()`](../API/DataClassClass.md#all)). Tenga en cuenta, sin embargo, que un contexto se actualiza automáticamente cuando se utilizan nuevos atributos en otras partes del código. Reutilizar el mismo contexto en diferentes códigos podría sobrecargar el contexto y, por tanto, reducir su eficacia.
+All ORDA functions that handle entity selections support the <strong x-id="1">context</strong> property (for example <a href="../API/DataClassClass.md#query"><code>dataClass.query()</code></a> or <a href="../API/DataClassClass.md#all"><code>dataClass.all()</code></a>). Todas las funciones ORDA que manejan entity selections soportan la propiedad **context** (por ejemplo [`dataClass.query()`](../API/DataClassClass.md#query) o [`dataClass.all()`](../API/DataClassClass.md#all)). Tenga en cuenta, sin embargo, que un contexto se actualiza automáticamente cuando se utilizan nuevos atributos en otras partes del código. Reutilizar el mismo contexto en diferentes códigos podría sobrecargar el contexto y, por tanto, reducir su eficacia.
 
 > Se implementa un mecanismo similar para las entidades que se cargan, de modo que sólo se solicitan los atributos utilizados (ver la función [`dataClass.get()`](../API/DataClassClass.md#get)).
 
