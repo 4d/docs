@@ -40,7 +40,7 @@ If(Current system user = $user) //puede almacenar los usuarios en una tabla base
 End if
 ```
 
-If you want to use the system user name in 4D instead of "Designer" (e.g. in log files), you can call the [`SET USER ALIAS`](https://doc.4d.com/4dv19R/help/command/en/page1666.html) command, for example:
+Si desea utilizar el nombre de usuario del sistema en 4D en lugar de "Designer" (por ejemplo, en los archivos de registro), puede llamar al comando [`SET USER ALIAS`](https://doc.4d.com/4dv19R/help/command/en/page1666.html), por ejemplo:
 
 ```4d
 SET USER ALIAS(Current system user)
