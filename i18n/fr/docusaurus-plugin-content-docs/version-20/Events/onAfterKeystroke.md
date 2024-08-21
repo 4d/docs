@@ -9,9 +9,9 @@ title: On After Keystroke
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                                                                           |
-| ------- | --------------------------------------------------------------------------------------- |
-| 18 R5   | - Support in non-enterable list boxes - The event is now triggered after IME validation |
+| Release | Modifications                                                                                                      |
+| ------- | ------------------------------------------------------------------------------------------------------------------ |
+| 18 R5   | - Prise en charge dans les list box non saisissables - L'événement est désormais déclenché après la validation IME |
 </details>
 
 ## Description
@@ -27,7 +27,7 @@ L'événement `On After Keystroke` n'est pas généré :
 - dans la méthode [des colonnes de list box](FormObjects/listbox_overview.md#list-box-columns), sauf lorsqu'une cellule est en cours d'édition (cependant elle est générée dans tous les cas dans la méthode de [list box](FormObjects/listbox_overview.md)),
 - lorsque les modifications utilisateur ne sont pas effectuées à l'aide du clavier (coller, glisser-déposer, case à cocher, liste déroulante, combo box). Pour traiter ces événements, vous devez utiliser [`On After Edit`](onAfterEdit.md).
 
-### Séquence de frappe
+### Séquence d'entrée
 
 Lorsqu'une entrée nécessite une séquence de frappes clavier, les événements [`On Before Keystroke`](onBeforeKeystroke.md) et [`On After Keystroke event`] sont générés uniquement lorsque l'entrée est entièrement validée par l'utilisateur. La commande `Keystroke` retourne le caractère validé. Ce cas se produit principalement :
 
