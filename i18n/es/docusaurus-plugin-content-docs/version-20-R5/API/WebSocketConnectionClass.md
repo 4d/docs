@@ -21,7 +21,7 @@ Para una visión general y algunos ejemplos de la implementación del servidor W
 
 ### Objeto WebSocketConnection
 
-A `WebSocketConnection` object is automatically created when the [`WSHandler.onConnection`](WebSocketServerClass.md#wsshandler-parameter) callback function of the [WebSocketServer object](WebSocketServerClass.md#4dwebsocketservernew) returns a [`connectionHandler`](WebSocketServerClass.md#connectionhandler-object) object.
+Un objeto `WebSocketConnection` se crea automáticamente cuando la función de retrollamada [`WSHandler.onConnection`](WebSocketServerClass.md#wsshandler-parameter) del objeto [WebSocketServer](WebSocketServerClass.md#4dwebsocketservernew) devuelve un objeto [`connectionHandler`](WebSocketServerClass.md#connectionhandler-object).
 
 Los objetos WebSocketConnection ofrecen las siguientes propiedades y funciones:
 
@@ -42,7 +42,7 @@ Los objetos WebSocketConnection ofrecen las siguientes propiedades y funciones:
 
 #### Descripción
 
-The `.handler` property contains <!-- REF #WebSocketConnectionClass.handler.Summary -->the accessor that gets the `connectionHandler` object used to initiate the connection<!-- END REF -->.
+La propiedad `.handler` contiene <!-- REF #WebSocketConnectionClass.handler.Summary -->el accessor que recupera el objeto `connectionHandler` utilizado para iniciar la conexión<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -133,7 +133,7 @@ Un *code* y un *message* pueden ser enviados al cliente durante el cierre para i
 
 #### Descripción
 
-The `.wss` property contains <!-- REF #WebSocketConnectionClass.wss.Summary -->the [`WebSocketServer`](WebSocketServerClass.md#4dwebsocketservernew) parent object of the connection<!-- END REF -->.
+La propiedad `.wss` contiene <!-- REF #WebSocketConnectionClass.wss.Summary -->el objeto padre [WebSocketServer\`](WebSocketServerClass.md#4dwebsocketservernew) de la conexión<!-- END REF -->.
 
 Esta propiedad es de sólo lectura.
 
