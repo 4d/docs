@@ -27,7 +27,7 @@ title: VP Get column attributes
 
 #### Descripción
 
-The `VP Get table column attributes` command <!-- REF #_method_.VP Get table column attributes.Summary -->returns the current attributes of the specified *column* in the *tableName*<!-- END REF -->.
+El comando `VP Get table column attributes` <!-- REF #_method_.VP Get table column attributes.Summary -->devuelve los atributos actuales de *column* especificados en la *tableName*<!-- END REF -->.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
