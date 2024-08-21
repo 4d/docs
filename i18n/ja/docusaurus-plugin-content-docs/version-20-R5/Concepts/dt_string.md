@@ -162,14 +162,14 @@ End if
 それ以外の場合には、式内で使用される文字列参照記号は、参照する文字を1文字の独立した文字列として返します。 例:
 
 ```4d
-//The following example tests if the last character of vtText is an At sign "@"
+// 以下の例は vtText の最後の文字が "@" であるかをテストします。
  If(vtText#"")
     If(Character code(Substring(vtText;Length(vtText);1))=At sign)
   //...
     End if
  End if
 
-  //Using the character reference syntax, you would write in a simpler manner:
+  // 文字参照記号を使用し、よりシンプルに記述できます:
  If(vtText#"")
     If(Character code(vtText[[Length(vtText)]])=At sign)
   // ...
@@ -200,9 +200,9 @@ End if
 以下のプロジェクトメソッドは、文字列内の各単語の先頭文字を大文字に変換し、結果の文字列を返します。
 
 ```4d
-  //Capitalize_text project method
-  //Capitalize_text ( Text ) -> Text
-  //Capitalize_text ( Source text ) -> Capitalized text
+  // Capitalize_text プロジェクトメソッド
+  // Capitalize_text ( Text ) -> Text
+  // Capitalize_text ( Source text ) -> Capitalized Text
 
  $0:=$1
  $vlLen:=Length($0)
