@@ -3,9 +3,9 @@ id: EntitySelectionClass
 title: EntitySelection
 ---
 
-An entity selection is an object containing one or more reference(s) to [entities](ORDA/dsMapping.md#entity) belonging to the same [Dataclass](ORDA/dsMapping.md#dataclass). Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass.
+Uma seleção de entidade é um objeto que contém uma ou mais referências a [entidades] (ORDA/dsMapping.md#entity) pertencentes à mesma [Dataclass] (ORDA/dsMapping.md#dataclass). Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass.
 
-Entity selections can be created from existing selections using various functions of the [`DataClass` class](DataClassClass.md) such as [`.all()`](DataClassClass.md#all) or [`.query()`](DataClassClass.md#query), or functions of the `EntityClass` class itself, such as [`.and()`](#and) or [`orderBy()`](#orderby). You can also create blank entity selections using the [`dataClass.newSelection()`](DataClassClass.md#newselection) function or the [`Create new selection`](#create-new-selection) command.
+As seleções de entidades podem ser criadas a partir de seleções existentes usando várias funções da classe [`DataClass`](DataClassClass.md), como [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou funções da própria classe `EntityClass`, como [`.and()`](#and) ou [`orderBy()`](#orderby). Você também pode criar seleções de entidades em branco usando a função [`dataClass.newSelection()`](DataClassClass.md#newselection) ou o comando [`Create new selection`](#create-new-selection).
 
 ### Resumo
 
@@ -62,17 +62,17 @@ Entity selections can be created from existing selections using various function
 
 #### Descrição
 
-The `Create entity selection` command builds and returns a new, [alterable](ORDA/entities.md#shareable-or-alterable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table.
+O comando `Create entity selection` cria e retorna uma nova seleção de entidade [alterável] (ORDA/entities.md#shareable-or-alterable-entity-selections) relacionada à classe de dados correspondente à *dsTable* fornecida, de acordo com a seleção atual dessa tabela.
 
-If the current selection is sorted, an [ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) entity selection is created (the order of the current selection is kept). Se a seleção atual não for ordenada, se cria uma seleção de entidades não ordenada.
+Se a seleção atual for ordenada, uma entidade [ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) é criada (a ordem da seleção atual é mantida). Se a seleção atual não for ordenada, se cria uma seleção de entidades não ordenada.
 
-If the *dsTable* is not exposed in [`ds`](API/DataStoreClass.md#ds), an error is returned. Esse comando não pode usado com uma datastore remota.
+Se a *dsTable* não estiver exposta em [`ds`](API/DataStoreClass.md#ds), se devolve um erro. Esse comando não pode usado com uma datastore remota.
 
-In the optional *settings* parameter, you can pass an object containing the following property:
+No parâmetro opcional *settings*, você pode passar um objeto que contenha a seguinte propriedade:
 
-| Propriedade | Tipo | Descrição                                                                                                                    |
-| ----------- | ---- | ---------------------------------------------------------------------------------------------------------------------------- |
-| context     | Text | Label for the [optimization context](../ORDA/client-server-optimization.md) applied to the entity selection. |
+| Propriedade | Tipo | Descrição                                                                                                                      |
+| ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------ |
+| context     | Text | Rótulo para o [contexto de otimização](../ORDA/client-server-optimization.md) aplicado à seleção de entidades. |
 
 #### Exemplo
 
@@ -101,19 +101,19 @@ $employees:=Create entity selection([Employee])
 
 #### Descrição
 
-The `USE ENTITY SELECTION` command updates the current selection of the table matching the dataclass of the *entitySelection* parameter, according to the content of the entity selection.
+O comando `USE ENTITY SELECTION` atualiza a seleção atual da tabela que corresponde à classe de dados do parâmetro *entitySelection*, de acordo com o conteúdo da seleção de entidade.
 
-This command cannot be used with a [Remote datastore](../ORDA/remoteDatastores.md).
+Este comando não pode ser utilizado com um [Datastore remoto](../ORDA/datastoresRemotos.md).
 
 :::info
 
-Esse comando foi projetado para fazer com que as seleções de corrente 4D se beneficiem do poder das consultas ORDA. For performance reasons, in 4D single-user and 4D Server, the command directly connects *entitySelection* to the current selection. Portanto, uma vez que a *entitySelection* tenha sido usada, ela não deve ser reutilizada ou alterada posteriormente.
+Esse comando foi projetado para fazer com que as seleções de corrente 4D se beneficiem do poder das consultas ORDA. Por motivos de desempenho, no 4D single-user e no 4D Server, o comando conecta diretamente *entitySelection* à seleção atual. Portanto, uma vez que a *entitySelection* tenha sido usada, ela não deve ser reutilizada ou alterada posteriormente.
 
 :::
 
 :::note
 
-After a call to `USE ENTITY SELECTION`, the first record of the updated current selection (if not empty) becomes the current record, but it is not loaded in memory. If you need to use the values of the fields in the current record, use the `LOAD RECORD` command after the `USE ENTITY SELECTION` command.
+Após uma chamada para `USE ENTITY SELECTION`, o primeiro registro da seleção atual atualizada (se não estiver vazio) torna-se o registro atual, mas não é carregado na memória. Se precisar usar os valores dos campos no registro atual, use o comando `LOAD RECORD` após o comando `USE ENTITY SELECTION`.
 
 :::
 
@@ -143,18 +143,18 @@ USE ENTITY SELECTION($entitySel) //A seleção atual da tabela Employee é atual
 
 #### Descrição
 
-The `EntitySelection[index]` notation <!-- REF EntitySelectionClass.index.Summary -->allows you to access entities within the entity selection using the standard collection syntax<!-- END REF -->: pass the position of the entity you want to get in the *index* parameter.
+A notação `EntitySelection[index]` <!-- REF EntitySelectionClass.index.Summary -->permite acessar entidades dentro da seleção de entidades usando a sintaxe de coleção padrão<!-- END REF -->: passe a posição da entidade que deseja obter no parâmetro *index*.
 
 Lembre que a entidade correspondente é recarregada a partir da datastore.
 
 *index* pode ser qualquer número entre 0 e `.length`-1.
 
 - Se *index* está fora do intervalo, se devolve um erro.
-- If *index* corresponds to a dropped entity, a Null value is returned.
+- Se *index* corresponder a uma entidade descartada, um valor Null será retornado.
 
 :::caution
 
-`EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](EntityClass.md#lock) or [`.save()`](EntityClass.md#save). Para trabalhar com a entidade correspondente, é necessário atribuir a expressão devolvida a uma expressão atribuível, como uma variável. Exemplos:
+`EntitySelection[index]` é uma expressão não atribuível, o que significa que não pode ser usada como uma referência editável da entidade com métodos como [`.lock()`](EntityClass.md#lock) ou [`.save()`](EntityClass.md#save). Para trabalhar com a entidade correspondente, é necessário atribuir a expressão devolvida a uma expressão atribuível, como uma variável. Exemplos:
 
 ```4d
  $sel:=ds. Employee.all() //criação da entity selection
@@ -543,16 +543,16 @@ Se *entity* e a entity selection não pertencerem à mesma dataclass, se produz 
 #### Exemplo
 
 ```4d
- var $employees : cs.EmployeeSelection
- var $employee : cs.EmployeeEntity
+ var $employees : cs. EmployeeSelection
+ var $employee : cs. EmployeeEntity
 
  $employees:=ds.Employee.query("lastName=:1";"H@")
- $employee:=ds.Employee.get(610)
+ $employee:=ds. Employee.get(610)
 
  If($employees.contains($employee))
-    ALERT("The entity with primary key 610 has a last name beginning with H")
+    ALERT("A entidade com chave primaria 610 tem um sobrenome começando com H")
  Else
-    ALERT("The entity with primary key 610 does not have a last name beginning with H")
+    ALERT("A entidade com chave primária 610 não tem um sobrenome começando com H")
  End if
 ```
 
@@ -631,7 +631,7 @@ Se quisermos encontrar o número total de empregados para uma empresa sem contar
 
 #### Descrição
 
-The `.copy()` function <!-- REF #EntitySelectionClass.copy().Summary -->returns a copy of the original entity selection<!-- END REF -->.
+A função `.copy()` <!-- REF #EntitySelectionClass.copy().Summary -->retorna uma cópia da entity selection original<!-- END REF -->.
 
 > Esta função não modifica a seleção de entidades original.
 
@@ -655,7 +655,7 @@ Então esta seleção de entidades é atualizada com produtos e se quiser compar
 
 ```4d
  ...
-  // The Form.products entity selection is updated
+  // A seleção de entidades de Form.products se atualiza
  Form.products.add(Form.selectedProduct)
 
  Use(Storage)
@@ -738,7 +738,7 @@ var $countries : Collection
  $countries:=ds. Employee.all().distinct("address.country")
 ```
 
-`nicknames` is a collection and `extra` is an object attribute:
+`nicknames` é uma coleção e `extra` é um atributo de objeto:
 
 ```4d
 $values:=ds. Employee.all().distinct("extra.nicknames[].first")
@@ -805,7 +805,7 @@ $paths:=ds. Employee.all().distinctPaths("fullData")
 
 :::note
 
-*length* is automatically added as path for nested collection properties.
+*length* é automaticamente adicionado como caminho para propriedades de coleções aninhadas.
 
 :::
 
@@ -847,24 +847,24 @@ Se encontrar uma entidade bloqueada durante a execução de `.drop()`, não é e
 Example without the `dk stop dropping on first error` option:
 
 ```4d
- var $employees; $notDropped : cs.EmployeeSelection
+ var $employees; $notDropped : cs. EmployeeSelection
  $employees:=ds.Employee.query("firstName=:1";"S@")
- $notDropped:=$employees.drop() // $notDropped is an entity selection containing all the not dropped entities
- If($notDropped.length=0) //The delete action is successful, all the entities have been deleted
-    ALERT("You have dropped "+String($employees.length)+" employees") //The dropped entity selection remains in memory
+ $notDropped:=$employees.drop() // $notDropped for uma entity selection que contém todas as entidades não suprimidas
+ If($notDropped.length=0) //A ação de eliminação for exitosa, todas as entidades foram eliminadas
+    ALERT("You have dropped "+String($employees.length)+" employees") //A seleção de entidades eliminada permanece na memoria
  Else
     ALERT("Problem during drop, try later")
  End if
 ```
 
-Example with the `dk stop dropping on first error` option:
+Exemplo com a opção `dk stop dropping on first error`:
 
 ```4d
  var $employees; $notDropped : cs.EmployeeSelection
  $employees:=ds.Employee.query("firstName=:1";"S@")
- $notDropped:=$employees.drop(dk stop dropping on first error) //$notDropped is an entity selection containing the first not dropped entity
- If($notDropped.length=0) //The delete action is successful, all the entities have been deleted
-    ALERT("You have dropped "+String($employees.length)+" employees") //The dropped entity selection remains in memory
+ $notDropped:=$employees.drop(dk stop dropping on first error) // $notDropped uma entity selection a primeira entidade não descartada
+ If($notDropped.length=0) //A ação de eliminação for exitosa, todas as entidades foram eliminadas
+    ALERT("You have dropped "+String($employees.length)+" employees") //A seleção de entidades eliminada permanece na memoria
  Else
     ALERT("Problem during drop, try later")
  End if
@@ -941,34 +941,34 @@ Dada a seguinte tabela e relação:
  var $firstnames; $addresses; $mailing; $teachers : Collection
   //
   //
-  //$firstnames is a collection of Strings
+  //$firstnames é uma coleção de Strings
 
 
- $firstnames:=ds.Teachers.all().extract("firstname")
+ $firstnames:=ds. Teachers.all().extract("firstname")
   //
-  //$addresses is a collection of entities related to dataclass Address
-  //Null values for address are extracted
- $addresses:=ds.Teachers.all().extract("address";ck keep null)
-  //
-  //
-  //$mailing is a collection of objects with properties "who" and "to"
-  //"who" property content is String type
-  //"to" property content is entity type (Address dataclass)
- $mailing:=ds.Teachers.all().extract("lastname";"who";"address";"to")
+  //$addresses é uma coleção de entities relacionadas ao dataclass Address
+  //Valores Null para o endereço são extraídos
+ $addresses:=ds. Teachers.all().extract("address";ck keep null)
   //
   //
-  //$mailing is a collection of objects with properties "who" and "city"
-  //"who" property content is String type
-  //"city" property content is String type
- $mailing:=ds.Teachers.all().extract("lastname";"who";"address.city";"city")
+  //$mailing é uma coleção de objetos com propriedades "who" e "to"
+  //conteúdo propriedade "who" é do tipo String
+  //conteudo propriedade "to" é do tipo entity (Address dataclass)
+ $mailing:=ds. Teachers.all().extract("lastname";"who";"address";"to")
   //
-  //$teachers is a collection of objects with properties "where" and "who"
-  //"where" property content is String
-  //"who" property content is an entity selection (Teachers dataclass)
- $teachers:=ds.Address.all().extract("city";"where";"teachers";"who")
   //
-  //$teachers is a collection of entity selections
- $teachers:=ds.Address.all().extract("teachers")
+  //$mailing é uma coleção de objetos com propriedades "who" e "city"
+  //conteúdo propriedade "who" é tipo String
+  //conteúdo propriedade "city" é tipo String
+ $mailing:=ds. Teachers.all().extract("lastname";"who";"address.city";"city")
+  //
+  //$teachers é uma coleção de objetos com propriedades "where" e "who"
+  //conteúdo propriedade "where" é String
+  //conteúdo propriedade "who" é uma entity selection (Teachers dataclass)
+ $teachers:=ds. Address.all().extract("city";"where";"teachers";"who")
+  //
+  //$teachers é uma coleção de entity selections
+ $teachers:=ds. Address.all().extract("teachers")
 ```
 
 <!-- END REF -->
@@ -1008,12 +1008,12 @@ O resultado desta função é similar a:
 Há, entretanto, uma diferença entre ambas as afirmações quando a seleção estiver vazia:
 
 ```4d
- var $entitySel : cs.EmpSelection
- var $entity : cs.EmpEntity
- $entitySel:=ds.Emp.query("lastName = :1";"Nonexistentname") //no matching entity
-  //entity selection is then empty
- $entity:=$entitySel.first() //returns Null
- $entity:=$entitySel[0]  //generates an error
+ var $entitySel : cs. EmpSelection
+ var $entity : cs. EmpEntity
+ $entitySel:=ds. Emp.query("lastName = :1";"Nonexistentname") //nenhuma entity correspondente
+  //entity selection é esvaziada
+ $entity:=$entitySel.first() //retorna Null
+ $entity:=$entitySel[0]  //gera um erro
 ```
 
 #### Exemplo
@@ -1065,9 +1065,9 @@ O seguinte código genérico duplica todas as entidades da entity selection:
   //duplicate_entities method
   //duplicate_entities($entity_selection)
 
- #DECLARE ( $entitySelection : 4D.EntitySelection )  
- var $dataClass : 4D.DataClass
- var $entity; $duplicate : 4D.Entity
+ #DECLARE ( $entitySelection : 4D. EntitySelection )  
+ var $dataClass : 4D. DataClass
+ var $entity; $duplicate : 4D. Entity
  var $status : Object
  $dataClass:=$entitySelection.getDataClass()
  For each($entity;$entitySelection)
@@ -1534,9 +1534,9 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 
 ```4d
  var $employees1; $employees2; $result : cs.EmployeeSelection
- $employees1:=ds.Employee.query("lastName = :1";"H@") //Returns "Colin Hetrick","Grady Harness"
- $employees2:=ds.Employee.query("firstName = :1";"C@") //Returns "Colin Hetrick", "Cath Kidston"
- $result:=$employees1.or($employees2) //$result contains "Colin Hetrick", "Grady Harness","Cath Kidston"
+ $employees1:=ds.Employee.query("lastName = :1"; "H@") //Retorna "Colin Hetrick", "Grady Harness"
+ $employees2:=ds.Employee.query("firstName = :1"; "C@") //Retorna "Colin Hetrick", "Cath Kidston"
+ $result:=$employees1.or($employees2) //$result contém "Colin Hetrick", "Grady Harness", "Cath Kidston"
 ```
 
 #### Exemplo 2
@@ -1614,12 +1614,11 @@ If you pass an invalid attribute path in *pathString* or *pathObject*, the funct
 #### Exemplo
 
 ```4d
-// order by formula
+// ordenar por fórmula
  $sortedEntitySelection:=$entitySelection.orderBy("firstName asc, salary desc")
  $sortedEntitySelection:=$entitySelection.orderBy("firstName")
 
-
-  // order by collection with or without sort orders
+  // ordenar por colecção com ou sem ordenação
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"firstName";"descending";False))
  $orderColl.push(New object("propertyPath";"salary";"descending";True))
@@ -1627,7 +1626,6 @@ If you pass an invalid attribute path in *pathString* or *pathObject*, the funct
 
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"manager.lastName"))
-
  $orderColl.push(New object("propertyPath";"salary"))
  $sortedEntitySelection:=$entitySelection.orderBy($orderColl)
 ```
@@ -1700,9 +1698,9 @@ Ordenar estudantes usando uma fórmula fornecida como texto:
 Mesma ordem mas usando objeto fórmula:
 
 ```4d
- var $es1; $es2 : cs.StudentsSelection
+ var $es1; $es2 : cs. StudentsSelection
  var $formula : Object
- $es1:=ds.Students.query("nationality=:1";"French")
+ $es1:=ds. Students.query("nationality=:1";"French")
  $formula:=Formula(Length(This.lastname))
  $es2:=$es1.orderByFormula($formula) // ascending by default
  $es2:=$es1.orderByFormula($formula;dk descending)
@@ -1735,9 +1733,9 @@ In this example, the "marks" object field in the **Students** dataClass contains
 
 ```4d
   //
-  // computeAverage method
+  // método computeAverage
   // -----------------------------
- #DECLARE ($coefList : Object) -> $result : Integer
+ #DECLARE ($coefList : Object)  -> $result : Integer
  var $subject : Text
  var $average; $sum : Integer
 
@@ -1896,21 +1894,21 @@ Neste exemplo, clássico e ORDA modifica os mesmos dados simultaneamente.
 ```4d
  //On a 4D remote
 
- var $selection : cs.StudentsSelection
- var $student : cs.StudentsEntity
+ var $selection : cs. StudentsSelection
+ var $student : cs. StudentsEntity
 
- $selection:=ds.Students.query("lastname=:1";"Collins")
-  //The first entity is loaded in the ORDA cache
+ $selection:=ds. Students.query("lastname=:1";"Collins")
+  //A primeira entidade é carregada na cache ORDA
  $student:=$selection.first()
 
-  //Update with classic 4D, ORDA cache is not aware of if
+  //Atualizar com clássico 4D, ORDA cache não está se
  QUERY([Students];[Students]lastname="Collins")
  [Students]lastname:="Colin"
  SAVE RECORD([Students])
 
-  //to get the latest version, the ORDA cache must be invalidated
+  //pra obter a última versão a cache ORDA deve ser invalidada
  $selection.refresh()
-  // Even if cache is not expired, the first entity is reloaded from disk
+  // Mesmo se cache não for expirada, a primeira entidade é carregada do disco
  $student:=$selection.first()
 
   //$student.lastname contains "Colin"
@@ -2066,7 +2064,7 @@ Assuming we have ds. Employee.all().length = 10
 var $slice : cs.EmployeeSelection
 
 
-$slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 to 8, but since 9 > 8, returns an empty entity selection
+$slice:=ds.Employee.all().slice(-1;-2) //tenta retornar entidades do índice 9 a 8, mas como 9 > 8, retorna uma seleção de entidade vazia
 
 ```
 
@@ -2137,14 +2135,14 @@ $sum:=$sel.sum("salary")
 
 <!-- REF #EntitySelectionClass.toCollection().Params -->
 
-| Parâmetro    | Tipo       |     | Descrição                                                                                                       |
-| ------------ | ---------- | :-: | --------------------------------------------------------------------------------------------------------------- |
-| filterString | Text       |  -> | String com caminho(s) de atributo(s) de entidade a extrair                |
-| filterCol    | Collection |  -> | Coleção de caminho(s) de atributo(s) de entidade a extrair                |
-| options      | Integer    |  -> | `dk with primary key`: adds the primary key<br/>`dk with stamp`: adds the stamp |
-| begin        | Integer    |  -> | Designa o índice inicial                                                                                        |
-| howMany      | Integer    |  -> | Número de entidades a extrair                                                                                   |
-| Resultados   | Collection |  <- | Colecção de objectos contendo atributos e valores de selecção de entidades                                      |
+| Parâmetro    | Tipo       |     | Descrição                                                                                                                 |
+| ------------ | ---------- | :-: | ------------------------------------------------------------------------------------------------------------------------- |
+| filterString | Text       |  -> | String com caminho(s) de atributo(s) de entidade a extrair                          |
+| filterCol    | Collection |  -> | Coleção de caminho(s) de atributo(s) de entidade a extrair                          |
+| options      | Integer    |  -> | `dk with primary key`: adiciona a chave primária<br/>`dk with stamp`: adiciona o marcador |
+| begin        | Integer    |  -> | Designa o índice inicial                                                                                                  |
+| howMany      | Integer    |  -> | Número de entidades a extrair                                                                                             |
+| Resultados   | Collection |  <- | Colecção de objectos contendo atributos e valores de selecção de entidades                                                |
 
 <!-- END REF -->
 
@@ -2343,7 +2341,7 @@ Retorna:
 
 #### Exemplo
 
-Example with `relatedEntity` type with simple form:
+Exemplo com o tipo 'relatedEntity' com uma forma simples:
 
 ```4d
 var $employeesCollection : Collection
@@ -2475,7 +2473,7 @@ $employeesCollection:=$employees.toCollection("firstName, lastName, employer.nam
 
 #### Exemplo 8
 
-Example with extraction of some properties of `relatedEntities`:
+Exemplo com extracção de algumas propriedades de `relatedEntities`:
 
 ```4d
  var $employeesCollection : Collection
@@ -2527,7 +2525,7 @@ Retorna:
 
 #### Exemplo 9
 
-Example with extraction of all properties of `relatedEntities`:
+Exemplo com extração de todas as propriedades de `relatedEntities`:
 
 ```4d
 var $employeesCollection : Collection
