@@ -3,32 +3,32 @@ id: propertiesReference
 title: Form object JSON property list
 ---
 
-You will find in this page a comprehensive list of all object properties sorted through their JSON name. Click on a property name to access its detailed description. 
+You will find in this page a comprehensive list of all object properties sorted through their JSON name. Click on a property name to access its detailed description.
 
->In the "Form Object Properties" chapter, properties are sorted according the Property List names and themes. 
+>In the "Form Object Properties" chapter, properties are sorted according the Property List names and themes.
 
 
-[a](#a) - 
-[b](#b) - 
-[c](#c) - 
-[d](#d) - 
-[e](#e) - 
-[f](#f) - 
-[g](#g) - 
-[h](#h) - 
-[i](#i) - 
-[j](#j) - 
-[k](#k) - 
-[l](#l) - 
-[m](#m) - 
-[n](#n) - 
-[p](#p) - 
-[r](#r) - 
-[s](#s) - 
-[t](#t) - 
-[u](#u) - 
-[v](#v) - 
-[w](#w) - 
+[a](#a) -
+[b](#b) -
+[c](#c) -
+[d](#d) -
+[e](#e) -
+[f](#f) -
+[g](#g) -
+[h](#h) -
+[i](#i) -
+[j](#j) -
+[k](#k) -
+[l](#l) -
+[m](#m) -
+[n](#n) -
+[p](#p) -
+[r](#r) -
+[s](#s) -
+[t](#t) -
+[u](#u) -
+[v](#v) -
+[w](#w) -
 [z](#z)
 
 
@@ -54,7 +54,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`controlType`](properties_Display.md#display-type)|Specifies how the value should be rendered in a list box cell.|"input", "checkbox" (for boolean / numeric columns), "automatic", "popup" (only for boolean columns)|
 |[`currentItemSource`](properties_DataSource.md#current-item)| The last selected item in a list box.|Object expression	|
 |[`currentItemPositionSource`](properties_DataSource.md#current-item-position)| The position of the last selected item in a list box.|Number expression	|
-|[`customBackgroundPicture`](properties_TextAndPicture.md#background-pathname) |Sets the picture that will be drawn in the background of a button.|Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option.| 
+|[`customBackgroundPicture`](properties_TextAndPicture.md#background-pathname) |Sets the picture that will be drawn in the background of a button.|Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option.|
 |[`customBorderX`](properties_TextAndPicture.md#horizontal-margin)|Sets the size (in pixels) of the internal horizontal margins of an object. Must be used with the style property with the "custom" option.|minimum: 0
 |[`customBorderY`](properties_TextAndPicture.md#vertical-margin)|Sets the size (in pixels) of the internal vertical margins of an object. Must be used with the style property with the "custom" option.|minimum: 0
 |[`customOffset`](properties_TextAndPicture.md#icon-offset)|Sets a custom offset value in pixels. Must be used with the style property with the "custom" option. |minimum: 0|
@@ -62,7 +62,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |**d**|||
 |[`dataSource`](properties_Object.md#variable-or-expression) (objects)<br/>[`dataSource`](properties_Subform.md#source) (subforms)<br/>[`dataSource`](properties_Object.md#data-source) (array list box) <br/> [`dataSource`](properties_Object.md#collection-or-entity-selection) (Collection or entity selection list box)<br/> [`dataSource`](properties_DataSource.md#expression) (list box column) <br/> [`dataSource`](properties_Hierarchy.md#hierarchical-list-box) (hierarchical list box)|Specifies the source of the data.|A 4D variable, field name, or an arbitrary complex language expression.|
 |[`dataSourceTypeHint`](properties_Object.md#expression-type) (objects) <br/> [`dataSourceTypeHint`](properties_DataSource.md#data-type-expression-type) (list box column, drop-down list)|Indicates the variable type.|"integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"|
-|[`dateFormat`](properties_Display.md#date-format)|Controls the way dates appear when displayed or printed.|Built-in formats ("systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull") or [customized formats](../Project/date-time-formats.md)|
+|[`dateFormat`](properties_Display.md#date-format)|Controls the way dates appear when displayed or printed.|Built-in formats ("systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull")|
 |[`defaultButton`](properties_Appearance.md#default-button)|Modifies a button's appearance in order to indicate the recommended choice to the user.|true, false|
 |[`defaultValue`](properties_RangeOfValues.md#default-value)|Defines a value or a stamp to be entered by default in an input object|String or "#D", "#H", "#N"|
 |[`deletableInList`](properties_Subform.md#allow-deletion)|Specifies if the user can delete subrecords in a list subform|true, false|
@@ -83,9 +83,9 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`fill`](properties_BackgroundAndBorder.md#background-color--fill-color)|Defines the background color of an object. |Any CSS value, "transparent", "automatic"|
 |[`focusable`](properties_Entry.md#focusable)|Indicates whether the object can have the focus (and can thus be activated by the keyboard for instance)|true, false|
 |[`fontFamily`](properties_Text.md#font)|Specifies the name of font family used in the object. |CSS font family name  |  
-|[`fontSize`](properties_Text.md#font-size)|Sets the font size in points when no font theme is selected|minimum: 0| 
-|[`fontStyle`](properties_Text.md#italic)|Sets the selected text to slant slightly to the right. |"normal", "italic"| 
-|[`fontTheme`](properties_Text.md#font-theme)|Sets the automatic style |"normal", "main", "additional"| 
+|[`fontSize`](properties_Text.md#font-size)|Sets the font size in points when no font theme is selected|minimum: 0|
+|[`fontStyle`](properties_Text.md#italic)|Sets the selected text to slant slightly to the right. |"normal", "italic"|
+|[`fontTheme`](properties_Text.md#font-theme)|Sets the automatic style |"normal", "main", "additional"|
 |[`fontWeight`](properties_Text.md#bold)|Sets the selected text to appear darker and heavier. | "normal", "bold"|
 |[`footerHeight`](properties_Footers.md#height)|Used to set the row height | positive decimal + px &#124; em |
 |[`frameDelay`](properties_Animation.md#switch-every-x-ticks)|Enables cycling through the contents of the picture button at the specified speed (in ticks).|minimum: 0<a id="g"></a>|
@@ -203,7 +203,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`textFormat`](properties_Display.md#alpha-format)|Controls the way the alphanumeric fields and variables appear when displayed or printed.|"### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats|
 |[`textPlacement`](properties_TextAndPicture.md#title-picture-position)|Relative location of the button title in relation to the associated icon.|"left", "top", "right", "bottom", "center"|
 |[`threeState`](properties_Display.md#three-states)|Allows a check box object to accept a third state.|true, false|
-|[`timeFormat`](properties_Display.md#time-format)|Controls the way times appear when displayed or printed. |Built-in formats ("systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull") or [customized formats](../Project/date-time-formats.md)|
+|[`timeFormat`](properties_Display.md#time-format)|Controls the way times appear when displayed or printed. |Built-in formats ("systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull")|
 |[`truncateMode`](properties_Display.md#truncate-with-ellipsis) | Controls the display of values when list box columns are too narrow to show their full contents.|"withEllipsis", "none" |
 |[`type`](properties_Object.md#type)|Mandatory. Designates the data type of the form object.|"text", "rectangle", "groupBox", "tab", "line", "button", "checkbox", "radio", "dropdown", "combo", "webArea", "write", "subform", "plugin", "splitter", "buttonGrid", "progress", "ruler", "spinner", "stepper", "list", "pictureButton", "picturePopup", "listbox", "input", "view"|
 |[`tooltip`](properties_Help.md)|	Provide users with additional information about a field.|Additional information to help a user|

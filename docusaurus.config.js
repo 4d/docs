@@ -254,4 +254,5 @@ module.exports = {
       maintainCase: false,
     },
   },
+ themes: ['@docusaurus/theme-mermaid'],
 }
