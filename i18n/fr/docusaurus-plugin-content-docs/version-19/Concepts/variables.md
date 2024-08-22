@@ -18,16 +18,16 @@ Les variables sont des objets du langage; vous pouvez créer et utiliser des var
 
 ## Déclaration des variables
 
-You usually create variables by declaring them. Le langage 4D propose deux manières de déclarer des variables :
+Vous créez généralement des variables en les déclarant. Le langage 4D propose deux manières de déclarer des variables :
 
 - à l'aide du mot-clé `var` (recommandé particulièrement si votre code utilise des objets et des classes),
-- using one of the "Compiler" or "Arrays" theme 4D language commands (legacy syntax).
+- à l'aide de l'une des commandes du langage 4D des thèmes "Compilateur" ou "Tableaux" (syntaxe historique).
 
 When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data).
 
 :::note
 
-Although it is not recommended, you can create variables simply by using them; you do not necessarily need to formally declare them. For example, to create a variable that will hold the current date plus 30 days, you can write:
+Bien que cela ne soit pas recommandé, vous pouvez créer des variables simplement en les utilisant ; il n'est pas obligatoire de les déclarer formellement. Par exemple, pour créer une variable qui contiendra la date du jour plus 30 jours, vous pouvez écrire :
 
 ```4d
  MyDate:=Current date+30 //MyDate est créé 
@@ -35,7 +35,7 @@ Although it is not recommended, you can create variables simply by using them; y
  // et affecte la date courante + 30 jours
 ```
 
-When a variable is created before being declared, it is not initialized at the declaration step.
+Lorsqu'une variable est créée avant d'être déclarée, elle n'est pas initialisée lors de l'étape de déclaration.
 
 :::
 
@@ -221,7 +221,7 @@ Pour plus d'informations, reportez-vous à la section **Process** et à la descr
 
 Les variables interprocess sont visibles dans tout le projet et sont disponibles pour tous les process. Les variables interprocess sont principalement utilisées pour le partage d’informations entre les process.
 
-> L'utilisation de variables interprocess n'est pas recommandée car elles ne sont pas disponibles depuis le process préemptif et peuvent rendre le code moins maintenable.
+> L'utilisation de variables interprocess est désormais déconseillée car elles ne sont pas disponibles depuis les process préemptifs et ont tendance à rendre le code moins maintenable.
 
 Le nom d'une variable interprocess commence toujours par les symboles `<>` - un signe "inférieur à" suivi d'un signe "supérieur à" - suivis de 31 caractères.
 
