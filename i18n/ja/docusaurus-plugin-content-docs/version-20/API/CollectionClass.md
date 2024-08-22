@@ -210,8 +210,8 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 *   日付
 *   時間 (ミリ秒の数 (実数) として保存されます)。
 *   null
-*   shared object
-*   shared collection
+*   共有オブジェクト
+*   共有コレクション
 
 :::note
 
@@ -913,7 +913,7 @@ End use
 | formula    | 4D.Function | -> | フォーミュラオブジェクト   |
 | methodName | Text        | -> | メソッド名          |
 
-|param|Mixed|->|Parameter(s) to pass to *formula* or *methodName*| |Result|Boolean|<-|True if all elements successfully passed the test|<!-- END REF -->
+|param|Mixed|->|*formula* または *methodName* に渡す引数| |戻り値|Boolean|<-|True if all elements successfully passed the test|<!-- END REF -->
 
 
 #### 説明
