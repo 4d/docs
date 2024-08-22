@@ -63,7 +63,7 @@ La siguiente tabla lista las páginas de parámetros que se encuentran en las ca
 | [Página Cliente-Servidor/rede](../settings/client-server.md#network-options)             | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
 | [Página Cliente-Servidor/Configuração IP](../settings/client-server.md#ip-configuration) | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
 | [Página Web/Configuração](../settings/web.md#configuration)                              | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
-| [Web/Options (I) page](../settings/web.md#options)                    | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
+| [Página Web/Options (I)](../settings/web.md#options)                  | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
 | [Web/Options (II) page](../settings/web.md#options-ii)                | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
 | [Web/Log (type) page](../settings/web.md#log)                         | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
 | [Web/Log (backup) page](../settings/web.md#log)                       | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                           |
