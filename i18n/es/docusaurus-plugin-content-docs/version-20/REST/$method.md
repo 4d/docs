@@ -26,7 +26,7 @@ Elimina la entidad actual, la colección de entidades o la selección de entidad
 
 ### Descripción
 
-Con `$method=delete`, puede eliminar una entidad o una colección de entidades entera. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) *(e.g.*, /Employee(22)).
+Con `$method=delete`, puede eliminar una entidad o una colección de entidades entera. Puede definir la colección de entidades utilizando, por ejemplo, [`$filter`]($filter.md) o especificando una directamente mediante [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) *(por ejemplo*, /Employee(22)).
 
 También puede eliminar las entidades de un conjunto de entidades, llamando a [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
 
