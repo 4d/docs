@@ -871,10 +871,10 @@ the value type (mandatory): text, color, event, etc. the value itself (optional)
 the cell content display (optional): button, list, etc. additional settings (optional): depend on the value type To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). Por ejemplo, puede escribir "¡Hola Mundo!" en una columna objeto utilizando este sencillo código:
 
 ```4d
-ARRAY OBJECT(obColumn;0) //column array
- C_OBJECT($ob) //first element
- OB SET($ob;"valueType";"text") //defines the value type (mandatory)
- OB SET($ob;"value";"Hello World!") //defines the value
+ARRAY OBJECT(obColumn;0) //array de columnas
+ C_OBJECT($ob) //primer elemento
+ OB SET($ob; "valueType"; "text") //define el tipo de valor (obligatorio)
+ OB SET($ob; "value"; "Hello World!") //define el valor
  APPEND TO ARRAY(obColumn;$ob)  
 ```
 
