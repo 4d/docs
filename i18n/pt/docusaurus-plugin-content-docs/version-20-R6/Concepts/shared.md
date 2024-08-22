@@ -69,8 +69,6 @@ A atribuição de objectos/colecções partilhados a propriedades ou elementos d
 
 Consulte o exemplo 2 para ver uma ilustração das regras de grupos partilhados.
 
-**Nota:** Os grupos partilhados são geridos através de uma propriedade interna denominada *identificador de bloqueio*. Para obter informações detalhadas sobre este valor, consulte a Referência da Linguagem 4D.
-
 ### Leitura
 
 A leitura de propriedades ou elementos de um objeto/coleção compartilhado é permitida sem a necessidade de chamar a estrutura `Use...End use`, mesmo que o objeto/coleção compartilhado esteja sendo usado por outro processo.
