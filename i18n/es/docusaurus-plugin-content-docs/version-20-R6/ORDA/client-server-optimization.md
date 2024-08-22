@@ -97,7 +97,7 @@ All ORDA functions that handle entity selections support the <strong x-id="1">co
 
 ### List box basado en una selección de entidades
 
-Entity selection optimization is automatically applied to entity selection-based list boxes in 4D client/server desktop applications, when displaying and scrolling a list box content: only the attributes displayed in the list box are requested from the server.
+La optimización de entity selection se aplica automáticamente a los list boxes basados en una entity selection en las aplicaciones de escritorio cliente/servidor 4D, al mostrar y desplazar el contenido de un list box: sólo se solicitan al servidor los atributos mostrados en el list box.
 
 A specific "page mode" context is also provided when loading the current entity through the **Current item** property expression of the list box (see [Collection or entity selection type list boxes](FormObjects/listbox_overview.md#list-box-types)). Esta funcionalidad le permite no sobrecargar el contexto inicial del list box en este caso, especialmente si la "página" solicita atributos adicionales. Tenga en cuenta que sólo el uso de la expresión **Elemento actual** permitirá crear/utilizar el contexto de la página (el acceso a través de `entitySelection\[index]` alterará el contexto de la entity selection).
 
@@ -125,7 +125,7 @@ Si desea entregar aplicaciones finales con el máximo nivel de optimización, pu
 1. Diseñe sus algoritmos.
 2. Ejecute su aplicación y deje que el mecanismo de aprendizaje automático complete los contextos de optimización.
 3. Call the [`dataStore.getRemoteContextInfo()`](../API/DataStoreClass.md#getremotecontextinfo) or [`dataStore.getAllRemoteContexts()`](../API/DataStoreClass.md#getallremotecontexts) function to collect  contexts. You can use the [`entitySelection.getRemoteContextAttributes()`](../API/EntitySelectionClass.md#getremotecontextattributes) and [`entity.getRemoteContextAttributes()`](../API/EntityClass.md#getremotecontextattributes) functions to analyse how your algorithms use attributes.
-4. In the final step, call the [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) function to build contexts at application startup and [use them](#reusing-the-context-property) in your algorithms.
+4. En el último paso, llama a la función [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) para construir contextos al inicio de la aplicación y [utilizarlos](#reutilizando-la-propiedad-context) en sus algoritmos.
 
 ## Caché ORDA
 
