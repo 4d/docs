@@ -17,11 +17,11 @@ Se soportan varios tipos de referencias de métodos:
 
 - a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for form operations.
 
-- a custom method file path including the .4dm extension, e.g.:\
+- una ruta de archivo de método personalizada que incluya la extensión .4dm, por ejemplo:
   `MyMethods/myFormMethod.4dm`
-  You can also use a filesystem:\
+  También puede utilizar un sistema de archivos:\
   `/RESOURCES/Forms/FormMethod.4dm`
-  In this case, 4D does not provide automatic support for object operations.
+  En este caso, 4D no ofrece soporte automático para operaciones con objetos.
 
 #### Gramática JSON
 
