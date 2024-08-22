@@ -150,7 +150,7 @@ El archivo por defecto tiene el siguiente contenido:
 
 ```
 
-Para un nivel de seguridad más alto, el privilegio "none" se asigna a todos los permisos en el datastore, por lo tanto el acceso de datos en todo el objeto `ds` está deshabilitado por defecto. It is recommended not to modified or use this locking privilege, but to add specific permissions to each resource you wish to make available from web or REST requests ([see example below](example-of-privilege-configuration)).
+Para un nivel de seguridad más alto, el privilegio "none" se asigna a todos los permisos en el datastore, por lo tanto el acceso de datos en todo el objeto `ds` está deshabilitado por defecto. Se recomienda no modificar ni utilizar este privilegio de bloqueo, sino agregar permisos específicos a cada recurso que desee poner a disposición desde solicitudes web o REST ([ver ejemplo a continuación](example-of-privilege-configuration)).
 
 :::caution
 
