@@ -229,7 +229,7 @@ Eis alguns exemplos:
 - "1.2.\*": todos os patches da versão menor 1.2.
 - "^1.2.3" or ">=1.2.3": the latest version 1, starting with the 1.2.3 version.
 - "~1.2.3" or ">1.2.3": the latest major version 1, starting with the version just after the 1.2.3.
-- "<=1.2.3": the latest version until the 1.2.3 one.
+- "<=1.2.3": a versão mais recente até a 1.2.3.
 - "1.0.0 – 1.2.3" or ">=1.0.0 <=1.2.3": version between 1.0.0 and 1.2.3.
 - "`<1.2.3 || >=2`": version that is not between 1.2.3 and 2.0.0.
 
