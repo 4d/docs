@@ -9,7 +9,7 @@ When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (r
 
 Cuando se abre una sesión de usuario web, puede manejarla a través del objeto `Session` y la [Session API](API/SessionClass.md). Subsequent REST requests reuse the same session cookie.
 
-A session is opened after the user was successfully logged (see below).
+Uma sessão é aberta depois que o usuário é autenticado com sucesso (veja abaixo).
 
 > - On 4D Server, opening a REST session requires that a free 4D client license is available.<br/>
 > - Em 4D single-user, pode abrir até três sessões REST para fins de teste.
