@@ -85,7 +85,7 @@ Keep in mind that [user settings](../settings/overview.md) can be defined at sev
 
 ### Ativando autenticação
 
-Authentication on the WebAdmin web server is granted using an access key. For more details, see [Access key](../Admin/webAdmin.md#access-key).
+Authentication on the WebAdmin web server is granted using an access key. Para mais detalhes, consulte [Chave de Acesso](../Admin/webAdmin.md#access-key).
 
 ### Gerenciamento de projetos
 
