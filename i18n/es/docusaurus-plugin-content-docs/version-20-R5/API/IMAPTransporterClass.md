@@ -1785,7 +1785,7 @@ Si la cadena `permanentFlags` incluye la bandera especial \*, significa que el s
 
 #### Descripción
 
-The `.subscribe()` function <!-- REF #IMAPTransporterClass.subscribe().Summary -->allows adding or removing of the specified mailbox to/from the IMAP server’s set of “subscribed” mailboxes<!-- END REF -->. De este modo, puede optar por acotar una gran lista de buzones disponibles suscribiéndose a los que habitualmente consulta.
+La función `.subscribe()` <!-- REF #IMAPTransporterClass.subscribe().Summary -->permite añadir o eliminar el buzón especificado del conjunto de buzones "suscritos" en el servidor IMAP<!-- END REF -->. De este modo, puede optar por acotar una gran lista de buzones disponibles suscribiéndose a los que habitualmente consulta.
 
 En el parámetro `name`, pase el nombre del buzón a añadir (suscribir) a sus buzones "suscritos".
 

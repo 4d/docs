@@ -235,7 +235,7 @@ Eis alguns exemplos:
 
 If you do not specify a tag or a version, 4D automatically retrieves the "latest" version.
 
-#### Private repositories
+#### Repositórios privados
 
 If you want to integrate a component located in a private repository, you need to tell 4D to use a connection token to access it.
 

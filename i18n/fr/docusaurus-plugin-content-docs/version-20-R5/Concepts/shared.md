@@ -69,8 +69,6 @@ L'assignation d'objets/collections partagé(e) s à des propriétés ou élémen
 
 Reportez-vous à l'exemple 2 pour l'illustration des règles des groupes partagés.
 
-**Note :** Les groupes partagés sont gérés via une propriété interne nommée _locking identifier_. Pour des informations détaillées sur cette valeur, veuillez vous référer au Manuel de référence du Langage 4D.
-
 ### Lecture
 
 La lecture de propriétés ou d'éléments d'un objet ou d'une collection partagé(e) est possible sans appel de la structure `Use...End use`, même si l'objet ou la collection partagé(e) est "utilisé(e)" par un autre process.

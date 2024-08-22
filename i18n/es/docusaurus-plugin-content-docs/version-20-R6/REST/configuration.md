@@ -38,7 +38,7 @@ Puede configurar los accesos REST de una de las siguientes maneras:
 
 ### Uso de los parámetros de la Estructura
 
-The **Read/Write** menu in the "**Web** > **Web Features**" page of the structure settings specifies a group of 4D users that is authorized to establish the link to the 4D application using REST queries.
+El menú **Lectura/Escritura** en la página "**Web** > **Funciones web**" de la configuración de la estructura especifica un grupo de usuarios 4D que está autorizado para establecer el enlace con la aplicación 4D utilizando las consultas REST.
 
 Por defecto, el menú muestra `\<Anyone>`, lo que significa que los accesos REST están abiertos a todos los usuarios. Una vez que haya especificado un grupo, sólo una cuenta de usuario de 4D que pertenezca a este grupo podrá ser utilizada para [acceder a 4D mediante una petición REST](authUsers.md). Si se utiliza una cuenta que no pertenece a este grupo, 4D devuelve un error de autenticación al remitente de la petición.
 

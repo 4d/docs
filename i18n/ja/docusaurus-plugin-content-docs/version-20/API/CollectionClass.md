@@ -210,8 +210,8 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 *   日付
 *   時間 (ミリ秒の数 (実数) として保存されます)。
 *   null
-*   共有オブジェクト(*)
-*   共有コレクション(*)
+*   shared object
+*   shared collection
 
 :::note
 
@@ -219,7 +219,6 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 :::
 
-(\*) 共有オブジェクトおよびコレクションが共有コレクションに追加された場合、それらは同じ *ロック識別子* を共有します。 この点についてのより詳細は、[4D Doc Center](https://doc.4d.com) を参照ください。
 
 #### 例題
 
@@ -908,16 +907,13 @@ End use
 
 
 <!-- REF #collection.every().Params -->
-| 引数         | タイプ         |    | 説明                                               |
-| ---------- | ----------- |:--:| ------------------------------------------------ |
-| startFrom  | Integer     | -> | テストを開始するインデックス                                   |
-| formula    | 4D.Function | -> | フォーミュラオブジェクト                                     |
-| methodName | Text        | -> | メソッド名                                            |
-| param      | 複合          | -> | *formula* または *methodName* に渡す引数                 |
-| 戻り値        | Boolean     | <- | すべての要素がテストをパスすれば true|<!-- END REF -->
+| 引数         | タイプ         |    | 説明             |
+| ---------- | ----------- |:--:| -------------- |
+| startFrom  | Integer     | -> | テストを開始するインデックス |
+| formula    | 4D.Function | -> | フォーミュラオブジェクト   |
+| methodName | Text        | -> | メソッド名          |
 
-
-|
+|param|Mixed|->|Parameter(s) to pass to *formula* or *methodName*| |Result|Boolean|<-|True if all elements successfully passed the test|<!-- END REF -->
 
 
 #### 説明
@@ -2126,6 +2122,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 > このコマンドは、元のコレクションを変更しません。
 
 コレクションが異なる型の値を格納している場合、`.max()` 関数は型のリスト順の、最後の型の最大値を返します ([`.sort()`](#sort) 参照)。
+
 
 コレクションがオブジェクトを格納している場合には、最大値を取得するオブジェクトプロパティのパスを *propertyPath* に渡します。
 

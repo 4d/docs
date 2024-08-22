@@ -17,7 +17,7 @@ Puede seleccionar la interfaz a utilizar con sus áreas de formulario 4D View Pr
 
 ![](../assets/en/ViewPro/vpUserInterface.PNG)
 
-> You can also use the [`userInterface`](FormObjects/properties_Appearance.md#user-interface) and [`withFormulaBar`](FormObjects/properties_Appearance.md#show-formula-bar)(only with the "toolbar" interface) JSON properties.
+> También puede utilizar las propiedades JSON [`userInterface`](FormObjects/properties_Appearance.md#user-interface) y [`withFormulaBar`](FormObjects/properties_Appearance.md#show-formula-bar)(sólo con la interfaz "barra de herramientas").
 
 Las interfaces permiten realizar modificaciones básicas y manipular los datos. Las modificaciones definidas por el usuario se guardan en el objeto 4D View Pro cuando el usuario guarda el documento.
 

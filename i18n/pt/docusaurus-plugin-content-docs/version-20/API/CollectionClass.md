@@ -210,8 +210,8 @@ Pode passar qualquer número de valores dos tipos compatíveis abaixo:
 *   date
 *   hora (armazenada como número de milissegundos - real)
 *   null
-*   objeto compartido(*)
-*   shared collection(*) > Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros, objetos ou coleções que não são compartilhadas.
+*   shared object
+*   shared collection
 
 :::note
 
@@ -219,7 +219,6 @@ Diferente de coleções padrão (não partilhadas), coleções partilhadas não 
 
 :::
 
-(\*)Quando um objeto partilhado ou coleção forem adicionadas a uma coleção partilhada, partilham o mesmo *locking identifier*. Para saber mais sobre esse ponto, veja [4D Doc Center](https://doc.4d.com).
 
 #### Exemplo
 
@@ -902,16 +901,13 @@ Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a ava
 
 
 <!-- REF #collection.every().Params -->
-| Parâmetro  | Tipo         |    | Descrição                                                                          |
-| ---------- | ------------ |:--:| ---------------------------------------------------------------------------------- |
-| startFrom  | Integer      | -> | Índice para início do teste em                                                     |
-| formula    | 4D. Function | -> | Objecto fórmula                                                                    |
-| methodName | Text         | -> | Nome da função a qual se chama para processar os elementos da coleção              |
-| param      | Mixed        | -> | *methodName* recebe os parâmetros abaixo:                                          |
-| Resultados | Parâmetros   | <- | True se todos os elementos passarem o teste com sucesso|<!-- END REF -->
+| Parâmetro  | Tipo         |    | Descrição                                                             |
+| ---------- | ------------ |:--:| --------------------------------------------------------------------- |
+| startFrom  | Integer      | -> | Índice para início do teste em                                        |
+| formula    | 4D. Function | -> | Objecto fórmula                                                       |
+| methodName | Text         | -> | Nome da função a qual se chama para processar os elementos da coleção |
 
-
-|
+|param|Mixed|->|Parameter(s) to pass to *formula* or *methodName*| |Result|Boolean|<-|True if all elements successfully passed the test|<!-- END REF -->
 
 
 #### Descrição
@@ -2094,6 +2090,7 @@ A função `.max()` <!-- REF #collection.max().Summary -->devolve o elemento com
 > Essa função não modifica a coleção original.
 
 shared collection(*) > Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros, objetos ou coleções que não são compartilhadas.
+
 
 Se a coleção conter objetos, pode passar o parâmetro *propertyPath* para indicar a propriedade objeto cujos valores máximos você quer obter.
 

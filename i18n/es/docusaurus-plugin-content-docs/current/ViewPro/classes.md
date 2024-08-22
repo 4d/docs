@@ -57,7 +57,7 @@ La propiedad `.name` <!-- REF #TableColumn.name.Summary -->contiene el nombre de
 
 **.allowAutoExpand** : Boolean<!-- END REF -->
 
-The `.allowAutoExpand` property <!-- REF #TableOptions.allowAutoExpand.Summary -->indicates whether to expand columns or rows of the table when values are added in empty adjacent cells<!-- END REF -->. Por defecto = True
+La propiedad `.allowAutoExpand` <!-- REF #TableOptions.allowAutoExpand.Summary -->indica si se expanden las columnas o filas de la tabla cuando se añaden valores en celdas vacías adyacentes<!-- END REF -->. Por defecto = True
 
 ### .bandColumns
 
@@ -121,7 +121,7 @@ La propiedad `.showResizeHandle` <!-- REF #TableOptions.showResizeHandle.Summary
 
 **.tableColumns** : Collection<!-- END REF -->
 
-The `.tableColumns` property <!-- REF #TableOptions.tableColumns.Summary -->is a collection of [cs.ViewPro.TableColumn](#tablecolumn) objects used to create the table's columns<!-- END REF -->.
+La propiedad `.tableColumns` <!-- REF #TableOptions.tableColumns.Summary -->es una colección de objetos [cs.ViewPro.TableColumn](#tablecolumn) utilizados para crear las columnas de la tabla<!-- END REF -->.
 
 ### .theme
 

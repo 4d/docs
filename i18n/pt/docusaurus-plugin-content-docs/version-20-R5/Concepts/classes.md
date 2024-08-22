@@ -849,7 +849,7 @@ As classes Singleton não são suportadas por [classes baseadas em ORDA](../ORDA
 
 :::
 
-### Creating a singleton
+### Criação de um singleton
 
 To create a singleton class, add the `singleton` keyword before [`Class Constructor`](#class-constructor). Por exemplo:
 

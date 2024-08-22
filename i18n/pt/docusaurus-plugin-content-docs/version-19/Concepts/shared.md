@@ -67,8 +67,6 @@ A atribuição de objectos/colecções partilhados a propriedades ou elementos d
 
 Consulte o exemplo 2 para ver uma ilustração das regras de grupos partilhados.
 
-**Nota:** Os grupos partilhados são geridos através de uma propriedade interna denominada *identificador de bloqueio*. Para obter informações detalhadas sobre este valor, consulte a Referência da Linguagem 4D.
-
 ### Leitura
 
 Ao chamar a `Use` em um objeto/colección compartido de um grupo se bloquearão as propriedades/elementos de todos os objetos/coleções compartidos que pertençam ao mesmo grupo.

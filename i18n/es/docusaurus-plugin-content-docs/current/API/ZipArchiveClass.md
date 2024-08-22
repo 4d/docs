@@ -258,10 +258,10 @@ Para leer el contenido de un archivo sin extraerlo de la carpeta root:
 Para extraer desde la carpeta root:
 
 ```4d
-  //extract a file
+  //extraer un archivo
  $folderResult:=$files[$i].copyTo(Folder(fk desktop folder).folder("MyDocs"))
 
-  //extract all files
+  //extraer todos los archivos
  $folderResult:=$archive.root.copyTo(Folder(fk desktop folder).folder("MyDocs"))
 ```
 

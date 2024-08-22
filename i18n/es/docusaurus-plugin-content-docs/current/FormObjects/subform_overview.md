@@ -76,9 +76,9 @@ Caso 1: se modifica el valor de la variable o expresión del formulario padre y 
 Se ejecuta el siguiente código:
 
 ```4d
-// Subform form method
-If (Form event code=On Bound Variable Change) //bound variable or expression was modified in the parent form
-	Form.clockValue:=OBJECT Get subform container value //synchonize the local value
+// Método de formulario del subformulario
+If (Form event code=On Bound Variable Change) //la variable o expresión vinculada se modificó en el formulario padre
+	Form.clockValue:=OBJECT Get subform container value //sincroniza el valor local
 End if
 ```
 
@@ -107,9 +107,9 @@ Dentro del subformulario, el botón cambia el valor de la expresión `Form.clock
 Se ejecuta el siguiente código:
 
 ```4d
-// subform clock object method
-If (Form event code=On Data Change) //whatever the way the value is changed
-	OBJECT SET SUBFORM CONTAINER VALUE(Form.clockValue) //Push the value to the container
+// método objeto subform clock
+If (Form event code=On Data Change) //sea cual sea la forma de cambiar el valor
+	OBJECT SET SUBFORM CONTAINER VALUE(Form.clockValue) //Empujar el valor al contenedor
 End if
 ```
 

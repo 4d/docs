@@ -168,7 +168,7 @@ Las advertencias son mensajes específicos generados por el compilador cuando ve
 
 Dependiendo de las circunstancias y del estilo de programación utilizado, las advertencias pueden ser más o menos relevantes. You can enable or disable warnings, in the compiler dialog, and in the code editors (4D code editor and VS Code), globally through the [warnings tab](#warnings-tab) or locally using [`//%W`](#disabling-and-enabling-warnings-locally).
 
-### Warnings tab
+### Pestaña Advertencias
 
 ![](../assets/en/Project/warnings-tab.png)
 

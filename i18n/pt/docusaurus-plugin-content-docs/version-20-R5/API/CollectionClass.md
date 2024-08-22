@@ -196,16 +196,14 @@ Pode passar qualquer número de valores dos tipos compatíveis abaixo:
 - date
 - hora (armazenada como número de milissegundos - real)
 - null
-- objeto compartido(\*)
-- shared collection(\*) > Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros, objetos ou coleções que não são compartilhadas.
+- shared object
+- shared collection
 
 :::note
 
 Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros e objetos ou coleção que não forem partilhadas.
 
 :::
-
-(\*)When a shared object or collection is added to a shared collection, they share the same *locking identifier*. For more information on this point, refer to [4D Doc Center](https://doc.4d.com).
 
 #### Exemplo
 

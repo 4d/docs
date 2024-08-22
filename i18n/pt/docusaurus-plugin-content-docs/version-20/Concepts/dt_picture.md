@@ -40,7 +40,7 @@ A maioria dos [comandos de gerenciamento de imagens 4D](https://doc.4d.com/4Dv18
 | Redimensionamento       | Imagem * Número        | Imagem     | Redimensionar imagem por proporção número                                                                                                                                  |
 | Escala horizontal       | Imagem *+ Número       | Imagem     | Redimensionar imagem horizontalmente por relação numérica                                                                                                                  |
 | Escala vertical         | Picture *&#124; Number | Imagem     | Redimensionar imagem por proporção número                                                                                                                                  |
-| Contém palavra chave    | Picture % String       | Parâmetros | Returns true if the string is associated with the picture stored in the picture expression. See `GET PICTURE KEYWORDS`                                                     |
+| Contém palavra chave    | Picture % String       | Parâmetros | Returns true if the string is associated with the picture stored in the picture expression. Veja `GET PICTURE KEYWORDS`                                                    |
 
 
 **Notas:**
