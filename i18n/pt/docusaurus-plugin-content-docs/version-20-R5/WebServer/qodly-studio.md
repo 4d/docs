@@ -17,7 +17,7 @@ Qodly Studio can also be used in the [**Qodly Cloud platform**](https://qodly.co
 
 With Qodly Studio, you will discover a totally new web UI, get familiar with the concept of datasources, and learn how to:
 
-- create Qodly forms by placing components on a page
+- criar formulários Qodly colocando componentes em uma página
 - mapear componentes para dados
 - acionar o código 4D configurando eventos
 - e muito mais.

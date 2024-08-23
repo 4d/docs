@@ -95,7 +95,7 @@ Estas propiedades son definidas:
 3. si no se utiliza, en los parámetros de la aplicación local o del componente.
 
 - Si el servidor web no se inicia, las propiedades contienen los valores que se utilizarán en el próximo inicio del servidor web.
-- If the web server is started, the properties contain the actual values used by the web server (default settings could have been overriden by the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function.
+- Si se inicia el servidor web, las propiedades contienen los valores reales utilizados por el servidor web (la configuración predeterminada podría haber sido anulada por el parámetro `settings` de la función [`.start()`](API/WebServerClass.md#start).
 
 > _isRunning_, _name_, _openSSLVersion_, and _perfectForwardSecrecy_ are read-only properties that cannot be predefined in the `settings` object parameter for the [`start()`](API/WebServerClass.md#start) function.
 

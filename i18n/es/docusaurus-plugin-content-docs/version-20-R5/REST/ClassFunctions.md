@@ -233,7 +233,7 @@ A continuación, puede ejecutar esta petición:
 La clase `StudentsSelection` tine una función `getAgeAverage`:
 
 ```
-// StudentsSelection Class
+// Clase StudentsSelection
 
 Class extends EntitySelection
 

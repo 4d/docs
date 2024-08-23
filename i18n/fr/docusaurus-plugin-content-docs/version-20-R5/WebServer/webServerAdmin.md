@@ -221,7 +221,7 @@ Les paramètres de sauvegarde automatique du logweb.txt sont définis sur la pag
 
 ![](../assets/en/WebServer/backup.png)
 
-First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. Vous devez ensuite spécifier le moment précis du backup si nécessaire.
+D'abord, vous devez choisir la fréquence (jours, semaines, etc.) ou le critère de limite de taille du fichier en cliquant sur le bouton radio correspondant. Vous devez ensuite spécifier le moment précis du backup si nécessaire.
 
 - **Pas de sauvegarde du journal** : La fonction de sauvegarde programmée est désactivée.
 

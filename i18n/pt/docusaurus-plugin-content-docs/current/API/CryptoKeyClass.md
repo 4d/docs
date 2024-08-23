@@ -5,7 +5,7 @@ title: CryptoKey
 
 The `CryptoKey` class in the 4D language encapsulates an asymmetric encryption key pair.
 
-This class is available from the `4D` class store.
+Essa classe está disponível no "class store" de `4D`.
 
 :::info Veja também
 
@@ -348,7 +348,7 @@ A `CryptoKey` deve conter uma chave **privada** válida.
 | ----------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash              | text    | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512". Quando utilizar para produzir um JWT, o tamanho de hash deve coincidir com o tamanho do algoritmo PS@, ES@, RS@ ou PS@ |
 | encodingEncrypted | text    | Codificação utilizada para converter a mensagem binária criptografada na string resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                                                                                 |
-| pss               | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Pass `true` when producing a JWT for PS@ algorithm                                                                                           |
+| pss               | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passe `true` ao produzir um JWT para o algoritmo PS@                                                                                         |
 | encoding          | text    | Representation of provided signature. Possible values are "Base64" or "Base64URL". Por padrão é "Base64".                                                                                                                                             |
 
 #### *Resultado*

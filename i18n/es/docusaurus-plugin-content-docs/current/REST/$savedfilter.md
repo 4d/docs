@@ -13,7 +13,7 @@ Utilice `$savedfilter` para guardar el filtro que definió al crear su conjunto 
 
 Si el conjunto de entidades ya no está en la caché de 4D Server, se recreará con un nuevo tiempo de espera de 10 minutos por defecto. El conjunto de entidades se refrescará (pueden incluirse ciertas entidades y eliminarse otras) desde la última vez que se creó, si ya no existía antes de recrearlo.
 
-If you have used both `$savedfilter` and [`$savedorderby`]($savedorderby.md) in your call when creating an entity set and then you omit one of them, the new entity set, which will have the same reference number, will reflect that.
+Si ha utilizado tanto `$savedfilter` como [`$savedorderby`]($savedorderby.md) en su llamada al crear un conjunto de entidades y luego omite una de ellas, el nuevo conjunto de entidades, que tendrá el mismo número de referencia, lo reflejará.
 
 ## Ejemplo
 

@@ -82,9 +82,9 @@ Lorsque cette option est sélectionnée, le serveur Web ne fournit aucune prise 
 
 Dans ce mode, vous pouvez configurer des paramètres de serveur Web supplémentaires :
 
-- [Maximum Concurrent Web Processes](#maximum-concurrent-web-processes)
-- [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts)
-- [Use preemptive processes](#use-preemptive-web-processes)
+- [Process Web simultanés maxi](#maximum-concurrent-web-processes)
+- [Réutilisation des contextes temporaires (en mode distant)](#reuse-temporary-context)
+- [Utiliser des process préemptifs](#use-preemptive-web-processes)
 
 #### Anciennes sessions (sessions process uniques)
 
@@ -126,7 +126,7 @@ Définit le système d'authentification que vous souhaitez utiliser pour le serv
 
 Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
 
-Il est recommandé d'utiliser l'authentification **personnalisée**. See [**Authentication**](../WebServer/authentication.md) chapter in the *Web Development* documentation.
+Il est recommandé d'utiliser l'authentification **personnalisée**. Voir le chapitre [**Authentification**](../WebServer/authentication.md) dans la section *Développement Web*.
 
 ## Options (II)
 
@@ -166,9 +166,8 @@ Le menu de format du journal propose les options suivantes :
 
 - **Pas de journal** : Lorsque cette option est sélectionnée, 4D ne génère pas d’historique des requêtes.
 
-- **CLF (Common Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format CLF. With the CLF format, each line of the file represents a request, such as:\
-  host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length\
-  Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+- **CLF (Common Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format CLF. Avec le format CLF, chaque ligne du fichier représente une requête, telle que :\
+  host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length\ Chaque champ est séparé par un espace et chaque ligne se termine par la séquence CR/LF (caractère 13, caractère 10).
 
   - hôte : adresse IP du client (ex. 192.100.100.10)
   - rfc931 : information non gérée par 4D, c’est toujours - (signe moins)
@@ -182,16 +181,16 @@ Le menu de format du journal propose les options suivantes :
 - longueur : taille des données renvoyées (hors en-tête HTTP) ou 0.
 
 > **Note :** Pour des raisons de performances, les opération sont stockées dans une mémoire tampon par paquets de 1 Ko avant d'être écrites sur disque. Les opérations sont également écrites sur disque si aucune requête n'a été envoyée au bout de 5 secondes.
-> The possible values of state are as follows:
-> 200: OK
-> 204: No contents
-> 302: Redirection
-> 304: Not modified
-> 400: Incorrect request
-> 401: Authentication required
-> 404: Not found
-> 500: Internal error
-> The CLF format cannot be customized.
+> Les valeurs possibles de l'état sont les suivantes :
+> 200 : OK
+> 204 : Pas de contenu
+> 302 : Redirection
+> 304 : Non modifié
+> 400 : Requête incorrecte
+> 401 : Authentification requise
+> 404 : Non trouvé
+> 500 : Erreur interne
+> Le format CLF ne peut pas être personnalisé.
 
 - **DLF (Combined Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format DLF. Le format DLF est semblable au format CLF dont il reprend exactement la structure. Il ajoute simplement deux champs HTTP supplémentaires à la fin de chaque requête : Referer et User-agent.
 
@@ -239,7 +238,7 @@ Le tableau suivant répertorie les champs disponibles pour chaque format (par or
 
 ## Journal (sauvegarde)
 
-Paramètres d’archivage automatique du journal des requêtes. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. Vous devez ensuite spécifier le moment précis du backup si nécessaire.
+Paramètres d’archivage automatique du journal des requêtes. D'abord, vous devez choisir la fréquence (jours, semaines, etc.) ou le critère de limite de taille du fichier en cliquant sur le bouton radio correspondant. Vous devez ensuite spécifier le moment précis du backup si nécessaire.
 
 - **Pas de sauvegarde du journal** : La fonction de sauvegarde programmée est désactivée.
 - **Toutes les X heure(s)** : Cette option est utilisée pour programmer des sauvegardes sur une base horaire. Vous pouvez entrer une valeur entre 1 et 24.
@@ -286,33 +285,33 @@ Démarre et stoppe le serveur REST. Voir [Configuration du serveur REST](../REST
 
 ### Accès
 
-:::information Deprecated
+:::information Obsolète
 
-**This section is deprecated** as of 4D 20 R6. If the current project configuration is obsolete and needs to be upgraded, this section, including the **Activate REST authentication through ds.authentify() function** button (see below), is displayed. If your project is already compatible with the [Force login](../REST/configuration.md#configuring-rest-access) mode, the section is missing and you can ignore this paragraph.
+**Cette section est obsolète** à partir de 4D 20 R6. Si la configuration actuelle du projet est obsolète et doit être mise à niveau, cette section, y compris le bouton **Activer l'authentification REST via la fonction ds.authentify()** (voir ci-dessous), est affichée. Si votre projet est déjà compatible avec le mode [Connexion forcée](../REST/configuration.md#configuration-de-l-accès-rest), la section n'apparaît pas et vous pouvez ignorer ce paragraphe.
 
 :::
 
-See [Configuring REST access](../REST/configuration.md#configuring-rest-access) to know the recommended way to control and manage REST access in your 4D projects.
+Reportez-vous à [Configurer les accès REST](../REST/configuration.md#configuring-rest-access) pour plus d'informations sur la manière recommandée de contrôler et gérer les accès REST dans vos projets 4D.
 
-#### Activate REST authentication through ds.authentify() function
+#### Activer l'authentification REST via la fonction ds.authentify()
 
-Click on the **Activate REST authentication through ds.authentify() function** button to automatically upgrade your project regarding REST user access. Note that this operation cannot be reverted and may require that you modify your code (a warning dialog box is displayed when you click on the button).
+Cliquez sur le bouton **Activer l'authentification REST via la fonction ds.authentify()** pour mettre automatiquement à niveau votre projet en matière d'accès utilisateur REST. Notez que cette opération ne peut pas être annulée et peut nécessiter que vous modifiez votre code (une boîte de dialogue d'avertissement s'affiche lorsque vous cliquez sur le bouton).
 
 :::note
 
-This button is only available in projects opened with the 4D application (single-user).
+Ce bouton est uniquement disponible dans les projets ouverts avec l'application 4D (mono-utilisateur).
 
 :::
 
-The button triggers the following upgrade sequence:
+Le bouton déclenche la séquence de mise à niveau suivante :
 
-- The group of REST API users set in the **Read/Write** menu is removed.
-- The `On REST Authentication` database method is deleted (moved into the system bin).
-- A default ["roles.json" file](../ORDA/privileges.md#rolesjson-file) is created in the [Sources folder](../Project/architecture.md#sources) of the project if it does not already exist, with its `forceLogin` attribute to `True`.
+- Le groupe d'utilisateurs de l'API REST défini dans le menu **Lecture/Écriture** est supprimé.
+- La méthode base `On REST Authentication` est supprimée (déplacée dans la corbeille du système).
+- Un fichier ["roles.json"](../ORDA/privileges.md#fichier-rolesjson) par défaut est créé dans le dossier [Sources](../Project/architecture.md#sources) du projet s'il n'existe pas déjà, avec son attribut `forceLogin` défini sur `True`.
 
-Remember to restart your project after performing this upgrade.
+N'oubliez pas de redémarrer votre projet après avoir effectué cette mise à niveau.
 
-The next step is to modify your code accordingly. [**See this blog post to know how to proceed**](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications).
+La prochaine étape consiste à modifier votre code en conséquence. [**Reportez-vous à cet article de blog pour savoir comment procéder**](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications).
 
 ### Qodly Studio
 
@@ -324,4 +323,4 @@ Cette option n'apparaît que si la licence Qodly Studio est activée.
 
 :::
 
-This option enables user access to [Qodly Studio](../WebServer/qodly-studio.md) for the current project. Note that global access must be allowed at the [application level](../Admin/webAdmin.md).
+Cette option permet l'accès utilisateur à [Qodly Studio](../WebServer/qodly-studio.md) pour le projet en cours. Notez que l'accès global doit être autorisé au [niveau de l'application](../Admin/webAdmin.md).

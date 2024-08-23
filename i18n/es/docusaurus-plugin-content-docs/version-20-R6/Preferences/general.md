@@ -104,7 +104,7 @@ Si tiene intención de utilizar VCS o los editores de código externos con sus n
 
 #### Exclusión de los tokens en los proyectos existentes
 
-You can configure your existing projects to save code **without tokens** by inserting the following key in the [`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-file) file using a text editor:
+Puede configurar sus proyectos existentes para guardar código **sin tokens** insertando la siguiente llave en el archivo [`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-file) utilizando un editor de texto:
 
 ```
 "tokenizedText": false

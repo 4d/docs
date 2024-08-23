@@ -66,7 +66,7 @@ Dependendo do processo a partir do qual o comando é chamado, a sessão atual do
 - uma sessão de cliente remoto,
 - a sessão de procedimentos armazenados.
 
-For more information, see the [Session types](#session-types) paragraph.
+Para obter mais informações, consulte o parágrafo [Tipos de sessão](#session-types).
 
 If the command is called from a non supported context (single-user application, scalable sessions disabled...), it returns *Null*.
 

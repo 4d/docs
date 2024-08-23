@@ -346,11 +346,11 @@ End if
 Entonces, el método *Color* contendría:
 
 ```4d
-  //Color method
+  //Método Color
  ...
  If(This.ID>5)
     Form.meta.stroke:="purple"
-    Form.meta.cell:=Form.colStyle //reuse the same object for better performance
+    Form.meta.cell:=Form.colStyle //reuse el mismo objeto para un mejor rendimiento
  Else
  	Form.meta.stroke:="orange"
 	Form.meta.cell:=Form.colStyle2

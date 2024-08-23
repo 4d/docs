@@ -30,7 +30,7 @@ Las aplicaciones monopuesto son aplicaciones de escritorio, desplegadas con 4D o
 
 ### Identificación del usuario
 
-To identify the current user in a 4D single-user application, you can rely on the [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html) command, which returns the user who opened the system session. Por lo tanto, la autenticación de los usuarios se delega al sistema operativo.
+Para identificar el usuario actual en una aplicación 4D monousuario, puede confiar en el comando [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html), que devuelve el usuario que abrió la sesión del sistema. Por lo tanto, la autenticación de los usuarios se delega al sistema operativo.
 
 A continuación, puede permitir o denegar el acceso dentro de su aplicación utilizando un código como:
 

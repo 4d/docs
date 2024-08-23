@@ -17,13 +17,13 @@ Con la API REST, puede realizar todas las manipulaciones a los datos como puede 
 
 Para añadir y modificar entidades, puede llamar a [`$method=update`]($method.md#methodupdate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
+Además la recuperación de una sola entidad en una clase de datos utilizando [\{dataClass\}({key})](dataClass.md#dataclasskey), también puede escribir una [función de clase](ClassFunctions.md#function-calls) que devuelva una entity selection (o una colección).
 
 Antes de devolver una selección, también puede ordenarla utilizando [`$orderby`]($orderby.md) uno o más atributos (incluso atributos de relación).
 
 ## Navegación de datos
 
-Add the [`$skip`]($skip.md) (to define with which entity to start) and [`$top/$limit`]($top_$limit.md) (to define how many entities to return) REST requests to your queries or entity selections to navigate the collection of entities.
+Añada las peticiones REST [`$skip`]($skip.md) (para definir con qué entidad empezar) y [`$top/$limit`]($top_$limit.md) (para definir cuántas entidades devolver) a sus consultas o selecciones de entidades para navegar por la colección de entidades.
 
 ## Creación y gestión del conjunto de entidades
 
