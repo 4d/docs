@@ -11,7 +11,7 @@ On the remote machine, 4D opens a [session](../WebServer/sessions.md) to handle 
 
 ## Utilizando sesiones web
 
-When you work with a remote datastore referenced through calls to the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command, the connection with the requesting processes is handled via [web sessions](../WebServer/sessions.md) on the remote machine.
+Cuando se trabaja con un datastore remoto referenciado a través de llamadas al comando [`Open datastore`](../API/DataStoreClass.md#open-datastore), la conexión con los procesos solicitantes se gestiona a través de [sesiones web](../WebServer/sessions.md) en la máquina remota.
 
 La sesión web creada en el almacén de datos remoto se identifica utilizando un ID de sesión interno que se asocia al `localID` del lado de la aplicación 4D. Esta sesión gestiona automáticamente el acceso a los datos, a las selecciones de entidades o a las entidades.
 
