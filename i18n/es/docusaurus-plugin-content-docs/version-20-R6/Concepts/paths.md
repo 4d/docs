@@ -114,9 +114,9 @@ Funciones de objetos folder tales como [`folder.file()`](../API/FolderClass.md#f
 ```4d
 var $userImages : 4D.Folder
 var $ok : Boolean
-  //to reference a "Picture" folder within the user documents folder
+  //para referenciar una carpeta "Picture" dentro de la carpeta de documentos del usuario
 $userImages:=Folder(fk documents folder).folder("Pictures")
-  //to create a folder on the desktop
+  //para crear una carpeta en el escritorio
 $ok:=Folder(fk desktop folder).folder("myFolder").create()
 ```
 
