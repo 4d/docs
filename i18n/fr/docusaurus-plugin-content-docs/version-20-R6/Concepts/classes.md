@@ -379,7 +379,7 @@ Le type de propriété peut être l'un des suivants :
 | `Date`                       | Valeur date                                                               |
 | `Time`                       | Valeur Heure                                                              |
 | `Boolean`                    | Valeur booléen                                                            |
-| `Entier`                     | Valeur entier long                                                        |
+| `Integer`                    | Valeur entier long                                                        |
 | `Real`                       | Valeur réel                                                               |
 | `Pointer`                    | Valeur pointeur                                                           |
 | `Picture`                    | Valeur image                                                              |
