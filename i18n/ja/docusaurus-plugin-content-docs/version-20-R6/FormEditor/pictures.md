@@ -81,6 +81,6 @@ title: ピクチャー
 
 4D では、[ピクチャー式](FormObjects/properties_Object.md#式の型) が設定された [入力オブジェクト](FormObjects/input_overview.md) をクリック、またはホバーした際のマウスのローカル座標を取得できます。これはスクロールやズーム処理がおこなわれている場合でも可能です。 このピクチャーマップに似た機構は、たとえば地図作製ソフトウェアのインターフェースや、スクロール可能なボタンバーを管理するのに使用できます。
 
-座標は *MouseX* と *MouseY* [システム変数](https://doc.4d.com/4Dv18/4D/18/System-Variables.300-4505547.ja.html) に返されます。 座標はピクセル単位で表現され、ピクチャーの左上隅が起点 (0,0) となります。 マウスがピクチャの座標の外側にある場合には、*MouseX* と *MouseY* には-1が返されます。
+The coordinates are returned in the *MouseX* and *MouseY* [System Variables](../Concepts/variables.md#system-variables). 座標はピクセル単位で表現され、ピクチャーの左上隅が起点 (0,0) となります。 マウスがピクチャの座標の外側にある場合には、*MouseX* と *MouseY* には-1が返されます。
 
 これらの値は、[`On Clicked`](Events/onClicked.md)、[`On Double Clicked`](Events/onDoubleClicked.md)、[`On Mouse up`](Events/onMouseUp.md)、[`On Mouse Enter`](Events/onMouseEnter.md)、あるいは [`On Mouse Move`](Events/onMouseMove.md) フォームイベントの一部として取得することができます。
