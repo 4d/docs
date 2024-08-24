@@ -118,9 +118,9 @@ Las funciones de los objetos carpeta, tales como [`folder.file()`](../API/Folder
 var $userImages : 4D.Folder
 var $ok : Boolean
 
-  //to reference a "Picture" folder within the user documents folder
+  //para referenciar una carpeta "Picture" dentro de la carpeta de documentos del usuario
 $userImages:=Folder(fk documents folder).folder("Pictures")
-  //to create a folder on the desktop
+  //para crear una carpeta en el escritorio
 $ok:=Folder(fk desktop folder).folder("myFolder").create()
 ```
 
