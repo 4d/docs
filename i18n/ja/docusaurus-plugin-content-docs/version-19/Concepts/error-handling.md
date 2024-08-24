@@ -57,14 +57,16 @@ ON ERR CALL("") // エラーの検知を中止します
 
 独自に作成してエラー処理メソッド内では、エラーを調査するための情報がいくつか提供されています:
 
-- 専用のシステム変数 (*):
+- 専用のシステム変数:
 
   - `Error` (倍長整数): エラーコード
   - `Error method` (テキスト): エラーを生成したメソッドの名称
   - `Error line` (倍長整数): エラーを生成したメソッドの行番号
   - `Error formula` (テキスト): エラーの元となった 4D コードのフォーミュラ (テキスト)
 
-(*) 4D は、いくつかの **システム変数** と呼ばれる専用の変数を自動的に管理しています。 詳細については [4D ランゲージマニュアル](https://doc.4d.com/4Dv18/4D/18/System-Variables.300-4505547.ja.html) を参照ください。
+:::info
+
+4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs. :::
 
 - `GET LAST ERROR STACK` コマンドは、4Dアプリケーションの現在のエラースタックに関する情報を返します。
 - `Get call chain` コマンドは、カレントプロセス内における、メソッド呼び出しチェーンの各ステップを詳細に説明するオブジェクトのコレクションを返します。
