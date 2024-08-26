@@ -95,7 +95,7 @@ Le tableau suivant résume la manière dont les méthodes objet et formulaire so
 | On Header Click           | Oui (List box et Zone 4D View Pro)              | Jamais             | Objets concernés uniquement |
 | On Footer Click           | Oui (List box)                                  | Jamais             | Objets concernés uniquement |
 | On After Sort             | Oui (List box)                                  | Jamais             | Objets concernés uniquement |
-| Sur clic long             | Oui (Bouton)                                    | Oui                | Objets concernés uniquement |
+| On Long Click             | Oui (Bouton)                                    | Oui                | Objets concernés uniquement |
 | On Alternative Click      | Oui (Bouton et List box)                        | Jamais             | Objets concernés uniquement |
 | On Expand                 | Oui (Liste hiérar. et list box) | Jamais             | Objets concernés uniquement |
 | On Collapse               | Oui (Liste hiérar. et list box) | Jamais             | Objets concernés uniquement |

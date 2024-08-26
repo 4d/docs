@@ -82,7 +82,7 @@ Internamente, el analizador funciona con cadenas UTF-16, pero los datos a analiz
 
 ## Acceso a los métodos 4D a través de la web
 
-Executing a 4D method with `4DEACH`, `4DELSEIF`, `4DEVAL`, `4DHTML`, `4DIF`, `4DLOOP`, `4DSCRIPT`, or `4DTEXT` from a web request is subject to the [Available through 4D tags and URLs (4DACTION...)](allowProject.md) attribute value defined in the properties of the method. Si no se comprueba el atributo para el método, éste no puede ser llamado desde una petición web.
+Ejecutar un método 4D con `4DEACH`, `4DELSEIF`, `4DEVAL`, `4DHTML`, `4DIF`, `4DLOOP`, `4DSCRIPT`, o `4DTEXT` desde una petición web está sujeto al valor del atributo [Disponible a través de etiquetas 4D y URLs (4DACTION...)](allowProject.md) definido en las propiedades del método. Si no se comprueba el atributo para el método, éste no puede ser llamado desde una petición web.
 
 ## Prevención de la inserción de códigos maliciosos
 

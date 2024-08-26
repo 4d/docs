@@ -125,38 +125,38 @@ Você pode exibir ou ocultar os números de linhas na área de pontos de quebra 
 - Para ativar ou desativar a exibição de números de linha por padrão, escolha **Preferências** > **Métodos** > **Mostrar números de linha**.
 - Para modificar essa exibição separadamente para cada janela do editor de código, selecione **Método** > **Visualizar** > **Números de linha**.
 
-Displaying the line numbers makes it easier to find your way around in the window. The **Method** > **Go to Line Number...** command in the also lets you take advantage of this display.
+Exibir as linhas de números torna mais fácil encontrar o seu caminho na janela. O comando **Método** > **Ir al número de linha...** no também permite aproveitar essa exibição.
 
-This type of search is useful when used in conjunction with the [compiler](../Project/compiler.md), which flags runtime errors by the line number in which they occur.
+Esse tipo de pesquisa é útil quando usado em conjunto com o [compilador](../Project/compiler.md), que sinaliza os erros de tempo de execução pelo número da linha em que eles ocorrem.
 
 ### Barra de estado
 
-The status bar located at the bottom right part of the editor window displays the position of the cursor at all times:
+A barra de status localizada na parte inferior direita do editor da janela exibe a posição do cursor em todos os momentos:
 
 ![](../assets/en/code-editor/status-bar.png)
 
 - **Ln**: Número da linha
-- **Col**: Column number, i.e., the level in the hierarchy of programming structures. O primeiro nível é 0. The column number is useful for debugging since this information can be provided by the interpreter in the event of an error in the code.
+- **C**: número de coluna, ou seja, o nível na hierarquia das estruturas de programação. O primeiro nível é 0. O número da coluna é útil para debugar, pois essa informação pode ser fornecida pelo interpretador em caso de erro no código.
 - **Ch**: localização do carácter na linha.
-- ![](../assets/en/code-editor/show-hide-list.png): Ocultar/apresentar listas.
+- ![](../assets/en/code-editor/show-hide-list.png): ocultar/apresentar listas.
 
-When you set the cursor in a command, function or parameter(s), the status bar displays the syntax of the command. If you write or select a parameter, the area shows the current parameter in **bold**: ![](../assets/en/code-editor/status-bar-bold.png)
+Quando você define o cursor em um comando, função ou parâmetros, a barra de status exibe a sintaxe do comando. Se você escrever ou selecionar um parâmetro, a área mostrará o parâmetro atual em **negrito**: ![](../assets/en/code-editor/status-bar-bold.png)
 
 ### Menu de navegação suspenso
 
-The navigation dropdown helps you organize your code and navigate more easily inside your classes and methods:
+O menu suspenso de navegação ajuda você a organizar seu código e navegar com mais facilidade dentro de suas classes e métodos:
 
 ![dropdown-list](../assets/en/code-editor/dropdown-list.png)
 
-Some tags are added automatically, and you can complement the dropdown list using [markers](#manual-tagging).
+Algumas tags são adicionadas automaticamente, e você pode complementar a lista suspensa usando [marcadores](#manual-tagging).
 
 #### Navegação de código
 
-Click an item in the dropdown list to go to its first line in the code. You can also navigate with arrow-keys and press **Enter**.
+Clique em um item da lista suspensa para acessar sua primeira linha no código. Você também pode navegar com as teclas de seta e pressionar **Enter**.
 
 #### Marcação automática
 
-Constructors, method declarations, functions and computed attributes are automatically tagged and added to the dropdown list.
+Construtores, declarações de métodos, funções e atributos computados são automaticamente marcados e adicionados à lista suspensa.
 
 Quando não existe uma etiqueta na classe/método, a ferramenta apresenta "Sem etiqueta".
 
@@ -185,9 +185,9 @@ Declara-os acrescentando comentários como:
 // FIXME: Correção dos seguintes itens
 ```
 
-Declarations are not case-sensitive; writing `fixme:` has the same effect.
+As declarações não diferenciam maiúsculas de minúsculas; escrever `fixme:` tem o mesmo efeito.
 
-Adding a hyphen after the `MARK:` tag draws a separating line in the code editor and the dropdown menu. Por isso, estou a escrever isto:
+A adição de um hífen após a tag `MARK:` desenha uma linha de separação no editor de código e no menu suspenso. Por isso, estou a escrever isto:
 
 ![mark-hyphen-image](../assets/en/code-editor/mark-hyphen-editor.png)
 
@@ -195,16 +195,16 @@ Os resultados são os seguintes:
 
 ![mark-hyphen-image](../assets/en/code-editor/dropdown-organize.png)
 
-All markers located inside functions are indented in the dropdown list, except for the `MARK:` tags located at the end of functions and not followed by instructions. Estes aparecerão no primeiro nível.
+Todos os marcadores localizados dentro de funções são recuados na lista suspensa, exceto as tags `MARK:` localizadas no final das funções e não seguidas de instruções. Estes aparecerão no primeiro nível.
 
 #### Ordem de visualização
 
 As etiquetas são exibidas em sua ordem de aparecimento dentro do método/classe.
 
-To display the tags of a method or class in alphabetical order, do one of the following:
+Para exibir as tags de um método ou classe em ordem alfabética, faça uma das seguintes:
 
 - **Clique direito** na ferramenta suspensa
-- hold **Cmd** on macOS or **Alt** on Windows, and click the dropdown tool
+- mantenha pressionado **Cmd** no macOS ou **Alt** no Windows e clique na ferramenta suspensa
 
 > As etiquetas em funções movem-se com os seus itens pais.
 
@@ -212,54 +212,54 @@ To display the tags of a method or class in alphabetical order, do one of the fo
 
 ### Atalhos
 
-Multiple features of 4D's Code Editor are available through default keyboard shortcuts.
+Várias funcionalidades do editor de código do 4D estão disponíveis através de atalhos de teclado padrão.
 
 :::info macOS
 
-Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Windows).
+No macOS, use a tecla **Command** em vez da tecla **Ctrl** mencionada (Windows).
 
 :::
 
-| **Atalho**                                                       | **Ação**                                                                                                                                       |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Selecção e navegação**                                         |                                                                                                                                                |
-| Duplo clique                                                     | Selecionar o nome de um elemento da linguagem                                                                                                  |
-| [Alt]+Clique duas vezes                                          | Selecionar um nome de elemento de língua contendo espaços (constante, método, etc.)                                                            |
-| [Shift]+[seta para a direita]                                    | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left         |
-| [Shift]+[seta para a esquerda]                                   | Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left          |
-| [Shift]+[seta para baixo]                                        | Create and enlarge a selection, line by line, from the top to the bottom                                                                       |
-| [Shift]+[seta para cima]                                         | Create and enlarge a selection, line by line, from the bottom to the top                                                                       |
-| [Ctrl]+[Shift]+[seta para a direita]                             | Criar e ampliar a seleção, palavra a palavra, a partir da direita                                                                              |
-| [Ctrl]+[Shift]+[seta para a esquerda]                            | Reduce the selection, word for word, from the right, or create and enlarge the selection, word by word, from the left                          |
-| [Ctrl]+[seta para a direita]                                     | Mover o ponto de inserção, palavra a palavra, da esquerda para a direita                                                                       |
-| [Ctrl]+[left arrow]                                              | Mover o ponto de inserção, palavra a palavra, da direita para a esquerda                                                                       |
-| [Alt]+[seta para baixo]                                          | Mover a(s) linha(s) onde se encontra o cursor para a parte inferior                                                                            |
-| [Alt]+[seta para cima]                                           | Mover a(s) linha(s) onde se encontra o cursor para o topo                                                                                      |
-| [Home]                                                           | Posicione o ponto de inserção no início da linha                                                                                               |
-| [End]                                                            | Colocar o ponto de inserção no fim da linha                                                                                                    |
-| [Ctrl]+[Home]                                                    | Colocar o ponto de inserção no início do método                                                                                                |
-| [Ctrl]+[End]                                                     | Colocar o ponto de inserção no final do método                                                                                                 |
-| [Shift]+[Home]                                                   | Select all the characters in the line that are to the left of the cursor                                                                       |
-| [Shift]+[End]                                                    | Select all the characters in the line that are to the right of the cursor                                                                      |
-| [PgUp]                                                           | Scroll the contents of the method, page by page, from the bottom to the top (doesn't modify the insertion point)                               |
-| [PgDn]                                                           | Scroll the contents of the method, page by page, from the top to the bottom (doesn't modify the insertion point)                               |
-| [**Introspecção**](#goto-definition)                             |                                                                                                                                                |
-| [Ctrl]+K ou [Alt]+clique duas vezes                              | Same as [**Goto definition**](#goto-definition) command                                                                                        |
-| \[Ctrl\] (Windows) or \[Alt\] (macOS)+hovering over a token  | Sublinhar o token (elemento linguístico identificado). Click on the underlined token = same as [**Goto definition**](#goto-definition) command |
-| [**Procurar e substituir**](#find-and-replace)                   |                                                                                                                                                |
-| [Ctrl]+F                                                         | Find                                                                                                                                           |
-| [Ctrl]+G                                                         | Encontrar o próximo                                                                                                                            |
-| [Ctrl]+[Shift]+G                                                 | Procurar Anterior                                                                                                                              |
-| [Ctrl]+E                                                         | Encontrar o mesmo próximo                                                                                                                      |
-| [Ctrl]+[Shift]+E                                                 | Encontrar o mesmo anterior                                                                                                                     |
-| [Ctrl]+[Alt]+F                                                   | Substituir                                                                                                                                     |
-| [Ctrl]+[Alt]+G                                                   | Substituir próximo                                                                                                                             |
-| [Ctrl]+[Alt]+[Shift]+G                                           | Reemplazar anterior                                                                                                                            |
-| [**Pranchetas**](#clipboards)                                    |                                                                                                                                                |
-| [Shift]+clique ou [Alt]+clique no ícone da área de transferência | Copiar texto selecionado para uma área de transferência                                                                                        |
-| [Ctrl]+[Shift]+tecla numérica                                    | Copiar texto selecionado numa área de transferência numérica                                                                                   |
-| [Ctrl]+clique no ícone da área de transferência                  | Colar o conteúdo de uma área de transferência na localização do cursor                                                                         |
-| [Ctrl]+chave numérica                                            | Colar o conteúdo da área de transferência numérica na localização do cursor                                                                    |
+| **Atalho**                                                       | **Ação**                                                                                                                                     |
+| ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Selecção e navegação**                                         |                                                                                                                                              |
+| Duplo clique                                                     | Selecionar o nome de um elemento da linguagem                                                                                                |
+| [Alt]+Clique duas vezes                                          | Selecionar um nome de elemento de língua contendo espaços (constante, método, etc.)                                                          |
+| [Shift]+[seta para a direita]                                    | Criar e ampliar a seleção, personagem por caractere, para a direita ou Reduzir a seleção, personagem por caracter a partir da esquerda       |
+| [Shift]+[seta para a esquerda]                                   | Reduzir a seleção, caractere por caractere, da direita ou Criar e ampliar a seleção, caractere por caractere, para a esquerda                |
+| [Shift]+[seta para baixo]                                        | Criar e ampliar uma seleção, linha por linha, da parte superior à parte inferior                                                             |
+| [Shift]+[seta para cima]                                         | Criar e ampliar uma seleção, linha por linha, de baixo para cima                                                                             |
+| [Ctrl]+[Shift]+[seta para a direita]                             | Criar e ampliar a seleção, palavra a palavra, a partir da direita                                                                            |
+| [Ctrl]+[Shift]+[seta para a esquerda]                            | Reduza a seleção, palavra por palavra, à direita, ou crie e amplie a seleção, palavra por palavra, à esquerda                                |
+| [Ctrl]+[seta para a direita]                                     | Mover o ponto de inserção, palavra a palavra, da esquerda para a direita                                                                     |
+| [Ctrl]+[left arrow]                                              | Mover o ponto de inserção, palavra a palavra, da direita para a esquerda                                                                     |
+| [Alt]+[seta para baixo]                                          | Mover a(s) linha(s) onde se encontra o cursor para a parte inferior                                                                          |
+| [Alt]+[seta para cima]                                           | Mover a(s) linha(s) onde se encontra o cursor para o topo                                                                                    |
+| [Home]                                                           | Posicione o ponto de inserção no início da linha                                                                                             |
+| [End]                                                            | Colocar o ponto de inserção no fim da linha                                                                                                  |
+| [Ctrl]+[Home]                                                    | Colocar o ponto de inserção no início do método                                                                                              |
+| [Ctrl]+[End]                                                     | Colocar o ponto de inserção no final do método                                                                                               |
+| [Shift]+[Home]                                                   | Selecione todos os caracteres da linha que estão à esquerda do cursor                                                                        |
+| [Shift]+[End]                                                    | Selecione todos os caracteres da linha que estão à direita do cursor                                                                         |
+| [PgUp]                                                           | Rolar o conteúdo do método, página por página, da parte inferior até a parte superior (não modificar o ponto de inserção)                    |
+| [PgDn]                                                           | Rolar o conteúdo do método, página por página, de cima para baixo (não modifica o ponto de inserção)                                         |
+| [**Introspecção**](#goto-definition)                             |                                                                                                                                              |
+| [Ctrl]+K ou [Alt]+clique duas vezes                              | Mesmo que o comando [**Goto definition**](#goto-definition)                                                                                  |
+| \[Ctrl\] (Windows) or \[Alt\] (macOS)+hovering over a token  | Sublinhar o token (elemento linguístico identificado). Clique no token sublinhado = igual ao comando [**Goto definition**](#goto-definition) |
+| [**Procurar e substituir**](#find-and-replace)                   |                                                                                                                                              |
+| [Ctrl]+F                                                         | Find                                                                                                                                         |
+| [Ctrl]+G                                                         | Encontrar o próximo                                                                                                                          |
+| [Ctrl]+[Shift]+G                                                 | Procurar Anterior                                                                                                                            |
+| [Ctrl]+E                                                         | Encontrar o mesmo próximo                                                                                                                    |
+| [Ctrl]+[Shift]+E                                                 | Encontrar o mesmo anterior                                                                                                                   |
+| [Ctrl]+[Alt]+F                                                   | Substituir                                                                                                                                   |
+| [Ctrl]+[Alt]+G                                                   | Substituir próximo                                                                                                                           |
+| [Ctrl]+[Alt]+[Shift]+G                                           | Reemplazar anterior                                                                                                                          |
+| [**Pranchetas**](#clipboards)                                    |                                                                                                                                              |
+| [Shift]+clique ou [Alt]+clique no ícone da área de transferência | Copiar texto selecionado para uma área de transferência                                                                                      |
+| [Ctrl]+[Shift]+tecla numérica                                    | Copiar texto selecionado numa área de transferência numérica                                                                                 |
+| [Ctrl]+clique no ícone da área de transferência                  | Colar o conteúdo de uma área de transferência na localização do cursor                                                                       |
+| [Ctrl]+chave numérica                                            | Colar o conteúdo da área de transferência numérica na localização do cursor                                                                  |
 
 :::tip
 
@@ -271,27 +271,27 @@ A maioria desses atalhos pode ser personalizada na caixa de diálogo [Preferenci
 
 ## Editar código
 
-4D uses standard text editing techniques for typing and editing in the Code Editor.
+O 4D utiliza técnicas padrão de edição de texto para digitar e editar no Editor de código.
 
-The Code Editor uses display conventions (style, color) for the syntax elements. You can [customize these conventions](#customizing-the-editing-area). As you type, when you validate your entry, 4D evaluates the text of the line and applies the appropriate display format. 4D also indents each line to its proper level in relation to the preceding line when you use programming structures (If, End if...).
+O Editor de código usa convenções de exibição (estilo, cor) para os elementos de sintaxe. Você pode [personalizar essas convenções](#customizing-the-editing-area). Conforme você digita, ao validar sua entrada, o 4D avalia o texto da linha e aplica o formato de exibição apropriado. 4D também recua cada linha para seu nível adequado em relação à linha anterior quando você usa estruturas de programação (If, End if...).
 
-Pode utilizar as teclas de setas para se deslocar rapidamente de uma linha para outra. Using the arrow keys to move across several lines is quicker than clicking because the editor delays evaluating the line for errors.
+Pode utilizar as teclas de setas para se deslocar rapidamente de uma linha para outra. Usar as teclas de seta para mover-se por várias linhas é mais rápido do que clicar, pois o editor atrasa a avaliação da linha em busca de erros.
 
-Under Windows, the code editor includes an Input Code Editor (IME) to facilitate code editing on Japanese or Chinese systems.
+No Windows, o editor de código inclui um Editor de Código de Entrada (IME) para facilitar a edição de código em sistemas japoneses ou chineses.
 
-The Code Editor includes numerous [navigation shortcuts](#shortcuts).
+O Editor de código inclui numerosos [atalhos de navegação](#shortcuts).
 
 #### Uso de la barra invertida
 
-The backslash character (`\`) has a specific support in the 4D language:
+O caractere de barra invertida (`\`) tem um suporte específico na linguagem 4D:
 
-- inserted at the end of lines, it allows to write a single statement on [several lines](../Concepts/quick-tour.md#code-on-several-lines).
-- it allows to define [escape sequences](../Concepts/quick-tour.md#escape-sequences).
+- inserido no final das linhas, permite escrever uma única declaração em [várias linhas](../Concepts/quick-tour.md#code-on-several-lines).
+- permite definir [sequências de escape](../Concepts/quick-tour.md#escape-sequences).
 
 
 :::caution
 
-The backslash character (`\`) is used as a separator in [pathnames under Windows](../Concepts/paths.md#windows). In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash `\` with a double backslash ``\\`. Por exemplo,``C:\MyDocuments`se tornará`C:\\MyDocuments`. No entanto, se escrever `"C:\MyDocuments\New"`, 4D will display`"C:\\MyDocuments\New"`. In this case, the second backslash is interpreted incorrectly as`\N`(an existing [escape sequence](../Concepts/quick-tour.md#escape-sequences)). You must therefore enter a double backslash`\\` when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
+O caractere de barra invertida`(`) é usado como separador em [nomes de caminho no Windows](../Concepts/paths.md#windows). In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash `\` with a double backslash ``\\`. Por exemplo,``C:\MyDocuments`se tornará`C:\\MyDocuments`. No entanto, se escrever `"C:\MyDocuments\New"`, 4D will display`"C:\\MyDocuments\New"`. In this case, the second backslash is interpreted incorrectly as`\N`(an existing [escape sequence](../Concepts/quick-tour.md#escape-sequences)). You must therefore enter a double backslash`\\` when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
 
 :::
 
@@ -299,27 +299,27 @@ The backslash character (`\`) is used as a separator in [pathnames under Windows
 
 ### Arrastar e largar
 
-From the Explorer, you can drag and drop tables, fields, forms, project methods, constants, or 4D commands. Quando você arrasta e solta um elemento, 4D sempre usa a sintaxe correta. For example, if you drag the field name First Name from the `[People]` table, it appears in the Code Editor as `[People]First Name`. Similarly, if you drag the Form name Input from the People table, it appears in the Code Editor as `[People];"Input"`.
+Do explorer, você pode arrastar e soltar tabelas, campos, formulários, métodos de projeto, constantes ou comandos 4D. Quando você arrasta e solta um elemento, 4D sempre usa a sintaxe correta. Por exemplo, se você arrastar o nome de campo First Name da tabela `[People]`, ele aparecerá no Editor editor de código como `[People]First Name`. Da mesma forma, se você arrastar o nome do formulário Input da tabela People, ele aparecerá no Code Editor como `[People]; "Input"`.
 
-When you insert a command by dragging it from the **Commands** page of the Explorer, it appears with its syntax (which consists of all of its parameters) in the Code Editor. This feature simply reminds you of the parameters that the command expects. Assim, você pode usar uma sintaxe mais adequada ao seu uso.
+Quando você insere um comando arrastando-o da página **Comandos** do Explorer, ele aparece com sua sintaxe (que consiste em todos os seus parâmetros) no Editor de código. Essa funcionalidade simplesmente lembra você dos parâmetros que o comando espera. Assim, você pode usar uma sintaxe mais adequada ao seu uso.
 
 
-In the Code Editor, the drag-and-drop mechanism is activated as soon as a portion of text is selected. You can also drag-and-drop within a method, class, function or between two different ones. By default, the drag-and-drop mechanism **moves** the selected text. In order to **copy** it, hold down the **Ctrl** key (Windows) or the **Option** key (macOS) during the operation.
+In the Code Editor, the drag-and-drop mechanism is activated as soon as a portion of text is selected. You can also drag-and-drop within a method, class, function or between two different ones. Por padrão, o mecanismo de arrastar e soltar **move** o texto selecionado. Para **copiá-lo**, mantenha pressionada a tecla **Ctrl** (Windows) ou a tecla **Option** (macOS) durante a operação.
 
 
 
 ### Alternância entre letras maiúsculas e minúsculas
 
-You can automatically modify the case of selected characters using the commands in **Methods** > **Case** or the context menu of the editor:
+Você pode modificar automaticamente o caso dos caracteres selecionados usando os comandos em **Métodos** > **Case** ou o menu de contexto do editor:
 
-- **Uppercase** / **Lowercase**: Switch the selected characters to uppercase or lowercase.
-- **camelCase** / **CamelCase** : Switch the selected characters to "camel case". This consists in changing each first letter of a group of attached words to uppercase. Este tipo de notação é frequentemente utilizado para as nomenclaturas de variáveis. hireDate e PurchaseDate são exemplos de duas variantes da notação camel case.
+- **Maiúsculas** / **Minúsculas**: muda os caracteres selecionados para maiúsculas ou minúsculas.
+- **camelCase** / **CamelCase**: muda os caracteres selecionados para "camel case". Isso consiste em alterar a primeira letra de cada palavra do grupo para maiúscula. Este tipo de notação é frequentemente utilizado para as nomenclaturas de variáveis. hireDate e PurchaseDate são exemplos de duas variantes da notação camel case.
 
-When you apply one of these commands to a text selection, the spaces and "_" characters are removed and the first letter of each word becomes uppercase.
+Quando você aplica um desses comandos a uma seleção de texto, os espaços e os caracteres "_" são removidos e a primeira letra de cada palavra se torna maiúscula.
 
 ### Trocar expressão
 
-The **Swap Expression** function can be used to reverse the arguments of an expression assigning a value. Por exemplo,
+A função **Swap Expression** pode ser usada para inverter os argumentos de uma expressão que atribui um valor. Por exemplo,
 
 `variable1:=variable2`
 
@@ -327,26 +327,26 @@ torna-se
 
 `variable2:=variable1`
 
-This function is extremely useful for reversing a set of assignments used to get or set properties, or to correct input errors. To use this function, select the line(s) to be modified, then choose **Method** > **Swap Expression** or use the context menu of the area. Within the selection, only the lines assigning a value will be modified.
+Essa função é extremamente útil para reverter um conjunto de atribuições usadas para obter ou definir propriedades ou para corrigir erros de entrada. Para usar essa função, selecione a(s) linha(s) a ser(em) modificada(s) e, em seguida, escolha **Method** > **Swap Expression** ou use o menu de contexto da área. Dentro da seleção, apenas as linhas que atribuem um valor serão modificadas.
 
 ### Pranchetas
 
-In addition to the standard copy-paste operation, 4D offers two additional functions that let you work with the contents of different clipboards:
+Além da operação padrão de copiar e colar, o 4D oferece duas funções adicionais que permitem trabalhar com o conteúdo de diferentes áreas de transferência:
 
-- The program stores the last 10 "copy" or "cut" actions that were performed in the Code Editor in memory during the current session. Each of the different contents saved in this way can be reused at any time. To do this, use the **Clipboard History** command of the Code Editor context menu or the "Last Clipboard values" button of the toolbar:
+- O programa armazena em memória as últimas 10 ações de "copiar" ou "recortar" que foram executadas no Editor de Código durante a sessão atual. Cada um dos diferentes conteúdos salvos desta forma pode ser reutilizado a qualquer momento. Para isso, use o comando **Clipboard History** do menu de contexto do Editor de código ou o botão "Last Clipboard values" da barra de ferramentas:
 
     ![](../assets/en/code-editor/last-clipboard-values-2.png)
 
     São apresentadas as primeiras palavras dos itens copiados ou cortados. Selecione um item para inseri-lo no local atual do cursor.
 
-- Nine additional numbered clipboards are available and can be employed directly using the buttons of the Code Editor toolbar or [using keyboard shortcuts](#shortcuts):
+- Nove áreas de transferência numeradas adicionais estão disponíveis e podem ser empregadas diretamente usando os botões da barra de ferramentas do Editor de Código ou [usando atalhos de teclado](#shortcuts):
 
 ![](../assets/en/code-editor/clipboards-2.png)
 
 
 ### Linhas em movimento
 
-You can move the line where the cursor is directly without selecting it first using the **Move Lines Up** and **Move Lines Down** commands in the **Method** menu. You can also do this using the **Alt/Option** + **Up Arrow** or **Down Arrow** [keyboard shorcut](#shortcuts).
+Você pode mover a linha onde o cursor está diretamente, sem selecioná-la primeiro, usando os comandos **Mover Linhas para Cima** e **Mover Linhas para Baixo** no menu **Método**. Você também pode fazer isso usando as teclas **Alt/Option** + **Seta para cima** ou **Seta para baixo** [atalho do teclado](#shortcuts).
 
 
 
@@ -356,7 +356,7 @@ You can move the line where the cursor is directly without selecting it first us
 
 O editor de código fornece funções de preenchimento automático. 4D exibe automaticamente sugestões baseadas nos primeiros caracteres digitados.
 
-In the example given below, typing the string "cop" causes the display of a blue triangle indicating that several suggestions are available:
+No exemplo abaixo, digitar a string "cop" faz com que seja exibido um triângulo azul indicando que há várias sugestões disponíveis:
 
 ![](../assets/en/code-editor/autocomplete-1.png)
 
@@ -366,21 +366,21 @@ When the characters you enter correspond to a single possibility, this suggested
 
 Autocompletion also works with code structures (e.g. If.. End if, For each... End for each): when you enter the first part of the structure, the Code Editor will automatically suggest the closing part:![](../assets/en/code-editor/autocomplete-code-structures.png)
 
-If there are several suggestions available, 4D displays them in a pop-up list when you hit the **Tab** key:
+Se houver várias sugestões disponíveis, 4D as exibe em uma lista pop-up quando você pressiona a tecla **Tab**:
 
 ![](../assets/en/code-editor/autocomplete-popup.png)
 
-A lista está por ordem alfabética. Choose the value by double-clicking it or scroll the list using the arrow keys of the keyboard and then hit **Enter**, **Carriage Return** or **Tab** to insert the selected value.
+A lista está por ordem alfabética. Escolha o valor clicando duas vezes nele ou role a lista usando as teclas de seta do teclado e, em seguida, pressione **Enter**, **Carriage Return** ou **Tab** para inserir o valor selecionado.
 
-By default, you can also insert a suggested value by hitting one of the following delimiter `( ; : = < [ {` keys after selecting a value: the value inserted is then followed by the delimiter, ready for data entry.
+Por padrão, você também pode inserir um valor sugerido pressionando uma das seguintes teclas delimitadoras `( ; : = < [ {` após selecionar um valor: o valor inserido é seguido pelo delimitador, pronto para a entrada de dados.
 
 ![](../assets/en/code-editor/autocomplete-delimiter.png)  +  **(** key --> ![](../assets/en/code-editor/autocomplete-delimiter-2.png)
 
-> You can disable the use of delimiters for inserting suggested values in **Preferences** > **Methods** > **Options**.
+> Você pode desativar o uso de delimitadores para inserir valores sugeridos em **Preferências** > **Métodos** > **Opções**.
 
-You can press the **Esc** key to close the pop-up list or you can continue typing while it is open. The values suggested in the pop-up list are updated as additional characters are typed.
+Você pode pressionar a tecla **Esc** para fechar a lista pop-up ou pode continuar digitando enquanto ela estiver aberta. Os valores sugeridos na lista pop-up são atualizados como caracteres adicionais são digitados.
 
-If the characters typed correspond to different types of objects, the list displays them in their current style. Podem ser visualizados os seguintes tipos de objetos:
+Se os caracteres digitados correspondem a diferentes tipos de objetos, a lista os exibe em seu estilo atual. Podem ser visualizados os seguintes tipos de objetos:
 
 - Comandos 4D
 - Comandos SQL
@@ -395,11 +395,11 @@ If the characters typed correspond to different types of objects, the list displ
 - Palavras-chave SQL
 - Macros (apresentadas entre < >)
 
-> For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. These options are found in **Preferences** > **Methods** > **Options**
+> For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. Essas opções podem ser encontradas em **Preferências** > **Métodos** > **Opções**
 
 #### Nomes de propriedade de objeto
 
-4D automatically displays case-sensitive suggestions of all valid object property names in 4D code when you:
+O 4D exibe automaticamente sugestões sensíveis a maiúsculas e minúsculas de todos os nomes de propriedades de objetos válidos no código 4D quando você:
 
 - digite um ponto "." depois de um objeto ou
 - utilizar a tecla Tab após um ponteiro objeto desreferenciado "->".
@@ -408,62 +408,62 @@ If the characters typed correspond to different types of objects, the list displ
 
 > A propriedade `length` é sempre incluída para uso com coleções.
 
-Once created, property names are stored in an internal global list and are available anytime a method/class/function is opened, closed or changes focus.
+Uma vez criados, os nomes das propriedades são armazenados em uma lista global interna e ficam disponíveis sempre que um método/classe/função é aberto, fechado ou muda de foco.
 
 ![](../assets/en/code-editor/autocomplete-object-attributes-2.png)
 
-A lista de sugestões é atualizada dinamicamente enquanto você edita o código. When switching between windows, new/edited property names are always added to the global list. The list is also updated when you preview a method, class or function in the Explorer.
+A lista de sugestões é atualizada dinamicamente enquanto você edita o código. Ao alternar entre janelas, os nomes de propriedades novos/editados são sempre adicionados à lista global. A lista também é atualizada quando você visualiza um método, uma classe ou uma função no Explorer.
 
 Quando o banco de dados é reiniciado, a lista é reinicializada.
 
-> You can disable the automatic display of object properties in **Preferences** > **Methods** > **suggestions**.
+> Você pode desativar a exibição automática das propriedades do objeto em **Preferências** > **Métodos** > **sugestões**.
 
 
 ## Procurar e substituir
 
 
-The Code editor has powerful **find and replace** features that apply to the current window.
+O editor de código possui poderosas funcionalidades de **buscar e substituir** que se aplicam à janela atual.
 
-A search and replace area can be displayed in the toolbar of any method window:
+Uma área de busca e substituição pode ser exibida na barra de ferramentas de qualquer janela de método:
 
 ![search-area](../assets/en/code-editor/search-area.png)
 
-To display this area, click on the **Find in method** icon of the [toolbar](#toolbar) or select a find or replace function either through a [**shortcut**](#shortcuts) or a command from the **Edit > Find** submenu. You can close this area at any moment by clicking on the **x** button at the rightmost side of the toolbar.
+Para exibir essa área, clique no ícone **Localizar no método** da [barra de ferramentas](#toolbar) ou selecione uma função de localização ou substituição por meio de um [**atalho**](#shortcuts) ou um comando no submenu **Editar > Localizar**. Você pode fechar essa área a qualquer momento clicando no botão **x** no lado direito da barra de ferramentas.
 
 :::tip
 
-The **Find in Design** feature in the 4D toolbar or in the **Edit** menu is not specific to the Code editor but may be used to search for a value among all the methods and classes.
+A funcionalidade **Localizar no Design** na barra de ferramentas do 4D ou no menu **Editar** não é específica do editor de código, mas pode ser usada para pesquisar um valor entre todos os métodos e classes.
 
 :::
 
 
 ### Find
 
-Select **Find > Find...** in the **Edit** menu or type **Ctrl+F** (Windows)/**Cmd+F** (macOS) to display/enable the *Search* area.
+Selecione **Localizar > Localizar...** no menu **Editar** ou digite **Ctrl+F** (Windows)/**Cmd+F** (macOS) para exibir/ativar a área de *Pesquisa*.
 
-The search defined in this area will be performed in the code located in the window.
+A pesquisa definida nessa área será executada no código localizado na janela.
 
-The **find** entry area enables you to enter the string to be searched for. This area is a combo box that stores the last 10 strings that have been searched for or replaced during the session. If you highlight text before choosing the **Find...** command, it will appear in this area. Pode então utilizar este texto ou substituí-lo por outro.
+A área de entrada **find** permite que você insira a string a ser pesquisada. Esta área é uma caixa de combinação que armazena as últimas 10 sequências de caracteres que foram pesquisadas ou substituídas durante a sessão. Se você destacar o texto antes de escolher o comando **Localizar...**, ele aparecerá nessa área. Pode então utilizar este texto ou substituí-lo por outro.
 
-Once a string is entered or selected, all occurrences found in the opened window are highlighted and the right side of the area displays the total number of hits found. Também indica a posição atual do cursor entre todos os resultados.
+Depois que uma cadeia é inserida ou selecionada, todas as ocorrências encontradas na janela aberta são destacadas e o lado direito da área exibe o número total de ocorrências encontradas. Também indica a posição atual do cursor entre todos os resultados.
 
-Hit the **Enter** key to select closest occurrence to the cursor. Também pode clicar nos botões **Próximo / Anterior** ![find-next-previous](../assets/en/code-editor/find-next.png) para selecionar todas as ocorrências sequencialmente no início ou no fim do método atual, a partir da localização inicial do cursor, ou utilizar os comandos **Procurar seguinte** e **Procurar anterior** do menu [**Editar**](#shortcuts).
+Pressione a tecla **Enter** para selecionar a ocorrência mais próxima ao cursor. Também pode clicar nos botões **Próximo / Anterior** ![find-next-previous](../assets/en/code-editor/find-next.png) para selecionar todas as ocorrências sequencialmente no início ou no fim do método atual, a partir da localização inicial do cursor, ou utilizar os comandos **Procurar seguinte** e **Procurar anterior** do menu [**Editar**](#shortcuts).
 
 
 #### Opções
 
-- **Sensível a maiúsculas e minúsculas** ![case-sensitive](../assets/en/code-editor/case-sensitive.png): tem em conta as maiúsculas e minúsculas dos caracteres tal como foram introduzidos na área de pesquisa. Essa opção também considera os caracteres diacríticos. For instance, a search for "MyVar" will not find "myVar"; a search for "dej" will not find "déjà".
-- **Palavra inteira** ![full-word](../assets/en/code-editor/full-word.png): limita a pesquisa a ocorrências exatas da palavra pesquisada. When this option is checked, for instance, a search for "client" will not find either "clients" or "myclient." When this option is checked, for instance, a search for "client" will not find either "clients" or "myclient."
+- **Sensível a maiúsculas e minúsculas** ![case-sensitive](../assets/en/code-editor/case-sensitive.png): tem em conta as maiúsculas e minúsculas dos caracteres tal como foram introduzidos na área de pesquisa. Essa opção também considera os caracteres diacríticos. Por exemplo, uma busca por "MyVar" não encontrará "myVar"; uma busca por "dej" não encontrará "déjà".
+- **Palavra inteira** ![full-word](../assets/en/code-editor/full-word.png): limita a pesquisa a ocorrências exatas da palavra pesquisada. Quando esta opção for marcada, por exemplo, uma busca por "cliente" não irá encontrar nem "clientes" nem "meucliente." Por padrão, essa opção não está marcada; portanto, uma pesquisa por "var" encontrará "Myvar", "variation" etc.
 
 
 
 ### Substituir
 
-Click on the **v** toggle button on the left side of the *Search* area to display/hide the *Replace* area. You can also select **Find > Replace...** in the **Edit** menu or type **Ctrl+Alt+F** (Windows)/**Cmd+Alt+F** (macOS) .
+Clique no botão de alternância **v** no lado esquerdo da área *Pesquisa* para mostrar/ocultar a área *Substituir*. Você também pode selecionar **Find > Replace...** no menu **Edit** ou digitar **Ctrl+Alt+F** (Windows)**/Cmd+Alt+F** (macOS).
 
-The *Replace* entry area is used to define the character string that will replace the one defined above.
+A área de entrada *Replace* é usada para definir a cadeia de caracteres que substituirá a definida acima.
 
-Click the **Replace** button to launch the search with all defined options and replace the first occurrence found. 4D begins searching from the current text insertion point and continues to the end of the method. It is then possible to continue finding/replacing using the **Replace Next** and **Replace Previous** commands of the [**Edit** menu](#shortcuts).
+Clique no botão **Substituir** para iniciar a pesquisa com todas as opções definidas e substituir a primeira ocorrência encontrada. 4D begins searching from the current text insertion point and continues to the end of the method. It is then possible to continue finding/replacing using the **Replace Next** and **Replace Previous** commands of the [**Edit** menu](#shortcuts).
 
 Click the **Replace all** button to replace all the occurrences corresponding to the search criteria directly in the open method.
 
