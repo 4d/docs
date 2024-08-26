@@ -85,7 +85,7 @@ La página también tiene cinco botones de control que actúan sobre el proceso 
 
 - **Abortar proceso**: permite abortar el proceso o los procesos seleccionados. Al presionar este botón, aparece una caja de diálogo de alerta para que pueda confirmar o cancelar la operación.
 
-> You can also abort the selected process(es) directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button, or by using the [`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/en/page1634.html) command.
+> También puede abortar directamente el proceso o procesos seleccionados sin que aparezca la caja de diálogo de confirmación, manteniendo pulsada la tecla **Alt** mientras hace clic en este botón, o utilizando el comando [`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/en/page1634.html).
 
 - **Pausar proceso**: permite pausar los procesos seleccionados.
 - **Activar proceso**: permite reactivar los procesos seleccionados. Los procesos deben haberse pausado previamente (utilizando el botón anterior o por programación); de lo contrario, este botón no tiene ningún efecto.

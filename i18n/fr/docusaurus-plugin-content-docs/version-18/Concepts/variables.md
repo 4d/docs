@@ -122,7 +122,7 @@ Pour plus d'informations, reportez-vous à la section **Process** et à la descr
 
 Les variables interprocess sont visibles dans toute la base et sont disponibles pour tous les process. Les variables interprocess sont principalement utilisées pour le partage d’informations entre les process.
 
-> L'utilisation de variables interprocess n'est pas recommandée car elles ne sont pas disponibles depuis le process préemptif et peuvent rendre le code moins maintenable.
+> L'utilisation de variables interprocess est désormais déconseillée car elles ne sont pas disponibles depuis les process préemptifs et ont tendance à rendre le code moins maintenable.
 
 The name of an interprocess variable always begins with the symbols (`<>`) — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
 

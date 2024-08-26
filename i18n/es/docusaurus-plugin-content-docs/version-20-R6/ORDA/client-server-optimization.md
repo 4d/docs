@@ -124,7 +124,7 @@ Si desea entregar aplicaciones finales con el máximo nivel de optimización, pu
 
 1. Diseñe sus algoritmos.
 2. Ejecute su aplicación y deje que el mecanismo de aprendizaje automático complete los contextos de optimización.
-3. Call the [`dataStore.getRemoteContextInfo()`](../API/DataStoreClass.md#getremotecontextinfo) or [`dataStore.getAllRemoteContexts()`](../API/DataStoreClass.md#getallremotecontexts) function to collect  contexts. You can use the [`entitySelection.getRemoteContextAttributes()`](../API/EntitySelectionClass.md#getremotecontextattributes) and [`entity.getRemoteContextAttributes()`](../API/EntityClass.md#getremotecontextattributes) functions to analyse how your algorithms use attributes.
+3. Call the [`dataStore.getRemoteContextInfo()`](../API/DataStoreClass.md#getremotecontextinfo) or [`dataStore.getAllRemoteContexts()`](../API/DataStoreClass.md#getallremotecontexts) function to collect  contexts. Puede utilizar las funciones [`entitySelection.getRemoteContextAttributes()`](../API/EntitySelectionClass.md#getremotecontextattributes) y [`entity.getRemoteContextAttributes()`](../API/EntityClass.md#getremotecontextattributes) para analizar cómo utilizan los atributos sus algoritmos.
 4. En el último paso, llama a la función [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) para construir contextos al inicio de la aplicación y [utilizarlos](#reutilizando-la-propiedad-context) en sus algoritmos.
 
 ## Caché ORDA

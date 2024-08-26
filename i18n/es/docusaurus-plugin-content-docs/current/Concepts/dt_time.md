@@ -62,10 +62,10 @@ Para obtener una expresión de tipo hora a partir de una expresión que combina 
 Puede combinar expresiones de los tipos hora y número utilizando las funciones `Time` o `Current time`:
 
 ```4d
-	//The following line assigns to $vlSeconds the number of seconds   
-	//that will be elapsed between midnight and one hour from now
+//La siguiente línea asigna a $vlSeconds el número de segundos   
+	//que transcurrirán entre la medianoche y una hora a partir de ahora
 $vlSeconds:=Current time+3600
-	//The following line assigns to $vHSoon the time it will be in one hour
+	//La siguiente línea asigna a $vHSoon la hora que será dentro de una hora
 $vhSoon:=Time(Current time+3600)
 ```
 

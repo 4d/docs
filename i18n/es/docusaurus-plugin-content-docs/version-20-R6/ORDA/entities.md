@@ -55,9 +55,9 @@ Ahora, si se ejecuta:
  $e1:=ds.Employee.get(1)
  $e2:=ds.Employee.get(1)
  $e1.name:="Hammer"
-  //variable $e1 contains a reference to an entity
-  //variable $e2 contains another reference to another entity
-  //$e2.name contains "smith"
+  //variable $e1 contiene una referencia a una entidad
+  //variable $e2 contiene otra referencia a otra entidad
+  //$e2.name contiene "smith"
  If($e1=$e2) //False
 ```
 
