@@ -70,22 +70,22 @@ var $myVar // バリアント型変数
 
 サポートされている `varType` 値の一覧です:
 
-| varType                | 内容                                      |
-| ---------------------- | --------------------------------------- |
-| `Text`                 | テキスト値                                   |
-| `日付`                   | 日付値                                     |
-| `時間`                   | 時間値                                     |
-| `Boolean`              | ブール値                                    |
-| `Integer`              | 倍長整数値                                   |
-| `Real`                 | 実数値                                     |
-| `ポインター`                | ポインター値                                  |
-| `Picture`              | ピクチャー値                                  |
-| `Blob`                 | BLOB value                              |
-| `Collection`           | コレクション値                                 |
-| `Variant`              | バリアント値                                  |
-| `Object`               | Object with default class (`4D.Object`) |
-| `4D.<className>` | 4Dクラス名のオブジェクト                           |
-| `cs.<className>` | ユーザークラス名のオブジェクト                         |
+| varType                | 内容                             |
+| ---------------------- | ------------------------------ |
+| `Text`                 | テキスト値                          |
+| `日付`                   | 日付値                            |
+| `時間`                   | 時間値                            |
+| `Boolean`              | ブール値                           |
+| `Integer`              | 倍長整数値                          |
+| `Real`                 | 実数値                            |
+| `ポインター`                | ポインター値                         |
+| `Picture`              | ピクチャー値                         |
+| `Blob`                 | BLOB値                          |
+| `Collection`           | コレクション値                        |
+| `Variant`              | バリアント値                         |
+| `Object`               | デフォルトクラス (`4D.Object`) のオブジェクト |
+| `4D.<className>` | 4Dクラス名のオブジェクト                  |
+| `cs.<className>` | ユーザークラス名のオブジェクト                |
 
 #### 例題
 
@@ -219,9 +219,9 @@ atNames{1}:="Richard"
 
 ### インタープロセス変数
 
-:::warning Deprecated
+:::warning 非推奨
 
-Use of interprocess variables is not recommended since they are not available from [preemptive processes](../Develop/preemptive.md) and tend to make the code less maintainable.
+[プリエンプティブプロセス](../Develop/preemptive.md) においては使用できないことと、コードの保守管理を煩雑にすることから、インタープロセス変数の使用は推奨されません。
 
 :::
 
@@ -232,7 +232,7 @@ Use of interprocess variables is not recommended since they are not available fr
 クライアント/サーバーでは、各マシン (クライアントマシンとサーバーマシン) で同じインタープロセス変数定義を共有しますが、マシンごとに各変数のインスタンスが存在します。
 
 
-## System Variables
+## システム変数
 
 The 4D language manages several **system variables**, which allow you to control the execution of different operations. You can test their values and use them as any variable. All system variables are [process variables](#process-variables).
 
