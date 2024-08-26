@@ -3218,7 +3218,7 @@ With the following ***Flatten*** method:
 |---------|--- |:---:|------|
 |index |Integer|->|Element at which to start removal|
 |howMany |Integer|->|Number of elements to remove, or 1 element if omitted|
-|Result|Collection|<-|Original collection without removed element(s)|
+|Result|Collection|<-|Modified collection without removed element(s)|
 <!-- END REF -->
 
 
