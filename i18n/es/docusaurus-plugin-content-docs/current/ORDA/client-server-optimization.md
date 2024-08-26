@@ -35,7 +35,7 @@ El contexto de optimización se basa en las siguientes implementaciones:
   - [`entitySelection.slice()`](../API/EntitySelectionClass.md#slice)
   - [`entitySelection.drop()`](../API/EntitySelectionClass.md#drop)
 
-- An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Reusing the context property](#reusing-the-context-property) below).
+- Un contexto de optimización existente puede pasarse como propiedad a otra selección de entidad de la misma dataclass, evitando así la fase de aprendizaje y acelerar la aplicación (ver abajo [Reutilización de la propiedad context](#reusing-the-context-property)).
 
 - Puede crear contextos de optimización manualmente mediante la función [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) (consulte [Preconfiguración de contextos](#preconfiguring-contexts)).
 
