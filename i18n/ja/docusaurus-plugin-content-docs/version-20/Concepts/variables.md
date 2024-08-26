@@ -218,9 +218,9 @@ atNames{1}:="Richard"
 
 ### インタープロセス変数
 
-:::warning Deprecated
+:::warning 非推奨
 
-Use of interprocess variables is not recommended since they are not available from [preemptive processes](../Develop/preemptive.md) and tend to make the code less maintainable.
+[プリエンプティブプロセス](../Develop/preemptive.md) においては使用できないことと、コードの保守管理を煩雑にすることから、インタープロセス変数の使用は推奨されません。
 
 :::
 
@@ -231,7 +231,7 @@ Use of interprocess variables is not recommended since they are not available fr
 クライアント/サーバーでは、各マシン (クライアントマシンとサーバーマシン) で同じインタープロセス変数定義を共有しますが、マシンごとに各変数のインスタンスが存在します。
 
 
-## System Variables
+## システム変数
 
 The 4D language manages several **system variables**, which allow you to control the execution of different operations. You can test their values and use them as any variable. All system variables are [process variables](#process-variables).
 
