@@ -66,7 +66,7 @@ ON ERR CALL("") // エラーの検知を中止します
 
 :::info
 
-4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs. :::
+4D は、いくつかの [**システム変数**](variables.md#システム変数) と呼ばれる専用の変数を自動的に管理しています。 :::
 
 - `GET LAST ERROR STACK` コマンドは、4Dアプリケーションの現在のエラースタックに関する情報を返します。
 - `Get call chain` コマンドは、カレントプロセス内における、メソッド呼び出しチェーンの各ステップを詳細に説明するオブジェクトのコレクションを返します。
