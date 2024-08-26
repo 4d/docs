@@ -15,10 +15,10 @@ You can use Qodly Studio directly from your **4D environment** to build modern a
 
 Qodly Studio can also be used in the [**Qodly Cloud platform**](https://qodly.com), dedicated to the development of web business applications.
 
-With Qodly Studio, you will discover a totally new web UI, get familiar with the concept of Qodly Sources, and learn how to:
+Qodly Studio proposes a dedicated web UI, in which you can:
 
 - create Qodly pages by placing components on a canvas
-- map components to data
+- map components to Qodly Sources
 - trigger 4D code by configuring events
 - and much more.
 
@@ -59,7 +59,7 @@ Qodly Studio is served by the [WebAdmin web server](../Admin/webAdmin.md) and di
 
 To enable access to Qodly Studio, you must explicitly allow it at two levels:
 
-* at 4D level (4D or 4D Server)
+* at 4D application level
 * at project level
 
 
@@ -97,6 +97,7 @@ In accordance with the management of 4D projects, only the following usages are 
 
 - development with Qodly Studio must be done using **4D** (single-user).
 - deployment of 4D applications powered with Qodly forms must be done using **4D Server**.
+- debugging in Qodly Studio can be done using **4D** or (provided the debugger is attached to Qodly Studio) **4D Server**
 
 
 
@@ -108,7 +109,7 @@ The Qodly Studio page is available when the [WebAdmin web server is running](../
 
 There are two ways to access Qodly Studio:
 
-* from your 4D single-user application, go to **Design** > **Qodly Studio...** or, from your 4D Server application, go to **Window** > **Qodly Studio...** 
+* from your 4D single-user application, go to **Design** > **Qodly Studio...** or, from your 4D Server application, go to **Window** > **Qodly Studio...**
 If the WebAdmin web server is already running, depending on its configuration, your default browser opens at `IPaddress:HTTPPort/studio` or `IPaddress:HTTPSPort/studio`. Otherwise, you will be prompted if you want to start the WebAdmin web server first.
 
 * on a browser, with the WebAdmin web server running (launched from 4D or 4D Server), enter the following address:
@@ -130,9 +131,9 @@ You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-
 
 ### Documentation
 
-The official Qodly Studio documentation is available on the [Qodly documentation website](https://developer.qodly.com/docs/studio/overview).
+The Qodly Studio documentation is available on the [Qodly documentation website](https://developer.qodly.com/docs/studio/overview).
 
-You can rely on this documentation and its associated resources for developing web applications powered by Qodly forms. However, depending on implementation stage, 4D developers will either use Qodly Studio or 4D IDE (see [Feature comparison](#feature-comparison)).
+You can rely on this documentation and its associated resources for developing web applications powered by Qodly pages. However, depending on implementation stage, 4D developers will either use Qodly Studio or 4D IDE (see [Feature comparison](#feature-comparison)).
 
 Code examples are provided in [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript), but since QodlyScript inherits from the 4D Language, you won't be lost. For more information, see the [From QodlyScript to 4D Language](from-qodlyscript-to-4d.md) page.
 
@@ -144,18 +145,18 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 
 ### Feature comparison
 
-||Qodly Studio for 4D developers using 4D IDE|Qodly Studio for Qodly developers|
-|---|---|---|
+||Qodly Studio for 4D developers (single-user or remote)|Qodly Studio for Qodly Cloud developers|
+|---|---|---|---|
 |View and edit tables (dataclasses), attributes and relations|4D Structure Editor(1)|Qodly Studio Model Editor|
 |Qodly pages|Qodly Studio Page Editor|Qodly Studio Page Editor|
 |Desktop forms|4D IDE|*not supported*|
 |Programming language|4D Language featuring ORDA|[QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) featuring ORDA|
-|Coding IDE|4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2)|Qodly Studio code editor|
-|Debugger|4D IDE debugger|Qodly Studio debugger|
+|Coding IDE|<li>4D IDE code editor</li><li>VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)</li><li>Qodly Studio code editor(2)</li>|Qodly Studio code editor|
+|Debugger|<li>4D single-user: 4D IDE debugger</li><li>4D remote with 4D Server: 4D IDE debugger or Qodly Studio debugger|Qodly Studio debugger|
 |REST/Web roles and privileges|roles.json direct edit/Qodly Studio roles and privileges editor|Qodly Studio role and privileges editor|
 
-(1) If you click on the **Model** button in Qodly Studio, nothing happens.
-(2) When you open some 4D code in Qodly Studio, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
+(1) If you click on the **Model** button in Qodly Studio, nothing happens.<br/>
+(2) When you open some 4D code in Qodly Studio with 4D single-user, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
 
 
 
