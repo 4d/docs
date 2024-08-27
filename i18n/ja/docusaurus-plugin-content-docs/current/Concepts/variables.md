@@ -124,10 +124,10 @@ var $d : cs.Customer:=cs.Customer.new()
 変数は、データ型を明示的に指定せずに宣言および初期化することもできます。その場合、変数の型は 4D によって推論されます。 次に例を示します:
 
 ```4d
-var $text:="hello"  // Inferred as Text
-var $number:=20  // Inferred as Real
-var $obj:={}  // Inferred as an Object
-var $mycol:=[]  // Inferred as a Collection  
+var $text:="hello"  // テキストと推論されます
+var $number:=20  // 実数と推論されます
+var $obj:={}  // オブジェクトと推論されます
+var $mycol:=[]  // コレクションと推論されます
 
 ```
 
