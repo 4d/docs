@@ -41,7 +41,7 @@ Cree otro conjunto de entidades basado en conjuntos de entidades creados anterio
 
 ### Descripción
 
-Después de crear un conjunto de entidades (conjunto de entidades nº 1) con `$method=entityset`, puede crear otro conjunto de entidades con `$entityset/\{entitySetID\}?$logicOperator... &$otherCollection` syntax, the `$logicOperator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. Los dos conjuntos de entidades deben estar en la misma clase de datos.
+Después de crear un conjunto de entidades (conjunto de entidades nº 1) con `$method=entityset`, puede crear otro conjunto de entidades con `$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`, la propiedad$logicOperator`(cuyos valores se muestran a continuación), y otro entity set (entity set #2) definido por la propiedad`$otherCollection\`. Los dos conjuntos de entidades deben estar en la misma clase de datos.
 
 A continuación, puede crear otro conjunto de entidades que contenga los resultados de esta llamada utilizando el `$method=entityset` al final de la petición REST.
 
