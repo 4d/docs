@@ -3,7 +3,7 @@ id: getting-started
 title: Comencemos
 ---
 
-4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [commands](commands.md). Le permite integrar las funcionalidades avanzadas de hoja de cálculo en sus proyectos.
+4D View Pro es un [componente 4D](Concepts/components.md) que incluye un [área de formulario 4D](FormObjects/viewProArea_overview.md) y [comandos](commands.md) específicos. Le permite integrar las funcionalidades avanzadas de hoja de cálculo en sus proyectos.
 
 ![](../assets/en/ViewPro/vpSpreadsheet.png)
 
@@ -99,7 +99,7 @@ Un área 4D View Pro maneja varios objetos y elementos.
 
 ![](../assets/en/ViewPro/vpDocument.PNG)
 
-Most of 4D View Pro commands require a *vpAreaName* parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). Este nombre es la propiedad del [nombre del objeto](FormObjects/properties_Object.md#object-name).
+La mayoría de los comandos de 4D View Pro requieren un parámetro *vpAreaName*, que es el [**nombre del área de formulario 4D View Pro**](FormObjects/viewProArea_overview.md) (objeto de formulario 4D). Este nombre es la propiedad del [nombre del objeto](FormObjects/properties_Object.md#object-name).
 
 Por ejemplo, si quiere definir el número total de columnas de un área llamada "myVpArea", escriba:
 
