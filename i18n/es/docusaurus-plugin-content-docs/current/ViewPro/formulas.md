@@ -215,7 +215,7 @@ Tenga en cuenta que los ( ) son obligatorios, incluso si no se pasan parámetros
 
 Puede declarar el nombre, tipo y número de parámetros a través de la colección _parameters_ de la función que declaró utilizando el comando [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md). Opcionalmente, puede controlar el número de parámetros pasados por el usuario a través de las propiedades _minParams_ y _maxParams_.
 
-For more information on supported incoming parameter types, please refer to the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions) command description.
+Para más información sobre los tipos de parámetros entrantes soportados, por favor consulte la descripción del comando [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions).
 
 Si no se declaran parámetros, los valores se pueden pasar secuencialmente a los métodos (se recibirán en $1, $2...) y su tipo se convertirá automáticamente.
 
