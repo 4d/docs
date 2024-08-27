@@ -91,13 +91,18 @@ Keep in mind that [user settings](../settings/overview.md) can be defined at sev
 Authentication on the WebAdmin web server is granted using an access key. For more details, see [Access key](../Admin/webAdmin.md#access-key).
 
 
-### Project management
+### Development and deployment
 
 In accordance with the management of 4D projects, only the following usages are supported:
 
 - development with Qodly Studio must be done using **4D** (single-user).
 - deployment of 4D applications powered with Qodly pages must be done using **4D Server**.
 
+:::warning
+
+You can open Qodly Studio, debug and edit Qodly pages directly on a 4D Server machine (see below). This feature is only provided for testing and debugging purposes, for example to evaluate the application flow with actual data or in multi-user environment. It must NOT be considered as a regular way to develop applications since it does not provide any access control over concurrent accesses.
+
+:::
 
 
 
@@ -107,22 +112,22 @@ The Qodly Studio page is available when the [WebAdmin web server is running](../
 
 There are two ways to access Qodly Studio:
 
-* from your 4D single-user application, go to **Design** > **Qodly Studio...** or, from your 4D Server application, go to **Window** > **Qodly Studio...**
+* by selecting the **Qodly Studio...** menu command from the **Design** menu (4D single-user) or the **Window** menu (4D Server).
 If the WebAdmin web server is already running, depending on its configuration, your default browser opens at `IPaddress:HTTPPort/studio` or `IPaddress:HTTPSPort/studio`. Otherwise, you will be prompted if you want to start the WebAdmin web server first.
 
-* on a browser, with the WebAdmin web server running (launched from 4D or 4D Server), enter the following address:
+* on a browser, with the WebAdmin web server running (launched from 4D or 4D Server), enter the following address:<br/>
+	`IPaddress:HTTPPort/studio`
 
-`IPaddress:HTTPPort/studio`
+	or:
 
-or:
+	`IPaddress:HTTPSPort/studio`
 
-`IPaddress:HTTPSPort/studio`
+	For example, after launching a local web server on port 7080, type this address in your browser:
 
-For example, after launching a local web server on port 7080, type this address in your browser:
+	`localhost:7080/studio`
 
-`localhost:7080/studio`
+	You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-key) to access Qodly Studio.
 
-You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-key) to access Qodly Studio.
 
 
 ## Using Qodly Studio
@@ -143,19 +148,18 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 
 ### Feature comparison
 
-||Qodly Studio in 4D (single-user or client/server)|Qodly Studio in Qodly Cloud platform|
+||Qodly Studio with 4D|Qodly Studio in Qodly Cloud platform|
 |---|---|---|
 |View and edit tables (dataclasses), attributes and relations|4D Structure Editor(1)|Qodly Studio Model Editor|
 |Qodly pages|Qodly Studio Page Editor|Qodly Studio Page Editor|
 |Desktop forms|4D IDE|*not supported*|
 |Programming language|4D Language featuring ORDA|[QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) featuring ORDA|
 |Coding IDE|4D IDE code editor *or* VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode) (*see also note (2)*)|Qodly Studio code editor|
-|Debugger|<li>single-user: 4D IDE debugger</li><li>client/server: 4D IDE debugger *or* Qodly Studio debugger|Qodly Studio debugger|
+|Debugger|4D IDE debugger (Qodly Studio debugger can be attached to 4D Server)|Qodly Studio debugger|
 |REST/Web roles and privileges|roles.json direct edit/Qodly Studio roles and privileges editor|Qodly Studio role and privileges editor|
 
 (1) If you click on the **Model** button in Qodly Studio, nothing happens.<br/>
-(2) For testing and debugging purposes, in client/server you can open some 4D code in Qodly Studio. With 4D single-user, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
-
+(2) On 4D Server, opening 4D code with the Qodly Studio code editor is supported for testing and debugging purposes (in 4D single-user, if you try to open 4D code with the Qodly Studio code editor, syntax coloring is not available and a "Lsp not loaded" warning is displayed).
 
 
 ### Language
@@ -184,13 +188,13 @@ You can develop with Qodly Studio while your computer is not connected to the in
 - UI tips: they are not displayed when you click on ![alt-text](../assets/en/WebServer/tips.png) icons.
 
 
-### Debugging in client/server
+### Debugging on 4D Server
 
-When using Qodly Studio in a 4D client/server configuration, you can attach the [Qodly Studio debugger](https://developer.qodly.com/docs/studio/debugging) to the 4D Server and then, benefit from the Qodly Studio debugger features when executing your Qodly pages.
+When using Qodly Studio in a deployed 4D Server application, you can attach the [Qodly Studio debugger](https://developer.qodly.com/docs/studio/debugging) to the 4D Server and then, benefit from the Qodly Studio debugger features when executing your Qodly pages.
 
 To attach the Qodly Studio debugger to your running 4D Server application:
 
-1. [Open Qodly Studio](#opening-qodly-studio) from 4D Server or a remote 4D.
+1. [Open Qodly Studio](#opening-qodly-studio) from 4D Server.
 2. Click on the **Debug** button located in the Studio toolbar.
 ![qodly-debug](../assets/en/WebServer/qodly-debug.png)
 
