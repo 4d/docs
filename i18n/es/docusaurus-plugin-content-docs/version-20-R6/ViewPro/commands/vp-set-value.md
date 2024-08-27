@@ -18,7 +18,7 @@ title: VP SET VALUE
 
 El comando `VP SET VALUE` <!-- REF #_method_.VP SET VALUE.Summary -->asigna un valor especificado a un rango de celdas designado<!-- END REF -->.
 
-The command allows you to use a generic code to set and format the types of values in *rangeObj*, whereas other commands, such as [`VP SET TEXT VALUE`](vp-set-text-value.md) and [`VP SET NUM VALUE`](vp-set-num-value.md), reduce the values to specific types.
+El comando permite utilizar un código genérico para definir y formatear los tipos de valores en *rangeObj*, mientras que otros comandos, como [`VP SET TEXT VALUE`](vp-set-text-value) y [`VP SET NUM VALUE`](vp-set-num-value), reducen los valores a tipos específicos.
 
 En *rangeObj*, pasa un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP Cell`](vp-cell) o [`VP Column`](vp-column.md)) cuyo valor desea especificar. Si *rangeObj* incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
 
