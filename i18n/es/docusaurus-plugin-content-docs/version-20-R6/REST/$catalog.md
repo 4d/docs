@@ -3,7 +3,7 @@ id: catalog
 title: $catalog
 ---
 
-The catalog describes all the dataclasses, attributes, and [interprocess (shared) singletons](../Concepts/classes.md#singleton-classes) available in the project.
+El catálogo describe todas las clases de datos, atributos y [singletoneos interproceso (compartidos)](../Concepts/classes.md#singleton-classes) disponibles en el proyecto.
 
 ## Sintaxis disponible
 
