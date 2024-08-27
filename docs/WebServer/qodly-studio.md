@@ -3,12 +3,6 @@ id: qodly-studio
 title: Qodly Studio for 4D
 ---
 
-:::caution Developer Preview
-
-Qodly Studio for 4D is currently in the **Developer Preview** phase. It should not be used in production.
-
-:::
-
 **Qodly Studio** is an interface builder for web applications. It provides developers with a graphical page editor to design applications running in web browsers or smartphones. It supports natively the [ORDA objects](../ORDA/overview.md).
 
 You can use Qodly Studio directly from your **4D environment** to build modern and sophisticated interfaces that you can easily integrate to your existing 4D projects and deploy **on premise**.
@@ -100,7 +94,7 @@ In accordance with the management of 4D projects, only the following usages are 
 
 :::warning
 
-You can open Qodly Studio, debug and edit Qodly pages directly on a 4D Server machine (see below). This feature is only provided for testing and debugging purposes, for example to evaluate the application flow with actual data or in multi-user environment. It must NOT be considered as a regular way to develop applications since it does not provide any access control over concurrent accesses.
+You can open Qodly Studio, [debug] and edit Qodly pages directly on a 4D Server machine when a project is running in interpreted mode. This feature is only provided for testing and debugging purposes, for example to evaluate the application flow with actual data or in multi-user environment. It must NOT be considered as a regular way to develop applications since it does not provide any access control over concurrent accesses.
 
 :::
 
@@ -148,18 +142,18 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 
 ### Feature comparison
 
-||Qodly Studio with 4D|Qodly Studio in Qodly Cloud platform|
+||Qodly Studio in 4D|Qodly Studio in Qodly Cloud platform|
 |---|---|---|
 |View and edit tables (dataclasses), attributes and relations|4D Structure Editor(1)|Qodly Studio Model Editor|
 |Qodly pages|Qodly Studio Page Editor|Qodly Studio Page Editor|
 |Desktop forms|4D IDE|*not supported*|
 |Programming language|4D Language featuring ORDA|[QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) featuring ORDA|
-|Coding IDE|4D IDE code editor *or* VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode) (*see also note (2)*)|Qodly Studio code editor|
-|Debugger|4D IDE debugger (Qodly Studio debugger can be attached to 4D Server)|Qodly Studio debugger|
+|Coding IDE|4D IDE code editor *or* VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)<br/>*4D Server only (debug)*: Qodly Studio code editor (see (2))|Qodly Studio code editor|
+|Debugger|4D IDE debugger<br/>*4D Server only (debug)*: Qodly Studio debugger (see [this paragraph](#using-qodly-debugger-on-4d-server))|Qodly Studio debugger|
 |REST/Web roles and privileges|roles.json direct edit/Qodly Studio roles and privileges editor|Qodly Studio role and privileges editor|
 
 (1) If you click on the **Model** button in Qodly Studio, nothing happens.<br/>
-(2) On 4D Server, opening 4D code with the Qodly Studio code editor is supported for testing and debugging purposes (in 4D single-user, if you try to open 4D code with the Qodly Studio code editor, syntax coloring is not available and a "Lsp not loaded" warning is displayed).
+(2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)). Note that in 4D single-user, if you open some 4D code with the Qodly Studio code editor, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
 
 
 ### Language
@@ -187,18 +181,6 @@ You can develop with Qodly Studio while your computer is not connected to the in
 - [Templates](https://developer.qodly.com/docs/studio/design-webforms/templates): the Template library is empty
 - UI tips: they are not displayed when you click on ![alt-text](../assets/en/WebServer/tips.png) icons.
 
-
-### Debugging on 4D Server
-
-When using Qodly Studio in a deployed 4D Server application, you can attach the [Qodly Studio debugger](https://developer.qodly.com/docs/studio/debugging) to the 4D Server and then, benefit from the Qodly Studio debugger features when executing your Qodly pages.
-
-To attach the Qodly Studio debugger to your running 4D Server application:
-
-1. [Open Qodly Studio](#opening-qodly-studio) from 4D Server.
-2. Click on the **Debug** button located in the Studio toolbar.
-![qodly-debug](../assets/en/WebServer/qodly-debug.png)
-
-If the debug session starts successfully, a green bullet will appear on the button label
 
 
 
@@ -254,6 +236,35 @@ For example:
 ```
 https://www.myWebSite.com/$lib/renderer/?w=welcome
 ```
+
+### Using Qodly debugger on 4D Server
+
+When using Qodly pages in a deployed 4D Server application (interpreted mode), you might encounter some cases where you need to debug your pages on the server, for example when a specific user configuration is required. In this case, you can attach the [Qodly Studio debugger](https://developer.qodly.com/docs/studio/debugging) to the 4D Server and then, benefit from its features when executing your Qodly pages.
+
+Note that in this case, the Qodly Studio debugger will display all the code executed on the server, in accordance with the [attached debugger rule on 4D Server](../Debugging/debugging-remote.md#attached-debugger).  
+
+To attach the Qodly Studio debugger to your running 4D Server application:
+
+1. [Open Qodly Studio](#opening-qodly-studio) from 4D Server.
+
+:::note
+
+The project must be running in interpreted mode so that **Qodly Studio** menu item is available.
+
+:::
+
+2. In the Qodly Studio toolbar, click on the **Debug** button.<br/>
+![qodly-debug](../assets/en/WebServer/qodly-debug.png)
+
+If the debug session starts successfully, a green bullet appears on the button label ![qodly-debug](../assets/en/WebServer/debug2.png) and you can use the Qodly Studio debugger.
+
+If the debugger is already attached to a another machine or another Qodly Studio page, an error is displayed. You have to detach it beforehand from the other location.
+
+To detach the Qodly Studio debugger from your running 4D Server application:
+
+1. Click the **Debug** button in the Qodly Studio toolbar while a debug session is active.
+A warning dialog box will prompt you to confirm whether you want to detach the debugger.
+2. Select **Keep in progress** to continue evaluating the code until the end of the current method or function before detaching the debugger, or **Stop** to detach the debugger immediately.
 
 
 
