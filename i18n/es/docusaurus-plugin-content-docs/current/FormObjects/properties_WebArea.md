@@ -59,7 +59,7 @@ La variable URL produce los mismos efectos que el comando [WA OPEN URL](https://
 - Para el acceso a los documentos, esta variable sólo acepta URLs que cumplan con el RFC ("file://c:/My%20Doc") y no los nombres de ruta del sistema ("c:\MyDoc"). El comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) acepta ambas notaciones.
 - Si la variable URL contiene una cadena vacía, el área web no intenta cargar la URL. El comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) genera un error en este caso.
 - Si la variable URL no contiene un protocolo (http, mailto, archivo, etc.), el área web añade "http://", lo que no ocurre con el comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html).
-- When the Web area is not displayed in the form (when it is located on another page of the form), executing the [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
+- Cuando el área Web no se muestra en el formulario (cuando se encuentra en otra página del formulario), la ejecución del comando [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) no tiene ningún efecto, mientras que la asignación de un valor a la variable URL puede utilizarse para actualizar la URL actual.
 
 #### Gramática JSON
 
@@ -85,8 +85,8 @@ Esta opción permite elegir entre dos motores de renderizado para el área web, 
 
 El motor CEF tiene las siguientes limitaciones:
 
-- [WA SET PAGE CONTENT](https://doc.4d.com/4dv19/help/command/en/page1037.html): using this command requires that at least one page is already loaded in the area (through a call to [`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) or an assignment to the URL variable associated to the area).
-- When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](https://doc.4d.com/4dv19/help/command/en/page1041.html) command, the first drop must be preceded by at least one call to [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) or one assignment to the URL variable associated to the area.
+- [WA SET PAGE CONTENT](https://doc.4d.com/4dv19/help/command/en/page1037.html): el uso de este comando requiere que al menos una página ya esté cargada en el área (mediante una llamada a [`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) o una asignación a la variable URL asociada al área).
+- Cuando se habilita soltar URL mediante el selector `WA enable URL drop` del comando [WA SET PREFERENCE](https://doc.4d.com/4dv19/help/command/en/page1041.html), la primera caída debe ir precedida de al menos una llamada a [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) o una asignación a la variable URL asociada al área.
 
 :::note
 
