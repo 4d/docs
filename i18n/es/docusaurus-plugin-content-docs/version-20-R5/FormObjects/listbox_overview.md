@@ -102,7 +102,7 @@ Cada elemento de la colección o cada entidad está disponible como un objeto al
 
 Cuando la fuente de datos es una entity selection, cualquier modificación realizada del lado del list box se guarda automáticamente en la base de datos. Por otro lado, las modificaciones realizadas en la base de datos son visibles en el list box después de que se hayan recargado las entidades modificadas.
 
-Cuando la fuente de datos es una colección, toda modificación realizada en los valores del list box se refleja en la colección. On the other hand, if modifications are done on the collection using for example the various functions of the [Collection class](../API/CollectionClass.md), you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. Por ejemplo:
+Cuando la fuente de datos es una colección, toda modificación realizada en los valores del list box se refleja en la colección. Por otra parte, si se realizan las modificaciones en la colección utilizando, por ejemplo, las diferentes funciones de la [clase Collection](../API/CollectionClass.md), será necesario notificar explícitamente a 4D reasignando la variable de la colección a sí misma, para que se actualice el contenido del list box. Por ejemplo:
 
 ```4d
 myCol:=myCol.push("new value") //mostrar el nuevo valor en el list box
@@ -480,7 +480,7 @@ En el método objeto del list box, puede escribir:
  End case
 ```
 
-For a selection type list box, to produce the same effect you can use a method to update the [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) based on the set specified in the [Highlight Set](properties_ListBox.md#highlight-set) property.
+Para un list box de tipo selección, para producir el mismo efecto puede utilizar un método para actualizar la [expresión de color de fondo](properties_BackgroundAndBorder.md#background-color-expression) basado en el conjunto especificado en la propiedad [Conjunto de resaltado](properties_ListBox.md#highlight-set).
 
 Por ejemplo, en el formulario JSON, ha definido el conjunto resaltado y la expresión de color de fondo siguientes para el list box:
 

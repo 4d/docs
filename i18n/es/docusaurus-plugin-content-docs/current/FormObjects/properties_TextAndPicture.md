@@ -195,7 +195,7 @@ Por defecto, cuando un botón contiene un título y una imagen, los elementos se
 
 #### Objetos soportados
 
-[Button](button_overview.md) (all styles except Help) - [Check Box](checkbox_overview.md) (all styles except Regular, Flat, Disclosure and Collapse/Expand) - [Radio Button](radio_overview.md) (all styles except Regular, Flat, Disclosure and Collapse/Expand).
+[Botón](button_overview.md) (todos los estilos excepto Ayuda) - [Casilla de verificación](checkbox_overview.md) (todos los estilos excepto Normal, Plano, Revelar y Contraer/Expandir) - [Botón de radio](radio_overview.md) (todos los estilos excepto Normal, Plano, Revelar y Contraer/Expandir).
 
 ---
 

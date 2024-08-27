@@ -74,13 +74,13 @@ Para iniciar y detener un servidor web, basta con llamar a las funciones [`start
 
 ```4d
 var $status : Object
-  	//to start a web server with default settings
+  	//para iniciar un servidor web con los parámetros por defecto
 $status:=webServer.start()
-	//to start the web server with custom settings  
+	//para iniciar el servidor web con los parámetros personalizados  
 	//$settings object contains web server properties
 webServer.start($settings)
 
-	//to stop the web server
+	//para detener el servidor web
 $status:=webServer.stop()
 ```
 

@@ -440,16 +440,16 @@ Cuerpo de la petición:
 En este ejemplo, asociamos una escuela existente a una entidad Students. La clase `StudentsEntity` tiene una API:
 
 ```
-// StudentsEntity class
+// Clase StudentsEntity
 
 Class extends Entity
 
 exposed Function putToSchool()
 	var $1, $school , $0, $status : Object
 
-		//$1 is a Schools entity
+		//$1 es una entidad Schools
 	$school:=$1
-		//Associate the related entity school to the current Students entity
+		//Asocia la entidad relacionada school a la entidad actual Students
 	This.school:=$school
 
 	$status:=This.save()

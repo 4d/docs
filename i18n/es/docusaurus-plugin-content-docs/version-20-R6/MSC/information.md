@@ -12,9 +12,9 @@ Esta página indica el nombre, la versión y la ubicación de la aplicación, as
 
 La parte central de la ventana indica el nombre y la ubicación del proyecto y de los os archivos de datos, así como también el archivo de historial (si lo hay). La parte inferior de la ventana indica el nombre del titular de la licencia 4D, el tipo de licencia y el nombre del usuario 4D actual.
 
-- **Display and selection of pathnames**: On the **Program** tab, pathnames are displayed in pop-up menus containing the folder sequence as found on the disk:\
+- **Visualización y selección de nombres de ruta**: en la pestaña **Programa**, los nombres de ruta se muestran en menús emergentes que contienen la secuencia de carpetas tal y como se encuentran en el disco:\
   ![](../assets/en/MSC/MSC_popup.png)
-  If you select a menu item (disk or folder), it is displayed in a new system window.
+  Si selecciona un elemento del menú (disco o carpeta), se muestra en una nueva ventana del sistema.
   El comando **Copiar la ruta** copia el nombre completo de la ruta en el portapapeles como texto, utilizando los separadores de la plataforma actual.
 
 - **"Licenses" Folder** The **"Licenses" Folder** button displays the contents of the active Licenses folder in a new system window. Todos los archivos de licencia instalados en su entorno 4D están agrupados en esta carpeta, en su disco duro. Cuando se abren con un navegador web, estos archivos muestran información sobre las licencias que contienen y sus características.
