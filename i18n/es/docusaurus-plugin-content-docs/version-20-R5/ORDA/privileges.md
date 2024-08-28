@@ -72,7 +72,7 @@ Un privilegio o un rol pueden asociarse a varias combinaciones "acción + recurs
 
 - Usted **crea** privilegios y/o roles en el archivo `roles.json` (ver abajo). **Configura** su alcance asignándolos a acción(es) de permiso aplicadas a recurso(s).
 
-- You **allow** privileges and/or roles to every user session using the [`.setPrivileges()`](../API/SessionClass.md#setprivileges) function of the `Session` class.
+- Usted **autoriza** los privilegios y/o roles para cada sesión usuario usando la función [`.setPrivileges()`](../API/SessionClass.md#setprivileges) de la clase `Session`.
 
 ### Ejemplo
 

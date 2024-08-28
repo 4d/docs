@@ -66,7 +66,7 @@ Dentro del método de error personalizado, tiene acceso a varias piezas de infor
 
 :::info
 
-4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs. :::
+4D mantiene automáticamente una serie de variables denominadas [**variables sistema**](variables.md#system-variables), que responden a diferentes necesidades. :::
 
 - el comando `GET LAST ERROR STACK` que devuelve información sobre la pila de errores actual de la aplicación 4D.
 - el comando `Get call chain` que devuelve una colección de objetos que describen cada paso de la cadena de llamadas a métodos dentro del proceso actual.

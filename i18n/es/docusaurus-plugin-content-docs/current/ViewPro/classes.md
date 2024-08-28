@@ -149,7 +149,7 @@ The `.useFooterDropDownList` property <!-- REF #TableOptions.useFooterDropDownLi
 
 **.backColor** : Text<!-- END REF -->
 
-The `.backColor` property is the <!-- REF #TableStyle.backColor.Summary -->[background color](configuring.md/#background--foreground) of the table<!-- END REF -->.
+La propiedad `.backColor` es el <!-- REF #TableStyle.backColor.Summary -->[color de fondo](configuring.md/#background--foreground) de la tabla<!-- END REF -->.
 
 ### .forecolor
 
@@ -157,7 +157,7 @@ The `.backColor` property is the <!-- REF #TableStyle.backColor.Summary -->[back
 
 **.forecolor** : Text<!-- END REF -->
 
-The `.forecolor` property is the <!-- REF #TableStyle.forecolor.Summary -->[foreground color](configuring.md/#background--foreground) of the table<!-- END REF -->.
+La propiedad `.forecolor` es el <!-- REF #TableStyle.forecolor.Summary -->[color de primer plano](configuring.md/#background--foreground) de la tabla<!-- END REF -->.
 
 ### .font
 
@@ -165,7 +165,7 @@ The `.forecolor` property is the <!-- REF #TableStyle.forecolor.Summary -->[fore
 
 **.font** : Text<!-- END REF -->
 
-The `.font` property is the <!-- REF #TableStyle.font.Summary -->font name (see [**Fonts and text**](configuring.md/#fonts-and-text)) of the table<!-- END REF -->.
+La propiedad `.font` es el nombre de la <!-- REF #TableStyle.font.Summary -->fuente (ver [**Fuentes y texto**](configuring.md/#fonts-and-text)) de la tabla<!-- END REF -->.
 
 ### .textDecoration
 
@@ -274,7 +274,7 @@ La propiedad `.firstColumnStripSize` es el tamaño <!-- REF #TableThemeOptions.f
 
 **.firstColumnStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.firstColumnStripStyle` property is the <!-- REF #TableThemeOptions.firstColumnStripStyle.Summary -->style of the first alternating column<!-- END REF -->.
+La propiedad `.firstColumnStripStyle` es el estilo <!-- REF #TableThemeOptions.firstColumnStripStyle.Summary -->de la primera columna alterna<!-- END REF -->.
 
 ### .firstFooterCellStyle
 
@@ -370,7 +370,7 @@ The `.name` property is the <!-- REF #TableThemeOptions.name.Summary -->name of 
 
 **.secondColumnStripSize** : Integer<!-- END REF -->
 
-The `.secondColumnStripSize` property is the <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->size of the second alternating column<!-- END REF -->. Por defecto=1
+La propiedad `.secondColumnStripSize` es el tamaño <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->de la segunda columna alterna<!-- END REF -->. Por defecto=1
 
 ### .secondColumnStripStyle
 
@@ -378,7 +378,7 @@ The `.secondColumnStripSize` property is the <!-- REF #TableThemeOptions.secondC
 
 **.secondColumnStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.secondColumnStripStyle` property is the <!-- REF #TableThemeOptions.secondColumnStripStyle.Summary -->style of the second alternating column<!-- END REF -->.
+La propiedad `.secondColumnStripStyle` es el <!-- REF #TableThemeOptions.secondColumnStripStyle.Summary -->estilo de la segunda columna alterna<!-- END REF -->.
 
 ### .secondRowStripSize
 

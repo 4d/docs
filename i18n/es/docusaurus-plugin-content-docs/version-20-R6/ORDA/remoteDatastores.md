@@ -5,9 +5,9 @@ title: Bases de datos remotas
 
 Un **datastore remoto** es una referencia, en una aplicación 4D local (4D o 4D Server), a un [datastore](dsMapping.md#datastore) almacenado en otra aplicación 4D.
 
-The local 4D application connects to and references the remote datastore through a call to the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command.
+La aplicación 4D local se conecta y hace referencia al datastore remoto a través de una llamada al comando [`Open datastore`](../API/DataStoreClass.md#open-datastore).
 
-On the remote machine, 4D opens a [session](../WebServer/sessions.md) to handle requests from the application that call `Open datastore`. Las solicitudes utilizan internamente la [API REST](../REST/gettingStarted.md), lo que significa que pueden requerir [licencias disponibles](../REST/authUsers.md).
+En la máquina remota, 4D abre una [sesión](../WebServer/sessions.md) para gestionar las peticiones de la aplicación que llaman a `Open datastore`. Las solicitudes utilizan internamente la [API REST](../REST/gettingStarted.md), lo que significa que pueden requerir [licencias disponibles](../REST/authUsers.md).
 
 ## Utilizando sesiones web
 

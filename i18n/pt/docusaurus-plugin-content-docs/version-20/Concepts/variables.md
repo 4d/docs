@@ -217,7 +217,7 @@ Para mais informações, ver o capítulo **Processos** e a descrição destes co
 
 ### Variáveis interprocesso
 
-:::warning Deprecated
+:::warning Obsoleto
 
 Use of interprocess variables is not recommended since they are not available from [preemptive processes](../Develop/preemptive.md) and tend to make the code less maintainable.
 

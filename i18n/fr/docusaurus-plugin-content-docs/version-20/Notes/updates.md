@@ -299,7 +299,7 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 | PDFWriter    | 4.3              | 20                  | FreeType dependency dans 12.2.1                                                                               |
 | SpreadJS     | 16.2.6           | 20.2 HF1            | Moteur 4D View Pro                                                                                            |
 |              | 16.0.4           | 20                  |                                                                                                               |
-| OpenSSL      | 3.1.1            | 20                  |                                                                                                               |
+| OpenSSL      | 3.1.6            | **20.4 HF2**        |                                                                                                               |
 | libZip       | 1.9.2            | 20                  | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                    |
 | LZMA         | 5.4.1            | 20                  |                                                                                                               |
 | Zlib         | 1.2.13           | 20                  |                                                                                                               |

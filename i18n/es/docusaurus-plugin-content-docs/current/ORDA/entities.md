@@ -254,7 +254,7 @@ Puede crear y utilizar simultáneamente tantas selecciones de entidades diferent
 
 :::note
 
-Cuando se eliminan entidades, sus referencias permanecen en la selección de entidades con un valor _undefined_. In this case, you can call the [`.clean()`](API/EntitySelectionClass.md#clean) function to get a new entity selection but without the deleted entity references.
+Cuando se eliminan entidades, sus referencias permanecen en la selección de entidades con un valor _undefined_. En este caso, puede llamar a la función [`.clean()`](API/EntitySelectionClass.md#clean) para obtener una nueva selección de entidades pero sin las referencias de entidades eliminadas.
 
 :::
 

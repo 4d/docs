@@ -9,16 +9,16 @@ As funções, propriedades e comandos de File e Folders permitem tratar arquivos
 $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 ```
 
-Además, los objetos archivo y carpeta soportan los `fileSystems`, que ofrecen una ruta contextual a las carpetas principales de la aplicación.
+Além disso, os objectos de arquivos e pastas suportam `fileSystems`, que fornecem o caminho contextual para as pastas principais da aplicação.
 
-## Filesystem pathnames
+## Caminhos dos filesystem
 
-4D acepta varios `filesystem` que designan las carpetas 4D específicas con una ubicación variable en macOS y Windows. A filesystem path is evaluated with regards to the context and is returned as an absolute path.
+4D aceita vários `filesystem` pathnames que designam pastas 4D específicas com localização variável em macOS e Windows. Um caminho de sistema de arquivos é avaliado com relação ao contexto e é retornado como um caminho absoluto.
 
 Os nomes de caminho do sistema de arquivos são úteis por duas razões principais:
 
-- Independência: Pode mover a sua solução de um local para outro, independentemente do sistema operativo, sem ter de se preocupar com caminhos,
-- Segurança: Nenhum código pode acessar elementos localizados acima da raiz do sistema de arquivos no disco (sandboxing).
+- Independência: pode mover a sua solução de um local para outro, independentemente do sistema operativo, sem ter de se preocupar com caminhos,
+- Segurança: nenhum código pode acessar elementos localizados acima da raiz do sistema de arquivos no disco (sandboxing).
 
 São compatíveis os seguintes nomes de caminho do sistema de arquivos:
 
@@ -33,7 +33,7 @@ São compatíveis os seguintes nomes de caminho do sistema de arquivos:
 
 ## Sintaxe POSIX
 
-A sintaxe POSIX é suportada em todas as plataformas. **Se recomienda la sintaxis POSIX** ya que es la más flexible. Se utiliza por defecto (devuelto por las propiedades [file.path](../API/FileClass.md#path) y [folder.path](../API/FolderClass.md#path)).
+A sintaxe POSIX é suportada em todas as plataformas. **A sintaxe POSIX é recomendada** por ser a mais flexível. É utilizado por predefinição (devolvido pelas propriedades [file.path](../API/FileClass.md#path) e [folder.path](../API/FolderClass.md#path)).
 
 Com esta sintaxe:
 
@@ -41,7 +41,7 @@ Com esta sintaxe:
 - os nomes de caminho absolutos começam com um "/"
 - para subir uma pasta num caminho relativo, utilize "../" à frente do nome do caminho (por segurança, não pode subir no sistema de arquivos).
 
-In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../API/FileClass.md#file) and [`Folder`](../API/FolderClass.md#folder) commands, for example:
+Na sintaxe POSIX, você geralmente usará nomes de caminho `filesystem` com os comandos [`File`](../API/FileClass.md#file) e [`Folder`](../API/FolderClass.md#folder), por exemplo:
 
 ```4d
 var $pathFile : 4D.File
@@ -52,14 +52,14 @@ $pathFolder:=Folder("/RESOURCES/Pictures")
 
 ## Sintaxe específica da plataforma
 
-A sintaxe específica da plataforma depende do sistema operativo em que o comando é executado. Tenga en cuenta que al crear un objeto archivo o carpeta con esta sintaxis, debe declararlo utilizando la constante `fk platform path` como parámetro.
+A sintaxe específica da plataforma depende do sistema operativo em que o comando é executado. Note-se que, ao criar um objeto de ficheiro ou pasta com esta sintaxe, é necessário declará-lo utilizando como parâmetro a constante `fk platform path`.
 
 ### Windows
 
 São suportados os seguintes padrões:
 
 - os separadores de pasta são "\"
-- the text contains ':' and '\' as the second and third character,
+- o texto contém ":" e "\" como segundo e terceiro carácter,
 - o texto começa por "\\".
 
 Exemplos com [`Folder`](../API/FolderClass.md#folder):
@@ -69,11 +69,11 @@ $ok:=Folder("C:\\Monday";fk platform path).create()
 $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 ```
 
-#### Entering Windows pathnames and escape sequences
+#### Caminhos Windows e sequências de escape
 
-El lenguaje 4D permite utilizar [secuencias de escape](quick-tour.md#escape-sequences). Las secuencias de escape comienzan con una barra invertida `\`, seguida de un caracter. Por ejemplo, `\t` es la secuencia de escape para el caracter `Tab`.
+A linguagem 4D permite o uso de [sequências de escape] (quick-tour.md#escape-sequences). As sequências de fuga começam com uma barra invertida `\`, seguida de um carácter. Por exemplo, `\t` é a sequência de escape para o carácter `Tab`.
 
-Dado que el caracter `\` también se utiliza como separador en los nombres de rutas en Windows, es necesario introducir un doble `\\` en los nombres de rutas.
+Uma vez que o carácter `\` também é utilizado como separador nos nomes de caminho no Windows, é necessário introduzir um duplo `\\` nos nomes de caminho do Windows.
 
 ### macOS
 
@@ -93,7 +93,7 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //a volume deve ser cham
 
 ### Constructores `File` y `Folder`
 
-[`File`](../API/FileClass.md#file) and [`Folder`](../API/FolderClass.md#folder) commands only accept **absolute pathnames**. Os nomes de caminho relativos não são suportados e devolverão erros. Por exemplo, o seguinte código não é permitido:
+Os comandos [`File`](../API/FileClass.md#file) e [`Folder`](../API/FolderClass.md#folder) aceitam apenas **nomes de caminho absolutos**. Os nomes de caminho relativos não são suportados e devolverão erros. Por exemplo, o seguinte código não é permitido:
 
 ```4d
 	//ERROR
@@ -109,7 +109,7 @@ $okFile:=File("/DATA/Prefs/tempo.txt").create() //ficheiro criado na pasta de da
 
 ### Funciones de carpeta `.file()` y `.folder()`
 
-Functions of folder objects such as [`folder.file()`](../API/FolderClass.md#file) and [`folder.folder()`](../API/FolderClass.md#folder-1) expect relative POSIX pathnames. Por exemplo:
+As funções de objetos de pasta como [`folder.file()`](../API/FolderClass.md#file) e [`folder.folder()`](../API/FolderClass.md#folder-1) esperam nomes de caminho POSIX relativos. Por exemplo:
 
 ```4d
 var $userImages : 4D.Folder

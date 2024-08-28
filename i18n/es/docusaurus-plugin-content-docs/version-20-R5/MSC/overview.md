@@ -16,8 +16,8 @@ En modo mantenimiento, sólo se muestra la ventana del CSM (el proyecto no es ab
 
 Puede abrir el CSM en modo mantenimiento desde dos lugares:
 
-- **From the standard project opening dialog box**
-  The standard Open dialog includes the **Maintenance Security Center** option from the menu associated with the **Open** button:
+- **Desde la ventana de diálogo estándar de apertura del proyecto**
+  La ventana de diálogo Abrir estándar incluye la opción **Centro de Seguridad de Mantenimiento** en el menú asociado con el botón **Abrir**:
   ![](../assets/en/MSC/MSC_standardOpen.png)
 - **menú Ayuda/Mantenimiento Centro de seguridad** o botón **MSC** de la barra de herramientas (proyecto no abierto)\
   ![](../assets/en/MSC/mscicon.png)\

@@ -5,9 +5,9 @@ title: Bases de datos remotas
 
 Un **datastore remoto** es una referencia, en una aplicación 4D local (4D o 4D Server), a un [datastore](dsMapping.md#datastore) almacenado en otra aplicación 4D.
 
-The local 4D application connects to and references the remote datastore through a call to the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command.
+La aplicación 4D local se conecta y hace referencia al datastore remoto a través de una llamada al comando [`Open datastore`](../API/DataStoreClass.md#open-datastore).
 
-On the remote machine, 4D opens a [session](../WebServer/sessions.md) to handle requests from the application that call `Open datastore`. Las solicitudes utilizan internamente la [API REST](../REST/gettingStarted.md), lo que significa que pueden requerir [licencias disponibles](../REST/authUsers.md).
+En la máquina remota, 4D abre una [sesión](../WebServer/sessions.md) para gestionar las peticiones de la aplicación que llaman a `Open datastore`. Las solicitudes utilizan internamente la [API REST](../REST/gettingStarted.md), lo que significa que pueden requerir [licencias disponibles](../REST/authUsers.md).
 
 ## Utilizando sesiones web
 
@@ -41,7 +41,7 @@ En el siguiente ejemplo, se están ejecutando dos procesos para la misma sesión
 
 Como se describe en el párrafo [tiempo de vida de la sesión](../WebServer/sessions.md#session-lifetime) una sesión web es cerrada automáticamente por 4D cuando no ha habido actividad durante su periodo de tiempo de espera. El tiempo de espera por defecto es de 60 mn, pero este valor puede modificarse utilizando el parámetro _connectionInfo_ del comando `Open datastore`.
 
-Si se envía una solicitud al almacén de datos remoto después de haber cerrado la sesión, ésta se vuelve a crear automáticamente si es posible (licencia disponible, servidor no detenido...). However, keep in mind that the context of the session regarding locks and transactions is lost (see below).
+Si se envía una solicitud al almacén de datos remoto después de haber cerrado la sesión, ésta se vuelve a crear automáticamente si es posible (licencia disponible, servidor no detenido...). Sin embargo, hay que tener en cuenta que se pierde el contexto de la sesión en cuanto a bloqueos y transacciones (ver abajo).
 
 ## Bloqueo y transacciones
 
