@@ -170,23 +170,23 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 
 O comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> cria uma nova coleção compartilhada vazia ou pré-preenchida<!-- END REF --> e retorna sua referência.
 
-Adding an element to this collection using the assignment operator must be surrounded by the [`Use...End use`](Concepts/shared.md#useend-use) structure, otherwise an error is generated (this is not necessary when adding elements using functions such as [`push()`](#push) or [`map()`](#map) because they automatically trigger an internal *Use...End use*). Reading an element without a *Use...End use* structure is, however, possible.
+A adição de um elemento a esta coleção utilizando o operador de atribuição deve ser rodeada pela estrutura [`Use...End use`](Concepts/shared.md#useend-use), caso contrário é gerado um erro (isto não é necessário ao adicionar elementos utilizando funções como [`push()`](#push) ou [`map()`](#map) porque estes ativam automaticamente uma estrutura interna *Use...End use*). A leitura de um elemento sem um *Use... End use* estrutura é, no entanto, possível.
 
 :::info
 
-For more information on shared collections, please refer to the [Shared objects and collections](Concepts/shared.md) page.
+Para obter mais informações sobre coleções compartilhadas, consulte a página [Objetos e coleções compartilhadas](Concepts/shared.md).
 
 :::
 
-If you do not pass any parameters, `New shared collection` creates an empty shared collection and returns its reference.
+Se não quiser passar parâmetros, `New shared collection` cria uma coleção vazia partilhada e retorna sua referência.
 
 Precisa atribuir a referência devolvida à uma variável 4D de tipo Collection.
 
 > Lembre-se de que as instruções `var : Collection` ou `C_COLLECTION` declaram uma variável do tipo `Collection`, mas não criam nenhuma coleção.
 
-Optionally, you can prefill the new shared collection by passing one or several *value*(s) as parameter(s). Também pode adicionar ou modificar elementos através de atribuição de notação de objetos (ver exemplo).
+Opcionalmente pode preencher automaticamente a nova coleção partilhada passando um ou vários *value* como parâmetros. Também pode adicionar ou modificar elementos através de atribuição de notação de objetos (ver exemplo).
 
-If the new element index is beyond the last existing element of the shared collection, the collection is automatically resized and all new intermediary elements are assigned a **null** value.
+Se o novo índice elemento for além do último elemento existente da coleção partilhada, a coleção é automaticamente redimensionada e todos os novos elementos intermediários são atribuídos um valor **null**.
 
 Pode passar qualquer número de valores dos tipos compatíveis abaixo:
 
@@ -196,8 +196,8 @@ Pode passar qualquer número de valores dos tipos compatíveis abaixo:
 - date
 - hora (armazenada como número de milissegundos - real)
 - null
-- shared object
-- shared collection
+- objeto compartido
+- coleção compartilhada
 
 :::note
 
@@ -239,13 +239,13 @@ Diferente de coleções padrão (não partilhadas), coleções partilhadas não 
 
 #### Descrição
 
-The `.at()` function <!-- REF #collection.at().Summary -->returns the item at position *index*, allowing for positive and negative integers<!-- END REF -->.
+A função `.at()` <!-- REF #collection.at().Summary -->retorna o item na posição *index*, permitindo o uso de números inteiros positivos e negativos<!-- END REF -->.
 
 > Essa função não modifica a coleção original.
 
 Os números inteiros negativos contam para trás a partir do último item da colecção.
 
-The function returns Undefined if *index* is beyond collection limits.
+A função retorna Indefinido se *index* estiver além dos limites da coleção.
 
 #### Exemplo
 
@@ -286,11 +286,11 @@ $element:=$col.at(10) // undefined
 
 #### Descrição
 
-The `.average()` function <!-- REF #collection.average().Summary -->returns the arithmetic mean (average) of defined values in the collection instance<!-- END REF -->.
+A função `.average()` <!-- REF #collection.average().Summary -->retorna a média aritmética (média) dos valores definidos na instância de coleção<!-- END REF -->.
 
 Apenas elementos numéricos são considerados para cálculos (outros tipos são ignorados).
 
-If the collection contains objects, pass the *propertyPath* parameter to indicate the object property to take into account.
+Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar a propriedade objeto para levar em consideração.
 
 `.average()` retorna `undefined` se:
 
@@ -343,7 +343,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 #### Descrição
 
-The `.clear()` function <!-- REF #collection.clear().Summary -->removes all elements from the collection instance and returns an empty collection<!-- END REF -->.
+A função `.clear()` <!-- REF #collection.clear().Summary -->remove todos os elementos da instância da coleção e retorna uma coleção vazia<!-- END REF -->.
 
 > Essa função modifica a coleção original.
 
@@ -384,7 +384,7 @@ $vSize:=$col.length //$vSize=0
 
 #### Descrição
 
-The `.combine()` function <!-- REF #collection.combine().Summary -->inserts *col2* elements at the end or at the specified *index* position in the collection instance and returns the edited collection<!-- END REF -->. Unlike the `.insert()` function, `.combine()` adds each value of *col2* in the original collection, and not as a single collection element.
+A função `.combine()` <!-- REF #collection.combine().Summary -->insere *col2* elementos no final ou na posição *index* especificada na instância da coleção e retorna a coleção editada<!-- END REF -->. Unlike the `.insert()` function, `.combine()` adds each value of *col2* in the original collection, and not as a single collection element.
 
 > Essa função modifica a coleção original.
 
@@ -3411,7 +3411,7 @@ The `.sum()` function <!-- REF #collection.sum().Summary -->returns the sum for 
 
 Apenas elementos numéricos são considerados para cálculos (outros tipos são ignorados).
 
-If the collection contains objects, pass the *propertyPath* parameter to indicate the object property to take into account.
+Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar a propriedade objeto para levar em consideração.
 
 `.sum()` retorna 0 se:
 
