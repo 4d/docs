@@ -182,8 +182,8 @@ Pode passar qualquer número de valores dos tipos compatíveis abaixo:
 * date
 * hora (armazenada como número de milissegundos - real)
 * null
-* shared object
-* shared collection
+* objeto compartido
+* coleção compartilhada
 
 > Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros e objetos ou coleção que não forem partilhadas.
 
