@@ -226,7 +226,7 @@ Con Qodly Studio for 4D, puede utilizar el modo ["forzar inicio de sesión"](../
 
 ### Definir el modo de inicio de sesión forzado
 
-You can set the ["force login" mode](../REST/authUsers.md#force-login-mode) for your 4D application in the [Roles and Privileges page](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/), using the **Force login** option:
+Puede definir el [modo "inicio de sesión forzado"](../REST/authUsers.md#force-login-mode) para su aplicación 4D en la página de [Roles y Privilegios](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/), utilizando la opción **Force login**:
 
 ![alt-text](../assets/en/WebServer/forcelogin.png)
 
@@ -236,7 +236,7 @@ También puede definir esta opción directamente en el archivo [**roles.json**](
 
 :::
 
-When the "force login" mode is **disabled** (default mode), any REST request, including the rendering of an authentication Qodly form, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. Cuando el modo "forzar inicio de sesión" está **activado**, se puede mostrar un formulario Qodly de autenticación simple sin consumir ninguna licencia. Basta con implementar la función [`authentify()`](../REST/authUsers.md#function-authentify) en la clase datastore y llamarla desde el formulario de Qodly. La licencia se consume solo cuando el usuario está realmente conectado.
+Cuando el modo "forzar el inicio de sesión" está **desactivado** (modo por defecto), cualquier solicitud REST, incluida la presentación de un formulario Qodly de autenticación, crea una sesión web en el servidor y obtiene una licencia 4D Client, sea cual sea el resultado real de la autenticación. Cuando el modo "forzar inicio de sesión" está **activado**, se puede mostrar un formulario Qodly de autenticación simple sin consumir ninguna licencia. Basta con implementar la función [`authentify()`](../REST/authUsers.md#function-authentify) en la clase datastore y llamarla desde el formulario de Qodly. La licencia se consume solo cuando el usuario está realmente conectado.
 
 :::info
 
@@ -291,7 +291,7 @@ Al desencadenar la acción de cierre de sesión de una sesión de usuario web, s
 
 ## Acerca del uso de licencias para renderización
 
-In default mode when any form is rendered, or in "force login" mode when a form handling data or calling a function is rendered, you must have an available license, as rendering Qodly forms targets the project database's main web server.
+En modo predeterminado, cuando se renderiza cualquier formulario, o en el modo "force login" cuando se renderiza un formulario que maneja datos o llama a una función, debe tener una licencia disponible, ya que la renderización de los formularios Qodly apunta al servidor web principal de la base de datos del proyecto.
 
 ### Esquemas URL
 
