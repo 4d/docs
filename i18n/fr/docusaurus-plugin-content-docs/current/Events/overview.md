@@ -20,15 +20,15 @@ End if
 
 Chaque événement est retourné sous forme d'objet par la commande `FORM Event`. Par défaut, il contient les propriétés suivantes :
 
-| Propriété   | Type        | Description                                                                                      |
-| ----------- | ----------- | ------------------------------------------------------------------------------------------------ |
-| objectName  | text        | Name of the object triggering the event - Not included if the event is triggered by the form     |
-| code        | entier long | Numeric value of the form event. Also returned by the `Form event code` command  |
-| Description | text        | Name of the form event (e.g. "On After Edit") |
+| Propriété   | Type        | Description                                                                                                      |
+| ----------- | ----------- | ---------------------------------------------------------------------------------------------------------------- |
+| objectName  | text        | Nom de l'objet générant l'événement - Non inclus si l'événement est déclenché par le formulaire                  |
+| code        | entier long | Valeur numérique de l'événement formulaire. Egalement retourné par la commande `Form event code` |
+| Description | text        | Nom de l'événement de formulaire (par exemple "On After Edit")                                |
 
 Des propriétés supplémentaires sont retournées lorsque l'événement se produit sur des objets spécifiques. En particulier :
 
-- [list boxes](FormObjects/listbox_overview.md#supported-form-events) and [list box columns](FormObjects/listbox_overview.md#supported-form-events-1) return [additional properties](FormObjects/listbox_overview.md#additional-properties) such as `columnName` or `isRowSelected`.
+- Les [list boxes](FormObjects/listbox_overview.md#supported-form-events) et les [colonnes de list box](FormObjects/listbox_overview.md#supported-form-events-1) retournent des [propriétés](FormObjects/listbox_overview.md#additional-properties) telles que `columnName` ou `isRowSelected`.
 - Les [zones 4D View Pro](FormObjects/viewProArea_overview.md) retournent par exemple des propriétés `sheetName` ou `action` dans l'objet événement [On After Edit](onAfterEdit.md).
 
 ## Événements et méthodes
