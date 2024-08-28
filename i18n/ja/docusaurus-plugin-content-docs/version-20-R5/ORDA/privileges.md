@@ -19,12 +19,14 @@ Webユーザーまたは RESTユーザーがログインすると、そのセッ
 
 ## リソース
 
-プロジェクト内の以下の公開リソースに対して、許諾アクションと権限名を割り当てることができます (この設定をパーミッションと呼びます):
+You can assign specific permission actions to the following resources in your project:
 
 - データストア
 - データクラス
 - 属性 (計算属性およびエイリアス属性を含む)
 - データモデルクラス関数
+
+Each time a resource is accessed within a session (whatever the way it is accessed), 4D checks that the session has the appropriate permissions, and rejects the access if it is not authorized.
 
 あるレベルにおいて定義されたパーミッションは基本的に下位レベルに継承されますが、パーミッションは複数のレベルで設定することもできます:
 
