@@ -3,9 +3,9 @@ id: onSelectionChange
 title: On Selection Change
 ---
 
-| Code | Peut être appelé par                                                                                                                                                                                                                                                  | Définition                                   |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| 31   | [4D View Pro area](FormObjects/viewProArea_overview.md) - [4D Write Pro area](FormObjects/writeProArea_overview.md) - Form - [Hierarchical List](FormObjects/list_overview.md) - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) | La sélection faite dans l'objet est modifiée |
+| Code | Peut être appelé par                                                                                                                                                                                                                                                         | Définition                             |
+| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| 31   | [Zone 4D View Pro](FormObjects/viewProArea_overview.md) - [Zone 4D Write Pro](FormObjects/writeProArea_overview.md) - Formulaire - [Liste Hiérarchique](FormObjects/list_overview.md) - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) | La sélection dans l'objet est modifiée |
 
 ## Description
 
