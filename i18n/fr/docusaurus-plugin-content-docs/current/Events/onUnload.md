@@ -14,7 +14,7 @@ Cet événement est déclenché lorsque le formulaire est généré.
 Tous les objets du formulaire (de n'importe quelle page) dont la propriété d'événement `On Unload` est sélectionnée verront leur méthode objet appelée.
 Ensuite, si la propriété d'événement formulaire `On Unload` est sélectionnée, la méthode formulaire sera appelée.
 
-> The [`On Load`](onLoad.md) and [`On Unload`] events are generated for objects if they are enabled for both the objects and the form to which the objects belong. Si les événements sont activés pour les objets uniquement, ils ne se produiront pas; ces deux événements doivent également être activés au niveau du formulaire.
+> Les événements [`On Load`](onLoad.md) et [`On Unload`] sont générés pour les objets s'ils sont activés tant pour les objets que pour le formulaire auquels ils appartiennent. Si les événements sont activés pour les objets uniquement, ils ne se produiront pas; ces deux événements doivent également être activés au niveau du formulaire.
 
 ### Sous-formulaire
 
