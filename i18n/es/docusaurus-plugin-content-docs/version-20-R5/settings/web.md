@@ -166,9 +166,9 @@ El menú de formato de registro ofrece las siguientes opciones:
 
 - **Sin archivo de registro**: cuando se selecciona esta opción, 4D no generará un archivo de historial de peticiones.
 
-- **CLF (Common Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato CLF. With the CLF format, each line of the file represents a request, such as:\
-  host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length\
-  Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+- **CLF (Common Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato CLF. Con el formato CLF, cada línea del archivo representa una solicitud, como:\
+  host rfc931 user [DD/MMM/AAAA:HH:MM:SS] "request" state length\
+  Cada campo está separado por un espacio y cada línea termina con la secuencia CR/LF (character 13, character 10).
 
   - host: dirección IP del cliente (por ejemplo: "192.100.100.10)
   - rfc931: información no generada por 4D, siempre es - (un signo menos)
