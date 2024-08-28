@@ -197,7 +197,7 @@ Puede pasar cualquier número de valores de los siguientes tipos soportados:
 - time (almacenado como número de milisegundos - real)
 - null
 - objeto compartido
-- shared collection
+- colección compartida
 
 :::note
 
@@ -2856,7 +2856,7 @@ Se pueden encontrar más ejemplos de búsquedas en la página `dataClass.query()
 
 #### Descripción
 
-The `.reduce()` function <!-- REF #collection.reduce().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from left to right) to reduce it to a single value<!-- END REF -->.
+La función `.reduce()` <!-- REF #collection.reduce().Summary -->aplica la *formula* o *callback* *methodName* contra un acumulador y cada elemento de la colección (de izquierda a derecha) para reducirlo a un único valor<!-- END REF -->.
 
 > Esta función no modifica la colección original.
 
@@ -2941,7 +2941,7 @@ Con el siguiente método ***Flatten***:
 
 #### Descripción
 
-The `.reduceRight()` function <!-- REF #collection.reduceRight().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from right to left) to reduce it to a single value<!-- END REF -->.
+La función `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->aplica la *formula* o *callback* *methodName* contra un acumulador y cada elemento de la colección (de derecha a izquierda) para reducirlo a un único valor<!-- END REF -->.
 
 > Esta función no modifica la colección original.
 
@@ -3261,17 +3261,17 @@ La colección devuelta contiene el elemento especificado por *startFrom* y todos
 | Parámetros | Tipo |     | Descripción |
 | ---------- | ---- | :-: | ----------- |
 
-|startFrom |Integer |->|Index to start the test at|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param |any |->|Parameter(s) to pass|
-|Result|Boolean|<-|True if at least one element successfully passed the test|
+|startFrom |Integer |->|Índice para comenzar la prueba|
+|formula|4D.Function|->|Objeto fórmula|
+|methodName|Text|->|Nombre de un método|
+|param |any |->|Parámetro(s) a pasar|
+|Result|Boolean|<-|True si al menos un elemento pasa exitosamente la prueba|
 
 <!-- END REF -->
 
 #### Descripción
 
-The `.some()` function <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test implemented in the provided *formula* or *methodName* code<!-- END REF -->.
+La función `.some()` <!-- REF #collection.some().Summary --> devuelve true si al menos un elemento de la colección ha pasado con éxito una prueba implementada en el código *formula* o *methodName* suministrado.
 
 Se designa el código 4D de retrollamada (callback) a ejecutar para evaluar los elementos de la colección utilizando:
 
