@@ -53,7 +53,7 @@ La información se ofrece en forma gráfica:
 
 > Esta página no tiene en cuenta los datos que puedan estar almacenados fuera del archivo de datos (ver "Almacenamiento externo").
 
-Los archivos demasiado fragmentados reducen el rendimiento del disco y, por tanto, de la base. If the occupation rate is too low, 4D will indicate this by a warning icon (which is displayed on the Information button and on the tab of the corresponding file type) and specify that compacting is necessary:![](../assets/en/MSC/MSC_infowarn.png)
+Los archivos demasiado fragmentados reducen el rendimiento del disco y, por tanto, de la base. Si la tasa de ocupación es demasiado baja, 4D lo indicará con un icono de advertencia (que aparece en el botón de información y en la pestaña del tipo de archivo correspondiente) y especificará que es necesario compactar:![](../assets/en/MSC/MSC_infowarn.png)
 
 También se muestra un icono de advertencia en el botón de la página [Compact](compact.md):
 ![](../assets/en/MSC/MSC_compactwarn.png)
