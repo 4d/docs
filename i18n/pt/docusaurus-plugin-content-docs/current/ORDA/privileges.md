@@ -23,13 +23,15 @@ Para obter uma visão detalhada de toda a arquitetura de permissões, por favor 
 
 ## Resources
 
-Você pode atribuir ações de permissão específicas aos seguintes recursos expostos em seu projeto:
+You can assign specific permission actions to the following resources in your project:
 
 - o armazenamento de dados
 - uma classe de dados
 - um atributo (inclusive calculado e aliases)
 - uma função de classe de modelo de dados
 - uma função [singleton](../REST/$singleton.md)
+
+Each time a resource is accessed within a session (whatever the way it is accessed), 4D checks that the session has the appropriate permissions, and rejects the access if it is not authorized.
 
 Uma ação de permissão definida em um determinado nível é herdada por padrão em níveis inferiores, mas várias permissões podem ser configuradas:
 
