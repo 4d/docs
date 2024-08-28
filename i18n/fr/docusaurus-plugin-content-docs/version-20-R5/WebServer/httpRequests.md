@@ -15,7 +15,7 @@ The 4D web server provides several features to handle HTTP requests:
 
 The `On Web Connection` database method can be used as the entry point for the 4D Web server.
 
-### Database method calls
+### Appels des méthodes base
 
 The `On Web Connection` database method is automatically called when the server reveives any URL that is not a path to an existing page on the server. The database method is called with the URL.
 
@@ -27,14 +27,14 @@ For example, the URL "_a/b/c_" will call the database method, but "_a/b/c.html_"
 
 **On Web Connection**( _$1_ : Text ; _$2_ : Text ; _$3_ : Text ; _$4_ : Text ; _$5_ : Text ; _$6_ : Text )
 
-| Paramètres | Type |     | Description                                                     |
-| ---------- | ---- | :-: | --------------------------------------------------------------- |
-| $1         | Text |  <- | Variable URL                                                    |
-| $2         | Text |  <- | HTTP headers + HTTP body (up to 32 kb limit) |
-| $3         | Text |  <- | IP address of the web client (browser)       |
-| $4         | Text |  <- | Adresse IP du serveur                                           |
-| $5         | Text |  <- | Nom d'utilisateur                                               |
-| $6         | Text |  <- | Mot de passe                                                    |
+| Paramètres | Type |     | Description                                                                 |
+| ---------- | ---- | :-: | --------------------------------------------------------------------------- |
+| $1         | Text |  <- | Variable URL                                                                |
+| $2         | Text |  <- | En-têtes HTTP + Corps HTTP (jusqu'à une limite de 32 ko) |
+| $3         | Text |  <- | Adresse IP du client web (navigateur)                    |
+| $4         | Text |  <- | Adresse IP du serveur                                                       |
+| $5         | Text |  <- | Nom d'utilisateur                                                           |
+| $6         | Text |  <- | Mot de passe                                                                |
 
 You must declare these parameters as shown below:
 
@@ -46,7 +46,7 @@ You must declare these parameters as shown below:
 //Code for the method
 ```
 
-Alternatively, you can use the [named parameters](Concepts/parameters.md#named-parameters) syntax:
+Alternativement, vous pouvez utiliser la syntaxe des [paramètres nommés](Concepts/parameters.md#named-parameters) :
 
 ```4d
 // On Web Connection database method
@@ -64,7 +64,7 @@ The first parameter ($1) is the URL entered by users in the address area of thei
 
 Let’s use an intranet connection as an example. Suppose that the IP address of your 4D Web Server machine is 123.4.567.89. The following table shows the values of $1 depending on the URL entered in the web browser:
 
-| URL entered in web browser                                                                                                                        | Value of parameter $1                                                                 |
+| URL entrée dans le navigateur web                                                                                                                 | Valeur du paramètre $1                                                                |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | 123.4.567.89                                                                                      | /                                                                                     |
 | http://123.45.67.89                                                               | /                                                                                     |
@@ -74,29 +74,29 @@ Let’s use an intranet connection as an example. Suppose that the IP address of
 
 Note that you are free to use this parameter at your convenience. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value "_/Customers/Add_" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcut By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
 
-### $2 - Header and Body of the HTTP request
+### $2 - En-tête (header) et corps (body) de la requête HTTP
 
 The second parameter ($2) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your `On Web Connection` database method "as is". Its contents will vary depending on the nature of the web browser attempting the connection.
 
-If your application uses this information, it is up to you to parse the header and the body. You can use the `WEB GET HTTP HEADER` and the `WEB GET HTTP BODY` commands.
+Si votre application utilise ces informations, il vous appartient d'analyser l'en-tête et le corps. Vous pouvez utiliser les commandes `WEB GET HTTP HEADER` et `WEB GET HTTP BODY`.
 
-> For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Beyond this size, they are truncated by the 4D HTTP server.
+> Pour des raisons de performance, la taille des données passant par le paramètre $2 ne doit pas dépasser 32 Ko. Au-delà de cette taille, ils sont tronqués par le serveur HTTP 4D.
 
-### $3 - Web client IP address
+### $3 - Adresse IP du client Web
 
-The $3 parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
+The $3 parameter receives the IP address of the browser’s machine. Cette information peut vous permettre de distinguer entre les connexions intranet et internet.
 
-> 4D returns IPv4 addresses in a hybrid IPv6/IPv4 format written with a 96-bit prefix, for example ::ffff:192.168.2.34 for the IPv4 address 192.168.2.34. For more information, refer to the [IPv6 Support](webServerConfig.md#about-ipv6-support) section.
+> 4D renvoie les adresses IPv4 dans un format hybride IPv6/IPv4 écrit avec un préfixe de 96 bits, par exemple ::ffff:192.168.2.34 pour l'adresse IPv4 192.168.2.34. Pour plus d'informations, consultez la section [Support IPv6](webServerConfig.md#about-ipv6-support).
 
-### $4 - Server IP address
+### $4 - Adresse IP du serveur
 
 The $4 parameter receives the IP address requested by the 4D Web Server. 4D allows for multi-homing, which allows you to use machines with more than one IP address. Pour plus d'informations, veuillez consulter la [Page Configuration](webServerConfig.html#ip-address-to-listen).
 
-### $5 and $6 - User Name and Password
+### $5 et $6 - Nom d'utilisateur et mot de passe
 
 The $5 and $6 parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser, if applicable (see the [authentication page](authentication.md)).
 
-> If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
+> Si le nom d'utilisateur envoyé par le navigateur existe dans 4D, le paramètre $6 (le mot de passe de l'utilisateur) n'est pas renvoyé pour des raisons de sécurité.
 
 ## /4DACTION
 
