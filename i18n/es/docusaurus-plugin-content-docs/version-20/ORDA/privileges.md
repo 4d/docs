@@ -24,12 +24,14 @@ Si un usuario intenta ejecutar una acción y no tiene los derechos de acceso ade
 
 ## Resources
 
-Puede asignar acciones de permiso específicas a los siguientes recursos expuestos en su proyecto:
+You can assign specific permission actions to the following resources in your project:
 
 - el almacén de datos
 - una clase de datos
 - un atributo (incluidos los calculados y los alias)
 - una función de clase de modelo de datos
+
+Each time a resource is accessed within a session (whatever the way it is accessed), 4D checks that the session has the appropriate permissions, and rejects the access if it is not authorized.
 
 Una acción de permiso definida en un nivel determinado se hereda por defecto en los niveles inferiores, pero se pueden establecer varios permisos:
 
