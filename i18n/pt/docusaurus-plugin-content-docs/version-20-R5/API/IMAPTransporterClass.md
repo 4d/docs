@@ -1032,19 +1032,19 @@ Se quiser receber uma mensagem com ID = 1:
 
 <!-- REF #IMAPTransporterClass.getMails().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                                                                                                                                                                          |
-| ---------- | ---------- | :-: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ids        | Collection |  -> | Colecção de identificação da mensagem                                                                                                                                                              |
-| startMsg   | Integer    |  -> | Número sequencial da primeira mensagem                                                                                                                                                             |
-| endMsg     | Integer    |  -> | Número sequencial da última mensagem                                                                                                                                                               |
-| options    | Object     |  -> | Instruções de tratamento de mensagens                                                                                                                                                              |
-| Resultados | Object     |  <- | Object containing:<br/><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul> |
+| Parâmetro  | Tipo       |     | Descrição                                                                                                                                                                                                                                                                                      |
+| ---------- | ---------- | :-: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ids        | Collection |  -> | Colecção de identificação da mensagem                                                                                                                                                                                                                                                          |
+| startMsg   | Integer    |  -> | Número sequencial da primeira mensagem                                                                                                                                                                                                                                                         |
+| endMsg     | Integer    |  -> | Número sequencial da última mensagem                                                                                                                                                                                                                                                           |
+| options    | Object     |  -> | Instruções de tratamento de mensagens                                                                                                                                                                                                                                                          |
+| Resultados | Object     |  <- | Objeto contendo:<br/><ul><li>uma coleção de [objetos de e-mail] (EmailObjectClass.md#email-object) e</li><li>uma coleção de IDs ou números para mensagens ausentes, se houver</li></ul> |
 
 <!-- END REF -->
 
 #### Descrição
 
-The `.getMails()` function <!-- REF #IMAPTransporterClass.getMails().Summary -->returns an object containing a collection of `Email` objects<!-- END REF -->.
+A função `.getMails()` <!-- REF #IMAPTransporterClass.getMails().Summary -->retorna um objeto que contém uma coleção de objetos `Email`<!-- END REF -->.
 
 **Primeira sintaxe:**
 
@@ -1052,9 +1052,9 @@ The `.getMails()` function <!-- REF #IMAPTransporterClass.getMails().Summary -->
 
 A primeira sintaxe permite recuperar mensagens com base nas suas identificações.
 
-In the *ids* parameter, pass a collection of IDs for the messages to return. You can get the IDs with [`.getMail()`](#getmail).
+No parâmetro *ids*, passe uma coleção de IDs para as mensagens a serem retornadas. Você pode obter as identificações com [`.getMail()`](#getmail).
 
-The optional *options* parameter allows you to define the parts of the messages to be returned. See the **Options** table below for a description of the available properties.
+O parâmetro opcional *options* permite que você defina as partes das mensagens a serem retornadas. Consulte a tabela **Opções** abaixo para obter uma descrição das propriedades disponíveis.
 
 **Segunda sintaxe:**
 
@@ -1062,11 +1062,11 @@ The optional *options* parameter allows you to define the parts of the messages 
 
 A segunda sintaxe permite recuperar mensagens com base num intervalo sequencial. Os valores passados representam a posição das mensagens na caixa de correio.
 
-In the *startMsg* parameter, pass an *integer* value corresponding to the number of the first message in a sequential range. If you pass a negative number (*startMsg* <= 0), the first message of the mailbox will be used as the beginning of the sequence.
+No parâmetro *startMsg*, passe um valor *inteiro* correspondente ao número da primeira mensagem em um intervalo sequencial. Se passar um número negativo (endMsg = 0), a última mensagem da caixa de correio será utilizada como o fim da sequência.
 
-In the *endMsg* parameter, pass an *integer* value corresponding to the number of the last message to be included in a sequential range. If you pass a negative number (*endMsg* <= 0), the last message of the mailbox will be used as the end of the sequence.
+No parâmetro endMsg, passe um valor inteiro correspondente ao número da última mensagem a ser incluída num intervalo sequencial. Se você passar um número negativo (*endMsg* <= 0), a última mensagem da caixa de correio será usada como o fim da sequência.
 
-The optional *options* parameter allows you to define the parts of the messages to be returned.
+O parâmetro opcional *options* permite que você defina as partes das mensagens a serem retornadas.
 
 **Options**
 
@@ -1075,17 +1075,17 @@ The optional *options* parameter allows you to define the parts of the messages 
 | updateSeen  | Parâmetros | Se Verdadeiro, as mensagens especificadas são marcadas como "vistas" na caixa de correio. Se falso, as mensagens não são marcadas como "vistas". Valor padrão: True |
 | withBody    | Parâmetros | Pass True para devolver o corpo das mensagens especificadas. Se falso, apenas os cabeçalhos das mensagens são devolvidos. Valor padrão: True                        |
 
-> - If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated.
-> - If there is no open connection, `.getMails()` will open a connection the last mailbox specified with [`.selectBox()`](#selectbox).
+> - Se nenhuma caixa de correio for selecionada com o comando [`.selectBox()`](#selectbox), será gerado um erro.
+> - Se não houver uma conexão aberta, `.getMails()` abrirá uma conexão com a última caixa de correio especificada com [`.selectBox()`](#selectbox).
 
 #### Resultados
 
-`.getMails()` returns an object containing the following collections:
+`.getMails()` retorna um objeto que contém as seguintes coleções:
 
-| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                                                                                        |
-| ----------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| lista       | Collection | Collection of [`Email` objects](EmailObjectClass.md#email-object). Se não forem encontrados objetos e-mail, uma coleção vazia é devolvida.                                                                                                                       |
-| notFound    | Collection | Collection of:<br/><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul>An empty collection is returned if all messages are found. |
+| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                                                                                                              |
+| ----------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| lista       | Collection | Coleção de objetos [`Email`](EmailObjectClass.md#email-object). Se não forem encontrados objetos e-mail, uma coleção vazia é devolvida.                                                                                                                                                |
+| notFound    | Collection | Coleção de:<br/><ul><li>primeira sintaxe - IDs de mensagens passadas anteriormente que não existem</li><li>segunda sintaxe - números de sequência de mensagens entre startMsg e endMsg que não existem</li></ul>Uma coleção vazia é retornada se todas as mensagens forem encontradas. |
 
 #### Exemplo
 
@@ -1096,19 +1096,19 @@ Se quiser recuperar os 20 e-mails mais recentes sem alterar o seu estatuto de "v
  var $transporter : 4D.IMAPTransporter
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" //Mandatório
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
-  //create transporter
+  //criar transportador
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
+  //selecionar caixa de correio
  $boxInfo:=$transporter.selectBox("INBOX")
 
   If($boxInfo.mailCount>0)
-  // retrieve the headers of the last 20 messages without marking them as read
+  // recupera os cabeçalhos das últimas 20 mensagens sem marcá-las como lidas
     $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
      New object("withBody";False;"updateSeen";False))
     For each($mail;$result.list)
@@ -1146,25 +1146,25 @@ Se quiser recuperar os 20 e-mails mais recentes sem alterar o seu estatuto de "v
 
 #### Descrição
 
-The `.getMIMEAsBlob()` function <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary -->returns a BLOB containing the MIME contents for the message corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->.
+A função `.getMIMEAsBlob()` <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary -->retorna um BLOB contendo o conteúdo MIME da mensagem correspondente ao *msgNumber* ou *msgID* na caixa de correio designada pelo `IMAP_transporter`<!-- END REF -->.
 
 No primeiro parâmetro, pode passar qualquer um dos dois:
 
-- *msgNumber*, an *integer* value indicating the sequence number of the message to retrieve or
-- *msgID*, a *text* value indicating the unique ID of the message to retrieve.
+- *msgNumber*, um valor *inteiro* que indica o número de sequência da mensagem a ser recuperada ou
+- *msgID*, um valor de *texto* que indica a ID exclusiva da mensagem a ser recuperada.
 
-The optional *updateSeen* parameter allows you to specify if the message is marked as "seen" in the mailbox. Pode passar:
+O parâmetro opcional *updateSeen* permite que você especifique se a mensagem está marcada como "vista" na caixa de correio. Pode passar:
 
 - **True** - para marcar a mensagem como "vista" (indicando que a mensagem foi lida)
 - **False** - para deixar o status "visto" da mensagem inalterado
 
-> * The function returns an empty BLOB if *msgNumber* or msgID\* designates a non-existing message,
-> * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated,
-> * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
+> * A função retorna um BLOB vazio se *msgNumber* ou msgID\* designar uma mensagem inexistente,
+> * Se nenhuma caixa de correio for selecionada com o comando [`.selectBox()`](#selectbox), será gerado um erro,
+> * Se não houver uma conexão aberta, `.getMIMEAsBlob()` abrirá uma conexão com a última caixa de correio especificada com `.selectBox()`.
 
 #### Resultados
 
-`.getMIMEAsBlob()` returns a `BLOB` which can be archived in a database or converted to an [`Email` object](EmailObjectClass.md#email-object) with the `MAIL Convert from MIME` command.
+`.getMIMEAsBlob()` retorna um `BLOB` que pode ser arquivado em um banco de dados ou convertido a um objeto [`Email`](EmailObjectClass.md#email-object) com o comando `MAIL Convert from MIME`.
 
 #### Exemplo
 
@@ -1223,16 +1223,16 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 
 #### Descrição
 
-The `.move()` function <!-- REF #IMAPTransporterClass.move().Summary -->moves the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
+A função `.move()` <!-- REF #IMAPTransporterClass.move().Summary -->move as mensagens definidas por *msgsIDs* ou *allMsgs* para *destinationBox* no servidor IMAP<!-- END REF -->.
 
 Pode passar:
 
-- in the *msgsIDs* parameter, a collection containing the unique IDs of the specific messages to move, or
-- in the *allMsgs* parameter, the `IMAP all` constant (integer) to move all messages in the selected mailbox.
+- no parâmetro *msgsIDs*, uma coleção contendo as IDs únicas das mensagens específicas a mover, ou
+- no parâmetro *allMsgs*, a constante `IMAP all` (número inteiro) para mover todas as mensagens na caixa de correio selecionada.
 
-The *destinationBox* parameter allows you to pass a text value with the name of the mailbox where the messages will be moved.
+O parâmetro destinationBox permite-lhe passar um valor de texto com o nome da caixa de correio onde as cópias das mensagens serão colocadas.
 
-> This function is only supported by IMAP servers compliant with RFC [8474](https://tools.ietf.org/html/rfc8474).
+> Esta função só é suportada por servidores IMAP em conformidade com o RFC [8474](https://tools.ietf.org/html/rfc8474).
 
 **Objeto devolvido**
 
@@ -1325,11 +1325,11 @@ Para mover todas as mensagens na mailbox atual:
 
 #### Descrição
 
-The `.numToID()` function <!-- REF #IMAPTransporterClass.numToID().Summary -->converts the sequence numbers to IMAP unique IDs for the messages in the sequential range designated by *startMsg* and *endMsg*<!-- END REF --> in the currently selected mailbox.
+A função `.numToID()` <!-- REF #IMAPTransporterClass.numToID().Summary -->converte os números de sequência em IDs exclusivos do IMAP para as mensagens no intervalo sequencial designado por *startMsg* e *endMsg*<!-- END REF --> na caixa de correio selecionada no momento.
 
-In the *startMsg* parameter, pass an integer value corresponding to the number of the first message in a sequential range. If you pass a negative number (*startMsg* <= 0), the first message of the mailbox will be used as the beginning of the sequence.
+No parâmetro startMsg , passe um valor <em x-id="3">inteiro</em> correspondente ao número da primeira mensagem num intervalo sequencial. Se você passar um número negativo (*startMsg* <= 0), a primeira mensagem da caixa de correio será usada como o início da sequência.
 
-In the *endMsg* parameter, pass an integer value corresponding to the number of the last message to be included in a sequential range. If you pass a negative number (*endMsg* <= 0), the last message of the mailbox will be used as the end of the sequence.
+No parâmetro endMsg, passe um valor inteiro correspondente ao número da última mensagem a ser incluída num intervalo sequencial. Se você passar um número negativo (*endMsg* <= 0), a última mensagem da caixa de correio será usada como o fim da sequência.
 
 #### Resultados
 
@@ -1389,19 +1389,19 @@ A função devolve uma colecção de cordas (identificações únicas).
 
 #### Descrição
 
-The `.removeFlags()` function <!-- REF #IMAPTransporterClass.removeFlags().Summary -->removes flags from the `msgIDs` for the specified `keywords`<!-- END REF -->.
+A função `.removeFlags()` <!-- REF #IMAPTransporterClass.removeFlags().Summary -->remove os sinalizadores dos `msgIDs` para as `keywords` especificadas<!-- END REF -->.
 
 No parâmetro `msgIDs`, você pode passar qualquer um deles:
 
 - uma *colecção* contendo as identificações únicas de mensagens específicas ou
 - o ID único (*texto*) de uma mensagem ou
-- the following constant (*longint*) for all messages in the selected mailbox:
+- a seguinte constante (*longint*) para todas as mensagens na caixa de correio selecionada:
 
 | Parâmetros | Valor | Comentário                                                     |
 | ---------- | ----- | -------------------------------------------------------------- |
 | IMAP all   | 1     | Seleccione todas as mensagens na caixa de correio seleccionada |
 
-The `keywords` parameter lets you define the flags to remove from `msgIDs`. Pode passar qualquer uma das seguintes palavras-chave:
+O parâmetro `keywords` permite que você defina os sinalizadores a serem removidos dos `msgIDs`. Pode passar qualquer uma das seguintes palavras-chave:
 
 | Parâmetro       | Tipo       | Descrição                                          |
 | --------------- | ---------- | -------------------------------------------------- |
@@ -1412,7 +1412,7 @@ The `keywords` parameter lets you define the flags to remove from `msgIDs`. Pode
 | $deleted        | Parâmetros | True para remover a flag "deleted" na mensagem     |
 | `<custom flag>` | Parâmetros | True para remover a flag personalizada na mensagem |
 
-Please refer to [.addFlags()](#addflags) for more information on custom flags.
+Consulte [.addFlags()](#addflags) para obter mais informações sobre sinalizadores personalizados.
 
 > - Para que uma palavra-chave seja tida em conta, tem de ser true.
 
@@ -1480,11 +1480,11 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 #### Descrição
 
-The `.renameBox()` function <!-- REF #IMAPTransporterClass.renameBox().Summary -->changes the name of a mailbox on the IMAP server<!-- END REF -->. Tentar mudar o nome de uma caixa de correio de um nome de caixa de correio que não existe ou para um nome de caixa de correio que já existe irá gerar um erro.
+A função `.renameBox()` <!-- REF #IMAPTransporterClass.renameBox().Summary -->altera o nome de uma caixa de correio no servidor IMAP<!-- END REF -->. Tentar mudar o nome de uma caixa de correio de um nome de caixa de correio que não existe ou para um nome de caixa de correio que já existe irá gerar um erro.
 
-In the `currentName` parameter, pass the name of the mailbox to be renamed.
+No parâmetro `currentName`, passe o nome da caixa de correio a ser renomeada.
 
-Pass the new name for the mailbox in the `newName` parameter.
+Passe o novo nome da caixa de correio no parâmetro `newName`.
 
 **Objeto devolvido**
 
@@ -1558,11 +1558,11 @@ End if
 
 #### Descrição
 
-> This function is based upon the specification for the [IMAP protocol](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
+> Essa função é baseada na especificação do [protocolo IMAP] (https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
 
-The `.searchMails()` function <!-- REF #IMAPTransporterClass.searchMails().Summary -->searches for messages that match the given *searchCriteria* in the current mailbox<!-- END REF -->. *searchCriteria* consists of one or more search keys.
+A função `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->procura por mensagens que correspondam aos *searchCriteria* fornecidos na caixa de correio atual<!-- END REF -->. O *searchCriteria* consiste em uma ou mais chaves de pesquisa.
 
-*searchCriteria* is a text parameter listing one or more search keys (see [Authorized search-keys](#authorized-search-keys) below) associated or not with values to look for. Uma chave de pesquisa pode ser um único ou vários itens. Por exemplo:
+*searchCriteria* é um parâmetro de texto que lista uma ou mais chaves de pesquisa (consulte [Authorized search-keys](#authorized-search-keys) abaixo) associadas ou não a valores a serem procurados. Uma chave de pesquisa pode ser um único ou vários itens. Por exemplo:
 
 ```
 SearchKey1 = FLAGGED SearchKey2 = NOT FLAGGED SearchKey3 = FLAGGED DRAFT
@@ -1570,14 +1570,14 @@ SearchKey1 = FLAGGED SearchKey2 = NOT FLAGGED SearchKey3 = FLAGGED DRAFT
 
 > A correspondência não é normalmente sensível a maiúsculas e minúsculas
 
-- If the *searchCriteria* is a null string, the search will be equivalent to a “select all”.
-- If the *searchCriteria* includes multiple search keys, the result is the intersection (AND function) of all the messages that match those keys.
+- Se o *searchCriteria* for uma cadeia de caracteres nula, a pesquisa será equivalente a um "seleccionar tudo".
+- Se o *searchCriteria* incluir várias chaves de pesquisa, o resultado será a interseção (função AND) de todas as mensagens que correspondem a essas chaves.
 
 ```
 searchCriteria = FLAGGED FROM "SMITH"
 ```
 
-... returns all messages with \Flagged flag set AND sent by Smith.
+... devolve todas as mensagens com o conjunto de bandeiras sinalizadas E enviadas por Smith.
 
 - Você pode usar os operadores **OR** ou **NOT** da seguinte forma:
 
@@ -1597,17 +1597,17 @@ searchCriteria = NOT SEEN
 searchCriteria = HEADER CONTENT-TYPE "MIXED" NOT HEADER CONTENT-TYPE "TEXT"...
 ```
 
-... returns message whose content-type header contains “Mixed” and does not contain “Text”.
+... devolve mensagem cujo cabeçalho de tipo de conteúdo contém "Mixed" e não contém "Text".
 
 ```
 searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE "MIXED"
 ```
 
-... returns message whose content-type header contains “ e ” and whose Subject header does not contain “ o ” and whose content-type header is not “ Mixed ”.
+... retorna mensagem cujo cabeçalho do tipo de conteúdo contém " e " e cujo cabeçalho do tipo de conteúdo não contém " o " e cujo cabeçalho do tipo de conteúdo não é " Mixed ".
 
 No que diz respeito aos dois últimos exemplos, note que o resultado da pesquisa é diferente quando se remove os parênteses da primeira lista de chaves de pesquisa.
 
-- A *searchCriteria* pode incluir a especificação opcional \[CHARSET]. Esta consiste na palavra "CHARSET" seguida de uma palavra registada \[CHARSET] (US ASCII, ISO-8859). It indicates the charset of the *searchCriteria* string. Therefore, you must convert the *searchCriteria* string into the specified charset if you use the \[CHARSET] specification (see the `CONVERT FROM TEXT` or `Convert to text` commands).
+- A *searchCriteria* pode incluir a especificação opcional \[CHARSET]. Esta consiste na palavra "CHARSET" seguida de uma palavra registada \[CHARSET] (US ASCII, ISO-8859). Indica o conjunto de caracteres da string *searchCriteria*. Portanto, você deve converter a cadeia de caracteres *searchCriteria* no conjunto de caracteres especificado se usar a especificação \[CHARSET] (consulte os comandos `CONVERT FROM TEXT` ou `Convert to text`).
   Como padrão, os códigos 4D em Quotable Printable the searchCriteria string se conter caracteres estendidos
 
 ```
@@ -1620,24 +1620,24 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 As chaves de pesquisa podem solicitar o valor a pesquisar:
 
-- **Search-keys with a date value**: the date is a string that must be formatted as follows: *date-day+"-"+date-month+"-"+date-year* where date-day indicates the number of the day of the month (max. 2 characters), date-month indicates the name of the month (Jan/Feb/Mar/Apr/May/Jun/Jul/Aug/Sep/Oct/Dec) and date-year indicates the year (4 characters).
-  Example: `searchCriteria = SENTBEFORE 1-Feb-2020` (a date does not usually need to be quoted since it does not contain any special characters)
+- **Chaves de pesquisa com um valor de data**: a data é uma cadeia de caracteres que deve ser formatada da seguinte forma: *date-day+"-"+date-month+"-"+date-year* em que date-day indica o número do dia do mês (máximo de 2 caracteres), date-month indica o nome do mês (jan/fev/mar/abr/mai/jun/jul/ago/set/out/dez) e date-year indica o ano (4 caracteres).
+  Exemplo: `searchCriteria = SENTBEFORE 1-Feb-2020` (uma data geralmente não precisa ser colocada entre aspas, pois não contém nenhum caractere especial)
 
-- **Search-keys with a string value**: the string may contain any character and must be quoted. Se a string não conter quaisquer caracteres especiais, como o carácter espacial, por exemplo, não precisa de ser citada. A citação de tais strings assegurará que o seu valor de strings será interpretado correctamente.
-  Example: `searchCriteria = FROM "SMITH"`
-  For all search keys that use strings, a message matches the key if the string is a substring of the field. A correspondência não é sensível a maiúsculas e minúsculas.
+- **Search-keys with a string value**: a string pode conter qualquer caractere e deve estar entre aspas. Se a string não conter quaisquer caracteres especiais, como o carácter espacial, por exemplo, não precisa de ser citada. A citação de tais strings assegurará que o seu valor de strings será interpretado correctamente.
+  Exemplo: `searchCriteria = FROM "SMITH"`
+  Para todas as chaves de pesquisa que usam cadeias de caracteres, uma mensagem corresponde à chave se a cadeia de caracteres for uma subcadeia do campo. A correspondência não é sensível a maiúsculas e minúsculas.
 
-- **Search-keys with a field-name value**: the field-name is the name of a header field.
-  Example: `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
+- \*\*Pesquisa-chaves com um valor de nome de campo: o nome de campo é o nome de um campo de cabeçalho.
+  Exemplo: `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
 
-- **Search-keys with a flag value**: the flag may accept one or several keywords (including standard flags), separated by spaces.
-  Example: `searchCriteria = KEYWORD \Flagged \Draft`
+- **Search-keys com um valor de sinalizador**: o sinalizador pode aceitar uma ou várias palavras-chave (incluindo sinalizadores padrão), separadas por espaços.
+  Exemplo: `searchCriteria = KEYWORD \Flagged \Draft`
 
 - **Pesquisa-chaves com um valor de conjunto de mensagens**: identifica um conjunto de mensagens. Para números de sequência de mensagens, estes são números consecutivos de 1 até ao número total de mensagens na caixa de correio. Uma vírgula delimita números individuais; uma vírgula delimita entre dois números, inclusive.
-  Examples:
-  `2,4:7,9,12:*` is `2,4,5,6,7,9,12,13,14,15` for a mailbox with 15 messages.
-  `searchCriteria = 1:5 ANSWERED` search in message selection from message sequence number 1 to 5 for messages which have the \Answered flag set.
-  `searchCriteria= 2,4 ANSWERED` search in the message selection (message numbers 2 and 4) for messages which have the \Answered flag set.
+  Exemplos:
+  `2,4:7,9,12:*` é `2,4,5,6,7,9,12,13,14,15` para uma caixa postal com 15 mensagens.
+  `searchCriteria = 1:5 ANSWERED` pesquisa na seleção de mensagens do número de sequência de mensagens 1 a 5 para mensagens que têm o sinalizador \Respondido definido.
+  `searchCriteria= 2,4 ANSWERED` pesquisa na seleção de mensagens (números de mensagem 2 e 4) as mensagens que têm o sinalizador \Respondido definido.
 
 #### Chaves de pesquisa autorizadas
 
@@ -1655,27 +1655,27 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 **SEEN**: mensagens que têm o sinalizador \Seen ativo.\
 **UNSEEN**: Mensagens que não possuem o indicador \Seen definido.\
 **NEW**: mensagens que tenham o indicador \Recent definido, mas não o indicador\Seen. Isso é funcionalmente equivalente a "(RECENT UNSEEN)".\
-**KEYWORD *flag***: Messages with the specified keyword set.\
+**KEYWORD *flag***: Mensagens com o conjunto de palavras-chave especificado.\
 **UNKEYWORD *flag***: mensagens que não têm a palavra-chave especificada.\
-**BEFORE *date***: Messages whose internal date is earlier than the specified date.\
-**ON *date***: Messages whose internal date is within the specified date.\
-**SINCE *date***: Messages whose internal date is within or later than the specified date.\
-**SENTBEFORE *date***: Messages whose Date header is earlier than the specified date.\
-**SENTON *date***: Messages whose Date header is within the specified date.\
-**SENTSINCE *date***: Messages whose Date header is within or later than the specified date.\
-**TO *string***: Messages that contain the specified string in the TO header.\
+**BEFORE *date***: Mensagens cuja data interna é anterior à data especificada.\
+**ON *date***: Mensagens cuja data interna está dentro da data especificada.\
+**SINCE *date***: Mensagens cuja data interna está dentro da data especificada ou é posterior a ela.\
+**SENTBEFORE *data***: Mensagens cujo cabeçalho de data é anterior à data especificada.\
+**SENTON *date***: Mensagens cujo cabeçalho de Data está dentro da data especificada.\
+**SENTSINCE *data***: Mensagens cujo cabeçalho de data está dentro ou posterior à data especificada.\
+**TO *string***: Mensagens que contêm a string especificada no cabeçalho TO.\
 **FROM *string***: mensagens que contêm a string especificada no cabeçalho FROM.\
-**CC *string***: Messages that contain the specified string in the CC header.\
+**CC *string***: Mensagens que contenham a seqüência de caracteres especificada no cabeçalho CC.\
 **BCC *string***: mensagens que contêm a string especificada no cabeçalho BCC.\
-**SUBJECT *string***: Messages that contain the specified string in the Subject header.\
-**BODY *string***: Messages that contain the specified string in the message body.\
-**TEXT *string***: Messages that contain the specified string in the header or in the message body.\
-**HEADER *field-name* *string***: Messages that have a header with the specified field-name and that contain the specified string in the field-body.\
-**UID *message-UID***: Messages with unique identifiers corresponding to the specified unique identifier set.\
+**SUBJECT *string***: Mensagens que contêm a string especificada no cabeçalho Subject.\
+**BODY *string***: Mensagens que contêm a string especificada no corpo da mensagem.\
+**TEXT *string***: Mensagens que contêm a string especificada no cabeçalho ou no corpo da mensagem.\
+**HEADER *nome-do-campo* *string***: Mensagens que possuem um cabeçalho com o nome do campo especificado e que contêm a string especificada no corpo-campo.\
+**UID *message-UID***: Mensagens com identificadores exclusivos correspondentes ao identificador exclusivo especificado.\
 **LARGER *n***: mensagens com tamanho maior do que o número de bytes especificado.\
 **SMALLER *n***: mensagens com tamanho menor do que o número de bytes especificado.\
-**NOT *search-key***: Messages that do not match the specified search key.\
-**OR *search-key1* *search-key2***: Messages that match either search key.
+**NOT *chave de pesquisa***: Mensagens que não correspondem à chave de pesquisa especificada.\
+**OR *search-key1* *search-key2***: Mensagens que correspondem a uma das chaves de pesquisa.
 
 <!-- END REF -->
 
@@ -1706,26 +1706,26 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 
 #### Descrição
 
-The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -->selects the *name* mailbox as the current mailbox<!-- END REF -->. Essa função permite que recupere informação sobre o mailbox.
+A função `.selectBox()` <!-- REF #IMAPTransporterClass.selectBox().Summary -->seleciona a caixa de correio *name* como a caixa de correio atual<!-- END REF -->. Essa função permite que recupere informação sobre o mailbox.
 
-> To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
+> Para obter as informações de uma caixa de correio sem alterar a caixa de correio actual, utilize [`.getBoxInfo()`](#getboxinfo).
 
-No parâmetro *name*, passar o nome da caixa de correio para aceder. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
+No parâmetro *name*, passar o nome da caixa de correio para aceder. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. O delimitador pode ser encontrado com a [`.getDelimiter()`](#getdelimiter) função.
 
-The optional *state* parameter defines the type of access to the mailbox. Os valores possíveis são:
+O parâmetro opcional *state* define o tipo de acesso à caixa de correio. Os valores possíveis são:
 
 | Parâmetros            | Valor | Comentário                                                                                                                                                                                                                                                             |
 | --------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | IMAP read only state  | 1     | A caixa de correio seleccionada é acedida com privilégios apenas de leitura. As mensagens com uma flag "recente" (indicando novas mensagens) permanecem inalteradas.                                                |
 | IMAP read write state | 0     | A caixa de correio seleccionada é acedida com privilégios de leitura e escrita. As mensagens são consideradas "vistas" e perdem o marcador "recente" (indicando novas mensagens). (Valor padrão) |
 
-> - The function generates an error and returns **Null** if *name* designates a non-existing mailbox.
-> - If there is no open connection, `.selectBox()` will open a connection.
-> - If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the [`.checkConnection()`](#checkconnection) function is automatically called.
+> - A função gera um erro e retorna **Null** se *name* designar uma caixa de correio inexistente.
+> - Se não houver uma conexão aberta, `.selectBox()` abrirá uma conexão.
+> - Se a conexão não tiver sido usada desde o atraso de conexão designado (veja `IMAP New transporter`), a função [`.checkConnection()`](#checkconnection) será automaticamente chamada.
 
 **Objeto devolvido**
 
-The `boxInfo` object returned contains the following properties:
+O objeto `boxInfo` retornado contém as seguintes propriedades:
 
 | Propriedade    | Tipo   | Descrição                                                                                                                                                   |
 | -------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1738,7 +1738,7 @@ The `boxInfo` object returned contains the following properties:
 
 :::info
 
-If `permanentFlags` string includes the special flag \*, it means that the server supports [custom flags](#addflags).
+Se a cadeia de caracteres `permanentFlags` incluir o sinalizador especial \*, isso significa que o servidor oferece suporte a [sinalizadores personalizados] (#addflags).
 
 :::
 
@@ -1783,9 +1783,9 @@ If `permanentFlags` string includes the special flag \*, it means that the serve
 
 #### Descrição
 
-The `.subscribe()` function <!-- REF #IMAPTransporterClass.subscribe().Summary -->allows adding or removing of the specified mailbox to/from the IMAP server’s set of “subscribed” mailboxes<!-- END REF -->. Como tal, pode optar por restringir uma grande lista de caixas de correio disponíveis, subscrevendo as que normalmente deseja ver.
+A função `.subscribe()` <!-- REF #IMAPTransporterClass.subscribe().Summary -->permite adicionar ou remover a caixa de correio especificada do conjunto de caixas de correio "inscritas" do servidor IMAP<!-- END REF -->. Como tal, pode optar por restringir uma grande lista de caixas de correio disponíveis, subscrevendo as que normalmente deseja ver.
 
-In the `name` parameter, pass the name of the mailbox to add (subscribe) to your "subscribed" mailboxes.
+No parâmetro `nome`, passe o nome da caixa de correio para adicionar (inscrever) para suas caixas de correio "inscritas".
 
 **Objeto devolvido**
 

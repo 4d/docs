@@ -17,12 +17,12 @@ Puedes gestionar los datos con los [métodos](Concepts/methods.md) objeto o form
 
 ```4d
 	"myText": {
-		"type": "input",	//define the type of object
-		"spellcheck": true,	//enable spelling verification
-		"left": 60,			//left position on the form  
-		"top": 160,			//top position on the form 
-		"width": 100,		//width of the object
-		"height": 20		//height of the object
+		"type": "input",	//definir el tipo de objeto
+		"spellcheck": true,	//activar la verificación ortográfica
+		"left": 60,			//posición izquierda en el formulario
+		"top": 160,			//posición superior en el formulario	
+		"width": 100,		//ancho del objeto
+		"height": 20		//altura del objeto
 		}
 ```
 

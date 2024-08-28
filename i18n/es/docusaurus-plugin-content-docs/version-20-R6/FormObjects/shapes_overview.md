@@ -94,13 +94,13 @@ Un óvalo estático es un objeto decorativo para los formularios. Los objetos ov
 
 ```4d
 	"myOval": {
-		"type": "oval",		//define the type of object
-		"left": 60,			//left position on the form  
-		"top": 160,			//top position on the form 
-		"width": 100,		//width of the object
-		"height": 20,		//height of the object
-		"fill": "blue"		//define the background color
-                }
+		"type": "oval", //definir el tipo de objeto
+		"left": 60, //posición izquierda en el formulario  
+		"top": 160, //posición superior en el formulario 
+		"width": 100, //ancho del objeto
+		"height": 20, //altura del objeto
+		"fill": "blue" //definir el color de fondo
+}
 ```
 
 #### Propiedades soportadas

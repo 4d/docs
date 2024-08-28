@@ -445,25 +445,25 @@ Clique no botão de alternância **v** no lado esquerdo da área *Search* para e
 
 A área de entrada *Replace* é usada para definir a cadeia de caracteres que substituirá a definida acima.
 
-Clique no botão **Replace** para iniciar a pesquisa com todas as opções definidas e substituir a primeira ocorrência encontrada. 4D begins searching from the current text insertion point and continues to the end of the method. É possível então continuar encontrando/substituindo usando os comandos **Substituir Próximo** e **Substituir o anterior** do menu [**Editar**](#atalhos).
+Clique no botão **Replace** para iniciar a pesquisa com todas as opções definidas e substituir a primeira ocorrência encontrada. 4D começa a pesquisar a partir do ponto de inserção de texto atual e continua até o final do método. É possível então continuar encontrando/substituindo usando os comandos **Substituir Próximo** e **Substituir o anterior** do menu [**Editar**](#atalhos).
 
 Clique no botão **Replace all** para substituir todas as ocorrências correspondentes aos critérios de pesquisa diretamente no método aberto.
 
 ### Encontrar o mesmo
 
-O comando **Find Same** é usado para localizar cadeias de caracteres idênticas à selecionada. This command is only active if you have selected at least one character in the Code Editor.
+O comando **Find Same** é usado para localizar cadeias de caracteres idênticas à selecionada. Esse comando só estará ativo se você tiver selecionado pelo menos um caractere no Code Editor.
 
-The search carried out is of the "Find Next" type in the current code editor window.
+A pesquisa realizada é do tipo "Localizar próximo" na janela atual do editor de código.
 
 Os comandos **Find Same Next** e **Find Same Previous** são usados para localizar cadeias de caracteres *estritamente* idênticas às selecionadas. Por exemplo, as maiúsculas e minúsculas devem corresponder.
 
 ### Marcar tudo
 
-O comando **Editar > Marcar tudo** é ativado quando uma pesquisa já tiver sido especificada na caixa de diálogo localizar ou substituir. When you select this command, 4D puts a bookmark at each line that contains an item corresponding to the "current" search criteria. Deste modo, é fácil identificar todos os resultados da pesquisa. Para obter mais informações sobre marcadores, consulte [Marcadores](#marcadores).
+O comando **Editar > Marcar tudo** é ativado quando uma pesquisa já tiver sido especificada na caixa de diálogo localizar ou substituir. Quando você seleciona esse comando, 4D coloca um marcador em cada linha que contém um item correspondente aos critérios de pesquisa "atuais". Deste modo, é fácil identificar todos os resultados da pesquisa. Para obter mais informações sobre marcadores, consulte [Marcadores](#marcadores).
 
 ## Avisos e erros
 
-Thanks to the 4D Code Live Checker, the syntax, consistency, and structure of the entered code are automatically checked in order to prevent execution errors. For example, the Code Live Checker can detect that a right parenthesis is missing or that you used an unknown dataclass attribute.
+Graças ao 4D Code Live Checker, a sintaxe, a consistência e a estrutura do código inserido são verificadas automaticamente para evitar erros de execução. Por exemplo, o Code Live Checker pode detectar a falta de um parêntese à direita ou o uso de um atributo de classe de dados desconhecido.
 
 O Code Live Checker é ativado em três níveis:
 
@@ -471,31 +471,31 @@ O Code Live Checker é ativado em três níveis:
 - quando você [verifica a sintaxe](../Project/compiler.md#check-syntax) no compilador,
 - quando você [compila](../Project/compiler.md) o projeto.
 
-4D verifica automaticamente a sintaxe do código para ver se está correta. If you enter text or select a component that is not correct, 4D displays a symbol to indicate the incorrect expression.
+4D verifica automaticamente a sintaxe do código para ver se está correta. Se você inserir um texto ou selecionar um componente que não esteja correto, o 4D exibirá um símbolo para indicar a expressão incorreta.
 
 Dois tipos de símbolos são exibidos:
 
 - **[warnings](../Project/compiler.md#warnings)** ![warning](../assets/en/code-editor/incorrect-expression-icon.png): Warnings are intended to draw your attention to statements that might lead to execution errors. Não impedem a compilação.
 - **errors**![error](../assets/en/code-editor/error-icon.png): erros são anomalias que impedem que o código seja executado corretamente. Eles devem ser corrigidos, caso contrário o projeto não será compilado.
 
-When you move the mouse over the symbol, a help tip displays the cause of the error:
+Quando você passa o mouse sobre o símbolo, uma dica de ajuda exibe a causa do erro:
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
-O Verificador de código ao vivo é ativado enquanto você insere o código. When a line of a method, class or function is marked as having improper syntax, check and fix the entry. Se a linha estiver correta, 4D removerá o símbolo de erro. Quando salvar ou fechar a janela, todo o método é validado.
+O Verificador de código ao vivo é ativado enquanto você insere o código. Quando uma linha de um método, classe ou função for marcada como tendo sintaxe inadequada, verifique e corrija a entrada. Se a linha estiver correta, 4D removerá o símbolo de erro. Quando salvar ou fechar a janela, todo o método é validado.
 
-Você pode formatar a linha atual (sem avançar para a próxima linha) pressionando a tecla **Enter** no teclado numérico. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line.
+Você pode formatar a linha atual (sem avançar para a próxima linha) pressionando a tecla **Enter** no teclado numérico. 4D avalia a linha, formata, marca qualquer erro e coloca o ponto de inserção no final da linha.
 
 O Code Live Checker verifica se:
 
 - erros básicos de sintaxe (operadores errados, erros de ortografia e similares)
 - a estrutura das declarações (`If`, `End if` e assim por diante)
-- matching enclosing characters in the code such as parentheses or brackets (see tip below)
-- the calls of attributes and functions according to your model (ORDA) and user class definitions. For example, the Code Live Checker generates an error when a call to a dataclass computed attribute is not compatible with the declared computed attribute type.
+- correspondência de caracteres de fechamento no código, como parênteses ou colchetes (veja a dica abaixo)
+- as chamadas de atributos e funções de acordo com seu modelo (ORDA) e definições de classe de usuário. Por exemplo, o Code Live Checker gera um erro quando uma chamada para um atributo computado de classe de dados não é compatível com o tipo de atributo computado declarado.
 
 :::tip
 
-When you type an enclosing character, 4D indicates the match by framing the start/end characters with gray rectangles by default:
+Quando você digita um caractere de fechamento, 4D indica a correspondência enquadrando os caracteres de início/fim com retângulos cinza por padrão:
 
 ![](../assets/en/code-editor/matching-enclosing-characters.png)
 
@@ -503,7 +503,7 @@ Você pode modificar a forma como o 4D indica os caracteres correspondentes ou d
 
 :::
 
-The Code Live Checker cannot detect some errors that only occur during execution. Erros de execução são capturados por 4D quando o código é executado. No entanto, lembre-se de que o [compiler](../Project/compiler.md) também fornece ajuda indispensável para a detecção de erros.
+O Code Live Checker não consegue detectar alguns erros que ocorrem somente durante a execução. Erros de execução são capturados por 4D quando o código é executado. No entanto, lembre-se de que o [compiler](../Project/compiler.md) também fornece ajuda indispensável para a detecção de erros.
 
 ## Dicas de ajuda
 
@@ -526,7 +526,7 @@ A [barra de status](#status-bar) também fornece informações contextuais.
 - **Métodos ou funções do projeto**: Quando você passa o mouse sobre um método de projeto ou função de classe, uma dica de ajuda é exibida:
 
   - ou os comentários especificados no Explorador.
-  - ou as primeiras linhas da função do método ou da classe, se ela incluir comentários (linhas que começam com // ou /*...*/ bloco de comentários). It is common practice to insert documentation for the method as well as its parameters in the form of comments at the beginning of the method. You can get this information directly in the help tip, just make sure to first remove any comments found in the Explorer.
+  - ou as primeiras linhas da função do método ou da classe, se ela incluir comentários (linhas que começam com // ou /*...*/ bloco de comentários). É prática comum inserir documentação para o método, assim como seus parâmetros, na forma de comentários no início do método. Você pode obter essa informação diretamente na gorjeta de ajuda, apenas certifique-se de remover primeiro quaisquer comentários encontrados no Explorer.
     Comentários no início de um método:
     ![](../assets/en/code-editor/comments-method.png)
     Dica de ajuda em outro método:
@@ -536,7 +536,7 @@ A [barra de status](#status-bar) também fornece informações contextuais.
 
 ## Comentar / Não comentar
 
-A linguagem 4D suporta [comentários](../Concepts/quick-tour.md#comments), que são linhas de código inativas. O editor de código não aplica nenhum estilo específico nos comentários. The length of comments is limited to the maximum size of 32,000 characters per line.
+A linguagem 4D suporta [comentários](../Concepts/quick-tour.md#comments), que são linhas de código inativas. O editor de código não aplica nenhum estilo específico nos comentários. O comprimento dos comentários é limitado ao tamanho máximo de 32.000 caracteres por linha.
 
 Há dois tipos de comentários: `//comment` (comentário de linha única) e `/*comment*/` (comentários em linha ou blocos de comentários de várias linhas).
 
@@ -550,7 +550,7 @@ Quando a seleção contém apenas código ativo, o comando **Comentário** é ap
 
 ## Expandir / Recolher
 
-4D code located inside loops and conditions can now be collapsed or expanded, in order to facilitate the reading of methods:
+O código 4D localizado dentro de loops e condições agora pode ser recolhido ou expandido, para facilitar a leitura dos métodos:
 
 - Código expandido:
   ![](../assets/en/code-editor/expanded-code.png)
@@ -558,13 +558,13 @@ Quando a seleção contém apenas código ativo, o comando **Comentário** é ap
 - Código recolhido:
   ![](../assets/en/code-editor/collapsed-code.png)
 
-If you place the mouse over the expand button [...], a help tip appears, displaying the first lines of the hidden code.
+Se você posicionar o mouse sobre o botão de expansão [...], uma dica de ajuda aparece, exibindo as primeiras linhas do código oculto.
 
-A collapsed portion of code can be selected, copied, pasted or deleted. Todas as linhas incluídas nesse documento serão copiadas, coladas ou excluídas, respectivamente. Quando uma parte do código é colada, é automaticamente expandida.
+Uma porção colapsada de código pode ser selecionada, copiada, colada ou excluída. Todas as linhas incluídas nesse documento serão copiadas, coladas ou excluídas, respectivamente. Quando uma parte do código é colada, é automaticamente expandida.
 
 Existem várias formas de expandir e recolher código:
 
-- Click on the expand/collapse icons ([+] and [-] under Windows) or on the opening button [...]
+- Clique nos ícones de expansão/colapso ([+] e [-] no Windows) ou no botão de abertura [...]
 - Use os comandos do submenu **Method > Collapse/Expand**:
 
   - **Recolher Seleção** / **Expandir Seleção**: recolhe ou expande todas as estruturas de código encontradas na seleção de texto.
@@ -584,7 +584,7 @@ Os blocos podem ser definidos por:
 
 A função **Select Enclosing Block** é usada para selecionar o "bloco envolvente" do código que contém o ponto de inserção.
 
-If a block of text is already selected, the function selects the enclosing block of the next highest level and so on, until the entire method is selected.
+Se um bloco de texto já estiver selecionado, a função seleciona o bloco que o envolve com o nível superior seguinte e assim por diante, até que o método inteiro seja selecionado.
 
 Pressionar **Ctrl+Shift+B** (Windows) ou **Command+Shift+B** (macOS) permite reverter essa operação e desmarcar o último bloco selecionado.
 
@@ -604,17 +604,17 @@ Esses comandos são encontrados no menu **Méto** e no menu de contexto do edito
 
 ## Marcadores
 
-4D permite que você associe marcadores a certas linhas em seus métodos. You can then browse quickly within the code by passing from one bookmark to another using specific commands.
+4D permite que você associe marcadores a certas linhas em seus métodos. Você pode navegar rapidamente dentro do código passando de um favorito para outro usando comandos específicos.
 
 ![](../assets/en/code-editor/bookm.png)
 
-A bookmark moves along with its original row if additional rows are inserted in the method. Os marcadores são guardados com os métodos.
+Um favorito se move junto com sua linha original se linhas adicionais forem inseridas no método. Os marcadores são guardados com os métodos.
 
 Os marcadores são gerenciados usando o submenu **Bookmarks** do menu **Method**:
 
 - **Alternar**: Associa um favorito com a linha atual (onde o cursor está localizado) se ele ainda não tiver um ou remover o favorito existente se o fizer. Essa função também está disponível usando o comando **Toggle Bookmark** do menu de contexto do editor ou usando o atalho de teclado **Ctrl+F3** (Windows) ou **Command+F3** (macOS).
 - **Remover tudo**: Remove todos os favoritos da janela em primeiro plano.
-- **Para o próximo** / **Para o anterior**: Permite a navegação entre os marcadores na janela. Selecting one of these commands places the cursor on the first character of the line associated with the bookmark concerned. Você também pode usar os atalhos de teclado **F3** (ir para o próximo) ou **Shift+F3** (ir para o anterior).
+- **Para o próximo** / **Para o anterior**: Permite a navegação entre os marcadores na janela. Selecionar um desses comandos coloca o cursor sobre o primeiro caractere da linha associada ao marcador em questão. Você também pode usar os atalhos de teclado **F3** (ir para o próximo) ou **Shift+F3** (ir para o anterior).
 
 :::info
 
@@ -628,7 +628,7 @@ O comando **Revelar no Explorer...** abre uma janela do Explorer com o elemento 
 
 ## Pesquisar chamadores
 
-O comando **Search Callers** no menu **Method** só é ativado para métodos de projeto. It searches for all the objects (other methods or menus) that reference the project method.
+O comando **Search Callers** no menu **Method** só é ativado para métodos de projeto. Ele procura todos os objetos (outros métodos ou menus) que fazem referência ao método do projeto.
 
 **Nota:** O comando **Pesquisar Chamadores...** também está disponível em **Explorador** > **Métodos**
 
@@ -646,7 +646,7 @@ Essa funcionalidade também está disponível através do atalho de teclado **Ct
 
 O efeito do comando **Ir a Definição...** varia dependendo do elemento de destino:
 
-- with a project method, it displays the contents of the method in a new window of the Code Editor
+- com um método de projeto, ele exibe o conteúdo do método em uma nova janela do Editor de Código
 - com um nome de classe ou função classe, ele abre a classe no Editor de código
 - com um comando ou função 4D integrado, ele tem o mesmo efeito que o comando [**Mostrar documentação**](#show-documentation).
 
@@ -660,7 +660,7 @@ O comando **Mostrar documentação...** abre a documentação do elemento de des
 
 :::tip
 
-Para exibir a documentação de um comando da linguagem "clássica" do 4D, selecione o nome do comando ou simplesmente coloque o cursor no nome e pressione **F1**. The documentation of the command is displayed in a new window of your default browser. O 4D procura a documentação dependendo das configurações feitas nas Preferências (consulte [Local da documentação](../Preferences/general.md#documentation-location)).
+Para exibir a documentação de um comando da linguagem "clássica" do 4D, selecione o nome do comando ou simplesmente coloque o cursor no nome e pressione **F1**. A documentação do comando é exibida em uma nova janela do seu navegador padrão. O 4D procura a documentação dependendo das configurações feitas nas Preferências (consulte [Local da documentação](../Preferences/general.md#documentation-location)).
 
 :::
 
@@ -668,7 +668,7 @@ Para exibir a documentação de um comando da linguagem "clássica" do 4D, selec
 
 O comando **Search References...** encontrado no menu **Method** ou no menu de contexto do Editor de código localiza todos os objetos (métodos e formulários) no projeto em que o item atual do método é referenciado (usado).
 
-The current item is either the one selected or the one where the cursor is located. Pode ser um nome de campo, nome de variável, comando, cadeia de caracteres e assim por diante. Por exemplo, a ação a seguir procura todas as ocorrências da variável *vlNbCmd* no banco de dados:
+O item atual é aquele selecionado ou aquele em que o cursor está localizado. Pode ser um nome de campo, nome de variável, comando, cadeia de caracteres e assim por diante. Por exemplo, a ação a seguir procura todas as ocorrências da variável *vlNbCmd* no banco de dados:
 
 ![find-dialog](../assets/en/code-editor/search-references.png)
 

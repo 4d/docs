@@ -629,7 +629,7 @@ El comando **Revelar en el Explorador...** abre una ventana del Explorador con e
 
 El comando **Buscar los llamantes** del menú **Método** solo está habilitado para métodos proyecto. Busca todos los objetos (otros métodos o menús) que hacen referencia al método proyecto.
 
-Selecting the **Find...** command displays the following dialog box:
+**Nota:** el comando **buscar llamantes...** también está disponible en **Explorador** > **Métodos**
 
 Este comando muestra sus resultados en una nueva ventana.
 
