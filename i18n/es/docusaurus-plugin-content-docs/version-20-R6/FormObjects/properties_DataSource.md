@@ -259,7 +259,7 @@ Se pueden utilizar todas las tablas de la base de datos, independientemente de s
 Esta propiedad está disponible en las siguientes condiciones:
 
 - una [lista de selección](#choice-list) está asociada al objeto
-- for [inputs](input_overview.md) and [list box columns](listbox_overview.md#list-box-columns), a [required list](properties_RangeOfValues.md#required-list) is also defined for the object (both options should use usually the same list), so that only values from the list can be entered by the user.
+- para [entradas](input_overview.md) y [columnas list box](listbox_overview.md#columnas-de-list-box), también se define una [lista requerida](properties_RangeOfValues.md#lista-requerida) para el objeto (ambas opciones deben usar normalmente la misma lista), de modo que solo se puedan ingresar valores de la lista por parte del usuario.
 
 Esta propiedad especifica, en el contexto de un campo o variable asociado a una lista de valores, el tipo de contenido a guardar:
 
