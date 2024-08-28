@@ -3,72 +3,72 @@ id: gettingStarted
 title: Développement Web
 ---
 
-This "Getting started" section is geared at first-time users who want an overall overview on how to go from zero to a 4D website that handles data from the database. Let's start!
+Cette section d'initiation est destinée aux nouveaux utilisateurs qui souhaitent avoir une vue d'ensemble sur la façon de créer à partir de rien un site Web 4D qui gère des données provenant de la base. C'est parti !
 
 ## Hello World Example
 
-Let's start by making the web server send "Hello World" to the browser. The most simple way to do this is to create a project, start the web server and write a small code that returns a text in the `On Web Connection` database method.
+Commençons par faire en sorte que le serveur web envoie "Hello World" au navigateur. La manière la plus simple de faire cela est de créer un projet, démarrer le serveur web et écrire un petit code qui retourne un texte dans la méthode base `On Web Connection`.
 
-### Starting the web server
+### Démarrer le serveur web
 
-To start the 4D web server:
+Pour démarrer le Serveur Web 4D:
 
-1. Launch your 4D application and create a new, empty 4D project.
-2. In the **Run** menu, select **Start Web Server**.
+1. Lancez votre application 4D et créez un nouveau projet 4D vide.
+2. Dans le menu **Exécution**, sélectionnez **Démarrer le serveur Web**.
 
-That's all! The web server is started (you can see that the menu item has become **Stop Web Server**). It is now ready to handle requests. To check it, we'll display the default home page.
+C'est tout ! Le serveur web est démarré (vous pouvez voir que l'élément de menu est devenu **Arrêter le serveur web**). Il est maintenant prêt à traiter les requêtes. Pour le vérifier, nous allons afficher la page d'accueil par défaut.
 
-### Displaying the default home page
+### Affichage de la page home par défaut
 
-The 4D web server creates automatically a default `index.html` page in the default `WebFolder` root folder, created at the same level as the Project folder.
+Le serveur web 4D crée automatiquement une page `index.html` par défaut dans le dossier racine `WebFolder` par défaut, créé au même niveau que le dossier Project.
 
-1. Launch a web browser and connect to the web server IP address (default http port for 4D web server is 80). If the web server and the browser are on the same machine, you can select **Test Web Server** in the **Run** menu.
+1. Lancez un navigateur web et connectez-vous à l'adresse IP du serveur web (le port http par défaut pour le serveur web 4D est 80). Si le serveur web et le navigateur sont sur la même machine, vous pouvez sélectionner **Tester le serveur Web** dans le menu **Exécution**.
 
-The default home page is displayed:
+La page d'accueil par défaut est affichée :
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
-### Displaying Hello World
+### Affichage de Hello World
 
-1. Open the Explorer, display the Database Methods list and double-click on `On Web Connection`.
+1. Ouvrez l'Explorateur, affichez la liste des méthodes base et double-cliquez sur `On Web Connection`.
 
-2. Enter the following code:
+2. Saisissez le code suivant :
 
 ```4d
 Case of 
 	: ($1="/hello")
 		WEB SEND TEXT("Hello World!")
 	Else 
-		// Error 404 for example
+		// Error 404 par exemple
 End case 
 ```
 
-The [`On Web Connection`](httpRequests.md#on-web-connection) database method is called for incoming requests and receives the target URL in the `$1` parameter. This very simple code only sends the text to the browser.
+La méthode base [`On Web Connection`](httpRequests.md#on-web-connection) est appelée pour les requêtes entrantes et reçoit l'URL cible dans le paramètre `$1`. Ce code très simple envoie simplement le texte au navigateur.
 
-3. In your browser, enter the following URL:
+3. Dans votre navigateur, saisissez l'URL suivante :
 
 ```
 http://localhost/hello
 ```
 
-The web server handles the request and returns:
+Le serveur web traite la demande et renvoie :
 
 ![](../assets/en/WebServer/hello.png)
 
-## Getting data from the database
+## Obtenir des données à partir de la base
 
-Now we'll see how simple it is to get data from the database. First, we will create a table and fill it with some data.
+Maintenant, nous allons voir à quel point il est simple de récupérer des données de la base. Tout d'abord, nous allons créer une table et la remplir avec quelques données.
 
-Create a basic database with, for example, a single table containing some records:
+Créez une base de données basique avec, par exemple, une seule table contenant quelques enregistrements :
 
 ![](../assets/en/WebServer/hello2.png)
 ![](../assets/en/WebServer/hello3.png)
 
-### Displaying data in a page
+### Affichage des données dans une page
 
-The most simple solution to display data is to call a [template page](templates.md) containing tags.
+La solution la plus simple pour afficher des données est d'appeler une [page de modèle](templates.md) contenant des balises.
 
-1. Using any text editor, create a file containing the following lines:
+1. À l'aide de n'importe quel éditeur de texte, créez un fichier contenant les lignes suivantes :
 
 ```html
 <html>
@@ -81,14 +81,14 @@ The most simple solution to display data is to call a [template page](templates.
 </html>
 ```
 
-2. Name the file "friends.shtml" and save it in the **WebFolder** of your project.
-3. In your browser, enter the following URL:
+2. Nommez le fichier "friends.shtml" et enregistrez-le dans le dossier **WebFolder** de votre projet.
+3. Dans votre navigateur, saisissez l'URL suivante :
 
 ```
 http://localhost/friends.shtml
 ```
 
-`.shtml` pages are automatically processed by the web server. Your page filled with data is returned:
+Les pages `.shtml` sont automatiquement traitées par le serveur web. Votre page remplie avec les données est renvoyée :
 
 ![](../assets/en/WebServer/hello3bis.png)
 
@@ -100,7 +100,7 @@ If we not only want to _display_ data, but to _use_ it, we can use ORDA and the 
 
 ![](../assets/en/WebServer/hello5.png)
 
-2. In your browser, enter the following URL:
+2. Dans votre navigateur, saisissez l'URL suivante :
 
 ```
 http://localhost/rest/$catalog
@@ -257,7 +257,7 @@ End if
 
 ![](../assets/en/WebServer/hello0.png)
 
-4. In your browser, enter the following URL:
+4. Dans votre navigateur, saisissez l'URL suivante :
 
 ```
 http://localhost/4DACTION/login/?userID=john@4d.com&password=123
