@@ -68,37 +68,37 @@ Comme en mode BASIC, l'utilisateur doit saisir son nom et mot de passe lors de l
 
 La méthode de base de données `On Web Authentication` est chargée de gérer l'accès au moteur du serveur web. Elle est appelée par 4D ou 4D Server lorsqu'une requête HTTP dynamique est reçue.
 
-### Database method calls
+### Appels des méthodes base
 
-The `On Web Authentication` database method is automatically called when a request or processing requires the execution of some 4D code (except for REST calls). It is also called when the web server receives an invalid static URL (for example, if the static page requested does not exist).
+The `On Web Authentication` database method is automatically called when a request or processing requires the execution of some 4D code (except for REST calls). Elle est également appelée lorsque le serveur web reçoit une URL statique invalide (par exemple, si la page statique demandée n'existe pas).
 
 The `On Web Authentication` database method is therefore called:
 
-- when the web server receives a URL requesting a resource that does not exist
+- lorsque le serveur web reçoit une URL demandant une ressource qui n'existe pas
 - when the web server receives a URL beginning with `4DACTION/`, `4DCGI/`...
 - when the web server receives a root access URL and no home page has been set in the Settings or by means of the `WEB SET HOME PAGE` command
 - when the web server processes a tag executing code (e.g `4DSCRIPT`) in a semi-dynamic page.
 
 The `On Web Authentication` database method is NOT called:
 
-- when the web server receives a URL requesting a valid static page.
+- lorsque le serveur web reçoit une URL demandant une page statique valide.
 - when the web server reveives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
 
 ### Syntaxe
 
 **On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ) -> $0 : Boolean
 
-| Paramètres | Type    |    | Description                                       |
-| ---------- | ------- |:--:| ------------------------------------------------- |
-| $1         | Text    | <- | Variable URL                                      |
-| $2         | Text    | <- | HTTP headers + HTTP body (up to 32 kb limit)      |
-| $3         | Text    | <- | IP address of the web client (browser)            |
-| $4         | Text    | <- | Adresse IP du serveur                             |
-| $5         | Text    | <- | Nom d'utilisateur                                 |
-| $6         | Text    | <- | Mot de passe                                      |
-| $0         | Boolean | -> | True = request accepted, False = request rejected |
+| Paramètres | Type    |    | Description                                              |
+| ---------- | ------- |:--:| -------------------------------------------------------- |
+| $1         | Text    | <- | Variable URL                                             |
+| $2         | Text    | <- | En-têtes HTTP + Corps HTTP (jusqu'à une limite de 32 ko) |
+| $3         | Text    | <- | Adresse IP du client web (navigateur)                    |
+| $4         | Text    | <- | Adresse IP du serveur                                    |
+| $5         | Text    | <- | Nom d'utilisateur                                        |
+| $6         | Text    | <- | Mot de passe                                             |
+| $0         | Boolean | -> | True = demande acceptée, False = demande rejetée         |
 
-You must declare these parameters as follows:
+Vous devez déclarer ces paramètres de la manière suivante :
 
 ```4d
 //On Web Authentication database method
@@ -125,9 +125,9 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md#named-p
 
 The first parameter (`$1`) is the URL received by the server, from which the host address has been removed.
 
-Let’s take the example of an Intranet connection. Suppose that the IP address of your 4D Web Server machine is 123.45.67.89. The following table shows the values of $1 depending on the URL entered in the Web browser:
+Prenons l'exemple d'une connexion Intranet. Supposons que l'adresse IP de votre machine serveur Web 4D est 123.45.67.89. Le tableau suivant montre les valeurs de $1 en fonction de l'URL saisie dans le navigateur Web :
 
-| URL entered in web browser           | Value of parameter $1    |
+| URL entrée dans le navigateur web    | Valeur du paramètre $1   |
 | ------------------------------------ | ------------------------ |
 | 123.45.67.89                         | /                        |
 | <http://123.45.67.89>                | /                        |
@@ -135,38 +135,38 @@ Let’s take the example of an Intranet connection. Suppose that the IP address 
 | <http://123.45.67.89/Customers/Add>  | /Customers/Add           |
 | 123.45.67.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
-#### $2 - Header and Body of the HTTP request
+#### $2 - En-tête (header) et corps (body) de la requête HTTP
 
-The second parameter (`$2`) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your `On Web Authentication` database method as it is. Its contents will vary depending on the nature of the web browser which is attempting the connection.
+The second parameter (`$2`) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your `On Web Authentication` database method as it is. Son contenu variera en fonction de la nature du navigateur web qui tente la connexion.
 
-If your application uses this information, it is up to you to parse the header and the body. You can use the `WEB GET HTTP HEADER` and the `WEB GET HTTP BODY` commands.
-> For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Beyond this size, they are truncated by the 4D HTTP server.
+Si votre application utilise ces informations, il vous appartient d'analyser l'en-tête et le corps. You can use the `WEB GET HTTP HEADER` and the `WEB GET HTTP BODY` commands.
+> Pour des raisons de performance, la taille des données passant par le paramètre $2 ne doit pas dépasser 32 Ko. Au-delà de cette taille, ils sont tronqués par le serveur HTTP 4D.
 
-#### $3 - Web client IP address
+#### $3 - Adresse IP du client Web
 
-The `$3` parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
-> 4D returns IPv4 addresses in a hybrid IPv6/IPv4 format written with a 96-bit prefix, for example ::ffff:192.168.2.34 for the IPv4 address 192.168.2.34. For more information, refer to the [IPv6 Support](webServerConfig.md#about-ipv6-support) section.
+The `$3` parameter receives the IP address of the browser’s machine. Cette information peut vous permettre de distinguer entre les connexions intranet et internet.
+> 4D renvoie les adresses IPv4 dans un format hybride IPv6/IPv4 écrit avec un préfixe de 96 bits, par exemple ::ffff:192.168.2.34 pour l'adresse IPv4 192.168.2.34. For more information, refer to the [IPv6 Support](webServerConfig.md#about-ipv6-support) section.
 
-#### $4 - Server IP address
+#### $4 - Adresse IP du serveur
 
-The `$4` parameter receives the IP address used to call the web server. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. Pour plus d'informations, veuillez consulter la [Page Configuration](webServerConfig.md#ip-address-to-listen).
+The `$4` parameter receives the IP address used to call the web server. 4D permet le multi-homing, ce qui vous permet d'exploiter des machines avec plus d'une adresse IP. Pour plus d'informations, veuillez consulter la [Page Configuration](webServerConfig.md#ip-address-to-listen).
 
-#### $5 and $6 - User Name and Password
+#### $5 et $6 - Nom d'utilisateur et mot de passe
 
 The `$5` and `$6` parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser. This dialog box appears for each connection, if [basic](#basic-protocol) or [digest](#digest-protocol) authentication is selected.
-> If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
+> Si le nom d'utilisateur envoyé par le navigateur existe dans 4D, le paramètre $6 (le mot de passe de l'utilisateur) n'est pas renvoyé pour des raisons de sécurité.
 
-#### $0 parameter
+#### Paramètre $0
 
 The `On Web Authentication` database method returns a boolean in $0:
 
-- If $0 is True, the connection is accepted.
+- Si $0 est True, la connexion est acceptée.
 
-- If $0 is False, the connection is refused.
+- Si $0 est False, la connexion est refusée.
 
 The `On Web Connection` database method is only executed if the connection has been accepted by `On Web Authentication`.
 > **WARNING**<br/>If no value is set to $0 or if $0 is not defined in the `On Web Authentication` database method, the connection is considered as accepted and the `On Web Connection` database method is executed.
-> - * Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. The same thing will happen if an error occurs during its processing.
+> - * Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. La même chose se produira s'il y a une erreur lors de son traitement.
 
 ### Exemple
 
