@@ -210,8 +210,8 @@ Pode passar qualquer número de valores dos tipos compatíveis abaixo:
 *   date
 *   hora (armazenada como número de milissegundos - real)
 *   null
-*   shared object
-*   shared collection
+*   objeto compartido
+*   coleção compartilhada
 
 :::note
 
