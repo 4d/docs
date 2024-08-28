@@ -523,7 +523,7 @@ El soporte de ordenación estándar depende del tipo de list box:
 
 | Tipo de list box               | Soporte de ordenación estándar | Comentarios                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ------------------------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Colección de objetos           | Sí                             | <ul><li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Colección de objetos           | Sí                             | <ul><li>Las columnas "This.a" o "This.a.b" son ordenables.</li><li>La [propiedad fuente del list box](properties_Object.md#variable-or-expression) debe ser una [expresión asignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Colección de valores escalares | No                             | Utilice la ordenación personalizada con la función [`orderBy()`](../API/CollectionClass.md#orderby)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | Entity selection               | Sí                             | <li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). Para ello, debe utilizar la ordenación personalizada con la función [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) (ver el siguiente ejemplo)</li> |
 | Selección actual               | Sí                             | Sólo se pueden ordenar las expresiones simples (por ejemplo, `[Table_1]Campo_2`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -532,7 +532,7 @@ El soporte de ordenación estándar depende del tipo de list box:
 
 ### Ordenación personalizada
 
-The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
+El desarrollador puede configurar ordenaciones personalizadas, por ejemplo utilizando el comando [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) y/o combinando los eventos de formulario [`On Header Click`](../Events/onHeaderClick) y [`On After Sort`](../Events/onAfterSort) y los comandos 4D relevantes.
 
 Los ordenamientos personalizados le permiten:
 
@@ -1056,7 +1056,7 @@ Ejemplos:
 	APPEND TO ARRAY($ChoiceList;100)
 	C_OBJECT($ob)
 	OB SET($ob;"valueType";"integer")
-	OB SET($ob;"value";10) //10 as default value
+	OB SET($ob;"value";10) //10 como valor por defecto
 	OB SET ARRAY($ob;"choiceList";$ChoiceList)
 ```
 
@@ -1098,7 +1098,7 @@ Ejemplos:
 	C_OBJECT($ob)
 	OB SET($ob;"valueType";"integer")
 	OB SET($ob;"saveAs";"reference")
-	OB SET($ob;"value";2) //displays London by default
+	OB SET($ob;"value";2) //muestra London por defecto
 	OB SET($ob;"requiredListReference";<>List)
 ```
 
