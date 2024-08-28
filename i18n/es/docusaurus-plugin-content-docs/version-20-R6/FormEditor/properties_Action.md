@@ -11,9 +11,9 @@ No llame a un método formulario - 4D lo llama automáticamente cuando un evento
 
 Se soportan varios tipos de referencias de métodos:
 
-- a standard project method file path, i.e. that uses the following pattern:\
+- una ruta de archivo de método proyecto estándar, es decir, que utilice el siguiente modelo:
   `method.4dm`\
-  This type of reference indicates that the method file is located at the default location ("sources/{TableForms/*numTable*} | {Forms}/*formName*/"). En este caso, 4D maneja automáticamente el método formulario cuando se ejecutan operaciones en el formulario (renombrar, duplicar, copiar/pegar...)
+  Este tipo de referencia indica que el archivo de método se encuentra en la ubicación por defecto ("sources/{TableForms/*numTable*} | {Forms}/*formName*/"). En este caso, 4D maneja automáticamente el método formulario cuando se ejecutan operaciones en el formulario (renombrar, duplicar, copiar/pegar...)
 
 - a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for form operations.
 
