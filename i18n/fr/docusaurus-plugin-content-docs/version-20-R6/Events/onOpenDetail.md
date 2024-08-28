@@ -12,7 +12,7 @@ title: On Open Detail
 L'événement `On Open Detail` peut être utilisé dans les contextes suivants :
 
 - **Formulaires de sortie** : un enregistrement est sur le point d'être affiché dans le formulaire détaillé associé au formulaire de sortie. Cet événement ne peut pas être sélectionné pour les formulaires projet, il est uniquement disponible avec les **formulaires table**.
-- List box of the [**selection type**](FormObjects/listbox_overview.md#selection-list-boxes): This event is generated when a record is about to be displayed in the detail form associated with a list box of the selection type (and before this form is opened).
+- List box de [**type sélection**](FormObjects/listbox_overview.md#selection-list-boxes) : cet événement est généré lorsqu'un enregistrement est sur le point d'être affiché dans le formulaire détail associé à une list box de type sélection (et avant que ce formulaire ne soit ouvert).
 
 ### Numéro de ligne affiché
 
