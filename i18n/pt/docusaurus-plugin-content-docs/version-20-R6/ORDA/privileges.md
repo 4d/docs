@@ -23,13 +23,15 @@ Para obter uma visão detalhada de toda a arquitetura de permissões, por favor 
 
 ## Resources
 
-You can assign specific permission actions to the following exposed resources in your project:
+You can assign specific permission actions to the following resources in your project:
 
 - o armazenamento de dados
 - uma classe de dados
 - um atributo (inclusive calculado e aliases)
 - uma função de classe de modelo de dados
 - uma função [singleton](../REST/$singleton.md)
+
+Each time a resource is accessed within a session (whatever the way it is accessed), 4D checks that the session has the appropriate permissions, and rejects the access if it is not authorized.
 
 A permission action defined at a given level is inherited by default at lower levels, but several permissions can be set:
 
@@ -150,7 +152,7 @@ O arquivo padrão tem o seguinte conteúdo:
 
 ```
 
-Para um nível máximo de segurança, o privilégio "none" é atribuído a todas as permissões no datastore, assim o acesso aos dados no objeto `ds` inteiro é desabilitado por padrão. It is recommended not to modified or use this locking privilege, but to add specific permissions to each resource you wish to make available from web or REST requests ([see example below](example-of-privilege-configuration)).
+Para um nível máximo de segurança, o privilégio "none" é atribuído a todas as permissões no datastore, assim o acesso aos dados no objeto `ds` inteiro é desabilitado por padrão. É recomendado não modificar ou usar esse privilégio de bloqueio, mas adicionar permissões específicas a cada recurso que você deseja disponibilizar para solicitações da web ou REST (veja o exemplo abaixo).
 
 :::caution
 
