@@ -94,7 +94,7 @@ http://localhost/friends.shtml
 
 ![](../assets/en/WebServer/hello3bis.png)
 
-### REST request
+### Requête REST
 
 If we not only want to *display* data, but to *use* it, we can use ORDA and the REST server. Thanks to the [ORDA concept](ORDA/overview.md), the `Friends` table is automatically mapped to a dataclass and is available through [REST](REST/gettingStarted.md).
 
@@ -108,7 +108,7 @@ If we not only want to *display* data, but to *use* it, we can use ORDA and the 
 http://localhost/rest/$catalog
 ```
 
-The web server returns the results in JSON:
+Le serveur web renvoie les résultats en JSON :
 
 ```json
 {
@@ -123,17 +123,17 @@ The web server returns the results in JSON:
 }
 ```
 
-You get the catalog, i.e. the list of exposed dataclasses and attributes in the datastore.
+Vous obtenez le catalogue, c'est-à-dire la liste des dataclass et des attributs exposés dans le datastore.
 
-You can also get any data.
+Vous pouvez également obtenir diverses données.
 
-3. Enter the following URL:
+3. Entrez l'URL suivante :
 
 ```
 http://localhost/rest/Friends
 ```
 
-The server returns the entities, i.e. the data, from the Friends dataclass:
+Le serveur renvoie les entités, c'est-à-dire les données, de la dataclass Friends :
 
 ```json
 {
@@ -180,24 +180,24 @@ The server returns the entities, i.e. the data, from the Friends dataclass:
 }
 ```
 
-This very simple example shows how the web server interacts transparently with the [REST server](REST/gettingStarted.md) to return any requested data, provided it is exposed. In your web interfaces, you can easily bind the javascript or html code with returned data. See the built-in [Web Data Explorer](Admin/dataExplorer.md) to have an example of sophisticated web interface bound to dataclasses.
+This very simple example shows how the web server interacts transparently with the [REST server](REST/gettingStarted.md) to return any requested data, provided it is exposed. Dans vos interfaces web, vous pouvez facilement lier le code javascript ou html avec les données retournées. See the built-in [Web Data Explorer](Admin/dataExplorer.md) to have an example of sophisticated web interface bound to dataclasses.
 
-## Login and session
+## Connexion et session
 
-In the above sections, we get free access to the application from web requests. However, in the world of web applications, data access security is the first priority. When connecting to the 4D web server, users must be authentified and their navigation controlled.
+Dans les sections ci-dessus, nous obtenons un accès libre à l'application à partir de requêtes Web. Cependant, dans le monde des applications web, la sécurité d'accès aux données est la première priorité. Lors de la connexion au serveur Web 4D, les utilisateurs doivent être authentifiés et leur navigation contrôlée.
 
-### Creating a table of users
+### Création d'une table d'utilisateurs
 
-The most simple and secured way to log a user on the 4D web server is based upon the following scenario:
+La façon la plus simple et sécurisée de connecter un utilisateur sur le serveur web 4D est basée sur le scénario suivant :
 
 - Users are stored in a dedicated, unexposed table (named *WebUsers* for example)
 - The *WebUsers* table could be [encrypted](MSC/encrypt.md) and stores the user login and a hash of their password.
 
-1. Create a table with some fields, for example:
+1. Créez une table avec certains champs, par exemple :
 
 ![](../assets/en/WebServer/helloUsers.png)
 
-2. Write and execute the following code to create a user:
+2. Écrivez et exécutez le code suivant pour créer un utilisateur :
 
 ```4d
 var $webUser : cs.WebUsersEntity
@@ -205,7 +205,7 @@ var $webUser : cs.WebUsersEntity
 $webUser:=ds.WebUsers.new()
 $webUser.firstName:="John"
 $webUser.lastName:="Doe"
-// the password would be entered by the user
+// le mot de passe devrait en principe être saisi par l'utilisateur
 $webUser.password:=Generate password hash("123")
 $webUser.userId:="john@4d.com"
 $webUser.save()
@@ -215,9 +215,9 @@ $webUser.save()
 
 > To be secure from end to end, it is necessary that the whole connection is established via [https](webServerConfig.md#enable-https).
 
-1. Open the Explorer and create a project method named "login".
+1. Ouvrez l'Explorateur et créez une méthode projet nommée "login".
 
-3. Write the following code:
+3. Écrivez le code suivant :
 
 ```4d
 var $indexUserId; $indexPassword : Integer
@@ -269,13 +269,13 @@ End if
 http://localhost/4DACTION/login/?userID=john@4d.com&password=123
 ```
 
-> Using such URLs is not recommended, it is only presented here to keep the example simple. A more realistic login request must be handled through a web form and a POST request. See [this page](sessions.md#example) for an example of form POST.
+> L'utilisation de telles URLs n'est pas recommandée, elle est présentée ici uniquement pour simplifier l'exemple. Une requête de connexion plus réaliste doit être traitée via un formulaire web et une requête POST. See [this page](sessions.md#example) for an example of form POST.
 
-Then you will be logged for the session:
+Vous serez alors connecté pour la session :
 
 ![](../assets/en/WebServer/login1.png)
 
-Wrong credentials would be rejected:
+Les informations d'identification erronées seraient rejetées :
 
 ![](../assets/en/WebServer/login2.png)
 
