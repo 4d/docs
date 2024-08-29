@@ -847,14 +847,14 @@ Como padrão, uma avaliação não-diacrítica é realizada. If you want the eva
 
 #### Descrição
 
-The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *formula* object or *methodName* method<!-- END REF -->.
+A função `.every()` <!-- REF #collection.every().Summary -->retorna **true** se todos os elementos da coleção passarem com sucesso em um teste implementado no objeto *formula* ou método *methodName* fornecido<!-- END REF -->.
 
 Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
 
-- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
-- or *methodName*, the name of a project method (text).
+- *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
+- ou *methodName*, o nome de um método projeto (texto).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for every element fulfilling the test. Este método recebe um `Object` como primeiro parâmetro ($1).
+A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **true** para cada elemento que cumpra o teste. Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -864,15 +864,15 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 Pode definir o(s) seguinte(s) parâmetro(s):
 
-- (mandatory if you used a method) *$1.result* (Boolean): **true** if the element value evaluation is successful, **false** otherwise.
-- *$1.stop* (Boolean, optional): **true** to stop the method callback. O valor retornado é o último calculado.
+- (obrigatório se você usou um método) *$1.result* (Boolean): **true** se a avaliação do valor do elemento for bem-sucedida, **false** caso contrário.
+- *$1.stop* (Boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
 
-In all cases, at the point when the `.every()` function encounters the first collection element evaluated to **false**, it stops calling the callback and returns **false**.
+Em todos os casos, no momento em que a função `.every()` encontra o primeiro elemento da coleção avaliado como **false**, ela para de chamar o retorno de chamada e retorna **false**.
 
-Por padrão, `.every()` testa toda a coleção. Optionally, you can pass in *startFrom* the index of the element from which to start the test.
+Por padrão, `.every()` testa toda a coleção. Opcionalmente, pode passar em *startFrom* o índice do elemento a partir do qual se inicia o teste.
 
-- If *startFrom* >= the collection's length, **false** is returned, which means the collection is not tested.
-- If *startFrom* < 0, it is considered as the offset from the end of the collection ( *startFrom:=startFrom+length*).
+- Se *startFrom* >= tamanho da coleção, é retornado **false**, o que significa que a coleção não é testada.
+- Se *startFrom* < 0, é considerada como offset do final da coleção(*startFrom:=startFrom+length*).
 - Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo 1
@@ -934,17 +934,17 @@ $b:=$c.every("TypeLookUp";Is real) //$b=false
 
 #### Descrição
 
-The `.extract()` function <!-- REF #collection.extract().Summary -->creates and returns a new collection containing *propertyPath* values extracted from the original collection of objects<!-- END REF -->.
+A função `.extract()` <!-- REF #collection.extract().Summary -->cria e retorna uma nova coleção contendo valores *propertyPath* extraídos da coleção original de objetos<!-- END REF -->.
 
 > Essa função não modifica a coleção original.
 
-The contents of the returned collection depends on the *targetPath* parameter:
+Os conteúdos da coleção retornada depende do parâmetro *targetPath*:
 
-- If the *targetPath* parameter is omitted, `.extract()` populates the new collection with the *propertyPath* values of the original collection.
+- Se o parâmetro *targetPath* for omitido, `.extract()` preenche a nova coleção com os valores *propertyPath* da coleção original.
 
-  By default, elements for which *propertyPath* is null or undefined are ignored in the resulting collection. You can pass the `ck keep null` constant in the *option* parameter to include these values as null elements in the returned collection.
+  Como padrão, elementos para os quais *propertyPath* for null ou undefined são ignorados na coleção resultante. Você pode passar a constante `ck keep null` no parâmetro *option* para incluir esses valores como elementos **null** na coleção retornada.
 
-- If one or more *targetPath* parameter(s) are passed (corresponding to one or more *propertyPath* parameter(s)), `.extract()` populates the new collection with the *propertyPath* properties and each element of the new collection is an object with *targetPath* properties filled with the matching *propertyPath* properties. Null values are kept (*option* parameter is ignored with this syntax).
+- Se um ou mais parâmetros *targetPath* forem passados (correspondentes a um ou mais parâmetros *propertyPath*), `.extract()` preenche a nova coleção com as propriedades *propertyPath* e cada elemento da nova coleção é um objeto com as propriedades *targetPath* preenchidas com as propriedades correspondentes *propertyPath*. Os valores null são mantidos (o parâmetro *option* é ignorado com essa sintaxe).
 
 #### Exemplo 1
 
@@ -1004,18 +1004,18 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 #### Descrição
 
-The `.fill()` function <!-- REF #collection.fill().Summary -->fills the collection with the specified *value*, optionally from *startFrom* index to *end* index, and returns the resulting collection<!-- END REF -->.
+A função `.fill()` <!-- REF #collection.fill().Summary -->preenche a coleção com o *value* especificado, opcionalmente do índice *startFrom* até o índice *end*, e retorna a coleção resultante<!-- END REF -->.
 
 > Essa função modifica a coleção original.
 
-- If the *startFrom* parameter is omitted, *value* is set to all collection elements (*startFrom*=0).
-- If the *startFrom* parameter is passed and *end* omitted, *value* is set to collection elements starting at *startFrom* to the last element of the collection (*end*=length).
-- If both the *startFrom* parameter and *end* are passed, *value* is set to collection elements starting at *startFrom* to the element *end*.
+- Se o parâmetro *startFrom* for omitido, *value* é estabelecido para todos os elementos coleção (*startFrom*=0).
+- Se o parâmetro *startFrom* for passado e *end* for omitido, *value* é definido como os elementos da coleção a partir de *startFrom* até o último elemento da coleção (*end*=length).
+- Se tanto o parâmetro *startFrom* quanto *end* forem passados, *value* é definido como os elementos da coleção a partir de *startFrom* até o elemento *end*.
 
 Em caso de inconsistências, as regras abaixos são seguidas:
 
-- If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection). Se o valor calculado for negativo, *startFrom* toma o valor 0.
-- If *end* < 0 , it is recalculated as *end:=end+length*.
+- Se *startFrom* < 0, ele é recalculado como *startFrom:=startFrom+length* (é considerado como o deslocamento a partir do final da coleção). Se o valor calculado for negativo, *startFrom* toma o valor 0.
+- Se *end* < 0 , ele será recalculado como *end:=end+length*.
 - If *end* < *startFrom* (passed or calculated values), the method does nothing.
 
 #### Exemplo
@@ -1059,16 +1059,16 @@ Em caso de inconsistências, as regras abaixos são seguidas:
 
 #### Descrição
 
-The `.filter()` function <!-- REF #collection.filter().Summary -->returns a new collection containing all elements of the original collection for which the *formula* or *methodName* result is **true**<!-- END REF -->. This function returns a ***shallow copy***, which means that objects or collections in both collections share the same reference. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+A função `.filter()` <!-- REF #collection.filter().Summary -->retorna uma nova coleção contendo todos os elementos da coleção original para os quais o resultado da *formula* ou do *methodName* é **true**<!-- END REF -->. Esta função devolve uma ***shallow copy***, o que significa que os objectos ou colecções de ambas as colecções partilham a mesma referência. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 
 > Essa função não modifica a coleção original.
 
 Pode determinar a chamada de retorno a ser executada para filtrar os elementos de recolha utilizando qualquer um dos dois:
 
-- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
-- or *methodName*, the name of a project method (text).
+- *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
+- ou *methodName*, o nome de um método projeto (texto).
 
-The callback is called with the parameter(s) passed in *param* (optional) and an object in first parameter (*$1*). The callback can perform any test, with or without the parameter(s) and must return **true** for each element fulfilling the condition and thus, to push to the new collection.
+A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional) e um objeto no primeiro parâmetro (*$1*). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **true** para cada elemento que cumpra a condição e assim, adicioná-lo à nova coleção.
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -1078,12 +1078,12 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 Pode definir o(s) seguinte(s) parâmetro(s):
 
-- *$1.result* (Boolean): **true** if the element value matches the filter condition and must be kept, **false** otherwise.
-- *$1.stop* (Boolean, optional): **true** to stop the method callback. O valor retornado é o último calculado.
+- *$1.result* (boolean): **true** se o valor do elemento corresponder à condição de filtro e deve ser mantido, **false** caso contrário.
+- *$1.stop* (Boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
 
 :::note
 
-When using *methodName* as callback, and if the method does not return any value, `.filter()` will look at the property *$1.result* that you must set to **true** for each element fulfilling the condition.
+Ao usar *methodName* como retorno de chamada e se o método não retornar nenhum valor, `.filter()` irá verificar a propriedade *$1.result* que você deve definir como **true** para cada elemento que satisfaz a condição.
 
 :::
 
@@ -1146,16 +1146,16 @@ Se quiser filtrar elementos de acordo com seu tipo de valor:
 
 #### Descrição
 
-The `.find()` function <!-- REF #collection.find().Summary -->returns the first value in the collection for which *formula* or *methodName* result, applied on each element, returns **true**<!-- END REF -->.
+A função `.find()` <!-- REF #collection.find().Summary -->retorna o primeiro valor na coleção para o qual o *formula* ou o resultado do *methodName*, aplicado a cada elemento, seja **true**<!-- END REF -->.
 
 > Essa função não modifica a coleção original.
 
 Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
 
-- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
-- or *methodName*, the name of a project method (text).
+- *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
+- ou *methodName*, o nome de um método projeto (texto).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for the first element fulfilling the condition. Este método recebe um `Object` como primeiro parâmetro ($1).
+A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **true** para o primeiro elemento que cumpra a condição. Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -1165,14 +1165,15 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 Pode definir o(s) seguinte(s) parâmetro(s):
 
-- (mandatory if you used a method) *$1.result* (Boolean): **true** if the element value matches the search condition, **false** otherwise.
-- *$1.stop* (Boolean, optional): **true** to stop the method callback. O valor retornado é o último calculado.
+- (obrigatório se você usou um método) *$1.result* (Boolean): **true** se o valor do elemento corresponde à condição de pesquisa, **false** caso contrário.
+- *$1.stop* (Boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
 
-By default, `.find()` searches in the whole collection. Optionally, you can pass in *startFrom* the index of element from which to start the search.
+Por padrão, `.find()` pesquisa em toda a coleção. Opcionalmente pode passar em *startFrom* o índice do elemento a partir do qual vai começar a pesquisa.
 
-- If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
-- If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*).
-  **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
+- Se *startFrom* >= o tamanho da coleção, -1 é retornado, o que significa que a coleção não é pesquisada.
+- Se *startFrom* < 0, é considerada como offset do final da coleção
+  (*startFrom:=startFrom+length*).
+  **Nota**: mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da esquerda para direita.
 - Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo 1
@@ -1234,16 +1235,16 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 #### Descrição
 
-The `.findIndex()` function <!-- REF #collection.findIndex().Summary -->returns the index, in the collection, of the first value for which *formula* or *methodName*, applied on each element, returns **true**<!-- END REF -->.
+A função `.findIndex()` <!-- REF #collection.findIndex().Summary -->retorna o índice, na coleção, do primeiro valor para o qual a *formula* ou o *methodName*, aplicado em cada elemento, retorna **true**<!-- END REF -->.
 
 > Essa função não modifica a coleção original.
 
 Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
 
-- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
+- *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
 - *methodName*, o nome de um método projeto (texto).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for the first element fulfilling the condition. Este método recebe um `Object` como primeiro parâmetro ($1).
+A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **true** para o primeiro elemento que cumpra a condição. Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -1253,14 +1254,15 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 Pode definir o(s) seguinte(s) parâmetro(s):
 
-- (mandatory if you used a method) *$1.result* (Boolean): **true** if the element value matches the search condition, **false** otherwise.
-- *$1.stop* (Boolean, optional): **true** to stop the method callback. O valor retornado é o último calculado.
+- (obrigatório se você usou um método) *$1.result* (Boolean): **true** se o valor do elemento corresponde à condição de pesquisa, **false** caso contrário.
+- *$1.stop* (Boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
 
-By default, `.findIndex()` searches in the whole collection. Optionally, you can pass in *startFrom* the index of element from which to start the search.
+Por padrão, `.findIndex()` pesquisa em toda a coleção. Opcionalmente pode passar em *startFrom* o índice do elemento a partir do qual vai começar a pesquisa.
 
-- If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
-- If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*).
-  **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
+- Se *startFrom* >= o tamanho da coleção, -1 é retornado, o que significa que a coleção não é pesquisada.
+- Se *startFrom* < 0, é considerada como offset do final da coleção
+  (*startFrom:=startFrom+length*).
+  **Nota**: mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da esquerda para direita.
 - Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo
@@ -1306,7 +1308,7 @@ var $c : Collection
 
 #### Descrição
 
-The `.first()` function <!-- REF #collection.first().Summary -->returns the first element of the collection<!-- END REF -->.
+A função `.first()` <!-- REF #collection.first().Summary -->retorna o primeiro elemento da coleção<!-- END REF -->.
 
 > Essa função não modifica a coleção original.
 
@@ -1347,9 +1349,9 @@ var $col : Collection
 
 #### Descrição
 
-The `.flat()` function <!-- REF #collection.flat().Summary -->creates a new collection with all sub-collection elements concatenated into it recursively up to the specified *depth*<!-- END REF -->.
+A função `.flat()` <!-- REF #collection.flat(). ummary -->cria uma nova coleção com todos os elementos da subcoleção concatenados recursivamente até a *depth*<!-- END REF -->.
 
-By default, if the *depth* parameter is omitted, only the first level of the nested collection structure will be flattened.
+Por defeito, se o parâmetro *depth* for omitido, apenas o primeiro nível da estrutura de colecção aninhada será aplanado.
 
 > Essa função não modifica a coleção original.
 
@@ -1402,18 +1404,18 @@ $col.flat(MAXLONG)
 
 #### Descrição
 
-The `.flatMap()` function <!-- REF #collection.flatMap().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection and flattened by a depth of 1<!-- END REF -->. Optionally, you can pass parameters to *formula* or *methodName* using the *param* parameter(s).
+A função `.flatMap()` <!-- REF #collection.flatMap().Summary -->cria uma nova coleção com base no resultado da chamada da *formula* da função 4D ou do método *methodName* em cada elemento da coleção original e aplanada por uma profundidade de 1<!-- END REF -->. Opcionalmente, você pode passar parâmetros para *formula* ou *methodName* usando o(s) parâmetro(s) *param*.
 
-This function is identical to a [`map()`](#map) call followed by a [`flat()`](#flat) call of depth 1.
+Esta função é idêntica a uma chamada [`map()`](#map) seguida de uma chamada [`flat()`](#flat) de profundidade 1.
 
 > Essa função não modifica a coleção original.
 
 Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
 
-- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
-- or *methodName*, the name of a project method (text).
+- *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
+- ou *methodName*, o nome de um método projeto (texto).
 
-The callback is called with the parameter(s) passed in *param* (optional). A chamada de retorno é chamada com o(s) parâmetro(s) aprovado(s) em <em x-id="3">param</em> (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
+A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno é chamada com o(s) parâmetro(s) aprovado(s) em <em x-id="3">param</em> (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -1423,8 +1425,8 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 Pode definir o(s) seguinte(s) parâmetro(s):
 
-- (mandatory if you used a method) *$1.result* (any type): new transformed value to add to the resulting collection
-- *$1.stop* (Boolean, optional): **true** to stop the method callback. O valor retornado é o último calculado.
+- (obrigatório se você usou um método) *$1.result* (qualquer tipo): novo valor transformado para adicionar à coleção resultante
+- *$1.stop* (Boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
 
 #### Exemplo 1
 
@@ -1490,7 +1492,7 @@ var $c; $c2 : Collection
 
 #### Descrição
 
-The `.includes()` function <!-- REF #collection.includes().Summary -->returns True if the *toSearch* expression is found among collection elements, otherwise False<!-- END REF -->.
+A função `.includes()` <!-- REF #collection.includes().Summary -->retorna True se a expressão *toSearch* for encontrada entre os elementos da coleção, caso contrário False<!-- END REF -->.
 
 > Essa função não modifica a coleção original.
 
@@ -1500,12 +1502,13 @@ Em *toSearch*, passe a expressão para encontrar na coleção. Pode passar:
 - $1.result:=$1.value&gt;0
 - um objeto ou uma referência de coleção.
 
-*toSearch* must match exactly the element to find (the same rules as for the equality operator of the data type are applied).
+*toSearch* deve corresponder exatamente com o elemento a encontrar (as mesmas regras que para o operador de igualdade do tipo dados é aplicado).
 
-Optionally, you can pass the index of collection from which to start the search in *startFrom*.
+Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa em *startFrom*.
 
-- If *startFrom* >= collection's length, False is returned, which means the collection is not searched.
-- If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). Note that even if *startFrom* is negative, the collection is still searched from left to right.
+- Se *startFrom* >= tamanho da coleção, é retornado false, o que significa que a coleção não é pesquisada.
+- Se *startFrom* < 0, é considerada como offset do final da coleção
+  (*startFrom:=startFrom+length*). Note que mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da esquerda para direita.
 - Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo
@@ -1552,7 +1555,7 @@ Optionally, you can pass the index of collection from which to start the search 
 
 #### Descrição
 
-The `.indexOf()` function <!-- REF #collection.indexOf().Summary -->searches the *toSearch* expression among collection elements and returns the index of the first found occurrence, or -1 if it was not found<!-- END REF -->.
+A função `.indexOf()` <!-- REF #collection.indexOf().Summary -->procura a expressão *toSearch* entre os elementos da coleção e retorna o índice da primeira ocorrência encontrada, ou -1 se não for encontrada<!-- END REF -->.
 
 > Essa função não modifica a coleção original.
 
@@ -1562,13 +1565,14 @@ Em *toSearch*, passe a expressão para encontrar na coleção. Pode passar:
 - $1.result:=$1.value&gt;0
 - um objeto ou uma referência de coleção.
 
-*toSearch* must match exactly the element to find (the same rules as for the equality operator of the data type are applied).
+*toSearch* deve corresponder exatamente com o elemento a encontrar (as mesmas regras que para o operador de igualdade do tipo dados é aplicado).
 
-Optionally, you can pass the index of collection from which to start the search in *startFrom*.
+Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa em *startFrom*.
 
-- If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
-- If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*).
-  **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
+- Se *startFrom* >= o tamanho da coleção, -1 é retornado, o que significa que a coleção não é pesquisada.
+- Se *startFrom* < 0, é considerada como offset do final da coleção
+  (*startFrom:=startFrom+length*).
+  **Nota**: mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da esquerda para direita.
 - Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo
@@ -1605,23 +1609,23 @@ Optionally, you can pass the index of collection from which to start the search 
 | ----------- | ---------- | :-: | ------------------------------------------------------------------------------------ |
 | queryString | Text       |  -> | Critérios de pesquisa                                                                |
 | value       | any        |  -> | Valores a comparar quando usar placeholders (valores temporários) |
-| Resultados  | Collection |  <- | Element index(es) matching queryString in the collection          |
+| Resultados  | Collection |  <- | Índices elemento correspondendo a queryString na coleção                             |
 
 <!-- END REF -->
 
 #### Descrição
 
-The `.indices()` function works exactly the same as the [`.query()`](#query) function but <!-- REF #collection.indices().Summary -->returns indexes, in the original collection, of object collection elements that match the *queryString* search conditions<!-- END REF -->, and not elements themselves. Indices são retornados em ordem ascendente.
+A função `.indices()` funciona exatamente da mesma forma que a função [`.query()`](#query), mas <!-- REF #collection.indices().Summary -->retorna os índices, na coleção original, dos elementos da coleção de objetos que correspondem às condições de busca *queryString*<!-- END REF -->, e não os próprios elementos. Indices são retornados em ordem ascendente.
 
 > Essa função não modifica a coleção original.
 
-The *queryString* parameter uses the following syntax:
+O parâmetro *queryString* usa a seguinte sintaxe:
 
 ```4d
 valor de comparação propertyPath {valor de comparação logicalOperator propertyPath}
 ```
 
-For a detailed description of the *queryString* and *value* parameters, please refer to the `dataClass.query()` function.
+Para uma descrição detalhada dos parâmetros *queryString* e *value*, por favor consulte a função `dataClass.query()`.
 
 #### Exemplo
 
@@ -1666,11 +1670,11 @@ For a detailed description of the *queryString* and *value* parameters, please r
 
 #### Descrição
 
-The `.insert()` function <!-- REF #collection.insert().Summary --> inserts *element* at the specified *index* position in the collection instance and returns the edited collection<!-- END REF -->.
+A função `.insert()` <!-- REF #collection.insert().Summary -->insere *element* na posição *index* especificada na instância da coleção e retorna a coleção editada<!-- END REF -->.
 
 > Essa função modifica a coleção original.
 
-In *index*, pass the position where you want the element to be inserted in the collection.
+In *index*, passe a posição onde quiser que o elemento seja inserido na coleção.
 
 > **Aviso**: lembre que elementos de coleção são numerados a partir de 0.
 
@@ -1823,7 +1827,7 @@ Em *toSearch*, passe a expressão para encontrar na coleção. Pode passar:
 Optionally, you can pass the index of collection from which to start a reverse search in *startFrom*.
 
 - If *startFrom* >= the collection's length minus one (coll.length-1), the whole collection is searched (default).
-- If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection). Se o valor calculado for negativo, -1 é retornado (a coleção não é pesquisada).
+- Se *startFrom* < 0, ele é recalculado como *startFrom:=startFrom+length* (é considerado como o deslocamento a partir do final da coleção). Se o valor calculado for negativo, -1 é retornado (a coleção não é pesquisada).
   **Note:** Even if *startFrom* is negative, the collection is still searched from right to left.
 - If *startFrom* = 0, -1 is returned, which means the collection is not searched.
 
@@ -1895,16 +1899,16 @@ The `.length` property is initialized when the collection is created. Adicionar 
 
 #### Descrição
 
-The `.map()` function <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection<!-- END REF -->. Optionally, you can pass parameters to *formula* or *methodName* using the *param* parameter(s). `.map()` always returns a collection with the same size as the original collection, except if *$1.stop* was used (see below).
+The `.map()` function <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection<!-- END REF -->. Opcionalmente, você pode passar parâmetros para *formula* ou *methodName* usando o(s) parâmetro(s) *param*. `.map()` always returns a collection with the same size as the original collection, except if *$1.stop* was used (see below).
 
 > Essa função não modifica a coleção original.
 
 Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
 
-- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
-- or *methodName*, the name of a project method (text).
+- *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
+- ou *methodName*, o nome de um método projeto (texto).
 
-The callback is called with the parameter(s) passed in *param* (optional). A chamada de retorno é chamada com o(s) parâmetro(s) aprovado(s) em <em x-id="3">param</em> (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
+A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno é chamada com o(s) parâmetro(s) aprovado(s) em <em x-id="3">param</em> (opcional). Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -1914,8 +1918,8 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 Pode definir o(s) seguinte(s) parâmetro(s):
 
-- (mandatory if you used a method) *$1.result* (any type): new transformed value to add to the resulting collection
-- *$1.stop* (Boolean, optional): **true** to stop the method callback. O valor retornado é o último calculado.
+- (obrigatório se você usou um método) *$1.result* (qualquer tipo): novo valor transformado para adicionar à coleção resultante
+- *$1.stop* (Boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
 
 #### Exemplo
 
@@ -2339,9 +2343,9 @@ This function returns a *shallow copy*, which means that objects or collections 
 
 Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
 
-- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
+- *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
 
-- or *methodName*, the name of a project method (text).
+- ou *methodName*, o nome de um método projeto (texto).
 
 In the callback, pass some code that compares two values and returns **true** if the first value is lower than the second value. You can provide *extraParam* parameters to the callback if necessary.
 
@@ -2537,7 +2541,7 @@ An empty collection is returned if the collection in which the query is executed
 
 #### parâmetro queryString
 
-The *queryString* parameter uses the following syntax:
+O parâmetro *queryString* usa a seguinte sintaxe:
 
 ```4d
 valor de comparação propertyPath {valor de comparação logicalOperator propertyPath}
@@ -2833,8 +2837,8 @@ The `.reduce()` function <!-- REF #collection.reduce().Summary -->applies the *f
 
 Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
 
-- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
-- or *methodName*, the name of a project method (text).
+- *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
+- ou *methodName*, o nome de um método projeto (texto).
 
 The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
 
@@ -2918,8 +2922,8 @@ The `.reduceRight()` function <!-- REF #collection.reduceRight().Summary -->appl
 
 Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
 
-- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
-- or *methodName*, the name of a project method (text).
+- *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
+- ou *methodName*, o nome de um método projeto (texto).
 
 The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
 
@@ -3194,9 +3198,9 @@ The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portio
 
 The returned collection contains the element specified by *startFrom* and all subsequent elements up to, but not including, the element specified by *end*. If only the *startFrom* parameter is specified, the returned collection contains all elements from *startFrom* to the last element of the original collection.
 
-- If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection).
+- Se *startFrom* < 0, ele é recalculado como *startFrom:=startFrom+length* (é considerado como o deslocamento a partir do final da coleção).
 - If the calculated value < 0, *startFrom* is set to 0.
-- If *end* < 0 , it is recalculated as *end:=end+length*.
+- Se *end* < 0 , ele será recalculado como *end:=end+length*.
 - If *end < startFrom* (passed or calculated values), the method does nothing.
 
 #### Exemplo
@@ -3246,10 +3250,10 @@ The `.some()` function <!-- REF #collection.some().Summary -->returns true if at
 
 Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
 
-- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
-- or *methodName*, the name of a project method (text).
+- *formula* (sintaxe recomendada), um [objecto Formula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos projecto;
+- ou *methodName*, o nome de um método projeto (texto).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for every element fulfilling the test. Este método recebe um `Object` como primeiro parâmetro ($1).
+A callback é chamada com o(s) parâmetro(s) passados em *param* (opcional). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **true** para cada elemento que cumpra o teste. Este método recebe um `Object` como primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
