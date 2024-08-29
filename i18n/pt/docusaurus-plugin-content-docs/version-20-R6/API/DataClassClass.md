@@ -897,7 +897,7 @@ Se nenhuma entidade correspondente for encontrada, uma `EntitySelection` vazia �
 
 #### parâmetro queryString
 
-The *queryString* parameter uses the following syntax:
+O parâmetro *queryString* usa a seguinte sintaxe:
 
 ```4d
 attributePath|formula comparator value   

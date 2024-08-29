@@ -36,11 +36,11 @@ Si ejecuta el siguiente código:
 
 ```4d
  var $e1; $e2 : cs.EmployeeEntity
- $e1:=ds.Employee.get(1) //access the employee with ID 1
+ $e1:=ds.Employee.get(1) //accede al empleado con ID 1
  $e2:=$e1
  $e1.name:="Hammer"
-  //both variables $e1 and $e2 share the reference to the same entity
-  //$e2.name contains "Hammer"
+  //ambas variables $e1 y $e2 comparten la referencia a la misma entidad
+  //$e2.name contiene "Hammer"
  If($e1=$e2) //True
 ```
 

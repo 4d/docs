@@ -86,9 +86,9 @@ Las variables o expresiones se pueden introducir o no y pueden recibir datos de 
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos            | Valores posibles                                                                                                                                                                                                                                          |
-| ---------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSource | cadena o array de cadenas | <li>4D variable, field name, or any expression.</li><li>Empty string for [dynamic variables](#dynamic-variables).</li><li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</li> |
+| Nombre     | Tipos de datos            | Valores posibles                                                                                                                                                                                                                                                                  |
+| ---------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSource | cadena o array de cadenas | <li>Variable 4D, nombre de campo o cualquier expresión.</li><li>Cadena vacía para [variables dinámicas](#dynamic-variables).</li><li>Array de cadenas (colección de nombres de arrays) para una columna de [listbox jerárquico](listbox_overview.md#hierarchical-list-boxes)</li> |
 
 ### Expresiones
 

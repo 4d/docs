@@ -47,7 +47,7 @@ Todas las demás peticiones REST (manejando datos o ejecutando una función) só
 Este modo le permite implementar la siguiente secuencia de acceso:
 
 1. En la primera llamada REST (para una llamada webform, por ejemplo), se crea una sesión de usuario web "invitado". No tiene privilegios, ni derechos para ejecutar peticiones que no sean descriptivas, ni consumo de licencias.
-2. You call your exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class) named [`authentify()`](#function-authentify) (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges.
+2. Usted llama a su función expuesta de la [clase datastore](../ORDA/ordaClasses.md#datastore-class) llamada [`authentify()`](#function-authentify) (creada de antemano), en la cual verifica las credenciales del usuario y llama a [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) con los privilegios correspondientes.
 3. La petición `/rest/$catalog/authentify` se envía al servidor junto con las credenciales del usuario. Este paso sólo requiere un formulario de acceso básico que no acceda a datos; puede ser un formulario Qodly (llamado a través de la petición `/rest/$getWebForm`).
 4. Si el usuario se autentica correctamente, se consume una licencia 4D en el servidor y se aceptan todas las peticiones REST.
 
@@ -129,7 +129,7 @@ Cuerpo de la petición:
 
 ## Usando `On REST Authentication`
 
-In default login mode (i.e. the "force login" mode is disabled), you can log in a user to your application by calling [`$directory/login`]($directory.md#directorylogin) in a POST request including the user's name and password in the header. Esta petición llama al método base `On REST Authentication` (si existe), donde se pueden comprobar las credenciales del usuario (ver ejemplo abajo).
+En el modo de inicio de sesión por defecto (es decir, el modo "forzar inicio de sesión" está desactivado), puede iniciar la sesión de un usuario en su aplicación llamando a [`$directory/login`]($directory.md#directorylogin) en una petición POST incluyendo el nombre y la contraseña del usuario en el encabezado. Esta petición llama al método base `On REST Authentication` (si existe), donde se pueden comprobar las credenciales del usuario (ver ejemplo abajo).
 
 Si no se ha definido el método base `On REST Authentication`, se abre una sesión `guest`.
 

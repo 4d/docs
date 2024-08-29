@@ -19,12 +19,14 @@ If a user attempts to execute an action and does not have the appropriate access
 
 ## Resources
 
-You can assign specific permission actions to the following exposed resources in your project:
+You can assign specific permission actions to the following resources in your project:
 
 - o armazenamento de dados
 - uma classe de dados
 - um atributo (inclusive calculado e aliases)
 - uma função de classe de modelo de dados
+
+Each time a resource is accessed within a session (whatever the way it is accessed), 4D checks that the session has the appropriate permissions, and rejects the access if it is not authorized.
 
 A permission action defined at a given level is inherited by default at lower levels, but several permissions can be set:
 

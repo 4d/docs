@@ -28,7 +28,7 @@ Depuis macOS Sierra, les applications Mac bénéficient d'onglets automatiques f
 
 Vous pouvez bénéficier de cette fonctionnalité dans les environnements de 4D suivants (versions 64 bits uniquement) :
 
-*   Code Editor windows
+*   Fenêtres de l'éditeur de code
 *   Fenêtres de l'éditeur de formulaires
 
 Toutes les fenêtres de ces éditeurs peuvent être ouvertes sous forme d'onglets :

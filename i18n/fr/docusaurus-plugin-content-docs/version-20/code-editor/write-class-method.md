@@ -548,7 +548,7 @@ Lorsque la sélection ne contient que du code actif, la commande **Commenter** e
 
 ## Déployer / Contracter
 
-Le code 4D situé à l'intérieur des boucles et des conditions peut être replié ou déplié, afin de faciliter la lecture des méthodes :
+Le code 4D situé à l'intérieur des boucles et des conditions peut être contracté ou déployé, afin de faciliter la lecture des méthodes :
 
 - Code déployé : ![](../assets/en/code-editor/expanded-code.png)
 
@@ -558,83 +558,83 @@ Si vous placez la souris sur le bouton de déploiement [...], une infobulle appa
 
 Une portion de code repliée peut être sélectionnée, copiée, collée ou supprimée. Toutes les lignes incluses seront copiées, collées ou supprimées respectivement. Lorsqu'une portion de code est collée, elle est automatiquement déployée.
 
-There are several ways to expand and collapse code:
+Il y a plusieurs façons de déployer et de contracter le code :
 
-- Click on the expand/collapse icons ([+] and [-] under Windows) or on the opening button [...]
+- Cliquer sur les icônes de déploiement/réduction ([+] et [-] sous Windows) ou sur le bouton d'ouverture [...]
 - Use the commands of the **Method > Collapse/Expand** submenu:
 
   - **Collapse Selection** / **Expand Selection**: collapses or expands all the code structures found in the text selection.
   - **Collapse Current Level** / **Expand Current Level**: collapses or expands the code structure at the level where the cursor is located. These commands are also available in the **context menu** of the editor.
-  - **Collapse All** / **Expand All**: collapses or expands all the loops and conditions of a method. These commands are also available in the toolbar of the editor.
+  - **Collapse All** / **Expand All**: collapses or expands all the loops and conditions of a method. Ces commandes sont également disponibles dans la barre d'outils de l'éditeur.
 
 
-## Blocks
+## Blocs
 
-Blocks can be defined by:
+Les blocs peuvent être définis par :
 
-- Guillemets
-- Parentheses
-- A logical structure (If/Else/End if, While/End while, Repeat/Until Case of/End case)
-- Braces
+- des guillemets
+- des parenthèses
+- une structure logique (Si/Sinon/Fin de si, Tant que/Fin tant que, Répéter/Jusque, Au cas ou/Fin de cas...)
+- des accolades
 
-### Select Enclosing Block
+### Sélectionner bloc
 
 The **Select Enclosing Block** function is used to select the "enclosing block" of the code containing the insertion point.
 
-If a block of text is already selected, the function selects the enclosing block of the next highest level and so on, until the entire method is selected.
+Si un bloc de texte est déjà sélectionné, la fonction sélectionne le bloc englobant du niveau supérieur suivant, et ainsi de suite, jusqu'à ce que la méthode entière soit sélectionnée.
 
 Pressing **Ctrl+Shift+B** (Windows) or **Command+Shift+B** (macOS) enables you to reverse this operation and deselect the last enclosing block selected.
 
 **Note:** If the insertion point is placed in an `If` or `Else` type structure, the enclosing block will be the one containing, respectively, the `If` or `Else` statement.
 
 
-### Start of Block or End of Block
+### Début de bloc ou Fin de bloc
 
 Two commands make it easier to move around within code structures (e.g. `If...Else...End if`):
 
 - **Start Of Block**: places the cursor at the start of the current structure, just before the initial keyword.
 - **End Of Block**: places the cursor at the end of the current structure, just after the final keyword.
 
-These commands are found in the **Method** menu as well as the context menu of the editor. You can also use the following shortcuts:
+These commands are found in the **Method** menu as well as the context menu of the editor. Vous pouvez également utiliser les raccourcis suivants :
 
 - Windows: **Ctrl + up arrow** or **Ctrl** + **down arrow**‚
 - macOS: **Command** + **up arrow** or **Command** +**down arrow**.
 
-## Bookmarks
+## Signets
 
-4D lets you associate bookmarks with certain lines in your methods. You can then browse quickly within the code by passing from one bookmark to another using specific commands.
+4D vous permet d'associer des signets à certaines lignes de vos méthodes. Vous pouvez alors naviguer rapidement dans le code en passant d'un signet à un autre à l'aide de commandes spécifiques.
 
 ![](../assets/en/code-editor/bookm.png)
 
-A bookmark moves along with its original row if additional rows are inserted in the method. Bookmarks are saved with the methods.
+Un signet se déplace avec sa ligne d'origine si des lignes supplémentaires sont insérées dans la méthode. Les signets sont enregistrés avec les méthodes.
 
 Bookmarks are managed using the **Bookmarks** submenu of the **Method** menu:
 
 - **Toggle**: Associates a bookmark with the current line (where the cursor is located) if it does not already have one or removes the existing bookmark if it does. This function is also available using the **Toggle Bookmark** command of the editor's context menu or using the **Ctrl+F3** (Windows) or **Command+F3** (macOS) keyboard shortcut.
 - **Remove All**: Removes all bookmarks from the foreground window.
-- **Goto Next** / **Goto Previous**: Enables browsing among bookmarks in the window. Selecting one of these commands places the cursor on the first character of the line associated with the bookmark concerned. You can also use the keyboard shortcuts **F3** (go to next) or **Shift+F3** (go to previous).
+- **Goto Next** / **Goto Previous**: Enables browsing among bookmarks in the window. La sélection d'une de ces commandes place le curseur sur le premier caractère de la ligne associée au signet concerné. You can also use the keyboard shortcuts **F3** (go to next) or **Shift+F3** (go to previous).
 
 :::info
 
-You can use bookmarks as markers for lines that contain an [item found by a search](#find). In this case, 4D automatically adds the bookmarks. For more information, refer to [Bookmark all](#bookmark-all).
+You can use bookmarks as markers for lines that contain an [item found by a search](#find). Dans ce cas, 4D ajoute automatiquement les signets. For more information, refer to [Bookmark all](#bookmark-all).
 
 :::
 
-## Reveal in Explorer
+## Afficher dans l'Explorateur
 
 The **Reveal in Explorer...** command opens an Explorer window with the target element selected. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Reveal in Explorer...** .
 
 
-## Search Callers
+## Chercher les appelants
 
-The **Search Callers** command in the **Method** menu is only enabled for project methods. It searches for all the objects (other methods or menus) that reference the project method.
+The **Search Callers** command in the **Method** menu is only enabled for project methods. Elle recherche tous les objets (autres méthodes ou menus) qui font référence à la méthode projet.
 
 **Note:** The **Search Callers...** command is also available in **Explorer** > **Methods**
 
-This command displays its results in a new window.
+Cette commande affiche ses résultats dans une nouvelle fenêtre.
 
 
-## Goto Definition
+## Aller à définition
 
 The **Goto Definition** command opens the definition of an element referenced in the Code Editor. To do this, place the cursor inside the object name or select it, and choose **Method** > **Goto Definition...** or use the context menu of the editor.
 
@@ -646,13 +646,13 @@ This feature is also available through the keyboard shortcut **Ctrl+K** (Windows
 
 The effect of the **Goto Definition...** command varies depending on the target element:
 
-- with a project method, it displays the contents of the method in a new window of the Code Editor
-- with a class name or class function, it opens the class in the the Code Editor
+- avec une méthode projet, elle affiche le contenu de la méthode dans une nouvelle fenêtre de l'Editeur de code
+- avec un nom de classe ou une fonction de classe, elle ouvre la classe dans l'Éditeur de code
 - with a built-in 4D command or function, it has the same effect as the [**Show documentation**](#show-documentation) command.
 
-## Show documentation
+## Montrer la documentation
 
-The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. The effect varies depending on the target element. Par exemple :
+The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. L'effet varie en fonction de l'élément cible. Par exemple :
 
 - Selecting a project method or a user class and choosing **Show documentation...** selects the method in the Explorer and switches to the documentation tab
 - Selecting a 4D command, function, or class name and choosing **Show documentation...** displays the online documentation.
@@ -660,18 +660,18 @@ The **Show documentation...** command opens the documentation for the target ele
 
 :::tip
 
-To display the documentation of a 4D "classic" language command, select the command name or simply place the cursor in the name and press **F1**. The documentation of the command is displayed in a new window of your default browser. 4D looks for the documentation depending on the settings made in the Preferences (see [Documentation location](../Preferences/general.md#documentation-location)).
+To display the documentation of a 4D "classic" language command, select the command name or simply place the cursor in the name and press **F1**. La documentation de la commande est affichée dans une nouvelle fenêtre de votre navigateur par défaut. 4D looks for the documentation depending on the settings made in the Preferences (see [Documentation location](../Preferences/general.md#documentation-location)).
 
 :::
 
 
-## Search References
+## Chercher les références
 
 The **Search References...** command found in the **Method** menu or the context menu of the Code Editor finds all the objects (methods and forms) in the project where the current item of the method is referenced (used).
 
-The current item is either the one selected or the one where the cursor is located. It can be a field name, variable name, command, string, and so on. For example, the following action looks for all the occurrences of the *vlNbCmd* variable in the database:
+L'élément courant est soit celui sélectionné, soit celui où se trouve le curseur. Il peut s’agir d’un nom de champ, de nom de variable, de commande, d’une chaîne, etc. For example, the following action looks for all the occurrences of the *vlNbCmd* variable in the database:
 
 ![find-dialog](../assets/en/code-editor/search-references.png)
 
-This command displays its results in a new window.
+Cette commande affiche ses résultats dans une nouvelle fenêtre.
 

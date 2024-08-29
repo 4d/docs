@@ -3,7 +3,7 @@ id: privileges
 title: Privilegios
 ---
 
-Proteger los datos a la vez que se permite un acceso rápido y sencillo a los usuarios autorizados es un reto importante para las aplicaciones web. The ORDA security architecture is implemented at the heart of your datastore and allows you to define specific privileges to all web or REST user sessions for the various resources in your project (datastore, dataclasses, functions, etc.).
+Proteger los datos a la vez que se permite un acceso rápido y sencillo a los usuarios autorizados es un reto importante para las aplicaciones web. La arquitectura de seguridad ORDA se implementa en el corazón de su almacén de datos y le permite definir privilegios específicos a todas las sesiones usuario REST o web para los distintos recursos de su proyecto (datastore, dataclasses, funciones, etc.).
 
 ## Generalidades
 
@@ -23,13 +23,15 @@ Para una descripción detallada de toda la arquitectura de permisos, por favor l
 
 ## Resources
 
-Puede asignar acciones de permiso específicas a los siguientes recursos expuestos en su proyecto:
+You can assign specific permission actions to the following resources in your project:
 
 - el almacén de datos
 - una clase de datos
 - un atributo (incluidos los calculados y los alias)
 - una función de clase de modelo de datos
 - una función [singleton](../REST/$singleton.md)
+
+Each time a resource is accessed within a session (whatever the way it is accessed), 4D checks that the session has the appropriate permissions, and rejects the access if it is not authorized.
 
 Una acción de permiso definida en un nivel determinado se hereda por defecto en los niveles inferiores, pero se pueden establecer varios permisos:
 
@@ -150,7 +152,7 @@ El archivo por defecto tiene el siguiente contenido:
 
 ```
 
-Para un nivel de seguridad más alto, el privilegio "none" se asigna a todos los permisos en el datastore, por lo tanto el acceso de datos en todo el objeto `ds` está deshabilitado por defecto. Se recomienda no modificar ni utilizar este privilegio de bloqueo, sino agregar permisos específicos a cada recurso que desee poner a disposición desde solicitudes web o REST ([ver ejemplo a continuación](example-of-privilege-configuration)).
+Para un nivel de seguridad más alto, el privilegio "none" se asigna a todos los permisos en el datastore, por lo tanto el acceso de datos en todo el objeto `ds` está deshabilitado por defecto. Se recomienda no modificar ni utilizar este privilegio de bloqueo, sino agregar permisos específicos a cada recurso que desee poner a disposición desde solicitudes web o REST ([ver ejemplo a continuación](#example-of-privilege-configuration)).
 
 :::caution
 

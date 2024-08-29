@@ -183,7 +183,7 @@ Puede pasar cualquier número de valores de los siguientes tipos soportados:
 * time (almacenado como número de milisegundos - real)
 * null
 * objeto compartido
-* shared collection
+* colección compartida
 
 > Esta función modifica la colección original.
 

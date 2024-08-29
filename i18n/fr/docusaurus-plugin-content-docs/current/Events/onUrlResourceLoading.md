@@ -9,7 +9,7 @@ title: On URL Resource Loading
 
 ## Description
 
-This event is generated each time a new resource (picture, frame, etc.) is loaded on the current Web page.
+Cet événement est généré à chaque fois qu'une nouvelle ressource (image, frame, etc.) est chargée dans la page Web courante.
 
 La variable [Progression](FormObjects/properties_WebArea.md#progression) associée à la zone vous permet de connaître l'état du chargement.
 
