@@ -146,7 +146,7 @@ var $path : Text
 var $PictVar : Picture
 var $BlobVar : Blob
 
- // Resources フォルダー内の Images フォルダー内でピクチャーを探します 
+ // Resources フォルダー内の Images フォルダー内でピクチャーを探します
 $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd"
 
 READ PICTURE FILE($path;$PictVar) // ピクチャーをピクチャー変数に入れます
@@ -264,13 +264,13 @@ return false
   <h1>Welcome to Spiders United</h1>
   <p><b>Please enter your name:</b>
   <input name="vtUserName" value="" size="30" type="text"></p>
-  <p> 
-<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit"> 
+  <p>
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit">
 <input name="vsbRegister" value="Register" type="submit">
 <input name="vsbInformation" value="Information" type="submit"></p>
-<p> 
-<input name="vtNav_appName" value="" type="hidden"> 
-<input name="vtNav_appVersion" value="" type="hidden"> 
+<p>
+<input name="vtNav_appName" value="" type="hidden">
+<input name="vtNav_appVersion" value="" type="hidden">
 <input name="vtNav_appCodeName" value="" type="hidden">
 <input name="vtNav_userAgent" value="" type="hidden"></p>
 </form>
@@ -350,5 +350,3 @@ HTMLではすべてのオブジェクトがテキストオブジェクトであ�
 COMPILER_WEB メソッドが存在する場合、それは HTTPサーバーが動的なリクエストを受け取り、4Dエンジンを呼び出した場合に、システムを通して呼び出されます。 これはたとえば 4D Webサーバーが、ポストされたフォーム、または処理すべき URL を [`On Web Connection`](#on-web-connection) に受け取る場合が該当します。 このメソッドは Web通信時に使用される型指定または変数初期化指示子を含めることを目的としています。 これはデータベースのコンパイル時にコンパイラーによって使用されます。 COMPILER_WEB メソッドはすべての Webフォームで共通です。 デフォルトでは、COMPILER_WEB メソッドは存在しません。 明示的に作成する必要があります。
 
 > COMPILER_WEB プロジェクトメソッドは (存在すれば)、SOAPリクエストが受け入れられるごとに実行されます。
-
-
