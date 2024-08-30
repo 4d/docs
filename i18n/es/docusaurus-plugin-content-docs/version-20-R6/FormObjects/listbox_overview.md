@@ -353,13 +353,13 @@ Aquí está el método de la columna *arrText*:
 
 ```4d
  Case of
-    :(FORM event.code=On Before Data Entry) // a cell gets the focus
-       LISTBOX GET CELL POSITION(*;"lb";$col;$row)
+    :(FORM event.code=On Before Data Entry) // una celda obtiene el foco
+     LISTBOX GET CELL POSITION(*;"lb";$col;$row)
   // identification of cell
-       If(arrDate{$row}<Current date) // if date is earlier than today
-          $0:=-1 // cell is NOT enterable
+       If(arrDate{$row}<Current date) // si la fecha es anterior a hoy
+          $0:=-1 // la celda NO  es editable
        Else
-  // otherwise, cell is enterable
+  // de lo contrario, la celda es editable
        End if
  End case
 ```
@@ -475,10 +475,10 @@ En el método objeto del list box, puede escribir:
  Case of
     :(FORM event.code=On Selection Change)
        $n:=Size of array(LB_Arrays)
-       ARRAY LONGINT(_ListboxBackground;$n) // row background colors
+       ARRAY LONGINT(_ListboxBackground;$n) // colores de fondo de la línea
        For($i;1;$n)
           If(LB_Arrays{$i}=True) // selected
-             _ListboxBackground{$i}:=0x0080C080 // green background
+             _ListboxBackground{$i}:=0x0080C080 // fondo verde
           Else // not selected
              _ListboxBackground{$i}:=lk inherited
           End if
@@ -959,11 +959,11 @@ El único atributo obligatorio es "valueType" y sus valores soportados son "text
 Los valores de las celdas se almacenan en el atributo "value". Este atributo se utiliza tanto para la entrada como para la salida. También puede utilizarse para definir valores por defecto cuando se utilizan listas (ver a continuación).
 
 ```4d
- ARRAY OBJECT(obColumn;0) //column array
+ ARRAY OBJECT(obColumn;0) //array columna 
  C_OBJECT($ob1)
  $entry:="Hello world!"
  OB SET($ob1;"valueType";"text")
- OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
+ OB SET($ob1;"value";$entry) // si el usuario introduce un nuevo valor, $entry contendrá el valor editado
  C_OBJECT($ob2)
  OB SET($ob2;"valueType";"real")
  OB SET($ob2;"value";2/3)
