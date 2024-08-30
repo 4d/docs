@@ -44,7 +44,6 @@ title: HTTPリクエストの処理
  C_TEXT($1;$2;$3;$4;$5;$6)
 
 // メソッドのコード
-
 ```
 
 あるいは、[名前付き引数](Concepts/parameters.md#名前付き引数) シンタックスを利用することもできます:
@@ -143,7 +142,7 @@ var $path : Text
 var $PictVar : Picture
 var $BlobVar : Blob
 
- // Resources フォルダー内の Images フォルダー内でピクチャーを探します 
+ // Resources フォルダー内の Images フォルダー内でピクチャーを探します
 $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd"
 
 READ PICTURE FILE($path;$PictVar) // ピクチャーをピクチャー変数に入れます
@@ -259,19 +258,18 @@ return false
   <h1>Welcome to Spiders United</h1>
   <p><b>Please enter your name:</b>
   <input name="vtUserName" value="" size="30" type="text"></p>
-  <p> 
-<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit"> 
+  <p>
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit">
 <input name="vsbRegister" value="Register" type="submit">
 <input name="vsbInformation" value="Information" type="submit"></p>
-<p> 
-<input name="vtNav_appName" value="" type="hidden"> 
-<input name="vtNav_appVersion" value="" type="hidden"> 
+<p>
+<input name="vtNav_appName" value="" type="hidden">
+<input name="vtNav_appVersion" value="" type="hidden">
 <input name="vtNav_appCodeName" value="" type="hidden">
 <input name="vtNav_userAgent" value="" type="hidden"></p>
 </form>
 </body>
 </html>
-
 ```
 
 4D が Webブラウザーにページを送信すると、以下のように表示されます:
@@ -288,7 +286,7 @@ return false
 ユーザーが HTMLフォーム上のボタンのどれかをクリックした際に呼び出される `WWW_STD_FORM_POST` という 4Dメソッドを検証してみましょう。
 
 ```4d
-// 変数の値を取得します
+  // 変数の値を取得します
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrValues;0)
  WEB GET VARIABLES($arrNames;$arrValues)
@@ -318,7 +316,6 @@ return false
     :(Find in array($arrNames;"vsbInformation")#-1)
        WEB SEND FILE("userinfos.html")
  End case
-
 ```
 
 このメソッドの機能は:
