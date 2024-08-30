@@ -140,7 +140,7 @@ Para comprimir una estructura de archivo ZIP con una contraseña y una barra de 
  $zip.password:="password"
  $zip.callback:=Formula(myFormulaCompressingMethod($1))
 
- progID:=Progress New //we use the 4D Progress component
+ progID:=Progress New //utilizamos el componente 4D Progress
 
  $status:=ZIP Create archive($zip;$destination)
 
