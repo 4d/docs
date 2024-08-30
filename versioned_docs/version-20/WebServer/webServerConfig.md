@@ -22,8 +22,8 @@ There are different ways to configure the 4D web server settings, depending on t
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|Settings dialog box|[Configuration page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache)||
-|Settings dialog box|[Configuration page/Page Cache Size](../settings/web.md#page-cache-size)||
+|Settings dialog box|[Options (I) page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache)||
+|Settings dialog box|[Options (I) page/Page Cache Size](../settings/web.md#page-cache-size)||
 
 Enables and configures the web page cache. 
 
