@@ -301,18 +301,18 @@ A continuación, puede ejecutar esta petición:
 La clase de Dataclass `Students` tiene la función `pushData()` que recibe una entidad que contiene los datos del cliente. El método `checkData()` efectúa algunos controles. Si son válidos, la entidad se guarda y se devuelve.
 
 ```
-// Students Class
+// Clase Students
 
 Class extends DataClass
 
 exposed Function pushData($entity : Object) : Object
 	var $status : Object
 
-	$status:=checkData($entity) // $status is an object with a success boolean property
+	$status:=checkData($entity) // $status es un objeto con una propiedad booleana success 
 
-	If ($status.success)
+	Si ($status.success)
 	    $status:=$entity.save()
- 	   If ($status.success)
+ 	   If ($status. uccess)
  	       return $entity
   	  End if
 	End if
