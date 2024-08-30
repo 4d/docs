@@ -5,7 +5,7 @@ title: Uso de procesos web apropiativos
 
 El servidor web de 4D le permite aprovechar al máximo los ordenadores multinúcleo utilizando procesos web apropiativos en sus aplicaciones. Puede configurar su código relacionado con la web, incluyendo las etiquetas 4D, los métodos base Web o las funciones de clase REST de ORDA para que se ejecuten simultáneamente en tantos núcleos como sea posible.
 
-Para obtener información detallada sobre el proceso apropiativo en 4D, por favor consulte la sección *Procesos 4D apropiativos* en el [*Manual de lenguaje 4D*](https://doc.4d.com).
+For in-depth information on preemptive process in 4D, please refer to the [Preemptive Processes](../Develop/preemptive.md) section.
 
 ## Disponibilidad del modo apropiativo para los procesos web
 
@@ -29,7 +29,7 @@ La siguiente tabla indica si el modo apropiativo se utiliza o está disponible, 
 - ***web setting*** significa que el modo apropiativo depende de un valor de configuración:
   - cuando se selecciona la opción de [**sesiones escalables**](sessions.md#enabling-sessions), el [modo apropiativo se utiliza automáticamente](sessions.md#preemptive-mode) para los procesos web.
   - en caso contrario, se tendrá en cuenta la opción [**Utilizar procesos apropiativos**](webServerConfig.md#use-preemptive-processes).
-  - en lo que respecta a los procesos de servicios web (servidor o cliente), se soporta el modo apropiativo a nivel del método. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.en.html)) and make sure they are confirmed thread-safe by the compiler.
+  - en lo que respecta a los procesos de servicios web (servidor o cliente), se soporta el modo apropiativo a nivel del método. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv20/4D/20.2/Subscribing-to-a-Web-Service-in-4D.300-6750336.en.html)) and make sure they are confirmed thread-safe by the compiler.
 
 ## Escribir código servidor web hilo seguro
 
