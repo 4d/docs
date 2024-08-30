@@ -307,7 +307,7 @@ Listening IP port number for HTTPS connections via TLS. By default, the value is
 |`WEB SET OPTION`|`Web inactive process timeout`||
 |Settings dialog box|[Options (I) page/Inactive Process Timeout](../settings/web.md#inactive-process-timeout)|Slider|
 
-Life duration (in minutes) of inactive processes associated with sessions. At the end of the timeout, the process is killed on the server, the `On Web Close Process` database method is called, then the session context is destroyed.
+Life duration (in minutes) of inactive processes associated with legacy sessions. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the session context is destroyed.
 
 Default: 480 minutes (pass 0 to restore the default value)
 
