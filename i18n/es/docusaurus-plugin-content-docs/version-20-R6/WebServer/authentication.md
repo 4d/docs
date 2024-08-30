@@ -83,7 +83,7 @@ Por tanto, se llama al método base `On Web Authentication`:
 Por tanto, NO se llama al método base `On Web Authentication`:
 
 - cuando el servidor web recibe una URL que solicita una página estática válida.
-- when the web server reveives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
+- cuando el servidor web recibe una URL que empieza por `rest/` y se lanza el servidor REST (en este caso, la autenticación se gestiona a través del método base [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) o los [parámetros de estructura](REST/configuration.md#using-the-structure-settings)).
 
 ### Sintaxis
 
@@ -180,7 +180,7 @@ El método base `On Web Connection` sólo se ejecuta si la conexión ha sido ace
 Ejemplo del método base `On Web Authentication` en [Modo DIGEST](#digest-protocol):
 
 ```4d
- // On Web Authentication Database Method
+ // Método base On Web Authentication
  #DECLARE ($url : Text; $header : Text; $ipB : Text; $ipS : Text; \
  	$user : Text; $pw : Text) -> $valid : Boolean
   
@@ -188,9 +188,9 @@ Ejemplo del método base `On Web Authentication` en [Modo DIGEST](#digest-protoc
  $valid:=False
 
  $found:=ds.WebUser.query("User === :1";$user)
- If($found.length=1) // User is found
+ If($found.length=1) // El usuario se encuentra
  	$valid:=WEB Validate digest($user;[WebUser]password)
  Else
-    $valid:=False // User does not exist
+    $valid:=False // El usuario no existe
  End if
 ```

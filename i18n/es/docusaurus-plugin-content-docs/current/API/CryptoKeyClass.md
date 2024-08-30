@@ -91,18 +91,18 @@ Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
 - Lado Alice:
 
 ```4d
-// Get message, public key & signature
+// Obtener mensaje, llave pública y firma
 $message:=Folder(fk desktop folder).file("message.txt").getText()
 $publicKey:=Folder(fk desktop folder).file("public.pem").getText()
-$signature:=Folder(fk desktop folder).file("signature").getText()
+$signature:=Folder(fk desktop folder).file("signature"). etText()
 
-// Create a key
+// Crear una llave
 $type:=New object("type";"PEM";"pem";$publicKey)
 $key:=4D.CryptoKey.new($type)
 
-// Verify signature
+// Verificar la firma
 If ($key.verify($message;$signature;$type).success)
-// The signature is valid
+// La firma es válida
 
 End if
 ```

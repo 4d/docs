@@ -92,9 +92,9 @@ Les pages `.shtml` sont automatiquement traitées par le serveur web. Votre page
 
 ![](../assets/en/WebServer/hello3bis.png)
 
-### REST request
+### Requête REST
 
-If we not only want to _display_ data, but to _use_ it, we can use ORDA and the REST server. Thanks to the [ORDA concept](ORDA/overview.md), the `Friends` table is automatically mapped to a dataclass and is available through [REST](REST/gettingStarted.md).
+Si nous ne voulons pas seulement _afficher_ des données, mais aussi les _utiliser_, nous pouvons faire appel à ORDA et au serveur REST. Grâce au concept [ORDA](ORDA/overview.md), la table `Friends` est automatiquement disponible sous forme de dataclass et est disponible via [REST](REST/gettingStarted.md).
 
 1. Nous allons utiliser le serveur REST pour accéder aux données : dans la boîte de dialogue des \*\* Paramètres\*\*, sélectionnez **Web** > **Fonctionnalités Web**, et cochez l'option **Exposer en tant que serveur REST**.
 
@@ -106,7 +106,7 @@ If we not only want to _display_ data, but to _use_ it, we can use ORDA and the 
 http://localhost/rest/$catalog
 ```
 
-The web server returns the results in JSON:
+Le serveur web renvoie les résultats en JSON :
 
 ```json
 {
@@ -121,17 +121,17 @@ The web server returns the results in JSON:
 }
 ```
 
-You get the catalog, i.e. the list of exposed dataclasses and attributes in the datastore.
+Vous obtenez le catalogue, c'est-à-dire la liste des dataclass et des attributs exposés dans le datastore.
 
-You can also get any data.
+Vous pouvez également obtenir diverses données.
 
-3. Enter the following URL:
+3. Entrez l'URL suivante :
 
 ```
 http://localhost/rest/Friends
 ```
 
-The server returns the entities, i.e. the data, from the Friends dataclass:
+Le serveur renvoie les entités, c'est-à-dire les données, de la dataclass Friends :
 
 ```json
 {
@@ -178,24 +178,24 @@ The server returns the entities, i.e. the data, from the Friends dataclass:
 }
 ```
 
-This very simple example shows how the web server interacts transparently with the [REST server](REST/gettingStarted.md) to return any requested data, provided it is exposed. In your web interfaces, you can easily bind the javascript or html code with returned data. See the built-in [Web Data Explorer](Admin/dataExplorer.md) to have an example of sophisticated web interface bound to dataclasses.
+Cet exemple très simple montre comment le serveur web interagit de manière transparente avec le [serveur REST](REST/gettingStarted.md) pour renvoyer toutes les données demandées, à condition qu'elles soient exposées. Dans vos interfaces web, vous pouvez facilement lier le code javascript ou html avec les données retournées. Examinez l'[Explorateur de données Web](Admin/dataExplorer.md) intégré pour avoir un exemple d'interface web sophistiquée liée aux dataclass.
 
-## Login and session
+## Connexion et session
 
-In the above sections, we get free access to the application from web requests. However, in the world of web applications, data access security is the first priority. When connecting to the 4D web server, users must be authentified and their navigation controlled.
+Dans les sections ci-dessus, nous obtenons un accès libre à l'application à partir de requêtes Web. Cependant, dans le monde des applications web, la sécurité d'accès aux données est la première priorité. Lors de la connexion au serveur Web 4D, les utilisateurs doivent être authentifiés et leur navigation contrôlée.
 
-### Creating a table of users
+### Création d'une table d'utilisateurs
 
-The most simple and secured way to log a user on the 4D web server is based upon the following scenario:
+La façon la plus simple et sécurisée de connecter un utilisateur sur le serveur web 4D est basée sur le scénario suivant :
 
-- Users are stored in a dedicated, unexposed table (named _WebUsers_ for example)
-- The _WebUsers_ table could be [encrypted](MSC/encrypt.md) and stores the user login and a hash of their password.
+- Les utilisateurs sont stockés dans une table dédiée et non exposée (nommée _WebUsers_ par exemple)
+- La table _WebUsers_ pourrait être [chiffrée](MSC/encrypt.md) et stocke le nom d'utilisateur et un hachage de leur mot de passe.
 
-1. Create a table with some fields, for example:
+1. Créez une table avec certains champs, par exemple :
 
 ![](../assets/en/WebServer/helloUsers.png)
 
-2. Write and execute the following code to create a user:
+2. Écrivez et exécutez le code suivant pour créer un utilisateur :
 
 ```4d
 var $webUser : cs.WebUsersEntity
@@ -203,7 +203,7 @@ var $webUser : cs.WebUsersEntity
 $webUser:=ds.WebUsers.new()
 $webUser.firstName:="John"
 $webUser.lastName:="Doe"
-// the password would be entered by the user
+// le mot de passe devrait en principe être saisi par l'utilisateur
 $webUser.password:=Generate password hash("123")
 $webUser.userId:="john@4d.com"
 $webUser.save()
@@ -211,11 +211,11 @@ $webUser.save()
 
 ### Authentification des utilisateurs
 
-> To be secure from end to end, it is necessary that the whole connection is established via [https](webServerConfig.md#enable-https).
+> Pour être en sécurité de bout en bout, il est nécessaire que la connexion entière soit établie via [https](webServerConfig.md#enable-https).
 
-1. Open the Explorer and create a project method named "login".
+1. Ouvrez l'Explorateur et créez une méthode projet nommée "login".
 
-2. Write the following code:
+2. Écrivez le code suivant :
 
 ```4d
 var $indexUserId; $indexPassword : Integer
@@ -224,26 +224,26 @@ var $user; $info : Object
 ARRAY TEXT($anames; 0)
 ARRAY TEXT($avalues; 0)
 
-// get values sent in the header of the request
+// récupérer les valeurs envoyées dans le header de la requête
 WEB GET VARIABLES($anames; $avalues)
 
-// look for header login fields
+// chercher les champs de login dans le header
 $indexUserId:=Find in array($anames; "userId")
 $userId:=$avalues{$indexUserId}
 $indexPassword:=Find in array($anames; "password")
 $password:=$avalues{$indexPassword}
 
-//look for a user with the entered name in the users table
+//chercher l'utilisateur saisi dans la table des utilisateurs
 $user:=ds.WebUsers.query("userId = :1"; $userId).first()
 
-If ($user#Null) //a user was found
-		//check the password
+If ($user#Null) //un utilisateur a été trouvé
+		//vérifier le mot de passe
     If (Verify password hash($password; $user.password))
-    		//password ok, fill the session
+    		//mot de passe ok, on remplit la session
         $info:=New object()
         $info.userName:=$user.firstName+" "+$user.lastName
         Session.setPrivileges($info)
-        	//You can use the user session to store any information
+        	//On peut utiliser la session utilisateur pour stocker toute information
         WEB SEND TEXT("Welcome "+Session.userName)
     Else 
         WEB SEND TEXT("Wrong user name or password.")
@@ -253,7 +253,7 @@ Else
 End if 
 ```
 
-3. Display the method properties by clicking on the **[i]** button in the code editor, check the `4D tags and URLs (4DACTION...)` option and click **OK**.
+3. Affichez les propriétés de la méthode en cliquant sur le bouton **[i]** dans l'éditeur de code, cochez l'option `Balises et URLs 4D (4DACTION...)` et cliquez sur **OK**.
 
 ![](../assets/en/WebServer/hello0.png)
 
@@ -263,14 +263,14 @@ End if
 http://localhost/4DACTION/login/?userID=john@4d.com&password=123
 ```
 
-> Using such URLs is not recommended, it is only presented here to keep the example simple. A more realistic login request must be handled through a web form and a POST request. See [this page](sessions.md#example) for an example of form POST.
+> L'utilisation de telles URLs n'est pas recommandée, elle est présentée ici uniquement pour simplifier l'exemple. Une requête de connexion plus réaliste doit être traitée via un formulaire web et une requête POST. Voir [cette page](sessions.md#example) pour un exemple de formulaire POST.
 
-Then you will be logged for the session:
+Vous serez alors connecté pour la session :
 
 ![](../assets/en/WebServer/login1.png)
 
-Wrong credentials would be rejected:
+Les informations d'identification erronées seraient rejetées :
 
 ![](../assets/en/WebServer/login2.png)
 
-Once a user is logged, you can handle the associated session using the `WEB Get Current Session ID` method. See the [User sessions](sessions.md) page.
+Une fois qu'un utilisateur est connecté, vous pouvez gérer la session associée en utilisant la commande `WEB Get Current Session ID`. Voir la page [Sessions Web](sessions.md) .

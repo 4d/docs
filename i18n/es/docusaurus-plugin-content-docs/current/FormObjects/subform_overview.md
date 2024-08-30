@@ -91,7 +91,7 @@ Se genera el evento formulario [On Bound Variable Change](../Events/onBoundVaria
 - en cuanto se asigna un valor a la variable/expresión del formulario padre, incluso si se reasigna el mismo valor
 - si el subformulario pertenece a la página formulario actual o a la página 0.
 
-Note that, as in the above example, it is preferable to use the `OBJECT Get subform container value` command which returns the value of the expression in the subform container rather than the expression itself because it is possible to insert several subforms in the same parent form (for example, a window displaying different time zones contains several clocks).
+Tenga en cuenta que, como en el ejemplo anterior, es preferible utilizar el comando `OBJECT Get subform container value` que devuelve el valor de la expresión en el contenedor del subformulario en lugar de la propia expresión, ya que es posible insertar varios subformularios en el mismo formulario padre (por ejemplo, una ventana que muestra diferentes zonas horarias contiene varios relojes).
 
 La modificación de la variable o expresión asociada desencadena eventos de formulario que permiten sincronizar los valores del formulario padre y del subformulario:
 

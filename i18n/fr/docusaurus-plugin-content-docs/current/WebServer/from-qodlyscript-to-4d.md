@@ -5,7 +5,7 @@ title: From QodlyScript to 4D Language
 
 4D developers use the [Qodly Studio documentation](https://developer.qodly.com/docs/studio/overview) to learn how to design their Qodly forms in Qodly Studio.
 
-Code examples are provided in [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript), but since QodlyScript inherits from the 4D Language, you won't be lost. Converting QodlyScript code to 4D language is easy, it only requires some adaptations.
+Les exemples de code sont fournis en [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript), mais étant donné que QodlyScript hérite du langage 4D, vous ne serez pas perdu. Converting QodlyScript code to 4D language is easy, it only requires some adaptations.
 
 ## Variable names
 

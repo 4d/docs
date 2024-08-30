@@ -160,15 +160,15 @@ End if
 En caso contrario, si los símbolos de referencia de caracteres aparecen dentro de una expresión, devuelven el caracter (al que se refieren) como una cadena de 1 caracter. Por ejemplo:
 
 ```4d
-//The following example tests if the last character of vtText is an At sign "@"
+//El siguiente ejemplo prueba si el último carácter de vtText es una arroba "@"
  If(vtText#"")
     If(Character code(Substring(vtText;Length(vtText);1))=At sign)
   //...
     End if
  End if
-
-  //Using the character reference syntax, you would write in a simpler manner:
- If(vtText#"")
+ 
+  //Utilizando la sintaxis de referencia de caracteres, se podría escribir de una manera más simple:
+  If(vtText#"")
     If(Character code(vtText[[Length(vtText)]])=At sign)
   // ...
     End if
@@ -200,7 +200,7 @@ El siguiente método proyecto pone en mayúsculas el primer carácter de cada pa
 ```4d
   //Capitalize_text project method
   //Capitalize_text ( Text ) -> Text
-  //Capitalize_text ( Source text ) -> Capitalized text
+  //Capitalize_text ( Source text ) -> Texto capitalizado
 
  $0:=$1
  $vlLen:=Length($0)

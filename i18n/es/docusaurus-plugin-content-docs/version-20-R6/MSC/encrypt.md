@@ -27,11 +27,11 @@ Para cifrar los datos por primera vez con el CSM es necesario seguir los siguien
 
 1. En el editor de estructuras, marque el atributo **Encriptable** de cada tabla cuyos datos desee encriptar. Ver la sección "Propiedades de las tablas".
 2. Abra la página de encriptación del CSM.
-   If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page:
+   Si abre la página sin defini ninguna tabla como **Encriptable**, se muestra el siguiente mensaje en la página:
    ![](../assets/en/MSC/MSC_encrypt1.png)
-   Otherwise, the following message is displayed:
+   En caso contrario, se muestra el siguiente mensaje:
    ![](../assets/en/MSC/MSC_encrypt2.png)<p>
-   This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted.
+   Esto significa que el estado **Encriptable** de al menos una tabla ha sido modificado y el archivo de datos aún no ha sido encriptado.
    \*\*Nota: \*\*El mismo mensaje se muestra cuando el estado **Encriptable** se ha modificado en un archivo de datos ya encriptado o después de que el archivo de datos haya sido desencriptado (ver más abajo).</p>
 3. Haga clic en el botón imagen Cifrar.\
    ![](../assets/en/MSC/MSC_encrypt3.png)\

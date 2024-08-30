@@ -17,7 +17,7 @@ El método base `On Web Connection` puede utilizarse como punto de entrada al se
 
 ### Llamadas a métodos base
 
-El método base `On Web Connection` se llama automáticamente cuando el servidor recibe cualquier URL que no sea una ruta a una página existente en el servidor. Se llama al método de la base de datos con la URL.
+The `On Web Connection` database method is automatically called when the server receives any URL that is not a path to an existing page on the server. Se llama al método de la base de datos con la URL.
 
 Por ejemplo, la URL "_a/b/c_" llamará al método base, pero "_a/b/c.html_" no llamará al método base si la página "c.html" existe en la subcarpeta "a/b" del [WebFolder](webServerConfig.md#root-folder).
 
@@ -40,9 +40,9 @@ Debe declarar estos parámetros de la siguiente manera:
 
 ```4d
 //Método base On Web Connection
- 
+
  C_TEXT($1;$2;$3;$4;$5;$6)
- 
+
 //Código para el métodod
 ```
 
@@ -136,16 +136,17 @@ Este ejemplo describe la asociación de la URL `/4DACTION` con un objeto imagen 
 El método `getPhoto` es el siguiente:
 
 ```4d
-C_TEXT($1) // Este parámetro debe declararse siempre
+C_TEXT($1) // This parameter must always be declared
 var $path : Text
 var $PictVar : Picture
 var $BlobVar : Blob
 
- //busca la imagen en la carpeta Imágenes dentro de la carpeta Resources 
+ //find the picture in the Images folder within the Resources folder
 $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd"
 
-READ PICTURE FILE($path;$PictVar) //pone la imagen en la variable imagen
-PICTURE TO BLOB($PictVar;$BLOB;".png") //convierte la imagen en formato ".png". WEB SEND BLOB($BLOB;"image/png")
+READ PICTURE FILE($path;$PictVar) //put the picture in the picture variable
+PICTURE TO BLOB($PictVar;$BLOB;".png") //convert the picture to ".png" format
+WEB SEND BLOB($BLOB;"image/png")
 ```
 
 ### 4DACCIÓN para publicar formularios
@@ -255,13 +256,13 @@ return false
   <h1>Welcome to Spiders United</h1>
   <p><b>Please enter your name:</b>
   <input name="vtUserName" value="" size="30" type="text"></p>
-  <p> 
-<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit"> 
+  <p>
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit">
 <input name="vsbRegister" value="Register" type="submit">
 <input name="vsbInformation" value="Information" type="submit"></p>
-<p> 
-<input name="vtNav_appName" value="" type="hidden"> 
-<input name="vtNav_appVersion" value="" type="hidden"> 
+<p>
+<input name="vtNav_appName" value="" type="hidden">
+<input name="vtNav_appVersion" value="" type="hidden">
 <input name="vtNav_appCodeName" value="" type="hidden">
 <input name="vtNav_userAgent" value="" type="hidden"></p>
 </form>
@@ -288,9 +289,9 @@ Examinemos el método 4D `WWW_STD_FORM_POST` que se llama cuando el usuario hace
  ARRAY TEXT($arrValues;0)
  WEB GET VARIABLES($arrNames;$arrValues)
  C_LONGINT($user)
- 
+
  Case of
- 
+
   // The Log On button was clicked
     :(Find in array($arrNames;"vsbLogOn")#-1)
        $user :=Find in array($arrNames;"vtUserName")
@@ -300,15 +301,15 @@ Examinemos el método 4D `WWW_STD_FORM_POST` que se llama cuando el usuario hace
           WWW POST EVENT("Log On";WWW Log information)
   // The WWW POST EVENT method saves the information in a database table
        Else
- 
+
           $0:=WWW Register
   // The WWW Register method lets a new Web user register
        End if
- 
+
   // The Register button was clicked
     :(Find in array($arrNames;"vsbRegister")#-1)
        $0:=WWW Register
- 
+
   // The Information button was clicked
     :(Find in array($arrNames;"vsbInformation")#-1)
        WEB SEND FILE("userinfos.html")
