@@ -50,11 +50,11 @@ Los siguientes comandos se pueden utilizar en el método de retrollamada:
 Quiere crear un área 4D View Pro fuera de la pantalla y obtener el valor de una celda:
 
 ```4d
-// cs.OffscreenArea class declaration 
+// Declaración de la clase cs.OffscreenArea 
 Class constructor ($path : Text)
  This.filePath:=$path
- 
-// This function will be called on each event of the offscreen area 
+
+// Esta función será llamada en cada evento del área offscreen 
 Function onEvent()
  Case of
   :(FORM Event.code=On VP Ready)
