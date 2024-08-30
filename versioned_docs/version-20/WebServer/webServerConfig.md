@@ -488,7 +488,7 @@ True if PFS is available on the web server (see [TLS](Admin/tls.md#perfect-forwa
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|Settings dialog box|[Options (I) page/Maximum Concurrent Web Processes](../settings/web.md#reuse-temporary-contexts)||
+|Settings dialog box|[Options (I) page/Reuse Temporary Contexts](../settings/web.md#reuse-temporary-contexts)||
 
 > This option is only available when **No sessions** option is checked. 
 
@@ -572,7 +572,7 @@ For example, if you want the HTML root folder to be the "Web" subfolder in the "
 |`WEB SET OPTION`|`Web scalable session`||
 |Settings dialog box|[Options (I) page/Scalable sessions (multi-process sessions)](../settings/web.md#scalable-sessions-multi-process-sessions)||
 
-Scalable session management enabling status for the 4D web server. Web server sessions are detailed in the [User sessions](sessions.md) page.
+Scalable session management enabling status for the 4D web server. Web server sessions are detailed in the [Web sessions](sessions.md) page.
 
 
 
@@ -631,7 +631,7 @@ The `Secure` attribute value of the session cookie is automatically set to "True
 
 |Can be set with|Name|Comments|
 |---|---|---|
-|Settings dialog box|[Options (I) page/Maximum Concurrent Web Processes](../settings/web.md#use-preemptive-processes)||
+|Settings dialog box|[Options (I) page/Use Preemptive Processes](../settings/web.md#use-preemptive-processes)||
 
 This option enables the preemptive mode for your application's web server code when **No sessions** option is selected (the preemptive mode is always enabled with **scalable sessions**). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of [web-related code](preemptiveWeb.md#thread-safety-of-4d-web-code) and return errors in case of incompatibility.
 
