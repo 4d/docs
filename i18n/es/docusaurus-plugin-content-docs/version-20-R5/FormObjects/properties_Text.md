@@ -317,13 +317,13 @@ La propiedad especial "cell" permite aplicar un conjunto de propiedades a una so
 En un método proyecto _Color_, escriba el siguiente código:
 
 ```4d
-//Color method
-//Sets font color for certain rows and background color for Col2 and Col3 columns
+//Método Color
+//Define el color de la fuente para ciertas líneas y el color de fondo para las columnas Col2 y Col3
 Form.meta:=New object
-If(This.ID>5) //ID is an attribute of collection objects/entities
+If(This.ID<5) //ID es un atributo de los objetos/entidades de la colección
   Form.meta.stroke:="purple"
   Form.meta.cell:=New object("Col2";New object("fill";"black");\
-  	"Col3";New object("fill";"red"))
+    "Col3";New object("fill";"red"))
 Else
   Form.meta.stroke:="orange"
 End if
@@ -332,12 +332,12 @@ End if
 **Buenas prácticas:** por razones de optimización, normalmente se recomienda crear el objeto `meta.cell` una vez en el método del formulario:
 
 ```4d
-  //form method
+  //método formulario
  Case of
     :(Form event code=On Load)
        Form.colStyle:=New object("Col2";New object("fill";"black");\
        	"Col3";New object("fill";"red"))  
- // you can also define other style sets  
+        // también puede definir otros conjuntos de estilos  
        Form.colStyle2:=New object("Col2";New object("fill";"green");\
        	"Col3";New object("fontWeight";"bold"))  
  End case
