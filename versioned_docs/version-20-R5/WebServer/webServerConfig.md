@@ -430,9 +430,9 @@ Possible values: 500 000 to 2 147 483 648.
 |Can be set with|Name|Comments|
 |---|---|---|
 |webServer object|[`maxSessions`](API/WebServerClass.md#maxsessions)||
-|`WEB SET OPTION`|`Web max sessions	`||
+|`WEB SET OPTION`|`Web max sessions`||
 
-Maximum number of simultaneous sessions. When you reach the limit set, the oldest session is closed (and `On Web Close Process` database method is called) if the Web server needs to create a new one. The number of simultaneous sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default). 
+Maximum number of simultaneous legacy sessions. When you reach the limit set, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the Web server needs to create a new one. The number of simultaneous legacy sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default). 
 
 Default value: 100 (pass 0 to restore the default value).
 
