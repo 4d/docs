@@ -1,7 +1,4 @@
-const { themes } = require('prism-react-renderer');
 const { default: remarkGfm } = require('remark-gfm');
-const lightTheme = themes.github;
-const darkTheme = themes.palenight;
 
 const isProduction = process.env.GITHUB_REPOSITORY_OWNER === '4d';
 
@@ -136,8 +133,8 @@ module.exports = {
       },
     },
     prism: {
-      theme: lightTheme,
-      darkTheme: darkTheme,
+      theme: require('./src/theme/highlight/themes/default4D_Light'),
+      darkTheme: require('./src/theme/highlight/themes/default4D_Dark'),
     },
     navbar: {
       title: "4D Documentation",
