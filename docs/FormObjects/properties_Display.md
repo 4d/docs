@@ -539,7 +539,7 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
+[List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
 ---
 
