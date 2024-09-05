@@ -17,15 +17,15 @@ title: VP ADD SHEET
 
 #### Description
 
-The `VP ADD SHEET` command <!-- REF #_method_.VP ADD SHEET.Summary -->inserts a sheet in the document loaded in _vpAreaName_.<!-- END REF -->
+La commande `VP ADD SHEET` <!-- REF #_method_.VP ADD SHEET.Summary -->insère une feuille dans le document chargé dans _vpAreaName_.<!-- END REF -->
 
-In _vpAreaName_, pass the name of the 4D View Pro area.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro.
 
-In _sheet_, you can pass an index for the new sheet. If the passed _index_ is inferior to or equal to 0, the command inserts the new sheet at the beginning. If _index_ exceeds the number of sheets, the command inserts the new sheet after the existing ones.
+Dans _sheet_, vous pouvez passer le numéro de la nouvelle feuille. Si l'_index_ passé est inférieur ou égal à 0, la commande insère la nouvelle feuille au début. Si l'_index_ est supérieur au nombre de feuilles, la commande insère la nouvelle feuille après les feuilles existantes.
 
 > La numérotation démarre à 0.
 
-In _name_, you can pass a name for the new sheet. The new name cannot contain the following characters: `*, :, [, ], ?,\,/`
+Dans _name_, vous pouvez passer un nom pour la nouvelle feuille. Le nouveau nom ne peut pas contenir les caractères suivants : `*, :, [, ], ?,\,/`
 
 #### Exemple
 
