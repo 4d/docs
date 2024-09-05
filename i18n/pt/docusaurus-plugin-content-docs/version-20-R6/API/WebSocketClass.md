@@ -86,8 +86,8 @@ The `4D.WebSocket.new()` function <!-- REF #4D.WebSocket.new().Summary -->create
 
 Em *url*, passe o URL ao qual o servidor WebSocket responderá. Podem ser utilizados os seguintes padrões de URL:
 
-- `ws://host[:port]path[?query]` for standard connections
-- `wss://host[:port]path[?query]` for TLS secured connections
+- `ws://host[:port]path[?query]` para ligações padrão
+- `wss://host[:port]path[?query]` para conexões TLS seguras
 
 If the connection is not possible, a `null` object is returned and an error is generated (that you can intercept using a method installed with `ON ERR CALL`).
 
@@ -111,7 +111,7 @@ Aqui está a sequência de chamadas de retorno:
 
 1. `onOpen` é executado uma vez
 2. São executados zero ou vários `onMessage`
-3. Zero or one `onError` is executed (stops the processing)
+3. Zero ou um `onError` é executado (pára o processamento)
 4. `onTerminate` é sempre executado uma vez
 
 #### Exemplo
@@ -251,7 +251,7 @@ In *reason*, you can pass a string describing why the connection is being closed
 
 #### Descrição
 
-The `.url` property contains <!-- REF #WebSocketClass.url.Summary -->the URL to which the WebSocket has connected<!-- END REF -->. It is the URL you passed to the [`new()`](#4dwebsocketnew) function.
+The `.url` property contains <!-- REF #WebSocketClass.url.Summary -->the URL to which the WebSocket has connected<!-- END REF -->. É o URL que você passou para a função [`new()`](#4dwebsocketnew).
 
 Esta propriedade é só de leitura.
 
