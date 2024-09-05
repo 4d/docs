@@ -7,22 +7,11 @@ title: CryptoKey
 
 このクラスは `4D` クラスストアより提供されます。
 
-### 例題
+:::info 参照
 
-たとえば ES256 JSON Web Token (JWT) を作成するために新規 ECDSA キーペアを使ってメッセージの署名と検証をおこないます。
+このクラスの包括的な概要については、[**CryptoKey: 暗号化、復号化、署名、検証！**](https://blog.4d.com/ja/cryptokey-encrypt-decrypt-sign-and-verify/) ブログ記事を参照ください。
 
-```4d
- // 新規 ECDSA キーペアの生成
-$key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
-
-  // base64 形式で署名を取得
-$message:="hello world" 
-$signature:=$key.sign($message;New object("hash";"SHA256"))
-
-  // 署名の検証
-$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
-ASSERT($status.success)
-```
+:::
 
 ### 概要
 
@@ -53,10 +42,10 @@ ASSERT($status.success)
 
 <!-- REF #4D.CryptoKey.new().Params -->
 
-| 引数       | タイプ                          |    | 説明                    |
+| 引数       | 型                            |    | 説明                    |
 | -------- | ---------------------------- | -- | --------------------- |
 | settings | Object                       | -> | キーペアを生成・ロードするための設定    |
-| result   | 4D.CryptoKey | <- | 暗号化キーペアをカプセル化したオブジェクト |
+| 戻り値      | 4D.CryptoKey | <- | 暗号化キーペアをカプセル化したオブジェクト |
 
 <!-- END REF -->
 
@@ -64,7 +53,7 @@ ASSERT($status.success)
 
 #### *settings*
 
-| プロパティ           | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| プロパティ           | 型       | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [type](#type)   | text    | 作成するキーのタイプを定義します:<li>"RSA": [.size](#size) に指定されたサイズを使って、RSA キーペアを生成します。</li><li>"ECDSA": [.curve](#curve) に指定された曲線を用いて、楕円曲線デジタル署名アルゴリズム (Elliptic Curve Digital Signature Algorithm) を使ったキーペアを生成します。 ECDSA キーは署名だけに使用されるもので、暗号化には使用できないことに留意してください。</li><li>"PEM": [.pem](#pem) を使って、PEM 形式のキーペアをロードします。</li> |
 | [curve](#curve) | text    | ECDSA 曲線名                                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -74,6 +63,66 @@ ASSERT($status.success)
 #### *CryptoKey*
 
 戻り値の `CryptoKey` オブジェクトは、暗号化キーペアをカプセル化します。 これは共有オブジェクトのため、複数の 4D プロセスによって同時使用できます。
+
+#### 例題 1
+
+メッセージが秘密鍵で署名され、その署名は対応する公開鍵で検証されます。 以下のコードは、簡単なメッセージの署名を作成し、検証するものです。
+
+- Bob側:
+
+```4d
+// メッセージを作成します
+$message:="hello world"
+Folder(fk desktop folder).file("message.txt").setText($message)
+
+// キーを作成します
+$type:=New object("type";"RSA")
+$key:=4D.CryptoKey.new($type)
+
+// 公開鍵を取得して保存します
+Folder(fk desktop folder).file("public.pem").setText($key.getPublicKey())
+
+// 署名を base64 形式で取得して保存します
+Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
+
+/*Bob はメッセージと公開鍵、署名を Alice に送信します*/
+```
+
+- Alice側:
+
+```4d
+// メッセージと公開鍵、署名を取得します
+$message:=Folder(fk desktop folder).file("message.txt").getText()
+$publicKey:=Folder(fk desktop folder).file("public.pem").getText()
+$signature:=Folder(fk desktop folder).file("signature").getText()
+
+// キーを作成します 
+$type:=New object("type";"PEM";"pem";$publicKey)
+$key:=4D.CryptoKey.new($type)
+
+// 署名を検証します
+If ($key.verify($message;$signature;$type).success)
+// 署名は有効です
+
+End if
+```
+
+#### 例題 2
+
+たとえば ES256 JSON Web Token (JWT) を作成するために新規 ECDSA キーペアを使ってメッセージの署名と検証をおこないます。
+
+```4d
+ // 新規 ECDSA キーペアの生成
+$key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
+
+  // base64 形式で署名を取得
+$message:="hello world" 
+$signature:=$key.sign($message;New object("hash";"SHA256"))
+
+  // 署名の検証
+$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
+ASSERT($status.success)
+```
 
 <!-- REF CryptoKey.curve -->
 
@@ -109,7 +158,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <!-- REF #CryptoKey.decrypt().Params -->
 
-| 引数      | タイプ    |    | 説明                                                |
+| 引数      | 型      |    | 説明                                                |
 | ------- | ------ | -- | ------------------------------------------------- |
 | message | Text   | -> | `options.encodingEncrypted` を使ってデコードし復号するメッセージ文字列 |
 | options | Object | -> | デコーディングオプション                                      |
@@ -123,7 +172,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 #### *オプション*
 
-| プロパティ             | タイプ  | 説明                                                                                                                         |
+| プロパティ             | 型    | 説明                                                                                                                         |
 | ----------------- | ---- | -------------------------------------------------------------------------------------------------------------------------- |
 | hash              | text | 使用する Digest アルゴリズム。 例: "SHA256", "SHA384", "SHA512"。                                                       |
 | encodingEncrypted | text | 復号するバイナリ形式に `message` を変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"   |
@@ -133,10 +182,10 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 `message` の復号に成功した場合には、success プロパティが `true` に設定された *status* オブジェクトを返します。
 
-| プロパティ   | タイプ        | 説明                                                              |
+| プロパティ   | 型          | 説明                                                              |
 | ------- | ---------- | --------------------------------------------------------------- |
 | success | boolean    | メッセージの復号に成功した場合は true                                           |
-| result  | text       | options.encodingDecrypted を使って復号およびデコードされたメッセージ |
+| 戻り値     | text       | options.encodingDecrypted を使って復号およびデコードされたメッセージ |
 | errors  | collection | `success` が `false` の場合、エラーのコレクションが含まれている場合があります。               |
 
 キーまたはアルゴリズムが合致しないなどの理由で *message* の復号に成功しなかった場合、返される `status` オブジェクトの `status.errors` プロパティにはエラーのコレクションが格納されます。
@@ -159,7 +208,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <!-- REF #CryptoKey.encrypt().Params -->
 
-| 引数      | タイプ    |    | 説明                                                  |
+| 引数      | 型      |    | 説明                                                  |
 | ------- | ------ | -- | --------------------------------------------------- |
 | message | Text   | -> | `options.encodingDecrypted` を使ってエンコードし暗号化するメッセージ文字列 |
 | options | Object | -> | エンコーディングオプション                                       |
@@ -173,7 +222,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 ##### *オプション*
 
-| プロパティ             | タイプ  | 説明                                                                                                                                |
+| プロパティ             | 型    | 説明                                                                                                                                |
 | ----------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------- |
 | hash              | text | 使用する Digest アルゴリズム。 例: "SHA256", "SHA384", "SHA512"。                                                              |
 | encodingEncrypted | text | バイナリの暗号化メッセージを文字列に変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"               |
@@ -201,7 +250,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
 
-| 引数  | タイプ  |    | 説明         |
+| 引数  | 型    |    | 説明         |
 | --- | ---- | -- | ---------- |
 | 戻り値 | Text | <- | PEM 形式の秘密鍵 |
 
@@ -231,7 +280,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
 
-| 引数  | タイプ  |    | 説明         |
+| 引数  | 型    |    | 説明         |
 | --- | ---- | -- | ---------- |
 | 戻り値 | Text | <- | PEM 形式の公開鍵 |
 
@@ -282,7 +331,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <!-- REF #CryptoKey.sign().Params -->
 
-| 引数      | タイプ    |    | 説明                                              |
+| 引数      | 型      |    | 説明                                              |
 | ------- | ------ | -- | ----------------------------------------------- |
 | message | Text   | -> | 署名をするメッセージ                                      |
 | options | Object | -> | 署名オプション                                         |
@@ -296,7 +345,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 #### *オプション*
 
-| プロパティ             | タイプ     | 説明                                                                                                                                                                                               |
+| プロパティ             | 型       | 説明                                                                                                                                                                                               |
 | ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | hash              | text    | 使用する Digest アルゴリズム。 例: "SHA256", "SHA384", "SHA512"。 JWT の生成に使われた場合、ハッシュサイズは PS@, ES@, RS@, または PS@ のアルゴリズムサイズと同じでなくてはなりません。 |
 | encodingEncrypted | text    | バイナリの暗号化メッセージを文字列に変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                                                              |
@@ -365,7 +414,7 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 
 <!-- REF #CryptoKey.verify().Params -->
 
-| 引数        | タイプ    |    | 説明                                                          |
+| 引数        | 型      |    | 説明                                                          |
 | --------- | ------ | -- | ----------------------------------------------------------- |
 | message   | Text   | -> | 署名生成時に使われたメッセージ文字列                                          |
 | signature | Text   | -> | 検証の対象である、`options.encoding` に応じて Base64 または Base64URL 形式の署名 |
@@ -380,7 +429,7 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 
 #### *オプション*
 
-| プロパティ    | タイプ     | 説明                                                                                                                                                                                               |
+| プロパティ    | 型       | 説明                                                                                                                                                                                               |
 | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | hash     | text    | 使用する Digest アルゴリズム。 例: "SHA256", "SHA384", "SHA512"。 JWT の生成に使われた場合、ハッシュサイズは PS@, ES@, RS@, または PS@ のアルゴリズムサイズと同じでなくてはなりません。 |
 | pss      | boolean | 確率的署名スキーム (PSS) を使用する。 RSA キーでない場合は無視されます。 PS＠ アルゴリズム用の JWT を生成する場合は `true` を渡します。                                                                                            |
@@ -392,7 +441,7 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 
 *message*、キーまたはアルゴリズムが署名と合致しないなどの理由で検証が成功しなかった場合、返される `status` オブジェクトの `status.errors` プロパティにはエラーのコレクションが格納されます。
 
-| プロパティ   | タイプ        | 説明                                                |
+| プロパティ   | 型          | 説明                                                |
 | ------- | ---------- | ------------------------------------------------- |
 | success | boolean    | 署名がメッセージと合致すれば true                               |
 | errors  | collection | `success` が `false` の場合、エラーのコレクションが含まれている場合があります。 |
