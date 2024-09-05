@@ -1,6 +1,6 @@
 ---
 id: BlobClass
-title: Blob
+title: BLOB
 ---
 
 Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#BLOB-の種類) (`4D.Blob`) を操作することができます。
@@ -27,7 +27,7 @@ Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#BLO
 
 <!-- REF #4D.Blob.new().Params -->
 
-| 引数   | タイプ                              |     | 説明                         |
+| 引数   | 型                                |     | 説明                         |
 | ---- | -------------------------------- | :-: | -------------------------- |
 | blob | BLOB または 4D.Blob |  -> | コピーする BLOB                 |
 | 戻り値  | 4D.Blob          |  <- | 新規 4D.Blob |
@@ -62,10 +62,10 @@ Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#BLO
 
 <!-- REF #Blob.slice().Params -->
 
-| 引数    | タイプ                     |     | 説明                               |
+| 引数    | 型                       |     | 説明                               |
 | ----- | ----------------------- | :-: | -------------------------------- |
-| start | Real                    |  -> | 新しい `4D.Blob` に含める最初のバイトのインデックス  |
-| end   | Real                    |  -> | 新しい `4D.Blob` に含めない最初のバイトのインデックス |
+| start | 実数                      |  -> | 新しい `4D.Blob` に含める最初のバイトのインデックス  |
+| end   | 実数                      |  -> | 新しい `4D.Blob` に含めない最初のバイトのインデックス |
 | 戻り値   | 4D.Blob |  <- | 新規 `4D.Blob`                     |
 
 <!-- END REF -->
