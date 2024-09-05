@@ -25,7 +25,7 @@ The `VP Cell` command <!-- REF #_method_.VP Cell.Summary -->returns a new range 
 
 > Cette commande s'applique aux plages d'une seule cellule. To create a range object for multiple cells, use the [VP Cells](vp-cells.md) command.
 
-In _vpAreaName_, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 The _column_ parameter defines the column of the cell range's position. Passez l'indice de la colonne dans ce paramètre.
 
