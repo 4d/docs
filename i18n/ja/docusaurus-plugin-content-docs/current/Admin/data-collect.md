@@ -26,40 +26,40 @@ title: データ収集
 
 ### データベース起動時に収集される情報
 
-| データ                     | タイプ                               | 注記                                                                                                          |
+| データ                     | 型                                 | 注記                                                                                                          |
 | ----------------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| CPU                     | Text                              | プロセッサーの名前、種類、および速度                                                                                          |
+| CPU                     | テキスト                              | プロセッサーの名前、種類、および速度                                                                                          |
 | numberOfCores           | Number                            | コアの合計数                                                                                                      |
 | memory                  | Number                            | マシン上で利用可能なメモリ容量 (バイト単位)                                                                  |
-| system                  | Text                              | OS のバージョンとビルド番号                                                                                             |
-| headless                | Boolean                           | アプリケーションがヘッドレスモードで実行されている場合は true                                                                           |
+| system                  | テキスト                              | OS のバージョンとビルド番号                                                                                             |
+| headless                | ブール                               | アプリケーションがヘッドレスモードで実行されている場合は true                                                                           |
 | version                 | Number                            | 4Dアプリケーションのバージョン番号                                                                                          |
 | buildNumber             | Number                            | 4Dアプリケーションのビルド番号                                                                                            |
-| license                 | Object                            | 製品ライセンスの名称と説明                                                                                               |
-| isRosetta               | Boolean                           | macOS の Rosetta で 4D がエミュレートされている場合は True、そうでない場合は False (エミュレートされていない、または Windows の場合)。 |
-| uniqueID                | Text                              | 4D Server の固有ID                                                                                             |
+| license                 | オブジェクト                            | 製品ライセンスの名称と説明                                                                                               |
+| isRosetta               | ブール                               | macOS の Rosetta で 4D がエミュレートされている場合は True、そうでない場合は False (エミュレートされていない、または Windows の場合)。 |
+| uniqueID                | テキスト                              | 4D Server の固有ID                                                                                             |
 | id                      | Text (ハッシュ文字列) | データベースに関連付けられた一意の id (_データベース名の多項式ローリングハッシュ_)                                            |
 | dataFileSize            | Number                            | データファイルのサイズ (バイト単位)                                                                      |
 | indexesSize             | Number                            | インデックスのサイズ (バイト単位)                                                                       |
 | cacheSize               | Number                            | キャッシュのサイズ (バイト単位)                                                                        |
-| usingLegacyNetworkLayer | Boolean                           | アプリケーションサーバーに旧式ネットワークレイヤーが使用されている場合は true                                                                   |
-| usingQUICNetworkLayer   | Boolean                           | データベースが QUICネットワークレイヤーを使用している場合は True                                                                       |
-| encryptedConnections    | Boolean                           | クライアント/サーバー接続が暗号化されている場合は True                                                                              |
-| encrypted               | Boolean                           | データファイルが暗号化されていれば true                                                                                      |
-| compiled                | Boolean                           | アプリケーションがコンパイル済みの場合は true                                                                                   |
-| isEngined               | Boolean                           | アプリケーションに 4D Volume Desltop が組み込まれている場合は true                                                               |
-| projectMode             | Boolean                           | アプリケーションがプロジェクトの場合は true                                                                                    |
-| mobile                  | Collection                        | モバイルセッションに関する情報                                                                                             |
+| usingLegacyNetworkLayer | ブール                               | アプリケーションサーバーに旧式ネットワークレイヤーが使用されている場合は true                                                                   |
+| usingQUICNetworkLayer   | ブール                               | データベースが QUICネットワークレイヤーを使用している場合は True                                                                       |
+| encryptedConnections    | ブール                               | クライアント/サーバー接続が暗号化されている場合は True                                                                              |
+| encrypted               | ブール                               | データファイルが暗号化されていれば true                                                                                      |
+| compiled                | ブール                               | アプリケーションがコンパイル済みの場合は true                                                                                   |
+| isEngined               | ブール                               | アプリケーションに 4D Volume Desltop が組み込まれている場合は true                                                               |
+| projectMode             | ブール                               | アプリケーションがプロジェクトの場合は true                                                                                    |
+| mobile                  | コレクション                            | モバイルセッションに関する情報                                                                                             |
 
 ### Webサーバー起動時、収集データの送信時に収集される情報
 
-| データ       | タイプ    | 注記                                                     |
+| データ       | 型      | 注記                                                     |
 | --------- | ------ | ------------------------------------------------------ |
-| webServer | Object | Webサーバーが起動中、または起動済みの場合は "started":true |
+| webServer | オブジェクト | Webサーバーが起動中、または起動済みの場合は "started":true |
 
 ### 一定時間ごとに収集される情報
 
-| データ                         | タイプ    | 注記           |
+| データ                         | 型      | 注記           |
 | --------------------------- | ------ | ------------ |
 | maximumNumberOfWebProcesses | Number | 最大同時Webプロセス数 |
 | maximumUsedPhysicalMemory   | Number | 最大使用した物理メモリ  |
@@ -67,17 +67,17 @@ title: データ収集
 
 ### 収集データの送信時に収集される情報
 
-| データ                                         | タイプ    | 注記                                                |
+| データ                                         | 型      | 注記                                                |
 | ------------------------------------------- | ------ | ------------------------------------------------- |
 | uptime                                      | Number | ローカル4Dデータベースが開かれてからの経過時間 (秒単位) |
-| cacheReadBytes                              | Object | キャッシュから読み出したバイト数                                  |
-| cacheMissBytes                              | Object | キャッシュミスバイト数                                       |
-| cacheReadCount                              | Object | キャッシュの読み出し回数                                      |
-| cacheMissCount                              | Object | キャッシュミス回数                                         |
-| dataSegment1.diskReadBytes  | Object | データファイルから読み取ったバイト数                                |
-| dataSegment1.diskWriteBytes | Object | データファイルに書き込んだバイト数                                 |
-| dataSegment1.diskReadCount  | Object | データファイルからの読み取り回数                                  |
-| dataSegment1.diskWriteCount | Object | データファイルへの書き込み回数                                   |
+| cacheReadBytes                              | オブジェクト | キャッシュから読み出したバイト数                                  |
+| cacheMissBytes                              | オブジェクト | キャッシュミスバイト数                                       |
+| cacheReadCount                              | オブジェクト | キャッシュの読み出し回数                                      |
+| cacheMissCount                              | オブジェクト | キャッシュミス回数                                         |
+| dataSegment1.diskReadBytes  | オブジェクト | データファイルから読み取ったバイト数                                |
+| dataSegment1.diskWriteBytes | オブジェクト | データファイルに書き込んだバイト数                                 |
+| dataSegment1.diskReadCount  | オブジェクト | データファイルからの読み取り回数                                  |
+| dataSegment1.diskWriteCount | オブジェクト | データファイルへの書き込み回数                                   |
 | indexSegment.diskReadBytes  | Number | インデックスファイルから読み取ったバイト数                             |
 | indexSegment.diskWriteBytes | Number | インデックスファイルに書き込んだバイト数                              |
 | indexSegment.diskReadCount  | Number | インデックスファイルからの読み取り回数                               |
@@ -85,7 +85,7 @@ title: データ収集
 
 ### データベースの終了時、収集データの送信時に収集される情報
 
-| データ                            | タイプ    | 注記                       |
+| データ                            | 型      | 注記                       |
 | ------------------------------ | ------ | ------------------------ |
 | webserverHits                  | Number | データ収集中の Webサーバーのヒット数     |
 | restHits                       | Number | データ収集中の RESTサーバーのヒット数    |
@@ -95,17 +95,17 @@ title: データ収集
 
 ### PHP execute の呼び出し毎に収集される情報
 
-| データ         | タイプ     | 注記                                                        |
-| ----------- | ------- | --------------------------------------------------------- |
-| phpCall     | Number  | `PHP execute` の呼び出し回数                                     |
-| externalPHP | Boolean | クライアントが `PHP execute` を呼び出して、独自のバージョンの php を使用した場合は True。 |
+| データ         | 型      | 注記                                                        |
+| ----------- | ------ | --------------------------------------------------------- |
+| phpCall     | Number | `PHP execute` の呼び出し回数                                     |
+| externalPHP | ブール    | クライアントが `PHP execute` を呼び出して、独自のバージョンの php を使用した場合は True。 |
 
 ### クライアント接続時に収集される情報
 
-| データ                        | タイプ        | 注記                                                           |
-| -------------------------- | ---------- | ------------------------------------------------------------ |
-| maximum4DClientConnections | Number     | サーバーへのクライアントの最大接続数                                           |
-| connectionSystems          | Collection | ビルド番号 (括弧内) なしのクライアントOSと、それを使用しているクライアント数 |
+| データ                        | 型      | 注記                                                           |
+| -------------------------- | ------ | ------------------------------------------------------------ |
+| maximum4DClientConnections | Number | サーバーへのクライアントの最大接続数                                           |
+| connectionSystems          | コレクション | ビルド番号 (括弧内) なしのクライアントOSと、それを使用しているクライアント数 |
 
 ## 保存先と送信先
 
