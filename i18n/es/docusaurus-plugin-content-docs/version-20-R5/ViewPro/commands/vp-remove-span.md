@@ -15,7 +15,7 @@ title: VP REMOVE SPAN
 
 #### Descripción
 
-The `VP REMOVE SPAN` command <!-- REF #_method_.VP REMOVE SPAN.Summary -->removes the span from the cells in _rangeObj_<!-- END REF -->.
+El comando `VP REMOVE SPAN` <!-- REF #_method_.VP REMOVE SPAN.Summary -->remueve el span de las celdas en _rangeObj_<!-- END REF -->.
 
 En _rangeObj_, pase un objeto rango de la fusión. Las celdas fusionadas en el rango se dividen en celdas individuales.
 
