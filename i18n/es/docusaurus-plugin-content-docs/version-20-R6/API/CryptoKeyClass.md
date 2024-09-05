@@ -7,22 +7,11 @@ La clase `CryptoKey` del lenguaje 4D encapsula un par de llaves de cifrado asim�
 
 Esta clase está disponible en el "class store" de `4D`.
 
-### Ejemplo
+:::info Ver también
 
-El siguiente código de ejemplo firma y verifica un mensaje utilizando un nuevo par de llaves ECDSA, por ejemplo para hacer un token web JSON ES256.
+Para obtener una visión general de esta clase, consulte la entrada del blog [**CryptoKey: cifrar, descifrar, firmar y verificar**](https://blog.4d.com/cryptokey-encrypt-decrypt-sign-and-verify/).
 
-```4d
- // Generar un nuevo par de llaves ECDSA
-$key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
-
-  // Obtener la firma como base64
-$message:="hello world"
-$signature:=$key.sign($message;New object("hash";"SHA256"))
-
-  // Verificar firma
-$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
-ASSERT($status.success)
-```
+:::
 
 ### Resumen
 
@@ -56,7 +45,7 @@ ASSERT($status.success)
 | Parámetros | Tipo                         |    | Descripción                                       |
 | ---------- | ---------------------------- | -- | ------------------------------------------------- |
 | settings   | Object                       | -> | Parámetros para generar o cargar un par de llaves |
-| result     | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado  |
+| resultado  | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado  |
 
 <!-- END REF -->
 
@@ -74,6 +63,66 @@ La función `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crea un
 #### *CryptoKey*
 
 El objeto `CryptoKey` devuelto encapsula un par de llaves de cifrado. Es un objeto compartido y, por tanto, puede ser utilizado por varios procesos 4D simultáneamente.
+
+#### Ejemplo 1
+
+Un mensaje está firmado por una llave privada y la firma es verificada por la llave pública correspondiente. El siguiente código firma y verifica una firma de mensaje simple.
+
+- Lado bob:
+
+```4d
+// Create the message
+$message:="hello world"
+Folder(fk desktop folder).file("message.txt").setText($message)
+
+// Create a key
+$type:=New object("type";"RSA")
+$key:=4D.CryptoKey.new($type)
+
+// Get the public key and save it
+Folder(fk desktop folder).file("public.pem").setText($key.getPublicKey())
+
+// Get signature as base64 and save it
+Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
+
+/*Bob sends the message, the public key and the signature to Alice*/
+```
+
+- Lado Alice:
+
+```4d
+// Obtener mensaje, llave pública y firma
+$message:=Folder(fk desktop folder).file("message.txt").getText()
+$publicKey:=Folder(fk desktop folder).file("public.pem").getText()
+$signature:=Folder(fk desktop folder).file("signature"). etText()
+
+// Crear una llave
+$type:=New object("type";"PEM";"pem";$publicKey)
+$key:=4D.CryptoKey.new($type)
+
+// Verificar la firma
+If ($key.verify($message;$signature;$type).success)
+// La firma es válida
+
+End if
+```
+
+#### Ejemplo 2
+
+El siguiente código de ejemplo firma y verifica un mensaje utilizando un nuevo par de llaves ECDSA, por ejemplo para hacer un token web JSON ES256.
+
+```4d
+ // Generar un nuevo par de llaves ECDSA
+$key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
+
+  // Obtener la firma como base64
+$message:="hello world"
+$signature:=$key.sign($message;New object("hash";"SHA256"))
+
+  // Verificar firma
+$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
+ASSERT($status.success)
+```
 
 <!-- REF CryptoKey.curve -->
 
@@ -136,7 +185,7 @@ La función devuelve un objeto status con la propiedad `success` definida en `tr
 | Propiedad | Tipo       | Descripción                                                              |
 | --------- | ---------- | ------------------------------------------------------------------------ |
 | success   | boolean    | True si el mensaje ha sido descifrado con éxito                          |
-| result    | text       | Mensaje descifrado y decodificado utilizando `options.encodingDecrypted` |
+| resultado | text       | Mensaje descifrado y decodificado utilizando `options.encodingDecrypted` |
 | errors    | collection | Si `success` es `false`, puede contener una colección de errores         |
 
 En caso de que *message* no haya podido ser descifrado por no haber sido cifrado con la misma clave o algoritmo, el objeto `status` devuelto contiene una colección de errores en `status.errors`.
