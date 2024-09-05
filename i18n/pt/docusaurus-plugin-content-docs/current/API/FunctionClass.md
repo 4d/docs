@@ -126,7 +126,7 @@ Ter uma fórmula como se fosse um objeto permite que seja passada como um parâm
 
 A fórmula retornada pode ser chamada com:
 
-- [`.call()`](#call) or [`.apply()`](#apply) methods, or
+- os métodos [`.call()`](#call) ou [`.apply()`](#apply),
 - a sintaxe de notação de objeto (consulte [objeto formula](#formula-object)).
 
 ```4d
