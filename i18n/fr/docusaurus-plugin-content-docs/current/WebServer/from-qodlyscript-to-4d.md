@@ -1,46 +1,46 @@
 ---
 id: from-qodlyscript-to-4d
-title: From QodlyScript to 4D Language
+title: De QodlyScript au langage 4D
 ---
 
-4D developers use the [Qodly Studio documentation](https://developer.qodly.com/docs/studio/overview) to learn how to design their Qodly forms in Qodly Studio.
+Les développeurs 4D utilisent la [documentation de Qodly Studio](https://developer.qodly.com/docs/studio/overview) pour savoir comment concevoir leurs pages Qodly dans Qodly Studio.
 
-Les exemples de code sont fournis en [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript), mais étant donné que QodlyScript hérite du langage 4D, vous ne serez pas perdu. Converting QodlyScript code to 4D language is easy, it only requires some adaptations.
+Les exemples de code sont fournis en [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript), mais étant donné que QodlyScript hérite du langage 4D, vous ne serez pas perdu. Convertir du code QodlyScript en langage 4D est facile, cela ne nécessite que quelques adaptations.
 
-## Variable names
+## Noms des variables
 
-QodlyScript only support local variables, so variables in QodlyScript examples are not prefixed with `$`. In the 4D code, make sure to **prefix variable names with `$`** so that they are identifed as local variables by 4D.
+QodlyScript ne prend en charge que des variables locales, donc les variables dans les exemples QodlyScript ne sont pas préfixées par `$`. Dans le code 4D, assurez-vous de **préfixer les noms des variables avec `$`** afin qu'elles soient identifiées comme des variables locales par 4D.
 
-## Symbols and keywords
+## Symboles et mots-clés
 
-Some basic symbols, operators, and keywords differ in QodlyScript and must be adapted to the 4D Language. They are listed below:
+Certains symboles, opérateurs et mots-clés de base diffèrent dans QodlyScript et doivent être adaptés au langage 4D. Ils sont listés ci-dessous:
 
-| QodlyScript | 4D Language                                                 | Commentaire             |
-| ----------- | ----------------------------------------------------------- | ----------------------- |
-| ,           | ;                                                           | argument separator      |
-| =           | :=                                          | opérateur d'assignation |
-| ==          | =                                                           | comparison operator     |
-| declare     | #Declare                                                    |                         |
-| switch      | Case of                                                     |                         |
-| constructor | Class constructor                                           |                         |
-| extends     | Class extends                                               |                         |
-| end         | End for, End For each, End if, End case, End use, End while |                         |
-| forEach     | For each                                                    |                         |
-| string      | Text                                                        | var type                |
-| number      | Real                                                        | var type                |
+| QodlyScript | Langage 4D                                                  | Commentaire              |
+| ----------- | ----------------------------------------------------------- | ------------------------ |
+| ,           | ;                                                           | séparateur d'argument    |
+| =           | :=                                          | opérateur d'assignation  |
+| ==          | =                                                           | opérateur de comparaison |
+| declare     | #Declare                                                    |                          |
+| switch      | Case of                                                     |                          |
+| constructor | Class constructor                                           |                          |
+| extends     | Class extends                                               |                          |
+| end         | End for, End For each, End if, End case, End use, End while |                          |
+| forEach     | For each                                                    |                          |
+| string      | Text                                                        | type de var              |
+| number      | Real                                                        | type de var              |
 
-Some other items have a different case (ex: `this` vs `This`) but can be pasted directly in 4D code.
+Certains autres éléments ont une casse différente (par exemple : `this` vs `This`) mais peuvent être collés directement dans le code 4D.
 
-## Command and Constant names
+## Noms de commandes et de constantes
 
-QodlyScript command and constant names are written in camel case without spaces. In addition, QodlyScript constant names start with a `k` letter. You might need to adapt these QodlyScript items to the 4D Language.
+Les noms des commandes et des constantes QodlyScript sont écrits en camel case sans espaces. De plus, les noms de constantes de QodlyScript commencent par la lettre `k`. Vous devrez peut-être adapter ces éléments QodlyScript au langage 4D.
 
-- Usually, you will only have to simply convert names. For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
-- However, some commands have been renamed for a better compliance, for example `atan` and `sqrt` are QodlyScript names for `Arctan` and `Square root` commands in 4D Language.
+- Généralement, vous devrez simplement convertir les noms. Par exemple, `newCollection` dans QodlyScript est `New collection` dans le langage 4D.
+- Cependant, certaines commandes ont été renommées pour une meilleure conformité, par exemple `atan` et `sqrt` sont les noms en QodlyScript des commandes `Arctan` et `Square root` en langage 4D.
 
 ### Exemple
 
-- QodlyScript code:
+- Code QodlyScript :
 
 ```qs
  declare(entitySelection : 4D.EntitySelection)  
@@ -56,7 +56,7 @@ QodlyScript command and constant names are written in camel case without spaces.
  end
 ```
 
-- 4D Language equivalent code:
+- Code équivalent en langage 4D :
 
 ```4d
  #DECLARE ( $entitySelection : 4D.EntitySelection )  
