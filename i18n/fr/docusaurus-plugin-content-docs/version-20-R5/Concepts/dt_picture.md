@@ -39,7 +39,7 @@ Les formats d'images reconnus par 4D sont retournés par la commande `PICTURE CO
 | Redimensionnement         | Image \* Nombre                     | Picture  | Redimensionne l'image au pourcentage Nombre                                                                                                                                                          |
 | Extension horizontale     | Image \*+ Nombre                    | Picture  | Redimensionne l'image horizontalement au pourcentage Nombre                                                                                                                                          |
 | Extension verticale       | Image \*\| Nombre                   | Picture  | Image    \| Redimensionne l'image verticalement au pourcentage Nombre                                                                                                                                |
-| Contient mot-clé          | Image % Chaîne                      | Boolean  | Returns true if the string is associated with the picture stored in the picture expression. See `GET PICTURE KEYWORDS`                                                               |
+| Contient mot-clé          | Image % Chaîne                      | Boolean  | Renvoie vrai si la chaîne est associée à l'image stockée dans l'expression image. Voir `GET PICTURE KEYWORDS`                                                                        |
 
 **Notes :**
 
