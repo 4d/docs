@@ -1087,7 +1087,7 @@ ds.Class.query("info.coll[a].val := :1";0)
 // encontra "entidades em que pelo menos uma propriedade val é diferente de 0"
 ```
 
-You can use any letter from the alphabet as the `[a]` notation.
+Você pode usar qualquer letra do alfabeto como a notação `[a]`.
 
 #### Linkar os argumentos de pesquisa com os atributos de coleção
 
@@ -1124,7 +1124,7 @@ ds. People.query("places.locations[].kind= :1 and places.locations[].city= :2";"
 
 If you want to only get entities where matching arguments are in the same collection element, you need to **link arguments**. Para linkar argumentos de pesquisa:
 
-- Adicionar uma letra entre os \[] na primeira rota a linkar e repita a mesma letra em todos os argumentos linkados. For example: `locations[a].city and locations[a].kind`. Pode usar qualquer letra do alfabeto latino (não diferencia maiúsculas e minúsculas).
+- Adicionar uma letra entre os \[] na primeira rota a linkar e repita a mesma letra em todos os argumentos linkados. Por exemplo: `locations[a].city and locations[a].kind`. Pode usar qualquer letra do alfabeto latino (não diferencia maiúsculas e minúsculas).
 - Para adicionar critérios linkados na mesma pesquisa, use outra letra. Pode criar até 26 combinações de critérios em uma única pesquisa.
 
 Com as entidades acima, se escreve:
@@ -1181,7 +1181,7 @@ The formula must have been created using the [`Formula`](FunctionClass.md#formul
 
 #### Passar parâmetros a fórmulas
 
-Any *formula* called by the `query()` class function can receive parameters:
+Qualquer *fórmula* chamada pela função de classe `query()` pode receber parâmetros:
 
 - Parameters must be passed through the **args** property (object) of the *querySettings* parameter.
 - A fórmula recebe esse objeto **args** como um parâmetro **$1**.
@@ -1195,7 +1195,7 @@ Este pequeno código mostra os principios de como são passados os parâmetros a
 
 No exemplo 3 são oferecidos mais exemplos.
 
-**4D Server**: em cliente/servidor, as fórmulas são executadas no servidor. In this context, only the `querySettings.args` object is sent to the formulas.
+**4D Server**: em cliente/servidor, as fórmulas são executadas no servidor. Neste contexto, só se envia às fórmulas o objeto `querySettings.args`.
 
 #### Parâmetro querySettings
 
@@ -1441,7 +1441,7 @@ Pesquisa com marcadores de posição com nome para os atributos e os valores:
 
 Estes exemplos ilustram as distintas formas de utilizar fórmulas com ou sem parâmetros em suas pesquisas.
 
-The formula is given as text with `eval()` in the *queryString* parameter:
+A fórmula é fornecida como texto com `eval()` no parâmetro *queryString*:
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1566,7 +1566,7 @@ In the *settings* parameter, pass an object with the following properties:
 
 Setting a `timeout` property sets a new timeout for the entities already present in the cache. É útil quando se trabalha com dados que não mudam com muita frequência, e, portanto, quando não são necessários novos pedidos ao servidor.
 
-`maxEntries` sets the max number of entities in the ORDA cache. O padrão é de 30 000.
+`maxEntries` define o número máximo de entidades na cache ORDA. O padrão é de 30 000.
 
 The minimum number of entries is 300, so the value of `maxEntries` must be equal to or higher than 300. Caso contrário, é ignorado e o número máximo de entradas é fixado em 300.
 
