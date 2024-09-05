@@ -17,10 +17,10 @@ title: VP SET BINDING PATH
 
 <!-- REF #_method_.VP SET BINDING PATH.Params -->
 
-| 引数                   | タイプ    |    | 説明                      |                  |
+| 引数                   | 型      |    | 説明                      |                  |
 | -------------------- | ------ | -- | ----------------------- | ---------------- |
-| rangeObj             | Object | -> | レンジオブジェクト               |                  |
-| dataContextAttribute | Text   | -> | *rangeObj* にバインドする属性の名称 | <!-- END REF --> |
+| rangeObj             | オブジェクト | -> | レンジオブジェクト               |                  |
+| dataContextAttribute | テキスト   | -> | *rangeObj* にバインドする属性の名称 | <!-- END REF --> |
 
 #### 説明
 
