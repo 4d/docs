@@ -81,6 +81,6 @@ En tiempo de ejecución, 4D cargará automáticamente la imagen clara u oscura s
 
 4D le permite recuperar las coordenadas locales del ratón en un [objeto de entrada](FormObjects/input_overview.md) asociado con una [expresión de imagen](FormObjects/properties_Object.md#expression-type), en caso de un clic o un desplazamiento, incluso si se ha aplicado un desplazamiento o zoom a la imagen. Este mecanismo, similar al de un mapa de imágenes, puede utilizarse, por ejemplo, para manejar barras de botones desplazables o la interfaz de un software de cartografía.
 
-The coordinates are returned in the _MouseX_ and _MouseY_ [System Variables](../Concepts/variables.md#system-variables). Las coordenadas se expresan en píxeles con respecto a la esquina superior izquierda de la imagen (0,0). Si el ratón está fuera del sistema de coordenadas de la imagen, se devuelve -1 en _MouseX_ y _MouseY_.
+Las coordenadas se devuelven en las _MouseX_ and _MouseY_ [Variables Sistema](../Concepts/variables.md#system-variables). Las coordenadas se expresan en píxeles con respecto a la esquina superior izquierda de la imagen (0,0). Si el ratón está fuera del sistema de coordenadas de la imagen, se devuelve -1 en _MouseX_ y _MouseY_.
 
 Puede obtener el valor de estas variables como parte de los eventos de formulario [`On Clicked`](Events/onClicked.md), [`On Double Clicked`](Events/onDoubleClicked.md), [`On Mouse up`](Events/onMouseUp.md), [`On Mouse Enter`](Events/onMouseEnter.md) o [`On Mouse Move`](Events/onMouseMove.md).
