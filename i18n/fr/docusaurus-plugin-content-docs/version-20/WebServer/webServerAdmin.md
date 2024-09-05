@@ -165,7 +165,7 @@ Le [fichier d'enregistrements d'historique Web](webServerConfig.md#log-recording
 
 #### CLF/DLF
 
-Each line of the file represents a request, such as: *host rfc931 user \[DD/MMM/YYYY:HH:MM:SS] "request" state length* Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+Chaque ligne du fichier représente une requête, comme : *host rfc931 user \[DD/MMM/YYYY:HH:MM:SS] "request" state length* Chaque champ est séparé par un espace et chaque ligne se termine par la séquence CR/LF (caractère 13, caractère 10).
 
 Le format DLF (Distilled Log Format) est similaire au format CLF (Common Log format) et utilise exactement la même structure. Il ajoute simplement deux champs HTTP supplémentaires à la fin de chaque requête : Referer et User-agent. Voici la description des formats CLF/DLF (non personnalisables) :
 
@@ -211,7 +211,7 @@ Le tableau suivant répertorie les champs disponibles pour chaque format (par or
 | CS_URI_STEM  | X   | X   | Partie de la requête sans les paramètres d’interrogation                                                                                                             |
 | DATE           | X   | X   | DD: jour, MMM: abréviation de 3 lettres pour le mois (Jan, Feb,...), YYYY: année                                                                                     |
 | METHOD         | X   | X   | Méthode HTTP utilisée pour la requête adressée au serveur                                                                                                            |
-| PATH_ARGS      |     | X   | CGI parameters: string located after the “$” character                                                                                                               |
+| PATH_ARGS      |     | X   | Paramètres de la CGI : chaîne située après le caractère “$”                                                                                                          |
 | STATUS         | X   | X   | Réponse fournie par le serveur                                                                                                                                       |
 | TIME           | X   | X   | HH: heure, MM: minutes, SS: secondes                                                                                                                                 |
 | TRANSFER_TIME  | X   | X   | Délai ayant été nécessaire au serveur pour générer la réponse                                                                                                        |
@@ -221,7 +221,7 @@ Le tableau suivant répertorie les champs disponibles pour chaque format (par or
 > Les dates et heures sont données au format GMT
 
 
-#### Fréquence de backup
+#### Fréquence de sauvegarde
 
 Comme la taille d'un *logweb.txt* fichier évoluer considérablement, il est possible de mettre en place un mécanisme d'archivage automatique. Le déclenchement d'une backup peut être basé sur une certaine période de temps (exprimée en heures, jours, semaine ou mois), ou sur la taille du fichier ; lorsque le délai fixé (ou la taille du fichier) est atteinte, 4D ferme et archive automatiquement le fichier d'historique en cours et en crée un nouveau.
 
@@ -229,13 +229,13 @@ Lorsque la sauvegarde du fichier d'historique web est déclenchée, le fichier d
 
 Le fichier archivé est renommé sur le modèle suivant : "DYYYY_MM_DD_Thh_mm_ss.txt". Par exemple, pour un fichier archivé le 4 septembre 2020 à 15h50  et 7 secondes : “D2020_09_04_T15_50_07.txt.”
 
-#### Paramètres de backup
+#### Paramètres de sauvegarde
 
 Les paramètres de sauvegarde automatique du logweb.txt sont définis sur la page **Web > Journal (périodicité)** des Paramètres :
 
 ![](../assets/en/WebServer/backup.png)
 
-Vous devez d'abord choisir la fréquence (jours, semaines, etc.) ou le critère de la taille limite du fichier en cliquant sur le bouton radio correspondant. Vous devez ensuite spécifier le moment précis du backup si nécessaire.
+Vous devez d'abord choisir la fréquence (jours, semaines, etc.) ou le critère de la taille limite du fichier en cliquant sur le bouton radio correspondant. Vous devez ensuite spécifier le moment précis de la sauvegarde si nécessaire.
 
 *   **Pas de sauvegarde du journal** : La fonction de sauvegarde programmée est désactivée.
 
@@ -244,8 +244,8 @@ Vous devez d'abord choisir la fréquence (jours, semaines, etc.) ou le critère 
 
 *   **Tous les N jour(s) à N** : permet de programmer des backups sur une base journalière. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer l’heure à laquelle la sauvegarde doit être déclenchée.
 
-*   **Tous les N jour(s) à N** : permet de programmer des backups sur une base hebdomadaire. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired.
+*   **Tous les N jour(s) à N** : permet de programmer des backups sur une base hebdomadaire. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer le ou les jours de la semaine et l’heure à laquelle chaque sauvegarde doit être déclenchée. Vous pouvez cocher un ou plusieurs jour(s) de la semaine. Par exemple, vous pouvez utiliser cette option pour définir deux sauvegardes hebdomadaires : une le mercredi et une le vendredi.
 
 *   **Tous les N mois, Ne jour à N** : permet de programmer des sauvegardes sur une base mensuelle. Saisissez 1 si vous souhaitez une sauvegarde mensuelle. Lorsque vous cochez cette option, vous devez indiquer le jour de chaque mois auquel la sauvegarde doit être déclenchée, ainsi que l’heure de déclenchement.
 
-*   **Tous les N Mo** : Cette option est utilisée pour programmer les sauvegardes en fonction de la taille du fichier journal courant. Un backup se déclenche automatiquement quand le fichier atteint la taille spécifiée. La taille limite du fichier peut être fixée à 1, 10, 100 ou 1000 Mo.
+*   **Tous les N Mo** : Cette option est utilisée pour programmer les sauvegardes en fonction de la taille du fichier journal courant. Une sauvegarde se déclenche automatiquement quand le fichier atteint la taille spécifiée. La taille limite du fichier peut être fixée à 1, 10, 100 ou 1000 Mo.
