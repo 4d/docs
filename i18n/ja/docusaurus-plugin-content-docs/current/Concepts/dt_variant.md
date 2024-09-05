@@ -1,6 +1,6 @@
 ---
 id: variant
-title: Variant
+title: バリアント
 ---
 
 バリアント型は、サポートしている型の任意のデータを受け取ることができる変数型です。 一般的には、返したり受け取ったりする値の型が未定である汎用的なコードを書くためにこの変数型が使用されます。 これは、たとえばオブジェクトの属性を扱うようなコードがそれに該当します。
@@ -11,12 +11,12 @@ title: Variant
 - boolean
 - collection
 - date
-- longint
+- 倍長整数
 - object
 - picture
 - pointer
 - 実数
-- text
+- テキスト
 - time
 - null
 - undefined
