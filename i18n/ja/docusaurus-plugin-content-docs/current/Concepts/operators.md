@@ -65,30 +65,30 @@ $a+=2 // $a=3
 
 次の複合代入演算子がサポートされています:
 
-| 演算子                         | シンタックス             | 代入される型  | 例題                                             |
-| --------------------------- | ------------------ | ------- | ---------------------------------------------- |
-| 加算 (足し算) | Text += Text       | Text    | `$t+=" World"  //$t:=$t+" World"`              |
-|                             | Number += Number   | Number  | `$n+=5 //$n:=$n+5`                             |
-|                             | Date += Number     | 日付      | `$d+=5 //$d:=$d+5`                             |
-|                             | Time += Time       | 時間      | `$t1+=$t2 //$t1:=$t1+$t2`                      |
-|                             | Time += Number     | Number  | `$t1+=5 //$t1:=$t1+5`                          |
-|                             | Picture += Picture | Picture | `$p1+=$p2 //$p1:=$p1+$p2 ($p1 の右に $p2 を追加します)` |
-|                             | Picture += Number  | Picture | `$p1+=5 //$p1:=$p1+5 ($p1 を 5ピクセル右に移動します)`     |
-| 減算 (引き算) | Number -= Number   | Number  | `$n-=5 //$n:=$n-5`                             |
-|                             | Date -= Number     | 日付      | `$d-=5 //$d:=$d-5`                             |
-|                             | Time -= Time       | 時間      | `$t1-=$t2 //$t1:=$t1-$t2`                      |
-|                             | Time -= Number     | Number  | `$t1-=5 //$t1:=$t1-5`                          |
-|                             | Picture -= Number  | Picture | `$p1-=5 //$p1:=$p1-5 ($p1 を 5ピクセル左に移動します)`     |
-| 除算 (割り算) | Number /= Number   | Number  | `$n/=5 //$n:=$n/5`                             |
-|                             | Time /= Time       | 時間      | `$t1/=$t2 //$t1:=$t1/$t2`                      |
-|                             | Time /= Number     | Number  | `$t1/=5 //$t1:=$t1/5`                          |
-|                             | Picture /= Picture | Picture | `$p1/=$p2 //$p1:=$p1/$p2 ($p1 の下に $p2 を追加します)` |
-|                             | Picture /= Number  | Picture | `$p1/=5 //$p1:=$p1/5 ($p1 を 5ピクセル垂直に移動します)`    |
-| 乗算 (かけ算) | Text \*= Number    | Text    | `$t*="abc"  //$t:=$t*"abc"`                    |
-|                             | Number \*= Number  | Number  | `$n*=5 //$n:=$n*5`                             |
-|                             | Time \*= Time      | 時間      | `$t1*=$t2 //$t1:=$t1*$t2`                      |
-|                             | Time \*= Number    | Number  | `$t1*=5 //$t1:=$t1*5`                          |
-|                             | Picture \*= Number | Picture | `$p1*=5 //$p1:=$p1*5 ($p1 を 5倍にリサイズします)`       |
+| 演算子                         | シンタックス             | 代入される型 | 例題                                             |
+| --------------------------- | ------------------ | ------ | ---------------------------------------------- |
+| 加算 (足し算) | Text += Text       | テキスト   | `$t+=" World"  //$t:=$t+" World"`              |
+|                             | Number += Number   | Number | `$n+=5 //$n:=$n+5`                             |
+|                             | Date += Number     | 日付     | `$d+=5 //$d:=$d+5`                             |
+|                             | Time += Time       | 時間     | `$t1+=$t2 //$t1:=$t1+$t2`                      |
+|                             | Time += Number     | Number | `$t1+=5 //$t1:=$t1+5`                          |
+|                             | Picture += Picture | ピクチャー  | `$p1+=$p2 //$p1:=$p1+$p2 ($p1 の右に $p2 を追加します)` |
+|                             | Picture += Number  | ピクチャー  | `$p1+=5 //$p1:=$p1+5 ($p1 を 5ピクセル右に移動します)`     |
+| 減算 (引き算) | Number -= Number   | Number | `$n-=5 //$n:=$n-5`                             |
+|                             | Date -= Number     | 日付     | `$d-=5 //$d:=$d-5`                             |
+|                             | Time -= Time       | 時間     | `$t1-=$t2 //$t1:=$t1-$t2`                      |
+|                             | Time -= Number     | Number | `$t1-=5 //$t1:=$t1-5`                          |
+|                             | Picture -= Number  | ピクチャー  | `$p1-=5 //$p1:=$p1-5 ($p1 を 5ピクセル左に移動します)`     |
+| 除算 (割り算) | Number /= Number   | Number | `$n/=5 //$n:=$n/5`                             |
+|                             | Time /= Time       | 時間     | `$t1/=$t2 //$t1:=$t1/$t2`                      |
+|                             | Time /= Number     | Number | `$t1/=5 //$t1:=$t1/5`                          |
+|                             | Picture /= Picture | ピクチャー  | `$p1/=$p2 //$p1:=$p1/$p2 ($p1 の下に $p2 を追加します)` |
+|                             | Picture /= Number  | ピクチャー  | `$p1/=5 //$p1:=$p1/5 ($p1 を 5ピクセル垂直に移動します)`    |
+| 乗算 (かけ算) | Text \*= Number    | テキスト   | `$t*="abc"  //$t:=$t*"abc"`                    |
+|                             | Number \*= Number  | Number | `$n*=5 //$n:=$n*5`                             |
+|                             | Time \*= Time      | 時間     | `$t1*=$t2 //$t1:=$t1*$t2`                      |
+|                             | Time \*= Number    | Number | `$t1*=5 //$t1:=$t1*5`                          |
+|                             | Picture \*= Number | ピクチャー  | `$p1*=5 //$p1:=$p1*5 ($p1 を 5倍にリサイズします)`       |
 
 これらの演算子は、あらゆる [代入可能な式](quick-tour.md#代入可-vs-代入不可の式) に適用できます (オブジェクトのプロパティやコレクション要素としてのピクチャーを除く)。
 
