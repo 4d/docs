@@ -9,10 +9,10 @@ title: VP SET ROW ATTRIBUTES
 
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Params -->
 
-| 引数          | タイプ    |    | 説明                 |                  |
+| 引数          | 型      |    | 説明                 |                  |
 | ----------- | ------ | -- | ------------------ | ---------------- |
-| rangeObj    | Object | -> | 行レンジ               |                  |
-| propertyObj | Object | -> | 行のプロパティを格納したオブジェクト | <!-- END REF --> |
+| rangeObj    | オブジェクト | -> | 行レンジ               |                  |
+| propertyObj | オブジェクト | -> | 行のプロパティを格納したオブジェクト | <!-- END REF --> |
 
 #### 説明
 
@@ -22,7 +22,7 @@ title: VP SET ROW ATTRIBUTES
 
 *propertyObj* 引数は、*rangeObj* 引数のレンジ内の行に対して適用する属性を指定します。 指定できる属性は以下の通りです:
 
-| プロパティ     | タイプ     | 説明                                        |
+| プロパティ     | 型       | 説明                                        |
 | --------- | ------- | ----------------------------------------- |
 | height    | number  | 行の高さ (ピクセル単位)          |
 | pageBreak | boolean | レンジ内の先頭行の前に改ページを挿入する場合には true、それ以外は false |
