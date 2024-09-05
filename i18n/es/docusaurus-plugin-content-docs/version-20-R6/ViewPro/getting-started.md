@@ -87,7 +87,7 @@ Dependiendo del área seleccionada, también están disponibles las siguientes o
 
 Los comandos 4D View Pro se pueden utilizar en el editor de código 4D, al igual que los comandos de lenguaje 4D.
 
-Since 4D View Pro is a built-in 4D component, you can access its list of commands from the Explorer, in the **Component Methods** section:
+Como 4D View Pro es un componente 4D intregado, puede acceder a su lista de comandos desde el Explorador, en la sección **Métodos componentes**:
 
 ![component-methods](../assets/en/ViewPro/explorer-methods.png)
 
