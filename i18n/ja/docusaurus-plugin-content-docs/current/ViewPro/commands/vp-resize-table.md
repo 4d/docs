@@ -17,10 +17,10 @@ title: VP RESIZE TABLE
 
 <!-- REF #_method_.VP RESIZE TABLE.Params -->
 
-| 引数        | タイプ    |    | 説明         |                  |
+| 引数        | 型      |    | 説明         |                  |
 | --------- | ------ | -- | ---------- | ---------------- |
-| rangeObj  | Object | -> | 表組みの新しいレンジ |                  |
-| tableName | Text   | -> | テーブル名      | <!-- END REF --> |
+| rangeObj  | オブジェクト | -> | 表組みの新しいレンジ |                  |
+| tableName | テキスト   | -> | テーブル名      | <!-- END REF --> |
 
 #### 説明
 
