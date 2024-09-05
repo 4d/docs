@@ -9,12 +9,12 @@ title: VP Name
 
 <!-- REF #_method_.VP Name.Params -->
 
-| 引数         | タイプ     |    | 説明                                      |                  |
-| ---------- | ------- | -- | --------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                 |                  |
-| rangeName  | Text    | -> | 既存のレンジ名                                 |                  |
-| sheet      | Integer | -> | レンジの場所 (省略時はカレントシート) |                  |
-| 戻り値        | Object  | <- | rangeName のレンジオブジェクト                    | <!-- END REF --> |
+| 引数         | 型      |    | 説明                                      |                  |
+| ---------- | ------ | -- | --------------------------------------- | ---------------- |
+| vpAreaName | テキスト   | -> | 4D View Pro フォームオブジェクト名                 |                  |
+| rangeName  | テキスト   | -> | 既存のレンジ名                                 |                  |
+| sheet      | 整数     | -> | レンジの場所 (省略時はカレントシート) |                  |
+| 戻り値        | オブジェクト | <- | rangeName のレンジオブジェクト                    | <!-- END REF --> |
 
 #### 説明
 
@@ -34,9 +34,9 @@ title: VP Name
 "Total" という名前のレンジに値を渡します:
 
 ```4d
-// B5 のセルを "Total" と命名します
+// name the B5 cell as Total
 VP ADD RANGE NAME(VP Cell("ViewProArea";1;4);"Total")
-$name:=VP Name("ViewProArea";" Total")
+$name:=VP Name("ViewProArea";"Total")
 VP SET NUM VALUE($name;285;"$#,###.00")
 ```
 
