@@ -61,11 +61,11 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 <!-- REF #4D.SystemWorker.new().Params -->
 
-| 引数          | タイプ                             |     | 説明                                                        |
+| 引数          | 型                               |     | 説明                                                        |
 | ----------- | ------------------------------- | :-: | --------------------------------------------------------- |
-| commandLine | Text                            |  -> | 実行するコマンドライン                                               |
-| options     | Object                          |  -> | ワーカーパラメーター                                                |
-| result      | 4D.SystemWorker |  <- | 非同期の新規システムワーカー (プロセスが開始されなかった場合は null) |
+| commandLine | テキスト                            |  -> | 実行するコマンドライン                                               |
+| options     | オブジェクト                          |  -> | ワーカーパラメーター                                                |
+| 戻り値         | 4D.SystemWorker |  <- | 非同期の新規システムワーカー (プロセスが開始されなかった場合は null) |
 
 <!-- END REF -->
 
@@ -85,7 +85,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 *options* に渡すオブジェクトは、次のプロパティを持つことができます:
 
-| プロパティ            | タイプ     | デフォルト     | 説明                                                                                                                                                                                              |
+| プロパティ            | 型       | デフォルト     | 説明                                                                                                                                                                                              |
 | ---------------- | ------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | onResponse       | Formula | undefined | システムワーカーメッセージ用のコールバック。 完全なレスポンスを受け取り次第、このコールバックが呼び出されます。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                |
 | onData           | Formula | undefined | システムワーカーデータ用のコールバック。 システムワーカーがデータを受け取る度に、このコールバックが呼び出されます。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                              |
@@ -93,18 +93,18 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 | onError          | Formula | undefined | 実行エラー用のコールバック。異常なランタイム条件 (システムエラー) の場合にシステムワーカーによって返されます。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                            |
 | onTerminate      | Formula | undefined | 外部プロセスが終了されたときのコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                  |
 | timeout          | Number  | undefined | プロセスが生きている場合、キルされるまでの秒数。                                                                                                                                                                        |
-| dataType         | Text    | "text"    | レスポンス本文のデータ型。 可能な値: "text" (デフォルト), "blob"。                                                                                                                  |
-| encoding         | Text    | "UTF-8"   | `dataType="text"` の場合のみ。 レスポンス本文のエンコーディング。 利用可能な値については、[`CONVERT FROM TEXT`](https://doc.4d.com/4dv19R/help/command/ja/page1011.html) コマンドの説明を参照ください。                                           |
-| variables        | Object  |           | システムワーカー用のカスタム環境変数を設定します。 シンタックス: `variables.key=value` (`key` は変数名、`value` はその値)。 値は、可能な限り文字列に変換されます。 値に '=' を含めることはできません。 定義されていない場合、システムワーカーは 4D環境を継承します。 |
+| dataType         | テキスト    | "text"    | レスポンス本文のデータ型。 可能な値: "text" (デフォルト), "blob"。                                                                                                                  |
+| encoding         | テキスト    | "UTF-8"   | `dataType="text"` の場合のみ。 レスポンス本文のエンコーディング。 利用可能な値については、[`CONVERT FROM TEXT`](https://doc.4d.com/4dv19R/help/command/ja/page1011.html) コマンドの説明を参照ください。                                           |
+| variables        | オブジェクト  |           | システムワーカー用のカスタム環境変数を設定します。 シンタックス: `variables.key=value` (`key` は変数名、`value` はその値)。 値は、可能な限り文字列に変換されます。 値に '=' を含めることはできません。 定義されていない場合、システムワーカーは 4D環境を継承します。 |
 | currentDirectory | Folder  |           | プロセスが実行される作業ディレクトリ                                                                                                                                                                              |
-| hideWindow       | Boolean | true      | (Windows) アプリケーションウィンドウを隠す (可能な場合)、または Windowsコンソールを隠す                                                                                                    |
+| hideWindow       | ブール     | true      | (Windows) アプリケーションウィンドウを隠す (可能な場合)、または Windowsコンソールを隠す                                                                                                    |
 
 すべてのコールバック関数は、2つのオブジェクト引数を受け取ります。 その内容は、コールバックに依存します:
 
-| 引数                           | タイプ           | *onResponse* | *onData*     | *onDataError* | *onError*    | *onTerminate* |
+| 引数                           | 型             | *onResponse* | *onData*     | *onDataError* | *onError*    | *onTerminate* |
 | ---------------------------- | ------------- | ------------ | ------------ | ------------- | ------------ | ------------- |
-| $param1                      | Object        | SystemWorker | SystemWorker | SystemWorker  | SystemWorker | SystemWorker  |
-| $param2.type | Text          | "response"   | "data"       | "error"       | "error"      | "termination" |
+| $param1                      | オブジェクト        | SystemWorker | SystemWorker | SystemWorker  | SystemWorker | SystemWorker  |
+| $param2.type | テキスト          | "response"   | "data"       | "error"       | "error"      | "termination" |
 | $param2.data | Text または Blob |              | 取得データ        | エラーデータ        |              |               |
 
 以下は、コールバック呼び出しの流れです:
@@ -272,9 +272,9 @@ Function _createFile($title : Text; $textBody : Text)
 
 <!-- REF #SystemWorkerClass.closeInput().Params -->
 
-| 引数 | タイプ |     | 説明         |
-| -- | --- | :-: | ---------- |
-|    |     |     | 引数を必要としません |
+| 引数 | 型 |     | 説明         |
+| -- | - | :-: | ---------- |
+|    |   |     | 引数を必要としません |
 
 <!-- END REF -->
 
@@ -378,7 +378,7 @@ $output:=$worker.response
 
 コレクションの各要素は、以下のプロパティを持つオブジェクトです:
 
-| プロパティ                                                                                      | タイプ    | 説明                  |
+| プロパティ                                                                                      | 型      | 説明                  |
 | ------------------------------------------------------------------------------------------ | ------ | ------------------- |
 | [].errorCode           | number | 4Dエラーコード            |
 | [].message             | text   | 4Dエラーの詳細            |
@@ -438,10 +438,10 @@ $output:=$worker.response
 
 <!-- REF #SystemWorkerClass.postMessage().Params -->
 
-| 引数          | タイプ  |     | 説明                                                  |
+| 引数          | 型    |     | 説明                                                  |
 | ----------- | ---- | :-: | --------------------------------------------------- |
-| message     | Text |  -> | 外部プロセスの入力ストリーム (stdin) に書き込むテキスト |
-| messageBLOB | Blob |  -> | 入力ストリームに書き込むバイト数                                    |
+| message     | テキスト |  -> | 外部プロセスの入力ストリーム (stdin) に書き込むテキスト |
+| messageBLOB | BLOB |  -> | 入力ストリームに書き込むバイト数                                    |
 
 <!-- END REF -->
 
@@ -491,9 +491,9 @@ $output:=$worker.response
 
 <!-- REF #SystemWorkerClass.terminate().Params -->
 
-| 引数 | タイプ |     | 説明         |
-| -- | --- | :-: | ---------- |
-|    |     |     | 引数を必要としません |
+| 引数 | 型 |     | 説明         |
+| -- | - | :-: | ---------- |
+|    |   |     | 引数を必要としません |
 
 <!-- END REF -->
 
@@ -550,9 +550,9 @@ $output:=$worker.response
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 
-| 引数      | タイプ                             |     | 説明                            |
+| 引数      | 型                               |     | 説明                            |
 | ------- | ------------------------------- | :-: | ----------------------------- |
-| timeout | Real                            |  -> | 待機時間 (秒単位) |
+| timeout | 実数                              |  -> | 待機時間 (秒単位) |
 | 戻り値     | 4D.SystemWorker |  <- | SystemWorker オブジェクト           |
 
 <!-- END REF -->
