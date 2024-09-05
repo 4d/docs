@@ -239,12 +239,12 @@ var $o3:=$o1 // 同じインスタンスへの参照
 
 上のコードに基づいて、比較表は次のようになります:
 
-| 演算  | シンタックス                | 戻り値     | 式         | 値     |
-| --- | --------------------- | ------- | --------- | ----- |
-| 等しい | objectRef = objectRef | Boolean | $o1 = $o3 | true  |
-|     |                       |         | $o1 = $o2 | false |
-| 異なる | objectRef # objectRef | Boolean | $o1 # $o3 | false |
-|     |                       |         | $o1 # $o2 | true  |
+| 演算  | シンタックス                | 戻り値 | 式         | 値     |
+| --- | --------------------- | --- | --------- | ----- |
+| 等しい | objectRef = objectRef | ブール | $o1 = $o3 | true  |
+|     |                       |     | $o1 = $o2 | false |
+| 異なる | objectRef # objectRef | ブール | $o1 # $o3 | false |
+|     |                       |     | $o1 # $o2 | true  |
 
 ## リソース
 
