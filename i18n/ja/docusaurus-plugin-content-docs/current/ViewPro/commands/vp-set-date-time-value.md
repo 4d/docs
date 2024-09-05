@@ -9,12 +9,12 @@ title: VP SET DATE TIME VALUE
 
 <!-- REF #_method_.VP SET DATE TIME VALUE.Params -->
 
-| 引数            | タイプ    |    | 説明        |                  |
+| 引数            | 型      |    | 説明        |                  |
 | ------------- | ------ | -- | --------- | ---------------- |
-| rangeObj      | Object | -> | レンジオブジェクト |                  |
+| rangeObj      | オブジェクト | -> | レンジオブジェクト |                  |
 | dateValue     | 日付     | -> | 設定する日付値   |                  |
 | timeValue     | 時間     | -> | 設定する時間値   |                  |
-| formatPattern | Text   | -> | 値のフォーマット  | <!-- END REF --> |
+| formatPattern | テキスト   | -> | 値のフォーマット  | <!-- END REF --> |
 
 #### 説明
 
