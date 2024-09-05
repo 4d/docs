@@ -45,7 +45,7 @@ Descriptive REST requests can be processed in web user sessions that do not requ
 
 - [`/rest/$catalog`]($catalog.md) requests (e.g. `/rest/$catalog/$all`) - access to available dataclasses
 - `/rest/$catalog/authentify` - la función del almacén de datos utilizada para iniciar sesión del usuario
-- `/rest/$getWebForm` - the rendering of a Qodly page
+- `/rest/$getWebForm` - Renderização de uma página Qodly
 
 ![alt-text](../assets/en/REST/force-login-1.jpeg)
 
