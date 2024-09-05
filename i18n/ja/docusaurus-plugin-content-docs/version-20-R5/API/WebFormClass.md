@@ -43,7 +43,7 @@ Webフォームのコンポーネント (構成要素) とは、これらの Web
 
 <!-- REF #WebFormClass.disableState().Params -->
 
-| 引数    | タイプ    |     | 説明                       |
+| 引数    | 型      |     | 説明                       |
 | ----- | ------ | :-: | ------------------------ |
 | state | string |  -> | Webフォーム上で無効化する state の名称 |
 
@@ -69,7 +69,7 @@ Webフォームの state に関する詳細については、[developer.qodly.co
 
 <!-- REF #WebFormClass.enableState().Params -->
 
-| 引数    | タイプ    |     | 説明                       |
+| 引数    | 型      |     | 説明                       |
 | ----- | ------ | :-: | ------------------------ |
 | state | string |  -> | Webフォーム上で有効化する state の名称 |
 
@@ -106,7 +106,7 @@ Function authenticationError()
 
 <!-- REF #WebFormClass.setError().Params -->
 
-| 引数  | タイプ    |     | 説明                   |
+| 引数  | 型      |     | 説明                   |
 | --- | ------ | :-: | -------------------- |
 | msg | string |  -> | Webフォームに表示するエラーメッセージ |
 
@@ -124,7 +124,7 @@ Function authenticationError()
 
 <!-- REF #WebFormClass.setMessage().Params -->
 
-| 引数  | タイプ    |     | 説明                  |
+| 引数  | 型      |     | 説明                  |
 | --- | ------ | :-: | ------------------- |
 | msg | string |  -> | Webフォームに表示する情報メッセージ |
 
@@ -142,7 +142,7 @@ Function authenticationError()
 
 <!-- REF #WebFormClass.setWarning().Params -->
 
-| 引数  | タイプ    |     | 説明                  |
+| 引数  | 型      |     | 説明                  |
 | --- | ------ | :-: | ------------------- |
 | msg | string |  -> | Webフォームに表示する警告メッセージ |
 
@@ -160,7 +160,7 @@ Function authenticationError()
 
 <!-- REF #_command_.Web Form.Params -->
 
-| 引数  | タイプ                        |     | 説明                       |
+| 引数  | 型                          |     | 説明                       |
 | --- | -------------------------- | :-: | ------------------------ |
 | 戻り値 | 4D.WebForm |  <- | 新しい `WebForm` プロキシオブジェクト |
 
@@ -178,7 +178,7 @@ Function authenticationError()
 
 <!-- REF #_command_.Web Event.Params -->
 
-| 引数  | タイプ    |     | 説明     |
+| 引数  | 型      |     | 説明     |
 | --- | ------ | :-: | ------ |
 | 戻り値 | object |  <- | object |
 
