@@ -48,7 +48,7 @@ var myPerson : cs.Person
 //variable de la clase usuario Person
 ```
 
-Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them. Por ejemplo, si desea una variable que contenga la fecha actual más 30 días, puede escribir:
+Aunque no se suele recomendar, se pueden crear variables simplemente utilizándolas; no es necesario definirlas formalmente. Por ejemplo, si desea una variable que contenga la fecha actual más 30 días, puede escribir:
 
 ```4d
 MyOtherDate:=Current date+30
