@@ -13,7 +13,7 @@ title: ポインター
 
 テーブル・フィールド・変数・配列・配列要素・オブジェクトを参照するためにポインターを使用することができます。 以下の表に、各タイプの例を示します:
 
-| タイプ    | 参照時                                                                                         | 使用時                                         | 代入時                                         |
+| 型      | 参照時                                                                                         | 使用時                                         | 代入時                                         |
 | ------ | ------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
 | テーブル   | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                                         |
 | フィールド  | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"           |
@@ -85,12 +85,12 @@ $MyVar:="Goodbye"
  vPtrC:=->anotherObject
 ```
 
-| 演算  | シンタックス            | 戻り値     | 式             | 値     |
-| --- | ----------------- | ------- | ------------- | ----- |
-| 等しい | Pointer = Pointer | Boolean | vPtrA = vPtrB | true  |
-|     |                   |         | vPtrA = vPtrC | false |
-| 異なる | Pointer # Pointer | Boolean | vPtrA # vPtrC | true  |
-|     |                   |         | vPtrA # vPtrB | false |
+| 演算  | シンタックス            | 戻り値 | 式             | 値     |
+| --- | ----------------- | --- | ------------- | ----- |
+| 等しい | Pointer = Pointer | ブール | vPtrA = vPtrB | true  |
+|     |                   |     | vPtrA = vPtrC | false |
+| 異なる | Pointer # Pointer | ブール | vPtrA # vPtrC | true  |
+|     |                   |     | vPtrA # vPtrB | false |
 
 ## ポインターの使用例
 
