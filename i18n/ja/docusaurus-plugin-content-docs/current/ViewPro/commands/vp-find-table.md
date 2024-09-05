@@ -17,10 +17,10 @@ title: VP Find table
 
 <!-- REF #_method_.VP Find table.Params -->
 
-| 引数       | タイプ    |    | 説明         |                  |
+| 引数       | 型      |    | 説明         |                  |
 | -------- | ------ | -- | ---------- | ---------------- |
-| rangeObj | Object | -> | セルのレンジ     |                  |
-| 戻り値      | Text   | <- | Table name | <!-- END REF --> |
+| rangeObj | オブジェクト | -> | セルのレンジ     |                  |
+| 戻り値      | テキスト   | <- | Table name | <!-- END REF --> |
 
 #### 説明
 
