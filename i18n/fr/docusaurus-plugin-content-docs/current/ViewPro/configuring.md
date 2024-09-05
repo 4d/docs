@@ -37,15 +37,15 @@ Lorsque la barre de formule est visible :
 
 Les interfaces de Ruban et de Barre d'outils regroupent les fonctionnalités qui s'y rattachent dans des onglets :
 
-| Onglet    | Actions                             | Interface Ruban | Interface Barre d'outils |
-| --------- | ----------------------------------- | :-------------: | :----------------------: |
-| File      | Gestion de fichiers                 |        X        |                          |
-| Accueil   | Apparence du texte                  |        X        |             X            |
-| Insérer   | Ajouter des éléments                |        X        |             X            |
-| Formules  | Calculs de formules et bibliothèque |        X        |             X            |
-| Data      | Gestion des données                 |        X        |             X            |
-| Affichage | Présentation visuelle               |        X        |             X            |
-| Settings  | Présentation de la feuille          |        X        |                          |
+| Onglet     | Actions                             | Interface Ruban | Interface Barre d'outils |
+| ---------- | ----------------------------------- | :-------------: | :----------------------: |
+| File       | Gestion de fichiers                 |        X        |                          |
+| Accueil    | Apparence du texte                  |        X        |             X            |
+| Insérer    | Ajouter des éléments                |        X        |             X            |
+| Formules   | Calculs de formules et bibliothèque |        X        |             X            |
+| Data       | Gestion des données                 |        X        |             X            |
+| Affichage  | Présentation visuelle               |        X        |             X            |
+| Propriétés | Présentation de la feuille          |        X        |                          |
 
 ## Evénements formulaire
 
@@ -357,12 +357,12 @@ Paper size attributes are used to specify the dimensions or model of paper to us
 |           | width  | entier long | Width of the paper, in hundredths of an inch.                                                                                                                    |
 |           | kind   | text        | Nom du format de papier standard (par exemple, A2, A4, legal, etc.) retourné par `Get Print Option`. Default value = "letter" |
 
-- If the paper size is specified using the `height` and `width` properties,  [`VP Get print info`](./commands/vp-get-print-info.md) returns a paper size with `custom` as value for `kind`.
+- Si le format du papier est spécifié en utilisant les propriétés `height` et `width`, [`VP Get print info`](./commands/vp-get-print-info.md) retourne un format de papier avec `custom` comme valeur pour `kind`.
 
-- If you set the paper size using the `kind` property, you can use either:
-  - one of the formats in the [SpreadJS format list](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
-  - one of the formats returned by the [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html) command.
-    In that case, [`VP Get print info`](./commands/vp-get-print-info.md) returns the corresponding format with the height and width.
+- Si vous définissez le format du papier à l'aide de la propriété `kind`, vous pouvez utiliser l'une ou l'autre :
+  - un des formats dans la [liste des formats SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
+  - un des formats retournés par la commande [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/fr/page785.html).
+    Dans ce cas, [`VP Get print info`](./commands/vp-get-print-info.md) retourne le format correspondant avec la hauteur et la largeur.
 
 ### Echelle
 
@@ -379,12 +379,12 @@ Scale attributes are used to specify printing optimization and adjustments.
 
 Show / Hide attributes are used to specify the visibility (printing) of 4D View Pro area elements.
 
-| Propriété        | Type        | Description                                                                                                                                                                                                                         |
-| ---------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| showBorder       | boolean     | Prints the outline border.Default value = "true"                                                                                                                                                                    |
-| showColumnHeader | entier long | Column header print settings. Available values: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once` |
-| showGridLine     | boolean     | Prints the gridlines. Default value = "false"                                                                                                                                                                       |
-| showRowHeader    | entier long | Row headers print settings. Available values: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once`   |
+| Propriété        | Type        | Description                                                                                                                                                                                                                                |
+| ---------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| showBorder       | boolean     | Prints the outline border.Default value = "true"                                                                                                                                                                           |
+| showColumnHeader | entier long | Column header print settings. Valeurs disponibles : `vk print visibility hide`, `vk print visibility inherit` (par défaut), `vk print visibility show`, `vk print visibility show once` |
+| showGridLine     | boolean     | Prints the gridlines. Default value = "false"                                                                                                                                                                              |
+| showRowHeader    | entier long | Row headers print settings. Valeurs disponibles : `vk print visibility hide`, `vk print visibility inherit` (par défaut), `vk print visibility show`, `vk print visibility show once`   |
 
 ### Watermark
 
