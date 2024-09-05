@@ -9,9 +9,9 @@ title: VP FLUSH COMMANDS
 
 <!-- REF #_method_.VP FLUSH COMMANDS.Params -->
 
-| 引数         | タイプ  |    | 説明                      |                  |
+| 引数         | 型    |    | 説明                      |                  |
 | ---------- | ---- | -- | ----------------------- | ---------------- |
-| vpAreaName | Text | -> | 4D View Pro フォームオブジェクト名 | <!-- END REF --> |
+| vpAreaName | テキスト | -> | 4D View Pro フォームオブジェクト名 | <!-- END REF --> |
 
 #### 説明
 
