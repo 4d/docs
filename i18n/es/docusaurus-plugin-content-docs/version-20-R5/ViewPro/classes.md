@@ -13,7 +13,7 @@ Las siguientes clases pueden utilizarse en 4D View Pro.
 
 **.color** : Text<!-- END REF -->
 
-The `.color` property is the <!-- REF #LineBorder.color.Summary -->[color](configuring.md#borders) of the border<!-- END REF -->. Por defecto = black.
+La propiedad `.color` es el <!-- REF #LineBorder.color.Summary -->[color](configuring.md#borders) del borde<!-- END REF -->. Por defecto = black.
 
 ### .style
 
@@ -21,7 +21,7 @@ The `.color` property is the <!-- REF #LineBorder.color.Summary -->[color](confi
 
 **.style** : Integer<!-- END REF -->
 
-The `.style` property is the <!-- REF #LineBorder.style.Summary -->[style](configuring.md#borders) of the border<!-- END REF -->. Por defecto = empty.
+La propiedad `.style` es el <!-- REF #LineBorder.style.Summary -->[estilo](configuring.md#borders) del borde<!-- END REF -->. Por defecto = empty.
 
 ## TableColumn
 
@@ -73,7 +73,7 @@ La propiedad `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indica
 
 **.bandRows** : Boolean<!-- END REF -->
 
-The `.bandRows` property <!-- REF #TableOptions.bandRows.Summary -->indicates whether to display an alternating row style<!-- END REF -->. Por defecto = True
+La propiedad `.bandRows` <!-- REF #TableOptions.bandRows.Summary -->indica si se muestra un estilo de línea alterna<!-- END REF -->. Por defecto = True
 
 ### .highlightLastColumn
 
@@ -213,7 +213,7 @@ La propiedad `.borderHorizontal` es la <!-- REF #TableStyle.borderHorizontal.Sum
 
 **.borderVertical** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderVertical` property is the <!-- REF #TableStyle.borderVertical.Summary -->vertical border line of the table <!-- END REF -->.
+La propiedad `.borderVertical` es la <!-- REF #TableStyle.borderVertical.Summary -->línea de borde vertical de la tabla <!-- END REF -->.
 
 ## TableTheme
 
@@ -223,7 +223,7 @@ The `.borderVertical` property is the <!-- REF #TableStyle.borderVertical.Summar
 
 **.bandRows** : Boolean<!-- END REF -->
 
-The `.bandRows` property <!-- REF #TableTheme.bandRows.Summary -->indicates whether to display an alternating row style<!-- END REF -->.
+La propiedad `.bandRows` <!-- REF #TableTheme.bandRows.Summary -->indica si se muestra un estilo de líneas alternas<!-- END REF -->.
 
 ### .bandColumns
 
