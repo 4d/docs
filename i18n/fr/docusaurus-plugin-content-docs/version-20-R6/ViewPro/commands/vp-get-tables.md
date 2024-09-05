@@ -27,7 +27,7 @@ title: VP Get tables
 
 The `VP Get tables` command <!-- REF #_method_.VP Get tables.Summary -->returns a collection of all table names defined in the *sheet*<!-- END REF -->.
 
-In *vpAreaName*, pass the name of the 4D View Pro area.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 In *sheet*, pass the index of the target sheet. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 
