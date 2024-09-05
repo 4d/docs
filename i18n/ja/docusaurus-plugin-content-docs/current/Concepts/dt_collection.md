@@ -1,6 +1,6 @@
 ---
 id: collection
-title: Collection
+title: コレクション
 ---
 
 コレクションとは、類似または混在した型 (テキスト、数値、日付、オブジェクト、ブール、コレクション、null) の値が順番に並べられたリストです。
@@ -154,12 +154,12 @@ var $c3:=$c1 // 同じインスタンスへの参照
 
 上のコードに基づいて、比較表は次のようになります:
 
-| 演算  | シンタックス                        | 戻り値     | 式         | 値     |
-| --- | ----------------------------- | ------- | --------- | ----- |
-| 等しい | collectionRef = collectionRef | Boolean | $c1 = $c3 | true  |
-|     |                               |         | $c1 = $c2 | false |
-| 異なる | collectionRef # collectionRef | Boolean | $c1 # $c3 | false |
-|     |                               |         | $c1 # $c2 | true  |
+| 演算  | シンタックス                        | 戻り値 | 式         | 値     |
+| --- | ----------------------------- | --- | --------- | ----- |
+| 等しい | collectionRef = collectionRef | ブール | $c1 = $c3 | true  |
+|     |                               |     | $c1 = $c2 | false |
+| 異なる | collectionRef # collectionRef | ブール | $c1 # $c3 | false |
+|     |                               |     | $c1 # $c2 | true  |
 
 ## 未定義
 
