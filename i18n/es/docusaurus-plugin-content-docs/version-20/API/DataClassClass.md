@@ -522,7 +522,7 @@ Este ejemplo ilustra el uso de la propiedad *context*:
 <!-- REF #DataClassClass.getCount().Params -->
 | Parámetros | Tipo    |    | Descripción                                                    |
 | ---------- | ------- | -- | -------------------------------------------------------------- |
-| result     | Integer | <- | Número de entidades en la dataclass|<!-- END REF -->
+| resultado  | Integer | <- | Número de entidades en la dataclass|<!-- END REF -->
 
 |
 
@@ -689,7 +689,7 @@ La función `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->devuelve 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
 | Parámetros | Tipo   |    | Descripción                                                                                          |
 | ---------- | ------ | -- | ---------------------------------------------------------------------------------------------------- |
-| result     | Object | <- | Objeto que describe el contenido de la caché ORDA para la clase de datos.|<!-- END REF -->
+| resultado  | Object | <- | Objeto que describe el contenido de la caché ORDA para la clase de datos.|<!-- END REF -->
 
 
 |
