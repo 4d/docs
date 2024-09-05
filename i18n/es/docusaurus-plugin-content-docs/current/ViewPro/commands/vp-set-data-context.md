@@ -49,7 +49,7 @@ En *options*, puede pasar un objeto que especifique las opciones adicionales. La
 
 En *sheet*, pase el índice de la hoja que recibirá el contexto de datos. Si no se pasa ningún índice, el contexto se aplica a la hoja actual.
 
-If you export your document to an object using [VP Export to object](vp-export-to-object.md), or to a 4DVP document using [VP EXPORT DOCUMENT](vp-export-document.md), the `includeBindingSource` option lets you copy the contents of the current contexts as cell values in the exported object or document. Para más detalles, consulte la descripción de esos métodos.
+Si exporta su documento a un objeto utilizando [VP Export to object](vp-export-to-object.md), o a un documento 4DVP utilizando [VP EXPORT DOCUMENT](vp-export-document.md), la opción `includeBindingSource` le permite copiar el contenido de los contextos actuales como valores de celda en el objeto o documento exportado. Para más detalles, consulte la descripción de esos métodos.
 
 #### Ejemplo
 
