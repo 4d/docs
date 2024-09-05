@@ -9,9 +9,9 @@ title: VP DELETE COLUMNS
 
 <!-- REF #_method_.VP DELETE COLUMNS.Params -->
 
-| 引数       | タイプ    |    | 説明        |                  |
+| 引数       | 型      |    | 説明        |                  |
 | -------- | ------ | -- | --------- | ---------------- |
-| rangeObj | Object | -> | レンジオブジェクト | <!-- END REF --> |
+| rangeObj | オブジェクト | -> | レンジオブジェクト | <!-- END REF --> |
 
 #### 説明
 
