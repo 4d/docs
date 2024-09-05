@@ -660,7 +660,7 @@ Las llaves primarias pueden ser números (enteros) o cadenas. Puede "forzar" que
 
 | Parámetros | Tipo |    | Descripción                                                           |
 | ---------- | ---- | -- | --------------------------------------------------------------------- |
-| result     | Text | <- | Atributos de contexto vinculados a la entidad, separados por una coma |
+| resultado  | Text | <- | Atributos de contexto vinculados a la entidad, separados por una coma |
 
 <!-- END REF -->
 
