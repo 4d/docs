@@ -52,7 +52,7 @@ As chaves XML oferecem opções adicionais além daquelas exibidas na caixa de d
 
 ### Arquivo histórico
 
-Quando uma aplicação é construída, 4D gera um arquivo de histórico na pasta **Logs**. O ficheiro de historial armazena as seguintes informações para cada compilação:
+Quando uma aplicação é construída, 4D gera um arquivo de histórico na pasta **Logs**. O arquivo de registro armazena as seguintes informações para cada compilação:
 
 * O início e o fim da construção de objetivos,
 * O nome e o caminho de acesso completo dos ficheiros gerados,
@@ -86,7 +86,7 @@ This feature creates a `.4dz`file within a `Compiled Database/<project name>` fo
 
 `/Compiled Database/MyProject/MyProject.4dz`
 
-Um ficheiro .4dz é essencialmente uma versão zipada (embalada) da pasta do projecto. A .4dz file is essentially a zipped (packed) version of the project folder. O tamanho compacto e otimizado dos arquivos .4dz torna os pacotes de projeto fáceis de implantar.
+Um arquivo .4dz é essencialmente uma versão compactada da pasta do projeto. A .4dz file is essentially a zipped (packed) version of the project folder. O tamanho compacto e otimizado dos arquivos .4dz torna os pacotes de projeto fáceis de implantar.
 
 > Ao gerar arquivos .4dz, 4D usa um formato zip padrão **padrão** por padrão. A vantagem desse formato é que ele pode ser lido facilmente por todas as ferramentas de descompactação. Se você não quiser usar esse formato padrão, adicione a chave `UseStandardZipFormat` XML com o valor `False` no arquivo [`buildApp.4DSettings`](#build-application-settings) (para obter mais informações, consulte o manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html)).
 
@@ -127,7 +127,7 @@ Os seguintes elementos são necessários para a construção:
 
 No Windows, esta funcionalidade cria um ficheiro executável (.exe). Em macOS, trata da criação de pacotes de software.
 
-O princípio consiste em fundir um ficheiro de estrutura compilado com 4D Volume Desktop. A funcionalidade fornecida pelo ficheiro 4D Volume Desktop está ligada à oferta do produto a que se subscreveu. The functionality provided by the 4D Volume Desktop file is linked with the product offer to which you have subscribed.
+O princípio consiste em fundir um ficheiro de estrutura compilado com 4D Volume Desktop. A funcionalidade fornecida pelo ficheiro 4D Volume Desktop está ligada à oferta do produto a que se subscreveu. Para mais informações sobre este ponto, consulte a documentação de vendas e a [4D Store](http://www.4d.com/).
 
 Você pode definir um arquivo de dados padrão ou permitir que os usuários criem e usem seu próprio arquivo de dados (consulte o gerenciamento [de arquivos de dados na seção de aplicativos finais](https://doc.4d.com/4Dv17R6/4D/17-R6/Data-file-management-in-final-applications.300-4354729.en.html)).
 
@@ -152,7 +152,7 @@ Esta opção permite escolher o modo de ligação entre o aplicativo mesclado e 
 
 * **Por nome da aplicação** (por defeito) - A aplicação 4D abre automaticamente o ficheiro de dados mais recentemente aberto correspondente ao ficheiro de estrutura. Isto permite-lhe mover o pacote de aplicações livremente no disco. Esta opção deve ser geralmente utilizada para aplicações fundidas, a menos que seja especificamente necessário duplicar a aplicação.
 
-* **Por caminho do aplicativo** - O aplicativo 4D mesclado analisará o arquivo *lastDataPath.xml* do aplicativo e tentará abrir o arquivo de dados com um atributo "executablePath" que corresponda ao caminho completo do aplicativo. Se tal entrada for encontrada, o arquivo de dados correspondente (definido através do seu atributo "dataFilePath") será aberto. If such an entry is found, its corresponding data file (defined through its "dataFilePath" attribute) is opened.
+* **Por caminho do aplicativo** - O aplicativo 4D mesclado analisará o arquivo *lastDataPath.xml* do aplicativo e tentará abrir o arquivo de dados com um atributo "executablePath" que corresponda ao caminho completo do aplicativo. Se tal entrada for encontrada, o arquivo de dados correspondente (definido através do seu atributo "dataFilePath") será aberto. Caso contrário, o último arquivo de dados aberto será aberto (modo padrão).
 
 Para obter mais informações sobre o modo de ligação de dados, consulte [Último arquivo de dados aberto](#last-data-file-opened).
 
@@ -165,7 +165,7 @@ Se você tiver especificado "MyProject" como o nome do aplicativo, encontrará o
 * *Windows*
   * MyProject.exe - Seu executável e um MyProject.rsr (os recursos da aplicação)
   * Pasta 4D Extensions, pasta Resources, várias bibliotecas (DLL), pasta Native Components, pasta SASL Plugins - Arquivos necessários para a operação do aplicativo
-  * Uma pasta Database - Inclui uma pasta Resources e um ficheiro MyProject.4DZ. Database folder  - Includes a Resources folder and  MyProject.4DZ file. **Observação**: Essa pasta também contém a pasta *Default Data* , se ela tiver sido definida (consulte [Gerenciamento de arquivos de dados em aplicativos finais](#data-file-management-in-final-applicatons).
+  * Uma pasta Database - Inclui uma pasta Resources e um arquivo MyProject.4DZ. Database folder  - Includes a Resources folder and  MyProject.4DZ file. **Observação**: Essa pasta também contém a pasta *Default Data* , se ela tiver sido definida (consulte [Gerenciamento de arquivos de dados em aplicativos finais](#data-file-management-in-final-applicatons).
   * (Opcional) Pasta Components e/ou pasta Plugins - Contém todos os componentes e/ou arquivos de plug-in incluídos no banco de dados. Para obter mais informações sobre isso, consulte os plugins [e componentes](#plugins-and-components).
   * Pasta de licenças - Um arquivo XML com números de licença integrados ao aplicativo. Para obter mais informações sobre isso, consulte a seção [Licenses & Certificate](#licenses-and-certificate) .
   * Itens adicionais adicionados à pasta da Área de Trabalho de Volume 4D, se houver (veja [Personalizando a pasta de Volume 4D para Desktop](#customizing-4d-volume-desktop-folder)).
@@ -184,7 +184,7 @@ Ao criar um aplicativo autônomo, o 4D copia o conteúdo da pasta 4D Volume Desk
 * Construir um pacote de projeto
 > No macOS, o 4D Volume Desktop é fornecido na forma de um pacote de software. Para modificá-lo, primeiro é preciso exibir seu conteúdo (**Control+clique** no ícone).
 
-#### Localização de ficheiros Web
+#### Localização dos arquivos da Web
 
 Se o seu aplicativo autônomo for usado como um servidor Web, os arquivos e pastas exigidos pelo servidor devem ser instalados em locais específicos. Estes itens são os seguintes:
 
@@ -274,7 +274,7 @@ Esta opção permite escolher o modo de ligação entre o aplicativo mesclado e 
 
 * **Por nome da aplicação** (por defeito) - A aplicação 4D abre automaticamente o ficheiro de dados mais recentemente aberto correspondente ao ficheiro de estrutura. Isto permite-lhe mover o pacote de aplicações livremente no disco. Esta opção deve ser geralmente utilizada para aplicações fundidas, a menos que seja especificamente necessário duplicar a aplicação.
 
-* **Por caminho do aplicativo** - O aplicativo 4D mesclado analisará o arquivo *lastDataPath.xml* do aplicativo e tentará abrir o arquivo de dados com um atributo "executablePath" que corresponda ao caminho completo do aplicativo. Se tal entrada for encontrada, o arquivo de dados correspondente (definido através do seu atributo "dataFilePath") será aberto. If such an entry is found, its corresponding data file (defined through its "dataFilePath" attribute) is opened.
+* **Por caminho do aplicativo** - O aplicativo 4D mesclado analisará o arquivo *lastDataPath.xml* do aplicativo e tentará abrir o arquivo de dados com um atributo "executablePath" que corresponda ao caminho completo do aplicativo. Se tal entrada for encontrada, o arquivo de dados correspondente (definido através do seu atributo "dataFilePath") será aberto. Caso contrário, o último arquivo de dados aberto será aberto (modo padrão).
 
 Para obter mais informações sobre o modo de ligação de dados, consulte [Último arquivo de dados aberto](#last-data-file-opened).
 
@@ -372,7 +372,7 @@ O conteúdo dessas pastas varia dependendo da plataforma atual:
 
 Se você marcou a opção "Permitir atualização automática do aplicativo cliente", uma subpasta adicional chamada *Upgrade4DClient* é adicionada na pasta/pacote do servidor `<ApplicationName>`. Esta subpasta contém o aplicativo cliente no macOS e/ou no formato Windows como um arquivo compactado. Este ficheiro é utilizado durante a atualização automática das aplicações clientes.
 
-#### Localização de ficheiros Web
+#### Localização dos arquivos da Web
 
 Se o servidor e/ou cliente parte do seu aplicativo clicável duplo for usado como um servidor web, os arquivos e pastas exigidos pelo servidor devem ser instalados em locais específicos. Estes itens são os seguintes:
 
