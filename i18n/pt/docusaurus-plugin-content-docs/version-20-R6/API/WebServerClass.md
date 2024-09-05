@@ -70,10 +70,10 @@ Eles oferecem as propriedades abaixo e funções:
 
 <!-- REF #_command_.WEB Server.Params -->
 
-| Parâmetro  | Tipo                          |    | Descrição                                                                         |
-| ---------- | ----------------------------- | -- | --------------------------------------------------------------------------------- |
-| option     | Integer                       | -> | Web server to get (default if omitted = `Web server database`) |
-| Resultados | 4D. WebServer | <- | Objeto Web Server                                                                 |
+| Parâmetro  | Tipo                          |    | Descrição                                                                                |
+| ---------- | ----------------------------- | -- | ---------------------------------------------------------------------------------------- |
+| option     | Integer                       | -> | Servidor Web a ser obtido (padrão se omitido = `Web server database`) |
+| Resultados | 4D. WebServer | <- | Objeto Web Server                                                                        |
 
 <!-- END REF -->
 
