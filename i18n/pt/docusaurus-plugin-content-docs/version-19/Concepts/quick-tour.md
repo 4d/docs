@@ -45,7 +45,7 @@ A palavra-chave `var` permite declarar variáveis objecto de um tipo de classe d
 
 ```4d
 var myPerson : cs.Person
-//variable of the Person user class
+//variável da classe usuário Person
 ```
 
 
