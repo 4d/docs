@@ -20,10 +20,10 @@ Há diferentes maneiras de configurar as definições do servidor web 4D, depend
 
 ## Cache
 
-| Pode ser definido com              | Nome                                                                                      | Comentários |
-| ---------------------------------- | ----------------------------------------------------------------------------------------- | ----------- |
-| Caixa de diálogos de configurações | [Página de configuração/Utilizar a cache Web 4D](../settings/web.md#use-the-4d-web-cache) |             |
-| Caixa de diálogos de configurações | [Página de configuração/Tamanho da cache das páginas](../settings/web.md#page-cache-size) |             |
+| Pode ser definido com              | Nome                                                                             | Comentários |
+| ---------------------------------- | -------------------------------------------------------------------------------- | ----------- |
+| Caixa de diálogos de configurações | [Options (I) page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache) |             |
+| Caixa de diálogos de configurações | [Options (I) page/Page Cache Size](../settings/web.md#page-cache-size)           |             |
 
 Ativa e configura a cache da página Web.
 
@@ -60,15 +60,15 @@ Define o conjunto de caracteres a serem usados pelo servidor web 4D. O valor pad
 > Essa configuração também é usada para gerar relatórios rápidos em formato HTML.
 
 
-## Lista de cifras
+## Lista de criptogramas
 
 | Pode ser definido com | Nome                                               | Comentários |
 | --------------------- | -------------------------------------------------- | ----------- |
 | objeto webServer      | [`cipherSuite`](API/WebServerClass.md#ciphersuite) | Text        |
 
-Lista de cifras usada para o protocolo seguro; define a prioridade dos algoritmos de cifra implementados pelo servidor da Web. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). Veja a página cifras [](https://www.openssl.org/docs/manmaster/man1/ciphers.html) no site OpenSSL.
+Lista de criptogramas  usada para o protocolo seguro; define a prioridade dos algoritmos de cifra implementados pelo servidor da Web. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). Veja a página cifras [](https://www.openssl.org/docs/manmaster/man1/ciphers.html) no site OpenSSL.
 
-> A lista de cifras padrão usada por 4D pode ser modificada para a sessão usando o comando `SET DATABASE PARAMETER` . Nesse caso, a modificação se aplica a todo o aplicativo 4D, incluindo o servidor web, o servidor SQL, as conexões cliente/servidor, bem como o cliente HTTP e todos os comandos 4D que usam o protocolo seguro.
+> A lista de criptogramas padrão usada por 4D pode ser modificada para a sessão usando o comando `SET DATABASE PARAMETER` . Nesse caso, a modificação se aplica a todo o aplicativo 4D, incluindo o servidor web, o servidor SQL, as conexões cliente/servidor, bem como o cliente HTTP e todos os comandos 4D que usam o protocolo seguro.
 
 ## Parâmetros CORS
 
@@ -113,11 +113,11 @@ Separar cada método com um ";" (por exemplo: "post;get"). Se methods estiver va
 
 #### Veja também
 
-[Activar CORS](#enable-cors-service)
+[Ativar CORS](#enable-cors-service)
 
 
 
-## Debug log
+## Registro de depuração
 
 | Pode ser definido com | Nome            | Comentários |
 | --------------------- | --------------- | ----------- |
@@ -159,13 +159,13 @@ Por exemplo, se você quiser que a página inicial padrão seja "MyHome. tm", e 
 
 Se não especificar nenhuma página inicial padrão, o método da base de dados `Conexão Web` é chamado. Cabe-lhe a si processar o pedido de forma processual.
 
-## Activar CORS
+## Ativar CORS
 
-| Pode ser definido com              | Nome                                                               | Comentários                                          |
-| ---------------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------- |
-| objeto webServer                   | [`CORSEnabled`](API/WebServerClass.md#corsenabled)                 | Booleano, true para ativar o CORS (false por padrão) |
-| `WEB SET OPTION`                   | `Web CORS enabled`                                                 | 0 (desativado, padrão) ou 1 (ativado)                |
-| Caixa de diálogos de configurações | [Página Options (II)/Activar CORS](../settings/web.md#enable-cors) | Não seleccionado por defeito                         |
+| Pode ser definido com              | Nome                                                               | Comentários                                           |
+| ---------------------------------- | ------------------------------------------------------------------ | ----------------------------------------------------- |
+| objeto webServer                   | [`CORSEnabled`](API/WebServerClass.md#corsenabled)                 | Booleano, true para ativar o CORS (false por defeito) |
+| `WEB SET OPTION`                   | `Web CORS enabled`                                                 | 0 (desativado, padrão) ou 1 (ativado)                 |
+| Caixa de diálogos de configurações | [Página Options (II)/Activar CORS](../settings/web.md#enable-cors) | Não seleccionado por defeito                          |
 
 O servidor web 4D implementa o compartilhamento de recursos entre origens (CORS) para permitir que páginas web específicas servidas de outro domínio acessem os recursos do aplicativo web atual por meio de chamadas XHR, por exemplo, usando REST. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. Quando ativado, chamadas XHR (por exemplo, Solicitações REST) de páginas da Web fora do domínio podem ser permitidas na sua aplicação (você precisa definir a lista de endereços permitidos na lista de domínio CORS, veja as configurações do CORS abaixo). Neste caso, se um domínio ou método não permitido enviar uma solicitação de um site cruzado, será rejeitado com uma resposta de erro "403 - proibida".
 
@@ -303,7 +303,7 @@ Número da porta IP de escuta para conexões HTTPS via TLS. Por padrão, o valor
 | `WEB SET OPTION`                   | `Web inactive process timeout`                                                                       |             |
 | Caixa de diálogos de configurações | [Página Opções (I)/Tempo limite dos processos inativos](../settings/web.md#inactive-process-timeout) | Slider      |
 
-Duração da vida (em minutos) dos processos inativos associados às sessões. No final do tempo limite, o processo é morto no servidor, o `On Web Close Process` método de banco de dados é chamado, em seguida, o contexto da sessão é destruído.
+Life duration (in minutes) of inactive processes associated with legacy sessions. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the session context is destroyed.
 
 Padrão: 480 minutos (passe 0 para repor o valor predefinido)
 
@@ -425,7 +425,7 @@ Valores possíveis: 500 000 a 2 147 483 648.
 | objeto webServer      | [`maxSessions`](API/WebServerClass.md#maxsessions) |             |
 | `WEB SET OPTION`      | `Web max sessions`                                 |             |
 
-Número máximo de sessões simultâneas. Quando você atingir o limite definido, a sessão mais antiga é encerrada (e o método de banco de dados `On Web Close Process` é chamado) se o servidor da Web precisar criar uma nova sessão. O número de sessões simultâneas não pode exceder o [número máximo de processos da Web ](#maximum-concurrent-web-processes) (100 por padrão).
+Maximum number of simultaneous legacy sessions. When you reach the limit set, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the Web server needs to create a new one. The number of simultaneous legacy sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default).
 
 Valor padrão: 100 (passe 0 para restaurar o valor padrão).
 
@@ -479,9 +479,9 @@ Verdadeiro se o PFS está disponível no servidor web (consulte a seção TLS [T
 
 ## Reutilizar contextos temporários (em modo remoto)
 
-| Pode ser definido com              | Nome                                                                                               | Comentários |
-| ---------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- |
-| Caixa de diálogos de configurações | [Página opções (I)/Processos Web simultâneos máximos](../settings/web.md#reuse-temporary-contexts) |             |
+| Pode ser definido com              | Nome                                                                                     | Comentários |
+| ---------------------------------- | ---------------------------------------------------------------------------------------- | ----------- |
+| Caixa de diálogos de configurações | [Options (I) page/Reuse Temporary Contexts](../settings/web.md#reuse-temporary-contexts) |             |
 
 > Essa opção só está disponível quando a opção **No sessions** está marcada.
 
@@ -565,7 +565,7 @@ Por exemplo, se você quiser que a pasta raiz HTML seja a subpasta "Web" na past
 | `WEB SET OPTION`                   | `Sessão escalável Web`                                                                                       |             |
 | Caixa de diálogos de configurações | [Options (I) page/Automatic Session Management](../settings/web.md#scalable-sessions-multi-process-sessions) |             |
 
-Session management enabling status for the 4D web server. Session mechanism is described in the [Session Management](sessions.md) section.
+Session management enabling status for the 4D web server. Web server sessions are detailed in the [Web sessions](sessions.md) page.
 
 
 
@@ -622,9 +622,9 @@ O valor do atributo `Secure` do cookie de sessão é automaticamente definido co
 
 ## Utilizar processos preemptivos
 
-| Pode ser definido com              | Nome                                                                                               | Comentários |
-| ---------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- |
-| Caixa de diálogos de configurações | [Página opções (I)/Processos Web simultâneos máximos](../settings/web.md#use-preemptive-processes) |             |
+| Pode ser definido com              | Nome                                                                                     | Comentários |
+| ---------------------------------- | ---------------------------------------------------------------------------------------- | ----------- |
+| Caixa de diálogos de configurações | [Options (I) page/Use Preemptive Processes](../settings/web.md#use-preemptive-processes) |             |
 
 Essa opção ativa o modo preemptivo para o código do servidor Web do seu aplicativo quando a opção **No sessions** é selecionada (o modo preemptivo é sempre ativado com **scalable sessions**). Quando essa opção estiver marcada nesse contexto, o compilador 4D avaliará automaticamente a propriedade de segurança de thread de cada parte do código relacionado à Web [](preemptiveWeb.md#thread-safety-of-4d-web-code) e retornará erros em caso de incompatibilidade.
 
