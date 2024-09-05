@@ -23,7 +23,7 @@ En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 Pase el rango con nombre o la fórmula con nombre que desea eliminar en _name_.
 
-You can define where to remove the name in _scope_ using either the sheet index (counting begins at 0) or the following constants:
+Puede definir dónde eliminar el nombre en _scope_ utilizando el índice de la hoja (la numeración comienza en 0) o una de las siguientes constantes:
 
 - `vk current sheet`
 - `vk workbook`
