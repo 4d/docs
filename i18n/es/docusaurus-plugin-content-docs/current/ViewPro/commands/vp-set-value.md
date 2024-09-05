@@ -24,11 +24,11 @@ En *rangeObj*, pasa un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP C
 
 El parámetro *valueObj* es un objeto que incluye propiedades para el valor y el [formato](../configuring.md#cell-format) a asignar a *rangeObj*. Puede contener las siguientes propiedades:
 
-| Propiedad | Tipo                                     | Descripción                                                                                                                                                                                          |
-| --------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| value     | Integer, Real, Boolean, Text, Date, Null | Valor a asignar a *rangeObj* (excepto- hora). Pase null para borrar el contenido de la celda.                                                     |
-| time      | Real                                     | Valor hora (en segundos) a asignar a *rangeObj*                                                                                                                                   |
-| format    | Text                                     | Patrón de propiedad valor/tiempo. For information on patterns and formatting characters, please refer to the [Cell Format](../configuring.md#cell-format) paragraph. |
+| Propiedad | Tipo                                     | Descripción                                                                                                                                                                                               |
+| --------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| value     | Integer, Real, Boolean, Text, Date, Null | Valor a asignar a *rangeObj* (excepto- hora). Pase null para borrar el contenido de la celda.                                                          |
+| time      | Real                                     | Valor hora (en segundos) a asignar a *rangeObj*                                                                                                                                        |
+| format    | Text                                     | Patrón de propiedad valor/tiempo. Para obtener información sobre patrones y caracteres de formato, consulte el párrafo [Formato de celda](../configuring.md#cell-format). |
 
 #### Ejemplo
 
