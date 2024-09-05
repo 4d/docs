@@ -17,14 +17,14 @@ title: VP INSERT TABLE COLUMNS
 
 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Params -->
 
-| 引数          | タイプ     |    | 説明                                                   |                  |
-| ----------- | ------- | -- | ---------------------------------------------------- | ---------------- |
-| vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名                              |                  |
-| tableName   | Text    | -> | Table name                                           |                  |
-| column      | Integer | -> | 列の挿入場所を指定する表組み内のインデックス                               |                  |
-| count       | Text    | -> | 挿入する列の数 (>0)                      |                  |
-| insertAfter | Integer | -> | `vk table insert before` または `vk table insert after` |                  |
-| sheet       | Integer | -> | シートのインデックス (省略した場合はカレントシート)       | <!-- END REF --> |
+| 引数          | 型    |    | 説明                                                   |                  |
+| ----------- | ---- | -- | ---------------------------------------------------- | ---------------- |
+| vpAreaName  | テキスト | -> | 4D View Pro フォームオブジェクト名                              |                  |
+| tableName   | テキスト | -> | Table name                                           |                  |
+| column      | 整数   | -> | 列の挿入場所を指定する表組み内のインデックス                               |                  |
+| count       | テキスト | -> | 挿入する列の数 (>0)                      |                  |
+| insertAfter | 整数   | -> | `vk table insert before` または `vk table insert after` |                  |
+| sheet       | 整数   | -> | シートのインデックス (省略した場合はカレントシート)       | <!-- END REF --> |
 
 #### 説明
 
