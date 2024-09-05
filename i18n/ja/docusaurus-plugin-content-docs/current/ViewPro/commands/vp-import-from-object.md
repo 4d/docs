@@ -9,10 +9,10 @@ title: VP IMPORT FROM OBJECT
 
 <!-- REF #_method_.VP IMPORT FROM OBJECT.Params -->
 
-| 引数         | タイプ    |    | 説明                      |                  |
+| 引数         | 型      |    | 説明                      |                  |
 | ---------- | ------ | -- | ----------------------- | ---------------- |
-| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名 |                  |
-| viewPro    | Object | -> | 4D View Pro オブジェクト      | <!-- END REF --> |
+| vpAreaName | テキスト   | -> | 4D View Pro フォームオブジェクト名 |                  |
+| viewPro    | オブジェクト | -> | 4D View Pro オブジェクト      | <!-- END REF --> |
 
 #### 説明
 
