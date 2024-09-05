@@ -18,22 +18,22 @@ title: VP ADD FORMULA NAME
 
 #### Description
 
-The `VP ADD FORMULA NAME` command <!-- REF #_method_.VP ADD FORMULA NAME.Summary -->creates or modifies a named formula in the open document<!-- END REF -->.
+La commande `VP ADD FORMULA NAME` <!-- REF #_method_.VP ADD FORMULA NAME.Summary -->permet de créer ou de modifier une formule nommée dans le document courant<!-- END REF -->.
 
 > Les formules nommées créées par cette commande sont stockées dans le document.
 
-In _vpAreaName_, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-Pass the 4D View Pro formula that you want to name in _vpFormula_. For detailed information about formula syntax, see [Formulas and Functions](../formulas.md) page.
+Passez la formule 4D View Pro que vous souhaitez nommer dans _vpFormula_. Pour plus d'informations sur la syntaxe des formules, veuillez consulter la page [Formules et Fonctions](../formulas.md).
 
-Pass the new name for the formula in _name_. Si le nom est déjà utilisé dans le même scope, la nouvelle formule nommée remplace la formule existante. A noter que vous pouvez utiliser le même nom pour plusieurs scopes (ci-dessous).
+Passez le nouveau nom de la formule dans _name_. Si le nom est déjà utilisé dans le même scope, la nouvelle formule nommée remplace la formule existante. A noter que vous pouvez utiliser le même nom pour plusieurs scopes (ci-dessous).
 
-You can pass an object with additional properties for the named formula in _options_. Les propriétés suivantes sont prises en charge :
+Vous pouvez passer un objet avec des propriétés additionnelles pour la formule nommée dans _options_. Les propriétés suivantes sont prises en charge :
 
-| Propriété | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| scope     | Number | Scope de la formule. You can pass the sheet index (counting begins at 0) or use the following constants: <li>`vk current sheet`</li><li>`vk workbook`</li>The scope determines whether a formula name is local to a given worksheet (_scope_=sheet index or `vk current sheet`), or global across the entire workbook (_scope_=`vk workbook`). |
-| comment   | Text   | Commentaire associé à une formule nommée                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Propriété | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| --------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| scope     | Number | Scope de la formule. Vous pouvez passer l'index de la feuille (la numérotation commence à zéro) ou utiliser les constantes suivantes : <li>`vk current sheet`</li><li>`vk workbook`</li>Le scope détermine si le nom d'une formule est propre à une feuille (_scope_=sheet index ou `vk current sheet`), ou s'il s'applique à l'ensemble du classeur (_scope_=`vk workbook`). |
+| comment   | Text   | Commentaire associé à une formule nommée                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 #### Exemple
 
