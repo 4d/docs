@@ -37,27 +37,27 @@ title: 数値 (実数、倍長整数、整数)
 
 ## 数値演算子
 
-| 演算        | シンタックス           | 戻り値     | 式        | 値     |
-| --------- | ---------------- | ------- | -------- | ----- |
-| 加算 (足し算)  | Number + Number  | Number  | 2 + 3    | 5     |
-| 減算 (引き算)  | Number - Number  | Number  | 3 – 2    | 1     |
-| 乗算 (かけ算)  | Number * Number  | Number  | 5 * 2    | 10    |
-| 除算 (割り算)  | Number / Number  | Number  | 5 / 2    | 2.5   |
-| 倍長整数を返す除算 | Number \ Number | Number  | 5 \ 2   | 2     |
-| モジューロ     | Number % Number  | Number  | 5 % 2    | 1     |
-| 指数        | Number ^ Number  | Number  | 2 ^ 3    | 8     |
-| 等しい       | Number = Number  | Boolean | 10 = 10  | true  |
-|           |                  |         | 10 = 11  | false |
-| 異なる       | Number # Number  | Boolean | 10 # 11  | true  |
-|           |                  |         | 10 # 10  | false |
-| 大きい       | Number > Number  | Boolean | 11 > 10  | true  |
-|           |                  |         | 10 > 11  | false |
-| 小さい       | Number < Number  | Boolean | 10 < 11  | true  |
-|           |                  |         | 11 < 10  | false |
-| 以上        | Number >= Number | Boolean | 11 >= 10 | true  |
-|           |                  |         | 10 >= 11 | false |
-| 以下        | Number <= Number | Boolean | 10 <= 11 | true  |
-|           |                  |         | 11 <= 10 | false |
+| 演算        | シンタックス           | 戻り値    | 式        | 値     |
+| --------- | ---------------- | ------ | -------- | ----- |
+| 加算 (足し算)  | Number + Number  | Number | 2 + 3    | 5     |
+| 減算 (引き算)  | Number - Number  | Number | 3 – 2    | 1     |
+| 乗算 (かけ算)  | Number * Number  | Number | 5 * 2    | 10    |
+| 除算 (割り算)  | Number / Number  | Number | 5 / 2    | 2.5   |
+| 倍長整数を返す除算 | Number \ Number | Number | 5 \ 2   | 2     |
+| モジューロ     | Number % Number  | Number | 5 % 2    | 1     |
+| 指数        | Number ^ Number  | Number | 2 ^ 3    | 8     |
+| 等しい       | Number = Number  | ブール    | 10 = 10  | true  |
+|           |                  |        | 10 = 11  | false |
+| 異なる       | Number # Number  | ブール    | 10 # 11  | true  |
+|           |                  |        | 10 # 10  | false |
+| 大きい       | Number > Number  | ブール    | 11 > 10  | true  |
+|           |                  |        | 10 > 11  | false |
+| 小さい       | Number < Number  | ブール    | 10 < 11  | true  |
+|           |                  |        | 11 < 10  | false |
+| 以上        | Number >= Number | ブール    | 11 >= 10 | true  |
+|           |                  |        | 10 >= 11 | false |
+| 以下        | Number <= Number | ブール    | 10 <= 11 | true  |
+|           |                  |        | 11 <= 10 | false |
 
 ### モジューロ
 
