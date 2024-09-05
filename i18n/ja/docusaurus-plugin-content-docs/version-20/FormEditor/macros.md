@@ -109,7 +109,7 @@ Function onInvoke($editor : Object)->$result : Object
 
 JSONファイルの説明です:
 
-| 属性     |                     |                          | タイプ    | 説明                         |
+| 属性     |                     |                          | 型      | 説明                         |
 | ------ | ------------------- | ------------------------ | ------ | -------------------------- |
 | macros |                     |                          | object | 定義されたマクロのリスト               |
 |        | `<macroName>` |                          | object | マクロ定義                      |
@@ -160,7 +160,7 @@ JSONファイルの説明です:
 
 #### Class constructor($macro : Object)
 
-| 引数     | タイプ    | 説明                                 |
+| 引数     | 型      | 説明                                 |
 | ------ | ------ | ---------------------------------- |
 | $macro | Object | `formMacros.json` ファイルのマクロ宣言オブジェクト |
 
@@ -200,7 +200,7 @@ Class constructor($macro : Object)
 
 #### onInvoke($editor : Object) -> $result : Object
 
-| 引数      | タイプ    | 説明                                            |
+| 引数      | 型      | 説明                                            |
 | ------- | ------ | --------------------------------------------- |
 | $editor | Object | フォームプロパティを格納する Form Editor Macro Proxy オブジェクト |
 | $result | Object | マクロによって変更されたフォームプロパティ (任意)                    |
@@ -213,7 +213,7 @@ Class constructor($macro : Object)
 
 *$editor* 引数にて渡されるプロパティは次の通りです:
 
-| プロパティ                            | タイプ        | 説明                               |
+| プロパティ                            | 型          | 説明                               |
 | -------------------------------- | ---------- | -------------------------------- |
 | $editor.editor.form              | Object     | フォーム全体                           |
 | $editor.editor.file              | File       | フォームファイルの Fileオブジェクト             |
@@ -227,7 +227,7 @@ Class constructor($macro : Object)
 
 マクロによる変更をフォームに反映させたい場合に、`$result` オブジェクトに渡せるプロパティの一覧です。 いずれのプロパティも任意です:
 
-| プロパティ             | タイプ        | 説明                                |
+| プロパティ             | 型          | 説明                                |
 | ----------------- | ---------- | --------------------------------- |
 | currentPage       | Object     | マクロによって変更されたオブジェクトを含む currentPage |
 | currentSelection  | Collection | マクロによって変更された currentSelection     |
@@ -254,9 +254,9 @@ Class constructor($macro : Object)
 
 - 次の構造を持つオブジェクトの使用:
 
-| プロパティ | タイプ | 説明 |
-| ----- | --- | -- |
-|       |     |    |
+| プロパティ | 型 | 説明 |
+| ----- | - | -- |
+|       |   |    |
  source|文字列|メソッドコード|
 
 後者の場合、4D は "objectMethods" フォルダー内に当該オブジェクト名を冠したファイルを作成し、`source` 属性に指定したメソッドコードを格納します。 この機能はマクロコードの場合にのみ有効です。
@@ -299,7 +299,7 @@ Function onInvoke($editor : Object)->$result : Object
 
 #### onError($editor : Object; $resultMacro : Object ; $error : Collection)
 
-| 引数           |                       | タイプ        | 説明                                   |
+| 引数           |                       | 型          | 説明                                   |
 | ------------ | --------------------- | ---------- | ------------------------------------ |
 | $editor      |                       | Object     | [onInvoke](#oninvoke) に渡されたオブジェクト    |
 | $resultMacro |                       | Object     | [onInvoke](#oninvoke) によって返されたオブジェクト |
