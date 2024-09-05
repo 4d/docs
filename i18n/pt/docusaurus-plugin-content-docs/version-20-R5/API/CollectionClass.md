@@ -485,16 +485,16 @@ The `.copy()` function <!-- REF #collection.copy().Summary --> returns a deep co
 
 If passed, the *option* parameter can contain one of the following constants (or both):
 
-| option                | Descrição                                                                                                                                                                                                                                                                                                                                                                                                       |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ck resolve pointers` | Se a collection original contém valores tipo ponteiro, por padrão a cópia também contém os ponteiros. However, you can resolve pointers when copying by passing the `ck resolve pointers` constant. Nesse caso, cada ponteiro presenta na coleção é avaliada quando copiar e seu valor de dereferencia é usado.                                                 |
-| `ck shared`           | By default, `copy()` returns a regular (not shared) collection, even if the command is applied to a shared collection. Pass the `ck shared` constant to create a shared collection. In this case, you can use the *groupWith* parameter to associate the shared collection with another collection or object (see below). |
+| option                | Descrição                                                                                                                                                                                                                                                                                                                                                                                                              |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ck resolve pointers` | Se a collection original contém valores tipo ponteiro, por padrão a cópia também contém os ponteiros. However, you can resolve pointers when copying by passing the `ck resolve pointers` constant. Nesse caso, cada ponteiro presenta na coleção é avaliada quando copiar e seu valor de dereferencia é usado.                                                        |
+| `ck shared`           | By default, `copy()` returns a regular (not shared) collection, even if the command is applied to a shared collection. Passe a constante `ck shared` para criar uma coleção compartilhada. In this case, you can use the *groupWith* parameter to associate the shared collection with another collection or object (see below). |
 
 The *groupWithCol* or *groupWithObj* parameters allow you to designate a collection or an object with which the resulting collection should be associated.
 
 :::note
 
-Os objectos de datastore, dataclass, e entity não são copiáveis. If `.copy()` is called with them, `Null` values are returned.
+Os objectos de datastore, dataclass, e entity não são copiáveis. Se `.copy()` for chamado com eles, valores `Null` são retornados.
 
 :::
 
@@ -552,7 +552,7 @@ $sharedLastnames:=$lastnames.copy(ck shared) // shared copy Use(Storage)
 
 #### Exemplo
 
-This example illustrates the use of the `ck resolve pointers` option:
+Este exemplo ilustra o uso da opção `ck resolve pointers`:
 
 ```4d
  var $col : Collection
@@ -1860,7 +1860,7 @@ Optionally, you can pass the index of collection from which to start a reverse s
 
 The `.length` property <!-- REF #collection.length.Summary -->returns the number of elements in the collection<!-- END REF -->.
 
-The `.length` property is initialized when the collection is created. Adicionar ou remover elementos atualiza o tamanho, se necessário. This property is **read-only** (you cannot use it to set the size of the collection).
+A propriedade `.length` é inicializada quando a coleção é criada. Adicionar ou remover elementos atualiza o tamanho, se necessário. This property is **read-only** (you cannot use it to set the size of the collection).
 
 #### Exemplo
 
@@ -1964,7 +1964,7 @@ If the collection contains different types of values, the `.max()` function will
 
 If the collection contains objects, pass the *propertyPath* parameter to indicate the object property whose maximum value you want to get.
 
-If the collection is empty, `.max()` returns *Undefined*.
+Se a coleção estiver vazia, `.max()` retorna *Undefined*.
 
 #### Exemplo
 
@@ -2014,7 +2014,7 @@ If the collection contains different types of values, the `.min()` function will
 
 If the collection contains objects, pass the *propertyPath* parameter to indicate the object property whose minimum value you want to get.
 
-If the collection is empty, `.min()` returns *Undefined*.
+Se a coleção estiver vazia, `.min()` devolve *Undefined*.
 
 #### Exemplo
 
@@ -2991,11 +2991,11 @@ Com o seguinte método ***Flatten***:
 
 <!-- REF #collection.remove().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                               |
-| ---------- | ---------- | :-: | ------------------------------------------------------- |
-| index      | Integer    |  -> | Elemento no qual que se inicia a eliminação             |
-| howMany    | Integer    |  -> | Número de elementos a eliminar, ou 1 elemento se omitir |
-| Resultados | Collection |  <- | Colección original sem elementos eliminados             |
+| Parâmetro  | Tipo       |     | Descrição                                                         |
+| ---------- | ---------- | :-: | ----------------------------------------------------------------- |
+| index      | Integer    |  -> | Elemento no qual que se inicia a eliminação                       |
+| howMany    | Integer    |  -> | Número de elementos a eliminar, ou 1 elemento se omitir           |
+| Resultados | Collection |  <- | Modified collection without removed element(s) |
 
 <!-- END REF -->
 
@@ -3268,7 +3268,7 @@ Pode definir o(s) seguinte(s) parâmetro(s):
 
 In any case, at the point where `.some()` function encounters the first collection element returning true, it stops calling the callback and returns **true**.
 
-By default, `.some()` tests the whole collection. Optionally, you can pass the index of an element from which to start the test in *startFrom*.
+Por padrão, `.some()` testa toda a coleção. Optionally, you can pass the index of an element from which to start the test in *startFrom*.
 
 - If *startFrom* >= the collection's length, **False** is returned, which means the collection is not tested.
 
