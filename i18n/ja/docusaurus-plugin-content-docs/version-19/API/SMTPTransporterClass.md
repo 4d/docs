@@ -42,9 +42,9 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 
 
 <!-- REF #_command_.SMTP New transporter.Params -->
-| 引数     | タイプ                |    | 説明                                                                             |
+| 引数     | 型                  |    | 説明                                                                             |
 | ------ | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| server | Object             | -> | メールサーバー情報                                                                      |
+| server | オブジェクト             | -> | メールサーバー情報                                                                      |
 | 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter オブジェクト](#smtp-transporter-オブジェクト)|<!-- END REF -->
 
 |
@@ -118,16 +118,16 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
-| 引数     | タイプ                |    | 説明                                                                             |
+| 引数     | 型                  |    | 説明                                                                             |
 | ------ | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| server | Object             | -> | メールサーバー情報                                                                      |
+| server | オブジェクト             | -> | メールサーバー情報                                                                      |
 | 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter オブジェクト](#smtp-transporter-オブジェクト)|<!-- END REF -->
 
 |
 
 #### 説明
 
-`4D.SMTPTransporter.new()` 関数は、 <!-- REF #4D.SMTPTransporter.new().Summary -->`4D.SMTPTransporter` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`SMTP New transporter`](#smtp-new-transporter) コマンドと同一です。
+`4D.SMTPTransporter.new()` 関数は、 <!-- REF #4D.SMTPTransporter.new().Summary -->`4D.SMTPTransporter` 型の新しいオブジェクトを作成して返します<!-- END REF -->. この関数の機能は、[`SMTP New transporter`](#smtp-new-transporter) コマンドと同一です。
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -209,16 +209,16 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 
 
 <!-- REF #SMTPTransporterClass.send().Params -->
-| 引数   | タイプ    |    | 説明                                           |
+| 引数   | 型      |    | 説明                                           |
 | ---- | ------ |:--:| -------------------------------------------- |
-| mail | Object | -> | 送信する [メール](EmailObjectClass.md#email-オブジェクト) |
-| 戻り値  | Object | <- | SMTP ステータス|<!-- END REF -->
+| mail | オブジェクト | -> | 送信する [メール](EmailObjectClass.md#email-オブジェクト) |
+| 戻り値  | オブジェクト | <- | SMTP ステータス|<!-- END REF -->
 
 |
 
 #### 説明
 
-`.send()` 関数は、 <!-- REF #SMTPTransporterClass.send().Summary -->[*mail*](EmailObjectClass.md#email-オブジェクト) 引数が指定するメールメッセージを、`transporter` オブジェクトが定義する SMTPサーバーへと送信し、ステータスオブジェクトを返します<!-- END REF -->。
+`.send()` 関数は、 <!-- REF #SMTPTransporterClass.send().Summary -->[*mail*](EmailObjectClass.md#email-オブジェクト) 引数が指定するメールメッセージを、`transporter` オブジェクトが定義する SMTPサーバーへと送信し、ステータスオブジェクトを返します<!-- END REF -->.
 > `transporter` オブジェクトは、事前に `SMTP New transporter` コマンドによって作成されている必要があります。
 
 この関数は、SMTP接続が事前に開かれていなかった場合には、それを作成します。 `transporter` オブジェクトの `.keepAlive` プロパティが **false** であった場合、SMTP接続は `.send()` 実行後に自動的に閉じられます。それ以外の場合には、接続は `transporter` オブジェクトが消去されるまで開いたままになります。 詳細については、[`SMTP New transporter`](#smtp-new-transporter) コマンドの説明を参照してください。
@@ -229,7 +229,7 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 
 この関数は、SMTP ステータスを表すオブジェクトを返します。 このオブジェクトには、次のプロパティが格納されることがあります:
 
-| プロパティ      | タイプ     | 説明                                      |
+| プロパティ      | 型       | 説明                                      |
 | ---------- | ------- | --------------------------------------- |
 | success    | boolean | 送信に成功した場合は true、それ以外は false             |
 | status     | number  | SMTPサーバーから返されたコード (メール処理に関係ない問題の場合には 0) |
