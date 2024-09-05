@@ -5,13 +5,13 @@ title: Gestão Cliente/Servidor
 
 As aplicações 4D desktop podem ser utilizadas numa configuração Cliente/Servidor, quer como aplicações cliente/servidor fundidas, quer como projectos remotos.
 
-- Las **aplicaciones cliente/servidor fusionadas** son generadas por el [gestor de creación de aplicaciones](building.md#clientserver-page). São utilizados para implementações de aplicações.
+- Os **aplicativos cliente/servidor mesclados** são gerados pelo [Gerenciador de aplicativos de compilação] (building.md#clientserver-page). São utilizados para implementações de aplicações.
 
-- Los **proyectos remotos** son archivos [.4DProject](Project/architecture.md) abiertos por 4D Server y a los que se accede con 4D en modo remoto. El servidor envía una versión .4dz del proyecto ([formato comprimido](building.md#build-compiled-structure)) al 4D remoto, por lo que los archivos de estructura son de sólo lectura. Esta configuração é normalmente utilizada para testar aplicações.
+- **Projetos remotos** são arquivos [.4DProject] (Project/architecture.md) abertos pelo 4D Server e acessados com o 4D em modo remoto. O servidor envia uma versão .4dz do projeto ([formato comprimido](building.md#build-compiled-structure)) para o 4D remoto, assim os arquivos de estrutura são apenas de leitura. Esta configuração é normalmente utilizada para testar aplicações.
 
 ![](../assets/en/getStart/localremote.png)
 
-> La conexión a un proyecto remoto desde **la misma máquina que 4D Server** permite modificar los archivos del proyecto. Esta [funcionalidad específica](#using-4d-and-4d-server-on-the-same-machine) permite desarrollar una aplicación cliente/servidor en el mismo contexto del despliegue.
+> Conectar a um projeto remoto da **mesma máquina que o 4D Server** permite modificar os arquivos do projeto. Esta [funcionalidade específica](#using-4d-and-4d-server-on-the-same-machine) permite desenvolver uma aplicação cliente/servidor no mesmo contexto do contexto de implantação.
 
 ## Abrir uma aplicação cliente/servidor fundida
 
@@ -20,48 +20,48 @@ A merged client/server application is customized and its starting is simplified:
 - Para iniciar a parte do servidor, o usuário simplesmente clica duas vezes no aplicativo do servidor. The database does not need to be selected.
 - Para iniciar a parte do cliente, o usuário simplesmente clica duas vezes no aplicativo cliente, que se conecta diretamente ao aplicativo do servidor.
 
-Estos principios se detallan en la página [Creación de aplicaciones](building.md#what-is-a-clientserver-application).
+Esses princípios são detalhados na página [Criar Aplicativo](building.md#what-is-a-clientserver-application).
 
 ## Abrir um projecto remoto
 
-A primeira vez que se liga a um projecto 4D Server através de um 4D remoto, normalmente utilizará o diálogo de ligação padrão. Luego, podrá conectarse directamente utilizando el menú **Abrir proyectos recientes** o un archivo de acceso directo 4DLink.
+A primeira vez que se liga a um projecto 4D Server através de um 4D remoto, normalmente utilizará o diálogo de ligação padrão. Em seguida, você poderá se conectar diretamente usando o menu **Abrir Projetos Recentes** ou um arquivo de atalho 4DLink.
 
 Para conectar remotamente a um projeto 4D Server:
 
 1. Faça uma das seguintes opções:
-   - Seleccione **Conectar a 4D Server** en la caja de diálogo del asistente de bienvenida
-   - Seleccione **Abrir/Proyecto remoto...** desde el menú **Archivo** o del botón**Abrir** de la barra de herramientas.
+   - Selecione **Conectar ao 4D Server** no diálogo Assistente de Boas Vindas
+   - Selecione **Abrir/Projeto Remoto...** no menu **Arquivo** ou no botão de ferramentas **Abrir**.
 
-Aparece o diálogo de ligação do 4D Server. Este diálogo tiene tres pestañas: **Reciente**, **Disponible** y **Personalizado**.
+Aparece o diálogo de ligação do 4D Server. Este diálogo possui três guias: **Recente**, **Disponível** e **Personalizado**.
 
-Si 4D Server está conectado a la misma subred que el 4D remoto, seleccione **Disponible**. 4D Server includes a built-in broadcasting system that, by default, publishes the name of the 4D Server projects available over the network. A lista é classificada por ordem de aparecimento e atualizada dinamicamente.
+Se o 4D Server estiver conectado à mesma sub-rede que o 4D remoto, selecione **Disponível**. O servidor 4D inclui um sistema de transmissão integrado que, por padrão, publica o nome dos projetos 4D Server disponíveis na rede. A lista é classificada por ordem de aparecimento e atualizada dinamicamente.
 
 ![](../assets/en/getStart/serverConnect.png)
 
-Para conectarse a un servidor de la lista, haga doble clic en su nombre o selecciónelo y presione el botón **Aceptar**.
+Para conectar a um servidor da lista, clique duas vezes no seu nome ou selecione-o e clique no botão **OK**.
 
-Si el proyecto publicado no aparece en la lista **Disponible**, seleccione **Personalizado**. The Custom page allows you to connect to a published server on the network using its network address and assigning it a customized name.
+Se o projeto publicado não for exibido na lista **Disponível**, selecione **Personalizado**. The Custom page allows you to connect to a published server on the network using its network address and assigning it a customized name.
 
 ![](../assets/en/Desktop/serverConnect2.png)
 
-- **Nombre del proyecto**: define el nombre local del proyecto 4D Server. Este nombre se utilizará en la página **Reciente** cuando se haga referencia al proyecto.
-- **Dirección red**: la dirección IP de la máquina donde se lanzó el 4D Server.
-  - Si dos servidores se ejecutan simultáneamente en la misma máquina, la dirección IP debe ir seguida de dos puntos y del número de puerto, por ejemplo: `192.168.92.104:19814`.
+- **Nome do projeto**: Define o nome local do projeto no servidor 4D. Este nome será usado na página **Recente** quando referente ao projeto.
+- **Endereço de rede**: O endereço IP da máquina onde o 4D Server foi lançado.
+  - Se dois servidores forem executados simultaneamente na mesma máquina, o endereço IP deve ser seguido por dois pontos e o número da porta, por exemplo: `192.168.92.104:19814`.
   - Por padrão, a porta de publicação de um 4D Server é 19813. Este número pode ser modificado nas definições do Projecto.
 
-> La opción **Activar modo desarrollo** abre la conexión remota en un modo especial de lectura/escritura y requiere acceder a la carpeta del proyecto desde el 4D remoto (opción de compatibilidad).
+> A opção **Ativar modo de desenvolvimento** abre a conexão remota em um modo especial de leitura/escrita e requer acessar a pasta do projeto a partir do 4D remoto (opção de compatibilidade).
 
-Una vez que esta página asigna un servidor, al hacer clic en el botón **Aceptar** podrá conectarse al servidor.
+Uma vez que esta página atribui um servidor, ao clicar no botão **OK**, você poderá se conectar ao servidor.
 
-Una vez establecida la conexión con el servidor, el proyecto remoto aparecerá en la pestaña **Recientes**.
+Uma vez que a conexão com o servidor tenha sido estabelecida, o projeto remoto será listado na guia **Recentes**.
 
 ### Atualizar ficheiros de projeto no servidor
 
-4D Server crea y envía automáticamente a las máquinas remotas una versión [.4dz](building.md#build-compiled-structure) del archivo proyecto *.4DProject* (no comprimido) en modo interpretado.
+O 4D Server cria e envia automaticamente para as máquinas remotas uma versão [.4dz](building.md#build-compiled-structure) do arquivo de projeto *.4DProject* (não compactado) em modo interpretado.
 
-- Una versión .4dz actualizada del proyecto se produce automáticamente cuando es necesario, \*es decir, \*cuando el proyecto ha sido modificado y recargado por 4D Server. O projecto é recarregado:
+- Uma versão .4dz atualizada do projeto é automaticamente produzida quando necessário, *ou seja*, quando o projeto foi modificado e recarregado pelo 4D Server. O projecto é recarregado:
   - automatically, when the 4D Server application window comes to the front of the OS or when the 4D application on the same machine saves a modification (see below).
-  - cuando se ejecuta el comando `RELOAD PROJECT`. Calling this command is necessary for example when you have pulled a new version of the project from the source control platform.
+  - quando o comando `RELOAD PROJECT` é executado. Calling this command is necessary for example when you have pulled a new version of the project from the source control platform.
 
 ### Atualizar ficheiros de projeto em máquinas remotas
 
@@ -71,11 +71,11 @@ When an updated .4dz version of the project has been produced on 4D Server, conn
 
 When 4D connects to a 4D Server on the same machine, the application behaves as 4D in single user mode and the design environment allows you to edit project files. This feature allows you to develop a client/server application in the same context as the deployment context.
 
-> Cuando 4D se conecta a un 4D Server en la misma máquina, el **modo desarrollo** se activa automáticamente, sea cual sea el estado de la [opción de apertura](#opening-a-remote-project).
+> Quando o 4D se conecta a um 4D Server na mesma máquina, o **modo de desenvolvimento** é ativado automaticamente, independentemente do status da [opção de abertura](#opening-a-remote-project).
 
-Cada vez que 4D realiza una acción **Guardar todo** desde el entorno de diseño (explícitamente desde el menú **Archivo** o implícitamente al cambiar al modo aplicación, por ejemplo), 4D Server recarga sincronizadamente los archivos del proyecto. 4D waits for 4D Server to finish reloading the project files before it continues.
+Cada vez que o 4D realiza uma ação **Salvar tudo** no ambiente de design (explicitamente no menu **Arquivo** ou implicitamente ao alternar para o modo de aplicativo, por exemplo), o 4D Server recarrega sincronizadamente os arquivos do projeto. 4D waits for 4D Server to finish reloading the project files before it continues.
 
-Sin embargo, debe prestar atención a las siguientes diferencias de comportamiento en comparación con [la arquitectura proyecto estándar](Project/architecture.md):
+No entanto, você precisa prestar atenção às seguintes diferenças de comportamento em comparação com [a arquitetura padrão do projeto](Project/architecture.md):
 
 - the userPreferences.\{username\} folder used by 4D is not the same folder used by 4D Server in the project folder. Instead, it is a dedicated folder, named "userPreferences", stored in the project system folder (i.e., the same location as when opening a .4dz project).
 - the folder used by 4D for derived data is not the folder named "DerivedData" in the project folder. Instead it is a dedicated folder named "DerivedDataRemote" located in the project system folder.
@@ -87,28 +87,28 @@ Sin embargo, debe prestar atención a las siguientes diferencias de comportamien
 
 ## Sessões de usuário remoto
 
-On the server, the [`Session`](../API/SessionClass.md#session) command returns a `session` object describing the current user session. This object is handled through the functions and properties of the [`Session` class](../API/SessionClass.md).
+No servidor, o comando [`Session`](../API/SessionClass.md#session) retorna um objeto `session` descrevendo a sessão atual do usuário. Este objeto é tratado através das funções e propriedades da [classe `sessão`](../API/SessionClass.md).
 
 ### Utilização
 
-The `session` object allows you to get information about the remote user session. You can share data between all processes of the user session using the [`session.storage`](../API/SessionClass.md#storage) shared object.
+O objeto `sessão` permite que você obtenha informações sobre a sessão remota do usuário. Você pode compartilhar dados entre todos os processos da sessão do usuário usando o objeto compartilhado [`session.storage`](../API/SessionClass.md#storage).
 
-For example, you can launch a user authentication and verification procedure when a client connects to the server, involving entering a code sent by e-mail or SMS into the application. You then add the user information to the session storage, enabling the server to identify the user. This way, the 4D server can access user information for all client processes, enabling customized code to be written according to the user's role.
+Por exemplo, você pode iniciar um procedimento de autenticação e verificação do usuário quando um cliente se conecta ao servidor, envolvendo a inserção de um código enviado por e-mail ou SMS no aplicativo. Em seguida, você adiciona as informações do usuário ao armazenamento de sessão, permitindo que o servidor identifique o usuário. Dessa forma, o servidor 4D pode acessar as informações do usuário para todos os processos do cliente, permitindo a escrita de código personalizado de acordo com o papel do usuário.
 
 ### Disponibilidade
 
-El objeto `session` del usuario remoto está disponible en:
+O objeto `session` do usuário remoto está disponível em:
 
-- Project methods that have the [Execute on Server](../Project/code-overview.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process),
+- Métodos de projeto que têm o atributo [Execute on Server](../Project/code-overview.md#execute-on-server) (são executados no processo "geminado" do processo do cliente),
 - Triggers,
-- `On Server Open Connection` and `On Server Shutdown Connection` database methods.
+- 'Conexão aberta com o servidor' e 'Conexão com o servidor' métodos de banco de dados.
 
 :::info
 
-All stored procedures on the server share the same virtual user session. Para más información, consulte [esta página en doc.4d.com](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html).
+Todos os procedimentos armazenados no servidor compartilham a mesma sessão do usuário virtual. Para obter mais informações, consulte [esta página em doc.4d.com](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html).
 
 :::
 
 ### Ver também (post do blog)
 
-[4D remote session object with Client/Server connection and Stored procedure](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).
+[Objeto de sessão remota 4D com conexão de Cliente/Servidor e procedimento armazenado](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure re).
