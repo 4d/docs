@@ -9,57 +9,57 @@ Un développeur 4D peut facilement implémenter ces palettes dans leur applicati
 
 La documentation principale de l'[interface 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) se trouve dans le _4D - Mode Développement_.
 
-You will find below the Table Wizard configuration documentation.
+Vous trouverez ci-dessous la documentation de configuration de l'Assistant de table.
 
-## Table Wizard
+## Assistant de table
 
-The Table Wizard is here to further simplify table creation based on database data using contexts, data sources, and formulas.
+L'Assistant de table est là pour simplifier encore davantage la création de table basée sur les données de la base de données en utilisant des contextes, des sources de données et des formules.
 
-The Table Wizard, accessible to end-users, loads templates provided and configured by 4D developers. This enables developers to customize the template according to the specific use cases and business requirements of the users.
+L'Assistant de table, accessible aux utilisateurs finaux, charge les modèles fournis et configurés par les développeurs de 4D. Cela permet aux développeurs de personnaliser le modèle en fonction des cas d'utilisation spécifiques et des exigences métier des utilisateurs.
 
-The Table Wizard comes with default templates and themes, which developers can configure to adapt its content to match the specific requirements of the application.
+L'Assistant de table est fourni avec des modèles et des thèmes par défaut, que les développeurs peuvent configurer pour adapter son contenu en fonction des exigences spécifiques de l'application.
 
-To implement the Table Wizard in your application, the developers are able to create and configure template files.
+Pour implémenter l'Assistant de table dans votre application, les développeurs peuvent créer et configurer des fichiers de modèle.
 
-### WP Table Wizard interface
+### Interface de l'Assistant de table WP
 
-The user opens the Table Wizard dialog from the "Insert table"  menu item in 4D Write Pro interface toolbar and sidebar.
+L'utilisateur ouvre la boîte de dialogue de l'Assistant de table à partir de l'élément de menu "Insérer une table" dans la barre d'outils et la barre latérale de l'interface de 4D Write Pro.
 
 ![](../assets/en/WritePro/tablewizard-interface2.png)
 
-From this interface, the user can select a template or a table from the first drop-down list and a theme from the second.
+À partir de cette interface, l'utilisateur peut sélectionner un modèle ou un tableau dans la première liste déroulante et un thème dans la deuxième.
 
-##### In Columns:
+##### Dans Colonnes :
 
 ![](../assets/en/WritePro/columns2.PNG)
 
-Depending on the user's selection of a template or a table, the user can view the list of fields stored in the template (Blob and object types are automatically excluded). They can then select columns to display in the table by checking the box in front of the field name and order them by moving and dragging the fields list.
+Selon la sélection de l'utilisateur d'un modèle ou d'un tableau, l'utilisateur peut voir la liste des champs stockés dans le modèle (Blob et les types d'objets sont automatiquement exclus). Ensuite, ils peuvent sélectionner les colonnes à afficher dans le tableau en cochant la case devant le nom du champ et les ordonner en déplaçant et en faisant glisser la liste des champs.
 
-##### In Rows:
+##### Dans Lignes :
 
 ![](../assets/en/WritePro/rows1.PNG)
 
-In the Table Wizard, the user can also define the number of header rows and extra rows (0 to 5 each), set [break rows](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6233076) (summary rows) above or below the data row, and choose to show/hide [carry-over rows](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6236686).
+Dans l'Assistant de table, l'utilisateur peut également définir le nombre de lignes d'en-tête et de lignes supplémentaires (de 0 à 5 chacune), définir les [lignes de rupture](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.fr.html#6233076) (lignes de synthèse) au-dessus ou en dessous de la ligne de données, et choisir d'afficher/masquer les [lignes de report](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.fr.html#6236686).
 
 In addition, the user has the possibility to choose the table's behavior when its datasource is empty with the following options: Show data row, Hide date row, Hide table, Show placeholder row.
 
-##### In Display:
+##### Dans Affichage :
 
 ![](../assets/en/WritePro/display2.PNG)
 
-The user adjusts the zoom level according to their preference by selecting the desired option from a drop-down list, uses radio buttons to display formulas or data for clear presentation, and chooses to display a horizontal ruler using a checkbox.
+L'utilisateur ajuste le niveau de zoom selon ses préférences en sélectionnant l'option souhaitée dans une liste déroulante, utilise des boutons radio pour afficher les formules ou les données pour une présentation claire, et choisit d'afficher une règle horizontale à l'aide d'une case à cocher.
 
-After finalizing the table creation and customization, the user can click on the **Insert** button to add the table to their WP document.
+Après avoir finalisé la création et la personnalisation de la table, l'utilisateur peut cliquer sur le bouton **Insérer** pour ajouter la table à son document WP.
 
-Once the table has been integrated into the document, the user can customize its style. The formatting tools of the toolbar and sidebar are still available.
+Une fois que la table a été intégrée dans le document, l'utilisateur peut personnaliser son style. Les outils de mise en forme de la barre d'outils et de la barre latérale sont toujours disponibles.
 
 ### WP Table Wizard template configuration
 
 La configuration des modèles inclut:
 
-- Defining tables and fields as well as preparing formulas adapted to the application from the [template file](#template-files).
-- Translating table, field, and formula names from the [translation file](#translation-files).
-- Designing graphic styles and customized  themes from the [theme file](#theme-files).
+- Définir des tables et des champs ainsi que préparer des formules adaptées à l'application à partir du [fichier de modèle](#template-files).
+- Traduction des noms de table, de champ et de formule à partir du [fichier de traduction](#translation-files).
+- Conception de styles graphiques et de thèmes personnalisés à partir du [fichier de thème](#theme-files).
 
 These three types of files contribute to the configuration of the Table Wizard, and while each serves a distinct purpose, none of them are considered essential components.
 
@@ -72,7 +72,7 @@ Le fichier de modèle vous permet de définir les éléments suivants :
 - the dataclass attributes that can be used as table columns,
 - the formulas available as contextual menus inside break rows, carry-over row, placeholder row or extra rows.
 
-The template file must be stored in a "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" folder within your project.
+Le fichier modèle doit être stocké dans un dossier "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" dans votre projet.
 
 The template file in JSON format contains the following attributes:
 
@@ -97,9 +97,9 @@ The template file in JSON format contains the following attributes:
 | extraFormulas.source | Text       | x           | Formula                                                                                                                                                                                                  |
 | placeholderFormulas                  | Collection |             | Collection of formula objects that are inserted in the placeholder row                                                                                                                                   |
 
-:::note French language
+:::note Langue française
 
-If your application is likely to be run on a 4D with language set to French, make sure that you use [tokens](https://doc.4d.com/4Dv20/4D/20/Using-tokens-in-formulas.300-6237731.en.html) in your formulas so that they are correctly interpreted no matter the user's language configuration.
+Si votre application est susceptible d'être exécutée sur un 4D avec une langue définie en français, assurez-vous d'utiliser [tokens](https://doc.4d.com/4Dv20/4D/20/Using-tokens-in-formulas.300-6237731.en.html) dans vos formules afin qu'elles soient correctement interprétées quelle que soit la configuration de la langue de l'utilisateur.
 
 :::
 
@@ -153,7 +153,7 @@ Here's a brief example of what your JSON file might look like:
 
 #### Translation files
 
-Translation files translate the names of templates, themes, tables, fields, and formulas. These files are added to the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" folder in your project.
+Translation files translate the names of templates, themes, tables, fields, and formulas. Ces fichiers sont ajoutés au dossier "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" de votre projet.
 
 Each translation file must be named with the corresponding language code (for example "en" for English or "fr" for French).
 
@@ -177,7 +177,7 @@ Defining these attributes within the translation object ensures proper organizat
 
 If the template name or the formula (break, carry-over row, or extra) exists in the translated file, its translation is applied in the Table Wizard. In addition, only the table defined within the translation file is displayed and translated.
 
-The translation file serves an additional role when a user selects a table in the interface. It can filter the tables and fields proposed to the user. For example, to hide table IDs, this behavior is similar to the `SET TABLE TITLES` and `SET FIELD TITLES` commands.
+The translation file serves an additional role when a user selects a table in the interface. It can filter the tables and fields proposed to the user. Par exemple, pour masquer les IDs de table, ce comportement est similaire aux commandes `SET TABLE TITLES` et `SET FIELD TITLES`.
 
 ##### Exemple
 
@@ -213,31 +213,31 @@ The translation file serves an additional role when a user selects a table in th
 
 #### Theme files
 
-A list of themes is provided by default in the 4D Write Pro Interface component, such as "Arial", "CourierNew" and "YuGothic", available in multiple variations like "Blue" and "Green". However, you can create your own theme by placing it in the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Themes" folder within your project.
+A list of themes is provided by default in the 4D Write Pro Interface component, such as "Arial", "CourierNew" and "YuGothic", available in multiple variations like "Blue" and "Green". Cependant, vous pouvez créer votre propre thème en le plaçant dans le dossier "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Themes" de votre projet.
 
 The theme file in JSON format contains the following attributes:
 
-| Attribut       | Type   | Obligatoire | Description                                                                                                                                                                                                              |
-| :------------- | :----- | :---------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| default        | Object |             | Object containing the default style applicable to all rows.                                                                                                                                              |
-| table          | Object |             | Object containing the style definition applicable to the table.                                                                                                                                          |
-| rows           | Object |             | Object containing the style definition applicable to all rows.                                                                                                                                           |
-| cells          | Object |             | Object containing the style definition applicable to all cells.                                                                                                                                          |
-| header1        | Object |             | Object containing the style definition applicable to the first header row.                                                                                                                               |
-| header2        | Object |             | Object containing the style definition applicable to the second header row.                                                                                                                              |
-| header3        | Object |             | Object containing the style definition applicable to the third header row.                                                                                                                               |
-| header4        | Object |             | Object containing the style definition applicable to the fourth header row.                                                                                                                              |
-| header5        | Object |             | Object containing the style definition applicable to the fifth header row.                                                                                                                               |
-| headers        | Object |             | Object containing the style definition applicable to the header rows, if a specific header (like header1, header2...) is not defined. |
-| data           | Object |             | Object containing the style definition applicable to the repeated data row.                                                                                                                              |
-| break1         | Object |             | Object containing the style definition applicable to the first break row.                                                                                                                                |
-| break2         | Object |             | Object containing the style definition applicable to the second break row.                                                                                                                               |
-| break3         | Object |             | Object containing the style definition applicable to the third break row.                                                                                                                                |
-| break4         | Object |             | Object containing the style definition applicable to the fourth break row.                                                                                                                               |
-| break5         | Object |             | Object containing the style definition applicable to the fifth break row.                                                                                                                                |
-| ruptures/sauts | Object |             | Object containing the style definition applicable to the break rows, if a specific break (like break1, break2...) is not defined.     |
-| bcor           | Object |             | Object containing the style definition applicable to the bottom carry-over row.                                                                                                                          |
-| placeholder    | Object |             | Object containing the default style applicable to the placeholder row.                                                                                                                                   |
+| Attribut       | Type   | Obligatoire | Description                                                                                                                                                                                                                       |
+| :------------- | :----- | :---------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| default        | Object |             | Object containing the default style applicable to all rows.                                                                                                                                                       |
+| table          | Object |             | Object containing the style definition applicable to the table.                                                                                                                                                   |
+| rows           | Object |             | Object containing the style definition applicable to all rows.                                                                                                                                                    |
+| cells          | Object |             | Object containing the style definition applicable to all cells.                                                                                                                                                   |
+| header1        | Object |             | Object containing the style definition applicable to the first header row.                                                                                                                                        |
+| header2        | Object |             | Object containing the style definition applicable to the second header row.                                                                                                                                       |
+| header3        | Object |             | Object containing the style definition applicable to the third header row.                                                                                                                                        |
+| header4        | Object |             | Object containing the style definition applicable to the fourth header row.                                                                                                                                       |
+| header5        | Object |             | Object containing the style definition applicable to the fifth header row.                                                                                                                                        |
+| headers        | Object |             | Objet contenant la définition de style applicable aux lignes d'en-tête, si un en-tête spécifique (comme header1, header2...) n'est pas défini. |
+| data           | Object |             | Object containing the style definition applicable to the repeated data row.                                                                                                                                       |
+| break1         | Object |             | Object containing the style definition applicable to the first break row.                                                                                                                                         |
+| break2         | Object |             | Object containing the style definition applicable to the second break row.                                                                                                                                        |
+| break3         | Object |             | Object containing the style definition applicable to the third break row.                                                                                                                                         |
+| break4         | Object |             | Object containing the style definition applicable to the fourth break row.                                                                                                                                        |
+| break5         | Object |             | Object containing the style definition applicable to the fifth break row.                                                                                                                                         |
+| ruptures/sauts | Object |             | Object containing the style definition applicable to the break rows, if a specific break (like break1, break2...) n'est pas défini.            |
+| bcor           | Object |             | Object containing the style definition applicable to the bottom carry-over row.                                                                                                                                   |
+| placeholder    | Object |             | Object containing the default style applicable to the placeholder row.                                                                                                                                            |
 
 For every attribute used in your JSON file (header, data, carry-over, summary, and extra rows), you can define the following WP attributes, mentionned with their [corresponding WP constant](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Attributes.300-6229528.en.html):
 
@@ -294,4 +294,4 @@ For every attribute used in your JSON file (header, data, carry-over, summary, a
 
 #### Voir également
 
-[4D Write Pro - Table Wizard (tutorial video)](https://www.youtube.com/watch?v=2ChlTju-mtM)
+[4D Write Pro - Table Wizard (vidéo tutorial)](https://www.youtube.com/watch?v=2ChlTju-mtM)
