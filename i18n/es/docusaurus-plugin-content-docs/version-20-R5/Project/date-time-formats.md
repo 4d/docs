@@ -116,7 +116,7 @@ En algunos idiomas (ruso, eslovaco), el mes utilizado por sí solo es diferente 
 
 ### `e` vs `c`
 
-Same remark as for `L` and `M`: `c` is for a day used alone "every tuesday") and `e` is for a day in a date ("Tuesday January 15, 1951").
+La misma observación que para `L` y `M`: `c` es para un día utilizado solo "todos los martes") y `e` es para un día en una fecha ("martes 15 de enero de 1951").
 
 ### `E` vs `e`
 
