@@ -9,11 +9,11 @@ title: VP SET TEXT VALUE
 
 <!-- REF #_method_.VP SET TEXT VALUE.Params -->
 
-| 引数            | タイプ    |    | 説明        |                  |
+| 引数            | 型      |    | 説明        |                  |
 | ------------- | ------ | -- | --------- | ---------------- |
-| rangeObj      | Object | -> | レンジオブジェクト |                  |
-| textValue     | Text   | -> | 設定するテキスト値 |                  |
-| formatPattern | Text   | -> | 値のフォーマット  | <!-- END REF --> |
+| rangeObj      | オブジェクト | -> | レンジオブジェクト |                  |
+| textValue     | テキスト   | -> | 設定するテキスト値 |                  |
+| formatPattern | テキスト   | -> | 値のフォーマット  | <!-- END REF --> |
 
 #### 説明
 
