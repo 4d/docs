@@ -9,7 +9,7 @@ title: VP Get column count
 
 <!-- REF #_method_.VP Get column count.Params -->
 
-| 引数         | タイプ     |    | 説明                                             |                  |
+| 引数         | 型       |    | 説明                                             |                  |
 | ---------- | ------- | -- | ---------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | 4D View Pro エリアフォームオブジェクト名                     |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |                  |
