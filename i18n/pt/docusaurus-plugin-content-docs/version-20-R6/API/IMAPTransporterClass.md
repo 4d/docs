@@ -250,7 +250,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 The `.append()` function <!-- REF #IMAPTransporterClass.append().Summary -->appends a `mailObj` to the `destinationBox`<!-- END REF -->.
 
-In the `mailObj` parameter, pass an Email object. For a comprehensive description of mail properties, see [Email object](EmailObjectClass.md#email-object). The `.append()` function supports keyword tags in the Email object's `keywords` attribute.
+No parâmetro `mailObj`, passe um objeto de e-mail. For a comprehensive description of mail properties, see [Email object](EmailObjectClass.md#email-object). The `.append()` function supports keyword tags in the Email object's `keywords` attribute.
 
 The optional `destinationBox` parameter lets you pass the name of a mailbox where the `mailObj` will be appended. Se omitido, é utilizada a caixa de correio actual.
 
@@ -470,7 +470,7 @@ Por outras palavras, uma tentativa de criar "Projectos/IMAP/Doc" num servidor em
 - "IMAP" & "Doc" mailboxes if only “Projects” already exists.
 - "Projects" & “IMAP” & "Doc" mailboxes, if they do not already exist.
 
-In the `name` parameter, pass the name of the new mailbox.
+No parâmetro `name`, passe o nome da nova caixa de correio.
 
 **Objeto devolvido**
 
@@ -789,7 +789,7 @@ $status:=$transporter.expunge()
 
 The `.getBoxInfo()` function <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->returns a `boxInfo` object corresponding to the current maibox, or the mailbox *name*<!-- END REF -->. This function returns the same information as [`.selectBox()`](#selectbox) without changing the current mailbox.
 
-In the optional *name* parameter, pass the name of the mailbox to access. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
+In the optional *name* parameter, pass the name of the mailbox to access. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. O delimitador pode ser encontrado com a função [`.getDelimiter()`](#getdelimiter).
 
 If the mailbox *name* is not selectable or does not exist, the function generates an error and returns **null**.
 
@@ -1052,7 +1052,7 @@ The `.getMails()` function <!-- REF #IMAPTransporterClass.getMails().Summary -->
 
 A primeira sintaxe permite recuperar mensagens com base nas suas identificações.
 
-In the *ids* parameter, pass a collection of IDs for the messages to return. You can get the IDs with [`.getMail()`](#getmail).
+In the *ids* parameter, pass a collection of IDs for the messages to return. Você pode obter as identificações com [`.getMail()`](#getmail).
 
 The optional *options* parameter allows you to define the parts of the messages to be returned. See the **Options** table below for a description of the available properties.
 
@@ -1080,11 +1080,11 @@ The optional *options* parameter allows you to define the parts of the messages 
 
 #### Resultados
 
-`.getMails()` returns an object containing the following collections:
+`.getMails()` retorna um objeto que contém as seguintes coleções:
 
 | Propriedade | Tipo       | Descrição                                                                                                                                                                                                                                                                                        |
 | ----------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| lista       | Collection | Collection of [`Email` objects](EmailObjectClass.md#email-object). Se não forem encontrados objetos e-mail, uma coleção vazia é devolvida.                                                                                                                       |
+| lista       | Collection | Coleção de objetos [`Email`] (EmailObjectClass.md#email-object). Se não forem encontrados objetos e-mail, uma coleção vazia é devolvida.                                  |
 | notFound    | Collection | Collection of:<br/><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul>An empty collection is returned if all messages are found. |
 
 #### Exemplo
@@ -1401,7 +1401,7 @@ No parâmetro `msgIDs`, você pode passar qualquer um deles:
 | ---------- | ----- | -------------------------------------------------------------- |
 | IMAP all   | 1     | Seleccione todas as mensagens na caixa de correio seleccionada |
 
-The `keywords` parameter lets you define the flags to remove from `msgIDs`. Pode passar qualquer uma das seguintes palavras-chave:
+O parâmetro `keywords` permite que você defina os sinalizadores a serem removidos dos `msgIDs`. Pode passar qualquer uma das seguintes palavras-chave:
 
 | Parâmetro       | Tipo       | Descrição                                          |
 | --------------- | ---------- | -------------------------------------------------- |
@@ -1482,9 +1482,9 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 The `.renameBox()` function <!-- REF #IMAPTransporterClass.renameBox().Summary -->changes the name of a mailbox on the IMAP server<!-- END REF -->. Tentar mudar o nome de uma caixa de correio de um nome de caixa de correio que não existe ou para um nome de caixa de correio que já existe irá gerar um erro.
 
-In the `currentName` parameter, pass the name of the mailbox to be renamed.
+No parâmetro `currentName`, passe o nome da caixa de correio a ser renomeada.
 
-Pass the new name for the mailbox in the `newName` parameter.
+Passe o novo nome da caixa de correio no parâmetro `newName`.
 
 **Objeto devolvido**
 
@@ -1628,10 +1628,10 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
   For all search keys that use strings, a message matches the key if the string is a substring of the field. A correspondência não é sensível a maiúsculas e minúsculas.
 
 - **Search-keys with a field-name value**: the field-name is the name of a header field.
-  Example: `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
+  Exemplo: `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
 
 - **Search-keys with a flag value**: the flag may accept one or several keywords (including standard flags), separated by spaces.
-  Example: `searchCriteria = KEYWORD \Flagged \Draft`
+  Exemplo: `searchCriteria = KEYWORD \Flagged \Draft`
 
 - **Pesquisa-chaves com um valor de conjunto de mensagens**: identifica um conjunto de mensagens. Para números de sequência de mensagens, estes são números consecutivos de 1 até ao número total de mensagens na caixa de correio. Uma vírgula delimita números individuais; uma vírgula delimita entre dois números, inclusive.
   Examples:
@@ -1710,7 +1710,7 @@ The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -
 
 > To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
 
-No parâmetro *name*, passar o nome da caixa de correio para aceder. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
+No parâmetro *name*, passar o nome da caixa de correio para aceder. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. O delimitador pode ser encontrado com a função [`.getDelimiter()`](#getdelimiter).
 
 The optional *state* parameter defines the type of access to the mailbox. Os valores possíveis são:
 
