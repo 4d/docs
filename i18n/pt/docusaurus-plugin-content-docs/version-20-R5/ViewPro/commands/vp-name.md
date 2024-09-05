@@ -34,8 +34,9 @@ In the optional _sheet_ parameter, you can designate a specific spreadsheet wher
 Pretende atribuir um valor ao intervalo nomeado "Total".
 
 ```4d
-// name the B5 cell as Total VP ADD RANGE NAME(VP Cell("ViewProArea";1;4);"Total")
-$name:=VP Name("ViewProArea";" Total")
+// name the B5 cell as Total
+VP ADD RANGE NAME(VP Cell("ViewProArea";1;4);"Total")
+$name:=VP Name("ViewProArea";"Total")
 VP SET NUM VALUE($name;285;"$#,###.00")
 ```
 
