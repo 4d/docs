@@ -45,7 +45,7 @@ Para obtener una visión general de esta clase, consulte la entrada del blog [**
 | Parámetros | Tipo                         |    | Descripción                                       |
 | ---------- | ---------------------------- | -- | ------------------------------------------------- |
 | settings   | Object                       | -> | Parámetros para generar o cargar un par de llaves |
-| result     | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado  |
+| resultado  | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado  |
 
 <!-- END REF -->
 
@@ -185,7 +185,7 @@ La función devuelve un objeto status con la propiedad `success` definida en `tr
 | Propiedad | Tipo       | Descripción                                                              |
 | --------- | ---------- | ------------------------------------------------------------------------ |
 | success   | boolean    | True si el mensaje ha sido descifrado con éxito                          |
-| result    | text       | Mensaje descifrado y decodificado utilizando `options.encodingDecrypted` |
+| resultado | text       | Mensaje descifrado y decodificado utilizando `options.encodingDecrypted` |
 | errors    | collection | Si `success` es `false`, puede contener una colección de errores         |
 
 En caso de que *message* no haya podido ser descifrado por no haber sido cifrado con la misma clave o algoritmo, el objeto `status` devuelto contiene una colección de errores en `status.errors`.
