@@ -9,7 +9,7 @@ title: VP Combine ranges
 
 <!-- REF #_method_.VP Combine ranges.Params -->
 
-| 引数            | タイプ    |    | 説明                  |                  |
+| 引数            | 型      |    | 説明                  |                  |
 | ------------- | ------ | -- | ------------------- | ---------------- |
 | rangeObj      | Object | -> | レンジオブジェクト           |                  |
 | otherRangeObj | Object | -> | レンジオブジェクト           |                  |
