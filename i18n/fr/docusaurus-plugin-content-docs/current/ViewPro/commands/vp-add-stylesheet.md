@@ -18,24 +18,24 @@ title: VP ADD STYLESHEET
 
 #### Description
 
-The `VP ADD STYLESHEET` command <!-- REF #_method_.VP ADD STYLESHEET.Summary -->creates or modifies the *styleName* style sheet based upon the combination of the properties specified in *styleObj* in the open document<!-- END REF -->. Si une feuille de style ayant le même nom et le même index existe déjà dans le document, cette commande l'écrasera et le remplacera avec les nouvelles valeurs.
+La commande `VP ADD STYLESHEET` <!-- REF #_method_.VP ADD STYLESHEET.Summary -->crée ou modifie la feuille de style *styleName* en fonction de la combinaison des propriétés spécifiées dans *styleObj* dans le document courant<!-- END REF -->. Si une feuille de style ayant le même nom et le même index existe déjà dans le document, cette commande l'écrasera et le remplacera avec les nouvelles valeurs.
 
 > Les feuilles de style créées par cette commande sont sauvegardées avec le document.
 
-In *vpAreaName*, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-The *styleName* parameter lets you assign a name to the style sheet. Si le nom existe déjà dans le même scope, la nouvelle feuille de style remplace la feuille existante. A noter que vous pouvez utiliser le même nom pour plusieurs scopes (ci-dessous).
+Le paramètre *styleName* vous permet de nommer la feuille de style. Si le nom existe déjà dans le même scope, la nouvelle feuille de style remplace la feuille existante. A noter que vous pouvez utiliser le même nom pour plusieurs scopes (ci-dessous).
 
-Within the *styleObj*, designate the settings for the style sheet (e.g., font, text decoration, alignment, borders, etc.). For the full list of style properties, see [Style object properties](../configuring.md#style-object-properties).
+Dans *styleObj*, définissez les propriétés de la feuille de style (ex : police, alignement, bordures, etc.). Pour consulter la liste complète des propriétés de style, voir [Propriétés des objets de style](../configuring.md#style-object-properties).
 
-You can designate where to define the style sheet in the optional *sheet* parameter using the sheet index (indexing starts at 0) or with the following constants:
+Vous pouvez indiquer l'endroit où définir la feuille de style dans le paramètre optionnel *sheet* à l'aide de l'index de la feuille (l'indexation commence à 0) ou à l'aide des constantes suivantes :
 
 - `vk current sheet`
 - `vk workbook`
 
-If a *styleName* style sheet is defined at the workbook level and at a sheet level, the sheet level has priority over the workbook level when the style sheet is set.
+Si une feuille de style *styleName* est définie au niveau du workbook ainsi qu'au niveau de la feuille, le niveau de la feuille est prioritaire sur celui du workbook lorsque la feuille de style est définie.
 
-To apply the style sheet, use the [VP SET DEFAULT STYLE](vp-set-default-style.md) or [VP SET CELL STYLE](vp-set-cell-style.md) commands.
+Pour appliquer la feuille de style, utilisez les commandes [VP SET DEFAULT STYLE](vp-set-default-style.md) ou [VP SET CELL STYLE](vp-set-cell-style.md).
 
 #### Exemple
 
