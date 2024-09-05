@@ -19,7 +19,7 @@ title: Document クラス
 
 #### 説明
 
-`.creationDate` プロパティは、 <!-- REF #document.creationDate.Summary -->ファイルの作成日を返します<!-- END REF -->。
+`.creationDate` プロパティは、 <!-- REF #document.creationDate.Summary -->ファイルの作成日を返します<!-- END REF -->.
 
 このプロパティは **読み取り専用** です。
 
@@ -77,7 +77,7 @@ title: Document クラス
 
 #### 説明
 
-`.extension` プロパティは、 <!-- REF #document.extension.Summary -->ファイル名の拡張子を返します (あれば)<!-- END REF -->。 拡張子は必ず"." で始まります。 ファイル名が拡張子を持たない場合には、このプロパティは空の文字列を返します。
+`.extension` プロパティは、 <!-- REF #document.extension.Summary -->ファイル名の拡張子を返します (あれば)<!-- END REF -->. 拡張子は必ず"." で始まります。 ファイル名が拡張子を持たない場合には、このプロパティは空の文字列を返します。
 
 このプロパティは **読み取り専用** です。
 
@@ -97,7 +97,7 @@ title: Document クラス
 
 #### 説明
 
-`.fullName` プロパティは、 <!-- REF #document.fullName.Summary -->拡張子 (あれば) を含めたファイルの完全な名称を返します<!-- END REF -->。
+`.fullName` プロパティは、 <!-- REF #document.fullName.Summary -->拡張子 (あれば) を含めたファイルの完全な名称を返します<!-- END REF -->.
 
 このプロパティは **読み取り専用** です。
 
@@ -157,7 +157,7 @@ title: Document クラス
 
 #### 説明
 
-`.isFile` プロパティは、 <!-- REF #document.isFile.Summary -->ファイルに対しては常に true を返します<!-- END REF -->。
+`.isFile` プロパティは、 <!-- REF #document.isFile.Summary -->ファイルに対しては常に true を返します<!-- END REF -->.
 
 このプロパティは **読み取り専用** です。
 
@@ -177,7 +177,7 @@ title: Document クラス
 
 #### 説明
 
-`.isFolder` プロパティは、 <!-- REF #document.isFolder.Summary -->ファイルに対しては常に false を返します。<!-- END REF -->。
+`.isFolder` プロパティは、 <!-- REF #document.isFolder.Summary -->ファイルに対しては常に false を返します。<!-- END REF -->.
 
 このプロパティは **読み取り専用** です。
 
@@ -197,7 +197,7 @@ title: Document クラス
 
 #### 説明
 
-`.isWritable` プロパティは、 <!-- REF #document.isWritable.Summary -->ファイルがディスク上に存在し、書き込み可能な場合に true を返します<!-- END REF -->。
+`.isWritable` プロパティは、 <!-- REF #document.isWritable.Summary -->ファイルがディスク上に存在し、書き込み可能な場合に true を返します<!-- END REF -->.
 > このプロパティは 4Dアプリケーションがディスクに書き込めるかどうか (アクセス権限) をチェックし、ファイルの *writable* (書き込み可能) 属性のみ依存するわけではありません。
 
 このプロパティは **読み取り専用** です。
@@ -227,7 +227,7 @@ title: Document クラス
 
 #### 説明
 
-`.modificationDate` プロパティは、 <!-- REF #document.modificationDate.Summary -->ファイルの最終変更日を返します<!-- END REF -->。
+`.modificationDate` プロパティは、 <!-- REF #document.modificationDate.Summary -->ファイルの最終変更日を返します<!-- END REF -->.
 
 このプロパティは **読み取り専用** です。
 
@@ -267,7 +267,7 @@ title: Document クラス
 
 #### 説明
 
-`.name` プロパティは、 <!-- REF #document.name.Summary -->拡張子 (あれば) を含まないファイル名を返します<!-- END REF -->。
+`.name` プロパティは、 <!-- REF #document.name.Summary -->拡張子 (あれば) を含まないファイル名を返します<!-- END REF -->.
 
 このプロパティは **読み取り専用** です。
 
@@ -287,7 +287,7 @@ title: Document クラス
 
 #### 説明
 
-`.original` プロパティは、 <!-- REF #document.original.Summary -->エイリアス、ショートカット、シンボリックリンクファイルのターゲット要素を返します<!-- END REF -->。 ターゲット要素は以下のいずれかです:
+`.original` プロパティは、 <!-- REF #document.original.Summary -->エイリアス、ショートカット、シンボリックリンクファイルのターゲット要素を返します<!-- END REF -->. ターゲット要素は以下のいずれかです:
 
 * File オブジェクト
 * Folder オブジェクト
@@ -312,7 +312,7 @@ title: Document クラス
 
 #### 説明
 
-`.parent` プロパティは、 <!-- REF #document.parent.Summary -->対象ファイルの親フォルダーオブジェクトを返します<!-- END REF -->。 パスがシステムパスを表す場合 (例: "/DATA/")、システムパスが返されます。
+`.parent` プロパティは、 <!-- REF #document.parent.Summary -->対象ファイルの親フォルダーオブジェクトを返します<!-- END REF -->. パスがシステムパスを表す場合 (例: "/DATA/")、システムパスが返されます。
 
 このプロパティは **読み取り専用** です。
 
@@ -332,7 +332,7 @@ title: Document クラス
 
 #### 説明
 
-`.path` プロパティは、 <!-- REF #document.path.Summary -->ファイルの POSIXパスを返します<!-- END REF -->。 パスがファイルシステムを表す場合 (例: "/DATA/")、ファイルシステムが返されます。
+`.path` プロパティは、 <!-- REF #document.path.Summary -->ファイルの POSIXパスを返します<!-- END REF -->. パスがファイルシステムを表す場合 (例: "/DATA/")、ファイルシステムが返されます。
 
 このプロパティは **読み取り専用** です。
 
@@ -352,7 +352,7 @@ title: Document クラス
 
 #### 説明
 
-`.platformPath` プロパティは、 <!-- REF #document.platformPath.Summary -->カレントプラットフォームのシンタックスで表現されたファイルのパスを返します<!-- END REF -->。
+`.platformPath` プロパティは、 <!-- REF #document.platformPath.Summary -->カレントプラットフォームのシンタックスで表現されたファイルのパスを返します<!-- END REF -->.
 
 このプロパティは **読み取り専用** です。
 
@@ -372,7 +372,7 @@ title: Document クラス
 
 #### 説明
 
-`.size` プロパティは、 <!-- REF #document.size.Summary -->ファイルのサイズ (バイト単位) を返します<!-- END REF -->。 ファイルがディスク上に存在しない場合、サイズは 0 になります。
+`.size` プロパティは、 <!-- REF #document.size.Summary -->ファイルのサイズ (バイト単位) を返します<!-- END REF -->. ファイルがディスク上に存在しない場合、サイズは 0 になります。
 
 このプロパティは **読み取り専用** です。
 
@@ -392,18 +392,18 @@ title: Document クラス
 
 
 <!-- REF #document.copyTo().Params -->
-| 引数                | タイプ       |    | 説明                                    |
+| 引数                | 型         |    | 説明                                    |
 | ----------------- | --------- |:--:| ------------------------------------- |
 | destinationFolder | 4D.Folder | -> | 宛先フォルダー                               |
 | newName           | Text      | -> | コピー先フォルダーの名前                          |
-| overwrite         | Integer   | -> | 既存要素を上書きするには `fk overwrite` を渡します     |
+| overwrite         | 整数        | -> | 既存要素を上書きするには `fk overwrite` を渡します     |
 | 戻り値               | 4D.File   | <- | コピーされたファイル|<!-- END REF -->
 
 |
 
 #### 説明
 
-`.copyTo()` 関数は、 <!-- REF #document.copyTo().Summary -->`File` オブジェクトを、*destinationFolder* 引数で指定したフォルダーへとコピーします <!-- END REF -->。
+`.copyTo()` 関数は、 <!-- REF #document.copyTo().Summary -->`File` オブジェクトを、*destinationFolder* 引数で指定したフォルダーへとコピーします <!-- END REF -->.
 
 *destinationFolder* 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。
 
@@ -445,15 +445,15 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 <!-- REF #document.getContent().Params -->
-| 引数  | タイプ  |    | 説明                                    |
+| 引数  | 型    |    | 説明                                    |
 | --- | ---- | -- | ------------------------------------- |
-| 戻り値 | Blob | <- | ファイルのコンテンツ|<!-- END REF -->
+| 戻り値 | BLOB | <- | ファイルのコンテンツ|<!-- END REF -->
 
 |
 
 #### 説明
 
-`.getContent()` 関数は、  <!-- REF #document.getContent().Summary -->ファイルの全コンテンツを格納した `BLOB` を返します<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
+`.getContent()` 関数は、  <!-- REF #document.getContent().Summary -->ファイルの全コンテンツを格納した `BLOB` を返します<!-- END REF -->. BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
 
 **戻り値**
 
@@ -487,16 +487,16 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 <!-- REF #document.getIcon().Params -->
-| 引数   | タイプ     |    | 説明                              |
-| ---- | ------- | -- | ------------------------------- |
-| size | Integer | -> | 取得するピクチャーの一辺の長さ (ピクセル単位)        |
-| 戻り値  | Picture | <- | アイコン|<!-- END REF -->
+| 引数   | 型     |    | 説明                              |
+| ---- | ----- | -- | ------------------------------- |
+| size | 整数    | -> | 取得するピクチャーの一辺の長さ (ピクセル単位)        |
+| 戻り値  | ピクチャー | <- | アイコン|<!-- END REF -->
 
 |
 
 #### 説明
 
-`.getIcon()` 関数は、 <!-- REF #document.getIcon().Summary -->ファイルのアイコンを返します<!-- END REF -->。
+`.getIcon()` 関数は、 <!-- REF #document.getIcon().Summary -->ファイルのアイコンを返します<!-- END REF -->.
 
 任意の *size* 引数を渡すと、返されるアイコンのサイズをピクセル単位で指定することができます。 この値は、実際にはアイコンを格納している正方形の一辺の長さを表しています。 アイコンは通常、32x32ピクセル ("大きいアイコン") または 16x16ピクセル ("小さいアイコン") で定義されています。 この引数に 0 を渡すか省略した場合、"大きいアイコン" が返されます。
 
@@ -522,18 +522,18 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 <!-- REF #document.getText().Params -->
-| 引数          | タイプ     |    | 説明                                          |
-| ----------- | ------- | -- | ------------------------------------------- |
-| charSetName | Text    | -> | 文字セットの名前                                    |
-| charSetNum  | Integer | -> | 文字セットの番号                                    |
-| breakMode   | Integer | -> | 改行の処理モード                                    |
-| 戻り値         | Text    | <- | ドキュメントから取得したテキスト|<!-- END REF -->
+| 引数          | 型    |    | 説明                                          |
+| ----------- | ---- | -- | ------------------------------------------- |
+| charSetName | Text | -> | 文字セットの名前                                    |
+| charSetNum  | 整数   | -> | 文字セットの番号                                    |
+| breakMode   | 整数   | -> | 改行の処理モード                                    |
+| 戻り値         | Text | <- | ドキュメントから取得したテキスト|<!-- END REF -->
 
 |
 
 #### 説明
 
-`.getText()` 関数は、 <!-- REF #document.getText().Summary -->ファイルのコンテンツをテキストとして返します <!-- END REF -->。
+`.getText()` 関数は、 <!-- REF #document.getText().Summary -->ファイルのコンテンツをテキストとして返します <!-- END REF -->.
 
 任意で、コンテンツの読み取りに使用する文字セットを渡します。 これには、次の二つの方法があります:
 
