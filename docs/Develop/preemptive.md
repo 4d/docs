@@ -226,7 +226,7 @@ In this case, all triggers are evaluated. If a thread-unsafe command is detected
 
 :::note
 
-In [client/server applications](../Desktop/clientServer.md), triggers can never run in preemptive mode, even if their code is thread-safe. In this configuration, triggers are executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Server-and-the-4D-Language.300-7182872.en.html#68966) on the server machine. Since this process is used for all calls from the user, it is always executed in cooperative mode.
+In [client/server applications](../Desktop/clientServer.md), triggers may be executed in cooperative mode, even if their code is thread-safe. This happens when a trigger is activated from a remote process: in this case, the trigger is executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Server-and-the-4D-Language.300-7182872.en.html#68966) on the server machine. Since this process is used for all calls from the client, it is always executed in cooperative mode.
 
 :::
 
