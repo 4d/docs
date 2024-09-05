@@ -1134,7 +1134,7 @@ El siguiente código genérico duplica todas las entidades de la entity selectio
 <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
 | Parámetros | Tipo |    | Descripción                                                                                               |
 | ---------- | ---- | -- | --------------------------------------------------------------------------------------------------------- |
-| result     | Text | <- | Atributos de contexto vinculados a la entity selection, separados por una coma|<!-- END REF --> |
+| resultado  | Text | <- | Atributos de contexto vinculados a la entity selection, separados por una coma|<!-- END REF --> |
 
 > **Modo avanzado:** esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
 
