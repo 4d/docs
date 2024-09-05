@@ -17,7 +17,7 @@ title: VP Get show print lines
 
 #### Descripción
 
-The `VP Get show print lines` command <!-- REF #_method_.VP Get show print lines.Summary -->returns `True` if the print preview lines are visible and `False` if they are hidden.<!-- END REF -->
+El comando `VP Get show print lines` <!-- REF #_method_.VP Get show print lines.Summary -->devuelve `True` si las líneas de la vista previa de impresión están visibles y `False` si están ocultas.<!-- END REF -->
 
 En _vpAreaName_, pase el nombre del área 4D View Pro.
 
