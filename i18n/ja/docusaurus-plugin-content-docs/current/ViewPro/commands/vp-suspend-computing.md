@@ -9,9 +9,9 @@ title: VP SUSPEND COMPUTING
 
 <!-- REF #_method_.VP SUSPEND COMPUTING.Params -->
 
-| 引数         | タイプ  |    | 説明                      |                  |
+| 引数         | 型    |    | 説明                      |                  |
 | ---------- | ---- | -- | ----------------------- | ---------------- |
-| vpAreaName | Text | -> | 4D View Pro フォームオブジェクト名 | <!-- END REF --> |
+| vpAreaName | テキスト | -> | 4D View Pro フォームオブジェクト名 | <!-- END REF --> |
 
 #### 説明
 
