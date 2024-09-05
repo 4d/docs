@@ -7,7 +7,7 @@ title: Notas del lanzamiento
 
 Lea [**Novedades en 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-20-R6/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R6.
 
-#### Destacados
+#### Lo más destacado
 
 - Soporte de operadores de comparación en las [referencias de objeto](../Concepts/dt_object.md#operatodores-en-los-objetos) y las [referencias de colección](../Concepts/dt_collection.md#operadores-en-las-colecciones). [`collection.query()`](../API/CollectionClass.md#query) ahora soporta las [referencias de objeto y de colección como valores de consulta](../API/CollectionClass.md#object-or-collection-reference-as-value).
 - Cuando un componente tiene un [espacio de nombres declarado](../Extensions/develop-components.md#declarar-el-espacio-de-nombres-del-componente), sus clases ahora se comparten automáticamente entre todos los componentes cargados en el proyecto del host por [`cs.<namespace>`](../Concepts/classes.md#cs).
@@ -35,7 +35,7 @@ Lea [**Novedades en 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-20-R6/), 
 
 Lea [**Novedades en 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R5.
 
-#### Destacados
+#### Lo más destacado
 
 - Nuevo [Gestor de componentes](../Project/components.md) para gestionar componentes a través de un archivo `dependencies.json`.
 - Soporte de estructuras de gestión de errores [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try).
@@ -59,7 +59,7 @@ Lea [**Novedades en 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5/), 
 
 Lea [**Novedades en 4D 20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R4/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R4.
 
-#### Destacados
+#### Lo más destacado
 
 - Soporte de [formato de cifrado ECDSA\`](../Admin/tls.md#encryption) para certificados TLS.
 - Las conexiones TLS cliente/servidor y servidor SQL ahora se [configuran dinámicamente](../Admin/tls.md#enabling-tls-with-the-other-servers) (no se requieren archivos de certificado).
@@ -86,7 +86,7 @@ Lea [**Novedades en 4D 20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R4/),
 
 Lea [**Novedades en 4D 20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-R3/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R3.
 
-#### Destacados
+#### Lo más destacado
 
 - Nueva función [`collection.multiSort`](../API/CollectionClass.md#multisort).
 - Soporte del parámetro *context* en [`Formula from string`](../API/FunctionClass.md#formula-from-string).
@@ -116,7 +116,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 :::
 
-#### Destacados
+#### Lo más destacado
 
 - Nueva [clase WebSocket](../API/WebSocketClass.md) para crear y gestionar conexiones WebSocket cliente desde 4D.
 - Nueva capa de red QUIC [configuración de interfaz](../settings/client-server.md#network-layer).
@@ -159,7 +159,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 :::
 
-#### Destacados
+#### Lo más destacado
 
 - A partir de 20.3, para permitir la verificación de la contraseña cuando el [directorio de usuarios 4D utiliza el algoritmo bcrypt](https://blog.4d.com/bcrypt-support-for-passwords/), el valor "password" en el parámetro *connectionInfo* del comando [`Open datastore`](../API/DataStoreClass.md#open-datastore) se envía ahora en claro por defecto. Asegúrese de que su método base "On REST authentication" puede manejar contraseñas en claro (el tercer parámetro es entonces **False**) y que `Open datastore` encripta su conexión pasando la opción "tls" a **True** en *connectionInfo*. En casos específicos, también se puede utilizar una nueva opción "passwordAlgorithm" para la compatibilidad (ver [`Open datastore`](../API/DataStoreClass.md#open-datastore).
 - 4D 20.2 está certificado en macOS Sonoma (macOS 14).
@@ -201,7 +201,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 Lee [**Novedades en 4D 19 R8**](https://blog.4d.com/en-whats-new-in-4d-19-r8/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 19 R8.
 
-#### Destacados
+#### Lo más destacado
 
 - Se pueden instalar métodos de gestión de errores para [contextos de ejecución globales y de componentes](../Concepts/error-handling.md#scope-and-components).
 - Los list boxes con fuentes de datos selección de entidades o colecciones ahora soportan la propiedad de columna [Alto de fila automática](../FormObjects/properties_CoordinatesAndSizing.md#automatic-row-height).
@@ -224,7 +224,7 @@ Lee [**Novedades en 4D 19 R8**](https://blog.4d.com/en-whats-new-in-4d-19-r8/), 
 
 Lee [**Novedades en 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-19-r7/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 19 R7.
 
-#### Destacados
+#### Lo más destacado
 
 - Los datos relacionados y los atributos calculados/alias pueden visualizarse en el [Explorador de datos](../Admin/dataExplorer#basics).
 - Nueva clase [FileHandle](../API/FileHandleClass.md) y nueva función [`.open()`](../API/FileClass.md#open) en la clase `File`.
@@ -391,7 +391,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 19
 
 </details>
 
-## Tabla de librerías
+## Tabla de la librería
 
 | Librería  | Versión actual                            | Actualizado en 4D | Comentario                                                                                                                                                     |
 | --------- | ----------------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
