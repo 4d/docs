@@ -297,6 +297,12 @@ As explained in the [configuration](#configuration) section, the WebAdmin web se
 
 Se você executar o renderizador a partir do Qodly Studio e esses dois servidores web não forem acessados através do mesmo esquema de URL (HTTP ou HTTPS), isso pode levar a uma contagem incorreta de licenças.
 
+:::info
+
+Using different schemes might also lead to [session](sessions.md) issues, such as losing [privileges](../ORDA/privileges.md) after a page refresh.
+
+:::
+
 #### Exemplo
 
 1. Você executa Qodly Studio em um esquema URL HTTPS (por exemplo, `https://127.0.0.1:7443/studio/`)
