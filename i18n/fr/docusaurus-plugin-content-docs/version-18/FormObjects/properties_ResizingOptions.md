@@ -128,4 +128,4 @@ Indique si la taille de la colonne peut être modifiée par l'utilisateur.
 
 #### Objets pris en charge
 
-[Colonne de list box](listbox_overview.md#list-box-columns)
+[\[Colonne de list box\](listbox_overview.md#list-box-columns)](listbox_overview.md#list-box-columns)
