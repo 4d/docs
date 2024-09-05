@@ -3,7 +3,7 @@ id: string
 title: String
 ---
 
-Chaîne est un terme générique utilisé pour :
+String ("Chaîne") est un terme générique utilisé pour :
 
 - Les variables ou champs de type Texte : un champ, une variable ou une expression de type Texte peut contenir de 0 à 2 Go de texte.
 - Les variables ou champs de type alphanumérique : un champ alphanumérique peut contenir de 0 à 255 caractères (la limite est fixée lors de la définition du champ).
@@ -64,7 +64,7 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 Character code("A")=Character code("a") // 65 n'est pas égal à 97
 ```
 
-- When strings are compared, diacritical characters are compared using the system character comparison table of your computer. Par exemple, les expressions suivantes renvoient `TRUE` :
+- Lorsque des chaînes de caractères sont comparées, les caractères diacritiques sont comparés en utilisant la table de comparaison des caractères système de votre ordinateur. Par exemple, les expressions suivantes renvoient `TRUE` :
 
 ```4d
      "n"="ñ"
@@ -160,14 +160,14 @@ End if
 Lorsque les symboles d'indice de chaîne apparaissent dans une expression, ils retournent le caractère auquel ils font référence sous la forme d'une chaîne d'un caractère. Par exemple :
 
 ```4d
-//The following example tests if the last character of vtText is an At sign "@"
+//L'exemple suivant teste si le dernier caractère de vtText est un signe "@"
  If(vtText#"")
     If(Character code(Substring(vtText;Length(vtText);1))=At sign)
   //...
     End if
  End if
 
-  //Using the character reference syntax, you would write in a simpler manner:
+  //En utilisant la syntaxe des symboles d'indice de chaîne, vous écririez d'une manière plus simple :
  If(vtText#"")
     If(Character code(vtText[[Length(vtText)]])=At sign)
   // ...
