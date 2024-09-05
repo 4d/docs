@@ -18,7 +18,7 @@ title: VP SET CURRENT SHEET
 
 The `VP SET CURRENT SHEET` command <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->sets the current sheet in *vpAreaName*<!-- END REF --> . La feuille courante est la feuille sélectionnée dans le document.
 
-In *vpAreaName*, pass the name of the 4D View Pro area.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 In *sheet*, pass the index of the sheet to be set as current sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
 
