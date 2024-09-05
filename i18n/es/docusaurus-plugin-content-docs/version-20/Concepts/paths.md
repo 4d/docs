@@ -27,7 +27,7 @@ Se soportan los siguientes nombres de rutas de filesystem:
 | "/LOGS"      | Carpeta Logs                                           | "C:\\MyApps\\Students\\Data\\Logs\\"       |
 | "/PACKAGE"   | Carpeta raíz del proyecto (con o sin extensión 4dbase) | "C:\\MyApps\\Students\\"                       |
 | "/PROJECT"   | Carpeta Project                                        | "C:\\MyApps\\Students\\Project\\"            |
-| "/RESOURCES" | Carpeta de recursos actual del proyecto                | "C:\\MyApps\\Resources\\"                      |
+| "/RESOURCES" | Carpeta de recursos actual del proyecto                | "C:\\MyApps\\Students\\Resources\\"          |
 | "/SOURCES"   | Carpeta de fuentes del proyecto actual                 | "C:\\MyApps\\Students\\Project\\Sources\\" |
 
 ## Sintaxis POSIX
