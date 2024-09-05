@@ -182,8 +182,8 @@ Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge 
 * date
 * heure (stockée en nombre de milliseconds - réel)
 * Null
-* shared object
-* shared collection
+* objet partagé
+* collection partagée
 
 > Contrairement aux collections standard (non partagées), les collections partagées ne prennent pas en charge les images, les pointeurs et les objets ou collections non partagés.
 
