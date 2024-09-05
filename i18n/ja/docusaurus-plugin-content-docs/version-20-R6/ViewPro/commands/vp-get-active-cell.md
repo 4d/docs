@@ -9,7 +9,7 @@ title: VP Get active cell
 
 <!-- REF #_method_.VP Get active cell.Params -->
 
-| 引数         | タイプ     |    | 説明                                             |                  |
+| 引数         | 型       |    | 説明                                             |                  |
 | ---------- | ------- | -- | ---------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                        |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |                  |
