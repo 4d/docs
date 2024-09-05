@@ -79,20 +79,20 @@ All ORDA functions that handle entity selections support the <strong x-id="1">co
  $querysettings2:=New object("context";"longList")
 
  $sel1:=ds.Employee.query("lastname = S@";$querysettings)
- $data:=extractData($sel1) // In extractData method an optimization is triggered   
- // and associated to context "shortList"
+ $data:=extractData($sel1) // En el método extractData la optimización asociada
+ // al contexto "shortList" se aplica
 
  $sel2:=ds.Employee.query("lastname = Sm@";$querysettings)
- $data:=extractData($sel2) // In extractData method the optimization associated   
- // to context "shortList" is applied
+ $data:=extractData($sel2) // En el método extractData una optimización
+ // se activa y asocia al contexto "shortList"
 
  $sel3:=ds.Employee.query("lastname = Smith";$querysettings2)
- $data:=extractDetailedData($sel3) // In extractDetailedData method an optimization  
- // is triggered and associated to context "longList"
+ $data:=extractDetailedData($sel3) // En el método extractDetailedData una optimización
+ // se activa y asocia al contexto "longList"
 
  $sel4:=ds.Employee.query("lastname = Brown";$querysettings2)
- $data:=extractDetailedData($sel4) // In extractDetailedData method the optimization  
- // associated to context "longList" is applied
+ $data:=extractDetailedData($sel4) // En el método extractDetailedData la optimización
+ // asociada al contexto "longList" se aplica
 ```
 
 ### List box basado en una selección de entidades
