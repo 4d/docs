@@ -9,11 +9,11 @@ title: VP Row
 
 <!-- REF #_method_.VP Row.Params -->
 
-| 引数         | タイプ     |    | 説明                      |
-| ---------- | ------- | -- | ----------------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名 |
-| row        | Integer | -> | 行のインデックス                |
-| rowCount   | Integer | -> | 行数                      |
+| 引数         | 型    |    | 説明                      |
+| ---------- | ---- | -- | ----------------------- |
+| vpAreaName | テキスト | -> | 4D View Pro フォームオブジェクト名 |
+| row        | 整数   | -> | 行のインデックス                |
+| rowCount   | 整数   | -> | 行数                      |
 
 __
 
