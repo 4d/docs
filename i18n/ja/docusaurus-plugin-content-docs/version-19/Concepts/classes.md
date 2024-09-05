@@ -1,6 +1,6 @@
 ---
 id: classes
-title: クラス
+title: Classes
 ---
 
 
@@ -103,7 +103,7 @@ $hello:=$person.sayHello() //"Hello John Doe"
 
 #### cs -> classStore
 
-| 引数         | タイプ    |    | 説明                          |
+| 引数         | 型      |    | 説明                          |
 | ---------- | ------ | -- | --------------------------- |
 | classStore | object | <- | プロジェクトまたはコンポーネントのユーザークラスストア |
 
@@ -121,7 +121,7 @@ $instance:=cs.myClass.new()
 
 #### 4D -> classStore
 
-| 引数         | タイプ    |    | 説明       |
+| 引数         | 型      |    | 説明       |
 | ---------- | ------ | -- | -------- |
 | classStore | object | <- | 4Dクラスストア |
 
@@ -352,7 +352,7 @@ Class constructor ($side : Integer)
 Super {( param{;...;paramN} )} {-> Object} 
 ```
 
-| 引数    | タイプ    |    | 説明               |
+| 引数    | 型      |    | 説明               |
 | ----- | ------ | -- | ---------------- |
 | param | mixed  | -> | 親コンストラクターに受け渡す引数 |
 | 戻り値   | object | <- | 親オブジェクト          |
@@ -462,7 +462,7 @@ $message:=$square.description() // "I have 4 sides which are all equal"
 This -> Object
 ```
 
-| 引数  | タイプ    |    | 説明         |
+| 引数  | 型      |    | 説明         |
 | --- | ------ | -- | ---------- |
 | 戻り値 | object | <- | カレントオブジェクト |
 
