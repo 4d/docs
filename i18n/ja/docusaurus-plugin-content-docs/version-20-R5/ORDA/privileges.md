@@ -115,7 +115,7 @@ _Qodly_ (クラウド) 以外のコンテキストでは、このファイルを
 
 `roles.json` ファイルの構文は次のとおりです:
 
-| プロパティ名      |                                                                                     |                                                                                   | タイプ                        | 必須 | 説明                                                                                 |
+| プロパティ名      |                                                                                     |                                                                                   | 型                          | 必須 | 説明                                                                                 |
 | ----------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------- | -- | ---------------------------------------------------------------------------------- |
 | privileges  |                                                                                     |                                                                                   | `privilege` オブジェクトのコレクション  | ○  | 定義された権限のリスト                                                                        |
 |             | \[].privilege  |                                                                                   | String                     |    | アクセス権の名称                                                                           |
@@ -123,7 +123,7 @@ _Qodly_ (クラウド) 以外のコンテキストでは、このファイルを
 | roles       |                                                                                     |                                                                                   | `role` オブジェクトのコレクション       |    | 定義されたロールのリスト                                                                       |
 |             | \[].role       |                                                                                   | String                     |    | ロール名                                                                               |
 |             | \[].privileges |                                                                                   | String の Collection        |    | 内包する権限名のリスト                                                                        |
-| permissions |                                                                                     |                                                                                   | Object                     | ○  | 設定されたパーミッションのリスト                                                                   |
+| permissions |                                                                                     |                                                                                   | オブジェクト                     | ○  | 設定されたパーミッションのリスト                                                                   |
 |             | allowed                                                                             |                                                                                   | `permission` オブジェクトのコレクション |    | 許可されたパーミッションのリスト                                                                   |
 |             |                                                                                     | \[].applyTo  | String                     | ○  | 対象の [リソース](#リソース) 名                                                                |
 |             |                                                                                     | \[].type     | String                     | ○  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method" |
@@ -134,7 +134,7 @@ _Qodly_ (クラウド) 以外のコンテキストでは、このファイルを
 |             |                                                                                     | \[].describe | String の Collection        |    | 権限名のリスト                                                                            |
 |             |                                                                                     | \[].execute  | String の Collection        |    | 権限名のリスト                                                                            |
 |             |                                                                                     | \[].promote  | String の Collection        |    | 権限名のリスト                                                                            |
-| forceLogin  |                                                                                     |                                                                                   | Boolean                    |    | ["forceLogin" モード](../REST/authUsers.md#force-login-mode) を有効にする場合は true           |
+| forceLogin  |                                                                                     |                                                                                   | ブール                        |    | ["forceLogin" モード](../REST/authUsers.md#force-login-mode) を有効にする場合は true           |
 
 :::caution 注記
 
