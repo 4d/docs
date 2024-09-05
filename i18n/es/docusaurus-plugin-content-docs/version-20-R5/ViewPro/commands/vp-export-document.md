@@ -100,7 +100,7 @@ Quiere exportar el contenido del área "VPArea" a un documento 4D View Pro en el
 
 ```4d
 var $docPath: Text
- 
+
 $docPath:="C:\\Bases\\ViewProDocs\\MyExport.4VP"
 VP EXPORT DOCUMENT("VPArea";$docPath)
 //MyExport.4VP se guarda en su disco
@@ -126,9 +126,9 @@ Desea exportar un documento 4D View Pro en formato ".xlsx" y llamar a un método
 ```4d
  $params:=New object
  $params.formula:=Formula(AfterExport)
- $params.format:=vp MS Excel format //".xlsx"
+ $params.format:=vk MS Excel format //".xlsx"
  $params.valuesOnly:=True
- 
+
  VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\convertedfile";$params)
 ```
 
@@ -136,7 +136,7 @@ Método _**AfterExport**_:
 
 ```4d
  #DECLARE($areaName : Text ; $filePath : Text ; $params : Object ; $status : Object )
- 
+
  If($status.success=False)
     ALERT($status.errorMessage)
  Else
