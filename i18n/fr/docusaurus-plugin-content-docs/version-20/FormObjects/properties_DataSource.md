@@ -226,7 +226,7 @@ Si un champ, une variable ou une expression assignable*(par exemple Person.lastN
 
 #### Objets pris en charge
 
-[Colonne de list box](listbox_overview.md#list-box-columns)
+[\[Colonne de list box\](listbox_overview.md#list-box-columns)](listbox_overview.md#list-box-columns)
 
 ---
 
