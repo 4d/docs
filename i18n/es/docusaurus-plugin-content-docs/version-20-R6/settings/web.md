@@ -286,7 +286,7 @@ Inicia y detiene el servidor REST. Ver [Configuración del servidor REST](../RES
 
 ### Acceso
 
-:::information Obsoleto
+:::info Obsoleto
 
 **Esta sección está obsoleta** a partir de 4D 20 R6. Si la configuración actual del proyecto es obsoleta y debe actualizarse, se mostrará esta sección, incluido el botón **Activar la autenticación REST mediante la función ds.authentify()** (ver más abajo). Si su proyecto ya es compatible con el modo [Force login](../REST/configuration.md#configuring-rest-access), la sección no existe y puede ignorar este párrafo.
 
@@ -312,7 +312,7 @@ El botón activa la siguiente secuencia de actualización:
 
 Recuerde reiniciar su proyecto después de realizar esta actualización.
 
-El siguiente paso es modificar su código en consecuencia. [**Vea esta entrada del blog para saber cómo proceder**](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications).
+El siguiente paso es modificar su código en consecuencia. [**Vea esta entrada del blog para saber cómo proceder**](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/).
 
 ### Qodly Studio
 
