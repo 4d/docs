@@ -328,7 +328,7 @@ Puede recuperar la información relativa a una clase de datos específica.
 
 ## singletons
 
-If you have defined [interprocess (shared) singletons](../Concepts/classes.md#singleton-classes) containing at least one [exposed function](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions), a `singletons` section is added to the returned json for both the `/$catalog` and `/$catalog/$all` syntaxes. Contiene la colección de clases singleton como objetos con su **nombre** y **métodos** (es decir, funciones expuestas).
+Si ha definido [singletons compartidos](../Concepts/classes.md#singleton-classes) que contienen al menos una [función expuesta](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions), se agrega una sección `singletons` al json devuelto tanto para la sintaxis `/$catalog` como `/$catalog/$all`. Contiene la colección de clases singleton como objetos con su **nombre** y **métodos** (es decir, funciones expuestas).
 
 Las funciones Singleton pueden ser llamadas por peticiones REST utilizando el comando [`$singleton`]($singleton.md).
 
