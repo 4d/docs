@@ -26,7 +26,7 @@ En el objeto *parameters*, pase una de las siguientes propiedades opcionales. Es
 | onEvent            | objet (fórmula) | Un método retro llamada que se lanzará cuando el área fuera de la pantalla esté lista. It can be either:<li>an `onEvent` function of a class, or</li><li>a `Formula` object</li>By default, the callback method is called on the [`On VP Ready`](../../Events/onVpReady.md), [`On Load`](../../Events/onLoad.md), [`On Unload`](../../Events/onUnload.md), [`On End URL Loading`](../../Events/onEndUrlLoading.md), [`On URL Loading Error`](../../Events/onUrlLoadingError.md), [`On VP Range Changed`](../../Events/onVpRangeChanged.md), or [`On Timer`](../../Events/onTimer.md) events. El método de retrollamada puede ser utilizado para acceder a la [variable del objeto 4D View Pro](../configuring.md#4d-view-pro-form-object-variable). |
 | autoQuit           | boolean                            | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](../../Events/onEndUrlLoading.md) or [`On URL Loading Error`](../../Events/onUrlLoadingError.md) events occur. Si es false, debe utilizar los comandos `CANCEL` o `ACCEPT` en el método de retrollamada *onEvent*.                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | timeout            | number                             | Tiempo máximo (expresado en segundos) antes de que el área se cierre automáticamente si no se genera ningún evento. Si se fija en 0, no se aplica ninguna limitación. Valor por defecto: 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| result             | mixto                              | Resultado del procesamiento (si hay)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| resultado          | mixto                              | Resultado del procesamiento (si hay)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | `<customProperty>` | mixto                              | Todo atributo personalizado que esté disponible en el método de retrollamada *onEvent*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
 La siguiente propiedad es añadida automáticamente por el comando si es necesario:
@@ -77,7 +77,7 @@ $result:=VP Run offscreen area($o)
 Quiere cargar un documento grande fuera de la pantalla, esperar a que todos los cálculos se completen y exportarlo como PDF:
 
 ```4d
-//cs.OffscreenArea class declaration
+// Declaración de clase cs.OffscreenArea
 Class constructor($pdfPath : Text)
  This.pdfPath:=$pdfPath
  This.autoQuit:=False
@@ -86,31 +86,31 @@ Class constructor($pdfPath : Text)
 Function onEvent()
  Case of
      :(FORM Event.code=On VP Ready)
- // Document import
+ // Importar el documento
    VP IMPORT DOCUMENT(This.area;$largeDocument4VP)
          This.isWaiting:=True
  
- // Start a timer to verify if all calculations are finished.
- // If during this period the "On VP Range Changed" is thrown, the timer will be restarted
- // The time must be defined according to the computer configuration.
+ // Iniciar un temporizador para verificar si todos los cálculos han finalizado.
+ // Si durante este período se lanza "On VP Range Changed", se reiniciará el temporizador
+ // El tiempo debe ser definido de acuerdo con la configuración del ordenador.
    SET TIMER(60)
  
   :(FORM Event.code=On VP Range Changed)
- // End of calculation detected. Restarts the timer
+ // Se detectó el fin del cálculo. Reinicia el temporizador
          If(This.isWaiting)
            SET TIMER(60)
          End if
  
   :(FORM Event.code=On Timer)
- // To be sure to not restart the timer if you call others 4D View command after this point
+ // Para asegurarse de no reiniciar el temporizador si llama a otros comandos de 4D View después de este punto
          This.isWaiting:=False
  
 
 
- // Stop the timer
+ // Detener el temporizador
    SET TIMER(0)
  
- // Start the PDF export
+ // Iniciar la exportación a PDF
         VP EXPORT DOCUMENT(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
  
      :(FORM Event.code=On URL Loading Error)
