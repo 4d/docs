@@ -43,9 +43,9 @@ HTTPAgent オブジェクトは共有可能なため、 シングルトンクラ
 
 <!-- REF #4D.HTTPAgent.new().Params -->
 
-| 引数      | タイプ                                               |     | 説明                     |
+| 引数      | 型                                                 |     | 説明                     |
 | ------- | ------------------------------------------------- | :-: | ---------------------- |
-| options | Object                                            |  -> | HTTPAgent のデフォルトのオプション |
+| options | オブジェクト                                            |  -> | HTTPAgent のデフォルトのオプション |
 | 戻り値     | [4D.HTTPAgent](#httpagent-オブジェクト) |  <- | 新規 HTTPAgent オブジェクト    |
 
 <!-- END REF -->
@@ -66,16 +66,16 @@ HTTPAgent のオプションは [HTTPRequest のオプション](HTTPRequestClas
 
 :::
 
-| プロパティ                  | タイプ     | デフォルト                                                                                                                            | 説明                                      |
-| ---------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
-| keepAlive              | Boolean | true                                                                                                                             | 当該エージェントについて keep-alive を有効にします         |
-| maxSockets             | Integer | 65535                                                                                                                            | サーバーあたりの最大ソケット数                         |
-| maxTotalSockets        | Integer | 65535                                                                                                                            | エージェントの最大ソケット数                          |
-| timeout                | Real    | undefined                                                                                                                        | 定義されている場合、未使用のソケットが閉じられるまでのタイムアウト       |
-| certificatesFolder     | Folder  | undefined (デフォルト値は [HTTPRequest.new()](HTTPRequestClass.md#options-引数) 参照) | 当該エージェントを使ったリクエストに使用するクライアント証明書フォルダー    |
-| minTLSVersion          | Text    | undefined (デフォルト値は [HTTPRequest.new()](HTTPRequestClass.md#options-引数) 参照) | 当該エージェントを使ったリクエストに設定する TLS の最小バージョン     |
-| protocol               | Text    | undefined (デフォルト値は [HTTPRequest.new()](HTTPRequestClass.md#options-引数) 参照) | 当該エージェントを使ったリクエストに使用されるプロトコル            |
-| validateTLSCertificate | Boolean | undefined (デフォルト値は [HTTPRequest.new()](HTTPRequestClass.md#options-引数) 参照) | 当該エージェントを使用したリクエストについて、TLS 証明書の検証をおこなうか |
+| プロパティ                  | 型      | デフォルト                                                                                                                            | 説明                                      |
+| ---------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| keepAlive              | ブール    | true                                                                                                                             | 当該エージェントについて keep-alive を有効にします         |
+| maxSockets             | 整数     | 65535                                                                                                                            | サーバーあたりの最大ソケット数                         |
+| maxTotalSockets        | 整数     | 65535                                                                                                                            | エージェントの最大ソケット数                          |
+| timeout                | 実数     | undefined                                                                                                                        | 定義されている場合、未使用のソケットが閉じられるまでのタイムアウト       |
+| certificatesFolder     | Folder | undefined (デフォルト値は [HTTPRequest.new()](HTTPRequestClass.md#options-引数) 参照) | 当該エージェントを使ったリクエストに使用するクライアント証明書フォルダー    |
+| minTLSVersion          | テキスト   | undefined (デフォルト値は [HTTPRequest.new()](HTTPRequestClass.md#options-引数) 参照) | 当該エージェントを使ったリクエストに設定する TLS の最小バージョン     |
+| protocol               | テキスト   | undefined (デフォルト値は [HTTPRequest.new()](HTTPRequestClass.md#options-引数) 参照) | 当該エージェントを使ったリクエストに使用されるプロトコル            |
+| validateTLSCertificate | ブール    | undefined (デフォルト値は [HTTPRequest.new()](HTTPRequestClass.md#options-引数) 参照) | 当該エージェントを使用したリクエストについて、TLS 証明書の検証をおこなうか |
 
 :::note
 
