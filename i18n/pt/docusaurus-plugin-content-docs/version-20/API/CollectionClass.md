@@ -2841,11 +2841,11 @@ Este exemplo permite reduzir vários elementos da coleção a um só:
 
 
 <!-- REF #collection.remove().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                              |
-| ---------- | ---------- |:--:| ---------------------------------------------------------------------- |
-| index      | Integer    | -> | Elemento no qual que se inicia a eliminação                            |
-| howMany    | Integer    | -> | Número de elementos a eliminar, ou 1 elemento se omitir                |
-| Resultados | Collection | <- | Colección original sem elementos eliminados|<!-- END REF -->
+| Parâmetro  | Tipo       |    | Descrição                                                                 |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------- |
+| index      | Integer    | -> | Elemento no qual que se inicia a eliminação                               |
+| howMany    | Integer    | -> | Número de elementos a eliminar, ou 1 elemento se omitir                   |
+| Resultados | Collection | <- | Modified collection without removed element(s)|<!-- END REF -->
 
 
 |
