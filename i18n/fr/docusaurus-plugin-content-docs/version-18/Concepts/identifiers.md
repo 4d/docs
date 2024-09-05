@@ -56,9 +56,9 @@ Exemples :
 
 ## Variables interprocess
 
-You designate an interprocess variable by preceding the name of the variable with the symbols (`<>`) — a “less than” sign followed by a “greater than” sign.
+Vous définissez une variable interprocess en faisant précédant son nom avec les symboles (`<>`) — un signe « moins que » suivi d'un signe « plus grand que ».
 
-The name of an interprocess variable can be up to 31 characters, not including the `<>` symbols.
+Le nom d’une variable interprocess peut contenir jusqu’à 31 caractères, symbole <> non compris.
 
 Exemples :
 
@@ -70,7 +70,7 @@ If(<>vtNom#"")
 
 ## Variables process
 
-You designate a process variable by using its name (which cannot start with the `<>` symbols nor the dollar sign $). Ce nom peut contenir jusqu’à 31 caractères.
+Vous désignez une variable process en écrivant simplement son nom (qui ne doit pas commencer par les symboles $ ou <>). Ce nom peut contenir jusqu’à 31 caractères.
 
 Exemples :
 
@@ -102,9 +102,9 @@ Vous désignez un tableau en écrivant simplement son nom, qui est celui que vou
 
 ### Tableaux interprocess
 
-The name of an interprocess array is preceded by the symbols (`<>`) — a “less than” sign followed by a “greater than” sign.
+Le nom d’un tableau interprocess est précédé du symbole (<>), formé des caractères “inférieur à” suivi de “supérieur à”.
 
-An interprocess array name can contain up to 31 characters, not including the `<>` symbols.
+Le nom d’un tableau interprocess peut contenir jusqu’à 31 caractères, symboles <> non compris.
 
 Exemples :
 
@@ -116,7 +116,7 @@ ARRAY INTEGER(<>aiGrosTableau;10000)
 
 ### Tableaux process
 
-You designate a process array by using its name (which cannot start with the `<>` symbols nor the dollar sign $). Ce nom peut contenir jusqu’à 31 caractères.
+Vous désignez un tableau process en écrivant simplement son nom (qui ne doit pas commencer par les symboles $ ou <>). Ce nom peut contenir jusqu’à 31 caractères.
 
 Exemples :
 
@@ -145,17 +145,17 @@ Vous désignez un élément d’un tableau local, process ou interprocess à l�
 Exemples :
 
 ```4d  
- //Addressing an element of an interprocess array
+ //Adresser un élément d'un tableau interprocess
 If(<>asKeywords{1}="Stop")
 <>atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{Size of array(<>aiBigArray)}
 
- //Addressing an element of a process array
+//Adresser un élément d'un tableau process
 If(asKeywords{1}="Stop")
 atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{Size of array(aiBigArray)}
 
- //Addressing an element of a local array
+//Adresser un élément d'un tableau local
 If($asKeywords{1}="Stop")
 $atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
@@ -163,22 +163,22 @@ $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 
 ### Eléments de tableaux à deux dimensions
 
-You reference an element of a two-dimensional array by using the curly braces ({…}) twice.   Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une double paire d’accolades ({…})   L’élément référencé (l’indice) est indiqué par deux expressions numériques dans deux paires d’accolades.
+Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une double paire d’accolades ({…})   L'élément référencé est décrit par deux expressions numériques dans deux ensembles d'accolades.
 
 Exemples :
 
 ```4d
- //Addressing an element of a two-dimensional interprocess array
+ //Adresser un élément d'un tableau interprocess à deux dimensions
 If(<>asKeywords{$vlNextRow}{1}="Stop")
 <>atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{$vlSet}{Size of array(<>aiBigArray{$vlSet})}
 
- //Addressing an element of a two-dimensional process array
+//Adresser un élément d'un tableau process à deux dimensions
 If(asKeywords{$vlNextRow}{1}="Stop")
 atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 
- //Addressing an element of a two-dimensional local array
+//Adresser un élément d'un tableau local à deux dimensions
 If($asKeywords{$vlNextRow}{1}="Stop")
 $atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
@@ -186,7 +186,7 @@ $viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
 
 ## Propriétés (attributs) d'objets
 
-When object notation is enabled, you designate an object attribute (also called object property) by placing a point (".") between the name of the object (or attribute) and the name of the attribute. entre le nom de l'objet (ou de l'attribut) et le nom de l'attribut. Un nom d'attribut peut contenir jusqu'à 255 caractères et est sensible à la casse.
+Lorsque la notation objet est activée, vous désignez un attribut d'objet (également appelé propriété d'objet) en plaçant un point (".") entre le nom de l'objet (ou de l'attribut) et le nom de l'attribut. Un nom d'attribut peut contenir jusqu'à 255 caractères et est sensible à la casse.
 
 Exemples :
 
@@ -250,28 +250,28 @@ Exemples :
 ON EVENT CALL("HANDLE EVENTS")
 ```
 
-Les méthodes peuvent accepter des paramètres (ou arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). Les paramètres sont passés à la méthode appelée en tant que variables locales numérotées séquentiellement : $1, $2,…, $n. The parameters are passed to the method in parentheses, following the name of the method.
+Les méthodes peuvent accepter des paramètres (ou arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). Les paramètres sont passés à la méthode appelée en tant que variables locales numérotées séquentiellement : $1, $2,…, $n. De plus, plusieurs paramètres consécutifs (s'ils sont les derniers) peuvent être adressés à l'aide de la syntaxe ${n} où n, expression numérique, est le numéro du paramètre.
 
 A l’intérieur d'une fonction, la variable locale $0 contient la valeur à retourner.
 
 Exemples :
 
 ```4d
- //Within DROP SPACES $1 is a pointer to the field [People]Name
+ //Dans DROP SPACES $1 est un pointeur vers le champ [People]Name
 DROP SPACES(->[People]Name)
 
- //Within Calc creator:
- //- $1 is numeric and equal to 1
- //- $2 is numeric and equal to 5
- //- $3 is text or string and equal to "Nice"
- //- The result value is assigned to $0
+ //Dans Calc creator :
+ //- $1 est un numérique et égal à 1
+ //- $2 est un numérique et égal à 5
+ //- $3 est un texte ou une chaîne et égal à "Nice"
+ //- La valeur résultante est assignée à $0
 $vsResult:=Calc creator(1;5;"Nice")
 
- //Within Dump:
- //- The three parameters are text or string
- //- They can be addressed as $1, $2 or $3
- //- They can also be addressed as, for instance, ${$vlParam} where $vlParam is 1, 2 or 3
- //- The result value is assigned to $0
+ //Dans Dump :
+ //- Les trois paramètres sont des textes ou des chaînes
+ //- Ils peuvent être adressés en tant que $1, $2 ou $3
+ //- Ils peuvent également être adressés comme, par exemple, ${$vlParam} où $vlParam est 1, 2 ou 3
+ //- La valeur résultante est assignée à $0
 vtClone:=Dump("is";"the";"it")
 ```
 
@@ -298,13 +298,13 @@ On peut également distinguer un troisième type d'ensemble, spécifique à 4D S
 
 ### Ensembles interprocess
 
-A set is an interprocess set if the name of the set is preceded by the symbols (`<>`) — a “less than” sign followed by a “greater than” sign.
+Un ensemble est un ensemble temporaire interprocess si le nom de l'ensemble est précédé des caractères (`<>`) — un symbole “inférieur à” suivi de “supérieur à”.
 
-An interprocess set name can contain up to 255 characters, not including the `<>` symbols.
+Le nom d'un ensemble interprocess peut comporter jusqu'à 255 caractères, symbole <> non compris.
 
 ### Ensembles process
 
-You denote a process set by using a string expression that represents its name (which cannot start with the `<>` symbols or the dollar sign $). Le nom d’un ensemble process peut comporter jusqu’à 255 caractères.
+Déclarez un ensemble process en utilisant une expression de chaîne qui représente son nom (qui ne peut pas commencer par les symboles <> ou le signe dollar $). Le nom d’un ensemble process peut comporter jusqu’à 255 caractères.
 
 ### Ensembles clients
 
@@ -315,18 +315,18 @@ Le nom d'un ensemble client doit être précédé du symbole dollar ($). Ce nom 
 Exemples :
 
 ```4d
- //Interprocess sets
-USE SET("<>Deleted Records")
-CREATE SET([Customers];"<>Customer Orders")
-If(Records in set("<>Selection"+String($i))>0)
- //Process sets
-USE SET("Deleted Records")
-CREATE SET([Customers];"Customer Orders")
-If(Records in set("<>Selection"+String($i))>0)
- //Client sets
-USE SET("$Deleted Records")
-CREATE SET([Customers];"$Customer Orders")
-If(Records in set("$Selection"+String($i))>0)
+ // Ensembles interprocess
+USE SET("<>Enregistrements supprimés")
+CREATE SET([Clients];"<>Commandes clients")
+ If(Records in set("<>Sélection"+Chaine($i))>0)
+  // Ensembles process
+  USE SET("Enregistrements supprimés")
+  CREATE SET([Clients];"Commandes clients")
+   If(Records in set("Sélection"+Chaine($i))>0)
+  // Ensembles client
+    USE SET("$Enregistrements supprimés")
+  CREATE SET([Clients];"$Commandes clients")
+      If(Records in set("$Sélection"+Chaine($i))>0)
 ```
 
 ## Sélections temporaires
@@ -338,21 +338,21 @@ Dans 4D, il existe deux types de sélections temporaires, qui se distinguent par
 
 ### Sélections temporaires interprocess
 
-A named selection is an interprocess named selection if its name is preceded by the symbols (`<>`) — a “less than” sign followed by a “greater than” sign.
+Une sélection temporaire est interprocess si son nom est précédé des caractères (`<>`) — un symbole “inférieur à” suivi de “supérieur à”.
 
-An interprocess named selection name can contain up to 255 characters, not including the `<>` symbols.
+Le nom d'une sélection temporaire interprocess peut contenir jusqu’à 255 caractères, symbole `<>` non compris.
 
 ### Sélections temporaires process
 
-You denote a process named selection by using a string expression that represents its name (which cannot start with the `<>` symbols nor the dollar sign $). Le nom d’une sélection temporaire process peut comporter jusqu’à 255 caractères.
+Vous déclarez une sélection temporaire process en utilisant une expression chaîne qui représente son nom (qui ne peut pas commencer par les symboles `<>` ni le signe dollar $). Le nom d’une sélection temporaire process peut comporter jusqu’à 255 caractères.
 
 Exemples :
 
 ```4d
- //Interprocess Named Selection
-USE NAMED SELECTION([Customers];"<>ByZipcode")
- //Process Named Selection
-USE NAMED SELECTION([Customers];"<>ByZipcode")
+ // Sélection temporaire interprocess
+USE NAMED SELECTION([Clients];"<>ParCodePostal")
+ // Sélection temporaire process
+USE NAMED SELECTION([Clients];"ParCodePostal")
 ```
 
 ## Process
@@ -373,36 +373,36 @@ Vous déclarez un process local lorsque son nom est précédé du symbole dollar
 Exemples :
 
 ```4d
- //Starting the global process "Add Customers"
-$vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
- //Starting the local process "$Follow Mouse Moves"
-$vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
+ // Lancer le process global "Ajouter Clients"
+$vlProcessID:=New process("P_AJOUT_CLIENTS";48*1024;"Ajouter Clients")
+ // Lancer le process local "$Suivre Souris"
+$vlProcessID:=New process("P_SUIVRE_SOURIS";16*1024;"$Suivre Souris")
 ```
 
 ## Résumé des conventions d'écriture dans 4D
 
 Le tableau suivant résume les principes de nommage des identifiants dans les méthodes.
 
-| Identifiant                       | Longueur Longueur max. | Exemple                            |
-| --------------------------------- | ---------------------- | ---------------------------------- |
-| Table                             | 31                     | [Factures]                         |
-| Champ                             | 31                     | [Employés]Nom                      |
-| Variable/Tableau interprocess     | `<>` + 31        | `<>vlNextProcessID`          |
-| Variable/Tableau process          | 31                     | vsNomCourant                       |
-| Variable/Tableau local(e)         | $ + 31                 | $vlCompteurLocal                   |
-| Propriétés d'objets               | 255                    | $o.monAttribut                     |
-| Formulaire                        | 31                     | "Formulaire Web perso"             |
-| Objet de formulaire               | 255                    | "MonBouton"                        |
-| Méthode                           | 31                     | M_AJOUTER_CLIENTS                |
-| Commande de plug-in               | 31                     | WR INSERER TEXTE                   |
-| Ensemble interprocess             | `<>` + 255       | `"<>Records to be Archived"` |
-| Ensemble process                  | 255                    | "Enregistrements actuels"          |
-| Ensemble client                   | $ + 255                | "$Sujets précédents"               |
-| Sélection temporaire              | 255                    | "Employés de A à Z"                |
-| Sélection temporaire interprocess | `<>` + 255       | `"<>Employees Z to A"`       |
-| Process local                     | $ + 255                | "$SuivreEvénements"                |
-| Process global                    | 255                    | "*P_MODULE_FACTURES*"            |
-| Sémaphore                         | 255                    | "monsémaphore"                     |
+| Identifiant                       | Longueur Longueur max. | Exemple                             |
+| --------------------------------- | ---------------------- | ----------------------------------- |
+| Table                             | 31                     | [Factures]                          |
+| Champ                             | 31                     | [Employés]Nom                       |
+| Variable/Tableau interprocess     | `<>` + 31           | `<>vlProcessSuivantID`           |
+| Variable/Tableau process          | 31                     | vsNomCourant                        |
+| Variable/Tableau local(e)         | $ + 31                 | $vlCompteurLocal                    |
+| Propriétés d'objets               | 255                    | $o.monAttribut                      |
+| Formulaire                        | 31                     | "Formulaire Web perso"              |
+| Objet de formulaire               | 255                    | "MonBouton"                         |
+| Méthode                           | 31                     | M_AJOUTER_CLIENTS                 |
+| Commande de plug-in               | 31                     | WR INSERER TEXTE                    |
+| Ensemble interprocess             | `<>` + 255          | `"<>Enregistrements à archiver"` |
+| Ensemble process                  | 255                    | "Enregistrements actuels"           |
+| Ensemble client                   | $ + 255                | "$Sujets précédents"                |
+| Sélection temporaire              | 255                    | "Employés de A à Z"                 |
+| Sélection temporaire interprocess | `<>` + 255          | `"<>Employés de Z à A"`          |
+| Process local                     | $ + 255                | "$SuivreEvénements"                 |
+| Process global                    | 255                    | "*P_MODULE_FACTURES*"             |
+| Sémaphore                         | 255                    | "monsémaphore"                      |
 
 **Note :** En cas d'utilisation de caractères non romans dans les noms des identifiants, leur taille maximum peut être inférieure.
 
