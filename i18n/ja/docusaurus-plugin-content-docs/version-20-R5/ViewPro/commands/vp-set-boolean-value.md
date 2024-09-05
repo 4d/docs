@@ -9,7 +9,7 @@ title: VP SET BOOLEAN VALUE
 
 <!-- REF #_method_.VP SET BOOLEAN VALUE.Params -->
 
-| 引数        | タイプ     |    | 説明        |                  |
+| 引数        | 型       |    | 説明        |                  |
 | --------- | ------- | -- | --------- | ---------------- |
 | rangeObj  | Object  | -> | レンジオブジェクト |                  |
 | boolValue | Boolean | -> | 設定するブール値  | <!-- END REF --> |
