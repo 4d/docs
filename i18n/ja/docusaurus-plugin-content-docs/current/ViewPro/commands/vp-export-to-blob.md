@@ -9,10 +9,10 @@ title: VP EXPORT TO BLOB
 
 <!-- REF #_method_.VP EXPORT TO BLOB.Params -->
 
-| 引数         | タイプ    |    | 説明                      |                  |
+| 引数         | 型      |    | 説明                      |                  |
 | ---------- | ------ | -- | ----------------------- | ---------------- |
-| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名 |                  |
-| paramObj   | Object | -> | 書き出しのオプション              | <!-- END REF --> |
+| vpAreaName | テキスト   | -> | 4D View Pro フォームオブジェクト名 |                  |
+| paramObj   | オブジェクト | -> | 書き出しのオプション              | <!-- END REF --> |
 
 #### 説明
 
@@ -20,22 +20,22 @@ title: VP EXPORT TO BLOB
 
 *paramObj* には、複数のプロパティを渡せます:
 
-| プロパティ                   | タイプ                         | 説明                                                                                                                                                         |
+| プロパティ                   | 型                           | 説明                                                                                                                                                         |
 | ----------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | formula                 | 4D.Function | (必須) 書き出しが完了した際に呼び出されるコールバックメソッド名。 [コールバックメソッド (フォーミュラ) の渡し方](vp-export-document.md#コールバックメソッド-フォーミュラ-の渡し方) を参照ください。 |
-| includeAutoMergedCells  | Boolean                     | 自動的に結合されたセルを含めるかどうか。デフォルトは false。                                                                                                                          |
-| includeBindingSource    | Boolean                     | バインドされたソースを含めるかどうか。デフォルトは true。                                                                                                                            |
-| includeCalcModelCache   | Boolean                     | 計算の追加データを含めるか。 ファイルを開く速さに影響する場合があります。デフォルトは false。                                                                                                         |
-| includeEmptyRegionCells | Boolean                     | 使用されるデータレンジの外側の空白セル (データがない、またはスタイルだけのセル) を含めるかどうか。デフォルトは true。                                                                         |
-| includeFormulas         | Boolean                     | フォーミュラを含めるかどうか。デフォルトは true。                                                                                                                                |
-| includeStyles           | Boolean                     | スタイルを含めるかどうか。デフォルトは true。                                                                                                                                  |
-| includeUnusedNames      | Boolean                     | 使用されていないカスタム名を含めるかどうか。デフォルトは true。                                                                                                                         |
+| includeAutoMergedCells  | ブール                         | 自動的に結合されたセルを含めるかどうか。デフォルトは false。                                                                                                                          |
+| includeBindingSource    | ブール                         | バインドされたソースを含めるかどうか。デフォルトは true。                                                                                                                            |
+| includeCalcModelCache   | ブール                         | 計算の追加データを含めるか。 ファイルを開く速さに影響する場合があります。デフォルトは false。                                                                                                         |
+| includeEmptyRegionCells | ブール                         | 使用されるデータレンジの外側の空白セル (データがない、またはスタイルだけのセル) を含めるかどうか。デフォルトは true。                                                                         |
+| includeFormulas         | ブール                         | フォーミュラを含めるかどうか。デフォルトは true。                                                                                                                                |
+| includeStyles           | ブール                         | スタイルを含めるかどうか。デフォルトは true。                                                                                                                                  |
+| includeUnusedNames      | ブール                         | 使用されていないカスタム名を含めるかどうか。デフォルトは true。                                                                                                                         |
 
 |saveAsView|Boolean|書き出される値にフォーマット文字列を適用するかどうか。デフォルトは false。|
 
 コールバックメソッドでは、以下のパラメーターを使用することができます:
 
-| 引数     |                               | タイプ                     | 説明                                |
+| 引数     |                               | 型                       | 説明                                |
 | :----- | :---------------------------- | :---------------------- | :-------------------------------- |
 | param1 |                               | text                    | 4D View Pro オブジェクト名               |
 | param2 |                               | 4D.blob | エクスポートされた Blob                    |
