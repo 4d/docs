@@ -120,12 +120,12 @@ The Dependencies panel lists all project dependencies, whatever their origin, i.
 
 São suportadas as seguintes origens:
 
-| Origin tag            | Descrição                                                                      |
-| --------------------- | ------------------------------------------------------------------------------ |
-| Componente 4D         | Built-in 4D component, stored in the `Components` folder of the 4D application |
-| Source                | Component declared in the [`dependencies.json`](#dependenciesjson) file        |
-| Environment           | Component declared in the [`environnement4d.json`](#environment4djson) file    |
-| Componente do projeto | Component located in the [`Components`](architecture.md#components) folder     |
+| Origin tag            | Descrição                                                                    |
+| --------------------- | ---------------------------------------------------------------------------- |
+| Componente 4D         | Componente 4D incorporado, armazenado na pasta `Components` da aplicação 4D  |
+| Source                | Component declared in the [`dependencies.json`](#dependenciesjson) file      |
+| Environment           | Componente declarado no arquivo [`environnement4d.json`](#environment4djson) |
+| Componente do projeto | Componente localizado na pasta [`Components`](architecture.md#components)    |
 
 **Right-click** in a dependency line and select **Show on disk** to reveal the location of a dependency:
 
