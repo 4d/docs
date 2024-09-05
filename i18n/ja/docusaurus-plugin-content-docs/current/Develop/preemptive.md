@@ -82,7 +82,7 @@ _コオペラティブ_ モードで実行された場合には、たとえマ�
 
 ## プロセスがプリエンプティブに実行される条件とは?
 
-:::info リマインダー
+:::info 注記
 
 プリエンプティブ実行はコンパイル済みモードでのみ利用可能です。
 
@@ -193,7 +193,7 @@ _コオペラティブ_ モードで実行された場合には、たとえマ�
 
 ### Triggers
 
-トリガーを呼び出すことのあるコマンドをメソッドが使用している場合、4Dコンパイラーはメソッドがスレッドセーフであるかどうかをチェックするために、トリガーがスレッドセーフかどうかを評価します:
+When a method uses a command that can call a [trigger](https://doc.4d.com/4Dv20R6/4D/20-R6/Triggers.300-6958353.en.html), the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
 
 ```4d
  SAVE RECORD([Table_1]) // Table_1 にトリガーが存在する場合、トリガーはスレッドセーフでなければなりません
@@ -213,6 +213,12 @@ _コオペラティブ_ モードで実行された場合には、たとえマ�
 ```
 
 この場合、すべてのトリガーが評価されます。 スレッドセーフでないコマンドの使用が検出されたトリガーが 1つでもあれば、グループ全体がチェックに失敗し、メソッドはスレッドアンセーフと宣言されます。
+
+:::note
+
+In [client/server applications](../Desktop/clientServer.md), triggers may be executed in cooperative mode, even if their code is thread-safe. This happens when a trigger is activated from a remote process: in this case, the trigger is executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Server-and-the-4D-Language.300-7182872.en.html#68966) on the server machine. Since this process is used for all calls from the client, it is always executed in cooperative mode.
+
+:::
 
 ### エラー処理メソッド
 
@@ -262,12 +268,12 @@ DocRef 参照番号 (開かれたドキュメントの参照番号。次のコ�
 特定のコードを検証対象から除外するには、コメント形式の専用ディレクティブ `%T-` および `%T+` でそのコードを挟みます。 `//%T-` は以降のコードを検証から除外し、`//%T+` は以降のコードに対する検証を有効に戻します:
 
 ```4d
-  // %T- 検証を無効にします
- 
-  // スレッドセーフ検証から除外するコード
- $w:=Open window(10;10;100;100) // 例
- 
-  // %T+ 検証を有効に戻します
+  // %T- to disable thread safety checking
+
+  // Place the code containing commands to be excluded from thread safety checking here
+ $w:=Open window(10;10;100;100) //for example
+
+  // %T+ to enable thread safety checking again for the rest of the method
 ```
 
 無効化および有効化用のディレクティブでコードを挟んだ場合、そのコードがスレッドセーフかどうかについては、開発者が熟知している必要があります。 プリエンプティブなスレッドでスレッドセーフでないコードが実行された場合には、ランタイムエラーが発生します。
