@@ -1,6 +1,6 @@
 ---
 id: classes
-title: クラス
+title: Classes
 ---
 
 ## 概要
@@ -107,9 +107,9 @@ Project フォルダー Project Sources Classes Polygon.4dm
 
 <!-- REF #_command_.cs.Params -->
 
-| 引数         | タイプ    |    | 説明                          |                  |
+| 引数         | 型      |    | 説明                          |                  |
 | ---------- | ------ | -- | --------------------------- | ---------------- |
-| classStore | Object | <- | プロジェクトまたはコンポーネントのユーザークラスストア | <!-- END REF --> |
+| classStore | オブジェクト | <- | プロジェクトまたはコンポーネントのユーザークラスストア | <!-- END REF --> |
 
 `cs` コマンドは、<!-- REF #_command_.cs.Summary -->カレントプロジェクトまたはコンポーネントのユーザークラスストアを返します<!-- END REF -->。 これには、プロジェクトまたはコンポーネントにて [定義](#クラス定義) されている、すべてのユーザークラスが含まれます。 デフォルトでは、 [ORDAクラス](ORDA/ordaClasses.md) のみ利用可能です。
 
@@ -127,9 +127,9 @@ $instance:=cs.myClass.new()
 
 <!-- REF #_command_.4D.Params -->
 
-| 引数         | タイプ    |    | 説明       |                  |
+| 引数         | 型      |    | 説明       |                  |
 | ---------- | ------ | -- | -------- | ---------------- |
-| classStore | Object | <- | 4Dクラスストア | <!-- END REF --> |
+| classStore | オブジェクト | <- | 4Dクラスストア | <!-- END REF --> |
 
 `4D` コマンドは、<!-- REF #_command_.4D.Summary -->ビルトイン 4Dクラスのクラスストアを返します<!-- END REF -->。 [CryptoKey](API/CryptoKeyClass.md) などの専用 API へのアクセスを提供します。
 
@@ -591,10 +591,10 @@ Class constructor ($side : Integer)
 
 <!-- REF #_command_.Super.Params -->
 
-| 引数    | タイプ    |    | 説明               |
+| 引数    | 型      |    | 説明               |
 | ----- | ------ | -- | ---------------- |
 | param | any    | -> | 親コンストラクターに受け渡す引数 |
-| 戻り値   | Object | <- | 親オブジェクト          |
+| 戻り値   | オブジェクト | <- | 親オブジェクト          |
 
 <!-- END REF -->
 
@@ -702,9 +702,9 @@ $message:=$square.description() // "I have 4 sides which are all equal"
 
 <!-- REF #_command_.This.Params -->
 
-| 引数  | タイプ    |    | 説明         |
+| 引数  | 型      |    | 説明         |
 | --- | ------ | -- | ---------- |
-| 戻り値 | Object | <- | カレントオブジェクト |
+| 戻り値 | オブジェクト | <- | カレントオブジェクト |
 
 <!-- END REF -->
 
