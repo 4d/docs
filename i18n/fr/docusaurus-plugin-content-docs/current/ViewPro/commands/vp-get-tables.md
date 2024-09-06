@@ -25,7 +25,7 @@ title: VP Get tables
 
 #### Description
 
-The `VP Get tables` command <!-- REF #_method_.VP Get tables.Summary -->returns a collection of all table names defined in the *sheet*<!-- END REF -->.
+La commande `VP Get tables` <!-- REF #_method_.VP Get tables.Summary -->retourne une collection de tous les noms de tables définis dans *sheet*<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
@@ -39,7 +39,7 @@ Le code suivant retournera une collection de tous les noms de tables de la feuil
 
 ```4d
 $tables:=VP Get tables("ViewProArea")
-//$tables contains for example ["contextTable","emailTable"]
+//$tables contient par exemple ["contextTable","emailTable"]
 
 ```
 
