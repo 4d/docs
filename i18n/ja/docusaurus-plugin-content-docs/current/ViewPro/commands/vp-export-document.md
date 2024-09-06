@@ -19,9 +19,9 @@ title: VP EXPORT DOCUMENT
 
 | 引数         | 型      |    | 説明                      |                  |
 | ---------- | ------ | -- | ----------------------- | ---------------- |
-| vpAreaName | テキスト   | -> | 4D View Pro フォームオブジェクト名 |                  |
-| filePath   | テキスト   | -> | ドキュメントのパス名              |                  |
-| paramObj   | オブジェクト | -> | 書き出しのオプション              | <!-- END REF --> |
+| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名 |                  |
+| filePath   | Text   | -> | ドキュメントのパス名              |                  |
+| paramObj   | Object | -> | 書き出しのオプション              | <!-- END REF --> |
 
 #### 説明
 
