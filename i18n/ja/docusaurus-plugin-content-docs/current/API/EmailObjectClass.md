@@ -64,8 +64,8 @@ Email オブジェクトは次のプロパティを提供します:
 
 | プロパティ | 型    | 説明                                |
 | ----- | ---- | --------------------------------- |
-| name  | テキスト | 表示名 (null も可能) |
-| email | テキスト | メールアドレス                           |
+| name  | Text | 表示名 (null も可能) |
+| email | Text | メールアドレス                           |
 
 #### コレクション
 
@@ -133,13 +133,13 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 | プロパティ       | 型                   | 値                                                                                                                        |
 | ----------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| partID      | テキスト                | メールのパートを固有に識別する ID                                                                                                       |
-| type        | テキスト                | (必須) パートの Content-Type ヘッダーフィールドの値                                                                    |
-| charset     | テキスト                | Content-Type ヘッダーフィールドの Charset の値                                                                                       |
-| encoding    | テキスト                | `isEncodingProblem=true` の場合、Content-Transfer-Encoding の値が追加されます (デフォルトでは未定義)                         |
-| disposition | テキスト                | パートの Content-Disposition ヘッダーフィールドの値                                                                                     |
+| partID      | Text                | メールのパートを固有に識別する ID                                                                                                       |
+| type        | Text                | (必須) パートの Content-Type ヘッダーフィールドの値                                                                    |
+| charset     | Text                | Content-Type ヘッダーフィールドの Charset の値                                                                                       |
+| encoding    | Text                | `isEncodingProblem=true` の場合、Content-Transfer-Encoding の値が追加されます (デフォルトでは未定義)                         |
+| disposition | Text                | パートの Content-Disposition ヘッダーフィールドの値                                                                                     |
 | language    | Text の Collection   | パートの Content-Language ヘッダーフィールドの、[RFC3282](https://tools.ietf.org/html/rfc3282) で定義されている言語タグの一覧 (あれば) |
-| location    | テキスト                | パートの Content-Location ヘッダーフィールドの、[RFC2557](https://tools.ietf.org/html/rfc2557) で定義されている URI (あれば)    |
+| location    | Text                | パートの Content-Location ヘッダーフィールドの、[RFC2557](https://tools.ietf.org/html/rfc2557) で定義されている URI (あれば)    |
 | subParts    | Object の Collection | それぞれの子の本文パート (*EmailBodyPart* オブジェクトのコレクション)                                                          |
 | headers     | Object の Collection | パート内の全ヘッダーフィールドの、メッセージ内で出現する順の一覧 (*EmailHeader* オブジェクトのコレクション。[headers](#headers) プロパティ参照)            |
 
@@ -380,7 +380,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 | 引数   | 型          |     | 説明           |
 | ---- | ---------- | :-: | ------------ |
 | mime | Blob, Text |  -> | MIME形式のメール   |
-| 戻り値  | オブジェクト     |  <- | Email オブジェクト |
+| 戻り値  | Object     |  <- | Email オブジェクト |
 
 <!-- END REF -->
 
@@ -466,9 +466,9 @@ $status:=$transporter.send($email)
 
 | 引数      | 型      |     | 説明                      |
 | ------- | ------ | :-: | ----------------------- |
-| mail    | オブジェクト |  -> | Email オブジェクト            |
-| options | オブジェクト |  -> | 文字セットとエンコーディングのメールオプション |
-| 戻り値     | テキスト   |  <- | MIME に変換された Emailオブジェクト |
+| mail    | Object |  -> | Email オブジェクト            |
+| options | Object |  -> | 文字セットとエンコーディングのメールオプション |
+| 戻り値     | Text   |  <- | MIME に変換された Emailオブジェクト |
 
 <!-- END REF -->
 
@@ -484,8 +484,8 @@ $status:=$transporter.send($email)
 
 | プロパティ         | 型    | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| headerCharset | テキスト | メールの以下の部分で使用される文字セットとエンコーディング: 件名、添付ファイル名、メール名の属性。 とりうる値:<table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: 可能なら US-ASCII 、次に可能なら Japanese (ISO-2022-JP) & Quoted-printable 、それも不可なら UTF-8 & Quoted-printable</li><li><i>bodyCharset</i>: 可能なら US-ASCII、次に可能なら Japanese (ISO-2022-JP) & 7-bit、それも不可なら UTF-8 & Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i>: 可能なら US-ASCII、それが不可なら UTF-8 & Quoted-printable (**デフォルト値**)</td></tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> & <i>bodyCharset</i>: 可能な場合は US-ASCII、それ以外は UTF-8 & base64</td></tr></table> |
-| bodyCharset   | テキスト | メールの HTML およびテキスト本文コンテンツで使用される文字セットとエンコーディング。 取りうる値: headerCharset と同じ(上記参照)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| headerCharset | Text | メールの以下の部分で使用される文字セットとエンコーディング: 件名、添付ファイル名、メール名の属性。 とりうる値:<table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: 可能なら US-ASCII 、次に可能なら Japanese (ISO-2022-JP) & Quoted-printable 、それも不可なら UTF-8 & Quoted-printable</li><li><i>bodyCharset</i>: 可能なら US-ASCII、次に可能なら Japanese (ISO-2022-JP) & 7-bit、それも不可なら UTF-8 & Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i>: 可能なら US-ASCII、それが不可なら UTF-8 & Quoted-printable (**デフォルト値**)</td></tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> & <i>bodyCharset</i>: 可能な場合は US-ASCII、それ以外は UTF-8 & base64</td></tr></table> |
+| bodyCharset   | Text | メールの HTML およびテキスト本文コンテンツで使用される文字セットとエンコーディング。 取りうる値: headerCharset と同じ(上記参照)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 *options* 引数が省略された場合、ヘッダーおよび本文においては mail mode UTF8 設定が使用されます。
 
