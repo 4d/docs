@@ -34,7 +34,7 @@ title: VP Name
 "Total" という名前のレンジに値を渡します:
 
 ```4d
-// name the B5 cell as Total
+// B5 のセルを "Total" と命名します
 VP ADD RANGE NAME(VP Cell("ViewProArea";1;4);"Total")
 $name:=VP Name("ViewProArea";"Total")
 VP SET NUM VALUE($name;285;"$#,###.00")
