@@ -1007,7 +1007,7 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 |         |                                                             | min>=0 の場合、"0-9" と "." |
 | integer | オブジェクト内で定義されているものと同じ                                        | "0-9" と "-"                            |
 |         |                                                             | min>=0 の場合、"0-9"                       |
-| ブール     | チェックボックス                                                    | N/A                                    |
+| Boolean | チェックボックス                                                    | N/A                                    |
 | color   | N/A                                                         | N/A                                    |
 | event   | N/A                                                         | N/A                                    |
 
