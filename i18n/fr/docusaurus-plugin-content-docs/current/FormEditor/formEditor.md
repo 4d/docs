@@ -275,7 +275,7 @@ Pour afficher cette boîte de dialogue, vous devez sélectionner les objets que 
 
 - Dans les zones “Alignement droite/gauche” et/ou “Alignement haut/bas”, cliquez sur l’icône correspondant à l'alignement que vous souhaitez effectuer.<p>La zone d'exemple affiche les résultats de votre sélection.</p>
 
-- Pour effectuer un alignement standard des objets sélectionnés, cliquez sur le bouton **Prévisualisation** ou **Appliquer**. Dans ce cas, 4D utilisera l’objet le plus avancé dans la direction de l’alignement comme “ancre” sur laquelle tous les autres objets vont être alignés. Par exemple, si vous alignez un groupe d’objets à droite, les objets seront alignés sur le côté droit de l’objet situé le plus à droite du groupe. OU:<p>Pour aligner les objets sur un objet spécifique, sélectionnez l'option **Aligner sur** et sélectionnez l'objet sur lequel vous voulez que les autres objets soient alignés dans la liste d'objets. In this case, the position of the reference object will not be altered.</p>
+- Pour effectuer un alignement standard des objets sélectionnés, cliquez sur le bouton **Prévisualisation** ou **Appliquer**. Dans ce cas, 4D utilisera l’objet le plus avancé dans la direction de l’alignement comme “ancre” sur laquelle tous les autres objets vont être alignés. Par exemple, si vous alignez un groupe d’objets à droite, les objets seront alignés sur le côté droit de l’objet situé le plus à droite du groupe. OU:<p>Pour aligner les objets sur un objet spécifique, sélectionnez l'option **Aligner sur** et sélectionnez l'objet sur lequel vous voulez que les autres objets soient alignés dans la liste d'objets. Dans ce cas, la position de l’objet de référence ne variera pas.</p>
 
 Vous pouvez prévisualiser le résultat réel de vos paramétrages en cliquant sur le bouton **Prévisualisation**. Les objets sont ensuite alignés dans l'éditeur de formulaires, mais comme la boîte de dialogue ne disparaît pas, vous pouvez toujours annuler ou appliquer l'alignement.
 
@@ -304,7 +304,7 @@ Ce fonctionnement s’applique à tous les types d’objets des formulaires. Le 
 
 ### Distribuer les objets
 
-Vous pouvez répartir des objets de manière à ce qu’ils soient disposés en respectant un espacement égal entre eux. Pour cela, vous pouvez utiliser des commandes directes de répartition ou passer par l’intermédiaire de la boîte de dialogue d’alignement et répartition pour effectuer des répartitions spécifiques ou combiner alignement et répartition. The latter allows you to align and distribute objects in one operation.
+Vous pouvez répartir des objets de manière à ce qu’ils soient disposés en respectant un espacement égal entre eux. Pour cela, vous pouvez utiliser des commandes directes de répartition ou passer par l’intermédiaire de la boîte de dialogue d’alignement et répartition pour effectuer des répartitions spécifiques ou combiner alignement et répartition. Cette dernière vous permet d'aligner et de répartir les objets en une seule opération.
 
 > Lorsque la [grille magnétique](#using-the-magnetic-grid) est activée, une aide visuelle est également fournie pour la répartition lors du déplacement manuel d’un objet.
 
@@ -312,20 +312,20 @@ Pour répartir directement une sélection d’objets (verticalement ou horizonta
 
 1. Sélectionnez les objets (au moins trois) que vous souhaitez répartir.
 
-2. In the toolbar, click on the distribution tool that corresponds to the distribution you want to apply.<p>![](../assets/en/FormEditor/distributionTool.png)</p> OR<p>Select a distribution menu command from the **Align** submenu in the **Object** menu or from the context menu of the editor.</p>4D distributes the objects accordingly. Les objets sont répartis en fonction de la distance entre leurs centres et la plus grande distance entre deux objets consécutifs est utilisée comme référence.
+2. Dans la barre d'outils, cliquez sur l'outil de distribution qui correspond à la distribution que vous souhaitez appliquer.<p>![](../assets/en/FormEditor/distributionTool.png)</p> OU<p>Sélectionnez une commande de distribution dans le sous-menu **Aligner** du menu **Objet** ou dans le menu contextuel de l'éditeur.</p>4D distribue les objets en conséquence. Les objets sont répartis en fonction de la distance entre leurs centres et la plus grande distance entre deux objets consécutifs est utilisée comme référence.
 
 Pour répartir des objets à l’aide de la boîte de dialogue d'alignement et répartition :
 
 1. Sélectionnez les objets que vous souhaitez répartir.
 
-2. Choisissez la commande **Alignement...** dans le sous-menu **Aligner** du menu **Objets** ou du menu contextuel de l’éditeur. The following dialog box appears:![](../assets/en/FormEditor/alignmentAssistant.png)
+2. Choisissez la commande **Alignement...** dans le sous-menu **Aligner** du menu **Objets** ou du menu contextuel de l’éditeur. La boîte de dialogue suivante apparaît :![](../assets/en/FormEditor/alignmentAssistant.png)
 
-3. In the Left/Right Alignment and/or Top/Bottom Alignment areas, click the standard distribution icon: ![](../assets/en/FormEditor/horizontalDistribution.png) <p>(Standard horizontal distribution icon)</p>The example area displays the results of your selection.
+3. Dans les zones Alignement gauche/droite et/ou haut/bas, cliquez sur l'icône de distribution standard : ![](../assets/en/FormEditor/horizontalDistribution.png) <p>(icône standard de distribution horizontale)</p>La zone d'exemple affiche les résultats de votre sélection.
 
-4. To perform a distribution that uses the standard scheme, click **Preview** or _Apply_.<p>In this case 4D will perform a standard distribution, so that the objects are set out with an equal amount of space between them.</p>OR:<p>To execute a specific distribution, select the **Distribute** option (for example if you want to distribute the objects based on the distance to their right side). This option acts like a switch. If the Distribute check box is selected, the icons located below it perform a different function:</p>
+4. Pour effectuer une distribution qui utilise le schéma standard, cliquez sur **Aperçu** ou _Appliquer_.<p>Dans ce cas, 4D effectuera une distribution standard, de sorte que les objets soient répartis avec une quantité d'espace égale entre eux.</p>OU :<p>Pour exécuter une distribution spécifique, sélectionnez l'option **Distribuer** (par exemple, si vous souhaitez distribuer les objets en fonction de la distance par rapport à leur côté droit). Cette option agit comme un interrupteur. Si la case à cocher Répartir est sélectionnée, les icônes situées en dessous effectuent une fonction différente:</p>
 
-- Horizontally, the icons correspond to the following distributions: evenly with respect to left sides, centers (hor.) and right sides of the selected objects.
-- Vertically, the icons correspond to the following distributions: evenly with respect to top edges, centers (vert.) and bottom edges of the selected objects.
+- Horizontalement, les icônes correspondent aux répartitions suivantes : équidistance des côtés gauches, des centres (hor.) et des côtés droits des objets sélectionnés.
+- Verticalement, les icônes correspondent aux répartitions suivantes : équidistance des bords supérieurs, des centres (vert.) et des bords inférieurs des objets sélectionnés.
 
 Vous pouvez prévisualiser le résultat réel de vos paramétrages en cliquant sur le bouton **Prévisualisation** : l’opération s’effectue dans l’éditeur de formulaires, mais la boîte de dialogue reste au premier plan. Vous pouvez alors **Appliquer** ou **Annuler** les modifications.
 
@@ -333,7 +333,7 @@ Vous pouvez prévisualiser le résultat réel de vos paramétrages en cliquant s
 
 ### Gérer les plans des objets
 
-Il est parfois nécessaire de réorganiser certains objets qui occultent d’autres objets du formulaire. Par exemple, vous pouvez souhaiter voir apparaître un graphique derrière les champs dans un formulaire. 4D propose 4 commandes, **Passer au dernier plan**, **Passer au premier plan**, **Plan suivant** et **Plan précédent**, qui vous permettent d’organiser les plans des objets du formulaire. These layers also determine the default entry order (see Modifying data entry order). La fenêtre ci-dessous représente des objets organisés en couches :
+Il est parfois nécessaire de réorganiser certains objets qui occultent d’autres objets du formulaire. Par exemple, vous pouvez souhaiter voir apparaître un graphique derrière les champs dans un formulaire. 4D propose 4 commandes, **Passer au dernier plan**, **Passer au premier plan**, **Plan suivant** et **Plan précédent**, qui vous permettent d’organiser les plans des objets du formulaire. Ces plans déterminent également l'ordre de saisie par défaut (voir Modification de l'ordre de saisie des données). La fenêtre ci-dessous représente des objets organisés en couches :
 
 ![](../assets/en/FormEditor/layering.png)
 
@@ -353,15 +353,15 @@ Pour ordonner les différents plans, 4D va toujours de l’arrière-plan vers l�
 
 L’ordre de saisie est l’ordre dans lequel les champs, les sous-formulaires et les autres objets actifs sont sélectionnés lorsque vous appuyez sur la touche **Tabulation** ou **Retour chariot** dans un formulaire. Il est possible de parcourir le formulaire dans le sens inverse de l’ordre de saisie en appuyant sur les touches **Maj+Tabulation** ou **Maj+Retour chariot**.
 
-> You can change the entry order at runtime using the `FORM SET ENTRY ORDER` and `FORM GET ENTRY ORDER` commands.
+> Vous pouvez modifier l'ordre de saisie en cours d'exécution en utilisant les commandes `FORM SET ENTRY ORDER` et `FORM GET ENTRY ORDER`.
 
-Every object that supports the focusable property is included in the data entry order by default.
+Chaque objet qui prend en charge la propriété focusable est inclus dans l'ordre de saisie des données par défaut.
 
-Setting the entry order for a JSON form is done with the [`entryOrder`](properties_JSONref.md) property.
+Définir l'ordre de saisie pour un formulaire JSON s'effectue avec la propriété [`entryOrder`](properties_JSONref.md) .
 
-If you don’t specify a custom entry order, by default 4D uses the layering of the objects to determine the entry order in the direction “background towards foreground.” The standard entry order thus corresponds to the order in which the objects were created in the form. Par défaut, l’ordre de saisie correspond donc à l’ordre de création des objets dans le formulaire.
+Si vous ne spécifiez pas d’ordre de saisie personnalisé, 4D utilise par défaut le plan des objets comme ordre de saisie, dans le sens “arrière-plan vers premier plan.” Par défaut, l’ordre de saisie correspond donc à l’ordre de création des objets dans le formulaire.
 
-Dans certains formulaires, il est nécessaire de définir un ordre de saisie personnalisé. Ci-dessous par exemple, des champs supplémentaires relatifs à l’adresse ont été ajoutés après la création du formulaire. The resulting standard entry order thus becomes illogical and forces the user to enter the information in an awkward manner:
+Dans certains formulaires, il est nécessaire de définir un ordre de saisie personnalisé. Ci-dessous par exemple, des champs supplémentaires relatifs à l’adresse ont été ajoutés après la création du formulaire. L'ordre de saisie qui en résulte devient donc illogique et force l'utilisateur à entrer les informations de manière maladroite :
 
 ![](../assets/en/FormEditor/entryOrder1.png)
 
@@ -373,21 +373,21 @@ Il est dans ce cas nécessaire de personnaliser l’ordre de saisie afin de prop
 
 Vous pouvez visualiser l’ordre de saisie courant soit à l’aide des badges “Ordre de saisie”, soit à l’aide du mode “Ordre de saisie”. En revanche, vous ne pouvez modifier l’ordre de saisie qu’en mode “Ordre de saisie”.
 
-Ce paragraphe décrit la visualisation et la modification de l’ordre de saisie en mode “Ordre de saisie”. Pour plus d’informations sur la visualisation de l’ordre de saisie à l’aide des badges, reportez-vous au paragraphe [Using shields](#using-shields).
+Ce paragraphe décrit la visualisation et la modification de l’ordre de saisie en mode “Ordre de saisie”. Pour plus d’informations sur la visualisation de l’ordre de saisie à l’aide des badges, reportez-vous au paragraphe [Utiliser des badges](#using-shields).
 
 Pour visualiser ou modifier l’ordre de saisie :
 
-1. Choose **Entry Order** from the **Form** menu or click on the Entry Order button in the toolbar of the window:<p>![](../assets/en/FormEditor/zOrder.png)</p>
+1. Sélectionnez **Ordre de saisie** dans le menu **Formulaire** ou cliquez sur le bouton dans la barre d’outils de la fenêtre :<p>![](../assets/en/FormEditor/zOrder.png)</p>
 
    Le pointeur prend la forme d’un pointeur d’ordre, et 4D dessine une ligne qui permet de visualiser la séquence de l’ordre de saisie courant. Visualiser et modifier l’ordre de saisie sont les seules opérations que vous pouvez réaliser dans ce mode.
 
-2. To change the data entry order, position the pointer on an object in the form and, while holding down the mouse button, drag the pointer to the object you want next in the data entry order.<p>![](../assets/en/FormEditor/entryOrder3.png)</p>4D will adjust the entry order accordingly.
+2. Pour changer l’ordre de saisie, positionnez le pointeur sur un objet dans le formulaire et, tout en maintenant le bouton de la souris enfoncé, faites glisser le pointeur vers l'objet que vous souhaitez ensuite dans l'ordre de saisie des données.<p>![](../assets/en/FormEditor/entryOrder3.png)</p>4D ajustera automatiquement l'ordre de saisie.
 
 3. Répétez l’étape 2 autant de fois que nécessaire pour obtenir le nouvel ordre de saisie.
 
 4. Lorsque vous êtes satisfait de l’ordre de saisie, sélectionnez de nouveau la commande **Ordre de saisie** dans le menu **Formulaire**. 4D retourne dans le mode de fonctionnement normal de l’éditeur de formulaires.
 
-> Seul l’ordre de saisie de la page courante du formulaire est affiché. If the form contains enterable objects on page 0 or coming from an inherited form, the default entry order is as follows: Objects from page 0 of the inherited form > Objects from page 1 of the inherited form > Objects from page 0 of the open form > Objects from the current page of the open form.
+> Seul l’ordre de saisie de la page courante du formulaire est affiché. Si le formulaire contient des objets saisissables sur la page 0 ou provenant d’un formulaire hérité, l’ordre de saisie par défaut est le suivant : Objets de la page zéro du formulaire hérité > Objets de la page 1 du formulaire hérité > Objets de la page zéro du formulaire ouvert > Objets de la page courante du formulaire ouvert.
 
 #### Utiliser un groupe de saisie
 
@@ -402,45 +402,45 @@ Lorsque vous relâchez le bouton de la souris, les objets contenus ou touchés p
 
 #### Exclure un objet de l’ordre de saisie
 
-By default, all objects that support the focusable property are included in the entry order. To exclude an object from the entry order:
+Par défaut, tous les objets qui prennent en charge la propriété focusable sont inclus dans l'ordre de saisie. Pour exclure un objet de l’ordre de saisie:
 
-1. Select the Entry order mode, then
+1. Sélectionnez le mode ordre de saisie, puis
 
-2. **shift-click** on the object
+2. **Maj-clic** sur l'objet
 
-3. **right-click** on the object and select **Remove from entry order** option from the context menu
+3. **Clic droit** sur l'objet et sélectionnez l'option **Supprimer de l'ordre de saisie** dans le menu contextuel
 
-## CSS Preview
+## Aperçu CSS
 
-The Form editor allows you to view your forms with or without applied CSS values.
+L'éditeur de formulaire vous permet de visualiser vos formulaires avec ou sans les valeurs CSS appliquées.
 
-When [style sheets](createStylesheet.md) have been defined, forms (including inherited forms and subforms) are opened in the CSS Preview mode for your operating system by default.
+Lorsque des [feuilles de style](createStylesheet.md) ont été définis, les formulaires (y compris les formulaires hérités et les sous-formulaires) sont ouverts en mode Aperçu CSS pour votre système d'exploitation par défaut.
 
-### Selecting CSS Preview Mode
+### Sélection du mode Aperçu CSS
 
-The Form editor toolbar provides a CSS button for viewing styled objects:
+La barre d'outils de l'éditeur de formulaires fournit un bouton CSS pour la visualisation des objets stylés :
 
 ![](../assets/en/FormEditor/cssToolbar.png)
 
-Select one of the following preview modes from the menu:
+Sélectionnez l'un des modes de prévisualisation suivants dans le menu :
 
-| Toolbar Icon                            | CSS Preview Mode | Description                                                                                                                                   |
-| --------------------------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/FormEditor/cssNo.png)  | Aucun            | No CSS values are applied in the form and no CSS values or icons displayed in the Property List.                              |
-| ![](../assets/en/FormEditor/cssWin.png) | Windows          | CSS values for Windows platform are applied in the form. CSS values and icons displayed in the Property List. |
-| ![](../assets/en/FormEditor/cssMac.png) | macOS            | CSS values for macOS platform are applied in the form. CSS values and icons displayed in the Property List.   |
+| Icône de la barre d'outils              | Mode d'aperçu CSS | Description                                                                                                                                                                                |
+| --------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![](../assets/en/FormEditor/cssNo.png)  | Aucun             | Aucune valeur CSS n'est appliquée dans le formulaire et aucune valeur CSS ou icône ne s'affiche dans la liste des propriétés.                                              |
+| ![](../assets/en/FormEditor/cssWin.png) | Windows           | Les valeurs CSS pour la plate-forme Windows sont appliquées dans le formulaire. Les valeurs et les icônes CSS sont affichées dans la liste des propriétés. |
+| ![](../assets/en/FormEditor/cssMac.png) | macOS             | Les valeurs CSS pour la plate-forme macOS sont appliquées dans le formulaire. Les valeurs et les icônes CSS sont affichées dans la liste des propriétés.   |
 
-> If a font size too large for an object is defined in a style sheet or JSON, the object will automatically be rendered to accommodate the font, however the size of the object will not be changed.
+> Si une taille de police trop grande pour un objet est définie dans une feuille de style ou un JSON, l'objet sera automatiquement rendu pour s'adapter à la police, mais la taille de l'objet ne sera pas modifiée.
 
-The CSS preview mode reflects the priority order applied to style sheets vs JSON attributes as defined in the [JSON vs Style Sheet](stylesheets.html#json-vs-style-sheet) section.
+Le mode d'aperçu CSS reflète l'ordre de priorité appliqué aux feuilles de style par rapport aux attributs JSON tels que définis dans la section [JSON vs Feuille de style](stylesheets.html#json-vs-style-sheet).
 
-Once a CSS preview mode is selected, objects are automatically displayed with the styles defined in a style sheet (if any).
+Une fois qu'un mode d'aperçu CSS est sélectionné, les objets sont automatiquement affichés avec les styles définis dans une feuille de style (le cas échéant).
 
-> When copying or duplicating objects, only the CSS references (if any) and the JSON values are copied.
+> Lors de la copie ou de la duplication d'objets, seules les références CSS (le cas échéant) et les valeurs JSON sont copiées.
 
-### CSS support in the Property List
+### Prise en charge des CSS dans la liste des propriétés
 
-In CSS Preview mode, if the value of an attribute has been defined in a style sheet, the attribute's name will appear with a CSS icon displayed next to it in the Property List. For example, the attribute values defined in this style sheet:
+En mode Aperçu CSS, si la valeur d'un attribut a été définie dans une feuille de style, le nom de l'attribut apparaîtra à côté d'une icône CSS dans la liste des propriétés. Par exemple, les valeurs des attributs définies dans cette feuille de style :
 
 ```4d
 .myButton {
@@ -450,21 +450,21 @@ stroke: #800080;
 }
 ```
 
-are displayed with a CSS icon in the Property List:
+sont affichées avec une icône CSS dans la liste des propriétés :
 
 ![](../assets/en/FormEditor/cssPpropList.png)
 
-An attribute value defined in a style sheet can be overridden in the JSON form description (except if the CSS includes the `!important` declaration, see below). In this case, the Property List displays the JSON form value in **bold**. You can reset the value to its style sheet definition with the **Ctrl + click** (Windows) or **Command + click** (macOs) shortcuts.
+Une valeur d'attribut définie dans une feuille de style peut être remplacée dans la description de formulaire JSON (sauf si la CSS inclut la déclaration `!important`, voir ci-dessous). Dans ce cas, la liste des propriétés affiche la valeur du formulaire JSON en **gras**. Vous pouvez réinitialiser la valeur à sa définition de feuille de style avec les raccourcis **Ctrl + clic** (Windows) ou **Command + clic** (macOs).
 
-> If an attribute has been defined with the `!important` declaration for a group, an object within a group, or any object within a selection of multiple objects, that attribute value is locked and cannot be changed in the Property List.
+> Si un attribut a été défini avec la déclaration `!important` pour un groupe, un objet à l'intérieur d'un groupe ou n'importe quel objet dans une sélection de plusieurs objets, la valeur de cet attribut est verrouillée et ne peut pas être modifiée dans la liste des propriétés.
 
-#### Property List CSS Icons
+#### Icônes CSS dans la Liste des propriétés
 
-| Icône                                         | Description                                                                                                                                                        |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](../assets/en/FormEditor/cssIcon.png)      | Indicates that an attribute value has been defined in a style sheet                                                                                                |
-| ![](../assets/en/FormEditor/cssImportant.png) | Indicates that an attribute value has been defined in a style sheet with the `!important` declaration                                                              |
-| ![](../assets/en/FormEditor/cssIconMixed.png) | Displayed when an attribute value defined in a style sheet for at least one item in a group or a selection of multiple objects is different from the other objects |
+| Icône                                         | Description                                                                                                                                                                           |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](../assets/en/FormEditor/cssIcon.png)      | Indique que la valeur d'un attribut a été définie dans une feuille de style                                                                                                           |
+| ![](../assets/en/FormEditor/cssImportant.png) | Indique que la valeur d'un attribut a été définie dans une feuille de style avec la déclaration `!important`                                                                          |
+| ![](../assets/en/FormEditor/cssIconMixed.png) | Affiché lorsque la valeur d'un attribut défini dans une feuille de style pour au moins un élément d'un groupe ou d'une sélection de plusieurs objets est différente des autres objets |
 
 ## Création de list box
 
@@ -512,19 +512,19 @@ La list box finale :
 
 ![](../assets/en/FormEditor/listboxBuilderListbox.png)
 
-## Insert fields
+## Insérer des champs
 
-The **Insert fields** button inserts all fields (except object and blob type fields) of the form table in the form, along with their labels and with respect to interface standards. This wizard is a shortcut to design basic entry forms or list forms.
+Le bouton **Insérer champs** insère tous les champs (à l'exception des champs de type objet et blob) de la table du formulaire dans le formulaire, avec leurs libellés et en respectant les normes d'interface. Cet assistant est un raccourci pour concevoir des formulaires de saisie ou des formulaires de liste basiques.
 
-The **Insert fields** button is only available with table forms.
+Le bouton **Insérer champs** est uniquement disponible avec les formulaires table.
 
-The design of the resulting form depends on the form type:
+L'apparence du formulaire final dépend du type de formulaire :
 
-- **Detail form**: clicking on the **Insert fields** button generates a form with a page design:
+- **Formulaire détail** : en cliquant sur le bouton **Insérer champs**, un formulaire en page est généré :
 
 ![](../assets/en/FormEditor/insertFields2.png)
 
-- **List form**: clicking on the **Insert fields** button generates a list form design with fields organized on a single line and area markers:
+- **Formulaire liste** : en cliquant sur le bouton **Insérer champs**, cela génère un formulaire en liste avec des champs organisés sur une seule ligne et des marqueurs de zone :
 
 ![](../assets/en/FormEditor/insertFields3.png)
 
@@ -550,18 +550,18 @@ Pour ne pas afficher de badges, choisissez la ligne **Pas de badges** dans le me
 
 Voici la description de chaque type de badge :
 
-| Icône                                           | Nom                             | Est affiché...                                                                                                                                                      |
-| ----------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/FormEditor/objectMethod.png)   | Méthode objet                   | Pour les objets auxquels une méthode objet est associée                                                                                                                                                             |
-| ![](../assets/en/FormEditor/standardAction.png) | Action standard                 | Pour les objets auxquels une action standard est associée                                                                                                                                                           |
-| ![](../assets/en/FormEditor/resizing.png)       | Redimensionnement               | Pour les objets disposant d’au moins une propriété de redimensionnement, indique la combinaison de propriétés courante                                                                                              |
-| ![](../assets/en/FormEditor/entryOrder.png)     | Ordre de saisie                 | Pour les objets saisissables, indique le numéro d’ordre de saisie                                                                                                                                                   |
-| ![](../assets/en/FormEditor/viewNumber.png)     | Vue courante                    | Pour tous les objets de la vue courante                                                                                                                                                                             |
-| ![](../assets/en/FormEditor/cssShield.png)      | [Style Sheet](stylesheets.html) | Pour les objets avec une ou plusieurs valeurs d'attribut remplacées par une feuille de style.                                                                                                       |
-| ![](../assets/en/FormEditor/filter.png)         | Filtre                          | Pour les objets saisissables auxquels un filtre de saisie est associé                                                                                                                                               |
-| ![](../assets/en/FormEditor/helpTip.png)        | Infobulle                       | Pour les objets auxquels une infobulle (message d’aide) est associée                                                                                                                             |
-| ![](../assets/en/FormEditor/localized.png)      | Localisé                        | Pour les objets dont le libellé provient d’une référence (libellé débutant par “:”). La référence peut être de type ressource (STR#) ou XLIFF |
-| ![](../assets/en/FormEditor/noShields.png)      | Pas de badge                    | Aucun badge n’apparaît                                                                                                                                                                                              |
+| Icône                                           | Nom                                  | Est affiché...                                                                                                                                                      |
+| ----------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](../assets/en/FormEditor/objectMethod.png)   | Méthode objet                        | Pour les objets auxquels une méthode objet est associée                                                                                                                                                             |
+| ![](../assets/en/FormEditor/standardAction.png) | Action standard                      | Pour les objets auxquels une action standard est associée                                                                                                                                                           |
+| ![](../assets/en/FormEditor/resizing.png)       | Redimensionnement                    | Pour les objets disposant d’au moins une propriété de redimensionnement, indique la combinaison de propriétés courante                                                                                              |
+| ![](../assets/en/FormEditor/entryOrder.png)     | Ordre de saisie                      | Pour les objets saisissables, indique le numéro d’ordre de saisie                                                                                                                                                   |
+| ![](../assets/en/FormEditor/viewNumber.png)     | Vue courante                         | Pour tous les objets de la vue courante                                                                                                                                                                             |
+| ![](../assets/en/FormEditor/cssShield.png)      | [Feuille de style](stylesheets.html) | Pour les objets avec une ou plusieurs valeurs d'attribut remplacées par une feuille de style.                                                                                                       |
+| ![](../assets/en/FormEditor/filter.png)         | Filtre                               | Pour les objets saisissables auxquels un filtre de saisie est associé                                                                                                                                               |
+| ![](../assets/en/FormEditor/helpTip.png)        | Infobulle                            | Pour les objets auxquels une infobulle (message d’aide) est associée                                                                                                                             |
+| ![](../assets/en/FormEditor/localized.png)      | Localisé                             | Pour les objets dont le libellé provient d’une référence (libellé débutant par “:”). La référence peut être de type ressource (STR#) ou XLIFF |
+| ![](../assets/en/FormEditor/noShields.png)      | Pas de badge                         | Aucun badge n’apparaît                                                                                                                                                                                              |
 
 ## Vues
 
