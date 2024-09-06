@@ -11,7 +11,7 @@ title: VP RESUME COMPUTING
 
 | 引数         | 型    |    | 説明                      |                  |
 | ---------- | ---- | -- | ----------------------- | ---------------- |
-| vpAreaName | テキスト | -> | 4D View Pro フォームオブジェクト名 | <!-- END REF --> |
+| vpAreaName | Text | -> | 4D View Pro フォームオブジェクト名 | <!-- END REF --> |
 
 #### 説明
 
