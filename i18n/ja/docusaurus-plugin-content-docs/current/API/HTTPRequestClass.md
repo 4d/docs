@@ -90,8 +90,8 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 
 | 引数      | 型                              |     | 説明                    |
 | ------- | ------------------------------ | :-: | --------------------- |
-| url     | テキスト                           |  -> | リクエストの送信先URL          |
-| options | オブジェクト                         |  -> | リクエスト設定プロパティ          |
+| url     | Text                           |  -> | リクエストの送信先URL          |
+| options | Object                         |  -> | リクエスト設定プロパティ          |
 | 戻り値     | 4D.HTTPRequest |  <- | 新規 HTTPRequest オブジェクト |
 
 <!-- END REF -->
@@ -131,26 +131,26 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 | プロパティ                  | 型                                                 | 説明                                                                                                                                                                                                          | デフォルト             |
 | ---------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
 | agent                  | [4D.HTTPAgent](HTTPAgentClass.md) | HTTPRequest で使用する HTTPAgent。 エージェントオプションはリクエストオプションと統合されます (リクエストオプションが優先されます)。 特定のエージェントが定義されていない場合、デフォルト値を持つグローバルエージェントが使用されます。                                                        | グローバルエージェントオブジェクト |
-| automaticRedirections  | ブール                                               | true の場合、リダイレクトは自動的に実行されます (最大 5回までのリダイレクトが処理され、もしあれば 6回目のリダイレクトレスポンスが返されます)                                                                                                             | true              |
+| automaticRedirections  | Boolean                                           | true の場合、リダイレクトは自動的に実行されます (最大 5回までのリダイレクトが処理され、もしあれば 6回目のリダイレクトレスポンスが返されます)                                                                                                             | true              |
 | body                   | バリアント                                             | リクエストの本文 (`post` または `put` リクエストの場合に必須)。 テキスト、BLOB、またはオブジェクトを指定できます。 ヘッダー内で設定されていない限り、content-type は当プロパティの型によって決定されます。                                                                  | undefined         |
 | certificatesFolder     | [Folder](FolderClass.md)                          | 使用するクライアント証明書フォルダーを指定します。                                                                                                                                                                                   | undefined         |
-| dataType               | テキスト                                              | レスポンス本文のデータ型。 値: "text", "blob", "object", または "auto"。 "auto" の場合、本文の型は MIMEタイプから推定されます (JSON ならオブジェクト、テキスト・javascript・xml・httpメッセージ・URLエンコードされたフォームなどはテキスト、それ以外は BLOB)。 | "auto"            |
-| decodeData             | ブール                                               | true の場合、`onData` コールバックが受け取るデータは非圧縮です                                                                                                                                                                      | false             |
-| encoding               | テキスト                                              | `body` のあるリクエストの場合にのみ使用 (`post` または `put` メソッド)。 本文がテキストの場合のエンコーディング。ヘッダーにて content-type が指定されている場合は無視されます。                                                                              | "UTF-8"           |
-| headers                | オブジェクト                                            | リクエストのヘッダー。 シンタックス: `headers.key=value` (同じ key に対して *value* を複数指定する場合、*value* にコレクションを使用できます)                                                                           | 空のオブジェクト          |
-| method                 | テキスト                                              | "POST"、"GET"、またはその他のメソッド                                                                                                                                                                                    | "GET"             |
-| minTLSVersion          | テキスト                                              | TLS の最小バージョンを指定します: "`TLSv1_0`", "`TLSv1_1`", "`TLSv1_2`", "`TLSv1_3`"                                                                                                                      | "`TLSv1_2`"       |
+| dataType               | Text                                              | レスポンス本文のデータ型。 値: "text", "blob", "object", または "auto"。 "auto" の場合、本文の型は MIMEタイプから推定されます (JSON ならオブジェクト、テキスト・javascript・xml・httpメッセージ・URLエンコードされたフォームなどはテキスト、それ以外は BLOB)。 | "auto"            |
+| decodeData             | Boolean                                           | true の場合、`onData` コールバックが受け取るデータは非圧縮です                                                                                                                                                                      | false             |
+| encoding               | Text                                              | `body` のあるリクエストの場合にのみ使用 (`post` または `put` メソッド)。 本文がテキストの場合のエンコーディング。ヘッダーにて content-type が指定されている場合は無視されます。                                                                              | "UTF-8"           |
+| headers                | Object                                            | リクエストのヘッダー。 シンタックス: `headers.key=value` (同じ key に対して *value* を複数指定する場合、*value* にコレクションを使用できます)                                                                           | 空のオブジェクト          |
+| method                 | Text                                              | "POST"、"GET"、またはその他のメソッド                                                                                                                                                                                    | "GET"             |
+| minTLSVersion          | Text                                              | TLS の最小バージョンを指定します: "`TLSv1_0`", "`TLSv1_1`", "`TLSv1_2`", "`TLSv1_3`"                                                                                                                      | "`TLSv1_2`"       |
 | onData                 | [Function](FunctionClass.md)                      | 本文のデータ受信時のコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                                   | undefined         |
 | onError                | [Function](FunctionClass.md)                      | エラー発生時のコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                                      | undefined         |
 | onHeaders              | [Function](FunctionClass.md)                      | ヘッダー受信時のコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                                     | undefined         |
 | onResponse             | [Function](FunctionClass.md)                      | レスポンス受信時のコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                                    | undefined         |
 | onTerminate            | [Function](FunctionClass.md)                      | リクエスト終了時のコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                                    | undefined         |
-| protocol               | テキスト                                              | "auto" または "HTTP1"。 "auto" は現在の実装における HTTP1 を意味します。                                                                                                                                                         | "auto"            |
+| protocol               | Text                                              | "auto" または "HTTP1"。 "auto" は現在の実装における HTTP1 を意味します。                                                                                                                                                         | "auto"            |
 | proxyAuthentication    | [authentication オブジェクト](#authentication-オブジェクト)   | プロキシ認証のためのオブジェクト                                                                                                                                                                                            | undefined         |
 | serverAuthentication   | [authentication オブジェクト](#authentication-オブジェクト)   | サーバー認証のためのオブジェクト                                                                                                                                                                                            | undefined         |
-| returnResponseBody     | ブール                                               | false の場合、レスポンス本文は [`response` オブジェクト](#response) に返されません。 false かつ `onData` が未定義の場合にエラーを返します。                                                                                                              | true              |
-| timeout                | 実数                                                | タイムアウト (秒単位) 未定義 = タイムアウトなし                                                                                                                                                              | 未定義               |
-| validateTLSCertificate | ブール                                               | false の場合、4D は TLS証明書の検証をおこなわず、無効 (期限切れ、自己署名など) であってもエラーを返しません。 重要: 現在の実装では、認証局そのものは検証されません。                                                                             | true              |
+| returnResponseBody     | Boolean                                           | false の場合、レスポンス本文は [`response` オブジェクト](#response) に返されません。 false かつ `onData` が未定義の場合にエラーを返します。                                                                                                              | true              |
+| timeout                | Real                                              | タイムアウト (秒単位) 未定義 = タイムアウトなし                                                                                                                                                              | 未定義               |
+| validateTLSCertificate | Boolean                                           | false の場合、4D は TLS証明書の検証をおこなわず、無効 (期限切れ、自己署名など) であってもエラーを返しません。 重要: 現在の実装では、認証局そのものは検証されません。                                                                             | true              |
 
 #### コールバック関数
 
@@ -194,9 +194,9 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 | プロパティ    | 型    | 説明                                              | デフォルト     |
 | -------- | ---- | ----------------------------------------------- | --------- |
-| name     | テキスト | 認証に使用する名前                                       | undefined |
-| password | テキスト | 認証に使用するパスワード                                    | undefined |
-| method   | テキスト | 認証方法: "basic", "digest", "auto" | "auto"    |
+| name     | Text | 認証に使用する名前                                       | undefined |
+| password | Text | 認証に使用するパスワード                                    | undefined |
+| method   | Text | 認証方法: "basic", "digest", "auto" | "auto"    |
 
 <!-- END REF -->
 
@@ -219,7 +219,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 | 引数   | 型          |     | 説明                                                |
 | ---- | ---------- | :-: | ------------------------------------------------- |
 | data | Text, Blob |  -> | 解析するデータ                                           |
-| 戻り値  | オブジェクト     |  <- | オブジェクト (各プロパティは、マルチパートの各データです) |
+| 戻り値  | Object     |  <- | オブジェクト (各プロパティは、マルチパートの各データです) |
 
 <!-- END REF -->
 
@@ -329,12 +329,12 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 
 `.errors` プロパティの内容は次の通りです:
 
-| プロパティ  |                                                                                           | 型      | 説明                  |
-| ------ | ----------------------------------------------------------------------------------------- | ------ | ------------------- |
-| errors |                                                                                           | コレクション | エラー発生時の 4Dエラースタック   |
-|        | [].errCode            | Number | 4Dエラーコード            |
-|        | [].message            | テキスト   | 4Dエラーの詳細            |
-|        | [].componentSignature | テキスト   | エラーを返した内部コンポーネントの署名 |
+| プロパティ  |                                                                                           | 型          | 説明                  |
+| ------ | ----------------------------------------------------------------------------------------- | ---------- | ------------------- |
+| errors |                                                                                           | Collection | エラー発生時の 4Dエラースタック   |
+|        | [].errCode            | Number     | 4Dエラーコード            |
+|        | [].message            | Text       | 4Dエラーの詳細            |
+|        | [].componentSignature | Text       | エラーを返した内部コンポーネントの署名 |
 
 <!-- END REF -->
 
@@ -397,10 +397,10 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 | プロパティ                       | 型      | 説明                                                                                                                                                                                                         |
 | --------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | .body       | バリアント  | レスポンスのボディ。 メッセージのデータ型は [`dataType`](#datatype) プロパティによって定義されています。 ボディがまだ受信されていない場合は未定義です。                                                                                                                  |
-| .headers    | オブジェクト | レスポンスのヘッダー。 ヘッダー名は小文字で返されます。 `<headername>.key` = value (同じ key が複数指定されている場合、*value* はコレクションでありえます) ヘッダーがまだ受信されていない場合は未定義です。 ヘッダーがまだ受信されていない場合は未定義です。                                   |
+| .headers    | Object | レスポンスのヘッダー。 ヘッダー名は小文字で返されます。 `<headername>.key` = value (同じ key が複数指定されている場合、*value* はコレクションでありえます) ヘッダーがまだ受信されていない場合は未定義です。 ヘッダーがまだ受信されていない場合は未定義です。                                   |
 | .status     | Number | レスポンスのステータスコード                                                                                                                                                                                             |
-| .statusText | テキスト   | ステータスコードを説明するメッセージ                                                                                                                                                                                         |
-| .rawHeaders | オブジェクト | レスポンスのヘッダー。 ヘッダー名はそのまま (大文字小文字を変えずに) 返されます。 `<headerName>.key` = value (同じ key が複数指定されている場合、*value* はコレクションでありえます) ヘッダーがまだ受信されていない場合は未定義です。 ヘッダーがまだ受信されていない場合は未定義です。 |
+| .statusText | Text   | ステータスコードを説明するメッセージ                                                                                                                                                                                         |
+| .rawHeaders | Object | レスポンスのヘッダー。 ヘッダー名はそのまま (大文字小文字を変えずに) 返されます。 `<headerName>.key` = value (同じ key が複数指定されている場合、*value* はコレクションでありえます) ヘッダーがまだ受信されていない場合は未定義です。 ヘッダーがまだ受信されていない場合は未定義です。 |
 
 <!-- END REF -->
 
@@ -484,7 +484,7 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 
 | 引数   | 型                              |     | 説明                                    |
 | ---- | ------------------------------ | :-: | ------------------------------------- |
-| time | 実数                             |  -> | レスポンスを待機する最長時間 (秒) |
+| time | Real                           |  -> | レスポンスを待機する最長時間 (秒) |
 | 戻り値  | 4D.HTTPRequest |  <- | HTTPRequest オブジェクト                    |
 
 <!-- END REF -->
