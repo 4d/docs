@@ -21,7 +21,7 @@ La commande `VP Get stylesheets` <!-- REF #_method_.VP Get stylesheets.Summary -
 
 In _vpAreaName_, pass the name property of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
 
-You can define where to get the style sheets in the optional _sheet_ parameter using the sheet index (counting begins at 0) or with the following constants:
+Vous pouvez définir où lire les feuilles de style via le paramètre _sheet_ en passant le numéro d'indice de la feuille (la numérotation commence à partir de 0) ou à l'aide des constantes suivantes :
 
 - `vk current sheet`
 - `vk workbook`
