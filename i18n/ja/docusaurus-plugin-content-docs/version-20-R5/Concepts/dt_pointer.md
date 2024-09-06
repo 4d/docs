@@ -85,9 +85,9 @@ $MyVar:="Goodbye"
  vPtrC:=->anotherObject
 ```
 
-| 演算  | シンタックス            | 戻り値 | 式             | 値    |
-| --- | ----------------- | --- | ------------- | ---- |
-| 等しい | Pointer = Pointer | ブール | vPtrA = vPtrB | true |
+| 演算  | シンタックス            | 戻り値     | 式             | 値    |
+| --- | ----------------- | ------- | ------------- | ---- |
+| 等しい | Pointer = Pointer | Boolean | vPtrA = vPtrB | true |
 
 ```
 	|	|||vPtrA = vPtrC	|False|
