@@ -33,10 +33,10 @@ Un plug-in peut être très simple, avec une seule routine effectuant une très 
 
 ## Comment créer un plug-in ?
 
-4D provides on GitHub an open-source [**plug-in SDK**](https://github.com/4d/4D-Plugin-SDK), containing the 4D Plugin API and the 4D Plugin Wizard:
+4D fournit sur GitHub un [**plug-in SDK**](https://github.com/4d/4D-Plugin-SDK) open-source, contenant l'API 4D Plugin et le 4D Plugin Wizard :
 
-- the [**4D Plugin API**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20API), written in C, adds more than 400 functions that help you to easily create your own plug-ins to add new functionnalities to your 4D application. Les fonctions du plug-in API de 4D gèrent toutes les interactions entre l'application 4D et votre plug-in.
-- The [**4D Plugin Wizard**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) is an essential tool that simplifies the task of developing 4D plug-ins. Il écrit le code dont 4D a besoin pour interagir correctement avec un plug-in et le charger, afin de vous concentrer sur votre propre code.
+- l'[**API 4D Plugin**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20API), écrite en C, propose plus de 400 fonctions qui vous aident à créer facilement vos propres plug-ins pour ajouter de nouvelles fonctionnalités à votre application 4D. Les fonctions de l'API 4D Plug-in gèrent toutes les interactions entre l'application 4D et votre plug-in.
+- L'assistant [**4D Plugin Wizard**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) est un outil essentiel qui simplifie la tâche de développer des plugins 4D. Il écrit le code dont 4D a besoin pour interagir correctement avec un plug-in et le charger, afin de vous concentrer sur votre propre code.
 
 ## Partager des plug-ins
 
