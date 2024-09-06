@@ -353,7 +353,7 @@ title: Transporter クラス
 <!-- REF #transporter.checkConnection().Params -->
 | 引数  | 型      |    | 説明                                                    |
 | --- | ------ |:--:| ----------------------------------------------------- |
-| 戻り値 | オブジェクト | <- | transporter オブジェクト接続のステータス|<!-- END REF -->
+| 戻り値 | Object | <- | transporter オブジェクト接続のステータス|<!-- END REF -->
 
 |
 
