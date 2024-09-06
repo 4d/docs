@@ -72,8 +72,8 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | 引数           | 型       |    | 説明                                             |
 | ------------ | ------- |:--:| ---------------------------------------------- |
 | path         | Text    | -> | ファイルパス                                         |
-| fileConstant | 整数      | -> | 4Dファイル定数                                       |
-| pathType     | 整数      | -> | `fk posix path` (デフォルト) または `fk platform path` |
+| fileConstant | Integer | -> | 4Dファイル定数                                       |
+| pathType     | Integer | -> | `fk posix path` (デフォルト) または `fk platform path` |
 | *            |         | -> | ホストデータベースのファイルを返すには * を渡します                    |
 | 戻り値          | 4D.File | <- | 新規ファイルオブジェクト|<!-- END REF -->
 
@@ -166,9 +166,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 <!--REF #FileClass.create().Params -->
-| 引数  | 型   |    | 説明                                                              |
-| --- | --- | -- | --------------------------------------------------------------- |
-| 戻り値 | ブール | <- | ファイルが正常に作成された場合に true、それ以外の場合は false|<!-- END REF -->
+| 引数  | 型       |    | 説明                                                              |
+| --- | ------- | -- | --------------------------------------------------------------- |
+| 戻り値 | Boolean | <- | ファイルが正常に作成された場合に true、それ以外の場合は false|<!-- END REF -->
 
 |
 
@@ -211,7 +211,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | ----------------- | --------- | -- | ------------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | エイリアスまたはショートカットの作成先フォルダー                          |
 | aliasName         | Text      | -> | エイリアスまたはショートカットの名称                                |
-| aliasType         | 整数        | -> | エイリアスリンクのタイプ                                      |
+| aliasType         | Integer   | -> | エイリアスリンクのタイプ                                      |
 | 戻り値               | 4D.File   | <- | エイリアスまたはショートカットのファイル参照|<!-- END REF -->
 
 |
@@ -322,7 +322,7 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 <!--REF #FileClass.getAppInfo().Params -->
 | 引数  | 型      |    | 説明                                                              |
 | --- | ------ | -- | --------------------------------------------------------------- |
-| 戻り値 | オブジェクト | <- | .exe/.dll のバージョンリソースや .plist ファイルの中身|<!-- END REF -->
+| 戻り値 | Object | <- | .exe/.dll のバージョンリソースや .plist ファイルの中身|<!-- END REF -->
 
 |
 
@@ -508,7 +508,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 <!--REF #FileClass.setAppInfo().Params -->
 | 引数   | 型      |    | 説明                                                                     |
 | ---- | ------ | -- | ---------------------------------------------------------------------- |
-| info | オブジェクト | -> | .exe/.dll のバージョンリソースや .plist ファイルに書き込むプロパティ|<!-- END REF -->
+| info | Object | -> | .exe/.dll のバージョンリソースや .plist ファイルに書き込むプロパティ|<!-- END REF -->
 
 |
 
@@ -624,12 +624,12 @@ $infoPlistFile.setAppInfo($info)
 
 
 <!--REF #FileClass.setText().Params -->
-| 引数          | 型    |    | 説明                                  |
-| ----------- | ---- | -- | ----------------------------------- |
-| text        | Text | -> | ファイルに保存するテキスト                       |
-| charSetName | Text | -> | 文字セットの名前                            |
-| charSetNum  | 整数   | -> | 文字セットの番号                            |
-| breakMode   | 整数   | -> | 改行の処理モード|<!-- END REF -->
+| 引数          | 型       |    | 説明                                  |
+| ----------- | ------- | -- | ----------------------------------- |
+| text        | Text    | -> | ファイルに保存するテキスト                       |
+| charSetName | Text    | -> | 文字セットの名前                            |
+| charSetNum  | Integer | -> | 文字セットの番号                            |
+| breakMode   | Integer | -> | 改行の処理モード|<!-- END REF -->
 
 
 |
