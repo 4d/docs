@@ -72,9 +72,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 | 引数           | 型                       |     | 説明                                                                |
 | ------------ | ----------------------- | :-: | ----------------------------------------------------------------- |
-| path         | テキスト                    |  -> | ファイルパス                                                            |
-| fileConstant | 整数                      |  -> | 4Dファイル定数                                                          |
-| pathType     | 整数                      |  -> | `fk posix path` (デフォルト) または `fk platform path` |
+| path         | Text                    |  -> | ファイルパス                                                            |
+| fileConstant | Integer                 |  -> | 4Dファイル定数                                                          |
+| pathType     | Integer                 |  -> | `fk posix path` (デフォルト) または `fk platform path` |
 | -            |                         |  -> | ホストデータベースのファイルを返すには \* を渡します                                      |
 | 戻り値          | 4D.File |  <- | 新規ファイルオブジェクト                                                      |
 
@@ -173,9 +173,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <!--REF #FileClass.create().Params -->
 
-| 引数  | 型   |    | 説明                                   |
-| --- | --- | -- | ------------------------------------ |
-| 戻り値 | ブール | <- | ファイルが正常に作成された場合に true、それ以外の場合は false |
+| 引数  | 型       |    | 説明                                   |
+| --- | ------- | -- | ------------------------------------ |
+| 戻り値 | Boolean | <- | ファイルが正常に作成された場合に true、それ以外の場合は false |
 
 <!-- END REF -->
 
@@ -220,8 +220,8 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | 引数                | 型                         |    | 説明                       |
 | ----------------- | ------------------------- | -- | ------------------------ |
 | destinationFolder | 4D.Folder | -> | エイリアスまたはショートカットの作成先フォルダー |
-| aliasName         | テキスト                      | -> | エイリアスまたはショートカットの名称       |
-| aliasType         | 整数                        | -> | エイリアスリンクのタイプ             |
+| aliasName         | Text                      | -> | エイリアスまたはショートカットの名称       |
+| aliasType         | Integer                   | -> | エイリアスリンクのタイプ             |
 | 戻り値               | 4D.File   | <- | エイリアスまたはショートカットのファイル参照   |
 
 <!-- END REF -->
@@ -337,7 +337,7 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 | 引数  | 型      |    | 説明                                                                                   |
 | --- | ------ | -- | ------------------------------------------------------------------------------------ |
-| 戻り値 | オブジェクト | <- | .exe/.dll のバージョンリソースや .plist ファイルの中身 |
+| 戻り値 | Object | <- | .exe/.dll のバージョンリソースや .plist ファイルの中身 |
 
 <!-- END REF -->
 
@@ -357,14 +357,14 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 | プロパティ            | 型    |
 | ---------------- | ---- |
-| InternalName     | テキスト |
-| ProductName      | テキスト |
-| CompanyName      | テキスト |
-| LegalCopyright   | テキスト |
-| ProductVersion   | テキスト |
-| FileDescription  | テキスト |
-| FileVersion      | テキスト |
-| OriginalFilename | テキスト |
+| InternalName     | Text |
+| ProductName      | Text |
+| CompanyName      | Text |
+| LegalCopyright   | Text |
+| ProductVersion   | Text |
+| FileDescription  | Text |
+| FileVersion      | Text |
+| OriginalFilename | Text |
 
 **.plist ファイルの場合に返されるオブジェクト**
 
@@ -433,7 +433,7 @@ ALERT($info.Copyright)
 | 引数                | 型                         |    | 説明              |
 | ----------------- | ------------------------- | -- | --------------- |
 | destinationFolder | 4D.Folder | -> | 宛先フォルダー         |
-| newName           | テキスト                      | -> | 移動先でのファイルの完全な名称 |
+| newName           | Text                      | -> | 移動先でのファイルの完全な名称 |
 | 戻り値               | 4D.File   | <- | 移動したファイル        |
 
 <!-- END REF -->
@@ -480,8 +480,8 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 | 引数      | 型                                                |    | 説明                                               |
 | ------- | ------------------------------------------------ | -- | ------------------------------------------------ |
-| mode    | テキスト                                             | -> | 開くモード: "read", "write", "append" |
-| options | オブジェクト                                           | -> | 開くオプション                                          |
+| mode    | Text                                             | -> | 開くモード: "read", "write", "append" |
+| options | Object                                           | -> | 開くオプション                                          |
 | 戻り値     | [4D.FileHandle](FileHandleClass) | <- | 新規の FileHandle オブジェクト                            |
 
 <!-- END REF -->
@@ -504,8 +504,8 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 | *オプション*           | 型               | 説明                                                                                        | デフォルト          |
 | ----------------- | --------------- | ----------------------------------------------------------------------------------------- | -------------- |
-| `.mode`           | テキスト            | 開くモード (上記の *mode* 参照)                                                  | "read"         |
-| `.charset`        | テキスト            | ファイルの読み取りや書き込みに使用される文字セット。 セットの標準名を使用します (たとえば、"ISO-8859-1" や "UTF-8") | "UTF-8"        |
+| `.mode`           | Text            | 開くモード (上記の *mode* 参照)                                                  | "read"         |
+| `.charset`        | Text            | ファイルの読み取りや書き込みに使用される文字セット。 セットの標準名を使用します (たとえば、"ISO-8859-1" や "UTF-8") | "UTF-8"        |
 | `.breakModeRead`  | Text または Number | ファイルの読み取り時に使用される改行の処理モード (下記参照)                                        | "native" または 1 |
 | `.breakModeWrite` | Text または Number | ファイルの書き込み時に使用される改行の処理モード (下記参照)                                        | "native" または 1 |
 
@@ -561,7 +561,7 @@ $fhandle:=$f.open("read")
 
 | 引数      | 型                       |    | 説明            |
 | ------- | ----------------------- | -- | ------------- |
-| newName | テキスト                    | -> | ファイルの新しい完全な名称 |
+| newName | Text                    | -> | ファイルの新しい完全な名称 |
 | 戻り値     | 4D.File | <- | 名称変更されたファイル   |
 
 <!-- END REF -->
@@ -608,7 +608,7 @@ $fhandle:=$f.open("read")
 
 | 引数   | 型      |    | 説明                                                                                          |
 | ---- | ------ | -- | ------------------------------------------------------------------------------------------- |
-| info | オブジェクト | -> | .exe/.dll のバージョンリソースや .plist ファイルに書き込むプロパティ |
+| info | Object | -> | .exe/.dll のバージョンリソースや .plist ファイルに書き込むプロパティ |
 
 <!-- END REF -->
 
@@ -628,15 +628,15 @@ $fhandle:=$f.open("read")
 
 | プロパティ            | 型    | 説明                                                                   |
 | ---------------- | ---- | -------------------------------------------------------------------- |
-| InternalName     | テキスト |                                                                      |
-| ProductName      | テキスト |                                                                      |
-| CompanyName      | テキスト |                                                                      |
-| LegalCopyright   | テキスト |                                                                      |
-| ProductVersion   | テキスト |                                                                      |
-| FileDescription  | テキスト |                                                                      |
-| FileVersion      | テキスト |                                                                      |
-| OriginalFilename | テキスト |                                                                      |
-| WinIcon          | テキスト | .icoファイルの Posixパス。 このプロパティは、4D が生成した実行ファイルにのみ適用されます。 |
+| InternalName     | Text |                                                                      |
+| ProductName      | Text |                                                                      |
+| CompanyName      | Text |                                                                      |
+| LegalCopyright   | Text |                                                                      |
+| ProductVersion   | Text |                                                                      |
+| FileDescription  | Text |                                                                      |
+| FileVersion      | Text |                                                                      |
+| OriginalFilename | Text |                                                                      |
+| WinIcon          | Text | .icoファイルの Posixパス。 このプロパティは、4D が生成した実行ファイルにのみ適用されます。 |
 
 `WinIcon` を除くすべてのプロパティにおいて、値として null または空テキストを渡すと、空の文字列がプロパティに書き込まれます。 テキストでない型の値を渡した場合には、文字列に変換されます。
 
@@ -734,12 +734,12 @@ $infoPlistFile.setAppInfo($info)
 
 <!--REF #FileClass.setText().Params -->
 
-| 引数          | 型    |    | 説明            |
-| ----------- | ---- | -- | ------------- |
-| text        | テキスト | -> | ファイルに保存するテキスト |
-| charSetName | テキスト | -> | 文字セットの名前      |
-| charSetNum  | 整数   | -> | 文字セットの番号      |
-| breakMode   | 整数   | -> | 改行の処理モード      |
+| 引数          | 型       |    | 説明            |
+| ----------- | ------- | -- | ------------- |
+| text        | Text    | -> | ファイルに保存するテキスト |
+| charSetName | Text    | -> | 文字セットの名前      |
+| charSetNum  | Integer | -> | 文字セットの番号      |
+| breakMode   | Integer | -> | 改行の処理モード      |
 
 <!-- END REF -->
 
