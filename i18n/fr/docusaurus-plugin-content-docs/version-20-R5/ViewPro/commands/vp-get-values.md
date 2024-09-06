@@ -16,14 +16,14 @@ title: VP Get values
 
 #### Description
 
-The `VP Get values` command <!-- REF #_method_.VP Get values.Summary --> retrieves the values from the designated _rangeObj_<!-- END REF -->.
+La commande `VP Get values` <!-- REF #_method_.VP Get values.Summary --> récupère les valeurs du _rangeObj_ désigné<!-- END REF -->.
 
-In _rangeObj_, pass a range whose values you want to retrieve. If _rangeObj_ includes multiple ranges, only the first range is used.
+Dans _rangeObj_, passez une plage dont vous souhaitez récupérer les valeurs. Si _rangeObj_ comprend plusieurs plages, seule la première plage est utilisée.
 
-The collection returned by `VP Get values` contains a two-dimensional collection:
+La collection retournée par `VP Get values` contient une collection bidimensionnelle:
 
 - Chaque élément de la collection de premier niveau représente une ligne et contient une sous-collection de valeurs
-- Chaque sous-collection contient des valeurs des cellule de la ligne. Values can be Integer, Real, Boolean, Text, Object, or Null. Si une valeur est de type date ou heure, elle est retournée en un objet dont les propriétés sont les suivantes :
+- Chaque sous-collection contient des valeurs des cellule de la ligne. Les valeurs peuvent être de type entier long, réel, booléen, texte, objet ou null. Si une valeur est de type date ou heure, elle est retournée en un objet dont les propriétés sont les suivantes :
 
 | Propriété | Type | Description                                                               |
 | --------- | ---- | ------------------------------------------------------------------------- |
