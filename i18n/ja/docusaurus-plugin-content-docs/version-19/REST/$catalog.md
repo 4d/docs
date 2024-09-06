@@ -214,18 +214,18 @@ title: '$catalog'
 
 公開されている各属性について、次のプロパティが返されます:
 
-| プロパティ       | 型      | 説明                                                                                                                            |
-| ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| name        | String | 属性の名称                                                                                                                         |
-| kind        | String | 属性タイプ (ストレージ (storage) またはリレートエンティティ (relatedEntity))                                                                         |
-| fieldPos    | Number | データベーステーブルのフィールド番号                                                                                                            |
-| scope       | String | 属性のスコープ (公開 (public) に設定されている属性のみ返されます)                                                                                       |
-| indexed     | String | 属性に **インデックス** が設定されていれば、このプロパティは true を返します。 それ以外の場合には、このプロパティは表示されません。                                                      |
-| type        | String | 属性タイプ (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, word)、または、N->1 リレーション属性の場合はリレーション先のデータクラス |
-| identifying | ブール    | 属性がプライマリーキーの場合、プロパティは true を返します。 それ以外の場合には、このプロパティは表示されません。                                                                  |
-| path        | String | relatedEntity 属性の場合はデータクラス名、relatedEntities 属性の場合はリレーション名                                                                     |
-| foreignKey  | String | relatedEntity 属性の場合、リレート先の属性名                                                                                                 |
-| inverseName | String | relatedEntity または relatedEntities 属性の逆方向リレーション名                                                                               |
+| プロパティ       | 型       | 説明                                                                                                                            |
+| ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| name        | String  | 属性の名称                                                                                                                         |
+| kind        | String  | 属性タイプ (ストレージ (storage) またはリレートエンティティ (relatedEntity))                                                                         |
+| fieldPos    | Number  | データベーステーブルのフィールド番号                                                                                                            |
+| scope       | String  | 属性のスコープ (公開 (public) に設定されている属性のみ返されます)                                                                                       |
+| indexed     | String  | 属性に **インデックス** が設定されていれば、このプロパティは true を返します。 それ以外の場合には、このプロパティは表示されません。                                                      |
+| type        | String  | 属性タイプ (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, word)、または、N->1 リレーション属性の場合はリレーション先のデータクラス |
+| identifying | Boolean | 属性がプライマリーキーの場合、プロパティは true を返します。 それ以外の場合には、このプロパティは表示されません。                                                                  |
+| path        | String  | relatedEntity 属性の場合はデータクラス名、relatedEntities 属性の場合はリレーション名                                                                     |
+| foreignKey  | String  | relatedEntity 属性の場合、リレート先の属性名                                                                                                 |
+| inverseName | String  | relatedEntity または relatedEntities 属性の逆方向リレーション名                                                                               |
 
 
 ### プライマリーキー
