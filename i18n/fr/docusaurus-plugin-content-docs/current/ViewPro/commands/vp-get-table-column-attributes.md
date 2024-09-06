@@ -23,11 +23,11 @@ title: VP Get column attributes
 | tableName  | Text    | -> | Nom de table                                                                |                  |
 | column     | Integer | -> | Numéro de colonne de la table                                               |                  |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |                  |
-| Résultat   | Object  | <- | Attributes of the *column*                                                  | <!-- END REF --> |
+| Résultat   | Object  | <- | Numéro d'indice de *column*                                                 | <!-- END REF --> |
 
 #### Description
 
-The `VP Get table column attributes` command <!-- REF #_method_.VP Get table column attributes.Summary -->returns the current attributes of the specified *column* in the *tableName*<!-- END REF -->.
+La commande `VP Récupère les attributs de colonne de la table` <!-- REF #_method_.VP Récupère les attributs de la colonne de la table. ummary -->retourne les attributs courants de la colonne spécifiée *column* dans la table *tableName*<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
@@ -35,7 +35,7 @@ Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécif
 
 > La numérotation démarre à 0.
 
-The command returns an object describing the current attributes of the *column*:
+La commande retourne un objet décrivant les attributs courants de la *column*:
 
 | Propriété           | Type    | Description                                                                                                                                     |
 | ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -45,7 +45,7 @@ The command returns an object describing the current attributes of the *column*:
 | footerFormula       | text    | Formule de pied de colonne.                                                                                                     |
 | filterButtonVisible | boolean | True if the table column's filter button is displayed, False otherwise.                                                         |
 
-If *tableName* is not found or if *column* index is higher than the number of columns, the command returns **null**.
+Si *tableName* n'est pas trouvé ou si l'index *column* est supérieur au nombre de colonnes, la commande retourne **null**.
 
 #### Exemple
 
