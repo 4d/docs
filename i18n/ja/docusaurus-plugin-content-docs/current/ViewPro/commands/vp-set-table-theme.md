@@ -19,8 +19,8 @@ title: VP SET TABLE THEME
 
 | 引数         | 型                                                                                 |    | 説明                      |                  |
 | ---------- | --------------------------------------------------------------------------------- | -- | ----------------------- | ---------------- |
-| vpAreaName | テキスト                                                                              | -> | 4D View Pro フォームオブジェクト名 |                  |
-| tableName  | テキスト                                                                              | -> | Table name              |                  |
+| vpAreaName | Text                                                                              | -> | 4D View Pro フォームオブジェクト名 |                  |
+| tableName  | Text                                                                              | -> | Table name              |                  |
 | options    | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | -> | 設定する表テーマのプロパティ          | <!-- END REF --> |
 
 #### 説明
