@@ -5,7 +5,7 @@ title: Uso de procesos web apropiativos
 
 El servidor web de 4D le permite aprovechar al máximo los ordenadores multinúcleo utilizando procesos web apropiativos en sus aplicaciones. Puede configurar su código relacionado con la web, incluyendo las etiquetas 4D, los métodos base Web o las funciones de clase REST de ORDA para que se ejecuten simultáneamente en tantos núcleos como sea posible.
 
-For in-depth information on preemptive process in 4D, please refer to the [Preemptive Processes](../Develop/preemptive.md) section.
+Para obtener información detallada sobre el proceso apropiativo en 4D, por favor consulte la sección [Procesos apropiativos](../Develop/preemptive.md).
 
 ## Disponibilidad del modo apropiativo para los procesos web
 

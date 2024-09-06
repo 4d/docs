@@ -285,23 +285,29 @@ Déclencher l'action de déconnexion d'une session utilisateur Web a les effets 
 - la licence 4D associée est libérée,
 - le `Session.storage` est conservé jusqu'à ce que le délai d'inactivité de la session Web soit atteint (au moins une heure). Pendant cette période après une déconnexion, si l'utilisateur se connecte à nouveau, la même session est réutilisée et l'objet partagé `Session.storage` est disponible avec son contenu actuel.
 
-## À propos de l'utilisation de la licence pour le rendu
+## Utilisation de licences pour le rendu
 
 In default mode when any page is rendered, or in "force login" mode when a page handling data or calling a function is rendered, you must have an available license, as rendering Qodly forms targets the project database's main web server.
 
-### URL Schemes
+### Schemas d'URL
 
-Qodly Studio's URL scheme configuration (HTTP and HTTPS) determines how many licenses are retained when rendering Qodly forms. With the appropriate configuration, you can avoid unnecessary license retaining.
+La configuration de schéma d'URL de Qodly Studio (HTTP et HTTPS) influe sur le nombre de licences qui sont prises lors du rendu des pages Qodly. Avec une configuration appropriée, vous pouvez éviter la consommation inutile de licences.
 
-Comme expliqué dans la section [configuration](#configuration), le serveur Web WebAdmin fournit un accès sécurisé à Qodly Studio. D'autre part, le [renderer](#rendering-webforms) communique avec le serveur web 4D de la base de données en utilisant des requêtes REST. As such, it behaves like a conventional 4D Client.
+Comme expliqué dans la section [configuration](#configuration), le serveur Web WebAdmin fournit un accès sécurisé à Qodly Studio. D'autre part, le [moteur de rendu](#rendering-webforms) communique avec le serveur web 4D de la base de données en utilisant des requêtes REST. En tant que tel, il se comporte comme un client 4D conventionnel.
 
-If you run the renderer from the Qodly Studio and these two web servers are not reached through the same URL scheme (HTTP or HTTPS), it might lead to wrong licence counting.
+Si vous exécutez le moteur de rendu depuis Qodly Studio et que ces deux serveurs Web ne sont pas accessibles via le même schéma d'URL (HTTP ou HTTPS), cela peut entraîner un décompte de licence incorrect.
+
+:::info
+
+Using different schemes might also lead to [session](sessions.md) issues, such as losing [privileges](../ORDA/privileges.md) after a page refresh.
+
+:::
 
 #### Exemple
 
 1. Vous exécutez Qodly Studio sur un schéma d'URL HTTPS (par exemple, `https://127.0.0.1:7443/studio/`)
 
-2. The web server of your database is started only on an HTTP port.
+2. Le serveur web de votre base de données est démarré uniquement sur un port HTTP.
 
 ![alt-text](../assets/en/WebServer/schemes.png)
 
@@ -309,32 +315,32 @@ If you run the renderer from the Qodly Studio and these two web servers are not 
 
 ![alt-text](../assets/en/WebServer/render-button.png)
 
-As a result, two licenses are retained.
+En conséquence, deux licences sont consommées.
 
 :::note
 
-You can enable/disable the display of the renderer pop over using a Qodly Studio user setting.
+Vous pouvez activer/désactiver l'affichage de la fenêtre "pop over" de rendu en utilisant un paramètre utilisateur de Qodly Studio.
 
 :::
 
-### SameSite attribute
+### Attribut SameSite
 
-The behavior previously described is due to the session cookie of the 4D web server. Ce cookie de session a un attribut `SameSite` qui détermine si le cookie de session est envoyé au serveur web.
+Le comportement précédemment décrit est dû au cookie de session du serveur web 4D. Ce cookie de session a un attribut `SameSite` qui détermine si le cookie de session est envoyé au serveur web.
 
 Si la valeur de l'attribut `SameSite` est `Strict` (par défaut), le cookie de session n'est pas envoyé au serveur web, donc une nouvelle session est ouverte à chaque fois qu'une page est affichée ou rafraîchie.
 
 Pour plus d'informations sur l'attribut `SameSite`, consultez [cet article de blog](https://blog.4d.com/get-ready-for-the-new-SameSite-and-secure-attributes-for-cookies/).
 
-### Recommendations
+### Recommandations
 
-To avoid using more licenses than necessary, we recommend doing one of the following:
+Pour éviter d'utiliser plus de licences que nécessaire, nous vous recommandons d'effectuer l'une des actions suivantes :
 
 - Run the renderer on another browser tab (by entering the rendered URL of your Qodly page: `IP:port/$lib/renderer/?w=QodlyPageName`).
-- Ensure the Qodly Studio and your database are reached on the same URL scheme.
+- Assurez-vous que Qodly Studio et votre base de données sont accessibles sur le même schéma d'URL.
 - Utilisez la valeur `Lax` pour le [cookie de session](webServerConfig.md#session-cookie-samesite) du serveur web de la base de données de votre projet.
 
 ## Hello, World
 
-This 5-minute video provides a "Hello World" example and covers how to enable access to the studio, create a basic interface, and configure an event that greets the user by their name:
+Cette vidéo de 5 minutes fournit un exemple de "Hello World" et explique comment autoriser l'accès au studio, créer une interface de base, et configurer un événement qui accueille l'utilisateur par son nom :
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GwIdic4OhPQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>

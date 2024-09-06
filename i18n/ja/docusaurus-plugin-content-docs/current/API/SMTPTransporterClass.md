@@ -43,7 +43,7 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 
 <!-- REF #_command_.SMTP New transporter.Params -->
 
-| 引数     | タイプ                                |     | 説明                                                  |
+| 引数     | 型                                  |     | 説明                                                  |
 | ------ | ---------------------------------- | :-: | --------------------------------------------------- |
 | server | Object                             |  -> | メールサーバー情報                                           |
 | 戻り値    | 4D.SMTPTransporter |  <- | [SMTP transporter object](#smtp-transporter-オブジェクト) |
@@ -119,7 +119,7 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
 
-| 引数     | タイプ                                |     | 説明                                                  |
+| 引数     | 型                                  |     | 説明                                                  |
 | ------ | ---------------------------------- | :-: | --------------------------------------------------- |
 | server | Object                             |  -> | メールサーバー情報                                           |
 | 戻り値    | 4D.SMTPTransporter |  <- | [SMTP transporter object](#smtp-transporter-オブジェクト) |
@@ -210,7 +210,7 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 
 <!-- REF #SMTPTransporterClass.send().Params -->
 
-| 引数   | タイプ    |     | 説明                                           |
+| 引数   | 型      |     | 説明                                           |
 | ---- | ------ | :-: | -------------------------------------------- |
 | mail | Object |  -> | 送信する [メール](EmailObjectClass.md#email-オブジェクト) |
 | 戻り値  | Object |  <- | SMTP ステータス                                   |
@@ -231,7 +231,7 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 
 この関数は、SMTP ステータスを表すオブジェクトを返します。 このオブジェクトには、次のプロパティが格納されることがあります:
 
-| プロパティ      | タイプ     | 説明                                                         |
+| プロパティ      | 型       | 説明                                                         |
 | ---------- | ------- | ---------------------------------------------------------- |
 | success    | boolean | 送信に成功した場合は true、それ以外は false                                |
 | status     | number  | SMTPサーバーから返されたコード (メール処理に関係ない問題の場合には 0) |

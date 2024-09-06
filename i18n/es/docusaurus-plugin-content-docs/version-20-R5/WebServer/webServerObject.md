@@ -34,15 +34,15 @@ $nbSrv:=WEB Server list.length
 //el valor de $nbSrv es 1
 ```
 
-To instantiate a web server object, call the [`WEB Server`](API/WebServerClass.md#web-server) command:
+Para instanciar un objeto servidor web, llame al comando [`WEB Server`](API/WebServerClass.md#web-server):
 
 ```4d
-	//create an object variable of the 4D.WebServer class
+//crear una variable objeto de la clase 4D.WebServer
 var webServer : 4D.WebServer 
-	//call the web server from the current context
+	//llamar al servidor web desde el contexto actual
 webServer:=WEB Server  
 
-	//equivalent to
+	//equivalente a
 webServer:=WEB Server(Web server database)
 ```
 
@@ -55,9 +55,9 @@ también se puede utilizar:
 
 ```4d
 var webServer : 4D.WebServer 
-	//call the host web server from a component  
+	//llamar al servidor web local desde un componente  
 webServer:=WEB Server(Web server host database)  
-	//call the target web server
+	//llamar al servidor web objetivo
 webServer:=WEB Server(Web server receiving request)  
 ```
 
@@ -97,7 +97,7 @@ Estas propiedades son definidas:
 - Si el servidor web no se inicia, las propiedades contienen los valores que se utilizarán en el próximo inicio del servidor web.
 - Si se inicia el servidor web, las propiedades contienen los valores reales utilizados por el servidor web (la configuración predeterminada podría haber sido anulada por el parámetro `settings` de la función [`.start()`](API/WebServerClass.md#start).
 
-> _isRunning_, _name_, _openSSLVersion_, and _perfectForwardSecrecy_ are read-only properties that cannot be predefined in the `settings` object parameter for the [`start()`](API/WebServerClass.md#start) function.
+> _isRunning_, _name_, _openSSLVersion_, y _perfectForwardSecrecy_ son propiedades de sólo lectura que no pueden predefinirse en el parámetro del objeto `settings` para la función [`start()`](API/WebServerClass.md#start).
 
 ## Alcance de los comandos 4D Web
 

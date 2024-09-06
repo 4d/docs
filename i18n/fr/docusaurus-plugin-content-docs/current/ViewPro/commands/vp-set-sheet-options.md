@@ -17,11 +17,11 @@ title: VP SET SHEET OPTIONS
 
 #### Description
 
-The `VP SET SHEET OPTIONS` command <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->allows defining various sheet options of the *vpAreaName* area<!-- END REF -->.
+La commande `VP SET SHEET OPTIONS` <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->permet de définir différentes options de feuille de la zone *vpAreaName* <!-- END REF -->.
 
 Pass the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
-Pass an object containing definitions for the options to set in the *sheetOptions* parameter. To view the full list of the available options, see the [Sheet Options](../configuring.md#sheet-options) paragraph.
+Passez un objet contenant les options à définir dans le paramètre *sheetOptions*. Pour consulter la liste complète des options disponibles, consultez le paragraphe [Options feuille](../configuring.md#sheet-options).
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet (counting begins at 0). Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante à l'aide de la constante suivante :
 
@@ -32,14 +32,14 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet (cou
 Vous souhaitez protéger toutes les cellules à l'exception de la plage C5:D10 :
 
 ```4d
-// Activate protection on the current sheet
+// Activer la protection sur la feuille courante
 var $options : Object
   
 $options:=New object
 $options.isProtected:=True
 VP SET SHEET OPTIONS("ViewProArea";$options)
   
-// mark cells C5:D10 as 'unlocked'
+// marquer les cellules C5:D10 comme 'déverrouillées'
 VP SET CELL STYLE(VP Cells("ViewProArea";2;4;2;6);New object("locked";False))
 ```
 
@@ -49,17 +49,17 @@ Vous souhaitez protéger votre document pendant que vos utilisateurs redimension
 
 ```4d
 var $options : Object
-  
+
 $options:=New object
-// Activate protection
+// Activer la protection
 $options.isProtected:=True
 $options.protectionOptions:=New object
-// Allow user to resize rows
+// Permettre à l'utilisateur de redimensionner les lignes
 $options.protectionOptions.allowResizeRows=True;
-// Allow user to resize columns
+// Permettre à l'utilisateur de redimensionner les colonnes
 $options.protectionOptions.allowResizeColumns=True;
-    
-// Apply protection on the current sheet
+
+// Appliquer la protection à la feuille courante
 VP SET SHEET OPTIONS("ViewProArea";$options)
 ```
 
@@ -71,7 +71,7 @@ Vous souhaitez personnaliser la couleur des onglets, des lignes figées, du quad
 var $options : Object
    
 $options:=New object
-// Customize color of Sheet 1 tab
+// Personnaliser la couleur de l'onglet de la feuille 1
 $options.sheetTabColor:="Black"
 $options.gridline:=New object("color";"Purple")
 $options.selectionBackColor:="rgb(255,128,0,0.4)"
@@ -80,12 +80,12 @@ $options.frozenlineColor:="Gold"
    
 VP SET SHEET OPTIONS("ViewProArea";$options;0)
  
-// Customize color of Sheet 2 tab
+// Personnaliser la couleur de l'onglet de la feuille 2
 $options.sheetTabColor:="red"
    
 VP SET SHEET OPTIONS("ViewProArea";$options;1)
  
-// Customize color of Sheet 3 tab
+// Personnaliser la couleur de l'onglet de la feuille 3
 $options.sheetTabColor:="blue"
   
 VP SET SHEET OPTIONS("ViewProArea";$options;2)

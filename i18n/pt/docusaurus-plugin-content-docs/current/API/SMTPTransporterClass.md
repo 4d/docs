@@ -188,7 +188,7 @@ The `.keepAlive` property contains <!-- REF #SMTPTransporterClass.keepAlive.Summ
 
 A coleção SMTP é automaticamente fechada:
 
-- when the `transporter` object is destroyed if the `.keepAlive` property is true,
+- quando o objeto `transporter` é destruído se a propriedade `.keepAlive` for true,
 - after each `.send( )` function execution if the `.keepAlive` property is set to false.
 
 <!-- INCLUDE transporter.logFile.Desc -->

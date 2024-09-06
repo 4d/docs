@@ -121,7 +121,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 `roles.json` ファイルの構文は次のとおりです:
 
-| プロパティ名      |                 |               | タイプ                        | 必須 | 説明                                                                 |
+| プロパティ名      |                 |               | 型                          | 必須 | 説明                                                                 |
 | ----------- | --------------- | ------------- | -------------------------- | -- | ------------------------------------------------------------------ |
 | privileges  |                 |               | `privilege` オブジェクトのコレクション  | ○  | 定義された権限のリスト                                                        |
 |             | \[].privilege  |               | String                     |    | アクセス権の名称                                                           |
@@ -129,7 +129,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 | roles       |                 |               | `role` オブジェクトのコレクション       |    | 定義されたロールのリスト                                                       |
 |             | \[].role       |               | String                     |    | ロール名                                                               |
 |             | \[].privileges |               | String の Collection        |    | 内包する権限名のリスト                                                        |
-| permissions |                 |               | Object                     | ○  | 設定されたパーミッションのリスト                                                   |
+| permissions |                 |               | オブジェクト                     | ○  | 設定されたパーミッションのリスト                                                   |
 |             | allowed         |               | `permission` オブジェクトのコレクション |    | 許可されたパーミッションのリスト                                                   |
 |             |                 | \[].applyTo  | String                     | ○  | 対象の [リソース](#リソース) 名                                                |
 |             |                 | \[].type     | String                     | ○  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method" |

@@ -14,8 +14,8 @@ Pour créer un nouveau projet :
 1. Lancez 4D ou 4D Server.
 
 2. Effectuez l'une des opérations suivantes :
-   - Select **New > Project...** from the **File** menu: ![](../assets/en/getStart/projectCreate1.png)
-   - (4D only) Select **Project...** from the **New** toolbar button:<p>![](../assets/en/getStart/projectCreate2.png)</p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
+   - Sélectionnez **Nouveau > Projet...** dans le menu **Fichier** : ![](../assets/en/getStart/projectCreate1.png)
+   - (uniquement pour 4D) Sélectionnez **Projet...** dans le bouton de la barre d'outils **Nouveau** :<p>![](../assets/en/getStart/projectCreate2.png)</p>Une boîte de dialogue **Enregistrer** standard apparaît afin que vous puissiez choisir le nom et l'emplacement du dossier principal du projet 4D.
 
 3. Saisissez le nom du dossier de projet et cliquez sur **Sauvegarder**. Ce nom sera utilisé :
 
@@ -72,7 +72,7 @@ Outre les options standard du système, la boîte de dialogue *Ouvrir* de 4D pro
 
 ### Ouvrir un projet avec un fichier 4DLink
 
-You can use a [`.4DLink` file](#about-4DLink-files) to launch the 4D application and open the target 4D project. Il existe deux façons de procéder :
+Vous pouvez utiliser un [fichier `.4DLink`](#about-4DLink-files) pour lancer l'application 4D et ouvrir le projet 4D cible. Il existe deux façons de procéder :
 
 - double-cliquer ou glisser-déposer le fichier `.4DLink` sur l'application 4D
 - aller sur **Fichier** > **Ouvrir projets récents** et sélectionner un projet

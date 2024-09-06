@@ -268,7 +268,7 @@ The `.offset` property returns <!-- REF #FileHandleClass.offset.Summary -->the c
 
 Setting the `.offset` will change its current value at the moment of the next read or write operation.
 
-- If the passed value is negative, the `.offset` is set to the start of the file (zero).
+- Se o valor passado for negativo, o `.offset` é definido para o início do arquivo (zero).
 - If the passed value is higher than the size of the file,  the `.offset` is set to the end of the file (size of file).
 
 Essa propriedade é **leitura/escrita**.

@@ -15,9 +15,9 @@ title: VP ADD SELECTION
 
 #### Description
 
-The `VP ADD SELECTION` command <!-- REF #_method_.VP ADD SELECTION.Summary -->adds the specified cells to the currently selected cells<!-- END REF -->.
+La commande `VP ADD SELECTION` <!-- REF #_method_.VP ADD SELECTION.Summary -->ajoute les cellules spécifiées aux cellules actuellement sélectionnées<!-- END REF -->.
 
-In *rangeObj*, pass a range object of cells to add to the current selection.
+Dans *rangeObj*, passez un objet plage de plusieurs cellules à ajouter à la sélection courante.
 
 > La cellule active n'est pas modifiée.
 

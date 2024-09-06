@@ -10,40 +10,40 @@ title: Éditeur de formulaires
 
 L’éditeur de formulaires affiche chaque formulaire JSON ouvert dans sa propre fenêtre, dotée d’une barre d’outils et d’une barre d’objets. Vous pouvez ouvrir plusieurs formulaires en même temps.
 
-### Display options
+### Options d'affichage
 
-You can show or hide several interface elements on the current page of the form:
+Vous pouvez afficher ou masquer plusieurs éléments de l'interface dans la page courante du formulaire :
 
-- **Inherited Form**: Inherited form objects (if there is an [inherited form](forms.md#inherited-forms)).
-- **Page 0**: Objects from [page 0](forms.md#form-pages). Cette option vous permet de mieux visualiser et distinguer les objets de la page courante et ceux de la page 0.
-- **Paper**: Borders of the printing page, which are shown as gray lines. This element can only be displayed by default in ["for printing" type](properties_FormProperties.md#form-type) forms.
-- **Rulers**: Rulers of the Form editor’s window.
-- **Markers**: Output control lines and associated markers that show the limits of the form’s different areas. This element can only be displayed by default in [list forms](properties_FormProperties.md#form-type).
-- **Marker Labels**: Marker labels, available only when the output control lines are displayed. This element can only be displayed by default in [list forms](properties_FormProperties.md#form-type).
-- **Limits**: Form’s limits. Lorsque cette option est sélectionnée, le formulaire est affiché dans l’éditeur tel qu’il apparaîtra en mode Application. Cette possibilité est particulièrement intéressante pour ajuster un formulaire sans devoir tester le mode Application pour visualiser le résultat.
+- **Formulaire hérité** : Objets du formulaire hérité (s'il y a un [formulaire hérité](forms.md#inherited-forms)).
+- **Page 0** : Objets de la [page 0](forms.md#form-pages). Cette option vous permet de mieux visualiser et distinguer les objets de la page courante et ceux de la page 0.
+- **Papier** : Contours de la page d'impression, qui sont affichés sous forme de filets grisés. Cet élément peut être affiché par défaut dans les formulaires de type [impression](properties_FormProperties.md#form-type).
+- **Règle** : Règles de la fenêtre de l’éditeur de formulaire.
+- **Taquets** : Lignes de contrôle de sortie et taquets associés qui indiquent les limites des différentes zones du formulaire. Cet élément peut être affiché par défaut dans les formulaires de type ["liste"](properties_FormProperties.md#form-type).
+- **Libellés des taquets** : Libellés des taquets, disponibles uniquement lorsque les lignes de contrôle de sortie sont affichées. Cet élément peut être affiché par défaut dans les formulaires de type ["liste"](properties_FormProperties.md#form-type).
+- **Limites** : Limites du formulaire. Lorsque cette option est sélectionnée, le formulaire est affiché dans l’éditeur tel qu’il apparaîtra en mode Application. Cette possibilité est particulièrement intéressante pour ajuster un formulaire sans devoir tester le mode Application pour visualiser le résultat.
 
-> The [**Size Based on**](properties_FormSize.md#size-based-on), [**Hor margin**](properties_FormSize.md#hor-margin) and [**Vert margin**](properties_FormSize.md#vert-margin) settings of the form properties affect the form’s limits. Les limites du formulaire sont calculées en fonction des objets qui le composent. Lorsque vous déplacez ou agrandissez un objet placé près de la limite d’un formulaire, le rectangle de délimitation est modifié en conséquence.
+> Les paramètres [**basés sur la taille**](properties_FormSize.md#size-based-on), [**Marge Hor**](properties_FormSize.md#hor-margin) et [**Marge vert**](properties_FormSize.md#vert-margin) affectent les limites du formulaire. Les limites du formulaire sont calculées en fonction des objets qui le composent. Lorsque vous déplacez ou agrandissez un objet placé près de la limite d’un formulaire, le rectangle de délimitation est modifié en conséquence.
 
-#### Default display
+#### Affichage par défaut
 
-When a form is opened in the editor, interface elements are displayed or hidden by default, depending on:
+Lorsqu'un formulaire est ouvert dans l'éditeur, les éléments de l'interface sont affichés ou masqués par défaut, selon :
 
-- the **New form default display** options set in the Preferences - unchecked options cannot be displayed by default.
+- les options **Affichage par défaut à la création** définies dans les Préférences - les options non cochées ne peuvent pas être affichées par défaut.
 - le [type de formulaire](properties_FormProperties.md#form-type) courant :
-  - Markers and marker labels are always displayed by default on list forms
-  - Paper is displayed by default on "for printing" forms.
+  - Les marqueurs et les libellés de marqueurs sont toujours affichés par défaut pour les formulaires liste
+  - Le papier est affiché par défaut pour les formulaires impression.
 
-#### Display/Hide elements
+#### Afficher/Masquer les éléments
 
-You can display or hide elements at any moment in the Form editor’s current window by selecting **Display** from the **Form** menu or the Form editor's context menu:
+Vous pouvez afficher ou masquer des éléments à tout moment dans la fenêtre courante de l'éditeur de formulaires en sélectionnant **Afficher** dans le menu **Formulaire** ou le menu contextuel de l'éditeur de formulaires :
 
 ![](../assets/en/FormEditor/showHideElements.png)
 
-### Rulers
+### Règles
 
-Les règles situées sur le côté et en bas de cette fenêtre ont pour but de vous aider à placer les objets dans le formulaire. They can be [displayed or hidden](#display-options).
+Les règles situées sur le côté et en bas de la fenêtre ont pour but de vous aider à placer les objets dans le formulaire. Elles peuvent être [affichées ou masquées](#display-options).
 
-Select **Ruler definition...** from the **Form** menu to change measurement units so that the form displays inches, centimeters, or pixels.
+Sélectionnez **Définir l'unité...** dans le menu **Formulaire** pour changer l'unité de mesure afin que le formulaire affiche des pouces, des centimètres ou des pixels.
 
 ### Toolbar (Barre d’outils)
 
@@ -56,12 +56,12 @@ La barre d’outils comporte les éléments suivants :
 | Icône                                            | Nom                                                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------------------------------------------ | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](../assets/en/FormEditor/execute.png)         | Exécuter le formulaire                               | Permet de tester l’exécution du formulaire. Lorsque vous cliquez sur ce bouton, 4D ouvre une nouvelle fenêtre et affiche le formulaire dans son contexte (liste d’enregistrements pour un formulaire liste et enregistrement courant en page pour un formulaire détaillé). Le formulaire est exécuté dans le process principal.                                                          |
-| ![](../assets/en/FormEditor/selection.png)       | [Selection tool](#selecting-objects)                 | Allows selecting, moving and resizing form objects.<p>**Note**: When an object of the Text or Group Box type is selected, pressing the **Enter** key lets you switch to editing mode.</p>                                                                                                                                                                                                                   |
-| ![](../assets/en/FormEditor/zOrder.png)          | [Entry order](#data-entry-order)                     | Passe en mode “Ordre de saisie”, dans lequel il est possible de visualiser et de modifier l’ordre de saisie courant du formulaire. A noter que vous pouvez également visualiser l’ordre de saisie courant tout en travaillant dans le formulaire.                                                                                                                                                                           |
-| ![](../assets/en/FormEditor/moving.png)          | [Moving](#moving-objects)                            | Passe en mode “Déplacement”, dans lequel il est possible d’atteindre rapidement n’importe quelle partie du formulaire en le faisant directement glisser dans la fenêtre. Le curseur prend la forme d’une main. Ce mode de navigation est particulièrement utile en cas de zoom dans le formulaire.                                                                                                          |
+| ![](../assets/en/FormEditor/selection.png)       | [Outil de sélection](#selecting-objects)             | Permet la sélection, le déplacement et le redimensionnement des objets de formulaire.<p>**Note** : Lorsqu'un objet de type Texte ou Box Groupe est sélectionné, appuyez sur la touche **Entrée** pour passer en mode édition.</p>                                                                                                                                                                           |
+| ![](../assets/en/FormEditor/zOrder.png)          | [Ordre de saisie](#data-entry-order)                 | Passe en mode “Ordre de saisie”, dans lequel il est possible de visualiser et de modifier l’ordre de saisie courant du formulaire. A noter que vous pouvez également visualiser l’ordre de saisie courant tout en travaillant dans le formulaire.                                                                                                                                                                           |
+| ![](../assets/en/FormEditor/moving.png)          | [Déplacement](#déplacement-objets)                   | Passe en mode “Déplacement”, dans lequel il est possible d’atteindre rapidement n’importe quelle partie du formulaire en le faisant directement glisser dans la fenêtre. Le curseur prend la forme d’une main. Ce mode de navigation est particulièrement utile en cas de zoom dans le formulaire.                                                                                                          |
 | ![](../assets/en/FormEditor/zoom.png)            | [Zoom](#zoom)                                        | Permet de modifier l’échelle d’affichage du formulaire (100% par défaut). Vous pouvez passer en mode “Zoom” en cliquant sur le bouton loupe ou en cliquant directement sur la barre correspondant à l’échelle désirée. Cette fonction est détaillée dans le paragraphe précédent.                                                                                                        |
-| ![](../assets/en/FormEditor/alignment.png)       | [Alignment](#aligning-objects)                       | Ce bouton est associé à un menu permettant d’aligner les objets dans le formulaire. It is enabled (or not) depending on the objects selected.<p>Available only with CSS Preview None</p>                                                                                                                                                                                                                 |
-| ![](../assets/en/FormEditor/distribution.png)    | [Distribution](#distributing-objects)                | Ce bouton est associé à un menu permettant de répartir les objets dans le formulaire. It is enabled (or not) depending on the objects selected.<p>Available only with CSS Preview None</p>                                                                                                                                                                                                               |
+| ![](../assets/en/FormEditor/alignment.png)       | [Alignement](#aligning-objects)                      | Ce bouton est associé à un menu permettant d’aligner les objets dans le formulaire. It is enabled (or not) depending on the objects selected.<br/>Disabled if one selected object position is locked by a CSS property                                                                                                                                                                                   |
+| ![](../assets/en/FormEditor/distribution.png)    | [Distribution](#distributing-objects)                | Ce bouton est associé à un menu permettant de répartir les objets dans le formulaire. It is enabled (or not) depending on the objects selected.<br/>Disabled if one selected object position is locked by a CSS property                                                                                                                                                                                 |
 | ![](../assets/en/FormEditor/level.png)           | [Level](#layering-objects)                           | Ce bouton est associé à un menu permettant de répartir les objets dans le formulaire. Il est activé (ou non) en fonction des objets sélectionnés.                                                                                                                                                                                                                                                        |
 | ![](../assets/en/FormEditor/group.png)           | [Group/Ungroup](#grouping-objects)                   | Ce bouton est associé à un menu permettant de grouper et dégrouper la sélection d’objets du formulaire. Il est activé (ou non) en fonction des objets sélectionnés.                                                                                                                                                                                                                                      |
 | ![](../assets/en/FormEditor/displyAndPage.png)   | [Display and page management](forms.html#form-pages) | Cette zone permet de passer d’une page du formulaire à une autre et d’ajouter des pages. Pour naviguer parmi les pages du formulaire, cliquez sur les boutons fléchés ou cliquez sur la zone centrale et choisissez la page à afficher dans le menu qui apparaît. Si vous cliquez sur le bouton fléché de droite alors que vous êtes sur la dernière page du formulaire, 4D vous permet d’ajouter une page. |

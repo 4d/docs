@@ -3,7 +3,7 @@ id: print
 title: Imprimer
 ---
 
-## Settings
+## Propriétés
 
 Permet de définir des paramètres d'impression spécifiques pour le formulaire. Cette fonctionnalité est utile pour afficher les limites de pages d'impression dans l'éditeur de formulaire.
 

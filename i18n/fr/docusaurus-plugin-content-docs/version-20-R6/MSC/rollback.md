@@ -10,7 +10,7 @@ Pour que cette fonction soit accessible, il est impératif que l'application tra
 
 ![](../assets/en/MSC/MSC_rollback1.png)
 
-> If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in the **Values** column and a dialog requesting the passphrase or the data key is displayed if you click the **Rollback** button.
+> Si la base de données est chiffrée et si aucune clé de données valide correspondant au fichier d'historique ouvert n'a été fournie, les valeurs chiffrées ne s'affichent pas dans la colonne **Valeurs** et un dialogue s'affiche, demandant la saisie d'une phrase secrète ou de la clé de données, si vous cliquez sur le bouton **Revenir en arrière**.
 
 Le contenu et le fonctionnement de la liste des opérations sont identiques à ceux de la fenêtre [d’analyse d’activités](analysis.md).
 

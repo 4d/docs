@@ -210,8 +210,8 @@ Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge 
 *   date
 *   heure (stockée en nombre de milliseconds - réel)
 *   Null
-*   shared object
-*   shared collection
+*   objet partagé
+*   collection partagée
 
 :::note
 
@@ -2884,11 +2884,11 @@ Avec la méthode ***Flatten*** suivante :
 
 
 <!-- REF #collection.remove().Params -->
-| Paramètres | Type       |    | Description                                                                 |
-| ---------- | ---------- |:--:| --------------------------------------------------------------------------- |
-| index      | Integer    | -> | Élément à partir duquel la suppression peut commencer                       |
-| howMany    | Integer    | -> | Nombre d'éléments à supprimer, ou 1 élément si omis                         |
-| Résultat   | Collection | <- | Collection d'origine sans élément(s) supprimé(s)|<!-- END REF -->
+| Paramètres | Type       |    | Description                                                               |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------- |
+| index      | Integer    | -> | Élément à partir duquel la suppression peut commencer                     |
+| howMany    | Integer    | -> | Nombre d'éléments à supprimer, ou 1 élément si omis                       |
+| Résultat   | Collection | <- | Modified collection without removed element(s)|<!-- END REF -->
 
 
 |

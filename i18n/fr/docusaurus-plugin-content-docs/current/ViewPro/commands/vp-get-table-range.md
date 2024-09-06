@@ -29,7 +29,7 @@ title: VP Get table range
 
 The `VP Get table range` command <!-- REF #_method_.VP Get table range.Summary -->returns the range of *tableName*<!-- END REF -->.
 
-In *vpAreaName*, pass the name of the 4D View Pro area.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 In the *onlyData* parameter, you can pass one of the following constants to indicate if you want to get the data only:
 

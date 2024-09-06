@@ -32,7 +32,7 @@ title: プロジェクトのアーキテクチャー
   - Classes
   - DatabaseMethods
   - Methods
-  - Forms
+  - フォーム
   - TableForms
   - Triggers
 - DerivedData
@@ -115,7 +115,7 @@ title: プロジェクトのアーキテクチャー
 プロジェクトから削除されたメソッドやフォームがあれば、Trash フォルダーにはそれらが格納されます。 たとえば、つぎのフォルダーが格納されている場合があります:
 
 - Methods
-- Forms
+- フォーム
 - TableForms
 
 削除された要素はファイル名に括弧が付いた形でフォルダー内に置かれます (例: "(myMethod).4dm")。 フォルダーの構成は [Sources](#sources) フォルダーと同じです。

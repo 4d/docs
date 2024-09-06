@@ -90,7 +90,7 @@ El motor CEF tiene las siguientes limitaciones:
 
 :::note
 
-You can customize CEF area parameters by creating a local [4DCEFParameters.json configuration file](webAreaOverview#4dcefparametersjson).
+Puede personalizar los parámetros del área CEF creando un [archivo de configuración local 4DCEFParameters.json] (webArea_overview#4dcefparametersjson).
 
 :::
 

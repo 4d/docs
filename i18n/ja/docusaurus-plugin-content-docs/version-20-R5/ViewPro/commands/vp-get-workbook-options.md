@@ -11,7 +11,7 @@ title: VP Get workbook options
 
 <!-- REF #_method_.VP Get workbook options.Params -->
 
-| 引数         | タイプ    |    | 説明                      |                  |
+| 引数         | 型      |    | 説明                      |                  |
 | ---------- | ------ | -- | ----------------------- | ---------------- |
 | vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名 |                  |
 | 戻り値        | Object | <- | ワークブックオプションを格納したオブジェクト  | <!-- END REF --> |

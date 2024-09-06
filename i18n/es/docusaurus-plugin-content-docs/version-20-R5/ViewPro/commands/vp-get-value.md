@@ -22,7 +22,7 @@ En _rangeObj_, pase un rango cuyo valor desea recuperar.
 
 #### Objeto devuelto
 
-The object returned will contain the `value` property, and, in case of a js date value, a `time` property:
+El objeto devuelto contendrá la propiedad `value` y, en caso de un valor fecha js, una propiedad `time`:
 
 | Propiedad | Tipo                                       | Descripción                                                                     |
 | --------- | ------------------------------------------ | ------------------------------------------------------------------------------- |

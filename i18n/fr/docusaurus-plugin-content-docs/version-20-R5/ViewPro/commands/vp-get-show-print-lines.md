@@ -19,7 +19,7 @@ title: VP Get show print lines
 
 The `VP Get show print lines` command <!-- REF #_method_.VP Get show print lines.Summary -->returns `True` if the print preview lines are visible and `False` if they are hidden.<!-- END REF -->
 
-In _vpAreaName_, pass the name of the 4D View Pro area.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro.
 
 In _sheet_, pass the index of the target sheet. If _sheet_ is omitted, the command applies to the current sheet.
 

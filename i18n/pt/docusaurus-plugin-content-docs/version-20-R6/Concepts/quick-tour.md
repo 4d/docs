@@ -45,7 +45,7 @@ A palavra-chave `var` permite declarar variáveis de objeto de um tipo de classe
 
 ```4d
 var myPerson : cs.Person
-//variable of the Person user class
+//variável da classe usuário Person
 ```
 
 Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
@@ -226,11 +226,11 @@ $f.message() //displays "Hello world!"
 Opcionalmente, use a palavra-chave `Class constructor` para declarar as propriedades do objeto.
 
 ```4d
-//in the Rectangle.4dm file
-Class constructor ($width : Integer; $height : Integer)
+//no arquivo Rectangle.4dm
+Construtor de classe ($height: Integer; $width : Integer)
 This.height:=$height
 This.width:=$width
-This.name:="Rectangle"
+This.name:="Retângulo"
 ```
 
 Uma classe pode estender outra classe usando `Class extends <ClassName>`. Las superclasses se pueden llamar con el comando `Super`. Por exemplo:

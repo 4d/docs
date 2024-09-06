@@ -17,11 +17,11 @@ title: VP Get sheet name
 
 #### Description
 
-The `VP Get sheet name` command <!-- REF #_method_.VP Get sheet name.Summary -->returns the name of a sheet based on its index in _vpAreaName_.<!-- END REF -->
+La commande `VP Get sheet name` <!-- REF #_method_.VP Get sheet name.Summary -->retourne le nom d'une feuille basé sur son index dans _vpAreaName_.<!-- END REF -->
 
-In _vpAreaName_, pass the name of the 4D View Pro area.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro.
 
-In _sheet_, pass the index of the sheet whose name will be returned.
+Dans _sheet_, passez l'index de la feuille dont le nom sera retourné.
 
 Si l'index passé n'existe pas, la méthode retourne un nom vide.
 

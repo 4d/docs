@@ -9,7 +9,7 @@ title: VP Get cell style
 
 <!-- REF #_method_.VP Get cell style.Params -->
 
-| 引数       | タイプ    |    | 説明         |                  |
+| 引数       | 型      |    | 説明         |                  |
 | -------- | ------ | -- | ---------- | ---------------- |
 | rangeObj | Object | -> | レンジオブジェクト  |                  |
 | 戻り値      | Object | <- | スタイルオブジェクト | <!-- END REF --> |

@@ -228,7 +228,7 @@ $message:=$o.myClass.hello()
 Opcionalmente, utilice la palabra clave `Class constructor` para declarar las propiedades del objeto.
 
 ```4d  
-//in the Rectangle.4dm file
+//en el archivo Rectangle.4dm
 Class constructor ($height: Integer; $width : Integer)
 This.height:=$height
 This.width:=$width

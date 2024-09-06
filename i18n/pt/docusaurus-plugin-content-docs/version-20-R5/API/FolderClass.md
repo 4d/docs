@@ -3,7 +3,7 @@ id: FolderClass
 title: Folder
 ---
 
-`Folder` objects are created with the [`Folder`](#folder) command. Contêm referências a pastas que podem ou não existir efectivamente no disco. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create()`](#create) function.
+Os objetos `Folder` são criados com o comando [`Folder`](#folder). Contêm referências a pastas que podem ou não existir efectivamente no disco. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create()`](#create) function.
 
 ### Exemplo
 
@@ -16,7 +16,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 ### Pathnames
 
-`Folder` objects support several pathnames, including `filesystems` or `posix` syntax. Supported pathnames are detailed in the [**Pathnames**](../Concepts/paths.md) page.
+Os objetos `Folder` suportam vários pathnames, incluindo a sintaxe `filesystems` ou `posix`. Supported pathnames are detailed in the [**Pathnames**](../Concepts/paths.md) page.
 
 ### Objecto Folder
 
@@ -104,7 +104,7 @@ In the *folderConstant* parameter, pass a 4D built-in or system folder, using on
 | fk database folder         | 4     | Sistema de arquivos associado: "/PACKAGE"                                                                                   |
 | fk desktop folder          | 115   |                                                                                                                                             |
 | fk documents folder        | 117   | Pasta de documentos do utilizador                                                                                                           |
-| fk home folder             | 118   | Current home folder of the user (usually `/Users/<username>/`)                                                           |
+| fk home folder             | 118   | Pasta atual do usuário (normalmente `/Users/<username>/`)                                                                |
 | fk licenses folder         | 1     | Pasta contendo os arquivos de licença 4D da máquina                                                                                         |
 | fk logs folder             | 7     | Sistema de arquivos associado: "/LOGS"                                                                                      |
 | fk mobileApps folder       | 10    |                                                                                                                                             |
@@ -134,7 +134,7 @@ If the command is called from a component, pass the optional *parameter to get t
 
 #### Descrição
 
-The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. It is identical to the [`Folder`](#folder) command (shortcut).
+The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. É idêntico ao comando [`Folder`](#folder) (atalho).
 
 > It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D.Folder.new()`.
 
@@ -289,7 +289,7 @@ By default, for security reasons, if you omit the option parameter, `.delete( )`
 | `Delete only if empty` | 0     | Elimina a pasta apenas quando está vazia               |
 | `Delete with contents` | 1     | Apaga a pasta juntamente com tudo o que a mesma contém |
 
-When `Delete only if empty` is passed or if you omit the option parameter:
+Quando `Delete only if empty` for passado ou se você omitir o parâmetro de opção:
 
 - A pasta só é apagada se estiver vazia; caso contrário, o comando não faz nada e é gerado um erro -47.
 - Se a pasta não existir, o erro -120 é gerado.

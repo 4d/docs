@@ -1,6 +1,6 @@
 ---
 id: EntityClass
-title: Entity
+title: エンティティ
 ---
 
 レコードとテーブルの関係と同様に、[エンティティ](ORDA/dsMapping.md#エンティティ) は [データクラス](ORDA/dsMapping.md#データクラス) のインスタンスです。 エンティティはデータクラスと同じ属性を持つほか、データ値や、特有のプロパティおよび関数を持ちます。
@@ -48,7 +48,7 @@ title: Entity
 
 #### 説明
 
-データクラス属性はすべて、エンティティのプロパティとして利用可能です。各エンティティのプロパティは、当該 <!-- REF EntityClass.attributeName.Summary -->エンティティの属性値を格納します<!-- END REF -->。
+データクラス属性はすべて、エンティティのプロパティとして利用可能です。各エンティティのプロパティは、当該 <!-- REF EntityClass.attributeName.Summary -->エンティティの属性値を格納します<!-- END REF -->.
 > データクラス属性は \[ ] を使用したシンタックスを使用することでもアクセス可能です。
 
 この属性値タイプは属性の種類 ([](DataClassClass.md#attributename).kind; リレーションまたはストレージ) によります。
@@ -84,7 +84,7 @@ title: Entity
 
 
 <!-- REF #EntityClass.clone().Params -->
-| 引数  | タイプ       |    | 説明                                             |
+| 引数  | 型         |    | 説明                                             |
 | --- | --------- |:--:| ---------------------------------------------- |
 | 戻り値 | 4D.Entity | <- | 同レコードを参照する新しいエンティティ|<!-- END REF -->
 
@@ -92,7 +92,7 @@ title: Entity
 
 #### 説明
 
-`.clone()` 関数は、 <!-- REF #EntityClass.clone().Summary -->対象エンティティと同じレコードを参照する新規エンティティをメモリ内に作成します<!-- END REF -->。 このメソッドを使用するとエンティティを個別に更新することができます。
+`.clone()` 関数は、 <!-- REF #EntityClass.clone().Summary -->対象エンティティと同じレコードを参照する新規エンティティをメモリ内に作成します<!-- END REF -->. このメソッドを使用するとエンティティを個別に更新することができます。
 > エンティティに対して何らかの変更をおこなった場合、それらは [`.save( )`](#save) 関数が実行されたときのみ、参照先のレコードに保存されるという点に注意してください。
 
 この関数は、すでにデータベースに保存されているエンティティに対してのみ使用可能です。 新規に作成されたエンティティ([`.isNew()`](#isnew) が **true** を返すもの) に対して呼び出すことはできません。
@@ -125,7 +125,7 @@ title: Entity
 
 
 <!-- REF #EntityClass.diff().Params -->
-| 引数                  | タイプ        |    | 説明                                    |
+| 引数                  | 型          |    | 説明                                    |
 | ------------------- | ---------- |:--:| ------------------------------------- |
 | entityToCompare     | 4D.Entity  | -> | 対象エンティティと比較するエンティティ                   |
 | attributesToCompare | Collection | -> | 比較する属性の名称                             |
@@ -135,7 +135,7 @@ title: Entity
 
 #### 説明
 
-`.diff()` 関数は、 <!-- REF #EntityClass.diff().Summary -->2つのエンティティの中身を比較し、その差異を返します<!-- END REF -->。
+`.diff()` 関数は、 <!-- REF #EntityClass.diff().Summary -->2つのエンティティの中身を比較し、その差異を返します<!-- END REF -->.
 
 *entityToCompare* には、オリジナルのエンティティと比較をするエンティティを渡します。
 
@@ -143,7 +143,7 @@ title: Entity
 
 エンティティの差異は、以下のプロパティを持つオブジェクトのコレクションとして返されます:
 
-| プロパティ名        | タイプ           | 説明                     |
+| プロパティ名        | 型             | 説明                     |
 | ------------- | ------------- | ---------------------- |
 | attributeName | String        | 属性名                    |
 | value         | any - 属性の型による | オリジナルエンティティの属性値        |
@@ -326,7 +326,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 <!-- REF #EntityClass.drop().Params -->
-| 引数   | タイプ     |    | 説明                                                           |
+| 引数   | 型       |    | 説明                                                           |
 | ---- | ------- |:--:| ------------------------------------------------------------ |
 | mode | Integer | -> | `dk force drop if stamp changed`: スタンプが変更されていた場合でも強制的にドロップする |
 | 戻り値  | Object  | <- | ドロップの結果|<!-- END REF -->
@@ -347,7 +347,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 `.drop( )` によって返されるオブジェクトには以下のプロパティが格納されます:
 
-| プロパティ         |                     | タイプ                 | 説明                                                                       |
+| プロパティ         |                     | 型                   | 説明                                                                       |
 | ------------- | ------------------- | ------------------- | ------------------------------------------------------------------------ |
 | success       |                     | boolean             | ドロップが成功した場合には true、それ以外は false                                           |
 |               |                     |                     | ***エラーの場合にのみ利用可能:***                                                     |
@@ -433,7 +433,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 <!-- REF #EntityClass.first().Params -->
-| 引数  | タイプ       |    | 説明                                                                   |
+| 引数  | 型         |    | 説明                                                                   |
 | --- | --------- |:--:| -------------------------------------------------------------------- |
 | 戻り値 | 4D.Entity | <- | エンティティセレクションの先頭エンティティへの参照 (見つからなければ null)|<!-- END REF -->
 
@@ -441,7 +441,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.first()` 関数は、 <!-- REF #EntityClass.first().Summary -->対象エンティティが所属するエンティティセレクションの先頭エンティティへの参照を返します<!-- END REF -->。
+`.first()` 関数は、 <!-- REF #EntityClass.first().Summary -->対象エンティティが所属するエンティティセレクションの先頭エンティティへの参照を返します<!-- END REF -->.
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection( )](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -472,7 +472,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 <!-- REF #EntityClass.fromObject().Params -->
-| 引数     | タイプ    |    | 説明                                               |
+| 引数     | 型      |    | 説明                                               |
 | ------ | ------ |:--:| ------------------------------------------------ |
 | filler | Object | -> | エンティティの属性値を設定するオブジェクト|<!-- END REF -->
 
@@ -480,7 +480,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.fromObject()` 関数は、 <!-- REF #EntityClass.fromObject().Summary -->*filler* に指定した内容でエンティティの属性値を設定します<!-- END REF -->。
+`.fromObject()` 関数は、 <!-- REF #EntityClass.fromObject().Summary -->*filler* に指定した内容でエンティティの属性値を設定します<!-- END REF -->.
 > このコマンドは、元のエンティティを変更します。
 
 オブジェクトとエンティティ間のマッピングは属性名でおこなわれます:
@@ -557,7 +557,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 <!-- REF #EntityClass.getDataClass().Params -->
-| 引数  | タイプ          |    | 説明                                                        |
+| 引数  | 型            |    | 説明                                                        |
 | --- | ------------ |:--:| --------------------------------------------------------- |
 | 戻り値 | 4D.DataClass | <- | エンティティが所属している DataClass オブジェクト|<!-- END REF -->
 
@@ -565,7 +565,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.getDataClass()` 関数は、 <!-- REF #EntityClass.getDataClass().Summary -->エンティティのデータクラスを返します<!-- END REF -->。 この関数は汎用的なコードを書くのに有用です。
+`.getDataClass()` 関数は、 <!-- REF #EntityClass.getDataClass().Summary -->エンティティのデータクラスを返します<!-- END REF -->. この関数は汎用的なコードを書くのに有用です。
 
 #### 例題
 
@@ -602,7 +602,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 <!-- REF #EntityClass.getKey().Params -->
-| 引数   | タイプ     |    | 説明                                                       |
+| 引数   | 型       |    | 説明                                                       |
 | ---- | ------- |:--:| -------------------------------------------------------- |
 | mode | Integer | -> | `dk key as string`: プライマリーキーの型にかかわらず、プライマリーキーを文字列として返します |
 | 戻り値  | Text    | <- | エンティティのテキスト型プライマリーキーの値                                   |
@@ -612,7 +612,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.getKey()` 関数は、 <!-- REF #EntityClass.getKey().Summary -->エンティティのプライマリーキー値を返します<!-- END REF -->。
+`.getKey()` 関数は、 <!-- REF #EntityClass.getKey().Summary -->エンティティのプライマリーキー値を返します<!-- END REF -->.
 
 プライマリーキーは数値 (倍長整数) あるいは文字列です。 *mode* 引数として `dk key as string` オプションを渡すことで、実際のプライマリーキーの型に関係なく、返されるプライマリーキー値の型を文字列に "強制" することができます。
 
@@ -643,9 +643,9 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
-| 引数     | タイプ  |    | 説明                                                        |
-| ------ | ---- | -- | --------------------------------------------------------- |
-| result | Text | <- | エンティティにリンクされたコンテキスト属性 (カンマ区切り)|<!-- END REF -->
+| 引数  | 型    |    | 説明                                                        |
+| --- | ---- | -- | --------------------------------------------------------- |
+| 戻り値 | Text | <- | エンティティにリンクされたコンテキスト属性 (カンマ区切り)|<!-- END REF -->
 
 |
 
@@ -653,7 +653,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 #### 説明
 
-`.getRemoteContextAttributes()` 関数は、 <!-- REF #EntityClass.getRemoteContextAttributes().Summary -->エンティティによって使われている最適化コンテキストの情報を返します <!-- END REF -->。
+`.getRemoteContextAttributes()` 関数は、 <!-- REF #EntityClass.getRemoteContextAttributes().Summary -->エンティティによって使われている最適化コンテキストの情報を返します <!-- END REF -->.
 
 エンティティについて [最適化コンテキスト](../ORDA/remoteDatastores.md#クライアントサーバーの最適化) が存在しない場合、関数は空のテキストを返します。
 
@@ -701,7 +701,7 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.getSelection().Params -->
-| 引数  | タイプ                |    | 説明                                                                 |
+| 引数  | 型                  |    | 説明                                                                 |
 | --- | ------------------ |:--:| ------------------------------------------------------------------ |
 | 戻り値 | 4D.EntitySelection | <- | エンティティが所属するエンティティセレクション (見つからなければ null)|<!-- END REF -->
 
@@ -709,7 +709,7 @@ $info:=$address.getRemoteContextAttributes()
 
 #### 説明
 
-`.getSelection()` 関数は、 <!-- REF #EntityClass.getSelection().Summary -->エンティティが所属するエンティティセレクションを返します<!-- END REF -->。
+`.getSelection()` 関数は、 <!-- REF #EntityClass.getSelection().Summary -->エンティティが所属するエンティティセレクションを返します<!-- END REF -->.
 
 対象エンティティがエンティティセレクションに所属していない場合、関数は Null値を返します。
 
@@ -744,7 +744,7 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.getStamp().Params -->
-| 引数  | タイプ     |    | 説明                                                              |
+| 引数  | 型       |    | 説明                                                              |
 | --- | ------- |:--:| --------------------------------------------------------------- |
 | 戻り値 | Integer | <- | エンティティのスタンプ (エンティティが作成されたばかりの場合には 0)|<!-- END REF -->
 
@@ -752,7 +752,7 @@ $info:=$address.getRemoteContextAttributes()
 
 #### 説明
 
-`.getStamp()` 関数は、 <!-- REF #EntityClass.getStamp().Summary --> エンティティのスタンプの値を返します<!-- END REF -->。
+`.getStamp()` 関数は、 <!-- REF #EntityClass.getStamp().Summary --> エンティティのスタンプの値を返します<!-- END REF -->.
 
 内部スタンプは、エンティティが保存されるたびに 4D によって自動的にインクリメントされます。 これは同じエンティティに対する複数のユーザーの同時アクセス・編集を管理します。この機構の詳細については、[**エンティティロッキング**](ORDA/entities.md#エンティティロッキング) を参照ください。
 > (一度も保存されていない) 新規エンティティに対しては、このメソッドは 0 を返します。 しかしながら、エンティティがまだ作成されたばかりかどうかを調べるには、[isNew()](#isnew) の使用が推奨されます。
@@ -790,7 +790,7 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.indexOf().Params -->
-| 引数              | タイプ                |    | 説明                                                  |
+| 引数              | 型                  |    | 説明                                                  |
 | --------------- | ------------------ |:--:| --------------------------------------------------- |
 | entitySelection | 4D.EntitySelection | -> | エンティティの位置を取得する対象のエンティティセレクション                       |
 | 戻り値             | Integer            | <- | エンティティセレクション内でのエンティティの位置|<!-- END REF -->
@@ -799,7 +799,7 @@ $info:=$address.getRemoteContextAttributes()
 
 #### 説明
 
-`.indexOf()` 関数は、 <!-- REF #EntityClass.indexOf().Summary -->エンティティセレクション内におけるエンティティの位置を返します<!-- END REF -->。
+`.indexOf()` 関数は、 <!-- REF #EntityClass.indexOf().Summary -->エンティティセレクション内におけるエンティティの位置を返します<!-- END REF -->.
 
 *entitySelection* 引数が渡されなかった場合はデフォルトで、所属エンティティセレクション内でのエンティティの位置が返されます。 *entitySelection* 引数を渡した場合は、指定されたエンティティセレクション内でのエンティティの位置を返します。
 
@@ -838,7 +838,7 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.isNew().Params -->
-| 引数  | タイプ     |    | 説明                                                                    |
+| 引数  | 型       |    | 説明                                                                    |
 | --- | ------- |:--:| --------------------------------------------------------------------- |
 | 戻り値 | Boolean | <- | エンティティが作成されたばかりで未保存の場合は true。 それ以外は false。|<!-- END REF -->
 
@@ -846,7 +846,7 @@ $info:=$address.getRemoteContextAttributes()
 
 #### 説明
 
-`.isNew()` 関数は、 <!-- REF #EntityClass.isNew().Summary --> 対象エンティティが作成されたばかりで、まだデータストアに保存されていない場合に true を返します<!-- END REF -->。 そうでない場合には、false を返します。
+`.isNew()` 関数は、 <!-- REF #EntityClass.isNew().Summary --> 対象エンティティが作成されたばかりで、まだデータストアに保存されていない場合に true を返します<!-- END REF -->. そうでない場合には、false を返します。
 
 #### 例題
 
@@ -877,7 +877,7 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.last().Params -->
-| 引数  | タイプ       |    | 説明                                                                   |
+| 引数  | 型         |    | 説明                                                                   |
 | --- | --------- |:--:| -------------------------------------------------------------------- |
 | 戻り値 | 4D.Entity | <- | エンティティセレクションの最終エンティティへの参照 (見つからなければ null)|<!-- END REF -->
 
@@ -885,7 +885,7 @@ $info:=$address.getRemoteContextAttributes()
 
 #### 説明
 
-`.last()` 関数は、 <!-- REF #EntityClass.last().Summary -->対象エンティティが所属するエンティティセレクションの最終エンティティへの参照を返します<!-- END REF -->。
+`.last()` 関数は、 <!-- REF #EntityClass.last().Summary -->対象エンティティが所属するエンティティセレクションの最終エンティティへの参照を返します<!-- END REF -->.
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection( )](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -916,7 +916,7 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.lock().Params -->
-| 引数   | タイプ     |    | 説明                                                       |
+| 引数   | 型       |    | 説明                                                       |
 | ---- | ------- |:--:| -------------------------------------------------------- |
 | mode | Integer | -> | `dk reload if stamp changed`: スタンプが変更されてる場合はロック前にリロードします |
 | 戻り値  | Object  | <- | ロックの結果|<!-- END REF -->
@@ -925,7 +925,7 @@ $info:=$address.getRemoteContextAttributes()
 
 #### 説明
 
-`.lock()` 関数は、 <!-- REF #EntityClass.lock().Summary -->対象エンティティが参照するレコードにペシミスティック・ロックをかけます<!-- END REF -->。 [ロック](ORDA/entities.md#エンティティロッキング)はレコードと、カレントプロセス内の当該エンティティの参照すべてに対してかけられます。
+`.lock()` 関数は、 <!-- REF #EntityClass.lock().Summary -->対象エンティティが参照するレコードにペシミスティック・ロックをかけます<!-- END REF -->. [ロック](ORDA/entities.md#エンティティロッキング)はレコードと、カレントプロセス内の当該エンティティの参照すべてに対してかけられます。
 
 他のプロセスからはこのレコードがロックされて見えます (この関数を使って同エンティティをロックしようとした場合、`result.success` プロパティには false が返されます)。 ロックをおこなったセッション内で実行される関数のみが、当該エンティティの属性を編集・保存できます。 他のセッションは同エンティティを読み取り専用にロードできますが、値の入力・保存はできません。
 
@@ -944,7 +944,7 @@ $info:=$address.getRemoteContextAttributes()
 
 `.lock( )` によって返されるオブジェクトには以下のプロパティが格納されます:
 
-| プロパティ            |                     | タイプ                 | 説明                                                                                                                                                |
+| プロパティ            |                     | 型                   | 説明                                                                                                                                                |
 | ---------------- | ------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success          |                     | boolean             | ロックに成功した場合 (あるいはエンティティがすでにカレントプロセスでロックされていた場合) には true、それ以外は false                                                                                |
 |                  |                     |                     | ***`dk reload if stamp changed` オプションが使用されていた場合にのみ利用可能:***                                                                                        |
@@ -1034,7 +1034,7 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.next().Params -->
-| 引数  | タイプ       |    | 説明                                                                    |
+| 引数  | 型         |    | 説明                                                                    |
 | --- | --------- |:--:| --------------------------------------------------------------------- |
 | 戻り値 | 4D.Entity | <- | エンティティセレクション内の次のエンティティへの参照 (見つからなければ null)|<!-- END REF -->
 
@@ -1042,7 +1042,7 @@ $info:=$address.getRemoteContextAttributes()
 
 #### 説明
 
-`.next()` 関数は、 <!-- REF #EntityClass.next().Summary -->エンティティが所属するエンティティセレクションの次のエンティティへの参照を返します<!-- END REF -->。
+`.next()` 関数は、 <!-- REF #EntityClass.next().Summary -->エンティティが所属するエンティティセレクションの次のエンティティへの参照を返します<!-- END REF -->.
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection()](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -1076,7 +1076,7 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.previous().Params -->
-| 引数  | タイプ       |    | 説明                                                                    |
+| 引数  | 型         |    | 説明                                                                    |
 | --- | --------- |:--:| --------------------------------------------------------------------- |
 | 戻り値 | 4D.Entity | <- | エンティティセレクション内の前のエンティティへの参照 (見つからなければ null)|<!-- END REF -->
 
@@ -1084,7 +1084,7 @@ $info:=$address.getRemoteContextAttributes()
 
 #### 説明
 
-`.previous()` 関数は、 <!-- REF #EntityClass.previous().Summary --> エンティティが所属するエンティティセレクションの前のエンティティへの参照を返します<!-- END REF -->。
+`.previous()` 関数は、 <!-- REF #EntityClass.previous().Summary --> エンティティが所属するエンティティセレクションの前のエンティティへの参照を返します<!-- END REF -->.
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection()](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -1117,7 +1117,7 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.reload().Params -->
-| 引数  | タイプ    |    | 説明                                     |
+| 引数  | 型      |    | 説明                                     |
 | --- | ------ |:--:| -------------------------------------- |
 | 戻り値 | Object | <- | ステータスオブジェクト|<!-- END REF -->
 
@@ -1131,7 +1131,7 @@ $info:=$address.getRemoteContextAttributes()
 
 `.reload( )` によって返されるオブジェクトには以下のプロパティが格納されます:
 
-| プロパティ            | タイプ     | 説明                                                              |
+| プロパティ            | 型       | 説明                                                              |
 | ---------------- | ------- | --------------------------------------------------------------- |
 | success          | boolean | リロードが成功した場合には true、それ以外は false。<br />***エラーの場合にのみ利用可能***: |
 | status(\*)     | number  | エラーコード、以下参照                                                     |
@@ -1180,7 +1180,7 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.save().Params -->
-| 引数   | タイプ     |    | 説明                               |
+| 引数   | 型       |    | 説明                               |
 | ---- | ------- |:--:| -------------------------------- |
 | mode | Integer | -> | `dk auto merge`: 自動マージモードを有効化します |
 | 戻り値  | Object  | <- | 保存の結果|<!-- END REF -->
@@ -1204,7 +1204,7 @@ $info:=$address.getRemoteContextAttributes()
 
 `.save()` によって返されるオブジェクトには以下のプロパティが格納されます:
 
-| プロパティ        |                    | タイプ                 | 説明                                                                       |
+| プロパティ        |                    | 型                   | 説明                                                                       |
 | ------------ | ------------------ | ------------------- | ------------------------------------------------------------------------ |
 | success      |                    | boolean             | 保存に成功した場合には true、それ以外は false                                             |
 |              |                    |                     | ***`dk auto merge` オプションが使用されていた場合にのみ利用可能***:                            |
@@ -1315,7 +1315,7 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.toObject().Params -->
-| 引数           | タイプ        |    | 説明                                                                                         |
+| 引数           | 型          |    | 説明                                                                                         |
 | ------------ | ---------- |:--:| ------------------------------------------------------------------------------------------ |
 | filterString | Text       | -> | 取得する属性 (カンマ区切り)                                                                            |
 | filterCol    | Collection | -> | 取得する属性のコレクション                                                                              |
@@ -1326,7 +1326,7 @@ $info:=$address.getRemoteContextAttributes()
 
 #### 説明
 
-`.toObject()` 関数は、 <!-- REF #EntityClass.toObject().Summary -->エンティティからビルドされたオブジェクトを返します<!-- END REF -->。 オブジェクト内部のプロパティ名はエンティティの属性名と合致します。
+`.toObject()` 関数は、 <!-- REF #EntityClass.toObject().Summary -->エンティティからビルドされたオブジェクトを返します<!-- END REF -->. オブジェクト内部のプロパティ名はエンティティの属性名と合致します。
 
 *filterString* 引数が空の文字列、あるいは "*" の場合、以下のいずれかが返されます:
 
@@ -1604,7 +1604,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 
 <!-- REF #EntityClass.touched().Params -->
-| 引数  | タイプ     |    | 説明                                                                              |
+| 引数  | 型       |    | 説明                                                                              |
 | --- | ------- |:--:| ------------------------------------------------------------------------------- |
 | 戻り値 | Boolean | <- | 少なくとも一つのエンティティ属性が編集されていて未保存の場合に true、それ以外の場合には false|<!-- END REF -->
 
@@ -1612,7 +1612,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 #### 説明
 
-`.touched()` 関数は、 <!-- REF #EntityClass.touched().Summary -->エンティティがメモリに読み込まれてから、あるいは保存されてから、エンティティ属性が変更されたかどうかをテストします<!-- END REF -->。
+`.touched()` 関数は、 <!-- REF #EntityClass.touched().Summary -->エンティティがメモリに読み込まれてから、あるいは保存されてから、エンティティ属性が変更されたかどうかをテストします<!-- END REF -->.
 
 属性が更新あるいは計算されていた場合、関数は true を返し、それ以外は false を返します。 この関数を使用することで、エンティティを保存する必要があるかどうかを確認することができます。
 
@@ -1649,7 +1649,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
-| 引数  | タイプ        |    | 説明                                                 |
+| 引数  | 型          |    | 説明                                                 |
 | --- | ---------- |:--:| -------------------------------------------------- |
 | 戻り値 | Collection | <- | 変更された属性の名前、あるいは空のコレクション|<!-- END REF -->
 
@@ -1657,7 +1657,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 #### 説明
 
-`.touchedAttributes()` 関数は、 <!-- REF #EntityClass.touchedAttributes().Summary -->メモリに読み込み後に変更されたエンティティの属性名を返します<!-- END REF -->。
+`.touchedAttributes()` 関数は、 <!-- REF #EntityClass.touchedAttributes().Summary -->メモリに読み込み後に変更されたエンティティの属性名を返します<!-- END REF -->.
 
 この関数は、種類 ([kind](DataClassClass.md#attributename)) が `storage` あるいは `relatedEntity` である属性に適用されます。
 
@@ -1723,7 +1723,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 
 <!-- REF #EntityClass.unlock().Params -->
-| 引数  | タイプ    |    | 説明                                     |
+| 引数  | 型      |    | 説明                                     |
 | --- | ------ |:--:| -------------------------------------- |
 | 戻り値 | Object | <- | ステータスオブジェクト|<!-- END REF -->
 
@@ -1750,7 +1750,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 `.unlock()` によって返されるオブジェクトには以下のプロパティが格納されます:
 
-| プロパティ   | タイプ     | 説明                                                                                                                                     |
+| プロパティ   | 型       | 説明                                                                                                                                     |
 | ------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | success | Boolean | ロック解除が成功した場合には true、それ以外は false ドロップされたエンティティや、ロックされてないレコード、あるいは他のプロセスや他のエンティティによってロックされたレコードに対してロック解除を実行した場合、success には false が返されます。 |
 

@@ -17,7 +17,7 @@ Con la API REST, puede realizar todas las manipulaciones a los datos como puede 
 
 Para añadir y modificar entidades, puede llamar a [`$method=update`]($method.md#methodupdate). Si desea eliminar una o varias entidades, puede utilizar [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a method in your DataClass class and call it to return an entity selection (or a collection) by using [\{dataClass\}/\{method\}](%7BdataClass%7D.html#dataclassmethod).
+Además de recuperar una sola entidad en una dataclass utilizando [\{dataClass\}({key})](%7BdataClass%7D_%7Bkey%7D.html), también puede escribir un método en su clase DataClass y llamarlo para devolver una selección de entidades (o una colección) utilizando [\{dataClass\}/\{method\}](%7BdataClass%7D.html#dataclassmethod).
 
 Antes de devolver la colección, también puede ordenarla utilizando [`$orderby`]($orderby.md) uno o varios atributos (incluso los atributos de relación).
 

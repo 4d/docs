@@ -128,7 +128,7 @@ The `.bcc` property contains the <!-- REF #EmailObjectClass.bcc.Summary -->Blind
 
 The `.bodyStructure` property contains the <!-- REF #EmailObjectClass.bodyStructure.Summary -->*EmailBodyPart* object, i.e. the full MIME structure of the message body (optional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
-The `.bodyStructure` object contains the following properties:
+O objeto `.bodyStructure` contém as seguintes propriedades:
 
 | Propriedade | Tipo                   | Valor                                                                                                                                                                      |
 | ----------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -150,7 +150,7 @@ The `.bodyStructure` object contains the following properties:
 
 The `.bodyValues` property contains the <!-- REF #EmailObjectClass.bodyValues.Summary -->*EmailBodyValue* object, containing an object for each \\<partID\> of `bodyStructure` (optional)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
-The `.bodyValues` object contains the following properties:
+O objeto `.bodyValues` contém as seguintes propriedades:
 
 | Propriedade                                | Tipo    | Valor                                                                                                                                                                                               |
 | ------------------------------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

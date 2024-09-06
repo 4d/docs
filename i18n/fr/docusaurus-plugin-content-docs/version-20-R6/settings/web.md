@@ -152,7 +152,7 @@ Active le service Cross-origin resource sharing (CORS). Voir [Activer Cors](../W
 
 #### Noms de domaines/Méthodes HTTP autorisées
 
-Liste des hôtes et méthodes autorisées pour le service CORS. Voir [Paramètres CORS](../WebServer/webServerConfig.md#paramètres-cors).
+Liste des hôtes et méthodes autorisé(e)s pour le service CORS. Voir [Paramètres CORS](../WebServer/webServerConfig.md#paramètres-cors).
 
 ## Journal (format)
 
@@ -238,16 +238,16 @@ Le tableau suivant répertorie les champs disponibles pour chaque format (par or
 
 ## Journal (sauvegarde)
 
-Paramètres d’archivage automatique du journal des requêtes. D'abord, vous devez choisir la fréquence (jours, semaines, etc.) ou le critère de limite de taille du fichier en cliquant sur le bouton radio correspondant. Vous devez ensuite spécifier le moment précis du backup si nécessaire.
+Paramètres d’archivage automatique du journal des requêtes. D'abord, vous devez choisir la fréquence (jours, semaines, etc.) ou le critère de limite de taille du fichier en cliquant sur le bouton radio correspondant. Vous devez ensuite spécifier le moment précis de la sauvegarde si nécessaire.
 
 - **Pas de sauvegarde du journal** : La fonction de sauvegarde programmée est désactivée.
 - **Toutes les X heure(s)** : Cette option est utilisée pour programmer des sauvegardes sur une base horaire. Vous pouvez entrer une valeur entre 1 et 24.
 
   - **à partir de**: Permet de définir l'heure du déclenchement du premier backup.
 - **Tous les N jour(s) à N** : permet de programmer des backups sur une base journalière. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer l’heure à laquelle la sauvegarde doit être déclenchée.
-- **Tous les N jour(s) à N** : permet de programmer des backups sur une base hebdomadaire. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired.
+- **Tous les N jour(s) à N** : permet de programmer des backups sur une base hebdomadaire. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer le ou les jours de la semaine et l’heure à laquelle chaque sauvegarde doit être déclenchée. Vous pouvez cocher un ou plusieurs jour(s) de la semaine. Par exemple, vous pouvez utiliser cette option pour définir deux sauvegardes hebdomadaires : une le mercredi et une le vendredi.
 - **Tous les N mois, Ne jour à N** : permet de programmer des sauvegardes sur une base mensuelle. Saisissez 1 si vous souhaitez une sauvegarde mensuelle. Lorsque vous cochez cette option, vous devez indiquer le jour de chaque mois auquel la sauvegarde doit être déclenchée, ainsi que l’heure de déclenchement.
-- **Tous les N Mo** : Cette option est utilisée pour programmer les sauvegardes en fonction de la taille du fichier journal courant. Un backup se déclenche automatiquement quand le fichier atteint la taille spécifiée. La taille limite du fichier peut être fixée à 1, 10, 100 ou 1000 Mo.
+- **Tous les N Mo** : Cette option est utilisée pour programmer les sauvegardes en fonction de la taille du fichier journal courant. Une sauvegarde se déclenche automatiquement quand le fichier atteint la taille spécifiée. La taille limite du fichier peut être fixée à 1, 10, 100 ou 1000 Mo.
 
 > En cas de sauvegarde périodique, si le serveur Web n’était pas lancé au moment théorique de la sauvegarde, 4D considère au lancement suivant que la sauvegarde a échoué et applique les paramétrages adéquats, définis dans les Propriétés.
 
@@ -285,7 +285,7 @@ Démarre et stoppe le serveur REST. Voir [Configuration du serveur REST](../REST
 
 ### Accès
 
-:::information Obsolète
+:::info Obsolète
 
 **Cette section est obsolète** à partir de 4D 20 R6. Si la configuration actuelle du projet est obsolète et doit être mise à niveau, cette section, y compris le bouton **Activer l'authentification REST via la fonction ds.authentify()** (voir ci-dessous), est affichée. Si votre projet est déjà compatible avec le mode [Connexion forcée](../REST/configuration.md#configuration-de-l-accès-rest), la section n'apparaît pas et vous pouvez ignorer ce paragraphe.
 
@@ -311,7 +311,7 @@ Le bouton déclenche la séquence de mise à niveau suivante :
 
 N'oubliez pas de redémarrer votre projet après avoir effectué cette mise à niveau.
 
-La prochaine étape consiste à modifier votre code en conséquence. [**Reportez-vous à cet article de blog pour savoir comment procéder**](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications).
+La prochaine étape consiste à modifier votre code en conséquence. [**Reportez-vous à cet article de blog pour savoir comment procéder**](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/).
 
 ### Qodly Studio
 

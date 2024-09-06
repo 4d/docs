@@ -532,7 +532,7 @@ Este ejemplo ilustra el uso de la propiedad *context*:
 
 | Parámetros | Tipo    |    | Descripción                         |
 | ---------- | ------- | -- | ----------------------------------- |
-| result     | Integer | <- | Número de entidades en la dataclass |
+| resultado  | Integer | <- | Número de entidades en la dataclass |
 
 <!-- END REF -->
 
@@ -702,7 +702,7 @@ La función `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->devuelve 
 
 | Parámetros | Tipo   |    | Descripción                                                                               |
 | ---------- | ------ | -- | ----------------------------------------------------------------------------------------- |
-| result     | Object | <- | Objeto que describe el contenido de la caché ORDA para la clase de datos. |
+| resultado  | Object | <- | Objeto que describe el contenido de la caché ORDA para la clase de datos. |
 
 <!-- END REF -->
 
@@ -1573,9 +1573,9 @@ Definir la propiedad `timeout` define un nuevo timeout para las entidades ya pre
 
 `maxEntries` define el número máximo de entidades en la caché ORDA. Por defecto es 30 000.
 
-The minimum number of entries is 300, so the value of `maxEntries` must be equal to or higher than 300. En caso contrario, se ignora y el número máximo de entradas se fija en 300.
+El número de entradas mínimo es 300, por lo que el valor de `maxEntries` debe ser igual o superior a 300. En caso contrario, se ignora y el número máximo de entradas se fija en 300.
 
-If no valid properties are passed as `timeout` and `maxEntries`, the cache remains unchanged, with its default or previously set values.
+Si no se pasan propiedades válidas como `timeout` y `maxEntries`, la caché permanece sin cambios, con sus valores por defecto o previamente definidos.
 
 Cuando se guarda una entidad, se actualiza en la caché y vence una vez alcanzado el timeout.
 

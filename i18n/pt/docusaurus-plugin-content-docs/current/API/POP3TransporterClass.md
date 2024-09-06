@@ -172,7 +172,7 @@ The `.delete( )` function <!-- REF #POP3TransporterClass.delete().Summary -->fla
 
 In the *msgNumber* parameter, pass the number of the email to delete. This number is returned in the number property by the [`.getMailInfoList()`](#getmailinfolist) method.
 
-Executar esse método não remove de verdade qualquer email. The flagged email will be deleted from the POP3 server only when the `POP3_transporter` object (created with `POP3 New transporter`) is destroyed. The flag could be also be removed using the `.undeleteAll()` method.
+Executar esse método não remove de verdade qualquer email. The flagged email will be deleted from the POP3 server only when the `POP3_transporter` object (created with `POP3 New transporter`) is destroyed. A marcação pode ser removida com o método `.undeleteAll()`.
 
 > Se a sessão atual terminar de forma inesperada e perder a conexão (por exemplo timeout, falha de rede, etc), uma mensagem de erro é gerada e mensagens marcadas para serem apagadas continuam no servidor POP3.
 
@@ -286,7 +286,7 @@ O método retorna Null se:
 
 **Objeto devolvido**
 
-`.getMail()` returns an [`Email` object](EmailObjectClass.md#email-object).
+`.getMail()` retorna um [`objeto email`](EmailObjectClass.md#email-object).
 
 ##### Exemplo
 
@@ -346,7 +346,7 @@ The `mailInfo` object returned contains the following properties:
 O método retorna **Null** se:
 
 - *msgNumber* determina uma mensagem não existente,
-- the message was marked for deletion using `.delete( )`.
+- a mensagem foi marcada para apagar usando `.delete( )`.
 
 ##### Exemplo
 
@@ -464,7 +464,7 @@ In *msgNumber*, pass the number of the message to retrieve. This number is retur
 O método retorna uma BLOB vazia se:
 
 - *msgNumber* determina uma mensagem não existente,
-- the message was marked for deletion using `.delete()`.
+- a mensagem foi marcada para apagar usando `.delete()`.
 
 **BLOB devolvido**
 

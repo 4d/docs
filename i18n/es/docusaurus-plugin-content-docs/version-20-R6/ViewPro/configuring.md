@@ -27,7 +27,7 @@ Las interfaces permiten realizar modificaciones básicas y manipular los datos. 
 
 #### Toolbar (Barra de herramientas)
 
-Enabling the Toolbar interface displays the [**Show Formula Bar**](FormObjects/properties_Appearance.md#show-formula-bar) option. Cuando se selecciona, la barra de fórmulas es visible debajo de la interfaz Barra de herramientas.
+Al habilitar la interfaz de la barra de herramientas se muestra la opción [**Mostrar barra de fórmulas**](FormObjects/properties_Appearance.md#show-formula-bar). Cuando se selecciona, la barra de fórmulas es visible debajo de la interfaz Barra de herramientas.
 
 Con barra de fórmula visible:
 
@@ -122,7 +122,7 @@ Para bloquear toda la hoja, basta con poner la propiedad *isProtected* en **true
 
 ## Formato de las celdas
 
-La definición de un modelo de formato garantiza que el contenido de sus documentos 4D View Pro se muestre de la forma que usted desea. Formats can be set using the selected 4D View Pro [interface](#selecting-a-user-interface), or using the [VP SET VALUE](commands/vp-set-value.md) or [VP SET NUM VALUE](commands/vp-set-num-value.md) commands.
+La definición de un modelo de formato garantiza que el contenido de sus documentos 4D View Pro se muestre de la forma que usted desea. Los formatos se pueden configurar utilizando la [interfaz](#selecting-a-user-interface) seleccionada de 4D View Pro, o utilizando los comandos [VP SET VALUE](commands/vp-set-value.md) o [VP SET NUM VALUE](commands/vp-set-num-value.md).
 
 4D View Pro tiene formatos integrados para números, fechas, horas y texto, pero también puede crear sus propios modelos para dar formato al contenido de las celdas utilizando caracteres y códigos especiales.
 

@@ -844,11 +844,11 @@ La propriété [`.isSingleton`](../API/ClassClass.md#issingleton) des objets Cla
 
 La portée d'une instance de singleton peut être le process dans lequel elle est instanciée ou tous les process de la machine, en fonction de sa propriété _shared_.
 
-| Singleton créé sur | Portée si non partagé                                                                                                | Portée si partagé  |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| 4D single-user     | Process                                                                                                              | Application        |
-| 4D Server          | Process                                                                                                              | Machine 4D Server  |
-| 4D mode distant    | Process (_note_: les singletons ne sont pas synchronisés sur les process jumeaux) | Machine 4D distant |
+| Singleton créé sur  | Portée si non partagé                                                                                                | Portée si partagé  |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| 4D mono-utilisateur | Process                                                                                                              | Application        |
+| 4D Server           | Process                                                                                                              | Machine 4D Server  |
+| 4D mode distant     | Process (_note_: les singletons ne sont pas synchronisés sur les process jumeaux) | Machine 4D distant |
 
 Une fois instanciée, une classe singleton (et son singleton) existe aussi longtemps qu'une référence à cette classe existe quelque part dans l'application sur le poste.
 

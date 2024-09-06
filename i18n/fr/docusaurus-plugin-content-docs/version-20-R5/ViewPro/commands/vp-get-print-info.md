@@ -17,11 +17,11 @@ title: VP Get print info
 
 #### Description
 
-The `VP Get print info` command <!-- REF #_method_.VP Get print info.Summary -->returns an object containing the print attributes of the _vpAreaName_<!-- END REF -->.
+La commande `VP Get print info` <!-- REF #_method_.VP Get print info.Summary -->retourne un objet contenant les attributs d'impression de _vpAreaName_<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in _vpAreaName_. Si vous passez un nom inexistant, une erreur est retournée.
+Passez le nom de la zone 4D View Pro dans _vpAreaName_. Si vous passez un nom inexistant, une erreur est retournée.
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet (counting begins at 0) whose printing attributes you want returned.  If omitted or if you pass `vk current sheet`, the current spreadsheet is used.
+Dans le paramètre optionnel _sheet_, vous pouvez désigner une feuille spécifique (la numérotation commence à zéro) dont vous souhaitez retourner les attributs d'impression.  If omitted or if you pass `vk current sheet`, the current spreadsheet is used.
 
 #### Exemple
 
@@ -31,7 +31,7 @@ Le code suivant :
 $pinfo:=VP Get print info("ViewProArea")
 ```
 
-... returns the print attributes of the 4D View Pro area set in the [VP SET PRINT INFO](vp-set-print-info.md) command:
+... retourne les attributs d'impression de la zone 4D View Pro définie dans la commande [VP SET PRINT INFO](vp-set-print-info.md) :
 
 ```4d
 {

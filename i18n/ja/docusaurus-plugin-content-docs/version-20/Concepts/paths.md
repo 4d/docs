@@ -27,7 +27,7 @@ $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 | "/LOGS"      | Logs フォルダー                            | "C:\\MyApps\\Students\\Data\\Logs\\"       |
 | "/PACKAGE"   | プロジェクトのルートフォルダー (拡張子 4dbase の有無に関わらず) | "C:\\MyApps\\Students\\"                       |
 | "/PROJECT"   | Project フォルダー                         | "C:\\MyApps\\Students\\Project\\"            |
-| "/RESOURCES" | カレントプロジェクトの Resources フォルダー           | "C:\\MyApps\\Resources\\"                      |
+| "/RESOURCES" | カレントプロジェクトの Resources フォルダー           | "C:\\MyApps\\Students\\Resources\\"          |
 | "/SOURCES"   | カレントプロジェクトの Sources フォルダー             | "C:\\MyApps\\Students\\Project\\Sources\\" |
 
 ## POSIX シンタックス

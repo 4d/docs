@@ -41,7 +41,7 @@ This command inserts some rows in the *tableName* table, NOT in the sheet. The t
 
 If the *tableName* table is bound to a [data context](vp-set-data-context.md), the command inserts new, empty element(s) in the collection.
 
-If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
+Si *tableName* n'existe pas ou s'il n'y a pas assez d'espace dans la feuille, rien ne se passe.
 
 #### Exemple
 

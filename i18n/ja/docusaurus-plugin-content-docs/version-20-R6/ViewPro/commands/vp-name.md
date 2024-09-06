@@ -9,7 +9,7 @@ title: VP Name
 
 <!-- REF #_method_.VP Name.Params -->
 
-| 引数         | タイプ     |    | 説明                                      |                  |
+| 引数         | 型       |    | 説明                                      |                  |
 | ---------- | ------- | -- | --------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                 |                  |
 | rangeName  | Text    | -> | 既存のレンジ名                                 |                  |
@@ -34,9 +34,9 @@ title: VP Name
 "Total" という名前のレンジに値を渡します:
 
 ```4d
-// B5 のセルを "Total" と命名します
+// name the B5 cell as Total
 VP ADD RANGE NAME(VP Cell("ViewProArea";1;4);"Total")
-$name:=VP Name("ViewProArea";" Total")
+$name:=VP Name("ViewProArea";"Total")
 VP SET NUM VALUE($name;285;"$#,###.00")
 ```
 

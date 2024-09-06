@@ -70,7 +70,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 <!-- REF #_command_.New collection.Params -->
-| 引数    | タイプ                                                                     |    | 説明                                   |
+| 引数    | 型                                                                       |    | 説明                                   |
 | ----- | ----------------------------------------------------------------------- |:--:| ------------------------------------ |
 | value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | コレクションの値                             |
 | 戻り値   | Collection                                                              | <- | 新規のコレクション|<!-- END REF -->
@@ -151,7 +151,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 <!-- REF #_command_.New shared collection.Params -->
-| 引数    | タイプ                                                                 |    | 説明                                     |
+| 引数    | 型                                                                   |    | 説明                                     |
 | ----- | ------------------------------------------------------------------- |:--:| -------------------------------------- |
 | value | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | 共有コレクションの値                             |
 | 戻り値   | Collection                                                          | <- | 新規の共有コレクション|<!-- END REF -->
@@ -212,7 +212,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 <!-- REF #collection.average().Params -->
-| 引数           | タイプ             |    | 説明                                       |
+| 引数           | 型               |    | 説明                                       |
 | ------------ | --------------- |:--:| ---------------------------------------- |
 | propertyPath | Text            | -> | 計算に使用するオブジェクトプロパティのパス                    |
 | 戻り値          | Real, Undefined | <- | コレクションの値の算術平均|<!-- END REF -->
@@ -221,7 +221,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 #### 説明
 
-`.average()` 関数は、 <!-- REF #collection.average().Summary -->コレクションインスタンス内で定義されている値の算術平均を返します<!-- END REF -->。
+`.average()` 関数は、 <!-- REF #collection.average().Summary -->コレクションインスタンス内で定義されている値の算術平均を返します<!-- END REF -->.
 
 計算の対象となるのは数値のみです (他の型の要素は無視されます)。
 
@@ -269,7 +269,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 <!-- REF #collection.clear().Params -->
-| 引数  | タイプ        |    | 説明                                           |
+| 引数  | 型          |    | 説明                                           |
 | --- | ---------- |:--:| -------------------------------------------- |
 | 戻り値 | Collection | <- | 全要素が削除された元のコレクション|<!-- END REF -->
 
@@ -277,7 +277,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 #### 説明
 
-`.clear()` 関数は、 <!-- REF #collection.clear().Summary -->コレクションインスタンス内の全要素を削除し、空のコレクションを返します<!-- END REF -->。
+`.clear()` 関数は、 <!-- REF #collection.clear().Summary -->コレクションインスタンス内の全要素を削除し、空のコレクションを返します<!-- END REF -->.
 > このコマンドは、元のコレクションを変更します。
 
 #### 例題
@@ -306,7 +306,7 @@ $vSize:=$col.length //$vSize=0
 
 
 <!-- REF #collection.combine().Params -->
-| 引数    | タイプ        |    | 説明                                           |
+| 引数    | 型          |    | 説明                                           |
 | ----- | ---------- |:--:| -------------------------------------------- |
 | col2  | Collection | -> | 追加するコレクション                                   |
 | index | Integer    | -> | 追加要素を挿入する位置 (デフォルトは length+1)                |
@@ -317,7 +317,7 @@ $vSize:=$col.length //$vSize=0
 #### 説明
 
 
-`.combine()` 関数は、 <!-- REF #collection.combine().Summary -->コレクションインスタンスの最後、あるいは *index* で指定した位置に *col2* の要素を挿入し、変更された元のコレクションを返します<!-- END REF -->。 `.insert()` 関数とは異なり、`.combine()` は *col2* の各要素を元のコレクション追加します (*col2* 自体が単一のコレクション要素としては挿入されるわけではありません)。
+`.combine()` 関数は、 <!-- REF #collection.combine().Summary -->コレクションインスタンスの最後、あるいは *index* で指定した位置に *col2* の要素を挿入し、変更された元のコレクションを返します<!-- END REF -->. `.insert()` 関数とは異なり、`.combine()` は *col2* の各要素を元のコレクション追加します (*col2* 自体が単一のコレクション要素としては挿入されるわけではありません)。
 > このコマンドは、元のコレクションを変更します。
 
 デフォルトでは、*col2* の要素は元のコレクションの最後に追加されます。 *index* に引数を渡すことで、*col2* の要素を挿入する位置を指定することができます。
@@ -353,7 +353,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 
 <!-- REF #collection.concat().Params -->
-| 引数    | タイプ                                                            |    | 説明                                                    |
+| 引数    | 型                                                              |    | 説明                                                    |
 | ----- | -------------------------------------------------------------- |:--:| ----------------------------------------------------- |
 | value | Number, Text, Object, Collection, Date, Time, Boolean, Picture | -> | 連結する値。 *value* がコレクションの場合、コレクションの全要素が元のコレクションに追加されます。 |
 | 戻り値   | Collection                                                     | <- | 元のコレクションに値が追加された新規コレクション|<!-- END REF -->
@@ -362,7 +362,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 #### 説明
 
-`.concat()` 関数は、 <!-- REF #collection.concat().Summary -->*value* に指定した要素を元のコレクションの最後に追加した、新しいコレクションを返します<!-- END REF -->。
+`.concat()` 関数は、 <!-- REF #collection.concat().Summary -->*value* に指定した要素を元のコレクションの最後に追加した、新しいコレクションを返します<!-- END REF -->.
 > このコマンドは、元のコレクションを変更しません。
 
 *value* がコレクションの場合、その全要素が新しい要素として元のコレクションの最後に追加されます。 *value* がコレクションでない場合、それ自体が新しい要素として追加されます。
@@ -396,7 +396,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 
 <!-- REF #collection.copy().Params -->
-| 引数           | タイプ        |    | 説明                                                                        |
+| 引数           | 型          |    | 説明                                                                        |
 | ------------ | ---------- |:--:| ------------------------------------------------------------------------- |
 | option       | Integer    | -> | `ck resolve pointers`: コピー前にポインターを解決する<br/>`ck shared`: 共有コレクションを返す |
 | groupWithCol | Collection | -> | 結果のコレクションとグループする共有コレクション                                                  |
@@ -523,7 +523,7 @@ End use
 
 
 <!-- REF #collection.count().Params -->
-| 引数           | タイプ  |    | 説明                                      |
+| 引数           | 型    |    | 説明                                      |
 | ------------ | ---- |:--:| --------------------------------------- |
 | propertyPath | Text | -> | 計算に使用するオブジェクトプロパティのパス                   |
 | 戻り値          | Real | <- | コレクション内の要素の数|<!-- END REF -->
@@ -532,7 +532,7 @@ End use
 
 #### 説明
 
-`.count()` 関数は、 <!-- REF #collection.count().Summary -->コレクション内の、null ではない要素の個数を返します<!-- END REF -->。
+`.count()` 関数は、 <!-- REF #collection.count().Summary -->コレクション内の、null ではない要素の個数を返します<!-- END REF -->.
 
 コレクションがオブジェクトを含んでいる場合、*propertyPath* 引数を渡すことができます。 この場合、*propertyPath* で指定したパスを含む要素のみがカウントされます。
 
@@ -568,7 +568,7 @@ End use
 
 
 <!-- REF #collection.countValues().Params -->
-| 引数           | タイプ                                             |    | 説明                                 |
+| 引数           | 型                                               |    | 説明                                 |
 | ------------ | ----------------------------------------------- |:--:| ---------------------------------- |
 | value        | Text, Number, Boolean, Date, Object, Collection | -> | 数える値                               |
 | propertyPath | Text                                            | -> | 計算に使用するオブジェクトプロパティのパス              |
@@ -578,7 +578,7 @@ End use
 
 #### 説明
 
-`.countValues()` 関数は、 <!-- REF #collection.countValues().Summary -->value 引数に指定した値がコレクション内において見つかった回数を返します<!-- END REF -->。
+`.countValues()` 関数は、 <!-- REF #collection.countValues().Summary -->value 引数に指定した値がコレクション内において見つかった回数を返します<!-- END REF -->.
 
 *value* には、以下のいずれかを渡すことができます:
 
@@ -642,7 +642,7 @@ End use
 
 
 <!-- REF #collection.distinct().Params -->
-| 引数           | タイプ        |    | 説明                                                       |
+| 引数           | 型          |    | 説明                                                       |
 | ------------ | ---------- |:--:| -------------------------------------------------------- |
 | option       | Integer    | -> | `ck diacritical`: アクセント等の発音区別符号を無視しない評価 (たとえば "A" # "a") |
 | propertyPath | Text       | -> | 重複しない値を取得する属性のパス                                         |
@@ -652,7 +652,7 @@ End use
 
 #### 説明
 
-`.distinct()` 関数は、 <!-- REF #collection.distinct().Summary -->元のコレクションから重複しない (異なる) 値のみを格納した新しいコレクションを返します<!-- END REF -->。
+`.distinct()` 関数は、 <!-- REF #collection.distinct().Summary -->元のコレクションから重複しない (異なる) 値のみを格納した新しいコレクションを返します<!-- END REF -->.
 > このコマンドは、元のコレクションを変更しません。
 
 返されたコレクションは自動的に並べ替えられています。 **Null** 値は返されません。
@@ -692,7 +692,7 @@ End use
 
 
 <!-- REF #collection.equal().Params -->
-| 引数          | タイプ        |    | 説明                                                         |
+| 引数          | 型          |    | 説明                                                         |
 | ----------- | ---------- |:--:| ---------------------------------------------------------- |
 | collection2 | Collection | -> | 比較するコレクション                                                 |
 | option      | Integer    | -> | `ck diacritical`: アクセント等の発音区別符号を無視しない評価 (たとえば "A" # "a")   |
@@ -753,7 +753,7 @@ End use
 
 
 <!-- REF #collection.every().Params -->
-| 引数         | タイプ     |    | 説明                                               |
+| 引数         | 型       |    | 説明                                               |
 | ---------- | ------- |:--:| ------------------------------------------------ |
 | startFrom  | Integer | -> | テストを開始するインデックス                                   |
 | methodName | Text    | -> | テストに呼び出すメソッド名                                    |
@@ -764,7 +764,7 @@ End use
 
 #### 説明
 
-`.every()` 関数は、 <!-- REF #collection.every().Summary -->コレクション内の全要素が、*methodName* に指定したメソッドで実装されたテストにパスした場合には **true** を返します<!-- END REF -->。
+`.every()` 関数は、 <!-- REF #collection.every().Summary -->コレクション内の全要素が、*methodName* に指定したメソッドで実装されたテストにパスした場合には **true** を返します<!-- END REF -->.
 
 *methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* で指定したメソッドはどんなテストでも実行でき、引数はあってもなくても構いません。 このメソッドは $1 にオブジェクトを受け取り、テストをパスした要素の *$1.result* を true に設定しなければなりません。
 
@@ -846,7 +846,7 @@ End if
 
 
 <!-- REF #collection.extract().Params -->
-| 引数           | タイプ        |    | 説明                                                                                              |
+| 引数           | 型          |    | 説明                                                                                              |
 | ------------ | ---------- |:--:| ----------------------------------------------------------------------------------------------- |
 | propertyPath | Text       | -> | 新しいコレクションに抽出する値のオブジェクトプロパティパス                                                                   |
 | targetpath   | Text       | -> | 抽出先のプロパティパスあるいはプロパティ名                                                                           |
@@ -857,7 +857,7 @@ End if
 
 #### 説明
 
-`.extract()` 関数は、 <!-- REF #collection.extract().Summary -->元のオブジェクトのコレクションから、*propertyPath* 引数が指定するプロパティ値を抽出し、新しいコレクションに格納して返します<!-- END REF -->。
+`.extract()` 関数は、 <!-- REF #collection.extract().Summary -->元のオブジェクトのコレクションから、*propertyPath* 引数が指定するプロパティ値を抽出し、新しいコレクションに格納して返します<!-- END REF -->.
 > このコマンドは、元のコレクションを変更しません。
 
 戻り値のコレクションの中身は、*targetPath* 引数によります:
@@ -914,7 +914,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 <!-- REF #collection.fill().Params -->
-| 引数        | タイプ                                             |    | 説明                                         |
+| 引数        | 型                                               |    | 説明                                         |
 | --------- | ----------------------------------------------- |:--:| ------------------------------------------ |
 | value     | number, Text, Collection, Object, Date, Boolean | -> | 代入する値                                      |
 | startFrom | Integer                                         | -> | 開始インデックス (含まれる)                            |
@@ -925,7 +925,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 #### 説明
 
-`.fill()` 関数は、 <!-- REF #collection.fill().Summary -->コレクションを *value* 引数の値で満たし、同コレクションを返します。オプションとして、*startFrom* および *end* インデックスを渡して代入開始位置および終了位置を指定することもできます<!-- END REF -->。
+`.fill()` 関数は、 <!-- REF #collection.fill().Summary -->コレクションを *value* 引数の値で満たし、同コレクションを返します。オプションとして、*startFrom* および *end* インデックスを渡して代入開始位置および終了位置を指定することもできます<!-- END REF -->.
 > このコマンドは、元のコレクションを変更します。
 
 * *startFrom* 引数が渡されなかった場合、*value* 引数の値はコレクションの全要素に代入されます (つまり、*startFrom*=0)。
@@ -966,7 +966,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 <!-- REF #collection.filter().Params -->
-| 引数         | タイプ        |    | 説明                                                             |
+| 引数         | 型          |    | 説明                                                             |
 | ---------- | ---------- |:--:| -------------------------------------------------------------- |
 | methodName | Text       | -> | コレクションをフィルターするために呼び出すメソッド名                                     |
 | param      | 複合         | -> | *methodName* に渡す引数                                             |
@@ -976,7 +976,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 #### 説明
 
-`.filter()` 関数は、 <!-- REF #collection.filter().Summary -->元のコレクション要素のうち、*methodName* メソッドの結果が **true** になる要素をすべて格納した新しいコレクションを返します<!-- END REF -->。 この関数は ***シャロウ・コピー*** を返します。つまり、元のコレクションにオブジェクト要素やコレクション要素が含まれていた場合、それらの参照は戻り値のコレクションで共有されます。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
+`.filter()` 関数は、 <!-- REF #collection.filter().Summary -->元のコレクション要素のうち、*methodName* メソッドの結果が **true** になる要素をすべて格納した新しいコレクションを返します<!-- END REF -->. この関数は ***シャロウ・コピー*** を返します。つまり、元のコレクションにオブジェクト要素やコレクション要素が含まれていた場合、それらの参照は戻り値のコレクションで共有されます。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 > このコマンドは、元のコレクションを変更しません。
 
 *methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* で指定したメソッドはどんなテストでも実行でき、引数はあってもなくても構いません。 このメソッドは $1 にオブジェクトを受け取り、メソッドの条件を満たして新規コレクションに代入されるべき要素の *$1.result* を **true** に設定しなければなりません。
@@ -1056,7 +1056,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 <!-- REF #collection.find().Params -->
-| 引数         | タイプ     |    | 説明                                                          |
+| 引数         | 型       |    | 説明                                                          |
 | ---------- | ------- |:--:| ----------------------------------------------------------- |
 | startFrom  | Integer | -> | 検索を開始するインデックス                                               |
 | methodName | Text    | -> | 検索用に呼び出すメソッド名                                               |
@@ -1067,7 +1067,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 #### 説明
 
-`.find()` 関数は、 <!-- REF #collection.find().Summary -->*methodName* 引数のメソッドを各コレクション要素に適用して、**true** を返す最初の要素を返します<!-- END REF -->。
+`.find()` 関数は、 <!-- REF #collection.find().Summary -->*methodName* 引数のメソッドを各コレクション要素に適用して、**true** を返す最初の要素を返します<!-- END REF -->.
 > このコマンドは、元のコレクションを変更しません。
 
 *methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* で指定したメソッドはどんなテストでも実行でき、引数はあってもなくても構いません。 このメソッドは $1 にオブジェクトを受け取り、条件を満たす最初の要素の *$1.result* を **true** に設定しなければなりません。
@@ -1150,7 +1150,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 <!-- REF #collection.findIndex().Params -->
-| 引数         | タイプ     |    | 説明                                                          |
+| 引数         | 型       |    | 説明                                                          |
 | ---------- | ------- |:--:| ----------------------------------------------------------- |
 | startFrom  | Integer | -> | 検索を開始するインデックス                                               |
 | methodName | Text    | -> | 検索用に呼び出すメソッド名                                               |
@@ -1161,7 +1161,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 #### 説明
 
-`.findIndex()` 関数は、 <!-- REF #collection.findIndex().Summary -->*methodName* 引数のメソッドを各コレクション要素に適用して、**true** を返す最初の要素のインデックスを返します<!-- END REF -->。
+`.findIndex()` 関数は、 <!-- REF #collection.findIndex().Summary -->*methodName* 引数のメソッドを各コレクション要素に適用して、**true** を返す最初の要素のインデックスを返します<!-- END REF -->.
 > このコマンドは、元のコレクションを変更しません。
 
 *methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* で指定したメソッドはどんなテストでも実行でき、引数はあってもなくても構いません。 このメソッドは $1 にオブジェクトを受け取り、条件を満たす最初の要素の *$1.result* を **true** に設定しなければなりません。
@@ -1225,7 +1225,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 <!-- REF #collection.indexOf().Params -->
-| 引数        | タイプ     |    | 説明                                                                   |
+| 引数        | 型       |    | 説明                                                                   |
 | --------- | ------- |:--:| -------------------------------------------------------------------- |
 | toSearch  | 式       | -> | コレクション内を検索する式                                                        |
 | startFrom | Integer | -> | 検索を開始するインデックス                                                        |
@@ -1235,7 +1235,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 #### 説明
 
-`.indexOf()` 関数は、 <!-- REF #collection.indexOf().Summary -->*toSearch* 引数の式をコレクション要素の中から検索し、最初に見つかった要素のインデックス (見つからなかった場合には -1) を返します<!-- END REF -->。
+`.indexOf()` 関数は、 <!-- REF #collection.indexOf().Summary -->*toSearch* 引数の式をコレクション要素の中から検索し、最初に見つかった要素のインデックス (見つからなかった場合には -1) を返します<!-- END REF -->.
 > このコマンドは、元のコレクションを変更しません。
 
 *toSearch* パラメーターには、コレクション内で検索する式を渡します。 以下のものを渡すことができます:
@@ -1281,7 +1281,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 <!-- REF #collection.indices().Params -->
-| 引数          | タイプ        |    | 説明                                                          |
+| 引数          | 型          |    | 説明                                                          |
 | ----------- | ---------- |:--:| ----------------------------------------------------------- |
 | queryString | Text       | -> | 検索条件                                                        |
 | value       | any        | -> | プレースホルダー使用時: 比較する値                                          |
@@ -1334,7 +1334,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.insert().Params -->
-| 引数      | タイプ        |    | 説明                                          |
+| 引数      | 型          |    | 説明                                          |
 | ------- | ---------- |:--:| ------------------------------------------- |
 | index   | Integer    | -> | 要素の挿入位置                                     |
 | element | any        | -> | コレクションに挿入する要素                               |
@@ -1344,7 +1344,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 説明
 
-*.insert()* 関数は、 <!-- REF #collection.insert().Summary --> *index* で指定したコレクションインスタンスの位置に *element* 要素を挿入し、変更された元のコレクションを返します<!-- END REF -->。
+*.insert()* 関数は、 <!-- REF #collection.insert().Summary --> *index* で指定したコレクションインスタンスの位置に *element* 要素を挿入し、変更された元のコレクションを返します<!-- END REF -->.
 > このコマンドは、元のコレクションを変更します。
 
 *index* パラメーターには、コレクション内で要素を挿入する位置を渡します。
@@ -1383,7 +1383,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.join().Params -->
-| 引数        | タイプ     |    | 説明                                                     |
+| 引数        | 型       |    | 説明                                                     |
 | --------- | ------- |:--:| ------------------------------------------------------ |
 | delimiter | Text    | -> | 要素間に用いる区切り文字                                           |
 | option    | Integer | -> | `ck ignore null or empty`: 戻り値に null と空の文字列を含めない       |
@@ -1425,7 +1425,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.lastIndexOf().Params -->
-| 引数        | タイプ     |    | 説明                                                                   |
+| 引数        | 型       |    | 説明                                                                   |
 | --------- | ------- |:--:| -------------------------------------------------------------------- |
 | toSearch  | 式       | -> | コレクション内を検索する要素                                                       |
 | startFrom | Integer | -> | 検索を開始するインデックス                                                        |
@@ -1482,7 +1482,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 説明
 
-`.length` プロパティは、 <!-- REF #collection.length.Summary -->コレクション内の要素数を返します<!-- END REF -->。
+`.length` プロパティは、 <!-- REF #collection.length.Summary -->コレクション内の要素数を返します<!-- END REF -->.
 
 `.length` プロパティは、コレクション作成時に初期化されます。 要素を追加・削除すると、必要に応じて length は更新されます。 このプロパティは **読み取り専用** です (これを使用してコレクションのサイズを設定することはできません)。
 
@@ -1512,7 +1512,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.map().Params -->
-| 引数         | タイプ        |    | 説明                                              |
+| 引数         | 型          |    | 説明                                              |
 | ---------- | ---------- |:--:| ----------------------------------------------- |
 | methodName | Text       | -> | コレクション要素を変換するのに使用するメソッド名                        |
 | param      | any        | -> | methodName に渡す引数                                |
@@ -1522,7 +1522,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 説明
 
-`.map()` 関数は、 <!-- REF #collection.map().Summary -->元のコレクションの各要素に対して *methodName* メソッドを呼び出した結果に基づいた、新しいコレクションを作成します<!-- END REF -->。 オプションで、*param* パラメーターに、*methodName* に渡す引数を指定することができます。 `.map()` は常に、元のコレクションと同じサイズのコレクションを返します (*$1.stop* が使用された場合を除く (後述参照))。
+`.map()` 関数は、 <!-- REF #collection.map().Summary -->元のコレクションの各要素に対して *methodName* メソッドを呼び出した結果に基づいた、新しいコレクションを作成します<!-- END REF -->. オプションで、*param* パラメーターに、*methodName* に渡す引数を指定することができます。 `.map()` は常に、元のコレクションと同じサイズのコレクションを返します (*$1.stop* が使用された場合を除く (後述参照))。
 > このコマンドは、元のコレクションを変更しません。
 
 *methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* で指定したメソッドはどんな処理でも実行でき、引数はあってもなくても構いません。
@@ -1572,7 +1572,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.max().Params -->
-| 引数           | タイプ                                             |    | 説明                                     |
+| 引数           | 型                                               |    | 説明                                     |
 | ------------ | ----------------------------------------------- |:--:| -------------------------------------- |
 | propertyPath | Text                                            | -> | 評価するオブジェクトプロパティのパス                     |
 | 戻り値          | Boolean, Text, Number, Collection, Object, Date | <- | コレクション内の最大値|<!-- END REF -->
@@ -1620,7 +1620,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.min().Params -->
-| 引数           | タイプ                                             |    | 説明                                     |
+| 引数           | 型                                               |    | 説明                                     |
 | ------------ | ----------------------------------------------- |:--:| -------------------------------------- |
 | propertyPath | Text                                            | -> | 評価するオブジェクトプロパティのパス                     |
 | 戻り値          | Boolean, Text, Number, Collection, Object, Date | <- | コレクション内の最小値|<!-- END REF -->
@@ -1668,7 +1668,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.orderBy().Params -->
-| 引数          | タイプ        |    | 説明                                                      |
+| 引数          | 型          |    | 説明                                                      |
 | ----------- | ---------- |:--:| ------------------------------------------------------- |
 | pathStrings | Text       | -> | コレクションの並べ替え基準とするプロパティパス                                 |
 | pathObjects | Collection | -> | 条件オブジェクトのコレクション                                         |
@@ -1679,7 +1679,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 説明
 
-.orderBy() 関数は、 <!-- REF #collection.orderBy().Summary -->コレクションの要素を指定順に並べ替えた新しいコレクションを返します<!-- END REF -->。
+.orderBy() 関数は、 <!-- REF #collection.orderBy().Summary -->コレクションの要素を指定順に並べ替えた新しいコレクションを返します<!-- END REF -->.
 
 この関数は *シャロウ・コピー* を返します。つまり、元のコレクションにオブジェクト要素やコレクション要素が含まれていた場合、それらの参照は戻り値のコレクションで共有されます。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 > このコマンドは、元のコレクションを変更しません。
@@ -1702,7 +1702,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 * *ascOrDesc* : Integer。 **Objects and collections** テーマから、以下の定数のいずれか一つを渡します:
 
- | 定数            | タイプ     | 値 | 説明                   |
+ | 定数            | 型       | 値 | 説明                   |
  | ------------- | ------- | - | -------------------- |
  | ck ascending  | Longint | 0 | 要素は昇順に並べられます (デフォルト) |
  | ck descending | Longint | 1 | 要素は降順に並べられます         |
@@ -1803,7 +1803,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.orderByMethod().Params -->
-| 引数         | タイプ        |    | 説明                                                      |
+| 引数         | 型          |    | 説明                                                      |
 | ---------- | ---------- |:--:| ------------------------------------------------------- |
 | methodName | Text       | -> | 並べ替え順の指定に使用するメソッド名                                      |
 | extraParam | 式          | -> | methodName に渡す引数                                        |
@@ -1813,7 +1813,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 説明
 
-`.orderByMethod()` 関数は、 <!-- REF #collection.orderByMethod().Summary -->*methodName* メソッドを通して定義された順番でコレクション要素を並べ替えた新しいコレクションを返します<!-- END REF -->。
+`.orderByMethod()` 関数は、 <!-- REF #collection.orderByMethod().Summary -->*methodName* メソッドを通して定義された順番でコレクション要素を並べ替えた新しいコレクションを返します<!-- END REF -->.
 
 この関数は *シャロウ・コピー* を返します。つまり、元のコレクションにオブジェクト要素やコレクション要素が含まれていた場合、それらの参照は戻り値のコレクションで共有されます。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 > このコマンドは、元のコレクションを変更しません。
@@ -1906,7 +1906,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 
 <!-- REF #collection.pop().Params -->
-| 引数  | タイプ |    | 説明                                      |
+| 引数  | 型   |    | 説明                                      |
 | --- | --- |:--:| --------------------------------------- |
 | 戻り値 | any | <- | コレクションの最後の要素|<!-- END REF -->
 
@@ -1914,7 +1914,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 #### 説明
 
-`.pop()` 関数は、 <!-- REF #collection.pop().Summary -->コレクションから最後の要素を取り除き、それを戻り値として返します<!-- END REF -->。
+`.pop()` 関数は、 <!-- REF #collection.pop().Summary -->コレクションから最後の要素を取り除き、それを戻り値として返します<!-- END REF -->.
 > このコマンドは、元のコレクションを変更します。
 
 空のコレクションに適用した場合、 `.pop()` は ***Undefined*** を返します。
@@ -1950,7 +1950,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 
 <!-- REF #collection.push().Params -->
-| 引数      | タイプ        |    | 説明                                          |
+| 引数      | 型          |    | 説明                                          |
 | ------- | ---------- |:--:| ------------------------------------------- |
 | element | 複合         | -> | コレクションに追加する要素                               |
 | 戻り値     | Collection | <- | 要素の追加された元のコレクション|<!-- END REF -->
@@ -1959,7 +1959,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 #### 説明
 
-`.push()` 関数は、 <!-- REF #collection.push().Summary -->一つ以上の *element* 引数をコレクションインスタンスの最後に追加し、変更された元のコレクションを返します<!-- END REF -->。
+`.push()` 関数は、 <!-- REF #collection.push().Summary -->一つ以上の *element* 引数をコレクションインスタンスの最後に追加し、変更された元のコレクションを返します<!-- END REF -->.
 > このコマンドは、元のコレクションを変更します。
 
 #### 例題 1
@@ -2004,7 +2004,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 
 <!-- REF #collection.query().Params -->
-| 引数            | タイプ        |    | 説明                                                   |
+| 引数            | 型          |    | 説明                                                   |
 | ------------- | ---------- |:--:| ---------------------------------------------------- |
 | queryString   | Text       | -> | 検索条件                                                 |
 | value         | 複合         | -> | プレースホルダー使用時: 比較する値                                   |
@@ -2105,7 +2105,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.reduce().Params -->
-| 引数         | タイプ                                             |    | 説明                                      |
+| 引数         | 型                                               |    | 説明                                      |
 | ---------- | ----------------------------------------------- |:--:| --------------------------------------- |
 | methodName | Text                                            | -> | コレクション要素を処理するのに使用するメソッド名                |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | *methodName* の最初の呼び出しに最初の引数として使用する値     |
@@ -2116,7 +2116,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 説明
 
-`.reduce()` 関数は、 <!-- REF #collection.reduce().Summary -->*methodName* コールバックをアキュムレーターおよびコレクションの各要素に (左から右へ) 適用して、単一の値にまとめます<!-- END REF -->。
+`.reduce()` 関数は、 <!-- REF #collection.reduce().Summary -->*methodName* コールバックをアキュムレーターおよびコレクションの各要素に (左から右へ) 適用して、単一の値にまとめます<!-- END REF -->.
 > このコマンドは、元のコレクションを変更しません。
 
 *methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* はコレクションの各要素を受け取り、任意の処理を実行して、結果を *$1.accumulator* に蓄積します。この値は最終的に *$1.value* に返されます。
@@ -2190,7 +2190,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.remove().Params -->
-| 引数      | タイプ        |    | 説明                                          |
+| 引数      | 型          |    | 説明                                          |
 | ------- | ---------- |:--:| ------------------------------------------- |
 | index   | Integer    | -> | 削除を開始する要素の位置                                |
 | howMany | Integer    | -> | 削除する要素の数、省略時は 1要素を削除                        |
@@ -2200,7 +2200,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 説明
 
-`.remove()` 関数は、 <!-- REF #collection.remove().Summary -->*index* で指定した位置から一つまた複数のコレクション要素を削除し、変更されたコレクションを返します<!-- END REF -->。
+`.remove()` 関数は、 <!-- REF #collection.remove().Summary -->*index* で指定した位置から一つまた複数のコレクション要素を削除し、変更されたコレクションを返します<!-- END REF -->.
 > このコマンドは、元のコレクションを変更します。
 
 *index* パラメーターには、削除するコレクション要素の位置を渡します。
@@ -2242,7 +2242,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.resize().Params -->
-| 引数           | タイプ                                             |    | 説明                                         |
+| 引数           | 型                                               |    | 説明                                         |
 | ------------ | ----------------------------------------------- |:--:| ------------------------------------------ |
 | size         | Integer                                         | -> | コレクションの新しいサイズ                              |
 | defaultValue | Number, Text, Object, Collection, Date, Boolean | -> | 新規要素のデフォルト値                                |
@@ -2252,7 +2252,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 説明
 
-.resize() 関数は、 <!-- REF #collection.resize().Summary -->コレクションの length を引数で指定されたサイズに設定し、変更された元のコレクションを返します<!-- END REF -->。
+.resize() 関数は、 <!-- REF #collection.resize().Summary -->コレクションの length を引数で指定されたサイズに設定し、変更された元のコレクションを返します<!-- END REF -->.
 > このコマンドは、元のコレクションを変更します。
 
 * *size* < lengthの場合、余分な要素はコレクションから削除されます。
@@ -2297,7 +2297,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.reverse().Params -->
-| 引数  | タイプ        |    | 説明                                             |
+| 引数  | 型          |    | 説明                                             |
 | --- | ---------- |:--:| ---------------------------------------------- |
 | 戻り値 | Collection | <- | 逆順に要素を格納した新しいコレクション|<!-- END REF -->
 
@@ -2305,7 +2305,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 説明
 
-`.reverse()` 関数は、 <!-- REF #collection.reverse().Summary -->全要素が逆順になった、コレクションのディープ・コピーを返します<!-- END REF -->。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
+`.reverse()` 関数は、 <!-- REF #collection.reverse().Summary -->全要素が逆順になった、コレクションのディープ・コピーを返します<!-- END REF -->. また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 > このコマンドは、元のコレクションを変更しません。
 
 #### 例題
@@ -2333,7 +2333,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.shift().Params -->
-| 引数  | タイプ |    | 説明                                     |
+| 引数  | 型   |    | 説明                                     |
 | --- | --- |:--:| -------------------------------------- |
 | 戻り値 | any | <- | コレクションの先頭要素|<!-- END REF -->
 
@@ -2341,7 +2341,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 説明
 
-`.shift()` 関数は、 <!-- REF #collection.shift().Summary -->コレクションの先頭要素を取り除き、それを戻り値として返します<!-- END REF -->。
+`.shift()` 関数は、 <!-- REF #collection.shift().Summary -->コレクションの先頭要素を取り除き、それを戻り値として返します<!-- END REF -->.
 > このコマンドは、元のコレクションを変更します。
 
 コレクションが空の場合、 関数はなにもしません。
@@ -2374,7 +2374,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.slice().Params -->
-| 引数        | タイプ        |    | 説明                                                      |
+| 引数        | 型          |    | 説明                                                      |
 | --------- | ---------- |:--:| ------------------------------------------------------- |
 | startFrom | Integer    | -> | 開始インデックス (含まれる)                                         |
 | end       | Integer    | -> | 終了インデックス (含まれない)                                        |
@@ -2422,7 +2422,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.some().Params -->
-| 引数         | タイプ     |    | 説明                                                   |
+| 引数         | 型       |    | 説明                                                   |
 | ---------- | ------- |:--:| ---------------------------------------------------- |
 | startFrom  | Integer | -> | テストを開始するインデックス                                       |
 | methodName | Text    | -> | テストに呼び出すメソッド名                                        |
@@ -2497,7 +2497,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.sort().Params -->
-| 引数         | タイプ        |    | 説明                                         |
+| 引数         | 型          |    | 説明                                         |
 | ---------- | ---------- |:--:| ------------------------------------------ |
 | methodName | Text       | -> | 並べ替え順の指定に使用するメソッド名                         |
 | extraParam | any        | -> | methodName に渡す引数                           |
@@ -2581,7 +2581,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.sum().Params -->
-| 引数           | タイプ  |    | 説明                                       |
+| 引数           | 型    |    | 説明                                       |
 | ------------ | ---- |:--:| ---------------------------------------- |
 | propertyPath | Text | -> | 計算に使用するオブジェクトプロパティのパス                    |
 | 戻り値          | Real | <- | コレクション要素の値の合計|<!-- END REF -->
@@ -2590,7 +2590,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 説明
 
-`.sum()` 関数は、 <!-- REF #collection.sum().Summary -->コレクションインスタンスの全要素の値を合計して返します<!-- END REF -->。
+`.sum()` 関数は、 <!-- REF #collection.sum().Summary -->コレクションインスタンスの全要素の値を合計して返します<!-- END REF -->.
 
 計算の対象となるのは数値のみです (他の型の要素は無視されます)。
 
@@ -2641,7 +2641,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 <!-- REF #collection.unshift().Params -->
-| 引数                         | タイプ                                    |    | 説明               |
+| 引数                         | 型                                      |    | 説明               |
 | -------------------------- | -------------------------------------- |:--:| ---------------- |
 | value                      | Text, Number, Object, Collection, Date | -> | コレクションの先頭に挿入する値  |
 | 戻り値                        | Real                                   | <- | 要素の追加された元のコレクション |

@@ -9,7 +9,7 @@ title: VP Get show print lines
 
 <!-- REF #_method_.VP Get show print lines.Params -->
 
-| 引数         | タイプ     |    | 説明                            |                  |
+| 引数         | 型       |    | 説明                            |                  |
 | ---------- | ------- | -- | ----------------------------- | ---------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名       |                  |
 | sheet      | Integer | <- | シートのインデックス                    |                  |

@@ -9,7 +9,7 @@ title: VP ADD SELECTION
 
 <!-- REF #_method_.VP ADD SELECTION.Params -->
 
-| 引数       | タイプ  |    | 説明        |                  |
+| 引数       | 型    |    | 説明        |                  |
 | -------- | ---- | -- | --------- | ---------------- |
 | rangeObj | Text | -> | レンジオブジェクト | <!-- END REF --> |
 

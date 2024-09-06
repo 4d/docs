@@ -194,7 +194,7 @@ Les [boutons de rendu](https://developer.qodly.com/docs/studio/rendering#how-to-
 
 :::
 
-### Portées des pages Qodly
+### Portée des pages Qodly
 
 Lors du rendu des pages Qodly dans Qodly Studio, le moteur de rendu se connectera au serveur web 4D via HTTP ou HTTPS, en fonction des propriétés, en suivant le même schéma de connexion HTTP/HTTPS que pour le [serveur webAdmin 4D](../Admin/webAdmin.md#accept-http-connections-on-localhost). Voir aussi [ce paragraphe](#about-license_usage) sur les schémas d'URL et l'utilisation de la licence.
 
@@ -224,9 +224,9 @@ https://www.myWebSite.com/$lib/renderer/?w=welcome
 
 Avec Qodly Studio for 4D, vous pouvez utiliser le [mode "force login"](../REST/authUsers.md#force-login-mode) pour contrôler le nombre de sessions web ouvertes qui nécessitent des licences 4D Client. Vous pouvez également [déconnecter](#logout) l'utilisateur à tout moment pour décrémenter le nombre de licences consommées.
 
-### Setting the force login mode
+### Activer le mode force login
 
-Vous pouvez définir le mode ["force login"](../REST/authUsers.md#force-login-mode) pour votre application 4D dans la page [Rôles et privilèges](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/), en utilisant l'option **Force login** :
+Vous pouvez activer le mode ["force login"](../REST/authUsers.md#force-login-mode) pour votre application 4D dans la page [Rôles et privilèges](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/), en utilisant l'option **Force login** :
 
 ![alt-text](../assets/en/WebServer/forcelogin.png)
 
@@ -236,7 +236,7 @@ Vous pouvez également définir cette option directement dans le fichier [**role
 
 :::
 
-Lorsque le mode "force login" est **désactivé** (mode par défaut), toute requête REST, y compris le rendu d'une page Qodly d'authentification, crée une session web sur le serveur et prend une licence 4D Client, quel que soit le résultat réel de l'authentification. Lorsque le mode "force login" est **activé**, une page d'authentification Qodly simple peut être affichée sans consommer de licence. Il vous suffit simplement de mettre en œuvre la fonction [`authentify()`](../REST/authUsers.md#function-authentify) dans la classe DataStore et de l'appeler depuis la page Qodly. The licence is consumed only when the user is actually logged.
+Lorsque le mode "force login" est **désactivé** (mode par défaut), toute requête REST, y compris le rendu d'une page Qodly d'authentification, crée une session web sur le serveur et prend une licence 4D Client, quel que soit le résultat réel de l'authentification. Lorsque le mode "force login" est **activé**, une page d'authentification Qodly simple peut être affichée sans consommer de licence. Il vous suffit simplement de mettre en œuvre la fonction [`authentify()`](../REST/authUsers.md#function-authentify) dans la classe DataStore et de l'appeler depuis la page Qodly. La licence est consommée uniquement lorsque l'utilisateur est réellement connecté.
 
 :::info
 
@@ -279,33 +279,39 @@ Cet appel est accepté et tant que l'authentification n'est pas réussie, `Sessi
 
 Quand le [mode "force login" est activé](#setting-the-force-login-mode), Qodly Studio for 4D vous permet d'implémenter une fonctionnalité de déconnexion dans votre application.
 
-Pour déconnecter l'utilisateur, vous devez simplement exécuter l'action standard **Logout** à partir de la page Qodly. In Qodly Studio, you can associate this standard action to a button for example:
+Pour déconnecter l'utilisateur, vous devez simplement exécuter l'action standard **Logout** à partir de la page Qodly. Dans Qodly Studio, vous pouvez associer cette action standard à un bouton par exemple :
 
 ![alt-text](../assets/en/WebServer/logout.png)
 
-Triggering the logout action from a web user session has the following effects:
+Déclencher l'action de déconnexion d'une session utilisateur Web a les effets suivants :
 
 - la session utilisateur web courante perd ses privilèges, seules les [requêtes REST descriptives](../REST/authUsers.md#descriptive-rest-requests) sont autorisées,
-- the associated 4D license is released,
+- la licence 4D associée est libérée,
 - le `Session.storage` est conservé jusqu'à ce que le délai d'inactivité de la session Web soit atteint (au moins une heure). Pendant cette période après une déconnexion, si l'utilisateur se connecte à nouveau, la même session est réutilisée et l'objet partagé `Session.storage` est disponible avec son contenu actuel.
 
-## About license usage for rendering
+## Utilisation de licences pour le rendu
 
-In default mode when any form is rendered, or in "force login" mode when a form handling data or calling a function is rendered, you must have an available license, as rendering Qodly forms targets the project database's main web server.
+En mode par défaut, lorsque n'importe quelle page est affichée, ou en mode "force login" lorsqu'un formulaire traitant des données ou appelant une fonction est affiché, vous devez disposer d'une licence disponible, car le moteur de rendu des pages Qodly cible le serveur web principal du projet.
 
-### URL Schemes
+### Schemas d'URL
 
-Qodly Studio's URL scheme configuration (HTTP and HTTPS) determines how many licenses are retained when rendering Qodly forms. With the appropriate configuration, you can avoid unnecessary license retaining.
+La configuration de schéma d'URL de Qodly Studio (HTTP et HTTPS) influe sur le nombre de licences qui sont prises lors du rendu des pages Qodly. Avec une configuration appropriée, vous pouvez éviter la consommation inutile de licences.
 
-Comme expliqué dans la section [configuration](#configuration), le serveur Web WebAdmin fournit un accès sécurisé à Qodly Studio. D'autre part, le [renderer](#rendering-webforms) communique avec le serveur web 4D de la base de données en utilisant des requêtes REST. As such, it behaves like a conventional 4D Client.
+Comme expliqué dans la section [configuration](#configuration), le serveur Web WebAdmin fournit un accès sécurisé à Qodly Studio. D'autre part, le [moteur de rendu](#rendering-webforms) communique avec le serveur web 4D de la base de données en utilisant des requêtes REST. En tant que tel, il se comporte comme un client 4D conventionnel.
 
-If you run the renderer from the Qodly Studio and these two web servers are not reached through the same URL scheme (HTTP or HTTPS), it might lead to wrong licence counting.
+Si vous exécutez le moteur de rendu depuis Qodly Studio et que ces deux serveurs Web ne sont pas accessibles via le même schéma d'URL (HTTP ou HTTPS), cela peut entraîner un décompte de licence incorrect.
+
+:::info
+
+Using different schemes might also lead to [session](sessions.md) issues, such as losing [privileges](../ORDA/privileges.md) after a page refresh.
+
+:::
 
 #### Exemple
 
 1. Vous exécutez Qodly Studio sur un schéma d'URL HTTPS (par exemple, `https://127.0.0.1:7443/studio/`)
 
-2. The web server of your database is started only on an HTTP port.
+2. Le serveur web de votre base de données est démarré uniquement sur un port HTTP.
 
 ![alt-text](../assets/en/WebServer/schemes.png)
 
@@ -313,32 +319,32 @@ If you run the renderer from the Qodly Studio and these two web servers are not 
 
 ![alt-text](../assets/en/WebServer/render-button.png)
 
-As a result, two licenses are retained.
+En conséquence, deux licences sont consommées.
 
 :::note
 
-You can enable/disable the display of the renderer pop over using a Qodly Studio user setting.
+Vous pouvez activer/désactiver l'affichage de la fenêtre "pop over" de rendu en utilisant un paramètre utilisateur de Qodly Studio.
 
 :::
 
-### SameSite attribute
+### Attribut SameSite
 
-The behavior previously described is due to the session cookie of the 4D web server. Ce cookie de session a un attribut `SameSite` qui détermine si le cookie de session est envoyé au serveur web.
+Le comportement précédemment décrit est dû au cookie de session du serveur web 4D. Ce cookie de session a un attribut `SameSite` qui détermine si le cookie de session est envoyé au serveur web.
 
 Si la valeur de l'attribut `SameSite` est `Strict` (par défaut), le cookie de session n'est pas envoyé au serveur web, donc une nouvelle session est ouverte à chaque fois qu'une page est affichée ou rafraîchie.
 
 Pour plus d'informations sur l'attribut `SameSite`, consultez [cet article de blog](https://blog.4d.com/get-ready-for-the-new-SameSite-and-secure-attributes-for-cookies/).
 
-### Recommendations
+### Recommandations
 
-To avoid using more licenses than necessary, we recommend doing one of the following:
+Pour éviter d'utiliser plus de licences que nécessaire, nous vous recommandons d'effectuer l'une des actions suivantes :
 
 - Exécutez le moteur de rendu sur un autre onglet du navigateur (en entrant l'URL de rendu de votre formulaire Web : `IP:port/$lib/renderer/?w=NomPageQodly`).
-- Ensure the Qodly Studio and your database are reached on the same URL scheme.
+- Assurez-vous que Qodly Studio et votre base de données sont accessibles sur le même schéma d'URL.
 - Utilisez la valeur `Lax` pour le [cookie de session](webServerConfig.md#session-cookie-samesite) du serveur web de la base de données de votre projet.
 
 ## Hello, World
 
-This 5-minute video provides a "Hello World" example and covers how to enable access to the studio, create a basic interface, and configure an event that greets the user by their name:
+Cette vidéo de 5 minutes fournit un exemple de "Hello World" et explique comment autoriser l'accès au studio, créer une interface de base, et configurer un événement qui accueille l'utilisateur par son nom :
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GwIdic4OhPQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>

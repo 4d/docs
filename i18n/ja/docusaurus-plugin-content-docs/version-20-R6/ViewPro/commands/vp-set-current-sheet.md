@@ -9,7 +9,7 @@ title: VP SET CURRENT SHEET
 
 <!-- REF #_method_.VP SET CURRENT SHEET.Params -->
 
-| 引数         | タイプ     |    | 説明                      |                  |
+| 引数         | 型       |    | 説明                      |                  |
 | ---------- | ------- | -- | ----------------------- | ---------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名 |                  |
 | sheet      | Integer | <- | 新しいカレントシートのインデックス       | <!-- END REF --> |

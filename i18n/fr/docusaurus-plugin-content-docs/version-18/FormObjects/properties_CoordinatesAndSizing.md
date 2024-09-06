@@ -34,7 +34,7 @@ Lorsque cette propriété est activée, la hauteur de chaque ligne est automatiq
 
 #### Objets pris en charge
 
-[Colonne de list box](listbox_overview.md#list-box-columns)
+[\[Colonne de list box\](listbox_overview.md#list-box-columns)](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -173,7 +173,7 @@ La largeur maximale de la colonne (en pixels). La largeur de la colonne ne peut 
 
 #### Objets pris en charge
 
-[Colonne de list box](listbox_overview.md#list-box-columns)
+[\[Colonne de list box\](listbox_overview.md#list-box-columns)](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -190,7 +190,7 @@ La largeur minimale de la colonne (en pixels). La largeur de la colonne ne peut 
 
 #### Objets pris en charge
 
-[Colonne de list box](listbox_overview.md#list-box-columns)
+[\[Colonne de list box\](listbox_overview.md#list-box-columns)](listbox_overview.md#list-box-columns)
 
 ---
 

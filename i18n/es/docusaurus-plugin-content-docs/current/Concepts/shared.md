@@ -29,7 +29,7 @@ Las siguientes modificaciones pueden efectuarse en objetos y colecciones compart
 
 :::note
 
-Keep in mind that objects or collections set as the content of a shared object or collection must themselves be shared.
+Tenga en cuenta que los objetos o colecciones definidas como el contenido de un objeto compartido o colección deben ser compartidos por sí mismos.
 
 :::
 

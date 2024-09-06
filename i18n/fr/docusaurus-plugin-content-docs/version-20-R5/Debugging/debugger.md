@@ -321,13 +321,13 @@ Le menu contextuel de la fenêtre vous donne accès à l'éditeur de formule 4D 
 
 ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 
-For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/4D-Design-Reference.100-6750070.en.html).
+Pour plus d'informations sur l'Éditeur de formules, consultez le [manuel Mode Développement](https://doc.4d.com/4Dv20/4D/20.2/4D-Design-Reference.100-6750070.en.html).
 
 - **Insérer commande** : Raccourci pour insérer une commande 4D en tant qu'expression.
 - **Supprimer tout** : Supprime toutes les expressions de la fenêtre d"évaluation.
 - **Expressions par défaut** : Copie la liste des expressions de la fenêtre d'expression.
 
-> This option is not available in remote debugging mode (see [Debugging from Remote Machines](debugging-remote.md).
+> Cette option n'est pas disponible en mode débogueur distant (voir [Débogage depuis des machines distantes](debugging-remote.md).
 
 - **Contracter tout/Développer tout** : Contracte ou développe toutes les listes hiérarchiques.
 - **Montrer les types** : Affiche le type de chaque élément dans la liste (lorsque cela est pertinent).

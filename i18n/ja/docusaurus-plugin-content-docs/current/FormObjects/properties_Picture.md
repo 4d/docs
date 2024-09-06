@@ -1,6 +1,6 @@
 ---
 id: propertiesPicture
-title: Picture
+title: ピクチャー
 ---
 
 ## パス名

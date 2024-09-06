@@ -791,7 +791,7 @@ var $countries : Collection
  $countries:=ds. Employee.all().distinct("address.country")
 ```
 
-`nicknames` is a collection and `extra` is an object attribute:
+`nicknames` é uma coleção e `extra` é um atributo de objeto:
 
 ```4d
 $values:=ds. Employee.all().distinct("extra.nicknames[].first")
@@ -897,7 +897,7 @@ Se encontrar uma entidade bloqueada durante a execução de `.drop()`, não é e
 
 #### Exemplo
 
-Example without the `dk stop dropping on first error` option:
+Exemplo sem a opção `dk stop dropping on first error`:
 
 ```4d
  var $employees; $notDropped : cs.EmployeeSelection
@@ -910,7 +910,7 @@ Example without the `dk stop dropping on first error` option:
  End if
 ```
 
-Example with the `dk stop dropping on first error` option:
+Exemplo com a opção `dk stop dropping on first error`:
 
 ```4d
  var $employees; $notDropped : cs.EmployeeSelection
@@ -1346,7 +1346,7 @@ Se a entity selection estiver vazia, a função devolve Null.
 
 The `.length` property <!-- REF #EntitySelectionClass.length.Summary -->returns the number of entities in the entity selection<!-- END REF -->. Se a entity selection estiver vazia, devolve 0.
 
-Entity selections always have a `.length` property.
+As seleções de entidade sempre têm uma propriedade `.length`.
 
 > To know the total number of entities in a dataclass, it is recommended to use the [`getCount()`](DataClassClass.md#getcount) function which is more optimized than the `ds.myClass.all().length` expression.
 
@@ -2153,7 +2153,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 
 The `.sum()` function <!-- REF #EntitySelectionClass.sum().Summary -->returns the sum for all *attributePath* values in the entity selection<!-- END REF -->.
 
-`.sum()` returns 0 if the entity selection is empty.
+`.sum()` devolve 0 se a entity selection estiver vazia.
 
 A soma só pode ser feita em valores do tipo de número. If the *attributePath* is an object property, only numerical values are taken into account for the calculation (other value types are ignored). In this case, if *attributePath* leads to a property that does not exist in the object or does not contain any numeric values, `.sum()` returns 0.
 
@@ -2191,14 +2191,14 @@ $sum:=$sel.sum("salary")
 
 <!-- REF #EntitySelectionClass.toCollection().Params -->
 
-| Parâmetro    | Tipo       |     | Descrição                                                                                                       |
-| ------------ | ---------- | :-: | --------------------------------------------------------------------------------------------------------------- |
-| filterString | Text       |  -> | String com caminho(s) de atributo(s) de entidade a extrair                |
-| filterCol    | Collection |  -> | Coleção de caminho(s) de atributo(s) de entidade a extrair                |
-| options      | Integer    |  -> | `dk with primary key`: adds the primary key<br/>`dk with stamp`: adds the stamp |
-| begin        | Integer    |  -> | Designa o índice inicial                                                                                        |
-| howMany      | Integer    |  -> | Número de entidades a extrair                                                                                   |
-| Resultados   | Collection |  <- | Colecção de objectos contendo atributos e valores de selecção de entidades                                      |
+| Parâmetro    | Tipo       |     | Descrição                                                                                                                 |
+| ------------ | ---------- | :-: | ------------------------------------------------------------------------------------------------------------------------- |
+| filterString | Text       |  -> | String com caminho(s) de atributo(s) de entidade a extrair                          |
+| filterCol    | Collection |  -> | Coleção de caminho(s) de atributo(s) de entidade a extrair                          |
+| options      | Integer    |  -> | `dk with primary key`: adiciona a chave primária<br/>`dk with stamp`: adiciona o marcador |
+| begin        | Integer    |  -> | Designa o índice inicial                                                                                                  |
+| howMany      | Integer    |  -> | Número de entidades a extrair                                                                                             |
+| Resultados   | Collection |  <- | Colecção de objectos contendo atributos e valores de selecção de entidades                                                |
 
 <!-- END REF -->
 
@@ -2397,7 +2397,7 @@ Retorna:
 
 #### Exemplo
 
-Example with `relatedEntity` type with simple form:
+Exemplo com o tipo 'relatedEntity' com uma forma simples:
 
 ```4d
 var $employeesCollection : Collection
@@ -2581,7 +2581,7 @@ Retorna:
 
 #### Exemplo 9
 
-Example with extraction of all properties of `relatedEntities`:
+Exemplo com extração de todas as propriedades de `relatedEntities`:
 
 ```4d
 var $employeesCollection : Collection

@@ -102,8 +102,8 @@ title: 制御フロー
     :(Boolean_Expression)
        statement(s)
        .
-       。
-       。
+       .
+       .
 
     :(Boolean_Expression)
        statement(s)
@@ -120,8 +120,8 @@ title: 制御フロー
     :(Boolean_Expression)
        statement(s)
        .
-       。
-       。
+       .
+       .
 
     :(Boolean_Expression)
        statement(s)

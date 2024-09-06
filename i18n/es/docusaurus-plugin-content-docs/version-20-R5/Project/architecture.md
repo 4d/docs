@@ -216,7 +216,7 @@ Carpeta que contiene los componentes anidados en el proyecto (debe almacenarse e
 
 :::info
 
-You can also use the [**dependencies.json** and (optionnally) **environment4d.json** files](components.md) to declare components.
+También puede usar los archivos [**dependencies.json** y (opcionalmente) **environment4d.json**](components.md) para declarar componentes.
 
 :::
 

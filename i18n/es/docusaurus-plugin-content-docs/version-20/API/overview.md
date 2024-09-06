@@ -15,6 +15,8 @@ En la sintaxis de la función se utilizan las siguientes convenciones:
 
 - los caracteres `{ }` indican los parámetros opcionales. Por ejemplo, `.delete( { option : Integer } )` significa que el parámetro *option* puede omitirse al llamar a la función.
 - la notación `{ ; ...param }` indica un número ilimitado de parámetros. Por ejemplo, `.concat( value : any { ;...valueN } ) : Collection` significa que se puede pasar a la función un número ilimitado de valores de cualquier tipo.
-- la palabra clave `any` se utiliza para parámetros que pueden ser de cualquier tipo que se pueda almacenar dentro de los atributos (número, texto, booleano, fecha, hora, objeto, colección...). 
+- la palabra clave `any` se utiliza para parámetros que pueden ser de cualquier tipo que se pueda almacenar dentro de los atributos (número, texto, booleano, fecha, hora, objeto, colección...).
 
+## Ver también
 
+[Classes in the 4D Language](../Concepts/classes.md).

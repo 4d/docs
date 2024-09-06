@@ -172,7 +172,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [スタイル式](properties_Text.md#スタイル式)                                   |           | ○             | ○                            |
 | [上](properties_CoordinatesAndSizing.md#上)                           | ○         | ○             | ○                            |
 | [透過](properties_BackgroundAndBorder.md#透過)                          | ○         | ○             | ○                            |
-| [タイプ](properties_Object.md#タイプ)                                     | ○         | ○             | ○                            |
+| [型](properties_Object.md#タイプ)                                       | ○         | ○             | ○                            |
 | [下線](properties_Text.md#下線)                                         | ○         | ○             | ○                            |
 | [変数あるいは式](properties_Object.md#変数あるいは式)                             | ○         | ○             |                              |
 | [縦揃え](properties_Text.md#縦揃え)                                       | ○         | ○             | ○                            |
@@ -225,14 +225,14 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 リストボックスやリストボックス列オブジェクトにて発生するフォームイベントは、次の追加プロパティを返すことがあります:
 
-| プロパティ            | タイプ     | 説明                                            |
+| プロパティ            | 型       | 説明                                            |
 | ---------------- | ------- | --------------------------------------------- |
-| area             | text    | リストボックスオブジェクトエリア ("header", "footer", "cell") |
-| areaName         | text    | エリアの名称                                        |
+| area             | テキスト    | リストボックスオブジェクトエリア ("header", "footer", "cell") |
+| areaName         | テキスト    | エリアの名称                                        |
 | column           | longint | 列番号                                           |
-| columnName       | text    | 列の名称                                          |
-| footerName       | text    | フッターの名称                                       |
-| headerName       | text    | ヘッダーの名称                                       |
+| columnName       | テキスト    | 列の名称                                          |
+| footerName       | テキスト    | フッターの名称                                       |
+| headerName       | テキスト    | ヘッダーの名称                                       |
 | horizontalScroll | longint | 右方向スクロールの場合は正の数値、左方向の場合は負の数値                  |
 | isRowSelected    | boolean | 行が選択されていれば true、でなければ false                   |
 | newPosition      | longint | 列あるいは行の変更後の位置                                 |
@@ -864,7 +864,7 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 | real      | 管理されたテキスト入力 (数字とセパレーター) | ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト)                    |
 | integer   | 管理されたテキスト入力 (数字のみ)      | ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト) またはスリーステートチェックボックス |
 | boolean   | チェックボックス                | ドロップダウンメニュー (指定リスト)                                       |
-| color     | 背景色                     | text                                                      |
+| color     | 背景色                     | テキスト                                                      |
 | event     | ラベル付ボタン                 |                                                           |
 |           |                         | すべてのウィジェットには、単位切り替えボタン または 省略ボタン を追加でセルに付属させることができます      |
 
@@ -881,7 +881,7 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 |         |                                          | min>=0 の場合、"0-9" と "." |
 | integer | オブジェクト内で定義されているものと同じ                     | "0-9" と "-"            |
 |         |                                          | min>=0 の場合、"0-9" と "." |
-| Boolean | チェックボックス                                 | N/A                    |
+| boolean | チェックボックス                                 | N/A                    |
 | color   | N/A                                      | N/A                    |
 | event   | N/A                                      | N/A                    |
 

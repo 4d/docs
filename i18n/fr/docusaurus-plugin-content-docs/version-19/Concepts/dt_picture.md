@@ -40,7 +40,7 @@ La plupart des [commandes 4D de gestion d'images](https://doc.4d.com/4Dv18/4D/18
 | Redimensionnement         | Image * Nombre       | Picture  | Redimensionne l'image au pourcentage Nombre                                                                                                                                         |
 | Extension horizontale     | Image *+ Nombre      | Picture  | Redimensionne l'image horizontalement au pourcentage Nombre                                                                                                                         |
 | Extension verticale       | Image *&#124; Nombre | Picture  | Image    | Redimensionne l'image verticalement au pourcentage Nombre                                                                                                                |
-| Contient mot-clé          | Image % Chaîne       | Boolean  | Returns true if the string is associated with the picture stored in the picture expression. See `GET PICTURE KEYWORDS`                                                              |
+| Contient mot-clé          | Image % Chaîne       | Boolean  | Renvoie vrai si la chaîne est associée à l'image stockée dans l'expression image. See `GET PICTURE KEYWORDS`                                                                        |
 
 
 **Notes :**
