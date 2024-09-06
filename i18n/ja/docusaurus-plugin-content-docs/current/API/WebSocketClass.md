@@ -76,8 +76,8 @@ WebSocketオブジェクトは、以下のプロパティと機能を提供し�
 
 | 引数                                         | 型                            |     | 説明                                        |
 | ------------------------------------------ | ---------------------------- | :-: | ----------------------------------------- |
-| url                                        | テキスト                         |  -> | 接続先の URL                                  |
-| [connectionHandler](#connectionHandler-引数) | オブジェクト                       |  -> | WebSocket用コールバックを宣言しているオブジェクト             |
+| url                                        | Text                         |  -> | 接続先の URL                                  |
+| [connectionHandler](#connectionHandler-引数) | Object                       |  -> | WebSocket用コールバックを宣言しているオブジェクト             |
 | 戻り値                                        | 4D.WebSocket |  <- | 新しい [WebSocket オブジェクト](#websocket-オブジェクト) |
 
 <!-- END REF -->
@@ -104,8 +104,8 @@ WebSocketオブジェクトは、以下のプロパティと機能を提供し�
 | onError     | [Function](FunctionClass.md) | 実行エラー用のコールバック関数。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.type` (text): 常に "error"</li><li>`$2.errors`: 実行エラーの場合、4Dエラースタックのコレクション。<ul><li>[].errCode (number): 4Dエラーコード</li><li>[].message (text): 4Dエラーの説明</li><li>[].componentSignature (text) - エラーを返した内部コンポーネントの署名</li></ul></li></ul> |
 | onTerminate | [Function](FunctionClass.md) | WebSocket が終了した時のコールバック関数。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.code` (number、読み取り専用): 符号なし短整数型で、サーバーから送られたクローズコードを格納します。</li><li>`$2.reason` (text、読み取り専用): サーバーが接続を切断した理由。 これは、対象のサーバーとサブプロトコルに固有のものです。</li></ul>                                                                                                                                                                                                                                                                                                                                                      |
 | onOpen      | [Function](FunctionClass.md) | WebSocket が開始した時のコールバック関数。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.type` (text): 常に "open"</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| dataType    | テキスト                         | 受信または送信されたデータの型。 可能な値: "text" (デフォルト), "blob", "object"。 "text" = utf-8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| headers     | オブジェクト                       | WebSocket のヘッダー。<li>標準的な key 割り当てのシンタックス:` headers.*key*:=*value*` (同じ key を複数指定する場合、*value* にコレクションを使用できます)</li><li>Cookie割り当てのシンタックス (特定の場合): `headers.Cookie:="*name*=*value* {; *name2*=*value2*{; ... } }"`</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| dataType    | Text                         | 受信または送信されたデータの型。 可能な値: "text" (デフォルト), "blob", "object"。 "text" = utf-8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| headers     | Object                       | WebSocket のヘッダー。<li>標準的な key 割り当てのシンタックス:` headers.*key*:=*value*` (同じ key を複数指定する場合、*value* にコレクションを使用できます)</li><li>Cookie割り当てのシンタックス (特定の場合): `headers.Cookie:="*name*=*value* {; *name2*=*value2*{; ... } }"`</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 以下は、コールバック呼び出しの流れです:
 
@@ -195,9 +195,9 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 | 型      | 内容                                                                                                                      |
 | ------ | ----------------------------------------------------------------------------------------------------------------------- |
-| テキスト   | UTF-8 のテキスト                                                                                                             |
+| Text   | UTF-8 のテキスト                                                                                                             |
 | BLOB   | バイナリデータ                                                                                                                 |
-| オブジェクト | JSON UTF-8 のテキスト ([`JSON Stringify`](https://doc.4d.com/4dv20/help/command/ja/page1217.html) と同じ結果)。 |
+| Object | JSON UTF-8 のテキスト ([`JSON Stringify`](https://doc.4d.com/4dv20/help/command/ja/page1217.html) と同じ結果)。 |
 
 <!-- END REF -->
 
@@ -223,10 +223,10 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 <!-- REF #WebSocketClass.terminate().Params -->
 
-| 引数     | 型    |     | 説明                    |
-| ------ | ---- | :-: | --------------------- |
-| code   | 整数   |  -> | 接続が切断される理由を示すステータスコード |
-| reason | テキスト |  -> | 接続が切断される理由を説明するテキスト   |
+| 引数     | 型       |     | 説明                    |
+| ------ | ------- | :-: | --------------------- |
+| code   | Integer |  -> | 接続が切断される理由を示すステータスコード |
+| reason | Text    |  -> | 接続が切断される理由を説明するテキスト   |
 
 <!-- END REF -->
 
