@@ -11,9 +11,9 @@ title: VP SET TEXT VALUE
 
 | 引数            | 型      |    | 説明        |                  |
 | ------------- | ------ | -- | --------- | ---------------- |
-| rangeObj      | オブジェクト | -> | レンジオブジェクト |                  |
-| textValue     | テキスト   | -> | 設定するテキスト値 |                  |
-| formatPattern | テキスト   | -> | 値のフォーマット  | <!-- END REF --> |
+| rangeObj      | Object | -> | レンジオブジェクト |                  |
+| textValue     | Text   | -> | 設定するテキスト値 |                  |
+| formatPattern | Text   | -> | 値のフォーマット  | <!-- END REF --> |
 
 #### 説明
 
