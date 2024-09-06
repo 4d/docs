@@ -44,7 +44,7 @@ title: CryptoKey
 
 | 引数       | 型                            |    | 説明                    |
 | -------- | ---------------------------- | -- | --------------------- |
-| settings | オブジェクト                       | -> | キーペアを生成・ロードするための設定    |
+| settings | Object                       | -> | キーペアを生成・ロードするための設定    |
 | 戻り値      | 4D.CryptoKey | <- | 暗号化キーペアをカプセル化したオブジェクト |
 
 <!-- END REF -->
@@ -160,9 +160,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 | 引数      | 型      |    | 説明                                                |
 | ------- | ------ | -- | ------------------------------------------------- |
-| message | テキスト   | -> | `options.encodingEncrypted` を使ってデコードし復号するメッセージ文字列 |
-| options | オブジェクト | -> | デコーディングオプション                                      |
-| 戻り値     | オブジェクト | <- | ステータス                                             |
+| message | Text   | -> | `options.encodingEncrypted` を使ってデコードし復号するメッセージ文字列 |
+| options | Object | -> | デコーディングオプション                                      |
+| 戻り値     | Object | <- | ステータス                                             |
 
 <!-- END REF -->
 
@@ -210,9 +210,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 | 引数      | 型      |    | 説明                                                  |
 | ------- | ------ | -- | --------------------------------------------------- |
-| message | テキスト   | -> | `options.encodingDecrypted` を使ってエンコードし暗号化するメッセージ文字列 |
-| options | オブジェクト | -> | エンコーディングオプション                                       |
-| 戻り値     | テキスト   | <- | `options.encodingEncrypted` を使って暗号化およびエンコードされたメッセージ |
+| message | Text   | -> | `options.encodingDecrypted` を使ってエンコードし暗号化するメッセージ文字列 |
+| options | Object | -> | エンコーディングオプション                                       |
+| 戻り値     | Text   | <- | `options.encodingEncrypted` を使って暗号化およびエンコードされたメッセージ |
 
 <!-- END REF -->
 
@@ -252,7 +252,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 | 引数  | 型    |    | 説明         |
 | --- | ---- | -- | ---------- |
-| 戻り値 | テキスト | <- | PEM 形式の秘密鍵 |
+| 戻り値 | Text | <- | PEM 形式の秘密鍵 |
 
 <!-- END REF -->
 
@@ -282,7 +282,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 | 引数  | 型    |    | 説明         |
 | --- | ---- | -- | ---------- |
-| 戻り値 | テキスト | <- | PEM 形式の公開鍵 |
+| 戻り値 | Text | <- | PEM 形式の公開鍵 |
 
 <!-- END REF -->
 
@@ -333,9 +333,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 | 引数      | 型      |    | 説明                                              |
 | ------- | ------ | -- | ----------------------------------------------- |
-| message | テキスト   | -> | 署名をするメッセージ                                      |
-| options | オブジェクト | -> | 署名オプション                                         |
-| 戻り値     | テキスト   | <- | "encoding" オプションに応じて Base64 または Base64URL 形式の署名 |
+| message | Text   | -> | 署名をするメッセージ                                      |
+| options | Object | -> | 署名オプション                                         |
+| 戻り値     | Text   | <- | "encoding" オプションに応じて Base64 または Base64URL 形式の署名 |
 
 <!-- END REF -->
 
@@ -416,10 +416,10 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 
 | 引数        | 型      |    | 説明                                                          |
 | --------- | ------ | -- | ----------------------------------------------------------- |
-| message   | テキスト   | -> | 署名生成時に使われたメッセージ文字列                                          |
-| signature | テキスト   | -> | 検証の対象である、`options.encoding` に応じて Base64 または Base64URL 形式の署名 |
-| options   | オブジェクト | -> | 署名オプション                                                     |
-| 戻り値       | オブジェクト | <- | 検証ステータス                                                     |
+| message   | Text   | -> | 署名生成時に使われたメッセージ文字列                                          |
+| signature | Text   | -> | 検証の対象である、`options.encoding` に応じて Base64 または Base64URL 形式の署名 |
+| options   | Object | -> | 署名オプション                                                     |
+| 戻り値       | Object | <- | 検証ステータス                                                     |
 
 <!-- END REF -->
 
