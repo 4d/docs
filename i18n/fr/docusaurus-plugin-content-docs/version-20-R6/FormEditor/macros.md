@@ -5,7 +5,7 @@ title: Macros de l'éditeur de formulaires
 
 L'éditeur de formulaires 4D prend en charge les macros. Une macro est un ensemble d'instructions permettant de réaliser une action ou une séquence d'actions. Lorsqu'elle est appelée, la macro exécutera ses instructions et, automatiquement, les actions.
 
-Par exemple, si vous avez un rapport récurrent avec une mise en forme spécifique (par exemple, certains textes doivent apparaître en rouge et certains textes en vert), vous pouvez créer une macro pour définir automatiquement la couleur. Vous pouvez créer des macros pour l'éditeur de 4D Form qui peuvent :
+Par exemple, si vous avez un rapport récurrent avec une mise en forme spécifique (par exemple, certains textes doivent apparaître en rouge et certains textes en vert), vous pouvez créer une macro pour définir automatiquement la couleur. Vous pouvez créer des macros pour l'éditeur de formulaires de 4D qui pourront :
 
 - Créer et exécuter du code 4D
 - Afficher les boîtes de dialogue
@@ -44,7 +44,7 @@ Function onInvoke($editor : Object)->$result : Object
 	
 	var $btnHello : Object
 	
-	// Create a "Hello" button
+	// Créer un bouton "Hello"
 	$btnHello:=New object("type"; "button"; \
 	"text"; "Hello World!"; \
 	"method"; New object("source"; "ALERT(\"Hello World!\")"); \
@@ -54,19 +54,19 @@ Function onInvoke($editor : Object)->$result : Object
 	"top"; 0; \
 	"left"; 0)	
 	
-	// Add button in the current page
+	// Ajouter le bouton dans la page courante
 	$editor.editor.currentPage.objects.btnHello:=$btnHello	
 	
-	// Select the new button in the form editor
+	// Sélectionner le nouveau bouton dans l'éditeur de formulaires
 	$editor.editor.currentSelection.clear() //unselect elements
 	$editor.editor.currentSelection.push("btnHello")	
 	
-	// Notify the modification to the 4D Form editor
+	// Notifier l'éditeur de formulaires de la modification
 	$result:=New object("currentSelection"; $editor.editor.currentSelection;\  
 		"currentPage"; $editor.editor.currentPage)
 ```
 
-You can then call the macro:
+Ensuite, vous pouvez appeler la macro :
 ![](../assets/en/FormEditor/macroex1.png)
 ![](../assets/en/FormEditor/macroex2.png)
 
@@ -78,7 +78,7 @@ Lorsque des macros sont définies dans votre projet 4D, vous pouvez appeler une 
 
 Ce menu est crée selon le(s) [fichier(s) de définition de macro](#location-of-macros) `formMacros.json`. Les macros sont classées par ordre alphabétique.
 
-Ce menu peut être appelé dans une zone vide ou une sélection dans le formulaire. Selected object are passed to `$editor.currentSelection` or `$editor.target` in the [`onInvoke`](#oninvoke) function of the macro.
+Ce menu peut être appelé dans une zone vide ou une sélection dans le formulaire. Les objets sélectionnés sont passés à `$editor.currentSelection` ou `$editor.target` dans la [fonction `onInvoke`](#oninvoke) de la macro.
 
 Une seule macro peut exécuter plusieurs opérations. Si elle est sélectionnée, la fonction **Annuler** de l'éditeur de formulaires peut être utilisée pour inverser les opérations de macro.
 
@@ -142,7 +142,7 @@ Chaque macro que vous souhaitez instancier dans votre projet ou composant doit �
 
 Le nom de la classe doit correspondre au nom défini à l'aide de l'attribut [class](#creating-macros) du fichier `formMacros.json`.
 
-Les macros sont instanciées au lancement de l'application. Consequently, if you modify the macro class structure (add a function, modify a parameter...) or the [constructor](#class-constructor), you will have to restart the application to apply the changes.
+Les macros sont instanciées au lancement de l'application. Par conséquent, si vous modifiez la structure de la classe macro (ajout d'une fonction, modification d'un paramètre...) ou le [constructeur](#class-constructor), vous devrez redémarrer l'application pour appliquer les modifications.
 
 ## Fonctions macro
 
@@ -203,28 +203,28 @@ Une fois les opérations terminées, si la macro entraîne la modification, l'aj
 
 Voici les propriétés retournées dans le paramètre *$editor* :
 
-| Propriété                                                        | Type       | Description                                                                       |
-| ---------------------------------------------------------------- | ---------- | --------------------------------------------------------------------------------- |
-| $editor.editor.form              | Object     | The entire form                                                                   |
-| $editor.editor.file              | File       | File object of the form file                                                      |
-| $editor.editor.name              | String     | Name of the form                                                                  |
-| $editor.editor.table             | number     | Table number of the form, 0 for project form                                      |
-| $editor.editor.currentPageNumber | number     | The number of the current page                                                    |
-| $editor.editor.currentPage       | Object     | The current page, containing all the form objects and the entry order of the page |
-| $editor.editor.currentSelection  | Collection | Collection of names of selected objects                                           |
-| $editor.editor.formProperties    | Object     | Properties of the current form                                                    |
-| $editor.editor.target            | string     | Name of the object under the mouse when clicked on a macro                        |
+| Propriété                                                        | Type       | Description                                                                            |
+| ---------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------- |
+| $editor.editor.form              | Object     | L'ensemble du formulaire                                                               |
+| $editor.editor.file              | File       | Objet fichier du formulaire                                                            |
+| $editor.editor.name              | String     | Nom du formulaire                                                                      |
+| $editor.editor.table             | number     | Numéro de table du formulaire, 0 pour un formulaire projet                             |
+| $editor.editor.currentPageNumber | number     | Numéro de la page courante                                                             |
+| $editor.editor.currentPage       | Object     | Page courante, contenant tous les objets du formulaire et l'ordre de saisie de la page |
+| $editor.editor.currentSelection  | Collection | Collection de noms d'objets sélectionnés                                               |
+| $editor.editor.formProperties    | Object     | Propriétés du formulaire courant                                                       |
+| $editor.editor.target            | string     | Nom de l'objet sous la souris lorsque vous cliquez sur une macro                       |
 
-Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. Toutes les propriétés sont optionnelles:
+Voici les propriétés que vous pouvez passer dans l'objet `$result` si vous voulez que le processeur de macro exécute une modification. Toutes les propriétés sont optionnelles:
 
-| Propriété                         | Type       | Description                                                 |
-| --------------------------------- | ---------- | ----------------------------------------------------------- |
-| currentPage                       | Object     | currentPage including objects modified by the macro, if any |
-| currentSelection                  | Collection | currentSelection if modified by the macro                   |
-| formProperties                    | Object     | formProperties if modified by the macro                     |
-| editor.groups     | Object     | group info, if groups are modified by the macro             |
-| editor.views      | Object     | view info, if views are modified by the macro               |
-| editor.activeView | String     | Active view name                                            |
+| Propriété                         | Type       | Description                                                             |
+| --------------------------------- | ---------- | ----------------------------------------------------------------------- |
+| currentPage                       | Object     | Page courante incluant les objets modifiés par la macro, le cas échéant |
+| currentSelection                  | Collection | Sélection courante si modifiée par la macro                             |
+| formProperties                    | Object     | Propriétés du formulaire si modifiées par la macro                      |
+| editor.groups     | Object     | informations du groupe, si les groupes sont modifiés par la macro       |
+| editor.views      | Object     | informations sur les vues, si les vues sont modifiées par la macro      |
+| editor.activeView | String     | Nom de la vue active                                                    |
 
 Par exemple, si des objets de la page courante et des groupes ont été modifiés, vous pouvez écrire ce qui suit :
 
@@ -236,15 +236,15 @@ Par exemple, si des objets de la page courante et des groupes ont été modifié
 
 #### attribut `method`
 
-When handling the `method` attribute of form objects, you can define the attribute value in two ways in macros:
+Lors de la manipulation de l'attribut `method` des objets de formulaire, vous pouvez définir la valeur de l'attribut de deux manières différentes dans les macros :
 
-- Using a [string containing the method file name/path](FormObjects/properties_Action.md#method).
+- En utilisant une [chaîne de caractères contenant le nom/chemin du fichier](FormObjects/properties_Action.md#method).
 
-- Using an object with the following structure:
+- En utilisant un objet avec la structure suivante :
 
-| Propriété | Type   | Description |
-| --------- | ------ | ----------- |
-| source    | String | method code |
+| Propriété | Type   | Description        |
+| --------- | ------ | ------------------ |
+| source    | String | code de la méthode |
 
 4D créera un fichier en utilisant le nom de l'objet dans le dossier "objectMethods" avec le contenu de l'attribut `source`. Cette fonctionnalité n'est disponible que pour le code macro.
 
@@ -265,7 +265,7 @@ Function onInvoke($editor : Object)->$result : Object
 	var $name : Text
 	
 	If ($editor.editor.currentSelection.length>0)		
-		// Set stroke to red and style to italic for each selected object
+		//  Définir le contour en rouge et le style en italique pour chaque objet sélectionné
 		For each ($name; $editor.editor.currentSelection)
 			$editor.editor.currentPage.objects[$name].stroke:="red"
 			$editor.editor.currentPage.objects[$name].fontStyle:="italic"
@@ -276,7 +276,7 @@ Function onInvoke($editor : Object)->$result : Object
 		ALERT("Please select a form object.")
 	End if 
 	
-	// Notify to 4D the modification
+	// Notifier 4D de la modification
 	$result:=New object("currentPage"; $editor.editor.currentPage)
 ```
 
@@ -286,12 +286,12 @@ Function onInvoke($editor : Object)->$result : Object
 
 | Paramètres   |                                                                                           | Type       | Description                              |
 | ------------ | ----------------------------------------------------------------------------------------- | ---------- | ---------------------------------------- |
-| $editor      |                                                                                           | Object     | Object send to [onInvoke](#oninvoke)     |
-| $resultMacro |                                                                                           | Object     | Object returned by [onInvoke](#oninvoke) |
-| $error       |                                                                                           | Collection | Error stack                              |
+| $editor      |                                                                                           | Object     | Objet envoyé à [onInvoke](#oninvoke)     |
+| $resultMacro |                                                                                           | Object     | Objet retourné par [onInvoke](#oninvoke) |
+| $error       |                                                                                           | Collection | Pile d'erreurs                           |
 |              | [].errCode            | Number     | Code d'erreur                            |
-|              | [].message            | Text       | Description of the error                 |
-|              | [].componentSignature | Text       | Internal component signature             |
+|              | [].message            | Text       | Description de l'erreur                  |
+|              | [].componentSignature | Text       | Signature du composant interne           |
 
 La fonction `onError` est exécutée lorsque le processeur de macros rencontre une erreur.
 
@@ -302,7 +302,7 @@ Lors de l'exécution d'une macro, si 4D rencontre une erreur qui empêche l'annu
 
 #### Exemple
 
-In a macro class definition, you can write the following generic error code:
+Dans une définition de classe de macro, vous pouvez écrire le code d'erreur générique suivant:
 
 ```4d
 Function onError($editor : Object; $resultMacro : Object; $error : Collection)
