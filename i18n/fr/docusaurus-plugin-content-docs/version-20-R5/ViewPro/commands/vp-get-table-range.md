@@ -38,7 +38,7 @@ In the _onlyData_ parameter, you can pass one of the following constants to indi
 | `vk table full range` | 0      | Get the cell range for the table area with footer and header (default if omitted) |
 | `vk table data range` | 1      | Get the cell range for the table data area only                                                      |
 
-In _sheet_, pass the index of the target sheet. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
+Dans _sheet_, passez le numéro de la page cible. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 
 > La numérotation démarre à 0.
 
