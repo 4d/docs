@@ -1,6 +1,6 @@
 ---
 id: classes
-title: Classes
+title: クラス
 ---
 
 4D View Pro では、以下のクラスを使用することができます。
