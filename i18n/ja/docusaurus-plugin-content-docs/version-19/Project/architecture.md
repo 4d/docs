@@ -32,7 +32,7 @@ title: プロジェクトのアーキテクチャー
   - Classes
   - DatabaseMethods
   - Methods
-  - フォーム
+  - Forms
   - TableForms
   - Triggers
 - DerivedData
