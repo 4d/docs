@@ -83,9 +83,9 @@ En fonction de la zone cliquée, les options suivantes sont également disponibl
   - **Insérer un commentaire** : permet à l'utilisateur de saisir un commentaire pour une zone. Lorsqu'un commentaire a été saisi pour une zone, la cellule supérieure gauche de la zone affiche un petit triangle rouge :\
     ![](../assets/en/ViewPro/vpContext2.PNG)
 
-## Using 4D View Pro commands
+## Utilisation des commandes 4D View Pro
 
-4D View Pro commands can be used in the 4D Code Editor, just like 4D language commands.
+Les commandes 4D View Pro peuvent être utilisées dans l'éditeur de code 4D, tout comme les commandes du langage 4D.
 
 Étant donné que 4D View Pro est un composant 4D intégré, vous pouvez accéder à sa liste de commandes depuis l'Explorateur, dans la section **Méthodes composants** :
 
@@ -111,7 +111,7 @@ VP SET COLUMN COUNT("myVpArea";5)
 
 ### Utilisation d'objets de plage
 
-Certaines commandes 4D View Pro nécessitent un paramètre _rangeObj_. Dans 4D View Pro, une plage est un objet qui fait référence à une zone dans une feuille de calcul. Cette zone peut être composée d'une ou plusieurs cellules. Using 4D View Pro commands, you can create ranges and pass them to other commands to read from or write to specific locations in your document.
+Certaines commandes 4D View Pro nécessitent un paramètre _rangeObj_. Dans 4D View Pro, une plage est un objet qui fait référence à une zone dans une feuille de calcul. Cette zone peut être composée d'une ou plusieurs cellules. À l'aide des commandes 4D View Pro, vous pouvez créer des plages et les passer à d'autres commandes pour lire ou écrire dans des emplacements spécifiques de votre document.
 
 Par exemple, pour créer un objet plage pour les cellules suivantes :
 
