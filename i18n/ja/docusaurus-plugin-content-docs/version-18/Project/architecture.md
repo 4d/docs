@@ -32,7 +32,7 @@ title: 4D プロジェクトのアーキテクチャー
   - Classes
   - DatabaseMethods
   - Methods
-  - フォーム
+  - Forms
   - TableForms
   - Triggers
 - DerivedData
