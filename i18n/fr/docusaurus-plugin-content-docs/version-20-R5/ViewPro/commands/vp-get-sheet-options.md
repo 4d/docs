@@ -21,7 +21,7 @@ La commande `VP Get sheet options` <!-- REF #_method_.VP Obtenir les options de 
 
 Passez le nom de la zone 4D View Pro dans _vpAreaName_. Si vous passez un nom inexistant, une erreur est retournée.
 
-Dans le paramètre optionnel _sheet_, vous pouvez désigner une feuille spécifique (la numérotation commence à zéro). If omitted or if you pass `vk current sheet`, the current spreadsheet is used.
+Dans le paramètre optionnel _sheet_, vous pouvez désigner une feuille spécifique (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
 #### Objet retourné
 
