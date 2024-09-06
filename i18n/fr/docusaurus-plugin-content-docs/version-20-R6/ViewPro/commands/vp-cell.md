@@ -31,7 +31,7 @@ Le paramètre *column* définit la colonne de la position de la plage de cellule
 
 Le paramètre *row* définit la ligne de la position de la plage de cellules. Passez l'indice de la ligne dans ce paramètre.
 
-Dans le paramètre optionnel *sheet*, vous pouvez indiquer l'index de la feuille où la plage sera définie. If omitted or if you pass `vk current sheet`, the current spreadsheet is used by default.
+Dans le paramètre optionnel *sheet*, vous pouvez indiquer l'index de la feuille où la plage sera définie. Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée par défaut.
 
 > l'indexation démarre à 0.
 
