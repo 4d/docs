@@ -12,7 +12,7 @@ title: VP Convert from 4D View
 | 引数             | 型      |    | 説明                                 |
 | -------------- | ------ | -- | ---------------------------------- |
 | 4DViewDocument | BLOB   | -> | 4D View ドキュメント                     |
-| 戻り値            | オブジェクト | <- | 4D View Pro オブジェクト<!-- END REF --> |
+| 戻り値            | Object | <- | 4D View Pro オブジェクト<!-- END REF --> |
 
 #### 説明
 
