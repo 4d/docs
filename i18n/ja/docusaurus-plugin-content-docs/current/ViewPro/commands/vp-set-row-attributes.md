@@ -11,8 +11,8 @@ title: VP SET ROW ATTRIBUTES
 
 | 引数          | 型      |    | 説明                 |                  |
 | ----------- | ------ | -- | ------------------ | ---------------- |
-| rangeObj    | オブジェクト | -> | 行レンジ               |                  |
-| propertyObj | オブジェクト | -> | 行のプロパティを格納したオブジェクト | <!-- END REF --> |
+| rangeObj    | Object | -> | 行レンジ               |                  |
+| propertyObj | Object | -> | 行のプロパティを格納したオブジェクト | <!-- END REF --> |
 
 #### 説明
 
