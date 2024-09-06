@@ -61,21 +61,21 @@ CALL WORKER("WebSocketServer"; Formula(wss:=4D.WebSocketServer.new($handler)))
 2. サーバーへの接続を処理するためのコールバック関数を含む `myServerHandler` ユーザークラスを定義します:
 
 ```4d
-//myServerHandler class
+// myServerHandler クラス
 
 Function onConnection($wss : Object; $event : Object) : Object
-	//returns an instance of the user class
-	//that will handle the messages
+	// ユーザークラスのインスタンスを返します
+	// このインスタンスがサーバーへの接続を処理します
 	return cs.myConnectionHandler.new()
 ```
 
 3. メッセージを処理するためのコールバック関数を含む `myConnectionHandler` ユーザークラスを定義します:
 
 ```4d
-// myConnectionHandler class
+// myConnectionHandler クラス
 
 Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
-	//resends the message in uppercase
+	// メッセージを大文字に変えて送信します
 	$ws.send(Uppercase($message.data))
 
 ```
@@ -176,30 +176,30 @@ WebSocketサーバーでエラーが発生したときに発生するイベン�
 この基本的なチャット機能の例では、*WSSHandler* クラスを使って WebSocket サーバー接続を管理する方法を説明します。
 
 ```4d
-//myWSServerHandler class
+// myWSServerHandler クラス 
 
 Function onConnection($wss : Object; $event : Object) : Object
 
 	If (VerifyAddress($event.request.remoteAddress))
-		// The VerifyAddress method validates the client address
-		// The returned WSConnectionHandler object will be used
-		// by 4D to instantiate the 4D.WebSocketConnection object
-		// related to this connection
+		// VerifyAddress メソッドはクライアントのアドレスを検証します
+		// 返される WSConnectionHandler オブジェクトは、この接続に関連する 
+		// 4D.WebSocketConnection オブジェクトをインスタンス化するために
+		// 4D によって使用されます
 		return cs.myConnectionHandler.new()   
-		// See connectionHandler object
-	Else
-		// The connection is cancelled		
-		return Null
-	End if
+		// connectionHandler オブジェクト参照
+	Else 
+		// 接続は解除されます
+		return Null 
+	End if 
 
 Function onOpen($wss : Object; $event : Object)
-LogFile("*** Server started")
+LogFile("*** サーバー起動")
 
 Function onTerminate($wss : Object; $event : Object)
-LogFile("*** Server closed")
+LogFile("*** サーバー終了")
 
 Function onError($wss : Object; $event : Object)
-LogFile("!!! Server error: "+$event.errors.first().message)
+LogFile("!!! サーバーエラー: "+$event.errors.first().message)
 
 ```
 
@@ -274,27 +274,27 @@ WebSocket 終了したときに呼び出されます。
 この基本的なチャット機能の例では、*connectionHandler* クラスを使ってメッセージを処理する方法を説明します。
 
 ```4d
-// myConnectionHandler Class
+// myConnectionHandler クラス
 
 Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
-	// Resend the message to all chat clients
+	// すべてのチャットクライアントにメッセージを送信します
 	This.broadcast($ws;$message.data)
 
 Function onOpen($ws : 4D.WebSocketConnection; $message : Object)
-	// Send a message to new connected users
-	$ws.send("Welcome on the chat!")
-	// Send "New client connected" message to all other chat clients
-	This.broadcast($ws;"New client connected")
+	// 新規接続ユーザーにメッセージを送信します
+	$ws.send("チャットへようこそ！") 
+	// その他の接続済チャットクライアントに "新規クライアントが接続しました" メッセージを送信します
+	This.broadcast($ws;"新規クライアントが接続しました")
 
 Function onTerminate($ws : 4D.WebSocketConnection; $message : Object)
-	// Send "Client disconnected" message to all other chat clients
-	This.broadcast($ws;"Client disconnected")
+	// その他の接続中クライアントに "クライアントが切断されました" メッセージを送信します
+	This.broadcast($ws;"クライアント接続が切断されました")
 
 Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 	var $client:4D.WebSocketConnection
-	// Resend the message to all chat clients
+	// すべてのチャットクライアントにメッセージを送信します
 	For each ($client; $ws.wss.connections)
-		// Check that the id is not the current connection
+		// id がカレント接続ではないことを確認します
 		If ($client.id#$ws.id)
 			$client.send($message)
 		End if
@@ -373,9 +373,9 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
 
-| 引数      | 型  |     | 説明                                                              |
-| ------- | -- | :-: | --------------------------------------------------------------- |
-| timeout | 整数 |  -> | Waiting time in seconds before terminating the WebSocket server |
+| 引数      | 型  |     | 説明                                                 |
+| ------- | -- | :-: | -------------------------------------------------- |
+| timeout | 整数 |  -> | WebSocketサーバーを終了するまでの待機時間 (秒単位) |
 
 <!-- END REF -->
 
@@ -383,12 +383,12 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 `.terminate()` 関数は、<!-- REF #WebSocketServerClass.terminate().Summary -->WebSocketサーバーを終了します<!-- END REF -->。
 
-By default, if no *timeout* value is set, the function initializes close handshake and waits to receive close frame from the peer, after that sending FIN packet in attempt to perform a clean socket close. When answer received, the socket is destroyed.
+*timeout* 値が設定されていない場合のデフォルトでは、関数はクローズハンドシェイクを初期化し、相手からクローズフレームを受信するのを待ちます。 その後、FINパケットを送信し、クリーンにソケットを閉じます。 応答を受け取ると、ソケットは破棄されます。
 
-If a *timeout* value is set:
+*timeout* 値が設定されている場合:
 
-- when the waiting time is reached, forcibly destroys the socket.
-- if *timeout* = 0, forcibly destroys the socket without closing frames or fin packets exchange, and does it instantly without waiting time.
+- 待機時間に達したら強制的にソケットを破棄します。
+- *timeout* = 0 の場合、クローズフレームや、FINパケットの交換なしで、強制的かつ即座にソケットを破棄します。
 
 <!-- END REF -->
 
