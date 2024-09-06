@@ -1,6 +1,6 @@
 ---
 id: classes
-title: Classes
+title: クラス
 ---
 
 ## 概要
