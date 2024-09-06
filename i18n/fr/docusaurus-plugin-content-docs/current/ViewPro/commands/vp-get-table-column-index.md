@@ -33,7 +33,7 @@ Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 In *columnName*, pass the name of the table column for which you want to get the index.
 
-In *sheet*, pass the index of the target sheet. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 
 > La numérotation démarre à 0.
 
