@@ -19,8 +19,8 @@ title: VP Find table
 
 | 引数       | 型      |    | 説明         |                  |
 | -------- | ------ | -- | ---------- | ---------------- |
-| rangeObj | オブジェクト | -> | セルのレンジ     |                  |
-| 戻り値      | テキスト   | <- | Table name | <!-- END REF --> |
+| rangeObj | Object | -> | セルのレンジ     |                  |
+| 戻り値      | Text   | <- | Table name | <!-- END REF --> |
 
 #### 説明
 
