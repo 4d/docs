@@ -58,7 +58,7 @@ Retrieve information about the entity sets currently stored in 4D Server's cache
 
 **Result**:
 
-```
+```json
 {
 cacheSize: 209715200,
 usedCache: 3136000,

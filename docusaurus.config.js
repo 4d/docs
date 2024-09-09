@@ -3,6 +3,7 @@ const { default: remarkGfm } = require('remark-gfm');
 const lightTheme = themes.github;
 const darkTheme = themes.palenight;
 
+
 const isProduction = process.env.GITHUB_REPOSITORY_OWNER === '4d';
 
 module.exports = {
@@ -138,6 +139,7 @@ module.exports = {
     prism: {
       theme: lightTheme,
       darkTheme: darkTheme,
+      additionalLanguages: ['json'],
     },
     navbar: {
       title: "4D Documentation",
