@@ -54,9 +54,6 @@ Las siguientes secuencias de escape pueden utilizarse dentro de las cadenas:
 |                        |                  |          | "abd" <= "abc"          | False    |
 | Contiene palabra clave | Cadena % Cadena  | Boolean  | "Alpha Bravo" % "Bravo" | True     |
 |                        |                  |          | "Alpha Bravo" % "ravo"  | False    |
-|                        | Imagen % Cadena  | Boolean  | Picture_expr % "Mer"    | True (*) |
-
-(*) Si la palabra clave "Mer" está asociada a la imagen almacenada en la expresión imagen (campo o variable).
 
 ## Comparaciones de cadenas
 
@@ -67,7 +64,7 @@ Las siguientes secuencias de escape pueden utilizarse dentro de las cadenas:
 Character code("A")=Character code("a") // porque 65 no es igual a 97
 ```
 
-- When strings are compared, diacritical characters are compared using the system character comparison table of your computer. Por ejemplo, las siguientes expresiones devuelven `TRUE`:
+- Cuando se comparan cadenas, los caracteres diacríticos se comparan utilizando la tabla de comparación de caracteres del sistema de su ordenador. Por ejemplo, las siguientes expresiones devuelven `TRUE`:
 
 ```4d
      "n"="ñ"

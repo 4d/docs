@@ -196,16 +196,14 @@ Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge 
 - date
 - heure (stockée en nombre de milliseconds - réel)
 - Null
-- shared object(\*)
-- shared collection(\*)
+- objet partagé
+- collection partagée
 
 :::note
 
 Contrairement aux collections standard (non partagées), les collections partagées ne prennent pas en charge les images, les pointeurs et les objets ou collections non partagés.
 
 :::
-
-(\*)Lorsqu'un objet partagé ou une collection partagée est ajouté(e) à une collection partagée, ils partagent le même *locking identifier*. Pour plus d'informations sur ce point, reportez-vous à [4D Doc Center](https://doc.4d.com).
 
 #### Exemple
 
@@ -3024,11 +3022,11 @@ Avec la méthode ***Flatten*** suivante :
 
 <!-- REF #collection.remove().Params -->
 
-| Paramètres | Type       |     | Description                                                                            |
-| ---------- | ---------- | :-: | -------------------------------------------------------------------------------------- |
-| index      | Integer    |  -> | Élément à partir duquel la suppression peut commencer                                  |
-| howMany    | Integer    |  -> | Nombre d'éléments à supprimer, ou 1 élément si omis                                    |
-| Résultat   | Collection |  <- | Collection d'origine sans élément(s) supprimé(s) |
+| Paramètres | Type       |     | Description                                                       |
+| ---------- | ---------- | :-: | ----------------------------------------------------------------- |
+| index      | Integer    |  -> | Élément à partir duquel la suppression peut commencer             |
+| howMany    | Integer    |  -> | Nombre d'éléments à supprimer, ou 1 élément si omis               |
+| Résultat   | Collection |  <- | Modified collection without removed element(s) |
 
 <!-- END REF -->
 

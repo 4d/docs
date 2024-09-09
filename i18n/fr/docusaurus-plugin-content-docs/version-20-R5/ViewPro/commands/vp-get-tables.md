@@ -25,11 +25,11 @@ title: VP Get tables
 
 #### Description
 
-The `VP Get tables` command <!-- REF #_method_.VP Get tables.Summary -->returns a collection of all table names defined in the _sheet_<!-- END REF -->.
+La commande `VP Get tables` <!-- REF #_method_.VP Get tables.Summary -->retourne une collection de tous les noms de tables définis dans _sheet_<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro.
 
-In _sheet_, pass the index of the target sheet. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
+Dans _sheet_, passez le numéro de la page cible. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 
 > La numérotation démarre à 0.
 
@@ -39,7 +39,7 @@ Le code suivant retournera une collection de tous les noms de tables de la feuil
 
 ```4d
 $tables:=VP Get tables("ViewProArea")
-//$tables contains for example ["contextTable","emailTable"]
+//$tables contient par exemple ["contextTable","emailTable"]
 
 ```
 

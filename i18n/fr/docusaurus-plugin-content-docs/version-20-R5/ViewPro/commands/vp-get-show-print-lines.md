@@ -17,11 +17,11 @@ title: VP Get show print lines
 
 #### Description
 
-The `VP Get show print lines` command <!-- REF #_method_.VP Get show print lines.Summary -->returns `True` if the print preview lines are visible and `False` if they are hidden.<!-- END REF -->
+La commande `VP Get show print lines`<!-- REF #_method_.VP Get show print lines.Summary -->retourne `True` si les lignes d'aperçu avant impression sont visibles et `False` si elles sont masquées.<!-- END REF -->
 
-In _vpAreaName_, pass the name of the 4D View Pro area.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro.
 
-In _sheet_, pass the index of the target sheet. If _sheet_ is omitted, the command applies to the current sheet.
+Dans _sheet_, passez le numéro de la page cible. Si _sheet_ est omis, la commande s'applique à la feuille courante.
 
 > La numérotation démarre à 0.
 

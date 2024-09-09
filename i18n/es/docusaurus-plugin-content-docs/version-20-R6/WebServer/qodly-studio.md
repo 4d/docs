@@ -11,11 +11,11 @@ Qodly Studio for 4D se encuentra actualmente en la fase **Developer Preview**. N
 
 **Qodly Studio** es un creador de interfaces para aplicaciones web. Ofrece a los desarrolladores un editor gráfico de páginas para diseñar aplicaciones que se ejecutan en navegadores web o smartphones. Soporta de forma nativa los [objetos ORDA](../ORDA/overview.md).
 
-You can use Qodly Studio directly from your **4D environment** to build modern and sophisticated interfaces that you can easily integrate to your existing 4D projects and deploy **on premise**.
+Puede utilizar Qodly Studio directamente desde su **entorno 4D** para crear interfaces modernas y sofisticadas que puede integrar fácilmente a sus proyectos 4D existentes y desplegar **in situ**.
 
 Qodly Studio también puede utilizarse en la [**plataforma Qodly Cloud**](https://qodly.com), dedicada al desarrollo de aplicaciones profesionales web.
 
-With Qodly Studio, you will discover a totally new web UI, get familiar with the concept of Qodly Sources, and learn how to:
+Con Qodly Studio, descubrirá una interfaz de usuario web totalmente nueva, se familiarizará con el concepto de fuentes Qodly y aprenderá a:
 
 - create Qodly pages by placing components on a canvas
 - mapear componentes a datos
@@ -154,8 +154,8 @@ Los siguientes comandos y clases están dedicados a la gestión del lado del ser
 
 - Comando [`Web Form`](../API/WebFormClass.md#web-form): devuelve la página Qodly como un objeto.
 - Comando [`Web Event`](../API/WebFormClass.md#web-event): devuelve los eventos desencadenados dentro de los componentes de página ´gQodly.
-- [`WebForm`](../API/WebFormClass.md) class: functions and properties to manage the rendered Qodly page.
-- [`WebFormItem`](../API/WebFormItemClass.md) class: functions and properties to manage Qodly page components.
+- Clase [`WebForm`](../API/WebFormClass.md): funciones y propiedades para gestionar la página Qodly renderizada.
+- clase [`WebFormItem`](../API/WebFormItemClass.md): funciones y propiedades para administrar componentes de página Qodly.
 
 ### Uso métodos proyecto
 
@@ -175,7 +175,7 @@ Puede desarrollar con Qodly Studio mientras su ordenador no esté conectado a In
 
 ### Activación del renderizado
 
-Qodly Studio encapsulates Qodly pages, including layout, data connections, and event-driven logic, in a structured JSON file. Este archivo JSON es procesado sobre la marcha por el renderizador **Qodly** para servir una página web completamente funcional.
+Qodly Studio encapsula las páginas Qodly, incluyendo el diseño, las conexiones de datos y la lógica basada en eventos, en un archivo JSON estructurado. Este archivo JSON es procesado sobre la marcha por el renderizador **Qodly** para servir una página web completamente funcional.
 
 :::info
 
@@ -190,13 +190,13 @@ Para habilitar el renderizado de las páginas Qodly, se deben configurar las sig
 
 :::note
 
-[Renderer buttons](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) are not available if the configuration options are not activated.
+[Los botones de renderización](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) no están disponibles si las opciones de configuración no están activas.
 
 :::
 
 ### Alcance de los formularios Qodly
 
-When rendering Qodly forms in the Qodly Studio, the renderer will connect to the 4D web server through HTTP or HTTPS, depending on the settings, following the same HTTP/HTTPS connection pattern as for the [4D WebAdmin web server](../Admin/webAdmin.md#accept-http-connections-on-localhost). Ver también [este párrafo](#about-license_usage) sobre los esquemas de URL y el uso de licencias.
+Al renderizar formularios Qodly en el Qodly Studio, el renderizador se conectará al servidor web 4D a través de HTTP o HTTPS, dependiendo de la configuración, siguiendo el mismo patrón de conexión HTTP/HTTPS que para el [servidor web WebAdmin 4D] (../Admin/webAdmin.md#accept-http-connections-on-localhost). Ver también [este párrafo](#about-license_usage) sobre los esquemas de URL y el uso de licencias.
 
 Tenga en cuenta que Qodly Studio se ejecuta a través del servidor web 4D WebAdmin. Cuando utiliza Qodly Studio como desarrollador, incluso cuando previsualiza una página Qodly en el estudio, está utilizando el servidor web 4D WebAdmin. Esto le permite ver, por ejemplo, clases de datos, funciones y atributos que no están expuestos como recursos REST (aparecen en gris).
 
@@ -222,21 +222,21 @@ https://www.myWebSite.com/$lib/renderer/?w=welcome
 
 ## Forzar inicio de sesión
 
-With Qodly Studio for 4D, the ["force login" mode](../REST/authUsers.md#force-login-mode) allows you to control the number of opened web sessions that require 4D Client licenses. You can also [logout](#logout) the user at any moment to decrement the number of retained licenses.
+Con Qodly Studio for 4D, el modo ["forzar login"](../REST/authUsers.md#force-login-mode) le permite controlar el número de sesiones web abiertas que requieren licencias 4D Client. También puede [cerrar la sesión](#logout) del usuario en cualquier momento para disminuir el número de licencias retenidas.
 
 ### Configuración
 
-Make sure the ["force login" mode](../REST/authUsers.md#force-login-mode) is enabled for your 4D application in the [Roles and Privileges page](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/), using the **Force login** option:
+Asegúrate de que el [modo "inicio de sesión forzado"](../REST/authUsers.md#force-login-mode) esté habilitado para su aplicación 4D en la [página Roles y privilegios](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/), usando la opción **Force login**:
 
 ![alt-text](../assets/en/WebServer/forcelogin.png)
 
 También puede definir esta opción directamente en el archivo [**roles.json**](../ORDA/privileges.md#rolesjson-file).
 
-You just need then to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly page. Una licencia se consumirá solo cuando el usuario esté realmente conectado.
+Entonces basta con implementar la función [`authentify()`](../REST/authUsers.md#function-authentify) en la clase datastore y llamarla desde la página Qodly. Una licencia se consumirá solo cuando el usuario esté realmente conectado.
 
 :::note Compatibilidad
 
-When the legacy login mode ([deprecated as of 4D 20 R6](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications)) is enabled, any REST request, including the rendering of an authentication Qodly page, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. Para más información, consulte [esta entrada de blog](https://blog.4d.com/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) que cuenta la historia completa.
+Cuando el modo de inicio de sesión ([obsoleto a partir de 4D 20 R6](https://blog.4d. om/force-login-now-is-the-default-mode-for-all-rest-authentications)) está habilitado, cualquier petición REST, incluyendo la representación de una página de autenticación Qodly, crea una sesión web en el servidor y obtiene una licencia de cliente 4D, cualquiera que sea el resultado real de la autenticación. Para más información, consulte [esta entrada de blog](https://blog.4d.com/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) que cuenta la historia completa.
 
 :::
 
@@ -283,11 +283,11 @@ Al desencadenar la acción de cierre de sesión de una sesión de usuario web, s
 
 - la sesión de usuario web actual pierde sus privilegios, sólo se permiten [peticiones REST descriptivas](../REST/authUsers.md#descriptive-rest-requests),
 - se libera la licencia asociada de 4D,
-- the `Session.storage` is kept until the web session inactivity timeout is reached (at least one hour). Durante este periodo tras un cierre de sesión, si el usuario vuelve a iniciar sesión, se utiliza la misma sesión y el objeto compartido `Session.storage` está disponible con su contenido actual.
+- el tiempo de espera de 'Session.storage' se mantiene hasta que se alcanza el tiempo de inactividad de la sesión web (al menos una hora). Durante este periodo tras un cierre de sesión, si el usuario vuelve a iniciar sesión, se utiliza la misma sesión y el objeto compartido `Session.storage` está disponible con su contenido actual.
 
 ## Acerca del uso de licencias para renderización
 
-In default mode when any page is rendered, or in "force login" mode when a page handling data or calling a function is rendered, you must have an available license, as rendering Qodly forms targets the project database's main web server.
+En modo predeterminado, cuando se renderiza cualquier página, o en el modo "force login" cuando se renderiza una página que maneja datos o llama a una función, debe tener una licencia disponible, ya que la renderización de los formularios Qodly apunta al servidor web principal de la base de datos del proyecto.
 
 ### Esquemas URL
 
@@ -296,6 +296,12 @@ La configuración del esquema URL de Qodly Studio (HTTP y HTTPS) determina cuán
 Como se explica en la sección [configuración](#configuration), el servidor web WebAdmin ofrece un acceso web seguro a Qodly Studio. Por otro lado, el [renderizador](#rendering-webforms) se comunica con el servidor web 4D de la base de datos mediante peticiones REST. Como tal, se comporta como un Cliente 4D convencional.
 
 Si ejecuta el renderizador desde Qodly Studio y no se accede a estos dos servidores web a través del mismo esquema de URL (HTTP o HTTPS), es posible que el conteo de licencias sea incorrecto.
+
+:::info
+
+El uso de diferentes esquemas también puede llevar a problemas de [sesión](sessions.md), como perder [privilegios](../ORDA/privileges.md) después de actualizar la página.
+
+:::
 
 #### Ejemplo
 

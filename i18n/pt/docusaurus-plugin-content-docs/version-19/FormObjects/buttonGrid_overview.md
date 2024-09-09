@@ -23,7 +23,7 @@ Os botões da grelha estão numerados do canto superior esquerdo para o canto in
 
 ### Ir para página
 
-Você pode atribuir a [ação padrão](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) `gotoPage` a uma grade de botões. Quando esta ação é selecionada, 4D mostrará automaticamente a página do formulário que corresponde ao número do botão selecionado na grelha de botões. Por exemplo, se o usuário seleciona o décimo botão da grade, 4D mostrará a décima página do formulário atual (se existir).
+É possível atribuir a `gotoPage`ação padrão[](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) a uma grelha de botões. Quando esta ação é selecionada, 4D mostrará automaticamente a página do formulário que corresponde ao número do botão selecionado na grelha de botões. Por exemplo, se o usuário seleciona o décimo botão da grade, 4D mostrará a décima página do formulário atual (se existir).
 
 ## Propriedades compatíveis
 

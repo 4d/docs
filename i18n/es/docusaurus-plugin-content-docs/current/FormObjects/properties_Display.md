@@ -94,14 +94,14 @@ Se pueden crear formatos de fecha personalizados utilizando varios patrones desc
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                                                                                                                                                                                                                                                                    |
-| ---------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dateFormat | string         | <li>Built-in formats: "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long" + " blankIfNull"</li><li>Custom formats: any format built using a [supported pattern](../Project/date-time-formats.md) + " blankIfNull"</li> |
+| Nombre     | Tipos de datos | Valores posibles                                                                                                                                                                                                                                                                                        |
+| ---------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dateFormat | string         | <li>Formatos integrados: "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long" + " blankIfNull"</li><li>Formatos personalizados: todo formato creado utilizando un [patrón soportado](../Project/date-time-formats.md) + " blankIfNull"</li> |
 
 :::note blankIfNull
 
 - Por defecto, una fecha null se muestra con ceros, por ejemplo 00/00/00. Con la opción "blankIfNull", una fecha null se muestra como un área vacía. La cadena "blankIfNull" (distingue mayúsculas de minúsculas) debe combinarse con el valor de formato seleccionado. Ej: "systemShort blankIfNull" o "ee dd LL blankIfNull".
-- [List box columns](listbox_overview.md#list-box-columns) and [list box footers](listbox_overview.md#list-box-footers) of type date always use the "blank if null" behavior (it cannot be disengaged).
+- Las [columnas list box](listbox_overview.md#list-box-columns) y los [pies List box](listbox_overview.md#list-box-footers) de tipo fecha utilizan siempre el comportamiento "blank if null" (no se puede desactivar).
 
 :::
 
@@ -268,7 +268,7 @@ La siguiente tabla muestra cómo afectan los distintos formatos a la visualizaci
 
 #### Objetos soportados
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Progress Indicators](progressIndicator.md)
+[Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Entrada](input_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Indicadores de progreso](progressIndicator.md)
 
 ---
 
@@ -370,9 +370,9 @@ Se pueden crear formatos de hora personalizados utilizando varios patrones descr
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                                                                                                                                                                                                                                                                                 |
-| ---------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| timeFormat | string         | <li>Built-in formats: "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS" + " blankIfNull"</li><li>Custom formats: any format built using [a supported pattern](../Project/date-time-formats.md) + "blankIfNull"</li> |
+| Nombre     | Tipos de datos | Valores posibles                                                                                                                                                                                                                                                                                                       |
+| ---------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| timeFormat | string         | <li>Formatos integrados: "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MMM", "MM_SS" + " blankIfNull"</li><li>Formatos personalizados: todo formato creado utilizando [un patrón compatible](../Project/date-time-formats.md) + "blankIfNull"</li> |
 
 :::note blankIfNull
 
@@ -393,7 +393,7 @@ Cuando una [expresión booleana](properties_Object.md#expression-type) se muestr
 - un texto en un [objeto de entrada](input_overview.md)
 - un "popup"  en una [columna del list box](listbox_overview.md#list-box-columns),
 
-... you can select the text to display for each value:
+... puede seleccionar el texto que se mostrará para cada valor:
 
 - **Text cuando True** - el texto que se mostrará cuando el valor sea "true"
 - **Text cuando False** - el texto que se mostrará cuando el valor sea "false"
@@ -420,9 +420,9 @@ Las columnas booleanas también pueden mostrarse como menús emergentes. En este
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                                                                                                              |
-| ----------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| controlType | string         | <li>**number columns**: "automatic" (default) or "checkbox"</li><li>**boolean columns**: "checkbox" (default) or "popup"</li> |
+| Nombre      | Tipos de datos | Valores posibles                                                                                                                           |
+| ----------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| controlType | string         | <li>**columnas numéricas**: "automatic" (por defecto) o "checkbox"</li><li>**columnas booleanas**: "checkbox" (por defecto) o "popup"</li> |
 
 #### Objetos soportados
 
@@ -532,7 +532,7 @@ La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; si
 
 #### Objetos soportados
 
-[Columna List Box](listbox_overview.md#list-box-columns) - [Encabezado List Box](listbox_overview.md#list-box-footers)
+[List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
 ---
 
@@ -553,7 +553,7 @@ Esta propiedad sólo se utiliza cuando se dibujan objetos situados en el cuerpo 
 
 ![](../assets/en/FormObjects/select-row.png)
 
-4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv20/help/command/en/page603.html) command; in this case, the object remains invisible regardless of whether or not the record is selected.
+4D no tiene en cuenta esta propiedad si el objeto se ocultó utilizando el comando [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv20/help/command/en/page603.html); en este caso, el objeto permanece invisible independientemente de si el registro está seleccionado o no.
 
 #### Gramática JSON
 
@@ -563,7 +563,7 @@ Esta propiedad sólo se utiliza cuando se dibujan objetos situados en el cuerpo 
 
 #### Objetos soportados
 
-[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md) - [List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Botón imagen](pictureButton_overview.md) - [Menú emergente con imagen](picturePopupMenu_overview.md) - [Área de Plug-in](pluginArea_overview.md) - [Indicador de progreso](progressIndicator.md) - [Botón de opción](radio_overview.md) - [Spinner](spinner.md) - [Separador](splitters.md) - [Imagen estática](staticPicture.md) - [Pasos](stepper.md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área de texto](text.md) - [Área web](webArea_overview.md)
 
 ---
 

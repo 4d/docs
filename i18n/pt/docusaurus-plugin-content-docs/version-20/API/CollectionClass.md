@@ -210,8 +210,8 @@ Pode passar qualquer número de valores dos tipos compatíveis abaixo:
 *   date
 *   hora (armazenada como número de milissegundos - real)
 *   null
-*   objeto compartido(*)
-*   shared collection(*) > Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros, objetos ou coleções que não são compartilhadas.
+*   objeto compartido
+*   coleção compartilhada
 
 :::note
 
@@ -219,7 +219,6 @@ Diferente de coleções padrão (não partilhadas), coleções partilhadas não 
 
 :::
 
-(\*)Quando um objeto partilhado ou coleção forem adicionadas a uma coleção partilhada, partilham o mesmo *locking identifier*. Para saber mais sobre esse ponto, veja [4D Doc Center](https://doc.4d.com).
 
 #### Exemplo
 
@@ -850,7 +849,7 @@ A função `.equal()` <!-- REF #collection.equal().Summary -->compara a collecti
 
 :::note Notas
 
-- The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. It does not check equality for native objects.
+- The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. Ele não verifica a igualdade dos objetos nativos.
 - Elements with **null** values are not equal to Undefined elements.
 
 :::
@@ -902,16 +901,13 @@ Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a ava
 
 
 <!-- REF #collection.every().Params -->
-| Parâmetro  | Tipo         |    | Descrição                                                                          |
-| ---------- | ------------ |:--:| ---------------------------------------------------------------------------------- |
-| startFrom  | Integer      | -> | Índice para início do teste em                                                     |
-| formula    | 4D. Function | -> | Objecto fórmula                                                                    |
-| methodName | Text         | -> | Nome da função a qual se chama para processar os elementos da coleção              |
-| param      | Mixed        | -> | *methodName* recebe os parâmetros abaixo:                                          |
-| Resultados | Parâmetros   | <- | True se todos os elementos passarem o teste com sucesso|<!-- END REF -->
+| Parâmetro  | Tipo         |    | Descrição                                                             |
+| ---------- | ------------ |:--:| --------------------------------------------------------------------- |
+| startFrom  | Integer      | -> | Índice para início do teste em                                        |
+| formula    | 4D. Function | -> | Objecto fórmula                                                       |
+| methodName | Text         | -> | Nome da função a qual se chama para processar os elementos da coleção |
 
-
-|
+|param|Mixed|->|Parameter(s) to pass to *formula* or *methodName*| |Result|Boolean|<-|True if all elements successfully passed the test|<!-- END REF -->
 
 
 #### Descrição
@@ -2095,6 +2091,7 @@ A função `.max()` <!-- REF #collection.max().Summary -->devolve o elemento com
 
 shared collection(*) > Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros, objetos ou coleções que não são compartilhadas.
 
+
 Se a coleção conter objetos, pode passar o parâmetro *propertyPath* para indicar a propriedade objeto cujos valores máximos você quer obter.
 
 Se a coleção estiver vazia, `.max()` devolve *Undefined*.
@@ -2844,11 +2841,11 @@ Este exemplo permite reduzir vários elementos da coleção a um só:
 
 
 <!-- REF #collection.remove().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                              |
-| ---------- | ---------- |:--:| ---------------------------------------------------------------------- |
-| index      | Integer    | -> | Elemento no qual que se inicia a eliminação                            |
-| howMany    | Integer    | -> | Número de elementos a eliminar, ou 1 elemento se omitir                |
-| Resultados | Collection | <- | Colección original sem elementos eliminados|<!-- END REF -->
+| Parâmetro  | Tipo       |    | Descrição                                                                 |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------- |
+| index      | Integer    | -> | Elemento no qual que se inicia a eliminação                               |
+| howMany    | Integer    | -> | Número de elementos a eliminar, ou 1 elemento se omitir                   |
+| Resultados | Collection | <- | Modified collection without removed element(s)|<!-- END REF -->
 
 
 |

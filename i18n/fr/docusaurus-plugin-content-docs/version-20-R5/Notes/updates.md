@@ -56,7 +56,7 @@ Lisez [**Les nouveautés de 4D 20 R4**](https://blog.4d.com/fr-whats-new-in-4d-v
 
 ## 4D 20 R3
 
-Read [**What’s new in 4D 20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-R3/), the blog post that lists all new features and enhancements in 4D 20 R3.
+Lisez [**Les nouveautés de 4D 20 R3**](https://blog.4d.com/fr-whats-new-in-4d-v20-R3/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R3.
 
 #### Points forts
 
@@ -71,7 +71,7 @@ Read [**What’s new in 4D 20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 - 4D View Pro : Prise en charge de [l'importation](../ViewPro/commands/vp-import-from-blob) et de [l'exportation](../ViewPro/commands/vp-export-to-blob) des documents 4D View Pro au format Blob.
 - Commandes du langage 4D : [page What's new](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6531224.en.html) sur doc.4d.com.
 - 4D Write Pro : [Liste des nouveautés](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6475174.en.html) sur doc.4d.com.
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R3): list of all bugs that have been fixed in 4D 20 R3.
+- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R3) : liste de tous les bugs qui ont été corrigés dans 4D 20 R3.
 
 #### Changements de comportement
 
@@ -161,7 +161,7 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 #### Changements de comportement
 
 - A compter de 4D 20.3, afin de permettre la vérification du mot de passe lorsque [l'annuaire des utilisateurs 4D utilise l'algorithme bcrypt](https://blog.4d.com/bcrypt-support-for-passwords/), la valeur "password" dans le paramètre _connectionInfo_ de la commande [`Open datastore`](../API/DataStoreClass.md#open-datastore) est maintenant envoyée en clair par défaut. Assurez-vous que votre méthode base "On REST authentication" peut gérer les mots de passe en clair (le troisième paramètre est alors **False**) et que `Open datastore` chiffre votre connexion en passant l'option "tls" à **True** dans _connectionInfo_. Dans certains cas spécifiques, une nouvelle option "passwordAlgorithm" peut également être utilisée pour la compatibilité (voir la commande [`Open datastore`](../API/DataStoreClass.md#open-datastore)).
-- As of 20.2, 4D 20 LTS is no longer compatible with Windows Server 2012 R2.
+- À partir de la version 20.2, 4D 20 LTS n'est plus compatible avec Windows Server 2012 R2.
 - **Attention** : La valeur de départ [`offset`](../API/FileHandleClass.md#offset) des objets [4D.FileHandle](../API/FileHandleClass.md) était incorrectement fixée à 1 au lieu de 0. Une correction a été apportée dans 4D à partir des versions **20.1 HF1** et **20 R2** et la valeur est maintenant 0.
 - Pour la conformité RFC de HTTP, la propriété [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) retourne maintenant tous les noms d'en-têtes **en minuscules**. Si vous voulez que votre code continue à fonctionner comme avant, utilisez la nouvelle propriété [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response).
 - Les certificats TLS sont désormais automatiquement validés par 4D lors de l'envoi de requêtes HTTP avec [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new), et rejetés avec une erreur s'ils sont invalides. Une nouvelle propriété _option_ vous permet de contrôler cette validation.

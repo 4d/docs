@@ -3,7 +3,7 @@ id: string
 title: Chaîne
 ---
 
-Chaîne est un terme générique utilisé pour :
+String ("Chaîne") est un terme générique utilisé pour :
 
 - Les variables ou champs de type Texte : un champ, une variable ou une expression de type Texte peut contenir de 0 à 2 Go de texte.
 - Les variables ou champs de type alphanumérique : un champ alphanumérique peut contenir de 0 à 255 caractères (la limite est fixée lors de la définition du champ).
@@ -36,27 +36,24 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 
 ## Opérateurs sur les chaînes
 
-| Opération           | Syntaxe          | Retourne | Expression                              | Valeur                       |
-| ------------------- | ---------------- | -------- | --------------------------------------- | ---------------------------- |
-| Concaténation       | Chaîne + Chaîne  | String   | "abc" + "def"                           | "abcdef"                     |
-| Répétition          | Chaîne \* Nombre | String   | "ab" \* 3                               | "ababab"                     |
-| Egalité             | Chaîne = Chaîne  | Boolean  | "abc" = "abc"                           | True                         |
-|                     |                  |          | "abc" = "abd"                           | False                        |
-| Inégalité           | Chaîne # Chaîne  | Boolean  | "abc" # "abd"                           | True                         |
-|                     |                  |          | "abc" # "abc"                           | False                        |
-| Supérieur à         | Chaîne > Chaîne  | Boolean  | "abd" > "abc"                           | True                         |
-|                     |                  |          | "abc" > "abc"                           | False                        |
-| Inférieur à         | Chaîne < Chaîne  | Boolean  | "abc" < "abd"                           | True                         |
-|                     |                  |          | "abc" < "abc"                           | False                        |
-| Supérieur ou égal à | Chaîne >= Chaîne | Boolean  | "abd" >= "abc"                          | True                         |
-|                     |                  |          | "abc" >= "abd"                          | False                        |
-| Inférieur ou égal à | Chaîne <= Chaîne | Boolean  | "abc" <= "abd"                          | True                         |
-|                     |                  |          | "abd" <= "abc"                          | False                        |
-| Contient mot-clé    | Chaîne % Chaîne  | Boolean  | "Alpha Bravo" % "Bravo"                 | True                         |
-|                     |                  |          | "Alpha Bravo" % "ravo"                  | False                        |
-|                     | Image % Chaîne   | Boolean  | Expr_image % "Mer" | True (\*) |
-
-(\*) Si le mot-clé "Mer" a été associé à l'image stockée dans l'expression image (champ ou variable).
+| Opération           | Syntaxe          | Retourne | Expression              | Valeur   |
+| ------------------- | ---------------- | -------- | ----------------------- | -------- |
+| Concaténation       | Chaîne + Chaîne  | String   | "abc" + "def"           | "abcdef" |
+| Répétition          | Chaîne \* Nombre | String   | "ab" \* 3               | "ababab" |
+| Egalité             | Chaîne = Chaîne  | Boolean  | "abc" = "abc"           | True     |
+|                     |                  |          | "abc" = "abd"           | False    |
+| Inégalité           | Chaîne # Chaîne  | Boolean  | "abc" # "abd"           | True     |
+|                     |                  |          | "abc" # "abc"           | False    |
+| Supérieur à         | Chaîne > Chaîne  | Boolean  | "abd" > "abc"           | True     |
+|                     |                  |          | "abc" > "abc"           | False    |
+| Inférieur à         | Chaîne < Chaîne  | Boolean  | "abc" < "abd"           | True     |
+|                     |                  |          | "abc" < "abc"           | False    |
+| Supérieur ou égal à | Chaîne >= Chaîne | Boolean  | "abd" >= "abc"          | True     |
+|                     |                  |          | "abc" >= "abd"          | False    |
+| Inférieur ou égal à | Chaîne <= Chaîne | Boolean  | "abc" <= "abd"          | True     |
+|                     |                  |          | "abd" <= "abc"          | False    |
+| Contient mot-clé    | Chaîne % Chaîne  | Boolean  | "Alpha Bravo" % "Bravo" | True     |
+|                     |                  |          | "Alpha Bravo" % "ravo"  | False    |
 
 ## Comparaisons de chaînes
 
@@ -67,7 +64,7 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 Character code("A")=Character code("a") // 65 n'est pas égal à 97
 ```
 
-- When strings are compared, diacritical characters are compared using the system character comparison table of your computer. Par exemple, les expressions suivantes renvoient `TRUE` :
+- Lorsque des chaînes de caractères sont comparées, les caractères diacritiques sont comparés en utilisant la table de comparaison des caractères système de votre ordinateur. Par exemple, les expressions suivantes renvoient `TRUE` :
 
 ```4d
      "n"="ñ"
@@ -169,8 +166,8 @@ Lorsque les symboles d'indice de chaîne apparaissent dans une expression, ils r
   //...
     End if
  End if
- 
-  //En utilisant la syntaxe de référence des caractères, vous écririez d'une manière plus simple :
+
+  //En utilisant la syntaxe des symboles d'indice de chaîne, vous écririez d'une manière plus simple :
  If(vtText#"")
     If(Character code(vtText[[Length(vtText)]])=At sign)
   // ...
@@ -204,7 +201,7 @@ La méthode projet suivante ajoute une lettre capitale à tous les mots du texte
   //Capitalize_text project method
   //Capitalize_text ( Text ) -> Text
   //Capitalize_text ( Source text ) -> Capitalized text
- 
+
  $0:=$1
  $vlLen:=Length($0)
  If($vlLen>0)

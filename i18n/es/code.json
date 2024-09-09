@@ -600,7 +600,7 @@
     "message": "Gestión del código"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
-    "message": "1 item|{count} items",
+    "message": "1 artículo|{count} artículos",
     "description": "The default description for a category card in the generated index about how many items this category includes"
   },
   "theme.admonition.warning": {
@@ -608,19 +608,19 @@
     "description": "The default label used for the Warning admonition (:::warning)"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
-    "message": "Expand sidebar category '{label}'",
+    "message": "Ampliar la categoría '{label}' de la barra lateral",
     "description": "The ARIA label to expand the sidebar category"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "Collapse sidebar category '{label}'",
+    "message": "Contraer categoría de la barra lateral '{label}'",
     "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.unlistedContent.title": {
-    "message": "Unlisted page",
+    "message": "Página no listada",
     "description": "The unlisted content banner title"
   },
   "theme.unlistedContent.message": {
-    "message": "This page is unlisted. Search engines will not index it, and only users having a direct link can access it.",
+    "message": "Esta página no está en la lista. Los motores de búsqueda no lo indexarán, y sólo los usuarios que tengan un enlace directo pueden acceder a ella.",
     "description": "The unlisted content banner message"
   }
 }

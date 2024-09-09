@@ -17,7 +17,7 @@ title: VP PASTE FROM OBJECT
 
 <!-- REF #_method_.PASTE FROM OBJECT.Params -->
 
-| 引数         | タイプ     |    | 説明                   |                  |
+| 引数         | 型       |    | 説明                   |                  |
 | ---------- | ------- | -- | -------------------- | ---------------- |
 | rangeObj   | Object  | -> | セルレンジオブジェクト          |                  |
 | dataObject | Object  | -> | ペーストするデータを格納したオブジェクト |                  |

@@ -299,7 +299,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 |PDFWriter|4.3|20|FreeType dependency in 12.2.1|
 |SpreadJS|16.2.6|20.2 HF1|4D View Pro engine|
 ||16.0.4|20||
-|OpenSSL|3.1.1|20||
+|OpenSSL|3.1.6|**20.4 HF2**||
 |libZip|1.9.2|20|Used by zip class, 4D Write Pro, svg and serverNet components|
 |LZMA|5.4.1|20||
 |Zlib|1.2.13|20||

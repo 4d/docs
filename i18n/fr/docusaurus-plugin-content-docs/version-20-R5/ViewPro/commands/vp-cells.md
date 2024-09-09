@@ -31,7 +31,7 @@ title: VP Cells
 
 The `VP Cells` command <!-- REF #_method_.VP Cells.Summary -->returns a new range object referencing specific cells<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 The _column_ parameter defines the first column of the cell range. Passez l'indice de la colonne (la numérotation commence à zéro) dans ce paramètre. If the range is within multiple columns, you should also use the _columnCount_ parameter.
 
@@ -41,7 +41,7 @@ The _columnCount_ parameter allows you to define the total number of columns the
 
 The _rowCount_ parameter allows you to define the total number of rows the range is within. _rowCount_ must be greater than 0.
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used by default.
+Dans le paramètre optionnel _sheet_, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée par défaut.
 
 #### Exemple
 

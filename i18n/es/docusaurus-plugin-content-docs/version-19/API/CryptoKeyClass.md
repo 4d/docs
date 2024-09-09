@@ -8,37 +8,26 @@ La clase `CryptoKey` del lenguaje 4D contiene un par de llaves de cifrado asimé
 
 Esta clase está disponible en el almacén de clases de `4D`.
 
-### Ejemplo
+:::info Ver también
 
-El siguiente código de ejemplo firma y verifica un mensaje utilizando un nuevo par de llaves ECDSA, por ejemplo para hacer un token web JSON ES256.
+For a comprehensive overview of this class, please refer to the [**CryptoKey: encrypt, decrypt, sign, and verify!**](https://blog.4d.com/cryptokey-encrypt-decrypt-sign-and-verify/) blog post.
 
-```4d
- // Generar un nuevo par de llaves ECDSA
-$key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
-
-  // Obtener la firma como base64
-$message:="hello world"
-$signature:=$key.sign($message;New object("hash";"SHA256"))
-
-  // Verificar firma
-$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
-ASSERT($status.success)
-```
+:::
 
 ### Resumen
 
-|                                                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #4D.CryptoKey.new().Syntax -->](#4dcryptokeynew)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.CryptoKey.new().Summary -->              |
-| [<!-- INCLUDE #CryptoKey.curve.Syntax -->](#curve)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.curve.Summary -->                             |
-| [<!-- INCLUDE #CryptoKey.decrypt().Syntax -->](#decrypt)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.decrypt().Summary -->                   |
-| [<!-- INCLUDE #CryptoKey.encrypt().Syntax -->](#encrypt)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.encrypt().Summary -->                   |
-| [<!-- INCLUDE #CryptoKey.getPrivateKey().Syntax -->](#getprivatekey)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.getPrivateKey().Summary --> |
-| [<!-- INCLUDE #CryptoKey.getPublicKey().Syntax -->](#getpublickey)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.getPublicKey().Summary -->    |
-| [<!-- INCLUDE #CryptoKey.sign().Syntax -->](#sign)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.sign().Summary -->                            |
-| [<!-- INCLUDE #CryptoKey.size.Syntax -->](#size)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.size.Summary -->                                |
-| [<!-- INCLUDE #CryptoKey.type.Syntax -->](#type)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.type.Summary -->                                |
-| [<!-- INCLUDE #CryptoKey.verify().Syntax -->](#verify)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.verify().Summary -->                      |
+|                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [<!-- INCLUDE #4D.CryptoKey.new().Syntax -->](#4dcryptokeynew)<br/><!-- INCLUDE #4D.CryptoKey.new().Summary -->              |
+| [<!-- INCLUDE #CryptoKey.curve.Syntax -->](#curve)<br/><!-- INCLUDE #CryptoKey.curve.Summary -->                             |
+| [<!-- INCLUDE #CryptoKey.decrypt().Syntax -->](#decrypt)<br/><!-- INCLUDE #CryptoKey.decrypt().Summary -->                   |
+| [<!-- INCLUDE #CryptoKey.encrypt().Syntax -->](#encrypt)<br/><!-- INCLUDE #CryptoKey.encrypt().Summary -->                   |
+| [<!-- INCLUDE #CryptoKey.getPrivateKey().Syntax -->](#getprivatekey)<br/><!-- INCLUDE #CryptoKey.getPrivateKey().Summary --> |
+| [<!-- INCLUDE #CryptoKey.getPublicKey().Syntax -->](#getpublickey)<br/><!-- INCLUDE #CryptoKey.getPublicKey().Summary -->    |
+| [<!-- INCLUDE #CryptoKey.sign().Syntax -->](#sign)<br/><!-- INCLUDE #CryptoKey.sign().Summary -->                            |
+| [<!-- INCLUDE #CryptoKey.size.Syntax -->](#size)<br/><!-- INCLUDE #CryptoKey.size.Summary -->                                |
+| [<!-- INCLUDE #CryptoKey.type.Syntax -->](#type)<br/><!-- INCLUDE #CryptoKey.type.Summary -->                                |
+| [<!-- INCLUDE #CryptoKey.verify().Syntax -->](#verify)<br/><!-- INCLUDE #CryptoKey.verify().Summary -->                      |
 
 ## 4D.CryptoKey.new()
 
@@ -50,15 +39,17 @@ ASSERT($status.success)
 </details>
 
 
-<!-- REF #4D.CryptoKey.new().Syntax --> **4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
+<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
 
 
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| Parámetros | Tipo         |    | Descripción                                                                    |
-| ---------- | ------------ | -- | ------------------------------------------------------------------------------ |
-| settings   | Object       | -> | Parámetros para generar o cargar un par de llaves                              |
-| result     | 4D.CryptoKey | <- | Objeto que contiene un par de llaves de encriptación<!-- END REF --> |
+| Parámetros | Tipo         |    | Descripción                                       |
+| ---------- | ------------ | -- | ------------------------------------------------- |
+| settings   | Object       | -> | Parámetros para generar o cargar un par de llaves |
+| resultado  | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado  |
+
+<!-- END REF -->
 
 La función `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crea un nuevo objeto `4D.CryptoKey` que encapsula un par de llaves de cifrado<!-- END REF -->, basado en el parámetro objeto *settings*. Permite generar una nueva llave RSA o ECDSA, o cargar un par de llaves existente desde una definición PEM.
 
@@ -75,6 +66,67 @@ La función `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crea un
 #### *CryptoKey*
 
 El objeto `CryptoKey` devuelto encapsula un par de llaves de cifrado. Es un objeto compartido y, por tanto, puede ser utilizado por varios procesos 4D simultáneamente.
+
+#### Ejemplo 1
+
+Un mensaje está firmado por una llave privada y la firma es verificada por la llave pública correspondiente. El siguiente código firma y verifica una firma de mensaje simple.
+
+- Lado bob:
+
+```4d
+// Create the message
+$message:="hello world"
+Folder(fk desktop folder).file("message.txt").setText($message)
+
+// Create a key
+$type:=New object("type";"RSA")
+$key:=4D.CryptoKey.new($type)
+
+// Get the public key and save it
+Folder(fk desktop folder).file("public.pem").setText($key.getPublicKey())
+
+// Get signature as base64 and save it
+Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
+
+/*Bob sends the message, the public key and the signature to Alice*/
+```
+
+- Lado Alice:
+
+```4d
+// Get message, public key & signature
+$message:=Folder(fk desktop folder).file("message.txt").getText()
+$publicKey:=Folder(fk desktop folder).file("public.pem").getText()
+$signature:=Folder(fk desktop folder).file("signature").getText()
+
+// Create a key
+$type:=New object("type";"PEM";"pem";$publicKey)
+$key:=4D.CryptoKey.new($type)
+
+// Verify signature
+If ($key.verify($message;$signature;$type).success)
+// The signature is valid
+
+End if
+```
+
+#### Ejemplo 2
+
+El siguiente código de ejemplo firma y verifica un mensaje utilizando un nuevo par de llaves ECDSA, por ejemplo para hacer un token web JSON ES256.
+
+```4d
+ // Generar un nuevo par de llaves ECDSA
+$key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
+
+  // Obtener la firma como base64
+$message:="hello world"
+$signature:=$key.sign($message;New object("hash";"SHA256"))
+
+  // Verificar firma
+$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
+ASSERT($status.success)
+```
+
 
 <!-- REF CryptoKey.curve -->
 ## .curve
@@ -104,7 +156,7 @@ Definido sólo para llaves ECDSA: el <!-- REF #CryptoKey.curve.Summary -->nombre
 </details>
 
 
-<!-- REF #CryptoKey.decrypt().Syntax --> **.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
+<!-- REF #CryptoKey.decrypt().Syntax -->**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
 
 
 
@@ -113,7 +165,9 @@ Definido sólo para llaves ECDSA: el <!-- REF #CryptoKey.curve.Summary -->nombre
 | ---------- | ------ | -- | ------------------------------------------------------------------------------------ |
 | message    | Text   | -> | Cadena de mensajes a decodificar utilizando `options.encodingEncrypted` y descifrar. |
 | options    | Object | -> | Opciones de decodificación                                                           |
-| Result     | Object | <- | Status|<!-- END REF -->                                                    |
+| Result     | Object | <- | Estado                                                                               |
+
+<!-- END REF -->
 
 La función `.decrypt()` <!-- REF #CryptoKey.decrypt().Summary -->descifra el parámetro *mensaje* utilizando la llave **privada**<!-- END REF -->. El algoritmo utilizado depende del tipo de la llave.
 
@@ -134,7 +188,7 @@ La función devuelve un objeto "status" con la propiedad `success` definida como
 | Propiedad | Tipo       | Descripción                                                              |
 | --------- | ---------- | ------------------------------------------------------------------------ |
 | success   | boolean    | True si el mensaje ha sido descifrado con éxito                          |
-| result    | text       | Mensaje descifrado y decodificado utilizando `options.encodingDecrypted` |
+| resultado | text       | Mensaje descifrado y decodificado utilizando `options.encodingDecrypted` |
 | errors    | collection | Si `success` es `false`, puede contener una colección de errores         |
 
 En caso de que el *message* no haya podido ser descifrado por no haber sido encriptado con la misma llave o algoritmo, el objeto `status` que se devuelve contiene una colección de errores en `status.errors`.
@@ -151,16 +205,18 @@ En caso de que el *message* no haya podido ser descifrado por no haber sido encr
 </details>
 
 
-<!-- REF #CryptoKey.encrypt().Syntax --> **.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
+<!-- REF #CryptoKey.encrypt().Syntax -->**.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
 
 
 
 <!-- REF #CryptoKey.encrypt().Params -->
-| Parámetros | Tipo   |    | Descripción                                                                                                 |
-| ---------- | ------ | -- | ----------------------------------------------------------------------------------------------------------- |
-| message    | Text   | -> | Cadena de mensajes a codificar utilizando `options.encodingDecrypted` y encriptado.                         |
-| options    | Object | -> | Opciones de codificación                                                                                    |
-| Result     | Text   | <- | Mensaje encriptado y codificado utilizando la opción `options.encodingEncrypted`|<!-- END REF --> |
+| Parámetros | Tipo   |    | Descripción                                                                         |
+| ---------- | ------ | -- | ----------------------------------------------------------------------------------- |
+| message    | Text   | -> | Cadena de mensajes a codificar utilizando `options.encodingDecrypted` y encriptado. |
+| options    | Object | -> | Opciones de codificación                                                            |
+| Result     | Text   | <- | Mensaje encriptado y codificado utilizando la opción `options.encodingEncrypted`    |
+
+<!-- END REF -->
 
 La función `.encrypt()` <!-- REF #CryptoKey.encrypt().Summary -->encripta el parámetro *mensaje* utilizando la llave **pública**<!-- END REF -->. El algoritmo utilizado depende del tipo de la llave.
 
@@ -190,20 +246,20 @@ El valor devuelto es un mensaje encriptado.
 </details>
 
 
-<!-- REF #CryptoKey.getPrivateKey().Syntax --> **.getPrivateKey()** : Text<!-- END REF -->
+<!-- REF #CryptoKey.getPrivateKey().Syntax -->**.getPrivateKey()** : Text<!-- END REF -->
 
 
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
-| Parámetros | Tipo |    | Descripción                                             |
-| ---------- | ---- | -- | ------------------------------------------------------- |
-| Result     | Text | <- | Llave privada en formato PEM|<!-- END REF --> |
+| Parámetros | Tipo |    | Descripción                  |
+| ---------- | ---- | -- | ---------------------------- |
+| Result     | Text | <- | Llave privada en formato PEM |
+
+<!-- END REF -->
 
 La función `.getPrivateKey()`  <!-- REF #CryptoKey.getPrivateKey().Summary -->devuelve la llave privada del objeto `CryptoKey`<!-- END REF --> en formato PEM, o una cadena vacía si no hay ninguna disponible.
 
 #### *Result*
-
-
 
 El valor devuelto es la llave privada.
 <!-- END REF -->
@@ -219,14 +275,16 @@ El valor devuelto es la llave privada.
 </details>
 
 
-<!-- REF #CryptoKey.getPublicKey().Syntax --> **.getPublicKey( )** : Text<!-- END REF -->
+<!-- REF #CryptoKey.getPublicKey().Syntax -->**.getPublicKey**() : Text<!-- END REF -->
 
 
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
-| Parámetros | Tipo |    | Descripción                                             |
-| ---------- | ---- | -- | ------------------------------------------------------- |
-| Result     | Text | <- | Llave pública en formato PEM|<!-- END REF --> |
+| Parámetros | Tipo |    | Descripción                  |
+| ---------- | ---- | -- | ---------------------------- |
+| Result     | Text | <- | Llave pública en formato PEM |
+
+<!-- END REF -->
 
 La función `.getPublicKey()` <!-- REF #CryptoKey.getPublicKey().Summary -->devuelve la llave pública del objeto `CryptoKey`<!-- END REF --> en formato PEM, o una cadena vacía si no hay ninguna disponible.
 
@@ -246,7 +304,7 @@ El valor devuelto es la llave pública.
 </details>
 
 
-<!-- REF #CryptoKey.pem.Syntax --> **.pem** : Text<!-- END REF -->
+<!-- REF #CryptoKey.pem.Syntax -->**.pem** : Text<!-- END REF -->
 
 
 
@@ -268,11 +326,13 @@ El valor devuelto es la llave pública.
 
 
 <!-- REF #CryptoKey.sign().Params -->
-| Parámetros | Tipo   |    | Descripción                                                                                      |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------ |
-| message    | Text   | -> | Cadena mensaje a firmar                                                                          |
-| options    | Object | -> | Opciones de firma                                                                                |
-| Result     | Text   | <- | Firma en representación Base64 o Base64URL, según la opción "encoding|<!-- END REF --> |
+| Parámetros | Tipo   |    | Descripción                                                           |
+| ---------- | ------ | -- | --------------------------------------------------------------------- |
+| message    | Text   | -> | Cadena mensaje a firmar                                               |
+| options    | Object | -> | Opciones de firma                                                     |
+| Result     | Text   | <- | Firma en representación Base64 o Base64URL, según la opción "encoding |
+
+<!-- END REF -->
 
 La función `.sign()` <!-- REF #CryptoKey.sign().Summary -->firma la representación utf8 de una cadena *mensaje*<!-- END REF --> utilizando las llaves del objeto `CryptoKey` y las *opciones* suministradas. Devuelve su firma en formato base64 o base64URL, dependiendo del valor del atributo `options.encoding` que haya pasado.
 
@@ -328,6 +388,7 @@ Definido sólo para llaves RSA: <!-- REF #CryptoKey.size.Summary -->el tamaño d
 
 Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA", "ECDSA", "PEM" <!-- END REF -->.
 
+
 - "RSA": un par de llaves RSA, utilizando l`settings.size` como [.size](#size).
 - "ECDSA": un par de llaves del Algoritmo Elliptic Curve Digital Signature Algorithm, utilizando `settings.curve` como [.curve](#curve). Tenga en cuenta que las llaves ECDSA no pueden utilizarse para el cifrado, sino sólo para la firma.
 - "PEM": una definición de par de llaves en formato PEM, utilizando `settings.pem` como [.pem](#pem).
@@ -343,7 +404,7 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 </details>
 
 
-<!-- REF #CryptoKey.verify().Syntax --> **.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
+<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
 
 
 
@@ -353,7 +414,9 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 | message    | Text   | -> | Cadena mensaje utilizada para generar la firma                                                       |
 | signature  | Text   | -> | Firma a verificar, en representación Base64 o Base64URL, dependiendo del valor de `options.encoding` |
 | options    | Object | -> | Opciones de firma                                                                                    |
-| Result     | Object | <- | Estado de la verificación|<!-- END REF -->                                                 |
+| Result     | Object | <- | Estado de la verificación                                                                            |
+
+<!-- END REF -->
 
 
 La función `.verify()` <!-- REF #CryptoKey.verify().Summary -->verifica la firma base64 contra la representación utf8 del *mensaje*<!-- END REF --> utilizando las llaves del objeto `CryptoKey` y las *opciones* suministradas.
@@ -374,7 +437,9 @@ La `CryptoKey` debe contener una llave **pública** válida.
 
 La función devuelve un objeto de estado con la propiedad `success` definida como `true` si el `message` pudo ser verificado con éxito (es decir, la firma coincide).
 
-| Propiedad | Tipo       | Descripción                                                                                 |
-| --------- | ---------- | ------------------------------------------------------------------------------------------- |
-| success   | boolean    | True si la firma coincide con el mensaje                                                    |
-| errors    | collection | Si `success` es `false`, puede contener una colección de errores|<!-- END REF --> |
+| Propiedad | Tipo       | Descripción                                                      |
+| --------- | ---------- | ---------------------------------------------------------------- |
+| success   | boolean    | True si la firma coincide con el mensaje                         |
+| errors    | collection | Si `success` es `false`, puede contener una colección de errores |
+
+<!-- END REF -->

@@ -7,7 +7,7 @@ Todos [los atributos, dataclasses expuestos](configuration.md#exposing-tables-an
 
 ## Buscar datos
 
-To query data directly, you can do so using the [`$filter`]($filter.md) function. Por ejemplo, para encontrar a una persona llamada "Smith", podría escribir:
+Para consultar los datos directamente, puede hacerlo mediante la función [`$filter`]($filter.md). Por ejemplo, para encontrar a una persona llamada "Smith", podría escribir:
 
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=Smith"`
 
@@ -17,19 +17,19 @@ Con la API REST, puede realizar todas las manipulaciones a los datos como puede 
 
 Para añadir y modificar entidades, puede llamar a [`$method=update`]($method.md#methodupdate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
+Además la recuperación de una sola entidad en una clase de datos utilizando [\{dataClass\}({key})](dataClass.md#dataclasskey), también puede escribir una [función de clase](ClassFunctions.md#function-calls) que devuelva una entity selection (o una colección).
 
-Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
+Antes de devolver una selección, también puede ordenarla utilizando [`$orderby`]($orderby.md) uno o más atributos (incluso atributos de relación).
 
 ## Navegación de datos
 
-Add the [`$skip`]($skip.md) (to define with which entity to start) and [`$top/$limit`]($top_$limit.md) (to define how many entities to return) REST requests to your queries or entity selections to navigate the collection of entities.
+Añada las peticiones REST [`$skip`]($skip.md) (para definir con qué entidad empezar) y [`$top/$limit`]($top_$limit.md) (para definir cuántas entidades devolver) a sus consultas o selecciones de entidades para navegar por la colección de entidades.
 
 ## Creación y gestión del conjunto de entidades
 
 Un conjunto de entidades (también conocido como *selección de entidades*) es una colección de entidades obtenidas a través de una petición REST que se almacena en la caché de 4D Server. El uso de un conjunto de entidades evita que se consulte continuamente la aplicación para obtener los mismos resultados. El acceso a un conjunto de entidades es mucho más rápido y puede mejorar la velocidad de su aplicación.
 
-Para crear un conjunto de entidades, llame a [`$method=entityset`]($method.md#methodentityset) en su solicitud REST. As a measure of security, you can also use [`$savedfilter`]($savedfilter.md) and/or [`$savedorderby`]($savedorderby.md) when you call [`$filter`]($filter.md) and/or [`$orderby`]($orderby.md) so that if ever the entity set timed out or was removed from the server, it can be quickly retrieved with the same ID as before.
+Para crear un conjunto de entidades, llame a [`$method=entityset`]($method.md#methodentityset) en su solicitud REST. Como medida de seguridad, también se puede utilizar [`$savedfilter`]($savedfilter.md) y/o [`$savedorderby`]($savedorderby.md) cuando se llame a [`$filter`]($filter.md) y/o [`$orderby`]($orderby.md) para que si alguna vez el conjunto de entidades se agota o se elimina del servidor, se pueda recuperar rápidamente con el mismo ID que antes.
 
 Para acceder al conjunto de entidades, debe utilizar `$entityset/\{entitySetID\}`, por ejemplo:
 
@@ -41,17 +41,17 @@ Si desea eliminar un conjunto de entidades de la caché de 4D Server, puede util
 
 Si se modifica alguno de los atributos de la entidad en el conjunto de entidades, los valores se actualizarán. Sin embargo, si se modifica un valor que formaba parte de la consulta ejecutada para crear el conjunto de entidades, no se eliminará del conjunto de entidades aunque ya no se ajuste a los criterios de búsqueda.
 
-Las entidades que elimine, por supuesto, dejarán de formar parte del conjunto de entidades. However, by default their reference will remain in the entity set with an *undefined* value, and they will still be included in the entity set count. Llame a [`$clean`]($clean.md) en el conjunto de entidades para crear un nuevo conjunto de entidades actualizado sin referencias de entidades *undefined*.
+Las entidades que elimine, por supuesto, dejarán de formar parte del conjunto de entidades. Sin embargo, por defecto su referencia permanecerá en el conjunto de entidades con un valor *undefined*, y seguirán incluidos en el recuento del conjunto de entidades. Llame a [`$clean`]($clean.md) en el conjunto de entidades para crear un nuevo conjunto de entidades actualizado sin referencias de entidades *undefined*.
 
 Si el conjunto de entidades ya no existe en la caché de 4D Server, se recreará con un nuevo tiempo de espera por defecto de 10 minutos. El conjunto de entidades se refrescará (pueden incluirse ciertas entidades y eliminarse otras) desde la última vez que se creó, si ya no existía antes de recrearlo.
 
 Utilizando [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), puede combinar dos conjuntos de entidades que haya creado previamente. Puede combinar los resultados en ambos, devolver sólo lo que es común entre los dos, o devolver lo que no es común entre los dos.
 
-A new selection of entities is returned; however, you can also create a new entity set by calling [`$method=entityset`]($method.md#methodentityset) at the end of the REST request.
+Se devuelve una nueva selección de entidades; sin embargo, también se puede crear un nuevo conjunto de entidades llamando a [`$method=entityset`]($method.md#methodentityset) al final de la petición REST.
 
 ## Cálculo de datos
 
-By using [`$compute`]($compute.md), you can compute the **average**, **count**, **min**, **max**, or **sum** for a specific attribute in a dataclass. También puede calcular todos los valores con la palabra clave $all.
+Utilizando [`$compute`]($compute.md), puede calcular **average**, **count**, **min**, **max**, o **sum** de un atributo específico de una clase de datos. También puede calcular todos los valores con la palabra clave $all.
 
 Por ejemplo, para obtener el salario más alto:
 
@@ -226,6 +226,6 @@ Si quiere guardar un BLOB almacenado en su clase de datos, puedes escribir lo si
 
 ## Recuperar sólo una entidad
 
-You can use the [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. Es especialmente útil cuando se quiere hacer una búsqueda relacionada que no se crea en la llave primaria de la clase de datos. Por ejemplo, puede escribir:
+Puede utilizar la sintaxis [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) cuando desee recuperar sólo una entidad. Es especialmente útil cuando se quiere hacer una búsqueda relacionada que no se crea en la llave primaria de la clase de datos. Por ejemplo, puede escribir:
 
 `GET  /rest/Company:companyCode("Acme001")`

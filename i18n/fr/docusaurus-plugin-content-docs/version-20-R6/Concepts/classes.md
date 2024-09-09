@@ -379,7 +379,7 @@ Le type de propriété peut être l'un des suivants :
 | `Date`                       | Valeur date                                                               |
 | `Time`                       | Valeur Heure                                                              |
 | `Boolean`                    | Valeur booléen                                                            |
-| `Entier`                     | Valeur entier long                                                        |
+| `Integer`                    | Valeur entier long                                                        |
 | `Real`                       | Valeur réel                                                               |
 | `Pointer`                    | Valeur pointeur                                                           |
 | `Picture`                    | Valeur image                                                              |
@@ -832,17 +832,25 @@ Si le mot-clé `shared` est utilisé devant une fonction dans une classe utilisa
 
 ## Classes Singleton
 
-Une **classe singleton** est une classe utilisateur qui ne produit qu'une seule instance. Pour plus d’informations sur les singletons, veuillez consulter la [page Wikipédia sur les singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
+Une **classe singleton** est une classe utilisateur qui ne produit qu'une seule instance. Pour plus d’informations sur les singletons, veuillez consulter la [page Wikipédia sur les singletons](https://en.wikipedia.org/wiki/Singleton_pattern). Un singleton a une instance unique pour le process dans lequel il est instancié, tandis qu'un singleton *partagé* a une instance unique pour tous les process de la machine. Les singletons sont utiles pour définir des valeurs qui doivent être disponibles de n'importe où dans une application ou un process.
 
 Le singleton de la classe est instancié lors du premier appel de la propriété [`cs.<class>.me`](../API/ClassClass.md#me). Le singleton instancié de la classe est ensuite toujours renvoyé lorsque la propriété [`me`](../API/ClassClass.md#me) est utilisée.
 
 Si vous avez besoin d'instancier un singleton avec des paramètres, vous pouvez également appeler la fonction [`new()`](../API/ClassClass.md#new). Dans ce cas, il est recommandé d'instancier le singleton dans du code exécuté au démarrage de l'application.
 
-La portée d'une instance de singleton peut être le process courant ou tous les process. Un singleton a une valeur unique pour le process dans lequel il est instancié, tandis qu'un singleton *partagé* a une valeur unique pour tous les process de l'application. Les singletons sont utiles pour définir des valeurs qui doivent être disponibles de n'importe où dans une application ou un process.
-
-Une fois instanciée, une classe singleton (et son singleton) existe aussi longtemps qu'une référence à cette classe existe quelque part dans l'application.
-
 La propriété [`.isSingleton`](../API/ClassClass.md#issingleton) des objets Class permet de savoir si la classe est un singleton.
+
+### Portée
+
+La portée d'une instance de singleton peut être le process dans lequel elle est instanciée ou tous les process de la machine, en fonction de sa propriété *shared*.
+
+| Singleton créé sur  | Portée si non partagé                                                                                                | Portée si partagé  |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| 4D mono-utilisateur | Process                                                                                                              | Application        |
+| 4D Server           | Process                                                                                                              | Machine 4D Server  |
+| 4D mode distant     | Process (*note*: les singletons ne sont pas synchronisés sur les process jumeaux) | Machine 4D distant |
+
+Une fois instanciée, une classe singleton (et son singleton) existe aussi longtemps qu'une référence à cette classe existe quelque part dans l'application sur le poste.
 
 :::info
 
@@ -883,7 +891,7 @@ var $myOtherSingleton := cs.ProcessTag.me
 
 ### Création d'un singleton partagé
 
-Pour créer un singleton partagé par tous les process de l'application, ajoutez les mots-clés `shared singleton` devant le [constructeur de classe](#class-constructor). Par exemple :
+Pour créer un singleton partagé par tous les process sur la machine, ajoutez les mots-clés `shared singleton` devant le [constructeur de classe](#class-constructor). Par exemple :
 
 ```4d
 //Class VehicleFactory
@@ -910,7 +918,7 @@ shared Function buildVehicle ($type : Text) -> $vehicle : cs.Vehicle
   This.vehicleBuilt+=1
 ```
 
-Vous pouvez alors appeler le singleton **cs.VehicleFactory** pour obtenir un nouveau véhicule depuis n'importe où dans votre application avec une seule ligne :
+Vous pouvez alors appeler le singleton **cs.VehicleFactory** pour obtenir un nouveau véhicule depuis n'importe où dans votre application sur le poste avec une seule ligne :
 
 ```4d
 $vehicle:=cs.VehicleFactory.me.buildVehicle("truck")

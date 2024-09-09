@@ -62,10 +62,10 @@ Para obtener una expresión de tipo hora a partir de una expresión que combina 
 Puede combinar expresiones de los tipos hora y número utilizando las funciones `Time` o `Current time`:
 
 ```4d
-	//The following line assigns to $vlSeconds the number of seconds   
-	//that will be elapsed between midnight and one hour from now
+//La siguiente línea asigna a $vlSeconds el número de segundos   
+	//que transcurrirán entre la medianoche y una hora a partir de ahora
 $vlSeconds:=Current time+3600
-	//The following line assigns to $vHSoon the time it will be in one hour
+	//La siguiente línea asigna a $vHSoon la hora que será dentro de una hora
 $vhSoon:=Time(Current time+3600)
 ```
 
@@ -81,8 +81,8 @@ La segunda línea podría escribirse de forma más sencilla:
 El operador Modulo puede utilizarse, más concretamente, para sumar tiempos que tengan en cuenta el formato de 24 horas:
 
 ```4d
-$t1:=?23:00:00? // It is 23:00 hours
-  // We want to add 2 and a half hours
-$t2:=$t1 +?02:30:00? // With a simple addition, $t2 is ?25:30:00?
-$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 is ?01:30:00? and it is 1:30 hour the next morning
+$t1:=?23:00:00? // Son las 23:00 horas
+  // Queremos sumar 2 horas y media
+$t2:=$t1 +?02:30:00? // Con una simple suma, $t2 es ?25:30:00?
+$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 es ?01:30:00? y es la 1:30 hora de la mañana siguiente
 ```

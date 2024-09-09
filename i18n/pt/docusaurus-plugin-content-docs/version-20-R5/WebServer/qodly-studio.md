@@ -17,7 +17,7 @@ Qodly Studio can also be used in the [**Qodly Cloud platform**](https://qodly.co
 
 With Qodly Studio, you will discover a totally new web UI, get familiar with the concept of datasources, and learn how to:
 
-- create Qodly forms by placing components on a page
+- criar formulários Qodly colocando componentes em uma página
 - mapear componentes para dados
 - acionar o código 4D configurando eventos
 - e muito mais.
@@ -85,7 +85,7 @@ Keep in mind that [user settings](../settings/overview.md) can be defined at sev
 
 ### Ativando autenticação
 
-Authentication on the WebAdmin web server is granted using an access key. For more details, see [Access key](../Admin/webAdmin.md#access-key).
+Authentication on the WebAdmin web server is granted using an access key. Para mais detalhes, consulte [Chave de Acesso](../Admin/webAdmin.md#access-key).
 
 ### Gerenciamento de projetos
 
@@ -186,7 +186,7 @@ See [this page](https://developer.qodly.com/docs/studio/rendering) for detailed 
 To enable the rendering of Qodly forms, the following options must be set.
 
 - The 4D project's **Settings** > **Web** > **Web Features** > [**Expose as REST server**](../settings/web.md#exposed-as-rest-server) option must be activated.
-- The [4D web server](webServer.md) must be running.
+- O [servidor Web 4D] (webServer.md) deve estar em execução.
 
 :::note
 
@@ -300,6 +300,12 @@ A configuração do esquema URL de Qodly Studio (HTTP e HTTPS) determina quantas
 As explained in the [configuration](#configuration) section, the WebAdmin web server provides a secured web access to Qodly Studio. On the other hand, the [renderer](#rendering-webforms) communicates with the 4D web server of the database using REST requests. Dessa forma, se comporta como um Cliente 4D convencional.
 
 Se você executar o renderizador a partir do Qodly Studio e esses dois servidores web não forem acessados através do mesmo esquema de URL (HTTP ou HTTPS), isso pode levar a uma contagem incorreta de licenças.
+
+:::info
+
+Using different schemes might also lead to [session](sessions.md) issues, such as losing [privileges](../ORDA/privileges.md) after a page refresh.
+
+:::
 
 #### Exemplo
 

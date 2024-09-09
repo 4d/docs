@@ -23,19 +23,19 @@ title: VP Get column attributes
 | tableName  | Text    | -> | Nom de table                                                                |                  |
 | column     | Integer | -> | Numéro de colonne de la table                                               |                  |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |                  |
-| Résultat   | Object  | <- | Attributes of the _column_                                                  | <!-- END REF --> |
+| Résultat   | Object  | <- | Numéro d'indice de _column_                                                 | <!-- END REF --> |
 
 #### Description
 
-The `VP Get table column attributes` command <!-- REF #_method_.VP Get table column attributes.Summary -->returns the current attributes of the specified _column_ in the _tableName_<!-- END REF -->.
+La commande `VP Récupère les attributs de colonne de la table` <!-- REF #_method_.VP Récupère les attributs de la colonne de la table. ummary -->retourne les attributs courants de la colonne spécifiée _column_ dans la table _tableName_<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro.
 
-In _sheet_, pass the index of the target sheet. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
+Dans _sheet_, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 
 > La numérotation démarre à 0.
 
-The command returns an object describing the current attributes of the _column_:
+La commande retourne un objet décrivant les attributs courants de la _column_:
 
 | Propriété           | Type    | Description                                                                                                                                     |
 | ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -45,7 +45,7 @@ The command returns an object describing the current attributes of the _column_:
 | footerFormula       | text    | Formule de pied de colonne.                                                                                                     |
 | filterButtonVisible | boolean | True if the table column's filter button is displayed, False otherwise.                                                         |
 
-If _tableName_ is not found or if _column_ index is higher than the number of columns, the command returns **null**.
+Si _tableName_ n'est pas trouvé ou si l'index _column_ est supérieur au nombre de colonnes, la commande retourne **null**.
 
 #### Exemple
 

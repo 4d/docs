@@ -36,27 +36,24 @@ As seguintes sequências de escape podem ser utilizadas em strings de caracteres
 
 ## Operadores de string
 
-| Operação             | Sintaxe          | Retorna    | Expression                                | Valor                        |
-| -------------------- | ---------------- | ---------- | ----------------------------------------- | ---------------------------- |
-| Concatenação         | String + String  | String     | "abc" + "def"                             | "abcdef"                     |
-| Repetição            | String \* Number | String     | "ab" \* 3                                 | "ababab"                     |
-| Igual                | String = String  | Parâmetros | "abc" = "abc"                             | True                         |
-|                      |                  |            | "abc" = "abd"                             | False                        |
-| Desigualdade         | String # String  | Parâmetros | "abc" # "abd"                             | True                         |
-|                      |                  |            | "abc" # "abc"                             | False                        |
-| Maior que            | Cadena > Cadena  | Parâmetros | "abd" > "abc"                             | True                         |
-|                      |                  |            | "abc" > "abc"                             | False                        |
-| Menor que            | Cadena < Cadena  | Parâmetros | "abc" < "abd"                             | True                         |
-|                      |                  |            | "abc" < "abc"                             | False                        |
-| Maior ou igual a     | Cadena >= Cadena | Parâmetros | "abd" >= "abc"                            | True                         |
-|                      |                  |            | "abc" >= "abd"                            | False                        |
-| Menor que ou igual a | Cadena <= Cadena | Parâmetros | "abc" <= "abd"                            | True                         |
-|                      |                  |            | "abd" <= "abc"                            | False                        |
-| Contém palavra chave | String % String  | Parâmetros | "Alpha Bravo" % "Bravo"                   | True                         |
-|                      |                  |            | "Alpha Bravo" % "ravo"                    | False                        |
-|                      | Picture % String | Parâmetros | Picture_expr % "Mer" | True (\*) |
-
-(\*) Se a palavra-chave "Mer" estiver associada à imagem armazenada na expressão de imagem (campo ou variável).
+| Operação             | Sintaxe          | Retorna    | Expression              | Valor    |
+| -------------------- | ---------------- | ---------- | ----------------------- | -------- |
+| Concatenação         | String + String  | String     | "abc" + "def"           | "abcdef" |
+| Repetição            | String \* Number | String     | "ab" \* 3               | "ababab" |
+| Igual                | String = String  | Parâmetros | "abc" = "abc"           | True     |
+|                      |                  |            | "abc" = "abd"           | False    |
+| Desigualdade         | String # String  | Parâmetros | "abc" # "abd"           | True     |
+|                      |                  |            | "abc" # "abc"           | False    |
+| Maior que            | Cadena > Cadena  | Parâmetros | "abd" > "abc"           | True     |
+|                      |                  |            | "abc" > "abc"           | False    |
+| Menor que            | Cadena < Cadena  | Parâmetros | "abc" < "abd"           | True     |
+|                      |                  |            | "abc" < "abc"           | False    |
+| Maior ou igual a     | Cadena >= Cadena | Parâmetros | "abd" >= "abc"          | True     |
+|                      |                  |            | "abc" >= "abd"          | False    |
+| Menor que ou igual a | Cadena <= Cadena | Parâmetros | "abc" <= "abd"          | True     |
+|                      |                  |            | "abd" <= "abc"          | False    |
+| Contém palavra chave | String % String  | Parâmetros | "Alpha Bravo" % "Bravo" | True     |
+|                      |                  |            | "Alpha Bravo" % "ravo"  | False    |
 
 ## Comparações de cadeias
 
@@ -163,19 +160,19 @@ End if
 Caso contrário, se os símbolos de referência de caracteres aparecerem numa expressão, devolvem o carácter (a que se referem) como uma cadeia de 1 carácter. Por exemplo:
 
 ```4d
-//O exemplo a seguir testa se o último caractere de vtText é um símbolo de arroba "@"
- Se(vtText#"")
-    Se(Código de caractere(Subcadeia(vtText;Comprimento(vtText);1))=Símbolo de arroba)
+//The following example tests if the last character of vtText is an At sign "@"
+ If(vtText#"")
+    If(Character code(Substring(vtText;Length(vtText);1))=At sign)
   //...
-    Fim se
- Fim se
- 
-  //Usando a sintaxe de referência de caractere, você poderia escrever de forma mais simples:
- Se(vtText#"")
-    Se(Código de caractere(vtText[[Comprimento(vtText)]])=Símbolo de arroba)
+    End if
+ End if
+
+  //Using the character reference syntax, you would write in a simpler manner:
+ If(vtText#"")
+    If(Character code(vtText[[Length(vtText)]])=At sign)
   // ...
-    Fim se
- Fim se
+    End if
+ End if
 ```
 
 ### Nota avançada sobre referência de caractere inválido
@@ -204,7 +201,7 @@ O seguinte método de projeto capitaliza o primeiro carácter de cada palavra do
   //Capitalize_text project method
   //Capitalize_text ( Text ) -> Text
   //Capitalize_text ( Source text ) -> Capitalized text
- 
+
  $0:=$1
  $vlLen:=Length($0)
  If($vlLen>0)

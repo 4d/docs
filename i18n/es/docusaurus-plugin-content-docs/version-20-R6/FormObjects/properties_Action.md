@@ -13,10 +13,10 @@ Hay dos modos de arrastrar disponibles:
 
 - **Personalizado**: en este modo, toda operación de arrastrar realizada en el objeto dispara el evento formulario `On Begin Drag` en el contexto del objeto. A continuación, gestiona la acción arrastrar utilizando un método.\
   En el modo personalizado, básicamente toda la operación de arrastrar y soltar es realizada por el programador. Este modo le permite implementar cualquier interfaz basada en la función de arrastrar y soltar, incluidas las interfaces que no necesariamente transportan datos, sino que pueden realizar cualquier acción como abrir archivos o activar un cálculo. Este modo se basa en una combinación de propiedades, eventos y comandos específicos del tema `Portapapeles`.
-- **Automático**: en este modo, 4D **copia** el texto o las imágenes directamente desde el objeto formulario. Puede utilizarse en la misma área 4D, entre dos áreas 4D o entre 4D y otra aplicación. For example, automatic drag (and drop) lets you copy a value between two fields without using programming:\
-  ![](../assets/en/FormObjects/property_automaticDragDrop.png)\
+- **Automático**: en este modo, 4D **copia** el texto o las imágenes directamente desde el objeto formulario. Puede utilizarse en la misma área 4D, entre dos áreas 4D o entre 4D y otra aplicación. Por ejemplo, arrastrar (y soltar) automáticamente le permite copiar un valor entre dos campos sin usar programación:\
+  ![](../assets/en/FormObjects/property_automaticDragDrop. ng)\
   ![](../assets/en/FormObjects/property_automaticDragDrop2.png)
-  In this mode, the `On Begin Drag` form event is NOT generated. Si quiere "forzar" el uso del arrastre personalizado mientras está activado el arrastre automático, mantenga presionada la tecla **Alt** (Windows) o **Opción** (macOS) durante la acción. Esta opción no está disponible para las imágenes.
+  En este modo, NO se genera el evento del formulario `On Begin Drag`. Si quiere "forzar" el uso del arrastre personalizado mientras está activado el arrastre automático, mantenga presionada la tecla **Alt** (Windows) o **Opción** (macOS) durante la acción. Esta opción no está disponible para las imágenes.
 
 Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) en el manual *Lenguaje 4D*.
 
@@ -88,15 +88,15 @@ Se soportan varios tipos de referencias de métodos:
 
 - una ruta de archivo de método objeto estándar, es decir, que utilice el siguiente patrón:\
   `ObjectMethods/objectName.4dm`\
-  ... where `objectName` is the actual [object name](properties_Object.md#object-name). Este tipo de referencia indica que el archivo del método se encuentra en la ubicación por defecto ("sources/forms/*formName*/ObjectMethods/"). En este caso, 4D maneja automáticamente el método objeto cuando se ejecutan operaciones en el objeto formulario (renombrar, duplicar, copiar/pegar...)
+  ... donde `objectName` es el [nombre del objeto](properties_Object.md#object-name). Este tipo de referencia indica que el archivo del método se encuentra en la ubicación por defecto ("sources/forms/*formName*/ObjectMethods/"). En este caso, 4D maneja automáticamente el método objeto cuando se ejecutan operaciones en el objeto formulario (renombrar, duplicar, copiar/pegar...)
 
 - a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for object operations.
 
-- a custom method file path including the .4dm extension, e.g.:\
+- una ruta de archivo de métodos personalizados que incluya la extensión .4dm, por ejemplo:
   `../../CustomMethods/myMethod.4dm`
-  You can also use a filesystem:\
+  También puede utilizar un sistema de archivos:\
   `/RESOURCES/Buttons/bOK.4dm`
-  In this case, 4D does not provide automatic support for object operations.
+  En este caso, 4D no ofrece soporte automático para operaciones con objetos.
 
 #### Gramática JSON
 
@@ -106,7 +106,7 @@ Se soportan varios tipos de referencias de métodos:
 
 #### Objetos soportados
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Forms](FormEditor/forms.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md#overview)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Formularios](FormEditor/forms.md) - [Lista jerárquica](list_overview.md#overview) - [Entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Botón imagen](pictureButton_overview.md) - [Menú emergente con imagen](picturePopupMenu_overview.md) - [Área de Plug-in](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón de opción](radio_overview.md) - [Regla](ruler.md) - [Selector](spinner.md) - [Separador](splitters.md) - [Pasos](stepper.md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área web](webArea_overview.md#overview)
 
 ---
 
@@ -169,7 +169,7 @@ En otros casos (list box basados en selecciones temporales, columnas asociadas a
 
 ## Acción estándar
 
-Typical activities to be performed by active objects (*e.g.*, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) han sido predefinidas por 4D como acciones estándar. Se describen con detalle en la sección [Acciones estándar](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) de la *manual de Diseño*.
+Actividades típicas que deben realizar los objetos activos (\*por ejemplo, permitir al usuario aceptar, cancelar o eliminar registros, desplazarse entre registros o de una página a otra en un formulario multipágina, etc.) han sido predefinidas por 4D como acciones estándar. Se describen con detalle en la sección [Acciones estándar](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) de la *manual de Diseño*.
 
 Puede asignar al mismo tiempo una acción estándar y un método proyecto de un objeto. En este caso, la acción estándar suele ejecutarse después del método y 4D utiliza esta acción para activar/desactivar el objeto según el contexto actual. Cuando se desactiva un objeto, no se puede ejecutar el método proyecto asociado.
 
@@ -183,4 +183,4 @@ También puede definir esta propiedad utilizando el comando `OBJECT SET ACTION`.
 
 #### Objetos soportados
 
-[Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [List Box](listbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Tab control](tabControl.md)
+[Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [List Box](listbox_overview.md) - [Botón imagen](pictureButton_overview.md) - [Menú emergente imagen](picturePopupMenu_overview.md) - [Control de pestañas](tabControl.md)

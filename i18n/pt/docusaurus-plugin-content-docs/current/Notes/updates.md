@@ -5,11 +5,12 @@ title: Notas de Lançamento
 
 ## 4D 20 R7
 
-Read [**What’s new in 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R7/), the blog post that lists all new features and enhancements in 4D 20 R7.
+Leia [**O que há de novo no 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R7/), o post do blog que lista todos os novos recursos e aprimoramentos em 4D 20 R7.
 
 #### Destaques
 
 - List box columns and headers of type time now support the ["blankIfNull" option](../FormObjects/properties_Display.md#time-format).
+- New properties in [.getBoxInfo()](../API/IMAPTransporterClass.md#getboxinfo) and [.getBoxList()](../API/IMAPTransporterClass.md#getboxlist).
 
 ## 4D 20 R6
 
@@ -251,7 +252,7 @@ Leia [**O que há de novo no 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-
 - Para manter a consistência com as interfaces padrão (por exemplo, exploradores de arquivos do sistema operacional), as regras da caixa de listagem para seleção de linhas/arrastar e soltar foram modificadas. A continuous or discontinuous selection of rows can be dragged by simply clicking on and moving a selected row; the **Alt** key is not longer necessary (but can still be used like in previous previous). When the **Shift** or **Ctrl/Command** key is pressed, a mouse click is taken into account when the click is down. Para obter mais informações sobre arrastar e soltar em list boxes, consulte [esta postagem do blog] (https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) e faça download [deste projeto HDI 4D] (https://github.com/4d-depot/HDI_LB_DragAndDrop).
 - A numeração de compilação interna do 4D foi modificada a partir do 4D 19 R7:
   - as versões até 4D 19 R6 (inclusive) são numeradas como 282xxx,
-  - releases from 4D 19 R7 will be numbered 100xxx.\
+  - os lançamentos do 4D 19 R7 serão numerados como 100xxx.\
     Note that a specific 4D version is still uniquely identified by a branch name and a build number. O número de build aumenta cronologicamente.
 - A capacidade de usar o protocolo REST do Wakanda/4D Mobile para chamar um método de projeto foi removida. You can use [ORDA data model class functions](../REST/ClassFunctions.md) or [/4DACTION urls](../WebServer/httpRequests.md#4daction) instead.
 
@@ -385,7 +386,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 - New default dark and light themes in [Code Editor preferences](../Preferences/methods.md#theme-list).
 - [Native compilation](../Project/compiler.md#compiler-methods-for) for Silicon processors.
 - [Variable calculation](../FormObjects/properties_Object.md#variable-calculation) property is now supported by entity selection list box columns.
-- New, comprehensive [CLI](../Admin/cli.md) page.
+- Nova página completa [CLI](../Admin/cli.md).
 
 ### 4D 18 R6
 

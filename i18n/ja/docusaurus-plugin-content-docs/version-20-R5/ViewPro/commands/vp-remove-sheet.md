@@ -9,7 +9,7 @@ title: VP REMOVE SHEET
 
 <!-- REF #_method_.VP REMOVE SHEET.Params -->
 
-| 引数         | タイプ     |    | 説明                      |                  |
+| 引数         | 型       |    | 説明                      |                  |
 | ---------- | ------- | -- | ----------------------- | ---------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名 |                  |
 | index      | Integer | -> | 削除するシートのインデックス          | <!-- END REF --> |

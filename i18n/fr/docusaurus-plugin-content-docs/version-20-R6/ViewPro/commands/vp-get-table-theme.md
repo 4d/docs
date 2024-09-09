@@ -25,15 +25,15 @@ title: VP Get table theme
 
 #### Description
 
-The `VP Get table theme` command <!-- REF #_method_.VP Get table theme.Summary -->returns the current theme propertie values of the *tableName*<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](vp-create-table.md) or [`VP SET TABLE THEME`](vp-set-table-theme.md) commands, or through the interface.
+La commande `VP Get table theme` <!-- REF #_method_.VP Get table theme.Summary -->retourne les valeurs des propriétés du thème actuel de la table *tableName*<!-- END REF -->. Un thème de table peut être défini à l'aide des commandes [`VP CREATE TABLE`](vp-create-table.md) ou [`VP SET TABLE THEME`](vp-set-table-theme.md), ou via l'interface.
 
-In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro et dans *tableName*, le nom de la table.
 
-The command returns an object of the [cs.ViewPro.TableTheme](../classes.md#tabletheme) class with properties and values that describe the current table theme.
+La commande retourne un objet de la classe [cs.ViewPro.TableTheme](../classes.md#tabletheme) avec des propriétés et des valeurs qui décrivent le thème de la table courante.
 
 #### Exemple
 
-The command returns a full `theme` object even if a [native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) name was used to define the theme.
+La commande retourne un objet de `thème` complet même si un nom de [thème natif SpreadJS](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) a été utilisé pour définir le thème.
 
 ```4d
 var $param : cs.ViewPro.TableTheme

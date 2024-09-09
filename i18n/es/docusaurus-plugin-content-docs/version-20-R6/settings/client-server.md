@@ -24,7 +24,7 @@ Si modifica este parámetro, deberá reiniciar la base del servidor para que se 
 
 #### Nombre de publicación
 
-This option lets you change the publication name of a 4D Server database, *i.e.*, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Opening a remote project](../Desktop/clientServer/md#opening-a-remote-project) paragraph). Por defecto, 4D Server utiliza el nombre del archivo de proyecto. Puede introducir cualquier nombre personalizado que desee.
+Esta opción permite modificar el nombre de publicación de una base 4D Server, *es decir*, el nombre que aparece en la pestaña dinámica **Disponible** de la caja de diálogo de conexión (ver el párrafo [Apertura de un proyecto remoto](../Desktop/clientServer/md#opening-a-remote-project)). Por defecto, 4D Server utiliza el nombre del archivo de proyecto. Puede introducir cualquier nombre personalizado que desee.
 
 :::note
 
@@ -47,21 +47,22 @@ Para actualizar las otras máquinas clientes que no estén conectadas, basta con
 
 #### 4D Server y números de puerto
 
-4D Server utiliza tres puertos TCP para las comunicaciones entre los servidores internos y los clientes:
+4D Server utiliza varios puertos TCP para las comunicaciones entre los servidores internos y los clientes:
 
 - **SQL Server**: 19812 por defecto (puede modificarse a través de la página "SQL/Configuración" de las Preferencias).
 - **Servidor de aplicaciones**: 19813 por defecto (puede modificarse a través de la página "Cliente-Servidor/Configuración" de las Preferencias, ver arriba).
 - **Servidor DB4D** (servidor de base de datos): 19814 por defecto. This port number cannot be modified directly but it always consists of the application server port number + 1.\
-  When a 4D client connects to 4D Server, it uses the TCP port of the application server (19813 or the port indicated after the colon ':' in the IP address shown in the connection dialog box). Connection to other servers via their respective ports is then automatic; it is no longer necessary to specify them.\
-  Note that in the case of access via a router or a firewall, the three TCP ports must be opened explicitly.
+  When a 4D client connects to 4D Server, it uses the TCP port of the application server (19813 or the port indicated after the colon ':' in the IP address shown in the connection dialog box). La conexión a otros servidores a través de sus respectivos puertos es entonces automática; ya no es necesario especificarlos.\
+  Tenga en cuenta que en caso de acceso a través de un enrutador o un cortafuegos, los tres puertos TCP deben abrirse explícitamente.
+- [**Depurador remoto**](../Debugging/debugging-remote.md): 19815 por defecto. Este número de puerto no puede modificarse directamente, pero siempre consta del número de puerto del servidor de aplicaciones + 2.
 
 #### Autenticación del usuario con el servidor de dominio
 
-Esta opción le permite implementar las funcionalidades SSO (*Single Sign On*) en su base de datos 4D Server en Windows. Al marcar esta opción, 4D se conecta de forma transparente al directorio Active del servidor de dominio Windows y obtiene los tokens de autenticación disponibles. This option is described in the [Single Sign On (SSO) on Windows](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.en.html) section.
+Esta opción le permite implementar las funcionalidades SSO (*Single Sign On*) en su base de datos 4D Server en Windows. Al marcar esta opción, 4D se conecta de forma transparente al directorio Active del servidor de dominio Windows y obtiene los tokens de autenticación disponibles. Esta opción se describe en la sección [Single Sign On (SSO) en Windows](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.en.html).
 
 #### Service Principal Name
 
-Cuando la autenticación única (SSO) está activa (ver arriba), debe llenar este campo si desea utilizar Kerberos como protocolo de autenticación. This option is described in the [Single Sign On (SSO) on Windows](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.en.html) section.
+Cuando la autenticación única (SSO) está activa (ver arriba), debe llenar este campo si desea utilizar Kerberos como protocolo de autenticación. Esta opción se describe en la sección [Single Sign On (SSO) en Windows](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.en.html).
 
 #### Capa de red
 
@@ -107,7 +108,7 @@ Esta opción permite activar el modo seguro para las comunicaciones entre la má
 
 #### Actualizar la carpeta Resources durante una sesión
 
-This setting can be used to globally set the updating mode for the local instance of the **Resources** folder on the connected 4D machines when the **Resources** folder of the database is modified during the session (the **Resources** folder is automatically synchronized on the remote machine each time a session is opened). Hay tres parámetros disponibles:
+Este parámetro puede utilizarse para definir globalmente el modo de actualización de la instancia local de la carpeta **Resources** en los equipos 4D conectados cuando se modifica la carpeta **Resources** de la base de datos durante la sesión (la carpeta **Resources** se sincroniza automáticamente en el equipo remoto cada vez que se abre una sesión). Hay tres parámetros disponibles:
 
 - **Nunca**: la carpeta local **Resources** no se actualiza durante la sesión. La notificación enviada por el servidor es ignorada. La carpeta **Resources** local puede actualizarse manualmente mediante el comando **Update Local Resources** del menú de acción (ver [Uso del explorador de recursos](https://doc.4d.com/4Dv19/4D/19/Using-the-Resources-explorer.300-5416788.en.html)).
 - **Siempre**: la sincronización de la carpeta local **Resources** se realiza automáticamente durante la sesión cada vez que el servidor envía una notificación.

@@ -33,7 +33,7 @@ Em _vpAreaName_, passe o nome da área 4D View Pro.
 
 In _tableName_, pass the name of the table for which you want to get the dirty rows. Somente as colunas modificadas vinculadas a um [contexto de dados] (vp-set-data-context.md) serão levadas em consideração.
 
-By default, calling the command will clear the _dirty_ status from the current table. To keep this status untouched, pass `False` in the _reset_ parameter.
+By default, calling the command will clear the _dirty_ status from the current table. Para manter este estado intacto, passe `False` no parâmetro _reset_.
 
 Em _sheet_, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 

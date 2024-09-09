@@ -47,7 +47,7 @@ title: 図形
 [表示状態](properties_Display.md#表示状態) -
 [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) -
 [表示状態](properties_Display.md#表示状態) -
-[塗りカラー](properties_BackgroundAndBorder.md#背景色-塗りカラー) -
+[塗りカラー](properties_BackgroundAndBorder.md#背景色塗りカラー) -
 [線カラー](properties_BackgroundAndBorder.md#線カラー) -
 [線幅](properties_BackgroundAndBorder.md#線幅) -
 [点線タイプ](properties_BackgroundAndBorder.md#点線タイプ)
@@ -149,7 +149,7 @@ title: 図形
 [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) -
 [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) -
 [表示状態](properties_Display.md#表示状態) -
-[塗りカラー](properties_BackgroundAndBorder.md#背景色-塗りカラー) -
+[塗りカラー](properties_BackgroundAndBorder.md#背景色塗りカラー) -
 [線カラー](properties_BackgroundAndBorder.md#線カラー) -
 [線幅](properties_BackgroundAndBorder.md#線幅) -
 [点線タイプ](properties_BackgroundAndBorder.md#点線タイプ)

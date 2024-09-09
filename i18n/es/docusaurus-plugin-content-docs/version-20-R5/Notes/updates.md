@@ -7,7 +7,7 @@ title: Notas del lanzamiento
 
 Lea [**Novedades en 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R5.
 
-#### Destacados
+#### Lo más destacado
 
 - Nuevo [Gestor de componentes](../Project/components.md) para gestionar componentes a través de un archivo `dependencies.json`.
 - Soporte de estructuras de gestión de errores [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try).
@@ -31,7 +31,7 @@ Lea [**Novedades en 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5/), 
 
 Lea [**Novedades en 4D 20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R4/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R4.
 
-#### Destacados
+#### Lo más destacado
 
 - Soporte de [formato de cifrado ECDSA\`](../Admin/tls.md#encryption) para certificados TLS.
 - Las conexiones TLS cliente/servidor y servidor SQL ahora se [configuran dinámicamente](../Admin/tls.md#enabling-tls-with-the-other-servers) (no se requieren archivos de certificado).
@@ -58,7 +58,7 @@ Lea [**Novedades en 4D 20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R4/),
 
 Lea [**Novedades en 4D 20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-R3/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R3.
 
-#### Destacados
+#### Lo más destacado
 
 - Nueva función [`collection.multiSort`](../API/CollectionClass.md#multisort).
 - Soporte del parámetro _context_ en [`Formula from string`](../API/FunctionClass.md#formula-from-string).
@@ -88,7 +88,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 :::
 
-#### Destacados
+#### Lo más destacado
 
 - Nueva [clase WebSocket](../API/WebSocketClass.md) para crear y gestionar conexiones WebSocket cliente desde 4D.
 - Nueva capa de red QUIC [configuración de interfaz](../settings/client-server.md#network-layer).
@@ -131,7 +131,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 :::
 
-#### Destacados
+#### Lo más destacado
 
 - 4D 20.2 está certificado en macOS Sonoma (macOS 14).
 - (4D 20.1) Nueva propiedad `plugins` en el parámetro _options_ del comando [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html).
@@ -173,7 +173,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 Lee [**Novedades en 4D 19 R8**](https://blog.4d.com/en-whats-new-in-4d-19-r8/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 19 R8.
 
-#### Destacados
+#### Lo más destacado
 
 - Se pueden instalar métodos de gestión de errores para [contextos de ejecución globales y de componentes](../Concepts/error-handling.md#scope-and-components).
 - Los list boxes con fuentes de datos selección de entidades o colecciones ahora soportan la propiedad de columna [Alto de fila automática](../FormObjects/properties_CoordinatesAndSizing.md#automatic-row-height).
@@ -196,7 +196,7 @@ Lee [**Novedades en 4D 19 R8**](https://blog.4d.com/en-whats-new-in-4d-19-r8/), 
 
 Lee [**Novedades en 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-19-r7/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 19 R7.
 
-#### Destacados
+#### Lo más destacado
 
 - Los datos relacionados y los atributos calculados/alias pueden visualizarse en el [Explorador de datos](../Admin/dataExplorer#basics).
 - Nueva clase [FileHandle](../API/FileHandleClass.md) y nueva función [`.open()`](../API/FileClass.md#open) en la clase `File`.
@@ -326,7 +326,7 @@ Para obtener información detallada, consulte [esta entrada del blog](https://bl
 
 ## 4D 19 R2
 
-- A [default .gitignore file](../Preferences/general.md#create-gitignore-file) can be created with new projects
+- Se puede crear un [archivo .gitignore por defecto](../Preferences/general.md#create-gitignore-file) con nuevos proyectos
 - Nueva [API clase Blob](../API/BlobClass.md) para manejar nuevos [objetos `4D.Blob`](Concepts/dt_blob.md#blob-types)
 - compatibilidad con `no-bom` y nuevos caracteres de fin de línea por defecto en [`.setText()`](../API/FileClass.md#settext)
 
@@ -350,7 +350,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 19
 - Nuevos temas oscuros y claros por defecto en [Preferencias del editor de código](../Preferences/methods.md#theme-list).
 - [Compilación nativa](../Project/compiler.md#compiler-methods-for) para procesadores Silicon.
 - La propiedad [Cálculo de variables](../FormObjects/properties_Object.md#cálculo-de-variables) ahora es compatible con las columnas list box de la selección de entidades.
-- Nueva página [CLI]completa (../Admin/cli.md).
+- Nueva página completada [CLI](../Admin/cli.md).
 
 ### 4D 18 R6
 
@@ -363,7 +363,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 19
 
 </details>
 
-## Tabla de librerías
+## Tabla de la librería
 
 | Librería  | Versión actual                         | Actualizado en 4D    | Comentario                                                                                                                                                     |
 | --------- | -------------------------------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |

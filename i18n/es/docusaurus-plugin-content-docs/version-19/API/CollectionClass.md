@@ -182,12 +182,10 @@ Puede pasar cualquier número de valores de los siguientes tipos soportados:
 * date
 * time (almacenado como número de milisegundos - real)
 * null
-* shared object(*)
-* shared collection(*) > Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.
+* objeto compartido
+* colección compartida
 
 > Esta función modifica la colección original.
-
-(\*)Cuando un objeto o colección compartido se añade a una colección compartida, comparten el mismo *identificador de bloqueo*. Para más información sobre este punto, consulte [4D Doc Center](https://doc.4d.com).
 
 
 #### Ejemplo
@@ -528,6 +526,7 @@ Este ejemplo ilustra el uso de la opción `ck resolve pointers`:
 <!-- REF #collection.count().Syntax -->**.count**( { *propertyPath* : Text } ) : Real<!-- END REF -->
 
 
+
 <!-- REF #collection.count().Params -->
 | Parámetros   | Tipo |    | Descripción                                                      |
 | ------------ | ---- |:--:| ---------------------------------------------------------------- |
@@ -713,7 +712,7 @@ La función `.equal()` <!-- REF #collection.equal().Summary -->compara collectio
 :::note Notas
 
 - La función `.equal()` solo comprueba la igualdad para los elementos de tipo cadena, booleano, número y null en las colecciones. No verifica la igualdad para objetos nativos.
-- Elements with **null** values are not equal to Undefined elements.
+- Los elementos con valores **null** no son iguales a los elementos Undefined.
 
 :::
 

@@ -49,7 +49,7 @@ Si modifica su proyecto en modo interpretado, debe recompilarlo para que sus mod
 
 ## Características de la ventana del compilador
 
-In addition to the [**Compile** button](#compile), the Compiler window provides additional features that are useful during the project development phase.
+Además del [botón **Compilar**](#compile), la ventana Compilador ofrece otras funcionalidades útiles durante la fase de desarrollo del proyecto.
 
 ### Verificar la sintaxis
 
@@ -59,7 +59,7 @@ El control sintáctico también puede lanzarse directamente con el comando **Ver
 
 ### Declarar tipos
 
-El botón **Declarar Tipos** crea o actualiza los métodos del compilador. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters declared outside prototypes](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). Estos métodos, cuando existen, son utilizados directamente por el compilador durante la compilación del código, lo que da lugar a tiempos de compilación más rápidos.
+El botón **Declarar Tipos** crea o actualiza los métodos del compilador. Los métodos de compilación son métodos proyecto que agrupan todas las declaraciones de tipo variable y array (proceso e interproceso), así como los [parámetros método declarados fuera de prototipos](. /Concepts/parameters.md#method-parameters-declared-outside-prototypes). Estos métodos, cuando existen, son utilizados directamente por el compilador durante la compilación del código, lo que da lugar a tiempos de compilación más rápidos.
 
 El nombre de estos métodos debe comenzar por `Compiler_`. Puede definir el nombre por defecto de cada uno de los 5 métodos del compilador en [la ventana de los parámetros del compilador](#compiler-methods-for). Los métodos de compilación que son generados y mantenidos por 4D tienen automáticamente el atributo `Invisible`:
 
@@ -87,7 +87,7 @@ Al hacer doble clic en un aviso se abre el método correspondiente.
 
 ## Parámetros del compilador
 
-The "Compiler" tab of the Settings dialog box lets you set parameters related to project compilation. Puede abrir directamente esta página desde la [ventana del compilador](#compiler-window) haciendo clic en el botón **Parámetros del compilador**:
+La pestaña "Compilador" de la caja de diálogo Propiedades le permite definir los parámetros relacionados con la compilación del proyecto. Puede abrir directamente esta página desde la [ventana del compilador](#compiler-window) haciendo clic en el botón **Parámetros del compilador**:
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -166,15 +166,15 @@ Puede renombrar cada uno de estos métodos en las áreas correspondientes, pero 
 
 Las advertencias son mensajes específicos generados por el compilador cuando verifica la sintaxis. Estos mensajes están destinados a llamar su atención sobre las declaraciones que podrían llevar a errores de ejecución. No impiden la compilación.
 
-Dependiendo de las circunstancias y del estilo de programación utilizado, las advertencias pueden ser más o menos relevantes. You can enable or disable warnings, in the compiler dialog, and in the code editors (4D code editor and VS Code), globally through the [warnings tab](#warnings-tab) or locally using [`//%W`](#disabling-and-enabling-warnings-locally).
+Dependiendo de las circunstancias y del estilo de programación utilizado, las advertencias pueden ser más o menos relevantes. Puede activar o desactivar las advertencias, en el diálogo del compilador, y en los editores de código (editor de código 4D y VS Code), de forma global a través de la [pestaña advertencias](#pestaña-advertencias) o localmente usando [`//%W`](#desactivar-y-activar-las-advertencias-localmente).
 
-### Warnings tab
+### Pestaña Advertencias
 
 ![](../assets/en/Project/warnings-tab.png)
 
 Esta pestaña le permite definir qué advertencias deben mostrarse globalmente. De la lista de todas las advertencias posibles con sus tipos, su código y su etiqueta localizada, ordenadas por código de advertencia.
 
-To reduce the list, you can search words by warning labels and codes using the **Search in codes and labels** textbox or the magnifying glass icon on the left.
+Para reducir la lista, puede buscar palabras por etiquetas de advertencia y códigos utilizandola caja de texto **Buscar en códigos y etiquetas** o el icono de la lupa de la izquierda.
 
 Por defecto, todos los tipos de advertencia están marcados y activados.
 
@@ -182,7 +182,7 @@ Cuando se modifica el estado de visualización de una advertencia, la informaci�
 
 El botón **Restablecer parámetros de fábrica** define todas las casillas de verificación de estado de visualización de advertencias en los valores predeterminados y borra el archivo "warnings.json".
 
-### Disabling and enabling warnings locally
+### Desactivar y activar advertencias localmente
 
 Puede controlar las advertencias en partes específicas de su código utilizando comentarios especiales para desactivarlas o activarlas.
 
@@ -225,7 +225,7 @@ _1: Redefinición de la variable $a (550.10)_
 
 :::note
 
-The special warnings comments have priority over the warnings display settings set in the warning tab.
+Los comentarios de advertencias especiales tienen prioridad sobre la configuración de la pantalla de advertencias definida en la pestaña de advertencias.
 
 :::
 
@@ -233,7 +233,7 @@ The special warnings comments have priority over the warnings display settings s
 
 ### Archivo Symbol
 
-If you check the [**Generate the symbol file**](#generate-the-symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](Project/architecture.md#logs) of the project during compilation. Está dividido en varias partes:
+Si activa la opción [**Generar el archivo de símbolos**](#generate-the-symbol-file) en la configuración del compilador, se creará un archivo de símbolos llamado `ProjectName_symbols.txt` en la [carpeta Logs](Project/architecture.md#logs) del proyecto durante la compilación. Está dividido en varias partes:
 
 #### Lista de las variables proceso e interproceso
 

@@ -5,24 +5,13 @@ title: CryptoKey
 
 The `CryptoKey` class in the 4D language encapsulates an asymmetric encryption key pair.
 
-This class is available from the `4D` class store.
+Essa classe está disponível no "class store" de `4D`.
 
-### Exemplo
+:::info Veja também
 
-O código abaixo de exemplo firma e verifica uma mensagem utilizando um novo par de chaves ECDSA, por exemplo para criar um token web JSON ES256.
+For a comprehensive overview of this class, please refer to the [**CryptoKey: encrypt, decrypt, sign, and verify!**](https://blog.4d.com/cryptokey-encrypt-decrypt-sign-and-verify/) blog post.
 
-```4d
- // Generate a new ECDSA key pair
-$key:=4D. CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
-
-  // Get signature as base64
-$message:="hello world"
-$signature:=$key.sign($message;New object("hash";"SHA256"))
-
-  // Verify signature
-$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
-ASSERT($status.success)
-```
+:::
 
 ### Resumo
 
@@ -53,14 +42,14 @@ ASSERT($status.success)
 
 <!-- REF #4D.CryptoKey.new().Params -->
 
-| Parâmetro | Tipo                          |    | Descrição                                          |
-| --------- | ----------------------------- | -- | -------------------------------------------------- |
-| settings  | Object                        | -> | Parâmetros para gerar ou carregar um par de chaves |
-| result    | 4D. CryptoKey | <- | Objeto que contém um par de chaves de encriptação  |
+| Parâmetro | Tipo                         |    | Descrição                                         |
+| --------- | ---------------------------- | -- | ------------------------------------------------- |
+| settings  | Object                       | -> | Settings to generate or load a key pair           |
+| result    | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação |
 
 <!-- END REF -->
 
-The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new `4D.CryptoKey` object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. Permite gerar uma nova chave RSA o ECDSA, ou carregar um par de chaves existente desde uma definição PEM.
+The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new `4D.CryptoKey` object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
 
 #### *parâmetros*
 
@@ -73,7 +62,67 @@ The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->create
 
 #### *CryptoKey*
 
-The returned `CryptoKey` object encapsulates an encryption key pair. É um objeto compartido e, portanto, pode ser utilizado por vários processos 4D simultaneamente.
+O objeto `CryptoKey` devolvido encapsula um par de chaves de cifrado. It is a shared object and can therefore be used by multiple 4D processes simultaneously.
+
+#### Exemplo 1
+
+A message is signed by a private key and the signature is verified by the corresponding public key. The following code signs and verifies a simple message signature.
+
+- Bob's side:
+
+```4d
+// Create the message
+$message:="hello world"
+Folder(fk desktop folder).file("message.txt").setText($message)
+
+// Create a key
+$type:=New object("type";"RSA")
+$key:=4D.CryptoKey.new($type)
+
+// Get the public key and save it
+Folder(fk desktop folder).file("public.pem").setText($key.getPublicKey())
+
+// Get signature as base64 and save it
+Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
+
+/*Bob sends the message, the public key and the signature to Alice*/
+```
+
+- Alice's side:
+
+```4d
+// Get message, public key & signature
+$message:=Folder(fk desktop folder).file("message.txt").getText()
+$publicKey:=Folder(fk desktop folder).file("public.pem").getText()
+$signature:=Folder(fk desktop folder).file("signature").getText()
+
+// Create a key
+$type:=New object("type";"PEM";"pem";$publicKey)
+$key:=4D.CryptoKey.new($type)
+
+// Verify signature
+If ($key.verify($message;$signature;$type).success)
+// The signature is valid
+
+End if
+```
+
+#### Exemplo 2
+
+O código abaixo de exemplo firma e verifica uma mensagem utilizando um novo par de chaves ECDSA, por exemplo para criar um token web JSON ES256.
+
+```4d
+ // Generate a new ECDSA key pair
+$key:=4D. CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
+
+  // Get signature as base64
+$message:="hello world"
+$signature:=$key.sign($message;New object("hash";"SHA256"))
+
+  // Verify signature
+$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
+ASSERT($status.success)
+```
 
 <!-- REF CryptoKey.curve -->
 
@@ -109,11 +158,11 @@ Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised
 
 <!-- REF #CryptoKey.decrypt().Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                                                                     |
-| ---------- | ------ | -- | --------------------------------------------------------------------------------------------- |
-| message    | Text   | -> | Message string to be decoded using `options.encodingEncrypted` and decrypted. |
-| options    | Object | -> | Opções de codificação                                                                         |
-| Resultados | Object | <- | Estado                                                                                        |
+| Parâmetro  | Tipo   |    | Descrição                                                                                                     |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------------- |
+| message    | Text   | -> | String de mensagens a ser decodificada usando `options.encodingEncrypted` e descriptografada. |
+| options    | Object | -> | Opções de codificação                                                                                         |
+| Resultados | Object | <- | Estado                                                                                                        |
 
 <!-- END REF -->
 
@@ -133,11 +182,11 @@ The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://too
 
 The function returns a status object with `success` property set to `true` if the *message* could be successfully decrypted.
 
-| Propriedade | Tipo       | Descrição                                                           |
-| ----------- | ---------- | ------------------------------------------------------------------- |
-| success     | boolean    | True se a mensagem tiver sido decifrada com êxito                   |
-| result      | text       | Message decrypted and decoded using the `options.encodingDecrypted` |
-| errors      | collection | If `success` is `false`, may contain a collection of errors         |
+| Propriedade | Tipo       | Descrição                                                                |
+| ----------- | ---------- | ------------------------------------------------------------------------ |
+| success     | boolean    | True se a mensagem tiver sido decifrada com êxito                        |
+| result      | text       | Mensagem decifrado e decodificado utilizando `options.encodingDecrypted` |
+| errors      | collection | Se `success` for `false`, pode conter uma coleção de erros               |
 
 In case the *message* couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
 
@@ -159,11 +208,11 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 
 <!-- REF #CryptoKey.encrypt().Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                                                                     |
-| ---------- | ------ | -- | --------------------------------------------------------------------------------------------- |
-| message    | Text   | -> | Message string to be encoded using `options.encodingDecrypted` and encrypted. |
-| options    | Object | -> | Opções de decodificação                                                                       |
-| Resultados | Text   | <- | Message encrypted and encoded using the `options.encodingEncrypted`                           |
+| Parâmetro  | Tipo   |    | Descrição                                                                                                    |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------------ |
+| message    | Text   | -> | String de mensagens a ser codificada utilizando `options.encodingDecrypted` e criptografada. |
+| options    | Object | -> | Opções de decodificação                                                                                      |
+| Resultados | Text   | <- | Mensagem criptografada e codificada utilizando `options.encodingEncrypted`                                   |
 
 <!-- END REF -->
 
@@ -299,7 +348,7 @@ A `CryptoKey` deve conter uma chave **privada** válida.
 | ----------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash              | text    | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512". Quando utilizar para produzir um JWT, o tamanho de hash deve coincidir com o tamanho do algoritmo PS@, ES@, RS@ ou PS@ |
 | encodingEncrypted | text    | Codificação utilizada para converter a mensagem binária criptografada na string resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                                                                                 |
-| pss               | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Pass `true` when producing a JWT for PS@ algorithm                                                                                           |
+| pss               | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passe `true` ao produzir um JWT para o algoritmo PS@                                                                                         |
 | encoding          | text    | Representation of provided signature. Possible values are "Base64" or "Base64URL". Por padrão é "Base64".                                                                                                                                             |
 
 #### *Resultado*
@@ -344,7 +393,7 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 
 Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "ECDSA", "PEM" <!-- END REF -->.
 
-- "RSA": an RSA key pair, using `settings.size` as [.size](#size).
+- "RSA": um par de chaves RSA, usando `settings.size` como [.size](#size).
 - "ECDSA": an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). Lembre que chaves ECDSA não podem ser usadas para a criptografia mas só pela assinatura.
 - "PEM": a key pair definition in PEM format, using `settings.pem` as [.pem](#pem).
 
@@ -382,7 +431,7 @@ A `CryptoKey` deve conter uma chave **pública** válida.
 | Propriedade | Tipo    | Descrição                                                                                                                                                                                                                                                                                             |
 | ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash        | text    | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512". Quando utilizar para produzir um JWT, o tamanho de hash deve coincidir com o tamanho do algoritmo PS@, ES@, RS@ ou PS@ |
-| pss         | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Pass `true` when verifying a JWT for PS@ algorithm                                                                                           |
+| pss         | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passa `true` ao verficar um JWT para o algoritmo PS@                                                                                         |
 | encoding    | text    | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                                                                                |
 
 #### *Resultado*
@@ -391,9 +440,9 @@ The function returns a status object with `success` property set to `true` if `m
 
 In case the signature couldn't be verified because it was not signed with the same *message*, key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
 
-| Propriedade | Tipo       | Descrição                                                   |
-| ----------- | ---------- | ----------------------------------------------------------- |
-| success     | boolean    | True se a assinatura corresponder com a mensagem            |
-| errors      | collection | If `success` is `false`, may contain a collection of errors |
+| Propriedade | Tipo       | Descrição                                                  |
+| ----------- | ---------- | ---------------------------------------------------------- |
+| success     | boolean    | True se a assinatura corresponder com a mensagem           |
+| errors      | collection | Se `success` for `false`, pode conter uma coleção de erros |
 
 <!-- END REF -->

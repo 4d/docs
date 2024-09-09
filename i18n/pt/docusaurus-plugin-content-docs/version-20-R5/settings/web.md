@@ -298,4 +298,4 @@ Essa opção só aparece se a licença do Qodly Studio estiver ativada.
 
 :::
 
-Esta opción permite al usuario acceder a [Qodly Studio](XXX) para el proyecto actual. Tenga en cuenta que el acceso global debe permitirse al [nivel de la aplicación](../Admin/webAdmin.md).
+Essa opção permite o acesso do usuário ao [Qodly Studio](../WebServer/qodly-studio.md) para o projeto atual. Tenga en cuenta que el acceso global debe permitirse al [nivel de la aplicación](../Admin/webAdmin.md).

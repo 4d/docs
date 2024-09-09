@@ -3,9 +3,9 @@ id: components
 title: Componentes
 ---
 
-Un componente 4D es un conjunto de código y/o de formularios 4D que representan una o varias funcionalidades que pueden añadirse y utilizarse en sus proyectos. For example, the [4D SVG](https://github.com/4d/4D-SVG) component adds advanced commands and an integrated rendering engine that can be used to display SVG files.
+Un componente 4D es un conjunto de código y/o de formularios 4D que representan una o varias funcionalidades que pueden añadirse y utilizarse en sus proyectos. Por ejemplo, el componente [4D SVG](https://github.com/4d/4D-SVG) añade comandos avanzados y un motor de renderizado integrado que puede utilizarse para visualizar archivos SVG.
 
-You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component\&type=Repositories).
+Puede [desarrollar](../Extensions/develop-components.md) y [crear](../Desktop/building.md) sus propios componentes 4D, o descargar componentes públicos compartidos por la comunidad 4D que [se pueden encontrar en GitHub](https://github.com/search?q=4d-component\&type=Repositories).
 
 Al desarrollar en 4D, los archivos de los componentes pueden almacenarse de forma transparente en su ordenador o en un repositorio Github.
 
@@ -302,12 +302,12 @@ El panel Dependencias enumera todas las dependencias del proyecto, sea cual sea 
 
 Las siguientes opciones de origen son posibles:
 
-| Etiqueta de origen                | Descripción                                                                     |
-| --------------------------------- | ------------------------------------------------------------------------------- |
-| Componente 4D                     | Built-in 4D component, stored in the `Components` folder of the 4D application  |
-| dependencies.json | Componente declarado en el archivo [`dependencies.json`](#dependenciesjson)     |
-| Entorno                           | Componente declarado en el archivo [`environnement4d.json`](#environment4djson) |
-| Componente del proyecto           | Componente ubicado en la carpeta [`Components`](architecture.md#components)     |
+| Etiqueta de origen                | Descripción                                                                        |
+| --------------------------------- | ---------------------------------------------------------------------------------- |
+| Componente 4D                     | Componente 4D integrado, almacenado en la carpeta `Components` de la aplicación 4D |
+| dependencies.json | Componente declarado en el archivo [`dependencies.json`](#dependenciesjson)        |
+| Entorno                           | Componente declarado en el archivo [`environnement4d.json`](#environment4djson)    |
+| Componente del proyecto           | Componente ubicado en la carpeta [`Components`](architecture.md#components)        |
 
 **Clic derecho** en una línea de dependencia y selecciona **Mostrar en el disco** para revelar la ubicación de una dependencia:
 

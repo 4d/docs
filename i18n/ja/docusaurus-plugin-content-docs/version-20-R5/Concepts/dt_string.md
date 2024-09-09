@@ -37,27 +37,24 @@ title: 文字列
 
 ## 文字列演算子
 
-| 演算                         | シンタックス           | 戻り値     | 式                                         | 値                            |
-| -------------------------- | ---------------- | ------- | ----------------------------------------- | ---------------------------- |
-| 連結 (結合) | String + String  | String  | "abc" + "def"                             | "abcdef"                     |
-| 繰り返し                       | String \* Number | String  | "ab" \* 3                                 | "ababab"                     |
-| 等しい                        | String = String  | Boolean | "abc" = "abc"                             | true                         |
-|                            |                  |         | "abc" = "abd"                             | false                        |
-| 異なる                        | String # String  | Boolean | "abc" # "abd"                             | true                         |
-|                            |                  |         | "abc" # "abc"                             | false                        |
-| 大きい                        | 文字列 > 文字列        | Boolean | "abd" > "abc"                             | true                         |
-|                            |                  |         | "abc" > "abc"                             | false                        |
-| 小さい                        | 文字列 < 文字列        | Boolean | "abc" < "abd"                             | true                         |
-|                            |                  |         | "abc" < "abc"                             | false                        |
-| 以上                         | 文字列 >= 文字列       | Boolean | "abd" >= "abc"                            | true                         |
-|                            |                  |         | "abc" >= "abd"                            | false                        |
-| 以下                         | String <= String | Boolean | "abc" <= "abd"                            | true                         |
-|                            |                  |         | "abd" <= "abc"                            | false                        |
-| キーワードを含む                   | String % String  | Boolean | "Alpha Bravo" % "Bravo"                   | true                         |
-|                            |                  |         | "Alpha Bravo" % "ravo"                    | false                        |
-|                            | Picture % String | Boolean | Picture_expr % "Mer" | true (\*) |
-
-(\*) キーワード "Mer" がピクチャー式 (フィールドまたは変数) に格納されたピクチャーの IPTC/Keywords メタデータに含まれている場合。
+| 演算                         | シンタックス           | 戻り値     | 式                       | 値        |
+| -------------------------- | ---------------- | ------- | ----------------------- | -------- |
+| 連結 (結合) | String + String  | String  | "abc" + "def"           | "abcdef" |
+| 繰り返し                       | String \* Number | String  | "ab" \* 3               | "ababab" |
+| 等しい                        | String = String  | Boolean | "abc" = "abc"           | true     |
+|                            |                  |         | "abc" = "abd"           | false    |
+| 異なる                        | String # String  | Boolean | "abc" # "abd"           | true     |
+|                            |                  |         | "abc" # "abc"           | false    |
+| 大きい                        | 文字列 > 文字列        | Boolean | "abd" > "abc"           | true     |
+|                            |                  |         | "abc" > "abc"           | false    |
+| 小さい                        | 文字列 < 文字列        | Boolean | "abc" < "abd"           | true     |
+|                            |                  |         | "abc" < "abc"           | false    |
+| 以上                         | 文字列 >= 文字列       | Boolean | "abd" >= "abc"          | true     |
+|                            |                  |         | "abc" >= "abd"          | false    |
+| 以下                         | String <= String | Boolean | "abc" <= "abd"          | true     |
+|                            |                  |         | "abd" <= "abc"          | false    |
+| キーワードを含む                   | String % String  | Boolean | "Alpha Bravo" % "Bravo" | true     |
+|                            |                  |         | "Alpha Bravo" % "ravo"  | false    |
 
 ## 文字列比較の詳細
 

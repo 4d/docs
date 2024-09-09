@@ -11,7 +11,7 @@ When developing in 4D, the component files can be transparently stored in your c
 
 ## Componentes interpretados e compilados
 
-Components can be interpreted or [compiled](../Desktop/building.md). The package folder of a component can contain:
+Components can be interpreted or [compiled](../Desktop/building.md). A pasta do pacote de um componente pode conter:
 
 - either a Project folder (interpreted component)
 - ou um arquivo .4DZ (componente compilado)
@@ -116,7 +116,7 @@ If you do not want to benefit from the **dependencies.json** architecture, you c
 
 :::
 
-#### Customizing component paths
+#### Personalizando caminhos dos componentes
 
 If you want to customize the location of local components, you declare the paths for the dependencies that are not stored at the same level as the project folder in the [**environment4d.json**](#environment4djson) file.
 
@@ -154,7 +154,7 @@ Regarding components stored on GitHub, both [**dependencies.json**](#dependencie
 
 To be able to directly reference and use a 4D component stored on GitHub, you need to configure the GitHub component's repository:
 
-- Compress the component files in ZIP format.
+- Compacte os arquivos de componentes no formato ZIP.
 - Name this archive with the same name as the GitHub repository.
 - Integrate the archive into a [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) of the repository.
 
@@ -219,7 +219,7 @@ When you create a release in GitHub, you specify a **tag** and a **version**.
 }
 ```
 
-The version is used to define which versions can be used. A [standard semantic version](https://regex101.com/r/Ly7O1x/3/) is used. A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. The `*` can be used as a placeholder for all versions. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
+The version is used to define which versions can be used. A [standard semantic version](https://regex101.com/r/Ly7O1x/3/) is used. A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. O `*` pode ser usado como um espaço reservado para todas as versões. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
 
 Eis alguns exemplos:
 
@@ -229,13 +229,13 @@ Eis alguns exemplos:
 - "1.2.\*": todos os patches da versão menor 1.2.
 - "^1.2.3" or ">=1.2.3": the latest version 1, starting with the 1.2.3 version.
 - "~1.2.3" or ">1.2.3": the latest major version 1, starting with the version just after the 1.2.3.
-- "<=1.2.3": the latest version until the 1.2.3 one.
+- "<=1.2.3": a versão mais recente até a 1.2.3.
 - "1.0.0 – 1.2.3" or ">=1.0.0 <=1.2.3": version between 1.0.0 and 1.2.3.
-- "`<1.2.3 || >=2`": version that is not between 1.2.3 and 2.0.0.
+- "`<1.2.3 || >=2`": versão que não está entre 1.2.3 e 2.0.0.
 
 If you do not specify a tag or a version, 4D automatically retrieves the "latest" version.
 
-#### Private repositories
+#### Repositórios privados
 
 If you want to integrate a component located in a private repository, you need to tell 4D to use a connection token to access it.
 
@@ -267,10 +267,10 @@ Then insert the "github" key in your [**environment4d.json**](#environment4djson
 
 Referenced GitHub components are downloaded in a local cache folder then loaded in your environment. The local cache folder is stored at the following location:
 
-- on macOs: `$HOME/Library/Caches/<app name>/Dependencies`
+- en macOs: `$HOME/Library/Caches/<app name>/Dependencies`
 - no Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
 
-...where `<app name>` can be "4D", "4D Server", or "tool4D".
+...onde `<app name>` pode ser "4D", "4D Server" ou "tool4D".
 
 #### dependency-lock.json
 
@@ -278,7 +278,7 @@ A `dependency-lock.json` file is created in the [`userPreferences` folder](archi
 
 This file logs information such as the state of dependencies, paths, urls, loading errors, as well as other information. It could be useful for component loading management or troubleshooting.
 
-## Monitoring Project Dependencies
+## Monitoramento das dependências do projeto
 
 In an opened project, you can get information about dependencies and their current loading status in the **Dependencies** panel.
 
@@ -302,12 +302,12 @@ The Dependencies panel lists all project dependencies, whatever their origin, i.
 
 As seguintes origens são possíveis:
 
-| Origin tag                        | Descrição                                                                      |
-| --------------------------------- | ------------------------------------------------------------------------------ |
-| Componente 4D                     | Built-in 4D component, stored in the `Components` folder of the 4D application |
-| dependencies.json | Component declared in the [`dependencies.json`](#dependenciesjson) file        |
-| Environment                       | Component declared in the [`environnement4d.json`](#environment4djson) file    |
-| Componente do projeto             | Component located in the [`Components`](architecture.md#components) folder     |
+| Origin tag                        | Descrição                                                                    |
+| --------------------------------- | ---------------------------------------------------------------------------- |
+| Componente 4D                     | Componente 4D incorporado, armazenado na pasta `Components` da aplicação 4D  |
+| dependencies.json | Component declared in the [`dependencies.json`](#dependenciesjson) file      |
+| Environment                       | Componente declarado no arquivo [`environnement4d.json`](#environment4djson) |
+| Componente do projeto             | Componente localizado na pasta [`Components`](architecture.md#components)    |
 
 **Right-click** in a dependency line and select **Show on disk** to reveal the location of a dependency:
 

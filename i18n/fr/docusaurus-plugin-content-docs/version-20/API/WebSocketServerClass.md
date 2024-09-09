@@ -3,6 +3,9 @@ id: WebSocketServerClass
 title: WebSocketServer
 ---
 
+
+La classe `WebSocketServer` vous permet de créer et configurer un serveur WebSocket en 4D. Une fois le serveur WebSocket 4D actif, vous pouvez ouvrir et utiliser les connexions WebSocket entre 4D et les clients en utilisant la classe [`WebSocketConnection`](WebSocketConnectionClass.md).
+
 <details><summary>Historique</summary>
 
 | Release | Modifications |
@@ -11,8 +14,6 @@ title: WebSocketServer
 
 </details>
 
-
-La classe `WebSocketServer` vous permet de créer et configurer un serveur WebSocket en 4D. Une fois le serveur WebSocket 4D actif, vous pouvez ouvrir et utiliser les connexions WebSocket entre 4D et les clients en utilisant la classe [`WebSocketConnection`](WebSocketConnectionClass.md).
 
 :::note À propos des serveurs WebSocket
 
@@ -68,16 +69,16 @@ CALL WORKER("WebSocketServer"; Formula(wss := 4D.WebSocketServer.new($handler)))
 Function onConnection($wss: Object; $event: Object): Object
     // retourne une instance de la classe utilisateur
     // qui traitera les messages
-    return cs.myConnectionHandler.new() 
+    return cs.myConnectionHandler.new()
 ```
 
 3. Définissez la classe utilisateur `myConnectionHandler` contenant la ou les fonction(s) de callback utilisée(s) pour gérer les messages :
 
 ```4d
-// Classe myConnectionHandler
+// myConnectionHandler class
 
 Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
-    // renvoie le message en majuscules
+    //resends the message in uppercase
     $ws.send(Uppercase($message.data))
 
 ```
@@ -92,14 +93,14 @@ Voir [cet article de blog](https://blog.4d.com/websocket-server/) pour un exempl
 
 Les objets WebSocketServer offrent les propriétés et fonctions suivantes :
 
-|                                                                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #WebSocketServerClass.connections.Syntax -->](#connections)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.connections.Summary -->|
-| [<!-- INCLUDE #WebSocketServerClass.dataType.Syntax -->](#dataType)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.dataType.Summary -->|
-| [<!-- INCLUDE #WebSocketServerClass.handler.Syntax -->](#handler)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.handler.Summary -->|
-| [<!-- INCLUDE #WebSocketServerClass.path.Syntax -->](#path)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.path.Summary -->|
-| [<!-- INCLUDE #WebSocketServerClass.terminate().Syntax -->](#terminate)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.terminate().Summary -->|
-| [<!-- INCLUDE #WebSocketServerClass.terminated.Syntax -->](#terminated)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.terminated.Summary -->|
+|                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [<!-- INCLUDE #WebSocketServerClass.connections.Syntax -->](#connections)<br/><!-- INCLUDE #WebSocketServerClass.connections.Summary -->|
+| [<!-- INCLUDE #WebSocketServerClass.dataType.Syntax -->](#dataType)<br/><!-- INCLUDE #WebSocketServerClass.dataType.Summary -->|
+| [<!-- INCLUDE #WebSocketServerClass.handler.Syntax -->](#handler)<br/><!-- INCLUDE #WebSocketServerClass.handler.Summary -->|
+| [<!-- INCLUDE #WebSocketServerClass.path.Syntax -->](#path)<br/><!-- INCLUDE #WebSocketServerClass.path.Summary -->|
+| [<!-- INCLUDE #WebSocketServerClass.terminate().Syntax -->](#terminate)<br/><!-- INCLUDE #WebSocketServerClass.terminate().Summary -->|
+| [<!-- INCLUDE #WebSocketServerClass.terminated.Syntax -->](#terminated)<br/><!-- INCLUDE #WebSocketServerClass.terminated.Summary -->|
 
 
 
@@ -114,10 +115,8 @@ Les objets WebSocketServer offrent les propriétés et fonctions suivantes :
 | ----------------------------------- | ------------------ |:--:| --------------------------------------------------------------------------- |
 | [WSSHandler](#wsshandler-parameter) | Object             | -> | Objet de la classe utilisateur déclarant les callbacks du serveur WebSocket |
 | [options](#options-parameter)       | Object             | -> | Paramètres de configuration du WebSocket                                    |
-| Résultat                            | 4D.WebSocketServer | <- | Nouvel objet WebSocketServer|<!-- END REF -->
-
-
-|
+| Résultat                            | 4D.WebSocketServer | <- | Nouvel objet WebSocketServer                                                |
+<!-- END REF -->
 
 
 The `4D.WebSocketServer.new()` function <!-- REF #4D.WebSocketServer.new().Summary -->creates and starts a WebSocket server that will use the specified *WSSHandler* callbacks and (optionally) *options*, and returns a `4D.WebSocketServer` object<!-- END REF -->.
@@ -191,21 +190,21 @@ Cette callback est appelée lorsque le handshake est terminé. It must be called
 This example of a basic chat feature illustrates how to handle WebSocket server connections in a *WSSHandler* class.
 
 ```4d
-//myWSServerHandler class 
+//myWSServerHandler class
 
 Function onConnection($wss : Object; $event : Object) : Object
 
     If (VerifyAddress($event.request.remoteAddress))
         // The VerifyAddress method validates the client address
-        // The returned WSConnectionHandler object will be used 
+        // The returned WSConnectionHandler object will be used
         // by 4D to instantiate the 4D.WebSocketConnection object
         // related to this connection
         return cs.myConnectionHandler.new()   
         // See connectionHandler object
-    Else 
+    Else
         // The connection is cancelled      
-        return Null 
-    End if 
+        return Null
+    End if
 
 Function onOpen($wss : Object; $event : Object)
 LogFile("*** Server started")
@@ -296,12 +295,12 @@ This example of a basic chat feature illustrates how to handle messages in a *co
 // myConnectionHandler Class
 
 Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
-    // Resend the message to all chat clients   
+    // Resend the message to all chat clients
     This.broadcast($ws;$message.data)
 
 Function onOpen($ws : 4D.WebSocketConnection; $message : Object)
     // Send a message to new connected users
-    $ws.send("Welcome on the chat!")    
+    $ws.send("Welcome on the chat!")
     // Send "New client connected" message to all other chat clients
     This.broadcast($ws;"New client connected")
 
@@ -316,8 +315,8 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
         // Check that the id is not the current connection
         If ($client.id#$ws.id)
             $client.send($message)
-        End if 
-    End for each 
+        End if
+    End for each
 
 ```
 
@@ -388,21 +387,28 @@ Cette propriété est en lecture seule.
 <!-- REF #WebSocketServerClass.terminate().Desc -->
 ## .terminate()
 
-<!-- REF #WebSocketServerClass.terminate().Syntax -->**.terminate()**<!-- END REF -->
+<!-- REF #WebSocketServerClass.terminate().Syntax -->**.terminate**()<br/>**.terminate**( *timeout* : Integer )<!-- END REF -->
 
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |::| ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-
-|
+| Paramètres | Type    |    | Description                                                     |
+| ---------- | ------- |:--:| --------------------------------------------------------------- |
+| timeout    | Integer | -> | Waiting time in seconds before terminating the WebSocket server |
+<!-- END REF -->
 
 
 #### Description
 
-La fonction `.terminate()` <!-- REF #WebSocketServerClass.terminate().Summary -->closes the WebSocket server<!-- END REF -->. 
+La fonction `.terminate()` <!-- REF #WebSocketServerClass.terminate().Summary -->closes the WebSocket server<!-- END REF -->.
+
+By default, if no *timeout* value is set, the function initializes close handshake and waits to receive close frame from the peer, after that sending FIN packet in attempt to perform a clean socket close. When answer received, the socket is destroyed.
+
+If a *timeout* value is set:
+- when the waiting time is reached, forcibly destroys the socket.
+- if *timeout* = 0, forcibly destroys the socket without closing frames or fin packets exchange, and does it instantly without waiting time.
+
+
+
 
 <!-- END REF -->
 
@@ -417,4 +423,3 @@ La propriété `.terminated` contient <!-- REF #WebSocketServerClass.terminated.
 
 Cette propriété est en lecture seule.
 <!-- END REF -->
-

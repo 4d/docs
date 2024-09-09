@@ -7,7 +7,7 @@ title: Text
 
 ## Autorizar selector fuente/color
 
-When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) and [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) commands can be called to display the system font and color picker windows. A través de estas ventanas, los usuarios pueden cambiar la fuente o el color de un objeto formulario que tenga el foco directamente haciendo clic. Cuando esta propiedad está desactivada (por defecto), los comandos del selector abierto no tienen efecto.
+Cuando esta propiedad está activada, los comandos [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) y [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) pueden ser invocados para mostrar las ventanas de selección de fuente y color del sistema. A través de estas ventanas, los usuarios pueden cambiar la fuente o el color de un objeto formulario que tenga el foco directamente haciendo clic. Cuando esta propiedad está desactivada (por defecto), los comandos del selector abierto no tienen efecto.
 
 #### Gramática JSON
 
@@ -25,7 +25,7 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 Ajusta el texto seleccionado para que aparezca más oscuro y pesado.
 
-You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
+Puede definir esta propiedad utilizando el comando [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
 
 > Esto es texto normal.<br/>
 > **Esto es texto en negrita.**
@@ -165,7 +165,7 @@ El color puede ser especificado por:
 - un valor HEX - como "# ff0000"
 - un valor RVB - como "rgb (255,0,0)"
 
-You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
+También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html).
 
 #### Gramática JSON
 
@@ -310,20 +310,20 @@ La propiedad especial "cell" permite aplicar un conjunto de propiedades a una so
 |                     | *columnName* |                | object | *columnName* es el nombre del objeto de la columna del list box                                                                                                                                                                                                                                                     |
 |                     |              | *propertyName* | string | las propiedades "stroke", "fill", "fontStyle", "fontWeight" o "textDecoration" (ver arriba). **Nota**: las propiedades "no seleccionable" y "desactivada" sólo pueden definirse a nivel de la línea. Se ignoran si se pasan en el objeto "celda" |
 
-> Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
+> Los ajustes de estilo hechos con esta propiedad son ignorados si otros ajustes de estilo ya están definidos a través de expresiones (\*por ejemplo, [Expresión de estilo](#style-expression), [Expresión de color de fuente](#font-color-expression), [Expresión de color de fondo](#background-color-expression)).
 
 **Ejemplos**
 
 En un método proyecto *Color*, escriba el siguiente código:
 
 ```4d
-//Color method
-//Sets font color for certain rows and background color for Col2 and Col3 columns
+//Método Color
+//Define el color de la fuente para ciertas líneas y el color de fondo para las columnas Col2 y Col3
 Form.meta:=New object
-If(This.ID>5) //ID is an attribute of collection objects/entities
+If(This.ID<5) //ID es un atributo de los objetos/entidades de la colección
   Form.meta.stroke:="purple"
   Form.meta.cell:=New object("Col2";New object("fill";"black");\
-  	"Col3";New object("fill";"red"))
+    "Col3";New object("fill";"red"))
 Else
   Form.meta.stroke:="orange"
 End if
@@ -332,12 +332,12 @@ End if
 **Buenas prácticas:** por razones de optimización, normalmente se recomienda crear el objeto `meta.cell` una vez en el método del formulario:
 
 ```4d
-  //form method
+  //método formulario
  Case of
     :(Form event code=On Load)
        Form.colStyle:=New object("Col2";New object("fill";"black");\
        	"Col3";New object("fill";"red"))  
- // you can also define other style sets  
+        // también puede definir otros conjuntos de estilos  
        Form.colStyle2:=New object("Col2";New object("fill";"green");\
        	"Col3";New object("fontWeight";"bold"))  
  End case
@@ -346,11 +346,11 @@ End if
 Entonces, el método *Color* contendría:
 
 ```4d
-  //Color method
+  //Método Color
  ...
  If(This.ID>5)
     Form.meta.stroke:="purple"
-    Form.meta.cell:=Form.colStyle //reuse the same object for better performance
+    Form.meta.cell:=Form.colStyle //reuse el mismo objeto para un mejor rendimiento
  Else
  	Form.meta.stroke:="orange"
 	Form.meta.cell:=Form.colStyle2

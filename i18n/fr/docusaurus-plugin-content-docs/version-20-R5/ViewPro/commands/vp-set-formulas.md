@@ -18,7 +18,7 @@ title: VP SET FORMULAS
 
 The `VP SET FORMULAS` command <!-- REF #_method_.VP SET FORMULAS.Summary -->assigns a collection of formulas starting at the specified cell range<!-- END REF -->.
 
-In _rangeObj_, pass a range of the cell (created with [VP Cell](vp-cell.md)) whose formula you want to specify. If _rangeObj_ includes multiple ranges, only the first range is used.
+In _rangeObj_, pass a range of the cell (created with [VP Cell](vp-cell.md)) whose formula you want to specify. Si _rangeObj_ comprend plusieurs plages, seule la première plage est utilisée.
 
 The _formulasCol_ is a two-dimensional collection:
 

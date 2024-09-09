@@ -82,9 +82,9 @@ Lorsque cette option est sélectionnée, le serveur Web ne fournit aucune prise 
 
 Dans ce mode, vous pouvez configurer des paramètres de serveur Web supplémentaires :
 
-- [Maximum Concurrent Web Processes](#maximum-concurrent-web-processes)
-- [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts)
-- [Use preemptive processes](#use-preemptive-web-processes)
+- [Process Web simultanés maxi](#maximum-concurrent-web-processes)
+- [Réutilisation des contextes temporaires (en mode distant)](#reuse-temporary-context)
+- [Utiliser des process préemptifs](#use-preemptive-web-processes)
 
 #### Anciennes sessions (sessions process uniques)
 
@@ -126,7 +126,7 @@ Définit le système d'authentification que vous souhaitez utiliser pour le serv
 
 Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
 
-Il est recommandé d'utiliser l'authentification **personnalisée**. See [**Authentication**](../WebServer/authentication.md) chapter in the _Web Development_ documentation.
+Il est recommandé d'utiliser l'authentification **personnalisée**. Voir le chapitre [**Authentification**](../WebServer/authentication.md) dans la section _Développement Web_.
 
 ## Options (II)
 
@@ -152,7 +152,7 @@ Active le service Cross-origin resource sharing (CORS). Voir [Activer Cors](../W
 
 #### Noms de domaines/Méthodes HTTP autorisées
 
-Liste des hôtes et méthodes autorisées pour le service CORS. Voir [Paramètres CORS](../WebServer/webServerConfig.md#paramètres-cors).
+Liste des hôtes et méthodes autorisé(e)s pour le service CORS. Voir [Paramètres CORS](../WebServer/webServerConfig.md#paramètres-cors).
 
 ## Journal (format)
 
@@ -166,9 +166,8 @@ Le menu de format du journal propose les options suivantes :
 
 - **Pas de journal** : Lorsque cette option est sélectionnée, 4D ne génère pas d’historique des requêtes.
 
-- **CLF (Common Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format CLF. With the CLF format, each line of the file represents a request, such as:\
-  host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length\
-  Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+- **CLF (Common Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format CLF. Avec le format CLF, chaque ligne du fichier représente une requête, telle que :\
+  host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length\ Chaque champ est séparé par un espace et chaque ligne se termine par la séquence CR/LF (caractère 13, caractère 10).
 
   - hôte : adresse IP du client (ex. 192.100.100.10)
   - rfc931 : information non gérée par 4D, c’est toujours - (signe moins)
@@ -182,16 +181,16 @@ Le menu de format du journal propose les options suivantes :
 - longueur : taille des données renvoyées (hors en-tête HTTP) ou 0.
 
 > **Note :** Pour des raisons de performances, les opération sont stockées dans une mémoire tampon par paquets de 1 Ko avant d'être écrites sur disque. Les opérations sont également écrites sur disque si aucune requête n'a été envoyée au bout de 5 secondes.
-> The possible values of state are as follows:
-> 200: OK
-> 204: No contents
-> 302: Redirection
-> 304: Not modified
-> 400: Incorrect request
-> 401: Authentication required
-> 404: Not found
-> 500: Internal error
-> The CLF format cannot be customized.
+> Les valeurs possibles de l'état sont les suivantes :
+> 200 : OK
+> 204 : Pas de contenu
+> 302 : Redirection
+> 304 : Non modifié
+> 400 : Requête incorrecte
+> 401 : Authentification requise
+> 404 : Non trouvé
+> 500 : Erreur interne
+> Le format CLF ne peut pas être personnalisé.
 
 - **DLF (Combined Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format DLF. Le format DLF est semblable au format CLF dont il reprend exactement la structure. Il ajoute simplement deux champs HTTP supplémentaires à la fin de chaque requête : Referer et User-agent.
 
@@ -239,16 +238,16 @@ Le tableau suivant répertorie les champs disponibles pour chaque format (par or
 
 ## Journal (sauvegarde)
 
-Paramètres d’archivage automatique du journal des requêtes. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. Vous devez ensuite spécifier le moment précis du backup si nécessaire.
+Paramètres d’archivage automatique du journal des requêtes. D'abord, vous devez choisir la fréquence (jours, semaines, etc.) ou le critère de limite de taille du fichier en cliquant sur le bouton radio correspondant. Vous devez ensuite spécifier le moment précis de la sauvegarde si nécessaire.
 
 - **Pas de sauvegarde du journal** : La fonction de sauvegarde programmée est désactivée.
 - **Toutes les X heure(s)** : Cette option est utilisée pour programmer des sauvegardes sur une base horaire. Vous pouvez entrer une valeur entre 1 et 24.
 
   - **à partir de**: Permet de définir l'heure du déclenchement du premier backup.
 - **Tous les N jour(s) à N** : permet de programmer des backups sur une base journalière. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer l’heure à laquelle la sauvegarde doit être déclenchée.
-- **Tous les N jour(s) à N** : permet de programmer des backups sur une base hebdomadaire. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired.
+- **Tous les N jour(s) à N** : permet de programmer des backups sur une base hebdomadaire. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer le ou les jours de la semaine et l’heure à laquelle chaque sauvegarde doit être déclenchée. Vous pouvez cocher un ou plusieurs jour(s) de la semaine. Par exemple, vous pouvez utiliser cette option pour définir deux sauvegardes hebdomadaires : une le mercredi et une le vendredi.
 - **Tous les N mois, Ne jour à N** : permet de programmer des sauvegardes sur une base mensuelle. Saisissez 1 si vous souhaitez une sauvegarde mensuelle. Lorsque vous cochez cette option, vous devez indiquer le jour de chaque mois auquel la sauvegarde doit être déclenchée, ainsi que l’heure de déclenchement.
-- **Tous les N Mo** : Cette option est utilisée pour programmer les sauvegardes en fonction de la taille du fichier journal courant. Un backup se déclenche automatiquement quand le fichier atteint la taille spécifiée. La taille limite du fichier peut être fixée à 1, 10, 100 ou 1000 Mo.
+- **Tous les N Mo** : Cette option est utilisée pour programmer les sauvegardes en fonction de la taille du fichier journal courant. Une sauvegarde se déclenche automatiquement quand le fichier atteint la taille spécifiée. La taille limite du fichier peut être fixée à 1, 10, 100 ou 1000 Mo.
 
 > En cas de sauvegarde périodique, si le serveur Web n’était pas lancé au moment théorique de la sauvegarde, 4D considère au lancement suivant que la sauvegarde a échoué et applique les paramétrages adéquats, définis dans les Propriétés.
 
@@ -298,4 +297,4 @@ Cette option n'apparaît que si la licence Qodly Studio est activée.
 
 :::
 
-This option enables user access to [Qodly Studio](XXX) for the current project. Note that global access must be allowed at the [application level](../Admin/webAdmin.md).
+Cette option permet l'accès utilisateur à [Qodly Studio](../WebServer/qodly-studio.md) pour le projet en cours. Notez que l'accès global doit être autorisé au [niveau de l'application](../Admin/webAdmin.md).

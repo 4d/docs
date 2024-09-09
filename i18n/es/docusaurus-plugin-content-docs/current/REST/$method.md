@@ -21,9 +21,9 @@ Elimina la entidad actual, la colección de entidades o la selección de entidad
 
 ### Descripción
 
-Con `$method=delete`, puede eliminar una entidad o una colección de entidades entera. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}({key})`](%7BdataClass%7D.html#dataclasskey) _(e.g._, /Employee(22)).
+Con `$method=delete`, puede eliminar una entidad o una colección de entidades entera. Puede definir la colección de entidades utilizando, por ejemplo, [`$filter`]($filter.md) o especificando una directamente utilizando [`{dataClass\}(\{key\})`](dataClass.md#dataclasskey) _(p.ej._, /Employee(22)).
 
-You can also delete the entities in an entity set, by calling [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
+También puede eliminar las entidades en un conjunto de entidades, llamando a [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
 
 ### Ejemplo
 
@@ -134,7 +134,7 @@ Si quiere recuperar sólo las entidades relacionadas para una entidad específic
 
 ```json
 {
- 
+
     "__ENTITYSET": "/rest/Employee/$entityset/FF625844008E430B9862E5FD41C741AB",
     "__entityModel": "Employee",
     "__COUNT": 2,
@@ -170,7 +170,7 @@ Si quiere recuperar sólo las entidades relacionadas para una entidad específic
             }
         }
     ]
- 
+
 }
 ```
 
@@ -224,7 +224,7 @@ Si quiere crear una entidad, puede enviar, vía POST los atributos utilizando es
 **POST data:**
 
 ```json
-{ 
+{
     firstName: "John",
     lastName: "Smith"
 }
@@ -237,13 +237,13 @@ También puede crear y actualizar múltiples entidades al mismo tiempo utilizand
 **POST data:**
 
 ```json
-[{ 
+[{
     "__KEY": "309",
     "__STAMP": 5,
     "ID": "309",
     "firstName": "Penelope",
     "lastName": "Miller"
-}, { 
+}, {
     "firstName": "Ann",
     "lastName": "Jones"
 }]
@@ -255,12 +255,12 @@ Cuando añade o modifica una entidad, se devuelve con los atributos modificados.
 
 ```json
 {
-    "__KEY": "622", 
-    "__STAMP": 1, 
-    "uri": "http://127.0.0.1:8081/rest/Employee(622)", 
+    "__KEY": "622",
+    "__STAMP": 1,
+    "uri": "http://127.0.0.1:8081/rest/Employee(622)",
     "__TIMESTAMP": "!!2020-04-03!!",
-    "ID": 622, 
-    "firstName": "John", 
+    "ID": 622,
+    "firstName": "John",
     "firstName": "Smith"
 }
 ```

@@ -20,7 +20,7 @@ title: VP Get formula by name
 
 The `VP Get formula by name` command <!-- REF #_method_.VP Get formula by name.Summary --> returns the formula and comment corresponding to the named range or named formula passed in the _name_ parameter, or **null** if it does not exist in the defined scope<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Pass the named range or named formula that you want to get in _name_. A noter que les plages nommées sont retournées sous forme de formules contenant des références absolues de cellules.
 

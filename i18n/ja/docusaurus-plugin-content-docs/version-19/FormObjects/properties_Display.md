@@ -338,7 +338,7 @@ title: 表示
 
 ## テキスト (True時)/テキスト (False時)
 
-[ブール式](properties_Object.md#式の型) を次のフォームオブジェクトで表示した場合:
+[ブール式](properties_Object.md#式の型式タイプ) を次のフォームオブジェクトで表示した場合:
 
 * [入力オブジェクト](input_overview.md) にテキストとして
 * [リストボックス列](listbox_overview.md#リストボックス列) に表示タイプ ["ポップアップ"](properties_Display.md#表示タイプ) を選択して
@@ -481,7 +481,7 @@ title: 表示
 
 #### 対象オブジェクト
 
-[リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー)
+[リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
 
 ---
 

@@ -42,15 +42,16 @@ Pour mettre à jour les autres machines clientes qui ne sont pas connectées, il
 
 -   **SQL Server** : 19812 par défaut (peut être modifié via la page "SQL/Configuration" des Préférences).
 -   **Serveur d'application** : 19813 par défaut (peut être modifié via la page "Client-Serveur/Configuration" des Préférences, voir ci-dessus).
--   **Serveur DB4D** (serveur de base de données) : 19814 par défaut. This port number cannot be modified directly but it always consists of the application server port number + 1.\
+-   **DB4D Server** (database server): 19814 by default. This port number cannot be modified directly but it always consists of the application server port number + 1.\
   When a 4D client connects to 4D Server, it uses the TCP port of the application server (19813 or the port indicated after the colon ':' in the IP address shown in the connection dialog box). Connection to other servers via their respective ports is then automatic; it is no longer necessary to specify them.\
   Note that in the case of access via a router or a firewall, the three TCP ports must be opened explicitly.
+-   [**Remote Debugger**](../Debugging/debugging-remote.md): 19815 by default. Ce numéro de port ne peut pas être modifié directement mais il est toujours composé du numéro de port du serveur d'application + 2.
 
 #### Authentification de l'utilisateur auprès du serveur de domaine
 
 Cette option vous permet de mettre en œuvre des fonctionnalités SSO (*Single Sign On*) dans votre base de données 4D Server sous Windows. Lorsque vous cochez cette option, 4D se connecte de manière transparente à l'Active directory du serveur de domaine Windows et obtient les tokens d'authentification disponibles. Cette option est décrite dans la section [Single Sign On (SSO) sur Windows](https://doc.4d.com/4Dv19/4D/19/Single-Sign-On-SSO-on-Windows.300-5422467.en.html).
 
-#### Service Principal Name
+#### Nom Principal de Service
 
 Lorsque l'authentification unique (SSO) est activée (voir ci-dessus), vous devez remplir ce champ si vous souhaitez utiliser Kerberos comme protocole d'authentification. Cette option est décrite dans la section [Single Sign On (SSO) sur Windows](https://doc.4d.com/4Dv19/4D/19/Single-Sign-On-SSO-on-Windows.300-5422467.en.html).
 

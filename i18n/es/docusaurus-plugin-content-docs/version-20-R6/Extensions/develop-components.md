@@ -143,9 +143,9 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 ## Completar el código de los componentes compilados
 
-To make your component easier to use for developers, you can check the [**Generate syntax file for code completion when compiled** option in the General page](../settings/general.md#component-namespace-in-the-class-store) of the matrix project Settings.
+Para facilitar el uso de su componente a los desarrolladores, puede marcar la opción [**Generar archivo de sintaxis para completado de código al compilar** en la página General](../settings/general.md#component-namespace-in-the-class-store) de las Propiedades del proyecto utilizado como matriz.
 
-A syntax file (JSON format) is then automatically created during the compilation phase, filled with the syntax of your component's classes, functions, and [exposed methods](#sharing-of-project-methods), and placed in the `\Resources\en.lproj` folder of the component project. 4D utiliza el contenido de ese archivo de sintaxis para generar ayuda contextual en el editor de código, como la finalización del código y la sintaxis de las funciones:
+Durante la fase de compilación se crea automáticamente un archivo de sintaxis (en formato JSON) con la sintaxis de las clases, funciones y [métodos expuestos] del componente (#sharing-of-project-methods), y se coloca en la carpeta `\Resources\en.lproj` del proyecto del componente. 4D utiliza el contenido de ese archivo de sintaxis para generar ayuda contextual en el editor de código, como la finalización del código y la sintaxis de las funciones:
 
 ![](../assets/en/settings/syntax-code-completion-2.png)
 ![](../assets/en/settings/syntax-code-completion-1.png)
@@ -199,7 +199,7 @@ Cuando se utilizan punteros para que los componentes y el proyecto local se comu
 
 - Si el componente C define la variable `myIvar`, el componente C no puede acceder a esta variable utilizando el puntero `->myIvar`. Esta sintaxis provoca un error de ejecución.
 
-- The comparison of pointers using the `RESOLVE POINTER` command is not recommended with components since the principle of partitioning variables allows the coexistence of variables having the same name but with radically different contents in a component and the host project (or another component). El tipo de la variable puede incluso ser diferente en ambos contextos. Si los punteros `myptr1` y `myptr2` apuntan cada uno a una variable, la siguiente comparación producirá un resultado incorrecto:
+- La comparación de punteros utilizando el comando `RESOLVE POINTER` no se recomienda con los componentes, ya que el principio de partición de variables permite la coexistencia de variables con el mismo nombre pero con contenidos radicalmente diferentes en un componente y en el proyecto local (u otro componente). El tipo de la variable puede incluso ser diferente en ambos contextos. Si los punteros `myptr1` y `myptr2` apuntan cada uno a una variable, la siguiente comparación producirá un resultado incorrecto:
 
 ```4d
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
@@ -349,7 +349,7 @@ Un componente puede ejecutar automáticamente código 4D al abrir o cerrar la ba
 
 La ejecución del código de inicialización o cierre se realiza mediante el método base `On Host Database Event`.
 
-> Por razones de seguridad, debe autorizar explícitamente la ejecución del método base `On Host Database Event` en la base local para poder llamarlo. To do this, you must check the [**Execute "On Host Database Event" method of the components** option](../settings/security.md#options) in the Security page of the Settings.
+> Por razones de seguridad, debe autorizar explícitamente la ejecución del método base `On Host Database Event` en la base local para poder llamarlo. Para ello, debe marcar la opción [**Ejecutar el método "On Host Database Event" de los componentes**](../settings/security.md#options) en la página Seguridad de la Configuración.
 
 ## Protección de los componentes: compilación
 

@@ -18,13 +18,13 @@ title: VP Get stylesheet
 
 #### Description
 
-The `VP Get stylesheet` command <!-- REF #_method_.VP Get stylesheet.Summary -->returns the _styleName_ style sheet object containing the property values which have been defined<!-- END REF -->.
+La commande `VP Get stylesheet` <!-- REF #_method_.VP Get stylesheet. ummary -->retourne l'objet de la feuille de style _styleName_ contenant les valeurs de propriété qui ont été définies<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-In _styleName_, pass the name of the style sheet to get.
+Dans _styleName_, passez le nom de la feuille de style que vous souhaitez lire.
 
-You can define where to get the style sheet in the optional _sheet_ parameter using the sheet index (counting begins at 0) or with the following constants:
+Vous pouvez définir où obtenir la feuille de style dans le paramètre optionnel _sheet_ en utilisant l'index de la feuille (la numérotation commence à partir de 0) ou avec les constantes suivantes :
 
 - `vk current sheet`
 - `vk workbook`
@@ -37,7 +37,7 @@ Le code suivant :
 $style:=VP Get stylesheet("ViewProArea";"GreenDashDotStyle")
 ```
 
-... will return the _GreenDashDotStyle_ style object from the current sheet:
+... retournera l'objet de style _GreenDashDotStyle_ de la feuille courante :
 
 ```4d
 {

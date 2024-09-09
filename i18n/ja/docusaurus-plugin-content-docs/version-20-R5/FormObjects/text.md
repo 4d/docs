@@ -61,7 +61,7 @@ title: テキスト
 [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) -
 [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) -
 [表示状態](properties_Display.md#表示状態) -
-[塗りカラー](properties_BackgroundAndBorder.md#背景色-塗りカラー) -
+[塗りカラー](properties_BackgroundAndBorder.md#背景色塗りカラー) -
 [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) -
 [フォント](properties_Text.md#フォント) -
 [フォントサイズ](properties_Text.md#フォントサイズ) -

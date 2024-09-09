@@ -1,6 +1,6 @@
 ---
 id: forms
-title: Forms
+title: フォーム
 ---
 
 

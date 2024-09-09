@@ -12,7 +12,7 @@ O catálogo descreve todos os dataclasses e atributos disponíveis na datastore.
 | [**$catalog**](#catalog)                                                | `/$catalog`            | Devolve uma lista dos valores de referência do seu projecto juntamente com dois URIs |
 | [**$catalog/$all**](#catalogall)                                        | `/$catalog/$all`       | Devolve informação sobre todos os dataclasses do seu projecto e os seus atributos    |
 | [**$catalog/\{dataClass\}**](#catalogdataclass)                       | `/$catalog/Employee`   | Retorna informação sobre um dataclass e os seus atributos                            |
-| [**$catalog/DataStoreClassFunction**](ClassFunctions.md#function-calls) | `/$catalog/authentify` | Executes the datastore class function if it exists                                   |
+| [**$catalog/DataStoreClassFunction**](ClassFunctions.md#function-calls) | `/$catalog/authentify` | Executa a função de classe do datastore se ela existir                               |
 
 ## $catalog
 

@@ -1156,7 +1156,7 @@ El siguiente código genérico duplica todas las entidades de la entity selectio
 
 | Parámetros | Tipo |    | Descripción                                                                    |
 | ---------- | ---- | -- | ------------------------------------------------------------------------------ |
-| result     | Text | <- | Atributos de contexto vinculados a la entity selection, separados por una coma |
+| resultado  | Text | <- | Atributos de contexto vinculados a la entity selection, separados por una coma |
 
 <!-- END REF -->
 
@@ -1996,7 +1996,8 @@ En este ejemplo, el código clásico y el código ORDA modifican los mismos dato
 
 #### Ver también
 
-[`.clean()`](#clean)
+[`.clean()`](#clean)<br/>
+[dataClass.clearRemoteCache()](DataClassClass.md#clearremotecache)
 
 <!-- END REF -->
 

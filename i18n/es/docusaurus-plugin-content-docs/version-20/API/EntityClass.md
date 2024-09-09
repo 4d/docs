@@ -645,7 +645,7 @@ Las llaves primarias pueden ser números (enteros) o cadenas. Puede "forzar" que
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
 | Parámetros | Tipo |    | Descripción                                                                                      |
 | ---------- | ---- | -- | ------------------------------------------------------------------------------------------------ |
-| result     | Text | <- | Atributos de contexto vinculados a la entidad, separados por una coma|<!-- END REF -->
+| resultado  | Text | <- | Atributos de contexto vinculados a la entidad, separados por una coma|<!-- END REF -->
 
 |
 

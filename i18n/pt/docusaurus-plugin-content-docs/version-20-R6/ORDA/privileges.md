@@ -19,17 +19,19 @@ If a user attempts to execute an action and does not have the appropriate access
 
 ### Veja também
 
-For a detailed overview of the whole permissions architecture, please read the [**Filter access to your data with a complete system of permissions**](https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/) blog post.
+Para obter uma visão detalhada de toda a arquitetura de permissões, por favor leia o post do blog [**Filtre o acesso aos seus dados com um sistema completo de permissões**](https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/).
 
 ## Resources
 
-You can assign specific permission actions to the following exposed resources in your project:
+You can assign specific permission actions to the following resources in your project:
 
 - o armazenamento de dados
 - uma classe de dados
 - um atributo (inclusive calculado e aliases)
 - uma função de classe de modelo de dados
 - uma função [singleton](../REST/$singleton.md)
+
+Each time a resource is accessed within a session (whatever the way it is accessed), 4D checks that the session has the appropriate permissions, and rejects the access if it is not authorized.
 
 A permission action defined at a given level is inherited by default at lower levels, but several permissions can be set:
 
@@ -39,7 +41,7 @@ A permission action defined at a given level is inherited by default at lower le
 
 :::info
 
-Permissions control access to datastore objects or functions. Si desea filtrar los datos leídos según algún criterio, puede considerar [restringir las selecciones de entidades](entities.md#restricting-entity-selections) que puede ser más apropiado en este caso.
+Permissões controlam o acesso a objetos ou funções de armazenamento de dados. Si desea filtrar los datos leídos según algún criterio, puede considerar [restringir las selecciones de entidades](entities.md#restricting-entity-selections) que puede ser más apropiado en este caso.
 
 :::
 
@@ -47,28 +49,28 @@ Permissions control access to datastore objects or functions. Si desea filtrar l
 
 As ações disponíveis estão relacionadas com o recurso alvo.
 
-| Acções       | armazém de dados                                                                                        | dataclass                                                                                                                                                            | atributo                                                                                                                                                 | data model function or singleton function                                                                                                                                                                                                                                                                             |
+| Acções       | armazém de dados                                                                                        | dataclass                                                                                                                                                            | atributo                                                                                                                                                 | função de modelo de dados ou função singleton                                                                                                                                                                                                                                                                         |
 | ------------ | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **create**   | Criar entidade em qualquer classe de dados                                                              | Criar entidade nesta classe de dados                                                                                                                                 | Create an entity with a value different from default value allowed for this attribute (ignored for alias attributes). | n/a                                                                                                                                                                                                                                                                                                                   |
 | **read**     | Ler atributos em qualquer dataclass                                                                     | Ler atributos nesta classe de dados                                                                                                                                  | Leia o conteúdo desse atributo                                                                                                                           | n/a                                                                                                                                                                                                                                                                                                                   |
 | **update**   | Atualizar atributos em qualquer classe de dados.                                        | Atualiza os atributos nesta classe de dados.                                                                                                         | Atualiza o conteúdo deste atributo (ignorado para atributos alias).                                                   | n/a                                                                                                                                                                                                                                                                                                                   |
 | **drop**     | Eliminar dados em qualquer classe de dados.                                             | Eliminar dados nesta classe de dados.                                                                                                                | Delete a not null value for this attribute (except for alias and computed attribute).                                 | n/a                                                                                                                                                                                                                                                                                                                   |
 | **execute**  | Execute any function on the project (datastore, dataclass, entity selection, entity) | Executa qualquer função na classe de dados. Dataclass functions, entity functions, and entity selection functions are handled as dataclass functions | n/a                                                                                                                                                      | Executar esta função                                                                                                                                                                                                                                                                                                  |
-| **describe** | Todas as classes de dados estão disponíveis na /rest/$catalog API                                       | Esta dataclass está disponível na API /rest/$catalog                                                                                                                 | Esse atributo está disponível na API /rest/$catalog.                                                                                     | This dataclass function is available in the /rest/$catalog API (not available with singletons)                                                                                                                                                                                                     |
+| **describe** | Todas as classes de dados estão disponíveis na /rest/$catalog API                                       | Esta dataclass está disponível na API /rest/$catalog                                                                                                                 | Esse atributo está disponível na API /rest/$catalog.                                                                                     | Esta função de dataclass está disponível na API /rest/$catalog (não disponível com singletons)                                                                                                                                                                                                     |
 | **promote**  | n/a                                                                                                     | n/a                                                                                                                                                                  | n/a                                                                                                                                                      | Associa um determinado privilégio durante a execução da função. The privilege is temporary added to the session and removed at the end of the function execution. By security, only the process executing the function is added the privilege, not the whole session. |
 
 **Notas:**
 
 - An alias can be read as soon as the session privileges allow the access to the alias itself, even if the session privileges do no allow the access to the attributes resolving the alias.
 - A computed attribute can be accessed even if there are no permissions on the attributes upon which it is built.
-- You can assign a permission action to a singleton class (`singleton` type), in which case it will be applied to all its exposed functions, or to a singleton function (`singletonMethod` type).
+- Você pode atribuir uma ação de permissão a uma classe de singleton (tipo `singleton`), nesse caso ele será aplicado a todas as suas funções expostas, ou a uma função de singleton (tipo `singletonMethod`).
 - Valores por defecto: en la implementación actual, solo *Null* está disponible como valor por defecto.
-- In REST [force login mode](../REST/authUsers.md/#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, whatever the permissions configuration.
+- No REST [modo de login](../REST/authUsers.md/#force-login-mode), a [função `authentify()`](../REST/authUsers.md#function-authentify) é sempre executável por usuários convidados, independentemente da configuração das permissões.
 
 A definição das permissões deve ser coerente, nomeadamente:
 
 - los permisos **update** y **drop** también necesitan el permiso **read** (pero **create** no lo necesita)
-- For data model functions, **promote** permission also needs **describe** permission.
+- Para funções do modelo de dados, permissão de **promoção** também precisa de permissão **descrever**.
 
 ## Privilégios e roles
 
@@ -112,9 +114,9 @@ El archivo `roles.json` describe todos los parámetros de seguridad del proyecto
 
 ### Arquivo padrão
 
-When you create a project, a default `roles.json` file is created at the following location: `<project folder>/Project/Sources/` (see [Architecture](../Project/architecture.md#sources) section).
+Quando você cria um projeto, um arquivo `roles.json` padrão é criado no seguinte local: `<pasta do projeto>/Projeto/Fontes/` (consulte a seção [Arquitetura](../Projeto/arquitetura.md#fontes)).
 
-The default file has the following contents:
+O arquivo padrão tem o seguinte conteúdo:
 
 ```json title="/Project/Sources/roles.json"
 
@@ -150,17 +152,17 @@ The default file has the following contents:
 
 ```
 
-For a highest level of security, the "none" privilege is assigned to all permissions in the datastore, thus data access on the whole `ds` object is disabled by default. It is recommended not to modified or use this locking privilege, but to add specific permissions to each resource you wish to make available from web or REST requests ([see example below](example-of-privilege-configuration)).
+Para um nível máximo de segurança, o privilégio "none" é atribuído a todas as permissões no datastore, assim o acesso aos dados no objeto `ds` inteiro é desabilitado por padrão. É recomendado não modificar ou usar esse privilégio de bloqueio, mas adicionar permissões específicas a cada recurso que você deseja disponibilizar para solicitações da web ou REST (veja o exemplo abaixo).
 
 :::caution
 
-When no specific parameters are defined in the `roles.json` file, accesses are not limited. This configuration allows you to develop the application without having to worry about accesses, but is not recommended in production environment.
+Quando nenhum parâmetro específico é definido no arquivo `roles.json`, os acessos não são limitados. Esta configuração permite que você desenvolva a aplicação sem se preocupar com acessos, mas não é recomendada em ambiente de produção.
 
 :::
 
 :::note Compatibidade
 
-In previous releases, the `roles.json` file was not created by default. As of 4D 20 R6, when opening an existing project that does not contain a `roles.json` file or the `"forceLogin": true` settings, the **Activate REST authentication through ds.authentify() function** button is available in the [**Web Features** page of the Settings dialog box](../settings/web.md#access). This button automatically upgrades your security settings (you may have to modify your code, [see this blog post](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/)).
+Em versões anteriores, o arquivo `roles.json` não foi criado por padrão. A partir de 4D 20 R6, ao abrir um projeto existente que não contém um `cargos. arquivo son` ou as configurações `"forceLogin": true`, a **Ativar autenticação REST através de d. Função uthentify()** está disponível na página [**Recursos Web** da caixa de diálogo Configurações](../settings/web.md#access). Este botão atualiza automaticamente suas configurações de segurança (você pode ter que modificar seu código, [veja este post de blog](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/)).
 :::
 
 :::note Qodly Studio
@@ -218,9 +220,9 @@ Else // you can prevent the project to open
 End if
 ```
 
-## Example of privilege configuration
+## Exemplo de configuração de privilégios
 
-The good practice is to keep all data access locked by default thanks to the "none" privilege and to configure the `roles.json` file to only open controlled parts to authorized sessions. For example, to allow some accesses to guest sessions:
+A boa prática é manter todo o acesso aos dados bloqueado por padrão graças ao privilégio "none" e configurar o arquivo `roles.json` para abrir apenas partes controladas para sessões autorizadas. Por exemplo, para permitir alguns acessos às sessões de convidados:
 
 ```json title="/Project/Sources/roles.json"
 

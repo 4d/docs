@@ -196,17 +196,14 @@ Puede pasar cualquier número de valores de los siguientes tipos soportados:
 - date
 - time (almacenado como número de milisegundos - real)
 - null
-- shared object(\*)
-- shared collection(\*)
-  \> Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.
+- objeto compartido
+- colección compartida
 
 :::note
 
 Esta función modifica la colección original.
 
 :::
-
-(\*)Cuando un objeto o colección compartida se añade a una colección compartida, comparten el mismo *identificador de bloqueo*. Para más información sobre este punto, consulte [4D Doc Center](https://doc.4d.com).
 
 #### Ejemplo
 
@@ -2755,10 +2752,10 @@ $col2:=$col.query("c = :v"; {parameters: {v: $c3}})
 
 En el parámetro *querySettings*, puede pasar un objeto que contenga marcadores de posición de consulta como objetos. Se soportan las siguientes propiedades:
 
-| Propiedad  | Tipo   | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| parameters | Object | **Marcadores de posición con nombre para los valores** utilizados en *queryString*. Los valores se expresan como pares propiedad / valor, donde propiedad es el nombre del marcador de posición insertado para un valor en *queryString* o formula (":placeholder") y valor es el valor a comparar. Puede combinar marcadores de posición indexados (valores pasados directamente en parámetros de valor) y valores de marcadores de posición con nombre en la misma búsqueda.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| attributes | Object | **Marcadores de posición con nombre para rutas de atributos** utilizados en la *queryString*. Los atributos se expresan como pares propiedad / valor, donde propiedad es el nombre del marcador de posición insertado para una ruta de atributo en *queryString* (":placeholder"), y valor puede ser una cadena o una colección de cadenas. Cada valor es una ruta que puede designar una propiedad en un objeto de la colección<table><tr><th>Tipo de objeto</th><th>Descripción</th></tr><tr><td>Cadena</td><td>Ruta de acceso del atributo expresado utilizando la notación de punto, por ejemplo, "name" o "user.address.zipCode"</td></tr><tr><td>Colección de cadenas</td><td>Cada cadena de la colección representa un nivel de attributePath, por ejemplo, \["name"] o \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
+| Propiedad  | Tipo   | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| parameters | Object | **Marcadores de posición con nombre para los valores** utilizados en *queryString*. Los valores se expresan como pares propiedad / valor, donde propiedad es el nombre del marcador de posición insertado para un valor en *queryString* o formula (":placeholder") y valor es el valor a comparar. Puede combinar marcadores de posición indexados (valores pasados directamente en parámetros de valor) y valores de marcadores de posición con nombre en la misma búsqueda.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| attributes | Object | **Marcadores de posición con nombre para rutas de atributos** utilizados en la *queryString*. Los atributos se expresan como pares propiedad / valor, donde propiedad es el nombre del marcador de posición insertado para una ruta de atributo en *queryString* (":placeholder"), y valor puede ser una cadena o una colección de cadenas. Cada valor es una ruta que puede designar una propiedad en un objeto de la colección<table><tr><th>Tipo de objeto</th><th>Descripción</th></tr><tr><td>Cadena</td><td>Ruta de acceso del atributo expresado utilizando la notación de punto, por ejemplo, "name" o "user.address.zipCode"</td></tr><tr><td>Colección de cadenas</td><td>Cada cadena de la colección representa un nivel de attributePath, por ejemplo, \["name"] o \["user","address","zipCode"]. El uso de una colección permite realizar consultas sobre atributos con nombres que no se ajustan a la notación de puntos, por ejemplo, \["4Dv17.1", "en/fr"]</td></tr></table>Puede mezclar marcadores de posición indexados (valores pasados directamente en parámetros *value*) y valores de marcador de posición con nombre en la misma consulta. |
 
 > El uso de este parámetro es obligatorio si desea consultar en una colección [utilizando una **referencia de colección** o una **referencia de un objeto**](#referencia-de-objeto-o-de-colección-como-valor).
 
@@ -2853,19 +2850,19 @@ Se pueden encontrar más ejemplos de búsquedas en la página `dataClass.query()
 
 <!-- REF #collection.reduce().Params -->
 
-| Parámetros | Tipo                                            |     | Descripción                                                                       |
-| ---------- | ----------------------------------------------- | :-: | --------------------------------------------------------------------------------- |
-| formula    | 4D.Function                     |  -> | Objeto fórmula                                                                    |
-| methodName | Text                                            |  -> | Nombre de un método                                                               |
-| initValue  | Text, Number, Object, Collection, Date, Boolean |  -> | Value to use as the first argument to the first call of *formula* or *methodName* |
-| param      | expresión                                       |  -> | Parámetro(s) a pasar                                           |
-| Result     | Text, Number, Object, Collection, Date, Boolean |  <- | Resultado del valor del acumulador                                                |
+| Parámetros | Tipo                                            |     | Descripción                                                                              |
+| ---------- | ----------------------------------------------- | :-: | ---------------------------------------------------------------------------------------- |
+| formula    | 4D.Function                     |  -> | Objeto fórmula                                                                           |
+| methodName | Text                                            |  -> | Nombre de un método                                                                      |
+| initValue  | Text, Number, Object, Collection, Date, Boolean |  -> | Valor a utilizar como primer argumento de la primera llamada de *formula* o *methodName* |
+| param      | expresión                                       |  -> | Parámetro(s) a pasar                                                  |
+| Result     | Text, Number, Object, Collection, Date, Boolean |  <- | Resultado del valor del acumulador                                                       |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `.reduce()` function <!-- REF #collection.reduce().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from left to right) to reduce it to a single value<!-- END REF -->.
+La función `.reduce()` <!-- REF #collection.reduce().Summary -->aplica la *formula* o *callback* *methodName* contra un acumulador y cada elemento de la colección (de izquierda a derecha) para reducirlo a un único valor<!-- END REF -->.
 
 > Esta función no modifica la colección original.
 
@@ -2938,19 +2935,19 @@ Con el siguiente método ***Flatten***:
 
 <!-- REF #collection.reduceRight().Params -->
 
-| Parámetros | Tipo                                            |     | Descripción                                                                       |
-| ---------- | ----------------------------------------------- | :-: | --------------------------------------------------------------------------------- |
-| formula    | 4D.Function                     |  -> | Objeto fórmula                                                                    |
-| methodName | Text                                            |  -> | Nombre de un método                                                               |
-| initValue  | Text, Number, Object, Collection, Date, Boolean |  -> | Value to use as the first argument to the first call of *formula* or *methodName* |
-| param      | expresión                                       |  -> | Parámetro(s) a pasar                                           |
-| Result     | Text, Number, Object, Collection, Date, Boolean |  <- | Resultado del valor del acumulador                                                |
+| Parámetros | Tipo                                            |     | Descripción                                                                              |
+| ---------- | ----------------------------------------------- | :-: | ---------------------------------------------------------------------------------------- |
+| formula    | 4D.Function                     |  -> | Objeto fórmula                                                                           |
+| methodName | Text                                            |  -> | Nombre de un método                                                                      |
+| initValue  | Text, Number, Object, Collection, Date, Boolean |  -> | Valor a utilizar como primer argumento de la primera llamada de *formula* o *methodName* |
+| param      | expresión                                       |  -> | Parámetro(s) a pasar                                                  |
+| Result     | Text, Number, Object, Collection, Date, Boolean |  <- | Resultado del valor del acumulador                                                       |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `.reduceRight()` function <!-- REF #collection.reduceRight().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from right to left) to reduce it to a single value<!-- END REF -->.
+La función `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->aplica la *formula* o *callback* *methodName* contra un acumulador y cada elemento de la colección (de derecha a izquierda) para reducirlo a un único valor<!-- END REF -->.
 
 > Esta función no modifica la colección original.
 
@@ -3025,17 +3022,17 @@ Con el siguiente método ***Flatten***:
 
 <!-- REF #collection.remove().Params -->
 
-| Parámetros | Tipo       |     | Descripción                                              |
-| ---------- | ---------- | :-: | -------------------------------------------------------- |
-| index      | Integer    |  -> | Elemento en el que se inicia la eliminación              |
-| howMany    | Integer    |  -> | Número de elementos a eliminar, o 1 elemento si se omite |
-| Result     | Collection |  <- | Colección original sin elementos eliminados              |
+| Parámetros | Tipo       |     | Descripción                                                       |
+| ---------- | ---------- | :-: | ----------------------------------------------------------------- |
+| index      | Integer    |  -> | Elemento en el que se inicia la eliminación                       |
+| howMany    | Integer    |  -> | Número de elementos a eliminar, o 1 elemento si se omite          |
+| Result     | Collection |  <- | Modified collection without removed element(s) |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `.remove()` function <!-- REF #collection.remove().Summary -->removes one or more element(s) from the specified *index* position in the collection and returns the edited collection<!-- END REF -->.
+La función `.remove()` <!-- REF #collection.remove().Summary -->elimina uno o más elementos de la posición *index* especificada en la colección y devuelve la colección editada<!-- END REF -->.
 
 > Esta función modifica la colección original.
 
@@ -3143,7 +3140,7 @@ Por defecto, los nuevos elementos se llenan con valores **null**. Puede especifi
 
 #### Descripción
 
-The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
+La función `.reverse()` <!-- REF #collection.reverse().Summary --> devuelve una copia profunda de la colección con todos sus elementos en orden inverso<!-- END REF -->. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 
 > Esta función no modifica la colección original.
 
@@ -3181,7 +3178,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 
 #### Descripción
 
-The `.shift()` function <!-- REF #collection.shift().Summary -->removes the first element of the collection and returns it as the function result<!-- END REF -->.
+La función `.shift()` <!-- REF #collection.shift().Summary --> elimina el primer elemento de la colección y lo devuelve como resultado de la función<!-- END REF -->.
 
 > Esta función modifica la colección original.
 
@@ -3226,7 +3223,7 @@ Si la colección está vacía, este método no hace nada.
 
 #### Descripción
 
-The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). Esta función devuelve una *copia superficial* de la colección. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
+La función `.slice()` <!-- REF #collection.slice().Summary -->devuelve una porción de una colección en una nueva colección<!-- END REF -->, seleccionada desde el índice *startFrom* hasta el índice *end* (no incluye end). Esta función devuelve una *copia superficial* de la colección. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 
 > Esta función no modifica la colección original.
 
@@ -3270,17 +3267,17 @@ La colección devuelta contiene el elemento especificado por *startFrom* y todos
 | Parámetros | Tipo |     | Descripción |
 | ---------- | ---- | :-: | ----------- |
 
-|startFrom |Integer |->|Index to start the test at|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param |any |->|Parameter(s) to pass|
-|Result|Boolean|<-|True if at least one element successfully passed the test|
+|startFrom |Integer |->|Índice para comenzar la prueba|
+|formula|4D.Function|->|Objeto fórmula|
+|methodName|Text|->|Nombre de un método|
+|param |any |->|Parámetro(s) a pasar|
+|Result|Boolean|<-|True si al menos un elemento pasa exitosamente la prueba|
 
 <!-- END REF -->
 
 #### Descripción
 
-The `.some()` function <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test implemented in the provided *formula* or *methodName* code<!-- END REF -->.
+La función `.some()` <!-- REF #collection.some().Summary --> devuelve true si al menos un elemento de la colección ha pasado con éxito una prueba implementada en el código *formula* o *methodName* suministrado.
 
 Se designa el código 4D de retrollamada (callback) a ejecutar para evaluar los elementos de la colección utilizando:
 
@@ -3373,7 +3370,7 @@ Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares 
 6. collections
 7. dates
 
-If you want to sort the collection elements in some other order or sort any type of element, you must supply in *formula* ([Formula object](FunctionClass.md)) or *methodName* (Text) a callback that defines the sort order. El valor de retorno debe ser un booleano que indica el orden relativo de los dos elementos: **True** si *$1.value* es menor que *$1.value2*, **False** si *$1.value* es mayor que *$1.value2*. Puede ofrecer parámetros adicionales a la retrollamada si es necesario.
+Si quiere ordenar los elementos de la colección en algún otro orden o ordenar cualquier tipo de elemento, debe suministrar en *formula* ([objeto Formula](FunctionClass.md)) o *methodName* (Text) una retro llamada que define el orden de clasificación. El valor de retorno debe ser un booleano que indica el orden relativo de los dos elementos: **True** si *$1.value* es menor que *$1.value2*, **False** si *$1.value* es mayor que *$1.value2*. Puede ofrecer parámetros adicionales a la retrollamada si es necesario.
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -3500,7 +3497,7 @@ Si la colección contiene objetos, pasa el parámetro *propertyPath* para indica
 
 #### Descripción
 
-The `.unshift()` function <!-- REF #collection.unshift().Summary -->inserts the given *value*(s) at the beginning of the collection <!-- END REF -->and returns the modified collection.
+La función `.unshift()` <!-- REF #collection.unshift().Summary -->inserta el *valor*(es) dado al principio de la colección <!-- END REF -->y devuelve la colección modificada.
 
 > Esta función modifica la colección original.
 

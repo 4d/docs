@@ -24,7 +24,7 @@ For each user connected to the server, the list provides the following informati
 - **Dirección IP**: dirección IP de la máquina remota.
 - **Fecha de conexión**: fecha y hora de la conexión de la máquina remota.
 - **Tiempos CPU**: tiempos procesador consumidos por este usuario desde la conexión.
-- **Actividad**: ratio de tiempo que 4D Server dedica a este usuario (visualización dinámica). "Sleeping" if the remote machine has switched to sleep mode (see below).
+- **Actividad**: ratio de tiempo que 4D Server dedica a este usuario (visualización dinámica). "Dormindo" se a máquina remota entrou em modo de suspensão (veja abaixo).
 
 ### Gerir usuários adormecidos
 

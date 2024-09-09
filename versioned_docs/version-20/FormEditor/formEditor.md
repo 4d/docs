@@ -60,8 +60,8 @@ The toolbar contains the following elements:
 |![](../assets/en/FormEditor/zOrder.png)| [Entry order](#data-entry-order)| Switches to “Entry order” mode, where it is possible to view and change the current entry order of the form. Note that shields allow viewing the current entry order, while still working in the form. |
 |![](../assets/en/FormEditor/moving.png)| [Moving](#moving-objects)| Switches to “Move” mode, where it is possible to reach any part of the form quickly by using drag and drop in the window. The cursor takes the shape of a hand. This navigation mode is particularly useful when zooming in the form.|
 |![](../assets/en/FormEditor/zoom.png)| [Zoom](#zoom)| Allows modifying the form display percentage (100% by default). You can switch to “Zoom” mode by clicking on the magnifying glass or by clicking directly on the desired bar. This feature is detailed in previous section.|
-|![](../assets/en/FormEditor/alignment.png)| [Alignment](#aligning-objects)| This button is linked to a menu that allows aligning objects in the form. It is enabled (or not) depending on the objects selected.<p>Available only with CSS Preview None</p>|
-|![](../assets/en/FormEditor/distribution.png)| [Distribution](#distributing-objects)| This button is linked to a menu that allows distributing objects in the form. It is enabled (or not) depending on the objects selected.<p>Available only with CSS Preview None</p>|
+|![](../assets/en/FormEditor/alignment.png)| [Alignment](#aligning-objects)| This button is linked to a menu that allows aligning objects in the form. It is enabled (or not) depending on the objects selected.<br/>Disabled if one selected object position is locked by a CSS property|
+|![](../assets/en/FormEditor/distribution.png)| [Distribution](#distributing-objects)| This button is linked to a menu that allows distributing objects in the form. It is enabled (or not) depending on the objects selected.<br/>Disabled if one selected object position is locked by a CSS property|
 |![](../assets/en/FormEditor/level.png)| [Level](#layering-objects)| This button is linked to a menu that allows changing the level of objects in the form. It is enabled (or not) depending on the objects selected. |
 |![](../assets/en/FormEditor/group.png)| [Group/Ungroup](#grouping-objects)| This button is linked to a menu that allows grouping and ungrouping selections of objects in the form. It is enabled (or not) depending on the objects selected. |
 |![](../assets/en/FormEditor/displyAndPage.png)| [Display and page management](forms.html#form-pages)| This area allows passing from one form page to another and adding pages. To navigate among form pages, click the arrow buttons, or click the central area and choose the page to display from the menu that appears. If you click the right arrow button while the last form page is displayed, 4D allows you to add a page. |
@@ -517,9 +517,9 @@ The final list box:
 
 ## Insert fields
 
-The **Insert fields** button inserts all fields (except object and blob type fields) of the form table in the form, along with their labels and with respect to interface standards. This wizard is a shortcut to design basic entry forms or list forms. 
+The **Insert fields** button inserts all fields (except object and blob type fields) of the form table in the form, along with their labels and with respect to interface standards. This wizard is a shortcut to design basic entry forms or list forms.
 
-The **Insert fields** button is only available with table forms. 
+The **Insert fields** button is only available with table forms.
 
 The design of the resulting form depends on the form type:
 
@@ -594,9 +594,9 @@ There are three ways to access the View palette:
 - **Context menu** (form or object): Right-click anywhere in the Form Editor or an object, and select **Current View**
 
  ![](../assets/en/FormEditor/contextMenu.png)
-  
+
 The current view is indicated with a check mark (*e.g.*, "Work Address" in the image above)
-  
+
 - **Form menu**: Click on the **Form** menu and select **View List**
 
 ![](../assets/en/FormEditor/formMenu.png)

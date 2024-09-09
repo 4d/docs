@@ -5,7 +5,7 @@ title: On URL Filtering
 
 | Code | Peut être appelé par                        | Définition                            |
 | ---- | ------------------------------------------- | ------------------------------------- |
-| 51   | [Web Area](FormObjects/webArea_overview.md) | Une URL a été bloquée par la zone Web |
+| 51   | [Zone Web](FormObjects/webArea_overview.md) | Une URL a été bloquée par la zone Web |
 
 ## Description
 

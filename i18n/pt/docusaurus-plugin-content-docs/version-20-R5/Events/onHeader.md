@@ -19,6 +19,6 @@ In this context, the following sequence of calls to methods and form events is t
   - Método objeto con el evento `On Header`
   - Método formulario con el evento `On Header`
 
-> Printed records are handled using the [`On Display Detail`](onDisplayDetail.md) event.
+> Os registros impressos são tratados usando o evento [`On Display Detail`](onDisplayDetail.md).
 
 Llamar a un comando 4D que muestra una caja de diálogo desde el evento `On Header` no está permitido y provocará un error de sintaxis. Más concretamente, los comandos en cuestión son: `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION` y `MODIFY SELECTION`.

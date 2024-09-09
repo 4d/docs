@@ -18,7 +18,7 @@ The `On Web Connection` database method can be used as the entry point for the 4
 
 ### Chamadas métodos de base
 
-The `On Web Connection` database method is automatically called when the server reveives any URL that is not a path to an existing page on the server. O método da base de dados é chamado com o URL.
+The `On Web Connection` database method is automatically called when the server receives any URL that is not a path to an existing page on the server. O método da base de dados é chamado com o URL.
 
 For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*" will not call the database method if the page "c.html" exists in the "a/b" subfolder of the [WebFolder](webServerConfig.md#root-folder).
 
@@ -146,8 +146,12 @@ var $path : Text
 var $PictVar : Picture
 var $BlobVar : Blob
 
- //find the picture in the Images folder within the Resources folder 
-$path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd" READ PICTURE FILE($path;$PictVar) //put the picture in the picture variable PICTURE TO BLOB($PictVar;$BLOB;".png") //convert the picture to ".png" format WEB SEND BLOB($BLOB;"image/png")
+ //find the picture in the Images folder within the Resources folder
+$path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd"
+
+READ PICTURE FILE($path;$PictVar) //put the picture in the picture variable
+PICTURE TO BLOB($PictVar;$BLOB;".png") //convert the picture to ".png" format
+WEB SEND BLOB($BLOB;"image/png")
 ```
 
 ### 4DACCIÓN para publicar formulários
@@ -307,13 +311,13 @@ return false
   <h1>Welcome to Spiders United</h1>
   <p><b>Please enter your name:</b>
   <input name="vtUserName" value="" size="30" type="text"></p>
-  <p> 
-<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit"> 
+  <p>
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit">
 <input name="vsbRegister" value="Register" type="submit">
 <input name="vsbInformation" value="Information" type="submit"></p>
-<p> 
-<input name="vtNav_appName" value="" type="hidden"> 
-<input name="vtNav_appVersion" value="" type="hidden"> 
+<p>
+<input name="vtNav_appName" value="" type="hidden">
+<input name="vtNav_appVersion" value="" type="hidden">
 <input name="vtNav_appCodeName" value="" type="hidden">
 <input name="vtNav_userAgent" value="" type="hidden"></p>
 </form>
@@ -393,5 +397,3 @@ The 4D web server supports files uploaded in chunked transfer encoding from any 
 O método COMPILER\_WEB, se existir, é chamado sistematicamente quando o servidor HTTP recebe uma solicitação dinâmica e chama ao motor 4D. This is the case, for example, when the 4D Web server receives a posted form or a URL to process in [`On Web Connection`](#on-web-connection). This method is intended to contain typing and/or variable initialization directives used during Web exchanges. É utilizado pelo compilador quando a aplicação é compilada. O método COMPILER\_WEB é comum a todos os formulários Web. Por defeito, o método COMPILER_WEB não existe. É necessário criá-lo explicitamente.
 
 > The COMPILER_WEB project method is also called, if it exists, for each SOAP request accepted.
-
-

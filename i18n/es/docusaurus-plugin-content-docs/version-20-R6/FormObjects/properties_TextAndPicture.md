@@ -195,7 +195,7 @@ Por defecto, cuando un botón contiene un título y una imagen, los elementos se
 
 #### Objetos soportados
 
-[Button](button_overview.md) (all styles except Help) - [Check Box](checkbox_overview.md) (all styles except Regular, Flat, Disclosure and Collapse/Expand) - [Radio Button](radio_overview.md) (all styles except Regular, Flat, Disclosure and Collapse/Expand).
+[Botón](button_overview.md) (todos los estilos excepto Ayuda) - [Casilla de verificación](checkbox_overview.md) (todos los estilos excepto Normal, Plano, Revelar y Contraer/Expandir) - [Botón de radio](radio_overview.md) (todos los estilos excepto Normal, Plano, Revelar y Contraer/Expandir).
 
 ---
 
@@ -244,7 +244,7 @@ Cada opción precisa la relación entre el botón y el menú emergente asociado:
 
 :::info
 
-Refer to the [`On Alternative Click` event description](../Events/onAlternativeClick.md) for more information on the handling of events in this case.
+Consulte la descripción del evento [`On Alternative Click`](../Events/onAlternativeClick.md) para más información sobre la gestión de eventos en este caso.
 
 :::
 
@@ -260,4 +260,4 @@ Es importante señalar que la propiedad "Con menú emergente" sólo gestiona el 
 
 #### Objetos soportados
 
-[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Circle Button](button_overview.md#circle) - [Custom](button_overview.md#custom)
+[Botón de barra de herramientas](button_overview.md#toolbar) - [Botón biselado](button_overview.md#bevel) - [Botón biselado redondeado](button_overview.md#Rounded-bevel) - [Botón de degradado OS X](button_overview.md#os-x-gradient) - [Botón con textura OS X](button_overview.md#os-x-textured) - [Botón Office XP](button_overview.md#office-XP) - [Botón circular](button_overview.md#circle) - [Personalizado](button_overview.md#custom)

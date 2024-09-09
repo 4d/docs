@@ -17,11 +17,11 @@ title: VP Get selection
 
 #### Description
 
-The `VP Get selection` command <!-- REF #_method_.VP Get selection.Summary -->returns a new range object referencing the current selected cells<!-- END REF -->.
+La commande `VP Get selection` <!-- REF #_method_.VP Get selection.Summary -->retourne un nouvel objet plage référençant les cellules courantes sélectionnées<!-- END REF -->.
 
-In *vpAreaName*, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used.
+Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
 #### Exemple
 
@@ -33,7 +33,7 @@ Le code suivant récupèrera les coordonnées de la cellule active :
 $currentSelection:=VP Get selection("myVPArea")
 
  
-//returns a range object containing:  
+//retourne un objet plage contenant :  
 //$currentSelection.ranges[0].column=5
 //$currentSelection.ranges[0].columnCount=2
 //$currentSelection.ranges[0].row=8

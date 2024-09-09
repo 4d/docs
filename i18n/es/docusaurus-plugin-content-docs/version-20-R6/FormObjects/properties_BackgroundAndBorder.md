@@ -7,6 +7,8 @@ title: Fondo y borde
 
 Permite definir un color de fondo diferente para las líneas o columnas impares de un list box. Por defecto, *Automático* está seleccionado: la columna utiliza el color de fondo alternativo definido en el nivel del list box.
 
+También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
+
 #### Gramática JSON
 
 | Nombre        | Tipos de datos | Valores posibles                                                        |
@@ -25,6 +27,8 @@ Define el color de fondo de un objeto.
 
 En el caso de un list box, por defecto se selecciona *Automático*: la columna utiliza el color de fondo definido al nivel del list box.
 
+También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
+
 #### Gramática JSON
 
 | Nombre | Tipos de datos | Valores posibles                         |
@@ -33,7 +37,7 @@ En el caso de un list box, por defecto se selecciona *Automático*: la columna u
 
 #### Objetos soportados
 
-[Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
+[Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers) - [Óvalo](shapes_overview.md#oval) - [Rectángulo](shapes_overview.md#rectangle) - [Área de texto](text.md)
 
 #### Ver también
 
@@ -186,7 +190,7 @@ A continuación, quiere colorear las celdas con valores negativos en naranja osc
 
 ![](../assets/en/FormObjects/listbox_styles2.png)
 
-You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](https://doc.4d.com/4dv20/help/command/en/page1268.html) and [`LISTBOX SET ROW COLOR`](https://doc.4d.com/4dv20/help/command/en/page1270.html) commands. Tienen la ventaja de permitirle omitir el tener que predefinir arrays de estilo/color para las columnas: en su lugar son creadas dinámicamente por los comandos.
+Puede obtener el mismo resultado utilizando los comandos [`LISTBOX SET ROW FONT STYLE`](https://doc.4d.com/4dv20/help/command/en/page1268.html) y [`LISTBOX SET ROW COLOR`](https://doc.4d.com/4dv20/help/command/en/page1270.html). Tienen la ventaja de permitirle omitir el tener que predefinir arrays de estilo/color para las columnas: en su lugar son creadas dinámicamente por los comandos.
 
 #### Gramática JSON
 

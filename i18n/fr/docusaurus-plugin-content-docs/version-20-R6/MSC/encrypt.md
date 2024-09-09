@@ -32,7 +32,7 @@ Trois étapes sont nécessaires pour effectuer le tout premier chiffrement de vo
    Sinon, le message suivant s'affiche :
    ![](../assets/en/MSC/MSC_encrypt2.png)<p>
    Cela signifie que le statut **Chiffrable** défini pour au moins une table a été modifié et que le fichier de données n'a toujours pas été chiffré.
-   \*\*Note: \*\*The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).</p>
+   \*\*Note : \*\*Le même message s'affiche lorsque le statut **Encryptable** a été modifié dans un fichier de données déjà crypté ou après que le fichier de données a été décrypté (voir ci-dessous).</p>
 3. Cliquez sur le bouton image Chiffrer.\
    ![](../assets/en/MSC/MSC_encrypt3.png)\
    Vous serez invité à saisir une phrase secrète pour votre fichier de données:

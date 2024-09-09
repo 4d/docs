@@ -43,7 +43,7 @@ Case of
 End case 
 ```
 
-The [`On Web Connection`](httpRequests.md#on-web-connection) database method is called for incoming requests and receives the target URL in the `$1` parameter. Este código tan sencillo sólo envía el texto al navegador.
+El método base [`On Web Connection`](httpRequests.md#on-web-connection) se ejecuta para las solicitudes entrantes y recibe la URL de destino en el parámetro `$1`. Este código tan sencillo sólo envía el texto al navegador.
 
 3. En su navegador, introduzca la siguiente URL:
 
@@ -224,26 +224,26 @@ var $user; $info : Object
 ARRAY TEXT($anames; 0)
 ARRAY TEXT($avalues; 0)
 
-// get values sent in the header of the request
+// obtener los valores enviados en el encabezado de la petición
 WEB GET VARIABLES($anames; $avalues)
 
-// look for header login fields
+// busca los campos de inicio de sesión del encabezado
 $indexUserId:=Find in array($anames; "userId")
 $userId:=$avalues{$indexUserId}
 $indexPassword:=Find in array($anames; "password")
 $password:=$avalues{$indexPassword}
 
-//look for a user with the entered name in the users table
+//buscar un usuario con el nombre introducido en la tabla de usuarios
 $user:=ds.WebUsers.query("userId = :1"; $userId).first()
 
-If ($user#Null) //a user was found
-		//check the password
+If ($user#Null) //se encontró un usuario
+		//comprobar la contraseña
     If (Verify password hash($password; $user.password))
-    		//password ok, fill the session
+    		//password ok, llenar la sesión
         $info:=New object()
         $info.userName:=$user.firstName+" "+$user.lastName
         Session.setPrivileges($info)
-        	//You can use the user session to store any information
+        	//Puede utilizar la sesión de usuario para almacenar cualquier información
         WEB SEND TEXT("Welcome "+Session.userName)
     Else 
         WEB SEND TEXT("Wrong user name or password.")

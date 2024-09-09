@@ -9,7 +9,7 @@ Esta clase está disponible en el "class store" de `4D`.
 
 :::info Ver también
 
-For a comprehensive overview of this class, please refer to the [**CryptoKey: encrypt, decrypt, sign, and verify!**](https://blog.4d.com/cryptokey-encrypt-decrypt-sign-and-verify/) blog post.
+Para obtener una visión general de esta clase, consulte la entrada del blog [**CryptoKey: cifrar, descifrar, firmar y verificar**](https://blog.4d.com/cryptokey-encrypt-decrypt-sign-and-verify/).
 
 :::
 
@@ -45,7 +45,7 @@ For a comprehensive overview of this class, please refer to the [**CryptoKey: en
 | Parámetros | Tipo                         |    | Descripción                                       |
 | ---------- | ---------------------------- | -- | ------------------------------------------------- |
 | settings   | Object                       | -> | Parámetros para generar o cargar un par de llaves |
-| result     | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado  |
+| resultado  | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado  |
 
 <!-- END REF -->
 
@@ -66,9 +66,9 @@ El objeto `CryptoKey` devuelto encapsula un par de llaves de cifrado. Es un obje
 
 #### Ejemplo 1
 
-A message is signed by a private key and the signature is verified by the corresponding public key. The following code signs and verifies a simple message signature.
+Un mensaje está firmado por una llave privada y la firma es verificada por la llave pública correspondiente. El siguiente código firma y verifica una firma de mensaje simple.
 
-- Bob's side:
+- Lado bob:
 
 ```4d
 // Create the message
@@ -88,21 +88,21 @@ Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
 /*Bob sends the message, the public key and the signature to Alice*/
 ```
 
-- Alice's side:
+- Lado Alice:
 
 ```4d
-// Get message, public key & signature
+// Obtener mensaje, llave pública y firma
 $message:=Folder(fk desktop folder).file("message.txt").getText()
 $publicKey:=Folder(fk desktop folder).file("public.pem").getText()
-$signature:=Folder(fk desktop folder).file("signature").getText()
+$signature:=Folder(fk desktop folder).file("signature"). etText()
 
-// Create a key
+// Crear una llave
 $type:=New object("type";"PEM";"pem";$publicKey)
 $key:=4D.CryptoKey.new($type)
 
-// Verify signature
+// Verificar la firma
 If ($key.verify($message;$signature;$type).success)
-// The signature is valid
+// La firma es válida
 
 End if
 ```
@@ -185,7 +185,7 @@ La función devuelve un objeto status con la propiedad `success` definida en `tr
 | Propiedad | Tipo       | Descripción                                                              |
 | --------- | ---------- | ------------------------------------------------------------------------ |
 | success   | boolean    | True si el mensaje ha sido descifrado con éxito                          |
-| result    | text       | Mensaje descifrado y decodificado utilizando `options.encodingDecrypted` |
+| resultado | text       | Mensaje descifrado y decodificado utilizando `options.encodingDecrypted` |
 | errors    | collection | Si `success` es `false`, puede contener una colección de errores         |
 
 En caso de que *message* no haya podido ser descifrado por no haber sido cifrado con la misma clave o algoritmo, el objeto `status` devuelto contiene una colección de errores en `status.errors`.

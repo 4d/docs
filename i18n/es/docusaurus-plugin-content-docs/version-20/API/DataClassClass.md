@@ -463,6 +463,13 @@ En el parámetro opcional *settings* se puede pasar un objeto que contenga opcio
 | --------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | context   | Text | Etiqueta para el contexto de optimización automática aplicado a la entidad. Este contexto será utilizado por el código siguiente que carga la entidad para que pueda beneficiarse de la optimización. Esta funcionalidad está [diseñada para el procesamiento cliente/servidor ORDA](ORDA/entities.md#client-server-optimization). |
 
+:::info
+
+Cuando se llama a la función `.get()` **sin** parámetro de *configuración*, se envía directamente al servidor una petición de valores de atributos (no se utiliza la [caché ORDA](../ORDA/entities.md#orda-cache)). Por otro lado, cuando se llama a la función `.get()` **con** un `contexto` pasado en el parámetro *settings*, los valores de los atributos se recuperan de la caché ORDA correspondiente al contexto. En este caso, puede ser aconsejable llamar a [`reload()`](EntityClass.md#reload) para asegurarse de recuperar los datos más recientes del servidor.
+
+:::
+
+
 #### Ejemplo 1
 
 ```4d
@@ -515,7 +522,7 @@ Este ejemplo ilustra el uso de la propiedad *context*:
 <!-- REF #DataClassClass.getCount().Params -->
 | Parámetros | Tipo    |    | Descripción                                                    |
 | ---------- | ------- | -- | -------------------------------------------------------------- |
-| result     | Integer | <- | Número de entidades en la dataclass|<!-- END REF -->
+| resultado  | Integer | <- | Número de entidades en la dataclass|<!-- END REF -->
 
 |
 
@@ -682,7 +689,7 @@ La función `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->devuelve 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
 | Parámetros | Tipo   |    | Descripción                                                                                          |
 | ---------- | ------ | -- | ---------------------------------------------------------------------------------------------------- |
-| result     | Object | <- | Objeto que describe el contenido de la caché ORDA para la clase de datos.|<!-- END REF -->
+| resultado  | Object | <- | Objeto que describe el contenido de la caché ORDA para la clase de datos.|<!-- END REF -->
 
 
 |
@@ -1044,7 +1051,7 @@ ds.Class.info:
 Considere los siguientes resultados:
 
 ```4d
-¡ds.Class.query("info.coll[].val = :1";0) 
+ds.Class.query("info.coll[].val = :1";0)
 // devuelve B y C
 // encuentra "entidades con 0 en al menos una propiedad val"
 
@@ -1052,7 +1059,7 @@ ds.Class.query("info.coll[].val != :1";0)
 // sólo devuelve A
 // encuentra "entidades en las que todas las propiedades val son distintas de 0"
 // lo que equivale a 
-ds.Class.query(not("info.coll[].val = :1";0)) 
+ds.Class.query(not("info.coll[].val = :1";0))
 ```
 
 Si desea implementar una búsqueda que encuentre entidades en las que "al menos una propiedad sea diferente del valor **", deberá utilizar una notación especial utilizando una letra en el `[]`:

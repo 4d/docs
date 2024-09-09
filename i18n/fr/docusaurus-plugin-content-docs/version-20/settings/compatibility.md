@@ -1,16 +1,16 @@
 ---
 id: compatibility
-title: Page de compatibilité
+title: Page Compatibilité
 ---
 
 La page Compatibilité regroupe les paramètres relatifs au maintien de la compatibilité avec les versions précédentes de 4D.
 
 > ainsi que des paramétrages modifiés dans ce(tte) base/projet.   
-> Cette page liste les options de compatibilité disponibles pour les bases/projets converti(e) s depuis 4D v18 et les versions plus récentes. Pour les options de compatibilité plus anciennes, consultez la [page Compatibilité](https://doc.4d.com/4Dv19R3/4D/19-R3/Compatibility-page.300-5612610.en.html) sur **doc.4d.com**.
+> Cette page liste les options de compatibilité disponibles pour les bases/projets converti(e) s depuis 4D v18 et les versions plus récentes. For older compatibility options, refer to the [Compatibility page](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) on **doc.4d.com**.
 
 - **Utiliser l'ancienne couche réseau** : à compter de 4D v15, les applications 4D proposent une nouvelle couche réseau, nommée *ServerNet*, pour gérer les communications entre 4D Server et les postes 4D distants (clients). L'ancienne couche réseau devient obsolète, mais est conservée pour assurer la compatibilité des bases existantes. A l'aide de cette option, vous pouvez activer ou désactiver à tout moment l'ancienne couche réseau dans vos applications 4D Server en fonction de vos besoins. *ServerNet* est automatiquement activé dans les nouvelles bases et les bases converties depuis les versions 15 et les versions plus récentes. A noter qu'en cas de modification de l'option, vous devez redémarrer l'application pour que le changement soit pris en compte. Toute application cliente qui était connectée doit également être redémarrée afin de se connecter avec la nouvelle couche réseau. **Note :** Cette option peut également être gérée par programmation via la commande `SET DATABASE PARAMETER`.
 
-- **Utiliser XPath standard** : Par défaut, cette option est décochée pour les bases converties à partir d'une version 4D antérieure à la v18 R3 et est cochée pour les bases créées sous une version 4D v18 R3 ou une version plus récente. A partir de v18 R3, l'implémentation de XPath dans 4D a été modifiée pour une meilleure conformité et pour la prise en charge d'un plus grand nombre de prédicats. Par conséquent, les fonctionnalités non standard de l'implémentation antérieure ne fonctionnent plus. Elles incluent :
+- **Utiliser XPath standard** : Par défaut, cette option est décochée pour les bases converties à partir d'une version 4D antérieure à la v18 R3 et est cochée pour les bases créées sous une version 4D v18 R3 ou une version plus récente. A partir de la version 18 R3, l'implémentation de XPath dans 4D a été modifiée pour une meilleure conformité et pour la prise en charge d'un plus grand nombre de prédicats. Par conséquent, les fonctionnalités non standard de l'implémentation antérieure ne fonctionnent plus. Elles incluent :
     * le caractère "/" initial n'est pas seulement le noeud racine - l'utilisation du caractère / comme premier caractère d'une expression XPath ne déclare pas un chemin absolu à partir du noeud racine
     * pas de noeud courant implicite - le noeud courant doit être intégré dans l'expression XPath
     * pas de requêtes récursives dans les structures répétées - seul le premier élément est parsé. \

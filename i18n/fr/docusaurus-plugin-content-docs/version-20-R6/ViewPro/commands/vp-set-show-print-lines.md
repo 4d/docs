@@ -19,11 +19,11 @@ title: VP SET SHOW PRINT LINES
 
 The `VP SET SHOW PRINT LINES` command <!-- REF #_method_.VP SET SHOW PRINT LINES.Summary --> sets whether to display print preview lines in a spreadsheet.<!-- END REF -->.
 
-In *vpAreaName*, pass the name of the 4D View Pro area.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 In *visible*, pass `True` to display the print lines, and `False` to hide them. `True` is passed by default.
 
-In *sheet*, pass the index of the target sheet. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 
 > La numérotation démarre à 0.
 

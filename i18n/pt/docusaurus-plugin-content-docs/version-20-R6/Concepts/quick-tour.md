@@ -45,7 +45,7 @@ A palavra-chave `var` permite declarar variáveis de objeto de um tipo de classe
 
 ```4d
 var myPerson : cs.Person
-//variable of the Person user class
+//variável da classe usuário Person
 ```
 
 Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
@@ -155,9 +155,9 @@ Há casos em que é necessário armazenar dados como um tipo e utilizá-los como
 [Products]Part Number:=String(Number)+"abc"
 ```
 
-If *Number* is 17, then *[Products]Part Number* will get the string “17abc”.
+Se *Number* for 17, então *[Products]Part Number* obterá a string "17abc".
 
-Los tipos de datos están completamente definidos en la sección [Tipos de datos](Concepts/data-types.md).
+Os tipos de dados são totalmente definidos na seção [Data Types](Concepts/data-types.md).
 
 ## Objectos e colecções
 
@@ -226,11 +226,11 @@ $f.message() //displays "Hello world!"
 Opcionalmente, use a palavra-chave `Class constructor` para declarar as propriedades do objeto.
 
 ```4d
-//in the Rectangle.4dm file
-Class constructor ($width : Integer; $height : Integer)
+//no arquivo Rectangle.4dm
+Construtor de classe ($height: Integer; $width : Integer)
 This.height:=$height
 This.width:=$width
-This.name:="Rectangle"
+This.name:="Retângulo"
 ```
 
 Uma classe pode estender outra classe usando `Class extends <ClassName>`. Las superclasses se pueden llamar con el comando `Super`. Por exemplo:
@@ -343,7 +343,7 @@ $str:=String("hello world!")
 ```4d
 $str:=String("hello"+\
 " world"+\
-+"!")
+"!")
 ```
 
 ## Comentários
@@ -369,7 +369,7 @@ Insira `//` no início de uma linha ou após uma instrução para adicionar um c
  End for
 ```
 
-#### Comentarios en línea o multilínea (`/*comment*/`)
+#### Comentários em linha ou em várias linhas (`/*comment*/`)
 
 Contorne o conteúdo com `/*` ... caracteres `*/` para criar comentários em linha ou blocos de comentários de várias linhas. Ambos os blocos de comentário em linha e em várias linhas começam com `/*` e terminam com `*/`.
 

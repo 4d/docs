@@ -1994,7 +1994,8 @@ Une list box affiche l'entity selection Form.students, sur laquelle plusieurs cl
 
 #### Voir également
 
-[`.clean()`](#clean)
+[`.clean()`](#clean)<br/>
+[dataClass.clearRemoteCache()](DataClassClass.md#clearremotecache)
 
 <!-- END REF -->
 

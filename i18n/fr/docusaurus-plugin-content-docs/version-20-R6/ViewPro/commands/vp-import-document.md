@@ -25,26 +25,26 @@ title: VP IMPORT DOCUMENT
 
 #### Description
 
-The `VP IMPORT DOCUMENT` command <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->imports and displays the document designated by *filePath* in the 4D View Pro area *vpAreaName*<!-- END REF -->. Le document importé remplace toutes les données déjà présentes dans la zone.
+La commande `VP IMPORT DOCUMENT` <!-- REF #_method_.VP IMPORT DOCUMENT. ummary -->importe et affiche le document désigné par *filePath* dans la zone 4D View Pro *vpAreaName*<!-- END REF -->. Le document importé remplace toutes les données déjà présentes dans la zone.
 
-In *vpAreaName*, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-In *filePath*, pass the path and name of the document to be imported. Les formats suivants sont pris en charge :
+Dans *filePath*, passez le chemin et le nom du document à importer. Les formats suivants sont pris en charge :
 
 - Les documents 4D View Pro (extension ".4vp")
 - Microsoft Excel (extension ".xlsx")
 - documents texte (extension ".txt", ".csv", le document doit être en utf-8)
-- [SpreadJS documents](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (extension ".sjs")
+- [Documents SpreadJS](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (extension ".sjs")
 
-If the document extension is not a recognized extension, such as `.4vp` or `.xlsx`, the document is considered a text document. Vous devez passer un chemin d'accès complet, sauf si le document est situé au même niveau que le dossier Project, auquel cas vous pouvez simplement passer son nom.
+Si l'extension du document n'est pas une extension reconnue, telle que `.4vp` ou `.xlsx`, le document est considéré comme un document texte. Vous devez passer un chemin d'accès complet, sauf si le document est situé au même niveau que le dossier Project, auquel cas vous pouvez simplement passer son nom.
 
-An error is returned if the `filePath` parameter is invalid, or if the file is missing or malformed.
+Une erreur est retournée si le paramètre `filePath` est invalide, ou si le fichier est manquant ou mal-formé.
 
-The optional *paramObj* parameter allows you to define properties for the imported document:
+Le paramètre optionnel *paramObj* vous permet de définir les propriétés du document importé:
 
 | Paramètres |                     | Type                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ---------- | ------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula    |                     | 4D.Function | Une méthode callback à lancer lorsque l'import est terminé. You must use a formula returned by the [`Formula`](../../API/FunctionClass.md#formula) command. See [Passing a callback method (formula)](vp-export-document.md#passing-a-callback-method-formula).                                                                                                                            |
+| formula    |                     | 4D.Function | Une méthode callback à lancer lorsque l'import est terminé. Vous devez utiliser une formule retournée par la commande [`Formula`](../../API/FunctionClass.md#formula). See [Passing a callback method (formula)](vp-export-document.md#passing-a-callback-method-formula).                                                                                                                 |
 | password   |                     | text                        | Microsoft Excel uniquement (optionnel) - Mot de passe utilisé pour protéger un document Microsoft Excel.                                                                                                                                                                                                                                                                                                                   |
 | csvOptions |                     | object                      | options d'import csv                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |            | range               | object                      | Plage de cellules contenant la première cellule dans laquelle les données seront saisies. Si la plage spécifiée n'est pas une plage de cellules, seule la première cellule de la plage est utilisée.                                                                                                                                                                                                                          |
@@ -63,7 +63,7 @@ The optional *paramObj* parameter allows you to define properties for the import
 
 - Importing files in .xslx, .csv, and .sjs formats is **asynchronous**. With these formats, you must use the `formula` attribute if you want to start an action at the end of the document processing.
 - When importing a Microsoft Excel-formatted file into a 4D View Pro document, some settings may be lost. You can verify your settings with [this list from SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
-- For more information on the CSV format and delimiter-separated values in general, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
+- Pour plus d'informations sur le format CSV et les valeurs séparées par des délimiteurs en général, voir [cet article sur Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
 
 :::
 
@@ -106,7 +106,7 @@ End if
 
 #### Exemple 3
 
-You want to import a `.txt` file that uses a comma (",") as delimiter:
+Vous souhaitez importer un fichier `.txt` qui utilise une virgule (",") comme délimiteur:
 
 ![example-import-csv](../../assets/en/ViewPro/vp-import-document-csv.png)
 
@@ -116,7 +116,7 @@ $params.range:=VP Cells("ViewProArea";0;0;2;5)
 VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOptions";$params))
 ```
 
-Here's the result:
+Voici le résultat :
 ![example-import-csv](../../assets/en/ViewPro/vp-import-document-csv-result.png)
 
 #### Voir également

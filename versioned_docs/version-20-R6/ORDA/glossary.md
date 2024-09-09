@@ -9,27 +9,27 @@ title: Glossary
 
 
 
-## Action 
+## Action
 
 Every action that can be done on a [resource](#resource). Available actions are: create, read, update, drop, execute, promote, and describe.
 
-## Attribute 
- 
+## Attribute
+
 An attribute is the smallest storage cell in a relational database (see also [Relation attribute](#relation-attribute)). Do not confuse dataclass attributes and entity attributes:
 
 *	In a dataclass object, each property is a dataclass attribute that maps to a corresponding field in the corresponding table (same name and type).
 *	In an entity object, entity attributes are properties that contain values for the corresponding datastore attributes.
 
->*Attributes* and *properties* are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object. 
+>*Attributes* and *properties* are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
 
 ## AttributePath  
 
-An attributePath is the path of an attribute inside a given dataclass or entity. See also [PropertyPath](#propertyPath).
+An attributePath is the path of an attribute inside a given dataclass or entity. See also [PropertyPath](#propertypath).
 
 
 ## Class code
 
-Code for the user class function(s). 
+Code for the user class function(s).
 
 
 ## Computed attribute
@@ -38,7 +38,7 @@ A computed attribute doesn't actually store information. Instead, it determines 
 
 ## Data model class
 
-Extended class available for a data model object. 
+Extended class available for a data model object.
 
 ## Data model object
 
@@ -57,7 +57,7 @@ A dataclass is related to a single datastore.
 
 ## DataClass class
 
-Class for specific dataclass objects, in which you can add custom functions. 
+Class for specific dataclass objects, in which you can add custom functions.
 
 ## Datastore  
 
@@ -68,21 +68,21 @@ A datastore provides:
 *	a connection to the 4D database
 *	a set of dataclasses to work with the database
 
-The database can be a 4D local database (the Main datastore), or a 4D Server database exposed as REST resource (a Remote datastore). 
+The database can be a 4D local database (the Main datastore), or a 4D Server database exposed as REST resource (a Remote datastore).
 
 A datastore references only a single database. It is, however, possible to open several datastores to access several databases.
 
 ## DataStore class
 
-Class for datastore objects, in which you can add custom functions. 
+Class for datastore objects, in which you can add custom functions.
 
 
 ## DataStoreImplementation
 
 Internal name of the generic DataStore class in the `4D` class store.
 
-## Deep copy 
- 
+## Deep copy
+
 A deep copy duplicates an object and all the references it contains. After a deep copy, a copied collection contains duplicated elements and thus, new references, of all of the orginal elements. See also Shallow copy.
 
 ## ds  
@@ -113,19 +113,19 @@ An entity selection can also be empty.
 
 ## Generic class
 
-Built-in class for ORDA objects such as entities, or dataclasses. Functions and properties of generic classes are automatically available in user extended classes, e.g. `EmployeeEntity`. 
+Built-in class for ORDA objects such as entities, or dataclasses. Functions and properties of generic classes are automatically available in user extended classes, e.g. `EmployeeEntity`.
 
 
-## Lazy loading 
- 
+## Lazy loading
+
 Since entities are managed as references, data is loaded only when necessary, i.e. when accessing it in the code or through interface widgets. This optimization principle is called lazy loading.
 
 ## Main datastore  
 
-The Datastore object matching the opened 4D database (standalone or client/server). The main datastore is returned by the ds command. 
+The Datastore object matching the opened 4D database (standalone or client/server). The main datastore is returned by the ds command.
 
-## Method 
- 
+## Method
+
 ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. They provide specific methods to directly interact with them. These methods are also called member functions. Such methods are used by calling them on an instance of the object.
 
 For example, the `query()` method is a dataclass member function. If you have stored a dataclass object in the `$myClass` variable, you can write:
@@ -209,23 +209,23 @@ An ORDA element on which any [action](#action) can be allowed or not according t
 
 ## Role
 
-A role is a published [privilege](#privilege) intended to be used by an administrator. It can contain one or more privileges. 
+A role is a published [privilege](#privilege) intended to be used by an administrator. It can contain one or more privileges.
 
 
 ## Session  
 
-When the 4D application connects to a Remote datastore, a session is created on the 4D Server (HTTP). A session cookie is generated and associated to the local datastore id. 
+When the 4D application connects to a Remote datastore, a session is created on the 4D Server (HTTP). A session cookie is generated and associated to the local datastore id.
 
 Each time a new session is opened, a license is used. Each time a session is closed, the license is freed.
 
 Inactive sessions are automatically closed after a timeout. The default timeout is 48 hours, it can be set by the developer (it must be >= 60 minutes).  
 
-## Shallow copy 
- 
+## Shallow copy
+
 A shallow copy only duplicates the structure of elements, and keeps the same internal references. After a shallow copy, two collections will both share the individual elements. See also Deep copy.
 
-## Stamp 
- 
+## Stamp
+
 Used in "optimistic" locking technology. All entities have an internal counter, the stamp, which is incremented each time the entity is saved. By automatically comparing stamps between an entity being saved and its version stored on disk, 4D can prevent concurrent modifications on the same entities.
 
 ## Storage attribute

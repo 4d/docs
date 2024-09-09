@@ -19,12 +19,14 @@ If a user attempts to execute an action and does not have the appropriate access
 
 ## Resources
 
-You can assign specific permission actions to the following exposed resources in your project:
+You can assign specific permission actions to the following resources in your project:
 
 - o armazenamento de dados
 - uma classe de dados
 - um atributo (inclusive calculado e aliases)
 - uma função de classe de modelo de dados
+
+Each time a resource is accessed within a session (whatever the way it is accessed), 4D checks that the session has the appropriate permissions, and rejects the access if it is not authorized.
 
 A permission action defined at a given level is inherited by default at lower levels, but several permissions can be set:
 
@@ -34,7 +36,7 @@ A permission action defined at a given level is inherited by default at lower le
 
 :::info
 
-Permissions control access to datastore objects. Si desea filtrar los datos leídos según algún criterio, puede considerar [restringir las selecciones de entidades](entities.md#restricting-entity-selections) que puede ser más apropiado en este caso.
+As permissões controlam o acesso aos objetos do datastore. Si desea filtrar los datos leídos según algún criterio, puede considerar [restringir las selecciones de entidades](entities.md#restricting-entity-selections) que puede ser más apropiado en este caso.
 
 :::
 
@@ -57,7 +59,7 @@ As ações disponíveis estão relacionadas com o recurso alvo.
 - An alias can be read as soon as the session privileges allow the access to the alias itself, even if the session privileges do no allow the access to the attributes resolving the alias.
 - A computed attribute can be accessed even if there are no permissions on the attributes upon which it is built.
 - Valores por defecto: en la implementación actual, solo _Null_ está disponible como valor por defecto.
-- In REST [force login mode](../REST/authUsers.md/#force-login-mode), the [`authentify()` function](../REST/authUsers.md#function-authentify) is always executable by guest users, whatever the permissions configuration.
+- No REST [modo de login](../REST/authUsers.md/#force-login-mode), a [função `authentify()`](../REST/authUsers.md#function-authentify) é sempre executável por usuários convidados, independentemente da configuração das permissões.
 
 A definição das permissões deve ser coerente, nomeadamente:
 

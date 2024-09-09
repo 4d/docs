@@ -19,12 +19,14 @@ Webユーザーまたは RESTユーザーがログインすると、そのセッ
 
 ## リソース
 
-プロジェクト内の以下の公開リソースに対して、許諾アクションと権限名を割り当てることができます (この設定をパーミッションと呼びます):
+プロジェクト内の以下のリソースに対して、許諾アクションと権限名を割り当てることができます (この設定をパーミッションと呼びます):
 
 - データストア
 - データクラス
 - 属性 (計算属性およびエイリアス属性を含む)
 - データモデルクラス関数
+
+セッションがリソースにアクセスするたびに (アクセス形式に関係なく)、4D はセッションの権限を確認し、許可されていない場合にはアクセスを拒否します。
 
 あるレベルにおいて定義されたパーミッションは基本的に下位レベルに継承されますが、パーミッションは複数のレベルで設定することもできます:
 
@@ -113,26 +115,26 @@ _Qodly_ (クラウド) 以外のコンテキストでは、このファイルを
 
 `roles.json` ファイルの構文は次のとおりです:
 
-| プロパティ名      |                                                                                     |                                                                                   | タイプ                        | 必須 | 説明                                                                                 |
-| ----------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------- | -- | ---------------------------------------------------------------------------------- |
-| privileges  |                                                                                     |                                                                                   | `privilege` オブジェクトのコレクション  | ○  | 定義された権限のリスト                                                                        |
-|             | \[].privilege  |                                                                                   | String                     |    | アクセス権の名称                                                                           |
-|             | \[].includes   |                                                                                   | String の Collection        |    | 内包する権限名のリスト                                                                        |
-| roles       |                                                                                     |                                                                                   | `role` オブジェクトのコレクション       |    | 定義されたロールのリスト                                                                       |
-|             | \[].role       |                                                                                   | String                     |    | ロール名                                                                               |
-|             | \[].privileges |                                                                                   | String の Collection        |    | 内包する権限名のリスト                                                                        |
-| permissions |                                                                                     |                                                                                   | Object                     | ○  | 設定されたパーミッションのリスト                                                                   |
-|             | allowed                                                                             |                                                                                   | `permission` オブジェクトのコレクション |    | 許可されたパーミッションのリスト                                                                   |
-|             |                                                                                     | \[].applyTo  | String                     | ○  | 対象の [リソース](#リソース) 名                                                                |
-|             |                                                                                     | \[].type     | String                     | ○  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method" |
-|             |                                                                                     | \[].read     | String の Collection        |    | 権限名のリスト                                                                            |
-|             |                                                                                     | \[].create   | String の Collection        |    | 権限名のリスト                                                                            |
-|             |                                                                                     | \[].update   | String の Collection        |    | 権限名のリスト                                                                            |
-|             |                                                                                     | \[].drop     | String の Collection        |    | 権限名のリスト                                                                            |
-|             |                                                                                     | \[].describe | String の Collection        |    | 権限名のリスト                                                                            |
-|             |                                                                                     | \[].execute  | String の Collection        |    | 権限名のリスト                                                                            |
-|             |                                                                                     | \[].promote  | String の Collection        |    | 権限名のリスト                                                                            |
-| forceLogin  |                                                                                     |                                                                                   | Boolean                    |    | ["forceLogin" モード](../REST/authUsers.md#force-login-mode) を有効にする場合は true           |
+| プロパティ名      |                                                                                     |                                                                                   | 型                               | 必須 | 説明                                                                                 |
+| ----------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------- | -- | ---------------------------------------------------------------------------------- |
+| privileges  |                                                                                     |                                                                                   | `privilege` オブジェクトの Collection  | ○  | 定義された権限のリスト                                                                        |
+|             | \[].privilege  |                                                                                   | String                          |    | アクセス権の名称                                                                           |
+|             | \[].includes   |                                                                                   | String の Collection             |    | 内包する権限名のリスト                                                                        |
+| roles       |                                                                                     |                                                                                   | `role` オブジェクトの Collection       |    | 定義されたロールのリスト                                                                       |
+|             | \[].role       |                                                                                   | String                          |    | ロール名                                                                               |
+|             | \[].privileges |                                                                                   | String の Collection             |    | 内包する権限名のリスト                                                                        |
+| permissions |                                                                                     |                                                                                   | Object                          | ○  | 設定されたパーミッションのリスト                                                                   |
+|             | allowed                                                                             |                                                                                   | `permission` オブジェクトの Collection |    | 許可されたパーミッションのリスト                                                                   |
+|             |                                                                                     | \[].applyTo  | String                          | ○  | 対象の [リソース](#リソース) 名                                                                |
+|             |                                                                                     | \[].type     | String                          | ○  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method" |
+|             |                                                                                     | \[].read     | String の Collection             |    | 権限名のリスト                                                                            |
+|             |                                                                                     | \[].create   | String の Collection             |    | 権限名のリスト                                                                            |
+|             |                                                                                     | \[].update   | String の Collection             |    | 権限名のリスト                                                                            |
+|             |                                                                                     | \[].drop     | String の Collection             |    | 権限名のリスト                                                                            |
+|             |                                                                                     | \[].describe | String の Collection             |    | 権限名のリスト                                                                            |
+|             |                                                                                     | \[].execute  | String の Collection             |    | 権限名のリスト                                                                            |
+|             |                                                                                     | \[].promote  | String の Collection             |    | 権限名のリスト                                                                            |
+| forceLogin  |                                                                                     |                                                                                   | Boolean                         |    | ["forceLogin" モード](../REST/authUsers.md#force-login-mode) を有効にする場合は true           |
 
 :::caution 注記
 

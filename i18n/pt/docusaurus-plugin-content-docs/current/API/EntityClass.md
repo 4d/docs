@@ -157,7 +157,7 @@ As diferenças são retornadas como uma coleção de objetos cujas propriedades 
 | value               | any - Depende do tipo de atributo | Valor do atributo na entidade          |
 | otherValue          | any - Depende do tipo de atributo | Valor do atributo em *entityToCompare* |
 
-Apenas atributos com valores diferentes estão incluídos na coleção. If no differences are found, `.diff()` returns an empty collection.
+Apenas atributos com valores diferentes estão incluídos na coleção. Se nenhuma diferença for encontrada, `.diff()` retorna uma coleção vazia.
 
 The function applies for properties whose [kind](DataClassClass.md#attributename) is **storage** or **relatedEntity**. In case a related entity has been updated (meaning the foreign key), the name of the related entity and its primary key name are returned as *attributeName* properties (*value* and *otherValue* are empty for the related entity name).
 
@@ -335,10 +335,10 @@ vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
 
 <!-- REF #EntityClass.drop().Params -->
 
-| Parâmetro  | Tipo    |     | Descrição                                                                                       |
-| ---------- | ------- | :-: | ----------------------------------------------------------------------------------------------- |
-| mode       | Integer |  -> | `dk force drop if stamp changed`: Forces the drop even if the stamp has changed |
-| Resultados | Object  |  <- | Resultado da operação de exclusão                                                               |
+| Parâmetro  | Tipo    |     | Descrição                                                                                      |
+| ---------- | ------- | :-: | ---------------------------------------------------------------------------------------------- |
+| mode       | Integer |  -> | `dk force drop if stamp changed`: força o drop mesmo se a estampa tenha mudado |
+| Resultados | Object  |  <- | Resultado da operação de exclusão                                                              |
 
 <!-- END REF -->
 
@@ -354,7 +354,7 @@ Otherwise, you can pass the `dk force drop if stamp changed` option in the *mode
 
 **Resultado**
 
-The object returned by `.drop( )` contains the following properties:
+O objeto retornado por `.drop( )` contém as seguintes propriedades:
 
 | Propriedade                       |                                     | Tipo                   | Descrição                                                                                                                                                                                                |
 | --------------------------------- | ----------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -389,7 +389,7 @@ The object returned by `.drop( )` contains the following properties:
 
 #### Exemplo 1
 
-Example without `dk force drop if stamp changed` option:
+Exemplo sem a opção `dk force drop if stamp changed`:
 
 ```4d
  var $employees : cs.EmployeeSelection
@@ -664,7 +664,7 @@ As chaves primárias podem ser números (Inteiro) ou strings. You can "force" th
 
 <!-- END REF -->
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
+> **Modo avançado:** Essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
@@ -936,10 +936,10 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 <!-- REF #EntityClass.lock().Params -->
 
-| Parâmetro  | Tipo    |     | Descrição                                                                            |
-| ---------- | ------- | :-: | ------------------------------------------------------------------------------------ |
-| mode       | Integer |  -> | `dk reload if stamp changed`: Reload before locking if stamp changed |
-| Resultados | Object  |  <- | Resultado da operação de bloqueio                                                    |
+| Parâmetro  | Tipo    |     | Descrição                                                                                         |
+| ---------- | ------- | :-: | ------------------------------------------------------------------------------------------------- |
+| mode       | Integer |  -> | `dk reload if stamp changed`: Recarregar antes de bloquear se o selo for alterado |
+| Resultados | Object  |  <- | Resultado da operação de bloqueio                                                                 |
 
 <!-- END REF -->
 
@@ -962,12 +962,12 @@ Otherwise, you can pass the `dk reload if stamp changed` option in the *mode* pa
 
 **Resultado**
 
-The object returned by `.lock()` contains the following properties:
+O objeto retornado por `.lock()` contém as seguintes propriedades:
 
 | Propriedade                       |                                     | Tipo                   | Descrição                                                                                                                                                                                                                                                                                                                                                                                    |
 | --------------------------------- | ----------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success                           |                                     | boolean                | true se a ação de bloqueio for bem sucedida (ou se a entidade já estiver bloqueada no processo atual), falso caso contrário.                                                                                                                                                                                                                              |
-|                                   |                                     |                        | ***Available only if `dk reload if stamp changed` option is used:***                                                                                                                                                                                                                                                                                                         |
+|                                   |                                     |                        | ***Disponível somente se a opção `dk reload if stamp changed` for usada:***                                                                                                                                                                                                                                                                                                  |
 | **wasReloaded**                   |                                     | boolean                | verdadeiro se a entidade foi recarregada com sucesso, falso caso contrário.                                                                                                                                                                                                                                                                                                  |
 |                                   |                                     |                        | ***Disponível apenas em caso de erro:***                                                                                                                                                                                                                                                                                                                                     |
 | status(\*)     |                                     | number                 | Código de erro, ver abaixo                                                                                                                                                                                                                                                                                                                                                                   |
@@ -1021,7 +1021,7 @@ Exemplo com erro:
 
 #### Exemplo 2
 
-Example with `dk reload if stamp changed` option:
+Exemplo com a opção `dk reload if stamp changed`:
 
 ```4d
  var $employee : cs. EmployeeEntity
@@ -1203,10 +1203,10 @@ The object returned by `.reload( )` contains the following properties:
 
 <!-- REF #EntityClass.save().Params -->
 
-| Parâmetro  | Tipo    |     | Descrição                                                         |
-| ---------- | ------- | :-: | ----------------------------------------------------------------- |
-| mode       | Integer |  -> | `dk auto merge`: Enables the automatic merge mode |
-| Resultados | Object  |  <- | Resultado da operação de salvamento                               |
+| Parâmetro  | Tipo    |     | Descrição                                                             |
+| ---------- | ------- | :-: | --------------------------------------------------------------------- |
+| mode       | Integer |  -> | `dk auto merge`: ativa o modo de mesclagem automática |
+| Resultados | Object  |  <- | Resultado da operação de salvamento                                   |
 
 <!-- END REF -->
 
@@ -1226,7 +1226,7 @@ Otherwise, you can pass the `dk auto merge` option in the *mode* parameter: when
 
 **Resultado**
 
-The object returned by `.save()` contains the following properties:
+O objeto retornado por `.save()` contém as seguintes propriedades:
 
 | Propriedade  |                                     | Tipo                   | Descrição                                                                                                                                                                                                  |
 | ------------ | ----------------------------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1234,8 +1234,8 @@ The object returned by `.save()` contains the following properties:
 |              |                                     |                        | ***Disponível apenas se a opção `dk auto merge` for usada***:                                                                                                                              |
 | autoMerged   |                                     | boolean                | True se fizer uma auto merge, senão False                                                                                                                                                                  |
 |              |                                     |                        | ***Disponível apenas em caso de erro***:                                                                                                                                                   |
-| status       |                                     | number                 | Error code, [see below](#status-and-statustext)                                                                                                                                                            |
-| statusText   |                                     | text                   | Description of the error, [see below](#status-and-statustext)                                                                                                                                              |
+| status       |                                     | number                 | Código de erro, [veja abaixo](#status-and-statustext)                                                                                                                                                      |
+| statusText   |                                     | text                   | Descrição do erro, [veja abaixo](#status-and-statustext)                                                                                                                                                   |
 |              |                                     |                        | ***Disponível apenas em caso de erro de bloqueio pessimista***:                                                                                                                            |
 | lockKindText |                                     | text                   | "Bloqueado pelo registro"                                                                                                                                                                                  |
 | lockInfo     |                                     | object                 | Informações sobre a origem do bloqueio                                                                                                                                                                     |
@@ -1282,7 +1282,7 @@ Criar uma nova entidade:
 
 #### Exemplo 2
 
-Updating an entity without `dk auto merge` option:
+Atualizar uma entidade sem a opção dk auto merge:
 
 ```4d
  var $status : Object
@@ -1302,7 +1302,7 @@ Updating an entity without `dk auto merge` option:
 
 #### Exemplo 3
 
-Updating an entity with `dk auto merge` option:
+Atualização de uma entidade com a opção `dk auto merge`:
 
 ```4d
  var $status : Object
@@ -1453,7 +1453,7 @@ Retorna:
 
 #### Exemplo 3
 
-Expanding all the properties of `relatedEntities`:
+Expande todas as propriedades de `relatedEntities`:
 
 ```4d
 employeeObject:=employeeSelected.toObject("directReports.*")
@@ -1522,7 +1522,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 #### Exemplo
 
-Extracting some properties of `relatedEntities`:
+Extração de algumas propriedades de `relatedEntities`:
 
 ```4d
  employeeObject:=employeeSelected.toObject("firstName, directReports.lastName")
@@ -1569,7 +1569,7 @@ Retorna:
 
 #### Exemplo 6
 
-Extracting all the properties of a `relatedEntity`:
+Expande todas as propriedades de `relatedEntity`:
 
 ```4d
  employeeObject:=employeeSelected.toObject("employer.*")
@@ -1591,7 +1591,7 @@ Retorna:
 
 #### Exemplo 3
 
-Extracting some properties of a `relatedEntity`:
+Extração de algumas propriedades de `relatedEntity`:
 
 ```4d
  $col:=New collection
@@ -1728,7 +1728,7 @@ Se nenhum atributo de entidade for tocado, o método retorna uma coleção vazia
 
 Nesse modo:
 
-- firstName and lastName have a `storage` kind
+- firstName and lastName tem um tipo `storage`
 - employer tem um tipo 'relatedEntity'
 - employerID é a chave estrangeira da entidade relacionada employer
 
@@ -1776,7 +1776,7 @@ Um registro é destrancado automaticamente quando não for mais referenciado por
 
 **Resultado**
 
-The object returned by `.unlock()` contains the following property:
+O objeto retornado por `.unlock()` contém a seguinte propriedade:
 
 | Propriedade | Tipo       | Descrição                                                                                                                                                                                                                                                                     |
 | ----------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

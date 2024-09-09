@@ -1,6 +1,6 @@
 ---
 id: ClassClass
-title: Class
+title: クラス
 ---
 
 
@@ -34,7 +34,7 @@ title: Class
 
 #### 説明
 
-`.name` プロパティは、 <!-- REF #ClassClass.name.Summary -->`4D.Class` オブジェクトの名称を格納します<!-- END REF -->。 クラス名の大文字・小文字は区別されます。
+`.name` プロパティは、 <!-- REF #ClassClass.name.Summary -->`4D.Class` オブジェクトの名称を格納します<!-- END REF -->. クラス名の大文字・小文字は区別されます。
 
 このプロパティは **読み取り専用** です。
 
@@ -57,7 +57,7 @@ title: Class
 
 
 <!-- REF #ClassClass.new().Params -->
-| 引数    | タイプ      |    | 説明                                      |
+| 引数    | 型        |    | 説明                                      |
 | ----- | -------- |:--:| --------------------------------------- |
 | param | any      | -> | コンストラクター関数に渡す引数                         |
 | 戻り値   | 4D.Class | <- | クラスの新規オブジェクト|<!-- END REF --> |
@@ -65,7 +65,7 @@ title: Class
 
 #### 説明
 
-`.new()` 関数は、 <!-- REF #ClassClass.new().Summary -->対象クラスの新規インスタンスである `cs.className` オブジェクトを作成して返します<!-- END REF --><!-- END REF -->。 この関数は、[`cs` クラスストア](Concepts/classes.md#cs) に属する全クラスで自動的に利用可能です。
+`.new()` 関数は、 <!-- REF #ClassClass.new().Summary -->対象クラスの新規インスタンスである `cs.className` オブジェクトを作成して返します<!-- END REF --><!-- END REF -->. この関数は、[`cs` クラスストア](Concepts/classes.md#cs) に属する全クラスで自動的に利用可能です。
 
 任意の *param* パラメーターに渡した引数は、当該クラス定義内の [Class Constructor](Concepts/classes.md#class-constructor) 関数 (あれば) が受け取ります。 コンストラクター関数においては、[`This`](Concepts/classes.md#this) は新規に作成されるオブジェクトを指します。
 
@@ -119,7 +119,7 @@ $person:=cs.Person.new("John";"Doe";40)
 
 #### 説明
 
-`.superclass` プロパティは、 <!-- REF #ClassClass.superclass.Summary -->対象クラスの親クラスを返します<!-- END REF -->。 スーパークラスは、`4D.Class` オブジェクト、あるいは `cs.className` オブジェクトのいずれかです。 親クラスが存在しない場合は、このプロパティは **null** を返します。
+`.superclass` プロパティは、 <!-- REF #ClassClass.superclass.Summary -->対象クラスの親クラスを返します<!-- END REF -->. スーパークラスは、`4D.Class` オブジェクト、あるいは `cs.className` オブジェクトのいずれかです。 親クラスが存在しない場合は、このプロパティは **null** を返します。
 
 ユーザークラスのスーパークラスは、[`Class extends <superclass>`](Concepts/classes.md#class-extends-classname) キーワードを使ってクラス内で定義されます。
 

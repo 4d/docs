@@ -161,7 +161,7 @@ $o.DRIVERS_LICENCE.parameters:=New collection
 $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 ```
 
-> [4D View Pro: Use 4D formulas in your spreadsheet (英文ブログ記事)](https://blog.4d.com/4d-view-pro-use-4d-formulas-in-your-spreadsheet/) も参照ください。
+> [4D View Pro: 4D のフォーミュラをスプレッドシートで使用する](https://blog.4d.com/ja/4d-view-pro-use-4d-formulas-in-your-spreadsheet/) も参照ください。
 
 ### Hello World 例題
 
@@ -223,14 +223,14 @@ _methodName_ はこれらの引数を $1, $2...$N に受け取ります。
 
 - _jstype_ の日付は、4Dコードでは 2つのプロパティを持つ [オブジェクト](Concepts/dt_object.md) として渡されます:
 
-| プロパティ | タイプ  | 説明                          |
+| プロパティ | 型    | 説明                          |
 | ----- | ---- | --------------------------- |
 | value | 日付   | 日付値                         |
 | time  | Real | 数値 (秒単位) |
 
 - オブジェクト引数は、`オブジェクト` 内の [.value](Concepts/dt_object.md) プロパティに格納されて渡されます:
 
-| プロパティ | タイプ    | 説明       |
+| プロパティ | 型      | 説明       |
 | ----- | ------ | -------- |
 | value | Object | オブジェクト引数 |
 
@@ -246,7 +246,7 @@ _methodName_ はこれらの引数を $1, $2...$N に受け取ります。
 - [ピクチャー](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg, その他のタイプは png に変換) の場合、URI (data:image/png;base64,xxxx) が作成され、フォーミュラを実行した 4D View Pro のセルにおいて背景として使用されます。
 - 次の 2つのプロパティを持つ [オブジェクト](Concepts/dt_object.md) (日付と時間の受け渡しを可能にします):
 
-  | プロパティ | タイプ  | 説明                          |
+  | プロパティ | 型    | 説明                          |
   | ----- | ---- | --------------------------- |
   | value | 日付   | 日付値                         |
   | time  | Real | 数値 (秒単位) |

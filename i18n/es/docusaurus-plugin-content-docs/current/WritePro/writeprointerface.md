@@ -41,7 +41,7 @@ Dependiendo de si el usuario selecciona un modelo o una tabla, puede ver la list
 
 En el Asistente para tablas, el usuario también puede definir el número de filas de encabezado y filas adicionales (de 0 a 5 cada una), definir [filas de interrupción](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6233076) (filas de resumen) encima o debajo de la fila de datos, y elegir mostrar/ocultar [filas de arrastre](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6236686).
 
-In addition, the user has the possibility to choose the table's behavior when its datasource is empty with the following options: Show data row, Hide date row, Hide table, Show placeholder row.
+Además, el usuario tiene la posibilidad de elegir el comportamiento de la tabla cuando su fuente de datos está vacía con las siguientes opciones: Mostrar fila de datos, Ocultar fila de fecha, Ocultar tabla, Mostrar fila de marcador de posición.
 
 ##### En pantalla:
 
@@ -70,7 +70,7 @@ El archivo de plantilla permite definir lo siguiente:
 - la fórmula que devuelve una selección de entidades utilizada como fuente de datos de la tabla,
 - las fórmulas de ruptura (si se puede insertar una línea de ruptura)
 - los atributos de la clase de datos que pueden utilizarse como columnas de la tabla,
-- the formulas available as contextual menus inside break rows, carry-over row, placeholder row or extra rows.
+- las fórmulas disponibles como menús contextuales dentro de las filas de interrupción, fila de arrastre, fila de marcador de posición o filas adicionales.
 
 El archivo de plantillas debe ser almacenado en una carpeta "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" dentro de su proyecto.
 

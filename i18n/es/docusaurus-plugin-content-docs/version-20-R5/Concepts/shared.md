@@ -10,7 +10,7 @@ Los objetos compartidos y las colecciones compartidas se almacenan en variables 
 - para crear un objeto compartido, utilice el comando [`New shared object`](https://doc.4d.com/4dv20/help/command/en/page1471.html) o llama a la función [`new()`](../API/ClassClass.md#new) de una [clase compartida](classes.md#clases-compartidas),
 - para crear una colección compartida, utilice el comando [`New shared collection`](../API/CollectionClass.md#new-shared-collection).
 
-Shared objects and collections can only contain scalar values or other shared objects and collections. However, shared objects and collections can be set as properties of standard (not shared) objects or collections.
+Los objetos y colecciones compartidas solo pueden contener valores escalares u otros objetos y colecciones compartidas. Sin embargo, los objetos y colecciones compartidos pueden establecerse como propiedades de objetos o colecciones estándar (no compartidos).
 
 Para modificar un objeto/colección compartido, se debe llamar a la estructura **Use...End use**. La lectura de un valor de objeto/colección compartido no requiere **Use...End use**.
 
@@ -29,7 +29,7 @@ Las siguientes modificaciones pueden efectuarse en objetos y colecciones compart
 
 :::note
 
-Keep in mind that objects or collections set as the content of a shared object or collection must themselves be shared.
+Tenga en cuenta que los objetos o colecciones definidas como el contenido de un objeto compartido o colección deben ser compartidos por sí mismos.
 
 :::
 
@@ -68,8 +68,6 @@ La asignación de objetos/colecciones compartidos a propiedades o elementos de o
 - Los objetos/colecciones compartidos agrupados no se pueden desagrupar. Una vez incluido en un grupo compartido, un objeto/colección compartido queda vinculado permanentemente a ese grupo durante toda la sesión. Incluso si todas las referencias de un objeto/colección se eliminan del objeto/colección padre, seguirán vinculadas.
 
 Consulte el ejemplo 2 para ver una ilustración de las reglas de los grupos compartidos.
-
-**Nota:** Los grupos compartidos se gestionan a través de una propiedad interna llamada _locking identifier_. Para obtener información detallada sobre este valor, consulte la Referencia del Lenguaje 4D.
 
 ### Lectura
 

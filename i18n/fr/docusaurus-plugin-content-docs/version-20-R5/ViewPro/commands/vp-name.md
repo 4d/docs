@@ -20,7 +20,7 @@ title: VP Name
 
 The `VP Name` command <!-- REF #_method_.VP Name.Summary -->returns a new range object referencing a named range<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 The _rangeName_ parameter specifies an existing named cell range.
 
@@ -34,10 +34,10 @@ In the optional _sheet_ parameter, you can designate a specific spreadsheet wher
 Vous souhaitez assigner une valeur à une plage nommée "Total".
 
 ```4d
-// nommez la cellule B5 Total
- VP ADD RANGE NAME(VP Cell("ViewProArea";1;4);"Total")
- $name:=VP Name("ViewProArea";" Total")
- VP SET NUM VALUE($name;285;"$#,###.00")
+// name the B5 cell as Total
+VP ADD RANGE NAME(VP Cell("ViewProArea";1;4);"Total")
+$name:=VP Name("ViewProArea";"Total")
+VP SET NUM VALUE($name;285;"$#,###.00")
 ```
 
 #### Voir également

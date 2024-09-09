@@ -17,11 +17,11 @@ title: VP Get sheet index
 
 #### Description
 
-The `VP Get sheet index` command <!-- REF #_method_.VP Get sheet index.Summary -->returns the index of a sheet based on its name in *vpAreaName*.<!-- END REF -->
+La commande `VP Get sheet index` <!-- REF #_method_.VP Get sheet index.Summary -->retourne l'index d'une feuille basé sur son nom dans *vpAreaName*.<!-- END REF -->
 
-In *vpAreaName*, pass the name of the 4D View Pro area.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
-In *name*, pass the name of the sheet whose index will be returned. If no sheet named *name* is found in the document, the method returns -1.
+Dans *name*, passez le nom de la feuille dont l'index sera retourné. Si aucune feuille nommée *name* n'est trouvée dans le document, la méthode retourne -1.
 
 > La numérotation démarre à 0.
 

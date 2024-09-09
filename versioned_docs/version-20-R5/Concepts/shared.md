@@ -72,7 +72,6 @@ Assigning shared objects/collections to properties or elements of other shared o
 
 Please refer to example 2 for an illustration of shared group rules.
 
-**Note:** Shared groups are managed through an internal property named *locking identifier*. For detailed information on this value, please refer to the 4D Language Reference.
 
 ### Read
 

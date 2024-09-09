@@ -24,12 +24,12 @@ title: ユーザーとセッション
 
 ユーザーログインシーケンスは次のとおりです:
 
-1. 最初の RESTコール (たとえば Webフォームコール) では、"ゲスト" Webユーザーセッションが作成されます。 [記述的RESTリクエスト](#記述的restリクエスト) 以外のリクエストを実行する権限も、ライセンスの消費もありません。\
+1. 最初の RESTコール (たとえば Qodlyページコール) では、"ゲスト" Webユーザーセッションが作成されます。 [記述的RESTリクエスト](#記述的restリクエスト) 以外のリクエストを実行する権限も、ライセンスの消費もありません。\
    記述的RESTリクエスト は、ライセンスを消費する Webユーザーセッションが開かれていなくても、常にサーバーで処理されます。 この場合、それらは "ゲスト" セッションを介して処理されます。
 
 2. 事前に用意した [`authentify()` 関数](#authentify) を呼び出し、ユーザーの資格情報をチェックして、適切な権限で[`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) を呼び出します。 `authentify()` は公開された [データストアクラス関数](../ORDA/ordaClasses.md#datastore-クラス) でなければなりません。
 
-3. `/rest/$catalog/authentify` リクエストは、ユーザーの資格情報と共にサーバーに送信されます。 このステップでは、データにアクセスしない基本的なログインフォームのみが必要です。`/rest/$getWebForm`リクエストを介して呼び出される [Qodlyフォーム](../WebServer/qodly-studio.md) を利用できます。
+3. `/rest/$catalog/authentify` リクエストは、ユーザーの資格情報と共にサーバーに送信されます。 このステップでは、データにアクセスしない基本的なログインフォームのみが必要です。`/rest/$getWebForm`リクエストを介して呼び出される [Qodlyページ](../WebServer/qodly-studio.md) を利用できます。
 
 4. ユーザーが正常に認証された場合、4Dライセンスがサーバー上で消費され、すべての RESTリクエストが受け入れられます。
 
@@ -45,7 +45,7 @@ title: ユーザーとセッション
 
 - [`/rest/$catalog`]($catalog.md) リクエスト (例: `/rest/$catalog/$all`) - 利用可能なデータクラスへのアクセス
 - `/rest/$catalog/authentify` - ユーザーログインに使用されるデータストア関数
-- `/rest/$getWebForm` - Qodlyフォームのレンダリング
+- `/rest/$getWebForm` - Qodlyページのレンダリング
 
 ![alt-text](../assets/en/REST/force-login-1.jpeg)
 

@@ -41,9 +41,9 @@ El subformulario en página utiliza el formulario de entrada indicado por la pro
 
 Puede vincular [una variable o una expresión](properties_Object.md#variable-or-expression) a un objeto contenedor de subformulario. Esto es muy útil para sincronizar valores del formulario padre y su(s) subformulario(s).
 
-By default, 4D creates a variable or expression of [object type](properties_Object.md#expression-type) for a subform container, which allows you to share values in the context of the subform using the `Form` command ([see below](#using-the-subform-bound-object)). Sin embargo, puede utilizar una variable o expresión de cualquier tipo escalar (tiempo, entero, etc.) especialmente si sólo necesita compartir un único valor:
+Por defecto, 4D crea una variable o expresión de [tipo objeto](properties_Object.md#expression-type) para un contenedor de subformulario, lo cual le permite compartir valores en el contexto del subformulario utilizando el comando `Form` ([ver abajo](#usando-el-objeto-enlazado-del-subformulario)). Sin embargo, puede utilizar una variable o expresión de cualquier tipo escalar (tiempo, entero, etc.) especialmente si sólo necesita compartir un único valor:
 
-- Define a bound variable or expression of a scalar type and call the `OBJECT Get subform container value` and `OBJECT SET SUBFORM CONTAINER VALUE` commands to exchange values when [On Bound Variable Change](../Events/onBoundVariableChange.md) or [On Data Change](../Events/onDataChange.md) form events occur. Esta solución se recomienda para sincronizar un solo valor.
+- Defina una variable ligada o una expresión de tipo escalar y llame a los comandos `OBJECT Get subform container value` y `OBJECT SET SUBFORM CONTAINER VALUE` para intercambiar valores cuando se produzcan los eventos de formulario [On Bound Variable Change](../Events/onBoundVariableChange.md) o [On Data Change](../Events/onDataChange.md). Esta solución se recomienda para sincronizar un solo valor.
 - Defina una variable o expresión vinculada del tipo **objecto** y utilice el comando `Form` para acceder a sus propiedades desde el subformulario. Esta solución se recomienda para sincronizar varios valores.
 
 ### Sincronizando formulario padre y subformulario (valor único)
@@ -76,9 +76,9 @@ Caso 1: se modifica el valor de la variable o expresión del formulario padre y 
 Se ejecuta el siguiente código:
 
 ```4d
-// Subform form method
-If (Form event code=On Bound Variable Change) //bound variable or expression was modified in the parent form
-	Form.clockValue:=OBJECT Get subform container value //synchonize the local value
+// Método de formulario del subformulario
+If (Form event code=On Bound Variable Change) //la variable o expresión vinculada se modificó en el formulario padre
+	Form.clockValue:=OBJECT Get subform container value //sincroniza el valor local
 End if
 ```
 
@@ -91,7 +91,7 @@ Se genera el evento formulario [On Bound Variable Change](../Events/onBoundVaria
 - en cuanto se asigna un valor a la variable/expresión del formulario padre, incluso si se reasigna el mismo valor
 - si el subformulario pertenece a la página formulario actual o a la página 0.
 
-Note that, as in the above example, it is preferable to use the `OBJECT Get subform container value` command which returns the value of the expression in the subform container rather than the expression itself because it is possible to insert several subforms in the same parent form (for example, a window displaying different time zones contains several clocks).
+Tenga en cuenta que, como en el ejemplo anterior, es preferible utilizar el comando `OBJECT Get subform container value` que devuelve el valor de la expresión en el contenedor del subformulario en lugar de la propia expresión, ya que es posible insertar varios subformularios en el mismo formulario padre (por ejemplo, una ventana que muestra diferentes zonas horarias contiene varios relojes).
 
 La modificación de la variable o expresión asociada desencadena eventos de formulario que permiten sincronizar los valores del formulario padre y del subformulario:
 
@@ -107,9 +107,9 @@ Dentro del subformulario, el botón cambia el valor de la expresión `Form.clock
 Se ejecuta el siguiente código:
 
 ```4d
-// subform clock object method
-If (Form event code=On Data Change) //whatever the way the value is changed
-	OBJECT SET SUBFORM CONTAINER VALUE(Form.clockValue) //Push the value to the container
+// método objeto subform clock
+If (Form event code=On Data Change) //sea cual sea la forma de cambiar el valor
+	OBJECT SET SUBFORM CONTAINER VALUE(Form.clockValue) //Empujar el valor al contenedor
 End if
 ```
 
@@ -162,7 +162,7 @@ If (Form event code=On Bound Variable Change)
 End if
 ```
 
-**Este principio aún se soporta por compatibilidad, pero ahora es obsoleto, ya que no permite vincular expresiones a subformularios.** Ya no debería utilizarse en sus desarrollos. In any cases, we recommend to use the [`Form` command](#synchronizing-parent-form-and-subform-multiple-values) or the [`OBJECT Get subform container value` and `OBJECT SET SUBFORM CONTAINER VALUE` commands](#synchronizing-parent-form-and-subform-single-value) to synchronize form and subform values.
+**Este principio aún se soporta por compatibilidad, pero ahora es obsoleto, ya que no permite vincular expresiones a subformularios.** Ya no debería utilizarse en sus desarrollos. En todos los casos, recomendamos utilizar el comando [`Form`](#synchronizing-parent-form-and-subform-multiple-values) o los comandos [`OBJECT Get subform container value` y `OBJECT SET SUBFORM CONTAINER VALUE`](#synchronizing-parent-form-and-subform-single-value) para sincronizar los valores de formulario y subformulario.
 
 ### Programación entre formularios avanzada
 
@@ -195,6 +195,6 @@ Para más información, consulte la descripción del comando `EXECUTE METHOD IN 
 
 ## Propiedades soportadas
 
-[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Detail Form](properties_Subform.md#detail-form) - [Double click on empty row](properties_Subform.md#double-click-on-empty-row) - [Double click on row](properties_Subform.md#double-click-on-row) - [Enterable in list](properties_Subform.md#enterable-in-list) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Height](properties_CoordinatesAndSizing.md#height) -
-[Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) -
-[Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [List Form](properties_Subform.md#list-form) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Print Frame](properties_Print.md#print-frame) - [Right](properties_CoordinatesAndSizing.md#right) - [Selection mode](properties_Subform.md#selection-mode) - [Source](properties_Subform.md#source) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Estilo de Borde](properties_BackgroundAndBorder.md#border-line-style) - [Inferior](properties_CoordinatesAndSizing.md#bottom) - [Clase](properties_Object.md#css-class) - [Formulario detallado](properties_Subform.md#detail-form) - [Doble clic en fila vacía](properties_Subform.md#double-click-on-empty-row) - [Doble clic en fila](properties_Subform.md#double-click-on-row) - [Editable en lista](properties_Subform.md#enterable-in-list) - [Tipo de expresión](properties_Object.md#expression-type) - [Enfocable](properties_Entry.md#focusable) - [Altura](properties_CoordinatesAndSizing.md#height) -
+[Ocultar rectángulo de enfoque](properties_Appearance.md#hide-focus-rectangle) -
+[Barra de desplazamiento horizontal](properties_Appearance.md#horizontal-scroll-bar) - [Dimensionado horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [Formulario listado](properties_Subform.md#list-form) - [Método](properties_Action.md#method) - [Nombre de objeto](properties_Object.md#object-name) - [Marco de impresión](properties_Print.md#print-frame) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Modo de selección](properties_Subform.md#selection-mode) - [Fuente](properties_Subform.md#source) - [Superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Variable o Expresión](properties_Object.md#variable-or-expression) - [Barra de desplazamiento vertical](properties_Appearance.md#vertical-scroll-bar) - [Dimensionado vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)

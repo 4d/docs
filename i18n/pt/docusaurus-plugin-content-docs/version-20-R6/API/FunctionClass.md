@@ -3,7 +3,7 @@ id: FunctionClass
 title: Function
 ---
 
-A **`4D.Function`** object contains a piece of code that can be executed from an object, either using the `()` operator, or using the [`apply()`](#apply) and [`call()`](#call) functions. 4D proposes three kinds of `Function` objects:
+A **`4D.Function`** object contains a piece of code that can be executed from an object, either using the `()` operator, or using the [`apply()`](#apply) and [`call()`](#call) functions. 4D propõe três tipos de objetos `Function`:
 
 - **native functions**, i.e. built-in functions from various 4D classes such as `collection.sort()` or `file.copyTo()`.
 - **user functions**, created in user [classes](Concepts/classes.md) using the [Function keyword](Concepts/classes.md#function).
@@ -126,8 +126,8 @@ Ter uma fórmula como se fosse um objeto permite que seja passada como um parâm
 
 A fórmula retornada pode ser chamada com:
 
-- [`.call()`](#call) or [`.apply()`](#apply) methods, or
-- object notation syntax (see [formula object](#formula-object)).
+- os métodos [`.call()`](#call) ou [`.apply()`](#apply),
+- a sintaxe de notação de objeto (consulte [objeto formula](#formula-object)).
 
 ```4d
  var $f : 4D. Function

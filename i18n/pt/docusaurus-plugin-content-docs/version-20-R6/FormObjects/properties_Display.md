@@ -390,7 +390,7 @@ Cuando una [expresión booleana](properties_Object.md#expression-type) se muestr
 - un texto en un [objeto de entrada](input_overview.md)
 - un "popup"  en una [columna del list box](listbox_overview.md#list-box-columns),
 
-... you can select the text to display for each value:
+... pode selecionar o texto a apresentar para cada valor:
 
 - **Text cuando True** - el texto que se mostrará cuando el valor sea "true"
 - **Text cuando False** - el texto que se mostrará cuando el valor sea "false"
@@ -529,7 +529,7 @@ La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; si
 
 #### Objectos suportados
 
-[Columna List Box](listbox_overview.md#list-box-columns) - [Encabezado List Box](listbox_overview.md#list-box-footers)
+[List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
 ---
 

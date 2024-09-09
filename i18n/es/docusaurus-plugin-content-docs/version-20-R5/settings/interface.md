@@ -17,7 +17,7 @@ Haga clic en **Seleccionar...** para definir la fuente y el tamaño de los carac
 
 La fuente y el tamaño de la fuente por defecto dependen de la plataforma de ejecución de 4D.
 
-> This property also affects the following parts of 4D: <li>certain preview areas of the Explorer</li><li>the ruler of the Form editor</li>
+> Esta propiedad también afecta las siguientes partes de 4D: <li>ciertas áreas de vista previa del Explorador</li><li>la regla del editor de formularios</li>
 
 ### Mostrar ventanas
 

@@ -3,25 +3,25 @@ id: clean
 title: $clean
 ---
 
-Creates a new entity set from an existing entity set but without its deleted entities, if any (*e.g.* `$clean=true`)
+Crée un nouvel entity set à partir d'un entity set existant mais sans ses entités supprimées, le cas échéant (*par exemple* `$clean=true`)
 
 ## Description
 
-`$clean` creates a new entity set containing the same entities as `entitySetID` but without references to deleted entities (if any).
+`$clean` crée un nouvel entity set contenant les mêmes entités que `entitySetID`, mais sans les références aux entités supprimées (le cas échéant).
 
-By default, when an entity is [deleted]($method.md#methoddelete), its reference(s) in existing entity set(s) become *undefined* but are not removed. They are also still included in the "count" property of the entity set. Calling `$clean` on the entity set returns a new, up-to-date entity set without *undefined* entity references.
+Par défaut, lorsqu'une entité est [supprimée]($method.md#methoddelete), sa ou ses référence(s) dans les entity sets existants deviennent *undefined* mais ne sont pas supprimée(s). Elles sont également toujours incluses dans la propriété "count" de l'entity set. Appeler `$clean` sur l'entity set renvoie un nouvel entity set à jour, sans références d'entités *undefined*.
 
-`$clean` can be followed by [`$method=entityset`]($method.md#methodentityset) to create the new entity set on the server:
+`$clean` peut être suivi de [`$method=entityset`]($method.md#methodentityset) pour créer le nouvel entity set sur le serveur:
 
 `/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$clean=true&$method=entityset`
 
 ## Exemple
 
-1. We create an entity set:
+1. Nous créons un entity set :
 
 `GET /rest/Speciality?$filter="ID<=3"&$method=entityset`
 
-Three entities are received and we get the entity set `DF6903FB5879404A9A818884CFC6F62A`
+Trois entités sont reçues et nous obtenons l'entity set `DF6903FB5879404A9A818884CFC6F62A`
 
 ```json
 {
@@ -73,11 +73,11 @@ Three entities are received and we get the entity set `DF6903FB5879404A9A818884C
 }
 ```
 
-2. We delete the entity with `KEY=2` (see [how to delete an entity]($method.md#methoddelete)), then this request is sent:
+2. Nous supprimons l'entité de `KEY=2` (voir [comment supprimer une entité]($method.md#methoddelete)), puis cette requête est envoyée :
 
 `GET /rest/Speciality/$entityset/DF6903FB5879404A9A818884CFC6F62A`
 
-The entity set is returned and still contains 3 entities. There is an undefined entity for the deleted entity (with stamp = 0):
+L'entity set est renvoyé et contient toujours 3 entités. Il y a une entité undefined pour l'entité supprimée (avec stamp = 0) :
 
 ```json
 {
@@ -119,11 +119,11 @@ The entity set is returned and still contains 3 entities. There is an undefined 
 }
 ```
 
-3. If this request is sent:
+3. Si cette requête est exécutée :
 
 `GET /rest/Speciality/$entityset/DF6903FB5879404A9A818884CFC6F62A?$clean=true&$method=entityset`
 
-We clean the entity set DF6903FB5879404A9A818884CFC6F62A and receive a new entity set (entity set D7BFBC49375B4FE5A94CDD17AA535F73) that does not contain the dropped entity:
+Nous nettoyons l'entity set DF6903FB5879404A9A818884CFC6F62A et recevons un nouvel entity set (entity set D7BFBC49375B4FE5A94CDD17AA535F73) qui ne contient pas l'entité supprimée :
 
 ```json
 {

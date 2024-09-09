@@ -82,7 +82,7 @@ _コオペラティブ_ モードで実行された場合には、たとえマ�
 
 ## プロセスがプリエンプティブに実行される条件とは?
 
-:::info リマインダー
+:::info 注記
 
 プリエンプティブ実行はコンパイル済みモードでのみ利用可能です。
 
@@ -191,9 +191,9 @@ _コオペラティブ_ モードで実行された場合には、たとえマ�
 - 標準の進捗インジケーター
 - `ALERT`、`Request` そして `CONFIRM` ダイアログ。 ダイアログはユーザーモードプロセス (4D)、あるいはサーバーユーザーインターフェースプロセス (4D Server) 内で表示されます。 ただし、4D Server を Windows上でユーザー操作を許可しないサービスとしてローンチした場合には、ダイアログは表示されないという点に注意して下さい。
 
-### Triggers
+### トリガー
 
-トリガーを呼び出すことのあるコマンドをメソッドが使用している場合、4Dコンパイラーはメソッドがスレッドセーフであるかどうかをチェックするために、トリガーがスレッドセーフかどうかを評価します:
+[トリガー](https://doc.4d.com/4Dv20R6/4D/20-R6/Triggers.300-6958353.ja.html) を呼び出すことのあるコマンドをメソッドが使用している場合、4Dコンパイラーはメソッドがスレッドセーフであるかどうかをチェックするために、トリガーがスレッドセーフかどうかを評価します:
 
 ```4d
  SAVE RECORD([Table_1]) // Table_1 にトリガーが存在する場合、トリガーはスレッドセーフでなければなりません
@@ -213,6 +213,12 @@ _コオペラティブ_ モードで実行された場合には、たとえマ�
 ```
 
 この場合、すべてのトリガーが評価されます。 スレッドセーフでないコマンドの使用が検出されたトリガーが 1つでもあれば、グループ全体がチェックに失敗し、メソッドはスレッドアンセーフと宣言されます。
+
+:::note
+
+In [client/server applications](../Desktop/clientServer.md), triggers may be executed in cooperative mode, even if their code is thread-safe. This happens when a trigger is activated from a remote process: in this case, the trigger is executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Server-and-the-4D-Language.300-7182872.en.html#68966) on the server machine. Since this process is used for all calls from the client, it is always executed in cooperative mode.
+
+:::
 
 ### エラー処理メソッド
 

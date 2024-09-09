@@ -3,7 +3,7 @@ id: DataStoreClass
 title: DataStore
 ---
 
-A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by ORDA to reference and access a database. `Datastore` objects are returned by the following commands:
+A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by ORDA to reference and access a database. Os objetos `Datastore` são retornados pelos seguintes comandos:
 
 - [ds](#ds): um atalho para o datastore principal
 - [Open datastore](#open-datastore): to open any remote datastore
@@ -60,7 +60,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 
 The `ds` command <!-- REF #_command_.ds.Summary -->returns a reference to the datastore matching the current 4D database or the database designated by *localID*<!-- END REF -->.
 
-If you omit the *localID* parameter (or pass an empty string ""), the command returns a reference to the datastore matching the local 4D database (or the 4D Server database in case of opening a remote database on 4D Server). The datastore is opened automatically and available directly through `ds`.
+If you omit the *localID* parameter (or pass an empty string ""), the command returns a reference to the datastore matching the local 4D database (or the 4D Server database in case of opening a remote database on 4D Server). O repositório de dados é aberto automaticamente e está disponível diretamente por meio do `ds`.
 
 You can also get a reference on an open remote datastore by passing its local id in the *localID* parameter. The datastore must have been previously opened with the [`Open datastore`](#open-datastore) command by the current database (host or component). A identificação local se define quando se utilizar este comando.
 
@@ -519,7 +519,7 @@ ds.unlock() //Nossa cópia terminou, podemos desbloquear a datastore
 
 <!-- END REF -->
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
+> **Modo avançado:** Essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
@@ -715,7 +715,7 @@ Em um armazém de dados remoto:
 
 <!-- END REF -->
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
+> **Modo avançado:** Essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
@@ -1096,7 +1096,7 @@ ds.setGlobalStamp($newValue)
 
 <!-- END REF -->
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
+> **Modo avançado:** Essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 

@@ -6,7 +6,7 @@ title: Appeler des fonctions de classe ORDA
 
 Vous pouvez appeler les [fonctions de classe](ORDA/ordaClasses.md) définies pour le modèle de données ORDA via vos requêtes REST, afin de bénéficier de l'API de l'application 4D ciblée.
 
-Les fonctions sont simplement appelées dans les requêtes POST sur l'interface ORDA appropriée, sans (). Par exemple, si vous avez défini une fonction `getCity()` dans la dataclass City, vous pouvez l'appeler à l'aide de la requête suivante :
+Les fonctions sont simplement appelées dans des requêtes POST sur l'interface ORDA appropriée, sans (). Par exemple, si vous avez défini une fonction `getCity()` dans la dataclass City, vous pouvez l'appeler à l'aide de la requête suivante :
 
 `/rest/City/getCity`
 
@@ -49,7 +49,7 @@ Les règles suivantes s'appliquent :
 - Les paramètres doivent être passés dans le **corps de la requête POST**
 - Les paramètres doivent être inclus dans une collection (format JSON)
 - Tous les types de données scalaires pris en charge dans les collections JSON peuvent être passés en tant que paramètres.
-- La sélection d'entité et l'entité peuvent être passées en tant que paramètres. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS,__ENTITY, __ENTITIES,__DATASET.
+- L'entity selection et l'entité peuvent être passées en tant que paramètres. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS,__ENTITY, __ENTITIES,__DATASET.
 
 Voir [cet exemple](#request-receiving-an-entity-as-parameter) et [cet exemple](#request-receiving-an-entity-selection-as-parameter).
 
@@ -180,7 +180,7 @@ Le résultat est une entité :
 }
 ```
 
-### Utiliser une fonction de classe d'une entité
+### Utiliser une fonction de classe d'entité
 
 La classe d'entité `CityEntity` fournit une API :
 
@@ -205,7 +205,7 @@ Vous pouvez lancer cette requête :
 }
 ```
 
-### Utiliser une fonction de classe d'une entity selection
+### Utiliser une fonction de classe d'entity selection
 
 La classe d'entity selection `CityEntity` fournit une API :
 
@@ -230,7 +230,7 @@ Vous pouvez lancer cette requête :
 }
 ```
 
-### Utiliser une fonction de classe de sélection d'entité et un ensemble d'entité
+### Utiliser une fonction de classe d'entity selection et un entity set
 
 La classe `StudentsSelection` a une fonction `getAgeAverage` :
 
@@ -262,7 +262,7 @@ Une fois que vous avez créé un ensemble d'entité, vous pouvez lancer cette re
 }
 ```
 
-### Utiliser une fonction de classe de sélection d'entité et un "orderBy"
+### Utiliser une fonction de classe d'entity selection et un "orderBy"
 
 La classe `StudentsSelection` a une fonction `getLastSummary` :
 
@@ -323,7 +323,7 @@ Lancez cette requête :
 
 **POST** `http://127.0.0.1:8044/rest/Students/pushData`
 
-Corps de la requête :
+Body de la requête :
 
 ```
 [{
@@ -361,7 +361,7 @@ Lancez cette requête :
 
 **POST:**`http://127.0.0.1:8044/rest/Students/pushData`
 
-Corps de la requête :
+Body de la requête :
 
 ```
 [{
@@ -399,7 +399,7 @@ Lancez cette requête :
 
 **POST:**`http://127.0.0.1:8044/rest/Students/pushData`
 
-Corps de la requête :
+Body de la requête :
 
 ```
 [{
@@ -475,7 +475,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 }
 ```
 
-### Recevoir une sélection d'entité comme paramètre
+### Recevoir une entity selection comme paramètre
 
 Dans la classe de Dataclass `Students`, la fonction `setFinalExam()` met à jour une sélection d'entité reçue ($1). Elle met à jour l'attribut *finalExam* avec la valeur reçue ($2). Elle retourne les clés primaires des entités mises à jour.
 
@@ -518,7 +518,7 @@ Vous pouvez ensuite exécuter cette requête :
 
 **POST** `http://127.0.0.1:8044/rest/Students/setFinalExam`
 
-Corps de la requête :
+Body de la requête :
 
 ```
 [

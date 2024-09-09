@@ -65,7 +65,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 | ----------- | ------------------------------- | :-: | -------------------------------------------------------------------- |
 | commandLine | Text                            |  -> | Línea de comando a ejecutar                                          |
 | options     | Object                          |  -> | Parámetros worker                                                    |
-| result      | 4D.SystemWorker |  <- | Nuevo System worker asíncrono o null si el proceso no se ha iniciado |
+| resultado   | 4D.SystemWorker |  <- | Nuevo System worker asíncrono o null si el proceso no se ha iniciado |
 
 <!-- END REF -->
 
@@ -116,7 +116,7 @@ Esta es la secuencia de llamadas de retorno:
 
 :::info
 
-For the callback functions to be called when you do not use [`wait()`](#wait) (asynchronous call), the process must be a [worker](../Develop/processes.md#worker-processes) created with [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NOT [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
+Para que las funciones de retrollamada se llamen cuando no utilice [`wait()`](#wait) (llamada asíncrona), el proceso debe ser un [worker](../Develop/processes.md#worker-processes) creado con [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NO [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
 
 :::
 

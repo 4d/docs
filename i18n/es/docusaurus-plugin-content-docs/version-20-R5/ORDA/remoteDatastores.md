@@ -5,15 +5,15 @@ title: Bases de datos remotas
 
 Un **datastore remoto** es una referencia, en una aplicación 4D local (4D o 4D Server), a un [datastore](dsMapping.md#datastore) almacenado en otra aplicación 4D.
 
-The local 4D application connects to and references the remote datastore through a call to the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command.
+La aplicación 4D local se conecta y hace referencia al datastore remoto a través de una llamada al comando [`Open datastore`](../API/DataStoreClass.md#open-datastore).
 
-On the remote machine, 4D opens a [session](../WebServer/sessions.md) to handle requests from the application that call `Open datastore`. Las solicitudes utilizan internamente la [API REST](../REST/gettingStarted.md), lo que significa que pueden requerir [licencias disponibles](../REST/authUsers.md).
+En la máquina remota, 4D abre una [sesión](../WebServer/sessions.md) para gestionar las peticiones de la aplicación que llaman a `Open datastore`. Las solicitudes utilizan internamente la [API REST](../REST/gettingStarted.md), lo que significa que pueden requerir [licencias disponibles](../REST/authUsers.md).
 
 ## Utilizando sesiones web
 
-When you work with a remote datastore referenced through calls to the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command, the connection with the requesting processes is handled via [web sessions](../WebServer/sessions.md) on the remote machine.
+Cuando se trabaja con un datastore remoto referenciado a través de llamadas al comando [`Open datastore`](../API/DataStoreClass.md#open-datastore), la conexión con los procesos solicitantes se gestiona a través de [sesiones web](../WebServer/sessions.md) en la máquina remota.
 
-The web session created on the remote datastore is identified using a internal session ID which is associated to the `localID` on the 4D application side. Esta sesión gestiona automáticamente el acceso a los datos, a las selecciones de entidades o a las entidades.
+La sesión web creada en el almacén de datos remoto se identifica utilizando un ID de sesión interno que se asocia al `localID` del lado de la aplicación 4D. Esta sesión gestiona automáticamente el acceso a los datos, a las selecciones de entidades o a las entidades.
 
 El `localID` es local a la máquina que se conecta al datastore remoto, lo que significa:
 
@@ -39,9 +39,9 @@ En el siguiente ejemplo, se están ejecutando dos procesos para la misma sesión
 
 ## Cierre de las sesiones
 
-As described in the [session lifetime](../WebServer/sessions.md#session-lifetime) paragraph, a web session is automatically closed by 4D when there has been no activity during its timeout period. El tiempo de espera por defecto es de 60 mn, pero este valor puede modificarse utilizando el parámetro _connectionInfo_ del comando `Open datastore`.
+Como se describe en el párrafo [tiempo de vida de la sesión](../WebServer/sessions.md#session-lifetime) una sesión web es cerrada automáticamente por 4D cuando no ha habido actividad durante su periodo de tiempo de espera. El tiempo de espera por defecto es de 60 mn, pero este valor puede modificarse utilizando el parámetro _connectionInfo_ del comando `Open datastore`.
 
-Si se envía una solicitud al almacén de datos remoto después de haber cerrado la sesión, ésta se vuelve a crear automáticamente si es posible (licencia disponible, servidor no detenido...). However, keep in mind that the context of the session regarding locks and transactions is lost (see below).
+Si se envía una solicitud al almacén de datos remoto después de haber cerrado la sesión, ésta se vuelve a crear automáticamente si es posible (licencia disponible, servidor no detenido...). Sin embargo, hay que tener en cuenta que se pierde el contexto de la sesión en cuanto a bloqueos y transacciones (ver abajo).
 
 ## Bloqueo y transacciones
 

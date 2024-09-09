@@ -27,7 +27,7 @@ title: VP EXPORT DOCUMENT
 
 The `VP EXPORT DOCUMENT` command <!-- REF #_method_.VP EXPORT DOCUMENT.Summary -->exports the 4D View Pro object attached to the 4D View Pro area _vpAreaName_ to a document on disk according to the _filePath_ and _paramObj_ parameters<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 In _filePath_, pass the destination path and name of the document to be exported. Si vous ne spécifiez pas de chemin, le document sera sauvegardé au même niveau que le dossier Projet.
 
@@ -100,10 +100,10 @@ Vous souhaitez exporter le contenu de la zone "VPArea" vers un document 4D View 
 
 ```4d
 var $docPath: Text
- 
+
 $docPath:="C:\\Bases\\ViewProDocs\\MyExport.4VP"
 VP EXPORT DOCUMENT("VPArea";$docPath)
-//MyExport.4VP is saved on your disk
+//MyExport.4VP est sauvegardé sur votre disque
 ```
 
 #### Exemple 2
@@ -126,9 +126,9 @@ Vous souhaitez exporter un document 4D View Pro au format ".xlsx" et appeler une
 ```4d
  $params:=New object
  $params.formula:=Formula(AfterExport)
- $params.format:=vp MS Excel format //".xlsx"
+ $params.format:=vk MS Excel format //".xlsx"
  $params.valuesOnly:=True
- 
+
  VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\convertedfile";$params)
 ```
 
@@ -136,7 +136,7 @@ _**AfterExport**_ method:
 
 ```4d
  #DECLARE($areaName : Text ; $filePath : Text ; $params : Object ; $status : Object )
- 
+
  If($status.success=False)
     ALERT($status.errorMessage)
  Else

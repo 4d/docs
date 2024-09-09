@@ -210,8 +210,8 @@ Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge 
 *   date
 *   heure (stockée en nombre de milliseconds - réel)
 *   Null
-*   shared object(*)
-*   shared collection(*)
+*   objet partagé
+*   collection partagée
 
 :::note
 
@@ -219,7 +219,6 @@ Contrairement aux collections standard (non partagées), les collections partag�
 
 :::
 
-(\*)Lorsqu'un objet partagé ou une collection partagée est ajouté(e) comme élément à une collection partagée, il/elle hérite de son *locking identifier*. Pour plus d'informations sur ce point, reportez-vous à [4D Doc Center](https://doc.4d.com).
 
 #### Exemple
 
@@ -908,16 +907,13 @@ Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez q
 
 
 <!-- REF #collection.every().Params -->
-| Paramètres | Type        |    | Description                                                             |
-| ---------- | ----------- |:--:| ----------------------------------------------------------------------- |
-| startFrom  | Integer     | -> | Elément à partir duquel débuter l'évaluation                            |
-| formula    | 4D.Function | -> | Objet formule                                                           |
-| methodName | Text        | -> | Nom de méthode                                                          |
-| param      | Mixed       | -> | Paramètre(s) à passer à *formula* ou à *methodName*                     |
-| Résultat   | Boolean     | <- | Vrai si tous les éléments sont évalués à vrai<!-- END REF -->
+| Paramètres | Type        |    | Description                                  |
+| ---------- | ----------- |:--:| -------------------------------------------- |
+| startFrom  | Integer     | -> | Elément à partir duquel débuter l'évaluation |
+| formula    | 4D.Function | -> | Objet formule                                |
+| methodName | Text        | -> | Nom de méthode                               |
 
-
-|
+|param|Mixed|->|Parameter(s) to pass to *formula* or *methodName*| |Result|Boolean|<-|True if all elements successfully passed the test|<!-- END REF -->
 
 
 #### Description
@@ -2127,6 +2123,7 @@ La fonction `.max()` <!-- REF #collection.max().Summary -->retourne l'élément 
 
 Si la collection contient différents types de valeurs, la fonction `.max()` retournera la plus grande valeur du dernier type d'élément dans l'ordre de la liste de types (cf. description de [`.sort()`](#sort)).
 
+
 Si la collection contient des objets, passez le paramètre *propertyPath* pour indiquer la propriété d'objet dont vous souhaitez obtenir la valeur maximale.
 
 Si la collection est vide, `.max()` retourne *Undefined*.
@@ -2887,11 +2884,11 @@ Avec la méthode ***Flatten*** suivante :
 
 
 <!-- REF #collection.remove().Params -->
-| Paramètres | Type       |    | Description                                                                 |
-| ---------- | ---------- |:--:| --------------------------------------------------------------------------- |
-| index      | Integer    | -> | Élément à partir duquel la suppression peut commencer                       |
-| howMany    | Integer    | -> | Nombre d'éléments à supprimer, ou 1 élément si omis                         |
-| Résultat   | Collection | <- | Collection d'origine sans élément(s) supprimé(s)|<!-- END REF -->
+| Paramètres | Type       |    | Description                                                               |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------- |
+| index      | Integer    | -> | Élément à partir duquel la suppression peut commencer                     |
+| howMany    | Integer    | -> | Nombre d'éléments à supprimer, ou 1 élément si omis                       |
+| Résultat   | Collection | <- | Modified collection without removed element(s)|<!-- END REF -->
 
 
 |

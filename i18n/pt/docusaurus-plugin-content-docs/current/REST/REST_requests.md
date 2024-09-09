@@ -5,7 +5,7 @@ title: Sobre petições REST
 
 As estrutyuras abaixo são compatíveis com petições REST:
 
-| URI                                                              | Recurso                                                                                                           | /? or &\{filter\} (Output)                                                                                                                                   |
+| URI                                                              | Recurso                                                                                                           | /? ou &\{filter\} (saída)                                                                                                                                    |
 | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | http://{servername}:{port}/rest/ | [\{dataClass\}](dataClass.md)                                                                                   | [$filter]($filter.md), [$attributes]($attributes.md), [$skip]($skip.md), [$method=...]($method.md)... |
 |                                                                  | [\{dataClass\}](dataClass.md)/[$entityset/\{entitySetID\}]($entityset.md#entitysetentitysetid)                | [$method=...]($method.md)                                                                                                                             |

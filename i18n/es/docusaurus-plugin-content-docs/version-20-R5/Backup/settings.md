@@ -127,7 +127,7 @@ When this option is checked, the program automatically starts the restore of the
 
 #### Integrar los últimos registros si la base de datos está incompleta
 
-When this option is checked, the program automatically integrates the current log file if it contains operations that are not present in the data file. Si existe una secuencia válida de archivos .journal en el mismo repositorio, el programa integra de antemano todos los archivos .journal necesarios desde el más antiguo hasta el más actual. Esta situación se produce, por ejemplo, si se produce un corte de corriente cuando hay operaciones en la caché de datos que aún no se han escrito en el disco, o después de que se haya detectado una anomalía al abrir el archivo de datos y se haya producido una restauración.
+Cuando se marca esta opción, el programa integra automáticamente el archivo de registro actual si contiene operaciones que no están presentes en el archivo de datos. Si existe una secuencia válida de archivos .journal en el mismo repositorio, el programa integra de antemano todos los archivos .journal necesarios desde el más antiguo hasta el más actual. Esta situación se produce, por ejemplo, si se produce un corte de corriente cuando hay operaciones en la caché de datos que aún no se han escrito en el disco, o después de que se haya detectado una anomalía al abrir el archivo de datos y se haya producido una restauración.
 
 :::note
 

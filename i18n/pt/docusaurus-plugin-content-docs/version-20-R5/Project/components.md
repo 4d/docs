@@ -9,7 +9,7 @@ You can [develop](../Extensions/develop-components.md) and [build](../Desktop/bu
 
 ## Componentes interpretados e compilados
 
-Components can be interpreted or [compiled](../Desktop/building.md). The package folder of a component can contain:
+Components can be interpreted or [compiled](../Desktop/building.md). A pasta do pacote de um componente pode conter:
 
 - either a Project folder (interpreted component)
 - ou um arquivo .4DZ (componente compilado)
@@ -39,7 +39,7 @@ If the same component is installed at different locations, a [priority order] is
    /MyProjectComponentRoot/
    ```
 
-Thanks to this architecture, you can simply copy all your components at the same level as your projects and reference them in your **dependencies.json** files if necessary. In addition, you can customize the path of your components, see below.
+Thanks to this architecture, you can simply copy all your components at the same level as your projects and reference them in your **dependencies.json** files if necessary. Além disso, você pode personalizar o caminho de seus componentes, veja abaixo.
 
 The **/Sources/dependencies.json** file contents must have the following structure:
 
@@ -96,7 +96,7 @@ Since components can be installed in different ways, a priority order is applied
 
 When a component cannot be loaded because of another instance of the same component located at a higher priority level, it is given the _Overloaded_ [status](#dependency-status). The loaded component has the _Overloading_ [status](#dependency-status).
 
-## Monitoring Project Dependencies
+## Monitoramento das dependências do projeto
 
 In an opened project, you can get information about dependencies and their current loading status in the **Dependencies** panel.
 
@@ -120,12 +120,12 @@ The Dependencies panel lists all project dependencies, whatever their origin, i.
 
 São suportadas as seguintes origens:
 
-| Origin tag            | Descrição                                                                      |
-| --------------------- | ------------------------------------------------------------------------------ |
-| Componente 4D         | Built-in 4D component, stored in the `Components` folder of the 4D application |
-| Source                | Component declared in the [`dependencies.json`](#dependenciesjson) file        |
-| Environment           | Component declared in the [`environnement4d.json`](#environment4djson) file    |
-| Componente do projeto | Component located in the [`Components`](architecture.md#components) folder     |
+| Origin tag            | Descrição                                                                    |
+| --------------------- | ---------------------------------------------------------------------------- |
+| Componente 4D         | Componente 4D incorporado, armazenado na pasta `Components` da aplicação 4D  |
+| Source                | Component declared in the [`dependencies.json`](#dependenciesjson) file      |
+| Environment           | Componente declarado no arquivo [`environnement4d.json`](#environment4djson) |
+| Componente do projeto | Componente localizado na pasta [`Components`](architecture.md#components)    |
 
 **Right-click** in a dependency line and select **Show on disk** to reveal the location of a dependency:
 

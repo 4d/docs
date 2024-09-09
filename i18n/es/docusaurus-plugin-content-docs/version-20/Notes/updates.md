@@ -34,7 +34,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 :::
 
 
-#### Destacados
+#### Lo más destacado
 
 - *SpreadJS* actualizado a la versión 16.2.6 en 4D 20.2 HF1.
 - 4D 20.2 está certificado en macOS Sonoma (macOS 14).
@@ -61,12 +61,12 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 - Nuevo `validateTLSCertificate` opción para [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) que permite controlar la validación automática del certificado.
 - Comandos del lenguaje 4D: [página Novedades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) en doc.4d.com.
 - 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) en doc.4d.com.
-- Fixed bug lists: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1) - [4D 20.2](https://bugs.4d.fr/fixedbugslist?version=20.2) - [4D 20.3](https://bugs.4d.fr/fixedbugslist?version=20.3) - [4D 20.4](https://bugs.4d.fr/fixedbugslist?version=20.4).
+- Listas de bugs corregidos: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1) - [4D 20.2](https://bugs.4d.fr/fixedbugslist?version=20.2) - [4D 20.3](https://bugs.4d.fr/fixedbugslist?version=20.3) - [4D 20.4](https://bugs.4d.fr/fixedbugslist?version=20.4).
 
 
 #### Cambios de comportamiento
 
-- As of 20.3, in order to allow password verification when the [4D user directory uses the bcrypt algorithm](https://blog.4d.com/bcrypt-support-for-passwords/), the "password" value in the *connectionInfo* parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command is now sent in clear form by default. Make sure your "On REST authentication" database method can handle passwords in clear form (third parameter is then **False**) and that `Open datastore` encrypts your connection by passing the "tls" option to **True** in *connectionInfo*. In specific cases, a new "passwordAlgorithm" option can also be used for compatibility (see [`Open datastore`](../API/DataStoreClass.md#open-datastore) command).
+- A partir de 20.3, para permitir la verificación de contraseña cuando el directorio de usuario [4D utiliza el algoritmo bcrypt](https://blog.4d.com/bcrypt-support-for-passwords/), el valor "contraseña" en el parámetro *connectionInfo* del comando [`Open datastore`](../API/DataStoreClass.md#open-datastore) ahora se envía de forma clara por defecto. Asegúrese de que su método base "On REST autentication" puede manejar contraseñas de forma limpia (el tercer parámetro es entonces **False**) y que `Open datastore` encripta su conexión pasando la opción "tls" a **True** en *connectionInfo*. En casos específicos, también se puede utilizar una nueva opción "passwordAlgorithm" para la compatibilidad (ver [`Open datastore`](../API/DataStoreClass.md#open-datastore)).
 - A partir de 20.2, 4D 20 LTS ya no es compatible con Windows Server 2012 R2.
 - **Atención**: el valor inicial [`offset`](../API/FileHandleClass.md#offset) de los objetos [4D.FileHandle](../API/FileHandleClass.md) se ha definido incorrectamente en 1 en lugar de 0. Se ha realizado una corrección en 4D a partir de las versiones **20.1 HF1** y **20 R2** y el valor es ahora 0.
 - Para el cumplimiento con la RFC HTTP, la propiedad [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) devuelve ahora todos los nombres de encabezados **en minúsculas**. Si desea que su código siga funcionando como antes, utilice la nueva propiedad [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response).
@@ -81,7 +81,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 Lea las [**novedades de 4D 19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-r8/), la entrada del blog que lista todas las nuevas funcionalidades y mejoras en 4D 19 R8.
 
 
-#### Destacados
+#### Lo más destacado
 
 - Se pueden instalar métodos de gestión de errores para [contextos de ejecución globales y de componentes](../Concepts/error-handling.md#scope-and-components).
 - Los listboxes con fuentes de datos colección o selección de entidades ahora soportan la propiedad de columna [Alto de línea automático](../FormObjects/properties_CoordinatesAndSizing.md#automatic-row-height).
@@ -109,7 +109,7 @@ Lea las [**novedades de 4D 19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-r
 Lea las [**novedades de 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r7/), la entrada del blog que enumera todas las nuevas funcionalidades y mejoras en 4D 19 R7.
 
 
-#### Destacados
+#### Lo más destacado
 
 - Los datos relacionados y los atributos calculados/alias pueden mostrarse en el [explorador de datos](../Admin/dataExplorer#basics).
 - Nueva clase [FileHandle](../API/FileHandleClass.md) y nueva función [`.open()`](../API/FileClass.md#open) en la clase `File`.
@@ -245,7 +245,7 @@ Para obtener información detallada, consulte [esta entrada del blog](https://bl
 
 ## 4D 19 R2
 
-- A [default .gitignore file](../Preferences/general.md#create-gitignore-file) can be created with new projects
+- Un [archivo .gitignore por defecto](../Preferences/general.md#create-gitignore-file) puede ser creado con nuevos proyectos
 - Nueva [API Blob class](../API/BlobClass.md) para gestionar nuevos objetos [`4D.Blob`](Concepts/dt_blob.md#blob-types)
 - Soporte de `no-bom` y nuevos caracteres de fin de línea por defecto en [`.setText()`](../API/FileClass.md#settext)
 
@@ -299,7 +299,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 19
 | PDFWriter | 4.3            | 20                | Dependencia FreeType en 12.2.1                                                                                |
 | SpreadJS  | 16.2.6         | 20.2 HF1          | Motor 4D View Pro                                                                                             |
 |           | 16.0.4         | 20                |                                                                                                               |
-| OpenSSL   | 3.1.1          | 20                |                                                                                                               |
+| OpenSSL   | 3.1.6          | **20.4 HF2**      |                                                                                                               |
 | libZip    | 1.9.2          | 20                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                        |
 | LZMA      | 5.4.1          | 20                |                                                                                                               |
 | Zlib      | 1.2.13         | 20                |                                                                                                               |

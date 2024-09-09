@@ -14,7 +14,7 @@ Esta propiedad es soportada por:
 - objetos formulario [Combo box](comboBox_overview.md) y [columna list box](listbox_overview.md#list-box-columns) asociadoa a una lista de selección.
 - objetos de formulario [Combo box](comboBox_overview.md) cuya lista asociada se llena mediante su array o fuente de datos de objetos.
 
-For example, given a choice list containing "France, Germany, Italy" that is associated with a "Countries" combo box: if the **automatic insertion** property is set and a user enters "Spain", then the value "Spain" is automatically added to the list in memory:
+Por ejemplo, dada una lista de selección que contiene "Francia, Alemania, Italia" que está asociada a un combo box "Países": si la propiedad **inserción automática** está activada y un usuario introduce "España", entonces el valor "España" se añade automáticamente a la lista en memoria:
 
 ![](../assets/en/FormObjects/comboBox_AutomaticInsertion_example.png)
 
@@ -143,7 +143,7 @@ Hay tres opciones disponibles:
 
 - **Referencia de lista**: declara que la lista desplegable es jerárquica. Significa que la lista desplegable puede mostrar hasta dos niveles jerárquicos y su contenido puede gestionarse mediante los comandos del lenguaje 4D del tema **Listas jerárquicas**.
 - **Valor del elemento seleccionado** (por defecto): la lista desplegable no es jerárquica y el valor del elemento elegido en la lista por el usuario se guarda directamente. Por ejemplo, si el usuario elige el valor "Azul", este valor se guarda en el campo.
-- **Referencia del elemento seleccionado**: la lista desplegable no es jerárquica y la referencia del elemento de la lista de selección se guarda en el objeto. This reference is the numeric value associated with each item either through the *itemRef* parameter of the [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) or [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html) commands, or in the list editor. Esta opción permite optimizar el uso de la memoria: almacenar valores numéricos en los campos ocupa menos espacio que almacenar cadenas. También facilita la traducción de aplicaciones: basta con crear varias listas en distintos idiomas pero con las mismas referencias de elementos y, a continuación, cargar la lista en función del idioma de la aplicación.
+- **Referencia del elemento seleccionado**: la lista desplegable no es jerárquica y la referencia del elemento de la lista de selección se guarda en el objeto. Esta referencia es el valor numérico asociado a cada elemento, ya sea a través del parámetro *itemRef* de los comandos [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) o [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html), o en el editor de listas. Esta opción permite optimizar el uso de la memoria: almacenar valores numéricos en los campos ocupa menos espacio que almacenar cadenas. También facilita la traducción de aplicaciones: basta con crear varias listas en distintos idiomas pero con las mismas referencias de elementos y, a continuación, cargar la lista en función del idioma de la aplicación.
 
 La utilización de la opción **Referencia del elemento seleccionado** requiere el cumplimiento de los siguientes principios:
 
@@ -197,8 +197,7 @@ Una expresión 4D que se asociará a una columna. Puede introducir:
 
 - Una **variable simple** (en este caso, debe ser declarada explícitamente para la compilación). Se puede utilizar cualquier tipo de variable excepto BLOBs y arrays. El valor de la variable se calculará generalmente en el evento `On Display Detail`.
 
-- A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes)
-  only), for example: `[Employees]LastName`. Se pueden utilizar los siguientes tipos de campos:
+- Un **campo** que utiliza la sintaxis estándar [Tabla]Campo (solo [list box tipo selección](listbox_overview.md#selection-list-boxes)), por ejemplo: `[Employees]LastName`. Se pueden utilizar los siguientes tipos de campos:
   - String
   - Numeric
   - Fecha
@@ -216,7 +215,7 @@ Una expresión 4D que se asociará a una columna. Puede introducir:
   - Boolean
 
 Para los list boxes colección/entity selection, Null o tipos no soportados se muestran como cadenas vacías.\
-When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` es un comando 4D dedicado que devuelve una referencia al elemento actualmente procesado. Por ejemplo, puede utilizar `This.\<propertyPath>` donde `\<propertyPath>` es la ruta de una propiedad en la colección o una ruta de atributo de entidad para acceder al valor actual de cada elemento/entidad.
+Cuando utilice colecciones o selecciones de entidades, normalmente declarará la propiedad del elemento o el atributo de entidad asociado a una columna dentro de una expresión que contenga [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` es un comando 4D dedicado que devuelve una referencia al elemento actualmente procesado. Por ejemplo, puede utilizar `This.\<propertyPath>` donde `\<propertyPath>` es la ruta de una propiedad en la colección o una ruta de atributo de entidad para acceder al valor actual de cada elemento/entidad.
 Si utiliza una colección de valores escalares, 4D creará un objeto para cada elemento de la colección con una única propiedad (llamada "valor"), llenada con el valor del elemento. En este caso, utilizará `This.value` como expresión.
 
 Si se utiliza una expresión no asignable  (por ejemplo, `[Person]FirstName+" "+[Person]LastName`), la columna nunca se podrá introducir aunque la propiedad [Editable](properties_Entry.md#enterable) esté activada.
@@ -260,12 +259,12 @@ Se pueden utilizar todas las tablas de la base de datos, independientemente de s
 Esta propiedad está disponible en las siguientes condiciones:
 
 - una [lista de selección](#choice-list) está asociada al objeto
-- for [inputs](input_overview.md) and [list box columns](listbox_overview.md#list-box-columns), a [required list](properties_RangeOfValues.md#required-list) is also defined for the object (both options should use usually the same list), so that only values from the list can be entered by the user.
+- para [entradas](input_overview.md) y [columnas list box](listbox_overview.md#columnas-de-list-box), también se define una [lista requerida](properties_RangeOfValues.md#lista-requerida) para el objeto (ambas opciones deben usar normalmente la misma lista), de modo que solo se puedan ingresar valores de la lista por parte del usuario.
 
 Esta propiedad especifica, en el contexto de un campo o variable asociado a una lista de valores, el tipo de contenido a guardar:
 
 - **Guardar como valor** (opción por defecto): el valor del elemento elegido en la lista por el usuario se guarda directamente. Por ejemplo, si el usuario elige el valor "Azul", este valor se guarda en el campo.
-- **Guardar como referencia**: la referencia del elemento de la lista de opciones se guarda en el objeto. This reference is the numeric value associated with each item either through the *itemRef* parameter of the [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) or [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html) commands, or in the list editor.
+- **Guardar como referencia**: la referencia del elemento de la lista de opciones se guarda en el objeto. Esta referencia es el valor numérico asociado a cada elemento, ya sea a través del parámetro *itemRef* de los comandos [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) o [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html), o en el editor de listas.
 
 Esta opción permite optimizar el uso de la memoria: almacenar valores numéricos en los campos ocupa menos espacio que almacenar cadenas. También facilita la traducción de aplicaciones: basta con crear varias listas en distintos idiomas pero con las mismas referencias de elementos y, a continuación, cargar la lista en función del idioma de la aplicación.
 

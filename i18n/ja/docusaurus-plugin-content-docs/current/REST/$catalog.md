@@ -26,7 +26,7 @@ title: $catalog
 
 データクラス毎に返されるプロパティの説明です:
 
-| プロパティ   | タイプ    | 説明                                |
+| プロパティ   | 型      | 説明                                |
 | ------- | ------ | --------------------------------- |
 | name    | String | データクラスの名称。                        |
 | uri     | String | データクラスとその属性に関する情報を取得するための URI です。 |
@@ -63,7 +63,7 @@ title: $catalog
 
 `$catalog/$all` を呼び出すと、プロジェクトのデータストア内の各データクラスについて属性の情報を取得します。
 
-各データクラスと属性について取得される情報についての詳細は [`$catalog/\{dataClass\}`](#catalogdataClass) を参照ください。
+各データクラスと属性について取得される情報についての詳細は [`$catalog/\{dataClass\}`](#catalogdataclass) を参照ください。
 
 ### 例題
 
@@ -193,7 +193,7 @@ title: $catalog
 
 公開されているデータクラスについて、次のプロパティが返されます:
 
-| プロパティ          | タイプ    | 説明                                                                                        |
+| プロパティ          | 型      | 説明                                                                                        |
 | -------------- | ------ | ----------------------------------------------------------------------------------------- |
 | name           | String | データクラスの名称                                                                                 |
 | collectionName | String | データクラスにおいて作成されるエンティティセレクションの名称                                                            |
@@ -205,7 +205,7 @@ title: $catalog
 
 公開されている各属性について、次のプロパティが返されます:
 
-| プロパティ       | タイプ     | 説明                                                                                                                                               |
+| プロパティ       | 型       | 説明                                                                                                                                               |
 | ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | name        | String  | 属性の名称                                                                                                                                            |
 | kind        | String  | 属性タイプ (ストレージ (storage) またはリレートエンティティ (relatedEntity))                                   |
@@ -328,7 +328,7 @@ key オブジェクトには、データクラスの **プライマリーキー*
 
 ## シングルトン
 
-If you have defined [shared singletons](../Concepts/classes.md#singleton-classes) containing at least one [exposed function](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions), a `singletons` section is added to the returned json for both the `/$catalog` and `/$catalog/$all` syntaxes. コレクションの形でまとめられたシングルトンクラスは、それぞれ **name** (クラス名) と **method** (公開関数名) を持つオブジェクト要素として格納されます。
+1つ以上の [公開関数](../ORDA/ordaClasses.md#公開vs非公開関数) を含む [共有シングルトン](../Concepts/classes.md#シングルトンクラス) を定義している場合、`/$catalog` と `/$catalog/$all` の両方の構文で、返される json に `singletons` セクションが追加されます。 コレクションの形でまとめられたシングルトンクラスは、それぞれ **name** (クラス名) と **method** (公開関数名) を持つオブジェクト要素として格納されます。
 
 シングルトン関数は、[`$singleton` コマンド]($singleton.md) を使用した RESTリクエストで呼び出すことができます。
 

@@ -5,11 +5,12 @@ title: リリースノート
 
 ## 4D 20 R7
 
-Read [**What’s new in 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R7/), the blog post that lists all new features and enhancements in 4D 20 R7.
+[**4D 20 R7 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20-R7/): 4D 20 R7 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
 #### ハイライト
 
-- List box columns and headers of type time now support the ["blankIfNull" option](../FormObjects/properties_Display.md#time-format).
+- 時間型のリストボックスの列とヘッダーは、["blankIfNull" オプション](../FormObjects/properties_Display.md#時間フォーマット) をサポートするようになりました。
+- [.getBoxInfo()](../API/IMAPTransporterClass.md#getboxinfo) および [.getBoxList()](../API/IMAPTransporterClass.md#getboxlist) に新しいプロパティが追加されました。
 
 ## 4D 20 R6
 
@@ -112,7 +113,7 @@ Read [**What’s new in 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 #### 動作の変更
 
 - いくつかのエラーは、[エラー処理メソッド](../Concepts/error-handling.md) によってインタプリタモードのみでキャッチ可能でした。 この問題の修正後、以下のエラーがコンパイルモードでも検出されるようになりました: _範囲外のインデックス_、_互換性のない型_、_Null ポインターの逆参照_。 ただし、Intelプロセッサーでは、このようなエラーによって以前と同様に処理が中断されますが、Apple Siliconプロセッサーでは、[`ABORT`](https://doc.4d.com/4dv20/help/command/ja/page156.html)コマンドを呼び出さない限り、処理は中断されません。
-- 4D は内部的な PHPインタプリターを実装しなくなりました。 PHPコマンドを使用するには、[別途PHPインタプリターをセットアップして実行する](https://blog.4d.com/ja/deprecation-of-php-commands-and-removal-of-4d-built-in-php-interpreter) 必要があります。
+- 4D は内部的な PHPインタプリターを実装しなくなりました。 PHPコマンドを使用するには、[別途PHPインタプリターをセットアップして実行する](https://blog.4d.com/ja/deprecation-of-php-commands-removal-of-4d-built-in-php-interpreter) 必要があります。
 
 ## 4D 20 R2
 

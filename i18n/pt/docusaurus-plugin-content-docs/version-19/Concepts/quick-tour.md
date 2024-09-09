@@ -38,14 +38,14 @@ Você DEVE diferenciar o operador atribuição := dos outros operadores. Ao inv�
 A linguagem 4D é baseada em tipos, mas com alguma flexibilidade. Pode criar uma variável digitada utilizando um comando `C_XXX`. Por exemplo, para criar uma variável do tipo dados, pode escrever:
 
 ```4d
-var MyDate : Date 
+var MyDate : Date
 ```
 
 A palavra-chave `var` permite declarar variáveis objecto de um tipo de classe definido, por exemplo:
 
 ```4d
-var myPerson : cs. Person 
-//variable of the Person user class
+var myPerson : cs.Person
+//variável da classe usuário Person
 ```
 
 
@@ -206,7 +206,7 @@ Para instanciar um objeto da classe num método, chame a classe usuário a parti
 
 ```4d  
 // num método 4D
-$o:=cs.myClass.new() 
+$o:=cs.myClass.new()
 ```
 
 No método classe `myClass`, utilize a instrução `Function <methodName>` para definir a função membro classe *methodName*. Uma função membro da classe pode receber e devolver parâmetros como qualquer método e utilizar `This` como instância do objeto.
@@ -230,7 +230,7 @@ Opcionalmente, utilize a palavra-chave `Class constructor` para declarar as prop
 //in the Rectangle.4dm file
 Class constructor ($height: Integer; $width : Integer)
 This.height:=$height
-This.width:=$width 
+This.width:=$width
 This.name:="Rectangle"
 ```
 
@@ -348,7 +348,7 @@ $str:=String("hello world!")
 ```4d
 $str:=String("hello"+\
 " world"+\
-+"!")
+"!")
 ```
 
 ## Comentários
@@ -392,9 +392,9 @@ End for
 For ($vCounter;1;100)
 /*
 comments  
- /*
- other comments
- */
+    /*
+    other comments
+    */
 */
 ...
 End for
@@ -421,4 +421,3 @@ Em 4D, podem ser utilizadas as seguintes sequências de escape:
 No exemplo seguinte, o carácter **Retorno de carro** (sequência de escape `\r`) é inserido numa expressão para obter uma caixa de diálogo:
 
 `ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
-

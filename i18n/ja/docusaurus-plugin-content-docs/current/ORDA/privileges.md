@@ -23,13 +23,15 @@ Webユーザーまたは RESTユーザーがログインすると、そのセッ
 
 ## リソース
 
-プロジェクト内の以下の公開リソースに対して、許諾アクションと権限名を割り当てることができます (この設定をパーミッションと呼びます):
+プロジェクト内の以下のリソースに対して、許諾アクションと権限名を割り当てることができます (この設定をパーミッションと呼びます):
 
 - データストア
 - データクラス
 - 属性 (計算属性およびエイリアス属性を含む)
 - データモデルクラス関数
 - [シングルトン](../REST/$singleton.md)関数
+
+セッションがリソースにアクセスするたびに (アクセス形式に関係なく)、4D はセッションの権限を確認し、許可されていない場合にはアクセスを拒否します。
 
 あるレベルにおいて定義されたパーミッションは基本的に下位レベルに継承されますが、パーミッションは複数のレベルで設定することもできます:
 
@@ -151,7 +153,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 ```
 
-最高レベルのセキュリティのため、データストア ("ds") のすべての許諾アクションに "none" の権限名が割り当てられています。したがって、デフォルトでは `ds` オブジェクト全体へのデータアクセスが無効になっています。 It is recommended not to modified or use this locking privilege, but to add specific permissions to each resource you wish to make available from web or REST requests ([see example below](#example-of-privilege-configuration)).
+最高レベルのセキュリティのため、データストア ("ds") のすべての許諾アクションに "none" の権限名が割り当てられています。したがって、デフォルトでは `ds` オブジェクト全体へのデータアクセスが無効になっています。 この "none" 権限はセキュリティのため、使用も変更もしないことが推奨されています。Web や RESTリクエストから利用可能にしたい各リソースには、それ専用の権限を新たに追加することが推奨されています ([以下の例を参照](#権限設定の例))。
 
 :::caution
 
@@ -161,7 +163,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 :::note 互換性
 
-以前のリリースでは、`roles.json` ファイルはデフォルトで作成されませんでした。 4D 20 R6 以降、`roles.json`ファイルを含まない、または `"forceLogin": true` の設定が含まれていない既存のプロジェクトを開く場合、[設定ダイアログボックスの **Web機能** ページ](../settings/web.md#アクセス権) で **ds.authentify() 関数によって REST認証を有効化する** ボタンが利用可能になります。 このボタンはセキュリティ設定を自動的にアップグレードします (コードを修正する必要があるかもしれません。[このブログ記事を参照ください](https://blog.4d.com/ja/force-login-becomes-default-for-all-rest-auth))。
+以前のリリースでは、`roles.json` ファイルはデフォルトで作成されませんでした。 4D 20 R6 以降、`roles.json`ファイルを含まない、または `"forceLogin": true` の設定が含まれていない既存のプロジェクトを開く場合、[設定ダイアログボックスの **Web機能** ページ](../settings/web.md#アクセス権) で **ds.authentify() 関数を通しての REST認証を有効化** ボタンが利用可能になります。 このボタンはセキュリティ設定を自動的にアップグレードします (コードを修正する必要があるかもしれません。[このブログ記事を参照ください](https://blog.4d.com/ja/force-login-becomes-default-for-all-rest-auth))。
 :::
 
 :::note Qodly Studio
@@ -174,26 +176,26 @@ Qodly Studio for 4D では、権限パネルの [**強制ログイン**オプシ
 
 `roles.json` ファイルの構文は次のとおりです:
 
-| プロパティ名      |                                                                                     |                                                                                   | タイプ                        | 必須 | 説明                                                                                                                 |
-| ----------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------- | -- | ------------------------------------------------------------------------------------------------------------------ |
-| privileges  |                                                                                     |                                                                                   | `privilege` オブジェクトのコレクション  | X  | 定義された権限のリスト                                                                                                        |
-|             | \[].privilege  |                                                                                   | String                     |    | アクセス権の名称                                                                                                           |
-|             | \[].includes   |                                                                                   | String の Collection        |    | 内包する権限名のリスト                                                                                                        |
-| roles       |                                                                                     |                                                                                   | `role` オブジェクトのコレクション       |    | 定義されたロールのリスト                                                                                                       |
-|             | \[].role       |                                                                                   | String                     |    | ロール名                                                                                                               |
-|             | \[].privileges |                                                                                   | String の Collection        |    | 内包する権限名のリスト                                                                                                        |
-| permissions |                                                                                     |                                                                                   | Object                     | X  | 設定されたパーミッションのリスト                                                                                                   |
-|             | allowed                                                                             |                                                                                   | `permission` オブジェクトのコレクション |    | 許可されたパーミッションのリスト                                                                                                   |
-|             |                                                                                     | \[].applyTo  | String                     | X  | 対象の [リソース](#リソース) 名                                                                                                |
-|             |                                                                                     | \[].type     | String                     | X  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method", "singletonMethod", "singleton" |
-|             |                                                                                     | \[].read     | String の Collection        |    | 権限名のリスト                                                                                                            |
-|             |                                                                                     | \[].create   | String の Collection        |    | 権限名のリスト                                                                                                            |
-|             |                                                                                     | \[].update   | String の Collection        |    | 権限名のリスト                                                                                                            |
-|             |                                                                                     | \[].drop     | String の Collection        |    | 権限名のリスト                                                                                                            |
-|             |                                                                                     | \[].describe | String の Collection        |    | 権限名のリスト                                                                                                            |
-|             |                                                                                     | \[].execute  | String の Collection        |    | 権限名のリスト                                                                                                            |
-|             |                                                                                     | \[].promote  | String の Collection        |    | 権限名のリスト                                                                                                            |
-| forceLogin  |                                                                                     |                                                                                   | Boolean                    |    | ["forceLogin" モード](../REST/authUsers.md#force-login-mode) を有効にする場合は true                                           |
+| プロパティ名      |                                                                                     |                                                                                   | 型                               | 必須 | 説明                                                                                                                 |
+| ----------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------- | -- | ------------------------------------------------------------------------------------------------------------------ |
+| privileges  |                                                                                     |                                                                                   | `privilege` オブジェクトの Collection  | ○  | 定義された権限のリスト                                                                                                        |
+|             | \[].privilege  |                                                                                   | String                          |    | アクセス権の名称                                                                                                           |
+|             | \[].includes   |                                                                                   | String の Collection             |    | 内包する権限名のリスト                                                                                                        |
+| roles       |                                                                                     |                                                                                   | `role` オブジェクトの Collection       |    | 定義されたロールのリスト                                                                                                       |
+|             | \[].role       |                                                                                   | String                          |    | ロール名                                                                                                               |
+|             | \[].privileges |                                                                                   | String の Collection             |    | 内包する権限名のリスト                                                                                                        |
+| permissions |                                                                                     |                                                                                   | オブジェクト                          | ○  | 設定されたパーミッションのリスト                                                                                                   |
+|             | allowed                                                                             |                                                                                   | `permission` オブジェクトの Collection |    | 許可されたパーミッションのリスト                                                                                                   |
+|             |                                                                                     | \[].applyTo  | String                          | ○  | 対象の [リソース](#リソース) 名                                                                                                |
+|             |                                                                                     | \[].type     | String                          | ○  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method", "singletonMethod", "singleton" |
+|             |                                                                                     | \[].read     | String の Collection             |    | 権限名のリスト                                                                                                            |
+|             |                                                                                     | \[].create   | String の Collection             |    | 権限名のリスト                                                                                                            |
+|             |                                                                                     | \[].update   | String の Collection             |    | 権限名のリスト                                                                                                            |
+|             |                                                                                     | \[].drop     | String の Collection             |    | 権限名のリスト                                                                                                            |
+|             |                                                                                     | \[].describe | String の Collection             |    | 権限名のリスト                                                                                                            |
+|             |                                                                                     | \[].execute  | String の Collection             |    | 権限名のリスト                                                                                                            |
+|             |                                                                                     | \[].promote  | String の Collection             |    | 権限名のリスト                                                                                                            |
+| forceLogin  |                                                                                     |                                                                                   | Boolean                         |    | ["forceLogin" モード](../REST/authUsers.md#force-login-mode) を有効にする場合は true                                           |
 
 :::caution 注記
 

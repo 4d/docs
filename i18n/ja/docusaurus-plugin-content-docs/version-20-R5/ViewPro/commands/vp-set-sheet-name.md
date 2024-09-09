@@ -9,7 +9,7 @@ title: VP SET SHEET NAME
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
-| 引数         | タイプ     |    | 説明                      |                  |
+| 引数         | 型       |    | 説明                      |                  |
 | ---------- | ------- | -- | ----------------------- | ---------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名 |                  |
 | name       | Text    | -> | シートの新しい名称               |                  |

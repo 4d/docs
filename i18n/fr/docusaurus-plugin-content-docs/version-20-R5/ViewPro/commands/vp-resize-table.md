@@ -24,7 +24,7 @@ title: VP RESIZE TABLE
 
 #### Description
 
-The `VP RESIZE TABLE` command <!-- REF #_method_.VP RESIZE TABLE.Summary -->changes the _tableName_ size with regards to the _rangeObj_<!-- END REF -->.
+La commande `VP RESIZE TABLE` <!-- REF #_method_.VP RESIZE TABLE.Summary -->modifie la taille de la _tableName_ par rapport à _rangeObj_<!-- END REF -->.
 
 Les règles suivantes s'appliquent :
 

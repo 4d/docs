@@ -125,7 +125,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | Propiedad                                                                                 | List box array | List box selección | List box colección o entity selection |
 | ----------------------------------------------------------------------------------------- | -------------- | ------------------ | ------------------------------------- |
 | [Color de fondo alternado](properties_BackgroundAndBorder.md#alternate-background-color)  | X              | X                  | X                                     |
-| [Color de fondo](properties_BackgroundAndBorder.md#background-color)                      | X              | X                  | X                                     |
+| [Color de fondo](properties_BackgroundAndBorder.md#background-color--fill-color)          | X              | X                  | X                                     |
 | [Negrita](properties_Text.md#bold)                                                        | X              | X                  | X                                     |
 | [Expresión color de fondo](properties_BackgroundAndBorder.md#background-color-expression) |                | X                  | X                                     |
 | [Estilo del borde](properties_BackgroundAndBorder.md#border-line-style)                   | X              | X                  | X                                     |
@@ -279,7 +279,7 @@ Puede definir para cada columna de list box de las propiedades estándar (texto,
 
 ### Propiedades específicas de la columna
 
-[Alpha Format](properties_Display.md#alpha-format) - [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color) - [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) - [Background Color](properties_Text.md#background-color) - [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) - [Bold](properties_Text.md#bold) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (selection and collection list box column)](properties_DataSource.md#data-type) - [Date Format](properties_Display.md#date-format) - [Default Values](properties_DataSource.md#default-values) - [Display Type](properties_Display.md#display-type) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression](properties_DataSource.md#expression) - [Expression Type (array list box column)](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding) - [Italic](properties_Text.md#italic) - [Invisible](properties_Display.md#visibility) - [Maximum Width](properties_CoordinatesAndSizing.md#maximum-width) - [Method](properties_Action.md#method) - [Minimum Width](properties_CoordinatesAndSizing.md#minimum-width) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Resizable](properties_ResizingOptions.md#resizable) - [Required List](properties_RangeOfValues.md#required-list) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Style Array](properties_Text.md#row-style-array) - [Save as](properties_DataSource.md#save-as) - [Style Expression](properties_Text.md#style-expression) - [Text when False/Text when True](properties_Display.md#text-when-false-text-when-true) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+[Alpha Format](properties_Display.md#alpha-format) - [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color) - [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) - [Background Color](properties_BackgroundAndBorder.md#background-color--fill-color) - [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) - [Bold](properties_Text.md#bold) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (selection and collection list box column)](properties_DataSource.md#data-type) - [Date Format](properties_Display.md#date-format) - [Default Values](properties_DataSource.md#default-values) - [Display Type](properties_Display.md#display-type) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression](properties_DataSource.md#expression) - [Expression Type (array list box column)](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding) - [Italic](properties_Text.md#italic) - [Invisible](properties_Display.md#visibility) - [Maximum Width](properties_CoordinatesAndSizing.md#maximum-width) - [Method](properties_Action.md#method) - [Minimum Width](properties_CoordinatesAndSizing.md#minimum-width) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Resizable](properties_ResizingOptions.md#resizable) - [Required List](properties_RangeOfValues.md#required-list) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Style Array](properties_Text.md#row-style-array) - [Save as](properties_DataSource.md#save-as) - [Style Expression](properties_Text.md#style-expression) - [Text when False/Text when True](properties_Display.md#text-when-false-text-when-true) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
 
 ### Eventos formulario soportados
 
@@ -354,7 +354,7 @@ Cuando el comando `OBJECT SET VISIBLE` se utiliza con un pie de página, se apli
 ### Propiedades específicas de los pies
 
 
-[Alpha Format](properties_Display.md#alpha-format) - [Background Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Bold](properties_Text.md#bold) - [Class](properties_Object.md#css-class) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding) - [Italic](properties_Text.md#italic) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable Calculation](properties_Object.md#variable-calculation) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+[Formato alfa](properties_Display.md#alpha-format) - [Color de fondo](properties_BackgroundAndBorder.md#background-color--fill-color) - [Negrita](properties_Text.md#bold) - [Clase](properties_Object.md#css-class) - [Formato Fecha](properties_Display.md#date-format) - [Tipo de expresión](properties_Object.md#expression-type) - [Fuente](properties_Text.md#font) - [Color de fuente](properties_Text.md#font-color) - [Ayuda](properties_Help.md#help-tip) - [Alineación horizontal](properties_Text.md#horizontal-alignment) - [Relleno horizontal](properties_CoordinatesAndSizing.md#horizontal-padding) - [Itálica](properties_Text.md#italic) - [Formato numérico](properties_Display.md#number-format) - [Nombre del objeto](properties_Object.md#object-name) - [Formato Imagen](properties_Display.md#picture-format) - [Formato Hora](properties_Display.md#time-format) - [Truncar con elipsis](properties_Display.md#truncate-with-ellipsis) - [Subrayar](properties_Text.md#underline) - [Cálculo de variables](properties_Object.md#variable-calculation) - [Variable o Expresión](properties_Object.md#variable-or-expression) - [Alineación vertical](properties_Text.md#vertical-alignment) - [Relleno vertical](properties_CoordinatesAndSizing.md#vertical-padding) - [Ancho](properties_CoordinatesAndSizing.md#width) - [Ajustar palabras](properties_Display.md#wordwrap)
 
 
 ## Gestión de entrada
@@ -460,6 +460,7 @@ Tenga en cuenta que las expresiones se reevalúan automáticamente cada vez que:
 - la ventana formulario que contiene el list box se convierte, o deja de ser, la ventana del primer plano.
 
 
+
 #### List box de tipo array
 Tiene que analizar el array booleano [Variable o expresión](properties_Object.md#variable-or-expression) asociado al list box para determinar si las líneas están seleccionadas o no.
 
@@ -537,7 +538,7 @@ El soporte de ordenación estándar depende del tipo de list box:
 
 | Tipo de list box               | Soporte de ordenación estándar | Comentarios                                                                                                  |
 | ------------------------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| Colección de objetos           | Sí                             | <li>Las columnas "This.a" o "This.a.b" son ordenables.</li><li>La [propiedad source del list box](properties_Object.md#variable-or-expression) debe ser una [expresión asignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
+| Colección de objetos           | Sí                             | <ul><li>Las columnas "This.a" o "This.a.b" son ordenables.</li><li>La [propiedad source del list box](properties_Object.md#variable-or-expression) debe ser una [expresión asignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                  |
 | Colección de valores escalares | No                             | Utilice la ordenación personalizada con la función [`orderBy()`](../API/CollectionClass.md#orderby)          |
 | Entity selection               | Sí                             | <li>La [propiedad source del list box](properties_Object.md#variable-or-expression) debe ser una [expresión asignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Soportado: ordena las propiedades de atributos de objetos (por ejemplo, "This.data.city" cuando "data" es un atributo de objeto)</li><li>Soportado: ordena los atributos relacionados (por ejemplo, "This.company.name")</li><li>No soportado: ordenar en las propiedades de atributos de objetos a través de atributos relacionados (por ejemplo, "This.company.data.city"). Para ello, debe utilizar la ordenación personalizada con la función [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) (ver el siguiente ejemplo)</li> |
 | Selección actual               | Sí                             | Sólo se pueden ordenar las expresiones simples (por ejemplo, `[Table_1]Campo_2`)                             |
@@ -587,7 +588,7 @@ El valor de la [variable asociada al encabezado de una columna](properties_Objec
 
 - Si la variable está definida como 1, la columna se ordena en orden ascendente y se muestra la flecha de ordenación. ![](../assets/en/FormObjects/sorticon1.png)
 
-- If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed. ![](../assets/en/FormObjects/sorticon2.png)
+- Si la variable se establece en 2, la columna se clasifica en orden descendente y se muestra la flecha de clasificación. ![](../assets/en/FormObjects/sorticon2.png)
 
 > Sólo las [variables](Concepts/variables.md) declaradas o dinámicas pueden utilizarse como variables de encabezado de columna. Otros tipos de [expresiones](Concepts/quick-tour.md#expressions) como `Form.sortValue` no son soportadas.
 
@@ -1113,7 +1114,7 @@ Ejemplos:
     OB SET($ob;"valueType";"text")
     OB SET($ob;"saveAs";"value")
     OB SET($ob;"value";"blue")
-    OB SET($ob;"requiredListName";"colors") 
+    OB SET($ob;"requiredListName";"colors")
 ```
 ![](../assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
 
@@ -1152,6 +1153,7 @@ Ejemplo:
 ````4d
  C_OBJECT($ob)
  OB SET($ob;"valueType";"text")
+
  OB SET($ob;"value";"blue")
  OB SET($ob;"choiceListName";"colors")
 ````
@@ -1271,6 +1273,3 @@ Se pueden manejar varios eventos mientras se utiliza un array list box de objeto
     *   en una casilla de selección (cambia entre marcado/desmarcado)
 *   **On Clicked**: cuando el usuario haga clic en un botón instalado con el "event" atributo *valueType*, se generará un evento `On Clicked`. Este evento es gestionado por el programador.
 *   **On Alternative Click**: cuando el usuario haga clic en un botón de elipsis (atributo "alternateButton"), se generará un evento `On Alternative Click`. Este evento es gestionado por el programador.
-
-
-

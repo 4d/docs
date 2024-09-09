@@ -35,10 +35,10 @@ Las funciones son llamadas en el objeto correspondiente en el almacén de datos 
 |                                                                    | `/rest/\{dataClass\}/EntitySelectionClassFunction/$orderby`                   |
 | [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/\{dataClass\}(key)/EntityClassFunction/`                               |
 
-> `/rest/\{dataClass\}/Function` can be used to call either a dataclass or an entity selection function (`/rest/\{dataClass\}` returns all entities of the DataClass as an entity selection).\
+> `/rest/\{dataClass\}/Function` puede utilizarse para llamar a una función de dataclass o de entity selection (`/rest/\{dataClass\}` devuelve todas las entidades de la dataClass como una selección de entidades).\
 > La función se busca primero en la clase de selección de entidades. Si no se encuentra, se busca en la dataclass. En otras palabras, si una función con el mismo nombre se define tanto en la clase DataClass como en la clase EntitySelection, la función de clase de DataClass nunca se ejecutará.
 
-> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [_Use preemptive process_ setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
+> Todo el código 4D llamado desde las peticiones REST **debe ser hilo-seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor del parámetro [_Utilizar proceso apropiativo_](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) es ignorado por el Servidor REST).
 
 ## Parámetros
 
@@ -51,7 +51,7 @@ Se aplican las siguientes reglas:
 - Todos los tipos de datos escalares soportados en las colecciones JSON pueden ser pasados como parámetros.
 - La selección de entidades y la entidad se pueden pasar como parámetros. El objeto JSON debe contener atributos específicos utilizados por el servidor REST para asignar datos a los objetos ORDA correspondientes: __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
 
-See [this example](#using-an-entity-to-be-created-on-the-server) and [this example](#receiving-an-entity-selection-as-parameter).
+Ver [este ejemplo](#usando-una-entidad-que-se-creará-en-el-servidor) y [este ejemplo](#recibiendo-una-selección-de-entidades-como-parámetro).
 
 ### Parámetro de valor escalar
 
@@ -111,7 +111,7 @@ Esta base de datos se expone como un almacén de datos remoto en localhost (puer
 La clase de `DataStore` US_Cities ofrece una API:
 
 ```
-// DataStore class
+// Clase DataStore 
 
 Class extends DataStoreImplementation
 
@@ -233,7 +233,7 @@ A continuación, puede ejecutar esta petición:
 La clase `StudentsSelection` tine una función `getAgeAverage`:
 
 ```
-// StudentsSelection Class
+// Clase StudentsSelection
 
 Class extends EntitySelection
 
@@ -294,18 +294,18 @@ A continuación, puede ejecutar esta petición:
 La clase de Dataclass `Students` tiene la función `pushData()` que recibe una entidad que contiene los datos del cliente. El método `checkData()` efectúa algunos controles. Si son válidos, la entidad se guarda y se devuelve.
 
 ```
-// Students Class
+// Clase Students
 
 Class extends DataClass
 
 exposed Function pushData($entity : Object) : Object
 	var $status : Object
 
-	$status:=checkData($entity) // $status is an object with a success boolean property
+	$status:=checkData($entity) // $status es un objeto con una propiedad booleana success 
 
-	If ($status.success)
+	Si ($status.success)
 	    $status:=$entity.save()
- 	   If ($status.success)
+ 	   If ($status. uccess)
  	       return $entity
   	  End if
 	End if
@@ -433,16 +433,16 @@ Cuerpo de la petición:
 En este ejemplo, asociamos una escuela existente a una entidad Students. La clase `StudentsEntity` tiene una API:
 
 ```
-// StudentsEntity class
+// Clase StudentsEntity
 
 Class extends Entity
 
 exposed Function putToSchool()
 	var $1, $school , $0, $status : Object
 
-		//$1 is a Schools entity
+		//$1 es una entidad Schools
 	$school:=$1
-		//Associate the related entity school to the current Students entity
+		//Asocia la entidad relacionada school a la entidad actual Students
 	This.school:=$school
 
 	$status:=This.save()

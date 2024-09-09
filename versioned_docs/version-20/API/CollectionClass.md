@@ -205,8 +205,8 @@ You can pass any number of values of the following supported types:
 *	date
 *	time (stored as number of milliseconds - real)
 *	null
-*	shared object(*)
-*	shared collection(*)
+*	shared object
+*	shared collection
 
 :::note
 
@@ -214,7 +214,6 @@ Unlike standard (not shared) collections, shared collections do not support pict
 
 :::
 
-(\*)When a shared object or collection is added to a shared collection, they share the same *locking identifier*. For more information on this point, refer to [4D Doc Center](https://doc.4d.com).
 
 #### Example
 
@@ -888,6 +887,7 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 |startFrom|Integer|->|Index to start the test at|
 |formula|4D.Function|->|Formula object|
 |methodName|Text|->|Name of a method|
+
 |param|Mixed|->|Parameter(s) to pass to *formula* or *methodName*|
 |Result|Boolean|<-|True if all elements successfully passed the test|<!-- END REF -->
 
@@ -2077,6 +2077,7 @@ The `.max()` function <!-- REF #collection.max().Summary -->returns the element 
 
 If the collection contains different types of values, the `.max()` function will return the maximum value within the last element type in the type list order (see [`.sort()`](#sort) description).
 
+
 If the collection contains objects, pass the *propertyPath* parameter to indicate the object property whose maximum value you want to get.
 
 If the collection is empty, `.max()` returns *Undefined*.
@@ -2830,7 +2831,7 @@ With the following ***Flatten*** method:
 |---------|--- |:---:|------|
 |index |Integer|->|Element at which to start removal|
 |howMany |Integer|->|Number of elements to remove, or 1 element if omitted|
-|Result|Collection|<-|Original collection without removed element(s)|<!-- END REF -->
+|Result|Collection|<-|Modified collection without removed element(s)|<!-- END REF -->
 
 
 #### Description

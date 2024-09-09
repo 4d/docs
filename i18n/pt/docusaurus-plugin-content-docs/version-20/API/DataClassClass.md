@@ -461,6 +461,13 @@ No  parâmetro *querySettings* é possível passar um objeto que conteha opçõe
 | ----------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | context     | Text | Etiqueta para o contexto de otimização automático aplicados à entidade. Esse contexto será usado pelo código subsequente que carrega a entidade para que se possa beneficiar da otimização. Essa funcionalidade foi criada para processamento cliente/servidor de ORDA [](ORDA/entities.md#client-server-optimization). |
 
+:::info
+
+When you call the `.get()` function **without** *settings* parameter, a request for attribute values is directly sent to the server (the [ORDA cache](../ORDA/entities.md#orda-cache) is not used). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. It may be advisable in this case to call [`reload()`](EntityClass.md#reload) to make sure the most recent data is retrieved from the server.
+
+:::
+
+
 #### Exemplo 1
 
 ```4d
@@ -1038,15 +1045,15 @@ ds.Class.info:
 Considere os seguintes resultados:
 
 ```4d
-ds.Class.query("info.coll[].val = :1";0) 
-// retorna B e C
-// encontra "entities with 0 in at least one val property"
+ds.Class.query("info.coll[].val = :1";0)
+// returns B and C
+// finds "entities with 0 in at least one val property"
 
 ds.Class.query("info.coll[].val != :1";0)
-// retorna apenas A
-// encontra "entities where all val properties are different from 0"
-// que é equivalente a  
-ds.Class.query(not("info.coll[].val = :1";0)) 
+// returns A only
+// finds "entities where all val properties are different from 0"
+// which is the equivalent to
+ds.Class.query(not("info.coll[].val = :1";0))
 ```
 
 Se você quiser implementar uma consulta que encontre entidades em que "pelo menos uma propriedade seja diferente do valor **", você precisará usar uma notação especial usando uma letra no `[]`:

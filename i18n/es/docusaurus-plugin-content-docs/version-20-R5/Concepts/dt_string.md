@@ -36,27 +36,24 @@ Las siguientes secuencias de escape pueden utilizarse dentro de las cadenas:
 
 ## Operadores de cadenas
 
-| Operación              | Sintaxis         | Devuelve | Expression                                | Valor                        |
-| ---------------------- | ---------------- | -------- | ----------------------------------------- | ---------------------------- |
-| Concatenación          | Cadena + Cadena  | String   | "abc" + "def"                             | "abcdef"                     |
-| Repetición             | Cadena \* Número | String   | "ab" \* 3                                 | "ababab"                     |
-| Igual                  | Cadena = Cadena  | Boolean  | "abc" = "abc"                             | True                         |
-|                        |                  |          | "abc" = "abd"                             | False                        |
-| Desigualdad            | Cadena # Cadena  | Boolean  | "abc" # "abd"                             | True                         |
-|                        |                  |          | "abc" # "abc"                             | False                        |
-| Mayor que              | Cadena > Cadena  | Boolean  | "abd" > "abc"                             | True                         |
-|                        |                  |          | "abc" > "abc"                             | False                        |
-| Menor que              | Cadena < Cadena  | Boolean  | "abc" < "abd"                             | True                         |
-|                        |                  |          | "abc" < "abc"                             | False                        |
-| Mayor o igual que      | Cadena >= Cadena | Boolean  | "abd" >= "abc"                            | True                         |
-|                        |                  |          | "abc" >= "abd"                            | False                        |
-| Menor o igual que      | Cadena <= Cadena | Boolean  | "abc" <= "abd"                            | True                         |
-|                        |                  |          | "abd" <= "abc"                            | False                        |
-| Contiene palabra clave | Cadena % Cadena  | Boolean  | "Alpha Bravo" % "Bravo"                   | True                         |
-|                        |                  |          | "Alpha Bravo" % "ravo"                    | False                        |
-|                        | Imagen % Cadena  | Boolean  | Picture_expr % "Mer" | True (\*) |
-
-(\*) Si la palabra clave "Mer" está asociada a la imagen almacenada en la expresión imagen (campo o variable).
+| Operación              | Sintaxis         | Devuelve | Expression              | Valor    |
+| ---------------------- | ---------------- | -------- | ----------------------- | -------- |
+| Concatenación          | Cadena + Cadena  | String   | "abc" + "def"           | "abcdef" |
+| Repetición             | Cadena \* Número | String   | "ab" \* 3               | "ababab" |
+| Igual                  | Cadena = Cadena  | Boolean  | "abc" = "abc"           | True     |
+|                        |                  |          | "abc" = "abd"           | False    |
+| Desigualdad            | Cadena # Cadena  | Boolean  | "abc" # "abd"           | True     |
+|                        |                  |          | "abc" # "abc"           | False    |
+| Mayor que              | Cadena > Cadena  | Boolean  | "abd" > "abc"           | True     |
+|                        |                  |          | "abc" > "abc"           | False    |
+| Menor que              | Cadena < Cadena  | Boolean  | "abc" < "abd"           | True     |
+|                        |                  |          | "abc" < "abc"           | False    |
+| Mayor o igual que      | Cadena >= Cadena | Boolean  | "abd" >= "abc"          | True     |
+|                        |                  |          | "abc" >= "abd"          | False    |
+| Menor o igual que      | Cadena <= Cadena | Boolean  | "abc" <= "abd"          | True     |
+|                        |                  |          | "abd" <= "abc"          | False    |
+| Contiene palabra clave | Cadena % Cadena  | Boolean  | "Alpha Bravo" % "Bravo" | True     |
+|                        |                  |          | "Alpha Bravo" % "ravo"  | False    |
 
 ## Comparaciones de cadenas
 
@@ -171,7 +168,7 @@ En caso contrario, si los símbolos de referencia de caracteres aparecen dentro 
  End if
  
   //Utilizando la sintaxis de referencia de caracteres, se podría escribir de una manera más simple:
- If(vtText#"")
+  If(vtText#"")
     If(Character code(vtText[[Length(vtText)]])=At sign)
   // ...
     End if
@@ -201,10 +198,10 @@ provocará el error de tiempo de ejecución que se muestra aquí:
 El siguiente método proyecto pone en mayúsculas el primer carácter de cada palabra del texto recibido como parámetro y devuelve el texto resultante en mayúsculas:
 
 ```4d
-  //Método proyecto Capitalize_text
+  //Capitalize_text project method
   //Capitalize_text ( Text ) -> Text
-  //Capitalize_text ( Source text ) -> Capitalized text
- 
+  //Capitalize_text ( Source text ) -> Texto capitalizado
+
  $0:=$1
  $vlLen:=Length($0)
  If($vlLen>0)

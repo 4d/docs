@@ -9,7 +9,7 @@ title: VP Get row attributes
 
 <!-- REF #_method_.VP Get row attributes.Params -->
 
-| 引数       | タイプ        |    | 説明            |                  |
+| 引数       | 型          |    | 説明            |                  |
 | -------- | ---------- | -- | ------------- | ---------------- |
 | rangeObj | Object     | -> | レンジオブジェクト     |                  |
 | 戻り値      | Collection | <- | 行プロパティのコレクション | <!-- END REF --> |

@@ -9,7 +9,7 @@ El IDE de 4D le ofrece varias funcionalidades para crear, editar, exportar o eli
 
 ## Creación de métodos
 
-A method in 4D is stored in a **.4dm** file located in the appropriate folder of the [`/Project/Sources/`](../Project/architecture.md#sources) folder.
+Un método en 4D se almacena en un archivo **.4dm** ubicado en la carpeta apropiada de la carpeta [`/Project/Sources/`](../Project/architecture.md#sources).
 
 Puede crear [varios tipos de métodos](../Concepts/methods.md):
 
@@ -124,7 +124,7 @@ En el Explorador, los métodos proyecto que se ofrecen como Servicio Web reciben
 
 Este atributo sólo está disponible si el atributo "Servicio Web" está marcado. Permite incluir el método actual en el WSDL de la aplicación 4D. Para obtener más información al respecto, consulte [Generación del WSDL](https://doc.4d.com/4Dv19R5/4D/19-R5/Publishing-a-Web-Service-with-4D.300-5851558.en.html#502689).
 
-In the Explorer, project methods that are offered as a Web Service and published in WSDL are given a specific icon ![](https://doc.4d.com/4Dv19R5/picture/440526/pict440526.fr.png).
+En el Explorador, los métodos proyecto que se ofrecen como Servicio Web y se publican en WSDL reciben un icono específico ![](https://doc.4d.com/4Dv19R5/picture/440526/pict440526.fr.png).
 
 #### Etiquetas 4D y URLs (4DACTION...)
 
@@ -138,7 +138,7 @@ Por razones de seguridad, esta opción está desmarcada por defecto. Cada métod
 
 Cuando está marcada, esta opción permite que el método proyecto sea ejecutado por el motor SQL de 4D. Por defecto, no está seleccionado, lo que significa que, a menos que se autorice explícitamente, los métodos proyecto de 4D están protegidos y no pueden ser llamados por el motor SQL de 4D.
 
-This property applies to all internal and external SQL queries --- executed via the ODBC driver, SQL code inserted between the [Begin SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/Begin-SQL.301-5830074.en.html)/[End SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/End-SQL.301-5830073.en.html)  tags or the [QUERY BY SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/QUERY-BY-SQL.301-5830079.en.html) command.
+Esta propiedad se aplica a todas las consultas SQL internas y externas, ejecutadas a través del controlador ODBC, código SQL insertado entre las etiquetas [Begin SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/Begin-SQL.301-5830074.en.html)/[End SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/End-SQL.301-5830073.en.html) o el comando [QUERY BY SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/QUERY-BY-SQL.301-5830079.en.html).
 
 **Notas:**
 
@@ -149,7 +149,7 @@ Para más información, consulte [Implementación del motor SQL de 4D](https://d
 
 #### Servidor REST
 
-*Esta opción está obsoleta. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md).*
+*Esta opción está obsoleta. La llamada a código a través de llamadas REST sólo es compatible con [Funciones clase modelo de datos ORDA](../REST/ClassFunctions.md).*
 
 #### Modificar de atributos globalmente
 

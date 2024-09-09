@@ -15,9 +15,9 @@ title: VP ADD SPAN
 
 #### Description
 
-The `VP ADD SPAN` command combines the cells in *rangeObj* as a single span of cells.
+La commande `VP ADD SPAN` combine les cellules dans *rangeObj* en une seule cellule fusionnée.
 
-In *rangeObj*, pass a range object of cells. Les cellules de la plage sont jointes, afin de créer une cellule plus large qui s'étend sur plusieurs colonnes et/ou lignes. Vous pouvez passer plusieurs plages de cellules pour créer plusieurs fusions de cellules en même temps. A noter que si les plages de cellules se chevauchent, seule la première plage est utilisée.
+Dans *rangeObj*, passez un objet de plage de cellules. Les cellules de la plage sont jointes, afin de créer une cellule plus large qui s'étend sur plusieurs colonnes et/ou lignes. Vous pouvez passer plusieurs plages de cellules pour créer plusieurs fusions de cellules en même temps. A noter que si les plages de cellules se chevauchent, seule la première plage est utilisée.
 
 > - Seules les données contenues dans la cellule supérieure gauche sont affichées. Les données des autres cellules combinées sont cachées jusqu'à ce que la fusion soit retirée.
 > - Les données masquées, contenues dans les cellules fusionnées, sont accessibles via des formules (commençant par la cellule supérieure gauche).
@@ -29,13 +29,13 @@ Pour fusionner les cellules First quarter et Second quarter avec les deux cellul
 ![initial-document](../../assets/en/ViewPro/vp-add-span.png)
 
 ```4d
- // First quarter range
+ // Plage First quarter
  $q1:=VP Cells("ViewProArea";2;3;3;1)
  
-  // Second quarter range
+  // Plage Second quarter
  $q2:=VP Cells("ViewProArea";5;3;3;1)
  
-  // South area range
+  // Plage South area
  $south:=VP Cells("ViewProArea";0;5;1;3)
  
  VP ADD SPAN(VP Combine ranges($q1;$q2;$south))

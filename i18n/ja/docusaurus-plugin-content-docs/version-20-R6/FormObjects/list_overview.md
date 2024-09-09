@@ -168,7 +168,7 @@ SET LIST ITEM FONT(*;"mylist1";*;thefont)
 [フォーカスの四角を隠す](properties_Appearance.md#フォーカスの四角を隠す) -
 [横スクロールバー](properties_Appearance.md#横スクロールバー) -
 [縦スクロールバー](properties_Appearance.md#縦スクロールバー) -
-[塗りカラー](properties_BackgroundAndBorder.md#背景色-塗りカラー) -
+[塗りカラー](properties_BackgroundAndBorder.md#背景色塗りカラー) -
 [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) -
 [フォント](properties_Text.md#フォント) -
 [フォントサイズ](properties_Text.md#フォントサイズ) -

@@ -1023,7 +1023,7 @@ Você deseja exportar um documento do 4D View Pro no formato ".xlsx" e chamar um
 ```4d
  $params:=New object
  $params.formula:=Formula(AfterExport)
- $params.format:=vp MS Excel format //".xlsx"
+ $params.format:=vk MS Excel format //".xlsx"
  $params.valuesOnly:=True
 
  VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\convertedfile";$params)
@@ -1191,15 +1191,15 @@ $range:=VP All("ViewProArea")
 
 $condition:=New object
 $condition.target:=vk find target text
-$condition.all:=True //Pesquisa em todo o documento
+$condition.all:=True //Search entire document
 $condition.flags:=vk find flag exact match
 
-  // Substituir as células que contêm apenas 'Total' na folha atual por "Total Geral"
-$result:=VP Find($range; "Total";$condition; "Total Geral")
+  // Replace the cells containing only 'Total' in the current sheet with "Grand Total"
+$result:=VP Find($range;"Total";$condition;"Grand Total")
 
-  // Verificar se existe um objeto de intervalo vazio 
+  // Check for empty range object
 If($result.ranges.length=0)
-    ALERT("Nenhum resultado encontrado")
+    ALERT("No result found")
 Else
     ALERT($result.ranges.length+" results found")
 End if
@@ -1244,6 +1244,7 @@ If (FORM Event.code=On After Edit && FORM Event.action="valueChanged")
          ALERT("The "+$tableName+" table has been modified.")
      End if
      End if
+End if
 ```
 
 
@@ -1372,7 +1373,7 @@ O código seguinte irá obter as coordenadas da célula ativa:
 ```4d
 $activeCell:=VP Get active cell("myVPArea")
 
-  //returns a range object containing: 
+  //returns a range object containing:
   //$activeCell.ranges[0].column=3
   //$activeCell.ranges[0].row=4
   //$activeCell.ranges[0].sheet=0
@@ -2368,11 +2369,11 @@ Se quiser centrar o texto das células fusionadas neste documento:
 ![](../assets/en/ViewPro/cmd_vpGetSpans.PNG)
 
 ```4d
-// Pesquisar todos os intervalos de células 
+// Search for all cell spans
 $range:=VP Get spans(VP All("ViewProArea"))
 
-//centralizar o texto
-$style:=New object("vAlign";vk vertical align center; "hAlign";vk horizontal align center)
+//center text
+$style:=New object("vAlign";vk vertical align center;"hAlign";vk horizontal align center)
 VP SET CELL STYLE($range;$style)
 ```
 
@@ -2473,10 +2474,10 @@ Nesse caso, a planilha atual usa dois objetos estilo:
 [
    {
      backColor:green,
-     borderLeft:{color:green,style:10}, 
-     borderTop:{color:green,style:10}, 
-     borderRight:{color:green,style:10}, 
-     borderBottom:{color:green,style:10}, 
+     borderLeft:{color:green,style:10},
+     borderTop:{color:green,style:10},
+     borderRight:{color:green,style:10},
+     borderBottom:{color:green,style:10},
      name:GreenDashDotStyle
    },
    {
@@ -3049,7 +3050,7 @@ $o.password:="excel123" VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile
 
 If ($status.success)
      ALERT("Import successfully completed")
-Else 
+Else
      ALERT("Error: "+$status.errorMessage)
 End if
 ```
@@ -3420,8 +3421,9 @@ No parâmetro *folha* opcional, você pode designar uma planilha específica ond
 Pretende atribuir um valor ao intervalo nomeado "Total".
 
 ```4d
-// name the B5 cell as Total VP ADD RANGE NAME(VP Cell("ViewProArea";1;4);"Total")
-$name:=VP Name("ViewProArea";" Total")
+// name the B5 cell as Total
+VP ADD RANGE NAME(VP Cell("ViewProArea";1;4);"Total")
+$name:=VP Name("ViewProArea";"Total")
 VP SET NUM VALUE($name;285;"$#,###.00")
 ```
 
@@ -4238,10 +4240,12 @@ Os seguintes comandos podem ser utilizados no método de retorno de chamada:
 Se quiser criar uma zona fora da área da tela do 4D View Pro e ler o valor de uma célula:
 
 ```4d
-// cs. OffscreenArea class declaration Class constructor ($path : Text)
+// cs.OffscreenArea class declaration
+Class constructor ($path : Text)
  This.filePath:=$path
 
-// This function will be called on each event of the offscreen area Function onEvent()
+// This function will be called on each event of the offscreen area
+Function onEvent()
  Case of
   :(FORM Event.code=On VP Ready)
       VP IMPORT DOCUMENT(This.area;This.filePath)
@@ -4282,24 +4286,24 @@ Se quiser carregar um grande documento offscreen, aguardar todos os cálculos pa
    SET TIMER(60)
 
   :(FORM Event.code=On VP Range Changed)
- // Fim de cálculo detectado. Reinicia o temporizador
-         If(This. sEsperando)
+ // Fim de cálculo detectado. Restarts the timer
+         If(This.isWaiting)
            SET TIMER(60)
-         End se
+         End if
 
-  :(Evento FORM. ode=On Timer)
- // Para ter certeza de não reiniciar o temporizador se você chamar o comando 4D View após este ponto
-         Esta. sWaiting:=False
+  :(FORM Event.code=On Timer)
+ // To be sure to not restart the timer if you call others 4D View command after this point
+         This.isWaiting:=False
 
- // Pare o timer
+ // Stop the timer
    SET TIMER(0)
 
- // Inicie a exportação em PDF
-        VP EXPORT DOCUMENT(Este). rea;Está. dfPath;Novo objeto("fórmula";Fórmula(ACCEPT)))
+ // Start the PDF export
+        VP EXPORT DOCUMENT(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
 
-     :(Evento FORM. ode=No URL carregando erro)
-         CANCEL 
- Caso Final
+     :(FORM Event.code=On URL Loading Error)
+         CANCEL
+ End case
 ```
 
 O método de retorno de chamada *OffscreenArea*:
@@ -4963,15 +4967,17 @@ var $options : Object
 $data:= New collection()
 
 // Dates can be passed as scalar values
-$data.push(New collection("Date"; Current date)) 
+$data.push(New collection("Date"; Current date))
 
 // Time values must be passed as object attributes
 $data.push(New collection("Time"; New object("time"; 5140)))
 
 // Date + time example
-$data.push(New collection("Date + Time"; New object("value"; Current date; "time"; 5140))) 
+$data.push(New collection("Date + Time"; New object("value"; Current date; "time"; 5140)))
 
-$options:=New object("autoGenerateColumns"; True) VP SET DATA CONTEXT("ViewProArea"; $data; $options)
+$options:=New object("autoGenerateColumns"; True)
+
+VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 ```
 
 Eis o resultado após as colunas serem geradas:
@@ -6365,5 +6371,3 @@ If(FORM Event.code=On Clicked)
 #### Veja também
 
 [VP RECOMPUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
-
-

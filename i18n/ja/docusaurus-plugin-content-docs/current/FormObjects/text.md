@@ -1,6 +1,6 @@
 ---
 id: text
-title: Text
+title: テキスト
 ---
 
 テキストオブジェクトを使って、指示・タイトル・ラベルなどの静的 (スタティック) なテキストを フォーム上に表示することができます。 これらのテキストは、参照を含むことで動的にもなります。 詳細については [スタティックテキスト中で参照を使用する](https://doc.4d.com/4Dv18/4D/18/Using-references-in-static-text.300-4575714.ja.html) を参照ください。
@@ -61,7 +61,7 @@ title: Text
 [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) -
 [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) -
 [表示状態](properties_Display.md#表示状態) -
-[塗りカラー](properties_BackgroundAndBorder.md#背景色-塗りカラー) -
+[塗りカラー](properties_BackgroundAndBorder.md#背景色塗りカラー) -
 [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) -
 [フォント](properties_Text.md#フォント) -
 [フォントサイズ](properties_Text.md#フォントサイズ) -

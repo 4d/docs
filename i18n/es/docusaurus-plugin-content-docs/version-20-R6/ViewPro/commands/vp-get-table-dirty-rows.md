@@ -27,7 +27,7 @@ title: VP Get table dirty rows
 
 #### Descripción
 
-The `VP Get table dirty rows` command <!-- REF #_method_.VP Get table dirty rows.Summary -->returns a collection of *dirty row* objects, containing items that were modified since the last reset in the specified *tableName*<!-- END REF -->.
+El comando `VP Get table dirty rows` <!-- REF #_method_.VP Get table dirty rows.Summary -->devuelve una colección de objetos *dirty row*, que contienen los elementos que fueron modificados desde el último reinicio en la tabla especificada *tableName*<!-- END REF -->.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
@@ -47,7 +47,7 @@ Cada objeto *dirty row* de la colección devuelta contiene las siguientes propie
 | originalItem | object  | Objeto antes de la modificación          |
 | row          | integer | Índice de la línea modificada            |
 
-If *tableName* is not found or if it does not contain a modified column, the command returns an empty collection.
+Si no se encuentra *tableName* o si no contiene una columna modificada, el comando devuelve una colección vacía.
 
 #### Ejemplo
 

@@ -9,7 +9,7 @@ Cette classe est disponible depuis le "class store" de `4D`.
 
 :::info Voir également
 
-For a comprehensive overview of this class, please refer to the [**CryptoKey: encrypt, decrypt, sign, and verify!**](https://blog.4d.com/cryptokey-encrypt-decrypt-sign-and-verify/) blog post.
+Pour une vue d'ensemble complète de cette classe, veuillez vous reporter au blog [**CryptoKey : chiffrer, déchiffrer, signer et vérifier!**](https://blog.4d.com/cryptokey-encrypt-decrypt-sign-and-verify/).
 
 :::
 
@@ -42,14 +42,14 @@ For a comprehensive overview of this class, please refer to the [**CryptoKey: en
 
 <!-- REF #4D.CryptoKey.new().Params -->
 
-| Paramètres | Type                         |    | Description                                          |
-| ---------- | ---------------------------- | -- | ---------------------------------------------------- |
-| settings   | Object                       | -> | Paramètres pour générer ou charger une paire de clés |
-| result     | 4D.CryptoKey | <- | Objet contenant une paire de clés de chiffrement     |
+| Paramètres | Type                         |    | Description                                      |
+| ---------- | ---------------------------- | -- | ------------------------------------------------ |
+| settings   | Object                       | -> | Settings to generate or load a key pair          |
+| result     | 4D.CryptoKey | <- | Objet contenant une paire de clés de chiffrement |
 
 <!-- END REF -->
 
-La fonction `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crée un nouvel objet `4D.CryptoKey` encapsulant une paire de clés de chiffrement<!-- END REF -->, en fonction du paramètre *settings*. Elle permet de générer une nouvelle clé RSA ou ECDSA, ou de charger une paire de clés existante à partir de la définition PEM.
+La fonction `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crée un nouvel objet `4D.CryptoKey` encapsulant une paire de clés de chiffrement<!-- END REF -->, en fonction du paramètre *settings*. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
 
 #### *settings*
 
@@ -62,47 +62,47 @@ La fonction `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crée u
 
 #### *CryptoKey*
 
-L'objet `CryptoKey` retourné encapsule une paire de clés de chiffrement. C'est un objet partagé et peut être alors utilisé par de multiples traitements 4D simultanés.
+L'objet `CryptoKey` retourné encapsule une paire de clés de chiffrement. It is a shared object and can therefore be used by multiple 4D processes simultaneously.
 
 #### Exemple 1
 
-A message is signed by a private key and the signature is verified by the corresponding public key. The following code signs and verifies a simple message signature.
+Un message est signé par une clé privée et la signature est vérifiée par la clé publique correspondante. Le code suivant signe et vérifie une signature de message simple.
 
-- Bob's side:
+- Côté bob :
 
 ```4d
-// Create the message
+// Créer le message
 $message:="hello world"
 Folder(fk desktop folder).file("message.txt").setText($message)
 
-// Create a key
+// Créer une clé
 $type:=New object("type";"RSA")
 $key:=4D.CryptoKey.new($type)
 
-// Get the public key and save it
+// Récupérer et stocker une clé publique
 Folder(fk desktop folder).file("public.pem").setText($key.getPublicKey())
 
-// Get signature as base64 and save it
+// Récupérer et stocker une signature en base64
 Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
 
-/*Bob sends the message, the public key and the signature to Alice*/
+/*Bob envoie le message, la clé publique et la signature à Alice*/
 ```
 
-- Alice's side:
+- Côté Alice :
 
 ```4d
-// Get message, public key & signature
+// Récupérer le message, la clé publique et la signature
 $message:=Folder(fk desktop folder).file("message.txt").getText()
 $publicKey:=Folder(fk desktop folder).file("public.pem").getText()
 $signature:=Folder(fk desktop folder).file("signature").getText()
 
-// Create a key
+// Créer une clé
 $type:=New object("type";"PEM";"pem";$publicKey)
 $key:=4D.CryptoKey.new($type)
 
-// Verify signature
+// Vérifier la signature
 If ($key.verify($message;$signature;$type).success)
-// The signature is valid
+// La signature est valide
 
 End if
 ```

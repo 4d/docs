@@ -49,7 +49,7 @@ $col:=New shared collection()
 $col.push("alpha") //.push() desencadeia internamente a utilização Use/End, pelo que não é necessário fazê-lo você mesmo
 ```
 
-Si necesita ejecutar varias modificaciones en la misma colección, puede proteger todas las modificaciones con un único `Use...End use` para que las modificaciones se realicen de forma atómica.
+Se precisar executar várias modificações na mesma coleção, você poderá proteger todas as modificações com um único `Use...End use` para que as modificações sejam executadas atomicamente.
 
 ```4d
 $col:=Storage.mySharedCollection
@@ -59,39 +59,37 @@ Use($col)
 End Use
 ```
 
-Um objeto/coleção partilhado só pode ser modificado por um processo de cada vez. Un objeto/una colección compartido(a) sólo puede modificarse por un proceso a la vez. . Intentar modificar un objeto/colección compartido sin al menos un `Use...End use` genera un error. Cuando un proceso llama a `Use...End use` en un objeto/colección compartido que ya está en uso por otro proceso, simplemente se pone en espera hasta que el `End use` lo desbloquee (no se genera ningún error). En consecuencia, las instrucciones dentro de las estructuras `Use...End use` deben ejecutarse rápidamente y desbloquear los elementos lo antes posible. Assim, recomenda-se vivamente que se evite modificar um objeto partilhado ou uma coleção diretamente a partir da interface, por exemplo, através de uma caixa de diálogo.
+Um objeto/coleção partilhado só pode ser modificado por um processo de cada vez. `Usar` bloqueia o objeto/coleção compartilhada de outros tópicos, enquanto `Finalizar uso` desbloqueia o objeto/coleção compartilhada (se o contador de bloqueio estiver em 0, veja abaixo). . A tentativa de modificar um objeto/coleção compartilhado sem pelo menos um `Use...End use` gera um erro. Quando um processo chama `Use...End use` em um objeto/coleção compartilhado que já está em uso por outro processo, ele simplesmente fica em espera até que o `End use` o desbloqueie (nenhum erro é gerado). Consequentemente, as instruções dentro das estruturas `Use...End use` devem ser executadas rapidamente e desbloquear os elementos o mais rápido possível. Assim, recomenda-se vivamente que se evite modificar um objeto partilhado ou uma coleção diretamente a partir da interface, por exemplo, através de uma caixa de diálogo.
 
-La asignación de objetos/colecciones compartidos a propiedades o elementos de otros objetos/colecciones compartidos está permitida y crea **grupos compartidos**. Um grupo partilhado é criado automaticamente quando um objeto/coleção partilhado é definido como valor de propriedade ou elemento de outro objeto/coleção partilhado. Os grupos partilhados permitem o aninhamento de objectos e colecções partilhados, mas impõem regras adicionais:
+A atribuição de objectos/colecções partilhados a propriedades ou elementos de outros objectos/colecções partilhados é permitida e cria grupos partilhados\*\*. Um grupo partilhado é criado automaticamente quando um objeto/coleção partilhado é definido como valor de propriedade ou elemento de outro objeto/coleção partilhado. Os grupos partilhados permitem o aninhamento de objectos e colecções partilhados, mas impõem regras adicionais:
 
-- Al llamar a `Use` en un objeto/colección compartido que pertenece a un grupo se bloquean las propiedades/elementos de todos los objetos/colecciones del grupo y se incrementa su conteo de bloqueo. La llamada a `End use` disminuye el contador de bloqueo del grupo y cuando el contador está a 0, todos los objetos/colecciones compartidos vinculados se desbloquean.
+- Chamar `Use` em um objeto/coleta compartilhado pertencente a um grupo bloqueia propriedades/elementos de todos os objetos/coletas compartilhados do grupo e incrementa seu contador de bloqueio. Chamando `Fim uso` diminui o contador de bloqueio do grupo e quando o contador está em 0, todos os objetos/coleções compartilhadas vinculadas são desbloqueados.
 - Um objeto/coleção partilhado só pode pertencer a um grupo partilhado. É devolvido um erro se tentar definir um objeto/coleção partilhado já agrupado para um grupo diferente.
 - Os objetos/coleções partilhados agrupados não podem ser desagrupados. Uma vez incluído num grupo partilhado, um objeto/coleção partilhado está permanentemente ligado a esse grupo durante toda a sessão. Mesmo que todas as referências de um objeto/coleção sejam removidas do objeto/coleção pai, permanecerão linkadas.
 
 Consulte o exemplo 2 para ver uma ilustração das regras de grupos partilhados.
 
-**Nota:** Los grupos compartidos se gestionan a través de una propiedad interna llamada *locking identifier*. Para obter informações detalhadas sobre este valor, consulte a Referência da Linguagem 4D.
-
 ### Leitura
 
-Se permite la lectura de propiedades o elementos de un objeto/colección compartida sin tener que llamar a la estructura `Use...End use`, incluso si el objeto/colección compartida está en uso por otro proceso.
+A leitura de propriedades ou elementos de um objeto/coleção compartilhado é permitida sem a necessidade de chamar a estrutura `Use...End use`, mesmo que o objeto/coleção compartilhado esteja sendo usado por outro processo.
 
-Sin embargo, cuando varios valores son interdependientes y deben ser leídos simultáneamente, es necesario enmarcar el acceso de lectura con una estructura `Use...End use` por coherencia.
+No entanto, é necessário ler um objeto/coleção partilhado dentro de `Use...End use` quando vários valores estão ligados entre si e devem ser lidos de uma só vez, por razões de coerência.
 
 ### Duplicação
 
-Llamar a `OB Copy` con un objeto compartido (o con un objeto cuyas propiedades son objetos compartidos) es posible, pero en este caso se devuelve un objeto estándar (no compartido).
+Chamar `OB Copy` com um objeto partilhado (ou com um objeto que contenha objeto(s) partilhados como propriedades) é possível, mas irá retornar um objeto padrão (não partilhado) incluindo os objetos contidos nele (se houver).
 
 ### Armazenamento
 
-**Storage** es un objeto compartido único, disponible automáticamente en cada aplicación y máquina. This shared object is returned by the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) command. É possível utilizar este objeto para fazer referência a todos os objetos/coleções partilhados definidos durante a sessão que se pretende que estejam disponíveis a partir de quaisquer processos preemptivos ou padrão.
+**Armazenamento** é um objeto partilhado único, automaticamente disponível em cada aplicação e máquina. Este objeto compartilhado é retornado pelo comando [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html). É possível utilizar este objeto para fazer referência a todos os objetos/coleções partilhados definidos durante a sessão que se pretende que estejam disponíveis a partir de quaisquer processos preemptivos ou padrão.
 
-Tenga en cuenta que, a diferencia de los objetos compartidos estándar, el objeto `Storage` no crea un grupo compartido cuando se añaden objetos/colecciones compartidos como sus propiedades. Esta excepción permite utilizar el objeto **Storage** sin bloquear todos los objetos o colecciones compartidos conectados.
+Observe que, diferentemente dos objetos compartilhados padrão, o objeto `storage` não cria um grupo compartilhado quando objetos/coleções compartilhados são adicionados como suas propriedades. Esta exceção permite que o objeto **Storage** seja usado sem bloquear todos os objetos compartilhados ou coleções conectadas.
 
 Para mais informações, consulte a descrição do comando [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html).
 
 ## Use... End use
 
-La sintaxis de la estructura `Use...End use` es:
+A sintaxe formal da estrutura `Use...End use` é a seguinte:
 
 ```4d
  Use(Shared_object_or_Shared_collection)
@@ -99,23 +97,23 @@ La sintaxis de la estructura `Use...End use` es:
  End use
 ```
 
-La estructura `Use...End use` define una secuencia de instrucciones que ejecutarán tareas sobre el parámetro *Shared_object_or_Shared_collection* bajo la protección de un semáforo interno. *Shared_object_or_Shared_collection* puede ser cualquier objeto o colección compartido válido.
+A estrutura `Use...End use` define uma sequência de instruções que executarão tarefas no parâmetro *Shared_object_or_Shared_collection* sob a proteção de um semáforo interno. O *Shared_object_or_Shared_collection* pode ser qualquer objeto compartilhado ou coleção compartilhada válida.
 
-Los objetos compartidos y las colecciones compartidas están diseñados para permitir la comunicación entre procesos, en particular, **procesos 4D preferentes**. Podem ser passados por referência como parâmetros de um processo para outro. Es obligatorio rodear las modificaciones en los objetos o colecciones compartidas con las palabras clave `Use...End use` para evitar el acceso concurrente entre procesos.
+Objetos compartilhados e coleções compartilhadas são projetados para permitir a comunicação entre processos, em particular, **processos 4D preemptivos**. Podem ser passados por referência como parâmetros de um processo para outro. É obrigatório envolver as modificações em objetos compartilhados ou coleções compartilhadas com as palavras-chave `Use...End use` para evitar o acesso simultâneo entre processos.
 
-- Once the **Use** line is successfully executed, all *Shared_object_or_Shared_collection* properties/elements are locked for all other process in write access until the corresponding `End use` line is executed.
-- The *statement(s)* sequence can execute any modification on the Shared_object_or_Shared_collection properties/elements without risk of concurrent access.
-- If another shared object or collection is added as a property of the *Shared_object_or_Shared_collection* parameter, they become connected within the same shared group.
-- If another process tries to access one of the *Shared_object_or_Shared_collection* properties or connected properties while a **Use...End use** sequence is being executed, it is automatically put on hold and waits until the current sequence is terminated.
-- The **End use** line unlocks the *Shared_object_or_Shared_collection* properties and all objects of the same group.
-- En el código 4D se pueden anidar varias estructuras **Use...End use**. Para modificar un objeto/colección compartido, se debe llamar a la estructura **Use...End use**.
+- Quando a linha **Use** é executada com sucesso, todas as propriedades/elementos *Shared_object_or_Shared_collection* são bloqueados para todos os outros processos com acesso de gravação até que a linha `End use` correspondente seja executada.
+- A sequência de *declarações* pode executar qualquer modificação nas propriedades/elementos do *Shared_object_or_Shared_collection* sem risco de acesso simultâneo.
+- Se outro objeto ou coleção compartilhada for adicionado como uma propriedade do parâmetro *Shared_object_or_Shared_collection*, eles se tornarão conectados dentro do mesmo grupo compartilhado.
+- Se outro processo tentar acessar uma das propriedades *Shared_object_or_Shared_collection* ou propriedades conectadas enquanto um **Use. .Fim de uso** a sequência está sendo executada, ela é automaticamente colocada em espera e aguarda até que a sequência atual seja encerrada.
+- A linha **End use** desbloqueia as propriedades *Shared_object_or_Shared_collection* e todos os objetos do mesmo grupo.
+- Várias estruturas de **Uso...Uso final** podem ser aninhadas no código 4D. No caso de um grupo, cada **Uso** incrementa o contador de bloqueio do grupo e cada **uso final** decreta ele; todas as propriedades/elementos serão liberadas somente quando a última chamada **Final** define o contador de bloqueio como 0.
 
 :::note
 
-Las siguientes funciones activan automáticamente un **Use/End use** interno, haciendo innecesaria una llamada explícita a la estructura cuando se ejecuta la función:
+As funções a seguir ativam automaticamente um uso interno de **Usar/Final**, fazendo uma chamada explícita para a estrutura desnecessária quando a função é executada:
 
 - [funções de coleção](../API/CollectionClass.md) que modificam as coleções compartilhadas
-- [funciones compartidas](classes.md#shared-functions) (definidas en [clases compartidas](classes.md#shared-classes)).
+- [funções compartilhadas](classes.md#shared-functions) (definida em [classes compartilhadas](classes.md#shared-classes)).
 
 :::
 

@@ -217,7 +217,7 @@ You can declare the name, type, and number of parameters through the *parameters
 
 For more information on supported incoming parameter types, please refer to the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions) command description.
 
-If you do not declare parameters, values can be sequentially passed to methods (they will be received in $1, $2...) and their type will be automatically converted.
+If you do not declare parameters, values can be sequentially passed to methods (they will be received in $1, $2...) e seu tipo será automaticamente convertido.
 
 Date and Object parameters are handled in the following way:
 

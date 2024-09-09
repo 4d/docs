@@ -20,7 +20,7 @@ Con la API REST, puede realizar todas las manipulaciones a los datos como puede 
 
 Para añadir y modificar entidades, puede llamar a [`$method=update`]($method.md#methodupdate). Si desea eliminar una o varias entidades, puede utilizar [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
+Además la recuperación de una sola entidad en una clase de datos utilizando [\{dataClass\}({key})](%7BdataClass%7D_%7Bkey%7D.html), también puede escribir una [función de clase](ClassFunctions.md#function-calls) que devuelva una entity selection (o una colección).
 
 Antes de devolver una selección, también puede ordenarla utilizando [`$orderby`]($orderby.md) uno o varios atributos (incluso los atributos de relación).
 
@@ -242,7 +242,7 @@ Si quiere guardar un BLOB almacenado en su clase de datos, puedes escribir lo si
 
 ## Recuperar sólo una entidad
 
-You can use the [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. Es especialmente útil cuando se quiere hacer una búsqueda relacionada que no se crea en la llave primaria de la clase de datos. Por ejemplo, puede escribir:
+Puede utilizar la sintaxis [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) cuando quiera recuperar sólo una entidad. Es especialmente útil cuando se quiere hacer una búsqueda relacionada que no se crea en la llave primaria de la clase de datos. Por ejemplo, puede escribir:
 
  `GET  /rest/Company:companyCode("Acme001")`
  

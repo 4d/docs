@@ -121,7 +121,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | プロパティ                                                                    | 配列リストボックス | セレクションリストボックス | コレクションまたはエンティティセレクションリストボックス |
 | ------------------------------------------------------------------------ | --------- | ------------- | ---------------------------- |
 | [交互に使用する背景色](properties_BackgroundAndBorder.md#交互に使用する背景色)               | ○         | ○             | ○                            |
-| [背景色](properties_BackgroundAndBorder.md#背景色-塗りカラー)                       | ○         | ○             | ○                            |
+| [背景色](properties_BackgroundAndBorder.md#背景色塗りカラー)                        | ○         | ○             | ○                            |
 | [太字](properties_Text.md#太字)                                              | ○         | ○             | ○                            |
 | [背景色式](properties_BackgroundAndBorder.md#背景色式)                           |           | ○             | ○                            |
 | [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル)                     | ○         | ○             | ○                            |
@@ -236,7 +236,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 リストボックスやリストボックス列オブジェクトにて発生するフォームイベントは、次の追加プロパティを返すことがあります:
 
-| プロパティ            | タイプ     | 説明                                                               |
+| プロパティ            | 型       | 説明                                                               |
 | ---------------- | ------- | ---------------------------------------------------------------- |
 | area             | text    | リストボックスオブジェクトエリア ("header", "footer", "cell") |
 | areaName         | text    | エリアの名称                                                           |
@@ -270,7 +270,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 [オブジェクト名](properties_Object.md#オブジェクト名) -
 [変数あるいは式](properties_Object.md#変数あるいは式) -
-[式タイプ (配列リストボックス列)](properties_Object.md#式タイプ) -
+[式タイプ (配列リストボックス列)](properties_Object.md#式の型式タイプ) -
 [CSSクラス](properties_Object.md#cssクラス) -
 [デフォルト値](properties_DataSource.md#デフォルト値) -
 [選択リスト](properties_DataSource.md#選択リスト) -
@@ -281,8 +281,8 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 [自動行高](properties_CoordinatesAndSizing.md#自動行高) -
 [最小幅](properties_CoordinatesAndSizing.md#最小幅) -
 [最大幅](properties_CoordinatesAndSizing.md#最大幅) -
-[横方向パディング](properties_CoordinatesAndSizing.md#horizontal-padding) -
-[縦方向パディング](properties_CoordinatesAndSizing.md#vertical-padding) -
+[横方向パディング](properties_CoordinatesAndSizing.md#横方向パディング) -
+[縦方向パディング](properties_CoordinatesAndSizing.md#縦方向パディング) -
 [サイズ変更可](properties_ResizingOptions.md#サイズ変更可) -
 [入力可](properties_Entry.md#入力可) -
 [入力フィルター](properties_Entry.md#入力フィルター) -
@@ -291,14 +291,14 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 [表示タイプ](properties_Display.md#表示タイプ) -
 [文字フォーマット](properties_Display.md#文字フォーマット) -
 [数値フォーマット](properties_Display.md#数値フォーマット) -
-[テキスト (True時)/テキスト (False時)](properties_Display.md#テキスト-true時-テキスト-false時) -
+[テキスト (True時)/テキスト (False時)](properties_Display.md#テキスト-true時テキスト-false時) -
 [日付フォーマット](properties_Display.md#日付フォーマット) -
 [時間フォーマット](properties_Display.md#時間フォーマット) -
 [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) -
 [非表示](properties_Display.md#表示状態) -
 [ワードラップ](properties_Display.md#ワードラップ) -
 [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) -
-[背景色](properties_Text.md#背景色) -
+[背景色](properties_BackgroundAndBorder.md#背景色塗りカラー) -
 [交互に使用する背景色](properties_BackgroundAndBorder.md#交互に使用する背景色) -
 [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列) -
 [背景色式](properties_BackgroundAndBorder.md#背景色式) -
@@ -369,8 +369,8 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 [パス名](properties_TextAndPicture.md#ピクチャーパス名) -
 [アイコンの場所](properties_TextAndPicture.md#アイコンの場所) -
 [幅](properties_CoordinatesAndSizing.md#幅) -
-[横方向パディング](properties_CoordinatesAndSizing.md#horizontal-padding) -
-[縦方向パディング](properties_CoordinatesAndSizing.md#vertical-padding) -
+[横方向パディング](properties_CoordinatesAndSizing.md#横方向パディング) -
+[縦方向パディング](properties_CoordinatesAndSizing.md#縦方向パディング) -
 [フォント](properties_Text.md#フォント) -
 [太字](properties_Text.md#太字) -
 [イタリック](properties_Text.md#イタリック) -
@@ -400,12 +400,12 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 [オブジェクト名](properties_Object.md#オブジェクト名) -
 [変数あるいは式](properties_Object.md#変数あるいは式) -
-[式の型](properties_Object.md#式の型) -
+[式の型](properties_Object.md#式の型式タイプ) -
 [変数の計算](properties_Object.md#変数の計算) -
 [CSSクラス](properties_Object.md#cssクラス) -
 [幅](properties_CoordinatesAndSizing.md#幅) -
-[横方向パディング](properties_CoordinatesAndSizing.md#horizontal-padding) -
-[縦方向パディング](properties_CoordinatesAndSizing.md#vertical-padding) -
+[横方向パディング](properties_CoordinatesAndSizing.md#横方向パディング) -
+[縦方向パディング](properties_CoordinatesAndSizing.md#縦方向パディング) -
 [文字フォーマット](properties_Display.md#文字フォーマット) -
 [数値フォーマット](properties_Display.md#数値フォーマット) -
 [日付フォーマット](properties_Display.md#日付フォーマット) -
@@ -413,7 +413,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) -
 [ワードラップ](properties_Display.md#ワードラップ) -
 [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) -
-[背景色](properties_BackgroundAndBorder.md#背景色-塗りカラー) -
+[背景色](properties_BackgroundAndBorder.md#背景色塗りカラー) -
 [フォント](properties_Text.md#フォント) -
 [太字](properties_Text.md#太字) -
 [イタリック](properties_Text.md#イタリック) -

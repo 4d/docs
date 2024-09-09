@@ -11,7 +11,7 @@ Sinais são ferramentas fornecidas pela linguagem 4D para gerenciar interações
 
 Um sinal é um objeto partilhado que deve ser passado como parâmetro a comandos que chamam ou criam trabalhadores ou processo.
 
-A `4D.Signal` object contains the following built-in methods and properties:
+Um objeto `4D.Signal` contém os seguintes métodos e propriedades integrados:
 
 - [`.wait()`](#wait)
 - [`.trigger()`](#trigger)
@@ -124,7 +124,7 @@ Since the signal object is a shared object, it can also be used to maintain user
 
 **Valor retornado**
 
-A new [`4D.Signal` object](#signal-object).
+Um novo [objeto `4D.Signal`](#signal-object).
 
 #### Exemplo
 
@@ -176,7 +176,7 @@ O método ***doSomething*** poderia ser como:
 
 The `.description` property <!-- REF #SignalClass.description.Summary -->contains a custom description for the `Signal` object.<!-- END REF -->.
 
-`.description` can be set at the creation of the signal object or at any moment. Note that since the `Signal` object is a shared object, any write-mode access to the `.description` property must be surrounded by a `Use...End use` structure.
+`.description` pode ser definida ao criar o objeto signal ou a qualquer momento. Note that since the `Signal` object is a shared object, any write-mode access to the `.description` property must be surrounded by a `Use...End use` structure.
 
 Essa propriedade é **leitura-escrita**.
 
@@ -198,7 +198,7 @@ Essa propriedade é **leitura-escrita**.
 
 #### Descrição
 
-The `.signaled` property <!-- REF #SignalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. Quando o sinal é criado, `.signaled` é **False**. It becomes **True** when the `.trigger( )` is called on the object.
+The `.signaled` property <!-- REF #SignalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. Quando o sinal é criado, `.signaled` é **False**. Torna-se **True** quando o `.trigger( )` é chamado no objeto.
 
 Essa propriedade é **somente leitura**.
 
@@ -267,8 +267,8 @@ To prevent blocking code, you can pass a maximum waiting time in seconds in the 
 
 If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
 
-The function returns the value of the `.signaled` property. Evaluating this value allows knowing if the function returned because the `.trigger( )` has been called (`.signaled` is **true**) or if the *timeout* expired (`.signaled` is **false**).
+A função retorna o valor da propriedade `.signaled`. Evaluating this value allows knowing if the function returned because the `.trigger( )` has been called (`.signaled` is **true**) or if the *timeout* expired (`.signaled` is **false**).
 
-> The state of a process that waits for a signal is `Waiting for internal flag`.
+> O estado de um processo que espera um signal é `Waiting for internal flag`.
 
 <!-- END REF -->

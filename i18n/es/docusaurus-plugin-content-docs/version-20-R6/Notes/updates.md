@@ -7,35 +7,35 @@ title: Notas del lanzamiento
 
 Lea [**Novedades en 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-20-R6/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R6.
 
-#### Destacados
+#### Lo más destacado
 
-- Soporte de operadores de comparación en las [referencias de objeto](../Concepts/dt_object.md#operatodores-en-los-objetos) y las [referencias de colección](../Concepts/dt_collection.md#operadores-en-las-colecciones). [`collection.query()`](../API/CollectionClass.md#query) now supports [object and collection references as query values](../API/CollectionClass.md#object-or-collection-reference-as-value).
-- When a component has a [declared namespace](../Extensions/develop-components.md#declaring-the-component-namespace), its classes are now automatically shared between all loaded components in the host project via [`cs.<namespace>`](../Concepts/classes.md#cs).
-- Component manager: Support of [components stored on GitHub](../Project/components.md#declaring-components-stored-on-github).
-- New [`entitySelection.clean()`](../API/EntitySelectionClass.md#clean) function and [`$clean`](../REST/$clean.md) REST API to get a new entity selection based upon the original entity selection but without its deleted entities.
-- New [`session.getPrivileges()`](../API/SessionClass.md#getprivileges) function and [`$info/privileges`](../REST/$info.md) REST API to inspect session privileges for an easier debugging.
+- Soporte de operadores de comparación en las [referencias de objeto](../Concepts/dt_object.md#operatodores-en-los-objetos) y las [referencias de colección](../Concepts/dt_collection.md#operadores-en-las-colecciones). [`collection.query()`](../API/CollectionClass.md#query) ahora soporta las [referencias de objeto y de colección como valores de consulta](../API/CollectionClass.md#object-or-collection-reference-as-value).
+- Cuando un componente tiene un [espacio de nombres declarado](../Extensions/develop-components.md#declarar-el-espacio-de-nombres-del-componente), sus clases ahora se comparten automáticamente entre todos los componentes cargados en el proyecto del host por [`cs.<namespace>`](../Concepts/classes.md#cs).
+- Gestión de componentes: soporte de [componentes almacenados en GitHub](../Project/components.md#declaring-components-stored-on-github).
+- Nueva función [`entitySelection.clean()`](../API/EntitySelectionClass.md#clean) y API REST [`$clean`](../REST/$clean.md) para obtener una nueva entity selection basada en la entity selection original pero sin sus entidades eliminadas.
+- Nueva función [`session.getPrivileges()`](../API/SessionClass.md#getprivileges) y API REST [`$info/privileges`](../REST/$info.md) para inspeccionar los privilegios de sesión más fácilmente durante la depuración.
 - Nuevo archivo [4DCEFParameters.json](../FormObjects/webArea_overview.md#4dcefparametersjson) para personalizar las áreas web anidadas de 4D.
 - Nueva clase [HTTPAgent](../API/HTTPAgentClass.md) y nueva propiedad [`agent`](../API/HTTPRequestClass.md#options-parameter) para la clase HTTPRequest.
 - Nuevas funciones [`enableState()`](../API/WebFormClass.md) y [`disableState()`](../API/WebFormClass.md) para controlar los estados de las páginas Qodly desde el servidor.
 - Nueva [\` API$singleton](../REST/$singleton.md) para llamar las funciones singleton expuestas desde REST y nuevos [privilegios asociados](../ORDA/privileges.md).
-- A [new settings button](../settings/web.md#activate-rest-authentication-through-dsauthentify-function) helps you upgrade your project to use "force login" REST mode (the `On REST Authentication` database method is now deprecated).
-- A [new settings tab](../Project/compiler.md#warnings) helps you define warnings generation globally.
-- Several commands, mainly from the "4D Environment" theme, are now thread-safe ([see the full list](https://doc.4d.com/4Dv20R6/4D/Preemptive_6957385.999-2878208.en.html)), as well as some selectors of the [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20R/help/command/en/page642.html)/[`Get database parameter`](https://doc.4d.com/4dv20R/help/command/en/page643.html) commands.
-- New [4D-QPDF component](https://github.com/4d/4D-QPDF) that provides the `PDF Get attachments` command to extract attachments from a PDF/A3 document.
+- Un [nuevo botón de parámetros](../settings/web.md#activate-rest-authentication-through-dsauthentify-function) le ayuda a actualizar su proyecto para utilizar el modo REST "conexión forzada" (el método base `On REST Authentication` es ahora obsoleto).
+- Una [nueva pestaña de parámetros](../Project/compiler.md#warnings) permite definir la generación de advertencias de forma global.
+- Varios comandos, principalmente del tema "Entorno 4D", ahora son hilo seguro ([ver la lista completa](https://doc.4d.com/4Dv20R6/4D/Preemptive_6957385.999-2878208.en.html)), así como algunos selectores de los comandos [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20R/help/command/en/page642.html)/[`Get database parameter`](https://doc.4d.com/4dv20R/help/command/en/page643.html).
+- Nuevo [componente 4D-QPDF](https://github.com/4d/4D-QPDF) que ofrece el comando `PDF Get attachments` para extraer los archivos adjuntos de un documento PDF/A3.
 - Comandos del lenguaje 4D: [página Novedades](https://doc.4d.com/4Dv20R6/4D/20-R6/What-s-new.901-6957482.en.html) en doc.4d.com.
 - 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv20R6/4D/20-R6/What-s-new.901-6993921.en.html) en doc.4d.com.
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=20_R6): lista de todos los bugs que se han corregido en 4D 20 R5.
 
 #### Cambios de comportamiento
 
-- Support of scroll chaining in forms: parent subforms now scroll automatically when embedded scrollable objects ([vertically](../FormObjects/properties_Appearance.md#vertical-scroll-bar) or [horizontally](../FormObjects/properties_Appearance.md#horizontal-scroll-bar)) have reached their boundaries and the user keeps scrolling using the mouse or trackpad (overscrolling).
+- Soporte de encadenamiento de desplazamiento en los formularios: los subformularios principales ahora se desplazan automáticamente cuando los objetos integrados deslizables ([verticalmente](../FormObjects/properties_Appearance.md#vertical-scroll-bar) u [horizontalmente](. /FormObjects/properties_Appearance.md#horizontal-scroll-bar)) han llegado a sus límites y el usuario sigue desplazándose utilizando el ratón o el trackpad (desplazamiento excesivo).
 - La API REST [`$catalog`](../REST/$catalog.md) ahora devuelve singletons (si los hay).
 
 ## 4D 20 R5
 
 Lea [**Novedades en 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R5.
 
-#### Destacados
+#### Lo más destacado
 
 - Nuevo [Gestor de componentes](../Project/components.md) para gestionar componentes a través de un archivo `dependencies.json`.
 - Soporte de estructuras de gestión de errores [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try).
@@ -59,7 +59,7 @@ Lea [**Novedades en 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5/), 
 
 Lea [**Novedades en 4D 20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R4/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R4.
 
-#### Destacados
+#### Lo más destacado
 
 - Soporte de [formato de cifrado ECDSA\`](../Admin/tls.md#encryption) para certificados TLS.
 - Las conexiones TLS cliente/servidor y servidor SQL ahora se [configuran dinámicamente](../Admin/tls.md#enabling-tls-with-the-other-servers) (no se requieren archivos de certificado).
@@ -80,13 +80,13 @@ Lea [**Novedades en 4D 20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R4/),
 - El uso de una sintaxis heredada para declarar parámetros (por ejemplo, `C_TEXT($1)` o `var $1 : Text`) es obsoleto y genera advertencias en los pasos de escritura de código, verificación de sintaxis y compilación.
 - La coherencia de las selecciones ahora se mantiene después de que se hayan eliminado algunos registros y se hayan creado otros (ver [esta entrada de blog](https://blog.4d.com/4d-keeps-your-selections-of-records-consistent-regarding-deletion-of-records/)).
 - En la actualización de [la librería OpenSSL](#library-table), el nivel de seguridad SSL/TLS por defecto se ha cambiado de 1 a 2. Las llaves RSA, DSA y DH de 1024 bits o más y menos de 2048 bits, así como las llaves ECC de 160 bits o más y menos de 224 bits, ya no están permitidas. Por defecto, la compresión TLS ya estaba desactivada en versiones anteriores de OpenSSL. En el nivel de seguridad 2 no se puede activar.
-- In order to allow password verification when the [4D user directory uses the bcrypt algorithm](https://blog.4d.com/bcrypt-support-for-passwords/), the "password" value in the *connectionInfo* parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command is now sent in clear form by default. Make sure your "On REST authentication" database method can handle passwords in clear form (third parameter is then **False**) and that `Open datastore` encrypts your connection by passing the "tls" option to **True** in *connectionInfo*. In specific cases, a new "passwordAlgorithm" option can also be used for compatibility (see [`Open datastore`](../API/DataStoreClass.md#open-datastore) command).
+- Con el fin de permitir la verificación de la contraseña cuando el [directorio de usuarios 4D utiliza el algoritmo bcrypt](https://blog.4d.com/bcrypt-support-for-passwords/), el valor "password" en el parámetro *connectionInfo* del comando [`Open datastore`](../API/DataStoreClass.md#open-datastore) se envía ahora en claro por defecto. Asegúrese de que su método base "On REST authentication" puede manejar contraseñas en claro (el tercer parámetro es entonces **False**) y que `Open datastore` encripta su conexión pasando la opción "tls" a **True** en *connectionInfo*. En casos específicos, también se puede utilizar una nueva opción "passwordAlgorithm" para la compatibilidad (ver [`Open datastore`](../API/DataStoreClass.md#open-datastore).
 
 ## 4D 20 R3
 
 Lea [**Novedades en 4D 20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-R3/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R3.
 
-#### Destacados
+#### Lo más destacado
 
 - Nueva función [`collection.multiSort`](../API/CollectionClass.md#multisort).
 - Soporte del parámetro *context* en [`Formula from string`](../API/FunctionClass.md#formula-from-string).
@@ -116,7 +116,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 :::
 
-#### Destacados
+#### Lo más destacado
 
 - Nueva [clase WebSocket](../API/WebSocketClass.md) para crear y gestionar conexiones WebSocket cliente desde 4D.
 - Nueva capa de red QUIC [configuración de interfaz](../settings/client-server.md#network-layer).
@@ -159,9 +159,9 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 :::
 
-#### Destacados
+#### Lo más destacado
 
-- As of 20.3, in order to allow password verification when the [4D user directory uses the bcrypt algorithm](https://blog.4d.com/bcrypt-support-for-passwords/), the "password" value in the *connectionInfo* parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command is now sent in clear form by default. Make sure your "On REST authentication" database method can handle passwords in clear form (third parameter is then **False**) and that `Open datastore` encrypts your connection by passing the "tls" option to **True** in *connectionInfo*. In specific cases, a new "passwordAlgorithm" option can also be used for compatibility (see [`Open datastore`](../API/DataStoreClass.md#open-datastore) command).
+- A partir de 20.3, para permitir la verificación de la contraseña cuando el [directorio de usuarios 4D utiliza el algoritmo bcrypt](https://blog.4d.com/bcrypt-support-for-passwords/), el valor "password" en el parámetro *connectionInfo* del comando [`Open datastore`](../API/DataStoreClass.md#open-datastore) se envía ahora en claro por defecto. Asegúrese de que su método base "On REST authentication" puede manejar contraseñas en claro (el tercer parámetro es entonces **False**) y que `Open datastore` encripta su conexión pasando la opción "tls" a **True** en *connectionInfo*. En casos específicos, también se puede utilizar una nueva opción "passwordAlgorithm" para la compatibilidad (ver [`Open datastore`](../API/DataStoreClass.md#open-datastore).
 - 4D 20.2 está certificado en macOS Sonoma (macOS 14).
 - (4D 20.1) Nueva propiedad `plugins` en el parámetro *options* del comando [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html).
 - 4D Server integra automáticamente varios diarios: [Restauración automática](../Backup/settings.md#automatic-restore).
@@ -185,7 +185,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 - Nueva opción `validateTLSCertificate` para [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) que permite controlar la validación automática de certificados.
 - Comandos del lenguaje 4D: [página Novedades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) en doc.4d.com.
 - 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) en doc.4d.com.
-- Fixed bug lists: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1) - [4D 20.2](https://bugs.4d.fr/fixedbugslist?version=20.2) - [4D 20.3](https://bugs.4d.fr/fixedbugslist?version=20.3) - [4D 20.4](https://bugs.4d.fr/fixedbugslist?version=20.4).
+- Listas de errores corregidos: [4D 20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D 20.1](https://bugs.4d.fr/fixedbugslist?version=20.1) - [4D 20.2](https://bugs.4d.fr/fixedbugslist?version=20.2) - [4D 20.3](https://bugs.4d.fr/fixedbugslist?version=20.3) - [4D 20.4](https://bugs.4d.fr/fixedbugslist?version=20.4).
 
 #### Cambios de comportamiento
 
@@ -201,7 +201,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 Lee [**Novedades en 4D 19 R8**](https://blog.4d.com/en-whats-new-in-4d-19-r8/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 19 R8.
 
-#### Destacados
+#### Lo más destacado
 
 - Se pueden instalar métodos de gestión de errores para [contextos de ejecución globales y de componentes](../Concepts/error-handling.md#scope-and-components).
 - Los list boxes con fuentes de datos selección de entidades o colecciones ahora soportan la propiedad de columna [Alto de fila automática](../FormObjects/properties_CoordinatesAndSizing.md#automatic-row-height).
@@ -224,7 +224,7 @@ Lee [**Novedades en 4D 19 R8**](https://blog.4d.com/en-whats-new-in-4d-19-r8/), 
 
 Lee [**Novedades en 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-19-r7/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 19 R7.
 
-#### Destacados
+#### Lo más destacado
 
 - Los datos relacionados y los atributos calculados/alias pueden visualizarse en el [Explorador de datos](../Admin/dataExplorer#basics).
 - Nueva clase [FileHandle](../API/FileHandleClass.md) y nueva función [`.open()`](../API/FileClass.md#open) en la clase `File`.
@@ -354,7 +354,7 @@ Para obtener información detallada, consulte [esta entrada del blog](https://bl
 
 ## 4D 19 R2
 
-- A [default .gitignore file](../Preferences/general.md#create-gitignore-file) can be created with new projects
+- Se puede crear un [archivo .gitignore por defecto](../Preferences/general.md#create-gitignore-file) con nuevos proyectos
 - Nueva [API clase Blob](../API/BlobClass.md) para manejar nuevos [objetos `4D.Blob`](Concepts/dt_blob.md#blob-types)
 - compatibilidad con `no-bom` y nuevos caracteres de fin de línea por defecto en [`.setText()`](../API/FileClass.md#settext)
 
@@ -378,7 +378,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 19
 - Nuevos temas oscuros y claros por defecto en [Preferencias del editor de código](../Preferences/methods.md#theme-list).
 - [Compilación nativa](../Project/compiler.md#compiler-methods-for) para procesadores Silicon.
 - La propiedad [Cálculo de variables](../FormObjects/properties_Object.md#cálculo-de-variables) ahora es compatible con las columnas list box de la selección de entidades.
-- Nueva página [CLI]completa (../Admin/cli.md).
+- Nueva página completada [CLI](../Admin/cli.md).
 
 ### 4D 18 R6
 
@@ -391,7 +391,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 19
 
 </details>
 
-## Tabla de librerías
+## Tabla de la librería
 
 | Librería  | Versión actual                            | Actualizado en 4D | Comentario                                                                                                                                                     |
 | --------- | ----------------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |

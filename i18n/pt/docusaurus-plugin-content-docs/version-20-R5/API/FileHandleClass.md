@@ -268,7 +268,7 @@ The `.offset` property returns <!-- REF #FileHandleClass.offset.Summary -->the c
 
 Setting the `.offset` will change its current value at the moment of the next read or write operation.
 
-- If the passed value is negative, the `.offset` is set to the start of the file (zero).
+- Se o valor passado for negativo, o `.offset` é definido para o início do arquivo (zero).
 - If the passed value is higher than the size of the file,  the `.offset` is set to the end of the file (size of file).
 
 Essa propriedade é **leitura/escrita**.
@@ -359,7 +359,7 @@ When this function is executed, the current position ([`.offset`](#offset)) is u
 
 :::caution Aviso
 
-This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. For more information, see the [.offset description](#offset).
+This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. Para obter mais informações, consulte [descrição de .offset](#offset).
 
 :::
 
@@ -404,7 +404,7 @@ When this function is executed, the ([.offset](#offset)) is placed just after th
 
 :::caution Aviso
 
-This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. For more information, see the [.offset description](#offset).
+This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. Para obter mais informações, consulte [descrição de .offset](#offset).
 
 :::
 

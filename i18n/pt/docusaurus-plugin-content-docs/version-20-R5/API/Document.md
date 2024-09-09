@@ -505,7 +505,7 @@ Um objeto `4D.Blob`.
 
 #### Exemplo
 
-To save a document's contents in a `BLOB` field:
+Para salvar o conteúdo de um documento em um campo `BLOB`:
 
 ```4d
  var $vPath : Text
@@ -638,10 +638,10 @@ Aqui está outro exemplo com o mesmo arquivo, mas um delimitador de linha difere
  $txt:=$myFile.getText("UTF-8"; Document with LF)
 ```
 
-In this case, the contents of `$txt` are as follows:
+Neste caso, o conteúdo de `$txt` é o seguinte:
 
 "id\tname\tprice\tvat\n3\tthé\t1.06€\t19.6\n2\tcafé\t1.05€\t19.6"
 
-This time `\n` (LF) is used as line delimiter.
+Este tempo `\n` (LF) é usado como delimitador de linha.
 
 <!-- END REF -->

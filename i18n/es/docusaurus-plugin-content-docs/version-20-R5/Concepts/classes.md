@@ -429,13 +429,13 @@ Si una clase [extiende a](#class-extends-classname) otra, las propiedades de la 
 
 :::note
 
-If you initialize a property in its declaration line with an object or a collection in a [shared class](#shared-classes), the value is automatically transformed into a shared value:
+Si inicializa una propiedad en su línea de declaración con un objeto o una colección en una [clase compartida](#clases-compartidas), el valor se transforma automáticamente en un valor compartido:
 
 ```4d
-// in a shared class
+// en una clase compartida
 property myCollection := ["something"]
-// myCollection will be a shared collection
-// equivalent to:
+// myCollection será una colección compartida
+// equivalente a:
 myCollection := New shared collection("something")
 ```
 
@@ -832,17 +832,25 @@ Si se utiliza la palabra clave `shared` en una clase usuario no compartida, se i
 
 ## Clases Singleton
 
-Una **clase singleton** es una clase usuario que sólo produce una única instancia. Para más información sobre los singletons, por favor consulte la [página Wikipedia sobre los singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
+Una **clase singleton** es una clase usuario que sólo produce una única instancia. Para más información sobre los singletons, por favor consulte la [página Wikipedia sobre los singletons](https://en.wikipedia.org/wiki/Singleton_pattern). Un singleton tiene una instancia única para el proceso en el que se instancia, mientras que un _singleton compartido_ tiene una instancia única para todos los procesos en la máquina. Los singletons son útiles para definir los valores que necesitan estar disponibles desde cualquier parte de una aplicación o proceso.
 
 La clase singleton está instanciada en la primera llamada de la propiedad [`cs.<class>.me`](../API/ClassClass.md#me). El singleton instanciado de la clase se devuelve siempre cuando se utiliza la propiedad [`me`](../API/ClassClass.md#me).
 
 Si necesita instanciar un singleton con parámetros, también puede llamar la función [`new()`](../API/ClassClass.md#new). En este caso, se recomienda instanciar el singleton en algún código ejecutado al inicio de la aplicación.
 
-El alcance de una instancia singleton puede ser el proceso actual o todos los procesos. A singleton has a unique value for the process in which it is instantiated, while a _shared_ singleton has a unique value for all processes of the application. Los singletons son útiles para definir los valores que necesitan estar disponibles desde cualquier parte de una aplicación o proceso.
-
-Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application.
-
 La propiedad [`isSingleton`](../API/ClassClass.md#issingleton) de los objetos Clase permite saber si la clase es un singleton.
+
+### Alcance
+
+El alcance de una instancia singleton puede ser el proceso donde se instancia o todos los procesos en la máquina, dependiendo de su propiedad _compartida_.
+
+| Singleton creado en | Alcance si no se comparte                                                                                       | Alcance si se comparte |
+| ------------------- | --------------------------------------------------------------------------------------------------------------- | ---------------------- |
+| 4D monopuesto       | Proceso                                                                                                         | Aplicación             |
+| 4D Server           | Proceso                                                                                                         | Máquina 4D Server      |
+| Modo remoto 4D      | Proceso (_nota_: los singletons no están sincronizados en el proceso gemelo) | Máquina remota 4D      |
+
+Una vez instanciado, existe una clase singleton (y su singleton) siempre que exista una referencia a ella en algún lugar de la aplicación que se ejecuta en la máquina.
 
 :::info
 
@@ -850,7 +858,7 @@ Las clases Singleton no están soportadas por las [clases ORDA](../ORDA/ordaClas
 
 :::
 
-### Creating a singleton
+### Creación de un singleton
 
 Para crear una clase singleton, añada la palabra clave `singleton` antes del [`Class Constructor`](#class-constructor). Por ejemplo:
 
@@ -883,7 +891,7 @@ var $myOtherSingleton := cs.ProcessTag.me
 
 ### Creación de un singleton compartido
 
-To create a singleton shared by all processes of the application, add the `shared singleton` keywords before the [Class Constructor](#class-constructor). Por ejemplo:
+Para crear un singleton compartido por todos los procesos en la máquina, añada las palabras clave `shared singleton` antes del [Class Constructor](#class-constructor). Por ejemplo:
 
 ```4d
 //Class VehicleFactory
@@ -910,7 +918,7 @@ shared Function buildVehicle ($type : Text) -> $vehicle : cs.Vehicle
   This.vehicleBuilt+=1
 ```
 
-Luego puede llamar al singleton **cs.VehicleFactory** para obtener un nuevo vehículo desde cualquier lugar de su aplicación con una sola línea:
+Luego puede llamar al singleton **cs.VehicleFactory** para obtener un nuevo vehículo desde cualquier lugar de la aplicación en su máquina con una sola línea:
 
 ```4d
 $vehicle:=cs.VehicleFactory.me.buildVehicle("truck")
