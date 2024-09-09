@@ -191,9 +191,9 @@ _コオペラティブ_ モードで実行された場合には、たとえマ�
 - 標準の進捗インジケーター
 - `ALERT`、`Request` そして `CONFIRM` ダイアログ。 ダイアログはユーザーモードプロセス (4D)、あるいはサーバーユーザーインターフェースプロセス (4D Server) 内で表示されます。 ただし、4D Server を Windows上でユーザー操作を許可しないサービスとしてローンチした場合には、ダイアログは表示されないという点に注意して下さい。
 
-### Triggers
+### トリガー
 
-When a method uses a command that can call a [trigger](https://doc.4d.com/4Dv20R6/4D/20-R6/Triggers.300-6958353.en.html), the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
+[トリガー](https://doc.4d.com/4Dv20R6/4D/20-R6/Triggers.300-6958353.ja.html) を呼び出すことのあるコマンドをメソッドが使用している場合、4Dコンパイラーはメソッドがスレッドセーフであるかどうかをチェックするために、トリガーがスレッドセーフかどうかを評価します:
 
 ```4d
  SAVE RECORD([Table_1]) // Table_1 にトリガーが存在する場合、トリガーはスレッドセーフでなければなりません
@@ -268,12 +268,12 @@ DocRef 参照番号 (開かれたドキュメントの参照番号。次のコ�
 特定のコードを検証対象から除外するには、コメント形式の専用ディレクティブ `%T-` および `%T+` でそのコードを挟みます。 `//%T-` は以降のコードを検証から除外し、`//%T+` は以降のコードに対する検証を有効に戻します:
 
 ```4d
-  // %T- to disable thread safety checking
-
-  // Place the code containing commands to be excluded from thread safety checking here
- $w:=Open window(10;10;100;100) //for example
-
-  // %T+ to enable thread safety checking again for the rest of the method
+  // %T- 検証を無効にします
+ 
+  // スレッドセーフ検証から除外するコード
+ $w:=Open window(10;10;100;100) // 例
+ 
+  // %T+ 検証を有効に戻します
 ```
 
 無効化および有効化用のディレクティブでコードを挟んだ場合、そのコードがスレッドセーフかどうかについては、開発者が熟知している必要があります。 プリエンプティブなスレッドでスレッドセーフでないコードが実行された場合には、ランタイムエラーが発生します。

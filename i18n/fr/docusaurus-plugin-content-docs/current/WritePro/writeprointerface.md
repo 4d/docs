@@ -168,10 +168,10 @@ The translation file in JSON format contains the following attributes:
 
 Whitin each one of these attribute, the translation object includes the following attributes:
 
-| Attribut    | Type | Obligatoire | Description                             |
-| :---------- | :--- | :---------- | :-------------------------------------- |
-| original    | Text | x           | Original text intended for translation  |
-| translation | Text | x           | Translated version of the original text |
+| Attribut    | Type | Obligatoire | Description                            |
+| :---------- | :--- | :---------- | :------------------------------------- |
+| original    | Text | x           | Texte original destiné à la traduction |
+| translation | Text | x           | Version traduite du texte original     |
 
 Defining these attributes within the translation object ensures proper organization and alignment between the source and translated content.
 

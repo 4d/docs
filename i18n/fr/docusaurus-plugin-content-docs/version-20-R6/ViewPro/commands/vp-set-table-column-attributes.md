@@ -42,7 +42,7 @@ In the *attributes* parameter, pass an object that contains the properties to se
 | footerFormula       | text    | Formule de pied de colonne.                                                                                                                                                                                              |
 | filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                                             |
 
-In *sheet*, pass the index of the target sheet. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 
 > La numérotation démarre à 0.
 

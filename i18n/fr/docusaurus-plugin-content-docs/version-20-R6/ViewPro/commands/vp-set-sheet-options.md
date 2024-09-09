@@ -19,11 +19,11 @@ title: VP SET SHEET OPTIONS
 
 La commande `VP SET SHEET OPTIONS` <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->permet de définir différentes options de feuille de la zone *vpAreaName* <!-- END REF -->.
 
-Pass the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
 Passez un objet contenant les options à définir dans le paramètre *sheetOptions*. Pour consulter la liste complète des options disponibles, consultez le paragraphe [Options feuille](../configuring.md#sheet-options).
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet (counting begins at 0). Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante à l'aide de la constante suivante :
+Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique (la numérotation commence à zéro). Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante à l'aide de la constante suivante :
 
 - `vk current sheet`
 

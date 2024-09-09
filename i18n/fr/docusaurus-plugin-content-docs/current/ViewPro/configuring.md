@@ -27,7 +27,7 @@ Les interfaces permettent d'effectuer des modifications de base et de manipuler 
 
 #### Toolbar (Barre d’outils)
 
-Enabling the Toolbar interface displays the [**Show Formula Bar**](FormObjects/properties_Appearance.md#show-formula-bar) option. Si la case de l'option est cochée, la barre de formule est visible en-dessous de l'interface Barre d'outils.
+L'activation de l'interface de la barre d'outils affiche l'option [**Afficher la barre de formule**](FormObjects/properties_Appearance.md#show-formula-bar). Si la case de l'option est cochée, la barre de formule est visible en-dessous de l'interface Barre d'outils.
 
 Lorsque la barre de formule est visible :
 
@@ -334,7 +334,7 @@ Page attributes are used to specify general document print settings.
 
 | Propriété       | Type        | Description                                                                                                                                                                                                                                                           |
 | --------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| blackAndWhite   | boolean     | Printing in black and white only. <p>Valeur par défaut = false</p><p>**Note**: Les PDF ne sont pas affectés par cet attribut. Colors in PDFs remain.</p>                                              |
+| blackAndWhite   | boolean     | Printing in black and white only. <p>Valeur par défaut = false</p><p>**Note**: Les PDF ne sont pas affectés par cet attribut. Les couleurs en PDF restent.</p>                                        |
 | centering       | entier long | How the contents are centered on the printed page. Valeurs disponibles : `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (par défaut), `vk print centering vertical`         |
 | firstPageNumber | entier long | The page number to print on the first page.Default value = 1                                                                                                                                                                                          |
 | pageOrder       | entier long | The order pages are printed. Valeurs disponibles : `vk print page order auto` (par défaut), `vk print page order down then over`, `vk print page order over then down`.                            |

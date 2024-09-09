@@ -45,7 +45,7 @@ Le code suivant :
 $styles:=New object
 $styles.backColor:="green"
  
-//Line Border Object
+//Objet Bordure de ligne
 $borders:=New object("color";"green";"style";vk line style medium dash dot)
  
 $styles.borderBottom:=$borders
@@ -55,11 +55,11 @@ $styles.borderTop:=$borders
  
 VP ADD STYLESHEET("ViewProArea";"GreenDashDotStyle";$styles)
  
-//To apply the style
+//Pour appliquer le style
 VP SET CELL STYLE(VP Cells("ViewProArea";1;1;2;2);New object("name";"GreenDashDotStyle"))
 ```
 
-will create and apply the following style object named _GreenDashDotStyle_:
+créera et appliquera l'objet de style suivant nommé _GreenDashDotStyle_:
 
 ```
 {

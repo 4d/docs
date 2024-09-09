@@ -391,9 +391,9 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
-| 引数      | 型  |    | 説明                                                              |
-| ------- | -- |:--:| --------------------------------------------------------------- |
-| timeout | 整数 | -> | Waiting time in seconds before terminating the WebSocket server |
+| 引数      | 型  |    | 説明                              |
+| ------- | -- |:--:| ------------------------------- |
+| timeout | 整数 | -> | WebSocketサーバーを終了するまでの待機時間 (秒単位) |
 <!-- END REF -->
 
 
@@ -401,10 +401,10 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 `.terminate()` 関数は、 <!-- REF #WebSocketServerClass.terminate().Summary -->WebSocketサーバーを終了します<!-- END REF -->.
 
-By default, if no *timeout* value is set, the function initializes close handshake and waits to receive close frame from the peer, after that sending FIN packet in attempt to perform a clean socket close. When answer received, the socket is destroyed.
+By default, if no *timeout* value is set, the function initializes close handshake and waits to receive close frame from the peer, after that sending FIN packet in attempt to perform a clean socket close. 応答を受け取ると、ソケットは破棄されます。
 
 If a *timeout* value is set:
-- when the waiting time is reached, forcibly destroys the socket.
+- 待機時間に達したら強制的にソケットを破棄します。
 - if *timeout* = 0, forcibly destroys the socket without closing frames or fin packets exchange, and does it instantly without waiting time.
 
 

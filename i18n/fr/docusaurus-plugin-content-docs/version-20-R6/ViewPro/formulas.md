@@ -140,22 +140,22 @@ Vous déclarez toutes vos fonctions en utilisant la commande [`VP SET CUSTOM FUN
 ```4d
 $o:=New object
 
-//Name of the function in 4D View Pro: "DRIVERS_LICENCE"
+//Nom de la fonction dans 4D View Pro : "DRIVERS_LICENCE"
 $o.DRIVERS_LICENCE:=New object
 
-//process variable
+//variable process
 $o.DRIVERS_LICENCE.formula:=Formula(DriverLicence)
 
-//table field
+//champ table
 $o.DRIVERS_LICENCE.formula:=Formula([Users]DriverLicence)
 
-//project method
+//méthode projet
 $o.DRIVERS_LICENCE.formula:=Formula(DriverLicenceState)
 
-//4D command
+//Commande 4D
 $o.DRIVERS_LICENCE:=Formula(Choose(DriverLicence; "Obtained"; "Failed"))
 
-//4D expression and parameter
+//expression et paramètre 4D 
 $o.DRIVERS_LICENCE.formula:=Formula(ds.Users.get($1).DriverLicence)
 $o.DRIVERS_LICENCE.parameters:=New collection
 $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
@@ -219,7 +219,7 @@ Pour plus d'informations sur les types de paramètres entrants pris en charge, v
 
 Si vous ne déclarez pas de paramètres, les valeurs peuvent être passées séquentiellement aux méthodes (elles seront reçues dans $1, $2...) et leur type sera automatiquement converti.
 
-Date and Object parameters are handled in the following way:
+Les paramètres Date et Objet sont gérés de la manière suivante:
 
 - Les dates en *jstype* seront passées en tant que [object](Concepts/dt_object.md) dans le code 4D avec deux propriétés :
 
@@ -230,11 +230,11 @@ Date and Object parameters are handled in the following way:
 
 - Les objets seront passés comme [object](Concepts/dt_object.md) avec une propriété `.value` contenant le paramètre:
 
-| Propriété | Type   | Description      |
-| --------- | ------ | ---------------- |
-| value     | Object | Object parameter |
+| Propriété | Type   | Description       |
+| --------- | ------ | ----------------- |
+| value     | Object | Paramètre d'objet |
 
-### Returned values
+### Valeurs retournées
 
 Les méthodes projet 4D peuvent également retourner des valeurs dans la formule de la cellule 4D View Pro via $0. Les types de données suivants sont pris en charge pour les paramètres retournés :
 

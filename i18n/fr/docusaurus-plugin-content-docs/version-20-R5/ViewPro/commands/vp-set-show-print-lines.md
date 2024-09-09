@@ -23,7 +23,7 @@ Dans _vpAreaName_, passez le nom de la zone 4D View Pro.
 
 In _visible_, pass `True` to display the print lines, and `False` to hide them. `True` is passed by default.
 
-In _sheet_, pass the index of the target sheet. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
+Dans _sheet_, passez le numéro de la page cible. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 
 > La numérotation démarre à 0.
 

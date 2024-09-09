@@ -23,29 +23,29 @@ title: VP Get table column index
 | tableName  | Text    | -> | Nom de table                                                                |                  |
 | columnName | Text    | -> | Nom de la colonne de la table                                               |                  |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |                  |
-| Résultat   | Integer | <- | Index of _columnName_                                                       | <!-- END REF --> |
+| Résultat   | Integer | <- | Numéro d'indice de _columnName_                                             | <!-- END REF --> |
 
 #### Description
 
-The `VP Get table column index` command <!-- REF #_method_.VP Get table column index.Summary -->returns the index of the _columnName_ in the _tableName_<!-- END REF -->.
+La commande `VP Get table column index` <!-- REF #_method_.VP Get table column index. ummary -->retourne l'index du _columnName_ dans la table _tableName_<!-- END REF -->.
 
 Dans _vpAreaName_, passez le nom de la zone 4D View Pro.
 
-In _columnName_, pass the name of the table column for which you want to get the index.
+Dans _columnName_, passez le nom de la colonne de la table pour laquelle vous souhaitez obtenir l'index.
 
-In _sheet_, pass the index of the target sheet. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
+Dans _sheet_, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 
 > La numérotation démarre à 0.
 
-If _tableName_ or _columnName_ is not found, the command returns -1.
+Si _tableName_ ou _columnName_ n'est pas trouvé, la commande retourne -1.
 
 #### Exemple
 
 ```4d
-	// Search the column id according the column name
+	// Rechercher l'id colonne en fonction du nom de la colonne
 var $id : Integer
 $id:=VP Get table column index($area; $tableName; "Weight price")
-	// Remove the column by id
+	// Supprimer la colonne par id
 VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 ```
 

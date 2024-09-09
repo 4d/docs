@@ -23,23 +23,23 @@ title: VP Get table dirty rows
 | tableName  | Text       | -> | Nom de table                                                                                                    |                  |
 | reset      | Boolean    | -> | True to clear the dirty status from the current table, False to keep it untouched. Default=True |                  |
 | sheet      | Integer    | -> | Numéro d'indice de la feuille (feuille courante si omis)                                     |                  |
-| Résultat   | Collection | <- | Collection of objects with all the items modified since the last reset                                          | <!-- END REF --> |
+| Résultat   | Collection | <- | Collection d'objets avec tous les éléments modifiés depuis la dernière réinitialisation                         | <!-- END REF --> |
 
 #### Description
 
-The `VP Get table dirty rows` command <!-- REF #_method_.VP Get table dirty rows.Summary -->returns a collection of _dirty row_ objects, containing items that were modified since the last reset in the specified _tableName_<!-- END REF -->.
+La commande `VP Get table dirty rows` <!-- REF #_method_.VP Get table dirty rows.Summary -->retourne une collection d'objets _dirty row_, contenant les éléments qui ont été modifiés depuis la dernière réinitialisation dans la table spécifiée _tableName_<!-- END REF -->.
 
 Dans _vpAreaName_, passez le nom de la zone 4D View Pro.
 
-In _tableName_, pass the name of the table for which you want to get the dirty rows. Only modified columns bound to a [data context](vp-set-data-context.md) will be taken into account.
+Dans _tableName_, passez le nom de la table pour laquelle vous souhaitez obtenir les lignes modifiées. Seules les colonnes modifiées liées à un [contexte de données](vp-set-data-context.md) seront prises en compte.
 
-By default, calling the command will clear the _dirty_ status from the current table. To keep this status untouched, pass `False` in the _reset_ parameter.
+Par défaut, appeler la commande effacera le statut _dirty_ de la table courante. Pour garder ce statut intact, passez `False` dans le paramètre _reset_.
 
-In _sheet_, pass the index of the target sheet. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
+Dans _sheet_, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 
 > La numérotation démarre à 0.
 
-Each _dirty row_ object in the returned collection contains the following properties:
+Chaque objet _dirty row_ dans la collection retournée contient les propriétés suivantes:
 
 | Propriété    | Type    | Description                        |
 | ------------ | ------- | ---------------------------------- |
@@ -47,7 +47,7 @@ Each _dirty row_ object in the returned collection contains the following proper
 | originalItem | object  | Objet avant modification           |
 | row          | integer | Index de la ligne modifiée         |
 
-If _tableName_ is not found or if it does not contain a modified column, the command returns an empty collection.
+Si _tableName_ n'est pas trouvé ou s'il ne contient pas de colonne modifiée, la commande retourne une collection vide.
 
 #### Exemple
 
