@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.4.0">
 <title data-rh="true">Privileges | 4D Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://developer.4d.com/docs/ORDA/privileges"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="fr"><meta data-rh="true" property="og:locale:alternate" content="es"><meta data-rh="true" property="og:locale:alternate" content="ja"><meta data-rh="true" property="og:locale:alternate" content="pt"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="20-R6"><meta data-rh="true" name="docusaurus_tag" content="docs-default-20-R6"><meta data-rh="true" name="docsearch:version" content="20-R6"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-20-R6"><meta data-rh="true" property="og:title" content="Privileges | 4D Docs"><meta data-rh="true" name="description" content="Protecting data while allowing fast and easy access to authorized users is a major challenge for web applications. The ORDA security architecture is implemented at the heart of your datastore and allows you to define specific privileges to all web or REST user sessions for the various resources in your project (datastore, dataclasses, functions, etc.)."><meta data-rh="true" property="og:description" content="Protecting data while allowing fast and easy access to authorized users is a major challenge for web applications. The ORDA security architecture is implemented at the heart of your datastore and allows you to define specific privileges to all web or REST user sessions for the various resources in your project (datastore, dataclasses, functions, etc.)."><link data-rh="true" rel="icon" href="/docs/img/favicon/4d.gif"><link data-rh="true" rel="canonical" href="https://developer.4d.com/docs/ORDA/privileges"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/ORDA/privileges" hreflang="en"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/fr/ORDA/privileges" hreflang="fr"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/es/ORDA/privileges" hreflang="es"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/ja/ORDA/privileges" hreflang="ja"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/pt/ORDA/privileges" hreflang="pt"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/ORDA/privileges" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://OJ04C0M3CU-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="4D Docs" href="/docs/opensearch.xml"><link rel="stylesheet" href="/docs/assets/css/styles.dc9a4272.css">
-<script src="/docs/assets/js/runtime~main.afe5db2d.js" defer="defer"></script>
+<script src="/docs/assets/js/runtime~main.8787f695.js" defer="defer"></script>
 <script src="/docs/assets/js/main.147a6bc1.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -18,7 +18,7 @@
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="see-also">See also<a class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" href="/docs/ORDA/privileges#see-also">​</a></h3>
 <p>For a detailed overview of the whole permissions architecture, please read the <a href="https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/" target="_blank" rel="noopener noreferrer"><strong>Filter access to your data with a complete system of permissions</strong></a> blog post.</p>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="resources">Resources<a class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" href="/docs/ORDA/privileges#resources">​</a></h2>
-<p>You can assign specific permission actions to the following exposed resources in your project:</p>
+<p>You can assign specific permission actions to the following resources in your project:</p>
 <ul>
 <li>the datastore</li>
 <li>a dataclass</li>
@@ -26,6 +26,7 @@
 <li>a data model class function</li>
 <li>a <a href="/docs/REST/singleton">singleton</a> function</li>
 </ul>
+<p>Each time a resource is accessed within a session (whatever the way it is accessed), 4D checks that the session has the appropriate permissions, and rejects the access if it is not authorized.</p>
 <p>A permission action defined at a given level is inherited by default at lower levels, but several permissions can be set:</p>
 <ul>
 <li>A permission action defined at the datastore level is automatically assigned to all dataclasses.</li>

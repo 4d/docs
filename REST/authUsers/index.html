@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.4.0">
 <title data-rh="true">Users and sessions | 4D Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://developer.4d.com/docs/REST/authUsers"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="fr"><meta data-rh="true" property="og:locale:alternate" content="es"><meta data-rh="true" property="og:locale:alternate" content="ja"><meta data-rh="true" property="og:locale:alternate" content="pt"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="20-R6"><meta data-rh="true" name="docusaurus_tag" content="docs-default-20-R6"><meta data-rh="true" name="docsearch:version" content="20-R6"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-20-R6"><meta data-rh="true" property="og:title" content="Users and sessions | 4D Docs"><meta data-rh="true" name="description" content="Sessions"><meta data-rh="true" property="og:description" content="Sessions"><link data-rh="true" rel="icon" href="/docs/img/favicon/4d.gif"><link data-rh="true" rel="canonical" href="https://developer.4d.com/docs/REST/authUsers"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/REST/authUsers" hreflang="en"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/fr/REST/authUsers" hreflang="fr"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/es/REST/authUsers" hreflang="es"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/ja/REST/authUsers" hreflang="ja"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/pt/REST/authUsers" hreflang="pt"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/REST/authUsers" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://OJ04C0M3CU-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="4D Docs" href="/docs/opensearch.xml"><link rel="stylesheet" href="/docs/assets/css/styles.dc9a4272.css">
-<script src="/docs/assets/js/runtime~main.afe5db2d.js" defer="defer"></script>
+<script src="/docs/assets/js/runtime~main.8787f695.js" defer="defer"></script>
 <script src="/docs/assets/js/main.147a6bc1.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -23,14 +23,14 @@
 <p>The user login sequence is the following:</p>
 <ol>
 <li>
-<p>At the first REST call (for a webform call for example), a &quot;guest&quot; web user session is created. It has no privileges, no rights to execute requests other than <a href="/docs/REST/authUsers#descriptive-rest-requests">descriptive REST requests</a>, no license consumption.<br>
+<p>At the first REST call (for a Qodly page call for example), a &quot;guest&quot; web user session is created. It has no privileges, no rights to execute requests other than <a href="/docs/REST/authUsers#descriptive-rest-requests">descriptive REST requests</a>, no license consumption.<br>
 Descriptive REST requests are always processed by the server, even if no web user session using a license is opened. In this case, they are processed through &quot;guest&quot; sessions.</p>
 </li>
 <li>
 <p>You call your <a href="/docs/REST/authUsers#authentify"><code>authentify()</code> function</a> (created beforehand), in which you check the user credentials and call <a href="/docs/API/SessionClass#setprivileges"><code>Session.setPrivileges()</code></a> with appropriate privileges. <code>authentify()</code> must be an exposed <a href="/docs/ORDA/ordaClasses#datastore-class">datastore class function</a>.</p>
 </li>
 <li>
-<p>The <code>/rest/$catalog/authentify</code> request is sent to the server along with user credentials. This step only requires a basic login form that do not access data; it can be a <a href="/docs/WebServer/qodly-studio">Qodly form</a> (called via the <code>/rest/$getWebForm</code> request).</p>
+<p>The <code>/rest/$catalog/authentify</code> request is sent to the server along with user credentials. This step only requires a basic login form that do not access data; it can be a <a href="/docs/WebServer/qodly-studio">Qodly page</a> (called via the <code>/rest/$getWebForm</code> request).</p>
 </li>
 <li>
 <p>If the user is successfully authentified, a 4D license is consumed on the server and all REST requests are accepted.</p>
@@ -44,7 +44,7 @@ Descriptive REST requests are always processed by the server, even if no web use
 <ul>
 <li><a href="/docs/REST/catalog"><code>/rest/$catalog</code></a> requests (e.g. <code>/rest/$catalog/$all</code>) - access to available dataclasses</li>
 <li><code>/rest/$catalog/authentify</code> - the datastore function used to login the user</li>
-<li><code>/rest/$getWebForm</code> - the rendering of a Qodly form</li>
+<li><code>/rest/$getWebForm</code> - the rendering of a Qodly page</li>
 </ul>
 <p><img decoding="async" loading="lazy" alt="alt-text" src="/docs/assets/images/force-login-1-f9e377d9d1294c166d2e316a30d4eef4.jpeg" width="1171" height="302" class="img_ev3q"></p>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="function-authentify"><code>Function authentify</code><a class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" href="/docs/REST/authUsers#function-authentify">​</a></h2>

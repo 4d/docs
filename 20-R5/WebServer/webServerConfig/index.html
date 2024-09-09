@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.4.0">
 <title data-rh="true">Configuration | 4D Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://developer.4d.com/docs/20-R5/WebServer/webServerConfig"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="fr"><meta data-rh="true" property="og:locale:alternate" content="es"><meta data-rh="true" property="og:locale:alternate" content="ja"><meta data-rh="true" property="og:locale:alternate" content="pt"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="20-R5"><meta data-rh="true" name="docusaurus_tag" content="docs-default-20-R5"><meta data-rh="true" name="docsearch:version" content="20-R5"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-20-R5"><meta data-rh="true" property="og:title" content="Configuration | 4D Docs"><meta data-rh="true" name="description" content="The 4D web server settings include security parameters, listening ports, defaults paths, and various options covering all the server features. 4D provides default values for every settings."><meta data-rh="true" property="og:description" content="The 4D web server settings include security parameters, listening ports, defaults paths, and various options covering all the server features. 4D provides default values for every settings."><link data-rh="true" rel="icon" href="/docs/img/favicon/4d.gif"><link data-rh="true" rel="canonical" href="https://developer.4d.com/docs/20-R5/WebServer/webServerConfig"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/20-R5/WebServer/webServerConfig" hreflang="en"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/fr/20-R5/WebServer/webServerConfig" hreflang="fr"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/es/20-R5/WebServer/webServerConfig" hreflang="es"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/ja/20-R5/WebServer/webServerConfig" hreflang="ja"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/pt/20-R5/WebServer/webServerConfig" hreflang="pt"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/20-R5/WebServer/webServerConfig" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://OJ04C0M3CU-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="4D Docs" href="/docs/opensearch.xml"><link rel="stylesheet" href="/docs/assets/css/styles.dc9a4272.css">
-<script src="/docs/assets/js/runtime~main.afe5db2d.js" defer="defer"></script>
+<script src="/docs/assets/js/runtime~main.8787f695.js" defer="defer"></script>
 <script src="/docs/assets/js/main.147a6bc1.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -61,7 +61,7 @@
 
 
 
-<table><thead><tr><th>Can be set with</th><th>Name</th><th>Comments</th></tr></thead><tbody><tr><td>Settings dialog box</td><td><a href="/docs/20-R5/settings/web#use-the-4d-web-cache">Configuration page/Use the 4D Web cache</a></td><td></td></tr><tr><td>Settings dialog box</td><td><a href="/docs/20-R5/settings/web#page-cache-size">Configuration page/Page Cache Size</a></td><td></td></tr></tbody></table>
+<table><thead><tr><th>Can be set with</th><th>Name</th><th>Comments</th></tr></thead><tbody><tr><td>Settings dialog box</td><td><a href="/docs/20-R5/settings/web#use-the-4d-web-cache">Options (I) page/Use the 4D Web cache</a></td><td></td></tr><tr><td>Settings dialog box</td><td><a href="/docs/20-R5/settings/web#page-cache-size">Options (I) page/Page Cache Size</a></td><td></td></tr></tbody></table>
 <p>Enables and configures the web page cache.</p>
 <p>The 4D web server has a cache that allows you to load static pages, GIF images, JPEG images (&lt;512 kb) and style sheets (.css files) in memory, as they are requested. Using the cache allows you to significantly increase the web server’s performance when sending static pages. The cache is shared between all the web processes. When the cache is enabled, the 4D Web server looks for any static page requested by the browser in the cache first. If it finds the page, it sends it immediately. If not, 4D loads the page from disk and places it in the cache.</p>
 <p>You can modify the size of the cache in the <strong>Pages Cache Size</strong> area. The value you set depends on the number and size of your website’s static pages, as well as the resources that the host machines has at its disposal.</p>
@@ -605,7 +605,7 @@ Default value is 63072000 (2 years)</p>
 
 
 <table><thead><tr><th>Can be set with</th><th>Name</th><th>Comments</th></tr></thead><tbody><tr><td>webServer object</td><td><a href="/docs/20-R5/API/WebServerClass#inactiveprocesstimeout"><code>inactiveProcessTimeout</code></a></td><td></td></tr><tr><td><code>WEB SET OPTION</code></td><td><code>Web inactive process timeout</code></td><td></td></tr><tr><td>Settings dialog box</td><td><a href="/docs/20-R5/settings/web#inactive-process-timeout">Options (I) page/Inactive Process Timeout</a></td><td>Slider</td></tr></tbody></table>
-<p>Life duration (in minutes) of inactive processes associated with sessions. At the end of the timeout, the process is killed on the server, the <code>On Web Close Process</code> database method is called, then the session context is destroyed.</p>
+<p>Life duration (in minutes) of inactive processes associated with legacy sessions. At the end of the timeout, the process is killed on the server, the <code>On Web Legacy Close Session</code> database method is called, then the session context is destroyed.</p>
 <p>Default: 480 minutes (pass 0 to restore the default value)</p>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="inactive-session-timeout">Inactive Session Timeout<a class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" href="/docs/20-R5/WebServer/webServerConfig#inactive-session-timeout">​</a></h2>
 
@@ -854,8 +854,8 @@ Since IPv6 notation uses colons (:), adding port numbers may lead to some confus
 
 
 
-<table><thead><tr><th>Can be set with</th><th>Name</th><th>Comments</th></tr></thead><tbody><tr><td>webServer object</td><td><a href="/docs/20-R5/API/WebServerClass#maxsessions"><code>maxSessions</code></a></td><td></td></tr><tr><td><code>WEB SET OPTION</code></td><td><code>Web max sessions	</code></td><td></td></tr></tbody></table>
-<p>Maximum number of simultaneous sessions. When you reach the limit set, the oldest session is closed (and <code>On Web Close Process</code> database method is called) if the Web server needs to create a new one. The number of simultaneous sessions cannot exceed the <a href="/docs/20-R5/WebServer/webServerConfig#maximum-concurrent-web-processes">maximum number of Web processes</a> (100 by default).</p>
+<table><thead><tr><th>Can be set with</th><th>Name</th><th>Comments</th></tr></thead><tbody><tr><td>webServer object</td><td><a href="/docs/20-R5/API/WebServerClass#maxsessions"><code>maxSessions</code></a></td><td></td></tr><tr><td><code>WEB SET OPTION</code></td><td><code>Web max sessions</code></td><td></td></tr></tbody></table>
+<p>Maximum number of simultaneous legacy sessions. When you reach the limit set, the oldest legacy session is closed (and <code>On Web Legacy Close Session</code> database method is called) if the Web server needs to create a new one. The number of simultaneous legacy sessions cannot exceed the <a href="/docs/20-R5/WebServer/webServerConfig#maximum-concurrent-web-processes">maximum number of Web processes</a> (100 by default).</p>
 <p>Default value: 100 (pass 0 to restore the default value).</p>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="minimum-tls-version">Minimum TLS Version<a class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" href="/docs/20-R5/WebServer/webServerConfig#minimum-tls-version">​</a></h2>
 
@@ -956,7 +956,7 @@ Since IPv6 notation uses colons (:), adding port numbers may lead to some confus
 
 
 
-<table><thead><tr><th>Can be set with</th><th>Name</th><th>Comments</th></tr></thead><tbody><tr><td>Settings dialog box</td><td><a href="/docs/20-R5/settings/web#reuse-temporary-contexts">Options (I) page/Maximum Concurrent Web Processes</a></td><td></td></tr></tbody></table>
+<table><thead><tr><th>Can be set with</th><th>Name</th><th>Comments</th></tr></thead><tbody><tr><td>Settings dialog box</td><td><a href="/docs/20-R5/settings/web#reuse-temporary-contexts">Options (I) page/Reuse Temporary Contexts</a></td><td></td></tr></tbody></table>
 <blockquote>
 <p>This option is only available when <strong>No sessions</strong> option is checked.</p>
 </blockquote>
@@ -1053,7 +1053,7 @@ Since IPv6 notation uses colons (:), adding port numbers may lead to some confus
 
 
 <table><thead><tr><th>Can be set with</th><th>Name</th><th>Comments</th></tr></thead><tbody><tr><td>webServer object</td><td><a href="/docs/20-R5/API/WebServerClass#scalablesession"><code>scalableSession</code></a></td><td></td></tr><tr><td><code>WEB SET OPTION</code></td><td><code>Web scalable session</code></td><td></td></tr><tr><td>Settings dialog box</td><td><a href="/docs/20-R5/settings/web#scalable-sessions-multi-process-sessions">Options (I) page/Scalable sessions (multi-process sessions)</a></td><td></td></tr></tbody></table>
-<p>Scalable session management enabling status for the 4D web server. Web server sessions are detailed in the <a href="/docs/20-R5/WebServer/sessions">User sessions</a> page.</p>
+<p>Scalable session management enabling status for the 4D web server. Web server sessions are detailed in the <a href="/docs/20-R5/WebServer/sessions">Web sessions</a> page.</p>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="session-cookie-domain">Session Cookie Domain<a class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" href="/docs/20-R5/WebServer/webServerConfig#session-cookie-domain">​</a></h2>
 
 
@@ -1170,7 +1170,7 @@ Since IPv6 notation uses colons (:), adding port numbers may lead to some confus
 
 
 
-<table><thead><tr><th>Can be set with</th><th>Name</th><th>Comments</th></tr></thead><tbody><tr><td>Settings dialog box</td><td><a href="/docs/20-R5/settings/web#use-preemptive-processes">Options (I) page/Maximum Concurrent Web Processes</a></td><td></td></tr></tbody></table>
+<table><thead><tr><th>Can be set with</th><th>Name</th><th>Comments</th></tr></thead><tbody><tr><td>Settings dialog box</td><td><a href="/docs/20-R5/settings/web#use-preemptive-processes">Options (I) page/Use Preemptive Processes</a></td><td></td></tr></tbody></table>
 <p>This option enables the preemptive mode for your application&#x27;s web server code when <strong>No sessions</strong> option is selected (the preemptive mode is always enabled with <strong>scalable sessions</strong>). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of <a href="/docs/20-R5/WebServer/preemptiveWeb#thread-safety-of-4d-web-code">web-related code</a> and return errors in case of incompatibility.</p>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="deprecated-settings">Deprecated Settings<a class="hash-link" aria-label="Direct link to heading" title="Direct link to heading" href="/docs/20-R5/WebServer/webServerConfig#deprecated-settings">​</a></h2>
 <p>The following settings are still supported but rely on deprecated features or technologies. It is usually recommended to keep default values.</p>
