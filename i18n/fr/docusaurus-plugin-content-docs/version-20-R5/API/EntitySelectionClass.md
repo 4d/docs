@@ -275,7 +275,7 @@ L'objet résultant est une entity selection de la dataclass Employee sans doublo
 | --------------- | ---------------------------------- | :-: | ---------------------------------------------------------------- |
 | entity          | 4D.Entity          |  -> | Entité à ajouter à l'entity selection                            |
 | entitySelection | 4D.EntitySelection |  -> | Entity selection à ajouter à l'entity selection d'origine        |
-| Résultat        | 4D.EntitySelection |  -> | Entity selection incluant l'*entity* ou *entitySelection*ajoutée |
+| Résultat        | 4D.EntitySelection |  <- | Entity selection incluant l'*entity* ou *entitySelection*ajoutée |
 
 <!-- END REF -->
 
