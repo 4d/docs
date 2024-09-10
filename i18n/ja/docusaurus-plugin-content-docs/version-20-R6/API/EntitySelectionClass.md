@@ -279,7 +279,7 @@ $result:=$sel[0].lock() //動作しません
 | --------------- | ---------------------------------- | :-: | --------------------------------------------------- |
 | entity          | 4D.Entity          |  -> | エンティティセレクションに追加するエンティティ                             |
 | entitySelection | 4D.EntitySelection |  -> | エンティティセレクションに追加するエンティティセレクション                       |
-| 戻り値             | 4D.EntitySelection |  -> | 追加した *entity* または *entitySelection* を含むエンティティセレクション |
+| 戻り値             | 4D.EntitySelection |  <- | 追加した *entity* または *entitySelection* を含むエンティティセレクション |
 
 <!-- END REF -->
 
