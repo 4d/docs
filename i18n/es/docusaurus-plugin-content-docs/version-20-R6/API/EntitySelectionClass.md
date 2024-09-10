@@ -279,7 +279,7 @@ El objeto resultante es una entity selection de la dataclass Employee sin duplic
 | --------------- | ---------------------------------- | :-: | ------------------------------------------------------------------------ |
 | entity          | 4D.Entity          |  -> | Entidad que debe añadirse a la entity selection                          |
 | entitySelection | 4D.EntitySelection |  -> | Selección de entidades que se añade a la selección de entidades original |
-| Result          | 4D.EntitySelection |  -> | Entity selection incluyendo la *entity* o *entitySelection* añadida      |
+| Result          | 4D.EntitySelection |  <- | Entity selection incluyendo la *entity* o *entitySelection* añadida      |
 
 <!-- END REF -->
 
