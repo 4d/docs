@@ -222,7 +222,7 @@ L'objet résultant est une entity selection de la dataclass Employee sans doublo
 | Paramètres | Type               |    | Description                                                     |
 | ---------- | ------------------ |:--:| --------------------------------------------------------------- |
 | entity     | 4D.Entity          | -> | Entité à ajouter à l'entity selection                           |
-| Résultat   | 4D.EntitySelection | -> | Entity selection incluant l'*entity*|<!-- END REF -->
+| Résultat   | 4D.EntitySelection | <- | Entity selection incluant l'*entity*|<!-- END REF -->
 
 |
 
@@ -1701,6 +1701,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tente de retourner les entités de posi
 | 17      | Ajout         |
 
 </details>
+
 
 <!-- REF #EntitySelectionClass.sum().Syntax -->**.sum**( *attributePath* : Text ) : Real<!-- END REF -->
 
