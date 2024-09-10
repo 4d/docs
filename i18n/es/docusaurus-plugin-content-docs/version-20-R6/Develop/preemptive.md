@@ -216,7 +216,7 @@ En este caso, se evalúan todos los triggers. Si se detecta un comando que no se
 
 :::note
 
-In [client/server applications](../Desktop/clientServer.md), triggers may be executed in cooperative mode, even if their code is thread-safe. This happens when a trigger is activated from a remote process: in this case, the trigger is executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Server-and-the-4D-Language.300-7182872.en.html#68966) on the server machine. Since this process is used for all calls from the client, it is always executed in cooperative mode.
+In [client/server applications](../Desktop/clientServer.md), triggers may be executed in cooperative mode, even if their code is thread-safe. Esto ocurre cuando se activa un trigger desde un proceso remoto: en este caso, el trigger se ejecuta en el ["proceso gemelo" del proceso cliente](https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Server-and-the-4D-Language.300-7182872.en.html#68966) en la máquina del servidor. Since this process is used for all calls from the client, it is always executed in cooperative mode.
 
 :::
 
@@ -268,12 +268,12 @@ En algunos casos, puede que prefiera que la verificación "thread-safety" de los
 Para hacer esto, debe rodear el código a excluir del comando hilo seguro utilizando las directivas específicas `%T-` y `%T+ como comentarios. El comentario `//%T-`desactiva la verificación hilo seguro y el comentario`//%T+\` la reactiva:
 
 ```4d
-  // %T- to disable thread safety checking
-
-  // Place the code containing commands to be excluded from thread safety checking here
- $w:=Open window(10;10;100;100) //for example
-
-  // %T+ to enable thread safety checking again for the rest of the method
+  // %T- para deshabilitar la verificación hilo seguro
+  
+  // Coloque el código que contiene los comandos que se excluirán de la verificacion hilo seguro
+ $w:=Open window(10;10;100;100) //por ejemplo
+  
+  // %T+ para reactivar nuevamente la verificación hilo seguro para el resto del método
 ```
 
 Por supuesto, el desarrollador 4D es responsable de que el modo apropiativo del código sea compatible con las directivas de activación y de reactivación. Se generarán errores de tiempo de ejecución si se ejecuta código hilo no seguro en un hilo apropiativo.

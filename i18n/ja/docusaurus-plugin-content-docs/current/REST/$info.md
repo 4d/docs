@@ -58,7 +58,7 @@ title: $info
 
 **結果**:
 
-```
+```json
 {
 cacheSize: 209715200,
 usedCache: 3136000,

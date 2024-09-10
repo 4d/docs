@@ -2083,8 +2083,8 @@ $result2:=$invoices.selected($creditSel)
 
 | Paramètres | Type                               |     | Description                                                                               |
 | ---------- | ---------------------------------- | :-: | ----------------------------------------------------------------------------------------- |
-| startFrom  | Integer                            |  -> | Position à laquelle démarrer l'opération (incluse)                     |
-| end        | Integer                            |  -> | Position de fin (non incluse)                                          |
+| startFrom  | Integer                            |  -> | Indice auquel démarrer l'opération (inclus)                            |
+| end        | Integer                            |  -> | Indice de fin (non inclus)                                             |
 | Résultat   | 4D.EntitySelection |  <- | Nouvelle entity selection contenant les entités copiées (shallow copy) |
 
 <!-- END REF -->
