@@ -176,19 +176,19 @@ Evento emitido cuando se produce un error en el servidor WebSocket.
 Este ejemplo de una función básica de chat ilustra cómo manejar conexiones de servidor WebSocket en una clase *WSSHandler*.
 
 ```4d
-//myWSServerHandler class
+//clase myWSServerHandler 
 
 Function onConnection($wss : Object; $event : Object) : Object
 
 	If (VerifyAddress($event.request.remoteAddress))
-		// The VerifyAddress method validates the client address
-		// The returned WSConnectionHandler object will be used
-		// by 4D to instantiate the 4D.WebSocketConnection object
-		// related to this connection
-		return cs.myConnectionHandler.new()   
-		// See connectionHandler object
-	Else
-		// The connection is cancelled		
+		// El método VerifyAddress valida la dirección del cliente
+        // El objeto WSConnectionHandler devuelto será utilizado 
+        // por 4D para instanciar el objeto 4D.WebSocketConnection
+        // relacionado con esta conexión
+        return cs.myConnectionHandler.new()   
+        // Ver objeto connectionHandler
+    Else 
+        // La conexión se cancela	
 		return Null
 	End if
 
@@ -274,27 +274,27 @@ Función llamada cuando se ha producido un error.
 Este ejemplo de una función básica de chat ilustra cómo gestionar mensajes en una clase *connectionHandler*.
 
 ```4d
-// myConnectionHandler Class
+// Clase myConnectionHandler
 
 Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
-	// Resend the message to all chat clients
+	// Reenviar el mensaje a todos los clientes de chat
 	This.broadcast($ws;$message.data)
 
 Function onOpen($ws : 4D.WebSocketConnection; $message : Object)
-	// Send a message to new connected users
-	$ws.send("Welcome on the chat!")
-	// Send "New client connected" message to all other chat clients
-	This.broadcast($ws;"New client connected")
+	// Enviar un mensaje a los nuevos usuarios conectados
+	$ws.send("¡Bienvenido al chat!")
+	// Enviar el mensaje "Nuevo cliente conectado" a todos los demás clientes de chat
+	This.broadcast($ws;"Nuevo cliente conectado")
 
 Function onTerminate($ws : 4D.WebSocketConnection; $message : Object)
-	// Send "Client disconnected" message to all other chat clients
-	This.broadcast($ws;"Client disconnected")
+	// Enviar el mensaje "Cliente desconectado" a todos los demás clientes de chat
+	This.broadcast($ws;"Cliente desconectado")
 
 Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 	var $client:4D.WebSocketConnection
-	// Resend the message to all chat clients
+	// Reenviar el mensaje a todos los clientes de chat
 	For each ($client; $ws.wss.connections)
-		// Check that the id is not the current connection
+		// Comprobar que el id no es la conexión actual
 		If ($client.id#$ws.id)
 			$client.send($message)
 		End if
