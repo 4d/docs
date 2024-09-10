@@ -1001,12 +1001,12 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <!-- REF #collection.fill().Params -->
 
-| Paramètres | Type                                            |     | Description                                               |
-| ---------- | ----------------------------------------------- | :-: | --------------------------------------------------------- |
-| value      | Number, Text, Object, Collection, Date, Boolean |  -> | Valeur de remplissage                                     |
-| startFrom  | Integer                                         |  -> | Numéro de l'élément de départ (inclus) |
-| end        | Integer                                         |  -> | Position de fin (non incluse)          |
-| Résultat   | collection                                      |  <- | Collection d'origine avec valeurs de remplissage          |
+| Paramètres | Type                                            |     | Description                                            |
+| ---------- | ----------------------------------------------- | :-: | ------------------------------------------------------ |
+| value      | Number, Text, Object, Collection, Date, Boolean |  -> | Valeur de remplissage                                  |
+| startFrom  | Integer                                         |  -> | Indice l'élément de départ (inclus) |
+| end        | Integer                                         |  -> | Indice de fin (non inclus)          |
+| Résultat   | collection                                      |  <- | Collection d'origine avec valeurs de remplissage       |
 
 <!-- END REF -->
 
@@ -3209,8 +3209,8 @@ Si la collection est vide, cette méthode ne fait rien.
 
 | Paramètres | Type       |     | Description                                                                                  |
 | ---------- | ---------- | :-: | -------------------------------------------------------------------------------------------- |
-| startFrom  | Integer    |  -> | Numéro de l'élément de départ (inclus)                                    |
-| end        | Integer    |  -> | Position de fin (non incluse)                                             |
+| startFrom  | Integer    |  -> | Indice l'élément de départ (inclus)                                       |
+| end        | Integer    |  -> | Indice de fin (non inclus)                                                |
 | Résultat   | Collection |  <- | Nouvelle collection contenant des éléments scindées (copie superficielle) |
 
 <!-- END REF -->
