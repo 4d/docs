@@ -33,11 +33,11 @@ Si vous cliquez sur le bouton **Refuser nouvelles connexions** :
 - Le nom du projet n’apparaît plus dans la boîte de dialogue de connexion.
 - Les clients déjà connectés ne sont pas déconnectés et peuvent continuer à travailler normalement.
 
-> You can perform the same action with the [`REJECT NEW REMOTE CONNECTIONS`](https://doc.4d.com/4dv19/help/command/en/page1635.html) command.
+> Vous pouvez effectuer la même action avec la commande [`REJECT NEW REMOTE CONNECTIONS`](https://doc.4d.com/4dv19/help/command/en/page1635.html).
 
 - Si vous cliquez sur le bouton **Accepter nouvelles connexions**, la base retourne dans l’état "par défaut".
 
-This feature permits, for example, an administrator to carry out various maintenance operations (verification, compacting, etc.) just after having started the server. S’il utilise une connexion cliente, il a la certitude d’être le seul à modifier les données. Il est également possible d’utiliser cette fonction en préparation d’une opération de maintenance nécessitant qu’aucun poste client ne soit connecté.
+Cette fonction permet par exemple à un administrateur d'effectuer diverses opérations de maintenance (vérification, compactage, etc.) juste après avoir démarré le serveur. S’il utilise une connexion cliente, il a la certitude d’être le seul à modifier les données. Il est également possible d’utiliser cette fonction en préparation d’une opération de maintenance nécessitant qu’aucun poste client ne soit connecté.
 
 ## Informations
 
