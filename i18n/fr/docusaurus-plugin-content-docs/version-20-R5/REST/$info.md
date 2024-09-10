@@ -9,14 +9,15 @@ Renvoie des informations sur les entity sets actuellement stockés dans le cache
 
 En appelant cette requête pour votre projet, vous récupérez des informations dans les propriétés suivantes :
 
-| Propriété      | Type       | Description                                                                                                         |
-| -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------- |
-| cacheSize      | Number     | Taille du cache du serveur 4D.                                                                      |
-| usedCache      | Number     | La quantité de cache du serveur 4D utilisée.                                                        |
-| entitySetCount | Number     | Nombre d'entity sets.                                                                               |
-| entitySet      | Collection | Une collection dans laquelle chaque objet contient des informations sur chaque entity set.          |
-| ProgressInfo   | Collection | Une collection contenant des informations sur les indicateurs de progression.                       |
-| sessionInfo    | Collection | Une collection dans laquelle chaque objet contient des informations sur chaque session utilisateur. |
+| Propriété      | Type       | Description                                                                                                                                                                                                                                     |
+| -------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| cacheSize      | Number     | Taille du cache du serveur 4D.                                                                                                                                                                                                  |
+| usedCache      | Number     | La quantité de cache du serveur 4D utilisée.                                                                                                                                                                                    |
+| entitySetCount | Number     | Nombre d'entity sets.                                                                                                                                                                                                           |
+| entitySet      | Collection | Une collection dans laquelle chaque objet contient des informations sur chaque entity set.                                                                                                                                      |
+| ProgressInfo   | Collection | Une collection contenant des informations sur les indicateurs de progression.                                                                                                                                                   |
+| sessionInfo    | Collection | Une collection dans laquelle chaque objet contient des informations sur chaque session utilisateur.                                                                                                                             |
+| privileges     | Object     | Un objet avec une propriété "privileges" (collection d'objets). Chaque objet de la collection a une propriété "privilege" avec le nom d'un privilège de la session utilisateur comme valeur. |
 
 ### entitySet
 
@@ -57,7 +58,7 @@ Retourne des informations sur les entity sets stockés dans le cache de 4D Serve
 
 **Résultat** :
 
-```
+```json
 {
 cacheSize: 209715200,
 usedCache: 3136000,
@@ -100,7 +101,7 @@ ProgressInfo: [
         percent: 0
     }
 ],
-sessionInfo: [ 
+sessionInfo: [
     {
         sessionID: "6657ABBCEE7C3B4089C20D8995851E30",
         userID: "36713176D42DB045B01B8E650E8FA9C6",
