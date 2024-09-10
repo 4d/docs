@@ -162,12 +162,12 @@ Each translation file must be named with the corresponding language code (for ex
 
 The translation file in JSON format contains the following attributes:
 
-| Attribut  | Type       | Obligatoire | Description                                                                                              |
-| :-------- | :--------- | :---------- | :------------------------------------------------------------------------------------------------------- |
-| tables    | Collection |             | Collection of translated table objects                                                                   |
-| fields    | Collection |             | Collection of translated field objects                                                                   |
-| formulas  | Collection |             | Collection of translated formula objects                                                                 |
-| fileNames | Collection |             | Collection of translated fileName objects (applicable to the theme and template name) |
+| Attribut  | Type       | Obligatoire | Description                                                                                        |
+| :-------- | :--------- | :---------- | :------------------------------------------------------------------------------------------------- |
+| tables    | Collection |             | Collection d'objets de table traduits                                                              |
+| fields    | Collection |             | Collection d'objets de champ traduits                                                              |
+| formulas  | Collection |             | Collection d'objets de formule traduits                                                            |
+| fileNames | Collection |             | Collection d'objets fileName traduits (applicable au thème et au nom du modèle) |
 
 Whitin each one of these attribute, the translation object includes the following attributes:
 

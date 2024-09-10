@@ -56,7 +56,7 @@ var myPerson : cs.Person
 MyOtherDate:=Current date+30
 ```
 
-上のコードは "MyOtherDate に、現在の日付に 30日を加算した値を代入します" という意味です。 この1行で変数が作成され、変数に (仮の) データ型とデータが割り当てられます。 このように代入によって作成された変数はデータ型が規定されていないと解釈され、コードの違う行では別のデータ型の値を代入することもでき、データ型を動的に変化させます。 This flexibility does not apply to variables declared with the `var` keyword (their type cannot change) and in [compiled mode](interpreted.md) where the type can never be changed, regardless of how the variable was created.
+上のコードは "MyOtherDate に、現在の日付に 30日を加算した値を代入します" という意味です。 この1行で変数が作成され、変数に (仮の) データ型とデータが割り当てられます。 このように代入によって作成された変数はデータ型が規定されていないと解釈され、コードの違う行では別のデータ型の値を代入することもでき、データ型を動的に変化させます。 この柔軟性は、`var` キーワードで宣言された変数には適用されません (型は変更できません)。また、[コンパイルモード](interpreted.md) では、変数の作成方法に関係なく、型を変更することはできません。
 
 ## コマンド
 
