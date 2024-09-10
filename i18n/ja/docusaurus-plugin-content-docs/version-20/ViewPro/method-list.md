@@ -1200,13 +1200,13 @@ $range:=VP All("ViewProArea")
 
 $condition:=New object
 $condition.target:=vk find target text
-$condition.all:=True //Search entire document
+$condition.all:=True // ドキュメント全体を検索します
 $condition.flags:=vk find flag exact match
 
-  // Replace the cells containing only 'Total' in the current sheet with "Grand Total"
+  // カレントシートにおいて "Total" のみを格納しているセルを "Grand Total" で置き換えます
 $result:=VP Find($range;"Total";$condition;"Grand Total")
 
-  // Check for empty range object
+  // 戻り値のレンジオブジェクトが空かどうかをチェックします
 If($result.ranges.length=0)
     ALERT("No result found")
 Else
@@ -1381,7 +1381,7 @@ size:16pt
 ```4d
 $activeCell:=VP Get active cell("myVPArea")
 
-  //returns a range object containing:
+  // 返されるレンジオブジェクトには以下が格納されています:
   //$activeCell.ranges[0].column=3
   //$activeCell.ranges[0].row=4
   //$activeCell.ranges[0].sheet=0
@@ -2383,10 +2383,10 @@ End if
 ![](../assets/en/ViewPro/cmd_vpGetSpans.PNG)
 
 ```4d
-// Search for all cell spans
+// すべてのセル結合を検索します
 $range:=VP Get spans(VP All("ViewProArea"))
 
-//center text
+// テキストを中央揃えにします
 $style:=New object("vAlign";vk vertical align center;"hAlign";vk horizontal align center)
 VP SET CELL STYLE($range;$style)
 ```
@@ -3064,13 +3064,13 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 ```
 
 ```4d
-    //myImport callback method
+    // myImport コールバックメソッド
 #DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object)
 
 If ($status.success)
-     ALERT("Import successfully completed")
+     ALERT("読み込みに成功しました。")
 Else
-     ALERT("Error: "+$status.errorMessage)
+     ALERT("エラー: "+$status.errorMessage)
 End if
 ```
 
@@ -4269,19 +4269,19 @@ $row:=VP Row("ViewProArea";9) // 10行目
 オフスクリーンの 4D View Pro エリアを作成し、そこからセルの値を取得します:
 
 ```4d
-// cs.OffscreenArea class declaration
+// cs.OffscreenArea クラス宣言
 Class constructor ($path : Text)
- This.filePath:=$path
+    This.filePath:=$path
 
-// This function will be called on each event of the offscreen area
+// この関数はオフスクリーンエリアの各イベントごとに呼び出されます
 Function onEvent()
- Case of
-  :(FORM Event.code=On VP Ready)
-      VP IMPORT DOCUMENT(This.area;This.filePath)
-       This.result:=VP Get value(VP Cell(This.area;6;22))
+    Case of
+       :(FORM Event.code=On VP Ready)
+            VP IMPORT DOCUMENT(This.area;This.filePath)
+            This.result:=VP Get value(VP Cell(This.area;6;22))
 
-       ALERT("The G23 cell contains the value: "+String(This.result))
- End case
+            ALERT("The G23 cell contains the value: "+String(This.result))
+    End case
 
 ```
 
@@ -4317,24 +4317,24 @@ Function onEvent()
    SET TIMER(60)
 
        :(FORM Event.code=On VP Range Changed)
-    // 計算の完了を感知し、 Restarts the timer
-         If(This.isWaiting)
-           SET TIMER(60)
-         End if
+    // 計算の完了を感知し、 タイマーを再スタートさせます
+            If(This.isWaiting)
+                SET TIMER(60)
+            End if
 
-  :(FORM Event.code=On Timer)
- // To be sure to not restart the timer if you call others 4D View command after this point
-         This.isWaiting:=False
+       :(FORM Event.code=On Timer)
+    // この時点以降、他の 4D View コマンドを呼び出してもタイマーが再スタートしないようにします
+            This.isWaiting:=False
 
- // Stop the timer
-   SET TIMER(0)
+    // タイマーを停止します
+            SET TIMER(0)
 
- // Start the PDF export
-        VP EXPORT DOCUMENT(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
+    // PDF 書き出しを開始します
+            VP EXPORT DOCUMENT(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
 
-     :(FORM Event.code=On URL Loading Error)
-         CANCEL
- End case
+       :(FORM Event.code=On URL Loading Error)
+            CANCEL
+    End case
 ```
 
 *OffscreenArea* コールバックメソッドの内容は以下の通りです:
@@ -5018,13 +5018,13 @@ var $options : Object
 
 $data:= New collection()
 
-// Dates can be passed as scalar values
+// 日付はスカラー値として渡すことができます
 $data.push(New collection("Date"; Current date))
 
-// Time values must be passed as object attributes
+// 時間はオブジェクト属性として渡す必要があります
 $data.push(New collection("Time"; New object("time"; 5140)))
 
-// Date + time example
+// 日付 + 時間の例
 $data.push(New collection("Date + Time"; New object("value"; Current date; "time"; 5140)))
 
 $options:=New object("autoGenerateColumns"; True)
@@ -5051,7 +5051,7 @@ VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 | ------------- | ------ | -- | ----------------------------------- |
 | rangeObj      | Object | -> | レンジオブジェクト                           |
 | dateValue     | Date   | -> | 設定する日付値                             |
-| timeValue     | 時間     | -> | 設定する時間値                             |
+| timeValue     | Time   | -> | 設定する時間値                             |
 | formatPattern | Text   | -> | 値のフォーマット|<!-- END REF -->
 
 |
@@ -5093,7 +5093,7 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 | 引数            | 型      |    | 説明                                  |
 | ------------- | ------ | -- | ----------------------------------- |
 | rangeObj      | Object | -> | レンジオブジェクト                           |
-| dateValue     | 日付     | -> | 設定する日付値                             |
+| dateValue     | Date   | -> | 設定する日付値                             |
 | formatPattern | Text   | -> | 値のフォーマット|<!-- END REF -->
 
 |
@@ -5183,11 +5183,11 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 <!-- REF #_method_.VP SET FIELD.Params -->
 
-| 引数            | 型      |    | 説明                                      |
-| ------------- | ------ | -- | --------------------------------------- |
-| rangeObj      | Object | -> | レンジオブジェクト                               |
-| フィールド         | ポインター  | -> | 仮想ストラクチャーのフィールドへの参照                     |
-| formatPattern | Text   | -> | フィールドのフォーマット|<!-- END REF -->
+| 引数            | 型       |    | 説明                                      |
+| ------------- | ------- | -- | --------------------------------------- |
+| rangeObj      | Object  | -> | レンジオブジェクト                               |
+| field         | Pointer | -> | 仮想ストラクチャーのフィールドへの参照                     |
+| formatPattern | Text    | -> | フィールドのフォーマット|<!-- END REF -->
 
 |
 
