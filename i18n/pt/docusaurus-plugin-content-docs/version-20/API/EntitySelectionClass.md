@@ -292,7 +292,7 @@ O objeto resultante é uma seleção de entidade da dataclasse Funcionario sem d
 | --------------- | ------------------- |:--:| ------------------------------------------------------------------------------- |
 | entity          | 4D. Entity          | -> | Entidade que deve ser adicinonada à entity selection                            |
 | entitySelection | 4D. EntitySelection | -> | Seleção entidade paara ser adicionado a sellleção entidade originaal            |
-| Resultados      | 4D. EntitySelection | -> | Seleção de entidades incluindo a *entity* adicionada|<!-- END REF -->
+| Resultados      | 4D. EntitySelection | <- | Seleção de entidades incluindo a *entity* adicionada|<!-- END REF -->
 
 
 |
