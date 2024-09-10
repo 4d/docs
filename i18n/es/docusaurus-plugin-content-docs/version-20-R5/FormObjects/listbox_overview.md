@@ -859,7 +859,7 @@ El siguiente list box fue diseñado utilizando un array de objetos:
 
 ### Configurar una columna array de objetos
 
-To assign an object array to a list box column, you just need to set the object array name in either the Property list ("Variable Name" field), or using the [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-INSERT-COLUMN.301-4311153.en.html) command, like with any array-based column. En la lista de propiedades, ahora puede seleccionar Objeto como "Tipo de expresión" para la columna:
+Para asignar un array de objetos a una columna list box, basta con definir el nombre del array de objetos en la lista de propiedades (campo "Nombre de variable"), o utilizando el comando [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-INSERT-COLUMN.301-4311153.en.html), como para toda columna basada en arrays. En la lista de propiedades, ahora puede seleccionar Objeto como "Tipo de expresión" para la columna:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 
