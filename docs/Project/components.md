@@ -97,7 +97,7 @@ flowchart TB
     id3("3\nUser 4D components")
 ```
 
-When a component cannot be loaded because of another instance of the same component located at a higher priority level, it is given the *Overloaded* [status](#dependency-status). The loaded component has the *Overloading* [status](#dependency-status).
+When a component cannot be loaded because of another instance of the same component located at a higher priority level, both get a specific [status](#dependency-status): the non-loaded component is given the *Overloaded* status, while the loaded component has the *Overloading* status.
 
 
 
