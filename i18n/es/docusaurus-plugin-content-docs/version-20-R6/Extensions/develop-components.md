@@ -305,7 +305,7 @@ Escritura en la base de datos externa:
 Lectura en una base de datos externa:
 
 ```4d
- $Ptr_1:=$2 // accesses data of the host project through pointers
+ $Ptr_1:=$2 // accede a los datos del proyecto local a través de punteros
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5
