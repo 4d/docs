@@ -907,13 +907,16 @@ Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez q
 
 
 <!-- REF #collection.every().Params -->
-| Paramètres | Type        |    | Description                                  |
-| ---------- | ----------- |:--:| -------------------------------------------- |
-| startFrom  | Integer     | -> | Elément à partir duquel débuter l'évaluation |
-| formula    | 4D.Function | -> | Objet formule                                |
-| methodName | Text        | -> | Nom de méthode                               |
+| Paramètres | Type        |    | Description                                                             |
+| ---------- | ----------- |:--:| ----------------------------------------------------------------------- |
+| startFrom  | Integer     | -> | Elément à partir duquel débuter l'évaluation                            |
+| formula    | 4D.Function | -> | Objet formule                                                           |
+| methodName | Text        | -> | Nom de méthode                                                          |
+| param      | Mixed       | -> | Paramètre(s) à passer à *formula* ou à *methodName*                     |
+| Résultat   | Boolean     | <- | Vrai si tous les éléments sont évalués à vrai<!-- END REF -->
 
-|param|Mixed|->|Paramètre(s) à passer à *formula* ou à *methodName*| |Result|Boolean|<-|True if all elements successfully passed the test|<!-- END REF -->
+
+|
 
 
 #### Description
