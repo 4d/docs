@@ -190,21 +190,21 @@ Evento emitido cuando se produce un error en el servidor WebSocket.
 Este ejemplo de una función básica de chat ilustra cómo manejar conexiones de servidor WebSocket en una clase *WSSHandler*.
 
 ```4d
-//myWSServerHandler class
+//Clase myWSServerHandler 
 
 Function onConnection($wss : Object; $event : Object) : Object
 
     If (VerifyAddress($event.request.remoteAddress))
-        // The VerifyAddress method validates the client address
-        // The returned WSConnectionHandler object will be used
-        // by 4D to instantiate the 4D.WebSocketConnection object
-        // related to this connection
+        // El método VerifyAddress valida la dirección del cliente
+        // El objeto WSConnectionHandler devuelto será utilizado 
+        // por 4D para instanciar el objeto 4D.WebSocketConnection
+        // relacionado con esta conexión
         return cs.myConnectionHandler.new()   
-        // See connectionHandler object
-    Else
-        // The connection is cancelled      
-        return Null
-    End if
+        // Ver objeto connectionHandler
+    Else 
+        // La conexión se cancela      
+        return Null 
+    End if 
 
 Function onOpen($wss : Object; $event : Object)
 LogFile("*** Server started")
@@ -292,15 +292,15 @@ Función llamada cuando se ha producido un error.
 Este ejemplo de una función básica de chat ilustra cómo gestionar mensajes en una clase *connectionHandler*.
 
 ```4d
-// myConnectionHandler Class
+// Clase myConnectionHandler
 
 Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
-    // Resend the message to all chat clients
+    // Reenviar el mensaje a todos los clientes del chat
     This.broadcast($ws;$message.data)
 
 Function onOpen($ws : 4D.WebSocketConnection; $message : Object)
-    // Send a message to new connected users
-    $ws.send("Welcome on the chat!")
+    // Enviar un mensaje a los nuevos usuarios conectados
+    $ws.send("¡Bienvenidos al chat!")
     // Send "New client connected" message to all other chat clients
     This.broadcast($ws;"New client connected")
 

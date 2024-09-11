@@ -36,9 +36,9 @@ Cette zone fournit des informations spécifiques relatives au serveur Web de 4D 
 
 This area provides specific information about the SOAP server of 4D Server and includes a control button.
 
-- **SOAP requests**: Accepted or Rejected. Cette information indique si le serveur SOAP est actif. Pour que les requêtes SOAP soient acceptées, le serveur HTTP doit être démarré et le serveur SOAP doit explicitement accepter les requêtes (cf. bouton Accepter/Refuser).
+- **Requêtes SOAP**: Acceptées ou Refusées. Cette information indique si le serveur SOAP est actif. Pour que les requêtes SOAP soient acceptées, le serveur HTTP doit être démarré et le serveur SOAP doit explicitement accepter les requêtes (cf. bouton Accepter/Refuser).
 - **Connexions maximum** : Nombre maximum de connexions SOAP autorisées. Cette valeur dépend de la licence installée sur le poste serveur.
-- **Accepter/Refuser les requêtes SOAP** : Ce bouton fonctionne en bascule. Il permet de contrôler l’activation du serveur SOAP de 4D Server. Ce bouton modifie la valeur de l’option **Autoriser requêtes Web Services** dans la page "Web services" des Propriétés de la base (et inversement). You can also use the [`SOAP REJECT NEW REQUESTS`](https://doc.4d.com/4dv19/help/command/en/page1636.html) command to refuse new SOAP requests, however this does not modify the value of the **Allow Web Services Requests** option.
+- **Accepter/Refuser les requêtes SOAP** : Ce bouton fonctionne en bascule. Il permet de contrôler l’activation du serveur SOAP de 4D Server. Ce bouton modifie la valeur de l’option **Autoriser requêtes Web Services** dans la page "Web services" des Propriétés de la base (et inversement). Vous pouvez également utiliser la commande [`SOAP REJECT NEW REQUESTS`](https://doc.4d.com/4dv19/help/command/fr/page1636.html) pour refuser de nouvelles requêtes SOAP, toutefois cela ne modifie pas la valeur de l'option **Autoriser requêtes Web Services**.
 
 Si vous cliquez sur le bouton **Accepter les requêtes SOAP** et que le serveur HTTP est arrêté, 4D le démarre automatiquement.
 

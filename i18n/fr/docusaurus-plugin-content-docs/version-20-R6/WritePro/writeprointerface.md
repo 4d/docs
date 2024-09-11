@@ -53,7 +53,7 @@ Après avoir finalisé la création et la personnalisation de la table, l'utilis
 
 Une fois que la table a été intégrée dans le document, l'utilisateur peut personnaliser son style. Les outils de mise en forme de la barre d'outils et de la barre latérale sont toujours disponibles.
 
-### WP Table Wizard template configuration
+### Configuration du modèle de l'Assistant de table WP
 
 La configuration des modèles inclut:
 
@@ -61,39 +61,39 @@ La configuration des modèles inclut:
 - Traduction des noms de table, de champ et de formule à partir du [fichier de traduction](#translation-files).
 - Conception de styles graphiques et de thèmes personnalisés à partir du [fichier de thème](#theme-files).
 
-These three types of files contribute to the configuration of the Table Wizard, and while each serves a distinct purpose, none of them are considered essential components.
+Ces trois types de fichiers contribuent à la configuration de l'Assistant de table, et bien que chacun remplisse une fonction distincte, aucun d'entre eux n'est considéré comme un composant essentiel.
 
-#### Template files
+#### Fichiers de modèle
 
 Le fichier de modèle vous permet de définir les éléments suivants :
 
-- the formula that returns an entity selection used as the table's data source,
+- la formule qui retourne une sélection d'entité utilisée comme source de données de la table,
 - the break formulas (if any break row can be inserted)
-- the dataclass attributes that can be used as table columns,
+- les attributs de dataclass qui peuvent être utilisés comme colonnes de table,
 - the formulas available as contextual menus inside break rows, carry-over row, placeholder row or extra rows.
 
 Le fichier modèle doit être stocké dans un dossier "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" dans votre projet.
 
-The template file in JSON format contains the following attributes:
+Le fichier de modèle au format JSON contient les attributs suivants :
 
 | Attribut                             | Type       | Obligatoire | Description                                                                                                                                                                                              |
 | :----------------------------------- | :--------- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tableDataSource                      | Text       | x           | Formula of table data source                                                                                                                                                                             |
-| colonnes                             | Collection | x           | Collection of table columns                                                                                                                                                                              |
-| columns.check        | Text       | x           | True when the column is already checked in the template editor. False when the column is unchecked in the template editor.                                               |
-| columns.header       | Text       | x           | Label shown to the user                                                                                                                                                                                  |
+| tableDataSource                      | Text       | x           | Formule de la source de données de la table                                                                                                                                                              |
+| colonnes                             | Collection | x           | Collection des colonnes de la table                                                                                                                                                                      |
+| columns.check        | Text       | x           | Vrai lorsque la colonne est déjà cochée dans l'éditeur de modèle. Faux lorsque la colonne est décochée dans l'éditeur de modèle.                                         |
+| columns.header       | Text       | x           | Étiquette affichée à l'utilisateur                                                                                                                                                                       |
 | columns.source       | Text       | x           | Formula                                                                                                                                                                                                  |
 | ruptures/sauts                       | Collection |             | Collection of break objects. The order of the breaks is important. It corresponds to the order in the document when the breaks are above the data lines. |
-| breaks.label         | Text       | x           | Label shown to the user                                                                                                                                                                                  |
+| breaks.label         | Text       | x           | Étiquette affichée à l'utilisateur                                                                                                                                                                       |
 | breaks.source        | Text       | x           | Formula                                                                                                                                                                                                  |
 | breakFormulas                        | Collection |             | Collection of formula objects applicable to break rows                                                                                                                                                   |
-| breakFormulas.label  | Text       | x           | Label shown to the user                                                                                                                                                                                  |
+| breakFormulas.label  | Text       | x           | Étiquette affichée à l'utilisateur                                                                                                                                                                       |
 | breakFormulas.source | Text       | x           | Formula                                                                                                                                                                                                  |
 | bcorFormulas                         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                                                                       |
-| bcorFormulas.label   | Text       | x           | Label shown to the user                                                                                                                                                                                  |
+| bcorFormulas.label   | Text       | x           | Étiquette affichée à l'utilisateur                                                                                                                                                                       |
 | bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                                                                  |
 | extraFormulas                        | Collection |             | Collection of formula objects applicable to extra rows                                                                                                                                                   |
-| extraFormulas.label  | Text       | x           | Label shown to the user                                                                                                                                                                                  |
+| extraFormulas.label  | Text       | x           | Étiquette affichée à l'utilisateur                                                                                                                                                                       |
 | extraFormulas.source | Text       | x           | Formula                                                                                                                                                                                                  |
 | placeholderFormulas                  | Collection |             | Collection of formula objects that are inserted in the placeholder row                                                                                                                                   |
 
@@ -151,31 +151,31 @@ Here's a brief example of what your JSON file might look like:
 
 ```
 
-#### Translation files
+#### Fichiers de traduction
 
-Translation files translate the names of templates, themes, tables, fields, and formulas. Ces fichiers sont ajoutés au dossier "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" de votre projet.
+Les fichiers de traduction traduisent les noms des modèles, thèmes, tables, champs et formules. Ces fichiers sont ajoutés au dossier "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" de votre projet.
 
-Each translation file must be named with the corresponding language code (for example "en" for English or "fr" for French).
+Chaque fichier de traduction doit être nommé avec le code de langue correspondant (par exemple "en" pour l'anglais ou "fr" pour le français).
 
-The translation file in JSON format contains the following attributes:
+Le fichier de traduction au format JSON contient les attributs suivants :
 
-| Attribut  | Type       | Obligatoire | Description                                                                                              |
-| :-------- | :--------- | :---------- | :------------------------------------------------------------------------------------------------------- |
-| tables    | Collection |             | Collection of translated table objects                                                                   |
-| fields    | Collection |             | Collection of translated field objects                                                                   |
-| formulas  | Collection |             | Collection of translated formula objects                                                                 |
-| fileNames | Collection |             | Collection of translated fileName objects (applicable to the theme and template name) |
+| Attribut  | Type       | Obligatoire | Description                                                                                        |
+| :-------- | :--------- | :---------- | :------------------------------------------------------------------------------------------------- |
+| tables    | Collection |             | Collection d'objets de table traduits                                                              |
+| fields    | Collection |             | Collection d'objets de champ traduits                                                              |
+| formulas  | Collection |             | Collection d'objets de formule traduits                                                            |
+| fileNames | Collection |             | Collection d'objets fileName traduits (applicable au thème et au nom du modèle) |
 
-Whitin each one of these attribute, the translation object includes the following attributes:
+Dans chacun de ces attributs, l'objet de traduction contient les attributs suivants :
 
 | Attribut    | Type | Obligatoire | Description                            |
 | :---------- | :--- | :---------- | :------------------------------------- |
 | original    | Text | x           | Texte original destiné à la traduction |
 | translation | Text | x           | Version traduite du texte original     |
 
-Defining these attributes within the translation object ensures proper organization and alignment between the source and translated content.
+La définition de ces attributs dans l'objet de traduction garantit une organisation et un alignement corrects entre le contenu source et le contenu traduit.
 
-If the template name or the formula (break, carry-over row, or extra) exists in the translated file, its translation is applied in the Table Wizard. In addition, only the table defined within the translation file is displayed and translated.
+If the template name or the formula (break, carry-over row, or extra) exists in the translated file, its translation is applied in the Table Wizard. De plus, seule la table définie dans le fichier de traduction est affichée et traduite.
 
 The translation file serves an additional role when a user selects a table in the interface. It can filter the tables and fields proposed to the user. Par exemple, pour masquer les IDs de table, ce comportement est similaire aux commandes `SET TABLE TITLES` et `SET FIELD TITLES`.
 
@@ -211,23 +211,23 @@ The translation file serves an additional role when a user selects a table in th
     
 ```
 
-#### Theme files
+#### Fichiers de thème
 
-A list of themes is provided by default in the 4D Write Pro Interface component, such as "Arial", "CourierNew" and "YuGothic", available in multiple variations like "Blue" and "Green". Cependant, vous pouvez créer votre propre thème en le plaçant dans le dossier "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Themes" de votre projet.
+Une liste de thèmes est fournie par défaut dans le composant Interface 4D Write Pro, tels que "Arial", "CourierNew" et "YuGothic", disponibles en plusieurs variations comme "Bleu" et "Vert". Cependant, vous pouvez créer votre propre thème en le plaçant dans le dossier "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Themes" de votre projet.
 
-The theme file in JSON format contains the following attributes:
+Le fichier de thème au format JSON contient les attributs suivants:
 
 | Attribut       | Type   | Obligatoire | Description                                                                                                                                                                                                                       |
 | :------------- | :----- | :---------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| default        | Object |             | Object containing the default style applicable to all rows.                                                                                                                                                       |
-| table          | Object |             | Object containing the style definition applicable to the table.                                                                                                                                                   |
-| rows           | Object |             | Object containing the style definition applicable to all rows.                                                                                                                                                    |
-| cells          | Object |             | Object containing the style definition applicable to all cells.                                                                                                                                                   |
-| header1        | Object |             | Object containing the style definition applicable to the first header row.                                                                                                                                        |
-| header2        | Object |             | Object containing the style definition applicable to the second header row.                                                                                                                                       |
-| header3        | Object |             | Object containing the style definition applicable to the third header row.                                                                                                                                        |
-| header4        | Object |             | Object containing the style definition applicable to the fourth header row.                                                                                                                                       |
-| header5        | Object |             | Object containing the style definition applicable to the fifth header row.                                                                                                                                        |
+| default        | Object |             | Objet contenant le style par défaut applicable à toutes les lignes.                                                                                                                                               |
+| table          | Object |             | Objet contenant la définition de style applicable à la table.                                                                                                                                                     |
+| rows           | Object |             | Objet contenant la définition de style applicable à toutes les lignes.                                                                                                                                            |
+| cells          | Object |             | Objet contenant la définition de style applicable à toutes les cellules.                                                                                                                                          |
+| header1        | Object |             | Objet contenant la définition de style applicable à la première ligne d'en-tête.                                                                                                                                  |
+| header2        | Object |             | Objet contenant la définition de style applicable à la deuxième ligne d'en-tête.                                                                                                                                  |
+| header3        | Object |             | Objet contenant la définition de style applicable à la ligne du troisième en-tête.                                                                                                                                |
+| header4        | Object |             | Objet contenant la définition de style applicable à la quatrième ligne d'en-tête.                                                                                                                                 |
+| header5        | Object |             | Objet contenant la définition de style applicable à la cinquième ligne d'en-tête.                                                                                                                                 |
 | headers        | Object |             | Objet contenant la définition de style applicable aux lignes d'en-tête, si un en-tête spécifique (comme header1, header2...) n'est pas défini. |
 | data           | Object |             | Object containing the style definition applicable to the repeated data row.                                                                                                                                       |
 | break1         | Object |             | Object containing the style definition applicable to the first break row.                                                                                                                                         |
@@ -241,18 +241,18 @@ The theme file in JSON format contains the following attributes:
 
 For every attribute used in your JSON file (header, data, carry-over, summary, and extra rows), you can define the following WP attributes, mentionned with their [corresponding WP constant](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Attributes.300-6229528.en.html):
 
-| WP attributes   | Corresponding WP constant |
-| :-------------- | :------------------------ |
-| textAlign       | wk text align             |
-| backgroundColor | wk background color       |
-| borderColor     | wk border color           |
-| borderStyle     | wk border style           |
-| borderWidth     | wk border width           |
-| font            | wk font                   |
-| color           | wk font color             |
-| fontFamily      | wk font family            |
-| fontSize        | wk font size              |
-| padding         | wk padding                |
+| Attributs WP    | Constante WP correspondante |
+| :-------------- | :-------------------------- |
+| textAlign       | wk text align               |
+| backgroundColor | wk background color         |
+| borderColor     | wk border color             |
+| borderStyle     | wk border style             |
+| borderWidth     | wk border width             |
+| font            | wk font                     |
+| color           | wk font color               |
+| fontFamily      | wk font family              |
+| fontSize        | wk font size                |
+| padding         | wk padding                  |
 
 ##### Exemple
 

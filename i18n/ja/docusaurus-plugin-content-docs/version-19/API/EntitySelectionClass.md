@@ -222,7 +222,7 @@ $result:=$sel[0].lock() //動作しません
 | 引数     | 型                  |    | 説明                                                 |
 | ------ | ------------------ |:--:| -------------------------------------------------- |
 | entity | 4D.Entity          | -> | エンティティセレクションに追加するエンティティ                            |
-| 戻り値    | 4D.EntitySelection | -> | 追加エンティティを含むエンティティセレクション|<!-- END REF -->
+| 戻り値    | 4D.EntitySelection | <- | 追加エンティティを含むエンティティセレクション|<!-- END REF -->
 
 |
 
@@ -1703,6 +1703,7 @@ $slice:=ds.Employee.all().slice(-1;-2) // インデックス 9 から 8番まで
 | 17   | 追加 |
 
 </details>
+
 
 <!-- REF #EntitySelectionClass.sum().Syntax -->**.sum**( *attributePath* : Text ) : Real<!-- END REF -->
 

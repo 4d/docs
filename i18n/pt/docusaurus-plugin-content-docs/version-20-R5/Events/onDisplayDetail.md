@@ -15,7 +15,7 @@ El evento `On Display Detail` puede utilizarse en los siguientes contextos:
 
 Un registro está a punto de ser visualizado en un formulario de lista que se muestra vía `DISPLAY SELECTION` y `MODIFY SELECTION`.
 
-> Este evento no se puede seleccionar para los formularios proyecto, sólo está disponible con los **formularios tabla**.
+> Este evento não pode ser selecionado para formulários projeto, está disponível apenas com **formulários tabela**.
 
 In this context, the following sequence of calls to methods and form events is triggered:
 
