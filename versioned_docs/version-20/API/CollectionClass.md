@@ -887,7 +887,6 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 |startFrom|Integer|->|Index to start the test at|
 |formula|4D.Function|->|Formula object|
 |methodName|Text|->|Name of a method|
-
 |param|Mixed|->|Parameter(s) to pass to *formula* or *methodName*|
 |Result|Boolean|<-|True if all elements successfully passed the test|<!-- END REF -->
 
