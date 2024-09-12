@@ -48,7 +48,7 @@ Components declared in the **dependencies.json** file can be stored at different
 If the same component is installed at different locations, a [priority order](#priority) is applied.  
 
 
-### dependencies.json vs environment4d.json
+### dependencies.json and environment4d.json
 
 #### dependencies.json
 
@@ -137,7 +137,8 @@ If you do not want to benefit from the **dependencies.json** architecture, you c
 
 If you want to customize the location of local components, you declare the paths for the dependencies that are not stored at the same level as the project folder in the [**environment4d.json**](#environment4djson) file.
 
-You can use absolute or relative paths, expressed in POSIX syntax as described in [this paragraph](../Concepts/paths#posix-syntax). Relative paths are relative to the environment4d.json file.
+You can use **relative** or **absolute** paths (see below).
+
 
 Examples:
 
@@ -146,7 +147,7 @@ Examples:
 	"dependencies": {
 		"myComponent1" : "MyComponent1",
 		"myComponent2" : "../MyComponent2",
-        "myComponent3" : "file:///Users/jean/MyComponent3"
+    "myComponent3" : "file:///Users/jean/MyComponent3"
     }
 }
 ```
@@ -156,6 +157,16 @@ Examples:
 If a component path declared in the **environment4d.json** file is not found when the project is started, the component is not loaded and gets the *Not found* [status](dependency-status), even if a version of the component exists next to the project's package folder.
 
 :::
+
+#### Relative paths vs absolute paths
+
+Paths are expressed in POSIX syntax as described in [this paragraph](../Concepts/paths#posix-syntax).
+
+Relative paths are relative to the [`environment4d.json`](#environment4djson) file. Absolute paths are linked to the user's machine.
+
+Using relative paths is **recommended** in most cases, since they provide flexibility and portability of the components architecture, especially if the project is hosted in a source control tool.
+
+Absolute paths should only be used for components that are specific to one machine and one user.   
 
 
 
@@ -248,8 +259,10 @@ Here are a few examples:
 - "*": the latest version released.
 - "1.*": all version of major version 1.
 - "1.2.*": all patches of minor version 1.2.
-- "^1.2.3" or ">=1.2.3": the latest version 1, starting with the 1.2.3 version.
-- "~1.2.3" or ">1.2.3": the latest major version 1, starting with the version just after the 1.2.3.
+- ">=1.2.3": the latest version, starting with the 1.2.3 version.
+- ">1.2.3": the latest version, starting with the version just after the 1.2.3.
+- "^1.2.3": the latest version 1, starting with the 1.2.3 version and strictly lower than version 2.
+- "~1.2.3": the latest version 1.2, starting with the 1.2.3 version and strictly lower than version 1.3.
 - "<=1.2.3": the latest version until the 1.2.3 one.
 - "1.0.0 – 1.2.3" or ">=1.0.0 <=1.2.3": version between 1.0.0 and 1.2.3.
 - "`<1.2.3 || >=2`": version that is not between 1.2.3 and 2.0.0.
@@ -325,17 +338,24 @@ The Dependency panel is then displayed. Dependencies are sorted by name in alpha
 
 ### Adding and Removing Dependencies
 
-The Dependencies panel interface allows you to manage dependencies. You can:
+The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server). You can:
 
 - add local dependencies ([GitHub dependencies](#components-stored-on-github) cannot be added through the interface),
 - remove any dependency.
+
 
 #### Adding a dependency
 
 To add a dependency from the Dependencies panel, click on the **+** button of the panel or select **Add a dependency...** from the contextual menu. A standard Open file dialog box is displayed, allowing you to select the component to add. You can select a **.4DBase** package or a [**.4DProject** file](architecture.md##applicationname4dproject-file). It the selected item is not valid, an error is displayed.
 
 - If you select a component located next to the project package folder (default location), it is automatically declared in the [**dependencies.json**](#dependenciesjson) file.
-- If you select a component that is not located next to the project package folder, it is automatically declared in the [**dependencies.json**](#dependenciesjson) file and its absolute path is declared in the [**environment4d.json**](#environmen4djson) file. You can [edit this path](#customizing-component-paths) afterwards if necessary.
+- If you select a component that is not located next to the project package folder, it is automatically declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). The Dependencies panel asks if you want to save a [relative or absolute path](#relative-paths-vs-absolute-paths).  
+
+:::note
+
+If no [**environment4d.json**](#environmen4djson) file is already defined for the project at this step, it is automatically created in the project package folder (default location).   
+
+:::
 
 The selected dependency is automatically added to the [inactive dependency list](#dependency-status). It will be loaded once the application restarts.
 
@@ -355,7 +375,7 @@ A confirmation dialog box is displayed. If the dependency was declared in the **
 
 If you confirm the dialog box, the removed dependency is automatically flagged "Unload at restart". It will be unloaded once the application restarts.
 
-![status-unload](../assets/en/Project/remove-comp.png)
+![status-unload](../assets/en/Project/status-unload.png)
 
 
 ### Dependency Origin
