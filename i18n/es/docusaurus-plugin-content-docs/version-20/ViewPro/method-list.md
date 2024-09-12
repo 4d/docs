@@ -1199,13 +1199,13 @@ $range:=VP All("ViewProArea")
 
 $condition:=New object
 $condition.target:=vk find target text
-$condition.all:=True //Search entire document
+$condition.all:=True //Buscar en todo el documento
 $condition.flags:=vk find flag exact match
 
-  // Replace the cells containing only 'Total' in the current sheet with "Grand Total"
+  // Reemplazar las celdas que contienen sólo "Total" en la hoja actual con "Grand Total"
 $result:=VP Find($range;"Total";$condition;"Grand Total")
 
-  // Check for empty range object
+  // Comprobar si el objeto de rango está vacío
 If($result.ranges.length=0)
     ALERT("No result found")
 Else
@@ -4268,17 +4268,17 @@ Los siguientes comandos se pueden utilizar en el método de retrollamada:
 Quiere crear un área 4D View Pro fuera de la pantalla y obtener el valor de una celda:
 
 ```4d
-// cs.OffscreenArea class declaration
+// Declaración de la clase cs.OffscreenArea
 Class constructor ($path : Text)
  This.filePath:=$path
 
-// This function will be called on each event of the offscreen area
+// Esta función será llamada en cada evento del área offscreen
 Function onEvent()
  Case of
   :(FORM Event.code=On VP Ready)
       VP IMPORT DOCUMENT(This.area;This.filePath)
        This.result:=VP Get value(VP Cell(This.area;6;22))
-
+ 
        ALERT("The G23 cell contains the value: "+String(This.result))
  End case
 
@@ -4316,20 +4316,20 @@ Function onEvent()
    SET TIMER(60)
 
   :(FORM Event.code=On VP Range Changed)
- // Detectado el final del cálculo. Restarts the timer
+ // Detectado el final del cálculo. Reinicia el temporizador
          If(This.isWaiting)
            SET TIMER(60)
          End if
 
   :(FORM Event.code=On Timer)
- // To be sure to not restart the timer if you call others 4D View command after this point
+ // Para asegurarse de no reiniciar el temporizador si llama a otros comandos de 4D View después de este punto
          This.isWaiting:=False
 
- // Stop the timer
+ // Detener el temporizador
    SET TIMER(0)
 
- // Start the PDF export
-        VP EXPORT DOCUMENT(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
+ // Iniciar la exportación del PDF
+        VP EXPORT DOCUMENTO(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
 
      :(FORM Event.code=On URL Loading Error)
          CANCEL
@@ -5019,13 +5019,13 @@ var $options : Object
 
 $data:= New collection()
 
-// Dates can be passed as scalar values
+// Las fechas pueden pasarse como valores escalares
 $data.push(New collection("Date"; Current date))
 
-// Time values must be passed as object attributes
+// Los valores hora deben pasarse como atributos objeto
 $data.push(New collection("Time"; New object("time"; 5140)))
 
-// Date + time example
+// Ejemplo de fecha + hora
 $data.push(New collection("Date + Time"; New object("value"; Current date; "time"; 5140)))
 
 $options:=New object("autoGenerateColumns"; True)

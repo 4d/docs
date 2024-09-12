@@ -258,14 +258,14 @@ If ($sp#Null)
 	If (Verify password hash($credentials.password; $sp.password))
 
 		Session.clearPrivileges()
-		Session.setPrivileges("") //guest session
+		Session.setPrivileges("") //sesión invitado
 
-		return "Authentication successful"
+		return "Autenticación exitosa"
 	Else
-		return "Wrong password"
+		return "Contraseña incorrecta"
 	End if
 Else
-	return "Wrong user"
+	return "Usuario incorrecto"
 End if
 ```
 

@@ -500,14 +500,14 @@ exposed Function setFinalExam()
 
     $keys:=New collection()
 
-      //Loop on the entity selection
+      //Bucle en la selección de entidades
     For each ($student;$es)
         $student.finalExam:=$examResult
         $status:=$student.save()
         If ($status.success)
             $keys.push($student.ID)
-        End if
-    End for each
+        End if 
+    End for each 
 
     $0:=$keys
 ```

@@ -9,11 +9,11 @@ title: On Display Detail
 
 ## Descrição
 
-El evento `On Display Detail` puede utilizarse en los siguientes contextos:
+O evento `On Display Detail` pode ser usado nos seguintes contextos:
 
 ### Formulário de saída
 
-Un registro está a punto de ser visualizado en un formulario de lista que se muestra vía `DISPLAY SELECTION` y `MODIFY SELECTION`.
+Um registro está prestes a ser exibido em um formulário de lista exibido via `DISPLAY SELECTION` e `MODIFY SELECTION`.
 
 > Este evento não pode ser selecionado para formulários projeto, está disponível apenas com **formulários tabela**.
 
@@ -21,17 +21,17 @@ In this context, the following sequence of calls to methods and form events is t
 
 - Para cada registo:
   - Para cada objecto na área de detalhes:
-    - Método objeto con el evento `On Display Detail`
-  - Método formulario con el evento `On Display Detail`
+    - Método objecto com o evento `On Display Detail`
+  - Método formulário com o evento `On Display Detail`
 
 > A área do cabeçalho é tratada usando o evento [`On Header`](onHeader.md).
 
-Llamar a un comando 4D que muestra una caja de diálogo desde el evento `On Display Detail` no está permitido y provocará un error de sintaxis. Más concretamente, los comandos en cuestión son: `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION` y `MODIFY SELECTION`.
+Chamar um comando 4D que exibe uma caixa de diálogo a partir do evento `On Exibir Detalhe` não é permitido e causará um erro de sintaxe. Mais especificamente, os comandos em questão são: `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION`, and `MODIFY SELECTION`.
 
 ### List box seleção
 
-This event is generated when a row of a [**selection type**](FormObjects/listbox_overview.md#selection-list-boxes) list box is displayed.
+Este evento é gerado quando uma linha de um [**tipo de seleção**](FormObjects/listbox_overview.md#selection-list-boxes) é exibida.
 
 ### Número de linha apresentado
 
-El comando 4D `Número de línea mostrado` funciona con el evento formulario `On Display Detail`. It returns the number of the row being processed while a list of records or list box rows is displayed on screen.
+O comando `Número de linha exibido` 4D funciona com o evento de formulário `Detalhes de Exibição`. It returns the number of the row being processed while a list of records or list box rows is displayed on screen.

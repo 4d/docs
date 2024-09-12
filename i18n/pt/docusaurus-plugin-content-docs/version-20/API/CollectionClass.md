@@ -901,13 +901,16 @@ Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a ava
 
 
 <!-- REF #collection.every().Params -->
-| Parâmetro  | Tipo         |    | Descrição                                                             |
-| ---------- | ------------ |:--:| --------------------------------------------------------------------- |
-| startFrom  | Integer      | -> | Índice para início do teste em                                        |
-| formula    | 4D. Function | -> | Objecto fórmula                                                       |
-| methodName | Text         | -> | Nome da função a qual se chama para processar os elementos da coleção |
+| Parâmetro  | Tipo         |    | Descrição                                                                          |
+| ---------- | ------------ |:--:| ---------------------------------------------------------------------------------- |
+| startFrom  | Integer      | -> | Índice para início do teste em                                                     |
+| formula    | 4D. Function | -> | Objecto fórmula                                                                    |
+| methodName | Text         | -> | Nome da função a qual se chama para processar os elementos da coleção              |
+| param      | Mixed        | -> | *methodName* recebe os parâmetros abaixo:                                          |
+| Resultados | Parâmetros   | <- | True se todos os elementos passarem o teste com sucesso|<!-- END REF -->
 
-|param|Mixed|->|Parameter(s) to pass to *formula* or *methodName*| |Result|Boolean|<-|True if all elements successfully passed the test|<!-- END REF -->
+
+|
 
 
 #### Descrição

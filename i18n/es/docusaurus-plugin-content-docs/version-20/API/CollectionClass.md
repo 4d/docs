@@ -912,13 +912,16 @@ Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluaci
 
 
 <!-- REF #collection.every().Params -->
-| Parámetros | Tipo        |    | Descripción                      |
-| ---------- | ----------- |:--:| -------------------------------- |
-| startFrom  | Integer     | -> | Índice para iniciar la prueba en |
-| formula    | 4D.Function | -> | Objeto fórmula                   |
-| methodName | Text        | -> | Nombre de un método              |
+| Parámetros | Tipo        |    | Descripción                                                                           |
+| ---------- | ----------- |:--:| ------------------------------------------------------------------------------------- |
+| startFrom  | Integer     | -> | Índice para iniciar la prueba en                                                      |
+| formula    | 4D.Function | -> | Objeto fórmula                                                                        |
+| methodName | Text        | -> | Nombre de un método                                                                   |
+| param      | Mixed       | -> | Parámetro(s) a pasar a la *fórmula* o *methodName*                                    |
+| Result     | Boolean     | <- | True si todos los elementos han pasado la prueba con éxito|<!-- END REF -->
 
-|param|Mixed|->|Parameter(s) to pass to *formula* or *methodName*| |Result|Boolean|<-|True if all elements successfully passed the test|<!-- END REF -->
+
+|
 
 
 #### Descripción

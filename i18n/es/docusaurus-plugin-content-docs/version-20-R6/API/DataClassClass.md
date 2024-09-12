@@ -1431,12 +1431,12 @@ Búsqueda con marcadores de posición con nombre para los atributos y los valore
  var $es : cs.EmployeeSelection
  var $name : Text
  $querySettings:=New object
-  //Named placeholders for values
-  //The user is asked for a name
- $name:=Request("Please enter the name to search:")
+  //Placeholders para los valores
+  //Se pide al usuario un nombre
+ $name:=Request("Por favor, introduzca el nombre a buscar:")
  If(OK=1)
     $querySettings.parameters:=New object("givenName";$name)
-  //Named placeholders for attribute paths
+  //Placeholders para las rutas de atributos
     $querySettings.attributes:=New object("attName";"name")
     $es:=ds.Employee.query(":attName= :givenName";$querySettings)
  End if
