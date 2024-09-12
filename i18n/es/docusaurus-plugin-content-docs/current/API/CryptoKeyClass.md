@@ -71,21 +71,21 @@ Un mensaje está firmado por una llave privada y la firma es verificada por la l
 - Lado bob:
 
 ```4d
-// Create the message
+// Crear el mensaje
 $message:="hello world"
 Folder(fk desktop folder).file("message.txt").setText($message)
 
-// Create a key
+// Crear una clave
 $type:=New object("type";"RSA")
 $key:=4D.CryptoKey.new($type)
 
-// Get the public key and save it
+// Obtener la llave pública y guardarla
 Folder(fk desktop folder).file("public.pem").setText($key.getPublicKey())
 
-// Get signature as base64 and save it
+// Obtener firma como base64 y guardarla
 Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
 
-/*Bob sends the message, the public key and the signature to Alice*/
+/*Bob envía el mensaje, la llave pública y la firma a Alice*/
 ```
 
 - Lado Alice:
