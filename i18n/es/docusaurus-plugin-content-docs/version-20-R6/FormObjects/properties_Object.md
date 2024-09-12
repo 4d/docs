@@ -159,7 +159,7 @@ Sin embargo, esta propiedad tiene una función tipográfica en los siguientes ca
 
 #### Objetos soportados
 
-[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab Control](tabControl.md)
+[Casilla de verificación](checkbox_overview.md) - [Cuadro combinado](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Entrada](input_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers) - [Área de Plug-in](pluginArea_overview.md#overview) - [Indicador de progreso](progressIndicator.md) - [Botón de opción](radio_overview.md) - [Regla](ruler.md) - [Selector](spinner.md) - [Pasos](stepper.md) - [Subformulario](subform_overview.md) - [Control de pestaña](tabControl.md)
 
 ---
 
