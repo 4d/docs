@@ -187,14 +187,14 @@ sendData({userId:document.forms['myForm'].elements['userId'].value , password:do
 Cuando la página de inicio de sesión se envía al servidor, se llama al método base `On REST Authentication`:
 
 ```4d
-	//On REST Authentication
+//On REST Authentication
 
 #DECLARE($userId : Text; $password : Text) -> $Accepted : Boolean
 var $sales : cs.SalesPersonsEntity
 
 $Accepted:=False
 
-	//A '/rest' URL has been called with headers username-4D and password-4D
+	//Una URL '/rest' ha sido llamada con los encabezados username-4D y password-4D
 If ($userId#"")
     $sales:=ds.SalesPersons.query("email = :1"; $userId).first()
     If ($sales#Null)
