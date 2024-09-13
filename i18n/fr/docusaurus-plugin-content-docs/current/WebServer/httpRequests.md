@@ -27,14 +27,14 @@ Par exemple, l'URL "_a/b/c_" appellera la méthode base, mais "_a/b/c.html_" n'a
 
 **On Web Connection**( _$1_ : Text ; _$2_ : Text ; _$3_ : Text ; _$4_ : Text ; _$5_ : Text ; _$6_ : Text )
 
-| Paramètres | Type |     | Description                                                                 |
-| ---------- | ---- | :-: | --------------------------------------------------------------------------- |
-| $1         | Text |  <- | Variable URL                                                                |
-| $2         | Text |  <- | En-têtes HTTP + Corps HTTP (jusqu'à une limite de 32 ko) |
-| $3         | Text |  <- | Adresse IP du client web (navigateur)                    |
-| $4         | Text |  <- | Adresse IP du serveur                                                       |
-| $5         | Text |  <- | Nom d'utilisateur                                                           |
-| $6         | Text |  <- | Mot de passe                                                                |
+| Paramètres | Type |                             | Description                                                                 |
+| ---------- | ---- | :-------------------------: | --------------------------------------------------------------------------- |
+| $1         | Text | <- | Variable URL                                                                |
+| $2         | Text | <- | En-têtes HTTP + Corps HTTP (jusqu'à une limite de 32 ko) |
+| $3         | Text | <- | Adresse IP du client web (navigateur)                    |
+| $4         | Text | <- | Adresse IP du serveur                                                       |
+| $5         | Text | <- | Nom d'utilisateur                                                           |
+| $6         | Text | <- | Mot de passe                                                                |
 
 Vous devez déclarer ces paramètres de la manière suivante :
 
