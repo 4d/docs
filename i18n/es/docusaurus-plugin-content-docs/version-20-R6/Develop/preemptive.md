@@ -216,7 +216,7 @@ En este caso, se evalúan todos los triggers. Si se detecta un comando que no se
 
 :::note
 
-In [client/server applications](../Desktop/clientServer.md), triggers may be executed in cooperative mode, even if their code is thread-safe. Esto ocurre cuando se activa un trigger desde un proceso remoto: en este caso, el trigger se ejecuta en el ["proceso gemelo" del proceso cliente](https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Server-and-the-4D-Language.300-7182872.en.html#68966) en la máquina del servidor. Since this process is used for all calls from the client, it is always executed in cooperative mode.
+En [aplicaciones client/servidor](../Desktop/clientServer.md), los triggers pueden ser ejecutados en modo cooperativo, incluso si su código es hilo seguro. Esto ocurre cuando se activa un trigger desde un proceso remoto: en este caso, el trigger se ejecuta en el ["proceso gemelo" del proceso cliente](https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Server-and-the-4D-Language.300-7182872.en.html#68966) en la máquina del servidor. Dado que este proceso se utiliza para todas las llamadas del cliente, siempre se ejecuta en modo cooperativo.
 
 :::
 

@@ -196,7 +196,7 @@ La sintaxis del archivo `roles.json` es la siguiente:
 |                     |                                                                                     | \[].promote  | Coleção de strings                |             | Lista de privilégios                                                                                                         |
 | forceLogin          |                                                                                     |                                                                                   | Parâmetros                        |             | True para habilitar el [modo "forceLogin"](../REST/authUsers.md#force-login-mode)                                            |
 
-:::caution Reminder
+:::caution Lembrete
 
 - O nome do privilégio "WebAdmin" está reservado à aplicação. Não se recomenda a utilização deste nome para privilégios personalizados.
 - los nombres de `privileges` y `roles` son insensibles a mayúsculas y minúsculas.

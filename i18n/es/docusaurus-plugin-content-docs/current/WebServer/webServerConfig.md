@@ -373,11 +373,11 @@ Este parámetro permite seleccionar el formato de este archivo. Valores disponib
 
 ## Procesos Web simultáneos maximos
 
-| Puede ajustarse con           | Nombre                                                                                                                      | Comentarios |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| objeto webServer              | [`maxConcurrentProcesses`](API/WebServerClass.md#maxconcurrentprocesses)                                                    |             |
-| `WEB SET OPTION`              | `Web max concurrent processes`                                                                                              |             |
-| Caja de diálogo de parámetros | [Options (I) page/Maximum Concurrent Web Processes](../settings/web.md#maximum-concurrent-web-processes) |             |
+| Puede ajustarse con           | Nombre                                                                                                                           | Comentarios |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| objeto webServer              | [`maxConcurrentProcesses`](API/WebServerClass.md#maxconcurrentprocesses)                                                         |             |
+| `WEB SET OPTION`              | `Web max concurrent processes`                                                                                                   |             |
+| Caja de diálogo de parámetros | Página [Opciones (I)/Máximo de procesos web simultáneos](../settings/web.md#maximum-concurrent-web-processes) |             |
 
 Límite estrictamente superior de procesos web concurrentes que pueden estar abiertos simultáneamente en el servidor cuando **no sessions** o **legacy sessions** están siendo utilizados (**scalable sessions** soporta un [número ilimitado](sessions.md) de p Este parámetro permite evitar la saturación del servidor como resultado de un número masivo de peticiones. Cuando se alcanza el número máximo de procesos web concurrentes (menos uno), 4D deja de crear nuevos procesos y envía el estado HTTP `503 - Servicio no disponible` a todas las nuevas peticiones.
 

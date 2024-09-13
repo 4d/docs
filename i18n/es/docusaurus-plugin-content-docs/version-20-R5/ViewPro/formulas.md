@@ -54,14 +54,14 @@ Todas las fórmulas tienen operandos y operadores:
 
 Los siguientes operadores pueden utilizarse con dos operandos del mismo tipo:
 
-| Operador | Comparación       |
-| -------- | ----------------- |
-| =        | igual a           |
-| `<>`     | es diferente de   |
-| >        | mayor que         |
-| <        | menor que         |
-| > =      | mayor o igual que |
-| <=       | menor o igual que |
+| Operador                    | Comparación       |
+| --------------------------- | ----------------- |
+| =                           | igual a           |
+| `<>`                        | es diferente de   |
+| >                           | mayor que         |
+| <  | menor que         |
+| > =                         | mayor o igual que |
+| <= | menor o igual que |
 
 ### Presedencia de los operadores
 
@@ -140,22 +140,22 @@ Todas las funciones se declaran con el comando [`VP SET CUSTOM FUNCTIONS`](comma
 ```4d
 $o:=New object
 
-//Name of the function in 4D View Pro: "DRIVERS_LICENCE"
+//Nombre de la fonción en 4D View Pro: "DRIVERS_LICENCE"
 $o.DRIVERS_LICENCE:=New object
 
-//process variable
+/variable process
 $o.DRIVERS_LICENCE.formula:=Formula(DriverLicence)
 
-//table field
+//campo table
 $o.DRIVERS_LICENCE.formula:=Formula([Users]DriverLicence)
 
-//project method
+//método proyecto
 $o.DRIVERS_LICENCE.formula:=Formula(DriverLicenceState)
 
-//4D command
+//Comando 4D
 $o.DRIVERS_LICENCE:=Formula(Choose(DriverLicence; "Obtained"; "Failed"))
 
-//4D expression and parameter
+//expresión y parámetro 4D 
 $o.DRIVERS_LICENCE.formula:=Formula(ds.Users.get($1).DriverLicence)
 $o.DRIVERS_LICENCE.parameters:=New collection
 $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))

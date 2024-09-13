@@ -17,7 +17,7 @@ El modo SDI sólo está disponible en los siguientes entornos de ejecución:
 
 - Windows
 - Fusionado aplicación 4D [autónomo](../Desktop/building.md#build-stand-alone-application) o [cliente](../Desktop/building.md#build-client-application)
-- [**Test application** feature](bars.md#previewing-menu-bars) available from the **Run** menu.
+- [**Funcionalidad de prueba de la aplicación**](bars.md#previewing-menu-bars) disponible desde el menú **Ejecutar**.
 
 ## Activación del modo SDI
 

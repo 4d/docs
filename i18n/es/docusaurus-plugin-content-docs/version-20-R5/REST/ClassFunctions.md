@@ -549,13 +549,14 @@ var $ageAverage : Integer
 
 $remoteDS:=Open datastore(New object("hostname";"127.0.0.1:8044");"students")
 
-// $newStudent is a student entity to procees
+// $newStudent es una entidad estudiantil para proceder
 $newStudent:=...
 $students:=$remoteDS.Students.query("school.name = :1";"Math school")
-// We add an entity to the $students entity selection on the client
+// Agregamos una entidad a la selección de entidad $students en el cliente
 $students.add($newStudent)
 
-// We call a function on the StudentsSelection class returning the age average of the students in the entity selection
-// The function is executed on the server on the updated $students entity selection which included the student added from the client
+// Llamamos a una función de la clase StudentsSelection devolviendo el promedio de edad de los estudiantes de la entity selection
+// La función se ejecuta en el servidor en la selección actualizada de entidad
+$students que incluía al estudiante añadido por el cliente
 $ageAverage:=$students.getAgeAverage()
 ```
