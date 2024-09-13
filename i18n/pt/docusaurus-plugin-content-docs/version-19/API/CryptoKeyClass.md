@@ -45,7 +45,7 @@ For a comprehensive overview of this class, please refer to the [**CryptoKey: en
 | Parâmetro | Tipo         |    | Descrição                                         |
 | --------- | ------------ | -- | ------------------------------------------------- |
 | settings  | Object       | -> | Settings to generate or load a key pair           |
-| result    | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação |
+| resultado | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação |
 <!-- END REF -->
 
 The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new `4D.CryptoKey` object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
@@ -68,7 +68,7 @@ The returned `CryptoKey` object encapsulates an encryption key pair. It is a sha
 
 A message is signed by a private key and the signature is verified by the corresponding public key. The following code signs and verifies a simple message signature.
 
-- Bob's side:
+- Lado bob:
 
 ```4d
 // Create the message
@@ -88,7 +88,7 @@ Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
 /*Bob sends the message, the public key and the signature to Alice*/
 ```
 
-- Alice's side:
+- O lado Alice:
 
 ```4d
 // Get message, public key & signature
@@ -184,7 +184,7 @@ A função `.decrypt()` <!-- REF #CryptoKey.decrypt().Summary -->decifra o parâ
 | Propriedade | Tipo       | Descrição                                                                |
 | ----------- | ---------- | ------------------------------------------------------------------------ |
 | success     | boolean    | True se a mensagem tiver sido decifrada com êxito                        |
-| result      | text       | Mensagem decifrado e decodificado utilizando `options.encodingDecrypted` |
+| resultado   | text       | Mensagem decifrado e decodificado utilizando `options.encodingDecrypted` |
 | errors      | collection | Se `success` for `false`, pode conter uma coleção de erros               |
 
 A função devolve um objeto "status" com a propriedade `success` definida como `true` se *message* puder ser descifrada com êxito.
