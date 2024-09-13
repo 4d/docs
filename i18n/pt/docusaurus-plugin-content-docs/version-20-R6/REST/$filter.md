@@ -68,15 +68,15 @@ Também é possível consultar atributos do tipo Object utilizando a notação d
 
 O comparador deve ser um dos seguintes valores:
 
-| Comparador | Descrição            |
-| ---------- | -------------------- |
-| =          | é igual a            |
-| !=         | diferente de         |
-| >          | maior que            |
-| > =        | maior ou igual a     |
-| <          | menor que            |
-| <=         | menor que ou igual a |
-| begin      | começa com           |
+| Comparador                  | Descrição            |
+| --------------------------- | -------------------- |
+| =                           | é igual a            |
+| !=                          | diferente de         |
+| >                           | maior que            |
+| > =                         | maior ou igual a     |
+| <  | menor que            |
+| <= | menor que ou igual a |
+| begin                       | começa com           |
 
 ## Exemplos
 
