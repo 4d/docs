@@ -9,10 +9,10 @@ title: VP Get sheet options
 
 <!-- REF #_method_.VP Get sheet options.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                   |                  |
-| ---------- | ------- | -- | ----------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nome da área 4D View Pro no formulário                      |                  |
-| sheet      | Integer | -> | Índice da folha (folha atual se omitida) |                  |
+| Parâmetro  | Tipo    |                             | Descrição                                                   |                  |
+| ---------- | ------- | --------------------------- | ----------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nome da área 4D View Pro no formulário                      |                  |
+| sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
 | Resultados | Object  | <- | Objecto opções de folha                                     | <!-- END REF --> |
 
 #### Descrição
