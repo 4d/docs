@@ -70,13 +70,13 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <!-- REF #_command_.File.Params -->
 
-| Parâmetro    | Tipo                     |     | Descrição                                                         |
-| ------------ | ------------------------ | :-: | ----------------------------------------------------------------- |
-| path         | Text                     |  -> | Rota do arquivo                                                   |
-| fileConstant | Integer                  |  -> | Constante de arquivo 4D                                           |
-| pathType     | Integer                  |  -> | `fk posix path` (padrão) ou `fk platform path` |
-| -            |                          |  -> | * para devolver o arquivo da base de dados anfitriã               |
-| Resultados   | 4D. File |  <- | Novo objeto arquivo                                               |
+| Parâmetro    | Tipo                     |                             | Descrição                                                         |
+| ------------ | ------------------------ | :-------------------------: | ----------------------------------------------------------------- |
+| path         | Text                     |              ->             | Rota do arquivo                                                   |
+| fileConstant | Integer                  |              ->             | Constante de arquivo 4D                                           |
+| pathType     | Integer                  |              ->             | `fk posix path` (padrão) ou `fk platform path` |
+| -            |                          |              ->             | * para devolver o arquivo da base de dados anfitriã               |
+| Resultados   | 4D. File | <- | Novo objeto arquivo                                               |
 
 <!-- END REF -->
 
@@ -173,8 +173,8 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 
 <!--REF #FileClass.create().Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                                                      |
-| ---------- | ---------- | -- | -------------------------------------------------------------- |
+| Parâmetro  | Tipo       |                             | Descrição                                                      |
+| ---------- | ---------- | --------------------------- | -------------------------------------------------------------- |
 | Resultados | Parâmetros | <- | True se o arquivo foi criado com sucesso, false caso contrário |
 
 <!-- END REF -->
@@ -217,11 +217,11 @@ Criação de um arquivo de preferências na pasta da base de dados:
 
 <!--REF #FileClass.createAlias().Params -->
 
-| Parâmetro         | Tipo                       |    | Descrição                                     |
-| ----------------- | -------------------------- | -- | --------------------------------------------- |
-| destinationFolder | 4D. Folder | -> | Pasta de destino para o pseudónimo ou atalho  |
-| aliasName         | Text                       | -> | Nome do pseudónimo ou atalho                  |
-| aliasType         | Integer                    | -> | Tipo de ligação do pseudónimo                 |
+| Parâmetro         | Tipo                       |                             | Descrição                                     |
+| ----------------- | -------------------------- | --------------------------- | --------------------------------------------- |
+| destinationFolder | 4D. Folder | ->                          | Pasta de destino para o pseudónimo ou atalho  |
+| aliasName         | Text                       | ->                          | Nome do pseudónimo ou atalho                  |
+| aliasType         | Integer                    | ->                          | Tipo de ligação do pseudónimo                 |
 | Resultados        | 4D. File   | <- | Referência a pseudónimo ou ficheiro de atalho |
 
 <!-- END REF -->
@@ -335,8 +335,8 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 <!--REF #FileClass.getAppInfo().Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                                                                                 |
-| ---------- | ------ | -- | --------------------------------------------------------------------------------------------------------- |
+| Parâmetro  | Tipo   |                             | Descrição                                                                                                 |
+| ---------- | ------ | --------------------------- | --------------------------------------------------------------------------------------------------------- |
 | Resultados | Object | <- | Conteúdo do arquivo de versão recurso .exe/.dll ou .plist |
 
 <!-- END REF -->
@@ -430,10 +430,10 @@ ALERT($info.Copyright)
 
 <!--REF #FileClass.moveTo().Params -->
 
-| Parâmetro         | Tipo                       |    | Descrição                        |
-| ----------------- | -------------------------- | -- | -------------------------------- |
-| destinationFolder | 4D. Folder | -> | Pasta de destino                 |
-| newName           | Text                       | -> | Nome completo do ficheiro movido |
+| Parâmetro         | Tipo                       |                             | Descrição                        |
+| ----------------- | -------------------------- | --------------------------- | -------------------------------- |
+| destinationFolder | 4D. Folder | ->                          | Pasta de destino                 |
+| newName           | Text                       | ->                          | Nome completo do ficheiro movido |
 | Resultados        | 4D. File   | <- | Arquivo movido                   |
 
 <!-- END REF -->
@@ -478,10 +478,10 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <!--REF #FileClass.open().Params -->
 
-| Parâmetro  | Tipo                                             |    | Descrição                                                   |
-| ---------- | ------------------------------------------------ | -- | ----------------------------------------------------------- |
-| mode       | Text                                             | -> | Modo de abertura: "read", "write", "append" |
-| options    | Object                                           | -> | Opções de abertura                                          |
+| Parâmetro  | Tipo                                             |                             | Descrição                                                   |
+| ---------- | ------------------------------------------------ | --------------------------- | ----------------------------------------------------------- |
+| mode       | Text                                             | ->                          | Modo de abertura: "read", "write", "append" |
+| options    | Object                                           | ->                          | Opções de abertura                                          |
 | Resultados | [4D.FileHandle](FileHandleClass) | <- | Novo objeto File handle                                     |
 
 <!-- END REF -->
@@ -559,9 +559,9 @@ $fhandle:=$f.open("read")
 
 <!--REF #FileClass.rename().Params -->
 
-| Parâmetro  | Tipo                     |    | Descrição                          |
-| ---------- | ------------------------ | -- | ---------------------------------- |
-| newName    | Text                     | -> | Novo nome completo para o ficheiro |
+| Parâmetro  | Tipo                     |                             | Descrição                          |
+| ---------- | ------------------------ | --------------------------- | ---------------------------------- |
+| newName    | Text                     | ->                          | Novo nome completo para o ficheiro |
 | Resultados | 4D. File | <- | Ficheiro renomeado                 |
 
 <!-- END REF -->
