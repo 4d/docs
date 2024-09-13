@@ -111,10 +111,10 @@ Parâmetros são recebidos dentro do método, na ordem que são especificados na
 
 <!-- REF #_command_.Formula.Params -->
 
-| Parâmetro  | Tipo                         |     | Descrição                            |
-| ---------- | ---------------------------- | :-: | ------------------------------------ |
-| formulaExp | Expression                   |  -> | Fórmula a ser retornada como objeto  |
-| Resultados | 4D. Function |  <- | Função nativa encapsulando a fórmula |
+| Parâmetro  | Tipo                         |                             | Descrição                            |
+| ---------- | ---------------------------- | :-------------------------: | ------------------------------------ |
+| formulaExp | Expression                   |              ->             | Fórmula a ser retornada como objeto  |
+| Resultados | 4D. Function | <- | Função nativa encapsulando a fórmula |
 
 <!-- END REF -->
 
@@ -242,11 +242,11 @@ Chamar uma fórmula usando notação de objeto:
 
 <!-- REF #_command_.Formula from string.Params -->
 
-| Parâmetro     | Tipo                         |     | Descrição                                                                                         |
-| ------------- | ---------------------------- | :-: | ------------------------------------------------------------------------------------------------- |
-| formulaString | Text                         |  -> | Fórmula texto a ser retornada como objeto                                                         |
-| context       | Number                       |  -> | `sk execute in current database` (por padrão) ou `sk execute in host database` |
-| Resultados    | 4D. Function |  <- | Objeto nativo encapsulando a fórmula                                                              |
+| Parâmetro     | Tipo                         |                             | Descrição                                                                                         |
+| ------------- | ---------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------- |
+| formulaString | Text                         |              ->             | Fórmula texto a ser retornada como objeto                                                         |
+| context       | Number                       |              ->             | `sk execute in current database` (por padrão) ou `sk execute in host database` |
+| Resultados    | 4D. Function | <- | Objeto nativo encapsulando a fórmula                                                              |
 
 <!-- END REF -->
 
@@ -301,11 +301,11 @@ O código abaixo cria um diálogo aceitando uma fórmula em formato texto:
 
 <!-- REF #FunctionClass.apply().Params -->
 
-| Parâmetro     | Tipo       |     | Descrição                                                                                                               |
-| ------------- | ---------- | :-: | ----------------------------------------------------------------------------------------------------------------------- |
-| thisObj       | Object     |  -> | Objeto a ser retornado pelo comando This na fórmula                                                                     |
-| formulaParams | Collection |  -> | Collection of values to be passed as $1...$n when `formula` is executed |
-| Resultados    | any        |  <- | Valores de execução de fórmula                                                                                          |
+| Parâmetro     | Tipo       |                             | Descrição                                                                                                               |
+| ------------- | ---------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------------- |
+| thisObj       | Object     |              ->             | Objeto a ser retornado pelo comando This na fórmula                                                                     |
+| formulaParams | Collection |              ->             | Collection of values to be passed as $1...$n when `formula` is executed |
+| Resultados    | any        | <- | Valores de execução de fórmula                                                                                          |
 
 <!-- END REF -->
 
@@ -361,10 +361,10 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 
 <!-- REF #FunctionClass.call().Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                                                                                            |
-| ---------- | ------ | -- | -------------------------------------------------------------------------------------------------------------------- |
-| thisObj    | Object | -> | Objeto a ser retornado pelo comando This na fórmula                                                                  |
-| params     | any    | -> | Valores a serem passados como $1...$n quando a fórmula for executada |
+| Parâmetro  | Tipo   |                             | Descrição                                                                                                            |
+| ---------- | ------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| thisObj    | Object | ->                          | Objeto a ser retornado pelo comando This na fórmula                                                                  |
+| params     | any    | ->                          | Valores a serem passados como $1...$n quando a fórmula for executada |
 | Resultados | any    | <- | Valores de execução de fórmula                                                                                       |
 
 <!-- END REF -->
