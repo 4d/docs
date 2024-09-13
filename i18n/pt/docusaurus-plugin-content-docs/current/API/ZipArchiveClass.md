@@ -47,14 +47,14 @@ End if
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 
-| Parâmetro       | Tipo                       |     | Descrição                                                           |
-| --------------- | -------------------------- | :-: | ------------------------------------------------------------------- |
-| fileToZip       | 4D. File   |  -> | Objeto File ou Folder a comprimir                                   |
-| folderToZip     | 4D. Folder |  -> | Objeto File ou Folder a comprimir                                   |
-| zipStructure    | Object                     |  -> | Objeto File ou Folder a comprimir                                   |
-| destinationFile | 4D. File   |  -> | Arquivo destino para o arquivo                                      |
-| options         | Integer                    |  -> | Opção *folderToZip*: `ZIP Without enclosing folder` |
-| Resultados      | Object                     |  <- | Objeto de estado                                                    |
+| Parâmetro       | Tipo                       |                             | Descrição                                                           |
+| --------------- | -------------------------- | :-------------------------: | ------------------------------------------------------------------- |
+| fileToZip       | 4D. File   |              ->             | Objeto File ou Folder a comprimir                                   |
+| folderToZip     | 4D. Folder |              ->             | Objeto File ou Folder a comprimir                                   |
+| zipStructure    | Object                     |              ->             | Objeto File ou Folder a comprimir                                   |
+| destinationFile | 4D. File   |              ->             | Arquivo destino para o arquivo                                      |
+| options         | Integer                    |              ->             | Opção *folderToZip*: `ZIP Without enclosing folder` |
+| Resultados      | Object                     | <- | Objeto de estado                                                    |
 
 <!-- END REF -->
 
@@ -201,11 +201,11 @@ $err:=ZIP Create archive($zip; $destination)
 
 <!-- REF #_command_.ZIP Read archive.Params -->
 
-| Parâmetro  | Tipo                     |     | Descrição                       |
-| ---------- | ------------------------ | :-: | ------------------------------- |
-| zipFile    | 4D. File |  -> | Arquivos Zip                    |
-| senha      | Text                     |  -> | Senha do arquivo ZIP, se houver |
-| Resultados | Parâmetros               |  <- | Objeto arquivo                  |
+| Parâmetro  | Tipo                     |                             | Descrição                       |
+| ---------- | ------------------------ | :-------------------------: | ------------------------------- |
+| zipFile    | 4D. File |              ->             | Arquivos Zip                    |
+| senha      | Text                     |              ->             | Senha do arquivo ZIP, se houver |
+| Resultados | Parâmetros               | <- | Objeto arquivo                  |
 
 <!-- END REF -->
 
