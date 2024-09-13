@@ -42,17 +42,17 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 ```4d
  var $signal : 4D.Signal
 
-  // Creation of a signal
+// Criação de um sinal
  $signal:=New signal
 
-  // call main process and execute OpenForm method
+// chamar o processo principal e executar o método OpenForm
  CALL WORKER(1;"OpenForm";$signal)
-  // do another calculation
- ...
-  // Waiting for the end of the process
+// fazer outro cálculo
+...
+// Esperando pelo fim do processo
  $signaled:=$signal.wait()
 
-  // Processing of the results
+// Processamento dos resultados
  $calc:=$signal.result+...
 ```
 
@@ -102,10 +102,10 @@ Método ***OpenForm*** :
 
 <!-- REF #_command_.New signal.Params -->
 
-| Parâmetro   | Tipo                       |     | Descrição                          |
-| ----------- | -------------------------- | :-: | ---------------------------------- |
-| description | Text                       |  -> | Descrição para o sinal             |
-| Resultados  | 4D. Signal |  <- | Objeto nativo encapsulando o sinal |
+| Parâmetro   | Tipo                       |                             | Descrição                          |
+| ----------- | -------------------------- | :-------------------------: | ---------------------------------- |
+| description | Text                       |              ->             | Descrição para o sinal             |
+| Resultados  | 4D. Signal | <- | Objeto nativo encapsulando o sinal |
 
 <!-- END REF -->
 
@@ -250,9 +250,9 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 
 <!-- REF #SignalClass.wait().Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                                   |
-| ---------- | ---------- | -- | ------------------------------------------- |
-| timeout    | Real       | -> | Tempo máximo de espera do sinal em segundos |
+| Parâmetro  | Tipo       |                             | Descrição                                   |
+| ---------- | ---------- | --------------------------- | ------------------------------------------- |
+| timeout    | Real       | ->                          | Tempo máximo de espera do sinal em segundos |
 | Resultados | Parâmetros | <- | Estado da propriedade `.signaled`           |
 
 <!-- END REF -->
