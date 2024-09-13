@@ -9,9 +9,9 @@ title: VP Get column attributes
 
 <!-- REF #_method_.VP Get column attributes.Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                          |                  |
-| ---------- | ---------- | -- | ---------------------------------- | ---------------- |
-| rangeObj   | Object     | -> | Objeto intervalo                   |                  |
+| Parâmetro  | Tipo       |                             | Descrição                          |                  |
+| ---------- | ---------- | --------------------------- | ---------------------------------- | ---------------- |
+| rangeObj   | Object     | ->                          | Objeto intervalo                   |                  |
 | Resultados | Collection | <- | Coleção de propriedades da colunas | <!-- END REF --> |
 
 #### Descrição
