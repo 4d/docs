@@ -36,24 +36,24 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 
 ## Opérateurs sur les chaînes
 
-| Opération           | Syntaxe          | Retourne | Expression              | Valeur   |
-| ------------------- | ---------------- | -------- | ----------------------- | -------- |
-| Concaténation       | Chaîne + Chaîne  | String   | "abc" + "def"           | "abcdef" |
-| Répétition          | Chaîne \* Nombre | String   | "ab" \* 3               | "ababab" |
-| Egalité             | Chaîne = Chaîne  | Boolean  | "abc" = "abc"           | True     |
-|                     |                  |          | "abc" = "abd"           | False    |
-| Inégalité           | Chaîne # Chaîne  | Boolean  | "abc" # "abd"           | True     |
-|                     |                  |          | "abc" # "abc"           | False    |
-| Supérieur à         | Chaîne > Chaîne  | Boolean  | "abd" > "abc"           | True     |
-|                     |                  |          | "abc" > "abc"           | False    |
-| Inférieur à         | Chaîne < Chaîne  | Boolean  | "abc" < "abd"           | True     |
-|                     |                  |          | "abc" < "abc"           | False    |
-| Supérieur ou égal à | Chaîne >= Chaîne | Boolean  | "abd" >= "abc"          | True     |
-|                     |                  |          | "abc" >= "abd"          | False    |
-| Inférieur ou égal à | Chaîne <= Chaîne | Boolean  | "abc" <= "abd"          | True     |
-|                     |                  |          | "abd" <= "abc"          | False    |
-| Contient mot-clé    | Chaîne % Chaîne  | Boolean  | "Alpha Bravo" % "Bravo" | True     |
-|                     |                  |          | "Alpha Bravo" % "ravo"  | False    |
+| Opération           | Syntaxe                                   | Retourne | Expression                              | Valeur   |
+| ------------------- | ----------------------------------------- | -------- | --------------------------------------- | -------- |
+| Concaténation       | Chaîne + Chaîne                           | String   | "abc" + "def"                           | "abcdef" |
+| Répétition          | Chaîne \* Nombre                          | String   | "ab" \* 3                               | "ababab" |
+| Egalité             | Chaîne = Chaîne                           | Boolean  | "abc" = "abc"                           | True     |
+|                     |                                           |          | "abc" = "abd"                           | False    |
+| Inégalité           | Chaîne # Chaîne                           | Boolean  | "abc" # "abd"                           | True     |
+|                     |                                           |          | "abc" # "abc"                           | False    |
+| Supérieur à         | Chaîne > Chaîne                           | Boolean  | "abd" > "abc"                           | True     |
+|                     |                                           |          | "abc" > "abc"                           | False    |
+| Inférieur à         | Chaîne < Chaîne  | Boolean  | "abc" < "abd"  | True     |
+|                     |                                           |          | "abc" < "abc"  | False    |
+| Supérieur ou égal à | Chaîne >= Chaîne                          | Boolean  | "abd" >= "abc"                          | True     |
+|                     |                                           |          | "abc" >= "abd"                          | False    |
+| Inférieur ou égal à | Chaîne <= Chaîne | Boolean  | "abc" <= "abd" | True     |
+|                     |                                           |          | "abd" <= "abc" | False    |
+| Contient mot-clé    | Chaîne % Chaîne                           | Boolean  | "Alpha Bravo" % "Bravo"                 | True     |
+|                     |                                           |          | "Alpha Bravo" % "ravo"                  | False    |
 
 ## Comparaisons de chaînes
 
@@ -140,7 +140,7 @@ A la différence des autres comparaisons de chaîne, les recherches par mots-cl�
 
 > **Notes :**
 >
-> - 4D utilise la librairie ICU pour la comparaison des chaînes (à l'aide des opérateurs `<>=#`) et la détection des mots-clés. Pour plus d'informations sur les règles mises en oeuvre, veuillez vous référer à l'adresse suivante : http://www.unicode.org/reports/tr29/#Word_Boundaries.
+> - 4D utilise la librairie ICU pour la comparaison des chaînes (à l'aide des opérateurs `<>=#`) et la détection des mots-clés. Pour plus d'informations sur les règles mises en oeuvre, veuillez vous référer à l'adresse suivante : <http://www.unicode.org/reports/tr29/#Word_Boundaries>.
 > - Dans la version japonaise, au lieu de ICU, 4D utilise Mecab par défaut pour la détection des mots-clés.
 
 ## Symboles d'indice de chaîne
