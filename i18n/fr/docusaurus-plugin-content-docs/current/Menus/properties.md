@@ -22,14 +22,14 @@ Il est possible de définir les propriétés des lignes de menus en insérant de
 
 Les caractères de contrôle n’apparaissent pas dans les libellés des commandes de menus. Vous devez donc les éviter afin de ne pas obtenir d’effets indésirables. Ces caractères sont les suivants :
 
-| Caractère            | Description                   | Utilisation                                                                                                      |
-| -------------------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| ( | parenthèse ouvrante           | Désactiver la ligne                                                                                              |
-| \<B                  | inférieur à B                 | Gras                                                                                                             |
-| \<I                  | inférieur à I                 | Italique                                                                                                         |
-| \<U                  | inférieur à U                 | Souligné                                                                                                         |
-| !+caractère          | point d'exclamation+caractère | Caractère d'ajout sous forme de coche (macOS); ajouter une coche (Windows) |
-| /+caractère          | slash+caractère               | Ajouter un caractère comme raccourci                                                                             |
+| Caractère                   | Description                   | Utilisation                                                                                                      |
+| --------------------------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| (        | parenthèse ouvrante           | Désactiver la ligne                                                                                              |
+| <B | inférieur à B                 | Gras                                                                                                             |
+| <I | inférieur à I                 | Italique                                                                                                         |
+| <U | inférieur à U                 | Souligné                                                                                                         |
+| !+caractère                 | point d'exclamation+caractère | Caractère d'ajout sous forme de coche (macOS); ajouter une coche (Windows) |
+| /+caractère                 | slash+caractère               | Ajouter un caractère comme raccourci                                                                             |
 
 ## Paramètres
 
