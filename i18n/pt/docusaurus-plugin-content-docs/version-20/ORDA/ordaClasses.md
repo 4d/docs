@@ -332,7 +332,7 @@ O parâmetro *$event* contém as seguintes propriedades:
 | attributeName | Text         | Nome do atributo computado                                                                             |
 | dataClassName | Text         | Nome do dataclass                                                                                      |
 | kind          | Text         | "get"                                                                                                  |
-| result        | Diferente de | Opcional. Adicione esta propriedade com o valor Null se pretender que um atributo escalar devolva Null |
+| resultado     | Diferente de | Opcional. Adicione esta propriedade com o valor Null se pretender que um atributo escalar devolva Null |
 
 
 #### Exemplos
@@ -444,7 +444,7 @@ O parâmetro *$event* contém as seguintes propriedades:
 | kind          | Text         | "query"                                                                                                                                                                                                                                                                                                                                                                        |
 | value         | Diferente de | Valor a tratar pelo atributo calculado                                                                                                                                                                                                                                                                                                                                         |
 | operator      | Text         | Operador de consulta (ver também a consulta [`` função de classe](API/DataClassClass.md#query)). Valores possíveis:<li>== (igual a, @ é um wildcard)</li><li>=== (igual a, @ não é wildcard)</li><li>!= (não é igual a, @ é um wildcard)</li><li>!== (não é igual a, @ não é wildcard)</li><li>< (menor que)</li><li><= (less than or equal to)</li><li>> (maior que)</li><li>>= (maior ou igual a)</li><li>IN (incluído em)</li><li>% (contém palavra-chave)</li> |
-| result        | Diferente de | Valor a tratar pelo atributo calculado. Passe `Null` nesta propriedade se quiser deixar 4D executar a consulta padrão (sempre seqüencial para atributos computados).                                                                                                                                                                                                           |
+| resultado     | Diferente de | Valor a tratar pelo atributo calculado. Passe `Null` nesta propriedade se quiser deixar 4D executar a consulta padrão (sempre seqüencial para atributos computados).                                                                                                                                                                                                           |
 
 > Se a função devolver um valor em *$result* e for atribuído outro valor à propriedade `$event.result` , a prioridade é dada a `$event.result`.
 
@@ -578,7 +578,7 @@ O parâmetro *$event* contém as seguintes propriedades:
 | value         | Diferente de | Valor a tratar pelo atributo calculado                                                            |
 | operator      | Text         | "desc" ou "asc" (padrão)                                                                          |
 | descending    | Parâmetros   | `true` para ordem descendente, `false` para ordem ascendente                                      |
-| result        | Diferente de | Valor a tratar pelo atributo calculado. Passe `Null` se quiser que 4D execute a ordenação padrão. |
+| resultado     | Diferente de | Valor a tratar pelo atributo calculado. Passe `Null` se quiser que 4D execute a ordenação padrão. |
 
 > Pode utilizar o operador `` ou a propriedade `descendente` . É essencialmente uma questão de estilo de programação (ver exemplos).
 
