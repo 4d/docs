@@ -19,7 +19,7 @@ Las opciones de tamaño dependen del valor de la opción **Tamaño basado en**.
 
 - `<object name>`: el tamaño del formulario se basará en la posición del objeto formulario seleccionado. Por ejemplo, si elige un objeto situado en la parte inferior derecha del área a mostrar, el tamaño del formulario consistirá en un rectángulo cuya esquina superior izquierda será el origen del formulario y la esquina inferior derecha corresponderá a la del objeto seleccionado, más los valores de los márgenes.
 
-> For output forms, only the [**Hor margin**](#hor-margin) or [**Width**](#width) fields are available.
+> Para los formularios de salida, sólo están disponibles los campos [**Margen horizontal**](#hor-margin) o [**Ancho**](#width).
 
 #### Gramática JSON
 
