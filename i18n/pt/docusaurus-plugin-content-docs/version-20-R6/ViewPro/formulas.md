@@ -54,14 +54,14 @@ Todas as fórmulas têm operandos e operadores:
 
 Os operadores a seguir podem ser usados com dois operandos do mesmo tipo:
 
-| Operador | Comparação           |
-| -------- | -------------------- |
-| =        | igual a              |
-| `<>`     | diferente de         |
-| >        | maior que            |
-| <        | menor que            |
-| > =      | maior ou igual a     |
-| <=       | menor que ou igual a |
+| Operador                    | Comparação           |
+| --------------------------- | -------------------- |
+| =                           | igual a              |
+| `<>`                        | diferente de         |
+| >                           | maior que            |
+| <  | menor que            |
+| > =                         | maior ou igual a     |
+| <= | menor que ou igual a |
 
 ### Precedência do operador
 
