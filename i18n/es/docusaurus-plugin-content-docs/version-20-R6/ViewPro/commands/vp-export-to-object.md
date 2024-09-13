@@ -9,10 +9,10 @@ title: VP Export to object
 
 <!-- REF #_method_.VP Export to object.Params -->
 
-| Parámetros | Tipo   |    | Descripción                                  |                  |
-| ---------- | ------ | -- | -------------------------------------------- | ---------------- |
-| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro |                  |
-| options    | Object | -> | Opciones de exportación                      |                  |
+| Parámetros | Tipo   |                             | Descripción                                  |                  |
+| ---------- | ------ | --------------------------- | -------------------------------------------- | ---------------- |
+| vpAreaName | Text   | ->                          | Nombre de objeto formulario área 4D View Pro |                  |
+| options    | Object | ->                          | Opciones de exportación                      |                  |
 | Result     | Object | <- | Objeto 4D View Pro                           | <!-- END REF --> |
 
 #### Descripción
