@@ -219,7 +219,7 @@ Para mais informações, ver o capítulo **Processos** e a descrição destes co
 
 :::warning Obsoleto
 
-Use of interprocess variables is not recommended since they are not available from [preemptive processes](../Develop/preemptive.md) and tend to make the code less maintainable.
+O uso de variáveis interprocessadas não é recomendado, uma vez que não estão disponíveis a partir de processos preventivos e tendem a tornar o código mais difícil para manutenção.
 
 :::
 
