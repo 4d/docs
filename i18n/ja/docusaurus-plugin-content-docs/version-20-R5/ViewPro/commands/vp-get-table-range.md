@@ -17,12 +17,12 @@ title: VP Get table range
 
 <!-- REF #_method_.VP Get table range.Params -->
 
-| 引数         | 型       |    | 説明                                                                         |                  |
-| ---------- | ------- | -- | -------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                                                    |                  |
-| tableName  | Text    | -> | Table name                                                                 |                  |
-| onlyData   | Integer | -> | `vk table full range` (デフォルト) または `vk table data range` |                  |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)                             |                  |
+| 引数         | 型       |                             | 説明                                                                         |                  |
+| ---------- | ------- | --------------------------- | -------------------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | 4D View Pro フォームオブジェクト名                                                    |                  |
+| tableName  | Text    | ->                          | Table name                                                                 |                  |
+| onlyData   | Integer | ->                          | `vk table full range` (デフォルト) または `vk table data range` |                  |
+| sheet      | Integer | ->                          | シートのインデックス (省略した場合はカレントシート)                             |                  |
 | 戻り値        | Object  | <- | 表組みが含まれるレンジ                                                                | <!-- END REF --> |
 
 #### 説明
