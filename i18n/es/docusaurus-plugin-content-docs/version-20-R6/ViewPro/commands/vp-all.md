@@ -9,10 +9,10 @@ title: VP All
 
 <!-- REF #_method_.VP All.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                    |                  |
-| ---------- | ------- | -- | -------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                   |                  |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |                  |
+| Parámetros | Tipo    |                             | Descripción                                                    |                  |
+| ---------- | ------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                   |                  |
+| sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
 | Result     | Object  | <- | Objeto rango de todas las celdas                               | <!-- END REF --> |
 
 #### Descripción
