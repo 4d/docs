@@ -78,7 +78,7 @@ A tabela seguinte enumera todos os valores `varType` suportados:
 | `Real`                 | Valor real                              |
 | `Ponteiro`             | Valor ponteiro                          |
 | `Imagem`               | Valor imagem                            |
-| `Blob`                 | BLOB value                              |
+| `Blob`                 | Valor BLOB                              |
 | `Collection`           | Valor colecção                          |
 | `Diferente de`         | Valor variant                           |
 | `Object`               | Object with default class (`4D.Object`) |
