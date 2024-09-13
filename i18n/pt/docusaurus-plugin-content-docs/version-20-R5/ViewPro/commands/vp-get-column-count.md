@@ -9,10 +9,10 @@ title: VP Get column count
 
 <!-- REF #_method_.VP Get column count.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                   |                  |
-| ---------- | ------- | -- | ----------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nome da área 4D View Pro no formulário                      |                  |
-| sheet      | Integer | -> | Índice da folha (folha atual se omitida) |                  |
+| Parâmetro  | Tipo    |                             | Descrição                                                   |                  |
+| ---------- | ------- | --------------------------- | ----------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nome da área 4D View Pro no formulário                      |                  |
+| sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
 | Resultados | Integer | <- | Número total de colunas                                     | <!-- END REF --> |
 
 #### Descrição
