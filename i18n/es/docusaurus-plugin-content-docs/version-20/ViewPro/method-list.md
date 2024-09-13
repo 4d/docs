@@ -3063,7 +3063,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 ```
 
 ```4d
-    //myImport callback method
+    //método de retrollamada myImport
 #DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object)
 
 If ($status.success)
