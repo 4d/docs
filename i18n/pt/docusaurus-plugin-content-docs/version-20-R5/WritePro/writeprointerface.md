@@ -70,7 +70,7 @@ O ficheiro modelo permite-lhe definir o seguinte:
 - os atributos dataclass que podem ser usados como colunas da tabela,
 - the formulas available as contextual menus inside break rows, carry-over row or extra rows.
 
-:::info Limitation
+:::info Limitação
 
 In the current implementation (4D v20 R2), formulas in breaks, data sources and contextual menus do not support calls to the host database methods. Esta limitação será eliminada na próxima versão.
 
