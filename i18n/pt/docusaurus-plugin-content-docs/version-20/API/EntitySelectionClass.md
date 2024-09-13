@@ -1141,7 +1141,7 @@ O seguinte código genérico duplica todas as entidades da entity selection:
 <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
 | Parâmetro | Tipo |    | Descrição                                                                                                   |
 | --------- | ---- | -- | ----------------------------------------------------------------------------------------------------------- |
-| result    | Text | <- | Atributos de contexto conectados à seleção de entidade, separados por uma vírgula<!-- END REF -->
+| resultado | Text | <- | Atributos de contexto conectados à seleção de entidade, separados por uma vírgula<!-- END REF -->
 
 |
 
