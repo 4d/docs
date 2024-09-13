@@ -15,7 +15,7 @@ Para consultar los datos directamente, puede hacerlo mediante la función [`$fil
 
 Con la API REST, puede realizar todas las manipulaciones a los datos como puede hacerlo en 4D.
 
-Para añadir y modificar entidades, puede llamar a [`$method=update`]($method.md#methodupdate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
+Para añadir y modificar entidades, puede llamar a [`$method=update`]($method.md#methodupdate). Si desea eliminar una o más entidades, puede utilizar [`$method=delete`]($method.md#methoddelete).
 
 Además la recuperación de una sola entidad en una clase de datos utilizando [\{dataClass\}({key})](dataClass.md#dataclasskey), también puede escribir una [función de clase](ClassFunctions.md#function-calls) que devuelva una entity selection (o una colección).
 
