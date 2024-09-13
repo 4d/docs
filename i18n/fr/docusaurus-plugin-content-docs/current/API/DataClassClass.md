@@ -137,10 +137,10 @@ Considérant les propriétés de table suivantes :
 
 <!-- REF #DataClassClass.all().Params -->
 
-| Paramètres | Type                               |     | Description                                        |
-| ---------- | ---------------------------------- | :-: | -------------------------------------------------- |
-| settings   | Object                             |  -> | Option de création : contexte      |
-| Résultat   | 4D.EntitySelection |  <- | Références vers toutes les entités de la dataclass |
+| Paramètres | Type                               |                             | Description                                        |
+| ---------- | ---------------------------------- | :-------------------------: | -------------------------------------------------- |
+| settings   | Object                             |              ->             | Option de création : contexte      |
+| Résultat   | 4D.EntitySelection | <- | Références vers toutes les entités de la dataclass |
 
 <!-- END REF -->
 
@@ -246,11 +246,11 @@ $ds.Persons.clearRemoteCache()
 
 <!-- REF #DataClassClass.fromCollection().Params -->
 
-| Paramètres | Type                               |     | Description                                            |
-| ---------- | ---------------------------------- | :-: | ------------------------------------------------------ |
-| objectCol  | Collection                         |  -> | Collection d'objets à faire correspondre à des entités |
-| settings   | Object                             |  -> | Option de création : contexte          |
-| Résultat   | 4D.EntitySelection |  <- | Entity selection issue de la collection                |
+| Paramètres | Type                               |                             | Description                                            |
+| ---------- | ---------------------------------- | :-------------------------: | ------------------------------------------------------ |
+| objectCol  | Collection                         |              ->             | Collection d'objets à faire correspondre à des entités |
+| settings   | Object                             |              ->             | Option de création : contexte          |
+| Résultat   | 4D.EntitySelection | <- | Entity selection issue de la collection                |
 
 <!-- END REF -->
 
@@ -441,11 +441,11 @@ Dans cet exemple, la première entité sera bien créée mais la seconde créati
 
 <!-- REF #DataClassClass.get().Params -->
 
-| Paramètres | Type                      |     | Description                                       |
-| ---------- | ------------------------- | :-: | ------------------------------------------------- |
-| primaryKey | Integer OR Text           |  -> | Valeur de la clé primaire de l'entité à récupérer |
-| settings   | Object                    |  -> | Option de création : contexte     |
-| Résultat   | 4D.Entity |  <- | Entité correspondant à la clé primaire indiquée   |
+| Paramètres | Type                      |                             | Description                                       |
+| ---------- | ------------------------- | :-------------------------: | ------------------------------------------------- |
+| primaryKey | Integer OR Text           |              ->             | Valeur de la clé primaire de l'entité à récupérer |
+| settings   | Object                    |              ->             | Option de création : contexte     |
+| Résultat   | 4D.Entity | <- | Entité correspondant à la clé primaire indiquée   |
 
 <!-- END REF -->
 
@@ -524,8 +524,8 @@ Cet exemple illustre l'utilisation de la propriété *context* :
 
 <!-- REF #DataClassClass.getCount().Params -->
 
-| Paramètres | Type    |    | Description                        |
-| ---------- | ------- | -- | ---------------------------------- |
+| Paramètres | Type    |                             | Description                        |
+| ---------- | ------- | --------------------------- | ---------------------------------- |
 | result     | Integer | <- | Nombre d'entités dans la dataclass |
 
 <!-- END REF -->
@@ -565,9 +565,9 @@ $number:=$ds.Persons.getCount()
 
 <!-- REF #DataClassClass.getDataStore().Params -->
 
-| Paramètres | Type                         |     | Description               |
-| ---------- | ---------------------------- | :-: | ------------------------- |
-| Résultat   | cs.DataStore |  <- | Datastore de la dataclass |
+| Paramètres | Type                         |                             | Description               |
+| ---------- | ---------------------------- | :-------------------------: | ------------------------- |
+| Résultat   | cs.DataStore | <- | Datastore de la dataclass |
 
 <!-- END REF -->
 
@@ -621,8 +621,8 @@ La méthode projet ***SearchDuplicate*** recherche des valeurs dupliquées dans 
 
 <!-- REF #DataClassClass.getInfo().Params -->
 
-| Paramètres | Type   |    | Description                   |
-| ---------- | ------ | -- | ----------------------------- |
+| Paramètres | Type   |                             | Description                   |
+| ---------- | ------ | --------------------------- | ----------------------------- |
 | Résultat   | Object | <- | Informations sur la dataclass |
 
 <!-- END REF -->
@@ -694,8 +694,8 @@ La fonction `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->renvoie u
 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
 
-| Paramètres | Type   |    | Description                                                                 |
-| ---------- | ------ | -- | --------------------------------------------------------------------------- |
+| Paramètres | Type   |                             | Description                                                                 |
+| ---------- | ------ | --------------------------- | --------------------------------------------------------------------------- |
 | result     | Object | <- | Objet décrivant le contenu du cache ORDA pour la dataclass. |
 
 <!-- END REF -->
@@ -784,8 +784,8 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 <!-- REF #DataClassClass.new().Params -->
 
-| Paramètres | Type                      |    | Description                                  |
-| ---------- | ------------------------- | -- | -------------------------------------------- |
+| Paramètres | Type                      |                             | Description                                  |
+| ---------- | ------------------------- | --------------------------- | -------------------------------------------- |
 | Résultat   | 4D.Entity | <- | Nouvelle entité correspondant à la dataclass |
 
 <!-- END REF -->
@@ -831,9 +831,9 @@ Cet exemple crée une nouvelle entité dans la dataclass "Log" et enregistre les
 
 <!-- REF #DataClassClass.newSelection().Params -->
 
-| Paramètres | Type                               |    | Description                                                                                                                                                                         |
-| ---------- | ---------------------------------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| keepOrder  | Integer                            | -> | `dk keep ordered` : crée une entity selection triée,<br/>`dk non ordered` : crée une entity selection non triée (défaut si omis) |
+| Paramètres | Type                               |                             | Description                                                                                                                                                                         |
+| ---------- | ---------------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| keepOrder  | Integer                            | ->                          | `dk keep ordered` : crée une entity selection triée,<br/>`dk non ordered` : crée une entity selection non triée (défaut si omis) |
 | Résultat   | 4D.EntitySelection | <- | Nouvelle entity selection vide liée à la dataclass                                                                                                                                  |
 
 <!-- END REF -->
@@ -876,12 +876,12 @@ Une fois créée, l'entity selection ne contient aucune entité (`mySelection.le
 
 <!-- REF #DataClassClass.query().Params -->
 
-| Paramètres    | Type                               |    | Description                                                                                                                                                                                |
-| ------------- | ---------------------------------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| queryString   | Text                               | -> | Critères de recherche en texte                                                                                                                                                             |
-| formula       | Object                             | -> | Critères de recherche en objet formule                                                                                                                                                     |
-| value         | any                                | -> | Valeur(s) à utiliser comme placeholder(s)                                                                                                            |
-| querySettings | Object                             | -> | Options de recherche : parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                          |
+| Paramètres    | Type                               |                             | Description                                                                                                                                                                                |
+| ------------- | ---------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| queryString   | Text                               | ->                          | Critères de recherche en texte                                                                                                                                                             |
+| formula       | Object                             | ->                          | Critères de recherche en objet formule                                                                                                                                                     |
+| value         | any                                | ->                          | Valeur(s) à utiliser comme placeholder(s)                                                                                                            |
+| querySettings | Object                             | ->                          | Options de recherche : parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                          |
 | Résultat      | 4D.EntitySelection | <- | Nouvelle entity selection constituée des entités de la dataclass correspondant au(x) critère(s) de recherche fournis dans *queryString* ou *formula* |
 
 <!-- END REF -->
@@ -930,9 +930,9 @@ Les formules contenues dans les requêtes peuvent recevoir des paramètres via $
 | Différent de                            | #, !=                         | Prend en charge le joker de recherche (@). Équivalent à "Condition Not appliquée à une assertion" ([voir ci-dessous](#not-equal-to-in-collections)).           |
 |                                         | !==, IS NOT                   | Considère le @ comme un caractère standard                                                                                                                                                                                           |
 | Condition Not appliquée à une assertion | NOT                           | Les parenthèses sont obligatoires lorsque NOT est utilisé avant une déclaration contenant plusieurs opérateurs. Équivalent à "Not equal to" ([voir ci-dessous](#not-equal-to-in-collections)). |
-| Inférieur à                             | <                             |                                                                                                                                                                                                                                                   |
+| Inférieur à                             | <    |                                                                                                                                                                                                                                                   |
 | Supérieur à                             | >                             |                                                                                                                                                                                                                                                   |
-| Inférieur ou égal à                     | <=                            |                                                                                                                                                                                                                                                   |
+| Inférieur ou égal à                     | <=   |                                                                                                                                                                                                                                                   |
 | Supérieur ou égal à                     | > =                           |                                                                                                                                                                                                                                                   |
 | Inclus parmi                            | IN                            | Retourne les données égales à au moins une des valeurs d'une collection ou d'un ensemble de valeurs, prend en charge le joker de recherche (@)                                                                    |
 | Contient mot-clé                        | %                             | Les mots-clés peuvent être utilisés avec les attributs de type texte ou image                                                                                                                                                                     |
