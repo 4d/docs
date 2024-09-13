@@ -9,9 +9,9 @@ title: VP Get values
 
 <!-- REF #_method_.VP Get values.Params -->
 
-| Paramètres | Type       |    | Description           |                  |
-| ---------- | ---------- | -- | --------------------- | ---------------- |
-| rangeObj   | Object     | -> | Objet plage           |                  |
+| Paramètres | Type       |                             | Description           |                  |
+| ---------- | ---------- | --------------------------- | --------------------- | ---------------- |
+| rangeObj   | Object     | ->                          | Objet plage           |                  |
 | Résultat   | Collection | <- | Collection de valeurs | <!-- END REF --> |
 
 #### Description
