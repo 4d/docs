@@ -43,10 +43,10 @@ Since HTTPAgent is a shareable object, you can add one to a singleton class so y
 
 <!-- REF #4D.HTTPAgent.new().Params -->
 
-| Paramètres | Type                                              |     | Description                       |
-| ---------- | ------------------------------------------------- | :-: | --------------------------------- |
-| options    | Object                                            |  -> | default options for the HTTPAgent |
-| Résultat   | [4D.HTTPAgent](#httpagent-object) |  <- | New HTTPAgent object              |
+| Paramètres | Type                                              |                             | Description                       |
+| ---------- | ------------------------------------------------- | :-------------------------: | --------------------------------- |
+| options    | Object                                            |              ->             | default options for the HTTPAgent |
+| Résultat   | [4D.HTTPAgent](#httpagent-object) | <- | New HTTPAgent object              |
 
 <!-- END REF -->
 
