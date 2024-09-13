@@ -11,6 +11,7 @@ Leia [**O que há de novo no 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-
 
 - List box columns and headers of type time now support the ["blankIfNull" option](../FormObjects/properties_Display.md#time-format).
 - New properties in [.getBoxInfo()](../API/IMAPTransporterClass.md#getboxinfo) and [.getBoxList()](../API/IMAPTransporterClass.md#getboxlist).
+- You can now [add and remove components using the Component manager interface](../Project/components.md#adding-and-removing-dependencies).
 
 ## 4D 20 R6
 
