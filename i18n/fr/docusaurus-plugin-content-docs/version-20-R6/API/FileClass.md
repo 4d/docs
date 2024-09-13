@@ -70,13 +70,13 @@ Les objets de type `File` prennent en charge plusieurs noms de chemin, y compris
 
 <!-- REF #_command_.File.Params -->
 
-| Paramètres   | Type                    |     | Description                                                           |
-| ------------ | ----------------------- | :-: | --------------------------------------------------------------------- |
-| path         | Text                    |  -> | Chemin de fichier                                                     |
-| fileConstant | Integer                 |  -> | Constante de fichier 4D                                               |
-| pathType     | Integer                 |  -> | `fk posix path` (par défaut) ou `fk platform path` |
-| -            |                         |  -> | * pour retourner le fichier de la base hôte                           |
-| Résultat     | 4D.File |  <- | Nouvel objet fichier                                                  |
+| Paramètres   | Type                    |                             | Description                                                           |
+| ------------ | ----------------------- | :-------------------------: | --------------------------------------------------------------------- |
+| path         | Text                    |              ->             | Chemin de fichier                                                     |
+| fileConstant | Integer                 |              ->             | Constante de fichier 4D                                               |
+| pathType     | Integer                 |              ->             | `fk posix path` (par défaut) ou `fk platform path` |
+| -            |                         |              ->             | * pour retourner le fichier de la base hôte                           |
+| Résultat     | 4D.File | <- | Nouvel objet fichier                                                  |
 
 <!-- END REF -->
 
@@ -173,8 +173,8 @@ La fonction `4D.File.new()` <!-- REF #4D.File.new().Summary -->crée et retourne
 
 <!--REF #FileClass.create().Params -->
 
-| Paramètres | Type    |    | Description                                           |
-| ---------- | ------- | -- | ----------------------------------------------------- |
+| Paramètres | Type    |                             | Description                                           |
+| ---------- | ------- | --------------------------- | ----------------------------------------------------- |
 | Résultat   | Boolean | <- | Vrai si le fichier a été créé avec succès, sinon Faux |
 
 <!-- END REF -->
@@ -217,11 +217,11 @@ Création d'un fichier de préférences dans le dossier principal :
 
 <!--REF #FileClass.createAlias().Params -->
 
-| Paramètres         | Type                      |    | Description                                         |
-| ------------------ | ------------------------- | -- | --------------------------------------------------- |
-| dossierDestination | 4D.Folder | -> | Dossier de destination pour l'alias ou le raccourci |
-| aliasName          | Text                      | -> | Nom de l'alias ou du raccourci                      |
-| aliasType          | Integer                   | -> | Type de lien de l'alias                             |
+| Paramètres         | Type                      |                             | Description                                         |
+| ------------------ | ------------------------- | --------------------------- | --------------------------------------------------- |
+| dossierDestination | 4D.Folder | ->                          | Dossier de destination pour l'alias ou le raccourci |
+| aliasName          | Text                      | ->                          | Nom de l'alias ou du raccourci                      |
+| aliasType          | Integer                   | ->                          | Type de lien de l'alias                             |
 | Résultat           | 4D.File   | <- | Référence du fichier de l'alias ou du raccourci     |
 
 <!-- END REF -->
@@ -335,8 +335,8 @@ Vous souhaitez supprimer un fichier spécifique dans le dossier de la base de do
 
 <!--REF #FileClass.getAppInfo().Params -->
 
-| Paramètres | Type   |    | Description                                                                                                 |
-| ---------- | ------ | -- | ----------------------------------------------------------------------------------------------------------- |
+| Paramètres | Type   |                             | Description                                                                                                 |
+| ---------- | ------ | --------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | Résultat   | Object | <- | Contenu du fichier de ressource version .exe/.dll ou .plist |
 
 <!-- END REF -->
@@ -430,10 +430,10 @@ ALERT($info.Copyright)
 
 <!--REF #FileClass.moveTo().Params -->
 
-| Paramètres         | Type                      |    | Description                    |
-| ------------------ | ------------------------- | -- | ------------------------------ |
-| dossierDestination | 4D.Folder | -> | Dossier de destination         |
-| nouveauNom         | Text                      | -> | Nom complet du fichier déplacé |
+| Paramètres         | Type                      |                             | Description                    |
+| ------------------ | ------------------------- | --------------------------- | ------------------------------ |
+| dossierDestination | 4D.Folder | ->                          | Dossier de destination         |
+| nouveauNom         | Text                      | ->                          | Nom complet du fichier déplacé |
 | Résultat           | 4D.File   | <- | Fichier déplacé                |
 
 <!-- END REF -->
@@ -478,10 +478,10 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <!--REF #FileClass.open().Params -->
 
-| Paramètres | Type                                             |    | Description                                                  |
-| ---------- | ------------------------------------------------ | -- | ------------------------------------------------------------ |
-| mode       | Text                                             | -> | Mode d'ouverture : "read", "write", "append" |
-| options    | Object                                           | -> | Options d'ouverture                                          |
+| Paramètres | Type                                             |                             | Description                                                  |
+| ---------- | ------------------------------------------------ | --------------------------- | ------------------------------------------------------------ |
+| mode       | Text                                             | ->                          | Mode d'ouverture : "read", "write", "append" |
+| options    | Object                                           | ->                          | Options d'ouverture                                          |
 | Résultat   | [4D.FileHandle](FileHandleClass) | <- | Nouvel objet File handle                                     |
 
 <!-- END REF -->
@@ -559,9 +559,9 @@ $fhandle:=$f.open("read")
 
 <!--REF #FileClass.rename().Params -->
 
-| Paramètres | Type                    |    | Description                    |
-| ---------- | ----------------------- | -- | ------------------------------ |
-| nouveauNom | Text                    | -> | Nouveau nom complet du fichier |
+| Paramètres | Type                    |                             | Description                    |
+| ---------- | ----------------------- | --------------------------- | ------------------------------ |
+| nouveauNom | Text                    | ->                          | Nouveau nom complet du fichier |
 | Résultat   | 4D.File | <- | Fichier renommé                |
 
 <!-- END REF -->
