@@ -171,7 +171,7 @@ You can develop with Qodly Studio while your computer is not connected to the in
 - [Templates](https://developer.qodly.com/docs/studio/design-webforms/templates): the Template library is empty
 - UI tips: they are not displayed when you click on ![alt-text](../assets/en/WebServer/tips.png) icons.
 
-## Deployment
+## Implantação
 
 ### Ativação da renderização
 
