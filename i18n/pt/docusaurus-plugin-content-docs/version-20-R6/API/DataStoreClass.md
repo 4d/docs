@@ -49,9 +49,9 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 
 <!-- REF #_command_.ds.Params -->
 
-| Parâmetro  | Tipo                          |    | Descrição                                       |
-| ---------- | ----------------------------- | -- | ----------------------------------------------- |
-| localID    | Text                          | -> | ID local del armazém de dados remoto a devolver |
+| Parâmetro  | Tipo                          |                             | Descrição                                       |
+| ---------- | ----------------------------- | --------------------------- | ----------------------------------------------- |
+| localID    | Text                          | ->                          | ID local del armazém de dados remoto a devolver |
 | Resultados | cs. DataStore | <- | Referencia ao armazém de dados                  |
 
 <!-- END REF -->
@@ -120,10 +120,10 @@ Usar a datastore principal do banco de dados 4D:
 
 <!-- REF #_command_.Open datastore.Params -->
 
-| Parâmetro      | Tipo                          |    | Descrição                                                                                       |
-| -------------- | ----------------------------- | -- | ----------------------------------------------------------------------------------------------- |
-| connectionInfo | Object                        | -> | Propriedades de conexão utilizadas para alcançar o armazém de datos remoto                      |
-| localID        | Text                          | -> | Id para assignar ao armazém de dados aberto na aplicação local (obrigatorio) |
+| Parâmetro      | Tipo                          |                             | Descrição                                                                                       |
+| -------------- | ----------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------- |
+| connectionInfo | Object                        | ->                          | Propriedades de conexão utilizadas para alcançar o armazém de datos remoto                      |
+| localID        | Text                          | ->                          | Id para assignar ao armazém de dados aberto na aplicação local (obrigatorio) |
 | Resultados     | cs. DataStore | <- | Objeto do armazém de dados                                                                      |
 
 <!-- END REF -->
@@ -147,15 +147,15 @@ The following remote datastores are supported by the command:
 
 Pass in *connectionInfo* an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except *hostname*):
 
-| Propriedade | Tipo       | Aplicação 4D remoto                                                                                                                                                                                                                                                                                                                                                                                                                  | Aplicação Qodly                                                              |
-| ----------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
-| hostname    | Text       | Nome ou endereço IP da database remota + ":" + número de porta (o numero de porta é obrigatório)                                                                                                                                                                                                                                                                                                  | API Endpoint de instância Qodly cloud                                        |
-| user        | Text       | Nome de usuario                                                                                                                                                                                                                                                                                                                                                                                                                      | - (ignorado)                                              |
-| senha       | Text       | senha de usuario                                                                                                                                                                                                                                                                                                                                                                                                                     | * (ignorado)                                              |
+| Propriedade | Tipo       | Aplicação 4D remoto                                                                                                                                                                                                                                                                                                                                                                                                                                           | Aplicação Qodly                                                              |
+| ----------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| hostname    | Text       | Nome ou endereço IP da database remota + ":" + número de porta (o numero de porta é obrigatório)                                                                                                                                                                                                                                                                                                                           | API Endpoint de instância Qodly cloud                                        |
+| user        | Text       | Nome de usuario                                                                                                                                                                                                                                                                                                                                                                                                                                               | - (ignorado)                                              |
+| senha       | Text       | senha de usuario                                                                                                                                                                                                                                                                                                                                                                                                                                              | * (ignorado)                                              |
 | idleTimeout | Longint    | Tempo de espera da sessão de inatividade (em minutos) depois do qual a sessão é fechada automaticamente por 4D. Se omitido, o valor por defeito é 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). Para saber mais informação, consulte **Fechamento de sessões**. | - (ignorado)                                              |
-| tls         | Parâmetros | True para usar conexão segura(1). Se omitido, false por defeito. Se for omitido, o normal é falso Usar uma conexão segura é recomendado sempre que possível.                                                                                                                                                                                                      | True para usar conexão segura. Se omitido, false por defeito |
-| type        | Text       | deve ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                                 | * (ignorado)                                              |
-| api-key     | Text       | - (ignorado)                                                                                                                                                                                                                                                                                                                                                                                                      | API key da instância Qodly cloud                                             |
+| tls         | Parâmetros | True para usar conexão segura(1). Se omitido, false por defeito. Se for omitido, o normal é falso Usar uma conexão segura é recomendado sempre que possível.                                                                                                                                                                                                                               | True para usar conexão segura. Se omitido, false por defeito |
+| type        | Text       | deve ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                                                          | * (ignorado)                                              |
+| api-key     | Text       | - (ignorado)                                                                                                                                                                                                                                                                                                                                                                                                                               | API key da instância Qodly cloud                                             |
 
 (1) Se `tls` for true, o protocolo HTTPS é utilizado se:
 
@@ -360,9 +360,9 @@ Nesses casos, você pode usar `.clearAllRemoteContexts()` para limpar seus conte
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 
-| Parâmetro  | Tipo   |     | Descrição                                                             |
-| ---------- | ------ | :-: | --------------------------------------------------------------------- |
-| Resultados | Object |  <- | Informação sobre o cifrado do armazém de dados atual e de cada tabela |
+| Parâmetro  | Tipo   |                             | Descrição                                                             |
+| ---------- | ------ | :-------------------------: | --------------------------------------------------------------------- |
+| Resultados | Object | <- | Informação sobre o cifrado do armazém de dados atual e de cada tabela |
 
 <!-- END REF -->
 
@@ -424,7 +424,7 @@ C_LONGINT($vcount)
 
 <details><summary>História</summary>
 
-|Release|Changes|
+|Lançamento|Mudanças|
 
 \|---|---|
 |20|Adicionado|
@@ -513,8 +513,8 @@ ds.unlock() //Nossa cópia terminou, podemos desbloquear a datastore
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                                       |
-| ---------- | ---------- | -- | ----------------------------------------------- |
+| Parâmetro  | Tipo       |                             | Descrição                                       |
+| ---------- | ---------- | --------------------------- | ----------------------------------------------- |
 | Resultados | Collection | <- | Colecção de objectos de contexto de optimização |
 
 <!-- END REF -->
@@ -586,8 +586,8 @@ $info:=$ds.getAllRemoteContexts()
 
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
 
-| Parâmetro  | Tipo |    | Descrição                                     |
-| ---------- | ---- | -- | --------------------------------------------- |
+| Parâmetro  | Tipo |                             | Descrição                                     |
+| ---------- | ---- | --------------------------- | --------------------------------------------- |
 | Resultados | Real | <- | Valor atual do marcador de modificação global |
 
 <!-- END REF -->
@@ -638,9 +638,9 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 <!-- REF #DataStoreClass.getInfo().Params -->
 
-| Parâmetro  | Tipo   |     | Descrição                |
-| ---------- | ------ | :-: | ------------------------ |
-| Resultados | Object |  <- | Propiedades de datastore |
+| Parâmetro  | Tipo   |                             | Descrição                |
+| ---------- | ------ | :-------------------------: | ------------------------ |
+| Resultados | Object | <- | Propiedades de datastore |
 
 <!-- END REF -->
 
@@ -708,9 +708,9 @@ Em um armazém de dados remoto:
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
 
-| Parâmetro   | Tipo   |    | Descrição                            |
-| ----------- | ------ | -- | ------------------------------------ |
-| contextName | Text   | -> | Nome do contexto                     |
+| Parâmetro   | Tipo   |                             | Descrição                            |
+| ----------- | ------ | --------------------------- | ------------------------------------ |
+| contextName | Text   | ->                          | Nome do contexto                     |
 | Resultados  | Object | <- | Descrição do contexto de optimização |
 
 <!-- END REF -->
@@ -760,9 +760,9 @@ Consulte o exemplo da seção [.setRemoteContextInfo()](#example-1-3).
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                                |
-| ---------- | ---------- | :-: | -------------------------------------------------------- |
-| Resultados | Collection |  <- | Coleção de objetos onde cada objeto descreve uma petição |
+| Parâmetro  | Tipo       |                             | Descrição                                                |
+| ---------- | ---------- | :-------------------------: | -------------------------------------------------------- |
+| Resultados | Collection | <- | Coleção de objetos onde cada objeto descreve uma petição |
 
 <!-- END REF -->
 
@@ -800,9 +800,9 @@ Consulte o exemplo 2 de [`.startRequestLog()`](#startrequestlog).
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                                                                                            |
-| ---------- | ---------- | :-: | -------------------------------------------------------------------------------------------------------------------- |
-| Resultados | Parâmetros |  <- | True se o acesso ao Explorador de Dados estiver desativado, False se estiver ativado (por padrão) |
+| Parâmetro  | Tipo       |                             | Descrição                                                                                                            |
+| ---------- | ---------- | :-------------------------: | -------------------------------------------------------------------------------------------------------------------- |
+| Resultados | Parâmetros | <- | True se o acesso ao Explorador de Dados estiver desativado, False se estiver ativado (por padrão) |
 
 <!-- END REF -->
 
@@ -834,8 +834,8 @@ Por padrão, o acesso ao Data Explorer é concedido para sessões `webAdmin`, ma
 
 <!-- REF #DataStoreClass.locked().Params -->
 
-| Parâmetro  | Tipo       |    | Descrição              |
-| ---------- | ---------- | -- | ---------------------- |
+| Parâmetro  | Tipo       |                             | Descrição              |
+| ---------- | ---------- | --------------------------- | ---------------------- |
 | Resultados | Parâmetros | <- | Verdadeiro se trancado |
 
 <!-- END REF -->
@@ -907,10 +907,10 @@ Quando essa função não é chamada, as novas seleções de entidades podem ser
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
 
-| Parâmetro     | Tipo   |    | Descrição                                          |
-| ------------- | ------ | -- | -------------------------------------------------- |
-| curPassPhrase | Text   | -> | Frase de cifrado atual                             |
-| curDataKey    | Object | -> | Chave de criptografia de dados atual               |
+| Parâmetro     | Tipo   |                             | Descrição                                          |
+| ------------- | ------ | --------------------------- | -------------------------------------------------- |
+| curPassPhrase | Text   | ->                          | Frase de cifrado atual                             |
+| curDataKey    | Object | ->                          | Chave de criptografia de dados atual               |
 | Resultados    | Object | <- | Resultado da coincidência da chave de criptografia |
 
 <!-- END REF -->
