@@ -1933,7 +1933,7 @@ $panesObj:=VP Get frozen panes("ViewProArea")
 | プロパティ               | 型    | 説明             |
 | ------------------- | ---- | -------------- |
 | result\[ ].name    | Text | セルまたはレンジ名      |
-| result\[ ].formula | Text | formula        |
+| result\[ ].formula | Text | フォーミュラ         |
 | result\[ ].comment | Text | 名前に割り当てられたコメント |
 
 返されるプロパティは、命名された要素のタイプ (命名セル、命名レンジ、または命名フォーミュラ) に応じて異なります。
