@@ -137,10 +137,10 @@ Considerando as propriedades de tabela abaixo:
 
 <!-- REF #DataClassClass.all().Params -->
 
-| Parâmetro  | Tipo                                |     | Descrição                                                               |
-| ---------- | ----------------------------------- | :-: | ----------------------------------------------------------------------- |
-| settings   | Object                              |  -> | Opção de construção: context                            |
-| Resultados | 4D. EntitySelection |  <- | Referencias sobre todas as entidades relacionadas com a classe de dados |
+| Parâmetro  | Tipo                                |                             | Descrição                                                               |
+| ---------- | ----------------------------------- | :-------------------------: | ----------------------------------------------------------------------- |
+| settings   | Object                              |              ->             | Opção de construção: context                            |
+| Resultados | 4D. EntitySelection | <- | Referencias sobre todas as entidades relacionadas com a classe de dados |
 
 <!-- END REF -->
 
@@ -244,11 +244,11 @@ $ds. Persons.clearRemoteCache()
 
 <!-- REF #DataClassClass.fromCollection().Params -->
 
-| Parâmetro  | Tipo                                |     | Descrição                                    |
-| ---------- | ----------------------------------- | :-: | -------------------------------------------- |
-| objectCol  | Collection                          |  -> | Coleção de objetos a mapear com entidades    |
-| settings   | Object                              |  -> | Opção de construção: context |
-| Resultados | 4D. EntitySelection |  <- | Seleção de entidades preenchidas da coleção  |
+| Parâmetro  | Tipo                                |                             | Descrição                                    |
+| ---------- | ----------------------------------- | :-------------------------: | -------------------------------------------- |
+| objectCol  | Collection                          |              ->             | Coleção de objetos a mapear com entidades    |
+| settings   | Object                              |              ->             | Opção de construção: context |
+| Resultados | 4D. EntitySelection | <- | Seleção de entidades preenchidas da coleção  |
 
 <!-- END REF -->
 
@@ -440,11 +440,11 @@ var $empsCollection : Collection
 
 <!-- REF #DataClassClass.get().Params -->
 
-| Parâmetro  | Tipo                       |     | Descrição                                            |
-| ---------- | -------------------------- | :-: | ---------------------------------------------------- |
-| primaryKey | Integer OR Text            |  -> | Valor da chave primária da entidade a recuperar      |
-| settings   | Object                     |  -> | Opção de construção: context         |
-| Resultados | 4D. Entity |  <- | Entidade que coincide com a chave primária designada |
+| Parâmetro  | Tipo                       |                             | Descrição                                            |
+| ---------- | -------------------------- | :-------------------------: | ---------------------------------------------------- |
+| primaryKey | Integer OR Text            |              ->             | Valor da chave primária da entidade a recuperar      |
+| settings   | Object                     |              ->             | Opção de construção: context         |
+| Resultados | 4D. Entity | <- | Entidade que coincide com a chave primária designada |
 
 <!-- END REF -->
 
@@ -523,9 +523,9 @@ Este exemplo ilustra o uso da propriedade *context*:
 
 <!-- REF #DataClassClass.getCount().Params -->
 
-| Parâmetro | Tipo    |    | Descrição                              |
-| --------- | ------- | -- | -------------------------------------- |
-| result    | Integer | <- | Número de entidades na classe de dados |
+| Parâmetro | Tipo    |                             | Descrição                              |
+| --------- | ------- | --------------------------- | -------------------------------------- |
+| resultado | Integer | <- | Número de entidades na classe de dados |
 
 <!-- END REF -->
 
@@ -564,9 +564,9 @@ $number:=$ds. Persons.getCount()
 
 <!-- REF #DataClassClass.getDataStore().Params -->
 
-| Parâmetro  | Tipo                          |     | Descrição               |
-| ---------- | ----------------------------- | :-: | ----------------------- |
-| Resultados | cs. DataStore |  <- | Informação da dataclass |
+| Parâmetro  | Tipo                          |                             | Descrição               |
+| ---------- | ----------------------------- | :-------------------------: | ----------------------- |
+| Resultados | cs. DataStore | <- | Informação da dataclass |
 
 <!-- END REF -->
 
@@ -620,8 +620,8 @@ O método de projeto ***SearchDuplicate*** procura por valores duplicados em qua
 
 <!-- REF #DataClassClass.getInfo().Params -->
 
-| Parâmetro  | Tipo   |    | Descrição              |
-| ---------- | ------ | -- | ---------------------- |
+| Parâmetro  | Tipo   |                             | Descrição              |
+| ---------- | ------ | --------------------------- | ---------------------- |
 | Resultados | Object | <- | Datastore da dataclass |
 
 <!-- END REF -->
@@ -693,9 +693,9 @@ A função `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->retorna um
 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
 
-| Parâmetro | Tipo   |    | Descrição                                                                       |
-| --------- | ------ | -- | ------------------------------------------------------------------------------- |
-| result    | Object | <- | Objecto que descreve o conteúdo da cache ORDA para o dataclass. |
+| Parâmetro | Tipo   |                             | Descrição                                                                       |
+| --------- | ------ | --------------------------- | ------------------------------------------------------------------------------- |
+| resultado | Object | <- | Objecto que descreve o conteúdo da cache ORDA para o dataclass. |
 
 <!-- END REF -->
 
@@ -781,8 +781,8 @@ $cacheAddress:=$ds. Adress.getRemoteCache()
 
 <!-- REF #DataClassClass.new().Params -->
 
-| Parâmetro  | Tipo                       |    | Descrição                                        |
-| ---------- | -------------------------- | -- | ------------------------------------------------ |
+| Parâmetro  | Tipo                       |                             | Descrição                                        |
+| ---------- | -------------------------- | --------------------------- | ------------------------------------------------ |
 | Resultados | 4D. Entity | <- | Nova entidade que coincide com a classe de dados |
 
 <!-- END REF -->
@@ -828,9 +828,9 @@ Este exemplo cria uma nova entidade na classe de dados "Log" e registra a inform
 
 <!-- REF #DataClassClass.newSelection().Params -->
 
-| Parâmetro  | Tipo                                |    | Descrição                                                                                                                                                                                         |
-| ---------- | ----------------------------------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| keepOrder  | Integer                             | -> | `dk keep ordered`: cria uma seleção de entidades ordenada,<br/>`dk non ordered`: cria uma seleção de entidade não ordenada (padrão se omitido) |
+| Parâmetro  | Tipo                                |                             | Descrição                                                                                                                                                                                         |
+| ---------- | ----------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| keepOrder  | Integer                             | ->                          | `dk keep ordered`: cria uma seleção de entidades ordenada,<br/>`dk non ordered`: cria uma seleção de entidade não ordenada (padrão se omitido) |
 | Resultados | 4D. EntitySelection | <- | Nova seleção de entidades em branco relacionadas com a classe de dados                                                                                                                            |
 
 <!-- END REF -->
@@ -873,12 +873,12 @@ Quando criada, a seleção de entidades não contém nenhuma entidade (`mySelect
 
 <!-- REF #DataClassClass.query().Params -->
 
-| Parâmetro     | Tipo                                |    | Descrição                                                                                                                                            |
-| ------------- | ----------------------------------- | -- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Text                                | -> | Criterios de pesquisa como string                                                                                                                    |
-| formula       | Object                              | -> | Criterios de pesquisa como objeto fórmula                                                                                                            |
-| value         | any                                 | -> | Valores a usar para placeholders indexados                                                                                                           |
-| querySettings | Object                              | -> | Opções de pesquisa: parâmetros, atributos, args, allowFormulas, contexto, queryPath,queryPlan                                        |
+| Parâmetro     | Tipo                                |                             | Descrição                                                                                                                                            |
+| ------------- | ----------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| queryString   | Text                                | ->                          | Criterios de pesquisa como string                                                                                                                    |
+| formula       | Object                              | ->                          | Criterios de pesquisa como objeto fórmula                                                                                                            |
+| value         | any                                 | ->                          | Valores a usar para placeholders indexados                                                                                                           |
+| querySettings | Object                              | ->                          | Opções de pesquisa: parâmetros, atributos, args, allowFormulas, contexto, queryPath,queryPlan                                        |
 | Resultados    | 4D. EntitySelection | <- | Nova seleção de entidade composta por entidades da classe de dados que atendem aos critérios de pesquisa especificados em *queryString* ou *formula* |
 
 <!-- END REF -->
@@ -920,19 +920,19 @@ Fórmulas nas consultas podem receber parâmetros através de $1. Este ponto est
 
 - **comparator**: símbolo que compara *attributePath* e *value*. Os simbolos abaixo são compatíveis:
 
-| Comparação                               | Símbolos    | Comentário                                                                                                                                                                                                                        |
-| ---------------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Igual a                                  | =, ==       | Retorna os dados coincidentes, admite o coringa (@), não diferencia entre maiúsculas e minúsculas nem diacríticas.                                                                |
-|                                          | ===, IS     | Retorna os dados coincidentes, considera @ como caractere padrão, não diferencia entre maiúsculas e minúsculas nem diacríticas                                                                                       |
-| Diferente de                             | #, !=       | Suporta o coringa (@). Equivalente a "Not condition applied on a statement" ([veja abaixo](#not-equal-to-in-collections)).                     |
-|                                          | !==, IS NOT | Considera  @ como um caractere normal                                                                                                                                                                                |
-| Não se aplica à condição de uma sentença | NOT         | Parentesis são obrigatórios quando usar NOT antes de uma instrução que contenha vários operadores. Equivalente a "Not equal to" ([veja abaixo](#not-equal-to-in-collections)). |
-| Menor que                                | <           |                                                                                                                                                                                                                                   |
-| Maior que                                | >           |                                                                                                                                                                                                                                   |
-| Menor que ou igual a                     | <=          |                                                                                                                                                                                                                                   |
-| Maior ou igual a                         | > =         |                                                                                                                                                                                                                                   |
-| Incluído em                              | IN          | Retorna dados iguais a ao menos um dos valores de uma coleção ou de um conjunto de valores, admite o coringa (@)                                                                                  |
-| Contém palavra chave                     | %           | As palavras chaves podem ser usadas em atributos de string ou imagem                                                                                                                                                              |
+| Comparação                               | Símbolos                    | Comentário                                                                                                                                                                                                                        |
+| ---------------------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Igual a                                  | =, ==                       | Retorna os dados coincidentes, admite o coringa (@), não diferencia entre maiúsculas e minúsculas nem diacríticas.                                                                |
+|                                          | ===, IS                     | Retorna os dados coincidentes, considera @ como caractere padrão, não diferencia entre maiúsculas e minúsculas nem diacríticas                                                                                       |
+| Diferente de                             | #, !=                       | Suporta o coringa (@). Equivalente a "Not condition applied on a statement" ([veja abaixo](#not-equal-to-in-collections)).                     |
+|                                          | !==, IS NOT                 | Considera  @ como um caractere normal                                                                                                                                                                                |
+| Não se aplica à condição de uma sentença | NOT                         | Parentesis são obrigatórios quando usar NOT antes de uma instrução que contenha vários operadores. Equivalente a "Not equal to" ([veja abaixo](#not-equal-to-in-collections)). |
+| Menor que                                | <  |                                                                                                                                                                                                                                   |
+| Maior que                                | >                           |                                                                                                                                                                                                                                   |
+| Menor que ou igual a                     | <= |                                                                                                                                                                                                                                   |
+| Maior ou igual a                         | > =                         |                                                                                                                                                                                                                                   |
+| Incluído em                              | IN                          | Retorna dados iguais a ao menos um dos valores de uma coleção ou de um conjunto de valores, admite o coringa (@)                                                                                  |
+| Contém palavra chave                     | %                           | As palavras chaves podem ser usadas em atributos de string ou imagem                                                                                                                                                              |
 
 - **value**: o valor a comparar ao valor atual da propriedade de cada entidade na seleção de entidade. Pode ser um **marcador** (ver **Uso de marcadores** abaixo) ou qualquer expressão que coincida com a propriedade de tipo de dados.
   Ao usar um valor constante, as seguintes regras devem ser respeitadas:
