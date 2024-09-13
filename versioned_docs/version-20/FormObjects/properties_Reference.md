@@ -138,6 +138,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`popupPlacement`](properties_TextAndPicture.md#with-pop-up-menu) |Allows displaying a symbol that appears as a triangle in the button, which indicates that there is a pop-up menu attached. |"None", Linked", "Separated" |
 |[`printFrame`](properties_Print.md#print-frame)|Print mode for objects whose size can vary from one record to another depending on their contents |"fixed", "variable", (subform only) "fixedMultiple"|
 |[`progressSource`](properties_WebArea.md#progression)| A value between 0 and 100, representing the page load completion percentage in the Web area. Automatically updated by 4D, cannot be modified manually.|minimum: 0<a id="r"></a>|
+
 |**r**|||
 |[`radioGroup`](properties_Object.md#radio-group)|Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.|	Radio group name|
 |[`requiredList`](properties_RangeOfValues.md#required-list)|Allows setting a list where only certain values can be inserted. |A list of mandatory values.|

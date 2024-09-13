@@ -221,7 +221,7 @@ For more information, see the chapter **Processes** and the description of these
 
 :::warning Deprecated
 
-Use of interprocess variables is not recommended since they are not available from [preemptive processes](../Develop/preemptive.md) and tend to make the code less maintainable.  
+Use of interprocess variables is not recommended since they are not available from preemptive processes and tend to make the code less maintainable.  
 
 :::
 
