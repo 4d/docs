@@ -330,27 +330,27 @@ Para añadir una dependencia desde el panel Dependencias, haga clic en el botón
 
 :::note
 
-If no [**environment4d.json**](#environmen4djson) file is already defined for the project at this step, it is automatically created in the project package folder (default location).
+Si en este paso no se ha definido aún ningún archivo [**environment4d.json**](#environmen4djson) para el proyecto, se creará automáticamente en la carpeta del paquete del proyecto (ubicación por defecto).
 
 :::
 
-The selected dependency is automatically added to the [inactive dependency list](#dependency-status). It will be loaded once the application restarts.
+La dependencia seleccionada se añade automáticamente a la [lista de dependencias inactivas](#dependency-status). Se cargará cuando se reinicie la aplicación.
 
-#### Removing a dependency
+#### Eliminando una dependencia
 
-To add a dependency from the Dependencies panel, select the dependency to remove and click on the **-** button of the panel or select **Remove the dependency...** from the contextual menu. You can select several dependencies, in which case the action is applied to all selected dependencies.
+Para añadir una dependencia desde el panel de dependencias, seleccione la dependencia que desea eliminar y haga clic en el botón **-** del panel o seleccione **Eliminar la dependencia...** en el menú contextual. Puede seleccionar varias relaciones, en cuyo caso la acción se aplica a todas las relaciones seleccionadas.
 
 :::note
 
-Only dependencies declared in the [**dependencies.json**](#dependenciesjson) file can be removed using the Dependencies panel. If a selected dependency cannot be removed, the **-** button is disabled and the **Remove the dependency...** menu item is hidden.
+Sólo las dependencias declaradas en el archivo [**dependencies.json**](#dependenciesjson) pueden eliminarse mediante el panel Dependencias. Si no se puede eliminar una dependencia seleccionada, se desactiva el botón **-** y se oculta la opción de menú **Eliminar la dependencia...**.
 
 :::
 
-Aparece una caja de diálogo de confirmación. If the dependency was declared in the **environment4d.json** file, an option allows you to remove it:
+Aparece una caja de diálogo de confirmación. Si la dependencia se declaró en el archivo **environment4d.json**, una opción permite eliminarla:
 
 ![dependency-remove](../assets/en/Project/remove-comp.png)
 
-If you confirm the dialog box, the removed dependency is automatically flagged "Unload at restart". It will be unloaded once the application restarts.
+Si confirma la caja de diálogo, la dependencia eliminada se marca automáticamente como "Descargar al reiniciar". Se descargará cuando se reinicie la aplicación.
 
 ![status-unload](../assets/en/Project/status-unload.png)
 
