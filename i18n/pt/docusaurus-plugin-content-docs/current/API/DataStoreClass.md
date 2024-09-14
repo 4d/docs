@@ -132,7 +132,7 @@ Usar a datastore principal do banco de dados 4D:
 
 The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the remote datastore identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `cs.DataStore` object associated with the *localID* local alias.
 
-The following remote datastores are supported by the command:
+Os seguintes datastores remotos são compatíveis com o comando:
 
 | tipo de datastore                                                      | Descrição                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
