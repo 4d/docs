@@ -3,7 +3,7 @@ id: components
 title: Componentes
 ---
 
-A 4D component is a set of 4D code and/or 4D forms representing one or more functionalities that you can add and use in your projects. For example, the [4D SVG](https://github.com/4d/4D-SVG) component adds advanced commands and an integrated rendering engine that can be used to display SVG files.
+Um componente 4D é um conjunto de código 4D e/ou formulários que representam uma ou mais funcionalidades que pode adicionar e usar nos seus projetos. For example, the [4D SVG](https://github.com/4d/4D-SVG) component adds advanced commands and an integrated rendering engine that can be used to display SVG files.
 
 You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component\&type=Repositories).
 
@@ -18,7 +18,7 @@ Components can be interpreted or [compiled](../Desktop/building.md). A pasta do 
 
 A 4D project running in interpreted mode can use either interpreted or compiled components. A 4D project running in compiled mode cannot use interpreted components. Por isso não pode ser usado em um componente.
 
-## Loading components
+## Carregando componentes
 
 :::note
 
@@ -44,7 +44,7 @@ Components declared in the **dependencies.json** file can be stored at different
 
 If the same component is installed at different locations, a [priority order](#priority) is applied.
 
-### dependencies.json and environment4d.json
+### dependencies.json e environment4d.json
 
 #### dependencies.json
 
@@ -94,7 +94,7 @@ flowchart TB
 
 When a component cannot be loaded because of another instance of the same component located at a higher priority level, both get a specific [status](#dependency-status): the non-loaded component is given the _Overloaded_ status, while the loaded component has the _Overloading_ status.
 
-### Local components
+### Componentes locais
 
 You declare a local component in the [**dependencies.json** file](#dependencyjson) in the following way:
 
@@ -148,7 +148,7 @@ If a component path declared in the **environment4d.json** file is not found whe
 
 :::
 
-#### Relative paths vs absolute paths
+#### Caminhos relativos versus caminhos absolutos
 
 Paths are expressed in POSIX syntax as described in [this paragraph](../Concepts/paths#posix-syntax).
 
