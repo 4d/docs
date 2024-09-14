@@ -456,7 +456,7 @@ Function event restrict() -> $result : cs.*DataClassName*Selection
 // código
 ```
 
-Esta função é chamada sempre que uma seleção de entidade ou uma entidade da classe de dados é solicitada. The filter is run once, when the entity selection is created.
+Esta função é chamada sempre que uma seleção de entidade ou uma entidade da classe de dados é solicitada. O filtro é executado uma vez, quando a entity selection é criada.
 
 The filter must return an entity selection of the dataclass. Puede ser una selección de entidades creada a partir de una consulta, almacenada en el [`Storage`], etc.
 
