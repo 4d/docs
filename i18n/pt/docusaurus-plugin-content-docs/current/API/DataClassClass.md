@@ -911,18 +911,18 @@ onde:
 
 > *Você não pode usar diretamente atributos cujo nome contém caracteres especiais, como ". , "\[ ]", ou "=", ">", "#"..., porque eles serão avaliados incorretamente na frase da consulta. Se precisar consultar tais atributos, deve considerar o uso de espaços reservados, que permite uma gama extendida de caracteres em caminhos de atributos (veja* **Usando espaços reservados** *abaixo).*
 
-- **formula**: uma fórmula válida passada como `Text` ou `Object`. A fórmula será avaliada para cada entidade processada e deve retornar um valor booleano. Within the formula, the entity is available through the `This` object.
+- **formula**: uma fórmula válida passada como `Text` ou `Object`. A fórmula será avaliada para cada entidade processada e deve retornar um valor booleano. Na fórmula, a entidade está disponível através do objeto `This`.
 
-  - **Text**: the formula string must be preceeded by the `eval()` statement, so that the query parser evaluates the expression correctly. Por exemplo: *"eval(length(This.lastname) >=30) "*
-  - **Object**: the [formula object](FunctionClass.md) is passed as a **placeholder** (see below). The formula must have been created using the [`Formula`](FunctionClass.md#formula) or [`Formula from string`](FunctionClass.md#formula-from-string) command.
+  - **Text**: a string de fórmula deve ser precedida pela declaração `eval()`, para que o parser da consulta avalie a expressão corretamente. Por exemplo: *"eval(length(This.lastname) >=30) "*
+  - **Objeto**: o [objeto fórmula](FunctionClass.md) é passado como um **marcador de posição** (ver abaixo). A fórmula deve ter sido criada usando o comando [`Fórmula`](FunctionClass.md#formula) ou [`Formula da string`](FunctionClass.md#formula-from-string).
 
-> * Keep in mind that 4D formulas only support `&` and `|` symbols as logical operators.
+> * Lembre que as fórmulas 4D só suportam os símbolos `&` e `|` como operadores lógicos.
 > * Se a fórmula não for o único critério de pesquisa, o otimizador de motor debusca poderia processar outros critérios previamente (por exemplo atributos indexados) e assim, a fórmula poderia ser avaliada apenas para um subconjunto de entidades.
 
-Fórmulas nas consultas podem receber parâmetros através de $1. This point is detailed in the **formula parameter** paragraph below.
+Fórmulas nas consultas podem receber parâmetros através de $1. Este ponto está detalhado no parágrafo de **fórmula** abaixo.
 
-> - You can also pass directy a `formula` parameter object instead of the `queryString` parameter (recommended when formulas are more complex). Ver o parágrafo **Parâmetro fórmula** mais abaixo.
-> - For security reasons, formula calls within `query()` functions can be disallowed. Consulte a descrição do parâmetro `querySettings`.
+> - Você também pode passar diretamente um objeto parâmetro `formula` em vez do parâmetro `queryString` (recomendado quando as fórmulas são mais complexas). Ver o parágrafo **Parâmetro fórmula** mais abaixo.
+> - Por razões de segurança, chamadas de fórmula dentro de funções `query()` podem ser desabilitadas. Consulte a descrição do parâmetro `querySettings`.
 
 - **comparator**: símbolo que compara *attributePath* e *value*. Os simbolos abaixo são compatíveis:
 
@@ -930,7 +930,7 @@ Fórmulas nas consultas podem receber parâmetros através de $1. This point is 
 | ---------------------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Igual a                                  | =, ==                       | Retorna os dados coincidentes, admite o coringa (@), não diferencia entre maiúsculas e minúsculas nem diacríticas.                                                                |
 |                                          | ===, IS                     | Retorna os dados coincidentes, considera @ como caractere padrão, não diferencia entre maiúsculas e minúsculas nem diacríticas                                                                                       |
-| Diferente de                             | #, !=                       | Suporta o coringa (@). Equivalent to "Not condition applied on a statement" ([see below](#not-equal-to-in-collections)).                       |
+| Diferente de                             | #, !=                       | Suporta o coringa (@). Equivalente a "Condição não aplicada em uma declaração" ([ver abaixo](#not-equal-to-in-collections)).                   |
 |                                          | !==, IS NOT                 | Considera  @ como um caractere normal                                                                                                                                                                                |
 | Não se aplica à condição de uma sentença | NOT                         | Parentesis são obrigatórios quando usar NOT antes de uma instrução que contenha vários operadores. Equivalente a "Not equal to" ([veja abaixo](#not-equal-to-in-collections)). |
 | Menor que                                | <  |                                                                                                                                                                                                                                   |
@@ -940,24 +940,24 @@ Fórmulas nas consultas podem receber parâmetros através de $1. This point is 
 | Incluído em                              | IN                          | Retorna dados iguais a ao menos um dos valores de uma coleção ou de um conjunto de valores, admite o coringa (@)                                                                                  |
 | Contém palavra chave                     | %                           | As palavras chaves podem ser usadas em atributos de string ou imagem                                                                                                                                                              |
 
-- **value**: the value to compare to the current value of the property of each entity in the entity selection. It can be a **placeholder** (see **Using placeholders** below) or any expression matching the data type property.
+- **value**: o valor a comparar ao valor atual da propriedade de cada entidade na seleção de entidade. Pode ser um **marcador** (ver **Uso de marcadores** abaixo) ou qualquer expressão que coincida com a propriedade de tipo de dados.
   Quando usar um valor constante, as regras abaixo devem ser respeitadas:
-  - **text** type constant can be passed with or without simple quotes (see **Using quotes** below). Para pesquisar uma stirng dentro de uma string (uma pesquisa "contém") use o símbolo coringa (@) em valor para isolar a string a ser pesquisada como mostrado neste exemplo: "@Smith@". As palavras chaves abaixo são proibidas para constantes de texto: true, false.
-  - **boolean** type constants: **true** or **false** (case sensitive).
+  - A constante de tipo texto pode ser passada com ou sem aspas simples (ver **Uso de aspas mais abaixo**). Para pesquisar uma string dentro de uma string (uma pesquisa "contém") use o símbolo coringa (@) em valor para isolar a string a ser pesquisada como mostrado neste exemplo: "@Smith@". As palavras chaves abaixo são proibidas para constantes de texto: true, false.
+  - Valores constantes de tipo **booleano**: **true** ou **false** (diferencia maiúscula de minúscula).
   - \*\*Valores constantes de tipo **numérico**: os decimais se separam com um '.' (ponto).
   - constantes de tipo **date**: formato "YYYY-MM-DD"
-  - **null** constant: using the "null" keyword will find **null** and **undefined** properties.
-  - in case of a query with an IN comparator, *value* must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, `"` characters must be escaped with `\`).
-- **logicalOperator**: used to join multiple conditions in the query (optional). Pode usaar um dos operadores lógicos abaixo (ou o nome ou o símbolo podem ser usados):
+  - **null** constante: usando a palavra-chave "null" irá encontrar as propriedades **null** e **undefined**.
+  - no caso de uma pesquisa com um comparador IN, *valor* deve ser uma coleção, ou valores que coincidam com o tipo da rota do atributo entre \[ ] separados por vírgulas (para as strings, os caracteres `"` devem ser escapados com `\`).
+- **logicalOperator**: usado para participar de múltiplas condições na consulta (opcional). Pode usaar um dos operadores lógicos abaixo (ou o nome ou o símbolo podem ser usados):
 
 | Conjunção | Símbolos                                                               |
 | --------- | ---------------------------------------------------------------------- |
 | AND       | &, &&, and |
 | OU        | \|,\|\|, or                                                            |
 
-- **order by attributePath**: you can include an order by *attributePath* statement in the query so that the resulting data will be sorted according to that statement. You can use multiple order by statements, separated by commas (e.g., order by *attributePath1* desc, *attributePath2* asc). Como padrão, a ordem é ascendente. Passe 'desc'' para definir uma ordem descendente e 'asc' para definir uma ordem ascendente.
+- **ordem por attributePath**: você pode incluir uma ordem pela instrução *attributePath* na consulta, para que os dados resultantes sejam classificados de acordo com essa afirmação. Você pode usar várias ordens por declarações, separadas por vírgulas (por exemplo, ordem por *attributePath1* desc, *attributePath2* ascens). Como padrão, a ordem é ascendente. Passe 'desc'' para definir uma ordem descendente e 'asc' para definir uma ordem ascendente.
 
-> If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
+> Se você usar essa declaração, a seleção de entidade retornada será ordenada (para mais informações, por favor consulte [Seleções de entidades ordenadas vs não ordenadas](ORDA/dsMapping.md#seleção-de-entidades-ordenadas-ou-não-ordenadas)).
 
 #### Usar aspas
 
@@ -979,9 +979,9 @@ Você pode usar parênteses na consulta para dar prioridade ao cálculo. Por exe
 
 #### Uso de placeholders
 
-4D allows you to use placeholders for *attributePath*, *formula* and *value* arguments within the *queryString* parameter. Um placeholder é um parâmetro que você insere em cadeias de consulta e que é substituído por outro valor quando a cadeia de consulta é avaliada. O valor dos placeholders é avaliado uma vez no início da consulta; ele não é avaliado para cada elemento.
+4D lhe permite utilizar placeholders, marcadores de posição, para os argumentos attributePath, formula e value dentro do parâmetro queryString. Um placeholder é um parâmetro que você insere em cadeias de consulta e que é substituído por outro valor quando a cadeia de consulta é avaliada. O valor dos placeholders é avaliado uma vez no início da consulta; ele não é avaliado para cada elemento.
 
-Two types of placeholders can be used: **indexed placeholders** and **named placeholders**:
+Dois tipos de marcadores podem ser usados: placeholders indexados \*\* e **placeholders nomeados**:
 
 |           | Marcadores de posição indexados                                                                                                                                                                                                                                                                                                                             | Placeholders nomeados                                                                                                                                                                                        |
 | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1032,7 +1032,7 @@ $vSingles:=ds. Person.query("spouse = :1";Null) // will NOT work
 Não obterá o resultado esperado porque o valor nulo será avaliado por 4D como um erro resultante da avaliação do parâmetro (por exemplo, um atributo vindo de outra consulta). Para este tipo de pesquisa, deve usar a sintaxe de pesquisa direta:
 
 ```4d
- $vSingles:=ds.Person.query("spouse = null") //correct syntax
+ $vSingles:=ds.Person.query("spouse = null") //sintaxe correta
 ```
 
 #### Não igual a em colecções
@@ -1171,13 +1171,13 @@ $es:=ds. Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2
 
 As an alternative to formula insertion within the *queryString* parameter (see above), you can pass directly a formula object as a boolean search criteria. Using a formula object for queries is **recommended** since you benefit from tokenization, and code is easier to search/read.
 
-The formula must have been created using the [`Formula`](FunctionClass.md#formula) or [`Formula from string`](FunctionClass.md#formula-from-string) command. Nesse modo:
+A fórmula deve ter sido criada usando o comando [`Fórmula`](FunctionClass.md#formula) ou [`Formula da string`](FunctionClass.md#formula-from-string). Nesse modo:
 
 - *formula* se avalia para cada entidade e deve devolver true ou false. Durante a execução da pesquisa, se o resultado da fórmula não for booleano, é considerado como False.
 - within the *formula*, the entity is available through the `This` object.
 - if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with `ON ERR CALL`.
 
-> For security reasons, formula calls within `query()` functions can be disallowed. Veja a descrição do parâmetro *querySettings*.
+> Por razões de segurança, chamadas de fórmula dentro de funções `query()` podem ser desabilitadas. Veja a descrição do parâmetro *querySettings*.
 
 #### Passar parâmetros a fórmulas
 
