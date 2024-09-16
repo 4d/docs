@@ -16,11 +16,11 @@ You can show or hide several interface elements on the current page of the form:
 
 - **Formulario heredado**: objetos formulario heredados (si hay un [formulario heredado](forms.md#inherited-forms)).
 - **Página 0**: objetos de [página 0](forms.md#form-pages). This option allows you to distinguish between the objects on the form’s current page and those on page 0.
-- **Papel**: bordes de la página de impresión, que se muestran como líneas grises. Este elemento sólo puede aparecer por defecto en los formularios de tipo ["para impresión"](properties_FormProperties.md#form-type).
-- **Reglas**: Reglas de la ventana del editor de formularios.
-- **Marcadores**: las líneas de control de salida y los marcadores asociados que muestran los límites de las diferentes áreas del formulario. Este elemento sólo puede aparecer por defecto en los [formularios lista](properties_FormProperties.md#form-type).
-- **Etiquetas de los marcadores**: etiquetas de los marcadores, disponibles sólo cuando se muestran las líneas de control de salida. Este elemento sólo puede aparecer por defecto en los [formularios lista](properties_FormProperties.md#form-type).
-- **Límites**: límites del formulario. When this option is selected, the form is displayed in the Form editor as it appears in Application mode. This way you can adjust your form without having to switch to the Application mode in order to see the result.
+- **Papel**: bordas da página de impressão, mostradas como linhas cinzas. Este elemento só pode ser exibido por padrão em formulários do tipo ["para impressão"](properties_FormProperties.md#form-type).
+- **Réguas**: réguas da janela do editor de formulários.
+- **Marcadores**: linhas de controle de saída e marcadores associados que mostram os limites das diferentes áreas do formulário. Este elemento só pode ser exibido por padrão em [formulários lista](properties_FormProperties.md#form-type).
+- **Rótulos dos marcadores**: rótulos dos marcadores, disponíveis apenas quando as linhas de controle de saída forem exibidas. Este elemento só pode ser exibido por padrão em [formulários lista](properties_FormProperties.md#form-type).
+- **Limites**: limites do formulário. When this option is selected, the form is displayed in the Form editor as it appears in Application mode. This way you can adjust your form without having to switch to the Application mode in order to see the result.
 
 > The [**Size Based on**](properties_FormSize.md#size-based-on), [**Hor margin**](properties_FormSize.md#hor-margin) and [**Vert margin**](properties_FormSize.md#vert-margin) settings of the form properties affect the form’s limits. When using these settings, the limits are based on the objects in the form. When you modify the size of an object that is located next to the form’s border, it is modified to reflect that change.
 
