@@ -983,26 +983,26 @@ Você pode usar parênteses na consulta para dar prioridade ao cálculo. Por exe
 
 Dois tipos de marcadores podem ser usados: placeholders indexados \*\* e **placeholders nomeados**:
 
-|           | Marcadores de posição indexados                                                                                                                                                                                                                                                                                                                             | Placeholders nomeados                                                                                                                                                                                        |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Definição | Parameters are inserted as `:paramIndex` (for example :1, :2...) in *queryString* and their corresponding values are provided by the sequence of *value* parameter(s). É possível utilizar até 128 parâmetros *value* | Parameters are inserted as `:paramName` (for example :myparam) and their values are provided in the attributes and/or parameters objects in the *querySettings* parameter |
-| Exemplo   | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                                                                                                                                                                                                                                                                 | `$o.attributes:=New object("att";"city")`<br/> `$o.parameters:=New object("name";"Chicago")`<br/> `$r:=class.query(":att=:name";$o)`                                                                         |
+|           | Marcadores de posição indexados                                                                                                                                                                                                                                                                                                                                | Placeholders nomeados                                                                                                                                                                                       |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Definição | Os parâmetros são inseridos como `:paramIndex` (por exemplo :1, :2...) no *queryString* e seus respectivos valores são fornecidos pela sequência de parâmetro(s) *value*. É possível utilizar até 128 parâmetros *value* | Os parâmetros são inseridos como `:paramName` (por exemplo :myparam) e seus valores são fornecidos nos atributos e/ou objetos de parâmetros no parâmetro *querySettings* |
+| Exemplo   | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                                                                                                                                                                                                                                                                    | `$o.attributes:=New object("att";"city")`<br/> `$o.parameters:=New object("name";"Chicago")`<br/> `$r:=class.query(":att=:name";$o)`                                                                        |
 
-É possível misturar todos os tipos de argumentos em *queryString*. A *queryString* can contain, for *attributePath*, *formula* and *value* parameters:
+É possível misturar todos os tipos de argumentos em *queryString*. Um *queryString* pode conter, para os parâmetros *attributePath*, *formula* e *value*:
 
 - valores diretos (sem placeholders),
 - placeholders indexados ou com nome.
 
-Using placeholders in queries **is recommended** for the following reasons:
+O uso de placeholders em consultas **é recomendado** pelos seguintes motivos:
 
 1. Evita a inserção de código malicioso: se user diretamente variáveis preenchidas com uma string de pesquisa, um usuário poderia modificar as condições de pesquisa entrando argumentos adicionais. Por exemplo, imagine uma string de pesquisa como:
 
 ```4d
- $vquery:="status = 'public' & name = "+myname //user enters their name
+ $vquery:="status = 'público' & nome = "+meunome //usuário entra em seu nome
  $result:=$col.query($vquery)
 ```
 
-Essa consulta parece segura, pois os dados não públicos são filtrados. However, if the user enters in the *myname* area something like *"smith OR status='private'*, the query string would be modified at the interpretation step and could return private data.
+Essa consulta parece segura, pois os dados não públicos são filtrados. No entanto, se o usuário inserir na área *myname* algo como *"smith OR status='private'*,\* a string de consulta será modificada na etapa de interpretação e poderá retornar dados privados.
 
 Ao usar placeholders, não é possível substituir as condições de segurança:
 
@@ -1010,9 +1010,9 @@ Ao usar placeholders, não é possível substituir as condições de segurança:
  $result:=$col.query("status='public' & name=:1";myname)
 ```
 
-In this case if the user enters *smith OR status='private'* in the *myname* area, it will not be interpreted in the query string, but only passed as a value. A busca por uma pessoa chamada "smith OR status='private'" simplesmente falhará.
+Neste caso, se o usuário digitar *smith OR status='private'* na área *myname*, isso não será interpretado na string de consulta, mas apenas passado como um valor. A busca por uma pessoa chamada "smith OR status='private'" simplesmente falhará.
 
-2. It prevents having to worry about formatting or character issues, especially when handling *attributePath* or *value* parameters that might contain non-alphanumeric characters such as ".", "['...
+2. Isso evita ter que se preocupar com problemas de formatação ou caracteres, especialmente ao lidar com os parâmetros *attributePath* ou *value* que podem conter caracteres não alfanuméricos, como ".", "['...
 
 3. Permite o uso de variáveis ou expressões nos argumentos de pesquisa. Exemplos:
 
@@ -1037,7 +1037,7 @@ Não obterá o resultado esperado porque o valor nulo será avaliado por 4D como
 
 #### Não igual a em colecções
 
-When searching within dataclass object attributes containing collections, the "not equal to *value*" comparator (`#` or `!=`) will find elements where ALL properties are different from *value* (and not those where AT LEAST one property is different from *value*, which is how work other comparators). Basically, it is equivalent to search for "Not(find collection elements where property equals *value*"). Por exemplo, com as seguintes entidades:
+Ao pesquisar nos atributos de objectos de classe de dados que contêm colecções, o comparador "não igual a valor" (`#` ou `!=`) encontrará elementos em que TODAS as propriedades são diferentes de valor (e não aqueles em que PELO MENOS uma propriedade é diferente de valor, que é como funcionam outros comparadores). Basicamente, é equivalente à pesquisa por "Not(encontrar elementos da coleção onde a propriedade é igual a *value*"). Por exemplo, com as seguintes entidades:
 
 ```
 Entity 1:
@@ -1068,18 +1068,18 @@ ds.Class.info:
 Considere os seguintes resultados:
 
 ```4d
-ds.Class.query("info.coll[].val = :1";0)
-// returns B and C
-// finds "entities with 0 in at least one val property"
+ds.Class.query("info.coll[].val = :1";0) 
+// retorna B e C
+// encontra "entities with 0 in at least one val property"
 
 ds.Class.query("info.coll[].val != :1";0)
-// returns A only
-// finds "entities where all val properties are different from 0"
-// which is the equivalent to
+// retorna apenas A
+// encontra "entities where all val properties are different from 0"
+// que é equivalente a 
 ds.Class.query(not("info.coll[].val = :1";0))
 ```
 
-If you want to implement a query that finds entities where "at least one property is different from *value*", you need to use a special notation using a letter in the `[]`:
+Se você quer implementar uma consulta que encontra entidades onde "pelo menos uma propriedade é diferente de *valor*", você precisa usar uma notação especial usando uma carta no `[]`:
 
 ```4d
 ds.Class.query("info.coll[a].val := :1";0)  
@@ -1120,9 +1120,9 @@ Você deseja encontrar pessoas com um tipo de local de "residência" na cidade "
 ds. People.query("places.locations[].kind= :1 and places.locations[].city= :2";"home";"paris")
 ```
 
-... the query will return "martin" **and** "smith" because "smith" has a "locations" element whose "kind" is "home" and a "locations" element whose "city" is "paris", even though they are different elements.
+... a consulta retornará "martin" **e** "smith" porque "smith" possui um elemento "locations" cujo "tipo" é "home" e um elemento "locations" cuja "cidade" é "paris", mesmo que sejam elementos diferentes.
 
-If you want to only get entities where matching arguments are in the same collection element, you need to **link arguments**. Para linkar argumentos de pesquisa:
+Se você quiser apenas obter entidades em que os argumentos correspondentes estão no mesmo elemento da coleção, você precisa **linkar os argumentos**. Para linkar argumentos de pesquisa:
 
 - Adicionar uma letra entre os \[] na primeira rota a linkar e repita a mesma letra em todos os argumentos linkados. Por exemplo: `locations[a].city and locations[a].kind`. Pode usar qualquer letra do alfabeto latino (não diferencia maiúsculas e minúsculas).
 - Para adicionar critérios linkados na mesma pesquisa, use outra letra. Pode criar até 26 combinações de critérios em uma única pesquisa.
@@ -1133,15 +1133,15 @@ Com as entidades acima, se escreve:
 ds. People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";"home";"paris")
 ```
 
-... the query will only return "martin" because it has a "locations" element whose "kind" is "home" and whose "city" is "paris". A consulta não devolverá "smith" porque os valores "home" e "paris" não estão no mesmo elemento de coleção.
+... pesquisa só devolverá "martin" porque tem um elemento "locations" cujo "kind" é "home" e cujo "city" for "paris". A consulta não devolverá "smith" porque os valores "home" e "paris" não estão no mesmo elemento de coleção.
 
 #### Consultas em relações Muitos para Muitos
 
-O ORDA oferece uma sintaxe especial para facilitar as consultas em relações muitos-para-muitos. In this context, you may need to search for different values with an `AND` operator BUT in the same attribute. Por exemplo, veja a seguinte estrutura:
+O ORDA oferece uma sintaxe especial para facilitar as consultas em relações muitos-para-muitos. Neste contexto, poderá ter de procurar valores diferentes com um operador E MAS no mesmo atributo. Por exemplo, veja a seguinte estrutura:
 
 ![alt-text](../assets/en/API/manytomany.png)
 
-Imagine that you want to search all movies in which *both* actor A and actor B have a role. If you write a simple query using an `AND` operator, it will not work:
+Imagine que você queira pesquisar todos os filmes em que ambos o ator A e o ator B tenham um papel. Se você escrever uma consulta simples usando um operador `AND`, ela não funcionará:
 
 ```4d
 // invalid code
@@ -1151,7 +1151,7 @@ $es:=ds. Movie.query("roles.actor.lastName = :1 AND roles.actor.lastName = :2";"
 
 Basicamente, o problema está relacionado à lógica interna da consulta: você não pode pesquisar um atributo cujo valor seja "A" e "B".
 
-To make it possible to perform such queries, ORDA allows a special syntax: you just need to add a *class index* between **{}** in all additional relation attributes used in the string:
+Para tornar possível a realização de tais consultas, a ORDA permite uma sintaxe especial: você só precisa adicionar um *índice de classe* entre **{}** em todos os atributos de relação adicionais usados na string:
 
 ```4d
 "relationAttribute.attribute = :1 AND relationAttribute{x}.attribute = :2 [AND relationAttribute{y}.attribute...]"
