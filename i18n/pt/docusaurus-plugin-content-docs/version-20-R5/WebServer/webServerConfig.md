@@ -271,11 +271,11 @@ Ativação do método HTTP TRACE no servidor web 4D. Por motivos de segurança, 
 
 ## Porta HTTPS
 
-| Pode ser definido com              | Nome                                                           | Comentários |
-| ---------------------------------- | -------------------------------------------------------------- | ----------- |
-| objeto webServer                   | [`HTTPSPort`](API/WebServerClass.md#httpsport)                 | number      |
-| `WEB SET OPTION`                   | `Web HTTPS port ID`                                            |             |
-| Caixa de diálogos de configurações | [Configuration page/HTTPS Port](../settings/web.md#https-port) |             |
+| Pode ser definido com              | Nome                                                                | Comentários |
+| ---------------------------------- | ------------------------------------------------------------------- | ----------- |
+| objeto webServer                   | [`HTTPSPort`](API/WebServerClass.md#httpsport)                      | number      |
+| `WEB SET OPTION`                   | `Web HTTPS port ID`                                                 |             |
+| Caixa de diálogos de configurações | [Página de Configuração/Porta HTTPS](../settings/web.md#https-port) |             |
 
 Número da porta IP de escuta para conexões HTTPS via TLS. Por padrão, o valor é 443 (valor padrão). Ver también [HTTP Port](#http-port) para obtener información sobre los números de puerto.
 
@@ -304,11 +304,11 @@ Padrão: 480 minutos (passe 0 para repor o valor predefinido)
 
 ## Endereço IP de escuta
 
-| Pode ser definido com              | Nome                                                           | Comentários |
-| ---------------------------------- | -------------------------------------------------------------- | ----------- |
-| objeto webServer                   | [`IPAddressToListen`](API/WebServerClass.md#ipaddresstolisten) |             |
-| `WEB SET OPTION`                   | `Web IP address to listen`                                     |             |
-| Caixa de diálogos de configurações | [Configuration page/IP Address](../settings/web.md#ip-address) | Menu pop-up |
+| Pode ser definido com              | Nome                                                             | Comentários |
+| ---------------------------------- | ---------------------------------------------------------------- | ----------- |
+| objeto webServer                   | [`IPAddressToListen`](API/WebServerClass.md#ipaddresstolisten)   |             |
+| `WEB SET OPTION`                   | `Web IP address to listen`                                       |             |
+| Caixa de diálogos de configurações | [Página Configuração/Endereço IP](../settings/web.md#ip-address) | Menu pop-up |
 
 Sequências de endereços IP nas quais o servidor web 4D receberá solicitações HTTP (4D local e servidor 4D).
 
