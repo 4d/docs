@@ -9,9 +9,9 @@ title: VP Get value
 
 <!-- REF #_method_.VP Get value.Params -->
 
-| Parámetros | Tipo   |    | Descripción                           |                  |
-| ---------- | ------ | -- | ------------------------------------- | ---------------- |
-| rangeObj   | Object | -> | Objeto rango                          |                  |
+| Parámetros | Tipo   |                             | Descripción                           |                  |
+| ---------- | ------ | --------------------------- | ------------------------------------- | ---------------- |
+| rangeObj   | Object | ->                          | Objeto rango                          |                  |
 | Result     | Object | <- | Objeto que contiene un valor de celda | <!-- END REF --> |
 
 #### Descripción

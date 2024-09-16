@@ -9,10 +9,10 @@ title: VP Get print info
 
 <!-- REF #_method_.VP Get print info.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                    |                  |
-| ---------- | ------- | -- | -------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                   |                  |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |                  |
+| Parámetros | Tipo    |                             | Descripción                                                    |                  |
+| ---------- | ------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                   |                  |
+| sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
 | Result     | Object  | <- | Objeto que contiene la información de impresión                | <!-- END REF --> |
 
 #### Descripción

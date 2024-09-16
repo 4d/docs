@@ -9,9 +9,9 @@ title: VP Get show print lines
 
 <!-- REF #_method_.VP Get show print lines.Params -->
 
-| 引数         | 型       |    | 説明                            |                  |
-| ---------- | ------- | -- | ----------------------------- | ---------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名       |                  |
+| 引数         | 型       |                             | 説明                            |                  |
+| ---------- | ------- | --------------------------- | ----------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | 4D View Pro フォームオブジェクト名       |                  |
 | sheet      | Integer | <- | シートのインデックス                    |                  |
 | 戻り値        | Boolean | <- | 印刷線が表示状態であれば true、それ以外は false | <!-- END REF --> |
 

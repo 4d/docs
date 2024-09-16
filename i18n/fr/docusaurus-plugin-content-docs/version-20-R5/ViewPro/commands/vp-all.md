@@ -9,10 +9,10 @@ title: VP All
 
 <!-- REF #_method_.VP All.Params -->
 
-| Paramètres | Type    |    | Description                                                                 |                  |
-| ---------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |                  |
+| Paramètres | Type    |                             | Description                                                                 |                  |
+| ---------- | ------- | --------------------------- | --------------------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |                  |
+| sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
 | Résultat   | Object  | <- | Objet plage de toutes les cellules                                          | <!-- END REF --> |
 
 #### Description

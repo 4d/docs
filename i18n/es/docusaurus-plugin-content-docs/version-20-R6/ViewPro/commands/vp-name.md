@@ -9,11 +9,11 @@ title: VP Name
 
 <!-- REF #_method_.VP Name.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                      |                  |
-| ---------- | ------- | -- | ---------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                     |                  |
-| rangeName  | Text    | -> | Nombre del rango existente                                       |                  |
-| sheet      | Integer | -> | Ubicación del rango (hoja actual si se omite) |                  |
+| Parámetros | Tipo    |                             | Descripción                                                      |                  |
+| ---------- | ------- | --------------------------- | ---------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                     |                  |
+| rangeName  | Text    | ->                          | Nombre del rango existente                                       |                  |
+| sheet      | Integer | ->                          | Ubicación del rango (hoja actual si se omite) |                  |
 | Result     | Object  | <- | Rango de nombre                                                  | <!-- END REF --> |
 
 #### Descripción

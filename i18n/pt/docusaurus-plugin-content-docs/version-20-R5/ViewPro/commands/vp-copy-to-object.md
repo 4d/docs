@@ -17,10 +17,10 @@ title: VP Copy to object
 
 <!-- REF #_method_.VP Copy to object.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                                   |                  |
-| ---------- | ------ | -- | ----------------------------------------------------------- | ---------------- |
-| rangeObj   | Object | -> | Objeto intervalo                                            |                  |
-| options    | Object | -> | Opções adicionais                                           |                  |
+| Parâmetro  | Tipo   |                             | Descrição                                                   |                  |
+| ---------- | ------ | --------------------------- | ----------------------------------------------------------- | ---------------- |
+| rangeObj   | Object | ->                          | Objeto intervalo                                            |                  |
+| options    | Object | ->                          | Opções adicionais                                           |                  |
 | Resultados | Object | <- | Objecto devolvido. Contém os dados copiados | <!-- END REF --> |
 
 #### Descrição

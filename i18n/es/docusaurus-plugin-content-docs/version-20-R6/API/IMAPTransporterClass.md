@@ -56,10 +56,10 @@ Los objetos IMAP Transporter se instancian con el comando [IMAP New transporter]
 
 <!-- REF #_command_.IMAP New transporter.Params -->
 
-| Parámetros | Tipo                               |     | Descripción                                           |
-| ---------- | ---------------------------------- | :-: | ----------------------------------------------------- |
-| server     | Object                             |  -> | Información del servidor de correo                    |
-| Result     | 4D.IMAPTransporter |  <- | [Objeto transportador IMAP](#objeto-imap-transporter) |
+| Parámetros | Tipo                               |                             | Descripción                                           |
+| ---------- | ---------------------------------- | :-------------------------: | ----------------------------------------------------- |
+| server     | Object                             |              ->             | Información del servidor de correo                    |
+| Result     | 4D.IMAPTransporter | <- | [Objeto transportador IMAP](#objeto-imap-transporter) |
 
 <!-- END REF -->
 
@@ -115,10 +115,10 @@ End if
 
 <!-- REF #4D.IMAPTransporter.new().Params -->
 
-| Parámetros | Tipo                               |     | Descripción                                           |
-| ---------- | ---------------------------------- | :-: | ----------------------------------------------------- |
-| server     | Object                             |  -> | Información del servidor de correo                    |
-| Result     | 4D.IMAPTransporter |  <- | [Objeto transportador IMAP](#objeto-imap-transporter) |
+| Parámetros | Tipo                               |                             | Descripción                                           |
+| ---------- | ---------------------------------- | :-------------------------: | ----------------------------------------------------- |
+| server     | Object                             |              ->             | Información del servidor de correo                    |
+| Result     | 4D.IMAPTransporter | <- | [Objeto transportador IMAP](#objeto-imap-transporter) |
 
 <!-- END REF -->
 
@@ -145,11 +145,11 @@ La función `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summar
 
 <!-- REF #IMAPTransporterClass.addFlags().Params -->
 
-| Parámetros | Tipo       |     | Descripción                                                                                                                                                                                                                                                |
-| ---------- | ---------- | :-: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| msgIDs     | Collection |  -> | Colección de cadenas: identificadores únicos de mensajes (texto)<br/>Texto: ID único de un mensaje<br/>Longint (IMAP all): todos los mensajes del buzón seleccionado |
-| keywords   | Object     |  -> | Banderas de palabras claves a añadir                                                                                                                                                                                                                       |
-| Result     | Object     |  <- | Estado de la operación addFlags                                                                                                                                                                                                                            |
+| Parámetros | Tipo       |                             | Descripción                                                                                                                                                                                                                                                |
+| ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| msgIDs     | Collection |              ->             | Colección de cadenas: identificadores únicos de mensajes (texto)<br/>Texto: ID único de un mensaje<br/>Longint (IMAP all): todos los mensajes del buzón seleccionado |
+| keywords   | Object     |              ->             | Banderas de palabras claves a añadir                                                                                                                                                                                                                       |
+| Result     | Object     | <- | Estado de la operación addFlags                                                                                                                                                                                                                            |
 
 <!-- END REF -->
 
@@ -237,12 +237,12 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 <!-- REF #IMAPTransporterClass.append().Params -->
 
-| Parámetros     | Tipo   |     | Descripción                                 |
-| -------------- | ------ | :-: | ------------------------------------------- |
-| mailObj        | Object |  -> | Objeto Email                                |
-| destinationBox | Text   |  -> | Buzón para recibir el objeto Email          |
-| options        | Object |  -> | Objeto que contiene información del charset |
-| Result         | Object |  <- | Estado de la operación                      |
+| Parámetros     | Tipo   |                             | Descripción                                 |
+| -------------- | ------ | :-------------------------: | ------------------------------------------- |
+| mailObj        | Object |              ->             | Objeto Email                                |
+| destinationBox | Text   |              ->             | Buzón para recibir el objeto Email          |
+| options        | Object |              ->             | Objeto que contiene información del charset |
+| Result         | Object | <- | Estado de la operación                      |
 
 <!-- END REF -->
 
@@ -351,12 +351,12 @@ La propiedad `.checkConnectionDelay` contiene <!-- REF #IMAPTransporterClass.che
 
 <!-- REF #IMAPTransporterClass.copy().Params -->
 
-| Parámetros     | Tipo       |     | Descripción                                                                  |
-| -------------- | ---------- | :-: | ---------------------------------------------------------------------------- |
-| msgsIDs        | Collection |  -> | Colección de identificadores únicos de mensajes (cadenas) |
-| allMsgs        | Integer    |  -> | `IMAP all`: todos los mensajes en el buzón seleccionado      |
-| destinationBox | Text       |  -> | Buzón para recibir mensajes copiados                                         |
-| Result         | Object     |  <- | Estado de la operación de copia                                              |
+| Parámetros     | Tipo       |                             | Descripción                                                                  |
+| -------------- | ---------- | :-------------------------: | ---------------------------------------------------------------------------- |
+| msgsIDs        | Collection |              ->             | Colección de identificadores únicos de mensajes (cadenas) |
+| allMsgs        | Integer    |              ->             | `IMAP all`: todos los mensajes en el buzón seleccionado      |
+| destinationBox | Text       |              ->             | Buzón para recibir mensajes copiados                                         |
+| Result         | Object     | <- | Estado de la operación de copia                                              |
 
 <!-- END REF -->
 
@@ -453,10 +453,10 @@ Para copiar todos los mensajes del buzón actual:
 
 <!-- REF #IMAPTransporterClass.createBox().Params -->
 
-| Parámetros | Tipo   |     | Descripción                                  |
-| ---------- | ------ | :-: | -------------------------------------------- |
-| name       | Text   |  -> | Nombre del nuevo buzón                       |
-| Result     | Object |  <- | Estado de la operación de creación del buzón |
+| Parámetros | Tipo   |                             | Descripción                                  |
+| ---------- | ------ | :-------------------------: | -------------------------------------------- |
+| name       | Text   |              ->             | Nombre del nuevo buzón                       |
+| Result     | Object | <- | Estado de la operación de creación del buzón |
 
 <!-- END REF -->
 
@@ -531,11 +531,11 @@ End if
 
 <!-- REF #IMAPTransporterClass.delete().Params -->
 
-| Parámetros | Tipo       |     | Descripción                                                                  |
-| ---------- | ---------- | :-: | ---------------------------------------------------------------------------- |
-| msgsIDs    | Collection |  -> | Colección de identificadores únicos de mensajes (cadenas) |
-| allMsgs    | Integer    |  -> | `IMAP all`: todos los mensajes en el buzón seleccionado      |
-| Result     | Object     |  <- | Estado de la operación de eliminación                                        |
+| Parámetros | Tipo       |                             | Descripción                                                                  |
+| ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------------------- |
+| msgsIDs    | Collection |              ->             | Colección de identificadores únicos de mensajes (cadenas) |
+| allMsgs    | Integer    |              ->             | `IMAP all`: todos los mensajes en el buzón seleccionado      |
+| Result     | Object     | <- | Estado de la operación de eliminación                                        |
 
 <!-- END REF -->
 
@@ -631,10 +631,10 @@ Para eliminar todos los mensajes del buzón actual:
 
 <!-- REF #IMAPTransporterClass.deleteBox().Params -->
 
-| Parámetros | Tipo   |     | Descripción                                     |
-| ---------- | ------ | :-: | ----------------------------------------------- |
-| name       | Text   |  -> | Nombre del buzón a eliminar                     |
-| Result     | Object |  <- | Estado de la operación de eliminación del buzón |
+| Parámetros | Tipo   |                             | Descripción                                     |
+| ---------- | ------ | :-------------------------: | ----------------------------------------------- |
+| name       | Text   |              ->             | Nombre del buzón a eliminar                     |
+| Result     | Object | <- | Estado de la operación de eliminación del buzón |
 
 <!-- END REF -->
 
@@ -709,9 +709,9 @@ End if
 
 <!-- REF IMAPTransporterClass.expunge().Params -->
 
-| Parámetros | Tipo   |     | Descripción                    |
-| ---------- | ------ | :-: | ------------------------------ |
-| Result     | Object |  <- | Estado de la operación expunge |
+| Parámetros | Tipo   |                             | Descripción                    |
+| ---------- | ------ | :-------------------------: | ------------------------------ |
+| Result     | Object | <- | Estado de la operación expunge |
 
 <!-- END REF -->
 
@@ -778,10 +778,10 @@ $status:=$transporter.expunge()
 
 <!-- REF #IMAPTransporterClass.getBoxInfo().Params -->
 
-| Parámetros | Tipo   |     | Descripción      |
-| ---------- | ------ | :-: | ---------------- |
-| name       | Text   |  -> | Nombre del buzón |
-| Result     | Object |  <- | objeto boxInfo   |
+| Parámetros | Tipo   |                             | Descripción      |
+| ---------- | ------ | :-------------------------: | ---------------- |
+| name       | Text   |              ->             | Nombre del buzón |
+| Result     | Object | <- | objeto boxInfo   |
 
 <!-- END REF -->
 
@@ -833,10 +833,10 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
 <!-- REF #IMAPTransporterClass.getBoxList().Params -->
 
-| Parámetros | Tipo       |     | Descripción                  |
-| ---------- | ---------- | :-: | ---------------------------- |
-| parameters | Object     |  -> | Objeto de parámetro          |
-| Result     | Collection |  <- | Colección de objetos mailbox |
+| Parámetros | Tipo       |                             | Descripción                  |
+| ---------- | ---------- | :-------------------------: | ---------------------------- |
+| parameters | Object     |              ->             | Objeto de parámetro          |
+| Result     | Collection | <- | Colección de objetos mailbox |
 
 <!-- END REF -->
 
@@ -900,9 +900,9 @@ Si la cuenta no contiene buzones, se devuelve una colección vacía.
 
 <!-- REF #IMAPTransporterClass.getDelimiter().Params -->
 
-| Parámetros | Tipo |     | Descripción                       |
-| ---------- | ---- | :-: | --------------------------------- |
-| Result     | Text |  <- | Caracter delimitador de jerarquía |
+| Parámetros | Tipo |                             | Descripción                       |
+| ---------- | ---- | :-------------------------: | --------------------------------- |
+| Result     | Text | <- | Caracter delimitador de jerarquía |
 
 <!-- END REF -->
 
@@ -956,12 +956,12 @@ Caracter delimitador del nombre del buzón.
 
 <!-- REF #IMAPTransporterClass.getMail().Params -->
 
-| Parámetros | Tipo    |     | Descripción                                    |
-| ---------- | ------- | :-: | ---------------------------------------------- |
-| msgNumber  | Integer |  -> | Número de secuencia del mensaje                |
-| msgID      | Text    |  -> | ID único del mensaje                           |
-| options    | Object  |  -> | Instrucciones sobre la gestión de mensajes     |
-| Result     | Object  |  <- | [Objet Email](EmailObjectClass.md#objet-email) |
+| Parámetros | Tipo    |                             | Descripción                                    |
+| ---------- | ------- | :-------------------------: | ---------------------------------------------- |
+| msgNumber  | Integer |              ->             | Número de secuencia del mensaje                |
+| msgID      | Text    |              ->             | ID único del mensaje                           |
+| options    | Object  |              ->             | Instrucciones sobre la gestión de mensajes     |
+| Result     | Object  | <- | [Objet Email](EmailObjectClass.md#objet-email) |
 
 <!-- END REF -->
 
@@ -1032,13 +1032,13 @@ Quiere obtener el mensaje con ID = 1:
 
 <!-- REF #IMAPTransporterClass.getMails().Params -->
 
-| Parámetros | Tipo       |     | Descripción                                                                                                                                                                                       |
-| ---------- | ---------- | :-: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ids        | Collection |  -> | Colección de identificadores de mensajes                                                                                                                                                          |
-| startMsg   | Integer    |  -> | Número de secuencia del primer mensaje                                                                                                                                                            |
-| endMsg     | Integer    |  -> | Número de secuencia del último mensaje                                                                                                                                                            |
-| options    | Object     |  -> | Instrucciones sobre la gestión de mensajes                                                                                                                                                        |
-| Result     | Object     |  <- | Objeto que contiene<br/><ul><li>una colección de [objetos Email](EmailObjectClass.md#email-object) y</li><li>una colección de IDs o de números para los mensajes que faltan, si los hay</li></ul> |
+| Parámetros | Tipo       |                             | Descripción                                                                                                                                                                                       |
+| ---------- | ---------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ids        | Collection |              ->             | Colección de identificadores de mensajes                                                                                                                                                          |
+| startMsg   | Integer    |              ->             | Número de secuencia del primer mensaje                                                                                                                                                            |
+| endMsg     | Integer    |              ->             | Número de secuencia del último mensaje                                                                                                                                                            |
+| options    | Object     |              ->             | Instrucciones sobre la gestión de mensajes                                                                                                                                                        |
+| Result     | Object     | <- | Objeto que contiene<br/><ul><li>una colección de [objetos Email](EmailObjectClass.md#email-object) y</li><li>una colección de IDs o de números para los mensajes que faltan, si los hay</li></ul> |
 
 <!-- END REF -->
 
@@ -1135,12 +1135,12 @@ Quiere recuperar los 20 correos electrónicos más recientes sin cambiar el esta
 
 <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Params -->
 
-| Parámetros | Tipo    |     | Descripción                                                                                                                |
-| ---------- | ------- | :-: | -------------------------------------------------------------------------------------------------------------------------- |
-| msgNumber  | Integer |  -> | Número de secuencia del mensaje                                                                                            |
-| msgID      | Text    |  -> | ID único del mensaje                                                                                                       |
-| updateSeen | Boolean |  -> | Si True, el mensaje se marca como "visto" en el buzón. Si False, el mensaje se deja igual. |
-| Result     | BLOB    |  <- | Blob de la cadena MIME devuelta por el servidor de correo                                                                  |
+| Parámetros | Tipo    |                             | Descripción                                                                                                                |
+| ---------- | ------- | :-------------------------: | -------------------------------------------------------------------------------------------------------------------------- |
+| msgNumber  | Integer |              ->             | Número de secuencia del mensaje                                                                                            |
+| msgID      | Text    |              ->             | ID único del mensaje                                                                                                       |
+| updateSeen | Boolean |              ->             | Si True, el mensaje se marca como "visto" en el buzón. Si False, el mensaje se deja igual. |
+| Result     | BLOB    | <- | Blob de la cadena MIME devuelta por el servidor de correo                                                                  |
 
 <!-- END REF -->
 
@@ -1212,12 +1212,12 @@ El parámetro opcional *updateSeen* permite indicar si el mensaje está marcado 
 
 <!-- REF #IMAPTransporterClass.move().Params -->
 
-| Parámetros     | Tipo       |     | Descripción                                                                  |
-| -------------- | ---------- | :-: | ---------------------------------------------------------------------------- |
-| msgsIDs        | Collection |  -> | Colección de identificadores únicos de mensajes (cadenas) |
-| allMsgs        | Integer    |  -> | `IMAP all`: todos los mensajes en el buzón seleccionado      |
-| destinationBox | Text       |  -> | Buzón para recibir los mensajes desplazados                                  |
-| Result         | Object     |  <- | Estado de la operación de desplazamiento                                     |
+| Parámetros     | Tipo       |                             | Descripción                                                                  |
+| -------------- | ---------- | :-------------------------: | ---------------------------------------------------------------------------- |
+| msgsIDs        | Collection |              ->             | Colección de identificadores únicos de mensajes (cadenas) |
+| allMsgs        | Integer    |              ->             | `IMAP all`: todos los mensajes en el buzón seleccionado      |
+| destinationBox | Text       |              ->             | Buzón para recibir los mensajes desplazados                                  |
+| Result         | Object     | <- | Estado de la operación de desplazamiento                                     |
 
 <!-- END REF -->
 
@@ -1315,11 +1315,11 @@ Para mover todos los mensajes del buzón actual:
 
 <!-- REF #IMAPTransporterClass.numToID().Params -->
 
-| Parámetros | Tipo       |     | Descripción                                     |
-| ---------- | ---------- | :-: | ----------------------------------------------- |
-| startMsg   | Integer    |  -> | Número de secuencia del primer mensaje          |
-| endMsg     | Integer    |  -> | Número de secuencia del último mensaje          |
-| Result     | Collection |  <- | Colección de identificadores de mensajes únicos |
+| Parámetros | Tipo       |                             | Descripción                                     |
+| ---------- | ---------- | :-------------------------: | ----------------------------------------------- |
+| startMsg   | Integer    |              ->             | Número de secuencia del primer mensaje          |
+| endMsg     | Integer    |              ->             | Número de secuencia del último mensaje          |
+| Result     | Collection | <- | Colección de identificadores de mensajes únicos |
 
 <!-- END REF -->
 
@@ -1379,11 +1379,11 @@ La función devuelve una colección de cadenas (IDs únicos).
 
 <!-- REF #IMAPTransporterClass.removeFlags().Params -->
 
-| Parámetros | Tipo       |     | Descripción                                                                                                                                                                                                                                                |
-| ---------- | ---------- | :-: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| msgIDs     | Collection |  -> | Colección de cadenas: identificadores únicos de mensajes (texto)<br/>Texto: ID único de un mensaje<br/>Longint (IMAP all): todos los mensajes del buzón seleccionado |
-| keywords   | Object     |  -> | Banderas de palabras claves a eliminar                                                                                                                                                                                                                     |
-| Result     | Object     |  <- | Estado de la operación removeFlags                                                                                                                                                                                                                         |
+| Parámetros | Tipo       |                             | Descripción                                                                                                                                                                                                                                                |
+| ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| msgIDs     | Collection |              ->             | Colección de cadenas: identificadores únicos de mensajes (texto)<br/>Texto: ID único de un mensaje<br/>Longint (IMAP all): todos los mensajes del buzón seleccionado |
+| keywords   | Object     |              ->             | Banderas de palabras claves a eliminar                                                                                                                                                                                                                     |
+| Result     | Object     | <- | Estado de la operación removeFlags                                                                                                                                                                                                                         |
 
 <!-- END REF -->
 
@@ -1470,11 +1470,11 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 <!-- REF #IMAPTransporterClass.renameBox().Params -->
 
-| Parámetros  | Tipo   |     | Descripción                      |
-| ----------- | ------ | :-: | -------------------------------- |
-| currentName | Text   |  -> | Nombre del nuevo actual          |
-| newName     | Text   |  -> | Nuevo nombre del buzón           |
-| Result      | Object |  <- | Estado de la operación renombrar |
+| Parámetros  | Tipo   |                             | Descripción                      |
+| ----------- | ------ | :-------------------------: | -------------------------------- |
+| currentName | Text   |              ->             | Nombre del nuevo actual          |
+| newName     | Text   |              ->             | Nuevo nombre del buzón           |
+| Result      | Object | <- | Estado de la operación renombrar |
 
 <!-- END REF -->
 
@@ -1549,10 +1549,10 @@ End if
 
 <!-- REF #IMAPTransporterClass.searchMails().Params -->
 
-| Parámetros     | Tipo       |     | Descripción                      |
-| -------------- | ---------- | :-: | -------------------------------- |
-| searchCriteria | Text       |  -> | Criterio de búsqueda             |
-| Result         | Collection |  <- | Colección de números de mensajes |
+| Parámetros     | Tipo       |                             | Descripción                      |
+| -------------- | ---------- | :-------------------------: | -------------------------------- |
+| searchCriteria | Text       |              ->             | Criterio de búsqueda             |
+| Result         | Collection | <- | Colección de números de mensajes |
 
 <!-- END REF -->
 
@@ -1698,11 +1698,11 @@ Las claves de búsqueda pueden solicitar el valor a buscar:
 
 <!-- REF #IMAPTransporterClass.selectBox().Params -->
 
-| Parámetros | Tipo    |     | Descripción               |
-| ---------- | ------- | :-: | ------------------------- |
-| name       | Text    |  -> | Nombre del buzón          |
-| state      | Integer |  -> | Estado de acceso al buzón |
-| Result     | Object  |  <- | objeto boxInfo            |
+| Parámetros | Tipo    |                             | Descripción               |
+| ---------- | ------- | :-------------------------: | ------------------------- |
+| name       | Text    |              ->             | Nombre del buzón          |
+| state      | Integer |              ->             | Estado de acceso al buzón |
+| Result     | Object  | <- | objeto boxInfo            |
 
 <!-- END REF -->
 
@@ -1776,10 +1776,10 @@ Si la cadena `permanentFlags` incluye la bandera especial \*, significa que el s
 
 <!-- REF #IMAPTransporterClass.subscribe().Params -->
 
-| Parámetros | Tipo   |     | Descripción                      |
-| ---------- | ------ | :-: | -------------------------------- |
-| name       | Text   |  -> | Nombre del buzón                 |
-| Result     | Object |  <- | Estado de la operación subscribe |
+| Parámetros | Tipo   |                             | Descripción                      |
+| ---------- | ------ | :-------------------------: | -------------------------------- |
+| name       | Text   |              ->             | Nombre del buzón                 |
+| Result     | Object | <- | Estado de la operación subscribe |
 
 <!-- END REF -->
 
@@ -1849,10 +1849,10 @@ End if
 
 <!-- REF #IMAPTransporterClass.unsubscribe().Params -->
 
-| Parámetros | Tipo   |     | Descripción                        |
-| ---------- | ------ | :-: | ---------------------------------- |
-| name       | Text   |  -> | Nombre del buzón                   |
-| Result     | Object |  <- | Estado de la operación unsubscribe |
+| Parámetros | Tipo   |                             | Descripción                        |
+| ---------- | ------ | :-------------------------: | ---------------------------------- |
+| name       | Text   |              ->             | Nombre del buzón                   |
+| Result     | Object | <- | Estado de la operación unsubscribe |
 
 <!-- END REF -->
 

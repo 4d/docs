@@ -9,10 +9,10 @@ title: VP Get stylesheets
 
 <!-- REF #_method_.VP Get stylesheets.Params -->
 
-| Paramètres | Type       |    | Description                                              |                  |
-| ---------- | ---------- | -- | -------------------------------------------------------- | ---------------- |
-| vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro                  |                  |
-| sheet      | Integer    | -> | Cible (par défaut = feuille courante) |                  |
+| Paramètres | Type       |                             | Description                                              |                  |
+| ---------- | ---------- | --------------------------- | -------------------------------------------------------- | ---------------- |
+| vpAreaName | Text       | ->                          | Nom d'objet formulaire zone 4D View Pro                  |                  |
+| sheet      | Integer    | ->                          | Cible (par défaut = feuille courante) |                  |
 | Résultat   | Collection | <- | Collection d'objets feuille de style                     | <!-- END REF --> |
 
 #### Description

@@ -89,15 +89,15 @@ Por tanto, NO se llama al método base `On Web Authentication`:
 
 **On Web Authentication**( _$1_ : Text ; _$2_ : Text ; _$3_ : Text ; _$4_ : Text ; _$5_ : Text ; _$6_ : Text ) -> $0 : Boolean
 
-| Parámetros | Tipo    |     | Descripción                                                                  |
-| ---------- | ------- | :-: | ---------------------------------------------------------------------------- |
-| $1         | Text    |  <- | URL                                                                          |
-| $2         | Text    |  <- | Encabezados HTTP + cuerpo HTTP (hasta un límite de 32 kb) |
-| $3         | Text    |  <- | Dirección IP del cliente web (navegador)                  |
-| $4         | Text    |  <- | Dirección IP del servidor                                                    |
-| $5         | Text    |  <- | Nombre de usuario                                                            |
-| $6         | Text    |  <- | Contraseña                                                                   |
-| $0         | Boolean |  -> | True = solicitud aceptada, False = solicitud rechazada                       |
+| Parámetros | Tipo    |                             | Descripción                                                                  |
+| ---------- | ------- | :-------------------------: | ---------------------------------------------------------------------------- |
+| $1         | Text    | <- | URL                                                                          |
+| $2         | Text    | <- | Encabezados HTTP + cuerpo HTTP (hasta un límite de 32 kb) |
+| $3         | Text    | <- | Dirección IP del cliente web (navegador)                  |
+| $4         | Text    | <- | Dirección IP del servidor                                                    |
+| $5         | Text    | <- | Nombre de usuario                                                            |
+| $6         | Text    | <- | Contraseña                                                                   |
+| $0         | Boolean |              ->             | True = solicitud aceptada, False = solicitud rechazada                       |
 
 Debe declarar estos parámetros de la siguiente manera:
 

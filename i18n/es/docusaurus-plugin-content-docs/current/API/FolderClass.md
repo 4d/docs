@@ -66,13 +66,13 @@ Los objetos `Folder` admiten varios nombres de ruta, incluida la sintaxis `files
 
 <!-- REF #_command_.Folder.Params -->
 
-| Parámetros     | Tipo                      |     | Descripción                                                           |
-| -------------- | ------------------------- | :-: | --------------------------------------------------------------------- |
-| path           | Text                      |  -> | Ruta de la carpeta                                                    |
-| folderConstant | Integer                   |  -> | Constante de la carpeta 4D                                            |
-| pathType       | Integer                   |  -> | `fk posix path` (por defecto) o `fk platform path` |
-| -              |                           |  -> | * para devolver la carpeta de la base local                           |
-| Result         | 4D.Folder |  <- | Nuevo objeto de carpeta                                               |
+| Parámetros     | Tipo                      |                             | Descripción                                                           |
+| -------------- | ------------------------- | :-------------------------: | --------------------------------------------------------------------- |
+| path           | Text                      |              ->             | Ruta de la carpeta                                                    |
+| folderConstant | Integer                   |              ->             | Constante de la carpeta 4D                                            |
+| pathType       | Integer                   |              ->             | `fk posix path` (por defecto) o `fk platform path` |
+| -              |                           |              ->             | * para devolver la carpeta de la base local                           |
+| Result         | 4D.Folder | <- | Nuevo objeto de carpeta                                               |
 
 <!-- END REF -->
 
@@ -156,8 +156,8 @@ La función `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crea y devuel
 
 <!--REF #FolderClass.create().Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                        |
-| ---------- | ------- | -- | ------------------------------------------------------------------ |
+| Parámetros | Tipo    |                             | Descripción                                                        |
+| ---------- | ------- | --------------------------- | ------------------------------------------------------------------ |
 | Result     | Boolean | <- | True si la carpeta se ha creado con éxito, false en caso contrario |
 
 <!-- END REF -->
@@ -213,11 +213,11 @@ End if
 
 <!--REF #FolderClass.createAlias().Params -->
 
-| Parámetros        | Tipo                      |    | Descripción                                          |
-| ----------------- | ------------------------- | -- | ---------------------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Carpeta de destino para el alias o el acceso directo |
-| aliasName         | Text                      | -> | Nombre del alias o del atajo                         |
-| aliasType         | Integer                   | -> | Tipo de enlace del alias                             |
+| Parámetros        | Tipo                      |                             | Descripción                                          |
+| ----------------- | ------------------------- | --------------------------- | ---------------------------------------------------- |
+| destinationFolder | 4D.Folder | ->                          | Carpeta de destino para el alias o el acceso directo |
+| aliasName         | Text                      | ->                          | Nombre del alias o del atajo                         |
+| aliasType         | Integer                   | ->                          | Tipo de enlace del alias                             |
 | Result            | 4D.File   | <- | Referencia de alias o de acceso directo              |
 
 <!-- END REF -->
@@ -350,10 +350,10 @@ Cuando se pasa `Delete with contents`:
 
 <!--REF #FolderClass.moveTo().Params -->
 
-| Parámetros        | Tipo                      |    | Descripción                              |
-| ----------------- | ------------------------- | -- | ---------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Carpeta de destino                       |
-| newName           | Text                      | -> | Nombre completo de la carpeta trasladada |
+| Parámetros        | Tipo                      |                             | Descripción                              |
+| ----------------- | ------------------------- | --------------------------- | ---------------------------------------- |
+| destinationFolder | 4D.Folder | ->                          | Carpeta de destino                       |
+| newName           | Text                      | ->                          | Nombre completo de la carpeta trasladada |
 | Result            | 4D.Folder | <- | Carpeta movida                           |
 
 <!-- END REF -->
@@ -409,9 +409,9 @@ Quiere mover y renombrar una carpeta:
 
 <!--REF #FolderClass.rename().Params -->
 
-| Parámetros | Tipo                      |    | Descripción                           |
-| ---------- | ------------------------- | -- | ------------------------------------- |
-| newName    | Text                      | -> | Nuevo nombre completo para la carpeta |
+| Parámetros | Tipo                      |                             | Descripción                           |
+| ---------- | ------------------------- | --------------------------- | ------------------------------------- |
+| newName    | Text                      | ->                          | Nuevo nombre completo para la carpeta |
 | Result     | 4D.Folder | <- | Carpeta renombrada                    |
 
 <!-- END REF -->

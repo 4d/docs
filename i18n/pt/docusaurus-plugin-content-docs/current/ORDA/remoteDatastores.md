@@ -29,7 +29,7 @@ Estes princípios são ilustrados nos gráficos seguintes:
 
 Os processos que gerenciam sessões para acesso ao armazenamento de dados são mostrados na janela de administração do 4D Server:
 
-- nombre: "REST Handler: \\<process name\>"
+- nombre: "REST Handler: \<process name\>"
 - type: type Worker Server HTTP
 - sesión: el nombre de la sesión es el nombre de usuario que se pasa al comando `Open datastore`.
 

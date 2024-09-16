@@ -221,7 +221,7 @@ Para mais informações, ver o capítulo **Processos** e a descrição destes co
 
 :::warning Obsoleto
 
-Use of interprocess variables is not recommended since they are not available from [preemptive processes](../Develop/preemptive.md) and tend to make the code less maintainable.
+O uso de variáveis interprocessadas não é recomendado, uma vez que não estão disponíveis a partir de processos preventivos e tendem a tornar o código mais difícil para manutenção.
 
 :::
 
@@ -236,7 +236,7 @@ Em Cliente/Servidor, cada máquina (máquinas Cliente e máquina Servidor) parti
 
 The 4D language manages several **system variables**, which allow you to control the execution of different operations. You can test their values and use them as any variable. All system variables are [process variables](#process-variables).
 
-System variables are used by [4D commands](commands.md). Refer to the "System variables and sets" paragraph in the description of a command to find out whether it affects a system variable.
+System variables are used by 4D commands. Refer to the "System variables and sets" paragraph in the description of a command to find out whether it affects a system variable.
 
 
 | System variable name                                   | Tipo          | Descrição                                                                                                                                                                                                                                                                      |

@@ -89,15 +89,15 @@ Por tanto, NO se llama al método base `On Web Authentication`:
 
 **On Web Authentication**( _$1_ : Text ; _$2_ : Text ; _$3_ : Text ; _$4_ : Text ; _$5_ : Text ; _$6_ : Text ) -> $0 : Boolean
 
-| Parâmetros | Tipo       |     | Descrição                                                                |
-| ---------- | ---------- | :-: | ------------------------------------------------------------------------ |
-| $1         | Text       |  <- | URL                                                                      |
-| $2         | Text       |  <- | Cabeçalhos HTTP + corpo HTTP (até um limite de 32 kb) |
-| $3         | Text       |  <- | Endereço IP do cliente Web (browser)                  |
-| $4         | Text       |  <- | Endereço IP do servidor                                                  |
-| $5         | Text       |  <- | Nome de usuario                                                          |
-| $6         | Text       |  <- | Senha                                                                    |
-| $0         | Parâmetros |  -> | True = pedido aceite, False = pedido rejeitado                           |
+| Parâmetros | Tipo       |                             | Descrição                                                                |
+| ---------- | ---------- | :-------------------------: | ------------------------------------------------------------------------ |
+| $1         | Text       | <- | URL                                                                      |
+| $2         | Text       | <- | Cabeçalhos HTTP + corpo HTTP (até um limite de 32 kb) |
+| $3         | Text       | <- | Endereço IP do cliente Web (browser)                  |
+| $4         | Text       | <- | Endereço IP do servidor                                                  |
+| $5         | Text       | <- | Nome de usuario                                                          |
+| $6         | Text       | <- | Senha                                                                    |
+| $0         | Parâmetros |              ->             | True = pedido aceite, False = pedido rejeitado                           |
 
 Estes parâmetros devem ser declarados da seguinte forma:
 

@@ -3,7 +3,7 @@ id: components
 title: Componentes
 ---
 
-A 4D component is a set of 4D code and/or 4D forms representing one or more functionalities that you can add and use in your projects. For example, the [4D SVG](https://github.com/4d/4D-SVG) component adds advanced commands and an integrated rendering engine that can be used to display SVG files.
+Um componente 4D é um conjunto de código 4D e/ou formulários que representam uma ou mais funcionalidades que pode adicionar e usar nos seus projetos. For example, the [4D SVG](https://github.com/4d/4D-SVG) component adds advanced commands and an integrated rendering engine that can be used to display SVG files.
 
 You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component\&type=Repositories).
 
@@ -18,7 +18,7 @@ Components can be interpreted or [compiled](../Desktop/building.md). A pasta do 
 
 A 4D project running in interpreted mode can use either interpreted or compiled components. A 4D project running in compiled mode cannot use interpreted components. Por isso não pode ser usado em um componente.
 
-## Loading components
+## Carregando componentes
 
 :::note
 
@@ -34,7 +34,7 @@ This page describes how to work with components in the **4D** and **4D Server** 
 To load a component in your 4D project, you can either:
 
 - copy the component files in the [**Components** folder of your project](architecture.md#components),
-- ou declare o componente no arquivo **dependencies.json**.
+- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Component manager interface**](#adding-a-dependency).
 
 Components declared in the **dependencies.json** file can be stored at different locations:
 
@@ -44,7 +44,7 @@ Components declared in the **dependencies.json** file can be stored at different
 
 If the same component is installed at different locations, a [priority order](#priority) is applied.
 
-### dependencies.json vs environment4d.json
+### dependencies.json e environment4d.json
 
 #### dependencies.json
 
@@ -75,18 +75,26 @@ Since components can be installed in different ways, a priority order is applied
 **Prioridade mais alta**
 
 1. Components stored in the [**Components** folder of the project](architecture.md#components).
-2. Componentes declarados no arquivo **dependencies.json**.
+2. Components declared in the **dependencies.json** file (the **environment4d.json** declared path overrides the **dependencies.json** path to configure a local environment).
 3. Internal User 4D components (e.g. 4D NetKit, 4D SVG...)
 
 **Prioridade mais baixa**
 
-![priority](../assets/en/Project/load-sequence.png)
+```mermaid
+flowchart TB
+    id1("1\nComponents from project's Components folder")~~~
+    id2("2\nComponents listed in dependencies.json")~~~
+    id2 -- environment4d.json gives path --> id4("Load component\nbased on path declared\nin environment4d.json")
+    ~~~
+    id3("3\nUser 4D components")
+    id2 -- environment4d.json doesn't give path --> id5("Load component\nnext to\npackage folder")
+    ~~~
+    id3("3\nUser 4D components")
+```
 
-When a component cannot be loaded because of another instance of the same component located at a higher priority level, it is given the _Overloaded_ [status](#dependency-status). The loaded component has the _Overloading_ [status](#dependency-status).
+When a component cannot be loaded because of another instance of the same component located at a higher priority level, both get a specific [status](#dependency-status): the non-loaded component is given the _Overloaded_ status, while the loaded component has the _Overloading_ status.
 
-(the **environment4d.json** declared path overrides the **dependencies.json** path to configure a local environment).
-
-### Declarando componentes locais
+### Componentes locais
 
 You declare a local component in the [**dependencies.json** file](#dependencyjson) in the following way:
 
@@ -120,7 +128,7 @@ If you do not want to benefit from the **dependencies.json** architecture, you c
 
 If you want to customize the location of local components, you declare the paths for the dependencies that are not stored at the same level as the project folder in the [**environment4d.json**](#environment4djson) file.
 
-You can use absolute or relative paths, expressed in POSIX syntax as described in [this paragraph](../Concepts/paths#posix-syntax). Relative paths are relative to the environment4d.json file.
+You can use **relative** or **absolute** paths (see below).
 
 Exemplos:
 
@@ -129,7 +137,7 @@ Exemplos:
 	"dependencies": {
 		"myComponent1" : "MyComponent1",
 		"myComponent2" : "../MyComponent2",
-        "myComponent3" : "file:///Users/jean/MyComponent3"
+    "myComponent3" : "file:///Users/jean/MyComponent3"
     }
 }
 ```
@@ -140,7 +148,17 @@ If a component path declared in the **environment4d.json** file is not found whe
 
 :::
 
-### Declarando componentes armazenados no GitHub
+#### Caminhos relativos versus caminhos absolutos
+
+Paths are expressed in POSIX syntax as described in [this paragraph](../Concepts/paths#posix-syntax).
+
+Relative paths are relative to the [`environment4d.json`](#environment4djson) file. Absolute paths are linked to the user's machine.
+
+Using relative paths is **recommended** in most cases, since they provide flexibility and portability of the components architecture, especially if the project is hosted in a source control tool.
+
+Absolute paths should only be used for components that are specific to one machine and one user.
+
+### Components stored on GitHub
 
 4D components available as GitHub releases can be referenced and automatically loaded in your 4D projects.
 
@@ -227,8 +245,10 @@ Eis alguns exemplos:
 - "\*": a versão mais recente lançada.
 - "1.\*": todas as versões da versão principal 1.
 - "1.2.\*": todos os patches da versão menor 1.2.
-- "^1.2.3" or ">=1.2.3": the latest version 1, starting with the 1.2.3 version.
-- "~1.2.3" or ">1.2.3": the latest major version 1, starting with the version just after the 1.2.3.
+- ">=1.2.3": the latest version, starting with the 1.2.3 version.
+- ">1.2.3": the latest version, starting with the version just after the 1.2.3.
+- "^1.2.3": the latest version 1, starting with the 1.2.3 version and strictly lower than version 2.
+- "~1.2.3": the latest version 1.2, starting with the 1.2.3 version and strictly lower than version 1.3.
 - "<=1.2.3": a versão mais recente até a 1.2.3.
 - "1.0.0 – 1.2.3" or ">=1.0.0 <=1.2.3": version between 1.0.0 and 1.2.3.
 - "`<1.2.3 || >=2`": versão que não está entre 1.2.3 e 2.0.0.
@@ -280,7 +300,7 @@ This file logs information such as the state of dependencies, paths, urls, loadi
 
 ## Monitoramento das dependências do projeto
 
-In an opened project, you can get information about dependencies and their current loading status in the **Dependencies** panel.
+In an opened project, you can add, remove, and get information about dependencies and their current loading status in the **Dependencies** panel.
 
 Para exibir o painel Dependências:
 
@@ -293,6 +313,46 @@ Para exibir o painel Dependências:
 O painel Dependência é então exibido. Dependencies are sorted by name in alphabetical order:
 
 ![dependency](../assets/en/Project/dependency.png)
+
+### Adding and Removing Dependencies
+
+The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server). Pode:
+
+- add local dependencies ([GitHub dependencies](#components-stored-on-github) cannot be added through the interface),
+- remove any dependency.
+
+#### Adding a dependency
+
+To add a dependency from the Dependencies panel, click on the **+** button of the panel or select **Add a dependency...** from the contextual menu. A standard Open file dialog box is displayed, allowing you to select the component to add. You can select a **.4DBase** package or a [**.4DProject** file](architecture.md##applicationname4dproject-file). It the selected item is not valid, an error is displayed.
+
+- If you select a component located next to the project package folder (default location), it is automatically declared in the [**dependencies.json**](#dependenciesjson) file.
+- If you select a component that is not located next to the project package folder, it is automatically declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). The Dependencies panel asks if you want to save a [relative or absolute path](#relative-paths-vs-absolute-paths).
+
+:::note
+
+If no [**environment4d.json**](#environmen4djson) file is already defined for the project at this step, it is automatically created in the project package folder (default location).
+
+:::
+
+The selected dependency is automatically added to the [inactive dependency list](#dependency-status). It will be loaded once the application restarts.
+
+#### Removing a dependency
+
+To add a dependency from the Dependencies panel, select the dependency to remove and click on the **-** button of the panel or select **Remove the dependency...** from the contextual menu. You can select several dependencies, in which case the action is applied to all selected dependencies.
+
+:::note
+
+Only dependencies declared in the [**dependencies.json**](#dependenciesjson) file can be removed using the Dependencies panel. If a selected dependency cannot be removed, the **-** button is disabled and the **Remove the dependency...** menu item is hidden.
+
+:::
+
+É exibida uma caixa de diálogo de confirmação. If the dependency was declared in the **environment4d.json** file, an option allows you to remove it:
+
+![dependency-remove](../assets/en/Project/remove-comp.png)
+
+If you confirm the dialog box, the removed dependency is automatically flagged "Unload at restart". It will be unloaded once the application restarts.
+
+![status-unload](../assets/en/Project/status-unload.png)
 
 ### Origem da dependência
 

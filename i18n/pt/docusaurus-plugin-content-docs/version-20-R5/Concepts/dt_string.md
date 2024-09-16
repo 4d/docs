@@ -36,24 +36,24 @@ As seguintes sequências de escape podem ser utilizadas em strings de caracteres
 
 ## Operadores de string
 
-| Operação             | Sintaxe          | Retorna    | Expression              | Valor    |
-| -------------------- | ---------------- | ---------- | ----------------------- | -------- |
-| Concatenação         | String + String  | String     | "abc" + "def"           | "abcdef" |
-| Repetição            | String \* Number | String     | "ab" \* 3               | "ababab" |
-| Igual                | String = String  | Parâmetros | "abc" = "abc"           | True     |
-|                      |                  |            | "abc" = "abd"           | False    |
-| Desigualdade         | String # String  | Parâmetros | "abc" # "abd"           | True     |
-|                      |                  |            | "abc" # "abc"           | False    |
-| Maior que            | Cadena > Cadena  | Parâmetros | "abd" > "abc"           | True     |
-|                      |                  |            | "abc" > "abc"           | False    |
-| Menor que            | Cadena < Cadena  | Parâmetros | "abc" < "abd"           | True     |
-|                      |                  |            | "abc" < "abc"           | False    |
-| Maior ou igual a     | Cadena >= Cadena | Parâmetros | "abd" >= "abc"          | True     |
-|                      |                  |            | "abc" >= "abd"          | False    |
-| Menor que ou igual a | Cadena <= Cadena | Parâmetros | "abc" <= "abd"          | True     |
-|                      |                  |            | "abd" <= "abc"          | False    |
-| Contém palavra chave | String % String  | Parâmetros | "Alpha Bravo" % "Bravo" | True     |
-|                      |                  |            | "Alpha Bravo" % "ravo"  | False    |
+| Operação             | Sintaxe                                   | Retorna    | Expression                              | Valor    |
+| -------------------- | ----------------------------------------- | ---------- | --------------------------------------- | -------- |
+| Concatenação         | String + String                           | String     | "abc" + "def"                           | "abcdef" |
+| Repetição            | String \* Number                          | String     | "ab" \* 3                               | "ababab" |
+| Igual                | String = String                           | Parâmetros | "abc" = "abc"                           | True     |
+|                      |                                           |            | "abc" = "abd"                           | False    |
+| Desigualdade         | String # String                           | Parâmetros | "abc" # "abd"                           | True     |
+|                      |                                           |            | "abc" # "abc"                           | False    |
+| Maior que            | Cadena > Cadena                           | Parâmetros | "abd" > "abc"                           | True     |
+|                      |                                           |            | "abc" > "abc"                           | False    |
+| Menor que            | Cadena < Cadena  | Parâmetros | "abc" < "abd"  | True     |
+|                      |                                           |            | "abc" < "abc"  | False    |
+| Maior ou igual a     | Cadena >= Cadena                          | Parâmetros | "abd" >= "abc"                          | True     |
+|                      |                                           |            | "abc" >= "abd"                          | False    |
+| Menor que ou igual a | Cadena <= Cadena | Parâmetros | "abc" <= "abd" | True     |
+|                      |                                           |            | "abd" <= "abc" | False    |
+| Contém palavra chave | String % String                           | Parâmetros | "Alpha Bravo" % "Bravo"                 | True     |
+|                      |                                           |            | "Alpha Bravo" % "ravo"                  | False    |
 
 ## Comparações de cadeias
 
@@ -140,7 +140,7 @@ Ao contrário de outras comparações de cadeias, a pesquisa por palavras-chave 
 
 > **Notas:**
 >
-> - 4D usa a biblioteca ICU para comparar strings (usando operadores `<>=#`) e detectar palavras-chave. Para mais informações sobre as regras implementadas, consulte o seguinte endereço: http://www.unicode.org/reports/tr29/#Word_Boundaries.
+> - 4D usa a biblioteca ICU para comparar strings (usando operadores `<>=#`) e detectar palavras-chave. Para mais informações sobre as regras implementadas, consulte o seguinte endereço: <http://www.unicode.org/reports/tr29/#Word_Boundaries>.
 > - Na versão japonesa, em vez de ICU, 4D usa Mecab por defeito para detectar palavras-chave.
 
 ## Símbolos de referência de caracteres

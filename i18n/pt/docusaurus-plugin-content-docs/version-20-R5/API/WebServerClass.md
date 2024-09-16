@@ -70,9 +70,9 @@ Eles oferecem as propriedades abaixo e funções:
 
 <!-- REF #_command_.WEB Server.Params -->
 
-| Parâmetro  | Tipo                          |    | Descrição                                                                                |
-| ---------- | ----------------------------- | -- | ---------------------------------------------------------------------------------------- |
-| option     | Integer                       | -> | Servidor Web a ser obtido (padrão se omitido = `Web server database`) |
+| Parâmetro  | Tipo                          |                             | Descrição                                                                                |
+| ---------- | ----------------------------- | --------------------------- | ---------------------------------------------------------------------------------------- |
+| option     | Integer                       | ->                          | Servidor Web a ser obtido (padrão se omitido = `Web server database`) |
 | Resultados | 4D. WebServer | <- | Objeto Web Server                                                                        |
 
 <!-- END REF -->
@@ -116,8 +116,8 @@ Do seu componente, você quer saber se o servidor Web do banco de dados host est
 
 <!-- REF #_command_.WEB Server list.Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                                     |
-| ---------- | ---------- | -- | --------------------------------------------- |
+| Parâmetro  | Tipo       |                             | Descrição                                     |
+| ---------- | ---------- | --------------------------- | --------------------------------------------- |
 | Resultados | Collection | <- | Coleção de objetos do Servidor Web disponível |
 
 <!-- END REF -->
@@ -226,9 +226,9 @@ Contains the <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed ho
   - 192.168.5.17
   - 192.168.\*
   - 192.168.\*:8081
-  - http://192.168.5.17:8081
-  - http://\*.myDomain.com
-  - http://myProject.myDomain.com
+  - <http://192.168.5.17:8081>
+  - <http://\*.myDomain.com>
+  - <http://myProject.myDomain.com>
   - \*.myDomain.com
   - myProject.myDomain.com
   - \*
@@ -651,9 +651,9 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 <!-- REF #WebServerClass.start().Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                           |
-| ---------- | ------ | -- | --------------------------------------------------- |
-| settings   | Object | -> | Configurações do servidor Web a definir no arranque |
+| Parâmetro  | Tipo   |                             | Descrição                                           |
+| ---------- | ------ | --------------------------- | --------------------------------------------------- |
+| settings   | Object | ->                          | Configurações do servidor Web a definir no arranque |
 | Resultados | Object | <- | Estado de arranque do servidor web                  |
 
 <!-- END REF -->

@@ -34,7 +34,7 @@ Esta página describe cómo trabajar con componentes en los entornos **4D** y **
 Para cargar un componente en su proyecto 4D, usted puede:
 
 - copiar los archivos del componente en la [carpeta **Components** de su proyecto](architecture.md#components),
-- o, declarar el componente en el archivo **dependencies.json**.
+- o bien, declare el componente en el archivo **dependencies.json** de su proyecto; esto se hace automáticamente para los archivos locales cuando [**añade una dependencia utilizando la interfaz del gestor de componentes**](#adding-a-dependency).
 
 Los componentes declarados en el archivo **dependencies.json** pueden almacenarse en diferentes ubicaciones:
 
@@ -44,7 +44,7 @@ Los componentes declarados en el archivo **dependencies.json** pueden almacenars
 
 Si se instala el mismo componente en distintos lugares, se aplica un [orden de prioridad](#priority).
 
-### dependencies.json vs environment4d.json
+### dependencies.json y environment4d.json
 
 #### dependencies.json
 
@@ -75,18 +75,26 @@ Dado que los componentes pueden instalarse de distintas formas, se aplica un ord
 **Máxima prioridad**
 
 1. Componentes almacenados en la carpeta [**Components** del proyecto](architecture.md#components).
-2. Componentes declarados en el archivo **dependencies.json**.
+2. Componentes declarados en el archivo **dependencies.json** (la ruta declarada **environment4d.json** anula la ruta **dependencies.json** para configurar un entorno local).
 3. Componentes 4D internos del usuario (por ejemplo, 4D NetKit, 4D SVG...)
 
 **Prioridad más baja**
 
-![priority](../assets/en/Project/load-sequence.png)
+```mermaid
+flowchart TB
+    id1("1\nComponents from project's Components folder")~~~
+    id2("2\nComponents listed in dependencies.json")~~~
+    id2 -- environment4d.json gives path --> id4("Load component\nbased on path declared\nin environment4d.json")
+    ~~~
+    id3("3\nUser 4D components")
+    id2 -- environment4d.json doesn't give path --> id5("Load component\nnext to\npackage folder")
+    ~~~
+    id3("3\nUser 4D components")
+```
 
-Cuando un componente no puede cargarse debido a otra instancia del mismo componente situada en un nivel de prioridad superior, recibe el [estado] _Overloaded_ (#estado de dependencia). El componente cargado tiene el [estado](#dependency-status) _Overloading_.
+Cuando un componente no puede cargarse debido a otra instancia del mismo componente situada en un nivel de prioridad superior, ambos obtienen un [estado] específico (#dependency-status): el componente no cargado recibe el estado _Overloaded_, mientras que el componente cargado tiene el estado _Overloading_.
 
-(la ruta declarada en **environment4d.json** sobrescribe la ruta en **dependencies.json** para configurar un entorno local).
-
-### Declarando componentes locales
+### Componentes locales
 
 Declara un componente local en el archivo [**dependencies.json**](#dependencyjson) de la siguiente manera:
 
@@ -120,7 +128,7 @@ Si no desea beneficiarse de la arquitectura **dependencies.json**, puede instala
 
 Si desea personalizar la ubicación de los componentes locales, declare las rutas de las dependencias que no se almacenan en el mismo nivel que la carpeta del proyecto en el archivo [**environment4d.json**](#environment4djson).
 
-Puede utilizar rutas absolutas o relativas, expresadas en sintaxis POSIX como se describe en [este párrafo](../Concepts/paths#posix-syntax). Las rutas relativas son relativas al archivo environment4d.json.
+Puede utilizar rutas **relativas** o **absolutas** (ver abajo).
 
 Ejemplos:
 
@@ -129,7 +137,7 @@ Ejemplos:
 	"dependencies": {
 		"myComponent1" : "MyComponent1",
 		"myComponent2" : "../MyComponent2",
-        "myComponent3" : "file:///Users/jean/MyComponent3"
+    "myComponent3" : "file:///Users/jean/MyComponent3"
     }
 }
 ```
@@ -140,7 +148,17 @@ Si la ruta de un componente declarado en el archivo **environment4d.json** no se
 
 :::
 
-### Declarar componentes almacenados en GitHub
+#### Rutas relativas frente a rutas absolutas
+
+Las rutas se expresan en sintaxis POSIX como se describe en [este párrafo](../Concepts/paths#posix-syntax).
+
+Las rutas relativas son relativas al archivo [`environment4d.json`](#environment4djson). Las rutas absolutas están vinculadas a la máquina del usuario.
+
+Utilizar rutas relativas es **recomendable** en la mayoría de los casos, ya que ofrecen flexibilidad y portabilidad de la arquitectura de componentes, especialmente si el proyecto está alojado en una herramienta de control de código fuente.
+
+Las rutas absolutas sólo deben utilizarse para componentes específicos de una máquina y un usuario.
+
+### Componentes almacenados en GitHub
 
 Los componentes 4D disponibles en GitHub pueden ser referenciados y cargados automáticamente en sus proyectos 4D.
 
@@ -227,8 +245,10 @@ Estos son algunos ejemplos:
 - "\*": la última versión lanzada.
 - "1.\*": todas las versiones de la versión principal 1.
 - "1.2.\*": todos los parches de la versión menor 1.2.
-- "^1.2.3" o ">=1.2.3": la última versión 1, a partir de la versión 1.2.3.
-- "~1.2.3" o ">1.2.3": la última versión mayor 1, empezando por la versión inmediatamente posterior a la 1.2.3.
+- ">=1.2.3": la última versión, a partir de la versión 1.2.3.
+- ">1.2.3": la última versión, empezando por la versión inmediatamente posterior a la 1.2.3.
+- "^1.2.3": la última versión 1, a partir de la versión 1.2.3 y estrictamente inferior a la versión 2.
+- "~1.2.3": la última versión 1.2, a partir de la versión 1.2.3 y estrictamente inferior a la versión 1.3.
 - "<=1.2.3": la última versión hasta la 1.2.3.
 - "1.0.0 – 1.2.3" o ">=1.0.0 <=1.2.3": versión entre 1.0.0 y 1.2.3.
 - "`<1.2.3 || >=2`": versión que no está entre 1.2.3 y 2.0.0.
@@ -280,7 +300,7 @@ Este archivo registra información como el estado de las dependencias, rutas, ur
 
 ## Monitoreo de dependencias del proyecto
 
-En un proyecto abierto, puede obtener información sobre las dependencias y su estado de carga actual en el panel **Dependencias**.
+En un proyecto abierto, puede añadir, eliminar y obtener información sobre las dependencias y su estado de carga actual en el panel **Dependencias**.
 
 Para mostrar el panel Dependencias:
 
@@ -293,6 +313,46 @@ Para mostrar el panel Dependencias:
 A continuación se muestra el panel Dependencias. Las dependencias se ordenan por nombre en orden alfabético:
 
 ![dependency](../assets/en/Project/dependency.png)
+
+### Añadiendo y eliminando dependencias
+
+La interfaz del panel Dependencias le permite gestionar las dependencias (en 4D monousuario y 4D Server). Puede:
+
+- añadir dependencias locales ([dependencias de GitHub](#components-stored-on-github) no pueden añadirse a través de la interfaz),
+- eliminar toda dependencia.
+
+#### Añadir una dependencia
+
+Para añadir una dependencia desde el panel Dependencias, haga clic en el botón **+** del panel o seleccione **Añadir una dependencia...** en el menú contextual. Aparece una caja de diálogo estándar Abrir archivo, que le permite seleccionar el componente que desea añadir. Puede seleccionar un paquete **.4DBase** o un archivo [**.4DProject**](architecture.md##applicationname4dproject-file). Si el elemento seleccionado no es válido, se muestra un error.
+
+- Si selecciona un componente situado junto a la carpeta del paquete del proyecto (ubicación predeterminada), se declara automáticamente en el archivo [**dependencies.json**](#dependenciesjson).
+- Si selecciona un componente que no se encuentra junto a la carpeta del paquete del proyecto, se declara automáticamente en el archivo [**dependencies.json**](#dependenciesjson) y su ruta se declara en el archivo [**environment4d.json**](#environmen4djson) (ver nota). El panel Dependencias le pregunta si desea guardar una [ruta relativa o absoluta](#relative-paths-vs-absolute-paths).
+
+:::note
+
+Si en este paso no se ha definido aún ningún archivo [**environment4d.json**](#environmen4djson) para el proyecto, se creará automáticamente en la carpeta del paquete del proyecto (ubicación por defecto).
+
+:::
+
+La dependencia seleccionada se añade automáticamente a la [lista de dependencias inactivas](#dependency-status). Se cargará cuando se reinicie la aplicación.
+
+#### Eliminando una dependencia
+
+Para añadir una dependencia desde el panel de dependencias, seleccione la dependencia que desea eliminar y haga clic en el botón **-** del panel o seleccione **Eliminar la dependencia...** en el menú contextual. Puede seleccionar varias relaciones, en cuyo caso la acción se aplica a todas las relaciones seleccionadas.
+
+:::note
+
+Sólo las dependencias declaradas en el archivo [**dependencies.json**](#dependenciesjson) pueden eliminarse mediante el panel Dependencias. Si no se puede eliminar una dependencia seleccionada, se desactiva el botón **-** y se oculta la opción de menú **Eliminar la dependencia...**.
+
+:::
+
+Aparece una caja de diálogo de confirmación. Si la dependencia se declaró en el archivo **environment4d.json**, una opción permite eliminarla:
+
+![dependency-remove](../assets/en/Project/remove-comp.png)
+
+Si confirma la caja de diálogo, la dependencia eliminada se marca automáticamente como "Descargar al reiniciar". Se descargará cuando se reinicie la aplicación.
+
+![status-unload](../assets/en/Project/status-unload.png)
 
 ### Origen de dependencia
 

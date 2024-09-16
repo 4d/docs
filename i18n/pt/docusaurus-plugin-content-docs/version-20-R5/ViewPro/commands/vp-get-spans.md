@@ -9,9 +9,9 @@ title: VP Get spans
 
 <!-- REF #_method_.VP Get spans.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                        |                  |
-| ---------- | ------ | -- | ------------------------------------------------ | ---------------- |
-| rangeObj   | Object | -> | Objeto intervalo                                 |                  |
+| Parâmetro  | Tipo   |                             | Descrição                                        |                  |
+| ---------- | ------ | --------------------------- | ------------------------------------------------ | ---------------- |
+| rangeObj   | Object | ->                          | Objeto intervalo                                 |                  |
 | Resultados | Object | <- | Objeto de células fundidas no intervalo definido | <!-- END REF --> |
 
 #### Descrição

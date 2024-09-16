@@ -17,12 +17,12 @@ title: VP Get column attributes
 
 <!-- REF #_method_.VP Get table column attributes.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                   |                  |
-| ---------- | ------- | -- | ----------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                  |                  |
-| tableName  | Text    | -> | Nome da tabela                                              |                  |
-| column     | Integer | -> | Índice da coluna na tabela                                  |                  |
-| sheet      | Integer | -> | Índice da folha (folha atual se omitida) |                  |
+| Parâmetro  | Tipo    |                             | Descrição                                                   |                  |
+| ---------- | ------- | --------------------------- | ----------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nome de objeto formulário área 4D View Pro                  |                  |
+| tableName  | Text    | ->                          | Nome da tabela                                              |                  |
+| column     | Integer | ->                          | Índice da coluna na tabela                                  |                  |
+| sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
 | Resultados | Object  | <- | Atributos da *coluna*                                       | <!-- END REF --> |
 
 #### Descrição

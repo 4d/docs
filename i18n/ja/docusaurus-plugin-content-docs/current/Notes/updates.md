@@ -11,6 +11,7 @@ title: リリースノート
 
 - 時間型のリストボックスの列とヘッダーは、["blankIfNull" オプション](../FormObjects/properties_Display.md#時間フォーマット) をサポートするようになりました。
 - [.getBoxInfo()](../API/IMAPTransporterClass.md#getboxinfo) および [.getBoxList()](../API/IMAPTransporterClass.md#getboxlist) に新しいプロパティが追加されました。
+- You can now [add and remove components using the Component manager interface](../Project/components.md#adding-and-removing-dependencies).
 
 ## 4D 20 R6
 

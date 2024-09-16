@@ -70,9 +70,9 @@ Leurs propriétés et fonctions sont les suivantes :
 
 <!-- REF #_command_.WEB Server.Params -->
 
-| Paramètres | Type                         |    | Description                                                                          |
-| ---------- | ---------------------------- | -- | ------------------------------------------------------------------------------------ |
-| option     | Integer                      | -> | Serveur Web à référencer (défaut si omis = `Web server database`) |
+| Paramètres | Type                         |                             | Description                                                                          |
+| ---------- | ---------------------------- | --------------------------- | ------------------------------------------------------------------------------------ |
+| option     | Integer                      | ->                          | Serveur Web à référencer (défaut si omis = `Web server database`) |
 | Résultat   | 4D.WebServer | <- | Objet Serveur Web                                                                    |
 
 <!-- END REF -->
@@ -116,8 +116,8 @@ L'objet Web server retourné contient les valeurs courantes des propriétés du 
 
 <!-- REF #_command_.WEB Server list.Params -->
 
-| Paramètres | Type       |    | Description                                  |
-| ---------- | ---------- | -- | -------------------------------------------- |
+| Paramètres | Type       |                             | Description                                  |
+| ---------- | ---------- | --------------------------- | -------------------------------------------- |
 | Résultat   | Collection | <- | Collection des objets Web server disponibles |
 
 <!-- END REF -->
@@ -226,9 +226,9 @@ Contient la <!-- REF #WebServerClass.CORSSettings.Summary -->liste d'hôtes et d
   - 192.168.5.17
   - 192.168.\*
   - 192.168.\*:8081
-  - http://192.168.5.17:8081
-  - http://\*.myDomain.com
-  - http://myProject.myDomain.com
+  - <http://192.168.5.17:8081>
+  - <http://\*.myDomain.com>
+  - <http://myProject.myDomain.com>
   - \*.myDomain.com
   - myProject.myDomain.com
   - \*
@@ -651,9 +651,9 @@ Voir [cookie de session SameSite](WebServer/webServerConfig.md#session-cookie-sa
 
 <!-- REF #WebServerClass.start().Params -->
 
-| Paramètres | Type   |    | Description                            |
-| ---------- | ------ | -- | -------------------------------------- |
-| settings   | Object | -> | Paramètres du serveur web au démarrage |
+| Paramètres | Type   |                             | Description                            |
+| ---------- | ------ | --------------------------- | -------------------------------------- |
+| settings   | Object | ->                          | Paramètres du serveur web au démarrage |
 | Résultat   | Object | <- | État du démarrage du serveur web       |
 
 <!-- END REF -->

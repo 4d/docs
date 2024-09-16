@@ -9,10 +9,10 @@ title: VP Combine ranges
 
 <!-- REF #_method_.VP Combine ranges.Params -->
 
-| Paramètres    | Type   |    | Description                        |                  |
-| ------------- | ------ | -- | ---------------------------------- | ---------------- |
-| rangeObj      | Object | -> | Objet plage                        |                  |
-| otherRangeObj | Object | -> | Objet plage                        |                  |
+| Paramètres    | Type   |                             | Description                        |                  |
+| ------------- | ------ | --------------------------- | ---------------------------------- | ---------------- |
+| rangeObj      | Object | ->                          | Objet plage                        |                  |
+| otherRangeObj | Object | ->                          | Objet plage                        |                  |
 | Résultat      | Object | <- | Objet contenant une plage combinée | <!-- END REF --> |
 
 #### Description

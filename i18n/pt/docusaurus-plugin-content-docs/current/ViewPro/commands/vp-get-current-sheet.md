@@ -9,9 +9,9 @@ title: VP Get current sheet
 
 <!-- REF #_method_.VP Get current sheet.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                  |                  |
-| ---------- | ------- | -- | ------------------------------------------ | ---------------- |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |                  |
+| Parâmetro  | Tipo    |                             | Descrição                                  |                  |
+| ---------- | ------- | --------------------------- | ------------------------------------------ | ---------------- |
+| vpAreaName | Text    | ->                          | Nome de objeto formulário área 4D View Pro |                  |
 | Resultado  | Integer | <- | Índice da folha actual                     | <!-- END REF --> |
 
 #### Descrição

@@ -17,9 +17,9 @@ title: VP Find table
 
 <!-- REF #_method_.VP Find table.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição            |                  |
-| ---------- | ------ | -- | -------------------- | ---------------- |
-| rangeObj   | Object | -> | Intervalo de células |                  |
+| Parâmetro  | Tipo   |                             | Descrição            |                  |
+| ---------- | ------ | --------------------------- | -------------------- | ---------------- |
+| rangeObj   | Object | ->                          | Intervalo de células |                  |
 | Resultados | Text   | <- | Nome da tabela       | <!-- END REF --> |
 
 #### Descrição

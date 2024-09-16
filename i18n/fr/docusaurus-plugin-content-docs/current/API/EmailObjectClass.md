@@ -54,8 +54,8 @@ Toutes les propriétés qui contiennent des adresses email ([`from`](#from), [`c
 #### Text
 
 - une adresse uniquement : "somebody@domain.com"
-- un seul nom d'affichage+courriel : "Somebodysomebody@domain.com"
-- plusieurs courriels : "Somebody somebody@domain.com,me@home.org"
+- un seul nom d'affichage+courriel : "Somebody<somebody@domain.com>"
+- plusieurs courriels : "Somebody <somebody@domain.com>,me@home.org"
 
 #### Object
 
@@ -148,7 +148,7 @@ L'objet `.bodyStructure` contient les propriété suivantes :
 
 #### Description
 
-La propriété `.bodyValues` contient l'<!-- REF #EmailObjectClass.bodyValues.Summary -->objet *EmailBodyValue*, contenant un objet pour chaque \\<partID\> de `bodyStructure` (facultatif)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
+La propriété `.bodyValues` contient l'<!-- REF #EmailObjectClass.bodyValues.Summary -->objet *EmailBodyValue*, contenant un objet pour chaque \<partID\> de `bodyStructure` (facultatif)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
 
 L'objet `.bodyValues` contient les propriété suivantes :
 
@@ -247,9 +247,9 @@ La propriété `.keywords` contient un <!-- REF #EmailObjectClass.keywords.Summa
 
 Cette propriété est l'en-tête "keywords" (voir la [RFC#4021](https://tools.ietf.org/html/rfc4021)).
 
-| Propriété                       | Type    | Valeur                                                                           |
-| ------------------------------- | ------- | -------------------------------------------------------------------------------- |
-| .\\<keyword\> | boolean | Mot-clé à définir à définir (la valeur doit être mise à vrai) |
+| Propriété                                               | Type    | Valeur                                                                           |
+| ------------------------------------------------------- | ------- | -------------------------------------------------------------------------------- |
+| .\<keyword\> | boolean | Mot-clé à définir à définir (la valeur doit être mise à vrai) |
 
 Mots-clés réservés :
 
@@ -375,10 +375,10 @@ La propriété `.to` contient <!-- REF #EmailObjectClass.to.Summary -->la ou les
 
 <!-- REF #_command_.MAIL Convert from MIME.Params -->
 
-| Paramètres | Type       |     | Description   |
-| ---------- | ---------- | :-: | ------------- |
-| mime       | Blob, Text |  -> | Email en MIME |
-| Résultat   | Object     |  <- | Objet email   |
+| Paramètres | Type       |                             | Description   |
+| ---------- | ---------- | :-------------------------: | ------------- |
+| mime       | Blob, Text |              ->             | Email en MIME |
+| Résultat   | Object     | <- | Objet email   |
 
 <!-- END REF -->
 
@@ -462,11 +462,11 @@ $status:=$transporter.send($email)
 
 <!-- REF #_command_.MAIL Convert to MIME.Params -->
 
-| Paramètres | Type   |     | Description                              |
-| ---------- | ------ | :-: | ---------------------------------------- |
-| mail       | Object |  -> | Objet email                              |
-| options    | Object |  -> | Options d'encodage et de charset du mail |
-| Résultat   | Text   |  <- | Objet email converti en MIME             |
+| Paramètres | Type   |                             | Description                              |
+| ---------- | ------ | :-------------------------: | ---------------------------------------- |
+| mail       | Object |              ->             | Objet email                              |
+| options    | Object |              ->             | Options d'encodage et de charset du mail |
+| Résultat   | Text   | <- | Objet email converti en MIME             |
 
 <!-- END REF -->
 

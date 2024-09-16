@@ -50,9 +50,9 @@ The availability of properties and functions in the `Session` object depend on t
 
 <!-- REF #_command_.Session.Params -->
 
-| Parâmetro  | Tipo                        |     | Descrição       |
-| ---------- | --------------------------- | :-: | --------------- |
-| Resultados | 4D. Session |  <- | Objecto Session |
+| Parâmetro  | Tipo                        |                             | Descrição       |
+| ---------- | --------------------------- | :-------------------------: | --------------- |
+| Resultados | 4D. Session | <- | Objecto Session |
 
 <!-- END REF -->
 
@@ -143,9 +143,9 @@ IP:port/4DACTION/action_Session
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                           |
-| ---------- | ---------- | :-: | ----------------------------------- |
-| Resultados | Parâmetros |  <- | True se a execução for bem-sucedida |
+| Parâmetro  | Tipo       |                             | Descrição                           |
+| ---------- | ---------- | :-------------------------: | ----------------------------------- |
+| Resultados | Parâmetros | <- | True se a execução for bem-sucedida |
 
 <!-- END REF -->
 
@@ -223,9 +223,9 @@ $expiration:=Session.expirationDate //por exemplo "2021-11-05T17:10:42Z"
 
 <!-- REF #SessionClass.getPrivileges().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                                    |
-| ---------- | ---------- | :-: | ------------------------------------------------------------ |
-| Resultados | Collection |  <- | Coleção de nomes de privilégios (strings) |
+| Parâmetro  | Tipo       |                             | Descrição                                                    |
+| ---------- | ---------- | :-------------------------: | ------------------------------------------------------------ |
+| Resultados | Collection | <- | Coleção de nomes de privilégios (strings) |
 
 <!-- END REF -->
 
@@ -318,10 +318,10 @@ $privileges := Session.getPrivileges()
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                                |
-| ---------- | ---------- | :-: | -------------------------------------------------------- |
-| privilege  | Text       |  -> | Nome do privilegio a verificar                           |
-| Resultados | Parâmetros |  <- | True se a sessão tiver *privilege*, False caso contrário |
+| Parâmetro  | Tipo       |                             | Descrição                                                |
+| ---------- | ---------- | :-------------------------: | -------------------------------------------------------- |
+| privilege  | Text       |              ->             | Nome do privilegio a verificar                           |
+| Resultados | Parâmetros | <- | True se a sessão tiver *privilege*, False caso contrário |
 
 <!-- END REF -->
 
@@ -485,9 +485,9 @@ Since `.info` is a computed property, it is recommended to call it once and then
 
 <!-- REF #SessionClass.isGuest().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                                   |
-| ---------- | ---------- | :-: | ----------------------------------------------------------- |
-| Resultados | Parâmetros |  <- | True se a sessão for uma sessão Guest, False caso contrário |
+| Parâmetro  | Tipo       |                             | Descrição                                                   |
+| ---------- | ---------- | :-------------------------: | ----------------------------------------------------------- |
+| Resultados | Parâmetros | <- | True se a sessão for uma sessão Guest, False caso contrário |
 
 <!-- END REF -->
 
@@ -530,12 +530,12 @@ End if
 
 <!-- REF #SessionClass.setPrivileges().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                                                           |
-| ---------- | ---------- | :-: | ----------------------------------------------------------------------------------- |
-| privilege  | Text       |  -> | Nome do privilégio                                                                  |
-| privileges | Collection |  -> | Collection de nomes de privilégios                                                  |
-| settings   | Object     |  -> | Objetos com as propriedades "privilégios" (string ou collection) |
-| Resultados | Parâmetros |  <- | True se a execução for bem-sucedida                                                 |
+| Parâmetro  | Tipo       |                             | Descrição                                                                           |
+| ---------- | ---------- | :-------------------------: | ----------------------------------------------------------------------------------- |
+| privilege  | Text       |              ->             | Nome do privilégio                                                                  |
+| privileges | Collection |              ->             | Collection de nomes de privilégios                                                  |
+| settings   | Object     |              ->             | Objetos com as propriedades "privilégios" (string ou collection) |
+| Resultados | Parâmetros | <- | True se a execução for bem-sucedida                                                 |
 
 <!-- END REF -->
 

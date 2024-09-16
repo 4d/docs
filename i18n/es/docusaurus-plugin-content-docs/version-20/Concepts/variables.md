@@ -220,7 +220,7 @@ Para más información, consulte el capítulo **Procesos** y la descripción de 
 
 :::warning Obsoleto
 
-No se recomienda el uso de variables interproceso, ya que no están disponibles para los [procesos apropiativos](../Develop/preemptive.md) y tienden a hacer que el código sea menos mantenible.
+No se recomienda el uso de variables interproceso, ya que no están disponibles para los procesos apropiativos y tienden a hacer que el código sea menos mantenible.
 
 :::
 

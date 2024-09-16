@@ -219,7 +219,7 @@ Pour plus d'informations, reportez-vous à la section **Process** et à la descr
 
 :::warning Deprecated
 
-Use of interprocess variables is not recommended since they are not available from [preemptive processes](../Develop/preemptive.md) and tend to make the code less maintainable.
+L'utilisation de variables interprocess est désormais déconseillée car elles ne sont pas disponibles depuis les process préemptifs et ont tendance à rendre le code moins maintenable.
 
 :::
 

@@ -9,9 +9,9 @@ title: VP Convert from 4D View
 
 <!-- REF #_method_.VP Convert from 4D View.Params -->
 
-| Parámetros     | Tipo   |    | Descripción                        |
-| -------------- | ------ | -- | ---------------------------------- |
-| 4DViewDocument | Blob   | -> | Documento 4D View                  |
+| Parámetros     | Tipo   |                             | Descripción                        |
+| -------------- | ------ | --------------------------- | ---------------------------------- |
+| 4DViewDocument | Blob   | ->                          | Documento 4D View                  |
 | Result         | Object | <- | Objeto 4D View Pro<!-- END REF --> |
 
 #### Descripción

@@ -433,12 +433,12 @@ Essa propriedade é **somente leitura**.
 
 <!-- REF #directory.copyTo().Params -->
 
-| Parâmetro         | Tipo                       |     | Descrição                                              |
-| ----------------- | -------------------------- | :-: | ------------------------------------------------------ |
-| destinationFolder | 4D. Folder |  -> | Pasta de destino                                       |
-| newName           | Text                       |  -> | Nome para a copia                                      |
-| overwrite         | Integer                    |  -> | `fk overwrite` para substituir os elementos existentes |
-| Resultados        | 4D. Folder |  <- | Pasta ou arquivo copiado                               |
+| Parâmetro         | Tipo                       |                             | Descrição                                              |
+| ----------------- | -------------------------- | :-------------------------: | ------------------------------------------------------ |
+| destinationFolder | 4D. Folder |              ->             | Pasta de destino                                       |
+| newName           | Text                       |              ->             | Nome para a copia                                      |
+| overwrite         | Integer                    |              ->             | `fk overwrite` para substituir os elementos existentes |
+| Resultados        | 4D. Folder | <- | Pasta ou arquivo copiado                               |
 
 <!-- END REF -->
 
@@ -490,9 +490,9 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 <!-- REF #directory.file().Params -->
 
-| Parâmetro  | Tipo                     |    | Descrição                                                   |
-| ---------- | ------------------------ | -- | ----------------------------------------------------------- |
-| path       | Text                     | -> | Rota POSIX relativa                                         |
+| Parâmetro  | Tipo                     |                             | Descrição                                                   |
+| ---------- | ------------------------ | --------------------------- | ----------------------------------------------------------- |
+| path       | Text                     | ->                          | Rota POSIX relativa                                         |
 | Resultados | 4D. File | <- | Objeto 'File' (null se caminho inválido) |
 
 <!-- END REF -->
@@ -534,9 +534,9 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 <!-- REF #directory.files().Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                           |
-| ---------- | ---------- | -- | ----------------------------------- |
-| options    | Integer    | -> | Opções da lista de arquivos         |
+| Parâmetro  | Tipo       |                             | Descrição                           |
+| ---------- | ---------- | --------------------------- | ----------------------------------- |
+| options    | Integer    | ->                          | Opções da lista de arquivos         |
 | Resultados | Collection | <- | Coleção de objetos de arquivo filho |
 
 <!-- END REF -->
@@ -600,9 +600,9 @@ Se quiser obter todos os arquivos que não são invisíveis na pasta Documents:
 
 <!-- REF #directory.folder().Params -->
 
-| Parâmetro  | Tipo                       |    | Descrição                                                              |
-| ---------- | -------------------------- | -- | ---------------------------------------------------------------------- |
-| path       | Text                       | -> | Rota POSIX relativa                                                    |
+| Parâmetro  | Tipo                       |                             | Descrição                                                              |
+| ---------- | -------------------------- | --------------------------- | ---------------------------------------------------------------------- |
+| path       | Text                       | ->                          | Rota POSIX relativa                                                    |
 | Resultados | 4D. Folder | <- | Objeto pasta criado (null se *path* for inválida\*) |
 
 <!-- END REF -->
@@ -644,9 +644,9 @@ Um objeto `Folder` ou null se *path* for inválido.
 
 <!-- REF #directory.folders().Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                         |
-| ---------- | ---------- | -- | --------------------------------- |
-| options    | Integer    | -> | Opções da lista de pasta          |
+| Parâmetro  | Tipo       |                             | Descrição                         |
+| ---------- | ---------- | --------------------------- | --------------------------------- |
+| options    | Integer    | ->                          | Opções da lista de pasta          |
 | Resultados | Collection | <- | Coleção de objetos de pasta filho |
 
 <!-- END REF -->
@@ -695,9 +695,9 @@ Se quiser a coleção de todas as pastas e subpastas da pasta database:
 
 <!-- REF #directory.getIcon().Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                          |
-| ---------- | ------- | -- | ------------------------------------------------------------------ |
-| size       | Integer | -> | Longitude de lado da imagem devolvida (píxeles) |
+| Parâmetro  | Tipo    |                             | Descrição                                                          |
+| ---------- | ------- | --------------------------- | ------------------------------------------------------------------ |
+| size       | Integer | ->                          | Longitude de lado da imagem devolvida (píxeles) |
 | Resultados | Imagem  | <- | Ícone                                                              |
 
 <!-- END REF -->

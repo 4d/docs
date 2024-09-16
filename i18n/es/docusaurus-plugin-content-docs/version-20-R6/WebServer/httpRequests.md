@@ -27,14 +27,14 @@ Por ejemplo, la URL "*a/b/c*" llamará al método base, pero "*a/b/c.html*" no l
 
 **On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
 
-| Parámetros | Tipo |     | Descripción                                                                  |
-| ---------- | ---- | :-: | ---------------------------------------------------------------------------- |
-| $1         | Text |  <- | URL                                                                          |
-| $2         | Text |  <- | Encabezados HTTP + cuerpo HTTP (hasta un límite de 32 kb) |
-| $3         | Text |  <- | Dirección IP del cliente web (navegador)                  |
-| $4         | Text |  <- | Dirección IP del servidor                                                    |
-| $5         | Text |  <- | Nombre de usuario                                                            |
-| $6         | Text |  <- | Contraseña                                                                   |
+| Parámetros | Tipo |                             | Descripción                                                                  |
+| ---------- | ---- | :-------------------------: | ---------------------------------------------------------------------------- |
+| $1         | Text | <- | URL                                                                          |
+| $2         | Text | <- | Encabezados HTTP + cuerpo HTTP (hasta un límite de 32 kb) |
+| $3         | Text | <- | Dirección IP del cliente web (navegador)                  |
+| $4         | Text | <- | Dirección IP del servidor                                                    |
+| $5         | Text | <- | Nombre de usuario                                                            |
+| $6         | Text | <- | Contraseña                                                                   |
 
 Debe declarar estos parámetros de la siguiente manera:
 

@@ -17,14 +17,14 @@ title: VP Cells
 
 <!-- REF #_method_.VP Cells.Params -->
 
-| Paramètres  | Type    |    | Description                                                                 |                  |
-| ----------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName  | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
-| column      | Integer | -> | Indice de la colonne                                                        |                  |
-| row         | Integer | -> | Indice de la ligne                                                          |                  |
-| columnCount | Integer | -> | Nombre de colonnes                                                          |                  |
-| rowCount    | Integer | -> | Nombre de lignes                                                            |                  |
-| sheet       | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |                  |
+| Paramètres  | Type    |                             | Description                                                                 |                  |
+| ----------- | ------- | --------------------------- | --------------------------------------------------------------------------- | ---------------- |
+| vpAreaName  | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |                  |
+| column      | Integer | ->                          | Indice de la colonne                                                        |                  |
+| row         | Integer | ->                          | Indice de la ligne                                                          |                  |
+| columnCount | Integer | ->                          | Nombre de colonnes                                                          |                  |
+| rowCount    | Integer | ->                          | Nombre de lignes                                                            |                  |
+| sheet       | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
 | Résultat    | Object  | <- | Objet plage de toutes les cellules                                          | <!-- END REF --> |
 
 #### Description

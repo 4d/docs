@@ -66,13 +66,13 @@ Os objetos `Folder` suportam vários pathnames, incluindo a sintaxe `filesystems
 
 <!-- REF #_command_.Folder.Params -->
 
-| Parâmetro      | Tipo                       |     | Descrição                                                         |
-| -------------- | -------------------------- | :-: | ----------------------------------------------------------------- |
-| path           | Text                       |  -> | Folder path                                                       |
-| folderConstant | Integer                    |  -> | Constante Pasta 4D                                                |
-| pathType       | Integer                    |  -> | `fk posix path` (padrão) ou `fk platform path` |
-| -              |                            |  -> | * para devolver a pasta da base de dados do anfitrião             |
-| Resultados     | 4D. Folder |  <- | Novo Objeto Folder                                                |
+| Parâmetro      | Tipo                       |                             | Descrição                                                         |
+| -------------- | -------------------------- | :-------------------------: | ----------------------------------------------------------------- |
+| path           | Text                       |              ->             | Folder path                                                       |
+| folderConstant | Integer                    |              ->             | Constante Pasta 4D                                                |
+| pathType       | Integer                    |              ->             | `fk posix path` (padrão) ou `fk platform path` |
+| -              |                            |              ->             | * para devolver a pasta da base de dados do anfitrião             |
+| Resultados     | 4D. Folder | <- | Novo Objeto Folder                                                |
 
 <!-- END REF -->
 
@@ -97,22 +97,22 @@ Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. If you work wit
 
 In the *folderConstant* parameter, pass a 4D built-in or system folder, using one of the following constants:
 
-| Parâmetros                 | Valor | Comentário                                                                                                                                  |
-| -------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| fk applications folder     | 116   |                                                                                                                                             |
-| fk data folder             | 9     | Sistema de ficheiros associado: "/DATA"                                                                                     |
-| fk database folder         | 4     | Sistema de arquivos associado: "/PACKAGE"                                                                                   |
-| fk desktop folder          | 115   |                                                                                                                                             |
-| fk documents folder        | 117   | Pasta de documentos do utilizador                                                                                                           |
-| fk home folder             | 118   | Pasta atual do usuário (normalmente `/Users/<username>/`)                                                                |
-| fk licenses folder         | 1     | Pasta contendo os arquivos de licença 4D da máquina                                                                                         |
-| fk logs folder             | 7     | Sistema de arquivos associado: "/LOGS"                                                                                      |
-| fk mobileApps folder       | 10    |                                                                                                                                             |
-| fk remote database folder  | 3     | Pasta de base de dados 4D criada em cada máquina 4D remota                                                                                  |
-| fk resources folder        | 6     | Sistema de arquivos associado: "/DATA"                                                                                      |
-| fk system folder           | 100   |                                                                                                                                             |
-| fk user preferences folder | 0     | 4D folder that stores user preference files within the <code>\\<userName&gt;</code> directory.         |
-| fk web root folder         | 8     | Pasta raiz atual da Web da base de dados: se estiver dentro do pacote "/PACKAGE/percurso", caso contrário, caminho completo |
+| Parâmetros                 | Valor | Comentário                                                                                                                                                  |
+| -------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| fk applications folder     | 116   |                                                                                                                                                             |
+| fk data folder             | 9     | Sistema de ficheiros associado: "/DATA"                                                                                                     |
+| fk database folder         | 4     | Sistema de arquivos associado: "/PACKAGE"                                                                                                   |
+| fk desktop folder          | 115   |                                                                                                                                                             |
+| fk documents folder        | 117   | Pasta de documentos do utilizador                                                                                                                           |
+| fk home folder             | 118   | Pasta atual do usuário (normalmente `/Users/<username>/`)                                                                                |
+| fk licenses folder         | 1     | Pasta contendo os arquivos de licença 4D da máquina                                                                                                         |
+| fk logs folder             | 7     | Sistema de arquivos associado: "/LOGS"                                                                                                      |
+| fk mobileApps folder       | 10    |                                                                                                                                                             |
+| fk remote database folder  | 3     | Pasta de base de dados 4D criada em cada máquina 4D remota                                                                                                  |
+| fk resources folder        | 6     | Sistema de arquivos associado: "/DATA"                                                                                                      |
+| fk system folder           | 100   |                                                                                                                                                             |
+| fk user preferences folder | 0     | 4D folder that stores user preference files within the <code>\<userName&gt;</code> directory. |
+| fk web root folder         | 8     | Pasta raiz atual da Web da base de dados: se estiver dentro do pacote "/PACKAGE/percurso", caso contrário, caminho completo                 |
 
 If the command is called from a component, pass the optional *parameter to get the path of the host database. Otherwise, if you omit the* parameter, a null object is always returned.
 
@@ -156,8 +156,8 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 
 <!--REF #FolderClass.create().Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                                                    |
-| ---------- | ---------- | -- | ------------------------------------------------------------ |
+| Parâmetro  | Tipo       |                             | Descrição                                                    |
+| ---------- | ---------- | --------------------------- | ------------------------------------------------------------ |
 | Resultados | Parâmetros | <- | True se a pasta foi criada com sucesso, false caso contrário |
 
 <!-- END REF -->
@@ -213,11 +213,11 @@ End if
 
 <!--REF #FolderClass.createAlias().Params -->
 
-| Parâmetro         | Tipo                       |    | Descrição                                    |
-| ----------------- | -------------------------- | -- | -------------------------------------------- |
-| destinationFolder | 4D. Folder | -> | Pasta de destino para o pseudónimo ou atalho |
-| aliasName         | Text                       | -> | Nome do pseudónimo ou atalho                 |
-| aliasType         | Integer                    | -> | Tipo de ligação do pseudónimo                |
+| Parâmetro         | Tipo                       |                             | Descrição                                    |
+| ----------------- | -------------------------- | --------------------------- | -------------------------------------------- |
+| destinationFolder | 4D. Folder | ->                          | Pasta de destino para o pseudónimo ou atalho |
+| aliasName         | Text                       | ->                          | Nome do pseudónimo ou atalho                 |
+| aliasType         | Integer                    | ->                          | Tipo de ligação do pseudónimo                |
 | Resultados        | 4D. File   | <- | Alias ou referência de atalho                |
 
 <!-- END REF -->
@@ -350,10 +350,10 @@ Quando `Delete with contents` é passado:
 
 <!--REF #FolderClass.moveTo().Params -->
 
-| Parâmetro         | Tipo                       |    | Descrição                         |
-| ----------------- | -------------------------- | -- | --------------------------------- |
-| destinationFolder | 4D. Folder | -> | Pasta de destino                  |
-| newName           | Text                       | -> | Nome completo para a pasta movida |
+| Parâmetro         | Tipo                       |                             | Descrição                         |
+| ----------------- | -------------------------- | --------------------------- | --------------------------------- |
+| destinationFolder | 4D. Folder | ->                          | Pasta de destino                  |
+| newName           | Text                       | ->                          | Nome completo para a pasta movida |
 | Resultados        | 4D. Folder | <- | Pasta movida                      |
 
 <!-- END REF -->
@@ -409,9 +409,9 @@ Quer mover-se e renomear uma pasta:
 
 <!--REF #FolderClass.rename().Params -->
 
-| Parâmetro  | Tipo                       |    | Descrição                       |
-| ---------- | -------------------------- | -- | ------------------------------- |
-| newName    | Text                       | -> | Novo nome completo para a pasta |
+| Parâmetro  | Tipo                       |                             | Descrição                       |
+| ---------- | -------------------------- | --------------------------- | ------------------------------- |
+| newName    | Text                       | ->                          | Novo nome completo para a pasta |
 | Resultados | 4D. Folder | <- | Renomeado arquivo               |
 
 <!-- END REF -->
