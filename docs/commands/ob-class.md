@@ -1,0 +1,49 @@
+---
+id: ob-class
+title: OB Class
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.OB Class.Syntax-->**OB Class** ( *object* ) -> Function result<!-- END REF-->
+<!--REF #_command_.OB Class.Params-->
+| Parameter | Type |  | Description |
+| --- | --- | --- | --- |
+| object | Object | -> | Object whose class is to be returned |
+| Function result | Null, Object | <- | Class of object |
+
+<!-- END REF-->
+
+#### Description 
+
+<!--REF #_command_.OB Class.Summary-->The **OB Class** command returns the class of the *object* passed in parameter.<!-- END REF--> In 4D, all objects inherit from the Object class. If *object* is not an existing object, **OB Class** returns null. 
+
+#### Example 
+
+You created the Polygon class:
+
+```4d
+  //Class: Polygon
+ 
+
+ Class constructor
+
+ C_LONGINT($1;$2)
+
+ This.area:=$1*$2
+```
+
+Then, in a method, you can write:
+
+```4d
+ C_OBJECT($poly;$class)
+
+ $poly:=cs.Polygon.new(4;3)
+ 
+
+ $class:=OB Class($poly)
+
+  //$class contains Class: Polygon
+```
+
+#### See also 
+[OB Instance of](ob-instance-of.md)  

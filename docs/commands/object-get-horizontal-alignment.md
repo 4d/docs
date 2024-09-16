@@ -1,0 +1,57 @@
+---
+id: object-get-horizontal-alignment
+title: OBJECT Get horizontal alignment
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.OBJECT Get horizontal alignment.Syntax-->**OBJECT Get horizontal alignment** ( {* ;} *object* ) -> Function result<!-- END REF-->
+<!--REF #_command_.OBJECT Get horizontal alignment.Params-->
+| Parameter | Type |  | Description |
+| --- | --- | --- | --- |
+| * | Operator | -> | If specified, object is an Object name (String) If omitted, object is a field or a variable |
+| object | Form object | -> | Object name (if * specified), or Field or variable (if * omitted) |
+| Function result | Longint | <- | Alignment code |
+
+<!-- END REF-->
+
+#### Description 
+
+<!--REF #_command_.OBJECT Get horizontal alignment.Summary-->The **OBJECT Get horizontal alignment** command returns a code indicating the type of horizontal alignment applied to the object designated by the *object* and *\** parameters.<!-- END REF-->
+
+If you specify the optional *\** parameter, you indicate an object name (a string) in the *object* parameter. If you omit the *\** parameter, you indicate a field or variable in the *object* parameter. In this case, you specify a field or variable reference (field or variable objects only) instead of a string.
+
+**Note:** If you apply the command to a group of objects, only the alignment value of the last object is returned.
+
+The returned code corresponds to one of the following constants located in the [Form Objects (Properties)](/4Dv20R6/4D/20-R6/Form-Objects-Properties.302-6958435.en.html) theme:   
+
+| Constant      | Type    | Value | Comment                               |
+| ------------- | ------- | ----- | ------------------------------------- |
+| Align center  | Longint | 3     |                                       |
+| Align default | Longint | 1     |                                       |
+| Align left    | Longint | 2     |                                       |
+| Align right   | Longint | 4     |                                       |
+| wk justify    | Longint | 5     | Available for 4D Write Pro areas only |
+
+  
+The form objects to which alignment can be applied are as follows:
+
+* Scrollable areas
+* Combo boxes
+* Buttons
+* Radio buttons
+* Check boxes
+* Static text
+* Group areas
+* Pop up menu/Drop-down lists
+* Fields
+* Variables
+* List boxes
+* List box columns
+* List box headers
+* List box footers
+* [4D Write Pro Reference](/4Dv20R6/4D/20-R6/4D-Write-Pro-Reference.100-6993921.en.html) areas
+
+#### See also 
+[OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
+[OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
+[OBJECT SET VERTICAL ALIGNMENT](object-set-vertical-alignment.md)  

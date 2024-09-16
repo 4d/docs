@@ -157,9 +157,34 @@ module.exports =
 						},
 						{
 							type: 'link',
-							label: 'Commands', //
+							label: 'Command List (doc center)', //
 							href: 'https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Language-Reference.100-6957482.en.html',
 						},
+					 {
+					   type:"category",
+					   label:"Commands",
+					   items:[
+					      "commands/command-index",
+					      {
+					         type:"category",
+					         label:"4D Environment",
+					         items:[
+					            "commands/application-file",
+					            "commands/application-type",
+					            "commands/build-application"
+					         ],
+					      },
+					      {
+					         type:"category",
+					         label:"Arrays ",
+					         items:[
+					            "commands/append-to-array",
+					            "commands/array-blob",
+					            "commands/array-boolean"
+					         ],
+					      },
+							],
+					   },
 						{
 							type: "category",
 							label: "Classes",

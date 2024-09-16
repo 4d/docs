@@ -1,0 +1,52 @@
+---
+id: object-set-text-orientation
+title: OBJECT SET TEXT ORIENTATION
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.OBJECT SET TEXT ORIENTATION.Syntax-->**OBJECT SET TEXT ORIENTATION** ( {* ;} *object* ; *orientation* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET TEXT ORIENTATION.Params-->
+| Parameter | Type |  | Description |
+| --- | --- | --- | --- |
+| * | Operator | -> | If specified, object is an object name (string)
+If omitted, object is a field or variable |
+| object | Form object | -> | Object name (if * is specified) or
+Field or variable (if * is omitted) |
+| orientation | Longint | -> | Value of object orientation |
+
+<!-- END REF-->
+
+#### Description 
+
+<!--REF #_command_.OBJECT SET TEXT ORIENTATION.Summary-->The **OBJECT SET TEXT ORIENTATION** command modifies the orientation of the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
+
+The "Orientation" property, available in the Form editor, performs permanent rotations of text areas in your forms. Unlike this property, the **OBJECT SET TEXT ORIENTATION** command applies the rotation to the contents of the object, but not to the object itself. For more information, refer to the *Design Reference* manual.
+
+ Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).   
+Only static text as well as non-enterable variables and fields can be rotated. If you apply this command to an object that does not support text orientation, the command does nothing. 
+
+In the *orientation* parameter, you pass the absolute orientation that you want to assign to the object. You must use one of the following constants, found in the "[Form Objects (Properties)](/4Dv20R6/4D/20-R6/Form-Objects-Properties.302-6958435.en.html)" theme:
+
+| Constant              | Type    | Value | Comment                                      |
+| --------------------- | ------- | ----- | -------------------------------------------- |
+| Orientation 0°        | Longint | 0     | No rotation (default value)                  |
+| Orientation 180°      | Longint | 180   | Orientation of text to 180° clockwise        |
+| Orientation 90° left  | Longint | 270   | Orientation of text to 90° counter-clockwise |
+| Orientation 90° right | Longint | 90    | Orientation of text to 90° clockwise         |
+
+**Note:** Only angles corresponding to these values are supported. If you pass any other value, it will be ignored. 
+
+#### Example 
+
+You want to apply an orientation of 270° to a variable in your form: 
+
+```4d
+ OBJECT SET ENTERABLE(*;"myVar";False)
+
+  // mandatory if variable is enterable
+
+ OBJECT SET TEXT ORIENTATION(*;"myVar";Orientation 90° left)
+```
+
+#### See also 
+[OBJECT Get text orientation](object-get-text-orientation.md)  

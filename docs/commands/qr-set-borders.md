@@ -1,0 +1,73 @@
+---
+id: qr-set-borders
+title: QR SET BORDERS
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.QR SET BORDERS.Syntax-->**QR SET BORDERS** ( *area* ; *column* ; *row* ; *border* ; *line* {; *color*} )<!-- END REF-->
+<!--REF #_command_.QR SET BORDERS.Params-->
+| Parameter | Type |  | Description |
+| --- | --- | --- | --- |
+| area | Longint | -> | Reference of the area |
+| column | Longint | -> | Column number |
+| row | Longint | -> | Row number |
+| border | Longint | -> | Border composite value |
+| line | Longint | -> | Line thickness |
+| color | Longint | -> | Border color |
+
+<!-- END REF-->
+
+#### Description 
+
+<!--REF #_command_.QR SET BORDERS.Summary-->The **QR SET BORDERS** command sets the border style for a given cell.<!-- END REF-->
+
+*area* is the reference of the Quick Report area.
+
+*column* is the column number of the cell.
+
+*row* is the row number of the cell. You can pass either:
+
+* a positive integer value to designate the corresponding subtotal (break) level,
+* one of the following constants located in the [QR Rows for Properties](/4Dv20R6/4D/20-R6/QR-Rows-for-Properties.302-6958428.en.html) theme:  
+| Constant       | Type    | Value | Comment               |  
+| -------------- | ------- | ----- | --------------------- |  
+| qr detail      | Longint | \-2   | Detail area of report |  
+| qr grand total | Longint | \-3   | Grand total area      |  
+| qr title       | Longint | \-1   | Title of report       |
+
+*border* is a composite value that indicates which borders of the cell are to be affected. Pass one of the constants from the [QR Borders](/4Dv20R6/4D/20-R6/QR-Borders.302-6958503.en.html) theme:  
+
+| Constant                    | Type    | Value | Comment                  |
+| --------------------------- | ------- | ----- | ------------------------ |
+| qr bottom border            | Longint | 8     | Bottom border            |
+| qr inside horizontal border | Longint | 32    | Inside horizontal border |
+| qr inside vertical border   | Longint | 16    | Inside vertical border   |
+| qr left border              | Longint | 1     | Left border              |
+| qr right border             | Longint | 4     | Right border             |
+| qr top border               | Longint | 2     | Top border               |
+
+*border* can contain an accumulation of several values in order to designate several borders simultaneously. For example, a value of 5 passed in *border* would affect the right and left borders.
+
+*line* is the thickness of the line: 
+* 0 indicates no line
+* 1 indicates a thickness of 1/4 point
+* 2 indicates a thickness of 1/2 point
+* 3 indicates a thickness of 1 point
+* 4 indicates a thickness of 2 points
+
+*color* is the color of the line:
+
+* If *color* is a positive value, it indicates a specific color.
+* If *color* equals 0, the color is black.
+* If *color* equals -1, no changes are to be made.
+
+**Note:** The default color is black.
+
+If you pass an invalid area number, the error -9850 will be generated.  
+If you pass an invalid column number, the error -9852 will be generated.  
+If you pass an invalid row number, the error -9853 will be generated.  
+If you pass an invalid border parameter, the error -9854 will be generated.  
+If you pass an invalid line parameter, the error -9855 will be generated.
+
+#### See also 
+[QR GET BORDERS](qr-get-borders.md)  
