@@ -13,7 +13,7 @@ Este evento pode ser gerado em diferentes contextos.
 
 ### 4D View Pro
 
-A seleção atual de linhas ou de colunas é modificada. En este contexto, el [objeto evento](overview.md#event-object) devuelto por el comando `FORM Event` contiene:
+A seleção atual de linhas ou de colunas é modificada. Nesse contexto, o [objeto evento] (overview.md#event-object) retornado pelo comando `FORM Event` contém:
 
 | Propriedade   | Tipo          | Descrição                               |
 | ------------- | ------------- | --------------------------------------- |
