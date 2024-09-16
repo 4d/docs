@@ -383,7 +383,7 @@ Esta propiedad es de sólo lectura.
 
 La función `.terminate()` <!-- REF #WebSocketServerClass.terminate().Summary -->cierra el servidor WebSocket<!-- END REF -->.
 
-By default, if no *timeout* value is set, the function initializes close handshake and waits to receive close frame from the peer, after that sending FIN packet in attempt to perform a clean socket close. When answer received, the socket is destroyed.
+De forma predeterminada, si no se establece un valor *timeout*, la función inicializa el cierre de conexión y espera recibir un frame de cierre del otro extremo, luego envía un paquete FIN en un intento de realizar un cierre limpio del socket. When answer received, the socket is destroyed.
 
 Si se establece un valor de *timeout*:
 
