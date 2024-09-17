@@ -108,7 +108,7 @@ Un _namespace_ garantiza que no surja ningún conflicto cuando un proyecto local
 
 :::
 
-When you enter a value, you declare that component classes will be available in the [user class store (**cs**)](../Concepts/classes.md#cs) of the host project as well as its loaded components, through the `cs.<value>` namespace. Por ejemplo, si introduce "eGeometry" como namespace del componente, asumiendo que ha creado una clase `Rectangle` que contiene una función `getArea()`, una vez que su proyecto se instala como componente, el desarrollador del proyecto local puede escribir
+When you enter a value, you declare that component classes will be available in the [user class store (**cs**)](../Concepts/classes.md#cs) of the host project as well as its loaded components, through the `cs.<value>` namespace. Por exemplo, se você digitar "eGeometry" como namespace do componente, Supondo que você criou uma classe `Rectangle` contendo uma função `getArea()`, assim que seu projeto for instalado como componente, o desenvolvedor do projeto host pode escrever:
 
 ```4d
 //in host project or one of its components
@@ -260,7 +260,7 @@ O código abaixo está incluído em um componente e realiza três ações básic
 Cria o banco externo:
 
 ```4d
-<>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) stores the data in an authorized directory
+<>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) armazena os dados em um diretório autorizado
  Begin SQL
         CREATE DATABASE IF NOT EXISTS DATAFILE :[<>MyDatabase];
         USE DATABASE DATAFILE :[<>MyDatabase];
@@ -272,9 +272,9 @@ Cria o banco externo:
         code TEXT,
         sort_order INT32
         );
-
+ 
         CREATE UNIQUE INDEX id_index ON KEEPIT (ID);
-
+ 
         USE DATABASE SQL_INTERNAL;
 
  End SQL
@@ -283,7 +283,7 @@ Cria o banco externo:
 Escrita no banco de dados externa:
 
 ```4d
- $Ptr_1:=$2 // retrieves data from the host project through pointers
+ $Ptr_1:=$2 // recupera dados do projeto host por meio de ponteiros
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5
@@ -291,14 +291,14 @@ Escrita no banco de dados externa:
  Begin SQL
 
         USE DATABASE DATAFILE :[<>MyDatabase];
-
+ 
         INSERT INTO KEEPIT
         (ID, kind, name, code, sort_order)
         VALUES
         (:[$Ptr_1], :[$Ptr_2], :[$Ptr_3], :[$Ptr_4], :[$Ptr_5]);
-
+ 
         USE DATABASE SQL_INTERNAL;
-
+ 
 
  End SQL
 ```
@@ -306,20 +306,20 @@ Escrita no banco de dados externa:
 Lendo de um banco externo:
 
 ```4d
- $Ptr_1:=$2 // accesses data of the host project through pointers
+ $Ptr_1:=$2 // acessa dados do projeto host por meio de ponteiros
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5
  $Ptr_5:=$6
-
+ 
  Begin SQL
 
     USE DATABASE DATAFILE :[<>MyDatabase];
-
+ 
     SELECT ALL ID, kind, name, code, sort_order
     FROM KEEPIT
     INTO :$Ptr_1, :$Ptr_2, :$Ptr_3, :$Ptr_4, :$Ptr_5;
-
+ 
     USE DATABASE SQL_INTERNAL;
 
  End SQL
@@ -350,7 +350,7 @@ Um componente pode executar o código 4D automaticamente ao abrir ou fechar o ba
 
 La ejecución del código de inicialización o cierre se realiza mediante el método base `On Host Database Event`.
 
-> Por razones de seguridad, debe autorizar explícitamente la ejecución del método base `On Host Database Event` en la base local para poder llamarlo. To do this, you must check the [**Execute "On Host Database Event" method of the components** option](../settings/security.md#options) in the Security page of the Settings.
+> Por motivos de segurança, você deve autorizar explicitamente a execução do método de banco de dados `On Host Database Event` no banco de dados do host para poder chamá-lo. To do this, you must check the [**Execute "On Host Database Event" method of the components** option](../settings/security.md#options) in the Security page of the Settings.
 
 ## Proteção dos componentes: compilação
 
