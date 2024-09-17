@@ -26,6 +26,7 @@ The documentation for this command has been moved. See [**File** command on deve
 The **File** command creates and returns a new object of the *File* type. 
 
 #### See also 
+
 [Folder](folder.md)  
 [Get 4D file](get-4d-file.md)  
 [Object to path](object-to-path.md)  

@@ -40,4 +40,5 @@ The *vertical* parameter returns a value indicating the vertical resizing option
 | Resize vertical none | Longint | 0     | If the window is expanded in height, neither the height nor the position of the object changes. |
 
 #### See also 
+
 [OBJECT SET RESIZING OPTIONS](object-set-resizing-options.md)  

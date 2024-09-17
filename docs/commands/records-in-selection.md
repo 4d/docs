@@ -22,16 +22,13 @@ displayed_sidebar: docs
 The following example shows a loop technique commonly used to move through all the records in a selection. The same action can also be accomplished with the [APPLY TO SELECTION](apply-to-selection.md) command:
 
 ```4d
- FIRST RECORD([People]) ` Start at first record in the selection
-
- For($vlRecord;1;Records in selection([People])) ` Loop once for each record
-
-    Do Something ` Do something with the record
-
-    NEXT RECORD([People]) ` Move to the next record
-
+ FIRST RECORD([People]) // Start at first record in the selection
+ For($vlRecord;1;Records in selection([People])) // Loop once for each record
+    Do Something // Do something with the record
+    NEXT RECORD([People]) // Move to the next record
  End for
 ```
 
 #### See also 
+
 [Records in table](records-in-table.md)  

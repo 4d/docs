@@ -26,19 +26,15 @@ You want to reject or accept new client connections:
 
 ```4d
   // Reject the new connections
-
  REJECT NEW REMOTE CONNECTIONS(True)
-
   // Execute the maintenance operation
-
  ...
-
   // Accept the new connections
-
  REJECT NEW REMOTE CONNECTIONS(False)
 ```
 
 #### See also 
+
 [DROP REMOTE USER](drop-remote-user.md)  
 [Get application info](get-application-info.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  

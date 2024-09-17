@@ -73,8 +73,7 @@ You execute the method with local information as parameters on a remote machine:
 The WriteLog method will be executed on the server. It contains, for example:
 
 ```4d
- C_TEXT($1;$2;$3)
-
+ var $1;$2;$3 : Text
  TEXT TO DOCUMENT(Get 4D folder(Logs folder)+"Log"+$1+".txt";$2+" "+$3)
 ```
 
@@ -83,164 +82,93 @@ The WriteLog method will be executed on the server. It contains, for example:
 The following example shows how importing data can be dramatically accelerated in Client/Server. The Regular Import method listed below allows you to test how long it takes to import records using the [IMPORT TEXT](import-text.md) command on the Client side:
 
 ```4d
-  ` Regular Import Project Method
-
+  // Regular Import Project Method
  $vhDocRef:=Open document("")
-
  If(OK=1)
-
     CLOSE DOCUMENT($vhDocRef)
-
     FORM SET INPUT([Table1];"Import")
-
     $vhStartTime:=Current time
-
     IMPORT TEXT([Table1];Document)
-
     $vhEndTime:=Current time
-
     ALERT("It took "+String(0+($vhEndTime-$vhStartTime))+" seconds.")
-
  End if
 ```
 
 With the regular import data, 4D Client performs the parsing of the text file, then, for each record, create a new record, fills out the fields with the imported data and sends the record to the Server machine so it can be added to the database. There are consequently many requests going over the network. A way to optimize the operation is to use a stored procedure to do the job locally on the Server machine. The Client machine loads the document into a BLOB, start a stored procedure passing the BLOB as parameter. The stored procedure stores the BLOB into a document on the server machine disk, then imports the document locally. The import data is therefore performed locally at a single-user version-like speed because most the network requests have been eliminated. Here is the CLIENT IMPORT project method. Executed on the Client machine, it starts the SERVER IMPORT stored procedure listed just below:
 
 ```4d
-  ` CLIENT IMPORT Project Method
-
-  ` CLIENT IMPORT ( Pointer ; String )
-
-  ` CLIENT IMPORT ( -> [Table] ; Input form )
+  // CLIENT IMPORT Project Method
+  // CLIENT IMPORT ( Pointer ; String )
+  // CLIENT IMPORT ( -> [Table] ; Input form )
  
-
- C_POINTER($1)
-
- C_TEXT($2)
-
- C_TIME($vhDocRef)
-
- C_BLOB($vxData)
-
- C_LONGINT(spErrCode)
+ var $1 : Pointer
+ var $2 : Text
+ var $vhDocRef : Time
+ var $vxData : Blob
+ var spErrCode : Integer
  
-
-  ` Select the document do be imported
-
+  // Select the document do be imported
  $vhDocRef:=Open document("")
-
  If(OK=1)
-
-  ` If a document was selected, do not keep it open
-
+  // If a document was selected, do not keep it open
     CLOSE DOCUMENT($vhDocRef)
-
     $vhStartTime:=Current time
-
-  ` Try to load it in memory
-
+  // Try to load it in memory
     DOCUMENT TO BLOB(Document;$vxData)
-
     If(OK=1)
-
-  ` If the document could be loaded in the BLOB,
-
-  ` Start the stored procedure that will import the data on the server machine
-
+  // If the document could be loaded in the BLOB,
+  // Start the stored procedure that will import the data on the server machine
        $spProcessID:=Execute on server("SERVER IMPORT";0;
-
        "Server Import Services";Table($1);$2;$vxData)
-
-  ` At this point, we no longer need the BLOB in this process
-
+  // At this point, we no longer need the BLOB in this process
        CLEAR VARIABLE($vxData)
-
-  ` Wait for the completion of the operation performed by the stored procedure
-
+  // Wait for the completion of the operation performed by the stored procedure
        Repeat
-
           DELAY PROCESS(Current process;300)
-
           GET PROCESS VARIABLE($spProcessID;spErrCode;spErrCode)
-
           If(Undefined(spErrCode))
-
-  ` Note: if the stored procedure has not initialized its own instance
-
-  ` of the variable spErrCode, we may be returned an undefined variable
-
+  // Note: if the stored procedure has not initialized its own instance
+  // of the variable spErrCode, we may be returned an undefined variable
              spErrCode:=1
-
           End if
-
        Until(spErrCode<=0)
-
-  ` Tell the stored procedure that we acknowledge
-
+  // Tell the stored procedure that we acknowledge
        spErrCode:=1
-
        SET PROCESS VARIABLE($spProcessID;spErrCode;spErrCode)
-
        $vhEndTime:=Current time
-
        ALERT("It took "+String(0+($vhEndTime-$vhStartTime))+" seconds.")
-
     Else
-
        ALERT("There is not enough memory to load the document.")
-
     End if
-
  End if
 ```
 
 Here is the SERVER IMPORT project method executed as a stored procedure:
 
 ```4d
-  ` SERVER IMPORT Project Method
-
-  ` SERVER IMPORT ( Long ; String ; BLOB )
-
-  ` SERVER IMPORT ( Table Number ; Input form ; Import Data )
+  // SERVER IMPORT Project Method
+  // SERVER IMPORT ( Long ; String ; BLOB )
+  // SERVER IMPORT ( Table Number ; Input form ; Import Data )
  
-
- C_LONGINT($1)
-
- C_TEXT($2)
-
- C_BLOB($3)
-
- C_LONGINT(spErrCode)
+ var $1 : Integer
+ var $2 : Text
+ var $3 : Blob
+ var spErrCode : Integer
  
-
-  ` Operation is not finished yet, set spErrCode to 1
-
+  // Operation is not finished yet, set spErrCode to 1
  spErrCode:=1
-
  $vpTable:=Table($1)
-
  FORM SET INPUT($vpTable->;$2)
-
  $vsDocName:="Import File "+String(1+Random)
-
  DELETE DOCUMENT($vsDocName)
-
  BLOB TO DOCUMENT($vsDocName;$3)
-
  IMPORT TEXT($vpTable->;$vsDocName)
-
  DELETE DOCUMENT($vsDocName)
-
-  ` Operation is finished, set spErrCode to 0
-
+  // Operation is finished, set spErrCode to 0
  spErrCode:=0
-
-  ` Wait until the requester Client got the result back
-
+  // Wait until the requester Client got the result back
  Repeat
-
     DELAY PROCESS(Current process;1)
-
  Until(spErrCode>0)
 ```
 
@@ -257,5 +185,6 @@ With some benchmarks you will discover that using this method you can import rec
 Refer to the [SP-Based Services (Example)](/4Dv20R6/4D/20-R6/SP-Based-Services-Example.300-7182870.en.html) section in the *4D Server Reference* manual.
 
 #### See also 
+
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [New process](new-process.md)  

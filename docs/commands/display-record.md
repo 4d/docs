@@ -27,20 +27,15 @@ If a form method exists, an On Load event will be generated.
 The following example displays a series of records as a slide show:
 
 ```4d
- ALL RECORDS([Demo]) ` Select all of the records
-
- FORM SET INPUT([Demo];"Display") ` Set the form to use for display
-
- For($vlRecord;1;Records in selection([Demo])) ` Loop through all of the records
-
-    DISPLAY RECORD([Demo]) ` Display a record
-
-    DELAY PROCESS(Current process;180) ` Pause for 3 seconds
-
-    NEXT RECORD([Demo]) ` Move to the next record
-
+ ALL RECORDS([Demo]) // Select all of the records
+ FORM SET INPUT([Demo];"Display") // Set the form to use for display
+ For($vlRecord;1;Records in selection([Demo])) // Loop through all of the records
+    DISPLAY RECORD([Demo]) // Display a record
+    DELAY PROCESS(Current process;180) // Pause for 3 seconds
+    NEXT RECORD([Demo]) // Move to the next record
  End for
 ```
 
 #### See also 
+
 [MESSAGE](message.md)  

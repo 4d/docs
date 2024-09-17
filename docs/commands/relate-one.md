@@ -29,7 +29,7 @@ More than one record may be found if *manyField* ends with the wildcard characte
 
 In the screen below, a record is being entered and a selection list is displayed in the foreground.
 
-![](../assets/en/Commands/pict2287719.en.png)
+![](../assets/en/commands/pict2287719.en.png)
 
 The following command is used to make the selection list appear: 
 
@@ -49,11 +49,11 @@ Specifying *choiceField* is the same as specifying a wildcard choice when establ
 
 Let’s say you have an *\[Invoice\]* table related to a *\[Customers\]* table with two non-automatic relations. One relation is from *\[Invoice\]Bill to* to *\[Customers\]Number*, and the other relation is from *\[Invoice\]Ship to* to *\[Customers\]Number*.
 
-![](../assets/en/Commands/pict2287721.en.png)
+![](../assets/en/commands/pict2287721.en.png)
 
 Here is the form for the \[Invoice\] table displaying the "Bill to" and "Send to" information:
 
-![](../assets/en/Commands/pict2287723.en.png)
+![](../assets/en/commands/pict2287723.en.png)
 
 Since both relations are to the same table, *\[Customers\]*, you cannot obtain the billing and shipment information at the same time. Therefore, displaying both addresses in a form should be performed using variables and calls to **RELATE ONE**. If the *\[Customers\]* fields were displayed instead, data from only one of the relations would be displayed.
 
@@ -63,13 +63,9 @@ Here is the object method for the *\[Invoice\]Bill to* field:
 
 ```4d
  RELATE ONE([Invoice]Bill to)
-
  vAddress1:=[Customers]Address
-
  vCity1:=[Customers]City
-
  vState1:=[Customers]State
-
  vZIP1:=[Customers]ZIP
 ```
 
@@ -77,13 +73,9 @@ Here is the object method for the *\[Invoice\]Ship to* field:
 
 ```4d
  RELATE ONE([Invoice]Ship to)
-
  vAddress2:=[Customers]Address
-
  vCity2:=[Customers]City
-
  vState2:=[Customers]State
-
  vZIP2:=[Customers]ZIP
 ```
 
@@ -92,5 +84,6 @@ Here is the object method for the *\[Invoice\]Ship to* field:
 If the command has been executed correctly and if the related records have been loaded, the OK system variable is set to 1\. If the user clicked on **Cancel** in the record selection dialog box (that appears when the related record has been modified), the OK variable is set to 0\. 
 
 #### See also 
+
 [OLD RELATED ONE](old-related-one.md)  
 [RELATE MANY](relate-many.md)  

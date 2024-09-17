@@ -38,16 +38,16 @@ The optional parameter *mode* defines the thumbnail creation mode, i.e. the resi
 If you do not enter any parameter, the “Scaled to fit prop centered” mode (6) is applied by default. Below is an illustration of the various modes:
 
 Source picture   
-![](../assets/en/Commands/pict27911.en.png)
+![](../assets/en/commands/pict27911.en.png)
 
 Resulting thumbnails (48x48)
 
 * Scaled to fit = 2  
-![](../assets/en/Commands/pict27912.en.png)
+![](../assets/en/commands/pict27912.en.png)
 * Scaled to fit proportional = 5  
-![](../assets/en/Commands/pict27913.en.png)
+![](../assets/en/commands/pict27913.en.png)
 * Scaled to fit prop centered = 6 (default mode)  
-![](../assets/en/Commands/pict27914.en.png)
+![](../assets/en/commands/pict27914.en.png)
 
 **Note:** With the “Scaled to fit proportional” and the “Scaled to fit prop centered”, the free space will be displayed in white. When these modes are applied to picture field or variable in 4D forms, the free space is transparent.
 

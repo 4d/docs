@@ -23,5 +23,6 @@ Static columns cannot be moved within the list box.
 **Note:** Static columns and locked columns are two independent functions. For more information, refer to the *Design Reference* manual.
 
 #### See also 
+
 [LISTBOX Get static columns](listbox-get-static-columns.md)  
 [LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md)  

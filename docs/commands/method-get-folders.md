@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 The **METHOD GET FOLDERS** command returns, in the *arrNames* array, the names of folders created on the Home page of the 4D Explorer:
 
-![](../assets/en/Commands/pict837666.en.png)
+![](../assets/en/commands/pict837666.en.png)
 
 Since folder names must be unique, the hierarchy is not returned in this array. 
 
@@ -29,4 +29,5 @@ You can limit this list of folders by passing a comparison string in the *filter
 If the command is executed from a component, it returns by default the paths of the component methods. If you pass the *\** parameter, the array contains the paths of the methods of the host database.
 
 #### See also 
+
 [METHOD GET PATHS](method-get-paths.md)  

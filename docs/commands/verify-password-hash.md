@@ -36,24 +36,19 @@ The following errors may be returned. You can review an error with the [GET LAST
 This example verifies a password hash previously created by [Generate password hash](generate-password-hash.md) and stored in a \[Users\] table with a newly entered password:
 
 ```4d
- C_TEXT($password)
-
+ var $password : Text
  $password:=Request("Please enter your password")
  
-
  If(Verify password hash($password;[Users]hash))
-
     ALERT("Good password")
-
  Else
-
     ALERT("Password error")
-
  End if
 ```
 
 **Note:** The password is never stored on disk, only the hash. Using a remote 4D application, the hash could be produced on the client side. If instead, you use a JavaScript (or similar) based front end, the best practice for security is to create the hash on the server side. Of course, you should use a TLS encrypted network connection for security, as this requires transferring the password over the network.
 
 #### See also 
+
   
 [Generate password hash](generate-password-hash.md)  

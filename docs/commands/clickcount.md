@@ -34,21 +34,13 @@ The following code structure can be placed in a listbox header to handle single-
 
 ```4d
  Case of
-
     :(Form event code=On Header Click)
-
        Case of
-
           :(Clickcount=1)
-
              ... //single-click action
-
           :(Clickcount=2)
-
              ... //double-click action
-
        End case
-
  End case
 ```
 
@@ -58,16 +50,10 @@ Labels are not enterable but they become so after a triple-click. If you want to
 
 ```4d
  If(Form event code=On Clicked)
-
     Case of
-
        :(Clickcount=3)
-
           OBJECT SET ENTERABLE(*;"Label";True)
-
           EDIT ITEM(*;"Label")
-
     End case
-
  End if
 ```

@@ -34,16 +34,14 @@ This command is useful when the code expects a boolean value, and when the evalu
 You select a value depending on the contents of an object field attribute, anticipating the case where the attribute is missing:
 
 ```4d
- C_TEXT($married)
-
+ var $married : Text
  $married:=Choose(Bool([Person]data.married);"Married";"Single")
-
   //"Single" if the "married" attribute is not found in the field
-
  ALERT("This person is "+$married)
 ```
 
 #### See also 
+
 [Date](date.md)  
 [Num](num.md)  
 [String](string.md)  

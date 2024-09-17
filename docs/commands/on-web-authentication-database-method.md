@@ -37,30 +37,27 @@ This method receives six Text parameters: $1, $2, $3, $4, $5, and $6, and return
 You must declare these parameters as follows:
 
 ```4d
-  ` On Web Authentication Database Method
- 
-
- C_TEXT($1;$2;$3;$4;$5;$6)
-
- C_BOOLEAN($0)
- 
-
-  ` Code for the method
+  // On Web Authentication Database Method
+ 
+ var $1;$2;$3;$4;$5;$6 : Text
+ var $0 : Boolean
+ 
+  // Code for the method
 ```
 
 **Note:** All the On Web Authentication database method’s parameters are not necessarily filled in. The information received by the database method depends on the options that you have previously selected in the Database Settings dialog box (please refer to the section [Connection Security](/4Dv20R6/4D/14-R2/Connection-Security.300-1342179.en.html)).
 
 * **URL**  
 The first parameter (*$1*) is the URL entered by the user in the location area of his or her Web browser, from which the host address has been removed.  
-Let’s take the example of an Intranet connection. Suppose that the IP address of your 4D Web Server machine is *123.4.567.89*. The following table shows the values of *$1* depending on the URL entered in the Web browser:  
+Let’s take the example of an Intranet connection. Suppose that the IP address of your 4D Web Server machine is *123.45.67.89*. The following table shows the values of *$1* depending on the URL entered in the Web browser:  
 | **URL entered in Web browser Location area** | **Value of parameter $1** |  
 | -------------------------------------------- | ------------------------- |  
-| 123.4.567.89                                 | /                         |  
-| http://123.4.567.89                          | /                         |  
-| 123.4.567.89/Customers                       | /Customers                |  
-| http://123.4.567.89/Customers                | /Customers                |  
-| http://123.4.567.89/Customers/Add            | /Customers/Add            |  
-| 123.4.567.89/Do\_This/If\_OK/Do\_That        | /Do\_This/If\_OK/Do\_That |
+| 123.45.67.89                                 | /                         |  
+| http://123.45.67.89                          | /                         |  
+| 123.45.67.89/Customers                       | /Customers                |  
+| http://123.45.67.89/Customers                | /Customers                |  
+| http://123.45.67.89/Customers/Add            | /Customers/Add            |  
+| 123.45.67.89/Do\_This/If\_OK/Do\_That        | /Do\_This/If\_OK/Do\_That |
 * **Header and Body of the HTTP request**  
 The second parameter (*$2*) is the header and the body of the HTTP request sent by the Web browser. Note that this information is passed to your **On Web Authentication database method** as it is. Its contents will vary depending on the nature of the Web browser which is attempting the connection.  
 If your application deals with this information, it is up to you to parse the header and the body.
@@ -117,87 +114,49 @@ Note that the On Web Authentication database method is NOT called when the serve
 Example of the On Web Authentication database method in BASIC mode:
 
 ```4d
-  `On Web Authentication Database Method
-
- C_TEXT($5;$6;$3;$4)
-
- C_TEXT($user;$password;$BrowserIP;$ServerIP)
-
- C_BOOLEAN($4Duser)
-
- ARRAY TEXT($users;0)
-
- ARRAY LONGINT($nums;0)
-
- C_LONGINT($upos)
-
- C_BOOLEAN($0)
- 
-
- $0:=False
- 
-
- $user:=$5
-
- $password:=$6
-
- $BrowserIP:=$3
-
- $ServerIP:=$4
- 
-
-  `For security reasons, refuse names that contain @
-
- If(WithWildcard($user)|WithWildcard($password))
-
-    $0:=False
-
-  `The WithWildcard method is described below
-
- Else
-
-  `Check to see if it’s a 4D user
-
-    GET USER LIST($users;$nums)
-
-    $upos:=Find in array($users;$user)
-
-    If($upos >0)
-
-       $4Duser:=Not(Is user deleted($nums{$upos}))
-
-    Else
-
-       $4Duser:=False
-
-    End if
- 
-
-    If(Not($4Duser))
-
-  `It is not a user defined 4D, look in the table of Web users
-
-       QUERY([WebUsers];[WebUsers]User=$user;*)
-
-       QUERY([WebUsers]; & [WebUsers]Password=$password)
-
-       $0:=(Records in selection([WebUsers])=1)
-
-    Else
-
-       $0:=True
-
-    End if
-
- End if
-
-  `Is this an intranet connection?
-
- If(Substring($BrowserIP;1;7)#"192.100.")
-
-    $0:=False
-
- End if
+  //On Web Authentication Database Method
+ var $5;$6;$3;$4 : Text
+ var $user;$password;$BrowserIP;$ServerIP : Text
+ var $4Duser : Boolean
+ ARRAY TEXT($users;0)
+ ARRAY LONGINT($nums;0)
+ var $upos : Integer
+ var $0 : Boolean
+ 
+ $0:=False
+ 
+ $user:=$5
+ $password:=$6
+ $BrowserIP:=$3
+ $ServerIP:=$4
+ 
+  //For security reasons, refuse names that contain @
+ If(WithWildcard($user)|WithWildcard($password))
+    $0:=False
+  //The WithWildcard method is described below
+ Else
+  //Check to see if it’s a 4D user
+    GET USER LIST($users;$nums)
+    $upos:=Find in array($users;$user)
+    If($upos >0)
+       $4Duser:=Not(Is user deleted($nums{$upos}))
+    Else
+       $4Duser:=False
+    End if
+ 
+    If(Not($4Duser))
+  //It is not a user defined 4D, look in the table of Web users
+       QUERY([WebUsers];[WebUsers]User=$user;*)
+       QUERY([WebUsers]; & [WebUsers]Password=$password)
+       $0:=(Records in selection([WebUsers])=1)
+    Else
+       $0:=True
+    End if
+ End if
+  //Is this an intranet connection?
+ If(Substring($BrowserIP;1;7)#"192.100.")
+    $0:=False
+ End if
 ```
 
 #### Example 2 
@@ -205,69 +164,41 @@ Example of the On Web Authentication database method in BASIC mode:
 Example of the On Web Authentication database method in DIGEST mode:
 
 ```4d
-  `On Web Authentication Database Method
-
- C_TEXT($1;$2;$5;$6;$3;$4)
-
- C_TEXT($user)
-
- C_BOOLEAN($0)
-
- $0:=False
-
- $user:=$5
-
-  `For security reasons, refuse names that contain @
-
- If(WithWildcard($user))
-
-    $0:=False
-
-  `The WithWildcard method is described below
-
- Else
-
-    QUERY([WebUsers];[WebUsers]User=$user)
-
-    If(OK=1)
-
-       $0:=WEB Validate digest($user;[WebUsers]password)
-
-    Else
-
-       $0:=False `User does not exist
-
-    End if
-
- End if
+  //On Web Authentication Database Method
+ var $1;$2;$5;$6;$3;$4 : Text
+ var $user : Text
+ var $0 : Boolean
+ $0:=False
+ $user:=$5
+  //For security reasons, refuse names that contain @
+ If(WithWildcard($user))
+    $0:=False
+  //The WithWildcard method is described below
+ Else
+    QUERY([WebUsers];[WebUsers]User=$user)
+    If(OK=1)
+       $0:=WEB Validate digest($user;[WebUsers]password)
+    Else
+       $0:=False //User does not exist
+    End if
+ End if
 ```
 
 The WithWildcard method is as follows:
 
 ```4d
-  `WithWildcard Method
-
-  `WithWildcard ( String ) -> Boolean
-
-  `WithWildcard ( Name ) -> Contains a Wilcard character
- 
-
- C_INTEGER($i)
-
- C_BOOLEAN($0)
-
- C_TEXT($1)
- 
-
- $0:=False
-
- For($i;1;Length($1))
-
-    If(Character code(Substring($1;$i;1))=Character code("@"))
-
-       $0:=True
-
-    End if
-
- End for
+  //WithWildcard Method
+  //WithWildcard ( String ) -> Boolean
+  //WithWildcard ( Name ) -> Contains a Wilcard character
+ 
+ C_INTEGER($i)
+ var $0 : Boolean
+ var $1 : Text
+ 
+ $0:=False
+ For($i;1;Length($1))
+    If(Character code(Substring($1;$i;1))=Character code("@"))
+       $0:=True
+    End if
+ End for
 ```

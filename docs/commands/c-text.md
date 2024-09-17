@@ -34,6 +34,7 @@ The syntax **C\_TEXT**(${...}) allows you to declare a variable number of parame
 See examples in the section [Compiler Commands](/4Dv20R6/4D/20-R6/Compiler-Commands.300-6958561.en.html).
 
 #### See also 
+
 [\_o\_C\_STRING](../../4D/20-R6/o-C-STRING.301-6957683.en.html)  
 [Compiler Commands](../../4D/20-R6/Compiler-Commands.300-6958561.en.html)  
 [Count parameters](count-parameters.md)  

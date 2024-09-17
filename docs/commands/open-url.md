@@ -50,11 +50,8 @@ The following examples illustrate different types of strings that are accepted a
 
 ```4d
  OPEN URL("http://www.4d.com")
-
  OPEN URL("file://C:/Users/Laurent/Documents/pending.htm")
-
  OPEN URL("C:\\Users\\Laurent\\Documents\\pending.htm")
-
  OPEN URL("mailto:jean_martin@4d.fr")
 ```
 
@@ -64,11 +61,8 @@ This example can be used to launch the most suitable application:
 
 ```4d
  $file:=Select document("";"";0)
-
  If(OK=1)
-
     OPEN URL(Document)
-
  End if
 ```
 
@@ -78,11 +72,10 @@ The *appName* parameter lets you open the same text file using different applica
 
 ```4d
  OPEN URL("C:\\temp\\cookies.txt") //open the file with Notepad
-
  OPEN URL("C:\\temp\\cookies.txt";"winword") //open the file with MS Word (if installed)
-
  OPEN URL("C:\\temp\\cookies.txt";"excel") //open the file with MS Excel (if installed)
 ```
 
 #### See also 
+
 [LAUNCH EXTERNAL PROCESS](launch-external-process.md)  

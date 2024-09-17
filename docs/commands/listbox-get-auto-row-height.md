@@ -46,11 +46,11 @@ You want to get the maximum number of lines for a list box row:
 
 ```4d
  var vhMaxInteger
-
  vhMax:=LISTBOX Get auto row height(*;"LB";lk row max height;lk lines)
 ```
 
 #### See also 
+
 [LISTBOX Get row height](listbox-get-row-height.md)  
 [LISTBOX Get rows height](listbox-get-rows-height.md)  
 [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  

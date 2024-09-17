@@ -27,30 +27,21 @@ The record exists in memory only until a [SAVE RECORD](save-record.md) command i
 The following example archives records that are over 30 days old. It does does this by creating new records in an archival table. When the archiving is finished, the records that were archived are deleted from the \[Accounts\] table:
 
 ```4d
-  ` Find records more than 30 days old
-
+  // Find records more than 30 days old
  QUERY([Accounts];[Accounts]Entered<(Current date 30))
-
- For($vlRecord;1;Records in selection([Accounts])) ` Loop once for each record
-
-    CREATE RECORD([Archive]) ` Create a new archive record
-
-    [Archive]Number:=[Account]Number ` Copy fields to the archive record
-
+ For($vlRecord;1;Records in selection([Accounts])) // Loop once for each record
+    CREATE RECORD([Archive]) // Create a new archive record
+    [Archive]Number:=[Account]Number // Copy fields to the archive record
     [Archive]Entered:=[Account]Entered
-
     [Archive]Amount:=[Account]Amount
-
-    SAVE RECORD([Archive]) ` Save the archive record
-
-    NEXT RECORD([Accounts]) ` Move to the next account record
-
+    SAVE RECORD([Archive]) // Save the archive record
+    NEXT RECORD([Accounts]) // Move to the next account record
  End for
-
- DELETE SELECTION([Accounts]) ` Delete the account records
+ DELETE SELECTION([Accounts]) // Delete the account records
 ```
 
 #### See also 
+
 [ADD RECORD](add-record.md)  
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  

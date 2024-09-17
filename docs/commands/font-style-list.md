@@ -32,44 +32,28 @@ You want to select styles of the "Verdana" font family (if available):
 
 ```4d
  ARRAY TEXT($aTfonts;0)
-
  ARRAY TEXT($aTStyles;0)
-
  ARRAY TEXT($aTnames;0)
-
- C_LONGINT($numStyle)
+ var $numStyle : Integer
  
-
  FONT LIST($aTfonts)
-
  $numStyle:=Find in array($aTfonts;"Verdana")
-
  If($numStyle#0)
-
     FONT STYLE LIST($aTfonts{$numStyle};$aTStyles;$aTnames)
-
  End if
  
-
   //For example, resulting arrays are:
-
   //$aTStyles{1}="Normal"
-
   //$aTStyles{1}="Italic"
-
   //$aTStyles{1}="Bold"
-
   //$aTStyles{1}="Bold Italic"
  
-
   // $aTnames{1}="Verdana"
-
   // $aTnames{1}="Verdana Italic"
-
   // $aTnames{1}="Verdana Bold"
-
   // $aTnames{1}="Verdana Bold Italic"
 ```
 
 #### See also 
+
 [FONT LIST](font-list.md)  

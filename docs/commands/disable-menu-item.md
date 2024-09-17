@@ -27,4 +27,5 @@ If the *menuItem* parameter designates a hierarchical submenu, all the items of 
 **Tip:** To enable/disable all items of a menu at once, pass 0 (zero) in *menuItem*.
 
 #### See also 
+
 [ENABLE MENU ITEM](enable-menu-item.md)  

@@ -35,16 +35,14 @@ In an output form displayed by the [MODIFY SELECTION](modify-selection.md) comma
 
 ```4d
  SET QUERY DESTINATION(Into set;"UserSet")
-
  QUERY
-
  SET QUERY DESTINATION(Into current selection)
-
  HIGHLIGHT RECORDS
 ```
 
 When the user clicks the button, the standard query dialog box appears. Once the search has been validated, the records found will be highlighted without the current selection being modified.
 
 #### See also 
+
 [GET HIGHLIGHTED RECORDS](get-highlighted-records.md)  
 [OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  

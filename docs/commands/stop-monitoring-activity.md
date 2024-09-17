@@ -22,5 +22,6 @@ This command can be called and executed on 4D remote, 4D Server, and 4D standalo
 See example for **[START MONITORING ACTIVITY](start-monitoring-activity.md)**.
 
 #### See also 
+
 [Get Monitored Activity](get-monitored-activity.md)  
 [START MONITORING ACTIVITY](start-monitoring-activity.md)  

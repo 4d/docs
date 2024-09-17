@@ -32,9 +32,7 @@ You can also use the *%* operator to calculate the remainder (see [C\_TIME](c-ti
 The following example illustrates how the Mod function works with different arguments. Each line assigns a number to the *vlResult* variable. The comments describe the results:
 
 ```4d
- vlResult:=Mod(3;2) ` vlResult gets 1
-
- vlResult:=Mod(4;2) ` vlResult gets 0
-
- vlResult:=Mod(3.5;2) ` vlResult gets 0
+ vlResult:=Mod(3;2) // vlResult gets 1
+ vlResult:=Mod(4;2) // vlResult gets 0
+ vlResult:=Mod(3.5;2) // vlResult gets 0
 ```

@@ -29,4 +29,5 @@ In the *property* parameter, pass the property for which you want to get the val
 **Compatibility Note:** By default, if the *value* variable is not explicitely typed or is declared as text, the command will return a [Standard Action](/4Dv20R6/4D/20-R6/Standard-Action.302-6958501.en.html) name. If you want to get a numeric value as defined in the (deprecated) [Value for Associated Standard Action](/4Dv20R6/4D/20-R6/Value-for-Associated-Standard-Action.302-6958515.en.html) constant theme, you need to declare the *value* variable as longint. 
 
 #### See also 
+
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  

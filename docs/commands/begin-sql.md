@@ -24,11 +24,8 @@ These keywords work as follows:
 
 ```4d
  Begin SQL
-
     INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Henry’,40);
-
     INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Bill’,35)
-
  End SQL
 ```
 
@@ -36,15 +33,14 @@ or:
 
 ```4d
  Begin SQL
-
     INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Henry’,40);INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Bill’,35)
-
  End SQL
 ```
 
 Note that the 4D [Debugger](/4Dv20R6/4D/14-R3/Debugger.300-1552188.en.html) will evaluate the SQL code line by line. In certain cases, it may be preferable to use more than one line.
 
 #### See also 
+
 [End SQL](end-sql.md)  
 [SQL Get current data source](sql-get-current-data-source.md)  
 [SQL LOGIN](sql-login.md)  

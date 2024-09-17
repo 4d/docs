@@ -35,14 +35,12 @@ You want to declare a collection process variable and to fill it with a new coll
 
 ```4d
  C_COLLECTION(myCol)
-
   //here myCol value is null
-
  myCol:=New collection("Green";100;"Orange";200;"Red";300)
-
   //myCol= ["Green",100,"Orange",200,"Red",300]
 ```
 
 #### See also 
+
 [Collections](collections.md)  
 [New collection](new-collection.md)  

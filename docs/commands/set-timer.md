@@ -32,19 +32,15 @@ Let’s imagine that you want, when a form is displayed on screen, the computer 
 
 ```4d
  If(Form event code=On Load)
-
     SET TIMER(60*3)
-
  End if
  
-
  If(Form event code=On Timer)
-
     BEEP
-
  End if
 ```
 
 #### See also 
+
 [Form event code](form-event-code.md)  
 [REDRAW](redraw.md)  

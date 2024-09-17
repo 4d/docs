@@ -22,8 +22,9 @@ In *event*, you can pass any predefined form event of 4D (you can use the consta
 
 *Example of execution of the* CALL SUBFORM CONTAINER *command:*
 
-![](../assets/en/Commands/pict166755.en.png)
+![](../assets/en/commands/pict166755.en.png)
 
 #### See also 
+
 [Form event code](form-event-code.md)  
 [GOTO OBJECT](goto-object.md)  

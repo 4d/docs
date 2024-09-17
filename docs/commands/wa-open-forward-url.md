@@ -20,5 +20,6 @@ displayed_sidebar: docs
 If there is no next URL (in other words, if the user has never returned to a previous URL), the command does nothing. You can test whether a next URL is available using the [WA Forward URL available](wa-forward-url-available.md) command.
 
 #### See also 
+
 [WA OPEN BACK URL](wa-open-back-url.md)  
 [WA OPEN URL](wa-open-url.md)  

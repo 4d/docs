@@ -27,5 +27,5 @@ You can use this database method to verify backup execution conditions (user, da
 **Note:** You must declare the *$0* parameter (longint) in the database method:
 
 ```4d
- C_LONGINT($0).
+ var $0 : Integer.
 ```

@@ -24,6 +24,7 @@ The system variable OK is set to 1 if the transaction has been validated correct
 Note that when OK is set to 0, the transaction is automatically cancelled internally (equivalent to [CANCEL TRANSACTION](cancel-transaction.md)). Consequently, you must not explicitly call [CANCEL TRANSACTION](cancel-transaction.md) if OK=0, particularly in the context of nested transactions, because the cancellation will then be applied to the higher level transaction. 
 
 #### See also 
+
 [CANCEL TRANSACTION](cancel-transaction.md)  
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  

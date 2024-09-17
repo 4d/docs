@@ -25,11 +25,11 @@ The **ADD RECORD** command lets the user add a new record to the database for th
 
 The following figure shows a typical data entry form. 
 
-![](../assets/en/Commands/pict2804768.en.png)
+![](../assets/en/commands/pict2804768.en.png)
 
 The form is displayed in the frontmost window of the process. The window has scroll bars and a size box. Specifying the optional *\** parameter causes the window to be drawn without scroll bars and the form window can no longer be reduced:
 
-![](../assets/en/Commands/pict2804770.en.png)
+![](../assets/en/commands/pict2804770.en.png)
 
 **ADD RECORD** displays the form until the user accepts or cancels the record. If the user is adding several records, the command must be executed once for each new record.
 
@@ -48,13 +48,10 @@ After a call to **ADD RECORD**, OK is set to 1 if the record is accepted, to 0 i
 The following example is a loop commonly used to add new records to a database: 
 
 ```4d
- FORM SET INPUT([Customers];"Std Input") ` Set input form for [Customers] table
-
- Repeat ` Loop until the user cancels
-
-    ADD RECORD([Customers];*) ` Add a record to the [Customers] table
-
- Until(OK=0) ` Until the user cancels
+ FORM SET INPUT([Customers];"Std Input") // Set input form for [Customers] table
+ Repeat // Loop until the user cancels
+    ADD RECORD([Customers];*) // Add a record to the [Customers] table
+ Until(OK=0) // Until the user cancels
 ```
 
 #### Example 2 
@@ -63,35 +60,20 @@ The following example queries the database for a customer. Depending on the resu
 
 ```4d
  READ WRITE([Customers])
-
- FORM SET INPUT([Customers];"Input") ` Set the input form
-
- vlCustNum:=Num(Request("Enter Customer Number:")) ` Get the customer number
-
+ FORM SET INPUT([Customers];"Input") // Set the input form
+ vlCustNum:=Num(Request("Enter Customer Number:")) // Get the customer number
  If(OK=1)
-
-    QUERY([Customers];[Customers]CustNo=vlCustNum) ` Look for the customer
-
-    If(Records in selection([Customers])=0) ` If no customer is found…
-
-       ADD RECORD([Customers]) ` Add a new customer
-
+    QUERY([Customers];[Customers]CustNo=vlCustNum) // Look for the customer
+    If(Records in selection([Customers])=0) // If no customer is found…
+       ADD RECORD([Customers]) // Add a new customer
     Else
-
        If(Not(Locked([Customers])))
-
-          MODIFY RECORD([Customers]) ` Modify the record
-
+          MODIFY RECORD([Customers]) // Modify the record
           UNLOAD RECORD([Customers])
-
        Else
-
           ALERT("The record is currently being used.")
-
        End if
-
     End if
-
  End if
 ```
 
@@ -100,6 +82,7 @@ The following example queries the database for a customer. Depending on the resu
 Accepting the record sets the OK system variable to 1; canceling it sets the OK system variable to 0\. The OK system variable is set only after the record is accepted or canceled.
 
 #### See also 
+
 [ACCEPT](accept.md)  
 [CANCEL](cancel.md)  
 [CREATE RECORD](create-record.md)  

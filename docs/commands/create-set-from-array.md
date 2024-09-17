@@ -36,5 +36,6 @@ If you do not pass the *setName* parameter or if you pass an empty string, the c
 In a Longint array, if a record number is invalid (record not created), the error -10503 is generated.
 
 #### See also 
+
 [BOOLEAN ARRAY FROM SET](boolean-array-from-set.md)  
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  

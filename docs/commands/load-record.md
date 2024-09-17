@@ -30,6 +30,7 @@ In multi-user and multi-process environments, when you need to modify an existin
 **Tip:** The **LOAD RECORD** command can be used to reload the current record in the context of an input form. All the data modified are then replaced by their previous values. In this case, the **LOAD RECORD** command carries out a sort of general cancellation of data entry. 
 
 #### See also 
+
 [Locked](locked.md)  
 [Record Locking](../../4D/20-R6/Record-Locking.300-6958117.en.html)  
 [UNLOAD RECORD](unload-record.md)  

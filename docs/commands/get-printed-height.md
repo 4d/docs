@@ -25,6 +25,7 @@ The right and left printable margins, unlike the top and bottom margins (which m
 **Note:** For more information regarding Printing management and terminology in 4D, refer to the [GET PRINTABLE MARGIN](get-printable-margin.md) command description. 
 
 #### See also 
+
 [GET PRINTABLE AREA](get-printable-area.md)  
 [Print form](print-form.md)  
 [SET PRINTABLE MARGIN](set-printable-margin.md)  

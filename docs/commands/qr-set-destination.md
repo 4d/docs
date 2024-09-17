@@ -42,9 +42,9 @@ The following code sets the destination as being the text file "Mydoc.txt" and e
 
 ```4d
  QR SET DESTINATION(MyArea;qr text file;"MyDoc.txt")
-
  QR RUN(MyArea)
 ```
 
 #### See also 
+
 [QR GET DESTINATION](qr-get-destination.md)  

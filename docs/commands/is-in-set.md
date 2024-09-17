@@ -22,17 +22,14 @@ displayed_sidebar: docs
 The following example is a button object method. It tests to see whether or not the currently displayed record is in the set of best customers:
 
 ```4d
- If(Is in set("Best")) ` Check if it is a good customer
-
+ If(Is in set("Best")) // Check if it is a good customer
     ALERT("They are one of our best customers.")
-
  Else
-
     ALERT("They are not one of our best customers.")
-
  End if
 ```
 
 #### See also 
+
 [ADD TO SET](add-to-set.md)  
 [REMOVE FROM SET](remove-from-set.md)  

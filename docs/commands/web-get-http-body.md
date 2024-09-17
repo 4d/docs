@@ -26,20 +26,16 @@ This command allows you, for example, to carry out queries in the body of reques
 
 In this example, a simple request is sent to the 4D Web server and the contents of the HTTP body are displayed in the debugger. Here is the form sent to the 4D Web server, as well as the corresponding HTML code:
 
-![](../assets/en/Commands/pict38463.en.png)
+![](../assets/en/commands/pict38463.en.png)
 
 Here is the Test4D2004 method:
 
 ```4d
- C_BLOB($request)
-
- C_TEXT($requestText)
+ var $request : Blob
+ var $requestText : Text
  
-
  WEB GET HTTP BODY($request)
-
  $requestText:=BLOB to text($request;UTF8 text without length)
-
  WEB SEND FILE("page.html")
 ```
 
@@ -48,5 +44,6 @@ Here is the Test4D2004 method:
 When the form is submitted to the Web server, the $requestText variable receives the text of the HTTP request body.
 
 #### See also 
+
 [WEB GET BODY PART](web-get-body-part.md)  
 [WEB GET HTTP HEADER](web-get-http-header.md)  

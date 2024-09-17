@@ -30,11 +30,8 @@ The following example is a one-line object method in a Break area of a form (B0,
 
 ```4d
  Case of
-
     :(FORM Event=On Printing Break)
-
        vSalary:=Subtotal([Employees]Salary)
-
  End case
 ```
 
@@ -56,6 +53,7 @@ When using [BREAK LEVEL](break-level.md) and [ACCUMULATE](accumulate.md), the pr
 The **Subtotal** function is necessary in order to display values on a form.
 
 #### See also 
+
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  

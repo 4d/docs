@@ -39,12 +39,9 @@ If a record is locked during execution of **APPLY TO SELECTION** and that record
 
 ```4d
  Repeat
-
     APPLY TO SELECTION([Employees];[Employees]Last Name:=Uppercase([Employees]Last Name))
-
-    USE SET("LockedSet") ` Select only locked records
-
- Until(Records in set("LockedSet")=0) ` Done when there are no locked records
+    USE SET("LockedSet") // Select only locked records
+ Until(Records in set("LockedSet")=0) // Done when there are no locked records
 ```
 
 #### Example 3 
@@ -53,7 +50,6 @@ This example uses a method:
 
 ```4d
  ALL RECORDS([Employees])
-
  APPLY TO SELECTION([Employees];M_Cap)
 ```
 
@@ -62,5 +58,6 @@ This example uses a method:
 If the user clicks the Stop button in the progress thermometer, the OK system variable is set to 0\. Otherwise, the OK system variable is set to 1.
 
 #### See also 
+
 [EDIT FORMULA](edit-formula.md)  
 [Sets](../../4D/20-R6/Sets.300-6959005.en.html)  

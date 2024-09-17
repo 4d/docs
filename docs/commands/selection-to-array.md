@@ -32,7 +32,6 @@ When you apply **SELECTION TO ARRAY** to a Time type field, it is important to n
 
 ```4d
  ARRAY LONGINT(myArray;0)
-
  SELECTION TO ARRAY([myTable]myTimeField;myArray)
 ```
 
@@ -67,13 +66,12 @@ The same example can be written:
 
 ```4d
  SELECTION TO ARRAY([Clients];alRecordNumbers;*)
-
  SELECTION TO ARRAY([Clients]Names;asNames;*)
-
  SELECTION TO ARRAY
 ```
 
 #### See also 
+
 [ARRAY TO SELECTION](array-to-selection.md)  
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
 [MULTI SORT ARRAY](multi-sort-array.md)  

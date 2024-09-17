@@ -23,5 +23,6 @@ If *elementRef* is not an XML root object, an error is generated.
 If the command has been correctly executed, the system variable OK is set to 1\. If an error occurs, it is set to 0.
 
 #### See also 
+
 [DOM Parse XML source](dom-parse-xml-source.md)  
 [DOM Parse XML variable](dom-parse-xml-variable.md)  

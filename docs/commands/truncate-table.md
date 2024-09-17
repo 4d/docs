@@ -35,4 +35,5 @@ The **TRUNCATE TABLE** command should therefore be used with caution but is very
 If the command has been executed correctly, the OK system variable is set to 1\. Otherwise, it is set to 0.
 
 #### See also 
+
 [DELETE SELECTION](delete-selection.md)  

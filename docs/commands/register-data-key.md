@@ -32,23 +32,18 @@ In the first parameter, pass the *curPassPhrase* or *curDataKey* that defines th
 #### Example 
 
 ```4d
- C_TEXT($passphrase)
-
- C_BOOLEAN($added)
+ var $passphrase : Text
+ var $added : Boolean
  
-
  $passphrase:=Request("Enter the passphrase:")
-
  If(OK=1)
-
     $added:=Register data key($passphrase)
  
-
     OPEN DATA FILE("data.4DD") //No key required, it is in the 4D keychain
-
  End if
 ```
 
 #### See also 
+
 [4D Blog - New 4D commands to work with encrypted data](https://blog.4d.com/new-4d-commands-to-work-with-encrypted-data/)  
 [New data key](new-data-key.md)  

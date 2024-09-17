@@ -23,4 +23,5 @@ Field or variable (if * is omitted) |
 You can set the "Three-States" property either using the Property List, or using the [OBJECT SET THREE STATES CHECKBOX](object-set-three-states-checkbox.md) command if it was called in the current process.
 
 #### See also 
+
 [OBJECT SET THREE STATES CHECKBOX](object-set-three-states-checkbox.md)  

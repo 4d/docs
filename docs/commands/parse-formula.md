@@ -55,47 +55,29 @@ The optional *errorMessage* parameter will receive an error message if there is 
 
 ```4d
  ARRAY TEXT($t1;1)
-
  ARRAY LONGINT($t2;1)
-
  $t1{1}:="Virtual table"
-
  $t2{1}:=1
-
  SET TABLE TITLES($t1;$t2;*)
  
-
  ARRAY TEXT($tf1;1)
-
  ARRAY LONGINT($tf2;1)
-
  $tf1{1}:="Virtual field"
-
  $tf2{1}:=2
-
  SET FIELD TITLES([Table_1];$tf1;$tf2;*)
  
-
   //Virtual structure to table and field name equivalent
-
  $parsedFormula:=Parse formula("[Virtual table]Virtual field";Formula in with virtual structure;$errorMessage)
-
   //return [Table_1]Field_2
  
-
   //Table and field name to virtual structure equivalent
-
  $parsedFormula:=Parse formula("[Table_1]Field_2";Formula out with virtual structure;$errorMessage)
-
   //return [Virtual table]Virtual field
  
-
   //Table and field name to the tokenized form equivalent
-
  $parsedFormula:=Parse formula("String([Table_1]Field_2)";Formula out with tokens;$errorMessage)
-
   //return String:C10([Table_1:1]Field_2:2)
-
+ 
  
 ```
 
@@ -103,31 +85,22 @@ The optional *errorMessage* parameter will receive an error message if there is 
 
 ```4d
   //ask the user to type their favorite formula
-
  $formula:=""
-
  EDIT FORMULA([Table_1];$formula)
  
-
   //save user's formula for later use
-
  CREATE RECORD([users_preferences])
-
  $persistentFormula:=Parse formula($formula;Formula out with tokens)
-
  [users_preferences]formula:=$persistentFormula
-
  SAVE RECORD([users_preferences])
  
-
   //later: execute the previously saved formula
-
  CREATE RECORD([Table_1])
-
  EXECUTE FORMULA([users_preferences]formula)
 ```
 
 #### See also 
+
 [Formula from string](formula-from-string.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  

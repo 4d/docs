@@ -48,11 +48,11 @@ You want to set the minimum and maximum heights for a list box with an automatic
 
 ```4d
  LISTBOX SET AUTO ROW HEIGHT(*;"LB";lk row min height;60;lk pixels) // 60 pixels for min value
-
  LISTBOX SET AUTO ROW HEIGHT(*;"LB";lk row max height;100;lk pixels) //and 100 pixels for max value
 ```
 
 #### See also 
+
 [LISTBOX Get auto row height](listbox-get-auto-row-height.md)  
 [LISTBOX SET ROW HEIGHT](listbox-set-row-height.md)  
 [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  

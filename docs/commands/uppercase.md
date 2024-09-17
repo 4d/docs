@@ -25,9 +25,8 @@ The optional *\** parameter, if passed, indicates that any accented characters p
 This example compares the results obtained according to whether or not the *\** parameter has been passed:
 
 ```4d
- $thestring:=Uppercase("hélène") ` $thestring is "HELENE"
-
- $thestring:=Uppercase("hélène";*) ` $thestring is "HÉLÈNE"
+ $thestring:=Uppercase("hélène") // $thestring is "HELENE"
+ $thestring:=Uppercase("hélène";*) // $thestring is "HÉLÈNE"
 ```
 
 #### Example 2 
@@ -35,4 +34,5 @@ This example compares the results obtained according to whether or not the *\** 
 See the example for [Lowercase](lowercase.md).
 
 #### See also 
+
 [Lowercase](lowercase.md)  

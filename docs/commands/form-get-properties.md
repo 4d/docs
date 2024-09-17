@@ -36,6 +36,7 @@ The *fixedWidth* and *fixedHeight* parameters indicate if the length and width o
 The *title* parameter returns the title of the form's window as it was defined in the Property List of the Form editor. If no name was defined, the *title* parameter returns an empty string.
 
 #### See also 
+
 [FORM GET OBJECTS](form-get-objects.md)  
 [FORM SET SIZE](form-set-size.md)  
 [Open form window](open-form-window.md)  

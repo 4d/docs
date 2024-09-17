@@ -39,24 +39,15 @@ The optional *\** parameter is useful in the case of an architecture using compo
 This example displays the name and the location of the structure file currently in use:
 
 ```4d
- C_OBJECT($fullpath)
-
- C_TEXT($name;$path)
-
+ var $fullpath : Object
+ var $name;$path : Text
  If(Application type#4D Remote mode)
-
     $fullpath:=Path to object(Structure file)
-
     $name:=$fullpath.name
-
     $path:=$fullpath.parentFolder
-
     ALERT("You are currently using the database "+Char(34)+$name+Char(34)+" located at "+Char(34)+$path+Char(34)+".")
-
  Else
-
     ALERT("You are connected to the database "+Char(34)+Structure file+Char(34))
-
  End if
 ```
 
@@ -65,14 +56,13 @@ This example displays the name and the location of the structure file currently 
 The following example can be used to find out whether the method is called from a component:
 
 ```4d
- C_BOOLEAN($0)
-
+ var $0 : Boolean
  $0:=(Structure file#Structure file(*))
-
-  ` $0=True if method is called from a component
+  // $0=True if method is called from a component
 ```
 
 #### See also 
+
 [\_o\_DATA SEGMENT LIST](../../4D/20-R6/o-DATA-SEGMENT-LIST.301-6957658.en.html)  
 [Application file](application-file.md)  
 [COMPONENT LIST](component-list.md)  

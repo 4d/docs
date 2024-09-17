@@ -35,19 +35,15 @@ In a form, a user can generate a label by dragging and dropping a row. In the ob
 
 ```4d
  If(Form event code=On Begin Drag Over)
-
     READ PICTURE FILE(Get 4D folder(Current resources folder)+"splash.png";vpict)
-
     CREATE THUMBNAIL(vpict;vpict;48;48)
-
     SET DRAG ICON(vpict)
-
  End if
 ```
 
 When you drag a row, the picture appears as shown here:
 
-![](../assets/en/Commands/pict1204050.en.png)
+![](../assets/en/commands/pict1204050.en.png)
 
 Note that you can modify the position of the cursor with respect to the picture:
 
@@ -55,7 +51,8 @@ Note that you can modify the position of the cursor with respect to the picture:
  SET DRAG ICON(vpict;0;0)
 ```
 
-![](../assets/en/Commands/pict1204052.fr.png)
+![](../assets/en/commands/pict1204052.fr.png)
 
 #### See also 
+
 [Form event code](form-event-code.md)  

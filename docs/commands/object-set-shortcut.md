@@ -75,17 +75,13 @@ You want to associate a different shortcut depending on the current language of 
 
 ```4d
  Case of
-
        vLang="FR"
-
        OBJECT SET SHORTCUT(*;"SortButton";"T";Command key mask+Shift key mask) // Ctrl+Shift+T in French
-
        vLang="US"
-
        OBJECT SET SHORTCUT(*;"SortButton";"O";Command key mask+Shift key mask) // Ctrl+Shift+O in English
-
  End case
 ```
 
 #### See also 
+
 [OBJECT GET SHORTCUT](object-get-shortcut.md)  

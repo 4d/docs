@@ -21,5 +21,6 @@ displayed_sidebar: docs
 This command can be used to detect any field deletions, which create gaps in the sequence of field numbers.
 
 #### See also 
+
 [Get last table number](get-last-table-number.md)  
 [Is table number valid](is-table-number-valid.md)  

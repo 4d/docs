@@ -44,9 +44,7 @@ The following example shows a typical use of **FORM SET OUTPUT**. Note that alth
 
 ```4d
  FORM SET INPUT([Parts];"Parts In") //Select the input form
-
  FORM SET OUTPUT([Parts];"Parts List") //Select the output form
-
  MODIFY SELECTION([Parts]) //This command uses both forms
 ```
 
@@ -56,13 +54,12 @@ The following example uses the path to a .json form to print the records in an e
 
 ```4d
  FORM SET OUTPUT([Personnel];"/RESOURCES/PersonnelPrintForm.json")
-
  ALL RECORDS([Personnel])
-
  PRINT SELECTION([Personnel])
 ```
 
 #### See also 
+
 [\_o\_CREATE USER FORM](../../4D/20-R6/o-CREATE-USER-FORM.301-6957652.en.html)  
 [DISPLAY SELECTION](display-selection.md)  
 [EXPORT DIF](export-dif.md)  

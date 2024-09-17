@@ -66,13 +66,9 @@ You want to create and handle an offscreen web area using a function of your Off
 
 ```4d
  $config:=cs.OffscreenArea.new()
-
  $result:=WA Run offscreen area($config)
-
  If($config.timeoutReached) //automatically returned in case of timeout
-
     ALERT("Timeout reached")
-
  End if
 ```
 
@@ -80,20 +76,13 @@ In the **OffscreenArea class**:
 
 ```4d
  Class constructor
-
  This.url:=File("/RESOURCES/compute.html")
-
  This.area:="myWAOffscreen"
  
-
  Function onEvent
-
  Case of
-
     :(FORM Event.code=On End URL Loading)
-
        This.result:=WA Evaluate JavaScript(*;This.area;"myJSMethod();")
-
  End case
 ```
 
@@ -102,6 +91,7 @@ In the **OffscreenArea class**:
 The OK system variable is set to 0 if the timeout has been reached or the [CANCEL](cancel.md) was called in *onEvent*, otherwise it is set to 1.
 
 #### See also 
+
 [FORM Event](form-event.md)  
 [Programmed management of Web Areas](../../4D/20-R6/Programmed-management-of-Web-Areas.300-6959063.en.html)  
 [WA OPEN WEB INSPECTOR](wa-open-web-inspector.md)  

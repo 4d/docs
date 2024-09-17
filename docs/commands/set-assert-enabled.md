@@ -31,11 +31,11 @@ Disabling assertions:
 
 ```4d
  SET ASSERT ENABLED(False)
-
  ASSERT(TestMethod) // TestMethod will not be called since assertions are disabled
 ```
 
 #### See also 
+
 [ASSERT](assert.md)  
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  

@@ -22,4 +22,5 @@ If there is already a list with this name, its contents are replaced.
 **Note:** This command cannot be used in a structure loaded in **read only**, such as a .4dz project or a component.
 
 #### See also 
+
 [Load list](load-list.md)  

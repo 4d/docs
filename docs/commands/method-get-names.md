@@ -30,16 +30,11 @@ Here are a few typical examples of use:
 
 ```4d
   // List of all project methods of the database
-
  METHOD GET NAMES(t_Names)
  
-
   //  List of project methods beginning with a specific string
-
  METHOD GET NAMES(t_Names;"web_@")
  
-
   // List of project methods in the host database beginning with a specific string
-
  METHOD GET NAMES(t_Names;"web_@";*)
 ```

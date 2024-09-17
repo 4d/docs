@@ -50,6 +50,7 @@ The form objects to which alignment can be applied are as follows:
 * [4D Write Pro Reference](/4Dv20R6/4D/20-R6/4D-Write-Pro-Reference.100-6993921.en.html) areas
 
 #### See also 
+
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
 [OBJECT SET VERTICAL ALIGNMENT](object-set-vertical-alignment.md)  

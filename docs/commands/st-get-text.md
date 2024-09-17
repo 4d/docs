@@ -56,6 +56,7 @@ After this command is executed, the OK variable is set to 1 if no error occurred
 In the case of an error, the variable is not changed. When an error occurs on a variable when text is being evaluated, 4D transforms the text into plain text; as a result, the <, > and & characters are converted into HTML entities.
 
 #### See also 
+
 [ST Get plain text](st-get-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
 [TEXT TO ARRAY](text-to-array.md)  

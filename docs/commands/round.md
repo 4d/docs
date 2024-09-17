@@ -27,14 +27,12 @@ If the digit following *places* is 5 though 9, **Round** rounds toward positive 
 The following example illustrates how Round works with different arguments. Each line assigns a number to the *vlResult* variable. The comments describe the results:
 
 ```4d
- vlResult:=Round(16.857;2) ` vlResult gets 16.86
-
- vlResult:=Round(32345.67;-3) ` vlResult gets 32000
-
- vlResult:=Round(29.8725;3) ` vlResult gets 29.873
-
- vlResult:=Round(-1.5;0) ` vlResult gets –2
+ vlResult:=Round(16.857;2) // vlResult gets 16.86
+ vlResult:=Round(32345.67;-3) // vlResult gets 32000
+ vlResult:=Round(29.8725;3) // vlResult gets 29.873
+ vlResult:=Round(-1.5;0) // vlResult gets –2
 ```
 
 #### See also 
+
 [Trunc](trunc.md)  

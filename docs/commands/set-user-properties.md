@@ -54,6 +54,7 @@ If you pass the optional *memberships* parameter, you change all the memberships
 If you do not have the proper access privileges for calling Set user properties or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
 #### See also 
+
 [DELETE USER](delete-user.md)  
 [GET GROUP LIST](get-group-list.md)  
 [GET USER LIST](get-user-list.md)  

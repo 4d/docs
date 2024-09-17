@@ -30,11 +30,9 @@ If *firstChar* plus *numChars* is greater than the number of characters in the s
 This example illustrates the use of Substring. The results, described in the comments, are assigned to the variable *vsResult*.
 
 ```4d
- vsResult:=Substring("08/04/62";4;2) ` vsResult gets "04"
-
- vsResult:=Substring("Emergency";1;6) ` vsResult gets "Emerge"
-
- vsResult:=Substring(var;2) ` vsResult gets all characters except ` the first
+ vsResult:=Substring("08/04/62";4;2) // vsResult gets "04"
+ vsResult:=Substring("Emergency";1;6) // vsResult gets "Emerge"
+ vsResult:=Substring(var;2) // vsResult gets all characters except ` the first
 ```
 
 #### Example 2 
@@ -42,42 +40,27 @@ This example illustrates the use of Substring. The results, described in the com
 The following project method appends the paragraphs found in the text (passed as first parameter) to a string or text array (the pointer of which is passed as second parameter):
 
 ```4d
-  ` EXTRACT PARAGRAPHS
-
-  ` EXTRACT PARAGRAPHS ( text ; Pointer )
-
-  ` EXTRACT PARAGRAPHS ( Text to parse ; -> Array of ¶s )
+  // EXTRACT PARAGRAPHS
+  // EXTRACT PARAGRAPHS ( text ; Pointer )
+  // EXTRACT PARAGRAPHS ( Text to parse ; -> Array of ¶s )
  
-
- C_TEXT($1)
-
- C_POINTER($2)
+ var $1 : Text
+ var $2 : Pointer
  
-
  $vlElem:=Size of array($2->)
-
  Repeat
-
     $vlElem:=$vlElem+1
-
     INSERT IN ARRAY($2->;$vlElem)
-
     $vlPos:=Position(Char(Carriage return);$1)
-
     If($vlPos>0)
-
        $2->{$vlElem}:=Substring($1;1;$vlPos-1)
-
        $1:=Substring($1;$vlPos+1)
-
     Else
-
        $2->{$vlElem}:=$1
-
     End if
-
  Until($1="")
 ```
 
 #### See also 
+
 [Position](position.md)  

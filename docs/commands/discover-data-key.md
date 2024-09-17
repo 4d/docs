@@ -30,29 +30,21 @@ Key files (".4DKeyChain" extension files) must be stored at the top level of con
 #### Example 
 
 ```4d
- C_OBJECT($status)
-
- C_BOOLEAN($keyFound)
+ var $status : Object
+ var $keyFound : Boolean
  
-
  $status:=ds.encryptionStatus()
  
-
  If(($status.isEncrypted)&(Not($status.keyProvided))) //no key is available
-
   // thus access to encrypted data is not allowed
-
     $keyFound:=Discover data key
-
     If($keyFound=True)
-
        ALERT("A valid encryption key has been found.")
-
     End if
-
  End if
 ```
 
 #### See also 
+
 [4D Blog - New 4D commands to work with encrypted data](https://blog.4d.com/new-4d-commands-to-work-with-encrypted-data/)  
 [New data key](new-data-key.md)  

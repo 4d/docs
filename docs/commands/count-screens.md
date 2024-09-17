@@ -17,6 +17,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Count screens.Summary-->The Count screens command returns the number of screen monitors connected to your machine.<!-- END REF-->
 
 #### See also 
+
 [Menu bar screen](menu-bar-screen.md)  
 [SCREEN COORDINATES](screen-coordinates.md)  
 [SCREEN DEPTH](screen-depth.md)  

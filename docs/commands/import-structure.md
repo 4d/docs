@@ -40,9 +40,9 @@ You want to import a saved structure definition into the current database:
 
 ```4d
  $struc:=Document to text("c:\\4DStructures\\Employee.xml")
-
  IMPORT STRUCTURE($struc)
 ```
 
 #### See also 
+
 [EXPORT STRUCTURE](export-structure.md)  

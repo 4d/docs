@@ -58,18 +58,15 @@ The following examples use the macOS Terminal available in the Application/Utili
 2\. To edit a text file (*cat* is the macOS command used to edit files). In this example, the full access path of the command is passed:
 
 ```4d
- C_TEXT(input;output)
-
+ var input;output : Text
  input:=""
-
  LAUNCH EXTERNAL PROCESS("/bin/cat /folder/myfile.txt";input;output)
 ```
 
 3\. To get the contents of the "Users" folder (*ls -l* is the macOS equivalent of the *dir* command in DOS):
 
 ```4d
- C_TEXT($In;$Out)
-
+ var $In;$Out : Text
  LAUNCH EXTERNAL PROCESS("/bin/ls -l /Users";$In;$Out)
 ```
 
@@ -97,19 +94,15 @@ The following examples use the macOS Terminal available in the Application/Utili
 
 ```4d
  $mydoc:="C:\\Program Files\\Microsoft Office\\Office10\\WINWORD.EXE \"C:\\Documents and
-
  Settings\\Mark\\Desktop\\MyDocs\\New folder\\test.xml\""
-
  LAUNCH EXTERNAL PROCESS($mydoc;$tIn;$tOut)
 ```
 
 8\. To execute a Perl script (requires ActivePerl):
 
 ```4d
- C_TEXT($input;$output)
-
+ var $input;$output : Text
  SET ENVIRONMENT VARIABLE("myvariable";"value")
-
  LAUNCH EXTERNAL PROCESS("D:\\Perl\\bin\\perl.exe D:\\Perl\\eg\\cgi\\env.pl";$input;$output)
 ```
 
@@ -117,9 +110,7 @@ The following examples use the macOS Terminal available in the Application/Utili
 
 ```4d
  SET ENVIRONMENT VARIABLE("_4D_OPTION_CURRENT_DIRECTORY";"C:\\4D_VCS")
-
  SET ENVIRONMENT VARIABLE("_4D_OPTION_HIDE_CONSOLE";"true")
-
  LAUNCH EXTERNAL PROCESS("mycommand")
 ```
 
@@ -127,26 +118,19 @@ The following examples use the macOS Terminal available in the Application/Utili
 
 ```4d
  $docname:=Select document("";"*.*";"Choose the file to open";0)
-
  If(OK=1)
-
     SET ENVIRONMENT VARIABLE("_4D_OPTION_HIDE_CONSOLE";"true")
-
     LAUNCH EXTERNAL PROCESS("cmd.exe /C start \"\" \""+$docname+"\"")
-
  End if
 ```
 
 11\. The following examples request the process list on Windows:
 
 ```4d
- C_LONGINT($pid)
-
- C_TEXT($stdin;$stdout;$stderr)
+ var $pid : Integer
+ var $stdin;$stdout;$stderr : Text
  
-
  LAUNCH EXTERNAL PROCESS("tasklist";$pid) //gets PID only
-
  LAUNCH EXTERNAL PROCESS("tasklist";$stdin;$stdout;$stderr;$pid) //gets all information
 ```
 
@@ -155,5 +139,6 @@ The following examples use the macOS Terminal available in the Application/Utili
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise (file not found, insufficient memory, etc.), it is set to 0.
 
 #### See also 
+
 [OPEN URL](open-url.md)  
 [SET ENVIRONMENT VARIABLE](set-environment-variable.md)  

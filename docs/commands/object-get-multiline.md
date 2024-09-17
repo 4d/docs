@@ -35,4 +35,5 @@ The value returned corresponds to one of the following constants, found in the "
 **Note:** If you apply the **OBJECT Get multiline** command to an object that does not support the "Multiline" option, the command returns 0.  
 
 #### See also 
+
 [OBJECT SET MULTILINE](object-set-multiline.md)  

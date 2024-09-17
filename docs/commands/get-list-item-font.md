@@ -28,4 +28,5 @@ You can pass a reference number in *itemRef*. If this number does not correspond
 Lastly, you can pass \* in *itemRef*: in this case, the command will get the font of the current item of the list. If several items are selected manually, the current item is the one that was selected last. If no item is selected, the command does nothing.
 
 #### See also 
+
 [SET LIST ITEM FONT](set-list-item-font.md)  

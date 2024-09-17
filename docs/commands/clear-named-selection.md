@@ -19,6 +19,7 @@ displayed_sidebar: docs
 If *name* was created using the [CUT NAMED SELECTION](cut-named-selection.md) command and then manipulated using the [USE NAMED SELECTION](use-named-selection.md) command, *name* no longer exists in memory. In this case, the **CLEAR NAMED SELECTION** command does not need to be used.
 
 #### See also 
+
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  

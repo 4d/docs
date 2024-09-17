@@ -42,10 +42,10 @@ The following code inserts an item (with no attached sublist) just before the cu
 
 ```4d
  vlUniqueRef:=vlUniqueRef+1
-
  INSERT IN LIST(hList;*;"New Item";vlUniqueRef)
 ```
 
 #### See also 
+
 [APPEND TO LIST](append-to-list.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  

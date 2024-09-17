@@ -19,5 +19,6 @@ displayed_sidebar: docs
 **Note:** In the context of 4D macro-commands, the *<method\_path>* tag is replaced in the code by the full pathname of the method being executed. 
 
 #### See also 
+
 [METHOD Get path](method-get-path.md)  
 [METHOD GET PATHS](method-get-paths.md)  

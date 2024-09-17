@@ -46,11 +46,8 @@ This example tests if the BLOB *vxMyBlob* is compressed, and, if it is not, comp
 
 ```4d
  BLOB PROPERTIES(vxMyBlob;$vlCompressed;$vlExpandedSize;$vlCurrentSize)
-
  If($vlCompressed=Is not compressed)
-
     COMPRESS BLOB(vxMyBlob)
-
  End if
 ```
 
@@ -62,25 +59,15 @@ This example allows you to select a document and then compress it:
 
 ```4d
  $vhDocRef :=Open document("")
-
  If(OK=1)
-
     CLOSE DOCUMENT($vhDocRef)
-
     DOCUMENT TO BLOB(Document;vxBlob)
-
     If(OK=1)
-
        COMPRESS BLOB(vxBlob)
-
        If(OK=1)
-
           BLOB TO DOCUMENT(Document;vxBlob)
-
        End if
-
     End if
-
  End if
 ```
 
@@ -90,13 +77,9 @@ Sending of raw HTTP data compressed with GZIP:
 
 ```4d
  COMPRESS BLOB($blob;GZIP Best compression mode)
-
- C_TEXT($vEncoding)
-
+ var $vEncoding : Text
  $vEncoding:="Content-encoding: gzip"
-
  WEB SET HTTP HEADER($vEncoding)
-
  WEB SEND RAW DATA($blob ;*)
 ```
 
@@ -105,5 +88,6 @@ Sending of raw HTTP data compressed with GZIP:
 The OK variable is set to 1 if the BLOB has been successfully compressed; otherwise, it is set to 0.
 
 #### See also 
+
 [BLOB PROPERTIES](blob-properties.md)  
 [EXPAND BLOB](expand-blob.md)  

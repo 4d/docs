@@ -81,48 +81,11 @@ After you execute the following code:
 ... $webServerInfo will contain for example:
 
 ```RAW
-{
-   "started": true,
-   "uptime": 40,
-   "SOAPServerStarted": true,
-   "startMode": "manual",
-   "httpRequestCount": 0,
-   "options": {
-      "CORSEnabled": false,
-      "CORSSettings": null,
-      "webCharacterSet": "UTF-8",
-      "webHTTPCompressionLevel": 1,
-      "webHTTPCompressionThreshold": 1024,
-      "webHTTPSPortID": 443,
-      "webIPAddressToListen": ["192.168.xxx.xxx"],
-      "webInactiveProcessTimeout": 28800,
-      "webInactiveSessionTimeout": 28800,
-      "webMaxConcurrentProcesses": 100,
-      "webPortID": 80
-   },
-   "security": {
-      "HTTPEnabled": true,
-      "cipherSuite": "ECDHE-RSA-AES128-GCM-SHA256:...:CAMELLIA128-SHA",
-      "openSSLVersion": "OpenSSL 1.0.2h 3 May 2016",
-      "perfectForwardSecrecy": true,
-      "minTLSVersion": "1.2" 
-   },
-    "cache": {
-        "cacheUsage": 1,
-        "numOfLoads": 24,
-        "currentSize": 154219,
-        "maxSize": 10485760,
-        "objectMaxSize": 524288,
-        "enabled": true,
-        "nbCachedObjects": 23,
-        "cachedObjects": [
-            {...},{...}
-         ]
-   }
-}
+{   "started": true,   "uptime": 40,   "SOAPServerStarted": true,   "startMode": "manual",   "httpRequestCount": 0,   "options": {      "CORSEnabled": false,      "CORSSettings": null,      "webCharacterSet": "UTF-8",      "webHTTPCompressionLevel": 1,      "webHTTPCompressionThreshold": 1024,      "webHTTPSPortID": 443,      "webIPAddressToListen": ["192.168.xxx.xxx"],      "webInactiveProcessTimeout": 28800,      "webInactiveSessionTimeout": 28800,      "webMaxConcurrentProcesses": 100,      "webPortID": 80   },   "security": {      "HTTPEnabled": true,      "cipherSuite": "ECDHE-RSA-AES128-GCM-SHA256:...:CAMELLIA128-SHA",      "openSSLVersion": "OpenSSL 1.0.2h 3 May 2016",      "perfectForwardSecrecy": true,      "minTLSVersion": "1.2"    },    "cache": {        "cacheUsage": 1,        "numOfLoads": 24,        "currentSize": 154219,        "maxSize": 10485760,        "objectMaxSize": 524288,        "enabled": true,        "nbCachedObjects": 23,        "cachedObjects": [            {...},{...}         ]   }}
 ```
 
 #### See also 
+
 [Get license info](get-license-info.md)  
 [Get process activity](get-process-activity.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  

@@ -29,12 +29,12 @@ In a custom configuration or preferences dialog box, you include a button whose 
 
 ```4d
   // Object method for bLicense button
-
  CHANGE LICENSES
 ```
 
 This way a user can activate licenses without having to modify the database.
 
 #### See also 
+
 [Get license info](get-license-info.md)  
 [Is license available](is-license-available.md)  

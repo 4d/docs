@@ -27,20 +27,16 @@ However, we strongly advise you to use **Is new record** instead of [Record numb
 The following two statements are identical. The second one is strongly advised so that the code will be compatible with future versions of 4D:
 
 ```4d
- If(Record number([Table])=-3) `Not advised
-
-  ` ...
-
+ If(Record number([Table])=-3) //Not advised
+  // ...
  End if
  
-
- If(Is new record([Table])) `Strongly advised
-
-  ` ...
-
+ If(Is new record([Table])) //Strongly advised
+  // ...
  End if
 ```
 
 #### See also 
+
 [Modified record](modified-record.md)  
 [Record number](record-number.md)  

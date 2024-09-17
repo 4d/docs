@@ -45,6 +45,7 @@ The following statement hides the detail row:
 ```
 
 #### See also 
+
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  

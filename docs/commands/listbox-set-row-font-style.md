@@ -59,22 +59,21 @@ Given an array type list box with the following characteristics:
 
 ```4d
  LISTBOX SET ROW FONT STYLE(*;"Col5";3;Bold)
-
   // equivalent to ArrCol5Style{3}:=Bold
 ```
 
-![](../assets/en/Commands/pict1205512.fr.png)
+![](../assets/en/commands/pict1205512.fr.png)
 
 ```4d
  LISTBOX SET ROW FONT STYLE(*;"List Box";3;Italic+Underline)
-
   // equivalent toArrGlobalStyle{3}:=Italic+Underline
 ```
 
-![](../assets/en/Commands/pict1205514.fr.png)
+![](../assets/en/commands/pict1205514.fr.png)
 
 After the second statement, all the cells of the third row change to underlined italic, except for the one in the 5th column which stays in bold only (column style arrays take priority over list box arrays). 
 
 #### See also 
+
 [LISTBOX Get row font style](listbox-get-row-font-style.md)  
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  

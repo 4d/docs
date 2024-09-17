@@ -36,19 +36,15 @@ The following example deletes from the Picture Library any pictures whose names 
 
 ```4d
  PICTURE LIBRARY LIST($alPicRef;$asPicName)
-
  For($vlPicture;1;Size of array($alPicRef))
-
     If($asPicName{$vlPicture}="$@")
-
        REMOVE PICTURE FROM LIBRARY($alPicRef{$vlPicture})
-
     End if
-
  End for
 ```
 
 #### See also 
+
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  

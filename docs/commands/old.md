@@ -28,17 +28,14 @@ To restore the original value of a field, assign it the value returned by **Old*
 **Note:** For technical reasons, in the case of Picture and BLOB type fields, the expression returned by **Old** cannot be used directly as a parameter for another command. It is necessary to pass the value via an intermediate variable. For example: 
 
 ```4d
-  `Do NOT write (causes a syntax error):
-
- $size :=BLOB size(Old([theTable]theBlob)) `INCORRECT
+  //Do NOT write (causes a syntax error):
+ $size :=BLOB size(Old([theTable]theBlob)) //INCORRECT
  
-
-  `Write:
-
+  //Write:
  $oldBLOB:=Old([theTable]theBlob)
-
- $size :=BLOB size($oldBLOB) `CORRECT
+ $size :=BLOB size($oldBLOB) //CORRECT
 ```
 
 #### See also 
+
 [Modified](modified.md)  

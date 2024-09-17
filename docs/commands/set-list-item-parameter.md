@@ -41,25 +41,19 @@ You want to set as choice list of a hierarchical pop up menu a custom list of fo
 
 ```4d
  $myList:=New list
-
  APPEND TO LIST($myList;ak standard action title;1)
-
  APPEND TO LIST($myList;ak standard action title;2)
-
  APPEND TO LIST($myList;ak standard action title;3)
-
  SET LIST ITEM PARAMETER($myList;1;Associated standard action;"fontSize?value=10pt")
-
  SET LIST ITEM PARAMETER($myList;2;Associated standard action;"fontSize?value=12pt")
-
  SET LIST ITEM PARAMETER($myList;3;Associated standard action;"fontSize?value=14pt")
-
  OBJECT SET LIST BY REFERENCE(*;"popup";Choice list;$myList)
 ```
 
-![](../assets/en/Commands/pict3372004.en.png)
+![](../assets/en/commands/pict3372004.en.png)
 
 #### See also 
+
 [APPEND TO LIST](append-to-list.md)  
 [Get action info](get-action-info.md)  
 [GET LIST ITEM PARAMETER](get-list-item-parameter.md)  

@@ -26,49 +26,30 @@ At this level, you can only append processing instructions and comments or repla
 In this example, we want to find the DTD declaration of the XML document:
 
 ```4d
- C_TEXT($rootRef)
-
+ var $rootRef : Text
  $rootRef:=DOM Parse XML source("")
-
  If(OK=1)
-
-    C_TEXT($documentRef)
-
+    var $documentRef : Text
   // we are looking for the document node, since it is the node to which
-
   // the DOCTYPE node is attached before the root node
-
     $documentRef:=DOM Get XML document ref($rootRef)
-
     ARRAY TEXT($typeArr;0)
-
     ARRAY TEXT($valueArr;0)
-
   // on this node we look for the DOCTYPE type node among the
-
   // child nodes
-
     DOM GET XML CHILD NODES($refDocument;$typeArr;$valueArr)
-
-    C_TEXT($text)
-
+    var $text : Text
     $text:=""
-
     $pos:=Find in array($typeArr;XML DOCTYPE)
-
     If($pos>-1)
-
   // We retrieve the DTD declaration in $text
-
        $text:=$text+"Doctype: "+$valueArr{$pos}+Char(Carriage return)
-
     End if
-
     DOM CLOSE XML($rootRef)
-
  End if
 ```
 
 #### See also 
+
 [DOM Append XML child node](dom-append-xml-child-node.md)  
 [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)  

@@ -33,9 +33,7 @@ A common practice could be initializing the **Storage** object in the :
 
 ```4d
  Use(Storage)
-
     Storage.counters:=New shared object("customers";0;"invoices";0)
-
  End use
 ```
 
@@ -45,17 +43,11 @@ This example shows a standard way to set **Storage** values:
 
 ```4d
  Use(Storage)
-
     Storage.mydata:=New shared object
-
     Use(Storage.mydata)
-
        Storage.mydata.prop1:="Smith"
-
        Storage.mydata.prop2:=100
-
     End use
-
  End use
 ```
 
@@ -66,40 +58,26 @@ This example shows a standard way to set **Storage** values:
 **Note:** For more information about singleton patterns, you can refer to this [Wikipedia page](https://en.wikipedia.org/wiki/Singleton%5Fpattern).
 
 ```4d
- C_LONGINT($0)
-
- C_LONGINT($counterValue)
-
- C_OBJECT(counter) //create a reference to counter for the process
+ var $0 : Integer
+ var $counterValue : Integer
+ var counter : Object //create a reference to counter for the process
  
-
  If(counter=Null) //if this reference is null, get if from Storage
-
     Use(Storage) //Use of Storage needed only once!
-
        If(Storage.counter=Null)
-
           Storage.counter:=New shared object("operation";0)
-
        End if
-
        counter:=Storage.counter //Get the reference of the counter shared object
-
     End use
-
  End if
-
  Use(counter) //directly use the shared object counter (no need to use Storage!)
-
     counter.operation:=counter.operation+1
-
     $counterValue:=counter.operation
-
  End use
  
-
  $0:=$counterValue
 ```
 
 #### See also 
+
 [Shared objects and shared collections](../../4D/20-R6/Shared-objects-and-shared-collections.300-6957624.en.html)  

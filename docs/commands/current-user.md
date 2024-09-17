@@ -32,6 +32,7 @@ In the optional *user* parameter, you can specify which of the following you wan
 See example for the [User in group](user-in-group.md) command.
 
 #### See also 
+
 [CHANGE CURRENT USER](change-current-user.md)  
 [CHANGE PASSWORD](change-password.md)  
 [SET USER ALIAS](set-user-alias.md)  

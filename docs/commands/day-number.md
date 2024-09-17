@@ -38,40 +38,25 @@ displayed_sidebar: docs
 The following example is a function that returns the current day as a string:
 
 ```4d
- $viDay :=Day number(Current date) ` $viDay gets the current day number
-
+ $viDay :=Day number(Current date) // $viDay gets the current day number
  Case of
-
     :($viDay =1)
-
        $0:="Sunday"
-
     :($viDay =2)
-
        $0:="Monday"
-
     :($viDay =3)
-
        $0:="Tuesday"
-
     :($viDay =4)
-
        $0:="Wednesday"
-
     :($viDay =5)
-
        $0:="Thursday"
-
     :($viDay =6)
-
        $0:="Friday"
-
     :($viDay =7)
-
        $0:="Saturday"
-
  End case
 ```
 
 #### See also 
+
 [Day of](day-of.md)  

@@ -33,5 +33,6 @@ See the example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md
 If a copy of the text is correctly placed in the pasteboard, the OK variable is set to 1\. If there is not enough memory to place a copy of the text in the pasteboard, the OK variable is set to 0, but no error is generated.
 
 #### See also 
+
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  

@@ -21,6 +21,7 @@ In order for the **In header** execution cycle to be generated, make sure that t
 **Note:** This command is equivalent to using [Form event code](form-event-code.md) and testing whether it returns the On Header event.
 
 #### See also 
+
 [\_o\_During](../../4D/20-R6/o-During.301-6957655.en.html)  
 [In break](in-break.md)  
 [In footer](in-footer.md)  

@@ -49,29 +49,20 @@ For more information on these requirements, please refer to the paragraph.
 In your 4D Server database, you have designed an access control system based on 4D's users and groups feature. You want to configure your application so that 4D remote users on Windows connect directly to 4D Server (no password dialog box is displayed), but while being logged with their actual rights:
 
 1. In the "Security" page of the Database Settings dialog box, designate a user as the "default user":  
-![](../assets/en/Commands/pict2909681.en.png)  
+![](../assets/en/commands/pict2909681.en.png)  
 With this setting, no password dialog will be displayed for a remote 4D that connects to the server; all clients being logged as "Bob".
 2. In the On Server Open Connection database method, add the following code to check user authentication from the Active Directory:
 
 ```4d
   //On Server Open Connection database method
-
- C_LONGINT($0;$1;$2;$3)
-
+ var $0;$1;$2;$3 : Integer
  $login:=Current client authentication($domain;$protocol)
-
  If($login #"") //a login was returned
-
   //call your custom authentication method
-
     $0:=CheckCredentials($login)
-
   //should return 0 in case of success or -1 for error
-
  Else
-
     $0:=-1 //reject the connection
-
  End if
 ```
 

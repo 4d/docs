@@ -43,9 +43,7 @@ To perform a query corresponding to the request “...give me any ten customers 
 
 ```4d
  SET QUERY LIMIT(10)
-
  QUERY([Customers];[Customers]Gross sales>1000000)
-
  SET QUERY LIMIT(0)
 ```
 
@@ -54,6 +52,7 @@ To perform a query corresponding to the request “...give me any ten customers 
 See the second example for the [SET QUERY DESTINATION](set-query-destination.md) command.
 
 #### See also 
+
 [Get query limit](get-query-limit.md)  
 [QUERY](query.md)  
 [QUERY BY EXAMPLE](query-by-example.md)  

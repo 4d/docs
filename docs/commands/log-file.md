@@ -28,4 +28,5 @@ If the database operates with a log file, the system variable OK is set to 1\. T
 * If for some reason the log file becomes unavailable during a working session, error 1274 is generated and 4D Server does not allow users to write data anymore. When the log file is available again, it is necessary to do a backup.
 
 #### See also 
+
 [SELECT LOG FILE](select-log-file.md)  

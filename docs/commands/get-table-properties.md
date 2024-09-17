@@ -29,6 +29,7 @@ Once the command has been executed:
 * The *trigDelRec* parameter returns True if the “On deleting a record” trigger has been set for this table, else false.
 
 #### See also 
+
 [GET FIELD ENTRY PROPERTIES](get-field-entry-properties.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  

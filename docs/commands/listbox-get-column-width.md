@@ -26,4 +26,5 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 If no minimum and/or maximum value has been set for the column, the corresponding parameter returns 0.
 
 #### See also 
+
 [LISTBOX SET COLUMN WIDTH](listbox-set-column-width.md)  

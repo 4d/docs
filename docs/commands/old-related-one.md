@@ -25,6 +25,7 @@ displayed_sidebar: docs
 If the command has been executed correctly and if the related records have been loaded, the OK system variable is set to 1\. If the user clicked on **Cancel** in the record selection dialog box (that appears when the related record has been modified), the OK variable is set to 0\. 
 
 #### See also 
+
 [Old](old.md)  
 [OLD RELATED MANY](old-related-many.md)  
 [RELATE ONE](relate-one.md)  

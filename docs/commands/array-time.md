@@ -55,14 +55,12 @@ Since time arrays accept numeric values, the following code is valid:
 
 ```4d
  ARRAY TIME($arrTimeValues;10)
-
  $CurTime:=Current time+1
-
  APPEND TO ARRAY($arrTimeValues;$CurTime)
-
  $Found:=Find in array($arrTimeValues;$CurTime)
 ```
 
 #### See also 
+
 [Creating Arrays](../../4D/20-R6/Creating-Arrays.300-6958321.en.html)  
 [Time](time.md)  

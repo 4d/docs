@@ -311,7 +311,7 @@ This event is generally used to display pop-up menus in case of long button clic
 \- If the pop-up menu is “separated,” the event is only generated when a click occurs on the portion of the button with the arrow.  
 \- If the pop-up menu is “linked,” the event is generated when a click occurs on any part of the button. Please note that the On Long Click event cannot be generated with this type of button.  
     
-![](../assets/en/Commands/pict2074286.en.png)
+![](../assets/en/commands/pict2074286.en.png)
 
 The following 3D button, 3D radio button and 3D check box styles accept the “With pop-up menu” property: None, Toolbar button, Bevel, Rounded bevel and Office XP.
 
@@ -443,15 +443,10 @@ This example shows the On Validate event being used to automatically assign (to 
 
 ```4d
   //Method of a form
-
  Case of
-
   // ...
-
     :(Form event code=On Validate)
-
        [aTable]Last Modified On:=Current date
-
  End case
 ```
 
@@ -461,31 +456,18 @@ In this example, the complete handling of a drop-down list (initialization, user
 
 ```4d
   //asBurgerSize Drop-down list Object Method
-
  Case of
-
     :(Form event code=On Load)
-
        ARRAY TEXT(asBurgerSize;3)
-
        asBurgerSize{1}:="Small"
-
        asBurgerSize{1}:="Medium"
-
        asBurgerSize{1}:="Large"
-
     :(Form event code=On Clicked)
-
        If(asBurgerSize#0)
-
           ALERT("You chose a "+asBurgerSize{asBurgerSize}+" burger.")
-
        End if
-
     :(Form event code=On Unload)
-
        CLEAR VARIABLE(asBurgerSize)
-
  End case
 ```
 
@@ -495,109 +477,57 @@ This example shows how, in an object method, to accept and later handle a drag a
 
 ```4d
   //[aTable]aPicture enterable picture field object method
-
  Case of
-
     :(Form event code=On Drag Over)
-
   //A drag-and-drop operation has started and the mouse is currently over the field
-
   //Get the information about the source object
-
        DRAG AND DROP PROPERTIES($vpSrcObject;$vlSrcElement;$lSrcProcess)
-
   //Note that we do not need to test the source process ID number
-
   //for the object method executed since it is in the same process
-
        $vlDataType:=Type($vpSrcObject->)
-
   //Is the source data a picture (field, variable or array)?
-
        If(($vlDataType=Is picture)|($vlDataType=Picture array))
-
   //If so, accept the drag.
-
           $0:=0
-
        Else
-
   //If so, refuse the drag
-
           $0:=-1
-
        End if
-
     :(Form event code=On Drop)
-
   //The source data has been dropped on the object, we therefore need to copy it
-
   //into the object
-
   //Get the information about the source object
-
        DRAG AND DROP PROPERTIES($vpSrcObject;$vlSrcElement;$lSrcProcess)
-
        $vlDataType:=Type($vpSrcObject->)
-
        Case of
-
   //The source object is Picture field or variable
-
           :($vlDataType=Is picture)
-
   //Is the source object from the same process (thus from the same window and form)?
-
              If($lSrcProcess=Current process)
-
   //If so, just copy the source value
-
                 [aTable]aPicture:=$vpSrcObject->
-
              Else
-
   //If not, is the source object a variable?
-
                 If(Is a variable($vpSrcObject))
-
   //If so, get the value from the source process
-
                    GET PROCESS VARIABLE($lSrcProcess;$vpSrcObject->;$vgDraggedPict)
-
                    [aTable]aPicture:=$vgDraggedPict
-
                 Else
-
   //If not, use CALL PROCESS to get the field value from the source process
-
                 End if
-
              End if
-
   //The source object is an array of pictures
-
           :($vlDataType=Picture array)
-
   //Is the source object from the same process (thus from the same window and form)?
-
              If($lSrcProcess=Current process)
-
   //If so, just copy the source value
-
                 [aTable]aPicture:=$vpSrcObject->{$vlSrcElement}
-
              Else
-
   //If not, get the value from the source process
-
                 GET PROCESS VARIABLE($lSrcProcess;$vpSrcObject->{$vlSrcElement};$vgDraggedPict)
-
                 [aTable]aPicture:=$vgDraggedPict
-
              End if
-
        End case
-
  End case
 ```
 
@@ -609,71 +539,38 @@ This example is a template for a form method. It shows each of the possible even
 
 ```4d
   //Method of a form being used as output form for a summary report
-
  $vpFormTable:=Current form table
-
  Case of
-
   //...
-
     :(Form event code=On Header)
-
   //A header area is about to be printed
-
        Case of
-
           :(Before selection($vpFormTable->))
-
   //Code for the first break header goes here
-
           :(Level=1)
-
   //Code for a break header level 1 goes here
-
           :(Level=2)
-
   //Code for a break header level 2 goes here
-
   //...
-
        End case
-
     :(Form event code=On Printing Detail)
-
   //A record is about to be printed
-
   //Code for each record goes here
-
     :(Form event code=On Printing Break)
-
   //A break area is about to be printed
-
        Case of
-
           :(Level=0)
-
   //Code for a break level 0 goes here
-
           :(Level=1)
-
   //Code for a break level 1 goes here
-
   //...
-
        End case
-
     :(Form event code=On Printing Footer)
-
        If(End selection($vpFormTable->))
-
   //Code for the last footer goes here
-
        Else
-
   //Code for a footer goes here
-
        End if
-
  End case
 ```
 
@@ -683,67 +580,36 @@ This example shows the template of a form method that handles the events that ca
 
 ```4d
   //A form method
-
  Case of
-
     :(Form event code=On Load)
-
        $vsTheEvent:="The form is about to be displayed"
-
     :(Form event code=On Unload)
-
        $vsTheEvent:="The output form has been exited and is about to disappear from the screen"
-
     :(Form event code=On Display Detail)
-
        $vsTheEvent:="Displaying record #"+String(Selected record number([TheTable]))
-
     :(Form event code=On Menu Selected)
-
        $vsTheEvent:="A menu item has been selected"
-
     :(Form event code=On Header")
-
        $vsTheEvent:="The header area is about to be drawn"
-
     :(Form event code=On Clicked")
-
        $vsTheEvent:="A record has been clicked"
-
     :(Form event code=On Double Clicked")
-
        $vsTheEvent:="A record has been double clicked"
-
     :(Form event code=On Open Detail)
-
        $vsTheEvent:="The record #"+String(Selected record number([TheTable]))+" is double-clicked"
-
     :(Form event code=On Close Detail)
-
        $vsTheEvent:="Going back to the output form"
-
     :(Form event code=On Activate)
-
        $vsTheEvent:="The form's window has just become the frontmost window"
-
     :(Form event code=On Deactivate)
-
        $vsTheEvent:="The form's window is no longer the frontmost window"
-
     :(Form event code=On Menu Selected)
-
        $vsTheEvent:="A menu item has been chosen"
-
     :(Form event code=On Outside Call)
-
        $vsTheEvent:="A call from another has been received"
-
     Else
-
        $vsTheEvent:="What's going on? Event #"+String(Form event)
-
  End case
-
  SET WINDOW TITLE($vsTheEvent)
 ```
 
@@ -757,29 +623,17 @@ This example shows how to treat clicks and double clicks in the same way in a sc
 
 ```4d
   //asChoices scrollable area object method
-
  Case of
-
     :(Form event code=On Load)
-
        ARRAY TEXT(asChoices;...)
-
   //...
-
        asChoices:=0
-
     :((Form event code=On Clicked)|(Form event code=On Double Clicked))
-
        If(asChoices#0)
-
   //An item has been clicked, do something here
-
   //...
-
        End if
-
   //...
-
  End case
 ```
 
@@ -789,51 +643,28 @@ This example shows how to treat clicks and double clicks using a different respo
 
 ```4d
   //asChoices scrollable area object method
-
  Case of
-
     :(Form event code=On Load)
-
        ARRAY TEXT(asChoices;...)
-
   // ...
-
        asChoices:=0
-
        asChoices{0}:="0"
-
     :(Form event code=On Clicked)
-
        If(asChoices#0)
-
           If(asChoices#Num(asChoices))
-
   //A new item has been clicked, do something here
-
   //...
-
   //Save the new selected element for the next time
-
              asChoices{0}:=String(asChoices)
-
           End if
-
        Else
-
           asChoices:=Num(asChoices{0})
-
        End if
-
     :(Form event code=On Double Clicked)
-
        If(asChoices#0)
-
   //An item has been double clicked, do something different here
-
        End if
-
   // ...
-
  End case
 ```
 
@@ -843,45 +674,25 @@ This example shows how to maintain a status text information area from within a 
 
 ```4d
   //[Contacts];"Data Entry" form method
-
  Case of
-
     :(Form event code=On Load)
-
-       C_TEXT(vtStatusArea)
-
+       var vtStatusArea : Text
        vtStatusArea:=""
-
     :(Form event code=On Getting Focus)
-
        RESOLVE POINTER(Focus object;$vsVarName;$vlTableNum;$vlFieldNum)
-
        If(($vlTableNum#0)&($vlFieldNum#0))
-
           Case of
-
              :($vlFieldNum=1) //Last name field
-
                 vtStatusArea:="Enter the Last name of the Contact; it will be capitalized automatically"
-
   //...
-
              :($vlFieldNum=10) //Zip Code field
-
                 vtStatusArea:="Enter a 5-digit zip code; it will be checked and validated automatically"
-
   //...
-
           End case
-
        End if
-
     :(Form event code=On Losing Focus)
-
        vtStatusArea:=""
-
   //...
-
  End case
 ```
 
@@ -891,37 +702,21 @@ This example shows how to respond to a close window event with a form used for r
 
 ```4d
   //Method for an input form
-
  $vpFormTable:=Current form table
-
  Case of
-
   //...
-
     :(Form event code=On Close Box)
-
        If(Modified record($vpFormTable->))
-
           CONFIRM("This record has been modified. Save Changes?")
-
           If(OK=1)
-
              ACCEPT
-
           Else
-
              CANCEL
-
           End if
-
        Else
-
           CANCEL
-
        End if
-
   //...
-
  End case
 ```
 
@@ -931,17 +726,11 @@ This example shows how to capitalize a text or alphanumeric field each time its 
 
 ```4d
   //[Contacts]First Name Object method
-
  Case of
-
   //...
-
     :(Form event code=On Data Change)
-
        [Contacts]First Name:=Uppercase(Substring([Contacts]First Name;1;1))+Lowercase(Substring([Contacts]First Name;2))
-
   //...
-
  End case
 ```
 
@@ -951,17 +740,11 @@ This example shows how to capitalize a text or alphanumeric field each time its 
 
 ```4d
   //[Contacts]First Name Object method
-
  Case of
-
   //...
-
     :(Form event code=On Data Change)
-
        [Contacts]First Name:=Uppercase(Substring([Contacts]First Name;1;1))+Lowercase(Substring([Contacts]First Name;2))
-
   //...
-
  End case
 ```
 
@@ -971,43 +754,25 @@ The following example illustrates how to manage a deletion action in a hierarchi
 
 ```4d
  ... //method of hierarchical list
-
 :(Form event code=On Delete Action)
-
  ARRAY LONGINT($itemsArray;0)
-
  $Ref:=Selected list items(<>HL;$itemsArray;*)
-
  $n:=Size of array($itemsArray)
  
-
  Case of
-
     :($n=0)
-
        ALERT("No item selected")
-
        OK:=0
-
     :($n=1)
-
        CONFIRM("Do you want to delete this item?")
-
     :($n>1)
-
        CONFIRM("Do you want to delete these items?")
-
  End case
  
-
  If(OK=1)
-
     For($i;1;$n)
-
        DELETE FROM LIST(<>HL;$itemsArray{$i};*)
-
     End for
-
  End if
 ```
 
@@ -1017,17 +782,11 @@ In this example, the On Scroll form event allows us to synchronize the display o
 
 ```4d
  Case of
-
     :(Form event code=On Scroll)
-
   // we take the position of the left picture
-
        OBJECT GET SCROLL POSITION(*;"satellite";vPos;hPos)
-
   // and we apply it to the right picture
-
        OBJECT SET SCROLL POSITION(*;"plan";vPos;hPos;*)
-
  End case
 ```
 
@@ -1040,55 +799,36 @@ You want to draw a red rectangle around the selected cell of a list box, and you
 ```4d
  Case of
  
-
     :(Form event code=On Clicked)
-
        LISTBOX GET CELL POSITION(*;"LB1";$col;$raw)
-
        LISTBOX GET CELL COORDINATES(*;"LB1";$col;$raw;$x1;$y1;$x2;$y2)
-
        OBJECT SET VISIBLE(*;"RedRect";True) //initialize a red rectangle
-
        OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
  
-
     :(Form event code=On Scroll)
-
        LISTBOX GET CELL POSITION(*;"LB1";$col;$raw)
-
        LISTBOX GET CELL COORDINATES(*;"LB1";$col;$raw;$x1;$y1;$x2;$y2)
-
        OBJECT GET COORDINATES(*;"LB1";$xlb1;$ylb1;$xlb2;$ylb2)
-
        $toAdd:=LISTBOX Get headers height(*;"LB1") //height of the header so as not to overlap it
-
        If($ylb1+$toAdd<$y1)&($ylb2>$y2) //if we are inside the list box
-
   //to keep it simple, we only handle headers
-
   //but we should handle horizontal clipping
-
   //as well as scroll bars
-
           OBJECT SET VISIBLE(*;"RedRect";True)
-
           OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
-
        Else
-
           OBJECT SET VISIBLE(*;"RedRect";False)
-
        End if
  
-
  End case
 ```
 
 As a result, the red rectangle follows the scrolling of the list box:
 
-![](../assets/en/Commands/pict1900395.en.png)
+![](../assets/en/commands/pict1900395.en.png)
 
 #### See also 
+
 [\_o\_DRAG AND DROP PROPERTIES](../../4D/20-R6/o-DRAG-AND-DROP-PROPERTIES.301-6957656.en.html)  
 [CALL SUBFORM CONTAINER](call-subform-container.md)  
 [Current form table](current-form-table.md)  

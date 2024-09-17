@@ -20,4 +20,5 @@ displayed_sidebar: docs
 If the logout is performed properly, the system variable OK is set to 1; otherwise, it is set to 0\. You can intercept this error with an error-handling method installed by the [ON ERR CALL](on-err-call.md) command.
 
 #### See also 
+
 [SQL LOGIN](sql-login.md)  

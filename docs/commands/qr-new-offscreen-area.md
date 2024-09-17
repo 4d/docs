@@ -17,5 +17,6 @@ displayed_sidebar: docs
 <!--REF #_command_.QR New offscreen area.Summary-->The QR New offscreen area command creates a new Quick Report offscreen area and returns its reference.<!-- END REF-->
 
 #### See also 
+
 [QR DELETE OFFSCREEN AREA](qr-delete-offscreen-area.md)  
 [QR NEW AREA](qr-new-area.md)  

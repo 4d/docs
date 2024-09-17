@@ -34,5 +34,6 @@ See example in [Record Locking](/4Dv20R6/4D/20-R6/Record-Locking.300-6958117.en.
 See example for the command [Process number](process-number.md).
 
 #### See also 
+
 [HIDE PROCESS](hide-process.md)  
 [PAUSE PROCESS](pause-process.md)  

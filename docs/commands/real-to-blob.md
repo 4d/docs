@@ -48,10 +48,8 @@ After the call, the *offset* variable parameter is returned, incremented by the 
 After executing this code:
 
 ```4d
- C_REAL(vrValue)
-
+ var vrValue : Real
  vrValue:=...
-
  REAL TO BLOB(vrValue;vxBlob;Extended real format)
 ```
 
@@ -62,10 +60,8 @@ After executing this code:
 After executing this code:
 
 ```4d
- C_REAL(vrValue)
-
+ var vrValue : Real
  vrValue:=...
-
  REAL TO BLOB(vrValue;vxBlob;Native real format)
 ```
 
@@ -77,12 +73,9 @@ After executing this code:
 
 ```4d
  SET BLOB SIZE(vxBlob;100)
-
- C_REAL(vrValue)
-
+ var vrValue : Real
  vrValue:=...
-
- INTEGER TO BLOB(vrValue;vxBlob;PC double real format) ` or Macintosh double real format
+ INTEGER TO BLOB(vrValue;vxBlob;PC double real format) // or Macintosh double real format
 ```
 
 * On all platforms, the size of *vxBlob* is 8 bytes
@@ -93,14 +86,10 @@ After executing this code:
 
 ```4d
  SET BLOB SIZE(vxBlob;100)
-
- C_REAL(vrValue)
-
+ var vrValue : Real
  vrValue:=...
-
  vlOffset:=50
-
- REAL TO BLOB(vrValue;vxBlob;PC double real format;vlOffset) ` or Macintosh double real format
+ REAL TO BLOB(vrValue;vxBlob;PC double real format;vlOffset) // or Macintosh double real format
 ```
 
 * On all platforms, the size of *vxBlob* is 100 bytes
@@ -113,11 +102,9 @@ After executing this code:
 After executing this code:
 
 ```4d
- C_REAL(vrValue)
-
+ var vrValue : Real
  vrValue:=...
-
- REAL TO BLOB(vrValue;vxBlob;Macintosh double real format) ` or Windows double real format
+ REAL TO BLOB(vrValue;vxBlob;Macintosh double real format) // or Windows double real format
 ```
 
 * On all platforms, the size of *vxBlob* is 8 bytes
@@ -128,7 +115,6 @@ After executing this code:
 
 ```4d
  SET BLOB SIZE(vxBlob;100)
-
  REAL TO BLOB(vrValue;vxBlob;Extended real format;*)
 ```
 
@@ -137,6 +123,7 @@ After executing this code:
 * The other bytes of the BLOB are left unchanged
 
 #### See also 
+
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
 [BLOB to real](blob-to-real.md)  

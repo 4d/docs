@@ -28,15 +28,15 @@ Passing the optional *\** parameter indicates that the *object* parameter is an 
 
 Given a combo box object defined in a form:
 
-![](../assets/en/Commands/pict1209738.en.png)![](../assets/en/Commands/pict1209740.en.png)
+![](../assets/en/commands/pict1209738.en.png)![](../assets/en/commands/pict1209740.en.png)
 
 You execute the following code:
 
 ```4d
  $vPtr :=OBJECT Get data source(*;"vCombo")
-
   // $vPtr contains -> vCombo
 ```
 
 #### See also 
+
 [OBJECT SET DATA SOURCE](object-set-data-source.md)  

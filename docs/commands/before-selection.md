@@ -22,28 +22,17 @@ To move the current record pointer back into the selection, use [FIRST RECORD](f
 **Before selection** also returns TRUE in the first header when a report is being printed with [PRINT SELECTION](print-selection.md) or from the Print menu. You can use the following code to test for the first header and print a special header for the first page:
 
 ```4d
-  ` Method of a form being used as output form for a summary report
-
+  // Method of a form being used as output form for a summary report
  $vpFormTable:=Current form table
-
  Case of
-
-  ` ...
-
+  // ...
     :(Form event code=On Header)
-
-  ` A header area is about to be printed
-
+  // A header area is about to be printed
        Case of
-
           :(Before selection($vpFormTable->))
-
-  ` Code for the first break header goes here
-
-  ` ...
-
+  // Code for the first break header goes here
+  // ...
        End case
-
  End case
 ```
 
@@ -52,30 +41,21 @@ To move the current record pointer back into the selection, use [FIRST RECORD](f
 This form method is used during the printing of a report. It sets a variable, *vTitle*, to print in the Header area on the first page:
 
 ```4d
-  ` [Finances];"Summary" Form Method
-
+  // [Finances];"Summary" Form Method
  Case of
-
-  ` ...
-
+  // ...
     :(Form event code=On Header)
-
        Case of
-
           :(Before selection([Finances))
-
-             vTitle:="Corporate Report 1997" ` Set the title for the first page
-
+             vTitle:="Corporate Report 1997" // Set the title for the first page
           Else
-
-             vTitle:="" ` Clear the title for all other pages
-
+             vTitle:="" // Clear the title for all other pages
        End case
-
  End case
 ```
 
 #### See also 
+
 [End selection](end-selection.md)  
 [FIRST RECORD](first-record.md)  
 [Form event code](form-event-code.md)  

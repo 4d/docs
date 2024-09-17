@@ -23,7 +23,7 @@ This command is designed to work with customized and advanced user interfaces ba
 
 This command is typically called along with the [Open form window](open-form-window.md) to display sophisticated forms, as shown in the following example: 
 
-![](../assets/en/Commands/pict3541609.en.png)
+![](../assets/en/commands/pict3541609.en.png)
 
 The **DIALOG** command can also be used instead of [ALERT](alert.md), [CONFIRM](confirm.md) or [Request](request.md) when the information to be presented or gathered is more complex than those commands can manage.
 
@@ -64,16 +64,11 @@ This form then reacts “normally” to user actions and is closed using a stand
 The following example can be used to create a tool palette:
 
 ```4d
-  `Display tool palette
-
+  //Display tool palette
  $palette_window:=Open form window("tools";Palette form window)
-
- DIALOG("tools";*) `Give back the control immediately
-
-  `Display main document windowl
-
+ DIALOG("tools";*) //Give back the control immediately
+  //Display main document windowl
  $document_window:=Open form window("doc";Plain form window)
-
  DIALOG("doc")
 ```
 
@@ -81,60 +76,39 @@ The following example can be used to create a tool palette:
 
 In a form displaying the record of a person, a "Check children" button opens a dialog to verify/modify the names and ages of their children:
 
-![](../assets/en/Commands/pict3542015.en.png)
+![](../assets/en/commands/pict3542015.en.png)
 
 **Note:** The "Children" object field is represented only to show its structure for this example.
 
 In the verification form, you have assigned some [Form](form.md) object properties to variables:
 
-![](../assets/en/Commands/pict3541682.en.png)
+![](../assets/en/commands/pict3541682.en.png)
 
 Here is the code for the "Check children" button:
 
 ```4d
- C_LONGINT($win;$n;$i)
-
- C_BOOLEAN($save)
-
+ var $win;$n;$i : Integer
+ var $save : Boolean
  ARRAY OBJECT($children;0)
-
  OB GET ARRAY([Person]Children;"children";$children) //get the children collection
-
  $save:=False //initialize the save variable
  
-
  $n:=Size of array($children)
-
  If($n>0)
-
     $win:=Open form window("Edit_Children";Movable form dialog box)
-
     SET WINDOW TITLE("Check children for "+[Person]Name)
-
     For($i;1;$n) //for each child
-
        DIALOG("Edit_Children";$children{$i}) //displays dialog filled with values
-
        If(OK=1) //the user clicked OK
-
           $save:=True
-
        End if
-
     End for
-
     If($save=True)
-
        [Person]Children:=[Person]Children //forces object field update
-
     End if
-
     CLOSE WINDOW($win)
-
  Else
-
     ALERT("No child to check.")
-
  End if
 ```
 
@@ -142,7 +116,7 @@ Here is the code for the "Check children" button:
 
 The form displays information for each child:
 
-![](../assets/en/Commands/pict3515152.en.png)
+![](../assets/en/commands/pict3515152.en.png)
 
 If values are edited and the OK button is clicked, the field is updated (the parent record must be saved afterwards). 
 
@@ -152,45 +126,38 @@ The following example uses the path to a .json form to display the records in an
 
 ```4d
  Open form window("/RESOURCES/OutputPersonnel.json";Plain form window)
-
  ALL RECORDS([Personnel])
-
  DIALOG("/RESOURCES/OutputPersonnel.json";*)
 ```
 
 which displays:
 
-![](../assets/en/Commands/pict3687439.en.png)
+![](../assets/en/commands/pict3687439.en.png)
 
 #### Example 4 
 
 The following example uses a .json file as an object and modifies a few properties: 
 
 ```4d
- C_OBJECT($form)
-
+ var $form : Object
  $form:=JSON Parse(Document to text(Get 4D folder(Current resources folder)+"OutputPersonnel.json"))
-
  $form.windowTitle:="The Avengers"
-
  $form.pages[1].objects.logo.picture:="/RESOURCES/Images/Avengers.png"
-
  $form.pages[1].objects.myListBox.borderStyle:="double"
-
  Open form window($form;Plain form window)
-
  DIALOG($form;*)
 ```
 
 The altered form is displayed with the title, logo and border modified:
 
-![](../assets/en/Commands/pict3688356.en.png)
+![](../assets/en/commands/pict3688356.en.png)
 
 #### System variables and sets 
 
 After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is canceled, OK is set to 0.
 
 #### See also 
+
 [ACCEPT](accept.md)  
 [ADD RECORD](add-record.md)  
 [CALL FORM](call-form.md)  

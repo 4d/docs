@@ -23,20 +23,13 @@ displayed_sidebar: docs
 You write an Information System that enables you to quickly store and retrieve documents. In a data entry form, you create a button that allows you to load a document into a BLOB field. The method for this button could be:
 
 ```4d
- $vhDocRef:=Open document("") ` Select the document of your choice
-
- If(OK=1) ` If a document has been chosen
-
-    CLOSE DOCUMENT($vhDocRef) ` We don't need to keep it open
-
-    DOCUMENT TO BLOB(Document;[YourTable]YourBLOBField) ` Load the document
-
+ $vhDocRef:=Open document("") // Select the document of your choice
+ If(OK=1) // If a document has been chosen
+    CLOSE DOCUMENT($vhDocRef) // We don't need to keep it open
+    DOCUMENT TO BLOB(Document;[YourTable]YourBLOBField) // Load the document
     If(OK=0)
-
-  ` Handle error
-
+  // Handle error
     End if
-
  End if
 ```
 
@@ -53,5 +46,6 @@ OK is set to 1 if the document is correctly loaded, otherwise OK is set to 0 and
 In each case, you can trap the error using an [ON ERR CALL](on-err-call.md) interruption method.
 
 #### See also 
+
 [BLOB TO DOCUMENT](blob-to-document.md)  
 [Open document](open-document.md)  

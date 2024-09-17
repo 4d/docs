@@ -28,10 +28,10 @@ In the *colorScheme* parameter, pass a color scheme to apply:
 
 ```4d
   // Force the current application in dark
-
  SET APPLICATION COLOR SCHEME("dark")
 ```
 
 #### See also 
+
 [FORM Get color scheme](form-get-color-scheme.md)  
 [Get application color scheme](get-application-color-scheme.md)  

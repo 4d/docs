@@ -30,22 +30,14 @@ The command returns:
 In an input form, place the following code in a button:
 
 ```4d
- C_TEXT($FormName)
-
+ var $FormName : Text
  $win:=Open form window([Members];"Input";Plain form window)
-
  DIALOG([Members];"Input")
-
  $FormName:=Current form name
-
   // $FormName = "Input"
-
  FORM LOAD([Members];"Drag")
-
  $FormName:=Current form name
-
   // $FormName = "Drag"
-
   //...
 ```
 
@@ -55,15 +47,12 @@ You want to get the current form if it is a project form:
 
 ```4d
  $PointerTable:=Current form table
-
  If(Nil($PointerTable)) // this is a project form
-
     $FormName:=Current form name
-
     ... // processing
-
  End if
 ```
 
 #### See also 
+
 [FORM LOAD](form-load.md)  

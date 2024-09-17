@@ -28,14 +28,13 @@ The *value* parameter allows you pass a new value (any type) for the form object
 You want to get the data source value for a form object, get its name, and set a new value:
 
 ```4d
- C_VARIANT($value)
+ var $value : Variant
  
-
  $value:=OBJECT Get value(OBJECT Get name(Object current)) //verify the set value
  
-
  OBJECT SET VALUE(OBJECT Get name(Object current);$value+10) //find the form object name and set the value to 50
 ```
 
 #### See also 
+
 [OBJECT Get value](object-get-value.md)  

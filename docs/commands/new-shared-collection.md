@@ -48,15 +48,13 @@ Optionally, you can prefill the new shared collection by passing one or several 
 
 ```4d
  $mySharedCol:=New shared collection("alpha";"omega")
-
  Use($mySharedCol)
-
     $mySharedCol[1]:="beta"
-
  End use
 ```
 
 #### See also 
+
 [New collection](new-collection.md)  
 [New shared object](new-shared-object.md)  
 [Shared objects and shared collections](../../4D/20-R6/Shared-objects-and-shared-collections.300-6957624.en.html)  

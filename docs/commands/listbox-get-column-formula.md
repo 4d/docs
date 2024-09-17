@@ -21,4 +21,5 @@ displayed_sidebar: docs
 If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string. This parameter must designate a column of the list box.
 
 #### See also 
+
 [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)  

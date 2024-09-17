@@ -30,6 +30,7 @@ The array *userNumbers*, synchronized with *userNames*, is filled with the corre
 If you do not have the proper access privileges for calling GET USER LIST or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
 
 #### See also 
+
 [GET GROUP LIST](get-group-list.md)  
 [GET USER PROPERTIES](get-user-properties.md)  
 [Set user properties](set-user-properties.md)  

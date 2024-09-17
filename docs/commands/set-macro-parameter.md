@@ -31,9 +31,7 @@ If no text has been selected, *paramText* is inserted into the method.
  In order for the [GET MACRO PARAMETER](get-macro-parameter.md) and **SET MACRO PARAMETER** commands to work correctly, the new “version” attribute must be declared in the macro itself. The “version” attribute must be declared as follows:
 
 ```RAW
-<macro name="MyMacro" version="2">
 --- Text of macro ---
-</macro>
 ```
 
 #### Example 
@@ -41,24 +39,17 @@ If no text has been selected, *paramText* is inserted into the method.
 This macro builds a new text that will be returned to the calling method:
 
 ```4d
- C_TEXT($input_text)
-
- C_TEXT($output_text)
-
+ var $input_text : Text
+ var $output_text : Text
  GET MACRO PARAMETER(Highlighted method text;$input_text)
-
-  `Suppose that the selected text is a table, i.e. “[Customers]”
-
+  //Suppose that the selected text is a table, i.e. “[Customers]”
  $output_text:=""
-
- $output_text:=$output_text+Command name(47)+"("+$input_text+")" ` Select all ([Customers])
-
- $output_text:=$output_text+"$i:="+Command name(76)+"("+$input_text+")" ` $i:=Records in selection([Customers])
-
+ $output_text:=$output_text+Command name(47)+"("+$input_text+")" // Select all ([Customers])
+ $output_text:=$output_text+"$i:="+Command name(76)+"("+$input_text+")" // $i:=Records in selection([Customers])
  SET MACRO PARAMETER(Highlighted method text;$output_text)
-
-  `Replaces the selected text by the new code
+  //Replaces the selected text by the new code
 ```
 
 #### See also 
+
 [GET MACRO PARAMETER](get-macro-parameter.md)  

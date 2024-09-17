@@ -55,7 +55,6 @@ Here are some typical examples of using this command:
 
 ```4d
  TEXT TO DOCUMENT("myTest.txt";"This is a test")
-
  TEXT TO DOCUMENT("myTest.xml";"This is a test")
 ```
 
@@ -65,30 +64,20 @@ Example allowing the user to indicate the location of the file to create:
 
 ```4d
  $MyTextVar:="This is a test"
-
  ON ERR CALL("IO ERROR HANDLER")
-
  $vhDocRef :=Create document("")
-
   // Store document with the ".txt" extension
-
   // In this case, the .txt extension is always added to the name; it is not possible to change it
-
  If(OK=1) // If document has been created successfully
-
     CLOSE DOCUMENT($vhDocRef) //Closes the document
-
     TEXT TO DOCUMENT(Document;$MyTextVar )
-
   // We write the document
-
  Else
-
   // Error management
-
  End if
 ```
 
 #### See also 
+
 [Document to text](document-to-text.md)  
 [System Documents](../../4D/20-R6/System-Documents.302-6958484.en.html)  

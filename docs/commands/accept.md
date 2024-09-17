@@ -34,4 +34,5 @@ It is also often used in the optional close box method for the [Open window](ope
 The **ACCEPT** command is allowed in headless mode, in the context of offscreen areas created by [VP Run offscreen area](/4Dv20R6/4D/19-R3/VP-Run-offscreen-area.301-5555930.en.html) or [WA Run offscreen area](wa-run-offscreen-area.md). 
 
 #### See also 
+
 [CANCEL](cancel.md)  

@@ -40,13 +40,9 @@ No matter what the current contents of the Picture Library, the following exampl
 
 ```4d
  PICTURE LIBRARY LIST($alPicRef;$asPicNames)
-
  Repeat
-
     $vlPicRef:=1+Abs(Random)
-
  Until(Find in array($alPicRef;$vlPicRef)<0)
-
  SET PICTURE TO LIBRARY(vgPicture;$vlPicRef;"New Picture")
 ```
 
@@ -56,61 +52,33 @@ The following example imports into the Picture Library the pictures (stored in a
 
 ```4d
  SET CHANNEL(10;"")
-
  If(OK=1)
-
     RECEIVE VARIABLE($vsTag)
-
     If($vsTag="4DV6PICTURELIBRARYEXPORT")
-
        RECEIVE VARIABLE($vlNbPictures)
-
        If($vlNbPictures>0)
-
           For($vlPicture;1;$vlNbPictures)
-
              RECEIVE VARIABLE($vlPicRef)
-
              If(OK=1)
-
                 RECEIVE VARIABLE($vsPicName)
-
              End if
-
              If(OK=1)
-
                 RECEIVE VARIABLE($vgPicture)
-
              End if
-
              If(OK=1)
-
                 SET PICTURE TO LIBRARY($vgPicture;$vlPicRef;$vsPicName)
-
              Else
-
                 $vlPicture:=$vlNbPictures+1
-
                 ALERT("This file looks like being damaged.")
-
              End if
-
           End for
-
        Else
-
           ALERT("This file looks like being damaged.")
-
        End if
-
     Else
-
        ALERT("The file “"+Document+"” is not a Picture Library export file.")
-
     End if
-
     SET CHANNEL(11)
-
     End
 ```
 
@@ -119,6 +87,7 @@ The following example imports into the Picture Library the pictures (stored in a
 If there is not enough memory to add the picture to the Picture Library, an error -108 is generated. Note that I/O errors may also be returned (i.e., the structure file is locked). You can catch these errors using an error-handling method.
 
 #### See also 
+
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  

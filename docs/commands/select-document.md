@@ -64,22 +64,14 @@ The command returns the name (name + extension under Windows) of the selected fi
 This example is used to specify a 4D data file: 
 
 ```4d
- C_LONGINT($platform)
-
+ var $platform : Integer
  PLATFORM PROPERTIES($platform)
-
  If($platform=Windows)
-
     $DocType:=".4DD"
-
  Else
-
-    $DocType:="com.4d.4d.data-file" `UTI type
-
+    $DocType:="com.4d.4d.data-file" //UTI type
  End if
-
  $Options:=Allow alias files+Package open+Use sheet window
-
  $Doc:=Select document("";$DocType;"Select the data file";$Options)
 ```
 
@@ -89,11 +81,8 @@ Creation of a custom document by user:
 
 ```4d
  $doc:=Select document(System folder(Documents folder)+"Report.pdf";"pdf";"Report name:";File name entry)
-
  If(OK=1)
-
     BLOB TO DOCUMENT(Document;$blob) // $blob contains document to record
-
  End if
 ```
 
@@ -103,5 +92,6 @@ If the command has been correctly executed and a valid document was selected, th
 If no file was selected (for example, if the user clicked on the **Cancel** button in the open file dialog box), the system variable OK is set to 0 and the system variable Document will be empty. 
 
 #### See also 
+
 [Open document](open-document.md)  
 [Select folder](select-folder.md)  

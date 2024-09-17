@@ -27,16 +27,14 @@ The following code:
 
 ```4d
  vtInstruct:="xml-stylesheet type="+Char(Quote)+"text/xsl"+Char(Quote)+
-
  "href="+Char(Quote)+"style.xsl"+Char(Quote)
-
  SAX ADD PROCESSING INSTRUCTION($DocRef;vtInstruct)
 ```
 
 ... will write the following line in the document: 
 
 ```4d
- <?xml-stylesheet type="text/xsl"href="style.xsl"?>
+ 
 ```
 
 #### System variables and sets 
@@ -44,4 +42,5 @@ The following code:
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated. 
 
 #### See also 
+
 [SAX GET XML PROCESSING INSTRUCTION](sax-get-xml-processing-instruction.md)  

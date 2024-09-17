@@ -48,37 +48,22 @@ The *groupWith* parameter allows you to designate a collection or an object with
 You want to duplicate an object containing simple values:
 
 ```4d
- C_OBJECT($Object)
-
- C_TEXT($JsonString)
+ var $Object : Object
+ var $JsonString : Text
  
-
  ARRAY OBJECT($arraySel;0)
-
  ALL RECORDS([Product])
-
  While(Not(End selection([Product])))
-
     OB SET($Object;"id";[Product]ID_Product)
-
     OB SET($Object;"Product Name";[Product]Product_Name)
-
     OB SET($Object;"Price";[Product]Price)
-
     OB SET($Object;"Tax rate";[Product]Tax_rate)
-
     $ref_value:=OB Copy($Object) //direct copy
-
     APPEND TO ARRAY($arraySel;$ref_value)
-
   //the contents of $ref_value are identical to those of $Object
-
     NEXT RECORD([Product])
-
  End while
-
   //the contents of $ref_value
-
  $JsonString:=JSON Stringify array($arraySel)
 ```
 
@@ -87,47 +72,29 @@ You want to duplicate an object containing simple values:
 You duplicate an object containing pointers (first syntax):
 
 ```4d
- C_OBJECT($ref)
+ var $ref : Object
  
-
  OB SET($ref;"name";->[Company]name) //object with pointers
-
  OB SET($ref;"country";->[Company]country)
-
  ARRAY OBJECT($sel;0)
-
  ARRAY OBJECT($sel2;0)
  
-
  ALL RECORDS([Company])
  
-
  While(Not(End selection([Company])))
-
     $ref_comp:=OB Copy($ref) // copy without evaluating pointers
-
   // $ref_comp={"name":"->[Company]name","country":"->[Company]Country"}
-
     $ref_comp2:=OB Copy($ref;True) //copy with evaluation of pointers
-
   // $ref_comp={"name":"4D SAS","country":"France"}
-
     APPEND TO ARRAY($sel;$ref_comp)
-
     APPEND TO ARRAY($sel2;$ref_comp2)
-
     NEXT RECORD([Company])
-
  End while
  
-
  $Object:=JSON Stringify array($sel)
-
  $Object2:=JSON Stringify array($sel2)
  
-
   // $Object = [{"name":"","country":""},{"name":"","country":""},...]
-
   // $Object2 = [{"name":"4D SAS","country":"France"},{"name":"4D, Inc","country":"USA"},{"name":"Catalan","country":"France"}...]
 ```
 
@@ -136,26 +103,17 @@ You duplicate an object containing pointers (first syntax):
 We want to copy the regular (non shared) *$person* object into the *$sharedObject* shared object. To do this, we must create a shared copy of the object (*$sharedObject*).
 
 ```4d
- C_OBJECT($person;$copy;$sharedObject)
-
- C_TEXT($text)
+ var $person;$copy;$sharedObject : Object
+ var $text : Text
  
-
  $text:=Document to text(Get 4D folder(Current resources folder)+"person.txt")
-
  $person:=JSON Parse($text) //$person is a standard object
-
  $sharedObject:=New shared object()
-
  $copy:=OB Copy($person;ck shared) //$copy is a shared object
  
-
   //So it can be put in $sharedObject
-
  Use($sharedObject)
-
     $sharedObject.person:=$copy
-
  End use
 ```
 
@@ -164,34 +122,21 @@ We want to copy the regular (non shared) *$person* object into the *$sharedObjec
 *$obj* contains a pointer ("name" property) on the current record "name" field.
 
 ```4d
- C_OBJECT($obj;$objWithPtr;$sharedObjWithPtr)
-
+ var $obj;$objWithPtr;$sharedObjWithPtr : Object
  $obj:=New object()
  
-
   //$obj is an object with a pointer
-
  OB SET($obj;"name";->[Persons]name)
  
-
  ALL RECORDS([Persons])
-
   //Now there is a current record on [Persons] table so [Persons]name is filled
-
   //
-
   // If we want to copy $obj as a standard object with evaluation of pointers
-
   // We do this:
-
  $objWithPtr:=OB Copy($obj;True)
-
   //
-
   // If we want to copy $obj as a shared object with evaluation of pointers
-
   // We do this:
-
  $sharedObjWithPtr:=OB Copy($obj;ck resolve pointers+ck shared)
 ```
 
@@ -200,34 +145,24 @@ We want to copy the regular (non shared) *$person* object into the *$sharedObjec
 We want to copy *$sharedObj* in *$sharedColl* but since they belong to different shared groups, a direct copy would result in an error. We must make a copy of *$sharedObj* and designate *$sharedColl* as shared group for the copy. 
 
 ```4d
- C_OBJECT($sharedObj;$objCopy)
-
- C_COLLECTION($sharedColl)
+ var $sharedObj;$objCopy : Object
+ var $sharedColl : Collection
  
-
   //$sharedObj belongs to a shared group
-
  $sharedObj:=New shared object("lastname";"Smith";"address";New shared object("city";"New York"))
-
   //$sharedColl belongs to another shared group
-
  $sharedColl:=New shared collection(New shared object("lastname";"Brown"))
  
-
  $objCopy:=OB Copy($sharedObj;ck shared;$sharedColl)
-
   //$objCopy is now in the same shared group as $sharedColl
  
-
   //So $objCopy can be put in $sharedColl without error
-
  Use($sharedColl)
-
     $sharedColl.push($objCopy)
-
  End use
 ```
 
 #### See also 
+
 [OB Get](ob-get.md)  
 [Shared objects and shared collections](../../4D/20-R6/Shared-objects-and-shared-collections.300-6957624.en.html)  

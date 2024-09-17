@@ -110,15 +110,10 @@ Enabling three form events for a set of list box objects and disabling other eve
 
 ```4d
  ARRAY LONGINT($MyEventsOnLB;3)
-
  $MyEventsOnLB {1}:=On After Sort
-
  $MyEventsOnLB {2}:=On Column Moved
-
  $MyEventsOnLB {3}:=On Column Resize
-
  OBJECT SET EVENTS(*;"MyLB@";$MyEventsOnLB;Enable events disable others)
-
   // enables 3 events and disables all others
 ```
 
@@ -128,15 +123,10 @@ Disabling three form events for a set of list box objects, without modifying the
 
 ```4d
  ARRAY LONGINT($MyEventsOnLB;3)
-
  $MyEventsOnLB {1}:=On After Sort
-
  $MyEventsOnLB {2}:=On Column Moved
-
  $MyEventsOnLB {3}:=On Column Resize
-
  OBJECT SET EVENTS(*;"MyLB@";$MyEventsOnLB;Disable events others unchanged)
-
   // disables only these 3 events
 ```
 
@@ -146,11 +136,8 @@ Enabling a form event for an object, without modifying the other events:
 
 ```4d
  ARRAY LONGINT($MyEventsOnLB;1)
-
  $MyEventsOnLB {1}:=On Column Moved
-
  OBJECT SET EVENTS(*;"Col1";$MyEventsOnLB;Enable events others unchanged)
-
   // only enables this event
 ```
 
@@ -160,9 +147,7 @@ Disabling all events of the form:
 
 ```4d
  ARRAY LONGINT($MyFormEvents;0)
-
  OBJECT SET EVENTS(*;"";$MyFormEvents;Enable events disable others)
-
   // disables all events
 ```
 
@@ -172,14 +157,12 @@ Disables a single event of the form without modifying the others:
 
 ```4d
  ARRAY LONGINT($MyFormEvents;1)
-
  $MyFormEvents{1}:=On Timer
-
  OBJECT SET EVENTS(*;"";$MyFormEvents;Disable events others unchanged)
-
   // only disables this event
 ```
 
 #### See also 
+
 [Form Events](../../4D/20-R6/Form-Events.302-6958427.en.html)  
 [OBJECT GET EVENTS](object-get-events.md)  

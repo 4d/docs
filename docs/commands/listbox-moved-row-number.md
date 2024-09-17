@@ -28,5 +28,6 @@ This command must be used with the form event On Row Moved (see the [Form event 
 **Note:** This command does not take into account any hidden/displayed states of list box rows. 
 
 #### See also 
+
 [Form event code](form-event-code.md)  
 [LISTBOX MOVED COLUMN NUMBER](listbox-moved-column-number.md)  

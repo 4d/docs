@@ -25,14 +25,13 @@ The following statement:
 
 ```4d
  vComment:="Created by 4D"
-
  SAX ADD XML COMMENT($DocRef;vComment)
 ```
 
 ... will write the following line in the document: 
 
 ```4d
- <!--Created by 4D-->
+ 
 ```
 
 #### System variables and sets 
@@ -44,4 +43,5 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 In the event of an error, the command returns an error which can be intercepted using an error-handling method.
 
 #### See also 
+
 [SAX ADD XML DOCTYPE](sax-add-xml-doctype.md)  

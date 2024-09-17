@@ -35,21 +35,13 @@ In an audio CD database, during data entry let’s assume that you want to verif
 
 ```4d
  If(FORM Event=On Data Change)
-
     $RecNum:=Find in field([Singer]Name;[Singer]Name)
-
-    If($RecNum #-1) ` If this name has already been entered
-
+    If($RecNum #-1) // If this name has already been entered
        CONFIRM("A singer with the same already exists. Do you want to see the record?";"Yes";"No")
-
        If(OK=1)
-
           GOTO RECORD([Singer];$RecNum)
-
        End if
-
     End if
-
  End if
 ```
 
@@ -58,18 +50,12 @@ In an audio CD database, during data entry let’s assume that you want to verif
 Here is an example that lets you verify the existence of a value:
 
 ```4d
- C_LONGINT($id;$1)
-
+ var $id;$1 : Integer
  $id:=$1
-
  If(Find in field([MyTable]MyID;$id)>=0)
-
     $0:=True
-
  Else
-
     $0:=False
-
  End if
 ```
 

@@ -33,12 +33,11 @@ Somewhere in your code, other than in the [On Server Startup Database Method](/4
 
 ```4d
  If(Application type=4D Server)
-
   //Perform appropriate actions
-
  End if
 ```
 
 #### See also 
+
 [Application version](application-version.md)  
 [Version type](version-type.md)  

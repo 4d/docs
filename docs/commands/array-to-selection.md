@@ -49,54 +49,33 @@ You want to copy a selection of records to an archive table by selecting the fie
 
 ```4d
  ARRAY TEXT($_name;0)
-
  ARRAY TEXT($_firstname;0)
-
  ARRAY TEXT($_cv;0)
-
  ARRAY PICTURE($_photo;0)
  
-
  SELECTION TO ARRAY([Candidate]Name;$_name;*)
-
  SELECTION TO ARRAY([Candidate]Firstname;$_firstname;*)
-
  If(withCV) //load the CV field
-
     SELECTION TO ARRAY([Candidate]cv;$_cv;*)
-
  End if
-
  If(withPhoto) //load the photo field
-
     SELECTION TO ARRAY([Candidate]photo;$_photo;*)
-
  End if
-
  SELECTION TO ARRAY //execute copy
  
-
  REDUCE SELECTION([Candidate_Archive];0)
-
  ARRAY TO SELECTION($_name;[Candidate_Archive]Name;*)
-
  ARRAY TO SELECTION($_prenom;[Candidate_Archive]Firstname;*)
-
  If(withCV)
-
     ARRAY TO SELECTION($_cv;[Candidate_Archive]cv;*)
-
  End if
-
  If(withPhoto)
-
     ARRAY TO SELECTION($_photo;[Candidate_Archive]photo;*)
-
  End if
-
  ARRAY TO SELECTION
 ```
 
 #### See also 
+
 [SELECTION TO ARRAY](selection-to-array.md)  
 [System Variables](../../4D/20-R6/System-Variables.300-6958705.en.html)  

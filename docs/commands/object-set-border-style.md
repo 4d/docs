@@ -37,4 +37,5 @@ In the *borderStyle* parameter, pass the value of the border line style that you
 | Border System | Longint | 6     | The border line is drawn based on the graphic specifications of the system                      |
 
 #### See also 
+
 [OBJECT Get border style](object-get-border-style.md)  

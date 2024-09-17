@@ -33,6 +33,7 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 If you pass an invalid *row* value, the error -9852 will be generated.
 
 #### See also 
+
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  

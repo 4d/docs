@@ -23,6 +23,7 @@ The documentation for this command has been moved. See [**Session** command on d
 The **Session** command returns the *Session* object corresponding to the current session. 
 
 #### See also 
+
 [Session API (developer.4d.com)](https://developer.4d.com/docs/en/API/sessionClass.html)  
 [Session storage by ID](session-storage-by-id.md)  
 [Web server user sessions (developer.4d.com)](https://developer.4d.com/docs/en/WebServer/sessions.html)  

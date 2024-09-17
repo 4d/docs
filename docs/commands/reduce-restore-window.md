@@ -24,6 +24,7 @@ The command toggles the window state:
 **Note:** On macOS, the command is asynchronous.
 
 #### See also 
+
 [Is window reduced](is-window-reduced.md)  
 [MAXIMIZE WINDOW](maximize-window.md)  
 [MINIMIZE WINDOW](minimize-window.md)  

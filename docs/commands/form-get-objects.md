@@ -50,7 +50,6 @@ You want to get information on all pages including objects from the inherited fo
 
 ```4d
   //open form
-
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray)
 ```
 
@@ -58,9 +57,7 @@ Or:
 
 ```4d
   //loaded form
-
  FORM LOAD([Table1];"MyForm")
-
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages+Form inherited)
 ```
 
@@ -70,9 +67,7 @@ You want to get information on the current page only, with page 0 of the loaded 
 
 ```4d
  FORM LOAD("MyForm")
-
  FORM GOTO PAGE(2)
-
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form current page+Form inherited)
 ```
 
@@ -82,7 +77,6 @@ You want to get information on all objects in the inherited form (if any). If th
 
 ```4d
  FORM LOAD("MyForm")
-
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form inherited)
 ```
 
@@ -92,9 +86,7 @@ You want to get information on page 4 objects, including page 0 objects, but wit
 
 ```4d
  FORM LOAD([Table1];"MyForm")
-
  FORM GOTO PAGE(4)
-
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form current page)
 ```
 
@@ -104,7 +96,6 @@ You want to get information on objects on all pages, but without inherited form 
 
 ```4d
  FORM LOAD([Table1];"MyForm")
-
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages)
 ```
 
@@ -114,31 +105,21 @@ You want to load a form and get a list of all the objects of list boxes that it 
 
 ```4d
  FORM LOAD("MyForm")
-
  ARRAY TEXT(arrObjects;0)
-
  FORM GET OBJECTS(arrObjects)
-
  ARRAY LONGINT(ar_type;Size of array(arrObjects))
-
  For($i;1;Size of array(arrObjects))
-
     ar_type{$i}:=OBJECT Get type(*;arrObjects{$i})
-
     If(ar_type{$i}=Object type listbox)
-
        ARRAY TEXT(arrLBObjects;0)
-
        LISTBOX GET OBJECTS(*;arrObjects{$i};arrLBObjects)
-
     End if
-
  End for
-
  FORM UNLOAD
 ```
 
 #### See also 
+
 [FORM GET PROPERTIES](form-get-properties.md)  
 [Form Objects (Access)](../../4D/20-R6/Form-Objects-Access.302-6958495.en.html)  
 [Objects (Forms)](objects-forms.md)  

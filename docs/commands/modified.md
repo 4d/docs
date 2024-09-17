@@ -39,9 +39,7 @@ The following example tests whether either the *\[Orders\]Quantity* field or the
 
 ```4d
  If((Modified([Orders]Quantity)|(Modified([Orders]Price))
-
     [Orders]Total :=[Orders]Quantity*[Orders]Price
-
  End if
 ```
 
@@ -52,27 +50,19 @@ Note that the same thing could be accomplished by using the second line as a sub
 You select a record for the table *\[anyTable\]*, then you call multiple subroutines that may modify the field *\[anyTable\]Important field,* but do not save the record. At the end of the main method, you can use the **Modified** command to detect whether you must save the record:
 
 ```4d
-  ` Here the record has been selected as current record
-
-  ` Then you perform actions using subroutines
-
+  // Here the record has been selected as current record
+  // Then you perform actions using subroutines
  DO SOMETHING
-
  DO SOMETHING ELSE
-
  DO NOT FORGET TO DO THAT
-
-  ` ...
-
-  ` And then you test the field to detect whether the record has to be saved
-
+  // ...
+  // And then you test the field to detect whether the record has to be saved
  If(Modified([anyTable]Important field))
-
     SAVE RECORD([anyTable])
-
  End if
 ```
 
 #### See also 
+
 [Form event code](form-event-code.md)  
 [Old](old.md)  

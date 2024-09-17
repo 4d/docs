@@ -21,4 +21,5 @@ displayed_sidebar: docs
 This command returns an empty string if there is no title available for the current URL. 
 
 #### See also 
+
 [WA Get page content](wa-get-page-content.md)  

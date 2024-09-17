@@ -42,5 +42,6 @@ If the command designates several objects, the style sheet returned is only mean
 In **project architecture**, only the three automatic style sheets are supported by this command. 
 
 #### See also 
+
 [Font Styles](../../4D/20-R6/Font-Styles.302-6958451.en.html)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  

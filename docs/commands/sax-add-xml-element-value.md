@@ -36,10 +36,8 @@ In order for this command to operate correctly, an element must be open. Otherwi
 This example inserts the *whitepaper.pdf* file into the open XML element:
 
 ```4d
- C_BLOB(vBMyBLOB)
-
+ var vBMyBLOB : Blob
  DOCUMENT TO BLOB("c:\\whitepaper.pdf";vBMyBLOB)
-
  SAX ADD XML ELEMENT VALUE($DocRef;vBMyBLOB)
 ```
 
@@ -48,5 +46,6 @@ This example inserts the *whitepaper.pdf* file into the open XML element:
 If the command has been executed correctly, the system variable OK is set to 1; otherwise, it is set to 0 and an error is generated. 
 
 #### See also 
+
 [SAX GET XML ELEMENT VALUE](sax-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  

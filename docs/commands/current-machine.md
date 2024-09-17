@@ -22,11 +22,10 @@ Even if you are not running with the Client/Server version of the 4D environment
 
 ```4d
  If((Current machine="")|(Current system user=""))
-
   //Display a dialog box asking the user to setup the Network identity of his or her machine
-
  End if
 ```
 
 #### See also 
+
 [Current system user](current-system-user.md)  

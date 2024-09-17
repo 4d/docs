@@ -41,4 +41,5 @@ The optional *fixedSubform* parameter lets you set an additional option when you
 | Print Frame fixed with truncation       | Longint | 1     | 4D prints only the records that fit into the area of the subform. The form is printed only once and those records that are not printed are ignored. |
 
 #### See also 
+
 [OBJECT GET PRINT VARIABLE FRAME](object-get-print-variable-frame.md)  

@@ -28,4 +28,5 @@ This command is the equivalent of recording groups and users from the Toolbar. T
 This lets you keep a backup of users in the database data and, as such, implements a backup mechanism as well as a system to load users automatically when a database structure file is updated (information related to user accounts are stored by 4D in the database structure file).
 
 #### See also 
+
 [BLOB TO USERS](blob-to-users.md)  

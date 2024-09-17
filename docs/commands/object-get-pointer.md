@@ -39,18 +39,15 @@ When the *subformName* parameter is passed, the **OBJECT Get pointer** command f
 Given a form "SF" used twice as a subform in the same parent form. The subform objects are named "SF1" and "SF2". The "SF" form contains an object named *CurrentValue*. In the "On Load" form event of the form method of the parent form, we want to initialize the *CurrentValue* object of SF1 to "January" and that of SF2 to "February": 
 
 ```4d
- C_POINTER($Ptr)
-
+ var $Ptr : Pointer
  $Ptr:=OBJECT Get pointer(Object named;"CurrentValue";"SF1")
-
  $Ptr->:="January"
-
  $Ptr:=OBJECT Get pointer(Object named;"CurrentValue";"SF2")
-
  $Ptr->:="February"
 ```
 
 #### See also 
+
 [Focus object](focus-object.md)  
 [Form Objects (Access)](../../4D/20-R6/Form-Objects-Access.302-6958495.en.html)  
 [OBJECT Get name](object-get-name.md)  

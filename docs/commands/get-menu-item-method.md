@@ -26,4 +26,5 @@ In *menu*, you can pass a menu reference ([MenuRef](# "Unique ID (16-character a
 The command returns the name of the 4D method as a character string (expression). If no method is associated with a menu item, the command returns an empty string.
 
 #### See also 
+
 [SET MENU ITEM METHOD](set-menu-item-method.md)  

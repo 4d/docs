@@ -48,10 +48,8 @@ You must pay attention to the following conversion issues:
 You want to create a new empty collection and assign it to a 4D collection variable:
 
 ```4d
- C_COLLECTION($myCol)
-
+ var $myCol : Collection
  $myCol:=New collection
-
   //$myCol=[]
 ```
 
@@ -60,10 +58,8 @@ You want to create a new empty collection and assign it to a 4D collection varia
 You want to create a prefilled collection:
 
 ```4d
- C_COLLECTION($filledColl)
-
+ var $filledColl : Collection
  $filledColl:=New collection(33;"mike";"november";->myPtr;Current date)
-
   //$filledColl=[33,"mike","november","->myPtr","2017-03-28T22:00:00.000Z"]
 ```
 
@@ -72,22 +68,18 @@ You want to create a prefilled collection:
 You create a new collection and then add a new element:
 
 ```4d
- C_COLLECTION($coll)
-
+ var $coll : Collection
  $coll:=New collection("a";"b";"c")
-
   //$coll=["a","b","c"]
-
  $coll[9]:="z" //add a 10th element with value "z"
-
  $vcolSize:=$coll.length //10
-
   //$coll=["a","b","c",null,null,null,null,null,null,"z"]
 ```
 
 **Note:** This example requires that object notation is activated in the database (see [Object Notation](/4Dv20R6/4D/20-R6/Compatibility-page.300-7003469.en.html#3368899) paragraph).
 
 #### See also 
+
 [C\_COLLECTION](c-collection.md)  
 [New shared collection](new-shared-collection.md)  
 [Type](type.md)  

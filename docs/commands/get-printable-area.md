@@ -29,11 +29,11 @@ To know the total size of the page, you can:
 * or use the following syntax:
 
 ```4d
- SET PRINTABLE MARGIN(0;0;0;0) ` Set the paper margin
-
- GET PRINTABLE AREA(hPaper;wPaper) ` Paper size
+ SET PRINTABLE MARGIN(0;0;0;0) // Set the paper margin
+ GET PRINTABLE AREA(hPaper;wPaper) // Paper size
 ```
 
 #### See also 
+
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
 [Print form](print-form.md)  

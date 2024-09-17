@@ -31,15 +31,10 @@ The following method is called to print the records in the selection and to acti
 
 ```4d
  ALL RECORDS([Table1])
-
  ORDER BY([Table1];[Table1]DataSeries;>)
-
  BREAK LEVEL(1)
-
  ACCUMULATE([Table1]DataSeries)
-
  OUTPUT FORM([Table1];"PrintForm")
-
  PRINT SELECTION([Table1])
 ```
 
@@ -51,15 +46,13 @@ This example gets the standard deviation of a series of values placed in an arra
 
 ```4d
  ARRAY REAL($ArrGrades;0)
-
  QUERY([Exams];[Exams]Exam_Date=!01/07/11!)
-
  SELECTION TO ARRAY([Exams]Exam_Grade;$ArrGrades)
-
  vStdDev:=Std deviation($ArrGrades)
 ```
 
 #### See also 
+
 [Average](average.md)  
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  

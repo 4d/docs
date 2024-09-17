@@ -41,12 +41,7 @@ The following example gets the highlighted selection from the field called *\[Pr
 
 ```4d
  GET HIGHLIGHT([Products]Comments;vFirst;vLast)
-
- If(vFirst<vLast)
-
-    ALERT("The selected text is: "+Substring([Products]Comments;vFirst;vLast-vFirst))
-
- End if
+ If(vFirst<vlast)     alert("the="" selected="" text="" is:="" "+substring([products]comments;vfirst;vlast-vfirst))=""  end="" if<="" pre=""></vlast)>
 ```
 
 #### Example 2 
@@ -59,11 +54,11 @@ Modification of highlighted text style:
 
 ```4d
  GET HIGHLIGHT(*;"myText";$startsel,$endsel)
-
  ST SET ATTRIBUTES(*;"myText";$startsel,$endsel;Attribute underline style;1;Attribute bold style;1)
 ```
 
 #### See also 
+
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [HIGHLIGHT TEXT](highlight-text.md)  
 [Keystroke](keystroke.md)  

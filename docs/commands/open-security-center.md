@@ -21,4 +21,5 @@ displayed_sidebar: docs
 * This command cannot be executed on a remote 4D application.
 
 #### See also 
+
 [VERIFY CURRENT DATA FILE](verify-current-data-file.md)  

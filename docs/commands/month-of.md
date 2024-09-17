@@ -42,9 +42,8 @@ To compare the value returned by this function, 4D provides the following predef
 The following example illustrates the use of **Month of**. The results are assigned to the variable *vResult*. The comments describe what is put in *vResult*:
 
 ```4d
- vResult:=Month of(!12/25/92!) ` vResult gets 12
-
- vResult:=Month of(Current date) ` vResult gets month of current date
+ vResult:=Month of(!12/25/92!) // vResult gets 12
+ vResult:=Month of(Current date) // vResult gets month of current date
 ```
 
 #### Example 2 
@@ -52,5 +51,6 @@ The following example illustrates the use of **Month of**. The results are assig
 See example for the [Current date](current-date.md) command.
 
 #### See also 
+
 [Day of](day-of.md)  
 [Year of](year-of.md)  

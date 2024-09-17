@@ -44,25 +44,27 @@ We want to set French as the interface language:
 The interface of your application uses the static string ":xliff:shopping". The XLIFF files contain more particularly the following information:
 
 * FR folder:  
+```XML  
  <trans-unit id="15" resname="Shopping">  
 <source>Shopping</source>  
 <target>Faire les courses</target>  
-</trans-unit>
+</trans-unit>  
+```
 * FR\_CA folder:  
+```XML  
  <trans-unit id="15" resname="Shopping">  
 <source>Shopping</source>  
 <target>Magasiner</target>  
-</trans-unit>
+</trans-unit>  
+```
 
 ```4d
  SET DATABASE LOCALIZATION("fr")
-
   //the string ":xliff:shopping" displays "Faire les courses"
-
  SET DATABASE LOCALIZATION("fr-ca")
-
   //the string ":xliff:shopping" displays "Magasiner"
 ```
 
 #### See also 
+
 [Get database localization](get-database-localization.md)  

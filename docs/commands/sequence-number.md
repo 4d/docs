@@ -45,18 +45,15 @@ If the sequence number needs to start at a number other than 1, just add the dif
 The following example is part of a form method. It tests to see if this is a new record; i.e., if the invoice number is an empty string. If it is a new record, the method assigns an invoice number. The invoice number is formed from two pieces of information: the sequence number, and the operator’s ID, which was entered when the database was opened. The sequence number is formatted as a 5-character string:
 
 ```4d
-  ` If this is a new part number, create a new invoice number
-
+  // If this is a new part number, create a new invoice number
  If([Invoices]Invoice No="")
-
-  ` The invoice number is a string that ends with the operator’s ID.
-
+  // The invoice number is a string that ends with the operator’s ID.
     [Invoices]Invoice No:=String(Sequence number;"00000")+[Invoices]OpID
-
  End if
 ```
 
 #### See also 
+
 [About Record Numbers](../../4D/20-R6/About-Record-Numbers.300-6958029.en.html)  
 [Record number](record-number.md)  
 [Selected record number](selected-record-number.md)  

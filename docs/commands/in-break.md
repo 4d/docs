@@ -21,6 +21,7 @@ In order for the **In break** execution cycle to be generated, make sure that th
 **Note:** This command is equivalent to using [Form event code](form-event-code.md) and testing whether it returns the On Printing Break event.
 
 #### See also 
+
 [\_o\_During](../../4D/20-R6/o-During.301-6957655.en.html)  
 [In footer](in-footer.md)  
 [In header](in-header.md)  

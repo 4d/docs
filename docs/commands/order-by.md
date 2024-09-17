@@ -23,7 +23,7 @@ If you omit the *aTable* parameter, the command applies to the default table, if
 
 If you do not specify the *aField*, the *\> or <* or the *\** parameters, **ORDER BY** displays the Order By editor for *aTable*. The Order By editor is shown here:
 
-![](../assets/en/Commands/pict2286854.en.png)
+![](../assets/en/commands/pict2286854.en.png)
 
 For more information about using the Order By editor, refer to the 4D Design Reference manual. 
 
@@ -138,9 +138,7 @@ The following line performs a sequential sort using a related field
 
 ```4d
  SET FIELD RELATION([Employee]Company_ID;Automatic;Do not modify)
-
  ORDER BY([Employee];[Company]LastName)
-
  SET FIELD RELATION([Employee]Company_ID;Structure configuration;Do not modify)
 ```
 
@@ -157,67 +155,45 @@ The following example carries out an indexed sort on two levels if a \[Contacts\
 In an Output form displayed in the Application environment, you allow the users to order a column in ascending order by simply clicking in the column header.   
 If the user holds the **Shift** key down while clicking in other column headers, the sort is performed on several levels:
 
-![](../assets/en/Commands/pict16003.en.png)
+![](../assets/en/commands/pict16003.en.png)
 
 Each column header contains a highlight button attached with the following object method:
 
 ```4d
- MULTILEVEL(->[CDs]Title) `Title column header button
+ MULTILEVEL(->[CDs]Title) //Title column header button
 ```
 
 Each button calls the MULTILEVEL project method with a pointer to the corresponding column field. The MULTILEVEL project method is the following:
 
 ```4d
-  ` MULTILEVEL Project Method
-
-  ` MULTILEVEL (Pointer)
-
-  ` MULTILEVEL (->[Table]Field)
+  // MULTILEVEL Project Method
+  // MULTILEVEL (Pointer)
+  // MULTILEVEL (->[Table]Field)
  
-
- C_POINTER($1)&nbsp;&nbsp; `Sort level (field)
-
- C_LONGINT($lLevelNb)
+ var $1)   //Sort level (field : Pointer
+ var $lLevelNb : Integer
  
-
-  `Getting sorting levels
-
- If(Not(Shift down)) `Simple sort (one-level)
-
+  //Getting sorting levels
+ If(Not(Shift down)) //Simple sort (one-level)
     ARRAY POINTER(aPtrSortField;1)
-
     aPtrSortField{1}:=$1
-
  Else
-
-    $lLevelNb:=Find in array(aPtrSortField;$1) `Is this field already sorted?
-
-    If($lLevelNb<0) `If not
-
+    $lLevelNb:=Find in array(aPtrSortField;$1) //Is this field already sorted?
+    If($lLevelNb<0) //If not
        INSERT IN ARRAY(aPtrSortField;Size of array(aPtrSortField)+1;1)
-
        aPtrSortField{Size of array(aPtrSortField)}:=$1
-
     End if
-
  End if
-
-  `Performing the sort
-
+  //Performing the sort
  $lLevelNb:=Size of array(aPtrSortField)
-
- If($lLevelNb>0) `There is at least one order level
-
+ If($lLevelNb>0) //There is at least one order level
     For($i;1;$lLevelNb)
-
-       ORDER BY([CDs];(aPtrSortField{$i})->;>;*) `Building sort definition
-
+       ORDER BY([CDs];(aPtrSortField{$i})->;>;*) //Building sort definition
     End for
-
-    ORDER BY([CDs]) `No * ends the sort definition and starts the actual sort operation
-
+    ORDER BY([CDs]) //No * ends the sort definition and starts the actual sort operation
  End if
 ```
 
 #### See also 
+
 [ORDER BY FORMULA](order-by-formula.md)  

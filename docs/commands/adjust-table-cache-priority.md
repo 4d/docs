@@ -41,12 +41,11 @@ You want to temporarily change the cache priority for the \[Docs\] scalar fields
 
 ```4d
  ADJUST TABLE CACHE PRIORITY([Docs];Cache priority low)
-
   // ... do some specific operation
-
  ADJUST TABLE CACHE PRIORITY([Docs];Cache priority normal)
 ```
 
 #### See also 
+
 [Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
 [SET TABLE CACHE PRIORITY](set-table-cache-priority.md)  

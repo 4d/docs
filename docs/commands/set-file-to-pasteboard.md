@@ -24,4 +24,5 @@ The command accepts the star *\** as an optional parameter. By default, when thi
 **Note:** The pasteboard is in read-only mode during the On Drag Over form event. It is therefore not possible to use this command in that context.
 
 #### See also 
+
 [Get file from pasteboard](get-file-from-pasteboard.md)  

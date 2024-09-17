@@ -21,5 +21,6 @@ In order for the **Deactivated** execution cycle to be generated, make sure that
 **Note:** This command is equivalent to using [Form event code](form-event-code.md) and testing whether it returns the On Deactivate event.
 
 #### See also 
+
 [Activated](activated.md)  
 [Form event code](form-event-code.md)  

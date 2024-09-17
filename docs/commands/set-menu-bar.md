@@ -58,11 +58,8 @@ The following example sets the current menu bar to menu bar #3 while records are
 
 ```4d
  SET MENU BAR(3)
-
  ALL RECORDS([Customers])
-
  MODIFY SELECTION([Customers])
-
  SET MENU BAR(2;*)
 ```
 
@@ -70,89 +67,53 @@ The following example sets the current menu bar to menu bar #3 while records are
 
 In this comprehensive example, we will create, by programming, a menu bar including the following File and Edit menus: 
 
-![](../assets/en/Commands/pict17860.en.png)
+![](../assets/en/commands/pict17860.en.png)
 
 ```4d
-  `Method for creating File menu
-
- C_TEXT(FileMenu) ` FileMenu will contain the File menu reference
-
+  //Method for creating File menu
+ var FileMenu : Text // FileMenu will contain the File menu reference
  FileMenu:=Create menu
-
  INSERT MENU ITEM(FileMenu;-1;"My Database "+Get indexed string(131;29))
-
  SET MENU ITEM MARK(FileMenu;1;Char(18))
-
  INSERT MENU ITEM(FileMenu;-1;"(-")
-
  INSERT MENU ITEM(FileMenu;-1;"Quit the Test Application mode/Y")
-
  SET MENU ITEM PROPERTY(FileMenu;3;Associated standard action;ak return to design mode)
-
  INSERT MENU ITEM(FileMenu;-1;"(-")
-
  INSERT MENU ITEM(FileMenu;-1;"Preferences")
-
- SET MENU ITEM PROPERTY(FileMenu;5;Associated standard action;ak database settings) `Settings
-
+ SET MENU ITEM PROPERTY(FileMenu;5;Associated standard action;ak database settings) //Settings
  INSERT MENU ITEM(FileMenu;-1;"(-")
-
  INSERT MENU ITEM(FileMenu;-1;Get indexed string(131;30))
-
- SET MENU ITEM PROPERTY(FileMenu;7;Associated standard action;ak quit) `Quit
-
+ SET MENU ITEM PROPERTY(FileMenu;7;Associated standard action;ak quit) //Quit
  SET MENU ITEM SHORTCUT(FileMenu;7;Character code("Q"))
  
-
-  `Method for creating Find and Replace menu
-
- C_TEXT(FindAndReplaceMenu) `FindAndReplaceMenu will contain the Find and Replace menu reference
-
+  //Method for creating Find and Replace menu
+ var FindAndReplaceMenu : Text //FindAndReplaceMenu will contain the Find and Replace menu reference
  FindAndReplaceMenu:=Create menu
-
  APPEND MENU ITEM(FindAndReplaceMenu;"Find;Find Next;Find Previous;(-;Replace;Replace Next;Replace Previous")
-
  SET MENU ITEM SHORTCUT(FindAndReplaceMenu;1;Character code("F"))
-
  SET MENU ITEM SHORTCUT(FindAndReplaceMenu;5;Character code("R"))
-
  SET MENU ITEM METHOD(FindAndReplaceMenu;1;"MyFindMethod")
  
-
-  `Method for creating Edit menu
-
- C_TEXT(EditMenu) `EditMenu will contain the Edit menu reference
-
+  //Method for creating Edit menu
+ var EditMenu : Text //EditMenu will contain the Edit menu reference
  EditMenu:=Create menu
-
  APPEND MENU ITEM(EditMenu;"Cut;Copy;Paste")
-
  SET MENU ITEM SHORTCUT(EditMenu;1;Character code("X"))
-
  SET MENU ITEM PROPERTY(EditMenu;1;Associated standard action;ak cut)
-
  SET MENU ITEM SHORTCUT(EditMenu;2;Character code("C"))
-
  SET MENU ITEM PROPERTY(EditMenu;2;Associated standard action;ak copy)
-
  SET MENU ITEM SHORTCUT(EditMenu;3;Character code("V"))
-
  SET MENU ITEM PROPERTY(EditMenu;3;Associated standard action;ak paste)
-
  INSERT MENU ITEM(EditMenu;-1;"(-")
-
- INSERT MENU ITEM(EditMenu;-1;"Find and Replace";FindAndReplaceMenu) ` item that will have submenu
+ INSERT MENU ITEM(EditMenu;-1;"Find and Replace";FindAndReplaceMenu) // item that will have submenu
  
-
- main_Bar:=Create menu ` Create the menu bar made up of other menus
-
+ main_Bar:=Create menu // Create the menu bar made up of other menus
  INSERT MENU ITEM(main_Bar;-1;Get indexed string(79;1);FileMenu)
-
  APPEND MENU ITEM(main_Bar;"Edit";EditMenu)
  
-
  SET MENU BAR(main_Bar)
 ```
 
 #### See also 
+
 [Managing Menus](../../4D/20-R6/Managing-Menus.300-6958844.en.html)  

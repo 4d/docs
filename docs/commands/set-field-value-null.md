@@ -24,5 +24,6 @@ The NULL value is used by the SQL kernel of 4D. For more information, please ref
 * **SET FIELD VALUE NULL** erases the contents of object fields.
 
 #### See also 
+
 [Is field value Null](is-field-value-null.md)  
 [Null](null.md)  

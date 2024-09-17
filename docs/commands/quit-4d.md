@@ -55,17 +55,14 @@ The action of the QUIT 4D command used in a stored procedure is the same as the 
 The project method listed here is associated with the Quit or Exit menu item in the File menu.
 
 ```4d
-  ` M_FILE_QUIT Project Method
+  // M_FILE_QUIT Project Method
  
-
  CONFIRM("Are you sure that you want to quit?")
-
  If(OK=1)
-
     QUIT 4D
-
  End if
 ```
 
 #### See also 
+
 [On Exit database method](on-exit-database-method.md)  

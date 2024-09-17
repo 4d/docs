@@ -37,7 +37,7 @@ When you pass this parameter, the item designated by the *itemPos* parameter set
 
 Given the hierarchical list named *hList,* shown here in the Application environment:
 
-![](../assets/en/Commands/pict22758.en.png)
+![](../assets/en/commands/pict22758.en.png)
 
 After the execution of this code:
 
@@ -47,33 +47,27 @@ After the execution of this code:
 
 The last visible list item is selected:
 
-![](../assets/en/Commands/pict22759.en.png)
+![](../assets/en/commands/pict22759.en.png)
 
 After execution of the following lines of code:
 
 ```4d
  SET LIST PROPERTIES(hList;0;0;18;0;1)
-
-  `It is imperative to pass 1 as the last parameter in order to allow multiple selections
-
+  //It is imperative to pass 1 as the last parameter in order to allow multiple selections
  ARRAY LONGINT($arr;3)
-
  $arr{1}:=2
-
  $arr{2}:=3
-
  $arr{3}:=5
-
  SELECT LIST ITEMS BY POSITION(hList;3;$arr)
-
-  `The 3rd item is designated as the current item
+  //The 3rd item is designated as the current item
 ```
 
 ... the 2nd, 3rd and 5th items of the hierarchical list are selected:
 
-![](../assets/en/Commands/pict22760.en.png)
+![](../assets/en/commands/pict22760.en.png)
 
 #### See also 
+
 [EDIT ITEM](edit-item.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 [Selected list items](selected-list-items.md)  

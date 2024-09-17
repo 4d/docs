@@ -25,7 +25,6 @@ The **Menu selected** command can be used to work with hierarchical submenus. Wh
 
 ```4d
  Menu:=Menu selected\ 65536
-
  menu command:=Menu selected% 65536
 ```
 
@@ -33,7 +32,6 @@ You can also extract these values using the *bitwise operators* as follows:
 
 ```4d
  Menu:=(Menu selected & 0xFFFF0000)>>16
-
  menu command:=Menu selected & 0xFFFF
 ```
 
@@ -45,25 +43,18 @@ The following form method uses **Menu selected** to supply the menu and menu ite
 
 ```4d
  Case of
-
     :(FORM Event=On Menu Selected)
-
        C_STRING(16;$refMenuIncludingItem)
-
-       C_LONGINT($ref;$MenuNum;$MenuItemNum)
-
+       var $ref;$MenuNum;$MenuItemNum : Integer
        $ref:=Menu selected($refMenuIncludingItem)
-
        $MenuNum:=$ref\65536
-
        $MenuItemNum:=$ref%65536
-
        SET MENU ITEM MARK($refMenuIncludingItem;$MenuItemNum;Char(18))
-
  End case
 ```
 
 **Note:** The On Menu Selected form event is not activated if no item is selected, *$refMenuIncludingItem* is always given a value and *$MenuNum* equals 0 if the menu is not one of the menus of the menu bar.
 
 #### See also 
+
 [Managing Menus](../../4D/20-R6/Managing-Menus.300-6958844.en.html)  

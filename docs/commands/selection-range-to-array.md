@@ -45,7 +45,6 @@ When you apply **SELECTION RANGE TO ARRAY** to a Time type field, it is importan
 
 ```4d
  ARRAY LONGINT(myArray;0)
-
  SELECTION TO ARRAY([myTable]myTimeField;myArray)
 ```
 
@@ -73,7 +72,6 @@ The following code addresses the last 50 records from the current selection for 
 
 ```4d
  lSelSize:=Records in selection([Invoices])
-
  SELECTION RANGE TO ARRAY(lSelSize-49;lSelSize;[Invoices];alInvRecN;[Customers];alCustRecN)
 ```
 
@@ -83,17 +81,11 @@ The following code process, in sequential “chunks”of 1000 records, a large s
 
 ```4d
  lMaxPage:=1000
-
  lSelSize:=Records in selection([Phone Directory])
-
  For($lPage ;1;1+((lSelSize-1)\lMaxPage))
-
-  ` Load the values and/or record numbers
-
+  // Load the values and/or record numbers
     SELECTION RANGE TO ARRAY(1+(lMaxPage*($lPage-1));lMaxPage*$lPage;...;...;...;...;...;...)
-
-  ` Do something with the arrays
-
+  // Do something with the arrays
  End for
 ```
 
@@ -103,19 +95,15 @@ Use the first 50 current records of the \[Invoices\] table to load various array
 
 ```4d
   // Deferred statements
-
  SELECTION TO ARRAY([Invoices]InvoiceRef;arrLInvRef;*)
-
  SELECTION TO ARRAY([Invoices]Date;arrDInvDate;*)
-
  SELECTION TO ARRAY([Clients]ClientRef;arrLClientRef;*)
-
   // Execution of deferred statements
-
  SELECTION RANGE TO ARRAY(1;50)
 ```
 
 #### See also 
+
 [ON ERR CALL](on-err-call.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  

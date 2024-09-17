@@ -48,11 +48,8 @@ Setting several values of the "Keywords" metadata via arrays:
 
 ```4d
  ARRAY TEXT($arrTkeywords;2)
-
  $arrTkeywords{1}:="France"
-
  $arrTkeywords{2}:="Europe"
-
  SET PICTURE METADATA(vPicture;IPTC keywords;$arrTkeywords)
 ```
 
@@ -61,24 +58,15 @@ Setting several values of the "Keywords" metadata via arrays:
 Setting of GPS block via a DOM reference:
 
 ```4d
- C_TEXT($domMetas)
-
+ var $domMetas : Text
  $domMetas:=DOM Parse XML source("metas.xml")
-
- C_TEXT($gpsRef)
-
+ var $gpsRef : Text
  $gpsRef:=DOM Find XML element($domMetas;"Metadatas/GPS")
-
  If(OK=1)
-
     SET PICTURE METADATA(vImage;"GPS";$refGPS)
-
   //here $gpsRef actually points to the GPS element
-
     ...
-
  End if
-
  DOM CLOSE XML($domMetas)
 ```
 
@@ -87,6 +75,7 @@ Setting of GPS block via a DOM reference:
 When all the metadata are handled via a DOM element reference, the tags are stored as attributes attached to an element (a child of the referenced element) whose name is the block name (TIFF, IPTC, etc.). When a specific metadata block is manipulated, the block tags are stored as attributes that are directly attached to the element referenced by the command. 
 
 #### See also 
+
 [GET PICTURE KEYWORDS](get-picture-keywords.md)  
 [GET PICTURE METADATA](get-picture-metadata.md)  
 [Picture Metadata Names](../../4D/20-R6/Picture-Metadata-Names.302-6958502.en.html)  

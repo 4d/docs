@@ -33,14 +33,10 @@ Passing an empty string in *entryFilter* removes the current entry filter for th
 The following example sets the entry filter for a postal code field. If the address is in the U.S., the filter is set to ZIP codes. Otherwise, it is set to allow any entry: 
 
 ```4d
- If([Companies]Country="US") ` Set the filter to a ZIP code format
-
+ If([Companies]Country="US") // Set the filter to a ZIP code format
     OBJECT SET FILTER([Companies]ZIP Code;"&9#####")
-
- Else ` Set the filter to accept alpha and numeric and uppercase the alpha
-
+ Else // Set the filter to accept alpha and numeric and uppercase the alpha
     OBJECT SET FILTER([Companies]ZIP Code;"~@")
-
  End if
 ```
 
@@ -55,5 +51,6 @@ The following example allows only the letters “a,” “b,” “c,” or “g
 **Note:** This example sets the entry filter to *&"a;b;c;g"##*.
 
 #### See also 
+
 [OBJECT Get filter](object-get-filter.md)  
 [OBJECT SET FORMAT](object-set-format.md)  

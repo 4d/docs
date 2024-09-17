@@ -34,4 +34,5 @@ In the *option* parameter, pass the number of the option whose value you want to
 In the *value* parameter, pass a variable to receive the current value of the *option*.
 
 #### See also 
+
 [HTTP SET OPTION](http-set-option.md)  

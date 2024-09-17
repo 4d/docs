@@ -118,28 +118,8 @@ No matter which way a query has been defined:
 
 ##### Date values in the object 
 
-Dates are stored in objects according to database settings; by default, the time zone is taken into account (see the JSON use local time selector in the [SET DATABASE PARAMETER](set-database-parameter.md) command). 
-
+```undefined
 !1973-05-22! -> "1973-05-21T23:00:00.000Z"
-
-This setting is also taken into account during queries, so you do not have to worry about it if you always use your database at the same place and if settings are the same on all machines that access the data. In this case, the following query will correctly return records whose Birthday attribute equals !1973-05-22! (saved as "1973-05-21T23:00:00.00Z"):
-
-```4d
- QUERY BY ATTRIBUTE([Persons];[Persons]OB_Info;"Birthday";=;!1973-05-22!)
-```
-
-If you do not want to use the GMT settings, you can modify these settings using the following instruction:
-
-```4d
- SET DATABASE PARAMETER(JSON use local time;0)
-```
-
-Keep in mind that the scope of this setting is the process only. If you execute this instruction, then October 1st, 1965 will be stored "1965-10-01T00:00:00.000Z" but you will need to set the same parameter before launching your queries:
-
-```4d
- SET DATABASE PARAMETER(JSON use local time;0)
-
- QUERY BY ATTRIBUTE([Persons];[Persons]OB_Info;"Birthday";=;!1976-11-27!)
 ```
 
 ##### Using the virtual length property 
@@ -175,7 +155,6 @@ You want to find people with a "home" location kind in the city "paris". If you 
 
 ```4d
  QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[].city";=;"paris";*)
-
  QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[].kind";=;"home")
 ```
 
@@ -190,7 +169,6 @@ With the above records, if you write:
 
 ```4d
  QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[a].city";=;"paris";*)
-
  QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[a].kind";=;"home")
 ```
 
@@ -204,11 +182,8 @@ In this example, the "age" attribute is either a string or an integer and we wan
 
 ```4d
  QUERY BY ATTRIBUTE([Persons];[Persons]OB_Info;"age";>=;20;*)
-
  QUERY BY ATTRIBUTE([Persons];&;[Persons]OB_Info;"age";<;30;*)
-
  QUERY BY ATTRIBUTE([Persons];|;[Persons]OB_Info;"age";=;"2@";*)
-
  QUERY BY ATTRIBUTE([Persons];&;[Persons]OB_Info;"age";#;"2") //no final * to launch execution
 ```
 
@@ -218,17 +193,13 @@ The **QUERY BY ATTRIBUTE** command can be used to find records where certain att
 
 ```4d
   //Find records where e-mail is defined in the object field
-
- C_OBJECT($undefined)
-
+ var $undefined : Object
  QUERY BY ATTRIBUTE([Persons];[Persons]Info;"e-mail";#;$undefined)
 ```
 
 ```4d
   //Find records where zip code is NOT defined in the object field
-
- C_OBJECT($undefined)
-
+ var $undefined : Object
  QUERY BY ATTRIBUTE([Persons];[Persons]Info;"zip code";=;$undefined)
 ```
 
@@ -261,9 +232,7 @@ You want to search a field containing array attributes. With the following two r
 
 ```4d
   //flag the array attribute with "[]" syntax
-
  QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[].city";=;"paris")
-
   //selects "martin" and "smith"
 ```
 
@@ -271,9 +240,7 @@ You want to search a field containing array attributes. With the following two r
 
 ```4d
  QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[].kind";=;"home";*)
-
  QUERY BY ATTRIBUTE([People];&;[People]OB_Field;"locations[].city";=;"paris")
-
   //selects "smith"
 ```
 
@@ -281,7 +248,7 @@ You want to search a field containing array attributes. With the following two r
 
 This example illustrates the use of the virtual "length" property. Your database has a \[Customer\]full\_Data object field with the following data:
 
-![](../assets/en/Commands/pict2994114.en.png)
+![](../assets/en/commands/pict2994114.en.png)
 
 You want to get the records for any customers who have two or more children. To do this, you can write:
 
@@ -366,16 +333,11 @@ To find people who have a child named "Betty" who is 15 years old:
 
 ```4d
  QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[a].Name";=;"Betty";*)
-
  QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[a].Age";=;"15")
-
   //returns "Victor"
  
-
  QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[].Name";=;"Betty";*)
-
  QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[].Age";=;"15")
-
   //returns "Sam", "Louis" and "Victor"
 ```
 
@@ -383,24 +345,15 @@ To find people who have a child named "Betty", 15 years old, and a child named "
 
 ```4d
  QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[a].Name";=;"Betty";*)
-
  QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[a].Age";=;"15";*)
-
  QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[b].Name";=;"Harry";*)
-
  QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[b].Age";=;"9")
-
   //returns "Victor"
  
-
  QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[].Name";=;"Betty";*)
-
  QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[].Age";=;"15";*)
-
  QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[].Name";=;"Harry";*)
-
  QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[].Age";=;"9")
-
   //returns "Sam" and "Victor"
 ```
 
@@ -408,24 +361,15 @@ To find people who have a 15 year-old child named "Harry" who has a "blue car" t
 
 ```4d
  QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[a].Name";=;"Harry";*)
-
  QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[a].Age";=;"15";*)
-
  QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[a].Toy[b].Name";=;"Car";*)
-
  QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[a].Toy[b].Color";=;"Blue")
-
   //returns "Sam"
  
-
  QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[].Name";=;"Harry";*)
-
  QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[].Age";=;"15";*)
-
  QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[].Toy[].Name";=;"Car";*)
-
  QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[].Toy[].Color";=;"Blue")
-
   //returns "Sam" and "Louis"
 ```
 
@@ -438,6 +382,7 @@ The OK variable is set to 0 if:
 * in 'query and lock' mode (see the [SET QUERY AND LOCK](set-query-and-lock.md) command), the query has found at least one locked record. In this case as well, the LockedSet system set is updated.
 
 #### See also 
+
   
 [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)  
 [Structure of 4D language objects](../../4D/20-R6/Structure-of-4D-language-objects.300-6957608.en.html)  

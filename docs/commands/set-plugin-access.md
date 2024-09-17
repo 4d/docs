@@ -38,6 +38,7 @@ Pass the name of the group whose users are authorized to use the plug-in in *gro
 * Used licenses will remain attached to 4D user accounts in *group* for the whole session, even if they change memberships or if the *group* loses its plug-in access rights.
 
 #### See also 
+
 [Get plugin access](get-plugin-access.md)  
 [PLUGIN LIST](plugin-list.md)  
 [SET GROUP ACCESS](set-group-access.md)  

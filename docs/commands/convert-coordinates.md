@@ -48,53 +48,37 @@ You want to open a pop-up menu at the bottom left corner of the "MyObject" objec
 
 ```4d
   // OBJECT GET COORDINATES works in the current form coordinate system
-
   // Dynamic pop-up menu uses the current window coordinate system
-
   // We need to convert the values
-
- C_LONGINT($left;$top;$right;$bottom)
-
- C_TEXT($menu)
-
+ var $left;$top;$right;$bottom : Integer
+ var $menu : Text
  OBJECT GET COORDINATES(*;"MyObject";$left;$top;$right;$bottom)
-
  CONVERT COORDINATES($left;$bottom;XY Current form;XY Current window)
-
  $menu:=Create menu
-
  APPEND MENU ITEM($menu;"Right here")
-
  APPEND MENU ITEM($menu;"Right now")
-
  Dynamic pop up menu($menu;"";$left;$bottom)
-
  RELEASE MENU($menu)
 ```
 
-![](../assets/en/Commands/pict2678144.en.png)
+![](../assets/en/commands/pict2678144.en.png)
 
 #### Example 2 
 
 You want to open a pop-up window at the position of the mouse cursor. On Windows, you need to convert the coordinates since [GET MOUSE](get-mouse.md) (with the \* parameter) returns values based on the position of the MDI window:
 
 ```4d
- C_LONGINT($mouseX;$mouseY;$mouseButtons)
-
- C_LONGINT($window)
-
+ var $mouseX;$mouseY;$mouseButtons : Integer
+ var $window : Integer
  GET MOUSE($mouseX;$mouseY;$mouseButtons)
-
  CONVERT COORDINATES($mouseX;$mouseY;XY Current window;XY Main window)
-
  $window:=Open form window("PopupWindowForm";Pop up form window;$mouseX;$mouseY)
-
  DIALOG("PopupWindowForm")
-
  CLOSE WINDOW($window)
 ```
 
 #### See also 
+
 [GET WINDOW RECT](get-window-rect.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  

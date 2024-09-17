@@ -37,11 +37,10 @@ You want to find people with an age between 20 and 30, among the records that we
 
 ```4d
  USE SET("UserSet") //creates a new current selection
-
  QUERY SELECTION BY ATTRIBUTE([People];[People]OB_Info;"age";>;20;*)
-
  QUERY SELECTION BY ATTRIBUTE([People];&;[People]OB_Info;"age";<;30) //triggers the query
 ```
 
 #### See also 
+
 [QUERY BY ATTRIBUTE](query-by-attribute.md)  

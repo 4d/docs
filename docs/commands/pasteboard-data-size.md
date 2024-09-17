@@ -36,13 +36,9 @@ The following code tests whether the pasteboard contains a picture and, if so, c
 
 ```4d
  If(Pasteboard data size(Picture data)=1) //Is there a picture in the pasteboard?
-
     GET PICTURE FROM PASTEBOARD($vPicVariable) //If so, extract the picture from the pasteboard
-
  Else
-
     ALERT("There is no picture in the pasteboard.")
-
  End if
 ```
 
@@ -52,25 +48,15 @@ Usually, applications cut and copy Text or Picture type data into the pasteboard
 
 ```4d
  Case of
-
-  ` First, check whether the pasteboard contains data from the hypothetical spreadsheet application
-
+  // First, check whether the pasteboard contains data from the hypothetical spreadsheet application
     :(Pasteboard data size('SPSH')>0)
-
-  ` ...
-
-  ` Second, check whether the pasteboard contains Sylk data
-
+  // ...
+  // Second, check whether the pasteboard contains Sylk data
     :(Pasteboard data size('SYLK')>0)
-
-  ` ...
-
-  ` Finally check whether the pasteboard contains Text data
-
+  // ...
+  // Finally check whether the pasteboard contains Text data
     :(Pasteboard data size('TEXT')>0)
-
-  ` ...
-
+  // ...
  End case
 ```
 
@@ -82,21 +68,15 @@ You want to drag some private data from different objects in your form. You can 
 
 ```4d
   //source object
-
  If(FORM Event=On Begin Drag Over)
-
     APPEND DATA TO PASTEBOARD("some.private.data";$data)
-
  End if
 ```
 
 ```4d
   //target object
-
  If(FORM Event=On Drag Over)
-
     $0:=Choose(Pasteboard data size("some.private.data")>0;0;-1)
-
  End if
 ```
 
@@ -105,6 +85,7 @@ You want to drag some private data from different objects in your form. You can 
 See the example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) command.
 
 #### See also 
+
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  

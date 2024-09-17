@@ -35,4 +35,5 @@ displayed_sidebar: docs
 If you pass an invalid *area* number, the error -9850 will be generated.
 
 #### See also 
+
 [QR SET SELECTION](qr-set-selection.md)  

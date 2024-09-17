@@ -40,6 +40,7 @@ However, we strongly recommend that you do NOT launch print jobs from the **On S
 See the example in the [Semaphore](semaphore.md) section.  
 
 #### See also 
+
 [Database Methods](../../4D/20-R6/Database-Methods.300-6958889.en.html)  
 [On Exit database method](on-exit-database-method.md)  
 [QUIT 4D](quit-4d.md)  

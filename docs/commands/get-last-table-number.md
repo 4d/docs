@@ -22,27 +22,19 @@ The following example builds an array, named asTables*,* with the names of table
 
 ```4d
  ARRAY TEXT(asTables;Get last table number)
-
  If(Get last table number>0) //If the database does contain tables
-
     For($vlTables;Size of array(asTables);1;-1)
-
        If(Is table number valid($vlTables))
-
           asTables{$vlTables}:=Table name($vlTables)
-
        Else
-
           DELETE FROM ARRAY(asTables;$vlTables)
-
        End if
-
     End for
-
  End if
 ```
 
 #### See also 
+
 [Get last field number](get-last-field-number.md)  
 [Is table number valid](is-table-number-valid.md)  
 [Table name](table-name.md)  

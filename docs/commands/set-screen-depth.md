@@ -21,4 +21,5 @@ displayed_sidebar: docs
 For details about the values you pass in *color* and *depth*, see the description of the command [SCREEN DEPTH](screen-depth.md).
 
 #### See also 
+
 [SCREEN DEPTH](screen-depth.md)  

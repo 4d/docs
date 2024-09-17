@@ -33,6 +33,7 @@ The *expDate* parameter receives the expiration date and the *expTime* parameter
  \-> Sends a cookie 4DSID aaabbb expiration I+24h = Wednesday 01:00
 
 #### See also 
+
 [WEB Get Current Session ID](web-get-current-session-id.md)  
 [Web Sessions Management (Legacy)](../../4D/20-R6/Web-Sessions-Management-Legacy.300-6957735.en.html)  
 [WEB SET OPTION](web-set-option.md)  

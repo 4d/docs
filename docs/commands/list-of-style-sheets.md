@@ -30,26 +30,21 @@ This command can only be used in **binary databases**. In **project architecture
 
 In your application, the following style sheets are defined:
 
-![](../assets/en/Commands/pict1206954.en.png)
+![](../assets/en/commands/pict1206954.en.png)
 
 If you execute the following code:
 
 ```4d
  LIST OF STYLE SHEETS($arrStyles)
-
   // $arrStyles{1} contains "__automatic__"
-
   // $arrStyles{2} contains "Buttons"
-
   // $arrStyles{3} contains "default"
-
   // $arrStyles{4} contains "Input_fields"
-
   // $arrStyles{5} contains "Labels"
-
   // $arrStyles{6} contains "Variables"
 ```
 
 #### See also 
+
 [GET STYLE SHEET INFO](get-style-sheet-info.md)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  

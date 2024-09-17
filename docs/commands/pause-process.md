@@ -25,6 +25,7 @@ While process execution is suspended, the windows belonging to this process are 
 **Note:** You cannot use this command to assign a stored procedure on the server machine from a client machine (*process*<0).
 
 #### See also 
+
 [ABORT PROCESS BY ID](abort-process-by-id.md)  
 [DELAY PROCESS](delay-process.md)  
 [HIDE PROCESS](hide-process.md)  

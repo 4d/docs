@@ -26,4 +26,5 @@ The following example displays an alert that shows the number of records in a ta
 ```
 
 #### See also 
+
 [Records in selection](records-in-selection.md)  

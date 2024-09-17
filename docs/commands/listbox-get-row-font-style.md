@@ -39,17 +39,15 @@ In *row*, pass the number of the row whose style you want to get.
 
 Given the following list box: 
 
-![](../assets/en/Commands/pict1205514.fr.png)
+![](../assets/en/commands/pict1205514.fr.png)
 
 ```4d
  vStyle:=LISTBOX Get row font style(*;"Col5";3)
-
  vStyle2:=LISTBOX Get row font style(*;"List Box";3)
-
   // vStyle contains 1 (Bold)
-
   // vStyle2 contains 6 (Italic + Underline)
 ```
 
 #### See also 
+
 [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  

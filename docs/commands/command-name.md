@@ -35,33 +35,20 @@ The **Command name** command sets the *OK* variable to 1 if *command* correspond
 The following code allows you to load all valid 4D commands in an array:
 
 ```4d
- C_LONGINT($Lon_id)
-
- C_TEXT($Txt_command)
-
+ var $Lon_id : Integer
+ var $Txt_command : Text
  ARRAY LONGINT($tLon_Command_IDs;0)
-
  ARRAY TEXT($tTxt_commands;0)
  
-
  Repeat
-
     $Lon_id:=$Lon_id+1
-
     $Txt_command:=Command name($Lon_id)
-
     If(OK=1) //command number exists
-
        If(Length($Txt_command)>0) //command is not disabled
-
           APPEND TO ARRAY($tTxt_commands;$Txt_command)
-
           APPEND TO ARRAY($tLon_Command_IDs;$Lon_id)
-
        End if
-
     End if
-
  Until(OK=0) //end of existing commands
 ```
 
@@ -71,21 +58,13 @@ In a form, you want a drop-down list populated with the basic summary report com
 
 ```4d
  Case of
-
     :(Form event code=On Before)
-
        ARRAY TEXT(asCommand;4)
-
        asCommand{1}:=Command name(1)
-
        asCommand{2}:=Command name(2)
-
        asCommand{3}:=Command name(4)
-
        asCommand{4}:=Command name(3)
-
-  ` ...
-
+  // ...
  End case
 ```
 
@@ -99,26 +78,16 @@ You want to create a method that returns **True** if the command, whose number i
 
 ```4d
   //Is_Thread_Safe project method
-
   //Is_Thread_Safe(numCom) -> Boolean
  
-
- C_LONGINT($1;$threadsafe)
-
- C_TEXT($name)
-
- C_BOOLEAN($0)
-
+ var $1;$threadsafe : Integer
+ var $name : Text
+ var $0 : Boolean
  $name:=Command name($1;$threadsafe;$theme)
-
  If($threadsafe ?? 0) //if the first bit is set to 1
-
     $0:=True
-
  Else
-
     $0:=False
-
  End if
 ```
 
@@ -126,10 +95,10 @@ Then, for the "SAVE RECORD" command (53) for example, you can write:
 
 ```4d
  $isSafe:=Is_Thread_Safe(53)
-
   // returns True
 ```
 
 #### See also 
+
 [EXECUTE FORMULA](execute-formula.md)  
 [Preemptive 4D processes](../../4D/20-R6/Preemptive-4D-processes.300-6957584.en.html)  

@@ -25,5 +25,6 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 **Note:** If the arrays associated with the columns of a List box do not all have the same size, only the number of items corresponding to the smallest array will appear in the list box and thus be returned by this command. 
 
 #### See also 
+
 [LISTBOX DELETE ROWS](listbox-delete-rows.md)  
 [LISTBOX INSERT ROWS](listbox-insert-rows.md)  

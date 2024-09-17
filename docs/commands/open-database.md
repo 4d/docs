@@ -46,43 +46,25 @@ If the target database file is not found or is invalid, a standard file system e
 You want to select a server at startup from a single-user application. You could execute this code from a process launched by the [On Startup database method](on-startup-database-method.md):
 
 ```4d
- C_TEXT($xml)
-
- $xml:="<?xml version=\"1.0\" encoding=\"UTF-8\"?><database_shortcut is_remote=\"true\" server_database_name=\"{databaseName}\" server_path=\"{IP}\"/>"
-
+ var $xml : Text
+ $xml:=""
  $databaseName:="myServer"
-
  $IP:="192.168.6.7:19813"
  
-
  If(Shift down)
-
     $IP:=Request("IP address to connect to "+$databaseName;$IP)
-
  Else
-
     ok:=1
-
  End if
  
-
  If(ok=1)
-
     $xml:=Replace string($xml;"{databaseName}";$databaseName)
-
     $xml:=Replace string($xml;"{IP}";$IP)
-
-    C_OBJECT($link)
-
+    var $link : Object
     $link:=Folder(fk user preferences folder).file("server.4dlink")
-
     $link.setText($xml)
-
     OPEN DATABASE($link.platformPath)
-
  Else
-
     QUIT 4D
-
  End if
 ```

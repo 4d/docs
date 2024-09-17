@@ -26,10 +26,11 @@ The selected record number is not the same as the number returned by [Record num
 The following example saves the current selected record number in a variable:
 
 ```4d
- CurSelRecNum:=Selected record number([People]) ` Get the selected record number
+ CurSelRecNum:=Selected record number([People]) // Get the selected record number
 ```
 
 #### See also 
+
 [About Record Numbers](../../4D/20-R6/About-Record-Numbers.300-6958029.en.html)  
 [GOTO SELECTED RECORD](goto-selected-record.md)  
 [Records in selection](records-in-selection.md)  

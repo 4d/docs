@@ -72,7 +72,7 @@ The **QR SET TOTALS DATA** command sets the details of a specific cell.
 
 Here is a depiction of how the parameters column and break have to be combined in cross-table mode:
 
-![](../assets/en/Commands/pict31186.en.png)
+![](../assets/en/commands/pict31186.en.png)
 
 ##### Supported Types of Data 
 
@@ -92,4 +92,5 @@ If you pass an invalid *colNum* number, the error -9852 will be generated.
 If you pass an invalid *breakNum* number, the error -9853 will be generated.
 
 #### See also 
+
 [QR GET TOTALS DATA](qr-get-totals-data.md)  

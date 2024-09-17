@@ -22,6 +22,7 @@ If the document is open, you pass its document reference number in *docRef*.
 On Macintosh, the size of the document's data fork is changed.
 
 #### See also 
+
 [Get document position](get-document-position.md)  
 [Get document size](get-document-size.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  

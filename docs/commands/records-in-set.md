@@ -22,15 +22,13 @@ displayed_sidebar: docs
 The following example displays an alert telling what percentage of the customers are rated as the best:
 
 ```4d
-  ` First calculate the percentage
-
+  // First calculate the percentage
  $Percent :=(Records in set("Best")/Records in table([Customers]))*100
-
-  ` Display an alert with the percentage
-
+  // Display an alert with the percentage
  ALERT(String($Percent;"##0%")+" of our customers are the best.")
 ```
 
 #### See also 
+
 [Records in selection](records-in-selection.md)  
 [Records in table](records-in-table.md)  

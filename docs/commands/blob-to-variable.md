@@ -38,4 +38,5 @@ See the examples for the [VARIABLE TO BLOB](variable-to-blob.md) command.
 The OK variable is set to 1 if the variable has been successfully rewritten, otherwise it is set to 0.
 
 #### See also 
+
 [VARIABLE TO BLOB](variable-to-blob.md)  

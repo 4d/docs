@@ -34,5 +34,6 @@ If the item is not visible because it is located in a collapsed list, **List ite
 If the item does not exist, **List item position** returns 0.
 
 #### See also 
+
 [Count list items](count-list-items.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  

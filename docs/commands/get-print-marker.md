@@ -57,5 +57,6 @@ Pass one of the constants of the [Form Area](/4Dv20R6/4D/20-R6/Form-Area.302-695
 Refer to the example of the [SET PRINT MARKER](set-print-marker.md) command. 
 
 #### See also 
+
 [OBJECT MOVE](object-move.md)  
 [SET PRINT MARKER](set-print-marker.md)  

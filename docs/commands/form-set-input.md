@@ -59,9 +59,8 @@ The optional *\** parameter is used in conjunction with the form properties you 
 The following example shows a typical use of FORM SET INPUT: 
 
 ```4d
- FORM SET INPUT([Companies];"New Comp") ` Form for adding new companies
-
- ADD RECORD([Companies]) ` Add a new company
+ FORM SET INPUT([Companies];"New Comp") // Form for adding new companies
+ ADD RECORD([Companies]) // Add a new company
 ```
 
 #### Example 2 
@@ -70,21 +69,13 @@ In an invoicing database managing several companies, the creation of an invoice 
 
 ```4d
  Case of
-
     :(company="4D SAS")
-
        FORM SET INPUT([Invoices];"Input";"4D_SAS")
-
     :(company="4D Inc")
-
        FORM SET INPUT([Invoices];"Input";"4D_Inc")
-
     :(company="Acme")
-
        FORM SET INPUT([Invoices];"Input";"ACME")
-
  End case
-
  ADD RECORD([Factures])
 ```
 
@@ -94,15 +85,15 @@ The following example uses a .json file describing a form to enter the records i
 
 ```4d
  FORM SET INPUT([Personnel];"/RESOURCES/PersonnelForm.json")
-
  ADD RECORD([Personnel])
 ```
 
 which displays:
 
-![](../assets/en/Commands/pict3687432.en.png)
+![](../assets/en/commands/pict3687432.en.png)
 
 #### See also 
+
 [\_o\_CREATE USER FORM](../../4D/20-R6/o-CREATE-USER-FORM.301-6957652.en.html)  
 [ADD RECORD](add-record.md)  
 [DISPLAY RECORD](display-record.md)  

@@ -99,35 +99,25 @@ The following examples create different files and folders in the database folder
 
 ```4d
  COPY DOCUMENT("folder1\\name1";"folder2\\")
-
   //creates the "folder2/name1" file
  
-
  COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
-
   //creates the "folder2/new" file
  
-
  COPY DOCUMENT("folder1\\name1";"folder2\\name2")
-
   //creates the "folder2/name2" file
  
-
  COPY DOCUMENT("folder1\\name1";"folder2\\name2";"new")
-
   //creates the "folder2/new" file (name2 is ignored)
  
-
  COPY DOCUMENT("folder1\\" ; "folder2\\")
-
   //creates the "folder2/folder1/" folder
  
-
  COPY DOCUMENT("folder1\\" ; "folder2\\" ; "new")
-
   //creates the "folder2/new/" folder
 ```
 
 #### See also 
+
 [MOVE DOCUMENT](move-document.md)  
 [System Documents](../../4D/20-R6/System-Documents.300-6958370.en.html)  

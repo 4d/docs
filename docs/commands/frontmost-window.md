@@ -18,5 +18,6 @@ displayed_sidebar: docs
 <!--REF #_command_.Frontmost window.Summary-->The Frontmost window command returns the window reference number of the frontmost window.<!-- END REF-->
 
 #### See also 
+
 [Frontmost process](frontmost-process.md)  
 [Next window](next-window.md)  

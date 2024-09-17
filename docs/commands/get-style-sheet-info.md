@@ -54,13 +54,12 @@ In **project architecture**, only the three automatic style sheets are supported
 You want to find out the current configuration of the "Automatic" style sheet:
 
 ```4d
- C_LONGINT($size;$style)
-
- C_TEXT($font)
-
+ var $size;$style : Integer
+ var $font : Text
  GET STYLE SHEET INFO(Automatic style sheet;$font;$size;$style)
 ```
 
 #### See also 
+
 [LIST OF STYLE SHEETS](list-of-style-sheets.md)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  

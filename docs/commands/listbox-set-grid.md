@@ -24,6 +24,7 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 Pass the Boolean values in *horizontal* and *vertical* that indicate if the corresponding grid lines should be displayed (**True**) or hidden (**False**). The grid is displayed by default. 
 
 #### See also 
+
 [LISTBOX GET GRID](listbox-get-grid.md)  
 [LISTBOX Get property](listbox-get-property.md)  
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  

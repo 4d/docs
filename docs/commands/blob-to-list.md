@@ -32,33 +32,22 @@ After the call, if the hierarchical list has been successfully created, the OK v
 In this example, the form method for a data entry form extracts a list from a BLOB field before the form appears on the screen, and stores it back to the BLOB field if the data entry is validated:
 
 ```4d
-  ` [Things To Do];"Input" Form Method
+  // [Things To Do];"Input" Form Method
  
-
  Case of
  
-
     :(FORM Event=On Load)
-
        hList:=BLOB to list([Things To Do]Other Crazy Ideas)
-
        If(OK=0)
-
           hList:=New list
-
        End if
  
-
     :(FORM Event=On Unload)
-
        CLEAR LIST(hList;*)
  
-
     :(bValidate=1)
-
        LIST TO BLOB(hList;[Things To Do]Other Crazy Ideas)
  
-
  End case
 ```
 
@@ -67,4 +56,5 @@ In this example, the form method for a data entry form extracts a list from a BL
 The OK variable is set to 1 if the list has been successfully created, otherwise it is set to 0.
 
 #### See also 
+
 [LIST TO BLOB](list-to-blob.md)  

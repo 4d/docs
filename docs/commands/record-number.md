@@ -28,18 +28,15 @@ Record numbers can change. The record numbers of deleted records are reused.
 The following example saves the current record number and then searches for any other records that have the same data:
 
 ```4d
- $RecNum:=Record number([People]) ` Get the record number
-
- QUERY([People];[People]Last =[People]Last) ` Anyone else with the last name?
-
-  ` Display an alert with the number of people with the same last name
-
+ $RecNum:=Record number([People]) // Get the record number
+ QUERY([People];[People]Last =[People]Last) // Anyone else with the last name?
+  // Display an alert with the number of people with the same last name
  ALERT("There are "+String(Records in selection([People])+" with that name.")
-
- GOTO RECORD([People];$RecNum) ` Go back to the same record
+ GOTO RECORD([People];$RecNum) // Go back to the same record
 ```
 
 #### See also 
+
 [About Record Numbers](../../4D/20-R6/About-Record-Numbers.300-6958029.en.html)  
 [GOTO RECORD](goto-record.md)  
 [Is new record](is-new-record.md)  

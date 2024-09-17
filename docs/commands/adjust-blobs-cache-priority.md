@@ -41,16 +41,13 @@ You want to temporarily change the cache priority for the \[Docs\] table text fi
 
 ```4d
  ADJUST BLOBS CACHE PRIORITY([Docs];Cache priority very high)
-
  QUERY([Docs];[Docs]Author#"A@") // sequential search on a non indexed field
-
   //... run several other queries or sorts on the same table
-
   // when finished, set back to normal cache priority
-
  ADJUST BLOBS CACHE PRIORITY([Docs];Cache priority normal)
 ```
 
 #### See also 
+
 [Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
 [SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md)  

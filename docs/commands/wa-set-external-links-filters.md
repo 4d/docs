@@ -38,22 +38,14 @@ This example causes sites to be opened in external browsers:
 
 ```4d
  ARRAY STRING(0;$filters;0)
-
  ARRAY BOOLEAN($AllowDeny;0)
  
-
- APPEND TO ARRAY($filters;"*www.google.*") `Select "google"
-
+ APPEND TO ARRAY($filters;"*www.google.*") //Select "google"
  APPEND TO ARRAY($AllowDeny;False)
-
-  `False: this link will be opened in an external browser
-
+  //False: this link will be opened in an external browser
  APPEND TO ARRAY($filters;"*www.apple.*")
-
  APPEND TO ARRAY($AllowDeny;False)
-
-  `False: this link will be opened in an external browser
-
+  //False: this link will be opened in an external browser
  WA SET EXTERNAL LINKS FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
@@ -63,31 +55,21 @@ This example combines the filtering of both sites and external links:
 
 ```4d
  ARRAY STRING(0;$filters;0)
-
  ARRAY BOOLEAN($AllowDeny;0)
-
- APPEND TO ARRAY($filters;"*www.google.*") `Select "google"
-
- APPEND TO ARRAY($AllowDeny;False) `Deny this link
-
+ APPEND TO ARRAY($filters;"*www.google.*") //Select "google"
+ APPEND TO ARRAY($AllowDeny;False) //Deny this link
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
  
-
  ARRAY STRING(0;$filters;0)
-
  ARRAY BOOLEAN($AllowDeny;0)
-
- APPEND TO ARRAY($filters;"*www.google.*") `Select "google"
-
+ APPEND TO ARRAY($filters;"*www.google.*") //Select "google"
  APPEND TO ARRAY($AllowDeny;False)
-
-  `False: this link should be opened in an external browser but this setting
-
-  `has no effect because the link will be blocked by the URL filtering.
-
+  //False: this link should be opened in an external browser but this setting
+  //has no effect because the link will be blocked by the URL filtering.
  WA SET EXTERNAL LINKS FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
 #### See also 
+
 [WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
 [WA SET URL FILTERS](wa-set-url-filters.md)  

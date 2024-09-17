@@ -25,5 +25,6 @@ If a record has a large amount of data, picture fields, or external documents (s
 **Note:** When it is used in a transaction, the **UNLOAD RECORD** command unloads the current record only for the process that manages the transaction. For other processes, the record stays locked as long as the transaction has not been validated (or cancelled).
 
 #### See also 
+
 [LOAD RECORD](load-record.md)  
 [Record Locking](../../4D/20-R6/Record-Locking.300-6958117.en.html)  

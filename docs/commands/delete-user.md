@@ -27,6 +27,7 @@ Deleted user names no longer appear in the Users editor displayed when you call 
 If you do not have the proper access privileges for calling DELETE USER or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
 
 #### See also 
+
 [GET USER LIST](get-user-list.md)  
 [GET USER PROPERTIES](get-user-properties.md)  
 [Is user deleted](is-user-deleted.md)  

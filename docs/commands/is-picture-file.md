@@ -25,4 +25,5 @@ If you do not pass the *\** parameter, the command tests the file by looking for
 **Note:** The command returns True for PDF files under Windows and EMF files under Mac OS. 
 
 #### See also 
+
 [PICTURE CODEC LIST](picture-codec-list.md)  

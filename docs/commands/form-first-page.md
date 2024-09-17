@@ -24,6 +24,7 @@ The following example is a one-line method called from a menu command. It displa
 ```
 
 #### See also 
+
 [FORM Get current page](form-get-current-page.md)  
 [FORM GOTO PAGE](form-goto-page.md)  
 [FORM LAST PAGE](form-last-page.md)  

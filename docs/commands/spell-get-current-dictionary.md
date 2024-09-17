@@ -22,17 +22,13 @@ We want to display the language of the current dictionary:
 
 ```4d
   // List of loaded dictionaries
-
  SPELL GET DICTIONARY LIST($IDs_al;$Codes_at;$Names_at)
-
  $curLangCode:=SPELL Get current dictionary
-
  $countryName:=$Names_at{Find in array($IDs_al;$curLangCode)}
-
   // Display message
-
  ALERT("Current dictionary: "+$countryName) // Spanish
 ```
 
 #### See also 
+
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  

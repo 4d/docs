@@ -48,73 +48,43 @@ If a menu item has been selected, the command returns its associated custom char
 This code allows creating a hierarchical dynamic pop up menu built upon standard actions:
 
 ```4d
- C_TEXT($refMainContextMenu;$refMenuEdit)
-
+ var $refMainContextMenu;$refMenuEdit : Text
  $refMainContextMenu:=Create menu
-
  APPEND MENU ITEM($refMainContextMenu;"-")
-
  APPEND MENU ITEM($refMainContextMenu;ak standard action title)
-
  SET MENU ITEM PROPERTY($refMainContextMenu;-1;Associated standard action;ak select all)
-
  APPEND MENU ITEM($refMainContextMenu;ak standard action title)
-
  SET MENU ITEM PROPERTY($refMainContextMenu;-1;Associated standard action;ak clear)
-
  APPEND MENU ITEM($refMainContextMenu;ak standard action title)
-
  SET MENU ITEM PROPERTY($refMainContextMenu;-1;Associated standard action;ak copy)
-
  APPEND MENU ITEM($refMainContextMenu;ak standard action title)
-
  SET MENU ITEM PROPERTY($refMainContextMenu;-1;Associated standard action;ak cut)
-
  APPEND MENU ITEM($refMainContextMenu;ak standard action title)
-
  SET MENU ITEM PROPERTY($refMainContextMenu;-1;Associated standard action;ak paste)
-
  APPEND MENU ITEM($refMainContextMenu;"-")
-
   //sub menu text edit
-
  $refMenuEdit:=Create menu
-
  APPEND MENU ITEM($refMenuEdit;ak standard action title)
-
  SET MENU ITEM PROPERTY($refMenuEdit;-1;Associated standard action;ak font bold)
-
  SET MENU ITEM SHORTCUT($refMenuEdit;-1;Character code("B"))
-
  APPEND MENU ITEM($refMenuEdit;ak standard action title)
-
  SET MENU ITEM PROPERTY($refMenuEdit;-1;Associated standard action;ak font italic)
-
  SET MENU ITEM SHORTCUT($refMenuEdit;-1;Character code("I"))
-
  APPEND MENU ITEM($refMenuEdit;ak standard action title)
-
  SET MENU ITEM PROPERTY($refMenuEdit;-1;Associated standard action;ak font linethrough)
-
  SET MENU ITEM SHORTCUT($refMenuEdit;-1;Character code("L"))
-
  APPEND MENU ITEM($refMenuEdit;ak standard action title)
-
  SET MENU ITEM PROPERTY($refMenuEdit;-1;Associated standard action;ak font underline)
-
  SET MENU ITEM SHORTCUT($refMenuEdit;-1;Character code("U"))
-
  APPEND MENU ITEM($refMenuEdit;ak standard action title)
-
  SET MENU ITEM PROPERTY($refMenuEdit;-1;Associated standard action;ak font show dialog)
-
  APPEND MENU ITEM($refMainContextMenu;"Edit";$refMenuEdit)
  
-
  paramRef:=Dynamic pop up menu($refMainContextMenu)
 ```
 
 #### See also 
+
 [Get menu item parameter](get-menu-item-parameter.md)  
 [Get selected menu item parameter](get-selected-menu-item-parameter.md)  
 [Pop up menu](pop-up-menu.md)  

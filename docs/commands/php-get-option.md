@@ -24,5 +24,6 @@ Pass a constant from the "[PHP](/4Dv20R6/4D/20-R6/PHP.302-6958466.en.html)" them
 | PHP raw result | Longint | 2     | Definition of processing mode for HTTP headers returned by PHP in the execution result when this result is of the Text type (when the result is of the BLOB type, headers are always kept).<br/>**Possible value(s)**: Boolean. False (default value = remove HTTP headers from result. True = keep HTTP headers. |
 
 #### See also 
+
 [PHP GET FULL RESPONSE](php-get-full-response.md)  
 [PHP SET OPTION](php-set-option.md)  

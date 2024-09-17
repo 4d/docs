@@ -28,9 +28,9 @@ You want to retrieve the numbers of the records in the current selection:
 
 ```4d
  ARRAY LONGINT($_arrRecNum;0) //mandatory for compiled mode
-
  LONGINT ARRAY FROM SELECTION([Clients];$_arrRecNum)
 ```
 
 #### See also 
+
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  

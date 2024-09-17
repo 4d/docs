@@ -32,15 +32,10 @@ This example allows you to obtain the value of the format constant applied to th
 
 ```4d
  var $format : Text
-
  OBJECT SET FORMAT(*;"myphoto";Char(On background))
-
   //Apply background format (value = 3)
-
  $format:=OBJECT Get format(*;"myphoto")
-
  ALERT("Format number:"+String(Character code($format)))
-
   //Display value "3"
 ```
 
@@ -50,9 +45,7 @@ This example allows you to obtain the format applied to the Boolean field \[Memb
 
 ```4d
  var $format : Text
-
  $format:=OBJECT Get format([Members]Marital_status)
-
  ALERT($format) //Display format, for example "Married;Single"
 ```
 
@@ -62,11 +55,10 @@ Customized formats are returned untouched:
 
 ```4d
  var $format : Text
-
  OBJECT SET FORMAT(*;"timeinput";":m") //":" is required for single-char patterns
-
  $format:=OBJECT Get format(*;"timeinput") // ":m"
 ```
 
 #### See also 
+
 [OBJECT SET FORMAT](object-set-format.md)  

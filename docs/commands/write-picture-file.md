@@ -41,6 +41,7 @@ If the extension used does not correspond to any available codec, the file is no
 If the command is executed successfully, the system variable Document contains the full pathname to the file created and the system variable OK is set to 1\. Otherwise, OK is set to 0.
 
 #### See also 
+
 [PICTURE TO BLOB](picture-to-blob.md)  
 [Pictures](../../4D/20-R6/Pictures.300-6957798.en.html)  
 [READ PICTURE FILE](read-picture-file.md)  

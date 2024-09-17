@@ -33,4 +33,5 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 If you pass an invalid *subtotal*, the error -9852 will be generated.
 
 #### See also 
+
 [QR SET TOTALS SPACING](qr-set-totals-spacing.md)  

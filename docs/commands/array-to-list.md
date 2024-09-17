@@ -44,11 +44,8 @@ You want to put the distinct values of a field into a list, for example to creat
 
 ```4d
  ALL RECORDS([Company])
-
  DISTINCT VALUES([Company]country;$arrCountries)
-
  CountryList:=New list
-
  ARRAY TO LIST($arrCountries;CountryList)
 ```
 
@@ -57,6 +54,7 @@ You want to put the distinct values of a field into a list, for example to creat
 An error *\-9957* is generated when ARRAY TO LIST is applied to a list that is currently being edited in the Design environment List Editor. You can catch this error using an [ON ERR CALL](on-err-call.md "ON ERR CALL") project method.
 
 #### See also 
+
 [LIST TO ARRAY](list-to-array.md)  
 [Load list](load-list.md)  
 [ON ERR CALL](on-err-call.md)  

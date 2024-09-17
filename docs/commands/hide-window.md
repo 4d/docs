@@ -30,23 +30,17 @@ To hide all the windows of a process, use the [HIDE PROCESS](hide-process.md) co
 This example corresponds to a method of a button located in an input form. This button opens a dialog box in a new window that belongs to the same process. In this example, the user wants to hide the other windows of the process (an entry form and a tool palette) while displaying the dialog box. Once the dialog box is validated, other process windows are displayed again.
 
 ```4d
-  ` Object method for the "Information" button
+  // Object method for the "Information" button
  
-
- HIDE WINDOW(Entry) ` Hide the entry window
-
- HIDE WINDOW(Palette) ` Hide the palette
-
- $Infos:=Open window(20;100;500;400;8) ` Create the information window
-
- ... ` Place here instructions that are dedicated to the dialog management
-
- CLOSE WINDOW($Infos) ` Close the dialog
-
+ HIDE WINDOW(Entry) // Hide the entry window
+ HIDE WINDOW(Palette) // Hide the palette
+ $Infos:=Open window(20;100;500;400;8) // Create the information window
+ ... // Place here instructions that are dedicated to the dialog management
+ CLOSE WINDOW($Infos) // Close the dialog
  SHOW WINDOW(Entry)
-
- SHOW WINDOW(Palette) ` Display the other windows
+ SHOW WINDOW(Palette) // Display the other windows
 ```
 
 #### See also 
+
 [SHOW WINDOW](show-window.md)  

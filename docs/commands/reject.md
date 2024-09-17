@@ -35,15 +35,10 @@ The following example is for a bank transaction record. It shows the first form 
 
 ```4d
  Case of
-
-    :(([Operation]Transaction="Check") & ([Operation]Check Number="")) ` If it is a check with no number...
-
-       ALERT("Please fill in the check number.") ` Alert the user
-
-       REJECT ` Reject the entry
-
-       GOTO OBJECT([Operation]Check Number) ` Go to the check number field
-
+    :(([Operation]Transaction="Check") & ([Operation]Check Number="")) // If it is a check with no number...
+       ALERT("Please fill in the check number.") // Alert the user
+       REJECT // Reject the entry
+       GOTO OBJECT([Operation]Check Number) // Go to the check number field
  End case
 ```
 
@@ -53,21 +48,16 @@ The following example is part of an object method for an *\[Employees\]Salary* f
 
 ```4d
  Case of
-
     :(FORM Event=On Data Change)
-
        If([Employees]Salary<10000)
-
           ALERT("Salary must be greater than $10,000")
-
           REJECT([Employees]Salary)
-
        End if
-
  End case
 ```
 
 #### See also 
+
 [ACCEPT](accept.md)  
 [CANCEL](cancel.md)  
 [GOTO OBJECT](goto-object.md)  

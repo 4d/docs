@@ -28,6 +28,7 @@ Refer to the example for the [REGISTER CLIENT](register-client.md) command.
 If the client is correctly unregistered, the OK system variable is set to 1\. If the client was not registered, OK is set to 0.
 
 #### See also 
+
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [REGISTER CLIENT](register-client.md)  

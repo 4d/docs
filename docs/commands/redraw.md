@@ -19,4 +19,5 @@ displayed_sidebar: docs
 In the context of list boxes in selection mode, when the REDRAW statement is applied to a list box type object it refreshes the data that is displayed in the object. This statement must be called typically after data modification has occurred in the records of the selection. 
 
 #### See also 
+
 [SET TIMER](set-timer.md)  

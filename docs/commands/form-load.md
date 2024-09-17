@@ -33,7 +33,6 @@ Optionally, you can pass parameters to the *form* using the *formData* object. A
 
 ```4d
  $v:=Form.version //"12"
-
  Form.version:=13
 ```
 
@@ -71,9 +70,7 @@ Calling a project form in a print job:
 
 ```4d
  OPEN PRINTING JOB
-
  FORM LOAD("print_form")
-
   // execution of events and object methods
 ```
 
@@ -83,9 +80,7 @@ Calling a table form in a print job:
 
 ```4d
  OPEN PRINTING JOB
-
  FORM LOAD([People];"print_form")
-
   // execution of events and object methods
 ```
 
@@ -95,21 +90,13 @@ Parsing of form contents to carry out processing on text input areas:
 
 ```4d
  FORM LOAD([People];"my_form")
-
   // selection of form without execution of events or methods
-
  FORM GET OBJECTS(arrObjNames;arrObjPtrs;arrPages;*)
-
  For($i;1;Size of array(arrObjNames))
-
     If(OBJECT Get type(*;arrObjNames{$i})=Object type text input)
-
   //… processing
-
     End if
-
  End for
-
  FORM UNLOAD //do not forget to unload the form
 ```
 
@@ -119,23 +106,18 @@ The following example returns the number of objects on a JSON form:
 
 ```4d
  ARRAY TEXT(objectsArray;0) //sort form items into arrays
-
  ARRAY POINTER(variablesArray;0)
-
  ARRAY INTEGER(pagesArray;0)
  
-
  FORM LOAD("/RESOURCES/OutputForm.json") //load the form
-
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages+Form inherited)
  
-
  ALERT("The form contains "+String(size of array(objectsArray))+" objects") //return the object count
 ```
 
 the result shown is:
 
-![](../assets/en/Commands/pict3688480.en.png)
+![](../assets/en/commands/pict3688480.en.png)
 
 #### Example 5 
 
@@ -145,41 +127,24 @@ You want to print a form containing a list box. During the *on load* event, you 
 
 ```4d
  var $formData : Object
-
  var $over : Boolean
-
  var $full : Boolean
  
-
  OPEN PRINTING JOB
-
  $formData:=New object
-
  $formData.LBcollection:=New collection()
-
  ... //fill the collection with data
  
-
  FORM LOAD("GlobalForm";$formData) //store the collection in $formData
-
  $over:=False
-
  Repeat
-
     $full:=Print object(*;"LB") // the datasource of this "LB" listbox is Form.LBcollection
-
     LISTBOX GET PRINT INFORMATION(*;"LB";lk printing is over;$over)
-
     If(Not($over))
-
        PAGE BREAK
-
     End if
-
  Until($over)
-
  FORM UNLOAD
-
  CLOSE PRINTING JOB
 ```
 
@@ -187,21 +152,16 @@ You want to print a form containing a list box. During the *on load* event, you 
 
 ```4d
  var $o : Object
-
  Case of
-
     :(Form event code=On Load)
-
        For each($o;Form.LBcollection) //LBcollection is available
-
           $o.reference:=Uppercase($o.reference)
-
        End for each
-
  End case
 ```
 
 #### See also 
+
 [Current form name](current-form-name.md)  
 [FORM UNLOAD](form-unload.md)  
 [LISTBOX GET OBJECTS](listbox-get-objects.md)  

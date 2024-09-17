@@ -31,16 +31,7 @@ If the command is executed from a component, by default it applies to the compon
 The supported attributes are:
 
 ```RAW
-{
-    "invisible" : false, // true if visible
-    "preemptive" : "capable" // or "incapable" or "indifferent"
-    "publishedWeb" : false,  // true if available through 4D tags and URLs
-    "publishedSoap": false,  // true if offered as Web Service
-    "publishedWsdl": false,  // true if published in WSDL
-    "shared" : false,  // true if shared by components and host database
-    "publishedSql" : false,  // true if available through SQL
-    "executedOnServer" : false, // true if executed on server
-}
+{    "invisible" : false, // true if visible    "preemptive" : "capable" // or "incapable" or "indifferent"    "publishedWeb" : false,  // true if available through 4D tags and URLs    "publishedSoap": false,  // true if offered as Web Service    "publishedWsdl": false,  // true if published in WSDL    "shared" : false,  // true if shared by components and host database    "publishedSql" : false,  // true if available through SQL    "executedOnServer" : false, // true if executed on server}
 ```
 
 **Note:** "published4DMobile" attributes are deprecated as for 4D v18.
@@ -50,13 +41,12 @@ The supported attributes are:
 You want to set a single attribute:
 
 ```4d
- C_OBJECT($attributes)
-
+ var $attributes : Object
  OB SET($attributes;"executedOnServer";True)
-
  METHOD SET ATTRIBUTES("aMethod";$attributes) //Only the "executedOnServer" attribute is modified
 ```
 
 #### See also 
+
 [METHOD GET ATTRIBUTES](method-get-attributes.md)  
 [METHOD SET ATTRIBUTE](method-set-attribute.md)  

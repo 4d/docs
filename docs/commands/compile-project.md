@@ -127,11 +127,8 @@ To perform a syntax check only, pass an empty collection to the targets paramete
   
 ```4d
  var $options;$status : Object
-
  $options:=New object
-
  $options.targets:=New collection //Empty collection for syntax checking
-
  $status:=Compile project($options)
 ```
 
@@ -139,7 +136,6 @@ Compile the current project using the compiler options of the Structure Settings
   
 ```4d
  var $status : Object
-
  $status:=Compile project
 ```
 
@@ -147,11 +143,8 @@ On a Silicon Mac, compile the current project to ARM only:
   
 ```4d
  var $options;$status : Object
-
  $options:=New object
-
  $options.targets:=New collection("arm64_macOS_lib")
-
  $status:=Compile project($options)
 ```
 
@@ -159,11 +152,8 @@ Compile a project other than the current project:
   
 ```4d
  var $status : Object
-
  var $projectFile: 4D.File
-
  $projectFile:=Folder(fk documents folder).file("Databases/myApp/Project/myApp.4DProject")
-
  $status:=Compile project($projectFile)
 ```
 
@@ -171,28 +161,19 @@ Compile a project and declare its component:
   
 ```4d
  var $options;$status : Object
-
  var $component : 4D.File
-
  $options:=New object
-
  $component:=Folder(fk documents folder).file("Components/myComponent.4dz")
-
  $options.components:=New collection($component)
-
  $status:=Compile project($options)
 ```
 
 Disable warnings 518.1 and 518.2 when compiling your project:  
   
 ```RAW
-var $options:={}
-$options.warnings:=[]
-$options.warnings.push({major: 518; minor: 1; enabled: False})
-$options.warnings.push({major: 518; minor: 2; enabled: False})
-var $result:=Compile project($options)
-
+var $options:={}$options.warnings:=[]$options.warnings.push({major: 518; minor: 1; enabled: False})$options.warnings.push({major: 518; minor: 2; enabled: False})var $result:=Compile project($options)
 ```
 
 #### See also 
+
 [BUILD APPLICATION](build-application.md)  

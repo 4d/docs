@@ -33,6 +33,7 @@ If you omit the *window* parameter, **Window kind** returns the type of the fron
 See example for the [WINDOW LIST](window-list.md) command.
 
 #### See also 
+
 [GET WINDOW RECT](get-window-rect.md)  
 [Get window title](get-window-title.md)  
 [Window process](window-process.md)  

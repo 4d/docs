@@ -27,28 +27,24 @@ If no *attribName* attribute exists in the XML element, an error is returned. If
 This method is used to retrieve the value of an XML attribute using its name:
 
 ```4d
- C_BLOB(myBlobVar)
-
- C_TEXT($xml_Parent_Ref;$xml_Child_Ref)
-
- C_LONGINT($LineNum)
+ var myBlobVar : Blob
+ var $xml_Parent_Ref;$xml_Child_Ref : Text
+ var $LineNum : Integer
  
-
  $xml_Parent_Ref:=DOM Parse XML variable(myBlobVar)
-
  $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref)
-
  DOM GET XML ATTRIBUTE BY NAME($xml_Child_Ref;"N";$LineNum)
 ```
 
 If this method is applied to the example below, $LineNum contains the value 1:
 
-![](../assets/en/Commands/pict40184.en.png)
+![](../assets/en/commands/pict40184.en.png)
 
 #### System variables and sets 
 
 If the command has been correctly executed, the system variable OK is set to 1\. If an error occurs, it is set to 0.
 
 #### See also 
+
 [DOM GET XML ATTRIBUTE BY INDEX](dom-get-xml-attribute-by-index.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  

@@ -43,15 +43,13 @@ The command returns a longint indicating the type of value. You can compare this
 We want to get the type of standard values:
 
 ```4d
- C_OBJECT($ref)
-
+ var $ref : Object
  OB SET($ref;"name";"smith";"age";42)
-
  $type:=OB Get type($ref;"name") //$type returns 2
-
  $type2:=OB Get type($ref;"age") //$type2 returns 1
 ```
 
 #### See also 
+
 [OB GET PROPERTY NAMES](ob-get-property-names.md)  
 [Value type](value-type.md)  

@@ -24,26 +24,21 @@ You created the Polygon class:
 ```4d
   //Class: Polygon
  
-
  Class constructor
-
- C_LONGINT($1;$2)
-
+ var $1;$2 : Integer
  This.area:=$1*$2
 ```
 
 Then, in a method, you can write:
 
 ```4d
- C_OBJECT($poly;$class)
-
+ var $poly;$class : Object
  $poly:=cs.Polygon.new(4;3)
  
-
  $class:=OB Class($poly)
-
   //$class contains Class: Polygon
 ```
 
 #### See also 
+
 [OB Instance of](ob-instance-of.md)  

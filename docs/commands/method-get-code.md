@@ -22,18 +22,14 @@ displayed_sidebar: docs
 You can use two types of syntaxes, based either on text arrays, or text variables:  
 
 ```4d
- C_TEXT(tVpath) // text variables
-
- C_TEXT(tVcode)
-
+ var tVpath : Text // text variables
+ var tVcode : Text
  METHOD GET CODE(tVpath;tVcode) // code of a single method
 ```
 
 ```4d
  ARRAY TEXT(arrPaths;0) // text arrays
-
  ARRAY TEXT(arrCodes;0)
-
  METHOD GET CODE(arrPaths;arrCodes) // code of several methods
 ```
 
@@ -80,62 +76,44 @@ You want to export the following "simple\_init" method:
 
 ```4d
  Case of
-
     :(Form event code=On Load)
-
        ALL RECORDS([Customer])
-
  End case
 ```
 
 If you execute the following code:
 
 ```4d
- C_TEXT($path)
-
- C_TEXT($contents)
-
+ var $path : Text
+ var $contents : Text
  $path:=METHOD Get path(Path project method;"simple_init")
-
  METHOD GET CODE($path;$contents;0) //no tokens
-
  TEXT TO DOCUMENT("simple_init.txt";$contents)
 ```
 
 The resulting document will contain:
 
 ```RAW
-  //%attributes = {"lang":"en"} comment added and reserved by 4D
-Case of
-    : (Form event code=On Load)
-        ALL RECORDS([Customer])
-End case
+  //%attributes = {"lang":"en"} comment added and reserved by 4DCase of    : (Form event code=On Load)        ALL RECORDS([Customer])End case
 ```
 
 If you execute the following code:
 
 ```4d
- C_TEXT($path)
-
- C_TEXT($contents)
-
+ var $path : Text
+ var $contents : Text
  $path:=METHOD Get path(Path project method;"simple_init")
-
  METHOD GET CODE($path;$contents;Code with tokens) //use tokens
-
  TEXT TO DOCUMENT("simple_init.txt";$contents)
 ```
 
 The resulting document will contain:
 
 ```RAW
-  //%attributes = {"lang":"en"} comment added and reserved by 4D
-Case of
-    : (Form event code:C388=On Load:K2:1)
-        ALL RECORDS:C47([Customer:1])
-End case
+  //%attributes = {"lang":"en"} comment added and reserved by 4DCase of    : (Form event code:C388=On Load:K2:1)        ALL RECORDS:C47([Customer:1])End case
 ```
 
 #### See also 
+
 [METHOD SET CODE](method-set-code.md)  
 [Using tokens in formulas](../../4D/20-R6/Using-tokens-in-formulas.300-6957948.en.html)  

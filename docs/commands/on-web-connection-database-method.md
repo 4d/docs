@@ -44,27 +44,25 @@ The **On Web Connection database method** receives six text parameters passed by
 You must declare these parameters as shown below:
 
 ```4d
-  ` On Web Connection Database Method
- 
-
- C_TEXT($1;$2;$3;$4;$5;$6)
- 
-
-  ` Code for the method
+  // On Web Connection Database Method
+ 
+ var $1;$2;$3;$4;$5;$6 : Text
+ 
+  // Code for the method
 ```
 
 * **URL extra data**  
 The first parameter (*$1*) is the URL entered by users in the address area of their web browser, without the host address.  
-Let’s use an intranet connection as an example. Suppose that the IP address of your 4D Web Server machine is *123.4.567.89*. The following table shows the values of *$1* depending on the URL entered in the web browser:  
+Let’s use an intranet connection as an example. Suppose that the IP address of your 4D Web Server machine is *123.45.67.89*. The following table shows the values of *$1* depending on the URL entered in the web browser:  
     
 | **URL entered in Web browser Location area** | **Value of parameter $1** |  
 | -------------------------------------------- | ------------------------- |  
-| 123.4.567.89                                 | /                         |  
-| http://123.4.567.89                          | /                         |  
-| 123.4.567.89/Customers                       | /Customers                |  
-| http://123.4.567.89/Customers                | /Customers                |  
-| http://123.4.567.89/Customers/Add            | /Customers/Add            |  
-| 123.4.567.89/Do\_This/If\_OK/Do\_That        | /Do\_This/If\_OK/Do\_That |  
+| 123.45.67.89                                 | /                         |  
+| http://123.45.67.89                          | /                         |  
+| 123.45.67.89/Customers                       | /Customers                |  
+| http://123.45.67.89/Customers                | /Customers                |  
+| http://123.45.67.89/Customers/Add            | /Customers/Add            |  
+| 123.45.67.89/Do\_This/If\_OK/Do\_That        | /Do\_This/If\_OK/Do\_That |  
     
     
 Note that you are free to use this parameter at your convenience. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value *"/Customers/Add"* means “go directly to add a new record in the *\[Customers\]* table.” By supplying the web users of your database with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection to your database.  
@@ -76,26 +74,12 @@ The second parameter (*$2*) is the header and the body of the HTTP request sent 
 With Safari running on Mac OS, you may receive a header similar to this:  
     
 ```RAW  
-GET /favicon.ico HTTP/1.1  
-Referer: http://123.45.67.89/4dcgi/test  
-User-Agent:  Mozilla/5.0 (Macintosh; U; Intel Mac OS X; fr-fr) AppleWebKit/523.10.3  (KHTML, like Gecko) Version/3.0.4 Safari/523.10  
-Cache-Control: max-age=0  
-Accept: */*  
-Accept-Language: fr-fr  
-Accept-Encoding: gzip, deflate  
-Connection: keep-alive  
-Host: 123.45.67.89  
+GET /favicon.ico HTTP/1.1Referer: http://123.45.67.89/4dcgi/testUser-Agent:  Mozilla/5.0 (Macintosh; U; Intel Mac OS X; fr-fr) AppleWebKit/523.10.3  (KHTML, like Gecko) Version/3.0.4 Safari/523.10Cache-Control: max-age=0Accept: */*Accept-Language: fr-frAccept-Encoding: gzip, deflateConnection: keep-aliveHost: 123.45.67.89  
 ```  
     
 With Microsoft Internet Explorer 8 running on Windows, you may receive a header similar to this:  
 ```RAW  
-GET / HTTP/1.1  
-Accept: image/jpeg, application/x-ms-application,  image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap,  application/vnd.ms-powerpoint, application/vnd.ms-excel,  application/msword, */*  
-Accept-Language: fr-FR  
-User-Agent:  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2;  .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center  PC 6.0; .NET4.0C)  
-Accept-Encoding: gzip, deflate  
-Host: 123.45.67.89  
-Connection: Keep-Alive  
+GET / HTTP/1.1Accept: image/jpeg, application/x-ms-application,  image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap,  application/vnd.ms-powerpoint, application/vnd.ms-excel,  application/msword, */*Accept-Language: fr-FRUser-Agent:  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2;  .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center  PC 6.0; .NET4.0C)Accept-Encoding: gzip, deflateHost: 123.45.67.89Connection: Keep-Alive  
 ```  
     
  If your application uses this information, it is up to you to parse the header and the body.  

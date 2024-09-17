@@ -22,37 +22,23 @@ This command is used to execute several SELECT requests within the same connecti
 In this example, two requests are executed in the same connection: 
 
 ```4d
- C_BLOB(Myblob)
-
- C_TEXT(MyText)
-
+ var Myblob : Blob
+ var MyText : Text
  SQL LOGIN("mysql";"root";"")
  
-
  SQLStmt:="SELECT blob_field FROM app_testTable"
-
  SQL EXECUTE(SQLStmt;Myblob)
-
  While(Not(SQL End selection))
-
     SQL LOAD RECORD
-
  End while
  
-
-  `Resetting of cursor
-
+  //Resetting of cursor
  SQL CANCEL LOAD
  
-
  SQLStmt:="SELECT Name FROM Employee"
-
  SQL EXECUTE(SQLStmt;MyText)
-
  While(Not(SQL End selection))
-
     SQL LOAD RECORD
-
  End while
 ```
 
@@ -61,5 +47,6 @@ In this example, two requests are executed in the same connection:
 If the command has been correctly executed, the system variable OK returns 1\. Otherwise, it returns 0.
 
 #### See also 
+
 [SQL LOAD RECORD](sql-load-record.md)  
 [SQL LOGIN](sql-login.md)  

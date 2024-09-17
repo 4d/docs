@@ -23,17 +23,15 @@ The following example tests the state of an \[Invoice\] table. If the state of t
 
 ```4d
  If(Read only state([Invoice]))
-
     READ WRITE([Invoice])
-
     LOAD RECORD([Invoice])
-
  End if
 ```
 
 **Note:** The invoice record is reloaded to allow the user to modify it. A record that was previously loaded in a read-only state will remain locked until it is reloaded in a read/write state.
 
 #### See also 
+
 [READ ONLY](read-only.md)  
 [READ WRITE](read-write.md)  
 [Record Locking](../../4D/20-R6/Record-Locking.300-6958117.en.html)  

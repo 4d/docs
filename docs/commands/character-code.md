@@ -40,7 +40,7 @@ On the other hand, this line returns False:
 This example returns the code of the first character of the string *"ABC"*:
 
 ```4d
- GetCode:=Character code("ABC") ` GetCode gets 65, the character code of A
+ GetCode:=Character code("ABC") // GetCode gets 65, the character code of A
 ```
 
 #### Example 3 
@@ -49,23 +49,14 @@ The following example tests for carriage returns and tabs:
 
 ```4d
  For($vlChar;1;Length(vtText))
-
     Case of
-
        :(vtText[[$vlChar]]=Char(Carriage return))
-
-  ` Do something
-
+  // Do something
        :(vtText[[$vlChar]]=Char(Tab))
-
-  ` Do something else
-
+  // Do something else
        :(...)
-
-  ` ...
-
+  // ...
     End case
-
  End for
 ```
 
@@ -73,30 +64,21 @@ When executed multiple times on large texts, this test will run faster when comp
 
 ```4d
  For($vlChar;1;Length(vtText))
-
     $vlCode:=Character code(vtText[[$vlChar]])
-
     Case of
-
        :($vlCode=Carriage return)
-
-  ` Do something
-
+  // Do something
        :($vlCode=Tab)
-
-  ` Do something else
-
+  // Do something else
        :(...)
-
-  ` ...
-
+  // ...
     End case
-
  End for
 ```
 
 The second piece of code runs faster for two reasons: it does only one character reference by iteration and uses LongInt comparisons instead of string comparisons to test for carriage returns and tabs. Use this technique when working with common codes such as CR and TAB.
 
 #### See also 
+
 [Char](char.md)  
 [Character Reference Symbols](../../4D/20-R6/Character-Reference-Symbols.300-6957888.en.html)  

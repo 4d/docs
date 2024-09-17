@@ -93,7 +93,6 @@ Optionally, you can pass parameters to the *form* using the *formData* object. A
 
 ```4d
  $v:=Form.version //"12"
-
  Form.version:=13
 ```
 
@@ -130,40 +129,23 @@ This command prints external areas and objects (for example, 4D Write or 4D View
 The following example performs as a [PRINT SELECTION](print-selection.md) command would. However, the report uses one of two different forms, depending on whether the record is for a check or a deposit:
 
 ```4d
- QUERY([Register]) ` Select the records
-
+ QUERY([Register]) // Select the records
  If(OK=1)
-
-    ORDER BY([Register]) ` Sort the records
-
+    ORDER BY([Register]) // Sort the records
     If(OK=1)
-
-       PRINT SETTINGS ` Display Printing dialog boxes
-
+       PRINT SETTINGS // Display Printing dialog boxes
        If(OK=1)
-
           For($vlRecord;1;Records in selection([Register]))
-
              If([Register]Type ="Check")
-
-                Print form([Register];"Check Out") ` Use one form for checks
-
+                Print form([Register];"Check Out") // Use one form for checks
              Else
-
-                Print form([Register];"Deposit Out") ` Use another form for deposits
-
+                Print form([Register];"Deposit Out") // Use another form for deposits
              End if
-
              NEXT RECORD([Register])
-
           End for
-
-          PAGE BREAK ` Make sure the last page is printed
-
+          PAGE BREAK // Make sure the last page is printed
        End if
-
     End if
-
  End if
 ```
 
@@ -175,19 +157,15 @@ Refer to the example of the [SET PRINT MARKER](set-print-marker.md) command.
 
 This form is used as dialog, then printed with modifications:
 
-![](../assets/en/Commands/pict6264975.en.png)
+![](../assets/en/commands/pict6264975.en.png)
 
 The form method:
 
 ```4d
  If(Form event code=On Printing Detail)
-
     Form.lastname:=Uppercase(Form.lastname)
-
     Form.firstname:=Uppercase(Substring(Form.firstname;1;1))+Lowercase(Substring(Form.firstname;2))
-
     Form.request:=Lowercase(Form.request)
-
  End if
 ```
 
@@ -195,21 +173,16 @@ The code that calls the dialog then prints its body:
 
 ```4d
  $formData:=New object
-
  $formData.lastname:="Smith"
-
  $formData.firstname:="john"
-
  $formData.request:="I need more COFFEE"
-
  $win:=Open form window("Request_obj";Plain form window;Horizontally centered;Vertically centered)
-
  DIALOG("Request_obj";$formData)
-
  $h:=Print form("Request_var";$formData;Form detail)
 ```
 
 #### See also 
+
 [CANCEL](cancel.md)  
 [PAGE BREAK](page-break.md)  
 [PRINT SETTINGS](print-settings.md)  

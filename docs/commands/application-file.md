@@ -28,20 +28,15 @@ At startup on Windows, you need to check if a DLL Library is correctly located a
 
 ```4d
  If(Is Windows&(Application type#4D Server))
-
-    C_OBJECT($appPath)
-
+    var $appPath : Object
     $appPath:=Path to object(Application file)
-
     If(Test path name(($appPath.parentFolder)+"XRAYCAPT.DLL")#Is a document)
-
        ALERT("XRAYCAPT.DLL is missing. The X-ray capture capability will not be available.")
-
     End if
-
  End if
 ```
 
 #### See also 
+
 [Data file](data-file.md)  
 [Structure file](structure-file.md)  

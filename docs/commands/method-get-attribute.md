@@ -36,4 +36,5 @@ If the command is executed from a component, it applies by default to the compon
 The command returns **True** when an attribute is selected and **False** if it is deselected.
 
 #### See also 
+
 [METHOD SET ATTRIBUTE](method-set-attribute.md)  

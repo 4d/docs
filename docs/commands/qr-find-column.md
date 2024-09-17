@@ -42,8 +42,6 @@ followed by:
 
 ```4d
  If($NumColumn#-1)
-
     QR DELETE COLUMN(MyArea;$NumColumn)
-
  End if
 ```

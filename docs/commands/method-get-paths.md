@@ -67,17 +67,11 @@ Retrieval of project methods that were modified since the last backup:
 
 ```4d
   // we load the last saved value
-
  $stamp :=Max([Backups]cur_stamp)
-
  METHOD GET PATHS(Path project method;arrPaths;$stamp)
-
   // we save the new value
-
  CREATE RECORD([Backups])
-
  [Backups]cur_stamp :=$stamp
-
  SAVE RECORD([Backups])
 ```
 
@@ -86,5 +80,6 @@ Retrieval of project methods that were modified since the last backup:
 Refer to the example of the [METHOD SET CODE](method-set-code.md) command.
 
 #### See also 
+
 [Current method path](current-method-path.md)  
 [METHOD GET FOLDERS](method-get-folders.md)  

@@ -48,41 +48,37 @@ If the selection or list box does not contain a break row or if all the break ro
 
 This example illustrates different ways of using the command. Given the following arrays shown in a list box:
 
-![](../assets/en/Commands/pict175844.en.png)
+![](../assets/en/commands/pict175844.en.png)
 
 ```4d
   //Expand all the break rows and subrows of the list box
-
  LISTBOX EXPAND(*;"MyListbox")
 ```
 
-![](../assets/en/Commands/pict175849.en.png)
+![](../assets/en/commands/pict175849.en.png)
 
 ```4d
   //Expand the first level of break rows of the selection
-
  LISTBOX EXPAND(*;"MyListbox";False;lk selection)
-
   //If the "Belgium" row was selected
 ```
 
-![](../assets/en/Commands/pict175851.en.png)
+![](../assets/en/commands/pict175851.en.png)
 
 ```4d
   //Expand the Brittany break row with recursion
-
  LISTBOX EXPAND(*;"MyListbox";False;lk break row;1;2)
 ```
 
-![](../assets/en/Commands/pict175853.en.png)
+![](../assets/en/commands/pict175853.en.png)
 
 ```4d
   //Expand all the first columns (countries) without recursion
-
  LISTBOX EXPAND(*;"MyListbox";False;lk level;1)
 ```
 
-![](../assets/en/Commands/pict175855.en.png)
+![](../assets/en/commands/pict175855.en.png)
 
 #### See also 
+
 [LISTBOX COLLAPSE](listbox-collapse.md)  

@@ -26,27 +26,18 @@ The following example searches for specific invoices. If the current user is in 
 
 ```4d
  QUERY([Invoices];[Invoices]Retail>100)
-
  If(User in group(Current user(4D user account);"Executive"))
-
   //4D user account parameter is necessary if you
-
   //use 4D user aliases in your application
-
     FORM SET OUTPUT([Invoices];"Executive Output")
-
     FORM SET INPUT([Invoices];"Executive Input")
-
  Else
-
     FORM SET OUTPUT([Invoices];"Standard Output")
-
     FORM SET INPUT([Invoices];"Standard Input")
-
  End if
-
  MODIFY SELECTION([Invoices];*)
 ```
 
 #### See also 
+
 [Current user](current-user.md)  

@@ -22,7 +22,7 @@ If do not specify the *document* parameter, **PRINT LABEL** prints the current s
 
 If you specify the *document* parameter, **PRINT LABEL** enables you to access the Label Wizard (shown below) or to print an existing Label document stored on disk. See the following discussion.
 
-![](../assets/en/Commands/pict2980390.en.png)
+![](../assets/en/commands/pict2980390.en.png)
 
 By default, **PRINT LABEL** displays the Print job dialog box before printing. If the user cancels the dialog box, the command is canceled and the labels are not printed. You can suppress these dialog box by using either the optional asterisk (*\**) parameter or the optional “greater than” (*\>*) parameter:
 
@@ -48,34 +48,23 @@ If you specify the *document* parameter, the labels are printed with the label s
 The following example prints labels using the output form of a table. The example uses two methods. The first is a project method that sets the correct output form and then prints labels: 
 
 ```4d
- ALL RECORDS([Addresses]) ` Select all records
-
- FORM SET OUTPUT([Addresses];"Label Out") ` Select the output form
-
- PRINT LABEL([Addresses]) ` Print the labels
-
- FORM SET OUTPUT([Addresses];"Output") ` Restore default output form
+ ALL RECORDS([Addresses]) // Select all records
+ FORM SET OUTPUT([Addresses];"Label Out") // Select the output form
+ PRINT LABEL([Addresses]) // Print the labels
+ FORM SET OUTPUT([Addresses];"Output") // Restore default output form
 ```
 
 The second method is the form method for the form *"Label Out"*. The form contains one variable named *vLabel*, which is used to hold the concatenated fields. If the second address field (Addr2) is blank, it is removed by the method. Note that this task is performed automatically with the Label Wizard. The form method creates the label for each record:
 
 ```4d
-  ` [Addresses]; "Label Out" form method
-
+  // [Addresses]; "Label Out" form method
  Case of
-
     :(FORM Event=On Load)
-
        vLabel:=[Addresses]Name1+" "+[Addresses]Name2+Char(13)+[Addresses]Addr1+Char(13)
-
        If([Addresses]Addr2 #"")
-
           vLabel:=vLabel+[Addresses]Addr2+Char(13)
-
        End if
-
        vLabel:=vLabel+[Addresses]City+", "+[Addresses]State+" "+[Addresses]ZipCode
-
  End case
 ```
 
@@ -85,11 +74,8 @@ The following example lets the user query the \[People\] table, and then automat
 
 ```4d
  QUERY([People])
-
  If(OK=1)
-
     PRINT LABEL([People];"My Labels";*)
-
  End if
 ```
 
@@ -99,11 +85,8 @@ The following example lets the user query the \[People\] table, and then lets th
 
 ```4d
  QUERY([People])
-
  If(OK=1)
-
     PRINT LABEL([People];"")
-
  End if
 ```
 
@@ -113,14 +96,12 @@ The following example lets the user query the \[People\] table, and then display
 
 ```4d
  QUERY([People])
-
  If(OK=1)
-
     PRINT LABEL([People];Char(1))
-
  End if
 ```
 
 #### See also 
+
 [PRINT SELECTION](print-selection.md)  
 [QR REPORT](qr-report.md)  

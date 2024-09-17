@@ -33,4 +33,5 @@ In the *indicator* parameter, pass the type of indicator you want to display. Yo
 | Progress bar              | Longint | 1     | Standard progress bar                              |
 
 #### See also 
+
 [OBJECT Get indicator type](object-get-indicator-type.md)  

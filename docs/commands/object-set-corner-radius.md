@@ -37,7 +37,7 @@ You can modify this value at the form level using the [Corner radius property](h
 
 You have the following rectangles in your form, named respectively "Rect1" and "Rect2":
 
-![](../assets/en/Commands/pict1629574.en.png)
+![](../assets/en/commands/pict1629574.en.png)
 
 You can execute the following code to change their corners:
 
@@ -45,13 +45,13 @@ You can execute the following code to change their corners:
  OBJECT SET CORNER RADIUS(*;"Rect@";20)
 ```
 
-![](../assets/en/Commands/pict1629576.en.png)
+![](../assets/en/commands/pict1629576.en.png)
 
 #### Example 2 
 
 You have the following text area in your form, named "required-label":
 
-![](../assets/en/Commands/pict6074566.en.png)
+![](../assets/en/commands/pict6074566.en.png)
 
 If you execute the following code:
 
@@ -59,9 +59,10 @@ If you execute the following code:
  OBJECT SET CORNER RADIUS(*;"required-label";10)
 ```
 
-![](../assets/en/Commands/pict6074568.en.png)
+![](../assets/en/commands/pict6074568.en.png)
 
 Note that for text areas (as well as inputs), unlike for rectangles, the corner roundness is drawn outside the initial area of the object.
 
 #### See also 
+
 [OBJECT Get corner radius](object-get-corner-radius.md)  

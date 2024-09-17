@@ -36,33 +36,33 @@ You can declare one or more additional namespaces in the generated XML tree usin
 Creating a single XML tree: 
 
 ```4d
- C_TEXT(vElemRef)
-
+ var vElemRef : Text
  vElemRef:=DOM Create XML Ref("MyRoot")
 ```
 
 This code produces the following result:
 
+```XML
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?> 
 <MyRoot/>
+```
 
 #### Example 2 
 
 Creating an XML tree with a single namespace:   
 
 ```4d
- C_TEXT(vElemRef)
-
+ var vElemRef : Text
  $Root:="MyNameSpace:MyRoot"
-
  $Namespace:="http://www.4D.com/tech/namespace"
-
  vElemRef:=DOM Create XML Ref($Root;$Namespace)
 ```
 
 This code produces the following result:
 
+```XML
 <MyNameSpace:MyRoot xmlns:MyNameSpace="http://www.4D.com/tech/namespace"/>
+```
 
 #### Example 3 
 
@@ -70,35 +70,30 @@ This code produces the following result:
 Creating an XML tree with several namespaces: 
 
 ```4d
- C_TEXT(vElemRef)
-
- C_TEXT($aNSName1;$aNSName2;$aNSValue1;$aNSValue2)
-
+ var vElemRef : Text
+ var $aNSName1;$aNSName2;$aNSValue1;$aNSValue2 : Text
  $Root:="MyNameSpace:MyRoot"
-
  $Namespace:="http://www.4D.com/tech/namespace"
-
  $aNSName1:="NSName1"
-
  $aNSName2:="NSName2"
-
  $aNSValue1:="http://www.4D.com/Prod/namespace"
-
  $aNSValue2:="http://www.4D.com/Mkt/namespace"
-
  vElemRef:=DOM Create XML Ref($Root;$Namespace;$aNSName1;$aNSValue1;$aNSName2;$aNSValue2)
 ```
 
 This code produces the following result:
 
+```XML
 <MyNameSpace:MyRoot xmlns:MyNameSpace="http://www.4D.com/tech/nameSpace"
 NSName1="http://www.4D.com/Prod/namespace"
 NSName2="http://www.4D.com/Mkt/namespace"/>
+```
 
 #### System variables and sets 
 
 If the command was executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated.
 
 #### See also 
+
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM SET XML DECLARATION](dom-set-xml-declaration.md)  

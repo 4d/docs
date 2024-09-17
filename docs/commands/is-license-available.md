@@ -38,6 +38,7 @@ Is license available returns [False](false.md "False") if the plug-in is operati
 * You pass the ID number of the plug-in “4BNX” resource directly in the license parameter. In this case, the command behaves as described above.
 
 #### See also 
+
 [CHANGE LICENSES](change-licenses.md)  
 [Get license info](get-license-info.md)  
 [Get plugin access](get-plugin-access.md)  

@@ -31,15 +31,10 @@ In each case with a remote 4D, several processes are started—One on the client
 
 ```4d
   // global process begins without a new process on the server, like a local process.
-
  CREATE RECORD([Table_1])
-
  [Table_1])field1_1:="Hello world"
-
  SAVE RECORD([Table_1]) // creation here of preemptive process on server
-
  $serverTime:=Current time(*) // creation here of cooperative process on server
-
   // call to On Server Open Connection
 ```
 
@@ -62,7 +57,7 @@ When the **On Server Open Connection database method** accesses a process variab
 4D Server passes three Long Integer parameters to the **On Server Open Connection database method** and expects a Long Integer result. The method must therefore be explicitly declared with three Long Integer parameters as well as a Long Integer function result:
 
 ```4d
- C_LONGINT($0;$1;$2;$3)
+ var $0;$1;$2;$3 : Integer
 ```
 
 If you do not return a value in *$0*, thereby leaving the variable undefined or initialized to zero, 4D Server assumes that the database method accepts the connection. If you do not accept the connection, you return a non-null value in *$0*.
@@ -81,90 +76,53 @@ These ID numbers are not directly usable as sources of information to be passed 
 
 The following example shows how to maintain a log of the connections to the database using the **On Server Open Connection database method** and the **On Server Close Connection Database Method**. The *\[Server Log\]* table (shown below) is used to keep track of the connection processes:
 
-![](../assets/en/Commands/pict69173.en.png)
+![](../assets/en/commands/pict69173.en.png)
 
 The information stored in this table is managed by the **On Server Open Connection database method** and the **On Server Close Connection Database Method** listed here:
 
 ```4d
-  ` On Server Open Connection Database Method
-
- C_LONGINT($0;$1;$2;$3)
-
-  ` Create a [Server Log] record
-
+  // On Server Open Connection Database Method
+ var $0;$1;$2;$3 : Integer
+  // Create a [Server Log] record
  CREATE RECORD([Server Log])
-
  [Server Log]Log ID:=Sequence number([Server Log])
-
-  ` Save the Log Date and Time
-
+  // Save the Log Date and Time
  [Server Log]Log Date:=Current date
-
  [Server Log]Log Time:=Current time
-
-  ` Save the connection information
-
+  // Save the connection information
  [Server Log]User ID:=$1
-
  [Server Log]Connection ID:=$2
-
  SAVE RECORD([Server Log])
-
-  ` Returns no error so that the connection can continue
-
+  // Returns no error so that the connection can continue
  $0:=0
  
-
-  ` On Server Close Connection Database Method
-
- C_LONGINT($1;$2;$3)
-
-  ` Retrieve the [Server Log] record
-
+  // On Server Close Connection Database Method
+ var $1;$2;$3 : Integer
+  // Retrieve the [Server Log] record
  QUERY([Server Log];[Server Log]User ID=$1;*)
-
  QUERY([Server Log]; & ;[Server Log]Connection ID=$2;*)
-
  QUERY([Server Log]; & ;[Server Log]Process ID=0)
-
-  ` Save the Exit date and time
-
+  // Save the Exit date and time
  [Server Log]Exit Date:=Current date
-
  [Server Log]Exit Time:=Current time
-
-  ` Save the process information
-
+  // Save the process information
  [Server Log]Process ID:=Current process
-
  PROCESS PROPERTIES([Server Log]Process ID;$vsProcName;$vlProcState;$vlProcTime)
-
  [Server Log]Process Name:=$vsProcName
-
  SAVE RECORD([Server Log])
 ```
 
 Here are some entries in the \[Server Log\] showing several remote connections:
 
-![](../assets/en/Commands/pict69174.en.png)
+![](../assets/en/commands/pict69174.en.png)
 
 #### Example 2 
 
 The following example prevents any new connection from 2 to 4 A.M.
 
 ```4d
-  ` On Server Open Connection Database Method
-
- C_LONGINT($0;$1;$2;$3)
+  // On Server Open Connection Database Method
+ var $0;$1;$2;$3 : Integer
  
-
- If((?02:00:00?<=Current time)&(Current time<?04:00:00?))
-
-    $0:=22000
-
- Else
-
-    $0:=0
-
- End if
+ If((?02:00:00?<=Current time)&(Current time
 ```

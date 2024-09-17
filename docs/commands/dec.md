@@ -22,10 +22,10 @@ displayed_sidebar: docs
 The following example takes a monetary value expressed as a real number, and extracts the dollar part and the cents part. If *vrAmount* is 7.31, then *vlDollars* is set to 7 and *vlCents* is set to 31:
 
 ```4d
- vlDollars:=Int(vrAmount) ` Get the dollars
-
- vlCents:=Dec(vrAmount)*100 ` Get the fractional part
+ vlDollars:=Int(vrAmount) // Get the dollars
+ vlCents:=Dec(vrAmount)*100 // Get the fractional part
 ```
 
 #### See also 
+
 [Int](int.md)  

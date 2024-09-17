@@ -25,4 +25,5 @@ If you pass 0 in the *textOrBackground* parameter or omit this parameter, the se
 If the color was changed, the On After Edit form event is generated for the object. 
 
 #### See also 
+
 [OPEN FONT PICKER](open-font-picker.md)  

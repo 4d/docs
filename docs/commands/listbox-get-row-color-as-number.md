@@ -43,25 +43,20 @@ In the *colorType* parameter, you can pass either the lk background color or lk 
 
 Given the following list box:
 
-![](../assets/en/Commands/pict1205393.fr.png)
+![](../assets/en/commands/pict1205393.fr.png)
 
 ```4d
- C_LONGINT($vLColor;$vLColor2;$vLColor3)
-
+ var $vLColor;$vLColor2;$vLColor3 : Integer
  $vLColor:=LISTBOX Get row color as number(*;"Col5";3)
-
  $vLColor2:=LISTBOX Get row color as number(*;"List Box";3)
-
  $vLColor3:=LISTBOX Get row color as number(*;"List Box";3;lk background color)
-
   // $vLColor contains 0xFFFF00 (yellow)
-
   // $vLColor2 contains 0x00FF (blue)
-
   // $vLColor3 contains 0x00FF0000 (red)
 ```
 
 #### See also 
+
 [List Box](../../4D/20-R6/List-Box.302-6958504.en.html)  
 [LISTBOX Get row color](listbox-get-row-color.md)  
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  

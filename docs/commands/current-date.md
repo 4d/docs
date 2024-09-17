@@ -34,118 +34,66 @@ If you write an application for the international market, you may need to know i
 The following project method allows you to do so:
 
 ```4d
-  ` Sys date format global function
-
-  ` Sys date format -> String
-
-  ` Sys date format -> Default 4D data format
+  // Sys date format global function
+  // Sys date format -> String
+  // Sys date format -> Default 4D data format
  
-
  C_STRING(31;$0;$vsDate;$vsMDY;$vsMonth;$vsDay;$vsYear)
-
- C_LONGINT($1;$vlPos)
-
- C_DATE($vdDate)
+ var $1;$vlPos : Integer
+ var $vdDate : Date
  
-
-  ` Get a Date value where the month, day and year values are all different
-
+  // Get a Date value where the month, day and year values are all different
  $vdDate:=Current date
-
  Repeat
-
     $vsMonth:=String(Month of($vdDate))
-
     $vsDay:=String(Day of($vdDate))
-
     $vsYear:=String(Year of($vdDate)%100)
-
     If(($vsMonth=$vsDay)|($vsMonth=$vsYear)|($vsDay=$vsYear))
-
        vOK:=0
-
        $vdDate:=$vdDate+1
-
     Else
-
        vOK:=1
-
     End if
-
  Until(vOK=1)
-
- $0:="" ` Initialize function result
-
+ $0:="" // Initialize function result
  $vsDate:=String($vdDate)
-
- $vlPos:=Position("/";$vsDate) ` Find the first / separator in the string ../../..
-
- $vsMDY:=Substring($vsDate;1;$vlPos-1) ` Extract the first digits from the date
-
- $vsDate:=Substring($vsDate;$vlPos+1) ` Eliminate the first digits as well as the first / separator
-
+ $vlPos:=Position("/";$vsDate) // Find the first / separator in the string ../../..
+ $vsMDY:=Substring($vsDate;1;$vlPos-1) // Extract the first digits from the date
+ $vsDate:=Substring($vsDate;$vlPos+1) // Eliminate the first digits as well as the first / separator
  Case of
-
-    :($vsMDY=$vsMonth) ` The digits express the month
-
+    :($vsMDY=$vsMonth) // The digits express the month
        $0:="MM"
-
-    :($vsMDY=$vsDay) ` The digits express the day
-
+    :($vsMDY=$vsDay) // The digits express the day
        $0:="DD"
-
-    :($vsMDY=$vsYear) ` The digits express the year
-
+    :($vsMDY=$vsYear) // The digits express the year
        $0:="YYYY"
-
  End case
-
- $0:=$0+"/" ` Start building the function result
-
- $vlPos:=Position("/";$vsDate) ` Find the second separator in the string ../..
-
- $vsMDY:=Substring($vsDate;1;$vlPos-1) ` Extract the next digits from the date
-
- $vsDate:=Substring($vsDate;$vlPos+1) ` Reduce the string to the last digits from the date
-
+ $0:=$0+"/" // Start building the function result
+ $vlPos:=Position("/";$vsDate) // Find the second separator in the string ../..
+ $vsMDY:=Substring($vsDate;1;$vlPos-1) // Extract the next digits from the date
+ $vsDate:=Substring($vsDate;$vlPos+1) // Reduce the string to the last digits from the date
  Case of
-
-    :($vsMDY=$vsMonth) ` The digits express the month
-
+    :($vsMDY=$vsMonth) // The digits express the month
        $0:=$0+"MM"
-
-    :($vsMDY=$vsDay) ` The digits express the day
-
+    :($vsMDY=$vsDay) // The digits express the day
        $0:=$0+"DD"
-
-    :($vsMDY=$vsYear) ` The digits express the year
-
+    :($vsMDY=$vsYear) // The digits express the year
        $0:=$0+"YYYY"
-
  End case
-
- $0:=$0+"/" ` Pursue building the function result
-
+ $0:=$0+"/" // Pursue building the function result
  Case of
-
-    :($vsDate=$vsMonth) ` The digits express the month
-
+    :($vsDate=$vsMonth) // The digits express the month
        $0:=$0+"MM"
-
-    :($vsDate=$vsDay) ` The digits express the day
-
+    :($vsDate=$vsDay) // The digits express the day
        $0:=$0+"DD"
-
-    :($vsDate=$vsYear) ` The digits express the year
-
+    :($vsDate=$vsYear) // The digits express the year
        $0:=$0+"YYYY"
-
  End case
-
-  ` At this point $0 is equal to MM/DD/YYYY or DD/MM/YYYY or...
+  // At this point $0 is equal to MM/DD/YYYY or DD/MM/YYYY or...
 ```
 
 #### See also 
+
 [Day of](day-of.md)  
 [Month of](month-of.md)  
 [Year of](year-of.md)  

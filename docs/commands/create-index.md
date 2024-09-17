@@ -56,13 +56,9 @@ Creation of two standard indexes on the “Last Name” and “Telephone”field
 
 ```4d
  ARRAY POINTER(fieldPtrArr;1)
-
  fieldPtrArr{1}:=->[Customers]LastName
-
  CREATE INDEX([Customers];fieldPtrArr;Standard BTree Index;"CustLNameIdx")
-
  fieldPtrArr{1}:=->[Customers]Telephone
-
  CREATE INDEX([Customers];fieldPtrArr;Standard BTree Index;"CustTelIdx")
 ```
 
@@ -72,9 +68,7 @@ Creation of a keywords index on the “Observations” field of the \[Customers\
 
 ```4d
  ARRAY POINTER(fieldPtrArr;1)
-
  fieldPtrArr{1}:=->[Customers]Observations
-
  CREATE INDEX([Customers];fieldPtrArr;Keywords Index;"CustObsIdx")
 ```
 
@@ -84,15 +78,13 @@ Creation of a composite index on the “City” and “Zipcode” fields of the 
 
 ```4d
  ARRAY POINTER(fieldPtrArr;2)
-
  fieldPtrArr{1}:=->[Customers]City
-
  fieldPtrArr{2}:=->[Customers]Zipcode
-
  CREATE INDEX([Customers];fieldPtrArr;Standard BTree Index;"CityZip")
 ```
 
 #### See also 
+
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
 [SET INDEX](set-index.md)  

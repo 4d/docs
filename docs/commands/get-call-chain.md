@@ -32,49 +32,18 @@ The command facilitates debugging by enabling the identification of the method c
 The following code returns a collection of objects containing information about the method call chain:
 
 ```4d
- C_COLLECTION($currentCallChain)
-
+ var $currentCallChain : Collection
  $currentCallChain:=Get call chain
 ```
 
 If a project method is executed, the call chain could contain (for example):
 
 ```RAW
-
-[
-   {
-    "type":"projectMethod",
-    "name":"detailForm",
-    "line":1,
-    "database":"myDatabase"
-   }
-]
-
+[   {    "type":"projectMethod",    "name":"detailForm",    "line":1,    "database":"myDatabase"   }]
 ```
 
 If a form object method is executed, the call chain could contain (for example):
 
 ```RAW
-
-[
-   {
-    "type":"formObjectMethod",
-    "name":"detailForm.Button",
-    "line":1,
-    "database":"myDatabase"
-   },
-   {
-    "type":"formMethod",
-    "name”:"detailForm",
-    "line":2,
-    "database":"myDatabase"
-   },
-   {
-    "type":"projectMethod",
-    "name”:"showDetailForm",
-    "line":2,
-    "database":"myDatabase”
-   }
-]
-
+[   {    "type":"formObjectMethod",    "name":"detailForm.Button",    "line":1,    "database":"myDatabase"   },   {    "type":"formMethod",    "name”:"detailForm",    "line":2,    "database":"myDatabase"   },   {    "type":"projectMethod",    "name”:"showDetailForm",    "line":2,    "database":"myDatabase”   }]
 ```

@@ -29,5 +29,6 @@ The optional *numRecords* parameter sets the number of records to retrieve:
 If the command has been executed correctly, the system variable OK returns 1\. Otherwise, it returns 0.
 
 #### See also 
+
 [SQL CANCEL LOAD](sql-cancel-load.md)  
 [SQL EXECUTE](sql-execute.md)  

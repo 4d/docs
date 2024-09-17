@@ -65,4 +65,5 @@ These tags will be replaced respectively by the data in the left, center or righ
 If you pass an invalid *area* number, the error -9850 will be generated.
 
 #### See also 
+
 [QR Get HTML template](qr-get-html-template.md)  

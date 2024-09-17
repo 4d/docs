@@ -41,6 +41,7 @@ The **Get indexed string** command is compatible with the XLIFF architecture of 
 If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
 
 #### See also 
+
 [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  

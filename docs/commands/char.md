@@ -30,6 +30,7 @@ The following example uses **Char** to insert a carriage return within the text 
 ```
 
 #### See also 
+
 [Character code](character-code.md)  
 [Character Reference Symbols](../../4D/20-R6/Character-Reference-Symbols.300-6957888.en.html)  
 [Unicode Codes](../../4D/20-R6/Unicode-Codes.300-6957845.en.html)  

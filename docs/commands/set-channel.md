@@ -157,6 +157,7 @@ All of the operations in this table set the Document system variable if appropri
 See examples for the [RECEIVE BUFFER](receive-buffer.md), [SET TIMEOUT](set-timeout.md) and [RECEIVE RECORD](receive-record.md) commands.
 
 #### See also 
+
 [Append document](append-document.md)  
 [Communications](../../4D/20-R6/Communications.302-6958471.en.html)  
 [Create document](create-document.md)  

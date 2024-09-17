@@ -25,28 +25,19 @@ The following example allows you to know the state of a process (in our case, wh
 
 ```4d
  $Win:=Open window(x1;x2;y1;y2;-Palette window)
-
  Repeat
-
     If(Test semaphore("Encrypting code"))
-
        POSITION MESSAGE($x3;$y3)
-
        MESSAGE("Encrypting code being modified.")
-
     Else
-
        POSITION MESSAGE($x3;$y3)
-
        MESSAGE("Modification of the encrypting code authorized.")
-
     End if
-
  Until(StopInfo)
-
  CLOSE WINDOW
 ```
 
 #### See also 
+
 [CLEAR SEMAPHORE](clear-semaphore.md)  
 [Semaphore](semaphore.md)  

@@ -34,6 +34,7 @@ If you pass the optional *members* parameter, the unique ID numbers of the users
 If you do not have the proper access privileges for calling GET GROUP PROPERTIES or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
 
 #### See also 
+
 [GET GROUP LIST](get-group-list.md)  
 [GET USER LIST](get-user-list.md)  
 [Set group properties](set-group-properties.md)  

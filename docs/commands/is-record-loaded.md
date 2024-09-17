@@ -24,36 +24,21 @@ displayed_sidebar: docs
 Instead of using the “Next record” or “Previous record” automatic actions, you can write object methods for these buttons to improve their operation. The “Next” button will display the beginning of the selection if the user is at the end of the selection and the “Previous” button will show the end of the selection when the user is at the beginning of the selection.
 
 ```4d
-  ` Object method of the “Previous” button (without an automatic action)
-
+  // Object method of the “Previous” button (without an automatic action)
  If(FORM Event=On Clicked)
-
     PREVIOUS RECORD([Group])
-
     If(Not(Is record loaded([Group])))
-
        GOTO SELECTED RECORD([Group];Records in selection([Group]))
-
-  `Go to the last record in the selection
-
+  //Go to the last record in the selection
     End if
-
  End if
  
-
-  ` Object method of the “Next” button (without an automatic action)
-
+  // Object method of the “Next” button (without an automatic action)
  If(FORM Event=On Clicked)
-
     NEXT RECORD([Group])
-
     If(Not(Is record loaded([Group])))
-
        GOTO SELECTED RECORD([Groups];1)
-
-  `Go to the first record in the selection
-
+  //Go to the first record in the selection
     End if
-
  End if
 ```

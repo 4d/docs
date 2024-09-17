@@ -23,13 +23,9 @@ If the menu bar was created by the [Create menu](create-menu.md) command, this I
 
 ```4d
  $vEditorRef:=Get menu bar reference(Frontmost process) //menu from the menu bar editor
-
  $vMenuRef:=Create menu($vEditorRef) //copy the menu in memory
-
  SET MENU BAR(2) //install another menu bar
-
  ... // execute code
-
  SET MENU BAR($vMenuRef) //back to the initial menu bar
 ```
 
@@ -40,4 +36,5 @@ The *process* parameter can be used to designate the process where you want to g
 Refer to the example of the [GET MENU ITEMS](get-menu-items.md) command.
 
 #### See also 
+
 [SET MENU BAR](set-menu-bar.md)  

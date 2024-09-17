@@ -35,5 +35,6 @@ In both cases, if the "name" attribute is undefined, the command will return:
 If there is no list form, an empty string is returned in the *listSubform* parameter.
 
 #### See also 
+
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
 [OBJECT SET SUBFORM](object-set-subform.md)  

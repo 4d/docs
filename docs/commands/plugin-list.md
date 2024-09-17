@@ -22,6 +22,7 @@ displayed_sidebar: docs
 PLUGIN LIST takes all plug-ins into account, including those that are integrated (for example, 4D Chart), and third-party plug-ins. 
 
 #### See also 
+
 [COMPONENT LIST](component-list.md)  
 [Get plugin access](get-plugin-access.md)  
 [Is license available](is-license-available.md)  

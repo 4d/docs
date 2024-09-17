@@ -24,4 +24,5 @@ If you pass the optional *\** parameter, this indicates that the *object* parame
 In *horizontal* and *vertical*, the command returns the value **True** or **False** depending on whether the corresponding lines are shown (True) or hidden (False). By default, the grid is shown. 
 
 #### See also 
+
 [LISTBOX SET GRID](listbox-set-grid.md)  

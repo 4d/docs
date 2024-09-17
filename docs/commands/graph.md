@@ -111,254 +111,167 @@ When you use the *graphSettings* parameter, you pass an object that contains the
 Syntax using *graphNumber*: The following example shows the different types of graphs that you can obtain. The code would be inserted in a form method or object method. It is not intended to be realistic, since the data is constant:
 
 ```4d
- C_PICTURE(vGraph) //Variable of graph
-
+ var vGraph : Picture //Variable of graph
  ARRAY TEXT(X;2) //Create an array for the x-axis
-
  X{1}:="1995" //X Label #1
-
  X{2}:="1996" //X Label #2
-
  ARRAY REAL(A;2) //Create an array for the y-axis
-
  A{1}:=30 //Insert some data
-
  A{2}:=40
-
  ARRAY REAL(B;2) //Create an array for the y-axis
-
  B{1}:=50 //Insert some data
-
  B{2}:=80
-
  vType:=1 //Initialize graph type
-
  GRAPH(vGraph;vType;X;A;B) //Draw the graph
-
  GRAPH SETTINGS(vGraph;0;0;0;0;False;False;True;"France";"USA") //Set the legends for the graph
 ```
 
 The following figures show the resulting graph.
 
 * With *vType* equal to 1, you obtain a **Column** graph:  
-![](../assets/en/Commands/pict847107.fr.png)
+![](../assets/en/commands/pict847107.fr.png)
 * With *vType* equal to 2, you obtain a **Proportional Column** graph:  
-![](../assets/en/Commands/pict847109.fr.png)
+![](../assets/en/commands/pict847109.fr.png)
 * With *vType* equal to 3, you obtain a **Stacked Column** graph:  
-![](../assets/en/Commands/pict847111.fr.png)
+![](../assets/en/commands/pict847111.fr.png)
 * With *vType* equal to 4, you obtain a **Line** graph:  
-![](../assets/en/Commands/pict847114.fr.png)
+![](../assets/en/commands/pict847114.fr.png)
 * With *vType* equal to 5, you obtain a **Area** graph:  
-![](../assets/en/Commands/pict847118.fr.png)
+![](../assets/en/commands/pict847118.fr.png)
 * With *vType* equal to 6, you obtain a **Scatter** graph:  
-![](../assets/en/Commands/pict847120.fr.png)
+![](../assets/en/commands/pict847120.fr.png)
 * With *vType* equal to 7, you obtain a **Pie** graph:  
-![](../assets/en/Commands/pict847122.en.png)
+![](../assets/en/commands/pict847122.en.png)
 * With *vType* equal to 8, you obtain a **Picture** graph:  
-![](../assets/en/Commands/pict847124.fr.png)
+![](../assets/en/commands/pict847124.fr.png)
 
 #### Example 2 
 
 Syntax using *graphSettings*: In the following example, you draw a simple line graph based on time values:
 
 ```4d
- C_PICTURE(vGraph) //Graph variable
-
+ var vGraph : Picture //Graph variable
  ARRAY TIME(X;3) //Create array for x-axis
-
  X{1}:=?05:15:10? //X Label #1
-
  X{2}:=?07:15:10? //X Label #2
-
  X{3}:=?12:15:55? //X Label #3
  
-
  ARRAY REAL(A;3) //Create array for y-axis
-
  A{1}:=30 //Insert some data
-
  A{2}:=22
-
  A{3}:=50
  
-
  ARRAY REAL(B;3) //Create another array for y-axis
-
  B{1}:=50 //Insert some data
-
  B{2}:=80
-
  B{3}:=10
  
-
- C_OBJECT(vSettings) //Initialize graph settings
+ var vSettings : Object //Initialize graph settings
  
-
  OB SET(vSettings;Graph type;4) //Line type
  
-
  ARRAY TEXT(aLabels;2) //Set legends for graph
-
  aLabels{1}:="Mary"
-
  aLabels{2}:="John"
-
  OB SET ARRAY(vSettings;Graph legend labels;aLabels)
  
-
  GRAPH(vGraph;vSettings;X;A;B) //Draw graph
 ```
 
-![](../assets/en/Commands/pict2603210.en.png)
+![](../assets/en/commands/pict2603210.en.png)
 
 #### Example 3 
 
 With the same values, you can add custom settings to obtain a different view:
 
 ```4d
- C_PICTURE(vGraph) //Graph variable
-
+ var vGraph : Picture //Graph variable
  ARRAY TIME(X;3) //Create an array for the x-axis
-
  X{1}:=?05:15:10? //X Label #1
-
  X{2}:=?07:15:10? //X Label #2
-
  X{3}:=?12:15:55? //X Label #3
  
-
  ARRAY REAL(A;3) //Create an array for the y-axis
-
  A{1}:=30 //Insert some data
-
  A{2}:=22
-
  A{3}:=50
  
-
  ARRAY REAL(B;3) //Create another array for the y-axis
-
  B{1}:=50 //Insert some data
-
  B{2}:=80
-
  B{3}:=10
  
-
- C_OBJECT(vSettings) //initializing graph settings
+ var vSettings : Object //initializing graph settings
  
-
  OB SET(vSettings;Graph type;4) //type Line
  
-
  ARRAY TEXT(aLabels;2) //Set the legends for the graph
-
  aLabels{1}:="Mary"
-
  aLabels{2}:="John"
-
  OB SET ARRAY(vSettings;Graph legend labels;aLabels)
  
-
   //options
-
  OB SET(vSettings;Graph xProp;True) //set proportional
-
  OB SET(vSettings;Graph xGrid;False) //remove the vertical grid
-
  OB SET(vSettings;Graph xMin;?03:00:00?) //define boundaries
-
  OB SET(vSettings;Graph xMax;?20:00:00?)
  
-
  GRAPH(vGraph;vSettings;X;A;B) //Draw the graph
 ```
 
-![](../assets/en/Commands/pict2603212.en.png)
+![](../assets/en/commands/pict2603212.en.png)
 
 #### Example 4 
 
 In this example, we customize a few settings:
 
 ```4d
- C_PICTURE(vGraph) //Graph variable
-
+ var vGraph : Picture //Graph variable
  ARRAY TEXT(X;5) //Create an array for the x-axis
-
  X{1}:="Monday" //X Label #1
-
  X{2}:="Tuesday" //X Label #2
-
  X{3}:="Wednesday" //X Label #3
-
  X{4}:="Thursday" //X Label #4
-
  X{5}:="Friday" //X Label #5
  
-
  ARRAY LONGINT(A;5) //Create an array for the y-axis
-
  A{1}:=30 //Insert some data
-
  A{2}:=22
-
  A{3}:=50
-
  A{4}:=45
-
  A{5}:=55
  
-
  ARRAY LONGINT(B;5) //Create another array for the y-axis
-
  B{1}:=50 //Insert some data
-
  B{2}:=80
-
  B{3}:=10
-
  B{4}:=5
-
  B{5}:=72
  
-
- C_OBJECT(vSettings) //initializing graph settings
+ var vSettings : Object //initializing graph settings
  
-
  OB SET(vSettings;Graph type;1) //type Bars
  
-
  ARRAY TEXT(aLabels;2) //Set the legends for the graph
-
  aLabels{1}:="Mary"
-
  aLabels{2}:="John"
-
  OB SET ARRAY(vSettings;Graph legend labels;aLabels)
  
-
   //options
-
  OB SET(vSettings;Graph yGrid;False) //remove the vertical grid
-
  OB SET(vSettings;Graph background color;"#573E82") //set a background color
-
  OB SET(vSettings;Graph background opacity;40)
-
  ARRAY TEXT($aTcols;2) //Set the colors for the graph
-
  $aTcols{1}:="#B5CF32"
-
  $aTcols{2}:="#D43A26"
-
  OB SET ARRAY(vSettings;Graph colors;$aTcols)
-
  GRAPH(vGraph;vSettings;X;A;B) //Draw the graph
 ```
 
-![](../assets/en/Commands/pict2648517.en.png)
+![](../assets/en/commands/pict2648517.en.png)
 
 #### See also 
+
   
 [Graph Parameters](../../4D/20-R6/Graph-Parameters.302-6958510.en.html)  
 [GRAPH SETTINGS](graph-settings.md)  

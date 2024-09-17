@@ -45,6 +45,7 @@ If you pass the optional *memberships* parameter, the unique ID numbers of the g
 If you do not have the proper access privileges for calling GET USER PROPERTIES or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
 #### See also 
+
 [GET GROUP LIST](get-group-list.md)  
 [GET USER LIST](get-user-list.md)  
 [Is user deleted](is-user-deleted.md)  

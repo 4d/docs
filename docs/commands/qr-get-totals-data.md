@@ -63,7 +63,7 @@ The **QR GET TOTALS DATA** command retrieves the details of a specific cell.
 
 Here is a depiction of how the parameters *colNum* and *breakNum* have to be combined in cross-table mode:
 
-![](../assets/en/Commands/pict30726.en.png)
+![](../assets/en/commands/pict30726.en.png)
 
   
 If you pass an invalid *area* number, the error -9850 will be generated.  
@@ -71,4 +71,5 @@ If you pass an invalid *colNum* number, the error -9852 will be generated.
 If you pass an invalid *breakNum* number, the error -9853 will be generated.
 
 #### See also 
+
 [QR SET TOTALS DATA](qr-set-totals-data.md)  

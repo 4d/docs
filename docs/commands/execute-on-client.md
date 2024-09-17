@@ -54,6 +54,7 @@ Refer to the example of the [REGISTER CLIENT](register-client.md) command.
 The **OK** system variable is equal to 1 if 4D Server has correctly received the execution request of a method; however, this does not guarantee that the method has been properly executed by 4D Client.
 
 #### See also 
+
 [Execute on server](execute-on-server.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [REGISTER CLIENT](register-client.md)  

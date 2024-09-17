@@ -49,23 +49,15 @@ If the command is executed from a component, it considers by default that *path*
 Resolution of a database method path:
 
 ```4d
- C_LONGINT($methodType)
-
- C_POINTER($tablePtr)
-
- C_TEXT($objectName)
-
- C_TEXT($formObjectName)
+ var $methodType : Integer
+ var $tablePtr : Pointer
+ var $objectName : Text
+ var $formObjectName : Text
  
-
  METHOD RESOLVE PATH("[databaseMethod]/onStartup";$methodType;$tablePtr;$objectName;$formObjectName)
-
   // $methodType: 2
-
   // $tablePtr: Nil pointer
-
   // $objectName: "onStartup"
-
   // $formObjectName: ""
 ```
 
@@ -74,25 +66,18 @@ Resolution of a database method path:
 Resolution of a path for an object of a table form method:
 
 ```4d
- C_LONGINT($methodType)
-
- C_POINTER($tablePtr)
-
- C_TEXT($objectName)
-
- C_TEXT($formObjectName)
+ var $methodType : Integer
+ var $tablePtr : Pointer
+ var $objectName : Text
+ var $formObjectName : Text
  
-
  METHOD RESOLVE PATH("[tableForm]/Table1/output1/myVar1";$methodType;$tablePtr;$objectName;$formObjectName)
-
   // $methodType: 16
-
   // $tablePtr: -> [Table1]
-
   // $objectName: "output1"
-
   // $formObjectName: "Btn1"
 ```
 
 #### See also 
+
 [METHOD Get path](method-get-path.md)  

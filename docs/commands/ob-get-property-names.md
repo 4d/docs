@@ -42,23 +42,14 @@ You want to test that an object is not empty:
 
 ```4d
  ARRAY TEXT(arrNames;0)
-
  ARRAY LONGINT(arrTypes;0)
-
- C_OBJECT($ref_richard)
-
+ var $ref_richard : Object
  OB SET($ref_richard;"name";"Richard";"age";7)
-
  OB GET PROPERTY NAMES($ref_richard;arrNames;arrTypes)
-
   // arrNames{1}="name", arrNames{2}="age"
-
   // arrTypes{1}=2, arrTypes{2}=1
-
  If(Size of array(arrNames)#0)
-
   // ...
-
  End if
 ```
 
@@ -67,69 +58,42 @@ You want to test that an object is not empty:
 Using an object array element:
 
 ```4d
- C_OBJECT($Children;$ref_richard;$ref_susan;$ref_james)
-
+ var $Children;$ref_richard;$ref_susan;$ref_james : Object
  ARRAY OBJECT($arrayChildren;0)
  
-
  OB SET($ref_richard;"name";"Richard";"age";7)
-
  APPEND TO ARRAY($arrayChildren;$ref_richard)
-
  OB SET($ref_susan;"name";"Susan";"age";4;"girl";True) //additional attribute
-
  APPEND TO ARRAY($arrayChildren;$ref_susan)
-
  OB SET($ref_james;"name";"James")
-
  OB SET NULL($ref_james;"age") //null attribute
-
  APPEND TO ARRAY($arrayChildren;$ref_james)
  
-
  OB GET PROPERTY NAMES($arrayChildren{1};$arrNames;$arrTypes)
-
   // $arrayChildren{1} = {"name":"Richard","age":7}
-
   // $arrNames{1}="name"
-
   // $arrNames{2}="age"
-
   // $arrTypes{1}=2
-
   // $arrTypes{2}=1
  
-
  OB GET PROPERTY NAMES($arrayChildren{2};$arrNames;$arrTypes)
-
   // $arrayChildren{3} = {"name":"Susan","age":4,"girl":true}
-
   // $arrNames{1}="name"
-
   // $arrNames{2}="age"
-
   // $arrNames{3}="girl"
-
   // $arrTypes{1}=2
-
   // $arrTypes{2}=1
-
   // $arrTypes{3}=6
  
-
  OB GET PROPERTY NAMES($arrayChildren{3};$arrNames;$arrTypes)
-
   // $arrayChildren{3} = {"name":"James","age":null}
-
   // $arrNames{1}="name"
-
   // $arrNames{2}="age"
-
   // $arrTypes{1}=2
-
   // $arrTypes{2}=255
 ```
 
 #### See also 
+
 [OB Get type](ob-get-type.md)  
 [OB SET NULL](ob-set-null.md)  

@@ -39,9 +39,7 @@ Example using a user data source:
 
 ```4d
  ARRAY TEXT(arrDSN;0)
-
  ARRAY TEXT(arrDSNDrivers;0)
-
  SQL GET DATA SOURCE LIST(User data source;arrDSN;arrDSNDrivers)
 ```
 
@@ -50,6 +48,7 @@ Example using a user data source:
 If the command is executed correctly, the OK system variable is set to 1\. Otherwise, it is set to 0 and an error is generated.
 
 #### See also 
+
 [SQL Get current data source](sql-get-current-data-source.md)  
 [SQL LOGIN](sql-login.md)  
 [SQL LOGOUT](sql-logout.md)  

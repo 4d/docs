@@ -32,25 +32,16 @@ If *start* is specified, the command starts searching at the element number spec
 The following project method deletes all empty elements from the string or text array whose pointer is passed as parameter:
 
 ```4d
-  ` CLEAN UP ARRAY project method
-
-  ` CLEAN UP ARRAY ( Pointer )
-
-  ` CLEAN UP ARRAY ( -> Text or String array )
+  // CLEAN UP ARRAY project method
+  // CLEAN UP ARRAY ( Pointer )
+  // CLEAN UP ARRAY ( -> Text or String array )
  
-
- C_POINTER($1)
-
+ var $1 : Pointer
  Repeat
-
     $vlElem:=Find in array($1->;"")
-
     If($vlElem>0)
-
        DELETE FROM ARRAY($1->;$vlElem)
-
     End if
-
  Until($vlElem<0)
 ```
 
@@ -58,15 +49,10 @@ After this project method is implemented in a database, you can write:
 
 ```4d
  ARRAY TEXT(atSomeValues;...)
-
-  ` ...
-
-  ` Do plenty of things with the array
-
-  ` ...
-
-  ` Eliminate empty string elements
-
+  // ...
+  // Do plenty of things with the array
+  // ...
+  // Eliminate empty string elements
  CLEAN UP ARRAY(->atSomeValues)
 ```
 
@@ -75,34 +61,24 @@ After this project method is implemented in a database, you can write:
 The following project method selects the first element of an array whose pointer is passed as the first parameter that matches the value of the variable or field whose pointer is passed as parameter:
 
 ```4d
-  ` SELECT ELEMENT project method
-
-  ` SELECT ELEMENT ( Pointer ; Pointer)
-
-  ` SELECT ELEMENT ( -> Text or String array ; -> Text or String variable or field )
+  // SELECT ELEMENT project method
+  // SELECT ELEMENT ( Pointer ; Pointer)
+  // SELECT ELEMENT ( -> Text or String array ; -> Text or String variable or field )
  
-
  $1->:=Find in array($1->;$2->)
-
  If($1->=-1)
-
-    $1->:=0 ` If no element was found, set the array to no selected element
-
+    $1->:=0 // If no element was found, set the array to no selected element
  End if
 ```
 
 After this project method is implemented in a database, you can write:
 
 ```4d
-  ` asGender pop-up menu object method
-
+  // asGender pop-up menu object method
  Case of
-
     :(Form event code=On Load)
-
        SELECT ELEMENT(->asGender;->[People]Gender)
  
-
  End case
 ```
 
@@ -114,25 +90,19 @@ You want to find an object reference:
 
 ```4d
  ARRAY OBJECT($objects;100)
-
  $o1:={a10;b"xyz"}
-
  $o2:={a10;b"xyz"}
  
-
  $objects{20}:=$o1
-
  var $p : Integer
  
-
  $p:=Find in array($objects;$o1) //$p = 20 
-
  $p:=Find in array($objects;$o2) //$p = -1 
-
  $p:=Find in array($objects;{a10;b"xyz"}) //$p = -1
 ```
 
 #### See also 
+
 [Count in array](count-in-array.md)  
 [DELETE FROM ARRAY](delete-from-array.md)  
 [Find in sorted array](find-in-sorted-array.md)  

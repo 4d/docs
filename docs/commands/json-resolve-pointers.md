@@ -34,7 +34,7 @@ Optionally, you can pass in *options* an object containing specific properties t
 | **Property** | **Value type** | **Description**                                                                                                                                       |
 | ------------ | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | rootFolder   | String         | Absolute path (using standard 4D syntax) to the folder to be used to resolve relative pointers in *object*. Default is the database Resources folder. |
-| merge        | Boolean        | Merge objects with pointer objects (true) instead of replacing them (false). Default is false ![](../assets/en/Commands/pict3516702.en.png)           |
+| merge        | Boolean        | Merge objects with pointer objects (true) instead of replacing them (false). Default is false ![](../assets/en/commands/pict3516702.en.png)           |
 
 After the command is executed: 
 
@@ -56,15 +56,11 @@ In any cases, the command returns an object containing the following properties:
   
 #### Defining JSON Pointers 
 
-JSON Pointer is a standard that defines a string syntax which can be used to access a particular field or key value in the entire JSON document. The standard has been described in the [RFC 6901](https://tools.ietf.org/html/rfc6901). 
-
-A JSON pointer is, strictly speaking, a string composed of parts separated by '/'. A JSON pointer is usually found in a URI that specifies the document into which the pointer will be resolved. The fragment character "#' is used in the URI to specify the JSON pointer. By convention, a URI containing a JSON pointer can be found in a JSON object property that must be named "$ref".
-
+```undefined
 {
    "$ref":<path>#<json_pointer>
 }
-
-**Note:** 4D does not support the "-" character as reference to nonexistent arrray elements. 
+```
 
 ##### Recursivity and path resolution 
 
@@ -84,49 +80,31 @@ This basic example illustrates how a JSON pointer can be set and replaced in an 
 
 ```4d
   // create an object with some value
-
- C_OBJECT($o)
-
+ var $o : Object
  $o:=New object("value";42)
  
-
   // create the JSON pointer object
-
- C_OBJECT($ref)
-
+ var $ref : Object
  $ref:=New object("$ref";"#/value")
  
-
   // add the JSON pointer object as property
-
  $o.myJSONPointer:=$ref
  
-
   // resolve the whole and check that the pointer has been resolved
-
- C_OBJECT($result)
-
+ var $result : Object
  $options:=New object("rootFolder";Get 4D folder(Current resources folder);"merge";True)
-
  $result:=JSON Resolve pointers($o;$options)
-
  If($result.success)
-
     ALERT(JSON Stringify($result.value))
-
   //{"value":42,"myJSONPointer":42}
-
  Else
-
     ALERT(JSON Stringify($result.errors))
-
  End if
 ```
 
 #### Example 2 
 
-You want to reuse the "billingAddress" as the "shippingAddress" in the following JSON object (named $oMyConfig):
-
+```undefined
 {
     "lastname": "Doe",
     "firstname": "John",
@@ -137,37 +115,11 @@ You want to reuse the "billingAddress" as the "shippingAddress" in the following
     },
     "shippingAddress": { "$ref": "#/billingAddress" }
 }
-
-After executing this code:
-
-```4d
- $oResult:=JSON Resolve pointers($oMyConfig)
 ```
-
-... the following object is returned:
-
-{
-    "success": true,
-    "value": {
-        "lastname": "Doe",
-        "firstname": "John",
-        "billingAddress": {
-            "street": "95 S. Market Street",
-            "city": "San Jose",
-            "state": "California" 
-        },
-        "shippingAddress": {
-            "street": "95 S. Market Street",
-            "city": "San Jose",
-            "state": "California" 
-        }
-    }
-}
 
 #### Example 3 
 
-This example illustrates the effect of the "merge" option. You want to edit an user's rights based upon a default file.
-
+```undefined
 {
     "rights": { 
         "$ref": "defaultSettings.json#/defaultRights",
@@ -175,64 +127,8 @@ This example illustrates the effect of the "merge" option. You want to edit an u
         "id": 456
     }
 }
-
-The *defaultSettings.json* file contains:
-
-{
-    "defaultRights":
-    {
-        "edit": true,
-        "add": false,
-        "delete": false
-    }
-}
-
-If you execute:
-
-```4d
- C_OBJECT($options)
-
- $options:=New object("merge";False) //replace contents
-
- $oResult:=JSON Resolve pointers($oMyConfig;$options)
 ```
-
-... the resulting value is exactly the *defaultSettings.json* file contents:
-
-{
-    "success": true,
-    "value": {
-        "rights": {
-            "edit": true,
-            "add": false,
-            "delete": false
-        }
-    }
-}
-
-If you execute:
-
-```4d
- C_OBJECT($options)
-
- $options:=New object("merge";True) //merge both contents
-
- $oResult:=JSON Resolve pointers($oMyConfig;$options)
-```
-
-... the resulting value is a modified version of the original object:
-
-{
-    "success": true,
-    "value": {
-        "rights": {
-            "edit": true,
-            "add": false,
-            "delete": true,
-            "id": 456
-        }
-    }
-}
 
 #### See also 
+
   

@@ -53,11 +53,8 @@ The following example (Windows) carries out the compacting of a data file:
 
 ```4d
  $structFile:=Structure file
-
  $dataFile:="C:\\Databases\\Invoices\\January\\Invoices.4dd"
-
  $origFile:="C:\\Databases\\Invoices\\Archives\\January\\"
-
  $archFolder:=Compact data file($structFile;$dataFile;$origFile)
 ```
 
@@ -66,5 +63,6 @@ The following example (Windows) carries out the compacting of a data file:
 If the compacting operation is carried out correctly, the OK system variable is set to 1; otherwise, it is set to 0\. If a log file was generated, its complete pathname is returned in the Document system variable. 
 
 #### See also 
+
 [Get table fragmentation](get-table-fragmentation.md)  
 [VERIFY DATA FILE](verify-data-file.md)  

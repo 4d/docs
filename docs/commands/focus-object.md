@@ -32,19 +32,14 @@ The following example is an object method for a button. The object method change
 
 ```4d
  $vp :=Focus object //Save the pointer to the last area
-
  Case of
-
     :(Nil($vp)) //No object has the focus
-
        ...
-
     :((Type($vp->)=Is alpha field)|(Type($vp->)=Is string var)) //If it is a string or text area
-
        $vp->:=Uppercase($vp->) //Change the area to uppercase
-
  End case
 ```
 
 #### See also 
+
 [OBJECT Get pointer](object-get-pointer.md)  

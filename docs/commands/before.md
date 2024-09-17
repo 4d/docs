@@ -21,4 +21,5 @@ In order for the **Before** execution cycle to be generated, make sure that the 
 **Note:** This command is equivalent to using [Form event code](form-event-code.md) and testing whether it returns the On Load event.
 
 #### See also 
+
 [Form event code](form-event-code.md)  

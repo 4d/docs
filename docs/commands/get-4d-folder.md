@@ -166,29 +166,17 @@ During the startup of a single-user database, you want to load (or create) your 
 
 ```4d
  $vsPrefDocName:=Get 4D folder+"MyPrefs.prf" //Build pathname to the Preferences file
-
   // Check if the file exists
-
  If(Test path name($vsPrefDocName)#Is a document)
-
     $vtPrefDocRef:=Create document($vsPrefDocName.prf) //If not, create it
-
  Else
-
     $vtPrefDocRef:=Open document($vsPrefDocName.prf) //If so, open it
-
  End if
-
  If(OK=1)
-
   //Process document contents
-
     CLOSE DOCUMENT($vtPrefDocRef)
-
  Else
-
   //Handle error
-
  End if
 ```
 
@@ -198,15 +186,10 @@ This example illustrates the use of the Database folder UNIX syntax constant und
 
 ```4d
  $posixpath:="\""+Get 4D folder(Database folder Unix syntax)+"\""
-
  $myfolder:="ls -l "+$posixpath
-
  $in:=""
-
  $out:=""
-
  $err:=""
-
  LAUNCH EXTERNAL PROCESS($myfolder;$in;$out;$err)
 ```
 
@@ -217,6 +200,7 @@ This example illustrates the use of the Database folder UNIX syntax constant und
 If the *folder* parameter is invalid or if the pathname returned is empty, the OK system variable is set to 0.
 
 #### See also 
+
 [COMPONENT LIST](component-list.md)  
 [System folder](system-folder.md)  
 [Temporary folder](temporary-folder.md)  

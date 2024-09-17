@@ -20,4 +20,5 @@ displayed_sidebar: docs
 If you omit the *window* parameter, Window process returns the process of the current frontmost window.
 
 #### See also 
+
 [Current process](current-process.md)  

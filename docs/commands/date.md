@@ -46,11 +46,8 @@ The following example uses a request box to prompt the user for a date. The stri
 
 ```4d
  vdRequestedDate:=Date(Request("Please enter the date:";String(Current date)))
-
  If(OK=1)
-
-  ` Do something with the date now stored in vdRequestedDate
-
+  // Do something with the date now stored in vdRequestedDate
  End if
 ```
 
@@ -60,17 +57,11 @@ The following examples show various cases:
 
 ```4d
  vdDate:=Date("12/25/94") //returns 12/25/94 on a US system
-
  vdDate2:=Date("40/40/94") //00/00/00
-
  vdDate3:=Date("It was the 6/30, we were in 2016") //06/30/16
-
- C_OBJECT($vobj)
-
+ var $vobj : Object
  $vobj:=New object("expDate";"2020-11-17T00:00:00.0000")
-
  vdDate4:=Date($vobj.expDate) //11/17/20
-
  vdDate5:=Date($vobj.creationDate) //00/00/00
 ```
 
@@ -80,9 +71,7 @@ Date evaluation based on a date in ISO format:
 
 ```4d
  $vtDateISO:="2013-06-05T20:00:00"
-
  $vDate:=Date($vtDateISO)
-
   //$vDate represents June 5th, 2013 regardless of the system language
 ```
 
@@ -92,16 +81,13 @@ You want to get a date from an object attribute, whatever the current attribute 
 
 ```4d
  If(Value type($myObj.myDate)=Is date) //it's stored as date, no need to convert
-
     $vDate:=$myObj.myDate
-
  Else //it's stored as string
-
     $vDate:=Date($myObj.myDate)
-
  End if
 ```
 
 #### See also 
+
 [Bool](bool.md)  
 [String](string.md)  

@@ -36,18 +36,12 @@ Use of DOM tree structures
 ```4d
  $xml:=DOM Create XML Ref("Root") //Creation of an XML DOM tree
  
-
   //Reception of TIFF metadata
-
  $_Xml_TIFF:=DOM Create XML element($xml;"/Root/TIFF")
-
  GET PICTURE METADATA(vPicture;"TIFF";$_Xml_TIFF)
  
-
   //Reception of GPS metadata
-
  $_Xml_GPS:=DOM Create XML element($xml;"/Root/GPS")
-
  GET PICTURE METADATA(vPicture;"GPS";$_Xml_GPS)
 ```
 
@@ -56,22 +50,15 @@ Use of DOM tree structures
 Use of variables
 
 ```4d
- C_DATE($dateAsDate)
-
+ var $dateAsDate : Date
  GET PICTURE METADATA(vPicture;TIFF date time;$dateAsDate)
-
   //only returns the date since $dateAsDate is of the Date type
  
-
- C_TEXT($dateAsText)
-
+ var $dateAsText : Text
  GET PICTURE METADATA(vPicture;TIFF date time;$dateAsText)
-
   //only returns the date but in XML format
  
-
  C_INTEGER($urgency)
-
  GET PICTURE METADATA(vPicture;IPTC urgency;$urgency)
 ```
 
@@ -81,7 +68,6 @@ Reception of tags with multiple values in arrays
 
 ```4d
  ARRAY TEXT($tTkeywords;0)
-
  GET PICTURE METADATA(vPicture;IPTC keywords;$tTkeywords)
 ```
 
@@ -89,7 +75,6 @@ After execution of the command, arrTkeywords contains for example:
 
 ```4d
  $arrTkeywords{1}="France"
-
  $arrTkeywords{2}="Europe"
 ```
 
@@ -98,8 +83,7 @@ After execution of the command, arrTkeywords contains for example:
 Reception of tags with multiple values in a Text variable
 
 ```4d
- C_TEXT($vTwords;0)
-
+ var $vTwords;0 : Text
  GET PICTURE METADATA(vPicture;IPTC keywords;$vTwords)
 ```
 
@@ -110,6 +94,7 @@ After execution of the command, *vTwords* contains for example "France;Europe".
 The *OK* system variable returns 1 if the retrieval of the metadata has proceeded correctly and 0 if an error occurs or if at least one of the tags is not found. In all cases, the any values that can be read are returned.
 
 #### See also 
+
 [GET PICTURE KEYWORDS](get-picture-keywords.md)  
 [Picture Metadata Names](../../4D/20-R6/Picture-Metadata-Names.302-6958502.en.html)  
 [Picture Metadata Values](../../4D/20-R6/Picture-Metadata-Values.302-6958429.en.html)  

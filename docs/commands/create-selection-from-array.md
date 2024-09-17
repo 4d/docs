@@ -42,6 +42,7 @@ When you use a Boolean array with this command, the Xth element of the array ind
 If a record number is invalid (record not created), the error -10503 is generated. You can intercept this error using a method installed by the [ON ERR CALL](on-err-call.md) command.
 
 #### See also 
+
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [CREATE SET FROM ARRAY](create-set-from-array.md)  

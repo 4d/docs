@@ -48,4 +48,5 @@ The following example moves the document DocName:
 **Note:** In the last two examples, the destination folder *"C:\\\\FOLDER2"* must exist. The MOVE DOCUMENT command only moves a document; it does not create folders.
 
 #### See also 
+
 [COPY DOCUMENT](copy-document.md)  

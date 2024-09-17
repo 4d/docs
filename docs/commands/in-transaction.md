@@ -23,6 +23,7 @@ If you perform a multi-record operation (adding, modifying, or deleting records)
 If you perform the operation from within a trigger or from a subroutine (that can be called while in transaction or not), you can use In transaction to check whether or not the current process method or the caller method started a transaction. If a transaction was not started, you do not even start the operation, because you already know that you will not be able to roll it back if it fails. 
 
 #### See also 
+
 [Active transaction](active-transaction.md)  
 [CANCEL TRANSACTION](cancel-transaction.md)  
 [START TRANSACTION](start-transaction.md)  

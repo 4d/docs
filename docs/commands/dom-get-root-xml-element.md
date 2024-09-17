@@ -18,4 +18,5 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get Root XML element.Summary-->The DOM Get Root XML element command returns a reference to the root element of the document to which the XML element that is passed in the *elementRef* parameter belongs.<!-- END REF--> This reference can be used with the other XML parsing commands.
 
 #### See also 
+
 [DOM Get parent XML element](dom-get-parent-xml-element.md)  

@@ -36,4 +36,5 @@ The following example toggles the check mark of a menu item:
 ```
 
 #### See also 
+
 [SET MENU ITEM MARK](set-menu-item-mark.md)  

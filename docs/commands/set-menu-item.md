@@ -27,6 +27,7 @@ If you omit the *process* parameter, SET MENU ITEM applies to the menu bar for t
 **Note:** If you pass a [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") in *menu*, the *process* parameter serves no purpose and will be ignored.
 
 #### See also 
+
 [APPEND MENU ITEM](append-menu-item.md)  
 [Get menu item](get-menu-item.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  

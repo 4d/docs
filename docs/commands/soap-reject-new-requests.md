@@ -26,14 +26,12 @@ You want to deny any new requests to your Web Services server:
 
 ```4d
   //method to be executed on server
-
  If(WEB Get server info.SOAPServerStarted)
-
     SOAP REJECT NEW REQUESTS(True)
-
  End if
 ```
 
 #### See also 
+
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
 [WEB Get server info](web-get-server-info.md)  

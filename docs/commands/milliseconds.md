@@ -26,19 +26,12 @@ The following code waits up to 5 seconds for a locked record to become unlocked 
 
 ```4d
  If(Locked([Table_1]))
-
     $starttime:=Milliseconds
-
     Repeat
-
        DELAY PROCESS(Current process;15)
-
        LOAD RECORD([Table_1])
-
        $waittime:=Milliseconds-$starttime
-
     Until(Not(Locked([Table_1]))|(Process aborted)|($waittime>5000)) //wait 5 seconds max
-
  End if
 ```
 
@@ -49,6 +42,7 @@ The following code waits up to 5 seconds for a locked record to become unlocked 
 ```
 
 #### See also 
+
 [Current time](current-time.md)  
 [Tickcount](tickcount.md)  
 [Timestamp](timestamp.md)  

@@ -28,11 +28,10 @@ The title of a picture button is stored as a help message. This title is stored 
 
 ```4d
  OBJECT SET HELP TIP(*;"button1";":xliff:btn_discover")
-
  $helpmessage:=OBJECT Get help tip(*;"button1")
-
   // $helpmessage contains for example "Découvrir" with a French 4D and "Discover" with an English 4D.
 ```
 
 #### See also 
+
 [OBJECT SET HELP TIP](object-set-help-tip.md)  

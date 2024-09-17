@@ -22,5 +22,6 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 An error is generated when the element reference is invalid.
 
 #### See also 
+
 [DOM Create XML element](dom-create-xml-element.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  

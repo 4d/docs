@@ -27,5 +27,6 @@ To obtain the list of available printers as well as additional information, use 
 If no printer is installed, an error is generated.
 
 #### See also 
+
 [PRINTERS LIST](printers-list.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  

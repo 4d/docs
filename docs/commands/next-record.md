@@ -23,6 +23,7 @@ If **NEXT RECORD** moves the current record pointer past the end of the current 
 See the example for [DISPLAY RECORD](display-record.md).
 
 #### See also 
+
 [Before selection](before-selection.md)  
 [End selection](end-selection.md)  
 [FIRST RECORD](first-record.md)  

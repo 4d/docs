@@ -38,6 +38,7 @@ The following example loads three variables from a document named UserPrefs:
 If the variables are loaded properly, the OK system variable is set to 1; otherwise it is set to 0.
 
 #### See also 
+
 [BLOB TO DOCUMENT](blob-to-document.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [DOCUMENT TO BLOB](document-to-blob.md)  

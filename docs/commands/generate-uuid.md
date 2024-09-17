@@ -25,7 +25,6 @@ In 4D, UUID numbers can be stored in fields. For more information, please refer 
 Generation of a UUID in a variable: 
 
 ```4d
- C_TEXT(MyUUID)
-
+ var MyUUID : Text
  MyUUID:=Generate UUID
 ```

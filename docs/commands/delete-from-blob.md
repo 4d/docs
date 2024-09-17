@@ -23,4 +23,5 @@ displayed_sidebar: docs
 **Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](https://developer.4d.com/docs/Concepts/blob.html#passing-blobs-and-blob-objects-to-4d-commands) on developer.4d.com.
 
 #### See also 
+
 [INSERT IN BLOB](insert-in-blob.md)  

@@ -47,17 +47,14 @@ The following example reads a process array from the process indicated by *$vlPr
 
 ```4d
  GET PROCESS VARIABLE($vlProcess;at_IPCom_Array;$anArray)
-
  For($vlElem;1;Size of array($anArray))
-
     $anArray{$vlElem}:=Uppercase($anArray{$vlElem})
-
  End for
-
  VARIABLE TO VARIABLE($vlProcess;at_IPCom_Array;$anArray)
 ```
 
 #### See also 
+
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [Processes](../../4D/20-R6/Processes.300-6957590.en.html)  
 [SET PROCESS VARIABLE](set-process-variable.md)  

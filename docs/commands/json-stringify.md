@@ -41,21 +41,14 @@ Conversion of scalar values:
 
 ```4d
  $vc:=JSON Stringify("Eureka!") // "Eureka!"
-
  $vel:=JSON Stringify(120) // "120"
  
-
  $vh:=JSON Stringify(?20:00:00?) // "72000" seconds since midnight
-
  SET DATABASE PARAMETER(Times inside objects;Times in milliseconds)
-
  $vhms:=JSON Stringify(?20:00:00?) // "72000000" milliseconds since midnight
  
-
  $vd:=JSON Stringify(!28/08/2013!) // "2013-08-27T22:00:00.000Z" (Paris timezone)
-
  SET DATABASE PARAMETER(Dates inside objects;String type without time zone)
-
  $vdd:=JSON Stringify(!28/08/2013!) // "2013-08-28T00:00:00.000Z"
 ```
 
@@ -65,11 +58,8 @@ Conversion of a string containing special characters:
 
 ```4d
  $s:=JSON Stringify("{\"name\":\"john\"}")
-
   // $s="{\\"name\\":\\"john\\"}"
-
  $p:=JSON Parse($s)
-
   // $p={"name":"john"}
 ```
 
@@ -78,59 +68,41 @@ Conversion of a string containing special characters:
 Examples of serializing a 4D object with and without the *\** parameter:
 
 ```4d
- C_TEXT($MyContact)
-
- C_TEXT($MyPContact)
-
- C_OBJECT($Contact;$Children)
-
+ var $MyContact : Text
+ var $MyPContact : Text
+ var $Contact;$Children : Object
  OB SET($Contact;"lastname";"Monroe";"firstname";"Alan")
-
  OB SET($Children;"firstname";"Jim";"age";"12")
-
  OB SET($Contact;"children";$Children)
-
  $MyContact:=JSON Stringify($Contact)
-
  $MyPContact:=JSON Stringify($Contact;*)
-
   //$MyContact= {"lastname":"Monroe","firstname":"Alan","children":{"firstname":"John","age":"12"}}
-
   //$MyPContact= {\n\t"lastname": "Monroe",\n\t"firstname": "Alan",\n\t"children": {\n\t\t"firstname": "John",\n\t\t"age": "12"\n\t}\n}
 ```
 
 The advantage of this formatting is clear when the JSON is shown in a Web area:
 
 * Standard formatting:  
-![](../assets/en/Commands/pict1205013.fr.png)
+![](../assets/en/commands/pict1205013.fr.png)
 * Pretty formatting:  
-![](../assets/en/Commands/pict1205011.fr.png)
+![](../assets/en/commands/pict1205011.fr.png)
 
 #### Example 4 
 
 Example using a pointer to a variable:
 
 ```4d
- C_OBJECT($MyTestVar)
-
- C_TEXT($name ;$jsonstring )
-
+ var $MyTestVar : Object
+ var $name ;$jsonstring  : Text
  OB SET($MyTestVar;"name";->$name) // object definition
-
   // $MyTestVar= {"name":"->$name"}
  
-
  $jsonstring :=JSON Stringify($MyTestVar)
-
   // $jsonstring ="{"name":""}"
-
   //...
  
-
  $name:="Smith"
-
  $jsonstring :=JSON Stringify($MyTestVar)
-
   //$jsonstring = "{"name" : "Smith"}"
 ```
 
@@ -139,24 +111,16 @@ Example using a pointer to a variable:
 Serialization of a 4D object:
 
 ```4d
- C_TEXT($varjsonTextserialized)
-
- C_OBJECT($Contact)
-
+ var $varjsonTextserialized : Text
+ var $Contact : Object
  OB SET($Contact;"firstname";"Alan")
-
  OB SET($Contact;"lastname";"Monroe")
-
  OB SET($Contact;"age";40)
-
  OB SET($Contact;"phone";"[555-0100,555-0120]")
  
-
  $varjsonTextserialized:=JSON Stringify($Contact)
  
-
   // $varjsonTextserialized = "{"lastname":"Monroe","phone":"[555-0100,
-
   // 555-0120]","age":40,"firstname":"Alan"}"
 ```
 
@@ -165,24 +129,19 @@ Serialization of a 4D object:
 Serialization of a 4D object containing a date value (Paris time zone). The resulting string depends on the current database date settings.
 
 ```4d
- C_TEXT($varjsonTextserialized)
-
- C_OBJECT($Contact)
-
+ var $varjsonTextserialized : Text
+ var $Contact : Object
  OB SET($Contact;"name";"Smith";"birthday";!22/10/1975!)
-
  $varjsonTextserialized:=JSON Stringify($Contact)
 ```
 
 * If the "Use date type instead of ISO date format in objects" option is not checked:  
 ```RAW  
-"name":"Smith",  
-"birthday":"1975-10-21T22:00:00.000Z"  
+"name":"Smith","birthday":"1975-10-21T22:00:00.000Z"  
 ```
 * If the "Use date type instead of ISO date format in objects" option is checked:  
 ```RAW  
-"name":"Smith",  
-"birthday":"1975-10-22"  
+"name":"Smith","birthday":"1975-10-22"  
 ```
 
 **Note:** For more information on this setting, please refer to the [Compatibility page](/4Dv20R6/4D/20-R6/Compatibility-page.300-7003469.en.html).
@@ -192,12 +151,9 @@ Serialization of a 4D object containing a date value (Paris time zone). The resu
 Conversion of a collection (Paris time zone). The resulting string depends on the current database date settings.
 
 ```4d
- C_COLLECTION($myCol)
-
- C_TEXT($myTxtCol)
-
+ var $myCol : Collection
+ var $myTxtCol : Text
  $myCol:=New collection(33;"mike";!28/08/2017!;False)
-
  $myTxtCol:=JSON Stringify($myCol)
 ```
 
@@ -213,5 +169,6 @@ $myTxtCol="[33,"mike","2017-08-28",false]"
 **Note:** For more information on this option, please refer to the [Compatibility page](/4Dv20R6/4D/20-R6/Compatibility-page.300-7003469.en.html).
 
 #### See also 
+
 [JSON Parse](json-parse.md)  
 [JSON Stringify array](json-stringify-array.md)  

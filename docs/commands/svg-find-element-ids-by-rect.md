@@ -40,4 +40,5 @@ The coordinates passed in the *x* and *y* parameters must be expressed in pixels
 All elements whose bounding rectangle intersects with the selection rectangle are taken into account, even those that are under other elements.
 
 #### See also 
+
 [SVG Find element ID by coordinates](svg-find-element-id-by-coordinates.md)  

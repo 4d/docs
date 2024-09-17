@@ -32,6 +32,7 @@ If the backup is performed correctly, the system variable OK is set to 1; otherw
 If an incident occurs during backup, information about the incident is written in the backup log and the top-level error is sent only to the [On Backup Shutdown database method](on-backup-shutdown-database-method.md). It is therefore particularly important to use this database method in order to be able to manage back-up related errors using programming.
 
 #### See also 
+
 [GET BACKUP INFORMATION](get-backup-information.md)  
 [On Backup Startup Database Method](../../4D/20-R6/On-Backup-Startup-Database-Method.300-6958274.en.html)  
 [RESTORE](restore.md)  

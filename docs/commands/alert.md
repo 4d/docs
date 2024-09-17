@@ -29,15 +29,13 @@ This example displays an alert showing information about a company. Note that th
 
 ```4d
  ALERT("Company: "+[Companies]Name+Char(13)+"People in company: "+\
-
  String(Records in selection([People]))+Char(13)+"Number of parts they supply: "+\
-
  String(Records in selection([Parts])))
 ```
 
 This line of code displays the following alert box (on Windows):
 
-![](../assets/en/Commands/pict4224938.en.png)
+![](../assets/en/commands/pict4224938.en.png)
 
 #### Example 2 
 
@@ -49,7 +47,7 @@ The line:
 
 displays the alert dialog box (on Windows) shown:
 
-![](../assets/en/Commands/pict4224959.en.png)
+![](../assets/en/commands/pict4224959.en.png)
 
 #### Example 3 
 
@@ -61,9 +59,10 @@ The line:
 
 displays the alert dialog box (on Windows) shown:
 
-![](../assets/en/Commands/pict4224968.en.png)
+![](../assets/en/commands/pict4224968.en.png)
 
 #### See also 
+
 [CONFIRM](confirm.md)  
 [DISPLAY NOTIFICATION](display-notification.md)  
 [Request](request.md)  

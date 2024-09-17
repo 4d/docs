@@ -25,13 +25,12 @@ When you create a set, the current record is “remembered” by the set. **USE 
 The following example uses [LOAD SET](load-set.md) to load a set of the Acme locations in New York. It then uses **USE SET** to make the loaded set the current selection:
 
 ```4d
- LOAD SET([Companies];"NY Acme";"NYAcmeSt") ` Load the set into memory
-
- USE SET("NY Acme") ` Change current selection to NY Acme
-
- CLEAR SET("NY Acme") ` Clear the set from memory
+ LOAD SET([Companies];"NY Acme";"NYAcmeSt") // Load the set into memory
+ USE SET("NY Acme") // Change current selection to NY Acme
+ CLEAR SET("NY Acme") // Clear the set from memory
 ```
 
 #### See also 
+
 [CLEAR SET](clear-set.md)  
 [LOAD SET](load-set.md)  

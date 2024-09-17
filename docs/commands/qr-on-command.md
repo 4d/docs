@@ -36,6 +36,7 @@ If you want the initial command to be executed, you need to include the followin
 If you pass an invalid *area* number, the error -9850 will be generated.
 
 #### See also 
+
 [QR Commands](../../4D/20-R6/QR-Commands.302-6958472.en.html)  
 [QR EXECUTE COMMAND](qr-execute-command.md)  
 [QR Get command status](qr-get-command-status.md)  

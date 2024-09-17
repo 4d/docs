@@ -29,5 +29,6 @@ Pass the number of the plug-in for which you want to find out the associated gro
 | 4D Write license       | Longint | 808464697 |
 
 #### See also 
+
 [SET GROUP ACCESS](set-group-access.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  

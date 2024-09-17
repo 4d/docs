@@ -35,18 +35,11 @@ You want to update your license and receive a message when it's completed:
 
 ```4d
   // Method to be executed on server
-
- C_OBJECT($res)
-
+ var $res : Object
  $res:=Refresh license
-
  If($res.success)
-
     ALERT("Success")
-
  Else
-
     ALERT($res.statusText)
-
  End if
 ```

@@ -63,31 +63,30 @@ You want to replace the styled text selected by the user with the contents of a 
 
 Here is the selected text:
 
-![](../assets/en/Commands/pict579068.en.png)
+![](../assets/en/commands/pict579068.en.png)
 
 The following contents are stored in the field:
 
-![](../assets/en/Commands/pict579073.en.png)
+![](../assets/en/commands/pict579073.en.png)
 
 After executing this code:
 
 ```4d
  vtempo:="Demonstration"
-
  GET HIGHLIGHT([Products]Notes;vStart;vEnd)
-
  ST SET TEXT([Products]Notes;vtemp;vStart;vEnd)
 ```
 
 The field and its contents are as follows:
 
-![](../assets/en/Commands/pict579075.en.png) ![](../assets/en/Commands/pict579077.en.png)
+![](../assets/en/commands/pict579075.en.png) ![](../assets/en/commands/pict579077.en.png)
 
 #### Example 2 
 
 Refer to the example of the [ST SET PLAIN TEXT](st-set-plain-text.md) command. 
 
 #### See also 
+
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
 [ST SET PLAIN TEXT](st-set-plain-text.md)  

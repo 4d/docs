@@ -45,9 +45,7 @@ The WEBFORM method can be as follows:
 
 ```4d
  ARRAY TEXT($anames;0)
-
  ARRAY TEXT($avalues;0)
-
  WEB GET VARIABLES($anames;$avalues)
 ```
 
@@ -55,15 +53,13 @@ The result will be:
 
 ```4d
  $anames{1}="vNAME"
-
  $anames{2}="vCITY"
-
  $avalues{1}="ROBERT"
-
  $avalues{2}="DALLAS"
 ```
 
 The vNAME variable contains ROBERT and the vCITY variable contains DALLAS.
 
 #### See also 
+
 [WEB GET BODY PART](web-get-body-part.md)  

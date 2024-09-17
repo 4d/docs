@@ -44,40 +44,24 @@ The value returned for the same object is the same on all the platforms (macOS/W
 This example compares two images using the MD5 algorithm: 
 
 ```4d
- C_PICTURE($vPict1;$vPict2)
-
- C_BLOB($FirstBlob;$SecondBlob)
-
+ var $vPict1;$vPict2 : Picture
+ var $FirstBlob;$SecondBlob : Blob
  READ PICTURE FILE("c:\\myPhotos\\photo1.png")
-
  If(OK=1)
-
     READ PICTURE FILE("c:\\myPhotos\\photo2.png")
-
     If(OK=1)
-
        PICTURE TO BLOB($vPict1;$FirstBlob;".png")
-
        PICTURE TO BLOB($vPict2;$SecondBlob;".png")
  
-
        $MD5_1:=Generate digest($FirstBlob;MD5 digest)
-
        $MD5_2:=Generate digest($SecondBlob;MD5 digest)
  
-
        If($MD5_1#$MD5_2)
-
           ALERT("These two images are different.")
-
        Else
-
           ALERT("These two images are identical.")
-
        End if
-
     End if
-
  End if
 ```
 
@@ -87,15 +71,13 @@ These examples illustrate how to retrieve the digest key of a text:
 
 ```4d
  $key1:=Generate digest("The quick brown fox jumps over the lazy dog.";MD5 digest)
-
   // $key1 is "e4d909c290d0fb1ca068ffaddf22cbd0"
-
  $key2:=Generate digest("The quick brown fox jumps over the lazy dog.";SHA1 digest)
-
   // $key2 is "408d94384216f890ff7a0c3528e8bed1e0b01621"
 ```
 
 #### See also 
+
 [BASE64 DECODE](base64-decode.md)  
 [BASE64 ENCODE](base64-encode.md)  
 [Generate password hash](generate-password-hash.md)  

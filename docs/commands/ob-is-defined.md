@@ -32,15 +32,11 @@ If you pass the *property* parameter, the command checks whether this property e
 Syntax testing the initialization of an object:
 
 ```4d
- C_OBJECT($object)
-
+ var $object : Object
  $def:=OB Is defined($object) // $def=false since $object is not initialized
  
-
  OB SET($object;"Name";"Martin")
-
  OB REMOVE($object;"Name")
-
  $def2:=OB Is defined($object) // $def2=true since $object is empty {} but has been initialized
 ```
 
@@ -49,16 +45,11 @@ Syntax testing the initialization of an object:
 Test for existence of a property:
 
 ```4d
- C_OBJECT($ref)
-
+ var $ref : Object
  OB SET($ref;"name";"smith";"age";42)
-
   //...
-
  If(OB Is defined($ref;"age"))
-
   //...
-
  End if
 ```
 
@@ -69,4 +60,5 @@ This test is equivalent to:
 ```
 
 #### See also 
+
 [OB Is empty](ob-is-empty.md)  

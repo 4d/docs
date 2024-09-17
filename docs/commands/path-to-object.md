@@ -44,134 +44,89 @@ Note that **Path to object** only handles strings. It neither checks if the path
 The following examples show various results with file paths:
 
 ```4d
- C_OBJECT($o)
-
+ var $o : Object
  $o:=Path to object("C:\\first\\second\\fileZ") //on Windows
-
   //$o.parentFolder="C:\\first\\second\\"
-
   //$o.name="fileZ"
-
   //$o.extension=""
-
   //$o.isFolder=false
 ```
 
 ```4d
- C_OBJECT($o)
-
+ var $o : Object
  $o:=Path to object("osx:Users:john:Documents:Comments.text)  //on macOS
-
   //$o.parentFolder="osx:Users:john:Documents:"
-
   //$o.name="Comments"
-
   //$o.extension=".text"
-
   //$o.isFolder=false
 ```
 
 ```4d
- C_OBJECT($o)
-
+ var $o : Object
  $o:=Path to object("\\images\\jan\\pict1.png";Path is system) //on Windows
-
   //$o.parentFolder="\\images\\jan\\"
-
   //$o.name="pict1"
-
   //$o.extension=".png"
-
   //$o.isFolder=false
 ```
 
 Defining a path to a folder:
 
 ```4d
- C_OBJECT($o)
-
+ var $o : Object
  $o:=Path to object("osx:Users:oscargoldman:Desktop:Databases:") //macOS
-
   //$o.parentFolder="osx:Users:oscargoldman:Desktop:"
-
   //$o.name="Databases"
-
   //$o.extension=""
-
   //$o.isFolder=True
 ```
 
 ```4d
- C_OBJECT($o)
-
+ var $o : Object
  $o:=Path to object("C:\\4D\\Main\\216410\\64\\4D\\4D.user\\")  //windows
-
   //$o.parentFolder="C:\\4D\\Main\\216410\\64\\4D\\"
-
   //$o.name="4D"
-
   //$o.extension=".user"
-
   //$o.isFolder=true
 ```
 
 ```4d
- C_OBJECT($o)
-
+ var $o : Object
  $o:=Path to object("/first/second.bundle/";Path is POSIX)
-
   //$o.parentFolder="/first/"
-
   //$o.name="second"
-
   //$o.extension=".bundle"
-
   //$o.isFolder=true
 ```
 
 If the path is a root directory, *parentFolder* is empty:
 
 ```4d
- C_OBJECT($o)
-
+ var $o : Object
  $o:=Path to object("C:\\")  //on windows
-
   //$o.parentFolder=""
-
   //$o.name="c:"
-
   //$o.extension=""
-
   //$o.isFolder=true
 ```
 
 ```4d
- C_OBJECT($o)
-
+ var $o : Object
  $o:=Path to object("osx:") //on macOS
-
   //$o.parentFolder=""
-
   //$o.name="osx"
-
   //$o.extension=""
-
   //$o.isFolder=true
 ```
 
 If the last portion of the path is ".something", it is considered as a file name:
 
 ```4d
- C_OBJECT($o)
-
+ var $o : Object
  $o:=Path to object("/folder/.invisible";Path is POSIX)
-
   //$o.parentFolder="/folder/"
-
   //$o.name=".invisible"
-
   //$o.extension=""
-
   //$o.isFolder=false
 ```
 
@@ -180,25 +135,16 @@ If the last portion of the path is ".something", it is considered as a file name
 You can combine this command with the [Object to path](object-to-path.md) to rename a file in a path:
 
 ```4d
- C_OBJECT($o)
-
- C_TEXT($path)
-
+ var $o : Object
+ var $path : Text
  $o:=Path to object("C:\\4D\\resources\\images\\4D.jpg")
-
   //$o.parentFolder="C:\\4D\\resources\\images\\"
-
   //$o.name="4D"
-
   //$o.extension=".jpg"
-
   //$o.isFolder=false
  
-
  $o.name:="4DOld"
-
  $path:=Object to path($o)
-
   //$path="C:\4D\resources\images\4DOld.jpg"
 ```
 
@@ -207,28 +153,20 @@ You can combine this command with the [Object to path](object-to-path.md) to ren
 You want to know the number of subfolders contained in a path:
 
 ```4d
- C_OBJECT($o)
-
- C_TEXT($path)
-
- C_LONGINT($vCount)
-
+ var $o : Object
+ var $path : Text
+ var $vCount : Integer
  $path:=Select folder //let the user select a folder
-
  $o:=Path to object($path)
-
  Repeat
-
     $o:=Path to object($o.parentFolder)
-
     $vCount:=$vCount+1
-
  Until($o.parentFolder="")
-
  ALERT("The path depth is: "+String($count))
 ```
 
 #### See also 
+
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
 [File](file.md)  

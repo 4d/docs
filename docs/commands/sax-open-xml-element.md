@@ -34,18 +34,20 @@ The following statement:
 
 ```4d
  vElement:="Book"
-
  SAX OPEN XML ELEMENT($DocRef;vElement)
 ```
 
 ... writes the following line in the document: 
 
+```XML
 <Book
+```
 
 #### Error management 
 
 If an invalid character is passed in *tag*, an error is generated. 
 
 #### See also 
+
 [SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
 [SAX OPEN XML ELEMENT ARRAYS](sax-open-xml-element-arrays.md)  

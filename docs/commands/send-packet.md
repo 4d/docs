@@ -33,32 +33,19 @@ When writing to a document, the first SEND PACKET begins writing at the beginnin
 The following example writes data from fields to a document. It writes the fields as fixed-length fields. Fixed-length fields are always of a specific length. If a field is shorter than the specified length, the field is padded with spaces. (That is, spaces are added to make up the specified length.) Although the use of fixed-length fields is an inefficient method of storing data, some computer systems and applications still use them:
 
 ```4d
- $vhDocRef :=Create document("") ` Create a document
-
- If(OK=1) ` Was the document created?
-
-    For($vlRecord;1;Records in selection([People])) ` Loop once for each record
-
-  ` Send a packet. Create the packet from a string of 15 spaces containing the first name field
-
+ $vhDocRef :=Create document("") // Create a document
+ If(OK=1) // Was the document created?
+    For($vlRecord;1;Records in selection([People])) // Loop once for each record
+  // Send a packet. Create the packet from a string of 15 spaces containing the first name field
        SEND PACKET($vhDocRef;Change string(15*Char(SPACE);[People]First;1))
-
-  ` Send a second packet. Create the packet from a string of 15 spaces containing the last name field
-
-  ` This could be in the first SEND PACKET, but is separated for clarity
-
+  // Send a second packet. Create the packet from a string of 15 spaces containing the last name field
+  // This could be in the first SEND PACKET, but is separated for clarity
        SEND PACKET($vhDocRef;Change string(15*Char(SPACE);[People]Last;1))
-
        NEXT RECORD([People])
-
     End for
-
-  ` Send a Char(26), which is used as an end-of-file marker for some computers
-
+  // Send a Char(26), which is used as an end-of-file marker for some computers
     SEND PACKET($vhDocRef;Char(SUB ASCII code))
-
-    CLOSE DOCUMENT($vhDocRef) ` Close the document
-
+    CLOSE DOCUMENT($vhDocRef) // Close the document
  End if
 ```
 
@@ -67,46 +54,29 @@ The following example writes data from fields to a document. It writes the field
 This example illustrates the sending and retrieval of extended characters via a BLOB in a document:
 
 ```4d
- C_BLOB($send_blob)
-
- C_BLOB($receive_blob)
-
+ var $send_blob : Blob
+ var $receive_blob : Blob
  TEXT TO BLOB("âzértÿ";$send_blob;UTF8 text without length)
-
  SET BLOB SIZE($send_blob;16;255)
-
  $send_blob{6}:=0
-
  $send_blob{7}:=1
-
  $send_blob{8}:=2
-
  $send_blob{9}:=3
-
  $send_blob{10}:=0
-
  $vlDocRef:=Create document("blob.test")
-
  If(OK=1)
-
     SEND PACKET($vlDocRef;$send_blob)
-
     CLOSE DOCUMENT($vlDocRef)
-
  End if
-
  $vlDocRef:=Open document(document)
-
  If(OK=1)
-
     RECEIVE PACKET($vlDocRef;$receive_blob;65536)
-
     CLOSE DOCUMENT($vlDocRef)
-
  End if
 ```
 
 #### See also 
+
 [Get document position](get-document-position.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  

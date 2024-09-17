@@ -46,5 +46,6 @@ If you pass a menu number, the command will take the corresponding menu in the m
 Refer to the example of the [Get menu item key](get-menu-item-key.md) command. 
 
 #### See also 
+
 [Get menu item key](get-menu-item-key.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  

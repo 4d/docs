@@ -25,4 +25,5 @@ If you pass the optional *\** parameter, this indicates that the *object* parame
 Pass **True** in the *invisible* parameter to hide the focus rectangle and **False** to keep it visible.
 
 #### See also 
+
 [OBJECT Get focus rectangle invisible](object-get-focus-rectangle-invisible.md)  

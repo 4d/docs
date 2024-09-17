@@ -25,10 +25,10 @@ The following code retrieves the column count and inserts a column to the right 
 
 ```4d
  $ColNb:=QR Count columns(MyArea)
-
  QR INSERT COLUMN(MyArea;$ColNb+1;->[Table 1]Field2)
 ```
 
 #### See also 
+
 [QR DELETE COLUMN](qr-delete-column.md)  
 [QR INSERT COLUMN](qr-insert-column.md)  

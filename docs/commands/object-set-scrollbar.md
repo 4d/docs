@@ -38,6 +38,7 @@ The following table indicates the values you can pass in the *horizontal* and *v
 **Note:** For more information about the automatic mode, refer to [Scroll bars](/4Dv20R6/4D/20-R6/Scroll-bars.300-7003352.en.html).
 
 #### See also 
+
 [LISTBOX Get property](listbox-get-property.md)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT GET SCROLLBAR](object-get-scrollbar.md)  

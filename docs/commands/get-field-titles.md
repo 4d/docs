@@ -25,5 +25,6 @@ Otherwise, **GET FIELD TITLES** returns the names of all database fields as defi
 In both cases, the command does not return invisible fields. 
 
 #### See also 
+
 [GET TABLE TITLES](get-table-titles.md)  
 [SET FIELD TITLES](set-field-titles.md)  

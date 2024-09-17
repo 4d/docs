@@ -45,8 +45,7 @@ Optionally, you can prefill the new object by passing one or several *property*/
 You want to create a new prefilled shared object:
 
 ```4d
- C_OBJECT($contact)
-
+ var $contact : Object
  $contact:=New shared object("name";"Smith";"firstname";"John")
 ```
 
@@ -55,18 +54,15 @@ You want to create a new prefilled shared object:
 You want to create and modify a shared object. The structure must be called for this object:   
 
 ```4d
- C_OBJECT($s_obj)
-
+ var $s_obj : Object
  $s_obj:=New shared object("prop1";"alpha")
-
  Use($s_obj)
-
     $s_obj.prop1:="omega"
-
  End use
 ```
 
 #### See also 
+
 [New object](new-object.md)  
 [New shared collection](new-shared-collection.md)  
 [Shared objects and shared collections](../../4D/20-R6/Shared-objects-and-shared-collections.300-6957624.en.html)  

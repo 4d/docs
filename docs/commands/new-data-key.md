@@ -36,23 +36,18 @@ If an empty string was passed in *passPhrase*, the command returns *null*.
 You want to save an encryption key in a .4DKeyChain file:
 
 ```4d
- C_OBJECT($dataKey)
-
- C_TEXT($passphrase)
+ var $dataKey : Object
+ var $passphrase : Text
  
-
  $passphrase:=Request("Enter the passphrase:")
-
  If(OK=1)
-
     $dataKey:=New data key($passphrase)
-
     TEXT TO DOCUMENT("generatedKey.4DKeyChain";JSON Stringify($dataKey))
-
  End if
 ```
 
 #### See also 
+
 [4D Blog - New 4D commands to work with encrypted data](https://blog.4d.com/new-4d-commands-to-work-with-encrypted-data/)  
 [Decrypt data BLOB](decrypt-data-blob.md)  
 [Discover data key](discover-data-key.md)  

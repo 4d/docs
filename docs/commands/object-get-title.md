@@ -29,4 +29,5 @@ Variable or field (if * is omitted) |
 If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a field or a variable. In this case, you pass a field or variable reference (object field or variable only) instead of a string.
 
 #### See also 
+
 [OBJECT SET TITLE](object-set-title.md)  

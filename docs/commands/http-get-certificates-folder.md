@@ -23,16 +23,13 @@ By default, 4D uses the "ClientCertificatesFolder" folder that is created next t
 You want to change certificates folder temporarily:
 
 ```4d
- C_TEXT($certifFolder)
-
+ var $certifFolder : Text
  $certifFolder :=HTTP Get certificates folder //save current folder
-
  HTTP SET CERTIFICATES FOLDER("C:/temp/certifTempo/")
-
  ... // execution of specific requests
-
  HTTP SET CERTIFICATES FOLDER($certifFolder) //restore previous folder
 ```
 
 #### See also 
+
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  

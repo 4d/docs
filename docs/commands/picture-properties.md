@@ -26,4 +26,5 @@ The *width* and *height* parameters return the width and height of the picture.
 The *hOffset*, *vOffset*, and *mode* parameters return the horizontal and vertical positions and the transfer mode of the picture when displayed on the background in a form (“On Background”).
 
 #### See also 
+
 [Picture size](picture-size.md)  

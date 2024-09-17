@@ -36,17 +36,13 @@ You want to enable two events and get the list of events for an object:
 
 ```4d
  ARRAY LONGINT($ArrCurrentEvents;0)
-
  ARRAY LONGINT($ArrEnabled;2)
-
  $ArrEnabled{1}:=On Header Click
-
  $ArrEnabled{2}:=On Footer Click
-
  OBJECT SET EVENTS(*;"Col1";$ArrEnabled;Enable events others unchanged)
-
  OBJECT GET EVENTS(*;"Col1";$ArrCurrentEvents)
 ```
 
 #### See also 
+
 [OBJECT SET EVENTS](object-set-events.md)  

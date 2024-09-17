@@ -27,4 +27,5 @@ In *charSet*, pass the character set of the text contained in *blob*, which will
 If the command has been correctly executed, the OK variable is set to 1\. Otherwise, it is set to 0.
 
 #### See also 
+
 [CONVERT FROM TEXT](convert-from-text.md)  

@@ -33,21 +33,19 @@ The **LISTBOX SET ROW HEIGHT** command modifies the row height array specified i
 
 You want to change the height of a few rows in the following list box:
 
-![](../assets/en/Commands/pict3071133.en.png)
+![](../assets/en/commands/pict3071133.en.png)
 
 If you execute this code:
 
 ```4d
   //current unit is pixels
-
  LISTBOX SET ROW HEIGHT(*;"listboxname";3;40) //Kuwait
-
  LISTBOX SET ROW HEIGHT(*;"listboxname";7;14) //Serbia
 ```
 
 ... you get the following result:
 
-![](../assets/en/Commands/pict3071135.en.png)
+![](../assets/en/commands/pict3071135.en.png)
 
 #### Example 2 
 
@@ -56,11 +54,8 @@ You have set a default row height and then set several individual row height val
 ```4d
  LISTBOX SET ROWS HEIGHT(*;"listboxname";25;lk pixels) // global height set in pixels
  
-
  LISTBOX SET ROW HEIGHT(*;"listboxname";1;30) // row 1: 30 pixels
-
  LISTBOX SET ROW HEIGHT(*;"listboxname";5;40) // row 5: 40 pixels
-
  LISTBOX SET ROW HEIGHT(*;"listboxname";11;50) // row 11: 50 pixels
 ```
 
@@ -81,6 +76,7 @@ On the other hand, if the code below is executed subsequently…
 …then rows 1, 5 and 11 are reset to the global default row height set by [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) (i.e., 2 lines) because the unit has changed from pixels to lines**.** Since there is no automatic conversion applied, changing units always results in row heights being reinitialized to the new default value defined.
 
 #### See also 
+
   
 [LISTBOX Get row height](listbox-get-row-height.md)  
 [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  

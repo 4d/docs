@@ -32,4 +32,5 @@ In *method*, pass the name of the 4D method as a character string (expression).
 Refer to the example of the [SET MENU BAR](set-menu-bar.md) command. 
 
 #### See also 
+
 [Get menu item method](get-menu-item-method.md)  

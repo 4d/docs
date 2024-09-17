@@ -26,16 +26,13 @@ In the *property* parameter, pass the label of the property to be read. Note tha
 You want to remove the "age" property of an object:
 
 ```4d
- C_OBJECT($Object)
-
+ var $Object : Object
  OB SET($Object;"name";"smith";"age";42;"client";True)
-
   // $Object={"name":"smith","age":42,"client":true}
-
  OB REMOVE($Object;"age")
-
   // $Object={"name":"smith","client":true}
 ```
 
 #### See also 
+
 [OB SET](ob-set.md)  

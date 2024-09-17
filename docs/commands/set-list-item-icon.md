@@ -34,16 +34,14 @@ Pass a valid 4D picture expression (field, variable, pointer, etc.) in the *icon
 We want to assign the same picture to two different items. The following code is optimized since the picture is only loaded into memory once:
 
 ```4d
- C_PICTURE($picture)
-
+ var $picture : Picture
  READ PICTURE FILE("myPict.png";$picture)
-
  SET LIST ITEM ICON(mylist;ref1;$picture)
-
  SET LIST ITEM ICON(mylist;ref2;$picture)
 ```
 
 #### See also 
+
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM FONT](set-list-item-font.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  

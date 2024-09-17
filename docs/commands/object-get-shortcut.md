@@ -37,4 +37,5 @@ If there are no modifier keys for the shortcut, *modifiers* returns 0\.
 **Note:** If the *object* parameter designates several objects in the form that have different settings, the command returns "" in *key* and 0 in *modifiers*. 
 
 #### See also 
+
 [OBJECT SET SHORTCUT](object-set-shortcut.md)  

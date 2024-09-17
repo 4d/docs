@@ -31,4 +31,5 @@ The following table describes the values that can be retrieved in both *type* an
 If you pass an invalid *area* number, the error -9850 will be generated.
 
 #### See also 
+
 [QR SET DESTINATION](qr-set-destination.md)  

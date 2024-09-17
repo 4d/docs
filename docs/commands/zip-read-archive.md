@@ -25,5 +25,6 @@ The documentation for this command has been moved. See [**ZIP Read archive** com
 The **ZIP Read archive** command retrieves the contents of zipFile and returns it as an object. 
 
 #### See also 
+
 [File and Folder](file-and-folder.md)  
 [ZIP Create archive](zip-create-archive.md)  

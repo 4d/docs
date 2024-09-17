@@ -27,31 +27,30 @@ To sort in ascending order, pass *\>*. To sort in descending order, pass <. If y
 
 Given the list named *hList,* shown here in the Application environment:
 
-![](../assets/en/Commands/pict23037.en.png)
+![](../assets/en/commands/pict23037.en.png)
 
  After the execution of this code:
 
 ```4d
-  ` Sort the list and it sublists in ascending order
-
+  // Sort the list and it sublists in ascending order
  SORT LIST(hList;>)
 ```
 
 The list looks like:
 
-![](../assets/en/Commands/pict23038.en.png)
+![](../assets/en/commands/pict23038.en.png)
 
 After the execution of this code:
 
 ```4d
-  ` Sort the list and it sublists in descending order
-
+  // Sort the list and it sublists in descending order
  SORT LIST(hList;<)
 ```
 
 The list looks like:
 
-![](../assets/en/Commands/pict23039.en.png)
+![](../assets/en/commands/pict23039.en.png)
 
 #### See also 
+
 [Selected list items](selected-list-items.md)  

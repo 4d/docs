@@ -52,7 +52,6 @@ The following example moves the insertion point to the end of the enterable fiel
 
 ```4d
  $vLen:=Length([Products]Comments)+1
-
  HIGHLIGHT TEXT([Products]Comments;$vLen;$vLen)
 ```
 
@@ -61,4 +60,5 @@ The following example moves the insertion point to the end of the enterable fiel
 See example for the [FILTER KEYSTROKE](filter-keystroke.md) command.
 
 #### See also 
+
 [GET HIGHLIGHT](get-highlight.md)  

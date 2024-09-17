@@ -28,4 +28,5 @@ Pass the type of information to get in *selector*. The type and content of the *
 | Next backup date        | Longint | 4     | *info1* returns the date and *info2* the time of the next scheduled backup                                                                                                               |
 
 #### See also 
+
 [RESTORE](restore.md)  

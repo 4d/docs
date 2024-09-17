@@ -55,19 +55,13 @@ This code allows you to select invoices in an entity selection using only a sing
 
 ```4d
   //On the On Load event of the form we have: Form.invoices:=ds.Invoices.all()
-
   //The ListBox "Invoices" displays the entity selection Form.invoices
  
-
- C_OBJECT($cash)
-
- C_OBJECT($card)
+ var $cash : Object
+ var $card : Object
  
-
   //Select invoices paid with cash
-
  $cash:=Form.invoices.query("paymentMethod=:1";"Cash")
-
  LISTBOX SELECT ROWS(*;"Invoices";$cash;lk replace selection)
 ```
 
@@ -76,20 +70,15 @@ This code allows you to select invoices in an entity selection using only a sing
 Example with a collection of objects:
 
 ```4d
- C_TEXT($name)
-
+ var $name : Text
  $name:=Request("Enter a name")
-
  If(OK=1)
-
   // Form.studentsColl is a collection of objects
-
     $selection:=Form.studentsColl.query("lastname = :1";$name)
-
     LISTBOX SELECT ROWS(*;"LBStudents";$selection;lk add selection)
-
  End if
 ```
 
 #### See also 
+
 [LISTBOX SELECT ROW](listbox-select-row.md)  

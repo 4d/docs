@@ -46,10 +46,8 @@ This command is designed to return the type of a scalar expression, *i.e.* the v
 **Note:** Numerical object properties are always considered real values:
 
 ```4d
- C_OBJECT($o)
-
+ var $o : Object
  $o:=New object("value";42)
-
  $vType:=Value type($o.value) //$vType=Is real
 ```
 
@@ -57,7 +55,6 @@ This command is designed to return the type of a scalar expression, *i.e.* the v
 
 ```4d
  $vType1:=Type([myTable]Long64field) //$vType=Is integer 64 bits
-
  $vType2:=Value type([myTable]Long64field) //$vType=Is real (in interpreted mode)
 ```
 
@@ -85,21 +82,13 @@ You want to handle the various possible types of an object property value:
 
 ```4d
  Case of
-
     :(Value type($o.value)=Is real)
-
   //handle a numeric value
-
     :(Value type($o.value)=Is text)
-
   //handle a text
-
     :(Value type($o.value)=Is object)
-
   //handle a sub-object
-
        ...
-
  End case
 ```
 
@@ -108,25 +97,18 @@ You want to handle the various possible types of an object property value:
 You want to sum up all numeric values in a collection:
 
 ```4d
- C_COLLECTION($col)
-
- C_REAL($sum)
-
+ var $col : Collection
+ var $sum : Real
  $col:=New collection("Hello";20;"World2";15;50;Current date;True;10)
-
  For($i;0;$col.length-1) //-1 since collections start at 0
-
     If(Value type($col[$i])=Is real)
-
        $sum:=$sum+$col[$i]
-
     End if
-
  End for
-
  ALERT(String($sum)) //95
 ```
 
 #### See also 
+
 [OB Get type](ob-get-type.md)  
 [Type](type.md)  

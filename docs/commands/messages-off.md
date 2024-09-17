@@ -59,11 +59,10 @@ The following example turns off the progress meter before doing a sort, and then
 
 ```4d
  MESSAGES OFF
-
  ORDER BY([Addresses];[Addresses]ZIP;>;[Addresses]Name2;>)
-
  MESSAGES ON
 ```
 
 #### See also 
+
 [MESSAGES ON](messages-on.md)  

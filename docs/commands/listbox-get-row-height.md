@@ -29,6 +29,7 @@ The returned height value is expressed:
 * in pixels when the row height is variable, i.e. set to automatic (see [Automatic Row Height](/4Dv20R6/4D/20-R6/List-box-column-specific-properties.300-7003336.en.html#6127001)) or handled by an array.
 
 #### See also 
+
 [LISTBOX Get auto row height](listbox-get-auto-row-height.md)  
 [LISTBOX Get rows height](listbox-get-rows-height.md)  
 [LISTBOX SET ROW HEIGHT](listbox-set-row-height.md)  

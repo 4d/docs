@@ -50,15 +50,10 @@ The following example sets a shipping field, depending on the weight of the ship
 
 ```4d
  If([Shipments]Weight<=1)
-
     [Shipments]Shipper:="US Mail"
-
     OBJECT SET ENTERABLE([Shipments]Shipper;False)
-
  Else
-
     OBJECT SET ENTERABLE([Shipments]Shipper;True)
-
  End if
 ```
 
@@ -67,11 +62,11 @@ The following example sets a shipping field, depending on the weight of the ship
 Here is the object method of a checkbox located in the header of a list in order to control the Enter in List mode: 
 
 ```4d
- C_BOOLEAN(bEnterable)
-
+ var bEnterable : Boolean
  OBJECT SET ENTERABLE([Table1];bEnterable)
 ```
 
 #### See also 
+
 [OBJECT Get enterable](object-get-enterable.md)  
 [OBJECT SET VISIBLE](object-set-visible.md)  

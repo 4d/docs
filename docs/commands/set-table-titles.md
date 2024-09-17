@@ -52,122 +52,68 @@ You are building a 4D application that you plan to sell internationally. Therefo
   
 In your database, add the following table:  
 
-![](../assets/en/Commands/pict36594.en.png)
+![](../assets/en/commands/pict36594.en.png)
 
  Then, create the TRANSLATE TABLES AND FIELDS project method listed below. This method browses the actual structure of your database and creates all the necessary *\[Translations\]* records for the localization corresponding to the language passed as parameter.  
 
 ```4d
   //TRANSLATE TABLES AND FIELDS project method
-
   //TRANSLATE TABLES AND FIELDS (Text)
-
   //TRANSLATE TABLES AND FIELDS (LanguageCode)
  
-
- C_TEXT($1) //language code
-
- C_LONGINT($vlTable;$vlField)
-
- C_TEXT($Language)
-
+ var $1 : Text //language code
+ var $vlTable;$vlField : Integer
+ var $Language : Text
  $Language:=$1
  
-
  For($vlTable;1;Get last table number) //Pass through each table
-
     If($vlTable#(Table(->[Translations]))) //Do not translate table of translations
-
   //Check if there is a translation of the table name for the specified language
-
        QUERY([Translations];[Translations]LanguageCode=$Language;*) //desired language
-
        QUERY([Translations];&;[Translations]TableID=$vlTable;*) //table number
-
        QUERY([Translations];&;[Translations]FieldID=0) //field number = 0 means that it is a table name
-
        If(Is table number valid($vlTable)) //check that the table still exists
-
           If(Records in selection([Translations])=0)
-
   //Otherwise, create the record
-
              CREATE RECORD([Translations])
-
              [Translations]LanguageCode:=$Language
-
              [Translations]TableID:=$vlTable
-
              [Translations]FieldID:=0
-
   //The name of the translated table will need to be entered
-
              [Translations]Translation:=Table name($vlTable)+" in "+$Language
-
              SAVE RECORD([Translations])
-
           End if
  
-
           For($vlField;1;Get last field number($vlTable))
-
   //Check if there is a translation of the field name for the specified language
-
              QUERY([Translations];[Translations]LanguageCode=$Language;*) //desired language
-
              QUERY([Translations];&;[Translations]TableID=$vlTable;*) //table number
-
              QUERY([Translations];&;[Translations]FieldID=$vlField) //field number
-
              If(Is field number valid($vlTable;$vlField))
-
                 If(Records in selection([Translations])=0)
-
   //Otherwise, create the record
-
                    CREATE RECORD([Translations])
-
                    [Translations]LanguageCode:=$Language
-
                    [Translations]TableID:=$vlTable
-
                    [Translations]FieldID:=$vlField
-
   //The name of the translated field will need to be entered
-
                    [Translations]Translation:=Field name($vlTable;$vlField)+" in "+$Language
-
                    SAVE RECORD([Translations])
-
                 End if
-
              Else
-
                 If(Records in selection([Translations])#0)
-
   //If the field no longer exists, remove the translation
-
                    DELETE RECORD([Translations])
-
                 End if
-
              End if
-
           End for
-
        Else
-
           If(Records in selection([Translations])#0)
-
   //If the table no longer exists, remove the translation
-
              DELETE RECORD([Translations])
-
           End if
-
        End if
-
     End if
-
  End for
 ```
   
@@ -191,58 +137,33 @@ with the project method LOCALIZED TABLES AND FIELDS:
 
 ```4d
   //LOCALIZED TABLES AND FIELDS global method
-
   //LOCALIZED TABLES AND FIELDS (Text)
-
   //LOCALIZED TABLES AND FIELDS (LanguageCode)
  
-
- C_TEXT($1) //Language code
-
- C_LONGINT($vlTable;$vlField)
-
- C_TEXT($Language)
-
- C_LONGINT($vlTableNum;$vlFieldNum)
-
+ var $1 : Text //Language code
+ var $vlTable;$vlField : Integer
+ var $Language : Text
+ var $vlTableNum;$vlFieldNum : Integer
  $Language:=$1
  
-
   //Updating table names
-
  ARRAY TEXT($asNames;0) //Initialize arrays for SET TABLE TITLES and SET FIELD TITLES
-
  ARRAY INTEGER($aiNumbers;0)
-
  QUERY([Translations];[Translations]LanguageCode=$Language;*)
-
  QUERY([Translations];&;[Translations]FieldID=0) //thus table names
-
  SELECTION TO ARRAY([Translations]Translation;$asNames;[Translations]TableID;$aiNumbers)
-
  SET TABLE TITLES($asNames;$aiNumbers)
  
-
   //Updating field names
-
  $vlTableNum:=Get last table number //Get number of tables in database
-
  For($vlTable;1;$vlTableNum) //Pass through each table
-
     If(Is table number valid($vlTable))
-
        QUERY([Translations];[Translations]LanguageCode=$Language;*)
-
        QUERY([Translations];&;[Translations]TableID=$vlTable;*)
-
        QUERY([Translations];&;[Translations]FieldID#0) //avoid the zero that serves as table name
-
        SELECTION TO ARRAY([Translations]Translation;$asNames;[Translations]FieldID;$aiNumbers)
-
        SET FIELD TITLES(Table($vlTable)->;$asNames;$aiNumbers)
-
     End if
-
  End for
 ```
   
@@ -258,6 +179,7 @@ You want to remove all defined custom field and table names:
 ```
 
 #### See also 
+
 [Get last table number](get-last-table-number.md)  
 [GET TABLE TITLES](get-table-titles.md)  
 [Parse formula](parse-formula.md)  

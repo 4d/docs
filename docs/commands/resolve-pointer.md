@@ -48,7 +48,7 @@ b. Set the properties of the object.
 c. Attach the following method to that object:
 
 ```4d
- DoSomething(Self) ` DoSomething being a project method in your database
+ DoSomething(Self) // DoSomething being a project method in your database
 ```
 
   
@@ -58,7 +58,6 @@ e. Within the DoSomething method, if you need to know the index of the variable 
 
 ```4d
  RESOLVE POINTER($1;$vsVarName;$vlTableNum;$vlFieldNum)
-
  $vlVarNum:=Num(Substring($vsVarName;2))
 ```
 
@@ -70,19 +69,12 @@ For debugging purposes, you need to verify that the second parameter ($2) to a m
   
 ```4d
  If(<>DebugOn)
-
     RESOLVE POINTER($2;$vsVarName;$vlTableNum;$vlFieldNum)
-
     If(Not(($vlTableNum>0)&($vlFieldNum=-1)&($vsVarName="")))
-
   // WARNING: The pointer is not a reference to a table
-
        TRACE
-
        End
-
     End if
-
   // ...
 ```
 
@@ -96,29 +88,20 @@ Here is an example of a 2D array pointer:
 
 ```4d
  ARRAY TEXT(atCities;100;50)
-
- C_POINTER($city)
-
+ var $city : Pointer
  atCities{1}{2}:="Rome"
-
  atCities{1}{5}:="Paris"
-
  atCities{2}{6}:="New York"
-
   // ...other values
-
  $city:=->atCities{1}{5}
-
  RESOLVE POINTER($city;$var;$rowNum;$colNum)
-
   //$var="atCities"
-
   //$rowNum="1"
-
   //$colNum="5"
 ```
 
 #### See also 
+
 [\_o\_DRAG AND DROP PROPERTIES](../../4D/20-R6/o-DRAG-AND-DROP-PROPERTIES.301-6957656.en.html)  
 [Field](field.md)  
 [Get pointer](get-pointer.md)  

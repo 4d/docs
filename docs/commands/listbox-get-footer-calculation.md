@@ -28,4 +28,5 @@ The *object* parameter can designate:
 You can compare the value returned with the constants of the [Listbox Footer Calculation](/4Dv20R6/4D/20-R6/Listbox-Footer-Calculation.302-6958456.en.html) theme (see the [LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md) command). 
 
 #### See also 
+
 [LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)  

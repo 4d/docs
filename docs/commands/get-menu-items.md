@@ -28,10 +28,7 @@ You want to find out the contents of the menu bar of the current process:
 
 ```4d
  ARRAY TEXT(menuTitlesArray;0)
-
  ARRAY TEXT(menuRefsArray;0)
-
  MenuBarRef:=Get menu bar reference(Frontmost process)
-
  GET MENU ITEMS(MenuBarRef;menuTitlesArray;menuRefsArray)
 ```

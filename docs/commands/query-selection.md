@@ -33,13 +33,12 @@ You want to query the records that have been previously highlighted by the user 
 
 ```4d
  USE SET("UserSet") //replace the current selection with the highlighted records
-
  QUERY SELECTION([Company];[Company]City="New York City";*)
-
  QUERY SELECTION([Company]Type Business="Stock Exchange")
 ```
 
 You will find all companies located in New York City, with a Stock Exchange activity, among the initial user selection. 
 
 #### See also 
+
 [QUERY](query.md)  

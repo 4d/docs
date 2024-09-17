@@ -27,11 +27,8 @@ To do this, place the following lines in the output form method:
 
 ```4d
  If(Form event code=On Double Clicked)
-
     FILTER EVENT
-
-    ... `Process the double-click
-
+    ... //Process the double-click
  End if
 ```
 
@@ -40,4 +37,5 @@ To do this, place the following lines in the output form method:
 See example for the [ON EVENT CALL](on-event-call.md) command.
 
 #### See also 
+
 [ON EVENT CALL](on-event-call.md)  

@@ -49,36 +49,36 @@ This example shows a few evaluations with conversion of the values received.
 
 JavaScript functions placed in an HTML file:
 
-<!DOCTYPE html>  
-<html>  
-    <head>  
-        <script>  
-        function evalLong(){  
-            return 123;  
-        }  
-        function evalText(){  
-            return "456";  
-        }  
-        function evalObject(){  
-            return {a:1,b:"hello world"};  
-        }  
-        function evalDate(){  
-            return new Date();  
-        }  
-    </script>  
-    </head>  
-    <body>  
-        TEST PAGE  
-    </body>  
+```HTML
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        function evalLong(){
+            return 123;
+        }
+        function evalText(){
+            return "456";
+        }
+        function evalObject(){
+            return {a:1,b:"hello world"};
+        }
+        function evalDate(){
+            return new Date();
+        }
+    </script>
+    </head>
+    <body>
+        TEST PAGE
+    </body>
 </html>
+```
 
 In the 4D form method, you write:
 
 ```4d
  If(Form event code=On Load)
-
     WA OPEN URL(*;"Web Area";"C:\\myDatabase\\index.html")
-
  End if
 ```
 
@@ -86,25 +86,17 @@ You can then evaluate the JavaScript code from 4D:
 
 ```4d
  $Eval1:=WA Evaluate JavaScript(*;"Web Area";"evalLong()";Is longint)
-
   //$Eval1 = 123
-
   //$Eval1 = "123" if type is omitted
-
  $Eval2:=WA Evaluate JavaScript(*;"Web Area";"evalText()";Is text)
-
   //$Eval2 = "456"
-
  $Eval3:=WA Evaluate JavaScript(*;"Web Area";"evalObject()";Is object)
-
   //$Eval3 = {"a":1,"b":"hello world"}
-
  $Eval4:=WA Evaluate JavaScript(*;"Web Area";"evalDate()";Is date)
-
   // $Eval4 = 06/21/13
-
   // $Eval4 = "2013-06-21T14:45:09.694Z" if type is omitted
 ```
 
 #### See also 
+
 [WA EXECUTE JAVASCRIPT FUNCTION](wa-execute-javascript-function.md)  

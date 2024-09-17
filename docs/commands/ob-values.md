@@ -24,30 +24,22 @@ The order of values within the returned collection follows the definition order 
 You want a collection with all property values of an object:
 
 ```4d
- C_OBJECT($person)
-
- C_COLLECTION($col)
+ var $person : Object
+ var $col : Collection
  
-
  $person:=New object
-
  $person.lastName:="Smith"
-
  $person.firstName:="Jenny"
-
  $person.children:=New object("Mary";12;"Mark";8)
  
-
  $col:=OB Values($person)
  
-
   //$col[0]="Smith"
-
   //$col[1]="Jenny"
-
   //$col[2]={"Mary":12,"Mark":8}
 ```
 
 #### See also 
+
 [OB Entries](ob-entries.md)  
 [OB Keys](ob-keys.md)  

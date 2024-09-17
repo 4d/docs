@@ -27,11 +27,11 @@ The following method empties the current selection of a table *\[Customers\]*:
 
 ```4d
  CUT NAMED SELECTION([Customers];"ToBeCleared")
-
  CLEAR NAMED SELECTION("ToBeCleared")
 ```
 
 #### See also 
+
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  

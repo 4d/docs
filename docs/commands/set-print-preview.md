@@ -24,18 +24,14 @@ The following example turns on the Preview on Screen option to display the resul
 
 ```4d
  QUERY([Customers])
-
  If(OK=1)
-
     SET PRINT PREVIEW(True)
-
     PRINT SELECTION([Customers] ;*)
-
     SET PRINT PREVIEW(False)
-
  End if
 ```
 
 #### See also 
+
 [Get print preview](get-print-preview.md)  
 [Is in print preview](is-in-print-preview.md)  

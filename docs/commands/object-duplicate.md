@@ -101,6 +101,7 @@ Creation of a new radio button "bRadio6" based on the existing radio button "bRa
 ```
 
 #### See also 
+
 [Form Objects (Access)](../../4D/20-R6/Form-Objects-Access.302-6958495.en.html)  
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT MOVE](object-move.md)  

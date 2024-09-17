@@ -33,24 +33,19 @@ If the conversion was successful, the system variable OK is set to 1\. If the co
 You want to convert an image from a proprietary format to GIF format and display it on a static web page. You can use a code such as:
 
 ```4d
- C_PICTURE($picture)
-
- C_BLOB($BLOB)
-
- C_TEXT($path)
+ var $picture : Picture
+ var $BLOB : Blob
+ var $path : Text
  
-
  $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+"Sunrise.psd" //find the picture in the Images folder within the Resources folder
-
  READ PICTURE FILE($path;$picture) //put the picture in the picture variable
  
-
  PICTURE TO BLOB($picture;$BLOB;".gif") //convert the picture to ".gif" format
-
  WEB SEND BLOB($BLOB;"image/gif")
 ```
 
 #### See also 
+
 [\_o\_PICTURE TO GIF](../../4D/20-R6/o-PICTURE-TO-GIF.301-6957657.en.html)  
 [BLOB TO PICTURE](blob-to-picture.md)  
 [PICTURE CODEC LIST](picture-codec-list.md)  

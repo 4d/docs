@@ -18,6 +18,7 @@ displayed_sidebar: docs
 **Note:** **CANCEL TRANSACTION** does not have an effect on any changes made in the current records that were not saved - they remain displayed after the command is executed.
 
 #### See also 
+
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
 [Transaction level](transaction-level.md)  

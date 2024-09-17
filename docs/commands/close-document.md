@@ -23,20 +23,16 @@ Closing a document is the only way to ensure that the data written to a file is 
 The following example lets the user create a new document, writes the string “Hello” into it, and closes the document:
 
 ```4d
- C_TIME(vhDocRef)
-
+ var vhDocRef : Time
  vhDocRef:=Create document("")
-
  If(OK=1)
-
-    SEND PACKET(vhDocRef;"Hello") ` Write one word into the document
-
-    CLOSE DOCUMENT(vhDocRef) ` Close the document
-
+    SEND PACKET(vhDocRef;"Hello") // Write one word into the document
+    CLOSE DOCUMENT(vhDocRef) // Close the document
  End if
 ```
 
 #### See also 
+
 [Append document](append-document.md)  
 [Create document](create-document.md)  
 [Open document](open-document.md)  

@@ -47,15 +47,13 @@ You created a "MyUpdates" folder on your disk, where you placed a new version of
 
 ```4d
   // Windows syntax
-
  SET UPDATE FOLDER("C:\\MyUpdates"+Folder separator+"MyApp"+Folder separator;True)
  
-
   // OS X syntax
-
  SET UPDATE FOLDER("MacHD:MyUpdates"+Folder separator+"MyApp.app"+Folder separator;True)
 ```
 
 #### See also 
+
 [Get last update log path](get-last-update-log-path.md)  
 [RESTART 4D](restart-4d.md)  

@@ -29,28 +29,20 @@ The commands that are affected by the timeout setting are:
 The following example sets the serial port to receive data. It then sets a time-out. The data is read with [RECEIVE PACKET](receive-packet.md). If the data is not received in time, an error occurs:
 
 ```4d
- SET CHANNEL(MacOS serial port;Speed 9600+Data bits 8+Stop bits one+Parity none) ` Open Serial Port
-
- SET TIMEOUT(10) ` Set the timeout for 10 seconds
-
- ON ERR CALL("CATCH COM ERRORS") ` Do not let the method being interrupted
-
- RECEIVE PACKET(vtBuffer;Char(13)) ` Read until a carriage return is met
-
+ SET CHANNEL(MacOS serial port;Speed 9600+Data bits 8+Stop bits one+Parity none) // Open Serial Port
+ SET TIMEOUT(10) // Set the timeout for 10 seconds
+ ON ERR CALL("CATCH COM ERRORS") // Do not let the method being interrupted
+ RECEIVE PACKET(vtBuffer;Char(13)) // Read until a carriage return is met
  If(OK=0)
-
     ALERT("Error receiving data.")
-
  Else
-
-    [People]Name:=vtBuffer ` Save received data in a field
-
+    [People]Name:=vtBuffer // Save received data in a field
  End if
-
  ON ERR CALL("")
 ```
 
 #### See also 
+
 [ON ERR CALL](on-err-call.md)  
 [RECEIVE BUFFER](receive-buffer.md)  
 [RECEIVE PACKET](receive-packet.md)  

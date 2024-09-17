@@ -46,4 +46,5 @@ Sending the Web page *"MyPage.HTM"* must be carried out in the following manner 
 If the file to be sent exists and if the timeout has not run out, OK is set to 1\. Otherwise, it is equal to 0.
 
 #### See also 
+
 [WEB SEND BLOB](web-send-blob.md)  

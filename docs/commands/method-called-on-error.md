@@ -33,18 +33,14 @@ This command is particularly useful in the context of components because it enab
 
 ```4d
  $methCurrent:=Method called on error
-
  ON ERR CALL("NewMethod")
-
-  ` If the document cannot be opened, an error is generated
-
+  // If the document cannot be opened, an error is generated
  $ref:=Open document("MyDocument")
-
-  ` Reinstallation of previous method
-
+  // Reinstallation of previous method
  ON ERR CALL($methCurrent)
 ```
 
 #### See also 
+
 [Error Handler](../../4D/20-R6/Error-Handler.302-6958437.en.html)  
 [ON ERR CALL](on-err-call.md)  

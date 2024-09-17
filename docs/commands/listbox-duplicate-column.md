@@ -62,41 +62,34 @@ Note that header and footer variables are always created with a specific type (l
 
 In an array type list box, we want to duplicate the "First Name" column, ready for input:
 
-![](../assets/en/Commands/pict1205357.en.png)
+![](../assets/en/commands/pict1205357.en.png)
 
 Here is the code of the button:
 
 ```4d
  ARRAY TEXT(arrFirstNames2;Records in table([Members]))
-
  LISTBOX DUPLICATE COLUMN(*;"column2";3;"col2bis";arrFirstNames2;"FirstNameA";vHead2A)
-
  OBJECT SET TITLE(*;"FirstNameA";"Middle Name")
-
  EDIT ITEM(*;"col2A";0)
 ```
 
 When you click on the button, the list box appears as follows:
 
-![](../assets/en/Commands/pict1205359.en.png)
+![](../assets/en/commands/pict1205359.en.png)
 
 #### Example 2 
 
 You want to duplicate a Boolean column and change its title:
 
 ```4d
- C_POINTER($ptr)
-
+ var $ptr : Pointer
  LISTBOX DUPLICATE COLUMN(*;"boolCol";3;"duplBoolCol";$ptr;"duplBoolHeader";$ptr;"duplBoolFooter";$ptr)
-
  colprt:=OBJECT Get pointer(Object named;"duplBoolCol")
-
  ARRAY BOOLEAN(colprt->;10)
-
  headprt:=OBJECT Get pointer(Object named;"duplBoolHeader")
-
  OBJECT SET TITLE(headprt->;"New duplicated column")
 ```
 
 #### See also 
+
 [LISTBOX MOVE COLUMN](listbox-move-column.md)  

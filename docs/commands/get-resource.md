@@ -45,4 +45,5 @@ If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
 If there is not enough memory to load the resource, an error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
 
 #### See also 
+
 [Resources](../../4D/20-R6/Resources.300-6958006.en.html)  

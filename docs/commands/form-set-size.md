@@ -63,7 +63,7 @@ Also note that this command does not change the size of the form window (you can
 
 The following example shows how an Explorer type window is set up. The following form is created in the Design environment :
 
-![](../assets/en/Commands/pict21945.en.png)
+![](../assets/en/commands/pict21945.en.png)
 
 The size of the form is “automatic”.
 
@@ -71,85 +71,54 @@ The window is displayed using the following code:
 
 ```4d
  $ref:=Open form window([Table 1];"Form1";Plain form window;Horizontally centered;Vertically centered;*)
-
  DIALOG([Table 1];"Form1")
-
  CLOSE WINDOW
 ```
 
 The right part of the window can be displayed or hidden by clicking on the increase/decrease option:
 
-![](../assets/en/Commands/pict21946.en.png)
+![](../assets/en/commands/pict21946.en.png)
 
 The object method associated with this button is as follows:
 
 ```4d
  Case of
-
     :(FORM Event.code=On Load)
-
-       C_BOOLEAN(b1;<>collapsed)
-
-       C_LONGINT(margin)
-
+       var b1;<>collapsed : Boolean
+       var margin : Integer
        margin:=15
-
        b1:=<>collapsed
-
        If(<>collapsed)
-
           FORM SET HORIZONTAL RESIZING(False)
-
           FORM SET SIZE("b1";margin;margin)
-
        Else
-
           FORM SET HORIZONTAL RESIZING(True)
-
           FORM SET SIZE("tab";margin;margin)
-
        End if
  
-
     :(FORM Event.code=On click)
-
        <>collapsed:=b1
-
        If(b1)
-
-  `collapsed
-
+  //collapsed
           OBJECT GET COORDINATES(*;"b1";$l;$t;$r;$b)
-
           GET WINDOW RECT($lf;$tf;$rf;$bf;Current form window)
-
           SET WINDOW RECT($lf;$tf;$lf+$r+margin;$tf+$b+margin;Current form window)
-
           SET FORM HORIZONTAL RESIZING(False)
-
           SET FORM SIZE("b1";margin;margin)
  
-
        Else
-
-  `expanded
-
+  //expanded
           OBJECT GET COORDINATES(*;"tab";$l;$t;$r;$b)
-
           GET WINDOW RECT($lf;$tf;$rf;$bf;Current form window)
-
           SET WINDOW RECT($lf;$tf;$lf+$r+margin;$tf+$b+margin;Current form window)
-
           FORM SET HORIZONTAL RESIZING(True)
-
           FORM SET SIZE("tab";margin;margin)
-
        End if
  
-
  End case
 ```
 
 #### See also 
+
 [FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
 [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  

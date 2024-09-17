@@ -49,22 +49,14 @@ Note that:
 This command can create empty of filled objects:
 
 ```4d
- C_OBJECT($obj1)
-
- C_OBJECT($obj2)
-
- C_OBJECT($obj3)
-
+ var $obj1 : Object
+ var $obj2 : Object
+ var $obj3 : Object
  $obj1:=New object
-
   // $obj1 = {}
-
  $obj2:=New object("name";"Smith")
-
   // $obj2 = {name:Smith}
-
  $obj3:=New object("name";"Smith";"age";40)
-
   // $obj3 = {name:Smith,age:40}
 ```
 
@@ -73,26 +65,17 @@ This command can create empty of filled objects:
 Creating a new object with an object as parameter value: 
 
 ```4d
- C_OBJECT($Children;$Contact)
+ var $Children;$Contact : Object
  
-
   //Creating an object array
-
  ARRAY TEXT($arrChildren;3)
-
  $arrChildren{1}:="Richard"
-
  $arrChildren{2}:="Susan"
-
  $arrChildren{3}:="James"
-
  OB SET ARRAY($Children;"Children";$arrChildren)
  
-
   //Initializing the object
-
  $Contact:=New object("FirstName";"Alan";"LastName";"Parker";"age";30;"Children";$Children)
-
   // $Contact = {FirstName:Alan,LastName:Parker,age:30,Children:{Children:[Richard,Susan,James]}}
 ```
 
@@ -101,8 +84,7 @@ Creating a new object with an object as parameter value:
 This command is useful to pass objects as parameters:
 
 ```4d
- C_OBJECT($measures)
-
+ var $measures : Object
  $measures:=Get database measures(New object("path";"DB.cacheReadBytes";"withHistory";True;"historyLength";120))
 ```
 
@@ -112,17 +94,14 @@ With this command, you can easily handle objects in loops:
 
 ```4d
  ARRAY OBJECT($refs;0)
-
- C_LONGINT(vCounter)
+ var vCounter : Integer
  
-
  For(vCounter;1;100)
-
     APPEND TO ARRAY($refs;New object("line";"Line number "+String(vCounter)))
-
  End for
 ```
 
 #### See also 
+
   
 [New shared object](new-shared-object.md)  

@@ -76,9 +76,7 @@ This example displays the 4D environment version number:
 
 ```4d
  $vs4Dversion:=Application version
-
  ALERT("You are using the version "+String(Num(Substring($vs4Dversion;1;2)))+"."+
-
  $vs4Dversion[[3]]+"."+$vs4Dversion[[4]])
 ```
 
@@ -88,11 +86,8 @@ This example tests to verify that you are using a final version:
 
 ```4d
  If(Substring(Application version(*);1;1)#"F")
-
     ALERT("Please make sure you are using a Final Production version of 4D with this database!")
-
     QUIT 4D
-
  End if
 ```
 
@@ -101,35 +96,25 @@ This example tests to verify that you are using a final version:
 You want to use the application's short version value returned by the command to display the 4D application release name. You can write:
 
 ```4d
- C_LONGINT($Lon_build)
-
- C_TEXT($Txt_info;$Txt_major;$Txt_minor;$Txt_release;$Txt_version)
+ var $Lon_build : Integer
+ var $Txt_info;$Txt_major;$Txt_minor;$Txt_release;$Txt_version : Text
  
-
  $Txt_version:=Application version($Lon_build)
  
-
  $Txt_major:=$Txt_version[[1]]+$Txt_version[[2]] //version number, e.g. 14
-
  $Txt_release:=$Txt_version[[3]] //Rx
-
  $Txt_minor:=$Txt_version[[4]] //.x
  
-
  $Txt_info:="4D v"+$Txt_major
-
  If($Txt_release="0") //4D v14.x
-
     $Txt_info:=$Txt_info+Choose($Txt_minor#"0";"."+$Txt_minor;"")
  
-
  Else //4D v14 Rx
-
     $Txt_info:=$Txt_info+" R"+$Txt_release
-
  End if
 ```
 
 #### See also 
+
 [Application type](application-type.md)  
 [Version type](version-type.md)  

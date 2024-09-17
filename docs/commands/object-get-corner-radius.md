@@ -36,16 +36,13 @@ This command returns the radius of rounded corners in pixels.
 The following code could be added to a button method:
 
 ```4d
- C_LONGINT($radius)
-
+ var $radius : Integer
  $radius:=OBJECT Get corner radius(*;"GreenRect") //get current value
-
  OBJECT SET CORNER RADIUS(*;"GreenRect";$radius+1) //increase radius
-
   // Maximum value will be handled automatically:
-
   // when reached, the button no longer has any effect
 ```
 
 #### See also 
+
 [OBJECT SET CORNER RADIUS](object-set-corner-radius.md)  

@@ -26,7 +26,7 @@ Both the *column* and *newPos* parameters must be valid column numbers (between 
 
 You have designed the following report:
 
-![](../assets/en/Commands/pict2569470.en.png)
+![](../assets/en/commands/pict2569470.en.png)
 
 If you execute:
 
@@ -36,4 +36,4 @@ If you execute:
 
 The result is:
 
-![](../assets/en/Commands/pict2569472.en.png)
+![](../assets/en/commands/pict2569472.en.png)

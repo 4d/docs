@@ -38,16 +38,14 @@ You should not execute a **SAVE RECORD** during the On Validate event for a form
 The following example is part of a method that reads records from a document. The code segment receives a record, and then, if it is received properly, saves it:
 
 ```4d
- RECEIVE RECORD([Customers]) ` Receive record from disk
-
- If(OK=1) ` If the record is received properly…
-
-    SAVE RECORD([Customers]) ` save it
-
+ RECEIVE RECORD([Customers]) // Receive record from disk
+ If(OK=1) // If the record is received properly…
+    SAVE RECORD([Customers]) // save it
  End if
 ```
 
 #### See also 
+
 [CREATE RECORD](create-record.md)  
 [Locked](locked.md)  
 [Triggers](../../4D/20-R6/Triggers.300-6958353.en.html)  

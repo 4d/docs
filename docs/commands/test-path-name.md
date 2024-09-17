@@ -34,19 +34,15 @@ The following tests if the document “Journal” is present in the folder of th
 
 ```4d
  If(Test path name("Journal")#Is a document)
-
     $vhDocRef:=Create document("Journal")
-
     If(OK=1)
-
        CLOSE DOCUMENT($vhDocRef)
-
     End if
-
  End if
 ```
 
 #### See also 
+
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
 [Create document](create-document.md)  
 [CREATE FOLDER](create-folder.md)  

@@ -24,9 +24,8 @@ displayed_sidebar: docs
 The following example illustrates the use of Day of. The results are assigned to the variable *vResult*. The comments describe what is put in *vResult*:
 
 ```4d
- vResult:=Day of(!12/25/92!) ` vResult gets 25
-
- vResult:=Day of(Current date) ` vResult gets day of current date
+ vResult:=Day of(!12/25/92!) // vResult gets 25
+ vResult:=Day of(Current date) // vResult gets day of current date
 ```
 
 #### Example 2 
@@ -34,6 +33,7 @@ The following example illustrates the use of Day of. The results are assigned to
 See the example for the [Current date](current-date.md) command.
 
 #### See also 
+
 [Day number](day-number.md)  
 [Month of](month-of.md)  
 [Year of](year-of.md)  

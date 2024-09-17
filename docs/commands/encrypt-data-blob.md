@@ -39,26 +39,20 @@ Encrypt a text file located in the RESOURCES folder of the database:
 
 ```4d
  var $fileToEncrypt;$encryptedFile : 4D.File
-
  var $blobToEncrypt;$encryptedBlob : Blob
-
  var $result : Boolean
  
-
  $fileToEncrypt:=File("/RESOURCES/confidential.txt")
-
  $encryptedFile:=File("/RESOURCES/encryptedConfidential.txt")
  
-
  $blobToencrypt:=$fileToEncrypt.getContent()
  
-
  $result:=Encrypt data BLOB($blobToEncrypt;"myPassPhrase";MAXLONG;$encryptedBlob)
-
  $encryptedFile.setContent($encryptedBlob)
 ```
 
 #### See also 
+
 [Decrypt data BLOB](decrypt-data-blob.md)  
 [ENCRYPT BLOB](encrypt-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  

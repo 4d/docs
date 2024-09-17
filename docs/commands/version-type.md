@@ -32,16 +32,13 @@ This test lets you run different code depending on whether the version is a merg
 
 ```4d
  If(Version type?? Merged application)
-
   // We are in a merged application
-
  Else
-
   // We are in a database executed by 4D
-
  End if
 ```
 
 #### See also 
+
 [Application type](application-type.md)  
 [Application version](application-version.md)  

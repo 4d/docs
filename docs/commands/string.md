@@ -96,7 +96,6 @@ This parameter can be used with both predefined or pattern-based date formats. E
 
 ```4d
  $dateTime:=String(!2010-09-09!;ISO date GMT;Current time) //"2010-09-09T08:30:41Z"
-
  $dateTime2:=String(!2023-11-27!;"E dd/MM/yyyy 'at' hh:mm aa O";?11:15:00?) //"Mon 27/11/2023 at 11:15 AM GMT+1"
 ```
   
@@ -177,6 +176,7 @@ If *expression* is evaluated to undefined, the command returns an empty string. 
 If *expression* is evaluated to Null, the command returns the "null" string. This is useful when you expect the result of an expression (e.g. an object attribute) to be a string, even if it can be null.
 
 #### See also 
+
 [Bool](bool.md)  
 [Date](date.md)  
 [Num](num.md)  

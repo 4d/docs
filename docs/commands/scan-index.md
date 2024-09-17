@@ -33,24 +33,18 @@ If you specify more records than exist in the table, **SCAN INDEX** will return 
 The following example mails letters to 50 of the worst customers and then to 50 of the best customers:
 
 ```4d
- SCAN INDEX([Customers]TotalDue;50;<) ` Get the 50 worst customers
-
- ORDER BY([Customers]Zipcode;>) ` Sort by Zip codes
-
+ SCAN INDEX([Customers]TotalDue;50;<) // Get the 50 worst customers
+ ORDER BY([Customers]Zipcode;>) // Sort by Zip codes
  FORM SET OUTPUT([Customers];"ThreateningMail")
-
- PRINT SELECTION([Customers]) ` Print the letters
-
- SCAN INDEX([Customers]TotalDue;50;>) ` Get the 50 best customers
-
- ORDER BY([Customers]Zipcode;>) ` Sort by Zip codes
-
+ PRINT SELECTION([Customers]) // Print the letters
+ SCAN INDEX([Customers]TotalDue;50;>) // Get the 50 best customers
+ ORDER BY([Customers]Zipcode;>) // Sort by Zip codes
  FORM SET OUTPUT([Customers];"Thanks Letter")
-
- PRINT SELECTION([Customers]) ` Print the letters
+ PRINT SELECTION([Customers]) // Print the letters
 ```
 
 #### See also 
+
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 [REDUCE SELECTION](reduce-selection.md)  

@@ -25,5 +25,6 @@ displayed_sidebar: docs
 If the command has been correctly executed, the system variable OK is set to 1\. If an error occurs, it is set to 0.
 
 #### See also 
+
 [DOM Get XML element](dom-get-xml-element.md)  
 [XML SET OPTIONS](xml-set-options.md)  

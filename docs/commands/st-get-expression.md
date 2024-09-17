@@ -56,29 +56,17 @@ When there is a double-click event, you check that there is in fact an expressio
 
 ```4d
  Case of
-
     :(Form event code=On Double Clicked)
-
        GET HIGHLIGHT(*;"StyledText_t";startSel;endSel)
-
        If(ST Get content type(*;"StyledText_t";startSel;endSel)=ST Expression type)
-
           vExpression:=ST Get expression(*;"StyledText_t";startSel;endSel)
-
           $winRef:=Open form window("Dial_InsertExpr";Movable form dialog box;Horizontally centered;Vertically centered;*)
-
           DIALOG("Dial_InsertExpr")
-
           If(OK=1)
-
              ST INSERT EXPRESSION(*;"StyledText_t";vExpression;startSel;endSel)
-
              HIGHLIGHT TEXT(*;"StyledText_t";startSel;endSel)
-
           End if
-
        End if
-
  End case
 ```
 
@@ -88,29 +76,19 @@ You want to execute a 4D method when a user link is clicked:
 
 ```4d
  Case of
-
     :(Form event code=On Clicked)
-
   //we retrieve the selection
-
        HIGHLIGHT TEXT(*;"myText";startSel;endSel)
-
        If(startSel#endSel) //there is selected content
-
   //we get the content type
-
           $CT_type:=ST Get content type(*;"myText";startSel;endSel)
-
           If($CT_type=ST User type) //this is a user link
-
              MyMethod //we execute a 4D method
-
           End if
-
        End if
-
  End case
 ```
 
 #### See also 
+
 [ST INSERT EXPRESSION](st-insert-expression.md)  

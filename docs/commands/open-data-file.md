@@ -36,31 +36,20 @@ In the context of deploying a merged application, you want to open or create the
 
 ```4d
  If(Data file="@default.4dd")
-
     If(Version type?? Merged application)
-
        If(Is data file locked)
-
           $dataPath:=Get 4D folder(Active 4D Folder)+"data.4dd"
-
   //If a local data file already exists
-
           If(Test path name($dataPath)=Is a document)
-
              OPEN DATA FILE($dataPath) //open it
-
           Else
-
              CREATE DATA FILE($dataPath) //create it
-
           End if
-
        End if
-
     End if
-
  End if
 ```
 
 #### See also 
+
 [CREATE DATA FILE](create-data-file.md)  

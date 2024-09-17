@@ -34,24 +34,18 @@ Remember to call [CLEAR LIST](clear-list.md) in order to delete the newly create
 You create a database for the international market and you need to switch to different languages while using the database. In a form, you present a hierarchical list, named *hlList*, that proposes a list of standard options. In the Design environment, you have prepared various lists, such as “Std Options US” for the English version, “Std Options FR” for the French version, “Std Options SP” for the Spanish version, and so on. In addition, you maintain an interprocess variable, named *◊gsCurrentLanguage*, where you store a 2-character language code, such as “US” for the English version, “FR” for the French version, “SP” for the Spanish version, and so on. To make sure that your list will always be loaded using the current selected language, you can write:
 
 ```4d
-  ` hlList Hierarchical List Object Method
-
+  // hlList Hierarchical List Object Method
  Case of
-
     :(FORM Event=On Load)
-
-       C_LONGINT(hlList)
-
+       var hlList : Integer
        hlList:=Load list("Std Options"+◊gsCurrentLanguage)
-
     :(FORM Event=On Unload)
-
        CLEAR LIST(hlList;*)
-
  End case
 ```
 
 #### See also 
+
 [CLEAR LIST](clear-list.md)  
 [Is a list](is-a-list.md)  
 [SAVE LIST](save-list.md)  

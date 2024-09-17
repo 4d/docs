@@ -22,5 +22,6 @@ displayed_sidebar: docs
 The filters are installed by the [WA SET URL FILTERS](wa-set-url-filters.md) command. If the arrays are reinitialized during the session, the **WA GET URL FILTERS** command can be used to find out the current settings
 
 #### See also 
+
 [WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
 [WA SET URL FILTERS](wa-set-url-filters.md)  

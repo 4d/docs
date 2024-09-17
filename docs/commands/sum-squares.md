@@ -31,15 +31,10 @@ The following method is called to print the records in the selection and to acti
 
 ```4d
  ALL RECORDS([Table1])
-
  ORDER BY([Table1];[Table1]DataSeries;>)
-
  BREAK LEVEL(1)
-
  ACCUMULATE([Table1]DataSeries)
-
  OUTPUT FORM([Table1];"PrintForm")
-
  PRINT SELECTION([Table1])
 ```
 
@@ -51,15 +46,13 @@ This example gets the sum of the squares of the values placed in an array:
 
 ```4d
  ARRAY REAL($ArrGrades;0)
-
  QUERY([Exams];[Exams]Exam_Date=!01/07/11!)
-
  SELECTION TO ARRAY([Exams]Exam_Grade;$ArrGrades)
-
  vSumSquares:=Sum squares($ArrGrades)
 ```
 
 #### See also 
+
 [Average](average.md)  
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  

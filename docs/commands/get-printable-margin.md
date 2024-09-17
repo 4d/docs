@@ -37,9 +37,10 @@ It is possible to base the form printing carried out using the [Print form](prin
   
 **Dead margin**:this refers to the area located between the paper margin and the printer margin. 
 
-![](../assets/en/Commands/pict28491.en.png)
+![](../assets/en/commands/pict28491.en.png)
 
 #### See also 
+
 [GET PRINTABLE AREA](get-printable-area.md)  
 [Print form](print-form.md)  
 [SET PRINTABLE MARGIN](set-printable-margin.md)  

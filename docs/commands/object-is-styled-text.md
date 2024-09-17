@@ -34,14 +34,12 @@ A form contains a field represented by two different objects; one of the objects
 
 ```4d
  $Style:=OBJECT Is styled text(*;"Styled_text")
-
   // returns True ("Multi-style" option is checked)
  
-
  $Style:=OBJECT Is styled text(*;"Plain_text")
-
   // returns False ("Multi-style" option is not checked)
 ```
 
 #### See also 
+
 [Styled Text](styled-text.md)  

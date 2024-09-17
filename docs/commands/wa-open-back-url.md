@@ -20,5 +20,6 @@ displayed_sidebar: docs
 If there is no previous URL, the command does nothing. You can test whether a previous URL is available using the [WA Back URL available](wa-back-url-available.md) command.
 
 #### See also 
+
 [WA OPEN FORWARD URL](wa-open-forward-url.md)  
 [WA OPEN URL](wa-open-url.md)  

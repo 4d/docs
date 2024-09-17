@@ -21,5 +21,6 @@ The Count user processes function returns the number of processes opened directl
 **Note:** The "live" processes are processes whose status is neither *aborted*, nor *does not exist* (see the [Process state](process-state.md) command). 
 
 #### See also 
+
 [Count tasks](count-tasks.md)  
 [Count users](count-users.md)  

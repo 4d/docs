@@ -26,4 +26,5 @@ The optional *row* and *column* parameters indicate the location of the error: t
 If the command has been correctly executed, the system variable OK is set to 1\. If an error occurs, it is set to 0.
 
 #### See also 
+
 [DOM Get XML information](dom-get-xml-information.md)  

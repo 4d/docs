@@ -41,16 +41,13 @@ Authentication with a Web Service located behind a proxy:
 
 ```4d
   // Authentication to Web Service in DIGEST mode
-
  WEB SERVICE AUTHENTICATE("SoapUser";"123";2)
-
   // Authentication to proxy in default mode
-
  WEB SERVICE AUTHENTICATE("ProxyUser";"456";*)
-
  WEB SERVICE CALL(...)
 ```
 
 #### See also 
+
 [WEB SERVICE CALL](web-service-call.md)  
 [WEB SERVICE Get info](web-service-get-info.md)  

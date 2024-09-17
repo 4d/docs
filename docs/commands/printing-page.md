@@ -22,25 +22,17 @@ The following example changes the position of the page numbers on a report so th
 
 ```4d
  Case of
-
     :(FORM Event=On Printing Footer)
-
-       If((Printing page% 2)=0) ` Modulo is 0, it is an even page
-
-          vLeftPageNum:=String(Printing page) ` Set the left page number
-
-          vRightPageNum:="" ` Clear the right page number
-
-       Else ` Otherwise it is an odd page
-
-          vLeftPageNum:="" ` Clear the left page number
-
-          vRightPageNum:=String(Printing page) ` Set the right page number
-
+       If((Printing page% 2)=0) // Modulo is 0, it is an even page
+          vLeftPageNum:=String(Printing page) // Set the left page number
+          vRightPageNum:="" // Clear the right page number
+       Else // Otherwise it is an odd page
+          vLeftPageNum:="" // Clear the left page number
+          vRightPageNum:=String(Printing page) // Set the right page number
        End if
-
  End case
 ```
 
 #### See also 
+
 [PRINT SELECTION](print-selection.md)  

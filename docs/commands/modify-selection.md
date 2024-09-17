@@ -25,6 +25,7 @@ displayed_sidebar: docs
 2\. [DISPLAY SELECTION](display-selection.md) loads the records in Read-only mode in the current process, which means that they are not locked for writing in the other processes. **MODIFY SELECTION** places all the records of the selection in Read-Write mode, which means that they are automatically locked for writing in other processes. **MODIFY SELECTION** frees the records when its execution is completed.
 
 #### See also 
+
 [DISPLAY SELECTION](display-selection.md)  
 [Form event code](form-event-code.md)  
 [Sets](../../4D/20-R6/Sets.300-6959005.en.html)  

@@ -48,10 +48,8 @@ The command accepts a *countArray* array as an optional parameter. When it is pa
 The following example creates a list of cities from the current selection and tells the user the number of cities in which the firm has stores: 
 
 ```4d
- ALL RECORDS([Retail Outlets]) ` Create a selection of records
-
+ ALL RECORDS([Retail Outlets]) // Create a selection of records
  DISTINCT VALUES([Retail Outlets]City;asCities)
-
  ALERT("The firm has stores in "+String(Size of array(asCities))+" cities.")
 ```
 
@@ -61,9 +59,7 @@ You want to get a complete list of keywords contained in the keyword index for t
 
 ```4d
  ALL RECORDS([PICTURES])
-
  ARRAY TEXT(<>_MyKeywords;10)
-
  DISTINCT VALUES([PICTURES]Photos;<>_MyKeywords)
 ```
 
@@ -73,15 +69,13 @@ To compute statistics, you want to sort the number of distinct values in a field
 
 ```4d
  ARRAY TEXT($_issue_type;0)
-
  ARRAY LONGINT($_issue_type_instance;0)
-
  DISTINCT VALUES([Issue]iType;$_issue_type;$_issue_type_instances)
-
  SORT ARRAY($_issue_type_instances;$_issue_type;<)
 ```
 
 #### See also 
+
   
 [GET TEXT KEYWORDS](get-text-keywords.md)  
 [ON ERR CALL](on-err-call.md)  

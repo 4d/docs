@@ -36,12 +36,11 @@ The following example appends an element to an array:
 
 ```4d
  $vlElem:=Size of array(anArray)+1
-
  INSERT IN ARRAY(anArray;$vlElem)
-
  anArray{$vlElem}:=...
 ```
 
 #### See also 
+
 [DELETE FROM ARRAY](delete-from-array.md)  
 [Size of array](size-of-array.md)  

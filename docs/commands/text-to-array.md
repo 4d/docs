@@ -57,7 +57,6 @@ We want to divide a multistyle text into lines with a maximum size of 200 pixels
 
 ```4d
  TEXT TO ARRAY(theText;TextArray;200;"Arial";20;Plain;*)
-
   // the Arial, 20, and Normal attributes are only taken into account if they are not defined in the text
 ```
 
@@ -67,21 +66,13 @@ We want to divide raw text into lines with a maximum size of 350 pixels in Bodon
 
 ```4d
  ARRAY TEXT($FontList;0)
-
  FONT LIST($FontList)
-
  $Font:="Bodoni"
-
  $p:=Find in array($FontList;$Font)
-
  If($p>0)
-
     TEXT TO ARRAY(theText;TextArray;350;"Bodoni";14;Bold)
-
  Else
-
   // use another font
-
  End if
 ```
 
@@ -91,11 +82,8 @@ Multistyle text must be printed without any styles in Arial Normal font, size 12
 
 ```4d
   // we transform the multistyle text into raw text
-
  $RawText:=OBJECT Get plain text(vText)
-
   // we fill the array
-
  TEXT TO ARRAY($RawText;TextArray;600;"Arial";12)
 ```
 
@@ -105,21 +93,16 @@ You need to print in a 400-pixel wide area, a text with a maximum of 80 lines an
 
 ```4d
  ARRAY TEXT(TextArray;0)
-
  $Size:=24
-
  Repeat
-
     TEXT TO ARRAY($RawText;TextArray;400;"Arial";$Size)
-
     $Size:=$Size-1
-
     $n:=Size of array(TextArray)
-
  Until($n<=80)
 ```
 
 #### See also 
+
 [Split string](split-string.md)  
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  

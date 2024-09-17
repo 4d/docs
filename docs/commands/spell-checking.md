@@ -23,14 +23,12 @@ Spell checking starts with the first word of the field or variable. If an unknow
 
 ```4d
  If(Form event code=On Data Change)
-
     SPELL CHECKING
-
     theVariable:=Get edited text
-
  End if
 ```
 
 #### See also 
+
 [SPELL CHECK TEXT](spell-check-text.md)  
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  

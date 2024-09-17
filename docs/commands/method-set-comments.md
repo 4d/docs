@@ -30,18 +30,14 @@ This documentation can be generated for methods ot type triggers, project method
 You can use two types of syntaxes, based either on text arrays, or text variables:  
 
 ```4d
- C_TEXT(tVpath) // text variables
-
- C_TEXT(tVcomments)
-
+ var tVpath : Text // text variables
+ var tVcomments : Text
  METHOD SET COMMENTS(tVpath;tVcomments) // documentation for a single method
 ```
 
 ```4d
  ARRAY TEXT(arrPaths;0) // text arrays
-
  ARRAY TEXT(arrComments;0)
-
  METHOD SET COMMENTS(arrPaths;arrComments) // documentation for several methods
 ```
 
@@ -57,11 +53,10 @@ Add a modification date to an existing trigger documentation:
 
 ```4d
  METHOD GET COMMENTS("[trigger]/Table1";$comments)
-
  $comments:="Modif:"+String(Current date)+"\r"+$comments
-
  METHOD SET COMMENTS("[trigger]/Table1";$comments)
 ```
 
 #### See also 
+
 [METHOD GET COMMENTS](method-get-comments.md)  

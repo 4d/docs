@@ -29,16 +29,16 @@ You can also use the *type* parameter to specify the MIME type of the text to be
 The following method:
 
 ```4d
- TEXT TO BLOB("<html><head></head><body>"+String(Current time)+"</body></html>";$blob;UTF8 Text without length)
-
+ TEXT TO BLOB(""+String(Current time)+"";$blob;UTF8 Text without length)
  WEB SEND BLOB($blob;"text/html")
 ```
 
 ... can be replaced by the single line:
 
 ```4d
- WEB SEND TEXT("<html><head></head><body>"+String(Current time)+"</body></html>")
+ WEB SEND TEXT(""+String(Current time)+"")
 ```
 
 #### See also 
+
 [WEB SEND BLOB](web-send-blob.md)  

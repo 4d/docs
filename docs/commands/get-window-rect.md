@@ -31,5 +31,6 @@ The coordinates are expressed relative to the top left corner of the contents ar
 See example for the [WINDOW LIST](window-list.md) command.
 
 #### See also 
+
 [CONVERT COORDINATES](convert-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  

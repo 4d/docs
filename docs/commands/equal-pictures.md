@@ -33,7 +33,7 @@ If the command is executed successfully (the two pictures are compared), the sys
 
 In the following example, we compare two pictures (pict1 and pict2) and display the resulting mask:
 
-![](../assets/en/Commands/pict847365.fr.png)
+![](../assets/en/commands/pict847365.fr.png)
 
 Here is the code for the **Compare** button:
 

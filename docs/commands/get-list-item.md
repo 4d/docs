@@ -44,17 +44,11 @@ If you passed the optional parameters *sublist* and *expanded*:
 
 ```4d
  $vlItemPos:=Selected list items(hList)
-
  If($vlItemPos>0)
-
     GET LIST ITEM(hList;$vlItemPos;$vlItemRef;$vsItemText;$hSublist;$vbExpanded)
-
     If(Is a list($hSublist))
-
        SET LIST ITEM(hList;$vlItemRef;$vsItemText;$vlItemRef;$hSublist;Not($vbExpanded))
-
     End if
-
  End if
 ```
 
@@ -63,6 +57,7 @@ If you passed the optional parameters *sublist* and *expanded*:
 Refer to the example of the [APPEND TO LIST](append-to-list.md) command.
 
 #### See also 
+
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [List item parent](list-item-parent.md)  
 [List item position](list-item-position.md)  

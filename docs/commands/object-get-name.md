@@ -33,6 +33,7 @@ Object method for "bValidateForm" button:
 After the execution of this object method, the *$btnName* variable contains the "bValidateForm" value.
 
 #### See also 
+
 [Form Objects (Access)](../../4D/20-R6/Form-Objects-Access.302-6958495.en.html)  
 [OBJECT Get pointer](object-get-pointer.md)  
 [Objects (Forms)](objects-forms.md)  

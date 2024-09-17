@@ -31,11 +31,8 @@ You put "fr-classic+reform1990.aff" and "fr-classic+reform1990.dic" as well as "
 
 ```4d
  ARRAY LONGINT($langID;0)
-
  ARRAY TEXT($dicName;0)
-
  ARRAY TEXT($langDesc;0)
-
  SPELL GET DICTIONARY LIST($langID;$dictName;$langDesc)
 ```
 
@@ -51,4 +48,5 @@ You put "fr-classic+reform1990.aff" and "fr-classic+reform1990.dic" as well as "
 | 1073901273  | fr-dentist            | No description - Hunspell  |
 
 #### See also 
+
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  

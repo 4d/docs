@@ -32,14 +32,10 @@ assigns the value *1.414213562373* to the variable *$vrSquareRootOfTwo*.
 The following method returns the hypotenuse of the right triangle whose two legs are passed as parameters:
 
 ```4d
-  ` Hypotenuse method
-
-  ` Hypotenuse ( real ; real ) -> real
-
-  ` Hypotenuse ( legA ; legB ) -> Hypotenuse
-
- C_REAL($0;$1;$2)
-
+  // Hypotenuse method
+  // Hypotenuse ( real ; real ) -> real
+  // Hypotenuse ( legA ; legB ) -> Hypotenuse
+ var $0;$1;$2 : Real
  $0:=Square root(($1^2)+($2^2))
 ```
 

@@ -19,5 +19,6 @@ displayed_sidebar: docs
 **Windows note:** On Windows, Menu bar screen always returns 1.
 
 #### See also 
+
 [Count screens](count-screens.md)  
 [Menu bar height](menu-bar-height.md)  

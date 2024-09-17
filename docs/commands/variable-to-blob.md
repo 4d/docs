@@ -57,42 +57,26 @@ The two following project methods allow you to quickly store and retrieve any se
 
 ```4d
   //STORE VARIABLES INTO BLOB project method
-
   //STORE VARIABLES INTO BLOB ( Pointer { ; Pointer ... { ; Pointer } } )
-
   //STORE VARIABLES INTO BLOB ( BLOB { ; Var1 ... { ; Var2 } } )
-
- C_POINTER(${1})
-
- C_LONGINT($vlParam)
+ var ${1} : Pointer
+ var $vlParam : Integer
  
-
  SET BLOB SIZE($1->;0)
-
  For($vlParam;2;Count parameters)
-
     VARIABLE TO BLOB(${$vlParam}->;$1->;*)
-
  End for
  
-
-  //RETRIEVE VARIABLES FROM BLOB project method
-
-  //RETRIEVE VARIABLES FROM BLOB ( Pointer { ; Pointer ... { ; Pointer } } )
-
-  //RETRIEVE VARIABLES FROM BLOB ( BLOB { ; Var1 ... { ; Var2 } } )
-
- C_POINTER(${1})
-
- C_LONGINT($vlParam;$vlOffset)
  
-
+  //RETRIEVE VARIABLES FROM BLOB project method
+  //RETRIEVE VARIABLES FROM BLOB ( Pointer { ; Pointer ... { ; Pointer } } )
+  //RETRIEVE VARIABLES FROM BLOB ( BLOB { ; Var1 ... { ; Var2 } } )
+ var ${1} : Pointer
+ var $vlParam;$vlOffset : Integer
+ 
  $vlOffset:=0
-
  For($vlParam;2;Count parameters)
-
     BLOB TO VARIABLE($1->;${$vlParam}->;$vlOffset)
-
  End for
 ```
 
@@ -100,9 +84,7 @@ After these methods have been added to your application, you can write:
 
 ```4d
  STORE VARIABLES INTO BLOB(->vxBLOB;->vgPicture;->asAnArray;->alAnotherArray)
-
   // ...
-
  RETRIEVE VARIABLES FROM BLOB(->vxBLOB;->vgPicture;->asAnArray;->alAnotherArray)
 ```
 
@@ -112,41 +94,25 @@ The two following project methods allow you to quickly store and retrieve arrays
 
 ```4d
   // SAVE ARRAY project method
-
   // SAVE ARRAY (Text ; Pointer)
-
   // SAVE ARRAY (Document ; -> Array)
-
- C_TEXT($1)
-
- C_POINTER($2)
-
- C_BLOB($vxArrayData)
-
+ var $1 : Text
+ var $2 : Pointer
+ var $vxArrayData : Blob
  VARIABLE TO BLOB($2->;$vxArrayData) // Store the array in the BLOB
-
  COMPRESS BLOB($vxArrayData) // Compress the BLOB
-
  BLOB TO DOCUMENT($1;$vxArrayData) // Save the BLOB on disk
 ```
 
 ```4d
   // LOAD ARRAY project method
-
   // LOAD ARRAY (Text ; Pointer)
-
   // LOAD ARRAY (Document ; -> Array)
-
- C_TEXT($1)
-
- C_POINTER($2)
-
- C_BLOB($vxArrayData)
-
+ var $1 : Text
+ var $2 : Pointer
+ var $vxArrayData : Blob
  DOCUMENT TO BLOB($1;$vxArrayData) // Load the BLOB from the disk
-
  EXPAND BLOB($vxArrayData) // Expand the BLOB
-
  BLOB TO VARIABLE($vxArrayData;$2->) // Retrieve the array from the BLOB
 ```
 
@@ -154,17 +120,14 @@ After these methods have been added to your application, you can write:
 
 ```4d
  ARRAY TEXT(...;asAnyArray;...)
-
   //  ...
-
  SAVE ARRAY($vsDocName;->asAnyArray)
-
   //  ...
-
  LOAD ARRAY($vsDocName;->asAnyArray)
 ```
 
 #### See also 
+
 [BLOB to list](blob-to-list.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [LIST TO BLOB](list-to-blob.md)  

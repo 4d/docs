@@ -42,7 +42,7 @@ The line:
 
 will display the request dialog box (on Windows) shown here:
 
-![](../assets/en/Commands/pict4225119.en.png)
+![](../assets/en/commands/pict4225119.en.png)
 
 #### Example 2 
 
@@ -50,21 +50,16 @@ The line:
 
 ```4d
  vsPrompt:=Request("Name of the Employee:";"";"Create Record";"Cancel")
-
  If(OK=1)
-
     ADD RECORD([Employees])
-
   //Note: vsPrompt is then copied into the field [Employees]Last name
-
   //during the On Load event in the form method
-
  End if
 ```
 
 will display the request dialog box (on Windows) shown here:
 
-![](../assets/en/Commands/pict4225137.en.png)
+![](../assets/en/commands/pict4225137.en.png)
 
 #### Example 3 
 
@@ -76,8 +71,9 @@ The line:
 
 will display the request dialog box (on Windows) shown here:
 
-![](../assets/en/Commands/pict4225146.en.png)
+![](../assets/en/commands/pict4225146.en.png)
 
 #### See also 
+
 [ALERT](alert.md)  
 [CONFIRM](confirm.md)  

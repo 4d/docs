@@ -24,4 +24,5 @@ The *infoType* parameter specifies the type of requested information. In current
 After the command has been executed, the statistics are provided in the *arrNames*, *arrValues* and *arrCount* arrays. This information is also available via the Runtime Explorer: size of physical, virtual, free and used memory, stack memory and free stack memory, etc. For more information about advanced interpretation of this data, please contact your local Technical Service department.
 
 #### See also 
+
 [Cache info](cache-info.md)  

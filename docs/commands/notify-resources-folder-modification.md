@@ -31,4 +31,5 @@ Current settings are set either:
 * locally, using the [SET DATABASE PARAMETER](set-database-parameter.md) command executed on the remote machine (Auto synchro resources folder selector). In this case, it "overrides" the database setting and applies only to the remote machine for the duration of the session.
 
 #### See also 
+
 [Get 4D folder](get-4d-folder.md)  

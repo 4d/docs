@@ -27,6 +27,7 @@ This parameter returns **False** if the [SET AUTOMATIC RELATIONS](set-automatic-
 Refer to the example of the [GET FIELD RELATION](get-field-relation.md) command. 
 
 #### See also 
+
 [GET FIELD RELATION](get-field-relation.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  

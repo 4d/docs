@@ -27,7 +27,7 @@ For more information on bound variables and form/subform interaction, see [Manag
 
 Given a main form and a subform that both have an Input form object: 
 
-![](../assets/en/Commands/pict5864479.en.png)
+![](../assets/en/commands/pict5864479.en.png)
 
 Inside the main form, the Input object and the Subform object are bound to the *Form.numeric* expression of type Numeric.
 
@@ -37,9 +37,7 @@ The subform's Form Method contains the following code:
 
 ```4d
  If(Form event code=On bound variable change)
-
     Form.displayNumeric:=OBJECT Get subform container value
-
  End if
 ```
 
@@ -52,6 +50,7 @@ And inside the subform, the Input text's object method contains the following co
 As a result, at runtime, updating the value of the main form's Input object also updates the value of the subform's Input object, and vice versa.
 
 #### See also 
+
 [Form](form.md)  
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT SET SUBFORM CONTAINER VALUE](object-set-subform-container-value.md)  

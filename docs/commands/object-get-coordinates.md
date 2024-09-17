@@ -38,7 +38,7 @@ For consistency, the reference frame used is the same when the object is a list 
 
 For example, consider the following graphic where the coordinates of the *Capital* column are symbolized by the red rectangle:
 
-![](../assets/en/Commands/pict1752174.en.png)
+![](../assets/en/commands/pict1752174.en.png)
 
 As you can see in the first picture, the column is larger than the list box, so its coordinates go beyond the lower limit of the list box, including the footer. In the second picture, the list box has scrolled, so the column has also been moved "under" the *Language* column and header area. In any case, in order to calculate the actual visible part (green area), you need to subtract the red areas.
 
@@ -54,40 +54,31 @@ Let’s assume that you want to obtain the coordinates of a rectangle formed by 
 
 For interface needs, you want to surround the clicked area with a red rectangle:
 
-![](../assets/en/Commands/pict1740373.en.png)
+![](../assets/en/commands/pict1740373.en.png)
 
 In the object method of the list box, you can write:
 
 ```4d
  OBJECT SET VISIBLE(*;"rectangleInfo";False) //initialize a red rectangle
-
  $ptr:=OBJECT Get pointer(Object current)
-
  OBJECT GET COORDINATES($ptr->;$x1;$y1;$x2;$y2)
-
  OBJECT SET VISIBLE(*;"RedRect";True)
-
  OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
  
-
  OBJECT GET COORDINATES(*;"LB1";$lbx1;$lby1;$lbx2;$lby2)
-
  If($lby1>$y1)|($lby2<$y2) // if the clicked area is outside the list box
-
     OBJECT SET VISIBLE(*;"Alert";True) //display a warning
-
  Else
-
     OBJECT SET VISIBLE(*;"Alert";False)
-
  End if
 ```
 
 The method returns theoretical coordinates. In cases where the list box has been resized, you may need to calculate the clipping to know which part is visible:
 
-![](../assets/en/Commands/pict1740929.en.png)
+![](../assets/en/commands/pict1740929.en.png)
 
 #### See also 
+
 [CONVERT COORDINATES](convert-coordinates.md)  
 [LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
 [OBJECT MOVE](object-move.md)  

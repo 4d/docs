@@ -30,4 +30,5 @@ The file is renamed with the current backup numbers of the database and of the l
 In the event of an error, the command generates a code that can be intercepted using the [ON ERR CALL](on-err-call.md "ON ERR CALL") command.
 
 #### See also 
+
 [\_o\_INTEGRATE LOG FILE](../../4D/20-R6/o-INTEGRATE-LOG-FILE.301-6957654.en.html)  

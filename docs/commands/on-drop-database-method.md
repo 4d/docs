@@ -32,18 +32,14 @@ On Mac, you need to hold down the **Option**+**Command** keys during the drop in
 This example can be used to open a 4D Write document that is dropped outside of any form:
 
 ```4d
-  `On Drop database method
-
+  //On Drop database method
  droppedFile:=Get file from pasteboard(1)
-
  If(Position(".4W7";droppedFile)=Length(droppedFile)-3)
-
     externalArea:=Open external window(100;100;500;500;0;droppedFile;"_4D Write")
-
     WR OPEN DOCUMENT(externalArea;droppedFile)
-
  End if
 ```
 
 #### See also 
+
 [Drag and Drop](drag-and-drop.md)  

@@ -35,4 +35,5 @@ OK is set to 1 if the log file is correctly created, or closed.
 An error -4447 is generated if the operation cannot be performed because the database needs to be backed up. You can intercept the error with an [ON ERR CALL](on-err-call.md) method. 
 
 #### See also 
+
 [ON ERR CALL](on-err-call.md)  

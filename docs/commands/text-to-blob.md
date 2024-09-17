@@ -83,27 +83,19 @@ After executing this code:
 
 ```4d
  SET BLOB SIZE(vxBlob;0)
-
- C_TEXT(vtValue)
-
- vtValue:="Café" ` Length of vtValue is 4 bytes
-
- TEXT TO BLOB(vtValue;vxBlob;Mac C string) ` Size of BLOB becomes 5 bytes
-
- TEXT TO BLOB(vtValue;vxBlob;Mac Pascal string) ` Size of BLOB becomes 5 bytes
-
- TEXT TO BLOB(vtValue;vxBlob;Mac text with length) ` Size of BLOB becomes 6 bytes
-
- TEXT TO BLOB(vtValue;vxBlob;Mac text without length) ` Size of BLOB becomes 4 bytes
-
- TEXT TO BLOB(vtValue;vxBlob;UTF8 C string) ` Size of BLOB becomes 6 bytes
-
- TEXT TO BLOB(vtValue;vxBlob;UTF8 text with length) ` Size of BLOB becomes 9 bytes
-
- TEXT TO BLOB(vtValue;vxBlob;UTF8 text without length) ` Size of BLOB becomes 5 bytes
+ var vtValue : Text
+ vtValue:="Café" // Length of vtValue is 4 bytes
+ TEXT TO BLOB(vtValue;vxBlob;Mac C string) // Size of BLOB becomes 5 bytes
+ TEXT TO BLOB(vtValue;vxBlob;Mac Pascal string) // Size of BLOB becomes 5 bytes
+ TEXT TO BLOB(vtValue;vxBlob;Mac text with length) // Size of BLOB becomes 6 bytes
+ TEXT TO BLOB(vtValue;vxBlob;Mac text without length) // Size of BLOB becomes 4 bytes
+ TEXT TO BLOB(vtValue;vxBlob;UTF8 C string) // Size of BLOB becomes 6 bytes
+ TEXT TO BLOB(vtValue;vxBlob;UTF8 text with length) // Size of BLOB becomes 9 bytes
+ TEXT TO BLOB(vtValue;vxBlob;UTF8 text without length) // Size of BLOB becomes 5 bytes
 ```
 
 #### See also 
+
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
 [BLOB to real](blob-to-real.md)  

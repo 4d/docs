@@ -23,4 +23,5 @@ In order to use the **SHOW WINDOW** command, the window must have been hidden by
 Refer to the example of the [HIDE WINDOW](hide-window.md) command.
 
 #### See also 
+
 [HIDE WINDOW](hide-window.md)  

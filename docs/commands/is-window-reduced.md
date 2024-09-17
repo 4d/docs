@@ -18,5 +18,6 @@ displayed_sidebar: docs
 <!--REF #_command_.Is window reduced.Summary-->The **Is window reduced** command returns **True** if the window whose reference number is passed in *window* is currently reduced in the taskbar (Windows) or in the dock (macOS), and **False** otherwise.<!-- END REF-->
 
 #### See also 
+
 [Is window maximized](is-window-maximized.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  

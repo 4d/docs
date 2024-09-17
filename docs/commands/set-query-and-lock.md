@@ -53,17 +53,11 @@ In this example, it is not possible to delete a client who would have been passe
 
 ```4d
  START TRANSACTION
-
  SET QUERY AND LOCK(True)
-
  QUERY([Customers];[Customers]Category=“C”)
-
-  `At this moment, the records found are automatically locked for all other processes
-
+  //At this moment, the records found are automatically locked for all other processes
  DELETE SELECTION([Customers])
-
  SET QUERY AND LOCK(False)
-
  VALIDATE TRANSACTION
 ```
 
@@ -72,4 +66,5 @@ In this example, it is not possible to delete a client who would have been passe
 If the command is not called in the context of a transaction, an error is generated. 
 
 #### See also 
+
 [QUERY](query.md)  

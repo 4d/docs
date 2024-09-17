@@ -31,4 +31,5 @@ If *object* sets a column or a column header, only the column set is resized.
 The optional *minWidth* and *maxWidth* parameters can be used to set limits for the manual resizing of the column You can pass, respectively, the minimum and maximum width expressed in pixels in the *minWidth* and *maxWidth* parameters. If you want users to be unable to resize the column, you can pass the same value in *width*, *minWidth* and *maxWidth*.
 
 #### See also 
+
 [LISTBOX Get column width](listbox-get-column-width.md)  

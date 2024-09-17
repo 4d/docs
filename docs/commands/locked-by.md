@@ -36,5 +36,6 @@ If the record has been locked by a [*$lock* REST request](https://developer.4d.c
 * *processName* returns the IP address of the locker, e.g. "127.0.0.1"
 
 #### See also 
+
 [Locked](locked.md)  
 [Record Locking](../../4D/20-R6/Record-Locking.300-6958117.en.html)  

@@ -40,5 +40,6 @@ Under macOS, this check can be carried out using the name of the printer (name o
 The system variable OK is set to 1 if the command has been executed correctly; otherwise, it is set to 0 and the arrays are returned empty. 
 
 #### See also 
+
 [Get current printer](get-current-printer.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  

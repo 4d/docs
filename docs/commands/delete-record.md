@@ -30,17 +30,14 @@ If a record is deleted, the record number will be reused when new records are cr
 The following example deletes an employee record. The code asks the user what employee to delete, searches for the employee’s record, and then deletes it:
 
 ```4d
- vFind:=Request("Employee ID to delete:") ` Get an employee ID
-
+ vFind:=Request("Employee ID to delete:") // Get an employee ID
  If(OK=1)
-
-    QUERY([Employee];[Employee]ID =vFind) ` Find the employee
-
-    DELETE RECORD([Employee]) ` Delete the employee
-
+    QUERY([Employee];[Employee]ID =vFind) // Find the employee
+    DELETE RECORD([Employee]) // Delete the employee
  End if
 ```
 
 #### See also 
+
 [Locked](locked.md)  
 [Triggers](../../4D/20-R6/Triggers.300-6958353.en.html)  

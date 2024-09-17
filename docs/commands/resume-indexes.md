@@ -23,5 +23,6 @@ If you pass the optional *\** parameter, the rebuilding of the indexes is perfor
 The **RESUME INDEXES** command can only be called from 4D Server or a local 4D. If this command is executed from a remote 4D machine, the error -10513 is generated. This error can be intercepted using a method installed by the [ON ERR CALL](on-err-call.md) command.
 
 #### See also 
+
 [CREATE INDEX](create-index.md)  
 [PAUSE INDEXES](pause-indexes.md)  

@@ -33,11 +33,11 @@ You want to promote the current user to the "admin" and "plugins" groups for the
 
 ```4d
  $groups:=New collection("admin";"plugins")
-
  SET GROUP ACCESS($groups)
 ```
 
 #### See also 
+
 [Get group access](get-group-access.md)  
 [Get plugin access](get-plugin-access.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  

@@ -26,6 +26,7 @@ The documentation for this command has been moved. See [**Folder** command on de
 The **Folder** command creates and returns a new object of the Folder type. 
 
 #### See also 
+
 [File](file.md)  
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  

@@ -31,35 +31,25 @@ Only first-level property names are returned (property names of sub-objects are 
 Using an object as an hash map (key / value system) provides a quick and direct access to data, just like when using an index (*e.g.*, if we need Mary's age, we can write: $persons\["Mary"\])
 
 ```4d
- C_OBJECT($individual;$persons)
-
- C_COLLECTION($names;$ages)
+ var $individual;$persons : Object
+ var $names;$ages : Collection
  
-
  $persons:=New object
-
  $persons["John"]:=42
-
  $persons["Andy"]:=24
-
  $persons["Mary"]:=30
-
  $persons["Paul"]:=50
  
-
  ALERT("The average age is "+String(OB Values($persons).average()))
-
  ALERT("There are "+String(OB Keys($persons).length)+" persons")
  
-
  $ages:=OB Entries($persons).query("value>:1";25)
-
  ALERT("There are "+String($ages.length)+" persons who are over 25")
  
-
  ALERT("Their names are: "+$ages.extract("key").join("-"))
 ```
 
 #### See also 
+
 [OB Keys](ob-keys.md)  
 [OB Values](ob-values.md)  

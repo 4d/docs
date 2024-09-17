@@ -46,17 +46,12 @@ If *expression* evaluates to undefined, the command returns 0 (zero). This is us
 The following example illustrates how Num works when passed a string argument. Each line assigns a number to the *vResult* variable. The comments describe the results:
 
 ```4d
- vResult:=Num("ABCD") ` vResult gets 0
-
- vResult:=Num("A1B2C3") ` vResult gets 123
-
- vResult:=Num("123") ` vResult gets 123
-
- vResult:=Num("123.4") ` vResult gets 123.4
-
- vResult:=Num("–123") ` vResult gets –123
-
- vResult:=Num("–123e2") ` vResult gets –12300
+ vResult:=Num("ABCD") // vResult gets 0
+ vResult:=Num("A1B2C3") // vResult gets 123
+ vResult:=Num("123") // vResult gets 123
+ vResult:=Num("123.4") // vResult gets 123.4
+ vResult:=Num("–123") // vResult gets –123
+ vResult:=Num("–123e2") // vResult gets –12300
 ```
 
 #### Example 2 
@@ -64,10 +59,8 @@ The following example illustrates how Num works when passed a string argument. E
 Here, *\[Client\]Debt* is compared with *$1000*. The Num command applied to these comparisons returns 1 or 0\. Multiplying 1 or 0 with a string repeats the string once or returns the empty string. As a result, *\[Client\]Risk* gets either “Good” or “Bad”:
 
 ```4d
-  ` If client owes less than 1000, a good risk.
-
-  ` If client owes more than 1000, a bad risk.
-
+  // If client owes less than 1000, a good risk.
+  // If client owes more than 1000, a bad risk.
  [Client]Risk:=("Good"*Num([Client]Debt<1000))+("Bad"*Num([Client]Debt>=1000))
 ```
 
@@ -77,19 +70,15 @@ This example compares the results obtained depending on the “current” separa
 
 ```4d
  $thestring:="33,333.33"
-
  $thenum:=Num($thestring)
-
-  ` by default, $thenum equals 33,33333 on a French system
-
+  // by default, $thenum equals 33,33333 on a French system
  $thenum:=Num($thestring;".")
-
-  ` $thenum will be correctly evaluated regardless of the system;
-
-  ` for example, 33 333,33 on a French system
+  // $thenum will be correctly evaluated regardless of the system;
+  // for example, 33 333,33 on a French system
 ```
 
 #### See also 
+
 [Bool](bool.md)  
 [GET SYSTEM FORMAT](get-system-format.md)  
 [String](string.md)  

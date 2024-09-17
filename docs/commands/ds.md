@@ -24,5 +24,6 @@ The documentation for this command has been moved. Visit [developer.4d.com](http
 The **ds** command returns a reference to the datastore matching the current 4D database or the database designated by *localID*
 
 #### See also 
+
 [4D Environment](4d-environment.md)  
 [Open datastore](open-datastore.md)  

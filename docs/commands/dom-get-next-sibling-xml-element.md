@@ -30,37 +30,32 @@ After the last “sibling,” the system variable OK is set to 0\.
 Retrieval of the reference of the next sibling XML element following the element passed as parameter:
 
 ```4d
- C_TEXT($xml_Parent_Ref;$next_XML_Ref)
-
+ var $xml_Parent_Ref;$next_XML_Ref : Text
  $next_XML_Ref:=DOM Get next sibling XML element($xml_Parent_Ref)
 ```
 
-![](../assets/en/Commands/pict40038.en.png)
+![](../assets/en/commands/pict40038.en.png)
 
 #### Example 2 
 
 Retrieval in a reference loop of all the child XML elements following the parent element passed as parameter, beginning with the first child:
 
 ```4d
- C_TEXT($xml_Parent_Ref;$first_XML_Ref;$next_XML_Ref)
+ var $xml_Parent_Ref;$first_XML_Ref;$next_XML_Ref : Text
  
-
  $first_XML_Ref:=DOM Get first child XML element($xml_Parent_Ref)
-
  $next_XML_Ref:=$first_XML_Ref
-
  While(OK=1)
-
     $next_XML_Ref:=DOM Get next sibling XML element($next_XML_Ref)
-
  End while
 ```
 
-![](../assets/en/Commands/pict40039.en.png)
+![](../assets/en/commands/pict40039.en.png)
 
 #### System variables and sets 
 
 If the command has been correctly executed and if the parsed element is not the last “sibling” of the referenced element, the system variable OK is set to 1\. If an error occurs or if the parsed element is the last “sibling” of the referenced element, it is set to 0.
 
 #### See also 
+
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  

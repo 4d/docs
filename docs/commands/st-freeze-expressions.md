@@ -58,14 +58,12 @@ You want to insert the current time at the start of the text and then freeze it 
 
 ```4d
   //Inserting the time at the start of the text
-
  ST INSERT EXPRESSION(*;StyledText_t;"Current time";1)
-
   //We freeze the expression
-
  ST FREEZE EXPRESSIONS(*;"StyledText_t";1)
 ```
 
 #### See also 
+
 [ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  

@@ -27,6 +27,7 @@ In order for this command to operate correctly, an element must be open. Otherwi
 
 You want to insert the following lines in your XML document:
 
+```XML
 function matchwo(a,b)
 {
 if (a < b && a < 0) then
@@ -38,19 +39,19 @@ else
       return 0
       }
 }
+```
 
 To do this, you just need to execute the following code:
 
 ```4d
- C_TEXT(vtMytext)
-
- ... ` place the text in the vtMytext variable here
-
+ var vtMytext : Text
+ ... // place the text in the vtMytext variable here
  SAX ADD XML CDATA($DocRef;vtMytext)
 ```
 
 The result will thus be:
 
+```XML
 <![CDATA[
 function matchwo(a,b)
 {
@@ -64,10 +65,12 @@ else
    }
 }
 ]]>
+```
 
 #### System variables and sets 
 
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0.
 
 #### See also 
+
 [SAX GET XML CDATA](sax-get-xml-cdata.md)  

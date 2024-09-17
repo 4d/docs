@@ -35,12 +35,8 @@ To verify the type and value of a variant variable:
 
 ```4d
  C_VARIANT($var)
-
  C_LONGINT($vt)
-
  $var:="test"
-
  $vt:=Type($var) //$vt="Is variant"
-
  $vt:=Value type($var) //$vt="Is text"
 ```

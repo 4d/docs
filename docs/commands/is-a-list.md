@@ -26,4 +26,5 @@ See example for the [CLEAR LIST](clear-list.md) command.
 See examples for the [\_o\_DRAG AND DROP PROPERTIES](/4Dv20R6/4D/20-R6/o-DRAG-AND-DROP-PROPERTIES.301-6957656.en.html) command.
 
 #### See also 
+
 [\_o\_DRAG AND DROP PROPERTIES](../../4D/20-R6/o-DRAG-AND-DROP-PROPERTIES.301-6957656.en.html)  

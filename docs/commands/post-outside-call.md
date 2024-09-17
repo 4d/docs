@@ -39,6 +39,7 @@ To communicate between processes that do not display forms, use the [GET PROCESS
 See example for [Semaphore](semaphore.md).
 
 #### See also 
+
 [Form event code](form-event-code.md)  
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  

@@ -41,6 +41,7 @@ See example for the [ADD RECORD](add-record.md) command.
 Accepting the record sets the OK system variable to 1; canceling it sets the OK system variable to 0\. The OK system variable is set only after the record is accepted or canceled.
 
 #### See also 
+
 [ADD RECORD](add-record.md)  
 [Locked](locked.md)  
 [Modified record](modified-record.md)  

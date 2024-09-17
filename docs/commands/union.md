@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 The result of a Union operation is depicted here. The shaded area is the result set.
 
-![](../assets/en/Commands/pict33125.en.png)
+![](../assets/en/commands/pict33125.en.png)
 
 The *resultSet* is created by **UNION**. The *resultSet* replaces any existing set having the same name, including *set1* and *set2*. Both *set1* and *set2* must be from the same table. The *resultSet* belongs to the same table as *set1* and *set2*. The current record for the *resultSet* is the current record from Set1.
 
@@ -38,17 +38,14 @@ The *resultSet* is created by **UNION**. The *resultSet* replaces any existing s
 This example adds records to a set of best customers. The records are displayed on screen with the first line. After the records are displayed, a set of the best customers is loaded from disk, and any records that the user selected (the set named “UserSet”) are added to the set. Finally, the new set is saved on disk:
 
 ```4d
- ALL RECORDS([Customers]) ` Select all the customers
-
- DISPLAY SELECTION([Customers]) ` Display all the customers in a list
-
- LOAD SET("$Best";"$SaveBest") ` Load the set of best customers
-
- UNION("$Best";"UserSet";"$Best") ` Add any selected to the set
-
- SAVE SET("$Best";"$SaveBest") ` Save the set of best customers
+ ALL RECORDS([Customers]) // Select all the customers
+ DISPLAY SELECTION([Customers]) // Display all the customers in a list
+ LOAD SET("$Best";"$SaveBest") // Load the set of best customers
+ UNION("$Best";"UserSet";"$Best") // Add any selected to the set
+ SAVE SET("$Best";"$SaveBest") // Save the set of best customers
 ```
 
 #### See also 
+
 [DIFFERENCE](difference.md)  
 [INTERSECTION](intersection.md)  

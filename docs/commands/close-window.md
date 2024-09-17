@@ -26,18 +26,14 @@ The following example opens a form window and adds new records with the [ADD REC
 
 ```4d
  FORM SET INPUT([Employees];"Entry")
-
  $winRef:=Open form window([Employees];"Entry")
-
  Repeat
-
     ADD RECORD([Employees]) //Add a new employee record
-
  Until(OK=0) //Loop until the user cancels
-
  CLOSE WINDOW //Close the window
 ```
 
 #### See also 
+
 [Open form window](open-form-window.md)  
 [Open window](open-window.md)  

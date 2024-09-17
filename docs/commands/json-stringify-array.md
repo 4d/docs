@@ -29,17 +29,12 @@ You can pass the optional *\** parameter to use pretty formatting in the resulti
 Conversion of a text array:
 
 ```4d
- C_TEXT($jsonString)
-
+ var $jsonString : Text
  ARRAY TEXT($ArrayFirstname;2)
-
  $ArrayFirstname{1}:="John"
-
  $ArrayFirstname{2}:="Jim"
-
  $jsonString :=JSON Stringify array($ArrayFirstname)
  
-
   // $jsonString = "["John","Jim"]"
 ```
 
@@ -49,13 +44,9 @@ Conversion of a text array containing numbers:
 
 ```4d
  ARRAY TEXT($phoneNumbers;0)
-
  APPEND TO ARRAY($phoneNumbers ;"555-0100")
-
  APPEND TO ARRAY($phoneNumbers ;"555-0120")
-
  $string :=JSON Stringify array($phoneNumbers)
-
   // $string = "["555-0100","555-0120"]"
 ```
 
@@ -64,85 +55,55 @@ Conversion of a text array containing numbers:
 Conversion of an object array:
 
 ```4d
- C_OBJECT($ref_john)
-
- C_OBJECT($ref_jim)
-
+ var $ref_john : Object
+ var $ref_jim : Object
  ARRAY OBJECT($myArray;0)
-
  OB SET($ref_john;"name";"John";"age";35)
-
  OB SET($ref_jim;"name";"Jim";"age";40)
-
  APPEND TO ARRAY($myArray ;$ref_john)
-
  APPEND TO ARRAY($myArray ;$ref_jim)
-
  $JsonString :=JSON Stringify array($myArray)
-
   // $JsonString = "[{"name":"John","age":35},{"name":"Jim","age":40}]"
  
-
   // If you want to view the result in a Web page,
-
   // pass the optional * parameter:
-
  $JsonStringPretty :=JSON Stringify array($myArray;*)
 ```
 
-![](../assets/en/Commands/pict1205072.fr.png)
+![](../assets/en/commands/pict1205072.fr.png)
 
 #### Example 4 
 
 Conversion of a 4D selection in an object array:
 
 ```4d
- C_OBJECT($jsonObject)
-
- C_TEXT($jsonString)
+ var $jsonObject : Object
+ var $jsonString : Text
  
-
  QUERY([Company];[Company]Company Name="a@")
-
  OB SET($jsonObject;"company name";->[Company]Company Name)
-
  OB SET($jsonObject;"city";->[Company]City)
-
  OB SET($jsonObject;"date";[Company]Date_input)
-
  OB SET($jsonObject;"time";[Company]Time_input)
-
  ARRAY OBJECT($arraySel;0)
  
-
  While(Not(End selection([Company])))
-
     $ref_value:=OB Copy($jsonObject;True)
-
   // If you do not copy them, the values will be empty strings
-
     APPEND TO ARRAY($arraySel;$ref_value)
-
   // Each element contains the selected values, for example:
-
   // $arraySel{1} = // {"company name":"APPLE","time":43200000,"city":
-
   // "Paris","date":"2012-08-02T00:00:00Z"}
-
     NEXT RECORD([Company])
-
  End while
  
-
  $jsonString:=JSON Stringify array($arraySel)
-
   // $jsonString = "[{"company name":"APPLE","time":43200000,"city":
-
   //"Paris","date":"2012-08-02T00:00:00Z"},{"company name":
-
   //"ALMANZA",...}]"
 ```
 
 #### See also 
+
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  

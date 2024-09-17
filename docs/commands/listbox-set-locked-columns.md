@@ -27,5 +27,6 @@ In *numColumns*, you can pass any value included between 1 and the total number 
 To remove the column locking, pass 0 or a negative value in *numColumns*.
 
 #### See also 
+
 [LISTBOX Get locked columns](listbox-get-locked-columns.md)  
 [LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md)  

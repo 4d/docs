@@ -22,4 +22,5 @@ Under macOS, the scope of this command is the 4D session: the configuration carr
 Under Windows, the scope of this command is global: the configuration is retained after the 4D application is closed.
 
 #### See also 
+
 [WA ZOOM OUT](wa-zoom-out.md)  

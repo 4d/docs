@@ -20,4 +20,5 @@ If the SQL server was launched, all the SQL connections are interrupted and the 
 **Note:** This command does not affect the internal functioning of the 4D SQL kernel. The SQL kernel is always available for internal queries.
 
 #### See also 
+
 [START SQL SERVER](start-sql-server.md)  

@@ -30,7 +30,6 @@ The following code:
 
 ```4d
  INSERT IN ARRAY($myarray;Size of array($myarray)+1)
-
  $myarray{Size of array($myarray)}:=$myvalue
 ```
 
@@ -41,5 +40,6 @@ The following code:
 ```
 
 #### See also 
+
 [DELETE FROM ARRAY](delete-from-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  

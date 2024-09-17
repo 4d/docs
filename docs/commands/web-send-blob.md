@@ -77,4 +77,5 @@ The references to 4D variables and *4DSCRIPT* type tags in the page are always p
 Refer to the example of the [PICTURE TO BLOB](picture-to-blob.md) routine.
 
 #### See also 
+
 [WEB SEND FILE](web-send-file.md)  

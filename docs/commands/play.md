@@ -38,13 +38,9 @@ The following example shows how to play a WAV file on Windows:
 
 ```4d
  $DocRef :=Open document("";"WAV";Read Mode)
-
  If(OK=1)
-
     CLOSE DOCUMENT($DocRef)
-
     PLAY(Document;0) //play asynchronously
-
  End if
 ```
 
@@ -57,4 +53,5 @@ The following example code plays a system sound on OS X:
 ```
 
 #### See also 
+
 [BEEP](beep.md)  

@@ -25,27 +25,18 @@ The following example can be used to retrieve in an array all the pathnames of t
 
 ```4d
  ARRAY TEXT($filesArray;0)
-
- C_TEXT($vfileArray)
-
- C_LONGINT($n)
-
+ var $vfileArray : Text
+ var $n : Integer
  $n:=1
-
  Repeat
-
     $vfileArray:=Get file from pasteboard($n)
-
     If($vfileArray#"")
-
        APPEND TO ARRAY($filesArray;$vfileArray)
-
        $n:=$n+1
-
     End if
-
  Until($vfileArray="")
 ```
 
 #### See also 
+
 [SET FILE TO PASTEBOARD](set-file-to-pasteboard.md)  

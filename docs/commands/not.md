@@ -22,13 +22,12 @@ displayed_sidebar: docs
 This example first assigns True to a variable, then changes the variable value to False, and then back to True.
 
 ```4d
- vResult:=True ` vResult is set to True
-
- vResult:=Not(vResult) ` vResult is set to False
-
- vResult:=Not(vResult) ` vResult is set to True
+ vResult:=True // vResult is set to True
+ vResult:=Not(vResult) // vResult is set to False
+ vResult:=Not(vResult) // vResult is set to True
 ```
 
 #### See also 
+
 [False](false.md)  
 [True](true.md)  

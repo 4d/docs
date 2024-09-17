@@ -28,7 +28,7 @@ In any case, you can get information about the error using the [GET BACKUP INFOR
 **Note**: You must declare the *$1* parameter (longint) in the database method:
 
 ```4d
- C_LONGINT($1)
+ var $1 : Integer
 ```
 
 It is important to note that in the case of an error during backup (disk full, support unavailable, etc.), the information related to the error is only displayed in the 4D Server monitor or in the MSC, and copied into the backup log. No alert dialog box appears and the *error* variable is not modified. If you want to be able to notify the administrator that an error has occurred, particularly in the context of an application running in client/server mode, you will need to use the **On Backup Shutdown database method**.

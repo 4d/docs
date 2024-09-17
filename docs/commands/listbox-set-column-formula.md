@@ -37,5 +37,6 @@ When the command is called, the formula is parsed and then executed.
 The *dataType* parameter designates the type of data resulting from the execution of the formula. In this parameter, you pass one of the constants from the [Field and Variable Types](/4Dv20R6/4D/20-R6/Field-and-Variable-Types.302-6958439.en.html) theme. If the formula result does not match the expected data type, an error is generated.
 
 #### See also 
+
 [LISTBOX Get column formula](listbox-get-column-formula.md)  
 [OBJECT SET DATA SOURCE](object-set-data-source.md)  

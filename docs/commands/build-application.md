@@ -34,11 +34,8 @@ This example builds two applications in a single method:
 
 ```4d
  BUILD APPLICATION("c:\\folder\\buildApp\\myclientApp.xml")
-
  If(OK=1)
-
     BUILD APPLICATION(File(Build application settings file).platformPath) //default settings
-
  End if
 ```
 
@@ -51,4 +48,5 @@ The system variable OK is set to 1 if the command has been correctly executed. O
 If the command fails, an error is generated that you can intercept using the [ON ERR CALL](on-err-call.md) command.
 
 #### See also 
+
 [Compile project](compile-project.md)  

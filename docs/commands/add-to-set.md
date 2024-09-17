@@ -18,4 +18,5 @@ displayed_sidebar: docs
 <!--REF #_command_.ADD TO SET.Summary-->ADD TO SET adds the current record of *aTable* to *set*.<!-- END REF--> The set must already exist; if it does not, an error occurs. If a current record does not exist for *aTable*, ADD TO SET has no effect.
 
 #### See also 
+
 [REMOVE FROM SET](remove-from-set.md)  

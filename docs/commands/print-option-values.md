@@ -49,5 +49,6 @@ For more information on the different print options, refer to the description of
 All the information returned by these commands is supplied by the operating system. Refer to the documentation of your system for more details about specific options.
 
 #### See also 
+
 [GET PRINT OPTION](get-print-option.md)  
 [SET PRINT OPTION](set-print-option.md)  

@@ -34,6 +34,7 @@ See example for the command [Print form](print-form.md).
 If the user clicks OK in both dialog boxes, the OK system variable is set to 1\. Otherwise, the OK system variable is set to 0\. 
 
 #### See also 
+
 [OPEN PRINTING JOB](open-printing-job.md)  
 [PAGE BREAK](page-break.md)  
 [Print form](print-form.md)  

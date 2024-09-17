@@ -62,11 +62,8 @@ The following example lets the user query the \[People\] table, and then automat
 
 ```4d
  QUERY([People])
-
  If(OK=1)
-
     QR REPORT([People];"Detailed Listing";*)
-
  End if
 ```
 
@@ -76,11 +73,8 @@ The following example lets the user query the \[People\] table, and then lets th
 
 ```4d
  QUERY([People])
-
  If(OK=1)
-
     QR REPORT([People];"")
-
  End if
 ```
 
@@ -90,11 +84,8 @@ The following example lets the user query the \[People\] table, and then display
 
 ```4d
  QUERY([People])
-
  If(OK=1)
-
     QR REPORT([People];Char(1))
-
  End if
 ```
 
@@ -113,46 +104,29 @@ You want to convert the character set used in a quick report called using **QR R
 The myCallbackMeth method converts the report when it is generated:
 
 ```4d
- C_LONGINT($1;$2)
-
+ var $1;$2 : Integer
  If($2=qr cmd generate) //if we generated a report
-
-    C_BLOB($myblob)
-
-    C_TEXT($path;$text)
-
-    C_LONGINT($type)
-
+    var $myblob : Blob
+    var $path;$text : Text
+    var $type : Integer
     QR EXECUTE COMMAND($1;$2) //execution of command
-
     QR GET DESTINATION($1;$type;$path) //retrieval of destination
-
     If(($type=qr HTML file)|($type=qr text file))
-
        DOCUMENT TO BLOB($path;$myblob)
-
   //conversion to text using UTF-8
-
        $text:=Convert to text($myblob;"UTF-8")
-
   //use of MacRoman set
-
        CONVERT FROM TEXT($text;"MacRoman";$myblob)
-
   //Return of converted report
-
        BLOB TO DOCUMENT($path;$myblob)
-
     End if
-
  Else //otherwise, execution of the command
-
     QR EXECUTE COMMAND($1;$2)
-
  End if
 ```
 
 #### See also 
+
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
 [SET ALLOWED METHODS](set-allowed-methods.md)  

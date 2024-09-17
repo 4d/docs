@@ -26,23 +26,17 @@ This code provides a menu including the names of the open windows and lets you g
 
 ```4d
  WINDOW LIST($alWindow)
-
  $tMenuRef:=Create menu
-
  For($i;1;Size of array($alWindow))
-
     APPEND MENU ITEM($tMenuRef;Get window title($alWindow{$i})) // Title of menu item
-
     SET MENU ITEM PARAMETER($tMenuRef;-1;String($alWindow{$i})) // Value returned by menu item
-
  End for
-
  $tWindowRef:=Dynamic pop up menu($tMenuRef)
-
  RELEASE MENU($tMenuRef)
 ```
 
 #### See also 
+
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [Get menu item parameter](get-menu-item-parameter.md)  
 [Get selected menu item parameter](get-selected-menu-item-parameter.md)  

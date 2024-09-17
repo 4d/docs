@@ -33,19 +33,12 @@ The following example populates the arrays *$alResID* and *$atResName* with the 
 
 ```4d
  If(On Windows)
-
     $vhStructureResFile:=Open resource file(Replace string(Structure file;".4DB";".RSR"))
-
  Else
-
     $vhStructureResFile:=Open resource file(Structure file)
-
  End if
-
  If(OK=1)
-
     RESOURCE LIST("STR#";$alResID;$atResName;$vhStructureResFile)
-
  End if
 ```
 
@@ -55,37 +48,23 @@ The following example copies the picture resources present in all currently open
 
 ```4d
  RESOURCE LIST("PICT";$alResID;$atResName)
-
  Open window(50;50;550;120;5;"Copying PICT resources...")
-
  For($vlElem;1;Size of array($alResID))
-
     GET PICTURE RESOURCE($alResID{$vlElem};$vgPicture)
-
     If(OK=1)
-
        $vsName:=$atResName{$vlElem}
-
        If($vsName="")
-
           $vsName:="PICT resID="+String($alResID{$vlElem})
-
        End if
-
        ERASE WINDOW
-
        GOTO XY(2;1)
-
        MESSAGE("Adding picture “"+$vsName+"” to the DB Picture library.")
-
        SET PICTURE TO LIBRARY($vgPicture;$alResID{$vlElem};$vsName)
-
     End if
-
  End for
-
  CLOSE WINDOW
 ```
 
 #### See also 
+
 [RESOURCE TYPE LIST](resource-type-list.md)  

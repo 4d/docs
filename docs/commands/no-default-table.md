@@ -21,9 +21,8 @@ This command concerns the use of project forms (forms not linked with tables): m
 In a database containing a project form named “TheForm” and a table form with the same name for the \[Table1\] table:
 
 ```4d
- DIALOG([Table1];"TheForm") `4D uses the table form
-
- DIALOG("TheForm") `4D uses the project form
+ DIALOG([Table1];"TheForm") //4D uses the table form
+ DIALOG("TheForm") //4D uses the project form
 ```
 
 However, this principle is null and void if the [DEFAULT TABLE](default-table.md) command is executed when the database contains a project form and a table form with the same name. In fact, in this case 4D will use the table form by default, even if the *aTable* parameter is not passed. In order to guarantee the use of project forms, simply use the **NO DEFAULT TABLE** command. 
@@ -34,13 +33,11 @@ In a database containing a project form named “TheForm” and a table form wit
 
 ```4d
  DEFAULT TABLE([Table1])
-
- DIALOG("TheForm") `4D uses the table form
-
+ DIALOG("TheForm") //4D uses the table form
  NO DEFAULT TABLE
-
- DIALOG("TheForm") `4D uses the project form
+ DIALOG("TheForm") //4D uses the project form
 ```
 
 #### See also 
+
 [DEFAULT TABLE](default-table.md)  

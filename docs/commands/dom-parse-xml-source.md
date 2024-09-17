@@ -89,5 +89,6 @@ Opening an XML document located at a specific URL, without validation:
 If the command has been correctly executed, the system variable OK is set to 1\. Otherwise, it is set to 0.
 
 #### See also 
+
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM Parse XML variable](dom-parse-xml-variable.md)  

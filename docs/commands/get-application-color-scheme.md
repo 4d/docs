@@ -34,12 +34,11 @@ Please refer to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.
 ```4d
  var $colorScheme : Text
  
-
   // Retrieve the colorScheme of the host database
-
  $colorScheme:=Get application color scheme(*)
 ```
 
 #### See also 
+
 [FORM Get color scheme](form-get-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  

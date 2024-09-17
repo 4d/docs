@@ -25,27 +25,18 @@ This maintenance method lets you request the compacting of the data file in the 
 
 ```4d
  ToBeCompacted:=False
-
  For($i ;1;Get last table number)
-
     If(Is table number valid($i))
-
        If(Get table fragmentation(Table($i)->)>20)
-
           ToBeCompacted:=True
-
        End if
-
     End if
-
  End for
-
  If(ToBeCompacted)
-
   // Places a marker requesting compacting
-
  End if
 ```
 
 #### See also 
+
 [Compact data file](compact-data-file.md)  

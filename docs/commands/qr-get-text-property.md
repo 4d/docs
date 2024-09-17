@@ -64,4 +64,5 @@ If you pass an invalid *rowNum* number, the error -9853 will be generated.
 If you pass an invalid *property* number, the error -9854 will be generated.
 
 #### See also 
+
 [QR SET TEXT PROPERTY](qr-set-text-property.md)  

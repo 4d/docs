@@ -25,9 +25,7 @@ displayed_sidebar: docs
 
 ```4d
  $result:=Undefined($exp)
-
   // same result:
-
  $result:=(Value type($exp)=Is undefined)
 ```
 
@@ -43,29 +41,21 @@ In some cases, you may not want the parameter to be evaluated (for example, when
 Here are the different results of the [Undefined](undefined.md) command as well as the [Null](null.md) command with object properties, depending on the context:
 
 ```4d
- C_OBJECT(vEmp)
-
+ var vEmp : Object
  vEmp:=New object
-
  vEmp.name:="Smith"
-
  vEmp.children:=Null
  
-
  $undefined:=Undefined(vEmp.name) // False
-
  $null:=(vEmp.name=Null) //False
  
-
  $undefined:=Undefined(vEmp.children) // False
-
  $null:=(vEmp.children=Null) //True
  
-
  $undefined:=Undefined(vEmp.parent) // True
-
  $null:=(vEmp.parent=Null) //True
 ```
 
 #### See also 
+
 [CLEAR VARIABLE](clear-variable.md)  

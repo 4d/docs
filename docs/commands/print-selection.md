@@ -47,16 +47,14 @@ After a call to **PRINT SELECTION**, the OK variable is set to 1 if the printing
 The following example selects all the records in the \[People\] table. It then uses the [DISPLAY SELECTION](display-selection.md) command to display the records and allows the user to highlight the records to print. Finally, it uses the selected records with the [USE SET](use-set.md) command, and prints them with **PRINT SELECTION**:
 
 ```4d
- ALL RECORDS([People]) ` Select all records
-
- DISPLAY SELECTION([People];*) ` Display the records
-
- USE SET("UserSet") ` Use only records picked by user
-
- PRINT SELECTION([People]) ` Print the records that the user picked
+ ALL RECORDS([People]) // Select all records
+ DISPLAY SELECTION([People];*) // Display the records
+ USE SET("UserSet") // Use only records picked by user
+ PRINT SELECTION([People]) // Print the records that the user picked
 ```
 
 #### See also 
+
 [\_o\_PAGE SETUP](../../4D/20-R6/o-PAGE-SETUP.301-6957638.en.html)  
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  

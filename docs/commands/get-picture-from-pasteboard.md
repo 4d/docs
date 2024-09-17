@@ -24,13 +24,9 @@ The following button’s object method assigns the picture (jpeg or gif format) 
 
 ```4d
  If((Pasteboard data size("com.4d.private.picture.jpeg")>0)|(Pasteboard data size("com.4d.private.picture.gif")>0))
-
     GET PICTURE FROM PASTEBOARD([Employees]Photo)
-
  Else
-
     ALERT("The pasteboard does not contain any pictures.")
-
  End if
 ```
 
@@ -39,6 +35,7 @@ The following button’s object method assigns the picture (jpeg or gif format) 
 If the picture is correctly extracted, OK is set to 1; otherwise OK is set to 0.
 
 #### See also 
+
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 [Pasteboard data size](pasteboard-data-size.md)  

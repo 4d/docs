@@ -24,8 +24,9 @@ displayed_sidebar: docs
 The following example assigns the exponential of 1 to *vrE* (the log of *vrE* is 1):
 
 ```4d
- vrE:=Exp(1) ` vrE gets 2.17828...
+ vrE:=Exp(1) // vrE gets 2.17828...
 ```
 
 #### See also 
+
 [Log](log.md)  

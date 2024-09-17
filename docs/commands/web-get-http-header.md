@@ -59,39 +59,26 @@ Here is a list of some HTTP fields that can be used in a request:
 The following method allows getting any HTTP request header field content: 
 
 ```4d
-  ` Project method GetHTTPField
-
-  ` GetHTTPField (Text) -> Text
-
-  ` GetHTTPField (HTTP header name) -> HTTP header content
+  // Project method GetHTTPField
+  // GetHTTPField (Text) -> Text
+  // GetHTTPField (HTTP header name) -> HTTP header content
  
-
- C_TEXT($0;$1)
-
- C_LONGINT($vlItem)
-
+ var $0;$1 : Text
+ var $vlItem : Integer
  ARRAY TEXT($names;0)
-
  ARRAY TEXT($values;0)
-
  $0:=""
-
  WEB GET HTTP HEADER($names;$values)
-
  $vlItem:=Find in array($names;$1)
-
  If($vlItem>0)
-
     $0:=$values{$vlItem}
-
  End if
 ```
 
 * Once this project method has been written, it can be called as follows:
 
 ```4d
-  ` Cookie header content
-
+  // Cookie header content
  $cookie:=GetHTTPField("Cookie")
 ```
 
@@ -99,21 +86,13 @@ The following method allows getting any HTTP request header field content:
 
 ```4d
  $language:=GetHTTPField("Accept-Language")
-
  Case of
-
-    :($language="@fr@") `French (see list ISO 639)
-
+    :($language="@fr@") //French (see list ISO 639)
        WEB SEND FILE("index_fr.html")
-
-    :($language="@sp@") `Spanish (see list ISO 639)
-
+    :($language="@sp@") //Spanish (see list ISO 639)
        WEB SEND FILE("index_es.html")
-
     Else
-
        WEB SEND FILE("index.html")
-
  End case
 ```
 
@@ -123,24 +102,17 @@ The following method allows getting any HTTP request header field content:
 
 ```4d
  $host:=GetHTTPField("Host")
-
  Case of
-
     :($host="www.site1.com")
-
        WEB SEND FILE("home_site1.com")
-
     :($host="www.site2.com")
-
        WEB SEND FILE("home_site2.com")
-
     Else
-
        WEB SEND FILE("home_site.com")
-
  End case
 ```
 
 #### See also 
+
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB SET HTTP HEADER](web-set-http-header.md)  

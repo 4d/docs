@@ -32,14 +32,7 @@ http://[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 For example, you can pass the following strings:  
 
 ```RAW
-    http://www.myserver.com
-    http://www.myserver.com/path
-    http://www.myserver.com/path?name="jones"
-    https://www.myserver.com/login (*)
-    http://123.45.67.89:8083
-    http://john:smith@123.45.67.89:8083
-    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]
-    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]:8080/index.html (**)
+    http://www.myserver.com    http://www.myserver.com/path    http://www.myserver.com/path?name="jones"    https://www.myserver.com/login (*)    http://123.45.67.89:8083    http://john:smith@123.45.67.89:8083    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]:8080/index.html (**)
 ```
 
 *(\*)* During HTTPS requests, authority of the certificate is not checked.   
@@ -70,16 +63,11 @@ If you are unable to connect to the server for a reason related to the network (
 Retrieval of the 4D logo on the 4D Web site:
 
 ```4d
- C_TEXT(URLPic_t)
-
+ var URLPic_t : Text
  URLPic_t:="http://www.4d.com/sites/all/themes/dimention/images/home/logo4D.jpg"
-
  ARRAY TEXT(HeaderNames_at;0)
-
  ARRAY TEXT(HeaderValues_at;0)
-
- C_PICTURE(Pic_i)
-
+ var Pic_i : Picture
  $httpResponse:=HTTP Get(URLPic_t;Pic_i;HeaderNames_at;HeaderValues_at)
 ```
 
@@ -88,16 +76,11 @@ Retrieval of the 4D logo on the 4D Web site:
 Retrieval of an RFC:
 
 ```4d
- C_TEXT(URLText_t)
-
- C_TEXT(Text_t)
-
+ var URLText_t : Text
+ var Text_t : Text
  URLText_t:="http://tools.ietf.org/rfc/rfc1.txt"
-
  ARRAY TEXT(HeaderNames_at;0)
-
  ARRAY TEXT(HeaderValues_at;0)
-
  $httpResponse:=HTTP Get(URLText_t;Text_t;HeaderNames_at;HeaderValues_at)
 ```
 
@@ -106,12 +89,11 @@ Retrieval of an RFC:
 Retrieval of a video:
 
 ```4d
- C_BLOB(vBlob)
-
+ var vBlob : Blob
  $httpResponse:=HTTP Get("http://www.example.com/video.flv";vBlob)
-
  BLOB TO DOCUMENT("video.flv";vBlob)
 ```
 
 #### See also 
+
 [HTTP Request](http-request.md)  

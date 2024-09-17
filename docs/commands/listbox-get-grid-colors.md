@@ -27,4 +27,5 @@ In *hColor* and *vColor*, the command returns the values of the RGB colors. The 
 * if you passed a longint, the color will be expressed as a 4-byte Long Integer (format 0x00rrggbb).
 
 #### See also 
+
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  

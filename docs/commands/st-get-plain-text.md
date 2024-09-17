@@ -68,46 +68,31 @@ You are looking for the text "very nice" among the values of a multistyle text f
 Given the following text placed in the multi-style area entitled "MyArea":
 
 ```RAW
-<span>It is now <span style="-d4-ref:'Current time:C178'"> </span> <a href="http://www.4d.com">Go to the 4D site</a> or <span style="-d4-ref-user:'openW'">Open a window</span></span>
+It is now   Go to the 4D site or Open a window
 ```
 
 This text is displayed:
 
-![](../assets/en/Commands/pict1217332.en.png)
+![](../assets/en/commands/pict1217332.en.png)
 
 If you execute the following code:
 
 ```4d
  $txt :=ST Get plain text(*;"myArea";ST References as spaces)
-
   // $txt = "It is now    or " (spaces)
-
  $txt :=ST Get plain text(*;"myArea";ST 4D Expressions as values)
-
   // $txt = "It is now 15:48:19  or  "
-
  $txt :=ST Get plain text(*;"myArea";ST 4D Expressions as sources)
-
   // $txt = "It is now Current time  or  "
-
  $txt :=ST Get plain text(*;"myArea";ST URL as links)
-
   //$txt = "It is now   http://www.4d.com or  "
-
  $txt :=ST Get plain text(*;"myArea";ST Text displayed with 4D Expression values)
-
   //$txt = "It is now 15:48:19 Go to the 4D site or Open a window"
-
  $txt :=ST Get plain text(*;"myArea";ST Text displayed with 4D Expression sources)
-
   //$txt = "It is now Current time Go to 4D site or Open a window"
-
  $txt :=ST Get plain text(*;"myArea";ST User links as labels)
-
   //$txt = "It is now    or Open a window"
-
  $txt :=ST Get plain text(*;"myArea";ST User links as links)
-
   //$txt = "It is now    or openW"
 ```
 
@@ -118,6 +103,7 @@ After this command is executed, the OK variable is set to 1 if no error occurred
 In the case of an error, the variable is not changed. When an error occurs on a variable when text is being evaluated, 4D transforms the text into plain text; as a result, the <, > and & characters are converted into HTML entities.
 
 #### See also 
+
 [ST Get text](st-get-text.md)  
 [ST SET PLAIN TEXT](st-set-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  

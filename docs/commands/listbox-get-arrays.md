@@ -44,6 +44,7 @@ For record selection, collection or entity selection type list boxes, *arrStyles
    * For each configuration set via an expression, a Nil pointer.
 
 #### See also 
+
 [LISTBOX Get array](listbox-get-array.md)  
 [LISTBOX Get property](listbox-get-property.md)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  

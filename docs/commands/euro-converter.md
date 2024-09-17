@@ -71,13 +71,9 @@ The conversion rates between the Euro and the currencies of the 11 participating
 Here are some examples of conversions that can be done with this command:
 
 ```4d
- $value:=10000 `Value expressed in French Francs
-
-  `Convert the value into Euros
-
+ $value:=10000 //Value expressed in French Francs
+  //Convert the value into Euros
  $InEuros:=Euro converter($value;French Franc;Euro)
-
-  `Convert the value into Italian Lire
-
+  //Convert the value into Italian Lire
  $InLires:=Euro converter($value;French Franc;Italian Lire)
 ```

@@ -73,13 +73,9 @@ This example sequentially sets to uppercase all elements of a process array from
 
 ```4d
  GET PROCESS VARIABLE($vlProcess;vl_IPCom_Array;$vlSize)
-
  For($vlElem;1;$vlSize)
-
     GET PROCESS VARIABLE($vlProcess;at_IPCom_Array{$vlElem};$vtElem)
-
     SET PROCESS VARIABLE($vlProcess;at_IPCom_Array{$vlElem};Uppercase($vtElem))
-
  End for
 ```
 
@@ -94,6 +90,7 @@ This example writes the destination process instance of the variables *v1*, *v2*
 ```
 
 #### See also 
+
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [POST OUTSIDE CALL](post-outside-call.md)  
 [Processes](../../4D/20-R6/Processes.300-6957590.en.html)  

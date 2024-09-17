@@ -40,15 +40,12 @@ Examples of requests with authentication:
 
 ```4d
   // Authentication on HTTP server in DIGEST mode
-
  HTTP AUTHENTICATE("httpUser";"123";2)
-
   // Authentication on proxy in default mode
-
  HTTP AUTHENTICATE("ProxyUser";"456";*)
-
  $httpStatus:=HTTP Get(...)
 ```
 
 #### See also 
+
 [HTTP SET OPTION](http-set-option.md)  

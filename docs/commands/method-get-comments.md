@@ -25,7 +25,7 @@ It contains:
 * markdown text in project databases
 * styled text in binary databases
 
-![](../assets/en/Commands/pict4968699.en.png)
+![](../assets/en/commands/pict4968699.en.png)
 
 This documentation can be generated for methods ot type triggers, project methods, form methods, database methods, and classes. 
 
@@ -34,18 +34,14 @@ This documentation can be generated for methods ot type triggers, project method
 You can use two types of syntaxes, based either on text arrays, or text variables:  
 
 ```4d
- C_TEXT(tVpath) // text variables
-
- C_TEXT(tVcomments)
-
+ var tVpath : Text // text variables
+ var tVcomments : Text
  METHOD GET COMMENTS(tVpath;tVcomments) // documentation of a single method
 ```
 
 ```4d
  ARRAY TEXT(arrPaths;0) // text arrays
-
  ARRAY TEXT(arrComments;0)
-
  METHOD GET COMMENTS(arrPaths;arrComments) // documentation of several methods
 ```
 
@@ -54,4 +50,5 @@ You cannot mix the two syntaxes.
 If the command is executed from a component, it applies by default to the component methods. If you pass the *\** parameter, it accesses the methods of the host database.
 
 #### See also 
+
 [METHOD SET COMMENTS](method-set-comments.md)  

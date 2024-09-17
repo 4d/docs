@@ -39,15 +39,10 @@ The following method is called to print the records in the selection and to acti
 
 ```4d
  ALL RECORDS([Students])
-
  ORDER BY([Students];[Students]Class;>)
-
  BREAK LEVEL(1)
-
  ACCUMULATE([Students]Grades)
-
  OUTPUT FORM([Students];"PrintForm")
-
  PRINT SELECTION([Students])
 ```
 
@@ -59,15 +54,13 @@ This example gets the variance of the values placed in an array:
 
 ```4d
  ARRAY REAL($ArrGrades;0)
-
  QUERY([Exams];[Exams]Exam_Date=!01/07/11!)
-
  SELECTION TO ARRAY([Exams]Exam_Grade;$ArrGrades)
-
  vVariance:=Variance($ArrGrades)
 ```
 
 #### See also 
+
 [Average](average.md)  
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  

@@ -20,5 +20,6 @@ displayed_sidebar: docs
 On Macintosh, Screen height returns the height of the main screen, the screen where the menu bar is located.
 
 #### See also 
+
 [SCREEN COORDINATES](screen-coordinates.md)  
 [Screen width](screen-width.md)  

@@ -33,12 +33,12 @@ You want to load a picture depending on the form current scheme:
 
 ```4d
  $txt_suffix:=Choose((FORM Get color scheme="dark");"_dark";"")
-
  READ PICTURE FILE(Get 4D folder(Current resources folder)+"myPict"+$txt_suffix+".png";$Pic_icon)
 ```
 
 **Note:** It is recommended to use [css](https://developer.4d.com/docs/FormEditor/stylesheets.html) to adapt form objects design to the current scheme. 
 
 #### See also 
+
 [Get application color scheme](get-application-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  

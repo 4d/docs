@@ -40,21 +40,18 @@ Adding a text type node:
 
 ```4d
  Reference:=DOM Create XML element(elementRef;"myElement")
-
  DOM SET XML ELEMENT VALUE(Reference;"Hello")
-
  temp:=DOM Create XML element(Reference;"br")
-
  temp:=DOM Append XML child node(Reference;XML DATA;"New")
-
  temp:=DOM Create XML element(Reference;"br")
-
  temp:=DOM Append XML child node(Reference;XML DATA;"York")
 ```
 
 Result:  
 
+```XML
 <myElement>Hello<br/>New<br/>York</myElement>
+```
 
 #### Example 2 
 
@@ -62,13 +59,14 @@ Adding a processing instruction type node:
 
 ```4d
  $Txt_instruction:="xml-stylesheet type = \"text/xsl\" href=\"style.xsl\""
-
  Reference:=DOM Append XML child node(elementRef;XML Processing Instruction;$Txt_instruction)
 ```
 
 Result (inserted before first element):  
 
+```XML
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
+```
 
 #### Example 3 
 
@@ -80,7 +78,9 @@ Adding a comment type node:
 
 Result:  
 
+```XML
 <!--Hello world-->
+```
 
 #### Example 4 
 
@@ -92,7 +92,9 @@ Adding a CDATA type node:
 
 Result:  
 
+```XML
 <element><![CDATA[12 < 18]]></element>
+```
 
 #### Example 5 
 
@@ -104,7 +106,9 @@ Adding or replacing a Doctype declaration type node:
 
 Result (inserted before first element):  
 
+```XML
 <!DOCTYPE Books SYSTEM  "Book.DTD">
+```
 
 #### Example 6 
 
@@ -112,26 +116,31 @@ Adding or replacing an Element type node.
 
 * if the *childValue* parameter is an XML fragment, it is inserted as child nodes:  
 ```4d  
- Reference:=DOM Append XML child node(elementRef;XML ELEMENT;"<child>simon</child><child>eva</child>")  
+ Reference:=DOM Append XML child node(elementRef;XML ELEMENT;"simoneva")  
 ```  
     
 Result:  
+```XML  
 <parent>  
     <child>simon</child>  
     <child>eva</child>  
-</parent>
+</parent>  
+```
 * otherwise, a new blank child element is appended:  
 ```4d  
  Reference:=DOM Append XML child node(elementRef;XML ELEMENT;"tbreak")  
 ```  
     
 Result:  
+```XML  
 <parent>  
      <tbreak/>  
- </parent>
+ </parent>  
+```
 
 If the contents of *childValue* are not valid, an error is returned. 
 
 #### See also 
+
 [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)  
 [DOM Get XML document ref](dom-get-xml-document-ref.md)  

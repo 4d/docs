@@ -29,4 +29,5 @@ This command only applies to checkboxes associated with variables, and not to Bo
 In the *threeStates* parameter, pass **True** to enable the "three states" mode, or **False** to disable it. 
 
 #### See also 
+
 [OBJECT Get three states checkbox](object-get-three-states-checkbox.md)  

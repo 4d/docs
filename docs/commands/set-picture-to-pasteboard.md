@@ -28,19 +28,12 @@ Using a floating window, you display a form that contains the array *asEmployeeN
 
 ```4d
  If(asEmployeeName#0)
-
     QUERY([Employees];[Employees]Last name=asEmployeeName{asEmployeeName})
-
     If(Picture size([Employees]Photo)>0)
-
-       SET PICTURE TO PASTEBOARD([Employees]Photo) ` Copy the employee's photo
-
+       SET PICTURE TO PASTEBOARD([Employees]Photo) // Copy the employee's photo
     Else
-
-       CLEAR PASTEBOARD ` No photo or no record found
-
+       CLEAR PASTEBOARD // No photo or no record found
     End if
-
  End if
 ```
 
@@ -50,5 +43,6 @@ If a copy of the picture is correctly put into the pasteboard, the OK variable i
 If there is not enough memory to paste the picture into the pasteboard, the OK variable is set to 0, but no error is generated.
 
 #### See also 
+
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  

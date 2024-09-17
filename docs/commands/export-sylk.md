@@ -35,8 +35,7 @@ The following example exports data to a SYLK document. The method first sets the
 
 ```4d
  FORM SET OUTPUT([People];"Export")
-
- EXPORT SYLK([People];"NewPeople.slk") ` Export to the "NewPeople.slk" document
+ EXPORT SYLK([People];"NewPeople.slk") // Export to the "NewPeople.slk" document
 ```
 
 #### System variables and sets 
@@ -44,6 +43,7 @@ The following example exports data to a SYLK document. The method first sets the
 OK is set to 1 if the export is successfully completed; otherwise, it is set to 0.
 
 #### See also 
+
 [EXPORT DIF](export-dif.md)  
 [EXPORT TEXT](export-text.md)  
 [IMPORT SYLK](import-sylk.md)  

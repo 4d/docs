@@ -30,15 +30,10 @@ Examples under Mac OS:
 
 ```4d
  $path:=Convert path POSIX to system("/Volumes/machd/file 2.txt")
-
   //returns "machd:file 2.txt"
-
  $path:=Convert path POSIX to system("/Volumes/machd/file%202.txt";*)
-
   //returns "machd:file 2.txt"
-
  $path:=Convert path POSIX to system("/file 2.txt")
-
   //returns "machd:file 2.txt" if machd is the startup disk
 ```
 
@@ -48,15 +43,13 @@ Examples under Windows:
 
 ```4d
  $path:=Convert path POSIX to system("c:/docs/file 2.txt")
-
   //returns "c:\\docs\\file 2.txt"
-
  $path:=Convert path POSIX to system("c:/docs/file%202.txt";*)
-
   //returns "c:\\docs\\file 2.txt"
 ```
 
 #### See also 
+
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  

@@ -49,13 +49,9 @@ This code is strictly equivalent to:
 
 ```4d
  If([Person]Masculine)
-
     vTitle:="Mr"
-
  Else
-
     vTitle:="Ms"
-
  End if
 ```
 
@@ -71,22 +67,13 @@ This code is strictly equivalent to:
 
 ```4d
  Case of
-
     :([Person]Status=0)
-
        vStatus:="Single"
-
     :([Person]Status=1)
-
        vStatus:="Married"
-
     :([Person]Status=2)
-
        vStatus:="Widowed"
-
     :([Person]Status=3)
-
        vStatus:="Divorced"
-
  End case
 ```

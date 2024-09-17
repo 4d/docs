@@ -52,37 +52,23 @@ We want to get the phone number of all users named "smith" in the company direct
 
 ```4d
  ARRAY TEXT($_tabAttributes;0)
-
  ARRAY BOOLEAN($_tabAttributes_asArray;0)
-
  APPEND TO ARRAY($_tabAttributes;"cn")
-
  APPEND TO ARRAY($_tabAttributes_asArray;False)
-
  APPEND TO ARRAY($_tabAttributes;"telephoneNumber")
-
  APPEND TO ARRAY($_tabAttributes_asArray;False)
-
  ARRAY OBJECT($_entry;0)
  
-
  LDAP LOGIN($url;$myLogin;$pwd)
-
  $filter:="cn=*smith*"
-
  LDAP SEARCH ALL($dnSearchRootEntry;$_entry;$filter;LDAP all levels;$_tabAttributes)
-
  LDAP LOGOUT
  
-
+ 
   //$_entry will contain for example
-
   // $_entry{1} = {"cn":"John Smith","telephoneNumber":"01 40 87 00 00"}
-
   // $_entry{2} = {"cn":"Adele Smith","telephoneNumber":"01 40 87 00 01"}
-
   // $_entry{3} = {"cn":"Adrian Smith","telephoneNumber":"01 23 45 67 89"}
-
   // ...
 ```
 
@@ -92,60 +78,39 @@ These examples illustrate the use of the *attributesAsArray* parameter:
 
 ```4d
  ARRAY OBJECT($_entry;0)
-
  ARRAY TEXT($_tabAttributes;0)
-
  ARRAY BOOLEAN($_tabAttributes_asArray;0)
-
  APPEND TO ARRAY($_tabAttributes;"cn")
-
  APPEND TO ARRAY($_tabAttributes_asArray;False)
-
  APPEND TO ARRAY($_tabAttributes;"memberOf")
-
  APPEND TO ARRAY($_tabAttributes_asArray;True)
  
-
  LDAP LOGIN($url;$login;$pwd;LDAP password plain text)
-
  LDAP SEARCH ALL($dnSearchRootEntry;$_entry;$filter;LDAP all levels;$_tabAttributes;$_tabAttributes_asArray)
-
  LDAP LOGOUT
  
-
  ARRAY TEXT($_arrMemberOf;0)
-
  OB GET ARRAY($_entry{1};"memberOf";$_arrMemberOf)
-
   // in $_arrMemberOf we have an array containing all groups of the entry
 ```
 
 ```4d
  ARRAY TEXT($_tabAttributes;0)
-
  ARRAY BOOLEAN($_tabAttributes_asArray;0)
-
  APPEND TO ARRAY($_tabAttributes;"cn")
-
  APPEND TO ARRAY($_tabAttributes_asArray;False)
-
  APPEND TO ARRAY($_tabAttributes;"memberOf")
-
  APPEND TO ARRAY($_tabAttributes_asArray;False)
  
-
  LDAP LOGIN($url;$login;$pwd;LDAP password plain text)
-
  LDAP SEARCH ALL($dnSearchRootEntry;$_entry;$filter;LDAP all levels;$_tabAttributes;$_tabAttributes_asArray)
-
  LDAP LOGOUT
  
-
  $memberOf:=OB Get($_entry{1};"memberOf")
-
   // in $memberOf we have a variable containing the first group of the entry
 ```
 
 #### See also 
+
 [LDAP](../../4D/20-R6/LDAP.302-6958498.en.html)  
 [LDAP Search](ldap-search.md)  

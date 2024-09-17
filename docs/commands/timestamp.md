@@ -26,24 +26,18 @@ You can use **Timestamp** in a log file to know precisely when the events occurr
 
 ```4d
  $vhDocRef:=Append document("TimestampProject.log")
-
  $logWithTimestamp:=Timestamp+Char(Tab)+"Log with timestamp"+Char(Carriage return)
-
  SEND PACKET($vhDocRef;String($logWithTimestamp))
 ```
 
 Result:
 
 ```RAW
-2016-12-12T13:31:29.477Z   Log with timestamp
-2016-12-12T13:31:29.478Z   Connection of user1
-2016-12-12T13:31:29.486Z   ERROR - Exception of type 'System exception'
-2016-12-12T13:31:29.492Z   Click on button1684
-2016-12-12T13:31:29.502Z   [SP_HELP- 1 rows] Command processed
-2016-12-12T13:31:29.512Z   [SP_HELP- 5 rows] Result set fetched
+2016-12-12T13:31:29.477Z   Log with timestamp2016-12-12T13:31:29.478Z   Connection of user12016-12-12T13:31:29.486Z   ERROR - Exception of type 'System exception'2016-12-12T13:31:29.492Z   Click on button16842016-12-12T13:31:29.502Z   [SP_HELP- 1 rows] Command processed2016-12-12T13:31:29.512Z   [SP_HELP- 5 rows] Result set fetched
 ```
 
 #### See also 
+
 [Milliseconds](milliseconds.md)  
 [String](string.md)  
 [Time](time.md)  

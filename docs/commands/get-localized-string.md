@@ -29,12 +29,14 @@ Note that XLIFF is diacritical.
 
 Here is an extract from an .xlf file:
 
+```XML
 <file source-language="en-US" target-language="fr-FR">
 [...]
    <trans-unit resname="Show on disk">
       <source>Show on disk</source>
       <target>Montrer sur le disque</target>
    </trans-unit>
+```
 
 After executing the following statement:
 
@@ -49,4 +51,5 @@ After executing the following statement:
 If the command is executed correctly, the OK variable is set to 1\. If *resName* is not found, the command returns an empty string and the OK variable is set to 0.
 
 #### See also 
+
 [Get database localization](get-database-localization.md)  

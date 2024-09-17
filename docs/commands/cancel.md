@@ -47,6 +47,7 @@ Refer to the example of the [SET PRINT MARKER](set-print-marker.md) command.
 When the [CANCEL](cancel.md) command is executed (form or printing cancelled), the system variable OK is set to 0.
 
 #### See also 
+
 [ACCEPT](accept.md)  
 [PAGE BREAK](page-break.md)  
 [Print form](print-form.md)  

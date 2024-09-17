@@ -26,42 +26,34 @@ If you pass *visible* equal to **TRUE**, the objects are shown. If you pass *vis
 
 Here is a typical form in the Design environment:
 
-![](../assets/en/Commands/pict27188.en.png)
+![](../assets/en/commands/pict27188.en.png)
 
 The objects in the **Employer Information** group box each have an object name that contains the expression “employer” (including the group box). When the **Currently Employed** check box is checked, the objects must be visible; when the check box is unchecked, the objects must be invisible.   
 Here is the object method of the check box:
 
 ```4d
-  ` cbCurrentlyEmployed Check Box Object Method
-
+  // cbCurrentlyEmployed Check Box Object Method
  Case of
-
     :(FORM Event=On Load)
-
        cbCurrentlyEmployed:=1
  
-
     :(FORM Event=On Clicked)
-
-  ` Hide or Show all the objects whose name contains "emp"
-
+  // Hide or Show all the objects whose name contains "emp"
        OBJECT SET VISIBLE(*;"@emp@";cbCurrentlyEmployed#0)
-
-  ` But always keep the check box itself visible
-
+  // But always keep the check box itself visible
        OBJECT SET VISIBLE(cbCurrentlyEmployed;True)
-
  End case
 ```
 
 Therefore, when executed, the form looks like:
 
-![](../assets/en/Commands/pict27189.en.png)
+![](../assets/en/commands/pict27189.en.png)
 
 or:
 
-![](../assets/en/Commands/pict27190.en.png)
+![](../assets/en/commands/pict27190.en.png)
 
 #### See also 
+
 [OBJECT Get visible](object-get-visible.md)  
 [OBJECT SET ENTERABLE](object-set-enterable.md)  

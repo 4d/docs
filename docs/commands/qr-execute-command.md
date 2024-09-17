@@ -33,5 +33,6 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 If you pass an invalid *command* number, the error -9852 will be generated.
 
 #### See also 
+
 [QR Get command status](qr-get-command-status.md)  
 [QR ON COMMAND](qr-on-command.md)  

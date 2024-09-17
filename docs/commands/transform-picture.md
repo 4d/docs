@@ -57,7 +57,7 @@ You want to set the white parts of a picture to transparent. To do this, you can
 
 You will get the following result:
 
-![](../assets/en/Commands/pict1359750.en.png)
+![](../assets/en/commands/pict1359750.en.png)
 
 #### Example 2 
 
@@ -67,7 +67,8 @@ Here is an example of cropping a picture (the picture is displayed in the form w
  TRANSFORM PICTURE($vpGears;Crop;50;50;100;100)
 ```
 
-![](../assets/en/Commands/pict28288.en.png)
+![](../assets/en/commands/pict28288.en.png)
 
 #### See also 
+
 [COMBINE PICTURES](combine-pictures.md)  

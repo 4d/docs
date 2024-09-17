@@ -46,49 +46,38 @@ You can compare the values returned in the *one* and *many* parameters with the 
 
 Given the following structure:
 
-![](../assets/en/Commands/pict31607.en.png)
+![](../assets/en/commands/pict31607.en.png)
 
 The properties of the relation linking the \[Employees\]Company field to the \[Companies\]Name field are the following:
 
-![](../assets/en/Commands/pict31608.en.png)
+![](../assets/en/commands/pict31608.en.png)
 
 The following code illustrates the various possibilities offered by the **GET FIELD RELATION**, [GET AUTOMATIC RELATIONS](get-automatic-relations.md) and [SET FIELD RELATION](set-field-relation.md), [SET AUTOMATIC RELATIONS](set-automatic-relations.md) commands along with their effects:
 
 ```4d
- GET AUTOMATIC RELATIONS(one;many) `returns False, False
-
- GET FIELD RELATION([Employees]Company;one;many) `returns 1,1
-
- GET FIELD RELATION([Employees]Company;one;many;*) `returns 3,2
+ GET AUTOMATIC RELATIONS(one;many) //returns False, False
+ GET FIELD RELATION([Employees]Company;one;many) //returns 1,1
+ GET FIELD RELATION([Employees]Company;one;many;*) //returns 3,2
  
-
- SET FIELD RELATION([Employees]Company;2;0) `changes Many-to-One relation to manual
+ SET FIELD RELATION([Employees]Company;2;0) //changes Many-to-One relation to manual
  
-
- GET FIELD RELATION([Employees]Company;one;many) `returns 2,1
-
- GET FIELD RELATION([Employees]Company;one;many;*) `returns 2, 2
+ GET FIELD RELATION([Employees]Company;one;many) //returns 2,1
+ GET FIELD RELATION([Employees]Company;one;many;*) //returns 2, 2
  
-
- SET FIELD RELATION([Employees]Company;1;0) `re-establishes the parameters set in Design environment for Many-to-One relation
+ SET FIELD RELATION([Employees]Company;1;0) //re-establishes the parameters set in Design environment for Many-to-One relation
  
-
- GET FIELD RELATION([Employees]Company;one;many) `returns 1,1
-
- GET FIELD RELATION([Employees]Company;one;many;*) `returns 3,2
+ GET FIELD RELATION([Employees]Company;one;many) //returns 1,1
+ GET FIELD RELATION([Employees]Company;one;many;*) //returns 3,2
  
-
- SET AUTOMATIC RELATIONS(True;True) `changes all relations of all tables to automatic
+ SET AUTOMATIC RELATIONS(True;True) //changes all relations of all tables to automatic
  
-
- GET AUTOMATIC RELATIONS(one;many) `returns True, True
-
- GET FIELD RELATION([Employees]Company;one;many) `returns 1,1
-
- GET FIELD RELATION([Employees]Company;one;many;*) `returns 3,3
+ GET AUTOMATIC RELATIONS(one;many) //returns True, True
+ GET FIELD RELATION([Employees]Company;one;many) //returns 1,1
+ GET FIELD RELATION([Employees]Company;one;many;*) //returns 3,3
 ```
 
 #### See also 
+
 [GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  

@@ -20,47 +20,7 @@ displayed_sidebar: docs
 * When executed on the server, by default if you omit the *options* parameter, **Get process activity** returns both user session and process lists, as shown below:  
     
 ```RAW  
-{  
-"sessions": [  
-          {  
-             "type": "remote",  
-             "userName": "Designer",  
-             "machineName": "iMac27caroline",  
-             "systemUserName": "Caroline Briaud",  
-             "IPAddress": "192.168.18.18",  
-             "hostType": "mac",  
-             "creationDateTime": "2017-09-22T12:46:39Z",  
-             "state": "postponed",  
-             "ID": "3C81A8D7AFE64C2E9CCFFCDC35DC52F5"  
-           },...  
-       ],  
-"processes": [  
-          {  
-             "name": "Application process",  
-             "sessionID": "3C81A8D7AFE64C2E9CCFFCDC35DC52F5",  
-             "number": 4,  
-             "ID": 4,  
-             "visible": true,  
-             "systemID": "123145476132864",  
-             "type": -18,  
-             "state": 0,  
-             "cpuUsage": 0,  
-             "cpuTime": 0.006769,  
-             "preemptive": false,  
-             "session": {  
-                      "type": "remote",  
-                      "userName": "Designer",  
-                      "machineName": "iMac27caroline",  
-                      "systemUserName": "Caroline Briaud",  
-                      "IPAddress": "192.168.18.18",  
-                      "hostType": "mac",  
-                      "creationDateTime": "2017-09-22T12:46:39Z",  
-                      "state": "postponed",  
-                      "ID": "3C81A8D7AFE64C2E9CCFFCDC35DC52F5"  
-                       }  
-           },...  
-    ]  
-}  
+{"sessions": [          {             "type": "remote",             "userName": "Designer",             "machineName": "iMac27caroline",             "systemUserName": "Caroline Briaud",             "IPAddress": "192.168.18.18",             "hostType": "mac",             "creationDateTime": "2017-09-22T12:46:39Z",             "state": "postponed",             "ID": "3C81A8D7AFE64C2E9CCFFCDC35DC52F5"           },...       ],"processes": [          {             "name": "Application process",             "sessionID": "3C81A8D7AFE64C2E9CCFFCDC35DC52F5",             "number": 4,             "ID": 4,             "visible": true,             "systemID": "123145476132864",             "type": -18,             "state": 0,             "cpuUsage": 0,             "cpuTime": 0.006769,             "preemptive": false,             "session": {                         "type": "remote",                      "userName": "Designer",                      "machineName": "iMac27caroline",                      "systemUserName": "Caroline Briaud",                      "IPAddress": "192.168.18.18",                      "hostType": "mac",                      "creationDateTime": "2017-09-22T12:46:39Z",                      "state": "postponed",                      "ID": "3C81A8D7AFE64C2E9CCFFCDC35DC52F5"                       }           },...    ]}  
 ```  
     
     
@@ -121,26 +81,19 @@ You want to get the collection of all user sessions:
 ```4d
   //To be executed on the server
  
-
- C_OBJECT($o)
-
- C_LONGINT($i)
+ var $o : Object
+ var $i : Integer
  
-
  $o:=Get process activity //Get process & session info
-
  For($i;0;($o.processes.length)-1) //Iterate over the "processes" collection
-
     $processName:=$o.processes[$i].name
-
     $userName:=String($o.processes[$i].session.userName) // Easy access to userName
-
   //use String because session object might be undefined
-
  End for
 ```
 
 #### See also 
+
 [PROCESS PROPERTIES](process-properties.md)  
 [Session storage by ID](session-storage-by-id.md)  
 [WEB Get server info](web-get-server-info.md)  

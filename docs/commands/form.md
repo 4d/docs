@@ -49,60 +49,39 @@ For more information, please refer to the [Page subforms](/4Dv20R6/4D/20-R6/Page
 
 In a form displaying the record of a person, a "Check children" button opens a dialog to verify/modify the names and ages of their children:
 
-![](../assets/en/Commands/pict3542015.en.png)
+![](../assets/en/commands/pict3542015.en.png)
 
 **Note:** The "Children" object field is represented only to show its structure for this example.
 
 In the verification form, you have assigned some [Form](form.md) object properties to variables:
 
-![](../assets/en/Commands/pict3541682.en.png)
+![](../assets/en/commands/pict3541682.en.png)
 
 Here is the code for the "Check children" button:
 
 ```4d
- C_LONGINT($win;$n;$i)
-
- C_BOOLEAN($save)
-
+ var $win;$n;$i : Integer
+ var $save : Boolean
  ARRAY OBJECT($children;0)
-
  OB GET ARRAY([Person]Children;"children";$children) //get the children collection
-
  $save:=False //initialize the save variable
  
-
  $n:=Size of array($children)
-
  If($n>0)
-
     $win:=Open form window("Edit_Children";Movable form dialog box)
-
     SET WINDOW TITLE("Check children for "+[Person]Name)
-
     For($i;1;$n) //for each child
-
        DIALOG("Edit_Children";$children{$i}) //displays dialog filled with values
-
        If(OK=1) //the user clicked OK
-
           $save:=True
-
        End if
-
     End for
-
     If($save=True)
-
        [Person]Children:=[Person]Children //forces object field update
-
     End if
-
     CLOSE WINDOW($win)
-
  Else
-
     ALERT("No child to check.")
-
  End if
 ```
 
@@ -110,9 +89,10 @@ Here is the code for the "Check children" button:
 
 The form displays information for each child:
 
-![](../assets/en/Commands/pict3515152.en.png)
+![](../assets/en/commands/pict3515152.en.png)
 
 If values are edited and the OK button is clicked, the field is updated (the parent record must be saved afterwards). 
 
 #### See also 
+
 [DIALOG](dialog.md)  

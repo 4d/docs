@@ -24,5 +24,6 @@ The documentation for this command has been moved. See [**Formula from string** 
 The **Formula from string** command creates a formula object based upon the *formulaString*. 
 
 #### See also 
+
 [Formula](formula.md)  
 [Parse formula](parse-formula.md)  

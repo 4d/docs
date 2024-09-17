@@ -32,7 +32,7 @@ The coordinates passed in the *x* and *y* parameters must be expressed in pixels
 
 The point taken into account is the first point reached. For example, in the case below, the command will return the ID of the circle if the coordinates of point A are passed and that of the rectangle if the coordinates of point B are passed:
 
-![](../assets/en/Commands/pict41094.en.png)
+![](../assets/en/commands/pict41094.en.png)
 
 When the coordinates correspond to superimposed or composite objects, the command returns the ID of the first object having a valid ID attribute by going back, if necessary, among the parent elements.
 
@@ -49,4 +49,5 @@ The command returns an empty string if:
 If *pictureObject* does not contain a valid SVG picture, the command returns an empty string and the OK system variable is set to 0\. Otherwise, if the command has been executed correctly, the OK system variable is set to 1\. 
 
 #### See also 
+
 [SVG Find element IDs by rect](svg-find-element-ids-by-rect.md)  

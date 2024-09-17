@@ -31,5 +31,6 @@ Lastly, you can pass *\** in *itemRef*: in this case, the command is applied to 
 In *selector*, you can pass the Additional text or Associated standard action constants (found in the “[Hierarchical Lists](/4Dv20R6/4D/20-R6/Hierarchical-Lists.302-6958481.en.html)” theme) or any custom value. For more information about the *selector* and *value* parameters, please refer to the description of the [SET LIST ITEM PARAMETER](set-list-item-parameter.md) command.
 
 #### See also 
+
 [Hierarchical Lists](../../4D/20-R6/Hierarchical-Lists.302-6958481.en.html)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  

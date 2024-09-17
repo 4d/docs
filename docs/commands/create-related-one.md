@@ -21,4 +21,5 @@ To save a value in the appropriate field, assign values to the One field from th
 If a related record exists, **CREATE RELATED ONE** acts just like [RELATE ONE](relate-one.md) and loads the related record into memory.
 
 #### See also 
+
 [SAVE RELATED ONE](save-related-one.md)  

@@ -49,14 +49,12 @@ This example creates an interprocess array of 50 4-byte Long Integer elements an
 
 ```4d
  ARRAY LONGINT(◊alValues;50)
-
  For($vlElem;1;50)
-
     ◊alValues{$vlElem}:=$vlElem
-
  End for
 ```
 
 #### See also 
+
 [ARRAY INTEGER](array-integer.md)  
 [ARRAY REAL](array-real.md)  

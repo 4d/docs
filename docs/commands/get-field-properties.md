@@ -68,6 +68,7 @@ This example sets the variables *vType*, *vLength*, *vIndex*, *vUnique* and *vIn
 ```
 
 #### See also 
+
 [Field](field.md)  
 [Field name](field-name.md)  
 [SET INDEX](set-index.md)  

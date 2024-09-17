@@ -19,4 +19,5 @@ displayed_sidebar: docs
 This command can be used for security reasons in the [On Web Authentication Database Method](/4Dv20R6/4D/14-R2/On-Web-Authentication-Database-Method.300-1342178.en.html) in order to determine the nature of the received requests.
 
 #### See also 
+
 [SOAP DECLARATION](soap-declaration.md)  

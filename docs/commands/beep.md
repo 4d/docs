@@ -23,15 +23,12 @@ In the following example, if no records are found by the query, a beep is emitte
 
 ```4d
  QUERY([Customers];[Customers]Name=$vsNameToLookFor)
-
  If(Records in selection([Customers])=0)
-
     BEEP
-
     ALERT("There is no Customer with such a name.")
-
  End if
 ```
 
 #### See also 
+
 [PLAY](play.md)  

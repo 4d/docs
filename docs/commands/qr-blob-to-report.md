@@ -25,12 +25,9 @@ If you pass an invalid *blob* parameter, the error -9852 will be generated.
 The following code allows you to display, in MyArea, a report file named “report.4qr” located next to the database structure. The report file does not have to be created with 4D version 2003; it can originate from previous versions:
 
 ```4d
- C_BLOB($doc)
-
- C_LONGINT(MyArea)
-
+ var $doc : Blob
+ var MyArea : Integer
  DOCUMENT TO BLOB("report.4qr";$doc)
-
  QR BLOB TO REPORT(MyArea;$doc)
 ```
 
@@ -43,4 +40,5 @@ The following statement retrieves the Quick Report stored in Field4 and displays
 ```
 
 #### See also 
+
 [QR REPORT TO BLOB](qr-report-to-blob.md)  

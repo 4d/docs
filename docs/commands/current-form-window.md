@@ -19,6 +19,7 @@ displayed_sidebar: docs
 The current form window can be generated automatically using a command such as [ADD RECORD](add-record.md), following a user action or by using the [Open window](open-window.md) or [Open form window](open-form-window.md) commands. 
 
 #### See also 
+
 [Open form window](open-form-window.md)  
 [Open window](open-window.md)  
 [RESIZE FORM WINDOW](resize-form-window.md)  

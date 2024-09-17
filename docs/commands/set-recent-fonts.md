@@ -22,23 +22,21 @@ This menu contains the names of the last fonts selected during the session. It i
 
 You want to add a font to the menu of recent fonts:
 
-![](../assets/en/Commands/pict1202029.en.png)
+![](../assets/en/commands/pict1202029.en.png)
 
 You execute the following code:
 
 ```4d
  ARRAY TEXT($arrRecent;0)
-
  FONT LIST($arrRecent;2)
-
  APPEND TO ARRAY($arrRecent;"Segoe Script")
-
  APPEND TO ARRAY($arrRecent)
 ```
 
 Then the menu contains:
 
-![](../assets/en/Commands/pict1202031.en.png)
+![](../assets/en/commands/pict1202031.en.png)
 
 #### See also 
+
 [FONT LIST](font-list.md)  

@@ -21,6 +21,7 @@ Use READ ONLY when you do not need to modify the record or records.
 **Note:** This command is not retroactive. A record is loaded according to the table’s read/write status at the time of loading. To load a record from a read/write table in read-only mode, you must first change the table state to read-only.
 
 #### See also 
+
 [Read only state](read-only-state.md)  
 [READ WRITE](read-write.md)  
 [Record Locking](../../4D/20-R6/Record-Locking.300-6958117.en.html)  

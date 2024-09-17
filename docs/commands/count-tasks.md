@@ -23,6 +23,7 @@ This number takes into account all processes, even those that are automatically 
 See the example for [Process state](process-state.md) and for the [Semaphore](semaphore.md).
 
 #### See also 
+
 [Count user processes](count-user-processes.md)  
 [Count users](count-users.md)  
 [PROCESS PROPERTIES](process-properties.md)  

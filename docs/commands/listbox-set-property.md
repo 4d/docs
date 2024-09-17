@@ -79,6 +79,7 @@ You want to set a maximum width for the column whose name is "ProductNumber":
 ```
 
 #### See also 
+
   
 [List Box](../../4D/20-R6/List-Box.302-6958504.en.html)  
 [LISTBOX Get property](listbox-get-property.md)  

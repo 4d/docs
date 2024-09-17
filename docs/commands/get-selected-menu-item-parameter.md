@@ -19,6 +19,7 @@ displayed_sidebar: docs
 If no menu item has been selected, the command returns an empty string "".
 
 #### See also 
+
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [Get menu item parameter](get-menu-item-parameter.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  

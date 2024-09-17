@@ -57,18 +57,12 @@ The optional *subMenu* parameter can be used to indicate a menu as the added ite
 This example appends the names of the available fonts to the Font menu, which in this example is the sixth menu of the current menu bar:
 
 ```4d
-  ` In the On Startup database method
-
-  ` The font list is loaded and menu item text is built
-
+  // In the On Startup database method
+  // The font list is loaded and menu item text is built
  FONT LIST(◊asAvailableFont)
-
  ◊atFontMenuItems:=""
-
  For($vlFont;1;Size of array(◊asAvailableFont))
-
     ◊atFontMenuItems:=◊atFontMenuItems+";"+◊asAvailableFont{$vlFont}
-
  End for
 ```
 
@@ -79,6 +73,7 @@ Then, in any form or project method, you can write:
 ```
 
 #### See also 
+
 [DELETE MENU ITEM](delete-menu-item.md)  
 [INSERT MENU ITEM](insert-menu-item.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  

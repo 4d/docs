@@ -37,4 +37,5 @@ The command returns a value corresponding to the border line style. You can comp
 | Border System | Longint | 6     | The border line is drawn based on the graphic specifications of the system                      |
 
 #### See also 
+
 [OBJECT SET BORDER STYLE](object-set-border-style.md)  

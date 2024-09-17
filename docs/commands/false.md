@@ -12,11 +12,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description
+#### Description 
 
 <!--REF #_command_.False.Summary-->False returns the Boolean value False.<!-- END REF-->
 
-#### Example
+#### Example 
 
 The following example sets the variable *vbOptions* to False:
 
@@ -24,6 +24,7 @@ The following example sets the variable *vbOptions* to False:
  vbOptions:=False
 ```
 
-#### See also
+#### See also 
+
 [Not](not.md)  
 [True](true.md)  

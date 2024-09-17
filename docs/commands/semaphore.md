@@ -45,13 +45,9 @@ Here is typical code for using a semaphore:
 
 ```4d
  While(Semaphore("MySemaphore";300))
-
     IDLE
-
  End while
-
   // place code protected by semaphore here
-
  CLEAR SEMAPHORE("MySemaphore")
 ```
 
@@ -60,16 +56,11 @@ Here is typical code for using a semaphore:
 In this example, you want to prevent two users from doing a global update of the prices in a Products table. The following method uses semaphores to manage this:
 
 ```4d
- If(Semaphore("UpdatePrices")) ` Try to create the semaphore
-
+ If(Semaphore("UpdatePrices")) // Try to create the semaphore
     ALERT("Another user is already updating prices. Retry later.")
-
  Else
-
-    DoUpdatePrices ` Update all the prices
-
-    CLEAR SEMAPHORE("UpdatePrices")) ` Clear the semaphore
-
+    DoUpdatePrices // Update all the prices
+    CLEAR SEMAPHORE("UpdatePrices")) // Clear the semaphore
  End if
 ```
 
@@ -80,32 +71,22 @@ The following example uses a local semaphore. In a database with several process
 The interprocess array is initialized in the Startup method:
 
 ```4d
- ARRAY TEXT(◊ToDoList;0) ` The To Do list is initially empty
+ ARRAY TEXT(◊ToDoList;0) // The To Do list is initially empty
 ```
 
 Here is the method used for adding items to the To Do list:
 
 ```4d
-  ` ADD TO DO LIST project method
-
-  ` ADD TO DO LIST ( Text )
-
-  ` ADD TO DO LIST ( To do list item )
-
- C_TEXT($1)
-
+  // ADD TO DO LIST project method
+  // ADD TO DO LIST ( Text )
+  // ADD TO DO LIST ( To do list item )
+ var $1 : Text
  If(Not(Semaphore("$AccessToDoList";300)))
-
-  ` Wait 5 seconds if the semaphore already exists
-
+  // Wait 5 seconds if the semaphore already exists
     $vlElem:=Size of array(◊ToDoList)+1
-
     INSERT IN ARAY(◊ToDoList;$vlElem)
-
     ◊ToDoList{$vlElem}:=$1
-
-    CLEAR SEMAPHORE("$AccessToDoList") ` Clear the semaphore
-
+    CLEAR SEMAPHORE("$AccessToDoList") // Clear the semaphore
  End if
 ```
 
@@ -123,76 +104,48 @@ Syntax:
 
 ```4d
   // Protective structure using semaphores
-
- C_LONGINT($0)
-
- C_POINTER($1) // error message
+ var $0 : Integer
+ var $1 : Pointer // error message
  
-
   // Start of method
-
- C_LONGINT($L_MyError)
-
+ var $L_MyError : Integer
  $L_MyError:=1
  
-
- C_TEXT($T_Sema_local)
-
+ var $T_Sema_local : Text
  $T_Sema_local:="$tictac"
  
-
  If(Semaphore($T_Sema_local;300))
-
   // We expected 300 ticks but the semaphore
-
   // was not released by the one that placed it:
-
   // we end up here
-
     $L_MyError:=-1
  
-
  Else
  
-
   // This method is only run by one process at a time
  
-
   // We placed the semaphore as we entered
-
   // so we're the only ones that can remove it
  
-
   // Do something
-
     ...
-
   // Then finish by removing the semaphore
-
     CLEAR SEMAPHORE($T_Sema_local)
-
  End if
  
-
- C_TEXT($T_Message)
-
+ var $T_Message : Text
  If($L_MyError=-1)
-
     $T_Message:="The semaphore "+$T_Sema_local+" has blocked access to the rest of the code"
-
  Else
-
     $T_Message:="OK"
-
  End if
  
-
  $0:=$L_MyError
-
  $1->:=$T_Message  // The calling method receives an error code and an explanation in plain text
 ```
 
 #### See also 
+
 [CLEAR SEMAPHORE](clear-semaphore.md)  
 [Semaphores and signals](../../4D/20-R6/Semaphores-and-signals.300-6958859.en.html)  
 [Test semaphore](test-semaphore.md)  

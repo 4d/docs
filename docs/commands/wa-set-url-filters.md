@@ -42,22 +42,14 @@ You want to deny access for all the .org, .net and .fr Web sites:
 
 ```4d
  ARRAY TEXT($filters;0)
-
  ARRAY BOOLEAN($AllowDeny;0)
  
-
  APPEND TO ARRAY($filters;"*.org")
-
  APPEND TO ARRAY($AllowDeny;False)
-
  APPEND TO ARRAY($filters;"*.net")
-
  APPEND TO ARRAY($AllowDeny;False)
-
  APPEND TO ARRAY($filters;"*.fr")
-
  APPEND TO ARRAY($AllowDeny;False)
-
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
@@ -67,18 +59,12 @@ You want to deny access for all Web sites except Russian ones (.ru):
 
 ```4d
  ARRAY TEXT($filters;0)
-
  ARRAY BOOLEAN($AllowDeny;0)
  
-
- APPEND TO ARRAY($filters;"*") `Select all
-
- APPEND TO ARRAY($AllowDeny;False) `Deny all
-
- APPEND TO ARRAY($filters;"www.*.ru") `Select *.ru
-
- APPEND TO ARRAY($AllowDeny;True) `Allow
-
+ APPEND TO ARRAY($filters;"*") //Select all
+ APPEND TO ARRAY($AllowDeny;False) //Deny all
+ APPEND TO ARRAY($filters;"www.*.ru") //Select *.ru
+ APPEND TO ARRAY($AllowDeny;True) //Allow
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
@@ -88,18 +74,12 @@ You want to allow access only to 4D Web sites (.com, .fr, .es, etc.):
 
 ```4d
  ARRAY TEXT($filters;0)
-
  ARRAY BOOLEAN($AllowDeny;0)
  
-
- APPEND TO ARRAY($filters;"*") `Select all
-
- APPEND TO ARRAY($AllowDeny;False) `Deny all
-
- APPEND TO ARRAY($filters;"www.4D.*") `Select 4d.fr, 4d.com...
-
- APPEND TO ARRAY($AllowDeny;True) `Allow
-
+ APPEND TO ARRAY($filters;"*") //Select all
+ APPEND TO ARRAY($AllowDeny;False) //Deny all
+ APPEND TO ARRAY($filters;"www.4D.*") //Select 4d.fr, 4d.com...
+ APPEND TO ARRAY($AllowDeny;True) //Allow
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
@@ -109,20 +89,13 @@ You want to allow local access to the documentation only (found in the folder C:
 
 ```4d
  ARRAY TEXT($filters;0)
-
  ARRAY BOOLEAN($AllowDeny;0)
  
-
- APPEND TO ARRAY($filters;"*") `Select all
-
- APPEND TO ARRAY($AllowDeny;False) `Deny all
-
+ APPEND TO ARRAY($filters;"*") //Select all
+ APPEND TO ARRAY($AllowDeny;False) //Deny all
  APPEND TO ARRAY($filters;"file://C:/doc/*")
-
-  `Select the path file:// allowed
-
- APPEND TO ARRAY($AllowDeny;True) `Allow
-
+  //Select the path file:// allowed
+ APPEND TO ARRAY($AllowDeny;True) //Allow
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
@@ -132,18 +105,12 @@ You want to allow access for all sites except one, for example the Elcaro site:
 
 ```4d
  ARRAY TEXT($filters;0)
-
  ARRAY BOOLEAN($AllowDeny;0)
  
-
  APPEND TO ARRAY($filters;"*")
-
- APPEND TO ARRAY($AllowDeny;True) `Allow all
-
- APPEND TO ARRAY($filters;"*elcaro*") `Deny all that contain elcaro
-
+ APPEND TO ARRAY($AllowDeny;True) //Allow all
+ APPEND TO ARRAY($filters;"*elcaro*") //Deny all that contain elcaro
  APPEND TO ARRAY($AllowDeny;False)
-
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
@@ -153,27 +120,19 @@ You want to deny access to specific IP addresses:
 
 ```4d
  ARRAY TEXT($filters;0)
-
  ARRAY BOOLEAN($AllowDeny;0)
  
-
- APPEND TO ARRAY($filters;"*") `Select all
-
- APPEND TO ARRAY($AllowDeny;True) `Allow all
-
- APPEND TO ARRAY($filters;86.83.*")  `Select IP addresses beginning with 86.83.
-
- APPEND TO ARRAY($AllowDeny;False) `Deny
-
- APPEND TO ARRAY($filters;86.1*")  `Select IP addresses beginning with 86.1 (86.10, 86.135 etc.)
-
- APPEND TO ARRAY($AllowDeny;False) `Deny
-
+ APPEND TO ARRAY($filters;"*") //Select all
+ APPEND TO ARRAY($AllowDeny;True) //Allow all
+ APPEND TO ARRAY($filters;86.83.*")  //Select IP addresses beginning with 86.83.
+ APPEND TO ARRAY($AllowDeny;False) //Deny
+ APPEND TO ARRAY($filters;86.1*")  //Select IP addresses beginning with 86.1 (86.10, 86.135 etc.)
+ APPEND TO ARRAY($AllowDeny;False) //Deny
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
-
-  `(Note that the IP address of a domain may vary).
+  //(Note that the IP address of a domain may vary).
 ```
 
 #### See also 
+
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  

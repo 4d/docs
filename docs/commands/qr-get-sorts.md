@@ -34,4 +34,5 @@ In the case of cross-table mode, the resulting arrays cannot have more than two 
 If you pass an invalid *area* number, the error -9850 will be generated.
 
 #### See also 
+
 [QR SET SORTS](qr-set-sorts.md)  

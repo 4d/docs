@@ -18,6 +18,7 @@ displayed_sidebar: docs
 Beginning with version 11 of 4D, you can nest several transactions (sub-transactions). Each transaction or sub-transaction must eventually be cancelled or validated. Note that if the main transaction is cancelled, all the sub-transactions are cancelled as well, regardless of their result.
 
 #### See also 
+
 [CANCEL TRANSACTION](cancel-transaction.md)  
 [In transaction](in-transaction.md)  
 [Transaction level](transaction-level.md)  

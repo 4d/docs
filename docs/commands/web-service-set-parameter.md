@@ -62,15 +62,13 @@ However, you may want to “force” the definition of the SOAP type of a parame
 This example defines two parameters: 
 
 ```4d
- C_TEXT($1)
-
- C_TEXT($2)
-
+ var $1 : Text
+ var $2 : Text
  WEB SERVICE SET PARAMETER("city";$1)
-
  WEB SERVICE SET PARAMETER("country";$2)
 ```
 
 #### See also 
+
 [WEB SERVICE CALL](web-service-call.md)  
 [WEB SERVICE GET RESULT](web-service-get-result.md)  

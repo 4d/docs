@@ -32,18 +32,15 @@ You can use the *name* property of the Web server object to identify the databas
 We want to know how many running web servers are available: 
 
 ```4d
- C_COLLECTION($wSList)
-
- C_LONGINT($vRun)
+ var $wSList : Collection
+ var $vRun : Integer
  
-
  $wSList:=WEB Server list
-
  $vRun:=$wSList.countValues(True;"isRunning")
-
  ALERT(String($vRun)+" web server(s) running on "+String($wSList.length)+" available.")
 ```
 
 #### See also 
+
 [WEB Server](web-server.md)  
 [webServer.stop( )](../../4D/20-R6/webServerstop.300-6957719.en.html)  

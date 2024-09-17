@@ -34,4 +34,5 @@ If the list box is in hierarchical mode, the command fills the *hierarchy* array
 **Note:** If the list box is in non-hierarchical mode, the command returns, in the first element of the *hierarchy* array, a pointer to the array of the first column of the list box.
 
 #### See also 
+
 [LISTBOX SET HIERARCHY](listbox-set-hierarchy.md)  

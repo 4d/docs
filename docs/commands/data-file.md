@@ -28,6 +28,7 @@ If, for example, you are working with the database located in the folder Documen
 **WARNING:** If you call this command from 4D in remote mode, only the name of the data file is returned, not the long name.
 
 #### See also 
+
 [\_o\_DATA SEGMENT LIST](../../4D/20-R6/o-DATA-SEGMENT-LIST.301-6957658.en.html)  
 [Application file](application-file.md)  
 [Structure file](structure-file.md)  

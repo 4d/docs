@@ -49,29 +49,19 @@ The following code retrieves the values of the header titles as well as the head
 
 ```4d
  QR GET HEADER AND FOOTER(MyArea;1;$LeftText;$CenterText;$RightText;$height)
-
  Case of
-
     :($LeftText #"")
-
        ALERT("The left title is "+Char(34)+$LeftText+Char(34))
-
     :($CenterText #"")
-
        ALERT("The center title is "+Char(34)+$CenterText+Char(34))
-
     :($RightText #"")
-
        ALERT("The right title is "+Char(34)+$RightText+Char(34))
-
     Else
-
        ALERT("No header title in this report.")
-
  End case
-
  ALERT("The height of the header is "+String($height))
 ```
 
 #### See also 
+
 [QR SET HEADER AND FOOTER](qr-set-header-and-footer.md)  

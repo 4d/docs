@@ -81,7 +81,6 @@ Given a \[Table\_1\]StyledText field displayed in a form. The object has the Mul
 
 ```4d
  $text:=ST Get text(*;"StyledText_t";ST Start highlight;ST End highlight)
-
  ST GET ATTRIBUTES(*;"StyledText_t";ST Start highlight;ST End highlight;Attribute bold style;$bold)
 ```
 
@@ -89,9 +88,7 @@ Given a \[Table\_1\]StyledText field displayed in a form. The object has the Mul
 
 ```4d
  GET HIGHLIGHT([Table_1]StyledText;$Begin_l;$End_l)
-
  $text:=ST Get text([Table_1]StyledText;$Begin_l;$End_l)
-
  ST GET ATTRIBUTES([Table_1]StyledText;$Begin_l;$End_l;Attribute bold style;$bold)
 ```
 
@@ -102,4 +99,5 @@ After this command is executed, the OK variable is set to 1 if no error occurred
 In the case of an error, the variable is not changed. When an error occurs on a variable when text is being evaluated, 4D transforms the text into plain text; as a result, the <, > and & characters are converted into HTML entities.
 
 #### See also 
+
 [ST SET ATTRIBUTES](st-set-attributes.md)  

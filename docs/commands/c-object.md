@@ -35,12 +35,11 @@ The syntax **C\_OBJECT**(${...}) allows you to declare a variable number of para
 
 ```4d
  C_OBJECT($obj) //The $obj variable is declared but the $obj object does not exist
-
  $obj:=New object //The $obj object is initialized
-
  $obj.prop:=42 //...and its properties can be accessed
 ```
 
 #### See also 
+
 [ARRAY OBJECT](array-object.md)  
 [Objects (Language)](objects-language.md)  

@@ -43,17 +43,14 @@ The following example reads 20 Real values from a BLOB, starting at the offset 0
 
 ```4d
  $vlOffset:=0x200
-
  For($viLoop;0;19)
-
     $vrValue:=BLOB to real(vxSomeBlob;PC byte ordering;$vlOffset)
-
-  ` Do something with $vrValue
-
+  // Do something with $vrValue
  End for
 ```
 
 #### See also 
+
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
 [BLOB to text](blob-to-text.md)  

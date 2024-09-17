@@ -51,43 +51,24 @@ Example for printing ten objects in a form:
 
 ```4d
  PRINT SETTINGS
-
  If(OK=1)
-
     OPEN PRINTING JOB
-
     If(OK=1)
-
        FORM LOAD("PrintForm")
-
        x:=100
-
        y:=50
-
        GET PRINTABLE AREA(hpaper;wpaper)
-
        For($i;1;10)
-
           OBJECT GET BEST SIZE(*;"Obj"+String($i);bestwidth;bestheight)
-
           $end:=Print object(*;"Obj"+String($i))
-
           y:=y+bestheight+15
-
           If(y>hpaper)
-
              PAGE BREAK(>)
-
              y:=50
-
           End if
-
        End for
-
     End if
-
     CLOSE PRINTING JOB
-
  End if
 ```
 
@@ -97,35 +78,22 @@ Example of printing a complete list box:
 
 ```4d
  OPEN PRINTING JOB
-
  FORM LOAD("myForm")
-
  $Over:=False
-
  gError:=0
-
  ON ERR CALL("err")
-
  Repeat
-
     $Total:=Print object(*;"List_Box")
-
     LISTBOX GET PRINT INFORMATION(*;"List_Box";lk printing is over;$Over)
-
     PAGE BREAK
-
     If(gError=-128) //the user has cancelled the operation
-
        $Over:=True
-
     End if
-
  Until($Over)
-
  CLOSE PRINTING JOB
-
  ON ERR CALL("")
 ```
 
 #### See also 
+
 [FORM LOAD](form-load.md)  

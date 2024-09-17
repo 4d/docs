@@ -23,31 +23,22 @@ The following method displays a record in full-screen display (Macintosh) until 
 
 ```4d
  HIDE TOOL BAR
-
  HIDE MENU BAR
-
  Open window(-1;-1;1+Screen width;1+Screen height;Alternate dialog box)
-
  FORM SET INPUT([Paintings];"Full Screen 800")
-
  DISPLAY RECORD([Paintings])
-
  Repeat
-
     GET MOUSE($vlX;$vlY;$vlButton)
-
  Until($vlButton#0)
-
  CLOSE WINDOW
-
  SHOW MENU BAR
-
  SHOW TOOL BAR
 ```
 
 **Note:** On Windows, the window will be limited to the bounds of the application window.
 
 #### See also 
+
 [HIDE TOOL BAR](hide-tool-bar.md)  
 [SHOW MENU BAR](show-menu-bar.md)  
 [SHOW TOOL BAR](show-tool-bar.md)  

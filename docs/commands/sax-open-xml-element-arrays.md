@@ -33,27 +33,23 @@ The following method:
 
 ```4d
  ARRAY STRING(80;tAttrNames;2)
-
  ARRAY STRING(80;tAttrValues;2)
-
  vElement:="Book"
-
  tAttrNames{1}:="Font"
-
  tAttrValues{1}:="Arial"
-
  tAttrNames{2}:="Style"
-
  tAttrValues{2}:="Bold"
-
  SAX OPEN XML ELEMENT ARRAYS($DocRef;vElement;tAttrNames;tAttrValues)
 ```
 
 ... will write in the document: 
 
+```XML
 <Book Font="Arial" Style="Bold">
+```
 
 #### See also 
+
 [SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
 [SAX OPEN XML ELEMENT](sax-open-xml-element.md)  
 [XML SET OPTIONS](xml-set-options.md)  

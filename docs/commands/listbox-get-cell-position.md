@@ -49,5 +49,6 @@ If the command is called outside of this context, **LISTBOX GET CELL POSITION** 
 This command takes into account any selection or deselection actions whether by mouse click, via keyboard keys, or using the [EDIT ITEM](edit-item.md) command (which can generate the On Getting Focus event). If the selection is modified using the arrow keys of the keyboard, *column* returns 0\. In this case, if it is passed, the *colVar* parameter returns [Is nil pointer](is-nil-pointer.md).
 
 #### See also 
+
 [LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
 [LISTBOX SELECT BREAK](listbox-select-break.md)  

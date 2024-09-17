@@ -37,10 +37,8 @@ In the *value* parameter, pass the value you want to set for the property. Sever
 Creating an object and adding a text type property:
 
 ```4d
- C_OBJECT($Object)
-
+ var $Object : Object
  OB SET($Object ;"FirstName";"John";"LastName";"Smith")
-
   // $Object = {"FirstName":"John","LastName":"Smith"}
 ```
 
@@ -49,10 +47,8 @@ Creating an object and adding a text type property:
 Creating an object and adding a Boolean type property:
 
 ```4d
- C_OBJECT($Object)
-
+ var $Object : Object
  OB SET($Object ;"LastName";"smith";"age";42;"client";True)
-
   // $Object = {"LastName":"smith","age":42,"client":true}
 ```
 
@@ -62,9 +58,7 @@ Modifying a property:
 
 ```4d
   // $Object = {"FirstName":"John","LastName":"Smith"}
-
  OB SET($Object ;"FirstName";"Paul")
-
   // $Object = {"FirstName":"Paul","LastName":"Smith"}
 ```
 
@@ -74,9 +68,7 @@ Adding a property:
 
 ```4d
   // $Object = {"FirstName":"John","LastName":"Smith"}
-
  OB SET($Object ;"department";"Accounting")
-
   // $Object = {"FirstName":"Paul","LastName":"Smith","department":"Accounting"}
 ```
 
@@ -85,18 +77,12 @@ Adding a property:
 Renaming a property:
 
 ```4d
- C_OBJECT($Object)
-
+ var $Object : Object
  OB SET($Object ;"LastName";"James";"age";35)
-
   // $Object = {"LastName":"James","age":35}
-
  OB SET($Object ;"FirstName";OB Get($Object ;"LastName"))
-
   // $Object = {"FirstName":""James","nom":"James","age":35}
-
  OB REMOVE($Object ;"LastName")
-
   // $Object = {"FirstName":""James","age":35}
 ```
 
@@ -106,21 +92,13 @@ Using a pointer:
 
 ```4d
   // $Object = {"FirstName":"Paul","LastName":"Smith"}
-
- C_TEXT($LastName)
-
+ var $LastName : Text
  OB SET($Object ;"LastName";->$LastName)
-
   // $Object = {"FirstName":"Paul","LastName":"->$LastName"}
-
  $JsonString:=JSON Stringify($Object)
-
   // $JsonString="{"FirstName":"Paul","LastName":""}
-
  $LastName:="Wesson"
-
  $JsonString:=JSON Stringify($Object)
-
   // $JsonString="{"FirstName":"Paul","LastName":"Wesson"}
 ```
 
@@ -129,18 +107,12 @@ Using a pointer:
 Using an object:
 
 ```4d
- C_OBJECT($ref_smith)
-
+ var $ref_smith : Object
  OB SET($ref_smith ;"name";"Smith")
-
- C_OBJECT($ref_emp)
-
+ var $ref_emp : Object
  OB SET($ref_emp ;"employee";$ref_smith)
-
  $Json_string :=JSON Stringify($ref_emp)
-
   // $ref_emp = {"employee":{"name":"Smith"}} (object)
-
   // $Json_string = "{"employee":{"name":"Smith"}}" (string)
 ```
 
@@ -148,11 +120,8 @@ You can also change a value on the fly:
 
 ```4d
  OB SET($ref_smith ;"name";"Smyth")
-
   // $ref_smith = {"employee":{"name":"Smyth"}}
-
  $string:=JSON Stringify($ref_emp)
-
   // $string = "{"employee":{"name":"Smyth"}}"
 ```
 
@@ -162,11 +131,8 @@ If you have defined the \[Rect\]Desc field as an object field, you can write:
 
 ```4d
  CREATE RECORD([Rect])
-
  [Rect]Name:="Blue square"
-
  OB SET([Rect]Desc;"x";"50";"y";"50";"color";"blue")
-
  SAVE RECORD([Rect])
 ```
 
@@ -175,16 +141,11 @@ If you have defined the \[Rect\]Desc field as an object field, you can write:
 You want to export data in JSON that contains a 4D date that you want to be converted into a string without time zone information. Note that conversion occurs when the date is saved in the object, so you must call the [SET DATABASE PARAMETER](set-database-parameter.md) command before calling [OB SET](ob-set.md): 
 
 ```4d
- C_OBJECT($o)
-
+ var $o : Object
  $vDateSetting:=Get database parameter(Dates inside objects) //save the current setting
-
  SET DATABASE PARAMETER(Dates inside objects;String type without time zone)
-
  OB SET($o ;"myDate";Current date) // JSON conversion
-
  $json:=JSON Stringify($o)
-
  SET DATABASE PARAMETER(Dates inside objects;$vDateSetting)
 ```
 
@@ -194,11 +155,8 @@ In the method of a form containing a 4D Write Pro area, you can write:
 
 ```4d
  If(FORM Event=On Validate)
-
     OB SET([MyDocuments]My4DWP;"myatt_Last edition by";Current user)
-
     OB SET([MyDocuments]My4DWP;"myatt_Category";"Memo")
-
  End if
 ```
 
@@ -213,15 +171,11 @@ You can also read custom attributes of the documents:
 You want to set a collection as a property value. You can write:
 
 ```4d
- C_OBJECT($person)
-
- C_COLLECTION($myCol)
+ var $person : Object
+ var $myCol : Collection
  
-
  $person:=OB New
-
  $myCol:=New collection("Mike";25;"Denis";12;"Henry";4;True)
-
  OB SET($person;"Name";"Jones";"Children";$myCol)
 ```
 
@@ -230,18 +184,15 @@ You want to set a collection as a property value. You can write:
 You want to store a picture in an object field. You can write:
 
 ```4d
- C_PICTURE($vPict)
-
+ var $vPict : Picture
  READ PICTURE FILE("photo.jpg";$vPict)
-
  If(OK=1)
-
     OB SET([Emp]Children;"photo";$vPict)
-
  End if
 ```
 
 #### See also 
+
 [OB Get](ob-get.md)  
 [OB REMOVE](ob-remove.md)  
 [OB SET ARRAY](ob-set-array.md)  

@@ -33,6 +33,7 @@ The information is returned in three synchronized arrays:
 The list of error codes and their text is provided in the sections of the [Error Codes](/4Dv20R6/4D/20-R6/Error-Codes.200-6957526.en.html) theme.
 
 #### See also 
+
 [Last errors](last-errors.md)  
 [ON ERR CALL](on-err-call.md)  
 [SQL GET LAST ERROR](sql-get-last-error.md)  

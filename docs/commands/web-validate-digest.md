@@ -31,43 +31,27 @@ You can use this mechanism to manage and maintain your own secure access system 
 Example using [On Web Authentication Database Method](/4Dv20R6/4D/14-R2/On-Web-Authentication-Database-Method.300-1342178.en.html) in Digest mode:
 
 ```4d
-  ` On Web Authentication Database Method
-
- C_TEXT($1;$2;$5;$6;$3;$4)
-
- C_TEXT($user)
-
- C_BOOLEAN($0)
-
+  // On Web Authentication Database Method
+ var $1;$2;$5;$6;$3;$4 : Text
+ var $user : Text
+ var $0 : Boolean
  $0:=False
-
  $user:=$5
-
-  `For security reasons, refuse names containing @
-
+  //For security reasons, refuse names containing @
  If(WithWildcard($user))
-
     $0:=False
-
-  `The WithWildcard method is described in the "On Web Authentication Database Method" section
-
+  //The WithWildcard method is described in the "On Web Authentication Database Method" section
  Else
-
     QUERY([WebUsers];[WebUsers]User=$user)
-
     If(OK=1)
-
        $0:=WEB Validate digest($user;[WebUsers]password)
-
     Else
-
-       $0:=False `User does not exist
-
+       $0:=False //User does not exist
     End if
-
  End if
 ```
 
 #### See also 
+
 [Generate digest](generate-digest.md)  
 [Validate password](validate-password.md)  

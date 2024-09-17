@@ -29,20 +29,15 @@ This method, combined with a scrollable area, enables you to change the value of
 
 ```4d
  If(Contextual click)
-
     If(Pop up menu("True;False")=1)
-
        myArray{myArray}:="True"
-
     Else
-
        myArray{myArray}:="False"
-
     End if
-
  End if
 ```
 
 #### See also 
+
 [Form event code](form-event-code.md)  
 [Right click](right-click.md)  

@@ -37,15 +37,10 @@ The following method is called to print the records in the selection and to acti
 
 ```4d
  ALL RECORDS([Employees])
-
  ORDER BY([Employees];[Employees]LastNm;>)
-
  BREAK LEVEL(1)
-
  ACCUMULATE([Employees]Salary)
-
  FORM SET OUTPUT([Employees];"PrintForm")
-
  PRINT SELECTION([Employees])
 ```
 
@@ -57,15 +52,10 @@ This example gets the average of the first 15 grades in the selection:
 
 ```4d
  ARRAY REAL($ArrGrades;0)
-
  QUERY([Exams];[Exams]Exam_Date=!01/07/11!)
-
  ORDER BY([Exams];[Exams]Exam_Grade;<)
-
  SELECTION TO ARRAY([Exams]Exam_Grade;$ArrGrades)
-
  ARRAY REAL($ArrGrades;15)
-
  vAverage:=Average($ArrGrades)
 ```
 
@@ -73,28 +63,23 @@ This example gets the average of the first 15 grades in the selection:
 
 Your \[Customer\] table contains a "full\_Data" object field with the following data:
 
-![](../assets/en/Commands/pict2898119.en.png)
+![](../assets/en/commands/pict2898119.en.png)
 
 You can perform the following computations:
 
 ```4d
- C_REAL($vAvg)
-
+ var $vAvg : Real
  ALL RECORDS([Customer])
-
  $vAvg:=Average([Customer]full_Data;"age")
-
   //$vAvg is 44,46
  
-
- C_LONGINT($vTot)
-
+ var $vTot : Integer
  $vTot:=Sum([Customer]full_Data;"Children[].age")
-
   //$vTot is 105
 ```
 
 #### See also 
+
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Max](max.md)  

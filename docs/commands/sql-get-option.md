@@ -24,4 +24,5 @@ For more information on the different options and their associated values, refer
 If the command was properly executed, the system variable OK is set to 1\. Otherwise, it is set to 0.
 
 #### See also 
+
 [SQL SET OPTION](sql-set-option.md)  

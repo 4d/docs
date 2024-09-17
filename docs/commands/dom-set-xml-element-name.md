@@ -23,9 +23,11 @@ Pass the reference of the element to rename in *elementRef* and the new name of 
 
 In the following XML source:
 
+```XML
 <Book>
    <Title>The Best Seller</Title>
 </Book>
+```
 
 If the following code is executed, with *vElemRef* containing the reference to the ‘Book’ element:
 
@@ -35,9 +37,11 @@ If the following code is executed, with *vElemRef* containing the reference to t
 
 We get:
 
+```XML
 <BestSeller>
    <Title>The Best Seller</Title>
 </BestSeller>
+```
 
 #### System variables and sets 
 
@@ -51,4 +55,5 @@ An error is generated when:
 * The new name of the element to create is invalid (for example, if it starts with a number).
 
 #### See also 
+
 [DOM GET XML ELEMENT NAME](dom-get-xml-element-name.md)  

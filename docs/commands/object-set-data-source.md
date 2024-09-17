@@ -24,7 +24,7 @@ Passing the optional *\** parameter indicates that the *object* parameter is an 
 
 The data source is the field or variable whose value is represented by the object when the form is executed. In Design mode, the data source is defined in the Property list, usually through the Source and Source Field (fields) or Variable Name (variables) row: 
 
-![](../assets/en/Commands/pict1208291.en.png)
+![](../assets/en/commands/pict1208291.en.png)
 
 Except for list boxes (see below), all data sources of the form can be modified by this command. It is up to the developer to ensure the consistency of the changes made. 
 
@@ -41,13 +41,12 @@ If this command is applied to a data source that is not modifiable, it does noth
 Modification of the data source for an entry area:
 
 ```4d
- C_POINTER($ptrField)
-
+ var $ptrField : Pointer
  $ptrField:=Field(3;2)
-
  OBJECT SET DATA SOURCE(*;"Input";$ptrField)
 ```
 
 #### See also 
+
 [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)  
 [OBJECT Get data source](object-get-data-source.md)  

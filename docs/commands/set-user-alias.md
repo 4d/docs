@@ -35,6 +35,7 @@ Your users are managed through a custom table and use the same 4D user account. 
 ```
 
 #### See also 
+
 [CHANGE CURRENT USER](change-current-user.md)  
 [Current user](current-user.md)  
 [SET GROUP ACCESS](set-group-access.md)  

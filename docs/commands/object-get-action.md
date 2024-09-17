@@ -32,19 +32,14 @@ You want to associate the "Cancel" action with all the objects in the form that 
 ```4d
  ARRAY TEXT($arrObjects;0)
  
-
  FORM GET OBJECTS($arrObjects)
-
  For($i;1;Size of array($arrObjects))
-
     If(OBJECT Get action(*;$arrObjects{$i})=ak none)
-
        OBJECT SET ACTION(*;$arrObjects{$i};ak cancel)
-
     End if
-
  End for
 ```
 
 #### See also 
+
 [OBJECT SET ACTION](object-set-action.md)  

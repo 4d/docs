@@ -28,9 +28,8 @@ The **GOTO OBJECT** command can be used in the context of a subform. When it is 
 The **GOTO OBJECT** command can be used in both ways: 
 
 ```4d
- GOTO OBJECT([People]Name) ` Field Reference
-
- GOTO OBJECT(*;"AgeArea") ` Object Name
+ GOTO OBJECT([People]Name) // Field Reference
+ GOTO OBJECT(*;"AgeArea") // Object Name
 ```
 
 #### Example 2 
@@ -46,5 +45,6 @@ You don't want any object of the form to have the focus:
 See the example for the [REJECT](reject.md) command.
 
 #### See also 
+
 [CALL SUBFORM CONTAINER](call-subform-container.md)  
 [REJECT](reject.md)  

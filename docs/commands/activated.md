@@ -23,5 +23,6 @@ displayed_sidebar: docs
 **Note:** In order for the **Activated** execution cycle to be generated, make sure that the On Activate event property of the form has been selected in the Design environment.
 
 #### See also 
+
 [Deactivated](deactivated.md)  
 [Form event code](form-event-code.md)  

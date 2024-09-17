@@ -19,6 +19,7 @@ displayed_sidebar: docs
 For more information on execution levels, see the topic [Cascading Triggers](/4Dv20R6/4D/20-R6/Triggers.300-6958353.en.html#35932).
 
 #### See also 
+
 [Trigger event](trigger-event.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  
 [Triggers](../../4D/20-R6/Triggers.300-6958353.en.html)  

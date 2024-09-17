@@ -42,11 +42,10 @@ You want to apply an orientation of 270° to a variable in your form:
 
 ```4d
  OBJECT SET ENTERABLE(*;"myVar";False)
-
   // mandatory if variable is enterable
-
  OBJECT SET TEXT ORIENTATION(*;"myVar";Orientation 90° left)
 ```
 
 #### See also 
+
 [OBJECT Get text orientation](object-get-text-orientation.md)  

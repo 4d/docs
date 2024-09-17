@@ -42,6 +42,7 @@ During the session, if you use the [ST SET ATTRIBUTES](st-set-attributes.md), [S
 In **project architecture**, only the three automatic style sheets are supported by this command. 
 
 #### See also 
+
 [Font Styles](../../4D/20-R6/Font-Styles.302-6958451.en.html)  
 [GET STYLE SHEET INFO](get-style-sheet-info.md)  
 [LIST OF STYLE SHEETS](list-of-style-sheets.md)  

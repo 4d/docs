@@ -32,34 +32,22 @@ We want to count the number of possible errors in a text:
 
 ```4d
  $pos:=1
-
  $errCount:=0
-
  ARRAY TEXT($tErrors;0)
-
  ARRAY TEXT($tSuggestions;0)
-
  Repeat
-
     SPELL CHECK TEXT($myText;$errPos;$errLength;$pos;$tSuggestions)
-
     If(OK=0)
-
        $errCount:=$errCount+1 // count any errors
-
        $errorWord:=Substring($myText;$errPos;$errLength)
-
        APPEND TO ARRAY($tErrors;$errorWord) // array of errors
-
        $pos:=$errPos+$errLength  //continue check
-
     End if
-
  Until(OK=1)
-
   // In the end $errCount=Size of array($tErrors)
 ```
 
 #### See also 
+
 [SPELL ADD TO USER DICTIONARY](spell-add-to-user-dictionary.md)  
 [SPELL CHECKING](spell-checking.md)  

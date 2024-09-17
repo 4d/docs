@@ -19,6 +19,7 @@ displayed_sidebar: docs
 If no tool bar is displayed, the command returns 0.
 
 #### See also 
+
 [HIDE TOOL BAR](hide-tool-bar.md)  
 [Menu bar height](menu-bar-height.md)  
 [SHOW TOOL BAR](show-tool-bar.md)  

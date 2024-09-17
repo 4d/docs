@@ -81,9 +81,7 @@ We want to add a new column to the right of the list box that will contain a for
 
 ```4d
  vAge:="Current Date-[Employees]BirthDate)\365"
-
  $last:=LISTBOX Get number of columns(*;"ListBox1")+1
-
  LISTBOX INSERT COLUMN FORMULA(*;"ListBox1";$last;"ColFormula";vAge;Is real;"Age";HeaderVar)
 ```
 
@@ -93,31 +91,29 @@ You want to add column to a list box of collection type:
 
 ```4d
   //create collection
-
- C_COLLECTION(emps)
-
+ var emps : Collection
  emps:=New collection(New object("Employee";"John Doe";"JobTitle";"CEO");New object("Employee";"Mary Smith";"JobTitle";"CTO");New object("Employee";"Jane Turner";"JobTitle";"CFO"))
 ```
 
 The column contents are evaluated for each element of the collection and referenced with the data source expression, *This.Employee*, as shown below:
 
-![](../assets/en/Commands/pict3815223.en.png)
+![](../assets/en/commands/pict3815223.en.png)
 
 At execution:
 
-![](../assets/en/Commands/pict3814815.en.png)
+![](../assets/en/commands/pict3814815.en.png)
 
 To add a column showing the job titles:
 
 ```4d
  LISTBOX INSERT COLUMN FORMULA(*;"EmpLB";2;"2nd Column";"This.JobTitle";Is text;"JTHeader";header2)
-
  OBJECT SET TITLE(header2;"Title")
 ```
 
 The column is added to the list box:
 
-![](../assets/en/Commands/pict3814850.en.png)
+![](../assets/en/commands/pict3814850.en.png)
 
 #### See also 
+
 [LISTBOX INSERT COLUMN](listbox-insert-column.md)  

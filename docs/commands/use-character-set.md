@@ -29,11 +29,9 @@ In 4D, the default character set is UTF-8\.
 The following example (Unicode mode) uses the UTF-16 character set to export a text, then the default character set is restored:
 
 ```4d
- USE CHARACTER SET("UTF-16LE";0) ` Use the UTF-16 'Little Endian' character set
-
- EXPORT TEXT([MyTable];"MyText") ` Export data through the map
-
- USE CHARACTER SET(*;0) ` Restore the default character set
+ USE CHARACTER SET("UTF-16LE";0) // Use the UTF-16 'Little Endian' character set
+ EXPORT TEXT([MyTable];"MyText") // Export data through the map
+ USE CHARACTER SET(*;0) // Restore the default character set
 ```
 
 #### System variables and sets 
@@ -41,6 +39,7 @@ The following example (Unicode mode) uses the UTF-16 character set to export a t
 The OK system variable is set to 1 if the map is loaded correctly. Otherwise, it is set to 0.
 
 #### See also 
+
 [\_o\_Mac to Win](../../4D/20-R6/o-Mac-to-Win.301-6957680.en.html)  
 [\_o\_Win to Mac](../../4D/20-R6/o-Win-to-Mac.301-6957681.en.html)  
 [EXPORT DIF](export-dif.md)  

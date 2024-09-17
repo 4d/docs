@@ -109,94 +109,51 @@ In your application, the *\[Phone Book\]* table contains a set of quite static d
 To do so, you can redirect your queries into named selections that you reuse as needed. You write the object method of the Tab Control *asRolodex* as follows:
 
 ```4d
-  ` asRolodex object method
-
+  // asRolodex object method
  Case of
-
     :(FORM Event=On Load)
-
-  ` Before the form appears on the screen,
-
-  ` initialize the rolodex and an array of Booleans that
-
-  ` will tell us if a query for the corresponding letter
-
-  ` has been performed or not
-
+  // Before the form appears on the screen,
+  // initialize the rolodex and an array of Booleans that
+  // will tell us if a query for the corresponding letter
+  // has been performed or not
        ARRAY STRING(1;asRolodex;26)
-
        ARRAY BOOLEAN(abQueryDone;26)
-
        For($vlElem;1;26)
-
           asRolodex{$vlElem}:=Char(64+$vlElem)
-
           abQueryDone{$vlElem}:=False
-
        End for
  
-
     :(FORM Event=On Clicked)
-
-  ` When a click on the Tab control occurs, check whether the corresponding query
-
-  ` has been performed or not
-
+  // When a click on the Tab control occurs, check whether the corresponding query
+  // has been performed or not
        If(Not(abQueryDone{asRolodex}))
-
-  ` If not, redirect the next query(ies) toward a named selection
-
+  // If not, redirect the next query(ies) toward a named selection
           SET QUERY DESTINATION(Into named selection;"temp")
-
-  ` Perform the query
-
+  // Perform the query
           QUERY([Phone Book];[Phone Book]Last name=asRolodex{asRolodex}+"@")
-
-  ` Restore normal query mode
-
+  // Restore normal query mode
           SET QUERY DESTINATION(Into current selection)
-
-  ` Use the records found
-
+  // Use the records found
           USE NAMED SELECTION("temp")
-
           COPY NAMED SELECTION([Phone book];"Rolodex+asRolodex{asRolodex})
-
-  ` Next time we choose that letter, we won't perform the query again
-
+  // Next time we choose that letter, we won't perform the query again
           abQueryDone{asRolodex}:=True
-
        Else
-
-  ` Use the existing named selection for displaying the records corresponding to the chosen letter
-
+  // Use the existing named selection for displaying the records corresponding to the chosen letter
           USE NAMED SELECTION("Rolodex"+asRolodex{asRolodex}
-
        End if
  
-
     :(FORM Event=On Unload)
-
-  ` After the form disappeared from the screen
-
-  ` Clear the named selections we created
-
+  // After the form disappeared from the screen
+  // Clear the named selections we created
        For($vlElem;1;26)
-
           If(abQueryDone{$vlElem})
-
              CLEAR NAMED SELECTION("Rolodex"+asRolodex{$vlElem})
-
           End if
-
        End for
-
-  ` Clear the two arrays we no longer need
-
+  // Clear the two arrays we no longer need
        CLEAR VARIABLE(asRolodex)
-
        CLEAR VARIABLE(abQueryDone)
-
  End case
 ```
 
@@ -206,130 +163,68 @@ The Unique values project method in this example allows you to verify the unique
 
 ```4d
   //Unique values project method
-
   //Unique values ( Pointer ; Pointer { ; Pointer... } ) -> Boolean
-
   //Unique values ( ->Table ; ->Field { ; ->Field2... } ) -> Yes or No
  
-
- C_BOOLEAN($0)
-
- C_POINTER(${1})
-
- C_LONGINT($vlField;$vlNbFields;$vlFound;$vlCurrentRecord)
-
+ var $0 : Boolean
+ var ${1} : Pointer
+ var $vlField;$vlNbFields;$vlFound;$vlCurrentRecord : Integer
  $vlNbFields:=Count parameters-1
-
  $vlCurrentRecord:=Record number($1->)
-
  If($vlNbFields>0)
-
     If($vlCurrentRecord#-1)
-
        If($vlCurrentRecord<0)
-
   //The current record is an unsaved new record (record number is -3);
-
   //therefore we can stop the query as soon as at least one record is found
-
           SET QUERY LIMIT(1)
-
        Else
-
   //The current record is an existing record;
-
   //therefore we can stop the query as soon as at least two records are found
-
           SET QUERY LIMIT(2)
-
        End if
-
   //The query will return its result in $vlFound
-
   //without changing the current record nor the current selection
-
        SET QUERY DESTINATION(Into variable;$vlFound)
-
   //Make the query according to the number of fields that are specified
-
        Case of
-
           :($vlNbFields=1)
-
              QUERY($1->;$2->=$2->)
-
           :($vlNbFields=2)
-
              QUERY($1->;$2->=$2->;*)
-
              QUERY($1->;&;$3->=$3->)
-
           Else
-
              QUERY($1->;$2->=$2->;*)
-
              For($vlField;2;$vlNbFields-1)
-
                 QUERY($1->;&;${1+$vlField}->=${1+$vlField}->;*)
-
              End for
-
              QUERY($1->;&;${1+$vlNbFields}->=${1+$vlNbFields}->)
-
        End case
-
        SET QUERY DESTINATION(Into current selection) //Restore normal query mode
-
        SET QUERY LIMIT(0) //No longer limit queries
-
   //Process query result
-
        Case of
-
           :($vlFound=0)
-
              $0:=True //No duplicated values
-
           :($vlFound=1)
-
              If($vlCurrentRecord<0)
-
                 $0:=False //Found an existing record with the same values as the unsaved new record
-
              Else
-
                 $0:=True //No duplicated values; just found the very same record
-
              End if
-
           :($vlFound=2)
-
              $0:=False //Whatever the case is, the values are duplicated
-
        End case
-
     Else
-
        If(◊DebugOn) //Does not make sense; signal it if development version
-
           TRACE //WARNING! Unique values is called with NO current record
-
        End if
-
        $0:=False //Can't guarantee the result
-
     End if
-
  Else
-
     If(◊DebugOn) //Does not make sense; signal it if development version
-
        TRACE //WARNING! Unique values is called with NO query condition
-
     End if
-
     $0:=False //Can't guarantee the result
-
  End if
 ```
 
@@ -337,21 +232,16 @@ After this project method is implemented in your application, you can write:
 
 ```4d
   //...
-
  If(Unique values(->[Contacts];->[Contacts]Company);->[Contacts]Last name;->[Contacts]First name)
-
   //Do appropriate actions for that record which has unique values
-
  Else
-
     ALERT("There is already a Contact with this name for this Company.")
-
  End if
-
   //...
 ```
 
 #### See also 
+
 [GET QUERY DESTINATION](get-query-destination.md)  
 [QUERY](query.md)  
 [QUERY BY EXAMPLE](query-by-example.md)  

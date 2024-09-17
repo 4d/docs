@@ -32,6 +32,7 @@ The nature of the database event for the trigger execution level is returned in 
 The table number and record number for the record involved by the database event for the trigger execution level are returned in *tableNum* and *recordNum*.
 
 #### See also 
+
 [About Record Numbers](../../4D/20-R6/About-Record-Numbers.300-6958029.en.html)  
 [Trigger event](trigger-event.md)  
 [Trigger level](trigger-level.md)  

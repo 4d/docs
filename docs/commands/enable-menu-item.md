@@ -27,4 +27,5 @@ If you omit the *process* parameter, **ENABLE MENU ITEM** applies to the menu ba
 **Tip:** To enable/disable all items of a menu at once, pass 0 (zero) in *menuItem*.
 
 #### See also 
+
 [DISABLE MENU ITEM](disable-menu-item.md)  

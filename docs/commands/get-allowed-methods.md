@@ -27,24 +27,18 @@ This command is useful for storing the settings of the current set of authorized
 This example authorizes a set of specific methods to create a report: 
 
 ```4d
-  `Store current parameters
-
+  //Store current parameters
  GET ALLOWED METHODS(methodsArray)
  
-
-  `Define methods for quick report
-
+  //Define methods for quick report
  methodsarr_Reports{1}:="Reports_@"
-
  SET ALLOWED METHODS(methodsarr_Reports)
-
  QR REPORT([People];"MyReport")
  
-
-  `Re-establish current parameters
-
+  //Re-establish current parameters
  SET ALLOWED METHODS(methodsArray)
 ```
 
 #### See also 
+
 [SET ALLOWED METHODS](set-allowed-methods.md)  

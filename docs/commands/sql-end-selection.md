@@ -20,26 +20,18 @@ displayed_sidebar: docs
 
 The code below connects to an external data source (Oracle) using the following parameters:
 
-![](../assets/en/Commands/pict33359.en.png)
+![](../assets/en/commands/pict33359.en.png)
 
 ```4d
- C_TEXT(vName)
+ var vName : Text
  
-
  SQL LOGIN("TestOracle";"scott";"tiger")
-
  If(OK=1)
-
     SQL EXECUTE("SELECT ename FROM emp";vName)
-
     While(Not(SQL End selection))
-
        SQL LOAD RECORD
-
     End while
-
     SQL LOGOUT
-
  End if
 ```
 

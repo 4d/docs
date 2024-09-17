@@ -37,7 +37,7 @@ If you work with item reference numbers, be sure to build a list in which the it
 
 Given the list named *hList* shown here in the Application environment:
 
-![](../assets/en/Commands/pict22613.en.png)
+![](../assets/en/commands/pict22613.en.png)
 
 The item reference numbers are set as follows:
 
@@ -56,16 +56,15 @@ The item reference numbers are set as follows:
 
 ```4d
  $vlItemPos:=Selected list items(hList)
-
  GET LIST ITEM(hList;$vlItemPos;$vlItemRef;$vsItemText)
-
- $vlParentItemRef:=List item parent(hList;$vlItemRef) ` $vlParentItemRef gets 200
+ $vlParentItemRef:=List item parent(hList;$vlItemRef) // $vlParentItemRef gets 200
 ```
 
 * If the item “a - 1” is selected, the variable *$vlParentItemRef* gets 100, the item reference number of the item “a”.
 * If the item “a” or “b” is selected, the variable *$vlParentItemRef* gets 0, because these items have no parent item.
 
 #### See also 
+
 [GET LIST ITEM](get-list-item.md)  
 [List item position](list-item-position.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  

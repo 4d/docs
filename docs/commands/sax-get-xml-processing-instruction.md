@@ -22,10 +22,12 @@ displayed_sidebar: docs
 
 Let's look at the following piece of XML code:
 
+```XML
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Edited with XML Spy v3.0.7 NT (http://www.xmlspy.com) by Myself (4D SA)-->
 <?PI TextProcess?>
 <!DOCTYPE RootElement SYSTEM "ParseTest.dtd">
+```
 
 The following instruction will return “PI” in *vName* and “TextProcess” in *vValue*: 
 
@@ -34,5 +36,6 @@ The following instruction will return “PI” in *vName* and “TextProcess” 
 ```
 
 #### See also 
+
 [SAX ADD PROCESSING INSTRUCTION](sax-add-processing-instruction.md)  
 [SAX Get XML node](sax-get-xml-node.md)  

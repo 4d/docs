@@ -43,46 +43,30 @@ You indicate RGB color values in *foregroundColor* and, optionally, *backgroundC
 
 This form contains the two non-enterable variables *vsColorValue* and *vsColor* as well as the three thermometers: *thRed*, *thGreen*, and *thBlue*.
 
-![](../assets/en/Commands/pict4278097.en.png)
+![](../assets/en/commands/pict4278097.en.png)
 
 Here are the methods for these objects:
 
 ```4d
   //vsColorValue non-enterable Object Method
-
  Case of
-
     :(FORM Event=On Load)
-
        vsColorValue:="0x00000000"
-
  End case
-
   // vsColor non-enterable variable Object Method
-
  Case of
-
     :(FORM Event=On Load)
-
        vsColor:=""
-
        OBJECT SET RGB COLORS(vsColor;0x00FFFFFF;0x0000)
-
  End case
  
-
   // thRed Thermometer Object Method
-
  CLICK IN COLOR THERMOMETER
  
-
   // thGreen Thermometer Object Method
-
  CLICK IN COLOR THERMOMETER
  
-
   // thBlue Thermometer Object Method
-
  CLICK IN COLOR THERMOMETER
 ```
 
@@ -90,15 +74,10 @@ The project method called by the three thermometers is:
 
 ```4d
   // CLICK IN COLOR THERMOMETER Project Method
-
  OBJECT SET RGB COLORS(vsColor;0x00FFFFFF;(thRed<<16)+(thGreen<<8)+thBlue)
-
  vsColorValue:=String((thRed<<16)+(thGreen<<8)+thBlue;"&x")
-
  If(thRed=0)
-
     vsColorValue:=Substring(vsColorValue;1;2)+"0000"+Substring(vsColorValue;3)
-
  End if
 ```
 
@@ -106,21 +85,22 @@ Note the use of the [SET AUTOMATIC RELATIONS](set-automatic-relations.md) for ca
 
 When executed, the form looks like this:
 
-![](../assets/en/Commands/pict4278099.en.png)
+![](../assets/en/commands/pict4278099.en.png)
 
 #### Example 2 
 
 Changing to transparent background with a light font color:
 
-![](../assets/en/Commands/pict1210700.en.png)
+![](../assets/en/commands/pict1210700.en.png)
 
 ```4d
  OBJECT SET RGB COLORS(*;"myVar";Light shadow color;Background color none)
 ```
 
-![](../assets/en/Commands/pict1210702.en.png)
+![](../assets/en/commands/pict1210702.en.png)
 
 #### See also 
+
 [\_o\_OBJECT SET COLOR](../../4D/20-R6/o-OBJECT-SET-COLOR.301-6957641.en.html)  
 [OBJECT GET RGB COLORS](object-get-rgb-colors.md)  
 [Select RGB Color](select-rgb-color.md)  

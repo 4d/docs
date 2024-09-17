@@ -29,5 +29,6 @@ The RESTORE command modifies the value of the *OK* and *Document* variables: if 
 **Note:** In a 4D application that is compiled and merged with 4D Volume Desktop, the RESTORE command causes the display of a standard open file dialog box that lists by default any files having the “4BK” extension. 
 
 #### See also 
+
 [BACKUP](backup.md)  
 [GET RESTORE INFORMATION](get-restore-information.md)  

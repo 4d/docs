@@ -37,12 +37,9 @@ The following example imports data from a text document. The method first sets t
 
 ```4d
  FORM SET INPUT([People];"Import")
-
- FldDelimit:=27 ` Set field delimiter to Escape character
-
- RecDelimit:=10 ` Set record delimiter to Line Feed character
-
- IMPORT TEXT([People];"NewPeople.txt") ` Import from “NewPeople.txt” document
+ FldDelimit:=27 // Set field delimiter to Escape character
+ RecDelimit:=10 // Set record delimiter to Line Feed character
+ IMPORT TEXT([People];"NewPeople.txt") // Import from “NewPeople.txt” document
 ```
 
 #### System variables and sets 
@@ -50,6 +47,7 @@ The following example imports data from a text document. The method first sets t
 OK is set to 1 if the import is successfully completed; otherwise, it is set to 0.
 
 #### See also 
+
 [EXPORT TEXT](export-text.md)  
 [IMPORT DIF](import-dif.md)  
 [IMPORT SYLK](import-sylk.md)  

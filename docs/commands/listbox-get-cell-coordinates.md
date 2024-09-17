@@ -39,20 +39,16 @@ You want to draw a red rectangle around the selected cell of a list box:
 
 ```4d
  OBJECT SET VISIBLE(*;"RedRect";False) //initialize a red rectangle
-
   //the rectangle is already defined somewhere in the form
-
  LISTBOX GET CELL POSITION(*;"LB1";$col;$row)
-
  LISTBOX GET CELL COORDINATES(*;"LB1";$col;$row;$x1;$y1;$x2;$y2)
-
  OBJECT SET VISIBLE(*;"RedRect";True)
-
  OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
 ```
 
-![](../assets/en/Commands/pict1741070.en.png)
+![](../assets/en/commands/pict1741070.en.png)
 
 #### See also 
+
 [LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  

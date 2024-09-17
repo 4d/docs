@@ -45,5 +45,6 @@ A PDF option code consists of two parts, OptionT*ype* and *OptionName*, combined
 The system variable OK is set to 1 if the command has been executed correctly; otherwise, it is set to 0\. 
 
 #### See also 
+
 [PRINT OPTION VALUES](print-option-values.md)  
 [SET PRINT OPTION](set-print-option.md)  

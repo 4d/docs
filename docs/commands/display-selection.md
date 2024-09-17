@@ -51,13 +51,10 @@ During and after execution of **DISPLAY SELECTION**, the records that the user h
 The following example selects all the records in the \[People\] table. It then uses **DISPLAY SELECTION** to display the records, and allows the user to select the records to print. Finally, it selects the records with [USE SET](use-set.md), and prints them with [PRINT SELECTION](print-selection.md):
 
 ```4d
- ALL RECORDS([People]) ` Select all records
-
- DISPLAY SELECTION([People];*) ` Display the records
-
- USE SET("UserSet") ` Use only records picked by user
-
- PRINT SELECTION([People]) ` Print the records that the user picked
+ ALL RECORDS([People]) // Select all records
+ DISPLAY SELECTION([People];*) // Display the records
+ USE SET("UserSet") // Use only records picked by user
+ PRINT SELECTION([People]) // Print the records that the user picked
 ```
 
 #### Example 2 
@@ -75,30 +72,23 @@ b. Associate this menu bar (using the “Associated menu bar” menu in the form
 c. Associate the following project methods to your menu commands:
 
 ```4d
-  ` M_SHOW_ALL (attached to menu item Show All)
-
+  // M_SHOW_ALL (attached to menu item Show All)
  $vpCurTable:=Current form table
-
  ALL RECORDS($vpCurTable->)
  
-
-  ` M_QUERY (attached to menu item Query)
-
+  // M_QUERY (attached to menu item Query)
  $vpCurTable:=Current form table
-
  QUERY($vpCurTable->)
  
-
-  ` M_ORDER_BY (attached to menu item Order By)
-
+  // M_ORDER_BY (attached to menu item Order By)
  $vpCurTable:=Current form table
-
  ORDER BY($vpCurTable->)
 ```
 
 You can also use other commands, such as [PRINT SELECTION](print-selection.md), [QR REPORT](qr-report.md), and so on, to provide all the “standard” menu options you may want each time you display or modify a selection in the Application environment. Thanks to the [Current form table](current-form-table.md) command, these methods are generic, and the menu bar they support can be attached to any output form of any table.
 
 #### See also 
+
 [Form event code](form-event-code.md)  
 [MODIFY SELECTION](modify-selection.md)  
 [Sets](../../4D/20-R6/Sets.300-6959005.en.html)  

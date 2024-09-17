@@ -45,5 +45,6 @@ You pass in the optional *type* parameter a value indicating the type of system 
 If you omit the *type* parameter, the function will return the pathname to active System folder (= constant System).
 
 #### See also 
+
 [Get 4D folder](get-4d-folder.md)  
 [Temporary folder](temporary-folder.md)  

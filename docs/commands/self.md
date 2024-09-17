@@ -33,6 +33,7 @@ If **Self** is called out of context, it returns a [Is nil pointer](is-nil-point
 See the example for the [RESOLVE POINTER](resolve-pointer.md) command.
 
 #### See also 
+
 [OBJECT Get pointer](object-get-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
 [This](this.md)  

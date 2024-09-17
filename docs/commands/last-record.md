@@ -25,6 +25,7 @@ The following example makes the last record of the \[People\] table the current 
 ```
 
 #### See also 
+
 [Before selection](before-selection.md)  
 [End selection](end-selection.md)  
 [FIRST RECORD](first-record.md)  

@@ -33,5 +33,6 @@ If no icon is associated with the item, the icon variable is returned empty.
 **Note:** When the icon associated with an item has been defined via a static reference (resource references or pictures from the picture library), it is possible to find out its number using the [GET LIST ITEM PROPERTIES](get-list-item-properties.md) command*.*
 
 #### See also 
+
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  

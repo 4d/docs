@@ -22,4 +22,5 @@ displayed_sidebar: docs
 If the SQL server has been launched correctly, the OK system variable is set to 1\. Otherwise, it is set to 0.
 
 #### See also 
+
 [STOP SQL SERVER](stop-sql-server.md)  

@@ -32,7 +32,7 @@ The optional *screenArea* parameter lets you specify if you want the coordinates
 
 The following images demonstrate the differences between the screen size and the work area:
 
-![](../assets/en/Commands/pict4800387.en.png) 
+![](../assets/en/commands/pict4800387.en.png) 
 
 **Notes**:
 
@@ -40,6 +40,7 @@ The following images demonstrate the differences between the screen size and the
 * If an invalid value is given in *screenID* or *screenArea*, a zero is returned for all of the coordinates.
 
 #### See also 
+
 [Count screens](count-screens.md)  
 [Menu bar screen](menu-bar-screen.md)  
 [SCREEN DEPTH](screen-depth.md)  

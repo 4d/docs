@@ -24,26 +24,7 @@ displayed_sidebar: docs
 The returned object contains a single property named "DB" that has the following basic structure:
 
 ```RAW
-{
-    "DB": {
-        "diskReadBytes": {…},
-        "cacheReadBytes": {…},
-        "cacheMissBytes": {…},
-        "diskWriteBytes": {…},
-
-        "diskReadCount": {…},
-        "cacheReadCount": {…},
-        "cacheMissCount": {…},
-        "diskWriteCount": {…},
-
-        "dataSegment1": {…},
-        "indexSegment": {…},
-
-        "tables": {…},
-        "indexes": {…}
-
-    }
-}
+{    "DB": {        "diskReadBytes": {…},        "cacheReadBytes": {…},        "cacheMissBytes": {…},        "diskWriteBytes": {…},        "diskReadCount": {…},        "cacheReadCount": {…},        "cacheMissCount": {…},        "diskWriteCount": {…},        "dataSegment1": {…},        "indexSegment": {…},        "tables": {…},        "indexes": {…}    }}
 ```
 
 This object is made up of eight properties that contain basic measures ("diskReadBytes", "cacheReadBytes", "cacheMissBytes", "diskWriteBytes", "diskReadCount", "cacheReadCount", "cacheMissCount", "diskWriteCount") and additional properties ("dataSegment1", "indexSegment", "tables", "index") that can also contain elementary properties but at a different level and with a different scope (see below).
@@ -52,21 +33,7 @@ This object is made up of eight properties that contain basic measures ("diskRea
 
 ##### Elementary properties 
 
-Elementary properties can be found at different levels in the DB object. They return the same information but at different scopes. Here is a description of the elementary properties:
-
-| **Name**       | **Information returned**        |
-| -------------- | ------------------------------- |
-| diskReadBytes  | Bytes read from disk            |
-| cacheReadBytes | Bytes read from cache           |
-| cacheMissBytes | Bytes missed from cache         |
-| diskWriteBytes | Bytes written to disk           |
-| diskReadCount  | Read accesses from disk         |
-| cacheReadCount | Read accesses from cache        |
-| cacheMissCount | Read accesses missed from cache |
-| diskWriteCount | Write accesses to disk          |
-
-The eight elementary properties all have the same object structure, for example:
-
+```undefined
 "diskReadBytes": {
     "value": 33486473620,
     "history": [        // optional
@@ -75,43 +42,11 @@ The eight elementary properties all have the same object structure, for example:
             …
     ]
 }
-
-* "**value**" (number): The "value" property contains a number that represents either a quantity of bytes or a count of accesses. Basically, this value is the sum of the value(s) of the "history" object (even if the "history" object is not present).
-* "**history**" (array of objects): The "history" object array is a compilation of event values grouped by second. The "history" property is present only if requested through the *options* parameter (see below). The history array will hold a maximum of 200 items. Each element of the array is itself an object that contains two properties: "value" and "time".  
-   * "value" (number): quantity of bytes or accesses handled during the time period designated in the associated "time" property.  
-   * "time" (number): number of seconds elapsed since the function has been called. In the example above ("time": -1649) means 1649 seconds ago (or more precisely between 1649 and 1650 seconds ago). During this one-second period, 54,202 bytes have been read on disk.  
-   The history array does not contain sequential values (-1650,-1651,-1652, etc.) The previous value is -1665, which means that nothing was read on the disk in the 15-second period between 1650 and 1665.  
-   **Note:** By default the array will only contain useful information.  
-   Since the maximum size of the array is 200, if the database is used intensively (e.g., something is read every second on the disk), the maximum length of the history will be 200 seconds. On the other hand, if almost nothing happens except, for example, once every 3 minutes, the length of the history will be 600 minutes (3\*200).  
-   This example can be represented in the following diagram:  
-   ![](../assets/en/Commands/pict1510781.en.png)
+```
 
 ##### dataSegment1 and indexSegment 
 
-The "dataSegment1" and "indexSegment" properties contain up to four elementary properties (when available): 
-
-```RAW
-"dataSegment1": {
-    "diskReadBytes": {…},
-    "diskWriteBytes": {…},
-    "diskReadCount": {…},
-    "diskWriteCount": {…}
-    },
-"indexSegment": {
-    "diskReadBytes": {…},
-    "diskWriteBytes": {…},
-    "diskReadCount": {…},
-    "diskWriteCount": {…}
-    }
-```
-
-These properties return the same information as the elementary properties, but detailed for each database file:
-
-* "dataSegment1" represents the .4dd data file on the disk
-* "indexSegment" represents the .4dx index file on the disk
-
-For example, you can get the following object:
-
+```undefined
 {
 "DB": {
 "diskReadBytes": {
@@ -137,108 +72,20 @@ For example, you can get the following object:
     "value": 17
     }
 }
-
-You can figure out how it works by adding up the returned values:
-
-*diskReadBytes.value = dataSegment1.diskReadBytes.value + indexSegment.diskReadBytes.value* 
-*diskWriteBytes.value = dataSegment1.diskWriteBytes.value + indexSegment.diskWriteBytes.value* 
-*diskReadCount.value = dataSegment1.diskReadCount.value + indexSegment.diskReadCount.value* 
-*diskWriteCount.value = dataSegment1.diskWriteCount.value + indexSegment.diskWriteCount.value* 
+```
 
 ##### tables 
 
-The "tables" property contains as many properties as there are tables that have been accessed either in read or write mode since the opening of the database. The name of each property is the name of the table involved. For example: 
-
+```undefined
 "tables": {
     "Employees": {…)
     "Companies": {…)
     }
-
-Each table objects contains up to 12 properties:
-
-* The first eight properties are the *elementary properties* (see above) with values related to the table involved.
-* Two other properties, "records" and "blobs", also have the same eight elementary properties, but concerning only certain field types:  
-   * The "records" property concerns all fields of the table (strings, dates, nums, etc.) except for text, pictures and Blobs  
-   * The "blobs" property concerns the text, picture and Blob fields of the table.
-* One or two additional properties, "fields" and "queries", may also be present depending on the queries and sorts performed on the table concerned:  
-   * The "fields" property contains as many "field name" attributes (which are also sub-objects) as the number of fields used for queries or sorts.  
-   Each field name object contains:  
-         * a "queryCount" object (with or without history, depending on the *options* parameter) if any query has been performed using this field  
-         * and/or a "sortCount" object (with or without history, depending on the *options* parameter) if any sort has been performed using this field.  
-   This attribute is not based on index use; all types of queries and sorts are taken into account.  
-   Example: Since the moment the database was launched, several queries and sorts have been carried out using the *CompID*, *Name* and *FirstName* fields. The returned object contains the following "fields" sub-object (*options* are with path and without history):  
-         
-   {  
-       "DB": {  
-           "tables": {  
-               "Employees": {  
-                   "fields": {  
-                       "CompID": {  
-                           "queryCount": {  
-                               "value": 3  
-                           }  
-                       },  
-                       "Name": {  
-                           "queryCount": {  
-                               "value": 1  
-                           },  
-                           "sortCount": {  
-                               "value": 3  
-                           }  
-                       },  
-                       "FirstName": {  
-                           "sortCount": {  
-                               "value": 2  
-                           }  
-                       }  
-   (...)  
-         
-   **Note**:The "fields" attribute is created only if a query or sort has been performed on the table; otherwise this attribute will not be present.  
-   * "queries" is an array of objects that provides a description of each query performed on the table. Each element of the array will contain three attributes:  
-         * "queryStatement" (string): query string (containing field names but not criteria values). For example: "(Companies.PK\_ID != ?)"  
-         * "queryCount" (object):  
-                  * "value" (number): number of times the query statement has been executed, regardless of the criteria values.  
-                  * "history" (array of objects) (if requested in *options*): "value" and "time" standard history properties  
-         * "duration" (object) (if the "value" is >0)  
-                  * "value" (number): number of milliseconds  
-                  * "history" (array of objects) (if requested in *options*): "value" and "time" standard history properties.  
-   Example: Since the moment the database was launched, a single query has been performed on the Employees table (*options* are with path and with history):  
-   {  
-       "DB": {  
-           "tables": {  
-               "Employees": {  
-                   "queries": [  
-                       {  
-                           "queryStatement": "(Employees.Name == ?)",  
-                           "queryCount": {  
-                               "value": 1,  
-                               "history": [  
-                                   {  
-                                       "value": 1,  
-                                       "time": -2022  
-                                   }  
-                               ]  
-                           },  
-                           "duration": {  
-                               "value": 2,  
-                               "history": [  
-                                   {  
-                                       "value": 2,  
-                                       "time": -2022  
-                                   }  
-                               ]  
-                           }  
-                       },  
-   (...)  
-         
-   **Note:** The "queries" attribute is created when at least one query has been performed on the table.
+```
 
 ##### indexes 
 
-This is the most complex object. All tables that have been accessed using one or more of their indexes are stored as properties and, inside the properties, the names of the indexes used are also included as properties. Keyword indexes appear separately and their names are followed by "*(Keyword)*". Finally, each index name property object contains the eight elementary properties related to this index as well as up to four sub-objects depending on index use in the database since it was launched (each sub-object only exists if their corresponding operation has been performed at some point since the launch of the database).
-
-Example: Since the moment the database was launched, several indexes of the \[Employees\]EmpLastName field have been solicited. In addition, 2 records were created and 16 were deleted in the \[Companies\] table. This table has a "name" field that is indexed. The table also has been queried and sorted using this field. The resulting object will contain:
-
+```undefined
 "indexes": {
     "Employees": {
         "EmpLastName": {
@@ -274,6 +121,7 @@ Example: Since the moment the database was launched, several indexes of the \[Em
                 }
     table3Name: {…}
 }
+```
 
 ##### options parameter 
 
@@ -305,31 +153,15 @@ This principle will also work for a component: if the component is used in a 4D 
 You want to have the history logged in the returned object:
 
 ```4d
- C_OBJECT($param)
-
- C_OBJECT($measures)
-
+ var $param : Object
+ var $measures : Object
  OB SET($param;"withHistory";True)
-
  $measures:=Get database measures($param)
 ```
 
 #### Example 2 
 
-We only want to know the global number of bytes read in the cache ("cacheReadBytes"):
-
-```4d
- C_OBJECT($oStats)
-
- C_OBJECT($oParams)
-
- OB SET($oParams;"path";"DB.cacheReadBytes")
-
- $oStats:=Get database measures($oParams)
-```
-
-The object returned contains, for example:
-
+```undefined
 {
     "DB": {
         "cacheReadBytes": {
@@ -337,21 +169,17 @@ The object returned contains, for example:
         }
     }
 }
+```
 
 #### Example 3 
 
 We want to request measures for cache bytes read within the last two minutes:
 
 ```4d
- C_OBJECT($oParams)
-
- C_OBJECT($measures)
-
+ var $oParams : Object
+ var $measures : Object
  OB SET($oParams;"path";"DB.cacheReadBytes")
-
  OB SET($oParams;"withHistory";True)
-
  OB SET($oParams;"historyLength";2*60)
-
  $measures:=Get database measures($oParams)
 ```

@@ -39,4 +39,5 @@ In the *format* parameter, pass the type of parameter whose value you want to kn
 | Time separator             | Longint | 14    | Separator used in time formats (e.g.: “:”)                                            |
 
 #### See also 
+
 [OBJECT SET FORMAT](object-set-format.md)  

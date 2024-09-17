@@ -25,14 +25,13 @@ The following statement:
 
 ```4d
  vDocType:="SYSTEM Books \"Book.DTD\""
-
  SAX ADD XML DOCTYPE($DocRef;vDocType)
 ```
 
 ... will write the following line in the document: 
 
 ```4d
- <!DOCTYPE SYSTEM Books"Book.DTD">
+ 
 ```
 
 #### System variables and sets 
@@ -44,4 +43,5 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 In the event of an error, the the command returns an error which can be intercepted using an error-handling method.
 
 #### See also 
+
 [SAX ADD XML COMMENT](sax-add-xml-comment.md)  

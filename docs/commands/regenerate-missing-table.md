@@ -26,61 +26,35 @@ This method regenerates all the missing tables that may be present in the databa
 
 ```4d
  ARRAY TEXT($arrMissingTables;0)
-
  GET MISSING TABLE NAMES($arrMissingTables)
-
  $SizeArray:=Size of array($arrMissingTables)
-
  If($SizeArray#0)
-
   // Fills the array with the names of all the tables in the database
-
     ARRAY TEXT(arrTables;Get last table number)
-
     If(Get last table number>0) //If there are actually tables
-
        For($vlTables;Size of array(arrTables);1;-1)
-
           If(Is table number valid($vlTables))
-
              arrTables{$vlTables}:=Table name($vlTables)
-
           Else
-
              DELETE FROM ARRAY(arrTables;$vlTables)
-
           End if
-
        End for
-
     End if
-
     For($i;1;$SizeArray)
-
        If(Find in array(arrTables;$arrMissingTables{$i})=-1)
-
           CONFIRM("Regenerate the table"+$arrMissingTables{$i}+"?")
-
           If(OK=1)
-
              REGENERATE MISSING TABLE($arrMissingTables{$i})
-
           End if
-
        Else
-
           ALERT("Impossible to regenerate table "+$arrMissingTables{$i}+" because there is already a table with this name in the database.")
-
        End if
-
     End for
-
  Else
-
     ALERT("No tables to regenerate.")
-
  End if
 ```
 
 #### See also 
+
 [GET MISSING TABLE NAMES](get-missing-table-names.md)  

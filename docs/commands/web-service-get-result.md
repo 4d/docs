@@ -33,30 +33,22 @@ The optional *\** parameter signals the program to free up the memory devoted to
 Imagine that a Web Service returns the current time in any city in the world. The parameters received by the Web Service are the name of the city and the country code. In return, the Web Service sends the corresponding time. The proxy calling method could be in the following form:
 
 ```4d
- C_TEXT($1)
-
- C_TEXT($2)
-
- C_TIME($0)
+ var $1 : Text
+ var $2 : Text
+ var $0 : Time
  
-
  WEB SERVICE SET PARAMETER("city";$1)
-
  WEB SERVICE SET PARAMETER("country_code";$2)
  
-
  WEB SERVICE CALL("http://www.citiesoftheworld.com/WS";"WSTime#City_time";"City_time";\
-
  "http://www.citiesoftheworld.com/namespace/default")
  
-
  If(OK=1)
-
     WEB SERVICE GET RESULT($0;"return";*)
-
  End if
 ```
 
 #### See also 
+
 [WEB SERVICE CALL](web-service-call.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  

@@ -42,7 +42,7 @@ See example for the [WINDOW LIST](window-list.md) command.
 
 Given the following window:
 
-![](../assets/en/Commands/pict39568.en.png)
+![](../assets/en/commands/pict39568.en.png)
 
 After execution of the following line:
 
@@ -52,9 +52,10 @@ After execution of the following line:
 
 The window appears as follows:
 
-![](../assets/en/Commands/pict39569.en.png)
+![](../assets/en/commands/pict39569.en.png)
 
 #### See also 
+
 [CONVERT COORDINATES](convert-coordinates.md)  
 [DRAG WINDOW](drag-window.md)  
 [GET WINDOW RECT](get-window-rect.md)  

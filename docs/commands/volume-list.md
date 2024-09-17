@@ -25,20 +25,16 @@ Using a scrollable area named *atVolumes* you want to display the list of the vo
 
 ```4d
  Case of
-
     :(Form event code=On Load)
-
        ARRAY TEXT(atVolumes;0)
-
        VOLUME LIST(atVolumes)
  
-
   //...
-
  End case
 ```
 
 #### See also 
+
 [DOCUMENT LIST](document-list.md)  
 [FOLDER LIST](folder-list.md)  
 [VOLUME ATTRIBUTES](volume-attributes.md)  

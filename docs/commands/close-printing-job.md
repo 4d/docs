@@ -18,4 +18,5 @@ displayed_sidebar: docs
 **Compatibility Note:** Starting with 4D v20 R4, printing jobs are non-blocking in new projects. For more information, please refer to the [Non-blocking printing option](https://developer.4d.com/docs/settings/compatibility/) documentation in the Compatibility settings.
 
 #### See also 
+
 [OPEN PRINTING JOB](open-printing-job.md)  

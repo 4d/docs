@@ -52,7 +52,7 @@ If they exist, the relations between the tables are not used as a rule. However,
 This example finds the records for all invoices that were entered in December of any year. It does this by applying the [Month of](month-of.md) function to each record. This query could not be performed any other way without creating a separate field for the month:
 
 ```4d
- QUERY BY FORMULA([Invoice];Month of([Invoice]Entered)=12) ` Find the invoices entered in December
+ QUERY BY FORMULA([Invoice];Month of([Invoice]Entered)=12) // Find the invoices entered in December
 ```
 
 #### Example 2 
@@ -60,7 +60,7 @@ This example finds the records for all invoices that were entered in December of
 This example finds records for all the people who have names with more than ten characters:
 
 ```4d
- QUERY BY FORMULA([People];Length([People]Name)>10) ` Find names longer than ten characters
+ QUERY BY FORMULA([People];Length([People]Name)>10) // Find names longer than ten characters
 ```
 
 #### Example 3 
@@ -72,6 +72,7 @@ This example uses a join to query all the lines of "ACME" client invoices even t
 ```
 
 #### See also 
+
 [QUERY](query.md)  
 [QUERY BY SQL](query-by-sql.md)  
 [QUERY SELECTION](query-selection.md)  

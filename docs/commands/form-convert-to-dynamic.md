@@ -39,18 +39,14 @@ You want to convert a classic form, modify it, and display it.
 The original form:
 
   
-![](../assets/en/Commands/pict3977360.en.png)
+![](../assets/en/commands/pict3977360.en.png)
 
   
 ```4d
- C_OBJECT($dynForm)
-
+ var $dynForm : Object
  $dynForm:=FORM Convert to dynamic("FormToConvert")
-
  $dynForm.pages[1].objects.TitleArea.stroke:="red"
-
  $dynForm.pages[1].objects.bOK.method:="myMethod" //associate a project method
-
  DIALOG($dynForm)
 ```
 
@@ -58,8 +54,9 @@ The original form:
 If you execute the code: 
 
   
-![](../assets/en/Commands/pict3977362.en.png)
+![](../assets/en/commands/pict3977362.en.png)
 
 #### See also 
+
 [DIALOG](dialog.md)  
 [Export structure file](export-structure-file.md)  

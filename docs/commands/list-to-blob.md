@@ -39,6 +39,7 @@ After the call, if the list has been successfully stored, the OK variable is set
 See example for the command [BLOB to list](blob-to-list.md).
 
 #### See also 
+
 [BLOB to list](blob-to-list.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [SAVE LIST](save-list.md)  

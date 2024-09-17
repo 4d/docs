@@ -37,8 +37,7 @@ The following example imports data from a SYLK document. The method first sets t
 
 ```4d
  FORM SET INPUT([People];"Import")
-
- IMPORT SYLK([People];"NewPeople.slk") ` Import from “NewPeople.slk” document
+ IMPORT SYLK([People];"NewPeople.slk") // Import from “NewPeople.slk” document
 ```
 
 #### System variables and sets 
@@ -46,6 +45,7 @@ The following example imports data from a SYLK document. The method first sets t
 OK is set to 1 if the import is successfully complete; otherwise, it is set to 0.
 
 #### See also 
+
 [EXPORT SYLK](export-sylk.md)  
 [IMPORT DIF](import-dif.md)  
 [IMPORT TEXT](import-text.md)  

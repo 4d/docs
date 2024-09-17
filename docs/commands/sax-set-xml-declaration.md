@@ -36,7 +36,10 @@ The following code:
 
 ... will write this line in the document: 
 
+```XML
 <<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+```
 
 #### See also 
+
 [SAX GET XML DOCUMENT VALUES](sax-get-xml-document-values.md)  

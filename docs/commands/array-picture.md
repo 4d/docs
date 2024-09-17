@@ -48,24 +48,14 @@ This example creates an interprocess array of [Picture](# "Can be any Windows or
 
 ```4d
  RESOURCE LIST("PICT";$aiResIDs;$asResNames)
-
  ARRAY PICTURE(◊agValues;Size of array($aiResIDs))
-
  $vlPictElem:=0
-
  For($vlElem;1;Size of array(◊agValues))
-
     If($asResNames{$vlElem}="User Intf/@")
-
        $vlPictElem:=$vlPictElem+1
-
        GET PICTURE RESOURCE("PICT";$aiResIDs{$vlElem};$vgPicture)
-
        ◊agValues{$vlPictElem}:=$vgPicture
-
     End if
-
  End for
-
  ARRAY PICTURE(◊agValues;$vlPictElem)
 ```

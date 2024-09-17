@@ -22,5 +22,6 @@ displayed_sidebar: docs
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated.
 
 #### See also 
+
 [SAX ADD XML COMMENT](sax-add-xml-comment.md)  
 [SAX Get XML node](sax-get-xml-node.md)  

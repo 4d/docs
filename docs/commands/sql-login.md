@@ -51,7 +51,7 @@ In this case, the *dataEntry* parameter contains the name of the data source as 
 Syntax: *""*  
 In this case, the command displays the connection dialog box so that the data source to be connected to can be entered manually:  
     
-![](../assets/en/Commands/pict33536.en.png)  
+![](../assets/en/commands/pict33536.en.png)  
     
 This dialog box includes several pages. The TCP/IP page includes the following elements:  
    * Target Name: This menu is built using two lists:  
@@ -160,71 +160,38 @@ This example illustrates the connection possibilities provided by the SQL LOGIN 
 
 ```4d
  ARRAY TEXT(aNames;0)
-
  ARRAY LONGINT(aAges;0)
-
  SQL LOGIN("ODBC:MyORACLE";"Marc";"azerty")
-
  If(OK=1)
-
-  `The following query will be redirected to the external ORACLE database
-
+  //The following query will be redirected to the external ORACLE database
     SQL EXECUTE("SELECT Name, Age FROM PERSONS";aNames;aAges)
-
-  `The following query will be sent to the local 4D database
-
+  //The following query will be sent to the local 4D database
     Begin SQL
-
        SELECT Name, Age
-
        FROM PERSONS
-
        INTO :aNames, :aAges;
-
     End SQL
-
-  `The following SQL LOGIN command closes the current connection
-
-  `with the external ORACLE database and opens a new connection
-
-  `with an external MySQL database
-
+  //The following SQL LOGIN command closes the current connection
+  //with the external ORACLE database and opens a new connection
+  //with an external MySQL database
     SQL LOGIN("ODBC:MySQL";"Jean";"qwerty";*)
-
     If(OK=1)
-
-  `The following query will be redirected to the external MySQL database
-
+  //The following query will be redirected to the external MySQL database
        SQL EXECUTE("SELECT Name, Age FROM PERSONS";aNames;aAges)
-
-  `The following query will also be redirected to the external MySQL database
-
+  //The following query will also be redirected to the external MySQL database
        Begin SQL
-
           SELECT Name, Age
-
           FROM PERSONS
-
           INTO :aNames, :aAges;
-
        End SQL
-
        SQL LOGOUT
-
-  `The following query will be sent to the local 4D database
-
+  //The following query will be sent to the local 4D database
        Begin SQL
-
           SELECT Name, Age
-
           FROM PERSONS
-
           INTO :aNames, :aAges;
-
        End SQL
-
     End if
-
  End if
 ```
 
@@ -233,6 +200,7 @@ This example illustrates the connection possibilities provided by the SQL LOGIN 
 If the connection is successful, the system variable OK is set to 1; otherwise, it is set to 0.
 
 #### See also 
+
 [Begin SQL](begin-sql.md)  
 [End SQL](end-sql.md)  
 [SQL LOGOUT](sql-logout.md)  

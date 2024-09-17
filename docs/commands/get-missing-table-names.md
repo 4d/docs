@@ -30,4 +30,5 @@ Once you have identified the missing tables of the database, you can reactivate 
 **Note:** The data of missing tables are erased when the data file is compacted (if the tables have not been regenerated). 
 
 #### See also 
+
 [REGENERATE MISSING TABLE](regenerate-missing-table.md)  

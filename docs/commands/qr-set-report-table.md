@@ -23,4 +23,5 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 If you pass an invalid *table* value, the error -9852 will be generated.
 
 #### See also 
+
 [QR Get report table](qr-get-report-table.md)  

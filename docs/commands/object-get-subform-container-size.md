@@ -27,5 +27,6 @@ The On Resize event is generated in the subform form method if the subform objec
 * If the command is called outside of the context of screen display (for example, during form printing), it returns 0 in *width* and *height*.
 
 #### See also 
+
 [OBJECT GET SUBFORM](object-get-subform.md)  
 [OBJECT SET SUBFORM](object-set-subform.md)  

@@ -32,4 +32,5 @@ You can compare the value returned with the value of one or more of the followin
 | Underline | Longint | 4     |
 
 #### See also 
+
 [OBJECT SET FONT STYLE](object-set-font-style.md)  

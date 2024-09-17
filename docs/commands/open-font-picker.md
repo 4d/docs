@@ -32,15 +32,12 @@ Here is the button code:
 
 ```4d
  Case of
-
     :(FORM Event=On Clicked)
-
        GOTO OBJECT(textVar) //gives the variable the focus
-
        OPEN FONT PICKER
-
  End case
 ```
 
 #### See also 
+
 [OPEN COLOR PICKER](open-color-picker.md)  

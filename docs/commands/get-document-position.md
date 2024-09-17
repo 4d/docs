@@ -20,6 +20,7 @@ displayed_sidebar: docs
 **Get document position** returns the position, starting from the beginning of the document, where the next read ([RECEIVE PACKET](receive-packet.md)) or write ([SEND PACKET](send-packet.md)) will occur.
 
 #### See also 
+
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  

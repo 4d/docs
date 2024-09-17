@@ -39,11 +39,10 @@ To test if a menu item is displayed in bold, you write:
 
 ```4d
  If((Get menu item style($vlMenu;$vlItem)&Bold)#0)
-
-  `...
-
+  //...
  End if
 ```
 
 #### See also 
+
 [SET MENU ITEM STYLE](set-menu-item-style.md)  

@@ -34,6 +34,7 @@ If you pass the optional *\** parameter, the command will accept any type of fil
 If the command is executed successfully, the system variable Document contains the full pathname to the open file and the system variable OK is set to 1\. Otherwise, OK is set to 0.
 
 #### See also 
+
 [BLOB TO PICTURE](blob-to-picture.md)  
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [Pictures](../../4D/20-R6/Pictures.300-6957798.en.html)  

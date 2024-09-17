@@ -27,15 +27,13 @@ Refer to [Open document](open-document.md) for more details about using **Append
 The following example opens an existing document called Note, appends the string "and so long" and a carriage return onto the end of the document, and closes the document. If the document already contained the string "Good-bye", the document would now contain the string “Good-bye and so long”, followed by a carriage return:
 
 ```4d
- C_TIME(vhDocRef)
-
+ var vhDocRef : Time
  vhDocRef:=Append document("Note.txt") //Open Note document
-
  SEND PACKET(vhDocRef;" and so long"+Char(13)) //Append a string
-
  CLOSE DOCUMENT(vhDocRef) //Close the document
 ```
 
 #### See also 
+
 [Create document](create-document.md)  
 [Open document](open-document.md)  

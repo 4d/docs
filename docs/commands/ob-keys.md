@@ -24,30 +24,22 @@ Only first-level property names are returned (property names of sub-objects are 
 You want a collection with all first-level property names of an object:
 
 ```4d
- C_OBJECT($person)
-
- C_COLLECTION($col)
+ var $person : Object
+ var $col : Collection
  
-
  $person:=New object
-
  $person.lastName:="Smith"
-
  $person.firstName:="Jenny"
-
  $person.children:=New object("Mary";12;"Mark";8)
  
-
  $col:=OB Keys($person)
  
-
   //$col[0]="lastName"
-
   //$col[1]="firstName"
-
   //$col[2]="children"
 ```
 
 #### See also 
+
 [OB Entries](ob-entries.md)  
 [OB Values](ob-values.md)  

@@ -66,20 +66,13 @@ The following project method tries to create a document whose name is received a
 
 ```4d
   //Create doc project method
-
   //Create doc ( String ; Pointer ) -> LongInt
-
   //Create doc ( DocName ; ->DocRef ) -> Error code result
  
-
  gError:=0
-
  ON ERR CALL("IO ERROR HANDLER")
-
  $2->:=Create document($1)
-
  ON ERR CALL("")
-
  $0:=gError
 ```
 
@@ -87,7 +80,6 @@ The IO ERROR HANDLER project method is listed here:
 
 ```4d
   //IO ERROR HANDLER project method
-
  gError:=Error //just copy the error code to the process variable gError
 ```
 
@@ -95,21 +87,13 @@ Note the use of the *gError* process variable to get the error code result withi
 
 ```4d
   // ...
-
- C_TIME(vhDocRef)
-
+ var vhDocRef : Time
  $vlErrCode:=Create doc($vsDocumentName;->vhDocRef)
-
  If($vlErrCode=0)
-
   //...
-
     CLOSE DOCUMENT($vlErrCode)
-
  Else
-
     ALERT("The document could not be created, I/O error "+String($vlErrCode))
-
  End if
 ```
 
@@ -122,71 +106,43 @@ While implementing a complex set of operations, you may end up with various subr
 You must initialize the array at the very beginning of the process execution:
 
 ```4d
-  ` Do NOT forget to initialize the array at the beginning
-
-  ` of the process method (the project method that runs the process)
-
+  // Do NOT forget to initialize the array at the beginning
+  // of the process method (the project method that runs the process)
  ARRAY STRING(63;asErrorMethod;0)
 ```
 
 Here is the custom ON ERROR CALL method:
 
 ```4d
-  ` ON ERROR CALL project method
-
-  ` ON ERROR CALL { ( String ) }
-
-  ` ON ERROR CALL { ( Method Name ) }
+  // ON ERROR CALL project method
+  // ON ERROR CALL { ( String ) }
+  // ON ERROR CALL { ( Method Name ) }
  
-
  C_STRING(63;$1;$ErrorMethod)
-
- C_LONGINT($vlElem)
+ var $vlElem : Integer
  
-
  If(Count parameters>0)
-
     $ErrorMethod:=$1
-
  Else
-
     $ErrorMethod:=""
-
  End if
  
-
  If($ErrorMethod#"")
-
-    C_LONGINT(gError)
-
+    var gError : Integer
     gError:=0
-
     $vlElem:=1+Size of array(asErrorMethod)
-
     INSERT IN ARRAY(asErrorMethod;$vlElem)
-
     asErrorMethod{$vlElem}:=$1
-
     ON ERR CALL($1)
-
  Else
-
     ON ERR CALL("")
-
     $vlElem:=Size of array(asErrorMethod)
-
     If($vlElem>0)
-
        DELETE FROM ARRAY(asErrorMethod;$vlElem)
-
        If($vlElem>1)
-
           ON ERR CALL(asErrorMethod{$vlElem-1})
-
        End if
-
     End if
-
  End if
 ```
 
@@ -194,22 +150,14 @@ Then, you can call it this way:
 
 ```4d
  gError:=0
-
- ON ERROR CALL("IO ERRORS") ` Installs the IO ERRORS error-handling method
-
-  ` ...
-
- ON ERROR CALL("ALL ERRORS") ` Installs the ALL ERRORS error-handling method
-
-  ` ...
-
- ON ERROR CALL ` Deinstalls ALL ERRORS error-handling method and reinstalls IO ERRORS
-
-  ` ...
-
- ON ERROR CALL ` Deinstalls the IO ERRORS error-handling method
-
-  ` ...
+ ON ERROR CALL("IO ERRORS") // Installs the IO ERRORS error-handling method
+  // ...
+ ON ERROR CALL("ALL ERRORS") // Installs the ALL ERRORS error-handling method
+  // ...
+ ON ERROR CALL // Deinstalls ALL ERRORS error-handling method and reinstalls IO ERRORS
+  // ...
+ ON ERROR CALL // Deinstalls the IO ERRORS error-handling method
+  // ...
 ```
 
 #### Example 4 
@@ -218,15 +166,13 @@ The following error-handling method ignores the user interruptions and displays 
 
 ```4d
   //Show_errors_only project method
-
  If(Error#1006) //this is not a user interruption
-
     ALERT("The error "+String(Error)+" occurred. The code in question is: \""+Error formula+"\"")
-
  End if
 ```
 
 #### See also 
+
 [ABORT](abort.md)  
 [Error Handler](../../4D/20-R6/Error-Handler.302-6958437.en.html)  
 [GET LAST ERROR STACK](get-last-error-stack.md)  

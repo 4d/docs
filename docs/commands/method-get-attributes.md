@@ -30,16 +30,7 @@ If the command is executed from a component, by default it applies to the compon
 
 #### Example 
 
-You want to get the attributes of the *sendMail* project method. You can write:
-
-```4d
- C_OBJECT($att)
-
- METHOD GET ATTRIBUTES("sendMail";$att)
-```
-
-After execution, $att contains, for example:
-
+```undefined
 {
     "invisible":false,
     "preemptive":"capable",
@@ -54,6 +45,8 @@ After execution, $att contains, for example:
         "table":"Table_1"
     }
 }
+```
 
 #### See also 
+
 [METHOD SET ATTRIBUTES](method-set-attributes.md)  

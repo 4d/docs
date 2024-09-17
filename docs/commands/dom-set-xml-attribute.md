@@ -33,31 +33,34 @@ The *attrValue* parameter can be of the text type or another type (Boolean, inte
 
 In the following XML source:
 
+```XML
 <Book>
    <Title>The Best Seller</Title>
 </Book>
+```
 
 If the following code is executed:
 
 ```4d
  vAttrName:="Font"
-
  vAttrVal:="Verdana"
-
  DOM SET XML ATTRIBUTE(vElemRef;vAttrName;vAttrVal)
 ```
 
 We get:
 
+```XML
 <Book>
    <Title Font=Verdana>The Best Seller</Title>
 </Book>
+```
 
 #### System variables and sets 
 
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated.
 
 #### See also 
+
 [DOM GET XML ATTRIBUTE BY INDEX](dom-get-xml-attribute-by-index.md)  
 [DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  

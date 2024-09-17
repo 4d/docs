@@ -35,19 +35,13 @@ In the *array* parameter, pass the array that must be passed as the property val
 Using a text array:
 
 ```4d
- C_OBJECT($Children)
-
+ var $Children : Object
  ARRAY TEXT($arrChildren;3)
-
  $arrChildren{1}:="Richard"
-
  $arrChildren{2}:="Susan"
-
  $arrChildren{3}:="James"
  
-
  OB SET ARRAY($Children;"Children";$arrChildren)
-
   // Value of $Children = {"Children":["Richard","Susan","James"]}
 ```
 
@@ -57,22 +51,14 @@ Adding an element to an array:
 
 ```4d
  ARRAY TEXT($arrText;2)
-
  $arrText{1}:="Smith"
-
  $arrText{2}:="White"
-
- C_OBJECT($Employees)
-
+ var $Employees : Object
  OB SET ARRAY($Employees;"Employees";$arrText)
-
  APPEND TO ARRAY($arrText;"Brown") // Add to the 4D array
-
   // $Employees = {"Employees":["Smith","White"]}
  
-
  OB SET ARRAY($Employees;"Employees";$arrText)
-
   // $Employees = {"Employees":["Smith","White","Brown"]}
 ```
 
@@ -82,9 +68,7 @@ Using a text array with selection of an element:
 
 ```4d
   // $Employees = {"Employees":["Smith","White","Brown"]}
-
  OB SET ARRAY($Employees ;"Manager";$arrText{1})
-
   // $Employees = {"Employees":["Smith","White","Brown"],"Manager":["Smith"]}
 ```
 
@@ -93,42 +77,29 @@ Using a text array with selection of an element:
 Using an object array:
 
 ```4d
- C_OBJECT($Children;$ref_richard;$ref_susan;$ref_james)
-
+ var $Children;$ref_richard;$ref_susan;$ref_james : Object
  ARRAY OBJECT($arrChildren;0)
-
  OB SET($ref_richard;"nom";"Richard";"age";7)
-
  APPEND TO ARRAY($arrChildren;$ref_richard)
-
  OB SET($ref_susan;"name";"Susan";"age";4)
-
  APPEND TO ARRAY($arrChildren;$ref_susan)
-
  OB SET($ref_james;"name";"James";"age";3)
  
-
  APPEND TO ARRAY($arrChildren;$ref_james)
  
-
   // $arrChildren {1} = {"name":"Richard","age":7}
-
   // $arrChildren {2} = {"name":"Susan","age":4}
-
   // $arrChildren {3} = {"name":"James","age":3}
  
-
  OB SET ARRAY($Children;"Children";$arrChildren)
  
-
   // $Children = {"Children":[{"name":"Richard","age":7},{"name":"Susan",
-
   // "age":4},{"name":"James","age":3}]}
 ```
 
 Here is how the object appears in the debugger:
 
-![](../assets/en/Commands/pict1211436.en.png)
+![](../assets/en/commands/pict1211436.en.png)
 
 #### Example 5 
 
@@ -136,17 +107,13 @@ Using an Object field:
 
 ```4d
  ARRAY TEXT($arrGirls;3)
-
  $arrGirls{1}:="Emma"
-
  $arrGirls{2}:="Susan"
-
  $arrGirls{3}:="Jamie"
-
  OB SET ARRAY([People]Children;"Girls";$arrGirls)
 ```
 
-![](../assets/en/Commands/pict1899097.en.png)
+![](../assets/en/commands/pict1899097.en.png)
 
 #### Example 6 
 
@@ -154,18 +121,15 @@ Using a picture array:
 
 ```4d
  ARRAY PICTURE($arrPhotos;3)
-
  READ PICTURE FILE("pict1.jpg";$arrPhotos{1})
-
  READ PICTURE FILE("pict2.jpg";$arrPhotos{2})
-
  READ PICTURE FILE("pict3.jpg";$arrPhotos{3})
  
-
  OB SET ARRAY([Cities]Places;"Photoset";$arrPhotos)
 ```
 
 #### See also 
+
 [OB GET ARRAY](ob-get-array.md)  
 [OB SET](ob-set.md)  
 [Type conversions between collections and 4D arrays](../../4D/20-R6/Type-conversions-between-collections-and-4D-arrays.300-6958644.en.html)  

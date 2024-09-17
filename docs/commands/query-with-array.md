@@ -30,13 +30,11 @@ The following example allows you to retrieve the records of both French and Amer
 
 ```4d
  ARRAY TEXT(searchArray;2)
-
  SearchArray{1}:="FR"
-
  SearchArray{2}:="US"
-
  QUERY WITH ARRAY([Clients]Country;SearchArray)
 ```
 
 #### See also 
+
 [QUERY SELECTION WITH ARRAY](query-selection-with-array.md)  

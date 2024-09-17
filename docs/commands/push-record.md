@@ -25,9 +25,10 @@ If you push a record that was unlocked, this record stays locked for all the oth
 The following example pushes the record for the customer onto the record stack:
 
 ```4d
- PUSH RECORD([Customer]) ` Push customer’s record onto stack
+ PUSH RECORD([Customer]) // Push customer’s record onto stack
 ```
 
 #### See also 
+
 [POP RECORD](pop-record.md)  
 [Using the Record Stack](../../4D/20-R6/Using-the-Record-Stack.300-6958028.en.html)  

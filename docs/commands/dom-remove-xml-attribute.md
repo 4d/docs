@@ -23,26 +23,22 @@ If the attribute has been correctly removed, the *OK* system variable is set to 
 
 Given the following structure:
 
-![](../assets/en/Commands/pict204122.fr.png)
+![](../assets/en/commands/pict204122.fr.png)
 
 The following code can be used to remove the first attribute "N=1": 
 
 ```4d
- C_BLOB(myBlobVar)
-
- C_TEXT($xml_Parent_Ref;$xml_Child_Ref)
-
- C_LONGINT($LineNum)
+ var myBlobVar : Blob
+ var $xml_Parent_Ref;$xml_Child_Ref : Text
+ var $LineNum : Integer
  
-
  $xml_Parent_Ref:=DOM Parse XML variable(myBlobVar)
-
  $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref)
-
  DOM REMOVE XML ATTRIBUTE($xml_Child_Ref;"N")
 ```
 
 #### See also 
+
 [DOM GET XML ATTRIBUTE BY INDEX](dom-get-xml-attribute-by-index.md)  
 [DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
 [DOM REMOVE XML ELEMENT](dom-remove-xml-element.md)  

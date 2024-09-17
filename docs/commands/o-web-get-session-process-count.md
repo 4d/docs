@@ -18,4 +18,5 @@ displayed_sidebar: docs
 <!--REF #_command_.O WEB Get session process count.Summary-->This command is deprecated as of 4D v18 R6\.<!-- END REF--> It always returns 0 (or 1 in legacy session mode).
 
 #### See also 
+
 [Web Sessions Management (Legacy)](../../4D/20-R6/Web-Sessions-Management-Legacy.300-6957735.en.html)  

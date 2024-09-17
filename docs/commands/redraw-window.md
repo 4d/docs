@@ -21,4 +21,5 @@ If you omit the *window* parameter, REDRAW WINDOW applies to the frontmost windo
 **Note:** 4D handles the graphical updates of the windows each time you move a window, resize it, or bring it to the front, as well as when you change the form and/or the values displayed in the window. You will rarely use this command.
 
 #### See also 
+
 [ERASE WINDOW](erase-window.md)  

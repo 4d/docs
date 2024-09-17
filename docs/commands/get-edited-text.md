@@ -33,9 +33,7 @@ The following method automatically puts the characters being entered in capitals
 
 ```4d
  If(Form event code=On After Edit)
-
     [Trips]Agencies:=Uppercase(Get edited text)
-
  End if
 ```
 
@@ -45,36 +43,24 @@ Here is an example of how to process on the fly characters entered in a text fie
 
 ```4d
  If(Form event code=On After Keystroke)
-
     $RealTimeEntry:=Get edited text
-
     PLATFORM PROPERTIES($platform)
-
-    If($platform#3) ` Mac OS
-
+    If($platform#3) // Mac OS
        Repeat
-
           $DecomposedSentence:=Replace string($RealTimeEntry;Char(32);Char(13))
-
        Until(Position(" ";$DecomposedSentence)=0)
-
-    Else ` Windows
-
+    Else // Windows
        Repeat
-
           $DecomposedSentence:=Replace string($RealTimeEntry;Char(32);Char(13)+Char(10))
-
        Until(Position(" ";$DecomposedSentence)=0)
-
     End if
-
     [Example]Words:=$DecomposedSentence
-
  End if
 ```
 
 **Note:** This example is not comprehensive because we have assumed that words are separated uniquely by spaces (Char (32)). For a complete solution you will need to add other filters to extract all the words (delimited by commas, semi-colons, apostrophes, etc.).
 
 #### See also 
+
 [Form event code](form-event-code.md)  
 [Is editing text](is-editing-text.md)  

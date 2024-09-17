@@ -38,17 +38,14 @@ As described in [this page](https://developer.4d.com/docs/Admin/tls), SSL certif
 You want to change certificates folder temporarily:
 
 ```4d
- C_TEXT($certifFolder)
-
+ var $certifFolder : Text
  $certifFolder :=HTTP Get certificates folder //save current folder
-
  HTTP SET CERTIFICATES FOLDER("C:/temp/certifTempo/")
-
  ... // execution of specific requests
-
  HTTP SET CERTIFICATES FOLDER($certifFolder) //restore previous folder
 ```
 
 #### See also 
+
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
 [HTTP Get certificates folder](http-get-certificates-folder.md)  

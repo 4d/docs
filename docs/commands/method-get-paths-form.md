@@ -43,13 +43,9 @@ List of all objects of the "input" form for the \[Employees\] table. Note that t
 
 ```4d
  METHOD GET PATHS FORM([Employees];arrPaths;"input")
-
   // Contents of arrPaths (for example)
-
   // [tableForm]/input/{formMethod} -> Form method
-
   // [tableForm]/input/bOK -> Object method
-
   // [tableForm]/input/bCancel -> Object method
 ```
 
@@ -70,4 +66,5 @@ List of all objects of the "input" form for the \[Employees\] table from a compo
 ```
 
 #### See also 
+
 [FORM GET NAMES](form-get-names.md)  

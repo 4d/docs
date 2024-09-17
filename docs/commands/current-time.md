@@ -27,11 +27,8 @@ The following example shows you how to time the length of an operation. Here, Lo
 
 ```4d
  $vhStartTime:=((Current date-!1980-01-01!)*86400)+Current time //Save the start time, seconds after 1.1.1980
-
  LongOperation //Perform the operation
-
  $vhEndTime:=((Current date-!1980-01-01!)*86400)+Current time
-
  ALERT("The operation took "+String($vhEndTime-$vhStartTime)+" seconds.") //Display how long it took
 ```
 
@@ -41,15 +38,13 @@ The following example extracts the hours, minutes, and seconds from the current 
 
 ```4d
  $vhNow:=Current time
-
  ALERT("Current hour is: "+String($vhNow\3600))
-
  ALERT("Current minute is: "+String(($vhNow\60)%60))
-
  ALERT("Current second is: "+String($vhNow%60))
 ```
 
 #### See also 
+
 [Milliseconds](milliseconds.md)  
 [String](string.md)  
 [Tickcount](tickcount.md)  

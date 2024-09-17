@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 Let's look at the following piece of XML code:
 
+```XML
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE body [
    <!ELEMENT body (element*)>
@@ -31,6 +32,7 @@ Let's look at the following piece of XML code:
 <body>
    <element>Entity updated by &name;</element>
 </body>
+```
 
 The following instruction will return “name” in *vName* and “Replacement” in *vValue*. 
 
@@ -43,4 +45,5 @@ The following instruction will return “name” in *vName* and “Replacement�
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated. 
 
 #### See also 
+
 [SAX Get XML node](sax-get-xml-node.md)  

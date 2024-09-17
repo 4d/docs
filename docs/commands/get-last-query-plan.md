@@ -30,5 +30,6 @@ This command returns a significant value if the [DESCRIBE QUERY EXECUTION](descr
 The description of the last query plan can be compared to the description of the actual path of the last query (obtained using the [Get last query path](get-last-query-path.md) command) for optimization purposes.
 
 #### See also 
+
 [DESCRIBE QUERY EXECUTION](describe-query-execution.md)  
 [Get last query path](get-last-query-path.md)  

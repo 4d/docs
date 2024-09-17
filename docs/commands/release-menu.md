@@ -28,43 +28,28 @@ This example shows different ways to use this command:
 
 ```4d
  newMenu:=Create menu
-
  APPEND MENU ITEM(newMenu;"Test1")
-
  subMenu:=Create menu
-
  APPEND MENU ITEM(subMenu;"SubTest1")
-
  APPEND MENU ITEM(subMenu;"SubTest2") // Creation of items in submenu
  
-
  APPEND MENU ITEM(newMenu;"Test2";subMenu) // Attaching submenu to menu
  
-
   //At this point, the submenu is attached to the menu and if we will not need it later on, this is right place to remove it.
-
   //Removing it does not immediately delete subMenu since it is still used by newMenu. subMenu is only deleted when newMenu is.
-
   //Removing the submenu here lets you save memory
-
  RELEASE MENU(subMenu)
  
-
  $result1:=Dynamic pop up menu(newMenu) //Use of menu
-
  copyMenu:=Create menu(newMenu) // Creation of menu by copying newMenu (and thus copying subMenu as well)
-
  RELEASE MENU(newMenu) // We no longer need newMenu.
  
-
  $result2:=Dynamic pop up menu(copyMenu)
-
  RELEASE MENU(copyMenu)
-
   //You don't need to worry about deleting the submenus of copyMenu since it was not created directly using Create menu
-
   //The rule to follow is: each Create menu must have a corresponding RELEASE MENU
 ```
 
 #### See also 
+
 [Create menu](create-menu.md)  

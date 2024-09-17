@@ -64,19 +64,12 @@ Example to display all the $1 tags:
 
 ```4d
  $start:=1
-
  Repeat
-
     vfound:=Match regex("<.*>";$1;$start;pos_found;length_found)
-
     If(vfound)
-
        ALERT(Substring($1;pos_found;length_found))
-
        $start:=pos_found+length_found
-
     End if
-
  Until(Not(vfound))
 ```
 
@@ -87,17 +80,11 @@ Search with support of “capture groups” via parentheses. ( ) are used to spe
 
 ```4d
  ARRAY LONGINT(pos_found_array;0)
-
  ARRAY LONGINT(length_found_array;0)
-
  vfound:=Match regex("(.*)stuff(.*)";$1;1;pos_found_array;length_found_array)
-
  If(vfound)
-
     $group1:=Substring($1;pos_found_array{1};length_found_array{1})
-
     $group2:=Substring($1;pos_found_array{2};length_found_array{2})
-
  End if
 ```
 
@@ -108,16 +95,11 @@ Add a star to the end of one of the two previous syntaxes.
 
 ```4d
  vfound:=Match regex("a.b";"---a-b---";1;$pos_found;$length_found)
-
-  `returns True
-
+  //returns True
  vfound:=Match regex("a.b";"---a-b---";1;$pos_found;$length_found;*)
-
-  `returns False
-
+  //returns False
  vfound:=Match regex("a.b";"---a-b---";4;$pos_found;$length_found;*)
-
-  `returns True
+  //returns True
 ```
 
 **Note:** The positions and lengths returned are only meaningful in Unicode mode or if the text being worked with is of the 7-bit ASCII type.

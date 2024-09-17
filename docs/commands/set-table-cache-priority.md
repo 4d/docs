@@ -44,6 +44,7 @@ In the , you want to set a high priority for the \[Customer\] scalar data:
 ```
 
 #### See also 
+
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
 [ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)  
 [Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  

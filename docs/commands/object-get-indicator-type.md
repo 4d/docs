@@ -32,4 +32,5 @@ You can compare the value returned by the command with the following constants, 
 | Progress bar              | Longint | 1     | Standard progress bar                              |
 
 #### See also 
+
 [OBJECT SET INDICATOR TYPE](object-set-indicator-type.md)  

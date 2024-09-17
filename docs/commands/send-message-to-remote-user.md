@@ -29,38 +29,25 @@ You want to send a message to all users, then send a message to a specific user:
 
 ```4d
   // Method to be executed on server
-
- C_TEXT($message)
-
- C_OBJECT($element)
-
- C_COLLECTION($userCol)
+ var $message : Text
+ var $element : Object
+ var $userCol : Collection
  
-
   // retrieve session information
-
  $userCol:=(Get process activity(Sessions only)).sessions
  
-
   // send message to all users
-
  $message:="A maintenance operation is scheduled for 10pm. The server will be restarted. Please log out before 10pm."
-
  SEND MESSAGE TO REMOTE USER($message)
  
-
   // send message to a single user, "Vanessa"
-
  $message:="Hello Vanessa"
-
  $userCol:=Get process activity(Sessions only).sessions.query("systemUserName = :1";"Vanessa")
-
  For each($element;$userCol)
-
     SEND MESSAGE TO REMOTE USER($message;$element.ID)
-
  End for each
 ```
 
 #### See also 
+
 [DROP REMOTE USER](drop-remote-user.md)  

@@ -33,17 +33,14 @@ Here is the code to sort only the rows in the case of a cross-table report:
 
 ```4d
  ARRAY REAL($aColumns;1)
-
  $aColumns{1}:=2
-
  ARRAY REAL($aOrders;1)
-
- $aOrders{1}:=-1 `Alphabetic sort for rows
-
+ $aOrders{1}:=-1 //Alphabetic sort for rows
  QR SET SORTS(qr_area;$aColumns;$aOrders)
 ```
 
 If you pass an invalid *area* number, the error -9850 will be generated.
 
 #### See also 
+
 [QR GET SORTS](qr-get-sorts.md)  

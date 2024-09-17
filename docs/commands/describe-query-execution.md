@@ -32,36 +32,26 @@ Pass **False** in the *status* parameter when you no longer need to analyze quer
 The following example illustrates the type of information obtained using these commands:
 
 ```4d
- C_TEXT($vResultPlan;$vResultPath)
-
+ var $vResultPlan;$vResultPath : Text
  DESCRIBE QUERY EXECUTION(True) //analysis mode
-
  QUERY([Employees];[Employees]LastName="T@";*) // Search for employees whose last name starts with T...
-
  QUERY([Employees];&;[Companies]Name="H@";*) // that work for a company whose name starts with H
-
  QUERY([Employees];&;[Employees]Salary>2500;*) // whose salary is > 2500
-
  QUERY([Employees];&;[Cities]Pop<50000) // that live in a city with less than 50,000 inhabitants
-
  $vResultPlan:=Get last query plan(Description in text format)
-
  $vResultPath:=Get last query path(Description in text format)
-
  DESCRIBE QUERY EXECUTION(False) //End of analysis mode
 ```
 
 After executing this code, *$vResultPlan* and *$vResultPath* contain descriptions of the queries performed, for example: 
 
 ```RAW
-$vResultPlan : 
-   Employees.LastName == T@ And  Employees.Salary > 2500 And Join on Table : Companies  :   Employees.Company = Companies.Name [index : Companies.Name ] LIKE H@ And Join  on Table : Cities  :  Employees.City = Cities.Name [index : Cities.Pop  ] < 50000
-$vResultPath : 
-(Employees.LastName == T@ And Employees.Salary  > 2500) And (Join on Table : Companies  :  Employees.Company  = Companies.Name with filter {[index : Companies.Name ]  LIKE H@}) And (Join on Table : Cities  :  Employees.City = Cities.Name  with filter {[index : Cities.Pop ] < 50000})   (3 records found in 1  ms)
+$vResultPlan :    Employees.LastName == T@ And  Employees.Salary > 2500 And Join on Table : Companies  :   Employees.Company = Companies.Name [index : Companies.Name ] LIKE H@ And Join  on Table : Cities  :  Employees.City = Cities.Name [index : Cities.Pop  ] < 50000$vResultPath : (Employees.LastName == T@ And Employees.Salary  > 2500) And (Join on Table : Companies  :  Employees.Company  = Companies.Name with filter {[index : Companies.Name ]  LIKE H@}) And (Join on Table : Cities  :  Employees.City = Cities.Name  with filter {[index : Cities.Pop ] < 50000})   (3 records found in 1  ms)
 ```
 
 If the Description in XML Format constant is passed to the [Get last query path](get-last-query-path.md) command, *$vResultPath* contains the description of the query expressed in XML:
 
+```XML
 $vResultPath : 
    <QueryExecution>
       <steps description="And" time="0" recordsfounds="1227">
@@ -70,7 +60,9 @@ $vResultPath :
          </steps>
       </steps>
    </QueryExecution>
+```
 
 #### See also 
+
 [Get last query path](get-last-query-path.md)  
 [Get last query plan](get-last-query-plan.md)  

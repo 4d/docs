@@ -73,18 +73,13 @@ For information about defining the data language, see the section in the *Design
 This example illustrates the use of **Position**. The results, described in the comments, are assigned to the variable *vlResult*.
 
 ```4d
- vlResult:=Position("ll";"Willow") ` vlResult gets 3
-
- vlResult:=Position(vtText1;vtText2) ` Returns first occurrence of vtText1 in vtText2
-
- vlResult:=Position("day";"Today is the first day";1) ` vlResult gets 3
-
- vlResult:=Position("day";"Today is the first day";4) ` vlResult gets 20
-
- vlResult:=Position("DAY";"Today is the first day";1;*) ` vlResult gets 0
+ vlResult:=Position("ll";"Willow") // vlResult gets 3
+ vlResult:=Position(vtText1;vtText2) // Returns first occurrence of vtText1 in vtText2
+ vlResult:=Position("day";"Today is the first day";1) // vlResult gets 3
+ vlResult:=Position("day";"Today is the first day";4) // vlResult gets 20
+ vlResult:=Position("DAY";"Today is the first day";1;*) // vlResult gets 0
  
-
- vlResult:=Position("œ";"Bœuf";1;$length) ` vlResult =2, $length = 1
+ vlResult:=Position("œ";"Bœuf";1;$length) // vlResult =2, $length = 1
 ```
 
 #### Example 2 
@@ -93,13 +88,9 @@ In the following example, the *lengthFound* parameter can be used to search for 
 
 ```4d
  $start:=1
-
  Repeat
-
     vlResult:=Position("aegis";$text;$start;$lengthfound)
-
     $start:=$start+$lengthfound
-
  Until(vlResult=0)
 ```
 
@@ -110,31 +101,21 @@ In the following example, you want to find all instances of a string and replace
 ```4d
  var $lengthFound : Integer
  
-
  $string:="Hello Joelle et joel!"
-
  $find:="joel"
-
  $replace:="Joël"
-
  $option:=sk case insensitive+sk diacritic insensitive
  
-
  $p:=0
-
  Repeat
-
     $p:=Position($find;$string;$p+1;$lengthFound;$option)
-
     If($p>0)
-
        $string:=Substring($string;1;$p-1)+$replace+Substring($string;$p+$lengthFound)
-
     End if
-
  Until($p<=0) //result: $string -> Hello Joëlle and Joël!
 ```
 
 #### See also 
+
 [Compare strings](compare-strings.md)  
 [Substring](substring.md)  

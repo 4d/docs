@@ -26,17 +26,16 @@ In the *property* parameter, pass the label of the property to be read. Note tha
 
 Given an object array defined in the example of the [OB SET ARRAY](ob-set-array.md) command:
 
-![](../assets/en/Commands/pict1211436.en.png)
+![](../assets/en/commands/pict1211436.en.png)
 
 We want to retrieve these values:
 
 ```4d
  ARRAY OBJECT($result;0)
-
  OB GET ARRAY($Children;"Children";$result)
 ```
 
-![](../assets/en/Commands/pict1213151.en.png)
+![](../assets/en/commands/pict1213151.en.png)
 
 #### Example 2 
 
@@ -44,14 +43,12 @@ We want to change a value in the first element of the array:
 
 ```4d
   // Change the value of "age":
-
  ARRAY OBJECT($refs)
-
  OB GET ARRAY($refEmployees;"__ENTITIES";$refs)
-
  OB SET($refs{1};"age";25)
 ```
 
 #### See also 
+
 [OB SET ARRAY](ob-set-array.md)  
 [Type conversions between collections and 4D arrays](../../4D/20-R6/Type-conversions-between-collections-and-4D-arrays.300-6958644.en.html)  

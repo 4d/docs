@@ -44,17 +44,11 @@ You want to reuse the font color array of the 4th column for the 10th column:
 
 ```4d
   // retrieve a pointer to the array for column 4
-
  $Pointer:=LISTBOX Get array(*;"Col4";lk font color array)
-
   // check that it exists
-
  If(Not(Nil($Pointer)))
-
   //transfer to column 10
-
     LISTBOX SET ARRAY(*;"Col10";lk font color array;$Pointer)
-
  End if
 ```
 
@@ -67,5 +61,6 @@ You want to set a row height array for a list box:
 ```
 
 #### See also 
+
 [LISTBOX Get array](listbox-get-array.md)  
 [LISTBOX GET ARRAYS](listbox-get-arrays.md)  

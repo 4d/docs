@@ -39,34 +39,22 @@ The following example puts the name and process reference number for each proces
 
 ```4d
  $vlNbTasks:=Count tasks
-
  ARRAY TEXT(asProcName;$vlNbTasks)
-
  ARRAY INTEGER(aiProcNum;$vlNbTasks)
-
  $vlActualCount:=0
-
  For($vlProcess;1;$vlNbTasks)
-
     If(Process state($vlProcess)>=Executing)
-
        $vlActualCount:=$vlActualCount+1
-
        PROCESS PROPERTIES($vlProcess;asProcName{$vlActualCount};$vlState;$vlTime)
-
        aiProcNum{$vlActualCount}:=$vlProcess
-
     End if
-
  End for
-
-  ` Eliminate unused extra elements
-
+  // Eliminate unused extra elements
  ARRAY TEXT(asProcName;$vlNbTasks)
-
  ARRAY INTEGER(aiProcNum;$vlActualCount)
 ```
 
 #### See also 
+
 [Count tasks](count-tasks.md)  
 [PROCESS PROPERTIES](process-properties.md)  

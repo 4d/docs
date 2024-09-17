@@ -46,5 +46,6 @@ The current language of the database determines the .lproj folder where the prog
 **Note:** If the database does not have an .lproj folder, 4D applies the following order of priority: 1\. System language, 2\. English (if the system language cannot be identified).
 
 #### See also 
+
 [Get localized document path](get-localized-document-path.md)  
 [SET DATABASE LOCALIZATION](set-database-localization.md)  

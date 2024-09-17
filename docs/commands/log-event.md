@@ -55,4 +55,5 @@ If you want to have keep track of when your database is opened under Windows, yo
 Each time the database is opened, this information will be written in Windows’ log events and its level of importance will be 0.
 
 #### See also 
+
 [SET DATABASE PARAMETER](set-database-parameter.md)  

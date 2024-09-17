@@ -35,10 +35,11 @@ The *mimeType* and *name* parameters receive the Mime type and the name of the o
 
 In this example, a Web form downloads several pictures using a browser onto the HTTP server and displays them in the page. Here is the Web form:
 
-![](../assets/en/Commands/pict864606.en.png)
+![](../assets/en/commands/pict864606.en.png)
 
 Here is the code for the <body> part of the page:
 
+```HTML
 <body>
         <form enctype="multipart/form-data" action="/4DACTION/GetFile/" method="post">
             Locate the picture files to upload: <br>
@@ -52,6 +53,7 @@ Here is the code for the <body> part of the page:
         <img src="/photos/<!--4Dvar aFileNames{aFileNames}-->"/>
     <!--4Dendloop-->
 </body>
+```
 
 Two 4D methods are called by the page:
 
@@ -61,44 +63,31 @@ Two 4D methods are called by the page:
 Here is the code for galleryInit:
 
 ```4d
- C_TEXT($vDestinationFolder)
-
+ var $vDestinationFolder : Text
  ARRAY TEXT(aFileNames;0)
-
- C_LONGINT($i)
-
+ var $i : Integer
  $vDestinationFolder:=Get 4D folder(HTML Root folder)+"photos"+Folder separator //"WebFolder/photos" folder
-
  DOCUMENT LIST($vDestinationFolder;aFileNames)
 ```
 
 Here is the code for GetFile:
 
 ```4d
- C_TEXT($vPartName;$vPartMimeType;$vPartFileName;$vDestinationFolder)
-
- C_BLOB($vPartContentBlob)
-
- C_LONGINT($i)
-
+ var $vPartName;$vPartMimeType;$vPartFileName;$vDestinationFolder : Text
+ var $vPartContentBlob : Blob
+ var $i : Integer
  $vDestinationFolder:=Get 4D folder(HTML Root folder)+"photos"+Folder separator
-
  For($i;1;WEB Get body part count) //for each part
-
     WEB GET BODY PART($i;$vPartContentBlob;$vPartName;$vPartMimeType;$vPartFileName)
-
     If($vPartFileName#"")
-
        BLOB TO DOCUMENT($vDestinationFolder+$vPartFileName;$vPartContentBlob)
-
     End if
-
  End for
-
  WEB SEND HTTP REDIRECT("/") // return to page
 ```
 
 #### See also 
+
 [WEB Get body part count](web-get-body-part-count.md)  
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB GET VARIABLES](web-get-variables.md)  

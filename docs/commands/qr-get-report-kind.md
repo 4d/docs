@@ -30,4 +30,5 @@ You can also compare the function result with the constants of the [QR Report Ty
 If you pass an invalid *area* number, the error -9850 will be generated.
 
 #### See also 
+
 [QR SET REPORT KIND](qr-set-report-kind.md)  

@@ -40,11 +40,11 @@ In the *value* parameter, you can pass one of the following constants:
 
 Display of values:
 
-![](../assets/en/Commands/pict1216069.en.png)
+![](../assets/en/commands/pict1216069.en.png)
 
 Display of expressions:
 
-![](../assets/en/Commands/pict1216065.en.png)
+![](../assets/en/commands/pict1216065.en.png)
 
 #### Example 
 
@@ -52,17 +52,13 @@ The following code lets you switch the display mode of the area:
 
 ```4d
  ST GET OPTIONS(*;"StyledText_t";ST Expressions display mode;$exprValue)
-
  If($exprValue=1)
-
     ST SET OPTIONS(*;"StyledText_t";ST Expressions display mode;ST Values)
-
  Else
-
     ST SET OPTIONS(*;"StyledText_t";ST Expressions display mode;ST References)
-
  End if
 ```
 
 #### See also 
+
 [ST GET OPTIONS](st-get-options.md)  

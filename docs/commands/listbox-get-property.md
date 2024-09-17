@@ -94,6 +94,7 @@ Given a list box "MyListbox", if you execute the following statement:
 **LISTBOX Get property** returns -1 because the lk column resizable property applies to columns and a list box was passed as parameter.
 
 #### See also 
+
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [LISTBOX SET PROPERTY](listbox-set-property.md)  
 [OBJECT SET SCROLLBAR](object-set-scrollbar.md)  

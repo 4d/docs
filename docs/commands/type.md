@@ -66,82 +66,45 @@ You can apply the Type function to fields, interprocess variables, process varia
 The following project method empties some or all of the fields for the current record of the table whose a pointer is passed as parameter. It does this without deleting or changing the current record:
 
 ```4d
-  ` EMPTY RECORD Project Method
-
-  ` EMPTY RECORD ( Pointer {; Long } )
-
-  ` EMPTY RECORD ( -> [Table] { ; Type Flags } )
+  // EMPTY RECORD Project Method
+  // EMPTY RECORD ( Pointer {; Long } )
+  // EMPTY RECORD ( -> [Table] { ; Type Flags } )
  
-
- C_POINTER($1)
-
- C_LONGINT($2;$vlTypeFlags)
+ var $1 : Pointer
+ var $2;$vlTypeFlags : Integer
  
-
  If(Count parameters>=2)
-
     $vlTypeFlags:=$2
-
  Else
-
     $vlTypeFlags:=0xFFFFFFFF
-
  End if
-
  For($vlField;1;Get last field number($1))
-
     $vpField:=Field(Table($1);$vlField)
-
     $vlFieldType:=Type($vpField->)
-
     If($vlTypeFlags ??$vlFieldType )
-
        Case of
-
           :(($vlFieldType=Is alpha field)|($vlFieldType=Is text))
-
              $vpField->:=""
-
           :(($vlFieldType=Is real)|($vlFieldType=Is integer)|($vlFieldType=Is longint))
-
              $vpField->:=0
-
           :($vlFieldType=Is date)
-
              $vpField->:=!00/00/00!
-
           :($vlFieldType=Is time)
-
              $vpField->:=?00:00:00?
-
           :($vlFieldType=Is Boolean)
-
              $vpField->:=False
-
           :($vlFieldType=Is picture)
-
-             C_PICTURE($vgEmptyPicture)
-
+             var $vgEmptyPicture : Picture
              $vpField->:=$vgEmptyPicture
-
           :($vlFieldType=Is subtable)
-
              Repeat
-
                 ALL SUBRECORDS($vpField->)
-
                 DELETE SUBRECORD($vpField->)
-
              Until(Records in subselection($vpField->)=0)
-
           :($vlFieldType=Is BLOB)
-
              SET BLOB SIZE($vpField->;0)
-
        End case
-
     End if
-
  End for
 ```
 
@@ -149,18 +112,13 @@ The following project method empties some or all of the fields for the current r
 After this project method is implemented in your database, you can write:
 
 ```4d
-  ` Empty the whole current record of the table [Things To Do]
-
+  // Empty the whole current record of the table [Things To Do]
  EMPTY RECORD(->[Things To Do])
  
-
-  ` Empty Text, BLOB and Picture fields for the current record of the table [Things To Do]
-
+  // Empty Text, BLOB and Picture fields for the current record of the table [Things To Do]
  EMPTY RECORD(->[Things To Do];0?+Is text?+Is BLOB?+Is picture)
  
-
-  ` Empty the whole current record of the table [Things To Do] except Alphanumeric fields
-
+  // Empty the whole current record of the table [Things To Do] except Alphanumeric fields
  EMPTY RECORD(->[Things To Do];-1?-Is alpha field)
 ```
 
@@ -169,18 +127,12 @@ After this project method is implemented in your database, you can write:
 In certain cases, for example when writing generic code, you may need to find out whether an array is a standard independent array or the “row” of a 2D array. In this case, you can use the following code:
 
 ```4d
- ptrmyArr:=->myArr{6} ` Is myArr{6} the row of a 2D array?
-
+ ptrmyArr:=->myArr{6} // Is myArr{6} the row of a 2D array?
  RESOLVE POINTER(ptrmyArr;varName;tableNum;fieldNum)
-
  If(varName#"")
-
     $ptr:=Get pointer(varName)
-
     $thetype:=Type($ptr->)
-
-  ` If myArr{6} is the row of a 2D array, $thetype equals 13
-
+  // If myArr{6} is the row of a 2D array, $thetype equals 13
  End if
 ```
 
@@ -189,6 +141,7 @@ In certain cases, for example when writing generic code, you may need to find ou
 See example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) command.
 
 #### See also 
+
 [Is a variable](is-a-variable.md)  
 [Undefined](undefined.md)  
 [Value type](value-type.md)  

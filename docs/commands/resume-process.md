@@ -21,5 +21,6 @@ If *process* has been delayed before, see the [PAUSE PROCESS](pause-process.md) 
 **Note:** You cannot use this command to assign a stored procedure on the server machine from a client machine (*process*<0).
 
 #### See also 
+
 [DELAY PROCESS](delay-process.md)  
 [PAUSE PROCESS](pause-process.md)  

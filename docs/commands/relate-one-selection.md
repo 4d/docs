@@ -29,17 +29,11 @@ Here is one way of creating a selection in the *\[Customers\]* table, given a se
 
 ```4d
  CREATE EMPTY SET([Customers];"Payment Due")
-
  QUERY([Invoices];[Invoices]DueDate=Current date)
-
  While(Not(End selection([Invoices])))
-
     RELATE ONE([Invoices]CustID)
-
     ADD TO SET([Customers];"Payment Due")
-
     NEXT RECORD([Invoices])
-
  End while
 ```
 
@@ -47,7 +41,6 @@ The following technique uses **RELATE ONE SELECTION** to accomplish the same res
 
 ```4d
  QUERY([Invoices];[Invoices]DueDate=Current date)
-
  RELATE ONE SELECTION([Invoices];[Customers])
 ```
 
@@ -58,6 +51,7 @@ The following technique uses **RELATE ONE SELECTION** to accomplish the same res
 ```
 
 #### See also 
+
 [QUERY](query.md)  
 [RELATE MANY SELECTION](relate-many-selection.md)  
 [RELATE ONE](relate-one.md)  

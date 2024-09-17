@@ -25,19 +25,18 @@ Pass a *value* variable of the Text type if you want to retrieve data having a s
 
 Let's look at the following piece of XML code:
 
+```XML
 <RootElement>
    <Child>MyText<![CDATA[MyCData]]</Child>
 </RootElement>
+```
 
 The following 4D code will return “MyCData” in *vTextData*: 
 
 ```4d
- C_BLOB(vData)
-
- C_TEXT(vTextData)
-
+ var vData : Blob
+ var vTextData : Text
  SAX GET XML CDATA(DocRef;vData)
-
  vTextData:=BLOB to text(vData;UTF8 C string)
 ```
 
@@ -46,5 +45,6 @@ The following 4D code will return “MyCData” in *vTextData*:
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated.
 
 #### See also 
+
 [SAX ADD XML CDATA](sax-add-xml-cdata.md)  
 [SAX Get XML node](sax-get-xml-node.md)  

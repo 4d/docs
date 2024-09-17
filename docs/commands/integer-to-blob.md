@@ -48,9 +48,7 @@ After executing this code:
 
 ```4d
  SET BLOB SIZE(vxBlob;100)
-
  vlOffset:=50
-
  INTEGER TO BLOB(518;vxBlob;Macintosh byte ordering;vlOffset)
 ```
 
@@ -76,7 +74,6 @@ After executing this code:
 
 ```4d
  SET BLOB SIZE(vxBlob;100)
-
  INTEGER TO BLOB(0x0206;vxBlob;PC byte ordering;*)
 ```
 
@@ -108,6 +105,7 @@ After executing this code:
 * On all platforms *vxBLOB{0}* \= *$02* and *vxBLOB{1}* \= *$06*
 
 #### See also 
+
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
 [BLOB to real](blob-to-real.md)  

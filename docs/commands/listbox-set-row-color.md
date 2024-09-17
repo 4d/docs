@@ -48,20 +48,17 @@ In an array type list box, we want to set colors for a row and for one cell in t
 
 ```4d
   // Definition of font color for cell
-
  LISTBOX SET ROW COLOR(*;"Col5";3;"yellow")
  
-
   // Definition of background and font color for row 3
-
  LISTBOX SET ROW COLOR(*;"ListBox";3;"red";lk background color)
-
  LISTBOX SET ROW COLOR(*;"ListBox";3;"blue")
 ```
 
-![](../assets/en/Commands/pict1205393.fr.png)
+![](../assets/en/commands/pict1205393.fr.png)
 
 #### See also 
+
 [List Box](../../4D/20-R6/List-Box.302-6958504.en.html)  
 [LISTBOX Get row color](listbox-get-row-color.md)  
 [LISTBOX Get row color as number](listbox-get-row-color-as-number.md)  

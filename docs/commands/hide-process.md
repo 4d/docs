@@ -31,5 +31,6 @@ The following example hides all the windows belonging to the current process:
 ```
 
 #### See also 
+
 [Process state](process-state.md)  
 [SHOW PROCESS](show-process.md)  

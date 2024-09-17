@@ -62,13 +62,9 @@ The following example shows a typical case where you launch one or more backgrou
 
 ```4d
  Use(Storage)
-
     Storage.global:=New shared object("ExitNow";False)
-
  End use
-
  $p:=New process("Serverjob";0;"Background job#1")
-
  $p1:=New process("Check_Invoices";0;"Background job#2")
 ```
 
@@ -76,15 +72,10 @@ The following example shows a typical case where you launch one or more backgrou
 
 ```4d
   // do regular background jobs on the server
-
  While(Not(Bool(Storage.global.ExitNow)))
-
   // run accounting jobs, calculate data, etc
-
   // ...
-
     DELAY PROCESS(Current process;60*60) //sleep for one minute, then repeat loop
-
  End while
 ```
 
@@ -92,37 +83,24 @@ The following example shows a typical case where you launch one or more backgrou
 
 ```4d
  Use(Storage.global)
-
     Storage.global.ExitNow:=True //ask all background workers to quit
-
  End use
  
-
  $time:=Current time
-
  $finished:=False
-
  While((($time+10)>(Current time+0))&(Not($finished)))&NBSP; // max 10 seconds
-
     $list:=Get process activity(Processes only) // get list of all processes
-
     $sublist:=$list.processes.query("name='Background job@' and state >=0") //is there still a background job running?
-
     $finished:=($sublist.length=0)
-
     If($sublist.length>0)
-
        For each($job;$sublist)
-
           RESUME PROCESS($job.number) //make sure all processes are awake
-
        End for each
-
     End if
-
  End while
 ```
 
 #### See also 
+
 [On Startup database method](on-startup-database-method.md)  
 [QUIT 4D](quit-4d.md)  

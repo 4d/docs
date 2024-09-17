@@ -31,4 +31,5 @@ Pass the height to set in the *height* parameter. By default, if you omit the *u
 **Note:** For more information about the calculation of row heights, refer to the *Design Reference* manual.
 
 #### See also 
+
 [LISTBOX Get footers height](listbox-get-footers-height.md)  

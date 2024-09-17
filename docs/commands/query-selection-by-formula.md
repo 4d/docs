@@ -25,6 +25,7 @@ displayed_sidebar: docs
 For more information, see the description of the [QUERY BY FORMULA](query-by-formula.md) command.
 
 #### See also 
+
 [QUERY](query.md)  
 [QUERY BY FORMULA](query-by-formula.md)  
 [QUERY SELECTION](query-selection.md)  

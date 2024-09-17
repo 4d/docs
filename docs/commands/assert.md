@@ -29,11 +29,8 @@ Before carrying out operations on a record, the developer wants to make sure tha
 
 ```4d
  READ WRITE([Table 1])
-
  LOAD RECORD([Table 1])
-
  ASSERT(Not(Locked([Table 1])))
-
   // triggers error -10518 if record is locked
 ```
 
@@ -43,19 +40,15 @@ An assertion can allow parameters passed to a project method to be tested in ord
 
 ```4d
   // Method that returns the number of a client according to its name passed in $1
-
- C_TEXT($1) // Name of client
-
+ var $1 : Text // Name of client
  ASSERT($1#"";"Search for a blank client name")
-
   // A blank name in this case is an aberrant value
-
   // If the assertion is false, the following will be displayed in the error dialog box:
-
   // "Assert failed: Search for a blank client name"
 ```
 
 #### See also 
+
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  

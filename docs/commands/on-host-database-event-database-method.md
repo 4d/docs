@@ -37,34 +37,19 @@ Example of typical structure of an On Host Database Event database method:
 
 ```4d
   // On Host Database Event database method
-
- C_LONGINT($1)
-
+ var $1 : Integer
  Case of
-
     :($1=On before host database startup)
-
   // put code here that you want to execute before the "On Startup" database method
-
   // of the host database
-
     :($1=On after host database startup)
-
   // put code here that you want to execute after the "On Startup"
-
   // database method of the host database
-
     :($1=On before host database exit)
-
   // put code here that you want to execute before the "On Exit"
-
   // database method of the host database
-
     :($1=On after host database exit)
-
   // put code here that you want to execute after the "On Exit"
-
   // database method of the host database
-
  End case
 ```

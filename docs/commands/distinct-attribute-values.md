@@ -34,29 +34,20 @@ You can use the "length" virtual property with this command. It is automatically
 
 Your database contains a \[Customer\]full\_Data object field with 15 records:
 
-![](../assets/en/Commands/pict2994114.en.png)
+![](../assets/en/commands/pict2994114.en.png)
 
 If you execute this code:
 
 ```4d
  ARRAY LONGINT(aLAges;0)
-
  ARRAY LONGINT(aLAgesChild;0)
-
  ARRAY LONGINT(aLChildNum;0)
-
  ALL RECORDS([Customer])
-
   //get the distinct values for the "age" attribute
-
  DISTINCT ATTRIBUTE VALUES([Customer]full_Data;"age";aLAges)
-
   //get the distinct values for the "age" attribute within the "Children" array
-
  DISTINCT ATTRIBUTE VALUES([Customer]full_Data;"Children[].age";aLAgesChild)
-
   //get the distinct numbers of children by using the length virtual property
-
  DISTINCT ATTRIBUTE VALUES([Customer]full_Data;"Children.length";aLChildNum)
 ```
 
@@ -98,5 +89,6 @@ The *aLChildNum* array receives the following elements:
 | 3           | 3         |
 
 #### See also 
+
   
 [DISTINCT ATTRIBUTE PATHS](distinct-attribute-paths.md)  

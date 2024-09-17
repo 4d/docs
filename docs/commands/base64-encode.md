@@ -32,6 +32,7 @@ If you omit the *encoded* parameter, the command directly modifies the *toEncode
 By default if the *\** parameter is omitted, the command uses a Base64 encoding. If you pass the *\** parameter, the command uses a Base64URL encoding.
 
 #### See also 
+
 [BASE64 DECODE](base64-decode.md)  
 [Generate digest](generate-digest.md)  
 [Overview of XML DOM Commands](../../4D/20-R6/Overview-of-XML-DOM-Commands.300-6957756.en.html)  

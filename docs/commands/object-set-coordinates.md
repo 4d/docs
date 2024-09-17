@@ -48,9 +48,10 @@ The following statement places the "button\_1" object at the (10,20) (30,40) coo
  OBJECT SET COORDINATES(*;"button_1";10;20;30;40)
 ```
 
-![](../assets/en/Commands/pict1207497.fr.png)
+![](../assets/en/commands/pict1207497.fr.png)
 
 #### See also 
+
 [CONVERT COORDINATES](convert-coordinates.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT MOVE](object-move.md)  

@@ -42,11 +42,9 @@ Note that in this mode, the evaluation does not handle variations in the way wor
 The following example illustrates the use of **Replace string**. The results, described in the comments, are assigned to the variable *vtResult*.
 
 ```4d
- vtResult:=Replace string("Willow";" ll";"d") ` Result gets "Widow"
-
- vtResult:=Replace string("Shout";"o";"") ` Result gets "Shut"
-
- vtResult:=Replace string(vtOtherVar;Char(Tab);",";*) ` Replaces all tabs in vtOtherVar with commas
+ vtResult:=Replace string("Willow";" ll";"d") // Result gets "Widow"
+ vtResult:=Replace string("Shout";"o";"") // Result gets "Shut"
+ vtResult:=Replace string(vtOtherVar;Char(Tab);",";*) // Replaces all tabs in vtOtherVar with commas
 ```
 
 #### Example 2 
@@ -62,12 +60,12 @@ The following example eliminates CRs and TABs from the text in *vtResult*:
 The following example illustrates the use of the \* parameter in the case of a diacritical evaluation:
 
 ```4d
- vtResult:=Replace string("Crème brûlée";"Brulee";"caramel") `Result gets "Crème caramel"
-
- vtResult:=Replace string("Crème brûlée";"Brulee";"caramel";*) `Result gets "Crème brûlée"
+ vtResult:=Replace string("Crème brûlée";"Brulee";"caramel") //Result gets "Crème caramel"
+ vtResult:=Replace string("Crème brûlée";"Brulee";"caramel";*) //Result gets "Crème brûlée"
 ```
 
 #### See also 
+
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Insert string](insert-string.md)  

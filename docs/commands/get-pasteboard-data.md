@@ -28,29 +28,18 @@ In *dataType*, pass a value specifying the type of data to be retrieved. You can
 The following object methods for two buttons copy from and paste data to the array *asOptions* (pop-up menu, drop-down list,...) located in a form:
 
 ```4d
-  ` bCopyasOptions object method
-
- If(Size of array(asOptions)>0) ` Is there something to copy?
-
-    VARIABLE TO BLOB(asOptions;$vxClipData) ` Accumulate the array elements in a BLOB
-
-    CLEAR PASTEBOARD ` Empty the pasteboard
-
-    APPEND DATA TO PASTEBOARD("artx";$vxClipData) ` Note the data type arbitrarily chosen
-
+  // bCopyasOptions object method
+ If(Size of array(asOptions)>0) // Is there something to copy?
+    VARIABLE TO BLOB(asOptions;$vxClipData) // Accumulate the array elements in a BLOB
+    CLEAR PASTEBOARD // Empty the pasteboard
+    APPEND DATA TO PASTEBOARD("artx";$vxClipData) // Note the data type arbitrarily chosen
  End if
  
-
   // bPasteasOptions object method
-
- If(Pasteboard data size("artx")>0) ` Is there some "artx" data in the pasteboard?
-
-    GET PASTEBOARD DATA("artx";$vxClipData) ` Extract the data from the pasteboard
-
-    BLOB TO VARIABLE($vxClipData;asOptions) ` Populate the array with the BLOB data
-
-    asOptions:=0 ` Reset the selected element for the array
-
+ If(Pasteboard data size("artx")>0) // Is there some "artx" data in the pasteboard?
+    GET PASTEBOARD DATA("artx";$vxClipData) // Extract the data from the pasteboard
+    BLOB TO VARIABLE($vxClipData;asOptions) // Populate the array with the BLOB data
+    asOptions:=0 // Reset the selected element for the array
  End if
 ```
 
@@ -59,6 +48,7 @@ The following object methods for two buttons copy from and paste data to the arr
 If the data is correctly extracted, OK is set to 1; otherwise OK is set to 0 and an error is generated.
 
 #### See also 
+
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  

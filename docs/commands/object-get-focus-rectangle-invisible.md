@@ -25,4 +25,5 @@ If you pass the optional *\** parameter, this indicates that the *object* parame
 The command returns **True** when the focus rectangle is hidden and **False** when it is shown.
 
 #### See also 
+
 [OBJECT SET FOCUS RECTANGLE INVISIBLE](object-set-focus-rectangle-invisible.md)  

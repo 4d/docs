@@ -46,14 +46,7 @@ http://[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 For example, you can pass the following strings:  
 
 ```RAW
-    http://www.myserver.com
-    http://www.myserver.com/path
-    http://www.myserver.com/path?name="jones"
-    https://www.myserver.com/login (*)
-    http://123.45.67.89:8083
-    http://john:smith@123.45.67.89:8083
-    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]
-    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]:8080/index.html (**)
+    http://www.myserver.com    http://www.myserver.com/path    http://www.myserver.com/path?name="jones"    https://www.myserver.com/login (*)    http://123.45.67.89:8083    http://john:smith@123.45.67.89:8083    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]:8080/index.html (**)
 ```
 
 *(\*)* During HTTPS requests, authority of the certificate is not checked.   
@@ -94,10 +87,8 @@ If you are unable to connect to the server for a reason related to the network (
 Requesting for a record deletion from a remote database:
 
 ```4d
- C_TEXT($response)
-
+ var $response : Text
  $body_t:="{record_id:25}"
-
  $httpStatus_l:=HTTP Request(HTTP DELETE method;"database.example.com";$body_t;$response)
 ```
 
@@ -108,10 +99,8 @@ Requesting for a record deletion from a remote database:
 Requesting to add a record to a remote database:
 
 ```4d
- C_TEXT($response)
-
+ var $response : Text
  $body_t:="{fName:'john',fName:'Doe'}"
-
  $httpStatus_l:=HTTP Request(HTTP PUT method;"database.example.com";$body_t;$response)
 ```
 
@@ -122,12 +111,11 @@ Requesting to add a record to a remote database:
 Request to add a record in JSON to a remote database::
 
 ```4d
- C_OBJECT($content)
-
+ var $content : Object
  OB SET($content;"lastname";"Doe";"firstname";"John")
-
  $result:=HTTP Request(HTTP PUT method;"database.example.com";$content;$response)
 ```
 
 #### See also 
+
 [HTTP Get](http-get.md)  

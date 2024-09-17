@@ -62,6 +62,7 @@ Setting several attribute/value pairs:
 ```
 
 #### See also 
+
 [Design Object Access](../../4D/20-R6/Design-Object-Access.302-6958460.en.html)  
 [METHOD Get attribute](method-get-attribute.md)  
 [METHOD SET ATTRIBUTES](method-set-attributes.md)  

@@ -61,7 +61,6 @@ The following example indexes the field *\[Customers\]ID*:
 
 ```4d
  UNLOAD RECORD([Customers])
-
  SET INDEX([Customers]ID;True)
 ```
 
@@ -82,6 +81,7 @@ Creation of a keywords index:
 ```
 
 #### See also 
+
 [CREATE INDEX](create-index.md)  
 [DELETE INDEX](delete-index.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  

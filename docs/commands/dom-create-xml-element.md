@@ -57,26 +57,15 @@ The command returns the XML reference of the element created as a result.
 We want to create the following element: 
 
 ```RAW
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<RootElement>
-   <Elem1>
-      <Elem2>
-         <Elem3> </Elem3>
-         <Elem3> </Elem3>
-      </Elem2>
-   </Elem1>
-</RootElement>
+                                      
 ```
 
 To do so, simply write:
 
 ```4d
- C_TEXT(vRootRef;vElemRef)
-
+ var vRootRef;vElemRef : Text
  vRootRef:=DOM Create XML Ref("RootElement")
-
  vxPath:="/RootElement/Elem1/Elem2/Elem3[2]"
-
  vElemRef:=DOM Create XML element(vRootRef;vxPath)
 ```
 
@@ -85,90 +74,63 @@ To do so, simply write:
 We want to create the following element (containing attributes): 
 
 ```RAW
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<RootElement>
-   <Elem1>
-      <Elem2>
-         <Elem3 Font=Verdana Size=10> </Elem3>
-         <Elem3 Font=Verdana Size=8> </Elem3>
-      </Elem2>
-   </Elem1>
-</RootElement>
+                                      
 ```
 
 To do so, simply write:
 
 ```4d
- C_TEXT(vRootRef;vElemRef)
+ var vRootRef;vElemRef : Text
+ var $aAttrName1;$aAttrName2;$aAttrVal1;$aAttrVal2;$aAttrVal3 : Text
 
- C_TEXT($aAttrName1;$aAttrName2;$aAttrVal1;$aAttrVal2;$aAttrVal3)</p><p>$aAttrName1:="Font"
-
+$aAttrName1:="Font"
  $aAttrName2:="Size"
-
  $aAttrVal1:="Verdana"
-
  $aAttrVal2:="10"
-
  $aAttrVal3:="8"
  
-
  vRootRef:=DOM Create XML Ref("RootElement")
-
  vxPath:="/RootElement/Elem1/Elem2/Elem3"
-
  vElemRef:=DOM Create XML element(vRootRef;vxPath;$aAttrName1;$aAttrVal1;$aAttrName2;$aAttrVal2)
-
  vElemRef:=DOM Create XML element(vRootRef;vxPath;$aAttrName1;$aAttrVal1;$aAttrName2;$aAttrVal3)
+
+
 ```
 
 If you want to insert an element afterwards, you can write:
 
 ```4d
  vxPath:="/RootElement/Elem1/Elem2/Elem3[2]"
-
  vElemRef:=DOM Create XML element(vRootRef;vxPath;"Font";"Arial")
 ```
 
 You have then:
 
 ```RAW
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<RootElement>
-   <Elem1>
-      <Elem2>
-         <Elem3 Font=Verdana Size=10> </Elem3>
-         <Elem3 Font=Arial> </Elem3>
-         <Elem3 Font=Verdana Size=8> </Elem3>
-      </Elem2>
-   </Elem1>
-</RootElement>
+                                                
 ```
 
 #### Example 3 
 
 We want to create and export the following structure: 
 
+```XML
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <Root>
    <Elem1>Hello</Elem1>
 </Root>
+```
 
 We want to use the syntax based on a simple item name. To do this, simply write:
 
 ```4d
- C_TEXT($root)
-
- C_TEXT($ref1)
+ var $root : Text
+ var $ref1 : Text
  
-
  $root:=DOM Create XML Ref("Root")
-
  $ref1:=DOM Create XML element($root;"Elem1")
-
  DOM SET XML ELEMENT VALUE($ref1;"Hello")
-
  DOM EXPORT TO FILE($root;"mydoc.xml")
-
  DOM CLOSE XML($root)
 ```
 
@@ -184,6 +146,7 @@ An error is generated when:
 * The name of the element to create is invalid (for example, if it starts with a number).
 
 #### See also 
+
 [DOM Create XML element arrays](dom-create-xml-element-arrays.md)  
 [DOM Get XML element](dom-get-xml-element.md)  
 [DOM REMOVE XML ELEMENT](dom-remove-xml-element.md)  

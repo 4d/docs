@@ -27,10 +27,10 @@ If the Web page is completely loaded, the value returned by the function is the 
 The page displayed is the URL "www.apple.com" and the "www.4d.com" page is in the process of being loaded:
 
 ```4d
- $url:=WA Get current URL(MyWArea) `returns "http://www.apple.com"
-
-  `The associated URL variable contains "http://www.4d.com"
+ $url:=WA Get current URL(MyWArea) //returns "http://www.apple.com"
+  //The associated URL variable contains "http://www.4d.com"
 ```
 
 #### See also 
+
 [WA OPEN URL](wa-open-url.md)  

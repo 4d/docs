@@ -27,20 +27,16 @@ Note that the *property* parameter is case sensitive.
 We want to put the null value in the "age" property for Lea:
 
 ```4d
- C_OBJECT($ref)
-
+ var $ref : Object
  OB SET($ref;"name";"Lea";"age";4)
-
   // $ref = {"name":"Lea","age":4}
-
  ...
-
  OB SET NULL($ref ;"age")
-
   // $ref = {"name":"Lea","age":null}
 ```
 
 #### See also 
+
 [Null](null.md)  
 [OB GET PROPERTY NAMES](ob-get-property-names.md)  
 [OB SET](ob-set.md)  

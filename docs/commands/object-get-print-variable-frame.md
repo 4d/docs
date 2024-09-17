@@ -35,4 +35,5 @@ If the *object* is a subform and if variable frame printing is disabled (**False
 | Print Frame fixed with truncation       | Longint | 1     | 4D prints only the records that fit into the area of the subform. The form is printed only once and those records that are not printed are ignored. |
 
 #### See also 
+
 [OBJECT SET PRINT VARIABLE FRAME](object-set-print-variable-frame.md)  

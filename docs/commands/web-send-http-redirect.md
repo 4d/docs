@@ -31,7 +31,7 @@ Note that the status of the request sent by this command is **302: Moved Tempora
 
 You can use this command to execute custom requests in 4D by using static pages. Imagine that you have placed the following elements in a static HTML page:
 
-![](../assets/en/Commands/pict38648.en.png)
+![](../assets/en/commands/pict38648.en.png)
 
 **Note:** The POST action “/4dcgi/rech” has been associated to the text area and to the **OK** and **Cancel** buttons.
 
@@ -39,32 +39,18 @@ In the [QR SET DESTINATION](qr-set-destination.md), you insert the following cod
 
 ```4d
  Case of
-
     :($1="/4dcgi/rech") //When 4D receives this URL
-
   //If the OK button has been used and the ‘name’ field contains a Value
-
        If((bOK="OK") & (name#""))
-
   //Change the URL to execute the request code,
-
   //placed farther down in the same method
-
           WEB SEND HTTP REDIRECT("/4dcgi/rech?"+name)
-
        Else
-
   //Else return to the beginning page
-
           WEB SEND HTTP REDIRECT("/page1.htm")
-
        End if
-
        ...
-
     :($1="/4dcgi/rech?@") //If the URL has been redirected
-
        ... //Put the request code here
-
  End case
 ```

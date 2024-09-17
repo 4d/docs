@@ -32,8 +32,6 @@ You want to check that the Web server is running:
 
 ```4d
  If(WEB Is server running)
-
     ... //do appropriate actions
-
  End if
 ```

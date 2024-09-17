@@ -40,18 +40,12 @@ The order in which the options are called is not important. If the same *option*
 Inserting a customized header in the SOAP request: 
 
 ```4d
-  ` Creating an XML reference
-
- C_TEXT(vRootRef;vElemRef)
-
+  // Creating an XML reference
+ var vRootRef;vElemRef : Text
  vRootRef:=DOM Create XML Ref("RootElement")
-
  vxPath:="/RootElement/Elem1/Elem2/Elem3"
-
  vElemRef:=DOM Create XML element(vRootRef;vxPath)
-
-  `Modifying SOAP header with reference
-
+  //Modifying SOAP header with reference
  WEB SERVICE SET OPTION(Web Service SOAP header;vElemRef)
 ```
 
@@ -64,4 +58,5 @@ Using version 1.2 of the SOAP protocol:
 ```
 
 #### See also 
+
 [WEB SERVICE CALL](web-service-call.md)  

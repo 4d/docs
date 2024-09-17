@@ -34,31 +34,22 @@ If *toDecode* contains an invalid base64 contents, an empty text or blob value i
 This example lets you transfer a picture via a BLOB:
 
 ```4d
- C_BLOB($sourceBlob)
-
- C_PICTURE($mypicture)
-
+ var $sourceBlob : Blob
+ var $mypicture : Picture
  $mypicture:=[people]photo
-
  PICTURE TO BLOB($mypicture;$sourceBlob;".JPG")
-
- C_TEXT($base64Text)
-
+ var $base64Text : Text
  BASE64 ENCODE($sourceBlob;$base64Text) //Encoding of text
-
   // the binary is now available as character strings in $base64Text
  
-
- C_TEXT($base64Text)
-
- C_BLOB($targetBlob)
-
+ var $base64Text : Text
+ var $targetBlob : Blob
  BASE64 DECODE($base64Text;$targetBlob) //Decoding of text
-
   // the binary encoded in base 64 is now available as a BLOB in $blobTarget
 ```
 
 #### See also 
+
 [BASE64 ENCODE](base64-encode.md)  
 [Generate digest](generate-digest.md)  
 [Overview of XML DOM Commands](../../4D/20-R6/Overview-of-XML-DOM-Commands.300-6957756.en.html)  

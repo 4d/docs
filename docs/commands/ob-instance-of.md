@@ -26,39 +26,29 @@ You created the Polygon class:
 
 ```4d
   //Class: Polygon
-
  Class constructor
-
- C_LONGINT($1;$2)
-
+ var $1;$2 : Integer
  This.area:=$1*$2
 ```
 
 Then, in a method, you can write:
 
 ```4d
- C_OBJECT($poly)
-
- C_BOOLEAN($instance)
+ var $poly : Object
+ var $instance : Boolean
  
-
  $poly:=cs.Polygon.new(4;3)
  
-
  $instance:=OB Instance of($poly;cs.Polygon)
-
   // true
  
-
  $instance:=OB Instance of($poly;4D.Object)
-
   // true 
  
-
  $instance:=OB Instance of($poly;cs.Circle)
-
   // false
 ```
 
 #### See also 
+
 [OB Class](ob-class.md)  

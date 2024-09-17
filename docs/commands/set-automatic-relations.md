@@ -36,6 +36,7 @@ The following example makes all manual Many-to-One relations automatic and rever
 ```
 
 #### See also 
+
 [About Relations](../../4D/20-R6/About-Relations.300-6958024.en.html)  
 [GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  

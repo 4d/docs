@@ -22,15 +22,11 @@ displayed_sidebar: docs
 The following example illustrates the use of **Year of**. The results are assigned to the variable *vResult*.
 
 ```4d
- vResult:=Year of(!12/25/92!) ` vResult gets 1992
-
- vResult:=Year of(!12/25/1992!) ` vResult gets 1992
-
- vResult:=Year of(!12/25/1892!) ` vResult gets 1892
-
- vResult:=Year of(!12/25/2092!) ` vResult gets 2092
-
- vResult:=Year of(Current date) ` vResult gets year of current date
+ vResult:=Year of(!12/25/92!) // vResult gets 1992
+ vResult:=Year of(!12/25/1992!) // vResult gets 1992
+ vResult:=Year of(!12/25/1892!) // vResult gets 1892
+ vResult:=Year of(!12/25/2092!) // vResult gets 2092
+ vResult:=Year of(Current date) // vResult gets year of current date
 ```
 
 #### Example 2 
@@ -38,5 +34,6 @@ The following example illustrates the use of **Year of**. The results are assign
 See example for the command [Current date](current-date.md).
 
 #### See also 
+
 [Day of](day-of.md)  
 [Month of](month-of.md)  

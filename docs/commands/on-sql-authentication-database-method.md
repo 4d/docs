@@ -39,11 +39,8 @@ You must declare these parameters as follows:
 ```4d
   //On SQL Authentication database method
  
-
- C_TEXT($1;$2;$3)
-
- C_BOOLEAN($0)
-
+ var $1;$2;$3 : Text
+ var $0 : Boolean
   //Code for method
 ```
 
@@ -60,45 +57,25 @@ The use of the [CHANGE CURRENT USER](change-current-user.md) command can be used
 This example of the **On SQL Authentication database method** checks whether the connection request comes from the internal network, validates the identifiers and then assigns access rights to the "sql\_user" user for the SQL session.
 
 ```4d
- C_TEXT($1;$2;$3)
-
- C_BOOLEAN($0)
-
+ var $1;$2;$3 : Text
+ var $0 : Boolean
   //$1: user
-
   //$2: password
-
   //{$3: IP address of client}
-
  ON ERR CALL("SQL_error")
-
  If(checkInternalIP($3))
-
   //The checkInternalIP method checks whether the IP address is internal
-
     If($1="victor") & ($2="hugo")
-
        CHANGE CURRENT USER("sql_user";"")
-
        If(OK=1)
-
           $0:=True
-
        Else
-
           $0:=False
-
        End if
-
     Else
-
        $0:=False
-
     End if
-
  Else
-
     $0:=False
-
  End if
 ```

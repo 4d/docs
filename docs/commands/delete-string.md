@@ -34,14 +34,13 @@ If *where* plus *numChars* is equal to or greater than the length of *source*, t
 The following example illustrates the use of Delete string. The results are assigned to the variable *vtResult*.
 
 ```4d
- vtResult:=Delete string("Lamborghini";6;6) ` vtResult gets "Lambo"
-
- vtResult:=Delete string("Indentation";6;2) ` vtResult gets "Indention"
-
- vtResult:=Delete string(vtOtherVar;3;32000) ` vtResult gets the first two characters of vtOtherVar
+ vtResult:=Delete string("Lamborghini";6;6) // vtResult gets "Lambo"
+ vtResult:=Delete string("Indentation";6;2) // vtResult gets "Indention"
+ vtResult:=Delete string(vtOtherVar;3;32000) // vtResult gets the first two characters of vtOtherVar
 ```
 
 #### See also 
+
 [Change string](change-string.md)  
 [Insert string](insert-string.md)  
 [Replace string](replace-string.md)  

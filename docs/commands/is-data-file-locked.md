@@ -24,10 +24,7 @@ This method will prevent the opening of the database if the data file is locked:
 
 ```4d
  If(Is data file locked)
-
     ALERT("The data file is locked. Impossible to open database.")
-
     QUIT 4D
-
  End if
 ```

@@ -23,6 +23,7 @@ This command was useful to “return” a record that had been pushed and popped
 **Warning:** Keep in mind that a record number can be reused if the record is deleted and another record is created (see [About Record Numbers](/4Dv20R6/4D/20-R6/About-Record-Numbers.300-6958029.en.html)). 
 
 #### See also 
+
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
 [Named Selections](../../4D/20-R6/Named-Selections.300-6958817.en.html)  
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  

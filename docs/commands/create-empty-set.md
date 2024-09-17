@@ -24,5 +24,6 @@ displayed_sidebar: docs
 Please refer to the examples of the [Sets](/4Dv20R6/4D/20-R6/Sets.300-6959005.en.html) section.
 
 #### See also 
+
 [CLEAR SET](clear-set.md)  
 [CREATE SET](create-set.md)  

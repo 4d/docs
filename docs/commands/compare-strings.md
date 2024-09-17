@@ -54,21 +54,14 @@ You want to compare the following strings:
 
 ```4d
  $string1:="alpha Bravo charlie Delta Echo Fox-Trot"
-
  $string2:="Alpha Bravo Charlie Delta Echo Fox-Trot"
  
-
   //compare the strings using the character code
-
  $result:=Compare strings($string1;$string2;sk char codes)
-
   // $result = 1
  
-
   //compare the strings using the character code but ignoring any capitalization
-
  $result:=Compare strings($string1;$string2;sk char codes+sk case insensitive)
-
   // $result = 0
 ```
 
@@ -78,35 +71,24 @@ The following examples illustrate the specific impact of options in **Japanese d
 
 ```4d
   //default is kana insensitive
-
  $result:=Compare strings("イロハ";"いろは") // equal
-
  $result:=Compare strings("イロハ";"いろは";sk strict) // not equal
-
  $result:=Compare strings("イロハ";"いろは";sk kana insensitive) // equal
 ```
 
 ```4d
   //default is case insensitive
-
  $result:=Compare strings("さつき";"さっき") // equal
-
  $result:=Compare strings("さつき";"さっき";sk strict) // not equal
-
  $result:=Compare strings("さつき";"さっき";sk case insensitive) // equal
 ```
 
 ```4d
   //default is diacritic sensitive when the data language is set to Japanese (different to all other languages)
-
  $result:=Compare strings("ete";"été") // equal in non-Japanese data language
-
  $result:=Compare strings("ete";"été") // not equal in Japanese data language
-
  $result:=Compare strings("うがい";"うかい") // not equal
-
  $result:=Compare strings("うがい";"うかい";sk strict) // not equal
-
  $result:=Compare strings("うがい";"うかい";sk diacritic insensitive) // equal
 ```
 
@@ -114,13 +96,11 @@ The following examples illustrate the specific impact of options in **Japanese d
 
 ```4d
  $result:=Compare strings("いすず";"いすゞ") // equal if setting is disabled
-
  $result:=Compare strings("いすず";"いすゞ") // not equal if setting is enabled
-
  $result:=Compare strings("ラーメン";"ﾗｰﾒﾝ") // equal if setting is enabled
-
  $result:=Compare strings("ラーメン";&NBSP;"ﾗｰﾒﾝ") // not equal if setting is disabled
 ```
 
 #### See also 
+
 [Position](position.md)  

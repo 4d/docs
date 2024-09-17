@@ -48,62 +48,40 @@ The code and information content entering order does not matter, however the two
 
 A “Certificate request” form contains the six fields necessary for a standard certificate request. The **Generate** button creates a document on disk containing the certificate request. The “Privatekey.txt” document containing the private key (generated with the [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) command) should be on the disk:
 
-![](../assets/en/Commands/pict32461.en.png)  
+![](../assets/en/commands/pict32461.en.png)  
   
 Here is the **Generate** button method:
 
 ```4d
-  ` bGenerate Object Method
+  // bGenerate Object Method
  
-
- C_BLOB($vbprivateKey;$vbcertifRequest)
-
- C_LONGINT($tableNum)
-
+ var $vbprivateKey;$vbcertifRequest : Blob
+ var $tableNum : Integer
  ARRAY LONGINT($tLCodes;6)
-
  ARRAY STRING(80;$tSInfos;6)
  
-
  $tableNum:=Table(Current form table)
-
  For($i;1;6)
-
     $tSInfos{$i}:=Field($tableNum;$i)->
-
     $tLCodes{$i}:=$i+12
-
  End for
-
  If(Find in array($tSInfos;"")#-1)
-
     ALERT("All fields should be filled.")
-
  Else
-
     ALERT("Select your private key.")
-
     $vhDocRef:=Open document("")
-
     If(OK=1)
-
        CLOSE DOCUMENT($vhDocRef)
-
        DOCUMENT TO BLOB(Document;$vbprivateKey)
-
        GENERATE CERTIFICATE REQUEST($vbPrivateKey;$vbcertifRequest;$tLCodes;$tSInfos)
-
        BLOB TO DOCUMENT("Request.txt";$vbcertifRequest)
-
     Else
-
        ALERT("Invalid private key.")
-
     End if
-
  End if
 ```
 
 #### See also 
+
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  

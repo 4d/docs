@@ -54,28 +54,7 @@ Cases of non-critical errors are:
 When one of these anomalies occurs in auto-repair mode, the record concerned is automatically "repaired" and the related operation is logged in the *errObject* parameter. After execution is completed, the *errObject* parameter lists all the repaired records. It contains a single object array named "operations" built as follows:
 
 ```RAW
-{"operations":
-    [
-        {
-            "operationType":24,
-            "operationName":"Create record",
-            "operationNumber":2,
-            "contextID":48,
-            "timeStamp":"2015-07-10T07:53:02.413Z",
-            "dataLen":24,
-            "recordNumber":0,
-            "tableID":"F4CXXXXX",
-            "tableName":"Customers",
-            "fields": {
-                "1": 9,
-                "2": "test value",
-                "3": "2003-03-03T00:00:00.000Z",
-                "4": "BlobPath: Table 1/Field 4/Data_9ACB28F1A2744FDFA5822B22F18B2E12.png",
-                "8": "BlobID: 2"
-              }
-        },
-        {...} 
-    ]
+{"operations":    [        {            "operationType":24,            "operationName":"Create record",            "operationNumber":2,            "contextID":48,            "timeStamp":"2015-07-10T07:53:02.413Z",            "dataLen":24,            "recordNumber":0,            "tableID":"F4CXXXXX",            "tableName":"Customers",            "fields": {                "1": 9,                "2": "test value",                "3": "2003-03-03T00:00:00.000Z",                "4": "BlobPath: Table 1/Field 4/Data_9ACB28F1A2744FDFA5822B22F18B2E12.png",                "8": "BlobID: 2"              }        },        {...}     ]
 ```
 
 **Warning:** The auto-repair mode must be used in specific cases since it bypasses 4D's internal data integrity checking features. It can be used, for example, when an intermediary log file has been lost or corrupted and you want to recover as many operations as possible. In any case, you need to pay particular attention to data integrity when using this mode.
@@ -107,11 +86,8 @@ You want to integrate a log file on the mirror server in auto-repair mode:
 
 ```4d
   //to be executed on the server
-
- C_OBJECT($err)
-
- C_LONGINT($num) //-2 to integrate all operations
-
+ var $err : Object
+ var $num : Integer //-2 to integrate all operations
  INTEGRATE MIRROR LOG FILE("c:\\mirror\\logNew.journal";$num;Auto repair mode;$err)
 ```
 
@@ -120,6 +96,7 @@ You want to integrate a log file on the mirror server in auto-repair mode:
 If the integration is carried out correctly, the system variable OK is set to 1; otherwise, it is set to 0\. 
 
 #### See also 
+
   
 [\_o\_INTEGRATE LOG FILE](../../4D/20-R6/o-INTEGRATE-LOG-FILE.301-6957654.en.html)  
 [LOG FILE TO JSON](log-file-to-json.md)  

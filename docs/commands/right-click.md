@@ -19,5 +19,6 @@ displayed_sidebar: docs
 This command should be used only in the context of the On Clicked form event. It is therefore necessary to verify in Design mode that the event has been properly selected in the Form properties and/or in the specific object.
 
 #### See also 
+
 [Contextual click](contextual-click.md)  
 [Form event code](form-event-code.md)  

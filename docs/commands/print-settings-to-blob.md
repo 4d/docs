@@ -36,27 +36,19 @@ When used in an heterogeneous environment, in order to restore the maximum setti
 You want to store the current print settings to disk:
 
 ```4d
- C_BLOB(curSettings)
-
+ var curSettings : Blob
  PRINT SETTINGS //displays print settings dialog to the user
-
  If(OK=1)
-
     $err:=Print settings to BLOB(curSettings)
-
     If($err=1)
-
        BLOB TO DOCUMENT(Get 4D folder+"current4Dsettings.blob";curSettings)
-
     Else
-
        ALERT("No selected printer")
-
     End if
-
  End if
 ```
 
 #### See also 
+
   
 [BLOB to print settings](blob-to-print-settings.md)  

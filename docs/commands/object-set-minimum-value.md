@@ -27,5 +27,6 @@ Passing the optional *\** parameter indicates that the *object* parameter is an 
 In *minValue*, pass the new minimum value you want to assign to the object for the current process. This value must correspond to the object type, otherwise error 18 "Field types are incompatible" is returned. 
 
 #### See also 
+
 [OBJECT GET MINIMUM VALUE](object-get-minimum-value.md)  
 [OBJECT SET MAXIMUM VALUE](object-set-maximum-value.md)  

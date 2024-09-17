@@ -134,11 +134,8 @@ Checking of records from tables 3 and 7 only:
 
 ```4d
  ARRAY LONGINT($arrTableNums;2)
-
  $arrTableNums{1}:=3
-
  $arrTableNums{2}:=7
-
  VERIFY DATA FILE($StructName;$DataName;Verify records;0;"FollowScan";$arrTableNums)
 ```
 
@@ -147,20 +144,13 @@ Checking of records from tables 3 and 7 only:
 Checking of specific indexes (index of field 1 of table 4 and index of fields 2 and 3 of table 5):
 
 ```4d
- ARRAY LONGINT($arrTableNums;0) `not used but mandatory
-
- ARRAY LONGINT($arrIndex;2;0) `2 rows (columns added later)
-
- $arrIndex{1}{0}:=4 ` table number in element 0
-
- APPEND TO ARRAY($arrIndex{1};1) `number of 1st field to be checked
-
- $arrIndex{2}{0}:=5 ` table number in element 0
-
- APPEND TO ARRAY($arrIndex{2};2) ` number of 1st field to be checked
-
- APPEND TO ARRAY($arrIndex{2};3) ` number of 2nd field to be checked
-
+ ARRAY LONGINT($arrTableNums;0) //not used but mandatory
+ ARRAY LONGINT($arrIndex;2;0) //2 rows (columns added later)
+ $arrIndex{1}{0}:=4 // table number in element 0
+ APPEND TO ARRAY($arrIndex{1};1) //number of 1st field to be checked
+ $arrIndex{2}{0}:=5 // table number in element 0
+ APPEND TO ARRAY($arrIndex{2};2) // number of 1st field to be checked
+ APPEND TO ARRAY($arrIndex{2};3) // number of 2nd field to be checked
  VERIFY DATA FILE($StructName;$DataName;Verify indexes;0;"FollowScan";$arrTableNums;$arrIndex)
 ```
 
@@ -170,7 +160,6 @@ Verify the data file, create and display the log file:
 
 ```4d
  VERIFY DATA FILE(Structure file;Data file;Verify all;0;"")
-
  SHOW ON DISK(File(Verification log file).platformPath)
 ```
 
@@ -179,4 +168,5 @@ Verify the data file, create and display the log file:
 If the callback method does not exist, the verification is not carried out, an error is generated and the system variable OK is set to 0\. If a log file was generated, its complete pathname is returned in the Document system variable. 
 
 #### See also 
+
 [VERIFY CURRENT DATA FILE](verify-current-data-file.md)  

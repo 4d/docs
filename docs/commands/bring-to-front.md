@@ -26,13 +26,12 @@ The following example is a method that can be executed from a menu. It checks to
 
 ```4d
  If(Frontmost process#◊vlAddCust_PID)
-
     BRING TO FRONT(◊vlAddCust_PID)
-
  End if
 ```
 
 #### See also 
+
 [HIDE PROCESS](hide-process.md)  
 [Process state](process-state.md)  
 [SHOW PROCESS](show-process.md)  

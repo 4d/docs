@@ -31,17 +31,13 @@ You want to stop the selected process of the processes collection displayed in a
 ```4d
   //variable =curItemPosition
  
-
   // Retrieve the list of process on the server and display in the list box
-
  $activity:=Get process activity(Processes only).processes
-
  ...
-
   // The selected process is stopped on the server
-
  ABORT PROCESS BY ID($activity[curItemPosition].ID)
 ```
 
 #### See also 
+
 [PAUSE PROCESS](pause-process.md)  

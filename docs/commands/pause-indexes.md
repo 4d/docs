@@ -37,12 +37,11 @@ Example of method for importing large amounts of data:
 
 ```4d
  PAUSE INDEXES([Articles])
-
  IMPORT DATA("HugeImport.txt") //Importing
-
  RESUME INDEXES([Articles])
 ```
 
 #### See also 
+
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  

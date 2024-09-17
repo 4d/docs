@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 The **CHECK LOG FILE** command displays the dialog box for viewing the current log file of the database (which can also be accessed via the Maintenance Security Center window):
 
-![](../assets/en/Commands/pict4835044.en.png)
+![](../assets/en/commands/pict4835044.en.png)
 
 This dialog box includes the **Rollback** button that can be used to cancel operations carried out on the data of the database. For more information about this dialog box, please refer to the Design Reference manual of 4D.
 
@@ -32,5 +32,6 @@ This command can only be used in the context of single-user applications. More p
 You can intercept these errors using an error-handling method installed with the [ON ERR CALL](on-err-call.md) command.
 
 #### See also 
+
 [Backup Manager Errors (1401 -> 1421)](../../4D/20-R6/Backup-Manager-Errors-1401-1421.300-6958287.en.html)  
 [RESTORE](restore.md)  

@@ -21,4 +21,5 @@ displayed_sidebar: docs
 This command returns an empty string if the contents of the current page is not available.
 
 #### See also 
+
 [WA SET PAGE CONTENT](wa-set-page-content.md)  

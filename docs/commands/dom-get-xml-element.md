@@ -29,5 +29,6 @@ The value of the element is also returned in the *elementValue* parameter.
 If the command has been correctly executed, the system variable OK is set to 1\. If an error occurs, it is set to 0.
 
 #### See also 
+
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  

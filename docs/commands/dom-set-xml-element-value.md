@@ -48,9 +48,11 @@ To comply with XML processing rules, all CR and CRLF end-of-line characters are 
 
 In the following XML source: 
 
+```XML
 <Book>
    <Title>The Best Seller</Title>
 </Book>
+```
 
 If the following code is executed, with *vElemRef* containing the reference to the “Title” element:
 
@@ -60,49 +62,56 @@ If the following code is executed, with *vElemRef* containing the reference to t
 
 We get:
 
+```XML
 <Book>
    <Title>The Loser</Title>
 </Book>
+```
 
 #### Example 2 
 
 In the following XML source: 
 
+```XML
 <Maths>
    <Postulate>1+2=3</Postulate>
 </Maths>
+```
 
 We want to write the text “12<18” in the *<Postulate>* element. This string cannot be written as is in XML because the “<” character is not accepted. This character must therefore be changed into “<” or the CDATA form must be used. If *vElemRef* indicates the XML *<Postulate>* node:
 
 ```4d
-  ` Normal form
-
+  // Normal form
  DOM SET XML ELEMENT VALUE(vElemRef;"12<18")
 ```
 
 We get:
 
+```XML
 <Maths>
    <Postulate>12 < 18</Postulate>
 </Maths>
+```
   
   
 ```4d
-  ` CDATA form
-
+  // CDATA form
  DOM SET XML ELEMENT VALUE(vElemRef;"12<18";*)
 ```
 
 We get:
 
+```XML
 <Maths>
    <Postulate><![CDATA[12 < 18]]></Postulate>
 </Maths>
+```
 
 #### System variables and sets 
 
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated (for example, if the element reference is invalid).
 
 #### See also 
+
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  

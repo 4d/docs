@@ -38,5 +38,6 @@ By default, for security reasons, if you omit the *deleteOption* parameter, **DE
 You can intercept these errors using a method installed by the [ON ERR CALL](on-err-call.md) command.
 
 #### See also 
+
   
 [DELETE DOCUMENT](delete-document.md)  

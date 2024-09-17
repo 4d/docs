@@ -50,7 +50,6 @@ Definition of the Ctrl+Shift+U (Windows) and Cmd+Shift+U (Mac OS) shortcut for t
 
 ```4d
  SET MENU ITEM(menuRef;1;"Underline")
-
  SET MENU ITEM SHORTCUT(menuRef;1;"U";Shift key mask)
 ```
 
@@ -60,7 +59,6 @@ Definition of the Ctrl+R (Windows) and Cmd+R (Mac OS) shortcut for the "Restart"
 
 ```4d
  INSERT MENU ITEM(FileMenu;-1;"Restart")
-
  SET MENU ITEM SHORTCUT(FileMenu;-1;"R";Command key mask)
 ```
 
@@ -70,10 +68,10 @@ Definition of the F4 shortcut for the "Close" menu item:
 
 ```4d
  INSERT MENU ITEM(FileMenu;-1;"Close")
-
  SET MENU ITEM SHORTCUT(FileMenu;-1;"[F4]";0)
 ```
 
 #### See also 
+
 [Get menu item key](get-menu-item-key.md)  
 [Get menu item modifiers](get-menu-item-modifiers.md)  

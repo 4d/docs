@@ -21,6 +21,7 @@ displayed_sidebar: docs
 See example for the [Shift down](shift-down.md) command.
 
 #### See also 
+
 [Macintosh command down](macintosh-command-down.md)  
 [Macintosh control down](macintosh-control-down.md)  
 [Macintosh option down](macintosh-option-down.md)  

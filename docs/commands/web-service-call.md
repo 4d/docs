@@ -85,15 +85,11 @@ It is up to you to format the initial BLOB as a valid XML element. As its first 
 **Example**  
 
 ```4d
- C_BLOB($1)
-
- C_BOOLEAN($0)
+ var $1 : Blob
+ var $0 : Boolean
  
-
  WEB SERVICE SET PARAMETER("MyXMLBlob";$1)
-
  WEB SERVICE CALL("http://my.domain.com/my_service";"MySoapAction";"TheMethod";"http://my.namespace.com/";Web Service manual in)
-
  WEB SERVICE GET RESULT($0;"MyOutputVar";*)
 ```
 
@@ -104,15 +100,11 @@ In this case, the *complexType* parameter contains the Web Service manual out co
 **Example**  
 
 ```4d
- C_BLOB($0)
-
- C_BOOLEAN($1)
+ var $0 : Blob
+ var $1 : Boolean
  
-
  WEB SERVICE SET PARAMETER("MyInputVar";$1)
-
  WEB SERVICE CALL("http://my.domain.com/my_service";"MySoapAction";"TheMethod";"http://my.namespace.com/";Web Service manual out)
-
  WEB SERVICE GET RESULT($0;"MyXMLOutput";*)
 ```
 
@@ -123,15 +115,11 @@ In this case, the *complexType* parameter contains the Web Service manual consta
 **Example**  
 
 ```4d
- C_BLOB($0)
-
- C_BLOB($1)
+ var $0 : Blob
+ var $1 : Blob
  
-
  WEB SERVICE SET PARAMETER("MyXMLInputBlob";$1)
-
  WEB SERVICE CALL("http://my.domain.com/my_service";"MySoapAction";"TheMethod";"http://my.namespace.com/";Web Service manual)
-
  WEB SERVICE GET RESULT($0;"MyXMLOutput";*)
 ```
 
@@ -144,15 +132,11 @@ The only difference between these two configurations lies at the level of the XM
 **Example**  
 
 ```4d
- C_BLOB($0)
-
- C_BLOB($1)
+ var $0 : Blob
+ var $1 : Blob
  
-
  WEB SERVICE SET PARAMETER("MyXMLInput";$1)
-
  WEB SERVICE CALL("http://my.domain.com/my_service";"MySoapAction";"TheMethod";"http://my.namespace.com/";Web Service manual)
-
  WEB SERVICE GET RESULT($0;"MyXMLOutput";*)
 ```
 
@@ -174,5 +158,6 @@ The *\** parameter can be used to optimize calls. When it is passed, the command
 If the request has been correctly routed and the Web Service has accepted it, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is returned.
 
 #### See also 
+
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  

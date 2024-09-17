@@ -45,16 +45,11 @@ Do not forget to eventually call [CLOSE DOCUMENT](close-document.md) for the doc
 The following example creates and opens a new document called Note, writes the string “Hello” into it, and closes the document:
 
 ```4d
- C_TIME(vhDoc)
-
- vhDoc:=Create document("Note.txt") ` Create new document called Note
-
+ var vhDoc : Time
+ vhDoc:=Create document("Note.txt") // Create new document called Note
  If(OK=1)
-
-    SEND PACKET(vhDoc;"Hello") ` Write one word in the document
-
-    CLOSE DOCUMENT(vhDoc) ` Close the document
-
+    SEND PACKET(vhDoc;"Hello") // Write one word in the document
+    CLOSE DOCUMENT(vhDoc) // Close the document
  End if
 ```
 
@@ -63,11 +58,9 @@ The following example creates and opens a new document called Note, writes the s
 The following example creates documents with non-standard extensions under Windows:
 
 ```4d
- $vtMyDoc:=Create document("Doc.ext1.ext2") `Several extensions
-
- $vtMyDoc:=Create document("Doc.shtml") `Long extension
-
- $vtMyDoc:=Create document("Doc.") `No extension (the period "." is mandatory)
+ $vtMyDoc:=Create document("Doc.ext1.ext2") //Several extensions
+ $vtMyDoc:=Create document("Doc.shtml") //Long extension
+ $vtMyDoc:=Create document("Doc.") //No extension (the period "." is mandatory)
 ```
 
 #### System variables and sets 
@@ -75,5 +68,6 @@ The following example creates documents with non-standard extensions under Windo
 If the document has been created correctly, the system variable OK is set to 1 and the system variable Document contains the full pathname and the name of *document*. 
 
 #### See also 
+
 [Append document](append-document.md)  
 [Open document](open-document.md)  

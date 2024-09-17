@@ -30,4 +30,5 @@ Pass the preference whose value you want to get in the *selector* parameter. You
 In the *value* parameter, pass a variable that will receive the current value of the preference. The *value* variable is always a Boolean: it contains **True** if the preference is active and **False** otherwise.
 
 #### See also 
+
 [WA SET PREFERENCE](wa-set-preference.md)  

@@ -33,4 +33,5 @@ The type and content of the *info1* and *info2* parameters depend on the value o
 **Note:** This command does not take manual database restores into account.
 
 #### See also 
+
 [RESTORE](restore.md)  

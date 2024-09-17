@@ -35,12 +35,9 @@ This example exports data to a text document. The method first sets the output f
 
 ```4d
  FORM SET OUTPUT([People];"Export")
-
- FldDelimit:=27 ` Set field delimiter to Escape character
-
- RecDelimit:=10 ` Set record delimiter to Line Feed character
-
- EXPORT TEXT([People];"NewPeople.txt") ` Export to the "NewPeople.txt" document
+ FldDelimit:=27 // Set field delimiter to Escape character
+ RecDelimit:=10 // Set record delimiter to Line Feed character
+ EXPORT TEXT([People];"NewPeople.txt") // Export to the "NewPeople.txt" document
 ```
 
 #### System variables and sets 
@@ -48,6 +45,7 @@ This example exports data to a text document. The method first sets the output f
 OK is set to 1 if the export is successfully completed; otherwise, it is set to 0.
 
 #### See also 
+
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  
 [IMPORT TEXT](import-text.md)  

@@ -41,11 +41,11 @@ Loading of the "fr-classic" dictionary found in the Hunspell folder:
 
 ```4d
  SPELL SET CURRENT DICTIONARY("fr-classic")
-
   // SPELL SET CURRENT DICTIONARY ("FR-classic.dic") is valid
 ```
 
 #### See also 
+
 [SPELL CHECKING](spell-checking.md)  
 [SPELL Get current dictionary](spell-get-current-dictionary.md)  
 [SPELL GET DICTIONARY LIST](spell-get-dictionary-list.md)  

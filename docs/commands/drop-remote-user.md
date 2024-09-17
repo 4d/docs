@@ -26,23 +26,17 @@ You want to drop a specific remote user:
 
 ```4d
   // Method to be executed on server
-
- C_COLLECTION($userCol)
-
- C_OBJECT($element)
+ var $userCol : Collection
+ var $element : Object
  
-
   //disconnect the remote user Vanessa Talbot
-
  $userCol:=Get process activity(Sessions only).sessions.query("systemUserName = :1";"Vanessa")
-
  For each($element;$userCol)
-
     DROP REMOTE USER($element.ID)
-
  End for each
 ```
 
 #### See also 
+
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
 [SEND MESSAGE TO REMOTE USER](send-message-to-remote-user.md)  

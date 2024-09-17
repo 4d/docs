@@ -34,7 +34,6 @@ When you are through with a large process or interprocess BLOB, it is good idea 
 
 ```4d
  SET BLOB SIZE(aProcessBLOB;0)
-
  SET BLOB SIZE(◊anInterprocessBLOB;0)
 ```
 
@@ -43,10 +42,10 @@ When you are through with a large process or interprocess BLOB, it is good idea 
 The following example creates a BLOB of 16K filled of 0xFF:
 
 ```4d
- C_BLOB(vxData)
-
+ var vxData : Blob
  SET BLOB SIZE(vxData;16*1024;0xFF)
 ```
 
 #### See also 
+
 [BLOB size](blob-size.md)  

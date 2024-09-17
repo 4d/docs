@@ -27,38 +27,24 @@ This project method can be used to address the same serial port (without protoco
 
 ```4d
  ARRAY TEXT($arrPortNames;0)
-
  ARRAY LONGINT($arrPortNums;0)
-
- C_LONGINT($vPortNum;$vFinalPortNum)
+ var $vPortNum;$vFinalPortNum : Integer
  
-
-  `Find out the current numbers of the serial ports
-
+  //Find out the current numbers of the serial ports
  GET SERIAL PORT MAPPING($arrPortNums;$arrPortNames)
-
  $vPortNum:=Find in array($arrPortNames;vPortName)
-
-  ` vPortName contains the name of the port to be used; it may come from a dialog box,
-
-  ` a value stored in a field, etc.
-
+  // vPortName contains the name of the port to be used; it may come from a dialog box,
+  // a value stored in a field, etc.
  If(arrPortNums{$vPortNum}=0)
-
-    $vFinalPortNum:=0 `special case under Mac OS X
-
+    $vFinalPortNum:=0 //special case under Mac OS X
  Else
-
     $vFinalPortNum:=arrPortNums{$vPortNum}+100
-
  End if
-
- SET CHANNEL($vFinalPortNum;params) `params contains the communication parameters
-
- ... `Carry out the desired operations
-
- SET CHANNEL(11) `Closing of port
+ SET CHANNEL($vFinalPortNum;params) //params contains the communication parameters
+ ... //Carry out the desired operations
+ SET CHANNEL(11) //Closing of port
 ```
 
 #### See also 
+
 [SET CHANNEL](set-channel.md)  

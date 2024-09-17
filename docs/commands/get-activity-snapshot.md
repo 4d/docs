@@ -39,37 +39,7 @@ The **GET ACTIVITY SNAPSHOT** command accepts two syntaxes:
 With this syntax, all the operations are returned in a structured form in the 4D object array (*arrActivities*). Each element of the array is an object built as follows:
 
 ```RAW
-[
-    {
-        "message":"xxx",
-        "maxValue":12321,
-        "currentValue":63212,
-        "interruptible:0,
-        "remote":0,
-        "uuid":"deadbeef",
-        "taskId":xxx,
-        "startTime":"2014-03-20 13:37:00:123",
-        "duration":92132,
-        "dbContextInfo":{
-            "task_id": xxx,
-            "user_name": Jean,
-            "host_name": HAL,
-            "task_name": "CreateIndexLocal",
-            "client_uid": "DE4DB33F33F"
-            "user4d_id ": 1,
-            "client_version ": 123456
-        },
-        "dbOperationDetails":{
-            table: "myTable"
-            field: "Field_1"
-        },
-        "subOperations":[
-            {"message":"xxx",
-            ...}
-            ]
-    },
-    {...}
-]
+[    {        "message":"xxx",        "maxValue":12321,        "currentValue":63212,        "interruptible:0,        "remote":0,        "uuid":"deadbeef",        "taskId":xxx,        "startTime":"2014-03-20 13:37:00:123",        "duration":92132,        "dbContextInfo":{            "task_id": xxx,            "user_name": Jean,            "host_name": HAL,            "task_name": "CreateIndexLocal",            "client_uid": "DE4DB33F33F"            "user4d_id ": 1,            "client_version ": 123456        },        "dbOperationDetails":{            table: "myTable"            field: "Field_1"        },        "subOperations":[            {"message":"xxx",            ...}            ]    },    {...}]
 ```
 
 Here is a description of each property returned:
@@ -119,27 +89,18 @@ This method, executed in a separate process on 4D or 4D Server, provides a snaps
 
 ```4d
  ARRAY TEXT(arrUUID;0)
-
  ARRAY TEXT(arrStart;0)
-
  ARRAY LONGINT(arrDuration;0)
-
  ARRAY TEXT(arrInfo;0)
  
-
  Repeat
-
     GET ACTIVITY SNAPSHOT(arrUUID;arrStart;arrDuration;arrInfo)
-
     If(Size of array(arrUUID)>0)
-
        TRACE // calling of debugger
-
     End if
-
  Until(False) // Infinite loop
 ```
 
 You get arrays such as:
 
-![](../assets/en/Commands/pict1213741.en.png)
+![](../assets/en/commands/pict1213741.en.png)

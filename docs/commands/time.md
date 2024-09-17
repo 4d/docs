@@ -38,15 +38,13 @@ You can express any numerical value as a time:
 
 ```4d
  vTime:=Time(10000)
-
   //vTime is 02:46:40
-
  vTime2:=Time((60*60)+(20*60)+5200)
-
   //vTime2 is 02:46:40
 ```
 
 #### See also 
+
 [ARRAY TIME](array-time.md)  
 [Bool](bool.md)  
 [String](string.md)  

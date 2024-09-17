@@ -27,4 +27,5 @@ Passing the optional *\** parameter indicates that the *object* parameter is an 
 The command returns **True** if the context menu is enabled for the object and **False** otherwise. 
 
 #### See also 
+
 [OBJECT SET CONTEXT MENU](object-set-context-menu.md)  

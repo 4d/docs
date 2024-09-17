@@ -30,14 +30,13 @@ If *where* is greater than the length of *source*, then *what* is appended to *s
 The following example illustrates the use of **Insert string**. The results are assigned to the variable *vtResult*.
 
 ```4d
- vtResult:=Insert string("The tree";" green";4) ` vtResult gets "The green tree"
-
- vtResult:=Insert string("Shut";"o";3) ` vtResult gets "Shout"
-
- vtResult:=Insert string("Indention";"ta";6) ` vtResult gets "Indentation"
+ vtResult:=Insert string("The tree";" green";4) // vtResult gets "The green tree"
+ vtResult:=Insert string("Shut";"o";3) // vtResult gets "Shout"
+ vtResult:=Insert string("Indention";"ta";6) // vtResult gets "Indentation"
 ```
 
 #### See also 
+
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Replace string](replace-string.md)  

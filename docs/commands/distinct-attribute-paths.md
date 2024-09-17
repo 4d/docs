@@ -32,15 +32,13 @@ After the call, the size of *pathArray* is equal to the number of distinct paths
 
 Your database contains a \[Customer\]full\_Data (indexed) object field with 15 records:
 
-![](../assets/en/Commands/pict2994114.en.png)
+![](../assets/en/commands/pict2994114.en.png)
 
 If you execute this code:
 
 ```4d
  ARRAY TEXT(aTPaths;0)
-
  ALL RECORDS([Customer])
-
  DISTINCT ATTRIBUTE PATHS([Customer]full_Data;aTPaths)
 ```
 
@@ -65,5 +63,6 @@ The *aTPaths* array receives the following elements:
 **Note:** "length" is a *virtual property* that is automatically available for all array type attributes. It provides the size of the array, i.e. the number of elements, and can be used in queries. For more information, please refer to the [Using the .length virtual property](/4Dv20R6/4D/20-R6/DISTINCT-ATTRIBUTE-VALUES.301-6958314.en.html#2998555) paragraph. 
 
 #### See also 
+
   
 [DISTINCT ATTRIBUTE VALUES](distinct-attribute-values.md)  

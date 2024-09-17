@@ -41,17 +41,14 @@ The following code allows setting only useful relations as automatic in the Quic
 
 ```4d
  SET AUTOMATIC RELATIONS(False;False) //Reset of the relations
-
   //Only the following relations will be used
-
  SET FIELD RELATION([Invoices]Cust_IDt;Automatic;Automatic)
-
  SET FIELD RELATION([Invoice_Row]Invoice_ID;Automatic;Automatic)
-
  QR REPORT([Invoices];Char(1))
 ```
 
 #### See also 
+
 [GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
 [GET FIELD RELATION](get-field-relation.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  

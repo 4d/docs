@@ -29,11 +29,9 @@ Remember that a set is a representation of a selection of records at the moment 
 The following example uses LOAD SET to load a set of the Acme locations in New York:
 
 ```4d
- LOAD SET([Companies];"NY Acme";"NYAcmeSt") ` Load the set into memory
-
- USE SET("NY Acme") ` Change current selection to NY Acme
-
- CLEAR SET("NY Acme") ` Clear the set from memory
+ LOAD SET([Companies];"NY Acme";"NYAcmeSt") // Load the set into memory
+ USE SET("NY Acme") // Change current selection to NY Acme
+ CLEAR SET("NY Acme") // Clear the set from memory
 ```
 
 #### System variables and sets 
@@ -41,4 +39,5 @@ The following example uses LOAD SET to load a set of the Acme locations in New Y
 If the user clicks Cancel in the Open File dialog box, or there is an error during the load operation, the OK system variable is set to 0\. Otherwise, it is set to 1.
 
 #### See also 
+
 [SAVE SET](save-set.md)  

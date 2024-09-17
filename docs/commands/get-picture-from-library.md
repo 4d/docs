@@ -48,6 +48,7 @@ If the Picture Library exists, the OK variable is set to 1\. Otherwise, OK is se
 If there is not enough memory to return the picture, an error -108 is generated. You can catch this error using an error-handling method.
 
 #### See also 
+
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  

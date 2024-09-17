@@ -42,7 +42,6 @@ could not be written as:
 
 ```4d
  DEFAULT TABLE([My Table])
-
  My Field:="A string" //WRONG
 ```
 
@@ -56,11 +55,8 @@ The following example first shows code without the DEFAULT TABLE command. It the
 
 ```4d
  FORM SET INPUT([Customers];"Add Recs")
-
  Repeat
-
     ADD RECORD([Customers])
-
  Until(OK=0)
 ```
 
@@ -68,16 +64,13 @@ Specifying the default table results in this code:
 
 ```4d
  DEFAULT TABLE([Customers])
-
  FORM SET INPUT("Add Recs")
-
  Repeat
-
     ADD RECORD
-
  Until(OK=0)
 ```
 
 #### See also 
+
 [Current default table](current-default-table.md)  
 [NO DEFAULT TABLE](no-default-table.md)  

@@ -34,16 +34,14 @@ Since this command modifies the database structure, it cannot be used in the con
 This example illustrates both syntaxes of the command: 
 
 ```4d
-  `Deletion of all indexes related to the LastName field
-
+  //Deletion of all indexes related to the LastName field
  DELETE INDEX(->[Customers]LastName)
-
-  `Deletion of index named “CityZip”
-
+  //Deletion of index named “CityZip”
  DELETE INDEX("CityZip")
 ```
 
 #### See also 
+
 [CREATE INDEX](create-index.md)  
 [PAUSE INDEXES](pause-indexes.md)  
 [SET INDEX](set-index.md)  

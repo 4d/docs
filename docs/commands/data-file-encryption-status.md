@@ -50,28 +50,20 @@ The returned object contains the following properties:
 You want to know the encryption status of a data file that corresponds to the current structure file:
 
 ```4d
- C_OBJECT($status)
+ var $status : Object
  
-
  $status:=Data file encryption status(Structure file;"D:\\Invoices\\Data_2019\\Invoices.4dd")
-
  Case of
-
     :(Not($status.isEncrypted))
-
        ALERT("The data file is not encrypted")
-
     :($status.isEncrypted&(Not($status.keyProvided))
-
        ALERT("The data file is encrypted and the encryption key is not in the keychain. You will not have access to encrypted data.")
-
     :($status.isEncrypted&$status.keyProvided)
-
        ALERT("The data file is encrypted and the encryption key is in the keychain. You will have access to encrypted data.")
-
  End case
 ```
 
 #### See also 
+
 [4D Blog - New 4D commands to work with encrypted data](https://blog.4d.com/new-4d-commands-to-work-with-encrypted-data/)  
 [Encrypt data file](encrypt-data-file.md)  

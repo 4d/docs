@@ -32,23 +32,17 @@ The line:
 
 ```4d
  CONFIRM("WARNING: You will not be able to revert this operation.")
-
  If(OK=1)
-
     ALL RECORDS([Old Stuff])
-
     DELETE SELECTION([Old Stuff])
-
  Else
-
     ALERT("Operation canceled.")
-
  End if
 ```
 
 will display the confirm dialog box (on Windows) shown here:
 
-![](../assets/en/Commands/pict4225029.en.png)
+![](../assets/en/commands/pict4225029.en.png)
 
 #### Example 2 
 
@@ -60,27 +54,23 @@ The line:
 
 will display the confirm dialog box (on Windows) shown here:
 
-![](../assets/en/Commands/pict4225038.en.png)
+![](../assets/en/commands/pict4225038.en.png)
 
 #### Example 3 
 
 You are writing a 4D application for the international market. You wrote your interface strings along with their target language translations in XLIFF files. In doing so, the code:
 
 ```4d
- C_TEXT($title;$yes;$no)
-
+ var $title;$yes;$no : Text
  $title:=Get localized string("add_Memo")
-
  $yes:=Get localized string("yes")
-
  $no:=Get localized string("no")
-
  CONFIRM($title;$yes;$no)
 ```
 
 could display the French confirm dialog box (on Windows) shown here:
 
-![](../assets/en/Commands/pict4225048.en.png)
+![](../assets/en/commands/pict4225048.en.png)
 
 **Note:** For more information on xliff database localization, please refer to the [Appendix B: XLIFF architecture](/4Dv20R6/4D/20-R6/Appendix-B-XLIFF-architecture.300-7003281.en.html) section. 
 
@@ -90,14 +80,14 @@ The line:
 
 ```4d
  CONFIRM("WARNING: If your pursue this operation, some records will be "+"irremediably affected."+\
-
  Char(13)+"What do you want to do?";"Do NOT continue";"Continue")
 ```
 
 will display the confirm dialog box (on Windows) shown here:
 
-![](../assets/en/Commands/pict4225058.en.png)
+![](../assets/en/commands/pict4225058.en.png)
 
 #### See also 
+
 [ALERT](alert.md)  
 [Request](request.md)  

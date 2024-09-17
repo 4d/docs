@@ -30,11 +30,11 @@ The second form, RELATE MANY(oneField), establishes the One-to-Many relation for
 
 In the following example, three tables are related with automatic relations. Both the \[People\] table and the \[Parts\] table have a Many-to-One relation to the \[Companies\] table.
 
-![](../assets/en/Commands/pict2286855.fr.png)
+![](../assets/en/commands/pict2286855.fr.png)
 
 This form for the \[Companies\] table will display related records from both the \[People\] and \[Parts\] tables.
 
-![](../assets/en/Commands/pict2287703.fr.png)
+![](../assets/en/commands/pict2287703.fr.png)
 
 When the People and Parts forms are displayed, the related records for both the \[People\] table and the \[Parts\] table are loaded and become the current selections in those tables. 
 
@@ -49,23 +49,17 @@ For example, the following method moves through each record of the \[Companies\]
 Note that the RELATE MANY command is needed, even though the relations are automatic.
 
 ```4d
- ALL RECORDS([Companies]) ` Select all records in the table
-
- ORDER BY([Companies];[Companies]Name) ` Order records in alphabetical order
-
- For($i;1;Records in table([Companies])) ` Loop once for each record
-
-    RELATE MANY([Companies]Name) ` Select the related records
-
+ ALL RECORDS([Companies]) // Select all records in the table
+ ORDER BY([Companies];[Companies]Name) // Order records in alphabetical order
+ For($i;1;Records in table([Companies])) // Loop once for each record
+    RELATE MANY([Companies]Name) // Select the related records
     ALERT("Company: "+[Companies]Name+Char(13)+"People in company: "
-
     +String(Records in selection([People]))+Char(13)+"Number of parts they supply: "+String(Records in selection([Parts])))
-
-    NEXT RECORD([Companies]) ` Move to the next record
-
+    NEXT RECORD([Companies]) // Move to the next record
  End for
 ```
 
 #### See also 
+
 [OLD RELATED MANY](old-related-many.md)  
 [RELATE ONE](relate-one.md)  

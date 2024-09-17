@@ -22,5 +22,6 @@ displayed_sidebar: docs
 If there are no folders at the specified location, the command returns an empty array. If the pathname you pass in *pathname* is invalid, **FOLDER LIST** generate a file manager error that you can intercept using an [ON ERR CALL](on-err-call.md) method.
 
 #### See also 
+
 [DOCUMENT LIST](document-list.md)  
 [VOLUME LIST](volume-list.md)  

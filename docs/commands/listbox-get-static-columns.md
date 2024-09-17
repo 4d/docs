@@ -28,4 +28,5 @@ However, the command does not take into account the visible/invisible status of 
 **Note:** Static columns and locked columns are two independent functions. For more information, refer to the *Design Reference* manual. 
 
 #### See also 
+
 [LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md)  

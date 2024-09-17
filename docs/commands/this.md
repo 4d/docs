@@ -30,8 +30,7 @@ Within supported contexts, you will access object/collection element properties 
 
 #### Example 1 
 
-A collection of objects, each with this structure:
-
+```undefined
 {  
 "ID": 1234
 "name": "Xavier",  
@@ -52,41 +51,17 @@ A collection of objects, each with this structure:
             ] 
 },...
  
-In the list box, each column refers to one of the properties of the object, either directly (This.name), indirectly (This.employees.length), or through an expression (*getPicture*) in which can be used directly. The list box looks like:
-
-![](../assets/en/Commands/pict3776706.en.png)
-
-The *GetPicture* project method is automatically executed during the **On display detail** event:
-
-```4d
-  //GetPicture Method
-
- C_PICTURE($0)
-
- If(This.isFemale)
-
-    $0:=Form.genericFemaleImage
-
- Else
-
-    $0:=Form.genericMaleImage
-
- End if
 ```
-
-Once the form is executed, you can see the result:
-
-![](../assets/en/Commands/pict3783169.en.png)
 
 #### Example 2 
 
 You want to display entities from the following structure in a list box:
 
-![](../assets/en/Commands/pict3872836.en.png)
+![](../assets/en/commands/pict3872836.en.png)
 
 You build a list box of the "Collection or entity selection" type with the following definition:
 
-![](../assets/en/Commands/pict3872844.en.png)
+![](../assets/en/commands/pict3872844.en.png)
 
 Note that:
 
@@ -102,36 +77,30 @@ Note that:
 
 Once the form is executed, the list box is automatically filled with the entity selection:
 
-![](../assets/en/Commands/pict3872875.en.png)
+![](../assets/en/commands/pict3872875.en.png)
 
 #### Example 3 
 
 You want to use a project method as a formula encapsulated in an object:
 
 ```4d
- C_OBJECT($person)
-
+ var $person : Object
  $person:=New object
-
  $person.firstName:="John"
-
  $person.lastName:="Smith"
-
  $person.greeting:=Formula(Greeting)
-
  $g:=$person.greeting("hello") // returns "hello John Smith"
-
  $g:=$person.greeting("hi") // returns "hi John Smith"
 ```
 
 With the Greeting project method:
 
 ```4d
- C_TEXT($0;$1)
-
+ var $0;$1 : Text
  $0:=$1+" "+This.firstName+" "+This.lastName
 ```
 
 #### See also 
+
 [Self](self.md)  
 [Super](super.md)  

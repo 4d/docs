@@ -76,13 +76,9 @@ The following example displays the Open file dialog box showing files created by
 
 ```4d
  $vhResFile:=Open resource file("";"res ")
-
  If(OK=1)
-
     ALERT("You just opened "+Document+”.")
-
     CLOSE RESOURCE FILE($vhResFile)
-
  End if
 ```
 
@@ -97,5 +93,6 @@ If the resource file is successfully opened using the Open file dialog box, the 
 If the resource file could not be opened due to a resource or I/O problem, an error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
 
 #### See also 
+
 [CLOSE RESOURCE FILE](close-resource-file.md)  
 [Resources](../../4D/20-R6/Resources.300-6958006.en.html)  

@@ -42,5 +42,6 @@ In the case of the Associated standard action property, you can pass in the *val
 * **Custom property**: In *property*, you can pass any custom text and associate a *value* of the text, number or Boolean type with it. This *value* will be stored with the item and can be retrieved using the [GET MENU ITEM PROPERTY](get-menu-item-property.md) command. You can use any custom string in the *property* parameter, simply make sure not to use a title used by 4D (by convention, properties set by 4D begin with “4D\_”).
 
 #### See also 
+
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [GET MENU ITEM PROPERTY](get-menu-item-property.md)  

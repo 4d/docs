@@ -63,11 +63,8 @@ The following example uses the first syntax: it creates four arrays and sorts th
 
 ```4d
  ALL RECORDS([Employees])
-
  SELECTION TO ARRAY([Employees]City;cities;[Employees]Salary;salaries;[Employees]Name;
-
  names;[Employees]TelNum;telNums)
-
  MULTI SORT ARRAY(cities;>;salaries;<;names;telNums)
 ```
 
@@ -90,37 +87,25 @@ The following example uses the second syntax: it creates four arrays and sorts t
 
 ```4d
  ALL RECORDS([Employees])
-
  SELECTION TO ARRAY([Employees]City;cities;[Employees]Company;companies;[Employees]Name;
-
  names;[Employees]TelNum;telNums)
-
  ARRAY POINTER(pointers_Array;4)
-
  ARRAY LONGINT(sorts_Array;4)
-
  pointers_Array{1}:=->cities
-
  sorts_Array{1}:=1
-
  pointers_Array{2}:=->companies
-
  sorts_Array{2}:=-1
-
  pointers_Array{3}:=->names
-
  sorts_Array{3}:=0
-
  pointers_Array{4}:=->telNums
-
  sorts_Array{4}:=0
-
  MULTI SORT ARRAY(pointers_Array;sorts_Array)
 ```
 
 If you want the array of names be used as a third sort criterion, you need to assign the value 1 to the sorts\_Array{3} element. Or else, if you want the arrays to be sorted only by the city criterion, assign the value 0 to the sorts\_Array{2}, sorts\_Array{3} and sorts\_Array{4} elements. In this way, you obtain an identical result to [SORT ARRAY](sort-array.md)(cities;companies;names;telNums;>). 
 
 #### See also 
+
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SORT ARRAY](sort-array.md)  

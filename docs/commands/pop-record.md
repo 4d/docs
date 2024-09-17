@@ -23,9 +23,10 @@ If you push a record, change the selection to not include the pushed record, and
 The following example pops the record for the customer off the record stack:
 
 ```4d
- POP RECORD([Customers]) ` Pop customer’s record onto stack
+ POP RECORD([Customers]) // Pop customer’s record onto stack
 ```
 
 #### See also 
+
 [PUSH RECORD](push-record.md)  
 [Using the Record Stack](../../4D/20-R6/Using-the-Record-Stack.300-6958028.en.html)  

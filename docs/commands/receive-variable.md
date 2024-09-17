@@ -33,6 +33,7 @@ See example for the [RECEIVE RECORD](receive-record.md) command.
 The OK system variable is set to 1 if the variable is received. Otherwise, the OK system variable is set to 0.
 
 #### See also 
+
 [ON ERR CALL](on-err-call.md)  
 [RECEIVE RECORD](receive-record.md)  
 [SEND RECORD](send-record.md)  

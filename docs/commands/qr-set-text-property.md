@@ -66,29 +66,19 @@ This method defines several attributes of the first column’s title:
 
 ```4d
   //Assigns the Times font:
-
  QR SET TEXT PROPERTY(qr_area;1;-1;qr font name;"Times")
-
   //Assigns 10-point font size:
-
  QR SET TEXT PROPERTY(qr_area;1;-1;qr font size;10)
-
   //Assigns the bold attribute:
-
  QR SET TEXT PROPERTY(qr_area;1;-1;qr bold;1)
-
   //Assigns the italic attribute:
-
  QR SET TEXT PROPERTY(qr_area;1;-1;qr italic;1)
-
   //Assigns the underline attribute:
-
  QR SET TEXT PROPERTY(qr_area;1;-1;qr underline;1)
-
   //Assigns the light green color:
-
  QR SET TEXT PROPERTY(qr_area;1;-1;qr text color;0x0000FF00)
 ```
 
 #### See also 
+
 [QR Get text property](qr-get-text-property.md)  

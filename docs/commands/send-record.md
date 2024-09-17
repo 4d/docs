@@ -29,6 +29,7 @@ The complete record is sent. This means that pictures and BLOBs stored in or wit
 See example for the [RECEIVE RECORD](receive-record.md) command.
 
 #### See also 
+
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND VARIABLE](send-variable.md)  

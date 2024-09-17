@@ -50,23 +50,17 @@ If the action status cannot be determined (for example if it is not affected to 
 You want to know if the copy action is available (i.e. if some data is selected):
 
 ```4d
- C_OBJECT($actionInfo)
-
- C_BOOLEAN($isEnabled)
-
+ var $actionInfo : Object
+ var $isEnabled : Boolean
  $actionInfo:=Get action info(ak copy)
-
  If(Not(Undefined($actionInfo.enabled))) //action is defined in the process
-
     If(OB Get($actionInfo;"enabled"))
-
        ... //the copy action is available
-
     End if
-
  End if
 ```
 
 #### See also 
+
 [INVOKE ACTION](invoke-action.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  

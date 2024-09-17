@@ -82,7 +82,6 @@ After executing this code:
 
 ```4d
  SET BLOB SIZE(vxBlob;100)
-
  LONGINT TO BLOB(0x01020304;vxBlob;PC byte ordering;*)
 ```
 
@@ -96,9 +95,7 @@ After executing this code:
 
 ```4d
  SET BLOB SIZE(vxBlob;100)
-
  vlOffset:=50
-
  LONGINT TO BLOB(0x01020304;vxBlob;Macintosh byte ordering;vlOffset)
 ```
 
@@ -108,6 +105,7 @@ After executing this code:
 * The variable *vlOffset* has been incremented by 4 (and is now equal to 54)
 
 #### See also 
+
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
 [BLOB to real](blob-to-real.md)  

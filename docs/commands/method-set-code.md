@@ -30,18 +30,14 @@ If a method does not exist, it is created with the *code* contents.
 You can use two types of syntaxes, based either on text arrays, or text variables:
 
 ```4d
- C_TEXT(tVpath) // text variables
-
- C_TEXT(tVcode)
-
+ var tVpath : Text // text variables
+ var tVcode : Text
  METHOD SET CODE(tVpath;tVcode) // code of a single method
 ```
 
 ```4d
  ARRAY TEXT(arrPaths;0) // text arrays
-
  ARRAY TEXT(arrCodes;0)
-
  METHOD SET CODE(arrPaths;arrCodes) // code of several methods
 ```
 
@@ -71,54 +67,32 @@ This example exports and imports all the project methods of an application:
 
 ```4d
  $root_t:=Get 4D folder(Database folder)+"methods"+Folder separator
-
  ARRAY TEXT($fileNames_at;0)
-
  CONFIRM("Import or export methods?";"Import";"Export")
  
-
  If(OK=1)
-
     DOCUMENT LIST($root_t;$fileNames_at)
-
     For($loop_l;1;Size of array($fileNames_at))
-
        $filename_t:=$fileNames_at{$loop_l}
-
        DOCUMENT TO BLOB($root_t+$filename_t;$blob_x)
-
        METHOD SET CODE($filename_t;BLOB to text($blob_x;UTF8 text without length))
-
     End for
-
  Else
-
     If(Test path name($root_t)#Is a folder)
-
        CREATE FOLDER($root_t;*)
-
     End if
-
     METHOD GET PATHS(Path project method;$fileNames_at)
-
     METHOD GET CODE($fileNames_at;$code_at)
-
     For($loop_l;1;Size of array($fileNames_at))
-
        $filename_t:=$fileNames_at{$loop_l}
-
        SET BLOB SIZE($blob_x;0)
-
        TEXT TO BLOB($code_at{$loop_l};$blob_x;UTF8 text without length)
-
        BLOB TO DOCUMENT($root_t+$filename_t;$blob_x)
-
     End for
-
  End if
-
  SHOW ON DISK($root_t)
 ```
 
 #### See also 
+
 [METHOD GET CODE](method-get-code.md)  

@@ -26,11 +26,8 @@ displayed_sidebar: docs
 
 ```4d
   // inside myClass constructor
-
- C_TEXT($1;$2)
-
+ var $1;$2 : Text
  Super($1) //calls superclass constructor with a text param
-
  This.param:=$2 // use second param
 ```
 
@@ -47,53 +44,34 @@ This example illustrates the use of **Super** in a class constructor. The comman
 ```4d
   //Class: Rectangle
  
-
  Class constructor
-
- C_LONGINT($1;$2)
-
+ var $1;$2 : Integer
  This.name:="Rectangle"
-
  This.height:=$1
-
  This.width:=$2
  
-
  Function sayName
-
  ALERT("Hi, I am a "+This.name+".")
  
-
  Function getArea
-
- C_LONGINT($0)
-
+ var $0 : Integer
  $0:=This.height*This.width
 ```
 
 ```4d
   //Class: Square
  
-
  Class extends Rectangle
  
-
  Class constructor
-
- C_LONGINT($1)
+ var $1 : Integer
  
-
   // It calls the parent class's constructor with lengths
-
   // provided for the Rectangle's width and height
-
  Super($1;$1)
  
-
   // In derived classes, Super must be called before you
-
   // can use 'This'
-
  This.name:="Square"
 ```
 
@@ -106,11 +84,8 @@ You created the Rectangle class with a function:
 ```4d
   //Class: Rectangle
  
-
  Function nbSides
-
- C_TEXT($0)
-
+ var $0 : Text
  $0:="I have 4 sides"
 ```
 
@@ -119,29 +94,23 @@ You also created the Square class with a function calling the superclass functio
 ```4d
   //Class: Square
  
-
  Class extends Rectangle
  
-
  Function description
-
- C_TEXT($0)
-
+ var $0 : Text
  $0:=Super.nbSides()+" which are all equal"
 ```
 
 Then you can write in a project method:
 
 ```4d
- C_OBJECT($square)
-
- C_TEXT($message)
-
+ var $square : Object
+ var $message : Text
  $square:=cs.Square.new()
-
  $message:=$square.description() //I have 4 sides which are all equal
 ```
 
 #### See also 
+
 [cs](cs.md)  
 [This](this.md)  

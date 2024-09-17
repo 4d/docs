@@ -38,21 +38,16 @@ This command supports Object type fields: the data of these fields is automatica
 
 You want to create a JSON string representing this selection:
 
-![](../assets/en/Commands/pict1205203.en.png)
+![](../assets/en/commands/pict1205203.en.png)
 
 1) You want to include the values of all the fields of the \[Members\] table:  
 
 ```4d
  $jsonString :=Selection to JSON([Members])
-
   // $jsonString =[{"LastName":"Durant","FirstName":"Mark","Address":
-
   //"25 Park St","Zip code":"15205","City":"Pittsburgh"},{"LastName":
-
   //"Smith","FirstName":"John","Address":"24 Philadelphia Ave","Zip code":
-
   //"75203","City":"Dallas"},{"LastName":"Anderson","FirstName"
-
   //:"Adeline","Address":"37 Market St","Zip code":"45205","City":"Cincinnati"},...]
 ```
 
@@ -60,9 +55,7 @@ You want to create a JSON string representing this selection:
 
 ```4d
  QUERY([Members];[Members]LastName="A@")
-
  $jsonString :=Selection to JSON([Members];[Members]LastName;[Members]City)
-
   // $jsonString = [{"LastName":"Anderson","City":"Cincinnati"},{"LastName":"Albert","City":"Houston"}]
 ```
 
@@ -70,16 +63,11 @@ You want to create a JSON string representing this selection:
 You can use the *template* syntax:  
 
 ```4d
- C_OBJECT($template)
-
+ var $template : Object
  OB SET($template;"Member";->[Members]LastName) //custom label and a single field
-
  ALL RECORDS([Members])
-
  $jsonString :=Selection to JSON([Members];$template)
-
   // $jsonString = [{"Member":"Durant"},{"Member":"Smith"},{"Member":"Anderson"},
-
   // {"Member":"Albert"},{"Member":"Leonard"},{"Member":"Pradel"}]
 ```
 
@@ -88,24 +76,17 @@ You can use the *template* syntax:
 You can use the *template* syntax in order to export fields from different tables:
 
 ```4d
- C_OBJECT($template)
-
- C_TEXT($jsonString)
-
+ var $template : Object
+ var $jsonString : Text
  OB SET($template;"Last name";->[Emp]LastName)
-
  OB SET($template;"First name";->[Emp]FirstName)
-
  OB SET($template;"Company";->[Company]LastName) //custom label otherwise conflict with [Emp]LastName field
-
  ALL RECORDS([Emp])
-
  SET FIELD RELATION([Emp]UUID_Company;Automatic;Do not modify)
-
  $jsonString:=Selection to JSON([Emp];$template)
-
  SET FIELD RELATION([Emp]UUID_Company;Structure configuration;Do not modify)
 ```
 
 #### See also 
+
 [JSON TO SELECTION](json-to-selection.md)  

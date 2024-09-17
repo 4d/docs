@@ -30,6 +30,7 @@ The parameter *mouseButton* returns the state of the buttons, as listed previous
 See the example for the [Pop up menu](pop-up-menu.md) command.
 
 #### See also 
+
 [Caps lock down](caps-lock-down.md)  
 [Macintosh command down](macintosh-command-down.md)  
 [Macintosh control down](macintosh-control-down.md)  

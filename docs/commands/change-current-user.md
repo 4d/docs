@@ -62,5 +62,6 @@ The following example simply displays the connection dialog box:
 **Note:** This code does nothing in a single-user project database. 
 
 #### See also 
+
 [CHANGE PASSWORD](change-password.md)  
 [SET USER ALIAS](set-user-alias.md)  

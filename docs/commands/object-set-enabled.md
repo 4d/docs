@@ -35,4 +35,5 @@ This command can be applied to the following types of objects:
 **Note:** This command has no effect with an object to which a standard action has been assigned (4D looks after modifying the state of this object when necessary), except in the case of the **Validate** and **Cancel** actions.
 
 #### See also 
+
 [OBJECT Get enabled](object-get-enabled.md)  

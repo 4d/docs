@@ -42,17 +42,14 @@ The following example reads 20 Integer values from a BLOB, starting at the offse
 
 ```4d
  $vlOffset:=0x200
-
  For($viLoop;0;19)
-
     $viValue:=BLOB to integer(vxSomeBlob;PC byte ordering;$vlOffset)
-
-  ` Do something with $viValue
-
+  // Do something with $viValue
  End for
 ```
 
 #### See also 
+
 [BLOB to longint](blob-to-longint.md)  
 [BLOB to real](blob-to-real.md)  
 [BLOB to text](blob-to-text.md)  

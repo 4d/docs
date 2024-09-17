@@ -49,16 +49,11 @@ In a form, you want a drop-down list that displays a list of the fonts available
 
 ```4d
  Case of
-
     :(FORM Event=On Load)
-
        ARRAY TEXT(asFont;0)
-
        FONT LIST(asFont)
-
-  ` ...
+  // ...
  
-
  End case
 ```
 
@@ -71,6 +66,7 @@ You want to get a list of recent fonts:
 ```
 
 #### See also 
+
 [\_o\_Font name](../../4D/20-R6/o-Font-name.301-6957678.en.html)  
 [FONT STYLE LIST](font-style-list.md)  
 [Font Type List](../../4D/20-R6/Font-Type-List.302-6958465.en.html)  

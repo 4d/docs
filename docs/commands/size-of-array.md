@@ -22,7 +22,7 @@ displayed_sidebar: docs
 The following example returns the size of the array *anArray*:
 
 ```4d
- vlSize:=Size of array(anArray) ` vlSize gets the size of anArray
+ vlSize:=Size of array(anArray) // vlSize gets the size of anArray
 ```
 
 #### Example 2 
@@ -30,7 +30,7 @@ The following example returns the size of the array *anArray*:
 The following example returns the number of rows in a two-dimensional array:
 
 ```4d
- vlRows:=Size of array(a2DArray) ` vlRows gets the size of a2DArray
+ vlRows:=Size of array(a2DArray) // vlRows gets the size of a2DArray
 ```
 
 #### Example 3 
@@ -38,9 +38,10 @@ The following example returns the number of rows in a two-dimensional array:
 The following example returns the number of columns for a row in a two-dimensional array:
 
 ```4d
- vlColumns:=Size of array(a2DArray{10}) ` vlColumns gets the size of a2DArray{10}
+ vlColumns:=Size of array(a2DArray{10}) // vlColumns gets the size of a2DArray{10}
 ```
 
 #### See also 
+
 [DELETE FROM ARRAY](delete-from-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  

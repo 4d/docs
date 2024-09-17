@@ -37,9 +37,7 @@ The following example creates the Archives folder in the folder of the database,
 
 ```4d
  CREATE FOLDER("Archives")
-
  CREATE FOLDER("Archives\\January")
-
  CREATE FOLDER("Archives\\February")
 ```
 
@@ -65,10 +63,10 @@ Creation of the "\\February\\" subfolder in the existing "C:\\Archives\\" folder
 
 ```4d
  CREATE FOLDER("C:\\Archives\\2011\\February\\Doc.txt";*)
-
   // the "Doc.txt" file is ignored
 ```
 
 #### See also 
+
 [FOLDER LIST](folder-list.md)  
 [Test path name](test-path-name.md)  

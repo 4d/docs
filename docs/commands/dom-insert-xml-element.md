@@ -29,6 +29,7 @@ The command returns the reference of the XML element obtained.
 
 In the following structure, we would like to invert the first and second book:
 
+```XML
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <BookCatalog>
   <Book>
@@ -46,39 +47,29 @@ In the following structure, we would like to invert the first and second book:
           <Publisher>Microsoft Press</Publisher>
     </Book>
 </BookCatalog> 
+```
 
 To do this, simply execute the following code:
 
 ```4d
- C_TEXT($rootRef)
-
+ var $rootRef : Text
  $rootRef:=DOM Parse XML source("") //selection of XML document
-
  If(OK=1)
-
-    C_TEXT($newStruct)
-
+    var $newStruct : Text
     $newStruct:=DOM Create XML Ref("BookCatalog")
  
-
     $bookRef:=DOM Find XML element($rootRef;"/BookCatalog/Book[1]")
-
     $newElementRef:=DOM Append XML element($newStruct;$bookRef)
  
-
     $bookRef:=DOM Find XML element($rootRef;"/BookCatalog/Book[2]")
-
-    C_TEXT($newElementRef)
-
+    var $newElementRef : Text
     $newElementRef:=DOM Insert XML element($newStruct;$bookRef;1)
  
-
     DOM CLOSE XML($newStruct)
-
     DOM CLOSE XML($rootRef)
-
  End if
 ```
 
 #### See also 
+
 [DOM Append XML element](dom-append-xml-element.md)  

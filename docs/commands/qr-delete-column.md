@@ -26,11 +26,10 @@ The following example makes sure the report is a list report and deletes the thi
 
 ```4d
  If(QR Get report kind(MyArea)=qr list report)
-
     QR DELETE COLUMN(MyArea;3)
-
  End if
 ```
 
 #### See also 
+
 [QR INSERT COLUMN](qr-insert-column.md)  

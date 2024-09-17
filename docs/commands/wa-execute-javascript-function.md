@@ -35,14 +35,10 @@ Calling a JavaScript function with 3 parameters:
 
 ```4d
  $JavaScriptFunction:="TheFunctionToBeExecuted"
-
  $Param1:="10"
-
  $Param2:="true"
-
- $Param3:="1,000.2" `note "," as thousands separator and "." as the decimal separator
+ $Param3:="1,000.2" //note "," as thousands separator and "." as the decimal separator
  
-
  WA EXECUTE JAVASCRIPT FUNCTION(MyWArea;$JavaScriptFunction;$Result;$Param1;$Param2;$Param3)
 ```
 
@@ -51,14 +47,12 @@ Calling a JavaScript function with 3 parameters:
 The "getCustomerInfo" JavaScript function receive a number ID as parameter and returns an object:
 
 ```4d
- C_OBJECT($Result)
-
- C_LONGINT($ID)
-
+ var $Result : Object
+ var $ID : Integer
  $ID:=1000
-
  WA EXECUTE JAVASCRIPT FUNCTION(*,"WA";"getCustomerInfo";$Result;$ID)
 ```
 
 #### See also 
+
 [WA Evaluate JavaScript](wa-evaluate-javascript.md)  

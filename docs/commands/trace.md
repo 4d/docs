@@ -28,53 +28,33 @@ The **TRACE** command is ignored when the executing code is compiled.
 The following code expects the process variable BUILD\_LANG to be equal to “US” or “FR”. If this is not the case, it calls the project method DEBUG:
 
 ```4d
-  ` ...
-
+  // ...
  Case of
-
     :(BUILD_LANG="US")
-
        vsBHCmdName:=[Commands]CM US Name
-
     :(BUILD_LANG="FR")
-
        vsBHCmdName:=[Commands]CM FR Name
-
     Else
-
        DEBUG("Unexpected BUILD_LANG value")
-
  End case
 ```
 
 The DEBUG project method is listed here:
 
 ```4d
-  ` DEBUG Project Method
-
-  ` DEBUG (Text)
-
-  ` DEBUG (Optional Debug Information)
+  // DEBUG Project Method
+  // DEBUG (Text)
+  // DEBUG (Optional Debug Information)
  
-
- C_TEXT($1)
+ var $1 : Text
  
-
- If(◊vbDebugOn) ` Interprocess variable set in the On Startup Method
-
+ If(◊vbDebugOn) // Interprocess variable set in the On Startup Method
     If(Is compiled mode)
-
        If(Count parameters>=1)
-
           ALERT($1+Char(13)+"Call Designer at x911")
-
        End if
-
     Else
-
        TRACE
-
     End if
-
  End if
 ```

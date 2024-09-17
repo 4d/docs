@@ -35,14 +35,12 @@ The command can return one of the following errors, that can be handled through 
 You want to reset all current sessions for all mobile applications:
 
 ```4d
- C_TEXT($sessionsPath)
-
+ var $sessionsPath : Text
  $sessionsPath:=Get 4D folder(MobileApps folder)
-
  DELETE FOLDER($sessionsPath;Delete with contents)
-
  MOBILE APP REFRESH SESSIONS
 ```
 
 #### See also 
+
 [On Mobile App Authentication database method](on-mobile-app-authentication-database-method.md)  

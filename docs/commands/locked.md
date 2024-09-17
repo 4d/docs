@@ -28,6 +28,7 @@ If you try to load a record that has been deleted, **Locked** continues to retur
 During transaction processing, [LOAD RECORD](load-record.md) and **Locked** are often used to test record availability. If a record is locked, it is common to cancel the transaction. 
 
 #### See also 
+
 [Get locked records info](get-locked-records-info.md)  
 [LOAD RECORD](load-record.md)  
 [LOCKED BY](locked-by.md)  

@@ -29,11 +29,8 @@ This example tests if the BLOB *vxMyBlob* is compressed and, if so, expands it:
 
 ```4d
  BLOB PROPERTIES(vxMyBlob;$vlCompressed;$vlExpandedSize;$vlCurrentSize)
-
  If($vlCompressed#Is not compressed)
-
     EXPAND BLOB(vxMyBlob)
-
  End if
 ```
 
@@ -43,31 +40,18 @@ This example allows you to select a document and then expand it, if it is compre
 
 ```4d
  $vhDocRef :=Open document("")
-
  If(OK=1)
-
     CLOSE DOCUMENT($vhDocRef)
-
     DOCUMENT TO BLOB(Document;vxBlob)
-
     If(OK=1)
-
        BLOB PROPERTIES(vxBlob;$vlCompressed;$vlExpandedSize;$vlCurrentSize)
-
        If($vlCompressed#Is not compressed)
-
           EXPAND BLOB(vxBlob)
-
           If(OK=1)
-
              BLOB TO DOCUMENT(Document;vxBlob)
-
           End if
-
        End if
-
     End if
-
  End if
 ```
 
@@ -76,5 +60,6 @@ This example allows you to select a document and then expand it, if it is compre
 The OK variable is set to 1 if the BLOB has been successfully expanded, otherwise it is set to 0.
 
 #### See also 
+
 [BLOB PROPERTIES](blob-properties.md)  
 [COMPRESS BLOB](compress-blob.md)  

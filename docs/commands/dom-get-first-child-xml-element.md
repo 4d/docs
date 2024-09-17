@@ -21,22 +21,18 @@ displayed_sidebar: docs
 
 The *childElemName* and *childElemValue* parameters, if they are passed, receive respectively the name and the value of the child element. 
 
-![](../assets/en/Commands/pict39972.en.png)
+![](../assets/en/commands/pict39972.en.png)
 
 #### Example 1 
 
 Retrieval of the reference of the first XML element of the parent root. The XML structure (C:\\\\import.xml) is first loaded into a BLOB: 
 
 ```4d
- C_BLOB(myBlobVar)
-
- C_TEXT($xml_Parent_Ref;$xml_Child_Ref)
+ var myBlobVar : Blob
+ var $xml_Parent_Ref;$xml_Child_Ref : Text
  
-
  DOCUMENT TO BLOB("c:\\import.xml";myBlobVar)
-
  $xml_Parent_Ref:=DOM Parse XML variable(myBlobVar)
-
  $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref)
 ```
 
@@ -45,17 +41,12 @@ Retrieval of the reference of the first XML element of the parent root. The XML 
 Retrieval of the reference, name and value of the first XML element of the parent root. The XML structure (C:\\\\import.xml) is first loaded into a BLOB: 
 
 ```4d
- C_BLOB(myBlobVar)
-
- C_TEXT($xml_Parent_Ref;$xml_Child_Ref)
-
- C_TEXT($childName;$childValue)
+ var myBlobVar : Blob
+ var $xml_Parent_Ref;$xml_Child_Ref : Text
+ var $childName;$childValue : Text
  
-
  DOCUMENT TO BLOB("c:\\import.xml";myBlobVar)
-
  $xml_Parent_Ref:=DOM Parse XML variable(myBlobVar)
-
  $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref;$childName;$childValue)
 ```
 
@@ -64,4 +55,5 @@ Retrieval of the reference, name and value of the first XML element of the paren
 If the command has been correctly executed, the system variable OK is set to 1\. Otherwise, it is set to 0\. 
 
 #### See also 
+
 [DOM Get next sibling XML element](dom-get-next-sibling-xml-element.md)  

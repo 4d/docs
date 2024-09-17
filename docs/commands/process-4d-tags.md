@@ -44,15 +44,11 @@ The *outputResult* parameter may be a field or a variable of the Text type.
 This example loads a 'template' type document, processes the tags it contains and then stores it:
 
 ```4d
- C_TEXT($inputText_t)
-
- C_TEXT($outputText_t)
+ var $inputText_t : Text
+ var $outputText_t : Text
  
-
  $inputText_t:=Document to text(File("/PACKAGE/mytemplate.txt").platformPath)
-
  PROCESS 4D TAGS($inputText_t;$outputText_t)
-
  TEXT TO DOCUMENT(File("/PACKAGE/myfile.txt").platformPath;$outputText_t)
 ```
 
@@ -62,23 +58,16 @@ This example generates a text using data of the arrays:
 
 ```4d
  ARRAY TEXT($array;2)
-
  $array{1}:="hello"
-
  $array{2}:="world"
-
- $input:="<!--#4DEVAL $1-->"
-
- $input:=$input+"<!--#4DLOOP $2-->"
-
- $input:=$input+"<!--#4DEVAL $2->{$2->}--> "
-
- $input:=$input+"<!--#4DENDLOOP-->"
-
+ $input:=""
+ $input:=$input+""
+ $input:=$input+" "
+ $input:=$input+""
  PROCESS 4D TAGS($input;$output;"elements = ";->$array)
-
   // $output = "elements = hello world"
 ```
 
 #### See also 
+
 [4D Transformation Tags](../../4D/20-R6/4D-Transformation-Tags.300-6957878.en.html)  

@@ -52,4 +52,5 @@ If the export has been carried out correctly, the OK variable is set to 1\. Othe
 **Note:** This command does not support Object type fields.
 
 #### See also 
+
 [SQL EXPORT SELECTION](sql-export-selection.md)  

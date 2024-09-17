@@ -29,5 +29,6 @@ If you omit the *process* parameter, **DELETE MENU ITEM** applies to the menu ba
 **Note:** For consistency in the user interface, do not keep a menu with no items.
 
 #### See also 
+
 [APPEND MENU ITEM](append-menu-item.md)  
 [INSERT MENU ITEM](insert-menu-item.md)  

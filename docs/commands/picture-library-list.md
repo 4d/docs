@@ -41,15 +41,10 @@ The following example tests whether or not the Picture Library is empty:
 
 ```4d
  PICTURE LIBRARY LIST(alPicRef;asPicName)
-
  If(Size of array(alPicRef)=0)
-
     ALERT("The Picture Library is empty.")
-
  Else
-
     ALERT("The Picture Library contains "+String(Size of array(alPicRef))+" pictures.")
-
  End if
 ```
 
@@ -59,69 +54,40 @@ The following example exports the Picture Library to a document on disk:
 
 ```4d
  PICTURE LIBRARY LIST($alPicRef;$asPicName)
-
  $vlNbPictures:=Size of array($alPicRef)
-
  If($vlNbPictures>0)
-
     SET CHANNEL(12;"")
-
     If(OK=1)
-
        $vsTag:="4DV6PICTURELIBRARYEXPORT"
-
        SEND VARIABLE($vsTag)
-
        SEND VARIABLE($vlNbPictures)
-
        gError:=0
-
        For($vlPicture;1;$vlNbPictures)
-
           $vlPicRef:=$alPicRef{$vlPicture}
-
           $vsPicName:=$asPicName{$vlPicture}
-
           GET PICTURE FROM LIBRARY($alPicRef{$vlPicture};$vgPicture)
-
           If(OK=1)
-
              SEND VARIABLE($vlPicRef)
-
              SEND VARIABLE($vsPicName)
-
              SEND VARIABLE($vgPicture)
-
           Else
-
              $vlPicture:=$vlPicture+1
-
              gError:=-108
-
           End if
-
        End for
-
        SET CHANNEL(11)
-
        If(gError#0)
-
           ALERT("The Picture Library could not be exported, retry with more memory.")
-
           DELETE DOCUMENT(Document)
-
        End if
-
     End if
-
  Else
-
     ALERT("The Picture Library is empty.")
-
  End if
 ```
 
 #### See also 
+
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  

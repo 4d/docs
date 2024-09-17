@@ -30,4 +30,5 @@ In *xmlInfo*, pass a code indicating the type of information to be retrieved. Yo
 | Version      | Longint | 5     | Accepted XML version                                                                                          |
 
 #### See also 
+
 [XML GET ERROR](xml-get-error.md)  

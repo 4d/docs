@@ -62,58 +62,44 @@ It throws all current errors in **deferred mode**, meaning they will be added to
 
 ```4d
  var $code : Integer
-
  var $description : text
-
  $code:=50042 //Custom code
-
  $description:=“This is a custom error”
-
  throw($code ;$description) // Throws an error with message "This is a custom error" and errCode = 50042
 ```
 
 #### Example 2 
 
 ```RAW
-
 throw({errCode: 1; message: "This an error"}) // Throws an error with errCode = 1 and message "This an error"
-
 ```
 
 #### Example 3 
 
 ```RAW
-
 throw({errCode: 1}) // Throws an error with errCode = 1 and message "Error code: 1 (host)"
-
 ```
 
 #### Example 4 
 
 ```RAW
-
 throw({message: "This an error"}) // Throws an error with errCode = -1 and message "This is my error"
-
 ```
 
 #### Example 5 
 
 ```RAW
-
 throw({message: "This is my error"; deferred: True}) // Throw an error with message "This is my error" and errCode = -1 in deferred mode
-
 ```
 
 #### Example 6 
 
 ```RAW
-
-throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFilePath"; deferred: True})
-// Throws an error with message "File myFileName not found (myFilePath)" in deferred mode
-
+throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFilePath"; deferred: True})// Throws an error with message "File myFileName not found (myFilePath)" in deferred mode
 ```
 
 #### See also 
+
 [ASSERT](assert.md)  
 [Last errors](last-errors.md)  
 [ON ERR CALL](on-err-call.md)  

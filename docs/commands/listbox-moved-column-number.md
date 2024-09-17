@@ -26,5 +26,6 @@ This command must be used with the form event On Column Moved (see the [Form eve
 **Note:** This command takes invisible columns into account.
 
 #### See also 
+
 [Form event code](form-event-code.md)  
 [LISTBOX MOVED ROW NUMBER](listbox-moved-row-number.md)  

@@ -27,5 +27,6 @@ The method must already exist. If the *path* parameter does not correspond to an
 You can execute this command from a component, but in this case, you must pass the *\** parameter because access to the component code is read-only. If you omit the *\** parameter in this context, the error -9763 is generated
 
 #### See also 
+
 [Design Object Access Commands](../../4D/20-R6/Design-Object-Access-Commands.300-6958910.en.html)  
 [METHOD Get path](method-get-path.md)  

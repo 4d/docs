@@ -31,19 +31,13 @@ In the *options* parameter, you can pass one or a combination of the following c
 #### Example 1 
 
 ```4d
- C_TEXT($vt)
-
- C_COLLECTION($col)
-
+ var $vt : Text
+ var $col : Collection
  $col:=New collection
  
-
  $vt:="John;Doe;120 jefferson st.;Riverside;; NJ; 08075"
-
  $col:=Split string($vt;";") //["John","Doe","120 jefferson st.","Riverside",""," NJ"," 08075"]
-
  $col:=Split string($vt;";";sk ignore empty strings) //["John","Doe","120 jefferson st.","Riverside"," NJ"," 08075"]
-
  $col:=Split string($vt;";";sk ignore empty strings+sk trim spaces) //["John","Doe","120 jefferson st.","Riverside","NJ","08075"]
 ```
 
@@ -52,16 +46,13 @@ In the *options* parameter, you can pass one or a combination of the following c
 The *separator* parameter can be a multiple-character string: 
 
 ```4d
- C_TEXT($vt)
-
- C_COLLECTION($col)
-
- $vt:="Name<tab>Smith<tab>age<tab>40"
-
- $col:=Split string($vt;"<tab>")
-
+ var $vt : Text
+ var $col : Collection
+ $vt:="NameSmithage40"
+ $col:=Split string($vt;"")
   //$col=["Name","Smith","age","40"]
 ```
 
 #### See also 
+
 [TEXT TO ARRAY](text-to-array.md)  

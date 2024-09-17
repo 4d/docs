@@ -30,28 +30,17 @@ If you pass 0 in *record*, there will no longer be a current record in *aTable*.
 The following example loads data from the field \[People\]Last Name into the *atNames* array. An array of long integers, called *alRecNum*, is filled with numbers that will represent the selected record numbers. Both arrays are then sorted:
 
 ```4d
-  ` Make any selection for the [People] table here
-
-  ` ...
-
-  ` Get the names
-
+  // Make any selection for the [People] table here
+  // ...
+  // Get the names
  SELECTION TO ARRAY([People]Last Name;atNames)
-
-  ` Create an array for the selected record numbers
-
+  // Create an array for the selected record numbers
  $vlNbRecords:=Size of array(atNames)
-
  ARRAY LONGINT(alRecNum;$vlNbRecords)
-
  For($vlRecord;1;$vlNbRecords)
-
     alRecNum{$vlRecord}:=$vlRecord
-
  End for
-
-  ` Sort the arrays in alphabetical order
-
+  // Sort the arrays in alphabetical order
  SORT ARRAY(atNames;alRecNum;>)
 ```
 
@@ -61,17 +50,13 @@ The following object method for *atNames* selects the correct record in the \[Pe
 
 ```4d
  Case of
-
     :(Form event code=On Clicked)
-
        If(atNames#0)
-
           GOTO SELECTED RECORD(alRecNum{atNames})
-
        End if
-
  End case
 ```
 
 #### See also 
+
 [Selected record number](selected-record-number.md)  

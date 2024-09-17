@@ -23,6 +23,7 @@ As a rule, all semaphores that have been created should be cleared. If semaphore
 See the example for [Semaphore](semaphore.md).
 
 #### See also 
+
 [Semaphore](semaphore.md)  
 [Semaphores and signals](../../4D/20-R6/Semaphores-and-signals.300-6958859.en.html)  
 [Test semaphore](test-semaphore.md)  

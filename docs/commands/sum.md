@@ -37,15 +37,10 @@ The following method is called to print the records in the selection and to acti
 
 ```4d
  ALL RECORDS([Employees])
-
  ORDER BY([Employees];[Employees]LastNm;>)
-
  BREAK LEVEL(1)
-
  ACCUMULATE([Employees]Salary)
-
  OUTPUT FORM([Employees];"PrintForm")
-
  PRINT SELECTION([Employees])
 ```
 
@@ -57,11 +52,8 @@ This example gets the sum of all the values placed in an array:
 
 ```4d
  ARRAY REAL($ArrGrades;0)
-
  QUERY([Exams];[Exams]Exam_Date=!01/07/11!)
-
  SELECTION TO ARRAY([Exams]Exam_Grade;$ArrGrades)
-
  vSum:=Sum($ArrGrades)
 ```
 
@@ -70,6 +62,7 @@ This example gets the sum of all the values placed in an array:
 For an example of computing an object field attribute, please refer to the example 3 of the [Average](average.md) command description.
 
 #### See also 
+
 [ACCUMULATE](accumulate.md)  
 [Average](average.md)  
 [BREAK LEVEL](break-level.md)  

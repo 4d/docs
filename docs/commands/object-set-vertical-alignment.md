@@ -36,6 +36,7 @@ Vertical alignment can be applied to the following form objects:
 * list box headers and footers.
 
 #### See also 
+
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
 [OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  

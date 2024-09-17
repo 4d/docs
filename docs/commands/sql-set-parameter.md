@@ -36,27 +36,17 @@ The value of the 4D object replaces the *?* character in the SQL request (standa
 This example is used to execute an SQL request which calls the associated 4D variables directly:
 
 ```4d
- C_TEXT(MyText)
-
- C_LONGINT(MyLongint)
+ var MyText : Text
+ var MyLongint : Integer
  
-
  SQL LOGIN("mysql";"root";"")
-
- SQLStmt:="insert into app_testTable (alpha_field, longint_field) VALUES (<<MyText>>, <<MyLongint>>)"
-
+ SQLStmt:="insert into app_testTable (alpha_field, longint_field) VALUES (<>, <>)"
  For(vCounter;1;10)
-
     MyText:="Text"+String(vCounter)
-
     MyLongint:=vCounter
-
     SQL EXECUTE(SQLStmt)
-
     SQL CANCEL LOAD
-
  End for
-
  SQL LOGOUT
 ```
 
@@ -65,31 +55,19 @@ This example is used to execute an SQL request which calls the associated 4D var
 Same example as the previous one, but using the SQL SET PARAMETER command:
 
 ```4d
- C_TEXT(MyText)
-
- C_LONGINT(MyLongint)
+ var MyText : Text
+ var MyLongint : Integer
  
-
  SQL LOGIN("mysql";"root";"")
-
  SQLStmt:="insert into app_testTable (alpha_field, longint_field) VALUES (?,?)"
-
  For(vCounter;1;10)
-
     MyText:="Text"+String(vCounter)
-
     MyLongint:=vCounter
-
     SQL SET PARAMETER(MyText;SQL param in)
-
     SQL SET PARAMETER(MyLongint;SQL param in)
-
     SQL EXECUTE(SQLStmt)
-
     SQL CANCEL LOAD
-
  End for
-
  SQL LOGOUT
 ```
 

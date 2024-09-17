@@ -36,11 +36,9 @@ By default, 4D bases its printouts on the printer margins. Once the **SET PRINTA
 The following example gets the size of the dead margin: 
 
 ```4d
- SET PRINTABLE MARGIN(-1;-1;-1;-1) `Sets the printer margin
-
+ SET PRINTABLE MARGIN(-1;-1;-1;-1) //Sets the printer margin
  GET PRINTABLE MARGIN($l;$t;$r;$b)
-
-  `$l, $t, $r and $b correspond to the dead margins of the sheet
+  //$l, $t, $r and $b correspond to the dead margins of the sheet
 ```
 
 #### Example 2 
@@ -48,14 +46,13 @@ The following example gets the size of the dead margin:
 The following example gets the paper size: 
 
 ```4d
- SET PRINTABLE MARGIN(0;0;0;0) `Sets the paper margin
-
+ SET PRINTABLE MARGIN(0;0;0;0) //Sets the paper margin
  GET PRINTABLE AREA($height;$width)
-
-  `For size A4: $height=842 ; $width=595 pixels
+  //For size A4: $height=842 ; $width=595 pixels
 ```
 
 #### See also 
+
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
 [Get printed height](get-printed-height.md)  
 [Print form](print-form.md)  

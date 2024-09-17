@@ -23,4 +23,5 @@ If you omit the *process* parameter, **Get menu title** applies to the menu bar 
 **Note:** If you pass a [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") in *menu*, the *process* parameter serves no purpose and will be ignored.
 
 #### See also 
+
 [Count menus](count-menus.md)  

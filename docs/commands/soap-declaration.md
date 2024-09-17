@@ -112,17 +112,12 @@ If the *alias* parameter is omitted, 4D will use, by default, the name of the va
 This example specifies a parameter name:
 
 ```4d
-  ` In the COMPILER_WEB method
-
- C_LONGINT($1)
+  // In the COMPILER_WEB method
+ var $1 : Integer
  
-
-  ` In the Web Service method
-
-  ` During generation of the WSDL file and SOAP calls, the word
-
-  ` zipcode will be used instead of fourD_arg1
-
+  // In the Web Service method
+  // During generation of the WSDL file and SOAP calls, the word
+  // zipcode will be used instead of fourD_arg1
  SOAP DECLARATION($1;Is longint;SOAP input;"zipcode")
 ```
 
@@ -131,13 +126,10 @@ This example specifies a parameter name:
 This example retrieves an array of zip codes in the form of longints: 
 
 ```4d
-  `In the COMPILER_WEB method
-
+  //In the COMPILER_WEB method
  ARRAY LONGINT(codes;0)
  
-
-  `In the Web service method
-
+  //In the Web service method
  SOAP DECLARATION(codes;LongInt array;SOAP input;"in_codes")
 ```
 
@@ -147,7 +139,6 @@ This example refers to two return values without specifying an argument name:
 
 ```4d
  SOAP DECLARATION(ret1;Is longint;SOAP output)
-
  SOAP DECLARATION(ret2;Is longint;SOAP output)
 ```
 
@@ -156,8 +147,7 @@ This example refers to two return values without specifying an argument name:
 This example allows the 4D SOAP server to return an argument with a size greater than 32 KB in databases in non-Unicode mode: 
 
 ```4d
- C_BLOB($0)
-
+ var $0 : Blob
  SOAP DECLARATION($0;Is text;SOAP output)
 ```
 
@@ -171,54 +161,35 @@ This example illustrates the results of different types of declarations:
 ```4d
  ALL RECORDS([Contact])
  
-
-  `Build an XML structure from the Contacts selection and store the XML in a BLOB
-
- C_BLOB(ws_vx_xmlBlob)
-
+  //Build an XML structure from the Contacts selection and store the XML in a BLOB
+ var ws_vx_xmlBlob : Blob
  getContactsXML(->ws_vx_xmlBlob)
-
-  `Retrieve the XML structure in a text variable
-
- C_TEXT(ws_vt_xml)
-
+  //Retrieve the XML structure in a text variable
+ var ws_vt_xml : Text
  ws_vt_xml:=BLOB to text(ws_vx_xmlBlob;UTF8 text without length)
-
-  `Retrieve a DOM reference to the XML structure
-
- C_TEXT(ws_vt_xmlRef)
-
+  //Retrieve a DOM reference to the XML structure
+ var ws_vt_xmlRef : Text
  ws_vt_xmlRef:=DOM Parse XML variable(ws_vt_xml)
  
-
-  `Test the various declarations
-
+  //Test the various declarations
  SOAP DECLARATION(ws_vx_xmlBlob;Is BLOB;SOAP output;"contactListsX")
-
-  `The XML is converted into Base64 by 4D
+  //The XML is converted into Base64 by 4D
  
-
  SOAP DECLARATION(ws_vt_xml;Is text;SOAP output;"contactListsText")
-
-  `The XML is converted into text by 4D (< > become entities)
+  //The XML is converted into text by 4D (< > become entities)
  
-
  SOAP DECLARATION(ws_vt_xml;Is XML;SOAP output;"xmlContacts")
-
-  `The XML is passed as XML text
+  //The XML is passed as XML text
  
-
  SOAP DECLARATION(ws_vx_xmlBlob;Is XML;SOAP output;"blobContacts")
-
-  `The XML is passed as an XML BLOB
+  //The XML is passed as an XML BLOB
  
-
  SOAP DECLARATION(ws_vt_xmlRef;Is DOM reference;SOAP output;"contactByRef")
-
-  `The XML is passed as a reference
+  //The XML is passed as a reference
 ```
 
 #### See also 
+
 [Is data file locked](is-data-file-locked.md)  
 [SOAP Get info](soap-get-info.md)  
 [SOAP SEND FAULT](soap-send-fault.md)  

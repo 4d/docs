@@ -23,4 +23,5 @@ Before launching the operation, the command verifies that the specified access p
 **4D Server:** Beginning with 4D v13, this command can be executed with 4D Server. In this context, it performs an internal call to [QUIT 4D](quit-4d.md) on the server (which causes a dialog box to appear on each remote machine, indicating that the server is in the process of quitting) before creating the designated file. 
 
 #### See also 
+
 [OPEN DATA FILE](open-data-file.md)  

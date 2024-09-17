@@ -28,36 +28,23 @@ If you omit the *window* parameter, **SET WINDOW TITLE** changes the title of th
 While performing data entry in a form, you click on a button that executes a lengthy operation (i.e., browsing programmatically related records shown in a subform). You keep informed about the progress of the operation using the title of the current window:
 
 ```4d
-  ` bAnalysis button Object Method
-
+  // bAnalysis button Object Method
  Case of
-
     :(FORM Event=On Clicked)
-
-  ` Save current window title in a local variable
-
+  // Save current window title in a local variable
        $vsCurTitle:=Get window title
-
-  ` Start the lengthy operation
-
+  // Start the lengthy operation
        FIRST RECORD([Invoice Line Items])
-
        For($vlRecord;1;Records in selection([Invoice Line Items]))
-
           DO SOMETHING
-
-  ` Show progress information
-
+  // Show progress information
           SET WINDOW TITLE("Processing Line Item #"+String($vlRecord))
-
        End for
-
-  ` Restore original window title
-
+  // Restore original window title
        SET WINDOW TITLE($vsCurTitle)
-
  End case
 ```
 
 #### See also 
+
 [Get window title](get-window-title.md)  

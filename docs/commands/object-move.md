@@ -62,6 +62,7 @@ The following statement moves “button\_1” to the following coordinates (10;2
 ```
 
 #### See also 
+
 [OBJECT DUPLICATE](object-duplicate.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  

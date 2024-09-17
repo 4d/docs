@@ -49,14 +49,9 @@ This example creates an interprocess array of [Pointer](# "A reference to anothe
 
 ```4d
  ARRAY POINTER(◊apValues;Get last table number)
-
  For($vlElem;1;Size of array(◊apValues);1;-1)
-
     If(Is table number valid($vlElem))
-
        ◊apValues{$vlElem}:=Table($vlElem)
-
     End if
-
  End for
 ```

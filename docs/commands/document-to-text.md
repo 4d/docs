@@ -55,8 +55,7 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 Given the following text document (fields are separated by tabs):
 
 ```RAW
-id    name    price    vat
-3    4D Tags    99    19.6
+id    name    price    vat3    4D Tags    99    19.6
 ```
 
 When you execute this code:
@@ -69,12 +68,11 @@ When you execute this code:
 
 ```4d
   // $Text = "id\tname\tprice\tvat\r\n3\t4D Tags\t99 \t19.6"
-
   // \t = tab
-
   // \r = CR
 ```
 
 #### See also 
+
 [System Documents](../../4D/20-R6/System-Documents.302-6958484.en.html)  
 [TEXT TO DOCUMENT](text-to-document.md)  

@@ -34,5 +34,6 @@ You can use the optional *listType* parameter to designate the type of list that
 If there is no list of the type defined associated with the *object*, the command returns an empty string ("").
 
 #### See also 
+
 [OBJECT Get list reference](object-get-list-reference.md)  
 [OBJECT SET LIST BY NAME](object-set-list-by-name.md)  

@@ -39,20 +39,15 @@ Creation of a PDF document under Windows:
 
 ```4d
  var $pdfpath : Text
-
  $pdfpath:=System folder(Desktop)+"test.pdf"
-
  SET CURRENT PRINTER(Generic PDF driver)
-
  SET PRINT OPTION(Destination option;3;$pdfpath)
-
  ALL RECORDS([Table_1])
-
  PRINT SELECTION([Table_1];*)
-
  SET CURRENT PRINTER("")
 ```
 
 #### See also 
+
 [Get current printer](get-current-printer.md)  
 [PRINTERS LIST](printers-list.md)  

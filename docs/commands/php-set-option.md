@@ -27,5 +27,6 @@ Pass a constant from the "[PHP](/4Dv20R6/4D/20-R6/PHP.302-6958466.en.html)" them
 By default, **PHP SET OPTION** sets the option for all subsequent calls to [PHP Execute](php-execute.md) of the process. If you want to set it for the next call only, pass the star (*\**) parameter.
 
 #### See also 
+
 [PHP Execute](php-execute.md)  
 [PHP GET OPTION](php-get-option.md)  

@@ -23,4 +23,5 @@ You then need to reload the data using the **RELOAD EXTERNAL DATA** command to u
 **Note:** The **RELOAD EXTERNAL DATA** command only works on a local 4D or on 4D Server. You cannot reload a field individually with 4D in remote mode. In this context, you have to reload all the records (using the [LOAD RECORD](load-record.md) command for example).
 
 #### See also 
+
 [SET EXTERNAL DATA PATH](set-external-data-path.md)  

@@ -25,23 +25,17 @@ The first step in this process consists in deleting the special automatic relati
 
 Let's look for example at the following converted structure: 
 
-![](../assets/en/Commands/pict473713.en.png)
+![](../assets/en/commands/pict473713.en.png)
 
 In 4D, the following code still works but it must be updated:
 
 ```4d
  ALL SUBRECORDS([Employees]Children)
-
  $total:=Records in subselection([Employees]Children)
-
  vFirstnames:=""
-
  For($i;1;$total)
-
     vFirstnames:=vFirstnames+[Employees]Children'FirstName+" "
-
     NEXT SUBRECORD([Employees]Children)
-
  End for
 ```
 
@@ -49,17 +43,11 @@ You can now replace this code with:
 
 ```4d
  QUERY([Employees_Children];[Employees_Children]id_added_by_converter=Get subrecord key([Employees]Children))
-
  $total:=Records in selection([Employees_Children])
-
  vFirstnames:=""
-
  For($i;1;$total)
-
     vFirstnames:=vFirstnames+[Employees_Children]FirstName+" "
-
     NEXT RECORD(Employees_Children)
-
  End for
 ```
 
@@ -81,19 +69,12 @@ For example, with the structure above you can write:
 
 ```4d
  CREATE RECORD([Employees])
-
  [Employees]LastName:="Jones"
-
  CREATE RECORD([Employees_Children])
-
  [Employees_Children]FirstName:="Natacha"
-
  [Employees_Children]BirthDate:=!12/24/2013!
-
  [Employees_Children]id_added_by_converter:=Get subrecord key([Employees]Children)
-
  SAVE RECORD([Employees_Children])
-
  SAVE RECORD([Employees]
 ```
 

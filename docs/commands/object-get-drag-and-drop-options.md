@@ -33,4 +33,5 @@ Each parameter returns True or False according to whether the corresponding opti
 * *automaticDrop* \= True (only used with picture fields and variables, text, combo boxes and list boxes): Object accepts drops in automatic mode.
 
 #### See also 
+
 [OBJECT SET DRAG AND DROP OPTIONS](object-set-drag-and-drop-options.md)  

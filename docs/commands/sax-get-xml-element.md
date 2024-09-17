@@ -33,11 +33,9 @@ The command also fills the *attrValues* array with the values of attributes of t
 Let's look at the following piece of XML code:
 
 ```4d
- <RootElement>
-
- <Child Att1="111"Att2="222"Att3="333">MyText</Child>
-
- </RootElement>
+ 
+ MyText
+ 
 ```
 
 Once the following statement has been executed: 
@@ -56,4 +54,5 @@ Once the following statement has been executed:
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated.
 
 #### See also 
+
 [SAX Get XML node](sax-get-xml-node.md)  

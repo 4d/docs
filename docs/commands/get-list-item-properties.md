@@ -46,6 +46,7 @@ After the call:
 For details about these properties, see the description of the command [SET LIST ITEM PROPERTIES](set-list-item-properties.md).
 
 #### See also 
+
 [GET LIST ITEM](get-list-item.md)  
 [GET LIST ITEM ICON](get-list-item-icon.md)  
 [SET LIST ITEM](set-list-item.md)  

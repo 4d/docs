@@ -70,59 +70,35 @@ This example will cancel printing if the user presses **Ctrl+period**. First, th
 
 ```4d
  PAGE SETUP
-
  If(OK=1)
-
     ◊vbWeStop:=False
-
-    ON EVENT CALL("EVENT HANDLER") ` Installs the event-handling method
-
+    ON EVENT CALL("EVENT HANDLER") // Installs the event-handling method
     ALL RECORDS([People])
-
     MESSAGE("To interrupt printing press Ctrl+Period")
-
     $vlNbRecords:=Records in selection([People])
-
     For($vlRecord;1;$vlNbRecords)
-
        If(◊vbWeStop)
-
           ALERT("Printing cancelled at record "+String($vlRecord)+" of "+String($vlNbRecords))
-
           $vlRecord:=$vlNbRecords+1
-
        Else
-
           Print form([People];"Special Report")
-
        End if
-
     End for
-
     PAGE BREAK
-
-    ON EVENT CALL("") ` Deinstalls the event-handling method
-
+    ON EVENT CALL("") // Deinstalls the event-handling method
  End if
 ```
 
 If **Ctrl+period** has been pressed, the event-handling method sets *◊vbWeStop* to True:
 
 ```4d
-  ` EVENT HANDLER project method
-
+  // EVENT HANDLER project method
  If((Modifiers?? Command key bit) & (KeyCode=Period))
-
     CONFIRM("Are you sure?")
-
     If(OK=1)
-
        ◊vbWeStop:=True
-
-       FILTER EVENT ` Do NOT forget this call; otherwise 4D will also get this event
-
+       FILTER EVENT // Do NOT forget this call; otherwise 4D will also get this event
     End if
-
  End if
 ```
 
@@ -131,6 +107,7 @@ Note that this example uses **ON EVENT CALL** because it performs a special prin
 If you print a report using [PRINT SELECTION](print-selection.md), you do NOT need to handle events that let the user interrupt the printing; this command does that for you.
 
 #### See also 
+
 [FILTER EVENT](filter-event.md)  
 [GET MOUSE](get-mouse.md)  
 [Method called on event](method-called-on-event.md)  

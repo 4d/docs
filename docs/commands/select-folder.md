@@ -25,11 +25,11 @@ The **Select folder** command displays a standard dialog box to browse through t
 The optional parameter *message* allows you to display a message in the dialog box. In the following examples, the message is "Destination folder?":
 
 **Windows**  
-![](../assets/en/Commands/pict3881936.en.png)
+![](../assets/en/commands/pict3881936.en.png)
 
 **macOS**
 
-![](../assets/en/Commands/pict3881985.en.png)
+![](../assets/en/commands/pict3881985.en.png)
 
  You can use the *defaultPath* parameter to provide a default folder location in the folder selection dialog box. You can pass three types of values in this parameter: 
 * The pathname of a valid folder using the syntax of the current platform.
@@ -57,7 +57,7 @@ The user selects a folder and then clicks the **Select Folder** button (on Windo
 
 **Note:** On macOS, depending on whether or not the name of the folder is selected in the dialog box, the access path that is returned to you may be different.
 
-![](../assets/en/Commands/pict34878.en.png)
+![](../assets/en/commands/pict34878.en.png)
 
 **4D Server:** This function allows you to view the volumes connected to the client workstations. It is not possible to call this function from a stored procedure.
 
@@ -71,19 +71,15 @@ The following example allows you to select the folder in which the pictures in t
 
 ```4d
  $PictFolder:=Select folder("Select a folder for your pictures.")
-
  PICTURE LIBRARY LIST(pictRefs;pictNames)
-
  For($n;1;Size of array(pictNames))
-
     GET PICTURE FROM LIBRARY(pictRefs{$n};$vStoredPict)
-
     WRITE PICTURE FILE($PictFolder+pictNames{$n};$vStoredPict)
-
  End for
 ```
 
 #### See also 
+
 [CREATE FOLDER](create-folder.md)  
 [FOLDER LIST](folder-list.md)  
 [Select document](select-document.md)  

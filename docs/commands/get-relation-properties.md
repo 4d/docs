@@ -36,6 +36,7 @@ Once the command has been executed:
 **Note:** The *autoOne* and *autoMany* parameters will also return **True** if no relation starts from the source field (in this case they return non-significant values). The value of both the *oneTable* and *oneField* parameters allows you to make sure that a relation exists. 
 
 #### See also 
+
 [GET FIELD ENTRY PROPERTIES](get-field-entry-properties.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET TABLE PROPERTIES](get-table-properties.md)  

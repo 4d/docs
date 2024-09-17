@@ -42,8 +42,7 @@ You can control the XML line ending and BOM management using the [XML SET OPTION
 This example stores the tree vElemRef in a text variable: 
 
 ```4d
- C_TEXT(vtMyText)
-
+ var vtMyText : Text
  DOM EXPORT TO VAR(vElemRef;vtMyText)
 ```
 
@@ -52,5 +51,6 @@ This example stores the tree vElemRef in a text variable:
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated (for example, if the element reference is invalid).
 
 #### See also 
+
 [DOM EXPORT TO FILE](dom-export-to-file.md)  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  

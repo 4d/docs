@@ -53,13 +53,11 @@ This example creates an interprocess array of 50 Boolean elements and sets each 
 
 ```4d
  ARRAY BOOLEAN(◊abValues;50)
-
  For($vlElem;1;50)
-
     ◊abValues{$vlElem}:=(($vlElem%2)=0)
-
  End for
 ```
 
 #### See also 
+
 [ARRAY INTEGER](array-integer.md)  

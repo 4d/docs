@@ -43,27 +43,16 @@ The following example is the object method of a search button located in the foo
 
 ```4d
  QUERY([People];[People]Name=vName)
-
  Case of
-
     :(Records in selection([People])=0) // No people found
-
        OBJECT SET TITLE(bDelete;" Delete")
-
        OBJECT SET ENABLED(bDelete;False)
-
     :(Records in selection([People])=1) // One person found
-
        OBJECT SET TITLE(bDelete;"Delete Person")
-
        OBJECT SET ENABLED(bDelete;True)
-
     :(Records in selection([People])>1) // Many people found
-
        OBJECT SET TITLE(bDelete;"Delete People")
-
        OBJECT SET ENABLED(bDelete;True)
-
  End case
 ```
 
@@ -73,11 +62,11 @@ You want to insert titles on two lines:
 
 ```4d
  OBJECT SET TITLE(*;"header1";"Ascending sort \\\ \\Descending sort")
-
  OBJECT SET TITLE(*;"button1";"Click here \\to print")
 ```
 
-![](../assets/en/Commands/pict1242273.en.png)
+![](../assets/en/commands/pict1242273.en.png)
 
 #### See also 
+
 [OBJECT Get title](object-get-title.md)  

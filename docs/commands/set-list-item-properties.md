@@ -71,6 +71,7 @@ The following example changes the text of the current item of *list* to bold and
 ```
 
 #### See also 
+
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [Hierarchical Lists](../../4D/20-R6/Hierarchical-Lists.302-6958481.en.html)  
 [SET LIST ITEM](set-list-item.md)  

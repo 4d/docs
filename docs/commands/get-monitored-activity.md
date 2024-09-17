@@ -135,5 +135,6 @@ The following additional properties are returned in the *activityData* object ac
 See example for **[START MONITORING ACTIVITY](start-monitoring-activity.md)**
 
 #### See also 
+
 [START MONITORING ACTIVITY](start-monitoring-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  

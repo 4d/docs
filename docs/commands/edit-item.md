@@ -45,13 +45,11 @@ The following code may be the method of a button that allows you to insert a new
 
 ```4d
  vlUniqueRef:=vlUniqueRef+1
-
  INSERT IN LIST(hList;*;"New_item";vlUniqueRef)
-
  EDIT ITEM(*;"MyList")
 ```
 
-![](../assets/en/Commands/pict21419.en.png)
+![](../assets/en/commands/pict21419.en.png)
 
 #### Example 2 
 
@@ -59,19 +57,16 @@ Given two columns in a list box whose variable names are “Array1” and “Arr
 
 ```4d
  $vlRowNum:=Size of array(Array1)+1
-
  LISTBOX INSERT ROWS(*;"MyListBox";$vlRowNum)
-
  Array1{$vlRowNum}:="New value 1"
-
  Array2{$vlRowNum}:="New value 2"
-
  EDIT ITEM(Array2;$vlRowNum)
 ```
 
-![](../assets/en/Commands/pict21420.en.png)
+![](../assets/en/commands/pict21420.en.png)
 
 #### See also 
+
 [GOTO OBJECT](goto-object.md)  
 [INSERT IN LIST](insert-in-list.md)  
 [SET LIST ITEM](set-list-item.md)  

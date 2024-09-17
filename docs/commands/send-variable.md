@@ -26,6 +26,7 @@ displayed_sidebar: docs
 See example for the [RECEIVE RECORD](receive-record.md) command.
 
 #### See also 
+
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND RECORD](send-record.md)  

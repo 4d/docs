@@ -32,13 +32,12 @@ The following example shows a typical use for **Modified record**:
 
 ```4d
  If(Modified record([Customers]))
-
     SAVE RECORD([Customers])
-
  End if
 ```
 
 #### See also 
+
 [Modified](modified.md)  
 [Old](old.md)  
 [SAVE RECORD](save-record.md)  

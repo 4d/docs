@@ -25,4 +25,5 @@ The documentation for this command has been moved. Visit [developer.4d.com](http
 The **Create entity selection** command builds and returns a new, alterable entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table.
 
 #### See also 
+
 [USE ENTITY SELECTION](use-entity-selection.md)  

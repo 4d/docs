@@ -33,4 +33,5 @@ The OK system variable is set to 1 if the print job has been successfully open. 
 * on Windows, the selected print preview format is not available
 
 #### See also 
+
 [CLOSE PRINTING JOB](close-printing-job.md)  

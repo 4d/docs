@@ -43,24 +43,22 @@ The *action* parameter, if it is passed, can set the selection action to be carr
 
 Given the following arrays shown in a list box:
 
-![](../assets/en/Commands/pict185052.en.png)
+![](../assets/en/commands/pict185052.en.png)
 
 We want to select the "Normandy" break row:
 
 ```4d
  $row:=Find in array(T2;"Normandy")
-
  $column:=2
-
- LISTBOX COLLAPSE(*;"MyListbox") `collapsing of all levels
-
+ LISTBOX COLLAPSE(*;"MyListbox") //collapsing of all levels
  LISTBOX SELECT BREAK(*;"MyListbox";$row;$column)
 ```
 
 Here is the result:
 
-![](../assets/en/Commands/pict185059.en.png)
+![](../assets/en/commands/pict185059.en.png)
 
 #### See also 
+
 [LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
 [LISTBOX SELECT ROW](listbox-select-row.md)  

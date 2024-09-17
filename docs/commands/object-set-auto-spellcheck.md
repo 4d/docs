@@ -23,4 +23,5 @@ If you pass the optional *\** parameter, this indicates that the *object* parame
 Pass **True** in *autoSpellcheck* to enable this function for the object, and **False** to disable it.
 
 #### See also 
+
 [OBJECT Get auto spellcheck](object-get-auto-spellcheck.md)  

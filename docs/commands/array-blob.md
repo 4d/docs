@@ -51,13 +51,11 @@ This example creates a local array of 100 rows each containing 50 BLOB-type elem
 
 ```4d
  C_INTEGER($vByteValue)
-
  ARRAY BLOB($arrValues;100;50)
-
  ...
-
  $vByteValue:=$arrValues{5}{7}{9}
 ```
 
 #### See also 
+
 [Creating Arrays](../../4D/20-R6/Creating-Arrays.300-6958321.en.html)  

@@ -37,5 +37,6 @@ You want to associate the **Validate** standard action with a button:
 ```
 
 #### See also 
+
 [\_o\_OBJECT Get action](../../4D/20-R6/o-OBJECT-Get-action.301-6957659.en.html)  
 [OBJECT Get action](object-get-action.md)  

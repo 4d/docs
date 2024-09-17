@@ -50,16 +50,13 @@ You want to save an existing file in the picture field, stored outside of the da
 
 ```4d
  CREATE RECORD([Photos])
-
  [Photos]Name:="Paris.png"
-
  SET EXTERNAL DATA PATH([Photos]Thumbnail;Get 4D folder(Database folder)+"custom"+Folder separator+[Photos]Name)
-
   //"/custom/Paris.png" must exist next to structure file
-
  SAVE RECORD([Photos])
 ```
 
 #### See also 
+
 [Get external data path](get-external-data-path.md)  
 [RELOAD EXTERNAL DATA](reload-external-data.md)  

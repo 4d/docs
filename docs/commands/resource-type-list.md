@@ -37,15 +37,10 @@ The following example tells you if the Macintosh 4D structure file you are using
 
 ```4d
  $vhResFile:=Open resource file(Structure file)
-
  RESOURCE TYPE LIST(atResType;$vhResFile)
-
  If(Find in array(atResType;"4DEX")>0)
-
     ALERT("This database contains old model Mac OS 4D plug-ins."+(Char(13)*2)+
-
     "You will have to update them for using this database on Windows.")
-
  End if
 ```
 
@@ -56,28 +51,18 @@ The following example tells you if the Macintosh 4D structure file you are using
 The following project method returns the number of resources present in a resource file:
 
 ```4d
-  ` Count resources project method
-
-  ` Count resources ( Time ) -> Long
-
-  ` Count resources ( DocRef ) -> Number of resources
+  // Count resources project method
+  // Count resources ( Time ) -> Long
+  // Count resources ( DocRef ) -> Number of resources
  
-
- C_LONGINT($0)
-
- C_TIME($1)
+ var $0 : Integer
+ var $1 : Time
  
-
  $0:=0
-
  RESOURCE TYPE LIST($atResType;$1)
-
  For($vlElem;1;Size of array($atResType))
-
     RESOURCE LIST($atResType{$vlElem};$alResID;$atResName;$1)
-
     $0:=$0+Size of array($alResID)
-
  End for
 ```
 
@@ -85,15 +70,12 @@ Once this project method is implemented in a database, you can write:
 
 ```4d
  $vhResFile:=Open resource file("")
-
  If(OK=1)
-
     ALERT("The file “"+Document+"” contains "+String(Count resources($vhResFile))+" resource(s).")
-
     CLOSE RESOURCE FILE($vhResFile)
-
  End if
 ```
 
 #### See also 
+
 [RESOURCE LIST](resource-list.md)  

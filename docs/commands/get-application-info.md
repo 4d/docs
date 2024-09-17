@@ -49,82 +49,30 @@ The returned object contains the following properties:
 The following code returns an object containing information about the running application:
 
 ```4d
- C_OBJECT($appInfo)
-
+ var $appInfo : Object
  $appInfo:=Get application info
 ```
 
 If the code is executed from a standalone environment, the object contains (for example):
 
 ```RAW
-
-{
-    "launchedAsService": false,
-    "volumeShadowCopyStatus": "notAvailable",
-    "cpuUsage": 10.035875,
-    "uptime": 469,
-    "headless": false,
-    "pid": 16500,
-    "networkInputThroughput": 377263157,
-    "networkOutputThroughput": 12345242236 
-}
-
+{    "launchedAsService": false,    "volumeShadowCopyStatus": "notAvailable",    "cpuUsage": 10.035875,    "uptime": 469,    "headless": false,    "pid": 16500,    "networkInputThroughput": 377263157,    "networkOutputThroughput": 12345242236 }
 ```
 
 If the code is executed from a 4D remote client, the object contains (for example):
 
 ```RAW
-
-{
-    "launchedAsService": false,
-    "volumeShadowCopyStatus": "notAvailable",
-    "cpuUsage": 10.035875,
-    "portID": 19814,
-    "TLSEnabled": false,
-    "uptime": 143,
-    "headless": false,
-    "pid": 1550,
-    "useLegacyNetworkLayer": true,
-    "networkInputThroughput": 268047058,
-    "networkOutputThroughput": 12207686274 
-}
-
+{    "launchedAsService": false,    "volumeShadowCopyStatus": "notAvailable",    "cpuUsage": 10.035875,    "portID": 19814,    "TLSEnabled": false,    "uptime": 143,    "headless": false,    "pid": 1550,    "useLegacyNetworkLayer": true,    "networkInputThroughput": 268047058,    "networkOutputThroughput": 12207686274 }
 ```
 
 If the code is executed on 4D Server, the object contains (for example):
 
 ```RAW
-
-{
-    "launchedAsService": false,
-    "volumeShadowCopyStatus": "notAvailable",
-    "cpuUsage": 10.016125,
-    "portID": 19814,
-    "TLSEnabled": false,
-    "uptime": 192,
-    "headless": false,
-    "pid": 9560,
-    "useLegacyNetworkLayer": true,
-    "useQUICNetworkLayer": false,
-    "newConnectionsAllowed": true,
-    "IPAddressesToListen": [
-        "192.168.18.8",
-        "192.168.18.7" 
-    ],
-
-      "IPAddressesAllowDeny": [
-       {"mode": "allow", "ip": "192.168.*"},
-       {"mode": "deny", "ip": "192.167.15.3"},
-       {"mode": "allow", "ip": "192.167.1.2" }
-    ],
-
-    "networkInputThroughput": 149014925,
-    "networkOutputThroughput": 80238805 
-}
-
+{    "launchedAsService": false,    "volumeShadowCopyStatus": "notAvailable",    "cpuUsage": 10.016125,    "portID": 19814,    "TLSEnabled": false,    "uptime": 192,    "headless": false,    "pid": 9560,    "useLegacyNetworkLayer": true,    "useQUICNetworkLayer": false,    "newConnectionsAllowed": true,    "IPAddressesToListen": [        "192.168.18.8",        "192.168.18.7"     ],      "IPAddressesAllowDeny": [       {"mode": "allow", "ip": "192.168.*"},       {"mode": "deny", "ip": "192.167.15.3"},       {"mode": "allow", "ip": "192.167.1.2" }    ],    "networkInputThroughput": 149014925,    "networkOutputThroughput": 80238805 }
 ```
 
 #### See also 
+
 [Execute on server](execute-on-server.md)  
 [Get database parameter](get-database-parameter.md)  
 [Get system info](get-system-info.md)  

@@ -37,8 +37,7 @@ The following example imports data from a DIF document. The method first sets th
 
 ```4d
  FORM SET INPUT([People];"Import")
-
- IMPORT DIF([People];"NewPeople.dif") ` Import from “NewPeople.dif” document
+ IMPORT DIF([People];"NewPeople.dif") // Import from “NewPeople.dif” document
 ```
 
 #### System variables and sets 
@@ -46,6 +45,7 @@ The following example imports data from a DIF document. The method first sets th
 OK is set to 1 if the import is successfully completed; otherwise, it is set to 0.
 
 #### See also 
+
 [EXPORT DIF](export-dif.md)  
 [IMPORT SYLK](import-sylk.md)  
 [IMPORT TEXT](import-text.md)  

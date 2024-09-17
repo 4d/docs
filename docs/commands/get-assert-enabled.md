@@ -20,6 +20,7 @@ False = assertions are disabled |
 By default, assertions are enabled but they may have been disabled using the [SET ASSERT ENABLED](set-assert-enabled.md) command. 
 
 #### See also 
+
 [ASSERT](assert.md)  
 [Asserted](asserted.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  

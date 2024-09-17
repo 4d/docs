@@ -34,4 +34,5 @@ By default, the command returns a screenshot of page 1 of the form. If you only 
 * Since the first two parameters of this command are optional, you cannot pass a function returning a pointer, such as [Current form table](current-form-table.md)\-> or [Table](table.md)\->, directly as an argument. Although this syntax would work in interpreted mode, it would be rejected during compilation, so instead you need to use an intermediate pointer variable in this case. For more information, refer to "[Direct use of commands returning pointers](/4Dv20R6/4D/20-R6/Syntax-Details.300-6958551.en.html#1402882)".
 
 #### See also 
+
 [FORM LOAD](form-load.md)  

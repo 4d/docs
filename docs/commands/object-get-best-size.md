@@ -43,5 +43,6 @@ For all other form object types (group areas, tabs, rectangles, straight lines, 
 Refer to the example in the [SET PRINT MARKER](set-print-marker.md) command. 
 
 #### See also 
+
 [OBJECT MOVE](object-move.md)  
 [SET PRINT MARKER](set-print-marker.md)  

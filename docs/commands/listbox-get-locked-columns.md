@@ -27,4 +27,5 @@ If a column is inserted or deleted by programming within the locked area, the nu
 However, the command does not take into account the visible/invisible status of columns.
 
 #### See also 
+
 [LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md)  

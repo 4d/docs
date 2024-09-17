@@ -63,14 +63,10 @@ Specifying this last parameter tells 4D to first check whether or not a process 
 Given the following project method:
 
 ```4d
-  ` ADD CUSTOMERS
-
+  // ADD CUSTOMERS
  SET MENU BAR(1)
-
  Repeat
-
     ADD RECORD([Customers];*)
-
  Until(OK=0)
 ```
 
@@ -79,8 +75,7 @@ If you attach this project method to a custom menu item **Menu Bar Editor** wind
 To be able to start this Add Customers process when you click on a button in a custom control panel, you can write:
 
 ```4d
-  ` bAddCustomers button object method
-
+  // bAddCustomers button object method
  $vlProcessID:=New process("Add Customers";0;"Adding Customers")
 ```
 
@@ -89,28 +84,24 @@ The button does the same thing as the custom menu item.
 While choosing the menu item or clicking the button, if you want to start the process (if it does not exist) or bring it to the front (if it is already running), you can create the method START ADD CUSTOMERS:
 
 ```4d
-  ` START ADD CUSTOMERS
-
+  // START ADD CUSTOMERS
  $vlProcessID:=New process("Add Customers";0;"Adding Customers";*)
-
  If($vlProcessID#0)
-
     BRING TO FRONT($vlProcessID)
-
  End if
 ```
 
 The object method of the *bAddCustomers* becomes:
 
 ```4d
-  ` bAddCustomers button object method
-
+  // bAddCustomers button object method
  START ADD CUSTOMERS
 ```
 
 In the Menu Bar editor, you replace the method ADD CUSTOMERS with the method START ADD CUSTOMERS, and you deselect the **Start a New Process** property for the menu item.
 
 #### See also 
+
 [Execute on server](execute-on-server.md)  
 [Preemptive 4D processes](../../4D/20-R6/Preemptive-4D-processes.300-6957584.en.html)  
 [Processes](../../4D/20-R6/Processes.300-6957590.en.html)  

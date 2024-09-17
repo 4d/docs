@@ -20,4 +20,5 @@ displayed_sidebar: docs
 If you omit the *process* parameter, **Count menus** applies to the menu bar for the current process. Otherwise, **Count menus** applies to the menu bar for the process whose reference number is passed in *process*. 
 
 #### See also 
+
 [Count menu items](count-menu-items.md)  

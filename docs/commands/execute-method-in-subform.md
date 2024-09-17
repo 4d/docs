@@ -39,27 +39,16 @@ Given the "ContactDetail" form used as subform in the parent form "Company". The
 
 ```4d
  Case of
-
     :(Form event code=On Load)
-
        Case of
-
           :([Company]City="New York")
-
              $Color:=$Red
-
           :([Company]City="San Diego")
-
              $Color:=$Blue
-
           Else
-
              $Color:=$Black
-
        End case
-
        EXECUTE METHOD IN SUBFORM("ContactSubform";Formula(SetToColor);*;$Color)
-
  End case
 ```
 
@@ -76,7 +65,6 @@ If this method was used directly in the Calendar form method, you could call it 
 
 ```4d
  EXECUTE METHOD IN SUBFORM("Cal1";Formula(SetCalendarDate);*;!01/01/20!)
-
  EXECUTE METHOD IN SUBFORM("Cal2";Formula(SetCalendarDate);*;!05/05/20!)
 ```
 

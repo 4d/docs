@@ -27,5 +27,6 @@ The synchronized *errLabels* and *errValues* text arrays are filled when the exe
 Since exchanges between 4D and the PHP interpreter are carried out via FastCGI, the PHP interpreter functions as if it were called by an HTTP server and therefore sends HTTP headers. You can recover these headers and their values in the *httpHeaderFields* and *httpHeaderValues* arrays.
 
 #### See also 
+
 [PHP Execute](php-execute.md)  
 [PHP GET OPTION](php-get-option.md)  

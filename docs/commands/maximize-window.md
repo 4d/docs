@@ -26,7 +26,7 @@ If *window* is already maximized, the command does nothing.
 
 The size of the window is increased to match the current size of the application window (MDI mode) or the screen (SDI mode). The maximized window is set to be the frontmost window. If you do not pass the *window* parameter, the command is applied to all the application windows. 
 
-![](../assets/en/Commands/pict39344.en.png)
+![](../assets/en/commands/pict39344.en.png)
 
 Windows zoom box
 
@@ -39,7 +39,7 @@ In cases where the command is applied to a window whose size is subject to const
 
 The size of the window is increased to match the size of its contents. If you do not pass the *window* parameter, the command is applied to the frontmost window of the current process. 
 
-![](../assets/en/Commands/pict39345.en.png)
+![](../assets/en/commands/pict39345.en.png)
 
 Zoom box on Mac OS
 
@@ -51,9 +51,8 @@ Zoom box on Mac OS
 This example sets the window size of your form to full screen when it is opened. To achieve this, the following code is placed in the form method:
 
 ```4d
-  ` In the Form method
+  // In the Form method
  
-
  MAXIMIZE WINDOW
 ```
 
@@ -61,7 +60,7 @@ This example sets the window size of your form to full screen when it is opened.
 
 This example illustrates how size constraints are handled on Windows (MDI mode). The following form has a size constraint (maximum width=400):
 
-![](../assets/en/Commands/pict1476223.en.png)
+![](../assets/en/commands/pict1476223.en.png)
 
 The method of the button contains simply:
 
@@ -71,13 +70,14 @@ The method of the button contains simply:
 
 In this context, when the user clicks on the button:
 
-![](../assets/en/Commands/pict1476225.en.png)
+![](../assets/en/commands/pict1476225.en.png)
 
 ... the window is not "maximized"; only its height is increased:
 
-![](../assets/en/Commands/pict1476363.en.png)
+![](../assets/en/commands/pict1476363.en.png)
 
 #### See also 
+
 [Is window maximized](is-window-maximized.md)  
 [MINIMIZE WINDOW](minimize-window.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  

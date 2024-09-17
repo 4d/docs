@@ -26,18 +26,12 @@ The following project method capitalizes the string or text received as paramete
 
 ```4d
   //Caps project method
-
   //Caps ( String ) -> String
-
   //Caps ( Any text or string ) -> Capitalized text
  
-
  $0:=Lowercase($1)
-
  If(Length($0)>0)
-
     $0[[1]]:=Uppercase($0[[1]])
-
  End if
 ```
 
@@ -46,10 +40,10 @@ The following project method capitalizes the string or text received as paramete
 This example compares the results obtained according to whether or not the *\** parameter has been passed:
 
 ```4d
- $thestring:=Lowercase("DÉJÀ VU") ` $thestring is "deja vu"
-
- $thestring:=Lowercase("DÉJÀ VU";*) ` $thestring is "déjà vu"
+ $thestring:=Lowercase("DÉJÀ VU") // $thestring is "deja vu"
+ $thestring:=Lowercase("DÉJÀ VU";*) // $thestring is "déjà vu"
 ```
 
 #### See also 
+
 [Uppercase](uppercase.md)  

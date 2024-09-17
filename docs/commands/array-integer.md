@@ -49,14 +49,12 @@ This example creates an interprocess array of 50 2-byte [Integer](# "Number betw
 
 ```4d
  ARRAY INTEGER(◊aiValues;50)
-
  For($vlElem;1;50)
-
     ◊aiValues{$vlElem}:=$vlElem
-
  End for
 ```
 
 #### See also 
+
 [ARRAY LONGINT](array-longint.md)  
 [ARRAY REAL](array-real.md)  

@@ -38,4 +38,5 @@ To open the *ContactList* project form:
 ```
 
 #### See also 
+
 [Design Object Access Commands](../../4D/20-R6/Design-Object-Access-Commands.300-6958910.en.html)  

@@ -21,5 +21,6 @@ displayed_sidebar: docs
 The command returns **True** if a URL exists and **False** otherwise. More particularly, this command can be used, in a custom interface, to enable or disable navigation buttons.
 
 #### See also 
+
 [WA Back URL available](wa-back-url-available.md)  
 [WA OPEN FORWARD URL](wa-open-forward-url.md)  

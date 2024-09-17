@@ -32,7 +32,7 @@ If the document is open when the command is called, the result depends on the OS
 The following example deletes the document named Note:
 
 ```4d
- DELETE DOCUMENT("Note") ` Delete the document
+ DELETE DOCUMENT("Note") // Delete the document
 ```
 
 #### Example 2 
@@ -44,4 +44,5 @@ See example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) co
 Deleting a document sets the OK system variable to 1\. If **DELETE DOCUMENT** can’t delete the document, the OK system variable is set to 0.
 
 #### See also 
+
 [Test path name](test-path-name.md)  

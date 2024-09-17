@@ -82,18 +82,14 @@ From your component, you want to know if the Web server of the host database is 
 
 ```4d
   // Method of a component
-
- C_OBJECT($hostWS)
-
+ var $hostWS : Object
  $hostWS:=WEB Server(Web server host database)
-
  If($hostWS.isRunning)
-
     ...
-
  End if
 ```
 
 #### See also 
+
 [WEB Server list](web-server-list.md)  
 [webServer.stop( )](../../4D/20-R6/webServerstop.300-6957719.en.html)  

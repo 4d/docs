@@ -37,86 +37,50 @@ When a help tip is already displayed, calling the **OBJECT SET HELP TIP** comman
 
 In this form, a help tip is displayed and changes dynamically when the mouse hovers over different parts of a picture button:
 
-![](../assets/en/Commands/pict3351402.en.png)
+![](../assets/en/commands/pict3351402.en.png)
 
 ```4d
   //"myFlag" object method
  
-
- C_REAL($x;$y;oldX;oldY)
-
- C_REAL($left;$right;$top;$bottom)
-
- C_LONGINT($b)
-
- C_TEXT($tip)
-
- C_TEXT(oldTip)
-
- C_BOOLEAN($doRefresh)
+ var $x;$y;oldX;oldY : Real
+ var $left;$right;$top;$bottom : Real
+ var $b : Integer
+ var $tip : Text
+ var oldTip : Text
+ var $doRefresh : Boolean
  
-
  Case of
-
     :(FORM Event=On Load)
-
        oldTip:=""
-
        SET DATABASE PARAMETER(Tips enabled;1) //To make sure tips are enabled
-
        SET DATABASE PARAMETER(Tips delay;0) // Tip displayed immediately at mouse stop
-
        SET DATABASE PARAMETER(Tips duration;60*10) // 10 seconds max display
-
     :(FORM Event=On Mouse Move)
-
        GET MOUSE($x;$y;$b)
-
        OBJECT GET COORDINATES(*;"myFlag";$left;$top;$right;$bottom)
-
        $x:=$x-$left
-
        $y:=$y-$top
-
        Case of //each part of the flag is 76 pixels
-
           :($x<76)
-
              $tip:="Green color"
-
           :($x<152)
-
              $tip:="White color"
-
           Else
-
              $tip:="Orange color"
-
        End case
  
-
        $doRefresh:=($tip#oldtip) //true if different tip
-
        If(Not($doRefresh)) //Same contents
-
           $doRefresh:=((Abs($x-oldX)>30)|(Abs($y-oldY)>30)) //true if cursor moved
-
        End if
  
-
        If($doRefresh) //display another tip
-
           OBJECT SET HELP TIP(*;"myFlag";$tip)
-
           oldX:=$x
-
           oldY:=$y
-
           oldTip:=$tip
-
        End if
  
-
  End case
 ```
 
@@ -125,56 +89,41 @@ In this form, a help tip is displayed and changes dynamically when the mouse hov
 You have a list box, "Commands List", containing a list and you want to set a help tip displaying the description for each list item. The description is in the \[Documentation\] table. 
 
 ```4d
- C_REAL($mouseX;$mouseY;$mouseZ)
-
- C_LONGINT($col;$row)
+ var $mouseX;$mouseY;$mouseZ : Real
+ var $col;$row : Integer
  
-
  Case of
  
-
     :(FORM Event=On Mouse Enter)
  
-
        SET DATABASE PARAMETER(Tips delay;1) // make the tip appear quickly
  
-
     :(FORM Event=On Mouse Move)
  
-
   //#1 : find which row is hovered
  
-
        GET MOUSE($mouseX;$mouseY;$mouseZ)
-
        LISTBOX GET CELL POSITION(*;"Commands List";$mouseX;$mouseY;$col;$row)
  
-
   //#2 : setup the matching help tip
  
-
        If($row#0)
-
           GOTO SELECTED RECORD([Documentation];$row)
-
           OBJECT SET HELP TIP(*;"Commands List";[Documentation]Description) // the full description will be used as "help tip" when (if) the mouse stops moving.
-
        End if
  
-
     :(FORM Event=On Mouse Leave)
  
-
        SET DATABASE PARAMETER(Tips delay;3) // make the tip appear normaly
  
-
  End case
 ```
 
 The result is...
 
-![](../assets/en/Commands/pict3529022.en.png)
+![](../assets/en/commands/pict3529022.en.png)
 
 #### See also 
+
 [OBJECT Get help tip](object-get-help-tip.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  

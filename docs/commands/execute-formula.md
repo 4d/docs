@@ -43,7 +43,6 @@ The cache size is zero by default (no cache); it needs to be created or adjusted
 
 ```4d
  SET DATABASE PARAMETER(Number of formulas in cache;0) //no cache for formulas
-
  SET DATABASE PARAMETER(Number of formulas in cache;3) //up to three formulas can be cached for each process
 ```
 
@@ -58,6 +57,7 @@ You want to execute a formula including calls to 4D commands and tables. Since t
 ```
 
 #### See also 
+
 [Command name](command-name.md)  
 [EDIT FORMULA](edit-formula.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  

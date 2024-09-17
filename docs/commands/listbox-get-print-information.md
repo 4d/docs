@@ -42,23 +42,15 @@ Printing until all the rows have been printed:
 
 ```4d
  OPEN PRINTING JOB
-
  FORM LOAD("SalesForm")
  
-
  $Over:=False
-
  Repeat
-
     $Total:=Print object(*;"mylistbox")
-
     LISTBOX GET PRINT INFORMATION(*;"mylistbox";lk printing is over;$Over)
-
     PAGE BREAK
-
  Until($Over)
  
-
  CLOSE PRINTING JOB
 ```
 
@@ -68,16 +60,10 @@ Printing at least 500 rows of the list box, knowing that certain rows are hidden
 
 ```4d
  $GlobalPrinted:=0
-
  Repeat
-
     $Total:=Print object(*;"mylistbox")
-
     LISTBOX GET PRINT INFORMATION(*;"mylistbox";lk printed rows;$Printed)
-
     $GlobalPrinted:=$GlobalPrinted+$Printed
-
     PAGE BREAK
-
  Until($GlobalPrinted>=500)
 ```

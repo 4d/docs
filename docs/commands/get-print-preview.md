@@ -19,5 +19,6 @@ displayed_sidebar: docs
 Note that the user can modify this option before validating the dialog box. To get the final printing mode, you must use the [Is in print preview](is-in-print-preview.md) command. 
 
 #### See also 
+
 [Is in print preview](is-in-print-preview.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  

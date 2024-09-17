@@ -37,13 +37,14 @@ The *nodeRefsArr* array receives the values or references of the elements accord
 
 Given the following XML structure:  
 
+```XML
 <myElement>Hello<br/>New<br/>York</myElement>
+```
 
 After executing these instructions:  
 
 ```4d
  elementRef:=DOM Find XML element($root;"myElement")
-
  DOM GET XML CHILD NODES(elementRef;$typeArr;$textArr)
 ```
 
@@ -57,5 +58,6 @@ After executing these instructions:
 | $typeArr{5}=6  | $textArr{5} = "York"                                       |
 
 #### See also 
+
 [DOM Append XML child node](dom-append-xml-child-node.md)  
 [DOM Get XML document ref](dom-get-xml-document-ref.md)  

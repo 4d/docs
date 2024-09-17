@@ -45,21 +45,16 @@ You want to customize the **Help** menu for your application:
 
 ```4d
  var $col : Collection
-
  $col:=New collection
-
  $col.push(New object("title";"Knowledge base";"worker";"workerHlp";"method";"methodHlp";"shortcutAlt";True;"shortcutKey";"Y"))
-
  $col.push(Null) //to add a separation line
-
  $col.push(New object("title";"Tools";"action";ak msc;"shortcutShift";True;"shortcutKey";"Y"))
-
  SET HELP MENU($col)
-
  SET ABOUT("About this application";"m_about") //to replace 'About 4D' on Windows
 ```
 
-![](../assets/en/Commands/pict6260534.en.png)
+![](../assets/en/commands/pict6260534.en.png)
 
 #### See also 
+
 [SET ABOUT](set-about.md)  

@@ -35,7 +35,6 @@ This command causes the replacement of any existing accounts and groups created 
 
 ```4d
  DOCUMENT TO BLOB(mydoc;blob)
-
  BLOB TO USERS(blob)
 ```
 
@@ -44,4 +43,5 @@ This command causes the replacement of any existing accounts and groups created 
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0.
 
 #### See also 
+
 [USERS TO BLOB](users-to-blob.md)  

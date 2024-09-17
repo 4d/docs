@@ -103,12 +103,9 @@ After the call:
 The following example returns the name, state, and time taken in the variables *vName*, *vState,* and *vTimeSpent* for the current process:
 
 ```4d
- C_TEXT(vName) //Initialize the variables
-
- C_LONGINT(vState)
-
- C_LONGINT(vTimeSpent)
-
+ var vName : Text //Initialize the variables
+ var vState : Integer
+ var vTimeSpent : Integer
  PROCESS PROPERTIES(Current process;vName;vState;vTimeSpent)
 ```
 
@@ -121,26 +118,19 @@ See example for [Semaphore](semaphore.md).
 You want to find out the visibility and execution mode of the current process. You can write:
 
 ```4d
- C_TEXT(vName)
-
- C_LONGINT(vState)
-
- C_LONGINT(vTime)
-
- C_LONGINT(vFlags)
-
- C_BOOLEAN(isVisible)
-
- C_BOOLEAN(isPreemptive)
-
+ var vName : Text
+ var vState : Integer
+ var vTime : Integer
+ var vFlags : Integer
+ var isVisible : Boolean
+ var isPreemptive : Boolean
  PROCESS PROPERTIES(Current process;vName;vState;vTime;vFlags)
-
  isVisible:=vFlags?? 0 //true if visible
-
  isPreemptive:=vFlags?? 1 //true if preemptive
 ```
 
 #### See also 
+
 [Count tasks](count-tasks.md)  
 [Get process activity](get-process-activity.md)  
 [Preemptive 4D processes](../../4D/20-R6/Preemptive-4D-processes.300-6957584.en.html)  

@@ -24,30 +24,21 @@ displayed_sidebar: docs
 Here are the different results of this command as well as the [OB Is defined](ob-is-defined.md) command, depending on the context:
 
 ```4d
- C_OBJECT($ref)
-
+ var $ref : Object
  $empty:=OB Is empty($ref) // True
-
  $def:=OB Is defined($ref) // False
  
-
  OB SET($ref;"name";"Susie";"age";4)
-
   // $ref="{"name":"Susie","age":4}"
-
  $empty:=OB Is empty($ref) // False
-
  $def:=OB Is defined($ref) // True
  
-
  OB REMOVE($ref;"name")
-
  OB REMOVE($ref;"age")
-
  $empty:=OB Is empty($ref) // True
-
  $def:=OB Is defined($ref) // True
 ```
 
 #### See also 
+
 [OB Is defined](ob-is-defined.md)  

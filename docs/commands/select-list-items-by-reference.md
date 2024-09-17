@@ -37,24 +37,18 @@ If you work with item reference numbers, be sure to build a list in which the it
 *hList* is a list whose items have unique reference numbers. The following object method for a button selects the parent item (if any) of the currently selected item:
 
 ```4d
- $vlItemPos:=Selected list items(hList) ` Get position of selected item
-
+ $vlItemPos:=Selected list items(hList) // Get position of selected item
  GET LIST ITEM(hList;$vlItemPos;$vlItemRef;$vsItemText)
-
-  ` Get item ref number of selected item
-
+  // Get item ref number of selected item
  $vlParentItemRef:=List item parent(hList;$vlItemRef)
-
-  ` Get item ref. number of parent item (if any)
-
+  // Get item ref. number of parent item (if any)
  If($vlParentItemRef>0)
-
-    SELECT LIST ITEM BY REFERENCE(hList;List item parent(hList;$vlItemRef)) ` Select the parent item
-
+    SELECT LIST ITEM BY REFERENCE(hList;List item parent(hList;$vlItemRef)) // Select the parent item
  End if
 ```
 
 #### See also 
+
 [EDIT ITEM](edit-item.md)  
 [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
 [Selected list items](selected-list-items.md)  

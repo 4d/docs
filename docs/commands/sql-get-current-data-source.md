@@ -21,6 +21,7 @@ When the current data source is the local 4D database, the command returns the s
 This command lets you check the current data source, generally before executing an SQL query.
 
 #### See also 
+
 [Begin SQL](begin-sql.md)  
 [End SQL](end-sql.md)  
 [SQL GET DATA SOURCE LIST](sql-get-data-source-list.md)  

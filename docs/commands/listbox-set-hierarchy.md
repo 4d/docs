@@ -45,15 +45,12 @@ Definition of the aCountry, aRegion and aCity arrays as the hierarchy of a list 
 
 ```4d
  ARRAY POINTER($ArrHierarch;3)
-
- $ArrHierarch{1}:=->aCountry `First break level
-
- $ArrHierarch{2}:=->aRegion `Second break level
-
- $ArrHierarch{3}:=->aCity `Third break level
-
+ $ArrHierarch{1}:=->aCountry //First break level
+ $ArrHierarch{2}:=->aRegion //Second break level
+ $ArrHierarch{3}:=->aCity //Third break level
  LISTBOX SET HIERARCHY(*;"mylistbox";True;$ArrHierarch)
 ```
 
 #### See also 
+
 [LISTBOX GET HIERARCHY](listbox-get-hierarchy.md)  

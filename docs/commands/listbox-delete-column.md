@@ -30,5 +30,6 @@ Otherwise, the *number* parameter indicates the number of columns to remove to t
 If the *colPosition* parameter is greater than the number of columns in the list box, the command does nothing.
 
 #### See also 
+
 [LISTBOX Get number of columns](listbox-get-number-of-columns.md)  
 [LISTBOX INSERT COLUMN](listbox-insert-column.md)  

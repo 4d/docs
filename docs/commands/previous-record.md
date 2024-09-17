@@ -19,6 +19,7 @@ displayed_sidebar: docs
 If **PREVIOUS RECORD** moves the current record pointer before the current selection, [End selection](end-selection.md) returns TRUE, and there is no current record. If [End selection](end-selection.md) returns TRUE, use [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) or [GOTO SELECTED RECORD](goto-selected-record.md) to move the current record pointer back into the current selection.
 
 #### See also 
+
 [Before selection](before-selection.md)  
 [End selection](end-selection.md)  
 [FIRST RECORD](first-record.md)  

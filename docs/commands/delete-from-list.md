@@ -38,5 +38,6 @@ The following code deletes the currently selected item of the list *hList*. If t
 ```
 
 #### See also 
+
 [CLEAR LIST](clear-list.md)  
 [GET LIST ITEM](get-list-item.md)  

@@ -61,17 +61,14 @@ The QR GET INFO COLUMN command retrieves the same parameters but the reference o
 * Column size  
 This is a “visual” attribute, therefore columns are numbered from left to right, as depicted below:
 
-![](../assets/en/Commands/pict30562.en.png)
+![](../assets/en/commands/pict30562.en.png)
 
 The following statement sets the size to automatic for all the columns in a cross-table report and leaves other elements unchanged:
 
 ```4d
  For($i;1;3)
-
     QR GET INFO COLUMN(qr_area;$i;$title;$obj;$hide;$size;$rep;$format)
-
     QR SET INFO COLUMN(qr_area;$i;$title;$obj;$hide;0;$rep;$format)
-
  End for
 ```
 
@@ -80,7 +77,7 @@ You will notice that since you want to alter only the column size, you have to u
 * Data source (object) and display format  
 In this case, the numbering of columns operates as depicted below:
 
-![](../assets/en/Commands/pict30563.en.png)
+![](../assets/en/commands/pict30563.en.png)
 
 If you pass an invalid area number, the error -9850 will be generated.  
 If you pass an invalid ColNum value, the error -9852 will be generated.
@@ -89,33 +86,25 @@ If you pass an invalid ColNum value, the error -9852 will be generated.
 
 You have designed the following report:
 
-![](../assets/en/Commands/pict2569537.en.png)
+![](../assets/en/commands/pict2569537.en.png)
 
 You can write:
 
 ```4d
- C_TEXT($vTitle;$vObject;$vDisplayFormat;$vResultVar)
-
- C_LONGINT($area;$vHide;$vSize;$vRepeatedValue)
-
+ var $vTitle;$vObject;$vDisplayFormat;$vResultVar : Text
+ var $area;$vHide;$vSize;$vRepeatedValue : Integer
  QR GET INFO COLUMN($area;3;$vTitle;$vObject;$vHide;$vSize;$vRepeatedValue;$vDisplayFormat;$vResultVar)
-
   //$vTitle = "Age"
-
   //$vObject = "[People]Birthdate-Current date"
-
   //$vHide = 0
-
   //$vSize = 57
-
   //$vRepeatedValue = 1
-
   //$vDisplayFormat = ""
-
   //$vResultVar = "C1"
 ```
 
 #### See also 
+
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  

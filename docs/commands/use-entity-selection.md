@@ -23,4 +23,5 @@ The documentation for this command has been moved. Visit [developer.4d.com](http
 The **USE ENTITY SELECTION** command updates the current selection of the table matching the dataclass of the *entitySelection* parameter, according to the content of the entity selection.
 
 #### See also 
+
 [Create entity selection](create-entity-selection.md)  

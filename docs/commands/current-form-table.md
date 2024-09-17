@@ -36,44 +36,28 @@ If the variable *vsCurrentRecord* is present in a form, it displays “New Recor
 To do so, use the object method to create the variable *vsCurrentRecord*, then copy and paste it into all of your forms:
 
 ```4d
-  ` vsCurrentRecord non-enterable variable object method
-
+  // vsCurrentRecord non-enterable variable object method
  Case of
-
     :(Form event code=On Load)
-
        C_STRING(31;vsCurrentRecord)
-
-       C_POINTER($vpParentTable)
-
-       C_LONGINT($vlRecordNum)
-
+       var $vpParentTable : Pointer
+       var $vlRecordNum : Integer
        $vpParentTable:=Current form table
-
        $vlRecordNum:=Record number($vpParentTable->)
-
        Case of
-
           :($vlRecordNum=-3)
-
              vsCurrentRecord:="New Record"
-
           :($vlRecordNum=-1)
-
              vsCurrentRecord:="No Record"
-
           :($vlRecordNum>=0)
-
              vsCurrentRecord:=String(Selected record number($vpParentTable->))+" of "+
-
              String(Records in selection($vpParentTable->))
-
        End case
-
  End case
 ```
 
 #### See also 
+
 [DIALOG](dialog.md)  
 [FORM SET INPUT](form-set-input.md)  
 [FORM SET OUTPUT](form-set-output.md)  

@@ -24,5 +24,6 @@ Otherwise, **GET TABLE TITLES** returns the names of all database tables as defi
 In both cases, the command does not return invisible tables. 
 
 #### See also 
+
 [GET FIELD TITLES](get-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  

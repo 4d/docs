@@ -23,5 +23,6 @@ Usually, you will use **ERASE WINDOW** in combination with [MESSAGE](message.md)
 Do not confuse **ERASE WINDOW**, which clears the contents of a window, with [CLOSE WINDOW](close-window.md), which removes the window from the screen.
 
 #### See also 
+
 [GOTO XY](goto-xy.md)  
 [MESSAGE](message.md)  

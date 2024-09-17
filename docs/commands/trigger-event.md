@@ -34,29 +34,20 @@ You use the **Trigger event** command to structure your triggers as follows:
 
 ```4d
   // Trigger for [anyTable]
-
- C_LONGINT($0)
-
+ var $0 : Integer
  $0:=0 // Assume the database request will be granted
-
  Case of
-
     :(Trigger event=On Saving New Record Event)
-
   // Perform appropriate action for the saving of a newly created record
-
     :(Trigger event=On Saving Existing Record Event)
-
   // Perform appropriate actions for the saving of an already existing record
-
     :(Trigger event=On Deleting Record Event)
-
   // Perform appropriate actions for the deletion of a record
-
  End case
 ```
 
 #### See also 
+
 [In transaction](in-transaction.md)  
 [Trigger level](trigger-level.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  

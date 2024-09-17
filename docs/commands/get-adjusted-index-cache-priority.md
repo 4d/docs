@@ -20,6 +20,7 @@ displayed_sidebar: docs
 **Note:** This command only works in local mode (4D Server and 4D); it cannot be used in 4D remote mode. 
 
 #### See also 
+
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
 [Managing priorities in database cache](../../4D/20-R6/Managing-priorities-in-database-cache.300-6958630.en.html)  
 [SET INDEX CACHE PRIORITY](set-index-cache-priority.md)  

@@ -42,43 +42,27 @@ The following code can be associated with a 3D button having a pop-up menu entit
 
 ```4d
  Case of
-
   //Single click
-
     :(Form event code=On Clicked)
-
        WA OPEN BACK URL(WA_area)
-
   //Click on arrow -> display of pop up
-
     :(Form event code=On Alternative Click)
-
   //Create a previous history menu
-
        $Menu:=WA Create URL history menu(WA_area;WA previous URLs)
-
   //Display this menu in a pop-up
-
        $URL:=Dynamic pop up menu($Menu)
-
   //If an item is selected
-
        If($URL#"")
-
   //Open Web page
-
           WA OPEN URL(WA_area;$URL)
-
        End if
-
   //Delete menu to free up memory
-
        RELEASE MENU($Menu)
-
  End case
 ```
 
 #### See also 
+
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [RELEASE MENU](release-menu.md)  
 [WA GET URL HISTORY](wa-get-url-history.md)  

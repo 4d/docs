@@ -18,9 +18,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY BY SQL.Summary-->The QUERY BY SQL command can be used to take advantage of the SQL kernel integrated into 4D.<!-- END REF--> It can execute a simple SELECT query that can be written as follows:
 
 ```SQL
-   SELECT * 
-      FROM table 
-      WHERE <sqlFormula>
+   SELECT *       FROM table       WHERE 
 ```
 
 *aTable* is the name of the table passed in the first parameter and *sqlFormula* is the query string passed in the second parameter.
@@ -56,12 +54,7 @@ The *sqlFormula* parameter can use references to 4D expressions. The syntax to u
 QUERY BY SQL does not use relations between tables defined in the 4D Structure editor. If you want to make use of related data, you will have to add a JOIN to the query. For example, assuming we have the following structure with a Many-to-One relation from\[Persons\]City to \[Cities\]Name:
 
 ```SQL
-   [People] 
-      Name 
-      City 
-   [Cities] 
-      Name 
-      Population
+   [People]       Name       City    [Cities]       Name       Population
 ```
 
 Using the [QUERY BY FORMULA](query-by-formula.md) command, you can write:
@@ -83,18 +76,14 @@ Using QUERY BY SQL, you must write the following statement, regardless of whethe
 This example shows the offices where sales exceed 100\. The SQL query is: 
 
 ```SQL
-   SELECT *
-      FROM Offices
-      WHERE Sales > 100
+   SELECT *      FROM Offices      WHERE Sales > 100
 ```
 
 When using the **QUERY BY SQL** command:
 
 ```4d
  C_STRING(30;$queryFormula)
-
  $queryFormula:="Sales > 100"
-
  QUERY BY SQL([Offices];$queryFormula)
 ```
 
@@ -103,18 +92,14 @@ When using the **QUERY BY SQL** command:
 This example shows the orders that fall into the 3000 to 4000 range. The SQL query is: 
 
 ```SQL
-   SELECT *
-      FROM Orders
-      WHERE Amount BETWEEN 3000 AND 4000
+   SELECT *      FROM Orders      WHERE Amount BETWEEN 3000 AND 4000
 ```
 
 When using the QUERY BY SQL command:
 
 ```4d
  C_STRING(40;$queryFormula)
-
  $queryFormula:="Amount BETWEEN 3000 AND 4000"
-
  QUERY BY SQL([Orders];$queryFormula)
 ```
 
@@ -123,19 +108,14 @@ When using the QUERY BY SQL command:
 This example shows how to get the query result ordered by a specific criterion. The SQL query is: 
 
 ```SQL
-   SELECT *
-      FROM People
-      WHERE City =’Paris’
-         ORDER BY Name
+   SELECT *      FROM People      WHERE City =’Paris’         ORDER BY Name
 ```
 
 When using the QUERY BY SQL command:
 
 ```4d
  C_STRING(40;$queryFormula)
-
  $queryFormula:="City= ‘Paris’ ORDER BY Name"
-
  QUERY BY SQL([People];$queryFormula)
 ```
 
@@ -144,14 +124,7 @@ When using the QUERY BY SQL command:
 This example shows a query using related tables in 4D. In SQL you should use a JOIN to simulate this relation. Assuming we have the two following tables: 
 
 ```SQL
-   [Invoices] with the following columns (fields):
-      ID_Inv: Longint
-      Date_Inv: Date
-      Amount: Real
-   [Lines_Invoices] with the following columns (fields):
-      ID_Line: Longint
-      ID_Inv: Longint
-      Code: Alpha (10)
+   [Invoices] with the following columns (fields):      ID_Inv: Longint      Date_Inv: Date      Amount: Real   [Lines_Invoices] with the following columns (fields):      ID_Line: Longint      ID_Inv: Longint      Code: Alpha (10)
 ```
 
 There is a Many-to-One relation from \[Lines\_Invoices\]ID\_Inv to \[Invoices\]ID\_Inv.  
@@ -164,20 +137,14 @@ Using the [QUERY BY FORMULA](query-by-formula.md) command, you could write:
 The SQL query is:
 
 ```SQL
-   SELECT ID_Line
-      FROM Lines_Invoices, Invoices
-      WHERE Lines_Invoices.ID_Inv=Invoices.ID_Inv
-         AND Lines_Invoices.Code='FX-200'
-         AND MONTH(Invoices.Date_Inv) = 4
+   SELECT ID_Line      FROM Lines_Invoices, Invoices      WHERE Lines_Invoices.ID_Inv=Invoices.ID_Inv         AND Lines_Invoices.Code='FX-200'         AND MONTH(Invoices.Date_Inv) = 4
 ```
 
 When using the **QUERY BY SQL** command:
 
 ```4d
  C_STRING(40;$queryFormula)
-
  $queryFormula:="Lines_Invoices.ID_Inv=Invoices.ID_InvAND Lines_Invoices.Code=’FX-200’ AND MONTH(Invoices.Date_Inv)=4"
-
  QUERY BY SQL([Lines_Invoices];$queryFormula)
 ```
 
@@ -186,4 +153,5 @@ When using the **QUERY BY SQL** command:
 If the format of the search condition is correct, the system variable OK is set to 1\. Otherwise, it is set to 0, the result of the command is an empty selection and an error is returned. This error can be intercepted by a method installed using the [ON ERR CALL](on-err-call.md) command.
 
 #### See also 
+
 [QUERY BY FORMULA](query-by-formula.md)  

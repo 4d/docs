@@ -26,13 +26,11 @@ You want to check if the current user belongs to the "plugins" group:
 
 ```4d
  $groups:=Get group access
-
  If($groups.countValues("plugins")#0) //the user belongs to the group
-
     ... //
-
  End if
 ```
 
 #### See also 
+
 [SET GROUP ACCESS](set-group-access.md)  

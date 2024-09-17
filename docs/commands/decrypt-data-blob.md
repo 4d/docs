@@ -37,28 +37,22 @@ The following example shows how to decrypt an encrypted file located in the RESO
   
 ```4d
  var $fileToDecrypt;$decryptedFile : 4D.File
-
  var $blobToDecrypt;$decryptedBlob : Blob
-
  var $result : Boolean
  
-
  $fileToDecrypt:=File("/RESOURCES/encryptedConfidential.txt")
-
  $decryptedFile:=File("/RESOURCES/decryptedConfidential.txt")
  
-
  $blobToDecrypt:=$fileToDecrypt.getContent()
  
-
  $result:=Decrypt data BLOB($blobToDecrypt;"myPassPhrase";MAXLONG;$decryptedBlob)
-
  $decryptedFile.setContent($decryptedBlob)
 ```
 
 The *passPhrase* and *salt* used for decryption are identical to the *passPhrase* and *salt* used for encryption (see the [Encrypt data BLOB](encrypt-data-blob.md) example).
 
 #### See also 
+
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
 [Encrypt your own data with the 4D algorithm](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm)  

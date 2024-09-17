@@ -87,20 +87,15 @@ Note that the interpreter is relaunched automatically when the first request is 
 Calling the "myPhpFile.php" script without any function. Here are the contents of the script:
 
 ```PHP
-<?php
-echo 'Current PHP version: ' . phpversion();
-?>
+
 ```
 
 The following 4D code:
 
 ```4d
- C_TEXT($result)
-
- C_BOOLEAN($isOK)
-
+ var $result : Text
+ var $isOK : Boolean
  $isOK:=PHP Execute("C:\\php\\myPhpFile.php";"";$result)
-
  ALERT($Result)
 ```
 
@@ -111,32 +106,19 @@ The following 4D code:
 Calling the *myPhpFunction* function in the "myNewScript.php" script with parameters. Here are the contents of the script:
 
 ```PHP
-<?php
-// . . . PHP code. . .
-function myPhpFunction($p1, $p2) {
-    return $p1 . ' '. $p2;
-}
-// . . . PHP code.. . .
-?>
+
 ```
 
 Calling with function:
 
 ```4d
- C_TEXT($result)
-
- C_TEXT($param1)
-
- C_TEXT($param2)
-
- C_BOOLEAN($isOk)
-
+ var $result : Text
+ var $param1 : Text
+ var $param2 : Text
+ var $isOk : Boolean
  $param1 :="Hello"
-
  $param2 :="4D world!"
-
  $isOk:=PHP Execute("C:\\MyFolder\\myNewScript.php";"myPhpFunction";$result;$param1;$param2)
-
  ALERT($result) // Displays "Hello 4D world!"
 ```
 
@@ -154,54 +136,37 @@ Error management:
 
 ```4d
   // Installation of the error-management method
-
  phpCommError:="" // Modified by PHPErrorHandler
-
  $T_saveErrorHandler :=Method called on error
+ ON ERR CALL("PHPErrorHandler")
 
- ON ERR CALL("PHPErrorHandler")</p><p> // Execution of script
-
- C_TEXT($T_result)
-
+ // Execution of script
+ var $T_result : Text
  If(PHP Execute("C:\\MyScripts\\MiscInfos.php";"";$T_result))
-
   // No error, $T_Result contains the result
-
  Else
-
   // An error is detected, managed by PHPErrorHandler
-
     If(phpCommError="")
-
        ... // PHP error, use PHP GET FULL RESPONSE
-
     Else
-
        ALERT(phpCommError)
-
     End if
-
  End if
  
-
   // Uninstalling method
-
  ON ERR CALL($T_saveErrorHandler)
+
+
 ```
 
 The PHP\_errHandler method is as follows:
 
 ```4d
  phpCommError:=""
-
  GET LAST ERROR STACK(arrCodes;arrComps;arrLabels)
-
  For($i;1;Size of array(arrCodes))
-
     phpCommError:=phpCommError+String(arrCodes{$i})+" "+arrComps{$i}+" "+
-
     arrLabels{$i}+Char(Carriage return)
-
  End for
 ```
 
@@ -211,28 +176,18 @@ Dynamic creation by 4D of a script before its execution:
 
 ```4d
  DOCUMENT TO BLOB("C:\\Scripts\\MyScript.php";$blobDoc)
-
  If(OK=1)
-
     $strDoc:=BLOB to text($blobDoc;UTF8 text without length)
  
-
     $strPosition:=Position("function2Rename";$strDoc)
  
-
     $strDoc:=Insert string($strDoc;"_v2";Length("function2Rename")+$strPosition)
  
-
     TEXT TO BLOB($strDoc;$blobDoc;UTF8 text without length)
-
     BLOB TO DOCUMENT("C:\\Scripts\\MyScript.php";$blobDoc)
-
     If(OK#1)
-
        ALERT("Error on script creation")
-
     End if
-
  End if
 ```
 
@@ -247,27 +202,18 @@ The script is then executed:
 Direct retrieval of a Date and Time type value. Here are the contents of the script:
 
 ```PHP
-<?php
-// . . . code php. . .
-echo date(DATE_ATOM, mktime(1, 2, 3, 4, 5, 2009));
-// . . . code php. . .
-?>
+
 ```
 
 Receiving the date on the 4D side:
 
 ```4d
- C_DATE($phpResult_date)
-
+ var $phpResult_date : Date
  $result :=PHP Execute("C:\php_scripts\ReturnDate.php";"";$phpResult_date)
-
   //$phpResult_date is !05/04/2009 !
  
-
- C_TIME($phpResult_time)
-
+ var $phpResult_time : Time
  $result :=PHP Execute("C:\php_scripts\ReturnDate.php";"";$phpResult_time)
-
   //$phpResult_time is ?01 :02 :03 ?
 ```
 
@@ -277,20 +223,13 @@ Distribution of data in arrays:
 
 ```4d
  ARRAY TEXT($arText ;0)
-
  ARRAY LONGINT($arLong ;0)
-
  $p1 :=","
-
  $p2 :="11,22,33,44,55"
-
  $phpok :=PHP Execute("";"explode";$arText;$p1;$p2)
-
  $phpok :=PHP Execute("";"explode";$arLong;$p1;$p2)
  
-
   // $arText contains the Alpha values "11", "22", "33", etc.
-
   // $arLong contains the numbers, 11, 22, 33, etc.
 ```
 
@@ -300,11 +239,8 @@ Initialization of an array:
 
 ```4d
  ARRAY TEXT($arText ;0)
-
  $phpok :=PHP Execute("";"array_pad";$arText;->$arText;50;"undefined")
-
   // Execute in PHP: $arrTest = array_pad($arrTest, 50, ’undefined’);
-
   // Fills the $arText array with 50 "undefined" elements
 ```
 
@@ -314,11 +250,8 @@ Passing of parameters via an array:
 
 ```4d
  ARRAY INTEGER($arInt;0)
-
  $phpok :=PHP Execute("";"json_decode";$arInt;"[13,51,69,42,7]")
-
   // Execute in PHP: $arInt = json_decode(’[13,51,69,42,7]’);
-
   // Fills the array with the initial values
 ```
 
@@ -327,18 +260,16 @@ Passing of parameters via an array:
 Here is an example of the basic use of the trim function, to remove extra spaces and/or invisible characters from the beginning and end of a string:
 
 ```4d
- C_TEXT($T_String)
-
+ var $T_String : Text
  $T_String:="   Hello  "
-
- C_BOOLEAN($B)
-
+ var $B : Boolean
  $B:=PHP Execute("";"trim";$T_String;$T_String)
 ```
 
 For more information concerning the trim function, please refer to the PHP documentation.
 
 #### See also 
+
 [Executing PHP scripts in 4D](../../4D/20-R6/Executing-PHP-scripts-in-4D.300-6959076.en.html)  
 [PHP GET FULL RESPONSE](php-get-full-response.md)  
 [PHP SET OPTION](php-set-option.md)  

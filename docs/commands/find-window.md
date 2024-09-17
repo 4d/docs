@@ -24,5 +24,6 @@ The coordinates must be expressed relative to the top left corner of the content
 The *windowPart* parameter returns 3 if the window is touched, and 0 otherwise. (**Compatibility note:** Starting with 4D v14, the constants of the [Find Window](/4Dv20R6/4D/20-R6/Find-Window.302-6958482.en.html) theme are obsolete). 
 
 #### See also 
+
 [Frontmost window](frontmost-window.md)  
 [Next window](next-window.md)  

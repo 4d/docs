@@ -30,6 +30,7 @@ The *horizontal* and *vertical* parameters allow you to set the grid lines to wh
 * If you pass **True** in *vertical*, the color will be applied to vertical grid lines. If you pass **False**, their color is not changed.
 
 #### See also 
+
 [LISTBOX GET GRID COLORS](listbox-get-grid-colors.md)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  

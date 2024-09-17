@@ -18,6 +18,7 @@ displayed_sidebar: docs
 For more information, please refer to the [Suspending transactions](/4Dv20R6/4D/20-R6/Suspending-transactions.300-6958364.en.html) section. 
 
 #### See also 
+
 [Active transaction](active-transaction.md)  
 [RESUME TRANSACTION](resume-transaction.md)  
 [Suspending transactions](../../4D/20-R6/Suspending-transactions.300-6958364.en.html)  

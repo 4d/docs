@@ -42,57 +42,38 @@ See examples for the commands [COMPRESS BLOB](compress-blob.md) and [EXPAND BLOB
 After a BLOB has been compressed, the following project method obtains the percentage of space saved by the compression: 
 
 ```4d
-  ` Space saved by compression project method
-
-  ` Space saved by compression (Pointer {; Pointer } ) -> Long integer
-
-  ` Space saved by compression ( -> BLOB {; -> savedBytes } ) -> Percentage
+  // Space saved by compression project method
+  // Space saved by compression (Pointer {; Pointer } ) -> Long integer
+  // Space saved by compression ( -> BLOB {; -> savedBytes } ) -> Percentage
  
-
- C_POINTER($1;$2)
-
- C_LONGINT($0;$vlCompressed;$vlExpandedSize;$vlCurrentSize)
+ var $1;$2 : Pointer
+ var $0;$vlCompressed;$vlExpandedSize;$vlCurrentSize : Integer
  
-
  BLOB PROPERTIES($1->;$vlCompressed;$vlExpandedSize;$vlCurrentSize)
-
  If($vlExpandedSize=0)
-
     $0:=0
-
     If(Count parameters>=2)
-
        $2->:=0
-
     End if
-
  Else
-
     $0:=100-(($vlCurrentSize/$vlExpandedSize)*100)
-
     If(Count parameters>=2)
-
        $2->:=$vlExpandedSize-$vlCurrentSize
-
     End if
-
  End if
 ```
 
 After this method has been added to your application, you can use it this way:
 
 ```4d
-  ` ...
-
+  // ...
  COMPRESS BLOB(vxBlob)
-
  $vlPercent:=Space saved by compression(->vxBlob;->vlBlobSize)
-
  ALERT("The compression saved "+String(vlBlobSize)+" bytes, so "+String($vlPercent;"#0%")+
-
  " of space.")
 ```
 
 #### See also 
+
 [COMPRESS BLOB](compress-blob.md)  
 [EXPAND BLOB](expand-blob.md)  

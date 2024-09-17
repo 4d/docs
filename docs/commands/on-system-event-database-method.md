@@ -36,18 +36,11 @@ It is absolutely necessary to declare the $1 parameter (longint) in the database
 ```4d
   // On System Event database method
  
-
- C_LONGINT($1)
-
+ var $1 : Integer
  Case of
-
     :($1=On application background move)
-
   //Do something
-
     :($1=On application foreground move)
-
   //Do something else
-
  End case
 ```

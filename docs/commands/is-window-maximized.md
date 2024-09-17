@@ -23,16 +23,13 @@ You want to switch between the maximized and previous states:
 
 ```4d
  If(Is window maximized($winRef))
-
     MINIMIZE WINDOW($winRef)
-
  Else
-
     MAXIMIZE WINDOW($winRef)
-
  End if
 ```
 
 #### See also 
+
 [Is window reduced](is-window-reduced.md)  
 [MAXIMIZE WINDOW](maximize-window.md)  

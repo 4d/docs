@@ -18,4 +18,5 @@ displayed_sidebar: docs
 A sequence of SQL statements must be enclosed with the [Begin SQL](begin-sql.md) and **End SQL** keywords. For more information, refer to the description of the [Begin SQL](begin-sql.md) keyword.
 
 #### See also 
+
 [Begin SQL](begin-sql.md)  

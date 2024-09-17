@@ -35,27 +35,19 @@ The optional *source* parameter defines the kind of activity to monitor. Possibl
 You want to start/stop monitoring and review 4D data and debug activities lasting longer than a millisecond:
 
 ```4d
- C_COLLECTION($activities)
+ var $activities : Collection
  
-
  START MONITORING ACTIVITY(0.001;Activity operations+Activity language)
  
-
  $coll:=ds.Persons.all().toCollection("firstname, lastname, address.*")
  
-
   //return all operations over 1 millisecond from the 4D data activity and the debug log
-
  $activities:=Get Monitored Activity
  
-
  $text:=JSON Stringify($activities.orderBy("startTime");*)
-
  TEXT TO DOCUMENT("result.txt";$text)
  
-
   //end monitoring for 4D data activity and from the debug log
-
  STOP MONITORING ACTIVITY()
 ```
 
@@ -96,5 +88,6 @@ You want to start/stop monitoring and review 4D data and debug activities lastin
 \]
 
 #### See also 
+
 [Get Monitored Activity](get-monitored-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  

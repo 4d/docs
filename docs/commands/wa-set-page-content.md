@@ -34,8 +34,13 @@ Under Windows, this parameter has no effect and the base URL is not specified so
 Displays "Hello world!" and sets a "file:///" base URL (Mac OS only):
 
 ```4d
- WA SET PAGE CONTENT(MyWArea;"<html><body><h1>Hello World!</h1></body></html>";"file:///")
+ WA SET PAGE CONTENT(MyWArea;"
+
+[Hello World!]
+
+";"file:///")
 ```
 
 #### See also 
+
 [WA Get page content](wa-get-page-content.md)  

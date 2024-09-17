@@ -32,45 +32,28 @@ You want to allow the user to select a row beginning with the typed letter or nu
 
 ```4d
  Case of
-
     :(FORM Event.code=On Before Keystroke) //a key is pressed
-
        If(Is editing text) //text is entered
-
   // you disallow some characters
-
           If(Keystroke="+")|(Keystroke="-")|(Keystroke="/")|(Keystroke="*")
-
              FILTER KEYSTROKE("")
-
           End if
-
        Else
-
   //nothing is beeing entered, scrolling shortcut feature
-
           $charCode:=Keystroke
-
           $char:=Uppercase($charCode) // removes accents
-
           Case of
-
              :((($char>="A")&($char<="Z"))|(($char>="0")&($char<="9")))
-
                 ... //Select a row beginning with the typed letter or number
-
              :($charCode>=Left arrow key)&($charCode<=Down arrow key) // left/right/up/down arrows
-
                 FILTER KEYSTROKE("") // disable actions of arrows
-
           End case
-
        End if
-
  End case
 ```
 
 #### See also 
+
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [Get edited text](get-edited-text.md)  
 [Type ahead made easy (blog post)](https://blog.4d.com/type-ahead-made-easy/)  

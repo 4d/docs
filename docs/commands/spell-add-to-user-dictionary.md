@@ -26,15 +26,12 @@ Adding proper nouns to the user dictionary:
 
 ```4d
  ARRAY TEXT($arrTwords;0)
-
  APPEND TO ARRAY($arrTwords;"4D")
-
  APPEND TO ARRAY($arrTwords;"Wakanda")
-
  APPEND TO ARRAY($arrTwords;"Clichy")
-
  SPELL ADD TO USER DICTIONARY($arrTwords)
 ```
 
 #### See also 
+
 [SPELL CHECK TEXT](spell-check-text.md)  

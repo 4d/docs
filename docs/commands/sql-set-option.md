@@ -42,4 +42,5 @@ displayed_sidebar: docs
 If the command was properly executed, the system variable OK returns 1\. Otherwise, it returns 0.
 
 #### See also 
+
 [SQL GET OPTION](sql-get-option.md)  

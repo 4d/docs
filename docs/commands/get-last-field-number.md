@@ -25,25 +25,18 @@ The following project method builds the array *asFields*, consisting of the fiel
 
 ```4d
  $vlTable:=Table($1)
-
  ARRAY STRING(31;asFields;Get last field number($vlTable))
-
  For($vlField;Size of array(asFields);1;-1)
-
     If(Is field number valid($vlTable;$vlField))
-
        asFields{$vlField}:=Field name($vlTable;$vlField)
-
     Else
-
        DELETE FROM ARRAY(asFields;$vlField)
-
     End if
-
  End for
 ```
 
 #### See also 
+
 [Field name](field-name.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Get last table number](get-last-table-number.md)  

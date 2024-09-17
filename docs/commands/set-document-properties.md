@@ -32,6 +32,7 @@ Before the call:
 The dates and times of creation and last modification are managed by the file manager of your system each time you create or access a document. Using this command, you can change those properties for special purpose. See example for the command [GET DOCUMENT PROPERTIES](get-document-properties.md).
 
 #### See also 
+
 [\_o\_SET DOCUMENT CREATOR](../../4D/20-R6/o-SET-DOCUMENT-CREATOR.301-6957646.en.html)  
 [\_o\_SET DOCUMENT TYPE](../../4D/20-R6/o-SET-DOCUMENT-TYPE.301-6957648.en.html)  
 [GET DOCUMENT PROPERTIES](get-document-properties.md)  

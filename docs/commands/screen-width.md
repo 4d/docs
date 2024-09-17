@@ -20,5 +20,6 @@ displayed_sidebar: docs
 On Macintosh, Screen width returns the width of the main screen, the screen where the menu bar is located.
 
 #### See also 
+
 [SCREEN COORDINATES](screen-coordinates.md)  
 [Screen height](screen-height.md)  

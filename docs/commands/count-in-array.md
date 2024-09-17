@@ -30,7 +30,6 @@ The following example allows displaying the number of selected lines in a list b
 
 ```4d
   //tBList is the name of a List box column array
-
  ALERT(String(Count in array(tBList;True))+" line(s) selected in the list box")
 ```
 
@@ -40,27 +39,20 @@ You want to count object references in an object array:
 
 ```4d
  ARRAY OBJECT($objects;100)
-
  $o1:={a10;b"xyz"}
-
  $o2:={a10;b"xyz"}
  
-
  $objects{20}:=$o1
-
  $objects{21}:=$o1
-
  $objects{22}:=$o1
  
-
  var $n : Integer
  
-
  $n:=Count in array($objects;$o1) // n = 3 
-
  $n:=Count in array($objects;$o2) // n = 0
 ```
 
 #### See also 
+
 [Find in array](find-in-array.md)  
 [Find in sorted array](find-in-sorted-array.md)  

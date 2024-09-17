@@ -22,7 +22,7 @@ The system color selection window appears as follows:
 
 | **Macintosh**                                | **Windows**                                 |
 | -------------------------------------------- | ------------------------------------------- |
-| ![](../assets/en/Commands/pict942577.fr.png) | ![](../assets/en/Commands/pict43385.en.png) |
+| ![](../assets/en/commands/pict942577.fr.png) | ![](../assets/en/commands/pict43385.en.png) |
 
 The optional *defaultColor* parameter preselects a color in the window. This parameter can be used, for example, to restore by default the last color set by the user. Pass an RGB-format color value in this parameter (for more information, refer to the description of the [OBJECT SET RGB COLORS](object-set-rgb-colors.md) command). You can use one of the constants in the [SET RGB COLORS](/4Dv20R6/4D/20-R6/SET-RGB-COLORS.302-6958485.en.html) theme. If the *defaultColor* parameter is omitted or if you pass 0, the color black is selected when the dialog box is opened. 
 
@@ -36,4 +36,5 @@ The effect of validating this dialog box differs depending on the platform:
 **Note:** This command must not be executed on the server machine nor within a Web process.
 
 #### See also 
+
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  

@@ -31,26 +31,16 @@ During the execution of RECEIVE BUFFER, the user can interrupt the reception by 
 The project method LISTEN TO SERIAL PORT uses **RECEIVE BUFFER** to get text from the serial port and accumulate it into a an interprocess variable:
 
 ```4d
-  ` LISTEN TO SERIAL PORT
-
-  ` Opening the serial port
-
+  // LISTEN TO SERIAL PORT
+  // Opening the serial port
  SET CHANNEL(201;Speed 9600+Data bits 8+Stop bits one+Parity none)
-
  <>IP_Listen_Serial_Port:=True
-
  While(<>IP_Listen_Serial_Port)
-
     RECEIVE BUFFER($vtBuffer)
-
     If((Length($vtBuffer)+Length(<>vtBuffer))>MAXTEXTLEN)
-
        <>vtBuffer:=""
-
     End if
-
     <>vtBuffer:=<>vtBuffer+$Buffer
-
  End while
 ```
 
@@ -59,14 +49,14 @@ At this point, any other process can read the interprocess *◊vtBuffer* to work
 To stop listening to the serial port, just execute:
 
 ```4d
-  ` Stop listening to the serial port
-
+  // Stop listening to the serial port
  ◊IP_Listen_Serial_Port:=False
 ```
 
 Note that access to the interprocess *◊vtBuffer* variable should be protected by a semaphore, so that processes will not conflict. See the command [Semaphore](semaphore.md) for more information.
 
 #### See also 
+
 [ON ERR CALL](on-err-call.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [Semaphore](semaphore.md)  

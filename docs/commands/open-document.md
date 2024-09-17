@@ -54,16 +54,11 @@ Do not forget to eventually call [CLOSE DOCUMENT](close-document.md) for the doc
 The following example opens an existing document called Note, writes the string "Good-bye" into it, and closes the document. Any existing content in the document will be overwritten: 
 
 ```4d
- C_TIME(vhDoc)
-
+ var vhDoc : Time
  vhDoc:=Open document("Note.txt";Read and Write) //Open a document called Note
-
  If(OK=1)
-
     SEND PACKET(vhDoc;"Good-bye") //Write one word into the document
-
     CLOSE DOCUMENT(vhDoc) //Close the document
-
  End if
 ```
 
@@ -72,10 +67,8 @@ The following example opens an existing document called Note, writes the string 
 You can read a document even if it is already open in write mode:
 
 ```4d
- vDoc:=Open document("PassFile";"TEXT") ` The file is open
-
-  ` Before the file is closed, it is possible to consult it in read-only mode:
-
+ vDoc:=Open document("PassFile";"TEXT") // The file is open
+  // Before the file is closed, it is possible to consult it in read-only mode:
  vRef:=Open document("PassFile";"TEXT";Read Mode)
 ```
 
@@ -90,5 +83,6 @@ If you call **Open document** with a mode of 3, the function returns ?00:00:00? 
 **Note:** If you pass an empty string in *document*, an open file dialog box appears. If the user chooses a document and clicks the OK button, *document* is set to the path of the document the user selected and OK is set to 1\. If the user clicked the Cancel button, OK is set to 0.
 
 #### See also 
+
 [Append document](append-document.md)  
 [Create document](create-document.md)  

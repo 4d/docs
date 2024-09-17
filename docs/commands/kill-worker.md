@@ -37,24 +37,18 @@ In the worker method (*theWorker*), you add some code to handle this situation:
 
 ```4d
   //theWorker method
-
- C_TEXT($1) //param
+ var $1 : Text //param
  
-
  Case of
-
     :($1="call") //the worker is called
-
        ... //do something
-
     :($1="end") //the worker is asked to kill itself
-
        KILL WORKER
-
  End case
 ```
 
 #### See also 
+
 [About workers](../../4D/20-R6/About-workers.300-6958856.en.html)  
 [CALL WORKER](call-worker.md)  
 [Current process name](current-process-name.md)  

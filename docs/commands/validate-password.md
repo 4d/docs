@@ -35,25 +35,15 @@ This example checks whether the password of the user “Hardy” is “Laurel”
 
 ```4d
  GET USER LIST(atUserName;alUserID)
-
  $vlElem:=Find in array(atUserName;"Hardy")
-
  If($vlElem>0)
-
     If(Validate password(alUserID{$vlElem};"Laurel"))
-
        ALERT("Yep!")
-
     Else
-
        ALERT("Too bad!")
-
     End if
-
  Else
-
     ALERT("Unknown user name")
-
  End if
 ```
 
@@ -66,6 +56,7 @@ In the [On REST Authentication database method](on-rest-authentication-database-
 ```
 
 #### See also 
+
 [GET USER PROPERTIES](get-user-properties.md)  
 [Set user properties](set-user-properties.md)  
 [WEB Validate digest](web-validate-digest.md)  

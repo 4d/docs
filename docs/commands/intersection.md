@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 The graphical result of an Intersection operation is displayed here. The shaded area is the result set.
 
-![](../assets/en/Commands/pict32963.en.png)
+![](../assets/en/commands/pict32963.en.png)
 
 The *resultSet* is created by **INTERSECTION**. The *resultSet* replaces any existing set having the same name, including *set1* and *set2*. Both *set1* and *set2* must be from the same table. The *resultSet* belongs to the same table as *set1* and *set2*. If the same current record is set in both *set1* and *set2*, it remains memorized in the *resultSet*. Otherwise, *resultSet* does not have a current record. 
 
@@ -38,15 +38,13 @@ The *resultSet* is created by **INTERSECTION**. The *resultSet* replaces any exi
 The following example finds the customers who are served by two sales representatives, Joe and Abby. Each sales representative has a set that represents his or her customers. The customers that are in both sets are represented by both Joe and Abby:
 
 ```4d
- INTERSECTION("Joe";"Abby";"Both") ` Put customers in both sets in Both
-
- USE SET("Both") ` Use the set
-
- CLEAR SET("Both") ` Clear this set but save the others
-
- DISPLAY SELECTION([Customers]) ` Display customers served by both
+ INTERSECTION("Joe";"Abby";"Both") // Put customers in both sets in Both
+ USE SET("Both") // Use the set
+ CLEAR SET("Both") // Clear this set but save the others
+ DISPLAY SELECTION([Customers]) // Display customers served by both
 ```
 
 #### See also 
+
 [DIFFERENCE](difference.md)  
 [UNION](union.md)  

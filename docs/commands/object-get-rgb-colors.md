@@ -34,4 +34,5 @@ The RGB color values returned in the *foregroundColor*, *backgroundColor*, and *
 For more information about the format of the *foregroundColor*, *backgroundColor*, and *altBackgrndColor* parameters, refer to the description of the [OBJECT SET RGB COLORS](object-set-rgb-colors.md) command.
 
 #### See also 
+
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  

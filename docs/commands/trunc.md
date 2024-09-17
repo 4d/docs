@@ -25,14 +25,12 @@ If *places* is positive, *number* is truncated to *places* decimal places. If *p
 The following example illustrates how Trunc works with different arguments. Each line assigns a number to the *vlResult* variable. The comments describe the results:
 
 ```4d
- vlResult:=Trunc(216.897;1) ` vlResult gets 216.8
-
- vlResult:=Trunc(216.897;-1) ` vlResult gets 210
-
- vlResult:=Trunc(-216.897;1) ` vlResult gets –216.9
-
- vlResult:=Trunc(-216.897;-1) ` vlResult gets –220
+ vlResult:=Trunc(216.897;1) // vlResult gets 216.8
+ vlResult:=Trunc(216.897;-1) // vlResult gets 210
+ vlResult:=Trunc(-216.897;1) // vlResult gets –216.9
+ vlResult:=Trunc(-216.897;-1) // vlResult gets –220
 ```
 
 #### See also 
+
 [Round](round.md)  

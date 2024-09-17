@@ -28,27 +28,18 @@ In a form, you are using the drop-down list *asMyDropDown* whose sole purpose is
 
 ```4d
   //asMyDropDown drop-drop list object method
-
  Case of
-
     :(Form event code=On Load)
-
   //Initialize the array one way or another
-
        ARRAY TEXT(asMyDropDown;...)
-
   // ...
-
     :(Form event code=On Unload)
-
   //No longer need the array
-
        CLEAR VARIABLE(asMyDropDown)
-
   // ...
-
  End case
 ```
 
 #### See also 
+
 [Undefined](undefined.md)  

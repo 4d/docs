@@ -28,4 +28,5 @@ If the path passed in *aliasPath* corresponds to a file and not an alias, *targe
 If *aliasPath* does specify an alias/shortcut, the OK system variable is set to 1\. If *aliasPath* specifies a standard file, the OK system variable is set to 0.
 
 #### See also 
+
 [CREATE ALIAS](create-alias.md)  

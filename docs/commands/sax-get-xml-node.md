@@ -37,29 +37,17 @@ The following example processes an event:
 
 ```4d
  DocRef:=Open document("";"xml";Read Mode)
-
  If(OK=1)
-
     Repeat
-
        MyEvent:=SAX Get XML node(DocRef)
-
        Case of
-
           :(MyEvent=XML Start Document)
-
              DoSomething
-
           :(MyEvent=XML Comment)
-
              DoSomethingElse
-
        End case
-
     Until(MyEvent=XML End Document)
-
     CLOSE DOCUMENT(DocRef)
-
  End if
 ```
 

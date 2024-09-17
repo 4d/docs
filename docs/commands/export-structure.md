@@ -38,9 +38,7 @@ You want to export the current database structure in a text file:
 
 ```4d
  var $vTStruc : Text
-
  EXPORT STRUCTURE($vTStruc)
-
  TEXT TO DOCUMENT("myStructure.xml";$vTStruc)
 ```
 
@@ -50,11 +48,10 @@ You want to export the current database structure in html format:
 
 ```4d
  var $vHtml : Text
-
  EXPORT STRUCTURE($vHtml;html format)
-
  File("/PACKAGE/myProject Structure Export/myProject.html").setText($vHtml)
 ```
 
 #### See also 
+
 [IMPORT STRUCTURE](import-structure.md)  

@@ -65,7 +65,7 @@ The following example reads data from the document referenced by the variable *m
 The following example reads data from the document referenced by the variable *myDoc* into the variable *vData*. It reads until it encounters the *</TD>* (end of table cell) HTML tag:
 
 ```4d
- RECEIVE PACKET(myDoc;vData;"</TD>")
+ RECEIVE PACKET(myDoc;vData;"")
 ```
 
 #### Example 4 
@@ -73,49 +73,31 @@ The following example reads data from the document referenced by the variable *m
 The following example reads data from a document into fields. The data is stored as fixed-length fields. The method calls a subroutine to strip any trailing spaces (spaces at the end of the string). The subroutine follows the method: 
 
 ```4d
- $vhDocRef :=Open document("";"TEXT") ` Open a TEXT document
-
- If(OK=1) ` If the document was opened
-
-    Repeat ` Loop until no more data
-
-       RECEIVE PACKET($vhDocRef;$Var1;15) ` Read 15 characters
-
-       RECEIVE PACKET($vhDocRef;$Var2;15) ` Do same as above for second field
-
-       If(($Var1#"")|($Var2#"")) ` If at least one of the fields is not empty
-
-          CREATE RECORD([People]) ` Create a new record
-
-          [People]First :=Strip($Var1) ` Save the first name
-
-          [People]Last :=Strip($Var2) ` Save the last name
-
-          SAVE RECORD([People]) ` Save the record
-
+ $vhDocRef :=Open document("";"TEXT") // Open a TEXT document
+ If(OK=1) // If the document was opened
+    Repeat // Loop until no more data
+       RECEIVE PACKET($vhDocRef;$Var1;15) // Read 15 characters
+       RECEIVE PACKET($vhDocRef;$Var2;15) // Do same as above for second field
+       If(($Var1#"")|($Var2#"")) // If at least one of the fields is not empty
+          CREATE RECORD([People]) // Create a new record
+          [People]First :=Strip($Var1) // Save the first name
+          [People]Last :=Strip($Var2) // Save the last name
+          SAVE RECORD([People]) // Save the record
        End if
-
     Until(OK=0)
-
-    CLOSE DOCUMENT($vhDocRef) ` Close the document
-
+    CLOSE DOCUMENT($vhDocRef) // Close the document
  End if
 ```
 
 The spaces at the end of the data are stripped by the following method, called Strip:
 
 ```4d
- For($i;Length($1);1;-1) ` Loop from end of string to start
-
-    If($1[[$i]]#" ") ` If it is not a space…
-
-       $i :=-$i  ` Force the loop to end
-
+ For($i;Length($1);1;-1) // Loop from end of string to start
+    If($1[[$i]]#" ") // If it is not a space…
+       $i :=-$i  // Force the loop to end
     End if
-
  End for
-
- $0:=Delete string($1;-$i;Length($1)) ` Delete the spaces
+ $0:=Delete string($1;-$i;Length($1)) // Delete the spaces
 ```
 
 #### System variables and sets 
@@ -123,6 +105,7 @@ The spaces at the end of the data are stripped by the following method, called S
 After a call to **RECEIVE PACKET**, the OK system variable is set to 1 if the packet is received without error. Otherwise, the OK system variable is set to 0.
 
 #### See also 
+
 [Get document position](get-document-position.md)  
 [RECEIVE BUFFER](receive-buffer.md)  
 [SEND PACKET](send-packet.md)  

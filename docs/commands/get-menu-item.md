@@ -24,5 +24,6 @@ If you omit the *process* parameter, **Get menu item** applies to the menu bar f
 **Note:** If you pass a [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") in *menu*, the *process* parameter serves no purpose and will be ignored.
 
 #### See also 
+
 [Get menu item key](get-menu-item-key.md)  
 [SET MENU ITEM](set-menu-item.md)  

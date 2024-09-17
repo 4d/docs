@@ -28,4 +28,5 @@ More particularly, this command lets you recopy the external file.
 * The command is executed from a remote 4D.
 
 #### See also 
+
 [SET EXTERNAL DATA PATH](set-external-data-path.md)  

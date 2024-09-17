@@ -30,4 +30,5 @@ Before the first “sibling,” the system variable OK is set to 0\.
 If the command has been executed correctly and if the referenced element is not the first “child” of the structure, the system variable OK is set to 1\. If an error occurs or if the element parsed is the first “child” of the structure, it is set to 0.
 
 #### See also 
+
 [DOM Get next sibling XML element](dom-get-next-sibling-xml-element.md)  

@@ -30,9 +30,7 @@ This method indicates how many records are selected in the subform displaying th
 
 ```4d
  GET HIGHLIGHTED RECORDS([CDs];"$highlight")
-
  ALERT(String(Records in set("$highlight"))"+"selected records.")
-
  CLEAR SET("$highlight")
 ```
 
@@ -41,4 +39,5 @@ This method indicates how many records are selected in the subform displaying th
 If the command was executed properly, the system variable OK is set to 1\. Otherwise, it is set to 0\. 
 
 #### See also 
+
 [HIGHLIGHT RECORDS](highlight-records.md)  

@@ -29,11 +29,7 @@ Each returned object includes the following main properties:
 For example, in the case of a click on a button, the object contains the following properties:
 
 ```RAW
-{
-"code":4,
-"description":"On Clicked",
-"objectName":"Button2"
-}
+{"code":4,"description":"On Clicked","objectName":"Button2"}
 ```
 
 The event object can contain additional properties, depending on the object for which the event occurs. For *eventObj* objects generated on:
@@ -49,9 +45,7 @@ You want to handle the On Clicked event on a button:
 
 ```4d
  If(FORM Event.code=On Clicked)
-
     ...
-
  End if
 ```
 
@@ -59,23 +53,17 @@ You want to handle the On Clicked event on a button:
 
 If you set the column object name with a real attribute name of a dataclass like this:
 
-![](../assets/en/Commands/pict4843820.en.png)
+![](../assets/en/commands/pict4843820.en.png)
 
 You can sort the column using the On Header Click event:
 
 ```4d
  Form.event:=FORM Event
-
  Case of
-
     :(Form event code=On Header Click)
-
        if(Form.event.columnName="lastname")
-
           Form.employees:=Form.employees.orderBy(Form.event.columnName+", firstname")
-
        End if
-
  End case
 ```
 
@@ -83,36 +71,28 @@ You can sort the column using the On Header Click event:
 
 You want to handle the On Display Details on a list box object with a method set in the *Meta info expression* property:
 
-![](../assets/en/Commands/pict4843812.en.png)
+![](../assets/en/commands/pict4843812.en.png)
 
 The *setColor* method:
 
 ```4d
- C_OBJECT($event;$0;$meta)
-
+ var $event;$0;$meta : Object
  $event:=FORM Event
-
  $meta:=New object
  
-
  Case of
-
     :($event.code=On Display Detail)
-
        If($event.isRowSelected)
-
           $meta.fill:="lightblue"
-
        End if
-
  End case
-
  $0:=$meta
 ```
 
 The resulting list box when rows are selected:
 
-![](../assets/en/Commands/pict4843808.en.png)
+![](../assets/en/commands/pict4843808.en.png)
 
 #### See also 
+
 [Form event code](form-event-code.md)  

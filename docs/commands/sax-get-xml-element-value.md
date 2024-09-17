@@ -23,9 +23,11 @@ Pass a Text or BLOB type variable in the *value* parameter. If you pass a BLOB, 
 
 Let's look at the following piece of XML code:
 
+```XML
 <RootElement>
    <Child Att1="111" Att2="222" Att3="333">MyText</Child>
 </RootElement>
+```
 
 The following instruction will return “MyText” in *vValue*:
 
@@ -38,5 +40,6 @@ The following instruction will return “MyText” in *vValue*:
 If the command was executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated.
 
 #### See also 
+
 [SAX ADD XML ELEMENT VALUE](sax-add-xml-element-value.md)  
 [SAX Get XML node](sax-get-xml-node.md)  

@@ -19,5 +19,6 @@ displayed_sidebar: docs
 If this command is called outside of the context of a Web session, it returns an empty string "". 
 
 #### See also 
+
 [WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
 [Web Sessions Management (Legacy)](../../4D/20-R6/Web-Sessions-Management-Legacy.300-6957735.en.html)  

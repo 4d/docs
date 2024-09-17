@@ -26,10 +26,8 @@ You pass the HTTP header fields to the *fields* parameter, of the Text type (var
 Here is an example of a custom “cookie”:
 
 ```4d
- C_TEXT($vTcookie)
-
+ var $vTcookie : Text
  $vTcookie:="Set-Cookie: USER="+String(Abs(Random))+"; PATH=/"
-
  WEB SET HTTP HEADER($vTcookie)
 ```
 
@@ -42,20 +40,13 @@ The HTTP header is defined through two text arrays, *fieldArray* and *valueArray
 
 ```4d
  fieldArray{1}:="X-VERSION"
-
  fieldArray{2}:="X-STATUS"
-
  fieldArray{3}:="Set-Cookie"
-
  fieldArray{4}:="Server"
  
-
  valueArray{1}:="HTTP/1.0"*
-
  valueArray{2}:="200 OK"*
-
  valueArray{3}:="C=HELLO"
-
  valueArray{4}:="North_Carolina"
 ```
 
@@ -63,11 +54,11 @@ The HTTP header is defined through two text arrays, *fieldArray* and *valueArray
 
 ```4d
  fieldArray{1}:="Set-Cookie"
-
  valueArray{1}:="C=HELLO"
 ```
 
 If you do not specify a state, it will automatically be HTTP/1.0 200 OK. By default, the **Server** field is "4D/<version>". The **Date** and **Content-Length** fields are also set by default by 4D. 
 
 #### See also 
+
 [WEB GET HTTP HEADER](web-get-http-header.md)  

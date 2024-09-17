@@ -22,7 +22,7 @@ If the *aTable* parameter is omitted, the command applies to the default table. 
 
 If you do not specify *queryArgument* or the *\** parameters, **QUERY** displays the Query editor for *aTable* (except when it is the last row of a multiple query, see example 2):
 
-![](../assets/en/Commands/pict1581957.en.png)
+![](../assets/en/commands/pict1581957.en.png)
 
 For more information about using the Query Editor, refer to the 4D Design Reference manual.
 
@@ -59,9 +59,8 @@ The following line looks for the \[People\] whose name starts with an “a”:
 The following line looks for the \[People\] whose name starts with “a” or “b”:
 
 ```4d
- QUERY([People];[People]Name="a@";*) ` * indicates that there are further search criteria
-
- QUERY([People];|;[People]Name="b@") ` No * ends the query definition and starts the actual query operation
+ QUERY([People];[People]Name="a@";*) // * indicates that there are further search criteria
+ QUERY([People];|;[People]Name="b@") // No * ends the query definition and starts the actual query operation
 ```
 
 **Note:** The interpretation of @ characters in queries can be modified via an option in the Preferences. For more information, please refer to the [Comparison Operators](/4Dv20R6/4D/14-R5/Comparison-Operators.300-1851154.en.html) section.
@@ -133,9 +132,8 @@ The following command finds the records for all the people named Smith:
 The following example finds the records for all people named John Smith. The Last Name field is indexed. The First Name field is not indexed. 
 
 ```4d
- QUERY([People];[People]Last Name="smith";*) ` Find every person named Smith
-
- QUERY([People]; & ;[People]First Name="john") ` with John as first name
+ QUERY([People];[People]Last Name="smith";*) // Find every person named Smith
+ QUERY([People]; & ;[People]First Name="john") // with John as first name
 ```
 
 When the query is performed, it quickly does an indexed search on Last Name and reduces the selection of records to those of people named Smith. The query then sequentially searches on First Name in this selection of records.
@@ -145,9 +143,8 @@ When the query is performed, it quickly does an indexed search on Last Name and 
 The following example will automatically take advantage of a composite index of the *\[People\]First Name*+*\[People\]Last Name* fields (if it exists) to find the records for all people named John Smith.
 
 ```4d
- QUERY([People];[People]First Name="john";*) ` Find every person named John
-
- QUERY([People];&;[People]Last Name="smith") ` with Smith as last name
+ QUERY([People];[People]First Name="john";*) // Find every person named John
+ QUERY([People];&;[People]Last Name="smith") // with Smith as last name
 ```
 
 For more information, see [Composite indexes](/4Dv20R6/4D/20-R6/Creating-and-modifying-indexes.300-7003397.en.html#106846).
@@ -157,9 +154,8 @@ For more information, see [Composite indexes](/4Dv20R6/4D/20-R6/Creating-and-mod
 The following example finds the records of people named Smith or Jones. The Last Name field is indexed.
 
 ```4d
- QUERY([People];[People]Last Name="smith";*) ` Find every person named Smith…
-
- QUERY([People];|;[People]Last Name="jones") ` ...or Jones
+ QUERY([People];[People]Last Name="smith";*) // Find every person named Smith…
+ QUERY([People];|;[People]Last Name="jones") // ...or Jones
 ```
 
 The QUERY command uses the Last Name index for both queries. The two queries are performed, and their results put into internal sets that are eventually combined using a union.
@@ -169,7 +165,7 @@ The QUERY command uses the Last Name index for both queries. The two queries are
 The following example finds the records for people who do not have a company name. It does this by finding entries with empty fields (the empty string).
 
 ```4d
- QUERY([People];[People]Company="") ` Find every person with no company
+ QUERY([People];[People]Company="") // Find every person with no company
 ```
 
 #### Example 10 
@@ -177,9 +173,8 @@ The following example finds the records for people who do not have a company nam
 The following example finds the record for every person whose last name is Smith and who works for a company based in New York. The second query uses a field from another table. This query can be done because the \[People\] table is related to the \[Company\] table with a many to one relation:
 
 ```4d
- QUERY([People];[People]Last Name="smith";*) ` Find every person named Smith…
-
- QUERY([People];&;[Company]State="NY") ` ... who works for a company based in NY
+ QUERY([People];[People]Last Name="smith";*) // Find every person named Smith…
+ QUERY([People];&;[Company]State="NY") // ... who works for a company based in NY
 ```
 
 #### Example 11 
@@ -187,7 +182,7 @@ The following example finds the record for every person whose last name is Smith
 The following example finds the record for every person whose name falls between A (included) and M (included):
 
 ```4d
- QUERY([People];[People]Name<"n") ` Find every person from A to M
+ QUERY([People];[People]Name<"n") // Find every person from A to M
 ```
 
 #### Example 12 
@@ -195,9 +190,8 @@ The following example finds the record for every person whose name falls between
 The following example finds the records for all the people living in the San Francisco or Los Angeles areas (ZIP codes beginning with 94 or 90):
 
 ```4d
- QUERY([People];[People]ZIP Code ="94@";*) ` Find every person in the SF…
-
- QUERY([People];|;[People]ZIP Code ="90@") ` ...or Los Angeles areas
+ QUERY([People];[People]ZIP Code ="94@";*) // Find every person in the SF…
+ QUERY([People];|;[People]ZIP Code ="90@") // ...or Los Angeles areas
 ```
 
 #### Example 13 
@@ -206,8 +200,7 @@ Searching by keyword: the following example searches the \[Products\] table for 
 
 ```4d
  QUERY([Products];[Products]Description%"easy")
-
-  ` Find products whose description contains the keyword easy
+  // Find products whose description contains the keyword easy
 ```
 
 #### Example 14 
@@ -215,12 +208,9 @@ Searching by keyword: the following example searches the \[Products\] table for 
 The following example finds the record that matches the invoice reference entered in the request dialog box:
 
 ```4d
- vFind:=Request("Find invoice reference:") ` Get an invoice reference from the user
-
- If(OK=1) ` If the user pressed OK
-
-    QUERY([Invoice];[Invoice]Ref=vFind) ` Find the invoice reference that matches vFind
-
+ vFind:=Request("Find invoice reference:") // Get an invoice reference from the user
+ If(OK=1) // If the user pressed OK
+    QUERY([Invoice];[Invoice]Ref=vFind) // Find the invoice reference that matches vFind
  End if
 ```
 
@@ -229,9 +219,8 @@ The following example finds the record that matches the invoice reference entere
 The following example finds the records for the invoices entered in 1996\. It does this by finding all records entered after 12/31/95 and before 1/1/97:
 
 ```4d
- QUERY([Invoice];[Invoice]In Date>!12/31/95!;*) ` Find invoices after 12/31/95…
-
- QUERY([Invoice];&;[Invoice]In Date<!1/1/97!) ` and before 1/1/97
+ QUERY([Invoice];[Invoice]In Date>!12/31/95!;*) // Find invoices after 12/31/95…
+ QUERY([Invoice];&;[Invoice]In Date
 ```
 
 #### Example 16 
@@ -239,9 +228,8 @@ The following example finds the records for the invoices entered in 1996\. It do
 The following example finds the record for each employee whose salary is between $10,000 and $50,000\. The query includes the employees who make $10,000, but excludes those who make $50,000:
 
 ```4d
- QUERY([Employee];[Employee]Salary >=10000;*) ` Find employees who make between…
-
- QUERY([Employee];&;[Employee]Salary <50000) ` ...$10,000 and $50,000
+ QUERY([Employee];[Employee]Salary >=10000;*) // Find employees who make between…
+ QUERY([Employee];&;[Employee]Salary <50000) // ...$10,000 and $50,000
 ```
 
 #### Example 17 
@@ -249,9 +237,8 @@ The following example finds the record for each employee whose salary is between
 The following example finds the records for the employees in the marketing department who have salaries over $20,000\. The Salary field is queried first because it is indexed. Notice that the second query uses a field from another table. It can do this because the \[Dept\] table is related to the \[Employee\] table with an automatic many to one relation:
 
 ```4d
- QUERY([Employee];[Employee]Salary >20000;*) ` Find employees with salaries over $20,000 and...
-
- QUERY([Employee];&;[Dept]Name="marketing") ` ...who are in the marketing department
+ QUERY([Employee];[Employee]Salary >20000;*) // Find employees with salaries over $20,000 and...
+ QUERY([Employee];&;[Dept]Name="marketing") // ...who are in the marketing department
 ```
 
 #### Example 18 
@@ -259,7 +246,7 @@ The following example finds the records for the employees in the marketing depar
 Given three tables related by Many-to-One relations: \[City\] -> \[Department\] -> \[Region\]. The following query finds all the regions with cities whose names begin with "Saint":
 
 ```4d
- QUERY([Region];[City]Name="Saint@") ` Find all the regions with cities beginning with "Saint"
+ QUERY([Region];[City]Name="Saint@") // Find all the regions with cities beginning with "Saint"
 ```
 
 #### Example 19 
@@ -267,7 +254,7 @@ Given three tables related by Many-to-One relations: \[City\] -> \[Department\] 
 The following example queries for information that was entered into the variable *myVar*.
 
 ```4d
- QUERY([Laws];[Laws]Text =myVar) ` Find all laws that match myVar
+ QUERY([Laws];[Laws]Text =myVar) // Find all laws that match myVar
 ```
 
 The query could have many different results, depending on the value of *myVar*. The query will also be performed differently. For example:
@@ -281,20 +268,13 @@ The following example adds or does not add lines to a complex query depending on
 
 ```4d
  QUERY([Invoice];[Invoice]Paid=False;*)
-
- If($city#"") ` if a city name has been specified
-
+ If($city#"") // if a city name has been specified
     QUERY([Invoice];[Invoice]Delivery_city=$city;*)
-
  End if
-
- If($zipcode#"") ` If a zip code has been specified
-
+ If($zipcode#"") // If a zip code has been specified
     QUERY([Invoice];[Invoice]ZipCode=$zipcode;*)
-
  End if
-
- QUERY([Invoice]) ` Execution of query on the criteria
+ QUERY([Invoice]) // Execution of query on the criteria
 ```
 
 #### Example 21 
@@ -302,14 +282,10 @@ The following example adds or does not add lines to a complex query depending on
 This example illustrates the use of a comparison operator as an alphanumeric expression. The value of the comparison operator is specified using a pop-up menu placed in a custom query dialog box:
 
 ```4d
- C_TEXT($oper)
-
- $oper:=_popup_operator{_popup_operator} `$oper equals for example "#" or "="
-
+ var $oper : Text
+ $oper:=_popup_operator{_popup_operator} //$oper equals for example "#" or "="
  If(OK=1)
-
     QUERY(Invoice];[Invoice]Amount;$oper;$amount)
-
  End if
 ```
 
@@ -330,4 +306,5 @@ The OK variable is set to 0 if:
 * in 'query and lock' mode (see the [SET QUERY AND LOCK](set-query-and-lock.md) command), the query has found at least one locked record. In this case as well, the LockedSet system set is updated.
 
 #### See also 
+
 [QUERY SELECTION](query-selection.md)  

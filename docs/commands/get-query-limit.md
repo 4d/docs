@@ -21,4 +21,5 @@ You set this limit using the [SET QUERY LIMIT](set-query-limit.md) command.
 By default, if no limit is set, the command returns 0.
 
 #### See also 
+
 [SET QUERY LIMIT](set-query-limit.md)  

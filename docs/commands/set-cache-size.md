@@ -29,16 +29,13 @@ By default, if this option is not used, 4D unloads at least 10% of the cache whe
 You want to add 100 MB to the current database cache size. You can write:
 
 ```4d
- C_REAL($currentCache)
-
+ var $currentCache : Real
  $currentCache:=Get cache size
-
   // current cache size is, for example, 419430400
-
  SET CACHE SIZE($currentCache+100000000)
-
   // current cache size is now 519430400
 ```
 
 #### See also 
+
 [Get cache size](get-cache-size.md)  

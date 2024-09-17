@@ -283,7 +283,6 @@ This example formats a date variable and a time variable using [customized forma
 
 ```4d
  OBJECT SET FORMAT(*;"mydate";"(yyyy) MMM dd") // (2023) Dec 12
-
  OBJECT SET FORMAT(*;"mytime";"hh'h' mm'mn' ss'sec.'") // 15h 12mn 17sec.
 ```
 
@@ -293,13 +292,9 @@ The following example changes the format for a *\[Company\]ZIP Code* field accor
 
 ```4d
  If(Length([Company]ZIP Code)=9)
-
     OBJECT SET FORMAT([Company]ZIP Code;"#####–####")
-
  Else
-
     OBJECT SET FORMAT([Company]ZIP Code;"#####")
-
  End if
 ```
 
@@ -325,13 +320,11 @@ Provided that you have stored a picture file named "envelope\_open.png" in the R
 
 ```4d
  vIcon:="#envelope_open.png"
-
  vPos:="2" // Right
-
  OBJECT SET FORMAT(*;"Header1";vIcon+";"+vPos)
 ```
 
-![](../assets/en/Commands/pict2878245.en.png)
+![](../assets/en/commands/pict2878245.en.png)
 
 #### Example 7 
 
@@ -355,11 +348,11 @@ Switching a thermometer to "Barber shop" mode:
 
 ```4d
  OBJECT SET FORMAT($Mythermo;";;;;128")
-
- $Mythermo:=1 `Start animation
+ $Mythermo:=1 //Start animation
 ```
 
 #### See also 
+
 [Example database (v15 R5)](https://download.4d.com/Demos/4D%5Fv15%5FR5/HDI%5FListBox%5FOBJECT%5FSET%5FFORMAT.zip)  
 [GET SYSTEM FORMAT](get-system-format.md)  
 [OBJECT Get format](object-get-format.md)  

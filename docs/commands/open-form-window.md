@@ -105,13 +105,9 @@ This code must be called on macOS while a document window is displayed, for exam
 
 ```4d
  $myWin:=Open form window("sheet form";Sheet form window)
-
   // For the moment, the window is created but remains hidden
-
  DIALOG([aTable];"dialForm")
-
   //The On Load event is generated then the sheet window is displayed; it "drops down"
-
   //from the bottom of the title bar
 ```
 
@@ -121,17 +117,16 @@ The following example uses the path to a .json form to display the records in an
 
 ```4d
  Open form window("/RESOURCES/OutputPersonnel.json";Plain form window)
-
  ALL RECORDS([Personnel])
-
  DIALOG("/RESOURCES/OutputPersonnel.json";*)
 ```
 
 which displays:
 
-![](../assets/en/Commands/pict3687439.en.png)
+![](../assets/en/commands/pict3687439.en.png)
 
 #### See also 
+
 [FORM GET PROPERTIES](form-get-properties.md)  
 [Open window](open-window.md)  
 [Window Types](../../4D/20-R6/Window-Types.300-6958184.en.html)  

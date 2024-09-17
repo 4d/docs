@@ -23,16 +23,14 @@ displayed_sidebar: docs
 This example selects all invoices made to the customers whose credit is greater than or equal to $1,000\. The \[Invoices\] table field *\[Invoices\]Customer ID* relates to the \[Customer\] table field *\[Customers\]ID Number*. 
 
 ```4d
-  ` Select the Customers
-
+  // Select the Customers
  QUERY([Customers];[Customers]Credit>=1000)
-
-  ` Find all invoices related to any of these customers
-
+  // Find all invoices related to any of these customers
  RELATE MANY SELECTION([Invoices]Customer ID)
 ```
 
 #### See also 
+
 [QUERY](query.md)  
 [RELATE ONE](relate-one.md)  
 [RELATE ONE SELECTION](relate-one-selection.md)  

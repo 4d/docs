@@ -25,6 +25,7 @@ If you omit the optional *anchor* parameter, the position is relative to the beg
 Depending on the anchor you can pass positive or negative values in *offset*.
 
 #### See also 
+
 [Get document position](get-document-position.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  

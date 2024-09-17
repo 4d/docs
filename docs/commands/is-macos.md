@@ -22,16 +22,13 @@ You want to determine if the current operating system is macOS:
 
 ```4d
  If(Is macOS)
-
     ALERT("It's macOS")
-
  Else
-
     ALERT("It's not macOS")
-
  End if
 ```
 
 #### See also 
+
 [Get system info](get-system-info.md)  
 [Is Windows](is-windows.md)  

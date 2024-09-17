@@ -48,17 +48,11 @@ You want to get the phone number of the user "smith" in the company directory:
 
 ```4d
  ARRAY TEXT($_tabAttributes;0)
-
  APPEND TO ARRAY($_tabAttributes;"cn")
-
  APPEND TO ARRAY($_tabAttributes;"phoneNumber")
-
  LDAP LOGIN($url;$dn;$pwd)
-
  $filter:="cn=*smith*"
-
  $vfound:=LDAP Search($dnSearchRootEntry;$filter;LDAP all levels;$_tabAttributes)
-
  LDAP LOGOUT
 ```
 
@@ -67,35 +61,24 @@ You want to get the phone number of the user "smith" in the company directory:
 We want to get an array of all entries found for the "memberOf" attribute:
 
 ```4d
- C_OBJECT($entry)
-
+ var $entry : Object
  ARRAY TEXT($_tabAttributes;0)
-
  ARRAY BOOLEAN($_tabAttributes_asArray;0)
-
  APPEND TO ARRAY($_tabAttributes;"cn")
-
  APPEND TO ARRAY($_tabAttributes_asArray;False)
-
  APPEND TO ARRAY($_tabAttributes;"memberOf")
-
  APPEND TO ARRAY($_tabAttributes_asArray;True)
  
-
  LDAP LOGIN($url;$login;$pwd;LDAP password plain text)
-
  $entry:=LDAP Search($dnSearchRootEntry;"cn=adrien*";LDAP all levels;$_tabAttributes;$_tabAttributes_asArray)
-
  LDAP LOGOUT
  
-
  ARRAY TEXT($_arrMemberOf;0)
-
  OB GET ARRAY($entry;"memberOf";$_arrMemberOf)
-
   // in $_arrMemberOf we have an array containing all entry groups
 ```
 
 #### See also 
+
 [LDAP](../../4D/20-R6/LDAP.302-6958498.en.html)  
 [LDAP SEARCH ALL](ldap-search-all.md)  

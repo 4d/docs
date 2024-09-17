@@ -49,13 +49,9 @@ Associating a simple choice list (default list type) to a text field:
 
 ```4d
  vCountriesList:=New list
-
  APPEND TO LIST(vCountriesList;"Spain";1)
-
  APPEND TO LIST(vCountriesList;"Portugal";2)
-
  APPEND TO LIST(vCountriesList;"Greece";3)
-
  OBJECT SET LIST BY REFERENCE([Contact]Country;vCountriesList)
 ```
 
@@ -65,15 +61,10 @@ Associating the "vColor" list as a simple choice list with the "DoorColor" pop-u
 
 ```4d
  vColor:=New list
-
  APPEND TO LIST(vColor;"Blue";1)
-
  APPEND TO LIST(vColor;"Green";2)
-
  APPEND TO LIST(vColor;"Red";3)
-
  APPEND TO LIST(vColor;"Yellow";4)
-
  OBJECT SET LIST BY REFERENCE(*;"DoorColor";Choice list;vColor)
 ```
 
@@ -83,15 +74,10 @@ Now you want to associate the "vColor" list with a combo box named "WallColor". 
 
 ```4d
  OBJECT SET LIST BY REFERENCE(*;"WallColor";Choice list;vColor)
-
  vReject:=New list
-
  APPEND TO LIST(vReject;"Black";1)
-
  APPEND TO LIST(vReject;"Gray";2)
-
  APPEND TO LIST(vReject;"Purple";3)
-
  OBJECT SET LIST BY REFERENCE(*;"WallColor";Excluded list;vReject)
 ```
 
@@ -101,9 +87,7 @@ You want to remove the list associations:
 
 ```4d
  OBJECT SET LIST BY REFERENCE(*;"WallColor";Choice list;0)
-
  OBJECT SET LIST BY REFERENCE(*;"WallColor";Required list;0)
-
  OBJECT SET LIST BY REFERENCE(*;"WallColor";Excluded list;0)
 ```
 
@@ -111,39 +95,36 @@ You want to remove the list associations:
 
 This example illustrates the difference in how the command works when applied to a pop-up menu associated with a text array or one associated with a text variable. There are two pop-up menus in a form:
 
-![](../assets/en/Commands/pict1207955.en.png)
+![](../assets/en/commands/pict1207955.en.png)
 
 The contents of these pop-up menus is set using the *<>vColor* list (containing color values). The following code is executed when the form is loaded:
 
 ```4d
  ARRAY TEXT(arr1;0) //arr1 pop up
-
- C_TEXT(text1) //text1 pop up
-
+ var text1 : Text //text1 pop up
  OBJECT SET LIST BY REFERENCE(*;"arr1";<>vColor)
-
  OBJECT SET LIST BY REFERENCE(*;"text1";<>vColor)
 ```
 
 During execution, both menus propose the same values:
 
-![](../assets/en/Commands/pict1207957.en.png)  
+![](../assets/en/commands/pict1207957.en.png)  
 (*Montage showing contents of menus simultaneously*)
 
 Then you run the following code, for example by means of a button:
 
 ```4d
  APPEND TO LIST(<>vColor;"White";5)
-
  APPEND TO LIST(<>vColor;"Black";6)
 ```
 
 Only the menu associated with the Text field is updated (by means of the dynamic reference):
 
-![](../assets/en/Commands/pict1207959.en.png)
+![](../assets/en/commands/pict1207959.en.png)
 
 In order to update the list associated with the pop-up managed by array, you need to call the **OBJECT SET LIST BY REFERENCE** command again to copy the contents of the list.
 
 #### See also 
+
 [OBJECT Get list reference](object-get-list-reference.md)  
 [OBJECT SET LIST BY NAME](object-set-list-by-name.md)  

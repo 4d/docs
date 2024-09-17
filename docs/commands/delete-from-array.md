@@ -34,14 +34,12 @@ The following example deletes the last element from an array, if it exists:
 
 ```4d
  $vlElem:=Size of array(anArray)
-
  If($vlElem>0)
-
     DELETE FROM ARRAY(anArray;$vlElem)
-
  End if
 ```
 
 #### See also 
+
 [INSERT IN ARRAY](insert-in-array.md)  
 [Size of array](size-of-array.md)  

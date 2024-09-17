@@ -46,31 +46,18 @@ If you do not want to change the sublist property of the item, pass *\-1* in *su
 
 ```4d
  $vlItemPos:=Selected list items(hList)
-
  If($vlItemPos>0)
-
     GET LIST ITEM(hList;$vlItemPos;$vlItemRef;$vsItemText;$hSublist;$vbExpanded)
-
     $vbNewSubList:=Not(Is a list($hSublist))
-
     If($vbNewSubList)
-
        $hSublist:=New list
-
     End if
-
     vlUniqueRef:=vlUniqueRef+1
-
     APPEND TO LIST($hSubList;"New Item";vlUniqueRef)
-
     If($vbNewSubList)
-
        SET LIST ITEM(hList;$vlItemRef;$vsItemText;$vlItemRef;$hSublist;True)
-
     End if
-
     SELECT LIST ITEMS BY REFERENCE(hList;vlUniqueRef)
-
  End if
 ```
 
@@ -83,6 +70,7 @@ See example for the [GET LIST ITEM](get-list-item.md) command.
 See example for the [APPEND TO LIST](append-to-list.md) command.
 
 #### See also 
+
 [GET LIST ITEM](get-list-item.md)  
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [SET LIST ITEM FONT](set-list-item-font.md)  

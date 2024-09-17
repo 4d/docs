@@ -24,6 +24,7 @@ The documentation for this command has been moved. See [**Formula** command on d
 The **Formula** command creates a formula object based upon the *formulaExp* expression. 
 
 #### See also 
+
 [4D Blog - Formula: More power behind simplicity](https://blog.4d.com/new-formula-more-power-behind-simplicity/)  
 [4D Blog - Formula: Think outside the box](https://blog.4d.com/new-formula-think-outside-the-box/)  
 [4D Blog - Write your own methods for objects](https://blog.4d.com/write-your-own-methods-for-objects/)  

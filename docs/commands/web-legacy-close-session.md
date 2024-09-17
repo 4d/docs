@@ -31,5 +31,6 @@ After this command is executed, if a Web client sends a request using an invalid
 **Note:** In the context of a 4D Mobile session, the **WEB LEGACY CLOSE SESSION** command closes the 4D Mobile session whose ID is passed in the *sessionID* parameter. Since a 4D Mobile session can manage several processes, this command actually requests all the Web processes related to the session to finish their execution. 
 
 #### See also 
+
 [On Web Legacy Close Session database method](on-web-legacy-close-session-database-method.md)  
 [Web Sessions Management (Legacy)](../../4D/20-R6/Web-Sessions-Management-Legacy.300-6957735.en.html)  

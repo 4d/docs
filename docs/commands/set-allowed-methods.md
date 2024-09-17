@@ -39,14 +39,12 @@ This example authorizes all methods starting with “formula” and the “Total
 
 ```4d
  ARRAY TEXT(methodsArray;2)
-
  methodsArray{1}:="formula@"
-
  methodsArray{2}:="Total_general"
-
  SET ALLOWED METHODS(methodsArray)
 ```
 
 #### See also 
+
 [EDIT FORMULA](edit-formula.md)  
 [GET ALLOWED METHODS](get-allowed-methods.md)  

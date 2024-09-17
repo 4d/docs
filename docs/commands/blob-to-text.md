@@ -50,6 +50,7 @@ If you specify the optional *offset* variable parameter, the Text value is read 
 After the call, the variable is incremented by the number of bytes read. Therefore, you can reuse that same variable with another BLOB reading command to read another value.
 
 #### See also 
+
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
 [BLOB to real](blob-to-real.md)  

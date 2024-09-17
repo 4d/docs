@@ -29,37 +29,25 @@ This method modifies the value of a "settings" property stored in the storage ob
 
 ```4d
   //Set storage for a session
-
   // The "Execute On Server" method property is set
  
-
  #DECLARE($id Text;$text Text)
-
  var $obj : Object
  
-
  $obj:=Session storage by ID($id)
  
-
  If($obj.settings=Null)
-
     Use($obj)
-
        $obj.settings:=New shared object("text";$text)
-
     End use
-
  Else
-
     Use($obj.settings)
-
        $obj.settings.text:=$text
-
     End use
-
  End if
 ```
 
 #### See also 
+
 [Get process activity](get-process-activity.md)  
 [Session](https://developer.4d.com/docs/API/SessionClass#session)  

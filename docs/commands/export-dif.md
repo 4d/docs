@@ -35,8 +35,7 @@ The following example exports data to a DIF document. The method first sets the 
 
 ```4d
  FORM SET OUTPUT([People];"Export")
-
- EXPORT DIF([People];"NewPeople.dif"")  ` Export to the "NewPeople.dif" document
+ EXPORT DIF([People];"NewPeople.dif"")  // Export to the "NewPeople.dif" document
 ```
 
 #### System variables and sets 
@@ -44,6 +43,7 @@ The following example exports data to a DIF document. The method first sets the 
 OK is set to 1 if the export is successfully completed; otherwise, it is set to 0.
 
 #### See also 
+
 [EXPORT SYLK](export-sylk.md)  
 [EXPORT TEXT](export-text.md)  
 [IMPORT DIF](import-dif.md)  

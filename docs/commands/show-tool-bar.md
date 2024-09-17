@@ -22,4 +22,5 @@ If a toolbar window has been created by the [Open form window](open-form-window.
 Refer to the example of the [HIDE TOOL BAR](hide-tool-bar.md) command.
 
 #### See also 
+
 [HIDE TOOL BAR](hide-tool-bar.md)  

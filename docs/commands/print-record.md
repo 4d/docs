@@ -38,11 +38,9 @@ By default, **PRINT RECORD** displays the Print job dialog box before printing. 
 The following example prints the current record of the \[Invoices\] table. The code is contained in the object method of a **Print** button on the input form. When the user clicks the button, the record is printed using an output form designed for this purpose. 
 
 ```4d
- FORM SET OUTPUT([Invoices];"Print One From Data Entry") ` Select the right output form for printing
-
- PRINT RECORD([Invoices];*) ` Print Invoices as it is (without showing the printing dialog boxes)
-
- FORM SET OUTPUT([Invoices];"Standard Output") ` Restore the previous output form
+ FORM SET OUTPUT([Invoices];"Print One From Data Entry") // Select the right output form for printing
+ PRINT RECORD([Invoices];*) // Print Invoices as it is (without showing the printing dialog boxes)
+ FORM SET OUTPUT([Invoices];"Standard Output") // Restore the previous output form
 ```
 
 #### Example 2 
@@ -50,22 +48,16 @@ The following example prints the current record of the \[Invoices\] table. The c
 The following example prints the same current record in two different forms. The code is contained in the object method of a **Print** button on the input form. You want to set customized print parameters and then use them in the two forms. 
 
 ```4d
- PRINT SETTINGS `User defines print parameters
-
+ PRINT SETTINGS //User defines print parameters
  If(OK=1)
-
-    FORM SET OUTPUT([Employees];"Detailed") `Use the first print form
-
-    PRINT RECORD([Employees];>) `Print using user-defined parameters
-
-    FORM SET OUTPUT([Employees];"Simple") `Use the second print form
-
-    PRINT RECORD([Employees];>) `Print using user-defined parameters
-
-    FORM SET OUTPUT([Employees];"Output") `Restore default output form
-
+    FORM SET OUTPUT([Employees];"Detailed") //Use the first print form
+    PRINT RECORD([Employees];>) //Print using user-defined parameters
+    FORM SET OUTPUT([Employees];"Simple") //Use the second print form
+    PRINT RECORD([Employees];>) //Print using user-defined parameters
+    FORM SET OUTPUT([Employees];"Output") //Restore default output form
  End if
 ```
 
 #### See also 
+
 [Print form](print-form.md)  

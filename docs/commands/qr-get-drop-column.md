@@ -25,4 +25,5 @@ The QR Get drop column command returns a value depending on where the drop was p
 If you pass an invalid *area* number, the error -9850 will be generated.
 
 #### See also 
+
 [QR DELETE COLUMN](qr-delete-column.md)  

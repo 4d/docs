@@ -19,4 +19,5 @@ displayed_sidebar: docs
 If you pass an invalid *area* number, the error -9850 will be generated.
 
 #### See also 
+
 [QR New offscreen area](qr-new-offscreen-area.md)  

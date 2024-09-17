@@ -37,23 +37,18 @@ The optional *exportType* parameter specifies the way the XML data source is to 
 The following example can be used to display “Hello World” in a 4D picture:  
 
 ```4d
- C_PICTURE(vpict)
-
+ var vpict : Picture
  $svg:=DOM Create XML Ref("svg";"http://www.w3.org/2000/svg")
-
  $ref:=DOM Create XML element($svg;"text";"font-size";26;"fill";"red")
-
  DOM SET XML ATTRIBUTE($ref;"y";"1em")
-
  DOM SET XML ELEMENT VALUE($ref;"Hello World")
-
  SVG EXPORT TO PICTURE($svg;vpict;Copy XML data source)
-
  DOM CLOSE XML($svg)
 ```
 
-![](../assets/en/Commands/pict14520.en.png)
+![](../assets/en/commands/pict14520.en.png)
 
 #### See also 
+
 [DOM EXPORT TO FILE](dom-export-to-file.md)  
 [DOM EXPORT TO VAR](dom-export-to-var.md)  

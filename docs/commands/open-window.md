@@ -61,38 +61,22 @@ Forms are displayed inside an open window. Text from the [MESSAGE](message.md) c
 The following project method opens a window centered in the main window (Windows) or in the main screen (Macintosh). Note that it can accept two, three, or four parameters:
 
 ```4d
-  ` OPEN CENTERED WINDOW project method
-
-  ` $1 – Window width
-
-  ` $2 – Window height
-
-  ` $3 – Window type (optional)
-
-  ` $4 – Window title (optional)
-
+  // OPEN CENTERED WINDOW project method
+  // $1 – Window width
+  // $2 – Window height
+  // $3 – Window type (optional)
+  // $4 – Window title (optional)
  $SW:=Screen width\2
-
  $SH:=(Screen height\2)
-
  $WW:=$1\2
-
  $WH:=$2\2
-
  Case of
-
     :(Count parameters=2)
-
        Open window($SW-$WW;$SH-$WH;$SW+$WW;$SH+$WH)
-
     :(Count parameters=3)
-
        Open window($SW-$WW;$SH-$WH;$SW+$WW;$SH+$WH;$3)
-
     :(Count parameters=4)
-
        Open window($SW-$WW;$SH-$WH;$SW+$WW;$SH+$WH;$3;$4)
-
  End case
 ```
 
@@ -100,15 +84,10 @@ After the project method is written, you can use it this way:
 
 ```4d
  OPEN CENTERED WINDOW(400;250;Movable dialog box;"Update Archives")
-
  DIALOG([Utility Table];"UPDATE OPTIONS")
-
  CLOSE WINDOW
-
  If(OK=1)
-
-  ` ...
-
+  // ...
  End if
 ```
 
@@ -118,7 +97,6 @@ The following example opens a floating window that has a Control-menu box (Windo
 
 ```4d
  $myWindow:=Open window(Screen width-149;33;Screen width-4;178;-Palette window;"";"CloseColorPalette")
-
  DIALOG([Dialogs];"Color Palette")
 ```
 
@@ -134,13 +112,9 @@ The following example opens a window whose size and title come from the properti
 
 ```4d
  FORM SET INPUT([Customers];"Add Records";*)
-
  $myWindow:=Open window(10;80;-1;-1;Plain window;"")
-
  Repeat
-
     ADD RECORD([Customers])
-
  Until(OK=0)
 ```
 
@@ -152,17 +126,14 @@ This example illustrates the “delay” mechanism for displaying sheet windows 
 
 ```4d
  $myWindow:=Open window(10;10;400;400;Sheet window)
-
-  `For the moment, the window is created but remains hidden
-
+  //For the moment, the window is created but remains hidden
  DIALOG([Table];"dialForm")
-
-  `The On Load event is generated then the sheet window is displayed; it "drops down" from the bottom
-
-  `of the title bar
+  //The On Load event is generated then the sheet window is displayed; it "drops down" from the bottom
+  //of the title bar
 ```
 
 #### See also 
+
 [CLOSE WINDOW](close-window.md)  
 [Open form window](open-form-window.md)  
 [Open Window](../../4D/20-R6/Open-Window.302-6958446.en.html)  

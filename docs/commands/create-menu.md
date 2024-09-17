@@ -35,6 +35,7 @@ When you no longer need the menu created by [Create menu](create-menu.md), remem
 Refer to the example of the [SET MENU BAR](set-menu-bar.md) command.
 
 #### See also 
+
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [RELEASE MENU](release-menu.md)  
 [SET MENU BAR](set-menu-bar.md)  

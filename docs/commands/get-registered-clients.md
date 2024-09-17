@@ -28,9 +28,7 @@ Let’s assume that you want to obtain a list of all the registered clients and 
 
 ```4d
  ARRAY TEXT($clients;0)
-
  ARRAY LONGINT($methods;0)
-
  GET REGISTERED CLIENTS($clients;$methods)
 ```
 
@@ -43,6 +41,7 @@ Refer to the example of the [REGISTER CLIENT](register-client.md) command.
 If the operation was successful, the OK system variable is equal to 1.
 
 #### See also 
+
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [REGISTER CLIENT](register-client.md)  
 [UNREGISTER CLIENT](unregister-client.md)  

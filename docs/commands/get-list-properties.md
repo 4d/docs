@@ -39,4 +39,5 @@ These properties can be set using the [SET LIST PROPERTIES](set-list-properties.
 For a complete description of the appearance, node icons, minimal line height and double-click management of a list, see the [SET LIST PROPERTIES](set-list-properties.md) command.
 
 #### See also 
+
 [SET LIST PROPERTIES](set-list-properties.md)  

@@ -30,5 +30,6 @@ When this database method is called, the context of the session (variables and s
 An example of the **On Web Legacy Close Session database method** is provided in the [Web Sessions Management (Legacy)](/4Dv20R6/4D/20-R6/Web-Sessions-Management-Legacy.300-6957735.en.html) section. 
 
 #### See also 
+
 [WEB LEGACY CLOSE SESSION](web-legacy-close-session.md)  
 [Web Sessions Management (Legacy)](../../4D/20-R6/Web-Sessions-Management-Legacy.300-6957735.en.html)  

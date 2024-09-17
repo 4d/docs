@@ -69,5 +69,6 @@ For example, to simulate the Shift key, pass Shift key bit.
 If you specify the *process* parameter, the event is sent to the process whose process number you pass in *process*. If you pass *0* (zero) or if you omit the parameter, the event is sent at the application level, and the 4D scheduler will dispatch it to the appropriate process.
 
 #### See also 
+
 [POST CLICK](post-click.md)  
 [POST KEY](post-key.md)  

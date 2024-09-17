@@ -25,29 +25,21 @@ Like [Selected record number](selected-record-number.md), **Displayed line numbe
 This example lets you apply an alternating color to a list form displayed on screen, even for rows without records:
 
 ```4d
-  `List form method
-
+  //List form method
  If(Form event code=On Display Detail)
-
     If(Displayed line number% 2=0)
-
-  `Black on white for even row text
-
+  //Black on white for even row text
        OBJECT SET RGB COLORS([Table 1]Field1;-1;0x00FFFFFF)
-
     Else
-
-  `Black on light blue for odd row text
-
+  //Black on light blue for odd row text
        OBJECT SET RGB COLORS([Table 1]Field1;-1;0x00E0E0FF)
-
     End if
-
  End if
 ```
 
-![](../assets/en/Commands/pict32598.en.png)
+![](../assets/en/commands/pict32598.en.png)
 
 #### See also 
+
 [Form event code](form-event-code.md)  
 [Selected record number](selected-record-number.md)  

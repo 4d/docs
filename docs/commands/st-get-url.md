@@ -53,33 +53,21 @@ When there is a double-click event, you check that there is in fact an URL, and 
 
 ```4d
  Case of
-
     :(Form event code=On Double Clicked)
-
        GET HIGHLIGHT(*;"StyledText_t";startSel;endSel)
-
        If(ST Get content type(*;"StyledText_t";startSel;endSel)=ST URL type) //URL
-
           ST GET URL(*;"StyledText_t";vTitle;vURL;startSel;endSel)
-
           $winRef:=Open form window("Dial_InsertURL";Movable form dialog box;Horizontally centered;Vertically centered;*)
-
           SET WINDOW TITLE("URL settings")
-
           DIALOG("Dial_InsertURL")
-
           If(OK=1)
-
              ST INSERT URL(*;"StyledText_t";vTitle;vURL;startSel;endSel)
-
              HIGHLIGHT TEXT(*;"StyledText_t";startSel;startSel+1)
-
           End if
-
        End if
-
  End case
 ```
 
 #### See also 
+
 [ST INSERT URL](st-insert-url.md)  

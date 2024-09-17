@@ -35,7 +35,7 @@ If you pass only a new default century minus one in *century*, 4D will interpret
 For example, after the call:
 
 ```4d
- SET DEFAULT CENTURY(20) ` Switch to 21st century for default century
+ SET DEFAULT CENTURY(20) // Switch to 21st century for default century
 ```
 
 * 01/25/97 means January 25, 2097
@@ -45,7 +45,7 @@ In addition, you can specify the optional *pivotYear* parameter.
 For example, after this call, in which the pivot year is 1995:
 
 ```4d
- SET DEFAULT CENTURY(19;95) ` Switch to 21st century for default century if year is less than 95
+ SET DEFAULT CENTURY(19;95) // Switch to 21st century for default century if year is less than 95
 ```
 
 * 01/25/97 means January 25, 1997

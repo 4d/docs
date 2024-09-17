@@ -23,7 +23,7 @@ As for the [On Server Open Connection database method](on-server-open-connection
 The method must therefore be explicitly declared with three Long Integer parameters:
 
 ```4d
- C_LONGINT($1;$2;$3)
+ var $1;$2;$3 : Integer
 ```
 
 This table details the information provided by the three parameters passed to the database method:

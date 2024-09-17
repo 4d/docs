@@ -25,5 +25,6 @@ The copy starts at the position (expressed relative to the beginning of the sour
 **Note:** The destination BLOB can be resized if necessary.
 
 #### See also 
+
 [DELETE FROM BLOB](delete-from-blob.md)  
 [INSERT IN BLOB](insert-in-blob.md)  

@@ -49,13 +49,11 @@ This example creates an interprocess array of 50 [Text](# "A character string th
 
 ```4d
  ARRAY TEXT(◊atValues;50)
-
  For($vlElem;1;50)
-
     ◊atValues{$vlElem}:="Element #"+String($vlElem)
-
  End for
 ```
 
 #### See also 
+
 [\_o\_ARRAY STRING](../../4D/20-R6/o-ARRAY-STRING.301-6957650.en.html)  

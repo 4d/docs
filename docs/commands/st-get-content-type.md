@@ -66,72 +66,38 @@ You want to display context-menu commands based on the type of contents selected
 
 ```4d
  Case of
-
     :(Form event code=On Clicked)
-
   //we retrieve the selection
-
        GET HIGHLIGHT(*;"myText";startSel;endSel)
-
        If(Contextual click&(Macintosh control down=False)) //calls the context menu
-
           If(startSel=endSel) // no contents selected
-
   //we enable only certain commands
-
              DISABLE MENU ITEM(<>menu_STYLEDTEXT;2)
-
              DISABLE MENU ITEM(<>menu_STYLEDTEXT;4)
-
              ENABLE MENU ITEM(<>menu_STYLEDTEXT;6)
-
              ...
-
           Else // we get the content type
-
              CT_Texttype:=ST Get content type(*;"myText";startSel;endSel)
-
              Case of // processing of different types
-
                 :(CT_Texttype=ST URL type)
-
                    DISABLE MENU ITEM(<>menu_STYLEDTEXT;6)
-
                    ENABLE MENU ITEM(<>menu_STYLEDTEXT;7)
-
                    ...
-
                 :(CT_Texttype=ST Expression type)
-
                    DISABLE MENU ITEM(<>menu_STYLEDTEXT;6)
-
                    DISABLE MENU ITEM(<>menu_STYLEDTEXT;7)
-
                    ...
-
                 Else
-
                    ENABLE MENU ITEM(<>menu_STYLEDTEXT;6)
-
                    DISABLE MENU ITEM(<>menu_STYLEDTEXT;7)
-
                    ...
-
              End case
-
           End if
-
           GET MOUSE($xCoord;$yCoord;$ButtonState)
-
           $AlphaVar:=Dynamic pop up menu(<>menu_STYLEDTEXT;"";$xCoord;$yCoord)
-
           startSel:=-3
-
           endSel:=-3
-
        End if
-
        ...
-
     End if
 ```

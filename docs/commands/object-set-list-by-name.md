@@ -49,13 +49,9 @@ The following example sets a choice list for a shipping field. If the shipping i
 
 ```4d
  If([Shipments]Overnight)
-
     OBJECT SET LIST BY NAME([Shipments]Shipper;"Fast Shippers")
-
  Else
-
     OBJECT SET LIST BY NAME([Shipments]Shipper;"Normal Shippers")
-
  End if
 ```
 
@@ -65,7 +61,6 @@ Associate the "color\_choice" list as a simple pop-up/drop-down list named "Door
 
 ```4d
  OBJECT SET LIST BY NAME(*;"DoorColor";Choice list;"color_choice")
-
   // in this case, the 3rd parameter (constant) can be omitted
 ```
 
@@ -75,7 +70,6 @@ You want to associate the "color\_choice" list with the "WallColor" combo box. S
 
 ```4d
  OBJECT SET LIST BY NAME(*;"WallColor";Choice list;"color_choice")
-
  OBJECT SET LIST BY NAME(*;"WallColor";Excluded list;"excl_colors")
 ```
 
@@ -85,14 +79,12 @@ You want to remove the list associations:
 
 ```4d
   // removal of a choice list
-
  OBJECT SET LIST BY NAME(*;"DoorColor";Choice list;"")
-
   // removal of list of values that are not allowed
-
  OBJECT SET LIST BY NAME(*;"WallColor";Excluded list;"")
 ```
 
 #### See also 
+
 [OBJECT Get list name](object-get-list-name.md)  
 [OBJECT SET LIST BY REFERENCE](object-set-list-by-reference.md)  

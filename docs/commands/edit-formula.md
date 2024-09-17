@@ -36,13 +36,9 @@ Displaying the Formula editor with the \[Employees\] table and without a pre-ent
 
 ```4d
  $myFormula:=""
-
  EDIT FORMULA([Employees];$myFormula)
-
  If(OK=1)
-
     APPLY TO SELECTION([Employees];EXECUTE FORMULA($myFormula))
-
  End if
 ```
 
@@ -51,6 +47,7 @@ Displaying the Formula editor with the \[Employees\] table and without a pre-ent
 If the user validates the dialog box, the system variable OK is set to 1\. If the user cancels the dialog box, the system variable OK is set to 0.
 
 #### See also 
+
 [APPLY TO SELECTION](apply-to-selection.md)  
 [EXECUTE FORMULA](execute-formula.md)  
 [SET ALLOWED METHODS](set-allowed-methods.md)  

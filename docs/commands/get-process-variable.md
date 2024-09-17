@@ -77,13 +77,9 @@ This example sequentially reads the elements of a process array from the process
 
 ```4d
  GET PROCESS VARIABLE($vlProcess;vl_IPCom_Array;$vlSize)
-
  For($vlElem;1;$vlSize)
-
     GET PROCESS VARIABLE($vlProcess;at_IPCom_Array{$vlElem};$vtElem)
-
-  ` Do something with $vtElem
-
+  // Do something with $vtElem
  End for
 ```
 
@@ -95,11 +91,8 @@ This example does the same thing as the previous one, but reads the array as a w
 
 ```4d
  GET PROCESS VARIABLE($vlProcess;at_IPCom_Array;$anArray)
-
  For($vlElem;1;Size of array($anArray))
-
-  ` Do something with $anArray{$vlElem}
-
+  // Do something with $anArray{$vlElem}
  End for
 ```
 
@@ -116,6 +109,7 @@ This example reads the source process instances of the variables *v1*,*v2*,*v3* 
 See the example for the [\_o\_DRAG AND DROP PROPERTIES](/4Dv20R6/4D/20-R6/o-DRAG-AND-DROP-PROPERTIES.301-6957656.en.html) command.
 
 #### See also 
+
 [\_o\_DRAG AND DROP PROPERTIES](../../4D/20-R6/o-DRAG-AND-DROP-PROPERTIES.301-6957656.en.html)  
 [Drag and Drop](../../4D/20-R6/Drag-and-Drop.300-6957997.en.html)  
 [POST OUTSIDE CALL](post-outside-call.md)  

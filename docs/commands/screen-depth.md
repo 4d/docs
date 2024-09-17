@@ -49,14 +49,12 @@ Your application displays many color graphics. Somewhere in your database, you c
 
 ```4d
  SCREEN DEPTH($vlDepth;$vlColor)
-
  If($vlDepth<8)
-
     ALERT("The forms will look better if the monitor"+" was set to display 256 colors or more.")
-
  End if
 ```
 
 #### See also 
+
 [Count screens](count-screens.md)  
 [SET SCREEN DEPTH](set-screen-depth.md)  

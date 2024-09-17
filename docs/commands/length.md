@@ -24,7 +24,6 @@ displayed_sidebar: docs
 This example illustrates the use of **Length**. The results, described in the comments, are assigned to the variable *vlResult*.
 
 ```4d
- vlResult:=Length("Topaz") ` vlResult gets 5
-
- vlResult:=Length("Citizen") ` vlResult gets 7
+ vlResult:=Length("Topaz") // vlResult gets 5
+ vlResult:=Length("Citizen") // vlResult gets 7
 ```

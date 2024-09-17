@@ -52,13 +52,12 @@ Insertion of an SVG picture:
 
 ```4d
  XML SET OPTIONS($pictElemRef;XML binary encoding;XML data URI scheme)
-
  XML SET OPTIONS($pictElemRef;XML picture encoding;XML native codec)
-
  DOM SET XML ATTRIBUTE($pictElemRef;"xlink:href";PictVar)
 ```
 
 #### See also 
+
 [DOM SET XML ATTRIBUTE](dom-set-xml-attribute.md)  
 [DOM SET XML DECLARATION](dom-set-xml-declaration.md)  
 [DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md)  

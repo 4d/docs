@@ -24,6 +24,7 @@ The command returns 0:
 **Note:** When the application is running in SDI mode on Windows, **Menu bar height** returns the height of a single menu bar line even if the window is narrowed and the menu bar has been wrapped on two or more lines. 
 
 #### See also 
+
 [HIDE MENU BAR](hide-menu-bar.md)  
 [Menu bar screen](menu-bar-screen.md)  
 [SHOW MENU BAR](show-menu-bar.md)  

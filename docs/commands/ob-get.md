@@ -59,12 +59,9 @@ The command returns the value of the *property*. Several types of data are suppo
 Retrieving a text type value:
 
 ```4d
- C_OBJECT($ref)
-
- C_TEXT($FirstName)
-
+ var $ref : Object
+ var $FirstName : Text
  OB SET($ref;"FirstName";"Harry")
-
  $FirstName:=OB Get($ref;"FirstName") // $FirstName = "Harry" (text)
 ```
 
@@ -74,9 +71,7 @@ Retrieving a real number value converted into a longint:
 
 ```4d
  OB SET($ref ;"age";42)
-
  $age:=OB Get($ref ;"age") // $age is a real number (default)
-
  $age:=OB Get($ref ;"age";Is longint) // $age is a longint
 ```
 
@@ -85,14 +80,10 @@ Retrieving a real number value converted into a longint:
 Retrieving the values of an object:
 
 ```4d
- C_OBJECT($ref1;$ref2)
-
+ var $ref1;$ref2 : Object
  OB SET($ref1;"LastName";"Smith") // $ref1={"LastName":"Smith"}
-
  OB SET($ref2;"son";$ref1) // $ref2={"son":{"LastName":"Smith"}}
-
  $son:=OB Get($ref2;"son") // $son={"LastName":"john"} (object)
-
  $sonsName:=OB Get($son ;"name") // $sonsName="john" (text)
 ```
 
@@ -101,32 +92,19 @@ Retrieving the values of an object:
 Modifying the age of an employee twice:
 
 ```4d
- C_OBJECT($ref_john;$ref_jim)
-
+ var $ref_john;$ref_jim : Object
  OB SET($ref_john;"name";"John";"age";35)
-
  OB SET($ref_jim;"name";"Jim";"age";40)
-
  APPEND TO ARRAY($myArray;$ref_john) // we create an object array
-
  APPEND TO ARRAY($myArray;$ref_jim)
-
   // we change the age for John from 35 to 25
-
  OB SET($myArray{1};"age";25)
-
   // We replace the age of "John" in the array
-
  For($i;1;Size of array($myArray))
-
     If(OB Get($myArray{$i};"name")="John")
-
        OB SET($myArray{$i};"age";36) // instead of 25
-
   // $ref_john={"name":"John","age":36}
-
     End if
-
  End for
 ```
 
@@ -137,28 +115,20 @@ When retrieving a date, the resulting value depends on the current database date
 * If the "Use date type instead of ISO date format in objects" option is not checked:
 
 ```4d
- C_OBJECT($object)
-
- C_DATE($birthday)
-
- C_TEXT($birthdayString)
-
+ var $object : Object
+ var $birthday : Date
+ var $birthdayString : Text
  OB SET($object;"Birthday";!30/01/2010!)
-
  $birthday:=OB Get($object;"Birthday";Is date) //30/01/10
-
  $birthdayString:=OB Get($object;"Birthday") //"2010-01-29T23:00:00.000Z" (Paris time zone)
 ```
 
 * If the "Use date type instead of ISO date format in objects" option is checked:
 
 ```4d
- C_OBJECT($object)
-
- C_DATE($birthday)
-
+ var $object : Object
+ var $birthday : Date
  OB SET($object;"Birthday";!30/01/2010!)
-
  $birthday:=OB Get($object;"Birthday") //30/01/10, no need for Is date
 ```
 
@@ -169,28 +139,17 @@ When retrieving a date, the resulting value depends on the current database date
 Using nested objects:
 
 ```4d
- C_OBJECT($ref1;$child;$children)
-
- C_TEXT($childName)
-
+ var $ref1;$child;$children : Object
+ var $childName : Text
  OB SET($ref1;"firstname";"John";"lastname";"Monroe")
-
   //{"firstname":"john","lastname";"Monroe"}
-
  OB SET($children;"children";$ref1)
-
  $child:=OB Get($children;"children")
-
   //$son = {"firstname":"John","lastname":"Monroe"} (object)
-
  $childName:=OB Get($child;"lastname")
-
   //$childName = "Monroe" (text)
-
   //or
-
  $childName:=OB Get(OB Get($children;"children");"lastname")
-
   // $childName = "Monroe" (text)
 ```
 
@@ -199,21 +158,14 @@ Using nested objects:
 Recovery in 4D of a time stored in an object:
 
 ```4d
- C_OBJECT($obj_o)
-
- C_TIME($set_h;$get_h)
+ var $obj_o : Object
+ var $set_h;$get_h : Time
  
-
  $set_h:=?01:00:00?+1
-
  OB SET($obj_o;"myHour";$set_h)
-
   // $obj_o = {"myHour":3601}
-
   // The time is stored in seconds
-
  $get_h:=OB Get($obj_o;"myHour";Is time)
-
   // $get_h = ?01:00:01?
 ```
 
@@ -223,16 +175,11 @@ Examples of working with 4D object fields:
 
 ```4d
   // Define a value
-
  OB SET([People]Identity_OB;"First name";$firstName)
-
  OB SET([People]Identity_OB;"Last name";$lastName)
  
-
   // Get a value
-
  $firstName:=OB Get([People]Identity_OB;"First name")
-
  $lastName:=OB Get([People]Identity_OB;"Last name")
 ```
 
@@ -242,11 +189,8 @@ In the method of a form containing a 4D Write Pro area, you can write:
 
 ```4d
  If(FORM Event=On Validate)
-
     OB SET([MyDocuments]My4DWP;"myatt_Last edition by";Current user)
-
     OB SET([MyDocuments]My4DWP;"myatt_Category";"Memo")
-
  End if
 ```
 
@@ -261,20 +205,19 @@ You can also read custom attributes of the documents:
 You want to know the size of a picture stored in an object attribute:
 
 ```4d
- C_LONGINT($vSize)
-
+ var $vSize : Integer
  $vSize:=Picture size(OB Get($object;"photo";Is picture))
 ```
 
 **Note:** If you assign the result of the command to a picture variable, the Is picture constant is not necessary. Example:  
 
 ```4d
- C_PICTURE($vPict)
-
+ var $vPict : Picture
  $vPict:=OB Get($object;"photo") //"is picture" is useless in this case
 ```
 
 #### See also 
+
 [Field and Variable Types](../../4D/20-R6/Field-and-Variable-Types.302-6958439.en.html)  
 [OB Copy](ob-copy.md)  
 [OB SET](ob-set.md)  

@@ -35,19 +35,16 @@ To enable URL drops in the 'myarea' Web area:
 
 ```4d
   //in the form method
-
  WA SET PREFERENCE(*;"myarea";WA enable URL drop;True)
 ```
 
 ```4d
   //in web area object method
-
  If(FORM Event.code=On Window Opening Denied)
-
     WA OPEN URL(*;"myarea";WA Get last filtered URL(*;"WebArea"))
-
  End if
 ```
 
 #### See also 
+
 [WA GET PREFERENCE](wa-get-preference.md)  

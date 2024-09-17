@@ -38,39 +38,27 @@ Examples of typical use:
 
 ```4d
   // List all the project forms of the database
-
  FORM GET NAMES(arr_Names)
  
-
   // List forms of the [Employees] table
-
  FORM GET NAMES([Employees] ;arr_Names)
  
-
   // List "input" forms of the [Employees] table
-
  FORM GET NAMES([Employees] ;arr_Names;"input_@")
  
-
   // List specific project forms of the database
-
  FORM GET NAMES(arr_Names;"dialogue_@")
  
-
   // List all project forms in database that were modified since the last synchronization
-
   // vMarker contains a numeric value
-
  FORM GET NAMES(arr_Names;"";vMarker)
  
-
   // List table forms from a component
-
   // A pointer is necessary because the table name is unknown
-
  FORM GET NAMES(tablePtr->;arr_Names;*)
 ```
 
 #### See also 
+
 [Forms](forms.md)  
 [METHOD GET PATHS FORM](method-get-paths-form.md)  

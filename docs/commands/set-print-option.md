@@ -49,26 +49,16 @@ The value of Orientation option can be modified within the same print job. Note 
 
 ```4d
  ALL RECORDS([People])
-
  PRINT SETTINGS
-
  If(OK=1)
-
     OPEN PRINTING JOB
-
     SET PRINT OPTION(Orientation option;1) //portrait
-
     Print form([People];"Vertical_Form")
  
-
     SET PRINT OPTION(Orientation option;2) //landscape
-
     PAGE BREAK //must be called imperatively AFTER the option
-
     Print form([People];"Horiz_Form")
-
     CLOSE PRINTING JOB
-
  End if
 ```
 
@@ -81,6 +71,7 @@ The system variable OK is set to 1 if the command has been executed correctly; o
 If the value passed for an *option* is invalid or if it is not available on the printer, the command returns an error (that you can intercept using an error-handling method installed by the [ON ERR CALL](on-err-call.md) command) and the current value of the option remains unchanged. 
 
 #### See also 
+
 [GET PRINT OPTION](get-print-option.md)  
 [Print form](print-form.md)  
 [PRINT OPTION VALUES](print-option-values.md)  

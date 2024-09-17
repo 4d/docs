@@ -27,11 +27,9 @@ The optional *cDATA* parameter is used to retrieve the contents of the CDATA sec
 This method returns the value of the $xml\_Element\_Ref element:
 
 ```4d
- C_TEXT($xml_Element_Ref)
-
- C_REAL($value)
+ var $xml_Element_Ref : Text
+ var $value : Real
  
-
  DOM GET XML ELEMENT VALUE($xml_Element_Ref;$value)
 ```
 
@@ -40,6 +38,7 @@ This method returns the value of the $xml\_Element\_Ref element:
 If the command has been correctly executed, the system variable OK is set to 1\. If an error occurs, it is set to 0.
 
 #### See also 
+
 [DOM Get XML element](dom-get-xml-element.md)  
 [DOM GET XML ELEMENT NAME](dom-get-xml-element-name.md)  
 [DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md)  

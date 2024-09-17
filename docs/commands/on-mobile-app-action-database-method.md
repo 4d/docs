@@ -22,4 +22,5 @@ displayed_sidebar: docs
 The documentation for this database method has been updated and moved to [developer.4d.com/go-mobile](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action).
 
 #### See also 
+
 [On Mobile App Authentication database method](on-mobile-app-authentication-database-method.md)  

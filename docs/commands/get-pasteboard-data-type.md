@@ -30,4 +30,5 @@ The *nativeTypes* array lets any type of data found in the pasteboard to be supp
 For more information about the data types supported, please refer to the [Managing Pasteboards](/4Dv20R6/4D/20-R6/Managing-Pasteboards.300-6958710.en.html) section. 
 
 #### See also 
+
 [Managing Pasteboards](../../4D/20-R6/Managing-Pasteboards.300-6958710.en.html)  

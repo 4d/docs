@@ -27,39 +27,25 @@ The following example allows you to check if there are other overdue invoices in
 
 ```4d
  ALL RECORDS([People])
-
-  `Allow the user to sort the selection
-
+  //Allow the user to sort the selection
  ORDER BY([People])
-
-  ` Save the sorted selection as a named selection
-
+  // Save the sorted selection as a named selection
  COPY NAMED SELECTION([People];"UserSort")
-
-  ` Search for records where invoices are due
-
+  // Search for records where invoices are due
  QUERY([People];[People]InvoiceDue=True)
-
-  ` If records are found
-
+  // If records are found
  If(Records in selection([People])>0)
-
-  ` Alert the user
-
+  // Alert the user
     ALERT("Yes, there are overdue invoices on table.")
-
  End if
-
-  ` Reuse the sorted named selection
-
+  // Reuse the sorted named selection
  USE NAMED SELECTION("UserSort")
-
-  ` Remove the selection from memory
-
+  // Remove the selection from memory
  CLEAR NAMED SELECTION("UserSort")
 ```
 
 #### See also 
+
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  

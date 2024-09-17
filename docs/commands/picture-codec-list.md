@@ -31,5 +31,6 @@ By default, if you do not pass the *\** parameter, the command returns only the 
  If you pass the *\** parameter, the command also returns the list of codecs used for decoding (reading) the pictures. The two lists are not exclusive, certain reading and writing Codecs are identical. Codecs intended for encoding pictures may usually be used for decoding. On the other hand, decoding Codecs cannot necessarily be used for encoding. For example, the ".jpg" Codec will be found in both lists, whereas the ".xbmp" Codec will only be found in the list of reading (decoding) Codecs.
 
 #### See also 
+
 [Is picture file](is-picture-file.md)  
 [Pictures](../../4D/20-R6/Pictures.300-6957798.en.html)  

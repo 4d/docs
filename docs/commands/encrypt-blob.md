@@ -31,7 +31,7 @@ Moreover, if the optional recipient’s public key has been used to encrypt the 
 
 **Encryption principle with public and private keys for message exchange between two people, “Alice” and “Bob”:** 
   
-![](../assets/en/Commands/pict13081.en.png)  
+![](../assets/en/commands/pict13081.en.png)  
 
 **Note:** The cipher contains a checksum functionality in order to avoid any BLOB content modification (deliberately or not). Consequently, an encrypted BLOB should not be modified otherwise it might not be decrypted.
 
@@ -52,14 +52,10 @@ A company wants to keep the data stored in a 4D database private. It has to regu
 1) The company generates a pair of keys with the command [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md):
 
 ```4d
-  `Method GENERATE_KEYS_TXT
-
- C_BLOB($BPublicKey;$BPrivateKey)
-
+  //Method GENERATE_KEYS_TXT
+ var $BPublicKey;$BPrivateKey : Blob
  GENERATE ENCRYPTION KEYPAIR($BPrivateKey;$BPublicKey)
-
  BLOB TO DOCUMENT("PublicKey.txt";$BPublicKey)
-
  BLOB TO DOCUMENT("PrivateKey.txt";$BPrivateKey)
 ```
 
@@ -68,25 +64,16 @@ A company wants to keep the data stored in a 4D database private. It has to regu
 3) Then the company copies the private information (stored in the text field, for example) in BLOBs which will be encrypted with the private key:
 
 ```4d
-  `Method ENCRYPT_INFO
-
- C_BLOB($vbEncrypted;$vbPrivateKey)
-
- C_TEXT($vtEncrypted)
+  //Method ENCRYPT_INFO
+ var $vbEncrypted;$vbPrivateKey : Blob
+ var $vtEncrypted : Text
  
-
  $vtEncrypted:=[Private]Info
-
  VARIABLE TO BLOB($vtEncrypted;$vbEncrypted)
-
  DOCUMENT TO BLOB("PrivateKey.txt";$vbPrivateKey)
-
  If(OK=1)
-
     ENCRYPT BLOB($vbEncrypted;$vbPrivateKey)
-
     BLOB TO DOCUMENT("Update.txt";$vbEncrypted)
-
  End if
 ```
 
@@ -95,41 +82,24 @@ A company wants to keep the data stored in a 4D database private. It has to regu
 5) Each subsidiary can decrypt the document with the public key:
 
 ```4d
-  `Method DECRYPT_INFO
-
- C_BLOB($vbEncrypted;$vbPublicKey)
-
- C_TEXT($vtDecrytped)
-
- C_TIME($vtDocRef)
+  //Method DECRYPT_INFO
+ var $vbEncrypted;$vbPublicKey : Blob
+ var $vtDecrytped : Text
+ var $vtDocRef : Time
  
-
  ALERT("Please select an encrypted document.")
-
- $vtDocRef:=Open document("") `Select Update.txt
-
+ $vtDocRef:=Open document("") //Select Update.txt
  If(OK=1)
-
     CLOSE DOCUMENT($vtDocRef)
-
     DOCUMENT TO BLOB(Document;$vbEncrypted)
-
     DOCUMENT TO BLOB("PublicKey.txt";$vbPublicKey)
-
     If(OK=1)
-
        DECRYPT BLOB($vbEncrypted;$vbPublicKey)
-
        BLOB TO VARIABLE($vbEncrypted;$vtDecrypted)
-
        CREATE RECORD([Private])
-
        [Private]Info:=$vtDecrypted
-
        SAVE RECORD([Private])
-
     End if
-
  End if
 ```
 
@@ -146,45 +116,26 @@ A company wants to use the Internet to exchange information. Each subsidiary rec
 3) To encrypt the information to send, the subsidiary or the corporate house executes the ENCRYPT\_INFO\_2 method which uses the sender’s private key and the recipient’s public key to encrypt the information:
 
 ```4d
-  `Method ENCRYPT_INFO_2
-
- C_BLOB($vbEncrypted;$vbPrivateKey;$vbPublicKey)
-
- C_TEXT($vtEncrypt)
-
- C_TIME($vtDocRef)
+  //Method ENCRYPT_INFO_2
+ var $vbEncrypted;$vbPrivateKey;$vbPublicKey : Blob
+ var $vtEncrypt : Text
+ var $vtDocRef : Time
  
-
  $vtEncrypt:=[Private]Info
-
  VARIABLE TO BLOB($vtEncrypt;$vbEncrypted)
-
-  ` Your own private key is loaded...
-
+  // Your own private key is loaded...
  DOCUMENT TO BLOB("PrivateKey.txt";$vbPrivateKey)
-
  If(OK=1)
-
-  ` ...and the recipient’s public key
-
+  // ...and the recipient’s public key
     ALERT("Please select the recipient’s public key.")
-
-    $vhDocRef:=Open document("") `Public key to load
-
+    $vhDocRef:=Open document("") //Public key to load
     If(OK=1)
-
        CLOSE DOCUMENT($vtDocRef)
-
        DOCUMENT TO BLOB(Document;$vbPublicKey)
-
-  `BLOB encryption with the two keys as parameters
-
+  //BLOB encryption with the two keys as parameters
        ENCRYPT BLOB($vbEncrypted;$vbPrivateKey;$vbPublicKey)
-
        BLOB TO DOCUMENT("Update.txt";$vbEncrypted)
-
     End if
-
  End if
 ```
 
@@ -193,63 +144,38 @@ A company wants to use the Internet to exchange information. Each subsidiary rec
 5) Each recipient can decrypt the document by using his/her own private key and the sender’s public key:
 
 ```4d
-  `Method DECRYPT_INFO_2
-
- C_BLOB($vbEncrypted;$vbPublicKey;$vbPrivateKey)
-
- C_TEXT($vtDecrypted)
-
- C_TIME($vhDocRef)
+  //Method DECRYPT_INFO_2
+ var $vbEncrypted;$vbPublicKey;$vbPrivateKey : Blob
+ var $vtDecrypted : Text
+ var $vhDocRef : Time
  
-
  ALERT("Please select the encrypted document.")
-
- $vhDocRef:=Open document("") `Select the Update.txt file
-
+ $vhDocRef:=Open document("") //Select the Update.txt file
  If(OK=1)
-
     CLOSE DOCUMENT($vhDocRef)
-
     DOCUMENT TO BLOB(Document;$vbEncrypted)
-
-  `Your own private key is loaded
-
+  //Your own private key is loaded
     DOCUMENT TO BLOB("PrivateKey.txt";$vbPrivateKey)
-
     If(OK=1)
-
-  ` ...and the sender’s public key
-
+  // ...and the sender’s public key
        ALERT("Please select the sender’s public key.")
-
-       $vhDocRef:=Open document("") `Public key to load
-
+       $vhDocRef:=Open document("") //Public key to load
        If(OK=1)
-
           CLOSE DOCUMENT($vhDocRef)
-
           DOCUMENT TO BLOB(Document;$vbPublicKey)
-
-  `Decrypting the BLOB with two keys as parameters
-
+  //Decrypting the BLOB with two keys as parameters
           DECRYPT BLOB($vbEncrypted;$vbPublicKey;$vbPrivateKey)
-
           BLOB TO VARIABLE($vbEncrypted;$vtDecrypted)
-
           CREATE RECORD([Private])
-
           [Private]Info:=$vtDecrypted
-
           SAVE RECORD([Private])
-
        End if
-
     End if
-
  End if
 ```
 
 #### See also 
+
 [CryptoKey class](https://developer.4d.com/docs/en/API/CryptoKeyClass.html)  
 [DECRYPT BLOB](decrypt-blob.md)  
 [Encrypt data BLOB](encrypt-data-blob.md)  
