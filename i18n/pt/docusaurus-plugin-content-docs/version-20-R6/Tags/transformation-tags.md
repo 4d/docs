@@ -33,20 +33,6 @@ Em geral, essas tags devem ser inseridas como comentários do tipo HTML (`<!--#T
 </HTML>
 ```
 
-```mermaid
-sequenceDiagram
-    participant Alice
-    participant Bob
-    Alice->>John: Hello John, how are you?
-    loop Health check
-        John->>John: Fight against hypochondria
-    end
-    Note right of John: Rational thoughts <br/>prevail!
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
-```
-
 ## Princípios de utilização das etiquetas
 
 ### Parsing
