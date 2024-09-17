@@ -2612,7 +2612,7 @@ Você pode usar parênteses na consulta para dar prioridade ao cálculo. Por exe
 
 Two types of placeholders can be used: **indexed placeholders** and **named placeholders**.
 
-- **Indexed placeholders**: parameters are inserted as `:paramIndex` (for example ":1", ":2"...) in *queryString* and their corresponding values are provided by the sequence of *value* parameter(s). É possível utilizar até 128 parâmetros *value*.
+- **Indexed placeholders**: parameters are inserted as `:paramIndex` (for example ":1", ":2"...) no *queryString* e seus respectivos valores são fornecidos pela sequência de parâmetro(s) *value*. É possível utilizar até 128 parâmetros *value*.
 
 Exemplo:
 
@@ -2635,16 +2635,16 @@ $c:=$myCol.query(":att=:name";$o)
 - valores diretos (sem placeholders),
 - placeholders indexados ou com nome.
 
-Using placeholders in queries **is recommended** for the following reasons:
+O uso de placeholders em consultas **é recomendado** pelos seguintes motivos:
 
 1. Evita a inserção de código malicioso: se user diretamente variáveis preenchidas com uma string de pesquisa, um usuário poderia modificar as condições de pesquisa entrando argumentos adicionais. Por exemplo, imagine uma string de pesquisa como:
 
 ```4d
- $vquery:="status = 'public' & name = "+myname //user enters their name
+ $vquery:="status = 'público' & nome = "+meunome //usuário entra em seu nome
  $result:=$col.query($vquery)
 ```
 
-Essa consulta parece segura, pois os dados não públicos são filtrados. However, if the user enters in the *myname* area something like *"smith OR status='private'*, the query string would be modified at the interpretation step and could return private data.
+Essa consulta parece segura, pois os dados não públicos são filtrados. No entanto, se o usuário inserir na área *myname* algo como *"smith OR status='private'*,\* a string de consulta será modificada na etapa de interpretação e poderá retornar dados privados.
 
 Ao usar placeholders, não é possível substituir as condições de segurança:
 
@@ -2652,7 +2652,7 @@ Ao usar placeholders, não é possível substituir as condições de segurança:
  $result:=$col.query("status='public' & name=:1";myname)
 ```
 
-In this case if the user enters *smith OR status='private'* in the *myname* area, it will not be interpreted in the query string, but only passed as a value. A busca por uma pessoa chamada "smith OR status='private'" simplesmente falhará.
+Neste caso, se o usuário digitar *smith OR status='private'* na área *myname*, isso não será interpretado na string de consulta, mas apenas passado como um valor. A busca por uma pessoa chamada "smith OR status='private'" simplesmente falhará.
 
 2. It prevents having to worry about formatting or character issues, especially when handling *propertyPath* or *value* parameters that might contain non-alphanumeric characters such as ".", "['...
 

@@ -2382,10 +2382,10 @@ Para centrar el texto de las celdas fusionadas en este documento:
 ![](../assets/en/ViewPro/cmd_vpGetSpans.PNG)
 
 ```4d
-// Search for all cell spans
+// Buscar todas las celdas fusionadas
 $range:=VP Get spans(VP All("ViewProArea"))
 
-//center text
+//centrar el texto
 $style:=New object("vAlign";vk vertical align center;"hAlign";vk horizontal align center)
 VP SET CELL STYLE($range;$style)
 ```

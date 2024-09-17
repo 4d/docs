@@ -1045,14 +1045,14 @@ ds.Class.info:
 Considere os seguintes resultados:
 
 ```4d
-ds.Class.query("info.coll[].val = :1";0)
-// returns B and C
-// finds "entities with 0 in at least one val property"
+ds.Class.query("info.coll[].val = :1";0) 
+// retorna B e C
+// encontra "entities with 0 in at least one val property"
 
 ds.Class.query("info.coll[].val != :1";0)
-// returns A only
-// finds "entities where all val properties are different from 0"
-// which is the equivalent to
+// retorna apenas A
+// encontra "entities where all val properties are different from 0"
+// que é equivalente a 
 ds.Class.query(not("info.coll[].val = :1";0))
 ```
 
