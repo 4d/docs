@@ -35,7 +35,7 @@ Todos os objetos propostos na biblioteca de objetos padrão estão descritos em 
 
 ## Utilização da biblioteca de objetos padrão
 
-Pode criar e usar bibliotecas de objetos personalizados em 4D. A custom object library is a 4D project where you can store your favorite objects (buttons, texts, pictures, etc.) You can then reuse these objects in different forms and different projects. You can then reuse these objects in different forms and different projects.
+Pode criar e usar bibliotecas de objetos personalizados em 4D. A custom object library is a 4D project where you can store your favorite objects (buttons, texts, pictures, etc.) You can then reuse these objects in different forms and different projects.
 
 Os objetos são armazenados com todas as suas propriedades, incluindo seus métodos objeto. Libraries are put together and used by simple drag-and-drop or copy-paste operations.
 
