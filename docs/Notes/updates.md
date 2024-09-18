@@ -458,13 +458,13 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 |Library|Current version|Updated in 4D|Comment|
 |---|---|---|----|
-|BoringSSL|0aa300b|**20 R6**|Used for QUIC|
-|CEF|121|20 R5|Chromium 6167|
+|BoringSSL|0aa300b|20 R6|Used for QUIC|
+|CEF|128|**20 R7**|Chromium 6613|
 |Hunspell|1.7.2|20|Used for spell checking in 4D forms and 4D Write Pro|
 |ICU|73.2|20|This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
-|libldap|**2.6.7**|**20 R6**||
+|libldap|2.6.7|20 R6||
 |libsasl|2.1.28|20||
-|Libuv |1.48|**20 R6**|Used for QUIC|
+|Libuv |1.48|20 R6|Used for QUIC|
 |libZip|1.9.2|20|Used by zip class, 4D Write Pro, svg and serverNet components|
 |LZMA|5.4.1|20||
 |OpenSSL|3.2.0|20 R4|Default TLS/SSL security level has been upgraded. See [Behavior changes](#behavior-changes) for release 20 R4|
