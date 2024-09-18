@@ -29,11 +29,11 @@ A excepción de los [comandos no utilizables](#comandos-inutilizables), un compo
 
 Quando os comandos são chamados a partir de um componente, eles são executados no contexto do componente, com exceção dos comandos [`EXECUTE METHOD`] (https://doc.4d.com/4dv20/help/command/en/page1007.html) ou [`EXECUTE FORMULA`] (https://doc.4d.com/4dv20/help/command/en/page63.html), que usam o contexto do método especificado pelo comando. Observe também que os comandos de leitura do tema "Usuários e grupos" podem ser usados a partir de um componente, mas lerão os usuários e grupos do projeto host (um componente não tem seus próprios usuários e grupos).
 
-The [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html) and [`Get database parameter`](https://doc.4d.com/4dv20/help/command/en/page643.html) commands are an exception: their scope is global to the application. Quando esses comandos forem chamados de um componente, são aplicados ao projecto de aplicação local.
+Os comandos [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/pt-BR/page642.html) e [`Get database parameter`](https://doc.4d.com/4dv20/help/command/pt-BR/page643.html) são uma exceção: seu escopo é global para a aplicação. Quando esses comandos forem chamados de um componente, são aplicados ao projecto de aplicação local.
 
-Además, se han especificado medidas específicas para los comandos `Structure file` y `Get 4D folder` cuando se utilizan en el marco de los componentes.
+Além disso, medidas especificas foram criadas para os comandos `Structure file` e `Get 4D folder` quando utilizados no marco dos componentes.
 
-The [`COMPONENT LIST`](https://doc.4d.com/4dv20/help/command/en/page1001.html) command can be used to obtain the list of components that are loaded by the host project.
+O comando [`COMPONENT LIST`](https://doc.4d.com/4dv20/help/command/en/page1001.html) pode ser usado para obter a lista de componentes carregados pelo projeto host.
 
 ### Comandos não utilizáveis
 
@@ -72,11 +72,11 @@ Por outro lado, por padrão, esses métodos de projeto não estarão visíveis e
 
 Os métodos do projeto compartilhado podem ser chamados no código do projeto host (mas não podem ser modificados no Editor de código do projeto host). Estos métodos son los **puntos de entrada** del componente.
 
-Por outro lado, por motivos de segurança, por padrão, um componente não pode executar métodos de projeto pertencentes ao projeto host. Em alguns casos, talvez seja necessário permitir que um componente acesse os métodos de projeto do seu projeto host. Para ello, debe designar explícitamente qué métodos proyecto del proyecto local quiere hacer accesibles a los componentes (en las propiedades del método, marque la casilla **Compartido por componentes y proyecto local**).
+Por outro lado, por motivos de segurança, por padrão, um componente não pode executar métodos de projeto pertencentes ao projeto host. Em alguns casos, talvez seja necessário permitir que um componente acesse os métodos de projeto do seu projeto host. Para isso, você deve designar explicitamente quais métodos de projeto do projeto host você deseja tornar acessíveis aos componentes (nas propriedades do método, marque a caixa **Compartilhado por componentes e projeto host**).
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
-Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/en/page63.html) or [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/en/page1007.html) command. Por exemplo:
+Quando os métodos projeto dos projetos host estiverem disponíveis para os componentes, você poderá executar um método do projeto host de dentro de um componente usando o comando [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/en/page63.html) ou [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/en/page1007.html). Por exemplo:
 
 ```4d
 // Método host
@@ -90,7 +90,7 @@ EXECUTE METHOD($param)
 ```
 
 > Um banco de dados de host interpretado que contém componentes interpretados pode ser compilado ou verificado quanto à sintaxe se não chamar métodos do componente interpretado. Otherwise, a warning dialog box appears when you attempt to launch the compilation or a syntax check and it will not be possible to carry out the operation.\
-> Keep in mind that an interpreted method can call a compiled method, but not the reverse, except via the use of the `EXECUTE METHOD` and `EXECUTE FORMULA` commands.
+> Lembre-se de que um método interpretado pode chamar um método compilado, mas não o contrário, exceto pelo uso dos comandos `EXECUTE METHOD` e `EXECUTE FORMULA`.
 
 ## Compartilhamento de classes
 
@@ -108,7 +108,7 @@ Un _namespace_ garantiza que no surja ningún conflicto cuando un proyecto local
 
 :::
 
-When you enter a value, you declare that component classes will be available in the [user class store (**cs**)](../Concepts/classes.md#cs) of the host project as well as its loaded components, through the `cs.<value>` namespace. Por ejemplo, si introduce "eGeometry" como namespace del componente, asumiendo que ha creado una clase `Rectangle` que contiene una función `getArea()`, una vez que su proyecto se instala como componente, el desarrollador del proyecto local puede escribir
+When you enter a value, you declare that component classes will be available in the [user class store (**cs**)](../Concepts/classes.md#cs) of the host project as well as its loaded components, through the `cs.<value>` namespace. Por exemplo, se você digitar "eGeometry" como namespace do componente, Supondo que você criou uma classe `Rectangle` contendo uma função `getArea()`, assim que seu projeto for instalado como componente, o desenvolvedor do projeto host pode escrever:
 
 ```4d
 //in host project or one of its components
@@ -260,7 +260,7 @@ O código abaixo está incluído em um componente e realiza três ações básic
 Cria o banco externo:
 
 ```4d
-<>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) stores the data in an authorized directory
+<>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) armazena os dados em um diretório autorizado
  Begin SQL
         CREATE DATABASE IF NOT EXISTS DATAFILE :[<>MyDatabase];
         USE DATABASE DATAFILE :[<>MyDatabase];
@@ -272,9 +272,9 @@ Cria o banco externo:
         code TEXT,
         sort_order INT32
         );
-
+ 
         CREATE UNIQUE INDEX id_index ON KEEPIT (ID);
-
+ 
         USE DATABASE SQL_INTERNAL;
 
  End SQL
@@ -283,7 +283,7 @@ Cria o banco externo:
 Escrita no banco de dados externa:
 
 ```4d
- $Ptr_1:=$2 // retrieves data from the host project through pointers
+ $Ptr_1:=$2 // recupera dados do projeto host por meio de ponteiros
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5
@@ -291,14 +291,14 @@ Escrita no banco de dados externa:
  Begin SQL
 
         USE DATABASE DATAFILE :[<>MyDatabase];
-
+ 
         INSERT INTO KEEPIT
         (ID, kind, name, code, sort_order)
         VALUES
         (:[$Ptr_1], :[$Ptr_2], :[$Ptr_3], :[$Ptr_4], :[$Ptr_5]);
-
+ 
         USE DATABASE SQL_INTERNAL;
-
+ 
 
  End SQL
 ```
@@ -306,20 +306,20 @@ Escrita no banco de dados externa:
 Lendo de um banco externo:
 
 ```4d
- $Ptr_1:=$2 // accesses data of the host project through pointers
+ $Ptr_1:=$2 // acessa dados do projeto host por meio de ponteiros
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5
  $Ptr_5:=$6
-
+ 
  Begin SQL
 
     USE DATABASE DATAFILE :[<>MyDatabase];
-
+ 
     SELECT ALL ID, kind, name, code, sort_order
     FROM KEEPIT
     INTO :$Ptr_1, :$Ptr_2, :$Ptr_3, :$Ptr_4, :$Ptr_5;
-
+ 
     USE DATABASE SQL_INTERNAL;
 
  End SQL
@@ -350,7 +350,7 @@ Um componente pode executar o código 4D automaticamente ao abrir ou fechar o ba
 
 La ejecución del código de inicialización o cierre se realiza mediante el método base `On Host Database Event`.
 
-> Por razones de seguridad, debe autorizar explícitamente la ejecución del método base `On Host Database Event` en la base local para poder llamarlo. To do this, you must check the [**Execute "On Host Database Event" method of the components** option](../settings/security.md#options) in the Security page of the Settings.
+> Por motivos de segurança, você deve autorizar explicitamente a execução do método de banco de dados `On Host Database Event` no banco de dados do host para poder chamá-lo. To do this, you must check the [**Execute "On Host Database Event" method of the components** option](../settings/security.md#options) in the Security page of the Settings.
 
 ## Proteção dos componentes: compilação
 

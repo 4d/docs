@@ -12,7 +12,7 @@ Pode utilizar bibliotecas de objectos nos seus formulários. An object library o
 
 ## Criar e utilizar bibliotecas de objetos personalizadas
 
-The standard object library is available from the Form editor: click on the last button of the toolbar:\
+A biblioteca de objetos padrão está disponível no editor de formulários: clique no último botão da barra de ferramentas:\
 ![](../assets/en/FormEditor/library1.png)
 
 A biblioteca é apresentada numa janela separada:
@@ -22,10 +22,10 @@ A biblioteca é apresentada numa janela separada:
 A janela tem as seguintes características principais:
 
 - Preview area with tips: The central area displays a preview of each object. You can hover on an object to obtain information about the object in a tip.
-- You can filter the window contents by using the **Categories** menu:
+- Você pode filtrar o conteúdo da janela usando o menu **Categorias**:
   ![](../assets/en/FormEditor/library3.png)
 - Para utilizar um objeto da biblioteca no seu formulário, pode:
-  - hacer clic derecho en un objeto y seleccionar **Copiar** en el menú contextual
+  - clicar com o botão direito do rato num objeto e selecionar **Copiar** no menu contextual
   - or drag and drop the object from the library The object is then added to the form.
 
 Esta biblioteca é só de leitura. If you want to edit default objects or create your own library of preconfigured objects or project forms, you need to create a custom object library (see below).
@@ -34,7 +34,7 @@ Todos los objetos propuestos en la librería de objetos estándar se describen e
 
 ## Utilização da biblioteca de objetos padrão
 
-Pode criar e usar bibliotecas de objetos personalizados em 4D. A custom object library is a 4D project where you can store your favorite objects (buttons, texts, pictures, etc.) You can then reuse these objects in different forms and different projects. You can then reuse these objects in different forms and different projects.
+Pode criar e usar bibliotecas de objetos personalizados em 4D. A custom object library is a 4D project where you can store your favorite objects (buttons, texts, pictures, etc.) You can then reuse these objects in different forms and different projects.
 
 Os objetos são armazenados com todas as suas propriedades, incluindo seus métodos objeto. Libraries are put together and used by simple drag-and-drop or copy-paste operations.
 
@@ -42,7 +42,7 @@ Using libraries, you can build form object backgrounds grouped by graphic famili
 
 ### Criar uma biblioteca de objetos
 
-Para crear una librería de objetos, seleccione **Nuevo>Librería de objetos...** en el menú **Archivo** o en la barra de herramientas de 4D. A standard save file dialog box appears, which allows you to choose the name and the location of the object library.
+To create an object library, select **New>Object Library...** from the 4D **File** menu or tool bar. A standard save file dialog box appears, which allows you to choose the name and the location of the object library.
 
 Once you validate the dialog box, 4D creates a new object library on your disk and displays its window (empty by default).
 
@@ -54,7 +54,7 @@ Once you validate the dialog box, 4D creates a new object library on your disk a
 
 Uma determinada biblioteca de objetos só pode ser aberta por um m banco de dados por vez. Entretanto, várias livrarias diferentes podem ser abertas no mesmo banco de dados.
 
-Para abrir una librería de objetos personalizada, seleccione el comando **Abrir>Librería de objetos...** en el menú **Archivo** o en la barra de herramientas de 4D. Aparece uma caixa de diálogo padrão de ficheiro aberto, que lhe permite seleccionar a biblioteca de objectos a abrir. Pode seleccionar os seguintes tipos de ficheiros:
+To open a custom object library, select **Open>Object Library...** command in the 4D **File** menu or tool bar. Aparece uma caixa de diálogo padrão de ficheiro aberto, que lhe permite seleccionar a biblioteca de objectos a abrir. Pode seleccionar os seguintes tipos de ficheiros:
 
 - **.4dproject**
 - **.4dz**
