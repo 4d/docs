@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+#### Description
 
 
 
@@ -23,8 +23,9 @@ displayed_sidebar: docs
 
 The documentation for this command has been moved. See [**ZIP Create archive** command on developer.4d.com](https://developer.4d.com/docs/API/ZipArchiveClass#zip-create-archive) for updated documentation.
 
-The **ZIP Create archive** command creates a compressed ZIP archive object and returns the status of the operation. 
+The **ZIP Create archive** command creates a compressed ZIP archive object and returns the status of the operation.
 
-#### See also 
+#### See also
 
-[ZIP Read archive](zip-read-archive.md)  
+[ZIP Read archive](zip-read-archive)  
+[File](file)

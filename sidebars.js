@@ -456,8 +456,8 @@ module.exports =
 									"type": "category",
 									"label": "File and Folder",
 									"items": [
-									  "commands/file",
-									  "commands/folder",
+									  "commands-n/file",
+									  "commands-n/folder",
 									  "commands/zip-create-archive",
 									  "commands/zip-read-archive"
 									]
