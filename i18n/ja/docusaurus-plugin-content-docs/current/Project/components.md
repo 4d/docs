@@ -34,7 +34,7 @@ title: コンポーネント
 4Dプロジェクトにコンポーネントを読み込むには、以下の方法があります:
 
 - [プロジェクトの **Components** フォルダー](architecture.md#components) にコンポーネントファイルをコピーします。
-- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Component manager interface**](#adding-a-dependency).
+- または、プロジェクトの **dependencies.json** ファイルでコンポーネントを宣言します。これは、[**Component manager インターフェースを使用して依存関係を追加**](#依存関係の追加) するときに、ローカルファイルに対して自動的におこなわれます。
 
 **dependencies.json** ファイルで宣言されているコンポーネントは、異なる場所に保存できます:
 
@@ -44,7 +44,7 @@ title: コンポーネント
 
 同じコンポーネントが異なる場所にインストールされている場合、[優先順位](#優先順位) が適用されます。
 
-### dependencies.json and environment4d.json
+### dependencies.json と environment4d.json
 
 #### dependencies.json
 
@@ -75,26 +75,26 @@ title: コンポーネント
 **優先度高**
 
 1. [プロジェクトの **Components** フォルダー](architecture.md#components) に置かれているコンポーネント
-2. Components declared in the **dependencies.json** file (the **environment4d.json** declared path overrides the **dependencies.json** path to configure a local environment).
+2. dependencies.json\*\*ファイルで宣言されたコンポーネント (ローカル環境を構成するために **environment4d.json** で指定されたパスは **dependencies.json** のパスをオーバーライドします)。
 3. 内部のユーザー4Dコンポーネント (4D NetKit、4D SVG など)
 
 **優先度低**
 
 ```mermaid
 flowchart TB
-    id1("1\nComponents from project's Components folder")~~~
-    id2("2\nComponents listed in dependencies.json")~~~
-    id2 -- environment4d.json gives path --> id4("Load component\nbased on path declared\nin environment4d.json")
+    id1("1\nプロジェクトの Components フォルダーにあるコンポーネント")~~~
+    id2("2\ndependencies.json にリストされたコンポーネント")~~~
+    id2 -- environment4d.json にパスがある --> id4("environment4d.json に\n宣言されたパスの\nコンポーネントをロード")
     ~~~
-    id3("3\nUser 4D components")
-    id2 -- environment4d.json doesn't give path --> id5("Load component\nnext to\npackage folder")
+    id3("3\nユーザー 4D コンポーネント")
+    id2 -- environment4d.json にパスがない --> id5("パッケージフォルダーの\n隣に配置されている\nコンポーネントをロード")
     ~~~
-    id3("3\nUser 4D components")
+    id3("3\nユーザー 4D コンポーネント")
 ```
 
-When a component cannot be loaded because of another instance of the same component located at a higher priority level, both get a specific [status](#dependency-status): the non-loaded component is given the _Overloaded_ status, while the loaded component has the _Overloading_ status.
+同じコンポーネントの別のインスタンス (A) がより高い優先度レベルにあるためにコンポーネント (B) を読み込めない場合、AとBのコンポーネントにはそれぞれ専用の [ステータス](#依存関係のステータス) が付与されます: 読み込まれなかったコンポーネント (B) には _Overloaded_ ステータス、読み込まれたコンポーネント (A) には _Overloading_ ステータスが与えられます。
 
-### Local components
+### ローカルコンポーネント
 
 ローカルコンポーネントは [**dependencies.json**ファイル](#dependencyjson) にて次のように宣言します:
 
@@ -128,7 +128,7 @@ When a component cannot be loaded because of another instance of the same compon
 
 ローカルコンポーネントの場所をカスタマイズしたい場合は、プロジェクトフォルダーと同じ階層に保存されていない依存関係のパスを、[**environment4d.json**](#environment4djson) ファイルに定義します。
 
-You can use **relative** or **absolute** paths (see below).
+**相対パス** または **絶対パス** を使用できます (下記参照)。
 
 例:
 
@@ -148,17 +148,17 @@ You can use **relative** or **absolute** paths (see below).
 
 :::
 
-#### Relative paths vs absolute paths
+#### 相対パス vs 絶対パス
 
-Paths are expressed in POSIX syntax as described in [this paragraph](../Concepts/paths#posix-syntax).
+パスは、POSIXシンタックスで表します ([POSIXシンタックス](../Concepts/paths#posix-シンタックス) 参照)。
 
-Relative paths are relative to the [`environment4d.json`](#environment4djson) file. Absolute paths are linked to the user's machine.
+相対パスは、[`environment4d.json`](#environment4djson) ファイルを基準とした相対パスです。 絶対パスは、ユーザーのマシンにリンクされています。
 
-Using relative paths is **recommended** in most cases, since they provide flexibility and portability of the components architecture, especially if the project is hosted in a source control tool.
+コンポーネントアーキテクチャーの柔軟性と移植性のため、ほとんどの場合、相対パスを使用することが **推奨** されます (特に、プロジェクトがソース管理ツールにホストされている場合)。
 
-Absolute paths should only be used for components that are specific to one machine and one user.
+絶対パスは、1台のマシンと 1人のユーザーに特化したコンポーネントの場合にのみ使用すべきです。
 
-### Components stored on GitHub
+### GitHub に保存されたコンポーネント
 
 GitHubリリースとして利用可能な 4Dコンポーネントを参照して、4Dプロジェクトに自動で読み込むことができます。
 
@@ -245,10 +245,10 @@ GitHub ではリリースを作成するときに、**タグ** と **バージ�
 - "`*`": リリースされている最新バージョン。
 - "`1.*`": メジャーバージョン 1 の全バージョン。
 - "`1.2.*`": マイナーバージョン 1.2 のすべてのパッチ。
-- ">=1.2.3": the latest version, starting with the 1.2.3 version.
-- ">1.2.3": the latest version, starting with the version just after the 1.2.3.
-- "^1.2.3": the latest version 1, starting with the 1.2.3 version and strictly lower than version 2.
-- "~1.2.3": the latest version 1.2, starting with the 1.2.3 version and strictly lower than version 1.3.
+- "`>=1.2.3`": 1.2.3 を含む、以降の最新バージョン。
+- "`>1.2.3`": 1.2.3 を含まない、以降の最新バージョン。
+- "`^1.2.3`": バージョン 1.2.3 を含む、以降の最新のバージョン1 (バージョン2未満であること)。
+- "`~1.2.3`": バージョン 1.2.3 を含む、以降の最新のバージョン 1.2 (バージョン1.3未満であること)。
 - "`<=1.2.3`": 1.2.3 までの最新バージョン。
 - "`1.0.0 – 1.2.3`" または ">=1.0.0 <=1.2.3": 1.0.0 から 1.2.3 までのバージョン。
 - "`<1.2.3 ||>=2`": 1.2.3 から 2.0.0 未満までを除いたバージョン。
@@ -300,7 +300,7 @@ GitHub ではリリースを作成するときに、**タグ** と **バージ�
 
 ## プロジェクトの依存関係の監視
 
-In an opened project, you can add, remove, and get information about dependencies and their current loading status in the **Dependencies** panel.
+開かれているプロジェクトでは、**依存関係** パネルで依存関係の追加・削除ができるほか、現在の読み込み状態に関する情報を取得することができます。
 
 依存関係パネルを表示するには:
 
@@ -314,43 +314,43 @@ In an opened project, you can add, remove, and get information about dependencie
 
 ![dependency](../assets/en/Project/dependency.png)
 
-### Adding and Removing Dependencies
+### 依存関係の追加と削除
 
-The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server). 次のことが可能です:
+依存関係インターフェースでは、依存関係を管理することができます (4Dシングルユーザーと4D Server)。 次のことが可能です:
 
-- add local dependencies ([GitHub dependencies](#components-stored-on-github) cannot be added through the interface),
-- remove any dependency.
+- ローカルな依存関係の追加 ([GitHub 上の依存関係](#github-に保存されたコンポーネント) は、インターフェースからは追加できません)
+- 依存関係の削除
 
-#### Adding a dependency
+#### 依存関係の追加
 
-To add a dependency from the Dependencies panel, click on the **+** button of the panel or select **Add a dependency...** from the contextual menu. A standard Open file dialog box is displayed, allowing you to select the component to add. You can select a **.4DBase** package or a [**.4DProject** file](architecture.md##applicationname4dproject-file). It the selected item is not valid, an error is displayed.
+依存関係パネルから依存関係を追加するには、パネルの **+** ボタンをクリックするか、 コンテキストメニューから **依存関係の追加...** を選択します。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 **.4DBase** パッケージまたは [**.4DProject** ファイル](architecture.md#applicationname4dproject-ファイル) を選択できます。 選択された項目が有効でない場合は、エラーが表示されます。
 
-- If you select a component located next to the project package folder (default location), it is automatically declared in the [**dependencies.json**](#dependenciesjson) file.
-- If you select a component that is not located next to the project package folder, it is automatically declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). The Dependencies panel asks if you want to save a [relative or absolute path](#relative-paths-vs-absolute-paths).
-
-:::note
-
-If no [**environment4d.json**](#environmen4djson) file is already defined for the project at this step, it is automatically created in the project package folder (default location).
-
-:::
-
-The selected dependency is automatically added to the [inactive dependency list](#dependency-status). It will be loaded once the application restarts.
-
-#### Removing a dependency
-
-To add a dependency from the Dependencies panel, select the dependency to remove and click on the **-** button of the panel or select **Remove the dependency...** from the contextual menu. You can select several dependencies, in which case the action is applied to all selected dependencies.
+- プロジェクトパッケージフォルダーの隣 (デフォルトの場所) にあるコンポーネントを選択すると、[**dependencies.json**](#dependenciesjson)ファイル内で自動的に宣言されます。
+- プロジェクトのパッケージフォルダーの隣にないコンポーネントを選択した場合、そのコンポーネントは自動的に [**dependencies.json**](#dependenciesjson) ファイルで宣言され、そのパスも [**environment4d.json**](#environmen4djson) ファイルで宣言されます (注記参照)。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。
 
 :::note
 
-Only dependencies declared in the [**dependencies.json**](#dependenciesjson) file can be removed using the Dependencies panel. If a selected dependency cannot be removed, the **-** button is disabled and the **Remove the dependency...** menu item is hidden.
+この段階で [**environment4d.json**](#environmen4djson) ファイルがまだプロジェクトに定義されていない場合、プロジェクトのパッケージフォルダー内 (デフォルトの場所) に自動的に作成されます。
 
 :::
 
-確認用のダイアログボックスが表示されます。 If the dependency was declared in the **environment4d.json** file, an option allows you to remove it:
+選択された依存関係は自動的に [非アクティブ依存関係リスト](#依存関係のステータス) に追加されます。 このコンポーネントはアプリケーションの再起動後にロードされます。
+
+#### 依存関係の削除
+
+依存関係パネルから依存関係を削除するには、対象の依存関係を選択し、パネルの **-** ボタンをクリックするか、コンテキストメニューから **依存関係の削除...** を選択します。 依存関係は複数選択することができ、その場合、操作は選択したすべての依存関係に適用されます。
+
+:::note
+
+依存関係パネルを使用して削除できるのは、[**dependencies.json**](#dependenciesjson) ファイルで宣言されている依存関係に限られます。 選択した依存関係を削除できない場合、**-** ボタンは無効化され、**依存関係の削除...** メニュー項目は非表示になります。
+
+:::
+
+確認用のダイアログボックスが表示されます。 依存関係が **environment4d.json** ファイルで宣言されている場合、以下のオプションでそれを削除することができます:
 
 ![dependency-remove](../assets/en/Project/remove-comp.png)
 
-If you confirm the dialog box, the removed dependency is automatically flagged "Unload at restart". It will be unloaded once the application restarts.
+ダイアログボックスを確定すると、削除された依存関係には "再起動時にアンロード" フラグが自動的に付きます。 このコンポーネントはアプリケーションの再起動時にアンロードされます。
 
 ![status-unload](../assets/en/Project/status-unload.png)
 

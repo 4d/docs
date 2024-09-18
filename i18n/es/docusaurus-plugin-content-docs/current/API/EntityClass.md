@@ -90,9 +90,9 @@ El tipo de valor del atributo depende del tipo [kind](DataClassClass.md#attribut
 
 <!-- REF #EntityClass.clone().Params -->
 
-| Parámetros | Tipo                      |     | Descripción                                   |
-| ---------- | ------------------------- | :-: | --------------------------------------------- |
-| Result     | 4D.Entity |  <- | Nueva entidad que hace referencia al registro |
+| Parámetros | Tipo                      |                             | Descripción                                   |
+| ---------- | ------------------------- | :-------------------------: | --------------------------------------------- |
+| Result     | 4D.Entity | <- | Nueva entidad que hace referencia al registro |
 
 <!-- END REF -->
 
@@ -133,11 +133,11 @@ Esta función sólo puede utilizarse con entidades ya guardadas en la base de da
 
 <!-- REF #EntityClass.diff().Params -->
 
-| Parámetros          | Tipo                      |     | Descripción                                |
-| ------------------- | ------------------------- | :-: | ------------------------------------------ |
-| entityToCompare     | 4D.Entity |  -> | Entidad a comparar con la entidad original |
-| attributesToCompare | Collection                |  -> | Nombre de los atributos a comparar         |
-| Result              | Collection                |  <- | Diferencias entre las entidades            |
+| Parámetros          | Tipo                      |                             | Descripción                                |
+| ------------------- | ------------------------- | :-------------------------: | ------------------------------------------ |
+| entityToCompare     | 4D.Entity |              ->             | Entidad a comparar con la entidad original |
+| attributesToCompare | Collection                |              ->             | Nombre de los atributos a comparar         |
+| Result              | Collection                | <- | Diferencias entre las entidades            |
 
 <!-- END REF -->
 
@@ -335,10 +335,10 @@ vCompareResult3 (sólo se devuelven las diferencias en atributos tocados $e1)
 
 <!-- REF #EntityClass.drop().Params -->
 
-| Parámetros | Tipo    |     | Descripción                                                                                        |
-| ---------- | ------- | :-: | -------------------------------------------------------------------------------------------------- |
-| mode       | Integer |  -> | `dk force drop if stamp changed`: activa el soltar incluso si el sello ha cambiado |
-| Result     | Object  |  <- | Resultado de la operación soltar                                                                   |
+| Parámetros | Tipo    |                             | Descripción                                                                                        |
+| ---------- | ------- | :-------------------------: | -------------------------------------------------------------------------------------------------- |
+| mode       | Integer |              ->             | `dk force drop if stamp changed`: activa el soltar incluso si el sello ha cambiado |
+| Result     | Object  | <- | Resultado de la operación soltar                                                                   |
 
 <!-- END REF -->
 
@@ -443,9 +443,9 @@ Ejemplo con la opción `dk force drop if stamp changed`:
 
 <!-- REF #EntityClass.first().Params -->
 
-| Parámetros | Tipo                      |     | Descripción                                                                                                |
-| ---------- | ------------------------- | :-: | ---------------------------------------------------------------------------------------------------------- |
-| Result     | 4D.Entity |  <- | Referencia a la primera entidad de una selección de entidades (Null si no se encuentra) |
+| Parámetros | Tipo                      |                             | Descripción                                                                                                |
+| ---------- | ------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------------------------- |
+| Result     | 4D.Entity | <- | Referencia a la primera entidad de una selección de entidades (Null si no se encuentra) |
 
 <!-- END REF -->
 
@@ -570,9 +570,9 @@ También puede utilizar una entidad relacionada dada como objeto:
 
 <!-- REF #EntityClass.getDataClass().Params -->
 
-| Parámetros | Tipo                         |     | Descripción                                  |
-| ---------- | ---------------------------- | :-: | -------------------------------------------- |
-| Result     | 4D.DataClass |  <- | Objeto DataClass al que pertenece la entidad |
+| Parámetros | Tipo                         |                             | Descripción                                  |
+| ---------- | ---------------------------- | :-------------------------: | -------------------------------------------- |
+| Result     | 4D.DataClass | <- | Objeto DataClass al que pertenece la entidad |
 
 <!-- END REF -->
 
@@ -616,11 +616,11 @@ El siguiente código genérico duplica cualquier entidad:
 
 <!-- REF #EntityClass.getKey().Params -->
 
-| Parámetros | Tipo    |     | Descripción                                                                                                               |
-| ---------- | ------- | :-: | ------------------------------------------------------------------------------------------------------------------------- |
-| mode       | Integer |  -> | `dk key as string`: la llave primaria se devuelve como una cadena, sin importar el tipo de llave primaria |
-| Result     | Text    |  <- | Valor de la llave primaria de texto de la entidad                                                                         |
-| Result     | Integer |  <- | Valor de la llave primaria numérica de la entidad                                                                         |
+| Parámetros | Tipo    |                             | Descripción                                                                                                               |
+| ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------- |
+| mode       | Integer |              ->             | `dk key as string`: la llave primaria se devuelve como una cadena, sin importar el tipo de llave primaria |
+| Result     | Text    | <- | Valor de la llave primaria de texto de la entidad                                                                         |
+| Result     | Integer | <- | Valor de la llave primaria numérica de la entidad                                                                         |
 
 <!-- END REF -->
 
@@ -658,8 +658,8 @@ Las llaves primarias pueden ser números (enteros) o cadenas. Puede "forzar" que
 
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
 
-| Parámetros | Tipo |    | Descripción                                                           |
-| ---------- | ---- | -- | --------------------------------------------------------------------- |
+| Parámetros | Tipo |                             | Descripción                                                           |
+| ---------- | ---- | --------------------------- | --------------------------------------------------------------------- |
 | resultado  | Text | <- | Atributos de contexto vinculados a la entidad, separados por una coma |
 
 <!-- END REF -->
@@ -717,9 +717,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <!-- REF #EntityClass.getSelection().Params -->
 
-| Parámetros | Tipo                               |     | Descripción                                                                                 |
-| ---------- | ---------------------------------- | :-: | ------------------------------------------------------------------------------------------- |
-| Result     | 4D.EntitySelection |  <- | Entity selection a la que pertenece la entidad (nula si no se encuentra) |
+| Parámetros | Tipo                               |                             | Descripción                                                                                 |
+| ---------- | ---------------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------- |
+| Result     | 4D.EntitySelection | <- | Entity selection a la que pertenece la entidad (nula si no se encuentra) |
 
 <!-- END REF -->
 
@@ -761,9 +761,9 @@ Si la entidad no pertenece a una selección de entidades, la función devuelve N
 
 <!-- REF #EntityClass.getStamp().Params -->
 
-| Parámetros | Tipo    |     | Descripción                                                                  |
-| ---------- | ------- | :-: | ---------------------------------------------------------------------------- |
-| Result     | Integer |  <- | Sello de la entidad (0 si la entidad acaba de ser creada) |
+| Parámetros | Tipo    |                             | Descripción                                                                  |
+| ---------- | ------- | :-------------------------: | ---------------------------------------------------------------------------- |
+| Result     | Integer | <- | Sello de la entidad (0 si la entidad acaba de ser creada) |
 
 <!-- END REF -->
 
@@ -809,10 +809,10 @@ El marcador interno se incrementa automáticamente en 4D cada vez que se guarda 
 
 <!-- REF #EntityClass.indexOf().Params -->
 
-| Parámetros      | Tipo                               |     | Descripción                                                               |
-| --------------- | ---------------------------------- | :-: | ------------------------------------------------------------------------- |
-| entitySelection | 4D.EntitySelection |  -> | La posición de la entidad se da en función de esta selección de entidades |
-| Result          | Integer                            |  <- | Posición de la entidad en una selección de entidades                      |
+| Parámetros      | Tipo                               |                             | Descripción                                                               |
+| --------------- | ---------------------------------- | :-------------------------: | ------------------------------------------------------------------------- |
+| entitySelection | 4D.EntitySelection |              ->             | La posición de la entidad se da en función de esta selección de entidades |
+| Result          | Integer                            | <- | Posición de la entidad en una selección de entidades                      |
 
 <!-- END REF -->
 
@@ -858,9 +858,9 @@ El valor resultante se incluye entre 0 y la longitud de la selección de entidad
 
 <!-- REF #EntityClass.isNew().Params -->
 
-| Parámetros | Tipo    |     | Descripción                                                                                                               |
-| ---------- | ------- | :-: | ------------------------------------------------------------------------------------------------------------------------- |
-| Result     | Boolean |  <- | True si la entidad acaba de ser creada y aún no se ha guardado. En caso contrario, False. |
+| Parámetros | Tipo    |                             | Descripción                                                                                                               |
+| ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------- |
+| Result     | Boolean | <- | True si la entidad acaba de ser creada y aún no se ha guardado. En caso contrario, False. |
 
 <!-- END REF -->
 
@@ -898,9 +898,9 @@ La función `.isNew()` <!-- REF #EntityClass.isNew().Summary --> devuelve True s
 
 <!-- REF #EntityClass.last().Params -->
 
-| Parámetros | Tipo                      |     | Descripción                                                                                               |
-| ---------- | ------------------------- | :-: | --------------------------------------------------------------------------------------------------------- |
-| Result     | 4D.Entity |  <- | Referencia a la última entidad de una selección de entidades (Null si no se encuentra) |
+| Parámetros | Tipo                      |                             | Descripción                                                                                               |
+| ---------- | ------------------------- | :-------------------------: | --------------------------------------------------------------------------------------------------------- |
+| Result     | 4D.Entity | <- | Referencia a la última entidad de una selección de entidades (Null si no se encuentra) |
 
 <!-- END REF -->
 
@@ -938,10 +938,10 @@ Si la entidad no pertenece a ninguna entity selection (es decir, [.getSelection(
 
 <!-- REF #EntityClass.lock().Params -->
 
-| Parámetros | Tipo    |     | Descripción                                                                                         |
-| ---------- | ------- | :-: | --------------------------------------------------------------------------------------------------- |
-| mode       | Integer |  -> | `dk reload if stamp changed`: recargar antes de bloquear si el marcador ha cambiado |
-| Result     | Object  |  <- | Resultado de la operación de bloqueo                                                                |
+| Parámetros | Tipo    |                             | Descripción                                                                                         |
+| ---------- | ------- | :-------------------------: | --------------------------------------------------------------------------------------------------- |
+| mode       | Integer |              ->             | `dk reload if stamp changed`: recargar antes de bloquear si el marcador ha cambiado |
+| Result     | Object  | <- | Resultado de la operación de bloqueo                                                                |
 
 <!-- END REF -->
 
@@ -1056,9 +1056,9 @@ Ejemplo con la opción `dk reload if stamp changed`:
 
 <!-- REF #EntityClass.next().Params -->
 
-| Parámetros | Tipo                      |     | Descripción                                                                                                 |
-| ---------- | ------------------------- | :-: | ----------------------------------------------------------------------------------------------------------- |
-| Result     | 4D.Entity |  <- | Referencia a la siguiente entidad en la selección de entidades (Null si no se encuentra) |
+| Parámetros | Tipo                      |                             | Descripción                                                                                                 |
+| ---------- | ------------------------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------- |
+| Result     | 4D.Entity | <- | Referencia a la siguiente entidad en la selección de entidades (Null si no se encuentra) |
 
 <!-- END REF -->
 
@@ -1100,9 +1100,9 @@ selection $employees
 
 <!-- REF #EntityClass.previous().Params -->
 
-| Parámetros | Tipo                      |     | Descripción                                                                                                |
-| ---------- | ------------------------- | :-: | ---------------------------------------------------------------------------------------------------------- |
-| Result     | 4D.Entity |  <- | Referencia a la entidad anterior en la selección de entidades (Null si no se encuentra) |
+| Parámetros | Tipo                      |                             | Descripción                                                                                                |
+| ---------- | ------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------------------------- |
+| Result     | 4D.Entity | <- | Referencia a la entidad anterior en la selección de entidades (Null si no se encuentra) |
 
 <!-- END REF -->
 
@@ -1142,9 +1142,9 @@ Si no hay una entidad anterior válida en la selección de entidades (es decir, 
 
 <!-- REF #EntityClass.reload().Params -->
 
-| Parámetros | Tipo   |     | Descripción   |
-| ---------- | ------ | :-: | ------------- |
-| Result     | Object |  <- | Objeto estado |
+| Parámetros | Tipo   |                             | Descripción   |
+| ---------- | ------ | :-------------------------: | ------------- |
+| Result     | Object | <- | Objeto estado |
 
 <!-- END REF -->
 
@@ -1206,10 +1206,10 @@ El objeto devuelto por `.reload( )` contiene las siguientes propiedades:
 
 <!-- REF #EntityClass.save().Params -->
 
-| Parámetros | Tipo    |     | Descripción                                                       |
-| ---------- | ------- | :-: | ----------------------------------------------------------------- |
-| mode       | Integer |  -> | `dk auto merge`: activa el modo "automatic merge" |
-| Result     | Object  |  <- | Resultado de la operación guardar                                 |
+| Parámetros | Tipo    |                             | Descripción                                                       |
+| ---------- | ------- | :-------------------------: | ----------------------------------------------------------------- |
+| mode       | Integer |              ->             | `dk auto merge`: activa el modo "automatic merge" |
+| Result     | Object  | <- | Resultado de la operación guardar                                 |
 
 <!-- END REF -->
 
@@ -1343,12 +1343,12 @@ Actualización de una entidad con la opción `dk auto merge`:
 
 <!-- REF #EntityClass.toObject().Params -->
 
-| Parámetros   | Tipo       |     | Descripción                                                                                                                                                                                        |
-| ------------ | ---------- | :-: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| filterString | Text       |  -> | Atributo(s) a extraer (cadena separada por comas)                                                                                                            |
-| filterCol    | Collection |  -> | Colección de atributos a extraer                                                                                                                                                                   |
-| options      | Integer    |  -> | `dk with primary key`: adds the \_\_KEY property;<br/>`dk with stamp`: adds the \_STAMP property |
-| Result       | Object     |  <- | Objeto creado a partir de la entidad                                                                                                                                                               |
+| Parámetros   | Tipo       |                             | Descripción                                                                                                                                                                                        |
+| ------------ | ---------- | :-------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| filterString | Text       |              ->             | Atributo(s) a extraer (cadena separada por comas)                                                                                                            |
+| filterCol    | Collection |              ->             | Colección de atributos a extraer                                                                                                                                                                   |
+| options      | Integer    |              ->             | `dk with primary key`: adds the \_\_KEY property;<br/>`dk with stamp`: adds the \_STAMP property |
+| Result       | Object     | <- | Objeto creado a partir de la entidad                                                                                                                                                               |
 
 <!-- END REF -->
 
@@ -1632,9 +1632,9 @@ Ejemplo con el tipo <code>relatedEntity</code> con una forma simple:
 
 <!-- REF #EntityClass.touched().Params -->
 
-| Parámetros | Tipo    |     | Descripción                                                                                       |
-| ---------- | ------- | :-: | ------------------------------------------------------------------------------------------------- |
-| Result     | Boolean |  <- | True si se ha modificado al menos un atributo de la entidad y aún no se ha guardado, si no, False |
+| Parámetros | Tipo    |                             | Descripción                                                                                       |
+| ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------------- |
+| Result     | Boolean | <- | True si se ha modificado al menos un atributo de la entidad y aún no se ha guardado, si no, False |
 
 <!-- END REF -->
 
@@ -1678,9 +1678,9 @@ En este ejemplo, comprobamos si es necesario guardar la entidad:
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
 
-| Parámetros | Tipo       |     | Descripción                                     |
-| ---------- | ---------- | :-: | ----------------------------------------------- |
-| Result     | Collection |  <- | Nombres de atributos tocados, o colección vacía |
+| Parámetros | Tipo       |                             | Descripción                                     |
+| ---------- | ---------- | :-------------------------: | ----------------------------------------------- |
+| Result     | Collection | <- | Nombres de atributos tocados, o colección vacía |
 
 <!-- END REF -->
 
@@ -1753,9 +1753,9 @@ En este caso:
 
 <!-- REF #EntityClass.unlock().Params -->
 
-| Parámetros | Tipo   |     | Descripción   |
-| ---------- | ------ | :-: | ------------- |
-| Result     | Object |  <- | Objeto estado |
+| Parámetros | Tipo   |                             | Descripción   |
+| ---------- | ------ | :-------------------------: | ------------- |
+| Result     | Object | <- | Objeto estado |
 
 <!-- END REF -->
 
