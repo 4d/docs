@@ -228,7 +228,7 @@ module.exports = {
     },
   },
   markdown: {
-    format: 'md',
+    format: 'detect',
     mermaid: true,
     mdx1Compat: {
       comments: true,

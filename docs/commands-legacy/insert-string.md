@@ -1,0 +1,43 @@
+---
+id: insert-string
+title: Insert string
+slug: /commands-legacy/insert-string
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.Insert string.Syntax-->**Insert string** ( *source* ; *what* ; *where* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Insert string.Params-->
+| Parameter | Type |  | Description |
+| --- | --- | --- | --- |
+| source | String | &rarr; | String in which to insert the other string |
+| what | String | &rarr; | String to insert |
+| where | Longint | &rarr; | Where to insert |
+| Function result | String | &larr; | Resulting string |
+
+<!-- END REF-->
+
+#### Description 
+
+<!--REF #_command_.Insert string.Summary-->**Insert string** inserts a string into *source* and returns the resulting string.<!-- END REF--> **Insert string** inserts the string *what* before the character at position *where*.
+
+If *what* is an empty string (""), **Insert string** returns *source* unchanged.
+
+If *where* is greater than the length of *source*, then *what* is appended to *source*. If *where* is less than one (1), then *what* is inserted before *source*.
+
+**Insert string** is different from [Change string](change-string.md) in that it inserts characters instead of overwriting them.
+
+#### Example 
+
+The following example illustrates the use of **Insert string**. The results are assigned to the variable *vtResult*.
+
+```4d
+ vtResult:=Insert string("The tree";" green";4) // vtResult gets "The green tree"
+ vtResult:=Insert string("Shut";"o";3) // vtResult gets "Shout"
+ vtResult:=Insert string("Indention";"ta";6) // vtResult gets "Indentation"
+```
+
+#### See also 
+
+[Change string](change-string.md)  
+[Delete string](delete-string.md)  
+[Replace string](replace-string.md)  
