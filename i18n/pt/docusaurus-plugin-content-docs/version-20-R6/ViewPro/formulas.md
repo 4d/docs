@@ -219,7 +219,7 @@ For more information on supported incoming parameter types, please refer to the 
 
 If you do not declare parameters, values can be sequentially passed to methods (they will be received in $1, $2...) e seu tipo será automaticamente convertido.
 
-Date and Object parameters are handled in the following way:
+Os parâmetros Date e Object são tratados da seguinte maneira:
 
 - Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:
 
@@ -238,11 +238,11 @@ Date and Object parameters are handled in the following way:
 
 4D project methods can also return values in the 4D View Pro cell formula via $0. São suportados os seguintes tipos de dados para os parâmetros devolvidos:
 
-- [text](Concepts/dt_string.md) (converted to string in 4D View Pro)
+- [text](Aceitar/dt_string.md) (convertido em string em 4D View Pro)
 - [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (converted to number in 4D View Pro)
 - [date](Concepts/dt_date.md) (converted to JS Date type in 4D View Pro - hour, minute, sec = 0)
 - [time](Concepts/dt_time.md) (converted to JS Date type in 4D View Pro - date in base date, i.e. 12/30/1899)
-- [boolean](Concepts/dt_boolean.md) (converted to bool in 4D View Pro)
+- [boolean](Concepts/dt_boolean.md) (convertido em bool no 4D View Pro)
 - [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed
 - [object](Concepts/dt_object.md) with the following two properties (allowing passing a date and time):
 
