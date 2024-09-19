@@ -22,7 +22,7 @@ The `VP Get formula by name` command <!-- REF #_method_.VP Get formula by name.S
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-Pass the named range or named formula that you want to get in *name*. Note que os intervalos com nome são devolvidos como fórmulas que contém referências absolutas de células.
+Passe o intervalo com nome ou a fórmula com nome que quiser obter em *name*. Note que os intervalos com nome são devolvidos como fórmulas que contém referências absolutas de células.
 
 You can define where to get the formula in *scope* using either the sheet index (counting begins at 0) or the following constants:
 
