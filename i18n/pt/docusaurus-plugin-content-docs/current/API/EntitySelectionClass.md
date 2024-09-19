@@ -151,7 +151,7 @@ Lembre que a entidade correspondente é recarregada a partir da datastore.
 *index* pode ser qualquer número entre 0 e `.length`-1.
 
 - Se *index* está fora do intervalo, se devolve um erro.
-- If *index* corresponds to a dropped entity, a Null value is returned.
+- Se *index* corresponder a uma entidade descartada, um valor Null será retornado.
 
 :::caution
 
@@ -484,7 +484,7 @@ $emp2:=$employees.at(-3) //starting from the end, 3rd entity
 
 The `.average()` function <!-- REF #EntitySelectionClass.average().Summary -->returns the arithmetic mean (average) of all the non-null values of *attributePath* in the entity selection<!-- END REF -->.
 
-Pass in the *attributePath* parameter the attribute path to evaluate.
+Passe no parâmetro *attributePath* a rota de atributo a avaliar.
 
 Só são levados em consideração os valores numéricos para o cálculo. Note however that, if the *attributePath* of the entity selection contains mixed value types, `.average()` takes all scalar elements into account to calculate the average value.
 
@@ -1860,7 +1860,7 @@ For detailed information on how to build a query using *queryString*, *value*, a
 
 #### Exemplo 2
 
-More examples of queries can be found in the DataClass [`.query()`](DataClassClass.md#query) page.
+Mais exemplos de consultas podem ser encontrados na página DataClass [`.query()`](DataClassClass.md#query).
 
 #### Veja também
 
@@ -2216,10 +2216,10 @@ Ou, pode designar os atributos da entidade a extrair utilizando um parâmetro de
 If a filter is specified for an attribute of the `relatedEntity` kind:
 
 - propertyPath = "relatedEntity" -> é extraído de forma simples
-- propertyPath = "relatedEntity.\*" -> all the properties are extracted
+- propertyPath = "relatedEntity.\*" -> todas as propriedades são extraídas
 - propertyPath = "relatedEntity.propertyName1, relatedEntity.propertyName2, ..." -> só se extraem essas propriedades
 
-If a filter is specified for an attribute of the `relatedEntities` kind:
+Se um filtro for especificado para um atributo do tipo `relatedEntities`:
 
 - propertyPath = "relatedEntities.\*" -> all the properties are extracted
 - propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> só se extraem essas propriedades
