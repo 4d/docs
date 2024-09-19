@@ -8,7 +8,7 @@ Creating, sending or receiving emails in 4D is done by handling an `Email` objec
 `Email` objects are created when receiving mails through a *transporter* class function:
 
 - IMAP - [`.getMail()`](IMAPTransporterClass.md#getmail) and [`.getMails()`](IMAPTransporterClass.md#getmails) functions to get emails from an IMAP server
-- POP3 - [`.getMail()`](POP3TransporterClass.md#getmail) function to get an email from a POP3 server.
+- POP3 - Função [`.getMail()`](POP3TransporterClass.md#getmail) para obter um e-mail de um servidor POP3.
 
 > You can also create a new, blank `Email` object and then fill it with [Email object properties](#email-object).
 
@@ -55,7 +55,7 @@ All properties that contain email addresses ([`from`](#from), [`cc`](#cc), [`bcc
 
 - e-mail único: "somebody@domain.com"
 - single display name+email: "Somebody <somebody@domain.com>"
-- several emails: "Somebody <somebody@domain.com>,me@home.org"
+- vários e-mails: "Somebody <somebody@domain.com>,me@home.org"
 
 #### Object
 
