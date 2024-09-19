@@ -835,11 +835,11 @@ O [`.isSingleton`](../API/ClassClass.md#issingleton) propriedade de objetos de c
 
 The scope of a singleton instance can be the process where it is instantiated or all processes on the machine, depending on its _shared_ property.
 
-| Singleton created on | Scope if not shared                                                                                      | Scope if shared   |
-| -------------------- | -------------------------------------------------------------------------------------------------------- | ----------------- |
-| 4D usuário único     | Processo                                                                                                 | Aplicação         |
-| 4D Server            | Processo                                                                                                 | Máquina 4D Server |
-| Modo remoto 4D       | Process (_note_: singletons are not synchronized on the twin process) | Máquina remota 4D |
+| Singleton created on | Scope if not shared                                                                                        | Scope if shared   |
+| -------------------- | ---------------------------------------------------------------------------------------------------------- | ----------------- |
+| 4D usuário único     | Processo                                                                                                   | Aplicação         |
+| 4D Server            | Processo                                                                                                   | Máquina 4D Server |
+| Modo remoto 4D       | Process (_nota_: os singletons não são sincronizados no processo gêmeo) | Máquina remota 4D |
 
 Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
 
