@@ -37,7 +37,7 @@ O seguinte código:
 $style:=VP Get stylesheet("ViewProArea";"GreenDashDotStyle")
 ```
 
-... will return the *GreenDashDotStyle* style object from the current sheet:
+... retorna o objeto estilo *GreenDashDotStyle* da folha atual:
 
 ```4d
 {
