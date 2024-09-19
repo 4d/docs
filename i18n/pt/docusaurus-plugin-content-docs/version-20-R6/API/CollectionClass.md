@@ -436,7 +436,7 @@ The `.concat()` function <!-- REF #collection.concat().Summary -->returns a new 
 
 > Essa função não modifica a coleção original.
 
-If *value* is a collection, all its elements are added as new elements at the end of the original collection. If *value* is not a collection, it is added itself as a new element.
+If *value* is a collection, all its elements are added as new elements at the end of the original collection. Se *value* não for a coleção, será adicionado ao novo elemento.
 
 #### Exemplo
 
@@ -2353,7 +2353,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 
 - ou *methodName*, o nome de um método projeto (texto).
 
-In the callback, pass some code that compares two values and returns **true** if the first value is lower than the second value. You can provide *extraParam* parameters to the callback if necessary.
+In the callback, pass some code that compares two values and returns **true** if the first value is lower than the second value. Você pode fornecer parâmetros *extraParam* para a callback, se necessário.
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -2848,7 +2848,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 
 The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
 
-You can pass the value to initialize the accumulator in *initValue*. If omitted, *$1.accumulator* starts with *Undefined*.
+Pode passar o valor para inicializar o acumulador em *initValue*. If omitted, *$1.accumulator* starts with *Undefined*.
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -2859,7 +2859,7 @@ A chamada de retorno recebe os seguintes parâmetros:
 A chamada de retorno recebe os seguintes parâmetros:
 
 - *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
-- *$1.stop* (boolean, optional): **true** to stop the method callback. O valor retornado é o último calculado.
+- *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
 
 #### Exemplo 1
 
@@ -2933,7 +2933,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 
 The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
 
-You can pass the value to initialize the accumulator in *initValue*. If omitted, *$1.accumulator* starts with *Undefined*.
+Pode passar o valor para inicializar o acumulador em *initValue*. If omitted, *$1.accumulator* starts with *Undefined*.
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -2944,7 +2944,7 @@ A chamada de retorno recebe os seguintes parâmetros:
 A chamada de retorno recebe os seguintes parâmetros:
 
 - *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
-- *$1.stop* (boolean, optional): **true** to stop the method callback. O valor retornado é o último calculado.
+- *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
 
 #### Exemplo 1
 
@@ -3270,7 +3270,7 @@ A chamada de retorno recebe os seguintes parâmetros:
 Pode definir o(s) seguinte(s) parâmetro(s):
 
 - (mandatory if you used a method) *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
-- *$1.stop* (boolean, optional): **true** to stop the method callback. O valor retornado é o último calculado.
+- *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
 
 In any case, at the point where `.some()` function encounters the first collection element returning true, it stops calling the callback and returns **true**.
 
