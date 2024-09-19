@@ -611,7 +611,7 @@ Se quiser obter todos os arquivos que não são invisíveis na pasta Documents:
 
 The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
 
-In *path*, pass a relative POSIX path to designate the folder to return. A rota se avaliará a partir da pasta pai como raíz.
+Em *path*, passe uma rota relativa POSIX para designar a pasta a devolver. A rota se avaliará a partir da pasta pai como raíz.
 
 **Valor retornado**
 
