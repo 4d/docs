@@ -42,7 +42,7 @@ Using libraries, you can build form object backgrounds grouped by graphic famili
 
 ### Criar uma biblioteca de objetos
 
-To create an object library, select **New>Object Library...** from the 4D **File** menu or tool bar. A standard save file dialog box appears, which allows you to choose the name and the location of the object library.
+Para criar uma biblioteca de objetos, selecione **New>Object Library...** no menu 4D **File** ou na barra de ferramentas. A standard save file dialog box appears, which allows you to choose the name and the location of the object library.
 
 Once you validate the dialog box, 4D creates a new object library on your disk and displays its window (empty by default).
 
@@ -54,7 +54,7 @@ Once you validate the dialog box, 4D creates a new object library on your disk a
 
 Uma determinada biblioteca de objetos só pode ser aberta por um m banco de dados por vez. Entretanto, várias livrarias diferentes podem ser abertas no mesmo banco de dados.
 
-To open a custom object library, select **Open>Object Library...** command in the 4D **File** menu or tool bar. Aparece uma caixa de diálogo padrão de ficheiro aberto, que lhe permite seleccionar a biblioteca de objectos a abrir. Pode seleccionar os seguintes tipos de ficheiros:
+Para abrir uma biblioteca de objetos personalizada, selecione o comando **Open>Object Library...** no menu 4D **File** ou na barra de ferramentas. Aparece uma caixa de diálogo padrão de ficheiro aberto, que lhe permite seleccionar a biblioteca de objectos a abrir. Pode seleccionar os seguintes tipos de ficheiros:
 
 - **.4dproject**
 - **.4dz**
@@ -66,18 +66,18 @@ Na realidade, as bibliotecas de objectos personalizados são projectos 4D cláss
 
 ### Construir uma biblioteca de objectos
 
-Os objectos são colocados numa biblioteca de objectos usando o método de arrastar e largar ou uma operação de cortar-copiar-colar. Pueden provenir de un formulario o de otra librería de objetos (incluyendo la [librería estándar](#using-the-standard-object-library)). No link is kept with the original object: if the original is modified, the copied object is not affected.
+Os objectos são colocados numa biblioteca de objectos usando o método de arrastar e largar ou uma operação de cortar-copiar-colar. Eles podem vir de um formulário ou de outra biblioteca de objetos (incluindo a [biblioteca padrão] (#using-the-standard-object-library)). No link is kept with the original object: if the original is modified, the copied object is not affected.
 
-> Para poder arrastrar y soltar objetos de los formularios a las librerías de objetos, debe asegurarse de seleccionar la opción **Iniciar arrastrar y soltar** en las Preferencias de 4D.
+> Para poder arrastar e soltar objetos de formulários para bibliotecas de objetos, você deve se certificar de que a opção **Iniciar arrastar e soltar** nas Preferências 4D esteja selecionada.
 
 As operações básicas estão disponíveis no menu de contexto ou no menu de opções da janela:
 
 ![](../assets/en/FormEditor/library5.png)
 
-- **Cortar** o **Copiar** al portapapeles
-- **Pegar** un objeto del tablero portapapeles
-- **Borrar** - elimina el objeto de la librería
-- **Renombrar** - aparece una caja de diálogo que permite cambiar el nombre del elemento. Note-se que os nomes dos objectos devem ser únicos numa biblioteca.
+- **Cortar** ou **Copiar** para a área de transferência
+- **Colar** um objeto da área de transferência
+- **Clear** - exclui o objeto da biblioteca
+- **Renomear** - é exibida uma caixa de diálogo que permite renomear o item. Note-se que os nomes dos objectos devem ser únicos numa biblioteca.
 
 Pode colocar objectos individuais (incluindo subformulários) ou conjuntos de objectos numa biblioteca de objectos. Cada objecto ou conjunto é agrupado num único item:
 
