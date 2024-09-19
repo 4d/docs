@@ -5,7 +5,7 @@ title: Qodly Studio for 4D
 
 :::caution Prévia do desenvolvedor
 
-Qodly Studio for 4D is currently in the **Developer Preview** phase. Não deve ser usado na produção.
+Qodly Studio for 4D está atualmente na fase **Developer Preview**. Não deve ser usado na produção.
 
 :::
 
