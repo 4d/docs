@@ -1367,7 +1367,7 @@ No primeiro par|âmetro, passa os atributos entidade a extrair. Pode passar:
 If a filter is specified for attributes of the relatedEntity [kind](DataClassClass.md#attributename):
 
 - propertyPath = "relatedEntity" -> it is extracted with simple form: an object with property \_\_KEY (primary key).
-- propertyPath = "relatedEntity.\*" -> all the properties are extracted
+- propertyPath = "relatedEntity.\*" -> todas as propriedades são extraídas
 - propertyPath = "relatedEntity.propertyName1; relatedEntity.propertyName2; ..." -> só se extraem essas propriedades
 
 If a filter is specified for attributes of the relatedEntities [kind](DataClassClass.md#attributename):
