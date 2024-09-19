@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON TO SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | 4D table into which elements are copied |
-| jsonArray | Text | &rarr; | Array of objects in JSON |
+| aTable | Table | &#x1F852; | 4D table into which elements are copied |
+| jsonArray | Text | &#x1F852; | Array of objects in JSON |
 
 <!-- END REF-->
 

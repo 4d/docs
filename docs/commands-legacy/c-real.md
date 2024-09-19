@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.C_REAL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| method | Method | &rarr; | Optional name of method |
-| variable | Variable | &rarr; | Name of variable(s) to declare |
+| method | Method | &#x1F852; | Optional name of method |
+| variable | Variable | &#x1F852; | Name of variable(s) to declare |
 
 <!-- END REF-->
 
@@ -28,7 +28,7 @@ The second form of the command, in which the optional *method* parameter IS pass
 
 ##### Advanced Use 
 
-The syntax **C\_REAL**(${...}) allows you to declare a variable number of parameters of the same type, under the condition that these are the last parameters for the method. For example, the declaration **C\_REAL**(${5}) tells 4D and the compiler that starting with the fifth parameter, the method can receive a variable number of parameters of that type. For more information, see the [Parameter indirection](/4Dv20R6/4D/20-R6/Typing-Guide.300-6958559.en.html#2064009) section.
+The syntax **C\_REAL**(${...}) allows you to declare a variable number of parameters of the same type, under the condition that these are the last parameters for the method. For example, the declaration **C\_REAL**(${5}) tells 4D and the compiler that starting with the fifth parameter, the method can receive a variable number of parameters of that type. For more information, see the *Parameter indirection* section.
 
 #### Examples 
 

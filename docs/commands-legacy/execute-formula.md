@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.EXECUTE FORMULA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| statement | String | &rarr; | Code to be executed |
+| statement | String | &#x1F852; | Code to be executed |
 
 <!-- END REF-->
 
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 The statement string must be one line. If *statement* is an empty string, **EXECUTE FORMULA** does nothing. The rule of thumb is that if the *statement* can be executed as a one-line method, then it will execute properly. Use **EXECUTE FORMULA** sparingly, as it can slow down execution speed. In a compiled database, the line of code is not compiled. This means that *statement* will be executed, but it will not have been checked by the compiler at compilation time.
 
-**Note:** Executing formulas in compiled mode can be optimized using a cache (see [Cache for formulas in compiled mode](/4Dv20R6/4D/20-R6/EXECUTE-FORMULA.301-6957952.en.html#2882913) below).
+**Note:** Executing formulas in compiled mode can be optimized using a cache (see *Cache for formulas in compiled mode* below).
 
 The *statement* can include the following elements:
 

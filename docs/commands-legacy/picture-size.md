@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Picture size.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture | &rarr; | Picture for which to return the size in bytes |
-| Function result | Longint | &larr; | Size in bytes of the picture |
+| picture | Picture | &#x1F852; | Picture for which to return the size in bytes |
+| Function result | Longint | &#x1F850; | Size in bytes of the picture |
 
 <!-- END REF-->
 

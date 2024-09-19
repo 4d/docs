@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE MANY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| oneTable | Field | Table, Field | &rarr; | Table to establish all one-to-many relations, or One Field |
+| oneTable &#124; Field | Table, Field | &#x1F852; | Table to establish all one-to-many relations, or One Field |
 
 <!-- END REF-->
 

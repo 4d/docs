@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Find in array.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &rarr; | Array to search |
-| value | Expression | &rarr; | Value of same type to search in the array |
-| start | Longint | &rarr; | Element at which to start searching |
-| Function result | Longint | &larr; | Number of the first element in array that matches value |
+| array | Array | &#x1F852; | Array to search |
+| value | Expression | &#x1F852; | Value of same type to search in the array |
+| start | Longint | &#x1F852; | Element at which to start searching |
+| Function result | Longint | &#x1F850; | Number of the first element in array that matches value |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAVE SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| set | String | &rarr; | Name of the set to save |
-| document | String | &rarr; | Name of the disk file to which to save the set |
+| set | String | &#x1F852; | Name of the set to save |
+| document | String | &#x1F852; | Name of the disk file to which to save the set |
 
 <!-- END REF-->
 

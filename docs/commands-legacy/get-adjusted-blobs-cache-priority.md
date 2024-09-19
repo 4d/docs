@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get adjusted blobs cache priority.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which the "blobs" priority value has to be retrieved |
-| Function result | Longint | &larr; | Current priority value for "blobs" fields |
+| aTable | Table | &#x1F852; | Table for which the "blobs" priority value has to be retrieved |
+| Function result | Longint | &#x1F850; | Current priority value for "blobs" fields |
 
 <!-- END REF-->
 

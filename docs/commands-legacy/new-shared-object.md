@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.New shared object.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| property | Text | &rarr; | Name of property to create |
-| value | Text, Date, Boolean, Pointer, Number, Object | &rarr; | Value of property |
-| Function result | Object | &larr; | New shared object |
+| property | Text | &#x1F852; | Name of property to create |
+| value | Text, Date, Boolean, Pointer, Number, Object | &#x1F852; | Value of property |
+| Function result | Object | &#x1F850; | New shared object |
 
 <!-- END REF-->
 
@@ -39,7 +39,7 @@ Optionally, you can prefill the new object by passing one or several *property*/
    * shared collection(\*)  
 **Note:** Unlike standard (not shared) objects, shared objects do not support pictures, pointers, and objects or collections that are not shared.  
     
-(\*)When a shared object or collection is added to a shared object, they share the same locking identifier. For more information on this point, refer to the [About the locking identifier (how shared groups work)](/4Dv20R6/4D/20-R6/Shared-objects-and-shared-collections.300-6957624.en.html#3648963) section.
+(\*)When a shared object or collection is added to a shared object, they share the same locking identifier. For more information on this point, refer to the *About the locking identifier (how shared groups work)* section.
 
 #### Example 1 
 

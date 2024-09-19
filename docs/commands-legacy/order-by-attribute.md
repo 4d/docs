@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to order selected records, or Default table, if omitted |
-| objectField | Object Field | &rarr; | Object field containing the sorting attribute |
-| attributePath | String | &rarr; | Name or path of attribute on which to set the order for each level |
-| > or < | Operator | &rarr; | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
-| * | Operator | &rarr; | Continue order flag |
+| aTable | Table | &#x1F852; | Table for which to order selected records, or Default table, if omitted |
+| objectField | Object Field | &#x1F852; | Object field containing the sorting attribute |
+| attributePath | String | &#x1F852; | Name or path of attribute on which to set the order for each level |
+| > or < | Operator | &#x1F852; | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
+| * | Operator | &#x1F852; | Continue order flag |
 
 <!-- END REF-->
 
@@ -32,7 +32,7 @@ In *attributePath*, pass the path of the attribute whose values you want to use 
 * Only attributes containing scalar values (number, text, boolean, date) can be sorted. Others types of values (object, picture...) are considered as null values.
 * You cannot pass an element of an array in *attributePath* (in this case, an error is returned).
 * Keep in mind that attribute names are case-sensitive: you can have different "MyAtt" and "myAtt" attribute names in the same record.
-* You cannot use attributes whose name contains special characters such as "." or "\[ \]", because they will be incorrectly evaluated as tokens in the order by string. For more information, please refer to the [Object property identifiers](/4Dv20R6/4D/20-R6/Using-object-notation.300-6957621.en.html#3305214) paragraph.
+* You cannot use attributes whose name contains special characters such as "." or "\[ \]", because they will be incorrectly evaluated as tokens in the order by string. For more information, please refer to the *Object property identifiers* paragraph.
 
 If the field attribute contains values in different data types (i.e. numbers, strings, booleans), they are first grouped by type, then by value. 
 

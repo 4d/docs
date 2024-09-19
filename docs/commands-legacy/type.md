@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Type.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldVar | Field, Variable | &rarr; | field or variable to be tested |
-| Function result | Longint | &larr; | Data type number |
+| fieldVar | Field, Variable | &#x1F852; | field or variable to be tested |
+| Function result | Longint | &#x1F850; | Data type number |
 
 <!-- END REF-->
 

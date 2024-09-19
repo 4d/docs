@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET SUBFORM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Form object | &rarr; | Object Name (if * is specified) or Variable (if * is omitted) |
-| aTable | Table | &rarr; | Table of form (if table form) |
-| detailSubform | Text, Object | &rarr; | Name (text) of the detail form, or a POSIX path (text) to a .json file describing the detail form, or an object describing the detail form of the subform |
-| listSubform | Text, Object | &rarr; | Name (text) of the list form, ora POSIX path (text) to a .json file describing the list form, or an object describing the list form of the subform (table form) |
+| * | Operator | &#x1F852; | If specified, object is an object name (string)If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object Name (if * is specified) or Variable (if * is omitted) |
+| aTable | Table | &#x1F852; | Table of form (if table form) |
+| detailSubform | Text, Object | &#x1F852; | Name (text) of the detail form, or a POSIX path (text) to a .json file describing the detail form, or an object describing the detail form of the subform |
+| listSubform | Text, Object | &#x1F852; | Name (text) of the list form, ora POSIX path (text) to a .json file describing the list form, or an object describing the list form of the subform (table form) |
 
 <!-- END REF-->
 
@@ -30,7 +30,7 @@ In the *aTable* parameter, pass the table of the forms to be used. This paramete
 In the *detailSubform* and *listSubform* parameters, pass either :
 
 * the name of a form, or
-* the path\* (in POSIX syntax) to a valid .json file containing a description of the form to use (see [Form file path](/4Dv20R6/4D/20-R6/Dynamic-Forms.300-7003255.en.html#3699744)), or
+* the path\* (in POSIX syntax) to a valid .json file containing a description of the form to use (see *Form file path*), or
 * an object containing a description of the form.
 
 \*Unlike other dynamic form-related commands, **OBJECT SET SUBFORM** filepaths are relative to the subform's parent form. 

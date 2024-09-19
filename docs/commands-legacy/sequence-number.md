@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Sequence number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to return the sequence number, or Default table, if omitted |
-| Function result | Longint | &larr; | Sequence number |
+| aTable | Table | &#x1F852; | Table for which to return the sequence number, or Default table, if omitted |
+| Function result | Longint | &#x1F850; | Sequence number |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Value type.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| expression | Expression | &rarr; | Expression whose resulting value to be tested |
-| Function result | Longint | &larr; | Data type number |
+| expression | Expression | &#x1F852; | Expression whose resulting value to be tested |
+| Function result | Longint | &#x1F850; | Data type number |
 
 <!-- END REF-->
 
@@ -52,7 +52,7 @@ This command is designed to return the type of a scalar expression, *i.e.* the v
  $vType:=Value type($o.value) //$vType=Is real
 ```
 
-**Value type** can be applied to any valid 4D expression, including fields, variables, and parameters. In this case, unlike the [Type](type.md) command, **Value type** returns the *internal* type of the value resulting from the evaluation of *expression*, and not its *declared* type. Since the 4D language converts some value types internally, the **Value type** result can differ from the declared type. For example, 4D internally converts the "[Integer 64 bits](/4Dv20R6/4D/20-R6/4D-field-types.300-7003399.en.html#105997)" type field values. This provides the following results:
+**Value type** can be applied to any valid 4D expression, including fields, variables, and parameters. In this case, unlike the [Type](type.md) command, **Value type** returns the *internal* type of the value resulting from the evaluation of *expression*, and not its *declared* type. Since the 4D language converts some value types internally, the **Value type** result can differ from the declared type. For example, 4D internally converts the "*Integer 64 bits*" type field values. This provides the following results:
 
 ```4d
  $vType1:=Type([myTable]Long64field) //$vType=Is integer 64 bits
@@ -61,13 +61,13 @@ This command is designed to return the type of a scalar expression, *i.e.* the v
 
 Other differences are related to arrays (evaluation of an array returns the current element index) and compiled mode. The following table lists these differences:
 
-| **Declared type**                                                                    | [Type](type.md) **result** | **Value type result (interpreted)** | **Value type result (compiled)** | **Comment**                                                                                 |
-| ------------------------------------------------------------------------------------ | -------------------------- | ----------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------- |
-| ARRAY TEXT($t;1)                                                                     | Text array                 | Is real                             | Is longint                       | $t contains the current element index, which is a number                                    |
-| [Alpha](/4Dv20R6/4D/20-R6/4D-field-types.300-7003399.en.html#1373333) field          | Is alpha field             | Is text                             | Is text                          | 4D internally handles all strings as texts                                                  |
-| [Integer](/4Dv20R6/4D/20-R6/4D-field-types.300-7003399.en.html#105987) field         | Is integer                 | Is real                             | Is longint                       | For optimization reasons, in interpreted mode all numeric values are considered real and... |
-| [Long Integer](/4Dv20R6/4D/20-R6/4D-field-types.300-7003399.en.html#105992) field    | Is longint                 | Is real                             | Is longint                       | ... in compiled mode, all integer values are considered longint(\*)                         |
-| [Integer 64 bits](/4Dv20R6/4D/20-R6/4D-field-types.300-7003399.en.html#105997) field | Is integer 64 bits         | Is real                             | Is longint                       |                                                                                             |
+| **Declared type**       | [Type](type.md) **result** | **Value type result (interpreted)** | **Value type result (compiled)** | **Comment**                                                                                 |
+| ----------------------- | -------------------------- | ----------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------- |
+| ARRAY TEXT($t;1)        | Text array                 | Is real                             | Is longint                       | $t contains the current element index, which is a number                                    |
+| *Alpha* field           | Is alpha field             | Is text                             | Is text                          | 4D internally handles all strings as texts                                                  |
+| *Integer* field         | Is integer                 | Is real                             | Is longint                       | For optimization reasons, in interpreted mode all numeric values are considered real and... |
+| *Long Integer* field    | Is longint                 | Is real                             | Is longint                       | ... in compiled mode, all integer values are considered longint(\*)                         |
+| *Integer 64 bits* field | Is integer 64 bits         | Is real                             | Is longint                       |                                                                                             |
 
 (\*)If you want to write a test for a numeric type value that is valid for both compiled and interpreted modes, you may consider using a code such as:
 

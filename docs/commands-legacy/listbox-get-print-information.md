@@ -9,12 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)
-If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or 
-Variable (if * is omitted) |
-| selector | Longint | &rarr; | Information to get |
-| info | Longint | <&rarr; | Current value |
+| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| selector | Longint | &#x1F852; | Information to get |
+| info | Longint | &#x1F858; | Current value |
 
 <!-- END REF-->
 
@@ -35,7 +33,7 @@ Pass a value indicating the information you want to find out in *selector* and a
 | lk printed rows            | Longint | 1     | Returns in *info* the number of rows actually printed during the last call to the [Print object](print-object.md) command. This number includes any break rows added in the case of a hierarchical list box. For example, *info* is 10 if the list box contains 20 rows and the odd-numbered rows were hidden.                                                                                                        |
 | lk printing is over        | Longint | 2     | Returns in *info* a Boolean indicating whether the last (visible) row of the list box has actually been printed. True = row has been printed; Otherwise, False.                                                                                                                                                                                                                                                       |
 
-For more information about the principles of printing list boxes, please refer to [Printing list boxes](/4Dv20R6/4D/20-R6/Managing-List-Box-Objects.300-6958138.en.html#250728).
+For more information about the principles of printing list boxes, please refer to *Printing list boxes*.
 
 #### Example 1 
 

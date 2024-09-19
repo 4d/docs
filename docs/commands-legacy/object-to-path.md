@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Object to path.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| pathObject | Object | &rarr; | Object describing a path contents |
-| Function result | Text | &larr; | Pathname |
+| pathObject | Object | &#x1F852; | Object describing a path contents |
+| Function result | Text | &#x1F850; | Pathname |
 
 <!-- END REF-->
 
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Object to path.Summary-->The **Object to path** command returns a pathname (string) based upon path information you passed in the *pathObject* parameter.<!-- END REF--> The following paths are supported:
 
 * System path (Windows or macOS) or Posix path. The path type is defined by the last character of the *parentFolder* property (see below).
-* Relative path or absolute path (see [Absolute or relative pathname](/4Dv20R6/4D/20-R6/System-Documents.300-6958370.en.html#1073038) for more information).
+* Relative path or absolute path (see *Absolute or relative pathname* for more information).
 
  In *pathObject*, pass an object defining the path you want to generate. It must contain the following properties:
 

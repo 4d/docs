@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.RESOURCE LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| resType | String | &rarr; | 4-character resource type |
-| resIDs | Longint array | <&rarr; | Resource ID numbers for resources of this type |
-| resNames | String array | <&rarr; | Resource names for resources of this type |
-| resFile | DocRef | &rarr; | Resource file reference number, or all open resource files, if omitted |
+| resType | String | &#x1F852; | 4-character resource type |
+| resIDs | Longint array | &#x1F858; | Resource ID numbers for resources of this type |
+| resNames | String array | &#x1F858; | Resource names for resources of this type |
+| resFile | DocRef | &#x1F852; | Resource file reference number, or all open resource files, if omitted |
 
 <!-- END REF-->
 

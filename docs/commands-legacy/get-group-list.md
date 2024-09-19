@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET GROUP LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| groupNames | String array | <&rarr; | Names of the groups as they appear in the Password editor window |
-| groupNumbers | Longint array | <&rarr; | Corresponding unique group ID numbers |
+| groupNames | String array | &#x1F858; | Names of the groups as they appear in the Password editor window |
+| groupNumbers | Longint array | &#x1F858; | Corresponding unique group ID numbers |
 
 <!-- END REF-->
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 The array *groupNumbers*, synchronized with *groupNames*, is filled with the corresponding unique group ID numbers. 
 
 * In project databases, these numbers start at 15001 and are dynamically allocated at startup and maintained during the session.
-* In binary databases, these numbers are stored and belong to a specific range, depending on the group creator. For more information, please refer to the [User and group ID ranges](/4Dv20R6/4D/20-R6/Designer-and-Administrator.300-7003454.en.html#4607697) paragraph.
+* In binary databases, these numbers are stored and belong to a specific range, depending on the group creator. For more information, please refer to the *User and group ID ranges* paragraph.
 
 #### Error management 
 

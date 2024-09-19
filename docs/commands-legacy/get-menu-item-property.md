@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MENU ITEM PROPERTY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Longint | &rarr; | Menu reference or Menu number |
-| menuItem | Longint | &rarr; | Number of menu item or -1 for the last item added to the menu |
-| property | String | &rarr; | Property type |
-| value | Expression | <&rarr; | Property value |
-| process | Longint | &rarr; | Process number |
+| menu | Longint | &#x1F852; | Menu reference or Menu number |
+| menuItem | Longint | &#x1F852; | Number of menu item or -1 for the last item added to the menu |
+| property | String | &#x1F852; | Property type |
+| value | Expression | &#x1F858; | Property value |
+| process | Longint | &#x1F852; | Process number |
 
 <!-- END REF-->
 

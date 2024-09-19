@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESIZE FORM WINDOW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| width | Longint | &rarr; | Pixels to add to or remove from the current form window width |
-| height | Longint | &rarr; | Pixels to add to or remove from the current form window height |
+| width | Longint | &#x1F852; | Pixels to add to or remove from the current form window width |
+| height | Longint | &#x1F852; | Pixels to add to or remove from the current form window height |
 
 <!-- END REF-->
 

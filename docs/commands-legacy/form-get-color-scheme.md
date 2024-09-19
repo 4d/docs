@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM Get color scheme.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &larr; | Color scheme of current form: "light" or "dark" |
+| Function result | Text | &#x1F850; | Color scheme of current form: "light" or "dark" |
 
 <!-- END REF-->
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 The actual color scheme of a form is defined by:
 
-* the "Color Scheme" form property (see [*colorScheme*](https://developer.4d.com/docs/FormEditor/propertiesForm.html#color-scheme));
+* the "Color Scheme" form property (see *colorScheme*);
 * if "Color Scheme" set to "inherited", a call to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) command;
 * if [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) not called or called with "inherited" parameter value, the Settings (host database Settings in case of a component);
 * if Settings set to "inherited", the OS user preferences.

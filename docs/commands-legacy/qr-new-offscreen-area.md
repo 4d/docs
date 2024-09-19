@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QR New offscreen area.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &larr; | Reference of the area created |
+| Function result | Longint | &#x1F850; | Reference of the area created |
 
 <!-- END REF-->
 

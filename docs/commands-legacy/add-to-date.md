@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Add to date.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| date | Date | &rarr; | Date to which to add days, months, and years |
-| years | Longint | &rarr; | Number of years to add to the date |
-| months | Longint | &rarr; | Number of months to add to the date |
-| days | Longint | &rarr; | Number of days to add to the date |
-| Function result | Date | &larr; | Resulting date |
+| date | Date | &#x1F852; | Date to which to add days, months, and years |
+| years | Longint | &#x1F852; | Number of years to add to the date |
+| months | Longint | &#x1F852; | Number of months to add to the date |
+| days | Longint | &#x1F852; | Number of days to add to the date |
+| Function result | Date | &#x1F850; | Resulting date |
 
 <!-- END REF-->
 

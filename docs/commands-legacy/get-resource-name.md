@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Get resource name.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| resType | String | &rarr; | 4-character resource type |
-| resID | Longint | &rarr; | Resource ID number |
-| resFile | DocRef | &rarr; | Resource file reference number, or all open resource files, if omitted |
-| Function result | String | &larr; | Name of the resource |
+| resType | String | &#x1F852; | 4-character resource type |
+| resID | Longint | &#x1F852; | Resource ID number |
+| resFile | DocRef | &#x1F852; | Resource file reference number, or all open resource files, if omitted |
+| Function result | String | &#x1F850; | Name of the resource |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE INDEX.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to create an index |
-| fieldsArray | Pointer array | &rarr; | Pointer(s) to field(s) to be indexed |
-| indexType | Longint | &rarr; | Type of index to create: -1 = Keywords, 0 = default, 1 = Standard B-Tree, 3 = Cluster B-Tree |
-| indexName | Text | &rarr; | Name of index to create |
-| * | Operator | &rarr; | If passed = asynchronous indexing |
+| aTable | Table | &#x1F852; | Table for which to create an index |
+| fieldsArray | Pointer array | &#x1F852; | Pointer(s) to field(s) to be indexed |
+| indexType | Longint | &#x1F852; | Type of index to create: -1 = Keywords, 0 = default, 1 = Standard B-Tree, 3 = Cluster B-Tree |
+| indexName | Text | &#x1F852; | Name of index to create |
+| * | Operator | &#x1F852; | If passed = asynchronous indexing |
 
 <!-- END REF-->
 

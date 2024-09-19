@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get last query plan.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| descFormat | Longint | &rarr; | Description format (Text or XML) |
-| Function result | String | &larr; | Description of last executed query plan |
+| descFormat | Longint | &#x1F852; | Description format (Text or XML) |
+| Function result | String | &#x1F850; | Description of last executed query plan |
 
 <!-- END REF-->
 

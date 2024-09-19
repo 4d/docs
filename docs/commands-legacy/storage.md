@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Storage.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Object | &larr; | Catalog of shared objects and shared collections registered in Storage |
+| Function result | Object | &#x1F850; | Catalog of shared objects and shared collections registered in Storage |
 
 <!-- END REF-->
 
@@ -26,7 +26,7 @@ Since the catalog returned by **Storage** is a *shared object*, it follows the r
 * This object can only contain shared objects and shared collections. Trying to add other kinds of values (non-shared objects or collections, null, scalar values) will generate an error.
 * Adding a property to this object must be surrounded by the *Use...End use* structure, otherwise an error is returned. Reading an attribute outside of a *Use...End use* structure is, however, possible.
 * When surrounded by the *Use...End use* structure, first-level attributes of **Storage** are locked for other processes.
-* Unlike standard shared objects, the object returned by **Storage** will NOT share its *locking identifier* with shared objects or collections added as attributes (for more information, refer to the [About the locking identifier (how shared groups work)](/4Dv20R6/4D/20-R6/Shared-objects-and-shared-collections.300-6957624.en.html#3648963) section).
+* Unlike standard shared objects, the object returned by **Storage** will NOT share its *locking identifier* with shared objects or collections added as attributes (for more information, refer to the *About the locking identifier (how shared groups work)* section).
 
 #### Example 1 
 

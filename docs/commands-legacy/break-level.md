@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.BREAK LEVEL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| level | Longint | &rarr; | Number of break levels |
-| pageBreak | Longint | &rarr; | Break level for which to do a page break |
+| level | Longint | &#x1F852; | Number of break levels |
+| pageBreak | Longint | &#x1F852; | Break level for which to do a page break |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR REPORT TO BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Longint | &rarr; | Reference of the area |
-| blob | BLOB | <&rarr; | BLOB to house the Quick Report |
+| area | Longint | &#x1F852; | Reference of the area |
+| blob | BLOB | &#x1F858; | BLOB to house the Quick Report |
 
 <!-- END REF-->
 

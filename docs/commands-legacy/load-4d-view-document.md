@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Load 4D View document.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| 4DViewDocument | BLOB | &rarr; | 4D View document |
-| Function result | Object | &larr; | Object representation of the 4D View document |
+| 4DViewDocument | BLOB | &#x1F852; | 4D View document |
+| Function result | Object | &#x1F850; | Object representation of the 4D View document |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET BLOB SIZE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | BLOB | &rarr; | BLOB field or variable |
-| size | Longint | &rarr; | New size of the BLOB |
-| filler | Longint | &rarr; | ASCII code of filler character |
+| blob | BLOB | &#x1F852; | BLOB field or variable |
+| size | Longint | &#x1F852; | New size of the BLOB |
+| filler | Longint | &#x1F852; | ASCII code of filler character |
 
 <!-- END REF-->
 
@@ -23,7 +23,7 @@ If you want to allocate new bytes to a BLOB and want to have those bytes initial
 
 ##### Note 
 
-**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](https://developer.4d.com/docs/Concepts/blob.html#passing-blobs-and-blob-objects-to-4d-commands) on developer.4d.com.
+**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See *Passing blobs and blob objects to 4D commands* on developer.4d.com.
 
 #### Error Handling 
 

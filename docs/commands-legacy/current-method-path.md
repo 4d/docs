@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current method path.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &larr; | Full internal pathname of the method being executed |
+| Function result | Text | &#x1F850; | Full internal pathname of the method being executed |
 
 <!-- END REF-->
 

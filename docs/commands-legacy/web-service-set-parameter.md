@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SERVICE SET PARAMETER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| name | String | &rarr; | Name of parameter to include in SOAP request |
-| value | Variable | &rarr; | 4D variable containing the value of the parameter |
-| soapType | String | &rarr; | SOAP type of the parameter |
+| name | String | &#x1F852; | Name of parameter to include in SOAP request |
+| value | Variable | &#x1F852; | 4D variable containing the value of the parameter |
+| soapType | String | &#x1F852; | SOAP type of the parameter |
 
 <!-- END REF-->
 
@@ -56,7 +56,7 @@ However, you may want to “force” the definition of the SOAP type of a parame
 
 * **Notes:**  
    * For more information about XML data types, refer to the URL <http://www.w3.org/TR/xmlschema-2/>  
-   * This command does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](https://developer.4d.com/docs/Concepts/blob.html#passing-blobs-and-blob-objects-to-4d-commands) on developer.4d.com.
+   * This command does not support blob objects (4D.Blob type). See *Passing blobs and blob objects to 4D commands* on developer.4d.com.
 
 #### Example 
 

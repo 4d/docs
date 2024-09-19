@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.List item parent.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | ListRef, String | &rarr; | List reference number  (if * omitted), or Name of list type object (if * passed) |
-| itemRef | * | Operator, Longint | &rarr; | Item reference number or 0 for the last item added to the list or * for the current item in the list |
-| Function result | Longint | &larr; | Item reference number of parent item or 0 if none |
+| * | Operator | &#x1F852; | If specified, list is an object name (string) If omitted, list is a list reference number |
+| list | ListRef, String | &#x1F852; | List reference number  (if * omitted), or Name of list type object (if * passed) |
+| itemRef &#124; * | Operator, Longint | &#x1F852; | Item reference number or 0 for the last item added to the list or * for the current item in the list |
+| Function result | Longint | &#x1F850; | Item reference number of parent item or 0 if none |
 
 <!-- END REF-->
 

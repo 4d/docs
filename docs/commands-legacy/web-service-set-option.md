@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SERVICE SET OPTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| option | Longint | &rarr; | Code of the option to set |
-| value | Longint, Text | &rarr; | Value of the option |
+| option | Longint | &#x1F852; | Code of the option to set |
+| value | Longint, Text | &#x1F852; | Value of the option |
 
 <!-- END REF-->
 

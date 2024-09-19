@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get last update log path.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &larr; | Pathname of most recent update log |
+| Function result | Text | &#x1F850; | Pathname of most recent update log |
 
 <!-- END REF-->
 

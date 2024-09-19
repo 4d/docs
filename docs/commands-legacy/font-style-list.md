@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.FONT STYLE LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fontFamily | Text | &rarr; | Name of font family |
-| fontStyleList | Text array | <&rarr; | List of font styles supported by the font family |
-| fontNameList | Text array | <&rarr; | List of complete font names supported by the font family |
+| fontFamily | Text | &#x1F852; | Name of font family |
+| fontStyleList | Text array | &#x1F858; | List of font styles supported by the font family |
+| fontNameList | Text array | &#x1F858; | List of complete font names supported by the font family |
 
 <!-- END REF-->
 

@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.CONVERT COORDINATES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| xCoord | Longint variable | &rarr; | Horizontal coordinate of a point (initial) |
-| <&rarr; | Horizontal coordinate of a point (converted) |
-| yCoord | Longint variable | &rarr; | Vertical coordinate of a point (initial) |
-| <&rarr; | Vertical coordinate of a point (converted) |
-| from | Longint | &rarr; | Coordinates system to convert from |
-| to | Longint | &rarr; | Coordinates system to convert to |
+| xCoord | Longint variable | &#x1F852; | Horizontal coordinate of a point (initial) |
+| &#x1F858; | Horizontal coordinate of a point (converted) |
+| yCoord | Longint variable | &#x1F852; | Vertical coordinate of a point (initial) |
+| &#x1F858; | Vertical coordinate of a point (converted) |
+| from | Longint | &#x1F852; | Coordinates system to convert from |
+| to | Longint | &#x1F852; | Coordinates system to convert to |
 
 <!-- END REF-->
 

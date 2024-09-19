@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GOTO RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table in which to go to the record, or Default table, if omitted |
-| record | Longint | &rarr; | Number returned by Record number |
+| aTable | Table | &#x1F852; | Table in which to go to the record, or Default table, if omitted |
+| record | Longint | &#x1F852; | Number returned by Record number |
 
 <!-- END REF-->
 

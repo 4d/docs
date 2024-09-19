@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table whose scalar data priority value has to be adjusted |
-| priority | Longint | &rarr; | Cache priority value for the table |
+| aTable | Table | &#x1F852; | Table whose scalar data priority value has to be adjusted |
+| priority | Longint | &#x1F852; | Cache priority value for the table |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.MAIL Convert to MIME.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| mail | Object | &rarr; | Email object |
-| options | Object | &rarr; | Charset and encoding mail options |
-| Function result | Text | &larr; | Email object converted to MIME |
+| mail | Object | &#x1F852; | Email object |
+| options | Object | &#x1F852; | Charset and encoding mail options |
+| Function result | Text | &#x1F850; | Email object converted to MIME |
 
 <!-- END REF-->
 
@@ -21,6 +21,6 @@ displayed_sidebar: docs
 
 **Documentation déplacée**
 
-The documentation for this command has been moved. Visit [developer.4d.com](https://developer.4d.com/docs/19/API/EmailObjectClass.html#mail-convert-from-mime) for updated documentation.
+The documentation for this command has been moved. Visit *developer.4d.com* for updated documentation.
 
 **MAIL Convert to MIME** converts a MIME document into a valid email object.

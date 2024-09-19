@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CALL FORM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| window | WinRef | &rarr; | Window reference number |
-| formula | Object, Text | &rarr; | Formula object or Name of project method |
-| param | Expression | &rarr; | Parameter(s) passed to formula |
+| window | WinRef | &#x1F852; | Window reference number |
+| formula | Object, Text | &#x1F852; | Formula object or Name of project method |
+| param | Expression | &#x1F852; | Parameter(s) passed to formula |
 
 <!-- END REF-->
 
@@ -25,10 +25,10 @@ In *window*, you pass the window reference number of the window displaying the c
 
 In *formula*, you designate the 4D code to be executed in the context of the *window* parent process. You can pass either:
 
-* a **formula object** (see [Formula Objects](https://doc4d.github.io/docs/en/API/FunctionClass.html#formula-objects)). Formula objects can encapsulate any executable expressions, including functions and project methods;
+* a **formula object** (see *Formula Objects*). Formula objects can encapsulate any executable expressions, including functions and project methods;
 * a **string** containing the name of a project method.
 
-You can also pass parameters to the formula using one or more *param* parameters. You can use [sequential parameters](https://doc4d.github.io/docs/en/Concepts/parameters.html#sequential-parameters) or, if the formula expression is a function or a project method, [named parameters](https://doc4d.github.io/docs/en/Concepts/parameters.html#named-parameters). Upon starting execution in the context of the form, the process formula receives the parameter values either in the named parameters, or in *$1*, *$2*, and so on. Remember that arrays cannot be passed as parameters. Furthermore, in the context of the **CALL FORM** command, the following additional considerations need to be taken into account:
+You can also pass parameters to the formula using one or more *param* parameters. You can use *sequential parameters* or, if the formula expression is a function or a project method, *named parameters*. Upon starting execution in the context of the form, the process formula receives the parameter values either in the named parameters, or in *$1*, *$2*, and so on. Remember that arrays cannot be passed as parameters. Furthermore, in the context of the **CALL FORM** command, the following additional considerations need to be taken into account:
 
 * Pointers to tables or fields are allowed.
 * Pointers to variables, particularly local and process variables, are not recommended since these variables may be undefined at the moment they are being accessed by the process method.

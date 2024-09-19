@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.Set user properties.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| userID | Longint | &rarr; | Unique ID number of user account, -1 for adding a user |
-| <&rarr; | Unique ID number of added user account (if any) |
-| name | String | &rarr; | New user name |
-| startup | String | &rarr; | Name of new user startup method |
-| password | String | &rarr; | New (unencrypted) password, or * to leave the password unchanged |
-| nbLogin | Longint | &rarr; | New number of logins to the database (Binary databases only) |
-| lastLogin | Date | &rarr; | New date of last login to the database (Binary databases only) |
-| memberships | Longint array | &rarr; | ID numbers of groups to which the user belongs |
-| groupOwner | Longint | &rarr; | Reference number of user group owner (Binary databases only) |
-| Function result | Longint | &larr; | Unique ID number of new user |
+| userID | Longint | &#x1F852; | Unique ID number of user account, -1 for adding a user |
+| &#x1F858; | Unique ID number of added user account (if any) |
+| name | String | &#x1F852; | New user name |
+| startup | String | &#x1F852; | Name of new user startup method |
+| password | String | &#x1F852; | New (unencrypted) password, or * to leave the password unchanged |
+| nbLogin | Longint | &#x1F852; | New number of logins to the database (Binary databases only) |
+| lastLogin | Date | &#x1F852; | New date of last login to the database (Binary databases only) |
+| memberships | Longint array | &#x1F852; | ID numbers of groups to which the user belongs |
+| groupOwner | Longint | &#x1F852; | Reference number of user group owner (Binary databases only) |
+| Function result | Longint | &#x1F850; | Unique ID number of new user |
 
 <!-- END REF-->
 
@@ -48,7 +48,7 @@ If you pass the optional *memberships* parameter, you change all the memberships
 
 (*Binary databases only*) If you pass the optional *groupOwner* parameter, you indicate the ID number of the user group “owner”, i.e. the default owner group of the objects created by this user. To revoke all the memberships of a user, pass an empty *memberships* array.
 
-**Note for binary databases:** Group and user ID values depend on their creator (Designer, Administrator, or affiliated group owner). For more information, please refer to the [User and group ID ranges](/4Dv20R6/4D/20-R6/Designer-and-Administrator.300-7003454.en.html#4607697) paragraph. To create a user affiliated with the Designer, pass -1 in userID. To create a user affiliated with the Administrator, pass -2 in userID.
+**Note for binary databases:** Group and user ID values depend on their creator (Designer, Administrator, or affiliated group owner). For more information, please refer to the *User and group ID ranges* paragraph. To create a user affiliated with the Designer, pass -1 in userID. To create a user affiliated with the Administrator, pass -2 in userID.
 
 #### Error management 
 

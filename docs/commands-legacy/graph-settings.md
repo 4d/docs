@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.GRAPH SETTINGS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| graphPicture | Picture variable | &rarr; | Picture variable |
-| xmin | Longint, Date, Time | &rarr; | Minimum x-axis value for proportional graph (line or scatter plot only) |
-| xmax | Longint, Date, Time | &rarr; | Maximum x-axis value for proportional graph (line or scatter plot only) |
-| ymin | Longint | &rarr; | Minimum y-axis value |
-| ymax | Longint | &rarr; | Maximum y-axis value |
-| xprop | Boolean | &rarr; | TRUE for proportional x-axis; FALSE for normal x-axis (line or scatter plot only) |
-| xgrid | Boolean | &rarr; | TRUE for x-axis grid; FALSE for no x-axis grid (only if xprop is TRUE) |
-| ygrid | Boolean | &rarr; | TRUE for y-axis grid; FALSE for no y-axis grid |
-| title | String | &rarr; | Title(s) for graph legend(s) |
+| graphPicture | Picture variable | &#x1F852; | Picture variable |
+| xmin | Longint, Date, Time | &#x1F852; | Minimum x-axis value for proportional graph (line or scatter plot only) |
+| xmax | Longint, Date, Time | &#x1F852; | Maximum x-axis value for proportional graph (line or scatter plot only) |
+| ymin | Longint | &#x1F852; | Minimum y-axis value |
+| ymax | Longint | &#x1F852; | Maximum y-axis value |
+| xprop | Boolean | &#x1F852; | TRUE for proportional x-axis; FALSE for normal x-axis (line or scatter plot only) |
+| xgrid | Boolean | &#x1F852; | TRUE for x-axis grid; FALSE for no x-axis grid (only if xprop is TRUE) |
+| ygrid | Boolean | &#x1F852; | TRUE for y-axis grid; FALSE for no y-axis grid |
+| title | String | &#x1F852; | Title(s) for graph legend(s) |
 
 <!-- END REF-->
 

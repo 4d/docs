@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Max.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| series | Field, Array | &rarr; | Data for which to return the maximum value |
-| attributePath | Text | &rarr; | Path of attribute for which to return the maximum value |
-| Function result | Date, Number | &larr; | Maximum value in series |
+| series | Field, Array | &#x1F852; | Data for which to return the maximum value |
+| attributePath | Text | &#x1F852; | Path of attribute for which to return the maximum value |
+| Function result | Date, Number | &#x1F850; | Maximum value in series |
 
 <!-- END REF-->
 

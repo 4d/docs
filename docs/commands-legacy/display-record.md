@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DISPLAY RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table from which to display the current record, or Default table, if omitted |
+| aTable | Table | &#x1F852; | Table from which to display the current record, or Default table, if omitted |
 
 <!-- END REF-->
 

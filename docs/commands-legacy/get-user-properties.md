@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.GET USER PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| userID | Longint | &rarr; | Unique user ID number |
-| name | String | <&rarr; | Name of the user |
-| startup | String | <&rarr; | Startup method name |
-| password | String | <&rarr; | Always an empty string |
-| nbLogin | Longint | <&rarr; | Number of logins to the database (Binary databases only) |
-| lastLogin | Date | <&rarr; | Date of last login to the database (Binary databases only) |
-| memberships | Longint array | <&rarr; | ID numbers of groups to which the user belongs |
-| groupOwner | Longint | <&rarr; | ID number of user group owner (Binary databases only) |
+| userID | Longint | &#x1F852; | Unique user ID number |
+| name | String | &#x1F858; | Name of the user |
+| startup | String | &#x1F858; | Startup method name |
+| password | String | &#x1F858; | Always an empty string |
+| nbLogin | Longint | &#x1F858; | Number of logins to the database (Binary databases only) |
+| lastLogin | Date | &#x1F858; | Date of last login to the database (Binary databases only) |
+| memberships | Longint array | &#x1F858; | ID numbers of groups to which the user belongs |
+| groupOwner | Longint | &#x1F858; | ID number of user group owner (Binary databases only) |
 
 <!-- END REF-->
 
@@ -39,7 +39,7 @@ If you pass the optional *memberships* parameter, the unique ID numbers of the g
 
 **Note:** The *groupOwner* array always returns 0 values in project databases. 
 
-**Note for binary databases:** Group and user ID values depend on their creator (Designer, Administrator, or affiliated group owner). For more information, please refer to the [User and group ID ranges](/4Dv20R6/4D/20-R6/Designer-and-Administrator.300-7003454.en.html#4607697) paragraph.
+**Note for binary databases:** Group and user ID values depend on their creator (Designer, Administrator, or affiliated group owner). For more information, please refer to the *User and group ID ranges* paragraph.
 
 #### Error management 
 

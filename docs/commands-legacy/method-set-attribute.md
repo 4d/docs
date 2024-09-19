@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD SET ATTRIBUTE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text | &rarr; | Path of project method |
-| attribType | Longint | &rarr; | Type of attribute |
-| attribValue | Boolean, Text | &rarr; | True = select attribute, False = deselect attributeor Folder name |
-| * | Operator | &rarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| path | Text | &#x1F852; | Path of project method |
+| attribType | Longint | &#x1F852; | Type of attribute |
+| attribValue | Boolean, Text | &#x1F852; | True = select attribute, False = deselect attributeor Folder name |
+| * | Operator | &#x1F852; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->
 

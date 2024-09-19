@@ -9,11 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SCREENSHOT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Form table |
-| formName | Text | &rarr; | Name of form |
-| formPict | Picture | <&rarr; | Picture of form being executed if first parameter(s) omitted, or 
-Picture of form in Form editor if a form name is passed |
-| pageNum | Longint | &rarr; | Form page number |
+| aTable | Table | &#x1F852; | Form table |
+| formName | Text | &#x1F852; | Name of form |
+| formPict | Picture | &#x1F858; | Picture of form being executed if first parameter(s) omitted, or <br/>Picture of form in Form editor if a form name is passed |
+| pageNum | Longint | &#x1F852; | Form page number |
 
 <!-- END REF-->
 
@@ -32,7 +31,7 @@ By default, the command returns a screenshot of page 1 of the form. If you only 
 **Notes:** 
 
 * Web areas are not rendered in the returned screenshot.
-* Since the first two parameters of this command are optional, you cannot pass a function returning a pointer, such as [Current form table](current-form-table.md)\-> or [Table](table.md)\->, directly as an argument. Although this syntax would work in interpreted mode, it would be rejected during compilation, so instead you need to use an intermediate pointer variable in this case. For more information, refer to "[Direct use of commands returning pointers](/4Dv20R6/4D/20-R6/Syntax-Details.300-6958551.en.html#1402882)".
+* Since the first two parameters of this command are optional, you cannot pass a function returning a pointer, such as [Current form table](current-form-table.md)\-> or [Table](table.md)\->, directly as an argument. Although this syntax would work in interpreted mode, it would be rejected during compilation, so instead you need to use an intermediate pointer variable in this case. For more information, refer to "*Direct use of commands returning pointers*".
 
 #### See also 
 

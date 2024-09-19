@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX DELETE ROWS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| rowPosition | Longint | &rarr; | Position of the row to delete |
-| numRows | Longint | &rarr; | Number of rows to delete |
+| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| rowPosition | Longint | &#x1F852; | Position of the row to delete |
+| numRows | Longint | &#x1F852; | Number of rows to delete |
 
 <!-- END REF-->
 

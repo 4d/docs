@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PRINT RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to print the current record or Default table if omitted |
-| * | > | Operator | &rarr; | * to suppress the printing dialog box, or > to not reinitialize print settings |
+| aTable | Table | &#x1F852; | Table for which to print the current record or Default table if omitted |
+| * &#124; > | Operator | &#x1F852; | * to suppress the printing dialog box, or > to not reinitialize print settings |
 
 <!-- END REF-->
 

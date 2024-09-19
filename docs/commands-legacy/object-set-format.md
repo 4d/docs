@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET FORMAT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
-| object | Form object | &rarr; | Object Name (if * is specified), or Field or Variable (if * is omitted) |
-| displayFormat | String | &rarr; | New display format for the object |
+| * | Operator | &#x1F852; | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
+| object | Form object | &#x1F852; | Object Name (if * is specified), or Field or Variable (if * is omitted) |
+| displayFormat | String | &#x1F852; | New display format for the object |
 
 <!-- END REF-->
 
@@ -105,7 +105,7 @@ To format Picture fields or variables, pass Char(n) in *displayFormat*, where *n
 
 To format fields or variables of the Alpha or Number type, pass the label of the format directly in the *displayFormat* parameter.
 
-For more information about display formats, see the [Number formats](/4Dv20R6/4D/20-R6/Display-formats.300-7003356.en.html#426672) and [Alpha formats](/4Dv20R6/4D/20-R6/Display-formats.300-7003356.en.html#426887) sections of the 4D *Design Reference* manual.
+For more information about display formats, see the *Number formats* and *Alpha formats* sections of the 4D *Design Reference* manual.
 
 **Note:** In *displayFormat*, to use custom display formats that you may have created in the tool box, prefix the name of the format with a vertical bar (|).
 

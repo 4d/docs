@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.LIST OF STYLE SHEETS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| arrStyleSheets | Text array | <&rarr; | Names of style sheets defined in the application |
+| arrStyleSheets | Text array | &#x1F858; | Names of style sheets defined in the application |
 
 <!-- END REF-->
 

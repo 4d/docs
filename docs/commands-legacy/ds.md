@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ds.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| localID | Text | &rarr; | Local ID of the remote datastore to return |
-| Result | DataStore | &larr; | Reference to the datastore |
+| localID | Text | &#x1F852; | Local ID of the remote datastore to return |
+| Result | DataStore | &#x1F850; | Reference to the datastore |
 
 <!-- END REF-->
 
@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 **Documentation moved**
 
-The documentation for this command has been moved. Visit [developer.4d.com](https://developer.4d.com/docs/API/DataStoreClass.html#ds) for updated documentation.
+The documentation for this command has been moved. Visit *developer.4d.com* for updated documentation.
 
 The **ds** command returns a reference to the datastore matching the current 4D database or the database designated by *localID*
 

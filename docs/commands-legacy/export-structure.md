@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT STRUCTURE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| exportedStructure | Text variable | <&rarr; | Export of the 4D database structure definition (by default in XML format) |
-| format | String | &rarr; | Export format: xml format (default) or html format |
+| exportedStructure | Text variable | &#x1F858; | Export of the 4D database structure definition (by default in XML format) |
+| format | String | &#x1F852; | Export format: xml format (default) or html format |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OB SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object Field, Object | &rarr; | Structured object |
-| property | Text | &rarr; | Name of property to set |
-| value | Expression | &rarr; | New value of property |
+| object | Object Field, Object | &#x1F852; | Structured object |
+| property | Text | &#x1F852; | Name of property to set |
+| value | Expression | &#x1F852; | New value of property |
 
 <!-- END REF-->
 
@@ -31,7 +31,7 @@ In the *value* parameter, pass the value you want to set for the property. Sever
 * if you pass a date, it will be stored with date type or as text in ISO format depending on your current database date settings. For more information, please refer to the "Use date type instead of ISO date format in objects" option in the *Compatibility page*.
 * if you pass a time, it is stored as a number of seconds (Real) in *object*.
 * if you pass a language object or a collection, the command uses a reference and not a copy. Any modification applied to the object or collection will be reported to all references.
-* starting with 4D v16 R4, you can pass a picture of any supported type (see [Native Formats Supported ](/4Dv20R6/4D/20-R6/Pictures.300-6957798.en.html#1272117)).
+* starting with 4D v16 R4, you can pass a picture of any supported type (see *Native Formats Supported* ).
 
 #### Example 1 
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SORT COLUMNS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| colNum | Longint | &rarr; | Column number(s) to sort |
-| order | Operator | &rarr; | ">" to sort in ascending order or "<" to sort in descending order |
+| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| colNum | Longint | &#x1F852; | Column number(s) to sort |
+| order | Operator | &#x1F852; | ">" to sort in ascending order or "<" to sort in descending order |
 
 <!-- END REF-->
 
@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SORT COLUMNS.Summary-->The LISTBOX SORT COLUMNS command applies a standard sort to the rows of the list box defined by the *object* and *\** parameters on the basis of one or more column value(s).<!-- END REF-->
 
-**Note:** A standard sort is applied on the basis of a single column value when the user clicks on the column header (see [Standard sorts](https://developer.4d.com/docs/FormObjects/listboxOverview.html#standard-sort)).
+**Note:** A standard sort is applied on the basis of a single column value when the user clicks on the column header (see *Standard sorts*).
 
 If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section.
 
@@ -32,4 +32,4 @@ You can define multi-level sorts: to do so, pass as many pairs (*colNum;order*) 
 
 In conformity with the principle of list box operation, the columns are synchronized which means that the sorting of a column is automatically passed on to all the other columns of the object.
 
-**Note:** The **LISTBOX SORT COLUMNS** command does not take the [Sortable](https://doc4d.github.io/docs/en/FormObjects/propertiesAction.html#sortable) listbox property into account.
+**Note:** The **LISTBOX SORT COLUMNS** command does not take the *Sortable* listbox property into account.

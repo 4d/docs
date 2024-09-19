@@ -9,16 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get corner radius.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)
-If omitted, object is a variable or a field |
-| object | Form object | &rarr; | Object name (if * is specified) or Field or variable (if * is omitted) |
-| Function result | Longint | &larr; | Radius of rounded corners (in pixels) |
+| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Field or variable (if * is omitted) |
+| Function result | Longint | &#x1F850; | Radius of rounded corners (in pixels) |
 
 <!-- END REF-->
 
 #### Description 
 
-<!--REF #_command_.OBJECT Get corner radius.Summary-->The **OBJECT Get corner radius** command returns the current value of the corner radius for the object designated by the *object* parameter.<!-- END REF--> This value may have been set at the form level using the [Corner radius property](https://developer.4d.com/docs/FormObjects/propertiesCoordinatesAndSizing.html#corner-radius) or for the current process using the [OBJECT SET CORNER RADIUS](object-set-corner-radius.md) command.
+<!--REF #_command_.OBJECT Get corner radius.Summary-->The **OBJECT Get corner radius** command returns the current value of the corner radius for the object designated by the *object* parameter.<!-- END REF--> This value may have been set at the form level using the *Corner radius property* or for the current process using the [OBJECT SET CORNER RADIUS](object-set-corner-radius.md) command.
 
 The **OBJECT Get corner radius** command can be used with the following form objects:
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET AUTO ROW HEIGHT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string). If omitted, object is a variable. |
-| object | Form object | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| selector | Longint | &rarr; | Height value to set: lk row min height or lk row max height |
-| value | Longint | &rarr; | Minimum or maximum row height value |
-| unit | Longint | &rarr; | Unit of height value: 0 = pixels, 1 = lines |
+| * | Operator | &#x1F852; | If specified, object is an object name (string). If omitted, object is a variable. |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| selector | Longint | &#x1F852; | Height value to set: lk row min height or lk row max height |
+| value | Longint | &#x1F852; | Minimum or maximum row height value |
+| unit | Longint | &#x1F852; | Unit of height value: 0 = pixels, 1 = lines |
 
 <!-- END REF-->
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET AUTO ROW HEIGHT.Summary-->The **LISTBOX SET AUTO ROW HEIGHT** command allows you to set the minimum or maximum row height *value* in the list box object designated using the *object* and *\** parameters.<!-- END REF-->
 
-**Note**: This command is taken into account only if the list box is set to automatic row height mode (see [Automatic Row Height](/4Dv20R6/4D/20-R6/List-box-column-specific-properties.300-7003336.en.html#6127001)), which is only available for "collection or entity selection" and "array" list boxes. Otherwise, it has no effect.
+**Note**: This command is taken into account only if the list box is set to automatic row height mode (see *Automatic Row Height*), which is only available for "collection or entity selection" and "array" list boxes. Otherwise, it has no effect.
 
 If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section.
 

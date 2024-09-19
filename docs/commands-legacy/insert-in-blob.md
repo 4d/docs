@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.INSERT IN BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | BLOB | &rarr; | BLOB into which bytes will be inserted |
-| offset | Longint | &rarr; | Starting position where bytes will be inserted |
-| len | Longint | &rarr; | Number of bytes to be inserted |
-| filler | Longint | &rarr; | Default byte value (0x00..0xFF) 0x00 if omitted |
+| blob | BLOB | &#x1F852; | BLOB into which bytes will be inserted |
+| offset | Longint | &#x1F852; | Starting position where bytes will be inserted |
+| len | Longint | &#x1F852; | Number of bytes to be inserted |
+| filler | Longint | &#x1F852; | Default byte value (0x00..0xFF) 0x00 if omitted |
 
 <!-- END REF-->
 
@@ -26,7 +26,7 @@ Before the call, you pass in the *offset* parameter the position of the insertio
 
 ##### Note 
 
-**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](https://developer.4d.com/docs/Concepts/blob.html#passing-blobs-and-blob-objects-to-4d-commands) on developer.4d.com.
+**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See *Passing blobs and blob objects to 4D commands* on developer.4d.com.
 
 #### See also 
 

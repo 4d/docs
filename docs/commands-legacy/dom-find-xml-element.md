@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Find XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | String | &rarr; | XML element reference |
-| xPath | Text | &rarr; | XPath path of the element to look for |
-| arrElementRefs | String array | <&rarr; | List of element references found (if applicable) |
-| Function result | String | &larr; | Reference of the element found (if applicable) |
+| elementRef | String | &#x1F852; | XML element reference |
+| xPath | Text | &#x1F852; | XPath path of the element to look for |
+| arrElementRefs | String array | &#x1F858; | List of element references found (if applicable) |
+| Function result | String | &#x1F850; | Reference of the element found (if applicable) |
 
 <!-- END REF-->
 
@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Find XML element.Summary-->The DOM Find XML element command looks for specific XML elements in an XML structure.<!-- END REF--> The search starts at the element designated by the *elementRef* parameter. 
 
-The XML node to seek is set expressed in XPath notation using the *xPath* parameter (for more information, see the [Support of XPath notation (DOM)](/4Dv20R6/4D/20-R6/Overview-of-XML-DOM-Commands.300-6957756.en.html#4967352) section). The following path expressions are supported: 
+The XML node to seek is set expressed in XPath notation using the *xPath* parameter (for more information, see the *Support of XPath notation (DOM)* section). The following path expressions are supported: 
 
 | **Expression**                  | **Action**                                                                                                                       |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |

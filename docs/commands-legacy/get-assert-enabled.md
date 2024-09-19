@@ -9,8 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get assert enabled.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &larr; | True = assertions are enabled
-False = assertions are disabled |
+| Function result | Boolean | &#x1F850; | True = assertions are enabled<br/>False = assertions are disabled |
 
 <!-- END REF-->
 

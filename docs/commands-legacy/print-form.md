@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Print form.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table owning the form, or Default table, if omitted |
-| form | String, Object | &rarr; | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
-| formData | Object | &rarr; | Data to associate to the form |
-| areaStart | Longint | &rarr; | Print marker, or Beginning area (if areaEnd is specified) |
-| areaEnd | Longint | &rarr; | Ending area (if areaStart specified) |
-| Function result | Longint | &larr; | Height of printed section |
+| aTable | Table | &#x1F852; | Table owning the form, or Default table, if omitted |
+| form | String, Object | &#x1F852; | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
+| formData | Object | &#x1F852; | Data to associate to the form |
+| areaStart | Longint | &#x1F852; | Print marker, or Beginning area (if areaEnd is specified) |
+| areaEnd | Longint | &#x1F852; | Ending area (if areaStart specified) |
+| Function result | Longint | &#x1F850; | Height of printed section |
 
 <!-- END REF-->
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 In the *form* parameter, you can pass:
 
 * the name of a form, or
-* the path (in POSIX syntax) to a valid .json file containing a description of the form to use (see [Form file path](/4Dv20R6/4D/20-R6/Dynamic-Forms.300-7003255.en.html#3699744)), or
+* the path (in POSIX syntax) to a valid .json file containing a description of the form to use (see *Form file path*), or
 * an object containing a description of the form.
 
 Since **Print form** does not issue a page break after printing the form, it is easy to combine different forms on the same page. Thus, **Print form** is perfect for complex printing tasks that involve different tables and different forms. To force a page break between forms, use the [PAGE BREAK](page-break.md) command. In order to carry printing over to the next page for a form whose height is greater than the available space, call the [CANCEL](cancel.md) command before the [PAGE BREAK](page-break.md) command.

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.New data key.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| passPhrase | Text | &rarr; | Passphrase to use to generate the AES data encryption key |
-| Function result | Object | &larr; | Object containing the key (encodedKey property) |
+| passPhrase | Text | &#x1F852; | Passphrase to use to generate the AES data encryption key |
+| Function result | Object | &#x1F850; | Object containing the key (encodedKey property) |
 
 <!-- END REF-->
 
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New data key.Summary-->The **New data key** command generates a binary data encryption key from the text passed in the *passPhrase* parameter.<!-- END REF-->
 
-The encoded key can be saved locally, in order to be stored on an removable device, like an USB key (see [Storing data encryption keys in files](/4Dv20R6/4D/20-R6/Encrypting-data.300-7003250.en.html#4099683) in the *4D Design Reference*). Connecting this device to the machine that hosts the encrypted database will automatically allow the user to access the encrypted data.
+The encoded key can be saved locally, in order to be stored on an removable device, like an USB key (see *Storing data encryption keys in files* in the *4D Design Reference*). Connecting this device to the machine that hosts the encrypted database will automatically allow the user to access the encrypted data.
 
 You can pass any character in *passPhrase*. The same *passPhrase* will always produce the same data encryption key.
 

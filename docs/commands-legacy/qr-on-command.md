@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR ON COMMAND.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Longint | &rarr; | Reference of the area |
-| methodName | String | &rarr; | Name of the replacement method |
+| area | Longint | &#x1F852; | Reference of the area |
+| methodName | String | &#x1F852; | Name of the replacement method |
 
 <!-- END REF-->
 

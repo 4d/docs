@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.INSERT IN ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &rarr; | Name of the array |
-| where | Longint | &rarr; | Where to insert the elements |
-| howMany | Longint | &rarr; | Number of elements to be inserted, or 1 element if omitted |
+| array | Array | &#x1F852; | Name of the array |
+| where | Longint | &#x1F852; | Where to insert the elements |
+| howMany | Longint | &#x1F852; | Number of elements to be inserted, or 1 element if omitted |
 
 <!-- END REF-->
 

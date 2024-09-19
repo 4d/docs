@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| colorScheme | Text | &rarr; | "light", "dark", or "inherited" |
+| colorScheme | Text | &#x1F852; | "light", "dark", or "inherited" |
 
 <!-- END REF-->
 

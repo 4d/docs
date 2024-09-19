@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET QUERY DESTINATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| destinationType | Longint | &rarr; | 0 = current selection, 1 = set, 2 = named selection, 3 = variable |
-| destinationObject | String, Variable | &rarr; | Name of the set, or Name of the named selection, or Variable |
-| destinationPtr | Pointer | &rarr; | Pointer to local variable if destinationType=3 |
+| destinationType | Longint | &#x1F852; | 0 = current selection, 1 = set, 2 = named selection, 3 = variable |
+| destinationObject | String, Variable | &#x1F852; | Name of the set, or Name of the named selection, or Variable |
+| destinationPtr | Pointer | &#x1F852; | Pointer to local variable if destinationType=3 |
 
 <!-- END REF-->
 

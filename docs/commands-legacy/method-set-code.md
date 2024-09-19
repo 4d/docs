@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD SET CODE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text, Text array | &rarr; | Text or Text array containing one or more method path(s) |
-| code | Text, Text array | &rarr; | Code of designated method(s) |
-| * | Operator | &rarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| path | Text, Text array | &#x1F852; | Text or Text array containing one or more method path(s) |
+| code | Text, Text array | &#x1F852; | Code of designated method(s) |
+| * | Operator | &#x1F852; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->
 
@@ -26,7 +26,7 @@ If a method does not exist, it is created with the *code* contents.
 **Note for projects:** 
 
 * Creating a new method with this command is only possible for database methods, triggers, and project methods.
-* The code is saved with or without tokens in newly created projects depending on the [**Include tokens in project source files**](https://developer.4d.com/docs/Preferences/general.html#include-tokens-in-project-source-files) option in the Preferences.
+* The code is saved with or without tokens in newly created projects depending on the *Include tokens in project source files* option in the Preferences.
 
 You can use two types of syntaxes, based either on text arrays, or text variables:
 

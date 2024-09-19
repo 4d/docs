@@ -9,13 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET HIERARCHY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)
-If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or 
-Variable (if * is omitted) |
-| hierarchical | Boolean | &rarr; | True = hierarchical list box
-False = non-hierarchical list box |
-| hierarchy | Pointer array | &rarr; | Array of pointers |
+| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| hierarchical | Boolean | &#x1F852; | True = hierarchical list box<br/>False = non-hierarchical list box |
+| hierarchy | Pointer array | &#x1F852; | Array of pointers |
 
 <!-- END REF-->
 

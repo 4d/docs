@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP Get certificates folder.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &larr; | Complete pathname of active certificates folder |
+| Function result | Text | &#x1F850; | Complete pathname of active certificates folder |
 
 <!-- END REF-->
 

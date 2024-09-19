@@ -5,12 +5,12 @@ slug: /commands-legacy/o-web-get-session-process-count
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.O WEB Get session process count.Syntax-->**_O_WEB Get session process count** ( *sessionID* ) -> Function result<!-- END REF-->
+<!--REF #_command_.O WEB Get session process count.Syntax-->**_o_WEB Get session process count** ( *sessionID* ) -> Function result<!-- END REF-->
 <!--REF #_command_.O WEB Get session process count.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| sessionID | Text | &rarr; | Session UUID |
-| Function result | Longint | &larr; | Number of processes attached to the session |
+| sessionID | Text | &#x1F852; | Session UUID |
+| Function result | Longint | &#x1F850; | Number of processes attached to the session |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get selected menu item parameter.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | String | &larr; | Custom parameter of the menu item |
+| Function result | String | &#x1F850; | Custom parameter of the menu item |
 
 <!-- END REF-->
 

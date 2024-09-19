@@ -9,13 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.ST INSERT EXPRESSION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)
-If omitted, object is a field or variable |
-| object | Object | &rarr; | Object name (if * is specified) or 
-Field or variable (if * is omitted) |
-| expression | Text | &rarr; | Expression and (optional) format to insert |
-| startSel | Longint | &rarr; | Start of selection |
-| endSel | Longint | &rarr; | End of selection |
+| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | Object | &#x1F852; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| expression | Text | &#x1F852; | Expression and (optional) format to insert |
+| startSel | Longint | &#x1F852; | Start of selection |
+| endSel | Longint | &#x1F852; | End of selection |
 
 <!-- END REF-->
 
@@ -31,7 +29,7 @@ A valid 4D expression is a string returning a value. *expression* can be a field
 
 **Notes:**
 
-* Inserting picture expressions (e. g. Picture type variables) is supported in 4D Write Pro areas (see [Picture expressions](/4Dv20R6/4D/20-R6/Handling-pictures.200-6993924.en.html#3841026)) but is not supported in multi-style text areas.
+* Inserting picture expressions (e. g. Picture type variables) is supported in 4D Write Pro areas (see *Picture expressions*) but is not supported in multi-style text areas.
 * This command expects "real" names for fields and tables, even if a "virtual" structure has been defined using [SET TABLE TITLES](set-table-titles.md) and [SET FIELD TITLES](set-field-titles.md) commands.
 
 If *expression* returns a value containing carriage returns and tabs, 4D formats the text according to the object hosting the expression; carriage return characters are interpreted as line breaks. 

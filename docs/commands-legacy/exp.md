@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Exp.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &rarr; | Number to evaluate |
-| Function result | Real | &larr; | Natural log base by the power of number |
+| number | Real | &#x1F852; | Number to evaluate |
+| Function result | Real | &#x1F850; | Natural log base by the power of number |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| objectField | Field | &rarr; | Indexed object field |
-| pathArray | Text array | <&rarr; | Array to receive list of distinct paths |
+| objectField | Field | &#x1F852; | Indexed object field |
+| pathArray | Text array | &#x1F858; | Array to receive list of distinct paths |
 
 <!-- END REF-->
 
@@ -61,7 +61,7 @@ The *aTPaths* array receives the following elements:
 | 12      | "telephone\[\]"     |
 | 13      | "telephone.length"  |
 
-**Note:** "length" is a *virtual property* that is automatically available for all array type attributes. It provides the size of the array, i.e. the number of elements, and can be used in queries. For more information, please refer to the [Using the .length virtual property](/4Dv20R6/4D/20-R6/DISTINCT-ATTRIBUTE-VALUES.301-6958314.en.html#2998555) paragraph. 
+**Note:** "length" is a *virtual property* that is automatically available for all array type attributes. It provides the size of the array, i.e. the number of elements, and can be used in queries. For more information, please refer to the *Using the .length virtual property* paragraph. 
 
 #### See also 
 

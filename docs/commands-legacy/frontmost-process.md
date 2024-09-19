@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Frontmost process.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | Process number for first non-floating window |
-| Function result | Integer | &larr; | Number of the process whose windows are in the front |
+| * | Operator | &#x1F852; | Process number for first non-floating window |
+| Function result | Integer | &#x1F850; | Number of the process whose windows are in the front |
 
 <!-- END REF-->
 

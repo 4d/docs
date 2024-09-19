@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Open document.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| document | String | &rarr; | Document name or Full document pathname or Empty string for standard file dialog box |
-| fileType | String | &rarr; | List of types of documents to be screened, or "*" to not screen the documents |
-| mode | Longint | &rarr; | Document’s opening mode |
-| Function result | DocRef | &larr; | Document reference number |
+| document | String | &#x1F852; | Document name or Full document pathname or Empty string for standard file dialog box |
+| fileType | String | &#x1F852; | List of types of documents to be screened, or "*" to not screen the documents |
+| mode | Longint | &#x1F852; | Document’s opening mode |
+| Function result | DocRef | &#x1F850; | Document reference number |
 
 <!-- END REF-->
 

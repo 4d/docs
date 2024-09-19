@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SET FIELD TITLES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to set the field titles |
-| fieldTitles | String array | &rarr; | Field names as they must appear in dialog boxes |
-| fieldNumbers | Longint array | &rarr; | Actual field numbers |
-| * | &rarr; | Use the custom names in the formula editor |
+| aTable | Table | &#x1F852; | Table for which to set the field titles |
+| fieldTitles | String array | &#x1F852; | Field names as they must appear in dialog boxes |
+| fieldNumbers | Longint array | &#x1F852; | Actual field numbers |
+| * | &#x1F852; | Use the custom names in the formula editor |
 
 <!-- END REF-->
 

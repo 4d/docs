@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Load list.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| listName | String | &rarr; | Name of a list created in the Design environment List Editor |
-| Function result | ListRef | &larr; | List reference number of newly created list |
+| listName | String | &#x1F852; | Name of a list created in the Design environment List Editor |
+| Function result | ListRef | &#x1F850; | List reference number of newly created list |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get drop column.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Longint | &rarr; | Reference of the area |
-| Function result | Longint | &larr; | Drop value |
+| area | Longint | &#x1F852; | Reference of the area |
+| Function result | Longint | &#x1F850; | Drop value |
 
 <!-- END REF-->
 

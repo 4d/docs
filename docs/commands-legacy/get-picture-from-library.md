@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picRef | picName | Longint, String | &rarr; | Reference number of Picture Library graphic or Name of Picture Library graphic |
-| picture | Picture variable | <&rarr; | Picture from the Picture Library |
+| picRef &#124; picName | Longint, String | &#x1F852; | Reference number of Picture Library graphic or Name of Picture Library graphic |
+| picture | Picture variable | &#x1F858; | Picture from the Picture Library |
 
 <!-- END REF-->
 

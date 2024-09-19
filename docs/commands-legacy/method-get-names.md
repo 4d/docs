@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET NAMES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| arrNames | Text array | <&rarr; | Array of project method names |
-| filter | Text | &rarr; | Name filter |
-| * | Operator | &rarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| arrNames | Text array | &#x1F858; | Array of project method names |
+| filter | Text | &#x1F852; | Name filter |
+| * | Operator | &#x1F852; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->
 

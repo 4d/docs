@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PAUSE INDEXES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to pause indexes |
+| aTable | Table | &#x1F852; | Table for which to pause indexes |
 
 <!-- END REF-->
 
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.PAUSE INDEXES.Summary-->The **PAUSE INDEXES** command temporarily disables all the indexes of *aTable*, except for the index of the primary key.<!-- END REF-->
 
-The indexes are not physically deleted from the data (.4DIndx file) or the structure of the database (\_USER\_INDEXES, see [System Tables](/4Dv20R6/4D/20-R6/4D-SQL-engine-implementation.300-7183941.en.html#148389)), but they are rendered invalid and are thus no longer updated. When indexes are disabled, all the operations performed on *aTable* (queries, sorts, record additions, modifications and deletions) no longer use the indexes.
+The indexes are not physically deleted from the data (.4DIndx file) or the structure of the database (\_USER\_INDEXES, see *System Tables*), but they are rendered invalid and are thus no longer updated. When indexes are disabled, all the operations performed on *aTable* (queries, sorts, record additions, modifications and deletions) no longer use the indexes.
 
 This command is mainly useful when you are importing or modifying large amounts of data in tables that have several indexes. Since 4D must update the indexes each time a record is validated, the operation could take a considerable amount of time. Disabling the indexes beforehand can significantly speed up the operation. 
 

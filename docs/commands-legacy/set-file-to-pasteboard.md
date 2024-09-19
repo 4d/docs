@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET FILE TO PASTEBOARD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| file | String | &rarr; | File name or complete pathname of file |
-| * | Operator | &rarr; | If passed = add; If omitted = replace |
+| file | String | &#x1F852; | File name or complete pathname of file |
+| * | Operator | &#x1F852; | If passed = add; If omitted = replace |
 
 <!-- END REF-->
 

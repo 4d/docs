@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD RELATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| manyField | Field | &rarr; | Starting field of a relation |
-| one | Longint | <&rarr; | Status of the Many-to-One relation |
-| many | Longint | <&rarr; | Status of the One-to-Many relation |
-| * | Operator | &rarr; | • If passed: one and many return the current status of the relation (values 2 or 3 only) • If omitted (default): one and many can return the value 1 if the relation has not been modified through programming |
+| manyField | Field | &#x1F852; | Starting field of a relation |
+| one | Longint | &#x1F858; | Status of the Many-to-One relation |
+| many | Longint | &#x1F858; | Status of the One-to-Many relation |
+| * | Operator | &#x1F852; | • If passed: one and many return the current status of the relation (values 2 or 3 only) • If omitted (default): one and many can return the value 1 if the relation has not been modified through programming |
 
 <!-- END REF-->
 

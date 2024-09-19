@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY TO COLLECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| collection | Collection | <&rarr; | Collection to receive the array data |
-| array | Array | &rarr; | Array to copy to the collection; if propertyName passed, array to copy to the values of propertyName in the collection |
-| propertyName | Text | &rarr; | Object property name whose value to fill with array elements |
+| collection | Collection | &#x1F858; | Collection to receive the array data |
+| array | Array | &#x1F852; | Array to copy to the collection; if propertyName passed, array to copy to the values of propertyName in the collection |
+| propertyName | Text | &#x1F852; | Object property name whose value to fill with array elements |
 
 <!-- END REF-->
 

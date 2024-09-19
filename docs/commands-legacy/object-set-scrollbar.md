@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET SCROLLBAR.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| horizontal | Boolean, Longint | &rarr; | Visibility of horizontal scrollbar |
-| vertical | Boolean, Longint | &rarr; | Visibility of vertical scrollbar |
+| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| horizontal | Boolean, Longint | &#x1F852; | Visibility of horizontal scrollbar |
+| vertical | Boolean, Longint | &#x1F852; | Visibility of vertical scrollbar |
 
 <!-- END REF-->
 

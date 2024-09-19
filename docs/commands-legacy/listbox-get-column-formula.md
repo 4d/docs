@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get column formula.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Form object | &rarr; | Object Name (if * is specified) or Variable (if * is omitted) |
-| Function result | String | &larr; | Formula associated with column |
+| * | Operator | &#x1F852; | If specified, object is an object name (string)If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object Name (if * is specified) or Variable (if * is omitted) |
+| Function result | String | &#x1F850; | Formula associated with column |
 
 <!-- END REF-->
 

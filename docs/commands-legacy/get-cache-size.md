@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get cache size.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Real | &larr; | Size of database cache in bytes |
+| Function result | Real | &#x1F850; | Size of database cache in bytes |
 
 <!-- END REF-->
 

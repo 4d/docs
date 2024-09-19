@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get menu item parameter.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Longint, MenuRef | &rarr; | Menu reference or Menu number |
-| menuItem | Longint | &rarr; | Number of menu item or -1 for the last item added to the menu |
-| Function result | String | &larr; | Custom parameter of the menu item |
+| menu | Longint, MenuRef | &#x1F852; | Menu reference or Menu number |
+| menuItem | Longint | &#x1F852; | Number of menu item or -1 for the last item added to the menu |
+| Function result | String | &#x1F850; | Custom parameter of the menu item |
 
 <!-- END REF-->
 

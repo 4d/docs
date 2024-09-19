@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET PATHS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| folderName | Text | &rarr; | Name of Home page folder |
-| methodType | Longint | &rarr; | Selector of method type to get |
-| arrPaths | Text array | <&rarr; | Array of method paths and names |
-| stamp | Real variable | &rarr; | Minimum value of stamp |
-| <&rarr; | New current value |
-| * | Operator | &rarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| folderName | Text | &#x1F852; | Name of Home page folder |
+| methodType | Longint | &#x1F852; | Selector of method type to get |
+| arrPaths | Text array | &#x1F858; | Array of method paths and names |
+| stamp | Real variable | &#x1F852; | Minimum value of stamp |
+| &#x1F858; | New current value |
+| * | Operator | &#x1F852; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->
 

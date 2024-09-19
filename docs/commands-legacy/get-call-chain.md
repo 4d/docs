@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get call chain.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Collection | &larr; | Collection of objects describing the call chain within a process |
+| Function result | Collection | &#x1F850; | Collection of objects describing the call chain within a process |
 
 <!-- END REF-->
 
@@ -26,7 +26,7 @@ The command facilitates debugging by enabling the identification of the method c
 | name         | text     | Name of the called method                                                                                                                                                                                                                                                                                                                                                                                         | "name":"On Load"         |
 | type         | text     | Type of the method: <br/>"projectMethod", "formObjectMethod", <li<"formmethod",< li=""> "databaseMethod", "triggerMethod", "executeOnServer" (when calling a project method with the *Execute on Server attribute*.), "executeFormula" (when executing a formula via [PROCESS 4D TAGS](process-4d-tags.md) or the evaluation of a formula in a 4D Write Pro document.)"classFunction"</li<"formmethod",<> | "type":"formMethod"      |
 
-**Note:** For this command to be able to operate in compiled mode, the Range checking must not be disabled. See [Range checking](/4Dv20R6/4D/20-R6/Compilation-diagnostic-aids.300-7003444.en.html#515014).
+**Note:** For this command to be able to operate in compiled mode, the Range checking must not be disabled. See *Range checking*.
 
 #### Example 
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.MESSAGE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| message | String | &rarr; | Message to display |
+| message | String | &#x1F852; | Message to display |
 
 <!-- END REF-->
 

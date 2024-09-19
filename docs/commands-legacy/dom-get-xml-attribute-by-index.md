@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM GET XML ATTRIBUTE BY INDEX.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | String | &rarr; | XML element reference |
-| attribIndex | Longint | &rarr; | Attribute index number |
-| attribName | Variable | <&rarr; | Attribute name |
-| attribValue | Variable | <&rarr; | Attribute value |
+| elementRef | String | &#x1F852; | XML element reference |
+| attribIndex | Longint | &#x1F852; | Attribute index number |
+| attribName | Variable | &#x1F858; | Attribute name |
+| attribValue | Variable | &#x1F858; | Attribute value |
 
 <!-- END REF-->
 

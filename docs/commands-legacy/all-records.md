@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.ALL RECORDS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to select all records, or Default table, if omitted |
+| aTable | Table | &#x1F852; | Table for which to select all records, or Default table, if omitted |
 
 <!-- END REF-->
 

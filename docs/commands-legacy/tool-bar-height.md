@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Tool bar height.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &larr; | Height (expressed in pixels) of tool bar or 0 if tool bar is hidden |
+| Function result | Longint | &#x1F850; | Height (expressed in pixels) of tool bar or 0 if tool bar is hidden |
 
 <!-- END REF-->
 

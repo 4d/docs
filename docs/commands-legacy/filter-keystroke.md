@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FILTER KEYSTROKE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| filteredChar | String | &rarr; | Filtered keystroke character or Empty string to cancel the keystroke |
+| filteredChar | String | &#x1F852; | Filtered keystroke character or Empty string to cancel the keystroke |
 
 <!-- END REF-->
 

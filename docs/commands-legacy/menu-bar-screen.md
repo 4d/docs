@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Menu bar screen.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &larr; | Number of screen where menu bar is located |
+| Function result | Longint | &#x1F850; | Number of screen where menu bar is located |
 
 <!-- END REF-->
 

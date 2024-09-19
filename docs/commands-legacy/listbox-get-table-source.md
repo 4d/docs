@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| tableNum | Longint | <&rarr; | Table number of selection |
-| name | String | <&rarr; | Name of named selection or "" for the current selection |
-| highlightName | String | <&rarr; | Name of highlight set |
+| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| tableNum | Longint | &#x1F858; | Table number of selection |
+| name | String | &#x1F858; | Name of named selection or "" for the current selection |
+| highlightName | String | &#x1F858; | Name of highlight set |
 
 <!-- END REF-->
 

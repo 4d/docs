@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SELECT LOG FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| logFile | Operator, String | &rarr; | Name of the log file or "*" for closing the current log file |
+| logFile | Operator, String | &#x1F852; | Name of the log file or "*" for closing the current log file |
 
 <!-- END REF-->
 

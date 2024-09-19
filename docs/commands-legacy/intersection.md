@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.INTERSECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| set1 | String | &rarr; | First set |
-| set2 | String | &rarr; | Second set |
-| resultSet | String | &rarr; | Resulting set |
+| set1 | String | &#x1F852; | First set |
+| set2 | String | &#x1F852; | Second set |
+| resultSet | String | &#x1F852; | Resulting set |
 
 <!-- END REF-->
 

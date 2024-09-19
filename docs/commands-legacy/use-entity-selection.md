@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.USE ENTITY SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| entitySelection | EntitySelection | &rarr; | An entity selection |
+| entitySelection | EntitySelection | &#x1F852; | An entity selection |
 
 <!-- END REF-->
 
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 **Documentation moved**
 
-The documentation for this command has been moved. Visit [developer.4d.com](https://developer.4d.com/docs/API/EntitySelectionClass.html#use-entity-selection) for updated documentation.
+The documentation for this command has been moved. Visit *developer.4d.com* for updated documentation.
 
 The **USE ENTITY SELECTION** command updates the current selection of the table matching the dataclass of the *entitySelection* parameter, according to the content of the entity selection.
 

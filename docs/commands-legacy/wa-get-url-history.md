@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WA GET URL HISTORY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| urlsArr | String array | <&rarr; | Array of URLs visited |
-| direction | Longint | &rarr; | 0 or omitted=List of previous URLs, 1=List of next URLs |
-| titlesArr | String array | <&rarr; | Array of window titles |
+| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| urlsArr | String array | &#x1F858; | Array of URLs visited |
+| direction | Longint | &#x1F852; | 0 or omitted=List of previous URLs, 1=List of next URLs |
+| titlesArr | String array | &#x1F858; | Array of window titles |
 
 <!-- END REF-->
 
@@ -38,7 +38,7 @@ If you omit the *direction* parameter, the value 0 is used.
 
 If it is passed, the *titlesArr* parameter contains the list of window names associated with the URLs. This array is synchronized with the *urlsArr* array.
 
-**Compatibility Note:* As of 4D v19 R5, this command only returns the current URL in urlsArr and titlesArr arrays for web areas using the [Windows system rendering engine](https://developer.4d.com/docs/FormObjects/webAreaOverview.html#web-rendering-engine).* 
+**Compatibility Note:* As of 4D v19 R5, this command only returns the current URL in urlsArr and titlesArr arrays for web areas using the Windows system rendering engine.* 
 
 #### See also 
 

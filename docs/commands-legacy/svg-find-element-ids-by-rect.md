@@ -9,16 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG Find element IDs by rect.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, pictureObject is an object name (string) 
-If omitted, pictureObject is a variable |
-| pictureObject | Picture | &rarr; | Object name (if * specified) or 
-Field or variable (if * omitted) |
-| x | Longint | &rarr; | Horizontal coordinate of top left corner of selection rectangle |
-| y | Longint | &rarr; | Vertical coordinate of top left corner of selection rectangle |
-| width | Longint | &rarr; | Width of selection rectangle |
-| height | Longint | &rarr; | Height of selection rectangle |
-| arrIDs | Text array | <&rarr; | IDs of elements whose bounding rectangle intersects with the selection rectangle |
-| Function result | Boolean | &larr; | True = at least one element is found |
+| * | Operator | &#x1F852; | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
+| pictureObject | Picture | &#x1F852; | Object name (if * specified) or <br/>Field or variable (if * omitted) |
+| x | Longint | &#x1F852; | Horizontal coordinate of top left corner of selection rectangle |
+| y | Longint | &#x1F852; | Vertical coordinate of top left corner of selection rectangle |
+| width | Longint | &#x1F852; | Width of selection rectangle |
+| height | Longint | &#x1F852; | Height of selection rectangle |
+| arrIDs | Text array | &#x1F858; | IDs of elements whose bounding rectangle intersects with the selection rectangle |
+| Function result | Boolean | &#x1F850; | True = at least one element is found |
 
 <!-- END REF-->
 

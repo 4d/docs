@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SAVE RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to save the current record, or Default table, if omitted |
+| aTable | Table | &#x1F852; | Table for which to save the current record, or Default table, if omitted |
 
 <!-- END REF-->
 
@@ -32,7 +32,7 @@ Here are some cases where **SAVE RECORD** is required:
 
 You should not execute a **SAVE RECORD** during the On Validate event for a form that has been accepted. If you do, the record will be saved twice.
 
-**Note:** Saving a record that contains edited object field(s) usually requires that you notify explicitely 4D before calling **SAVE RECORD**. For more information, please refer to the [Saving Object fields](/4Dv20R6/4D/20-R6/4D-field-types.300-7003399.en.html#3626314) section. 
+**Note:** Saving a record that contains edited object field(s) usually requires that you notify explicitely 4D before calling **SAVE RECORD**. For more information, please refer to the *Saving Object fields* section. 
 
 #### Example 
 

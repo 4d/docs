@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Trigger level.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &larr; | Level of trigger execution (0 if outside any trigger execution cycle) |
+| Function result | Longint | &#x1F850; | Level of trigger execution (0 if outside any trigger execution cycle) |
 
 <!-- END REF-->
 
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Trigger level.Summary-->The Trigger level command returns the execution level of the trigger.<!-- END REF-->
 
-For more information on execution levels, see the topic [Cascading Triggers](/4Dv20R6/4D/20-R6/Triggers.300-6958353.en.html#35932).
+For more information on execution levels, see the topic *Cascading Triggers*.
 
 #### See also 
 

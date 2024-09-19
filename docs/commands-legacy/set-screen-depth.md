@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET SCREEN DEPTH.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| depth | Longint | &rarr; | Depth of the screen (number of colors = 2 ^ Screen depth) |
-| color | Longint | &rarr; | 1 = Color, 0 = Gray Scale |
-| screen | Longint | &rarr; | Screen number, or main screen if omitted |
+| depth | Longint | &#x1F852; | Depth of the screen (number of colors = 2 ^ Screen depth) |
+| color | Longint | &#x1F852; | 1 = Color, 0 = Gray Scale |
+| screen | Longint | &#x1F852; | Screen number, or main screen if omitted |
 
 <!-- END REF-->
 

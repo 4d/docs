@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Execute on server.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| procedure | String | &rarr; | Procedure to be executed within the process |
-| stack | Longint | &rarr; | Stack size in bytes |
-| name | String | &rarr; | Name of the process created |
-| param | Expression | &rarr; | Parameter(s) to the procedure |
-| * | Operator | &rarr; | Unique process |
-| Function result | Longint | &larr; | Process number for newly created process or already executing process |
+| procedure | String | &#x1F852; | Procedure to be executed within the process |
+| stack | Longint | &#x1F852; | Stack size in bytes |
+| name | String | &#x1F852; | Name of the process created |
+| param | Expression | &#x1F852; | Parameter(s) to the procedure |
+| * | Operator | &#x1F852; | Unique process |
+| Function result | Longint | &#x1F850; | Process number for newly created process or already executing process |
 
 <!-- END REF-->
 

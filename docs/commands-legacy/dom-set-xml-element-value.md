@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | String | &rarr; | XML element reference |
-| xPath | Text | &rarr; | XPath path of the XML element |
-| elementValue | String, Variable | &rarr; | New value of element |
-| * | Operator | &rarr; | If passed: set the value in CDATA |
+| elementRef | String | &#x1F852; | XML element reference |
+| xPath | Text | &#x1F852; | XPath path of the XML element |
+| elementValue | String, Variable | &#x1F852; | New value of element |
+| * | Operator | &#x1F852; | If passed: set the value in CDATA |
 
 <!-- END REF-->
 
@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Summary-->The **DOM SET XML ELEMENT VALUE** command modifies the value of the element set by *elementRef*.<!-- END REF--> 
 
-If you pass the optional *xPath* parameter, you choose to use XPath notation to indicate the element to be modified (for more information see the [Support of XPath notation (DOM)](/4Dv20R6/4D/20-R6/Overview-of-XML-DOM-Commands.300-6957756.en.html#4967352) section). The following path expressions are supported: 
+If you pass the optional *xPath* parameter, you choose to use XPath notation to indicate the element to be modified (for more information see the *Support of XPath notation (DOM)* section). The following path expressions are supported: 
 
 | **Expression** | **Action**                                          |
 | -------------- | --------------------------------------------------- |

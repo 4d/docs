@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current form name.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &larr; | Name of current project form or current table form in the process |
+| Function result | Text | &#x1F850; | Name of current project form or current table form in the process |
 
 <!-- END REF-->
 

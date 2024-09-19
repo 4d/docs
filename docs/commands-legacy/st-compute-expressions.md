@@ -9,12 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)
-If omitted, object is a field or variable |
-| object | Form object | &rarr; | Object name (if * is specified) or 
-Field or variable (if * is omitted) |
-| startSel | Longint | &rarr; | Start of selection |
-| endSel | Longint | &rarr; | End of selection |
+| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| startSel | Longint | &#x1F852; | Start of selection |
+| endSel | Longint | &#x1F852; | End of selection |
 
 <!-- END REF-->
 
@@ -36,7 +34,7 @@ Passing the optional *\** parameter indicates that the *object* parameter is an 
 
 It is not necessary for the *object* to have the focus. However, if the *object* designates a multi-style text area, it must be included in a form or else the **ST COMPUTE EXPRESSIONS** command has no effect.
 
-**Note:** If the *object* designates a 4D Write Pro document, it will be computed by the command even if it is not opened in a form object (see also [Picture expressions](/4Dv20R6/4D/20-R6/Handling-pictures.200-6993924.en.html#3841026)). 
+**Note:** If the *object* designates a 4D Write Pro document, it will be computed by the command even if it is not opened in a form object (see also *Picture expressions*). 
 
 The optional *startSel* and *endSel* parameters designate a selection of text in *object*. The *startSel* and *endSel* values express a plain text selection, without taking into account any style tags or references that may be present. Note that a reference is equivalent to a single character. 
 

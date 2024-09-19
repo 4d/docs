@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR EXECUTE COMMAND.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Longint | &rarr; | Reference of the area |
-| command | Longint | &rarr; | Menu command to be executed |
+| area | Longint | &#x1F852; | Reference of the area |
+| command | Longint | &#x1F852; | Menu command to be executed |
 
 <!-- END REF-->
 

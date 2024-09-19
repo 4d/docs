@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET INFO COLUMN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Longint | &rarr; | Reference of the area |
-| colNum | Longint | &rarr; | Column number |
-| title | Text | <&rarr; | Column title |
-| object | Text | <&rarr; | Object assigned for that column |
-| hide | Longint | <&rarr; | 0 = displayed, 1 = hidden |
-| size | Longint | <&rarr; | Column size |
-| repeatedValue | Longint | <&rarr; | 0 = not repeated, 1 = repeated |
-| displayFormat | Text | <&rarr; | Display format for the data |
-| resultVar | Text | <&rarr; | Name of the formula variable |
+| area | Longint | &#x1F852; | Reference of the area |
+| colNum | Longint | &#x1F852; | Column number |
+| title | Text | &#x1F858; | Column title |
+| object | Text | &#x1F858; | Object assigned for that column |
+| hide | Longint | &#x1F858; | 0 = displayed, 1 = hidden |
+| size | Longint | &#x1F858; | Column size |
+| repeatedValue | Longint | &#x1F858; | 0 = not repeated, 1 = repeated |
+| displayFormat | Text | &#x1F858; | Display format for the data |
+| resultVar | Text | &#x1F858; | Name of the formula variable |
 
 <!-- END REF-->
 

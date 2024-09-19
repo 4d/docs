@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM LOAD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table form to load (if omitted, load a project form) |
-| form | String, Object | &rarr; | Name (string) of form (project or table), ora POSIX path (string) to a .json file describing the form, or an object describing the form to open |
-| formData | Object | &rarr; | Data to associate to the form |
-| * | Operator | &rarr; | If passed = command applies to host database when it is executed from a component (parameter ignored outside of this context) |
+| aTable | Table | &#x1F852; | Table form to load (if omitted, load a project form) |
+| form | String, Object | &#x1F852; | Name (string) of form (project or table), ora POSIX path (string) to a .json file describing the form, or an object describing the form to open |
+| formData | Object | &#x1F852; | Data to associate to the form |
+| * | Operator | &#x1F852; | If passed = command applies to host database when it is executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 In the *form* parameter, you can pass:
 
 * the name of a form, or
-* the path (in POSIX syntax) to a valid .json file containing a description of the form to use (see [Form file path](/4Dv20R6/4D/20-R6/Dynamic-Forms.300-7003255.en.html#3699744)), or
+* the path (in POSIX syntax) to a valid .json file containing a description of the form to use (see *Form file path*), or
 * an object containing a description of the form.
 
 When the command is executed from a component, it loads the component forms by default. If you pass the *\** parameter, the method loads the host database forms.

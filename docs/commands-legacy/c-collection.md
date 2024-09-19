@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.C_COLLECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| method | Method | &rarr; | Name of method |
-| variable | Variable | &rarr; | Name(s) of variable(s) or ${...} parameter(s) to declare |
+| method | Method | &#x1F852; | Name of method |
+| variable | Variable | &#x1F852; | Name(s) of variable(s) or ${...} parameter(s) to declare |
 
 <!-- END REF-->
 
@@ -28,7 +28,7 @@ You use the second syntax of the command (when the *method* parameter is passed)
 
 ##### Advanced Use 
 
-The syntax **C\_COLLECTION**(${...}) allows you to declare a variable number of parameters of the same type, under the condition that these are the last parameters for the method. For example, the declaration **C\_COLLECTION**(${5}) tells 4D and the compiler that starting with the fifth parameter, the method can receive a variable number of parameters of that type. For more information, see the [Parameter indirection](/4Dv20R6/4D/20-R6/Typing-Guide.300-6958559.en.html#2064009) section.
+The syntax **C\_COLLECTION**(${...}) allows you to declare a variable number of parameters of the same type, under the condition that these are the last parameters for the method. For example, the declaration **C\_COLLECTION**(${5}) tells 4D and the compiler that starting with the fifth parameter, the method can receive a variable number of parameters of that type. For more information, see the *Parameter indirection* section.
 
 #### Example 
 

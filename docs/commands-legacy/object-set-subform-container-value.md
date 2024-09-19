@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| value | Mixed | &rarr; | New value for the data source |
+| value | Mixed | &#x1F852; | New value for the data source |
 
 <!-- END REF-->
 
@@ -19,9 +19,9 @@ displayed_sidebar: docs
 
 This command can only be used in the context of a form used as a subform. In any other context, it does nothing.
 
-Pass in *value* a value of the same type as the data source bound to the subform container. The data source must be an assignable expression (see [Assignable vs non-assignable expressions](https://developer.4d.com/docs/Concepts/quick-tour.html#assignable-vs-non-assignable-expressions)), otherwise the command does nothing. 
+Pass in *value* a value of the same type as the data source bound to the subform container. The data source must be an assignable expression (see *Assignable vs non-assignable expressions*), otherwise the command does nothing. 
 
-For more information on bound variables and form/subform interaction, see [Managing the bound variable](https://developer.4d.com/docs/FormObjects/subformOverview.html#managing-the-bound-variable) on developer.4d.com.
+For more information on bound variables and form/subform interaction, see *Managing the bound variable* on developer.4d.com.
 
 #### Example 
 

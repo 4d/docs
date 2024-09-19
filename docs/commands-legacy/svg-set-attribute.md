@@ -9,14 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG SET ATTRIBUTE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, pictureObject is an object name (string) 
-If omitted, pictureObject is a variable |
-| pictureObject | Picture | &rarr; | Object name (if * specified) or 
-Variable or field (if * omitted) |
-| element_ID | Text | &rarr; | ID of element where one or more attributes are set |
-| attribName | String | &rarr; | Attribute to be specified |
-| attribValue | String, Longint | &rarr; | New value of attribute |
-| * | Operator | &rarr; | If passed = modify SVG image itself |
+| * | Operator | &#x1F852; | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
+| pictureObject | Picture | &#x1F852; | Object name (if * specified) or <br/>Variable or field (if * omitted) |
+| element_ID | Text | &#x1F852; | ID of element where one or more attributes are set |
+| attribName | String | &#x1F852; | Attribute to be specified |
+| attribValue | String, Longint | &#x1F852; | New value of attribute |
+| * | Operator | &#x1F852; | If passed = modify SVG image itself |
 
 <!-- END REF-->
 

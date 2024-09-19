@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Open datastore.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| connectionInfo | Object | &rarr; | Connection properties used to reach the remote datastore |
-| localID | Text | &rarr; | Id to assign to the opened datastore on the local application (mandatory) |
-| Function result | Object | &larr; | Datastore object |
+| connectionInfo | Object | &#x1F852; | Connection properties used to reach the remote datastore |
+| localID | Text | &#x1F852; | Id to assign to the opened datastore on the local application (mandatory) |
+| Function result | Object | &#x1F850; | Datastore object |
 
 <!-- END REF-->
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 **Documentation moved**
 
-The documentation for this command has been moved. Visit [developer.4d.com](https://developer.4d.com/docs/API/DataStoreClass.html#open-datastore) for updated documentation.
+The documentation for this command has been moved. Visit *developer.4d.com* for updated documentation.
 
 The **Open datastore** command connects the application to the 4D database identified by the *connectionInfo* parameter and returns a matching [datastore](# "Datastore reference object") object associated with the *localID* local alias. 
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to return a selection of records, or Default table, if omitted |
-| queryArgument | Expression | &rarr; | Query argument |
-| * | Operator | &rarr; | Continue query flag |
+| aTable | Table | &#x1F852; | Table for which to return a selection of records, or Default table, if omitted |
+| queryArgument | Expression | &#x1F852; | Query argument |
+| * | Operator | &#x1F852; | Continue query flag |
 
 <!-- END REF-->
 
@@ -148,7 +148,7 @@ The following example will automatically take advantage of a composite index of 
  QUERY([People];&;[People]Last Name="smith") // with Smith as last name
 ```
 
-For more information, see [Composite indexes](/4Dv20R6/4D/20-R6/Creating-and-modifying-indexes.300-7003397.en.html#106846).
+For more information, see *Composite indexes*.
 
 #### Example 8 
 

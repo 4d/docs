@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Append XML child node.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &rarr; | XML element reference |
-| childType | Longint | &rarr; | Type of child to append |
-| childValue | Text, BLOB | &rarr; | Text or variable (Text or BLOB) whose value must be inserted as child node |
-| Function result | Text | &larr; | Reference of child XML element |
+| elementRef | Text | &#x1F852; | XML element reference |
+| childType | Longint | &#x1F852; | Type of child to append |
+| childValue | Text, BLOB | &#x1F852; | Text or variable (Text or BLOB) whose value must be inserted as child node |
+| Function result | Text | &#x1F850; | Reference of child XML element |
 
 <!-- END REF-->
 

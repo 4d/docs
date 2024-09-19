@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Get current URL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| Function result | String | &larr; | URL currently loaded in the Web area |
+| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| Function result | String | &#x1F850; | URL currently loaded in the Web area |
 
 <!-- END REF-->
 

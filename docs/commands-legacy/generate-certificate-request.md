@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| privKey | BLOB | &rarr; | BLOB containing the private key |
-| certifRequest | BLOB | <&rarr; | BLOB receiving the certificate request |
-| codeArray | Longint array | &rarr; | Information code list |
-| nameArray | String array | &rarr; | Name list |
+| privKey | BLOB | &#x1F852; | BLOB containing the private key |
+| certifRequest | BLOB | &#x1F858; | BLOB receiving the certificate request |
+| codeArray | Longint array | &#x1F852; | Information code list |
+| nameArray | String array | &#x1F852; | Name list |
 
 <!-- END REF-->
 

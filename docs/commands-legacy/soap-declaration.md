@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SOAP DECLARATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| variable | Variable | &rarr; | Variable referring to an incoming or outgoing SOAP argument |
-| type | Longint | &rarr; | 4D type to which the argument points |
-| input_output | Longint | &rarr; | 1 = SOAP Input, 2 = SOAP Output |
-| alias | String | &rarr; | Name published for this argument during SOAP exchanges |
+| variable | Variable | &#x1F852; | Variable referring to an incoming or outgoing SOAP argument |
+| type | Longint | &#x1F852; | 4D type to which the argument points |
+| input_output | Longint | &#x1F852; | 1 = SOAP Input, 2 = SOAP Output |
+| alias | String | &#x1F852; | Name published for this argument during SOAP exchanges |
 
 <!-- END REF-->
 
@@ -43,7 +43,7 @@ By default, because only Text type arguments can be used, the SOAP server respon
 **Notes:** 
 
 * On the client side, if you subscribe to this type of Web Service with 4D, the Web Services Wizard will of course generate a Text type variable. To be able to use it, you just need to re-type this return variable as a BLOB in the proxy method.
-* This command does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](https://developer.4d.com/docs/Concepts/blob.html#passing-blobs-and-blob-objects-to-4d-commands) on developer.4d.com.
+* This command does not support blob objects (4D.Blob type). See *Passing blobs and blob objects to 4D commands* on developer.4d.com.
 
 In *type*, pass the corresponding 4D type. Most types of 4D variables and arrays can be used. You can use the following predefined constants, located in the “*Field and Variable Types*” theme, as well as, for XML types, two constants of the *Web Services (Server)* theme:
 

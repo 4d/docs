@@ -9,13 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.PHP Execute.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| scriptPath | Text | &rarr; | Pathname to PHP script or
-"" to execute a PHP function |
-| functionName | Text | &rarr; | PHP function to be executed |
-| phpResult | Operator, Variable, Field | <&rarr; | Result of PHP function execution or * to not receive any result |
-| param | Text, Boolean, Real, Longint, Date, Time | &rarr; | Parameter(s) of PHP function |
-| Function result | Boolean | &larr; | True = execution correct
-False = execution error |
+| scriptPath | Text | &#x1F852; | Pathname to PHP script or<br/>"" to execute a PHP function |
+| functionName | Text | &#x1F852; | PHP function to be executed |
+| phpResult | Operator, Variable, Field | &#x1F858; | Result of PHP function execution or * to not receive any result |
+| param | Text, Boolean, Real, Longint, Date, Time | &#x1F852; | Parameter(s) of PHP function |
+| Function result | Boolean | &#x1F850; | True = execution correct<br/>False = execution error |
 
 <!-- END REF-->
 
@@ -35,7 +33,7 @@ The *phpResult* parameter receives the result of the execution of the PHP functi
 * a variable, an array or a field in order to receive the result,
 * the \* character if the function does not return any result or if you do not want to retrieve it.
 
-The *phpResult* parameter can be of the Text, Longint, Real, Boolean, or Date type as well as (except for arrays) a field of the BLOB or Time type. 4D will carry out the conversion of the data and any adjustments needed according to the principles described in the [Conversion of data returned](/4Dv20R6/4D/20-R6/PHP-Execute.301-6959073.en.html#519641) section below. 
+The *phpResult* parameter can be of the Text, Longint, Real, Boolean, or Date type as well as (except for arrays) a field of the BLOB or Time type. 4D will carry out the conversion of the data and any adjustments needed according to the principles described in the *Conversion of data returned* section below. 
 
 * If you passed a function name in the *functionName* parameter, *phpResult* will receive what the PHP developer returned with the **return** command from the body of the function.
 * If you use the command without passing a function name in the *functionName* parameter, *phpResult* will receive what the PHP developer returned with the **echo** command (or a similar command).

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.LAST RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to move to the last selected record, or Default table, if omitted |
+| aTable | Table | &#x1F852; | Table for which to move to the last selected record, or Default table, if omitted |
 
 <!-- END REF-->
 

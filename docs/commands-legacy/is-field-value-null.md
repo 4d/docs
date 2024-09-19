@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is field value Null.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &rarr; | Field to be evaluated |
-| Function result | Boolean | &larr; | True = field is NULL, False = field is not NULL |
+| aField | Field | &#x1F852; | Field to be evaluated |
+| Function result | Boolean | &#x1F850; | True = field is NULL, False = field is not NULL |
 
 <!-- END REF-->
 
@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 The NULL value is used by the SQL kernel of 4D. For more information, refer to the *4D SQL Reference* manual.
 
-The value returned by this command is only meaningful if the "[Map NULL values to blank values](/4Dv20R6/4D/20-R6/Field-properties.300-7003391.en.html#2287953)" option is not checked in the field definition of the Structure editor. Otherwise, it always returns **False**. 
+The value returned by this command is only meaningful if the "*Map NULL values to blank values*" option is not checked in the field definition of the Structure editor. Otherwise, it always returns **False**. 
 
 **Note:** This command cannot be used with objects and object properties. Null values in object fields are handled through the [Null](null.md) command. 
 

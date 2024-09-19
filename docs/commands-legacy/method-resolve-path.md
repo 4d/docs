@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD RESOLVE PATH.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text | &rarr; | Path to resolve |
-| methodType | Longint | <&rarr; | Object type selector |
-| ptrTable | Pointer | <&rarr; | Table reference |
-| objectName | Text | <&rarr; | Name of form or database method |
-| formObjectName | Text | <&rarr; | Name of form object |
-| * | Operator | &rarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| path | Text | &#x1F852; | Path to resolve |
+| methodType | Longint | &#x1F858; | Object type selector |
+| ptrTable | Pointer | &#x1F858; | Table reference |
+| objectName | Text | &#x1F858; | Name of form or database method |
+| formObjectName | Text | &#x1F858; | Name of form object |
+| * | Operator | &#x1F852; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->
 

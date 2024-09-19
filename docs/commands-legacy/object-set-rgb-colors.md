@@ -9,12 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET RGB COLORS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
-| object | Form object | &rarr; | Object Name (if * is specified), or 
-Variable or field (if * is omitted) |
-| foregroundColor | Text, Longint | &rarr; | RGB color value for foreground |
-| backgroundColor | Text, Longint | &rarr; | RGB color value for background |
-| altBackgrndColor | Text, Longint | &rarr; | RGB color value for alternating background |
+| * | Operator | &#x1F852; | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
+| object | Form object | &#x1F852; | Object Name (if * is specified), or <br/>Variable or field (if * is omitted) |
+| foregroundColor | Text, Longint | &#x1F852; | RGB color value for foreground |
+| backgroundColor | Text, Longint | &#x1F852; | RGB color value for background |
+| altBackgrndColor | Text, Longint | &#x1F852; | RGB color value for alternating background |
 
 <!-- END REF-->
 

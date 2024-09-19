@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Run offscreen area.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| parameters | Object | &rarr; | Object containing the web area's attributes |
-| Function result | Mixed | &larr; | .result property of the onEvent object, or Null if does not return a value |
+| parameters | Object | &#x1F852; | Object containing the web area's attributes |
+| Function result | Mixed | &#x1F850; | .result property of the onEvent object, or Null if does not return a value |
 
 <!-- END REF-->
 
@@ -44,7 +44,7 @@ If a null value is passed in *parameters*, a blank web area will be created and 
 **Notes**: 
 
 * The offscreen web area is only available during the execution of the **WA Run offscreen area** command. It will automatically be destroyed once execution has ended.
-* 4D methods can be called from the JavaScript code executed in a web area. See [Accessing 4D methods](/4Dv20R6/4D/20-R6/Programmed-management-of-Web-Areas.300-6959063.en.html#3190797).
+* 4D methods can be called from the JavaScript code executed in a web area. See *Accessing 4D methods*.
 
 The following commands can be used in the callback method:
 

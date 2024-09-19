@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SMTP New transporter.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| server | Object | &rarr; | Mail server information |
-| Function result | Object | &larr; | SMTP transporter object |
+| server | Object | &#x1F852; | Mail server information |
+| Function result | Object | &#x1F850; | SMTP transporter object |
 
 <!-- END REF-->
 
@@ -20,6 +20,6 @@ displayed_sidebar: docs
 
 **Documentation moved**
 
-The documentation for this command has been moved. Visit [developer.4d.com](https://developer.4d.com/docs/API/SMTPTransporterClass.html#smtp-new-transporter) for updated documentation.
+The documentation for this command has been moved. Visit *developer.4d.com* for updated documentation.
 
 The **SMTP New transporter** command configures a new SMTP connection according to the *server* parameter and returns a new *transporter* object. The returned *transporter* object will then usually be used to send emails.

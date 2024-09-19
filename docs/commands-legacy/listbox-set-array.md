@@ -9,11 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or
-Variable (if * is omitted) |
-| arrType | Longint | &rarr; | Type of array |
-| arrPtr | Pointer | &rarr; | Array to associate with property |
+| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or<br/>Variable (if * is omitted) |
+| arrType | Longint | &#x1F852; | Type of array |
+| arrPtr | Pointer | &#x1F852; | Array to associate with property |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LIST TO BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| list | ListRef | &rarr; | Hierarchical list to store in the BLOB |
-| blob | BLOB | &rarr; | BLOB to receive the Hierarchical list |
-| * | Operator | &rarr; | * to append the value |
+| list | ListRef | &#x1F852; | Hierarchical list to store in the BLOB |
+| blob | BLOB | &#x1F852; | BLOB to receive the Hierarchical list |
+| * | Operator | &#x1F852; | * to append the value |
 
 <!-- END REF-->
 
@@ -33,7 +33,7 @@ After the call, if the list has been successfully stored, the OK variable is set
 
 ##### Note 
 
-**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](https://developer.4d.com/docs/Concepts/blob.html#passing-blobs-and-blob-objects-to-4d-commands) on developer.4d.com.
+**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See *Passing blobs and blob objects to 4D commands* on developer.4d.com.
 
 #### Example 
 

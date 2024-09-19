@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Discover data key.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &larr; | True if a valid encryption key for the currently open data file has been found, else False |
+| Function result | Boolean | &#x1F850; | True if a valid encryption key for the currently open data file has been found, else False |
 
 <!-- END REF-->
 
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 Connected devices to be searched include USB keys or external disks. A valid encryption key is necessary to allow read/write access to an encrypted database. This command can be called, for example, at database startup, after the user has been invited to connect a USB key.
 
-Key files (".4DKeyChain" extension files) must be stored at the top level of connected devices (the search will not go through the folder hierarchy). Encryption keys must be saved in JSON format (see [Storing data encryption keys in files](/4Dv20R6/4D/20-R6/Encrypting-data.300-7003250.en.html#4099683) in the *4D Design Reference*).
+Key files (".4DKeyChain" extension files) must be stored at the top level of connected devices (the search will not go through the folder hierarchy). Encryption keys must be saved in JSON format (see *Storing data encryption keys in files* in the *4D Design Reference*).
 
 **Returned value**
 

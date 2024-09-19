@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table from which to create the selection |
-| recordArray | Longint, Boolean array | &rarr; | Array of record numbers, or Array of booleans (True = the record is in the selection, False = the record is not in the selection) |
-| selectionName | String | &rarr; | Name of the named selection to create, or Apply the command to the current selection if the parameter is omitted |
+| aTable | Table | &#x1F852; | Table from which to create the selection |
+| recordArray | Longint, Boolean array | &#x1F852; | Array of record numbers, or Array of booleans (True = the record is in the selection, False = the record is not in the selection) |
+| selectionName | String | &#x1F852; | Name of the named selection to create, or Apply the command to the current selection if the parameter is omitted |
 
 <!-- END REF-->
 

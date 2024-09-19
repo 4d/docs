@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD Get attribute.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text | &rarr; | Path of project method |
-| attribType | Longint | &rarr; | Type of attribute to get |
-| * | Operator | &rarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
-| Function result | Boolean | &larr; | True = attribute selected; otherwise False |
+| path | Text | &#x1F852; | Path of project method |
+| attribType | Longint | &#x1F852; | Type of attribute to get |
+| * | Operator | &#x1F852; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| Function result | Boolean | &#x1F850; | True = attribute selected; otherwise False |
 
 <!-- END REF-->
 

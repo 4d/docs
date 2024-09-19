@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| booleanArr | Boolean array | <&rarr; | Array to indicate if a record is in the set or not |
-| set | String | &rarr; | Name of the set or UserSet if this parameter is omitted |
+| booleanArr | Boolean array | &#x1F858; | Array to indicate if a record is in the set or not |
+| set | String | &#x1F852; | Name of the set or UserSet if this parameter is omitted |
 
 <!-- END REF-->
 

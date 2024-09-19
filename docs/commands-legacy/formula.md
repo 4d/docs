@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Formula.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| formulaExp | Expression | &rarr; | Formula to be returned as object |
-| Function result | Object | &larr; | Function object encapsulating the formula |
+| formulaExp | Expression | &#x1F852; | Formula to be returned as object |
+| Function result | Object | &#x1F850; | Function object encapsulating the formula |
 
 <!-- END REF-->
 

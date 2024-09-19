@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.After.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &larr; | Returns True if the execution cycle is an after |
+| Function result | Boolean | &#x1F850; | Returns True if the execution cycle is an after |
 
 <!-- END REF-->
 

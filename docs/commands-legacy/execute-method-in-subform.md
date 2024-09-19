@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| subformObject | Text | &rarr; | Name of subform object |
-| formula | Object, Text | &rarr; | Formula object or Name of project method |
-| return | Operator, Variable | &rarr; | * if formula does not return a value |
-| <&rarr; | Value returned by formula |
-| param | Expression | &rarr; | Parameter(s) passed to formula |
+| subformObject | Text | &#x1F852; | Name of subform object |
+| formula | Object, Text | &#x1F852; | Formula object or Name of project method |
+| return | Operator, Variable | &#x1F852; | * if formula does not return a value |
+| &#x1F858; | Value returned by formula |
+| param | Expression | &#x1F852; | Parameter(s) passed to formula |
 
 <!-- END REF-->
 
@@ -25,7 +25,7 @@ The called code can receive from 1 to X parameters in *param* and return a value
 
 In *formula*, you designate the 4D code to be executed in the context of *subformObject*. You can pass either:
 
-* a **formula object** (see [Formula Objects](https://doc4d.github.io/docs/en/API/FunctionClass.html#formula-objects)). Formula objects can encapsulate any executable expressions, including functions and project methods;
+* a **formula object** (see *Formula Objects*). Formula objects can encapsulate any executable expressions, including functions and project methods;
 * a **string** containing the name of a project method.
 
 The execution context is preserved in the called code, which means that the current form and current form event remain specified. If the subform comes from a component, a called method or function must belong to the component and have the "Shared by components and host database" property.

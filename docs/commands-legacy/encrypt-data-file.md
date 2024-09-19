@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Encrypt data file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| structurePath | Text | &rarr; | Pathname of structure file |
-| dataPath | Text | &rarr; | Pathname of data file to encrypt |
-| newPassPhrase | newDataKey | Text, Object | &rarr; | In case of replacement: new passPhrase (text) or new encryption key (object) |
-| archiveFolder | Text | &rarr; | Pathname of folder where original files will be stored |
-| curPassPhrase | curDataKey | Text, Object | &rarr; | Current passPhrase (text) or current encryption key (object) |
-| methodName | Text | &rarr; | Name of 4D callback method |
-| Function result | Text | &larr; | Full pathname of folder where original files have been stored |
+| structurePath | Text | &#x1F852; | Pathname of structure file |
+| dataPath | Text | &#x1F852; | Pathname of data file to encrypt |
+| newPassPhrase &#124; newDataKey | Text, Object | &#x1F852; | In case of replacement: new passPhrase (text) or new encryption key (object) |
+| archiveFolder | Text | &#x1F852; | Pathname of folder where original files will be stored |
+| curPassPhrase &#124; curDataKey | Text, Object | &#x1F852; | Current passPhrase (text) or current encryption key (object) |
+| methodName | Text | &#x1F852; | Name of 4D callback method |
+| Function result | Text | &#x1F850; | Full pathname of folder where original files have been stored |
 
 <!-- END REF-->
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 * This command cannot be used with the currently opened data file.
 * This command can only be executed from 4D (local mode) or 4D Server (stored procedure). The data file to be encrypted must correspond to the structure file designated by *structurePath*.
 
-Executing this command will encrypt or modify the encryption of all tables of the database that have been set as "encryptable". For more information, please refer to the [Encryptable](/4Dv20R6/4D/20-R6/Table-properties.300-7003400.en.html#4168557) section.
+Executing this command will encrypt or modify the encryption of all tables of the database that have been set as "encryptable". For more information, please refer to the *Encryptable* section.
 
 **Warning:** Encrypting a database is a lengthy operation. It displays a progress indicator (which could be interrupted by the user). Note also that database encryption sequence includes a compacting step.
 

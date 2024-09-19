@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Level.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &larr; | Current break or header level |
+| Function result | Longint | &#x1F850; | Current break or header level |
 
 <!-- END REF-->
 

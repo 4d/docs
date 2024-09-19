@@ -9,14 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.ST GET ATTRIBUTES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) 
-If omitted, object is a variable or a field |
-| object | Form object | &rarr; | Object name (if * is specified) or 
-Variable or field (if * is omitted) |
-| startSel | Longint | &rarr; | Start of text selection |
-| endSel | Longint | &rarr; | End of text selection |
-| attribName | Longint | &rarr; | Attribute to get |
-| attribValue | Variable | <&rarr; | Current value of attribute |
+| * | Operator | &#x1F852; | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
+| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
+| startSel | Longint | &#x1F852; | Start of text selection |
+| endSel | Longint | &#x1F852; | End of text selection |
+| attribName | Longint | &#x1F852; | Attribute to get |
+| attribValue | Variable | &#x1F858; | Current value of attribute |
 
 <!-- END REF-->
 

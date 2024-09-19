@@ -9,11 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get enabled.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)
-If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or 
-Variable (if * is omitted) |
-| Function result | Boolean | &larr; | True = object(s) enabled; Otherwise, false |
+| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| Function result | Boolean | &#x1F850; | True = object(s) enabled; Otherwise, false |
 
 <!-- END REF-->
 

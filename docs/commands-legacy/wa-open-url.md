@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WA OPEN URL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| url | String | &rarr; | URL to load in Web area |
+| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| url | String | &#x1F852; | URL to load in Web area |
 
 <!-- END REF-->
 

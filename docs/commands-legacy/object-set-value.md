@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET VALUE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| objectName | Text | &rarr; | Object name |
-| value | Mixed | &rarr; | New value for the form object's data source |
+| objectName | Text | &#x1F852; | Object name |
+| value | Mixed | &#x1F852; | New value for the form object's data source |
 
 <!-- END REF-->
 
@@ -22,7 +22,7 @@ In the *objectName* parameter, pass the name of a form object (a string). You ca
 
 The *value* parameter allows you pass a new value (any type) for the form object's data source.
 
-**Note**: If the data source is a non-assignable expression, **OBJECT SET VALUE** does nothing. For more information, see [assignable vs non-assignable expressions](https://developer.4d.com/docs/Concepts/quick-tour.html#assignable-vs-non-assignable-expressions).
+**Note**: If the data source is a non-assignable expression, **OBJECT SET VALUE** does nothing. For more information, see *assignable vs non-assignable expressions*.
 
 #### Example 2 
 

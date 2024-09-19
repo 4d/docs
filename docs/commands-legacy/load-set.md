@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LOAD SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table to which the set belongs, or Default table, if omitted |
-| set | String | &rarr; | Name of the set to be created in memory |
-| document | String | &rarr; | Document holding the set |
+| aTable | Table | &#x1F852; | Table to which the set belongs, or Default table, if omitted |
+| set | String | &#x1F852; | Name of the set to be created in memory |
+| document | String | &#x1F852; | Document holding the set |
 
 <!-- END REF-->
 

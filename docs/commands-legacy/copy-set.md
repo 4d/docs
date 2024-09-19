@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.COPY SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| srcSet | String | &rarr; | Source set name |
-| dstSet | String | &rarr; | Destination set name |
+| srcSet | String | &#x1F852; | Source set name |
+| dstSet | String | &#x1F852; | Destination set name |
 
 <!-- END REF-->
 
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COPY SET.Summary-->The COPY SET command copies the contents of the set *srcSet* into the set *dstSet*.<!-- END REF-->
 
-Each of these sets can be of the process, interprocess or local/client type. The two sets do not have to be the same type (as shown in the examples below), so long as they are both visible on the machine. For more information about this point, refer to "[Visibility of Sets](/4Dv20R6/4D/20-R6/Sets.300-6959005.en.html#32810)".
+Each of these sets can be of the process, interprocess or local/client type. The two sets do not have to be the same type (as shown in the examples below), so long as they are both visible on the machine. For more information about this point, refer to "*Visibility of Sets*".
 
 #### Example 1 
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET TABLE TITLES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tableTitles | String array | &rarr; | Table names as they must appear in dialog boxes |
-| tableNumbers | Longint array | &rarr; | Actual table numbers |
-| * | Operator | &rarr; | Use the custom names in the formula editor |
+| tableTitles | String array | &#x1F852; | Table names as they must appear in dialog boxes |
+| tableNumbers | Longint array | &#x1F852; | Actual table numbers |
+| * | Operator | &#x1F852; | Use the custom names in the formula editor |
 
 <!-- END REF-->
 

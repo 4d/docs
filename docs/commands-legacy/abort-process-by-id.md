@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.ABORT PROCESS BY ID.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| uniqueID | Longint | &rarr; | Unique process ID |
+| uniqueID | Longint | &#x1F852; | Unique process ID |
 
 <!-- END REF-->
 
@@ -22,7 +22,7 @@ In the *uniqueID* parameter, pass the unique ID of the process running on the se
 **Notes**: 
 
 * This command can only be executed on 4D Server. If the method calling the command is executed locally on a remote client or in 4D single user, **ABORT PROCESS BY ID** does nothing.
-* This command can only be used with the *ServerNet* network layer. See [ New ServerNet Network Layer (compatibility)](/4Dv20R6/4D/20-R6/Network-and-Client-Server-options.300-7182857.en.html#3750425).
+* This command can only be used with the *ServerNet* network layer. See   *New ServerNet Network Layer (compatibility)*.
 * This command should only be used for searching errors or administration purposes, not as a regular procedure.
 
 #### Example 

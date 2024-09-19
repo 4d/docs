@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.RESOLVE POINTER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aPointer | Pointer | &rarr; | Pointer for which to retrieve the referenced object |
-| varName | String | <&rarr; | Name of referenced variable or empty string |
-| tableNum | Longint | <&rarr; | Number of referenced table or array element or 0 or -1 |
-| fieldNum | Longint | <&rarr; | Number of referenced field or 0 |
+| aPointer | Pointer | &#x1F852; | Pointer for which to retrieve the referenced object |
+| varName | String | &#x1F858; | Name of referenced variable or empty string |
+| tableNum | Longint | &#x1F858; | Number of referenced table or array element or 0 or -1 |
+| fieldNum | Longint | &#x1F858; | Number of referenced field or 0 |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB GET HTTP HEADER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| header|fieldArray | Text, Text array | <&rarr; | Request HTTP header or HTTP header fields |
-| valueArray | Text array | <&rarr; | HTTP header fields content |
+| header&#124;fieldArray | Text, Text array | &#x1F858; | Request HTTP header or HTTP header fields |
+| valueArray | Text array | &#x1F858; | HTTP header fields content |
 
 <!-- END REF-->
 

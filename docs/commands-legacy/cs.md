@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.cs.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Object | &larr; | Class Store containing all classes of the current database |
+| Function result | Object | &#x1F850; | Class Store containing all classes of the current database |
 
 <!-- END REF-->
 

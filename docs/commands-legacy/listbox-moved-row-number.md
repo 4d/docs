@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX MOVED ROW NUMBER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| oldPosition | Longint | <&rarr; | Previous position of the moved row |
-| newPosition | Longint | <&rarr; | New position of the moved row |
+| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| oldPosition | Longint | &#x1F858; | Previous position of the moved row |
+| newPosition | Longint | &#x1F858; | New position of the moved row |
 
 <!-- END REF-->
 

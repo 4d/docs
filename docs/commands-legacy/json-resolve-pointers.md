@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Resolve pointers.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object | &rarr; | Object containing JSON pointers to resolve |
-| <&rarr; | Object with JSON pointers resolved (only if result is an object) |
-| options | Object | &rarr; | Options for pointer resolution |
-| Function result | Object | &larr; | Object containing the result of the processing |
+| object | Object | &#x1F852; | Object containing JSON pointers to resolve |
+| &#x1F858; | Object with JSON pointers resolved (only if result is an object) |
+| options | Object | &#x1F852; | Options for pointer resolution |
+| Function result | Object | &#x1F850; | Object containing the result of the processing |
 
 <!-- END REF-->
 
@@ -26,7 +26,7 @@ JSON pointers are particularily useful to:
 * express a cyclic structure in JSON,
 * define a template object containing default properties stored in JSON.
 
-Pass in the *object* parameter an object containing JSON pointers to be resolved (for information on JSON pointer syntax, please refer to the [Defining JSON Pointers](/4Dv20R6/4D/20-R6/JSON-Resolve-pointers.301-6958664.en.html#3516585) paragraph below). 
+Pass in the *object* parameter an object containing JSON pointers to be resolved (for information on JSON pointer syntax, please refer to the *Defining JSON Pointers* paragraph below). 
 
 **Note:** The source *object* will be updated with the result of pointer resolution after the command is executed (except if the result is not an object, see below). If you want to keep an original version of *object*, you may consider using the [OB Copy](ob-copy.md) beforehand. 
 

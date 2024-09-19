@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.LDAP SEARCH ALL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| dnRootEntry | String | &rarr; | Distinguished Name of root entry where search is to start |
-| arrResult | Object array | <&rarr; | Result of the search |
-| filter | String | &rarr; | LDAP search filter |
-| scope | String | &rarr; | Scope of the search: "base" (default), "one", or "sub" |
-| attributes | Text array | &rarr; | Attribute(s) to fetch |
-| attributesAsArray | Boolean array | &rarr; | True = force attributes to be returned as array; false = force attributes to be returned as a simple variable |
+| dnRootEntry | String | &#x1F852; | Distinguished Name of root entry where search is to start |
+| arrResult | Object array | &#x1F858; | Result of the search |
+| filter | String | &#x1F852; | LDAP search filter |
+| scope | String | &#x1F852; | Scope of the search: "base" (default), "one", or "sub" |
+| attributes | Text array | &#x1F852; | Attribute(s) to fetch |
+| attributesAsArray | Boolean array | &#x1F852; | True = force attributes to be returned as array; false = force attributes to be returned as a simple variable |
 
 <!-- END REF-->
 

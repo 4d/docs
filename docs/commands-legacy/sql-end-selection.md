@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL End selection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &larr; | Result set boundaries reached |
+| Function result | Boolean | &#x1F850; | Result set boundaries reached |
 
 <!-- END REF-->
 

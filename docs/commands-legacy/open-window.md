@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.Open window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| left | Longint | &rarr; | Global left coordinate of window contents area |
-| top | Longint | &rarr; | Global top coordinate of window contents area |
-| right | Longint | &rarr; | Global right coordinate of window contents area, or -1 for using form default size |
-| bottom | Longint | &rarr; | Global bottom coordinate of window contents area, or -1 for using form default size |
-| type | Longint | &rarr; | Window type |
-| title | String | &rarr; | Title of window or "" for using default form title |
-| controlMenuBox | String | &rarr; | Method to call when the Control-menu box is double-clicked or the Close box is clicked |
-| Function result | WinRef | &larr; | Window reference number |
+| left | Longint | &#x1F852; | Global left coordinate of window contents area |
+| top | Longint | &#x1F852; | Global top coordinate of window contents area |
+| right | Longint | &#x1F852; | Global right coordinate of window contents area, or -1 for using form default size |
+| bottom | Longint | &#x1F852; | Global bottom coordinate of window contents area, or -1 for using form default size |
+| type | Longint | &#x1F852; | Window type |
+| title | String | &#x1F852; | Title of window or "" for using default form title |
+| controlMenuBox | String | &#x1F852; | Method to call when the Control-menu box is double-clicked or the Close box is clicked |
+| Function result | WinRef | &#x1F850; | Window reference number |
 
 <!-- END REF-->
 
@@ -55,7 +55,7 @@ If more than one window is open for a process, the last window opened is the act
 
 Forms are displayed inside an open window. Text from the [MESSAGE](message.md) command also appears in the window.
 
-**Open window** returns a WinRef type window reference, which can be used by window management commands (see the "[WinRef](/4Dv20R6/4D/20-R6/Managing-Windows.300-6958205.en.html#1203131)" section). 
+**Open window** returns a WinRef type window reference, which can be used by window management commands (see the "*WinRef*" section). 
 
 #### Example 1 
 

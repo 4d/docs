@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DIALOG.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table owning the form or If omitted: default table or use of project form |
-| form | String, Object | &rarr; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
-| formData | Object | &rarr; | Data to associate to the form |
-| * | Operator | &rarr; | Use the same process |
+| aTable | Table | &#x1F852; | Table owning the form or If omitted: default table or use of project form |
+| form | String, Object | &#x1F852; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
+| formData | Object | &#x1F852; | Data to associate to the form |
+| * | Operator | &#x1F852; | Use the same process |
 
 <!-- END REF-->
 
@@ -33,7 +33,7 @@ The **DIALOG** command can also be used instead of [ALERT](alert.md), [CONFIRM](
 In the *form* parameter, you can pass:
 
 * the name of a form (project form or table form) to use;
-* the path (in POSIX syntax) to a valid .json file containing a description of the form to use. See [Form file path](/4Dv20R6/4D/20-R6/Dynamic-Forms.300-7003255.en.html#3699744);
+* the path (in POSIX syntax) to a valid .json file containing a description of the form to use. See *Form file path*;
 * an object containing a description of the form to use.
 
 Optionally, you can pass parameter(s) to the *form* using the *formData* object. Any properties of the *formData* object will then be available from within the form context through the [Form](form.md) command. For example, if you pass an object containing {"version","12"} in *formData*, you will be able to get the value of the "version" property in the form by calling:

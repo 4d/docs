@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Create URL history menu.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| direction | Longint | &rarr; | 0 or omitted=List of previous URLs, 1=List of next URLs |
-| Function result | MenuRef | &larr; | Menu reference |
+| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| direction | Longint | &#x1F852; | 0 or omitted=List of previous URLs, 1=List of next URLs |
+| Function result | MenuRef | &#x1F850; | Menu reference |
 
 <!-- END REF-->
 
@@ -35,7 +35,7 @@ Once the menu has been generated, you can display it using the 4D [Dynamic pop u
 
 Call the [RELEASE MENU](release-menu.md) command to delete a URL history menu when it is no longer useful.
 
-**Compatibility Note:* As of 4D v19 R5, this command fills a menu with only the current URL for web areas using the [Windows system rendering engine](https://developer.4d.com/docs/FormObjects/webAreaOverview.html#web-rendering-engine).* 
+**Compatibility Note:* As of 4D v19 R5, this command fills a menu with only the current URL for web areas using the Windows system rendering engine.* 
 
 #### Example 
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET RECENT FONTS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fontsArray | Text array | &rarr; | Array of font names |
+| fontsArray | Text array | &#x1F852; | Array of font names |
 
 <!-- END REF-->
 

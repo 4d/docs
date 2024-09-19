@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.MOVE DOCUMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| srcPathname | String | &rarr; | Full pathname to existing document |
-| dstPathname | String | &rarr; | Destination pathname |
+| srcPathname | String | &#x1F852; | Full pathname to existing document |
+| dstPathname | String | &#x1F852; | Destination pathname |
 
 <!-- END REF-->
 

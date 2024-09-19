@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Active transaction.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &larr; | Returns False if the current transaction is suspended |
+| Function result | Boolean | &#x1F850; | Returns False if the current transaction is suspended |
 
 <!-- END REF-->
 

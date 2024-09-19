@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MENU ITEMS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Longint, MenuRef | &rarr; | Menu reference or Menu number |
-| menuTitlesArray | String array | <&rarr; | Array of menu titles |
-| menuRefsArray | String array | <&rarr; | Array of menu references |
+| menu | Longint, MenuRef | &#x1F852; | Menu reference or Menu number |
+| menuTitlesArray | String array | &#x1F858; | Array of menu titles |
+| menuRefsArray | String array | &#x1F858; | Array of menu references |
 
 <!-- END REF-->
 

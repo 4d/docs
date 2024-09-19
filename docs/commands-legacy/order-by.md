@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ORDER BY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to order selected records, or Default table, if omitted |
-| aField | Field | &rarr; | Field on which to set the order for each level |
-| > or < | Operator | &rarr; | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
-| * | Operator | &rarr; | Continue order flag |
+| aTable | Table | &#x1F852; | Table for which to order selected records, or Default table, if omitted |
+| aField | Field | &#x1F852; | Field on which to set the order for each level |
+| > or < | Operator | &#x1F852; | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
+| * | Operator | &#x1F852; | Continue order flag |
 
 <!-- END REF-->
 

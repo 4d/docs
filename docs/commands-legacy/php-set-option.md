@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.PHP SET OPTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| option | Longint | &rarr; | Option to be set |
-| value | Boolean | &rarr; | New value of option |
-| * | Operator | &rarr; | If passed: modification only applied to next call |
+| option | Longint | &#x1F852; | Option to be set |
+| value | Boolean | &#x1F852; | New value of option |
+| * | Operator | &#x1F852; | If passed: modification only applied to next call |
 
 <!-- END REF-->
 

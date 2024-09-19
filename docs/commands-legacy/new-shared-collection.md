@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.New shared collection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| value | &rarr; | Shared collection's value(s) |
-| Function result | Collection | &larr; | New shared collection |
+| value | &#x1F852; | Shared collection's value(s) |
+| Function result | Collection | &#x1F850; | New shared collection |
 
 <!-- END REF-->
 
@@ -43,7 +43,7 @@ Optionally, you can prefill the new shared collection by passing one or several 
 
 **Note:** Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared. 
 
- (\*)When a shared object or collection is added to a shared collection, they share the same *locking identifier*. For more information on this point, refer to the [About the locking identifier (how shared groups work)](/4Dv20R6/4D/20-R6/Shared-objects-and-shared-collections.300-6957624.en.html#3648963) section.
+ (\*)When a shared object or collection is added to a shared collection, they share the same *locking identifier*. For more information on this point, refer to the *About the locking identifier (how shared groups work)* section.
 
 #### Example 
 

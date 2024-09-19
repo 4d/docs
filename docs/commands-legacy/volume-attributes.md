@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.VOLUME ATTRIBUTES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| volume | String | &rarr; | Volume name |
-| size | Real | <&rarr; | Volume size expressed in bytes |
-| used | Real | <&rarr; | Used space expressed in bytes |
-| free | Real | <&rarr; | Free space expressed in bytes |
+| volume | String | &#x1F852; | Volume name |
+| size | Real | &#x1F858; | Volume size expressed in bytes |
+| used | Real | &#x1F858; | Used space expressed in bytes |
+| free | Real | &#x1F858; | Free space expressed in bytes |
 
 <!-- END REF-->
 

@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Open form window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table of the form or Default table, if omitted |
-| formName | String, Object | &rarr; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
-| type | Longint | &rarr; | Window type |
-| hPos | Longint | &rarr; | Horizontal position of the window |
-| vPos | Longint | &rarr; | Vertical position of the window |
-| * | Operator | &rarr; | Save current position and size of the window |
-| Function result | WinRef | &larr; | Window reference number |
+| aTable | Table | &#x1F852; | Table of the form or Default table, if omitted |
+| formName | String, Object | &#x1F852; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
+| type | Longint | &#x1F852; | Window type |
+| hPos | Longint | &#x1F852; | Horizontal position of the window |
+| vPos | Longint | &#x1F852; | Vertical position of the window |
+| * | Operator | &#x1F852; | Save current position and size of the window |
+| Function result | WinRef | &#x1F850; | Window reference number |
 
 <!-- END REF-->
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 In the *formName* parameter, you can pass:
 
 * the name of a form (project form or table form) to use;
-* the path (in POSIX syntax) to a valid .json file containing a description of the form to use. See [Form file path](/4Dv20R6/4D/20-R6/Dynamic-Forms.300-7003255.en.html#3699744);
+* the path (in POSIX syntax) to a valid .json file containing a description of the form to use. See *Form file path*;
 * an object containing a description of the form to use.
 
 The *formName* is not displayed in the window. If you want to display the form, you have to call a command which loads a form ([ADD RECORD](add-record.md) for example).

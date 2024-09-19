@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM SET XML DECLARATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | String | &rarr; | XML element reference |
-| encoding | String | &rarr; | XML document character set |
-| standalone | Boolean | &rarr; | True = document is standalone False (default) = document is not standalone |
-| indentation | Boolean | &rarr; | *** Obsolete, do not use *** |
+| elementRef | String | &#x1F852; | XML element reference |
+| encoding | String | &#x1F852; | XML document character set |
+| standalone | Boolean | &#x1F852; | True = document is standalone False (default) = document is not standalone |
+| indentation | Boolean | &#x1F852; | *** Obsolete, do not use *** |
 
 <!-- END REF-->
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM SET XML DECLARATION.Summary-->The **DOM SET XML DECLARATION** command allows you to define various options that are useful in creating the XML tree set using *elementRef*.<!-- END REF--> These options concern the encoding and the standalone property of the tree:
 
 * *encoding*: Indicates the character set used in the document. By default (if the command is not called), the UTF-8 character set (compressed Unicode) is used.  
-**Note:** If you pass a character set that is not supported by 4D XML commands, UTF-8 will be used. Refer to [Character Sets](/4Dv20R6/4D/20-R6/Overview-of-XML-DOM-Commands.300-6957756.en.html#39695) to see the list of character sets supported (UTF-8 is however recommended in most cases).
+**Note:** If you pass a character set that is not supported by 4D XML commands, UTF-8 will be used. Refer to *Character Sets* to see the list of character sets supported (UTF-8 is however recommended in most cases).
 * *standalone*: Indicates whether the tree is standalone (**True**) or if it needs other files or external resources to operate (**False**). By default (if the command is not called or if the parameter is omitted), the tree is not standalone.
 **Compatibility note:** The *indentation* parameter is kept for reasons of compatibility with previous versions of 4D but its use is not recommended in 4D v12\. From now on, to specify the indentation of the document, it is strongly recommended to use the [XML SET OPTIONS](xml-set-options.md) command.
 

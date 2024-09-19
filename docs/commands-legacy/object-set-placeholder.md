@@ -9,11 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET PLACEHOLDER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)
-If omitted, object is a field or variable |
-| object | Form object | &rarr; | Object name (if * is specified) or 
-Field or variable (if * is omitted) |
-| placeholderText | Text | &rarr; | Placeholder text associated with object |
+| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| placeholderText | Text | &#x1F852; | Placeholder text associated with object |
 
 <!-- END REF-->
 

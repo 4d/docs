@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Int.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &rarr; | Number whose integer portion is returned |
-| Function result | Real | &larr; | Integer portion of number |
+| number | Real | &#x1F852; | Number whose integer portion is returned |
+| Function result | Real | &#x1F850; | Integer portion of number |
 
 <!-- END REF-->
 

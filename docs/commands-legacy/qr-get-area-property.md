@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get area property.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Longint | &rarr; | Reference of the area |
-| property | Longint | &rarr; | Interface element designated |
-| Function result | Longint | &larr; | 1 = displayed, 0 = hidden |
+| area | Longint | &#x1F852; | Reference of the area |
+| property | Longint | &#x1F852; | Interface element designated |
+| Function result | Longint | &#x1F850; | 1 = displayed, 0 = hidden |
 
 <!-- END REF-->
 

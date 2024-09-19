@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE METADATA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture | &rarr; | Picture whose metadata you want to get |
-| metaName | Text | &rarr; | Name or path of block to get |
-| metaContents | Variable | <&rarr; | Metadata contents |
+| picture | Picture | &#x1F852; | Picture whose metadata you want to get |
+| metaName | Text | &#x1F852; | Name or path of block to get |
+| metaContents | Variable | &#x1F858; | Metadata contents |
 
 <!-- END REF-->
 

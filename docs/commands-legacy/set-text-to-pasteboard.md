@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| text | String | &rarr; | Text to be put into the pasteboard |
+| text | String | &#x1F852; | Text to be put into the pasteboard |
 
 <!-- END REF-->
 

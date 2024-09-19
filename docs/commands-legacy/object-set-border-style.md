@@ -9,11 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET BORDER STYLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)
-If omitted, object is a field or variable |
-| object | Form object | &rarr; | Object name (if * is specified) or
-Field or variable (if * is omitted) |
-| borderStyle | Longint | &rarr; | Border line style |
+| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| borderStyle | Longint | &#x1F852; | Border line style |
 
 <!-- END REF-->
 
@@ -21,7 +19,7 @@ Field or variable (if * is omitted) |
 
 <!--REF #_command_.OBJECT SET BORDER STYLE.Summary-->The **OBJECT SET BORDER STYLE** command modifies the border line style of the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
 
-The "Border Line Style" property modifies the appearance of the object outlines. For more information, refer to [Border Line Style](/4Dv20R6/4D/20-R6/Setting-object-display-properties.300-7003258.en.html#945967) in the *Design Reference* manual. 
+The "Border Line Style" property modifies the appearance of the object outlines. For more information, refer to *Border Line Style* in the *Design Reference* manual. 
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
 

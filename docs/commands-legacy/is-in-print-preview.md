@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is in print preview.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &larr; | True = Print preview,False = No print preview |
+| Function result | Boolean | &#x1F850; | True = Print preview,False = No print preview |
 
 <!-- END REF-->
 

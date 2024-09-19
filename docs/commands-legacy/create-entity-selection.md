@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Create entity selection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| dsTable | Table | &rarr; | Table in the 4D database whose current selection will be used to build the entity selection |
-| settings | Object | &rarr; | Build option: context |
-| Function result | EntitySelection | &larr; | Entity selection matching the dataclass related to the given table |
+| dsTable | Table | &#x1F852; | Table in the 4D database whose current selection will be used to build the entity selection |
+| settings | Object | &#x1F852; | Build option: context |
+| Function result | EntitySelection | &#x1F850; | Entity selection matching the dataclass related to the given table |
 
 <!-- END REF-->
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 **Documentation moved**
 
-The documentation for this command has been moved. Visit [developer.4d.com](https://developer.4d.com/docs/API/EntitySelectionClass.html#create-entity-selection) for updated documentation.
+The documentation for this command has been moved. Visit *developer.4d.com* for updated documentation.
 
 The **Create entity selection** command builds and returns a new, alterable entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table.
 

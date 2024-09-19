@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Formula from string.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| formulaString | Text | &rarr; | Text formula to be returned as object |
-| function result | Object | &larr; | Function object containing the formula |
+| formulaString | Text | &#x1F852; | Text formula to be returned as object |
+| function result | Object | &#x1F850; | Function object containing the formula |
 
 <!-- END REF-->
 

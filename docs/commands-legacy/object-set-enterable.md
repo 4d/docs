@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET ENTERABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
-| object | Form object | &rarr; | Object Name (if * is specified), or Table or Field or Variable (if * is omitted) |
-| enterable | Boolean, Longint | &rarr; | Boolean: True=enterable, False=non-enterableLongint: 0=not enterable, 1=enterable, 2=not enterable not focusable |
+| * | Operator | &#x1F852; | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
+| object | Form object | &#x1F852; | Object Name (if * is specified), or Table or Field or Variable (if * is omitted) |
+| enterable | Boolean, Longint | &#x1F852; | Boolean: True=enterable, False=non-enterableLongint: 0=not enterable, 1=enterable, 2=not enterable not focusable |
 
 <!-- END REF-->
 
@@ -29,7 +29,7 @@ You can pass either a boolean value or a Longint value in *enterable*:
 When *enterable* is False:  
    * in binary databases, the user cannot enter data and the *focusable* attribute depends on the **Focusable** option set in the Property list.  
    * in projects, the user cannot enter data and the object is focusable.
-* Longint - passing a longint value in *enterable* allows you to control also the [**focusable**](https://developer.4d.com/docs/FormObjects/propertiesEntry.html#focusable) property for **Inputs** and **4D Write Pro areas**. You can use one of the following constants:  
+* Longint - passing a longint value in *enterable* allows you to control also the *focusable* property for **Inputs** and **4D Write Pro areas**. You can use one of the following constants:  
 | Constant                        | Value | Comment                                                                                                                                                                |  
 | ------------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | obk enterable                   | 1     | Users can enter values in the object and the object is focusable.                                                                                                      |  
@@ -43,7 +43,7 @@ The **OBJECT SET ENTERABLE** command can also be used to enable the “Enter in 
 
 Making an object non-enterable does not prevent you from changing its value programmatically.
 
-**Note:** To make a list box cell non-enterable, you pass the value -1 to $0 in the On Before Data Entry event, see [Managing entry](/4Dv20R6/4D/20-R6/Managing-List-Box-Objects.300-6958138.en.html#848345).
+**Note:** To make a list box cell non-enterable, you pass the value -1 to $0 in the On Before Data Entry event, see *Managing entry*.
 
 #### Example 1 
 

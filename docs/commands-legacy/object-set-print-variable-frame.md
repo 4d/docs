@@ -9,12 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)
-If omitted, object is a field or variable |
-| object | Form object | &rarr; | Object name (if * is specified) or 
-Field or variable (if * is omitted) |
-| variableFrame | Boolean | &rarr; | True = Variable frame printing, False = Fixed frame printing |
-| fixedSubform | Longint | &rarr; | Options for printing subforms in fixed size |
+| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| variableFrame | Boolean | &#x1F852; | True = Variable frame printing, False = Fixed frame printing |
+| fixedSubform | Longint | &#x1F852; | Options for printing subforms in fixed size |
 
 <!-- END REF-->
 
@@ -26,7 +24,7 @@ This property is available for the following objects:
 
 * Text or Picture type variables and fields (see *Print Variable Frame* in the *Design Reference* manual)
 * 4D Write Pro areas (see *Using a 4D Write Pro area* in the 4D Write Pro reference manual).
-* Subforms. Subforms have an additional option for fixed size printing (see [Subform Printing](/4Dv20R6/4D/20-R6/List-subforms.300-7003339.en.html#430316) in the *Design Reference* manual); the command can be used to configure this option using the *fixedSubform* parameter.
+* Subforms. Subforms have an additional option for fixed size printing (see *Subform Printing* in the *Design Reference* manual); the command can be used to configure this option using the *fixedSubform* parameter.
 
 If you apply this command to an object that does not support this property, the command does nothing. 
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get last table number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &larr; | Highest table number in the database |
+| Function result | Longint | &#x1F850; | Highest table number in the database |
 
 <!-- END REF-->
 

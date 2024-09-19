@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET GROUP PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| groupID | Longint | &rarr; | Unique group ID number |
-| name | String | <&rarr; | Name of the group |
-| owner | Longint | <&rarr; | User ID number of group owner (Binary databases only) |
-| members | Longint array | <&rarr; | Group members |
+| groupID | Longint | &#x1F852; | Unique group ID number |
+| name | String | &#x1F858; | Name of the group |
+| owner | Longint | &#x1F858; | User ID number of group owner (Binary databases only) |
+| members | Longint array | &#x1F858; | Group members |
 
 <!-- END REF-->
 
@@ -28,7 +28,7 @@ After the call, you retrieve the name of the group in the *name* parameter.
 
 If you pass the optional *members* parameter, the unique ID numbers of the users and groups belonging to the group are returned. 
 
-**Note for binary databases:** Group and user ID values depend on their creator (Designer, Administrator, or affiliated group owner). For more information, please refer to the [User and group ID ranges](/4Dv20R6/4D/20-R6/Designer-and-Administrator.300-7003454.en.html#4607697) paragraph.
+**Note for binary databases:** Group and user ID values depend on their creator (Designer, Administrator, or affiliated group owner). For more information, please refer to the *User and group ID ranges* paragraph.
 
 #### Error management 
 

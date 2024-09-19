@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET PROPERTY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string). If omitted, object is a variable. |
-| object | Form object | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| property | Longint | &rarr; | List box or column property |
-| value | Longint, String | &rarr; | Value of property |
+| * | Operator | &#x1F852; | If specified, object is an object name (string). If omitted, object is a variable. |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| property | Longint | &#x1F852; | List box or column property |
+| value | Longint, String | &#x1F852; | Value of property |
 
 <!-- END REF-->
 

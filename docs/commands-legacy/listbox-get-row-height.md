@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get row height.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| row | Longint | &rarr; | List box row whose height you want to get |
-| Function result | Integer | &larr; | Row height |
+| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| row | Longint | &#x1F852; | List box row whose height you want to get |
+| Function result | Integer | &#x1F850; | Row height |
 
 <!-- END REF-->
 
@@ -27,7 +27,7 @@ If the specified *row* does not exist in the list box, the command returns 0 (ze
 The returned height value is expressed:
 
 * in the current unit defined globally for the list box rows either in the Property list or by a prior call to the [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) command when the row height is fixed,
-* in pixels when the row height is variable, i.e. set to automatic (see [Automatic Row Height](/4Dv20R6/4D/20-R6/List-box-column-specific-properties.300-7003336.en.html#6127001)) or handled by an array.
+* in pixels when the row height is variable, i.e. set to automatic (see *Automatic Row Height*) or handled by an array.
 
 #### See also 
 

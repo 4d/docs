@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.HIGHLIGHT RECORDS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table where records will be highlighted If omitted, table of current form |
-| setName | String | &rarr; | Set of records to highlight or Userset if omitted |
-| * | Operator | &rarr; | Disable the automatic scroll of the list |
+| aTable | Table | &#x1F852; | Table where records will be highlighted If omitted, table of current form |
+| setName | String | &#x1F852; | Set of records to highlight or Userset if omitted |
+| * | Operator | &#x1F852; | Disable the automatic scroll of the list |
 
 <!-- END REF-->
 

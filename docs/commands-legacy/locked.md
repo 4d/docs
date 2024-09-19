@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Locked.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table to check for locked current record, or Default table, if omitted |
-| Function result | Boolean | &larr; | Record is locked (TRUE), or Record is unlocked (FALSE) |
+| aTable | Table | &#x1F852; | Table to check for locked current record, or Default table, if omitted |
+| Function result | Boolean | &#x1F850; | Record is locked (TRUE), or Record is unlocked (FALSE) |
 
 <!-- END REF-->
 

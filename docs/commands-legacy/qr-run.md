@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QR RUN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Longint | &rarr; | Reference of the area to execute |
+| area | Longint | &#x1F852; | Reference of the area to execute |
 
 <!-- END REF-->
 

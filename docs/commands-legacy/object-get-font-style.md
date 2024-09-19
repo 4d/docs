@@ -9,11 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get font style.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)
-If omitted, object is a variable or a field |
-| object | Form object | &rarr; | Object name (if * is specified) or 
-Variable or field (if * is omitted) |
-| Function result | Longint | &larr; | Font style |
+| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
+| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
+| Function result | Longint | &#x1F850; | Font style |
 
 <!-- END REF-->
 

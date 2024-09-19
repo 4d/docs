@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Outside call.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &larr; | True if the execution cycle is an outside call |
+| Function result | Boolean | &#x1F850; | True if the execution cycle is an outside call |
 
 <!-- END REF-->
 

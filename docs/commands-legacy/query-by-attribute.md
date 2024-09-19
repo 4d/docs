@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY BY ATTRIBUTE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to return a selection of records, or Default table if omitted |
-| conjOp | Operator | &rarr; | Conjunction operator to use to join multiple queries (if any) |
-| objectField | Field | &rarr; | Object field to query attributes |
-| attributePath | String | &rarr; | Name or path of attribute |
-| queryOp | String, Operator | &rarr; | Query operator (comparator) |
-| value | Text, Number, Date, Time | &rarr; | Value to compare |
-| * | Operator | &rarr; | Continue query flag |
+| aTable | Table | &#x1F852; | Table for which to return a selection of records, or Default table if omitted |
+| conjOp | Operator | &#x1F852; | Conjunction operator to use to join multiple queries (if any) |
+| objectField | Field | &#x1F852; | Object field to query attributes |
+| attributePath | String | &#x1F852; | Name or path of attribute |
+| queryOp | String, Operator | &#x1F852; | Query operator (comparator) |
+| value | Text, Number, Date, Time | &#x1F852; | Value to compare |
+| * | Operator | &#x1F852; | Continue query flag |
 
 <!-- END REF-->
 
@@ -37,13 +37,13 @@ The *conjOp* parameter is not used for the first **QUERY BY ATTRIBUTE** call of 
 
  In *objectField*, pass the Object field whose attribute(s) you want to query. It can come from another table if it is table 1 of a table linked to *aTable* by an automatic or manual link. **QUERY BY ATTRIBUTE** supports 4D Write Pro custom attributes when documents are stored in Object fields. For more information about this point, please refer to the *Storing 4D Write Pro documents in 4D Object fields* section.
 
-In *attributePath*, pass the path of the attribute whose values you want to compare for each record, for example "children.girls.age". If you pass a single name, for example "place", you designate the corresponding attribute found at the first level of the object field. If an attribute "x" is an array, **QUERY BY ATTRIBUTE** will search records which contain an attribute "x" in which at least one element matches the criteria. To search in array attributes, it is necessary to indicate to the **QUERY BY ATTRIBUTE** command that attribute "x" is an array by appending "\[\]" to its name in *attributePath* (see example 3). You can add a letter in the brackets (i.e. "\[b\]") to link arguments (see the [Linking array attribute query arguments](/4Dv20R6/4D/20-R6/QUERY-BY-ATTRIBUTE.301-6958094.en.html#3181657) paragraph below).
+In *attributePath*, pass the path of the attribute whose values you want to compare for each record, for example "children.girls.age". If you pass a single name, for example "place", you designate the corresponding attribute found at the first level of the object field. If an attribute "x" is an array, **QUERY BY ATTRIBUTE** will search records which contain an attribute "x" in which at least one element matches the criteria. To search in array attributes, it is necessary to indicate to the **QUERY BY ATTRIBUTE** command that attribute "x" is an array by appending "\[\]" to its name in *attributePath* (see example 3). You can add a letter in the brackets (i.e. "\[b\]") to link arguments (see the *Linking array attribute query arguments* paragraph below).
 
 **Notes:** 
 
 * Keep in mind that attribute names are case-sensitive: you can have different "MyAtt" and "myAtt" attribute names in the same record.
 * Attribute names are trimmed to eliminate extra spaces. For example, " my first attribute .my second attribute " is interpreted as "my first attribute.my second attribute".
-* You cannot query on attributes whose name contains special characters such as "." or "\[ \]", because they will be incorrectly evaluated as tokens in the query string. For more information, please refer to the [Object property identifiers](/4Dv20R6/4D/20-R6/Using-object-notation.300-6957621.en.html#3305214) paragraph.
+* You cannot query on attributes whose name contains special characters such as "." or "\[ \]", because they will be incorrectly evaluated as tokens in the query string. For more information, please refer to the *Object property identifiers* paragraph.
 
 The *queryOp* parameter is the comparison operator that is applied between *objectField* and *value*. You can pass one of the symbols shown here:
 

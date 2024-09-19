@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| list | ListRef | &rarr; | List reference number |
-| * | &rarr; | If specified, clear sublists from memory, if any. If omitted, sublists (if any) are not cleared. |
+| list | ListRef | &#x1F852; | List reference number |
+| * | &#x1F852; | If specified, clear sublists from memory, if any. If omitted, sublists (if any) are not cleared. |
 
 <!-- END REF-->
 

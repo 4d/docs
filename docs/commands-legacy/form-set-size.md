@@ -9,11 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SET SIZE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | String | &rarr; | Object name indicating form limits |
-| horizontal | Longint | &rarr; | If * passed: horizontal margin (pixels)If * omitted: width (pixels) |
-| vertical | Longint | &rarr; | If * passed: vertical margin (pixels)If * omitted: height (pixels) |
-| * | Operator | &rarr; | • If passed, use horizontal and vertical as form margins• If omitted, use horizontal and vertical as width and height of the form
-This parameter cannot be passed if the object parameter is passed. |
+| object | String | &#x1F852; | Object name indicating form limits |
+| horizontal | Longint | &#x1F852; | If * passed: horizontal margin (pixels)If * omitted: width (pixels) |
+| vertical | Longint | &#x1F852; | If * passed: vertical margin (pixels)If * omitted: height (pixels) |
+| * | Operator | &#x1F852; | • If passed, use horizontal and vertical as form margins• If omitted, use horizontal and vertical as width and height of the form<br/>This parameter cannot be passed if the object parameter is passed. |
 
 <!-- END REF-->
 

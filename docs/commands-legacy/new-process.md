@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.New process.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| method | String | &rarr; | Method to be executed within the process |
-| stack | Longint | &rarr; | Stack size in bytes |
-| name | String | &rarr; | Name of the process created |
-| param | Expression | &rarr; | Parameter(s) to the method |
-| * | Operator | &rarr; | Unique process |
-| Function result | Longint | &larr; | Process number for newly created process or already executing process |
+| method | String | &#x1F852; | Method to be executed within the process |
+| stack | Longint | &#x1F852; | Stack size in bytes |
+| name | String | &#x1F852; | Name of the process created |
+| param | Expression | &#x1F852; | Parameter(s) to the method |
+| * | Operator | &#x1F852; | Unique process |
+| Function result | Longint | &#x1F850; | Process number for newly created process or already executing process |
 
 <!-- END REF-->
 
@@ -43,7 +43,7 @@ The *stack* parameter allows you to indicate the amount of memory allocated for 
 
  You pass the name of the new process in *name*. This name will appear in the list of processes of the Runtime Explorer and will be returned by the [PROCESS PROPERTIES](process-properties.md) command when applied to this new process. You can omit this parameter; if you do so, the name of the process will be the empty string. You can make a process local in scope by prefixing its name with the dollar sign (*$*). 
 
-**Important:** Remember that local processes should not access data in Client/Server. For more information, please refer to the [Global and Local Processes](/4Dv20R6/4D/20-R6/Processes.300-6957590.en.html#29138) section. 
+**Important:** Remember that local processes should not access data in Client/Server. For more information, please refer to the *Global and Local Processes* section. 
 
 ##### Parameters to Process Method 
 

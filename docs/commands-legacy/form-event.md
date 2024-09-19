@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM Event.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Object | &larr; | Event object |
+| Function result | Object | &#x1F850; | Event object |
 
 <!-- END REF-->
 

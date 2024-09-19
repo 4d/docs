@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SET OUTPUT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to set the output form, or Default table, if omitted |
-| form | String, Object | &rarr; | Name (string) of table form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
-| userForm | String | &rarr; | Name of user form to use |
+| aTable | Table | &#x1F852; | Table for which to set the output form, or Default table, if omitted |
+| form | String, Object | &#x1F852; | Name (string) of table form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
+| userForm | String | &#x1F852; | Name of user form to use |
 
 <!-- END REF-->
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 The *form* parameter is the form which will be displayed. Pass the:
 
 * the name of a form;
-* the path (in POSIX syntax) to a valid .json file containing a description of the form to use. See [Form file path](/4Dv20R6/4D/20-R6/Dynamic-Forms.300-7003255.en.html#3699744);
+* the path (in POSIX syntax) to a valid .json file containing a description of the form to use. See *Form file path*;
 * an object containing a description of the form.
 
 The scope of this command is the current process. Each table has its own output form in each process.

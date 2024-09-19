@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Current client authentication.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| domain | Text | <&rarr; | Domain name |
-| protocol | Text | <&rarr; | "Kerberos", "NTLM", or empty string |
-| Function result | Text | &larr; | Session user login returned by Windows |
+| domain | Text | &#x1F858; | Domain name |
+| protocol | Text | &#x1F858; | "Kerberos", "NTLM", or empty string |
+| Function result | Text | &#x1F850; | Session user login returned by Windows |
 
 <!-- END REF-->
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 This command can only be used in the context of an SSO implementation on Windows with 4D Server. For more information, please refer to the *Single Sign On (SSO) on Windows* section.
 
-Usually, both the client and the server must be managed by the same Active Directory. However, different configurations can be supported, as described in the [Requirements for SSO](/4Dv20R6/4D/20-R6/Single-Sign-On-SSO-on-Windows.300-7182855.en.html#2949178) section. 
+Usually, both the client and the server must be managed by the same Active Directory. However, different configurations can be supported, as described in the *Requirements for SSO* section. 
 
 The returned login string must be passed to your 4D identification module to grant access rights to the client based upon the Windows session login; if you managed to remove the 4D Server login dialog by setting a "Default user", you can implement an interface where the user does not need to reenter any IDs (see example). 
 

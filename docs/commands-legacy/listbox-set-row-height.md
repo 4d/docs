@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET ROW HEIGHT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| row | Longint | &rarr; | List box row whose height you want to set |
-| height | Longint | &rarr; | Height of list box row |
+| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| row | Longint | &#x1F852; | List box row whose height you want to set |
+| height | Longint | &#x1F852; | Height of list box row |
 
 <!-- END REF-->
 
@@ -26,7 +26,7 @@ If the specified *row* does not exist in the list box, the command does nothing.
 
 The unit used for the specified *height* corresponds to the one defined globally for the list box rows, either in the Property list or by a prior call to the [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) command.
 
-The **LISTBOX SET ROW HEIGHT** command modifies the row height array specified in the Property List, if any (for more information, please see the [Row Height Array](/4Dv20R6/4D/20-R6/List-box-specific-properties.300-7003332.en.html#3070590) section in the *Design Reference* manual); otherwise, its creates a row height array dynamically. Using this command to set individual row heights produces the exact same visual result as associating a row height array using the Property List; however, filling a row height array with values is much faster than calling this command in a loop to set row heights one by one for the list box.
+The **LISTBOX SET ROW HEIGHT** command modifies the row height array specified in the Property List, if any (for more information, please see the *Row Height Array* section in the *Design Reference* manual); otherwise, its creates a row height array dynamically. Using this command to set individual row heights produces the exact same visual result as associating a row height array using the Property List; however, filling a row height array with values is much faster than calling this command in a loop to set row heights one by one for the list box.
 
 **Important note:** If the global [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) command is called subsequently with a different unit than the one previously defined, the default value set by this command will replace and reinitialize any row heights set using **LISTBOX SET ROW HEIGHT** (see example 2).
 

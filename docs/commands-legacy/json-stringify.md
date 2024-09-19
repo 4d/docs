@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Stringify.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| value | Object, Mixed | &rarr; | Data to convert into JSON string |
-| * | Operator | &rarr; | Pretty printing |
-| Function result | Text | &larr; | String containing serialized JSON text |
+| value | Object, Mixed | &#x1F852; | Data to convert into JSON string |
+| * | Operator | &#x1F852; | Pretty printing |
+| Function result | Text | &#x1F850; | String containing serialized JSON text |
 
 <!-- END REF-->
 
@@ -23,7 +23,7 @@ Pass the data to be serialized in *value*. It can be expressed in scalar form (s
 
 **Note:** 4D dates will be converted either in "yyyy-mm-dd" or "YYYY-MM-DDThh:mm:sssZ" format according to the current database date setting (see the "Use date type instead of ISO date format in objects" option in the *Compatibility page*).
 
-In the case of an object or a collection, you can include all types of values (see the [JSON data types](/4Dv20R6/4D/20-R6/Overview-of-JSON-commands.300-6958662.en.html#1204273) paragraph), with respect to the following JSON rules:
+In the case of an object or a collection, you can include all types of values (see the *JSON data types* paragraph), with respect to the following JSON rules:
 
 * String values must be enclosed in quotes. All Unicode character can be used except for special characters that must be preceded by a backslash.
 * Numbers: interval of ±10.421e±10

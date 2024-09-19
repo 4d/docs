@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.On Server Open Connection database method.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| $1 | Longint | <&rarr; | User ID number used internally by 4D Server to identify users |
-| $2 | Longint | <&rarr; | Connection ID number used internally by 4D Server to identify a connection |
-| $3 | Longint | <&rarr; | Obsolete: Always returns 0 (but must be declared) |
-| $0 | Longint | &larr; | 0 or omitted = connection accepted; other value = connection refused |
+| $1 | Longint | &#x1F858; | User ID number used internally by 4D Server to identify users |
+| $2 | Longint | &#x1F858; | Connection ID number used internally by 4D Server to identify a connection |
+| $3 | Longint | &#x1F858; | Obsolete: Always returns 0 (but must be declared) |
+| $0 | Longint | &#x1F850; | 0 or omitted = connection accepted; other value = connection refused |
 
 <!-- END REF-->
 

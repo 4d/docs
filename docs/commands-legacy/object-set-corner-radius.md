@@ -9,10 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)
-If omitted, object is a variable or a field |
-| object | Form object | &rarr; | Object name (if * is specified) or Field or variable (if * is omitted) |
-| radius | Longint | &rarr; | New radius of rounded corners (in pixels) |
+| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Field or variable (if * is omitted) |
+| radius | Longint | &#x1F852; | New radius of rounded corners (in pixels) |
 
 <!-- END REF-->
 
@@ -32,7 +31,7 @@ In the *radius* parameter, you pass a new radius value in pixels to be applied t
 
 **Note**: With input and text area objects, the corner radius property is only available with "none", "solid", or "dotted" border line styles.
 
-You can modify this value at the form level using the [Corner radius property](https://developer.4d.com/docs/FormObjects/propertiesCoordinatesAndSizing.html#corner-radius) (see also [Corner radius (rectangles)](/4Dv20R6/4D/20-R6/Setting-object-display-properties.300-7003258.en.html#1717696)).
+You can modify this value at the form level using the *Corner radius property* (see also *Corner radius (rectangles)*).
 
 #### Example 1 
 

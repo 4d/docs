@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SELECT ROW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| rowPosition | Longint | &rarr; | Number of the row to select |
-| action | Longint | &rarr; | Selection action |
+| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| rowPosition | Longint | &#x1F852; | Number of the row to select |
+| action | Longint | &#x1F852; | Selection action |
 
 <!-- END REF-->
 
@@ -42,7 +42,7 @@ After execution of the method, the arrays are synchronized: if the source array 
 * If you want the list box to scroll automatically in order to display the row selected, use the [OBJECT SET SCROLL POSITION](object-set-scroll-position.md) command.
 * To switch a row into editing mode (to allow data entry), use the [EDIT ITEM](edit-item.md) command.
 * If the number passed in *position* corresponds to a hidden row in the list box, the row is selected but not displayed.
-* If you have checked the **Hide selection highlight** option for a list box, you will need to make list box selections visible using available interface options. For more information about how to do this, see [Customizing the appearance of selections](/4Dv20R6/4D/20-R6/Managing-List-Box-Objects.300-6958138.en.html#3186993).
+* If you have checked the **Hide selection highlight** option for a list box, you will need to make list box selections visible using available interface options. For more information about how to do this, see *Customizing the appearance of selections*.
 
 #### See also 
 

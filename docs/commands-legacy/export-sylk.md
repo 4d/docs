@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT SYLK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table from which to export data, or Default table, if omitted |
-| document | String | &rarr; | SYLK document to receive the data |
+| aTable | Table | &#x1F852; | Table from which to export data, or Default table, if omitted |
+| document | String | &#x1F852; | SYLK document to receive the data |
 
 <!-- END REF-->
 

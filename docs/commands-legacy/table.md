@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Table.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tableNum | aPtr | Longint, Pointer | &rarr; | Table number, or Table pointer, or Field pointer |
-| Function result | Longint, Pointer | &larr; | Table pointer, if a Table number is passedTable number, if a Table pointer is passedTable number, if a Field pointer is passed |
+| tableNum &#124; aPtr | Longint, Pointer | &#x1F852; | Table number, or Table pointer, or Field pointer |
+| Function result | Longint, Pointer | &#x1F850; | Table pointer, if a Table number is passedTable number, if a Table pointer is passedTable number, if a Field pointer is passed |
 
 <!-- END REF-->
 

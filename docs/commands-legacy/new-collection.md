@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.New collection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| value | Number, Text, Date, Object, Collection, Pointer | &rarr; | Collection's value(s) |
-| Function result | Collection | &larr; | New collection |
+| value | Number, Text, Date, Object, Collection, Pointer | &#x1F852; | Collection's value(s) |
+| Function result | Collection | &#x1F850; | New collection |
 
 <!-- END REF-->
 
@@ -77,7 +77,7 @@ You create a new collection and then add a new element:
   //$coll=["a","b","c",null,null,null,null,null,null,"z"]
 ```
 
-**Note:** This example requires that object notation is activated in the database (see [Object Notation](/4Dv20R6/4D/20-R6/Compatibility-page.300-7003469.en.html#3368899) paragraph).
+**Note:** This example requires that object notation is activated in the database (see *Object Notation* paragraph).
 
 #### See also 
 

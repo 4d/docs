@@ -9,12 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET LIST BY REFERENCE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)
-If omitted, object is a field or variable |
-| object | Form object | &rarr; | Object name (if * is specified) or
-Field or variable (if * is omitted) |
-| listType | Longint | &rarr; | Type of list: Choice list, Required list or Excluded list |
-| list | ListRef | &rarr; | List reference number |
+| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| listType | Longint | &#x1F852; | Type of list: Choice list, Required list or Excluded list |
+| list | ListRef | &#x1F852; | List reference number |
 
 <!-- END REF-->
 

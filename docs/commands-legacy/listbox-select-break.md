@@ -9,13 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SELECT BREAK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)
-If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or 
-Variable (if * is omitted) |
-| row | Longint | &rarr; | Number of break row |
-| column | Longint | &rarr; | Number of break column |
-| action | Longint | &rarr; | Selection action |
+| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| row | Longint | &#x1F852; | Number of break row |
+| column | Longint | &#x1F852; | Number of break column |
+| action | Longint | &#x1F852; | Selection action |
 
 <!-- END REF-->
 
@@ -37,8 +35,8 @@ The *action* parameter, if it is passed, can set the selection action to be carr
 
 **Note:** If you have checked the **Hide selection highlight** option for a list box:
 
-* you have to make list box selections visible using available interface options. For more information about how to do this, see [Customizing the appearance of selections](/4Dv20R6/4D/20-R6/Managing-List-Box-Objects.300-6958138.en.html#3186993).
-* you cannot highlight break rows for hierarchical list boxes in this case (see [Limitation with hierarchical list boxes](/4Dv20R6/4D/20-R6/Managing-List-Box-Objects.300-6958138.en.html#3187002)).
+* you have to make list box selections visible using available interface options. For more information about how to do this, see *Customizing the appearance of selections*.
+* you cannot highlight break rows for hierarchical list boxes in this case (see *Limitation with hierarchical list boxes*).
 
 #### Example 
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET DOCUMENT ICON.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| docPath | String | &rarr; | Name or path of document to get icon, or Empty string for standard Open File dialog box |
-| icon | Picture field, Picture variable | <&rarr; | Document icon |
-| size | Longint | &rarr; | Size of the returned picture (in pixels) |
+| docPath | String | &#x1F852; | Name or path of document to get icon, or Empty string for standard Open File dialog box |
+| icon | Picture field, Picture variable | &#x1F858; | Document icon |
+| size | Longint | &#x1F852; | Size of the returned picture (in pixels) |
 
 <!-- END REF-->
 

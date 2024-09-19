@@ -9,10 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET EVENTS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)
-If omitted, object is a field or variable |
-| object | Form object | &rarr; | Object name or "" to designate the form (if * is specified) orField or variable (if * is omitted) |
-| arrEvents | Longint array | <&rarr; | Array of enabled events |
+| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | Form object | &#x1F852; | Object name or "" to designate the form (if * is specified) orField or variable (if * is omitted) |
+| arrEvents | Longint array | &#x1F858; | Array of enabled events |
 
 <!-- END REF-->
 

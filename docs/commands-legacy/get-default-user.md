@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get default user.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &larr; | Unique user ID number |
+| Function result | Longint | &#x1F850; | Unique user ID number |
 
 <!-- END REF-->
 

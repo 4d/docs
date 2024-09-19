@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Trunc.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &rarr; | Number to be truncated |
-| places | Longint | &rarr; | Number of decimal places used for truncating |
-| Function result | Real | &larr; | Number with its decimal part truncated to the number of decimal places specified by Places |
+| number | Real | &#x1F852; | Number to be truncated |
+| places | Longint | &#x1F852; | Number of decimal places used for truncating |
+| Function result | Real | &#x1F850; | Number with its decimal part truncated to the number of decimal places specified by Places |
 
 <!-- END REF-->
 

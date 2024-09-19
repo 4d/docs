@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Compare strings.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aString | String | &rarr; | String to compare |
-| bString | String | &rarr; | String to compare |
-| options | Longint | &rarr; | Comparison rule(s) |
-| Function result | Longint | &larr; | Result of string comparison |
+| aString | String | &#x1F852; | String to compare |
+| bString | String | &#x1F852; | String to compare |
+| options | Longint | &#x1F852; | Comparison rule(s) |
+| Function result | Longint | &#x1F850; | Result of string comparison |
 
 <!-- END REF-->
 
@@ -24,7 +24,7 @@ In the *aString* parameter, pass a text value.
 
 In the *bString* parameter, pass a text value to be compared to *aString*. 
 
-By default, **Compare strings** functions as if the "<" (less than) operator is used. (See [String operators](https://developer.4d.com/docs/Concepts/string.html#string-operators)). This can be modified with the *options* parameter. You can pass one or a combination of the following constants from the *Strings* theme: 
+By default, **Compare strings** functions as if the "<" (less than) operator is used. (See *String operators*). This can be modified with the *options* parameter. You can pass one or a combination of the following constants from the *Strings* theme: 
 
 | Constant                 | Value | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------------------ | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Compact data file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| structurePath | Text | &rarr; | Pathname of structure file |
-| dataPath | Text | &rarr; | Pathname of data file to be compacted |
-| archiveFolder | Text | &rarr; | Pathname of folder where original data file will be put |
-| option | Longint | &rarr; | Compacting options |
-| method | Text | &rarr; | Name of 4D callback method |
-| Function result | Text | &larr; | Complete pathname of folder containing original data file |
+| structurePath | Text | &#x1F852; | Pathname of structure file |
+| dataPath | Text | &#x1F852; | Pathname of data file to be compacted |
+| archiveFolder | Text | &#x1F852; | Pathname of folder where original data file will be put |
+| option | Longint | &#x1F852; | Compacting options |
+| method | Text | &#x1F852; | Name of 4D callback method |
+| Function result | Text | &#x1F850; | Complete pathname of folder containing original data file |
 
 <!-- END REF-->
 

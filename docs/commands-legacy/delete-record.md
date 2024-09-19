@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table where the current record will be deleted, or Default table, if omitted |
+| aTable | Table | &#x1F852; | Table where the current record will be deleted, or Default table, if omitted |
 
 <!-- END REF-->
 

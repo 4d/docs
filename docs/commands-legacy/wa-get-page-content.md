@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Get page content.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| Function result | String | &larr; | HTML source code |
+| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| Function result | String | &#x1F850; | HTML source code |
 
 <!-- END REF-->
 

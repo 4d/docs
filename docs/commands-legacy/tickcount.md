@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Tickcount.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &larr; | Number of ticks (60th of a second) elapsed since the machine was started |
+| Function result | Longint | &#x1F850; | Number of ticks (60th of a second) elapsed since the machine was started |
 
 <!-- END REF-->
 

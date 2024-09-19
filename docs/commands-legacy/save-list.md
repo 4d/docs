@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAVE LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| list | ListRef | &rarr; | List reference number |
-| listName | String | &rarr; | Name of the list as it will appear in the Design environment List Editor |
+| list | ListRef | &#x1F852; | List reference number |
+| listName | String | &#x1F852; | Name of the list as it will appear in the Design environment List Editor |
 
 <!-- END REF-->
 

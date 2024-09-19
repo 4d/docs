@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.EDIT ITEM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If set, object is an object name (string) If omitted, object is a table or variable |
-| object | Form object | &rarr; | Object name (if * set) or Table or variable (if * omitted) |
-| item | Longint | &rarr; | Item number |
+| * | Operator | &#x1F852; | If set, object is an object name (string) If omitted, object is a table or variable |
+| object | Form object | &#x1F852; | Object name (if * set) or Table or variable (if * omitted) |
+| item | Longint | &#x1F852; | Item number |
 
 <!-- END REF-->
 

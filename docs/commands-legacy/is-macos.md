@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is macOS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &larr; | True if operating system = macOS, else False |
+| Function result | Boolean | &#x1F850; | True if operating system = macOS, else False |
 
 <!-- END REF-->
 

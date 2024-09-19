@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Find window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| left | Longint | &rarr; | Global left coordinate |
-| top | Longint | &rarr; | Global top coordinate |
-| windowPart | Longint | <&rarr; | 3 if window is "touched", 0 otherwise |
-| Function result | WinRef | &larr; | Window reference number |
+| left | Longint | &#x1F852; | Global left coordinate |
+| top | Longint | &#x1F852; | Global top coordinate |
+| windowPart | Longint | &#x1F858; | 3 if window is "touched", 0 otherwise |
+| Function result | WinRef | &#x1F850; | Window reference number |
 
 <!-- END REF-->
 

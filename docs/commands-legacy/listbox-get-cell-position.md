@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET CELL POSITION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| X | Real | &rarr; | Horizontal coordinate of mouse |
-| Y | Real | &rarr; | Vertical coordinate of mouse |
-| column | Longint | <&rarr; | Column number |
-| row | Longint | <&rarr; | Row number |
-| colVar | Pointer | <&rarr; | Pointer to column variable |
+| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| X | Real | &#x1F852; | Horizontal coordinate of mouse |
+| Y | Real | &#x1F852; | Vertical coordinate of mouse |
+| column | Longint | &#x1F858; | Column number |
+| row | Longint | &#x1F858; | Row number |
+| colVar | Pointer | &#x1F858; | Pointer to column variable |
 
 <!-- END REF-->
 
@@ -30,8 +30,8 @@ If the *X* and *Y* parameters are passed, this command returns the column and ro
 **Notes:** 
 
 * The value returned in the *row* parameter does not take into account any hidden/displayed states of list box rows. It may also return a value of 0 if the click or *Y* position is below the last row.
-* If a cell in a fake column is clicked or corresponds to the *X* position, the *column* parameter returns "N+1", where N is the number of existing columns. A fake column can be added automatically when the "Column Auto-Resizing" option is selected; for more information refer to the [Resizing Options theme](/4Dv20R6/4D/20-R6/List-box-specific-properties.300-7003332.en.html#3049992) paragraph.
-* In a hierachical list box, the *column* value takes into account the column(s) merged to represent the hierarchy, as explained in the [Management of selections and positions](/4Dv20R6/4D/20-R6/Hierarchical-list-boxes.300-7003329.en.html#178303) paragraph.
+* If a cell in a fake column is clicked or corresponds to the *X* position, the *column* parameter returns "N+1", where N is the number of existing columns. A fake column can be added automatically when the "Column Auto-Resizing" option is selected; for more information refer to the *Resizing Options theme* paragraph.
+* In a hierachical list box, the *column* value takes into account the column(s) merged to represent the hierarchy, as explained in the *Management of selections and positions* paragraph.
 
 The optional *colVar* parameter returns a pointer to the variable (*i.e.* array) associated with the column.
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR VARIABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| variable | Variable | &rarr; | Variable to clear |
+| variable | Variable | &#x1F852; | Variable to clear |
 
 <!-- END REF-->
 
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLEAR VARIABLE.Summary-->CLEAR VARIABLE resets *variable* to its default type value (*i.<!-- END REF-->e.*, empty string for Text variables, *0* for numeric variables, no elements for arrays, etc.). The variable still exists in memory. 
 
-**Note:** For more information on default type values, please refer to the [Default values](/4Dv20R6/4D/20-R6/Using-Compiler-Directives.300-6958560.en.html#4619397) paragraph.
+**Note:** For more information on default type values, please refer to the *Default values* paragraph.
 
 The variable you pass in *variable* can be a local, process or interprocess variable.
 

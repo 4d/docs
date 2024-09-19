@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CALL WORKER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Text, Longint | &rarr; | Name or number of worker process |
-| formula | Object, Text | &rarr; | Formula object or Name of project method |
-| param | Expression | &rarr; | Parameter(s) passed to formula |
+| process | Text, Longint | &#x1F852; | Name or number of worker process |
+| formula | Object, Text | &#x1F852; | Formula object or Name of project method |
+| param | Expression | &#x1F852; | Parameter(s) passed to formula |
 
 <!-- END REF-->
 
@@ -32,7 +32,7 @@ The worker process appears in the list of processes of the Runtime Explorer and 
 
 In *formula*, you designate the 4D code to execute in the context of the worker process. You can pass either:
 
-* a **formula object** (see [Formula Objects](https://doc4d.github.io/docs/en/API/FunctionClass.html#formula-objects)). Formula objects can encapsulate any executable expressions, including functions and project methods;
+* a **formula object** (see *Formula Objects*). Formula objects can encapsulate any executable expressions, including functions and project methods;
 * a **string** containing the name of a project method. You can pass an empty string; in this case, the worker executes the method that was originally used to start its process, if any (i.e., the startup method of the worker).  
 **Note:** It is not possible to pass an empty string in *formula* when the command calls the main process (process number 1) since it was not started using a project method. As a result, **CALL WORKER* (1;"")* does nothing.
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to delete the current selection, or Default table, if omitted |
+| aTable | Table | &#x1F852; | Table for which to delete the current selection, or Default table, if omitted |
 
 <!-- END REF-->
 
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 **Warning:** Deleting a selection of records is a permanent operation, and cannot be undone.
 
-Unchecking the **Records definitively deleted** option in the table Inspector allows you to increase the speed of deletions when **DELETE SELECTION** is used (see [Records definitively deleted](/4Dv20R6/4D/20-R6/Table-properties.300-7003400.en.html#107236) in the *Design Reference* manual).
+Unchecking the **Records definitively deleted** option in the table Inspector allows you to increase the speed of deletions when **DELETE SELECTION** is used (see *Records definitively deleted* in the *Design Reference* manual).
 
 #### Example 1 
 

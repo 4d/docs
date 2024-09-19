@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP Request.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| httpMethod | Text | &rarr; | HTTP method for request |
-| url | Text | &rarr; | URL to which to send the request |
-| contents | Text, BLOB, Picture, Object | &rarr; | Contents of request body |
-| response | Text, BLOB, Picture, Object | <&rarr; | Result of request |
-| headerNames | Text array | &rarr; | Header names of the request |
-| <&rarr; | Returned header names |
-| headerValues | Text array | &rarr; | Header values of the request |
-| <&rarr; | Returned header values |
-| * | Operator | &rarr; | If passed, connection is maintained (keep-alive)If omitted, connection is closed automatically |
-| Function result | Longint | &larr; | HTTP status code |
+| httpMethod | Text | &#x1F852; | HTTP method for request |
+| url | Text | &#x1F852; | URL to which to send the request |
+| contents | Text, BLOB, Picture, Object | &#x1F852; | Contents of request body |
+| response | Text, BLOB, Picture, Object | &#x1F858; | Result of request |
+| headerNames | Text array | &#x1F852; | Header names of the request |
+| &#x1F858; | Returned header names |
+| headerValues | Text array | &#x1F852; | Header values of the request |
+| &#x1F858; | Returned header values |
+| * | Operator | &#x1F852; | If passed, connection is maintained (keep-alive)If omitted, connection is closed automatically |
+| Function result | Longint | &#x1F850; | HTTP status code |
 
 <!-- END REF-->
 
@@ -71,7 +71,7 @@ You can pass different types of variables in *response*:
 
 **Note:** When a text variable is passed in *response*, 4D will try to decode the data returned from the server. 4D first tries to retrieve the charset from the *content-type* header, then from the content using a BOM, and finally looks for any *http-equiv charset* (in html content) or *encoding* (for xml) attribute. If no charset can be detected, 4D will attempt to decode the response in ANSI. If the conversion fails, the resulting text will be empty. If you are unsure whether the server returns a charset information or a BOM, but you know the encoding, it is more accurate to pass *response* in BLOB and call [Convert to text](convert-to-text.md).
 
-When you pass an object type variable in the *response* parameter, if the request returns a result with a text content-type, 4D attempts to parse the content as JSON and returns the parsed result as an object. Otherwise, a [4D.Blob](https://developer.4d.com/docs/Concepts/blob.html#blob-types) object is returned.
+When you pass an object type variable in the *response* parameter, if the request returns a result with a text content-type, 4D attempts to parse the content as JSON and returns the parsed result as an object. Otherwise, a *4D.Blob* object is returned.
 
 If the result returned by the server does not correspond to the *response* variable type, it is left blank.
 

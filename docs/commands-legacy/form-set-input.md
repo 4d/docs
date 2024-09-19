@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SET INPUT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to set the input form, or Default table, if omitted |
-| form | String, Object | &rarr; | Name (string) of table form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
-| userForm | String | &rarr; | Name of user form to use |
-| * | &rarr; | Automatic window size |
+| aTable | Table | &#x1F852; | Table for which to set the input form, or Default table, if omitted |
+| form | String, Object | &#x1F852; | Name (string) of table form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
+| userForm | String | &#x1F852; | Name of user form to use |
+| * | &#x1F852; | Automatic window size |
 
 <!-- END REF-->
 
@@ -25,7 +25,7 @@ The scope of this command is the current process. Each table has its own input f
 In the *form* parameter, you can pass:
 
 * the name of a form;
-* the path (in POSIX syntax) to a valid .json file containing a description of the form to use. See [Form file path](/4Dv20R6/4D/20-R6/Dynamic-Forms.300-7003255.en.html#3699744);
+* the path (in POSIX syntax) to a valid .json file containing a description of the form to use. See *Form file path*;
 * an object containing a description of the form.
 
 **Note:** For structural reasons, this command is not compatible with project forms.  

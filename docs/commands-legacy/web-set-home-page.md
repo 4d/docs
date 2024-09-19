@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SET HOME PAGE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| homePage | String | &rarr; | Page name or HTML access path to the page or "" to not send the custom home page |
+| homePage | String | &#x1F852; | Page name or HTML access path to the page or "" to not send the custom home page |
 
 <!-- END REF-->
 

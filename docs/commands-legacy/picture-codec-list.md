@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.PICTURE CODEC LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| codecArray | String array | <&rarr; | IDs of available picture Codecs |
-| namesArray | String array | <&rarr; | Names of picture Codecs |
-| * | Operator | &rarr; | Return list of reading (decoding) Codecs |
+| codecArray | String array | &#x1F858; | IDs of available picture Codecs |
+| namesArray | String array | &#x1F858; | Names of picture Codecs |
+| * | Operator | &#x1F852; | Return list of reading (decoding) Codecs |
 
 <!-- END REF-->
 

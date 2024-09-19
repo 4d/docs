@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is license available.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| license | Longint | &rarr; | Plug-in for which license validity testing is desired |
-| Function result | Boolean | &larr; | True if plug-in is available, otherwise False |
+| license | Longint | &#x1F852; | Plug-in for which license validity testing is desired |
+| Function result | Boolean | &#x1F850; | True if plug-in is available, otherwise False |
 
 <!-- END REF-->
 

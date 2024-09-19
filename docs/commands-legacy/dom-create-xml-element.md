@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Create XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | String | &rarr; | Root XML element reference |
-| xPath | Text | &rarr; | XPath path of the XML element to create |
-| attribName | String | &rarr; | Attribute to set |
-| attrValue | String, Boolean, Longint, Real, Time, Date | &rarr; | New attribute value |
-| Function result | String | &larr; | Reference of the created XML element |
+| elementRef | String | &#x1F852; | Root XML element reference |
+| xPath | Text | &#x1F852; | XPath path of the XML element to create |
+| attribName | String | &#x1F852; | Attribute to set |
+| attrValue | String, Boolean, Longint, Real, Time, Date | &#x1F852; | New attribute value |
+| Function result | String | &#x1F850; | Reference of the created XML element |
 
 <!-- END REF-->
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 Pass the root element reference in *elementRef* (created, for example, using the [DOM Create XML Ref](dom-create-xml-ref.md) command).
 
-In *xPath*, pass the path of the element to create, expressed using the XPath notation (for more information, see the [Support of XPath notation (DOM)](/4Dv20R6/4D/20-R6/Overview-of-XML-DOM-Commands.300-6957756.en.html#4967352) section). The following path expressions are supported: 
+In *xPath*, pass the path of the element to create, expressed using the XPath notation (for more information, see the *Support of XPath notation (DOM)* section). The following path expressions are supported: 
 
 | **Expression** | **Action**                                          |
 | -------------- | --------------------------------------------------- |

@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.INSERT IN LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | ListRef, String | &rarr; | List reference number (if * omitted), or Name of list type object (if * passed) |
-| beforeItemRef | * | Longint, Operator | &rarr; | Item reference number or 0 for the last item added to the list or * for the currently selected list item |
-| itemText | String | &rarr; | Text for the new list item |
-| itemRef | Longint | &rarr; | Unique reference number for the new list item |
-| sublist | ListRef | &rarr; | Optional sublist to attach to the new list item |
-| expanded | Boolean | &rarr; | Indicates if the sublist will be expanded or collapsed |
+| * | Operator | &#x1F852; | If specified, list is an object name (string) If omitted, list is a list reference number |
+| list | ListRef, String | &#x1F852; | List reference number (if * omitted), or Name of list type object (if * passed) |
+| beforeItemRef &#124; * | Longint, Operator | &#x1F852; | Item reference number or 0 for the last item added to the list or * for the currently selected list item |
+| itemText | String | &#x1F852; | Text for the new list item |
+| itemRef | Longint | &#x1F852; | Unique reference number for the new list item |
+| sublist | ListRef | &#x1F852; | Optional sublist to attach to the new list item |
+| expanded | Boolean | &#x1F852; | Indicates if the sublist will be expanded or collapsed |
 
 <!-- END REF-->
 
@@ -33,7 +33,7 @@ The *beforeItemRef* parameter can be used to designate the item before which you
 
 You pass the text of the new item in *itemText*. Starting with 4D v16 R4, if the item is associated with a standard action, you can pass the ak standard action title constant in *itemText* to automatically use the localized action name. For more information, please refer to the *Standard actions* section.
 
-You pass the item reference number of the new item in *itemRef*. Although we qualify this item reference number as unique, you can actually pass the value you want. Refer to the [Using item reference numbers (itemRef)](/4Dv20R6/4D/20-R6/Managing-Hierarchical-Lists.300-6957920.en.html#22261) paragraph for more information about the *itemRef* parameter.
+You pass the item reference number of the new item in *itemRef*. Although we qualify this item reference number as unique, you can actually pass the value you want. Refer to the *Using item reference numbers (itemRef)* paragraph for more information about the *itemRef* parameter.
 
 If you want for the item to include subitems, pass a valid list reference number in the *sublist* parameter. In this case, you must also pass the *expanded* parameter. Pass either **True** or **False** in this parameter so that this sublist is displayed either expanded or collapsed respectively. 
 

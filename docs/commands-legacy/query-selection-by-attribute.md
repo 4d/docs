@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &rarr; | Table for which to return a selection of records, or Default table if omitted |
-| conjOp | Operator | &rarr; | Conjunction operator to use to join multiple queries (if any) |
-| objectField | Field | &rarr; | Object field to query attributes |
-| attributePath | String | &rarr; | Name or path of attribute |
-| queryOp | Operator, String | &rarr; | Query operator (comparator) |
-| value | Text, Number, Date, Time | &rarr; | Value to compare |
-| * | Operator | &rarr; | Continue query flag |
+| aTable | Table | &#x1F852; | Table for which to return a selection of records, or Default table if omitted |
+| conjOp | Operator | &#x1F852; | Conjunction operator to use to join multiple queries (if any) |
+| objectField | Field | &#x1F852; | Object field to query attributes |
+| attributePath | String | &#x1F852; | Name or path of attribute |
+| queryOp | Operator, String | &#x1F852; | Query operator (comparator) |
+| value | Text, Number, Date, Time | &#x1F852; | Value to compare |
+| * | Operator | &#x1F852; | Continue query flag |
 
 <!-- END REF-->
 

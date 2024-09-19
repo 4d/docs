@@ -11,18 +11,18 @@ displayed_sidebar: docs
 <!--REF #_command_.Match regex.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| pattern | Text | &rarr; | Regular expression |
-| aString | Text | &rarr; | String in which search will be done |
-| start | Longint | &rarr; | Position in aString where search will start |
-| pos_found | Longint array, Longint variable | <&rarr; | Position of occurrence |
-| length_found | Longint array, Longint variable | <&rarr; | Length of occurrence |
-| * | Operator | &rarr; | If passed: only searches at position indicated |
-| Function result | Boolean | &larr; | True = search has found an occurrence; Otherwise, False. |
-| Match regex ( pattern ; aString ) &rarr; Function result |
+| pattern | Text | &#x1F852; | Regular expression |
+| aString | Text | &#x1F852; | String in which search will be done |
+| start | Longint | &#x1F852; | Position in aString where search will start |
+| pos_found | Longint array, Longint variable | &#x1F858; | Position of occurrence |
+| length_found | Longint array, Longint variable | &#x1F858; | Length of occurrence |
+| * | Operator | &#x1F852; | If passed: only searches at position indicated |
+| Function result | Boolean | &#x1F850; | True = search has found an occurrence; Otherwise, False. |
+| Match regex ( pattern ; aString ) -> Function result |
 | Parameter | Type | Description |
-| pattern | Text | &rarr; | Regular expression (complete equality) |
-| aString | Text | &rarr; | String in which search will be done |
-| Function result | Boolean | &larr; | True = search has found an occurrence; Otherwise, False. |
+| pattern | Text | &#x1F852; | Regular expression (complete equality) |
+| aString | Text | &#x1F852; | String in which search will be done |
+| Function result | Boolean | &#x1F850; | True = search has found an occurrence; Otherwise, False. |
 
 <!-- END REF-->
 
@@ -46,7 +46,7 @@ For more information about regex, refer to the following address:
 <http://en.wikipedia.org/wiki/Regular%5Fexpression>
 
 For more information about the syntax of the regular expression passed in the *pattern* parameter, refer to the following address:  
-<https://unicode-org.github.io/icu/userguide/strings/regexp.html#regular-expressions>
+*https://unicode-org.github.io/icu/userguide/strings/regexp.html#regular-expressions*
 
 #### Example 1 
 

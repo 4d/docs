@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Copy parameters.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| startFrom | Longint | &rarr; | Starting index (included) |
-| Function result | Collection | &larr; | New collection containing parameters actually passed |
+| startFrom | Longint | &#x1F852; | Starting index (included) |
+| Function result | Collection | &#x1F850; | New collection containing parameters actually passed |
 
 <!-- END REF-->
 
@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 In the *startFrom* optional parameter, you can pass the index of the parameter from which to start collecting parameters to forward. The *startFrom* parameter itself is included. 
 
-When called inside a formula, **Copy parameters** returns the parameters passed explicitely using [**apply()**](https://developer.4d.com/docs/API/FunctionClass.html#apply) or [**call()**](https://developer.4d.com/docs/API/FunctionClass.html#call) (and not those passed to the parent method or function). 
+When called inside a formula, **Copy parameters** returns the parameters passed explicitely using *apply()* or *call()* (and not those passed to the parent method or function). 
 
 **Copy parameters** returns an empty collection if:
 

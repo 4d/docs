@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Windows Alt down.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &larr; | State of the Windows Alt key (Option key on Macintosh) |
+| Function result | Boolean | &#x1F850; | State of the Windows Alt key (Option key on Macintosh) |
 
 <!-- END REF-->
 

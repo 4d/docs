@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BACKUP.Summary-->The BACKUP command starts the backup of the database using the current backup settings.<!-- END REF--> No confirmation dialog is displayed; however, a progress bar appears on screen.
 
-Backup settings are set in the Database Settings. They are stored in the [backup.4DSettings](/4Dv20R6/4D/20-R6/Configuration-and-trace-files.300-7003372.en.html#4673549) file in the database Settings folder or in the data folder (see *Configuration and trace files*). 
+Backup settings are set in the Database Settings. They are stored in the *backup.4DSettings* file in the database Settings folder or in the data folder (see *Configuration and trace files*). 
 
 The BACKUP command calls the *On Backup Startup Database Method* at the beginning of its execution and the *On Backup Shutdown Database Method* at the end of its execution. 
 

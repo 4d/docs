@@ -9,16 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX COLLAPSE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string)
-If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or 
-Variable (if * is omitted) |
-| recursive | Boolean | &rarr; | True = collapse sublevels
-False = do not collapse sublevels |
-| selector | Longint | &rarr; | Part of list box to collapse |
-| line | Longint | &rarr; | Number of break row to collapse or 
-Number of list box level to collapse |
-| column | Longint | &rarr; | Number of break column to collapse |
+| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| recursive | Boolean | &#x1F852; | True = collapse sublevels<br/>False = do not collapse sublevels |
+| selector | Longint | &#x1F852; | Part of list box to collapse |
+| line | Longint | &#x1F852; | Number of break row to collapse or <br/>Number of list box level to collapse |
+| column | Longint | &#x1F852; | Number of break column to collapse |
 
 <!-- END REF-->
 

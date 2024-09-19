@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Compile project.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| projectFile | 4D.File | &rarr; | .4DProject file to compile |
-| options | Object | &rarr; | Object that specifies compilation options |
-| Function result | Object | &larr; | Object containing information on the compilation status |
+| projectFile | 4D.File | &#x1F852; | .4DProject file to compile |
+| options | Object | &#x1F852; | Object that specifies compilation options |
+| Function result | Object | &#x1F850; | Object containing information on the compilation status |
 
 <!-- END REF-->
 
@@ -48,7 +48,7 @@ The *options* parameter is an object. Here are the available compilation options
 | defaultTypeForButtons  | Integer               | Possible value: Is real or Is longint                                                                                                                                                                                         |
 | defaultTypeForNumerics | Integer               | Possible value: Is real or Is longint                                                                                                                                                                                         |
 | generateSymbols        | Boolean               | True to generate symbol information in the .symbols returned object                                                                                                                                                           |
-| generateSyntaxFile     | Boolean               | True to generate a [syntax file for code completion](https://developer.4d.com/docs/settings/general.html#generate-syntax-file-for-code-completion-when-compiled) in the \\Resources\\en.lproj folder of the project           |
+| generateSyntaxFile     | Boolean               | True to generate a *syntax file for code completion* in the \\Resources\\en.lproj folder of the project                                                                                                                       |
 | generateTypingMethods  | String                | "reset" or "append" to generate typing methods. If value is "append", existing variable declarations won't be modified (compiler window behavior). If value is "reset" existing variable declarations are removed beforehand. |
 | plugins                | 4D.Folder object      | Plug-ins folder to be used instead of the [Plugins folder of the current project](https://developer.4d.com/docs/Project/architecture#plugins). This property is only available with the *projectFile* syntax.                 |
 | targets                | Collection of strings | possible values: "x86\_64\_generic", "arm64\_macOS\_lib". Pass an empty collection to execute syntax check only                                                                                                               |
@@ -71,27 +71,27 @@ The object returned by **Compile project** has up to three properties:
 | errors                                                       | Collection of objects | collection of objects describing compilation errors or warnings                                                       |
 | isError                                                      | Boolean               | Error if True, warning otherwise                                                                                      |
 | message                                                      | String                | Error message                                                                                                         |
-| code                                                         | Object                | [code object](/4Dv20R6/4D/20-R6/Compile-project.301-6958549.en.html#5459152)                                          |
+| code                                                         | Object                | *code object*                                                                                                         |
 | line                                                         | Number                | Line number of error in the code. For class methods, line number in the function                                      |
 | lineInFile                                                   | Number                | Line number in the file (different from "line" for class methods, and takes into account the %attributes prefix line) |
 | **Available only if generateSymbols option is set to True:** |                       |                                                                                                                       |
 | symbols                                                      | Object                |                                                                                                                       |
 | interprocessVariables                                        | Object                | List of all interprocess variables                                                                                    |
-| variables                                                    | Collection            | Collection of [variable objects](/4Dv20R6/4D/20-R6/Compile-project.301-6958549.en.html#5459146)                       |
+| variables                                                    | Collection            | Collection of *variable objects*                                                                                      |
 | size                                                         | Number                |                                                                                                                       |
 | processVariables                                             | Object                | List of all process variables                                                                                         |
-| variables                                                    | Collection            | Collection of [variable objects](/4Dv20R6/4D/20-R6/Compile-project.301-6958549.en.html#5459146)                       |
+| variables                                                    | Collection            | Collection of *variable objects*                                                                                      |
 | size                                                         | Number                |                                                                                                                       |
 | localVariables                                               | Collection of objects | List of local variables per method                                                                                    |
-| code                                                         | Object                | [code object](/4Dv20R6/4D/20-R6/Compile-project.301-6958549.en.html#5459152)                                          |
-| variables                                                    | Collection            | Collection of [variable objects](/4Dv20R6/4D/20-R6/Compile-project.301-6958549.en.html#5459146)                       |
+| code                                                         | Object                | *code object*                                                                                                         |
+| variables                                                    | Collection            | Collection of *variable objects*                                                                                      |
 | methods                                                      | Collection of objects | List of methods                                                                                                       |
-| code                                                         | Object                | [code object](/4Dv20R6/4D/20-R6/Compile-project.301-6958549.en.html#5459152)                                          |
+| code                                                         | Object                | *code object*                                                                                                         |
 | callCount                                                    | Number                | Number of times this method has been called                                                                           |
 | params                                                       | Collection            | Collection of parameter types (Value type numerical codes)                                                            |
 | threadSafe                                                   | Boolean               | Indicates if this method is thread safe                                                                               |
 
-For more information, see [Compilation tools](https://developer.4d.com/docs/Project/compiler.html#compilation-tools).
+For more information, see *Compilation tools*.
 
 ###### variable objects 
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WA SET PREFERENCE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| selector | Longint | &rarr; | Preference to be modified |
-| value | Boolean | &rarr; | Value of the preference (True = allowed,  False = not allowed) |
+| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| selector | Longint | &#x1F852; | Preference to be modified |
+| value | Boolean | &#x1F852; | Value of the preference (True = allowed,  False = not allowed) |
 
 <!-- END REF-->
 

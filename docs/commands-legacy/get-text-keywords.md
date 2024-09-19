@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET TEXT KEYWORDS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| text | Text | &rarr; | Original text |
-| arrKeywords | Text array | <&rarr; | Array containing keywords |
-| * | Operator | &rarr; | If passed = unique words |
+| text | Text | &#x1F852; | Original text |
+| arrKeywords | Text array | &#x1F858; | Array containing keywords |
+| * | Operator | &#x1F852; | If passed = unique words |
 
 <!-- END REF-->
 
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET TEXT KEYWORDS.Summary-->The **GET TEXT KEYWORDS** command splits all the *text* into individual words and creates an item in the *arrKeywords* text array for each word.<!-- END REF-->
 
-4D uses the same algorithm to break up text into individual words that it does to build a [Keywords index](/4Dv20R6/4D/20-R6/Creating-and-modifying-indexes.300-7003397.en.html#944589). It is based on the ICU library. For more information about how text is separated into words, refer to the following address: <http://userguide.icu-project.org/boundaryanalysis>. 
+4D uses the same algorithm to break up text into individual words that it does to build a *Keywords index*. It is based on the ICU library. For more information about how text is separated into words, refer to the following address: <http://userguide.icu-project.org/boundaryanalysis>. 
 
 **Note:** At the request of users, we introduced an exception for French and Italian: the apostrophe (') followed by either a vowel or the letter "h" is considered as a word separator. For example, the strings "L'homme" or "l'arbre" are split into "L’"+"homme" and "l'"+"arbre".
 

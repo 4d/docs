@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Day of.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| date | Date | &rarr; | Date for which to return the day |
-| Function result | Longint | &larr; | Day of the month of date |
+| date | Date | &#x1F852; | Date for which to return the day |
+| Function result | Longint | &#x1F850; | Day of the month of date |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD OPEN PATH.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text | &rarr; | Path of method to open |
-| line | Number | &rarr; | Line number |
-| * | Operator | &rarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| path | Text | &#x1F852; | Path of method to open |
+| line | Number | &#x1F852; | Line number |
+| * | Operator | &#x1F852; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 The command is asynchronous, it returns immediately to the calling method and does not wait for the method editor to be open. 
 
-This command can open all method types and class functions. For more details, see [Path syntax](/4Dv20R6/4D/20-R6/Design-Object-Access-Commands.300-6958910.en.html#5460318).
+This command can open all method types and class functions. For more details, see *Path syntax*.
 
 The method must already exist. If the *path* parameter does not correspond to an existing method, the error -9801 "Cannot open method" is returned.
 

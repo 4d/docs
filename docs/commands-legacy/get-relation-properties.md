@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET RELATION PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldPtr|tableNum | Pointer, Longint | &rarr; | Field pointer or table number |
-| fieldNum | Longint | &rarr; | Field number if the table number is passed as first parameter |
-| oneTable | Longint | <&rarr; | One table number or 0 if no relation is defined from the field |
-| oneField | Longint | <&rarr; | One field number or 0 if no relation is defined from the field |
-| choiceField | Longint | <&rarr; | Choice field number or 0 if no choice field |
-| autoOne | Boolean | <&rarr; | True = Auto relate one, False = Manual relate one |
-| autoMany | Boolean | <&rarr; | True = Auto one to many, False = Manual one to many |
+| fieldPtr&#124;tableNum | Pointer, Longint | &#x1F852; | Field pointer or table number |
+| fieldNum | Longint | &#x1F852; | Field number if the table number is passed as first parameter |
+| oneTable | Longint | &#x1F858; | One table number or 0 if no relation is defined from the field |
+| oneField | Longint | &#x1F858; | One field number or 0 if no relation is defined from the field |
+| choiceField | Longint | &#x1F858; | Choice field number or 0 if no choice field |
+| autoOne | Boolean | &#x1F858; | True = Auto relate one, False = Manual relate one |
+| autoMany | Boolean | &#x1F858; | True = Auto one to many, False = Manual one to many |
 
 <!-- END REF-->
 

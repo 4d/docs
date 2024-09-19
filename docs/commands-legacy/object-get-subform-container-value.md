@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get subform container value.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Mixed | &larr; | Current value of the subform container data source |
+| Function result | Mixed | &#x1F850; | Current value of the subform container data source |
 
 <!-- END REF-->
 
@@ -22,7 +22,7 @@ This command can only be used in the context of a form used as a subform. In any
 * If the data source is an expression, the command returns the current value of the expression, evaluated since the last form event cycle.
 * If the data source is an array, the command returns the array index (integer).
 
-For more information on bound variables and form/subform interaction, see [Managing the bound variable](https://developer.4d.com/docs/FormObjects/subformOverview.html#managing-the-bound-variable) on developer.4d.com.
+For more information on bound variables and form/subform interaction, see *Managing the bound variable* on developer.4d.com.
 
 #### Example 
 

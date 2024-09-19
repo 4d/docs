@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LONGINT TO BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| longInt | Longint | &rarr; | Long Integer value to write into the BLOB |
-| blob | BLOB | &rarr; | BLOB to receive the Long Integer value |
-| byteOrder | Longint | &rarr; | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
-| offset | * | Variable, Operator | &rarr; | Offset within the BLOB (expressed in bytes) or * to append the value |
-| <&rarr; | New offset after writing if not * |
+| longInt | Longint | &#x1F852; | Long Integer value to write into the BLOB |
+| blob | BLOB | &#x1F852; | BLOB to receive the Long Integer value |
+| byteOrder | Longint | &#x1F852; | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
+| offset &#124; * | Variable, Operator | &#x1F852; | Offset within the BLOB (expressed in bytes) or * to append the value |
+| &#x1F858; | New offset after writing if not * |
 
 <!-- END REF-->
 
@@ -41,7 +41,7 @@ After the call, the *offset* variable parameter is returned, incremented by the 
 
 ##### Note 
 
-**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](https://developer.4d.com/docs/Concepts/blob.html#passing-blobs-and-blob-objects-to-4d-commands) on developer.4d.com.
+**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See *Passing blobs and blob objects to 4D commands* on developer.4d.com.
 
 #### Example 1 
 

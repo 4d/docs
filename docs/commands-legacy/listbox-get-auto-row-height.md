@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get auto row height.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, object is an object name (string). If omitted, object is a variable. |
-| object | Form object | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| selector | Longint | &rarr; | Height value to get: lk row min height or lk row max height |
-| unit | Longint | &rarr; | Unit of height value: 0 = pixels, 1 = lines |
-| Function result | Longint | &larr; | Selected row height value |
+| * | Operator | &#x1F852; | If specified, object is an object name (string). If omitted, object is a variable. |
+| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| selector | Longint | &#x1F852; | Height value to get: lk row min height or lk row max height |
+| unit | Longint | &#x1F852; | Unit of height value: 0 = pixels, 1 = lines |
+| Function result | Longint | &#x1F850; | Selected row height value |
 
 <!-- END REF-->
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get auto row height.Summary-->The **LISTBOX Get auto row height** command returns the current minimum or maximum row height value set for the list box object designated using the *object* and *\** parameters.<!-- END REF-->
 
-The current minimum or maximum row height value can be set either in the Property list (see [Automatic Row Height](/4Dv20R6/4D/20-R6/List-box-column-specific-properties.300-7003336.en.html#6127001)) or in the current process using the [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md) command.
+The current minimum or maximum row height value can be set either in the Property list (see *Automatic Row Height*) or in the current process using the [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md) command.
 
 **Note**: This command can be used with "collection or entity selection" and "array" list boxes only.
 

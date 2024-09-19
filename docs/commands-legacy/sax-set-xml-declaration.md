@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX SET XML DECLARATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| document | DocRef | &rarr; | Reference of open document |
-| encoding | String | &rarr; | XML document character set |
-| standalone | Boolean | &rarr; | True = the document is standalone False (default) = document is not standalone |
+| document | DocRef | &#x1F852; | Reference of open document |
+| encoding | String | &#x1F852; | XML document character set |
+| standalone | Boolean | &#x1F852; | True = the document is standalone False (default) = document is not standalone |
 
 <!-- END REF-->
 
@@ -20,7 +20,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX SET XML DECLARATION.Summary-->The **SAX SET XML DECLARATION** command initializes the XML document referenced in *document* using the specified *encoding*.<!-- END REF--> Optionnally, you can set the *standalone* attribute.
 
 * *encoding*: Indicates the character set used in the document. By default (if the command is not called), the UTF-8 character set (compressed Unicode) is used.  
-**Note:** If you pass a character set that is not supported by 4D XML commands, UTF-8 will be used. Refer to [Character Sets](/4Dv20R6/4D/20-R6/Overview-of-XML-DOM-Commands.300-6957756.en.html#39695) to see the list of character sets supported (UTF-8 is however recommended in most cases).
+**Note:** If you pass a character set that is not supported by 4D XML commands, UTF-8 will be used. Refer to *Character Sets* to see the list of character sets supported (UTF-8 is however recommended in most cases).
 * *standalone*: Indicates whether the document is standalone (**True**) or if it needs other files or external resources to operate (**False**). By default (if the command is not called or if the parameter is omitted), the document is not standalone.
 
 **Note:** You can specify the indentation of the document thanks to the [XML SET OPTIONS](xml-set-options.md) command before writing anything.

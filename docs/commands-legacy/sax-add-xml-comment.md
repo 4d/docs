@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX ADD XML COMMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| document | DocRef | &rarr; | Reference of open document |
-| comment | String | &rarr; | Comment to be added |
+| document | DocRef | &#x1F852; | Reference of open document |
+| comment | String | &#x1F852; | Comment to be added |
 
 <!-- END REF-->
 

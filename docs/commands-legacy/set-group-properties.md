@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Set group properties.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| groupID | Longint | &rarr; | Unique ID number of group, -1 for adding a group |
-| <&rarr; | Unique ID number of added group (if any) |
-| name | String | &rarr; | New group name |
-| owner | Longint | &rarr; | User ID number of new group owner (Binary databases only) |
-| members | Longint array | &rarr; | New group members |
-| Function result | Longint | &larr; | Unique ID number of new group |
+| groupID | Longint | &#x1F852; | Unique ID number of group, -1 for adding a group |
+| &#x1F858; | Unique ID number of added group (if any) |
+| name | String | &#x1F852; | New group name |
+| owner | Longint | &#x1F852; | User ID number of new group owner (Binary databases only) |
+| members | Longint array | &#x1F852; | New group members |
+| Function result | Longint | &#x1F850; | Unique ID number of new group |
 
 <!-- END REF-->
 
@@ -44,7 +44,7 @@ To remove all the members from a group, pass an empty *members* array.
 
 **Notes for binary databases**
 
-* Group and user ID values depend on their creator (Designer, Administrator, or affiliated group owner). For more information, please refer to the [User and group ID ranges](/4Dv20R6/4D/20-R6/Designer-and-Administrator.300-7003454.en.html#4607697) paragraph. To create a group affiliated with the Designer, pass -1 in groupID. To create a group affiliated with the Administrator, pass -2 in groupID.
+* Group and user ID values depend on their creator (Designer, Administrator, or affiliated group owner). For more information, please refer to the *User and group ID ranges* paragraph. To create a group affiliated with the Designer, pass -1 in groupID. To create a group affiliated with the Administrator, pass -2 in groupID.
 * The group owner is not automatically set as a member of the group that he or she owns. It is up to you to include the group owner in the group, using the *members* parameter.
 
 #### Error management 

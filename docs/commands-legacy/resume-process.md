@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RESUME PROCESS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Longint | &rarr; | Process number |
+| process | Longint | &#x1F852; | Process number |
 
 <!-- END REF-->
 

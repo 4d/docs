@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Count tasks.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &larr; | Number of open processes (including kernel processes) |
+| Function result | Longint | &#x1F850; | Number of open processes (including kernel processes) |
 
 <!-- END REF-->
 

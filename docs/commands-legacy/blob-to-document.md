@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB TO DOCUMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| document | String | &rarr; | Name of the document |
-| blob | BLOB | &rarr; | New contents for the document |
+| document | String | &#x1F852; | Name of the document |
+| blob | BLOB | &#x1F852; | New contents for the document |
 
 <!-- END REF-->
 

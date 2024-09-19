@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PRINT OPTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| option | Longint | &rarr; | Option number or PDF option code |
-| value1 | Longint, Text | <&rarr; | Value 1 of the option |
-| value2 | Longint, Text | <&rarr; | Value 2 of the option |
+| option | Longint | &#x1F852; | Option number or PDF option code |
+| value1 | Longint, Text | &#x1F858; | Value 1 of the option |
+| value2 | Longint, Text | &#x1F858; | Value 2 of the option |
 
 <!-- END REF-->
 

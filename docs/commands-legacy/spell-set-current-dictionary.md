@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| dictionary | Longint, Text | &rarr; | ID, Name, or Language code of dictionary to use for spell-check |
+| dictionary | Longint, Text | &#x1F852; | ID, Name, or Language code of dictionary to use for spell-check |
 
 <!-- END REF-->
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 * Windows - the Hunspell dictionary corresponding to the application language,
 * Mac - the native spell checker.
 
-**Note:** For Mac, you can use the Hunspell dictionary via the [SET DATABASE PARAMETER](set-database-parameter.md) command. For more information, see the [Spellcheck configuration](/4Dv20R6/4D/20-R6/Spell-checking.300-7003362.en.html#3630373) section in the *Design Reference* manual. 
+**Note:** For Mac, you can use the Hunspell dictionary via the [SET DATABASE PARAMETER](set-database-parameter.md) command. For more information, see the *Spellcheck configuration* section in the *Design Reference* manual. 
 
 You can use the *dictionary* parameter to change the dictionary. You can pass either:
 

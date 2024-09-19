@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | ListRef, String | &rarr; | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef | * | Operator, Longint | &rarr; | Item reference number, or 0 for last item appended to the list, or * for the current list item |
-| enterable | Boolean | &rarr; | TRUE = Enterable, FALSE = Non-enterable |
-| styles | Longint | &rarr; | Font style for the item |
-| icon | Text, Longint | &rarr; | Picture name or number ("" or 0 for no icon) |
-| color | Longint | &rarr; | RGB color value or -1 = reset to original color |
+| * | Operator | &#x1F852; | If specified, list is an object name (string) If omitted, list is a list reference number |
+| list | ListRef, String | &#x1F852; | List reference number (if * omitted) or Name of list type object (if * passed) |
+| itemRef &#124; * | Operator, Longint | &#x1F852; | Item reference number, or 0 for last item appended to the list, or * for the current list item |
+| enterable | Boolean | &#x1F852; | TRUE = Enterable, FALSE = Non-enterable |
+| styles | Longint | &#x1F852; | Font style for the item |
+| icon | Text, Longint | &#x1F852; | Picture name or number ("" or 0 for no icon) |
+| color | Longint | &#x1F852; | RGB color value or -1 = reset to original color |
 
 <!-- END REF-->
 
@@ -48,7 +48,7 @@ You specify the font style of the item in the *styles* parameter. You pass a com
 
 In the *icon* parameter, you can pass a picture to be used as the icon for the item. You can use a picture file reference or (binary databases only) a library picture.
 
-* Picture file reference (text): you must use the **path:<filesystem path>** pattern. For more information, refer to the [Filesystem pathnames](/4Dv20R6/4D/20-R6/File-and-folder-object-pathnames.300-6957688.en.html#4282533) paragraph.
+* Picture file reference (text): you must use the **path:<filesystem path>** pattern. For more information, refer to the *Filesystem pathnames* paragraph.
 * Library picture (longint or text, binary databases only): you can pass either the name or number of the picture. It is generally preferable to use its number rather than its name since picture numbers are unique IDs, which is not the case with names. If you want to use a number, pass Use PicRef+*N* in the parameter, where *N* is the reference number of the picture in the picture library. Use PicRef is a predefined constant located in the *Hierarchical Lists* theme.
 * Pass an empty string ("") or zero (0) in *icon* if you do not want any graphic for the item.
 

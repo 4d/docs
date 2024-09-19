@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET ATTRIBUTES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text, Text array | &rarr; | Method path(s) |
-| attributes | Object, Object array | <&rarr; | Attribute(s) for selected method(s) |
-| * | Operator | &rarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| path | Text, Text array | &#x1F852; | Method path(s) |
+| attributes | Object, Object array | &#x1F858; | Attribute(s) for selected method(s) |
+| * | Operator | &#x1F852; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->
 

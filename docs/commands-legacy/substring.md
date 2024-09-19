@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Substring.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| source | String | &rarr; | String from which to get substring |
-| firstChar | Longint | &rarr; | Position of first character |
-| numChars | Longint | &rarr; | Number of characters to get |
-| Function result | String | &larr; | Substring of source |
+| source | String | &#x1F852; | String from which to get substring |
+| firstChar | Longint | &#x1F852; | Position of first character |
+| numChars | Longint | &#x1F852; | Number of characters to get |
+| Function result | String | &#x1F850; | Substring of source |
 
 <!-- END REF-->
 
@@ -24,7 +24,7 @@ The *firstChar* parameter points to the first character in the string to return,
 
 If *firstChar* plus *numChars* is greater than the number of characters in the string, or if *numChars* is not specified, **Substring** returns the last character(s) in the string, starting with the character specified by *firstChar*. If *firstChar* is greater than the number of characters in the string, **Substring** returns an empty string ("").
 
-**Warning:** When you use this command in a multi-style context, you need to convert any Window end-of-line characters ('\\r\\n') into single ('\\r') characters in order for processing to be valid. This is due to the mechanism which normalizes 4D line endings to ensure multi-platform compatibility for texts. For more information, refer to [Automatic normalization of line endings](/4Dv20R6/4D/20-R6/Programming-Notes.300-6958941.en.html#1285389). 
+**Warning:** When you use this command in a multi-style context, you need to convert any Window end-of-line characters ('\\r\\n') into single ('\\r') characters in order for processing to be valid. This is due to the mechanism which normalizes 4D line endings to ensure multi-platform compatibility for texts. For more information, refer to *Automatic normalization of line endings*. 
 
 #### Example 1 
 

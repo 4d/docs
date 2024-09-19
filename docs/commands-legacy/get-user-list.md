@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET USER LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| userNames | String array | <&rarr; | User names as they appear in the Password editor window |
-| userNumbers | Longint array | <&rarr; | Corresponding unique user ID numbers |
+| userNames | String array | &#x1F858; | User names as they appear in the Password editor window |
+| userNumbers | Longint array | &#x1F858; | Corresponding unique user ID numbers |
 
 <!-- END REF-->
 
@@ -24,7 +24,7 @@ The array *userNames* is filled with the user names displayed in the Passwords w
 
 The array *userNumbers*, synchronized with *userNames*, is filled with the corresponding unique user ID numbers. 
 
-**Note for binary databases:** Group and user ID values depend on their creator (Designer, Administrator, or affiliated group owner). For more information, please refer to the [User and group ID ranges](/4Dv20R6/4D/20-R6/Designer-and-Administrator.300-7003454.en.html#4607697) paragraph.
+**Note for binary databases:** Group and user ID values depend on their creator (Designer, Administrator, or affiliated group owner). For more information, please refer to the *User and group ID ranges* paragraph.
 
 #### Error management 
 

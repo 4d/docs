@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.String.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| expression | Expression | &rarr; | Expression for which to return the string form (can be Real, Integer, Long Integer, Date, Time, String, Text, Boolean, Undefined, or Null) |
-| format | Longint, String | &rarr; | Display format |
-| addTime | Time | &rarr; | Time to add on if expression is a date |
-| Function result | String | &larr; | String form of the expression |
+| expression | Expression | &#x1F852; | Expression for which to return the string form (can be Real, Integer, Long Integer, Date, Time, String, Text, Boolean, Undefined, or Null) |
+| format | Longint, String | &#x1F852; | Display format |
+| addTime | Time | &#x1F852; | Time to add on if expression is a date |
+| Function result | String | &#x1F850; | String form of the expression |
 
 <!-- END REF-->
 

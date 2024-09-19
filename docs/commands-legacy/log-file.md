@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Log File.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | String | &larr; | Long name of the database log file |
+| Function result | String | &#x1F850; | Long name of the database log file |
 
 <!-- END REF-->
 

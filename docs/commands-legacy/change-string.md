@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Change string.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| source | String | &rarr; | Original string |
-| newChars | String | &rarr; | New characters |
-| where | Longint | &rarr; | Where to start the changes |
-| Function result | String | &larr; | Resulting string |
+| source | String | &#x1F852; | Original string |
+| newChars | String | &#x1F852; | New characters |
+| where | Longint | &#x1F852; | Where to start the changes |
+| Function result | String | &#x1F850; | Resulting string |
 
 <!-- END REF-->
 

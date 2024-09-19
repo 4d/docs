@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY PICTURE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| arrayName | Array | &rarr; | Name of the array |
-| size | Longint | &rarr; | Number of elements in the array, or Number of rows if size2 is specified |
-| size2 | Longint | &rarr; | Number of columns in a two-dimensional array |
+| arrayName | Array | &#x1F852; | Name of the array |
+| size | Longint | &#x1F852; | Number of elements in the array, or Number of rows if size2 is specified |
+| size2 | Longint | &#x1F852; | Number of columns in a two-dimensional array |
 
 <!-- END REF-->
 

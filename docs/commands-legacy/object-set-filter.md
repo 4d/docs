@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET FILTER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &rarr; | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
-| object | Form object | &rarr; | Object Name (if * is specified), or Field or Variable (if * is omitted) |
-| entryFilter | String | &rarr; | New data entry filter for the enterable area |
+| * | Operator | &#x1F852; | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
+| object | Form object | &#x1F852; | Object Name (if * is specified), or Field or Variable (if * is omitted) |
+| entryFilter | String | &#x1F852; | New data entry filter for the enterable area |
 
 <!-- END REF-->
 

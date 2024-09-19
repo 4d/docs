@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Form event code.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &larr; | Form event number |
+| Function result | Longint | &#x1F850; | Form event number |
 
 <!-- END REF-->
 
@@ -325,7 +325,7 @@ Several form events can be used to manage various specific features of list boxe
 * On Column Moved: This event is generated when a column of the list box is moved by the user using drag and drop. It is not generated if the column is dragged and then dropped in its initial location. The [LISTBOX MOVED COLUMN NUMBER](listbox-moved-column-number.md) command returns the new position of the column.
 * On Row Moved: This event is generated when a row of the list box is moved by the user using drag and drop. It is not generated if the row is dragged and then dropped in its initial location.
 * On Column Resize: This event is generated when the width of a column in the list box is modified by a user. Starting with 4D v16, the event is triggered "live," i.e., sent continuously during the event, for as long as the list box or column concerned is being resized. This resizing is performed manually by a user, or may occur as a result of the list box and its column(s) being resized along with the form window itself (whether the form is resized manually or using the [RESIZE FORM WINDOW](resize-form-window.md) command).  
-**Note:** The On Column Resize event is not triggered when a "fake" column is resized (for more information on fake columns, please refer to [Resizing Options theme](/4Dv20R6/4D/20-R6/List-box-specific-properties.300-7003332.en.html#3049992)).
+**Note:** The On Column Resize event is not triggered when a "fake" column is resized (for more information on fake columns, please refer to *Resizing Options theme*).
 * On Expand and On Collapse: These events are generated when a row of the hierarchical list box is expanded or collapsed.
 * On Header Click: This event is generated when a click occurs on the header of a column in the list box. In this case, the [Self](self.md) command lets you find out the header of the column that was clicked. The On Clicked event is generated when a right click (Windows) or Ctrl+click (Mac OS) occurs on a column or column header. You can test the number of clicks made by the user by means of the [Clickcount](clickcount.md) command.  
 If the **Sortable** property was checked in the list box, you can decide whether or not to authorize a standard sort of the column by passing the value 0 or -1 in the $0 variable:  
@@ -378,7 +378,7 @@ These events are not mutually exclusive. They can be generated one after another
   
 ##### Picture fields and variables 
 
-* The On Scroll form event is generated as soon as a user scrolls a picture within the area (field or variable) that contains it. You can scroll the contents of a picture area when the size of the area is smaller than its contents and the display format is "**Truncated (non Centered)**". For more information about this, refer to [Picture formats](/4Dv20R6/4D/20-R6/Display-formats.300-7003356.en.html#426990).  
+* The On Scroll form event is generated as soon as a user scrolls a picture within the area (field or variable) that contains it. You can scroll the contents of a picture area when the size of the area is smaller than its contents and the display format is "**Truncated (non Centered)**". For more information about this, refer to *Picture formats*.  
 The event is generated when the scroll is the result of a user action: using the scroll bars and/or cursors, using the mouse wheel or the keyboard (for more information about scrolling using the keyboard, refer to *Scroll bars*). It is not generated when the object is scrolled due to the execution of the [OBJECT SET SCROLL POSITION](object-set-scroll-position.md) command. This event is triggered after any other user event related to the scrolling action (On Clicked, On After Keystroke, etc.). It is generated in the object method (not in the form method). Refer to example 14.
 * (New in v16) The On Mouse Up event is generated when the user has just released the left mouse button while dragging in a picture area (field or variable). This event is useful, for example, when you want the user to be able to move, resize or draw objects in a SVG area.  
 When the On Mouse Up event is generated, you can get the local coordinates where the mouse button was released. These coordinates are returned in the **MouseX** and **MouseY** *System Variables*. The coordinates are expressed in pixels with respect to the top left corner of the picture (0,0).  

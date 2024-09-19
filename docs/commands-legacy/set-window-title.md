@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET WINDOW TITLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| title | String | &rarr; | Window title |
-| window | WinRef | &rarr; | Window reference number, or Frontmost window of current process, if omitted |
+| title | String | &#x1F852; | Window title |
+| window | WinRef | &#x1F852; | Window reference number, or Frontmost window of current process, if omitted |
 
 <!-- END REF-->
 
