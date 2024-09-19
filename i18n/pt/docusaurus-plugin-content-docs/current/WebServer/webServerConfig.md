@@ -474,7 +474,7 @@ Para isso, coloque o arquivo ROBOTS.TXT na raiz do servidor. Este ficheiro deve 
 
 ```4d
    User-Agent: <name>
-   Disallow: <URL> or <beginning of the URL>
+   Disallow: <URL> ou <beginning of the URL>
 ```
 
 Por exemplo:
