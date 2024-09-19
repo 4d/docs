@@ -15,7 +15,7 @@ To query data directly, you can do so using the [`$filter`]($filter.md) function
 
 Com o REST API, pode realizar todas as manipulações de dados que quiser em 4D.
 
-To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
+To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). Se quiser excluir uma ou mais entidades, você pode usar [`$method=delete`]($method.md#methoddelete).
 
 Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
 
@@ -29,7 +29,7 @@ Add the [`$skip`]($skip.md) (to define with which entity to start) and [`$top/$l
 
 Un conjunto de entidades (también conocido como *selección de entidades*) es una colección de entidades obtenidas a través de una petición REST que se almacena en la caché de 4D Server. Usar um conjunto de entidades previne que pesquise continuamente sua aplicação pelos mesmos resultados. Acessar um conjunto de entidades é mais rápido e pode melhorar a velocidade de sua aplicação.
 
-To create an entity set, call [`$method=entityset`]($method.md#methodentityset) in your REST request. As a measure of security, you can also use [`$savedfilter`]($savedfilter.md) and/or [`$savedorderby`]($savedorderby.md) when you call [`$filter`]($filter.md) and/or [`$orderby`]($orderby.md) so that if ever the entity set timed out or was removed from the server, it can be quickly retrieved with the same ID as before.
+Para criar um conjunto de entidades, chame [`$method=entityset`]($method.md#methodentityset) em sua solicitação REST. As a measure of security, you can also use [`$savedfilter`]($savedfilter.md) and/or [`$savedorderby`]($savedorderby.md) when you call [`$filter`]($filter.md) and/or [`$orderby`]($orderby.md) so that if ever the entity set timed out or was removed from the server, it can be quickly retrieved with the same ID as before.
 
 To access the entity set, you must use `$entityset/\{entitySetID\}`, for example:
 
