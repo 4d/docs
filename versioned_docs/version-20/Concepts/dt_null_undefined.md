@@ -127,16 +127,16 @@ Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (
 |Inequality |Undefined `#` Undefined |Boolean|a.undefinedProp `#` b.undefinedProp |False|
 |  |Undefined `#` Null |Boolean|a.undefinedProp `#` b.nullProp |False|
 |  |Undefined `#` *other values* |Boolean|a.undefinedProp `#` 42 |True|
-|Greater than |Undefined `>` string, Date, Time, Boolean, number |Boolean  |a.undefinedProp `>` "abc" |False|
-|Less than |Undefined `<` string, Date, Time, Boolean, number |Boolean  |a.undefinedProp `<` "abc" |False|
-|Greater than or equal to |Undefined `>=` string, Date, Time, Boolean, number |Boolean  |a.undefinedProp `>=` "abc" |False|
-|Less than or equal to |Undefined `<=` string, Date, Time, Boolean, number |Boolean  |a.undefinedProp `<=` "abc" |False|
+|Greater than |Undefined `>` string, Date, Time, number |Boolean  |a.undefinedProp `>` "abc" |False|
+|Less than |Undefined `<` string, Date, Time, number |Boolean  |a.undefinedProp `<` "abc" |False|
+|Greater than or equal to |Undefined `>=` string, Date, Time, number |Boolean  |a.undefinedProp `>=` "abc" |False|
+|Less than or equal to |Undefined `<=` string, Date, Time, number |Boolean  |a.undefinedProp `<=` "abc" |False|
 
 *other values* are expressions of any type with a value neither Undefined nor Null. 
 
 :::info
 
-Comparisons of Undefined values with Pointer, Picture, Blob, Object, Collection, Undefined or Null values using Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported and return an error.
+Comparisons of Undefined values with Pointer, Picture, Boolean, Blob, Object, Collection, Undefined or Null values using Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported and return an error.
 
 :::
 
