@@ -3061,7 +3061,7 @@ The `.resize()` function <!-- REF #collection.resize().Summary -->sets the colle
 > Essa função modifica a coleção original.
 
 - If *size* < collection length, exceeding elements are removed from the collection.
-- If *size* > collection length, the collection length is increased to size.
+- Se *size* > comprimento da coleção, o comprimento da coleção é aumentado à medida.
 
 Por padrão, novos elementos são preenchidos com valores **null**. You can specify the value to fill in added elements using the *defaultValue* parameter.
 
