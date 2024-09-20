@@ -48,7 +48,7 @@ A resolução recomendada é 1920x1080.
 - Desenvolvimento: 4D Server v20 R2 ou superior
 - Qodly Studio only works with 4D projects (binary databases are not supported).
 - Web sessions (_aka_ Scalable sessions) must [be enabled](sessions.md#enabling-web-sessions).
-- The 4D code called by Qodly forms must be [thread-safe](preemptiveWeb.md).
+- O código 4D chamado pelos formulários Qodly deve ser [hilo seguro] (preemptiveWeb.md).
 
 ### Habilitando o acesso a Qodly Studio
 
@@ -145,7 +145,7 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 | Depurador                                                                               | Depurador 4D IDE                                                                                               | Depurador Qodly Studio                                                              |
 | REST/Web roles and privileges                                                           | roles.json direct edit/Qodly Studio roles and privileges editor                                | Qodly Studio role and privileges editor                                             |
 
-(1) If you click on the **Model** button in Qodly Studio, nothing happens.
+(1) Se você clicar no botão **Model** no Qodly Studio, nada acontecerá.
 (2) When you open some 4D code in Qodly Studio, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
 
 ### Línguagem
@@ -183,7 +183,7 @@ See [this page](https://developer.qodly.com/docs/studio/rendering) for detailed 
 
 :::
 
-To enable the rendering of Qodly forms, the following options must be set.
+Para ativar a renderização de formulários Qodly, as seguintes opções devem ser definidas.
 
 - The 4D project's **Settings** > **Web** > **Web Features** > [**Expose as REST server**](../settings/web.md#exposed-as-rest-server) option must be activated.
 - O [servidor Web 4D] (webServer.md) deve estar em execução.
