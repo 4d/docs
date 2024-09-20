@@ -16,7 +16,7 @@ Components can be interpreted or [compiled](../Desktop/building.md). A pasta do 
 
 A 4D project running in interpreted mode can use either interpreted or compiled components. A 4D project running in compiled mode cannot use interpreted components. Por isso não pode ser usado em um componente.
 
-## Loading components
+## Carregando componentes
 
 ### Básicos
 
