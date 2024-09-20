@@ -142,7 +142,7 @@ Várias funções aceitam um *propriedadePath* como parâmetro. Este parâmetro 
  $vmin:=$col.min(["My.special.property"]) //erro
 ```
 
-## Collection operators
+## Operadores em coleções
 
 You can use comparison operators with **collection references**, which means that you can evaluate if two or more references point to the same instance of a collection.
 
