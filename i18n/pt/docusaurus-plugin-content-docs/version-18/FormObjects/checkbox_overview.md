@@ -292,7 +292,7 @@ As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas 
 
 ### Contrair/expandir
 
-This check box style can be used to add a standard collapse/expand icon. Esses botões são usados nativamente em listas hierárquicas.
+Este estilo de caixa de seleção pode ser usado para adicionar um ícone padrão de contrair/expandir. Esses botões são usados nativamente em listas hierárquicas.
 
 - *Windows* - o botão se parece com um [+] ou um [-]
 
