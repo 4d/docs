@@ -18,7 +18,7 @@ title: VP Get spans
 
 O comando `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->recupera os intervalos de células no *rangeObj* designado<!-- END REF -->.
 
-Em *rangeObj*, passe um intervalo de células fusionadas que queira recuperar. If *rangeObj* does not contain a cell span, an empty range is returned.
+Em *rangeObj*, passe um intervalo de células fusionadas que queira recuperar. Se *rangeObj* não contiver um intervalo de células, um intervalo vazio será retornado.
 
 #### Exemplo
 
