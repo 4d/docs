@@ -10,7 +10,7 @@ You can compile your projects, i.e., translate all of your methods into machine 
 
 The compilation is handled from your 4D application and is entirely automatic.
 
-> On macOS, the compilation requires that you install `Xcode`. See [this section](#silicon-compiler) for more information about this requirement.
+> En macOS, la compilación requiere que instale `Xcode`. See [this section](#silicon-compiler) for more information about this requirement.
 
 1. Open the compiler window by selecting the **Compiler...** command in the **Design** menu or the **Compiler** toolbar button.
 
@@ -166,8 +166,8 @@ Duas opções de alvo estão disponíveis. O resultado depende do processador da
 
 Use esta área para definir o tipo padrão para objetos de banco de dados ambíguos.
 
-- **Numeric**: Used to force numeric typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. Você pode otimizar a execução do seu banco de dados escolhendo o tipo Longint.
-- **Button**: Used to force button typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. This type applies to buttons as well as check boxes, picture buttons, button grids, radio buttons, picture pop-up menus and drop-down lists.
+- **Numeric**: Used to force numeric typing in an unambiguous manner, either in real or longint. Isso não substituirá as diretivas que você possa ter definido em seu projeto. Você pode otimizar a execução do seu banco de dados escolhendo o tipo Longint.
+- **Button**: Used to force button typing in an unambiguous manner, either in real or longint. Isso não substituirá as diretivas que você possa ter definido em seu projeto. This type applies to buttons as well as check boxes, picture buttons, button grids, radio buttons, picture pop-up menus and drop-down lists.
 
 ### Compiler Methods for
 
