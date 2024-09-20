@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.VARIABLE TO VARIABLE.Summary-->The **VARIABLE TO VARIABLE** command writes the *dstVar* process variables (*dstVar2*, etc.<!-- END REF-->) of the destination process whose number is passed in *process* using the values of the variables *srcVar1* *srcVar2*, etc.
+<!--REF #_command_.VARIABLE TO VARIABLE.Summary-->The **VARIABLE TO VARIABLE** command writes the *dstVar* process variables (*dstVar2*, etc.) of the destination process whose number is passed in *process* using the values of the variables *srcVar1* *srcVar2*, etc.<!-- END REF-->
 
 **VARIABLE TO VARIABLE** has the same action as [SET PROCESS VARIABLE](set-process-variable.md), with the following differences: 
 

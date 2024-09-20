@@ -16,11 +16,9 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.Formula.Summary-->**Documentation moved**
 
-
-**Documentation moved**
-
-The documentation for this command has been moved. See [**Formula** command on developer.4d.com](https://developer.4d.com/docs/API/FunctionClass#formula) for updated documentation.
+The documentation for this command has been moved.<!-- END REF--> See [**Formula** command on developer.4d.com](https://developer.4d.com/docs/API/FunctionClass#formula) for updated documentation.
 
 The **Formula** command creates a formula object based upon the *formulaExp* expression. 
 

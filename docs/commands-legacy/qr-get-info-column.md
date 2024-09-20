@@ -23,11 +23,9 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.QR GET INFO COLUMN.Summary-->##### List mode 
 
-
-##### List mode 
-
-The **QR GET INFO COLUMN** command retrieves the parameters of an existing column.
+The **QR GET INFO COLUMN** command retrieves the parameters of an existing column.<!-- END REF-->
 
 *area* is the reference of the Quick Report area.
 

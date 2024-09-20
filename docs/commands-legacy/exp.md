@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Exp.Summary-->Exp raises the natural log base (e = 2.<!-- END REF-->71828...) by the power of *number*. Exp is the inverse function of [Log](log.md).
+<!--REF #_command_.Exp.Summary-->Exp raises the natural log base (e = 2.71828...) by the power of *number*.<!-- END REF--> Exp is the inverse function of [Log](log.md).
 
 **Note:** 4D provides the predefined constant *e number* (2.71828...).
 

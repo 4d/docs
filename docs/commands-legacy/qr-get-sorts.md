@@ -17,12 +17,10 @@ displayed_sidebar: docs
 
 #### Description 
 
-
-
-The QR GET SORTS command populates two arrays:
+<!--REF #_command_.QR GET SORTS.Summary-->The QR GET SORTS command populates two arrays:
 
 * *aColumns*  
-This array includes all the columns that have a sort order.
+This array includes all the columns that have a sort order.<!-- END REF-->
 * *aOrders*  
 Each element of this array contains the sort orders for the matching column.  
 \- If *aOrders{$i}* equals 1, the sort order is ascending.  

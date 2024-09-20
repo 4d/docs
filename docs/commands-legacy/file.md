@@ -17,11 +17,9 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.File.Summary-->**Documentation moved**
 
-
-**Documentation moved**
-
-The documentation for this command has been moved. See [**File** command on developer.4d.com](https://developer.4d.com/docs/API/FileClass#file) for updated documentation.
+The documentation for this command has been moved.<!-- END REF--> See [**File** command on developer.4d.com](https://developer.4d.com/docs/API/FileClass#file) for updated documentation.
 
 The **File** command creates and returns a new object of the *File* type. 
 

@@ -16,11 +16,9 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.Table.Summary-->The Table command has three forms:
 
-
-The Table command has three forms:
-
-* If you pass a table number in *tableNum*, Table returns a pointer to the table.
+* If you pass a table number in *tableNum*, Table returns a pointer to the table.<!-- END REF-->
 * If you pass a table pointer in *aPtr*, Table returns the table number of the table.
 * If you pass a field pointer in *aPtr*, Table returns the table number of the field.
 

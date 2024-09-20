@@ -17,11 +17,9 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.Create entity selection.Summary-->**Documentation moved**
 
-
-**Documentation moved**
-
-The documentation for this command has been moved. Visit *developer.4d.com* for updated documentation.
+The documentation for this command has been moved.<!-- END REF--> Visit *developer.4d.com* for updated documentation.
 
 The **Create entity selection** command builds and returns a new, alterable entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table.
 

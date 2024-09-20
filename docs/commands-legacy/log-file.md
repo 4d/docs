@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Log File.Summary-->The Log File command returns the long name (i.<!-- END REF-->e. the complete pathname of the file, including its name) of the current log file of the open database. 
+<!--REF #_command_.Log File.Summary-->The Log File command returns the long name (i.e. the complete pathname of the file, including its name) of the current log file of the open database.<!-- END REF--> 
 
 If the database is operating without a log file, the command returns an empty string and the system variable OK is set to 0\. 
 

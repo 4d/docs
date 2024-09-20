@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.SET TABLE TITLES.Summary-->**SET TABLE TITLES** lets you mask, rename, and reorder the tables of your database that appear in standard 4D dialog boxes within the Application environment (i.<!-- END REF-->e. when the startup mode is **Application**, or after you select **Test application** in the **Run** menu). For example, this command can modify the display of tables in the Query editor in Application mode.
+<!--REF #_command_.SET TABLE TITLES.Summary-->**SET TABLE TITLES** lets you mask, rename, and reorder the tables of your database that appear in standard 4D dialog boxes within the Application environment (i.e. when the startup mode is **Application**, or after you select **Test application** in the **Run** menu).<!-- END REF--> For example, this command can modify the display of tables in the Query editor in Application mode.
 
 Using this command, you can also rename the table labels in your forms on the fly, if you used dynamic names. For more information about inserting dynamic field and table names in forms, refer to *Using references in static text* in the *4D Design Reference* manual.
 

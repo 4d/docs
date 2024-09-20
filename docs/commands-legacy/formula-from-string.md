@@ -16,11 +16,9 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.Formula from string.Summary-->**Documentation moved**
 
-
-**Documentation moved**
-
-The documentation for this command has been moved. See [**Formula from string** command on developer.4d.com](https://developer.4d.com/docs/API/FunctionClass#formula-from-string) for updated documentation.
+The documentation for this command has been moved.<!-- END REF--> See [**Formula from string** command on developer.4d.com](https://developer.4d.com/docs/API/FunctionClass#formula-from-string) for updated documentation.
 
 The **Formula from string** command creates a formula object based upon the *formulaString*. 
 

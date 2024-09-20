@@ -16,8 +16,6 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.New signal.Summary-->**Documentation moved**
 
-
-**Documentation moved**
-
-The documentation for this command has been moved to [developer.4d.com](https://developer.4d.com/docs/API/SignalClass#new-signal).
+The documentation for this command has been moved to [developer.<!-- END REF-->4d.com](https://developer.4d.com/docs/API/SignalClass#new-signal).

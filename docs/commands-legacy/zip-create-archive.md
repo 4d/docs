@@ -18,11 +18,9 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.ZIP Create archive.Summary-->**Documentation moved**
 
-
-**Documentation moved**
-
-The documentation for this command has been moved. See [**ZIP Create archive** command on developer.4d.com](https://developer.4d.com/docs/API/ZipArchiveClass#zip-create-archive) for updated documentation.
+The documentation for this command has been moved.<!-- END REF--> See [**ZIP Create archive** command on developer.4d.com](https://developer.4d.com/docs/API/ZipArchiveClass#zip-create-archive) for updated documentation.
 
 The **ZIP Create archive** command creates a compressed ZIP archive object and returns the status of the operation. 
 

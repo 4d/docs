@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.GET PROCESS VARIABLE.Summary-->The **GET PROCESS VARIABLE** command reads the *srcVar* process variables (*srvVar2*, etc.<!-- END REF-->) from the source process whose number is passed in *process*, and returns their current values in the *dstVar* variables ( *dstVar2*, etc.) of the current process.
+<!--REF #_command_.GET PROCESS VARIABLE.Summary-->The **GET PROCESS VARIABLE** command reads the *srcVar* process variables (*srvVar2*, etc.) from the source process whose number is passed in *process*, and returns their current values in the *dstVar* variables ( *dstVar2*, etc.) of the current process.<!-- END REF-->
 
 Each source variable can be a variable, an array or an array element. However, see the restrictions listed later in this section.
 

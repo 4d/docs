@@ -16,11 +16,9 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.On Mobile App Authentication database method.Summary-->**Documentation moved**
 
-
-**Documentation moved**
-
-The documentation for this database method has been updated and moved to [developer.4d.com/go-mobile](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication).
+The documentation for this database method has been updated and moved to [developer.<!-- END REF-->4d.com/go-mobile](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication).
 
 #### See also 
 

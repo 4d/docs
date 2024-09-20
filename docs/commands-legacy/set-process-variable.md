@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.SET PROCESS VARIABLE.Summary-->The **SET PROCESS VARIABLE** command writes the *dstVar* process variables (*dstVar2*, etc.<!-- END REF-->) of the destination process whose number is passed in *process* using the values passed in *expr1* (*expr2*, etc.).
+<!--REF #_command_.SET PROCESS VARIABLE.Summary-->The **SET PROCESS VARIABLE** command writes the *dstVar* process variables (*dstVar2*, etc.) of the destination process whose number is passed in *process* using the values passed in *expr1* (*expr2*, etc.).<!-- END REF-->
 
 Each destination variable can be a variable or an array element. However, see the restrictions listed later in this section.
 

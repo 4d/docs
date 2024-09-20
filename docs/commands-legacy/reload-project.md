@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.RELOAD PROJECT.Summary-->The **RELOAD PROJECT** command reloads the source file definitions (methods, forms, etc.<!-- END REF-->) from the disk for the running project in the current 4D environment. It can only be used with 4D projects executed in **interpreted mode**. The command execution is asynchronous. 
+<!--REF #_command_.RELOAD PROJECT.Summary-->The **RELOAD PROJECT** command reloads the source file definitions (methods, forms, etc.) from the disk for the running project in the current 4D environment.<!-- END REF--> It can only be used with 4D projects executed in **interpreted mode**. The command execution is asynchronous. 
 
 Usually, a project is automatically reloaded when the 4D application detects that a source file has been added, modified, or deleted. It is the case when a file was directly edited from the 4D Developer IDE, or after the 4D application window is moved from the background to the foreground of the OS. 
 

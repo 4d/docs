@@ -16,9 +16,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Cache info.Summary-->The **Cache info** command returns an object that contains detailed information about the current cache contents (used memory, loaded tables and indexes, etc.<!-- END REF-->)
+<!--REF #_command_.Cache info.Summary-->The **Cache info** command returns an object that contains detailed information about the current cache contents (used memory, loaded tables and indexes, etc.)
 
-**Note:** This command only works in local mode (4D Server and 4D); it must not be used from 4D in remote mode. 
+**Note:** This command only works in local mode (4D Server and 4D); it must not be used from 4D in remote mode.<!-- END REF--> 
 
 By default, returned information refers to the running database only. The optional *dbFilter* object parameter allows you to specify the scope of the command:
 

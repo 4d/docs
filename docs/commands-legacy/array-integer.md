@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.ARRAY INTEGER.Summary-->The ARRAY INTEGER command creates and/or resizes an array of 2-byte [Integer](# "Number between -32,768.<!-- END REF-->.32,767 (2^15..(2^15)-1) (2-byte integer)") elements in memory.
+<!--REF #_command_.ARRAY INTEGER.Summary-->The ARRAY INTEGER command creates and/or resizes an array of 2-byte [Integer](# "Number between -32,768..32,767 (2^15..(2^15)-1) (2-byte integer)") elements in memory.<!-- END REF-->
 
 * The *arrayName* parameter is the name of the array.
 * The *size* parameter is the number of elements in the array.

@@ -17,11 +17,9 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.Folder.Summary-->**Documentation moved**
 
-
-**Documentation moved**
-
-The documentation for this command has been moved. See [**Folder** command on developer.4d.com](https://developer.4d.com/docs/API/FolderClass#folder) for updated documentation.
+The documentation for this command has been moved.<!-- END REF--> See [**Folder** command on developer.4d.com](https://developer.4d.com/docs/API/FolderClass#folder) for updated documentation.
 
 The **Folder** command creates and returns a new object of the Folder type. 
 

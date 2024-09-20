@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.WEB GET VARIABLES.Summary-->The **WEB GET VARIABLES** command fills the text arrays *nameArray* and *valueArray* with the variable names and values contained in the Web form “submitted” (i.<!-- END REF-->e. sent to the Web server).
+<!--REF #_command_.WEB GET VARIABLES.Summary-->The **WEB GET VARIABLES** command fills the text arrays *nameArray* and *valueArray* with the variable names and values contained in the Web form “submitted” (i.e. sent to the Web server).<!-- END REF-->
 
 This command gets the value for all the variables which can be included in HTML pages: text area, button, check box, radio button, pop up menu, choice list...
 

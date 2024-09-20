@@ -16,11 +16,9 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.GET REGISTERED CLIENTS.Summary-->The **GET REGISTERED CLIENTS** command fills two arrays:
 
-
-The **GET REGISTERED CLIENTS** command fills two arrays:
-
-* *clientLists* contains the list of clients who were “registered” by using the [REGISTER CLIENT](register-client.md) command.
+* *clientLists* contains the list of clients who were “registered” by using the [REGISTER CLIENT](register-client.md) command.<!-- END REF-->
 * *methods* supplies the list of each client’s “workload”. The workload is the number of methods that a 4D Client must still execute by calling the [EXECUTE ON CLIENT](execute-on-client.md) command (for more information, please refer to the description of the [EXECUTE ON CLIENT](execute-on-client.md) command).
 
 #### Example 1 

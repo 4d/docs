@@ -22,11 +22,9 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.Open window.Summary-->**Open window** opens a new window with the dimensions given by the first four parameters:
 
-
-**Open window** opens a new window with the dimensions given by the first four parameters:
-
-* *left* is the distance in pixels from the left edge of the application window to the left internal edge of the window.
+* *left* is the distance in pixels from the left edge of the application window to the left internal edge of the window.<!-- END REF-->
 * *top* is the distance in pixels from the top of the application window to the top internal edge of the window.
 * *right* is the distance in pixels from the left edge of the application window to the right internal edge of the window.
 * *bottom* is the distance in pixels from the top of the application window to the bottom internal edge of the window.

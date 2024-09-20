@@ -14,11 +14,9 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.ACCEPT.Summary-->The **ACCEPT** command is used in form or object methods (or in subroutines) to:
 
-
-The **ACCEPT** command is used in form or object methods (or in subroutines) to:
-
-* accept a new or modified record, for which data entry has been initiated using [ADD RECORD](add-record.md) or [MODIFY RECORD](modify-record.md).
+* accept a new or modified record, for which data entry has been initiated using [ADD RECORD](add-record.md) or [MODIFY RECORD](modify-record.md).<!-- END REF-->
 * accept a form displayed with the [DIALOG](dialog.md) command.
 * exit a form displaying a selection of records, using [DISPLAY SELECTION](display-selection.md) or [MODIFY SELECTION](modify-selection.md).
 

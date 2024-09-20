@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.ARRAY LONGINT.Summary-->The ARRAY LONGINT command creates and/or resizes an array of 4-byte [Longint](# "Number between -2^31.<!-- END REF-->.(2^31)-1 (4-byte Integer)") elements in memory.
+<!--REF #_command_.ARRAY LONGINT.Summary-->The ARRAY LONGINT command creates and/or resizes an array of 4-byte [Longint](# "Number between -2^31..(2^31)-1 (4-byte Integer)") elements in memory.<!-- END REF-->
 
 * The *arrayName* parameter is the name of the array.
 * The *size* parameter is the number of elements in the array.

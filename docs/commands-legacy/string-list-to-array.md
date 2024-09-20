@@ -17,11 +17,9 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.STRING LIST TO ARRAY.Summary-->The **STRING LIST TO ARRAY** command populates the array *strings* with:
 
-
-The **STRING LIST TO ARRAY** command populates the array *strings* with:
-
-* Either the strings stored in the string list ("STR#") resource whose ID is passed in *resID*.
+* Either the strings stored in the string list ("STR#") resource whose ID is passed in *resID*.<!-- END REF-->
 * Or a string stored in an open XLIFF file whose 'id' attribute of the 'group' element is passed in *resID* (see "Compatibility with XLIFF architecture" below).
 
 If the resource is not found, the array *strings* is left unchanged and the OK variable is set to 0 (zero).

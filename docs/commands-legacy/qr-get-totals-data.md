@@ -19,11 +19,9 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.QR GET TOTALS DATA.Summary-->##### List Mode 
 
-
-##### List Mode 
-
-The **QR GET TOTALS DATA** command retrieves the details of a specific break.  
+The **QR GET TOTALS DATA** command retrieves the details of a specific break.<!-- END REF-->  
 
 *area* is the reference of the Quick Report area.
 

@@ -20,10 +20,8 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.MAIL New attachment.Summary-->**Documentation moved**
 
-
-**Documentation moved**
-
-The documentation for this command has been moved. Visit *developer.4d.com* for updated documentation.
+The documentation for this command has been moved.<!-- END REF--> Visit *developer.4d.com* for updated documentation.
 
 The **MAIL New attachment** command allows you to create an attachment object that you can add to an *Email* object (see *transporter.send( )*)

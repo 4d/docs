@@ -22,11 +22,9 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.QR SET INFO COLUMN.Summary-->##### List mode 
 
-
-##### List mode 
-
-The **QR SET INFO COLUMN** command sets the parameters of an existing column. 
+The **QR SET INFO COLUMN** command sets the parameters of an existing column.<!-- END REF--> 
 
 *area* is the reference of the Quick Report area.
 

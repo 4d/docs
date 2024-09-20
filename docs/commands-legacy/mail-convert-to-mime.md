@@ -17,10 +17,8 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.MAIL Convert to MIME.Summary-->**Documentation déplacée**
 
-
-**Documentation déplacée**
-
-The documentation for this command has been moved. Visit *developer.4d.com* for updated documentation.
+The documentation for this command has been moved.<!-- END REF--> Visit *developer.4d.com* for updated documentation.
 
 **MAIL Convert to MIME** converts a MIME document into a valid email object.

@@ -15,11 +15,9 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.USE ENTITY SELECTION.Summary-->**Documentation moved**
 
-
-**Documentation moved**
-
-The documentation for this command has been moved. Visit *developer.4d.com* for updated documentation.
+The documentation for this command has been moved.<!-- END REF--> Visit *developer.4d.com* for updated documentation.
 
 The **USE ENTITY SELECTION** command updates the current selection of the table matching the dataclass of the *entitySelection* parameter, according to the content of the entity selection.
 

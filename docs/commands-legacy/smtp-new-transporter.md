@@ -16,10 +16,8 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.SMTP New transporter.Summary-->**Documentation moved**
 
-
-**Documentation moved**
-
-The documentation for this command has been moved. Visit *developer.4d.com* for updated documentation.
+The documentation for this command has been moved.<!-- END REF--> Visit *developer.4d.com* for updated documentation.
 
 The **SMTP New transporter** command configures a new SMTP connection according to the *server* parameter and returns a new *transporter* object. The returned *transporter* object will then usually be used to send emails.

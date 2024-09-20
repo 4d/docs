@@ -20,11 +20,9 @@ displayed_sidebar: docs
 
 #### 
 
+<!--REF #_command_.On Web Connection database method.Summary-->The **On Web Connection database method** can be called in the following cases:
 
-
-The **On Web Connection database method** can be called in the following cases:
-
-* the web server receives a request beginning with the *4DCGI* URL.
+* the web server receives a request beginning with the *4DCGI* URL.<!-- END REF-->
 * the web server receives an invalid request.
 
 For more information, refer to the paragraph “” below.

@@ -17,11 +17,9 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.ZIP Read archive.Summary-->**Documentation moved**
 
-
-**Documentation moved**
-
-The documentation for this command has been moved. See [**ZIP Read archive** command on developer.4d.com](https://developer.4d.com/docs/API/ZipArchiveClass#zip-read-archive) for updated documentation.
+The documentation for this command has been moved.<!-- END REF--> See [**ZIP Read archive** command on developer.4d.com](https://developer.4d.com/docs/API/ZipArchiveClass#zip-read-archive) for updated documentation.
 
 The **ZIP Read archive** command retrieves the contents of zipFile and returns it as an object. 
 

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.CLEAR VARIABLE.Summary-->CLEAR VARIABLE resets *variable* to its default type value (*i.<!-- END REF-->e.*, empty string for Text variables, *0* for numeric variables, no elements for arrays, etc.). The variable still exists in memory. 
+<!--REF #_command_.CLEAR VARIABLE.Summary-->CLEAR VARIABLE resets *variable* to its default type value (*i.e.*, empty string for Text variables, *0* for numeric variables, no elements for arrays, etc.).<!-- END REF--> The variable still exists in memory. 
 
 **Note:** For more information on default type values, please refer to the *Default values* paragraph.
 

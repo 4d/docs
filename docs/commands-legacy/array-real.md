@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.ARRAY REAL.Summary-->The ARRAY REAL command creates and/or resizes an array of [Real](# "Number between ±1.<!-- END REF-->7e±308 (15 digits)") elements in memory. 
+<!--REF #_command_.ARRAY REAL.Summary-->The ARRAY REAL command creates and/or resizes an array of [Real](# "Number between ±1.7e±308 (15 digits)") elements in memory.<!-- END REF--> 
 
 * The arrayName parameter is the name of the array.
 * The *size* parameter is the number of elements in the array.

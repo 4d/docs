@@ -16,10 +16,8 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.POP3 New transporter.Summary-->**Documentation moved**
 
-
-**Documentation moved**
-
-The documentation for this command has been moved. Visit *developer.4d.com* for updated documentation.
+The documentation for this command has been moved.<!-- END REF--> Visit *developer.4d.com* for updated documentation.
 
 The **POP3 New transporter** command configures a new POP3 connection according to the *server* parameter and returns a new *transporter* object. The returned transporter object will then usually be used to receive emails.

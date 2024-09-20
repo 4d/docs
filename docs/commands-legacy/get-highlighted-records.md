@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.GET HIGHLIGHTED RECORDS.Summary-->The **GET HIGHLIGHTED RECORDS** command stores in the set designated by the *setName* parameter the highlighted records (i.<!-- END REF-->e., the records highlighted by the user in the list form) in the *aTable* passed as parameter. If the *aTable* parameter is omitted, the table of the current form or subform is used.
+<!--REF #_command_.GET HIGHLIGHTED RECORDS.Summary-->The **GET HIGHLIGHTED RECORDS** command stores in the set designated by the *setName* parameter the highlighted records (i.e., the records highlighted by the user in the list form) in the *aTable* passed as parameter.<!-- END REF--> If the *aTable* parameter is omitted, the table of the current form or subform is used.
 
 In Design mode or when executing the [DISPLAY SELECTION](display-selection.md) /[MODIFY SELECTION](modify-selection.md) commands, this command can be replaced by calling the UserSet system set which is automatically maintained by 4D. However, since this command allows you to pick the table that will receive highlighted records, the GET HIGHLIGHTED RECORDS command can also manage record selections in subforms as well. In this case, subform selections can also come from different tables. For more information about the UserSet set, refer to the *Sets* section.
 
