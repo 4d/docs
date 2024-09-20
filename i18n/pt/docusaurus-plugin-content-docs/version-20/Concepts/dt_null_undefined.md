@@ -119,24 +119,24 @@ Comparações com os operadores Maior que (`>`), Menor que (`<`), Maior ou igual
 ## Operadores indefinidos
 
 
-| Operação             | Sintaxe                                               | Retorna    | Expression                          | Valor |
-| -------------------- | ----------------------------------------------------- | ---------- | ----------------------------------- | ----- |
-| Igual                | Undefined `=` Undefined                               | Parâmetros | a.undefinedProp `=` b.undefinedProp | True  |
-|                      | Undefined `=` Null                                    | Parâmetros | a.undefinedProp `=` c.nullProp      | True  |
-|                      | Undefined `=` *outros valores*                        | Parâmetros | a.undefinedProp `=` 42              | False |
-| Desigualdade         | Undefined `#` Undefined                               | Parâmetros | a.undefinedProp `#` b.undefinedProp | False |
-|                      | Undefined `#` Null                                    | Parâmetros | a.undefinedProp `#` b.nullProp      | False |
-|                      | Undefined `#` *outros valores*                        | Parâmetros | a.undefinedProp `#` 42              | True  |
-| Maior que            | Undefined `>` string, Date, Time, Boolean, number  | Parâmetros | a.undefinedProp `>` "abc"        | False |
-| Menor que            | Undefined `<` string, Date, Time, Boolean, number  | Parâmetros | a.undefinedProp `<` "abc"        | False |
-| Maior ou igual a     | Undefined `>=` string, Date, Time, Boolean, number | Parâmetros | a.undefinedProp `>=` "abc"       | False |
-| Menor que ou igual a | Undefined `<=` string, Date, Time, Boolean, number | Parâmetros | a.undefinedProp `<=` "abc"       | False |
+| Operação             | Sintaxe                                      | Retorna    | Expression                          | Valor |
+| -------------------- | -------------------------------------------- | ---------- | ----------------------------------- | ----- |
+| Igual                | Undefined `=` Undefined                      | Parâmetros | a.undefinedProp `=` b.undefinedProp | True  |
+|                      | Undefined `=` Null                           | Parâmetros | a.undefinedProp `=` c.nullProp      | True  |
+|                      | Undefined `=` *outros valores*               | Parâmetros | a.undefinedProp `=` 42              | False |
+| Desigualdade         | Undefined `#` Undefined                      | Parâmetros | a.undefinedProp `#` b.undefinedProp | False |
+|                      | Undefined `#` Null                           | Parâmetros | a.undefinedProp `#` b.nullProp      | False |
+|                      | Undefined `#` *outros valores*               | Parâmetros | a.undefinedProp `#` 42              | True  |
+| Maior que            | Undefined `>` string, Date, Time, number  | Parâmetros | a.undefinedProp `>` "abc"        | False |
+| Menor que            | Undefined `<` string, Date, Time, number  | Parâmetros | a.undefinedProp `<` "abc"        | False |
+| Maior ou igual a     | Undefined `>=` string, Date, Time, number | Parâmetros | a.undefinedProp `>=` "abc"       | False |
+| Menor que ou igual a | Undefined `<=` string, Date, Time, number | Parâmetros | a.undefinedProp `<=` "abc"       | False |
 
 *outros valores* são expressões de qualquer tipo com um valor nem Indefinido nem Null.
 
 :::info
 
-Comparações de valores Indefinidos com Pontos, Imagem, Blob, Objecto, Colecção, Valores Indefinidos ou Nulos utilizando valores Maiores que (`>`), Menos que (`<`), Maiores ou iguais a (`>=`), e Menos ou iguais a (`<=`) os operadores não são suportados e devolvem um erro.
+Comparisons of Undefined values with Pointer, Picture, Boolean, Blob, Object, Collection, Undefined or Null values using Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported and return an error.
 
 :::
 
