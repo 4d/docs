@@ -620,7 +620,7 @@ Quando um objeto `Session` é criado, a propriedade `.storage` está vazia. Sinc
 
 > Like the `Storage` object of the server, the `.storage` property is always "single": adding a shared object or a shared collection to `.storage` does not create a shared group.
 
-This property is **read only** itself but it returns a read-write object.
+Essa propriedade é **apenas de leitura**, mas retorna um objeto de leitura e gravação.
 
 :::tip
 
