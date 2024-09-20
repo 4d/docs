@@ -5,7 +5,7 @@ title: IMAPTransporter
 
 A classe `IMAPTransporter` permite-lhe recuperar mensagens a partir de um servidor de correio electrónico IMAP.
 
-### IMAP Transporter object
+### Objecto IMAP Transporter
 
 Os objectos do IMAP Transporter são instanciados com o comando [IMAP New Transportter](#imap-new-transporter) . Eles oferecem as propriedades abaixo e funções:
 
