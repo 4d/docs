@@ -10,7 +10,7 @@ Nome do caminho de uma imagem de origem estática para um botão de imagem [](pi
 
 Podem ser utilizadas duas localizações principais para o percurso da imagem estática:
 
-- in the **Resources** folder of the project database. Appropriate when you want to share static pictures between several forms in the database. Neste caso, o nome do caminho é "/RESOURCES/<picture path\>".
+- na pasta **Resources** do banco de dados projeto. Appropriate when you want to share static pictures between several forms in the database. Neste caso, o nome do caminho é "/RESOURCES/<picture path\>".
 - numa pasta de imagens (por exemplo, **Images**) dentro da pasta do formulário. Adequado quando as imagens estáticas forem utilizadas apenas no formulário ou se pretende poder mover ou duplicar todo o formulário dentro do projeto ou em projetos diferentes. Neste caso, o nome do caminho é "<picture path\>" e é resolvido a partir da raiz da pasta do formulário.
 
 #### Gramática JSON
