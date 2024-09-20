@@ -536,7 +536,7 @@ Por exemplo, se você quiser que a pasta raiz HTML seja a subpasta "Web" na past
 | `WEB SET OPTION`                   | `Sessão escalável Web`                                                                                                                                           |             |
 | Caixa de diálogos de configurações | [Options (I) page/Scalable sessions (multi-process sessions)](../settings/web.md#scalable-sessions-multi-process-sessions) |             |
 
-Session management enabling status for the 4D web server. Web server sessions are detailed in the [Web sessions](sessions.md) page.
+Session management enabling status for the 4D web server. As sessões do servidor da Web são detalhadas na página [Sessões Web](sessions.md).
 
 ## Domínio do cookie de sessão
 
