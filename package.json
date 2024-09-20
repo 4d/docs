@@ -11,8 +11,8 @@
     "doc_preprocess": "doc_preprocess",
     "start_watch": "doc_preprocess --settings_type='start_watch'",
     "syntaxViewPro": "doc_preprocess --settings_type='build_syntax_viewPro' && doc_preprocess --settings_type='build_syntax_viewPro_translated'",
-    "syntax": "doc_preprocess --settings_type='build_syntax' && doc_preprocess --settings_type='build_syntax_translated'",
-    "build": "doc_preprocess && doc_preprocess --settings_type='build_versioned_docs' && doc_preprocess --settings_type='build_translate' && docusaurus build",
+    "syntax": "cross-env NODE_OPTIONS='--max-old-space-size=8192' doc_preprocess --settings_type='build_syntax' && doc_preprocess --settings_type='build_syntax_translated'",
+    "build": "cross-env NODE_OPTIONS='--max-old-space-size=8192' doc_preprocess && doc_preprocess --settings_type='build_versioned_docs' && doc_preprocess --settings_type='build_translate' && docusaurus build",
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus write-translations",
     "version": "docusaurus-version",
@@ -22,6 +22,7 @@
     "docusaurus": "docusaurus"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "highlightjs-4d": "^1.0.6"
   },
   "dependencies": {
