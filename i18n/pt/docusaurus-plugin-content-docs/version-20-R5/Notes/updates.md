@@ -276,7 +276,7 @@ WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
 - Because of the support of the [ternary operator](../Concepts/operators.md#ternary-operator), the colon ":" is no longer allowed in variable, field, constant, function, plugin and project method names. Se o seu banco de dados/projeto contiver identificadores com dois, você deve substituí-los antes de convertê-lo para 4D 19 R4 ou superior, caso contrário podem ocorrer erros no seu código. For example, if you have a variable named _a:b_, it could be interpreted as ternary operator syntax:
 
 ```4d
-$value:=($size>1000)? a:b // Here 'a:b' is viewed as a ternary operator.
+$value:=($size>1000)? a:b // Aqui 'a:b' é visto como um operador ternário.
 
 ```
 
