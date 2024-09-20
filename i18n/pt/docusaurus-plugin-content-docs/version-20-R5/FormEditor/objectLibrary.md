@@ -26,7 +26,8 @@ A janela tem as seguintes características principais:
   ![](../assets/en/FormEditor/library3.png)
 - Para utilizar um objeto da biblioteca no seu formulário, pode:
   - clicar com o botão direito do rato num objeto e selecionar **Copiar** no menu contextual
-  - or drag and drop the object from the library The object is then added to the form.
+  - or drag and drop the object from the library
+    The object is then added to the form.
 
 Esta biblioteca é só de leitura. Se quiser editar objetos padrão ou criar sua própria biblioteca de objetos pré-configurados ou formulários projetos, você precisará criar uma biblioteca de objetos personalizada (veja abaixo).
 
