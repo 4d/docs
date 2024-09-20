@@ -250,7 +250,7 @@ Eis alguns exemplos:
 - "^1.2.3": the latest version 1, starting with the 1.2.3 version and strictly lower than version 2.
 - "~1.2.3": the latest version 1.2, starting with the 1.2.3 version and strictly lower than version 1.3.
 - "<=1.2.3": a versão mais recente até a 1.2.3.
-- "1.0.0 – 1.2.3" or ">=1.0.0 <=1.2.3": version between 1.0.0 and 1.2.3.
+- "1.0.0 - 1.2.3" ou ">=1.0.0 <=1.2.3": versão entre 1.0.0 e 1.2.3.
 - "`<1.2.3 || >=2`": versão que não está entre 1.2.3 e 2.0.0.
 
 If you do not specify a tag or a version, 4D automatically retrieves the "latest" version.
