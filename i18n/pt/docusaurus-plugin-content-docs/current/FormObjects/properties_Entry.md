@@ -70,7 +70,7 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 ## Filtro de entrada
 
-An entry filter controls exactly what the user can type during data entry. A diferencia de las [listas obligatorias ](properties_RangeOfValues.md#required-list), por ejemplo, los filtros de entrada funcionan caracter por caracter. For example, if a part number always consists of two letters followed by three digits, you can use an entry filter to restrict the user to that pattern. Pode até controlar as letras e os números específicos.
+Um filtro de entrada controla exatamente o que o usuário pode digitar durante a entrada de dados. A diferencia de las [listas obligatorias ](properties_RangeOfValues.md#required-list), por ejemplo, los filtros de entrada funcionan caracter por caracter. For example, if a part number always consists of two letters followed by three digits, you can use an entry filter to restrict the user to that pattern. Pode até controlar as letras e os números específicos.
 
 Um filtro de entrada funciona apenas durante a introdução de dados. Não tem nenhum efeito na apresentação de dados após o usuário ter anulado a seleção do objeto. En general, se utilizan conjuntamente los filtros de entrada con los [formatos de visualización](properties_Display.md). The filter constrains data entry and the format ensures proper display of the value after data entry.
 
@@ -108,7 +108,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | !_&9(###)!0###-####                            | Número de telefone interurbano. Mostrar sublinhados nos três primeiros espaços de entrada, zeros nos restantes.                                                                                       |
 | !0&9###-###-###                                                                        | Número de telefone interurbano. Apresentar zeros nos espaços de entrada. Permitir qualquer número. Três entradas, hífen, três entradas, hífen, quatro entradas.       |
 | !0&9###-##-###                                                                         | Número de segurança social. Apresentar zeros nos espaços de entrada. Permitir quaisquer números.                                                                                      |
-| ~"A-Z;0-9; ;,;.;-"                                                         | Letras maiúsculas e pontuação. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                                                                             |
+| ~"A-Z;0-9; ;,;.;-"                                                         | Letras maiúsculas e pontuação. Permita apenas letras maiúsculas, números, espaços, vírgulas, pontos e hifens.                                                                                         |
 | &"a-z;0-9; ;,;.;-"                                                     | Letras maiúsculas e minúsculas e pontuação. Permitir letras minúsculas, números, espaços, vírgulas, pontos e hífens.                                                                                  |
 | &"0-9;.;-"                                                             | Números. Só são permitidos números, pontos decimais e hífenes (sinal de menos).                                                                                                    |
 
