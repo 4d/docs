@@ -60,6 +60,14 @@ Syntax checking can also be launched directly using the **Check Syntax** command
 
 ### Generate Typing
 
+
+:::info Compatibility
+
+This button is only displayed when the **All variables are typed (Direct typing)** [compilation path](#compilation-path) option (default, recommended) is not selected. 
+
+:::
+
+
 The **Generate Typing** button creates or updates typing compiler methods. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters declared outside prototypes](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). These methods, when they exist, are used directly by the compiler during code compilation, resulting in faster compilation times. 
 
 The name of these methods must begin with `Compiler_`. You can set the default name for each of the 5 compiler methods in the [compiler settings window](#compiler-methods-for). The compiler methods that are generated and maintained by 4D automatically have the `Invisible` attribute:
@@ -112,15 +120,17 @@ Used to generate the error file (see [error file](#error-file)) at the time of s
 
 Used to set the number of passes (code parsing) performed by the compiler and thus the duration of compilation.
 
-- **Type the variables**: Check this option if you want the compiler to infer the type of variables and parameters in your code. This option requires the compiler to perform all the stages that make compilation possible, which increases the duration of compilation. 
-- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables as well as method parameters declared outside prototypes is not carried out. This option can be used when you have already carried out the typing of all your process and interprocess variables either yourself or using the function for automatic generation of compiler methods.
-- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters declared outside prototypes is not carried out. Use this option when you are certain that all the local, process, and interprocess variables as well as method parameters have been clearly typed.
+:::info Compatibility
 
-:::tip
-
-You can use the [Generate Typing](#generate-typing) button then compile with one of the two last options. 
+The first three options are only maintained for compatibility with legacy code. It is recommended to select the **All variables are typed (Direct typing)** option and to declare variables and parameters using `var` and `#declare` keywords. 
 
 :::
+
+
+- **Type the variables**: Check this option if you want the compiler to infer the type of variables and parameters in your code. This option requires the compiler to perform all the stages that make compilation possible, which increases the duration of compilation. 
+- **Process and interprocess variables are typed**: When selected, the pass for typing process and interprocess variables as well as method parameters declared outside prototypes is not carried out. This option can be used when you have already carried out the typing of all your process and interprocess variables either yourself or using the [Generate Typing](#generate-typing) button.
+- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters declared outside prototypes is not carried out. Use this option when you are certain that all the local, process, and interprocess variables as well as method parameters have been clearly typed, either by yourself or with the [Generate Typing](#generate-typing) button. 
+- **All variables are typed (Direct typing)**: The direct typing concept assumes that all elements are declared where they are defined in your code. This option **is recommended** since it provides the most flexibility and efficiency to developers. Use this option when you have declared all your local, process, and interprocess variables using the regular [`var` syntax](../Concepts/variables.md#declaring-variables) as well as your method and function parameters [in their prototypes](../Concepts/parameters.md#parameters-declared-in-prototypes). 
 
 
 #### Compilation Target
