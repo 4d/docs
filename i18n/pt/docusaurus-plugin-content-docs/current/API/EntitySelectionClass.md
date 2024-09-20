@@ -144,7 +144,7 @@ USE ENTITY SELECTION($entitySel) //A seleção atual da tabela Employee é atual
 
 #### Descrição
 
-The `EntitySelection[index]` notation <!-- REF EntitySelectionClass.index.Summary -->allows you to access entities within the entity selection using the standard collection syntax<!-- END REF -->: pass the position of the entity you want to get in the *index* parameter.
+A notação `EntitySelection[index]` <!-- REF EntitySelectionClass.index.Summary -->permite acessar entidades dentro da seleção de entidades usando a sintaxe de coleção padrão<!-- END REF -->: passe a posição da entidade que deseja obter no parâmetro *index*.
 
 Lembre que a entidade correspondente é recarregada a partir da datastore.
 
@@ -155,7 +155,7 @@ Lembre que a entidade correspondente é recarregada a partir da datastore.
 
 :::caution
 
-`EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](EntityClass.md#lock) or [`.save()`](EntityClass.md#save). Para trabalhar com a entidade correspondente, é necessário atribuir a expressão devolvida a uma expressão atribuível, como uma variável. Exemplos:
+`EntitySelection[index]` é uma expressão não atribuível, o que significa que não pode ser usada como uma referência editável da entidade com métodos como [`.lock()`](EntityClass.md#lock) ou [`.save()`](EntityClass.md#save). Para trabalhar com a entidade correspondente, é necessário atribuir a expressão devolvida a uma expressão atribuível, como uma variável. Exemplos:
 
 ```4d
  $sel:=ds. Employee.all() //criação da entity selection
@@ -198,7 +198,7 @@ Lembre que a entidade correspondente é recarregada a partir da datastore.
 
 #### Descrição
 
-Any dataclass attribute can be used as a property of an entity selection to return <!-- REF EntitySelectionClass.attributeName.Summary -->a "projection" of values for the attribute in the entity selection<!-- END REF -->. Projected values can be a collection or a new entity selection, depending on the [kind](DataClassClass.md#attributename) (`storage` or `relation`) of the attribute.
+Qualquer atributo de classe de dados pode ser usado como uma propriedade de uma seleção de entidade para retornar <!-- REF EntitySelectionClass.attributeName.Summary -->uma "projeção" de valores para o atributo na seleção de entidade<!-- END REF -->. Os valores projetados podem ser uma coleção ou uma nova seleção de entidade, dependendo do [kind](DataClassClass.md#attributename) (`storage` ou `relation`) do atributo.
 
 - If *attributeName* kind is `storage`:
   `.attributeName` returns a collection of values of the same type as *attributeName*.
