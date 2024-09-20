@@ -3,9 +3,9 @@ id: EntitySelectionClass
 title: EntitySelection
 ---
 
-An entity selection is an object containing one or more reference(s) to [entities](ORDA/dsMapping.md#entity) belonging to the same [Dataclass](ORDA/dsMapping.md#dataclass). Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass.
+Uma seleção de entidade é um objeto que contém uma ou mais referências a [entidades](ORDA/dsMapping.md#entity) pertencentes à mesma [Dataclass](ORDA/dsMapping.md#dataclass). Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass.
 
-Entity selections can be created from existing selections using various functions of the [`DataClass` class](DataClassClass.md) such as [`.all()`](DataClassClass.md#all) or [`.query()`](DataClassClass.md#query), or functions of the `EntityClass` class itself, such as [`.and()`](#and) or [`orderBy()`](#orderby). You can also create blank entity selections using the [`dataClass.newSelection()`](DataClassClass.md#newselection) function or the [`Create new selection`](#create-new-selection) command.
+As seleções de entidades podem ser criadas a partir de seleções existentes usando várias funções da classe [`DataClass`](DataClassClass.md), como [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou funções da própria classe `EntityClass`, como [`.and()`](#and) ou [`orderBy()`](#orderby). Você também pode criar seleções de entidades em branco usando a função [`dataClass.newSelection()`](DataClassClass.md#newselection) ou o comando [`Create new selection`](#create-new-selection).
 
 ### Resumo
 
@@ -63,17 +63,17 @@ Entity selections can be created from existing selections using various function
 
 #### Descrição
 
-The `Create entity selection` command builds and returns a new, [alterable](ORDA/entities.md#shareable-or-alterable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table.
+O comando `Create entity selection` cria e retorna uma nova seleção de entidade [alterável](ORDA/entities.md#shareable-or-alterable-entity-selections) relacionada à classe de dados correspondente à *dsTable* fornecida, de acordo com a seleção atual dessa tabela.
 
-If the current selection is sorted, an [ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) entity selection is created (the order of the current selection is kept). Se a seleção atual não for ordenada, se cria uma seleção de entidades não ordenada.
+Se a seleção atual for ordenada, uma entidade [ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) é criada (a ordem da seleção atual é mantida). Se a seleção atual não for ordenada, se cria uma seleção de entidades não ordenada.
 
-If the *dsTable* is not exposed in [`ds`](API/DataStoreClass.md#ds), an error is returned. Esse comando não pode usado com uma datastore remota.
+Se a *dsTable* não estiver exposta em [`ds`](API/DataStoreClass.md#ds), se devolve um erro. Esse comando não pode usado com uma datastore remota.
 
-In the optional *settings* parameter, you can pass an object containing the following property:
+No parâmetro opcional *settings*, você pode passar um objeto que contenha a seguinte propriedade:
 
-| Propriedade | Tipo | Descrição                                                                                                                    |
-| ----------- | ---- | ---------------------------------------------------------------------------------------------------------------------------- |
-| context     | Text | Label for the [optimization context](../ORDA/client-server-optimization.md) applied to the entity selection. |
+| Propriedade | Tipo | Descrição                                                                                                                      |
+| ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------ |
+| context     | Text | Rótulo para o [contexto de otimização](../ORDA/client-server-optimization.md) aplicado à seleção de entidades. |
 
 #### Exemplo
 
@@ -102,19 +102,19 @@ $employees:=Create entity selection([Employee])
 
 #### Descrição
 
-The `USE ENTITY SELECTION` command updates the current selection of the table matching the dataclass of the *entitySelection* parameter, according to the content of the entity selection.
+O comando `USE ENTITY SELECTION` atualiza a seleção atual da tabela que corresponde à classe de dados do parâmetro *entitySelection*, conforme o conteúdo da seleção de entidade.
 
-This command cannot be used with a [Remote datastore](../ORDA/remoteDatastores.md).
+Este comando não pode ser utilizado com um [Datastore remoto](../ORDA/datastoresRemotos.md).
 
 :::info
 
-Esse comando foi projetado para fazer com que as seleções de corrente 4D se beneficiem do poder das consultas ORDA. For performance reasons, in 4D single-user and 4D Server, the command directly connects *entitySelection* to the current selection. Portanto, uma vez que a *entitySelection* tenha sido usada, ela não deve ser reutilizada ou alterada posteriormente.
+Esse comando foi projetado para fazer com que as seleções de corrente 4D se beneficiem do poder das consultas ORDA. Por motivos de desempenho, no 4D single-user e no 4D Server, o comando conecta diretamente *entitySelection* à seleção atual. Portanto, uma vez que a *entitySelection* tenha sido usada, ela não deve ser reutilizada ou alterada posteriormente.
 
 :::
 
 :::note
 
-After a call to `USE ENTITY SELECTION`, the first record of the updated current selection (if not empty) becomes the current record, but it is not loaded in memory. If you need to use the values of the fields in the current record, use the `LOAD RECORD` command after the `USE ENTITY SELECTION` command.
+Após uma chamada para `USE ENTITY SELECTION`, o primeiro registro da seleção atual atualizada (se não estiver vazio) torna-se o registro atual, mas não é carregado na memória. Se precisar usar os valores dos campos no registro atual, use o comando `LOAD RECORD` após o comando `USE ENTITY SELECTION`.
 
 :::
 
@@ -837,9 +837,9 @@ $jobs:=ds. Employee.all().distinct("jobName";dk count values)
 
 The `.distinctPaths()` function <!-- REF #EntitySelectionClass.distinctPaths().Summary -->returns a collection of distinct paths found in the indexed object *attribute* for the entity selection<!-- END REF -->.
 
-If *attribute* is not an indexed object attribute, an error is generated.
+Se *attribute* não for um atributo de objeto indexado, será gerado um erro.
 
-After the call, the size of the returned collection is equal to the number of distinct paths found in *attribute* for the entity selection. Os caminhos são devolvidos como cadeias de caracteres, incluindo atributos e colecções aninhados, por exemplo "info.address.number" ou "children[].birthdate". Entities with a null value in the *attribute* are not taken into account.
+After the call, the size of the returned collection is equal to the number of distinct paths found in *attribute* for the entity selection. Os caminhos são devolvidos como cadeias de caracteres, incluindo atributos e colecções aninhados, por exemplo "info.address.number" ou "children[].birthdate". Entidades com um valor nulo no *atributo* não são consideradas.
 
 #### Exemplo
 
@@ -858,7 +858,7 @@ $paths:=ds. Employee.all().distinctPaths("fullData")
 
 :::note
 
-*length* is automatically added as path for nested collection properties.
+*length* é automaticamente adicionado como caminho para propriedades de coleções aninhadas.
 
 :::
 
