@@ -10,7 +10,7 @@ En ORDA, se accede a los datos a través de [entidades](dsMapping.md#entity) y [
 Existem duas maneiras de criar uma nova entidade numa dataclass:
 
 - Since entities are references to database records, you can create entities by creating records using the 4D language and then reference them with ORDA functions such as [`entity.next()`](../API/EntityClass.md#next) or [`entitySelection.first()`](../API/EntitySelectionClass.md#first).
-- You can also create an entity using the [`dataClass.new()`](../API/DataClassClass.md#new) function.
+- Você também pode criar uma entidade usando a função [`dataClass.new()`](../API/DataClassClass.md#new).
 
 Tenha em atenção que a entidade só é criada na memória. Se quiser adicioná-lo ao datastore, você deve chamar a função [`entity.save()`](../API/EntityClass.md#save).
 
@@ -450,7 +450,7 @@ Function event restrict() -> $result : cs.*DataClassName*Selection
 
 Esta função é chamada sempre que uma seleção de entidade ou uma entidade da classe de dados é solicitada. O filtro é executado uma vez, quando a entity selection é criada.
 
-The filter must return an entity selection of the dataclass. Puede ser una selección de entidades creada a partir de una consulta, almacenada en el [`Storage`], etc.
+O filtro deve retornar uma seleção de entidade da dataclass. Puede ser una selección de entidades creada a partir de una consulta, almacenada en el [`Storage`], etc.
 
 :::note
 

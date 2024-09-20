@@ -5,7 +5,7 @@ title: Interface 4D Write Pro
 
 4D WritePro Interface offers a set of palettes, which allow end users to easily customize a 4D Write Pro document.
 
-A 4D developer can easily implement these palettes in their application. Thus, end users can manage all 4D Write Pro properties, such as fonts, text alignment, bookmarks, table layout, and frames.
+Um desenvolvedor 4D pode facilmente implementar essas paletas em sua aplicação. Thus, end users can manage all 4D Write Pro properties, such as fonts, text alignment, bookmarks, table layout, and frames.
 
 La documentación principal de [la interfaz de 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) se encuentra en el manual _Diseño 4D_.
 

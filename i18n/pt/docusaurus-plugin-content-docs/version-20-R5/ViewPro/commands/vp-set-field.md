@@ -21,7 +21,7 @@ O comando `VP SET FIELD` <!-- REF #_method_.VP SET FIELD.Summary -->atribui um c
 
 In _rangeObj_, pass a range of the cell(s) whose value you want to specify. If _rangeObj_ includes multiple cells, the specified field will be linked in each cell.
 
-The _field_ parameter specifies a 4D database [virtual field](../formulas.md#referencing-fields-using-the-virtual-structure) to be assigned to the _rangeObj_. The virtual structure name for _field_ can be viewed in the formula bar. If any of the cells in _rangeObj_ have existing content, it will be replaced by _field_.
+The _field_ parameter specifies a 4D database [virtual field](../formulas.md#referencing-fields-using-the-virtual-structure) to be assigned to the _rangeObj_. O nome da estrutura virtual do _field_ pode ser visualizado na barra de fórmulas. If any of the cells in _rangeObj_ have existing content, it will be replaced by _field_.
 
 The optional _formatPattern_ defines a pattern for the _field_ parameter. Você pode passar qualquer [formato personalizado] válido(../configuring.md#cell-format).
 

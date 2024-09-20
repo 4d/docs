@@ -42,7 +42,7 @@ In "force login" mode, license usage is disconnected from web user sessions. A l
 
 [Descriptive REST requests](#descriptive-rest-requests) are always processed by the server, even if no web user session using a license is opened. In this case, they are processed through "guest" sessions.
 
-All other REST requests (handling data or executing a function) will only be processed if they are executed within a web session with appropriate privileges, otherwise they return an error. To assign privileges to a web session, you need to execute the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function for the session. Executing this function triggers the 4D license consumption.
+All other REST requests (handling data or executing a function) will only be processed if they are executed within a web session with appropriate privileges, otherwise they return an error. To assign privileges to a web session, you need to execute the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function for the session. A execução dessa função aciona o consumo da licença 4D.
 
 This mode allows you to implement the following login sequence:
 

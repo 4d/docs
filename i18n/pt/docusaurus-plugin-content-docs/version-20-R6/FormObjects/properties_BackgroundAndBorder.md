@@ -41,7 +41,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 #### Veja também
 
-[Transparent](#transparent)
+[Transparente](#transparente)
 
 ---
 

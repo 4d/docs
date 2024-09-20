@@ -16,11 +16,11 @@ title: VP Get column attributes
 
 #### Descrição
 
-The `VP Get column attributes` command <!-- REF #_method_.VP Get column attributes.Summary -->returns a collection of properties for any column in the *rangeObj*<!-- END REF -->.
+O comando `VP Get column attributes` <!-- REF #_method_.VP Get column attributes.Summary -->retorna uma coleção de propriedades para qualquer coluna no *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass an object containing a range of the columns whose attributes will be retrieved.
+Em *rangeObj*, passe um objeto que contenha um intervalo das colunas cujos atributos serão recuperados.
 
-The returned collection contains any properties for the columns, whether or not they have been set by the [VP SET COLUMN ATTRIBUTES](vp-set-column-attributes.md) command.
+A coleção retornada contém todas as propriedades das colunas, independentemente de terem sido definidas ou não pelo comando [VP SET COLUMN ATTRIBUTES](vp-set-column-attributes.md).
 
 #### Exemplo
 
@@ -34,7 +34,7 @@ $range:=VP Column("ViewProArea";1;2)
 $attr:=VP Get column attributes($range)
 ```
 
-... will return a collection of the attributes within the given range:
+... devolverá uma coleção dos atributos no intervalo dado:
 
 ![](../../assets/en/ViewPro/cmd_vpGetColumnAttributes.PNG)
 

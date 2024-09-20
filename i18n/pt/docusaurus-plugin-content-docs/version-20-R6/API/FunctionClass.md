@@ -39,7 +39,7 @@ Note que mesmo se não tiver parênteses (ver abaixo), uma função objeto a ser
  $o:=$f.message //devolve o objeto fórmula em $o
 ```
 
-You can also execute a function using the [`apply()`](#apply) and [`call()`](#call) functions:
+Você também pode executar uma função usando as funções [`apply()`](#apply) e [`call()`](#call):
 
 ```4d
  $f.message.apply() //exibe "Hello world"
@@ -142,7 +142,7 @@ A fórmula retornada pode ser chamada com:
 
 You can pass [parameters](#passing-parameters) to the `Formula`, as seen below in [example 4](#example-4).
 
-You can specify the object on which the formula is executed, as seen in [example 5](#example-5). The properties of the object can then be accessed via the `This` command.
+You can specify the object on which the formula is executed, as seen in [example 5](#example-5). As propriedades do objeto podem ser acessadas via o comando `This`.
 
 If *formulaExp* uses local variables, their values are copied and stored in the returned formula object when it is created. Quando executados, a fórmula usa esses valores copiados ao invés do valor atual da variável local. Note que usar arrays como variáveis locais não são compatíveis.
 
@@ -377,7 +377,7 @@ In the *thisObj* parameter, you can pass a reference to the object to be used as
 
 You can also pass values to be used as *$1...$n* parameters in the formula using the optional *params* parameter(s).
 
-Note that `.call()` is similar to [`.apply()`](#apply) except that parameters are passed directly.
+Observe que `.call()` é semelhante a [`.apply()`](#apply), exceto pelo fato de que os parâmetros são passados diretamente.
 
 #### Exemplo 1
 

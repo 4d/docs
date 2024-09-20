@@ -1551,7 +1551,7 @@ Queremos desautorizar as fórmulas, por exemplo, quando el usuário introduz sua
 
 The `.setRemoteCacheSettings()` function <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->sets the timeout and maximum size of the ORDA cache for a dataclass.<!-- END REF -->.
 
-In the *settings* parameter, pass an object with the following properties:
+No parâmetro *settings*, passe um objeto contendo as propriedades abaixo:
 
 | Propriedade | Tipo    | Descrição                                    |
 | ----------- | ------- | -------------------------------------------- |

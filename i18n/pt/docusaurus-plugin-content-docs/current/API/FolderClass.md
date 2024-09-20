@@ -114,7 +114,7 @@ In the *folderConstant* parameter, pass a 4D built-in or system folder, using on
 | fk user preferences folder | 0     | 4D folder that stores user preference files within the <code>\<userName&gt;</code> directory. |
 | fk web root folder         | 8     | Pasta raiz atual da Web da base de dados: se estiver dentro do pacote "/PACKAGE/percurso", caso contrário, caminho completo                 |
 
-If the command is called from a component, pass the optional *parameter to get the path of the host database. Otherwise, if you omit the* parameter, a null object is always returned.
+If the command is called from a component, pass the optional \*parameter to get the path of the host database. Caso contrário, se omitir o parâmetro \*, um objeto nulo é sempre devolvido.
 
 > On Windows, in merged clients, the location of built-in folders is modified if the `ShareLocalResourcesOnWindowsClient` [BuildApp key](../Desktop/building.md#buildapp4dsettings) is used.
 
@@ -136,7 +136,7 @@ If the command is called from a component, pass the optional *parameter to get t
 
 The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. É idêntico ao comando [`Folder`](#folder) (atalho).
 
-> It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D.Folder.new()`.
+> Recomenda-se usar o comando de atalho [`Folder`](#folder) em vez de `4D.Folder.new()`.
 
 <!-- INCLUDE directory.copyTo().Desc -->
 

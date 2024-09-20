@@ -4,7 +4,7 @@ title: Página Métodos
 ---
 
 
-A method is basically a piece of code that executes one or several actions. Na linguagem 4D, há duas categorias de métodos:
+Um método é basicamente um pedaço de código que executa uma ou várias ações. Na linguagem 4D, há duas categorias de métodos:
 
 - **built-in methods**, which are provided by 4D or third-party developers and can be only called in your code. Os métodos incorporados incluem:
     - Commands and functions of the 4D API, such as `ALERT` or `Current date`.

@@ -314,7 +314,7 @@ WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
 - Because of the support of the [ternary operator](../Concepts/operators.md#ternary-operator), the colon ":" is no longer allowed in variable, field, constant, function, plugin and project method names. Se o seu banco de dados/projeto contiver identificadores com dois, você deve substituí-los antes de convertê-lo para 4D 19 R4 ou superior, caso contrário podem ocorrer erros no seu código. For example, if you have a variable named _a:b_, it could be interpreted as ternary operator syntax:
 
 ```4d
-$value:=($size>1000)? a:b // Here 'a:b' is viewed as a ternary operator.
+$value:=($size>1000)? a:b // Aqui 'a:b' é visto como um operador ternário.
 
 ```
 
@@ -402,20 +402,20 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 ## Tabela da biblioteca
 
-| Biblioteca | Versão atual                              | Atualizado em 4D | Comentário                                                                                                                                |
-| ---------- | ----------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| BoringSSL  | 0aa300b                                   | **20 R6**        | Usado para QUIC                                                                                                                           |
-| CEF        | 121                                       | 20 R5            | Chromium 6167                                                                                                                             |
-| Hunspell   | 7.3.27    | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                                                       |
-| ICU        | 73.2                      | 20               | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos.               |
-| libldap    | **2.6.7** | **20 R6**        |                                                                                                                                           |
-| libsasl    | 2.1.28    | 20               |                                                                                                                                           |
-| Libuv      | 1.48                      | **20 R6**        | Usado para QUIC                                                                                                                           |
-| libZip     | 19.5                      | 20               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                                                      |
-| LZMA       | 5.4.1     | 20               |                                                                                                                                           |
-| OpenSSL    | 3.2.0     | 20 R4            | O nível de segurança TLS/SSL padrão foi atualizado. Veja [mudanças de comportamento](#behavior-changes) para versão 20 R4 |
-| PDFWriter  | 4.3                       | 20               | Dependência FreeType na 12.2.1                                                                            |
-| PHP        | 8.2.4     | 20               |                                                                                                                                           |
-| SpreadJS   | 16.2.6    | 20 R4            | Motor 4D View Pro                                                                                                                         |
-| webKit     | WKWebView                                 | 19               |                                                                                                                                           |
-| Zlib       | 14.1.6    | 20               |                                                                                                                                           |
+| Biblioteca | Versão atual                           | Atualizado em 4D | Comentário                                                                                                                                |
+| ---------- | -------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| BoringSSL  | 0aa300b                                | 20 R6            | Usado para QUIC                                                                                                                           |
+| CEF        | 128                                    | **20 R7**        | Chromium 6613                                                                                                                             |
+| Hunspell   | 7.3.27 | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                                                       |
+| ICU        | 73.2                   | 20               | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos.               |
+| libldap    | 2.6.7  | 20 R6            |                                                                                                                                           |
+| libsasl    | 2.1.28 | 20               |                                                                                                                                           |
+| Libuv      | 1.48                   | 20 R6            | Usado para QUIC                                                                                                                           |
+| libZip     | 19.5                   | 20               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                                                      |
+| LZMA       | 5.4.1  | 20               |                                                                                                                                           |
+| OpenSSL    | 3.2.0  | 20 R4            | O nível de segurança TLS/SSL padrão foi atualizado. Veja [mudanças de comportamento](#behavior-changes) para versão 20 R4 |
+| PDFWriter  | 4.3                    | 20               | Dependência FreeType na 12.2.1                                                                            |
+| PHP        | 8.2.4  | 20               |                                                                                                                                           |
+| SpreadJS   | 16.2.6 | 20 R4            | Motor 4D View Pro                                                                                                                         |
+| webKit     | WKWebView                              | 19               |                                                                                                                                           |
+| Zlib       | 14.1.6 | 20               |                                                                                                                                           |
