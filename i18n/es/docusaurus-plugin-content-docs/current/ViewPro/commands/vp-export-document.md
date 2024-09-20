@@ -82,7 +82,7 @@ Una vez finalizada la operación de exportación, `VP EXPORT DOCUMENT` activa au
 
 #### Pasar un método retrollamada (fórmula)
 
-When including the optional *paramObj* parameter, the command allows you to use the [`Formula`](../../API/FunctionClass.md#formula) command to call a 4D method which will be executed once the export has completed. El método de retrollamada recibirá los siguientes valores en parámetros locales:
+Cuando se incluye el parámetro opcional *paramObj*, el comando le permite utilizar el comando [`Formula`](../../API/FunctionClass.md#formula) para llamar a un método 4D que se ejecutará una vez finalizada la exportación. El método de retrollamada recibirá los siguientes valores en parámetros locales:
 
 | Parámetros |                               | Tipo    | Descripción                                                       |
 | ---------- | ----------------------------- | ------- | ----------------------------------------------------------------- |
