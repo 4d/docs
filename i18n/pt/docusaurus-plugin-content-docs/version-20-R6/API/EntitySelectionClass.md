@@ -1722,20 +1722,20 @@ Você pode usar um parâmetro *formulaString* ou *formulaObj*:
 - \*formulaString: passa uma expressão 4D como "Year of(this.birthDate)".
 - *formulaObj*: passe um objeto de fórmula válido criado usando o comando `Formula` o `Formula from string`.
 
-The *formulaString* or *formulaObj* is executed for each entity of the entity selection and its result is used to define the position of the entity in the returned entity selection. O resultado deve ser um tipo ordenavel (booleano, data, número, texto, hora, null).
+O *formulaString* ou *formulaObj* é executado para cada entidade da seleção de entidade e seu resultado é usado para definir a posição da entidade na seleção de entidade retornada. O resultado deve ser um tipo ordenavel (booleano, data, número, texto, hora, null).
 
 > Um resultado nullé sempre o menor valor.
 
-Como padrão, se omitir o parâmetro *sortOrder*, a seleção de entidade resultado é ordenada de forma ascendente. Optionnally, you can pass one of the following values in the *sortOrder* parameter:
+Como padrão, se omitir o parâmetro *sortOrder*, a seleção de entidade resultado é ordenada de forma ascendente. Opcionalmente, você pode passar um dos seguintes valores no parâmetro *sortOrder*:
 
 | Parâmetros    | Valor | Comentário                                   |
 | ------------- | ----- | -------------------------------------------- |
 | dk ascending  | 0     | Ordem ascendente (padrão) |
 | dk descending | 1     | Ordem descendente                            |
 
-Within the *formulaString* or *formulaObj*, the processed entity and thus its attributes are available through the `This` command (for example, `This.lastName`).
+Dentro da *formulaString* ou *formulaObj*, a entidade processada e, portanto, seus atributos estão disponíveis por meio do comando `This` (por exemplo, `This.lastName`).
 
-You can pass parameter(s) to the formula using the `args` property (object) of the `settings` parameter: the formula receives the `settings.args` object in $1.
+Você pode passar parâmetro(s) para a fórmula usando a propriedade `args` (objeto) do parâmetro `configurações`: a fórmula recebe o objeto `settings.args` em $1.
 
 #### Exemplo 1
 
@@ -1743,9 +1743,9 @@ Ordenar estudantes usando uma fórmula fornecida como texto:
 
 ```4d
  var $es1; $es2 : cs.StudentsSelection
- $es1:=ds.Students.query("nationality=:1";"French")
- $es2:=$es1.orderByFormula("length(this.lastname)") //ascending by default
- $es2:=$es1.orderByFormula("length(this.lastname)";dk descending)
+ $es1:=ds.Students.query("nationality=:1"; "French")
+ $es2:=$es1.orderByFormula("length(this.lastname)") //ascendente por padrão
+ $es2:=$es1.orderByFormula("length(this.lastname)";dk descendente)
 ```
 
 Mesma ordem mas usando objeto fórmula:
@@ -1753,42 +1753,42 @@ Mesma ordem mas usando objeto fórmula:
 ```4d
  var $es1; $es2 : cs.StudentsSelection
  var $formula : Object
- $es1:=ds.Students.query("nationality=:1";"French")
+ $es1:=ds.Students.query("nationality=:1"; "French")
  $formula:=Formula(Length(This.lastname))
- $es2:=$es1.orderByFormula($formula) // ascending by default
- $es2:=$es1.orderByFormula($formula;dk descending)
+ $es2:=$es1.orderByFormula($formula) // ascendente por padrão
+ $es2:=$es1.orderByFormula($formula;dk descendente)
 ```
 
 #### Exemplo 2
 
-A formula is given as a formula object with parameters; `settings.args` object is received as $1 in the ***computeAverage*** method.
+Uma fórmula é dada como um objeto de fórmula com parâmetros; o objeto `settings.args` é recebido como $1 no método ***computeAverage***.
 
-In this example, the "marks" object field in the **Students** dataClass contains students' grades for each subject. Um objeto fórmula é usado para computar a média das notas dos estudantes com coeficientes diferentes para schoolA e schoolB
+Neste exemplo, o campo de objeto "marks" na classe de dados **Students** contém as notas dos estudantes para cada matéria. Um objeto fórmula é usado para computar a média das notas dos estudantes com coeficientes diferentes para schoolA e schoolB
 
 ```4d
  var $es1; $es2 : cs.StudentsSelection
  var $formula; $schoolA; $schoolB : Object
- $es1:=ds.Students.query("nationality=:1";"French")
+ $es1:=ds.Students.query("nationality=:1"; "French")
  $formula:=Formula(computeAverage($1))
 
- $schoolA:=New object() //settings object
- $schoolA.args:=New object("english";1;"math";1;"history";1) // Coefficients to compute an average
+ $schoolA:=New object() // objeto de configurações
+ $schoolA.args:=New object("english";1; "math";1; "history";1) // Coeficientes para calcular uma média
 
-  //Order students according to school A criteria
+  //Ordenar os alunos de acordo com os critérios da escola A
  $es2:=$es1.entitySelection.orderByFormula($formula;$schoolA)
 
- $schoolB:=New object() //settings object
- $schoolB.args:=New object("english";1;"math";2;"history";3) // Coefficients to compute an average
+ $schoolB:=New object() //objeto settings 
+ $schoolB.args:=New object("english";1; "math";2; "history";3) // Coeficientes para calcular uma média
 
-  //Order students according to school B criteria
+  //Ordenar os alunos de acordo com os critérios da escola B
  $es2:=$es1.entitySelection.orderByFormula($formula;dk descending;$schoolB)
 ```
 
 ```4d
   //
-  // computeAverage method
+  // método computeAverage
   // -----------------------------
- #DECLARE ($coefList : Object) -> $result : Integer
+ #DECLARE ($coefList : Object)  -> $result : Integer
  var $subject : Text
  var $average; $sum : Integer
 
@@ -1826,27 +1826,27 @@ In this example, the "marks" object field in the **Students** dataClass contains
 
 <!-- REF #EntitySelectionClass.query().Params -->
 
-| Parâmetro     | Tipo                                |                             | Descrição                                                                                                                          |
-| ------------- | ----------------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Text                                |              ->             | Criterios de pesquisa como string                                                                                                  |
-| formula       | Object                              |              ->             | Criterios de pesquisa como objeto fórmula                                                                                          |
-| value         | any                                 |              ->             | Valores a usar para placeholders indexados                                                                                         |
-| querySettings | Object                              |              ->             | Opções de pesquisa: parâmetros, atributos, args, allowFormulas, contexto, queryPath,queryPlan                      |
-| Resultados    | 4D. EntitySelection | <- | New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula* |
+| Parâmetro     | Tipo                                |                             | Descrição                                                                                                                                                |
+| ------------- | ----------------------------------- | :-------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| queryString   | Text                                |              ->             | Criterios de pesquisa como string                                                                                                                        |
+| formula       | Object                              |              ->             | Criterios de pesquisa como objeto fórmula                                                                                                                |
+| value         | any                                 |              ->             | Valores a usar para placeholders indexados                                                                                                               |
+| querySettings | Object                              |              ->             | Opções de pesquisa: parâmetros, atributos, args, allowFormulas, contexto, queryPath,queryPlan                                            |
+| Resultados    | 4D. EntitySelection | <- | Nova seleção de entidade composta de entidades da seleção de entidades que atendem aos critérios de pesquisa especificados em *queryString* ou *formula* |
 
 <!-- END REF -->
 
 #### Descrição
 
-The `.query()` function <!-- REF #EntitySelectionClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
+A função `.query()` <!-- REF #EntitySelectionClass.query().Summary -->busca entidades que atendam aos critérios de pesquisa especificados em *queryString* ou *formula* e (opcionalmente) *value*(s) entre todas as entidades na seleção de entidades<!-- END REF -->, e retorna um novo objeto do tipo `EntitySelection` contendo todas as entidades encontradas. Se aplica carregamento diferido/lazy loading.
 
 > Esta função não modifica a seleção de entidades original.
 
 Se nenhuma entidade correspondente for encontrada, uma `EntitySelection` vazia é retornada.
 
-For detailed information on how to build a query using *queryString*, *value*, and *querySettings* parameters, please refer to the DataClass [`.query()`](DataClassClass.md#query) function description.
+Para obter informações detalhadas sobre como criar uma consulta usando os parâmetros *queryString*, *value* e *querySettings*, consulte a descrição da função DataClass [`.query()`](DataClassClass.md#query).
 
-> By default if you omit the **order by** statement in the *queryString*, the returned entity selection is [not ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). Note entretanto que em modo Cliente Servidor funciona como uma seleção de entidade ordenada (entidades são adicionadas no final da seleção)
+> Por padrão, se você omitir a instrução **order by** na *queryString*, a seleção da entidade retornada [não está ordenada](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). Note entretanto que em modo Cliente Servidor funciona como uma seleção de entidade ordenada (entidades são adicionadas no final da seleção)
 
 #### Exemplo 1
 
@@ -1882,9 +1882,9 @@ Mais exemplos de consultas podem ser encontrados na página DataClass [`.query()
 
 #### Descrição
 
-The `.queryPath` property <!-- REF #EntitySelectionClass.queryPath.Summary -->contains a detailed description of the query as it was actually performed by 4D<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPath":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
+A propriedade `.queryPath` <!-- REF #EntitySelectionClass.queryPath.Summary -->contém uma descrição detalhada da consulta conforme ela foi realmente executada pelo 4D<!-- END REF -->. Esta propriedade é disponível para objetos `EntitySelection` gerados através de pesquisas se a propriedade "queryPlan":true for passada no parâmetro *querySettings* da função [`.query()`](#query).
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.md#query) page.
+Para mais informações, consulte o parágrafo do **parâmetro querySettings** na página da função Dataclass[`.query()`](DataClassClass.md#query).
 
 <!-- END REF -->
 
@@ -1904,9 +1904,9 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 #### Descrição
 
-The `.queryPlan` property <!-- REF #EntitySelectionClass.queryPlan.Summary --> contains a detailed description of the query just before it is executed (i.e., the planned query)<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPlan":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
+A propriedade `.queryPlan` <!-- REF #EntitySelectionClass.queryPlan.Summary --> contém uma descrição detalhada da consulta imediatamente antes de ser executada (ou seja, a consulta planejada)<!-- END REF -->. Esta propriedade está disponível para objectos EntitySelection gerados através de consultas se a propriedade "queryPath":true tiver sido passada no parâmetro *querySettings* da função [`.query()`](#query).
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page.
+Para mais informações, consulte o parágrafo do **parâmetro querySettings** na página da função Dataclass[`.query()`](DataClassClass.html#query).
 
 <!-- END REF -->
 
@@ -1934,9 +1934,9 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 #### Descrição
 
-> This function only works with a remote datastore (client / server or `Open datastore` connection).
+> Essa função só funciona com um datastore remoto (conexão cliente/servidor ou `Open datastore`).
 
-The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the [local ORDA cache](../ORDA/client-server-optimization.md#orda-cache)<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
+A função `.refresh()` <!-- REF #EntitySelectionClass.refresh().Summary -->invalida imediatamente os dados de seleção de entidade no [cache ORDA local](../ORDA/client-server-optimization.md#orda-cache)<!-- END REF -->, para que da próxima vez que o 4D precisar da seleção de entidade, ela seja recarregada do banco de dados.
 
 Como padrão, a cache ORDA local é invaidade depois de 30 segundos. No contexto de aplicações cliente/servidor usando ORDA e a linguagem clássica, este método permite assegurar que a aplicação remota vai sempre funcionar com os últimos dados.
 
@@ -1947,21 +1947,21 @@ Neste exemplo, clássico e ORDA modifica os mesmos dados simultaneamente.
 ```4d
  //On a 4D remote
 
- var $selection : cs.StudentsSelection
- var $student : cs.StudentsEntity
+ var $selection : cs. StudentsSelection
+ var $student : cs. StudentsEntity
 
- $selection:=ds.Students.query("lastname=:1";"Collins")
-  //The first entity is loaded in the ORDA cache
+ $selection:=ds. Students.query("lastname=:1";"Collins")
+  //A primeira entidade é carregada na cache ORDA
  $student:=$selection.first()
 
-  //Update with classic 4D, ORDA cache is not aware of if
+  //Atualizar com clássico 4D, ORDA cache não está se
  QUERY([Students];[Students]lastname="Collins")
  [Students]lastname:="Colin"
  SAVE RECORD([Students])
 
-  //to get the latest version, the ORDA cache must be invalidated
+  //para obter a última versão a cache ORDA deve ser invalidada
  $selection.refresh()
-  // Even if cache is not expired, the first entity is reloaded from disk
+  // Mesmo se cache não for expirada, a primeira entidade é carregada do disco
  $student:=$selection.first()
 
   //$student.lastname contains "Colin"
@@ -2020,11 +2020,11 @@ Uma list box exibe a seleção de entidade Form.students e vários clientes trab
 
 #### Descrição
 
-The `.selected()` function <!-- REF #EntitySelectionClass.selected().Summary -->returns an object describing the position(s) of *selectedEntities* in the original entity selection<!-- END REF -->.
+A função `.selected()` <!-- REF #EntitySelectionClass.selected().Summary -->retorna um objeto que descreve a(s) posição(ões) de *selectedEntities* na seleção da entidade original<!-- END REF -->.
 
 > Esta função não modifica a seleção de entidades original.
 
-Pass in the *selectedEntities* parameter an entity selection containing entities for which you want to know the position in the original entity selection. *selectedEntities* must be an entity selection belonging to the same dataclass as the original entity selection, otherwise an error 1587 - "The entity selection comes from an incompatible dataclass" is raised.
+Passe o parâmetro *selectedEntities* uma seleção de entidade contendo entidades para qual quiser saber a posição na seleção de entidade original. *selectedEntities* deve ser uma seleção de entidade pertencente ao mesmo dataclass que a entidade original, caso contrário um erro 1587 - "A seleção da entidade vem de uma base de dados incompatível" é gerada.
 
 #### Resultados
 
@@ -2038,7 +2038,7 @@ O objeto retornado contém as propriedades abaixo:
 
 Se uma propriedade `ranges` contém uma única entidade, `start` = `end`. Indice começa em 0
 
-The function returns an empty collection in the `ranges` property if the original entity selection or the *selectedEntities* entity selection is empty.
+A função retorna uma coleção vazia na propriedade `ranges` se a seleção de entidade original ou a seleção de entidade *selectedEntities* estiver vazia.
 
 #### Exemplo
 
@@ -2087,15 +2087,15 @@ $result2:=$invoices.selected($creditSel)
 
 #### Descrição
 
-The `.slice()` function <!-- REF #EntitySelectionClass.slice().Summary -->returns a portion of an entity selection into a new entity selection<!-- END REF -->, selected from the *startFrom* index to the *end* index (*end* is not included) or to the last entity of the entity selection. Este método devolve uma cópia superficial da selecção de entidades (utiliza as mesmas referências de entidades).
+A função `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->retorna uma parte de uma seleção de entidades em uma nova seleção de entidades<!-- END REF -->, selecionada a partir do índice *startFrom* até o índice *end* (*end* não está incluído) ou até a última entidade da seleção de entidades. Este método devolve uma cópia superficial da selecção de entidades (utiliza as mesmas referências de entidades).
 
 > Esta função não modifica a seleção de entidades original.
 
-The returned entity selection contains the entities specified by *startFrom* and all subsequent entities up to, but not including, the entity specified by *end*. If only the *startFrom* parameter is specified, the returned entity selection contains all entities from *startFrom* to the last entity of the original entity selection.
+A seleção de entidade retornada contém as entidades especificadas por *startFrom* e todas as entidades subsequentes até, mas não incluindo, a entidade especificada por *end*. Se apenas o parâmetro *startFrom* for especificado, a seleção de entidades retornada contém todas as entidades desde *startFrom* até a última entidade da seleção de entidades original.
 
-- If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the entity selection). If the calculated value < 0, *startFrom* is set to 0.
+- Se *startFrom* < 0, ele será recalculado como *startFrom:=startFrom+length* (ele é considerado como o deslocamento do final da seleção da entidade). If the calculated value < 0, *startFrom* is set to 0.
 - Se *startFrom >= length*, a função retorna uma seleção vazia de entidade.
-- If *end* < 0, it is recalculated as *end:=end+length*.
+- Se *end* < 0, ele será recalculado como *end:=end+length*.
 - If *end < startFrom* (passed or calculated values), the method does nothing.
 
 Se a seleção de entidade contém entidades que foram abandonadas, também serão retornadas.
@@ -2118,7 +2118,7 @@ Assuming we have ds. Employee.all().length = 10
 var $slice : cs.EmployeeSelection
 
 
-$slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 to 8, but since 9 > 8, returns an empty entity selection
+$slice:=ds.Employee.all().slice(-1;-2) //tenta retornar entidades do índice 9 a 8, mas como 9 > 8, retorna uma seleção de entidade vazia
 
 ```
 
@@ -2149,15 +2149,15 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 
 #### Descrição
 
-The `.sum()` function <!-- REF #EntitySelectionClass.sum().Summary -->returns the sum for all *attributePath* values in the entity selection<!-- END REF -->.
+A função `.sum()` <!-- REF #EntitySelectionClass.sum().Summary -->retorna a soma de todos os valores *attributePath* na seleção de entidades<!-- END REF -->.
 
 `.sum()` devolve 0 se a entity selection estiver vazia.
 
-A soma só pode ser feita em valores do tipo de número. If the *attributePath* is an object property, only numerical values are taken into account for the calculation (other value types are ignored). In this case, if *attributePath* leads to a property that does not exist in the object or does not contain any numeric values, `.sum()` returns 0.
+A soma só pode ser feita em valores do tipo de número. Se o *attributePath* for uma propriedade do objeto, apenas valores numéricos são considerados para o cálculo (outros tipos de valores são ignorados). Neste caso, se *attributePath* levar a uma propriedade que não existe no objeto ou não contém nenhum valor numérico, `.sum()` retorna 0.
 
 Um erro é retornado se:
 
-- *attributePath* is not a numerical or an object attribute,
+- *attributePath* não é um atributo numérico ou de objeto,
 - *attributePath* is a related attribute,
 - *attributePath* não se encontra na classe de dados da entity selection.
 
@@ -2202,16 +2202,16 @@ $sum:=$sel.sum("salary")
 
 #### Descrição
 
-The `.toCollection()` function <!-- REF #EntitySelectionClass.toCollection().Summary -->creates and returns a collection where each element is an object containing a set of properties and values <!-- END REF -->corresponding to the attribute names and values for the entity selection.
+A função `.toCollection()` <!-- REF #EntitySelectionClass.toCollection().Summary -->cria e retorna uma coleção em que cada elemento é um objeto que contém um conjunto de propriedades e valores <!-- END REF -->correspondentes aos nomes e valores dos atributos da seleção da entidade.
 
-Se nenhum parâmetro de filtro for passado ou se o primeiro parâmetro contiver uma cadeia vazia ou "\*", todos os atributos são extraídos. Attributes with [kind](DataClassClass.md#attributename) property as "relatedEntity" are extracted with the simple form: an object with property \_\_KEY (primary key). Atributos com propriedade tipo como "Entidades relacionadas" não são extraídos.
+Se nenhum parâmetro de filtro for passado ou se o primeiro parâmetro contiver uma cadeia vazia ou "\*", todos os atributos são extraídos. Atributos com propriedade [kind](DataClassClass.md#attributename) como "relatedEntity" são extraídos com a forma simples: um objeto com a propriedade \_\_KEY (chave primária). Atributos com propriedade tipo como "Entidades relacionadas" não são extraídos.
 
 Ou, pode designar os atributos da entidade a extrair utilizando um parâmetro de filtro. Pode usar um destes dois filtros:
 
-- *filterString* --a string with property paths separated with commas: "propertyPath1, propertyPath2, ...".
-- *filterCol* --a collection of strings containing property paths: \["propertyPath1","propertyPath2",...]
+- \*filterString - uma string com caminhos de propriedade separados por vírgulas: "propertyPath1, propertyPath2, ...".
+- filterCol - uma coleção de strings contendo caminhos de propriedade: \["propertyPath1", "propertyPath2",...]
 
-If a filter is specified for an attribute of the `relatedEntity` kind:
+Se um filtro for especificado para um atributo do tipo `relatedEntity`:
 
 - propertyPath = "relatedEntity" -> é extraído de forma simples
 - propertyPath = "relatedEntity.\*" -> todas as propriedades são extraídas
@@ -2222,17 +2222,17 @@ Se um filtro for especificado para um atributo do tipo `relatedEntities`:
 - propertyPath = "relatedEntities.\*" -> all the properties are extracted
 - propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> só se extraem essas propriedades
 
-In the *options* parameter, you can pass the `dk with primary key` and/or `dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.
+No parâmetro *options*, você pode passar o(s) seletor(es) `dk with primary key` e/ou `dk with stamp` para adicionar as chaves primárias e/ou os selos da entidade nos objetos extraídos.
 
 :::caution Aviso
 
-Se utilizar outro atributo que não a chave primária como o atributo Um numa relação, o valor deste atributo será escrito na propriedade "__KEY". Keep in mind that it is recommended to use the primary key as One attribute in your relations, especially when you use `.toCollection()` and `.fromCollection()` functions.
+Se utilizar outro atributo que não a chave primária como o atributo Um numa relação, o valor deste atributo será escrito na propriedade "__KEY". Lembre-se de que é recomendável usar a chave primária como um atributo em suas relações, especialmente quando você usar as funções `.toCollection()` e `.fromCollection()`.
 
 :::
 
-The *begin* parameter allows you to indicate the starting index of the entities to extract. Pode passar qualquer valor entre 0 e o comprimento-1 da selecção da entidade.
+O parâmetro *begin* permite que você indique o índice inicial das entidades a extrair. Pode passar qualquer valor entre 0 e o comprimento-1 da selecção da entidade.
 
-The *howMany* parameter lets you specify the number of entities to extract, starting with the one specified in *begin*. Dropped entities are not returned but are taken into account according to *howMany*. For example, if *howMany*= 3 and there is 1 dropped entity, only 2 entities are extracted.
+O parâmetro *howMany* permite especificar o número de entidades a extrair, começando com o especificado em *begin*. As entidades abandonadas não são devolvidas, mas são tidas em conta de acordo com *howMany*. Por exemplo, se *howMany*= 3 e houver 1 entidade abandonada, apenas 2 entidades são extraídas.
 
 Se *howMany* > comprimento da seleção da entidade, o método retorna (comprimento - *begin*) objetos.
 
@@ -2527,7 +2527,7 @@ $employeesCollection:=$employees.toCollection("firstName, lastName, employer.nam
 
 #### Exemplo 8
 
-Example with extraction of some properties of `relatedEntities`:
+Exemplo com extracção de algumas propriedades de `relatedEntities`:
 
 ```4d
  var $employeesCollection : Collection
