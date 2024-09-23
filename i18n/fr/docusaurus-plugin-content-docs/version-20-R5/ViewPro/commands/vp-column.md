@@ -19,13 +19,13 @@ title: VP Column
 
 #### Description
 
-The `VP Column` command <!-- REF #_method_.VP Column.Summary -->returns a new range object referencing a specific column or columns<!-- END REF -->.
+La commande `VP Column` <!-- REF #_method_.VP Column.Summary -->retourne un nouvel objet de plage référencant une ou des colonnes spécifiques<!-- END REF -->.
 
 Dans _vpAreaName_, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-The _column_ parameter defines the first column of the column range. Passez l'indice de la colonne (la numérotation commence à zéro) dans ce paramètre. If the range contains multiple columns, you should also use the optional _columnCount_ parameter.
+Le paramètre _column_ définit la première colonne de la plage de colonnes. Passez l'indice de la colonne (la numérotation commence à zéro) dans ce paramètre. Si la plage contient plusieurs colonnes, vous devez également utiliser le paramètre optionnel _columnCount_.
 
-The optional _columnCount_ parameter allows you to define the total number of columns of the range. _columnCount_ must be greater than 0. Si le paramètre est omis, la valeur 1 sera définie par défaut et une plage de type colonne sera créée.
+Le paramètre optionnel _columnCount_ permet de définir le nombre total de colonnes de la plage. _columnCount_ doit être supérieur à 0. Si le paramètre est omis, la valeur 1 sera définie par défaut et une plage de type colonne sera créée.
 
 Dans le paramètre optionnel _sheet_, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée par défaut.
 
