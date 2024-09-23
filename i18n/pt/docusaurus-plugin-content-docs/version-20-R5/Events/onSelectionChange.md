@@ -3,9 +3,9 @@ id: onSelectionChange
 title: On Selection Change
 ---
 
-| Code | Pode ser chamado por                                                                                                                                                                                                                                                  | Definição                        |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| 31   | [4D View Pro area](FormObjects/viewProArea_overview.md) - [4D Write Pro area](FormObjects/writeProArea_overview.md) - Form - [Hierarchical List](FormObjects/list_overview.md) - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) | A seleção no objeto é modificada |
+| Code | Pode ser chamado por                                                                                                                                                                                                                                                         | Definição                        |
+| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| 31   | [Área 4D View Pro](FormObjects/viewProArea_overview.md) - [Área 4D Write Pro](FormObjects/writeProArea_overview.md) - Formulário - [Lista Jerárquica](FormObjects/list_overview.md) - [Entrada](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) | A seleção no objeto é modificada |
 
 ## Descrição
 
@@ -39,12 +39,12 @@ O registo atual ou a seleção atual de linhas é modificado num formulário lis
 
 ### Lista hierárquica
 
-This event is generated every time the selection in the hierarchical list is modified after a mouse click or keystroke.
+Esse evento é gerado sempre que a seleção na lista hierárquica é modificada após um clique do mouse ou pressionamento de tecla.
 
-### Área de entrada y 4D Write Pro
+### Área de entrada e 4D Write Pro
 
-The text selection or the position of the cursor in the area is modified following a click or a keystroke.
+A seleção de texto ou a posição do cursor na área é modificada após um clique, ou um pressionamento de tecla.
 
 ### List box
 
-This event is generated each time the current selection of rows or columns of the list box is modified.
+Esse evento é gerado sempre que a seleção atual de linhas ou colunas do list box é modificada.
