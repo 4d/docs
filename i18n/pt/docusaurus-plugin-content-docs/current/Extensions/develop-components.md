@@ -59,8 +59,8 @@ Os comandos abaixo não são compatíveis para seu uso dentro de um componente p
 
 **Notas:**
 
-- El comando `Current form table` devuelve `Nil` cuando se llama en el contexto de un formulario proyecto. Por isso não pode ser usado em um componente.
-- Os comandos da linguagem de definição de dados SQL (`CREATE TABLE`, `DROP TABLE`, etc.) não pode ser usado no projeto do componente. Sin embargo, se soportan con bases de datos externas (ver el comando SQL `CREATE DATABASE`).
+- O comando `Current form table` retorna `Nil` quando é chamado no contexto de um formulário de projeto. Por isso não pode ser usado em um componente.
+- Os comandos da linguagem de definição de dados SQL (`CREATE TABLE`, `DROP TABLE`, etc.) não pode ser usado no projeto do componente. No entanto, eles são compatíveis com bancos de dados externos (consulte o comando SQL `CREATE DATABASE`).
 
 ## Partilhar os métodos de projeto
 
@@ -104,7 +104,7 @@ To allow classes of your component to be exposed in the host projects and their 
 
 :::note
 
-Un _namespace_ garantiza que no surja ningún conflicto cuando un proyecto local utilice diferentes componentes que tienen clases o funciones con nombres idénticos. Un namespace del componente debe ser compatible con [reglas de denominación de las propiedades](../Concepts/identifiers.md#object-properties).
+Um namespace garante que não surja nenhum conflito quando um projeto host usar componentes diferentes que tenham classes ou funções com nomes idênticos. Um namespace de componente deve estar em conformidade com as [regras de nomeação de propriedades](../Concepts/identifiers.md#object-properties).
 
 :::
 
@@ -131,26 +131,26 @@ As classes ORDA de um componente não estão disponíveis no seu projeto host. P
 
 ### Classes ocultas
 
-Assim como em qualquer projeto, você pode criar classes e funções ocultas no componente prefixando os nomes com um sublinhado ("_"). Cuando se define un [namespace de componente](#declaring-the-component-namespace), las clases y funciones ocultas del componente no aparecerán como sugerencias al utilizar completar el código.
+Assim como em qualquer projeto, você pode criar classes e funções ocultas no componente prefixando os nomes com um sublinhado ("_"). Quando um [componente namespace for definido](#declaring-the-component-namespace), classes ocultas e funções do componente não aparecerão como sugestões ao usar a conclusão do código.
 
-No entanto, se souberes os seus nomes, podes utilizá-los. Por ejemplo, la siguiente sintaxis es válida incluso si la clase `_Rectangle` está oculta:
+No entanto, se souberes os seus nomes, podes utilizá-los. Por exemplo, a sintaxe a seguir é válida mesmo que a classe `_Rectangle` esteja oculta:
 
 ```4d
 $rect:=cs.eGeometry._Rectangle.new(10;20)
 ```
 
-> Las funciones no ocultas al interior de una clase oculta aparecen como sugerencias cuando se utiliza completar código con una clase que [hereda](../Concepts/classes.md#inheritance) de ella. Por ejemplo, si un componente tiene una clase `Teacher` que hereda una clase `_Person`, la finalización del código para `Teacher` sugiere funciones no ocultas de `_Person`.
+> As funções não ocultas dentro de uma classe oculta aparecem como sugestões quando você usa a funcionalidade autocompletar código com uma classe que [herda](../Concepts/classes.md#inheritance) dela. Por exemplo, se um componente tiver uma classe `Teacher` que herda de uma classe `_Person`, o recurso autocompletar código para `Teacher` sugere funções não ocultas de `_Person`.
 
 ## Completar o código dos componentes compilados
 
-To make your component easier to use for developers, you can check the [**Generate syntax file for code completion when compiled** option in the General page](../settings/general.md#component-namespace-in-the-class-store) of the matrix project Settings.
+Para facilitar o uso do seu componente pelos desenvolvedores, você pode marcar a opção [**Gerar arquivo de sintaxe para autocompletar código quando compilado** na página Geral](../settings/general.md#component-namespace-in-the-class-store) das Configurações do projeto da matriz.
 
-A syntax file (JSON format) is then automatically created during the compilation phase, filled with the syntax of your component's classes, functions, and [exposed methods](#sharing-of-project-methods), and placed in the `\Resources\en.lproj` folder of the component project. 4D usa o conteúdo desse arquivo de sintaxe para gerar ajuda contextual no editor de código, como autocompletar código e sintaxe de função:
+Um arquivo de sintaxe (formato JSON) é criado automaticamente durante a fase de compilação, preenchido com a sintaxe das classes, funções e [métodos expostos] do seu componente (#sharing-of-project-methods) e colocado na pasta `\Resources\en.lproj` do projeto do componente. 4D usa o conteúdo desse arquivo de sintaxe para gerar ajuda contextual no editor de código, como autocompletar código e sintaxe de função:
 
 ![](../assets/en/settings/syntax-code-completion-2.png)
 ![](../assets/en/settings/syntax-code-completion-1.png)
 
-Si no ingresa un [namespace](#declaring-the-component-namespace), los recursos de las clases y de los métodos exposed no se generan incluso si la opción de archivo de sintaxis está marcada.
+Se você não inserir um [component namespace] (#declaring-the-component-namespace), os recursos para as classes e os métodos expostos não serão gerados, mesmo que a opção de arquivo de sintaxe esteja marcada.
 
 ## Passar variáveis
 
@@ -191,16 +191,16 @@ component_method($input_t)
 
 Quando você usa ponteiros para permitir que os componentes e o projeto host se comuniquem, é necessário levar em conta as seguintes especificidades:
 
-- El comando `Get pointer` no devolverá un puntero a una variable del proyecto local si se llama desde un componente y viceversa.
+- O comando `Get pointer` não retornará um ponteiro para uma variável do projeto host se for chamado a partir de um componente e vice-versa.
 
 - A arquitetura de componentes permite a coexistência, no mesmo projeto interpretado, de componentes interpretados e compilados (por outro lado, somente componentes compilados podem ser usados em um projeto compilado). Para utilizar apontadores neste caso, deve respeitar o seguinte princípio: o intérprete pode desconectar um ponteiro construído em modo compilado; no entanto, em modo compilado, não pode deconectar um ponteiro construído em modo interpretado.
   Vamos ilustrar esse princípio com o seguinte exemplo: dados dois componentes, C (compilados) e eu (interpretados), instalados no mesmo projeto host.
 
-- Si el componente C define la variable `myCvar`, el componente I puede acceder al valor de esta variable utilizando el puntero `->myCvar`.
+- Se o componente C definir a variável `myCvar`, o componente I poderá acessar o valor dessa variável usando o ponteiro `->myCvar`.
 
-- Si el componente C define la variable `myIvar`, el componente C no puede acceder a esta variable utilizando el puntero `->myIvar`. Esta sintaxe causa um erro de execução.
+- Se o componente I definir a variável `myIvar`, o componente C não poderá acessar essa variável usando o ponteiro `->myIvar`. Esta sintaxe causa um erro de execução.
 
-- The comparison of pointers using the `RESOLVE POINTER` command is not recommended with components since the principle of partitioning variables allows the coexistence of variables having the same name but with radically different contents in a component and the host project (or another component). O tipo da variável pode mesmo ser diferente em ambos os contextos. Si los punteros `myptr1` y `myptr2` apuntan cada uno a una variable, la siguiente comparación producirá un resultado incorrecto:
+- A comparação de ponteiros usando o comando `RESOLVE POINTER` não é recomendada com componentes, uma vez que o princípio de partição de variáveis permite a coexistência de variáveis com o mesmo nome, mas com conteúdos radicalmente diferentes em um componente e o projeto host (ou outro componente). O tipo da variável pode mesmo ser diferente em ambos os contextos. Se os ponteiros `myptr1` e `myptr2` apontarem cada um para uma variável, a comparação a seguir produzirá um resultado incorreto:
 
 ```4d
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
@@ -217,37 +217,37 @@ Neste caso é preciso usar a comparação de ponteiros:
 
 ## Gestão de erros
 
-Un [método de gestión de errores](Concepts/error-handling.md) instalado por el comando `ON ERR CALL` sólo se aplica a la aplicación en ejecución. En el caso de un error generado por un componente, no se llama al método de gestión de errores `ON ERR CALL` del proyecto local, y viceversa.
+Um [método de tratamento de erros] (Concepts/error-handling.md) instalado pelo comando `ON ERR CALL` aplica-se somente ao aplicativo em execução. No caso de um erro gerado por um componente, o método de tratamento de erros `ON ERR CALL` do projeto host não é chamado, e vice-versa.
 
 ## Acesso às tabelas do projeto local
 
 Apesar de os componentes não poderem usar tabelas, ponteiros podem permitir que projetos locais e componentes se comuniquem entre si. Por exemplo, aqui está um método que pode ser chamado a partir de um componente:
 
 ```4d
-// llamar a un método componente
-methCreateRec(->[PEOPLE];->[PEOPLE]Name;"Julie Andrews")
+// chamando um método de componente
+methCreateRec(->[PEOPLE];->[PEOPLE]Name; "Julie Andrews")
 ```
 
-Dentro del componente, el código del método `methCreateRec`:
+Dentro do componente, o código do método `methCreateRec`:
 
 ```4d
-C_POINTER($1) //Puntero a una tabla del proyecto local
-C_POINTER($2) //Puntero a un campo del proyecto local
-C_TEXT($3) // Valor a insertar
+C_POINTER($1) ///Pointer em uma tabela no projeto host
+C_POINTER($2) ///Pointer em um campo no projeto host
+C_TEXT($3) // Valor para inserir
 
 $tablepointer:=$1
 $fieldpointer:=$2
 CREATE RECORD($tablepointer->)
 
 $fieldpointer->:=$3
-SAVE RECORD($tablepointer-
+SAVE RECORD($tablepointer->)
 ```
 
 > No contexto de um componente, 4D assume que uma referência a um formulário de tabela é uma referência ao formulário de tabela do host (já que os componentes não podem ter tabelas).
 
 ## Uso de tabelas e campos
 
-Um componente não pode usar as tabelas e os campos definidos na estrutura 4D do projeto de matriz. Mas pode criar e usar bancos de dados externos e então usar suas tabelas e campos de acordo com suas necessidades. Pode criar e gerenciar bancos de dados externos usando SQL. Mas pode criar e usar bancos de dados externos e então usar suas tabelas e campos de acordo com suas necessidades. Usar um banco externo significa designar temporariamente esse banco de dados como o banco atual, em outras palavras, o banco alvo para as pesquisas SQL executadas por 4D. Las bases externas se crean con el comando SQL `CREATE DATABASE`.
+Um componente não pode usar as tabelas e os campos definidos na estrutura 4D do projeto de matriz. Mas pode criar e usar bancos de dados externos e então usar suas tabelas e campos de acordo com suas necessidades. Pode criar e gerenciar bancos de dados externos usando SQL. Mas pode criar e usar bancos de dados externos e então usar suas tabelas e campos de acordo com suas necessidades. Usar um banco externo significa designar temporariamente esse banco de dados como o banco atual, em outras palavras, o banco alvo para as pesquisas SQL executadas por 4D. Você cria bancos de dados externos usando o comando SQL `CREATE DATABASE`.
 
 ### Exemplo
 
@@ -330,11 +330,11 @@ Lendo de um banco externo:
 - Só os "formulários projeto" (formulários que não estejam associados a nenhuma tabela específica) podem ser utilizados em um componente. Só os "formulários de projeto" (formulários que não estejam associados a nenhuma tabela específica) podem ser utilizados em um componente.
 - Um componente pode chamar formulários tabela do projeto host. Note que nesse caso é necessário usar ponteiros ao invés de nomes de tabelas entre colchetes [] para especificar os formulários no código do componente.
 
-> Si un componente utiliza el comando `ADD RECORD`, se mostrará el formulario de entrada actual del proyecto local, en el contexto del proyecto local. Por isso se o formulário incluir variáveis, o componente não terá acesso às mesmas.
+> Se um componente usar o comando `ADD RECORD`, será exibido o formulário de entrada atual do projeto host, no contexto do projeto host. Por isso se o formulário incluir variáveis, o componente não terá acesso às mesmas.
 
-- Puede [publicar formularios de componentes como subformularios](../FormEditor/properties_FormProperties.md#published-as-subform) en los proyectos locales. Pode publicar formulários componentes como subformulários no banco de dados local Isso significa que pode desenvolver componentes oferecendo objetos gráficos. Por exemplo, Widgets fornecidos por 4D são baseados no uso de subformulários em componentes.
+- Você pode [publicar formulários de componentes como subformulários](../FormEditor/properties_FormProperties.md#published-as-subform) nos projetos host. Pode publicar formulários componentes como subformulários no banco de dados local Isso significa que pode desenvolver componentes oferecendo objetos gráficos. Por exemplo, Widgets fornecidos por 4D são baseados no uso de subformulários em componentes.
 
-> No contexto de um componente, qualquer formulário projeto referenciado deve pertencer a esse componente. Por ejemplo, dentro de un componente, hacer referencia a un formulario proyecto local utilizando `DIALOG` u `Open form window` arrojará un error.
+> No contexto de um componente, qualquer formulário projeto referenciado deve pertencer a esse componente. Por exemplo, dentro de um componente, a referência a um formulário do projeto host usando `DIALOG` ou `Open form window` gerará um erro.
 
 ## Uso de recursos
 
@@ -348,9 +348,9 @@ Em um projeto host contendo um ou mais componentes, cada componente, bem como os
 
 Um componente pode executar o código 4D automaticamente ao abrir ou fechar o banco de dados do host, por exemplo, para carregar e/ou salvar as preferências ou os estados do usuário relacionados à operação do banco de dados do host.
 
-La ejecución del código de inicialización o cierre se realiza mediante el método base `On Host Database Event`.
+A execução do código de inicialização ou fechamento é feita por meio do método de banco de dados `On Host Database Event`.
 
-> Por motivos de segurança, você deve autorizar explicitamente a execução do método de banco de dados `On Host Database Event` no banco de dados do host para poder chamá-lo. To do this, you must check the [**Execute "On Host Database Event" method of the components** option](../settings/security.md#options) in the Security page of the Settings.
+> Por motivos de segurança, você deve autorizar explicitamente a execução do método de banco de dados `On Host Database Event` no banco de dados do host para poder chamá-lo. Para fazer isso, você deve marcar a opção [**Executar o método "On Host Database Event" dos componentes**](../settings/security.md#options) na página Segurança das Configurações.
 
 ## Proteção dos componentes: compilação
 
@@ -358,13 +358,13 @@ Por padrão, todo o código de um projeto de matriz instalado como um componente
 
 - Os métodos do projeto compartilhado são encontrados na página de métodos do Explorer e podem ser chamados nos métodos do projeto host. Seu conteúdo pode ser selecionado e copiado na área de vista prévia do Explorador. Também podem ser vistos no depurador. No entanto, eles não podem ser abertos ou modificados no editor de código.
 - Os outros métodos de projeto do projeto matriz não aparecem no Explorer, mas também podem ser visualizados no depurador do projeto host.
-- Las clases y funciones no ocultas pueden verse en el depurador [si se declara un namespace](#declaring-the-component-namespace).
+- As classes e funções não-ocultas podem ser vistas no depurador [se um namespace for declarado](#declaring-the-component-namespace).
 
-Para proteger eficazmente el código de un componente, basta con [compilar y generar](Desktop/building.md#build-component) el proyecto utilizado como matriz y proporcionarlo en forma de archivo .4dz. Quando um projeto compilado usado como uma matriz é instalado como um componente:
+Para proteger o código de um componente de forma eficaz, basta [compilar e construir] (Desktop/building.md#build-component) o projeto da matriz e fornecê-lo na forma de um arquivo .4dz. Quando um projeto compilado usado como uma matriz é instalado como um componente:
 
 - Os métodos, as classes e as funções do projeto compartilhado podem ser chamados nos métodos do projeto host e também ficam visíveis na página Métodos do Explorer. No entanto, seu conteúdo não aparecerá na área de visualização e no depurador.
 - Os outros métodos projeto do projeto matriz nunca aparecerão.
 
 ## Partilha de componentes
 
-Lo animamos a que apoye a la comunidad de desarrolladores 4D compartiendo sus componentes, preferiblemente en la plataforma [GitHub](https://github.com/topics/4d-component). Recomendamos que utilice el tema **`4d-component`** para ser referenciado correctamente.
+Nós encorajamos você a apoiar a comunidade de desenvolvedores 4D compartilhando seus componentes, de preferência na [plataforma GitHub](https://github.com/topics/4d-component). Recomendamos que você use o tópico **`4d-component`** para ser referenciado corretamente.
