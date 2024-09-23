@@ -3016,11 +3016,11 @@ Con el siguiente método ***Flatten***:
 
 <!-- REF #collection.remove().Params -->
 
-| Parámetros | Tipo       |                             | Descripción                                                       |
-| ---------- | ---------- | :-------------------------: | ----------------------------------------------------------------- |
-| index      | Integer    |              ->             | Elemento en el que se inicia la eliminación                       |
-| howMany    | Integer    |              ->             | Número de elementos a eliminar, o 1 elemento si se omite          |
-| Result     | Collection | <- | Modified collection without removed element(s) |
+| Parámetros | Tipo       |                             | Descripción                                                                             |
+| ---------- | ---------- | :-------------------------: | --------------------------------------------------------------------------------------- |
+| index      | Integer    |              ->             | Elemento en el que se inicia la eliminación                                             |
+| howMany    | Integer    |              ->             | Número de elementos a eliminar, o 1 elemento si se omite                                |
+| Result     | Collection | <- | Colección modificada sin elemento(s) eliminado(s) |
 
 <!-- END REF -->
 
