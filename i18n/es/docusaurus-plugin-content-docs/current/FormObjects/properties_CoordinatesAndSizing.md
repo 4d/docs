@@ -44,7 +44,7 @@ Cuando esta propiedad está activada, la altura de cada línea se calcula autom�
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -206,7 +206,7 @@ El ancho máximo de la columna (en píxeles). El ancho de la columna no puede au
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -224,7 +224,7 @@ El ancho mínimo de la columna (en píxeles). El ancho de la columna no puede re
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox_overview.md#list-box-columns)
 
 ---
 
