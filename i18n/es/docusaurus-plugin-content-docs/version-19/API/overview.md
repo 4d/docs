@@ -19,7 +19,7 @@ En la sintaxis de la función se utilizan las siguientes convenciones:
 
 ### Ver también
 
-[Classes in the 4D Language](../Concepts/classes.md).
+[Clases en el Lenguaje 4D](../Concepts/classes.md).
 
 
 ## Comandos clásicos
