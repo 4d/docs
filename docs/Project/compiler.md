@@ -63,20 +63,9 @@ Syntax checking can also be launched directly using the **Check Syntax** command
 
 :::info Compatibility
 
-This button is only displayed when the **All variables are typed (Direct typing)** [compilation path](#compilation-path) option (default, recommended) is not selected. 
+This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. For information about this button, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#generate-typing).
 
 :::
-
-
-The **Generate Typing** button creates or updates typing compiler methods. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters declared outside prototypes](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). These methods, when they exist, are used directly by the compiler during code compilation, resulting in faster compilation times. 
-
-The name of these methods must begin with `Compiler_`. You can set the default name for each of the 5 compiler methods in the [compiler settings window](#compiler-methods-for). The compiler methods that are generated and maintained by 4D automatically have the `Invisible` attribute:
-
-![](../assets/en/Project/compilerWin3.png)
-
-Only the necessary compiler methods (i.e., those for which items already exist in the project) are generated. 
-
-The information area indicates any errors found during method creation or updating. Double-clicking on an error line causes the method and line concerned to be displayed in the Code Editor. 
 
 
 ### Clear compiled code
@@ -116,23 +105,6 @@ Used to generate the symbol file (see [symbol file](#symbol-file)). The symbol f
 Used to generate the error file (see [error file](#error-file)) at the time of syntax checking. The error file is created in the [Logs folder](Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
 
 
-#### Compilation Path
-
-Used to set the number of passes (code parsing) performed by the compiler and thus the duration of compilation.
-
-:::info Compatibility
-
-The first three options are only maintained for compatibility with legacy code. It is recommended to select the **All variables are typed (Direct typing)** option and to declare variables and parameters using `var` and `#declare` keywords. 
-
-:::
-
-
-- **Type the variables**: Check this option if you want the compiler to infer the type of variables and parameters in your code. This option requires the compiler to perform all the stages that make compilation possible, which increases the duration of compilation. 
-- **Process and interprocess variables are typed**: When selected, the pass for typing process and interprocess variables as well as method parameters declared outside prototypes is not carried out. This option can be used when you have already carried out the typing of all your process and interprocess variables either yourself or using the [Generate Typing](#generate-typing) button.
-- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters declared outside prototypes is not carried out. Use this option when you are certain that all the local, process, and interprocess variables as well as method parameters have been clearly typed, either by yourself or with the [Generate Typing](#generate-typing) button. 
-- **All variables are typed (Direct typing)**: The direct typing concept assumes that all elements are declared where they are defined in your code. This option **is recommended** since it provides the most flexibility and efficiency to developers. Use this option when you have declared all your local, process, and interprocess variables using the regular [`var` syntax](../Concepts/variables.md#declaring-variables) as well as your method and function parameters [in their prototypes](../Concepts/parameters.md#parameters-declared-in-prototypes). 
-
-
 #### Compilation Target
 
 <details><summary>History</summary>
@@ -158,27 +130,33 @@ Two target options are proposed. The result depends on the processor of the mach
 > Apple Silicon compiler target requires that the **Clang** application be installed on your machine. Clang comes with the latest version of Xcode. See the [Silicon compiler requirements](#requirements) for more information.
 
 
+### Additional options (Compatibility)
 
-### Default typing
+In projects converted from 4D versions prior to 20 R7, additional compilation options are available:
 
-Use this area to set the default type for ambiguous database objects.
+- **Compilation Path**
+- **Default typing**
+- **Compiler Methods for...**
 
-- **Numeric**: Used to force numeric typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. You can optimize the running of your database by choosing the Longint type.
-- **Button**: Used to force button typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. This type applies to buttons as well as check boxes, picture buttons, button grids, radio buttons, picture pop-up menus and drop-down lists.
+These options are only maintained for compatibility with legacy code. For more information, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#compiler-settings). 
 
-### Compiler Methods for...
+In converted projects, it is recommended to [enable the direct typing option](#enabling-direct-typing) and to write compliant declaration code, i.e.:
 
-This area lets you rename the Compiler methods that are generated automatically by the compiler when you click [Generate Typing](#generate-typing). 
+- declare explicitely all variables [using `var` keywords](../Concepts/variables.md#declaring-variables)
+- declare explicitely all parameters in function and method prototypes using [`function` and `#declare` keywords](../Concepts/parameters.md).
 
-Up to 5 compiler methods may be generated; a compiler method is only generated if the project contains the following items:
+#### Enabling direct typing
 
-- **Variables**: Groups together process variable declarations;
-- **Interprocess Variables**: Groups together interprocess variable declarations;
-- **Arrays**: Groups together process array declarations;
-- **Interprocess Arrays**: Groups together interprocess array declarations;
-- **Methods**: Groups together method parameter declarations (e.g `C_LONGINT(mymethod;$1;$2)`) for [method parameters declared outside prototypes](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
+:::info
 
-You can rename each of these methods in the corresponding areas, but they will always be preceded by the label `Compiler_` (non-modifiable). The name of each method (prefix included) must be no longer than 31 characters. It must also be unique and comply with [4D rules for naming methods](Concepts/identifiers.md#project-methods). 
+Selecting the direct typing mode is only required (if desired) in converted projects. It is natively used in projects created with 4D 20 R7 and higher. 
+
+:::
+
+Select **All variables are typed (Direct typing)** option in the **Compilation Path** menu to enable the direct typing mode. When this option is selected, other compatibility options become useless and are no longer displayed. 
+
+Using this option is recommended since it provides flexibility and efficiency. The direct typing concept assumes that all elements are directly declared where they are defined in your code. You just have to make sure that all your variables are declared using the regular [`var` syntax](../Concepts/variables.md#declaring-variables) and that your method and function parameters are declared [in their prototypes](../Concepts/parameters.md) (the [Check Syntax](#check-syntax) feature can help you detecting missing or invalid declarations).
+
 
 ## Warnings
 
