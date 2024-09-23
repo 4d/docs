@@ -95,7 +95,7 @@ Valores disponibles:
 
 #### Ver también
 
-[Vertical scroll bar](#vertical-scroll-bar)
+[Barra de desplazamiento vertical](#vertical-scroll-bar)
 
 ---
 
