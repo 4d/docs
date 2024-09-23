@@ -3,7 +3,7 @@ id: web
 title: Página da Web
 ---
 
-Using the tabs on the **Web** page, you can configure various aspects of the integrated Web server of 4D (security, startup, connections, Web services, etc.). For more information about how the 4D Web server works, see [Web server](../WebServer/webServer.md). Para obter mais informações sobre os serviços Web 4D, consulte o capítulo [Publicação e uso de Serviços Web](https://doc.4d.com/4Dv19/4D/19/Publication-and-use-of-Web-Services.200-5416624.en.html).
+Usando as guias na página **Web**, você pode configurar vários aspectos do servidor Web integrado de 4D (segurança, inicialização, conexões, serviços Web, etc.). Para obter mais informações sobre como o servidor Web 4D funciona, consulte [Servidor Web](../WebServer/webServer.md). Para obter mais informações sobre os serviços Web 4D, consulte o capítulo [Publicação e uso de Serviços Web](https://doc.4d.com/4Dv19/4D/19/Publication-and-use-of-Web-Services.200-5416624.en.html).
 
 ## Configuração
 
@@ -11,11 +11,11 @@ Using the tabs on the **Web** page, you can configure various aspects of the int
 
 #### Iniciar o servidor Web no arranque
 
-Indicates whether the Web server will be launched on startup of the 4D application. This option is described in the [Web server administration](../WebServer/webServerAdmin.md#starting-the-4d-web-server) section.
+Indica se o servidor Web será iniciado ao iniciar a aplicação 4D. Essa opção é descrita na seção [Administração do servidor Web](../WebServer/webServerAdmin.md#starting-the-4d-web-server).
 
 #### Ativar HTTP
 
-Indicates whether or not the Web server will accept non-secure connections. Ver [Ativar HTTP](../WebServer/webServerConfig.md#enable-http).
+Indica se o servidor web vai ou não aceitar conexões não seguras. Ver [Ativar HTTP](../WebServer/webServerConfig.md#enable-http).
 
 
 #### Porta HTTP
@@ -24,32 +24,32 @@ Número da porta IP (TCP) de escuta para HTTP. Ver [Porta HTTP](../WebServer/web
 
 #### Endereço IP
 
-Endereço IP em que o servidor web 4D vai receber solicitações HTTP (4D local e 4D Server). See [IP Address to listen](../WebServer/webServerConfig.md#ip-address-to-listen).
+Endereço IP em que o servidor web 4D vai receber solicitações HTTP (4D local e 4D Server). Consulte [Endereço IP para ouvir](../WebServer/webServerConfig.md#ip-address-to-listen).
 
 
 #### Ativar HTTPS
 
-Indicates whether or not the Web server will accept secure connections. Consulte [Habilitar HTTPS](../WebServer/webServerConfig.md#enable-https).
+Indica se o servidor web vai ou não aceitar conexões seguras. Consulte [Habilitar HTTPS](../WebServer/webServerConfig.md#enable-https).
 
 
 #### Porta HTTPS
 
 Permite modificar o número da porta TCP/IP usada pelo servidor Web para as conexões HTTP seguras sobre TLS (protocolo HTTPS). Ver [Porta HTTPS](../WebServer/webServerConfig.md#https-port).
 
-#### Allow database Access through 4DSYNC URLs
+#### Permitir o acesso ao banco de dados através de URLs 4DSYNC
 
-*Compatibility Note*: This option is [deprecated](../WebServer/webServerConfig.md#deprecated-settings). For database access through HTTP, it is now recommended to use ORDA remote datastore features and REST requests.
+*Nota de compatibilidade*: esta opção é [obsoleta](../WebServer/webServerConfig.md#deprecated-settings). Para acesso ao banco de dados através de HTTP, agora é recomendado usar as funcionalidades de armazenamento remoto do ORDA e solicitações REST.
 
 
 ### Caminhos
 
 #### Raiz HTML predefinida
 
-Define the default location of the Web site files and to indicate the hierarchical level on the disk above which the files will not be accessible. Ver [Carpeta raiz](../WebServer/webServerConfig.md#root-folder).
+Define a localização padrão dos arquivos do site e indicar o nível hierárquico no disco acima do qual os arquivos não serão acessíveis. Ver [Carpeta raiz](../WebServer/webServerConfig.md#root-folder).
 
 #### Página inicial predefinida
 
-Designar uma página inicial padrão para o servidor Web. See [Default Home page](../WebServer/webServerConfig.md#default-home-page).
+Designar uma página inicial padrão para o servidor Web. Veja [Página inicial padrão](../WebServer/webServerConfig.md#default-home-page).
 
 
 
@@ -70,24 +70,24 @@ Define o tamanho da cache. Ver [Cache](../WebServer/webServerConfig.md#cache).
 
 #### Limpar cache
 
-At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache). At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache). A cache é então imediatamente limpa.
+A qualquer momento, você pode limpar o cache das páginas e imagens que ele contém (se, por exemplo, você tiver modificado uma página estática e quiser recarregá-la no cache). At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache). A cache é então imediatamente limpa.
 
 > Também pode utilizar o URL especial [/4DCACHECLEAR](../WebServer/webServerAdmin.md#4dcacheclear).
 
 ### Processo Web
 
-This area allows you to configure how the web server will handle user sessions and their associated processes.
+Essa área permite configurar como o servidor Web tratará as sessões de usuário e seus processos associados.
 
-> The **Legacy sessions** option is only available for compatibility in databases/projects created with 4D versions prior to 4D v18 R6.
+> A opção **Legacy sessions** só está disponível para compatibilidade em bancos de dados/projetos criados com versões do 4D anteriores ao 4D v18 R6.
 
 #### Sessões escaláveis (sessões multi-processo)
 
-When you select this option (recommended), a user session is managed through a **Session** object. See the [User sessions page](../WebServer/sessions.md#enabling-sessions).
+Quando seleciona esta opção (recomendado), uma sessão de usuário é gerenciada através de um objeto **Session**. Consulte a [página Sessões usuário](../WebServer/sessions.md#enabling-sessions).
 
 
 #### Sem sessões
 
-When this option is selected, the web server does not provide any specific support for [user sessions](../WebServer/sessions.md). Successive requests from web clients are always independent and no context is maintained on the server.
+Quando essa opção é selecionada, o servidor Web não oferece nenhum suporte específico para as [sessões usuário](../WebServer/sessions.md). Successive requests from web clients are always independent and no context is maintained on the server.
 
 Neste modo, pode configurar parâmetros do servidor Web adicionais:
 
