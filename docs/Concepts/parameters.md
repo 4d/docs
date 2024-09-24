@@ -49,7 +49,7 @@ Input and output values are [evaluated](#values-or-references) at the moment of 
 
 :::info Compatibility
 
-The legacy declaration syntax, where parameters are automatically copied in sequentially numbered local variables $0, $1, etc. and declared using compiler directives such as `C_TEXT($1;$2)`, is **deprecated** since 4D 20 R7.  
+The legacy declaration syntax, where parameters are automatically copied in sequentially numbered local variables $0, $1, etc. and declared using compiler directives such as `C_TEXT($1;$2)`, is **deprecated** as of 4D 20 R7.  
 
 :::
 
@@ -58,7 +58,7 @@ The legacy declaration syntax, where parameters are automatically copied in sequ
 
 Inside called methods or class functions, parameter values are assigned to local variables. You usually declare parameters using a **parameter name** along with a **parameter type**, separated by colon.  
 
-- For class functions, parameters are declared along with the `Function` keyword.
+- For class functions, parameters are declared along with the function prototype, i.e. when using the `Function` or `Class Constructor` keywords.
 - For methods (project methods, form object methods, database methods, and triggers), parameters are declared using the `#DECLARE` keyword at the beginning of the method code.
 
 Examples:
