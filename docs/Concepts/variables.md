@@ -19,12 +19,6 @@ Variables are language objects; you can create and use variables that will never
 
 You create variables by declaring them using the `var` keyword.
 
-:::compatibility
-
-The legacy syntax using `C_XXX` commands is deprecated as of 4D 20 R7.
-
-:::
-
 When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data). Alternatively, when declaring variables, you can [initialize](#initializing-variables-in-the-declaration-line) their value along with their data type all within one line.
 
 :::note
@@ -55,7 +49,7 @@ var $myVar //a variant variable
 ```
 
 `varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.
-This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
+This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) (deprecated) and [arrays](Concepts/arrays.md).
 
 `varType` can be:
 
@@ -84,6 +78,12 @@ The following table lists all supported `varType` values:
 |`cs.<className>`|Object of the user class name|
 |`cs.<namespace><className>`|Object of the `<namespace>` component class name|
 
+
+:::note Compatibility
+
+The legacy syntax using `C_XXX` commands is deprecated as of 4D 20 R7.
+
+:::
 
 
 ### Examples
@@ -185,11 +185,6 @@ Of course, variables would not be very useful if you could not get data out of t
 
 In this case, _[Products]Size_ would be equal to 3. This example is rather simple, but it illustrates the fundamental way that data is transferred from one place to another by using the language.
 
-You assign data to array elements by using curly braces ({...}):
-
-```4d
-atNames{1}:="Richard"
-```
 
 ## Local, Process, and Interprocess variables
 
