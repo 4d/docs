@@ -140,10 +140,10 @@ In projects converted from 4D versions prior to 20 R7, additional compilation op
 
 These options are only maintained for compatibility with legacy code. For more information, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#compiler-settings). 
 
-In converted projects, it is recommended to [enable the direct typing option](#enabling-direct-typing) and to write compliant declaration code, i.e.:
+In converted projects, it is recommended to [enable the direct typing mode](#enabling-direct-typing) and to write compliant declaration code, i.e.:
 
 - declare explicitely all variables [using `var` keywords](../Concepts/variables.md#declaring-variables)
-- declare explicitely all parameters in function and method prototypes using [`function` and `#declare` keywords](../Concepts/parameters.md).
+- declare explicitely all parameters in function and method prototypes using [`Function` and `#DECLARE` keywords](../Concepts/parameters.md).
 
 #### Enabling direct typing
 
