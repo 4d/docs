@@ -63,7 +63,7 @@ Acción a realizar en caso de doble clic en una línea vacía de un subformulari
 
 #### Ver también
 
-[Double click on row](#double-click-on-row)
+[Doble clic en la línea](#double-click-on-row)
 
 ---
 

@@ -22,7 +22,7 @@ Any worker/process calling the `.wait()` method will suspend its execution until
 
 Note that to avoid blocking situations, the `.wait()` can also return after a defined timeout has been reached.
 
-Signal objects are created with the [New signal](#new-signal) command.
+Os objetos de sinal são criados com o comando [New signal](#new-signal).
 
 ### Trabalhar com sinais
 

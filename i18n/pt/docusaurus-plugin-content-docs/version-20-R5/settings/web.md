@@ -11,11 +11,11 @@ A través de las pestañas de la página **Web**, puede configurar varios aspect
 
 #### Iniciar o servidor Web no arranque
 
-Indicates whether the Web server will be launched on startup of the 4D application. Esta opción se describe en la sección [Administración del servidor web](../WebServer/webServerAdmin.md#starting-the-4d-web-server).
+Indica se o servidor Web será iniciado ao iniciar a aplicação 4D. Esta opción se describe en la sección [Administración del servidor web](../WebServer/webServerAdmin.md#starting-the-4d-web-server).
 
 #### Ativar HTTP
 
-Indicates whether or not the Web server will accept non-secure connections. Ver [Activar HTTP](../WebServer/webServerConfig.md#enable-http).
+Indica se o servidor web vai ou não aceitar conexões não seguras. Ver [Activar HTTP](../WebServer/webServerConfig.md#enable-http).
 
 #### Porta HTTP
 
@@ -27,21 +27,21 @@ Endereço IP em que o servidor web 4D vai receber solicitações HTTP (4D local 
 
 #### Ativar HTTPS
 
-Indicates whether or not the Web server will accept secure connections. Ver [Activar HTTPS](../WebServer/webServerConfig.md#enable-https).
+Indica se o servidor web vai ou não aceitar conexões seguras. Ver [Activar HTTPS](../WebServer/webServerConfig.md#enable-https).
 
 #### Porta HTTPS
 
 Permite modificar o número da porta TCP/IP usada pelo servidor Web para as conexões HTTP seguras sobre TLS (protocolo HTTPS). Ver [Puerto HTTPS](../WebServer/webServerConfig.md#https-port).
 
-#### Allow database Access through 4DSYNC URLs
+#### Allow database access through 4DSYNC URLs
 
-_Nota de compatibilidad:_ esta opción es [obsoleta](../WebServer/webServerConfig.md#deprecated-settings). For database access through HTTP, it is now recommended to use ORDA remote datastore features and REST requests.
+_Nota de compatibilidad:_ esta opción es [obsoleta](../WebServer/webServerConfig.md#deprecated-settings). Para acesso ao banco de dados através de HTTP, agora é recomendado usar as funcionalidades de armazenamento remoto do ORDA e solicitações REST.
 
 ### Caminhos
 
 #### Raiz HTML predefinida
 
-Define the default location of the Web site files and to indicate the hierarchical level on the disk above which the files will not be accessible. Ver [Carpeta raíz](../WebServer/webServerConfig.md#root-folder).
+Define a localização padrão dos arquivos do site e indicar o nível hierárquico no disco acima do qual os arquivos não serão acessíveis. Ver [Carpeta raíz](../WebServer/webServerConfig.md#root-folder).
 
 #### Página inicial predefinida
 
@@ -68,7 +68,7 @@ At any moment, you can clear the cache of the pages and images that it contains 
 
 ### Processo Web
 
-This area allows you to configure how the web server will handle user sessions and their associated processes.
+Essa área permite configurar como o servidor Web tratará as sessões de usuário e seus processos associados.
 
 > La opción **Sesiones heredadas** solo está disponible para la compatibilidad en las bases/proyectos creados con las versiones de 4D anteriores a 4D v18 R6.
 

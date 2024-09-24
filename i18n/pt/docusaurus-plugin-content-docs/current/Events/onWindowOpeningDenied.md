@@ -21,15 +21,13 @@ This event is generated when the opening of a pop-up window is blocked by the We
 
 Puede identificar la URL bloqueada utilizando el comando `WA Get last filtered URL`.
 
-This event is also triggered when a drop operation has been done in the Web area (with embedded and Wwindows system [engines](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine)) if the [Drag and drop](../FormObjects/webArea_overview.md#user-interface) option is also enabled for the area. Pode aceitar a entrega chamando:
+Esse evento também é acionado quando uma operação de soltar é feita na área da Web (com [mecanismos] do sistema incorporado e do Windows(../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine)) se a opção [Drag and drop](../FormObjects/webArea_overview.md#user-interface) também estiver ativada para a área. Pode aceitar a entrega chamando:
 
 ```4d
-//web area object method
-If (FORM Event.code=On Window Opening Denied)
-	WA OPEN URL(*; "WebArea"; WA Get last filtered URL(*; "WebArea"))  
-	// or UrlVariable:=WA Get last filtered URL(*; "WebArea")  
-	// where UrlVariable is the URL variable associated to the web area
-End if 
+//web area object method If (FORM Event.code=On Window Opening Denied)
+    WA OPEN URL(*; "WebArea"; WA Get last filtered URL(*; "WebArea"))  
+    // or UrlVariable:=WA Get last filtered URL(*; "WebArea")  
+    // where UrlVariable is the URL variable associated to the web area End if
 ```
 
 ### Veja também

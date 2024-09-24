@@ -15,9 +15,9 @@ title: VP COLUMN AUTOFIT
 
 #### Description
 
-The `VP COLUMN AUTOFIT` command <!-- REF #_method_.VP COLUMN AUTOFIT.Summary -->automatically sizes the column(s) in _rangeObj_ according to their contents<!-- END REF -->.
+La commande `VP COLUMN AUTOFIT` <!-- REF #_method_.VP COLUMN AUTOFIT.Summary -->dimensionne automatiquement les colonnes dans _rangeObj_ en fonction de leur contenu<!-- END REF -->.
 
-In _rangeObj_, pass a range object containing a range of the columns whose size will be automatically handled.
+Dans _rangeObj_, passez un objet plage contenant une plage de colonnes dont la taille doit être gérée automatiquement.
 
 #### Exemple
 
@@ -31,7 +31,7 @@ La sélection des colonnes et l'exécution du code suivant :
  VP COLUMN AUTOFIT(VP Get selection("ViewProarea"))
 ```
 
-... resizes the columns to fit the size of the contents:
+... redimensionne les colonnes pour correspondre à la taille du contenu :
 
 ![](../../assets/en/ViewPro/cmd_vpColumnAutoFit2.PNG)
 

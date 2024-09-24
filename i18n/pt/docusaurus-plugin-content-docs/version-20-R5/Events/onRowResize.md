@@ -5,11 +5,11 @@ title: On Row Resize
 
 | Code | Pode ser chamado por                                    | Definição                                                    |
 | ---- | ------------------------------------------------------- | ------------------------------------------------------------ |
-| 60   | [4D View Pro Area](FormObjects/viewProArea_overview.md) | A altura de uma linha é modificada por um usuário com o rato |
+| 60   | [Área 4D View Pro](FormObjects/viewProArea_overview.md) | A altura de uma linha é modificada por um usuário com o rato |
 
 ## Descrição
 
-This event is generated when the height of a row is modified by a user in a 4D View Pro document. Nesse contexto, o [objeto evento] (overview.md#event-object) retornado pelo comando `FORM Event` contém:
+Esse evento é gerado quando a altura de uma linha é modificada por um usuário em um documento 4D View Pro. Nesse contexto, o [objeto evento] (overview.md#event-object) retornado pelo comando `FORM Event` contém:
 
 | Propriedade | Tipo          | Descrição                                                                                                  |
 | ----------- | ------------- | ---------------------------------------------------------------------------------------------------------- |

@@ -48,11 +48,11 @@ Con 4D en modo remoto, estos archivos deben estar ubicados en la carpeta de recu
 
 ## Conjunto de caracteres
 
-| Puede ajustarse con           | Nombre                                                                               | Comentarios                  |
-| ----------------------------- | ------------------------------------------------------------------------------------ | ---------------------------- |
-| objeto webServer              | `characterSet`                                                                       | Entero MIBEnum o cadena Name |
-| `WEB SET OPTION`              | `Web character set`                                                                  | Entero MIBEnum o cadena Name |
-| Caja de diálogo de parámetros | [Options (II) page/Standard Set](../settings/web.md#standard-set) | Menú popup                   |
+| Puede ajustarse con           | Nombre                                                                                       | Comentarios                  |
+| ----------------------------- | -------------------------------------------------------------------------------------------- | ---------------------------- |
+| objeto webServer              | `characterSet`                                                                               | Entero MIBEnum o cadena Name |
+| `WEB SET OPTION`              | `Web character set`                                                                          | Entero MIBEnum o cadena Name |
+| Caja de diálogo de parámetros | [Página Opciones (II)/Conjunto estándar](../settings/web.md#standard-set) | Menú popup                   |
 
 Define el conjunto de caracteres que utilizará el servidor web de 4D. El valor por defecto depende del lenguaje del sistema operativo.
 
@@ -110,7 +110,7 @@ Separe cada método con un ";" (por ejemplo: "post;get"). Si methods está vací
 
 #### Ver también
 
-[Enable CORS Service](#enable-cors-service)
+[Activar el servicio CORS](#enable-cors-service)
 
 ## Debug log
 
@@ -131,11 +131,11 @@ Estado del archivo de registro de peticiones HTTP del servidor web ([_HTTPDebugL
 
 ## Página de inicio por defecto
 
-| Puede ajustarse con           | Nombre                                                                       | Comentarios                               |
-| ----------------------------- | ---------------------------------------------------------------------------- | ----------------------------------------- |
-| objeto webServer              | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage)                   | Text                                      |
-| `WEB SET HOME PAGE`           |                                                                              | Puede ser diferente para cada proceso web |
-| Caja de diálogo de parámetros | [Configuration page/Default Home Page](../settings/web.md#default-home-page) |                                           |
+| Puede ajustarse con           | Nombre                                                                                    | Comentarios                               |
+| ----------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------- |
+| objeto webServer              | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage)                                | Text                                      |
+| `WEB SET HOME PAGE`           |                                                                                           | Puede ser diferente para cada proceso web |
+| Caja de diálogo de parámetros | [Página Configuración/Página de inicio por defecto](../settings/web.md#default-home-page) |                                           |
 
 Designa una página de inicio por defecto para el servidor web. Esta página puede ser estática o [semi-dynamic].
 
@@ -173,11 +173,11 @@ Para más información sobre CORS, consulte la página [Cross-origin resource sh
 
 ## Activar HTTP
 
-| Puede ajustarse con           | Nombre                                                           | Comentarios |
-| ----------------------------- | ---------------------------------------------------------------- | ----------- |
-| objeto webServer              | [`HTTPEnabled`](API/WebServerClass.md#httpenabled)               | boolean     |
-| `WEB SET OPTION`              | `Web HTTP enabled`                                               |             |
-| Caja de diálogo de parámetros | [Configuration page/Enable HTTP](../settings/web.md#enable-http) |             |
+| Puede ajustarse con           | Nombre                                                              | Comentarios |
+| ----------------------------- | ------------------------------------------------------------------- | ----------- |
+| objeto webServer              | [`HTTPEnabled`](API/WebServerClass.md#httpenabled)                  | boolean     |
+| `WEB SET OPTION`              | `Web HTTP enabled`                                                  |             |
+| Caja de diálogo de parámetros | [Página Configuración/Activar HTTP](../settings/web.md#enable-http) |             |
 
 Indica si el servidor web acepta o no conexiones no seguras.
 
@@ -281,11 +281,11 @@ Número de puerto IP de escucha para las conexiones HTTPS vía TLS. Por defecto,
 
 ## Tiempo de espera del proceso inactivo
 
-| Puede ajustarse con           | Nombre                                                                                                      | Comentarios |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------- |
-| objeto webServer              | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout)                                    |             |
-| `WEB SET OPTION`              | `Web inactive process timeout`                                                                              |             |
-| Caja de diálogo de parámetros | [Options (I) page/Inactive Process Timeout](../settings/web.md#inactive-process-timeout) | Cursor      |
+| Puede ajustarse con           | Nombre                                                                                                                     | Comentarios |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| objeto webServer              | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout)                                                   |             |
+| `WEB SET OPTION`              | `Web inactive process timeout`                                                                                             |             |
+| Caja de diálogo de parámetros | [Página Opciones (I)/Tiempo de espera de proceso inactivo](../settings/web.md#inactive-process-timeout) | Cursor      |
 
 Duración de vida (en minutos) de los procesos inactivos asociados con sesiones heredadas. Al final del tiempo de espera, el proceso se mata en el servidor, se llama al método base `On Web Legacy Close Session`, luego se destruye el contexto de sesión.
 
@@ -503,11 +503,11 @@ En este caso, los robots no pueden acceder a todo el sitio.
 
 ## Carpeta raíz
 
-| Puede ajustarse con           | Nombre                                                                       | Comentarios                                                                                                                                  |
-| ----------------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| objeto webServer              | [`rootFolder`](API/WebServerClass.md#rootfolder)                             | Propiedad texto pero puede ser un objeto [`4D.Folder`](API/FolderClass.md) cuando se usa con el parámetro _settings_ de la función `start()` |
-| `WEB SET ROOT FOLDER`         |                                                                              |                                                                                                                                              |
-| Caja de diálogo de parámetros | [Configuration page/Default HTML Root](../settings/web.md#default-html-root) |                                                                                                                                              |
+| Puede ajustarse con           | Nombre                                                                             | Comentarios                                                                                                                                  |
+| ----------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| objeto webServer              | [`rootFolder`](API/WebServerClass.md#rootfolder)                                   | Propiedad texto pero puede ser un objeto [`4D.Folder`](API/FolderClass.md) cuando se usa con el parámetro _settings_ de la función `start()` |
+| `WEB SET ROOT FOLDER`         |                                                                                    |                                                                                                                                              |
+| Caja de diálogo de parámetros | [Página Configuración/Raíz HTML por defecto](../settings/web.md#default-html-root) |                                                                                                                                              |
 
 Ruta de la carpeta raíz del servidor web, es decir, la carpeta en la que 4D buscará las páginas HTML estáticas y semidinámicas, imágenes, etc., para enviarlas a los navegadores. La ruta de acceso está en formato POSIX (ruta completa). Será necesario reiniciar el servidor web para que se tenga en cuenta la nueva carpeta raíz.
 

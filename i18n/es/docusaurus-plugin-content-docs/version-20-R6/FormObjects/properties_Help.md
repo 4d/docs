@@ -44,4 +44,4 @@ Cuando se asocian consejos diferentes a un mismo objeto en varias ubicaciones, s
 
 #### Ver también
 
-[Placeholder](properties_Entry.md#placeholder)
+[Marcador de posición](properties_Entry.md#placeholder)
