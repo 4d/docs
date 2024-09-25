@@ -187,7 +187,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.isFile` property returns <!-- REF #directory.isFile.Summary -->always **false** for a folder<!-- END REF -->.
+A propriedade `.isFile` retorna <!-- REF #directory.isFile.Summary -->sempre **false** para uma pasta<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
