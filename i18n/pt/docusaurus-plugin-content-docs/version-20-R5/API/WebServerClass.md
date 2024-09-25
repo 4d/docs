@@ -233,7 +233,7 @@ Contains the <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed ho
   - myProject.myDomain.com
   - \*
 
-- **methods** (text, optional): Accepted HTTP method(s) for the corresponding CORS host. Separar cada método com um ";" (por exemplo: "post;get"). If *methods* is empty, null, or undefined, all methods are enabled.
+- **methods** (texto, opcional): métodos HTTP aceito(s) para o host CORS correspondente. Separar cada método com um ";" (por exemplo: "post;get"). If *methods* is empty, null, or undefined, all methods are enabled.
 
 <!-- END REF -->
 
