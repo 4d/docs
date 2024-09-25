@@ -14,7 +14,7 @@ You'll often find that you need to pass data to your methods and functions. This
 ALERT("Hello")
 ```
 
-Parameters are passed to methods or class functions in the same way. For example, if a class function named `getArea()` accepts two parameters, a call to the class function might look like this: 
+Parameters are passed to methods or class functions in the same way. For example, if a class function named `getArea()` accepts two parameters, a call to the class function might look like this:
 
 ```4d
 $area:=$o.getArea(50;100)
@@ -26,7 +26,7 @@ Or, if a project method named `DO_SOMETHING` accepts three parameters, a call to
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
-The input parameters are separated by semicolons (;). 
+The input parameters are separated by semicolons (;).
 
 The same principles are used when methods are executed through dedicated commands, for example:
 
@@ -76,12 +76,12 @@ Function getArea($width : Integer; $height : Integer) -> $area : Integer
 The following rules apply:
 
 - The declaration line must be the first line of the method or function code, otherwise an error is displayed (only comments or line breaks can precede the declaration).
-- Parameter names must start with a `$` character and be compliant with [property naming rules](identifiers.md#object-properties). 
-- Multiple parameters (and types) are separated by semicolons (;). 
+- Parameter names must start with a `$` character and be compliant with [property naming rules](identifiers.md#object-properties).
+- Multiple parameters (and types) are separated by semicolons (;).
 - Multiline syntaxes are supported (using "\\" character).
 
 
-For example, when you call a `getArea()` function with two parameters: 
+For example, when you call a `getArea()` function with two parameters:
 
 ```4d
 $area:=$o.getArea(50;100)
@@ -93,7 +93,7 @@ In the class function code, the value of each parameter is copied into the corre
 // Class: Polygon
 Function getArea($width : Integer; $height : Integer)-> $area : Integer
 	$area:=$width*$height
-``` 
+```
 
 >If the type is not defined, the parameter will be defined as [`Variant`](dt_variant.md).
 
@@ -116,8 +116,8 @@ You declare the return parameter of a function by adding an arrow (->) and the p
 ```4d
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
- 
-You can also declare the return parameter only by adding `: type`, in which case it can be handled by a [return statement](#return-expression). For example: 
+
+You can also declare the return parameter only by adding `: type`, in which case it can be handled by a [return statement](#return-expression). For example:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -131,9 +131,9 @@ Parameters, which include the returned value, must be declared only once. In par
 
 ```qs
 	//invalid declaration
-Function myTransform ($x : Integer) -> $x : Integer 
+Function myTransform ($x : Integer) -> $x : Integer
 	//error: $x is declared twice
-``` 
+```
 
 :::
 
@@ -149,13 +149,13 @@ Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 
 :::note
 
-Tables or array expressions can only be passed [as reference using a pointer](dt_pointer.md#pointers-as-parameters-to-methods). 
+Tables or array expressions can only be passed [as reference using a pointer](dt_pointer.md#pointers-as-parameters-to-methods).
 
 :::
 
 ### Initialization
 
-When parameters are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been assigned. 
+When parameters are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been assigned.
 
 
 
@@ -168,7 +168,7 @@ When parameters are declared, they are initialized to the [**default value corre
 |19 R4|Added
 </details>
 
-The `return` statement ends function or method execution and can be used to return an expression to the caller. 
+The `return` statement ends function or method execution and can be used to return an expression to the caller.
 
 For example, the following function returns the square of its argument, $x, where $x is a number.
 
@@ -231,7 +231,7 @@ Note that even if you declared 0, 1, or more parameters, you can always pass the
 
 ```4d
 //foo method
-#DECLARE($p1: Text;$p2 : Text; $p3 : Date) 
+#DECLARE($p1: Text;$p2 : Text; $p3 : Date)
 For($i;1;Count parameters)
 	ALERT("param "+String($i)+" = "+String(${$i}))
 End for
@@ -243,10 +243,10 @@ This method can be called:
 foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed
 ```
 
-> Parameter indirection is best managed if you respect the following convention: if only some of the parameters are addressed by indirection, they should be passed after the others. 
+> Parameter indirection is best managed if you respect the following convention: if only some of the parameters are addressed by indirection, they should be passed after the others.
 
 
-### Declaring variadic parameters 
+### Declaring variadic parameters
 
 It is not mandatory to declare variadic parameters. Non-declared variadic parameters automatically get the [Variant](dt_variant.md) type.
 
@@ -277,20 +277,20 @@ Function myfunction (var1: Integer ; ... : Text)
 
 
 #### Example
- 
+
 Here we have a method called `SumNumbers` that returns the calculated total for all the numbers passed as parameters:
 
 ```4d
 
-#DECLARE( ... : Real) : Real 
+#DECLARE( ... : Real) : Real
 
 
 
-var $number; $total : Real 
+var $number; $total : Real
 
 For each ($number; 1; Count parameters)
 	$total+=${$number}
-End for each 
+End for each
 
 return $total
 
@@ -300,7 +300,7 @@ This method can be called with a variable number of Real parameters. In case of 
 
 ```4d
 
-$total1:=SumNumbers // returns 0 
+$total1:=SumNumbers // returns 0
 $total2:=SumNumbers(1; 2; 3; 4; 5) // returns 15
 $total3:=SumNumbers(1; 2; "hello"; 4; 5) // error
 
@@ -308,7 +308,7 @@ $total3:=SumNumbers(1; 2; "hello"; 4; 5) // error
 
 :::note Compatibility
 
-The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is deprecated as of 4D 20 R7. 
+The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is deprecated as of 4D 20 R7.
 
 :::
 
@@ -318,21 +318,6 @@ The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is deprecat
 Some contexts do not support declaration in a "Compiler_" method, thus they are handled specifically:
 
 - Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
-
-- Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the object method.
-**Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. For example:
-
-```4d
- var $0 : Integer
- If(Form event code=On Drag Over)
-    $0:=0
-    ...
-    If($DataType=Is picture)
-       $0:=-1
-    End if
-    ...
- End if
-```
 
 
 
@@ -363,9 +348,9 @@ This case is handled by 4D depending on the context:
 
 
 
-## Using object properties as named parameters 
+## Using object properties as named parameters
 
-Using objects as parameters allow you to handle **named parameters**. This programming style is simple, flexible, and easy to read. 
+Using objects as parameters allow you to handle **named parameters**. This programming style is simple, flexible, and easy to read.
 
 For example, using the `CreatePerson` method:
 
@@ -418,7 +403,7 @@ ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
 
 The power here is that you will not need to change your existing code. It will always work as in the previous version, but if necessary, you can use another value than 10 years.
 
-With named variables, any parameter can be optional. In the above example, all parameters are optional and anyone can be given, in any order. 
+With named variables, any parameter can be optional. In the above example, all parameters are optional and anyone can be given, in any order.
 
 
 
@@ -460,9 +445,9 @@ The following example displays a text message and can insert the text into a doc
 // APPEND TEXT Project Method
 // APPEND TEXT ( Text { ; Text { ; Object } } )
 // APPEND TEXT ( Message { ; Path { ; 4DWPArea } } )
- 
+
  #DECLARE ($message : Text; $path : Text; $wpArea : Object)
-  
+
  ALERT($message)
  If(Count parameters>=3)
     WP SET TEXT($wpArea;$1;wk append)
@@ -495,7 +480,7 @@ When you pass a parameter, 4D always evaluates the parameter expression in the c
 	//Here is some code from the method MY_METHOD
 DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
 ALERT([People]Name)
- 
+
 	//Here is the code of the method DO_SOMETHING
  #DECLARE($param : Text)
  $param:=Uppercase($param)
@@ -512,7 +497,7 @@ There are two ways to make the method `DO_SOMETHING` change the value of the fie
   //Here is some code from the method MY_METHOD
 DO_SOMETHING(->[People]Name) //Let's say [People]Name value is "williams"
 ALERT([People]Last Name)
- 
+
   //Here the code of the method DO_SOMETHING
 #DECLARE($param : Text)
 $param->:=Uppercase($param->)
@@ -539,7 +524,7 @@ This second technique of returning a value by a subroutine is called "using a fu
 
 ### Particular cases: objects and collections
 
-You need to pay attention to the fact that Object and Collection data types can only be handled through a reference (i.e. an internal *pointer*). 
+You need to pay attention to the fact that Object and Collection data types can only be handled through a reference (i.e. an internal *pointer*).
 
 Consequently, when using such data types as parameters, `$param, $return...` do not contain *values* but *references*. Modifying the value of the `$param, $return...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](dt_pointer.md#pointers-as-parameters-to-methods), except that `$param, $return...` parameters do not need to be dereferenced in the subroutine.
 
@@ -567,5 +552,3 @@ When you execute the `CreatePerson` method, both alert boxes will read "50" sinc
 
 
 **4D Server:** When parameters are passed between methods that are not executed on the same machine (using for example the "Execute on Server" option), references are not usable. In these cases, copies of object and collection parameters are sent instead of references.
-
-
