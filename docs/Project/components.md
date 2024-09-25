@@ -37,7 +37,7 @@ This page describes how to work with components in the **4D** and **4D Server** 
 To load a component in your 4D project, you can either:
 
 - copy the component files in the [**Components** folder of your project](architecture.md#components),
-- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Component manager interface**](#adding-a-dependency).
+- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-dependency).
 
 Components declared in the **dependencies.json** file can be stored at different locations:
 
@@ -116,7 +116,7 @@ You declare a local component in the [**dependencies.json** file](#dependencyjso
 
 ... where "myComponent1" and "myComponent2" are the name of the components to be loaded.
 
-By default, if "myComponent1" and "myComponent2" are not declared in an [environment4d.json file](#environment4djson), 4D will look for the component's package folder (*i.e.* the project root folder of the component) at the same level as your 4D project's package folder, e.g.:
+By default, if "myComponent1" and "myComponent2" are not declared in an [**environment4d.json**](#environment4djson) file, 4D will look for the component's package folder (*i.e.* the project root folder of the component) at the same level as your 4D project's package folder, e.g.:
 
 ```
 	/MyProjectRoot/
@@ -128,7 +128,7 @@ Thanks to this architecture, you can simply copy all your components at the same
 
 :::note
 
-If you do not want to benefit from the **dependencies.json** architecture, you can install local components by copying their files in the [**Components** folder of your project](architecture.md#components).
+If you do not want to use the **dependencies.json** architecture, you can install local components by copying their files in the [**Components** folder of your project](architecture.md#components).
 
 :::
 
@@ -336,17 +336,22 @@ The Dependency panel is then displayed. Dependencies are sorted by name in alpha
 ![dependency](../assets/en/Project/dependency.png)
 
 
-### Adding and Removing Dependencies
-
-The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server). You can:
-
-- add local dependencies ([GitHub dependencies](#components-stored-on-github) cannot be added through the interface),
-- remove any dependency.
+The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server). You can add and remove local or GitHub dependencies.
 
 
-#### Adding a dependency
 
-To add a dependency from the Dependencies panel, click on the **+** button of the panel or select **Add a dependency...** from the contextual menu. A standard Open file dialog box is displayed, allowing you to select the component to add. You can select a **.4DBase** package or a [**.4DProject** file](architecture.md##applicationname4dproject-file). It the selected item is not valid, an error is displayed.
+### Adding a local dependency
+
+To add a local dependency, click on the **+** button in the bottom left area of the panel, select the **Local** tab and click on the **...** button. 
+
+![dependency-add](../assets/en/Project/dependency-add.png)
+
+
+ A standard Open file dialog box is displayed, allowing you to select the component to add. You can select a [**.4DZ**](../Desktop/building.md#build-component) or a [**.4DProject**](architecture.md##applicationname4dproject-file) file. 
+ 
+ If the selected item is not valid, an error message is displayed. 
+ 
+ If the selected item is valid, its name and location are displayed in the dialog box. Click **Add** to add the dependency to the project. 
 
 - If you select a component located next to the project package folder (default location), it is automatically declared in the [**dependencies.json**](#dependenciesjson) file.
 - If you select a component that is not located next to the project package folder, it is automatically declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). The Dependencies panel asks if you want to save a [relative or absolute path](#relative-paths-vs-absolute-paths).  
@@ -359,9 +364,35 @@ If no [**environment4d.json**](#environmen4djson) file is already defined for th
 
 The selected dependency is automatically added to the [inactive dependency list](#dependency-status). It will be loaded once the application restarts.
 
-#### Removing a dependency
 
-To add a dependency from the Dependencies panel, select the dependency to remove and click on the **-** button of the panel or select **Remove the dependency...** from the contextual menu. You can select several dependencies, in which case the action is applied to all selected dependencies.
+### Adding a GitHub dependency
+
+To add a [GitHub dependency](#components-stored-on-github), click on the **+** button in the bottom left area of the panel and select the **GitHub** tab. 
+
+![dependency-add-git](../assets/en/Project/dependency-add-git.png)
+
+In the address area, enter the path of the GitHub component's repository. It includes your GitHub user account name and your repository, for example:
+
+![dependency-add-git-2](../assets/en/Project/dependency-add-git-2.png)
+
+
+#### Providing your GitHub access token
+
+If you use a [private GitHub repository](#private-repositories) for your component to add, you need to provide your personal access token to the Dependency manager. To do this, you can either:
+
+- click on **Add a personal access token...** button that is displayed in the "Add a dependency" dialog box after you entered private GitHub repository path. 
+- or, select **Add a GitHub personal access token** in the Dependency manager menu.
+
+![dependency-add-token](../assets/en/Project/dependency-add-token.png)
+
+You can then enter your personal access token:
+
+![dependency-add-token-2](../assets/en/Project/dependency-add-token-2.png)
+
+
+### Removing a dependency
+
+To remove a dependency from the Dependencies panel, select the dependency to remove and click on the **-** button of the panel or select **Remove the dependency...** from the contextual menu. You can select several dependencies, in which case the action is applied to all selected dependencies.
 
 :::note
 
