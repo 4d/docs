@@ -1834,7 +1834,7 @@ Optionally, you can pass the index of collection from which to start a reverse s
 
 - If *startFrom* >= the collection's length minus one (coll.length-1), the whole collection is searched (default).
 - Se *startFrom* < 0, ele é recalculado como *startFrom:=startFrom+length* (é considerado como o deslocamento a partir do final da coleção). Se o valor calculado for negativo, -1 é retornado (a coleção não é pesquisada).
-  **Note:** Even if *startFrom* is negative, the collection is still searched from right to left.
+  **Nota**: mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da direita para esquerda.
 - If *startFrom* = 0, -1 is returned, which means the collection is not searched.
 
 #### Exemplo
@@ -1866,7 +1866,7 @@ Optionally, you can pass the index of collection from which to start a reverse s
 
 The `.length` property <!-- REF #collection.length.Summary -->returns the number of elements in the collection<!-- END REF -->.
 
-A propriedade `.length` é inicializada quando a coleção é criada. Adicionar ou remover elementos atualiza o tamanho, se necessário. This property is **read-only** (you cannot use it to set the size of the collection).
+A propriedade `.length` é inicializada quando a coleção é criada. Adicionar ou remover elementos atualiza o tamanho, se necessário. Essa propriedade é **somente leitura** (não pode usá-la para estabelecer o tamanho da coleção).
 
 #### Exemplo
 
@@ -2224,7 +2224,7 @@ Também pode passar um parâmetro de critérios para definir como devem ordenar-
 }
 ```
 
-- *ascOrDesc* : Integer. You pass one of the following constants from the **Objects and collections** theme:
+- *ascOrDesc* : Integer. Se passar uma das seguintes constantes do tema **Objects and collections**:
 
   | Parâmetros    | Tipo    | Valor | Comentário                                                                     |
   | ------------- | ------- | ----- | ------------------------------------------------------------------------------ |
@@ -2610,9 +2610,9 @@ Você pode usar parênteses na consulta para dar prioridade ao cálculo. Por exe
 
 4D allows you to use placeholders for *propertyPath* and *value* arguments within the *queryString* parameter. Um placeholder é um parâmetro que você insere em cadeias de consulta e que é substituído por outro valor quando a cadeia de consulta é avaliada. O valor dos placeholders é avaliado uma vez no início da consulta; ele não é avaliado para cada elemento.
 
-Two types of placeholders can be used: **indexed placeholders** and **named placeholders**.
+Dois tipos de placeholders podem ser usados: **placeholders indexados** e **placeholders nomeados**.
 
-- **Indexed placeholders**: parameters are inserted as `:paramIndex` (for example ":1", ":2"...) no *queryString* e seus respectivos valores são fornecidos pela sequência de parâmetro(s) *value*. É possível utilizar até 128 parâmetros *value*.
+- **Placeholders indexados**: parâmetros são inseridos como `:paramIndex` (por exemplo, ":1", ":2"...) no *queryString* e seus respectivos valores são fornecidos pela sequência de parâmetro(s) *value*. É possível utilizar até 128 parâmetros *value*.
 
 Exemplo:
 
@@ -2681,7 +2681,7 @@ $vSingles:=$colPersons.query("spouse = null") //sintaxe correta
 
 #### Referência de objeto ou de coleção como valor
 
-You can query a collection using an object reference or a collection reference as the *value* parameter to compare. The query will match objects in the collection that refer (point to) the same **instance of** object or collection.
+You can query a collection using an object reference or a collection reference as the *value* parameter to compare. A consulta corresponderá a objetos na coleção que se referem (apontam para) a mesma **instância de** objeto ou coleção.
 
 Os seguintes comparadores são suportados:
 
@@ -2729,7 +2729,7 @@ In the *querySettings* parameter, you can pass an object containing query placeh
 
 | Propriedade | Tipo   | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| parameters  | Object | **Named placeholders for values** used in the *queryString*. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the *queryString* (":placeholder") and value is the value to compare. Pode combinar marcadores de posição indexados (valores passados diretamente em parâmetros de valor) e valores de marcadores de posição com nome na mesma pesquisa.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| parameters  | Object | **Placeholders com nome para os valores** usados na *queryString*. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the *queryString* (":placeholder") and value is the value to compare. Pode combinar marcadores de posição indexados (valores passados diretamente em parâmetros de valor) e valores de marcadores de posição com nome na mesma pesquisa.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | attributes  | Object | **Placeholders nomeados para os caminhos de atributos** usados na *queryString*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate a property in an object of the collection<table><tr><th>Type</th><th>Description</th></tr><tr><td>String</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
 
 > Using this parameter is mandatory if you want to query a collection [using a **collection reference** or **object reference**](#object-or-collection-reference-as-value).
