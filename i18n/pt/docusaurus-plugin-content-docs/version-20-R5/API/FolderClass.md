@@ -16,7 +16,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 ### Pathnames
 
-Os objetos `Folder` suportam vários pathnames, incluindo a sintaxe `filesystems` ou `posix`. Supported pathnames are detailed in the [**Pathnames**](../Concepts/paths.md) page.
+Os objetos `Folder` suportam vários pathnames, incluindo a sintaxe `filesystems` ou `posix`. Os nomes de caminho compatíveis são detalhados na página [**Rotas de acesso**](../Concepts/paths.md).
 
 ### Objecto Folder
 
