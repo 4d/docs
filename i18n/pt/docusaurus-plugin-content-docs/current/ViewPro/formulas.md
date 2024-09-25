@@ -92,7 +92,7 @@ Essa fórmula se refere às células C6 e C7. Ou seja, 4D View Pro é instruído
 When you copy or move these formulas to new locations, each cell address in that formula will either change or stay the same, depending on how it is typed.
 
 - A reference that changes is called a **relative reference**, and refers to a cell by how far left/right and up/down it is from the cell with the formula.
-- A reference that always points to a particular cell is called an **absolute reference**.
+- Uma referência que aponta sempre para uma célula específica é chamada de **referência absoluta**.
 - You can also create a mixed reference which always points to a fixed row or column.
 
 ### Notação de referências
