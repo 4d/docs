@@ -92,7 +92,7 @@ Authentication on the WebAdmin web server is granted using an access key. Para m
 In accordance with the management of 4D projects, only the following usages are supported:
 
 - o desenvolvimento com Qodly Studio deve ser feito usando **4D** (monousuário).
-- deployment of 4D applications powered with Qodly forms must be done using **4D Server**.
+- implantação de aplicações 4D com formulários Qodly deve ser feita usando **4D Server**.
 
 ## Abertura do Qodly Studio
 
@@ -100,7 +100,7 @@ The Qodly Studio page is available when the [WebAdmin web server is running](../
 
 Há duas maneiras de acessar Qodly Studio:
 
-- from your 4D single-user application, go to **Design** > **Qodly Studio...**.
+- de sua aplicação 4D usuário único, vá para **Desenho** > **Qodly Studio...**.
   If the WebAdmin web server is already running, depending on its configuration, your default browser opens at `IPaddress:HTTPPort/studio` or `IPaddress:HTTPSPort/studio`. Otherwise, you will be prompted if you want to start the WebAdmin web server first.
 
 - on a browser, with the WebAdmin web server running (launched from 4D or 4D Server), enter the following address:
