@@ -158,7 +158,7 @@ Cuando se selecciona esta opción, la opción [Guardar valor](FormObjects/proper
 
 #### Veja também
 
-[**Save Value**](FormObjects/properties_Object.md#save-value)
+[**Salvar valor**](FormObjects/properties_Object.md#save-value)
 
 ---
 
