@@ -129,7 +129,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Class](properties_Object.md#css-class)                                                           | X              | X                  | X                                     |
 | [Collection or entity selection](properties_Object.md#collection-or-entity-selection)             |                | X                  | X                                     |
 | [Redimensionamiento automático de columnas](properties_ResizingOptions.md#column-auto-resizing)   | X              | X                  | X                                     |
-| [Current item](properties_DataSource.md#current-item)                                             |                |                    | X                                     |
+| [Elemento actual](properties_DataSource.md#current-item)                                          |                |                    | X                                     |
 | [Posición actual del elemento](properties_DataSource.md#current-item-position)                    |                |                    | X                                     |
 | [Data Source](properties_Object.md#data-source)                                                   | X              | X                  | X                                     |
 | [Detail Form Name](properties_ListBox.md#detail-form-name)                                        |                | X                  |                                       |
@@ -161,19 +161,19 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Tabla maestra](properties_DataSource.md#table)                                                   |                | X                  |                                       |
 | [Meta info expression](properties_Text.md#meta-info-expression)                                   |                |                    | X                                     |
 | [Method](properties_Action.md#method)                                                             | X              | X                  | X                                     |
-| [Movable Rows](properties_Action.md#movable-rows)                                                 | X              |                    |                                       |
+| [Líneas móviles](properties_Action.md#movable-rows)                                               | X              |                    |                                       |
 | [Named Selection](properties_DataSource.md#selectionName)                                         |                | X                  |                                       |
 | [Number of Columns](properties_ListBox.md#number-of-columns)                                      | X              | X                  | X                                     |
 | [Número de columnas bloqueadas](properties_ListBox.md#number-of-locked-columns)                   | X              | X                  | X                                     |
 | [Número de columnas estáticas](properties_ListBox.md#number-of-static-columns)                    | X              | X                  | X                                     |
 | [Nombre del objeto](properties_Object.md#nombre-del-objeto)                                       | X              | X                  | X                                     |
-| [Right](properties_CoordinatesAndSizing.md#right)                                                 | X              | X                  | X                                     |
+| [Derecha](properties_CoordinatesAndSizing.md#right)                                               | X              | X                  | X                                     |
 | [Array de colores de fondo de fila](properties_BackgroundAndBorder.md#row-background-color-array) | X              |                    |                                       |
 | [Row Control Array](properties_ListBox.md#row-control-array)                                      | X              |                    |                                       |
 | [Row Font Color Array](properties_Text.md#row-font-color-array)                                   | X              |                    |                                       |
 | [Altura de línea](properties_CoordinatesAndSizing.md#row-height)                                  | X              |                    |                                       |
 | [Array altura de línea](properties_CoordinatesAndSizing.md#row-height-array)                      | X              |                    |                                       |
-| [Row Style Array](properties_Text.md#row-style-array)                                             | X              |                    |                                       |
+| [Array de estilo de línea](properties_Text.md#row-style-array)                                    | X              |                    |                                       |
 | [Selected Items](properties_DataSource.md#selected-items)                                         |                |                    | X                                     |
 | [Selection Mode](properties_ListBox.md#selection-mode)                                            | X              | X                  | X                                     |
 | [Single-Click Edit](properties_Entry.md#single-click-edit)                                        | X              | X                  | X                                     |
@@ -191,7 +191,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Barra de desplazamiento vertical](properties_Appearance.md#vertical-scroll-bar)                  | X              | X                  | X                                     |
 | [Tamaño vertical](properties_ResizingOptions.md#vertical-sizing)                                  | X              | X                  | X                                     |
 | [Visibilidad](properties_Display.md#visibility)                                                   | X              | X                  | X                                     |
-| [Width](properties_CoordinatesAndSizing.md#width)                                                 | X              | X                  | X                                     |
+| [Ancho](properties_CoordinatesAndSizing.md#width)                                                 | X              | X                  | X                                     |
 
 > Las columnas, los encabezados y los pies de list box soportan propiedades específicas.
 
@@ -637,7 +637,7 @@ Según el tipo de list box, puede utilizar diferentes propiedades para personali
 | ---------------- | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Color de fondo   | [Array de colores de fondo de fila](properties_BackgroundAndBorder.md#row-background-color-array) | [Expresión del color de fondo](properties_BackgroundAndBorder.md#background-color-expression) | [Expresión color de fondo](properties_BackgroundAndBorder.md#background-color-expression) o [Meta info expresión](properties_Text.md#meta-info-expression) |
 | Color de fuente  | [Row Font Color Array](properties_Text.md#row-font-color-array)                                   | [Expresión de color de fuente](properties_Text.md#font-color-expression)                      | [Expresión color de fuente](properties_Text.md#font-color-expression) o [Meta info expression](properties_Text.md#meta-info-expression)                    |
-| Estilo de fuente | [Row Style Array](properties_Text.md#row-style-array)                                             | [Style Expression](properties_Text.md#style-expression)                                       | [Expresión de estilo](properties_Text.md#style-expression) o [Expresión meta info](properties_Text.md#meta-info-expression)                                |
+| Estilo de fuente | [Array de estilo de línea](properties_Text.md#row-style-array)                                    | [Style Expression](properties_Text.md#style-expression)                                       | [Expresión de estilo](properties_Text.md#style-expression) o [Expresión meta info](properties_Text.md#meta-info-expression)                                |
 | Visualización    | [Row Control Array](properties_ListBox.md#row-control-array)                                      | -                                                                                             | *                                                                                                                                                          |
 
 ## Imprimir list boxes
