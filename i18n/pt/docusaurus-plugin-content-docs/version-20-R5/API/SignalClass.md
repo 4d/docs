@@ -230,7 +230,7 @@ Essa propriedade é **somente leitura**.
 
 The `.trigger( )` function <!-- REF #SignalClass.trigger().Summary -->sets the `signaled` property of the signal object to **true**<!-- END REF --> and awakens all workers or processes waiting for this signal.
 
-If the signal is already in the signaled state (i.e., the `signaled` property is already **true**), the function does nothing.
+Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `signaled` já for **true**), a função não faz nada.
 
 <!-- END REF -->
 
