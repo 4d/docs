@@ -365,7 +365,7 @@ If no [**environment4d.json**](#environmen4djson) file is already defined for th
 
 :::
 
-The selected dependency is added to the [inactive dependency list](#dependency-status). It will be loaded once the application restarts.
+ The dependency is added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. It will be loaded once the application restarts. It will be loaded once the application restarts.
 
 
 ### Adding a GitHub dependency
@@ -374,19 +374,39 @@ To add a [GitHub dependency](#components-stored-on-github), click on the **+** b
 
 ![dependency-add-git](../assets/en/Project/dependency-add-git.png)
 
-Enter your GitHub user account name and the GitHub component's repository, for example:
+Enter the path of the GitHub repository of the dependency. It could be a **repository URL** or a **github-account/repository-name string**, for example:
 
 ![dependency-add-git-2](../assets/en/Project/dependency-add-git-2.png)
 
-If the 
+Once the connection is established, the GitHub icon ![dependency-gitlogo](../assets/en/Project/dependency-gitlogo.png) is displayed on the right side of the entry area. You can click on this icon to open the repository in your default browser. 
 
+:::note
+
+If the component is stored on a [private GitHub repository](#private-repositories) and your personal token is missing, an error message is displayed and a  **Add a personal access token...** button is displayed (see [Providing your GitHub access token](#providing-your-github-access-token)).
+
+:::
+
+
+You can then define the [tag or version](#tags-and-versions) option for the dependency: 
+
+![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
+
+- **Latest**: Selected by default and allows to download the release that is tagged as the latest (stable) version.
+- **Up to Next Major Version**: Define a semantic version range to restrict updates to the next major version.
+- **Up to Next Minor Version**: Similarly, restrict updates to the next minor version.
+- **Exact Version (Tag)**: Select or manually enter a specific tag from the available list.
+
+
+Click on the **Add** button to add the dependency to the project. 
+
+The GitHub dependency declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. It will be loaded once the application restarts.
 
 #### Providing your GitHub access token
 
-If you use a [private GitHub repository](#private-repositories) for your component to add, you need to provide your personal access token to the Dependency manager. To do this, you can either:
+If the component is stored on a [private GitHub repository](#private-repositories), you need to provide your personal access token to the Dependency manager. To do this, you can either:
 
-- click on **Add a personal access token...** button that is displayed in the "Add a dependency" dialog box after you entered private GitHub repository path. 
-- or, select **Add a GitHub personal access token** in the Dependency manager menu.
+- click on **Add a personal access token...** button that is displayed in the "Add a dependency" dialog box after you entered a private GitHub repository path. 
+- or, select **Add a GitHub personal access token...** in the Dependency manager menu at any moment.
 
 ![dependency-add-token](../assets/en/Project/dependency-add-token.png)
 
@@ -394,6 +414,7 @@ You can then enter your personal access token:
 
 ![dependency-add-token-2](../assets/en/Project/dependency-add-token-2.png)
 
+You can only enter one personal access token. Once a token has been entered, you can edit it.  
 
 ### Removing a dependency
 
@@ -409,7 +430,7 @@ A confirmation dialog box is displayed. If the dependency was declared in the **
 
 ![dependency-remove](../assets/en/Project/remove-comp.png)
 
-If you confirm the dialog box, the removed dependency is automatically flagged "Unload at restart". It will be unloaded once the application restarts.
+If you confirm the dialog box, the removed dependency [status](#dependency-status) is automatically flagged "Unload at restart". It will be unloaded once the application restarts.
 
 ![status-unload](../assets/en/Project/status-unload.png)
 
@@ -470,7 +491,11 @@ The following status labels are available:
 - **Overloading**: The dependency is loaded and is overloading one or more other dependencies with the same name at a lower [priority level](#priority).
 - **Not found**: The dependency is declared in the dependencies.json file but is not found.
 - **Inactive**: The dependency is not loaded because it is not compatible with the project (e.g. the component is not compiled for the current platform).
-- **Duplicated**: The dependency is not loaded because another dependency with the same name exists at the same location (and is loaded).  
+- **Duplicated**: The dependency is not loaded because another dependency with the same name exists at the same location (and is loaded). 
+- **Available at restart**: The dependency reference has just been added [using the interface](#monitoring-project-dependencies), it will be loaded once the application restarts.  
+- **Unloaded at restart**: The dependency reference has just been removed [using the interface](#removing-a-dependency), it will be unloaded once the application restarts.   
+
+
 
 A tooltip is displayed when you hover over the dependency line, provding additional information about the status:
 
