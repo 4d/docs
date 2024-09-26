@@ -51,7 +51,7 @@ Para actualizar las otras máquinas clientes que no estén conectadas, basta con
 
 - **SQL Server**: 19812 por defecto (puede modificarse a través de la página "SQL/Configuración" de las Preferencias).
 - **Servidor de aplicaciones**: 19813 por defecto (puede modificarse a través de la página "Cliente-Servidor/Configuración" de las Preferencias, ver arriba).
-- **DB4D Server** (database server): 19814 by default. This port number cannot be modified directly but it always consists of the application server port number + 1.\
+- **DB4D Server** (servidor de banco de dados): 19814 por padrão. This port number cannot be modified directly but it always consists of the application server port number + 1.\
   When a 4D client connects to 4D Server, it uses the TCP port of the application server (19813 or the port indicated after the colon ':' in the IP address shown in the connection dialog box). Connection to other servers via their respective ports is then automatic; it is no longer necessary to specify them.\
   Note that in the case of access via a router or a firewall, the three TCP ports must be opened explicitly.
 - [**Depurador remoto**](../Debugging/debugging-remote.md): 19815 por padrão. This port number cannot be modified directly but it always consists of the application server port number + 2.

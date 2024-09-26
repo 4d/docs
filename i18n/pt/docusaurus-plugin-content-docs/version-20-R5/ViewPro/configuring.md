@@ -27,7 +27,7 @@ As interfaces permitem modificações básicas e a manipulação de dados. User-
 
 #### Barra de ferramentas
 
-Enabling the Toolbar interface displays the [**Show Formula Bar**](FormObjects/properties_Appearance.md#show-formula-bar) option. Quando selecionada, a barra de fórmula fica visível abaixo da interface da barra de ferramentas.
+Habilitar a interface da barra de ferramentas exibe a opção [**Mostrar a barra de fórmula**](FormObjects/properties_Appearance.md#show-formula-bar). Quando selecionada, a barra de fórmula fica visível abaixo da interface da barra de ferramentas.
 
 Com barra de fórmula visível:
 

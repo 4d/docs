@@ -414,7 +414,7 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 | Libuv        | 1.48                   | 20 R6               | Utilisé pour QUIC                                                                                                                                  |
 | libZip       | 1.9.2  | 20                  | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                                                         |
 | LZMA         | 5.4.1  | 20                  |                                                                                                                                                    |
-| OpenSSL      | 3.2.0  | 20 R4               | Le niveau de sécurité TLS/SSL par défaut a été relevé. Voir [Changements de comportement](#behavior-changes) pour la version 20 R4 |
+| OpenSSL      | 3.3.2  | **20 R7**           | Le niveau de sécurité TLS/SSL par défaut a été relevé. Voir [Changements de comportement](#behavior-changes) pour la version 20 R4 |
 | PDFWriter    | 4.3                    | 20                  | FreeType dependency dans 12.2.1                                                                                    |
 | PHP          | 8.2.4  | 20                  |                                                                                                                                                    |
 | SpreadJS     | 16.2.6 | 20 R4               | Moteur 4D View Pro                                                                                                                                 |

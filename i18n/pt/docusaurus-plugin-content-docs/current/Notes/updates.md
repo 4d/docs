@@ -62,7 +62,7 @@ Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5
 
 #### Mudanças de comportamento
 
-- Os plug-ins _4D Internet Commands_ e _4D for OCI_ não estão mais incluídos nos instaladores do 4D. To get these plug-ins, you need to connect to the [**4D Product Download portal**](https://product-download.4d.com/).
+- Os plug-ins _4D Internet Commands_ e _4D for OCI_ não estão mais incluídos nos instaladores do 4D. Para obter esses plug-ins, você precisa se conectar ao [**Portal de descarrega de produtos 4D**](https://product-download.4d.com/).
 - Changes made in the Structure editor regarding graphical appearance of tables and fields (color, position, order...) are now saved in a separate file named `catalog_editor.json` stored in the project's [`Sources`](../Project/architecture.md#sources) folder.
 
 ## 4D 20 R4
@@ -250,7 +250,7 @@ Leia [**O que há de novo no 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-
 
 #### Mudanças de comportamento
 
-- Para manter a consistência com as interfaces padrão (por exemplo, exploradores de arquivos do sistema operacional), as regras da caixa de listagem para seleção de linhas/arrastar e soltar foram modificadas. A continuous or discontinuous selection of rows can be dragged by simply clicking on and moving a selected row; the **Alt** key is not longer necessary (but can still be used like in previous previous). When the **Shift** or **Ctrl/Command** key is pressed, a mouse click is taken into account when the click is down. Para obter mais informações sobre arrastar e soltar em list boxes, consulte [esta postagem do blog] (https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) e faça download [deste projeto HDI 4D] (https://github.com/4d-depot/HDI_LB_DragAndDrop).
+- Para manter a consistência com as interfaces padrão (por exemplo, exploradores de arquivos do sistema operacional), as regras da caixa de listagem para seleção de linhas/arrastar e soltar foram modificadas. A continuous or discontinuous selection of rows can be dragged by simply clicking on and moving a selected row; the **Alt** key is not longer necessary (but can still be used like in previous previous). Quando a tecla **Shift** ou **Ctrl/Comando** é pressionada, um clique do mouse é levado em consideração quando o clique é para baixo. Para obter mais informações sobre arrastar e soltar em list boxes, consulte [esta postagem do blog] (https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) e faça download [deste projeto HDI 4D] (https://github.com/4d-depot/HDI_LB_DragAndDrop).
 - A numeração de compilação interna do 4D foi modificada a partir do 4D 19 R7:
   - as versões até 4D 19 R6 (inclusive) são numeradas como 282xxx,
   - os lançamentos do 4D 19 R7 serão numerados como 100xxx.\
@@ -413,7 +413,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 | Libuv      | 1.48                   | 20 R6            | Usado para QUIC                                                                                                                           |
 | libZip     | 19.5                   | 20               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                                                      |
 | LZMA       | 5.4.1  | 20               |                                                                                                                                           |
-| OpenSSL    | 3.2.0  | 20 R4            | O nível de segurança TLS/SSL padrão foi atualizado. Veja [mudanças de comportamento](#behavior-changes) para versão 20 R4 |
+| OpenSSL    | 3.3.2  | **20 R7**        | O nível de segurança TLS/SSL padrão foi atualizado. Veja [mudanças de comportamento](#behavior-changes) para versão 20 R4 |
 | PDFWriter  | 4.3                    | 20               | Dependência FreeType na 12.2.1                                                                            |
 | PHP        | 8.2.4  | 20               |                                                                                                                                           |
 | SpreadJS   | 16.2.6 | 20 R4            | Motor 4D View Pro                                                                                                                         |

@@ -16,7 +16,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 ### Pathnames
 
-`File` objects support several pathnames, including `filesystems` or `posix` syntax. Supported pathnames are detailed in the [**Pathnames**](../Concepts/paths.md) page.
+`File` objects support several pathnames, including `filesystems` or `posix` syntax. Os nomes de caminho compatíveis são detalhados na página [**Rotas de acesso**](../Concepts/paths.md).
 
 ### Objeto File
 
@@ -188,7 +188,7 @@ If necessary, the function creates the folder hierachy as described in the [plat
 **Valor retornado**
 
 - **True** se o arquivo for criado com sucesso;
-- **False** if a file with the same name already exists or if an error occured.
+- **False** se já existir um arquivo com o mesmo nome ou se tiver ocorrido um erro.
 
 #### Exemplo
 
@@ -769,7 +769,7 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
-> **Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
+> **Nota de compatibilidade**: as opções de compatibilidade estão disponíveis para a gerenciamento da EOL e da BOM. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
 
 #### Exemplo
 

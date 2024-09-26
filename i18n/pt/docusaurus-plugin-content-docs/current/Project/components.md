@@ -22,7 +22,7 @@ A 4D project running in interpreted mode can use either interpreted or compiled 
 
 :::note
 
-This page describes how to work with components in the **4D** and **4D Server** environments. In other environments, components are managed differently:
+Esta página descreve como trabalhar com componentes nos ambientes **4D** e **4D Server**. In other environments, components are managed differently:
 
 - in [4D in remote mode](../Desktop/clientServer.md), components are loaded by the server and sent to the remote application.
 - in merged applications, components are [included at the build step](../Desktop/building.md#plugins--components-page).
@@ -36,7 +36,7 @@ To load a component in your 4D project, you can either:
 - copy the component files in the [**Components** folder of your project](architecture.md#components),
 - or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Component manager interface**](#adding-a-dependency).
 
-Components declared in the **dependencies.json** file can be stored at different locations:
+Os componentes declarados no arquivo **dependencies.json** podem ser armazenados em locais diferentes:
 
 - at the same level as your 4D project's package folder: this is the default location,
 - anywhere on your machine: the component path must be declared in the **environment4d.json** file
@@ -48,7 +48,7 @@ If the same component is installed at different locations, a [priority order](#p
 
 #### dependencies.json
 
-O arquivo **dependencies.json** faz referência a todos os componentes necessários em seu projeto 4D. This file must be located in the **Sources** folder of the 4D project folder, e.g.:
+O arquivo **dependencies.json** faz referência a todos os componentes necessários em seu projeto 4D. Esse arquivo deve estar localizado na pasta **Sources** da pasta do projeto 4D, por exemplo:
 
 ```
 	/MyProjectRoot/Project/Sources/dependencies.json
@@ -74,7 +74,7 @@ Since components can be installed in different ways, a priority order is applied
 
 **Prioridade mais alta**
 
-1. Components stored in the [**Components** folder of the project](architecture.md#components).
+1. Componentes armazenados na pasta [**Components** do projeto](architecture.md#components).
 2. Components declared in the **dependencies.json** file (the **environment4d.json** declared path overrides the **dependencies.json** path to configure a local environment).
 3. Internal User 4D components (e.g. 4D NetKit, 4D SVG...)
 
@@ -128,7 +128,7 @@ If you do not want to benefit from the **dependencies.json** architecture, you c
 
 If you want to customize the location of local components, you declare the paths for the dependencies that are not stored at the same level as the project folder in the [**environment4d.json**](#environment4djson) file.
 
-You can use **relative** or **absolute** paths (see below).
+Você pode usar caminhos **relativos** ou **absolutos** (veja abaixo).
 
 Exemplos:
 
@@ -180,7 +180,7 @@ These steps can easily be automated, with 4D code or using GitHub Actions, for e
 
 #### Declaring paths
 
-You declare a component stored on GitHub in the [**dependencies.json** file](#dependencyjson) in the following way:
+Você declara um componente armazenado no GitHub no arquivo [**dependencies.json**](#dependencyjson) da seguinte maneira:
 
 ```json
 {
@@ -209,9 +209,9 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 
 #### Tags and versions
 
-When you create a release in GitHub, you specify a **tag** and a **version**.
+Ao criar uma versão no GitHub, você especifica uma **etiqueta** e uma **versão**.
 
-- **Tags** are texts that uniquely reference a release. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por exemplo :
+- **Etiquetas** são textos que fazem referência exclusiva a uma versão. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por exemplo :
 
 ```json
 {
@@ -259,7 +259,7 @@ If you do not specify a tag or a version, 4D automatically retrieves the "latest
 
 If you want to integrate a component located in a private repository, you need to tell 4D to use a connection token to access it.
 
-To do this, in your GitHub account, create a **classic** token with access rights to **repo**.
+Para fazer isso, em sua conta GitHub, crie um token **classic** com direitos de acesso a **repo**.
 
 :::note
 
@@ -267,7 +267,7 @@ For more information, please refer to the [GitHub token interface](https://githu
 
 :::
 
-Then insert the "github" key in your [**environment4d.json**](#environment4djson) file:
+Em seguida, insira a chave "github" em seu arquivo [**environment4d.json**](#environment4djson):
 
 ```json
 {
@@ -342,7 +342,7 @@ To add a dependency from the Dependencies panel, select the dependency to remove
 
 :::note
 
-Only dependencies declared in the [**dependencies.json**](#dependenciesjson) file can be removed using the Dependencies panel. If a selected dependency cannot be removed, the **-** button is disabled and the **Remove the dependency...** menu item is hidden.
+Somente as dependências declaradas no arquivo [**dependencies.json**](#dependenciesjson) podem ser removidas usando o painel Dependencies. If a selected dependency cannot be removed, the **-** button is disabled and the **Remove the dependency...** menu item is hidden.
 
 :::
 
@@ -393,8 +393,8 @@ By default, all dependencies identified by the Dependency manager are listed, wh
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
 - **Ativo**: dependências carregadas e podem ser usadas no projeto. Isso inclui dependências _overloading_, que são de fato carregadas. _Overloaded_ dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
-- **Inactive**: Dependencies that are not loaded in the project and are not available. There are many possible reasons for this status: missing files, version incompatibility...
-- **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
+- **Inativo**: dependências que não estão carregadas no projeto e não estão disponíveis. There are many possible reasons for this status: missing files, version incompatibility...
+- **Conflito**: dependências carregadas, mas que sobrecarregam pelo menos outra dependência em um [nível de prioridade](#priority) inferior. Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
 
 ### Status de dependência
 
@@ -406,7 +406,7 @@ Estão disponíveis as seguintes etiquetas de status:
 
 - **Overloaded**: The dependency is not loaded because it is overloaded by another dependency with the same name at a higher [priority level](#priority).
 - **Overloading**: The dependency is loaded and is overloading one or more other dependencies with the same name at a lower [priority level](#priority).
-- **Not found**: The dependency is declared in the dependencies.json file but is not found.
+- **Not found**: a dependência está declarada no arquivo dependencies.json, mas não foi encontrada.
 - **Inactive**: The dependency is not loaded because it is not compatible with the project (e.g. the component is not compiled for the current platform).
 - **Duplicated**: The dependency is not loaded because another dependency with the same name exists at the same location (and is loaded).
 

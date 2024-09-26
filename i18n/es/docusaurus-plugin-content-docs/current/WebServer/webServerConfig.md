@@ -9,11 +9,11 @@ Los parámetros del servidor web 4D incluye parámetros de seguridad, puertos de
 
 Hay diferentes maneras de configurar los parámetros del servidor web 4D, en función del alcance y del servidor que se quiera configurar:
 
-| Ubicación del parámetro                                                          | Alcance                                                                     | Servidor web a utilizar                                               |
-| -------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| [webServer object](webServerObject.md)                                           | Temporal (sesión actual)                                 | Todos los servidores web, incluidos los servidores web de componentes |
-| `WEB SET OPTION` o comando `WEB XXX`                                             | Temporal (sesión actual)                                 | Servidor principal                                                    |
-| [**Settings** dialog box](../settings/web.md) (**Web** pages) | Permanente (todas las sesiones, almacenadas en el disco) | Servidor principal                                                    |
+| Ubicación del parámetro                                                                    | Alcance                                                                     | Servidor web a utilizar                                               |
+| ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| [webServer object](webServerObject.md)                                                     | Temporal (sesión actual)                                 | Todos los servidores web, incluidos los servidores web de componentes |
+| `WEB SET OPTION` o comando `WEB XXX`                                                       | Temporal (sesión actual)                                 | Servidor principal                                                    |
+| Caja de diálogo [**Propiedades**](../settings/web.md) (**Páginas web**) | Permanente (todas las sesiones, almacenadas en el disco) | Servidor principal                                                    |
 
 > Algunos parámetros no están disponibles desde todos los lugares.
 

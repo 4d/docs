@@ -183,7 +183,7 @@ A pasta Logs contém todos os arquivos de registo utilizados pelo projeto. Os ar
 
 ## `Settings` (usuario)
 
-This folder contains [**user settings**](../Desktop/user-settings.md#user-settings) used for application administration.
+Essa pasta contém [**configurações de usuário**](../Desktop/user-settings.md#user-settings) usadas para a administração de aplicações.
 
 > Estos parámetros tienen prioridad sobre el archivo de [parámetros de estructura](#sources). Sin embargo, si existen [parámetros de usuario para los datos](#settings-user-data), tienen prioridad sobre los parámetros de usuario. Ver también [Prioridad de los parámetros](../Desktop/user-settings.md#priority-of-settings).
 
@@ -216,7 +216,7 @@ Folder containing components that are embedded in the project (must be stored at
 
 :::info
 
-You can also use the [**dependencies.json** and (optionnally) **environment4d.json** files](components.md) to declare components.
+Você também pode usar os arquivos [**dependencies.json** e (opcionalmente) **environment4d.json**](components.md) para declarar componentes.
 
 :::
 

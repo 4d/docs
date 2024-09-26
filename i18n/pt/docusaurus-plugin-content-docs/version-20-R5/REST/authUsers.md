@@ -16,7 +16,7 @@ The user login mode allows you to control how REST requests acquire 4D Client li
 
 You set the user login mode through the `forceLogin` property in the [`roles.json` file](../ORDA/privileges.md#rolesjson-file):
 
-- the **default mode** is used if the "forceLogin" property is missing or set to "false",
+- o **modo padrão** é usado se a propriedade "forceLogin" estiver ausente ou definida como "false",
 - el modo **force login** se utiliza si la propiedad "forceLogin" es "true".
 
 :::caution

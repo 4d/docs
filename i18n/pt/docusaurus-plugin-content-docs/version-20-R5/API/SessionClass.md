@@ -388,7 +388,7 @@ Since `.info` is a computed property, it is recommended to call it once and then
 
 :::note
 
-This function always returns **False** with remote client and stored procedure sessions.
+Essa função sempre retorna **False** com sessões de procedimento armazenado e cliente remoto.
 
 :::
 
@@ -456,7 +456,7 @@ The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -
 
 :::note
 
-Privileges and roles are defined in [`roles.json`](../ORDA/privileges.md#rolesjson-file) file of the project. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) section.
+Privileges and roles are defined in [`roles.json`](../ORDA/privileges.md#rolesjson-file) file of the project. Para obter mais informações, consulte a seção [**Privilégios**](../ORDA/privileges.md).
 
 :::
 

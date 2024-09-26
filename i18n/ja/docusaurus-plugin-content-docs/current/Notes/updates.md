@@ -415,7 +415,7 @@ ALERT($param1+" "+$param2)
 | Libuv     | 1.48                   | 20 R6          | QUIC に使用                                                              |
 | libZip    | 1.9.2  | 20             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                 |
 | LZMA      | 5.4.1  | 20             |                                                                       |
-| OpenSSL   | 3.2.0  | 20 R4          | デフォルトの TLS/SSL セキュリティレベルがアップグレードされました。 リリース v20R4 の[動作の変更](#動作の変更)参照。 |
+| OpenSSL   | 3.3.2  | **20 R7**      | デフォルトの TLS/SSL セキュリティレベルがアップグレードされました。 リリース v20R4 の[動作の変更](#動作の変更)参照。 |
 | PDFWriter | 4.3                    | 20             | 12.2.1 で FreeType依存                   |
 | PHP       | 8.2.4  | 20             |                                                                       |
 | SpreadJS  | 16.2.6 | 20 R4          | 4D View Pro エンジン                                                      |
