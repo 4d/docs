@@ -80,7 +80,7 @@ A privilege or a role can be associated to several "action + resource" combinati
 
 - Usted **crea** privilegios y/o roles en el archivo `roles.json` (ver abajo). **Configura** su alcance asignándolos a acción(es) de permiso aplicadas a recurso(s).
 
-- You **allow** privileges and/or roles to every user session using the [`.setPrivileges()`](../API/SessionClass.md#setprivileges) function of the `Session` class.
+- Você **permite** privilégios e/ou funções para cada sessão usuário usando a função [`.setPrivileges()`](../API/SessionClass.md#setprivileges) da classe `Session`.
 
 ### Exemplo
 
