@@ -513,7 +513,7 @@ Esta função envia a instrução para terminar e devolver o controlo ao guião 
 
 #### Descrição
 
-The `.terminated` property <!-- REF #SystemWorkerClass.terminated.Summary -->contains **true** if the external process is terminated<!-- END REF -->.
+A propriedade `.terminated` <!-- REF #SystemWorkerClass.terminated.Summary -->contém **true** se o processo externo for encerrado<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
