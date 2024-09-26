@@ -123,7 +123,7 @@ No entanto, essa propriedade tem uma função de digitação nos seguintes casos
 
 | Nome               | Tipo de dados | Valores possíveis         |
 | ------------------ | ------------- | ------------------------- |
-| dataSourceTypeHint | string        | <ul><li>**objectos standard:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object"</li></ul> |
+| dataSourceTypeHint | string        | <ul><li>**objectos standard:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**Colunas list box:** "boolean", "number", "picture", "text", date" (*somente list box array/seleção*) "integer", "time", "object"</li></ul> |
 
 #### Objectos suportados
 
