@@ -75,7 +75,7 @@ El botón **Borrar el código compilado** borra el código compilado del proyect
 
 ### Mostrar/ocultar avisos
 
-You can toggle the [warnings](#warnings) display in the Compiler window by clicking the **Show/Hide Warnings** button:
+Você pode alternar a exibição de [warnings](#warnings) na janela do Compilador clicando no botão **Mostrar/Esconder Warnings**:
 
 ![](../assets/en/Project/compilerWin4.png)
 
