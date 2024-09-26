@@ -40,7 +40,7 @@ Os componentes declarados no arquivo **dependencies.json** podem ser armazenados
 
 - at the same level as your 4D project's package folder: this is the default location,
 - anywhere on your machine: the component path must be declared in the **environment4d.json** file
-- on a GitHub repository: the component path can be declared in the **dependencies.json** file or in the **environment4d.json** file, or in both files.
+- em um repositório GitHub: o caminho do componente pode ser declarado no arquivo **dependencies.json** ou no arquivo **environment4d.json**, ou em ambos os arquivos.
 
 If the same component is installed at different locations, a [priority order](#priority) is applied.
 
@@ -116,7 +116,7 @@ By default, if "myComponent1" and "myComponent2" are not declared in an [environ
 	/MyProjectComponentRoot/
 ```
 
-Thanks to this architecture, you can simply copy all your components at the same level as your projects and reference them in your **dependencies.json** files.
+Graças a essa arquitetura, você pode simplesmente copiar todos os seus componentes no mesmo nível dos seus projetos e fazer referência a eles nos arquivos **dependencies.json**.
 
 :::note
 
@@ -404,10 +404,10 @@ Dependencies requiring the developer's attention are indicated by a **status lab
 
 Estão disponíveis as seguintes etiquetas de status:
 
-- **Overloaded**: The dependency is not loaded because it is overloaded by another dependency with the same name at a higher [priority level](#priority).
-- **Overloading**: The dependency is loaded and is overloading one or more other dependencies with the same name at a lower [priority level](#priority).
+- **Overloaded**: a dependência não é carregada porque está sobrecarregada por outra dependência com o mesmo nome em um [nível de prioridade] mais alto (#prioridade).
+- **Overloading**: a dependência está carregada e está sobrecarregando uma ou mais dependências com o mesmo nome em um [nível de prioridade] inferior (#prioridade).
 - **Not found**: a dependência está declarada no arquivo dependencies.json, mas não foi encontrada.
-- **Inactive**: The dependency is not loaded because it is not compatible with the project (e.g. the component is not compiled for the current platform).
+- **Inactive**: a dependência não é carregada porque não é compatível com o projeto (por exemplo, o componente não é compilado para a plataforma atual).
 - **Duplicated**: The dependency is not loaded because another dependency with the same name exists at the same location (and is loaded).
 
 A tooltip is displayed when you hover over the dependency line, provding additional information about the status:
