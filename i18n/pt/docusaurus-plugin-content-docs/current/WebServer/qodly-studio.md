@@ -311,7 +311,7 @@ Using different schemes might also lead to [session](sessions.md) issues, such a
 
 ![alt-text](../assets/en/WebServer/schemes.png)
 
-3. No Qodly Studio, você clica no ícone **Preview**. You are warned that the two web servers are started on different schemes, but despite this you click on the **Confirm** button.
+3. No Qodly Studio, você clica no ícone **Preview**. Você está avisado que os dois servidores web estão iniciados em esquemas diferentes, mas apesar disso você clique no botão **Confirmar**.
 
 ![alt-text](../assets/en/WebServer/render-button.png)
 
