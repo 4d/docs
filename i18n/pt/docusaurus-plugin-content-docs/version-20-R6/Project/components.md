@@ -84,7 +84,7 @@ Since components can be installed in different ways, a priority order is applied
 
 When a component cannot be loaded because of another instance of the same component located at a higher priority level, it is given the *Overloaded* [status](#dependency-status). The loaded component has the *Overloading* [status](#dependency-status).
 
-(the **environment4d.json** declared path overrides the **dependencies.json** path to configure a local environment).
+(a rota declarada em **environment4d.json** substitui a rota em **dependencies.json** para configurar um ambiente local).
 
 ### Declarando componentes locais
 
@@ -162,7 +162,7 @@ These steps can easily be automated, with 4D code or using GitHub Actions, for e
 
 #### Declaring paths
 
-You declare a component stored on GitHub in the [**dependencies.json** file](#dependencyjson) in the following way:
+Você declara um componente armazenado no GitHub no arquivo [**dependencies.json**](#dependencyjson) da seguinte maneira:
 
 ```json
 {
@@ -280,7 +280,7 @@ This file logs information such as the state of dependencies, paths, urls, loadi
 
 ## Monitoramento das dependências do projeto
 
-In an opened project, you can get information about dependencies and their current loading status in the **Dependencies** panel.
+Em um projeto aberto, você pode obter informações sobre dependências e seu estado de carregamento atual no painel **Dependências**.
 
 Para exibir o painel Dependências:
 
@@ -334,7 +334,7 @@ By default, all dependencies identified by the Dependency manager are listed, wh
 
 - **Ativo**: dependências carregadas e podem ser usadas no projeto. Isso inclui dependências *overloading*, que são de fato carregadas. *Overloaded* dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
 - **Inativo**: dependências que não estão carregadas no projeto e não estão disponíveis. There are many possible reasons for this status: missing files, version incompatibility...
-- **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
+- **Conflito**: dependências carregadas, mas que sobrecarregam pelo menos outra dependência em um [nível de prioridade](#priority) inferior. Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
 
 ### Status de dependência
 
