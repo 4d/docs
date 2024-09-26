@@ -98,7 +98,7 @@ When a component cannot be loaded because of another instance of the same compon
 
 ## Monitoramento das dependências do projeto
 
-In an opened project, you can get information about dependencies and their current loading status in the **Dependencies** panel.
+Em um projeto aberto, você pode obter informações sobre dependências e seu estado de carregamento atual no painel **Dependências**.
 
 Para exibir o painel Dependências:
 
@@ -145,7 +145,7 @@ By default, all dependencies identified by the Dependency manager are listed, wh
 
 - **Ativo**: dependências carregadas e podem ser usadas no projeto. Isso inclui dependências _overloading_, que são de fato carregadas. _Overloaded_ dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
 - **Inativo**: dependências que não estão carregadas no projeto e não estão disponíveis. There are many possible reasons for this status: missing files, version incompatibility...
-- **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
+- **Conflito**: dependências carregadas, mas que sobrecarregam pelo menos outra dependência em um [nível de prioridade](#priority) inferior. Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
 
 ### Status de dependência
 
