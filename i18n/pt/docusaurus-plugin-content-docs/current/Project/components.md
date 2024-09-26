@@ -180,7 +180,7 @@ These steps can easily be automated, with 4D code or using GitHub Actions, for e
 
 #### Declaring paths
 
-You declare a component stored on GitHub in the [**dependencies.json** file](#dependencyjson) in the following way:
+Você declara um componente armazenado no GitHub no arquivo [**dependencies.json**](#dependencyjson) da seguinte maneira:
 
 ```json
 {
@@ -342,7 +342,7 @@ To add a dependency from the Dependencies panel, select the dependency to remove
 
 :::note
 
-Only dependencies declared in the [**dependencies.json**](#dependenciesjson) file can be removed using the Dependencies panel. If a selected dependency cannot be removed, the **-** button is disabled and the **Remove the dependency...** menu item is hidden.
+Somente as dependências declaradas no arquivo [**dependencies.json**](#dependenciesjson) podem ser removidas usando o painel Dependencies. If a selected dependency cannot be removed, the **-** button is disabled and the **Remove the dependency...** menu item is hidden.
 
 :::
 
@@ -394,7 +394,7 @@ By default, all dependencies identified by the Dependency manager are listed, wh
 
 - **Ativo**: dependências carregadas e podem ser usadas no projeto. Isso inclui dependências _overloading_, que são de fato carregadas. _Overloaded_ dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
 - **Inativo**: dependências que não estão carregadas no projeto e não estão disponíveis. There are many possible reasons for this status: missing files, version incompatibility...
-- **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
+- **Conflito**: dependências carregadas, mas que sobrecarregam pelo menos outra dependência em um [nível de prioridade](#priority) inferior. Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
 
 ### Status de dependência
 
