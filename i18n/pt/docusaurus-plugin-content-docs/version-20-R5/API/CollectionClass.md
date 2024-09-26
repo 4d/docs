@@ -2347,7 +2347,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 
 - ou *methodName*, o nome de um método projeto (texto).
 
-In the callback, pass some code that compares two values and returns **true** if the first value is lower than the second value. Você pode fornecer parâmetros *extraParam* para a callback, se necessário.
+No retorno de chamada, passe algum código que compare dois valores e retorne **true** se o primeiro valor for menor que o segundo. Você pode fornecer parâmetros *extraParam* para a callback, se necessário.
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -2566,7 +2566,7 @@ onde:
 | Maior ou igual a                         | > =                         |                                                                                                                                                                                                                                   |
 | Incluído em                              | IN                          | Retorna dados iguais a ao menos um dos valores de uma coleção ou de um conjunto de valores, admite o coringa (@)                                                                                  |
 
-- **value**: the value to compare to the current value of the property of each element in the collection. It can be any constant value expression matching the element's data type property or a [**placeholder**](#using-placeholders).
+- **value**: the value to compare to the current value of the property of each element in the collection. Pode ser qualquer expressão de valor constante que corresponda à propriedade de tipo de dados do elemento ou um [**placeholder**](#using-placeholders).
   Quando usar um valor constante, as regras abaixo devem ser respeitadas:
   - A constante de tipo texto pode ser passada com ou sem aspas simples (ver **Uso de aspas mais abaixo**). Para pesquisar uma stirng dentro de uma string (uma pesquisa "contém") use o símbolo coringa (@) em valor para isolar a string a ser pesquisada como mostrado neste exemplo: "@Smith@". As palavras chaves abaixo são proibidas para constantes de texto: true, false.
   - Valores constantes de tipo **booleano**: **true** ou **false** (diferencia maiúscula de minúscula).
