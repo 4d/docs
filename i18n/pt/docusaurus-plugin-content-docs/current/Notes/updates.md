@@ -62,7 +62,7 @@ Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5
 
 #### Mudanças de comportamento
 
-- Os plug-ins _4D Internet Commands_ e _4D for OCI_ não estão mais incluídos nos instaladores do 4D. To get these plug-ins, you need to connect to the [**4D Product Download portal**](https://product-download.4d.com/).
+- Os plug-ins _4D Internet Commands_ e _4D for OCI_ não estão mais incluídos nos instaladores do 4D. Para obter esses plug-ins, você precisa se conectar ao [**Portal de descarrega de produtos 4D**](https://product-download.4d.com/).
 - Changes made in the Structure editor regarding graphical appearance of tables and fields (color, position, order...) are now saved in a separate file named `catalog_editor.json` stored in the project's [`Sources`](../Project/architecture.md#sources) folder.
 
 ## 4D 20 R4
@@ -413,7 +413,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 | Libuv      | 1.48                   | 20 R6            | Usado para QUIC                                                                                                                           |
 | libZip     | 19.5                   | 20               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                                                      |
 | LZMA       | 5.4.1  | 20               |                                                                                                                                           |
-| OpenSSL    | 3.2.0  | 20 R4            | O nível de segurança TLS/SSL padrão foi atualizado. Veja [mudanças de comportamento](#behavior-changes) para versão 20 R4 |
+| OpenSSL    | 3.3.2  | **20 R7**        | O nível de segurança TLS/SSL padrão foi atualizado. Veja [mudanças de comportamento](#behavior-changes) para versão 20 R4 |
 | PDFWriter  | 4.3                    | 20               | Dependência FreeType na 12.2.1                                                                            |
 | PHP        | 8.2.4  | 20               |                                                                                                                                           |
 | SpreadJS   | 16.2.6 | 20 R4            | Motor 4D View Pro                                                                                                                         |
