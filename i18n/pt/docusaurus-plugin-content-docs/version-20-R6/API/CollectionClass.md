@@ -2663,7 +2663,7 @@ $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
 $result2:=$col.query("company.name = :1";"John's Pizzas")
 ```
 
-> Using a [**collection reference** or **object reference**](#object-or-collection-reference-as-value) in the *value* parameter is not supported with this syntax. Você deve usar o parâmetro [*querySettings*] (#querysettings-parameter).
+> O uso de uma [**referência de coleção** ou **referência de objeto**](#object-or-collection-reference-as-value) no parâmetro *value* não é compatível com essa sintaxe. Você deve usar o parâmetro [*querySettings*] (#querysettings-parameter).
 
 #### Pesquisa de valores null
 
@@ -3272,7 +3272,7 @@ Pode definir o(s) seguinte(s) parâmetro(s):
 - (mandatory if you used a method) *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
 - *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
 
-In any case, at the point where `.some()` function encounters the first collection element returning true, it stops calling the callback and returns **true**.
+De qualquer forma, no momento em que a função `.some()` encontra o primeiro elemento da coleção retornando true, ela para de chamar o retorno de chamada e retorna **true**.
 
 Por padrão, `.some()` testa toda a coleção. Optionally, you can pass the index of an element from which to start the test in *startFrom*.
 
