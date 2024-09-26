@@ -470,6 +470,6 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 |OpenSSL|3.2.0|20 R4|Default TLS/SSL security level has been upgraded. See [Behavior changes](#behavior-changes) for release 20 R4|
 |PDFWriter|4.3|20|FreeType dependency in 12.2.1|
 |PHP|8.2.4|20||
-|SpreadJS|17.0.1|**20 R7**|4D View Pro engine|
+|SpreadJS|17.1.0|**20 R7**|See [this blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) for an overview of the new features|
 |webKit|WKWebView|19||
 |Zlib|1.2.13|20||
