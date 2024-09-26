@@ -236,7 +236,7 @@ You can also set this option directly in the [**roles.json** file](../ORDA/privi
 
 :::
 
-When the "force login" mode is **disabled** (default mode), any REST request, including the rendering of an authentication Qodly form, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. When the "force login" mode is **enabled**, a simple authentication Qodly form can be rendered without consuming any license. You just need to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly form. A licença é consumida somente quando o usuário está realmente conectado.
+When the "force login" mode is **disabled** (default mode), any REST request, including the rendering of an authentication Qodly form, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. Quando o modo "force login" está **ativado**, um formulário Qodly de autenticação simples pode ser renderizado sem consumir nenhuma licença. You just need to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly form. A licença é consumida somente quando o usuário está realmente conectado.
 
 :::info
 
@@ -315,7 +315,7 @@ Using different schemes might also lead to [session](sessions.md) issues, such a
 
 ![alt-text](../assets/en/WebServer/schemes.png)
 
-3. No Qodly Studio, você clica no ícone **Preview**. You are warned that the two web servers are started on different schemes, but despite this you click on the **Confirm** button.
+3. No Qodly Studio, você clica no ícone **Preview**. Você está avisado que os dois servidores web estão iniciados em esquemas diferentes, mas apesar disso você clique no botão **Confirmar**.
 
 ![alt-text](../assets/en/WebServer/render-button.png)
 
