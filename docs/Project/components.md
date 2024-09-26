@@ -331,30 +331,33 @@ To display the Dependencies panel:
 - with 4D Server, select the **Window/Project Dependencies** menu item.<br/>
 ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
-The Dependency panel is then displayed. Dependencies are sorted by name in alphabetical order:
+The Dependencies panel is then displayed. Dependencies are sorted by name in alphabetical order:
 
 ![dependency](../assets/en/Project/dependency.png)
 
 
-The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server). You can add and remove local or GitHub dependencies.
+The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server). You can add or remove **local** and **GitHub** dependencies.
 
 
 
 ### Adding a local dependency
 
-To add a local dependency, click on the **+** button in the bottom left area of the panel, select the **Local** tab and click on the **...** button. 
+To add a local dependency, click on the **+** button in the footer area of the panel. The following dialog box is displayed:
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
-
- A standard Open file dialog box is displayed, allowing you to select the component to add. You can select a [**.4DZ**](../Desktop/building.md#build-component) or a [**.4DProject**](architecture.md##applicationname4dproject-file) file. 
+Make sure the **Local** tab is selected and click on the **...** button. A standard Open file dialog box is displayed, allowing you to select the component to add. You can select a [**.4DZ**](../Desktop/building.md#build-component) or a [**.4DProject**](architecture.md##applicationname4dproject-file) file. 
  
+ If the selected item is valid, its name and location are displayed in the dialog box. 
+ 
+ ![dependency-selected](../assets/en/Project/local-selected.png)
+
  If the selected item is not valid, an error message is displayed. 
- 
- If the selected item is valid, its name and location are displayed in the dialog box. Click **Add** to add the dependency to the project. 
 
-- If you select a component located next to the project package folder (default location), it is automatically declared in the [**dependencies.json**](#dependenciesjson) file.
-- If you select a component that is not located next to the project package folder, it is automatically declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). The Dependencies panel asks if you want to save a [relative or absolute path](#relative-paths-vs-absolute-paths).  
+ Click **Add** to add the dependency to the project. 
+
+- If you select a component located next to the project package folder (default location), it is declared in the [**dependencies.json**](#dependenciesjson) file.
+- If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). The Dependencies panel asks if you want to save a [relative or absolute path](#relative-paths-vs-absolute-paths).  
 
 :::note
 
@@ -362,18 +365,20 @@ If no [**environment4d.json**](#environmen4djson) file is already defined for th
 
 :::
 
-The selected dependency is automatically added to the [inactive dependency list](#dependency-status). It will be loaded once the application restarts.
+The selected dependency is added to the [inactive dependency list](#dependency-status). It will be loaded once the application restarts.
 
 
 ### Adding a GitHub dependency
 
-To add a [GitHub dependency](#components-stored-on-github), click on the **+** button in the bottom left area of the panel and select the **GitHub** tab. 
+To add a [GitHub dependency](#components-stored-on-github), click on the **+** button in the footer area of the panel and select the **GitHub** tab. 
 
 ![dependency-add-git](../assets/en/Project/dependency-add-git.png)
 
-In the address area, enter the path of the GitHub component's repository. It includes your GitHub user account name and your repository, for example:
+Enter your GitHub user account name and the GitHub component's repository, for example:
 
 ![dependency-add-git-2](../assets/en/Project/dependency-add-git-2.png)
+
+If the 
 
 
 #### Providing your GitHub access token
