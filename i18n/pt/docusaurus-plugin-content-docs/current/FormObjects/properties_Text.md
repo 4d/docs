@@ -121,7 +121,7 @@ Existem dois tipos de nomes de famílias de letras:
 - _family-name:_ El nombre de una familia de fuentes, como "times", "courier", "arial", etc.
 - _generic-family:_ El nombre de una familia genérica, como "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
-You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.
+Você pode definir isso usando o comando [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html).
 
 #### Gramática JSON
 
