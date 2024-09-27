@@ -18,7 +18,7 @@ Uma sessão é aberta depois que o usuário é autenticado com sucesso (veja aba
 
 :::note Compatibidade
 
-The legacy login mode based upon the `On REST Authentication` database method is **deprecated** as of 4D 20 R6. It is now recommended to [use the **force login mode**](../ORDA/privileges.md#rolesjson-file) (automatically enabled in new projects) and to implement the [`ds.authentify()` function](#dsauthentify). In converted projects, [a button in the Settings dialog box](../settings/web.md#activate-rest-authentication-through-dsauthentify-function) will help you upgrade your configuration. In Qodly Studio for 4D, the mode can be set using the [**Force login** option](../WebServer/qodly-studio.md#force-login) in the Privileges panel.
+O modo de login legado baseado no método de banco de dados `On REST Authentication` é **obsoleto** a partir de 4D 20 R6. It is now recommended to [use the **force login mode**](../ORDA/privileges.md#rolesjson-file) (automatically enabled in new projects) and to implement the [`ds.authentify()` function](#dsauthentify). In converted projects, [a button in the Settings dialog box](../settings/web.md#activate-rest-authentication-through-dsauthentify-function) will help you upgrade your configuration. In Qodly Studio for 4D, the mode can be set using the [**Force login** option](../WebServer/qodly-studio.md#force-login) in the Privileges panel.
 
 :::
 
