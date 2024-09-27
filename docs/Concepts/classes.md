@@ -878,20 +878,13 @@ Singleton classes are not supported by [ORDA-based classes](../ORDA/ordaClasses.
 
 :::
 
-The scope of a singleton instance depends on its *shared* property. 
+The following table indicates the scope of a singleton instance depending on where it was created: 
   
-|Singleton created on|Process singleton|Shared singleton|Session singleton|
+|Singleton created on|Scope of process singleton|Scope of shared singleton|Scope of session singleton|
 |---|----|---|---|
-|4D single-user|Process|Application|Session on Application|
-|4D Server|Process|4D Server machine|Session on 4D Server machine|
-|4D remote mode|Process (*note*: singletons are not synchronized on the twin process)|4D remote machine|Session on 4D remote machine|
-
-:::note
-
-A session singleton created outside any session (e.g., in 4D single-user when code is not executed from a HTTP request) behaves like a standard shared session. 
-
-:::
-
+|**4D single-user**|Process|Application|Application or Web/REST session|
+|**4D Server**|Process|4D Server machine|Client/server session or Web/REST session or Stored procedure session|
+|**4D remote mode**|Process (*note*: singletons are not synchronized on the twin process)|4D remote machine|4D remote machine or Web/REST session|
 
 Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
 
@@ -992,23 +985,24 @@ Since the *buildVehicle()* function modifies the **cs.VehicleFactory** singleton
 
 #### Session singleton
 
-In an e-commerce application, you want to implement a shopping cart using session singletons. 
+In an inventory application, you want to implement an item inventory using session singletons. 
 
 ```4d
-//class ShoppingCart
+//class ItemInventory
 
 session singleton Class constructor()
-    This.productList:=New shared collection()
+    This.itemList:=New shared collection()
 
 shared function addItem($item:object)
-    This.productList.push($item)
+    This.itemList.push($item)
 ```
 
-By defining the ShoppingCart class as a session singleton, you make sure that every session and therefore every user has their own shopping cart. Accessing the user's ShoppingCart is as simple as:
+By defining the ItemInventory class as a session singleton, you make sure that every session and therefore every user has their own inventory. Accessing the user's inventory is as simple as:
 
 ```4d
 //in a user session
-cs.ShoppingCart.me //current user's shopping cart
+cs.ItemInventory.me
+//current user's shopping cart
 
 ```
 
