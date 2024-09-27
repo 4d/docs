@@ -613,6 +613,7 @@ Class constructor ($side : Integer)
 
 <!-- REF #_command_.Super.Params -->
 |Parameter|Type||Description|  
+
 |---|---|---|---|
 |param|any|->|Parameter(s) to pass to the parent constructor|
 |Result|Object|<-|Object's parent|
@@ -863,11 +864,11 @@ A **singleton class** is a user class that only produces a single instance. For 
 
 ### Singletons types
 
-4D supports three types of singletons, defined by their scope:
+4D supports three types of singletons:
 
 - a **process singleton** has a unique instance for the process in which it is instantiated, 
-- a **shared singleton** has a unique instance for all processes on the machine 
-- a **session singleton** has a unique instance for all processes in the [session](../API/SessionClass.md).
+- a **shared singleton** has a unique instance for all processes on the machine.
+- a **session singleton** is a shared singleton but with a unique instance for all processes in the [session](../API/SessionClass.md). Session singletons are shared within an entire session but vary between sessions. In the context of a client-server or a web application, session singletons make it possible to create and use a different instance for each session, and therefore for each user.
 
 Singletons are useful to define values that need to be available from anywhere in an application, a session, or a process.
 
@@ -879,22 +880,35 @@ Singleton classes are not supported by [ORDA-based classes](../ORDA/ordaClasses.
 
 The scope of a singleton instance depends on its *shared* property. 
   
-|Singleton created on|Scope if not shared|Scope if shared|
-|---|----|---|
-|4D single-user|Process|Application|
-|4D Server|Process|4D Server machine|
-|4D remote mode|Process (*note*: singletons are not synchronized on the twin process)|4D remote machine|
+|Singleton created on|Process singleton|Shared singleton|Session singleton|
+|---|----|---|---|
+|4D single-user|Process|Application|Session on Application|
+|4D Server|Process|4D Server machine|Session on 4D Server machine|
+|4D remote mode|Process (*note*: singletons are not synchronized on the twin process)|4D remote machine|Session on 4D remote machine|
+
+:::note
+
+A session singleton created outside any session (e.g., in 4D single-user when code is not executed from a HTTP request) behaves like a standard shared session. 
+
+:::
+
 
 Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
 
 
-### Singleton class API
+### Creating and using singletons
 
 You declare singleton classes by adding appropriate keyword(s) before the [`Class constructor`](#class-constructor):
 
 - To declare a (process) singleton class, write `singleton Class Constructor()`.
 - To declare a shared singleton class, write `shared singleton Class constructor()`.
 - To declare a session singleton class, write `session singleton Class constructor()`.
+
+:::note
+
+Session singletons are automatically shared singletons (there's no need to use the `shared` keyword in the class constructor). 
+
+:::
 
 The class singleton is instantiated at the first call of the [`cs.<class>.me`](../API/ClassClass.md#me) property. The instantiated class singleton is then always returned when the [`me`](../API/ClassClass.md#me) property is used.
 
@@ -905,41 +919,11 @@ The [`.isSingleton`](../API/ClassClass.md#issingleton) property of Class objects
 The [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) property of Class objects allows to know if the class is a session singleton.
 
 
-### Scope
-
-The scope of a singleton instance can be the process where it is instantiated or all processes on the machine, depending on its *shared* property. 
-  
-|Singleton created on|Scope if not shared|Scope if shared|
-|---|----|---|
-|4D single-user|Process|Application|
-|4D Server|Process|4D Server machine|
-|4D remote mode|Process (*note*: singletons are not synchronized on the twin process)|4D remote machine|
-
-Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
 
 
-:::info
+### Examples
 
-Singleton classes are not supported by [ORDA-based classes](../ORDA/ordaClasses.md).
-
-:::
-
-
-### Session singletons
-
-A session singleton is a **shared singleton** whose scope is limited to the [session](../API/SessionClass.md) in which it has been instantiated. Session singletons are shared within an entire session but vary between sessions. In the context of a client-server or a web application, session singletons make it possible to create and use a different instance for each session, and therefore for each user.
-
-Session singletons are automatically shared singletons (there's no need to use the `shared` keyword in the class constructor). 
-
-:::note
-
-A session singleton created outside any session (e.g., in 4D single-user when code is not executed from a HTTP request) behaves like a standard shared session. 
-
-:::
-
-### Creating a singleton
-
-To create a singleton class, add the `singleton` keyword before [`Class Constructor`](#class-constructor). For example:
+#### Process singleton
 
 ```4d
 	//class: ProcessTag
@@ -970,9 +954,7 @@ var $myOtherSingleton := cs.ProcessTag.me
 
 
 
-### Creating a shared singleton
-
-To create a singleton shared by all processes on the machine, add the `shared singleton` keywords before the [Class Constructor](#class-constructor). For example:
+#### Shared singleton
 
 ```4d
 //Class VehicleFactory
@@ -1008,7 +990,7 @@ $vehicle:=cs.VehicleFactory.me.buildVehicle("truck")
 Since the *buildVehicle()* function modifies the **cs.VehicleFactory** singleton (by incrementing `This.vehicleBuilt`) you need to add the `shared` keyword to it.
 
 
-### Creating a session singleton
+#### Session singleton
 
 In an e-commerce application, you want to implement a shopping cart using session singletons. 
 
