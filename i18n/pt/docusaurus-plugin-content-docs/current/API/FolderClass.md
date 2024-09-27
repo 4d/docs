@@ -297,8 +297,8 @@ Quando `Delete only if empty` for passado ou se você omitir o parâmetro de op�
 Quando `Delete with contents` é passado:
 
 - A pasta, juntamente com todo o seu conteúdo, é apagada.
-  **Warning**: Even when this folder and/or its contents are locked or set to read-only, if the current user has suitable access rights, the folder (and contents) is still deleted.
-- Se esta pasta, ou qualquer dos arquivos que conter, não puder ser apagada, a eliminação é abortada assim que o primeiro elemento inacessível for detectado, e um erro(\*) é devolvido. Neste caso, a pasta pode ser apenas parcialmente apagada. When deletion is aborted, you can use the `GET LAST ERROR STACK` command to retrieve the name and path of the offending file.
+  **Aviso**: mesmo quando esta pasta e/ou o seu conteúdo estiver bloqueado ou definido para apenas leitura, se o usuário atual tiver direitos de acesso adequados, a pasta (e conteúdo) continua a ser eliminada.
+- Se esta pasta, ou qualquer dos arquivos que conter, não puder ser apagada, a eliminação é abortada assim que o primeiro elemento inacessível for detectado, e um erro(\*) é devolvido. Neste caso, a pasta pode ser apenas parcialmente apagada. Quando a eliminação é abortada, pode utilizar o comando `GET LAST ERROR STACK` para recuperar o nome e o caminho do ficheiro ofensivo.
 - Se a pasta não existir, o comando não faz nada e nenhum erro é devolvido.
   (\*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
 
@@ -360,11 +360,11 @@ Quando `Delete with contents` é passado:
 
 #### Descrição
 
-The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
+A função `.moveTo( )` <!-- REF #FolderClass.moveTo().Summary -->move ou renomeia o objeto `Folder` (pasta de origem) para a *destinationFolder* especificada<!-- END REF -->.
 
-The *destinationFolder* must exist on disk, otherwise an error is generated.
+A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
-Por padrão, a pasta mantém o seu nome quando movida. If you want to rename the moved folder, pass the new full name in the *newName* parameter. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
+Por padrão, a pasta mantém o seu nome quando movida. Se quiser renomear a pasta movida, passe o novo nome completo no parâmetro *newName*. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
 **Objeto devolvido**
 
@@ -418,9 +418,9 @@ Quer mover-se e renomear uma pasta:
 
 #### Descrição
 
-The `.rename()` function <!-- REF #FolderClass.rename().Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
+A função `.rename()` <!-- REF #FolderClass.rename().Summary -->renomeia a pasta com o nome que você passou em *newName* e retorna o objeto `Folder` renomeado<!-- END REF -->.
 
-The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
+O parâmetro *newName* deve cumprir as regras de nomeação (por exemplo, não deve conter caracteres como ":", "/", etc.), caso contrário é devolvido um erro. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
 
 **Objeto devolvido**
 
