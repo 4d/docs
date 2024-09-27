@@ -55,8 +55,8 @@ Any dataclass attribute is available as a property of an entity, which <!-- REF 
 
 The attribute value type depends on the attribute [kind](DataClassClass.md#attributename) (relation or storage):
 
-- If *attributeName* kind is **storage**:
-  `.attributeName` returns a value of the same type as *attributeName*.
+- Se o tipo de *attributeName* for **storage**:
+  `.attributeName` retorna um valor do mesmo tipo que *attributeName*.
 - Se o tipo *attributeName* está **relatedEntity**:
   `.attributeName` retorna a entidade relacionada. Valores da entidade relacionada estão diretamente disponíveis através de propriedades em cascata, por exemplo "myEntity.employer.employees\[0].lastname".
 - Se o tipo *attributeName* for **relatedEntities**:
@@ -1153,11 +1153,11 @@ The `.reload()` function <!-- REF #EntityClass.reload().Summary -->reloads the c
 
 The object returned by `.reload( )` contains the following properties:
 
-| Propriedade                       | Tipo    | Descrição                                                                                                                       |
-| --------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| success                           | boolean | True if the reload action is successful, False otherwise.***Available only in case of error***: |
-| status(\*)     | number  | Código de erro, ver abaixo                                                                                                      |
-| statusText(\*) | text    | Descrição do erro, ver abaixo                                                                                                   |
+| Propriedade                       | Tipo    | Descrição                                                                                                                                 |
+| --------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| success                           | boolean | True se a ação de recarga for bem-sucedida, Falso caso contrário.***Disponível apenas em caso de erro***: |
+| status(\*)     | number  | Código de erro, ver abaixo                                                                                                                |
+| statusText(\*) | text    | Descrição do erro, ver abaixo                                                                                                             |
 
 (\*) The following values can be returned in the *status* and *statusText* properties of *Result* object in case of error:
 
