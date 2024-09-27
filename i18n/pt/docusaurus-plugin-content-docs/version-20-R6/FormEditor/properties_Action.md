@@ -11,9 +11,9 @@ You do not call an object method—4D calls it automatically when an event invol
 
 São suportados vários tipos de referências de métodos:
 
-- a standard project method file path, i.e. that uses the following pattern:\
-  `method.4dm`\
-  This type of reference indicates that the method file is located at the default location ("sources/{TableForms/*numTable*} | {Forms}/*formName*/"). In this case, 4D automatically handles the object method when operations are executed on the form object (renaming, duplication, copy/paste...)
+- um caminho de arquivo de método de projeto padrão, ou seja, que usa o seguinte padrão:\
+  `método. dm`\
+  Este tipo de referência indica que o arquivo de método está localizado no local padrão ("sources/{TableForms/*numTable*} 「 {Forms}/*formName*/"). In this case, 4D automatically handles the object method when operations are executed on the form object (renaming, duplication, copy/paste...)
 
 - a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for form operations.
 
