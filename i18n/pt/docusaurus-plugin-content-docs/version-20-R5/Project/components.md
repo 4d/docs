@@ -23,7 +23,7 @@ A 4D project running in interpreted mode can use either interpreted or compiled 
 To load a component in your 4D project, you can either:
 
 - reference the component in the **dependencies.json** file (and, optionnally, the **environment4d.json** file)
-- or, copy the component files in the [**Components** folder of your project](architecture.md#components).
+- ou, copie os arquivos de componentes na pasta [**Components** do seu projeto](architecture.md#components).
 
 If the same component is installed at different locations, a [priority order] is applied.
 
@@ -127,7 +127,7 @@ São suportadas as seguintes origens:
 | Environment           | Componente declarado no arquivo [`environnement4d.json`](#environment4djson) |
 | Componente do projeto | Componente localizado na pasta [`Components`](architecture.md#components)    |
 
-**Right-click** in a dependency line and select **Show on disk** to reveal the location of a dependency:
+**Clique com o botão direito do mouse** em uma linha de dependência e selecione **Mostrar no disco** para revelar o local de uma dependência:
 
 ![dependency-show](../assets/en/Project/dependency-show.png)
 
