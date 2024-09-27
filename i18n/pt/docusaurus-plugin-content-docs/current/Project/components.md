@@ -33,13 +33,13 @@ Esta página descreve como trabalhar com componentes nos ambientes **4D** e **4D
 
 To load a component in your 4D project, you can either:
 
-- copy the component files in the [**Components** folder of your project](architecture.md#components),
+- copie os arquivos de componentes na pasta [**Components** do seu projeto] (architecture.md#components),
 - or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Component manager interface**](#adding-a-dependency).
 
 Os componentes declarados no arquivo **dependencies.json** podem ser armazenados em locais diferentes:
 
 - at the same level as your 4D project's package folder: this is the default location,
-- anywhere on your machine: the component path must be declared in the **environment4d.json** file
+- em qualquer lugar de sua máquina: o caminho do componente deve ser declarado no arquivo **environment4d.json**
 - em um repositório GitHub: o caminho do componente pode ser declarado no arquivo **dependencies.json** ou no arquivo **environment4d.json**, ou em ambos os arquivos.
 
 If the same component is installed at different locations, a [priority order](#priority) is applied.
@@ -61,7 +61,7 @@ Pode conter:
 
 #### environment4d.json
 
-O arquivo **environment4d.json** é opcional. It allows you to define **custom paths** for some or all components declared in the **dependencies.json** file. This file can be stored in your project package folder or in one of its parent folders, at any level (up to the root).
+O arquivo **environment4d.json** é opcional. Ele permite que você defina **caminhos personalizados** para alguns ou todos os componentes declarados no arquivo **dependencies.json**. This file can be stored in your project package folder or in one of its parent folders, at any level (up to the root).
 
 The main benefits of this architecture are the following:
 
@@ -96,7 +96,7 @@ When a component cannot be loaded because of another instance of the same compon
 
 ### Componentes locais
 
-You declare a local component in the [**dependencies.json** file](#dependencyjson) in the following way:
+Você declara um componente local no arquivo [**dependencies.json**](#dependencyjson) da seguinte maneira:
 
 ```json
 {
@@ -323,7 +323,7 @@ The Dependencies panel interface allows you to manage dependencies (on 4D single
 
 #### Adding a dependency
 
-To add a dependency from the Dependencies panel, click on the **+** button of the panel or select **Add a dependency...** from the contextual menu. A standard Open file dialog box is displayed, allowing you to select the component to add. You can select a **.4DBase** package or a [**.4DProject** file](architecture.md##applicationname4dproject-file). It the selected item is not valid, an error is displayed.
+To add a dependency from the Dependencies panel, click on the **+** button of the panel or select **Add a dependency...** from the contextual menu. A standard Open file dialog box is displayed, allowing you to select the component to add. Você pode selecionar um pacote **.4DBase** ou um arquivo [**.4DProject**](architecture.md##applicationname4dproject-file). It the selected item is not valid, an error is displayed.
 
 - If you select a component located next to the project package folder (default location), it is automatically declared in the [**dependencies.json**](#dependenciesjson) file.
 - If you select a component that is not located next to the project package folder, it is automatically declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). The Dependencies panel asks if you want to save a [relative or absolute path](#relative-paths-vs-absolute-paths).
@@ -346,7 +346,7 @@ Somente as dependências declaradas no arquivo [**dependencies.json**](#dependen
 
 :::
 
-É exibida uma caixa de diálogo de confirmação. If the dependency was declared in the **environment4d.json** file, an option allows you to remove it:
+É exibida uma caixa de diálogo de confirmação. Se a dependência foi declarada no arquivo **environment4d.json**, uma opção permite que você a remova:
 
 ![dependency-remove](../assets/en/Project/remove-comp.png)
 
@@ -369,7 +369,7 @@ As seguintes origens são possíveis:
 | Environment                       | Componente declarado no arquivo [`environnement4d.json`](#environment4djson) |
 | Componente do projeto             | Componente localizado na pasta [`Components`](architecture.md#components)    |
 
-**Right-click** in a dependency line and select **Show on disk** to reveal the location of a dependency:
+**Clique com o botão direito do mouse** em uma linha de dependência e selecione **Mostrar no disco** para revelar o local de uma dependência:
 
 ![dependency-show](../assets/en/Project/dependency-show.png)
 
