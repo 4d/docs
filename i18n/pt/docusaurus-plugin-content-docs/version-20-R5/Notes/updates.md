@@ -5,7 +5,7 @@ title: Notas de Lançamento
 
 ## 4D 20 R5
 
-Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5/), the blog post that lists all new features and enhancements in 4D 20 R5.
+Leia [**O que há de novo no 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5/), o post do blog que lista todos os novos recursos e aprimoramentos em 4D 20 R5.
 
 #### Destaques
 
@@ -163,7 +163,7 @@ Se suas aplicações 4D utilizam conexões TLS, é recomendado que você faça a
 - As of 20.3, in order to allow password verification when the [4D user directory uses the bcrypt algorithm](https://blog.4d.com/bcrypt-support-for-passwords/), the "password" value in the _connectionInfo_ parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command is now sent in clear form by default. Make sure your "On REST authentication" database method can handle passwords in clear form (third parameter is then **False**) and that `Open datastore` encrypts your connection by passing the "tls" option to **True** in _connectionInfo_. In specific cases, a new "passwordAlgorithm" option can also be used for compatibility (see [`Open datastore`](../API/DataStoreClass.md#open-datastore) command).
 - A partir da 20.2, o 4D 20 LTS não é mais compatível com o Windows Server 2012 R2.
 - **Warning**: The starting [`offset`](../API/FileHandleClass.md#offset) value of [4D.FileHandle](../API/FileHandleClass.md) objects was incorrectly set to 1 instead of 0. Foi feita uma correção no 4D a partir das versões **20.1 HF1** e **20 R2** e o valor agora é 0.
-- For HTTP RFC compliance, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) property now returns all header names **in lowercase**. If you want your code to continue working as before, use the new [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) property.
+- Para a conformidade RFC de HTTP, a propriedade [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) agora retorna todos os nomes de cabeçalho **em minúsculas**. If you want your code to continue working as before, use the new [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) property.
 - TLS certificates are now automatically validated by 4D when sending HTTP requests with [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new), and rejected with an error if they are invalid. Uma nova propriedade _option_ permite-lhe controlar esta validação.
 - TLS v1.0 and TLS v1.1 are deprecated, they are no longer supported as `Min TLS version` on 4D Server. Version 1.3 is now selected by default and is automatically used if `_o_TLSv1_0` or `_o_TLSv1_1` constants are set with [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html).
 - For consistency, all buttons, checkboxes, and radio buttons are now rendered with a "3D" type at runtime: respectively `Object type 3D button`, `Object type 3D checkbox`, and `Object type 3D radio button` are returned by [`OBJECT Get type`](https://doc.4d.com/4dv20/help/command/en/page642.html) for these objects.
@@ -188,7 +188,7 @@ Leia [**O que há de novo no 4D 19 R8**](https://blog.4d.com/en-whats-new-in-4d-
 
 #### Mudanças de comportamento
 
-- For HTTP RFC compliance, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) property now returns all header names **in lowercase**. If you want your code to continue working as before, use the new [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) property.
+- Para a conformidade RFC de HTTP, a propriedade [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) agora retorna todos os nomes de cabeçalho **em minúsculas**. If you want your code to continue working as before, use the new [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) property.
 - When a [bevel button with linked pop-up menu](../FormObjects/properties_TextAndPicture.md/#with-pop-up-menu) is assigned a standard action, the standard action is no longer generated if a pop-up menu option is selected.
 - In Web areas using blink (CEF), dialogs displayed from external scripts are now blocking if not called from a `setTimeout()` JS function. This is due to the current CEF updates, in which dialogs displayed by functions such as `alert()` or `print()` are no longer handled by the OS but by the Web area. Veja [`WA Evaluate JavaScript`](https://doc.4d.com/4dv19/help/command/en/page1029.html) e [`WA EXECUTE JAVASCRIPT`](https://doc.4d.com/4dv19/help/command/en/page1043.html).
 
@@ -249,7 +249,7 @@ Leia [**O que há de novo no 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-
     - Os comandos `WA Create URL history menu` e `WA GET URL HISTORY` retornam apenas o URL atual.
     * The [Progression variable](../FormObjects/properties_WebArea.md#progression) is no longer updated.
     * Os recursos de arrastar e soltar são gerenciados por uma API do Windows que é classificada como "experimental" pela Microsoft. Consequently, web areas may not work as expected when this API is not installed: Drag and drop may seem allowed even when the `WA enable URL drop` preference has been set to False. However, the drop action is blocked by default, and you can control the allowed URLs using the [`On Window Opening Denied` event](../Events/onWindowOpeningDenied.md) (see below).
-  * (Windows only) When the user selects **Print...** from a web area using the embedded web rendering engine, a new print settings window is now displayed.
+  * (Somente Windows) Quando o usuário seleciona **Print...** em uma área da Web usando o mecanismo de renderização da Web incorporado, uma nova janela de configurações de impressão é exibida.
   * To reflect their actual effect in web areas (increase or decrease page zoom level), two commands have been renamed: `WA SET PAGE TEXT LARGER` has been renamed `WA ZOOM IN`, `WA SET PAGE TEXT SMALLER` has been renamed `WA ZOOM OUT`.
   * Enhanced security in web areas that use the [embedded web rendering engine](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) or the [Windows system rendering engine](../FormObjects/webArea_overview.md#web-rendering-engine) (based on Microsoft Edge WebView2):
     - As políticas CORS agora se aplicam ao acesso a arquivos em disco em áreas da Web. For example, when opening a .html file with `WA OPEN URL`, that .html file cannot contain links that point to files outside its folder

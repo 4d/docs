@@ -185,7 +185,7 @@ See [this page](https://developer.qodly.com/docs/studio/rendering) for detailed 
 
 Para ativar a renderização das páginas Qodly, as seguintes opções devem ser definidas.
 
-- The 4D project's **Settings** > **Web** > **Web Features** > [**Expose as REST server**](../settings/web.md#exposed-as-rest-server) option must be activated.
+- A opção **Propriedades** > **Web** > **Funcionalidades Web** > [**Expor como servidor REST**](../settings/web.md#exposed-as-rest-server) deve ser ativada.
 - O [servidor Web 4D] (webServer.md) deve estar em execução.
 
 :::note
@@ -275,7 +275,7 @@ This call is accepted and as long as the authentication is not successful, `Sess
 
 When the ["force login" mode is enabled](#setting-the-force-login-mode), Qodly Studio for 4D allows you to implement a logout feature in your application.
 
-To logout the user, you just need to execute the **Logout** standard action from the Qodly page. In Qodly Studio, you can associate this standard action to a button for example:
+Para fazer o logout do usuário, basta executar a ação padrão **Logout** na página Qodly. In Qodly Studio, you can associate this standard action to a button for example:
 
 ![alt-text](../assets/en/WebServer/logout.png)
 

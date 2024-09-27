@@ -49,7 +49,7 @@ If you modify your project in interpreted mode, you must recompile it in order t
 
 ## Características da janela do compilador
 
-In addition to the [**Compile** button](#compile), the Compiler window provides additional features that are useful during the project development phase.
+Além do botão [**Compilar**](#compilar), a janela Compilador oferece recursos adicionais que são úteis durante a fase de desenvolvimento do projeto.
 
 ### Verificar sintaxe
 

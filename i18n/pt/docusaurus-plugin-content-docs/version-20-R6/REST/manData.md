@@ -51,7 +51,7 @@ A new selection of entities is returned; however, you can also create a new enti
 
 ## Calcular dados
 
-By using [`$compute`]($compute.md), you can compute the **average**, **count**, **min**, **max**, or **sum** for a specific attribute in a dataclass. Pode também computar todos os valores com a palavra chave $all.
+Ao usar [`$compute`]($compute.md), você pode calcular **average**, **count**, **min**, **max**, ou **sum** de um atributo específico em uma dataclass. Pode também computar todos os valores com a palavra chave $all.
 
 Por exemplo, para obter o maior salário:
 

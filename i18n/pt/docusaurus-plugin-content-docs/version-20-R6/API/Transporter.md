@@ -168,7 +168,7 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 | ------------------------------ | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | mail mode ISO2022JP            | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul> |
 | mail mode ISO88591             | ISO-8859-1                                                                                  | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                                                                                                     |
-| mail mode UTF8                 | US-ASCII_UTF8_QP                                  | *headerCharset* & *bodyCharset*: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (**default value**)                                                                                       |
+| mail mode UTF8                 | US-ASCII_UTF8_QP                                  | *headerCharset* & *bodyCharset*: US-ASCII se possível, caso contrário UTF-8 & Quoted-printable (**valor padrão**)                                                                                   |
 | modo de correio UTF8 na base64 | US-ASCII_UTF8_B64                                 | *headerCharset* & *bodyCharset*: US-ASCII if possible, otherwise UTF-8 & base64                                                                                                                                        |
 
 <!-- END REF -->
@@ -274,9 +274,9 @@ The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the pa
 
 Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), extended log files store MIME contents of all sent mails and do not have any size limit. Para mais informações sobre arquivos de registo estendidos, consultar:
 
-- **SMTP connections** - [4DSMTPLog.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-- **POP3 connections** - [4DPOP3Log.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-- **IMAP connections** - [4DIMAPLog.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+- **Conexões SMSTP** - [4DSMTPLog.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+- **Conexões POP3** - [4DPOP3Log.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+- **Conexões IMAP** - [4DIMAPLog.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 
 <!-- END REF -->
 

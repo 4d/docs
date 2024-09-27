@@ -23,7 +23,7 @@ A 4D project running in interpreted mode can use either interpreted or compiled 
 To load a component in your 4D project, you can either:
 
 - reference the component in the **dependencies.json** file (and, optionnally, the **environment4d.json** file)
-- or, copy the component files in the [**Components** folder of your project](architecture.md#components).
+- ou, copie os arquivos de componentes na pasta [**Components** do seu projeto](architecture.md#components).
 
 If the same component is installed at different locations, a [priority order] is applied.
 
@@ -127,7 +127,7 @@ São suportadas as seguintes origens:
 | Environment           | Componente declarado no arquivo [`environnement4d.json`](#environment4djson) |
 | Componente do projeto | Componente localizado na pasta [`Components`](architecture.md#components)    |
 
-**Right-click** in a dependency line and select **Show on disk** to reveal the location of a dependency:
+**Clique com o botão direito do mouse** em uma linha de dependência e selecione **Mostrar no disco** para revelar o local de uma dependência:
 
 ![dependency-show](../assets/en/Project/dependency-show.png)
 
@@ -155,10 +155,10 @@ Dependencies requiring the developer's attention are indicated by a **status lab
 
 Estão disponíveis as seguintes etiquetas de status:
 
-- **Overloaded**: The dependency is not loaded because it is overloaded by another dependency with the same name at a higher [priority level](#priority).
-- **Overloading**: The dependency is loaded and is overloading one or more other dependencies with the same name at a lower [priority level](#priority).
+- **Overloaded**: a dependência não é carregada porque está sobrecarregada por outra dependência com o mesmo nome em um [nível de prioridade] mais alto (#prioridade).
+- **Overloading**: a dependência está carregada e está sobrecarregando uma ou mais dependências com o mesmo nome em um [nível de prioridade] inferior (#prioridade).
 - **Not found**: a dependência está declarada no arquivo dependencies.json, mas não foi encontrada.
-- **Inactive**: The dependency is not loaded because it is not compatible with the project (e.g. the component is not compiled for the current platform).
+- **Inactive**: a dependência não é carregada porque não é compatível com o projeto (por exemplo, o componente não é compilado para a plataforma atual).
 - **Duplicated**: The dependency is not loaded because another dependency with the same name exists at the same location (and is loaded).
 
 A tooltip is displayed when you hover over the dependency line, provding additional information about the status:

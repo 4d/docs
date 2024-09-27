@@ -21,7 +21,7 @@ Objetos formulário podem ser encapsulados em propriedades objeto:
  $f.message:=Formula(ALERT("Hello world"))
 ```
 
-Essa propriedade é uma "função objeto" ou seja uma função que é restrita a seu objeto pai. To execute a function stored in an object property, use the **()** operator after the property name, such as:
+Essa propriedade é uma "função objeto" ou seja uma função que é restrita a seu objeto pai. Para executar uma função armazenada em uma propriedade objeto, use o operador **()** depois do nome propriedade, tal como:
 
 ```4d
  $f.message() //exibe "Hello world"

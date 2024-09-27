@@ -417,6 +417,6 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 | OpenSSL      | 3.3.2  | **20 R7**           | Le niveau de sécurité TLS/SSL par défaut a été relevé. Voir [Changements de comportement](#behavior-changes) pour la version 20 R4 |
 | PDFWriter    | 4.3                    | 20                  | FreeType dependency dans 12.2.1                                                                                    |
 | PHP          | 8.2.4  | 20                  |                                                                                                                                                    |
-| SpreadJS     | 16.2.6 | 20 R4               | Moteur 4D View Pro                                                                                                                                 |
+| SpreadJS     | 17.1.0 | **20 R7**           | See [this blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) for an overview of the new features                                   |
 | webKit       | WKWebView                              | 19                  |                                                                                                                                                    |
 | Zlib         | 1.2.13 | 20                  |                                                                                                                                                    |

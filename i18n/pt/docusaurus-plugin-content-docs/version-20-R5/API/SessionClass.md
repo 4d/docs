@@ -89,7 +89,7 @@ The `Session` object of remote client sessions is available from:
 - Triggers,
 - 'Conexão aberta com o servidor' e 'Conexão com o servidor' métodos de banco de dados.
 
-For more information on remote user sessions, please refer to the [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions) paragraph.
+Para mais informações em sessões usuários remotos, consulte o parágrafo [**Sessões usuário cliente remoto**](../Desktop/clientServer.md#remote-user-sessions).
 
 #### a sessão de procedimentos armazenados
 
