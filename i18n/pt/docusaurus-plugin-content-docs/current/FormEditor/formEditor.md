@@ -14,7 +14,7 @@ O editor de formulários apresenta cada formulário JSON na sua própria janela,
 
 You can show or hide several interface elements on the current page of the form:
 
-- **Formulario heredado**: objetos formulario heredados (si hay un [formulario heredado](forms.md#inherited-forms)).
+- **Formulário herdado**: Objetos de formulário herdados (se houver um [formulário herdado] (forms.md#inherited-forms)).
 - **Página 0**: objetos de [página 0](forms.md#form-pages). This option allows you to distinguish between the objects on the form’s current page and those on page 0.
 - **Papel**: bordas da página de impressão, mostradas como linhas cinzas. Este elemento só pode ser exibido por padrão em formulários do tipo ["para impressão"](properties_FormProperties.md#form-type).
 - **Réguas**: réguas da janela do editor de formulários.
@@ -22,28 +22,28 @@ You can show or hide several interface elements on the current page of the form:
 - **Rótulos dos marcadores**: rótulos dos marcadores, disponíveis apenas quando as linhas de controle de saída forem exibidas. Este elemento só pode ser exibido por padrão em [formulários lista](properties_FormProperties.md#form-type).
 - **Limites**: limites do formulário. When this option is selected, the form is displayed in the Form editor as it appears in Application mode. This way you can adjust your form without having to switch to the Application mode in order to see the result.
 
-> The [**Size Based on**](properties_FormSize.md#size-based-on), [**Hor margin**](properties_FormSize.md#hor-margin) and [**Vert margin**](properties_FormSize.md#vert-margin) settings of the form properties affect the form’s limits. When using these settings, the limits are based on the objects in the form. When you modify the size of an object that is located next to the form’s border, it is modified to reflect that change.
+> As configurações [**Size Based on**](properties_FormSize.md#size-based-on), [**Hor margin**](properties_FormSize.md#hor-margin) e [**Vert margin**](properties_FormSize.md#vert-margin) das propriedades do formulário afetam os limites do formulário. When using these settings, the limits are based on the objects in the form. When you modify the size of an object that is located next to the form’s border, it is modified to reflect that change.
 
 #### Visualização por defeito
 
 When a form is opened in the editor, interface elements are displayed or hidden by default, depending on:
 
-- las opciones de **Visualización por defecto del nuevo formulario** definidas en las Preferencias - las opciones no marcadas no pueden mostrarse por defecto.
-- el [tipo de formulario](properties_FormProperties.md#form-type) actual:
+- as opções de **exibição padrão do novo formulário** definidas nas Preferências - as opções não marcadas não podem ser exibidas por padrão.
+- o [tipo de formulário] atual (properties_FormProperties.md#form-type):
   - Marcadores e rótulos de marcadores são sempre exibidos por padrão em formulários lista
   - O papel é apresentado por defeito nos formulários "para impressão".
 
 #### Exibir/ocultar elementos
 
-Puede mostrar u ocultar elementos en cualquier momento en la ventana actual del editor de formularios seleccionando **Mostrar** en el menú **Formulario** o en el menú contextual del editor de formularios:
+Você pode exibir ou ocultar elementos a qualquer momento na janela atual do editor de formulários selecionando **Display** no menu **Form** ou no menu de contexto do editor de formulários:
 
 ![](../assets/en/FormEditor/showHideElements.png)
 
 ### Regras
 
-The rulers on the side and bottom help you position objects in the form. Pueden [mostrarse u ocultarse](#display-options).
+The rulers on the side and bottom help you position objects in the form. Elas podem ser [exibidas ou ocultas] (#display-options).
 
-Seleccione **Definición de regla...** en el menú **Formulario** para cambiar las unidades de medida de modo que el formulario muestre pulgadas, centímetros o píxeles.
+Selecione **Ruler definition...** no menu **Form** para alterar as unidades de medida de modo que o formulário exiba polegadas, centímetros ou pixels.
 
 ### Barra de ferramentas
 
@@ -56,12 +56,12 @@ A barra de ferramentas contém os seguintes elementos:
 | Ícone                                            | Nome                                                 | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ------------------------------------------------ | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](../assets/en/FormEditor/execute.png)         | Executar o formulário                                | Utilizado para testar a execução do formulário. When you click on this button, 4D opens a new window and displays the form in its context (list of records for a list form and current record page for a detail form). O formulário é executado no processo principal.                                                                                       |
-| ![](../assets/en/FormEditor/selection.png)       | [Ferramenta de seleção](#selecting-objects)          | Allows selecting, moving and resizing form objects.<p>**Note**: When an object of the Text or Group Box type is selected, pressing the **Enter** key lets you switch to editing mode.</p>                                                                                                                                                                                       |
+| ![](../assets/en/FormEditor/selection.png)       | [Ferramenta de seleção](#selecting-objects)          | Permite selecionar, mover e redimensionar objetos de formulário<p>: Quando um objeto do tipo Text ou Group Box é selecionado, pressionar a tecla **Enter** permite alternar para o modo de edição.</p>                                                                                                                                                                                          |
 | ![](../assets/en/FormEditor/zOrder.png)          | [Ordem de entrada](#data-entry-order)                | Switches to “Entry order” mode, where it is possible to view and change the current entry order of the form. Note that shields allow viewing the current entry order, while still working in the form.                                                                                                                                                                                          |
-| ![](../assets/en/FormEditor/moving.png)          | [Moving](#moving-objects)                            | Switches to “Move” mode, where it is possible to reach any part of the form quickly by using drag and drop in the window. O cursor assume a forma de uma mão. Este modo de navegação é particularmente útil ao ampliar o formulário.                                                                                                                                            |
+| ![](../assets/en/FormEditor/moving.png)          | [Moving](#objetos-em-movimento)                      | Switches to “Move” mode, where it is possible to reach any part of the form quickly by using drag and drop in the window. O cursor assume a forma de uma mão. Este modo de navegação é particularmente útil ao ampliar o formulário.                                                                                                                                            |
 | ![](../assets/en/FormEditor/zoom.png)            | [Zoom](#zoom)                                        | Permite modificar a percentagem de visualização do formulário (100% por padrão). You can switch to “Zoom” mode by clicking on the magnifying glass or by clicking directly on the desired bar. Esta função é descrita em pormenor na secção anterior.                                                                                                        |
 | ![](../assets/en/FormEditor/alignment.png)       | [Alinhamento](#alinhamento-objetos)                  | This button is linked to a menu that allows changing the level of objects in the form. It is enabled (or not) depending on the objects selected.<br/>Disabled if one selected object position is locked by a CSS property                                                                                                                                                    |
-| ![](../assets/en/FormEditor/distribution.png)    | [Distribution](#distributing-objects)                | Este botão está ligado a um menu que permite agrupar e desagrupar seleções de objetos no formulário. It is enabled (or not) depending on the objects selected.<br/>Disabled if one selected object position is locked by a CSS property                                                                                                                                      |
+| ![](../assets/en/FormEditor/distribution.png)    | [Distribuição](#distributing-objects)                | Este botão está ligado a um menu que permite agrupar e desagrupar seleções de objetos no formulário. It is enabled (or not) depending on the objects selected.<br/>Disabled if one selected object position is locked by a CSS property                                                                                                                                      |
 | ![](../assets/en/FormEditor/level.png)           | [Level](#layering-objects)                           | This button is linked to a menu that allows aligning objects in the form. É ativada (ou não) em função dos objetos selecionados.                                                                                                                                                                                                                                             |
 | ![](../assets/en/FormEditor/group.png)           | [Group/Ungroup](#grouping-objects)                   | Este botão está ligado a um menu que permite agrupar e desagrupar seleções de objetos no formulário. É ativada (ou não) em função dos objetos selecionados.                                                                                                                                                                                                                  |
 | ![](../assets/en/FormEditor/displyAndPage.png)   | [Display and page management](forms.html#form-pages) | Esta área permite passar de uma página de formulário para outra e adicionar páginas. Para navegar entre páginas de formulários, clique nos botões de seta, ou clique na área central e escolha a página a exibir a partir do menu que aparece. Se clicar no botão da seta para a direita enquanto é exibida a última página do formulário, 4D permite-lhe adicionar uma página. |
@@ -76,21 +76,21 @@ A barra de ferramentas contém os seguintes elementos:
 
 The object bar contains all the active and inactive objects that can be used in 4D forms. Alguns objectos estão agrupados por temas. Cada tema inclui várias alternativas que pode escolher entre elas. Quando a barra de objectos tem o foco, é possível seleccionar os botões usando as teclas do teclado. The following table describes the object groups available and their associated shortcut key.
 
-| Botão                                      | Agrupar                                                                                                                                                                                                                                                                                                                                                     | Chave |
-| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---: |
-| ![](../assets/en/FormEditor/text.png)      | [Text](FormObjects/text.md) / [Group Box](FormObjects/groupBox.md)                                                                                                                                                                                                                                                                                          |   T   |
-| ![](../assets/en/FormEditor/input.png)     | [Input](FormObjects/input_overview.md)                                                                                                                                                                                                                                                                                                                      |   F   |
-| ![](../assets/en/FormEditor/listbox.png)   | [Lista jerárquica](FormObjects/list_overview.md) / [List Box](FormObjects/listbox_overview.md)                                                                                                                                                                                                                                                              |   L   |
-| ![](../assets/en/FormEditor/combo.png)     | [Combo Box](FormObjects/comboBox_overview.md) / [Lista desplegable](FormObjects/dropdownList_Overview.md) / [Menú emergente de imágenes](FormObjects/picturePopupMenu_overview.md)                                                                                                                                                                          |   P   |
-| ![](../assets/en/FormEditor/button.png)    | [Botón](FormObjects/button_overview.md) / [Botón imagen](FormObjects/pictureButton_overview.md) / [Rejilla de botones](FormObjects/buttonGrid_overview.md)                                                                                                                                                                                                  |   B   |
-| ![](../assets/en/FormEditor/radio.png)     | [Radio Button](FormObjects/radio_overview.md)                                                                                                                                                                                                                                                                                                               |   R   |
-| ![](../assets/en/FormEditor/checkbox.png)  | [Check Box](FormObjects/checkbox_overview.md)                                                                                                                                                                                                                                                                                                               |   C   |
-| ![](../assets/en/FormEditor/indicator.png) | [Indicador de progreso](FormObjects/progressIndicator.md) / [Regla](FormObjects/ruler.md) / [Stepper](FormObjects/stepper.md) / [Spinner](FormObjects/spinner.md)                                                                                                                                                                                           |   I   |
-| ![](../assets/en/FormEditor/rectangle.png) | [Rectángulo](FormObjects/shapes_overview.md#rectangle) / [Línea](FormObjects/shapes_overview.md#line) / [Óvalo](FormObjects/shapes_overview.md#oval)                                                                                                                                                                                                        |   S   |
-| ![](../assets/en/FormEditor/splitter.png)  | [Splitter](FormObjects/splitters.md) / [Control de pestañas](FormObjects/tabControl.md)                                                                                                                                                                                                                                                                     |   D   |
-| ![](../assets/en/FormEditor/plugin.png)    | [Área de plug-in ](FormObjects/pluginArea_overview.md) / [Subformulario](FormObjects/subform_overview.md) / [Área Web](FormObjects/webArea_overview.md) / [4D Write Pro](FormObjects/writeProArea_overview.md) / [4D View Pro](FormObjects/viewProArea_overview |   X   |
+| Botão                                      | Agrupar                                                                                                                                                                                                                                                   | Chave |
+| ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---: |
+| ![](../assets/en/FormEditor/text.png)      | [Text](FormObjects/text.md) / [Group Box](FormObjects/groupBox.md)                                                                                                                                                                                        |   T   |
+| ![](../assets/en/FormEditor/input.png)     | [Input](FormObjects/input_overview.md)                                                                                                                                                                                                                    |   F   |
+| ![](../assets/en/FormEditor/listbox.png)   | [Lista hierárquica](FormObjects/list_overview.md) / [Caixa de listagem](FormObjects/listbox_overview.md)                                                                                                                                                  |   L   |
+| ![](../assets/en/FormEditor/combo.png)     | [Caixa de Combo](FormObjects/comboBox_overview.md) / [Lista Dropdown](FormObjects/dropdownList_Overview.md) / [Menu de Pop-up de imagens](FormObjects/picturePopupMenu_overview.md)                                                                       |   P   |
+| ![](../assets/en/FormEditor/button.png)    | [Button](FormObjects/button_overview.md) / [Picture Button](FormObjects/pictureButton_overview.md) / [Button Grid](FormObjects/buttonGrid_overview.md)                                                                                                    |   B   |
+| ![](../assets/en/FormEditor/radio.png)     | [Botão de Rádio](FormObjects/radio_overview.md)                                                                                                                                                                                                           |   R   |
+| ![](../assets/en/FormEditor/checkbox.png)  | [Caixa de seleção] (FormObjects/checkbox_overview.md)                                                                                         |   C   |
+| ![](../assets/en/FormEditor/indicator.png) | [Progress Indicator](FormObjects/progressIndicator.md) / [Ruler](FormObjects/ruler.md) / [Stepper](FormObjects/stepper.md) / [Spinner](FormObjects/spinner.md)                                                                                            |   I   |
+| ![](../assets/en/FormEditor/rectangle.png) | [Rectangle](FormObjects/shapes_overview.md#rectangle) / [Line](FormObjects/shapes_overview.md#line) / [Oval](FormObjects/shapes_overview.md#oval)                                                                                                         |   S   |
+| ![](../assets/en/FormEditor/splitter.png)  | [Splitter](FormObjects/splitters.md) / [Controle de guia](FormObjects/tabControl.md)                                                                                                                                                                      |   D   |
+| ![](../assets/en/FormEditor/plugin.png)    | [Plug-in Area](FormObjects/pluginArea_overview.md) / [Subform](FormObjects/subform_overview.md) / [Web Area](FormObjects/webArea_overview.md) / [4D Write Pro](FormObjects/writeProArea_overview.md) / [4D View Pro](FormObjects/viewProArea_overview.md) |   X   |
 
-To draw an object type, select the corresponding button and then trace the object in the form. Após criar um objeto, você pode modificar seu tipo utilizando a Lista de Propriedades. Mantenga presionada la tecla **Mayúsculas** mientras dibuja para restringir el objeto a una forma regular. Lines are constrained to horizontal, 45°, or vertical, rectangles are constrained to squares, and ovals are constrained to circles.
+To draw an object type, select the corresponding button and then trace the object in the form. Após criar um objeto, você pode modificar seu tipo utilizando a Lista de Propriedades. Mantenha pressionada a tecla **Shift** ao desenhar para restringir o objeto a uma forma regular. Lines are constrained to horizontal, 45°, or vertical, rectangles are constrained to squares, and ovals are constrained to circles.
 
 The current variant of the theme is the object that will be inserted in the form. Ao clicar no lado direito de um botão, você acessa o menu de variantes:
 
@@ -104,19 +104,19 @@ Both forms and form objects have properties that control access to the form, the
 
 You can display and modify form and object properties using the Property List. It displays either form or objects properties depending on what you select in the editor window.
 
-Para mostrar/ocultar la lista de propiedades, seleccione **Lista de propiedades** en el menú **Formulario** o en el menú contextual del editor de formularios. You can also display it by double-clicking in an empty area of the form.
+Para exibir/ocultar a Lista de propriedades, selecione **Lista de propriedades** no menu **Formulário** ou no menu de contexto do editor de formulários. You can also display it by double-clicking in an empty area of the form.
 
 #### Atalhos
 
 Pode utilizar os seguintes atalhos na Lista de Propriedades:
 
-- **Tecla de flecha**s ↑ ↓: se utiliza para pasar de una celda a otra.
-- **Teclas flechas** ← →: se utiliza para expandir/contraer los temas o entrar en el modo de edición.
-- **PgUp** y **PgDn**: selecciona la primera o la última celda visible de la lista mostrada.
-- **Inicio** y **Fin**: selecciona la primera o la última celda de la lista.
-- **Ctrl+clic** (Windows) o **Comando+clic** (macOS) sobre un evento: utilizado para seleccionar/deseleccionar cada evento de la lista, según el estado inicial del evento sobre el que se ha hecho clic.
-- **Ctrl+clic** (Windows) o **Comando+clic** (macOS) en la etiqueta de un tema: Permite contraer/expandir todos los temas de la lista.
-- **Ctrl+clic** (Windows) o **Comando+clic** (macOS) sobre un valor de propiedad mostrado en **negrita**: restablece la propiedad a su valor por defecto.
+- **Tecla de seta**s ↑ ↓: Usada para ir de uma célula para outra.
+- **Teclas de seta** ← →: Usadas para expandir/recolher temas ou entrar no modo de edição.
+- **PgUp** e **PgDn**: Usado para rolar o conteúdo da Lista de Propriedades.
+- **Página Inicial** e **Final**: Usado para rolar a Lista de Propriedades para que a primeira ou última célula seja exibida.
+- **Ctrl+clique** (Windows) ou **Command+clique** (macOS) em um evento: Usado para selecionar/desmarcar todos os eventos da lista, de acordo com o estado inicial do evento em que você clicou.
+- **Ctrl+clique** (Windows) ou **Command+clique** (macOS) em um rótulo de tema: Usado para recolher/expandir todos os temas da lista.
+- **Ctrl+clique** (Windows) ou **Command+clique** (macOS) em um valor de propriedade exibido em **negrito**: Redefine a propriedade para seu padrão.
 
 ## Manipulação de objetos formulário
 
@@ -124,9 +124,9 @@ Pode utilizar os seguintes atalhos na Lista de Propriedades:
 
 É possível adicionar objetos a formulários de várias maneiras:
 
-- Dibujando el objeto directamente en el formulario después de seleccionar su tipo en la barra de objetos (ver [Utilizando la barra de objetos](#using-the-object-bar))
+- Desenhando o objeto diretamente na forma após selecionar o seu tipo na barra de objeto (veja [Usando a barra do objeto](#using-the-object-bar))
 - Arrastando e soltando o objeto da barra de objetos
-- Mediante operaciones de arrastrar y soltar o copiar y pegar sobre un objeto seleccionado de la [librería de objetos](objectLibrary.md) preconfigurada,
+- Por meio de operações de arrastar e soltar ou copiar e colar em um objeto selecionado da [biblioteca de objetos] pré-configurada (objectLibrary.md),
 - Ao arrastar e largar um objeto de outro formulário,
 - By dragging and dropping an object from the Explorer (fields) or from other editors in the Design environment (lists, pictures, etc.)
 
@@ -134,9 +134,9 @@ Once the object is placed in the form, you can modify its characteristics using 
 
 É possível trabalhar com dois tipos de objetos nos formulários:
 
-- **Objetos estáticos** (líneas, marcos, imágenes de fondo, etc.): estos objetos se utilizan generalmente para definir la apariencia del formulario y sus etiquetas, así como para la interfaz gráfica. Estão disponíveis na barra de objetos do editor de formulários. Você também pode definir seus atributos gráficos (tamanho, cor, fonte, etc.) and their resizing properties using the Property List. Os objetos estáticos não têm variáveis associadas como os objetos ativos. No entanto, é possível inserir objetos dinâmicos em objetos estáticos.
+- **Objetos estáticos** (linhas, quadros, imagens de fundo, etc.): Esses objetos são geralmente usados para definir a aparência do formulário e de seus rótulos, bem como para a interface gráfica. Estão disponíveis na barra de objetos do editor de formulários. Você também pode definir seus atributos gráficos (tamanho, cor, fonte, etc.) e suas propriedades de redimensionamento usando a Lista de propriedades. Os objetos estáticos não têm variáveis associadas como os objetos ativos. No entanto, é possível inserir objetos dinâmicos em objetos estáticos.
 
-- **Objetos activos**: estos objetos realizan tareas o funciones en la interfaz y pueden adoptar muchas formas: campos, botones, listas desplazables, etc. Cada objeto ativo é associado com um campo ou uma variável.
+- **Objetos ativos**: Esses objetos executam tarefas ou funções na interface e podem assumir várias formas: campos, botões, listas roláveis, etc. Cada objeto ativo é associado com um campo ou uma variável.
 
 ### Selecção de objectos
 
@@ -144,16 +144,16 @@ Before you can perform any operation on an object (such as changing a line width
 
 Para seleccionar um objecto utilizando a barra de ferramentas:
 
-1. Click the Arrow tool  in the toolbar.<p>![](../assets/en/FormEditor/selection.png)</p>
+1. Clique na ferramenta Seta na barra de ferramentas<p>![](../assets/en/FormEditor/selection.png)</p>
 
 <p>Click the Arrow tool  in the toolbar.<img src="../assets/en/FormEditor/selection.png" alt="" /> When you move the pointer into the form area, it becomes a standard arrow-shaped pointer.</p>.
 
-2. Clique no objecto que deseja selecionar. Resizing handles identify the selected object.<p>![](../assets/en/FormEditor/selectResize.png)</p>
+2. Clique no objecto que deseja selecionar. As alças de redimensionamento identificam o objeto selecionado<p>![](../assets/en/FormEditor/selectResize.png)</p>
 
 Para selecionar um objecto utilizando a Lista de Propriedades:
 
 1. Escolher o nome do objecto na lista pendente da Lista de Objectos localizada no topo da Lista de Propriedades. Usando estes dois métodos, pode seleccionar um objecto que esteja escondido por outros objectos ou localizado fora da área visível da janela actual.
-   Para deseleccionar un objeto, haga clic fuera del límite del objeto o **Mayúsculas+clic** en el objeto.
+   Para cancelar a seleção de um objeto, clique fora do limite do objeto ou **Shift+clique** no objeto.
 
 > \> > It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
 
@@ -161,17 +161,17 @@ Para selecionar um objecto utilizando a Lista de Propriedades:
 
 Pode querer realizar a mesma operação em mais de um objecto de forma - por exemplo, para mover os objectos, alinhá-los, ou alterar a sua aparência. 4D permite-lhe selecionar vários objectos ao mesmo tempo. Há várias maneiras de seleccionar vários objectos:
 
-- Seleccione **Seleccionar todo** en el menú Edición para seleccionar todos los objetos.
-- Haga clic con el botón derecho en el objeto y elija el comando **Seleccionar objetos del mismo tipo** en el menú contextual.
-- Mantenga presionada la tecla **Mayús** y haga clic en los objetos que desee seleccionar.
+- Escolha **Select All** no menu Edit para selecionar todos os objetos.
+- Clique com o botão direito no objeto e escolha o comando **Selecione objetos semelhantes** no menu de contexto.
+- Mantenha pressionada a tecla **Shift** e clique nos objetos que deseja selecionar.
 - Start at a location outside the group of objects you want to select and drag a marquee (sometimes called a selection rectangle) around the objects. When you release the mouse button, if any part of an object lies within or touches the boundaries of the selection rectangle, that object is selected.
-- Mantenga presionada la tecla **Alt** (Windows) o la tecla **Opción** (macOS) y dibuje un rectángulo de selección. Os objetos que estiverem completamente no retângulo serão selecionados.
+- Mantenha pressionada a tecla **Alt** (Windows) ou a tecla **Option** (macOS) e desenhe uma marca de seleção. Os objetos que estiverem completamente no retângulo serão selecionados.
 
 A figura abaixo mostra um marque sendo desenhado para selecionar dois objetos:
 
 ![](../assets/en/FormEditor/selectMultiple.png)
 
-Para deseleccionar un objeto que forma parte de un grupo de objetos seleccionados, mantenga presionada la tecla **Mayús** y haga clic en el objeto. Os outros objetos permanecem selecionados. To deselect all the selected objects, click outside the boundaries of all the objects.
+Para desmarcar um objeto que faz parte de um conjunto de objetos selecionados, mantenha pressionada a tecla **Shift** e clique no objeto. Os outros objetos permanecem selecionados. To deselect all the selected objects, click outside the boundaries of all the objects.
 
 ### Duplicação de objectos
 
