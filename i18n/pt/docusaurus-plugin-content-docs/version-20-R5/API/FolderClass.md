@@ -3,7 +3,7 @@ id: FolderClass
 title: Folder
 ---
 
-Os objetos `Folder` são criados com o comando [`Folder`](#folder). Contêm referências a pastas que podem ou não existir efectivamente no disco. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create()`](#create) function.
+Os objetos `Folder` são criados com o comando [`Folder`](#folder). Contêm referências a pastas que podem ou não existir efectivamente no disco. Por exemplo, quando executa o comando ’Folder`para criar uma pasta, é criado um objeto válido`Folder` mas nada é realmente armazenado no disco até chamar a função [`folder.create()\`](#create).
 
 ### Exemplo
 
@@ -78,13 +78,13 @@ Os objetos `Folder` suportam vários pathnames, incluindo a sintaxe `filesystems
 
 #### Descrição
 
-The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. O comando aceita duas sintaxes:
+O comando `Folder` <!-- REF #_command_.Folder.Summary -->cria e retorna um novo objeto do tipo `4D.Folder`<!-- END REF -->. O comando aceita duas sintaxes:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-No parâmetro *path*, passe uma string de rotas de pasta. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA").
+No parâmetro *path*, passe uma string de rotas de pasta. Você pode usar uma cadeia de caracteres personalizada ou um [sistema de arquivos](../Concepts/paths.md#filesystem-pathnames) (por exemplo, "/DATA").
 
-> Only absolute pathnames are supported with the `Folder` command.
+> Apenas são compatíveis com os nomes de caminho absolutos com o comando `Folder`.
 
 Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. Estão disponíveis as seguintes constantes:
 
@@ -95,7 +95,7 @@ Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. If you work wit
 
 **Folder ( folderConstant { ; \* } )**
 
-In the *folderConstant* parameter, pass a 4D built-in or system folder, using one of the following constants:
+No parâmetro *folderConstant*, passe uma pasta 4D incorporada ou de sistema, utilizando uma das seguintes constantes:
 
 | Parâmetros                 | Valor | Comentário                                                                                                                                                  |
 | -------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -114,9 +114,9 @@ In the *folderConstant* parameter, pass a 4D built-in or system folder, using on
 | fk user preferences folder | 0     | 4D folder that stores user preference files within the <code>\<userName&gt;</code> directory. |
 | fk web root folder         | 8     | Pasta raiz atual da Web da base de dados: se estiver dentro do pacote "/PACKAGE/percurso", caso contrário, caminho completo                 |
 
-If the command is called from a component, pass the optional \*parameter to get the path of the host database. Caso contrário, se omitir o parâmetro \*, um objeto nulo é sempre devolvido.
+Se o comando for chamado a partir de um componente, passe o parâmetro opcional \* para obter o caminho da base de dados anfitriã. Caso contrário, se omitir o parâmetro \*, um objeto nulo é sempre devolvido.
 
-> On Windows, in merged clients, the location of built-in folders is modified if the `ShareLocalResourcesOnWindowsClient` [BuildApp key](../Desktop/building.md#buildapp4dsettings) is used.
+> No Windows, em clientes mesclados, o local das pastas incorporadas é modificado se a chave `ShareLocalResourcesOnWindowsClient` [BuildApp key](../Desktop/building.md#buildapp4dsettings) for usada.
 
 ## 4D. Folder.new()
 
@@ -134,7 +134,7 @@ If the command is called from a component, pass the optional \*parameter to get 
 
 #### Descrição
 
-The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. É idêntico ao comando [`Folder`](#folder) (atalho).
+A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e retorna um novo objeto do tipo `4D.Folder`<!-- END REF -->. É idêntico ao comando [`Folder`](#folder) (atalho).
 
 > Recomenda-se usar o comando de atalho [`Folder`](#folder) em vez de `4D.Folder.new()`.
 
@@ -164,7 +164,7 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 
 #### Descrição
 
-The `.create()` function <!-- REF #FolderClass.create().Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
+A função `.create()` <!-- REF #FolderClass.create().Summary -->cria uma pasta no disco de acordo com as propriedades do objeto `Folder`<!-- END REF -->.
 
 If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. Se a pasta já existir no disco, a função não faz nada (não é atirado nenhum erro) e retorna falso.
 
@@ -224,7 +224,7 @@ End if
 
 #### Descrição
 
-The `.createAlias()` function <!-- REF #FolderClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
+A função `.createAlias()` <!-- REF #FolderClass.createAlias().Summary -->cria um alias (macOS) ou um atalho (Windows)<!-- END REF --> para a pasta com o nome *aliasName* especificado na pasta designada pelo objeto *destinationFolder*.
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
@@ -280,9 +280,9 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 #### Descrição
 
-The `.delete()` function <!-- REF #FolderClass.delete().Summary -->deletes the folder<!-- END REF -->.
+A função `.delete()` <!-- REF #FolderClass.delete().Summary -->exclui a pasta<!-- END REF -->.
 
-By default, for security reasons, if you omit the option parameter, `.delete( )` only allows empty folders to be deleted. Se quiser que o comando possa apagar pastas que não estejam vazias, deve utilizar o parâmetro de opção com uma das seguintes constantes:
+Por padrão, por razões de segurança, se omitir o parâmetro de opção, `.delete( )` só permite a eliminação de pastas vazias. Se quiser que o comando possa apagar pastas que não estejam vazias, deve utilizar o parâmetro de opção com uma das seguintes constantes:
 
 | Parâmetros             | Valor | Comentário                                             |
 | ---------------------- | ----- | ------------------------------------------------------ |
