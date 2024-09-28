@@ -66,7 +66,7 @@ O arquivo **environment4d.json** é opcional. Ele permite que você defina **cam
 The main benefits of this architecture are the following:
 
 - you can store the **environment4d.json** file in a parent folder of your projects and decide not to commit it, allowing you to have your local component organization.
-- if you want to use the same GitHub repository for several of your projects, you can reference it in the **environment4d.json** file and declare it in the **dependencies.json** file.
+- se quiser usar o mesmo repositório GitHub para vários projetos, você poderá fazer referência a ele no arquivo **environment4d.json** e declará-lo no arquivo **dependencies.json**.
 
 ### Prioridade
 
