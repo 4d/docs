@@ -303,7 +303,7 @@ Numéro de port IP d'écoute pour les connections HTTP via TLS. La valeur par d�
 | `WEB SET OPTION`                 | `Web inactive process timeout`                                                                 |              |
 | Boîte de dialogue des Propriétés | [Options (I) > Conservation des Process inactifs](../settings/web.md#inactive-process-timeout) | Curseur      |
 
-Life duration (in minutes) of inactive processes associated with legacy sessions. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the session context is destroyed.
+Durée de vie (en minutes) des process inactifs associés aux anciennes sessions. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the session context is destroyed.
 
 Valeur par défaut : 480 minutes (passez 0 pour restaurer la valeur par défaut)
 
@@ -425,7 +425,7 @@ Valeurs possibles: 500 000 - 2147483648.
 | objet webServer         | [`maxSessions`](API/WebServerClass.md#maxsessions) |              |
 | `WEB SET OPTION`        | `Web max sessions`                                 |              |
 
-Maximum number of simultaneous legacy sessions. When you reach the limit set, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the Web server needs to create a new one. The number of simultaneous legacy sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default).
+Nombre maximal d'anciennes sessions simultanées. When you reach the limit set, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the Web server needs to create a new one. The number of simultaneous legacy sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default).
 
 Valeur par défaut : 100 (passez 0 pour restaurer la valeur par défaut).
 
