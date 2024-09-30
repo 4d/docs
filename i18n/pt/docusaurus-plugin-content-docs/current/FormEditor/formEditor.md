@@ -182,7 +182,7 @@ You can duplicate an object directly using the Duplicate tool in the Tools palet
 Para duplicar um ou mais objectos:
 
 1. Seleccione os objectos que pretende agrupar.
-2. Elija **Duplicar** en el menú **Edición**. 4D cria uma cópia de cada objecto selecionado e coloca a cópia em frente e ligeiramente para o lado do original.
+2. Escolha **Duplicar** no menu **Editar**. 4D cria uma cópia de cada objecto selecionado e coloca a cópia em frente e ligeiramente para o lado do original.
 3. Deslocar a cópia para a localização pretendida.
    If you choose the Duplicate menu item again, 4D creates another copy of each object and moves it the exact same distance and direction from the first copy. If you need to distribute copies of the object along a line, you should use the following procedure. Duplicate the original object, move the copy to another location in the form, and then duplicate the copy. The second copy is automatically placed in the same relation to the first copy as the first copy was in relation to the original object. As cópias subsequentes também são colocadas na mesma relação com seus originais. A figura abaixo mostra como funciona esse posicionamento relativo das cópias:
 
@@ -190,7 +190,7 @@ Para duplicar um ou mais objectos:
 
 #### Duplicar muitos
 
-La caja de diálogo "Duplicar muchos" aparece cuando se selecciona uno o más objetos y se elige el comando **Duplicar muchos...** del menú **Objeto**.
+A caixa de diálogo "Duplicate Many" é exibida quando você seleciona um ou mais objetos e escolhe o comando **Duplicate Many...** no menu **Object**.
 
 ![](../assets/en/FormEditor/duplcateMany.png)
 
@@ -198,8 +198,8 @@ La caja de diálogo "Duplicar muchos" aparece cuando se selecciona uno o más ob
 
 - Para linhas e colunas, defina o offset que deseja deixar entre cada cópia. O valor deve ser expresso em pontos. It will be applied to each copy, or copies, in relation to the original object. For example, if you want to leave a vertical offset of 20 points between each object and the height of the source object is 50 points, enter 70 in the column’s “Offset” area.
 
-- Si desea crear una matriz de variables, seleccione la opción **Numerar las variables** y seleccione la dirección en la que se van a numerar las variables, ya sea por línea(s) o por columna(s).
-  Esta opção só está activa quando o objecto seleccionado é uma variável. Para más información sobre esta opción, consulte **Duplicar en una matriz** en el _Manual de diseño_.
+- Se você deseja criar uma matriz de variáveis, selecione a opção **Variáveis de número** e selecione a direção na qual as variáveis estão a ser numeradas, seja por linha(s) ou por coluna(s).
+  Esta opção só está activa quando o objecto seleccionado é uma variável. Para obter mais informações sobre essa opção, consulte **Duplicação em uma matriz** no _Design Reference_.
 
 ### Mover objetos
 
@@ -209,9 +209,9 @@ You can move any graphic or active object in the form including fields and objec
 - Mova o objeto um píxel de cada vez utilizando as teclas de seta,
 - Mova o objeto em etapas usando as teclas de seta (etapas de 20 píxeis por padrão),
 
-Ao começar a arrastar o objeto selecionado, seus manipuladores desaparecem. 4D displays markers that show the location of the object’s boundaries in the rulers so that you can place the object exactly where you want it. Tenha cuidado para não arrastar uma alça. Dragging a handle resizes the object. Puede presionar la tecla **Mayúsculas** para realizar el movimiento con una restricción.
+Ao começar a arrastar o objeto selecionado, seus manipuladores desaparecem. 4D displays markers that show the location of the object’s boundaries in the rulers so that you can place the object exactly where you want it. Tenha cuidado para não arrastar uma alça. Dragging a handle resizes the object. Você pode pressionar a tecla **Shift** para executar o movimento com uma restrição.
 
-Cuando la [rejilla magnética](#usando-la-rejilla-magnética) está activada, los objetos se mueven por etapas indicando ubicaciones perceptibles.
+Quando a [Magnetic Grid] (#using-the-magnetic-grid) está ativada, os objetos são movidos em etapas, indicando locais perceptíveis.
 
 Para mover um objeto um píxel de cada vez:
 
@@ -219,7 +219,7 @@ Para mover um objeto um píxel de cada vez:
 
 Para mover um objeto em passos:
 
-- Selecciona el objeto u objetos que quiera mover y mantenga presionada la tecla **Mayúsculas** y utilice las teclas de dirección para mover el objeto por pasos. Por padrão, os passos são de 20 pixéis de cada vez. Pode alterar este valor na página Formulários das Preferências.
+- Selecione o objeto ou objetos que deseja mover e mantenha pressionada a tecla **Shift** e use as teclas de seta para mover o objeto por etapas. Por padrão, os passos são de 20 pixéis de cada vez. Pode alterar este valor na página Formulários das Preferências.
 
 ### Agrupamento de objectos
 
@@ -229,23 +229,23 @@ When you resize a group, all the objects in the group are resized proportionally
 
 Você pode desagrupar um grupo de objetos a qualquer momento e tratá-los novamente como objetos independentes.
 
-Um objecto activo que tenha sido agrupado deve ser desarticulado antes de se poder aceder às suas propriedades ou método. Sin embargo, es posible seleccionar un objeto perteneciente a un grupo sin reagrupar el conjunto: para ello, **Ctrl+clic** (Windows) o **Comando+clic** (macOS) en el objeto (el grupo debe estar seleccionado previamente).
+Um objecto activo que tenha sido agrupado deve ser desarticulado antes de se poder aceder às suas propriedades ou método. No entanto, é possível selecionar um objeto pertencente a um grupo sem desagrupar o conjunto: para isso, **Ctrl+clique** (Windows) ou **Command+clique** (macOS) no objeto (o grupo deve ser selecionado antes).
 
 O agrupamento só afeta os objetos no editor de formulários. Quando o formulário é executado, todos os objetos agrupados agem como se não estivessem agrupados.
 
-> La rejilla magnética también influye en el redimensionamiento manual de los objetos.
+> Não é possível agrupar objetos pertencentes a diferentes visualizações e somente os objetos pertencentes à visualização atual podem ser agrupados (consulte [Views](#views) ).
 
 Para agrupar objectos:
 
 1. Selecione o objecto agrupado que pretende desagrupar.
-2. Elija **Agrupar** en el menú Objetos. OR
-   Click the Group button  in the toolbar of the Form editor:<p>![](../assets/en/FormEditor/group.png)</p>
-   4D marks the boundary of the newly grouped objects with handles. No handles mark the boundary of any of the individual objects within the group. Now, when you modify the grouped object, you change all the objects that make up the group.
+2. Elija **Agrupar** en el menú Objetos. OU
+   Clique no botão Group (Agrupar<p>)</p> na barra de ferramentas do editor de formulários:<p>![](../assets/en/FormEditor/group.png)</p>
+   4D marca o limite dos objetos recém-agrupados com alças. No handles mark the boundary of any of the individual objects within the group. Now, when you modify the grouped object, you change all the objects that make up the group.
 
 Para desagrupar objetos:
 
 1. Seleccione o objecto ou objectos que pretende duplicar.
-2. Choose **Ungroup** from the **Object** menu.<p>OR</p><p>Click the **Ungroup** button (variant of the **Group** button) in the toolbar of the Form editor.</p><p>If **Ungroup** is dimmed, this means that the selected object is already separated into its simplest form.</p>4D marks the boundaries of the individual objects with handles.
+2. Escolha **Ungroup** no menu **Object**<p>.OUClique no</p><p>botão **Ungroup** (variante do botão **Group**) na barra de ferramentas do editor de formulários.</p><p>Se **Ungroup** estiver esmaecido, isso significa que o objeto selecionado já está separado em sua forma mais simples.</p>4D marca os limites dos objetos individuais com alças.
 
 ### Alinhamento de objetos
 
@@ -271,15 +271,15 @@ The Alignment Assistant allows you to perform any type of alignment and/or distr
 
 ![](../assets/en/FormEditor/alignmentAssistant.png)
 
-Para mostrar esta caja de diálogo, seleccione los objetos que desee alinear y, a continuación, elija el comando **Alineación** del submenú **Alinear** del menú **Objeto** o del menú contextual del editor.
+Para exibir essa caixa de diálogo, selecione os objetos que deseja alinhar e escolha o comando **Alinhamento** no submenu **Alinhar** do menu **Objeto** ou no menu de contexto do editor.
 
-- In the “Left/Right Alignment” and/or “Top/Bottom Alignment” areas, click the icon that corresponds to the alignment you want to perform.<p>The example area displays the results of your selection.</p>
+- Nas áreas "Alinhamento Esquerda/Direita" e/ou "Alinhamento Superior/Inferior", clique no ícone que corresponde ao alinhamento que você deseja executar.<p>A área de exemplo exibe os resultados da sua seleção.</p>
 
-- Para realizar una alineación que utilice el esquema de anclaje estándar, haga clic en **Ver** o **Aplicar**. In this case 4D uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. Por exemplo, se quiser realizar um alinhamento correcto num conjunto de objectos, o objecto mais à direita será utilizado como âncora. OR:<p>To align objects to a specific object, select the **Align on** option and select the object to which you want the other objects to be aligned from the object list. In this case, the position of the reference object will not be altered.</p>
+- Para executar um alinhamento que use o esquema de âncora padrão, clique em **Preview** ou **Apply**. In this case 4D uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. Por exemplo, se quiser realizar um alinhamento correcto num conjunto de objectos, o objecto mais à direita será utilizado como âncora. OU:<p>Para alinhar objetos a um objeto específico, selecione a opção **Alinhar em** e selecione o objeto ao qual você deseja que os outros objetos sejam alinhados na lista de objetos. In this case, the position of the reference object will not be altered.</p>
 
-Puede previsualizar los resultados de la alineación haciendo clic en el botón **Previsualización**. Os objetos são então alinhados no editor de formulários, mas como a caixa de diálogo não desaparece, ainda é possível cancelar ou aplicar o alinhamento.
+Você pode visualizar os resultados do alinhamento clicando no botão **Preview**. Os objetos são então alinhados no editor de formulários, mas como a caixa de diálogo não desaparece, ainda é possível cancelar ou aplicar o alinhamento.
 
-> Esta caixa de diálogo permite-lhe alinhar e distribuir objetos numa única operação. Para más información sobre cómo distribuir objetos, consulte [Repartir objetos](#distribuir-objetos).
+> Esta caixa de diálogo permite-lhe alinhar e distribuir objetos numa única operação. Para obter mais informações sobre como distribuir objetos, consulte [Distribuir objetos] (#distributing-objects).
 
 #### Utilização da Rede Magnética
 
@@ -298,7 +298,7 @@ No que diz respeito à distribuição dos objetos, 4D propõe uma distância bas
 
 ![](../assets/en/FormEditor/magneticGrid2.png)
 
-Esta operação aplica-se a todos os tipos de objetos dos formulários. La rejilla magnética puede activarse o desactivarse en cualquier momento utilizando el comando **Activar la rejilla magnética** del menú **Formulario** o del menú contextual del editor. También es posible definir la activación de esta función por defecto en la página **Preferencias** > **Formularios** (opción **Activar la alineación automática por defecto**). Puede activar o desactivar manualmente la rejilla magnética cuando se selecciona un objeto presionando la tecla **Ctrl** (Windows) o **Control** (macOS) .
+Esta operação aplica-se a todos os tipos de objetos dos formulários. A Magnetic Grid pode ser ativada ou desativada a qualquer momento usando o comando **Magnetic Grid** no menu **Form** ou no menu de contexto do editor. Também é possível definir a ativação desse recurso por padrão na página **Preferências** > **Formulários** (opção **Ativar alinhamento automático por padrão**). Você pode ativar ou desativar manualmente a grade magnética quando um objeto for selecionado pressionando a tecla **Ctrl** (Windows) ou **Control** (macOS) .
 
 > O magnetismo também leva à observação de etapas ao redimensionar objetos manualmente.
 
@@ -306,13 +306,13 @@ Esta operação aplica-se a todos os tipos de objetos dos formulários. La rejil
 
 You can distribute objects so that they are set out with an equal amount of space between them. To do this, you can distribute objects using either the Distribute tools in the Tools palette or the Alignment Assistant. Este último permite-lhe alinhar e distribuir objetos numa única operação.
 
-> Puede cambiar el orden de entrada en tiempo de ejecución utilizando los comandos `FORM SET ENTRY ORDER` y `FORM GET ENTRY ORDER`.
+> Quando a [Magnetic Grid] (#using-the-magnetic-grid) está ativada, um guia visual também é fornecido para distribuição quando um objeto é movido manualmente.
 
 Para distribuir objetos com igual espaçamento:
 
 1. Selecione três ou mais objetos e clique na ferramenta Distribuir pretendida.
 
-2. In the toolbar, click on the distribution tool that corresponds to the distribution you want to apply.<p>![](../assets/en/FormEditor/distributionTool.png)</p> OR<p>Select a distribution menu command from the **Align** submenu in the **Object** menu or from the context menu of the editor.</p>4D distributes the objects accordingly. Objects are distributed using the distance to their centers and the largest distance between two consecutive objects is used as a reference.
+2. Na barra de ferramentas, clique na ferramenta de distribuição que corresponde à distribuição que você deseja aplicar.<p>![](../assets/en/FormEditor/distributionTool. ng)</p> OU<p>Selecione um comando de menu de distribuição no submenu **Alinhar** no menu **Objeto** ou no menu de contexto do editor.</p>4D distribui os objetos apropriadamente. Objects are distributed using the distance to their centers and the largest distance between two consecutive objects is used as a reference.
 
 Para distribuir objetos utilizando a caixa de diálogo Alinhar e distribuir:
 
@@ -320,44 +320,44 @@ Para distribuir objetos utilizando a caixa de diálogo Alinhar e distribuir:
 
 2. Seleccione el comando **Alineación** del submenú **Alinear** del menú **Objeto** o del menú contextual del editor. A seguinte caixa de diálogo é exibida:![](../assets/en/FormEditor/alignmentAssistant.png)
 
-3. In the Left/Right Alignment and/or Top/Bottom Alignment areas, click the standard distribution icon: ![](../assets/en/FormEditor/horizontalDistribution.png) <p>(Standard horizontal distribution icon)</p>The example area displays the results of your selection.
+3. Nas áreas de Alinhamento Esquerdo/Direita e/ou Topo/Bottom Alinhamento, clique no ícone de distribuição padrão: ![](../assets/en/FormEditor/horizontalDistribution. ng) <p>(ícone padrão de distribuição horizontal)</p>A área de exemplo exibe os resultados da sua seleção.
 
-4. To perform a distribution that uses the standard scheme, click **Preview** or _Apply_.<p>In this case 4D will perform a standard distribution, so that the objects are set out with an equal amount of space between them.</p>OR:<p>To execute a specific distribution, select the **Distribute** option (for example if you want to distribute the objects based on the distance to their right side). Esta opção funciona como um interruptor. If the Distribute check box is selected, the icons located below it perform a different function:</p>
+4. Para executar uma distribuição que use o esquema padrão, clique em **Preview** ou _Apply_.<p>Nesse caso, o 4D executará uma distribuição padrão, de modo que os objetos sejam dispostos com uma quantidade igual de espaço entre eles</p>. OU:<p>Para executar uma distribuição específica, selecione a opção **Distribute** (por exemplo, se quiser distribuir os objetos com base na distância até o lado direito). Esta opção funciona como um interruptor. If the Distribute check box is selected, the icons located below it perform a different function:</p>
 
-- Horizontally, the icons correspond to the following distributions: evenly with respect to left sides, centers (hor.) e os lados direito dos objetos selecionados.
-- Vertically, the icons correspond to the following distributions: evenly with respect to top edges, centers (vert.) e as bordas inferiores dos objetos selecionados.
+- Horizontalmente, os ícones correspondem às seguintes distribuições: igualmente com relação aos lados esquerdos, centros (hor.) e os lados direito dos objetos selecionados.
+- Verticalmente, os ícones correspondem às seguintes distribuições: uniformemente em relação às bordas superiores, centros (vert.) e as bordas inferiores dos objetos selecionados.
 
-Puede previsualizar el resultado real de sus parámetros haciendo clic en el botón **Previsualización**: la operación se lleva a cabo en el editor de formularios, pero la caja de diálogo permanece en primer plano. Puede entoces **Cancelar** o **Aplicar** las modificaciones.
+Você pode visualizar o resultado real de suas configurações clicando no botão **Preview**: a operação é executada no editor de formulários, mas a caixa de diálogo permanece em primeiro plano. Você poderá então **Cancelar** ou **Aplicar** as modificações.
 
-> Esta caixa de diálogo permite-lhe combinar o alinhamento e a distribuição de objetos. Para más información sobre la alineación, consulte [Alinear objetos](#aligning-objects).
+> Esta caixa de diálogo permite-lhe combinar o alinhamento e a distribuição de objetos. Para obter mais informações sobre alinhamento, consulte [Alinhamento de objetos](#alinhamento-de-objetos).
 
 ### Gerenciar os planos dos objetos
 
-You will sometimes have to rearrange objects that are obstructing your view of other objects in the form. For example, you may have a graphic that you want to appear behind the fields in a form. 4D ofrece cuatro elementos de menú, **Mover hacia atrás**, **Mover hacia delante**, **Subir un nivel** y **Bajar un nivel** que le permiten organizar los planos de los objetos en el formulario. These layers also determine the default entry order (see Modifying data entry order). A figura abaixo mostra objetos à frente e atrás de outros objetos:
+You will sometimes have to rearrange objects that are obstructing your view of other objects in the form. For example, you may have a graphic that you want to appear behind the fields in a form. O 4D oferece quatro itens de menu, **Mover para trás**, **Mover para frente**, **Subir um nível** e **Descer um nível**, que permitem que você coloque objetos em camadas no formulário. These layers also determine the default entry order (see Modifying data entry order). A figura abaixo mostra objetos à frente e atrás de outros objetos:
 
 ![](../assets/en/FormEditor/layering.png)
 
 Para mover um objeto para outro nível, selecione-o e escolha:
 
-- Uno de los comandos **Mover hacia atrás**, **Mover hacia delante**, **Subir un nivel** y **Bajar un nivel** en el menú Objeto,
-- Uno de los comandos del submenú **Plano>** del menú contextual del editor,
+- Um dos comandos **Mover para o Voltar**, **Mover para Front**, **Para cima um Nível** e **Para Baixo** do menu Obstáculo,
+- Um dos comandos no submenu **Level>** no menu de contexto do editor,
 - One of the commands associated with the level management button of the toolbar.
 
 ![](../assets/en/FormEditor/level2.png)
 
-> Cuando se superponen varios objetos, se puede utilizar el atajo **Ctrl+Mayús+clic** / **Comando+Mayús+clic** para seleccionar cada objeto sucesivamente bajando un plano con cada clic.
+> Quando vários objetos são sobrepostos, o atalho **Ctrl+Shift+click** / **Command+Shift+click** pode ser usado para selecionar cada objeto sucessivamente, descendo uma camada a cada clique.
 
 When ordering different levels, 4D always goes from the background to the foreground. As a result, the previous level moves the selection of objects one level towards the background. The next level moves the selection one level towards the foreground of the form.
 
 ### Ordem de introdução de dados
 
-El orden de entrada de datos es el orden en el que se seleccionan los campos, subformularios y otros objetos activos al presionar la tecla **Tab** o la tecla **Retorno de carro** en un formulario de entrada. Es posible desplazarse por el formulario en sentido contrario (invertir el orden de entrada de datos) presionando las teclas **Mayúsc+Tab** o **Mayúsc+Retorno de carro** de retorno.
+A ordem de entrada de dados é a ordem em que os campos, subformulários e outros objetos ativos são selecionados quando você pressiona a tecla **Tab** ou **Carriage return** em um formulário de entrada. É possível percorrer o formulário na direção oposta (ordem inversa de entrada de dados) pressionando as teclas de retorno **Shift+Tab** ou **Shift+Carriage**.
 
-> Puede cambiar el orden de entrada en tiempo de ejecución utilizando los comandos `FORM SET ENTRY ORDER` y `FORM GET ENTRY ORDER`.
+> Você pode alterar a ordem de entrada em tempo de execução usando os comandos `FORM SET ENTRY ORDER` e `FORM GET ENTRY ORDER`.
 
 Every object that supports the focusable property is included in the data entry order by default.
 
-Setting the entry order for a JSON form is done with the [`entryOrder`](properties_JSONref.md) property.
+Definir a ordem de entrada para um formulário JSON é feita com a propriedade [`entryOrder`](properties_JSONref.md).
 
 If you don’t specify a custom entry order, by default 4D uses the layering of the objects to determine the entry order in the direction “background towards foreground.” The standard entry order thus corresponds to the order in which the objects were created in the form.
 
@@ -373,7 +373,7 @@ In cases such as this, a custom data entry order allows you to enter the informa
 
 You can view the current entry order either using the “Entry order” shields, or by using the “Entry order” mode. No entanto, você só pode modificar a ordem de entrada usando o modo “Ordem de entrada”.
 
-This paragraph describes viewing and modifying the entry order using the “Entry order” mode. Para más información sobre la visualización del orden de entrada utilizando marcas, consulte [Using shields](#using-shields).
+This paragraph describes viewing and modifying the entry order using the “Entry order” mode. Para obter mais informações sobre como visualizar a ordem de entrada usando escudos, consulte [Using shields](#using-shields).
 
 Para ver ou alterar a ordem de entrada:
 
@@ -381,13 +381,13 @@ Para ver ou alterar a ordem de entrada:
 
    Choose <strong x-id="1">Entry Order</strong> from the <strong x-id="1">Form</strong> menu or click on the Entry Order button in the toolbar of the window:<img src="../assets/en/FormEditor/zOrder.png" alt="" />The pointer turns into an entry order pointer and 4D draws a line in the form showing the order in which it selects objects during data entry. A visualização e alteração da ordem de introdução de dados são as únicas acções que pode realizar até clicar em qualquer ferramenta na paleta Ferramentas.
 
-2. To change the data entry order, position the pointer on an object in the form and, while holding down the mouse button, drag the pointer to the object you want next in the data entry order.<p>![](../assets/en/FormEditor/entryOrder3.png)</p>4D will adjust the entry order accordingly.
+2. Para mudar a ordem de entrada de dados, posicione o ponteiro em um objeto no formulário e, enquanto mantém pressionado o botão do mouse, arraste o ponteiro para o objeto que deseja na ordem de entrada de dados.<img src="../assets/en/FormEditor/entryOrder3.png" alt="" />4D ajustará a ordem de entrada de acordo.
 
 3. Repita a etapa 2 tantas vezes quantas forem necessárias para definir a ordem de introdução de dados que desejar.
 
-4. Cuando esté satisfecho con el orden de entrada de datos, haga clic en cualquier herramienta no seleccionada de la barra de herramientas o elija **Orden de entrada** en el menú **Formulario**. 4D regressa ao funcionamento normal do editor de formulários.
+4. Quando estiver satisfeito com a ordem de entrada de dados, clique em qualquer ferramenta não selecionada na barra de ferramentas ou escolha Ordem de entrada a partir do menu Formulário. 4D regressa ao funcionamento normal do editor de formulários.
 
-> Somente a ordem de entrada da página atual do formulário é exibida. If the form contains enterable objects on page 0 or coming from an inherited form, the default entry order is as follows: Objects from page 0 of the inherited form > Objects from page 1 of the inherited form > Objects from page 0 of the open form > Objects from the current page of the open form.
+> Somente a ordem de entrada da página atual do formulário é exibida. Se o formulário contiver objetos inseríveis na página 0 ou provenientes de um formulário herdado, a ordem de entrada padrão será a seguinte: Objetos da página 0 do formulário herdado > Objetos da página 1 do formulário herdado > Objetos da página 0 do formulário aberto > Objetos da página atual do formulário aberto.
 
 #### Utilização de um grupo de introdução de dados
 
@@ -395,7 +395,7 @@ While you are changing the data entry order, you can select a group of objects i
 
 Para criar um grupo de entrada de dados:
 
-1. Seleccione **Orden de entrada** en el menú _Formulario_ o haga clic en el botón de la barra de herramientas.
+1. Selecione **Entry Order** no menu _Formulário_ ou clique no botão na barra de ferramentas.
 2. Desenhe uma seleção ao redor dos objetos que você deseja agrupar para entrada de dados.
 
 When you release the mouse button, the objects enclosed or touched by the rectangle follow the standard data entry order. A ordem de entrada de dados para os restantes objetos ajustam-se conforme necessário.
@@ -406,15 +406,15 @@ Por defeito, todos os objetos que suportam a propriedade focusable são incluíd
 
 1. Selecionar o modo ordem de entrada e, em seguida
 
-2. **Mayúsculas-clic** en el objeto
+2. **shift-click** no objeto
 
-3. **haga clic derecho** en el objeto y seleccione la opción **Eliminar del orden de entrada** del menú contextual
+3. **Clique com o botão direito do mouse** no objeto e selecione a opção **Remover da ordem de entrada** no menu de contexto
 
 ## Pré-visualização CSS
 
 The Form editor allows you to view your forms with or without applied CSS values.
 
-Cuando se han definido [hojas de estilo](createStylesheet.md), los formularios (incluidos los formularios y subformularios heredados) se abren por defecto en el modo de vista previa CSS para su sistema operativo.
+Quando as [folhas de estilo] (createStylesheet.md) forem definidas, os formulários (inclusive os formulários herdados e os subformulários) são abertos no modo CSS Preview do seu sistema operacional por padrão.
 
 ### Selecção do modo de pré-visualização do CSS
 
@@ -432,7 +432,7 @@ Seleccione um dos seguintes modos de pré-visualização a partir do menu:
 
 > If a font size too large for an object is defined in a style sheet or JSON, the object will automatically be rendered to accommodate the font, however the size of the object will not be changed.
 
-El modo de vista previa CSS refleja el orden de prioridad aplicado a las hojas de estilo frente a los atributos JSON, tal y como se define en la sección [JSON vs Hoja de estilo](stylesheets.html#json-vs-style-sheet).
+O modo de visualização CSS reflete a ordem de prioridade aplicada às folhas de estilo versus atributos JSON, conforme definido na seção [JSON vs. Folha de estilo] (stylesheets.html#json-vs-style-sheet).
 
 Once a CSS preview mode is selected, objects are automatically displayed with the styles defined in a style sheet (if any).
 
@@ -454,9 +454,9 @@ são apresentados com um ícone CSS na Lista de Propriedades:
 
 ![](../assets/en/FormEditor/cssPpropList.png)
 
-Un valor de atributo definido en una hoja de estilo puede ser anulado en la descripción del formulario JSON (excepto si el CSS incluye la declaración `!important`, ver más abajo). En este caso, la lista de propiedades muestra el valor del formulario JSON en **negrita**. Puede restablecer el valor a su definición de hoja de estilo con los atajos **Ctrl + clic** (Windows) o **Comando + clic** (macOs).
+Um valor de atributo definido em uma folha de estilo pode ser substituído na descrição do formulário JSON (exceto se o CSS incluir a declaração `!important`, veja abaixo). Nesse caso, a Lista de propriedades exibe o valor do formulário JSON em **negrito**. Você pode redefinir o valor para sua definição de folha de estilo com os atalhos **Ctrl + clique** (Windows) ou **Command + clique** (macOs).
 
-> Si un atributo ha sido definido con la declaración `!important` para un grupo, un objeto dentro de un grupo, o cualquier objeto dentro de una selección de múltiples objetos, el valor de ese atributo está bloqueado y no puede ser cambiado en la Lista de Pr
+> Se um atributo tiver sido definido com a declaração `!important` para um grupo, um objeto em um grupo ou qualquer objeto em uma seleção de vários objetos, esse valor de atributo será bloqueado e não poderá ser alterado na Lista de propriedades.
 
 #### Lista de propriedades Ícones CSS
 
@@ -468,7 +468,7 @@ Un valor de atributo definido en una hoja de estilo puede ser anulado en la desc
 
 ## Criação de list box
 
-Puede crear rápidamente nuevos list box de tipo selección de entidades con el **-Generador de list box**. The new list box can be used immediately or it can be edited via the Form Editor.
+Você pode criar novas caixas de listagem de seleção de entidades rapidamente com o **Criador de caixas de listagem**. The new list box can be used immediately or it can be edited via the Form Editor.
 
 The List box builder lets you create and fill entity selection list boxes in a few simple operations.
 
@@ -482,15 +482,15 @@ O gerador do list box é exibido:
 
 ![](../assets/en/FormEditor/listboxBuilder.png)
 
-2. Seleccione una tabla de la lista desplegable **Tabla**:
+2. Selecione uma tabela na lista suspensa **Table**:
 
 ![](../assets/en/FormEditor/listboxBuilderTable.png)
 
-3. Seleccione los campos del list box en el área **Campos**:
+3. Selecione os campos para a caixa de listagem na área **Fields**:
 
 ![](../assets/en/FormEditor/listboxBuilderFields.png)
 
-Por padrão, todos os campos são selecionados. Puede seleccionar o deseleccionar los campos individualmente o utilizar **Ctrl+clic** (Windows) o **Cmd+clic** (macOS) para seleccionarlos o deseleccionarlos todos a la vez.
+Por padrão, todos os campos são selecionados. Você pode selecionar ou desmarcar campos individualmente ou usar **Ctrl+clique** (Windows) ou **Cmd+clique** (macOS) para selecionar ou desmarcar todos de uma vez.
 
 Você pode alterar a ordem dos campos arrastando-os e soltando-os.
 
@@ -500,11 +500,11 @@ Você pode alterar a ordem dos campos arrastando-os e soltando-os.
 
 Esta expressão pode ser alterada se necessário.
 
-5. Al hacer clic en el botón **Copiar** se copiará la expresión para cargar todos los registros en la memoria:
+5. Clicar no botão **Copy** copiará a expressão para carregar todos os registros na memória:
 
 ![](../assets/en/FormEditor/listboxBuilderCode.png)
 
-6. Haga clic en el botón **Crear un widget** para crear el list box.
+6. Clique no botão **Construir widget** para criar a caixa de lista.
 
 ![](../assets/en/FormEditor/listboxBuilderBuild.png)
 
@@ -514,17 +514,17 @@ O list box final:
 
 ## Inserir campos
 
-El botón **Insertar campos** inserta en el formulario todos los campos (excepto los de tipo objeto y blob) de la tabla del formulario, junto con sus etiquetas y respetando las normas de la interfaz. Esse assistente é um atalho para projetar formulários básicos de entrada ou formulários lista.
+O botão **Inserir campos** insere todos os campos (exceto os campos do tipo objeto e bolha) da tabela do formulário no formulário, juntamente com seus rótulos e de acordo com os padrões de interface. Esse assistente é um atalho para projetar formulários básicos de entrada ou formulários lista.
 
-El botón **Insertar campos** sólo está disponible con formularios tabla.
+O botão **Inserir campos** só está disponível em formulários de tabela.
 
 O desenho do formulário resultante depende do formulário:
 
-- **Formulario detallado**: al hacer clic en el botón **Insertar campos** se genera un formulario con un diseño de página:
+- **Formulário detalhado**: clicar no botão **Inserir campos** gera um formulário com um design de página:
 
 ![](../assets/en/FormEditor/insertFields2.png)
 
-- **Formulario listado**: al hacer clic en el botón **Insertar campos** se genera un diseño de formulario listado con campos organizados en una sola línea y marcadores de área:
+- **Formulário de lista**: clicar no botão **Inserir campos** gera um design de formulário de lista com campos organizados em uma única linha e marcadores de área:
 
 ![](../assets/en/FormEditor/insertFields3.png)
 
@@ -534,15 +534,15 @@ The 4D Form Editor uses shields to make viewing object properties easier. Pode e
 
 ![](../assets/en/FormEditor/shields.png)
 
-El principio de esta función es el siguiente: cada escudo está asociado a una propiedad (por ejemplo, **Vistas**, que significa que el objeto "está en la vista actual"). When you activate a shield, 4D displays a small icon (shield) in the upper left of each object of the form where the property is applied.
+Essa função funciona da seguinte forma: Cada escudo é associado a uma propriedade (por exemplo, **Views**, que significa que o objeto "está na visualização atual"). When you activate a shield, 4D displays a small icon (shield) in the upper left of each object of the form where the property is applied.
 
 ![](../assets/en/FormEditor/shield.png)
 
 ### Usando escudos
 
-Para activar una marca, haga clic en el icono _Marca_ de la barra de herramientas hasta seleccionar la marca deseada. You can also click on the right side of the button and select the type of shield to display directly in the associated menu:
+Para ativar um escudo, clique no ícone _Escudo_ na barra de ferramentas até que o escudo desejado seja selecionado. You can also click on the right side of the button and select the type of shield to display directly in the associated menu:
 
-Si no quiere mostrar marcas, seleccione **Sin marcas** en el menú de selección.
+Se você não quer exibir escudos, selecione **Sem Escudos** no menu de seleção.
 
 > You can set which shields to display by default on the Forms Page of the application Preferences.
 
@@ -579,19 +579,19 @@ A gestão das vistas é efetuada através da paleta de vistas.
 
 Existem três formas de aceder à paleta de vistas:
 
-- **Barra de herramientas**: haga clic en el icono Vistas de la barra de herramientas del Editor de formularios. (This icon appears gray when at least one object belongs to a view other than the default view.)
+- **Barra de ferramentas**: Clique no ícone Views na barra de ferramentas do Form Editor. (This icon appears gray when at least one object belongs to a view other than the default view.)
 
 |                 Vista por defeito apenas                |                 Com vistas adicionais                 |
 | :-----------------------------------------------------: | :---------------------------------------------------: |
 | ![](../assets/en/FormEditor/icon.png "No views in use") | ![](../assets/en/FormEditor/icon2.png "Views in use") |
 
-- **Menú contextual** (formulario u objeto): haga clic derecho en cualquier lugar del editor de formularios o de un objeto, y seleccione **Vista actual**
+- **Menu de contexto** (formulário ou objeto): Clique com o botão direito do mouse em qualquer lugar do Form Editor ou de um objeto e selecione **Current View**
 
 ![](../assets/en/FormEditor/contextMenu.png)
 
-La vista actual se indica con una marca de verificación (por ejemplo, "Dirección de trabajo" en la imagen superior)
+A visualização atual é indicada com uma marca de seleção (\*por exemplo, \*, "Work Address" na imagem acima)
 
-- **Menú Formulario**: haga clic en el menú **Formulario** y seleccione **Mostrar la lista**
+- **Menu do formulário**: clique no menu do **formulário** e selecione **Exibir lista**
 
 ![](../assets/en/FormEditor/formMenu.png)
 
@@ -599,31 +599,31 @@ La vista actual se indica con una marca de verificación (por ejemplo, "Direcci�
 
 Aqui estão algumas coisas importantes que você deve saber antes de começar a trabalhar com vistas:
 
-- **Contexto de uso**: las vistas son una herramienta puramente gráfica que sólo se puede utilizar en el Editor de formularios; no se puede acceder a las vistas por programación ni en el modo Aplicación.
+- **Contexto de uso**: As visualizações são uma ferramenta puramente gráfica que só pode ser usada no Editor de Formulário; você não pode acessar as visualizações programaticamente ou no ambiente de Aplicativos.
 
-- **Vistas y páginas**: Los objetos de una misma vista pueden pertenecer a diferentes páginas del formulario; sólo se pueden mostrar los objetos de la página actual (y de la página 0 si es visible), independientemente de la configuración de las vistas.
+- **Visualizações e páginas**: Os objetos da mesma visualização podem pertencer a páginas de formulário diferentes; somente os objetos da página atual (e da página 0, se ela estiver visível) podem ser exibidos, independentemente da configuração da visualização.
 
-- **Vistas y niveles**: las vistas son independientes de los niveles de los objetos; no existe una jerarquía de visualización entre las diferentes vistas.
+- **Visualizações e níveis**: As visualizações são independentes dos níveis do objeto; não há hierarquia de exibição entre visualizações diferentes.
 
-- **Vistas y grupos**: sólo se pueden agrupar los objetos que pertenecen a la vista actual.
+- **Visualizações e grupos**: Somente objetos pertencentes à visualização atual podem ser agrupados.
 
-- **Vistas actuales y por defecto**: la vista por defecto es la primera vista de un formulario y no se puede eliminar; la vista actual es la que se está editando y el nombre se muestra en negrita.
+- Visualizações **atuais e padrão**: A visualização padrão é a primeira vista de um formulário e não pode ser excluída; a visualização atual é a visualização que está sendo editada e o nome é exibido em negrito.
 
 ### Gestão da vistas
 
 #### Criar vistas
 
-Qualquer objecto criado num formulário é colocado na primeira vista ("Vista 1") do formulário. La primera vista es **siempre** la vista por defecto, indicada por (por defecto) después del nombre. El nombre de la vista puede cambiarse (ver [Renombrar vistas](#renaming-views)), sin embargo sigue siendo la vista por defecto.
+Qualquer objecto criado num formulário é colocado na primeira vista ("Vista 1") do formulário. A primeira visualização é **sempre** a visualização padrão, indicada por (Default) após o nome. O nome da visualização pode ser alterado (consulte [Renomear visualizações](#renomear-visualizações)), mas ela continua sendo a visualização padrão.
 
 ![](../assets/en/FormEditor/createView.png)
 
 Existem duas formas de adicionar vistas adicionais:
 
-- Haga clic en el botón **Añadir una nueva vista** en la parte inferior de la paleta Vista:
+- Clique no botão **Adicionar uma nova exibição** na parte inferior da paleta Exibir:
 
 ![](../assets/en/FormEditor/addView.png)
 
-- Haga clic con el botón derecho en una vista existente y seleccione **Insertar vista**:
+- Clique com o botão direito do mouse em uma visualização existente e selecione **Inserir visualização**:
 
 ![](../assets/en/FormEditor/addView2.png)
 
@@ -655,11 +655,11 @@ Note-se que a vista padrão não é alterada:
 
 Para mudar o nome de uma vista, pode utilizar:
 
-- Haga clic en el botón **Eliminar la vista seleccionada** en la parte inferior de la paleta Vista:
+- Clique no botão **Delete the selected view** (Excluir a exibição selecionada) na parte inferior da paleta View (Exibir):
 
 ![](../assets/en/FormEditor/deleteView.png)
 
-- Haga clic derecho en el nombre de la vista y seleccione **Eliminar la vista**:
+- Clique com o botão direito do mouse no nome da visualização e selecione **Delete View**:
 
 ![](../assets/en/FormEditor/deleteView2.png)
 
@@ -679,7 +679,7 @@ Uma vez criadas as vistas, pode utilizar a paleta Vista para:
 
 Um objeto só pode pertencer a uma única vista.
 
-Para crear un objeto en otra vista, basta con seleccionar la vista en la paleta de vistas (antes de crear el objeto) haciendo clic en su nombre (se muestra un icono de edición para la [Vista actual](#before-you-begin) y el nombre aparece en negrita):
+Para criar um objeto em outra visualização, basta selecionar a visualização na paleta Visualizar (antes de criar o objeto) clicando em seu nome (um ícone Editar é exibido para a [Visualização atual] (#antes-de-começar) e o nome aparece em negrito):
 
 ![](../assets/en/FormEditor/addObject.png)
 
@@ -691,13 +691,13 @@ It's also possible to move one or more objects from one view to another. No form
 
 > A seleção pode conter vários objetos pertencentes a diferentes visualizações.
 
-Simplemente seleccione la vista de destino, haga clic derecho y seleccione **Mover a**:
+Basta selecionar a visualização de destino, clicar com o botão direito do mouse e selecionar **Move to**:
 
 ![](../assets/en/FormEditor/moveObject.png)
 
 OU
 
-Seleccione la vista de destino de la selección y haga clic en el botón **Mover a** de la parte inferior de la paleta de vistas:
+Selecione a exibição de destino da seleção e clique no botão **Mover para** na parte inferior da paleta Exibir:
 
 ![](../assets/en/FormEditor/moveObject3.png)
 
@@ -705,17 +705,17 @@ A seleção é então colocada na nova vista:
 
 ![](../assets/en/FormEditor/objNewView.png)
 
-Você também pode mover um objeto para outra visualização por meio do menu de contexto do objeto. Haga clic derecho en el objeto, seleccione **Mover a la vista** y seleccione una vista en la lista de vistas disponibles:
+Você também pode mover um objeto para outra visualização por meio do menu de contexto do objeto. Clique com o botão direito do mouse no objeto, selecione **Mover para visualização** e selecione uma visualização na lista de visualizações disponíveis:
 
 ![](../assets/en/FormEditor/moveObject2.png)
 
-> La [vista actual](#antes-del-comienzo) se muestra en negrita.
+> A [Visualização atual] (#antes-de-comecar) é mostrada em negrito.
 
 #### Seleccionar todos os objectos de uma vista
 
 You can select all objects belong to the same view in the current page of the form. This function is useful for applying global changes to a set of objects.
 
-Para ello, haga clic derecho en la vista en la que desea seleccionar todos los objetos, haga clic en **Seleccionar todo**:
+Para fazer isso, clique com o botão direito do mouse no modo de exibição em que você deseja selecionar todos os objetos, clique em **Selecionar todos**:
 
 ![](../assets/en/FormEditor/selectAll.png)
 
@@ -727,27 +727,27 @@ Também pode utilizar o botão na parte inferior da paleta de vistas:
 
 You can show or hide objects belonging to a view at any time in the form's current page. Essa função pode ser usada, por exemplo, para focar em determinados objetos ao modificar o formulário.
 
-Por defecto, se muestran todas las vistas, como indica el icono _Mostrar/Ocultar_:
+Por padrão, todas as exibições são mostradas, conforme indicado pelo ícone _Show/Hide_:
 
 ![](../assets/en/FormEditor/showHide.png)
 
-Para ocultar una vista, haga clic en el icono _Mostrar/Ocultar_. Em seguida, é escurecida e os objetos da vista correspondente deixam de ser mostrados no formulário:
+Para ocultar uma exibição, clique no ícone _Mostrar/Ocultar_. Em seguida, é escurecida e os objetos da vista correspondente deixam de ser mostrados no formulário:
 
 ![](../assets/en/FormEditor/hidden.png)
 
-> La [vista actual](#antes-del-comienzo) no se puede ocultar.
+> A [Visualização atual] (#before-you-begin) não pode ser ocultada.
 
-Para mostrar una vista que está oculta, simplemente selecciónela o haga clic en el icono _Mostrar/Ocultar_ de esa vista.
+Para mostrar uma visualização oculta, simplesmente selecione-a ou clique no ícone _Mostrar/Ocultar_ para essa exibição.
 
 #### Bloqueio de objetos de uma vista
 
 É possível bloquear os objectos de uma vista. Isto impede que sejam selecionados, alterados ou eliminados do formulário. Una vez bloqueado, un objeto no puede seleccionarse mediante un clic, un rectángulo o el comando **Seleccionar objetos similares** del menú contextual. Esta função é útil para evitar erros de tratamento.
 
-Por defecto, todas las vistas están desbloqueadas, como lo indica el icono _Bloquear/Desbloquear_ que aparece junto a cada vista:
+Por padrão, todas as visualizações estão desbloqueadas, conforme indicado pelo ícone _Lock/Unlock_ ao lado de cada visualização:
 
 ![](../assets/en/FormEditor/lockUnlock.png)
 
-Para bloquear los objetos de una vista, haga clic en el icono _Bloquear/Desbloquear_. O cadeado está fechado, o que significa que a vista está agora bloqueada:
+Para bloquear os objetos de uma visualização, clique no ícone _Lock/Unlock_ (Bloquear/Desbloquear). O cadeado está fechado, o que significa que a vista está agora bloqueada:
 
 ![](../assets/en/FormEditor/locked.png)
 
