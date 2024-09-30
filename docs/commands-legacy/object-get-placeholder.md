@@ -1,7 +1,7 @@
 ---
 id: object-get-placeholder
 title: OBJECT Get placeholder
-slug: /commands-legacy/object-get-placeholder
+slug: /commands/object-get-placeholder
 displayed_sidebar: docs
 ---
 

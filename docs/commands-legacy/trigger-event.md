@@ -1,7 +1,7 @@
 ---
 id: trigger-event
 title: Trigger event
-slug: /commands-legacy/trigger-event
+slug: /commands/trigger-event
 displayed_sidebar: docs
 ---
 

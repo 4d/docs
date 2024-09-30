@@ -1,7 +1,7 @@
 ---
 id: compile-project
 title: Compile project
-slug: /commands-legacy/compile-project
+slug: /commands/compile-project
 displayed_sidebar: docs
 ---
 

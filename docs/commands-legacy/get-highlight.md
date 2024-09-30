@@ -1,7 +1,7 @@
 ---
 id: get-highlight
 title: GET HIGHLIGHT
-slug: /commands-legacy/get-highlight
+slug: /commands/get-highlight
 displayed_sidebar: docs
 ---
 

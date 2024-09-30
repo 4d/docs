@@ -1,7 +1,7 @@
 ---
 id: qr-report-to-blob
 title: QR REPORT TO BLOB
-slug: /commands-legacy/qr-report-to-blob
+slug: /commands/qr-report-to-blob
 displayed_sidebar: docs
 ---
 

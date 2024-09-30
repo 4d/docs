@@ -1,7 +1,7 @@
 ---
 id: resource-list
 title: RESOURCE LIST
-slug: /commands-legacy/resource-list
+slug: /commands/resource-list
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: object-set-multiline
 title: OBJECT SET MULTILINE
-slug: /commands-legacy/object-set-multiline
+slug: /commands/object-set-multiline
 displayed_sidebar: docs
 ---
 

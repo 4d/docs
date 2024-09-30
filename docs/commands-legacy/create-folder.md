@@ -1,7 +1,7 @@
 ---
 id: create-folder
 title: CREATE FOLDER
-slug: /commands-legacy/create-folder
+slug: /commands/create-folder
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: print-settings
 title: PRINT SETTINGS
-slug: /commands-legacy/print-settings
+slug: /commands/print-settings
 displayed_sidebar: docs
 ---
 

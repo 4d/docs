@@ -1,7 +1,7 @@
 ---
 id: method-set-comments
 title: METHOD SET COMMENTS
-slug: /commands-legacy/method-set-comments
+slug: /commands/method-set-comments
 displayed_sidebar: docs
 ---
 

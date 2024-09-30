@@ -1,7 +1,7 @@
 ---
 id: save-variables
 title: SAVE VARIABLES
-slug: /commands-legacy/save-variables
+slug: /commands/save-variables
 displayed_sidebar: docs
 ---
 

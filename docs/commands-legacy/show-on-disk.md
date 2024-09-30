@@ -1,7 +1,7 @@
 ---
 id: show-on-disk
 title: SHOW ON DISK
-slug: /commands-legacy/show-on-disk
+slug: /commands/show-on-disk
 displayed_sidebar: docs
 ---
 

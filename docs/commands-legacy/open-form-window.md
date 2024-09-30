@@ -1,7 +1,7 @@
 ---
 id: open-form-window
 title: Open form window
-slug: /commands-legacy/open-form-window
+slug: /commands/open-form-window
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: convert-coordinates
 title: CONVERT COORDINATES
-slug: /commands-legacy/convert-coordinates
+slug: /commands/convert-coordinates
 displayed_sidebar: docs
 ---
 

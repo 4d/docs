@@ -1,7 +1,7 @@
 ---
 id: qr-get-area-property
 title: QR Get area property
-slug: /commands-legacy/qr-get-area-property
+slug: /commands/qr-get-area-property
 displayed_sidebar: docs
 ---
 

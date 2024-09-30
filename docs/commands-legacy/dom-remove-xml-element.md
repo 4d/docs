@@ -1,7 +1,7 @@
 ---
 id: dom-remove-xml-element
 title: DOM REMOVE XML ELEMENT
-slug: /commands-legacy/dom-remove-xml-element
+slug: /commands/dom-remove-xml-element
 displayed_sidebar: docs
 ---
 

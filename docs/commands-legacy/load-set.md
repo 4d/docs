@@ -1,7 +1,7 @@
 ---
 id: load-set
 title: LOAD SET
-slug: /commands-legacy/load-set
+slug: /commands/load-set
 displayed_sidebar: docs
 ---
 

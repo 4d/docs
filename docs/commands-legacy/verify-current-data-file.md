@@ -1,7 +1,7 @@
 ---
 id: verify-current-data-file
 title: VERIFY CURRENT DATA FILE
-slug: /commands-legacy/verify-current-data-file
+slug: /commands/verify-current-data-file
 displayed_sidebar: docs
 ---
 

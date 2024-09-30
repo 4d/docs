@@ -1,7 +1,7 @@
 ---
 id: set-application-color-scheme
 title: SET APPLICATION COLOR SCHEME
-slug: /commands-legacy/set-application-color-scheme
+slug: /commands/set-application-color-scheme
 displayed_sidebar: docs
 ---
 

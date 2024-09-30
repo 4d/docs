@@ -1,7 +1,7 @@
 ---
 id: minimize-window
 title: MINIMIZE WINDOW
-slug: /commands-legacy/minimize-window
+slug: /commands/minimize-window
 displayed_sidebar: docs
 ---
 

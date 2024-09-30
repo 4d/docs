@@ -1,7 +1,7 @@
 ---
 id: picture-size
 title: Picture size
-slug: /commands-legacy/picture-size
+slug: /commands/picture-size
 displayed_sidebar: docs
 ---
 

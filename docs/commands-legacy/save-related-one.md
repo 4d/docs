@@ -1,7 +1,7 @@
 ---
 id: save-related-one
 title: SAVE RELATED ONE
-slug: /commands-legacy/save-related-one
+slug: /commands/save-related-one
 displayed_sidebar: docs
 ---
 

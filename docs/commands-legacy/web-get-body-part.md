@@ -1,7 +1,7 @@
 ---
 id: web-get-body-part
 title: WEB GET BODY PART
-slug: /commands-legacy/web-get-body-part
+slug: /commands/web-get-body-part
 displayed_sidebar: docs
 ---
 

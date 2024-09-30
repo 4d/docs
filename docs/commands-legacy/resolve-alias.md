@@ -1,7 +1,7 @@
 ---
 id: resolve-alias
 title: RESOLVE ALIAS
-slug: /commands-legacy/resolve-alias
+slug: /commands/resolve-alias
 displayed_sidebar: docs
 ---
 

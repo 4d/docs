@@ -1,7 +1,7 @@
 ---
 id: qr-get-totals-data
 title: QR GET TOTALS DATA
-slug: /commands-legacy/qr-get-totals-data
+slug: /commands/qr-get-totals-data
 displayed_sidebar: docs
 ---
 

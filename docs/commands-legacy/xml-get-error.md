@@ -1,7 +1,7 @@
 ---
 id: xml-get-error
 title: XML GET ERROR
-slug: /commands-legacy/xml-get-error
+slug: /commands/xml-get-error
 displayed_sidebar: docs
 ---
 

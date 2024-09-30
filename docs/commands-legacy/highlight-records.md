@@ -1,7 +1,7 @@
 ---
 id: highlight-records
 title: HIGHLIGHT RECORDS
-slug: /commands-legacy/highlight-records
+slug: /commands/highlight-records
 displayed_sidebar: docs
 ---
 

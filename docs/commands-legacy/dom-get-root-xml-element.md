@@ -1,7 +1,7 @@
 ---
 id: dom-get-root-xml-element
 title: DOM Get Root XML element
-slug: /commands-legacy/dom-get-root-xml-element
+slug: /commands/dom-get-root-xml-element
 displayed_sidebar: docs
 ---
 

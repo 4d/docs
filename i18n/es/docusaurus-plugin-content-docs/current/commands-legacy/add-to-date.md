@@ -1,0 +1,37 @@
+---
+id: add-to-date
+title: Add to date
+slug: /commands/add-to-date
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.Add to date.Syntax-->**Add to date** ( *fecha* ; *años* ; *meses* ; *días* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Add to date.Params-->
+| Parámetro | Tipo |  | Descripción |
+| --- | --- | --- | --- |
+| fecha | Fecha | &#x1F852; | Fecha a la cual añadir días, meses y años |
+| años | Entero largo | &#x1F852; | Número de años a añadir a la fecha |
+| meses | Entero largo | &#x1F852; | Número de meses a añadir a la fecha |
+| días | Entero largo | &#x1F852; | Número de días a añadir a la fecha |
+| Resultado | Fecha | &#x1F850; | Fecha resultante |
+
+<!-- END REF-->
+
+#### Descripción 
+
+<!--REF #_command_.Add to date.Summary-->El comando Add to date añade *años*, *meses,* y *días* a la fecha pasada en *fecha*, luego devuelve la fecha resultante.<!-- END REF-->
+
+Aunque usted puede utilizar los *Operadores de fechas* para añadir días a una fecha, Add to date le permite rápidamente añadir meses y años sin tener que lidiar con el número de días al mes o años bisiestos (como lo haría cuando utiliza el operador + en fechas).
+
+#### Ejemplo 
+
+```4d
+  // Esta línea calcula la fecha dentro de un año, el mismo día
+ $vdInUnaño:=Add to date(Current date;1;0;0)
+ 
+  // Esta línea calcula la fecha el próximo mes, el mismo día
+ $vdProximoMes:=Add to date(Current date;0;1;0)
+ 
+  // Esta línea hace lo mismo que $vdMañana:=Current date+1
+ $vdMañana:=Add to date(Current date;0;0;1)
+```

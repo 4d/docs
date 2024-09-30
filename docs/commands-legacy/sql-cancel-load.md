@@ -1,7 +1,7 @@
 ---
 id: sql-cancel-load
 title: SQL CANCEL LOAD
-slug: /commands-legacy/sql-cancel-load
+slug: /commands/sql-cancel-load
 displayed_sidebar: docs
 ---
 

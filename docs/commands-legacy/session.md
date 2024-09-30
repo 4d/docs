@@ -1,7 +1,7 @@
 ---
 id: session
 title: Session
-slug: /commands-legacy/session
+slug: /commands/session
 displayed_sidebar: docs
 ---
 

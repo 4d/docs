@@ -1,7 +1,7 @@
 ---
 id: close-resource-file
 title: CLOSE RESOURCE FILE
-slug: /commands-legacy/close-resource-file
+slug: /commands/close-resource-file
 displayed_sidebar: docs
 ---
 

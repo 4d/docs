@@ -1,7 +1,7 @@
 ---
 id: object-set-shortcut
 title: OBJECT SET SHORTCUT
-slug: /commands-legacy/object-set-shortcut
+slug: /commands/object-set-shortcut
 displayed_sidebar: docs
 ---
 

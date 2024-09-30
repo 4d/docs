@@ -1,7 +1,7 @@
 ---
 id: create-entity-selection
 title: Create entity selection
-slug: /commands-legacy/create-entity-selection
+slug: /commands/create-entity-selection
 displayed_sidebar: docs
 ---
 

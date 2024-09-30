@@ -1,7 +1,7 @@
 ---
 id: month-of
 title: Month of
-slug: /commands-legacy/month-of
+slug: /commands/month-of
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: wa-zoom-in
 title: WA ZOOM IN
-slug: /commands-legacy/wa-zoom-in
+slug: /commands/wa-zoom-in
 displayed_sidebar: docs
 ---
 

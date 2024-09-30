@@ -1,7 +1,7 @@
 ---
 id: menu-selected
 title: Menu selected
-slug: /commands-legacy/menu-selected
+slug: /commands/menu-selected
 displayed_sidebar: docs
 ---
 

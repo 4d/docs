@@ -1,7 +1,7 @@
 ---
 id: sql-get-option
 title: SQL GET OPTION
-slug: /commands-legacy/sql-get-option
+slug: /commands/sql-get-option
 displayed_sidebar: docs
 ---
 

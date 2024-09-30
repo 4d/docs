@@ -1,7 +1,7 @@
 ---
 id: object-set-coordinates
 title: OBJECT SET COORDINATES
-slug: /commands-legacy/object-set-coordinates
+slug: /commands/object-set-coordinates
 displayed_sidebar: docs
 ---
 

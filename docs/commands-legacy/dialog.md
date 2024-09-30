@@ -1,7 +1,7 @@
 ---
 id: dialog
 title: DIALOG
-slug: /commands-legacy/dialog
+slug: /commands/dialog
 displayed_sidebar: docs
 ---
 

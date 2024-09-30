@@ -1,7 +1,7 @@
 ---
 id: listbox-set-headers-height
 title: LISTBOX SET HEADERS HEIGHT
-slug: /commands-legacy/listbox-set-headers-height
+slug: /commands/listbox-set-headers-height
 displayed_sidebar: docs
 ---
 

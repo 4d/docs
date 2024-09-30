@@ -1,7 +1,7 @@
 ---
 id: string
 title: String
-slug: /commands-legacy/string
+slug: /commands/string
 displayed_sidebar: docs
 ---
 

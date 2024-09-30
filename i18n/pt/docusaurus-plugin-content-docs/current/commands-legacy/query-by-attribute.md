@@ -1,0 +1,318 @@
+---
+id: query-by-attribute
+title: QUERY BY ATTRIBUTE
+slug: /commands/query-by-attribute
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.QUERY BY ATTRIBUTE.Syntax-->**QUERY BY ATTRIBUTE** ( {*umaTabela*}{;}{*opConj* ;} *campoObjeto* ; *caminhoAtributo* ; *opPesq* ; *valor* {; *} )<!-- END REF-->
+<!--REF #_command_.QUERY BY ATTRIBUTE.Params-->
+| Parâmetro | Tipo |  | Descrição |
+| --- | --- | --- | --- |
+| umaTabela | Tabela | &#x1F852; | Tabela para a qual retornar uma seleção de registros, ou tabela padrão se for omitido |
+| opConj | Operador | &#x1F852; | Operador de Conjunção para juntar múltiplas pesquisas |
+| campoObjeto | Campo | &#x1F852; | Campo Objeto para atributos de pesquisa |
+| caminhoAtributo | String | &#x1F852; | Nome ou caminho do atributo |
+| opPesq | String, Operador | &#x1F852; | Operador pesquisa (comparador) |
+| valor | Texto, Número, Data, Hora | &#x1F852; | Valor a comparar |
+| * | Operador | &#x1F852; | Continua a flag de pesquisa |
+
+<!-- END REF-->
+
+#### Descrição 
+
+<!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->**QUERY BY ATTRIBUTE** localiza os registros que correspondam com a string de consulta definida utilizando os parâmetros *campoObjeto*, *caminhoAtributo*, *opPesq* e *valor* e retorna uma seleção de registros para a *tabela*.<!-- END REF-->  
+
+  
+**QUERY BY ATTRIBUTE** altera a seleção atual de *tabela* para o processo atual e faz o primeiro registro da nova seleção do registro atual. Se o parâmetro *tabela* for omitido, o comando aplica-se a tabela como padrão. Se você não tiver definido qualquer tabela padrão, ocorre um erro.
+
+O parâmetro opcional *opConj* é usado para combinar várias chamadas a **QUERY BY ATTRIBUTE** no caso de várias pesquisas. Os operadores de conjunção disponíveis são o mesmo que o comando [QUERY](query.md):  
+  
+  
+| **Conjunção** | **Símbolo a utilizar com QUERY BY ATTRIBUTE** |
+| ------------- | --------------------------------------------- |
+| AND           | &                                             |
+| OR            | \|                                            |
+| Except        | #                                             |
+
+O parâmetro *opConj* não é usado para a primeira chamada para **QUERY BY ATTRIBUTE** de uma consulta múltipla, ou se a pesquisa for uma busca simples. Se você omitir esse parâmetro dentro de uma pesquisa múltipla, o operador AND (&) é usado como padrão.
+
+Em *campoObjeto*, passe o campo objeto cujos atributos que você deseja pesquisar. Se pertence a uma tabela Um relacionada à *tabela* com uma relação automática ou manual, o *campoObjeto* pode pertencer a uma outra tabela.
+
+Em *caminhoAtributo*, passe o nome ou o caminho do atributo cujos valores deseja comparar. Pode passar um único atributo, por exemplo, "age": nesse caso todos os atributos com o nome serão comparados no registro. Você pode também passar um caminho, por exemplo "children.girls.age", neste caso todos os atributos com este nome serão comparados no registro. Pode também passar um caminho, por exemplo "children.girls.age", em cujo caso só os atributos coincidentes serão comparados no registro.
+
+Se um atributo "x" for um array, **QUERY BY ATTRIBUTE** buscará registros que contenham um atributo "x" no qual ao menos um elemento coincida com os critérios. Para buscar em atributos array, é necessário indicar ao comando **QUERY BY ATTRIBUTE** que o atributo "x" é um array adicionando ".\[\]" a seu nome em *caminhoAtributo* (ver exemplo 3). É possível adicionar uma letra entre colchetes (por exemplo "\[b\]") para linkar argumentos (veja o parágrafo abaixo \[#cmd id="1331" anchor="3181657"/\]).
+
+**Notas:** 
+
+* Lembre que os nomes de atributos diferenciam entre maiusculas e minúsculas: pode ter diferentes nomes de atributos "MyAtt" e "myAtt" no mesmo registro.
+* Os nomes de atributos são cortados para eliminar espaços adicionais. Por exemplo, "meu primeiro atributo .meu segundo atributo" se interpreta como "meu primeiro atributo.meu segundo atributo".
+* Não é possível pesquisar atributos cujos nomes contenham caracteres especiais tais como "." ou "\[ \]", já que serão avaliados incorretamente como tokens na pesquisa de string. Para saber mais, veja o parágrafo *identificador notação objeto*.
+
+O parâmetro *opBusq* é o operador de comparação que se aplica entre *campoObjeto* e *valor*. Pode passar um dos símbolos que se mostran aqui:  
+  
+| **Comparação**   | **Símbolo a utilizar com** **QUERY BY ATTRIBUTE** |
+| ---------------- | ------------------------------------------------- |
+| Igual a          | \=                                                |
+| Diferente de     | #                                                 |
+| Menor que        | <                                                 |
+| Maior que        | \>                                                |
+| Menor ou igual a | <=                                                |
+| Maior ou igual a | \>=                                               |
+  
+  
+(\*) Quando usado com elementos array, o operador # significa "não contém qualquer um". **Nota**: Você pode especificar o operador de comparação como uma expressão de texto em vez de um símbolo. Consulte a descrição do comando [QUERY](query.md) para mais informações.  
+
+  
+*valor* é o dado contra o qual irá comparar *caminhoAtributo*. O valor pode ser qualquer expressão do mesmo tipo que *caminhoAtributo*. O valor é avaliado uma vez, no início da busca. O valor não é avaliado para cada registro. Para procurar uma string dentro de uma string (uma procura "contém"), use o sinal de arroba (@) em *valor* para isolar a string a pesquisar, como mostrado neste exemplo: "@ Smith @". Note-se que, neste caso, a busca apenas parcialmente se benefícia do índice (compacidade de armazenamento de dados).  
+
+Esta é a estrutura de uma consulta por atributos:
+
+```4d
+ QUERY BY ATTRIBUTE([Table] ;[Table]ObjectField ;"attribute1.attribute2";=;value)
+```
+
+**NOta:** um critério implícito para todos os operadores (exceto #) é que o campo Objeto contenha um atributo. Entretanto, para o operador #, ele pode ser indefinido (ver abaixo). 
+
+##### Usar o operator # 
+
+Ao consultar por atributo utilizando o operador **#**, deve se lembrar dos casos em que um atributo pode não estar presente em um registro. Por exemplo, considere a afirmação abaixo:
+
+```4d
+ QUERY BY ATTRIBUTE([People];[People]Animals;"dog.name";#;"Rex")
+```
+
+Esta pesquisa devolverá os registros de pessoas que tenham um cachorro cujo nome não é "Rex", assim como também os registros de pessoas que não tenham cachorro, ou que tenham cachorro sem nome, ou seja, registros para os quais o valor da propriedade "dog.name" seja **null**. O conceito subjacente é: se o motor de consulta não conhce os dados para compará-los com os critérios de pesquisa, não pode decidir se coincidem ou não. Portanto, o registro se exclui da consulta.
+
+Para usar um exemplo mais genérico:
+
+```4d
+ QUERY BY ATTRIBUTE([Table];[Table]ObjectField;"attribute1.attribute2";#;value)
+```
+
+Esta pesquisa devolverá todos os registros para os que *\[Table\]ObjectField* contém um objeto que contenha um atributo attribute1, que é em si um objeto que contém um atributo attribute2 cujo valor não seja o valor. NAO vá devolver os registros onde:
+
+* o campo objeto não contém *attribute1*
+* o campo objeto não contém **attribute1.attribute*2
+* o campo objeto contém **attribute1.attribute*2=null
+
+Este principio também aplica aos atributos array. Por exemplo, a pesquisa devolverá os registros das pessoas que tenham um ou vários endereços, mas nenhum em Paris.
+
+```4d
+ QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[].city";#;"paris")
+```
+
+**Nota:** Para obter específicamente os registros onde o atributo não está definido, pode utilizar um objeto vazio (ver exemplo 2). Note entretanto que a pesquisa de valores NULL em elementos array não é compatível.
+
+##### Construir múltiplas pesquisas 
+
+Aqui estão as regras a serem seguidas para a construção de várias pesquisas por atributo:  
+
+* A primeira linha não deve conter uma conjunção.
+* Cada argumento de consulta sucessivo pode começar com uma conjunção. Se você omiti-lo, o operador AND (&) é usado por padrão.
+* Todas as linhas, exceto a última, deve usar o parâmetro *\**.
+* **QUERY BY ATTRIBUTE** pode ser combinado com os comandos [QUERY](query.md) (ver exemplo).
+* Para realizar a pesquisar, não especifique o parâmetro \* no último comando **QUERY BY ATTRIBUTE**. Alternativamente, você pode executar o comando [QUERY](query.md) sem parâmetros diferentes à da tabela.
+
+**Nota:** Cada tabela mantém sua própria construção de pesquisa atual. Isto significa que você pode criar várias consultas simultaneamente, um para cada tabela.
+
+Não importa a forma em que a pesquisa foi definida:  
+
+* Se a operação de busca vai levar algum tempo para ser executada, 4D mostra automaticamente uma mensagem contendo um termômetro de progresso. Estas mensagens podem ser ligados e desligadas usando os comandos [MESSAGES ON](messages-on.md) y [MESSAGES OFF](messages-off.md). Se um termômetro de progresso for exibido, o usuário pode clicar no botão Parar para parar a pesquisa. Se a consulta for concluída, OK é definido como 1\. Caso contrário, se a consulta for interrompida, OK é definido como 0 (zero).
+* Se nenhum campo objeto indexado não for indicado, a pesquisa é otimizada sempre que for possível (campos indexados são procurados primeiro), resultando em uma busca que leva o mínimo de tempo possível.
+
+##### Valores de Datas nos objetos 
+
+As datas são armazenadas nos objectos com base nos parâmetros do banco de dados e; por padrão, se considera o fuso horário (veja selector JSON use local time no comando [SET DATABASE PARAMETER](set-database-parameter.md)). 
+
+!1973-05-22!"></span></span><span id="result\_box" lang="pt"><span title="\[#codeJS\]!1973-05-22!">\[#codeJS\]!1973-05-22! -> "1973-05-21T23:00:00.000Z"  
+  
+Essa configuração também é considerada durante a busca, assim você não precisa se preocupar com isso, se você usar sempre a sua base no mesmo lugar e se os parâmetros são os mesmos em todos os computadores que acessam os dados. Neste caso, a seguinte busca retorna corretamente os registros cujo atributo é Birthday igual a !1973-05-22! (Salvo como"1973-05-21T23:00:00.00Z"):
+
+```4d
+ QUERY BY ATTRIBUTE([Persons];[Persons]OB_Info;"Birthday";=;!1973-05-22!)
+```
+
+Se você não quiser usar o parâmetro GMT, você pode modificar esses parâmetros com a seguinte declaração:
+
+  
+```4d
+ SET DATABASE PARAMETER(JSON use local time;0)
+```
+
+Lembnre que o escopo deste parâmetro é limitado ao process.. Se você executar este comando, 01 de outubro de 1965 se armazenará como "1965-10-01T00: 00: 00.000Z", mas você deve definir o mesmo parâmetro antes de iniciar suas pesquisas:
+
+```4d
+ SET DATABASE PARAMETER(JSON use local time;0)
+ QUERY BY ATTRIBUTE([Persons];[Persons]OB_Info;"Birthday";=;!1976-11-27!)
+```
+
+##### Usar a propriedade de comprimento virtual 
+
+Pode usar a propriedade virtual "comprimento" com este comando. Esta propriedade está disponível automaticamente para qualquer atributo do tipo array e retorna o tamanho do array, ou seja, o número de elementos que o array contém. Pode ser usado no contexto de execução do comando **QUERY BY ATTRIBUTE** (veja exemplo 4).
+
+##### Atributo Linking array com múltiplos argumentos pesquisa 
+
+```undefined
+{
+    "name":"martin",
+    "locations" : [ {
+                "kind":"home",
+                "city":"paris" 
+            } ]
+} , {
+    "name":"smith",
+    "locations" : [ {
+                "kind":"home",
+                "city":"lyon" 
+            } , {
+                "kind":"office",
+                "city":"paris" 
+            } ]
+}
+```
+
+#### Exemplo 1 
+
+Neste exemplo, o atributo de "age" (idade) é uma string ou um inteiro e queremos encontrar pessoas cujas idades estão entre 20 e 29. As primeiras duas linhas procuram o atributo como um número inteiro (> = 20 e <30) e as última consultam o campo como uma string (começando com "2", mas é diferente de "2".)
+
+```4d
+ QUERY BY ATTRIBUTE([Persons];[Persons]OB_Info;"age";>=;20;*)
+ QUERY BY ATTRIBUTE([Persons];&;[Persons]OB_Info;"age";<;30;*)
+ QUERY BY ATTRIBUTE([Persons];|;[Persons]OB_Info;"age";=;"2@";*)
+ QUERY BY ATTRIBUTE([Persons];&;[Persons]OB_Info;"age";#;"2") //sem * para lançar a execução
+```
+
+#### Exemplo 2 
+
+O comando **QUERY BY ATTRIBUTE** pode ser usado para encontrar registros nos quais alguns atributos são definidos (ou não). Para isso, deve usar um objeto vazio.
+
+```4d
+  //Pesquisar os registros onde o correio eletrônico é definida no campo objeto
+ var $undefined : Object
+ QUERY BY ATTRIBUTE([Persons];[Persons]Info;"email";#;$undefined)
+```
+
+```4d
+  //Pesquisar os registros onde o CEP- código postal não está definido no campo objeto
+ var $undefined : Object
+ QUERY BY ATTRIBUTE([Persons];[Persons]Info;"zip code";=;$undefined)
+```
+
+**Nota:** Essa sintaxe específica não é ocmpatível com atributos do tipo array. Pesquisar por valores NULL em elementos array dá resultados inválidos.
+
+#### Exemplo 3 
+
+```undefined
+{
+    "name":"martin",
+    "locations" : [ {
+                "kind":"office",
+                "city":"paris" 
+            } ]
+} , {
+    "name":"smith",
+    "locations" : [ {
+                "kind":"home",
+                "city":"lyon" 
+            } , {
+                "kind":"office",
+                "city":"paris" 
+            } ]
+}
+```
+
+#### Exemplo 4 
+
+ Este exemplo ilustra o uso da propriedade virtual "comprimento". Seu banco de dados tem um campo de objeto \[Customer\]full\_Data com os dados abaixo:
+
+![](../assets/en/commands/pict2994114.en.png)
+
+Se quiser obter os registros para qualquer cliente que tenha duas ou mais crianças, pode escrever:
+
+```4d
+ QUERY BY ATTRIBUTE([Customer];[Customer]full_Data;"Children.length";>=;2)
+```
+
+#### Exemplo 5 
+
+```undefined
+[ {
+    "Name": "Sam",
+    "Children": [ {
+        "Name": "Harry",
+        "Age": "15",
+        "Toy": [ {
+            "Name": "Car",
+            "Color": "Blue" 
+         }, {
+            "Name": "Teddy Bear",
+            "Color": "Brown" 
+        } ]
+      }, {
+        "Name": "Betty",
+        "Age": "9",
+        "Toy": [ {
+            "Name": "Car",
+            "Color": "Green" 
+       }, {
+            "Name": "Puzzle",
+            "Color": "Blue" 
+        } ]
+      } ]
+  }, {
+    "Name": "Louis",
+    "Children": [ {
+        "Name": "Harry",
+        "Age": "15",
+        "Toy": [ {
+            "Name": "Water gun",
+            "Color": "Blue" 
+        } ]
+      }, {
+        "Name": "Betty",
+        "Age": "3",
+        "Toy": [ {
+            "Name": "Car",
+            "Color": "Blue" 
+        }, {
+            "Name": "Puzzle",
+            "Color": "Green" 
+        } ]
+      } ]
+  }, {
+    "Name": "Victor",
+    "Children": [ {
+        "Name": "Harry",
+        "Age": "9",
+        "Toy": [ {
+            "Name": "Doll",
+            "Color": "Pink" 
+        }, {
+            "Name": "Puzzle",
+            "Color": "Blue" 
+        } ]
+      }, {
+        "Name": "Betty",
+        "Age": "15",
+        "Toy": [ {
+            "Name": "Water gun",
+            "Color": "Blue" 
+        } ]
+      } ]
+ } ]
+```
+
+#### Variáveis e conjuntos do sistema 
+
+Se a pesquisa é realizada corretamente, a variável sistema OK toma o valor 1.  
+A variável Ok toma o valor 0 se:
+
+* o usuário clicar em **Cancelar** na caixa de diálogo de pesquisa,
+* em modo "pesquisa e bloqueio"! (ver o comando [SET QUERY AND LOCK](set-query-and-lock.md)), a pesquisa encontra, no mínimo, um registro bloqueado. Nese caso, igualmente, o conjunto sistema LockedSet é atualizado.
+
+#### Ver também 
+
+  
+*Estrutura dos objetos de linguagem 4D*  
+[QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)  

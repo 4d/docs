@@ -1,7 +1,7 @@
 ---
 id: dom-get-previous-sibling-xml-element
 title: DOM Get previous sibling XML element
-slug: /commands-legacy/dom-get-previous-sibling-xml-element
+slug: /commands/dom-get-previous-sibling-xml-element
 displayed_sidebar: docs
 ---
 

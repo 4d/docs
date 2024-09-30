@@ -1,7 +1,7 @@
 ---
 id: listbox-set-array
 title: LISTBOX SET ARRAY
-slug: /commands-legacy/listbox-set-array
+slug: /commands/listbox-set-array
 displayed_sidebar: docs
 ---
 

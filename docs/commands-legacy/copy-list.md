@@ -1,7 +1,7 @@
 ---
 id: copy-list
 title: Copy list
-slug: /commands-legacy/copy-list
+slug: /commands/copy-list
 displayed_sidebar: docs
 ---
 

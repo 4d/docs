@@ -1,7 +1,7 @@
 ---
 id: longint-array-from-selection
 title: LONGINT ARRAY FROM SELECTION
-slug: /commands-legacy/longint-array-from-selection
+slug: /commands/longint-array-from-selection
 displayed_sidebar: docs
 ---
 

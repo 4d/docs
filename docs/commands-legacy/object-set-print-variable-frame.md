@@ -1,7 +1,7 @@
 ---
 id: object-set-print-variable-frame
 title: OBJECT SET PRINT VARIABLE FRAME
-slug: /commands-legacy/object-set-print-variable-frame
+slug: /commands/object-set-print-variable-frame
 displayed_sidebar: docs
 ---
 

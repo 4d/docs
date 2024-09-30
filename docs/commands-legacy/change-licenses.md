@@ -1,7 +1,7 @@
 ---
 id: change-licenses
 title: CHANGE LICENSES
-slug: /commands-legacy/change-licenses
+slug: /commands/change-licenses
 displayed_sidebar: docs
 ---
 

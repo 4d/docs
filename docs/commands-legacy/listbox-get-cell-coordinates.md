@@ -1,7 +1,7 @@
 ---
 id: listbox-get-cell-coordinates
 title: LISTBOX GET CELL COORDINATES
-slug: /commands-legacy/listbox-get-cell-coordinates
+slug: /commands/listbox-get-cell-coordinates
 displayed_sidebar: docs
 ---
 

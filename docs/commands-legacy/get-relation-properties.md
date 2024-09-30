@@ -1,7 +1,7 @@
 ---
 id: get-relation-properties
 title: GET RELATION PROPERTIES
-slug: /commands-legacy/get-relation-properties
+slug: /commands/get-relation-properties
 displayed_sidebar: docs
 ---
 

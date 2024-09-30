@@ -1,7 +1,7 @@
 ---
 id: object-get-coordinates
 title: OBJECT GET COORDINATES
-slug: /commands-legacy/object-get-coordinates
+slug: /commands/object-get-coordinates
 displayed_sidebar: docs
 ---
 

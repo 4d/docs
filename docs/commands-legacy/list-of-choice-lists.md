@@ -1,7 +1,7 @@
 ---
 id: list-of-choice-lists
 title: LIST OF CHOICE LISTS
-slug: /commands-legacy/list-of-choice-lists
+slug: /commands/list-of-choice-lists
 displayed_sidebar: docs
 ---
 

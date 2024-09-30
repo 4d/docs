@@ -1,7 +1,7 @@
 ---
 id: milliseconds
 title: Milliseconds
-slug: /commands-legacy/milliseconds
+slug: /commands/milliseconds
 displayed_sidebar: docs
 ---
 

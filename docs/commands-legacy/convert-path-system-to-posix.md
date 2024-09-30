@@ -1,7 +1,7 @@
 ---
 id: convert-path-system-to-posix
 title: Convert path system to POSIX
-slug: /commands-legacy/convert-path-system-to-posix
+slug: /commands/convert-path-system-to-posix
 displayed_sidebar: docs
 ---
 

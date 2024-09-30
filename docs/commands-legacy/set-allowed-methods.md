@@ -1,7 +1,7 @@
 ---
 id: set-allowed-methods
 title: SET ALLOWED METHODS
-slug: /commands-legacy/set-allowed-methods
+slug: /commands/set-allowed-methods
 displayed_sidebar: docs
 ---
 

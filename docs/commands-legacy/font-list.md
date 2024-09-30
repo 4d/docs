@@ -1,7 +1,7 @@
 ---
 id: font-list
 title: FONT LIST
-slug: /commands-legacy/font-list
+slug: /commands/font-list
 displayed_sidebar: docs
 ---
 

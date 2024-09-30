@@ -1,7 +1,7 @@
 ---
 id: use-set
 title: USE SET
-slug: /commands-legacy/use-set
+slug: /commands/use-set
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: dom-count-xml-attributes
 title: DOM Count XML attributes
-slug: /commands-legacy/dom-count-xml-attributes
+slug: /commands/dom-count-xml-attributes
 displayed_sidebar: docs
 ---
 

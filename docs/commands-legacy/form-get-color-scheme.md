@@ -1,7 +1,7 @@
 ---
 id: form-get-color-scheme
 title: FORM Get color scheme
-slug: /commands-legacy/form-get-color-scheme
+slug: /commands/form-get-color-scheme
 displayed_sidebar: docs
 ---
 

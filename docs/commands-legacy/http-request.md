@@ -1,7 +1,7 @@
 ---
 id: http-request
 title: HTTP Request
-slug: /commands-legacy/http-request
+slug: /commands/http-request
 displayed_sidebar: docs
 ---
 

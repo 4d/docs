@@ -1,7 +1,7 @@
 ---
 id: qr-set-header-and-footer
 title: QR SET HEADER AND FOOTER
-slug: /commands-legacy/qr-set-header-and-footer
+slug: /commands/qr-set-header-and-footer
 displayed_sidebar: docs
 ---
 

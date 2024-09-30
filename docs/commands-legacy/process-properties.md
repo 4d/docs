@@ -1,7 +1,7 @@
 ---
 id: process-properties
 title: PROCESS PROPERTIES
-slug: /commands-legacy/process-properties
+slug: /commands/process-properties
 displayed_sidebar: docs
 ---
 

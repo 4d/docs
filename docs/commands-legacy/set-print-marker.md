@@ -1,7 +1,7 @@
 ---
 id: set-print-marker
 title: SET PRINT MARKER
-slug: /commands-legacy/set-print-marker
+slug: /commands/set-print-marker
 displayed_sidebar: docs
 ---
 

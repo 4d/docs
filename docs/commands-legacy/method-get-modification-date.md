@@ -1,7 +1,7 @@
 ---
 id: method-get-modification-date
 title: METHOD GET MODIFICATION DATE
-slug: /commands-legacy/method-get-modification-date
+slug: /commands/method-get-modification-date
 displayed_sidebar: docs
 ---
 

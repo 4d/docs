@@ -1,7 +1,7 @@
 ---
 id: set-process-variable
 title: SET PROCESS VARIABLE
-slug: /commands-legacy/set-process-variable
+slug: /commands/set-process-variable
 displayed_sidebar: docs
 ---
 

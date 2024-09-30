@@ -1,7 +1,7 @@
 ---
 id: set-current-printer
 title: SET CURRENT PRINTER
-slug: /commands-legacy/set-current-printer
+slug: /commands/set-current-printer
 displayed_sidebar: docs
 ---
 

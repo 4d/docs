@@ -1,7 +1,7 @@
 ---
 id: clear-pasteboard
 title: CLEAR PASTEBOARD
-slug: /commands-legacy/clear-pasteboard
+slug: /commands/clear-pasteboard
 displayed_sidebar: docs
 ---
 

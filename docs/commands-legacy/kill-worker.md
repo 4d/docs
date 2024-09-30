@@ -1,7 +1,7 @@
 ---
 id: kill-worker
 title: KILL WORKER
-slug: /commands-legacy/kill-worker
+slug: /commands/kill-worker
 displayed_sidebar: docs
 ---
 

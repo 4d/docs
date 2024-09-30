@@ -1,7 +1,7 @@
 ---
 id: register-data-key
 title: Register data key
-slug: /commands-legacy/register-data-key
+slug: /commands/register-data-key
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: sql-login
 title: SQL LOGIN
-slug: /commands-legacy/sql-login
+slug: /commands/sql-login
 displayed_sidebar: docs
 ---
 

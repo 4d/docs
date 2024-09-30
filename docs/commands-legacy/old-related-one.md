@@ -1,7 +1,7 @@
 ---
 id: old-related-one
 title: OLD RELATED ONE
-slug: /commands-legacy/old-related-one
+slug: /commands/old-related-one
 displayed_sidebar: docs
 ---
 

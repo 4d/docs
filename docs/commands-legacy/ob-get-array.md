@@ -1,7 +1,7 @@
 ---
 id: ob-get-array
 title: OB GET ARRAY
-slug: /commands-legacy/ob-get-array
+slug: /commands/ob-get-array
 displayed_sidebar: docs
 ---
 

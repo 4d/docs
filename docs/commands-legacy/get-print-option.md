@@ -1,7 +1,7 @@
 ---
 id: get-print-option
 title: GET PRINT OPTION
-slug: /commands-legacy/get-print-option
+slug: /commands/get-print-option
 displayed_sidebar: docs
 ---
 

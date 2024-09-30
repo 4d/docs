@@ -1,7 +1,7 @@
 ---
 id: square-root
 title: Square root
-slug: /commands-legacy/square-root
+slug: /commands/square-root
 displayed_sidebar: docs
 ---
 

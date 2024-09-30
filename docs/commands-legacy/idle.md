@@ -1,7 +1,7 @@
 ---
 id: idle
 title: IDLE
-slug: /commands-legacy/idle
+slug: /commands/idle
 displayed_sidebar: docs
 ---
 

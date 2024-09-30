@@ -1,7 +1,7 @@
 ---
 id: find-in-sorted-array
 title: Find in sorted array
-slug: /commands-legacy/find-in-sorted-array
+slug: /commands/find-in-sorted-array
 displayed_sidebar: docs
 ---
 

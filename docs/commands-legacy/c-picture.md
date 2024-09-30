@@ -1,7 +1,7 @@
 ---
 id: c-picture
 title: C_PICTURE
-slug: /commands-legacy/c-picture
+slug: /commands/c-picture
 displayed_sidebar: docs
 ---
 

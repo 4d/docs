@@ -1,7 +1,7 @@
 ---
 id: generate-password-hash
 title: Generate password hash
-slug: /commands-legacy/generate-password-hash
+slug: /commands/generate-password-hash
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-string-resource
 title: Get string resource
-slug: /commands-legacy/get-string-resource
+slug: /commands/get-string-resource
 displayed_sidebar: docs
 ---
 

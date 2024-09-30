@@ -1,7 +1,7 @@
 ---
 id: object-get-vertical-alignment
 title: OBJECT Get vertical alignment
-slug: /commands-legacy/object-get-vertical-alignment
+slug: /commands/object-get-vertical-alignment
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: font-file
 title: Font file
-slug: /commands-legacy/font-file
+slug: /commands/font-file
 displayed_sidebar: docs
 ---
 

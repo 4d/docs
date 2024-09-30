@@ -1,7 +1,7 @@
 ---
 id: trunc
 title: Trunc
-slug: /commands-legacy/trunc
+slug: /commands/trunc
 displayed_sidebar: docs
 ---
 

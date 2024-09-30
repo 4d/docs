@@ -1,7 +1,7 @@
 ---
 id: get-pointer
 title: Get pointer
-slug: /commands-legacy/get-pointer
+slug: /commands/get-pointer
 displayed_sidebar: docs
 ---
 

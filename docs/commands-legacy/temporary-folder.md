@@ -1,7 +1,7 @@
 ---
 id: temporary-folder
 title: Temporary folder
-slug: /commands-legacy/temporary-folder
+slug: /commands/temporary-folder
 displayed_sidebar: docs
 ---
 

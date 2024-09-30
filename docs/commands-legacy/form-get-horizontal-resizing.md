@@ -1,7 +1,7 @@
 ---
 id: form-get-horizontal-resizing
 title: FORM GET HORIZONTAL RESIZING
-slug: /commands-legacy/form-get-horizontal-resizing
+slug: /commands/form-get-horizontal-resizing
 displayed_sidebar: docs
 ---
 

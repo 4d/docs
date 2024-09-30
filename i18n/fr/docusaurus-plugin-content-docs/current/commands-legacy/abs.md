@@ -1,0 +1,27 @@
+---
+id: abs
+title: Abs
+slug: /commands/abs
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.Abs.Syntax-->**Abs** ( *nombre* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Abs.Params-->
+| Paramètre | Type |  | Description |
+| --- | --- | --- | --- |
+| nombre | Réel | &#x1F852; | Nombre dont vous voulez obtenir la valeur absolue |
+| Résultat | Réel | &#x1F850; | Valeur absolue de nombre |
+
+<!-- END REF-->
+
+#### Description 
+
+<!--REF #_command_.Abs.Summary-->**Abs** retourne la valeur absolue (positive et sans signe) de *nombre*.<!-- END REF--> Si *nombre* est négatif, sa valeur positive est retournée. Si *nombre* est positif, il est retourné inchangé. 
+
+#### Exemple 
+
+L'exemple suivant retourne la valeur absolue de -10,3, qui est 10,3 :
+
+```4d
+ vVector:=Abs(-10,3)
+```

@@ -1,7 +1,7 @@
 ---
 id: stop-monitoring-activity
 title: STOP MONITORING ACTIVITY
-slug: /commands-legacy/stop-monitoring-activity
+slug: /commands/stop-monitoring-activity
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: current-client-authentication
 title: Current client authentication
-slug: /commands-legacy/current-client-authentication
+slug: /commands/current-client-authentication
 displayed_sidebar: docs
 ---
 

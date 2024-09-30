@@ -1,7 +1,7 @@
 ---
 id: blob-to-picture
 title: BLOB TO PICTURE
-slug: /commands-legacy/blob-to-picture
+slug: /commands/blob-to-picture
 displayed_sidebar: docs
 ---
 

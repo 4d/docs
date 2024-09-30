@@ -1,7 +1,7 @@
 ---
 id: dynamic-pop-up-menu
 title: Dynamic pop up menu
-slug: /commands-legacy/dynamic-pop-up-menu
+slug: /commands/dynamic-pop-up-menu
 displayed_sidebar: docs
 ---
 

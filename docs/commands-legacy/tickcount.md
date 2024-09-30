@@ -1,7 +1,7 @@
 ---
 id: tickcount
 title: Tickcount
-slug: /commands-legacy/tickcount
+slug: /commands/tickcount
 displayed_sidebar: docs
 ---
 

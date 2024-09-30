@@ -1,7 +1,7 @@
 ---
 id: log-file-to-json
 title: LOG FILE TO JSON
-slug: /commands-legacy/log-file-to-json
+slug: /commands/log-file-to-json
 displayed_sidebar: docs
 ---
 

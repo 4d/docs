@@ -1,7 +1,7 @@
 ---
 id: cut-named-selection
 title: CUT NAMED SELECTION
-slug: /commands-legacy/cut-named-selection
+slug: /commands/cut-named-selection
 displayed_sidebar: docs
 ---
 

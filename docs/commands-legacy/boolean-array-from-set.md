@@ -1,7 +1,7 @@
 ---
 id: boolean-array-from-set
 title: BOOLEAN ARRAY FROM SET
-slug: /commands-legacy/boolean-array-from-set
+slug: /commands/boolean-array-from-set
 displayed_sidebar: docs
 ---
 

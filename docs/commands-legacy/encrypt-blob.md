@@ -1,7 +1,7 @@
 ---
 id: encrypt-blob
 title: ENCRYPT BLOB
-slug: /commands-legacy/encrypt-blob
+slug: /commands/encrypt-blob
 displayed_sidebar: docs
 ---
 

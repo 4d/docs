@@ -1,7 +1,7 @@
 ---
 id: wa-get-url-filters
 title: WA GET URL FILTERS
-slug: /commands-legacy/wa-get-url-filters
+slug: /commands/wa-get-url-filters
 displayed_sidebar: docs
 ---
 

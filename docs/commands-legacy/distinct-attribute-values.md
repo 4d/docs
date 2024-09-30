@@ -1,7 +1,7 @@
 ---
 id: distinct-attribute-values
 title: DISTINCT ATTRIBUTE VALUES
-slug: /commands-legacy/distinct-attribute-values
+slug: /commands/distinct-attribute-values
 displayed_sidebar: docs
 ---
 

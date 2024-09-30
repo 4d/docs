@@ -1,7 +1,7 @@
 ---
 id: query-by-sql
 title: QUERY BY SQL
-slug: /commands-legacy/query-by-sql
+slug: /commands/query-by-sql
 displayed_sidebar: docs
 ---
 

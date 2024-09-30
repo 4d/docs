@@ -1,7 +1,7 @@
 ---
 id: wa-zoom-out
 title: WA ZOOM OUT
-slug: /commands-legacy/wa-zoom-out
+slug: /commands/wa-zoom-out
 displayed_sidebar: docs
 ---
 

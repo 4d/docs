@@ -1,7 +1,7 @@
 ---
 id: web-get-server-info
 title: WEB Get server info
-slug: /commands-legacy/web-get-server-info
+slug: /commands/web-get-server-info
 displayed_sidebar: docs
 ---
 

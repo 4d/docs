@@ -1,7 +1,7 @@
 ---
 id: get-system-format
 title: GET SYSTEM FORMAT
-slug: /commands-legacy/get-system-format
+slug: /commands/get-system-format
 displayed_sidebar: docs
 ---
 

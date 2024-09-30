@@ -1,7 +1,7 @@
 ---
 id: listbox-insert-column
 title: LISTBOX INSERT COLUMN
-slug: /commands-legacy/listbox-insert-column
+slug: /commands/listbox-insert-column
 displayed_sidebar: docs
 ---
 

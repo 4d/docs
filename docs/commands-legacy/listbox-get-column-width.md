@@ -1,7 +1,7 @@
 ---
 id: listbox-get-column-width
 title: LISTBOX Get column width
-slug: /commands-legacy/listbox-get-column-width
+slug: /commands/listbox-get-column-width
 displayed_sidebar: docs
 ---
 

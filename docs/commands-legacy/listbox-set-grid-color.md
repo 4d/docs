@@ -1,7 +1,7 @@
 ---
 id: listbox-set-grid-color
 title: LISTBOX SET GRID COLOR
-slug: /commands-legacy/listbox-set-grid-color
+slug: /commands/listbox-set-grid-color
 displayed_sidebar: docs
 ---
 

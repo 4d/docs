@@ -1,7 +1,7 @@
 ---
 id: show-tool-bar
 title: SHOW TOOL BAR
-slug: /commands-legacy/show-tool-bar
+slug: /commands/show-tool-bar
 displayed_sidebar: docs
 ---
 

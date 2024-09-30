@@ -1,7 +1,7 @@
 ---
 id: enable-menu-item
 title: ENABLE MENU ITEM
-slug: /commands-legacy/enable-menu-item
+slug: /commands/enable-menu-item
 displayed_sidebar: docs
 ---
 

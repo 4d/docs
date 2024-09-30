@@ -1,7 +1,7 @@
 ---
 id: sax-get-xml-entity
 title: SAX GET XML ENTITY
-slug: /commands-legacy/sax-get-xml-entity
+slug: /commands/sax-get-xml-entity
 displayed_sidebar: docs
 ---
 

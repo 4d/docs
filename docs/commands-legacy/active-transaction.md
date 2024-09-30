@@ -1,7 +1,7 @@
 ---
 id: active-transaction
 title: Active transaction
-slug: /commands-legacy/active-transaction
+slug: /commands/active-transaction
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: random
 title: Random
-slug: /commands-legacy/random
+slug: /commands/random
 displayed_sidebar: docs
 ---
 

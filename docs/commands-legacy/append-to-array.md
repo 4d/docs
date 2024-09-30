@@ -1,7 +1,7 @@
 ---
 id: append-to-array
 title: APPEND TO ARRAY
-slug: /commands-legacy/append-to-array
+slug: /commands/append-to-array
 displayed_sidebar: docs
 ---
 

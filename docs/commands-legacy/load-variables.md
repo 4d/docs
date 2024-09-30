@@ -1,7 +1,7 @@
 ---
 id: load-variables
 title: LOAD VARIABLES
-slug: /commands-legacy/load-variables
+slug: /commands/load-variables
 displayed_sidebar: docs
 ---
 

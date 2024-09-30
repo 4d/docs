@@ -1,7 +1,7 @@
 ---
 id: set-document-properties
 title: SET DOCUMENT PROPERTIES
-slug: /commands-legacy/set-document-properties
+slug: /commands/set-document-properties
 displayed_sidebar: docs
 ---
 

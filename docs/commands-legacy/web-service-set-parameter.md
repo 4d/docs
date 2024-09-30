@@ -1,7 +1,7 @@
 ---
 id: web-service-set-parameter
 title: WEB SERVICE SET PARAMETER
-slug: /commands-legacy/web-service-set-parameter
+slug: /commands/web-service-set-parameter
 displayed_sidebar: docs
 ---
 

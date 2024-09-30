@@ -1,7 +1,7 @@
 ---
 id: tool-bar-height
 title: Tool bar height
-slug: /commands-legacy/tool-bar-height
+slug: /commands/tool-bar-height
 displayed_sidebar: docs
 ---
 

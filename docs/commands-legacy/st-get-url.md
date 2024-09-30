@@ -1,7 +1,7 @@
 ---
 id: st-get-url
 title: ST GET URL
-slug: /commands-legacy/st-get-url
+slug: /commands/st-get-url
 displayed_sidebar: docs
 ---
 

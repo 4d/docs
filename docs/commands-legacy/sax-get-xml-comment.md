@@ -1,7 +1,7 @@
 ---
 id: sax-get-xml-comment
 title: SAX GET XML COMMENT
-slug: /commands-legacy/sax-get-xml-comment
+slug: /commands/sax-get-xml-comment
 displayed_sidebar: docs
 ---
 

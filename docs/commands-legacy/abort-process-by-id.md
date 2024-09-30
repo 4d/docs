@@ -1,7 +1,7 @@
 ---
 id: abort-process-by-id
 title: ABORT PROCESS BY ID
-slug: /commands-legacy/abort-process-by-id
+slug: /commands/abort-process-by-id
 displayed_sidebar: docs
 ---
 

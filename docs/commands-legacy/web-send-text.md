@@ -1,7 +1,7 @@
 ---
 id: web-send-text
 title: WEB SEND TEXT
-slug: /commands-legacy/web-send-text
+slug: /commands/web-send-text
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: describe-query-execution
 title: DESCRIBE QUERY EXECUTION
-slug: /commands-legacy/describe-query-execution
+slug: /commands/describe-query-execution
 displayed_sidebar: docs
 ---
 

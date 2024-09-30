@@ -1,7 +1,7 @@
 ---
 id: is-license-available
 title: Is license available
-slug: /commands-legacy/is-license-available
+slug: /commands/is-license-available
 displayed_sidebar: docs
 ---
 

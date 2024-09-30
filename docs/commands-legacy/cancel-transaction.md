@@ -1,7 +1,7 @@
 ---
 id: cancel-transaction
 title: CANCEL TRANSACTION
-slug: /commands-legacy/cancel-transaction
+slug: /commands/cancel-transaction
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: set-query-destination
 title: SET QUERY DESTINATION
-slug: /commands-legacy/set-query-destination
+slug: /commands/set-query-destination
 displayed_sidebar: docs
 ---
 

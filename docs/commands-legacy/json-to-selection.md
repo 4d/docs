@@ -1,7 +1,7 @@
 ---
 id: json-to-selection
 title: JSON TO SELECTION
-slug: /commands-legacy/json-to-selection
+slug: /commands/json-to-selection
 displayed_sidebar: docs
 ---
 

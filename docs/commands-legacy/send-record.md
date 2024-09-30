@@ -1,7 +1,7 @@
 ---
 id: send-record
 title: SEND RECORD
-slug: /commands-legacy/send-record
+slug: /commands/send-record
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: qr-set-totals-data
 title: QR SET TOTALS DATA
-slug: /commands-legacy/qr-set-totals-data
+slug: /commands/qr-set-totals-data
 displayed_sidebar: docs
 ---
 

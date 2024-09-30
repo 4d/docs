@@ -1,7 +1,7 @@
 ---
 id: pop-up-menu
 title: Pop up menu
-slug: /commands-legacy/pop-up-menu
+slug: /commands/pop-up-menu
 displayed_sidebar: docs
 ---
 

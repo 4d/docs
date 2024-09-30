@@ -1,7 +1,7 @@
 ---
 id: get-group-access
 title: Get group access
-slug: /commands-legacy/get-group-access
+slug: /commands/get-group-access
 displayed_sidebar: docs
 ---
 

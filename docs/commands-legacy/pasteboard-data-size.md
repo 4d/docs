@@ -1,7 +1,7 @@
 ---
 id: pasteboard-data-size
 title: Pasteboard data size
-slug: /commands-legacy/pasteboard-data-size
+slug: /commands/pasteboard-data-size
 displayed_sidebar: docs
 ---
 

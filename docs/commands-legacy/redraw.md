@@ -1,7 +1,7 @@
 ---
 id: redraw
 title: REDRAW
-slug: /commands-legacy/redraw
+slug: /commands/redraw
 displayed_sidebar: docs
 ---
 

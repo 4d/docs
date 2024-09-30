@@ -1,7 +1,7 @@
 ---
 id: sax-add-xml-comment
 title: SAX ADD XML COMMENT
-slug: /commands-legacy/sax-add-xml-comment
+slug: /commands/sax-add-xml-comment
 displayed_sidebar: docs
 ---
 

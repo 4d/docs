@@ -1,7 +1,7 @@
 ---
 id: create-document
 title: Create document
-slug: /commands-legacy/create-document
+slug: /commands/create-document
 displayed_sidebar: docs
 ---
 

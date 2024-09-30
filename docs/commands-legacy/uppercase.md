@@ -1,7 +1,7 @@
 ---
 id: uppercase
 title: Uppercase
-slug: /commands-legacy/uppercase
+slug: /commands/uppercase
 displayed_sidebar: docs
 ---
 

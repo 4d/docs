@@ -1,7 +1,7 @@
 ---
 id: listbox-get-property
 title: LISTBOX Get property
-slug: /commands-legacy/listbox-get-property
+slug: /commands/listbox-get-property
 displayed_sidebar: docs
 ---
 

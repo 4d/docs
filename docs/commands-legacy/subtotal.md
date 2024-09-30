@@ -1,7 +1,7 @@
 ---
 id: subtotal
 title: Subtotal
-slug: /commands-legacy/subtotal
+slug: /commands/subtotal
 displayed_sidebar: docs
 ---
 

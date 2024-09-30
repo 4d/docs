@@ -1,7 +1,7 @@
 ---
 id: qr-get-drop-column
 title: QR Get drop column
-slug: /commands-legacy/qr-get-drop-column
+slug: /commands/qr-get-drop-column
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: goto-object
 title: GOTO OBJECT
-slug: /commands-legacy/goto-object
+slug: /commands/goto-object
 displayed_sidebar: docs
 ---
 

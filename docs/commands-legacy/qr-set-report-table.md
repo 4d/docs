@@ -1,7 +1,7 @@
 ---
 id: qr-set-report-table
 title: QR SET REPORT TABLE
-slug: /commands-legacy/qr-set-report-table
+slug: /commands/qr-set-report-table
 displayed_sidebar: docs
 ---
 

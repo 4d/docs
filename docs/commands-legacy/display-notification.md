@@ -1,7 +1,7 @@
 ---
 id: display-notification
 title: DISPLAY NOTIFICATION
-slug: /commands-legacy/display-notification
+slug: /commands/display-notification
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: position
 title: Position
-slug: /commands-legacy/position
+slug: /commands/position
 displayed_sidebar: docs
 ---
 

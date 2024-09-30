@@ -1,7 +1,7 @@
 ---
 id: resource-type-list
 title: RESOURCE TYPE LIST
-slug: /commands-legacy/resource-type-list
+slug: /commands/resource-type-list
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: set-group-access
 title: SET GROUP ACCESS
-slug: /commands-legacy/set-group-access
+slug: /commands/set-group-access
 displayed_sidebar: docs
 ---
 

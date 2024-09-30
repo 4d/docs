@@ -1,7 +1,7 @@
 ---
 id: current-date
 title: Current date
-slug: /commands-legacy/current-date
+slug: /commands/current-date
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-picture-formats
 title: GET PICTURE FORMATS
-slug: /commands-legacy/get-picture-formats
+slug: /commands/get-picture-formats
 displayed_sidebar: docs
 ---
 

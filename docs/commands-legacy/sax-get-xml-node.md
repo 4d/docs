@@ -1,7 +1,7 @@
 ---
 id: sax-get-xml-node
 title: SAX Get XML node
-slug: /commands-legacy/sax-get-xml-node
+slug: /commands/sax-get-xml-node
 displayed_sidebar: docs
 ---
 

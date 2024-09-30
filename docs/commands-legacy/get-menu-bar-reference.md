@@ -1,7 +1,7 @@
 ---
 id: get-menu-bar-reference
 title: Get menu bar reference
-slug: /commands-legacy/get-menu-bar-reference
+slug: /commands/get-menu-bar-reference
 displayed_sidebar: docs
 ---
 

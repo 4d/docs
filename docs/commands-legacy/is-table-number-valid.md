@@ -1,7 +1,7 @@
 ---
 id: is-table-number-valid
 title: Is table number valid
-slug: /commands-legacy/is-table-number-valid
+slug: /commands/is-table-number-valid
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: hide-tool-bar
 title: HIDE TOOL BAR
-slug: /commands-legacy/hide-tool-bar
+slug: /commands/hide-tool-bar
 displayed_sidebar: docs
 ---
 

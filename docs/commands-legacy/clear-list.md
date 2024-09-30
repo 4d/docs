@@ -1,7 +1,7 @@
 ---
 id: clear-list
 title: CLEAR LIST
-slug: /commands-legacy/clear-list
+slug: /commands/clear-list
 displayed_sidebar: docs
 ---
 

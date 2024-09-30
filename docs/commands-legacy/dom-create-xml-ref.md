@@ -1,7 +1,7 @@
 ---
 id: dom-create-xml-ref
 title: DOM Create XML Ref
-slug: /commands-legacy/dom-create-xml-ref
+slug: /commands/dom-create-xml-ref
 displayed_sidebar: docs
 ---
 

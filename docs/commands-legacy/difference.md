@@ -1,7 +1,7 @@
 ---
 id: difference
 title: DIFFERENCE
-slug: /commands-legacy/difference
+slug: /commands/difference
 displayed_sidebar: docs
 ---
 

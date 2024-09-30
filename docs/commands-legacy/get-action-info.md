@@ -1,7 +1,7 @@
 ---
 id: get-action-info
 title: Get action info
-slug: /commands-legacy/get-action-info
+slug: /commands/get-action-info
 displayed_sidebar: docs
 ---
 

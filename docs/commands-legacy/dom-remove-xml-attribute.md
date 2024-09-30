@@ -1,7 +1,7 @@
 ---
 id: dom-remove-xml-attribute
 title: DOM REMOVE XML ATTRIBUTE
-slug: /commands-legacy/dom-remove-xml-attribute
+slug: /commands/dom-remove-xml-attribute
 displayed_sidebar: docs
 ---
 

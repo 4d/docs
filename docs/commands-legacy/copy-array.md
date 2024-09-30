@@ -1,7 +1,7 @@
 ---
 id: copy-array
 title: COPY ARRAY
-slug: /commands-legacy/copy-array
+slug: /commands/copy-array
 displayed_sidebar: docs
 ---
 

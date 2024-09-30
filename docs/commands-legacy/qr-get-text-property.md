@@ -1,7 +1,7 @@
 ---
 id: qr-get-text-property
 title: QR Get text property
-slug: /commands-legacy/qr-get-text-property
+slug: /commands/qr-get-text-property
 displayed_sidebar: docs
 ---
 

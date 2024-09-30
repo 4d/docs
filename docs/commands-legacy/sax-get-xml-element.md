@@ -1,7 +1,7 @@
 ---
 id: sax-get-xml-element
 title: SAX GET XML ELEMENT
-slug: /commands-legacy/sax-get-xml-element
+slug: /commands/sax-get-xml-element
 displayed_sidebar: docs
 ---
 

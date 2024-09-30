@@ -1,7 +1,7 @@
 ---
 id: object-get-enabled
 title: OBJECT Get enabled
-slug: /commands-legacy/object-get-enabled
+slug: /commands/object-get-enabled
 displayed_sidebar: docs
 ---
 

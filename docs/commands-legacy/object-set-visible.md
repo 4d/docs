@@ -1,7 +1,7 @@
 ---
 id: object-set-visible
 title: OBJECT SET VISIBLE
-slug: /commands-legacy/object-set-visible
+slug: /commands/object-set-visible
 displayed_sidebar: docs
 ---
 

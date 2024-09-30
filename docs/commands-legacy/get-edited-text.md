@@ -1,7 +1,7 @@
 ---
 id: get-edited-text
 title: Get edited text
-slug: /commands-legacy/get-edited-text
+slug: /commands/get-edited-text
 displayed_sidebar: docs
 ---
 

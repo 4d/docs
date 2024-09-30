@@ -1,7 +1,7 @@
 ---
 id: get-last-query-plan
 title: Get last query plan
-slug: /commands-legacy/get-last-query-plan
+slug: /commands/get-last-query-plan
 displayed_sidebar: docs
 ---
 

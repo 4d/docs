@@ -1,7 +1,7 @@
 ---
 id: object-set-list-by-name
 title: OBJECT SET LIST BY NAME
-slug: /commands-legacy/object-set-list-by-name
+slug: /commands/object-set-list-by-name
 displayed_sidebar: docs
 ---
 

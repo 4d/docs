@@ -1,7 +1,7 @@
 ---
 id: select-document
 title: Select document
-slug: /commands-legacy/select-document
+slug: /commands/select-document
 displayed_sidebar: docs
 ---
 

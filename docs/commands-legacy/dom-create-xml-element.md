@@ -1,7 +1,7 @@
 ---
 id: dom-create-xml-element
 title: DOM Create XML element
-slug: /commands-legacy/dom-create-xml-element
+slug: /commands/dom-create-xml-element
 displayed_sidebar: docs
 ---
 

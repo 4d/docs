@@ -1,7 +1,7 @@
 ---
 id: select-folder
 title: Select folder
-slug: /commands-legacy/select-folder
+slug: /commands/select-folder
 displayed_sidebar: docs
 ---
 

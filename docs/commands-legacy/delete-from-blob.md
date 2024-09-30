@@ -1,7 +1,7 @@
 ---
 id: delete-from-blob
 title: DELETE FROM BLOB
-slug: /commands-legacy/delete-from-blob
+slug: /commands/delete-from-blob
 displayed_sidebar: docs
 ---
 

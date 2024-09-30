@@ -1,7 +1,7 @@
 ---
 id: screen-coordinates
 title: SCREEN COORDINATES
-slug: /commands-legacy/screen-coordinates
+slug: /commands/screen-coordinates
 displayed_sidebar: docs
 ---
 

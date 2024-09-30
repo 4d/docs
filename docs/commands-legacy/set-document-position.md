@@ -1,7 +1,7 @@
 ---
 id: set-document-position
 title: SET DOCUMENT POSITION
-slug: /commands-legacy/set-document-position
+slug: /commands/set-document-position
 displayed_sidebar: docs
 ---
 

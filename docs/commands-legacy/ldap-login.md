@@ -1,7 +1,7 @@
 ---
 id: ldap-login
 title: LDAP LOGIN
-slug: /commands-legacy/ldap-login
+slug: /commands/ldap-login
 displayed_sidebar: docs
 ---
 

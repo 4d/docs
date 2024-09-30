@@ -1,7 +1,7 @@
 ---
 id: get-style-sheet-info
 title: GET STYLE SHEET INFO
-slug: /commands-legacy/get-style-sheet-info
+slug: /commands/get-style-sheet-info
 displayed_sidebar: docs
 ---
 

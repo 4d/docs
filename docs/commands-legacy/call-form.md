@@ -1,7 +1,7 @@
 ---
 id: call-form
 title: CALL FORM
-slug: /commands-legacy/call-form
+slug: /commands/call-form
 displayed_sidebar: docs
 ---
 

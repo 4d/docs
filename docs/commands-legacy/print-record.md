@@ -1,7 +1,7 @@
 ---
 id: print-record
 title: PRINT RECORD
-slug: /commands-legacy/print-record
+slug: /commands/print-record
 displayed_sidebar: docs
 ---
 

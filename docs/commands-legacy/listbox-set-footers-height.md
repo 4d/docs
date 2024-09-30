@@ -1,7 +1,7 @@
 ---
 id: listbox-set-footers-height
 title: LISTBOX SET FOOTERS HEIGHT
-slug: /commands-legacy/listbox-set-footers-height
+slug: /commands/listbox-set-footers-height
 displayed_sidebar: docs
 ---
 

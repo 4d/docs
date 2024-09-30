@@ -1,7 +1,7 @@
 ---
 id: messages-on
 title: MESSAGES ON
-slug: /commands-legacy/messages-on
+slug: /commands/messages-on
 displayed_sidebar: docs
 ---
 

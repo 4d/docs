@@ -1,7 +1,7 @@
 ---
 id: display-selection
 title: DISPLAY SELECTION
-slug: /commands-legacy/display-selection
+slug: /commands/display-selection
 displayed_sidebar: docs
 ---
 

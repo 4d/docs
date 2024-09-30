@@ -1,7 +1,7 @@
 ---
 id: list-to-array
 title: LIST TO ARRAY
-slug: /commands-legacy/list-to-array
+slug: /commands/list-to-array
 displayed_sidebar: docs
 ---
 

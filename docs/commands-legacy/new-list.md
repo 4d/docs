@@ -1,7 +1,7 @@
 ---
 id: new-list
 title: New list
-slug: /commands-legacy/new-list
+slug: /commands/new-list
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: notify-resources-folder-modification
 title: NOTIFY RESOURCES FOLDER MODIFICATION
-slug: /commands-legacy/notify-resources-folder-modification
+slug: /commands/notify-resources-folder-modification
 displayed_sidebar: docs
 ---
 

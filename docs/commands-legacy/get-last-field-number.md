@@ -1,7 +1,7 @@
 ---
 id: get-last-field-number
 title: Get last field number
-slug: /commands-legacy/get-last-field-number
+slug: /commands/get-last-field-number
 displayed_sidebar: docs
 ---
 

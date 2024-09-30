@@ -1,7 +1,7 @@
 ---
 id: get-table-properties
 title: GET TABLE PROPERTIES
-slug: /commands-legacy/get-table-properties
+slug: /commands/get-table-properties
 displayed_sidebar: docs
 ---
 

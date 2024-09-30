@@ -1,7 +1,7 @@
 ---
 id: method-get-comments
 title: METHOD GET COMMENTS
-slug: /commands-legacy/method-get-comments
+slug: /commands/method-get-comments
 displayed_sidebar: docs
 ---
 

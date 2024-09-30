@@ -1,7 +1,7 @@
 ---
 id: create-index
 title: CREATE INDEX
-slug: /commands-legacy/create-index
+slug: /commands/create-index
 displayed_sidebar: docs
 ---
 

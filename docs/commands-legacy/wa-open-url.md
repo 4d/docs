@@ -1,7 +1,7 @@
 ---
 id: wa-open-url
 title: WA OPEN URL
-slug: /commands-legacy/wa-open-url
+slug: /commands/wa-open-url
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: on-drop-database-method
 title: On Drop database method
-slug: /commands-legacy/on-drop-database-method
+slug: /commands/on-drop-database-method
 displayed_sidebar: docs
 ---
 

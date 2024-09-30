@@ -1,7 +1,7 @@
 ---
 id: form-unload
 title: FORM UNLOAD
-slug: /commands-legacy/form-unload
+slug: /commands/form-unload
 displayed_sidebar: docs
 ---
 

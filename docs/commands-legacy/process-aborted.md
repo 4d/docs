@@ -1,7 +1,7 @@
 ---
 id: process-aborted
 title: Process aborted
-slug: /commands-legacy/process-aborted
+slug: /commands/process-aborted
 displayed_sidebar: docs
 ---
 

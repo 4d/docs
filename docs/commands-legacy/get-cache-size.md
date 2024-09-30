@@ -1,7 +1,7 @@
 ---
 id: get-cache-size
 title: Get cache size
-slug: /commands-legacy/get-cache-size
+slug: /commands/get-cache-size
 displayed_sidebar: docs
 ---
 

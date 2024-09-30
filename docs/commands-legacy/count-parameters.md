@@ -1,7 +1,7 @@
 ---
 id: count-parameters
 title: Count parameters
-slug: /commands-legacy/count-parameters
+slug: /commands/count-parameters
 displayed_sidebar: docs
 ---
 

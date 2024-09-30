@@ -1,7 +1,7 @@
 ---
 id: set-database-localization
 title: SET DATABASE LOCALIZATION
-slug: /commands-legacy/set-database-localization
+slug: /commands/set-database-localization
 displayed_sidebar: docs
 ---
 

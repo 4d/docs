@@ -1,7 +1,7 @@
 ---
 id: pop-record
 title: POP RECORD
-slug: /commands-legacy/pop-record
+slug: /commands/pop-record
 displayed_sidebar: docs
 ---
 

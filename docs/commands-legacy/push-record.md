@@ -1,7 +1,7 @@
 ---
 id: push-record
 title: PUSH RECORD
-slug: /commands-legacy/push-record
+slug: /commands/push-record
 displayed_sidebar: docs
 ---
 

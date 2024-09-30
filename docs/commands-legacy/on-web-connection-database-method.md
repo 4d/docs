@@ -1,7 +1,7 @@
 ---
 id: on-web-connection-database-method
 title: On Web Connection database method
-slug: /commands-legacy/on-web-connection-database-method
+slug: /commands/on-web-connection-database-method
 displayed_sidebar: docs
 ---
 

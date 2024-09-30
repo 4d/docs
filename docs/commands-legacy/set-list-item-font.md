@@ -1,7 +1,7 @@
 ---
 id: set-list-item-font
 title: SET LIST ITEM FONT
-slug: /commands-legacy/set-list-item-font
+slug: /commands/set-list-item-font
 displayed_sidebar: docs
 ---
 

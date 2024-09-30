@@ -1,7 +1,7 @@
 ---
 id: sql-load-record
 title: SQL LOAD RECORD
-slug: /commands-legacy/sql-load-record
+slug: /commands/sql-load-record
 displayed_sidebar: docs
 ---
 

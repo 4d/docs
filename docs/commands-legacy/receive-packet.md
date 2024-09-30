@@ -1,7 +1,7 @@
 ---
 id: receive-packet
 title: RECEIVE PACKET
-slug: /commands-legacy/receive-packet
+slug: /commands/receive-packet
 displayed_sidebar: docs
 ---
 

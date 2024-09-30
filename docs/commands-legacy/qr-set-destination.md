@@ -1,7 +1,7 @@
 ---
 id: qr-set-destination
 title: QR SET DESTINATION
-slug: /commands-legacy/qr-set-destination
+slug: /commands/qr-set-destination
 displayed_sidebar: docs
 ---
 

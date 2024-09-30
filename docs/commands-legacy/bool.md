@@ -1,7 +1,7 @@
 ---
 id: bool
 title: Bool
-slug: /commands-legacy/bool
+slug: /commands/bool
 displayed_sidebar: docs
 ---
 

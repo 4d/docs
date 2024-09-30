@@ -1,7 +1,7 @@
 ---
 id: php-set-option
 title: PHP SET OPTION
-slug: /commands-legacy/php-set-option
+slug: /commands/php-set-option
 displayed_sidebar: docs
 ---
 

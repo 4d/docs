@@ -1,7 +1,7 @@
 ---
 id: web-service-authenticate
 title: WEB SERVICE AUTHENTICATE
-slug: /commands-legacy/web-service-authenticate
+slug: /commands/web-service-authenticate
 displayed_sidebar: docs
 ---
 

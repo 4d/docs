@@ -1,7 +1,7 @@
 ---
 id: list-item-position
 title: List item position
-slug: /commands-legacy/list-item-position
+slug: /commands/list-item-position
 displayed_sidebar: docs
 ---
 

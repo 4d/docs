@@ -1,7 +1,7 @@
 ---
 id: get-list-item-parameter
 title: GET LIST ITEM PARAMETER
-slug: /commands-legacy/get-list-item-parameter
+slug: /commands/get-list-item-parameter
 displayed_sidebar: docs
 ---
 

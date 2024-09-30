@@ -1,7 +1,7 @@
 ---
 id: adjust-index-cache-priority
 title: ADJUST INDEX CACHE PRIORITY
-slug: /commands-legacy/adjust-index-cache-priority
+slug: /commands/adjust-index-cache-priority
 displayed_sidebar: docs
 ---
 

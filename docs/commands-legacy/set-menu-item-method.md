@@ -1,7 +1,7 @@
 ---
 id: set-menu-item-method
 title: SET MENU ITEM METHOD
-slug: /commands-legacy/set-menu-item-method
+slug: /commands/set-menu-item-method
 displayed_sidebar: docs
 ---
 

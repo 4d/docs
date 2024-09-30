@@ -1,7 +1,7 @@
 ---
 id: volume-attributes
 title: VOLUME ATTRIBUTES
-slug: /commands-legacy/volume-attributes
+slug: /commands/volume-attributes
 displayed_sidebar: docs
 ---
 

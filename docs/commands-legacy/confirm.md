@@ -1,7 +1,7 @@
 ---
 id: confirm
 title: CONFIRM
-slug: /commands-legacy/confirm
+slug: /commands/confirm
 displayed_sidebar: docs
 ---
 

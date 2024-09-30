@@ -1,7 +1,7 @@
 ---
 id: copy-document
 title: COPY DOCUMENT
-slug: /commands-legacy/copy-document
+slug: /commands/copy-document
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: path-to-object
 title: Path to object
-slug: /commands-legacy/path-to-object
+slug: /commands/path-to-object
 displayed_sidebar: docs
 ---
 

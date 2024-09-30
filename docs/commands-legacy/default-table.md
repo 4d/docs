@@ -1,7 +1,7 @@
 ---
 id: default-table
 title: DEFAULT TABLE
-slug: /commands-legacy/default-table
+slug: /commands/default-table
 displayed_sidebar: docs
 ---
 

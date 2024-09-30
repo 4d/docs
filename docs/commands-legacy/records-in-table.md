@@ -1,7 +1,7 @@
 ---
 id: records-in-table
 title: Records in table
-slug: /commands-legacy/records-in-table
+slug: /commands/records-in-table
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: set-environment-variable
 title: SET ENVIRONMENT VARIABLE
-slug: /commands-legacy/set-environment-variable
+slug: /commands/set-environment-variable
 displayed_sidebar: docs
 ---
 

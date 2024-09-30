@@ -1,7 +1,7 @@
 ---
 id: sql-get-data-source-list
 title: SQL GET DATA SOURCE LIST
-slug: /commands-legacy/sql-get-data-source-list
+slug: /commands/sql-get-data-source-list
 displayed_sidebar: docs
 ---
 

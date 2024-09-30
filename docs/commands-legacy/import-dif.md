@@ -1,7 +1,7 @@
 ---
 id: import-dif
 title: IMPORT DIF
-slug: /commands-legacy/import-dif
+slug: /commands/import-dif
 displayed_sidebar: docs
 ---
 

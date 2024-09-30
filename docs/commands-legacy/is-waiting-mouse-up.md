@@ -1,7 +1,7 @@
 ---
 id: is-waiting-mouse-up
 title: Is waiting mouse up
-slug: /commands-legacy/is-waiting-mouse-up
+slug: /commands/is-waiting-mouse-up
 displayed_sidebar: docs
 ---
 

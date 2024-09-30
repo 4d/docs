@@ -1,7 +1,7 @@
 ---
 id: set-table-titles
 title: SET TABLE TITLES
-slug: /commands-legacy/set-table-titles
+slug: /commands/set-table-titles
 displayed_sidebar: docs
 ---
 

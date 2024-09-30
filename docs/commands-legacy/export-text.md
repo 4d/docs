@@ -1,7 +1,7 @@
 ---
 id: export-text
 title: EXPORT TEXT
-slug: /commands-legacy/export-text
+slug: /commands/export-text
 displayed_sidebar: docs
 ---
 

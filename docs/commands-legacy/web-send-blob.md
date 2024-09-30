@@ -1,7 +1,7 @@
 ---
 id: web-send-blob
 title: WEB SEND BLOB
-slug: /commands-legacy/web-send-blob
+slug: /commands/web-send-blob
 displayed_sidebar: docs
 ---
 

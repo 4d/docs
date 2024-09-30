@@ -1,7 +1,7 @@
 ---
 id: svg-show-element
 title: SVG SHOW ELEMENT
-slug: /commands-legacy/svg-show-element
+slug: /commands/svg-show-element
 displayed_sidebar: docs
 ---
 

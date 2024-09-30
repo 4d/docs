@@ -1,7 +1,7 @@
 ---
 id: object-get-pointer
 title: OBJECT Get pointer
-slug: /commands-legacy/object-get-pointer
+slug: /commands/object-get-pointer
 displayed_sidebar: docs
 ---
 

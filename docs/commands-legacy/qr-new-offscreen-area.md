@@ -1,7 +1,7 @@
 ---
 id: qr-new-offscreen-area
 title: QR New offscreen area
-slug: /commands-legacy/qr-new-offscreen-area
+slug: /commands/qr-new-offscreen-area
 displayed_sidebar: docs
 ---
 

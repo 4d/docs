@@ -1,7 +1,7 @@
 ---
 id: listbox-insert-column-formula
 title: LISTBOX INSERT COLUMN FORMULA
-slug: /commands-legacy/listbox-insert-column-formula
+slug: /commands/listbox-insert-column-formula
 displayed_sidebar: docs
 ---
 

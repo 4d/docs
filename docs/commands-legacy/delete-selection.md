@@ -1,7 +1,7 @@
 ---
 id: delete-selection
 title: DELETE SELECTION
-slug: /commands-legacy/delete-selection
+slug: /commands/delete-selection
 displayed_sidebar: docs
 ---
 

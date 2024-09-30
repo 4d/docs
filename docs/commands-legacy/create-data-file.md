@@ -1,7 +1,7 @@
 ---
 id: create-data-file
 title: CREATE DATA FILE
-slug: /commands-legacy/create-data-file
+slug: /commands/create-data-file
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: create-related-one
 title: CREATE RELATED ONE
-slug: /commands-legacy/create-related-one
+slug: /commands/create-related-one
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: printers-list
 title: PRINTERS LIST
-slug: /commands-legacy/printers-list
+slug: /commands/printers-list
 displayed_sidebar: docs
 ---
 

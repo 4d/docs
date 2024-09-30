@@ -1,7 +1,7 @@
 ---
 id: show-menu-bar
 title: SHOW MENU BAR
-slug: /commands-legacy/show-menu-bar
+slug: /commands/show-menu-bar
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: on-rest-authentication-database-method
 title: On REST Authentication database method
-slug: /commands-legacy/on-rest-authentication-database-method
+slug: /commands/on-rest-authentication-database-method
 displayed_sidebar: docs
 ---
 

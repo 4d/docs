@@ -1,7 +1,7 @@
 ---
 id: on-server-shutdown-database-method
 title: On Server Shutdown database method
-slug: /commands-legacy/on-server-shutdown-database-method
+slug: /commands/on-server-shutdown-database-method
 displayed_sidebar: docs
 ---
 

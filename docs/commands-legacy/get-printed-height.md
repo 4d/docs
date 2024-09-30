@@ -1,7 +1,7 @@
 ---
 id: get-printed-height
 title: Get printed height
-slug: /commands-legacy/get-printed-height
+slug: /commands/get-printed-height
 displayed_sidebar: docs
 ---
 

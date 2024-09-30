@@ -1,7 +1,7 @@
 ---
 id: dom-get-xml-child-nodes
 title: DOM GET XML CHILD NODES
-slug: /commands-legacy/dom-get-xml-child-nodes
+slug: /commands/dom-get-xml-child-nodes
 displayed_sidebar: docs
 ---
 

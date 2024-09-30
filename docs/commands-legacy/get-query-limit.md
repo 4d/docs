@@ -1,7 +1,7 @@
 ---
 id: get-query-limit
 title: Get query limit
-slug: /commands-legacy/get-query-limit
+slug: /commands/get-query-limit
 displayed_sidebar: docs
 ---
 

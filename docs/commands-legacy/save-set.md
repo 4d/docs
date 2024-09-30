@@ -1,7 +1,7 @@
 ---
 id: save-set
 title: SAVE SET
-slug: /commands-legacy/save-set
+slug: /commands/save-set
 displayed_sidebar: docs
 ---
 

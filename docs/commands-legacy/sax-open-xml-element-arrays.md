@@ -1,7 +1,7 @@
 ---
 id: sax-open-xml-element-arrays
 title: SAX OPEN XML ELEMENT ARRAYS
-slug: /commands-legacy/sax-open-xml-element-arrays
+slug: /commands/sax-open-xml-element-arrays
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: goto-record
 title: GOTO RECORD
-slug: /commands-legacy/goto-record
+slug: /commands/goto-record
 displayed_sidebar: docs
 ---
 

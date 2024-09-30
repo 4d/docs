@@ -1,7 +1,7 @@
 ---
 id: sql-export-database
 title: SQL EXPORT DATABASE
-slug: /commands-legacy/sql-export-database
+slug: /commands/sql-export-database
 displayed_sidebar: docs
 ---
 

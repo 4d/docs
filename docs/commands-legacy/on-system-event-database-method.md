@@ -1,7 +1,7 @@
 ---
 id: on-system-event-database-method
 title: On System Event database method
-slug: /commands-legacy/on-system-event-database-method
+slug: /commands/on-system-event-database-method
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: spell-add-to-user-dictionary
 title: SPELL ADD TO USER DICTIONARY
-slug: /commands-legacy/spell-add-to-user-dictionary
+slug: /commands/spell-add-to-user-dictionary
 displayed_sidebar: docs
 ---
 

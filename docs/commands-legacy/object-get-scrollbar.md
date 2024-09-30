@@ -1,7 +1,7 @@
 ---
 id: object-get-scrollbar
 title: OBJECT GET SCROLLBAR
-slug: /commands-legacy/object-get-scrollbar
+slug: /commands/object-get-scrollbar
 displayed_sidebar: docs
 ---
 

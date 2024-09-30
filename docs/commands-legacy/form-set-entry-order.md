@@ -1,7 +1,7 @@
 ---
 id: form-set-entry-order
 title: FORM SET ENTRY ORDER
-slug: /commands-legacy/form-set-entry-order
+slug: /commands/form-set-entry-order
 displayed_sidebar: docs
 ---
 

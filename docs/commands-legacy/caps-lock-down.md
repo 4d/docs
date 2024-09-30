@@ -1,7 +1,7 @@
 ---
 id: caps-lock-down
 title: Caps lock down
-slug: /commands-legacy/caps-lock-down
+slug: /commands/caps-lock-down
 displayed_sidebar: docs
 ---
 

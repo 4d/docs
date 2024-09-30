@@ -1,7 +1,7 @@
 ---
 id: ob-get
 title: OB Get
-slug: /commands-legacy/ob-get
+slug: /commands/ob-get
 displayed_sidebar: docs
 ---
 

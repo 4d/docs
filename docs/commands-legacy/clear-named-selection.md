@@ -1,7 +1,7 @@
 ---
 id: clear-named-selection
 title: CLEAR NAMED SELECTION
-slug: /commands-legacy/clear-named-selection
+slug: /commands/clear-named-selection
 displayed_sidebar: docs
 ---
 

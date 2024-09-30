@@ -1,7 +1,7 @@
 ---
 id: set-window-title
 title: SET WINDOW TITLE
-slug: /commands-legacy/set-window-title
+slug: /commands/set-window-title
 displayed_sidebar: docs
 ---
 

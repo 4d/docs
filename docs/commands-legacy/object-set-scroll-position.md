@@ -1,7 +1,7 @@
 ---
 id: object-set-scroll-position
 title: OBJECT SET SCROLL POSITION
-slug: /commands-legacy/object-set-scroll-position
+slug: /commands/object-set-scroll-position
 displayed_sidebar: docs
 ---
 

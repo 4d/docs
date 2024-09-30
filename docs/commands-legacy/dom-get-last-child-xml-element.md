@@ -1,7 +1,7 @@
 ---
 id: dom-get-last-child-xml-element
 title: DOM Get last child XML element
-slug: /commands-legacy/dom-get-last-child-xml-element
+slug: /commands/dom-get-last-child-xml-element
 displayed_sidebar: docs
 ---
 

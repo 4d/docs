@@ -1,7 +1,7 @@
 ---
 id: count-list-items
 title: Count list items
-slug: /commands-legacy/count-list-items
+slug: /commands/count-list-items
 displayed_sidebar: docs
 ---
 

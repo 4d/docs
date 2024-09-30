@@ -1,7 +1,7 @@
 ---
 id: query-with-array
 title: QUERY WITH ARRAY
-slug: /commands-legacy/query-with-array
+slug: /commands/query-with-array
 displayed_sidebar: docs
 ---
 

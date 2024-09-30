@@ -1,7 +1,7 @@
 ---
 id: on-err-call
 title: ON ERR CALL
-slug: /commands-legacy/on-err-call
+slug: /commands/on-err-call
 displayed_sidebar: docs
 ---
 

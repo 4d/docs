@@ -1,7 +1,7 @@
 ---
 id: c-collection
 title: C_COLLECTION
-slug: /commands-legacy/c-collection
+slug: /commands/c-collection
 displayed_sidebar: docs
 ---
 

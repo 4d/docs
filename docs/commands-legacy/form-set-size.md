@@ -1,7 +1,7 @@
 ---
 id: form-set-size
 title: FORM SET SIZE
-slug: /commands-legacy/form-set-size
+slug: /commands/form-set-size
 displayed_sidebar: docs
 ---
 

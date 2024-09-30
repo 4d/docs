@@ -1,7 +1,7 @@
 ---
 id: sax-add-xml-element-value
 title: SAX ADD XML ELEMENT VALUE
-slug: /commands-legacy/sax-add-xml-element-value
+slug: /commands/sax-add-xml-element-value
 displayed_sidebar: docs
 ---
 

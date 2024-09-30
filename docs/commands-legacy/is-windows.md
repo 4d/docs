@@ -1,7 +1,7 @@
 ---
 id: is-windows
 title: Is Windows
-slug: /commands-legacy/is-windows
+slug: /commands/is-windows
 displayed_sidebar: docs
 ---
 

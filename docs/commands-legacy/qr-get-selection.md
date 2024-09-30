@@ -1,7 +1,7 @@
 ---
 id: qr-get-selection
 title: QR GET SELECTION
-slug: /commands-legacy/qr-get-selection
+slug: /commands/qr-get-selection
 displayed_sidebar: docs
 ---
 

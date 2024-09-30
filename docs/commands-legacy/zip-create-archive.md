@@ -1,7 +1,7 @@
 ---
 id: zip-create-archive
 title: ZIP Create archive
-slug: /commands-legacy/zip-create-archive
+slug: /commands/zip-create-archive
 displayed_sidebar: docs
 ---
 

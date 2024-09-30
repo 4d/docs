@@ -1,7 +1,7 @@
 ---
 id: set-field-value-null
 title: SET FIELD VALUE NULL
-slug: /commands-legacy/set-field-value-null
+slug: /commands/set-field-value-null
 displayed_sidebar: docs
 ---
 

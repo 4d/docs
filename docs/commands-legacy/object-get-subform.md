@@ -1,7 +1,7 @@
 ---
 id: object-get-subform
 title: OBJECT GET SUBFORM
-slug: /commands-legacy/object-get-subform
+slug: /commands/object-get-subform
 displayed_sidebar: docs
 ---
 

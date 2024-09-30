@@ -1,7 +1,7 @@
 ---
 id: use-entity-selection
 title: USE ENTITY SELECTION
-slug: /commands-legacy/use-entity-selection
+slug: /commands/use-entity-selection
 displayed_sidebar: docs
 ---
 

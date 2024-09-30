@@ -1,7 +1,7 @@
 ---
 id: web-set-option
 title: WEB SET OPTION
-slug: /commands-legacy/web-set-option
+slug: /commands/web-set-option
 displayed_sidebar: docs
 ---
 

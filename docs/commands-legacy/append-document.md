@@ -1,7 +1,7 @@
 ---
 id: append-document
 title: Append document
-slug: /commands-legacy/append-document
+slug: /commands/append-document
 displayed_sidebar: docs
 ---
 

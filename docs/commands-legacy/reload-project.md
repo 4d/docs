@@ -1,7 +1,7 @@
 ---
 id: reload-project
 title: RELOAD PROJECT
-slug: /commands-legacy/reload-project
+slug: /commands/reload-project
 displayed_sidebar: docs
 ---
 

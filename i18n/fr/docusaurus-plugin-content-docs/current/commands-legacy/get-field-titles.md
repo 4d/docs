@@ -1,0 +1,29 @@
+---
+id: get-field-titles
+title: GET FIELD TITLES
+slug: /commands/get-field-titles
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.GET FIELD TITLES.Syntax-->**GET FIELD TITLES** ( *laTable* ; *titresChamps* ; *numChamps* )<!-- END REF-->
+<!--REF #_command_.GET FIELD TITLES.Params-->
+| Paramètre | Type |  | Description |
+| --- | --- | --- | --- |
+| laTable | Table | &#x1F852; | Table dont vous souhaitez connaître les noms des champs |
+| titresChamps | Tableau texte | &#x1F858; | Noms courants des champs |
+| numChamps | Tableau entier long | &#x1F858; | Numéros des champs |
+
+<!-- END REF-->
+
+#### Description 
+
+<!--REF #_command_.GET FIELD TITLES.Summary-->La commande **GET FIELD TITLES** remplit les tableaux *titresChamps* et *numChamps* avec les noms et les numéros des champs de *laTable* désignée.<!-- END REF--> Le contenu des deux tableaux est synchronisé.
+
+Si la commande [SET FIELD TITLES](set-field-titles.md) a été appelée au cours de la session, **GET FIELD TITLES** retourne uniquement les noms “modifiés” et les numéros des champs ayant été définis via cette commande.  
+Sinon, **GET FIELD TITLES** retourne le nom défini dans la fenêtre de Structure de tous les champs de la base.   
+Dans les deux cas, la commande ne retourne pas les champs déclarés invisibles. 
+
+#### Voir aussi 
+
+[GET TABLE TITLES](get-table-titles.md)  
+[SET FIELD TITLES](set-field-titles.md)  

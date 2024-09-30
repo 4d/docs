@@ -1,7 +1,7 @@
 ---
 id: split-string
 title: Split string
-slug: /commands-legacy/split-string
+slug: /commands/split-string
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: show-process
 title: SHOW PROCESS
-slug: /commands-legacy/show-process
+slug: /commands/show-process
 displayed_sidebar: docs
 ---
 

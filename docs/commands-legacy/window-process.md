@@ -1,7 +1,7 @@
 ---
 id: window-process
 title: Window process
-slug: /commands-legacy/window-process
+slug: /commands/window-process
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-table-titles
 title: GET TABLE TITLES
-slug: /commands-legacy/get-table-titles
+slug: /commands/get-table-titles
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: listbox-get-array
 title: LISTBOX Get array
-slug: /commands-legacy/listbox-get-array
+slug: /commands/listbox-get-array
 displayed_sidebar: docs
 ---
 

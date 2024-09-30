@@ -1,7 +1,7 @@
 ---
 id: equal-pictures
 title: Equal pictures
-slug: /commands-legacy/equal-pictures
+slug: /commands/equal-pictures
 displayed_sidebar: docs
 ---
 

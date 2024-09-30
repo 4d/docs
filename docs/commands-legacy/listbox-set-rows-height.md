@@ -1,7 +1,7 @@
 ---
 id: listbox-set-rows-height
 title: LISTBOX SET ROWS HEIGHT
-slug: /commands-legacy/listbox-set-rows-height
+slug: /commands/listbox-set-rows-height
 displayed_sidebar: docs
 ---
 

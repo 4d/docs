@@ -1,7 +1,7 @@
 ---
 id: object-get-border-style
 title: OBJECT Get border style
-slug: /commands-legacy/object-get-border-style
+slug: /commands/object-get-border-style
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: set-list-item
 title: SET LIST ITEM
-slug: /commands-legacy/set-list-item
+slug: /commands/set-list-item
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: is-picture-file
 title: Is picture file
-slug: /commands-legacy/is-picture-file
+slug: /commands/is-picture-file
 displayed_sidebar: docs
 ---
 

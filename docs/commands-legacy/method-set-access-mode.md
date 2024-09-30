@@ -1,7 +1,7 @@
 ---
 id: method-set-access-mode
 title: METHOD SET ACCESS MODE
-slug: /commands-legacy/method-set-access-mode
+slug: /commands/method-set-access-mode
 displayed_sidebar: docs
 ---
 

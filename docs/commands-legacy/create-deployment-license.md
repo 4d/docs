@@ -1,7 +1,7 @@
 ---
 id: create-deployment-license
 title: Create deployment license
-slug: /commands-legacy/create-deployment-license
+slug: /commands/create-deployment-license
 displayed_sidebar: docs
 ---
 

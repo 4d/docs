@@ -1,7 +1,7 @@
 ---
 id: web-validate-digest
 title: WEB Validate digest
-slug: /commands-legacy/web-validate-digest
+slug: /commands/web-validate-digest
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: listbox-select-break
 title: LISTBOX SELECT BREAK
-slug: /commands-legacy/listbox-select-break
+slug: /commands/listbox-select-break
 displayed_sidebar: docs
 ---
 

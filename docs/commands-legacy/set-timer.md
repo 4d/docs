@@ -1,7 +1,7 @@
 ---
 id: set-timer
 title: SET TIMER
-slug: /commands-legacy/set-timer
+slug: /commands/set-timer
 displayed_sidebar: docs
 ---
 

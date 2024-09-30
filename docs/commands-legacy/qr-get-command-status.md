@@ -1,7 +1,7 @@
 ---
 id: qr-get-command-status
 title: QR Get command status
-slug: /commands-legacy/qr-get-command-status
+slug: /commands/qr-get-command-status
 displayed_sidebar: docs
 ---
 

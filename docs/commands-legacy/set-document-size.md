@@ -1,7 +1,7 @@
 ---
 id: set-document-size
 title: SET DOCUMENT SIZE
-slug: /commands-legacy/set-document-size
+slug: /commands/set-document-size
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-field-relation
 title: GET FIELD RELATION
-slug: /commands-legacy/get-field-relation
+slug: /commands/get-field-relation
 displayed_sidebar: docs
 ---
 

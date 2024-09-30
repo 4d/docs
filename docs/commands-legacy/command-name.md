@@ -1,7 +1,7 @@
 ---
 id: command-name
 title: Command name
-slug: /commands-legacy/command-name
+slug: /commands/command-name
 displayed_sidebar: docs
 ---
 

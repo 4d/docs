@@ -1,7 +1,7 @@
 ---
 id: listbox-get-row-font-style
 title: LISTBOX Get row font style
-slug: /commands-legacy/listbox-get-row-font-style
+slug: /commands/listbox-get-row-font-style
 displayed_sidebar: docs
 ---
 

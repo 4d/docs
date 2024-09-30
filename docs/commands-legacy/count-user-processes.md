@@ -1,7 +1,7 @@
 ---
 id: count-user-processes
 title: Count user processes
-slug: /commands-legacy/count-user-processes
+slug: /commands/count-user-processes
 displayed_sidebar: docs
 ---
 

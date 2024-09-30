@@ -1,7 +1,7 @@
 ---
 id: c-pointer
 title: C_POINTER
-slug: /commands-legacy/c-pointer
+slug: /commands/c-pointer
 displayed_sidebar: docs
 ---
 

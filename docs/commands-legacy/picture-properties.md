@@ -1,7 +1,7 @@
 ---
 id: picture-properties
 title: PICTURE PROPERTIES
-slug: /commands-legacy/picture-properties
+slug: /commands/picture-properties
 displayed_sidebar: docs
 ---
 

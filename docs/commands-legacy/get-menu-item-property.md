@@ -1,7 +1,7 @@
 ---
 id: get-menu-item-property
 title: GET MENU ITEM PROPERTY
-slug: /commands-legacy/get-menu-item-property
+slug: /commands/get-menu-item-property
 displayed_sidebar: docs
 ---
 

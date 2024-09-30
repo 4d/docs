@@ -1,7 +1,7 @@
 ---
 id: get-list-item-font
 title: Get list item font
-slug: /commands-legacy/get-list-item-font
+slug: /commands/get-list-item-font
 displayed_sidebar: docs
 ---
 

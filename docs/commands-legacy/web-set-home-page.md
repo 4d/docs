@@ -1,7 +1,7 @@
 ---
 id: web-set-home-page
 title: WEB SET HOME PAGE
-slug: /commands-legacy/web-set-home-page
+slug: /commands/web-set-home-page
 displayed_sidebar: docs
 ---
 

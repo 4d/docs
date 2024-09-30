@@ -1,7 +1,7 @@
 ---
 id: quit-4d
 title: QUIT 4D
-slug: /commands-legacy/quit-4d
+slug: /commands/quit-4d
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: execute-method-in-subform
 title: EXECUTE METHOD IN SUBFORM
-slug: /commands-legacy/execute-method-in-subform
+slug: /commands/execute-method-in-subform
 displayed_sidebar: docs
 ---
 

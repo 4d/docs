@@ -1,7 +1,7 @@
 ---
 id: is-record-loaded
 title: Is record loaded
-slug: /commands-legacy/is-record-loaded
+slug: /commands/is-record-loaded
 displayed_sidebar: docs
 ---
 

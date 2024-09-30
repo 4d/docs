@@ -1,7 +1,7 @@
 ---
 id: object-get-enterable
 title: OBJECT Get enterable
-slug: /commands-legacy/object-get-enterable
+slug: /commands/object-get-enterable
 displayed_sidebar: docs
 ---
 

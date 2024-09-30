@@ -1,7 +1,7 @@
 ---
 id: text-to-blob
 title: TEXT TO BLOB
-slug: /commands-legacy/text-to-blob
+slug: /commands/text-to-blob
 displayed_sidebar: docs
 ---
 

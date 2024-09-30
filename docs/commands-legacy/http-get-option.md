@@ -1,7 +1,7 @@
 ---
 id: http-get-option
 title: HTTP GET OPTION
-slug: /commands-legacy/http-get-option
+slug: /commands/http-get-option
 displayed_sidebar: docs
 ---
 

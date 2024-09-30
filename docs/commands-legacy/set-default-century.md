@@ -1,7 +1,7 @@
 ---
 id: set-default-century
 title: SET DEFAULT CENTURY
-slug: /commands-legacy/set-default-century
+slug: /commands/set-default-century
 displayed_sidebar: docs
 ---
 

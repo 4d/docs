@@ -1,7 +1,7 @@
 ---
 id: c-time
 title: C_TIME
-slug: /commands-legacy/c-time
+slug: /commands/c-time
 displayed_sidebar: docs
 ---
 

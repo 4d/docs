@@ -1,7 +1,7 @@
 ---
 id: select-list-items-by-position
 title: SELECT LIST ITEMS BY POSITION
-slug: /commands-legacy/select-list-items-by-position
+slug: /commands/select-list-items-by-position
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: register-client
 title: REGISTER CLIENT
-slug: /commands-legacy/register-client
+slug: /commands/register-client
 displayed_sidebar: docs
 ---
 

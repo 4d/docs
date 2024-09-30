@@ -1,7 +1,7 @@
 ---
 id: dom-parse-xml-source
 title: DOM Parse XML source
-slug: /commands-legacy/dom-parse-xml-source
+slug: /commands/dom-parse-xml-source
 displayed_sidebar: docs
 ---
 

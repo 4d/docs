@@ -1,7 +1,7 @@
 ---
 id: on-host-database-event-database-method
 title: On Host Database Event database method
-slug: /commands-legacy/on-host-database-event-database-method
+slug: /commands/on-host-database-event-database-method
 displayed_sidebar: docs
 ---
 

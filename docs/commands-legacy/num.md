@@ -1,7 +1,7 @@
 ---
 id: num
 title: Num
-slug: /commands-legacy/num
+slug: /commands/num
 displayed_sidebar: docs
 ---
 

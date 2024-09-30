@@ -1,7 +1,7 @@
 ---
 id: c-date
 title: C_DATE
-slug: /commands-legacy/c-date
+slug: /commands/c-date
 displayed_sidebar: docs
 ---
 

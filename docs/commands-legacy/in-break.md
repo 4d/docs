@@ -1,7 +1,7 @@
 ---
 id: in-break
 title: In break
-slug: /commands-legacy/in-break
+slug: /commands/in-break
 displayed_sidebar: docs
 ---
 

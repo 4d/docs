@@ -1,7 +1,7 @@
 ---
 id: php-get-option
 title: PHP GET OPTION
-slug: /commands-legacy/php-get-option
+slug: /commands/php-get-option
 displayed_sidebar: docs
 ---
 

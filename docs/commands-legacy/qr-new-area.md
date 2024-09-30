@@ -1,7 +1,7 @@
 ---
 id: qr-new-area
 title: QR NEW AREA
-slug: /commands-legacy/qr-new-area
+slug: /commands/qr-new-area
 displayed_sidebar: docs
 ---
 

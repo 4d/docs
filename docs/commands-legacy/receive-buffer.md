@@ -1,7 +1,7 @@
 ---
 id: receive-buffer
 title: RECEIVE BUFFER
-slug: /commands-legacy/receive-buffer
+slug: /commands/receive-buffer
 displayed_sidebar: docs
 ---
 

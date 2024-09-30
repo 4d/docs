@@ -1,7 +1,7 @@
 ---
 id: string-list-to-array
 title: STRING LIST TO ARRAY
-slug: /commands-legacy/string-list-to-array
+slug: /commands/string-list-to-array
 displayed_sidebar: docs
 ---
 

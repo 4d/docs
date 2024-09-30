@@ -1,7 +1,7 @@
 ---
 id: integrate-mirror-log-file
 title: INTEGRATE MIRROR LOG FILE
-slug: /commands-legacy/integrate-mirror-log-file
+slug: /commands/integrate-mirror-log-file
 displayed_sidebar: docs
 ---
 

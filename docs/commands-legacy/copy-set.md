@@ -1,7 +1,7 @@
 ---
 id: copy-set
 title: COPY SET
-slug: /commands-legacy/copy-set
+slug: /commands/copy-set
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: delete-index
 title: DELETE INDEX
-slug: /commands-legacy/delete-index
+slug: /commands/delete-index
 displayed_sidebar: docs
 ---
 

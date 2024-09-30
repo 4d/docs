@@ -1,7 +1,7 @@
 ---
 id: load-4d-view-document
 title: Load 4D View document
-slug: /commands-legacy/load-4d-view-document
+slug: /commands/load-4d-view-document
 displayed_sidebar: docs
 ---
 

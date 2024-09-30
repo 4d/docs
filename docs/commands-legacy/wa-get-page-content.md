@@ -1,7 +1,7 @@
 ---
 id: wa-get-page-content
 title: WA Get page content
-slug: /commands-legacy/wa-get-page-content
+slug: /commands/wa-get-page-content
 displayed_sidebar: docs
 ---
 

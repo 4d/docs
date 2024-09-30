@@ -1,7 +1,7 @@
 ---
 id: spell-get-dictionary-list
 title: SPELL GET DICTIONARY LIST
-slug: /commands-legacy/spell-get-dictionary-list
+slug: /commands/spell-get-dictionary-list
 displayed_sidebar: docs
 ---
 

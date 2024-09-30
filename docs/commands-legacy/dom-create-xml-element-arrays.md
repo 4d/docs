@@ -1,7 +1,7 @@
 ---
 id: dom-create-xml-element-arrays
 title: DOM Create XML element arrays
-slug: /commands-legacy/dom-create-xml-element-arrays
+slug: /commands/dom-create-xml-element-arrays
 displayed_sidebar: docs
 ---
 

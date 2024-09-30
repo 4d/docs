@@ -1,7 +1,7 @@
 ---
 id: close-document
 title: CLOSE DOCUMENT
-slug: /commands-legacy/close-document
+slug: /commands/close-document
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-window-title
 title: Get window title
-slug: /commands-legacy/get-window-title
+slug: /commands/get-window-title
 displayed_sidebar: docs
 ---
 

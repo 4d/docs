@@ -1,7 +1,7 @@
 ---
 id: frontmost-process
 title: Frontmost process
-slug: /commands-legacy/frontmost-process
+slug: /commands/frontmost-process
 displayed_sidebar: docs
 ---
 

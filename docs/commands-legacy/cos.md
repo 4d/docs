@@ -1,7 +1,7 @@
 ---
 id: cos
 title: Cos
-slug: /commands-legacy/cos
+slug: /commands/cos
 displayed_sidebar: docs
 ---
 

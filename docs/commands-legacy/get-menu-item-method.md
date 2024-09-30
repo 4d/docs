@@ -1,7 +1,7 @@
 ---
 id: get-menu-item-method
 title: Get menu item method
-slug: /commands-legacy/get-menu-item-method
+slug: /commands/get-menu-item-method
 displayed_sidebar: docs
 ---
 

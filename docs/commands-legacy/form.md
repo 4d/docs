@@ -1,7 +1,7 @@
 ---
 id: form
 title: Form
-slug: /commands-legacy/form
+slug: /commands/form
 displayed_sidebar: docs
 ---
 

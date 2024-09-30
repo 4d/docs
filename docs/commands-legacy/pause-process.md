@@ -1,7 +1,7 @@
 ---
 id: pause-process
 title: PAUSE PROCESS
-slug: /commands-legacy/pause-process
+slug: /commands/pause-process
 displayed_sidebar: docs
 ---
 

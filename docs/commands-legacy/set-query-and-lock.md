@@ -1,7 +1,7 @@
 ---
 id: set-query-and-lock
 title: SET QUERY AND LOCK
-slug: /commands-legacy/set-query-and-lock
+slug: /commands/set-query-and-lock
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: object-set-filter
 title: OBJECT SET FILTER
-slug: /commands-legacy/object-set-filter
+slug: /commands/object-set-filter
 displayed_sidebar: docs
 ---
 

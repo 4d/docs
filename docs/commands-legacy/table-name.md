@@ -1,7 +1,7 @@
 ---
 id: table-name
 title: Table name
-slug: /commands-legacy/table-name
+slug: /commands/table-name
 displayed_sidebar: docs
 ---
 

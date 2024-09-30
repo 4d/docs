@@ -1,7 +1,7 @@
 ---
 id: set-channel
 title: SET CHANNEL
-slug: /commands-legacy/set-channel
+slug: /commands/set-channel
 displayed_sidebar: docs
 ---
 

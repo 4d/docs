@@ -1,7 +1,7 @@
 ---
 id: set-menu-item-style
 title: SET MENU ITEM STYLE
-slug: /commands-legacy/set-menu-item-style
+slug: /commands/set-menu-item-style
 displayed_sidebar: docs
 ---
 

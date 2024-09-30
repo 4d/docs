@@ -1,7 +1,7 @@
 ---
 id: qr-set-totals-spacing
 title: QR SET TOTALS SPACING
-slug: /commands-legacy/qr-set-totals-spacing
+slug: /commands/qr-set-totals-spacing
 displayed_sidebar: docs
 ---
 

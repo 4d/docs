@@ -1,7 +1,7 @@
 ---
 id: set-menu-item-property
 title: SET MENU ITEM PROPERTY
-slug: /commands-legacy/set-menu-item-property
+slug: /commands/set-menu-item-property
 displayed_sidebar: docs
 ---
 

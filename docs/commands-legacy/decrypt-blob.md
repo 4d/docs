@@ -1,7 +1,7 @@
 ---
 id: decrypt-blob
 title: DECRYPT BLOB
-slug: /commands-legacy/decrypt-blob
+slug: /commands/decrypt-blob
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: object-set-action
 title: OBJECT SET ACTION
-slug: /commands-legacy/object-set-action
+slug: /commands/object-set-action
 displayed_sidebar: docs
 ---
 

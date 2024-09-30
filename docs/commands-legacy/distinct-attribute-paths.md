@@ -1,7 +1,7 @@
 ---
 id: distinct-attribute-paths
 title: DISTINCT ATTRIBUTE PATHS
-slug: /commands-legacy/distinct-attribute-paths
+slug: /commands/distinct-attribute-paths
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: export-data
 title: EXPORT DATA
-slug: /commands-legacy/export-data
+slug: /commands/export-data
 displayed_sidebar: docs
 ---
 

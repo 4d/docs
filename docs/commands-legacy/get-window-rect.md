@@ -1,7 +1,7 @@
 ---
 id: get-window-rect
 title: GET WINDOW RECT
-slug: /commands-legacy/get-window-rect
+slug: /commands/get-window-rect
 displayed_sidebar: docs
 ---
 

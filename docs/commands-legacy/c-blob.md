@@ -1,7 +1,7 @@
 ---
 id: c-blob
 title: C_BLOB
-slug: /commands-legacy/c-blob
+slug: /commands/c-blob
 displayed_sidebar: docs
 ---
 

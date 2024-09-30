@@ -1,7 +1,7 @@
 ---
 id: qr-delete-column
 title: QR DELETE COLUMN
-slug: /commands-legacy/qr-delete-column
+slug: /commands/qr-delete-column
 displayed_sidebar: docs
 ---
 

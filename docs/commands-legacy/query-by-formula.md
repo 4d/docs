@@ -1,7 +1,7 @@
 ---
 id: query-by-formula
 title: QUERY BY FORMULA
-slug: /commands-legacy/query-by-formula
+slug: /commands/query-by-formula
 displayed_sidebar: docs
 ---
 

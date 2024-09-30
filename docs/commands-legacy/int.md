@@ -1,7 +1,7 @@
 ---
 id: int
 title: Int
-slug: /commands-legacy/int
+slug: /commands/int
 displayed_sidebar: docs
 ---
 

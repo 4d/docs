@@ -1,7 +1,7 @@
 ---
 id: is-user-deleted
 title: Is user deleted
-slug: /commands-legacy/is-user-deleted
+slug: /commands/is-user-deleted
 displayed_sidebar: docs
 ---
 

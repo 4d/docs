@@ -1,7 +1,7 @@
 ---
 id: round
 title: Round
-slug: /commands-legacy/round
+slug: /commands/round
 displayed_sidebar: docs
 ---
 

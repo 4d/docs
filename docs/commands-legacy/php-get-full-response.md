@@ -1,7 +1,7 @@
 ---
 id: php-get-full-response
 title: PHP GET FULL RESPONSE
-slug: /commands-legacy/php-get-full-response
+slug: /commands/php-get-full-response
 displayed_sidebar: docs
 ---
 

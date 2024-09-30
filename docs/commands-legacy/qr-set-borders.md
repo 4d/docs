@@ -1,7 +1,7 @@
 ---
 id: qr-set-borders
 title: QR SET BORDERS
-slug: /commands-legacy/qr-set-borders
+slug: /commands/qr-set-borders
 displayed_sidebar: docs
 ---
 

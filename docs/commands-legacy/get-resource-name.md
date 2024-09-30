@@ -1,7 +1,7 @@
 ---
 id: get-resource-name
 title: Get resource name
-slug: /commands-legacy/get-resource-name
+slug: /commands/get-resource-name
 displayed_sidebar: docs
 ---
 

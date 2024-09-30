@@ -1,7 +1,7 @@
 ---
 id: wa-run-offscreen-area
 title: WA Run offscreen area
-slug: /commands-legacy/wa-run-offscreen-area
+slug: /commands/wa-run-offscreen-area
 displayed_sidebar: docs
 ---
 

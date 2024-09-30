@@ -1,7 +1,7 @@
 ---
 id: st-get-content-type
 title: ST Get content type
-slug: /commands-legacy/st-get-content-type
+slug: /commands/st-get-content-type
 displayed_sidebar: docs
 ---
 

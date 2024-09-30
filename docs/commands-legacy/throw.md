@@ -1,7 +1,7 @@
 ---
 id: throw
 title: throw
-slug: /commands-legacy/throw
+slug: /commands/throw
 displayed_sidebar: docs
 ---
 

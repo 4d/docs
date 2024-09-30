@@ -1,7 +1,7 @@
 ---
 id: session-storage-by-id
 title: Session storage by ID
-slug: /commands-legacy/session-storage-by-id
+slug: /commands/session-storage-by-id
 displayed_sidebar: docs
 ---
 

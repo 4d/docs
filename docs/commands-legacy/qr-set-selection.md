@@ -1,7 +1,7 @@
 ---
 id: qr-set-selection
 title: QR SET SELECTION
-slug: /commands-legacy/qr-set-selection
+slug: /commands/qr-set-selection
 displayed_sidebar: docs
 ---
 

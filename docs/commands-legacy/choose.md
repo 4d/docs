@@ -1,7 +1,7 @@
 ---
 id: choose
 title: Choose
-slug: /commands-legacy/choose
+slug: /commands/choose
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: begin-sql
 title: Begin SQL
-slug: /commands-legacy/begin-sql
+slug: /commands/begin-sql
 displayed_sidebar: docs
 ---
 

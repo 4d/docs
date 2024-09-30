@@ -1,7 +1,7 @@
 ---
 id: execute-on-server
 title: Execute on server
-slug: /commands-legacy/execute-on-server
+slug: /commands/execute-on-server
 displayed_sidebar: docs
 ---
 

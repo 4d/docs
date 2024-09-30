@@ -1,7 +1,7 @@
 ---
 id: get-print-marker
 title: Get print marker
-slug: /commands-legacy/get-print-marker
+slug: /commands/get-print-marker
 displayed_sidebar: docs
 ---
 

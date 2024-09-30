@@ -1,7 +1,7 @@
 ---
 id: duplicate-record
 title: DUPLICATE RECORD
-slug: /commands-legacy/duplicate-record
+slug: /commands/duplicate-record
 displayed_sidebar: docs
 ---
 

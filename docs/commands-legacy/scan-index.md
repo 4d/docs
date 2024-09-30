@@ -1,7 +1,7 @@
 ---
 id: scan-index
 title: SCAN INDEX
-slug: /commands-legacy/scan-index
+slug: /commands/scan-index
 displayed_sidebar: docs
 ---
 

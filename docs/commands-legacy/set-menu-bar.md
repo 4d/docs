@@ -1,7 +1,7 @@
 ---
 id: set-menu-bar
 title: SET MENU BAR
-slug: /commands-legacy/set-menu-bar
+slug: /commands/set-menu-bar
 displayed_sidebar: docs
 ---
 

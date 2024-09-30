@@ -1,7 +1,7 @@
 ---
 id: get-4d-file
 title: Get 4D file
-slug: /commands-legacy/get-4d-file
+slug: /commands/get-4d-file
 displayed_sidebar: docs
 ---
 

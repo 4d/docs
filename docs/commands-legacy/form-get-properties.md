@@ -1,7 +1,7 @@
 ---
 id: form-get-properties
 title: FORM GET PROPERTIES
-slug: /commands-legacy/form-get-properties
+slug: /commands/form-get-properties
 displayed_sidebar: docs
 ---
 

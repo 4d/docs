@@ -1,7 +1,7 @@
 ---
 id: page-break
 title: PAGE BREAK
-slug: /commands-legacy/page-break
+slug: /commands/page-break
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: object-get-name
 title: OBJECT Get name
-slug: /commands-legacy/object-get-name
+slug: /commands/object-get-name
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: application-file
 title: Application file
-slug: /commands-legacy/application-file
+slug: /commands/application-file
 displayed_sidebar: docs
 ---
 

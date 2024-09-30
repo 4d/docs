@@ -1,7 +1,7 @@
 ---
 id: volume-list
 title: VOLUME LIST
-slug: /commands-legacy/volume-list
+slug: /commands/volume-list
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: json-validate
 title: JSON Validate
-slug: /commands-legacy/json-validate
+slug: /commands/json-validate
 displayed_sidebar: docs
 ---
 

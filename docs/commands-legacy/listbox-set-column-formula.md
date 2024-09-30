@@ -1,7 +1,7 @@
 ---
 id: listbox-set-column-formula
 title: LISTBOX SET COLUMN FORMULA
-slug: /commands-legacy/listbox-set-column-formula
+slug: /commands/listbox-set-column-formula
 displayed_sidebar: docs
 ---
 

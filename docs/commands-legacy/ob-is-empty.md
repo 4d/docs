@@ -1,7 +1,7 @@
 ---
 id: ob-is-empty
 title: OB Is empty
-slug: /commands-legacy/ob-is-empty
+slug: /commands/ob-is-empty
 displayed_sidebar: docs
 ---
 

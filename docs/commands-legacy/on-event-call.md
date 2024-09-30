@@ -1,7 +1,7 @@
 ---
 id: on-event-call
 title: ON EVENT CALL
-slug: /commands-legacy/on-event-call
+slug: /commands/on-event-call
 displayed_sidebar: docs
 ---
 

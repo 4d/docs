@@ -1,7 +1,7 @@
 ---
 id: query-selection-by-formula
 title: QUERY SELECTION BY FORMULA
-slug: /commands-legacy/query-selection-by-formula
+slug: /commands/query-selection-by-formula
 displayed_sidebar: docs
 ---
 

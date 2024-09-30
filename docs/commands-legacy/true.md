@@ -1,7 +1,7 @@
 ---
 id: "true"
 title: "True"
-slug: /commands-legacy/true
+slug: /commands/true
 displayed_sidebar: docs
 ---
 

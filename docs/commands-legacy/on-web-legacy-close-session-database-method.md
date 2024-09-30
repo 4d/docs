@@ -1,7 +1,7 @@
 ---
 id: on-web-legacy-close-session-database-method
 title: On Web Legacy Close Session database method
-slug: /commands-legacy/on-web-legacy-close-session-database-method
+slug: /commands/on-web-legacy-close-session-database-method
 displayed_sidebar: docs
 ---
 

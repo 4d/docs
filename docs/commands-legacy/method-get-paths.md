@@ -1,7 +1,7 @@
 ---
 id: method-get-paths
 title: METHOD GET PATHS
-slug: /commands-legacy/method-get-paths
+slug: /commands/method-get-paths
 displayed_sidebar: docs
 ---
 

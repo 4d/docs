@@ -1,7 +1,7 @@
 ---
 id: query-by-attribute
 title: QUERY BY ATTRIBUTE
-slug: /commands-legacy/query-by-attribute
+slug: /commands/query-by-attribute
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: parse-formula
 title: Parse formula
-slug: /commands-legacy/parse-formula
+slug: /commands/parse-formula
 displayed_sidebar: docs
 ---
 

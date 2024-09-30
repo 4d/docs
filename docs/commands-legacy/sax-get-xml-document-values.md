@@ -1,7 +1,7 @@
 ---
 id: sax-get-xml-document-values
 title: SAX GET XML DOCUMENT VALUES
-slug: /commands-legacy/sax-get-xml-document-values
+slug: /commands/sax-get-xml-document-values
 displayed_sidebar: docs
 ---
 

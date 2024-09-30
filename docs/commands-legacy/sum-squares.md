@@ -1,7 +1,7 @@
 ---
 id: sum-squares
 title: Sum squares
-slug: /commands-legacy/sum-squares
+slug: /commands/sum-squares
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: cache-info
 title: Cache info
-slug: /commands-legacy/cache-info
+slug: /commands/cache-info
 displayed_sidebar: docs
 ---
 

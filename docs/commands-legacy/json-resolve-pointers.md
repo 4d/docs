@@ -1,7 +1,7 @@
 ---
 id: json-resolve-pointers
 title: JSON Resolve pointers
-slug: /commands-legacy/json-resolve-pointers
+slug: /commands/json-resolve-pointers
 displayed_sidebar: docs
 ---
 

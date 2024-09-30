@@ -1,7 +1,7 @@
 ---
 id: get-serial-information
 title: GET SERIAL INFORMATION
-slug: /commands-legacy/get-serial-information
+slug: /commands/get-serial-information
 displayed_sidebar: docs
 ---
 

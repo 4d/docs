@@ -1,7 +1,7 @@
 ---
 id: adjust-blobs-cache-priority
 title: ADJUST BLOBS CACHE PRIORITY
-slug: /commands-legacy/adjust-blobs-cache-priority
+slug: /commands/adjust-blobs-cache-priority
 displayed_sidebar: docs
 ---
 

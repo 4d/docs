@@ -1,7 +1,7 @@
 ---
 id: web-get-current-session-id
 title: WEB Get Current Session ID
-slug: /commands-legacy/web-get-current-session-id
+slug: /commands/web-get-current-session-id
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-highlighted-records
 title: GET HIGHLIGHTED RECORDS
-slug: /commands-legacy/get-highlighted-records
+slug: /commands/get-highlighted-records
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: qr-move-column
 title: QR MOVE COLUMN
-slug: /commands-legacy/qr-move-column
+slug: /commands/qr-move-column
 displayed_sidebar: docs
 ---
 

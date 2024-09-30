@@ -1,7 +1,7 @@
 ---
 id: order-by
 title: ORDER BY
-slug: /commands-legacy/order-by
+slug: /commands/order-by
 displayed_sidebar: docs
 ---
 

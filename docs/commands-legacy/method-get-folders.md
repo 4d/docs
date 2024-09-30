@@ -1,7 +1,7 @@
 ---
 id: method-get-folders
 title: METHOD GET FOLDERS
-slug: /commands-legacy/method-get-folders
+slug: /commands/method-get-folders
 displayed_sidebar: docs
 ---
 

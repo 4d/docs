@@ -1,7 +1,7 @@
 ---
 id: focus-object
 title: Focus object
-slug: /commands-legacy/focus-object
+slug: /commands/focus-object
 displayed_sidebar: docs
 ---
 

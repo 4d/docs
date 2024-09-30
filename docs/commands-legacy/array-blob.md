@@ -1,7 +1,7 @@
 ---
 id: array-blob
 title: ARRAY BLOB
-slug: /commands-legacy/array-blob
+slug: /commands/array-blob
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: this
 title: This
-slug: /commands-legacy/this
+slug: /commands/this
 displayed_sidebar: docs
 ---
 

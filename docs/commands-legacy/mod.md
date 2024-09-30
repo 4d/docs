@@ -1,7 +1,7 @@
 ---
 id: mod
 title: Mod
-slug: /commands-legacy/mod
+slug: /commands/mod
 displayed_sidebar: docs
 ---
 

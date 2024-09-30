@@ -1,7 +1,7 @@
 ---
 id: one-record-select
 title: ONE RECORD SELECT
-slug: /commands-legacy/one-record-select
+slug: /commands/one-record-select
 displayed_sidebar: docs
 ---
 

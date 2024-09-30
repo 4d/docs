@@ -1,7 +1,7 @@
 ---
 id: qr-set-report-kind
 title: QR SET REPORT KIND
-slug: /commands-legacy/qr-set-report-kind
+slug: /commands/qr-set-report-kind
 displayed_sidebar: docs
 ---
 

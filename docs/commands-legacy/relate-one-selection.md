@@ -1,7 +1,7 @@
 ---
 id: relate-one-selection
 title: RELATE ONE SELECTION
-slug: /commands-legacy/relate-one-selection
+slug: /commands/relate-one-selection
 displayed_sidebar: docs
 ---
 

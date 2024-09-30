@@ -1,7 +1,7 @@
 ---
 id: generate-certificate-request
 title: GENERATE CERTIFICATE REQUEST
-slug: /commands-legacy/generate-certificate-request
+slug: /commands/generate-certificate-request
 displayed_sidebar: docs
 ---
 

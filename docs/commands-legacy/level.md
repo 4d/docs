@@ -1,7 +1,7 @@
 ---
 id: level
 title: Level
-slug: /commands-legacy/level
+slug: /commands/level
 displayed_sidebar: docs
 ---
 

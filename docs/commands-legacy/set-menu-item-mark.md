@@ -1,7 +1,7 @@
 ---
 id: set-menu-item-mark
 title: SET MENU ITEM MARK
-slug: /commands-legacy/set-menu-item-mark
+slug: /commands/set-menu-item-mark
 displayed_sidebar: docs
 ---
 

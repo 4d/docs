@@ -1,7 +1,7 @@
 ---
 id: qr-get-info-column
 title: QR GET INFO COLUMN
-slug: /commands-legacy/qr-get-info-column
+slug: /commands/qr-get-info-column
 displayed_sidebar: docs
 ---
 

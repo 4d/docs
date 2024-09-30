@@ -1,7 +1,7 @@
 ---
 id: insert-in-list
 title: INSERT IN LIST
-slug: /commands-legacy/insert-in-list
+slug: /commands/insert-in-list
 displayed_sidebar: docs
 ---
 

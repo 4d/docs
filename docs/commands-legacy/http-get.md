@@ -1,7 +1,7 @@
 ---
 id: http-get
 title: HTTP Get
-slug: /commands-legacy/http-get
+slug: /commands/http-get
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: web-send-http-redirect
 title: WEB SEND HTTP REDIRECT
-slug: /commands-legacy/web-send-http-redirect
+slug: /commands/web-send-http-redirect
 displayed_sidebar: docs
 ---
 

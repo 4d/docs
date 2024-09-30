@@ -1,7 +1,7 @@
 ---
 id: get-locked-records-info
 title: Get locked records info
-slug: /commands-legacy/get-locked-records-info
+slug: /commands/get-locked-records-info
 displayed_sidebar: docs
 ---
 

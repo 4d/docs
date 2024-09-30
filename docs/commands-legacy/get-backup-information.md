@@ -1,7 +1,7 @@
 ---
 id: get-backup-information
 title: GET BACKUP INFORMATION
-slug: /commands-legacy/get-backup-information
+slug: /commands/get-backup-information
 displayed_sidebar: docs
 ---
 

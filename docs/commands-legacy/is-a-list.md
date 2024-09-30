@@ -1,7 +1,7 @@
 ---
 id: is-a-list
 title: Is a list
-slug: /commands-legacy/is-a-list
+slug: /commands/is-a-list
 displayed_sidebar: docs
 ---
 

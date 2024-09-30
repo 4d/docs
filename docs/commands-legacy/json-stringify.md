@@ -1,7 +1,7 @@
 ---
 id: json-stringify
 title: JSON Stringify
-slug: /commands-legacy/json-stringify
+slug: /commands/json-stringify
 displayed_sidebar: docs
 ---
 

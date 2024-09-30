@@ -1,7 +1,7 @@
 ---
 id: web-get-body-part-count
 title: WEB Get body part count
-slug: /commands-legacy/web-get-body-part-count
+slug: /commands/web-get-body-part-count
 displayed_sidebar: docs
 ---
 

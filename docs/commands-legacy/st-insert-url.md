@@ -1,7 +1,7 @@
 ---
 id: st-insert-url
 title: ST INSERT URL
-slug: /commands-legacy/st-insert-url
+slug: /commands/st-insert-url
 displayed_sidebar: docs
 ---
 

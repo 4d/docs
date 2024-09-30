@@ -1,7 +1,7 @@
 ---
 id: open-administration-window
 title: OPEN ADMINISTRATION WINDOW
-slug: /commands-legacy/open-administration-window
+slug: /commands/open-administration-window
 displayed_sidebar: docs
 ---
 

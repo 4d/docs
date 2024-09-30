@@ -1,7 +1,7 @@
 ---
 id: listbox-get-column-formula
 title: LISTBOX Get column formula
-slug: /commands-legacy/listbox-get-column-formula
+slug: /commands/listbox-get-column-formula
 displayed_sidebar: docs
 ---
 

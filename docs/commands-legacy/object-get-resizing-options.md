@@ -1,7 +1,7 @@
 ---
 id: object-get-resizing-options
 title: OBJECT GET RESIZING OPTIONS
-slug: /commands-legacy/object-get-resizing-options
+slug: /commands/object-get-resizing-options
 displayed_sidebar: docs
 ---
 

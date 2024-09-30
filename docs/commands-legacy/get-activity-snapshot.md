@@ -1,7 +1,7 @@
 ---
 id: get-activity-snapshot
 title: GET ACTIVITY SNAPSHOT
-slug: /commands-legacy/get-activity-snapshot
+slug: /commands/get-activity-snapshot
 displayed_sidebar: docs
 ---
 

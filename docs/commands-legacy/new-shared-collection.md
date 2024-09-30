@@ -1,7 +1,7 @@
 ---
 id: new-shared-collection
 title: New shared collection
-slug: /commands-legacy/new-shared-collection
+slug: /commands/new-shared-collection
 displayed_sidebar: docs
 ---
 

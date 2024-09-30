@@ -1,7 +1,7 @@
 ---
 id: method-get-attribute
 title: METHOD Get attribute
-slug: /commands-legacy/method-get-attribute
+slug: /commands/method-get-attribute
 displayed_sidebar: docs
 ---
 

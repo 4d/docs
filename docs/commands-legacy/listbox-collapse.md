@@ -1,7 +1,7 @@
 ---
 id: listbox-collapse
 title: LISTBOX COLLAPSE
-slug: /commands-legacy/listbox-collapse
+slug: /commands/listbox-collapse
 displayed_sidebar: docs
 ---
 

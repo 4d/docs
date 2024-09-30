@@ -1,7 +1,7 @@
 ---
 id: drop-remote-user
 title: DROP REMOTE USER
-slug: /commands-legacy/drop-remote-user
+slug: /commands/drop-remote-user
 displayed_sidebar: docs
 ---
 

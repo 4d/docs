@@ -1,7 +1,7 @@
 ---
 id: st-set-options
 title: ST SET OPTIONS
-slug: /commands-legacy/st-set-options
+slug: /commands/st-set-options
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: delete-from-array
 title: DELETE FROM ARRAY
-slug: /commands-legacy/delete-from-array
+slug: /commands/delete-from-array
 displayed_sidebar: docs
 ---
 

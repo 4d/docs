@@ -1,7 +1,7 @@
 ---
 id: union
 title: UNION
-slug: /commands-legacy/union
+slug: /commands/union
 displayed_sidebar: docs
 ---
 

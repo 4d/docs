@@ -1,7 +1,7 @@
 ---
 id: generate-uuid
 title: Generate UUID
-slug: /commands-legacy/generate-uuid
+slug: /commands/generate-uuid
 displayed_sidebar: docs
 ---
 

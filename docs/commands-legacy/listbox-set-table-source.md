@@ -1,7 +1,7 @@
 ---
 id: listbox-set-table-source
 title: LISTBOX SET TABLE SOURCE
-slug: /commands-legacy/listbox-set-table-source
+slug: /commands/listbox-set-table-source
 displayed_sidebar: docs
 ---
 

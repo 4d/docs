@@ -1,7 +1,7 @@
 ---
 id: open-data-file
 title: OPEN DATA FILE
-slug: /commands-legacy/open-data-file
+slug: /commands/open-data-file
 displayed_sidebar: docs
 ---
 

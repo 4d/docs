@@ -1,7 +1,7 @@
 ---
 id: object-get-scroll-position
 title: OBJECT GET SCROLL POSITION
-slug: /commands-legacy/object-get-scroll-position
+slug: /commands/object-get-scroll-position
 displayed_sidebar: docs
 ---
 

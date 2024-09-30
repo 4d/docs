@@ -1,7 +1,7 @@
 ---
 id: listbox-get-row-color-as-number
 title: LISTBOX Get row color as number
-slug: /commands-legacy/listbox-get-row-color-as-number
+slug: /commands/listbox-get-row-color-as-number
 displayed_sidebar: docs
 ---
 

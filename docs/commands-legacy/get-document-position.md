@@ -1,7 +1,7 @@
 ---
 id: get-document-position
 title: Get document position
-slug: /commands-legacy/get-document-position
+slug: /commands/get-document-position
 displayed_sidebar: docs
 ---
 

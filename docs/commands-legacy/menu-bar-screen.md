@@ -1,7 +1,7 @@
 ---
 id: menu-bar-screen
 title: Menu bar screen
-slug: /commands-legacy/menu-bar-screen
+slug: /commands/menu-bar-screen
 displayed_sidebar: docs
 ---
 

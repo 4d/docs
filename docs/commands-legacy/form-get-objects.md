@@ -1,7 +1,7 @@
 ---
 id: form-get-objects
 title: FORM GET OBJECTS
-slug: /commands-legacy/form-get-objects
+slug: /commands/form-get-objects
 displayed_sidebar: docs
 ---
 

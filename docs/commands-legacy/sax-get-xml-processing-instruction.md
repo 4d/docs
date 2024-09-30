@@ -1,7 +1,7 @@
 ---
 id: sax-get-xml-processing-instruction
 title: SAX GET XML PROCESSING INSTRUCTION
-slug: /commands-legacy/sax-get-xml-processing-instruction
+slug: /commands/sax-get-xml-processing-instruction
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: array-integer
 title: ARRAY INTEGER
-slug: /commands-legacy/array-integer
+slug: /commands/array-integer
 displayed_sidebar: docs
 ---
 

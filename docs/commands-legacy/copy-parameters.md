@@ -1,7 +1,7 @@
 ---
 id: copy-parameters
 title: Copy parameters
-slug: /commands-legacy/copy-parameters
+slug: /commands/copy-parameters
 displayed_sidebar: docs
 ---
 

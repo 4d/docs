@@ -1,7 +1,7 @@
 ---
 id: ob-set
 title: OB SET
-slug: /commands-legacy/ob-set
+slug: /commands/ob-set
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: launch-external-process
 title: LAUNCH EXTERNAL PROCESS
-slug: /commands-legacy/launch-external-process
+slug: /commands/launch-external-process
 displayed_sidebar: docs
 ---
 

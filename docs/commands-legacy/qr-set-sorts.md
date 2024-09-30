@@ -1,7 +1,7 @@
 ---
 id: qr-set-sorts
 title: QR SET SORTS
-slug: /commands-legacy/qr-set-sorts
+slug: /commands/qr-set-sorts
 displayed_sidebar: docs
 ---
 

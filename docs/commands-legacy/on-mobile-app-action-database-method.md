@@ -1,7 +1,7 @@
 ---
 id: on-mobile-app-action-database-method
 title: On Mobile App Action database method
-slug: /commands-legacy/on-mobile-app-action-database-method
+slug: /commands/on-mobile-app-action-database-method
 displayed_sidebar: docs
 ---
 

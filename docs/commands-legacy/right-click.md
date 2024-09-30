@@ -1,7 +1,7 @@
 ---
 id: right-click
 title: Right click
-slug: /commands-legacy/right-click
+slug: /commands/right-click
 displayed_sidebar: docs
 ---
 

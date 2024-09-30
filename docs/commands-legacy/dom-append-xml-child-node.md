@@ -1,7 +1,7 @@
 ---
 id: dom-append-xml-child-node
 title: DOM Append XML child node
-slug: /commands-legacy/dom-append-xml-child-node
+slug: /commands/dom-append-xml-child-node
 displayed_sidebar: docs
 ---
 

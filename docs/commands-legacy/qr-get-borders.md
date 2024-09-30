@@ -1,7 +1,7 @@
 ---
 id: qr-get-borders
 title: QR GET BORDERS
-slug: /commands-legacy/qr-get-borders
+slug: /commands/qr-get-borders
 displayed_sidebar: docs
 ---
 

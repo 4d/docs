@@ -1,7 +1,7 @@
 ---
 id: test-path-name
 title: Test path name
-slug: /commands-legacy/test-path-name
+slug: /commands/test-path-name
 displayed_sidebar: docs
 ---
 

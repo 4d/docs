@@ -1,7 +1,7 @@
 ---
 id: c-text
 title: C_TEXT
-slug: /commands-legacy/c-text
+slug: /commands/c-text
 displayed_sidebar: docs
 ---
 

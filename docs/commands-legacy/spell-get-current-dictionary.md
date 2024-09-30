@@ -1,7 +1,7 @@
 ---
 id: spell-get-current-dictionary
 title: SPELL Get current dictionary
-slug: /commands-legacy/spell-get-current-dictionary
+slug: /commands/spell-get-current-dictionary
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-group-properties
 title: GET GROUP PROPERTIES
-slug: /commands-legacy/get-group-properties
+slug: /commands/get-group-properties
 displayed_sidebar: docs
 ---
 

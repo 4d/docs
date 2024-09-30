@@ -1,7 +1,7 @@
 ---
 id: relate-one
 title: RELATE ONE
-slug: /commands-legacy/relate-one
+slug: /commands/relate-one
 displayed_sidebar: docs
 ---
 

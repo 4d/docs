@@ -1,7 +1,7 @@
 ---
 id: form-get-current-page
 title: FORM Get current page
-slug: /commands-legacy/form-get-current-page
+slug: /commands/form-get-current-page
 displayed_sidebar: docs
 ---
 

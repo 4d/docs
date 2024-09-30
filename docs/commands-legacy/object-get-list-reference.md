@@ -1,7 +1,7 @@
 ---
 id: object-get-list-reference
 title: OBJECT Get list reference
-slug: /commands-legacy/object-get-list-reference
+slug: /commands/object-get-list-reference
 displayed_sidebar: docs
 ---
 

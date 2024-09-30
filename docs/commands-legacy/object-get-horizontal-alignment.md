@@ -1,7 +1,7 @@
 ---
 id: object-get-horizontal-alignment
 title: OBJECT Get horizontal alignment
-slug: /commands-legacy/object-get-horizontal-alignment
+slug: /commands/object-get-horizontal-alignment
 displayed_sidebar: docs
 ---
 

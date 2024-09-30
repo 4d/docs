@@ -1,7 +1,7 @@
 ---
 id: folder-list
 title: FOLDER LIST
-slug: /commands-legacy/folder-list
+slug: /commands/folder-list
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: object-set-font-size
 title: OBJECT SET FONT SIZE
-slug: /commands-legacy/object-set-font-size
+slug: /commands/object-set-font-size
 displayed_sidebar: docs
 ---
 

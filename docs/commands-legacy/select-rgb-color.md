@@ -1,7 +1,7 @@
 ---
 id: select-rgb-color
 title: Select RGB Color
-slug: /commands-legacy/select-rgb-color
+slug: /commands/select-rgb-color
 displayed_sidebar: docs
 ---
 

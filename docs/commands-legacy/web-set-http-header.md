@@ -1,7 +1,7 @@
 ---
 id: web-set-http-header
 title: WEB SET HTTP HEADER
-slug: /commands-legacy/web-set-http-header
+slug: /commands/web-set-http-header
 displayed_sidebar: docs
 ---
 

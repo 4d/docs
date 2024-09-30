@@ -1,7 +1,7 @@
 ---
 id: sax-add-xml-cdata
 title: SAX ADD XML CDATA
-slug: /commands-legacy/sax-add-xml-cdata
+slug: /commands/sax-add-xml-cdata
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: set-menu-item-parameter
 title: SET MENU ITEM PARAMETER
-slug: /commands-legacy/set-menu-item-parameter
+slug: /commands/set-menu-item-parameter
 displayed_sidebar: docs
 ---
 

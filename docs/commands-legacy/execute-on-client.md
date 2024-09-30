@@ -1,7 +1,7 @@
 ---
 id: execute-on-client
 title: EXECUTE ON CLIENT
-slug: /commands-legacy/execute-on-client
+slug: /commands/execute-on-client
 displayed_sidebar: docs
 ---
 

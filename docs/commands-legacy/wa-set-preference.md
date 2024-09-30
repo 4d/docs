@@ -1,7 +1,7 @@
 ---
 id: wa-set-preference
 title: WA SET PREFERENCE
-slug: /commands-legacy/wa-set-preference
+slug: /commands/wa-set-preference
 displayed_sidebar: docs
 ---
 

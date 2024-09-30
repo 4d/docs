@@ -1,7 +1,7 @@
 ---
 id: form-screenshot
 title: FORM SCREENSHOT
-slug: /commands-legacy/form-screenshot
+slug: /commands/form-screenshot
 displayed_sidebar: docs
 ---
 

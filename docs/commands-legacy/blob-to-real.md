@@ -1,7 +1,7 @@
 ---
 id: blob-to-real
 title: BLOB to real
-slug: /commands-legacy/blob-to-real
+slug: /commands/blob-to-real
 displayed_sidebar: docs
 ---
 

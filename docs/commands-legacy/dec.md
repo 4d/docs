@@ -1,7 +1,7 @@
 ---
 id: dec
 title: Dec
-slug: /commands-legacy/dec
+slug: /commands/dec
 displayed_sidebar: docs
 ---
 

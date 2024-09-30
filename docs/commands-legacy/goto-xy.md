@@ -1,7 +1,7 @@
 ---
 id: goto-xy
 title: GOTO XY
-slug: /commands-legacy/goto-xy
+slug: /commands/goto-xy
 displayed_sidebar: docs
 ---
 

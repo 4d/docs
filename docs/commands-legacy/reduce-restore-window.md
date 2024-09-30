@@ -1,7 +1,7 @@
 ---
 id: reduce-restore-window
 title: REDUCE RESTORE WINDOW
-slug: /commands-legacy/reduce-restore-window
+slug: /commands/reduce-restore-window
 displayed_sidebar: docs
 ---
 

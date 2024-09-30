@@ -1,7 +1,7 @@
 ---
 id: get-list-item-icon
 title: GET LIST ITEM ICON
-slug: /commands-legacy/get-list-item-icon
+slug: /commands/get-list-item-icon
 displayed_sidebar: docs
 ---
 

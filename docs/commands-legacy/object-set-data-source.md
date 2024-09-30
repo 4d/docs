@@ -1,7 +1,7 @@
 ---
 id: object-set-data-source
 title: OBJECT SET DATA SOURCE
-slug: /commands-legacy/object-set-data-source
+slug: /commands/object-set-data-source
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: set-plugin-access
 title: SET PLUGIN ACCESS
-slug: /commands-legacy/set-plugin-access
+slug: /commands/set-plugin-access
 displayed_sidebar: docs
 ---
 

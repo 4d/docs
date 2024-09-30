@@ -1,7 +1,7 @@
 ---
 id: min
 title: Min
-slug: /commands-legacy/min
+slug: /commands/min
 displayed_sidebar: docs
 ---
 

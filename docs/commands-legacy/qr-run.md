@@ -1,7 +1,7 @@
 ---
 id: qr-run
 title: QR RUN
-slug: /commands-legacy/qr-run
+slug: /commands/qr-run
 displayed_sidebar: docs
 ---
 

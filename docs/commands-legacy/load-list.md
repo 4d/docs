@@ -1,7 +1,7 @@
 ---
 id: load-list
 title: Load list
-slug: /commands-legacy/load-list
+slug: /commands/load-list
 displayed_sidebar: docs
 ---
 

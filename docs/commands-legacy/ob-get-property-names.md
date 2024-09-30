@@ -1,7 +1,7 @@
 ---
 id: ob-get-property-names
 title: OB GET PROPERTY NAMES
-slug: /commands-legacy/ob-get-property-names
+slug: /commands/ob-get-property-names
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: qr-get-document-property
 title: QR Get document property
-slug: /commands-legacy/qr-get-document-property
+slug: /commands/qr-get-document-property
 displayed_sidebar: docs
 ---
 

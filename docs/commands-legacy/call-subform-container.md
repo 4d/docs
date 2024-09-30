@@ -1,7 +1,7 @@
 ---
 id: call-subform-container
 title: CALL SUBFORM CONTAINER
-slug: /commands-legacy/call-subform-container
+slug: /commands/call-subform-container
 displayed_sidebar: docs
 ---
 

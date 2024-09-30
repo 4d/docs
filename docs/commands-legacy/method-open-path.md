@@ -1,7 +1,7 @@
 ---
 id: method-open-path
 title: METHOD OPEN PATH
-slug: /commands-legacy/method-open-path
+slug: /commands/method-open-path
 displayed_sidebar: docs
 ---
 

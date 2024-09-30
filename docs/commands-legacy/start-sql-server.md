@@ -1,7 +1,7 @@
 ---
 id: start-sql-server
 title: START SQL SERVER
-slug: /commands-legacy/start-sql-server
+slug: /commands/start-sql-server
 displayed_sidebar: docs
 ---
 

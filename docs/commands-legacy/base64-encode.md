@@ -1,7 +1,7 @@
 ---
 id: base64-encode
 title: BASE64 ENCODE
-slug: /commands-legacy/base64-encode
+slug: /commands/base64-encode
 displayed_sidebar: docs
 ---
 

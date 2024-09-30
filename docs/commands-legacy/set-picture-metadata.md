@@ -1,7 +1,7 @@
 ---
 id: set-picture-metadata
 title: SET PICTURE METADATA
-slug: /commands-legacy/set-picture-metadata
+slug: /commands/set-picture-metadata
 displayed_sidebar: docs
 ---
 

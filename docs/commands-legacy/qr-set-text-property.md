@@ -1,7 +1,7 @@
 ---
 id: qr-set-text-property
 title: QR SET TEXT PROPERTY
-slug: /commands-legacy/qr-set-text-property
+slug: /commands/qr-set-text-property
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: wa-get-page-title
 title: WA Get page title
-slug: /commands-legacy/wa-get-page-title
+slug: /commands/wa-get-page-title
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: st-get-expression
 title: ST Get expression
-slug: /commands-legacy/st-get-expression
+slug: /commands/st-get-expression
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: object-get-events
 title: OBJECT GET EVENTS
-slug: /commands-legacy/object-get-events
+slug: /commands/object-get-events
 displayed_sidebar: docs
 ---
 

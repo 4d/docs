@@ -1,7 +1,7 @@
 ---
 id: delay-process
 title: DELAY PROCESS
-slug: /commands-legacy/delay-process
+slug: /commands/delay-process
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: delete-folder
 title: DELETE FOLDER
-slug: /commands-legacy/delete-folder
+slug: /commands/delete-folder
 displayed_sidebar: docs
 ---
 

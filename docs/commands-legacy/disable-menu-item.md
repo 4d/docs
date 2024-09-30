@@ -1,7 +1,7 @@
 ---
 id: disable-menu-item
 title: DISABLE MENU ITEM
-slug: /commands-legacy/disable-menu-item
+slug: /commands/disable-menu-item
 displayed_sidebar: docs
 ---
 

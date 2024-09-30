@@ -1,7 +1,7 @@
 ---
 id: sql-export-selection
 title: SQL EXPORT SELECTION
-slug: /commands-legacy/sql-export-selection
+slug: /commands/sql-export-selection
 displayed_sidebar: docs
 ---
 

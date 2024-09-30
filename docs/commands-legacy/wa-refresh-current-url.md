@@ -1,7 +1,7 @@
 ---
 id: wa-refresh-current-url
 title: WA REFRESH CURRENT URL
-slug: /commands-legacy/wa-refresh-current-url
+slug: /commands/wa-refresh-current-url
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: messages-off
 title: MESSAGES OFF
-slug: /commands-legacy/messages-off
+slug: /commands/messages-off
 displayed_sidebar: docs
 ---
 

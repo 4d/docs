@@ -1,7 +1,7 @@
 ---
 id: object-set-list-by-reference
 title: OBJECT SET LIST BY REFERENCE
-slug: /commands-legacy/object-set-list-by-reference
+slug: /commands/object-set-list-by-reference
 displayed_sidebar: docs
 ---
 

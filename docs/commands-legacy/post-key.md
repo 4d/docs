@@ -1,7 +1,7 @@
 ---
 id: post-key
 title: POST KEY
-slug: /commands-legacy/post-key
+slug: /commands/post-key
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: modified-record
 title: Modified record
-slug: /commands-legacy/modified-record
+slug: /commands/modified-record
 displayed_sidebar: docs
 ---
 

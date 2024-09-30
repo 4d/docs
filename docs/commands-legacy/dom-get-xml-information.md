@@ -1,7 +1,7 @@
 ---
 id: dom-get-xml-information
 title: DOM Get XML information
-slug: /commands-legacy/dom-get-xml-information
+slug: /commands/dom-get-xml-information
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: set-menu-item-icon
 title: SET MENU ITEM ICON
-slug: /commands-legacy/set-menu-item-icon
+slug: /commands/set-menu-item-icon
 displayed_sidebar: docs
 ---
 

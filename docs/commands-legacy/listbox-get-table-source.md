@@ -1,7 +1,7 @@
 ---
 id: listbox-get-table-source
 title: LISTBOX GET TABLE SOURCE
-slug: /commands-legacy/listbox-get-table-source
+slug: /commands/listbox-get-table-source
 displayed_sidebar: docs
 ---
 

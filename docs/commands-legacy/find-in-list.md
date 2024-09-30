@@ -1,7 +1,7 @@
 ---
 id: find-in-list
 title: Find in list
-slug: /commands-legacy/find-in-list
+slug: /commands/find-in-list
 displayed_sidebar: docs
 ---
 

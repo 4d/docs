@@ -1,7 +1,7 @@
 ---
 id: resolve-pointer
 title: RESOLVE POINTER
-slug: /commands-legacy/resolve-pointer
+slug: /commands/resolve-pointer
 displayed_sidebar: docs
 ---
 

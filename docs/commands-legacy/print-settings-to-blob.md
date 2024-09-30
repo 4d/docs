@@ -1,7 +1,7 @@
 ---
 id: print-settings-to-blob
 title: Print settings to BLOB
-slug: /commands-legacy/print-settings-to-blob
+slug: /commands/print-settings-to-blob
 displayed_sidebar: docs
 ---
 

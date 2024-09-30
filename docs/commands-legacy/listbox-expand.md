@@ -1,7 +1,7 @@
 ---
 id: listbox-expand
 title: LISTBOX EXPAND
-slug: /commands-legacy/listbox-expand
+slug: /commands/listbox-expand
 displayed_sidebar: docs
 ---
 

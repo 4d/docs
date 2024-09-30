@@ -1,7 +1,7 @@
 ---
 id: get-subrecord-key
 title: Get subrecord key
-slug: /commands-legacy/get-subrecord-key
+slug: /commands/get-subrecord-key
 displayed_sidebar: docs
 ---
 

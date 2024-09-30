@@ -1,7 +1,7 @@
 ---
 id: set-drag-icon
 title: SET DRAG ICON
-slug: /commands-legacy/set-drag-icon
+slug: /commands/set-drag-icon
 displayed_sidebar: docs
 ---
 

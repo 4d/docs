@@ -1,7 +1,7 @@
 ---
 id: restore
 title: RESTORE
-slug: /commands-legacy/restore
+slug: /commands/restore
 displayed_sidebar: docs
 ---
 

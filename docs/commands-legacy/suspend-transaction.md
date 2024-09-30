@@ -1,7 +1,7 @@
 ---
 id: suspend-transaction
 title: SUSPEND TRANSACTION
-slug: /commands-legacy/suspend-transaction
+slug: /commands/suspend-transaction
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-resource-properties
 title: Get resource properties
-slug: /commands-legacy/get-resource-properties
+slug: /commands/get-resource-properties
 displayed_sidebar: docs
 ---
 

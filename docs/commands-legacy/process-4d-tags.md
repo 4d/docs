@@ -1,7 +1,7 @@
 ---
 id: process-4d-tags
 title: PROCESS 4D TAGS
-slug: /commands-legacy/process-4d-tags
+slug: /commands/process-4d-tags
 displayed_sidebar: docs
 ---
 

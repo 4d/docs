@@ -1,7 +1,7 @@
 ---
 id: set-cursor
 title: SET CURSOR
-slug: /commands-legacy/set-cursor
+slug: /commands/set-cursor
 displayed_sidebar: docs
 ---
 

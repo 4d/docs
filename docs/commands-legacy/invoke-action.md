@@ -1,7 +1,7 @@
 ---
 id: invoke-action
 title: INVOKE ACTION
-slug: /commands-legacy/invoke-action
+slug: /commands/invoke-action
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: selection-to-json
 title: Selection to JSON
-slug: /commands-legacy/selection-to-json
+slug: /commands/selection-to-json
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-printable-margin
 title: GET PRINTABLE MARGIN
-slug: /commands-legacy/get-printable-margin
+slug: /commands/get-printable-margin
 displayed_sidebar: docs
 ---
 

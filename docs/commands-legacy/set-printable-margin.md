@@ -1,7 +1,7 @@
 ---
 id: set-printable-margin
 title: SET PRINTABLE MARGIN
-slug: /commands-legacy/set-printable-margin
+slug: /commands/set-printable-margin
 displayed_sidebar: docs
 ---
 

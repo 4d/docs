@@ -1,7 +1,7 @@
 ---
 id: qr-get-destination
 title: QR GET DESTINATION
-slug: /commands-legacy/qr-get-destination
+slug: /commands/qr-get-destination
 displayed_sidebar: docs
 ---
 

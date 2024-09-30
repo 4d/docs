@@ -1,7 +1,7 @@
 ---
 id: sax-set-xml-declaration
 title: SAX SET XML DECLARATION
-slug: /commands-legacy/sax-set-xml-declaration
+slug: /commands/sax-set-xml-declaration
 displayed_sidebar: docs
 ---
 

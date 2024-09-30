@@ -1,7 +1,7 @@
 ---
 id: compare-strings
 title: Compare strings
-slug: /commands-legacy/compare-strings
+slug: /commands/compare-strings
 displayed_sidebar: docs
 ---
 

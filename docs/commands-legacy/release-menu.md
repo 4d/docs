@@ -1,7 +1,7 @@
 ---
 id: release-menu
 title: RELEASE MENU
-slug: /commands-legacy/release-menu
+slug: /commands/release-menu
 displayed_sidebar: docs
 ---
 

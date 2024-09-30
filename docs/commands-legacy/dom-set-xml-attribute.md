@@ -1,7 +1,7 @@
 ---
 id: dom-set-xml-attribute
 title: DOM SET XML ATTRIBUTE
-slug: /commands-legacy/dom-set-xml-attribute
+slug: /commands/dom-set-xml-attribute
 displayed_sidebar: docs
 ---
 

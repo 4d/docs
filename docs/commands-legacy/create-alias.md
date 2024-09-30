@@ -1,7 +1,7 @@
 ---
 id: create-alias
 title: CREATE ALIAS
-slug: /commands-legacy/create-alias
+slug: /commands/create-alias
 displayed_sidebar: docs
 ---
 

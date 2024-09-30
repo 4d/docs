@@ -1,7 +1,7 @@
 ---
 id: list-to-blob
 title: LIST TO BLOB
-slug: /commands-legacy/list-to-blob
+slug: /commands/list-to-blob
 displayed_sidebar: docs
 ---
 

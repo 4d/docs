@@ -1,7 +1,7 @@
 ---
 id: erase-window
 title: ERASE WINDOW
-slug: /commands-legacy/erase-window
+slug: /commands/erase-window
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: next-record
 title: NEXT RECORD
-slug: /commands-legacy/next-record
+slug: /commands/next-record
 displayed_sidebar: docs
 ---
 

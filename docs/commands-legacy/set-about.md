@@ -1,7 +1,7 @@
 ---
 id: set-about
 title: SET ABOUT
-slug: /commands-legacy/set-about
+slug: /commands/set-about
 displayed_sidebar: docs
 ---
 

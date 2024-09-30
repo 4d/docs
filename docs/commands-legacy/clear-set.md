@@ -1,7 +1,7 @@
 ---
 id: clear-set
 title: CLEAR SET
-slug: /commands-legacy/clear-set
+slug: /commands/clear-set
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: mobile-app-refresh-sessions
 title: MOBILE APP REFRESH SESSIONS
-slug: /commands-legacy/mobile-app-refresh-sessions
+slug: /commands/mobile-app-refresh-sessions
 displayed_sidebar: docs
 ---
 

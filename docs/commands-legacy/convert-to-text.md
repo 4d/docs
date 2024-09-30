@@ -1,7 +1,7 @@
 ---
 id: convert-to-text
 title: Convert to text
-slug: /commands-legacy/convert-to-text
+slug: /commands/convert-to-text
 displayed_sidebar: docs
 ---
 

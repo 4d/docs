@@ -1,7 +1,7 @@
 ---
 id: "null"
 title: "Null"
-slug: /commands-legacy/null
+slug: /commands/null
 displayed_sidebar: docs
 ---
 

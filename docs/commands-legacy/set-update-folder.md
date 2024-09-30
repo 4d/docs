@@ -1,7 +1,7 @@
 ---
 id: set-update-folder
 title: SET UPDATE FOLDER
-slug: /commands-legacy/set-update-folder
+slug: /commands/set-update-folder
 displayed_sidebar: docs
 ---
 

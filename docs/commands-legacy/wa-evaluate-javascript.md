@@ -1,7 +1,7 @@
 ---
 id: wa-evaluate-javascript
 title: WA Evaluate JavaScript
-slug: /commands-legacy/wa-evaluate-javascript
+slug: /commands/wa-evaluate-javascript
 displayed_sidebar: docs
 ---
 

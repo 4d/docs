@@ -1,7 +1,7 @@
 ---
 id: object-set-title
 title: OBJECT SET TITLE
-slug: /commands-legacy/object-set-title
+slug: /commands/object-set-title
 displayed_sidebar: docs
 ---
 

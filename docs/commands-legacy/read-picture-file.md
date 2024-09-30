@@ -1,7 +1,7 @@
 ---
 id: read-picture-file
 title: READ PICTURE FILE
-slug: /commands-legacy/read-picture-file
+slug: /commands/read-picture-file
 displayed_sidebar: docs
 ---
 

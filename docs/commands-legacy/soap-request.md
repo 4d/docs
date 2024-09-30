@@ -1,7 +1,7 @@
 ---
 id: soap-request
 title: SOAP Request
-slug: /commands-legacy/soap-request
+slug: /commands/soap-request
 displayed_sidebar: docs
 ---
 

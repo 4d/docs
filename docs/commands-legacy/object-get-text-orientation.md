@@ -1,7 +1,7 @@
 ---
 id: object-get-text-orientation
 title: OBJECT Get text orientation
-slug: /commands-legacy/object-get-text-orientation
+slug: /commands/object-get-text-orientation
 displayed_sidebar: docs
 ---
 

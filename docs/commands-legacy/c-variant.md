@@ -1,7 +1,7 @@
 ---
 id: c-variant
 title: C_VARIANT
-slug: /commands-legacy/c-variant
+slug: /commands/c-variant
 displayed_sidebar: docs
 ---
 

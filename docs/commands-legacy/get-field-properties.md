@@ -1,7 +1,7 @@
 ---
 id: get-field-properties
 title: GET FIELD PROPERTIES
-slug: /commands-legacy/get-field-properties
+slug: /commands/get-field-properties
 displayed_sidebar: docs
 ---
 

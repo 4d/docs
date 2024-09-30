@@ -1,7 +1,7 @@
 ---
 id: object-get-indicator-type
 title: OBJECT Get indicator type
-slug: /commands-legacy/object-get-indicator-type
+slug: /commands/object-get-indicator-type
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: set-window-rect
 title: SET WINDOW RECT
-slug: /commands-legacy/set-window-rect
+slug: /commands/set-window-rect
 displayed_sidebar: docs
 ---
 

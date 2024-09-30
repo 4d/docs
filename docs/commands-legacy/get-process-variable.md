@@ -1,7 +1,7 @@
 ---
 id: get-process-variable
 title: GET PROCESS VARIABLE
-slug: /commands-legacy/get-process-variable
+slug: /commands/get-process-variable
 displayed_sidebar: docs
 ---
 

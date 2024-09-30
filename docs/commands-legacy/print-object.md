@@ -1,7 +1,7 @@
 ---
 id: print-object
 title: Print object
-slug: /commands-legacy/print-object
+slug: /commands/print-object
 displayed_sidebar: docs
 ---
 

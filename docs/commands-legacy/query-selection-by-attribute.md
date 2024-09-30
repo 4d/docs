@@ -1,7 +1,7 @@
 ---
 id: query-selection-by-attribute
 title: QUERY SELECTION BY ATTRIBUTE
-slug: /commands-legacy/query-selection-by-attribute
+slug: /commands/query-selection-by-attribute
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: dom-set-xml-element-name
 title: DOM SET XML ELEMENT NAME
-slug: /commands-legacy/dom-set-xml-element-name
+slug: /commands/dom-set-xml-element-name
 displayed_sidebar: docs
 ---
 

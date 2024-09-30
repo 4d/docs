@@ -1,7 +1,7 @@
 ---
 id: get-localized-document-path
 title: Get localized document path
-slug: /commands-legacy/get-localized-document-path
+slug: /commands/get-localized-document-path
 displayed_sidebar: docs
 ---
 

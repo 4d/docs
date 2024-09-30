@@ -1,7 +1,7 @@
 ---
 id: sort-list
 title: SORT LIST
-slug: /commands-legacy/sort-list
+slug: /commands/sort-list
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-picture-from-pasteboard
 title: GET PICTURE FROM PASTEBOARD
-slug: /commands-legacy/get-picture-from-pasteboard
+slug: /commands/get-picture-from-pasteboard
 displayed_sidebar: docs
 ---
 

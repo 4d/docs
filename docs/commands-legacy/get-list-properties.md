@@ -1,7 +1,7 @@
 ---
 id: get-list-properties
 title: GET LIST PROPERTIES
-slug: /commands-legacy/get-list-properties
+slug: /commands/get-list-properties
 displayed_sidebar: docs
 ---
 

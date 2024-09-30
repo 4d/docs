@@ -1,7 +1,7 @@
 ---
 id: get-last-query-path
 title: Get last query path
-slug: /commands-legacy/get-last-query-path
+slug: /commands/get-last-query-path
 displayed_sidebar: docs
 ---
 

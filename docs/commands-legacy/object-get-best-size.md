@@ -1,7 +1,7 @@
 ---
 id: object-get-best-size
 title: OBJECT GET BEST SIZE
-slug: /commands-legacy/object-get-best-size
+slug: /commands/object-get-best-size
 displayed_sidebar: docs
 ---
 

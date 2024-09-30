@@ -1,7 +1,7 @@
 ---
 id: st-set-plain-text
 title: ST SET PLAIN TEXT
-slug: /commands-legacy/st-set-plain-text
+slug: /commands/st-set-plain-text
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: on-backup-startup-database-method
 title: On Backup Startup database method
-slug: /commands-legacy/on-backup-startup-database-method
+slug: /commands/on-backup-startup-database-method
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-serial-port-mapping
 title: GET SERIAL PORT MAPPING
-slug: /commands-legacy/get-serial-port-mapping
+slug: /commands/get-serial-port-mapping
 displayed_sidebar: docs
 ---
 

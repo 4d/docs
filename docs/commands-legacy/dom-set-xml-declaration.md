@@ -1,7 +1,7 @@
 ---
 id: dom-set-xml-declaration
 title: DOM SET XML DECLARATION
-slug: /commands-legacy/dom-set-xml-declaration
+slug: /commands/dom-set-xml-declaration
 displayed_sidebar: docs
 ---
 

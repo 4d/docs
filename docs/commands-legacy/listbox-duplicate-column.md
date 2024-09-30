@@ -1,7 +1,7 @@
 ---
 id: listbox-duplicate-column
 title: LISTBOX DUPLICATE COLUMN
-slug: /commands-legacy/listbox-duplicate-column
+slug: /commands/listbox-duplicate-column
 displayed_sidebar: docs
 ---
 

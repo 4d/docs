@@ -1,7 +1,7 @@
 ---
 id: set-menu-item-shortcut
 title: SET MENU ITEM SHORTCUT
-slug: /commands-legacy/set-menu-item-shortcut
+slug: /commands/set-menu-item-shortcut
 displayed_sidebar: docs
 ---
 

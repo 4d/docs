@@ -1,7 +1,7 @@
 ---
 id: get-list-item
 title: GET LIST ITEM
-slug: /commands-legacy/get-list-item
+slug: /commands/get-list-item
 displayed_sidebar: docs
 ---
 

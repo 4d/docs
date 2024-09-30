@@ -1,7 +1,7 @@
 ---
 id: dom-export-to-var
 title: DOM EXPORT TO VAR
-slug: /commands-legacy/dom-export-to-var
+slug: /commands/dom-export-to-var
 displayed_sidebar: docs
 ---
 

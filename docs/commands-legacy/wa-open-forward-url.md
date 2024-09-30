@@ -1,7 +1,7 @@
 ---
 id: wa-open-forward-url
 title: WA OPEN FORWARD URL
-slug: /commands-legacy/wa-open-forward-url
+slug: /commands/wa-open-forward-url
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: object-get-data-source
 title: OBJECT Get data source
-slug: /commands-legacy/object-get-data-source
+slug: /commands/object-get-data-source
 displayed_sidebar: docs
 ---
 

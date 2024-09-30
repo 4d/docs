@@ -1,7 +1,7 @@
 ---
 id: old
 title: Old
-slug: /commands-legacy/old
+slug: /commands/old
 displayed_sidebar: docs
 ---
 

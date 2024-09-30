@@ -1,7 +1,7 @@
 ---
 id: get-pasteboard-data-type
 title: GET PASTEBOARD DATA TYPE
-slug: /commands-legacy/get-pasteboard-data-type
+slug: /commands/get-pasteboard-data-type
 displayed_sidebar: docs
 ---
 

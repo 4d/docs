@@ -1,7 +1,7 @@
 ---
 id: append-to-list
 title: APPEND TO LIST
-slug: /commands-legacy/append-to-list
+slug: /commands/append-to-list
 displayed_sidebar: docs
 ---
 

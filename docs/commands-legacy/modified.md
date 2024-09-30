@@ -1,7 +1,7 @@
 ---
 id: modified
 title: Modified
-slug: /commands-legacy/modified
+slug: /commands/modified
 displayed_sidebar: docs
 ---
 

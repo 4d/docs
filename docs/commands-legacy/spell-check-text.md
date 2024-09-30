@@ -1,7 +1,7 @@
 ---
 id: spell-check-text
 title: SPELL CHECK TEXT
-slug: /commands-legacy/spell-check-text
+slug: /commands/spell-check-text
 displayed_sidebar: docs
 ---
 

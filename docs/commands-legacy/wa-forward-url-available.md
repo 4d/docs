@@ -1,7 +1,7 @@
 ---
 id: wa-forward-url-available
 title: WA Forward URL available
-slug: /commands-legacy/wa-forward-url-available
+slug: /commands/wa-forward-url-available
 displayed_sidebar: docs
 ---
 

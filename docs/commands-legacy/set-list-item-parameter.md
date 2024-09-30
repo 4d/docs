@@ -1,7 +1,7 @@
 ---
 id: set-list-item-parameter
 title: SET LIST ITEM PARAMETER
-slug: /commands-legacy/set-list-item-parameter
+slug: /commands/set-list-item-parameter
 displayed_sidebar: docs
 ---
 

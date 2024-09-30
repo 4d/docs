@@ -1,7 +1,7 @@
 ---
 id: backup
 title: BACKUP
-slug: /commands-legacy/backup
+slug: /commands/backup
 displayed_sidebar: docs
 ---
 

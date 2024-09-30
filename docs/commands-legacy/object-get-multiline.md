@@ -1,7 +1,7 @@
 ---
 id: object-get-multiline
 title: OBJECT Get multiline
-slug: /commands-legacy/object-get-multiline
+slug: /commands/object-get-multiline
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-picture-keywords
 title: GET PICTURE KEYWORDS
-slug: /commands-legacy/get-picture-keywords
+slug: /commands/get-picture-keywords
 displayed_sidebar: docs
 ---
 

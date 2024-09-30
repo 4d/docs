@@ -1,7 +1,7 @@
 ---
 id: qr-set-info-row
 title: QR SET INFO ROW
-slug: /commands-legacy/qr-set-info-row
+slug: /commands/qr-set-info-row
 displayed_sidebar: docs
 ---
 

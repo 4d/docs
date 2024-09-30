@@ -1,7 +1,7 @@
 ---
 id: get-picture-resource
 title: GET PICTURE RESOURCE
-slug: /commands-legacy/get-picture-resource
+slug: /commands/get-picture-resource
 displayed_sidebar: docs
 ---
 

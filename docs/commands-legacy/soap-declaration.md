@@ -1,7 +1,7 @@
 ---
 id: soap-declaration
 title: SOAP DECLARATION
-slug: /commands-legacy/soap-declaration
+slug: /commands/soap-declaration
 displayed_sidebar: docs
 ---
 

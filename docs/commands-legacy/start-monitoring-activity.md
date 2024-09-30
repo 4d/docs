@@ -1,7 +1,7 @@
 ---
 id: start-monitoring-activity
 title: START MONITORING ACTIVITY
-slug: /commands-legacy/start-monitoring-activity
+slug: /commands/start-monitoring-activity
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: generate-encryption-keypair
 title: GENERATE ENCRYPTION KEYPAIR
-slug: /commands-legacy/generate-encryption-keypair
+slug: /commands/generate-encryption-keypair
 displayed_sidebar: docs
 ---
 

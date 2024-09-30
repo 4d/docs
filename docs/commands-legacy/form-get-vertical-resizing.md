@@ -1,7 +1,7 @@
 ---
 id: form-get-vertical-resizing
 title: FORM GET VERTICAL RESIZING
-slug: /commands-legacy/form-get-vertical-resizing
+slug: /commands/form-get-vertical-resizing
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: maximize-window
 title: MAXIMIZE WINDOW
-slug: /commands-legacy/maximize-window
+slug: /commands/maximize-window
 displayed_sidebar: docs
 ---
 

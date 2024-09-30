@@ -1,7 +1,7 @@
 ---
 id: change-current-user
 title: CHANGE CURRENT USER
-slug: /commands-legacy/change-current-user
+slug: /commands/change-current-user
 displayed_sidebar: docs
 ---
 

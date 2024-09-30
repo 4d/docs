@@ -1,7 +1,7 @@
 ---
 id: set-picture-to-pasteboard
 title: SET PICTURE TO PASTEBOARD
-slug: /commands-legacy/set-picture-to-pasteboard
+slug: /commands/set-picture-to-pasteboard
 displayed_sidebar: docs
 ---
 

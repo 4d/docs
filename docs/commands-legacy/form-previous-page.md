@@ -1,7 +1,7 @@
 ---
 id: form-previous-page
 title: FORM PREVIOUS PAGE
-slug: /commands-legacy/form-previous-page
+slug: /commands/form-previous-page
 displayed_sidebar: docs
 ---
 

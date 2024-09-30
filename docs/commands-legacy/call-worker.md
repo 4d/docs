@@ -1,7 +1,7 @@
 ---
 id: call-worker
 title: CALL WORKER
-slug: /commands-legacy/call-worker
+slug: /commands/call-worker
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: screen-depth
 title: SCREEN DEPTH
-slug: /commands-legacy/screen-depth
+slug: /commands/screen-depth
 displayed_sidebar: docs
 ---
 

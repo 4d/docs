@@ -1,7 +1,7 @@
 ---
 id: ob-set-null
 title: OB SET NULL
-slug: /commands-legacy/ob-set-null
+slug: /commands/ob-set-null
 displayed_sidebar: docs
 ---
 

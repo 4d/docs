@@ -1,7 +1,7 @@
 ---
 id: cancel
 title: CANCEL
-slug: /commands-legacy/cancel
+slug: /commands/cancel
 displayed_sidebar: docs
 ---
 

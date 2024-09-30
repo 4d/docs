@@ -1,7 +1,7 @@
 ---
 id: import-data
 title: IMPORT DATA
-slug: /commands-legacy/import-data
+slug: /commands/import-data
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-last-error-stack
 title: GET LAST ERROR STACK
-slug: /commands-legacy/get-last-error-stack
+slug: /commands/get-last-error-stack
 displayed_sidebar: docs
 ---
 

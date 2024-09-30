@@ -1,7 +1,7 @@
 ---
 id: count-screens
 title: Count screens
-slug: /commands-legacy/count-screens
+slug: /commands/count-screens
 displayed_sidebar: docs
 ---
 

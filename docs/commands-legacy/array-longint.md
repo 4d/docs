@@ -1,7 +1,7 @@
 ---
 id: array-longint
 title: ARRAY LONGINT
-slug: /commands-legacy/array-longint
+slug: /commands/array-longint
 displayed_sidebar: docs
 ---
 

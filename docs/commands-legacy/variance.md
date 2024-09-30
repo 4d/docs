@@ -1,7 +1,7 @@
 ---
 id: variance
 title: Variance
-slug: /commands-legacy/variance
+slug: /commands/variance
 displayed_sidebar: docs
 ---
 

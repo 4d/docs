@@ -1,7 +1,7 @@
 ---
 id: clear-variable
 title: CLEAR VARIABLE
-slug: /commands-legacy/clear-variable
+slug: /commands/clear-variable
 displayed_sidebar: docs
 ---
 

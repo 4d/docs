@@ -1,7 +1,7 @@
 ---
 id: read-write
 title: READ WRITE
-slug: /commands-legacy/read-write
+slug: /commands/read-write
 displayed_sidebar: docs
 ---
 

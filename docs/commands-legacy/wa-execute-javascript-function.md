@@ -1,7 +1,7 @@
 ---
 id: wa-execute-javascript-function
 title: WA EXECUTE JAVASCRIPT FUNCTION
-slug: /commands-legacy/wa-execute-javascript-function
+slug: /commands/wa-execute-javascript-function
 displayed_sidebar: docs
 ---
 

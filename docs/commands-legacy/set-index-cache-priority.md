@@ -1,7 +1,7 @@
 ---
 id: set-index-cache-priority
 title: SET INDEX CACHE PRIORITY
-slug: /commands-legacy/set-index-cache-priority
+slug: /commands/set-index-cache-priority
 displayed_sidebar: docs
 ---
 

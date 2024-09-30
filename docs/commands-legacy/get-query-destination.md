@@ -1,7 +1,7 @@
 ---
 id: get-query-destination
 title: GET QUERY DESTINATION
-slug: /commands-legacy/get-query-destination
+slug: /commands/get-query-destination
 displayed_sidebar: docs
 ---
 

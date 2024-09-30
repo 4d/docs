@@ -1,7 +1,7 @@
 ---
 id: substring
 title: Substring
-slug: /commands-legacy/substring
+slug: /commands/substring
 displayed_sidebar: docs
 ---
 

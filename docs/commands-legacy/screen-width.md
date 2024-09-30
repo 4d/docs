@@ -1,7 +1,7 @@
 ---
 id: screen-width
 title: Screen width
-slug: /commands-legacy/screen-width
+slug: /commands/screen-width
 displayed_sidebar: docs
 ---
 

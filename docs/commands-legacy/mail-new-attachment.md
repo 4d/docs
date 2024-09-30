@@ -1,7 +1,7 @@
 ---
 id: mail-new-attachment
 title: MAIL New attachment
-slug: /commands-legacy/mail-new-attachment
+slug: /commands/mail-new-attachment
 displayed_sidebar: docs
 ---
 

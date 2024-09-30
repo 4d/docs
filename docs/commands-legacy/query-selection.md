@@ -1,7 +1,7 @@
 ---
 id: query-selection
 title: QUERY SELECTION
-slug: /commands-legacy/query-selection
+slug: /commands/query-selection
 displayed_sidebar: docs
 ---
 

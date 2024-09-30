@@ -1,7 +1,7 @@
 ---
 id: ob-is-defined
 title: OB Is defined
-slug: /commands-legacy/ob-is-defined
+slug: /commands/ob-is-defined
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-plugin-access
 title: Get plugin access
-slug: /commands-legacy/get-plugin-access
+slug: /commands/get-plugin-access
 displayed_sidebar: docs
 ---
 

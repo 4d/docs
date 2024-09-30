@@ -1,7 +1,7 @@
 ---
 id: object-get-help-tip
 title: OBJECT Get help tip
-slug: /commands-legacy/object-get-help-tip
+slug: /commands/object-get-help-tip
 displayed_sidebar: docs
 ---
 

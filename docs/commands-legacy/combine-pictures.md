@@ -1,7 +1,7 @@
 ---
 id: combine-pictures
 title: COMBINE PICTURES
-slug: /commands-legacy/combine-pictures
+slug: /commands/combine-pictures
 displayed_sidebar: docs
 ---
 

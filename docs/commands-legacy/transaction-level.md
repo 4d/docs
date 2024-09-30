@@ -1,7 +1,7 @@
 ---
 id: transaction-level
 title: Transaction level
-slug: /commands-legacy/transaction-level
+slug: /commands/transaction-level
 displayed_sidebar: docs
 ---
 

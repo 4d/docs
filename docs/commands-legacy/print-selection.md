@@ -1,7 +1,7 @@
 ---
 id: print-selection
 title: PRINT SELECTION
-slug: /commands-legacy/print-selection
+slug: /commands/print-selection
 displayed_sidebar: docs
 ---
 

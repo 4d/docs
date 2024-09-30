@@ -1,7 +1,7 @@
 ---
 id: move-document
 title: MOVE DOCUMENT
-slug: /commands-legacy/move-document
+slug: /commands/move-document
 displayed_sidebar: docs
 ---
 

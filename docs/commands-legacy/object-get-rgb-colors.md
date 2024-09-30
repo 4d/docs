@@ -1,7 +1,7 @@
 ---
 id: object-get-rgb-colors
 title: OBJECT GET RGB COLORS
-slug: /commands-legacy/object-get-rgb-colors
+slug: /commands/object-get-rgb-colors
 displayed_sidebar: docs
 ---
 

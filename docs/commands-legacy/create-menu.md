@@ -1,7 +1,7 @@
 ---
 id: create-menu
 title: Create menu
-slug: /commands-legacy/create-menu
+slug: /commands/create-menu
 displayed_sidebar: docs
 ---
 

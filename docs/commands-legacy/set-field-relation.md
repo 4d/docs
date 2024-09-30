@@ -1,7 +1,7 @@
 ---
 id: set-field-relation
 title: SET FIELD RELATION
-slug: /commands-legacy/set-field-relation
+slug: /commands/set-field-relation
 displayed_sidebar: docs
 ---
 

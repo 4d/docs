@@ -1,7 +1,7 @@
 ---
 id: set-print-option
 title: SET PRINT OPTION
-slug: /commands-legacy/set-print-option
+slug: /commands/set-print-option
 displayed_sidebar: docs
 ---
 

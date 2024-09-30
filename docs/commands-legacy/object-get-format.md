@@ -1,7 +1,7 @@
 ---
 id: object-get-format
 title: OBJECT Get format
-slug: /commands-legacy/object-get-format
+slug: /commands/object-get-format
 displayed_sidebar: docs
 ---
 

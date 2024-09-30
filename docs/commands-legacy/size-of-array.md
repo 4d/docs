@@ -1,7 +1,7 @@
 ---
 id: size-of-array
 title: Size of array
-slug: /commands-legacy/size-of-array
+slug: /commands/size-of-array
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: qr-delete-offscreen-area
 title: QR DELETE OFFSCREEN AREA
-slug: /commands-legacy/qr-delete-offscreen-area
+slug: /commands/qr-delete-offscreen-area
 displayed_sidebar: docs
 ---
 

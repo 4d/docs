@@ -1,7 +1,7 @@
 ---
 id: c-longint
 title: C_LONGINT
-slug: /commands-legacy/c-longint
+slug: /commands/c-longint
 displayed_sidebar: docs
 ---
 

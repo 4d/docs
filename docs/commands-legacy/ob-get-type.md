@@ -1,7 +1,7 @@
 ---
 id: ob-get-type
 title: OB Get type
-slug: /commands-legacy/ob-get-type
+slug: /commands/ob-get-type
 displayed_sidebar: docs
 ---
 

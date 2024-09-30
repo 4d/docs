@@ -1,7 +1,7 @@
 ---
 id: add-record
 title: ADD RECORD
-slug: /commands-legacy/add-record
+slug: /commands/add-record
 displayed_sidebar: docs
 ---
 

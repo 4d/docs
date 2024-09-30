@@ -1,7 +1,7 @@
 ---
 id: convert-from-text
 title: CONVERT FROM TEXT
-slug: /commands-legacy/convert-from-text
+slug: /commands/convert-from-text
 displayed_sidebar: docs
 ---
 

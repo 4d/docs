@@ -1,7 +1,7 @@
 ---
 id: get-memory-statistics
 title: GET MEMORY STATISTICS
-slug: /commands-legacy/get-memory-statistics
+slug: /commands/get-memory-statistics
 displayed_sidebar: docs
 ---
 

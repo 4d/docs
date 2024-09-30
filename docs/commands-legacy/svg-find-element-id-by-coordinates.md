@@ -1,7 +1,7 @@
 ---
 id: svg-find-element-id-by-coordinates
 title: SVG Find element ID by coordinates
-slug: /commands-legacy/svg-find-element-id-by-coordinates
+slug: /commands/svg-find-element-id-by-coordinates
 displayed_sidebar: docs
 ---
 

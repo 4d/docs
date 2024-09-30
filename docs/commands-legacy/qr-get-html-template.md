@@ -1,7 +1,7 @@
 ---
 id: qr-get-html-template
 title: QR Get HTML template
-slug: /commands-legacy/qr-get-html-template
+slug: /commands/qr-get-html-template
 displayed_sidebar: docs
 ---
 

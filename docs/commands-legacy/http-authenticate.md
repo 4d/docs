@@ -1,7 +1,7 @@
 ---
 id: http-authenticate
 title: HTTP AUTHENTICATE
-slug: /commands-legacy/http-authenticate
+slug: /commands/http-authenticate
 displayed_sidebar: docs
 ---
 

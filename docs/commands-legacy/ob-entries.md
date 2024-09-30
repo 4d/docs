@@ -1,7 +1,7 @@
 ---
 id: ob-entries
 title: OB Entries
-slug: /commands-legacy/ob-entries
+slug: /commands/ob-entries
 displayed_sidebar: docs
 ---
 

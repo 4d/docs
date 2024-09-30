@@ -1,7 +1,7 @@
 ---
 id: sax-open-xml-element
 title: SAX OPEN XML ELEMENT
-slug: /commands-legacy/sax-open-xml-element
+slug: /commands/sax-open-xml-element
 displayed_sidebar: docs
 ---
 

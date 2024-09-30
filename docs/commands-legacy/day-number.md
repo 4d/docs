@@ -1,7 +1,7 @@
 ---
 id: day-number
 title: Day number
-slug: /commands-legacy/day-number
+slug: /commands/day-number
 displayed_sidebar: docs
 ---
 

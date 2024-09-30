@@ -1,7 +1,7 @@
 ---
 id: listbox-get-rows-height
 title: LISTBOX Get rows height
-slug: /commands-legacy/listbox-get-rows-height
+slug: /commands/listbox-get-rows-height
 displayed_sidebar: docs
 ---
 

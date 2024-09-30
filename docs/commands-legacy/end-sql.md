@@ -1,7 +1,7 @@
 ---
 id: end-sql
 title: End SQL
-slug: /commands-legacy/end-sql
+slug: /commands/end-sql
 displayed_sidebar: docs
 ---
 

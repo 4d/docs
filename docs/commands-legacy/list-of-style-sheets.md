@@ -1,7 +1,7 @@
 ---
 id: list-of-style-sheets
 title: LIST OF STYLE SHEETS
-slug: /commands-legacy/list-of-style-sheets
+slug: /commands/list-of-style-sheets
 displayed_sidebar: docs
 ---
 

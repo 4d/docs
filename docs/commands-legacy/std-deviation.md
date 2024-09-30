@@ -1,7 +1,7 @@
 ---
 id: std-deviation
 title: Std deviation
-slug: /commands-legacy/std-deviation
+slug: /commands/std-deviation
 displayed_sidebar: docs
 ---
 

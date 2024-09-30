@@ -1,7 +1,7 @@
 ---
 id: read-only-state
 title: Read only state
-slug: /commands-legacy/read-only-state
+slug: /commands/read-only-state
 displayed_sidebar: docs
 ---
 

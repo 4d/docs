@@ -1,7 +1,7 @@
 ---
 id: window-kind
 title: Window kind
-slug: /commands-legacy/window-kind
+slug: /commands/window-kind
 displayed_sidebar: docs
 ---
 

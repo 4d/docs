@@ -1,7 +1,7 @@
 ---
 id: set-real-comparison-level
 title: SET REAL COMPARISON LEVEL
-slug: /commands-legacy/set-real-comparison-level
+slug: /commands/set-real-comparison-level
 displayed_sidebar: docs
 ---
 

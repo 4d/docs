@@ -1,7 +1,7 @@
 ---
 id: ldap-search-all
 title: LDAP SEARCH ALL
-slug: /commands-legacy/ldap-search-all
+slug: /commands/ldap-search-all
 displayed_sidebar: docs
 ---
 

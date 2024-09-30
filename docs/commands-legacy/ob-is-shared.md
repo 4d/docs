@@ -1,7 +1,7 @@
 ---
 id: ob-is-shared
 title: OB Is shared
-slug: /commands-legacy/ob-is-shared
+slug: /commands/ob-is-shared
 displayed_sidebar: docs
 ---
 

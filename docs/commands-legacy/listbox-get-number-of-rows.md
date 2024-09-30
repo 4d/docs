@@ -1,7 +1,7 @@
 ---
 id: listbox-get-number-of-rows
 title: LISTBOX Get number of rows
-slug: /commands-legacy/listbox-get-number-of-rows
+slug: /commands/listbox-get-number-of-rows
 displayed_sidebar: docs
 ---
 

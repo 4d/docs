@@ -1,7 +1,7 @@
 ---
 id: web-service-get-result
 title: WEB SERVICE GET RESULT
-slug: /commands-legacy/web-service-get-result
+slug: /commands/web-service-get-result
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: trace
 title: TRACE
-slug: /commands-legacy/trace
+slug: /commands/trace
 displayed_sidebar: docs
 ---
 

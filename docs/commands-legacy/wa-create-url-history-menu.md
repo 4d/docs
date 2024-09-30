@@ -1,7 +1,7 @@
 ---
 id: wa-create-url-history-menu
 title: WA Create URL history menu
-slug: /commands-legacy/wa-create-url-history-menu
+slug: /commands/wa-create-url-history-menu
 displayed_sidebar: docs
 ---
 

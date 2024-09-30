@@ -1,7 +1,7 @@
 ---
 id: form-convert-to-dynamic
 title: FORM Convert to dynamic
-slug: /commands-legacy/form-convert-to-dynamic
+slug: /commands/form-convert-to-dynamic
 displayed_sidebar: docs
 ---
 

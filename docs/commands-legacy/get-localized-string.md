@@ -1,7 +1,7 @@
 ---
 id: get-localized-string
 title: Get localized string
-slug: /commands-legacy/get-localized-string
+slug: /commands/get-localized-string
 displayed_sidebar: docs
 ---
 

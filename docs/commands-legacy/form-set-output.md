@@ -1,7 +1,7 @@
 ---
 id: form-set-output
 title: FORM SET OUTPUT
-slug: /commands-legacy/form-set-output
+slug: /commands/form-set-output
 displayed_sidebar: docs
 ---
 

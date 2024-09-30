@@ -1,7 +1,7 @@
 ---
 id: object-set-subform
 title: OBJECT SET SUBFORM
-slug: /commands-legacy/object-set-subform
+slug: /commands/object-set-subform
 displayed_sidebar: docs
 ---
 

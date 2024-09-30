@@ -1,7 +1,7 @@
 ---
 id: dom-get-xml-element-value
 title: DOM GET XML ELEMENT VALUE
-slug: /commands-legacy/dom-get-xml-element-value
+slug: /commands/dom-get-xml-element-value
 displayed_sidebar: docs
 ---
 

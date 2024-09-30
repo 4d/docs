@@ -1,7 +1,7 @@
 ---
 id: open-database
 title: OPEN DATABASE
-slug: /commands-legacy/open-database
+slug: /commands/open-database
 displayed_sidebar: docs
 ---
 

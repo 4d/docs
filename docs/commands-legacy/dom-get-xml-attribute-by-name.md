@@ -1,7 +1,7 @@
 ---
 id: dom-get-xml-attribute-by-name
 title: DOM GET XML ATTRIBUTE BY NAME
-slug: /commands-legacy/dom-get-xml-attribute-by-name
+slug: /commands/dom-get-xml-attribute-by-name
 displayed_sidebar: docs
 ---
 

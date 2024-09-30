@@ -1,7 +1,7 @@
 ---
 id: document-to-text
 title: Document to text
-slug: /commands-legacy/document-to-text
+slug: /commands/document-to-text
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: array-picture
 title: ARRAY PICTURE
-slug: /commands-legacy/array-picture
+slug: /commands/array-picture
 displayed_sidebar: docs
 ---
 

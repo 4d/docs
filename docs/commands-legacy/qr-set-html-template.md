@@ -1,7 +1,7 @@
 ---
 id: qr-set-html-template
 title: QR SET HTML TEMPLATE
-slug: /commands-legacy/qr-set-html-template
+slug: /commands/qr-set-html-template
 displayed_sidebar: docs
 ---
 

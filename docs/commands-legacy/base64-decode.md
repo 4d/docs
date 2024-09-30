@@ -1,7 +1,7 @@
 ---
 id: base64-decode
 title: BASE64 DECODE
-slug: /commands-legacy/base64-decode
+slug: /commands/base64-decode
 displayed_sidebar: docs
 ---
 

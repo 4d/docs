@@ -1,7 +1,7 @@
 ---
 id: wa-open-web-inspector
 title: WA OPEN WEB INSPECTOR
-slug: /commands-legacy/wa-open-web-inspector
+slug: /commands/wa-open-web-inspector
 displayed_sidebar: docs
 ---
 

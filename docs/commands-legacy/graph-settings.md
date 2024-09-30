@@ -1,7 +1,7 @@
 ---
 id: graph-settings
 title: GRAPH SETTINGS
-slug: /commands-legacy/graph-settings
+slug: /commands/graph-settings
 displayed_sidebar: docs
 ---
 

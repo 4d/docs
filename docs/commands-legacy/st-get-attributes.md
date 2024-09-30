@@ -1,7 +1,7 @@
 ---
 id: st-get-attributes
 title: ST GET ATTRIBUTES
-slug: /commands-legacy/st-get-attributes
+slug: /commands/st-get-attributes
 displayed_sidebar: docs
 ---
 

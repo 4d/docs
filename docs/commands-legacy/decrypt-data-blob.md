@@ -1,7 +1,7 @@
 ---
 id: decrypt-data-blob
 title: Decrypt data BLOB
-slug: /commands-legacy/decrypt-data-blob
+slug: /commands/decrypt-data-blob
 displayed_sidebar: docs
 ---
 

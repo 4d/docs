@@ -1,7 +1,7 @@
 ---
 id: insert-in-array
 title: INSERT IN ARRAY
-slug: /commands-legacy/insert-in-array
+slug: /commands/insert-in-array
 displayed_sidebar: docs
 ---
 

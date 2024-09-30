@@ -1,7 +1,7 @@
 ---
 id: frontmost-window
 title: Frontmost window
-slug: /commands-legacy/frontmost-window
+slug: /commands/frontmost-window
 displayed_sidebar: docs
 ---
 

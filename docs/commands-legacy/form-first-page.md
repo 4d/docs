@@ -1,7 +1,7 @@
 ---
 id: form-first-page
 title: FORM FIRST PAGE
-slug: /commands-legacy/form-first-page
+slug: /commands/form-first-page
 displayed_sidebar: docs
 ---
 

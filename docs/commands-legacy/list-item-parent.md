@@ -1,7 +1,7 @@
 ---
 id: list-item-parent
 title: List item parent
-slug: /commands-legacy/list-item-parent
+slug: /commands/list-item-parent
 displayed_sidebar: docs
 ---
 

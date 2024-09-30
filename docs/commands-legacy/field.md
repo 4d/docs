@@ -1,7 +1,7 @@
 ---
 id: field
 title: Field
-slug: /commands-legacy/field
+slug: /commands/field
 displayed_sidebar: docs
 ---
 

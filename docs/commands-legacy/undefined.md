@@ -1,7 +1,7 @@
 ---
 id: undefined
 title: Undefined
-slug: /commands-legacy/undefined
+slug: /commands/undefined
 displayed_sidebar: docs
 ---
 

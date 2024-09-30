@@ -1,7 +1,7 @@
 ---
 id: open-font-picker
 title: OPEN FONT PICKER
-slug: /commands-legacy/open-font-picker
+slug: /commands/open-font-picker
 displayed_sidebar: docs
 ---
 

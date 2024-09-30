@@ -1,7 +1,7 @@
 ---
 id: listbox-get-number-of-columns
 title: LISTBOX Get number of columns
-slug: /commands-legacy/listbox-get-number-of-columns
+slug: /commands/listbox-get-number-of-columns
 displayed_sidebar: docs
 ---
 

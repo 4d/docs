@@ -1,7 +1,7 @@
 ---
 id: resume-process
 title: RESUME PROCESS
-slug: /commands-legacy/resume-process
+slug: /commands/resume-process
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: new-object
 title: New object
-slug: /commands-legacy/new-object
+slug: /commands/new-object
 displayed_sidebar: docs
 ---
 

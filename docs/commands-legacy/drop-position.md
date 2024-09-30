@@ -1,7 +1,7 @@
 ---
 id: drop-position
 title: Drop position
-slug: /commands-legacy/drop-position
+slug: /commands/drop-position
 displayed_sidebar: docs
 ---
 

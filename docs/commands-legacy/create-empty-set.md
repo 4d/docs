@@ -1,7 +1,7 @@
 ---
 id: create-empty-set
 title: CREATE EMPTY SET
-slug: /commands-legacy/create-empty-set
+slug: /commands/create-empty-set
 displayed_sidebar: docs
 ---
 

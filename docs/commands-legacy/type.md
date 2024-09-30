@@ -1,7 +1,7 @@
 ---
 id: type
 title: Type
-slug: /commands-legacy/type
+slug: /commands/type
 displayed_sidebar: docs
 ---
 

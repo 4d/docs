@@ -1,7 +1,7 @@
 ---
 id: web-service-call
 title: WEB SERVICE CALL
-slug: /commands-legacy/web-service-call
+slug: /commands/web-service-call
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-text-keywords
 title: GET TEXT KEYWORDS
-slug: /commands-legacy/get-text-keywords
+slug: /commands/get-text-keywords
 displayed_sidebar: docs
 ---
 

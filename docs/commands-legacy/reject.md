@@ -1,7 +1,7 @@
 ---
 id: reject
 title: REJECT
-slug: /commands-legacy/reject
+slug: /commands/reject
 displayed_sidebar: docs
 ---
 

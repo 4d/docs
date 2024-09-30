@@ -1,7 +1,7 @@
 ---
 id: match-regex
 title: Match regex
-slug: /commands-legacy/match-regex
+slug: /commands/match-regex
 displayed_sidebar: docs
 ---
 

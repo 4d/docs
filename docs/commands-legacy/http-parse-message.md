@@ -1,7 +1,7 @@
 ---
 id: http-parse-message
 title: HTTP Parse message
-slug: /commands-legacy/http-parse-message
+slug: /commands/http-parse-message
 displayed_sidebar: docs
 ---
 

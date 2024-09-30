@@ -1,7 +1,7 @@
 ---
 id: ob-instance-of
 title: OB Instance of
-slug: /commands-legacy/ob-instance-of
+slug: /commands/ob-instance-of
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-group-list
 title: GET GROUP LIST
-slug: /commands-legacy/get-group-list
+slug: /commands/get-group-list
 displayed_sidebar: docs
 ---
 

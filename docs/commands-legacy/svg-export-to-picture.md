@@ -1,7 +1,7 @@
 ---
 id: svg-export-to-picture
 title: SVG EXPORT TO PICTURE
-slug: /commands-legacy/svg-export-to-picture
+slug: /commands/svg-export-to-picture
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-allowed-methods
 title: GET ALLOWED METHODS
-slug: /commands-legacy/get-allowed-methods
+slug: /commands/get-allowed-methods
 displayed_sidebar: docs
 ---
 

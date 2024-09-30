@@ -1,7 +1,7 @@
 ---
 id: get-license-info
 title: Get license info
-slug: /commands-legacy/get-license-info
+slug: /commands/get-license-info
 displayed_sidebar: docs
 ---
 

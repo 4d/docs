@@ -1,7 +1,7 @@
 ---
 id: current-form-table
 title: Current form table
-slug: /commands-legacy/current-form-table
+slug: /commands/current-form-table
 displayed_sidebar: docs
 ---
 

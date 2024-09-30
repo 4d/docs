@@ -1,7 +1,7 @@
 ---
 id: dom-get-xml-attribute-by-index
 title: DOM GET XML ATTRIBUTE BY INDEX
-slug: /commands-legacy/dom-get-xml-attribute-by-index
+slug: /commands/dom-get-xml-attribute-by-index
 displayed_sidebar: docs
 ---
 

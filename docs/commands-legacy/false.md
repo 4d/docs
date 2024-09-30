@@ -1,7 +1,7 @@
 ---
 id: "false"
 title: "False"
-slug: /commands-legacy/false
+slug: /commands/false
 displayed_sidebar: docs
 ---
 

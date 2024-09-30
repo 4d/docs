@@ -1,7 +1,7 @@
 ---
 id: assert
 title: ASSERT
-slug: /commands-legacy/assert
+slug: /commands/assert
 displayed_sidebar: docs
 ---
 

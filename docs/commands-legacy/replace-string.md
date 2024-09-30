@@ -1,7 +1,7 @@
 ---
 id: replace-string
 title: Replace string
-slug: /commands-legacy/replace-string
+slug: /commands/replace-string
 displayed_sidebar: docs
 ---
 

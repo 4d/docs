@@ -1,7 +1,7 @@
 ---
 id: picture-library-list
 title: PICTURE LIBRARY LIST
-slug: /commands-legacy/picture-library-list
+slug: /commands/picture-library-list
 displayed_sidebar: docs
 ---
 

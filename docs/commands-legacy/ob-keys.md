@@ -1,7 +1,7 @@
 ---
 id: ob-keys
 title: OB Keys
-slug: /commands-legacy/ob-keys
+slug: /commands/ob-keys
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: transform-picture
 title: TRANSFORM PICTURE
-slug: /commands-legacy/transform-picture
+slug: /commands/transform-picture
 displayed_sidebar: docs
 ---
 

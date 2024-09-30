@@ -1,7 +1,7 @@
 ---
 id: is-a-variable
 title: Is a variable
-slug: /commands-legacy/is-a-variable
+slug: /commands/is-a-variable
 displayed_sidebar: docs
 ---
 

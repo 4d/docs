@@ -1,7 +1,7 @@
 ---
 id: records-in-selection
 title: Records in selection
-slug: /commands-legacy/records-in-selection
+slug: /commands/records-in-selection
 displayed_sidebar: docs
 ---
 

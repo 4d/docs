@@ -1,7 +1,7 @@
 ---
 id: convert-picture
 title: CONVERT PICTURE
-slug: /commands-legacy/convert-picture
+slug: /commands/convert-picture
 displayed_sidebar: docs
 ---
 

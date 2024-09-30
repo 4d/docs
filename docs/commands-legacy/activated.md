@@ -1,7 +1,7 @@
 ---
 id: activated
 title: Activated
-slug: /commands-legacy/activated
+slug: /commands/activated
 displayed_sidebar: docs
 ---
 

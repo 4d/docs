@@ -1,7 +1,7 @@
 ---
 id: soap-get-info
 title: SOAP Get info
-slug: /commands-legacy/soap-get-info
+slug: /commands/soap-get-info
 displayed_sidebar: docs
 ---
 

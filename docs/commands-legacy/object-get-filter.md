@@ -1,7 +1,7 @@
 ---
 id: object-get-filter
 title: OBJECT Get filter
-slug: /commands-legacy/object-get-filter
+slug: /commands/object-get-filter
 displayed_sidebar: docs
 ---
 

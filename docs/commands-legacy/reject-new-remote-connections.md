@@ -1,7 +1,7 @@
 ---
 id: reject-new-remote-connections
 title: REJECT NEW REMOTE CONNECTIONS
-slug: /commands-legacy/reject-new-remote-connections
+slug: /commands/reject-new-remote-connections
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: length
 title: Length
-slug: /commands-legacy/length
+slug: /commands/length
 displayed_sidebar: docs
 ---
 

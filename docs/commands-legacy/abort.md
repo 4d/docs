@@ -1,7 +1,7 @@
 ---
 id: abort
 title: ABORT
-slug: /commands-legacy/abort
+slug: /commands/abort
 displayed_sidebar: docs
 ---
 

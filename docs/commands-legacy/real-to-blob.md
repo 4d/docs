@@ -1,7 +1,7 @@
 ---
 id: real-to-blob
 title: REAL TO BLOB
-slug: /commands-legacy/real-to-blob
+slug: /commands/real-to-blob
 displayed_sidebar: docs
 ---
 

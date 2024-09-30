@@ -1,7 +1,7 @@
 ---
 id: svg-get-attribute
 title: SVG GET ATTRIBUTE
-slug: /commands-legacy/svg-get-attribute
+slug: /commands/svg-get-attribute
 displayed_sidebar: docs
 ---
 

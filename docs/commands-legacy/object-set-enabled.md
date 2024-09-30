@@ -1,7 +1,7 @@
 ---
 id: object-set-enabled
 title: OBJECT SET ENABLED
-slug: /commands-legacy/object-set-enabled
+slug: /commands/object-set-enabled
 displayed_sidebar: docs
 ---
 

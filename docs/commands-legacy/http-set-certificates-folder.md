@@ -1,7 +1,7 @@
 ---
 id: http-set-certificates-folder
 title: HTTP SET CERTIFICATES FOLDER
-slug: /commands-legacy/http-set-certificates-folder
+slug: /commands/http-set-certificates-folder
 displayed_sidebar: docs
 ---
 

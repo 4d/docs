@@ -1,7 +1,7 @@
 ---
 id: get-table-fragmentation
 title: Get table fragmentation
-slug: /commands-legacy/get-table-fragmentation
+slug: /commands/get-table-fragmentation
 displayed_sidebar: docs
 ---
 

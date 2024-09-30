@@ -1,7 +1,7 @@
 ---
 id: wa-get-external-links-filters
 title: WA GET EXTERNAL LINKS FILTERS
-slug: /commands-legacy/wa-get-external-links-filters
+slug: /commands/wa-get-external-links-filters
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: compact-data-file
 title: Compact data file
-slug: /commands-legacy/compact-data-file
+slug: /commands/compact-data-file
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: listbox-sort-columns
 title: LISTBOX SORT COLUMNS
-slug: /commands-legacy/listbox-sort-columns
+slug: /commands/listbox-sort-columns
 displayed_sidebar: docs
 ---
 

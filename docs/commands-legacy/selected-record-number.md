@@ -1,7 +1,7 @@
 ---
 id: selected-record-number
 title: Selected record number
-slug: /commands-legacy/selected-record-number
+slug: /commands/selected-record-number
 displayed_sidebar: docs
 ---
 

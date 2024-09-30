@@ -1,7 +1,7 @@
 ---
 id: is-macos
 title: Is macOS
-slug: /commands-legacy/is-macos
+slug: /commands/is-macos
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: object-get-value
 title: OBJECT Get value
-slug: /commands-legacy/object-get-value
+slug: /commands/object-get-value
 displayed_sidebar: docs
 ---
 

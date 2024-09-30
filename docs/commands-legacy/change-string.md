@@ -1,7 +1,7 @@
 ---
 id: change-string
 title: Change string
-slug: /commands-legacy/change-string
+slug: /commands/change-string
 displayed_sidebar: docs
 ---
 

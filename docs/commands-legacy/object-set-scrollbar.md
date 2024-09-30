@@ -1,7 +1,7 @@
 ---
 id: object-set-scrollbar
 title: OBJECT SET SCROLLBAR
-slug: /commands-legacy/object-set-scrollbar
+slug: /commands/object-set-scrollbar
 displayed_sidebar: docs
 ---
 

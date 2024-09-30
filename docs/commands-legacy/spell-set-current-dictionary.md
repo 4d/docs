@@ -1,7 +1,7 @@
 ---
 id: spell-set-current-dictionary
 title: SPELL SET CURRENT DICTIONARY
-slug: /commands-legacy/spell-set-current-dictionary
+slug: /commands/spell-set-current-dictionary
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: find-window
 title: Find window
-slug: /commands-legacy/find-window
+slug: /commands/find-window
 displayed_sidebar: docs
 ---
 

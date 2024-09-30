@@ -1,7 +1,7 @@
 ---
 id: array-to-collection
 title: ARRAY TO COLLECTION
-slug: /commands-legacy/array-to-collection
+slug: /commands/array-to-collection
 displayed_sidebar: docs
 ---
 

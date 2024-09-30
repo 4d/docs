@@ -1,7 +1,7 @@
 ---
 id: get-application-color-scheme
 title: Get application color scheme
-slug: /commands-legacy/get-application-color-scheme
+slug: /commands/get-application-color-scheme
 displayed_sidebar: docs
 ---
 

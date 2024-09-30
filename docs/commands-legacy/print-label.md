@@ -1,7 +1,7 @@
 ---
 id: print-label
 title: PRINT LABEL
-slug: /commands-legacy/print-label
+slug: /commands/print-label
 displayed_sidebar: docs
 ---
 

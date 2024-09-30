@@ -1,7 +1,7 @@
 ---
 id: dom-export-to-file
 title: DOM EXPORT TO FILE
-slug: /commands-legacy/dom-export-to-file
+slug: /commands/dom-export-to-file
 displayed_sidebar: docs
 ---
 

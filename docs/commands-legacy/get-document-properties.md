@@ -1,7 +1,7 @@
 ---
 id: get-document-properties
 title: GET DOCUMENT PROPERTIES
-slug: /commands-legacy/get-document-properties
+slug: /commands/get-document-properties
 displayed_sidebar: docs
 ---
 

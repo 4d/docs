@@ -1,7 +1,7 @@
 ---
 id: object-get-maximum-value
 title: OBJECT GET MAXIMUM VALUE
-slug: /commands-legacy/object-get-maximum-value
+slug: /commands/object-get-maximum-value
 displayed_sidebar: docs
 ---
 

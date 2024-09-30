@@ -1,7 +1,7 @@
 ---
 id: time
 title: Time
-slug: /commands-legacy/time
+slug: /commands/time
 displayed_sidebar: docs
 ---
 

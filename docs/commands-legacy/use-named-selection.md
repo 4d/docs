@@ -1,7 +1,7 @@
 ---
 id: use-named-selection
 title: USE NAMED SELECTION
-slug: /commands-legacy/use-named-selection
+slug: /commands/use-named-selection
 displayed_sidebar: docs
 ---
 

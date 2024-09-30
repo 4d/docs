@@ -1,7 +1,7 @@
 ---
 id: execute-formula
 title: EXECUTE FORMULA
-slug: /commands-legacy/execute-formula
+slug: /commands/execute-formula
 displayed_sidebar: docs
 ---
 

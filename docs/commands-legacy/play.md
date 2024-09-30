@@ -1,7 +1,7 @@
 ---
 id: play
 title: PLAY
-slug: /commands-legacy/play
+slug: /commands/play
 displayed_sidebar: docs
 ---
 

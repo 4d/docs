@@ -1,7 +1,7 @@
 ---
 id: form-last-page
 title: FORM LAST PAGE
-slug: /commands-legacy/form-last-page
+slug: /commands/form-last-page
 displayed_sidebar: docs
 ---
 

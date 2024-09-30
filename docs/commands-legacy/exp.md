@@ -1,7 +1,7 @@
 ---
 id: exp
 title: Exp
-slug: /commands-legacy/exp
+slug: /commands/exp
 displayed_sidebar: docs
 ---
 

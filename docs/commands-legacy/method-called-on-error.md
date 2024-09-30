@@ -1,7 +1,7 @@
 ---
 id: method-called-on-error
 title: Method called on error
-slug: /commands-legacy/method-called-on-error
+slug: /commands/method-called-on-error
 displayed_sidebar: docs
 ---
 

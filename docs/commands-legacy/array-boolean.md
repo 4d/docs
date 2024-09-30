@@ -1,7 +1,7 @@
 ---
 id: array-boolean
 title: ARRAY BOOLEAN
-slug: /commands-legacy/array-boolean
+slug: /commands/array-boolean
 displayed_sidebar: docs
 ---
 

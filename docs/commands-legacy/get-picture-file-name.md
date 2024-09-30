@@ -1,7 +1,7 @@
 ---
 id: get-picture-file-name
 title: Get picture file name
-slug: /commands-legacy/get-picture-file-name
+slug: /commands/get-picture-file-name
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: delete-record
 title: DELETE RECORD
-slug: /commands-legacy/delete-record
+slug: /commands/delete-record
 displayed_sidebar: docs
 ---
 

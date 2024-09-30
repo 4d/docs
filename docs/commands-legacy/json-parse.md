@@ -1,7 +1,7 @@
 ---
 id: json-parse
 title: JSON Parse
-slug: /commands-legacy/json-parse
+slug: /commands/json-parse
 displayed_sidebar: docs
 ---
 

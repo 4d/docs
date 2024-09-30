@@ -1,7 +1,7 @@
 ---
 id: ldap-search
 title: LDAP Search
-slug: /commands-legacy/ldap-search
+slug: /commands/ldap-search
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: listbox-set-grid
 title: LISTBOX SET GRID
-slug: /commands-legacy/listbox-set-grid
+slug: /commands/listbox-set-grid
 displayed_sidebar: docs
 ---
 

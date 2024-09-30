@@ -1,7 +1,7 @@
 ---
 id: listbox-get-footer-calculation
 title: LISTBOX Get footer calculation
-slug: /commands-legacy/listbox-get-footer-calculation
+slug: /commands/listbox-get-footer-calculation
 displayed_sidebar: docs
 ---
 

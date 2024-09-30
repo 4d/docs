@@ -1,7 +1,7 @@
 ---
 id: sql-end-selection
 title: SQL End selection
-slug: /commands-legacy/sql-end-selection
+slug: /commands/sql-end-selection
 displayed_sidebar: docs
 ---
 

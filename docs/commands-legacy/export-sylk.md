@@ -1,7 +1,7 @@
 ---
 id: export-sylk
 title: EXPORT SYLK
-slug: /commands-legacy/export-sylk
+slug: /commands/export-sylk
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: sax-add-xml-doctype
 title: SAX ADD XML DOCTYPE
-slug: /commands-legacy/sax-add-xml-doctype
+slug: /commands/sax-add-xml-doctype
 displayed_sidebar: docs
 ---
 

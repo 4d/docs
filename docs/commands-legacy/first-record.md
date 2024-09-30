@@ -1,7 +1,7 @@
 ---
 id: first-record
 title: FIRST RECORD
-slug: /commands-legacy/first-record
+slug: /commands/first-record
 displayed_sidebar: docs
 ---
 

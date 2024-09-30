@@ -1,7 +1,7 @@
 ---
 id: listbox-set-hierarchy
 title: LISTBOX SET HIERARCHY
-slug: /commands-legacy/listbox-set-hierarchy
+slug: /commands/listbox-set-hierarchy
 displayed_sidebar: docs
 ---
 

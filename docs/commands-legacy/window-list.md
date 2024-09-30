@@ -1,7 +1,7 @@
 ---
 id: window-list
 title: WINDOW LIST
-slug: /commands-legacy/window-list
+slug: /commands/window-list
 displayed_sidebar: docs
 ---
 

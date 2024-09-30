@@ -1,7 +1,7 @@
 ---
 id: relate-many-selection
 title: RELATE MANY SELECTION
-slug: /commands-legacy/relate-many-selection
+slug: /commands/relate-many-selection
 displayed_sidebar: docs
 ---
 

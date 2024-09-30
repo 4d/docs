@@ -1,7 +1,7 @@
 ---
 id: flush-cache
 title: FLUSH CACHE
-slug: /commands-legacy/flush-cache
+slug: /commands/flush-cache
 displayed_sidebar: docs
 ---
 

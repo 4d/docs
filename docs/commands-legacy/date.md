@@ -1,7 +1,7 @@
 ---
 id: date
 title: Date
-slug: /commands-legacy/date
+slug: /commands/date
 displayed_sidebar: docs
 ---
 

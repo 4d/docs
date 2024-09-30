@@ -1,7 +1,7 @@
 ---
 id: is-window-reduced
 title: Is window reduced
-slug: /commands-legacy/is-window-reduced
+slug: /commands/is-window-reduced
 displayed_sidebar: docs
 ---
 

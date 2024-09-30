@@ -1,7 +1,7 @@
 ---
 id: variable-to-blob
 title: VARIABLE TO BLOB
-slug: /commands-legacy/variable-to-blob
+slug: /commands/variable-to-blob
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: object-set-focus-rectangle-invisible
 title: OBJECT SET FOCUS RECTANGLE INVISIBLE
-slug: /commands-legacy/object-set-focus-rectangle-invisible
+slug: /commands/object-set-focus-rectangle-invisible
 displayed_sidebar: docs
 ---
 

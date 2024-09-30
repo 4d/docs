@@ -1,7 +1,7 @@
 ---
 id: request
 title: Request
-slug: /commands-legacy/request
+slug: /commands/request
 displayed_sidebar: docs
 ---
 

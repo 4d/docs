@@ -1,7 +1,7 @@
 ---
 id: timestamp
 title: Timestamp
-slug: /commands-legacy/timestamp
+slug: /commands/timestamp
 displayed_sidebar: docs
 ---
 

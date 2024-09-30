@@ -1,7 +1,7 @@
 ---
 id: qr-get-header-and-footer
 title: QR GET HEADER AND FOOTER
-slug: /commands-legacy/qr-get-header-and-footer
+slug: /commands/qr-get-header-and-footer
 displayed_sidebar: docs
 ---
 

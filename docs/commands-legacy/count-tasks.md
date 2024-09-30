@@ -1,7 +1,7 @@
 ---
 id: count-tasks
 title: Count tasks
-slug: /commands-legacy/count-tasks
+slug: /commands/count-tasks
 displayed_sidebar: docs
 ---
 

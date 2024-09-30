@@ -1,7 +1,7 @@
 ---
 id: append-menu-item
 title: APPEND MENU ITEM
-slug: /commands-legacy/append-menu-item
+slug: /commands/append-menu-item
 displayed_sidebar: docs
 ---
 

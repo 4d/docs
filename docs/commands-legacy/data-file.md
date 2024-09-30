@@ -1,7 +1,7 @@
 ---
 id: data-file
 title: Data file
-slug: /commands-legacy/data-file
+slug: /commands/data-file
 displayed_sidebar: docs
 ---
 

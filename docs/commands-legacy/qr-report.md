@@ -1,7 +1,7 @@
 ---
 id: qr-report
 title: QR REPORT
-slug: /commands-legacy/qr-report
+slug: /commands/qr-report
 displayed_sidebar: docs
 ---
 

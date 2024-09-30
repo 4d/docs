@@ -1,7 +1,7 @@
 ---
 id: in-transaction
 title: In transaction
-slug: /commands-legacy/in-transaction
+slug: /commands/in-transaction
 displayed_sidebar: docs
 ---
 

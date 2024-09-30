@@ -1,7 +1,7 @@
 ---
 id: hide-menu-bar
 title: HIDE MENU BAR
-slug: /commands-legacy/hide-menu-bar
+slug: /commands/hide-menu-bar
 displayed_sidebar: docs
 ---
 

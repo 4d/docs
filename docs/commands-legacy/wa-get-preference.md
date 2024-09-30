@@ -1,7 +1,7 @@
 ---
 id: wa-get-preference
 title: WA GET PREFERENCE
-slug: /commands-legacy/wa-get-preference
+slug: /commands/wa-get-preference
 displayed_sidebar: docs
 ---
 

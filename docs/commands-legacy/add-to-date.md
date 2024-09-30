@@ -1,7 +1,7 @@
 ---
 id: add-to-date
 title: Add to date
-slug: /commands-legacy/add-to-date
+slug: /commands/add-to-date
 displayed_sidebar: docs
 ---
 

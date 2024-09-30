@@ -1,7 +1,7 @@
 ---
 id: get-registered-clients
 title: GET REGISTERED CLIENTS
-slug: /commands-legacy/get-registered-clients
+slug: /commands/get-registered-clients
 displayed_sidebar: docs
 ---
 

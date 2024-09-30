@@ -1,7 +1,7 @@
 ---
 id: get-menu-item-mark
 title: Get menu item mark
-slug: /commands-legacy/get-menu-item-mark
+slug: /commands/get-menu-item-mark
 displayed_sidebar: docs
 ---
 

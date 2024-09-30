@@ -1,7 +1,7 @@
 ---
 id: create-set-from-array
 title: CREATE SET FROM ARRAY
-slug: /commands-legacy/create-set-from-array
+slug: /commands/create-set-from-array
 displayed_sidebar: docs
 ---
 

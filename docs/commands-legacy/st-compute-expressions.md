@@ -1,7 +1,7 @@
 ---
 id: st-compute-expressions
 title: ST COMPUTE EXPRESSIONS
-slug: /commands-legacy/st-compute-expressions
+slug: /commands/st-compute-expressions
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: show-window
 title: SHOW WINDOW
-slug: /commands-legacy/show-window
+slug: /commands/show-window
 displayed_sidebar: docs
 ---
 

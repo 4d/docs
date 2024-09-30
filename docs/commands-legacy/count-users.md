@@ -1,7 +1,7 @@
 ---
 id: count-users
 title: Count users
-slug: /commands-legacy/count-users
+slug: /commands/count-users
 displayed_sidebar: docs
 ---
 

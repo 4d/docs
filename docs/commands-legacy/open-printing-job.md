@@ -1,7 +1,7 @@
 ---
 id: open-printing-job
 title: OPEN PRINTING JOB
-slug: /commands-legacy/open-printing-job
+slug: /commands/open-printing-job
 displayed_sidebar: docs
 ---
 

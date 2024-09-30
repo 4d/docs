@@ -1,7 +1,7 @@
 ---
 id: use-character-set
 title: USE CHARACTER SET
-slug: /commands-legacy/use-character-set
+slug: /commands/use-character-set
 displayed_sidebar: docs
 ---
 

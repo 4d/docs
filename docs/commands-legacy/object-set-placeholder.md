@@ -1,7 +1,7 @@
 ---
 id: object-set-placeholder
 title: OBJECT SET PLACEHOLDER
-slug: /commands-legacy/object-set-placeholder
+slug: /commands/object-set-placeholder
 displayed_sidebar: docs
 ---
 

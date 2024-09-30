@@ -1,7 +1,7 @@
 ---
 id: web-legacy-close-session
 title: WEB LEGACY CLOSE SESSION
-slug: /commands-legacy/web-legacy-close-session
+slug: /commands/web-legacy-close-session
 displayed_sidebar: docs
 ---
 

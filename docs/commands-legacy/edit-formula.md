@@ -1,7 +1,7 @@
 ---
 id: edit-formula
 title: EDIT FORMULA
-slug: /commands-legacy/edit-formula
+slug: /commands/edit-formula
 displayed_sidebar: docs
 ---
 

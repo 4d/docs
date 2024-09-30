@@ -1,7 +1,7 @@
 ---
 id: screen-height
 title: Screen height
-slug: /commands-legacy/screen-height
+slug: /commands/screen-height
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-user-properties
 title: GET USER PROPERTIES
-slug: /commands-legacy/get-user-properties
+slug: /commands/get-user-properties
 displayed_sidebar: docs
 ---
 

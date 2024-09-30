@@ -1,7 +1,7 @@
 ---
 id: selected-list-items
 title: Selected list items
-slug: /commands-legacy/selected-list-items
+slug: /commands/selected-list-items
 displayed_sidebar: docs
 ---
 

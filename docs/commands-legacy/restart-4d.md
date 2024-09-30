@@ -1,7 +1,7 @@
 ---
 id: restart-4d
 title: RESTART 4D
-slug: /commands-legacy/restart-4d
+slug: /commands/restart-4d
 displayed_sidebar: docs
 ---
 

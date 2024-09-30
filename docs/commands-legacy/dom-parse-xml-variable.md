@@ -1,7 +1,7 @@
 ---
 id: dom-parse-xml-variable
 title: DOM Parse XML variable
-slug: /commands-legacy/dom-parse-xml-variable
+slug: /commands/dom-parse-xml-variable
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: log-event
 title: LOG EVENT
-slug: /commands-legacy/log-event
+slug: /commands/log-event
 displayed_sidebar: docs
 ---
 

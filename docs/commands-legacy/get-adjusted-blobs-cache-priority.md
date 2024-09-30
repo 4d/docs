@@ -1,7 +1,7 @@
 ---
 id: get-adjusted-blobs-cache-priority
 title: Get adjusted blobs cache priority
-slug: /commands-legacy/get-adjusted-blobs-cache-priority
+slug: /commands/get-adjusted-blobs-cache-priority
 displayed_sidebar: docs
 ---
 

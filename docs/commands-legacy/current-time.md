@@ -1,7 +1,7 @@
 ---
 id: current-time
 title: Current time
-slug: /commands-legacy/current-time
+slug: /commands/current-time
 displayed_sidebar: docs
 ---
 

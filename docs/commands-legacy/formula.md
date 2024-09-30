@@ -1,7 +1,7 @@
 ---
 id: formula
 title: Formula
-slug: /commands-legacy/formula
+slug: /commands/formula
 displayed_sidebar: docs
 ---
 

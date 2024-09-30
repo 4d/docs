@@ -1,7 +1,7 @@
 ---
 id: qr-get-info-row
 title: QR Get info row
-slug: /commands-legacy/qr-get-info-row
+slug: /commands/qr-get-info-row
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: print-option-values
 title: PRINT OPTION VALUES
-slug: /commands-legacy/print-option-values
+slug: /commands/print-option-values
 displayed_sidebar: docs
 ---
 

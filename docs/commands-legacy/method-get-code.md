@@ -1,7 +1,7 @@
 ---
 id: method-get-code
 title: METHOD GET CODE
-slug: /commands-legacy/method-get-code
+slug: /commands/method-get-code
 displayed_sidebar: docs
 ---
 

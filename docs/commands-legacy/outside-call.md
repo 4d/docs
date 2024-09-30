@@ -1,7 +1,7 @@
 ---
 id: outside-call
 title: Outside call
-slug: /commands-legacy/outside-call
+slug: /commands/outside-call
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: change-password
 title: CHANGE PASSWORD
-slug: /commands-legacy/change-password
+slug: /commands/change-password
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: all-records
 title: ALL RECORDS
-slug: /commands-legacy/all-records
+slug: /commands/all-records
 displayed_sidebar: docs
 ---
 

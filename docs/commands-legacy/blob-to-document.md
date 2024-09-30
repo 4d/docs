@@ -1,7 +1,7 @@
 ---
 id: blob-to-document
 title: BLOB TO DOCUMENT
-slug: /commands-legacy/blob-to-document
+slug: /commands/blob-to-document
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-printable-area
 title: GET PRINTABLE AREA
-slug: /commands-legacy/get-printable-area
+slug: /commands/get-printable-area
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: delete-from-list
 title: DELETE FROM LIST
-slug: /commands-legacy/delete-from-list
+slug: /commands/delete-from-list
 displayed_sidebar: docs
 ---
 

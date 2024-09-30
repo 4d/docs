@@ -1,7 +1,7 @@
 ---
 id: add-to-set
 title: ADD TO SET
-slug: /commands-legacy/add-to-set
+slug: /commands/add-to-set
 displayed_sidebar: docs
 ---
 

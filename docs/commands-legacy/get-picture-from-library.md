@@ -1,7 +1,7 @@
 ---
 id: get-picture-from-library
 title: GET PICTURE FROM LIBRARY
-slug: /commands-legacy/get-picture-from-library
+slug: /commands/get-picture-from-library
 displayed_sidebar: docs
 ---
 

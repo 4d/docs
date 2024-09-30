@@ -1,7 +1,7 @@
 ---
 id: qr-insert-column
 title: QR INSERT COLUMN
-slug: /commands-legacy/qr-insert-column
+slug: /commands/qr-insert-column
 displayed_sidebar: docs
 ---
 

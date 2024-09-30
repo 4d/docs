@@ -1,7 +1,7 @@
 ---
 id: method-called-on-event
 title: Method called on event
-slug: /commands-legacy/method-called-on-event
+slug: /commands/method-called-on-event
 displayed_sidebar: docs
 ---
 

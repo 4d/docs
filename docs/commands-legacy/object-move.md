@@ -1,7 +1,7 @@
 ---
 id: object-move
 title: OBJECT MOVE
-slug: /commands-legacy/object-move
+slug: /commands/object-move
 displayed_sidebar: docs
 ---
 

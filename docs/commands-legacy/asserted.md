@@ -1,7 +1,7 @@
 ---
 id: asserted
 title: Asserted
-slug: /commands-legacy/asserted
+slug: /commands/asserted
 displayed_sidebar: docs
 ---
 

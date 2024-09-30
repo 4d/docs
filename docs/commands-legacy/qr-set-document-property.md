@@ -1,7 +1,7 @@
 ---
 id: qr-set-document-property
 title: QR SET DOCUMENT PROPERTY
-slug: /commands-legacy/qr-set-document-property
+slug: /commands/qr-set-document-property
 displayed_sidebar: docs
 ---
 

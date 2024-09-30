@@ -1,7 +1,7 @@
 ---
 id: selection-range-to-array
 title: SELECTION RANGE TO ARRAY
-slug: /commands-legacy/selection-range-to-array
+slug: /commands/selection-range-to-array
 displayed_sidebar: docs
 ---
 

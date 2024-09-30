@@ -1,7 +1,7 @@
 ---
 id: clear-semaphore
 title: CLEAR SEMAPHORE
-slug: /commands-legacy/clear-semaphore
+slug: /commands/clear-semaphore
 displayed_sidebar: docs
 ---
 

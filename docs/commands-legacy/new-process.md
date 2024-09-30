@@ -1,7 +1,7 @@
 ---
 id: new-process
 title: New process
-slug: /commands-legacy/new-process
+slug: /commands/new-process
 displayed_sidebar: docs
 ---
 

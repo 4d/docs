@@ -1,7 +1,7 @@
 ---
 id: arctan
 title: Arctan
-slug: /commands-legacy/arctan
+slug: /commands/arctan
 displayed_sidebar: docs
 ---
 

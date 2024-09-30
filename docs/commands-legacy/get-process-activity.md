@@ -1,7 +1,7 @@
 ---
 id: get-process-activity
 title: Get process activity
-slug: /commands-legacy/get-process-activity
+slug: /commands/get-process-activity
 displayed_sidebar: docs
 ---
 

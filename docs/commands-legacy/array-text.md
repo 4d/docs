@@ -1,7 +1,7 @@
 ---
 id: array-text
 title: ARRAY TEXT
-slug: /commands-legacy/array-text
+slug: /commands/array-text
 displayed_sidebar: docs
 ---
 

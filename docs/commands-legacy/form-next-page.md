@@ -1,7 +1,7 @@
 ---
 id: form-next-page
 title: FORM NEXT PAGE
-slug: /commands-legacy/form-next-page
+slug: /commands/form-next-page
 displayed_sidebar: docs
 ---
 

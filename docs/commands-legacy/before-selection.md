@@ -1,7 +1,7 @@
 ---
 id: before-selection
 title: Before selection
-slug: /commands-legacy/before-selection
+slug: /commands/before-selection
 displayed_sidebar: docs
 ---
 

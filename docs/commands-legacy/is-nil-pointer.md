@@ -1,7 +1,7 @@
 ---
 id: is-nil-pointer
 title: Is nil pointer
-slug: /commands-legacy/is-nil-pointer
+slug: /commands/is-nil-pointer
 displayed_sidebar: docs
 ---
 

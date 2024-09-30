@@ -1,7 +1,7 @@
 ---
 id: c-boolean
 title: C_BOOLEAN
-slug: /commands-legacy/c-boolean
+slug: /commands/c-boolean
 displayed_sidebar: docs
 ---
 

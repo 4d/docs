@@ -1,7 +1,7 @@
 ---
 id: load-record
 title: LOAD RECORD
-slug: /commands-legacy/load-record
+slug: /commands/load-record
 displayed_sidebar: docs
 ---
 

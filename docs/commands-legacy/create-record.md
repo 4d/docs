@@ -1,7 +1,7 @@
 ---
 id: create-record
 title: CREATE RECORD
-slug: /commands-legacy/create-record
+slug: /commands/create-record
 displayed_sidebar: docs
 ---
 

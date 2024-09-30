@@ -1,7 +1,7 @@
 ---
 id: qr-count-columns
 title: QR Count columns
-slug: /commands-legacy/qr-count-columns
+slug: /commands/qr-count-columns
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: last-record
 title: LAST RECORD
-slug: /commands-legacy/last-record
+slug: /commands/last-record
 displayed_sidebar: docs
 ---
 

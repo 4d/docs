@@ -1,7 +1,7 @@
 ---
 id: sequence-number
 title: Sequence number
-slug: /commands-legacy/sequence-number
+slug: /commands/sequence-number
 displayed_sidebar: docs
 ---
 

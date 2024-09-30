@@ -1,7 +1,7 @@
 ---
 id: dom-get-next-sibling-xml-element
 title: DOM Get next sibling XML element
-slug: /commands-legacy/dom-get-next-sibling-xml-element
+slug: /commands/dom-get-next-sibling-xml-element
 displayed_sidebar: docs
 ---
 

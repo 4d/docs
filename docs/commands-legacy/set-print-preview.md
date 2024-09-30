@@ -1,7 +1,7 @@
 ---
 id: set-print-preview
 title: SET PRINT PREVIEW
-slug: /commands-legacy/set-print-preview
+slug: /commands/set-print-preview
 displayed_sidebar: docs
 ---
 

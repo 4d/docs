@@ -1,7 +1,7 @@
 ---
 id: keystroke
 title: Keystroke
-slug: /commands-legacy/keystroke
+slug: /commands/keystroke
 displayed_sidebar: docs
 ---
 

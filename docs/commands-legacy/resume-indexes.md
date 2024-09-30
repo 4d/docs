@@ -1,7 +1,7 @@
 ---
 id: resume-indexes
 title: RESUME INDEXES
-slug: /commands-legacy/resume-indexes
+slug: /commands/resume-indexes
 displayed_sidebar: docs
 ---
 

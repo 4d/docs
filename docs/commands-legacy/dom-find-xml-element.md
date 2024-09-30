@@ -1,7 +1,7 @@
 ---
 id: dom-find-xml-element
 title: DOM Find XML element
-slug: /commands-legacy/dom-find-xml-element
+slug: /commands/dom-find-xml-element
 displayed_sidebar: docs
 ---
 

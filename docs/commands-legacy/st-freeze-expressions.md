@@ -1,7 +1,7 @@
 ---
 id: st-freeze-expressions
 title: ST FREEZE EXPRESSIONS
-slug: /commands-legacy/st-freeze-expressions
+slug: /commands/st-freeze-expressions
 displayed_sidebar: docs
 ---
 

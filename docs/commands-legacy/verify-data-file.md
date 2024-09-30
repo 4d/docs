@@ -1,7 +1,7 @@
 ---
 id: verify-data-file
 title: VERIFY DATA FILE
-slug: /commands-legacy/verify-data-file
+slug: /commands/verify-data-file
 displayed_sidebar: docs
 ---
 

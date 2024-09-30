@@ -1,7 +1,7 @@
 ---
 id: last-errors
 title: Last errors
-slug: /commands-legacy/last-errors
+slug: /commands/last-errors
 displayed_sidebar: docs
 ---
 

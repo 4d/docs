@@ -1,7 +1,7 @@
 ---
 id: set-timeout
 title: SET TIMEOUT
-slug: /commands-legacy/set-timeout
+slug: /commands/set-timeout
 displayed_sidebar: docs
 ---
 

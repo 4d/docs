@@ -1,7 +1,7 @@
 ---
 id: post-event
 title: POST EVENT
-slug: /commands-legacy/post-event
+slug: /commands/post-event
 displayed_sidebar: docs
 ---
 

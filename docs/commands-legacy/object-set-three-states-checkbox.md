@@ -1,7 +1,7 @@
 ---
 id: object-set-three-states-checkbox
 title: OBJECT SET THREE STATES CHECKBOX
-slug: /commands-legacy/object-set-three-states-checkbox
+slug: /commands/object-set-three-states-checkbox
 displayed_sidebar: docs
 ---
 

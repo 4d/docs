@@ -1,7 +1,7 @@
 ---
 id: object-set-context-menu
 title: OBJECT SET CONTEXT MENU
-slug: /commands-legacy/object-set-context-menu
+slug: /commands/object-set-context-menu
 displayed_sidebar: docs
 ---
 

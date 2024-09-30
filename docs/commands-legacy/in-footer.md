@@ -1,7 +1,7 @@
 ---
 id: in-footer
 title: In footer
-slug: /commands-legacy/in-footer
+slug: /commands/in-footer
 displayed_sidebar: docs
 ---
 

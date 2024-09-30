@@ -1,7 +1,7 @@
 ---
 id: set-table-cache-priority
 title: SET TABLE CACHE PRIORITY
-slug: /commands-legacy/set-table-cache-priority
+slug: /commands/set-table-cache-priority
 displayed_sidebar: docs
 ---
 

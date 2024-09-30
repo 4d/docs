@@ -1,7 +1,7 @@
 ---
 id: get-macro-parameter
 title: GET MACRO PARAMETER
-slug: /commands-legacy/get-macro-parameter
+slug: /commands/get-macro-parameter
 displayed_sidebar: docs
 ---
 

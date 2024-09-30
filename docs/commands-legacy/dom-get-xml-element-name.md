@@ -1,7 +1,7 @@
 ---
 id: dom-get-xml-element-name
 title: DOM GET XML ELEMENT NAME
-slug: /commands-legacy/dom-get-xml-element-name
+slug: /commands/dom-get-xml-element-name
 displayed_sidebar: docs
 ---
 

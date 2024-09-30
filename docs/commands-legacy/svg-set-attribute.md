@@ -1,7 +1,7 @@
 ---
 id: svg-set-attribute
 title: SVG SET ATTRIBUTE
-slug: /commands-legacy/svg-set-attribute
+slug: /commands/svg-set-attribute
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: char
 title: Char
-slug: /commands-legacy/char
+slug: /commands/char
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: method-set-attributes
 title: METHOD SET ATTRIBUTES
-slug: /commands-legacy/method-set-attributes
+slug: /commands/method-set-attributes
 displayed_sidebar: docs
 ---
 

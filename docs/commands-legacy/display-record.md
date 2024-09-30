@@ -1,7 +1,7 @@
 ---
 id: display-record
 title: DISPLAY RECORD
-slug: /commands-legacy/display-record
+slug: /commands/display-record
 displayed_sidebar: docs
 ---
 

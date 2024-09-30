@@ -1,7 +1,7 @@
 ---
 id: on-server-open-connection-database-method
 title: On Server Open Connection database method
-slug: /commands-legacy/on-server-open-connection-database-method
+slug: /commands/on-server-open-connection-database-method
 displayed_sidebar: docs
 ---
 

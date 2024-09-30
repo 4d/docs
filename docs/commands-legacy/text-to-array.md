@@ -1,7 +1,7 @@
 ---
 id: text-to-array
 title: TEXT TO ARRAY
-slug: /commands-legacy/text-to-array
+slug: /commands/text-to-array
 displayed_sidebar: docs
 ---
 

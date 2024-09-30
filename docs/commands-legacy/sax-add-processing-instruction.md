@@ -1,7 +1,7 @@
 ---
 id: sax-add-processing-instruction
 title: SAX ADD PROCESSING INSTRUCTION
-slug: /commands-legacy/sax-add-processing-instruction
+slug: /commands/sax-add-processing-instruction
 displayed_sidebar: docs
 ---
 

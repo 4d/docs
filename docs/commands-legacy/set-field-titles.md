@@ -1,7 +1,7 @@
 ---
 id: set-field-titles
 title: SET FIELD TITLES
-slug: /commands-legacy/set-field-titles
+slug: /commands/set-field-titles
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: object-get-visible
 title: OBJECT Get visible
-slug: /commands-legacy/object-get-visible
+slug: /commands/object-get-visible
 displayed_sidebar: docs
 ---
 

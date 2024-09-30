@@ -1,7 +1,7 @@
 ---
 id: after
 title: After
-slug: /commands-legacy/after
+slug: /commands/after
 displayed_sidebar: docs
 ---
 

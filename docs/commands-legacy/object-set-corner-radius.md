@@ -1,7 +1,7 @@
 ---
 id: object-set-corner-radius
 title: OBJECT SET CORNER RADIUS
-slug: /commands-legacy/object-set-corner-radius
+slug: /commands/object-set-corner-radius
 displayed_sidebar: docs
 ---
 

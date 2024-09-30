@@ -1,7 +1,7 @@
 ---
 id: get-selected-menu-item-parameter
 title: Get selected menu item parameter
-slug: /commands-legacy/get-selected-menu-item-parameter
+slug: /commands/get-selected-menu-item-parameter
 displayed_sidebar: docs
 ---
 

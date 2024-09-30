@@ -1,7 +1,7 @@
 ---
 id: get-menu-item-icon
 title: GET MENU ITEM ICON
-slug: /commands-legacy/get-menu-item-icon
+slug: /commands/get-menu-item-icon
 displayed_sidebar: docs
 ---
 

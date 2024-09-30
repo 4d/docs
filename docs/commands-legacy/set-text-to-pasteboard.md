@@ -1,7 +1,7 @@
 ---
 id: set-text-to-pasteboard
 title: SET TEXT TO PASTEBOARD
-slug: /commands-legacy/set-text-to-pasteboard
+slug: /commands/set-text-to-pasteboard
 displayed_sidebar: docs
 ---
 

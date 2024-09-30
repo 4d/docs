@@ -1,7 +1,7 @@
 ---
 id: trigger-level
 title: Trigger level
-slug: /commands-legacy/trigger-level
+slug: /commands/trigger-level
 displayed_sidebar: docs
 ---
 

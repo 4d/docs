@@ -1,7 +1,7 @@
 ---
 id: set-user-alias
 title: SET USER ALIAS
-slug: /commands-legacy/set-user-alias
+slug: /commands/set-user-alias
 displayed_sidebar: docs
 ---
 

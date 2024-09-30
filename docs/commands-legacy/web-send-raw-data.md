@@ -1,7 +1,7 @@
 ---
 id: web-send-raw-data
 title: WEB SEND RAW DATA
-slug: /commands-legacy/web-send-raw-data
+slug: /commands/web-send-raw-data
 displayed_sidebar: docs
 ---
 

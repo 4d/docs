@@ -1,7 +1,7 @@
 ---
 id: in-header
 title: In header
-slug: /commands-legacy/in-header
+slug: /commands/in-header
 displayed_sidebar: docs
 ---
 

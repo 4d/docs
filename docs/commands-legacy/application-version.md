@@ -1,7 +1,7 @@
 ---
 id: application-version
 title: Application version
-slug: /commands-legacy/application-version
+slug: /commands/application-version
 displayed_sidebar: docs
 ---
 

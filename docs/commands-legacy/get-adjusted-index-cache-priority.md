@@ -1,7 +1,7 @@
 ---
 id: get-adjusted-index-cache-priority
 title: Get adjusted index cache priority
-slug: /commands-legacy/get-adjusted-index-cache-priority
+slug: /commands/get-adjusted-index-cache-priority
 displayed_sidebar: docs
 ---
 

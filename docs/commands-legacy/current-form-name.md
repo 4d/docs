@@ -1,7 +1,7 @@
 ---
 id: current-form-name
 title: Current form name
-slug: /commands-legacy/current-form-name
+slug: /commands/current-form-name
 displayed_sidebar: docs
 ---
 

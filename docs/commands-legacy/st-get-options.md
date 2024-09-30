@@ -1,7 +1,7 @@
 ---
 id: st-get-options
 title: ST GET OPTIONS
-slug: /commands-legacy/st-get-options
+slug: /commands/st-get-options
 displayed_sidebar: docs
 ---
 

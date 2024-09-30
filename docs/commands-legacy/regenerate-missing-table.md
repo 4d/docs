@@ -1,7 +1,7 @@
 ---
 id: regenerate-missing-table
 title: REGENERATE MISSING TABLE
-slug: /commands-legacy/regenerate-missing-table
+slug: /commands/regenerate-missing-table
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: average
 title: Average
-slug: /commands-legacy/average
+slug: /commands/average
 displayed_sidebar: docs
 ---
 

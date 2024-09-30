@@ -1,7 +1,7 @@
 ---
 id: abs
 title: Abs
-slug: /commands-legacy/abs
+slug: /commands/abs
 displayed_sidebar: docs
 ---
 

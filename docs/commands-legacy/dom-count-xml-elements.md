@@ -1,7 +1,7 @@
 ---
 id: dom-count-xml-elements
 title: DOM Count XML elements
-slug: /commands-legacy/dom-count-xml-elements
+slug: /commands/dom-count-xml-elements
 displayed_sidebar: docs
 ---
 

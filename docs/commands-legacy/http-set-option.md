@@ -1,7 +1,7 @@
 ---
 id: http-set-option
 title: HTTP SET OPTION
-slug: /commands-legacy/http-set-option
+slug: /commands/http-set-option
 displayed_sidebar: docs
 ---
 

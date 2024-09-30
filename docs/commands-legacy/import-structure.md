@@ -1,7 +1,7 @@
 ---
 id: import-structure
 title: IMPORT STRUCTURE
-slug: /commands-legacy/import-structure
+slug: /commands/import-structure
 displayed_sidebar: docs
 ---
 

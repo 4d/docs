@@ -1,7 +1,7 @@
 ---
 id: set-picture-file-name
 title: SET PICTURE FILE NAME
-slug: /commands-legacy/set-picture-file-name
+slug: /commands/set-picture-file-name
 displayed_sidebar: docs
 ---
 

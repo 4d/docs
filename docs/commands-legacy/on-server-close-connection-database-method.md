@@ -1,7 +1,7 @@
 ---
 id: on-server-close-connection-database-method
 title: On Server Close Connection database method
-slug: /commands-legacy/on-server-close-connection-database-method
+slug: /commands/on-server-close-connection-database-method
 displayed_sidebar: docs
 ---
 

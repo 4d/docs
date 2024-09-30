@@ -1,7 +1,7 @@
 ---
 id: order-by-attribute
 title: ORDER BY ATTRIBUTE
-slug: /commands-legacy/order-by-attribute
+slug: /commands/order-by-attribute
 displayed_sidebar: docs
 ---
 

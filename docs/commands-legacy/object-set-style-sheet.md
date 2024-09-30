@@ -1,7 +1,7 @@
 ---
 id: object-set-style-sheet
 title: OBJECT SET STYLE SHEET
-slug: /commands-legacy/object-set-style-sheet
+slug: /commands/object-set-style-sheet
 displayed_sidebar: docs
 ---
 

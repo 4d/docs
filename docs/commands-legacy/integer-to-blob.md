@@ -1,7 +1,7 @@
 ---
 id: integer-to-blob
 title: INTEGER TO BLOB
-slug: /commands-legacy/integer-to-blob
+slug: /commands/integer-to-blob
 displayed_sidebar: docs
 ---
 

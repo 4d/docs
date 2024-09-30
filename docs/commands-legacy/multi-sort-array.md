@@ -1,7 +1,7 @@
 ---
 id: multi-sort-array
 title: MULTI SORT ARRAY
-slug: /commands-legacy/multi-sort-array
+slug: /commands/multi-sort-array
 displayed_sidebar: docs
 ---
 

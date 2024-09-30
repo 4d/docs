@@ -1,7 +1,7 @@
 ---
 id: drag-window
 title: DRAG WINDOW
-slug: /commands-legacy/drag-window
+slug: /commands/drag-window
 displayed_sidebar: docs
 ---
 

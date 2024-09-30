@@ -1,7 +1,7 @@
 ---
 id: wa-set-external-links-filters
 title: WA SET EXTERNAL LINKS FILTERS
-slug: /commands-legacy/wa-set-external-links-filters
+slug: /commands/wa-set-external-links-filters
 displayed_sidebar: docs
 ---
 

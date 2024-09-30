@@ -1,7 +1,7 @@
 ---
 id: trigger-properties
 title: TRIGGER PROPERTIES
-slug: /commands-legacy/trigger-properties
+slug: /commands/trigger-properties
 displayed_sidebar: docs
 ---
 

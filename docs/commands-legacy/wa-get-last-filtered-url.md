@@ -1,7 +1,7 @@
 ---
 id: wa-get-last-filtered-url
 title: WA Get last filtered URL
-slug: /commands-legacy/wa-get-last-filtered-url
+slug: /commands/wa-get-last-filtered-url
 displayed_sidebar: docs
 ---
 

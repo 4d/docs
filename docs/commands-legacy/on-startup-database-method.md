@@ -1,7 +1,7 @@
 ---
 id: on-startup-database-method
 title: On Startup database method
-slug: /commands-legacy/on-startup-database-method
+slug: /commands/on-startup-database-method
 displayed_sidebar: docs
 ---
 

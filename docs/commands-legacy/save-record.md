@@ -1,7 +1,7 @@
 ---
 id: save-record
 title: SAVE RECORD
-slug: /commands-legacy/save-record
+slug: /commands/save-record
 displayed_sidebar: docs
 ---
 

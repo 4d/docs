@@ -1,7 +1,7 @@
 ---
 id: sql-get-last-error
 title: SQL GET LAST ERROR
-slug: /commands-legacy/sql-get-last-error
+slug: /commands/sql-get-last-error
 displayed_sidebar: docs
 ---
 

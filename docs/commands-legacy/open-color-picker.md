@@ -1,7 +1,7 @@
 ---
 id: open-color-picker
 title: OPEN COLOR PICKER
-slug: /commands-legacy/open-color-picker
+slug: /commands/open-color-picker
 displayed_sidebar: docs
 ---
 

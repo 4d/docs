@@ -1,7 +1,7 @@
 ---
 id: process-state
 title: Process state
-slug: /commands-legacy/process-state
+slug: /commands/process-state
 displayed_sidebar: docs
 ---
 

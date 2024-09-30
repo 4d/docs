@@ -1,7 +1,7 @@
 ---
 id: sort-array
 title: SORT ARRAY
-slug: /commands-legacy/sort-array
+slug: /commands/sort-array
 displayed_sidebar: docs
 ---
 

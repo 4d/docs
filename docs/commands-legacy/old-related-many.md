@@ -1,7 +1,7 @@
 ---
 id: old-related-many
 title: OLD RELATED MANY
-slug: /commands-legacy/old-related-many
+slug: /commands/old-related-many
 displayed_sidebar: docs
 ---
 

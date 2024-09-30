@@ -1,7 +1,7 @@
 ---
 id: receive-variable
 title: RECEIVE VARIABLE
-slug: /commands-legacy/receive-variable
+slug: /commands/receive-variable
 displayed_sidebar: docs
 ---
 

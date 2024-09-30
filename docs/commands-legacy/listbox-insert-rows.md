@@ -1,7 +1,7 @@
 ---
 id: listbox-insert-rows
 title: LISTBOX INSERT ROWS
-slug: /commands-legacy/listbox-insert-rows
+slug: /commands/listbox-insert-rows
 displayed_sidebar: docs
 ---
 

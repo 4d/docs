@@ -1,7 +1,7 @@
 ---
 id: st-set-attributes
 title: ST SET ATTRIBUTES
-slug: /commands-legacy/st-set-attributes
+slug: /commands/st-set-attributes
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: object-is-styled-text
 title: OBJECT Is styled text
-slug: /commands-legacy/object-is-styled-text
+slug: /commands/object-is-styled-text
 displayed_sidebar: docs
 ---
 

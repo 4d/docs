@@ -1,7 +1,7 @@
 ---
 id: json-parse-array
 title: JSON PARSE ARRAY
-slug: /commands-legacy/json-parse-array
+slug: /commands/json-parse-array
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: build-application
 title: BUILD APPLICATION
-slug: /commands-legacy/build-application
+slug: /commands/build-application
 displayed_sidebar: docs
 ---
 

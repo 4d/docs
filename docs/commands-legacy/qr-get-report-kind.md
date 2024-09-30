@@ -1,7 +1,7 @@
 ---
 id: qr-get-report-kind
 title: QR Get report kind
-slug: /commands-legacy/qr-get-report-kind
+slug: /commands/qr-get-report-kind
 displayed_sidebar: docs
 ---
 

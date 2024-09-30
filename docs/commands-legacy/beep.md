@@ -1,7 +1,7 @@
 ---
 id: beep
 title: BEEP
-slug: /commands-legacy/beep
+slug: /commands/beep
 displayed_sidebar: docs
 ---
 

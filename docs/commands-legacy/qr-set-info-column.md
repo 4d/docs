@@ -1,7 +1,7 @@
 ---
 id: qr-set-info-column
 title: QR SET INFO COLUMN
-slug: /commands-legacy/qr-set-info-column
+slug: /commands/qr-set-info-column
 displayed_sidebar: docs
 ---
 

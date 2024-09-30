@@ -1,7 +1,7 @@
 ---
 id: wa-get-url-history
 title: WA GET URL HISTORY
-slug: /commands-legacy/wa-get-url-history
+slug: /commands/wa-get-url-history
 displayed_sidebar: docs
 ---
 

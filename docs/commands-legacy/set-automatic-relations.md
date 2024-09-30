@@ -1,7 +1,7 @@
 ---
 id: set-automatic-relations
 title: SET AUTOMATIC RELATIONS
-slug: /commands-legacy/set-automatic-relations
+slug: /commands/set-automatic-relations
 displayed_sidebar: docs
 ---
 

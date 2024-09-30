@@ -1,7 +1,7 @@
 ---
 id: qr-set-area-property
 title: QR SET AREA PROPERTY
-slug: /commands-legacy/qr-set-area-property
+slug: /commands/qr-set-area-property
 displayed_sidebar: docs
 ---
 

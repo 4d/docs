@@ -1,7 +1,7 @@
 ---
 id: alert
 title: ALERT
-slug: /commands-legacy/alert
+slug: /commands/alert
 displayed_sidebar: docs
 ---
 

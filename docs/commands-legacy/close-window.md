@@ -1,7 +1,7 @@
 ---
 id: close-window
 title: CLOSE WINDOW
-slug: /commands-legacy/close-window
+slug: /commands/close-window
 displayed_sidebar: docs
 ---
 

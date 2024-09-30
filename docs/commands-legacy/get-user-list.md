@@ -1,7 +1,7 @@
 ---
 id: get-user-list
 title: GET USER LIST
-slug: /commands-legacy/get-user-list
+slug: /commands/get-user-list
 displayed_sidebar: docs
 ---
 

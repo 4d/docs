@@ -1,7 +1,7 @@
 ---
 id: web-get-option
 title: WEB GET OPTION
-slug: /commands-legacy/web-get-option
+slug: /commands/web-get-option
 displayed_sidebar: docs
 ---
 

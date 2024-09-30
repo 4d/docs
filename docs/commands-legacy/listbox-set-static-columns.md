@@ -1,7 +1,7 @@
 ---
 id: listbox-set-static-columns
 title: LISTBOX SET STATIC COLUMNS
-slug: /commands-legacy/listbox-set-static-columns
+slug: /commands/listbox-set-static-columns
 displayed_sidebar: docs
 ---
 

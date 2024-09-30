@@ -1,7 +1,7 @@
 ---
 id: get-text-resource
 title: Get text resource
-slug: /commands-legacy/get-text-resource
+slug: /commands/get-text-resource
 displayed_sidebar: docs
 ---
 

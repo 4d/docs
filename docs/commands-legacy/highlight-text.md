@@ -1,7 +1,7 @@
 ---
 id: highlight-text
 title: HIGHLIGHT TEXT
-slug: /commands-legacy/highlight-text
+slug: /commands/highlight-text
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: contextual-click
 title: Contextual click
-slug: /commands-legacy/contextual-click
+slug: /commands/contextual-click
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: save-list
 title: SAVE LIST
-slug: /commands-legacy/save-list
+slug: /commands/save-list
 displayed_sidebar: docs
 ---
 

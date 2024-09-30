@@ -1,7 +1,7 @@
 ---
 id: set-picture-to-library
 title: SET PICTURE TO LIBRARY
-slug: /commands-legacy/set-picture-to-library
+slug: /commands/set-picture-to-library
 displayed_sidebar: docs
 ---
 

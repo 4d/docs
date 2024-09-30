@@ -1,7 +1,7 @@
 ---
 id: qr-execute-command
 title: QR EXECUTE COMMAND
-slug: /commands-legacy/qr-execute-command
+slug: /commands/qr-execute-command
 displayed_sidebar: docs
 ---
 

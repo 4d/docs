@@ -1,7 +1,7 @@
 ---
 id: web-service-set-option
 title: WEB SERVICE SET OPTION
-slug: /commands-legacy/web-service-set-option
+slug: /commands/web-service-set-option
 displayed_sidebar: docs
 ---
 

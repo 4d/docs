@@ -1,7 +1,7 @@
 ---
 id: find-in-array
 title: Find in array
-slug: /commands-legacy/find-in-array
+slug: /commands/find-in-array
 displayed_sidebar: docs
 ---
 

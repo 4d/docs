@@ -1,7 +1,7 @@
 ---
 id: euro-converter
 title: Euro converter
-slug: /commands-legacy/euro-converter
+slug: /commands/euro-converter
 displayed_sidebar: docs
 ---
 

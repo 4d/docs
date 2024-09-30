@@ -1,7 +1,7 @@
 ---
 id: listbox-get-headers-height
 title: LISTBOX Get headers height
-slug: /commands-legacy/listbox-get-headers-height
+slug: /commands/listbox-get-headers-height
 displayed_sidebar: docs
 ---
 

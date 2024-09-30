@@ -1,7 +1,7 @@
 ---
 id: object-get-drag-and-drop-options
 title: OBJECT GET DRAG AND DROP OPTIONS
-slug: /commands-legacy/object-get-drag-and-drop-options
+slug: /commands/object-get-drag-and-drop-options
 displayed_sidebar: docs
 ---
 

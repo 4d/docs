@@ -1,7 +1,7 @@
 ---
 id: create-thumbnail
 title: CREATE THUMBNAIL
-slug: /commands-legacy/create-thumbnail
+slug: /commands/create-thumbnail
 displayed_sidebar: docs
 ---
 

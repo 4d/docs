@@ -1,7 +1,7 @@
 ---
 id: listbox-select-row
 title: LISTBOX SELECT ROW
-slug: /commands-legacy/listbox-select-row
+slug: /commands/listbox-select-row
 displayed_sidebar: docs
 ---
 

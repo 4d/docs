@@ -1,7 +1,7 @@
 ---
 id: xml-decode
 title: XML DECODE
-slug: /commands-legacy/xml-decode
+slug: /commands/xml-decode
 displayed_sidebar: docs
 ---
 

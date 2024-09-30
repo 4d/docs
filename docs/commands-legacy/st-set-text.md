@@ -1,7 +1,7 @@
 ---
 id: st-set-text
 title: ST SET TEXT
-slug: /commands-legacy/st-set-text
+slug: /commands/st-set-text
 displayed_sidebar: docs
 ---
 

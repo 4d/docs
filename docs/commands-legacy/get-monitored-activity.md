@@ -1,7 +1,7 @@
 ---
 id: get-monitored-activity
 title: Get Monitored Activity
-slug: /commands-legacy/get-monitored-activity
+slug: /commands/get-monitored-activity
 displayed_sidebar: docs
 ---
 

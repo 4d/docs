@@ -1,7 +1,7 @@
 ---
 id: get-database-localization
 title: Get database localization
-slug: /commands-legacy/get-database-localization
+slug: /commands/get-database-localization
 displayed_sidebar: docs
 ---
 

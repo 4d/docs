@@ -1,7 +1,7 @@
 ---
 id: previous-record
 title: PREVIOUS RECORD
-slug: /commands-legacy/previous-record
+slug: /commands/previous-record
 displayed_sidebar: docs
 ---
 

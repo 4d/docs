@@ -1,7 +1,7 @@
 ---
 id: truncate-table
 title: TRUNCATE TABLE
-slug: /commands-legacy/truncate-table
+slug: /commands/truncate-table
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-field-titles
 title: GET FIELD TITLES
-slug: /commands-legacy/get-field-titles
+slug: /commands/get-field-titles
 displayed_sidebar: docs
 ---
 

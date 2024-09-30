@@ -1,7 +1,7 @@
 ---
 id: blob-properties
 title: BLOB PROPERTIES
-slug: /commands-legacy/blob-properties
+slug: /commands/blob-properties
 displayed_sidebar: docs
 ---
 

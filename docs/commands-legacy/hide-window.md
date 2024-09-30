@@ -1,7 +1,7 @@
 ---
 id: hide-window
 title: HIDE WINDOW
-slug: /commands-legacy/hide-window
+slug: /commands/hide-window
 displayed_sidebar: docs
 ---
 

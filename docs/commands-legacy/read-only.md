@@ -1,7 +1,7 @@
 ---
 id: read-only
 title: READ ONLY
-slug: /commands-legacy/read-only
+slug: /commands/read-only
 displayed_sidebar: docs
 ---
 

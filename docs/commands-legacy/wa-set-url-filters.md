@@ -1,7 +1,7 @@
 ---
 id: wa-set-url-filters
 title: WA SET URL FILTERS
-slug: /commands-legacy/wa-set-url-filters
+slug: /commands/wa-set-url-filters
 displayed_sidebar: docs
 ---
 

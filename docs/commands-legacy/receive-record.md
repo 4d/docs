@@ -1,7 +1,7 @@
 ---
 id: receive-record
 title: RECEIVE RECORD
-slug: /commands-legacy/receive-record
+slug: /commands/receive-record
 displayed_sidebar: docs
 ---
 

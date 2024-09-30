@@ -1,7 +1,7 @@
 ---
 id: get-document-size
 title: Get document size
-slug: /commands-legacy/get-document-size
+slug: /commands/get-document-size
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: generate-digest
 title: Generate digest
-slug: /commands-legacy/generate-digest
+slug: /commands/generate-digest
 displayed_sidebar: docs
 ---
 

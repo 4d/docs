@@ -1,7 +1,7 @@
 ---
 id: object-get-three-states-checkbox
 title: OBJECT Get three states checkbox
-slug: /commands-legacy/object-get-three-states-checkbox
+slug: /commands/object-get-three-states-checkbox
 displayed_sidebar: docs
 ---
 

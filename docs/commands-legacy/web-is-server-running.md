@@ -1,7 +1,7 @@
 ---
 id: web-is-server-running
 title: WEB Is server running
-slug: /commands-legacy/web-is-server-running
+slug: /commands/web-is-server-running
 displayed_sidebar: docs
 ---
 

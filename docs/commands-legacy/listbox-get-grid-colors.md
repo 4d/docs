@@ -1,7 +1,7 @@
 ---
 id: listbox-get-grid-colors
 title: LISTBOX GET GRID COLORS
-slug: /commands-legacy/listbox-get-grid-colors
+slug: /commands/listbox-get-grid-colors
 displayed_sidebar: docs
 ---
 

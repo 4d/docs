@@ -1,7 +1,7 @@
 ---
 id: folder
 title: Folder
-slug: /commands-legacy/folder
+slug: /commands/folder
 displayed_sidebar: docs
 ---
 

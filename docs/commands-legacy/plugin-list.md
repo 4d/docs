@@ -1,7 +1,7 @@
 ---
 id: plugin-list
 title: PLUGIN LIST
-slug: /commands-legacy/plugin-list
+slug: /commands/plugin-list
 displayed_sidebar: docs
 ---
 

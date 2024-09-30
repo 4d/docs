@@ -1,7 +1,7 @@
 ---
 id: no-default-table
 title: NO DEFAULT TABLE
-slug: /commands-legacy/no-default-table
+slug: /commands/no-default-table
 displayed_sidebar: docs
 ---
 

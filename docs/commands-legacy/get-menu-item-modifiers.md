@@ -1,7 +1,7 @@
 ---
 id: get-menu-item-modifiers
 title: Get menu item modifiers
-slug: /commands-legacy/get-menu-item-modifiers
+slug: /commands/get-menu-item-modifiers
 displayed_sidebar: docs
 ---
 

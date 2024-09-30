@@ -1,7 +1,7 @@
 ---
 id: on-sql-authentication-database-method
 title: On SQL Authentication database method
-slug: /commands-legacy/on-sql-authentication-database-method
+slug: /commands/on-sql-authentication-database-method
 displayed_sidebar: docs
 ---
 

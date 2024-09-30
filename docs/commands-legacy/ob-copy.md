@@ -1,7 +1,7 @@
 ---
 id: ob-copy
 title: OB Copy
-slug: /commands-legacy/ob-copy
+slug: /commands/ob-copy
 displayed_sidebar: docs
 ---
 

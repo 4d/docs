@@ -1,7 +1,7 @@
 ---
 id: c-object
 title: C_OBJECT
-slug: /commands-legacy/c-object
+slug: /commands/c-object
 displayed_sidebar: docs
 ---
 

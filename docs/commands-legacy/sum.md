@@ -1,7 +1,7 @@
 ---
 id: sum
 title: Sum
-slug: /commands-legacy/sum
+slug: /commands/sum
 displayed_sidebar: docs
 ---
 

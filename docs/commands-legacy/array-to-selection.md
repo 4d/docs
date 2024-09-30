@@ -1,7 +1,7 @@
 ---
 id: array-to-selection
 title: ARRAY TO SELECTION
-slug: /commands-legacy/array-to-selection
+slug: /commands/array-to-selection
 displayed_sidebar: docs
 ---
 

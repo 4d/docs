@@ -1,7 +1,7 @@
 ---
 id: start-transaction
 title: START TRANSACTION
-slug: /commands-legacy/start-transaction
+slug: /commands/start-transaction
 displayed_sidebar: docs
 ---
 

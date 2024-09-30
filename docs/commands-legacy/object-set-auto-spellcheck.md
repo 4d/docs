@@ -1,7 +1,7 @@
 ---
 id: object-set-auto-spellcheck
 title: OBJECT SET AUTO SPELLCHECK
-slug: /commands-legacy/object-set-auto-spellcheck
+slug: /commands/object-set-auto-spellcheck
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: listbox-set-locked-columns
 title: LISTBOX SET LOCKED COLUMNS
-slug: /commands-legacy/listbox-set-locked-columns
+slug: /commands/listbox-set-locked-columns
 displayed_sidebar: docs
 ---
 

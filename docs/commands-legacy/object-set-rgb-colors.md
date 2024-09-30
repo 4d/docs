@@ -1,7 +1,7 @@
 ---
 id: object-set-rgb-colors
 title: OBJECT SET RGB COLORS
-slug: /commands-legacy/object-set-rgb-colors
+slug: /commands/object-set-rgb-colors
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: users-to-blob
 title: USERS TO BLOB
-slug: /commands-legacy/users-to-blob
+slug: /commands/users-to-blob
 displayed_sidebar: docs
 ---
 

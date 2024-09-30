@@ -1,7 +1,7 @@
 ---
 id: set-list-item-icon
 title: SET LIST ITEM ICON
-slug: /commands-legacy/set-list-item-icon
+slug: /commands/set-list-item-icon
 displayed_sidebar: docs
 ---
 

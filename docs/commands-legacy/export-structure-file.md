@@ -1,7 +1,7 @@
 ---
 id: export-structure-file
 title: Export structure file
-slug: /commands-legacy/export-structure-file
+slug: /commands/export-structure-file
 displayed_sidebar: docs
 ---
 

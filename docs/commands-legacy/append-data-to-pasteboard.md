@@ -1,7 +1,7 @@
 ---
 id: append-data-to-pasteboard
 title: APPEND DATA TO PASTEBOARD
-slug: /commands-legacy/append-data-to-pasteboard
+slug: /commands/append-data-to-pasteboard
 displayed_sidebar: docs
 ---
 

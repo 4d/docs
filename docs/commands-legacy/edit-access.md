@@ -1,7 +1,7 @@
 ---
 id: edit-access
 title: EDIT ACCESS
-slug: /commands-legacy/edit-access
+slug: /commands/edit-access
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: before
 title: Before
-slug: /commands-legacy/before
+slug: /commands/before
 displayed_sidebar: docs
 ---
 

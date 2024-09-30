@@ -1,7 +1,7 @@
 ---
 id: listbox-moved-row-number
 title: LISTBOX MOVED ROW NUMBER
-slug: /commands-legacy/listbox-moved-row-number
+slug: /commands/listbox-moved-row-number
 displayed_sidebar: docs
 ---
 

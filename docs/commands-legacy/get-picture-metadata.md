@@ -1,7 +1,7 @@
 ---
 id: get-picture-metadata
 title: GET PICTURE METADATA
-slug: /commands-legacy/get-picture-metadata
+slug: /commands/get-picture-metadata
 displayed_sidebar: docs
 ---
 

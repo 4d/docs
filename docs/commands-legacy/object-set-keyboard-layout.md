@@ -1,7 +1,7 @@
 ---
 id: object-set-keyboard-layout
 title: OBJECT SET KEYBOARD LAYOUT
-slug: /commands-legacy/object-set-keyboard-layout
+slug: /commands/object-set-keyboard-layout
 displayed_sidebar: docs
 ---
 

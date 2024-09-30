@@ -1,7 +1,7 @@
 ---
 id: listbox-move-column
 title: LISTBOX MOVE COLUMN
-slug: /commands-legacy/listbox-move-column
+slug: /commands/listbox-move-column
 displayed_sidebar: docs
 ---
 

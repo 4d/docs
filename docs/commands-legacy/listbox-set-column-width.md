@@ -1,7 +1,7 @@
 ---
 id: listbox-set-column-width
 title: LISTBOX SET COLUMN WIDTH
-slug: /commands-legacy/listbox-set-column-width
+slug: /commands/listbox-set-column-width
 displayed_sidebar: docs
 ---
 

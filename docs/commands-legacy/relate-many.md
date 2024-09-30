@@ -1,7 +1,7 @@
 ---
 id: relate-many
 title: RELATE MANY
-slug: /commands-legacy/relate-many
+slug: /commands/relate-many
 displayed_sidebar: docs
 ---
 

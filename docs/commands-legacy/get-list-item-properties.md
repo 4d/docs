@@ -1,7 +1,7 @@
 ---
 id: get-list-item-properties
 title: GET LIST ITEM PROPERTIES
-slug: /commands-legacy/get-list-item-properties
+slug: /commands/get-list-item-properties
 displayed_sidebar: docs
 ---
 

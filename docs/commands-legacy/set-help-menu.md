@@ -1,7 +1,7 @@
 ---
 id: set-help-menu
 title: SET HELP MENU
-slug: /commands-legacy/set-help-menu
+slug: /commands/set-help-menu
 displayed_sidebar: docs
 ---
 

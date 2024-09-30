@@ -1,7 +1,7 @@
 ---
 id: object-get-auto-spellcheck
 title: OBJECT Get auto spellcheck
-slug: /commands-legacy/object-get-auto-spellcheck
+slug: /commands/object-get-auto-spellcheck
 displayed_sidebar: docs
 ---
 

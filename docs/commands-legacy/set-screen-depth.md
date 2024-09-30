@@ -1,7 +1,7 @@
 ---
 id: set-screen-depth
 title: SET SCREEN DEPTH
-slug: /commands-legacy/set-screen-depth
+slug: /commands/set-screen-depth
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: query-by-example
 title: QUERY BY EXAMPLE
-slug: /commands-legacy/query-by-example
+slug: /commands/query-by-example
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-license-usage
 title: Get license usage
-slug: /commands-legacy/get-license-usage
+slug: /commands/get-license-usage
 displayed_sidebar: docs
 ---
 

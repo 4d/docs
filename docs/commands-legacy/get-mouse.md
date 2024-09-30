@@ -1,7 +1,7 @@
 ---
 id: get-mouse
 title: GET MOUSE
-slug: /commands-legacy/get-mouse
+slug: /commands/get-mouse
 displayed_sidebar: docs
 ---
 

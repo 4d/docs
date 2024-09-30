@@ -1,7 +1,7 @@
 ---
 id: hide-process
 title: HIDE PROCESS
-slug: /commands-legacy/hide-process
+slug: /commands/hide-process
 displayed_sidebar: docs
 ---
 

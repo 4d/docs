@@ -1,7 +1,7 @@
 ---
 id: get-pasteboard-data
 title: GET PASTEBOARD DATA
-slug: /commands-legacy/get-pasteboard-data
+slug: /commands/get-pasteboard-data
 displayed_sidebar: docs
 ---
 

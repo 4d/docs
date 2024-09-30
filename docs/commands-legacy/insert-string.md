@@ -1,7 +1,7 @@
 ---
 id: insert-string
 title: Insert string
-slug: /commands-legacy/insert-string
+slug: /commands/insert-string
 displayed_sidebar: docs
 ---
 

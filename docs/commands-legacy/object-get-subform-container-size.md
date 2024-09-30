@@ -1,7 +1,7 @@
 ---
 id: object-get-subform-container-size
 title: OBJECT GET SUBFORM CONTAINER SIZE
-slug: /commands-legacy/object-get-subform-container-size
+slug: /commands/object-get-subform-container-size
 displayed_sidebar: docs
 ---
 

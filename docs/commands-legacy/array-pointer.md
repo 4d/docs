@@ -1,7 +1,7 @@
 ---
 id: array-pointer
 title: ARRAY POINTER
-slug: /commands-legacy/array-pointer
+slug: /commands/array-pointer
 displayed_sidebar: docs
 ---
 

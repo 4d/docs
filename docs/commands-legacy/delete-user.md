@@ -1,7 +1,7 @@
 ---
 id: delete-user
 title: DELETE USER
-slug: /commands-legacy/delete-user
+slug: /commands/delete-user
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: object-get-print-variable-frame
 title: OBJECT GET PRINT VARIABLE FRAME
-slug: /commands-legacy/object-get-print-variable-frame
+slug: /commands/object-get-print-variable-frame
 displayed_sidebar: docs
 ---
 

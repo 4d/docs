@@ -1,7 +1,7 @@
 ---
 id: object-get-corner-radius
 title: OBJECT Get corner radius
-slug: /commands-legacy/object-get-corner-radius
+slug: /commands/object-get-corner-radius
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: semaphore
 title: Semaphore
-slug: /commands-legacy/semaphore
+slug: /commands/semaphore
 displayed_sidebar: docs
 ---
 

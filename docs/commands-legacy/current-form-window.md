@@ -1,7 +1,7 @@
 ---
 id: current-form-window
 title: Current form window
-slug: /commands-legacy/current-form-window
+slug: /commands/current-form-window
 displayed_sidebar: docs
 ---
 

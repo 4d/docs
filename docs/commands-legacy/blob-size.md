@@ -1,7 +1,7 @@
 ---
 id: blob-size
 title: BLOB size
-slug: /commands-legacy/blob-size
+slug: /commands/blob-size
 displayed_sidebar: docs
 ---
 

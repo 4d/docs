@@ -1,7 +1,7 @@
 ---
 id: log-file
 title: Log File
-slug: /commands-legacy/log-file
+slug: /commands/log-file
 displayed_sidebar: docs
 ---
 

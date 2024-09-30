@@ -1,7 +1,7 @@
 ---
 id: object-get-context-menu
 title: OBJECT Get context menu
-slug: /commands-legacy/object-get-context-menu
+slug: /commands/object-get-context-menu
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: send-packet
 title: SEND PACKET
-slug: /commands-legacy/send-packet
+slug: /commands/send-packet
 displayed_sidebar: docs
 ---
 

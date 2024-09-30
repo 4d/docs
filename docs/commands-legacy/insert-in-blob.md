@@ -1,7 +1,7 @@
 ---
 id: insert-in-blob
 title: INSERT IN BLOB
-slug: /commands-legacy/insert-in-blob
+slug: /commands/insert-in-blob
 displayed_sidebar: docs
 ---
 

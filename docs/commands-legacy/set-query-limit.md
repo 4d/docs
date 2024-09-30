@@ -1,7 +1,7 @@
 ---
 id: set-query-limit
 title: SET QUERY LIMIT
-slug: /commands-legacy/set-query-limit
+slug: /commands/set-query-limit
 displayed_sidebar: docs
 ---
 

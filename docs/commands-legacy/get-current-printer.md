@@ -1,7 +1,7 @@
 ---
 id: get-current-printer
 title: Get current printer
-slug: /commands-legacy/get-current-printer
+slug: /commands/get-current-printer
 displayed_sidebar: docs
 ---
 

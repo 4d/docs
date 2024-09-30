@@ -1,7 +1,7 @@
 ---
 id: object-get-subform-container-value
 title: OBJECT Get subform container value
-slug: /commands-legacy/object-get-subform-container-value
+slug: /commands/object-get-subform-container-value
 displayed_sidebar: docs
 ---
 

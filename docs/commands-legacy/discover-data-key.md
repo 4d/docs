@@ -1,7 +1,7 @@
 ---
 id: discover-data-key
 title: Discover data key
-slug: /commands-legacy/discover-data-key
+slug: /commands/discover-data-key
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: qr-get-sorts
 title: QR GET SORTS
-slug: /commands-legacy/qr-get-sorts
+slug: /commands/qr-get-sorts
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: st-insert-expression
 title: ST INSERT EXPRESSION
-slug: /commands-legacy/st-insert-expression
+slug: /commands/st-insert-expression
 displayed_sidebar: docs
 ---
 

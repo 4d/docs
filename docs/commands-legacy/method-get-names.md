@@ -1,7 +1,7 @@
 ---
 id: method-get-names
 title: METHOD GET NAMES
-slug: /commands-legacy/method-get-names
+slug: /commands/method-get-names
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: web-service-get-info
 title: WEB SERVICE Get info
-slug: /commands-legacy/web-service-get-info
+slug: /commands/web-service-get-info
 displayed_sidebar: docs
 ---
 

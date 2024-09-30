@@ -1,7 +1,7 @@
 ---
 id: dom-append-xml-element
 title: DOM Append XML element
-slug: /commands-legacy/dom-append-xml-element
+slug: /commands/dom-append-xml-element
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: ob-remove
 title: OB REMOVE
-slug: /commands-legacy/ob-remove
+slug: /commands/ob-remove
 displayed_sidebar: docs
 ---
 

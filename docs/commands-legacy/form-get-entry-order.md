@@ -1,7 +1,7 @@
 ---
 id: form-get-entry-order
 title: FORM GET ENTRY ORDER
-slug: /commands-legacy/form-get-entry-order
+slug: /commands/form-get-entry-order
 displayed_sidebar: docs
 ---
 

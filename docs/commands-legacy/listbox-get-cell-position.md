@@ -1,7 +1,7 @@
 ---
 id: listbox-get-cell-position
 title: LISTBOX GET CELL POSITION
-slug: /commands-legacy/listbox-get-cell-position
+slug: /commands/listbox-get-cell-position
 displayed_sidebar: docs
 ---
 

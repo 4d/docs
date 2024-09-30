@@ -1,7 +1,7 @@
 ---
 id: component-list
 title: COMPONENT LIST
-slug: /commands-legacy/component-list
+slug: /commands/component-list
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: is-editing-text
 title: Is editing text
-slug: /commands-legacy/is-editing-text
+slug: /commands/is-editing-text
 displayed_sidebar: docs
 ---
 

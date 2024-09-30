@@ -1,7 +1,7 @@
 ---
 id: import-sylk
 title: IMPORT SYLK
-slug: /commands-legacy/import-sylk
+slug: /commands/import-sylk
 displayed_sidebar: docs
 ---
 

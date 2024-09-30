@@ -1,7 +1,7 @@
 ---
 id: process-number
 title: Process number
-slug: /commands-legacy/process-number
+slug: /commands/process-number
 displayed_sidebar: docs
 ---
 

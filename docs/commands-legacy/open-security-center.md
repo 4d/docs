@@ -1,7 +1,7 @@
 ---
 id: open-security-center
 title: OPEN SECURITY CENTER
-slug: /commands-legacy/open-security-center
+slug: /commands/open-security-center
 displayed_sidebar: docs
 ---
 

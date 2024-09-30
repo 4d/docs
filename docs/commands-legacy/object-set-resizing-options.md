@@ -1,7 +1,7 @@
 ---
 id: object-set-resizing-options
 title: OBJECT SET RESIZING OPTIONS
-slug: /commands-legacy/object-set-resizing-options
+slug: /commands/object-set-resizing-options
 displayed_sidebar: docs
 ---
 

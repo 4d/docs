@@ -1,7 +1,7 @@
 ---
 id: listbox-get-static-columns
 title: LISTBOX Get static columns
-slug: /commands-legacy/listbox-get-static-columns
+slug: /commands/listbox-get-static-columns
 displayed_sidebar: docs
 ---
 

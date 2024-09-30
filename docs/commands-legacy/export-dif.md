@@ -1,7 +1,7 @@
 ---
 id: export-dif
 title: EXPORT DIF
-slug: /commands-legacy/export-dif
+slug: /commands/export-dif
 displayed_sidebar: docs
 ---
 

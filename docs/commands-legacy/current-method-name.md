@@ -1,7 +1,7 @@
 ---
 id: current-method-name
 title: Current method name
-slug: /commands-legacy/current-method-name
+slug: /commands/current-method-name
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: document-list
 title: DOCUMENT LIST
-slug: /commands-legacy/document-list
+slug: /commands/document-list
 displayed_sidebar: docs
 ---
 

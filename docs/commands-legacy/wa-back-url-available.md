@@ -1,7 +1,7 @@
 ---
 id: wa-back-url-available
 title: WA Back URL available
-slug: /commands-legacy/wa-back-url-available
+slug: /commands/wa-back-url-available
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: open-settings-window
 title: OPEN SETTINGS WINDOW
-slug: /commands-legacy/open-settings-window
+slug: /commands/open-settings-window
 displayed_sidebar: docs
 ---
 

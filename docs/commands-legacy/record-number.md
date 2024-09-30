@@ -1,7 +1,7 @@
 ---
 id: record-number
 title: Record number
-slug: /commands-legacy/record-number
+slug: /commands/record-number
 displayed_sidebar: docs
 ---
 

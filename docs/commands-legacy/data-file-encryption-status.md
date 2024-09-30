@@ -1,7 +1,7 @@
 ---
 id: data-file-encryption-status
 title: Data file encryption status
-slug: /commands-legacy/data-file-encryption-status
+slug: /commands/data-file-encryption-status
 displayed_sidebar: docs
 ---
 

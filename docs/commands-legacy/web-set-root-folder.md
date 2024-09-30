@@ -1,7 +1,7 @@
 ---
 id: web-set-root-folder
 title: WEB SET ROOT FOLDER
-slug: /commands-legacy/web-set-root-folder
+slug: /commands/web-set-root-folder
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-text-from-pasteboard
 title: Get text from pasteboard
-slug: /commands-legacy/get-text-from-pasteboard
+slug: /commands/get-text-from-pasteboard
 displayed_sidebar: docs
 ---
 

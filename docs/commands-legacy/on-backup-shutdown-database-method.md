@@ -1,7 +1,7 @@
 ---
 id: on-backup-shutdown-database-method
 title: On Backup Shutdown database method
-slug: /commands-legacy/on-backup-shutdown-database-method
+slug: /commands/on-backup-shutdown-database-method
 displayed_sidebar: docs
 ---
 

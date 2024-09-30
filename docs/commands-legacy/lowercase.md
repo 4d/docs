@@ -1,7 +1,7 @@
 ---
 id: lowercase
 title: Lowercase
-slug: /commands-legacy/lowercase
+slug: /commands/lowercase
 displayed_sidebar: docs
 ---
 

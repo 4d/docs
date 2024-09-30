@@ -1,7 +1,7 @@
 ---
 id: print-form
 title: Print form
-slug: /commands-legacy/print-form
+slug: /commands/print-form
 displayed_sidebar: docs
 ---
 

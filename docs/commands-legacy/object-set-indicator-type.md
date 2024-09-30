@@ -1,7 +1,7 @@
 ---
 id: object-set-indicator-type
 title: OBJECT SET INDICATOR TYPE
-slug: /commands-legacy/object-set-indicator-type
+slug: /commands/object-set-indicator-type
 displayed_sidebar: docs
 ---
 

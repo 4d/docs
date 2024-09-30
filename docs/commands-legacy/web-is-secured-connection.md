@@ -1,7 +1,7 @@
 ---
 id: web-is-secured-connection
 title: WEB Is secured connection
-slug: /commands-legacy/web-is-secured-connection
+slug: /commands/web-is-secured-connection
 displayed_sidebar: docs
 ---
 

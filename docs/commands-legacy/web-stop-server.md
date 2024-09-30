@@ -1,7 +1,7 @@
 ---
 id: web-stop-server
 title: WEB STOP SERVER
-slug: /commands-legacy/web-stop-server
+slug: /commands/web-stop-server
 displayed_sidebar: docs
 ---
 

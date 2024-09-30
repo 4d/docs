@@ -1,7 +1,7 @@
 ---
 id: object-get-action
 title: OBJECT Get action
-slug: /commands-legacy/object-get-action
+slug: /commands/object-get-action
 displayed_sidebar: docs
 ---
 

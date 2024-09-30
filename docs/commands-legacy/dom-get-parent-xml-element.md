@@ -1,7 +1,7 @@
 ---
 id: dom-get-parent-xml-element
 title: DOM Get parent XML element
-slug: /commands-legacy/dom-get-parent-xml-element
+slug: /commands/dom-get-parent-xml-element
 displayed_sidebar: docs
 ---
 

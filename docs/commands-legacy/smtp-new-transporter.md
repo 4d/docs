@@ -1,7 +1,7 @@
 ---
 id: smtp-new-transporter
 title: SMTP New transporter
-slug: /commands-legacy/smtp-new-transporter
+slug: /commands/smtp-new-transporter
 displayed_sidebar: docs
 ---
 

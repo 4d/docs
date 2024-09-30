@@ -1,7 +1,7 @@
 ---
 id: day-of
 title: Day of
-slug: /commands-legacy/day-of
+slug: /commands/day-of
 displayed_sidebar: docs
 ---
 

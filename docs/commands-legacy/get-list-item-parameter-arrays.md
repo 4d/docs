@@ -1,7 +1,7 @@
 ---
 id: get-list-item-parameter-arrays
 title: GET LIST ITEM PARAMETER ARRAYS
-slug: /commands-legacy/get-list-item-parameter-arrays
+slug: /commands/get-list-item-parameter-arrays
 displayed_sidebar: docs
 ---
 

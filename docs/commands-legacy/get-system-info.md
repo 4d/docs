@@ -1,7 +1,7 @@
 ---
 id: get-system-info
 title: Get system info
-slug: /commands-legacy/get-system-info
+slug: /commands/get-system-info
 displayed_sidebar: docs
 ---
 

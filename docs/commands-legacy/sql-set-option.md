@@ -1,7 +1,7 @@
 ---
 id: sql-set-option
 title: SQL SET OPTION
-slug: /commands-legacy/sql-set-option
+slug: /commands/sql-set-option
 displayed_sidebar: docs
 ---
 

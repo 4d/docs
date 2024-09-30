@@ -1,7 +1,7 @@
 ---
 id: is-new-record
 title: Is new record
-slug: /commands-legacy/is-new-record
+slug: /commands/is-new-record
 displayed_sidebar: docs
 ---
 

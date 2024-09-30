@@ -1,7 +1,7 @@
 ---
 id: set-user-properties
 title: Set user properties
-slug: /commands-legacy/set-user-properties
+slug: /commands/set-user-properties
 displayed_sidebar: docs
 ---
 

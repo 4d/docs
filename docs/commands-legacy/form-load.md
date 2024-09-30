@@ -1,7 +1,7 @@
 ---
 id: form-load
 title: FORM LOAD
-slug: /commands-legacy/form-load
+slug: /commands/form-load
 displayed_sidebar: docs
 ---
 

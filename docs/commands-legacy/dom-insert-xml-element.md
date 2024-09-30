@@ -1,7 +1,7 @@
 ---
 id: dom-insert-xml-element
 title: DOM Insert XML element
-slug: /commands-legacy/dom-insert-xml-element
+slug: /commands/dom-insert-xml-element
 displayed_sidebar: docs
 ---
 

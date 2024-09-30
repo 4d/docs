@@ -1,7 +1,7 @@
 ---
 id: object-get-keyboard-layout
 title: OBJECT Get keyboard layout
-slug: /commands-legacy/object-get-keyboard-layout
+slug: /commands/object-get-keyboard-layout
 displayed_sidebar: docs
 ---
 

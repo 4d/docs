@@ -1,7 +1,7 @@
 ---
 id: set-assert-enabled
 title: SET ASSERT ENABLED
-slug: /commands-legacy/set-assert-enabled
+slug: /commands/set-assert-enabled
 displayed_sidebar: docs
 ---
 

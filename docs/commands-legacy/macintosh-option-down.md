@@ -1,7 +1,7 @@
 ---
 id: macintosh-option-down
 title: Macintosh option down
-slug: /commands-legacy/macintosh-option-down
+slug: /commands/macintosh-option-down
 displayed_sidebar: docs
 ---
 

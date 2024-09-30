@@ -1,7 +1,7 @@
 ---
 id: dom-find-xml-element-by-id
 title: DOM Find XML element by ID
-slug: /commands-legacy/dom-find-xml-element-by-id
+slug: /commands/dom-find-xml-element-by-id
 displayed_sidebar: docs
 ---
 

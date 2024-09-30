@@ -1,7 +1,7 @@
 ---
 id: wa-stop-loading-url
 title: WA STOP LOADING URL
-slug: /commands-legacy/wa-stop-loading-url
+slug: /commands/wa-stop-loading-url
 displayed_sidebar: docs
 ---
 

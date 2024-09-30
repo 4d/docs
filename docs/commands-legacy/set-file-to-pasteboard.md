@@ -1,7 +1,7 @@
 ---
 id: set-file-to-pasteboard
 title: SET FILE TO PASTEBOARD
-slug: /commands-legacy/set-file-to-pasteboard
+slug: /commands/set-file-to-pasteboard
 displayed_sidebar: docs
 ---
 

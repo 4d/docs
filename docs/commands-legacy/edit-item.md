@@ -1,7 +1,7 @@
 ---
 id: edit-item
 title: EDIT ITEM
-slug: /commands-legacy/edit-item
+slug: /commands/edit-item
 displayed_sidebar: docs
 ---
 

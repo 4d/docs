@@ -1,7 +1,7 @@
 ---
 id: dom-get-xml-document-ref
 title: DOM Get XML document ref
-slug: /commands-legacy/dom-get-xml-document-ref
+slug: /commands/dom-get-xml-document-ref
 displayed_sidebar: docs
 ---
 

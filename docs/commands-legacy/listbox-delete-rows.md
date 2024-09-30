@@ -1,7 +1,7 @@
 ---
 id: listbox-delete-rows
 title: LISTBOX DELETE ROWS
-slug: /commands-legacy/listbox-delete-rows
+slug: /commands/listbox-delete-rows
 displayed_sidebar: docs
 ---
 

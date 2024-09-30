@@ -1,7 +1,7 @@
 ---
 id: form-get-names
 title: FORM GET NAMES
-slug: /commands-legacy/form-get-names
+slug: /commands/form-get-names
 displayed_sidebar: docs
 ---
 

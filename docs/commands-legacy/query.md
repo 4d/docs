@@ -1,7 +1,7 @@
 ---
 id: query
 title: QUERY
-slug: /commands-legacy/query
+slug: /commands/query
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: dom-set-xml-element-value
 title: DOM SET XML ELEMENT VALUE
-slug: /commands-legacy/dom-set-xml-element-value
+slug: /commands/dom-set-xml-element-value
 displayed_sidebar: docs
 ---
 

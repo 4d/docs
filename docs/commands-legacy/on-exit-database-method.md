@@ -1,7 +1,7 @@
 ---
 id: on-exit-database-method
 title: On Exit database method
-slug: /commands-legacy/on-exit-database-method
+slug: /commands/on-exit-database-method
 displayed_sidebar: docs
 ---
 

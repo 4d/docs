@@ -1,7 +1,7 @@
 ---
 id: post-outside-call
 title: POST OUTSIDE CALL
-slug: /commands-legacy/post-outside-call
+slug: /commands/post-outside-call
 displayed_sidebar: docs
 ---
 

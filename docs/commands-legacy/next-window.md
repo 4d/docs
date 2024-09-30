@@ -1,7 +1,7 @@
 ---
 id: next-window
 title: Next window
-slug: /commands-legacy/next-window
+slug: /commands/next-window
 displayed_sidebar: docs
 ---
 

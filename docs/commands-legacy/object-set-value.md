@@ -1,7 +1,7 @@
 ---
 id: object-set-value
 title: OBJECT SET VALUE
-slug: /commands-legacy/object-set-value
+slug: /commands/object-set-value
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: execute-method
 title: EXECUTE METHOD
-slug: /commands-legacy/execute-method
+slug: /commands/execute-method
 displayed_sidebar: docs
 ---
 

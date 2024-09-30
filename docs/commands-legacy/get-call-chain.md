@@ -1,7 +1,7 @@
 ---
 id: get-call-chain
 title: Get call chain
-slug: /commands-legacy/get-call-chain
+slug: /commands/get-call-chain
 displayed_sidebar: docs
 ---
 

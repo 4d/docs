@@ -1,7 +1,7 @@
 ---
 id: picture-codec-list
 title: PICTURE CODEC LIST
-slug: /commands-legacy/picture-codec-list
+slug: /commands/picture-codec-list
 displayed_sidebar: docs
 ---
 

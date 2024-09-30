@@ -1,7 +1,7 @@
 ---
 id: qr-find-column
 title: QR Find column
-slug: /commands-legacy/qr-find-column
+slug: /commands/qr-find-column
 displayed_sidebar: docs
 ---
 

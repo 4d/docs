@@ -1,7 +1,7 @@
 ---
 id: set-cache-size
 title: SET CACHE SIZE
-slug: /commands-legacy/set-cache-size
+slug: /commands/set-cache-size
 displayed_sidebar: docs
 ---
 

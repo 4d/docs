@@ -1,7 +1,7 @@
 ---
 id: object-duplicate
 title: OBJECT DUPLICATE
-slug: /commands-legacy/object-duplicate
+slug: /commands/object-duplicate
 displayed_sidebar: docs
 ---
 

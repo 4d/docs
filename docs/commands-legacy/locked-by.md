@@ -1,7 +1,7 @@
 ---
 id: locked-by
 title: LOCKED BY
-slug: /commands-legacy/locked-by
+slug: /commands/locked-by
 displayed_sidebar: docs
 ---
 

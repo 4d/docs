@@ -1,7 +1,7 @@
 ---
 id: validate-password
 title: Validate password
-slug: /commands-legacy/validate-password
+slug: /commands/validate-password
 displayed_sidebar: docs
 ---
 

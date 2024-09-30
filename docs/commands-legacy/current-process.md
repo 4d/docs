@@ -1,7 +1,7 @@
 ---
 id: current-process
 title: Current process
-slug: /commands-legacy/current-process
+slug: /commands/current-process
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: not
 title: Not
-slug: /commands-legacy/not
+slug: /commands/not
 displayed_sidebar: docs
 ---
 

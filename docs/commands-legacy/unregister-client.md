@@ -1,7 +1,7 @@
 ---
 id: unregister-client
 title: UNREGISTER CLIENT
-slug: /commands-legacy/unregister-client
+slug: /commands/unregister-client
 displayed_sidebar: docs
 ---
 

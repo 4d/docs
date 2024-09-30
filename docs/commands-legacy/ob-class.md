@@ -1,7 +1,7 @@
 ---
 id: ob-class
 title: OB Class
-slug: /commands-legacy/ob-class
+slug: /commands/ob-class
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: listbox-get-footers-height
 title: LISTBOX Get footers height
-slug: /commands-legacy/listbox-get-footers-height
+slug: /commands/listbox-get-footers-height
 displayed_sidebar: docs
 ---
 

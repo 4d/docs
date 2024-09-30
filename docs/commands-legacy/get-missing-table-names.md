@@ -1,7 +1,7 @@
 ---
 id: get-missing-table-names
 title: GET MISSING TABLE NAMES
-slug: /commands-legacy/get-missing-table-names
+slug: /commands/get-missing-table-names
 displayed_sidebar: docs
 ---
 

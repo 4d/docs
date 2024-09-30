@@ -1,7 +1,7 @@
 ---
 id: get-indexed-string
 title: Get indexed string
-slug: /commands-legacy/get-indexed-string
+slug: /commands/get-indexed-string
 displayed_sidebar: docs
 ---
 

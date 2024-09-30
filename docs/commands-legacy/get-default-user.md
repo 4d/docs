@@ -1,7 +1,7 @@
 ---
 id: get-default-user
 title: Get default user
-slug: /commands-legacy/get-default-user
+slug: /commands/get-default-user
 displayed_sidebar: docs
 ---
 

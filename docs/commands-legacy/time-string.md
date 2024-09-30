@@ -1,7 +1,7 @@
 ---
 id: time-string
 title: Time string
-slug: /commands-legacy/time-string
+slug: /commands/time-string
 displayed_sidebar: docs
 ---
 

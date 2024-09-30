@@ -1,7 +1,7 @@
 ---
 id: resume-transaction
 title: RESUME TRANSACTION
-slug: /commands-legacy/resume-transaction
+slug: /commands/resume-transaction
 displayed_sidebar: docs
 ---
 

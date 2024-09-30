@@ -1,7 +1,7 @@
 ---
 id: reload-external-data
 title: RELOAD EXTERNAL DATA
-slug: /commands-legacy/reload-external-data
+slug: /commands/reload-external-data
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: object-set-vertical-alignment
 title: OBJECT SET VERTICAL ALIGNMENT
-slug: /commands-legacy/object-set-vertical-alignment
+slug: /commands/object-set-vertical-alignment
 displayed_sidebar: docs
 ---
 

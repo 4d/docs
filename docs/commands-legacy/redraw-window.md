@@ -1,7 +1,7 @@
 ---
 id: redraw-window
 title: REDRAW WINDOW
-slug: /commands-legacy/redraw-window
+slug: /commands/redraw-window
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: tan
 title: Tan
-slug: /commands-legacy/tan
+slug: /commands/tan
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: import-text
 title: IMPORT TEXT
-slug: /commands-legacy/import-text
+slug: /commands/import-text
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: printing-page
 title: Printing page
-slug: /commands-legacy/printing-page
+slug: /commands/printing-page
 displayed_sidebar: docs
 ---
 

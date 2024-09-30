@@ -1,7 +1,7 @@
 ---
 id: is-field-value-null
 title: Is field value Null
-slug: /commands-legacy/is-field-value-null
+slug: /commands/is-field-value-null
 displayed_sidebar: docs
 ---
 

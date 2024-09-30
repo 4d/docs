@@ -1,7 +1,7 @@
 ---
 id: set-macro-parameter
 title: SET MACRO PARAMETER
-slug: /commands-legacy/set-macro-parameter
+slug: /commands/set-macro-parameter
 displayed_sidebar: docs
 ---
 

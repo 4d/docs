@@ -1,7 +1,7 @@
 ---
 id: select-log-file
 title: SELECT LOG FILE
-slug: /commands-legacy/select-log-file
+slug: /commands/select-log-file
 displayed_sidebar: docs
 ---
 

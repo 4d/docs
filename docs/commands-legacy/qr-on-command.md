@@ -1,7 +1,7 @@
 ---
 id: qr-on-command
 title: QR ON COMMAND
-slug: /commands-legacy/qr-on-command
+slug: /commands/qr-on-command
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: storage
 title: Storage
-slug: /commands-legacy/storage
+slug: /commands/storage
 displayed_sidebar: docs
 ---
 

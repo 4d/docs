@@ -1,7 +1,7 @@
 ---
 id: listbox-get-objects
 title: LISTBOX GET OBJECTS
-slug: /commands-legacy/listbox-get-objects
+slug: /commands/listbox-get-objects
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: array-real
 title: ARRAY REAL
-slug: /commands-legacy/array-real
+slug: /commands/array-real
 displayed_sidebar: docs
 ---
 

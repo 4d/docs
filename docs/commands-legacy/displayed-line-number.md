@@ -1,7 +1,7 @@
 ---
 id: displayed-line-number
 title: Displayed line number
-slug: /commands-legacy/displayed-line-number
+slug: /commands/displayed-line-number
 displayed_sidebar: docs
 ---
 

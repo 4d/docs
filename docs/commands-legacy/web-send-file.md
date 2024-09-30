@@ -1,7 +1,7 @@
 ---
 id: web-send-file
 title: WEB SEND FILE
-slug: /commands-legacy/web-send-file
+slug: /commands/web-send-file
 displayed_sidebar: docs
 ---
 

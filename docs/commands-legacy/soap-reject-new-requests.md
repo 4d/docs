@@ -1,7 +1,7 @@
 ---
 id: soap-reject-new-requests
 title: SOAP REJECT NEW REQUESTS
-slug: /commands-legacy/soap-reject-new-requests
+slug: /commands/soap-reject-new-requests
 displayed_sidebar: docs
 ---
 

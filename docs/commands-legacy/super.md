@@ -1,7 +1,7 @@
 ---
 id: super
 title: Super
-slug: /commands-legacy/super
+slug: /commands/super
 displayed_sidebar: docs
 ---
 

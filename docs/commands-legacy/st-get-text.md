@@ -1,7 +1,7 @@
 ---
 id: st-get-text
 title: ST Get text
-slug: /commands-legacy/st-get-text
+slug: /commands/st-get-text
 displayed_sidebar: docs
 ---
 

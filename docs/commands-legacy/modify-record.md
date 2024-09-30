@@ -1,7 +1,7 @@
 ---
 id: modify-record
 title: MODIFY RECORD
-slug: /commands-legacy/modify-record
+slug: /commands/modify-record
 displayed_sidebar: docs
 ---
 

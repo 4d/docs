@@ -1,7 +1,7 @@
 ---
 id: open-resource-file
 title: Open resource file
-slug: /commands-legacy/open-resource-file
+slug: /commands/open-resource-file
 displayed_sidebar: docs
 ---
 

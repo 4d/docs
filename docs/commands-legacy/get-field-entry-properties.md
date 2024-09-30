@@ -1,7 +1,7 @@
 ---
 id: get-field-entry-properties
 title: GET FIELD ENTRY PROPERTIES
-slug: /commands-legacy/get-field-entry-properties
+slug: /commands/get-field-entry-properties
 displayed_sidebar: docs
 ---
 

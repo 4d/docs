@@ -1,7 +1,7 @@
 ---
 id: get-menu-items
 title: GET MENU ITEMS
-slug: /commands-legacy/get-menu-items
+slug: /commands/get-menu-items
 displayed_sidebar: docs
 ---
 

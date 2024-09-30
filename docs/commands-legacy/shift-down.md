@@ -1,7 +1,7 @@
 ---
 id: shift-down
 title: Shift down
-slug: /commands-legacy/shift-down
+slug: /commands/shift-down
 displayed_sidebar: docs
 ---
 

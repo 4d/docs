@@ -1,7 +1,7 @@
 ---
 id: object-get-focus-rectangle-invisible
 title: OBJECT Get focus rectangle invisible
-slug: /commands-legacy/object-get-focus-rectangle-invisible
+slug: /commands/object-get-focus-rectangle-invisible
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: listbox-get-grid
 title: LISTBOX GET GRID
-slug: /commands-legacy/listbox-get-grid
+slug: /commands/listbox-get-grid
 displayed_sidebar: docs
 ---
 

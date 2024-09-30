@@ -1,7 +1,7 @@
 ---
 id: close-printing-job
 title: CLOSE PRINTING JOB
-slug: /commands-legacy/close-printing-job
+slug: /commands/close-printing-job
 displayed_sidebar: docs
 ---
 

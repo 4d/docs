@@ -1,7 +1,7 @@
 ---
 id: listbox-delete-column
 title: LISTBOX DELETE COLUMN
-slug: /commands-legacy/listbox-delete-column
+slug: /commands/listbox-delete-column
 displayed_sidebar: docs
 ---
 

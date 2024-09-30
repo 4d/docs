@@ -1,7 +1,7 @@
 ---
 id: method-get-paths-form
 title: METHOD GET PATHS FORM
-slug: /commands-legacy/method-get-paths-form
+slug: /commands/method-get-paths-form
 displayed_sidebar: docs
 ---
 

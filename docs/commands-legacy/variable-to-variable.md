@@ -1,7 +1,7 @@
 ---
 id: variable-to-variable
 title: VARIABLE TO VARIABLE
-slug: /commands-legacy/variable-to-variable
+slug: /commands/variable-to-variable
 displayed_sidebar: docs
 ---
 

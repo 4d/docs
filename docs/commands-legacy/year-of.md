@@ -1,7 +1,7 @@
 ---
 id: year-of
 title: Year of
-slug: /commands-legacy/year-of
+slug: /commands/year-of
 displayed_sidebar: docs
 ---
 

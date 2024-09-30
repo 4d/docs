@@ -1,7 +1,7 @@
 ---
 id: object-get-type
 title: OBJECT Get type
-slug: /commands-legacy/object-get-type
+slug: /commands/object-get-type
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-external-data-path
 title: Get external data path
-slug: /commands-legacy/get-external-data-path
+slug: /commands/get-external-data-path
 displayed_sidebar: docs
 ---
 

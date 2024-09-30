@@ -1,7 +1,7 @@
 ---
 id: set-database-parameter
 title: SET DATABASE PARAMETER
-slug: /commands-legacy/set-database-parameter
+slug: /commands/set-database-parameter
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: check-log-file
 title: CHECK LOG FILE
-slug: /commands-legacy/check-log-file
+slug: /commands/check-log-file
 displayed_sidebar: docs
 ---
 

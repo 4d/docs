@@ -1,7 +1,7 @@
 ---
 id: user-in-group
 title: User in group
-slug: /commands-legacy/user-in-group
+slug: /commands/user-in-group
 displayed_sidebar: docs
 ---
 

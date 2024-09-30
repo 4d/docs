@@ -1,7 +1,7 @@
 ---
 id: form-set-input
 title: FORM SET INPUT
-slug: /commands-legacy/form-set-input
+slug: /commands/form-set-input
 displayed_sidebar: docs
 ---
 

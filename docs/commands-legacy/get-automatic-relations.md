@@ -1,7 +1,7 @@
 ---
 id: get-automatic-relations
 title: GET AUTOMATIC RELATIONS
-slug: /commands-legacy/get-automatic-relations
+slug: /commands/get-automatic-relations
 displayed_sidebar: docs
 ---
 

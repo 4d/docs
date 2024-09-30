@@ -1,7 +1,7 @@
 ---
 id: wa-set-page-content
 title: WA SET PAGE CONTENT
-slug: /commands-legacy/wa-set-page-content
+slug: /commands/wa-set-page-content
 displayed_sidebar: docs
 ---
 

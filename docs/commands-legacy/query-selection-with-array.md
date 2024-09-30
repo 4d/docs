@@ -1,7 +1,7 @@
 ---
 id: query-selection-with-array
 title: QUERY SELECTION WITH ARRAY
-slug: /commands-legacy/query-selection-with-array
+slug: /commands/query-selection-with-array
 displayed_sidebar: docs
 ---
 

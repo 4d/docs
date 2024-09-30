@@ -1,7 +1,7 @@
 ---
 id: delete-string
 title: Delete string
-slug: /commands-legacy/delete-string
+slug: /commands/delete-string
 displayed_sidebar: docs
 ---
 

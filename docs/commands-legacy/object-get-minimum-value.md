@@ -1,7 +1,7 @@
 ---
 id: object-get-minimum-value
 title: OBJECT GET MINIMUM VALUE
-slug: /commands-legacy/object-get-minimum-value
+slug: /commands/object-get-minimum-value
 displayed_sidebar: docs
 ---
 

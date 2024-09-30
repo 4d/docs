@@ -1,7 +1,7 @@
 ---
 id: refresh-license
 title: Refresh license
-slug: /commands-legacy/refresh-license
+slug: /commands/refresh-license
 displayed_sidebar: docs
 ---
 

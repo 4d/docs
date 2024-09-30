@@ -1,7 +1,7 @@
 ---
 id: array-time
 title: ARRAY TIME
-slug: /commands-legacy/array-time
+slug: /commands/array-time
 displayed_sidebar: docs
 ---
 

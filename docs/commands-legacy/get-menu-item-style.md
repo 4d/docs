@@ -1,7 +1,7 @@
 ---
 id: get-menu-item-style
 title: Get menu item style
-slug: /commands-legacy/get-menu-item-style
+slug: /commands/get-menu-item-style
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: set-external-data-path
 title: SET EXTERNAL DATA PATH
-slug: /commands-legacy/set-external-data-path
+slug: /commands/set-external-data-path
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: menu-bar-height
 title: Menu bar height
-slug: /commands-legacy/menu-bar-height
+slug: /commands/menu-bar-height
 displayed_sidebar: docs
 ---
 

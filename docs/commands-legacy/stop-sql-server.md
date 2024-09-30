@@ -1,7 +1,7 @@
 ---
 id: stop-sql-server
 title: STOP SQL SERVER
-slug: /commands-legacy/stop-sql-server
+slug: /commands/stop-sql-server
 displayed_sidebar: docs
 ---
 

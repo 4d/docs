@@ -1,7 +1,7 @@
 ---
 id: is-compiled-mode
 title: Is compiled mode
-slug: /commands-legacy/is-compiled-mode
+slug: /commands/is-compiled-mode
 displayed_sidebar: docs
 ---
 

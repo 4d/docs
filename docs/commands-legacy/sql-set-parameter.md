@@ -1,7 +1,7 @@
 ---
 id: sql-set-parameter
 title: SQL SET PARAMETER
-slug: /commands-legacy/sql-set-parameter
+slug: /commands/sql-set-parameter
 displayed_sidebar: docs
 ---
 

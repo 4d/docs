@@ -1,7 +1,7 @@
 ---
 id: st-get-plain-text
 title: ST Get plain text
-slug: /commands-legacy/st-get-plain-text
+slug: /commands/st-get-plain-text
 displayed_sidebar: docs
 ---
 

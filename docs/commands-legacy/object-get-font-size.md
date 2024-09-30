@@ -1,7 +1,7 @@
 ---
 id: object-get-font-size
 title: OBJECT Get font size
-slug: /commands-legacy/object-get-font-size
+slug: /commands/object-get-font-size
 displayed_sidebar: docs
 ---
 

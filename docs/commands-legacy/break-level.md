@@ -1,7 +1,7 @@
 ---
 id: break-level
 title: BREAK LEVEL
-slug: /commands-legacy/break-level
+slug: /commands/break-level
 displayed_sidebar: docs
 ---
 

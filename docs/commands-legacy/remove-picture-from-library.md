@@ -1,7 +1,7 @@
 ---
 id: remove-picture-from-library
 title: REMOVE PICTURE FROM LIBRARY
-slug: /commands-legacy/remove-picture-from-library
+slug: /commands/remove-picture-from-library
 displayed_sidebar: docs
 ---
 

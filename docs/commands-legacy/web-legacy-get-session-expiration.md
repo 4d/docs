@@ -1,7 +1,7 @@
 ---
 id: web-legacy-get-session-expiration
 title: WEB LEGACY GET SESSION EXPIRATION
-slug: /commands-legacy/web-legacy-get-session-expiration
+slug: /commands/web-legacy-get-session-expiration
 displayed_sidebar: docs
 ---
 

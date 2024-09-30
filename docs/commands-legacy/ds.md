@@ -1,7 +1,7 @@
 ---
 id: ds
 title: ds
-slug: /commands-legacy/ds
+slug: /commands/ds
 displayed_sidebar: docs
 ---
 

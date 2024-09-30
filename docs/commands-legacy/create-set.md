@@ -1,7 +1,7 @@
 ---
 id: create-set
 title: CREATE SET
-slug: /commands-legacy/create-set
+slug: /commands/create-set
 displayed_sidebar: docs
 ---
 

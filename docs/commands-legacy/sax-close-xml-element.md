@@ -1,7 +1,7 @@
 ---
 id: sax-close-xml-element
 title: SAX CLOSE XML ELEMENT
-slug: /commands-legacy/sax-close-xml-element
+slug: /commands/sax-close-xml-element
 displayed_sidebar: docs
 ---
 

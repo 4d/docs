@@ -1,7 +1,7 @@
 ---
 id: method-set-code
 title: METHOD SET CODE
-slug: /commands-legacy/method-set-code
+slug: /commands/method-set-code
 displayed_sidebar: docs
 ---
 

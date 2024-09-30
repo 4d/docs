@@ -1,7 +1,7 @@
 ---
 id: form-edit
 title: FORM EDIT
-slug: /commands-legacy/form-edit
+slug: /commands/form-edit
 displayed_sidebar: docs
 ---
 

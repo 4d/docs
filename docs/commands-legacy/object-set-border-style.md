@@ -1,7 +1,7 @@
 ---
 id: object-set-border-style
 title: OBJECT SET BORDER STYLE
-slug: /commands-legacy/object-set-border-style
+slug: /commands/object-set-border-style
 displayed_sidebar: docs
 ---
 

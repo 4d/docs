@@ -1,7 +1,7 @@
 ---
 id: post-click
 title: POST CLICK
-slug: /commands-legacy/post-click
+slug: /commands/post-click
 displayed_sidebar: docs
 ---
 

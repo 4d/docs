@@ -1,7 +1,7 @@
 ---
 id: records-in-set
 title: Records in set
-slug: /commands-legacy/records-in-set
+slug: /commands/records-in-set
 displayed_sidebar: docs
 ---
 

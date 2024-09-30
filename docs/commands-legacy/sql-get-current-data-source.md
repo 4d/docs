@@ -1,7 +1,7 @@
 ---
 id: sql-get-current-data-source
 title: SQL Get current data source
-slug: /commands-legacy/sql-get-current-data-source
+slug: /commands/sql-get-current-data-source
 displayed_sidebar: docs
 ---
 

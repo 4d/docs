@@ -1,7 +1,7 @@
 ---
 id: cs
 title: cs
-slug: /commands-legacy/cs
+slug: /commands/cs
 displayed_sidebar: docs
 ---
 

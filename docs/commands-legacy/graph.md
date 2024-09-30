@@ -1,7 +1,7 @@
 ---
 id: graph
 title: GRAPH
-slug: /commands-legacy/graph
+slug: /commands/graph
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: modify-selection
 title: MODIFY SELECTION
-slug: /commands-legacy/modify-selection
+slug: /commands/modify-selection
 displayed_sidebar: docs
 ---
 

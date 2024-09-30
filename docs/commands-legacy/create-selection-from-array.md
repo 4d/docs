@@ -1,7 +1,7 @@
 ---
 id: create-selection-from-array
 title: CREATE SELECTION FROM ARRAY
-slug: /commands-legacy/create-selection-from-array
+slug: /commands/create-selection-from-array
 displayed_sidebar: docs
 ---
 

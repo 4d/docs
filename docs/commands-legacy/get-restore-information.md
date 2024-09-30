@@ -1,7 +1,7 @@
 ---
 id: get-restore-information
 title: GET RESTORE INFORMATION
-slug: /commands-legacy/get-restore-information
+slug: /commands/get-restore-information
 displayed_sidebar: docs
 ---
 

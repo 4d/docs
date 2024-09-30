@@ -1,7 +1,7 @@
 ---
 id: windows-alt-down
 title: Windows Alt down
-slug: /commands-legacy/windows-alt-down
+slug: /commands/windows-alt-down
 displayed_sidebar: docs
 ---
 

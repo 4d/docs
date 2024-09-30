@@ -1,7 +1,7 @@
 ---
 id: self
 title: Self
-slug: /commands-legacy/self
+slug: /commands/self
 displayed_sidebar: docs
 ---
 

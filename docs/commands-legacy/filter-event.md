@@ -1,7 +1,7 @@
 ---
 id: filter-event
 title: FILTER EVENT
-slug: /commands-legacy/filter-event
+slug: /commands/filter-event
 displayed_sidebar: docs
 ---
 

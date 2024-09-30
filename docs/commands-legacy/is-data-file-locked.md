@@ -1,7 +1,7 @@
 ---
 id: is-data-file-locked
 title: Is data file locked
-slug: /commands-legacy/is-data-file-locked
+slug: /commands/is-data-file-locked
 displayed_sidebar: docs
 ---
 

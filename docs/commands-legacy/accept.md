@@ -1,7 +1,7 @@
 ---
 id: accept
 title: ACCEPT
-slug: /commands-legacy/accept
+slug: /commands/accept
 displayed_sidebar: docs
 ---
 

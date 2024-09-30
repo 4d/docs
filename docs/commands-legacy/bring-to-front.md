@@ -1,7 +1,7 @@
 ---
 id: bring-to-front
 title: BRING TO FRONT
-slug: /commands-legacy/bring-to-front
+slug: /commands/bring-to-front
 displayed_sidebar: docs
 ---
 

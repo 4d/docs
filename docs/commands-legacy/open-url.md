@@ -1,7 +1,7 @@
 ---
 id: open-url
 title: OPEN URL
-slug: /commands-legacy/open-url
+slug: /commands/open-url
 displayed_sidebar: docs
 ---
 

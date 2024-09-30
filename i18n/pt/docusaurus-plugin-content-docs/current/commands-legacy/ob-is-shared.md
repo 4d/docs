@@ -1,0 +1,21 @@
+---
+id: ob-is-shared
+title: OB Is shared
+slug: /commands/ob-is-shared
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.OB Is shared.Syntax-->**OB Is shared** ( *aVerificar* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.OB Is shared.Params-->
+| Parâmetro | Tipo |  | Descrição |
+| --- | --- | --- | --- |
+| aVerificar | Objeto, Collection | &#x1F852; | Objeto ou coleção a verificar |
+| Resultado | Booleano | &#x1F850; | True se o objeto ou coleção for compartilhável, False se for alterável |
+
+<!-- END REF-->
+
+#### Descrição 
+
+<!--REF #_command_.OB Is shared.Summary-->O comando **OB Is shared** devolve **True** se o objeto ou coleção *aVerificar* é compartido, e **False** em caso contrário (ver *Objetos compartidos e Coleções compartidas*).<!-- END REF-->
+
+Este comando devolve **True** se for passado uma seleção de entidades compaível em *aVerificar* (ver ).

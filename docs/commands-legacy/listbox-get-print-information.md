@@ -1,7 +1,7 @@
 ---
 id: listbox-get-print-information
 title: LISTBOX GET PRINT INFORMATION
-slug: /commands-legacy/listbox-get-print-information
+slug: /commands/listbox-get-print-information
 displayed_sidebar: docs
 ---
 

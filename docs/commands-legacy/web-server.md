@@ -1,7 +1,7 @@
 ---
 id: web-server
 title: WEB Server
-slug: /commands-legacy/web-server
+slug: /commands/web-server
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: sql-execute-script
 title: SQL EXECUTE SCRIPT
-slug: /commands-legacy/sql-execute-script
+slug: /commands/sql-execute-script
 displayed_sidebar: docs
 ---
 

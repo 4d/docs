@@ -1,7 +1,7 @@
 ---
 id: value-type
 title: Value type
-slug: /commands-legacy/value-type
+slug: /commands/value-type
 displayed_sidebar: docs
 ---
 

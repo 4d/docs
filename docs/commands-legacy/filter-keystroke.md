@@ -1,7 +1,7 @@
 ---
 id: filter-keystroke
 title: FILTER KEYSTROKE
-slug: /commands-legacy/filter-keystroke
+slug: /commands/filter-keystroke
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: listbox-get-locked-columns
 title: LISTBOX Get locked columns
-slug: /commands-legacy/listbox-get-locked-columns
+slug: /commands/listbox-get-locked-columns
 displayed_sidebar: docs
 ---
 

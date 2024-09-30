@@ -1,7 +1,7 @@
 ---
 id: wa-get-current-url
 title: WA Get current URL
-slug: /commands-legacy/wa-get-current-url
+slug: /commands/wa-get-current-url
 displayed_sidebar: docs
 ---
 

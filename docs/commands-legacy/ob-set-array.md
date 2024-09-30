@@ -1,7 +1,7 @@
 ---
 id: ob-set-array
 title: OB SET ARRAY
-slug: /commands-legacy/ob-set-array
+slug: /commands/ob-set-array
 displayed_sidebar: docs
 ---
 

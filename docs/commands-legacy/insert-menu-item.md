@@ -1,7 +1,7 @@
 ---
 id: insert-menu-item
 title: INSERT MENU ITEM
-slug: /commands-legacy/insert-menu-item
+slug: /commands/insert-menu-item
 displayed_sidebar: docs
 ---
 

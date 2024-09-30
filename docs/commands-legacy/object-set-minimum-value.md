@@ -1,7 +1,7 @@
 ---
 id: object-set-minimum-value
 title: OBJECT SET MINIMUM VALUE
-slug: /commands-legacy/object-set-minimum-value
+slug: /commands/object-set-minimum-value
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: compress-blob
 title: COMPRESS BLOB
-slug: /commands-legacy/compress-blob
+slug: /commands/compress-blob
 displayed_sidebar: docs
 ---
 

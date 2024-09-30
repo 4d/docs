@@ -1,7 +1,7 @@
 ---
 id: version-type
 title: Version type
-slug: /commands-legacy/version-type
+slug: /commands/version-type
 displayed_sidebar: docs
 ---
 

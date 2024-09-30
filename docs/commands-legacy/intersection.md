@@ -1,7 +1,7 @@
 ---
 id: intersection
 title: INTERSECTION
-slug: /commands-legacy/intersection
+slug: /commands/intersection
 displayed_sidebar: docs
 ---
 

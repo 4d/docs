@@ -1,7 +1,7 @@
 ---
 id: validate-transaction
 title: VALIDATE TRANSACTION
-slug: /commands-legacy/validate-transaction
+slug: /commands/validate-transaction
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: is-in-print-preview
 title: Is in print preview
-slug: /commands-legacy/is-in-print-preview
+slug: /commands/is-in-print-preview
 displayed_sidebar: docs
 ---
 

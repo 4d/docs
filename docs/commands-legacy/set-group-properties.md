@@ -1,7 +1,7 @@
 ---
 id: set-group-properties
 title: Set group properties
-slug: /commands-legacy/set-group-properties
+slug: /commands/set-group-properties
 displayed_sidebar: docs
 ---
 

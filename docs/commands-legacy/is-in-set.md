@@ -1,7 +1,7 @@
 ---
 id: is-in-set
 title: Is in set
-slug: /commands-legacy/is-in-set
+slug: /commands/is-in-set
 displayed_sidebar: docs
 ---
 

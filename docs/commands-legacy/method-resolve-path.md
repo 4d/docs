@@ -1,7 +1,7 @@
 ---
 id: method-resolve-path
 title: METHOD RESOLVE PATH
-slug: /commands-legacy/method-resolve-path
+slug: /commands/method-resolve-path
 displayed_sidebar: docs
 ---
 

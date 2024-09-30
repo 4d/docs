@@ -1,7 +1,7 @@
 ---
 id: export-structure
 title: EXPORT STRUCTURE
-slug: /commands-legacy/export-structure
+slug: /commands/export-structure
 displayed_sidebar: docs
 ---
 

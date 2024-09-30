@@ -1,7 +1,7 @@
 ---
 id: http-get-certificates-folder
 title: HTTP Get certificates folder
-slug: /commands-legacy/http-get-certificates-folder
+slug: /commands/http-get-certificates-folder
 displayed_sidebar: docs
 ---
 

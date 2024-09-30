@@ -1,7 +1,7 @@
 ---
 id: ob-values
 title: OB Values
-slug: /commands-legacy/ob-values
+slug: /commands/ob-values
 displayed_sidebar: docs
 ---
 

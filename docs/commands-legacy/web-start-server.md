@@ -1,7 +1,7 @@
 ---
 id: web-start-server
 title: WEB START SERVER
-slug: /commands-legacy/web-start-server
+slug: /commands/web-start-server
 displayed_sidebar: docs
 ---
 

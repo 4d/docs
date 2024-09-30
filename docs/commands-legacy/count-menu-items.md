@@ -1,7 +1,7 @@
 ---
 id: count-menu-items
 title: Count menu items
-slug: /commands-legacy/count-menu-items
+slug: /commands/count-menu-items
 displayed_sidebar: docs
 ---
 

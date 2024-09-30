@@ -1,7 +1,7 @@
 ---
 id: select-list-items-by-reference
 title: SELECT LIST ITEMS BY REFERENCE
-slug: /commands-legacy/select-list-items-by-reference
+slug: /commands/select-list-items-by-reference
 displayed_sidebar: docs
 ---
 

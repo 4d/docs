@@ -1,7 +1,7 @@
 ---
 id: object-set-format
 title: OBJECT SET FORMAT
-slug: /commands-legacy/object-set-format
+slug: /commands/object-set-format
 displayed_sidebar: docs
 ---
 

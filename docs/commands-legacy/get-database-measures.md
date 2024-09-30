@@ -1,7 +1,7 @@
 ---
 id: get-database-measures
 title: Get database measures
-slug: /commands-legacy/get-database-measures
+slug: /commands/get-database-measures
 displayed_sidebar: docs
 ---
 

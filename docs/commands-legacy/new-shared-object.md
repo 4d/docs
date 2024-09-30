@@ -1,7 +1,7 @@
 ---
 id: new-shared-object
 title: New shared object
-slug: /commands-legacy/new-shared-object
+slug: /commands/new-shared-object
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: clickcount
 title: Clickcount
-slug: /commands-legacy/clickcount
+slug: /commands/clickcount
 displayed_sidebar: docs
 ---
 

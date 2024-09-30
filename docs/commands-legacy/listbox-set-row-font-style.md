@@ -1,7 +1,7 @@
 ---
 id: listbox-set-row-font-style
 title: LISTBOX SET ROW FONT STYLE
-slug: /commands-legacy/listbox-set-row-font-style
+slug: /commands/listbox-set-row-font-style
 displayed_sidebar: docs
 ---
 

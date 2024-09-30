@@ -1,7 +1,7 @@
 ---
 id: find-in-field
 title: Find in field
-slug: /commands-legacy/find-in-field
+slug: /commands/find-in-field
 displayed_sidebar: docs
 ---
 

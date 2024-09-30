@@ -1,7 +1,7 @@
 ---
 id: ldap-logout
 title: LDAP LOGOUT
-slug: /commands-legacy/ldap-logout
+slug: /commands/ldap-logout
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: count-in-array
 title: Count in array
-slug: /commands-legacy/count-in-array
+slug: /commands/count-in-array
 displayed_sidebar: docs
 ---
 

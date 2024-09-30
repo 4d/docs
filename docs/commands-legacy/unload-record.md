@@ -1,7 +1,7 @@
 ---
 id: unload-record
 title: UNLOAD RECORD
-slug: /commands-legacy/unload-record
+slug: /commands/unload-record
 displayed_sidebar: docs
 ---
 

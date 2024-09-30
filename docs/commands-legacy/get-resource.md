@@ -1,7 +1,7 @@
 ---
 id: get-resource
 title: GET RESOURCE
-slug: /commands-legacy/get-resource
+slug: /commands/get-resource
 displayed_sidebar: docs
 ---
 

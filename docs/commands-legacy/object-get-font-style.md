@@ -1,7 +1,7 @@
 ---
 id: object-get-font-style
 title: OBJECT Get font style
-slug: /commands-legacy/object-get-font-style
+slug: /commands/object-get-font-style
 displayed_sidebar: docs
 ---
 

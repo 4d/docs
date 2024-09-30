@@ -1,7 +1,7 @@
 ---
 id: character-code
 title: Character code
-slug: /commands-legacy/character-code
+slug: /commands/character-code
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: macintosh-command-down
 title: Macintosh command down
-slug: /commands-legacy/macintosh-command-down
+slug: /commands/macintosh-command-down
 displayed_sidebar: docs
 ---
 

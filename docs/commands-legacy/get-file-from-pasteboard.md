@@ -1,7 +1,7 @@
 ---
 id: get-file-from-pasteboard
 title: Get file from pasteboard
-slug: /commands-legacy/get-file-from-pasteboard
+slug: /commands/get-file-from-pasteboard
 displayed_sidebar: docs
 ---
 

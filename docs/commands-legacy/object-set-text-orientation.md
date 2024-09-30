@@ -1,7 +1,7 @@
 ---
 id: object-set-text-orientation
 title: OBJECT SET TEXT ORIENTATION
-slug: /commands-legacy/object-set-text-orientation
+slug: /commands/object-set-text-orientation
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: structure-file
 title: Structure file
-slug: /commands-legacy/structure-file
+slug: /commands/structure-file
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: xml-get-options
 title: XML GET OPTIONS
-slug: /commands-legacy/xml-get-options
+slug: /commands/xml-get-options
 displayed_sidebar: docs
 ---
 

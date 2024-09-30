@@ -1,7 +1,7 @@
 ---
 id: apply-to-selection
 title: APPLY TO SELECTION
-slug: /commands-legacy/apply-to-selection
+slug: /commands/apply-to-selection
 displayed_sidebar: docs
 ---
 

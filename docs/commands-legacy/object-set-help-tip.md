@@ -1,7 +1,7 @@
 ---
 id: object-set-help-tip
 title: OBJECT SET HELP TIP
-slug: /commands-legacy/object-set-help-tip
+slug: /commands/object-set-help-tip
 displayed_sidebar: docs
 ---
 

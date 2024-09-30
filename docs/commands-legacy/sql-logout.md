@@ -1,7 +1,7 @@
 ---
 id: sql-logout
 title: SQL LOGOUT
-slug: /commands-legacy/sql-logout
+slug: /commands/sql-logout
 displayed_sidebar: docs
 ---
 

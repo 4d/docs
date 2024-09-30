@@ -1,7 +1,7 @@
 ---
 id: send-variable
 title: SEND VARIABLE
-slug: /commands-legacy/send-variable
+slug: /commands/send-variable
 displayed_sidebar: docs
 ---
 

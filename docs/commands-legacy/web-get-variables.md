@@ -1,7 +1,7 @@
 ---
 id: web-get-variables
 title: WEB GET VARIABLES
-slug: /commands-legacy/web-get-variables
+slug: /commands/web-get-variables
 displayed_sidebar: docs
 ---
 

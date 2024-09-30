@@ -1,7 +1,7 @@
 ---
 id: set-blob-size
 title: SET BLOB SIZE
-slug: /commands-legacy/set-blob-size
+slug: /commands/set-blob-size
 displayed_sidebar: docs
 ---
 

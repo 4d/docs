@@ -1,7 +1,7 @@
 ---
 id: set-recent-fonts
 title: SET RECENT FONTS
-slug: /commands-legacy/set-recent-fonts
+slug: /commands/set-recent-fonts
 displayed_sidebar: docs
 ---
 

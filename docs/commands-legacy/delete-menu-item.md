@@ -1,7 +1,7 @@
 ---
 id: delete-menu-item
 title: DELETE MENU ITEM
-slug: /commands-legacy/delete-menu-item
+slug: /commands/delete-menu-item
 displayed_sidebar: docs
 ---
 

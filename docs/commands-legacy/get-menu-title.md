@@ -1,7 +1,7 @@
 ---
 id: get-menu-title
 title: Get menu title
-slug: /commands-legacy/get-menu-title
+slug: /commands/get-menu-title
 displayed_sidebar: docs
 ---
 

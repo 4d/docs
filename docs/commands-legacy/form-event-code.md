@@ -1,7 +1,7 @@
 ---
 id: form-event-code
 title: Form event code
-slug: /commands-legacy/form-event-code
+slug: /commands/form-event-code
 displayed_sidebar: docs
 ---
 

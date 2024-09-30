@@ -1,7 +1,7 @@
 ---
 id: soap-send-fault
 title: SOAP SEND FAULT
-slug: /commands-legacy/soap-send-fault
+slug: /commands/soap-send-fault
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: file
 title: File
-slug: /commands-legacy/file
+slug: /commands/file
 displayed_sidebar: docs
 ---
 

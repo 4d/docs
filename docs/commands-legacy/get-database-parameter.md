@@ -1,7 +1,7 @@
 ---
 id: get-database-parameter
 title: Get database parameter
-slug: /commands-legacy/get-database-parameter
+slug: /commands/get-database-parameter
 displayed_sidebar: docs
 ---
 

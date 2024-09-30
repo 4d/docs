@@ -1,7 +1,7 @@
 ---
 id: set-list-properties
 title: SET LIST PROPERTIES
-slug: /commands-legacy/set-list-properties
+slug: /commands/set-list-properties
 displayed_sidebar: docs
 ---
 

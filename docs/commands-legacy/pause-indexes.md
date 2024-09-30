@@ -1,7 +1,7 @@
 ---
 id: pause-indexes
 title: PAUSE INDEXES
-slug: /commands-legacy/pause-indexes
+slug: /commands/pause-indexes
 displayed_sidebar: docs
 ---
 

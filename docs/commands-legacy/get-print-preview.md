@@ -1,7 +1,7 @@
 ---
 id: get-print-preview
 title: Get print preview
-slug: /commands-legacy/get-print-preview
+slug: /commands/get-print-preview
 displayed_sidebar: docs
 ---
 

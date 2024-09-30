@@ -1,7 +1,7 @@
 ---
 id: php-execute
 title: PHP Execute
-slug: /commands-legacy/php-execute
+slug: /commands/php-execute
 displayed_sidebar: docs
 ---
 

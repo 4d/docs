@@ -1,7 +1,7 @@
 ---
 id: message
 title: MESSAGE
-slug: /commands-legacy/message
+slug: /commands/message
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: listbox-set-row-color
 title: LISTBOX SET ROW COLOR
-slug: /commands-legacy/listbox-set-row-color
+slug: /commands/listbox-set-row-color
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: open-datastore
 title: Open datastore
-slug: /commands-legacy/open-datastore
+slug: /commands/open-datastore
 displayed_sidebar: docs
 ---
 

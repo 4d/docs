@@ -1,7 +1,7 @@
 ---
 id: open-window
 title: Open window
-slug: /commands-legacy/open-window
+slug: /commands/open-window
 displayed_sidebar: docs
 ---
 

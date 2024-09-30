@@ -1,7 +1,7 @@
 ---
 id: blob-to-longint
 title: BLOB to longint
-slug: /commands-legacy/blob-to-longint
+slug: /commands/blob-to-longint
 displayed_sidebar: docs
 ---
 

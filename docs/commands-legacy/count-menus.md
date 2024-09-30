@@ -1,7 +1,7 @@
 ---
 id: count-menus
 title: Count menus
-slug: /commands-legacy/count-menus
+slug: /commands/count-menus
 displayed_sidebar: docs
 ---
 

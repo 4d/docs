@@ -1,7 +1,7 @@
 ---
 id: new-data-key
 title: New data key
-slug: /commands-legacy/new-data-key
+slug: /commands/new-data-key
 displayed_sidebar: docs
 ---
 

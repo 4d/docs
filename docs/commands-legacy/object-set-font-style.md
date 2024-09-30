@@ -1,7 +1,7 @@
 ---
 id: object-set-font-style
 title: OBJECT SET FONT STYLE
-slug: /commands-legacy/object-set-font-style
+slug: /commands/object-set-font-style
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: dom-get-first-child-xml-element
 title: DOM Get first child XML element
-slug: /commands-legacy/dom-get-first-child-xml-element
+slug: /commands/dom-get-first-child-xml-element
 displayed_sidebar: docs
 ---
 

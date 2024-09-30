@@ -1,7 +1,7 @@
 ---
 id: listbox-get-hierarchy
 title: LISTBOX GET HIERARCHY
-slug: /commands-legacy/listbox-get-hierarchy
+slug: /commands/listbox-get-hierarchy
 displayed_sidebar: docs
 ---
 

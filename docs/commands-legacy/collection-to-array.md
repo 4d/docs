@@ -1,7 +1,7 @@
 ---
 id: collection-to-array
 title: COLLECTION TO ARRAY
-slug: /commands-legacy/collection-to-array
+slug: /commands/collection-to-array
 displayed_sidebar: docs
 ---
 

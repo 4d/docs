@@ -1,7 +1,7 @@
 ---
 id: current-machine
 title: Current machine
-slug: /commands-legacy/current-machine
+slug: /commands/current-machine
 displayed_sidebar: docs
 ---
 

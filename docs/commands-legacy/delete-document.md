@@ -1,7 +1,7 @@
 ---
 id: delete-document
 title: DELETE DOCUMENT
-slug: /commands-legacy/delete-document
+slug: /commands/delete-document
 displayed_sidebar: docs
 ---
 

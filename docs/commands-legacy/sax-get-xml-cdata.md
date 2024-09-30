@@ -1,7 +1,7 @@
 ---
 id: sax-get-xml-cdata
 title: SAX GET XML CDATA
-slug: /commands-legacy/sax-get-xml-cdata
+slug: /commands/sax-get-xml-cdata
 displayed_sidebar: docs
 ---
 

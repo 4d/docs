@@ -1,7 +1,7 @@
 ---
 id: svg-find-element-ids-by-rect
 title: SVG Find element IDs by rect
-slug: /commands-legacy/svg-find-element-ids-by-rect
+slug: /commands/svg-find-element-ids-by-rect
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: set-index
 title: SET INDEX
-slug: /commands-legacy/set-index
+slug: /commands/set-index
 displayed_sidebar: docs
 ---
 

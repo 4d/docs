@@ -1,7 +1,7 @@
 ---
 id: remove-from-set
 title: REMOVE FROM SET
-slug: /commands-legacy/remove-from-set
+slug: /commands/remove-from-set
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: object-set-drag-and-drop-options
 title: OBJECT SET DRAG AND DROP OPTIONS
-slug: /commands-legacy/object-set-drag-and-drop-options
+slug: /commands/object-set-drag-and-drop-options
 displayed_sidebar: docs
 ---
 

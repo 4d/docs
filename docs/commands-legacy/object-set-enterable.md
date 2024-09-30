@@ -1,7 +1,7 @@
 ---
 id: object-set-enterable
 title: OBJECT SET ENTERABLE
-slug: /commands-legacy/object-set-enterable
+slug: /commands/object-set-enterable
 displayed_sidebar: docs
 ---
 

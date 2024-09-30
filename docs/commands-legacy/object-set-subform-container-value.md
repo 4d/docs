@@ -1,7 +1,7 @@
 ---
 id: object-set-subform-container-value
 title: OBJECT SET SUBFORM CONTAINER VALUE
-slug: /commands-legacy/object-set-subform-container-value
+slug: /commands/object-set-subform-container-value
 displayed_sidebar: docs
 ---
 

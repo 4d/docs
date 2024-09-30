@@ -1,7 +1,7 @@
 ---
 id: system-folder
 title: System folder
-slug: /commands-legacy/system-folder
+slug: /commands/system-folder
 displayed_sidebar: docs
 ---
 

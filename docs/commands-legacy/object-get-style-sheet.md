@@ -1,7 +1,7 @@
 ---
 id: object-get-style-sheet
 title: OBJECT Get style sheet
-slug: /commands-legacy/object-get-style-sheet
+slug: /commands/object-get-style-sheet
 displayed_sidebar: docs
 ---
 

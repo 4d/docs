@@ -1,7 +1,7 @@
 ---
 id: goto-selected-record
 title: GOTO SELECTED RECORD
-slug: /commands-legacy/goto-selected-record
+slug: /commands/goto-selected-record
 displayed_sidebar: docs
 ---
 

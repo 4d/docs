@@ -1,7 +1,7 @@
 ---
 id: form-set-horizontal-resizing
 title: FORM SET HORIZONTAL RESIZING
-slug: /commands-legacy/form-set-horizontal-resizing
+slug: /commands/form-set-horizontal-resizing
 displayed_sidebar: docs
 ---
 

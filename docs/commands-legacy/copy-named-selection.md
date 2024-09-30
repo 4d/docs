@@ -1,7 +1,7 @@
 ---
 id: copy-named-selection
 title: COPY NAMED SELECTION
-slug: /commands-legacy/copy-named-selection
+slug: /commands/copy-named-selection
 displayed_sidebar: docs
 ---
 

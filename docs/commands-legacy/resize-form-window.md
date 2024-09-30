@@ -1,7 +1,7 @@
 ---
 id: resize-form-window
 title: RESIZE FORM WINDOW
-slug: /commands-legacy/resize-form-window
+slug: /commands/resize-form-window
 displayed_sidebar: docs
 ---
 

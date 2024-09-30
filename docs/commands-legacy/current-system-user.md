@@ -1,7 +1,7 @@
 ---
 id: current-system-user
 title: Current system user
-slug: /commands-legacy/current-system-user
+slug: /commands/current-system-user
 displayed_sidebar: docs
 ---
 

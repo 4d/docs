@@ -1,7 +1,7 @@
 ---
 id: open-document
 title: Open document
-slug: /commands-legacy/open-document
+slug: /commands/open-document
 displayed_sidebar: docs
 ---
 

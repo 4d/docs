@@ -1,7 +1,7 @@
 ---
 id: reduce-selection
 title: REDUCE SELECTION
-slug: /commands-legacy/reduce-selection
+slug: /commands/reduce-selection
 displayed_sidebar: docs
 ---
 

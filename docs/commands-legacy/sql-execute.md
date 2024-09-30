@@ -1,7 +1,7 @@
 ---
 id: sql-execute
 title: SQL EXECUTE
-slug: /commands-legacy/sql-execute
+slug: /commands/sql-execute
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: get-menu-item-parameter
 title: Get menu item parameter
-slug: /commands-legacy/get-menu-item-parameter
+slug: /commands/get-menu-item-parameter
 displayed_sidebar: docs
 ---
 

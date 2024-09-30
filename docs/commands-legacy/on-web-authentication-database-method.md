@@ -1,7 +1,7 @@
 ---
 id: on-web-authentication-database-method
 title: On Web Authentication database method
-slug: /commands-legacy/on-web-authentication-database-method
+slug: /commands/on-web-authentication-database-method
 displayed_sidebar: docs
 ---
 

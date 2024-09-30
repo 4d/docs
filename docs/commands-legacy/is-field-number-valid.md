@@ -1,7 +1,7 @@
 ---
 id: is-field-number-valid
 title: Is field number valid
-slug: /commands-legacy/is-field-number-valid
+slug: /commands/is-field-number-valid
 displayed_sidebar: docs
 ---
 

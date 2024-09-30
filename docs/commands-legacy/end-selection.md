@@ -1,7 +1,7 @@
 ---
 id: end-selection
 title: End selection
-slug: /commands-legacy/end-selection
+slug: /commands/end-selection
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: sin
 title: Sin
-slug: /commands-legacy/sin
+slug: /commands/sin
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: form-goto-page
 title: FORM GOTO PAGE
-slug: /commands-legacy/form-goto-page
+slug: /commands/form-goto-page
 displayed_sidebar: docs
 ---
 

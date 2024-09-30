@@ -1,7 +1,7 @@
 ---
 id: on-mobile-app-authentication-database-method
 title: On Mobile App Authentication database method
-slug: /commands-legacy/on-mobile-app-authentication-database-method
+slug: /commands/on-mobile-app-authentication-database-method
 displayed_sidebar: docs
 ---
 

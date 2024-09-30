@@ -1,7 +1,7 @@
 ---
 id: windows-ctrl-down
 title: Windows Ctrl down
-slug: /commands-legacy/windows-ctrl-down
+slug: /commands/windows-ctrl-down
 displayed_sidebar: docs
 ---
 

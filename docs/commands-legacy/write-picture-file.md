@@ -1,7 +1,7 @@
 ---
 id: write-picture-file
 title: WRITE PICTURE FILE
-slug: /commands-legacy/write-picture-file
+slug: /commands/write-picture-file
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: object-set-maximum-value
 title: OBJECT SET MAXIMUM VALUE
-slug: /commands-legacy/object-set-maximum-value
+slug: /commands/object-set-maximum-value
 displayed_sidebar: docs
 ---
 

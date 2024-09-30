@@ -1,7 +1,7 @@
 ---
 id: object-set-events
 title: OBJECT SET EVENTS
-slug: /commands-legacy/object-set-events
+slug: /commands/object-set-events
 displayed_sidebar: docs
 ---
 

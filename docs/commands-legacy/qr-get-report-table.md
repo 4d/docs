@@ -1,7 +1,7 @@
 ---
 id: qr-get-report-table
 title: QR Get report table
-slug: /commands-legacy/qr-get-report-table
+slug: /commands/qr-get-report-table
 displayed_sidebar: docs
 ---
 

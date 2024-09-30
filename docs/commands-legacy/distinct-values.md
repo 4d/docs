@@ -1,7 +1,7 @@
 ---
 id: distinct-values
 title: DISTINCT VALUES
-slug: /commands-legacy/distinct-values
+slug: /commands/distinct-values
 displayed_sidebar: docs
 ---
 

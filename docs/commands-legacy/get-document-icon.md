@@ -1,7 +1,7 @@
 ---
 id: get-document-icon
 title: GET DOCUMENT ICON
-slug: /commands-legacy/get-document-icon
+slug: /commands/get-document-icon
 displayed_sidebar: docs
 ---
 

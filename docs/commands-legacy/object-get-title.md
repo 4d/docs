@@ -1,7 +1,7 @@
 ---
 id: object-get-title
 title: OBJECT Get title
-slug: /commands-legacy/object-get-title
+slug: /commands/object-get-title
 displayed_sidebar: docs
 ---
 

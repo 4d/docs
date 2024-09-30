@@ -1,7 +1,7 @@
 ---
 id: wa-get-last-url-error
 title: WA GET LAST URL ERROR
-slug: /commands-legacy/wa-get-last-url-error
+slug: /commands/wa-get-last-url-error
 displayed_sidebar: docs
 ---
 

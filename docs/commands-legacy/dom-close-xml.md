@@ -1,7 +1,7 @@
 ---
 id: dom-close-xml
 title: DOM CLOSE XML
-slug: /commands-legacy/dom-close-xml
+slug: /commands/dom-close-xml
 displayed_sidebar: docs
 ---
 

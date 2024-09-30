@@ -1,7 +1,7 @@
 ---
 id: application-type
 title: Application type
-slug: /commands-legacy/application-type
+slug: /commands/application-type
 displayed_sidebar: docs
 ---
 

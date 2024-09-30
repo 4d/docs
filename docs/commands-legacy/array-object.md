@@ -1,7 +1,7 @@
 ---
 id: array-object
 title: ARRAY OBJECT
-slug: /commands-legacy/array-object
+slug: /commands/array-object
 displayed_sidebar: docs
 ---
 

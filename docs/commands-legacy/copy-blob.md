@@ -1,7 +1,7 @@
 ---
 id: copy-blob
 title: COPY BLOB
-slug: /commands-legacy/copy-blob
+slug: /commands/copy-blob
 displayed_sidebar: docs
 ---
 

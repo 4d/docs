@@ -1,7 +1,7 @@
 ---
 id: object-get-shortcut
 title: OBJECT GET SHORTCUT
-slug: /commands-legacy/object-get-shortcut
+slug: /commands/object-get-shortcut
 displayed_sidebar: docs
 ---
 

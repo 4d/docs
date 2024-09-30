@@ -1,7 +1,7 @@
 ---
 id: encrypt-data-file
 title: Encrypt data file
-slug: /commands-legacy/encrypt-data-file
+slug: /commands/encrypt-data-file
 displayed_sidebar: docs
 ---
 

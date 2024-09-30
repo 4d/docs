@@ -1,7 +1,7 @@
 ---
 id: c-real
 title: C_REAL
-slug: /commands-legacy/c-real
+slug: /commands/c-real
 displayed_sidebar: docs
 ---
 

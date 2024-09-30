@@ -1,7 +1,7 @@
 ---
 id: expand-blob
 title: EXPAND BLOB
-slug: /commands-legacy/expand-blob
+slug: /commands/expand-blob
 displayed_sidebar: docs
 ---
 

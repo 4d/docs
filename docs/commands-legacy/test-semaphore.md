@@ -1,7 +1,7 @@
 ---
 id: test-semaphore
 title: Test semaphore
-slug: /commands-legacy/test-semaphore
+slug: /commands/test-semaphore
 displayed_sidebar: docs
 ---
 

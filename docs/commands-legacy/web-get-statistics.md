@@ -1,7 +1,7 @@
 ---
 id: web-get-statistics
 title: WEB GET STATISTICS
-slug: /commands-legacy/web-get-statistics
+slug: /commands/web-get-statistics
 displayed_sidebar: docs
 ---
 

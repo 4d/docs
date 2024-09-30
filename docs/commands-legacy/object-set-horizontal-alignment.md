@@ -1,7 +1,7 @@
 ---
 id: object-set-horizontal-alignment
 title: OBJECT SET HORIZONTAL ALIGNMENT
-slug: /commands-legacy/object-set-horizontal-alignment
+slug: /commands/object-set-horizontal-alignment
 displayed_sidebar: docs
 ---
 

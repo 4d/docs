@@ -1,7 +1,7 @@
 ---
 id: listbox-moved-column-number
 title: LISTBOX MOVED COLUMN NUMBER
-slug: /commands-legacy/listbox-moved-column-number
+slug: /commands/listbox-moved-column-number
 displayed_sidebar: docs
 ---
 

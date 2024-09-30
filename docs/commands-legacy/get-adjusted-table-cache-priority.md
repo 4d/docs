@@ -1,7 +1,7 @@
 ---
 id: get-adjusted-table-cache-priority
 title: Get adjusted table cache priority
-slug: /commands-legacy/get-adjusted-table-cache-priority
+slug: /commands/get-adjusted-table-cache-priority
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: verify-password-hash
 title: Verify password hash
-slug: /commands-legacy/verify-password-hash
+slug: /commands/verify-password-hash
 displayed_sidebar: docs
 ---
 

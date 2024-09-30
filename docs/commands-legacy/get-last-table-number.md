@@ -1,7 +1,7 @@
 ---
 id: get-last-table-number
 title: Get last table number
-slug: /commands-legacy/get-last-table-number
+slug: /commands/get-last-table-number
 displayed_sidebar: docs
 ---
 

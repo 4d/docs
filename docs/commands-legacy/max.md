@@ -1,7 +1,7 @@
 ---
 id: max
 title: Max
-slug: /commands-legacy/max
+slug: /commands/max
 displayed_sidebar: docs
 ---
 

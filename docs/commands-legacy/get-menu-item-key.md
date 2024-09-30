@@ -1,7 +1,7 @@
 ---
 id: get-menu-item-key
 title: Get menu item key
-slug: /commands-legacy/get-menu-item-key
+slug: /commands/get-menu-item-key
 displayed_sidebar: docs
 ---
 

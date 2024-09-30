@@ -1,7 +1,7 @@
 ---
 id: open-runtime-explorer
 title: OPEN RUNTIME EXPLORER
-slug: /commands-legacy/open-runtime-explorer
+slug: /commands/open-runtime-explorer
 displayed_sidebar: docs
 ---
 

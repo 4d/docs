@@ -1,7 +1,7 @@
 ---
 id: order-by-formula
 title: ORDER BY FORMULA
-slug: /commands-legacy/order-by-formula
+slug: /commands/order-by-formula
 displayed_sidebar: docs
 ---
 

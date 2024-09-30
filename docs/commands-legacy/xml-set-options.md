@@ -1,7 +1,7 @@
 ---
 id: xml-set-options
 title: XML SET OPTIONS
-slug: /commands-legacy/xml-set-options
+slug: /commands/xml-set-options
 displayed_sidebar: docs
 ---
 

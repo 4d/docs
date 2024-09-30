@@ -1,7 +1,7 @@
 ---
 id: array-date
 title: ARRAY DATE
-slug: /commands-legacy/array-date
+slug: /commands/array-date
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: listbox-get-row-color
 title: LISTBOX Get row color
-slug: /commands-legacy/listbox-get-row-color
+slug: /commands/listbox-get-row-color
 displayed_sidebar: docs
 ---
 

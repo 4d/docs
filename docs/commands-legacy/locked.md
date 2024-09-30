@@ -1,7 +1,7 @@
 ---
 id: locked
 title: Locked
-slug: /commands-legacy/locked
+slug: /commands/locked
 displayed_sidebar: docs
 ---
 

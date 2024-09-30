@@ -1,7 +1,7 @@
 ---
 id: accumulate
 title: ACCUMULATE
-slug: /commands-legacy/accumulate
+slug: /commands/accumulate
 displayed_sidebar: docs
 ---
 

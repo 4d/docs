@@ -1,7 +1,7 @@
 ---
 id: deactivated
 title: Deactivated
-slug: /commands-legacy/deactivated
+slug: /commands/deactivated
 displayed_sidebar: docs
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: web-get-http-body
 title: WEB GET HTTP BODY
-slug: /commands-legacy/web-get-http-body
+slug: /commands/web-get-http-body
 displayed_sidebar: docs
 ---
 
