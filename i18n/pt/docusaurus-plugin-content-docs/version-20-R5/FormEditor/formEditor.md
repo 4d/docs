@@ -177,14 +177,14 @@ Para desmarcar um objeto que faz parte de um conjunto de objetos selecionados, m
 
 Pode duplicar qualquer objecto na forma, incluindo objectos activos. Cópias de objetos ativos retêm todas as propriedades do original, incluindo nome, tipo, padrão ação, formato de exibição e método de objeto.
 
-Você pode duplicar um objeto diretamente usando a ferramenta Duplicada na paleta de ferramentas ou usar a caixa de diálogo Duplicado muitas vezes para duplicar um objeto mais de uma vez. Also, using this dialog box, you can set the distance between two copies.
+Você pode duplicar um objeto diretamente usando a ferramenta Duplicada na paleta de ferramentas ou usar a caixa de diálogo Duplicado muitas vezes para duplicar um objeto mais de uma vez. Além disso, usando esta caixa de diálogo, você pode definir a distância entre duas cópias.
 
 Para duplicar um ou mais objectos:
 
 1. Seleccione os objectos que pretende agrupar.
-2. Elija **Duplicar** en el menú **Edición**. 4D cria uma cópia de cada objecto selecionado e coloca a cópia em frente e ligeiramente para o lado do original.
+2. Escolha **Duplicar** no menu **Editar**. 4D cria uma cópia de cada objecto selecionado e coloca a cópia em frente e ligeiramente para o lado do original.
 3. Deslocar a cópia para a localização pretendida.
-   If you choose the Duplicate menu item again, 4D creates another copy of each object and moves it the exact same distance and direction from the first copy. If you need to distribute copies of the object along a line, you should use the following procedure. Duplicate the original object, move the copy to another location in the form, and then duplicate the copy. The second copy is automatically placed in the same relation to the first copy as the first copy was in relation to the original object. As cópias subsequentes também são colocadas na mesma relação com seus originais. A figura abaixo mostra como funciona esse posicionamento relativo das cópias:
+   Se você selecionar o item de menu Duplicate novamente, o 4D criará outra cópia de cada objeto e a moverá exatamente na mesma distância e direção da primeira cópia. Se precisar distribuir cópias do objeto ao longo de uma linha, use o procedimento a seguir. Duplique o objeto original, mova a cópia para outro local no formulário e, em seguida, duplique a cópia. The second copy is automatically placed in the same relation to the first copy as the first copy was in relation to the original object. As cópias subsequentes também são colocadas na mesma relação com seus originais. A figura abaixo mostra como funciona esse posicionamento relativo das cópias:
 
 ![](../assets/en/FormEditor/duplicateObjects.png)
 
