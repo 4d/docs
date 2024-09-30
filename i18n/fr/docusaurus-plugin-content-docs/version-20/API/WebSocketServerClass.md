@@ -391,9 +391,9 @@ Cette propriété est en lecture seule.
 
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
-| Paramètres | Type    |    | Description                                                     |
-| ---------- | ------- |:--:| --------------------------------------------------------------- |
-| timeout    | Integer | -> | Waiting time in seconds before terminating the WebSocket server |
+| Paramètres | Type    |    | Description                                                        |
+| ---------- | ------- |:--:| ------------------------------------------------------------------ |
+| timeout    | Integer | -> | Temps d'attente en secondes avant de terminer le serveur WebSocket |
 <!-- END REF -->
 
 
@@ -401,10 +401,10 @@ Cette propriété est en lecture seule.
 
 La fonction `.terminate()` <!-- REF #WebSocketServerClass.terminate().Summary -->closes the WebSocket server<!-- END REF -->.
 
-By default, if no *timeout* value is set, the function initializes close handshake and waits to receive close frame from the peer, after that sending FIN packet in attempt to perform a clean socket close. When answer received, the socket is destroyed.
+By default, if no *timeout* value is set, the function initializes close handshake and waits to receive close frame from the peer, after that sending FIN packet in attempt to perform a clean socket close. Lorsque la réponse est reçue, le socket est détruit.
 
 If a *timeout* value is set:
-- when the waiting time is reached, forcibly destroys the socket.
+- lorsque le temps d'attente est atteint, détruit de force la socket.
 - if *timeout* = 0, forcibly destroys the socket without closing frames or fin packets exchange, and does it instantly without waiting time.
 
 

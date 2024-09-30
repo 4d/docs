@@ -3,7 +3,7 @@ id: buttonOverview
 title: Botão
 ---
 
-Un botón es un objeto activo al que se le puede asignar una acción (_por ejemplo_, una tarea de base de datos o una función de interfaz) para que la realice cuando un usuario haga clic en él.
+Um botão é um objeto ativo ao qual pode ser atribuída uma ação (_por exemplo_, uma tarefa de banco de dados ou uma função de interface) a executar quando um usuário clica nele.
 
 ![](../assets/en/FormObjects/button_regular.png)
 
@@ -11,12 +11,12 @@ Buttons can fulfill a variety of roles, depending on their style and the action 
 
 ## Manipulação de botões
 
-Las acciones asignadas a los botones pueden provenir de [acciones estándar](properties_Action.md#standard-action) o de métodos de objetos personalizados. Examples of typical actions include letting the user accept, cancel, or delete records, copy or paste data, move from page to page in a multi-page form, open, delete, or add records in a subform, handle font attributes in text areas, etc.
+As ações atribuídas aos botões podem se originar de [ações padrão](properties_Action.md#standard-action) predefinidas ou de métodos objeto personalizados. Examples of typical actions include letting the user accept, cancel, or delete records, copy or paste data, move from page to page in a multi-page form, open, delete, or add records in a subform, handle font attributes in text areas, etc.
 
-Buttons with standard actions are dimmed when appropriate during form execution. Por ejemplo, si se muestra el primer registro de una tabla, un botón con la acción estándar `firstRecord` aparecería atenuado.
+Buttons with standard actions are dimmed when appropriate during form execution. Por exemplo, se o primeiro registro de uma tabela for exibido, um botão com a ação padrão `firstRecord` aparecerá esmaecido.
 
-If you want a button to perform an action that's not available as a standard action, leave the standard action field empty and write an object method to specify the button’s action. Para más información sobre los métodos de objetos y cómo crearlos y asociarlos, ver [Uso de los métodos objeto](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-object-methods.300-4163733.en.html).
-Normalmente, se activaría el evento `On Clicked` y el método se ejecutaría sólo cuando se presiona el botón. Pode associar um método a qualquer botão.
+If you want a button to perform an action that's not available as a standard action, leave the standard action field empty and write an object method to specify the button’s action. Para obter mais informações sobre métodos objeto e como criá-los e associá-los, consulte [Usando métodos objeto](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-object-methods.300-4163733.en.html).
+Normalmente, você ativaria o evento `On Clicked` e o método seria executado somente quando o botão fosse clicado. Pode associar um método a qualquer botão.
 
 La [variable](properties_Object.md#variable-or-expression) asociada a un botón se define automáticamente a **0** cuando el formulario se ejecuta por primera vez en modo Diseño o Aplicación. Cuando el usuario hace clic en un botón, su variable se define como **1**.
 
@@ -26,13 +26,13 @@ La [variable](properties_Object.md#variable-or-expression) asociada a un botón 
 
 Os estilos dos botões controlam a aparência geral de um botão, bem como as suas propriedades disponíveis. É possível aplicar diferentes estilos pré-definidos a botões ou associar-lhes menus pop-up. Um grande número de variações podem ser obtidas combinando essas propriedades/comportamentos.
 
-Con la excepción de las [propiedades-disponibles](#supported-properties), muchos objetos botón son _estructuralmente_ idénticos. A diferença é no processamento das variáveis associadas.
+Com exceção das [propriedades disponíveis](#supported-properties), muitos objetos de botão são _estruturalmente_ idênticos. A diferença é no processamento das variáveis associadas.
 
 4D fornece botões nos seguintes estilos pré-definidos:
 
 ### Clássico
 
-El estilo de botón Clásico es un botón sistema estándar (_es decir,_, un rectángulo con una etiqueta descriptiva) que ejecuta el código cuando el usuario hace clic en él.
+O estilo de botão Clássico é um botão padrão do sistema (ou seja, um retângulo com um rótulo descritivo) que executa o código quando o usuário clica nele.
 
 ![](../assets/en/FormObjects/button_regular.png)
 
@@ -43,23 +43,23 @@ By default, the Regular style has a light gray background with a label in the ce
 ```4d
 
 	"myButton": {
-		"type": "button",	//define the type of object
-		"style":"regular",	//define the style of the button
-		"defaultButton":"true"	//define button as the default choice
-		"text": "OK",	//text to appear on the button
-		"action": "Cancel", //action to be be performed 
-		"left": 60,	 //left position on the form  
-		"top": 160, //top position on the form 
-	  	"width": 100,  //width of the button
-		"height": 20 //height of the button
-		}
+		"type": "button", //defina o tipo de objeto
+		"style": "regular", //defina o estilo do botão
+		"defaultButton": "true" //defina o botão como a opção padrão
+		"text": "OK", //texto a ser exibido no botão
+		"action": "Cancel", //ação a ser executada 
+		"left": 60, //posição esquerda no formulário  
+		"top": 160, //posição superior no formulário 
+	  	"width": 100, //largura do botão
+		"height": 20 //altura do botão
+}
 ```
 
-Sólo los estilos Clásico y Plano ofrecen la propiedad [Botón por defecto](properties_Appearance.md#default-button).
+Somente os estilos Clássico e Plano oferecem a propriedade [Botão padrão](properties_Appearance.md#default-button).
 
 ### Plano
 
-El estilo de botón Plano es un botón sistema estándar (\*es decir, \*, un rectángulo con una etiqueta descriptiva) que ejecuta código cuando un usuario hace clic en él.
+O estilo de botão Plano é um botão padrão do sistema (ou seja, um retângulo com um rótulo descritivo) que executa o código quando o usuário clica nele.
 
 ![](../assets/en/FormObjects/button_flat.png)
 
@@ -82,7 +82,7 @@ By default, the Flat style has a white background with a label in the center, ro
                 }
 ```
 
-Sólo los estilos Clásico y Plano ofrecen la propiedad [Botón por defecto](properties_Appearance.md#default-button).
+Somente os estilos Clássico e Plano oferecem a propriedade [Botão padrão](properties_Appearance.md#default-button).
 
 ### Barra de ferramentas
 

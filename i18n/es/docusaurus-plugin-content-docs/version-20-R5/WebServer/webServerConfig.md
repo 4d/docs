@@ -169,7 +169,7 @@ Para más información sobre CORS, consulte la página [Cross-origin resource sh
 
 #### Ver también
 
-[CORS Settings](#cors-settings)
+[Configuración CORS](#cors-settings)
 
 ## Activar HTTP
 

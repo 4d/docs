@@ -132,7 +132,7 @@ _その他の値_ は、未定義でも Null でもない値を持つ任意の�
 
 :::info
 
-Comparisons of Undefined values with Pointer, Picture, Boolean, Blob, Object, Collection, Undefined or Null values using Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported and return an error.
+大なり (`>`)、小なり (`<`)、以上 (`>=`)、以下 (`<=`) 演算子による未定義値の比較は、ポインター、ピクチャー、ブール、BLOB、オブジェクト、コレクション、未定義値または Null値に対応しておらず、エラーが返されます。
 
 :::
 

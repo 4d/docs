@@ -39,7 +39,7 @@ If the same component is installed at different locations, a [priority order] is
    /MyProjectComponentRoot/
    ```
 
-Thanks to this architecture, you can simply copy all your components at the same level as your projects and reference them in your **dependencies.json** files if necessary. Além disso, você pode personalizar o caminho de seus componentes, veja abaixo.
+Graças a essa arquitetura, você pode simplesmente copiar todos os seus componentes no mesmo nível dos seus projetos e fazer referência a eles nos arquivos **dependencies.json**, se necessário. Além disso, você pode personalizar o caminho de seus componentes, veja abaixo.
 
 O conteúdo do arquivo **/Sources/dependencies.json** deve ter a seguinte estrutura:
 

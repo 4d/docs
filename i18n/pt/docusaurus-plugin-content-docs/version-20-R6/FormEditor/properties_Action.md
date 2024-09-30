@@ -15,13 +15,15 @@ São suportados vários tipos de referências de métodos:
   `método. dm`\
   Este tipo de referência indica que o arquivo de método está localizado no local padrão ("sources/{TableForms/*numTable*} 「 {Forms}/*formName*/"). In this case, 4D automatically handles the object method when operations are executed on the form object (renaming, duplication, copy/paste...)
 
-- a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for form operations.
+- um nome de método de projeto: nome de um método de projeto existente sem extensão de arquivo, ou seja:
+  `myMethod`
+  Nesse caso, o 4D não oferece suporte automático para operações de formulário.
 
-- a custom method file path including the .4dm extension, e.g.:\
-  `MyMethods/myFormMethod.4dm`
-  You can also use a filesystem:\
+- um caminho de arquivo de método personalizado, incluindo a extensão .4dm, por exemplo:\
+  `MyMethods/myFormMethod. dm`
+  Você também pode usar um sistema de arquivos:\
   `/RESOURCES/Forms/FormMethod.4dm`
-  In this case, 4D does not provide automatic support for object operations.
+  Neste caso, 4D não fornece suporte automático para operações de objeto.
 
 #### Gramática JSON
 
