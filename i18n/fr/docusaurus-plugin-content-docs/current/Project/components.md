@@ -34,7 +34,7 @@ This page describes how to work with components in the **4D** and **4D Server** 
 To load a component in your 4D project, you can either:
 
 - copy the component files in the [**Components** folder of your project](architecture.md#components),
-- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Component manager interface**](#adding-a-dependency).
+- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-dependency).
 
 Components declared in the **dependencies.json** file can be stored at different locations:
 
@@ -109,7 +109,7 @@ You declare a local component in the [**dependencies.json** file](#dependencyjso
 
 ... where "myComponent1" and "myComponent2" are the name of the components to be loaded.
 
-By default, if "myComponent1" and "myComponent2" are not declared in an [environment4d.json file](#environment4djson), 4D will look for the component's package folder (_i.e._ the project root folder of the component) at the same level as your 4D project's package folder, e.g.:
+By default, if "myComponent1" and "myComponent2" are not declared in an [**environment4d.json**](#environment4djson) file, 4D will look for the component's package folder (_i.e._ the project root folder of the component) at the same level as your 4D project's package folder, e.g.:
 
 ```
 	/MyProjectRoot/
@@ -120,7 +120,7 @@ Thanks to this architecture, you can simply copy all your components at the same
 
 :::note
 
-If you do not want to benefit from the **dependencies.json** architecture, you can install local components by copying their files in the [**Components** folder of your project](architecture.md#components).
+If you do not want to use the **dependencies.json** architecture, you can install local components by copying their files in the [**Components** folder of your project](architecture.md#components).
 
 :::
 
@@ -310,23 +310,30 @@ To display the Dependencies panel:
 - with 4D Server, select the **Window/Project Dependencies** menu item.<br/>
   ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
-The Dependency panel is then displayed. Dependencies are sorted by name in alphabetical order:
+The Dependencies panel is then displayed. Dependencies are sorted by name in alphabetical order:
 
 ![dependency](../assets/en/Project/dependency.png)
 
-### Adding and Removing Dependencies
+The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server). You can add or remove **local** and **GitHub** dependencies.
 
-The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server). Vous pouvez :
+### Adding a local dependency
 
-- add local dependencies ([GitHub dependencies](#components-stored-on-github) cannot be added through the interface),
-- remove any dependency.
+To add a local dependency, click on the **+** button in the footer area of the panel. La fenêtre suivante s'affiche :
 
-#### Adding a dependency
+![dependency-add](../assets/en/Project/dependency-add.png)
 
-To add a dependency from the Dependencies panel, click on the **+** button of the panel or select **Add a dependency...** from the contextual menu. A standard Open file dialog box is displayed, allowing you to select the component to add. You can select a **.4DBase** package or a [**.4DProject** file](architecture.md##applicationname4dproject-file). It the selected item is not valid, an error is displayed.
+Make sure the **Local** tab is selected and click on the **...** button. A standard Open file dialog box is displayed, allowing you to select the component to add. You can select a [**.4DZ**](../Desktop/building.md#build-component) or a [**.4DProject**](architecture.md##applicationname4dproject-file) file.
 
-- If you select a component located next to the project package folder (default location), it is automatically declared in the [**dependencies.json**](#dependenciesjson) file.
-- If you select a component that is not located next to the project package folder, it is automatically declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). The Dependencies panel asks if you want to save a [relative or absolute path](#relative-paths-vs-absolute-paths).
+If the selected item is valid, its name and location are displayed in the dialog box.
+
+![dependency-selected](../assets/en/Project/local-selected.png)
+
+If the selected item is not valid, an error message is displayed.
+
+Click **Add** to add the dependency to the project.
+
+- If you select a component located next to the project package folder (default location), it is declared in the [**dependencies.json**](#dependenciesjson) file.
+- If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). The Dependencies panel asks if you want to save a [relative or absolute path](#relative-paths-vs-absolute-paths).
 
 :::note
 
@@ -334,11 +341,57 @@ If no [**environment4d.json**](#environmen4djson) file is already defined for th
 
 :::
 
-The selected dependency is automatically added to the [inactive dependency list](#dependency-status). It will be loaded once the application restarts.
+The dependency is added to the [inactive dependency list](#dependency-status) with the **Available after restart** status. It will be loaded once the application restarts.
 
-#### Removing a dependency
+### Adding a GitHub dependency
 
-To add a dependency from the Dependencies panel, select the dependency to remove and click on the **-** button of the panel or select **Remove the dependency...** from the contextual menu. You can select several dependencies, in which case the action is applied to all selected dependencies.
+To add a [GitHub dependency](#components-stored-on-github), click on the **+** button in the footer area of the panel and select the **GitHub** tab.
+
+![dependency-add-git](../assets/en/Project/dependency-add-git.png)
+
+Enter the path of the GitHub repository of the dependency. It could be a **repository URL** or a **github-account/repository-name string**, for example:
+
+![dependency-add-git-2](../assets/en/Project/dependency-add-git-2.png)
+
+Once the connection is established, the GitHub icon ![dependency-gitlogo](../assets/en/Project/dependency-gitlogo.png) is displayed on the right side of the entry area. You can click on this icon to open the repository in your default browser.
+
+:::note
+
+If the component is stored on a [private GitHub repository](#private-repositories) and your personal token is missing, an error message is displayed and a  **Add a personal access token...** button is displayed (see [Providing your GitHub access token](#providing-your-github-access-token)).
+
+:::
+
+You can then define the [tag or version](#tags-and-versions) option for the dependency:
+
+![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
+
+- **Latest**: Selected by default and allows to download the release that is tagged as the latest (stable) version.
+- **Up to Next Major Version**: Define a [semantic version range](#tags-and-versions) to restrict updates to the next major version.
+- **Up to Next Minor Version**: Similarly, restrict updates to the next minor version.
+- **Exact Version (Tag)**: Select or manually enter a [specific tag](#tags-and-versions) from the available list.
+
+Click on the **Add** button to add the dependency to the project.
+
+The GitHub dependency declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. It will be loaded once the application restarts.
+
+#### Providing your GitHub access token
+
+If the component is stored on a [private GitHub repository](#private-repositories), you need to provide your personal access token to the Dependency manager. To do this, you can either:
+
+- click on **Add a personal access token...** button that is displayed in the "Add a dependency" dialog box after you entered a private GitHub repository path.
+- or, select **Add a GitHub personal access token...** in the Dependency manager menu at any moment.
+
+![dependency-add-token](../assets/en/Project/dependency-add-token.png)
+
+You can then enter your personal access token:
+
+![dependency-add-token-2](../assets/en/Project/dependency-add-token-2.png)
+
+You can only enter one personal access token. Once a token has been entered, you can edit it.
+
+### Removing a dependency
+
+To remove a dependency from the Dependencies panel, select the dependency to remove and click on the **-** button of the panel or select **Remove the dependency...** from the contextual menu. You can select several dependencies, in which case the action is applied to all selected dependencies.
 
 :::note
 
@@ -350,9 +403,7 @@ Une boîte de dialogue de confirmation s'affiche. If the dependency was declared
 
 ![dependency-remove](../assets/en/Project/remove-comp.png)
 
-If you confirm the dialog box, the removed dependency is automatically flagged "Unload at restart". It will be unloaded once the application restarts.
-
-![status-unload](../assets/en/Project/status-unload.png)
+If you confirm the dialog box, the removed dependency [status](#dependency-status) is automatically flagged "Unload after restart". It will be unloaded once the application restarts.
 
 ### Dependency Origin
 
@@ -409,6 +460,8 @@ The following status labels are available:
 - **Not found**: The dependency is declared in the dependencies.json file but is not found.
 - **Inactive**: The dependency is not loaded because it is not compatible with the project (e.g. the component is not compiled for the current platform).
 - **Duplicated**: The dependency is not loaded because another dependency with the same name exists at the same location (and is loaded).
+- **Available after restart**: The dependency reference has just been added [using the interface](#monitoring-project-dependencies), it will be loaded once the application restarts.
+- **Unloaded after restart**: The dependency reference has just been removed [using the interface](#removing-a-dependency), it will be unloaded once the application restarts.
 
 A tooltip is displayed when you hover over the dependency line, provding additional information about the status:
 
