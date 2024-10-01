@@ -17,31 +17,31 @@ title: VP Cells
 
 <!-- REF #_method_.VP Cells.Params -->
 
-| Paramètres  | Type    |    | Description                                                                 |                  |
-| ----------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName  | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
-| column      | Integer | -> | Indice de la colonne                                                        |                  |
-| row         | Integer | -> | Indice de la ligne                                                          |                  |
-| columnCount | Integer | -> | Nombre de colonnes                                                          |                  |
-| rowCount    | Integer | -> | Nombre de lignes                                                            |                  |
-| sheet       | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |                  |
+| Paramètres  | Type    |                             | Description                                                                 |                  |
+| ----------- | ------- | --------------------------- | --------------------------------------------------------------------------- | ---------------- |
+| vpAreaName  | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |                  |
+| column      | Integer | ->                          | Indice de la colonne                                                        |                  |
+| row         | Integer | ->                          | Indice de la ligne                                                          |                  |
+| columnCount | Integer | ->                          | Nombre de colonnes                                                          |                  |
+| rowCount    | Integer | ->                          | Nombre de lignes                                                            |                  |
+| sheet       | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
 | Résultat    | Object  | <- | Objet plage de toutes les cellules                                          | <!-- END REF --> |
 
 #### Description
 
-The `VP Cells` command <!-- REF #_method_.VP Cells.Summary -->returns a new range object referencing specific cells<!-- END REF -->.
+La commande `VP Cells` <!-- REF #_method_.VP Cells.Summary -->retourne un nouvel objet de plage référencant des cellules spécifiques<!-- END REF -->.
 
-In _vpAreaName_, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-The _column_ parameter defines the first column of the cell range. Passez l'indice de la colonne (la numérotation commence à zéro) dans ce paramètre. If the range is within multiple columns, you should also use the _columnCount_ parameter.
+Le paramètre _column_ définit la première colonne de la plage de cellules. Passez l'indice de la colonne (la numérotation commence à zéro) dans ce paramètre. Si l'intervalle se situe dans plusieurs colonnes, vous devez également utiliser le paramètre _columnCount_.
 
-In the _row_ parameter, you can define the row(s) of the cell range's position. Passez l'indice de la ligne (la numérotation commence à zéro) dans ce paramètre. If the range is within multiple rows, you should also use the _rowCount_ parameter.
+Dans le paramètre _row_, vous pouvez définir la ou les lignes de la position de la plage de cellules. Passez l'indice de la ligne (la numérotation commence à zéro) dans ce paramètre. Si la plage se situe sur plusieurs lignes, vous devez également utiliser le paramètre _rowCount_.
 
-The _columnCount_ parameter allows you to define the total number of columns the range is within. _columnCount_ must be greater than 0.
+Le paramètre _columnCount_ vous permet de définir le nombre total de colonnes dans lesquelles se trouve la plage. _columnCount_ doit être supérieur à 0.
 
-The _rowCount_ parameter allows you to define the total number of rows the range is within. _rowCount_ must be greater than 0.
+Le paramètre _rowCount_ vous permet de définir le nombre total de lignes dans lesquelles se trouve la plage. _rowCount_ doit être supérieur à 0.
 
-In the optional _sheet_ parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used by default.
+Dans le paramètre optionnel _sheet_, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée par défaut.
 
 #### Exemple
 

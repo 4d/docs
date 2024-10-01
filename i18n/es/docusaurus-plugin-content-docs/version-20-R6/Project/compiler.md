@@ -59,7 +59,7 @@ El control sintáctico también puede lanzarse directamente con el comando **Ver
 
 ### Declarar tipos
 
-El botón **Declarar Tipos** crea o actualiza los métodos del compilador. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters declared outside prototypes](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). Estos métodos, cuando existen, son utilizados directamente por el compilador durante la compilación del código, lo que da lugar a tiempos de compilación más rápidos.
+El botón **Declarar Tipos** crea o actualiza los métodos del compilador. Los métodos de compilación son métodos proyecto que agrupan todas las declaraciones de tipo variable y array (proceso e interproceso), así como los [parámetros método declarados fuera de prototipos](. /Concepts/parameters.md#method-parameters-declared-outside-prototypes). Estos métodos, cuando existen, son utilizados directamente por el compilador durante la compilación del código, lo que da lugar a tiempos de compilación más rápidos.
 
 El nombre de estos métodos debe comenzar por `Compiler_`. Puede definir el nombre por defecto de cada uno de los 5 métodos del compilador en [la ventana de los parámetros del compilador](#compiler-methods-for). Los métodos de compilación que son generados y mantenidos por 4D tienen automáticamente el atributo `Invisible`:
 
@@ -166,9 +166,9 @@ Puede renombrar cada uno de estos métodos en las áreas correspondientes, pero 
 
 Las advertencias son mensajes específicos generados por el compilador cuando verifica la sintaxis. Estos mensajes están destinados a llamar su atención sobre las declaraciones que podrían llevar a errores de ejecución. No impiden la compilación.
 
-Dependiendo de las circunstancias y del estilo de programación utilizado, las advertencias pueden ser más o menos relevantes. You can enable or disable warnings, in the compiler dialog, and in the code editors (4D code editor and VS Code), globally through the [warnings tab](#warnings-tab) or locally using [`//%W`](#disabling-and-enabling-warnings-locally).
+Dependiendo de las circunstancias y del estilo de programación utilizado, las advertencias pueden ser más o menos relevantes. Puede activar o desactivar las advertencias, en el diálogo del compilador, y en los editores de código (editor de código 4D y VS Code), de forma global a través de la [pestaña advertencias](#pestaña-advertencias) o localmente usando [`//%W`](#desactivar-y-activar-las-advertencias-localmente).
 
-### Warnings tab
+### Pestaña Advertencias
 
 ![](../assets/en/Project/warnings-tab.png)
 
@@ -233,7 +233,7 @@ Los comentarios de advertencias especiales tienen prioridad sobre la configuraci
 
 ### Archivo Symbol
 
-If you check the [**Generate the symbol file**](#generate-the-symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](Project/architecture.md#logs) of the project during compilation. Está dividido en varias partes:
+Si activa la opción [**Generar el archivo de símbolos**](#generate-the-symbol-file) en la configuración del compilador, se creará un archivo de símbolos llamado `ProjectName_symbols.txt` en la [carpeta Logs](Project/architecture.md#logs) del proyecto durante la compilación. Está dividido en varias partes:
 
 #### Lista de las variables proceso e interproceso
 

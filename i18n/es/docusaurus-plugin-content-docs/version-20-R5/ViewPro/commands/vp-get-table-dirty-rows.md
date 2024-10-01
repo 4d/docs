@@ -17,17 +17,17 @@ title: VP Get table dirty rows
 
 <!-- REF #_method_.VP Get table dirty rows.Params -->
 
-| Parámetros | Tipo       |    | Descripción                                                                                                          |                  |
-| ---------- | ---------- | -- | -------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text       | -> | Nombre de objeto formulario área 4D View Pro                                                                         |                  |
-| tableName  | Text       | -> | Nombre de la tabla                                                                                                   |                  |
-| reset      | Boolean    | -> | True para borrar el estado sucio de la tabla actual, False para mantenerlo intacto. Por defecto=True |                  |
-| sheet      | Integer    | -> | Índice de la hoja (hoja actual si se omite)                                                       |                  |
+| Parámetros | Tipo       |                             | Descripción                                                                                                          |                  |
+| ---------- | ---------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text       | ->                          | Nombre de objeto formulario área 4D View Pro                                                                         |                  |
+| tableName  | Text       | ->                          | Nombre de la tabla                                                                                                   |                  |
+| reset      | Boolean    | ->                          | True para borrar el estado sucio de la tabla actual, False para mantenerlo intacto. Por defecto=True |                  |
+| sheet      | Integer    | ->                          | Índice de la hoja (hoja actual si se omite)                                                       |                  |
 | Result     | Collection | <- | Colección de objetos con todos los elementos modificados desde el último reinicio                                    | <!-- END REF --> |
 
 #### Descripción
 
-The `VP Get table dirty rows` command <!-- REF #_method_.VP Get table dirty rows.Summary -->returns a collection of _dirty row_ objects, containing items that were modified since the last reset in the specified _tableName_<!-- END REF -->.
+El comando `VP Get table dirty rows` <!-- REF #_method_.VP Get table dirty rows.Summary -->devuelve una colección de objetos _dirty row_, que contienen los elementos que fueron modificados desde el último reinicio en la tabla especificada _tableName_<!-- END REF -->.
 
 En _vpAreaName_, pase el nombre del área 4D View Pro.
 

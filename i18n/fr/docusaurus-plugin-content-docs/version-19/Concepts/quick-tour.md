@@ -182,7 +182,7 @@ $vAge:=employee.children[2].age
 
 A noter que si la valeur de la propriété de l'objet est un objet qui encapsule une méthode (une formule), vous devez ajouter des parenthèses () au nom de la propriété pour exécuter la méthode :
 
-```
+```4d
 $f:=New object
 $f.message:=Formula(ALERT("Hello world !"))
 $f.message() //affiche "Hello world!"

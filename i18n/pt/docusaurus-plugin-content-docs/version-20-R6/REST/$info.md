@@ -58,7 +58,7 @@ Recupera informação sobre os conjuntos de entidades atualmente armazenados na 
 
 **Resultado**:
 
-```
+```json
 {
 cacheSize: 209715200,
 usedCache: 3136000,

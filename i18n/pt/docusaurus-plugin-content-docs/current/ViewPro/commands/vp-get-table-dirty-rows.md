@@ -17,12 +17,12 @@ title: VP Get table dirty rows
 
 <!-- REF #_method_.VP Get table dirty rows.Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                                                                                                 |                  |
-| ---------- | ---------- | -- | --------------------------------------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text       | -> | Nome de objeto formulário área 4D View Pro                                                                |                  |
-| tableName  | Text       | -> | Nome da tabela                                                                                            |                  |
-| reset      | Parâmetros | -> | True para apagar o estado "dirty" da tabela atual, False para mantê-lo igual. Padrão=True |                  |
-| sheet      | Integer    | -> | Índice da folha (folha atual se omitida)                                               |                  |
+| Parâmetro  | Tipo       |                             | Descrição                                                                                                 |                  |
+| ---------- | ---------- | --------------------------- | --------------------------------------------------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text       | ->                          | Nome de objeto formulário área 4D View Pro                                                                |                  |
+| tableName  | Text       | ->                          | Nome da tabela                                                                                            |                  |
+| reset      | Parâmetros | ->                          | True para apagar o estado "dirty" da tabela atual, False para mantê-lo igual. Padrão=True |                  |
+| sheet      | Integer    | ->                          | Índice da folha (folha atual se omitida)                                               |                  |
 | Resultados | Collection | <- | Collection of objects with all the items modified since the last reset                                    | <!-- END REF --> |
 
 #### Descrição
@@ -33,7 +33,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro.
 
 In *tableName*, pass the name of the table for which you want to get the dirty rows. Somente as colunas modificadas vinculadas a um [contexto de dados] (vp-set-data-context.md) serão levadas em consideração.
 
-By default, calling the command will clear the *dirty* status from the current table. To keep this status untouched, pass `False` in the *reset* parameter.
+By default, calling the command will clear the *dirty* status from the current table. Para manter este estado intacto, passe `False` no parâmetro *reset*.
 
 Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 

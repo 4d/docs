@@ -37,7 +37,7 @@ In _dataContextAttribute_, pass the name of the attribute to bind to _rangeObj_.
 
 #### Exemplo
 
-Set a data context and bind the `firstName` and `lastName` attribute to cells:
+Defina um contexto de dados e vincule o atributo `firstName` e `lastName` às células:
 
 ```4d
 var $p : Object

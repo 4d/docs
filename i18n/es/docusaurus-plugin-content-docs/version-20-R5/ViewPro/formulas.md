@@ -54,14 +54,14 @@ Todas las fórmulas tienen operandos y operadores:
 
 Los siguientes operadores pueden utilizarse con dos operandos del mismo tipo:
 
-| Operador | Comparación       |
-| -------- | ----------------- |
-| =        | igual a           |
-| `<>`     | es diferente de   |
-| >        | mayor que         |
-| <        | menor que         |
-| > =      | mayor o igual que |
-| <=       | menor o igual que |
+| Operador                    | Comparación       |
+| --------------------------- | ----------------- |
+| =                           | igual a           |
+| `<>`                        | es diferente de   |
+| >                           | mayor que         |
+| <  | menor que         |
+| > =                         | mayor o igual que |
+| <= | menor o igual que |
 
 ### Presedencia de los operadores
 
@@ -101,7 +101,7 @@ Si sólo utiliza coordenadas de celda, por ejemplo, `C5`, 4D View Pro interpreta
 
 Puede combinar las referencias absolutas y relativas insertando un signo de dólar delante de la letra o el número solo, por ejemplo, `$C5` o `C$5`. Una referencia mixta permite especificar la fila o la columna como absolutas, permitiendo al mismo tiempo que la otra parte de la dirección se refiera a ella de forma relativa.
 
-Una forma cómoda, rápida y precisa de especificar una referencia absoluta es nombrar la celda y utilizar ese nombre en lugar de la dirección de la celda. Una referencia a una celda nombrada es siempre absoluta. You can create or modify named cells or named cell ranges using the [`VP ADD RANGE NAME`](commands/vp-add-range-name.md) command.
+Una forma cómoda, rápida y precisa de especificar una referencia absoluta es nombrar la celda y utilizar ese nombre en lugar de la dirección de la celda. Una referencia a una celda nombrada es siempre absoluta. Puede crear o modificar celdas con nombre o rangos de celdas con nombre utilizando el comando [`VP ADD RANGE NAME`](commands/vp-add-range-name.md).
 
 La siguiente tabla muestra el efecto de las diferentes notaciones:
 
@@ -140,22 +140,22 @@ Todas las funciones se declaran con el comando [`VP SET CUSTOM FUNCTIONS`](comma
 ```4d
 $o:=New object
 
-//Name of the function in 4D View Pro: "DRIVERS_LICENCE"
+//Nombre de la fonción en 4D View Pro: "DRIVERS_LICENCE"
 $o.DRIVERS_LICENCE:=New object
 
-//process variable
+/variable process
 $o.DRIVERS_LICENCE.formula:=Formula(DriverLicence)
 
-//table field
+//campo table
 $o.DRIVERS_LICENCE.formula:=Formula([Users]DriverLicence)
 
-//project method
+//método proyecto
 $o.DRIVERS_LICENCE.formula:=Formula(DriverLicenceState)
 
-//4D command
+//Comando 4D
 $o.DRIVERS_LICENCE:=Formula(Choose(DriverLicence; "Obtained"; "Failed"))
 
-//4D expression and parameter
+//expresión y parámetro 4D 
 $o.DRIVERS_LICENCE.formula:=Formula(ds.Users.get($1).DriverLicence)
 $o.DRIVERS_LICENCE.parameters:=New collection
 $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
@@ -213,9 +213,9 @@ Tenga en cuenta que los ( ) son obligatorios, incluso si no se pasan parámetros
 =METHODWITHOUTNAME()
 ```
 
-You can declare the name, type, and number of parameters through the _parameters_ collection of the function you declared using the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) command. Opcionalmente, puede controlar el número de parámetros pasados por el usuario a través de las propiedades _minParams_ y _maxParams_.
+Puede declarar el nombre, tipo y número de parámetros a través de la colección _parameters_ de la función que declaró utilizando el comando [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md). Opcionalmente, puede controlar el número de parámetros pasados por el usuario a través de las propiedades _minParams_ y _maxParams_.
 
-For more information on supported incoming parameter types, please refer to the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions) command description.
+Para más información sobre los tipos de parámetros entrantes soportados, por favor consulte la descripción del comando [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions).
 
 Si no se declaran parámetros, los valores se pueden pasar secuencialmente a los métodos (se recibirán en $1, $2...) y su tipo se convertirá automáticamente.
 
@@ -361,4 +361,4 @@ Para ser llamado en una fórmula 4D View Pro, un método proyecto debe ser:
 - **Ejecutable**: pertenece al proyecto local o a un componente cargado con la opción "Compartido por los componentes y el proyecto local" activada (ver [Compartir los métodos proyecto](../Concepts/components.md#sharing-of-project-methods)).
 - **No está en conflicto** con una función de hoja de cálculo 4D View Pro existente: si llama a un método proyecto con el mismo nombre que una función integrada 4D View Pro, se llama a la función.
 
-> If neither the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) nor the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. En este caso, los nombres de los métodos proyecto deben cumplir la gramática de identificadores de JavaScript (ver [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). La opción de filtrado global de la caja de diálogo Parámetros (ver _Acceso a los datos_) se ignora en todos los casos.
+> Si ni el método [VP SET CUSTOM FUNCTIONS](comandos/vp-set-custom-functions.md) ni el comando [VP SET ALLOWED METHODS](comandos/vp-set-allowed-methods.md) han sido ejecutados durante la sesión, las funciones personalizadas de 4D View Pro se basan en los métodos permitidos definidos por el comando genérico de 4D `SET ALLOWED METHODS`. En este caso, los nombres de los métodos proyecto deben cumplir la gramática de identificadores de JavaScript (ver [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). La opción de filtrado global de la caja de diálogo Parámetros (ver _Acceso a los datos_) se ignora en todos los casos.

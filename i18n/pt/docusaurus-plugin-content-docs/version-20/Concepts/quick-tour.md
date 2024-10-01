@@ -45,17 +45,17 @@ A palavra-chave `var` permite declarar variáveis objecto de um tipo de classe d
 
 ```4d
 var myPerson : cs.Person
-//variable of the Person user class
+//variável da classe usuário Person
 ```
 
 
-Mesmo geralmente não sendo recomendado, é possível criar variáveis simplesmente usando-as; não precisa defini-las formalmente como se faz com campos. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
+Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-A linha de código lê “MyOtherDate gets the current date plus 30 days.” Essa linha cria a variável e a atribuiu com o tipo de data (temporário) e um conteúdo. Uma variável criada por atribuição é interpretada como sem tipo, ou seja, pode ser atribuída com outros tipos em outras linhas e então muda o tipo dinamicamente. Uma variável digitada com `C_XXX` não pode mudar de tipo. Em modo compilado, o tipo não pode ser modificado nunca, independentemente de como tenha criado a variável.
+A linha de código lê “MyOtherDate gets the current date plus 30 days.” This line creates the variable, assigns it with both the (temporary) date type and a content. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and change of type dynamically. This flexibility does not apply to variables declared with the `var` keyword (their type cannot change) and in [compiled mode](interpreted.md) where the type can never be changed, regardless of how the variable was created.
 
 ## Comandos
 
@@ -100,6 +100,8 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // abre documento em modo apena
 ```
 
 > As constantes pré-definidas aparecem sublinhadas como padrão no editor de métodos 4D.
+
+
 
 ## Página Métodos
 
@@ -180,7 +182,7 @@ $vAge:=employee.children[2].age
 
 Note-se que se o valor da propriedade do objeto for um objeto que encapsula um método (uma fórmula), é necessário adicionar parênteses () ao nome da propriedade para executar o método:
 
-```
+```4d
 ALERT($myText) //"HELLO"
 
   //Here the code of the method Do_Something  
@@ -212,6 +214,7 @@ $o:=cs.myClass.new()
 No método classe `myClass`, utilize a instrução `Function <methodName>` para definir a função membro classe *methodName*. Uma função membro da classe pode receber e devolver parâmetros como qualquer método e utilizar `This` como instância do objeto.
 
 ```4d  
+
 //in o ficheiro myClass.4dm Function hello -> $welcome : Text
   $welcome:="Hello "+This.who
 ```
@@ -227,11 +230,11 @@ $f.message() //displays "Hello world!"
 Opcionalmente, utilize a palavra-chave `Class constructor` para declarar as propriedades do objeto.
 
 ```4d  
-//in the Rectangle.4dm file
-Class constructor ($width : Integer; $height : Integer)
+//no arquivo Rectangle.4dm
+Construtor de classe ($height: Integer; $width : Integer)
 This.height:=$height
 This.width:=$width
-This.name:="Rectangle"
+This.name:="Retângulo"
 ```
 
 Uma classe pode estender outra classe utilizando `Class extends <ClassName>`. As superclasses podem ser chamadas utilizando o comando `Super`. Por exemplo:

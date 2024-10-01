@@ -208,8 +208,8 @@ You can pass any number of values of the following supported types:
 *	date
 *	time (stored as number of milliseconds - real)
 *	null
-*	shared object(*)
-*	shared collection(*)
+*	shared object
+*	shared collection
 
 :::note
 
@@ -217,7 +217,6 @@ Unlike standard (not shared) collections, shared collections do not support pict
 
 :::
 
-(\*)When a shared object or collection is added to a shared collection, they share the same *locking identifier*. For more information on this point, refer to [4D Doc Center](https://doc.4d.com).
 
 #### Example
 
@@ -850,6 +849,7 @@ The `.equal()` function <!-- REF #collection.equal().Summary -->recursively comp
 :::
 
 By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the option parameter.
+
 
 
 #### Example
@@ -3214,7 +3214,7 @@ With the following ***Flatten*** method:
 |---------|--- |:---:|------|
 |index |Integer|->|Element at which to start removal|
 |howMany |Integer|->|Number of elements to remove, or 1 element if omitted|
-|Result|Collection|<-|Original collection without removed element(s)|
+|Result|Collection|<-|Modified collection without removed element(s)|
 <!-- END REF -->
 
 

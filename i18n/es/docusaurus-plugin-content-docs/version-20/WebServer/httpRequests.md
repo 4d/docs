@@ -146,7 +146,7 @@ var $path : Text
 var $PictVar : Picture
 var $BlobVar : Blob
 
- //busca la imagen en la carpeta Imágenes dentro de la carpeta Resources 
+ //busca la imagen en la carpeta Imágenes dentro de la carpeta Resources
 $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd"
 
 READ PICTURE FILE($path;$PictVar) //pone la imagen en la variable imagen
@@ -287,13 +287,13 @@ return false
   <h1>Welcome to Spiders United</h1>
   <p><b>Please enter your name:</b>
   <input name="vtUserName" value="" size="30" type="text"></p>
-  <p> 
-<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit"> 
+  <p>
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit">
 <input name="vsbRegister" value="Register" type="submit">
 <input name="vsbInformation" value="Information" type="submit"></p>
-<p> 
-<input name="vtNav_appName" value="" type="hidden"> 
-<input name="vtNav_appVersion" value="" type="hidden"> 
+<p>
+<input name="vtNav_appName" value="" type="hidden">
+<input name="vtNav_appVersion" value="" type="hidden">
 <input name="vtNav_appCodeName" value="" type="hidden">
 <input name="vtNav_userAgent" value="" type="hidden"></p>
 </form>
@@ -373,5 +373,3 @@ El servidor web de 4D ahora soporta archivos cargados con codificación chunked 
 El método COMPILER\WEB, si existe, es llamado sistemáticamente cuando el servidor HTTP recibe una petición dinámica y llama al motor 4D. Este es el caso, por ejemplo, cuando el servidor web de 4D recibe un formulario publicado o una URL para procesar en [`On Web Connection`](#on-web-connection). Este método está destinado a contener directivas de digitación y/o inicialización de variables utilizadas durante los intercambios web. Es utilizado por el compilador cuando se compila la aplicación. El método COMPILER\WEB es común a todos los formularios web. Por defecto, el método COMPILER_WEB no existe. Debe crearlo explícitamente.
 
 > También se llama al método proyecto COMPILER_WEB, si existe, para cada solicitud SOAP aceptada.
-
-

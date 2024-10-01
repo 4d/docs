@@ -5,7 +5,7 @@ title: Qodly Studio for 4D
 
 :::caution Prévia do desenvolvedor
 
-Qodly Studio for 4D is currently in the **Developer Preview** phase. Não deve ser usado na produção.
+Qodly Studio for 4D está atualmente na fase **Developer Preview**. Não deve ser usado na produção.
 
 :::
 
@@ -48,7 +48,7 @@ A resolução recomendada é 1920x1080.
 - Desenvolvimento: 4D Server v20 R2 ou superior
 - Qodly Studio only works with 4D projects (binary databases are not supported).
 - Web sessions (*aka* Scalable sessions) must [be enabled](sessions.md#enabling-web-sessions).
-- The 4D code called by Qodly forms must be [thread-safe](preemptiveWeb.md).
+- O código 4D chamado pelos formulários Qodly deve ser [hilo seguro] (preemptiveWeb.md).
 
 ### Habilitando o acesso a Qodly Studio
 
@@ -85,14 +85,14 @@ Keep in mind that [user settings](../settings/overview.md) can be defined at sev
 
 ### Ativando autenticação
 
-Authentication on the WebAdmin web server is granted using an access key. For more details, see [Access key](../Admin/webAdmin.md#access-key).
+Authentication on the WebAdmin web server is granted using an access key. Para mais detalhes, consulte [Chave de Acesso](../Admin/webAdmin.md#access-key).
 
 ### Gerenciamento de projetos
 
 In accordance with the management of 4D projects, only the following usages are supported:
 
 - o desenvolvimento com Qodly Studio deve ser feito usando **4D** (monousuário).
-- deployment of 4D applications powered with Qodly forms must be done using **4D Server**.
+- implantação de aplicações 4D com formulários Qodly deve ser feita usando **4D Server**.
 
 ## Abertura do Qodly Studio
 
@@ -100,7 +100,7 @@ The Qodly Studio page is available when the [WebAdmin web server is running](../
 
 Há duas maneiras de acessar Qodly Studio:
 
-- from your 4D single-user application, go to **Design** > **Qodly Studio...**.
+- de sua aplicação 4D usuário único, vá para **Desenho** > **Qodly Studio...**.
   If the WebAdmin web server is already running, depending on its configuration, your default browser opens at `IPaddress:HTTPPort/studio` or `IPaddress:HTTPSPort/studio`. Otherwise, you will be prompted if you want to start the WebAdmin web server first.
 
 - on a browser, with the WebAdmin web server running (launched from 4D or 4D Server), enter the following address:
@@ -145,7 +145,7 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 | Depurador                                                                               | Depurador 4D IDE                                                                                               | Depurador Qodly Studio                                                              |
 | REST/Web roles and privileges                                                           | roles.json direct edit/Qodly Studio roles and privileges editor                                | Qodly Studio role and privileges editor                                             |
 
-(1) If you click on the **Model** button in Qodly Studio, nothing happens.
+(1) Se você clicar no botão **Model** no Qodly Studio, nada acontecerá.
 (2) When you open some 4D code in Qodly Studio, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
 
 ### Línguagem
@@ -171,7 +171,7 @@ You can develop with Qodly Studio while your computer is not connected to the in
 - [Templates](https://developer.qodly.com/docs/studio/design-webforms/templates): the Template library is empty
 - UI tips: they are not displayed when you click on ![alt-text](../assets/en/WebServer/tips.png) icons.
 
-## Deployment
+## Implantação
 
 ### Ativação da renderização
 
@@ -183,9 +183,9 @@ See [this page](https://developer.qodly.com/docs/studio/rendering) for detailed 
 
 :::
 
-To enable the rendering of Qodly pages, the following options must be set.
+Para ativar a renderização das páginas Qodly, as seguintes opções devem ser definidas.
 
-- The 4D project's **Settings** > **Web** > **Web Features** > [**Expose as REST server**](../settings/web.md#exposed-as-rest-server) option must be activated.
+- A opção **Propriedades** > **Web** > **Funcionalidades Web** > [**Expor como servidor REST**](../settings/web.md#exposed-as-rest-server) deve ser ativada.
 - O [servidor Web 4D] (webServer.md) deve estar em execução.
 
 :::note
@@ -275,7 +275,7 @@ This call is accepted and as long as the authentication is not successful, `Sess
 
 When the ["force login" mode is enabled](#setting-the-force-login-mode), Qodly Studio for 4D allows you to implement a logout feature in your application.
 
-To logout the user, you just need to execute the **Logout** standard action from the Qodly page. In Qodly Studio, you can associate this standard action to a button for example:
+Para fazer o logout do usuário, basta executar a ação padrão **Logout** na página Qodly. In Qodly Studio, you can associate this standard action to a button for example:
 
 ![alt-text](../assets/en/WebServer/logout.png)
 
@@ -297,6 +297,12 @@ As explained in the [configuration](#configuration) section, the WebAdmin web se
 
 Se você executar o renderizador a partir do Qodly Studio e esses dois servidores web não forem acessados através do mesmo esquema de URL (HTTP ou HTTPS), isso pode levar a uma contagem incorreta de licenças.
 
+:::info
+
+Using different schemes might also lead to [session](sessions.md) issues, such as losing [privileges](../ORDA/privileges.md) after a page refresh.
+
+:::
+
 #### Exemplo
 
 1. Você executa Qodly Studio em um esquema URL HTTPS (por exemplo, `https://127.0.0.1:7443/studio/`)
@@ -305,7 +311,7 @@ Se você executar o renderizador a partir do Qodly Studio e esses dois servidore
 
 ![alt-text](../assets/en/WebServer/schemes.png)
 
-3. No Qodly Studio, você clica no ícone **Preview**. You are warned that the two web servers are started on different schemes, but despite this you click on the **Confirm** button.
+3. No Qodly Studio, você clica no ícone **Preview**. Você está avisado que os dois servidores web estão iniciados em esquemas diferentes, mas apesar disso você clique no botão **Confirmar**.
 
 ![alt-text](../assets/en/WebServer/render-button.png)
 

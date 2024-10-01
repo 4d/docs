@@ -227,7 +227,7 @@ El objeto resultante es una entity selection de la dataclass Employee sin duplic
 | Parámetros | Tipo               |    | Descripción                                                                      |
 | ---------- | ------------------ |:--:| -------------------------------------------------------------------------------- |
 | entity     | 4D.Entity          | -> | Entidad que debe añadirse a la entity selection                                  |
-| Result     | 4D.EntitySelection | -> | Selección de entidades incluyendo la *entity* añadida|<!-- END REF --> |
+| Result     | 4D.EntitySelection | <- | Selección de entidades incluyendo la *entity* añadida|<!-- END REF --> |
 
 #### Descripción
 
@@ -1728,6 +1728,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //intenta devolver entidades del índice 
 | 17          | Añadidos       |
 
 </details>
+
 
 
 <!-- REF #EntitySelectionClass.sum().Syntax -->**.sum**( *attributePath* : Text ) : Real<!-- END REF -->

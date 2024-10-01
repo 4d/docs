@@ -40,7 +40,7 @@ Para más información sobre cómo consultar datos en 4D, consulte la documentac
 > <li>Comillas ('): \u0027</li>
 > <li>Comillas dobles ("): \u0022</li>
 >
-> For example, you can write the following when passing a value with a quote when using the _params_ property:\
+> Por ejemplo, puede escribir lo siguiente al pasar un valor con comillas cuando utilice la propiedad \*params\
 > `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 >
 > Si pasa el valor directamente, puede escribir lo siguiente:
@@ -68,15 +68,15 @@ Puede buscar en el objeto escribiendo lo siguiente:
 
 El comparador debe ser uno de los siguientes valores:
 
-| Comparador | Descripción       |
-| ---------- | ----------------- |
-| =          | igual a           |
-| !=         | diferente de      |
-| >          | mayor que         |
-| > =        | mayor o igual que |
-| <          | menor que         |
-| <=         | menor o igual que |
-| begin      | comienza con      |
+| Comparador                  | Descripción       |
+| --------------------------- | ----------------- |
+| =                           | igual a           |
+| !=                          | diferente de      |
+| >                           | mayor que         |
+| > =                         | mayor o igual que |
+| <  | menor que         |
+| <= | menor o igual que |
+| begin                       | comienza con      |
 
 ## Ejemplos
 

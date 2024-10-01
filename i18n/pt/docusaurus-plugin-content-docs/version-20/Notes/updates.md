@@ -287,7 +287,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 </details>
 
 
-## Library table (4D 20 LTS)
+## Tabela das bibliotecas (4D 20 LTS)
 
 
 
@@ -299,7 +299,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 | PDFWriter  | 4.3          | 20               | Dependência FreeType na 12.2.1                                                                              |
 | SpreadJS   | 16.2.6       | 20.2 HF1         | Motor 4D View Pro                                                                                           |
 |            | 19.6         | 20               |                                                                                                             |
-| OpenSSL    | 3.1.1        | 20               |                                                                                                             |
+| OpenSSL    | 3.1.6        | **20.4 HF2**     |                                                                                                             |
 | libZip     | 19.5         | 20               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                        |
 | LZMA       | 5.4.1        | 20               |                                                                                                             |
 | Zlib       | 14.1.6       | 20               |                                                                                                             |

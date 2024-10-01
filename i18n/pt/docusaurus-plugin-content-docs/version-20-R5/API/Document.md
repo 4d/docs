@@ -433,12 +433,12 @@ Essa propriedade é **somente leitura**.
 
 <!-- REF #document.copyTo().Params -->
 
-| Parâmetro         | Tipo                       |     | Descrição                                              |
-| ----------------- | -------------------------- | :-: | ------------------------------------------------------ |
-| destinationFolder | 4D. Folder |  -> | Pasta de destino                                       |
-| newName           | Text                       |  -> | Nome para a copia                                      |
-| overwrite         | Integer                    |  -> | `fk overwrite` para substituir os elementos existentes |
-| Resultados        | 4D. File   |  <- | Arquivo copiado                                        |
+| Parâmetro         | Tipo                       |                             | Descrição                                              |
+| ----------------- | -------------------------- | :-------------------------: | ------------------------------------------------------ |
+| destinationFolder | 4D. Folder |              ->             | Pasta de destino                                       |
+| newName           | Text                       |              ->             | Nome para a copia                                      |
+| overwrite         | Integer                    |              ->             | `fk overwrite` para substituir os elementos existentes |
+| Resultados        | 4D. File   | <- | Arquivo copiado                                        |
 
 <!-- END REF -->
 
@@ -489,8 +489,8 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 <!-- REF #document.getContent().Params -->
 
-| Parâmetro  | Tipo                     |    | Descrição           |
-| ---------- | ------------------------ | -- | ------------------- |
+| Parâmetro  | Tipo                     |                             | Descrição           |
+| ---------- | ------------------------ | --------------------------- | ------------------- |
 | Resultados | 4D. Blob | <- | Conteúdo do arquivo |
 
 <!-- END REF -->
@@ -533,9 +533,9 @@ Para salvar o conteúdo de um documento em um campo `BLOB`:
 
 <!-- REF #document.getIcon().Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                          |
-| ---------- | ------- | -- | ------------------------------------------------------------------ |
-| size       | Integer | -> | Longitude de lado da imagem devolvida (píxeles) |
+| Parâmetro  | Tipo    |                             | Descrição                                                          |
+| ---------- | ------- | --------------------------- | ------------------------------------------------------------------ |
+| size       | Integer | ->                          | Longitude de lado da imagem devolvida (píxeles) |
 | Resultados | Imagem  | <- | Ícone                                                              |
 
 <!-- END REF -->
@@ -570,11 +570,11 @@ Se o arquivo não existir no disco, um ícone em branco padrão será retornado.
 
 <!-- REF #document.getText().Params -->
 
-| Parâmetro   | Tipo    |    | Descrição                                   |
-| ----------- | ------- | -- | ------------------------------------------- |
-| charSetName | Text    | -> | Nome do conjunto de caracteres              |
-| charSetNum  | Integer | -> | Número de conjuntos de caracteres           |
-| breakMode   | Integer | -> | Modo de processamento para quebras de linha |
+| Parâmetro   | Tipo    |                             | Descrição                                   |
+| ----------- | ------- | --------------------------- | ------------------------------------------- |
+| charSetName | Text    | ->                          | Nome do conjunto de caracteres              |
+| charSetNum  | Integer | ->                          | Número de conjuntos de caracteres           |
+| breakMode   | Integer | ->                          | Modo de processamento para quebras de linha |
 | Resultados  | Text    | <- | Texto do documento                          |
 
 <!-- END REF -->
@@ -586,7 +586,7 @@ The `.getText()` function <!-- REF #document.getText().Summary -->returns the co
 Opcionalmente, você pode designar o conjunto de caracteres a ser usado na leitura do conteúdo. Você pode passar também:
 
 - in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or "UTF-8"),
-- or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
+- ou em *charSetNum*, o MIBEnum ID (número) do nome de configuração padrão.
 
 > For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
 
@@ -638,7 +638,7 @@ Aqui está outro exemplo com o mesmo arquivo, mas um delimitador de linha difere
  $txt:=$myFile.getText("UTF-8"; Document with LF)
 ```
 
-In this case, the contents of `$txt` are as follows:
+Neste caso, o conteúdo de `$txt` é o seguinte:
 
 "id\tname\tprice\tvat\n3\tthé\t1.06€\t19.6\n2\tcafé\t1.05€\t19.6"
 

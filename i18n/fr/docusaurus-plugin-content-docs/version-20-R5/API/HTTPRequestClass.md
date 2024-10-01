@@ -87,11 +87,11 @@ Les objets HTTPRequest fournissent les propriétés et fonctions suivantes :
 
 <!-- REF #4D.HTTPRequest.new().Params -->
 
-| Paramètres | Type                           |     | Description                               |
-| ---------- | ------------------------------ | :-: | ----------------------------------------- |
-| url        | Text                           |  -> | URL à laquelle envoyer la requête         |
-| options    | Object                         |  -> | Propriétés de configuration de la requête |
-| Résultat   | 4D.HTTPRequest |  <- | Nouvel objet HTTPRequest                  |
+| Paramètres | Type                           |                             | Description                               |
+| ---------- | ------------------------------ | :-------------------------: | ----------------------------------------- |
+| url        | Text                           |              ->             | URL à laquelle envoyer la requête         |
+| options    | Object                         |              ->             | Propriétés de configuration de la requête |
+| Résultat   | 4D.HTTPRequest | <- | Nouvel objet HTTPRequest                  |
 
 <!-- END REF -->
 
@@ -214,10 +214,10 @@ Un objet d'authentification gère la propriété `options.serverAuthentication` 
 
 <!-- REF #HTTP Parse message.Params -->
 
-| Paramètres | Type       |     | Description                                                         |
-| ---------- | ---------- | :-: | ------------------------------------------------------------------- |
-| data       | Text, Blob |  -> | Données à analyser                                                  |
-| Résultat   | Object     |  <- | Objet dont chaque propriété est une partie des données multiparties |
+| Paramètres | Type       |                             | Description                                                         |
+| ---------- | ---------- | :-------------------------: | ------------------------------------------------------------------- |
+| data       | Text, Blob |              ->             | Données à analyser                                                  |
+| Résultat   | Object     | <- | Objet dont chaque propriété est une partie des données multiparties |
 
 <!-- END REF -->
 
@@ -468,10 +468,10 @@ La propriété `.url` contient <!-- REF #HTTPRequestClass.url.Summary -->l'URL d
 
 <!-- REF #HTTPRequestClass.wait().Params -->
 
-| Paramètres | Type                           |     | Description                                         |
-| ---------- | ------------------------------ | :-: | --------------------------------------------------- |
-| time       | Real                           |  -> | Délai d'attente maximum en secondes pour la réponse |
-| Résultat   | 4D.HTTPRequest |  <- | Objet HTTPRequest                                   |
+| Paramètres | Type                           |                             | Description                                         |
+| ---------- | ------------------------------ | :-------------------------: | --------------------------------------------------- |
+| time       | Real                           |              ->             | Délai d'attente maximum en secondes pour la réponse |
+| Résultat   | 4D.HTTPRequest | <- | Objet HTTPRequest                                   |
 
 <!-- END REF -->
 

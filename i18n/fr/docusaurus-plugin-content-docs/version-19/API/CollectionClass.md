@@ -72,10 +72,10 @@ Une collection est initialisée avec :
 
 
 <!-- REF #_command_.New collection.Params -->
-| Paramètres | Type                                                                    |    | Description                                   |
-| ---------- | ----------------------------------------------------------------------- |:--:| --------------------------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valeur(s) de collection                       |
-| Résultat   | Collection                                                              | <- | The new collection|<!-- END REF --> |
+| Paramètres | Type                                                                    |    | Description                                       |
+| ---------- | ----------------------------------------------------------------------- |:--:| ------------------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valeur(s) de collection                           |
+| Résultat   | Collection                                                              | <- | La nouvelle collection|<!-- END REF --> |
 
 #### Description
 
@@ -153,10 +153,10 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
 
 <!-- REF #_command_.New shared collection.Params -->
-| Paramètres | Type                                                                |    | Description                                          |
-| ---------- | ------------------------------------------------------------------- |:--:| ---------------------------------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valeur(s) de la collection partagée                  |
-| Résultat   | Collection                                                          | <- | The new shared collection|<!-- END REF --> |
+| Paramètres | Type                                                                |    | Description                                                |
+| ---------- | ------------------------------------------------------------------- |:--:| ---------------------------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valeur(s) de la collection partagée                        |
+| Résultat   | Collection                                                          | <- | La nouvelle collection partagée|<!-- END REF --> |
 
 #### Description
 
@@ -182,12 +182,10 @@ Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge 
 * date
 * heure (stockée en nombre de milliseconds - réel)
 * Null
-* shared object(*)
-* shared collection(*)
+* objet partagé
+* collection partagée
 
 > Contrairement aux collections standard (non partagées), les collections partagées ne prennent pas en charge les images, les pointeurs et les objets ou collections non partagés.
-
-(\*)Lorsqu'un objet partagé ou une collection partagée est ajouté(e) comme élément à une collection partagée, il/elle hérite de son *locking identifier*. Pour plus d'informations sur ce point, reportez-vous à [4D Doc Center](https://doc.4d.com).
 
 
 #### Exemple
@@ -531,6 +529,7 @@ Cet exemple illustre l'utilisation de l'option `ck resolve pointers` :
 
 
 
+
 <!-- REF #collection.count().Params -->
 | Paramètres   | Type |    | Description                                                     |
 | ------------ | ---- |:--:| --------------------------------------------------------------- |
@@ -716,8 +715,8 @@ La fonction `.equal()` <!-- REF #collection.equal().Summary -->compare la collec
 
 :::note Notes
 
-- The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. Elle ne vérifie pas l'égalité pour les objets natifs.
-- Elements with **null** values are not equal to Undefined elements.
+- La fonction `.equal()` ne vérifie l'égalité que pour les éléments de type chaîne, booléen, nombre et null dans les collections. Elle ne vérifie pas l'égalité pour les objets natifs.
+- Les éléments avec des valeurs **null** ne sont pas égaux aux éléments Undefined.
 
 :::
 
@@ -932,8 +931,8 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 | Paramètres | Type                                            |    | Description                                                                |
 | ---------- | ----------------------------------------------- |:--:| -------------------------------------------------------------------------- |
 | value      | Number, Text, Object, Collection, Date, Boolean | -> | Valeur de remplissage                                                      |
-| startFrom  | Integer                                         | -> | Numéro de l'élément de départ (inclus)                                     |
-| end        | Integer                                         | -> | Position de fin (non incluse)                                              |
+| startFrom  | Integer                                         | -> | Indice l'élément de départ (inclus)                                        |
+| end        | Integer                                         | -> | Indice de fin (non inclus)                                                 |
 | Résultat   | collection                                      | <- | Collection d'origine avec valeurs de remplissage<!-- END REF --> |
 
 #### Description
@@ -2410,13 +2409,13 @@ Si la collection est vide, cette méthode ne fait rien.
 <!-- REF #collection.slice().Params -->
 | Paramètres | Type       |    | Description                                                                                         |
 | ---------- | ---------- |:--:| --------------------------------------------------------------------------------------------------- |
-| startFrom  | Integer    | -> | Numéro de l'élément de départ (inclus)                                                              |
-| end        | Integer    | -> | Position de fin (non incluse)                                                                       |
+| startFrom  | Integer    | -> | Indice l'élément de départ (inclus)                                                                 |
+| end        | Integer    | -> | Indice de fin (non inclus)                                                                          |
 | Résultat   | Collection | <- | Nouvelle collection contenant des éléments scindés (copie superficielle)|<!-- END REF --> |
 
 #### Description
 
-La fonction `slice()` <!-- REF #collection.slice().Summary -->retourne une partie de la collection dans une nouvelle collection<!-- END REF -->, sélectionné à partir de l'index *startFrom* jusqu'à l'index *end* (end n'est pas inclus). Cette fonction retourne une *copie superficielle* de la collection. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
+La fonction `slice()` <!-- REF #collection.slice().Summary -->retourne une partie de la collection dans une nouvelle collection<!-- END REF -->, sélectionné à partir de l'indice *startFrom* jusqu'à l'indice *end* (end n'est pas inclus). Cette fonction retourne une *copie superficielle* de la collection. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 > Cette fonction ne modifie pas la collection d'origine.
 
 La collection retournée contient l'élément spécifié par *startFrom* et tous les éléments suivants jusqu'à l'élément spécifié par *end* (mais non compris). Si seul le paramètre *startFrom* est spécifié, la collection retournée contient tous les éléments de *startFrom* au dernier élément de la collection d'origine.
@@ -2483,7 +2482,7 @@ Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les é
 
 La fonction `.lastIndexOf()` <!-- REF #collection.lastIndexOf().Summary -->recherche l'expression *toSearch* parmi les éléments de la collection et retourne le numéro d'élément de la dernière occurrence trouvée<!-- END REF -->, ou -1 si aucune occurrence n'a été trouvée.
 
-Par défaut, `.some()` évalue l'ensemble de la collection. Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche dans *startFrom*.
+Par défaut, `.some()` évalue l'ensemble de la collection. Optionnellement, vous pouvez passer l'indice de l'élément auquel démarrer la recherche dans *startFrom*.
 
 * Si *startFrom* >= la longueur de la collection, **False** est retourné, ce qui signifie que la collection n'est pas testée.
 * Si *startFrom* < 0, il est considéré comme le décalage depuis la fin de la collection.

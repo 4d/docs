@@ -13,14 +13,14 @@ title: ポインター
 
 テーブル・フィールド・変数・配列・配列要素・オブジェクトを参照するためにポインターを使用することができます。 以下の表に、各タイプの例を示します:
 
-| タイプ    | 参照時                                                                                         | 使用時                                         | 代入時                                         |
+| 型      | 参照時                                                                                         | 使用時                                         | 代入時                                         |
 | ------ | ------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
-| Table  | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                                         |
+| テーブル   | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                                         |
 | フィールド  | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"           |
 | 変数     | vpVar:=->Variable                                                           | ALERT(vpVar->)           | vpVar->:="John"             |
 | 配列     | vpArr:=->Array                                                              | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
 | 配列要素   | vpElem:=->Array{1}                                                          | ALERT (vpElem->)         | vpElem->:="John"            |
-| Object | vpObj:=->myObject                                                           | ALERT (vpObj->myProp)    | vpObj->myProp:="John"       |
+| オブジェクト | vpObj:=->myObject                                                           | ALERT (vpObj->myProp)    | vpObj->myProp:="John"       |
 
 ## ポインターの基本
 

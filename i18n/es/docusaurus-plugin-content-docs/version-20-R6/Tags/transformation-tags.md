@@ -33,20 +33,6 @@ Es posible mezclar varios tipos de etiquetas. Por ejemplo, la siguiente estructu
 </HTML>
 ```
 
-```mermaid
-sequenceDiagram
-    participant Alice
-    participant Bob
-    Alice->>John: Hello John, how are you?
-    loop Health check
-        John->>John: Fight against hypochondria
-    end
-    Note right of John: Rational thoughts <br/>prevail!
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
-```
-
 ## Principios de uso de las etiquetas
 
 ### Parsing
@@ -55,7 +41,7 @@ El análisis del contenido de una fuente *plantilla* se hace en dos contextos:
 
 - Utilizando el comando `PROCESS 4D TAGS`; este comando acepta una *plantilla* como entrada, así como los parámetros opcionales y devuelve un texto resultante del procesamiento.
 
-- Utilizando el servidor HTTP integrado de 4D: [páginas plantilla](WebServer/templates.md) enviadas mediante los comandos `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (BLOB de tipo texto/html), `WEB SEND TEXT`, o llamadas utilizando URLs. En este último caso, por razones de optimización, las páginas con sufijo ".htm" y ".html" NO se analizan. Para analizar páginas HTML en este caso, debe añadir el sufijo ".shtm" o ".shtml" (por ejemplo, http://www.server.com/dir/page.shtm).
+- Utilizando el servidor HTTP integrado de 4D: [páginas plantilla](WebServer/templates.md) enviadas mediante los comandos `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (BLOB de tipo texto/html), `WEB SEND TEXT`, o llamadas utilizando URLs. En este último caso, por razones de optimización, las páginas con sufijo ".htm" y ".html" NO se analizan. Para analizar páginas HTML en este caso, debe añadir el sufijo ".shtm" o ".shtml" (por ejemplo, <http://www.server.com/dir/page.shtm>).
 
 ### Tratamiento recursivo
 

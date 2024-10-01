@@ -46,7 +46,7 @@ Here is a description of the properties returned for each dataclass in your proj
 
 ```json
 {
-    dataClasses: [
+    dataClass: [
         {
             name: "Company",
             uri: "http://127.0.0.1:8081/rest/$catalog/Company",

@@ -16,7 +16,7 @@ title: On Selection Change
 ### 4D View Pro
 現在の行や列の選択が変更された。 このコンテキストにおいて、`FORM Event` コマンドによって返される [イベントオブジェクト](overview.md#イベントオブジェクト) には以下のプロパティが含まれています:
 
-| プロパティ         | タイプ     | 説明                    |
+| プロパティ         | 型       | 説明                    |
 | ------------- | ------- | --------------------- |
 | code          | longint | 31                    |
 | description   | text    | "On Selection Change" |

@@ -612,11 +612,11 @@
     "description": "The ARIA label to expand the sidebar category"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "Collapse sidebar category '{label}'",
+    "message": "Contraer categoría de la barra lateral '{label}'",
     "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.unlistedContent.title": {
-    "message": "Unlisted page",
+    "message": "Página no listada",
     "description": "The unlisted content banner title"
   },
   "theme.unlistedContent.message": {

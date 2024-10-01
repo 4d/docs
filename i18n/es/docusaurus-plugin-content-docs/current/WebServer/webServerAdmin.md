@@ -14,14 +14,14 @@ Un proyecto 4D puede iniciar y monitorizar un servidor web para la aplicación p
 El servidor web principal de 4D puede iniciarse de diferentes maneras:
 
 - Utilizando un botón o comando de menú.
-  - 4D: **Run\>Start Web Server** menu<br/>![](../assets/en/WebServer/start1.png)
+  - 4D: **Ejecutar\>Iniciar el servidor Web** menú<br/>![](../assets/en/WebServer/start1.png)
   - 4D Server: botón **Iniciar servidor HTTP** de la página Servidor HTTP<br/>![](../assets/en/WebServer/start2.png)
 
 - Se inicia automáticamente cada vez que se abre la aplicación 4D. Para ello, despliegue la página **Web\/Configuración** de la Configuración y active la casilla **Lanzar servidor web al iniciar**:<br/>![](../assets/en/WebServer/config.png)
 
 - Programáticamente, llamando a la función [`webServer.start()`](API/WebServerClass.md#start) o al comando `WEB START SERVER`.
 
-The web server of any component can be launched by calling the [`webServer.start()`](API/WebServerClass.md#start) function on the component's web server object.
+El servidor web de todo componente puede ser lanzado llamando a la función [`webServer.start()`](API/WebServerClass.md#start) en el objeto servidor web del componente.
 
 > No es necesario relanzar la aplicación 4D para iniciar o detener el servidor web.
 
@@ -147,7 +147,7 @@ Los siguientes campos se registran tanto para la solicitud como para la respuest
 
 ### logweb.txt
 
-The [web log recording file](webServerConfig.md#log-recording) can be enabled using the [`web server` object](webServerObject.md), the `WEB SET OPTION` command, or the **Web/Log (type)** page of the settings. Debe seleccionar el formato de historial.
+El [archivo de registro web](webServerConfig.md#log-recording) puede activarse utilizando el [`servidor web`](webServerObject.md), el comando `WEB SET OPTION`, o la página **Web/Log (tipo)** de las Propiedades. Debe seleccionar el formato de historial.
 
 #### CLF/DLF
 

@@ -183,7 +183,7 @@ $vAge:=employee.children[2].age
 
 Tenga en cuenta que si el valor de la propiedad del objeto es un objeto que encapsula un método (una fórmula), debe añadir paréntesis () al nombre de la propiedad para ejecutar el método:
 
-```
+```4d
 $f:=New object
 $f.message:=Formula(ALERT("Hello world!"))
 $f.message() //displays "Hello world!"
@@ -228,7 +228,7 @@ $message:=$o.myClass.hello()
 Opcionalmente, utilice la palabra clave `Class constructor` para declarar las propiedades del objeto.
 
 ```4d  
-//in the Rectangle.4dm file
+//en el archivo Rectangle.4dm
 Class constructor ($height: Integer; $width : Integer)
 This.height:=$height
 This.width:=$width

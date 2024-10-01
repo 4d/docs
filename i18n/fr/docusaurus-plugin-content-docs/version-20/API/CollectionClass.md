@@ -83,10 +83,10 @@ Une collection est initialisée avec :
 
 
 <!-- REF #_command_.New collection.Params -->
-| Paramètres | Type                                                                    |    | Description                                   |
-| ---------- | ----------------------------------------------------------------------- |:--:| --------------------------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valeur(s) de collection                       |
-| Résultat   | Collection                                                              | <- | The new collection|<!-- END REF -->
+| Paramètres | Type                                                                    |    | Description                                       |
+| ---------- | ----------------------------------------------------------------------- |:--:| ------------------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valeur(s) de collection                           |
+| Résultat   | Collection                                                              | <- | La nouvelle collection|<!-- END REF -->
 
 
 |
@@ -171,10 +171,10 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
 
 <!-- REF #_command_.New shared collection.Params -->
-| Paramètres | Type                                                                |    | Description                                          |
-| ---------- | ------------------------------------------------------------------- |:--:| ---------------------------------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valeur(s) de la collection partagée                  |
-| Résultat   | Collection                                                          | <- | The new shared collection|<!-- END REF -->
+| Paramètres | Type                                                                |    | Description                                                |
+| ---------- | ------------------------------------------------------------------- |:--:| ---------------------------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valeur(s) de la collection partagée                        |
+| Résultat   | Collection                                                          | <- | La nouvelle collection partagée|<!-- END REF -->
 
 
 |
@@ -210,8 +210,8 @@ Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge 
 *   date
 *   heure (stockée en nombre de milliseconds - réel)
 *   Null
-*   shared object(*)
-*   shared collection(*)
+*   objet partagé
+*   collection partagée
 
 :::note
 
@@ -219,7 +219,6 @@ Contrairement aux collections standard (non partagées), les collections partag�
 
 :::
 
-(\*)Lorsqu'un objet partagé ou une collection partagée est ajouté(e) comme élément à une collection partagée, il/elle hérite de son *locking identifier*. Pour plus d'informations sur ce point, reportez-vous à [4D Doc Center](https://doc.4d.com).
 
 #### Exemple
 
@@ -856,8 +855,8 @@ La fonction `.equal()` <!-- REF #collection.equal().Summary -->compare la collec
 
 :::note Notes
 
-- The `.equal()` function only checks equality for string, boolean, number, and null type elements in the collections. Elle ne vérifie pas l'égalité pour les objets natifs.
-- Elements with **null** values are not equal to Undefined elements.
+- La fonction `.equal()` ne vérifie l'égalité que pour les éléments de type chaîne, booléen, nombre et null dans les collections. Elle ne vérifie pas l'égalité pour les objets natifs.
+- Les éléments avec des valeurs **null** ne sont pas égaux aux éléments Undefined.
 
 :::
 
@@ -922,7 +921,7 @@ Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez q
 
 #### Description
 
-La fonction `.every()` <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *formula* object or *methodName* method<!-- END REF -->.
+La fonction `.every()` <!-- REF #collection.every().Summary -->retourne **true** si tous les éléments de la collection ont réussi avec succès un test implémenté dans l'objet *formule* fourni ou la méthode *methodName*<!-- END REF -->.
 
 Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les éléments de la collection en utilisant soit :
 
@@ -1087,8 +1086,8 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 | Paramètres | Type                                            |    | Description                                                                |
 | ---------- | ----------------------------------------------- |:--:| -------------------------------------------------------------------------- |
 | value      | Number, Text, Object, Collection, Date, Boolean | -> | Valeur de remplissage                                                      |
-| startFrom  | Integer                                         | -> | Numéro de l'élément de départ (inclus)                                     |
-| end        | Integer                                         | -> | Position de fin (non incluse)                                              |
+| startFrom  | Integer                                         | -> | Indice l'élément de départ (inclus)                                        |
+| end        | Integer                                         | -> | Indice de fin (non inclus)                                                 |
 | Résultat   | collection                                      | <- | Collection d'origine avec valeurs de remplissage<!-- END REF -->
 
 
@@ -2127,6 +2126,7 @@ La fonction `.max()` <!-- REF #collection.max().Summary -->retourne l'élément 
 
 Si la collection contient différents types de valeurs, la fonction `.max()` retournera la plus grande valeur du dernier type d'élément dans l'ordre de la liste de types (cf. description de [`.sort()`](#sort)).
 
+
 Si la collection contient des objets, passez le paramètre *propertyPath* pour indiquer la propriété d'objet dont vous souhaitez obtenir la valeur maximale.
 
 Si la collection est vide, `.max()` retourne *Undefined*.
@@ -2887,11 +2887,11 @@ Avec la méthode ***Flatten*** suivante :
 
 
 <!-- REF #collection.remove().Params -->
-| Paramètres | Type       |    | Description                                                                 |
-| ---------- | ---------- |:--:| --------------------------------------------------------------------------- |
-| index      | Integer    | -> | Élément à partir duquel la suppression peut commencer                       |
-| howMany    | Integer    | -> | Nombre d'éléments à supprimer, ou 1 élément si omis                         |
-| Résultat   | Collection | <- | Collection d'origine sans élément(s) supprimé(s)|<!-- END REF -->
+| Paramètres | Type       |    | Description                                                                             |
+| ---------- | ---------- |:--:| --------------------------------------------------------------------------------------- |
+| index      | Integer    | -> | Élément à partir duquel la suppression peut commencer                                   |
+| howMany    | Integer    | -> | Nombre d'éléments à supprimer, ou 1 élément si omis                                     |
+| Résultat   | Collection | <- | Collection modifiée ne contenant plus les éléments supprimés|<!-- END REF -->
 
 
 |
@@ -3109,8 +3109,8 @@ Si la collection est vide, cette méthode ne fait rien.
 <!-- REF #collection.slice().Params -->
 | Paramètres | Type       |    | Description                                                                                         |
 | ---------- | ---------- |:--:| --------------------------------------------------------------------------------------------------- |
-| startFrom  | Integer    | -> | Numéro de l'élément de départ (inclus)                                                              |
-| end        | Integer    | -> | Position de fin (non incluse)                                                                       |
+| startFrom  | Integer    | -> | Indice l'élément de départ (inclus)                                                                 |
+| end        | Integer    | -> | Indice de fin (non inclus)                                                                          |
 | Résultat   | Collection | <- | Nouvelle collection contenant des éléments scindés (copie superficielle)|<!-- END REF -->
 
 
@@ -3119,7 +3119,7 @@ Si la collection est vide, cette méthode ne fait rien.
 
 #### Description
 
-La fonction `slice()` <!-- REF #collection.slice().Summary -->retourne une partie de la collection dans une nouvelle collection<!-- END REF -->, sélectionné à partir de l'index *startFrom* jusqu'à l'index *end* (end n'est pas inclus). Cette fonction retourne une *copie superficielle* de la collection. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
+La fonction `slice()` <!-- REF #collection.slice().Summary -->retourne une partie de la collection dans une nouvelle collection<!-- END REF -->, sélectionné à partir de l'indice *startFrom* jusqu'à l'indice *end* (end n'est pas inclus). Cette fonction retourne une *copie superficielle* de la collection. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 > Cette fonction ne modifie pas la collection d'origine.
 
 La collection retournée contient l'élément spécifié par *startFrom* et tous les éléments suivants jusqu'à l'élément spécifié par *end* (mais non compris). Si seul le paramètre *startFrom* est spécifié, la collection retournée contient tous les éléments de *startFrom* au dernier élément de la collection d'origine.
@@ -3200,7 +3200,7 @@ Elle peut définir le(s) paramètre(s) suivant(s) :
 
 Dans tous les cas, au moment où la fonction `.some()` rencontre le premier élément de la collection retournant true, elle arrête d'appeler la callback et retourne **true**.
 
-Par défaut, `.some()` évalue l'ensemble de la collection. Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche dans *startFrom*.
+Par défaut, `.some()` évalue l'ensemble de la collection. Optionnellement, vous pouvez passer l'indice de l'élément auquel démarrer la recherche dans *startFrom*.
 
 *   Si *startFrom* >= la longueur de la collection, **False** est retourné, ce qui signifie que la collection n'est pas testée.
 *   Si *startFrom* < 0, il est considéré comme le décalage depuis la fin de la collection.
@@ -3266,7 +3266,7 @@ Vous voulez savoir si au moins une valeur de la collection est >0.
 La fonction `.sort()` <!-- REF #collection.sort().Summary -->trie les éléments de la collection d'origine et retourne également une référence vers cette collection triée<!-- END REF --> .
 > Cette fonction modifie la collection d'origine.
 
-Si `.sort()` est appelé sans paramètre, seules les valeurs scalaires (numérique, texte, date, booléens) sont triées. Les éléments sont triés par défaut par ordre croissant, en fonction de leur type. If the collection contains scalar values of different types, they are first grouped by type and sorted afterwards. Les types sont renvoyés dans l'ordre suivant :
+Si `.sort()` est appelé sans paramètre, seules les valeurs scalaires (numérique, texte, date, booléens) sont triées. Les éléments sont triés par défaut par ordre croissant, en fonction de leur type. Si la collection contient des valeurs scalaires de différents types, elles sont d'abord groupées par type et triées par la suite. Les types sont renvoyés dans l'ordre suivant :
 
 1.  Null
 2.  booléens
@@ -3286,9 +3286,9 @@ La callback reçoit les paramètres suivants :
     - *$1.value2* (tout type) : valeur du second élément à comparer
 - $2...$N (tout type) : paramètres supplémentaires (extraParam)
 
-If you used a method, you must set the following parameter:
+Si vous avez utilisé une méthode, vous devez définir le paramètre suivant :
 
-- *$1.result* (boolean): **True** if *$1.value < $1.value2*, **False** otherwise.
+- *$1.result* (booléen): **True** si *$1.value < $1.value2*, **False** sinon.
 
 
 #### Exemple 1

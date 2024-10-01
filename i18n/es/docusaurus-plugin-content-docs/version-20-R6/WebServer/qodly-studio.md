@@ -11,7 +11,7 @@ Qodly Studio for 4D se encuentra actualmente en la fase **Developer Preview**. N
 
 **Qodly Studio** es un creador de interfaces para aplicaciones web. Ofrece a los desarrolladores un editor gráfico de páginas para diseñar aplicaciones que se ejecutan en navegadores web o smartphones. Soporta de forma nativa los [objetos ORDA](../ORDA/overview.md).
 
-You can use Qodly Studio directly from your **4D environment** to build modern and sophisticated interfaces that you can easily integrate to your existing 4D projects and deploy **on premise**.
+Puede utilizar Qodly Studio directamente desde su **entorno 4D** para crear interfaces modernas y sofisticadas que puede integrar fácilmente a sus proyectos 4D existentes y desplegar **in situ**.
 
 Qodly Studio también puede utilizarse en la [**plataforma Qodly Cloud**](https://qodly.com), dedicada al desarrollo de aplicaciones profesionales web.
 
@@ -196,7 +196,7 @@ Para habilitar el renderizado de las páginas Qodly, se deben configurar las sig
 
 ### Alcance de los formularios Qodly
 
-When rendering Qodly forms in the Qodly Studio, the renderer will connect to the 4D web server through HTTP or HTTPS, depending on the settings, following the same HTTP/HTTPS connection pattern as for the [4D WebAdmin web server](../Admin/webAdmin.md#accept-http-connections-on-localhost). Ver también [este párrafo](#about-license_usage) sobre los esquemas de URL y el uso de licencias.
+Al renderizar formularios Qodly en el Qodly Studio, el renderizador se conectará al servidor web 4D a través de HTTP o HTTPS, dependiendo de la configuración, siguiendo el mismo patrón de conexión HTTP/HTTPS que para el [servidor web WebAdmin 4D] (../Admin/webAdmin.md#accept-http-connections-on-localhost). Ver también [este párrafo](#about-license_usage) sobre los esquemas de URL y el uso de licencias.
 
 Tenga en cuenta que Qodly Studio se ejecuta a través del servidor web 4D WebAdmin. Cuando utiliza Qodly Studio como desarrollador, incluso cuando previsualiza una página Qodly en el estudio, está utilizando el servidor web 4D WebAdmin. Esto le permite ver, por ejemplo, clases de datos, funciones y atributos que no están expuestos como recursos REST (aparecen en gris).
 
@@ -226,17 +226,17 @@ Con Qodly Studio for 4D, el modo ["forzar login"](../REST/authUsers.md#force-log
 
 ### Configuración
 
-Make sure the ["force login" mode](../REST/authUsers.md#force-login-mode) is enabled for your 4D application in the [Roles and Privileges page](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/), using the **Force login** option:
+Asegúrate de que el [modo "inicio de sesión forzado"](../REST/authUsers.md#force-login-mode) esté habilitado para su aplicación 4D en la [página Roles y privilegios](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/), usando la opción **Force login**:
 
 ![alt-text](../assets/en/WebServer/forcelogin.png)
 
 También puede definir esta opción directamente en el archivo [**roles.json**](../ORDA/privileges.md#rolesjson-file).
 
-You just need then to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly page. Una licencia se consumirá solo cuando el usuario esté realmente conectado.
+Entonces basta con implementar la función [`authentify()`](../REST/authUsers.md#function-authentify) en la clase datastore y llamarla desde la página Qodly. Una licencia se consumirá solo cuando el usuario esté realmente conectado.
 
 :::note Compatibilidad
 
-When the legacy login mode ([deprecated as of 4D 20 R6](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications)) is enabled, any REST request, including the rendering of an authentication Qodly page, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. Para más información, consulte [esta entrada de blog](https://blog.4d.com/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) que cuenta la historia completa.
+Cuando el modo de inicio de sesión ([obsoleto a partir de 4D 20 R6](https://blog.4d. om/force-login-now-is-the-default-mode-for-all-rest-authentications)) está habilitado, cualquier petición REST, incluyendo la representación de una página de autenticación Qodly, crea una sesión web en el servidor y obtiene una licencia de cliente 4D, cualquiera que sea el resultado real de la autenticación. Para más información, consulte [esta entrada de blog](https://blog.4d.com/improved-4d-client-licenses-usage-with-qodly-studio-for-4d) que cuenta la historia completa.
 
 :::
 
@@ -258,14 +258,14 @@ If ($sp#Null)
 	If (Verify password hash($credentials.password; $sp.password))
 
 		Session.clearPrivileges()
-		Session.setPrivileges("") //guest session
+		Session.setPrivileges("") //sesión invitado
 
-		return "Authentication successful"
+		return "Autenticación exitosa"
 	Else
-		return "Wrong password"
+		return "Contraseña incorrecta"
 	End if
 Else
-	return "Wrong user"
+	return "Usuario incorrecto"
 End if
 ```
 
@@ -287,7 +287,7 @@ Al desencadenar la acción de cierre de sesión de una sesión de usuario web, s
 
 ## Acerca del uso de licencias para renderización
 
-In default mode when any page is rendered, or in "force login" mode when a page handling data or calling a function is rendered, you must have an available license, as rendering Qodly forms targets the project database's main web server.
+En modo predeterminado, cuando se renderiza cualquier página, o en el modo "force login" cuando se renderiza una página que maneja datos o llama a una función, debe tener una licencia disponible, ya que la renderización de los formularios Qodly apunta al servidor web principal de la base de datos del proyecto.
 
 ### Esquemas URL
 
@@ -296,6 +296,12 @@ La configuración del esquema URL de Qodly Studio (HTTP y HTTPS) determina cuán
 Como se explica en la sección [configuración](#configuration), el servidor web WebAdmin ofrece un acceso web seguro a Qodly Studio. Por otro lado, el [renderizador](#rendering-webforms) se comunica con el servidor web 4D de la base de datos mediante peticiones REST. Como tal, se comporta como un Cliente 4D convencional.
 
 Si ejecuta el renderizador desde Qodly Studio y no se accede a estos dos servidores web a través del mismo esquema de URL (HTTP o HTTPS), es posible que el conteo de licencias sea incorrecto.
+
+:::info
+
+El uso de diferentes esquemas también puede llevar a problemas de [sesión](sessions.md), como perder [privilegios](../ORDA/privileges.md) después de actualizar la página.
+
+:::
 
 #### Ejemplo
 

@@ -17,13 +17,13 @@ Dans le langage de 4D et pour les attributs des champs objets, les valeurs null 
 
 ## Undefined
 
-Undefined (Indéfinie) n'est pas véritablement un type de données. Une variable dite "indéfinie" est une variable n'ayant pas encore été définie. Evaluating an object property can also produce an undefined value. Reading a property of an undefined value returns **undefined**.
+Undefined (Indéfinie) n'est pas véritablement un type de données. Il indique une variable n'ayant pas encore été définie. L'évaluation d'une propriété d'objet peut également produire une valeur undefined. Reading a property of an undefined value returns **undefined**.
 
 A variant variable has **undefined** as [default value](data-types.md#default-values).
 
 Un champ ne peut pas être indéfini (la commande `Indefinie` retourne toujours Faux pour un champ).
 
-Typically when trying to read or assign undefined expressions, 4D will generate errors, except in the following cases:
+En règle générale, lorsque le code tente de lire ou d'assigner des expressions indéfinies, 4D générera des erreurs, excepté dans les cas suivants :
 
 - Assigning an undefined value to variables (except arrays) has the same effect as calling [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) with them:
 
@@ -64,7 +64,7 @@ Typically when trying to read or assign undefined expressions, 4D will generate 
       // $myText contains ""
 ```
 
-- Une expression de condition est automatiquement convertie à Faux lorsque son évaluation donne Indéfinie avec les mots-clés Si et Au cas ou :
+- Une expression de condition est automatiquement convertie à Faux lorsqu'elle est évaluée undefined avec les mots-clés If et Case of :
 
 ```4d
      var $o : Object
@@ -100,7 +100,7 @@ Lorsque des expressions d'un type donné sont attendues dans votre code 4D, vous
 |           | Null `#` Undefined         | Boolean  | a.nullProp `#` b.undefinedProp | False  |
 |           | Null `#` *scalar value*    | Boolean  | a.nullProp `#` 42              | True   |
 
-Les *valeurs scalaires* sont des valeurs de type chaîne, date, heure, booléen, nombre ou Blob. Lorsqu'elles sont déclarées, leur [valeur par défaut](data-types.md#valeurs-par-defaut) n'est ni undefined ni null. Les autres types (Pointeur, Image, Objet, Collection) ont une valeur par défaut undefined ou null. Ex :
+Les *valeurs scalaires* sont des valeurs de type chaîne, date, heure, booléen, nombre ou Blob. Lorsqu'elles sont déclarées, leur [valeur par défaut](data-types.md#valeurs-par-defaut) n'est ni undefined ni null. Les autres types (pointeur, image, objet, collection) ont une valeur par défaut undefined ou null. Ex :
 
 ```4d
 var $object : Object
@@ -119,24 +119,24 @@ Les comparaisons avec les opérateurs Supérieur à (`>`), Inférieur à (`<`), 
 ## Opérateurs sur les Undefined
 
 
-| Opération           | Syntaxe                                               | Retourne | Expression                          | Valeur |
-| ------------------- | ----------------------------------------------------- | -------- | ----------------------------------- | ------ |
-| Egalité             | Undefined `=` Undefined                               | Boolean  | a.undefinedProp `=` b.undefinedProp | True   |
-|                     | Undefined `=` Null                                    | Boolean  | a.undefinedProp `=` c.nullProp      | True   |
-|                     | Undefined `=` *autres valeurs*                        | Boolean  | a.undefinedProp `=` 42              | False  |
-| Inégalité           | Undefined `#` Undefined                               | Boolean  | a.undefinedProp `#` b.undefinedProp | False  |
-|                     | Undefined `#` Null                                    | Boolean  | a.undefinedProp `#` b.nullProp      | False  |
-|                     | Undefined `#` *autres valeurs*                        | Boolean  | a.undefinedProp `#` 42              | True   |
-| Supérieur à         | Undefined `>` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `>` "abc"        | False  |
-| Inférieur à         | Undefined `<` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `<` "abc"        | False  |
-| Supérieur ou égal à | Undefined `>=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `>=` "abc"       | False  |
-| Inférieur ou égal à | Undefined `<=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `<=` "abc"       | False  |
+| Opération           | Syntaxe                                      | Retourne | Expression                          | Valeur |
+| ------------------- | -------------------------------------------- | -------- | ----------------------------------- | ------ |
+| Egalité             | Undefined `=` Undefined                      | Boolean  | a.undefinedProp `=` b.undefinedProp | True   |
+|                     | Undefined `=` Null                           | Boolean  | a.undefinedProp `=` c.nullProp      | True   |
+|                     | Undefined `=` *autres valeurs*               | Boolean  | a.undefinedProp `=` 42              | False  |
+| Inégalité           | Undefined `#` Undefined                      | Boolean  | a.undefinedProp `#` b.undefinedProp | False  |
+|                     | Undefined `#` Null                           | Boolean  | a.undefinedProp `#` b.nullProp      | False  |
+|                     | Undefined `#` *autres valeurs*               | Boolean  | a.undefinedProp `#` 42              | True   |
+| Supérieur à         | Undefined `>` string, Date, Time, number  | Boolean  | a.undefinedProp `>` "abc"        | False  |
+| Inférieur à         | Undefined `<` string, Date, Time, number  | Boolean  | a.undefinedProp `<` "abc"        | False  |
+| Supérieur ou égal à | Undefined `>=` string, Date, Time, number | Boolean  | a.undefinedProp `>=` "abc"       | False  |
+| Inférieur ou égal à | Undefined `<=` string, Date, Time, number | Boolean  | a.undefinedProp `<=` "abc"       | False  |
 
 *autres valeurs* sont des expressions de tout type dont la valeur n'est ni Undefined ni Null.
 
 :::info
 
-Les comparaisons de valeurs Undefined avec des pointeurs, des images, des Blobs, des objets, des collections, d'autres valeurs Undefined ou Null à l'aide des opérateurs Supérieur à (`>`), Inférieur à (`<`), Supérieur ou égal à (`>=`) et Inférieur ou égal à (`<=`) ne sont pas prises en charge et renvoient une erreur.
+Comparisons of Undefined values with Pointer, Picture, Boolean, Blob, Object, Collection, Undefined or Null values using Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported and return an error.
 
 :::
 
@@ -162,7 +162,7 @@ $result:=Undefined($vEmp.parent) //True
 $result:=($vEmp.parent=Null) //True
 ```
 
-Exemples de résultats de comparaisons avec des valeurs indéfinies et nulles :
+Exemples de résultats de comparaisons avec des valeurs undefined et null :
 
 ```4d
 var $result : Boolean

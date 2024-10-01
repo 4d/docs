@@ -82,8 +82,8 @@ Cuando se selecciona esta opción, el servidor web no ofrece ningún soporte esp
 
 En este modo, puede configurar los parámetros del servidor web adicionales:
 
-- [Maximum Concurrent Web Processes](#maximum-concurrent-web-processes)
-- [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts)
+- [Máximo de procesos web simultáneos](#maximum-concurrent-web-processes)
+- [Reutilización de contextos temporales (4D en modo remoto)](#reuse-temporary-contexts)
 - [Use preemptive processes](#use-preemptive-web-processes)
 
 #### Sesiones antiguas (sesiones procesos únicos)
@@ -166,9 +166,9 @@ El menú de formato de registro ofrece las siguientes opciones:
 
 - **Sin archivo de registro**: cuando se selecciona esta opción, 4D no generará un archivo de historial de peticiones.
 
-- **CLF (Common Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato CLF. With the CLF format, each line of the file represents a request, such as:\
-  host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length\
-  Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+- **CLF (Common Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato CLF. Con el formato CLF, cada línea del archivo representa una solicitud, como:\
+  host rfc931 user [DD/MMM/AAAA:HH:MM:SS] "request" state length\
+  Cada campo está separado por un espacio y cada línea termina con la secuencia CR/LF (character 13, character 10).
 
   - host: dirección IP del cliente (por ejemplo: "192.100.100.10)
   - rfc931: información no generada por 4D, siempre es - (un signo menos)
@@ -182,7 +182,7 @@ El menú de formato de registro ofrece las siguientes opciones:
 - longitud: tamaño de los datos devueltos (excepto el encabezado HTTP) o 0.
 
 > **Nota:** por razones de rendimiento, las operaciones se guardan en una memoria búfer por paquetes de 1Kb antes de ser escritas en el disco. Las operaciones también se escriben en disco si no se ha enviado ninguna petición cada 5 segundos.
-> The possible values of state are as follows:
+> Los posibles valores de estado son los siguientes
 > 200: OK
 > 204: No contents
 > 302: Redirection
@@ -191,7 +191,7 @@ El menú de formato de registro ofrece las siguientes opciones:
 > 401: Authentication required
 > 404: Not found
 > 500: Internal error
-> The CLF format cannot be customized.
+> El formato CLF no puede personalizarse.
 
 - **DLF (Combined Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato DLF. El formato DLF es similar al formato CLF y utiliza exactamente la misma estructura. Simplemente añade dos campos HTTP adicionales al final de cada petición: Referer y User-agent.
 
@@ -286,7 +286,7 @@ Inicia y detiene el servidor REST. Ver [Configuración del servidor REST](../RES
 
 ### Acceso
 
-:::information Obsoleto
+:::info Obsoleto
 
 **Esta sección está obsoleta** a partir de 4D 20 R6. Si la configuración actual del proyecto es obsoleta y debe actualizarse, se mostrará esta sección, incluido el botón **Activar la autenticación REST mediante la función ds.authentify()** (ver más abajo). Si su proyecto ya es compatible con el modo [Force login](../REST/configuration.md#configuring-rest-access), la sección no existe y puede ignorar este párrafo.
 
@@ -312,7 +312,7 @@ El botón activa la siguiente secuencia de actualización:
 
 Recuerde reiniciar su proyecto después de realizar esta actualización.
 
-El siguiente paso es modificar su código en consecuencia. [**Vea esta entrada del blog para saber cómo proceder**](https://blog.4d.com/force-login-now-is-the-default-mode-for-all-rest-authentications).
+El siguiente paso es modificar su código en consecuencia. [**Vea esta entrada del blog para saber cómo proceder**](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/).
 
 ### Qodly Studio
 

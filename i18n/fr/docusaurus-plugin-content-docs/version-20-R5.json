@@ -24,7 +24,7 @@
     "description": "The label for category Project Management in sidebar docs"
   },
   "sidebar.docs.category.Settings": {
-    "message": "Settings",
+    "message": "Propriétés",
     "description": "The label for category Settings in sidebar docs"
   },
   "sidebar.docs.category.Development Environment": {

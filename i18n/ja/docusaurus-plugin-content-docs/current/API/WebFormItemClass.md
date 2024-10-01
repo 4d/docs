@@ -30,9 +30,9 @@ title: WebFormItem
 
 <!-- REF #WebFormItemClass.hide().Params -->
 
-| 引数 | タイプ |     | 説明         |
-| -- | --- | :-: | ---------- |
-|    |     |     | 引数を必要としません |
+| 引数 | 型 |     | 説明         |
+| -- | - | :-: | ---------- |
+|    |   |     | 引数を必要としません |
 
 <!-- END REF -->
 
@@ -48,9 +48,9 @@ title: WebFormItem
 
 <!-- REF #WebFormItemClass.show().Params -->
 
-| 引数 | タイプ |     | 説明         |
-| -- | --- | :-: | ---------- |
-|    |     |     | 引数を必要としません |
+| 引数 | 型 |     | 説明         |
+| -- | - | :-: | ---------- |
+|    |   |     | 引数を必要としません |
 
 <!-- END REF -->
 
@@ -66,7 +66,7 @@ title: WebFormItem
 
 <!-- REF #WebFormItemClass.addCSSClass().Params -->
 
-| 引数        | タイプ    |     | 説明                      |
+| 引数        | 型      |     | 説明                      |
 | --------- | ------ | :-: | ----------------------- |
 | className | string |  -> | コンポーネントに追加する CSSクラスの名前。 |
 
@@ -84,7 +84,7 @@ title: WebFormItem
 
 <!-- REF #WebFormItemClass.removeCSSClass().Params -->
 
-| 引数        | タイプ    |     | 説明                       |
+| 引数        | 型      |     | 説明                       |
 | --------- | ------ | :-: | ------------------------ |
 | className | string |  -> | コンポーネントから削除する CSSクラスの名前。 |
 

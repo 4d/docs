@@ -11,7 +11,7 @@ Puede desarrollar componentes 4D para sus propias necesidades y mantenerlos en p
 
 - **Base proyecto**: proyecto 4D utilizado para desarrollar el componente. El proyecto matriz es una base estándar sin atributos específicos. Un proyecto matricial forma un único componente.
 - **Proyecto local**: proyecto aplicación en la que se instala y utiliza un componente.
-- **Component**: Matrix project that can be compiled or [built](Desktop/building.md#build-component), copied into the [`Components`](Project/architecture.md) folder of the host application and whose contents are used in the host application.
+- **Componente**: proyecto matricial, compilado o [generado](Desktop/building.md#compilar-componente), copiado en la carpeta [`Components`](Project/architecture.md) de la aplicación local y cuyo contenido se utiliza en la aplicación local.
 
 ## Básicos
 
@@ -98,13 +98,13 @@ Por defecto, las clases y funciones de los componentes no pueden ser llamadas de
 
 ### Declaración del namespace
 
-To allow classes and functions of your component to be exposed in the host projects, enter a value in the [**Component namespace in the class store** option in the General page](../settings/general.md#component-namespace-in-the-class-store) of the matrix project Settings. Por defecto, el área está vacía: las clases de componentes no están disponibles fuera del contexto de los componentes.
+Para permitir que las clases y funciones de su componente se expongan en los proyectos locales, introduzca un valor en la opción [**namespace del componente en la class store** en la página General](../settings/general.md#component-namespace-in-the-class-store) de las Propiedades del proyecto matriz. Por defecto, el área está vacía: las clases de componentes no están disponibles fuera del contexto de los componentes.
 
 ![](../assets/en/settings/namespace.png)
 
 > Un _namespace_ garantiza que no surja ningún conflicto cuando un proyecto local utilice diferentes componentes que tienen clases o funciones con nombres idénticos. Un namespace del componente debe ser compatible con [reglas de denominación de las propiedades](../Concepts/identifiers.md#object-properties).
 
-When you enter a value, you declare that component classes and functions will be available in the [user class store (**cs**)](../Concepts/classes.md#cs) of the host project's code, through the `cs.<value>` namespace. Por ejemplo, si introduce "eGeometry" como namespace del componente, asumiendo que ha creado una clase `Rectangle` que contiene una función `getArea()`, una vez que su proyecto se instala como componente, el desarrollador del proyecto local puede escribir
+Al introducir un valor, se declara que las clases y funciones del componente estarán disponibles en el [class store usuario (**cs**)](../Concepts/classes.md#cs) del código del proyecto local, a través del espacio de nombres `cs.<value>`. Por ejemplo, si introduce "eGeometry" como namespace del componente, asumiendo que ha creado una clase `Rectangle` que contiene una función `getArea()`, una vez que su proyecto se instala como componente, el desarrollador del proyecto local puede escribir
 
 ```4d
 //en el proyecto local
@@ -139,9 +139,9 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 ## Completar el código de los componentes compilados
 
-To make your component easier to use for developers, you can check the [**Generate syntax file for code completion when compiled** option in the General page](../settings/general.md#component-namespace-in-the-class-store) of the matrix project Settings.
+Para facilitar el uso de su componente a los desarrolladores, puede marcar la opción [**Generar archivo de sintaxis para completado de código al compilar** en la página General](../settings/general.md#component-namespace-in-the-class-store) de las Propiedades del proyecto utilizado como matriz.
 
-A syntax file (JSON format) is then automatically created during the compilation phase, filled with the syntax of your component's classes, functions, and [exposed methods](#sharing-of-project-methods), and placed in the `\Resources\en.lproj` folder of the component project. 4D utiliza el contenido de ese archivo de sintaxis para generar ayuda contextual en el editor de código, como la finalización del código y la sintaxis de las funciones:
+Durante la fase de compilación se crea automáticamente un archivo de sintaxis (en formato JSON) con la sintaxis de las clases, funciones y [métodos expuestos] del componente (#sharing-of-project-methods), y se coloca en la carpeta `\Resources\en.lproj` del proyecto del componente. 4D utiliza el contenido de ese archivo de sintaxis para generar ayuda contextual en el editor de código, como la finalización del código y la sintaxis de las funciones:
 
 ![](../assets/en/settings/syntax-code-completion-2.png)
 ![](../assets/en/settings/syntax-code-completion-1.png)
@@ -195,7 +195,7 @@ Cuando se utilizan punteros para que los componentes y el proyecto local se comu
 
 - Si el componente C define la variable `myIvar`, el componente C no puede acceder a esta variable utilizando el puntero `->myIvar`. Esta sintaxis provoca un error de ejecución.
 
-- The comparison of pointers using the `RESOLVE POINTER` command is not recommended with components since the principle of partitioning variables allows the coexistence of variables having the same name but with radically different contents in a component and the host project (or another component). El tipo de la variable puede incluso ser diferente en ambos contextos. Si los punteros `myptr1` y `myptr2` apuntan cada uno a una variable, la siguiente comparación producirá un resultado incorrecto:
+- La comparación de punteros utilizando el comando `RESOLVE POINTER` no se recomienda con los componentes, ya que el principio de partición de variables permite la coexistencia de variables con el mismo nombre pero con contenidos radicalmente diferentes en un componente y en el proyecto local (u otro componente). El tipo de la variable puede incluso ser diferente en ambos contextos. Si los punteros `myptr1` y `myptr2` apuntan cada uno a una variable, la siguiente comparación producirá un resultado incorrecto:
 
 ```4d
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
@@ -255,10 +255,10 @@ El siguiente código se incluye en un componente y realiza tres acciones básica
 Creación de la base de datos externa:
 
 ```4d
-<>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) stores the data in an authorized directory
+<>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) almacena los datos en un directorio autorizado
  Begin SQL
-        CREATE DATABASE IF NOT EXISTS DATAFILE :[<>MyDatabase];
-        USE DATABASE DATAFILE :[<>MyDatabase];
+        CREATE DATABASE IF NOT EXISTS DATAFILE :[MyDatabase];
+        USE DATABASE DATAFILE :[MyDatabase];
         CREATE TABLE IF NOT EXISTS KEEPIT
         (
         ID INT32 PRIMARY KEY,
@@ -301,7 +301,7 @@ Escritura en la base de datos externa:
 Lectura en una base de datos externa:
 
 ```4d
- $Ptr_1:=$2 // accesses data of the host project through pointers
+ $Ptr_1:=$2 // accede a los datos del proyecto local a través de punteros
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5
@@ -345,7 +345,7 @@ Un componente puede ejecutar automáticamente código 4D al abrir o cerrar la ba
 
 La ejecución del código de inicialización o cierre se realiza mediante el método base `On Host Database Event`.
 
-> Por razones de seguridad, debe autorizar explícitamente la ejecución del método base `On Host Database Event` en la base local para poder llamarlo. To do this, you must check the [**Execute "On Host Database Event" method of the components** option](../settings/security.md#options) in the Security page of the Settings.
+> Por razones de seguridad, debe autorizar explícitamente la ejecución del método base `On Host Database Event` en la base local para poder llamarlo. Para ello, debe marcar la opción [**Ejecutar el método "On Host Database Event" de los componentes**](../settings/security.md#options) en la página Seguridad de la Configuración.
 
 ## Protección de los componentes: compilación
 

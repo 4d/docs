@@ -199,7 +199,7 @@ Lorsque cette valeur est sélectionnée, la propriété est gérée par l'option
 
 ---
 
-## Le placeholder
+## Placeholder
 
 4D can display placeholder text in the fields of your forms.
 

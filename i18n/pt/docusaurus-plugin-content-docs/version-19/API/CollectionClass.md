@@ -182,12 +182,10 @@ Pode passar qualquer número de valores dos tipos compatíveis abaixo:
 * date
 * hora (armazenada como número de milissegundos - real)
 * null
-* objeto compartido(*)
-* shared collection(*) > Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros, objetos ou coleções que não são compartilhadas.
+* objeto compartido
+* coleção compartilhada
 
 > Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros e objetos ou coleção que não forem partilhadas.
-
-(\*)Quando um objeto partilhado ou coleção forem adicionadas a uma coleção partilhada, partilham o mesmo *locking identifier*. Para saber mais sobre esse ponto, veja [4D Doc Center](https://doc.4d.com).
 
 
 #### Exemplo
@@ -516,6 +514,7 @@ Esse exemplo ilustra o uso da opção `ck resolve pointers`:
 </details>
 
 <!-- REF #collection.count().Syntax -->**.count**( { *propertyPath* : Text } ) : Real<!-- END REF -->
+
 
 
 <!-- REF #collection.count().Params -->

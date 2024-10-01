@@ -292,7 +292,7 @@ O objeto resultante é uma seleção de entidade da dataclasse Funcionario sem d
 | --------------- | ------------------- |:--:| ------------------------------------------------------------------------------- |
 | entity          | 4D. Entity          | -> | Entidade que deve ser adicinonada à entity selection                            |
 | entitySelection | 4D. EntitySelection | -> | Seleção entidade paara ser adicionado a sellleção entidade originaal            |
-| Resultados      | 4D. EntitySelection | -> | Seleção de entidades incluindo a *entity* adicionada|<!-- END REF -->
+| Resultados      | 4D. EntitySelection | <- | Seleção de entidades incluindo a *entity* adicionada|<!-- END REF -->
 
 
 |
@@ -1141,7 +1141,7 @@ O seguinte código genérico duplica todas as entidades da entity selection:
 <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
 | Parâmetro | Tipo |    | Descrição                                                                                                   |
 | --------- | ---- | -- | ----------------------------------------------------------------------------------------------------------- |
-| result    | Text | <- | Atributos de contexto conectados à seleção de entidade, separados por uma vírgula<!-- END REF -->
+| resultado | Text | <- | Atributos de contexto conectados à seleção de entidade, separados por uma vírgula<!-- END REF -->
 
 |
 

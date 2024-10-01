@@ -3,6 +3,7 @@ const { default: remarkGfm } = require('remark-gfm');
 const lightTheme = themes.github;
 const darkTheme = themes.palenight;
 
+
 const isProduction = process.env.GITHUB_REPOSITORY_OWNER === '4d';
 
 module.exports = {
@@ -68,23 +69,6 @@ module.exports = {
       },
     ],
   ],
-  webpack: {
-    jsLoader: (isServer) => ({
-      loader: require.resolve('swc-loader'),
-      options: {
-        jsc: {
-          "parser": {
-            "syntax": "typescript",
-            "tsx": true
-          },
-          target: 'es2017',
-        },
-        module: {
-          type: isServer ? 'commonjs' : 'es6',
-        }
-      },
-    }),
-  },
   i18n: {
     defaultLocale: "en",
     locales: ["en", "fr", "es", "ja", "pt"],
@@ -138,6 +122,7 @@ module.exports = {
     prism: {
       theme: lightTheme,
       darkTheme: darkTheme,
+      additionalLanguages: ['json'],
     },
     navbar: {
       title: "4D Documentation",
@@ -254,4 +239,5 @@ module.exports = {
       maintainCase: false,
     },
   },
+ themes: ['@docusaurus/theme-mermaid'],
 }

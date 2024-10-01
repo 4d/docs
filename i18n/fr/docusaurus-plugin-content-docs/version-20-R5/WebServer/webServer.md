@@ -20,18 +20,18 @@ Le serveur web 4D crée automatiquement un dossier racine et une page d'accueil 
 
 La sécurité des données est présente à tous les stades d'implémentation du serveur web 4D. Les niveaux de sécurité sont évolutifs, et les options les plus sécurisées sont généralement sélectionées par défaut. La sécurité du serveur web 4D est basée sur les éléments suivants :
 
-- Extended support of the [**TLS Protocol (HTTPS)**](../Admin/tls.md),
+- Extension du support du [**Protocole TLS (HTTPS)**](../Admin/tls.md),
 
-- **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
+- **Authentification** : [fonctionnalités d'authentification](authentification.md) flexibles et personnalisables basées sur des paramètres inclus et des méthodes base ([`On Web Authentication`](authentication.md#on-web-authentication) pour le serveur web et [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) pour le serveur REST),
 
 - **Contrôle du contenu exposé** : Seul le contenu que vous exposez explicitement est disponible via des requêtes web directes ou des requêtes REST. Vous devez déclarer :
-  - [Les méthodes projet](templates.md#allowing-project-methods) exposées via requêtes HTTP
-  - [ORDA functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposed through REST requests
-  - [Les tables et champs](REST/configuration.md#exposing-tables-and-fields) que vous ne voulez pas rendre disponibles via requêtes REST
+  - [Les méthodes projet](templates.md#allowing-project-methods) exposées via des requêtes HTTP
+  - Les [fonctions ORDA](../ORDA/ordaClasses.md#fonctions-exposées-vs-non-exposées) exposées via des requêtes REST
+  - [Les tables et champs](REST/configuration.md#exposing-tables-and-fields) que vous ne voulez pas rendre disponibles via des requêtes REST.
 
 - **Sandboxing** via la définition d'un [dossier HTML racine](webServerConfig.md#root-folder) par défaut
 
-- **Control of server resource usage** (e.g. [maximum concurrent web processes](webServerConfig.md#maximum-concurrent-web-processes) option).
+- **Contrôle de l'utilisation des ressources du serveur** (par exemple, option [nombre maximal de process web simultanés](webServerConfig.md#maximum-concurrent-web-processes)).
 
 > Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.
 

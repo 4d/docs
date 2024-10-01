@@ -465,7 +465,7 @@ En el parámetro opcional *settings* se puede pasar un objeto que contenga opcio
 
 :::info
 
-When you call the `.get()` function **without** *settings* parameter, a request for attribute values is directly sent to the server (the [ORDA cache](../ORDA/entities.md#orda-cache) is not used). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. It may be advisable in this case to call [`reload()`](EntityClass.md#reload) to make sure the most recent data is retrieved from the server.
+Cuando se llama a la función `.get()` **sin** parámetro de *configuración*, se envía directamente al servidor una petición de valores de atributos (no se utiliza la [caché ORDA](../ORDA/entities.md#orda-cache)). Por otro lado, cuando se llama a la función `.get()` **con** un `contexto` pasado en el parámetro *settings*, los valores de los atributos se recuperan de la caché ORDA correspondiente al contexto. En este caso, puede ser aconsejable llamar a [`reload()`](EntityClass.md#reload) para asegurarse de recuperar los datos más recientes del servidor.
 
 :::
 
@@ -522,7 +522,7 @@ Este ejemplo ilustra el uso de la propiedad *context*:
 <!-- REF #DataClassClass.getCount().Params -->
 | Parámetros | Tipo    |    | Descripción                                                    |
 | ---------- | ------- | -- | -------------------------------------------------------------- |
-| result     | Integer | <- | Número de entidades en la dataclass|<!-- END REF -->
+| resultado  | Integer | <- | Número de entidades en la dataclass|<!-- END REF -->
 
 |
 
@@ -689,7 +689,7 @@ La función `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->devuelve 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
 | Parámetros | Tipo   |    | Descripción                                                                                          |
 | ---------- | ------ | -- | ---------------------------------------------------------------------------------------------------- |
-| result     | Object | <- | Objeto que describe el contenido de la caché ORDA para la clase de datos.|<!-- END REF -->
+| resultado  | Object | <- | Objeto que describe el contenido de la caché ORDA para la clase de datos.|<!-- END REF -->
 
 
 |

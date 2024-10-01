@@ -9,11 +9,11 @@ title: VP Get stylesheet
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                   |                  |
-| ---------- | ------- | -- | ----------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                  |                  |
-| styleName  | Text    | -> | Nome do estilo                                              |                  |
-| sheet      | Integer | -> | Índice da folha (folha atual se omitida) |                  |
+| Parâmetro  | Tipo    |                             | Descrição                                                   |                  |
+| ---------- | ------- | --------------------------- | ----------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nome de objeto formulário área 4D View Pro                  |                  |
+| styleName  | Text    | ->                          | Nome do estilo                                              |                  |
+| sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
 | Resultados | Object  | <- | Objeto da folha de estilo                                   | <!-- END REF --> |
 
 #### Descrição
@@ -37,7 +37,7 @@ O seguinte código:
 $style:=VP Get stylesheet("ViewProArea";"GreenDashDotStyle")
 ```
 
-... will return the *GreenDashDotStyle* style object from the current sheet:
+... retorna o objeto estilo *GreenDashDotStyle* da folha atual:
 
 ```4d
 {

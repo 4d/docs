@@ -210,8 +210,8 @@ Pode passar qualquer número de valores dos tipos compatíveis abaixo:
 *   date
 *   hora (armazenada como número de milissegundos - real)
 *   null
-*   objeto compartido(*)
-*   shared collection(*) > Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros, objetos ou coleções que não são compartilhadas.
+*   objeto compartido
+*   coleção compartilhada
 
 :::note
 
@@ -219,7 +219,6 @@ Diferente de coleções padrão (não partilhadas), coleções partilhadas não 
 
 :::
 
-(\*)Quando um objeto partilhado ou coleção forem adicionadas a uma coleção partilhada, partilham o mesmo *locking identifier*. Para saber mais sobre esse ponto, veja [4D Doc Center](https://doc.4d.com).
 
 #### Exemplo
 
@@ -2095,6 +2094,7 @@ A função `.max()` <!-- REF #collection.max().Summary -->devolve o elemento com
 
 shared collection(*) > Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros, objetos ou coleções que não são compartilhadas.
 
+
 Se a coleção conter objetos, pode passar o parâmetro *propertyPath* para indicar a propriedade objeto cujos valores máximos você quer obter.
 
 Se a coleção estiver vazia, `.max()` devolve *Undefined*.
@@ -2844,11 +2844,11 @@ Este exemplo permite reduzir vários elementos da coleção a um só:
 
 
 <!-- REF #collection.remove().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                              |
-| ---------- | ---------- |:--:| ---------------------------------------------------------------------- |
-| index      | Integer    | -> | Elemento no qual que se inicia a eliminação                            |
-| howMany    | Integer    | -> | Número de elementos a eliminar, ou 1 elemento se omitir                |
-| Resultados | Collection | <- | Colección original sem elementos eliminados|<!-- END REF -->
+| Parâmetro  | Tipo       |    | Descrição                                                                 |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------- |
+| index      | Integer    | -> | Elemento no qual que se inicia a eliminação                               |
+| howMany    | Integer    | -> | Número de elementos a eliminar, ou 1 elemento se omitir                   |
+| Resultados | Collection | <- | Modified collection without removed element(s)|<!-- END REF -->
 
 
 |

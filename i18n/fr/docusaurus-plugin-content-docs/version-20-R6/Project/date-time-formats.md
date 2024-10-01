@@ -15,7 +15,7 @@ Throughout your 4D projects, you might need to format date and/or time values ac
 
 The following table lists all supported patterns for date and time formats.
 
-| Symbol | Meaning                                                                  | Pattern       | Example Output                                                        |
+| Symbol | Meaning                                                                  | Motif         | Example Output                                                        |
 | ------ | ------------------------------------------------------------------------ | ------------- | --------------------------------------------------------------------- |
 | G      | era designator                                                           | G, GG, or GGG | AD                                                                    |
 |        |                                                                          | GGGG          | Anno Domini                                                           |
@@ -151,7 +151,7 @@ Par exemple :
 
 ## Exemples
 
-| Date or time                             | Pattern                      | Résultat                         | Commentaires          |
+| Date or time                             | Motif                        | Résultat                         | Commentaires          |
 | ---------------------------------------- | ---------------------------- | -------------------------------- | --------------------- |
 | 15/06/2000                               | "QQQQ"                       | "2nd quarter"                    | localisé              |
 | 17/03/2001                               | "D"                          | "76"                             | 76th day of the year  |

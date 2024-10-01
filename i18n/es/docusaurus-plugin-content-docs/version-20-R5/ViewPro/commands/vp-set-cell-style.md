@@ -20,7 +20,7 @@ El comando `VP SET CELL STYLE` <!-- REF #_method_.VP SET CELL STYLE.Summary -->a
 
 En _rangeObj_, pase un rango de celdas donde se aplicará el estilo. Si _rangeObj_ contiene múltiples celdas, el estilo se aplica a cada celda.
 
-> Borders applied with `VP SET CELL STYLE` will be applied to each cell of the _rangeObj_, as opposed to the [VP SET BORDER](vp-set-border.md) command which applies borders to the _rangeObj_ as a whole.
+> Los bordes aplicados con `VP SET CELL STYLE` se aplicarán a cada celda del _rangeObj_, a diferencia del comando [VP SET BORDER](vp-set-border.md) que aplica bordes al _rangeObj_ en su conjunto.
 
 El parámetro _styleObj_ permite pasar un objeto que contiene propiedades de estilo. Puede utilizar una hoja de estilo existente o crear una nueva. Si _styleObj_ contiene a la vez una hoja de estilo existente y propiedades de estilo adicionales, se aplica primero la hoja de estilo existente, seguida de las propiedades adicionales.
 

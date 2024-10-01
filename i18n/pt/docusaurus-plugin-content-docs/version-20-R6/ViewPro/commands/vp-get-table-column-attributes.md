@@ -17,12 +17,12 @@ title: VP Get column attributes
 
 <!-- REF #_method_.VP Get table column attributes.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                   |                  |
-| ---------- | ------- | -- | ----------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                  |                  |
-| tableName  | Text    | -> | Nome da tabela                                              |                  |
-| column     | Integer | -> | Índice da coluna na tabela                                  |                  |
-| sheet      | Integer | -> | Índice da folha (folha atual se omitida) |                  |
+| Parâmetro  | Tipo    |                             | Descrição                                                   |                  |
+| ---------- | ------- | --------------------------- | ----------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nome de objeto formulário área 4D View Pro                  |                  |
+| tableName  | Text    | ->                          | Nome da tabela                                              |                  |
+| column     | Integer | ->                          | Índice da coluna na tabela                                  |                  |
+| sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
 | Resultados | Object  | <- | Atributos da *coluna*                                       | <!-- END REF --> |
 
 #### Descrição
@@ -45,7 +45,7 @@ The command returns an object describing the current attributes of the *column*:
 | footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                            |
 | filterButtonVisible | boolean | True se o botão de filtro da coluna da tabela for exibido, senão False                                                                  |
 
-If *tableName* is not found or if *column* index is higher than the number of columns, the command returns **null**.
+Se *tableName* não for encontrado ou se o índice *column* for maior que o número de colunas, o comando retorna **null**.
 
 #### Exemplo
 

@@ -56,7 +56,7 @@ IMAP Transporter オブジェクトは [IMP New transporter](#imap-new-transport
 
 
 <!-- REF #_command_.IMAP New transporter.Params -->
-| 引数     | タイプ                |    | 説明                                                                             |
+| 引数     | 型                  |    | 説明                                                                             |
 | ------ | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server | Object             | -> | メールサーバー情報                                                                      |
 | 戻り値    | 4D.IMAPTransporter | <- | [IMAP transporter オブジェクト](#imap-transporter-オブジェクト)|<!-- END REF -->
@@ -115,7 +115,7 @@ End if
 
 
 <!-- REF #4D.IMAPTransporter.new().Params -->
-| 引数     | タイプ                |    | 説明                                                                             |
+| 引数     | 型                  |    | 説明                                                                             |
 | ------ | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server | Object             | -> | メールサーバー情報                                                                      |
 | 戻り値    | 4D.IMAPTransporter | <- | [IMAP transporter オブジェクト](#imap-transporter-オブジェクト)|<!-- END REF -->
@@ -124,7 +124,7 @@ End if
 
 #### 説明
 
-`4D.IMAPTransporter.new()` 関数は、 <!-- REF #4D.IMAPTransporter.new().Summary -->`4D.IMAPTransporter` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`IMAP New transporter`](#imap-new-transporter) コマンドと同一です。
+`4D.IMAPTransporter.new()` 関数は、 <!-- REF #4D.IMAPTransporter.new().Summary -->`4D.IMAPTransporter` 型の新しいオブジェクトを作成して返します<!-- END REF -->. この関数の機能は、[`IMAP New transporter`](#imap-new-transporter) コマンドと同一です。
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -143,7 +143,7 @@ End if
 
 
 <!-- REF #IMAPTransporterClass.addFlags().Params -->
-| 引数       | タイプ        |    | 説明                                                                                                          |
+| 引数       | 型          |    | 説明                                                                                                          |
 | -------- | ---------- |:--:| ----------------------------------------------------------------------------------------------------------- |
 | msgIDs   | Collection | -> | 文字列のコレクション: メッセージの固有ID (テキスト型)<br/> テキスト: メッセージの固有ID<br/> 倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ |
 | keywords | Object     | -> | 追加するキーワードフラグ                                                                                                |
@@ -153,7 +153,7 @@ End if
 
 #### 説明
 
-`.addFlags()` 関数は、 <!-- REF #IMAPTransporterClass.addFlags().Summary -->`msgIDs` のメッセージに対して、`keywords` で指定したフラグを追加します<!-- END REF -->。
+`.addFlags()` 関数は、 <!-- REF #IMAPTransporterClass.addFlags().Summary -->`msgIDs` のメッセージに対して、`keywords` で指定したフラグを追加します<!-- END REF -->.
 
 `msgIDs` には、以下のいずれかを渡すことができます:
 
@@ -167,7 +167,7 @@ End if
 
 `keywords` には、`msgIDs` 引数で指定したメッセージに対して追加するフラグのキーワード値を格納したオブジェクトを渡します。 次のキーワードを渡すことができます:
 
-| 引数        | タイプ     | 説明                                |
+| 引数        | 型       | 説明                                |
 | --------- | ------- | --------------------------------- |
 | $draft    | Boolean | メッセージに "draft" フラグを追加するには true    |
 | $seen     | Boolean | メッセージに "seen" フラグを追加するには true     |
@@ -181,7 +181,7 @@ End if
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 説明                                                 |
+| プロパティ      |                         | 型          | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
 | success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
 | statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
@@ -230,7 +230,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 
 <!-- REF #IMAPTransporterClass.append().Params -->
-| 引数             | タイプ    |    | 説明                                        |
+| 引数             | 型      |    | 説明                                        |
 | -------------- | ------ |:--:| ----------------------------------------- |
 | mailObj        | Object | -> | Email オブジェクト                              |
 | destinationBox | Text   | -> | Emailオブジェクトを受信するメールボックス                   |
@@ -241,7 +241,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 #### 説明
 
-`.append()` 関数は、 <!-- REF #IMAPTransporterClass.append().Summary -->`destinationBox` に指定したメールボックスに、`mailObj` のメールを追加します<!-- END REF -->。
+`.append()` 関数は、 <!-- REF #IMAPTransporterClass.append().Summary -->`destinationBox` に指定したメールボックスに、`mailObj` のメールを追加します<!-- END REF -->.
 
 `mailObj` には、Email オブジェクトを渡します。 メールプロパティに関する包括的な詳細については、[Email オブジェクト](EmailObjectClass.md#email-オブジェクト) を参照ください。 `.append()` 関数は Email オブジェクトの `keywords` 属性内のキーワードタグをサポートします。
 
@@ -249,7 +249,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 任意の `options` には、メールの特定部分の文字セットやエンコーディングを定義するオブジェクトを渡すことができます。 次のプロパティを含みます:
 
-| プロパティ         | タイプ  | 説明                                                                                |
+| プロパティ         | 型    | 説明                                                                                |
 | ------------- | ---- | --------------------------------------------------------------------------------- |
 | headerCharset | Text | メールの以下の部分で使用される文字セットとエンコーディング: 件名、添付ファイル名、メール名の属性。 取り得る値: 以下の可能な文字セットテーブルを参照ください。 |
 | bodyCharset   | Text | メールの HTML およびテキスト本文コンテンツで使用される文字セットとエンコーディング。 取り得る値: 以下の可能な文字セットテーブルを参照ください。      |
@@ -267,7 +267,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 説明                                                 |
+| プロパティ      |                         | 型          | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
 | success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
 | statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
@@ -320,7 +320,7 @@ $status:=$imap.append($msg; "Drafts")
 
 #### 説明
 
-`.checkConnectionDelay` プロパティは、 <!-- REF #IMAPTransporterClass.checkConnectionDelay.Summary -->サーバー接続をチェックするまでの最長時間 (秒単位) を格納します<!-- END REF -->。  関数呼び出しの間隔がこの時間を超過する場合、サーバー接続が確認されます。 プロパティが *server* オブジェクトによって設定されていない場合は、デフォルトで 300 という値が使用されます。
+`.checkConnectionDelay` プロパティは、 <!-- REF #IMAPTransporterClass.checkConnectionDelay.Summary -->サーバー接続をチェックするまでの最長時間 (秒単位) を格納します<!-- END REF -->.  関数呼び出しの間隔がこの時間を超過する場合、サーバー接続が確認されます。 プロパティが *server* オブジェクトによって設定されていない場合は、デフォルトで 300 という値が使用されます。
 > **警告**: 定義されたタイムアウトが、サーバータイムアウトより短いようにしてください。そうでない場合、クライアントタイムアウトは無意味になります。
 
 <!-- END REF -->
@@ -342,7 +342,7 @@ $status:=$imap.append($msg; "Drafts")
 
 
 <!-- REF #IMAPTransporterClass.copy().Params -->
-| 引数             | タイプ        |    | 説明                                      |
+| 引数             | 型          |    | 説明                                      |
 | -------------- | ---------- |:--:| --------------------------------------- |
 | msgsIDs        | Collection | -> | メッセージの固有ID のコレクション (テキスト)               |
 | allMsgs        | Integer    | -> | `IMAP all`: 選択されたメールボックスの全メッセージ         |
@@ -353,7 +353,7 @@ $status:=$imap.append($msg; "Drafts")
 
 #### 説明
 
-`.copy()` 関数は、 <!-- REF #IMAPTransporterClass.copy().Summary -->*msgsIDs* または *allMsgs* で定義されたメッセージを IMAP サーバーの *destinationBox* へとコピーします<!-- END REF -->。
+`.copy()` 関数は、 <!-- REF #IMAPTransporterClass.copy().Summary -->*msgsIDs* または *allMsgs* で定義されたメッセージを IMAP サーバーの *destinationBox* へとコピーします<!-- END REF -->.
 
 以下のものを渡すことができます:
 
@@ -366,7 +366,7 @@ $status:=$imap.append($msg; "Drafts")
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 説明                                                 |
+| プロパティ      |                         | 型          | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
 | success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
 | statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
@@ -442,7 +442,7 @@ $status:=$imap.append($msg; "Drafts")
 
 
 <!-- REF #IMAPTransporterClass.createBox().Params -->
-| 引数   | タイプ    |    | 説明                                           |
+| 引数   | 型      |    | 説明                                           |
 | ---- | ------ |:--:| -------------------------------------------- |
 | name | Text   | -> | 新規メールボックスの名称                                 |
 | 戻り値  | Object | <- | createBox処理のステータス|<!-- END REF -->
@@ -451,7 +451,7 @@ $status:=$imap.append($msg; "Drafts")
 
 #### 説明
 
-`.createBox()` 関数は、 <!-- REF #IMAPTransporterClass.createBox().Summary -->`name` に指定した名称の新規メールボックスを作成します<!-- END REF -->。 IMAPサーバーの階層区切り文字がメールボックス名内に含まれる場合、IMAPサーバーは指定のメールボックスを作成するのに必要な親階層を作成します。
+`.createBox()` 関数は、 <!-- REF #IMAPTransporterClass.createBox().Summary -->`name` に指定した名称の新規メールボックスを作成します<!-- END REF -->. IMAPサーバーの階層区切り文字がメールボックス名内に含まれる場合、IMAPサーバーは指定のメールボックスを作成するのに必要な親階層を作成します。
 
 たとえば、"/" が階層区切り文字として使われるサーバーにおいて、"Projects/IMAP/Doc" を作成しようとした場合:
 
@@ -465,7 +465,7 @@ $status:=$imap.append($msg; "Drafts")
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 説明                                                 |
+| プロパティ      |                         | 型          | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
 | success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
 | statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
@@ -519,7 +519,7 @@ End if
 
 
 <!-- REF #IMAPTransporterClass.delete().Params -->
-| 引数      | タイプ        |    | 説明                                        |
+| 引数      | 型          |    | 説明                                        |
 | ------- | ---------- |:--:| ----------------------------------------- |
 | msgsIDs | Collection | -> | メッセージの固有ID のコレクション (テキスト)                 |
 | allMsgs | Integer    | -> | `IMAP all`: 選択されたメールボックスの全メッセージ           |
@@ -529,7 +529,7 @@ End if
 
 #### 説明
 
-`.delete()` 関数は、 <!-- REF #IMAPTransporterClass.delete().Summary -->`msgsIDs` または `allMsgs` が指定するメッセージに対して "削除済み" フラグを設定します<!-- END REF -->。
+`.delete()` 関数は、 <!-- REF #IMAPTransporterClass.delete().Summary -->`msgsIDs` または `allMsgs` が指定するメッセージに対して "削除済み" フラグを設定します<!-- END REF -->.
 
 以下のものを渡すことができます:
 
@@ -542,7 +542,7 @@ End if
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 説明                                                 |
+| プロパティ      |                         | 型          | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
 | success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
 | statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
@@ -618,7 +618,7 @@ End if
 
 
 <!-- REF #IMAPTransporterClass.deleteBox().Params -->
-| 引数   | タイプ    |    | 説明                                           |
+| 引数   | 型      |    | 説明                                           |
 | ---- | ------ |:--:| -------------------------------------------- |
 | name | Text   | -> | 削除するメールボックスの名称                               |
 | 戻り値  | Object | <- | deleteBox処理のステータス|<!-- END REF -->
@@ -629,7 +629,7 @@ End if
 
 #### 説明
 
-`.deleteBox()` 関数は、 <!-- REF #IMAPTransporterClass.deleteBox().Summary -->`name` に指定した名称の新規メールボックスを IMAPサーバーから完全に削除します<!-- END REF -->。 存在しないメールボックス、または INBOX を削除しようとして場合には、エラーが生成されます。
+`.deleteBox()` 関数は、 <!-- REF #IMAPTransporterClass.deleteBox().Summary -->`name` に指定した名称の新規メールボックスを IMAPサーバーから完全に削除します<!-- END REF -->. 存在しないメールボックス、または INBOX を削除しようとして場合には、エラーが生成されます。
 
 `name` には、削除するメールボックスの名前を渡します。
 > * 子メールボックスを持つ親メールボックスが "\Noselect" 属性を持っている場合、そのメールボックスは削除できません。
@@ -640,7 +640,7 @@ End if
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 説明                                                 |
+| プロパティ      |                         | 型          | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
 | success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
 | statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
@@ -696,7 +696,7 @@ End if
 
 
 <!-- REF IMAPTransporterClass.expunge().Params -->
-| 引数  | タイプ    |    | 説明                                          |
+| 引数  | 型      |    | 説明                                          |
 | --- | ------ |:--:| ------------------------------------------- |
 | 戻り値 | Object | <- | expunge処理のステータス |<!-- END REF -->
 
@@ -710,7 +710,7 @@ End if
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 説明                                                 |
+| プロパティ      |                         | 型          | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
 | success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
 | statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
@@ -765,7 +765,7 @@ $status:=$transporter.expunge()
 
 
 <!-- REF #IMAPTransporterClass.getBoxInfo().Params -->
-| 引数   | タイプ    |    | 説明                                        |
+| 引数   | 型      |    | 説明                                        |
 | ---- | ------ |:--:| ----------------------------------------- |
 | name | Text   | -> | メールボックスの名称                                |
 | 戻り値  | Object | <- | boxInfo オブジェクト|<!-- END REF -->
@@ -774,7 +774,7 @@ $status:=$transporter.expunge()
 
 #### 説明
 
-`.getBoxInfo()` 関数は、 <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->カレントメールボックス、または *name* が指定するメールボックスに対応する `boxInfo` オブジェクトを返します<!-- END REF -->。 この関数は、[`.selectBox()`](#selectbox) と同じ情報を返しますが、カレントメールボックスは変えません。
+`.getBoxInfo()` 関数は、 <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->カレントメールボックス、または *name* が指定するメールボックスに対応する `boxInfo` オブジェクトを返します<!-- END REF -->. この関数は、[`.selectBox()`](#selectbox) と同じ情報を返しますが、カレントメールボックスは変えません。
 
 任意の *name* パラメーターには、アクセスするメールボックスの名称を渡します。 この名称は明確な左から右への階層を表し、特定の区切り文字でレベルを区分けします。 この区切り文字は [`.getDelimiter()`](#getdelimiter) 関数で調べることができます。
 
@@ -784,7 +784,7 @@ $status:=$transporter.expunge()
 
 返される `boxInfo` オブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ      | タイプ    | 説明                                         |
+| プロパティ      | 型      | 説明                                         |
 | ---------- | ------ | ------------------------------------------ |
 | name       | text   | メールボックスの名称                                 |
 | mailCount  | number | メールボックス内のメッセージの数                           |
@@ -818,7 +818,7 @@ $status:=$transporter.expunge()
 
 
 <!-- REF #IMAPTransporterClass.getBoxList().Params -->
-| 引数         | タイプ        |    | 説明                                               |
+| 引数         | 型          |    | 説明                                               |
 | ---------- | ---------- |:--:| ------------------------------------------------ |
 | parameters | Object     | -> | 引数のオブジェクト                                        |
 | 戻り値        | Collection | <- | mailbox オブジェクトのコレクション|<!-- END REF -->
@@ -827,11 +827,11 @@ $status:=$transporter.expunge()
 
 #### 説明
 
-`.getBoxList()` 関数は、 <!-- REF #IMAPTransporterClass.getBoxList().Summary -->利用可能なメールボックスの情報を mailbox オブジェクトのコレクションとしてを返します<!-- END REF -->。 この関数を使用すると、IMAPメールサーバー上にあるメッセージの一覧をローカルで管理することができるようになります。
+`.getBoxList()` 関数は、 <!-- REF #IMAPTransporterClass.getBoxList().Summary -->利用可能なメールボックスの情報を mailbox オブジェクトのコレクションとしてを返します<!-- END REF -->. この関数を使用すると、IMAPメールサーバー上にあるメッセージの一覧をローカルで管理することができるようになります。
 
 任意の `parameters` パラメーターには、返されるメールボックスをフィルターするための値を格納したオブジェクトを渡すことができます。 以下のものを渡すことができます:
 
-| プロパティ        | タイプ     | 説明                                                   |
+| プロパティ        | 型       | 説明                                                   |
 | ------------ | ------- | ---------------------------------------------------- |
 | isSubscribed | Boolean | <li>**True**: 購読しているメールボックスのみを返します。</li><li> **False**: すべての利用可能なメールボックスを返します</li> |
 
@@ -839,7 +839,7 @@ $status:=$transporter.expunge()
 
 返されるコレクションの各オブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ            | タイプ     | 説明                                                                          |
+| プロパティ            | 型       | 説明                                                                          |
 | ---------------- | ------- | --------------------------------------------------------------------------- |
 | \[].name        | text    | メールボックスの名称                                                                  |
 | \[].selectable  | boolean | アクセス権でメールボックスを選択できるかどうかを表します: <ul><li>true - メールボックスは選択可能</li><li>false - メールボックスは選択不可能</li></ul>                     |
@@ -883,7 +883,7 @@ $status:=$transporter.expunge()
 
 
 <!-- REF #IMAPTransporterClass.getDelimiter().Params -->
-| 引数  | タイプ  |    | 説明                                 |
+| 引数  | 型    |    | 説明                                 |
 | --- | ---- |:--:| ---------------------------------- |
 | 戻り値 | Text | <- | 階層区切り文字|<!-- END REF -->
 
@@ -891,7 +891,7 @@ $status:=$transporter.expunge()
 
 #### 説明
 
-`.getDelimiter()` 関数は、 <!-- REF #IMAPTransporterClass.getDelimiter().Summary -->メールボックス名で階層レベルを区切るのに使用される文字を返します<!-- END REF -->。
+`.getDelimiter()` 関数は、 <!-- REF #IMAPTransporterClass.getDelimiter().Summary -->メールボックス名で階層レベルを区切るのに使用される文字を返します<!-- END REF -->.
 
 この区切り文字は以下のように使用することができます:
 
@@ -937,7 +937,7 @@ $status:=$transporter.expunge()
 
 
 <!-- REF #IMAPTransporterClass.getMail().Params -->
-| 引数        | タイプ     |    | 説明                                                                          |
+| 引数        | 型       |    | 説明                                                                          |
 | --------- | ------- |:--:| --------------------------------------------------------------------------- |
 | msgNumber | Integer | -> | メッセージのシーケンス番号                                                               |
 | msgID     | Text    | -> | メッセージの固有ID                                                                  |
@@ -948,7 +948,7 @@ $status:=$transporter.expunge()
 
 #### 説明
 
-`.getMail()` 関数は、 <!-- REF #IMAPTransporterClass.getMail().Summary -->`IMAP_transporter` が指定するメールボックス内の、*msgNumber* または *msgID* に対応するメールを `Email` オブジェクトとして返します<!-- END REF -->。 この関すを使用すると、メールのコンテンツをローカルで管理できるようになります。
+`.getMail()` 関数は、 <!-- REF #IMAPTransporterClass.getMail().Summary -->`IMAP_transporter` が指定するメールボックス内の、*msgNumber* または *msgID* に対応するメールを `Email` オブジェクトとして返します<!-- END REF -->. この関すを使用すると、メールのコンテンツをローカルで管理できるようになります。
 
 最初の引数として、次のいずれかを渡すことができます:
 
@@ -957,7 +957,7 @@ $status:=$transporter.expunge()
 
 任意の *options* 引数として、メッセージの扱い方を定義する追加のオブジェクトを渡すことができます。 次のプロパティを利用することができます:
 
-| プロパティ      | タイプ     | 説明                                                                         |
+| プロパティ      | 型       | 説明                                                                         |
 | ---------- | ------- | -------------------------------------------------------------------------- |
 | updateSeen | boolean | true 時には、メールボックス内でメッセージを "既読" にします。 false 時にはメッセージの状態は変化しません。 デフォルト値: true |
 | withBody   | boolean | true を渡すとメッセージ本文を返します。 false 時には、メッセージヘッダーのみが返されます。 デフォルト値: true           |
@@ -1011,7 +1011,7 @@ ID = 1のメッセージを取得します:
 
 
 <!-- REF #IMAPTransporterClass.getMails().Params -->
-| 引数       | タイプ        |    | 説明                                                                                   |
+| 引数       | 型          |    | 説明                                                                                   |
 | -------- | ---------- |:--:| ------------------------------------------------------------------------------------ |
 | ids      | Collection | -> | メッセージID のコレクション                                                                      |
 | startMsg | Integer    | -> | 先頭メッセージのシーケンス番号                                                                      |
@@ -1026,7 +1026,7 @@ ID = 1のメッセージを取得します:
 #### 説明
 
 
-`.getMails()` 関数は、 <!-- REF #IMAPTransporterClass.getMails().Summary -->`Email` オブジェクトのコレクションを格納したオブジェクトを返します<!-- END REF -->。
+`.getMails()` 関数は、 <!-- REF #IMAPTransporterClass.getMails().Summary -->`Email` オブジェクトのコレクションを格納したオブジェクトを返します<!-- END REF -->.
 
 **第一シンタックス:**
 
@@ -1052,7 +1052,7 @@ ID = 1のメッセージを取得します:
 
 **オプション**
 
-| プロパティ      | タイプ     | 説明                                                                     |
+| プロパティ      | 型       | 説明                                                                     |
 | ---------- | ------- | ---------------------------------------------------------------------- |
 | updateSeen | Boolean | true 時には、指定されたメッセージを "既読" にします。 false 時にはメッセージの状態は変化しません。 デフォルト値: true |
 | withBody   | Boolean | true を渡すと指定されたメッセージの本文を返します。 false 時には、メッセージヘッダーのみが返されます。 デフォルト値: true |
@@ -1063,7 +1063,7 @@ ID = 1のメッセージを取得します:
 
 `.getMails()` は、以下のコレクションを格納したオブジェクトを返します。
 
-| プロパティ    | タイプ        | 説明                                                                                                  |
+| プロパティ    | 型          | 説明                                                                                                  |
 | -------- | ---------- | --------------------------------------------------------------------------------------------------- |
 | list     | Collection | [`Email`](EmailObjectClass.md#email-オブジェクト) オブジェクトのコレクション。 Email オブジェクトが見つからない場合、空のコレクションが返されます。    |
 | notFound | Collection | 使用したシンタックスによって返されるものが異なります:<br/><ul><li>第一シンタックス - 指定した ID のうち、存在しなかったメッセージの ID</li><li>第二シンタックス - startMsg と endMsg の間の番号のうち、存在しなかったメッセージの番号</li></ul>すべてのメッセージが見つかった場合には、空のコレクションが返されます。 |
@@ -1115,7 +1115,7 @@ ID = 1のメッセージを取得します:
 
 
 <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Params -->
-| 引数         | タイプ     |    | 説明                                                            |
+| 引数         | 型       |    | 説明                                                            |
 | ---------- | ------- |:--:| ------------------------------------------------------------- |
 | msgNumber  | Integer | -> | メッセージのシーケンス番号                                                 |
 | msgID      | Text    | -> | メッセージの固有ID                                                    |
@@ -1126,7 +1126,7 @@ ID = 1のメッセージを取得します:
 
 #### 説明
 
-`.getMIMEAsBlob()` 関数は、 <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary -->`IMAP_transporter` が指定するメールボックス内の、*msgNumber* または *msgID* に対応するメッセージの MIMEコンテンツを格納した BLOB を返します<!-- END REF -->。
+`.getMIMEAsBlob()` 関数は、 <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary -->`IMAP_transporter` が指定するメールボックス内の、*msgNumber* または *msgID* に対応するメッセージの MIMEコンテンツを格納した BLOB を返します<!-- END REF -->.
 
 最初の引数として、次のいずれかを渡すことができます:
 
@@ -1190,7 +1190,7 @@ ID = 1のメッセージを取得します:
 
 
 <!-- REF #IMAPTransporterClass.move().Params -->
-| 引数             | タイプ        |    | 説明                                      |
+| 引数             | 型          |    | 説明                                      |
 | -------------- | ---------- |:--:| --------------------------------------- |
 | msgsIDs        | Collection | -> | メッセージの固有ID のコレクション (テキスト)               |
 | allMsgs        | Integer    | -> | `IMAP all`: 選択されたメールボックスの全メッセージ         |
@@ -1201,7 +1201,7 @@ ID = 1のメッセージを取得します:
 
 #### 説明
 
-`.move()` 関数は、 <!-- REF #IMAPTransporterClass.move().Summary -->*msgsIDs* または *allMsgs* で定義されたメッセージを IMAP サーバーの *destinationBox* へと移動します<!-- END REF -->。
+`.move()` 関数は、 <!-- REF #IMAPTransporterClass.move().Summary -->*msgsIDs* または *allMsgs* で定義されたメッセージを IMAP サーバーの *destinationBox* へと移動します<!-- END REF -->.
 
 以下のものを渡すことができます:
 
@@ -1216,7 +1216,7 @@ ID = 1のメッセージを取得します:
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 説明                                                 |
+| プロパティ      |                         | 型          | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
 | success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
 | statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
@@ -1292,7 +1292,7 @@ ID = 1のメッセージを取得します:
 
 
 <!-- REF #IMAPTransporterClass.numToID().Params -->
-| 引数       | タイプ        |    | 説明                                      |
+| 引数       | 型          |    | 説明                                      |
 | -------- | ---------- |:--:| --------------------------------------- |
 | startMsg | Integer    | -> | 先頭メッセージのシーケンス番号                         |
 | endMsg   | Integer    | -> | 最後のメッセージのシーケンス番号                        |
@@ -1354,7 +1354,7 @@ ID = 1のメッセージを取得します:
 
 
 <!-- REF #IMAPTransporterClass.removeFlags().Params -->
-| 引数       | タイプ        |    | 説明                                                                                                          |
+| 引数       | 型          |    | 説明                                                                                                          |
 | -------- | ---------- |:--:| ----------------------------------------------------------------------------------------------------------- |
 | msgIDs   | Collection | -> | 文字列のコレクション: メッセージの固有ID (テキスト型)<br/> テキスト: メッセージの固有ID<br/> 倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ |
 | keywords | Object     | -> | 削除するキーワードフラグ                                                                                                |
@@ -1364,7 +1364,7 @@ ID = 1のメッセージを取得します:
 
 #### 説明
 
-`.removeFlags()` 関数は、 <!-- REF #IMAPTransporterClass.removeFlags().Summary -->`msgIDs` のメッセージに対して、`keywords` で指定したフラグを削除します<!-- END REF -->。
+`.removeFlags()` 関数は、 <!-- REF #IMAPTransporterClass.removeFlags().Summary -->`msgIDs` のメッセージに対して、`keywords` で指定したフラグを削除します<!-- END REF -->.
 
 `msgIDs` には、以下のいずれかを渡すことができます:
 
@@ -1378,7 +1378,7 @@ ID = 1のメッセージを取得します:
 
 `keywords` には、`msgIDs` 引数で指定したメッセージから削除するフラグのキーワード値を格納したオブジェクトを渡します。 次のキーワードを渡すことができます:
 
-| 引数        | タイプ     | 説明                                |
+| 引数        | 型       | 説明                                |
 | --------- | ------- | --------------------------------- |
 | $draft    | Boolean | メッセージの "draft" フラグを削除するには true    |
 | $seen     | Boolean | メッセージの "seen" フラグを削除するには true     |
@@ -1392,7 +1392,7 @@ false値は無視されます。
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 説明                                                 |
+| プロパティ      |                         | 型          | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
 | success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
 | statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
@@ -1441,7 +1441,7 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 
 <!-- REF #IMAPTransporterClass.renameBox().Params -->
-| 引数          | タイプ    |    | 説明                                           |
+| 引数          | 型      |    | 説明                                           |
 | ----------- | ------ |:--:| -------------------------------------------- |
 | currentName | Text   | -> | カレントメールボックスの名称                               |
 | newName     | Text   | -> | 新しいメールボックス名                                  |
@@ -1451,7 +1451,7 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 #### 説明
 
-`.renameBox()` 関数は、 <!-- REF #IMAPTransporterClass.renameBox().Summary -->IMAPサーバー上でメールボックスの名称を変更します<!-- END REF -->。 存在しないメールボックスの名称を変更しようとしたり、すでに使われているメールボックス名に変更しようとしたりすると、エラーが生成されます。
+`.renameBox()` 関数は、 <!-- REF #IMAPTransporterClass.renameBox().Summary -->IMAPサーバー上でメールボックスの名称を変更します<!-- END REF -->. 存在しないメールボックスの名称を変更しようとしたり、すでに使われているメールボックス名に変更しようとしたりすると、エラーが生成されます。
 
 `currentName` には、名称変更するメールボックスの名前を渡します。
 
@@ -1461,7 +1461,7 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 説明                                                 |
+| プロパティ      |                         | 型          | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
 | success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
 | statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
@@ -1519,7 +1519,7 @@ End if
 
 
 <!-- REF #IMAPTransporterClass.searchMails().Params -->
-| 引数             | タイプ        |    | 説明                                        |
+| 引数             | 型          |    | 説明                                        |
 | -------------- | ---------- |:--:| ----------------------------------------- |
 | searchCriteria | Text       | -> | 検索条件                                      |
 | 戻り値            | Collection | <- | メッセージ番号のコレクション|<!-- END REF -->
@@ -1530,7 +1530,7 @@ End if
 
 > この関数は、[IMAP プロトコル](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol) の仕様に基づいています。
 
-`.searchMails()` 関数は、 <!-- REF #IMAPTransporterClass.searchMails().Summary -->カレントメールボックスにおいて *searchCriteria* の検索条件に合致するメッセージを検索します<!-- END REF -->。 *searchCriteria* 引数には、一つ以上の検索キーを格納します。
+`.searchMails()` 関数は、 <!-- REF #IMAPTransporterClass.searchMails().Summary -->カレントメールボックスにおいて *searchCriteria* の検索条件に合致するメッセージを検索します<!-- END REF -->. *searchCriteria* 引数には、一つ以上の検索キーを格納します。
 
 *searchCriteria* はテキスト型の引数で、一つ以上の検索キー (詳細は後述の [利用可能な検索キー](#利用可能な検索キー) 参照) を格納し、検索する値を渡します (渡さない場合もあります)。 検索キーは単一または複数の項目からなります。 例:
 
@@ -1656,7 +1656,7 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 
 <!-- REF #IMAPTransporterClass.selectBox().Params -->
-| 引数    | タイプ     |    | 説明                                        |
+| 引数    | 型       |    | 説明                                        |
 | ----- | ------- |:--:| ----------------------------------------- |
 | name  | Text    | -> | メールボックスの名称                                |
 | state | Integer | -> | メールボックスのアクセス状態                            |
@@ -1666,7 +1666,7 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 #### 説明
 
-`.selectBox()` 関数は、 <!-- REF #IMAPTransporterClass.selectBox().Summary -->*name* に指定したメールボックスをカレントメールボックスとして選択します<!-- END REF -->。 この関数を使用するとメールボックスに関する情報を取得することができます。
+`.selectBox()` 関数は、 <!-- REF #IMAPTransporterClass.selectBox().Summary -->*name* に指定したメールボックスをカレントメールボックスとして選択します<!-- END REF -->. この関数を使用するとメールボックスに関する情報を取得することができます。
 > カレントメールボックスを変更せずに、メールボックスから情報を取得するには、[`.getBoxInfo()`](#getboxinfo) を使用します。
 
 *name* には、アクセスするメールボックスの名前を渡します。 この名称は明確な左から右への階層を表し、特定の区切り文字でレベルを区分けします。 この区切り文字は [`.getDelimiter()`](#getdelimiter) 関数で調べることができます。
@@ -1685,7 +1685,7 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 返される `boxInfo` オブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ      | タイプ    | 説明                      |
+| プロパティ      | 型      | 説明                      |
 | ---------- | ------ | ----------------------- |
 | name       | Text   | メールボックスの名称              |
 | mailCount  | number | メールボックス内のメッセージの数        |
@@ -1722,7 +1722,7 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 
 <!-- REF #IMAPTransporterClass.subscribe().Params -->
-| 引数   | タイプ    |    | 説明                                           |
+| 引数   | 型      |    | 説明                                           |
 | ---- | ------ |:--:| -------------------------------------------- |
 | name | Text   | -> | メールボックスの名称                                   |
 | 戻り値  | Object | <- | subscribe処理のステータス|<!-- END REF -->
@@ -1731,7 +1731,7 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 #### 説明
 
-`.subscribe()` 関数は、 <!-- REF #IMAPTransporterClass.subscribe().Summary -->IMAPサーバーの購読メールボックスとして任意のメールボックスを追加・削除します<!-- END REF -->。 利用可能なメールボックスが大量にある場合、すべてを取得するのを避けるため、確認したいメールボックスだけを購読することができます。
+`.subscribe()` 関数は、 <!-- REF #IMAPTransporterClass.subscribe().Summary -->IMAPサーバーの購読メールボックスとして任意のメールボックスを追加・削除します<!-- END REF -->. 利用可能なメールボックスが大量にある場合、すべてを取得するのを避けるため、確認したいメールボックスだけを購読することができます。
 
 `name` には、購読するメールボックスの名前を渡します。
 
@@ -1739,7 +1739,7 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 説明                                                 |
+| プロパティ      |                         | 型          | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
 | success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
 | statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
@@ -1794,7 +1794,7 @@ End if
 
 
 <!-- REF #IMAPTransporterClass.unsubscribe().Params -->
-| 引数   | タイプ    |    | 説明                                             |
+| 引数   | 型      |    | 説明                                             |
 | ---- | ------ |:--:| ---------------------------------------------- |
 | name | Text   | -> | メールボックスの名称                                     |
 | 戻り値  | Object | <- | unsubscribe処理のステータス|<!-- END REF -->
@@ -1803,7 +1803,7 @@ End if
 
 #### 説明
 
-`.unsubscribe()` 関数は、 <!-- REF #IMAPTransporterClass.unsubscribe().Summary -->指定したメールボックスを購読メールボックスから削除します<!-- END REF -->。 これにより、確認するメールボックスの数を減らせます。
+`.unsubscribe()` 関数は、 <!-- REF #IMAPTransporterClass.unsubscribe().Summary -->指定したメールボックスを購読メールボックスから削除します<!-- END REF -->. これにより、確認するメールボックスの数を減らせます。
 
 `name` には、購読を解除するメールボックスの名前を渡します。
 
@@ -1811,7 +1811,7 @@ End if
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 説明                                                 |
+| プロパティ      |                         | 型          | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
 | success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
 | statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |

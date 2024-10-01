@@ -36,24 +36,24 @@ Las siguientes secuencias de escape pueden utilizarse dentro de las cadenas:
 
 ## Operadores de cadenas
 
-| Operación              | Sintaxis         | Devuelve | Expression              | Valor    |
-| ---------------------- | ---------------- | -------- | ----------------------- | -------- |
-| Concatenación          | Cadena + Cadena  | String   | "abc" + "def"           | "abcdef" |
-| Repetición             | Cadena \* Número | String   | "ab" \* 3               | "ababab" |
-| Igual                  | Cadena = Cadena  | Boolean  | "abc" = "abc"           | True     |
-|                        |                  |          | "abc" = "abd"           | False    |
-| Desigualdad            | Cadena # Cadena  | Boolean  | "abc" # "abd"           | True     |
-|                        |                  |          | "abc" # "abc"           | False    |
-| Mayor que              | Cadena > Cadena  | Boolean  | "abd" > "abc"           | True     |
-|                        |                  |          | "abc" > "abc"           | False    |
-| Menor que              | Cadena < Cadena  | Boolean  | "abc" < "abd"           | True     |
-|                        |                  |          | "abc" < "abc"           | False    |
-| Mayor o igual que      | Cadena >= Cadena | Boolean  | "abd" >= "abc"          | True     |
-|                        |                  |          | "abc" >= "abd"          | False    |
-| Menor o igual que      | Cadena <= Cadena | Boolean  | "abc" <= "abd"          | True     |
-|                        |                  |          | "abd" <= "abc"          | False    |
-| Contiene palabra clave | Cadena % Cadena  | Boolean  | "Alpha Bravo" % "Bravo" | True     |
-|                        |                  |          | "Alpha Bravo" % "ravo"  | False    |
+| Operación              | Sintaxis                                  | Devuelve | Expression                              | Valor    |
+| ---------------------- | ----------------------------------------- | -------- | --------------------------------------- | -------- |
+| Concatenación          | Cadena + Cadena                           | String   | "abc" + "def"                           | "abcdef" |
+| Repetición             | Cadena \* Número                          | String   | "ab" \* 3                               | "ababab" |
+| Igual                  | Cadena = Cadena                           | Boolean  | "abc" = "abc"                           | True     |
+|                        |                                           |          | "abc" = "abd"                           | False    |
+| Desigualdad            | Cadena # Cadena                           | Boolean  | "abc" # "abd"                           | True     |
+|                        |                                           |          | "abc" # "abc"                           | False    |
+| Mayor que              | Cadena > Cadena                           | Boolean  | "abd" > "abc"                           | True     |
+|                        |                                           |          | "abc" > "abc"                           | False    |
+| Menor que              | Cadena < Cadena  | Boolean  | "abc" < "abd"  | True     |
+|                        |                                           |          | "abc" < "abc"  | False    |
+| Mayor o igual que      | Cadena >= Cadena                          | Boolean  | "abd" >= "abc"                          | True     |
+|                        |                                           |          | "abc" >= "abd"                          | False    |
+| Menor o igual que      | Cadena <= Cadena | Boolean  | "abc" <= "abd" | True     |
+|                        |                                           |          | "abd" <= "abc" | False    |
+| Contiene palabra clave | Cadena % Cadena                           | Boolean  | "Alpha Bravo" % "Bravo"                 | True     |
+|                        |                                           |          | "Alpha Bravo" % "ravo"                  | False    |
 
 ## Comparaciones de cadenas
 
@@ -140,7 +140,7 @@ A diferencia de otras comparaciones de cadenas, la búsqueda por palabras clave 
 
 > **Notas:**
 >
-> - 4D utiliza la librería ICU para comparar cadenas (utilizando los operadores `<>=#`) y detectar palabras claves. Para más información sobre las normas implementadas, por favor consulte la siguiente dirección: http://www.unicode.org/reports/tr29/#Word_Boundaries.
+> - 4D utiliza la librería ICU para comparar cadenas (utilizando los operadores `<>=#`) y detectar palabras claves. Para más información sobre las normas implementadas, por favor consulte la siguiente dirección: <http://www.unicode.org/reports/tr29/#Word_Boundaries>.
 > - En la versión japonesa, en lugar de ICU, 4D utiliza por defecto Mecab para detectar las palabras claves.
 
 ## Símbolos de indice de cadena
@@ -160,15 +160,15 @@ End if
 En caso contrario, si los símbolos de referencia de caracteres aparecen dentro de una expresión, devuelven el caracter (al que se refieren) como una cadena de 1 caracter. Por ejemplo:
 
 ```4d
-//The following example tests if the last character of vtText is an At sign "@"
+//El siguiente ejemplo prueba si el último carácter de vtText es una arroba "@"
  If(vtText#"")
     If(Character code(Substring(vtText;Length(vtText);1))=At sign)
   //...
     End if
  End if
-
-  //Using the character reference syntax, you would write in a simpler manner:
- If(vtText#"")
+ 
+  //Utilizando la sintaxis de referencia de caracteres, se podría escribir de una manera más simple:
+  If(vtText#"")
     If(Character code(vtText[[Length(vtText)]])=At sign)
   // ...
     End if
@@ -200,7 +200,7 @@ El siguiente método proyecto pone en mayúsculas el primer carácter de cada pa
 ```4d
   //Capitalize_text project method
   //Capitalize_text ( Text ) -> Text
-  //Capitalize_text ( Source text ) -> Capitalized text
+  //Capitalize_text ( Source text ) -> Texto capitalizado
 
  $0:=$1
  $vlLen:=Length($0)

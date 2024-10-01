@@ -9,21 +9,21 @@ title: VP Get values
 
 <!-- REF #_method_.VP Get values.Params -->
 
-| Parâmetro  | Tipo       |    | Descrição          |                  |
-| ---------- | ---------- | -- | ------------------ | ---------------- |
-| rangeObj   | Object     | -> | Objeto intervalo   |                  |
+| Parâmetro  | Tipo       |                             | Descrição          |                  |
+| ---------- | ---------- | --------------------------- | ------------------ | ---------------- |
+| rangeObj   | Object     | ->                          | Objeto intervalo   |                  |
 | Resultados | Collection | <- | Coleção de valores | <!-- END REF --> |
 
 #### Descrição
 
 The `VP Get values` command <!-- REF #_method_.VP Get values.Summary --> retrieves the values from the designated _rangeObj_<!-- END REF -->.
 
-Em _rangeObj_, passe um intervalo cujos valores você deseja recuperar. If _rangeObj_ includes multiple ranges, only the first range is used.
+Em _rangeObj_, passe um intervalo cujos valores você deseja recuperar. Se _rangeObj_ incluir vários intervalos, somente o primeiro será usado.
 
 A coleção retornada por `VP Get values` contém uma coleção bidimensional:
 
 - Cada elemento da coleção de primeiro nível representa uma linha e contém uma subcoleção de valores.
-- Cada subcoleção contém valores de células para a linha. Values can be Integer, Real, Boolean, Text, Object, or Null. Se um valor for uma data ou hora, é retornado em um objeto com as propriedades abaixo:
+- Cada subcoleção contém valores de células para a linha. Os valores podem ser Inteiro, Real, Booleano, Texto, Objeto ou Null. Se um valor for uma data ou hora, é retornado em um objeto com as propriedades abaixo:
 
 | Propriedade | Tipo | Descrição                                                                  |
 | ----------- | ---- | -------------------------------------------------------------------------- |

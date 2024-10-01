@@ -67,7 +67,7 @@ $a+=2 // $a=3
 
 | 演算子                         | シンタックス             | 代入される型  | 例題                                             |
 | --------------------------- | ------------------ | ------- | ---------------------------------------------- |
-| 加算 (足し算) | Text += Text       | Text    | `$t+=" World"  //$t:=$t+" World"`              |
+| 加算 (足し算) | Text += Text       | テキスト    | `$t+=" World"  //$t:=$t+" World"`              |
 |                             | Number += Number   | Number  | `$n+=5 //$n:=$n+5`                             |
 |                             | Date += Number     | 日付      | `$d+=5 //$d:=$d+5`                             |
 |                             | Time += Time       | 時間      | `$t1+=$t2 //$t1:=$t1+$t2`                      |
@@ -84,7 +84,7 @@ $a+=2 // $a=3
 |                             | Time /= Number     | Number  | `$t1/=5 //$t1:=$t1/5`                          |
 |                             | Picture /= Picture | Picture | `$p1/=$p2 //$p1:=$p1/$p2 ($p1 の下に $p2 を追加します)` |
 |                             | Picture /= Number  | Picture | `$p1/=5 //$p1:=$p1/5 ($p1 を 5ピクセル垂直に移動します)`    |
-| 乗算 (かけ算) | Text \*= Number    | Text    | `$t*="abc"  //$t:=$t*"abc"`                    |
+| 乗算 (かけ算) | Text \*= Number    | テキスト    | `$t*="abc"  //$t:=$t*"abc"`                    |
 |                             | Number \*= Number  | Number  | `$n*=5 //$n:=$n*5`                             |
 |                             | Time \*= Time      | 時間      | `$t1*=$t2 //$t1:=$t1*$t2`                      |
 |                             | Time \*= Number    | Number  | `$t1*=5 //$t1:=$t1*5`                          |

@@ -24,7 +24,7 @@ Si vous modifiez ce paramètre, vous devez redémarrer la base du serveur pour q
 
 #### Nom de publication
 
-This option lets you change the publication name of a 4D Server database, _i.e._, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Opening a remote project](../Desktop/clientServer/md#opening-a-remote-project) paragraph). Par défaut, 4D Server utilise le nom du fichier de projet. Vous pouvez saisir le nom personnalisé de votre choix.
+Cette option vous permet de modifier le nom de publication d'une base de données 4D Server, c'est-à-dire le nom affiché dans l'onglet dynamique **Disponible** de la boîte de dialogue de connexion (voir le paragraphe [Ouverture d'un projet distant](../Desktop/clientServer/md#opening-a-remote-project)). Par défaut, 4D Server utilise le nom du fichier de projet. Vous pouvez saisir le nom personnalisé de votre choix.
 
 :::note
 
@@ -51,42 +51,42 @@ Pour mettre à jour les autres machines clientes qui ne sont pas connectées, il
 
 - **SQL Server** : 19812 par défaut (peut être modifié via la page "SQL/Configuration" des Préférences).
 - **Serveur d'application** : 19813 par défaut (peut être modifié via la page "Client-Serveur/Configuration" des Préférences, voir ci-dessus).
-- **DB4D Server** (database server): 19814 by default. This port number cannot be modified directly but it always consists of the application server port number + 1.\
-  When a 4D client connects to 4D Server, it uses the TCP port of the application server (19813 or the port indicated after the colon ':' in the IP address shown in the connection dialog box). Connection to other servers via their respective ports is then automatic; it is no longer necessary to specify them.\
-  Note that in the case of access via a router or a firewall, the three TCP ports must be opened explicitly.
-- [**Remote Debugger**](../Debugging/debugging-remote.md): 19815 by default. This port number cannot be modified directly but it always consists of the application server port number + 2.
+- **DB4D Server** (serveur de base de données) : 19814 par défaut. Ce numéro de port ne peut pas être modifié directement mais il est toujours composé du numéro de port du serveur d'application + 1.
+  Lorsqu'un client 4D se connecte à 4D Server, il utilise le port TCP du serveur d'application (19813 ou le port indiqué après le signe ':' dans l'adresse IP affichée dans la boîte de dialogue de connexion). La connexion aux autres serveurs via leurs ports respectifs est alors automatique ; il n'est plus nécessaire de les spécifier.\
+  Notez que dans le cas d'un accès via un routeur ou un pare-feu, les ports TCP doivent être ouverts explicitement.
+- [**Débogueur à distance**](../Debugging/debugging-remote.md) : 19815 par défaut. Ce numéro de port ne peut pas être modifié directement mais il est toujours composé du numéro de port du serveur d'application + 2.
 
 #### Authentification de l'utilisateur auprès du serveur de domaine
 
-Cette option vous permet de mettre en œuvre des fonctionnalités SSO (_Single Sign On_) dans votre base de données 4D Server sous Windows. Lorsque vous cochez cette option, 4D se connecte de manière transparente à l'Active directory du serveur de domaine Windows et obtient les tokens d'authentification disponibles. This option is described in the [Single Sign On (SSO) on Windows](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.en.html) section.
+Cette option vous permet de mettre en œuvre des fonctionnalités SSO (_Single Sign On_) dans votre base de données 4D Server sous Windows. Lorsque vous cochez cette option, 4D se connecte de manière transparente à l'Active directory du serveur de domaine Windows et obtient les tokens d'authentification disponibles. Cette option est décrite dans la section [Single Sign On (SSO) sous Windows](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.en.html).
 
-#### Service Principal Name
+#### Nom Principal de Service
 
-Lorsque l'authentification unique (SSO) est activée (voir ci-dessus), vous devez remplir ce champ si vous souhaitez utiliser Kerberos comme protocole d'authentification. This option is described in the [Single Sign On (SSO) on Windows](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.en.html) section.
+Lorsque l'authentification unique (SSO) est activée (voir ci-dessus), vous devez remplir ce champ si vous souhaitez utiliser Kerberos comme protocole d'authentification. Cette option est décrite dans la section [Single Sign On (SSO) sous Windows](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.en.html).
 
-#### Network Layer
+#### Couche réseau
 
-This drop-down box contains 3 network layer options to choose between: **legacy**, **ServerNet** and **QUIC** (only in project mode), which are used to handle communications between 4D Server and remote 4D machines (clients).
+Cette liste déroulante contient 3 options de couche réseau : **Historique**, **ServerNet** et **QUIC** (uniquement en mode projet), qui sont utilisées pour gérer les communications entre le serveur 4D et les machines 4D distantes (clients).
 
-- **Legacy**: This former "legacy" network layer is still supported in order to ensure compatibility for databases created prior to v15. This network layer can also be enabled by programming using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html) command.
-- **ServerNet** (by default): Enables the ServerNet network layer on the server (available since 4D v15).
-- **QUIC** (available only in project mode): Enables the QUIC network layer on the server.
+- **Historique** : Cette ancienne couche réseau "historique" est toujours prise en charge afin d'assurer la compatibilité avec les bases de données créées avant la version 15. Cette couche réseau peut également être activée par programmation à l'aide de la commande [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html).
+- **ServerNet** (par défaut) : Active la couche réseau ServerNet sur le serveur (disponible depuis 4D v15).
+- **QUIC** (disponible uniquement en mode projet) : Active la couche réseau QUIC sur le serveur.
 
-  **Notes**:
+  **Notes** :
 
-  - Selecting this option overrides the Use legacy network layer option in case it has been set using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html) command.
-  - You can know if a 4D application is running with a QUIC network layer using the [Get application info](https://doc.4d.com/4Dv20/help/command/page1599.html) command.
-  - Since QUIC uses the UDP protocol, make sure UDP is allowed in your network security settings.
-  - QUIC automatically connects to the port 19813 for both application server and DB4D server.
-  - When the QUIC layer option is selected:
-    - A beta message and an alert icon are displayed near the selector.
-    - [Client-server Connections Timeout settings](#Client-Server-Connections-Timeout) are hidden
-    - The [Encrypt Client-Server communication checkbox](#Encrypt-Client-Server-Communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is.).
-  - **Compatibility**: You need to deploy your client/server applications with 4D v20 or higher before switching to the QUIC network layer.
+  - La sélection de cette option remplace l'option Utiliser l'ancienne couche réseau si elle a été définie à l'aide de la commande [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html).
+  - Vous pouvez savoir si une application 4D est en cours d'exécution avec une couche réseau QUIC en utilisant la commande [Get application info](https://doc.4d.com/4Dv20/help/command/page1599.html).
+  - Étant donné que QUIC utilise le protocole UDP, assurez-vous que l'UDP est autorisé dans les paramètres de sécurité de votre réseau.
+  - QUIC se connecte automatiquement au port 19813 à la fois pour le serveur d'application et le serveur DB4D.
+  - Lorsque l'option de couche QUIC est sélectionnée :
+    - Un message bêta et une icône d'alerte sont affichés près du sélecteur.
+    - Les paramètres de [délai avant déconnexion client-serveur](#Client-Server-Connections-Timeout) sont masqués
+    - L'option [Crypter les communications Client-Serveur](#Crypter-les-communications-Client-Serveur) est masquée (les communications QUIC sont toujours en TLS, quel que soit votre mode sécurisé).
+  - **Compatibilité** : Vous devez déployer vos applications client/serveur avec 4D 20 ou une version supérieure avant de passer à la couche réseau QUIC.
 
 :::note
 
-In case of a modification, you need to restart the application for the change to be taken into account. Toute application cliente qui était connectée doit également être redémarrée afin de se connecter avec la nouvelle couche réseau.
+En cas de modification, vous devez redémarrer l'application pour que le changement soit pris en compte. Toute application cliente qui était connectée doit également être redémarrée afin de se connecter avec la nouvelle couche réseau.
 
 :::
 
@@ -108,12 +108,12 @@ Cette option permet d'activer le mode sécurisé pour les communications entre l
 
 #### Mise à jour du dossier Resources en cours de session
 
-This setting can be used to globally set the updating mode for the local instance of the **Resources** folder on the connected 4D machines when the **Resources** folder of the database is modified during the session (the **Resources** folder is automatically synchronized on the remote machine each time a session is opened). Trois paramètres sont disponibles :
+Ce paramètre permet de définir globalement le mode de mise à jour de l'instance locale du dossier **Resources** sur les machines 4D connectées lorsque le dossier **Resources** de la base de données est modifié en cours de session (le dossier **Ressources** est automatiquement synchronisé sur la machine distante à chaque ouverture de session). Trois paramètres sont disponibles :
 
-- **Jamais** : Le dossier **Resources** local n'est pas mis à jour pendant la session. La notification envoyée par le serveur est ignorée. Le dossier **Resources** local peut être mis à jour manuellement à l'aide de la commande **Update Local Resources** du menu d'action (voir [Utilisation de l'explorateur de ressources](https://doc.4d.com/4Dv19/4D/19/Using-the-Resources-explorer.300-5416788
+- **Jamais** : Le dossier **Resources** local n'est pas mis à jour pendant la session. La notification envoyée par le serveur est ignorée. Le dossier **Resources** local peut être mis à jour manuellement à l'aide de la commande **Update Local Resources** du menu d'action (voir [Utilisation de l'explorateur de ressources](https://doc.4d.com/4Dv19/4D/19/Using-the-Resources-explorer.300-5416788.en.html)).
 - **Toujours** : La synchronisation du dossier local **Resources** est automatiquement effectuée pendant la session chaque fois qu'une notification est envoyée par le serveur.
-- **Demander** : Lorsque la notification est envoyée par le serveur, une boîte de dialogue est affichée sur les postes clients, indiquant la modification. The user can then accept or refuse the synchronization of the local **Resources** folder.\
-  The **Resources** folder centralizes the custom files required for the database interface (translation files, pictures, etc.). Des mécanismes automatiques ou manuels permettent de notifier chaque client lorsque le contenu de ce dossier a été modifié. Pour plus d'informations, reportez-vous à la section [Gestion du dossier Resources](https://doc.4d.com/4Dv19/4D/19/Gestion-du-dossier-Resources.300-5422466.fe.html).
+- **Demander** : Lorsque la notification est envoyée par le serveur, une boîte de dialogue est affichée sur les postes clients, indiquant la modification. L'utilisateur peut ensuite accepter ou refuser la synchronisation du dossier **Resources** local.\
+  Le dossier **Resources** centralise les fichiers personnalisés nécessaires à l'interface de la base de données (fichiers de traduction, images, etc.). Des mécanismes automatiques ou manuels permettent de notifier chaque client lorsque le contenu de ce dossier a été modifié. Pour plus d'informations, reportez-vous à la section [Gestion du dossier Resources](https://doc.4d.com/4Dv19/4D/19/Gestion-du-dossier-Resources.300-5422466.fe.html).
 
 ## Page Configuration IP
 

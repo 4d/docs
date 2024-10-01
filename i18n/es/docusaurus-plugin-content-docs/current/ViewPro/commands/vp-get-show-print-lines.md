@@ -9,15 +9,15 @@ title: VP Get show print lines
 
 <!-- REF #_method_.VP Get show print lines.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                         |                  |
-| ---------- | ------- | -- | ------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                        |                  |
+| Parámetros | Tipo    |                             | Descripción                                                         |                  |
+| ---------- | ------- | --------------------------- | ------------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                        |                  |
 | sheet      | Integer | <- | Índice de la hoja                                                   |                  |
 | Resultado  | Boolean | <- | True si las líneas de impresión son visibles, de lo contrario False | <!-- END REF --> |
 
 #### Descripción
 
-The `VP Get show print lines` command <!-- REF #_method_.VP Get show print lines.Summary -->returns `True` if the print preview lines are visible and `False` if they are hidden.<!-- END REF -->
+El comando `VP Get show print lines` <!-- REF #_method_.VP Get show print lines.Summary -->devuelve `True` si las líneas de la vista previa de impresión están visibles y `False` si están ocultas.<!-- END REF -->
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 

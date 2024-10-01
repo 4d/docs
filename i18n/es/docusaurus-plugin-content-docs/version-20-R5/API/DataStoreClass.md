@@ -49,9 +49,9 @@ Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrad
 
 <!-- REF #_command_.ds.Params -->
 
-| Parámetros | Tipo                         |    | Descripción                                     |
-| ---------- | ---------------------------- | -- | ----------------------------------------------- |
-| localID    | Text                         | -> | ID local del almacén de datos remoto a devolver |
+| Parámetros | Tipo                         |                             | Descripción                                     |
+| ---------- | ---------------------------- | --------------------------- | ----------------------------------------------- |
+| localID    | Text                         | ->                          | ID local del almacén de datos remoto a devolver |
 | Result     | cs.DataStore | <- | Referencia al almacén de datos                  |
 
 <!-- END REF -->
@@ -119,10 +119,10 @@ Utilizando el almacén de datos principal de la base 4D:
 
 <!-- REF #_command_.Open datastore.Params -->
 
-| Parámetros     | Tipo                         |    | Descripción                                                                                         |
-| -------------- | ---------------------------- | -- | --------------------------------------------------------------------------------------------------- |
-| connectionInfo | Object                       | -> | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto                         |
-| localID        | Text                         | -> | Id para asignar al almacén de datos abierto en la aplicación local (obligatorio) |
+| Parámetros     | Tipo                         |                             | Descripción                                                                                         |
+| -------------- | ---------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------- |
+| connectionInfo | Object                       | ->                          | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto                         |
+| localID        | Text                         | ->                          | Id para asignar al almacén de datos abierto en la aplicación local (obligatorio) |
 | Result         | cs.DataStore | <- | Objeto del almacén de datos                                                                         |
 
 <!-- END REF -->
@@ -158,15 +158,15 @@ Una vez abierta la sesión, las siguientes sentencias son equivalentes y devuelv
 
 Pase en *connectionInfo* un objeto que describa el almacén de datos remoto al que desea conectarse. Todas las propiedades son opcionales excepto *hostname* :
 
-| Propiedad         | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ----------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hostname          | Text    | Nombre o dirección IP de la base de datos remota + ":" + número de puerto (el número de puerto es obligatorio)                                                                                                                                                                                                                                                                                                         |
-| user              | Text    | Nombre de usuario                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| contraseña        | Text    | Contraseña del usuario. Por defecto, la contraseña se envía en claro, por lo que es **fuertemente recomendable** utilizar comunicaciones cifradas pasando `true` en la propiedad `tls`.                                                                                                                                                                                                                                   |
+| Propiedad         | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ----------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hostname          | Text    | Nombre o dirección IP de la base de datos remota + ":" + número de puerto (el número de puerto es obligatorio)                                                                                                                                                                                                                                                                                                                                  |
+| user              | Text    | Nombre de usuario                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| contraseña        | Text    | Contraseña del usuario. Por defecto, la contraseña se envía en claro, por lo que es **fuertemente recomendable** utilizar comunicaciones cifradas pasando `true` en la propiedad `tls`.                                                                                                                                                                                                                                                            |
 | idleTimeout       | Longint | Tiempo de espera de la sesión de inactividad (en minutos), después del cual la sesión es cerrada automáticamente por 4D. Si se omite, el valor por defecto es 60 (1h). El valor no puede ser < 60 (si se pasa un valor inferior, el tiempo de espera se establece en 60). Para más información, consulte **Cierre de sesiones**. |
-| tls               | Boolean | Utilice una conexión segura(\*). Si se omite, es false por defecto. Se recomienda utilizar una conexión segura siempre que sea posible.                                                                                                                                                                                                                                                |
-| passwordAlgorithm | Text    | Pasa "4d-rest-digest" si el servidor valida la contraseña utilizando el comando [`Validate password`](https://doc.4d.com/4dv20/help/command/en/page638.html) con el parámetro *digest* definido en `true`.                                                                                                                                                                                                                                |
-| type              | Text    | Debe ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| tls               | Boolean | Utilice una conexión segura(\*). Si se omite, es false por defecto. Se recomienda utilizar una conexión segura siempre que sea posible.                                                                                                                                                                                                                                                                         |
+| passwordAlgorithm | Text    | Pasa "4d-rest-digest" si el servidor valida la contraseña utilizando el comando [`Validate password`](https://doc.4d.com/4dv20/help/command/en/page638.html) con el parámetro *digest* definido en `true`.                                                                                                                                                                                                                                                         |
+| type              | Text    | Debe ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 (\*) Si tls es true, se utiliza el protocolo HTTPS si:
 
@@ -336,9 +336,9 @@ En estos casos, puedes utilizar `.clearAllRemoteContexts()` para borrar sus cont
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 
-| Parámetros | Tipo   |     | Descripción                                                              |
-| ---------- | ------ | :-: | ------------------------------------------------------------------------ |
-| Result     | Object |  <- | Información sobre el cifrado del almacén de datos actual y de cada tabla |
+| Parámetros | Tipo   |                             | Descripción                                                              |
+| ---------- | ------ | :-------------------------: | ------------------------------------------------------------------------ |
+| Result     | Object | <- | Información sobre el cifrado del almacén de datos actual y de cada tabla |
 
 <!-- END REF -->
 
@@ -488,8 +488,8 @@ ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
 
-| Parámetros | Tipo       |    | Descripción                                    |
-| ---------- | ---------- | -- | ---------------------------------------------- |
+| Parámetros | Tipo       |                             | Descripción                                    |
+| ---------- | ---------- | --------------------------- | ---------------------------------------------- |
 | Result     | Collection | <- | Colección de objetos contextos de optimización |
 
 <!-- END REF -->
@@ -565,8 +565,8 @@ $info:=$ds.getAllRemoteContexts()
 
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
 
-| Parámetros | Tipo |    | Descripción                                      |
-| ---------- | ---- | -- | ------------------------------------------------ |
+| Parámetros | Tipo |                             | Descripción                                      |
+| ---------- | ---- | --------------------------- | ------------------------------------------------ |
 | Result     | Real | <- | Valor actual del marcador de modificación global |
 
 <!-- END REF -->
@@ -617,9 +617,9 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 <!-- REF #DataStoreClass.getInfo().Params -->
 
-| Parámetros | Tipo   |     | Descripción                      |
-| ---------- | ------ | :-: | -------------------------------- |
-| Result     | Object |  <- | Propiedades del almacén de datos |
+| Parámetros | Tipo   |                             | Descripción                      |
+| ---------- | ------ | :-------------------------: | -------------------------------- |
+| Result     | Object | <- | Propiedades del almacén de datos |
 
 <!-- END REF -->
 
@@ -687,9 +687,9 @@ En un almacén de datos remoto:
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
 
-| Parámetros  | Tipo   |    | Descripción              |
-| ----------- | ------ | -- | ------------------------ |
-| contextName | Text   | -> | Nombre del contexto      |
+| Parámetros  | Tipo   |                             | Descripción              |
+| ----------- | ------ | --------------------------- | ------------------------ |
+| contextName | Text   | ->                          | Nombre del contexto      |
 | Result      | Object | <- | Descripción del contexto |
 
 <!-- END REF -->
@@ -739,9 +739,9 @@ Ver el ejemplo de la sección [`.setRemoteContextInfo()`](#example-1-3).
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
 
-| Parámetros | Tipo       |     | Descripción                                                    |
-| ---------- | ---------- | :-: | -------------------------------------------------------------- |
-| Result     | Collection |  <- | Colección de objetos, donde cada objeto describe una solicitud |
+| Parámetros | Tipo       |                             | Descripción                                                    |
+| ---------- | ---------- | :-------------------------: | -------------------------------------------------------------- |
+| Result     | Collection | <- | Colección de objetos, donde cada objeto describe una solicitud |
 
 <!-- END REF -->
 
@@ -779,9 +779,9 @@ Vea el ejemplo 2 de [`.startRequestLog()`](#startrequestlog).
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 
-| Parámetros | Tipo    |     | Descripción                                                                                                        |
-| ---------- | ------- | :-: | ------------------------------------------------------------------------------------------------------------------ |
-| Result     | Boolean |  <- | True si el acceso al Explorador de Datos está desactivado, False si está activado (por defecto) |
+| Parámetros | Tipo    |                             | Descripción                                                                                                        |
+| ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------ |
+| Result     | Boolean | <- | True si el acceso al Explorador de Datos está desactivado, False si está activado (por defecto) |
 
 <!-- END REF -->
 
@@ -813,8 +813,8 @@ Por defecto, se concede acceso al Data Explorer para las sesiones `webAdmin`, pe
 
 <!-- REF #DataStoreClass.locked().Params -->
 
-| Parámetros | Tipo    |    | Descripción       |
-| ---------- | ------- | -- | ----------------- |
+| Parámetros | Tipo    |                             | Descripción       |
+| ---------- | ------- | --------------------------- | ----------------- |
 | Result     | Boolean | <- | True si bloqueado |
 
 <!-- END REF -->
@@ -886,10 +886,10 @@ Cuando no se llama a esta función, las nuevas selecciones de entidades pueden s
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
 
-| Parámetros    | Tipo   |    | Descripción                                              |
-| ------------- | ------ | -- | -------------------------------------------------------- |
-| curPassPhrase | Text   | -> | Frase de cifrado actual                                  |
-| curDataKey    | Object | -> | Llave de encriptación de datos actual                    |
+| Parámetros    | Tipo   |                             | Descripción                                              |
+| ------------- | ------ | --------------------------- | -------------------------------------------------------- |
+| curPassPhrase | Text   | ->                          | Frase de cifrado actual                                  |
+| curDataKey    | Object | ->                          | Llave de encriptación de datos actual                    |
 | Result        | Object | <- | Resultado de la coincidencia de la llave de encriptación |
 
 <!-- END REF -->

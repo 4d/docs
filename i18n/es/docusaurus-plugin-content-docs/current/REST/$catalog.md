@@ -3,7 +3,7 @@ id: catalog
 title: $catalog
 ---
 
-The catalog describes all the dataclasses, attributes, and [interprocess (shared) singletons](../Concepts/classes.md#singleton-classes) available in the project.
+El catálogo describe todas las clases de datos, atributos y [singletoneos interproceso (compartidos)](../Concepts/classes.md#singleton-classes) disponibles en el proyecto.
 
 ## Sintaxis disponible
 
@@ -40,7 +40,7 @@ A continuación se describen las propiedades devueltas para cada clase de datos 
 
 ```json
 {
-    dataClasses: [
+    dataClass: [
         {
             name: "Company",
             uri: "http://127.0.0.1:8081/rest/$catalog/Company",
@@ -63,7 +63,7 @@ Devuelve los [singletons compartidos](#singletons) (si los hay) e información s
 
 Llamando `$catalog/$all` puede recibir información detallada sobre los atributos de cada una de las clases de datos del modelo activo del proyecto.
 
-For more information about what is returned for each dataclass and its attributes, use [`$catalog/\{dataClass\}`](#catalogdataclass).
+Para obtener más información sobre lo que se devuelve para cada clase de datos y sus atributos, utilice [`$catalog/\{dataClass\}`](#catalogdataclass).
 
 ### Ejemplo
 
@@ -328,7 +328,7 @@ Puede recuperar la información relativa a una clase de datos específica.
 
 ## singletons
 
-If you have defined [shared singletons](../Concepts/classes.md#singleton-classes) containing at least one [exposed function](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions), a `singletons` section is added to the returned json for both the `/$catalog` and `/$catalog/$all` syntaxes. Contiene la colección de clases singleton como objetos con su **nombre** y **métodos** (es decir, funciones expuestas).
+Si ha definido [instancias compartidas](../Concepts/classes.md#clases-singleton) que contienen al menos una [función expuesta](../ORDA/ordaClasses.md#funciones-expuestas-vs-no-expuestas), se agrega una sección `singletons` al json devuelto tanto para la sintaxis `/$catalog` como `/$catalog/$all`. Contiene la colección de clases singleton como objetos con su **nombre** y **métodos** (es decir, funciones expuestas).
 
 Las funciones Singleton pueden ser llamadas por peticiones REST utilizando el comando [`$singleton`]($singleton.md).
 

@@ -3,11 +3,11 @@ id: sessions
 title: Sessões web
 ---
 
-The 4D web server provides built-in features for managing **web sessions**. Creating and maintaining web sessions allows you to control and improve the user experience on your web application. When web sessions are enabled, web clients can reuse the same server context from one request to another.
+O servidor web 4D oferece recursos integrados para gerenciar **sessões web**. Creating and maintaining web sessions allows you to control and improve the user experience on your web application. When web sessions are enabled, web clients can reuse the same server context from one request to another.
 
 As sessões Web permitem:
 
-- handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web sessions are **scalable**),
+- manipular várias solicitações simultaneamente do mesmo cliente web através de um número ilimitado de processos preventivos (sessões web são **escaláveis**),
 - manage session through a `Session` object and the [Session API](API/SessionClass.md),
 - store and share data between processes of a web client using the [.storage](../API/SessionClass.md#storage) of the session,
 - associate privileges to the user running the session.
@@ -23,7 +23,7 @@ As sessões Web são usadas para:
 
 The session management feature can be enabled and disabled on your 4D web server. Existem diferentes formas de ativar a gestão de sessões:
 
-- Using the **Scalable sessions** option on the "Web/Options (I)" page of the Settings (permanent setting):
+- Usando a opção **Sessões escalonáveis** na página "Web/Opções (I)" das Propriedades (configuração permanente):
   ![alt-text](../assets/en/WebServer/settingsSession.png)
 
 Esta opção é selecionada por defeito nos novos projetos. Sin embargo, se puede desactivar seleccionando la opción **Sin sesiones**, en cuyo caso las funcionalidades de la sesión web se desactivan (no hay ningún objeto `Session` disponible).
@@ -89,7 +89,7 @@ This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeo
 When a web session is closed, if the [`Session`](API/SessionClass.md#session) command is called afterwards:
 
 - el objeto `Session` no contiene privilegios (es una sesión de invitado)
-- the [`.storage`](API/SessionClass.md#storage) property is empty
+- a propriedade [`storage`](API/SessionClass.md#storage) está vazia
 - um novo cookie de sessão é associado à sessão
 
 :::info
@@ -100,9 +100,9 @@ You can close a session from a Qodly form using the [**logout**](qodly-studio.md
 
 ## Privilégios
 
-Privileges can be associated to web user sessions. On the web server, you can provide specific access or features depending on the privileges of the session.
+Os privilégios podem ser associados a sessões usuário Web. On the web server, you can provide specific access or features depending on the privileges of the session.
 
-You assign privileges using the [`.setPrivileges()`](API/SessionClass.md#setprivileges) function. In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/SessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **Guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
+Você atribui privilégios usando a função [`.setPrivileges()`](API/SessionClass.md#setprivileges). In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/SessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **Guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
 
 Exemplo:
 

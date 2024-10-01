@@ -9,7 +9,7 @@ title: VP SET SELECTION
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
-| 引数       | タイプ    |    | 説明             |                  |
+| 引数       | 型      |    | 説明             |                  |
 | -------- | ------ | -- | -------------- | ---------------- |
 | rangeObj | Object | -> | 複数セルのレンジオブジェクト | <!-- END REF --> |
 

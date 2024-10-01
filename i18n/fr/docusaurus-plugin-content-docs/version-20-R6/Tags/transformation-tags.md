@@ -33,29 +33,15 @@ Il est possible de combiner plusieurs types de balises. Par exemple, la structur
 </HTML>
 ```
 
-```mermaid
-sequenceDiagram
-    participant Alice
-    participant Bob
-    Alice->>John: Hello John, how are you?
-    loop Health check
-        John->>John: Fight against hypochondria
-    end
-    Note right of John: Rational thoughts <br/>prevail!
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
-```
-
 ## Principes d'utilisation des balises
 
 ### Parsing
 
-Parsing the contents of a *template* source is done in two contexts:
+L'analyse ou le parsing du contenu d'une source de *template* se fait dans deux contextes :
 
-- Using the `PROCESS 4D TAGS` command; this command accepts a *template* as input, as well as optional parameters and returns a text resulting from the processing.
+- En utilisant la commande `PROCESS 4D TAGS`; cette commande accepte un *template* en entrée, ainsi que des paramètres optionnels et retourne un texte résultant du traitement.
 
-- Using 4D's integrated HTTP server: [template pages](WebServer/templates.md) sent by means of the `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` commands, or called using URLs. Dans ce dernier cas, à des fins d'optimisation, les pages suffixées par ".htm" et ".html" ne sont PAS parsées. In order to parse HTML pages in this case, you must add the suffix “.shtm” or “.shtml” (for example, http://www.server.com/dir/page.shtm).
+- En utilisant le serveur HTTP intégré de 4D : [pages de templates](WebServer/templates.md) envoyées au moyen des commandes `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` , ou appelées en utilisant des URL. Dans ce dernier cas, à des fins d'optimisation, les pages suffixées par ".htm" et ".html" ne sont PAS parsées. Pour analyser les pages HTML dans ce cas, vous devez ajouter le suffixe « .shtm » ou « .shtml » (par exemple, <http://www.server.com/dir/page.shtm>).
 
 ### Traitement récursif
 
@@ -65,7 +51,7 @@ Les balises 4D sont interprétées de manière récursive : 4D tente toujours de
 <!--#4DHTML [Mail]Letter_type-->
 ```
 
-If the `[Mail]Letter_type` text field itself contains a tag, for example `<!--#4DSCRIPT/m_Gender-->`, this tag will be evaluated recursively after the interpretation of the 4DHTML tag.
+Si le champ texte `[Mail]Letter_type` contient lui-même une balise, par exemple `<! -#4DSCRIPT/m_Gender-->`, cette balise sera évaluée récursivement après l'interprétation de la balise 4DHTML.
 
 Ce principe puissant répond à la plupart des besoins liés à la transformation des textes. Note, however, that in some cases this can also allow malicious code to be inserted in the web context, [which can be avoided](WebServer/templates.md#prevention-of-malicious-code-insertion).
 
@@ -99,7 +85,7 @@ Le code suivant, qui doit spécifier un chemin relatif pour chaque appel :
 <!--#4DINCLUDE ../folder/subpage.html-->
 ```
 
-... is equivalent to:
+... est équivalent à :
 
 ```html
 <!--#4DINCLUDE subpage.html-->
@@ -126,7 +112,7 @@ Par exemple, pour définir un répertoire pour la page d'accueil :
 <!--#4DINCLUDE footer.html-->
 ```
 
-In the "head.html" file, the current folder is modified through `<!--#4DBASE -->`, without this changing its value in "Index.html":
+Dans le fichier "head.html", le dossier courant est modifié via `<!--#4DBASE -->`, sans que cela ne modifie sa valeur dans "Index.html":
 
 ```html
 /* Head.htm */
@@ -143,9 +129,9 @@ In the "head.html" file, the current folder is modified through `<!--#4DBASE -->
 
 #### Syntax: `<!--#4DCODE codeLines-->`
 
-The `4DCODE` tag allows you to insert a multi-line 4D code block in a template.
+La balise `4DCODE` permet d'insérer un bloc de code 4D de plusieurs lignes dans un template.
 
-When a `<!--#4DCODE` sequence is detected that is followed by a space, a CR or a LF character, 4D interprets all the lines of code up to the next `-->` sequence. Le bloc de code lui-même peut contenir des retours chariot, des sauts de ligne ou les deux ; il sera interprété séquentiellement par 4D.
+Lorsqu'une séquence `<!--#4DCODE` est détectée et qu'elle est suivie d'un espace, d'un caractère CR ou LF, 4D interprète toutes les lignes de code jusqu'à la séquence `-->` suivante. Le bloc de code lui-même peut contenir des retours chariot, des sauts de ligne ou les deux ; il sera interprété séquentiellement par 4D.
 
 Par exemple, vous pouvez écrire dans un template :
 
@@ -702,7 +688,7 @@ au lieu de :
 
 Le principal avantage de cette syntaxe est qu'elle vous permet d'écrire des modèles conformes à XML. Certains développeurs 4D ont besoin de créer et de valider des modèles basés sur XML à l'aide d'outils d'analyse syntaxique XML standard. Since the "<" character is invalid in an XML attribute value, it was not possible to use the "`<!-- -->`" syntax of 4D tags without breaking the document syntax. On the other hand, escaping the "<" character will prevent 4D from interpreting the tags correctly.
 
-For example, the following code would cause an XML parsing error because of the first "<" character in the attribute value:
+Par exemple, le code suivant provoquerait une erreur d'analyse XML en raison du premier caractère "<" dans la valeur de l'attribut :
 
 ```xml
 <line x1="<!--#4DEVAL $x-->" y1="<!--#4DEVAL $graphY1-->"/>

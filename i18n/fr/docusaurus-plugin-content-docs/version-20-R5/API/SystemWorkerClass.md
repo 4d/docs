@@ -61,11 +61,11 @@ $myMacWorker:= 4D.SystemWorker.new("chmod x /folder/myfile.sh")
 
 <!-- REF #4D.SystemWorker.new().Params -->
 
-| Paramètres  | Type                            |     | Description                                                            |
-| ----------- | ------------------------------- | :-: | ---------------------------------------------------------------------- |
-| commandLine | Text                            |  -> | Ligne de commande à exécuter                                           |
-| options     | Object                          |  -> | Paramètres du worker                                                   |
-| result      | 4D.SystemWorker |  <- | Nouveau System worker asynchrone ou null si le process n'a pas démarré |
+| Paramètres  | Type                            |                             | Description                                                            |
+| ----------- | ------------------------------- | :-------------------------: | ---------------------------------------------------------------------- |
+| commandLine | Text                            |              ->             | Ligne de commande à exécuter                                           |
+| options     | Object                          |              ->             | Paramètres du worker                                                   |
+| result      | 4D.SystemWorker | <- | Nouveau System worker asynchrone ou null si le process n'a pas démarré |
 
 <!-- END REF -->
 
@@ -550,10 +550,10 @@ Cette propriété est en **lecture seule**.
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 
-| Paramètres | Type                            |     | Description                                      |
-| ---------- | ------------------------------- | :-: | ------------------------------------------------ |
-| timeout    | Real                            |  -> | Temps d'attente (en secondes) |
-| Résultat   | 4D.SystemWorker |  <- | Objet SystemWorker                               |
+| Paramètres | Type                            |                             | Description                                      |
+| ---------- | ------------------------------- | :-------------------------: | ------------------------------------------------ |
+| timeout    | Real                            |              ->             | Temps d'attente (en secondes) |
+| Résultat   | 4D.SystemWorker | <- | Objet SystemWorker                               |
 
 <!-- END REF -->
 

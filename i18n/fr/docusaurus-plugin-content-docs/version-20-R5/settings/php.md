@@ -3,11 +3,11 @@ id: php
 title: Page PHP
 ---
 
-You can [execute PHP scripts in 4D](https://doc.4d.com/4Dv20/4D/20.1/Executing-PHP-scripts-in-4D.300-6480814.en.html). This page allows you to configure the interpreter.
+Vous pouvez [exécuter des scripts PHP dans 4D](https://doc.4d.com/4Dv20/4D/20.1/Executing-PHP-scripts-in-4D.300-6480814.en.html). Cette page vous permet de configurer l'interpréteur.
 
 :::note
 
-These settings are specified for all connected machines and all sessions. You can also modify and read them separately for each machine and each session using the [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html) and [`Get database parameter`](https://doc.4d.com/4dv20/help/command/en/page643.html) commands. The parameters modified by the `SET DATABASE PARAMETER` command have priority for the current session.
+Ces paramètres sont définis pour toutes les machines connectées et toutes les sessions. Vous pouvez également les modifier et les lire séparément pour chaque machine et chaque session en utilisant les commandes [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/fe/page7836.html) et [`Get database parameter`](https://doc.4d.com/4dv20/help/command/fe/page7837.html). Les paramètres modifiés par la commande `SET DATABASE PARAMETER` ont la priorité pour la session courante.
 
 :::
 
@@ -15,12 +15,12 @@ These settings are specified for all connected machines and all sessions. You ca
 
 ### Adresse IP
 
-Address of the PHP interpreter where PHP execution requests must be adressed. By default, 4D uses the address 127.0.0.1.
+Adresse de l'interpréteur PHP où les demandes d'exécution PHP doivent être adressées. Par défaut, 4D utilise l'adresse 127.0.0.1.
 
-Note that the HTTP address must be on the same machine as 4D.
+Notez que l'adresse HTTP doit être sur la même machine que 4D.
 
-### Port number
+### Numéro de port
 
-Port number of the PHP interpreter. By default, 4D uses the port 8002.
+Numéro de port de l'interpréteur PHP. Par défaut, 4D utilise le port 8002.
 
-You can change the address and/or port if they are already used by another service or if you have several interpreters on the same machine.
+Vous pouvez modifier cette adresse et/ou ce port s'ils sont déjà utilisés par un autre service ou si vous avez plusieurs interpréteurs sur la même machine.

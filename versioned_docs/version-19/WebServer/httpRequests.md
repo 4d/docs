@@ -11,13 +11,14 @@ The 4D web server provides several features to handle HTTP requests:
 - other commands such as `WEB GET HTTP BODY`, `WEB GET HTTP HEADER`, or `WEB GET BODY PART` allow to customize the request processing, including cookies.
 - the *COMPILER_WEB* project method, to declare your variables.
 
+
 ## On Web Connection
 
 The `On Web Connection` database method can be used as the entry point for the 4D Web server.
 
 ### Database method calls
 
-The `On Web Connection` database method is automatically called when the server reveives any URL that is not a path to an existing page on the server. The database method is called with the URL.
+The `On Web Connection` database method is automatically called when the server receives any URL that is not a path to an existing page on the server. The database method is called with the URL.
 
 For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*" will not call the database method if the page "c.html" exists in the "a/b" subfolder of the [WebFolder](webServerConfig.md#root-folder).
 
@@ -36,13 +37,14 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 |$5|Text|<-|User name |
 |$6|Text|<-|Password |
 
+
 You must declare these parameters as shown below:
 
 ```4d
 //On Web Connection database method
- 
+
  C_TEXT($1;$2;$3;$4;$5;$6)
- 
+
 //Code for the method
 ```
 
@@ -56,7 +58,9 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md#named-p
 
 ```
 
+
 > Calling a 4D command that displays an interface element (`DIALOG`, `ALERT`, etc.) is not allowed and ends the method processing.
+
 
 ### $1 - URL extra data
 
@@ -67,12 +71,13 @@ Let’s use an intranet connection as an example. Suppose that the IP address of
 |URL entered in web browser|Value of parameter $1|
 |---|---|
 |123.4.567.89|/ |
-|<http://123.45.67.89>|/ |
+|http://123.45.67.89|/ |
 |123.4.567.89/Customers|/Customers |
-|<http://123.45.67.89/Customers/Add>|/Customers/Add |
+|http://123.45.67.89/Customers/Add|/Customers/Add |
 |123.4.567.89/Do_This/If_OK/Do_That|/Do_This/If_OK/Do_That |
 
 Note that you are free to use this parameter at your convenience. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
+
 
 ### $2 - Header and Body of the HTTP request
 
@@ -81,6 +86,7 @@ The second parameter ($2) is the header and the body of the HTTP request sent by
 If your application uses this information, it is up to you to parse the header and the body. You can use the `WEB GET HTTP HEADER` and the `WEB GET HTTP BODY` commands.
 
 >For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Beyond this size, they are truncated by the 4D HTTP server.
+
 
 ### $3 - Web client IP address
 
@@ -97,6 +103,9 @@ The $4 parameter receives the IP address requested by the 4D Web Server. 4D allo
 The $5 and $6 parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser, if applicable (see the [authentication page](authentication.md)).
 
 >If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
+
+
+
 
 ## /4DACTION
 
@@ -141,7 +150,7 @@ var $path : Text
 var $PictVar : Picture
 var $BlobVar : Blob
 
- //find the picture in the Images folder within the Resources folder 
+ //find the picture in the Images folder within the Resources folder
 $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd"
 
 READ PICTURE FILE($path;$PictVar) //put the picture in the picture variable
@@ -154,7 +163,6 @@ WEB SEND BLOB($BLOB;"image/png")
 The 4D Web server also allows you to use “posted” forms, which are static HTML pages that send data to the Web server, and to easily retrieve all the values. The POST type must be associated to them and the form’s action must imperatively start with /4DACTION/MethodName.
 
 A form can be submitted through two methods (both can be used with 4D):
-
 - POST, usually used to send data to the Web server,
 - GET, usually used to request data from the Web server.
 
@@ -217,6 +225,10 @@ OK="Search"
 End if
 ```
 
+
+
+
+
 ## Getting values from HTTP requests
 
 4D's Web server lets you recover data sent through POST or GET requests, using Web forms or URLs.
@@ -254,15 +266,15 @@ return false
  name="frmWelcome"
  onsubmit="return GetBrowserInformation(frmWelcome)">
   <h1>Welcome to Spiders United</h1>
-  <b>Please enter your name:</b>
+  <p><b>Please enter your name:</b>
   <input name="vtUserName" value="" size="30" type="text"></p>
-   
-<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit"> 
+  <p>
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit">
 <input name="vsbRegister" value="Register" type="submit">
 <input name="vsbInformation" value="Information" type="submit"></p>
- 
-<input name="vtNav_appName" value="" type="hidden"> 
-<input name="vtNav_appVersion" value="" type="hidden"> 
+<p>
+<input name="vtNav_appName" value="" type="hidden">
+<input name="vtNav_appVersion" value="" type="hidden">
 <input name="vtNav_appCodeName" value="" type="hidden">
 <input name="vtNav_userAgent" value="" type="hidden"></p>
 </form>
@@ -289,9 +301,9 @@ Let’s examine the 4D method `WWW_STD_FORM_POST` that is called when the user c
  ARRAY TEXT($arrValues;0)
  WEB GET VARIABLES($arrNames;$arrValues)
  C_LONGINT($user)
- 
+
  Case of
- 
+
   // The Log On button was clicked
     :(Find in array($arrNames;"vsbLogOn")#-1)
        $user :=Find in array($arrNames;"vtUserName")
@@ -301,15 +313,15 @@ Let’s examine the 4D method `WWW_STD_FORM_POST` that is called when the user c
           WWW POST EVENT("Log On";WWW Log information)
   // The WWW POST EVENT method saves the information in a database table
        Else
- 
+
           $0:=WWW Register
   // The WWW Register method lets a new Web user register
        End if
- 
+
   // The Register button was clicked
     :(Find in array($arrNames;"vsbRegister")#-1)
        $0:=WWW Register
- 
+
   // The Information button was clicked
     :(Find in array($arrNames;"vsbInformation")#-1)
        WEB SEND FILE("userinfos.html")
@@ -322,6 +334,7 @@ The features of this method are:
 - Out of the *vsbLogOn*, *vsbRegister* and *vsbInformation* variables bound to the three Submit buttons, only the one corresponding to the button that was clicked will be retrieved by the `WEB GET VARIABLES` command. When the submit is performed by one of these buttons, the browser returns the value of the clicked button to 4D. This tells you which button was clicked.
 
 Keep in main that with HTML, all objects are text objects. If you use a SELECT object, it is the value of the highlighted element in the object that is returned in the `WEB GET VARIABLES` command, and not the position of the element in the array as in 4D. `WEB GET VARIABLES` always returns values of the Text type.
+
 
 ## Other Web Server Commands
 

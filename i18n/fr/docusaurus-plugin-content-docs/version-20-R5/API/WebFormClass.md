@@ -158,9 +158,9 @@ Pour plus d'informations, veuillez vous référer à la [description de la méth
 
 <!-- REF #_command_.Web Form.Params -->
 
-| Paramètres | Type                       |     | Description                  |
-| ---------- | -------------------------- | :-: | ---------------------------- |
-| Résultat   | 4D.WebForm |  <- | Nouvel objet proxy `WebForm` |
+| Paramètres | Type                       |                             | Description                  |
+| ---------- | -------------------------- | :-------------------------: | ---------------------------- |
+| Résultat   | 4D.WebForm | <- | Nouvel objet proxy `WebForm` |
 
 <!-- END REF -->
 
@@ -176,9 +176,9 @@ Pour plus d'informations, veuillez vous référer à la [description de la comma
 
 <!-- REF #_command_.Web Event.Params -->
 
-| Paramètres | Type   |     | Description |
-| ---------- | ------ | :-: | ----------- |
-| Résultat   | object |  <- | object      |
+| Paramètres | Type   |                             | Description |
+| ---------- | ------ | :-------------------------: | ----------- |
+| Résultat   | object | <- | object      |
 
 <!-- END REF -->
 

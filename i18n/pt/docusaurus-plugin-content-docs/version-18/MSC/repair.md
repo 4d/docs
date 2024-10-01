@@ -63,7 +63,7 @@ Next select the table you want to assign to the group in the "Unassigned tables"
 
 ## Abrir arquivo de registo
 
-After repair is completed, 4D generates a log file in the Logs folder of the database. Este arquivo permite visualizar todas as operações efectuadas. It is created in XML format and named:  *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
+After repair is completed, 4D generates a log file in the Logs folder of the database. Este arquivo permite visualizar todas as operações efectuadas. É criado no formato XML e chamado: *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" onde:
 
 - *DatabaseName* is the name of the project file without any extension, for example "Invoices",
 - *yyyy-mm-dd hh-mm-ss* é o carimbo de data/hora do arquivo, com base na hora do sistema local quando a operação de manutenção foi iniciada, por exemplo "2019-02-11 15-20-45".

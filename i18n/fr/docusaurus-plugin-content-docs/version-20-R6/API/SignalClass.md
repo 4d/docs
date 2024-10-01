@@ -102,10 +102,10 @@ Méthode ***OpenForm*** :
 
 <!-- REF #_command_.New signal.Params -->
 
-| Paramètres  | Type                      |     | Description                  |
-| ----------- | ------------------------- | :-: | ---------------------------- |
-| Description | Text                      |  -> | Description du signal        |
-| Résultat    | 4D.Signal |  <- | Object encapsulant le signal |
+| Paramètres  | Type                      |                             | Description                  |
+| ----------- | ------------------------- | :-------------------------: | ---------------------------- |
+| Description | Text                      |              ->             | Description du signal        |
+| Résultat    | 4D.Signal | <- | Object encapsulant le signal |
 
 <!-- END REF -->
 
@@ -250,9 +250,9 @@ Si le signal est déjà dans l'état signaled (i.e., la propriété `signaled` e
 
 <!-- REF #SignalClass.wait().Params -->
 
-| Paramètres | Type    |    | Description                                   |
-| ---------- | ------- | -- | --------------------------------------------- |
-| timeout    | Real    | -> | Délai d'attente maximum du signal en secondes |
+| Paramètres | Type    |                             | Description                                   |
+| ---------- | ------- | --------------------------- | --------------------------------------------- |
+| timeout    | Real    | ->                          | Délai d'attente maximum du signal en secondes |
 | Résultat   | Boolean | <- | Etat de la propriété `.signaled`              |
 
 <!-- END REF -->

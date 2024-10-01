@@ -107,8 +107,8 @@ Les classes disponibles sont accessibles depuis leurs class stores. Il existe de
 
 <!-- REF #_command_.cs.Params -->
 
-| Paramètres | Type   |    | Description                                                         |                  |
-| ---------- | ------ | -- | ------------------------------------------------------------------- | ---------------- |
+| Paramètres | Type   |                             | Description                                                         |                  |
+| ---------- | ------ | --------------------------- | ------------------------------------------------------------------- | ---------------- |
 | classStore | Object | <- | Class store utilisateur utilisateurs pour le projet ou le composant | <!-- END REF --> |
 
 La commande `cs` <!-- REF #_command_.cs.Summary -->retourne le class store utilisateur pour le projet ou le composant courant<!-- END REF -->. Elle retourne toutes les classes utilisateur [définies](#class-definition) dans le projet ou le composant ouvert. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
@@ -127,8 +127,8 @@ $instance:=cs.myClass.new()
 
 <!-- REF #_command_.4D.Params -->
 
-| Paramètres | Type   |    | Description    |                  |
-| ---------- | ------ | -- | -------------- | ---------------- |
+| Paramètres | Type   |                             | Description    |                  |
+| ---------- | ------ | --------------------------- | -------------- | ---------------- |
 | classStore | Object | <- | Class store 4D | <!-- END REF --> |
 
 La commande `4D` <!-- REF #_command_.4D.Summary -->retourne le class store des classes 4D intégrées disponibles<!-- END REF -->. Elle donne accès à des API spécifiques telles que [CryptoKey](API/CryptoKeyClass.md).
@@ -379,7 +379,7 @@ Le type de propriété peut être l'un des suivants :
 | `Date`                       | Valeur date                                                               |
 | `Time`                       | Valeur Heure                                                              |
 | `Boolean`                    | Valeur booléen                                                            |
-| `Entier`                     | Valeur entier long                                                        |
+| `Integer`                    | Valeur entier long                                                        |
 | `Real`                       | Valeur réel                                                               |
 | `Pointer`                    | Valeur pointeur                                                           |
 | `Picture`                    | Valeur image                                                              |
@@ -590,9 +590,9 @@ Class constructor ($side : Integer)
 
 <!-- REF #_command_.Super.Params -->
 
-| Paramètres | Type   |    | Description                                                                   |
-| ---------- | ------ | -- | ----------------------------------------------------------------------------- |
-| param      | any    | -> | Paramètre(s) à passer au constructeur de la classe parente |
+| Paramètres | Type   |                             | Description                                                                   |
+| ---------- | ------ | --------------------------- | ----------------------------------------------------------------------------- |
+| param      | any    | ->                          | Paramètre(s) à passer au constructeur de la classe parente |
 | Résultat   | Object | <- | Parent de l'objet                                                             |
 
 <!-- END REF -->
@@ -701,8 +701,8 @@ $message:=$square.description() //I have 4 sides which are all equal
 
 <!-- REF #_command_.This.Params -->
 
-| Paramètres | Type   |    | Description   |
-| ---------- | ------ | -- | ------------- |
+| Paramètres | Type   |                             | Description   |
+| ---------- | ------ | --------------------------- | ------------- |
 | Résultat   | Object | <- | Objet courant |
 
 <!-- END REF -->
@@ -844,11 +844,11 @@ La propriété [`.isSingleton`](../API/ClassClass.md#issingleton) des objets Cla
 
 La portée d'une instance de singleton peut être le process dans lequel elle est instanciée ou tous les process de la machine, en fonction de sa propriété _shared_.
 
-| Singleton créé sur | Portée si non partagé                                                                                                | Portée si partagé  |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| 4D single-user     | Process                                                                                                              | Application        |
-| 4D Server          | Process                                                                                                              | Machine 4D Server  |
-| 4D mode distant    | Process (_note_: les singletons ne sont pas synchronisés sur les process jumeaux) | Machine 4D distant |
+| Singleton créé sur  | Portée si non partagé                                                                                                | Portée si partagé  |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| 4D mono-utilisateur | Process                                                                                                              | Application        |
+| 4D Server           | Process                                                                                                              | Machine 4D Server  |
+| 4D mode distant     | Process (_note_: les singletons ne sont pas synchronisés sur les process jumeaux) | Machine 4D distant |
 
 Une fois instanciée, une classe singleton (et son singleton) existe aussi longtemps qu'une référence à cette classe existe quelque part dans l'application sur le poste.
 

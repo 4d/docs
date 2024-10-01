@@ -17,11 +17,11 @@ title: VP SET TABLE THEME
 
 <!-- REF #_method_.VP SET TABLE THEME.Params -->
 
-| Paramètres | Type                                                                              |    | Description                             |                  |
-| ---------- | --------------------------------------------------------------------------------- | -- | --------------------------------------- | ---------------- |
-| vpAreaName | Text                                                                              | -> | Nom d'objet formulaire zone 4D View Pro |                  |
-| tableName  | Text                                                                              | -> | Nom de table                            |                  |
-| options    | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | -> | Table theme properties to modify        | <!-- END REF --> |
+| Paramètres | Type                                                                              |    | Description                                |                  |
+| ---------- | --------------------------------------------------------------------------------- | -- | ------------------------------------------ | ---------------- |
+| vpAreaName | Text                                                                              | -> | Nom d'objet formulaire zone 4D View Pro    |                  |
+| tableName  | Text                                                                              | -> | Nom de table                               |                  |
+| options    | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | -> | Propriétés du thème de la table à modifier | <!-- END REF --> |
 
 #### Description
 
@@ -52,11 +52,11 @@ Vous souhaitez obtenir ce rendu de colonne alterné :
 var $param : cs.ViewPro.TableTheme
 $param:=cs.ViewPro.TableTheme.new()
 
-// Enable the band column rendering
+// Activer le rendu bandColumn
 $param.bandColumns:=True
 $param.bandRows:=False
 
-// Create the theme object with header and column styles
+// Créer l'objet thème avec les styles d'en-tête et de colonne
 $param.theme:=cs.ViewPro.TableThemeOptions.new()
 
 var $styleHeader; $styleColumn; $styleColumn2 : cs.ViewPro.TableStyle
@@ -76,7 +76,7 @@ $styleColumn2.backColor:="LightCyan"
 $styleColumn2.foreColor:="#03045E"
 $param.theme.secondColumnStripStyle:=$styleColumn2
 
-VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
+VP SET TABLE THEME("ViewProArea" ; "myTable" ; $param)
 
 ```
 

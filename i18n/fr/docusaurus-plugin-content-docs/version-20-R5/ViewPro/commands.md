@@ -5,7 +5,7 @@ title: Commandes
 
 :::caution
 
-4D View Pro commands are not thread-safe.
+Les commandes 4D View Pro ne sont pas thread-safe.
 
 :::
 

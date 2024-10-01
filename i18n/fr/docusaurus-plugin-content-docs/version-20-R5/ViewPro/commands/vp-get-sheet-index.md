@@ -9,19 +9,19 @@ title: VP Get sheet index
 
 <!-- REF #_method_.VP Get sheet index.Params -->
 
-| Paramètres | Type    |    | Description                             |                  |
-| ---------- | ------- | -- | --------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |                  |
-| name       | Text    | -> | Nom de la feuille                       |                  |
+| Paramètres | Type    |                             | Description                             |                  |
+| ---------- | ------- | --------------------------- | --------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro |                  |
+| name       | Text    | ->                          | Nom de la feuille                       |                  |
 | Résultat   | Integer | <- | Numéro d'indice de la feuille           | <!-- END REF --> |
 
 #### Description
 
-The `VP Get sheet index` command <!-- REF #_method_.VP Get sheet index.Summary -->returns the index of a sheet based on its name in _vpAreaName_.<!-- END REF -->
+La commande `VP Get sheet index` <!-- REF #_method_.VP Get sheet index.Summary -->retourne l'index d'une feuille basé sur son nom dans _vpAreaName_.<!-- END REF -->
 
-In _vpAreaName_, pass the name of the 4D View Pro area.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro.
 
-In _name_, pass the name of the sheet whose index will be returned. If no sheet named _name_ is found in the document, the method returns -1.
+Dans _name_, passez le nom de la feuille dont l'index sera retourné. Si aucune feuille nommée _name_ n'est trouvée dans le document, la méthode retourne -1.
 
 > La numérotation démarre à 0.
 

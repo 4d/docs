@@ -9,20 +9,20 @@ Los parámetros del servidor web 4D incluye parámetros de seguridad, puertos de
 
 Hay diferentes maneras de configurar los parámetros del servidor web 4D, en función del alcance y del servidor que se quiera configurar:
 
-| Ubicación del parámetro                                                          | Alcance                                                                     | Servidor web a utilizar                                               |
-| -------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| [webServer object](webServerObject.md)                                           | Temporal (sesión actual)                                 | Todos los servidores web, incluidos los servidores web de componentes |
-| `WEB SET OPTION` o comando `WEB XXX`                                             | Temporal (sesión actual)                                 | Servidor principal                                                    |
-| [**Settings** dialog box](../settings/web.md) (**Web** pages) | Permanente (todas las sesiones, almacenadas en el disco) | Servidor principal                                                    |
+| Ubicación del parámetro                                                                    | Alcance                                                                     | Servidor web a utilizar                                               |
+| ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| [webServer object](webServerObject.md)                                                     | Temporal (sesión actual)                                 | Todos los servidores web, incluidos los servidores web de componentes |
+| `WEB SET OPTION` o comando `WEB XXX`                                                       | Temporal (sesión actual)                                 | Servidor principal                                                    |
+| Caja de diálogo [**Propiedades**](../settings/web.md) (**Páginas web**) | Permanente (todas las sesiones, almacenadas en el disco) | Servidor principal                                                    |
 
 > Algunos parámetros no están disponibles desde todos los lugares.
 
 ## Caché
 
-| Puede ajustarse con           | Nombre                                                                                  | Comentarios |
-| ----------------------------- | --------------------------------------------------------------------------------------- | ----------- |
-| Caja de diálogo de parámetros | [Configuration page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache)      |             |
-| Caja de diálogo de parámetros | [Página de configuración/Tamaño de caché de página](../settings/web.md#page-cache-size) |             |
+| Puede ajustarse con           | Nombre                                                                                              | Comentarios |
+| ----------------------------- | --------------------------------------------------------------------------------------------------- | ----------- |
+| Caja de diálogo de parámetros | [Options (I) page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache) |             |
+| Caja de diálogo de parámetros | [Options (I) page/Page Cache Size](../settings/web.md#page-cache-size)           |             |
 
 Activa y configura la caché de las páginas web.
 
@@ -48,11 +48,11 @@ Con 4D en modo remoto, estos archivos deben estar ubicados en la carpeta de recu
 
 ## Conjunto de caracteres
 
-| Puede ajustarse con           | Nombre                                                                               | Comentarios                  |
-| ----------------------------- | ------------------------------------------------------------------------------------ | ---------------------------- |
-| objeto webServer              | `characterSet`                                                                       | Entero MIBEnum o cadena Name |
-| `WEB SET OPTION`              | `Web character set`                                                                  | Entero MIBEnum o cadena Name |
-| Caja de diálogo de parámetros | [Options (II) page/Standard Set](../settings/web.md#standard-set) | Menú popup                   |
+| Puede ajustarse con           | Nombre                                                                                       | Comentarios                  |
+| ----------------------------- | -------------------------------------------------------------------------------------------- | ---------------------------- |
+| objeto webServer              | `characterSet`                                                                               | Entero MIBEnum o cadena Name |
+| `WEB SET OPTION`              | `Web character set`                                                                          | Entero MIBEnum o cadena Name |
+| Caja de diálogo de parámetros | [Página Opciones (II)/Conjunto estándar](../settings/web.md#standard-set) | Menú popup                   |
 
 Define el conjunto de caracteres que utilizará el servidor web de 4D. El valor por defecto depende del lenguaje del sistema operativo.
 
@@ -66,7 +66,7 @@ Define el conjunto de caracteres que utilizará el servidor web de 4D. El valor 
 
 Lista de cifrado utilizada para el protocolo seguro; establece la prioridad de los algoritmos de cifrado implementados por el servidor web. Puede ser una secuencia de cadenas separadas por dos puntos (por ejemplo "ECDHE-RSA-AES128-..."). Ver la [página de cifrados](https://www.openssl.org/docs/manmaster/man1/ciphers.html) en el sitio OpenSSL.
 
-> The default cipher list used by 4D can be modified for the session using the `SET DATABASE PARAMETER` command, in which case the modification applies to the entire 4D application, including the web server, SQL server, client/server connections, as well as the HTTP client and all the 4D commands that make use of the secure protocol.
+> La lista de cifrado por defecto utilizada por 4D puede ser modificada para la sesión utilizando el comando `SET DATABASE PARAMETER`, en cuyo caso la modificación se aplica a toda la aplicación 4D, incluyendo el servidor web, el servidor SQL, las conexiones cliente/servidor, así como el cliente HTTP y todos los comandos de 4D que hacen uso del protocolo seguro.
 
 ## Parámetros CORS
 
@@ -110,7 +110,7 @@ Separe cada método con un ";" (por ejemplo: "post;get"). Si methods está vací
 
 #### Ver también
 
-[Enable CORS Service](#enable-cors-service)
+[Activar el servicio CORS](#enable-cors-service)
 
 ## Debug log
 
@@ -119,7 +119,7 @@ Separe cada método con un ";" (por ejemplo: "post;get"). Si methods está vací
 | objeto webServer    | `debugLog`      | number      |
 | `WEB SET OPTION`    | `Web debug log` | number      |
 
-Status of the HTTP request log file of the web server ([_HTTPDebugLog_nn.txt_](../Debugging/debugLogFiles.md#httpdebuglogtxt), stored in the "Logs" folder of the application -- nn is the file number). Es útil para depurar problemas relacionados con el servidor web. Registra cada solicitud y cada respuesta en modo bruto. Se registran las solicitudes completas, incluidos los encabezados; opcionalmente, también se pueden registrar las partes del cuerpo.
+Estado del archivo de registro de peticiones HTTP del servidor web ([_HTTPDebugLog_nn.txt_](../Debugging/debugLogFiles.md#httpdebuglogtxt), almacenado en la carpeta "Logs" de la aplicación -- nn es el número de archivo). Es útil para depurar problemas relacionados con el servidor web. Registra cada solicitud y cada respuesta en modo bruto. Se registran las solicitudes completas, incluidos los encabezados; opcionalmente, también se pueden registrar las partes del cuerpo.
 
 | Valor | Constante                      | Descripción                                                                                                                      |
 | ----- | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -131,11 +131,11 @@ Status of the HTTP request log file of the web server ([_HTTPDebugLog_nn.txt_](.
 
 ## Página de inicio por defecto
 
-| Puede ajustarse con           | Nombre                                                                       | Comentarios                               |
-| ----------------------------- | ---------------------------------------------------------------------------- | ----------------------------------------- |
-| objeto webServer              | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage)                   | Text                                      |
-| `WEB SET HOME PAGE`           |                                                                              | Puede ser diferente para cada proceso web |
-| Caja de diálogo de parámetros | [Configuration page/Default Home Page](../settings/web.md#default-home-page) |                                           |
+| Puede ajustarse con           | Nombre                                                                                    | Comentarios                               |
+| ----------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------- |
+| objeto webServer              | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage)                                | Text                                      |
+| `WEB SET HOME PAGE`           |                                                                                           | Puede ser diferente para cada proceso web |
+| Caja de diálogo de parámetros | [Página Configuración/Página de inicio por defecto](../settings/web.md#default-home-page) |                                           |
 
 Designa una página de inicio por defecto para el servidor web. Esta página puede ser estática o [semi-dynamic].
 
@@ -169,15 +169,15 @@ Para más información sobre CORS, consulte la página [Cross-origin resource sh
 
 #### Ver también
 
-[CORS Settings](#cors-settings)
+[Configuración CORS](#cors-settings)
 
 ## Activar HTTP
 
-| Puede ajustarse con           | Nombre                                                           | Comentarios |
-| ----------------------------- | ---------------------------------------------------------------- | ----------- |
-| objeto webServer              | [`HTTPEnabled`](API/WebServerClass.md#httpenabled)               | boolean     |
-| `WEB SET OPTION`              | `Web HTTP enabled`                                               |             |
-| Caja de diálogo de parámetros | [Configuration page/Enable HTTP](../settings/web.md#enable-http) |             |
+| Puede ajustarse con           | Nombre                                                              | Comentarios |
+| ----------------------------- | ------------------------------------------------------------------- | ----------- |
+| objeto webServer              | [`HTTPEnabled`](API/WebServerClass.md#httpenabled)                  | boolean     |
+| `WEB SET OPTION`              | `Web HTTP enabled`                                                  |             |
+| Caja de diálogo de parámetros | [Página Configuración/Activar HTTP](../settings/web.md#enable-http) |             |
 
 Indica si el servidor web acepta o no conexiones no seguras.
 
@@ -281,13 +281,13 @@ Número de puerto IP de escucha para las conexiones HTTPS vía TLS. Por defecto,
 
 ## Tiempo de espera del proceso inactivo
 
-| Puede ajustarse con           | Nombre                                                                                                      | Comentarios |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------- |
-| objeto webServer              | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout)                                    |             |
-| `WEB SET OPTION`              | `Web inactive process timeout`                                                                              |             |
-| Caja de diálogo de parámetros | [Options (I) page/Inactive Process Timeout](../settings/web.md#inactive-process-timeout) | Cursor      |
+| Puede ajustarse con           | Nombre                                                                                                                     | Comentarios |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| objeto webServer              | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout)                                                   |             |
+| `WEB SET OPTION`              | `Web inactive process timeout`                                                                                             |             |
+| Caja de diálogo de parámetros | [Página Opciones (I)/Tiempo de espera de proceso inactivo](../settings/web.md#inactive-process-timeout) | Cursor      |
 
-Duración de vida (en minutos) de los procesos inactivos asociados a las sesiones. Al final del tiempo de espera, el proceso se mata en el servidor, se llama al método base `On Web Close Process` y se destruye el contexto de sesión.
+Duración de vida (en minutos) de los procesos inactivos asociados con sesiones heredadas. Al final del tiempo de espera, el proceso se mata en el servidor, se llama al método base `On Web Legacy Close Session`, luego se destruye el contexto de sesión.
 
 Por defecto: 480 minutos (pase 0 para restaurar el valor por defecto)
 
@@ -339,11 +339,11 @@ Para evitar esta confusión, se recomienda utilizar la notación [ ] siempre que
 
 ## Keep Session
 
-| Puede ajustarse con           | Nombre                                                                                                                                                         | Comentarios                       |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| objeto webServer              | [`keepSession`](API/WebServerClass.md#keepsession)                                                                                                             |                                   |
-| `WEB SET OPTION`              | `Web keep session`                                                                                                                                             |                                   |
-| Caja de diálogo de parámetros | [Options (I) page/Legacy sessions (single process sessions)](../settings/web.md#legacy-sessions-single-process-sessions) | sólo en los proyectos convertidos |
+| Puede ajustarse con           | Nombre                                                                                                                                                                   | Comentarios                       |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------- |
+| objeto webServer              | [`keepSession`](API/WebServerClass.md#keepsession)                                                                                                                       |                                   |
+| `WEB SET OPTION`              | `Web keep session`                                                                                                                                                       |                                   |
+| Caja de diálogo de parámetros | [Página Opciones (I)/Sesiones heredadas (sesiones de un solo proceso)](../settings/web.md#legacy-sessions-single-process-sessions) | sólo en los proyectos convertidos |
 
 Estado de activación de la gestión de sesiones heredada para el servidor web 4D (obsoleto).
 
@@ -373,11 +373,11 @@ Este parámetro permite seleccionar el formato de este archivo. Valores disponib
 
 ## Procesos Web simultáneos maximos
 
-| Puede ajustarse con           | Nombre                                                                                                                      | Comentarios |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| objeto webServer              | [`maxConcurrentProcesses`](API/WebServerClass.md#maxconcurrentprocesses)                                                    |             |
-| `WEB SET OPTION`              | `Web max concurrent processes`                                                                                              |             |
-| Caja de diálogo de parámetros | [Options (I) page/Maximum Concurrent Web Processes](../settings/web.md#maximum-concurrent-web-processes) |             |
+| Puede ajustarse con           | Nombre                                                                                                                           | Comentarios |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| objeto webServer              | [`maxConcurrentProcesses`](API/WebServerClass.md#maxconcurrentprocesses)                                                         |             |
+| `WEB SET OPTION`              | `Web max concurrent processes`                                                                                                   |             |
+| Caja de diálogo de parámetros | Página [Opciones (I)/Máximo de procesos web simultáneos](../settings/web.md#maximum-concurrent-web-processes) |             |
 
 Límite estrictamente superior de procesos web concurrentes que pueden estar abiertos simultáneamente en el servidor cuando **no sessions** o **legacy sessions** están siendo utilizados (**scalable sessions** soporta un [número ilimitado](sessions.md) de p Este parámetro permite evitar la saturación del servidor como resultado de un número masivo de peticiones. Cuando se alcanza el número máximo de procesos web concurrentes (menos uno), 4D deja de crear nuevos procesos y envía el estado HTTP `503 - Servicio no disponible` a todas las nuevas peticiones.
 
@@ -401,9 +401,9 @@ Valores posibles: 500 000 a 2 147 483 648.
 | Puede ajustarse con | Nombre                                             | Comentarios |
 | ------------------- | -------------------------------------------------- | ----------- |
 | objeto webServer    | [`maxSessions`](API/WebServerClass.md#maxsessions) |             |
-| `WEB SET OPTION`    | `Web max sessions	`                                |             |
+| `WEB SET OPTION`    | `Web max sessions`                                 |             |
 
-Número máximo de sesiones simultáneas. Cuando se alcanza el límite definido, se cierra la sesión más antigua (y se llama al método base `On Web Close Process`) si el servidor web necesita crear una nueva. El número de sesiones simultáneas no puede superar el [número máximo de procesos web](#maximum-concurrent-web-processes) (100 por defecto).
+Número máximo de sesiones heredadas simultáneas. Cuando alcanza el límite establecido, la sesión antigua se cierra (y se llama al método base `On Web Legacy Close Session`) si el servidor web necesita crear una nueva. El número de sesiones heredadas simultáneas no puede superar el [número máximo de procesos web](#maximum-concurrent-web-processes) (100 por defecto).
 
 Valor por defecto: 100 (pase 0 para restaurar el valor por defecto).
 
@@ -452,9 +452,9 @@ Verdadero si PFS está disponible en el servidor web (ver la sección [TLS](Admi
 
 ## Reutilizar los contextos temporales (en modo remoto)
 
-| Puede ajustarse con           | Nombre                                                                                                              | Comentarios |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------- | ----------- |
-| Caja de diálogo de parámetros | [Options (I) page/Maximum Concurrent Web Processes](../settings/web.md#reuse-temporary-contexts) |             |
+| Puede ajustarse con           | Nombre                                                                                                      | Comentarios |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------- |
+| Caja de diálogo de parámetros | [Options (I) page/Reuse Temporary Contexts](../settings/web.md#reuse-temporary-contexts) |             |
 
 > Esta opción sólo está disponible cuando la opción **Sin sesiones** está marcada.
 
@@ -503,11 +503,11 @@ En este caso, los robots no pueden acceder a todo el sitio.
 
 ## Carpeta raíz
 
-| Puede ajustarse con           | Nombre                                                                       | Comentarios                                                                                                                           |
-| ----------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| objeto webServer              | [`rootFolder`](API/WebServerClass.md#rootfolder)                             | Text property but can be a [`4D.Folder`](API/FolderClass.md) object when used with the _settings_ parameter of the `start()` function |
-| `WEB SET ROOT FOLDER`         |                                                                              |                                                                                                                                       |
-| Caja de diálogo de parámetros | [Configuration page/Default HTML Root](../settings/web.md#default-html-root) |                                                                                                                                       |
+| Puede ajustarse con           | Nombre                                                                             | Comentarios                                                                                                                                  |
+| ----------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| objeto webServer              | [`rootFolder`](API/WebServerClass.md#rootfolder)                                   | Propiedad texto pero puede ser un objeto [`4D.Folder`](API/FolderClass.md) cuando se usa con el parámetro _settings_ de la función `start()` |
+| `WEB SET ROOT FOLDER`         |                                                                                    |                                                                                                                                              |
+| Caja de diálogo de parámetros | [Página Configuración/Raíz HTML por defecto](../settings/web.md#default-html-root) |                                                                                                                                              |
 
 Ruta de la carpeta raíz del servidor web, es decir, la carpeta en la que 4D buscará las páginas HTML estáticas y semidinámicas, imágenes, etc., para enviarlas a los navegadores. La ruta de acceso está en formato POSIX (ruta completa). Será necesario reiniciar el servidor web para que se tenga en cuenta la nueva carpeta raíz.
 
@@ -531,13 +531,13 @@ Por ejemplo, si quiere que la carpeta raíz HTML sea la subcarpeta "Web" de la c
 
 ## Sesiones escalables
 
-| Puede ajustarse con           | Nombre                                                                                                                                                           | Comentarios |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| objeto webServer              | [`scalableSession`](API/WebServerClass.md#scalablesession)                                                                                                       |             |
-| `WEB SET OPTION`              | `Sesión escalable web`                                                                                                                                           |             |
-| Caja de diálogo de parámetros | [Options (I) page/Scalable sessions (multi-process sessions)](../settings/web.md#scalable-sessions-multi-process-sessions) |             |
+| Puede ajustarse con           | Nombre                                                                                                                                                                | Comentarios |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| objeto webServer              | [`scalableSession`](API/WebServerClass.md#scalablesession)                                                                                                            |             |
+| `WEB SET OPTION`              | `Sesión escalable web`                                                                                                                                                |             |
+| Caja de diálogo de parámetros | [Página Opciones (I)/Sesiones extensible (sesiones multi-proceso)](../settings/web.md#scalable-sessions-multi-process-sessions) |             |
 
-Estado de activación de la gestión de sesiones escalable para el servidor web 4D. Las sesiones del servidor web se detallan en la página [Sesiones de usuario](sessions.md).
+Estado de activación de la gestión de sesiones escalable para el servidor web 4D. Las sesiones del servidor web se detallan en la página [Sesiones Web](sessions.md).
 
 ## Dominio de la cookie de sesión
 
@@ -588,9 +588,9 @@ El valor del atributo `Secure` de la cookie de sesión se define automáticament
 
 ## Utilizar procesos apropiativos
 
-| Puede ajustarse con           | Nombre                                                                                                              | Comentarios |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------- | ----------- |
-| Caja de diálogo de parámetros | [Options (I) page/Maximum Concurrent Web Processes](../settings/web.md#use-preemptive-processes) |             |
+| Puede ajustarse con           | Nombre                                                                                                      | Comentarios |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------- |
+| Caja de diálogo de parámetros | [Options (I) page/Use Preemptive Processes](../settings/web.md#use-preemptive-processes) |             |
 
 Esta opción activa el modo apropiativo para el código del servidor web de su aplicación cuando se selecciona la opción **Sin sesiones** (el modo apropiativo siempre está activado con **sesiones escalables**). Cuando esta opción está marcada en este contexto, el compilador 4D evaluará automáticamente la propiedad hilo seguro de cada pieza de [código relacionado con la web](preemptiveWeb.md#thread-safety-of-4d-web-code) y devolverá errores en caso de incompatibi
 
@@ -624,8 +624,8 @@ En algunos casos, se pueden invocar otras funciones internas optimizadas. Las co
 
 Dos opciones le permiten definir cómo funcionan las conexiones persistentes:
 
-- **Número de peticiones por conexión**: permite definir el número máximo de peticiones y de respuestas capaces de viajar por una conexión persistente. Limiting the number of requests per connection allows you to prevent server flooding due to a large number of incoming requests (a technique used by hackers).<p>
-  The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
+- **Número de peticiones por conexión**: permite definir el número máximo de peticiones y de respuestas capaces de viajar por una conexión persistente. Limitar el número de peticiones por conexión le permite evitar la inundación del servidor debido a un gran número de peticiones entrantes (una técnica utilizada por los hackers).<p>
+  El valor por defecto (100) puede aumentarse o disminuirse en función de los recursos de la máquina que aloja el Servidor Web 4D.</p>
 
 - **Tiempo de espera antes de desconexión**: este valor define el periodo máximo de espera (en segundos) durante el cual el servidor web mantiene una conexión TCP abierta sin recibir ninguna petición del navegador web. Una vez transcurrido este periodo, el servidor cierra la conexión.<p>
   Si el navegador envía una solicitud después de que se haya cerrado la conexión, se crea automáticamente una nueva conexión TCP. Esta operación no es visible para el usuario.</p>

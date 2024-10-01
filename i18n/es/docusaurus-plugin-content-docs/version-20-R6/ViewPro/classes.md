@@ -13,7 +13,7 @@ Las siguientes clases pueden utilizarse en 4D View Pro.
 
 **.color** : Text<!-- END REF -->
 
-The `.color` property is the <!-- REF #LineBorder.color.Summary -->[color](configuring.md#borders) of the border<!-- END REF -->. Por defecto = black.
+La propiedad `.color` es el <!-- REF #LineBorder.color.Summary -->[color](configuring.md#borders) del borde<!-- END REF -->. Por defecto = black.
 
 ### .style
 
@@ -21,7 +21,7 @@ The `.color` property is the <!-- REF #LineBorder.color.Summary -->[color](confi
 
 **.style** : Integer<!-- END REF -->
 
-The `.style` property is the <!-- REF #LineBorder.style.Summary -->[style](configuring.md#borders) of the border<!-- END REF -->. Por defecto = empty.
+La propiedad `.style` es el <!-- REF #LineBorder.style.Summary -->[estilo](configuring.md#borders) del borde<!-- END REF -->. Por defecto = empty.
 
 ## TableColumn
 
@@ -57,7 +57,7 @@ La propiedad `.name` <!-- REF #TableColumn.name.Summary -->contiene el nombre de
 
 **.allowAutoExpand** : Boolean<!-- END REF -->
 
-The `.allowAutoExpand` property <!-- REF #TableOptions.allowAutoExpand.Summary -->indicates whether to expand columns or rows of the table when values are added in empty adjacent cells<!-- END REF -->. Por defecto = True
+La propiedad `.allowAutoExpand` <!-- REF #TableOptions.allowAutoExpand.Summary -->indica si se expanden las columnas o filas de la tabla cuando se añaden valores en celdas vacías adyacentes<!-- END REF -->. Por defecto = True
 
 ### .bandColumns
 
@@ -73,7 +73,7 @@ La propiedad `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indica
 
 **.bandRows** : Boolean<!-- END REF -->
 
-The `.bandRows` property <!-- REF #TableOptions.bandRows.Summary -->indicates whether to display an alternating row style<!-- END REF -->. Por defecto = True
+La propiedad `.bandRows` <!-- REF #TableOptions.bandRows.Summary -->indica si se muestra un estilo de línea alterna<!-- END REF -->. Por defecto = True
 
 ### .highlightLastColumn
 
@@ -121,7 +121,7 @@ La propiedad `.showResizeHandle` <!-- REF #TableOptions.showResizeHandle.Summary
 
 **.tableColumns** : Collection<!-- END REF -->
 
-The `.tableColumns` property <!-- REF #TableOptions.tableColumns.Summary -->is a collection of [cs.ViewPro.TableColumn](#tablecolumn) objects used to create the table's columns<!-- END REF -->.
+La propiedad `.tableColumns` <!-- REF #TableOptions.tableColumns.Summary -->es una colección de objetos [cs.ViewPro.TableColumn](#tablecolumn) utilizados para crear las columnas de la tabla<!-- END REF -->.
 
 ### .theme
 
@@ -149,7 +149,7 @@ The `.useFooterDropDownList` property <!-- REF #TableOptions.useFooterDropDownLi
 
 **.backColor** : Text<!-- END REF -->
 
-The `.backColor` property is the <!-- REF #TableStyle.backColor.Summary -->[background color](configuring.md/#background--foreground) of the table<!-- END REF -->.
+La propiedad `.backColor` es el <!-- REF #TableStyle.backColor.Summary -->[color de fondo](configuring.md/#background--foreground) de la tabla<!-- END REF -->.
 
 ### .forecolor
 
@@ -157,7 +157,7 @@ The `.backColor` property is the <!-- REF #TableStyle.backColor.Summary -->[back
 
 **.forecolor** : Text<!-- END REF -->
 
-The `.forecolor` property is the <!-- REF #TableStyle.forecolor.Summary -->[foreground color](configuring.md/#background--foreground) of the table<!-- END REF -->.
+La propiedad `.forecolor` es el <!-- REF #TableStyle.forecolor.Summary -->[color de primer plano](configuring.md/#background--foreground) de la tabla<!-- END REF -->.
 
 ### .font
 
@@ -165,7 +165,7 @@ The `.forecolor` property is the <!-- REF #TableStyle.forecolor.Summary -->[fore
 
 **.font** : Text<!-- END REF -->
 
-The `.font` property is the <!-- REF #TableStyle.font.Summary -->font name (see [**Fonts and text**](configuring.md/#fonts-and-text)) of the table<!-- END REF -->.
+La propiedad `.font` es el nombre de la <!-- REF #TableStyle.font.Summary -->fuente (ver [**Fuentes y texto**](configuring.md/#fonts-and-text)) de la tabla<!-- END REF -->.
 
 ### .textDecoration
 
@@ -213,7 +213,7 @@ La propiedad `.borderHorizontal` es la <!-- REF #TableStyle.borderHorizontal.Sum
 
 **.borderVertical** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderVertical` property is the <!-- REF #TableStyle.borderVertical.Summary -->vertical border line of the table <!-- END REF -->.
+La propiedad `.borderVertical` es la <!-- REF #TableStyle.borderVertical.Summary -->línea de borde vertical de la tabla <!-- END REF -->.
 
 ## TableTheme
 
@@ -223,7 +223,7 @@ The `.borderVertical` property is the <!-- REF #TableStyle.borderVertical.Summar
 
 **.bandRows** : Boolean<!-- END REF -->
 
-The `.bandRows` property <!-- REF #TableTheme.bandRows.Summary -->indicates whether to display an alternating row style<!-- END REF -->.
+La propiedad `.bandRows` <!-- REF #TableTheme.bandRows.Summary -->indica si se muestra un estilo de líneas alternas<!-- END REF -->.
 
 ### .bandColumns
 
@@ -274,7 +274,7 @@ La propiedad `.firstColumnStripSize` es el tamaño <!-- REF #TableThemeOptions.f
 
 **.firstColumnStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.firstColumnStripStyle` property is the <!-- REF #TableThemeOptions.firstColumnStripStyle.Summary -->style of the first alternating column<!-- END REF -->.
+La propiedad `.firstColumnStripStyle` es el estilo <!-- REF #TableThemeOptions.firstColumnStripStyle.Summary -->de la primera columna alterna<!-- END REF -->.
 
 ### .firstFooterCellStyle
 
@@ -370,7 +370,7 @@ The `.name` property is the <!-- REF #TableThemeOptions.name.Summary -->name of 
 
 **.secondColumnStripSize** : Integer<!-- END REF -->
 
-The `.secondColumnStripSize` property is the <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->size of the second alternating column<!-- END REF -->. Por defecto=1
+La propiedad `.secondColumnStripSize` es el tamaño <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->de la segunda columna alterna<!-- END REF -->. Por defecto=1
 
 ### .secondColumnStripStyle
 
@@ -378,7 +378,7 @@ The `.secondColumnStripSize` property is the <!-- REF #TableThemeOptions.secondC
 
 **.secondColumnStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.secondColumnStripStyle` property is the <!-- REF #TableThemeOptions.secondColumnStripStyle.Summary -->style of the second alternating column<!-- END REF -->.
+La propiedad `.secondColumnStripStyle` es el <!-- REF #TableThemeOptions.secondColumnStripStyle.Summary -->estilo de la segunda columna alterna<!-- END REF -->.
 
 ### .secondRowStripSize
 

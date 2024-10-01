@@ -87,9 +87,9 @@ $myEntity.save() //sauvegarder l'entity
 
 <!-- REF #EntityClass.clone().Params -->
 
-| Paramètres | Type                      |     | Description                                  |
-| ---------- | ------------------------- | :-: | -------------------------------------------- |
-| Résultat   | 4D.Entity |  <- | Nouvelle entité référençant l'enregistrement |
+| Paramètres | Type                      |                             | Description                                  |
+| ---------- | ------------------------- | :-------------------------: | -------------------------------------------- |
+| Résultat   | 4D.Entity | <- | Nouvelle entité référençant l'enregistrement |
 
 <!-- END REF -->
 
@@ -130,11 +130,11 @@ Cette fonction ne peut être utilisée qu'avec des entités déjà enregistrées
 
 <!-- REF #EntityClass.diff().Params -->
 
-| Paramètres          | Type                      |     | Description                            |
-| ------------------- | ------------------------- | :-: | -------------------------------------- |
-| entityToCompare     | 4D.Entity |  -> | Entité à comparer à l'entité d'origine |
-| attributesToCompare | Collection                |  -> | Noms des attributs à comparer          |
-| Résultat            | Collection                |  <- | Différences entre les entités          |
+| Paramètres          | Type                      |                             | Description                            |
+| ------------------- | ------------------------- | :-------------------------: | -------------------------------------- |
+| entityToCompare     | 4D.Entity |              ->             | Entité à comparer à l'entité d'origine |
+| attributesToCompare | Collection                |              ->             | Noms des attributs à comparer          |
+| Résultat            | Collection                | <- | Différences entre les entités          |
 
 <!-- END REF -->
 
@@ -332,10 +332,10 @@ vCompareResult3 (seules les différences sur les attributs touchés de $e1 sont 
 
 <!-- REF #EntityClass.drop().Params -->
 
-| Paramètres | Type    |     | Description                                                                                                  |
-| ---------- | ------- | :-: | ------------------------------------------------------------------------------------------------------------ |
-| mode       | Integer |  -> | `dk force drop if stamp changed` : Force la suppression même si le marqueur interne a changé |
-| Résultat   | Object  |  <- | Résultat de l'opération de suppression                                                                       |
+| Paramètres | Type    |                             | Description                                                                                                  |
+| ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------ |
+| mode       | Integer |              ->             | `dk force drop if stamp changed` : Force la suppression même si le marqueur interne a changé |
+| Résultat   | Object  | <- | Résultat de l'opération de suppression                                                                       |
 
 <!-- END REF -->
 
@@ -440,9 +440,9 @@ Même exemple avec l'option `dk force drop if stamp changed` :
 
 <!-- REF #EntityClass.first().Params -->
 
-| Paramètres | Type                      |     | Description                                                                                   |
-| ---------- | ------------------------- | :-: | --------------------------------------------------------------------------------------------- |
-| Résultat   | 4D.Entity |  <- | Référence à la première entité de l'entity selection (Null si non trouvée) |
+| Paramètres | Type                      |                             | Description                                                                                   |
+| ---------- | ------------------------- | :-------------------------: | --------------------------------------------------------------------------------------------- |
+| Résultat   | 4D.Entity | <- | Référence à la première entité de l'entity selection (Null si non trouvée) |
 
 <!-- END REF -->
 
@@ -567,9 +567,9 @@ Vous pouvez également utiliser une entité relative fournie sous forme d'objet 
 
 <!-- REF #EntityClass.getDataClass().Params -->
 
-| Paramètres | Type                         |     | Description                              |
-| ---------- | ---------------------------- | :-: | ---------------------------------------- |
-| Résultat   | 4D.DataClass |  <- | Dataclass à laquelle appartient l'entité |
+| Paramètres | Type                         |                             | Description                              |
+| ---------- | ---------------------------- | :-------------------------: | ---------------------------------------- |
+| Résultat   | 4D.DataClass | <- | Dataclass à laquelle appartient l'entité |
 
 <!-- END REF -->
 
@@ -613,11 +613,11 @@ Le code générique suivant duplique toute entité :
 
 <!-- REF #EntityClass.getKey().Params -->
 
-| Paramètres | Type    |     | Description                                                                                              |
-| ---------- | ------- | :-: | -------------------------------------------------------------------------------------------------------- |
-| mode       | Integer |  -> | `dk key as string`: retourner la clé primaire en texte, quel que soit son type d'origine |
-| Résultat   | Text    |  <- | Valeur de la clé primaire texte de l'entité                                                              |
-| Résultat   | Integer |  <- | Valeur de la clé primaire numérique de l'entité                                                          |
+| Paramètres | Type    |                             | Description                                                                                              |
+| ---------- | ------- | :-------------------------: | -------------------------------------------------------------------------------------------------------- |
+| mode       | Integer |              ->             | `dk key as string`: retourner la clé primaire en texte, quel que soit son type d'origine |
+| Résultat   | Text    | <- | Valeur de la clé primaire texte de l'entité                                                              |
+| Résultat   | Integer | <- | Valeur de la clé primaire numérique de l'entité                                                          |
 
 <!-- END REF -->
 
@@ -655,8 +655,8 @@ Les clés primaires peuvent être des nombres (integer) ou des textes. Vous pouv
 
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
 
-| Paramètres | Type |    | Description                                                        |
-| ---------- | ---- | -- | ------------------------------------------------------------------ |
+| Paramètres | Type |                             | Description                                                        |
+| ---------- | ---- | --------------------------- | ------------------------------------------------------------------ |
 | result     | Text | <- | Attirbuts de contexte associés à l'entity, séparés par une virgule |
 
 <!-- END REF -->
@@ -714,9 +714,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <!-- REF #EntityClass.getSelection().Params -->
 
-| Paramètres | Type                               |     | Description                                                                              |
-| ---------- | ---------------------------------- | :-: | ---------------------------------------------------------------------------------------- |
-| Résultat   | 4D.EntitySelection |  <- | Entity selection à laquelle appartient l'entité (Null si non trouvée) |
+| Paramètres | Type                               |                             | Description                                                                              |
+| ---------- | ---------------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------- |
+| Résultat   | 4D.EntitySelection | <- | Entity selection à laquelle appartient l'entité (Null si non trouvée) |
 
 <!-- END REF -->
 
@@ -758,9 +758,9 @@ Si l'entité n'appartient pas à une entity selection, la fonction renvoie Null.
 
 <!-- REF #EntityClass.getStamp().Params -->
 
-| Paramètres | Type    |     | Description                                                                         |
-| ---------- | ------- | :-: | ----------------------------------------------------------------------------------- |
-| Résultat   | Integer |  <- | Valeur du "stamp" de l'entité (0 si l'entité vient d'être créée) |
+| Paramètres | Type    |                             | Description                                                                         |
+| ---------- | ------- | :-------------------------: | ----------------------------------------------------------------------------------- |
+| Résultat   | Integer | <- | Valeur du "stamp" de l'entité (0 si l'entité vient d'être créée) |
 
 <!-- END REF -->
 
@@ -806,10 +806,10 @@ Le stamp (marqueur interne) d'une entité est automatiquement incrémenté par 4
 
 <!-- REF #EntityClass.indexOf().Params -->
 
-| Paramètres      | Type                               |     | Description                                                    |
-| --------------- | ---------------------------------- | :-: | -------------------------------------------------------------- |
-| entitySelection | 4D.EntitySelection |  -> | Entity selection dans laquelle obtenir la position de l'entité |
-| Résultat        | Integer                            |  <- | Position de l'entité dans l'entity selection                   |
+| Paramètres      | Type                               |                             | Description                                                    |
+| --------------- | ---------------------------------- | :-------------------------: | -------------------------------------------------------------- |
+| entitySelection | 4D.EntitySelection |              ->             | Entity selection dans laquelle obtenir la position de l'entité |
+| Résultat        | Integer                            | <- | Position de l'entité dans l'entity selection                   |
 
 <!-- END REF -->
 
@@ -855,9 +855,9 @@ La valeur résultante est comprise entre 0 et la longueur de l'entity selection 
 
 <!-- REF #EntityClass.isNew().Params -->
 
-| Paramètres | Type    |     | Description                                                                                                               |
-| ---------- | ------- | :-: | ------------------------------------------------------------------------------------------------------------------------- |
-| Résultat   | Boolean |  <- | Vrai si l'entité vient juste d'être créée et n'a pas encore été enregistrée. Sinon, Faux. |
+| Paramètres | Type    |                             | Description                                                                                                               |
+| ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------- |
+| Résultat   | Boolean | <- | Vrai si l'entité vient juste d'être créée et n'a pas encore été enregistrée. Sinon, Faux. |
 
 <!-- END REF -->
 
@@ -895,9 +895,9 @@ La fonction `.isNew()` <!-- REF #EntityClass.isNew().Summary --> renvoie Vrai si
 
 <!-- REF #EntityClass.last().Params -->
 
-| Paramètres | Type                      |     | Description                                                                                   |
-| ---------- | ------------------------- | :-: | --------------------------------------------------------------------------------------------- |
-| Résultat   | 4D.Entity |  <- | Référence à la dernière entité de l'entity selection (Null si non trouvée) |
+| Paramètres | Type                      |                             | Description                                                                                   |
+| ---------- | ------------------------- | :-------------------------: | --------------------------------------------------------------------------------------------- |
+| Résultat   | 4D.Entity | <- | Référence à la dernière entité de l'entity selection (Null si non trouvée) |
 
 <!-- END REF -->
 
@@ -934,10 +934,10 @@ Si l'entité n'appartient à aucune entity selection (i.e. [.getSelection( )](#g
 
 <!-- REF #EntityClass.lock().Params -->
 
-| Paramètres | Type    |     | Description                                                                                                   |
-| ---------- | ------- | :-: | ------------------------------------------------------------------------------------------------------------- |
-| mode       | Integer |  -> | `dk reload if stamp changed` : Recharger avant de verrouiller si le marqueur interne a changé |
-| Résultat   | Object  |  <- | Résultat de l'opération lock                                                                                  |
+| Paramètres | Type    |                             | Description                                                                                                   |
+| ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------- |
+| mode       | Integer |              ->             | `dk reload if stamp changed` : Recharger avant de verrouiller si le marqueur interne a changé |
+| Résultat   | Object  | <- | Résultat de l'opération lock                                                                                  |
 
 <!-- END REF -->
 
@@ -1052,9 +1052,9 @@ Exemple avec option `dk reload if stamp changed` :
 
 <!-- REF #EntityClass.next().Params -->
 
-| Paramètres | Type                      |     | Description                                                                                    |
-| ---------- | ------------------------- | :-: | ---------------------------------------------------------------------------------------------- |
-| Résultat   | 4D.Entity |  <- | Référence à l'entité suivante dans l'entity selection (Null si non trouvée) |
+| Paramètres | Type                      |                             | Description                                                                                    |
+| ---------- | ------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------------- |
+| Résultat   | 4D.Entity | <- | Référence à l'entité suivante dans l'entity selection (Null si non trouvée) |
 
 <!-- END REF -->
 
@@ -1095,9 +1095,9 @@ S'il n'y a pas d'entité suivante valide dans l'entity selection (i.e. vous ête
 
 <!-- REF #EntityClass.previous().Params -->
 
-| Paramètres | Type                      |     | Description                                                                                      |
-| ---------- | ------------------------- | :-: | ------------------------------------------------------------------------------------------------ |
-| Résultat   | 4D.Entity |  <- | Référence à l'entité précédente dans l'entity selection (Null si non trouvée) |
+| Paramètres | Type                      |                             | Description                                                                                      |
+| ---------- | ------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------ |
+| Résultat   | 4D.Entity | <- | Référence à l'entité précédente dans l'entity selection (Null si non trouvée) |
 
 <!-- END REF -->
 
@@ -1137,9 +1137,9 @@ S'il n'y a pas d'entité précédente valide dans l'entity selection (i.e. vous 
 
 <!-- REF #EntityClass.reload().Params -->
 
-| Paramètres | Type   |     | Description  |
-| ---------- | ------ | :-: | ------------ |
-| Résultat   | Object |  <- | Objet statut |
+| Paramètres | Type   |                             | Description  |
+| ---------- | ------ | :-------------------------: | ------------ |
+| Résultat   | Object | <- | Objet statut |
 
 <!-- END REF -->
 
@@ -1201,10 +1201,10 @@ L'objet retourné par `.reload( )` contient les propriétés suivantes :
 
 <!-- REF #EntityClass.save().Params -->
 
-| Paramètres | Type    |     | Description                                                        |
-| ---------- | ------- | :-: | ------------------------------------------------------------------ |
-| mode       | Integer |  -> | `dk auto merge` : Active le mode "automatic merge" |
-| Résultat   | Object  |  <- | Résultat de la sauvegarde                                          |
+| Paramètres | Type    |                             | Description                                                        |
+| ---------- | ------- | :-------------------------: | ------------------------------------------------------------------ |
+| mode       | Integer |              ->             | `dk auto merge` : Active le mode "automatic merge" |
+| Résultat   | Object  | <- | Résultat de la sauvegarde                                          |
 
 <!-- END REF -->
 
@@ -1338,12 +1338,12 @@ Mise à jour d'une entité avec option `dk auto merge` :
 
 <!-- REF #EntityClass.toObject().Params -->
 
-| Paramètres   | Type       |     | Description                                                                                                                                                                                             |
-| ------------ | ---------- | :-: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| filterString | Text       |  -> | Attribut(s) à extraire (chaînes séparées par des virgules)                                                                                                        |
-| filterCol    | Collection |  -> | Collection d'attribut(s) à extraire                                                                                                                                                  |
-| options      | Integer    |  -> | `dk with primary key`: ajoute la propriété \_\_KEY ;<br/>`dk with stamp`: ajoute la propriété \_STAMP |
-| Résultat     | Object     |  <- | Objet généré à partir de l'entité                                                                                                                                                                       |
+| Paramètres   | Type       |                             | Description                                                                                                                                                                                             |
+| ------------ | ---------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| filterString | Text       |              ->             | Attribut(s) à extraire (chaînes séparées par des virgules)                                                                                                        |
+| filterCol    | Collection |              ->             | Collection d'attribut(s) à extraire                                                                                                                                                  |
+| options      | Integer    |              ->             | `dk with primary key`: ajoute la propriété \_\_KEY ;<br/>`dk with stamp`: ajoute la propriété \_STAMP |
+| Résultat     | Object     | <- | Objet généré à partir de l'entité                                                                                                                                                                       |
 
 <!-- END REF -->
 
@@ -1627,9 +1627,9 @@ Retourne :
 
 <!-- REF #EntityClass.touched().Params -->
 
-| Paramètres | Type    |     | Description                                                                                 |
-| ---------- | ------- | :-: | ------------------------------------------------------------------------------------------- |
-| Résultat   | Boolean |  <- | Vrai si au moins un attribut de l'entité a été modifié et non encore sauvegardé, sinon Faux |
+| Paramètres | Type    |                             | Description                                                                                 |
+| ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------- |
+| Résultat   | Boolean | <- | Vrai si au moins un attribut de l'entité a été modifié et non encore sauvegardé, sinon Faux |
 
 <!-- END REF -->
 
@@ -1673,9 +1673,9 @@ Cet exemple vérifie s'il est nécessaire de sauvegarder l'entité :
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
 
-| Paramètres | Type       |     | Description                                   |
-| ---------- | ---------- | :-: | --------------------------------------------- |
-| Résultat   | Collection |  <- | Noms des attributs touchés ou collection vide |
+| Paramètres | Type       |                             | Description                                   |
+| ---------- | ---------- | :-------------------------: | --------------------------------------------- |
+| Résultat   | Collection | <- | Noms des attributs touchés ou collection vide |
 
 <!-- END REF -->
 
@@ -1748,9 +1748,9 @@ Dans ce cas :
 
 <!-- REF #EntityClass.unlock().Params -->
 
-| Paramètres | Type   |     | Description  |
-| ---------- | ------ | :-: | ------------ |
-| Résultat   | Object |  <- | Objet statut |
+| Paramètres | Type   |                             | Description  |
+| ---------- | ------ | :-------------------------: | ------------ |
+| Résultat   | Object | <- | Objet statut |
 
 <!-- END REF -->
 

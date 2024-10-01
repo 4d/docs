@@ -357,7 +357,7 @@ Par défaut, cette option n'est pas activée.
 
 #### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+\[Colonne de list box\](listbox_overview.md#list-box-columns)
 
 ---
 

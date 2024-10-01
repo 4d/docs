@@ -152,8 +152,8 @@ Désigne l'épaisseur d'une ligne.
 
 #### Grammaire JSON
 
-| Nom         | Type de données | Valeurs possibles                                                                       |
-| ----------- | --------------- | --------------------------------------------------------------------------------------- |
+| Nom         | Type de données | Valeurs possibles                                                                                                |
+| ----------- | --------------- | ---------------------------------------------------------------------------------------------------------------- |
 | strokeWidth | number          | 0 pour la plus petite largeur dans un formulaire imprimé, ou toute valeur d'entier < 20 |
 
 #### Objets pris en charge

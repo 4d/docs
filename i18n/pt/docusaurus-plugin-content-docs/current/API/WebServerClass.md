@@ -3,7 +3,7 @@ id: WebServerClass
 title: WebServer
 ---
 
-The `WebServer` class API allows you to start and monitor a web server for the main (host) application as well as each hosted component (see the [Web Server object](WebServer/webServerObject.md) overview). This class is available from the `4D` class store.
+The `WebServer` class API allows you to start and monitor a web server for the main (host) application as well as each hosted component (see the [Web Server object](WebServer/webServerObject.md) overview). Essa classe está disponível no "class store" de `4D`.
 
 ### Objeto Web Server
 
@@ -70,10 +70,10 @@ Eles oferecem as propriedades abaixo e funções:
 
 <!-- REF #_command_.WEB Server.Params -->
 
-| Parâmetro  | Tipo                          |    | Descrição                                                                         |
-| ---------- | ----------------------------- | -- | --------------------------------------------------------------------------------- |
-| option     | Integer                       | -> | Web server to get (default if omitted = `Web server database`) |
-| Resultados | 4D. WebServer | <- | Objeto Web Server                                                                 |
+| Parâmetro  | Tipo                          |                             | Descrição                                                                                |
+| ---------- | ----------------------------- | --------------------------- | ---------------------------------------------------------------------------------------- |
+| option     | Integer                       | ->                          | Servidor Web a ser obtido (padrão se omitido = `Web server database`) |
+| Resultados | 4D. WebServer | <- | Objeto Web Server                                                                        |
 
 <!-- END REF -->
 
@@ -116,8 +116,8 @@ Do seu componente, você quer saber se o servidor Web do banco de dados host est
 
 <!-- REF #_command_.WEB Server list.Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                                     |
-| ---------- | ---------- | -- | --------------------------------------------- |
+| Parâmetro  | Tipo       |                             | Descrição                                     |
+| ---------- | ---------- | --------------------------- | --------------------------------------------- |
 | Resultados | Collection | <- | Coleção de objetos do Servidor Web disponível |
 
 <!-- END REF -->
@@ -153,7 +153,7 @@ Queremos saber quantos servidores rodando estão disponíveis:
 
 <!-- REF #WebServerClass.accessKeyDefined.Syntax -->**.accessKeyDefined** : Boolean<!-- END REF -->
 
-The **.accessKeyDefined** property contains <!-- REF #WebServerClass.accessKeyDefined.Summary -->true if an access key is defined in the settings of the web server<!-- END REF -->. Esta propriedade é usada pelo servidor web WebAdmin para validar a configuração de segurança da interface de administração.
+A propriedade **.accessKeyDefined** contém <!-- REF #WebServerClass.accessKeyDefined.Summary -->true se uma chave de acesso estiver definida nas configurações do servidor Web<!-- END REF -->. Esta propriedade é usada pelo servidor web WebAdmin para validar a configuração de segurança da interface de administração.
 
 <!-- REF WebServerClass.certificateFolder.Desc -->
 
@@ -226,14 +226,14 @@ Contains the <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed ho
   - 192.168.5.17
   - 192.168.\*
   - 192.168.\*:8081
-  - http://192.168.5.17:8081
-  - http://\*.myDomain.com
-  - http://myProject.myDomain.com
+  - <http://192.168.5.17:8081>
+  - <http://\*.myDomain.com>
+  - <http://myProject.myDomain.com>
   - \*.myDomain.com
   - myProject.myDomain.com
   - \*
 
-- **methods** (text, optional): Accepted HTTP method(s) for the corresponding CORS host. Separar cada método com um ";" (por exemplo: "post;get"). If *methods* is empty, null, or undefined, all methods are enabled.
+- **methods** (texto, opcional): métodos HTTP aceito(s) para o host CORS correspondente. Separar cada método com um ";" (por exemplo: "post;get"). If *methods* is empty, null, or undefined, all methods are enabled.
 
 <!-- END REF -->
 
@@ -651,9 +651,9 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 <!-- REF #WebServerClass.start().Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                           |
-| ---------- | ------ | -- | --------------------------------------------------- |
-| settings   | Object | -> | Configurações do servidor Web a definir no arranque |
+| Parâmetro  | Tipo   |                             | Descrição                                           |
+| ---------- | ------ | --------------------------- | --------------------------------------------------- |
+| settings   | Object | ->                          | Configurações do servidor Web a definir no arranque |
 | Resultados | Object | <- | Estado de arranque do servidor web                  |
 
 <!-- END REF -->

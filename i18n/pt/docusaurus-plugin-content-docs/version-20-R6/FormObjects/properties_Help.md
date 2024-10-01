@@ -31,7 +31,7 @@ Você também pode:
 
 #### Outras funcionalidades de ajuda
 
-You can also associate help messages with form objects in two other ways:
+Você também pode associar mensagens de ajuda a objetos de formulário de duas outras maneiras:
 
 - ao nível da estrutura da base de dados (apenas campos). Neste caso, a dica de ajuda do campo é apresentada em todos os formulários em que aparece. Para más información, consulte "Consejos de ayuda" en [Propiedades de los campos](https://doc.4d.com/4Dv17R5/4D/17-R5/Field-properties.300-4163580.en.html).
 - utilizando el comando **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)**, para el proceso actual.

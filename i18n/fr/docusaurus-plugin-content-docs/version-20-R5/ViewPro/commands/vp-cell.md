@@ -9,29 +9,29 @@ title: VP Cell
 
 <!-- REF #_method_.VP Cell.Params -->
 
-| Paramètres | Type    |    | Description                                                                 |
-| ---------- | ------- | -- | --------------------------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |
-| column     | Longint | -> | Indice de la colonne                                                        |
-| row        | Longint | -> | Indice de la ligne                                                          |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+| Paramètres | Type    |                             | Description                                                                 |
+| ---------- | ------- | --------------------------- | --------------------------------------------------------------------------- |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |
+| column     | Longint | ->                          | Indice de la colonne                                                        |
+| row        | Longint | ->                          | Indice de la ligne                                                          |
+| sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |
 | Résultat   | Object  | <- | Objet plage d'une seule cellule                                             |
 
 <!-- END REF -->
 
 #### Description
 
-The `VP Cell` command <!-- REF #_method_.VP Cell.Summary -->returns a new range object referencing a specific cell<!-- END REF -->.
+La commande `VP Cell` <!-- REF #_method_.VP Cell.Summary -->retourne une nouvelle plage référençant une cellule spécifique<!-- END REF -->.
 
-> Cette commande s'applique aux plages d'une seule cellule. To create a range object for multiple cells, use the [VP Cells](vp-cells.md) command.
+> Cette commande s'applique aux plages d'une seule cellule. Pour créer un objet plage pour plusieurs cellules, utilisez la commande [VP Cells](vp-cells.md).
 
-In _vpAreaName_, pass the name of the 4D View Pro area. Si vous passez un nom inexistant, une erreur est retournée.
+Dans _vpAreaName_, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-The _column_ parameter defines the column of the cell range's position. Passez l'indice de la colonne dans ce paramètre.
+Le paramètre _column_ définit la colonne de la position de la plage de cellules. Passez l'indice de la colonne dans ce paramètre.
 
-The _row_ parameter defines the row of the cell range's position. Passez l'indice de la ligne dans ce paramètre.
+Le paramètre _row_ définit la ligne de la position de la plage de cellules. Passez l'indice de la ligne dans ce paramètre.
 
-In the optional _sheet_ parameter, you can indicate the index of the sheet where the range will be defined. If omitted or if you pass `vk current sheet`, the current spreadsheet is used by default.
+Dans le paramètre optionnel _sheet_, vous pouvez indiquer l'index de la feuille où la plage sera définie. Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée par défaut.
 
 > l'indexation démarre à 0.
 

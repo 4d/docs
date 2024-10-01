@@ -23,13 +23,15 @@ Para obter uma visão detalhada de toda a arquitetura de permissões, por favor 
 
 ## Resources
 
-You can assign specific permission actions to the following exposed resources in your project:
+You can assign specific permission actions to the following resources in your project:
 
 - o armazenamento de dados
 - uma classe de dados
 - um atributo (inclusive calculado e aliases)
 - uma função de classe de modelo de dados
 - uma função [singleton](../REST/$singleton.md)
+
+Each time a resource is accessed within a session (whatever the way it is accessed), 4D checks that the session has the appropriate permissions, and rejects the access if it is not authorized.
 
 A permission action defined at a given level is inherited by default at lower levels, but several permissions can be set:
 
@@ -78,7 +80,7 @@ A privilege or a role can be associated to several "action + resource" combinati
 
 - Usted **crea** privilegios y/o roles en el archivo `roles.json` (ver abajo). **Configura** su alcance asignándolos a acción(es) de permiso aplicadas a recurso(s).
 
-- You **allow** privileges and/or roles to every user session using the [`.setPrivileges()`](../API/SessionClass.md#setprivileges) function of the `Session` class.
+- Você **permite** privilégios e/ou funções para cada sessão usuário usando a função [`.setPrivileges()`](../API/SessionClass.md#setprivileges) da classe `Session`.
 
 ### Exemplo
 
@@ -150,7 +152,7 @@ O arquivo padrão tem o seguinte conteúdo:
 
 ```
 
-Para um nível máximo de segurança, o privilégio "none" é atribuído a todas as permissões no datastore, assim o acesso aos dados no objeto `ds` inteiro é desabilitado por padrão. It is recommended not to modified or use this locking privilege, but to add specific permissions to each resource you wish to make available from web or REST requests ([see example below](example-of-privilege-configuration)).
+Para um nível máximo de segurança, o privilégio "none" é atribuído a todas as permissões no datastore, assim o acesso aos dados no objeto `ds` inteiro é desabilitado por padrão. É recomendado não modificar ou usar esse privilégio de bloqueio, mas adicionar permissões específicas a cada recurso que você deseja disponibilizar para solicitações da web ou REST (veja o exemplo abaixo).
 
 :::caution
 
@@ -194,7 +196,7 @@ La sintaxis del archivo `roles.json` es la siguiente:
 |                     |                                                                                     | \[].promote  | Coleção de strings                |             | Lista de privilégios                                                                                                         |
 | forceLogin          |                                                                                     |                                                                                   | Parâmetros                        |             | True para habilitar el [modo "forceLogin"](../REST/authUsers.md#force-login-mode)                                            |
 
-:::caution Reminder
+:::caution Lembrete
 
 - O nome do privilégio "WebAdmin" está reservado à aplicação. Não se recomenda a utilização deste nome para privilégios personalizados.
 - los nombres de `privileges` y `roles` son insensibles a mayúsculas y minúsculas.

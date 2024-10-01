@@ -9,10 +9,10 @@ title: VP Get active cell
 
 <!-- REF #_method_.VP Get active cell.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                    |                  |
-| ---------- | ------- | -- | -------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                   |                  |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |                  |
+| Parámetros | Tipo    |                             | Descripción                                                    |                  |
+| ---------- | ------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                   |                  |
+| sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
 | Result     | Object  | <- | Objeto rango de una sola celda                                 | <!-- END REF --> |
 
 #### Descripción

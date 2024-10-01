@@ -154,7 +154,7 @@ Número de columnas que no se pueden mover durante la ejecución.
 
 Define el número de columnas del list box.
 
-> You can add or remove columns dynamically by programming, using commands such as [`LISTBOX INSERT COLUMN`](https://doc.4d.com/4dv20/help/command/en/page829.html) or [`LISTBOX DELETE COLUMN`](https://doc.4d.com/4dv20/help/command/en/page830.html).
+> Puede añadir o eliminar columnas dinámicamente por programación, utilizando comandos como [`LISTBOX INSERT COLUMN`](https://doc.4d.com/4dv20/help/command/en/page829.html) o [`LISTBOX DELETE COLUMN`](https://doc.4d.com/4dv20/help/command/en/page830.html).
 
 #### Gramática JSON
 

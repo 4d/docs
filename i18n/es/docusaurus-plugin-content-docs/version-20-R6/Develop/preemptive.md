@@ -193,7 +193,7 @@ Los únicos accesos posibles a la interfaz de usuario desde un hilo apropiativo 
 
 ### Triggers
 
-Cuando un método utiliza un comando que puede llamar a un trigger, el compilador 4D evalúa la seguridad de los hilos del trigger para comprobar la seguridad de hilos del método:
+When a method uses a command that can call a [trigger](https://doc.4d.com/4Dv20R6/4D/20-R6/Triggers.300-6958353.en.html), the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
 
 ```4d
  SAVE RECORD([Table_1]) //activar en Table_1, si existe, debe ser hilo seguro
@@ -213,6 +213,12 @@ Si la tabla se pasa dinámicamente, a veces el compilador no puede averiguar qu�
 ```
 
 En este caso, se evalúan todos los triggers. Si se detecta un comando que no sea hilo seguro en al menos un trigger, se rechaza todo el grupo y el método se declara hilo no seguro.
+
+:::note
+
+En [aplicaciones client/servidor](../Desktop/clientServer.md), los triggers pueden ser ejecutados en modo cooperativo, incluso si su código es hilo seguro. Esto ocurre cuando se activa un trigger desde un proceso remoto: en este caso, el trigger se ejecuta en el ["proceso gemelo" del proceso cliente](https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Server-and-the-4D-Language.300-7182872.en.html#68966) en la máquina del servidor. Dado que este proceso se utiliza para todas las llamadas del cliente, siempre se ejecuta en modo cooperativo.
+
+:::
 
 ### Métodos de gestión de errores
 

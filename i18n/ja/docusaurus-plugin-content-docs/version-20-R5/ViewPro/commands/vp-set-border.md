@@ -9,7 +9,7 @@ title: VP SET BORDER
 
 <!-- REF #_method_.VP SET BORDER.Params -->
 
-| 引数             | タイプ    |    | 説明                 |                  |
+| 引数             | 型      |    | 説明                 |                  |
 | -------------- | ------ | -- | ------------------ | ---------------- |
 | rangeObj       | Object | -> | レンジオブジェクト          |                  |
 | borderStyleObj | Object | -> | 境界線スタイルを格納したオブジェクト |                  |
@@ -23,14 +23,14 @@ _rangeObj_ 引数には、境界線スタイルを適用したいセルのレン
 
 _borderStyleObj_ 引数を使用すると、境界線のスタイルを定義することができます。 _borderStyleObj_ 引数は、以下のプロパティをサポートしています:
 
-| プロパティ | タイプ     | 説明                             | とりうる値                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| プロパティ | 型       | 説明                             | とりうる値                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ----- | ------- | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | color | text    | 境界線のカラーを定義します。 デフォルト = black   | CSSカラー "#rrggbb" シンタックス (推奨シンタックス)、CSSカラー "rgb(r,g,b)" シンタックス (代替シンタックス)、CSSカラーネーム (代替シンタックス)                                                                                                                                                                                                                                                                                                                     |
 | style | Integer | 境界線のスタイルを定義します。 デフォルト = empty。 | <li>`vk line style dash dot`</li><li>`vk line style dash dot dot`</li><li>`vk line style dashed`</li> <li>`vk line style dotted`</li><li>`vk line style double`</li><li>`vk line style empty`</li><li>`vk line style hair`</li> <li>`vk line style medium`</li><li>`vk line style medium dash dot`</li><li>`vk line style medium dash dot dot`</li><li>`vk line style medium dashed`</li><li>`vk line style slanted dash dot`</li><li>`vk line style thick`</li><li>`vk line style thin`</li> |
 
 _borderStyleObj_ の境界線スタイルの位置 (どこに境界線を引くか) は _borderPosObj_ 引数で定義します:
 
-| プロパティ           | タイプ     | 説明                        |
+| プロパティ           | 型       | 説明                        |
 | --------------- | ------- | ------------------------- |
 | all             | boolean | 境界線スタイルはすべての境界に適用されます。    |
 | left            | boolean | 境界線スタイルは左の境界に適用されます。      |

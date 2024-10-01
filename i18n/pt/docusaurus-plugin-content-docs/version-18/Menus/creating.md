@@ -50,7 +50,7 @@ Para adicionar um item de menu:
 
 1. In the list of source menus, select the menu to which you want to add a command. Se o menu já contiver comandos, eles serão exibidos na lista central. If you want to insert the new command, select the command that you want it to appear above. Você sempre pode reorganizar o menu posteriormente, arrastando e soltando.
 2. Choose **Add an item to menu “MenuName”** in the options menu of the editor or from the context menu (right click in the central list). OR Click on the add ![](../assets/en/Menus/PlussNew.png) button located below the central list. 4D adds a new item with the default name “Item X” where X is the number of items already created.
-3. Double-click on the name of the command in order to switch it to editing mode and enter a custom name. OR Enter the custom name in the "Title" area. Pode conter até 31 caracteres. You can enter the name as "hard coded" or enter a reference (see below).
+3. Double-click on the name of the command in order to switch it to editing mode and enter a custom name. OR Enter the custom name in the "Title" area. Pode conter até 31 caracteres. Você pode digitar o nome como "código duro" ou insira uma referência (veja abaixo).
 
 ### Utilizar a linguagem 4D
 

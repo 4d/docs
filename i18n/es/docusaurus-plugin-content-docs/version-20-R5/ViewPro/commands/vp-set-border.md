@@ -19,7 +19,7 @@ title: VP SET BORDER
 
 El comando `VP SET BORDER` <!-- REF #_method_.VP SET BORDER.Summary -->aplica los estilos de borde definidos en _borderStyleObj_ y _borderPosObj_ al rango definido en _rangeObj_<!-- END REF -->.
 
-En _rangeObj_, pase un rango de celdas donde se aplicará el estilo de borde. If the _rangeObj_ contains multiple cells, borders applied with `VP SET BORDER` will be applied to the _rangeObj_ as a whole (as opposed to the [`VP SET CELL STYLE`](vp-set-cell-style.md) command which applies borders to each cell of the _rangeObj_). Si ya se ha aplicado una hoja de estilo, `VP SET BORDER` anulará la configuración de bordes aplicada anteriormente para el _rangeObj_.
+En _rangeObj_, pase un rango de celdas donde se aplicará el estilo de borde. Si _rangeObj_ contiene múltiples celdas, los bordes aplicados con `VP SET BORDER` se aplicarán al _rangeObj_ como un todo (a diferencia del comando [`VP SET CELL STYLE`](vp-set-cell-style) que aplica bordes a cada celda del _rangeObj_). Si ya se ha aplicado una hoja de estilo, `VP SET BORDER` anulará la configuración de bordes aplicada anteriormente para el _rangeObj_.
 
 El parámetro _borderStyleObj_ permite definir el estilo de las líneas del borde. _borderStyleObj_ soporta las siguientes propiedades:
 

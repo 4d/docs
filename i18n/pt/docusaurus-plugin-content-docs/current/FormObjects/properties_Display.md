@@ -230,35 +230,35 @@ corresponde ao 5.º formato de hora no menu pop-up, especificamente a hora AM/PM
 
 A tabela a seguir mostra como os diferentes formatos afetam a exibição dos números. As três colunas - Positivo, Negativo e Zero - mostram como 1.234,50, -1.234,50 e 0 seriam exibidos.
 
-| Formato Introduzido                                                                   | Positivo                   | Negativo                                       | Zero                           |
-| ------------------------------------------------------------------------------------- | -------------------------- | ---------------------------------------------- | ------------------------------ |
-| ###                                                                                   | <<<                        | <<<                                            |                                |
-| ####                                                                                  | 1234                       | <<<<                                           |                                |
-| #######                                                                               | 1234                       | -1234                                          |                                |
-| #####.##                                                              | 1234.5     | -1234.5                        |                                |
-| ####0.00                                                              | 1234.50    | -1234.50                       | 0.00           |
-| #####0                                                                                | 1234                       | -1234                                          | 0                              |
-| +#####0;–#####0;0                                                                     | +1234                      | -1234                                          | 0                              |
-| #####0DB;#####0CR;0                                                                   | 1234DB                     | 1234CR                                         | 0                              |
-| #####0;(#####0)                                                    | 1234                       | (1234)                      | 0                              |
-| ###,##0                                                                               | 1,234                      | -1,234                                         | 0                              |
-| ##,##0.00                                                             | 1,234.50   | -1,234.50                      | 0.00           |
-| \^\^\^\^\^\^\^                                                                 | 1234                       | -1234                                          |                                |
-| \^\^\^\^\^\^0                                                                   | 1234                       | -1234                                          | 0                              |
-| \^\^\^,\^\^0                                                                     | 1,234                      | -1,234                                         | 0                              |
-| \^\^,\^\^0.00                                                     | 1,234.50   | -1,234.50                      | 0.00           |
-| \*\*\*\*\*\*\*                                                                        | \*\*\*1234                 | \*\*-1234                                      | \*\*\*\*\*\*\*                 |
-| \*\*\*\*\*\*0                                                                         | \*\*\*1234                 | \*\*-1234                                      | \*\*\*\*\*\*0                  |
-| \*\*\*,\*\*0                                                                          | \*\*1,234                  | \*-1,234                                       | \*\*\*\*\*\*0                  |
-| \*\*,\*\*0.00                                                         | \*1,234.50 | -1,234.50                      | \*\*\*\*\*0.00 |
-| $\*,\*\*0.00;–$\*,\*\*0.00                            | $1,234.50  | -$1,234.50                     | $\*\*\*\*0.00  |
-| $\^\^\^\^0                                                                        | $ 1234                     | $–1234                                         | $    0                         |
-| $\^\^\^0;–$\^\^\^0                                                              | $1234                      | –$1234                                         | $   0                          |
-| $\^\^\^0 ;($\^\^\^0)                                         | $1234                      | ($1234)                     | $   0                          |
-| $\^,\^\^0.00 ;($\^,\^\^0.00) | $1,234.50  | ($1,234.50) | $    0.00      |
-| &2                                                                | 1.2e+3     | -1.2e+3                        | 0.0e+0         |
-| &5                                                                | 1.23450e+3 | -1.23450e+3                    | 0.00000        |
-| &xml                                                              | 1234.5     | -1234.5                        | 0                              |
+| Formato Introduzido                                                                   | Positivo                                                                       | Negativo                                                                                                 | Zero                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| ###                                                                                   | <<< | <<<                           |                                |
+| ####                                                                                  | 1234                                                                           | <<<< |                                |
+| #######                                                                               | 1234                                                                           | -1234                                                                                                    |                                |
+| #####.##                                                              | 1234.5                                                         | -1234.5                                                                                  |                                |
+| ####0.00                                                              | 1234.50                                                        | -1234.50                                                                                 | 0.00           |
+| #####0                                                                                | 1234                                                                           | -1234                                                                                                    | 0                              |
+| +#####0;–#####0;0                                                                     | +1234                                                                          | -1234                                                                                                    | 0                              |
+| #####0DB;#####0CR;0                                                                   | 1234DB                                                                         | 1234CR                                                                                                   | 0                              |
+| #####0;(#####0)                                                    | 1234                                                                           | (1234)                                                                                | 0                              |
+| ###,##0                                                                               | 1,234                                                                          | -1,234                                                                                                   | 0                              |
+| ##,##0.00                                                             | 1,234.50                                                       | -1,234.50                                                                                | 0.00           |
+| \^\^\^\^\^\^\^                                                                 | 1234                                                                           | -1234                                                                                                    |                                |
+| \^\^\^\^\^\^0                                                                   | 1234                                                                           | -1234                                                                                                    | 0                              |
+| \^\^\^,\^\^0                                                                     | 1,234                                                                          | -1,234                                                                                                   | 0                              |
+| \^\^,\^\^0.00                                                     | 1,234.50                                                       | -1,234.50                                                                                | 0.00           |
+| \*\*\*\*\*\*\*                                                                        | \*\*\*1234                                                                     | \*\*-1234                                                                                                | \*\*\*\*\*\*\*                 |
+| \*\*\*\*\*\*0                                                                         | \*\*\*1234                                                                     | \*\*-1234                                                                                                | \*\*\*\*\*\*0                  |
+| \*\*\*,\*\*0                                                                          | \*\*1,234                                                                      | \*-1,234                                                                                                 | \*\*\*\*\*\*0                  |
+| \*\*,\*\*0.00                                                         | \*1,234.50                                                     | -1,234.50                                                                                | \*\*\*\*\*0.00 |
+| $\*,\*\*0.00;–$\*,\*\*0.00                            | $1,234.50                                                      | -$1,234.50                                                                               | $\*\*\*\*0.00  |
+| $\^\^\^\^0                                                                        | $ 1234                                                                         | $–1234                                                                                                   | $    0                         |
+| $\^\^\^0;–$\^\^\^0                                                              | $1234                                                                          | –$1234                                                                                                   | $   0                          |
+| $\^\^\^0 ;($\^\^\^0)                                         | $1234                                                                          | ($1234)                                                                               | $   0                          |
+| $\^,\^\^0.00 ;($\^,\^\^0.00) | $1,234.50                                                      | ($1,234.50)                                                           | $    0.00      |
+| &2                                                                | 1.2e+3                                                         | -1.2e+3                                                                                  | 0.0e+0         |
+| &5                                                                | 1.23450e+3                                                     | -1.23450e+3                                                                              | 0.00000        |
+| &xml                                                              | 1234.5                                                         | -1234.5                                                                                  | 0                              |
 
 #### Gramática JSON
 
@@ -393,15 +393,15 @@ Cuando una [expresión booleana](properties_Object.md#expression-type) se muestr
 - un texto en un [objeto de entrada](input_overview.md)
 - un "popup"  en una [columna del list box](listbox_overview.md#list-box-columns),
 
-... you can select the text to display for each value:
+... pode selecionar o texto a apresentar para cada valor:
 
 - **Text cuando True** - el texto que se mostrará cuando el valor sea "true"
 - **Text cuando False** - el texto que se mostrará cuando el valor sea "false"
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis                                                               |
-| ------------- | ------------- | ------------------------------------------------------------------------------- |
+| Nome          | Tipo de dados | Valores possíveis                                                                                                                 |
+| ------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | booleanFormat | string        | "\<_textWhenTrue_\>;\<_textWhenFalse_\>", por ejemplo "Assigned;Unassigned" |
 
 #### Objectos suportados
@@ -420,9 +420,9 @@ As colunas booleanas também podem ser apresentadas como menus pop-up. En este c
 
 #### Gramática JSON
 
-| Nome        | Tipo de dados | Valores possíveis                                                                                                             |
-| ----------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| controlType | string        | <li>**number columns**: "automatic" (default) or "checkbox"</li><li>**boolean columns**: "checkbox" (default) or "popup"</li> |
+| Nome        | Tipo de dados | Valores possíveis                                                                                                                 |
+| ----------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| controlType | string        | <li>**colunas de números**: "automatic" (padrão) ou "checkbox"</li><li>**colunas booleanas**: "checkbox" (padrão) ou "popup"</li> |
 
 #### Objectos suportados
 
@@ -532,7 +532,7 @@ La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; si
 
 #### Objectos suportados
 
-[Columna List Box](listbox_overview.md#list-box-columns) - [Encabezado List Box](listbox_overview.md#list-box-footers)
+[List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
 ---
 

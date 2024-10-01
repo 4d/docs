@@ -9,7 +9,7 @@ When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (r
 
 Cuando se abre una sesión de usuario web, puede manejarla a través del objeto `Session` y la [Session API](API/SessionClass.md). Subsequent REST requests reuse the same session cookie.
 
-A session is opened after the user was successfully logged (see below).
+Uma sessão é aberta depois que o usuário é autenticado com sucesso (veja abaixo).
 
 > - On 4D Server, opening a REST session requires that a free 4D client license is available.<br/>
 > - Em 4D single-user, pode abrir até três sessões REST para fins de teste.
@@ -18,7 +18,7 @@ A session is opened after the user was successfully logged (see below).
 
 :::note Compatibidade
 
-The legacy login mode based upon the `On REST Authentication` database method is **deprecated** as of 4D 20 R6. It is now recommended to [use the **force login mode**](../ORDA/privileges.md#rolesjson-file) (automatically enabled in new projects) and to implement the [`ds.authentify()` function](#dsauthentify). In converted projects, [a button in the Settings dialog box](../settings/web.md#activate-rest-authentication-through-dsauthentify-function) will help you upgrade your configuration. In Qodly Studio for 4D, the mode can be set using the [**Force login** option](../WebServer/qodly-studio.md#force-login) in the Privileges panel.
+O modo de login legado baseado no método de banco de dados `On REST Authentication` é **obsoleto** a partir de 4D 20 R6. It is now recommended to [use the **force login mode**](../ORDA/privileges.md#rolesjson-file) (automatically enabled in new projects) and to implement the [`ds.authentify()` function](#dsauthentify). In converted projects, [a button in the Settings dialog box](../settings/web.md#activate-rest-authentication-through-dsauthentify-function) will help you upgrade your configuration. In Qodly Studio for 4D, the mode can be set using the [**Force login** option](../WebServer/qodly-studio.md#force-login) in the Privileges panel.
 
 :::
 
@@ -37,7 +37,7 @@ A sequência de login do usuário é a seguinte:
 
 In the user login phase, license usage is disconnected from web user sessions. A license is required only when the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) is executed, allowing you to control the number of used licenses.
 
-All other REST requests (handling data or executing a function) will only be processed if they are executed within a web session with appropriate privileges, otherwise they return an error. To assign privileges to a web session, you need to execute the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function for the session. Executing this function triggers the 4D license consumption.
+All other REST requests (handling data or executing a function) will only be processed if they are executed within a web session with appropriate privileges, otherwise they return an error. To assign privileges to a web session, you need to execute the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function for the session. A execução dessa função aciona o consumo da licença 4D.
 
 ### Solicitações REST descritivas
 
@@ -45,7 +45,7 @@ Descriptive REST requests can be processed in web user sessions that do not requ
 
 - [`/rest/$catalog`]($catalog.md) requests (e.g. `/rest/$catalog/$all`) - access to available dataclasses
 - `/rest/$catalog/authentify` - la función del almacén de datos utilizada para iniciar sesión del usuario
-- `/rest/$getWebForm` - the rendering of a Qodly page
+- `/rest/$getWebForm` - Renderização de uma página Qodly
 
 ![alt-text](../assets/en/REST/force-login-1.jpeg)
 

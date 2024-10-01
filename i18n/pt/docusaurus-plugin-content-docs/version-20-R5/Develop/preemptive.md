@@ -194,7 +194,7 @@ Os únicos acessos possíveis à interface do usuário de um thread preemptivo s
 
 ### Triggers
 
-Quando um método usa um comando que pode chamar um gatilho, o compilador 4D avalia a segurança dos segmentos do gatilho a fim de verificar a segurança dos segmentos do método:
+When a method uses a command that can call a [trigger](https://doc.4d.com/4Dv20R6/4D/20-R6/Triggers.300-6958353.en.html), the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
 
 ```4d
  SALVAR RECORD([Table_1]) //trigger na Table_1, se ele existir, deve ser seguro por thread-safe
@@ -214,6 +214,12 @@ Se a tabela for passada dinamicamente, o compilador poderá, às vezes, não ser
 ```
 
 Nesse caso, todos os triggers são avaliados. Se um comando thread-unsafe for detectado em pelo menos um acionador, o grupo inteiro será rejeitado e o método será declarado thread-unsafe.
+
+:::note
+
+In [client/server applications](../Desktop/clientServer.md), triggers may be executed in cooperative mode, even if their code is thread-safe. This happens when a trigger is activated from a remote process: in this case, the trigger is executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Server-and-the-4D-Language.300-7182872.en.html#68966) on the server machine. Since this process is used for all calls from the client, it is always executed in cooperative mode.
+
+:::
 
 ### Métodos de tratamento de erros
 
@@ -263,12 +269,12 @@ Pode haver alguns casos em que você prefira que a verificação de segurança d
 Para fazer isso, você deve envolver o código a ser excluído da verificação de segurança de thread de comando com as diretivas especiais `%T-` e `%T+` como comentários. O comentário `//%T-` desativa a verificação de segurança de thread e `//%T+` a ativa novamente:
 
 ```4d
-  // %T- para desativar a verificação de segurança de thread
- 
-  // Coloque o código que contém os comandos a serem excluídos da verificação de segurança de thread aqui
- $w:=Open window(10;10;100;100) //por exemplo
- 
-  // %T+ para ativar a verificação de segurança de thread novamente para o restante do método
+  // %T- to disable thread safety checking
+
+  // Place the code containing commands to be excluded from thread safety checking here
+ $w:=Open window(10;10;100;100) //for example
+
+  // %T+ to enable thread safety checking again for the rest of the method
 ```
 
 Obviamente, o desenvolvedor do 4D é responsável pela compatibilidade do modo preemptivo do código entre as diretivas de desativação e reativação. Erros de tempo de execução serão gerados se o código não seguro de thread for executado em um thread preemptivo.

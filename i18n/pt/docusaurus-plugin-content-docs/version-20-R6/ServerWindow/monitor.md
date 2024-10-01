@@ -34,7 +34,7 @@ The "Overview" area provides various information concerning the system, applicat
 
 ![](../assets/en/Admin/server-licence-failed.png)
 
-Usually, you will need to check the [**Licences Manager**](Admin/licenses.md).
+Geralmente, você precisará verificar o [**Gerenciador de licenças**](Admin/licenses.md).
 
 ## Área Detalhes
 

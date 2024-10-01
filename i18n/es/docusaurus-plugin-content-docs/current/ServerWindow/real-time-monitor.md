@@ -22,7 +22,7 @@ La siguiente información se ofrece para cada línea:
   - **Suboperaciones** (si las hay): operaciones dependientes de la operación seleccionada (por ejemplo, eliminar registros relacionados antes que un registro padre).
   - **Detalles del proceso**: información adicional relativa a la tabla, campo, proceso o cliente, en función del tipo de operación
 
-> Real-time monitoring page uses the [`GET ACTIVITY SNAPSHOT`](https://doc.4d.com/4dv19/help/command/en/page1277.html) command internally. Puede encontrar más información en la descripción de este comando.
+> La página de monitoreo en tiempo real utiliza el comando [`GET ACTIVITY SNAPSHOT`](https://doc.4d.com/4dv19/help/command/en/page1277.html) internamente. Puede encontrar más información en la descripción de este comando.
 
 La página está activa y se actualiza permanentemente en cuanto se muestra. Cabe señalar que su funcionamiento puede ralentizar considerablemente la ejecución de la aplicación. Es posible suspender la actualización de esta página de una de las siguientes maneras:
 

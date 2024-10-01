@@ -137,10 +137,10 @@ Considerando as propriedades de tabela abaixo:
 
 <!-- REF #DataClassClass.all().Params -->
 
-| Parâmetro  | Tipo                                |     | Descrição                                                               |
-| ---------- | ----------------------------------- | :-: | ----------------------------------------------------------------------- |
-| settings   | Object                              |  -> | Opção de construção: context                            |
-| Resultados | 4D. EntitySelection |  <- | Referencias sobre todas as entidades relacionadas com a classe de dados |
+| Parâmetro  | Tipo                                |                             | Descrição                                                               |
+| ---------- | ----------------------------------- | :-------------------------: | ----------------------------------------------------------------------- |
+| settings   | Object                              |              ->             | Opção de construção: context                            |
+| Resultados | 4D. EntitySelection | <- | Referencias sobre todas as entidades relacionadas com a classe de dados |
 
 <!-- END REF -->
 
@@ -244,11 +244,11 @@ $ds. Persons.clearRemoteCache()
 
 <!-- REF #DataClassClass.fromCollection().Params -->
 
-| Parâmetro  | Tipo                                |     | Descrição                                    |
-| ---------- | ----------------------------------- | :-: | -------------------------------------------- |
-| objectCol  | Collection                          |  -> | Coleção de objetos a mapear com entidades    |
-| settings   | Object                              |  -> | Opção de construção: context |
-| Resultados | 4D. EntitySelection |  <- | Seleção de entidades preenchidas da coleção  |
+| Parâmetro  | Tipo                                |                             | Descrição                                    |
+| ---------- | ----------------------------------- | :-------------------------: | -------------------------------------------- |
+| objectCol  | Collection                          |              ->             | Coleção de objetos a mapear com entidades    |
+| settings   | Object                              |              ->             | Opção de construção: context |
+| Resultados | 4D. EntitySelection | <- | Seleção de entidades preenchidas da coleção  |
 
 <!-- END REF -->
 
@@ -440,11 +440,11 @@ var $empsCollection : Collection
 
 <!-- REF #DataClassClass.get().Params -->
 
-| Parâmetro  | Tipo                       |     | Descrição                                            |
-| ---------- | -------------------------- | :-: | ---------------------------------------------------- |
-| primaryKey | Integer OR Text            |  -> | Valor da chave primária da entidade a recuperar      |
-| settings   | Object                     |  -> | Opção de construção: context         |
-| Resultados | 4D. Entity |  <- | Entidade que coincide com a chave primária designada |
+| Parâmetro  | Tipo                       |                             | Descrição                                            |
+| ---------- | -------------------------- | :-------------------------: | ---------------------------------------------------- |
+| primaryKey | Integer OR Text            |              ->             | Valor da chave primária da entidade a recuperar      |
+| settings   | Object                     |              ->             | Opção de construção: context         |
+| Resultados | 4D. Entity | <- | Entidade que coincide com a chave primária designada |
 
 <!-- END REF -->
 
@@ -523,9 +523,9 @@ Este exemplo ilustra o uso da propriedade *context*:
 
 <!-- REF #DataClassClass.getCount().Params -->
 
-| Parâmetro | Tipo    |    | Descrição                              |
-| --------- | ------- | -- | -------------------------------------- |
-| result    | Integer | <- | Número de entidades na classe de dados |
+| Parâmetro | Tipo    |                             | Descrição                              |
+| --------- | ------- | --------------------------- | -------------------------------------- |
+| resultado | Integer | <- | Número de entidades na classe de dados |
 
 <!-- END REF -->
 
@@ -564,9 +564,9 @@ $number:=$ds. Persons.getCount()
 
 <!-- REF #DataClassClass.getDataStore().Params -->
 
-| Parâmetro  | Tipo                          |     | Descrição               |
-| ---------- | ----------------------------- | :-: | ----------------------- |
-| Resultados | cs. DataStore |  <- | Informação da dataclass |
+| Parâmetro  | Tipo                          |                             | Descrição               |
+| ---------- | ----------------------------- | :-------------------------: | ----------------------- |
+| Resultados | cs. DataStore | <- | Informação da dataclass |
 
 <!-- END REF -->
 
@@ -620,8 +620,8 @@ O método de projeto ***SearchDuplicate*** procura por valores duplicados em qua
 
 <!-- REF #DataClassClass.getInfo().Params -->
 
-| Parâmetro  | Tipo   |    | Descrição              |
-| ---------- | ------ | -- | ---------------------- |
+| Parâmetro  | Tipo   |                             | Descrição              |
+| ---------- | ------ | --------------------------- | ---------------------- |
 | Resultados | Object | <- | Datastore da dataclass |
 
 <!-- END REF -->
@@ -693,9 +693,9 @@ A função `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->retorna um
 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
 
-| Parâmetro | Tipo   |    | Descrição                                                                       |
-| --------- | ------ | -- | ------------------------------------------------------------------------------- |
-| result    | Object | <- | Objecto que descreve o conteúdo da cache ORDA para o dataclass. |
+| Parâmetro | Tipo   |                             | Descrição                                                                       |
+| --------- | ------ | --------------------------- | ------------------------------------------------------------------------------- |
+| resultado | Object | <- | Objecto que descreve o conteúdo da cache ORDA para o dataclass. |
 
 <!-- END REF -->
 
@@ -781,8 +781,8 @@ $cacheAddress:=$ds. Adress.getRemoteCache()
 
 <!-- REF #DataClassClass.new().Params -->
 
-| Parâmetro  | Tipo                       |    | Descrição                                        |
-| ---------- | -------------------------- | -- | ------------------------------------------------ |
+| Parâmetro  | Tipo                       |                             | Descrição                                        |
+| ---------- | -------------------------- | --------------------------- | ------------------------------------------------ |
 | Resultados | 4D. Entity | <- | Nova entidade que coincide com a classe de dados |
 
 <!-- END REF -->
@@ -828,9 +828,9 @@ Este exemplo cria uma nova entidade na classe de dados "Log" e registra a inform
 
 <!-- REF #DataClassClass.newSelection().Params -->
 
-| Parâmetro  | Tipo                                |    | Descrição                                                                                                                                                                                         |
-| ---------- | ----------------------------------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| keepOrder  | Integer                             | -> | `dk keep ordered`: cria uma seleção de entidades ordenada,<br/>`dk non ordered`: cria uma seleção de entidade não ordenada (padrão se omitido) |
+| Parâmetro  | Tipo                                |                             | Descrição                                                                                                                                                                                         |
+| ---------- | ----------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| keepOrder  | Integer                             | ->                          | `dk keep ordered`: cria uma seleção de entidades ordenada,<br/>`dk non ordered`: cria uma seleção de entidade não ordenada (padrão se omitido) |
 | Resultados | 4D. EntitySelection | <- | Nova seleção de entidades em branco relacionadas com a classe de dados                                                                                                                            |
 
 <!-- END REF -->
@@ -873,12 +873,12 @@ Quando criada, a seleção de entidades não contém nenhuma entidade (`mySelect
 
 <!-- REF #DataClassClass.query().Params -->
 
-| Parâmetro     | Tipo                                |    | Descrição                                                                                                                                            |
-| ------------- | ----------------------------------- | -- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Text                                | -> | Criterios de pesquisa como string                                                                                                                    |
-| formula       | Object                              | -> | Criterios de pesquisa como objeto fórmula                                                                                                            |
-| value         | any                                 | -> | Valores a usar para placeholders indexados                                                                                                           |
-| querySettings | Object                              | -> | Opções de pesquisa: parâmetros, atributos, args, allowFormulas, contexto, queryPath,queryPlan                                        |
+| Parâmetro     | Tipo                                |                             | Descrição                                                                                                                                            |
+| ------------- | ----------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| queryString   | Text                                | ->                          | Criterios de pesquisa como string                                                                                                                    |
+| formula       | Object                              | ->                          | Criterios de pesquisa como objeto fórmula                                                                                                            |
+| value         | any                                 | ->                          | Valores a usar para placeholders indexados                                                                                                           |
+| querySettings | Object                              | ->                          | Opções de pesquisa: parâmetros, atributos, args, allowFormulas, contexto, queryPath,queryPlan                                        |
 | Resultados    | 4D. EntitySelection | <- | Nova seleção de entidade composta por entidades da classe de dados que atendem aos critérios de pesquisa especificados em *queryString* ou *formula* |
 
 <!-- END REF -->
@@ -920,19 +920,19 @@ Fórmulas nas consultas podem receber parâmetros através de $1. Este ponto est
 
 - **comparator**: símbolo que compara *attributePath* e *value*. Os simbolos abaixo são compatíveis:
 
-| Comparação                               | Símbolos    | Comentário                                                                                                                                                                                                                      |
-| ---------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Igual a                                  | =, ==       | Retorna os dados coincidentes, admite o coringa (@), não diferencia entre maiúsculas e minúsculas nem diacríticas.                                                              |
-|                                          | ===, IS     | Retorna os dados coincidentes, considera @ como caractere padrão, não diferencia entre maiúsculas e minúsculas nem diacríticas                                                                                     |
-| Diferente de                             | #, !=       | Suporta o coringa (@). Equivalente a "Not condition applied on a statement" ([veja abaixo](#not-equal-to-in-collections)).                   |
-|                                          | !==, IS NOT | Considera  @ como um caractere normal                                                                                                                                                                              |
-| Não se aplica à condição de uma sentença | NOT         | Parentesis são obrigatórios quando usar NOT antes de uma instrução que contenha vários operadores. Equivalent to "Not equal to" ([see below](#not-equal-to-in-collections)). |
-| Menor que                                | <           |                                                                                                                                                                                                                                 |
-| Maior que                                | >           |                                                                                                                                                                                                                                 |
-| Menor que ou igual a                     | <=          |                                                                                                                                                                                                                                 |
-| Maior ou igual a                         | > =         |                                                                                                                                                                                                                                 |
-| Incluído em                              | IN          | Retorna dados iguais a ao menos um dos valores de uma coleção ou de um conjunto de valores, admite o coringa (@)                                                                                |
-| Contém palavra chave                     | %           | As palavras chaves podem ser usadas em atributos de string ou imagem                                                                                                                                                            |
+| Comparação                               | Símbolos                    | Comentário                                                                                                                                                                                                                        |
+| ---------------------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Igual a                                  | =, ==                       | Retorna os dados coincidentes, admite o coringa (@), não diferencia entre maiúsculas e minúsculas nem diacríticas.                                                                |
+|                                          | ===, IS                     | Retorna os dados coincidentes, considera @ como caractere padrão, não diferencia entre maiúsculas e minúsculas nem diacríticas                                                                                       |
+| Diferente de                             | #, !=                       | Suporta o coringa (@). Equivalente a "Not condition applied on a statement" ([veja abaixo](#not-equal-to-in-collections)).                     |
+|                                          | !==, IS NOT                 | Considera  @ como um caractere normal                                                                                                                                                                                |
+| Não se aplica à condição de uma sentença | NOT                         | Parentesis são obrigatórios quando usar NOT antes de uma instrução que contenha vários operadores. Equivalente a "Not equal to" ([veja abaixo](#not-equal-to-in-collections)). |
+| Menor que                                | <  |                                                                                                                                                                                                                                   |
+| Maior que                                | >                           |                                                                                                                                                                                                                                   |
+| Menor que ou igual a                     | <= |                                                                                                                                                                                                                                   |
+| Maior ou igual a                         | > =                         |                                                                                                                                                                                                                                   |
+| Incluído em                              | IN                          | Retorna dados iguais a ao menos um dos valores de uma coleção ou de um conjunto de valores, admite o coringa (@)                                                                                  |
+| Contém palavra chave                     | %                           | As palavras chaves podem ser usadas em atributos de string ou imagem                                                                                                                                                              |
 
 - **value**: o valor a comparar ao valor atual da propriedade de cada entidade na seleção de entidade. Pode ser um **marcador** (ver **Uso de marcadores** abaixo) ou qualquer expressão que coincida com a propriedade de tipo de dados.
   Ao usar um valor constante, as seguintes regras devem ser respeitadas:
@@ -1135,7 +1135,7 @@ O ORDA oferece uma sintaxe especial para facilitar as consultas em relações mu
 
 ![alt-text](../assets/en/API/manytomany.png)
 
-Imagine que você queira pesquisar todos os filmes em que ambos o ator A e o ator B tenham um papel. If you write a simple query using an `AND` operator, it will not work:
+Imagine que você queira pesquisar todos os filmes em que ambos o ator A e o ator B tenham um papel. Se você escrever uma consulta simples usando um operador `AND`, ela não funcionará:
 
 ```4d
 // invalid code
@@ -1195,15 +1195,15 @@ No exemplo 3 são oferecidos mais exemplos.
 
 No  parâmetro querySettings é possível passar um objeto que conteha opções adicionais. As propriedades abaixo são compatíveis:
 
-| Propriedade   | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| parameters    | Object     | **Espaços reservados nomeados para valores** usados na *queryString* ou *fórmula*. Os valores são expressos como pares propriedade / valor, onde propriedade é o nome do marcador de posição inserido para um valor na *queryString* ou na *formula* (":placeholder") e valor é o valor a ser comparado. Você pode misturar marcadores de posição indexados (valores passados diretamente nos parâmetros value) e valores de marcadores de posição com nome na mesma consulta.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| atributos     | Object     | **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass<table><tr><th>Type</th><th>Description</th></tr><tr><td>String</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
-| args          | Object     | Parámetro(s) a passar para as fórmulas, se houver. The **args** object will be received in $1 within formulas and thus its values will be available through *$1.property* (see example 3).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| allowFormulas | Parâmetros | True para permitir as chamadas de fórmulas na pesquisa (padrão). Passe falso para desautorizar a execução de fórmulas. If set to false and `query()` is given a formula, an error is sent (1278 - Formula not allowed in this member method).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| context       | Text       | Etiqueta para o contexto de otimização automático aplicados à seleção de entidade. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. This feature is designed for client/server processing; for more information, please refer to the [**Client/server optimization**](../ORDA/client-server-optimization.md#optimization-context) section.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| queryPlan     | Parâmetros | Na entity selection resultante, devolve ou não a descrição detalhada da pesquisa logo antes de ser executada, ou seja, a pesquisa planificada. A propriedade devolvida é um objeto que inclui cada pesquisa e subpesquisa prevista (no caso de uma pesquisa complexa). Esta opção é útil durante a fase de desenvolvimento de uma aplicação. Geralmente é usada em conjunto com queryPath. Como padrão é omitido: false.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| queryPath     | Parâmetros | Na entity selection resultante, devolve ou não a descrição detalhada da pesquisa tal qual for realizada. A propriedade retornada é um objeto que contém a rota atual usada para a pesquisa (geralmente idêntica àquela do queryPlan, mas deve diferenciar se o motor consegue otimizar a pesquisa), assim como o tempo de processamento e o número de registros encontrado. Esta opção é útil durante a fase de desenvolvimento de uma aplicação. Como padrão é omitido: false.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Propriedade   | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| parameters    | Object     | **Espaços reservados nomeados para valores** usados na *queryString* ou *fórmula*. Os valores são expressos como pares propriedade / valor, onde propriedade é o nome do marcador de posição inserido para um valor na *queryString* ou na *formula* (":placeholder") e valor é o valor a ser comparado. Você pode misturar marcadores de posição indexados (valores passados diretamente nos parâmetros value) e valores de marcadores de posição com nome na mesma consulta.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| atributos     | Object     | **Espaços reservados nomeados para caminhos de atributos** usados na *queryString* ou *formula*. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em *queryString* ou *formula* (":placeholder") e valor pode ser uma string ou uma coleção de strings. Cada valor é um caminho que pode designar um escalar ou um atributo relacionado da classe de dados ou uma propriedade em um campo de objeto da classe de dados.<table><tr><th>Tipo</th><th>Descrição</th></tr><tr><td>String</td><td>attributePath expresso usando a notação de ponto, por exemplo, "nome" ou "usuario.endereco.cep"</td></tr><tr><td>Coleção de strings</td><td>Cada string da coleção representa um nível do attributePath, por exemplo, \["nome"] ou \["usuario","endereco","cep"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
+| args          | Object     | Parámetro(s) a passar para as fórmulas, se houver. The **args** object will be received in $1 within formulas and thus its values will be available through *$1.property* (see example 3).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| allowFormulas | Parâmetros | True para permitir as chamadas de fórmulas na pesquisa (padrão). Passe falso para desautorizar a execução de fórmulas. If set to false and `query()` is given a formula, an error is sent (1278 - Formula not allowed in this member method).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| context       | Text       | Etiqueta para o contexto de otimização automático aplicados à seleção de entidade. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. This feature is designed for client/server processing; for more information, please refer to the [**Client/server optimization**](../ORDA/client-server-optimization.md#optimization-context) section.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| queryPlan     | Parâmetros | Na entity selection resultante, devolve ou não a descrição detalhada da pesquisa logo antes de ser executada, ou seja, a pesquisa planificada. A propriedade devolvida é um objeto que inclui cada pesquisa e subpesquisa prevista (no caso de uma pesquisa complexa). Esta opção é útil durante a fase de desenvolvimento de uma aplicação. Geralmente é usada em conjunto com queryPath. Como padrão é omitido: false.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| queryPath     | Parâmetros | Na entity selection resultante, devolve ou não a descrição detalhada da pesquisa tal qual for realizada. A propriedade retornada é um objeto que contém a rota atual usada para a pesquisa (geralmente idêntica àquela do queryPlan, mas deve diferenciar se o motor consegue otimizar a pesquisa), assim como o tempo de processamento e o número de registros encontrado. Esta opção é útil durante a fase de desenvolvimento de uma aplicação. Como padrão é omitido: false.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 #### Sobre queryPlan e queryPath
 
@@ -1435,7 +1435,7 @@ Pesquisa com marcadores de posição com nome para os atributos e os valores:
 
 Estes exemplos ilustram as distintas formas de utilizar fórmulas com ou sem parâmetros em suas pesquisas.
 
-The formula is given as text with `eval()` in the *queryString* parameter:
+A fórmula é fornecida como texto com `eval()` no parâmetro *queryString*:
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1485,7 +1485,7 @@ A text formula in *queryString* receives a parameter:
  $result:=(Position($exclude;This.lastname)=0)
 ```
 
-Using the same ***checkName*** method, a `Formula` object as placeholder receives a parameter:
+Usando o mesmo método ***checkName***, um objeto `Formula` como espaço reservado recebe um parâmetro:
 
 ```4d
  var $es : cs. StudentsSelection
@@ -1545,7 +1545,7 @@ Queremos desautorizar as fórmulas, por exemplo, quando el usuário introduz sua
 
 The `.setRemoteCacheSettings()` function <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->sets the timeout and maximum size of the ORDA cache for a dataclass.<!-- END REF -->.
 
-In the *settings* parameter, pass an object with the following properties:
+No parâmetro *settings*, passe um objeto contendo as propriedades abaixo:
 
 | Propriedade | Tipo    | Descrição                                    |
 | ----------- | ------- | -------------------------------------------- |
@@ -1560,7 +1560,7 @@ In the *settings* parameter, pass an object with the following properties:
 
 Setting a `timeout` property sets a new timeout for the entities already present in the cache. É útil quando se trabalha com dados que não mudam com muita frequência, e, portanto, quando não são necessários novos pedidos ao servidor.
 
-`maxEntries` sets the max number of entities in the ORDA cache. O padrão é de 30 000.
+`maxEntries` define o número máximo de entidades na cache ORDA. O padrão é de 30 000.
 
 O número mínimo de entradas é 300, pelo que o valor de `maxEntries` deve ser igual ou superior a 300. Caso contrário, é ignorado e o número máximo de entradas é fixado em 300.
 

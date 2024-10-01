@@ -9,9 +9,9 @@ title: VP Get formula
 
 <!-- REF #_method_.VP Get formula.Params -->
 
-| Paramètres | Type   |    | Description |                  |
-| ---------- | ------ | -- | ----------- | ---------------- |
-| rangeObj   | Object | -> | Objet plage |                  |
+| Paramètres | Type   |                             | Description |                  |
+| ---------- | ------ | --------------------------- | ----------- | ---------------- |
+| rangeObj   | Object | ->                          | Objet plage |                  |
 | Résultat   | Text   | <- | Formula     | <!-- END REF --> |
 
 #### Description

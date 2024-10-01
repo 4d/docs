@@ -29,7 +29,7 @@ Las siguientes modificaciones pueden efectuarse en objetos y colecciones compart
 
 :::note
 
-Keep in mind that objects or collections set as the content of a shared object or collection must themselves be shared.
+Tenga en cuenta que los objetos o colecciones definidas como el contenido de un objeto compartido o colección deben ser compartidos por sí mismos.
 
 :::
 
@@ -68,8 +68,6 @@ La asignación de objetos/colecciones compartidos a propiedades o elementos de o
 - Los objetos/colecciones compartidos agrupados no se pueden desagrupar. Una vez incluido en un grupo compartido, un objeto/colección compartido queda vinculado permanentemente a ese grupo durante toda la sesión. Incluso si todas las referencias de un objeto/colección se eliminan del objeto/colección padre, seguirán vinculadas.
 
 Consulte el ejemplo 2 para ver una ilustración de las reglas de los grupos compartidos.
-
-**Nota:** Los grupos compartidos se gestionan a través de una propiedad interna llamada _locking identifier_. Para obtener información detallada sobre este valor, consulte la Referencia del Lenguaje 4D.
 
 ### Lectura
 

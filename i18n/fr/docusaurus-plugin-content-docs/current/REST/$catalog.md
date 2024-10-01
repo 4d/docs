@@ -40,7 +40,7 @@ Voici une description des propriétés retournées pour chaque dataclass dans le
 
 ```json
 {
-    dataClasses: [
+    dataClass: [
         {
             name: "Company",
             uri: "http://127.0.0.1:8081/rest/$catalog/Company",

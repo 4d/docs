@@ -3,7 +3,7 @@ id: privileges
 title: Privilegios
 ---
 
-Proteger los datos a la vez que se permite un acceso rápido y sencillo a los usuarios autorizados es un reto importante para las aplicaciones web. The ORDA security architecture is implemented at the heart of your datastore and allows you to define specific privileges to all web or REST user sessions for the various resources in your project (datastore, dataclasses, functions, etc.).
+Proteger los datos a la vez que se permite un acceso rápido y sencillo a los usuarios autorizados es un reto importante para las aplicaciones web. La arquitectura de seguridad ORDA se implementa en el corazón de su almacén de datos y le permite definir privilegios específicos a todas las sesiones usuario REST o web para los distintos recursos de su proyecto (datastore, dataclasses, funciones, etc.).
 
 ## Generalidades
 
@@ -23,13 +23,15 @@ Para una descripción detallada de toda la arquitectura de permisos, por favor l
 
 ## Resources
 
-Puede asignar acciones de permiso específicas a los siguientes recursos expuestos en su proyecto:
+Puede asignar acciones de permiso específicas a los siguientes recursos en su proyecto:
 
 - el almacén de datos
 - una clase de datos
 - un atributo (incluidos los calculados y los alias)
 - una función de clase de modelo de datos
 - una función [singleton](../REST/$singleton.md)
+
+Cada vez que se accede a un recurso dentro de una sesión (sin importar la forma en que se acceda), 4D verifica que la sesión tenga los permisos apropiados y rechaza el acceso si no está autorizado.
 
 Una acción de permiso definida en un nivel determinado se hereda por defecto en los niveles inferiores, pero se pueden establecer varios permisos:
 
@@ -78,7 +80,7 @@ Un privilegio o un rol pueden asociarse a varias combinaciones "acción + recurs
 
 - Usted **crea** privilegios y/o roles en el archivo `roles.json` (ver abajo). **Configura** su alcance asignándolos a acción(es) de permiso aplicadas a recurso(s).
 
-- You **allow** privileges and/or roles to every user session using the [`.setPrivileges()`](../API/SessionClass.md#setprivileges) function of the `Session` class.
+- Usted **autoriza** los privilegios y/o roles para cada sesión usuario usando la función [`.setPrivileges()`](../API/SessionClass.md#setprivileges) de la clase `Session`.
 
 ### Ejemplo
 
@@ -92,14 +94,14 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
     Session.clearPrivileges()
 
-    $result:="Your are authenticated as Guest"
+    $result:="Está autentificado como Invitado"
 
     $user:=ds.Users.query("identifier = :1"; $identifier).first()
 
     If ($user#Null)
         If (Verify password hash($password; $user.password))
             Session.setPrivileges(New object("roles"; $user.role))
-            $result:="Your are authenticated as "+$user.role
+            $result:="Está autentificado como "+$user.role
         End if
     End if
 
@@ -150,7 +152,7 @@ El archivo por defecto tiene el siguiente contenido:
 
 ```
 
-Para un nivel de seguridad más alto, el privilegio "none" se asigna a todos los permisos en el datastore, por lo tanto el acceso de datos en todo el objeto `ds` está deshabilitado por defecto. It is recommended not to modified or use this locking privilege, but to add specific permissions to each resource you wish to make available from web or REST requests ([see example below](example-of-privilege-configuration)).
+Para un nivel de seguridad más alto, el privilegio "none" se asigna a todos los permisos en el datastore, por lo tanto el acceso de datos en todo el objeto `ds` está deshabilitado por defecto. Se recomienda no modificar ni utilizar este privilegio de bloqueo, sino agregar permisos específicos a cada recurso que desee poner a disposición desde solicitudes web o REST ([ver ejemplo a continuación](#example-of-privilege-configuration)).
 
 :::caution
 

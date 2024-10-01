@@ -107,7 +107,7 @@ Function onInvoke($editor : Object)->$result : Object
 
 JSONファイルの説明です:
 
-| 属性     |               |                    | タイプ    | 説明                                            |
+| 属性     |               |                    | 型      | 説明                                            |
 | ------ | ------------- | ------------------ | ------ | --------------------------------------------- |
 | macros |               |                    | object | 定義されたマクロのリスト                                  |
 |        | `<macroName>` |                    | object | マクロ定義                                         |
@@ -152,9 +152,9 @@ JSONファイルの説明です:
 
 #### Class constructor($macro : Object)
 
-| 引数     | タイプ    | 説明                                 |
+| 引数     | 型      | 説明                                 |
 | ------ | ------ | ---------------------------------- |
-| $macro | Object | `formMacros.json` ファイルのマクロ宣言オブジェクト |
+| $macro | オブジェクト | `formMacros.json` ファイルのマクロ宣言オブジェクト |
 
 [Class constructor](Concepts/classes.md#class-constructor) 関数が定義されている場合、マクロはそれによってインスタンス化されます。
 
@@ -189,10 +189,10 @@ Class constructor($macro : Object)
 
 #### onInvoke($editor : Object) -> $result : Object
 
-| 引数      | タイプ    | 説明                                            |
+| 引数      | 型      | 説明                                            |
 | ------- | ------ | --------------------------------------------- |
-| $editor | Object | フォームプロパティを格納する Form Editor Macro Proxy オブジェクト |
-| $result | Object | マクロによって変更されたフォームプロパティ (任意) |
+| $editor | オブジェクト | フォームプロパティを格納する Form Editor Macro Proxy オブジェクト |
+| $result | オブジェクト | マクロによって変更されたフォームプロパティ (任意) |
 
 マクロが呼び出されるたびに、`onInvoke` 関数が自動的に実行されます。
 
@@ -202,28 +202,28 @@ Class constructor($macro : Object)
 
 _$editor_ 引数にて渡されるプロパティは次の通りです:
 
-| プロパティ                                                            | タイプ        | 説明                                               |
-| ---------------------------------------------------------------- | ---------- | ------------------------------------------------ |
-| $editor.editor.form              | Object     | フォーム全体                                           |
-| $editor.editor.file              | File       | フォームファイルの Fileオブジェクト                             |
-| $editor.editor.name              | String     | フォームの名称                                          |
-| $editor.editor.table             | number     | フォームのテーブル番号。プロジェクトフォームの場合は 0。                    |
-| $editor.editor.currentPageNumber | number     | 現在のページの番号                                        |
-| $editor.editor.currentPage       | Object     | 現在のページ (フォームオブジェクトおよび入力順序を格納) |
-| $editor.editor.currentSelection  | Collection | 選択されているオブジェクトの名称のコレクション                          |
-| $editor.editor.formProperties    | Object     | カレントフォームのプロパティ                                   |
-| $editor.editor.target            | string     | マクロ呼び出し時にマウスカーソルが置かれているオブジェクトの名称                 |
+| プロパティ                                                            | 型      | 説明                                               |
+| ---------------------------------------------------------------- | ------ | ------------------------------------------------ |
+| $editor.editor.form              | オブジェクト | フォーム全体                                           |
+| $editor.editor.file              | File   | フォームファイルの Fileオブジェクト                             |
+| $editor.editor.name              | String | フォームの名称                                          |
+| $editor.editor.table             | number | フォームのテーブル番号。プロジェクトフォームの場合は 0。                    |
+| $editor.editor.currentPageNumber | number | 現在のページの番号                                        |
+| $editor.editor.currentPage       | オブジェクト | 現在のページ (フォームオブジェクトおよび入力順序を格納) |
+| $editor.editor.currentSelection  | コレクション | 選択されているオブジェクトの名称のコレクション                          |
+| $editor.editor.formProperties    | オブジェクト | カレントフォームのプロパティ                                   |
+| $editor.editor.target            | string | マクロ呼び出し時にマウスカーソルが置かれているオブジェクトの名称                 |
 
 マクロによる変更をフォームに反映させたい場合に、`$result` オブジェクトに渡せるプロパティの一覧です。 いずれのプロパティも任意です:
 
-| プロパティ                             | タイプ        | 説明                                |
-| --------------------------------- | ---------- | --------------------------------- |
-| currentPage                       | Object     | マクロによって変更されたオブジェクトを含む currentPage |
-| currentSelection                  | Collection | マクロによって変更された currentSelection     |
-| formProperties                    | Object     | マクロによって変更された formProperties       |
-| editor.groups     | Object     | マクロによって変更されたグループ情報                |
-| editor.views      | Object     | マクロによって変更されたビュー情報                 |
-| editor.activeView | String     | 有効なビュー名                           |
+| プロパティ                             | 型      | 説明                                |
+| --------------------------------- | ------ | --------------------------------- |
+| currentPage                       | オブジェクト | マクロによって変更されたオブジェクトを含む currentPage |
+| currentSelection                  | コレクション | マクロによって変更された currentSelection     |
+| formProperties                    | オブジェクト | マクロによって変更された formProperties       |
+| editor.groups     | オブジェクト | マクロによって変更されたグループ情報                |
+| editor.views      | オブジェクト | マクロによって変更されたビュー情報                 |
+| editor.activeView | String | 有効なビュー名                           |
 
 たとえば、currentPage と editor.groups の内容が変わった場合には、戻り値を次のように設定します:
 
@@ -241,7 +241,7 @@ _$editor_ 引数にて渡されるプロパティは次の通りです:
 
 - 次の構造を持つオブジェクトの使用:
 
-| プロパティ  | タイプ    | 説明      |
+| プロパティ  | 型      | 説明      |
 | ------ | ------ | ------- |
 | source | String | メソッドコード |
 
@@ -283,14 +283,14 @@ Function onInvoke($editor : Object)->$result : Object
 
 #### onError($editor : Object; $resultMacro : Object ; $error : Collection)
 
-| 引数           |                                                                                           | タイプ        | 説明                                   |
-| ------------ | ----------------------------------------------------------------------------------------- | ---------- | ------------------------------------ |
-| $editor      |                                                                                           | Object     | [onInvoke](#oninvoke) に渡されたオブジェクト    |
-| $resultMacro |                                                                                           | Object     | [onInvoke](#oninvoke) によって返されたオブジェクト |
-| $error       |                                                                                           | Collection | エラースタック                              |
-|              | [].errCode            | Number     | エラーコード                               |
-|              | [].message            | Text       | エラーの詳細                               |
-|              | [].componentSignature | Text       | 内部コンポーネントのシグネチャー                     |
+| 引数           |                                                                                           | 型      | 説明                                   |
+| ------------ | ----------------------------------------------------------------------------------------- | ------ | ------------------------------------ |
+| $editor      |                                                                                           | オブジェクト | [onInvoke](#oninvoke) に渡されたオブジェクト    |
+| $resultMacro |                                                                                           | オブジェクト | [onInvoke](#oninvoke) によって返されたオブジェクト |
+| $error       |                                                                                           | コレクション | エラースタック                              |
+|              | [].errCode            | Number | エラーコード                               |
+|              | [].message            | テキスト   | エラーの詳細                               |
+|              | [].componentSignature | テキスト   | 内部コンポーネントのシグネチャー                     |
 
 マクロの実行時にエラーが発生した場合、`onError` 関数が実行されます。
 

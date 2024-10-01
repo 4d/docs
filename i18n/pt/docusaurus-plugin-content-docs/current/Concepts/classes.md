@@ -107,8 +107,8 @@ As classes disponíveis são acessíveis a partir das suas class stores. Estão 
 
 <!-- REF #_command_.cs.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                           |                  |
-| ---------- | ------ | -- | --------------------------------------------------- | ---------------- |
+| Parâmetro  | Tipo   |                             | Descrição                                           |                  |
+| ---------- | ------ | --------------------------- | --------------------------------------------------- | ---------------- |
 | classStore | Object | <- | Class store de usuário para o projeto ou componente | <!-- END REF --> |
 
 O comando `cs` <!-- REF #_command_.cs.Summary -->devolve a loja de classes de utilizadores para o projecto ou componente actual<!-- END REF -->. Ele retorna todas as classes de usuários [definidas](#class-definition) no projeto ou componente aberto. Por padrão, apenas as classes [ORDA do projeto](ORDA/ordaClasses.md) estão disponíveis.
@@ -127,8 +127,8 @@ $instance:=cs.myClass.new()
 
 <!-- REF #_command_.4D.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição      |                  |
-| ---------- | ------ | -- | -------------- | ---------------- |
+| Parâmetro  | Tipo   |                             | Descrição      |                  |
+| ---------- | ------ | --------------------------- | -------------- | ---------------- |
 | classStore | Object | <- | Class store 4D | <!-- END REF --> |
 
 O comando `4D` <!-- REF #_command_.4D.Summary -->retorna a classe store para as classes 4D incorporadas disponíveis<!-- END REF -->. Ele permite acesso a APIs específicas como [CryptoKey](API/CryptoKeyClass.md).
@@ -586,9 +586,9 @@ Classe ($side : Integer)
 
 <!-- REF #_command_.Super.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                                      |
-| ---------- | ------ | -- | -------------------------------------------------------------- |
-| param      | any    | -> | Parâmetro(s) a passar para o construtor pai |
+| Parâmetro  | Tipo   |                             | Descrição                                                      |
+| ---------- | ------ | --------------------------- | -------------------------------------------------------------- |
+| param      | any    | ->                          | Parâmetro(s) a passar para o construtor pai |
 | Resultados | Object | <- | Pai do objecto                                                 |
 
 <!-- END REF -->
@@ -694,8 +694,8 @@ Parâmetros
 
 <!-- REF #_command_.This.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição      |
-| ---------- | ------ | -- | -------------- |
+| Parâmetro  | Tipo   |                             | Descrição      |
+| ---------- | ------ | --------------------------- | -------------- |
 | Resultados | Object | <- | Objecto actual |
 
 <!-- END REF -->
@@ -833,11 +833,11 @@ O [`.isSingleton`](../API/ClassClass.md#issingleton) propriedade de objetos de c
 
 The scope of a singleton instance can be the process where it is instantiated or all processes on the machine, depending on its _shared_ property.
 
-| Singleton created on | Scope if not shared                                                                                      | Scope if shared   |
-| -------------------- | -------------------------------------------------------------------------------------------------------- | ----------------- |
-| 4D usuário único     | Processo                                                                                                 | Application       |
-| 4D Server            | Processo                                                                                                 | Máquina 4D Server |
-| Modo remoto 4D       | Process (_note_: singletons are not synchronized on the twin process) | Máquina remota 4D |
+| Singleton criado em | Scope if not shared                                                                                        | Scope if shared   |
+| ------------------- | ---------------------------------------------------------------------------------------------------------- | ----------------- |
+| 4D usuário único    | Processo                                                                                                   | Aplicação         |
+| 4D Server           | Processo                                                                                                   | Máquina 4D Server |
+| Modo remoto 4D      | Process (_nota_: os singletons não são sincronizados no processo gêmeo) | Máquina remota 4D |
 
 Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
 
@@ -847,7 +847,7 @@ As classes Singleton não são suportadas por [classes baseadas em ORDA](../ORDA
 
 :::
 
-### Creating a singleton
+### Criação de um singleton
 
 To create a singleton class, add the `singleton` keyword before [`Class Constructor`](#class-constructor). Por exemplo:
 

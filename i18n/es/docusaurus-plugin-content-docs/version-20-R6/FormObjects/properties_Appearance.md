@@ -53,7 +53,7 @@ Durante la ejecución, un campo o toda área introducible es delimitada por un r
 
 Esta propiedad se utiliza para desactivar el resaltado de la selección en los list box.
 
-Cuando esta opción está activada, el resaltado de la selección ya no es visible para las selecciones realizadas en los list box. Selections themselves are still valid and work in exactly the same way as previously; however, they are no longer represented graphically onscreen, and you will need to [define their appearance programmatically](listbox_overview.md#customizing-appearance-of-selected-rows).
+Cuando esta opción está activada, el resaltado de la selección ya no es visible para las selecciones realizadas en los list box. Las selecciones en sí siguen siendo válidas y funcionan exactamente igual que antes; sin embargo, ya no se representan gráficamente en pantalla, y tendrá que [definir su apariencia por programación](listbox_overview.md#customizing-appearance-of-selected-rows).
 
 Por defecto, esta opción no está activa.
 
@@ -95,7 +95,7 @@ Valores disponibles:
 
 #### Ver también
 
-[Vertical scroll bar](#vertical-scroll-bar)
+[Barra de desplazamiento vertical](#vertical-scroll-bar)
 
 ---
 

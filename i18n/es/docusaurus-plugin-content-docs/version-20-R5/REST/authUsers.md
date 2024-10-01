@@ -3,7 +3,7 @@ id: authUsers
 title: Usuarios y sesiones
 ---
 
-When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), REST requests can create and use [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between web client processes, and control of user privileges.
+Cuando las [sesiones escalables están activadas](WebServer/sessions.md#enabling-sessions) (recomendadas), las peticiones REST pueden crear y usar [sesiones usuario web](WebServer/sessions.md), ofreciendo funcionalidades adicionales como la gestión de múltiples peticiones, el intercambio de datos entre procesos web clientes y el control de los privilegios usuario.
 
 Cuando se abre una sesión de usuario web, puede manejarla a través del objeto `Session` y la [Session API](API/SessionClass.md). Las siguientes peticiones REST reutilizan la misma cookie de sesión.
 
@@ -47,7 +47,7 @@ Todas las demás peticiones REST (manejando datos o ejecutando una función) só
 Este modo le permite implementar la siguiente secuencia de acceso:
 
 1. En la primera llamada REST (para una llamada webform, por ejemplo), se crea una sesión de usuario web "invitado". No tiene privilegios, ni derechos para ejecutar peticiones que no sean descriptivas, ni consumo de licencias.
-2. You call your exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class) named [`authentify()`](#function-authentify) (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges.
+2. Usted llama a su función expuesta de la [clase datastore](../ORDA/ordaClasses.md#datastore-class) llamada [`authentify()`](#function-authentify) (creada de antemano), en la cual verifica las credenciales del usuario y llama a [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) con los privilegios correspondientes.
 3. La petición `/rest/$catalog/authentify` se envía al servidor junto con las credenciales del usuario. Este paso sólo requiere un formulario de acceso básico que no acceda a datos; puede ser un formulario Qodly (llamado a través de la petición `/rest/$getWebForm`).
 4. Si el usuario se autentica correctamente, se consume una licencia 4D en el servidor y se aceptan todas las peticiones REST.
 
@@ -89,7 +89,7 @@ Esta función debe contener dos partes:
 - algún código para identificar y autenticar al remitente de la petición REST,
 - si la autenticación tiene éxito, una llamada a [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) que asigna los privilegios apropiados a la sesión.
 
-If the function does not call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges), no privileges are assigned, no license is consumed and subsequent non-descriptive REST requests are rejected.
+Si la función no llama a [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges), no se asignan privilegios, no se consume ninguna licencia y las solicitudes REST no descriptivas posteriores son rechazadas.
 
 #### Ejemplo
 
@@ -129,13 +129,13 @@ Cuerpo de la petición:
 
 ## Usando `On REST Authentication`
 
-In default login mode (i.e. the "force login" mode is disabled), you can log in a user to your application by calling [`$directory/login`]($directory.md#directorylogin) in a POST request including the user's name and password in the header. Esta petición llama al método base `On REST Authentication` (si existe), donde se pueden comprobar las credenciales del usuario (ver ejemplo abajo).
+En el modo de inicio de sesión por defecto (es decir, el modo "forzar inicio de sesión" está desactivado), puede iniciar la sesión de un usuario en su aplicación llamando a [`$directory/login`]($directory.md#directorylogin) en una petición POST incluyendo el nombre y la contraseña del usuario en el encabezado. Esta petición llama al método base `On REST Authentication` (si existe), donde se pueden comprobar las credenciales del usuario (ver ejemplo abajo).
 
 Si no se ha definido el método base `On REST Authentication`, se abre una sesión `guest`.
 
 ### Ejemplo
 
-In this example, the user enters their email and password in an html page that requests [`$directory/login`]($directory.md#directorylogin) in a POST (it is recommended to use an HTTPS connection to send the html page). Se llama al método base `On REST Authentication` para validar las credenciales y establecer la sesión.
+En este ejemplo, el usuario introduce su correo electrónico y contraseña en una página html que solicita [`$directory/login`]($directory.md#directorylogin) en un POST (se recomienda utilizar una conexión HTTPS para enviar la página html). Se llama al método base `On REST Authentication` para validar las credenciales y establecer la sesión.
 
 Página de inicio de sesión HTML:
 
@@ -168,7 +168,7 @@ function sendData(data) {
       }
   };
 
-  XHR.open('POST', 'http://127.0.0.1:8044/rest/$directory/login'); //rest server address
+  XHR.open('POST', 'http://127.0.0.1:8044/rest/$directory/login'); //dirección de servidor rest
 
   XHR.setRequestHeader('username-4D', data.userId);
   XHR.setRequestHeader('password-4D', data.password);
@@ -187,14 +187,14 @@ sendData({userId:document.forms['myForm'].elements['userId'].value , password:do
 Cuando la página de inicio de sesión se envía al servidor, se llama al método base `On REST Authentication`:
 
 ```4d
-	//On REST Authentication
+//On REST Authentication
 
 #DECLARE($userId : Text; $password : Text) -> $Accepted : Boolean
 var $sales : cs.SalesPersonsEntity
 
 $Accepted:=False
 
-	//A '/rest' URL has been called with headers username-4D and password-4D
+	//Una URL '/rest' ha sido llamada con los encabezados username-4D y password-4D
 If ($userId#"")
     $sales:=ds.SalesPersons.query("email = :1"; $userId).first()
     If ($sales#Null)

@@ -7,16 +7,17 @@ title: Notas del lanzamiento
 
 Lea [**Novedades en 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R7/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R7.
 
-#### Destacados
+#### Lo más destacado
 
 - Las columnas de los list box y de los encabezados de tipo hora ahora soportan la opción ["blankIfNull"](../FormObjects/properties_Display.md#time-format).
 - Nuevas propiedades en [.getBoxInfo()](../API/IMAPTransporterClass.md#getboxinfo) y [.getBoxList()](../API/IMAPTransporterClass.md#getboxlist).
+- Ahora puede [añadir y eliminar componentes utilizando la interfaz del gestor de componentes](../Project/components.md#adding-and-removing-dependencies).
 
 ## 4D 20 R6
 
 Lea [**Novedades en 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-20-R6/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R6.
 
-#### Destacados
+#### Lo más destacado
 
 - Soporte de operadores de comparación en las [referencias de objeto](../Concepts/dt_object.md#operatodores-en-los-objetos) y las [referencias de colección](../Concepts/dt_collection.md#operadores-en-las-colecciones). [`collection.query()`](../API/CollectionClass.md#query) ahora soporta las [referencias de objeto y de colección como valores de consulta](../API/CollectionClass.md#object-or-collection-reference-as-value).
 - Cuando un componente tiene un [espacio de nombres declarado](../Extensions/develop-components.md#declarar-el-espacio-de-nombres-del-componente), sus clases ahora se comparten automáticamente entre todos los componentes cargados en el proyecto del host por [`cs.<namespace>`](../Concepts/classes.md#cs).
@@ -44,7 +45,7 @@ Lea [**Novedades en 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-20-R6/), 
 
 Lea [**Novedades en 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R5.
 
-#### Destacados
+#### Lo más destacado
 
 - Nuevo [Gestor de componentes](../Project/components.md) para gestionar componentes a través de un archivo `dependencies.json`.
 - Soporte de estructuras de gestión de errores [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try).
@@ -68,7 +69,7 @@ Lea [**Novedades en 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5/), 
 
 Lea [**Novedades en 4D 20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R4/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R4.
 
-#### Destacados
+#### Lo más destacado
 
 - Soporte de [formato de cifrado ECDSA\`](../Admin/tls.md#encryption) para certificados TLS.
 - Las conexiones TLS cliente/servidor y servidor SQL ahora se [configuran dinámicamente](../Admin/tls.md#enabling-tls-with-the-other-servers) (no se requieren archivos de certificado).
@@ -95,7 +96,7 @@ Lea [**Novedades en 4D 20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R4/),
 
 Lea [**Novedades en 4D 20 R3**](https://blog.4d.com/en-whats-new-in-4d-20-vR3/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R3.
 
-#### Destacados
+#### Lo más destacado
 
 - Nueva función [`collection.multiSort`](../API/CollectionClass.md#multisort).
 - Soporte del parámetro _context_ en [`Formula from string`](../API/FunctionClass.md#formula-from-string).
@@ -125,7 +126,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 :::
 
-#### Destacados
+#### Lo más destacado
 
 - Nueva [clase WebSocket](../API/WebSocketClass.md) para crear y gestionar conexiones WebSocket cliente desde 4D.
 - Nueva capa de red QUIC [configuración de interfaz](../settings/client-server.md#network-layer).
@@ -168,7 +169,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 :::
 
-#### Destacados
+#### Lo más destacado
 
 - A partir de 20.3, para permitir la verificación de la contraseña cuando el [directorio de usuarios 4D utiliza el algoritmo bcrypt](https://blog.4d.com/bcrypt-support-for-passwords/), el valor "password" en el parámetro _connectionInfo_ del comando [`Open datastore`](../API/DataStoreClass.md#open-datastore) se envía ahora en claro por defecto. Asegúrese de que su método base "On REST authentication" puede manejar contraseñas en claro (el tercer parámetro es entonces **False**) y que `Open datastore` encripta su conexión pasando la opción "tls" a **True** en _connectionInfo_. En casos específicos, también se puede utilizar una nueva opción "passwordAlgorithm" para la compatibilidad (ver [`Open datastore`](../API/DataStoreClass.md#open-datastore).
 - 4D 20.2 está certificado en macOS Sonoma (macOS 14).
@@ -210,7 +211,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 Lee [**Novedades en 4D 19 R8**](https://blog.4d.com/en-whats-new-in-4d-19-r8/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 19 R8.
 
-#### Destacados
+#### Lo más destacado
 
 - Se pueden instalar métodos de gestión de errores para [contextos de ejecución globales y de componentes](../Concepts/error-handling.md#scope-and-components).
 - Los list boxes con fuentes de datos selección de entidades o colecciones ahora soportan la propiedad de columna [Alto de fila automática](../FormObjects/properties_CoordinatesAndSizing.md#automatic-row-height).
@@ -233,7 +234,7 @@ Lee [**Novedades en 4D 19 R8**](https://blog.4d.com/en-whats-new-in-4d-19-r8/), 
 
 Lee [**Novedades en 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-19-r7/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 19 R7.
 
-#### Destacados
+#### Lo más destacado
 
 - Los datos relacionados y los atributos calculados/alias pueden visualizarse en el [Explorador de datos](../Admin/dataExplorer#basics).
 - Nueva clase [FileHandle](../API/FileHandleClass.md) y nueva función [`.open()`](../API/FileClass.md#open) en la clase `File`.
@@ -400,22 +401,22 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 19
 
 </details>
 
-## Tabla de librerías
+## Tabla de la librería
 
-| Librería  | Versión actual                            | Actualizado en 4D | Comentario                                                                                                                                                     |
-| --------- | ----------------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BoringSSL | 0aa300b                                   | **20 R6**         | Utilizado para QUIC                                                                                                                                            |
-| CEF       | 121                                       | 20 R5             | Chromium 6167                                                                                                                                                  |
-| Hunspell  | 1.7.2     | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                                      |
-| ICU       | 73.2                      | 20                | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto.                                  |
-| libldap   | **2.6.7** | **20 R6**         |                                                                                                                                                                |
-| libsasl   | 2.1.28    | 20                |                                                                                                                                                                |
-| Libuv     | 1.48                      | **20 R6**         | Utilizado para QUIC                                                                                                                                            |
-| libZip    | 1.9.2     | 20                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                                         |
-| LZMA      | 5.4.1     | 20                |                                                                                                                                                                |
-| OpenSSL   | 3.2.0     | 20 R4             | Se ha actualizado el nivel de seguridad TLS/SSL por defecto. Ver [Cambios de comportamiento](#cambios-de-comportamiento) para la versión 20 R4 |
-| PDFWriter | 4.3                       | 20                | Dependencia FreeType en 12.2.1                                                                                                 |
-| PHP       | 8.2.4     | 20                |                                                                                                                                                                |
-| SpreadJS  | 16.2.6    | 20 R4             | Motor 4D View Pro                                                                                                                                              |
-| webKit    | WKWebView                                 | 19                |                                                                                                                                                                |
-| Zlib      | 1.2.13    | 20                |                                                                                                                                                                |
+| Librería  | Versión actual                         | Actualizado en 4D | Comentario                                                                                                                                                     |
+| --------- | -------------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BoringSSL | 0aa300b                                | 20 R6             | Utilizado para QUIC                                                                                                                                            |
+| CEF       | 128                                    | **20 R7**         | Chromium 6613                                                                                                                                                  |
+| Hunspell  | 1.7.2  | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                                      |
+| ICU       | 73.2                   | 20                | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto.                                  |
+| libldap   | 2.6.7  | 20 R6             |                                                                                                                                                                |
+| libsasl   | 2.1.28 | 20                |                                                                                                                                                                |
+| Libuv     | 1.48                   | 20 R6             | Utilizado para QUIC                                                                                                                                            |
+| libZip    | 1.9.2  | 20                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                                         |
+| LZMA      | 5.4.1  | 20                |                                                                                                                                                                |
+| OpenSSL   | 3.3.2  | **20 R7**         | Se ha actualizado el nivel de seguridad TLS/SSL por defecto. Ver [Cambios de comportamiento](#cambios-de-comportamiento) para la versión 20 R4 |
+| PDFWriter | 4.3                    | 20                | Dependencia FreeType en 12.2.1                                                                                                 |
+| PHP       | 8.2.4  | 20                |                                                                                                                                                                |
+| SpreadJS  | 17.1.0 | **20 R7**         | See [this blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) for an overview of the new features                                               |
+| webKit    | WKWebView                              | 19                |                                                                                                                                                                |
+| Zlib      | 1.2.13 | 20                |                                                                                                                                                                |

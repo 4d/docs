@@ -181,7 +181,7 @@ L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfi
   // $1 contient ""
 ```
 
-- Une expression de condition est automatiquement convertie à Faux lorsque son évaluation donne Indéfinie avec les mots-clés Si et Au cas ou :
+- Une expression de condition est automatiquement convertie à Faux lorsqu'elle est évaluée undefined avec les mots-clés If et Case of :
 
 ```4d
      C_OBJECT($o)

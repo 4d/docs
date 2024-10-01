@@ -7,22 +7,11 @@ La classe `CryptoKey` du langage 4D contient une paire de clés de chiffrement a
 
 Cette classe est disponible depuis le "class store" de `4D`.
 
-### Exemple
+:::info Voir également
 
-L'extrait de code suivant illustre la signature et la vérification d'un message à l'aide d'une nouvelle paire de clés ECDSA, afin de créer, par exemple, un token Web JSON ES256.
+Pour une vue d'ensemble complète de cette classe, veuillez vous reporter au blog [**CryptoKey : chiffrer, déchiffrer, signer et vérifier!**](https://blog.4d.com/cryptokey-encrypt-decrypt-sign-and-verify/).
 
-```4d
- // Générer une nouvelle paire de clés ECDSA
-$key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
-
-  // Obtenir une signature en base64
-$message:="hello world" 
-$signature:=$key.sign($message;New object("hash";"SHA256"))
-
-  // Vérifier la signature
-$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
-ASSERT($status.success)
-```
+:::
 
 ### Sommaire
 
@@ -53,14 +42,14 @@ ASSERT($status.success)
 
 <!-- REF #4D.CryptoKey.new().Params -->
 
-| Paramètres | Type                         |    | Description                                          |
-| ---------- | ---------------------------- | -- | ---------------------------------------------------- |
-| settings   | Object                       | -> | Paramètres pour générer ou charger une paire de clés |
-| result     | 4D.CryptoKey | <- | Objet contenant une paire de clés de chiffrement     |
+| Paramètres | Type                         |                             | Description                                      |
+| ---------- | ---------------------------- | --------------------------- | ------------------------------------------------ |
+| settings   | Object                       | ->                          | Settings to generate or load a key pair          |
+| result     | 4D.CryptoKey | <- | Objet contenant une paire de clés de chiffrement |
 
 <!-- END REF -->
 
-La fonction `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crée un nouvel objet `4D.CryptoKey` encapsulant une paire de clés de chiffrement<!-- END REF -->, en fonction du paramètre *settings*. Elle permet de générer une nouvelle clé RSA ou ECDSA, ou de charger une paire de clés existante à partir de la définition PEM.
+La fonction `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crée un nouvel objet `4D.CryptoKey` encapsulant une paire de clés de chiffrement<!-- END REF -->, en fonction du paramètre *settings*. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
 
 #### *settings*
 
@@ -73,7 +62,67 @@ La fonction `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crée u
 
 #### *CryptoKey*
 
-L'objet `CryptoKey` retourné encapsule une paire de clés de chiffrement. C'est un objet partagé et peut être alors utilisé par de multiples traitements 4D simultanés.
+L'objet `CryptoKey` retourné encapsule une paire de clés de chiffrement. It is a shared object and can therefore be used by multiple 4D processes simultaneously.
+
+#### Exemple 1
+
+Un message est signé par une clé privée et la signature est vérifiée par la clé publique correspondante. Le code suivant signe et vérifie une signature de message simple.
+
+- Côté bob :
+
+```4d
+// Créer le message
+$message:="hello world"
+Folder(fk desktop folder).file("message.txt").setText($message)
+
+// Créer une clé
+$type:=New object("type";"RSA")
+$key:=4D.CryptoKey.new($type)
+
+// Récupérer et stocker une clé publique
+Folder(fk desktop folder).file("public.pem").setText($key.getPublicKey())
+
+// Récupérer et stocker une signature en base64
+Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
+
+/*Bob envoie le message, la clé publique et la signature à Alice*/
+```
+
+- Côté Alice :
+
+```4d
+// Récupérer le message, la clé publique et la signature
+$message:=Folder(fk desktop folder).file("message.txt").getText()
+$publicKey:=Folder(fk desktop folder).file("public.pem").getText()
+$signature:=Folder(fk desktop folder).file("signature").getText()
+
+// Créer une clé
+$type:=New object("type";"PEM";"pem";$publicKey)
+$key:=4D.CryptoKey.new($type)
+
+// Vérifier la signature
+If ($key.verify($message;$signature;$type).success)
+// La signature est valide
+
+End if
+```
+
+#### Exemple 2
+
+L'extrait de code suivant illustre la signature et la vérification d'un message à l'aide d'une nouvelle paire de clés ECDSA, afin de créer, par exemple, un token Web JSON ES256.
+
+```4d
+ // Générer une nouvelle paire de clés ECDSA
+$key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
+
+  // Obtenir une signature en base64
+$message:="hello world" 
+$signature:=$key.sign($message;New object("hash";"SHA256"))
+
+  // Vérifier la signature
+$status:=$key.verify($message;$signature;New object("hash";"SHA256"))
+ASSERT($status.success)
+```
 
 <!-- REF CryptoKey.curve -->
 
@@ -109,10 +158,10 @@ Défini uniquement pour les clés ECDSA : le <!-- REF #CryptoKey.curve.Summary -
 
 <!-- REF #CryptoKey.decrypt().Params -->
 
-| Paramètres | Type   |    | Description                                                                                       |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------- |
-| message    | Text   | -> | Chaine message à déchiffrer à l'aide de `options.encodingEncrypted` et decrypted. |
-| options    | Object | -> | Options de décodage                                                                               |
+| Paramètres | Type   |                             | Description                                                                                       |
+| ---------- | ------ | --------------------------- | ------------------------------------------------------------------------------------------------- |
+| message    | Text   | ->                          | Chaine message à déchiffrer à l'aide de `options.encodingEncrypted` et decrypted. |
+| options    | Object | ->                          | Options de décodage                                                                               |
 | Résultat   | Object | <- | Statut                                                                                            |
 
 <!-- END REF -->
@@ -159,10 +208,10 @@ Si le *message* n'a pas pu être déchiffré parce qu'il n'a pas été chiffré 
 
 <!-- REF #CryptoKey.encrypt().Params -->
 
-| Paramètres | Type   |    | Description                                                                                     |
-| ---------- | ------ | -- | ----------------------------------------------------------------------------------------------- |
-| message    | Text   | -> | Chaine message à chiffrer à l'aide de `options.encodingDecrypted` et encrypted. |
-| options    | Object | -> | Options de chiffrement                                                                          |
+| Paramètres | Type   |                             | Description                                                                                     |
+| ---------- | ------ | --------------------------- | ----------------------------------------------------------------------------------------------- |
+| message    | Text   | ->                          | Chaine message à chiffrer à l'aide de `options.encodingDecrypted` et encrypted. |
+| options    | Object | ->                          | Options de chiffrement                                                                          |
 | Résultat   | Text   | <- | Message chiffré et encodé à l'aide de `options.encodingEncrypted`                               |
 
 <!-- END REF -->
@@ -201,8 +250,8 @@ La valeur retournée est un message chiffré.
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
 
-| Paramètres | Type |    | Description                |
-| ---------- | ---- | -- | -------------------------- |
+| Paramètres | Type |                             | Description                |
+| ---------- | ---- | --------------------------- | -------------------------- |
 | Résultat   | Text | <- | Clé primaire au format PEM |
 
 <!-- END REF -->
@@ -231,8 +280,8 @@ La valeur retournée est la clé privée.
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
 
-| Paramètres | Type |    | Description                |
-| ---------- | ---- | -- | -------------------------- |
+| Paramètres | Type |                             | Description                |
+| ---------- | ---- | --------------------------- | -------------------------- |
 | Résultat   | Text | <- | Clé publique au format PEM |
 
 <!-- END REF -->
@@ -281,10 +330,10 @@ Définition PEM d'une clé de chiffrement à charger. Si la clé est une clé pr
 
 <!-- REF #CryptoKey.sign().Params -->
 
-| Paramètres | Type   |    | Description                                                                |
-| ---------- | ------ | -- | -------------------------------------------------------------------------- |
-| message    | Text   | -> | Chaîne message à signer                                                    |
-| options    | Object | -> | Options de signature                                                       |
+| Paramètres | Type   |                             | Description                                                                |
+| ---------- | ------ | --------------------------- | -------------------------------------------------------------------------- |
+| message    | Text   | ->                          | Chaîne message à signer                                                    |
+| options    | Object | ->                          | Options de signature                                                       |
 | Résultat   | Text   | <- | Signature en représentation Base64 ou Base64URL, selon l'option "encoding" |
 
 <!-- END REF -->
@@ -364,11 +413,11 @@ Contient le <!-- REF #CryptoKey.type.Summary -->nom du type de clé - "RSA", "EC
 
 <!-- REF #CryptoKey.verify().Params -->
 
-| Paramètres | Type   |    | Description                                                                                     |
-| ---------- | ------ | -- | ----------------------------------------------------------------------------------------------- |
-| message    | Text   | -> | Chaîne message utilisée pour générer la signature                                               |
-| signature  | Text   | -> | Signature à vérifier, en représentation Base64 ou Base64URL, selon la valeur `options.encoding` |
-| options    | Object | -> | Options de signature                                                                            |
+| Paramètres | Type   |                             | Description                                                                                     |
+| ---------- | ------ | --------------------------- | ----------------------------------------------------------------------------------------------- |
+| message    | Text   | ->                          | Chaîne message utilisée pour générer la signature                                               |
+| signature  | Text   | ->                          | Signature à vérifier, en représentation Base64 ou Base64URL, selon la valeur `options.encoding` |
+| options    | Object | ->                          | Options de signature                                                                            |
 | Résultat   | Object | <- | Statut de la vérification                                                                       |
 
 <!-- END REF -->

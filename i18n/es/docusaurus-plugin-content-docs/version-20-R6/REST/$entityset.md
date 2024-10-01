@@ -22,7 +22,7 @@ Esta sintaxis permite ejecutar cualquier operación sobre un conjunto de entidad
 
 Como los conjuntos de entidades tienen un límite de tiempo (ya sea por defecto o después de llamar a `$timeout` con su propio límite), puede llamar a `$savedfilter` y a `$savedorderby` para guardar el filtro y ordenar por instrucciones cuando cree un conj
 
-When you retrieve an existing entity set stored in 4D Server's cache, you can also apply any of the following to the entity set: [`$clean`]($clean.md), [`$expand`]($expand.md), [`$filter`]($filter.md), [`$orderby`]($orderby.md), [`$skip`]($skip.md), or [`$top/$limit`]($top_$limit.md).
+Cuando se recupera un conjunto de entidades existente almacenado en la caché de 4D Server, también se puede aplicar cualquiera de las siguientes opciones al conjunto de entidades: [`$clean`]($clean.md), [`$expand`]($expand.md), [`$filter`]($filter.md), [`$orderby`]($orderby.md), [`$skip`]($skip.md), o [`$top/$limit`]($top_$limit.md).
 
 ### Ejemplo
 
@@ -41,7 +41,7 @@ Cree otro conjunto de entidades basado en conjuntos de entidades creados anterio
 
 ### Descripción
 
-Después de crear un conjunto de entidades (conjunto de entidades nº 1) con `$method=entityset`, puede crear otro conjunto de entidades con `$entityset/\{entitySetID\}?$logicOperator... &$otherCollection` syntax, the `$logicOperator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. Los dos conjuntos de entidades deben estar en la misma clase de datos.
+Después de crear un conjunto de entidades (conjunto de entidades nº 1) con `$method=entityset`, puede crear otro conjunto de entidades con `$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`, la propiedad$logicOperator`(cuyos valores se muestran a continuación), y otro entity set (entity set #2) definido por la propiedad`$otherCollection\`. Los dos conjuntos de entidades deben estar en la misma clase de datos.
 
 A continuación, puede crear otro conjunto de entidades que contenga los resultados de esta llamada utilizando el `$method=entityset` al final de la petición REST.
 

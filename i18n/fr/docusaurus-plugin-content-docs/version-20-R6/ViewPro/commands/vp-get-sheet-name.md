@@ -9,19 +9,19 @@ title: VP Get sheet name
 
 <!-- REF #_method_.VP Get sheet name.Params -->
 
-| Paramètres | Type    |    | Description                             |                  |
-| ---------- | ------- | -- | --------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |                  |
-| sheet      | Integer | -> | Numéro d'indice de la feuille           |                  |
+| Paramètres | Type    |                             | Description                             |                  |
+| ---------- | ------- | --------------------------- | --------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro |                  |
+| sheet      | Integer | ->                          | Numéro d'indice de la feuille           |                  |
 | Résultat   | Text    | <- | Nom de la feuille                       | <!-- END REF --> |
 
 #### Description
 
-The `VP Get sheet name` command <!-- REF #_method_.VP Get sheet name.Summary -->returns the name of a sheet based on its index in *vpAreaName*.<!-- END REF -->
+La commande `VP Get sheet name` <!-- REF #_method_.VP Get sheet name.Summary -->retourne le nom d'une feuille basé sur son index dans *vpAreaName*.<!-- END REF -->
 
-In *vpAreaName*, pass the name of the 4D View Pro area.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
-In *sheet*, pass the index of the sheet whose name will be returned.
+Dans *sheet*, passez l'index de la feuille dont le nom sera retourné.
 
 Si l'index passé n'existe pas, la méthode retourne un nom vide.
 

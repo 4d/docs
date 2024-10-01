@@ -9,9 +9,9 @@ title: VP Get row attributes
 
 <!-- REF #_method_.VP Get row attributes.Params -->
 
-| Parámetros | Tipo       |    | Descripción                          |                  |
-| ---------- | ---------- | -- | ------------------------------------ | ---------------- |
-| rangeObj   | Object     | -> | Objeto rango                         |                  |
+| Parámetros | Tipo       |                             | Descripción                          |                  |
+| ---------- | ---------- | --------------------------- | ------------------------------------ | ---------------- |
+| rangeObj   | Object     | ->                          | Objeto rango                         |                  |
 | Result     | Collection | <- | Colección de propiedades de la línea | <!-- END REF --> |
 
 #### Descripción
@@ -20,7 +20,7 @@ El comando `VP Get row attributes` <!-- REF #_method_.VP Get row attributes.Summ
 
 En *rangeObj*, pase un objeto que contenga un rango de líneas cuyos atributos serán recuperados.
 
-The returned collection contains any properties for the rows, whether or not they have been set by the [VP SET ROW ATTRIBUTES](vp-set-row-attributes.md) method.
+La colección devuelta contiene las propiedades de las filas, hayan sido o no definidas por el método [VP SET ROW ATTRIBUTES](vp-set-row-attributes.md).
 
 #### Ejemplo
 

@@ -27,22 +27,22 @@ Por ejemplo, la URL "*a/b/c*" llamará al método base, pero "*a/b/c.html*" no l
 
 **On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
 
-| Parámetros | Tipo |     | Descripción                                                                  |
-| ---------- | ---- | :-: | ---------------------------------------------------------------------------- |
-| $1         | Text |  <- | URL                                                                          |
-| $2         | Text |  <- | Encabezados HTTP + cuerpo HTTP (hasta un límite de 32 kb) |
-| $3         | Text |  <- | Dirección IP del cliente web (navegador)                  |
-| $4         | Text |  <- | Dirección IP del servidor                                                    |
-| $5         | Text |  <- | Nombre de usuario                                                            |
-| $6         | Text |  <- | Contraseña                                                                   |
+| Parámetros | Tipo |                             | Descripción                                                                  |
+| ---------- | ---- | :-------------------------: | ---------------------------------------------------------------------------- |
+| $1         | Text | <- | URL                                                                          |
+| $2         | Text | <- | Encabezados HTTP + cuerpo HTTP (hasta un límite de 32 kb) |
+| $3         | Text | <- | Dirección IP del cliente web (navegador)                  |
+| $4         | Text | <- | Dirección IP del servidor                                                    |
+| $5         | Text | <- | Nombre de usuario                                                            |
+| $6         | Text | <- | Contraseña                                                                   |
 
 Debe declarar estos parámetros de la siguiente manera:
 
 ```4d
 //Método base On Web Connection
- 
+
  C_TEXT($1;$2;$3;$4;$5;$6)
- 
+
 //Código para el métodod
 ```
 
@@ -141,7 +141,7 @@ var $path : Text
 var $PictVar : Picture
 var $BlobVar : Blob
 
- //busca la imagen en la carpeta Imágenes dentro de la carpeta Resources 
+ //busca la imagen en la carpeta Imágenes dentro de la carpeta Resources
 $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd"
 
 READ PICTURE FILE($path;$PictVar) //pone la imagen en la variable imagen
@@ -192,15 +192,15 @@ OK="Search"
 4D llama al método base `<On Web Authentication>` (si existe), luego se llama al método proyecto `processForm`, que es el siguiente:
 
 ```4d
- C_TEXT($1) //mandatory for compiled mode
+ C_TEXT($1) //obligatorio para el modo compilado
  C_LONGINT($vName)
  C_TEXT(vName;vLIST)
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrVals;0)
- WEB GET VARIABLES($arrNames;$arrVals) //we retrieve all the variables of the form
+ WEB GET VARIABLES($arrNames;$arrVals) //recuperamos todas las variables del formulario
  $vName:=Find in array($arrNames;"vName")
  vName:=$arrVals{$vName}
- If(Find in array($arrNames;"vExact")=-1) //If the option has not been checked
+ If(Find in array($arrNames;"vExact")=-1) //Si la opción no ha sido marcada
     vName:=vName+"@"
  End if
  QUERY([Jockeys];[Jockeys]Name=vName)
@@ -209,9 +209,9 @@ OK="Search"
     vLIST:=vLIST+[Jockeys]Name+" "+[Jockeys]Tel+"<br/>"
     NEXT RECORD([Jockeys])
  End while
- WEB SEND FILE("results.htm") //Send the list to the results.htm form
-  //which contains a reference to the variable vLIST,
-  //for example <!--4DHTML vLIST-->
+ WEB SEND FILE("results.htm") //Enviar la lista al formulario results.htm
+  //que contiene una referencia a la variable vLIST,
+  //por ejemplo <!--4DHTML vLIST-->
   //...
 End if
 ```
@@ -255,13 +255,13 @@ return false
   <h1>Welcome to Spiders United</h1>
   <p><b>Please enter your name:</b>
   <input name="vtUserName" value="" size="30" type="text"></p>
-  <p> 
-<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit"> 
+  <p>
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit">
 <input name="vsbRegister" value="Register" type="submit">
 <input name="vsbInformation" value="Information" type="submit"></p>
-<p> 
-<input name="vtNav_appName" value="" type="hidden"> 
-<input name="vtNav_appVersion" value="" type="hidden"> 
+<p>
+<input name="vtNav_appName" value="" type="hidden">
+<input name="vtNav_appVersion" value="" type="hidden">
 <input name="vtNav_appCodeName" value="" type="hidden">
 <input name="vtNav_userAgent" value="" type="hidden"></p>
 </form>
@@ -283,33 +283,33 @@ Las principales características de esta página son:
 Examinemos el método 4D `WWW_STD_FORM_POST` que se llama cuando el usuario hace clic en uno de los botones del formulario HTML.
 
 ```4d
-  // Retrieval of value of variables
+  // Recuperación del valor de las variables
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrValues;0)
  WEB GET VARIABLES($arrNames;$arrValues)
  C_LONGINT($user)
- 
+
  Case of
- 
-  // The Log On button was clicked
+
+  // Se ha presionado el botón Log On
     :(Find in array($arrNames;"vsbLogOn")#-1)
        $user :=Find in array($arrNames;"vtUserName")
        QUERY([WWW Users];[WWW Users]UserName=$arrValues{$user})
        $0:=(Records in selection([WWW Users])>0)
        If($0)
           WWW POST EVENT("Log On";WWW Log information)
-  // The WWW POST EVENT method saves the information in a database table
+  // El método WWW POST EVENT guarda la información en una tabla de la base
        Else
- 
+
           $0:=WWW Register
-  // The WWW Register method lets a new Web user register
+  // El método WWW Register permite que un nuevo usuario de la Web se registre
        End if
- 
-  // The Register button was clicked
+
+  // Se ha presionado el botón Register
     :(Find in array($arrNames;"vsbRegister")#-1)
        $0:=WWW Register
- 
-  // The Information button was clicked
+
+  // Se ha presionado el botón de información
     :(Find in array($arrNames;"vsbInformation")#-1)
        WEB SEND FILE("userinfos.html")
  End case
@@ -317,7 +317,7 @@ Examinemos el método 4D `WWW_STD_FORM_POST` que se llama cuando el usuario hace
 
 Las funcionalidades de este método son:
 
-- The values of the variables *vtNav_appName*, *vtNav_appVersion*, *vtNav_appCodeName*, and *vtNav_userAgent* (bound to the HTML objects having the same names) are retrieved using the `WEB GET VARIABLES` command from HTML objects created by the *GetBrowserInformation* JavaScript script.
+- Los valores de las variables *vtNav_appName*, *vtNav_appVersion*, *vtNav_appCodeName*, y *vtNav_userAgent* (vinculados a los objetos HTML que tienen los mismos nombres) se recuperan utilizando el comando `WEB GET VARIABLES` de los objetos HTML creados por el script JavaScript *GetBrowserInformation*.
 - De las variables vinculadas *vsbLogOn*, *vsbRegister* y *vsbInformation* a los tres botones de envío, sólo la correspondiente al botón que se ha presionado será recuperada por el comando `WEB GET VARIABLES`. Cuando el envío se realiza mediante uno de estos botones, el navegador devuelve a 4D el valor del botón presionado. Esto le indica qué botón se ha presionado.
 
 Tenga en cuenta que con HTML, todos los objetos son objetos de texto. Si se utiliza un objeto SELECT, es el valor del elemento resaltado en el objeto el que se devuelve en el comando `WEB GET VARIABLES`, y no la posición del elemento en el array como en 4D. `WEB GET VARIABLES` siempre devuelve valores de tipo Texto.

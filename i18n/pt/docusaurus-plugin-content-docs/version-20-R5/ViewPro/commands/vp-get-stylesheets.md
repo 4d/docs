@@ -9,10 +9,10 @@ title: VP Get stylesheets
 
 <!-- REF #_method_.VP Get stylesheets.Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                                             |                  |
-| ---------- | ---------- | -- | ----------------------------------------------------- | ---------------- |
-| vpAreaName | Text       | -> | Nome de objeto formulário área 4D View Pro            |                  |
-| sheet      | Integer    | -> | Âmbito alvo (padrão = folha atual) |                  |
+| Parâmetro  | Tipo       |                             | Descrição                                             |                  |
+| ---------- | ---------- | --------------------------- | ----------------------------------------------------- | ---------------- |
+| vpAreaName | Text       | ->                          | Nome de objeto formulário área 4D View Pro            |                  |
+| sheet      | Integer    | ->                          | Âmbito alvo (padrão = folha atual) |                  |
 | Resultados | Collection | <- | Coleção de objectos de folhas de estilo               | <!-- END REF --> |
 
 #### Descrição

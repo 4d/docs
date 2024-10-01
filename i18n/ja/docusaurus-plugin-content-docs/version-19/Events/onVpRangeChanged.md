@@ -13,13 +13,13 @@ title: On VP Range Changed
 
 FORM Event によって返されるオブジェクトには以下のプロパティが格納されます:
 
-| プロパティ        | タイプ    | 説明                                                                                                                                                                                             |
-| ------------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objectName   | text   | 4D View Pro エリア名                                                                                                                                                                               |
-| code         | 倍長整数   | On VP Range Changed                                                                                                                                                                            |
-| description  | text   | "On VP Range Changed"                                                                                                                                                                          |
-| sheetName    | text   | イベントが発生したシート名                                                                                                                                                                                  |
-| range        | object | 変化したセルレンジ                                                                                                                                                                                      |
-| changedCells | object | 変化したセルのみを格納したレンジ。 レンジが組み合わされたものである可能性もあります。                                                                                                                                                    |
-| action       | text   | イベント生成した操作のタイプ:<li>"clear" - レンジの値をクリア操作</li><li>"dragDrop" - ドラッグドロップ操作</li><li>"dragFill" - ドラッグによるフィル操作</li><li>"evaluateFormula" - 特定のセルレンジにフォーミュラを設定した</li><li>"paste" - ペースト操作</li><li>"setArrayFormula" - 特定のセルレンジにフォーミュラを設定した</li><li>"sort" - セルのレンジを並べ替えた</li> |
+| プロパティ        | 型       | 説明                                                                                                                                                                                             |
+| ------------ | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objectName   | text    | 4D View Pro エリア名                                                                                                                                                                               |
+| code         | longint | On VP Range Changed                                                                                                                                                                            |
+| description  | text    | "On VP Range Changed"                                                                                                                                                                          |
+| sheetName    | text    | イベントが発生したシート名                                                                                                                                                                                  |
+| range        | object  | 変化したセルレンジ                                                                                                                                                                                      |
+| changedCells | object  | 変化したセルのみを格納したレンジ。 レンジが組み合わされたものである可能性もあります。                                                                                                                                                    |
+| action       | text    | イベント生成した操作のタイプ:<li>"clear" - レンジの値をクリア操作</li><li>"dragDrop" - ドラッグドロップ操作</li><li>"dragFill" - ドラッグによるフィル操作</li><li>"evaluateFormula" - 特定のセルレンジにフォーミュラを設定した</li><li>"paste" - ペースト操作</li><li>"setArrayFormula" - 特定のセルレンジにフォーミュラを設定した</li><li>"sort" - セルのレンジを並べ替えた</li> |
 > [On After Edit](onAfterEdit.md) も参照ください。 

@@ -49,7 +49,7 @@ El estado de la última copia de seguridad (correcta o fallida) se almacena en e
 
 ### Acceso a la base durante la copia
 
-Durante una copia de seguridad, el acceso a la base está restringido por 4D según el contexto. Durante una copia de seguridad, el acceso a la aplicación está restringido por 4D en función del contexto.
+Durante una copia de seguridad, el acceso a la base está restringido por 4D según el contexto. 4D bloquea todos los procesos relacionados con los tipos de archivos incluidos en la copia de seguridad: si sólo se están copiando los archivos del proyecto, no se podrá acceder a la estructura pero sí a los datos.
 
 Por el contrario, si sólo se hace una copia de seguridad del archivo de datos, se sigue permitiendo el acceso a la estructura. En este caso, las posibilidades de acceso a los datos son las siguientes:
 
@@ -66,7 +66,7 @@ En todos los casos, tenga en cuenta que el estado de la última copia de segurid
 
 - **Interrupción del usuario**: el botón **Parar** de la caja de diálogo de progreso permite a los usuarios interrumpir la copia de seguridad en cualquier momento. En este caso, la copia de elementos se detiene y se genera el error 1406. Puedes interceptar este error en el método base `On Backup Shutdown`.
 - **Archivo adjunto no encontrado**: cuando no se encuentra un archivo adjunto, 4D realiza una copia de seguridad parcial (copia de seguridad de los archivos de la base y de los archivos adjuntos accesibles) y devuelve un error.
-- **Backup impossible** (disk is full or write-protected, missing disk, disk failure, incomplete transaction, database not launched at time of scheduled automatic backup, etc.): If this is a first-time error, 4D will then make a second attempt to perform the backup. La espera entre los dos intentos se define en la página **Backup/Backup& y Restauración** de las Propiedades de la base. Si el segundo intento falla, se muestra una caja de diálogo de alerta del sistema y se genera un error. Puedes interceptar este error en el método base `On Backup Shutdown`.
+- **Copia de seguridad imposible** (disco lleno o protegido contra escritura, disco ausente, fallo de disco, transacción incompleta, base de datos no lanzada en el momento de la copia de seguridad automática programada, etc.): Si se trata de un primer error, 4D hará un segundo intento de realizar la copia de seguridad. La espera entre los dos intentos se define en la página **Backup/Backup y Restauración** de las Propiedades de la base. Si el segundo intento falla, se muestra una caja de diálogo de alerta del sistema y se genera un error. Puedes interceptar este error en el método base `On Backup Shutdown`.
 
 ## Historial de copias de seguridad (Backup Journal)
 

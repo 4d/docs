@@ -3,7 +3,7 @@ id: string
 title: String
 ---
 
-Chaîne est un terme générique utilisé pour :
+String ("Chaîne") est un terme générique utilisé pour :
 
 - Les variables ou champs de type Texte : un champ, une variable ou une expression de type Texte peut contenir de 0 à 2 Go de texte.
 - Les variables ou champs de type alphanumérique : un champ alphanumérique peut contenir de 0 à 255 caractères (la limite est fixée lors de la définition du champ).
@@ -64,7 +64,7 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 Character code("A")=Character code("a") // 65 n'est pas égal à 97
 ```
 
-- When strings are compared, diacritical characters are compared using the system character comparison table of your computer. Par exemple, les expressions suivantes retournent `VRAI` :
+- Lorsque des chaînes de caractères sont comparées, les caractères diacritiques sont comparés en utilisant la table de comparaison des caractères système de votre ordinateur. Par exemple, les expressions suivantes retournent `VRAI` :
 
 ```4d
      "n"="ñ"

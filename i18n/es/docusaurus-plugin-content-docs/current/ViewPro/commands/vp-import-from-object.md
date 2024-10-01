@@ -16,7 +16,7 @@ title: VP IMPORT FROM OBJECT
 
 #### Descripción
 
-The `VP IMPORT FROM OBJECT` command <!-- REF #_method_.VP IMPORT FROM OBJECT.Summary -->imports and displays the *viewPro* 4D View Pro object in the *vpAreaName* 4D View Pro area<!-- END REF -->. El contenido del objeto importado sustituye todos los datos insertados en el área.
+El comando `VP IMPORT FROM OBJECT` <!-- REF #_method_.VP IMPORT FROM OBJECT.Summary -->importa y muestra el objeto *viewPro* de 4D View Pro en el área *vpAreaName* de 4D View Pro<!-- END REF -->. El contenido del objeto importado sustituye todos los datos insertados en el área.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 

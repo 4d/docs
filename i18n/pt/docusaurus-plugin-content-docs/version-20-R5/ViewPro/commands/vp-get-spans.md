@@ -9,16 +9,16 @@ title: VP Get spans
 
 <!-- REF #_method_.VP Get spans.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                        |                  |
-| ---------- | ------ | -- | ------------------------------------------------ | ---------------- |
-| rangeObj   | Object | -> | Objeto intervalo                                 |                  |
+| Parâmetro  | Tipo   |                             | Descrição                                        |                  |
+| ---------- | ------ | --------------------------- | ------------------------------------------------ | ---------------- |
+| rangeObj   | Object | ->                          | Objeto intervalo                                 |                  |
 | Resultados | Object | <- | Objeto de células fundidas no intervalo definido | <!-- END REF --> |
 
 #### Descrição
 
 O comando `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->recupera os intervalos de células no _rangeObj_ designado<!-- END REF -->.
 
-Em _rangeObj_, passe um intervalo de células fusionadas que queira recuperar. If _rangeObj_ does not contain a cell span, an empty range is returned.
+Em _rangeObj_, passe um intervalo de células fusionadas que queira recuperar. Se _rangeObj_ não contiver um intervalo de células, um intervalo vazio será retornado.
 
 #### Exemplo
 

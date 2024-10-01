@@ -11,6 +11,7 @@ El servidor web de 4D ofrece varias funcionalidades para gestionar las peticione
 - otros comandos como `WEB GET HTTP BODY`, `WEB GET HTTP HEADER`, o `WEB GET BODY PART` permiten personalizar el tratamiento de las solicitudes, incluidas las cookies.
 - el método proyecto *COMPILER_WEB*, para declarar sus variables.
 
+
 ## On Web Connection
 
 El método base `On Web Connection` puede utilizarse como punto de entrada al servidor web de 4D.
@@ -36,6 +37,7 @@ Por ejemplo, la URL "*a/b/c*" llamará al método base, pero "*a/b/c.html*" no l
 | $5         | Text | <- | Nombre de usuario                                         |
 | $6         | Text | <- | Contraseña                                                |
 
+
 Debe declarar estos parámetros de la siguiente manera:
 
 ```4d
@@ -56,7 +58,9 @@ Como alternativa, puede utilizar la sintaxis [parámetros nombrados](Concepts/pa
 
 ```
 
+
 > Llamar a un comando 4D que muestra un elemento de interfaz (`DIALOG`, `ALERT`, etc.) no está permitido y termina el procesamiento del método.
+
 
 ### $1 - Datos adicionales de la URL
 
@@ -67,12 +71,13 @@ Utilicemos como ejemplo una conexión de intranet. Supongamos que la dirección 
 | URL introducida en el navegador web  | Valor del parámetro $1   |
 | ------------------------------------ | ------------------------ |
 | 123.4.567.89                         | /                        |
-| <http://123.45.67.89>                | /                        |
+| http://123.45.67.89                  | /                        |
 | 123.4.567.89/Customers               | /Customers               |
-| <http://123.45.67.89/Customers/Add>  | /Customers/Add           |
+| http://123.45.67.89/Customers/Add    | /Customers/Add           |
 | 123.4.567.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
 Tenga en cuenta que es libre de utilizar este parámetro a su conveniencia. 4D simplemente ignora el valor pasado más allá de la parte del host de la URL. Por ejemplo, puede establecer una convención en la que el valor "*/Customers/Add*" significa "ir directamente a añadir un nuevo registro en la tabla `[Customers]`.” Al proporcionar a los usuarios de la web una lista de posibles valores y/o marcadores por defecto, puede dar accesos directos a diferentes partes de su aplicación. De este modo, los usuarios de la web pueden acceder rápidamente a los recursos de su sitio web sin tener que recorrer toda la ruta de navegación cada vez que realicen una nueva conexión.
+
 
 ### $2 - Encabezado y cuerpo de la petición HTTP
 
@@ -80,6 +85,7 @@ El segundo parámetro ($2) es el encabezado y el cuerpo de la petición HTTP env
 
 Si su aplicación utiliza esta información, deberá analizar el encabezado y el cuerpo. Puede utilizar los comandos `WEB GET HTTP HEADER` y `WEB GET HTTP BODY`.
 > Por razones de rendimiento, el tamaño de los datos que pasan por el parámetro $2 no debe superar los 32 KB. Más allá de este tamaño, son truncados por el servidor HTTP de 4D.
+
 
 ### $3 - Dirección IP del cliente web
 
@@ -94,6 +100,9 @@ El parámetro $4 recibe la dirección IP solicitada por el servidor web 4D. 4D p
 
 Los parámetros $5 y $6 reciben el nombre de usuario y la contraseña introducidos por el usuario en el cuadro de diálogo de identificación estándar que muestra el navegador, si procede (ver la página [autenticación](authentication.md)).
 > Si el nombre de usuario enviado por el navegador existe en 4D, el parámetro $6 (la contraseña del usuario) no se devuelve por razones de seguridad.
+
+
+
 
 ## /4DACTION
 
@@ -137,7 +146,7 @@ var $path : Text
 var $PictVar : Picture
 var $BlobVar : Blob
 
- //busca la imagen en la carpeta Imágenes dentro de la carpeta Resources 
+ //busca la imagen en la carpeta Imágenes dentro de la carpeta Resources
 $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd"
 
 READ PICTURE FILE($path;$PictVar) //pone la imagen en la variable imagen
@@ -149,7 +158,6 @@ PICTURE TO BLOB($PictVar;$BLOB;".png") //convierte la imagen en formato ".png". 
 El servidor web de 4D también le permite utilizar formularios "publicados", que son páginas HTML estáticas que envían datos al servidor web y recuperar fácilmente todos los valores. Se les debe asociar el tipo POST y la acción del formulario debe empezar imperativamente por /4DACTION/MethodName.
 
 Un formulario puede ser enviado a través de dos métodos (ambos pueden ser utilizados con 4D):
-
 - POST, normalmente utilizado para enviar datos al servidor web,
 - GET, normalmente utilizado para solicitar datos del servidor web.
 
@@ -212,6 +220,10 @@ OK="Search"
 End if
 ```
 
+
+
+
+
 ## Obtener valores de las peticiones HTTP
 
 El servidor web de 4D le permite recuperar datos enviados a través de peticiones POST o GET, utilizando formularios web o URLs.
@@ -273,15 +285,15 @@ return false
  name="frmWelcome"
  onsubmit="return GetBrowserInformation(frmWelcome)">
   <h1>Welcome to Spiders United</h1>
-  <b>Please enter your name:</b>
+  <p><b>Please enter your name:</b>
   <input name="vtUserName" value="" size="30" type="text"></p>
-
-<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit"> 
+  <p>
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit">
 <input name="vsbRegister" value="Register" type="submit">
 <input name="vsbInformation" value="Information" type="submit"></p>
-
-<input name="vtNav_appName" value="" type="hidden"> 
-<input name="vtNav_appVersion" value="" type="hidden"> 
+<p>
+<input name="vtNav_appName" value="" type="hidden">
+<input name="vtNav_appVersion" value="" type="hidden">
 <input name="vtNav_appCodeName" value="" type="hidden">
 <input name="vtNav_userAgent" value="" type="hidden"></p>
 </form>
@@ -340,6 +352,7 @@ Las funcionalidades de este método son:
 - De las variables vinculadas *vsbLogOn*, *vsbRegister* y *vsbInformation* a los tres botones de envío, sólo la correspondiente al botón que se ha presionado será recuperada por el comando `WEB GET VARIABLES`. Cuando el envío se realiza mediante uno de estos botones, el navegador devuelve a 4D el valor del botón presionado. Esto le indica qué botón se ha presionado.
 
 Tenga en cuenta que con HTML, todos los objetos son objetos de texto. Si se utiliza un objeto SELECT, es el valor del elemento resaltado en el objeto el que se devuelve en el comando `WEB GET VARIABLES`, y no la posición del elemento en el array como en 4D. `WEB GET VARIABLES` siempre devuelve valores de tipo Texto.
+
 
 ## Otros comandos del servidor web
 

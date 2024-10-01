@@ -5,7 +5,7 @@ title: HTTPRequest
 
 The `HTTPRequest` class allows you to handle [`HTTPRequest objects`](#httprequest-object) that can be used to configure and send requests to an HTTP server, as well as to process the HTTP server responses.
 
-The `HTTPRequest` class is available from the `4D` class store. You create and send HTTP requests using the [4D.HTTPRequest.new()](#4dhttprequestnew) function, that returns a [`HTTPRequest object`](#httprequest-object).
+A classe `HTTPRequest` está disponível no class store `4D`. You create and send HTTP requests using the [4D.HTTPRequest.new()](#4dhttprequestnew) function, that returns a [`HTTPRequest object`](#httprequest-object).
 
 <details><summary>História</summary>
 
@@ -17,7 +17,7 @@ The `HTTPRequest` class is available from the `4D` class store. You create and s
 
 ### Exemplo
 
-Create a `MyHttpRequestOptions` class for the request options:
+Criar uma classe `MyHttpRequestOptions` para as opções de pedido:
 
 ```4d
 Class constructor($method : Text; $headers : Object; $body : Text)
@@ -81,11 +81,11 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
 <!-- REF #4D.HTTPRequest.new().Params -->
 
-| Parâmetro  | Tipo                           |     | Descrição                          |
-| ---------- | ------------------------------ | :-: | ---------------------------------- |
-| url        | Text                           |  -> | URL para onde enviar o pedido      |
-| options    | Object                         |  -> | Pedir propriedades de configuração |
-| Resultados | 4D.HTTPRequest |  <- | Novo objecto HTTPRequest           |
+| Parâmetro  | Tipo                           |                             | Descrição                          |
+| ---------- | ------------------------------ | :-------------------------: | ---------------------------------- |
+| url        | Text                           |              ->             | URL para onde enviar o pedido      |
+| options    | Object                         |              ->             | Pedir propriedades de configuração |
+| Resultados | 4D.HTTPRequest | <- | Novo objecto HTTPRequest           |
 
 <!-- END REF -->
 
@@ -102,7 +102,7 @@ In *url*, pass the URL where you want to send the request. A sintaxe a utilizar 
 {https://}[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 ```
 
-If you omit the scheme part (`http://` or `https://`), a https request is sent.
+Se você omitir a parte do esquema (`http://` ou `https://`), é enviado um pedido https.
 
 Por exemplo, pode passar as seguintes cordas:
 
@@ -124,10 +124,10 @@ In the *options* parameter, pass an object that can contain the following proper
 | Propriedade            | Tipo                                             | Descrição                                                                                                                                                                                                                                                                                                                                                           | Por padrão    |
 | ---------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | automaticRedirections  | Parâmetros                                       | Se true, os redirecionamentos serão realizados automaticamente (até 5 redirecionamentos são tratados, a resposta do 6. º redirecionamento é retornada, se houver)                                                                                                                                                                | True          |
-| body                   | Diferente de                                     | Body of the request (required in case of `post` or `put` requests). Pode ser um texto, um blob, ou um objecto. O tipo de conteúdo é determinado a partir do tipo desta propriedade, a menos que seja colocado dentro dos cabeçalhos                                                                              | indefinido    |
+| body                   | Diferente de                                     | Corpo do pedido (requerido no caso de `post` ou `put` requests). Pode ser um texto, um blob, ou um objecto. O tipo de conteúdo é determinado a partir do tipo desta propriedade, a menos que seja colocado dentro dos cabeçalhos                                                                                 | indefinido    |
 | certificatesFolder     | [Folder](FolderClass.md)                         | Define a pasta de certificados de cliente activos                                                                                                                                                                                                                                                                                                                   | indefinido    |
 | dataType               | Text                                             | Tipo de atributo do corpo de resposta. Valores: "texto", "blob", "objecto", ou "auto". Se "auto", o tipo do conteúdo do corpo será deduzido do seu tipo MIME (objecto para JSON, texto para texto, javascript, xml, mensagem http e forma codificada url, ou então um blob)                      | "auto"        |
-| decodeData             | Parâmetros                                       | If true, the data received in the `onData` callback is uncompressed                                                                                                                                                                                                                                                                                                 | False         |
+| decodeData             | Parâmetros                                       | Se for verdade, os dados recebidos em `onData` callback não são compactados                                                                                                                                                                                                                                                                                         | False         |
 | encoding               | Text                                             | Used only in case of requests with a `body` (`post` or `put` methods). Codificação do conteúdo do corpo do pedido se for um texto, ignorado se o tipo de conteúdo for colocado dentro dos cabeçalhos                                                                                                                             | "UTF-8"       |
 | headers                | Object                                           | Cabeçalhos do pedido. Syntax: `headers.key=value` (*value* can be a Collection if the same key must appear multiple times)                                                                                                                                                                                       | Objecto vazio |
 | method                 | Text                                             | "POST", "GET", ou outro método                                                                                                                                                                                                                                                                                                                                      | "GET"         |
@@ -140,7 +140,7 @@ In the *options* parameter, pass an object that can contain the following proper
 | protocol               | Text                                             | "auto" ou "HTTP1". "auto" significa HTTP1 na implementação actual                                                                                                                                                                                                                                                                                   | "auto"        |
 | proxyAuthentication    | [objeto de autenticação](#authentication-object) | Autenticação por procuração de tratamento de objectos                                                                                                                                                                                                                                                                                                               | indefinido    |
 | serverAuthentication   | [objeto de autenticação](#authentication-object) | Autenticação do servidor de tratamento de objectos                                                                                                                                                                                                                                                                                                                  | indefinido    |
-| returnResponseBody     | Parâmetros                                       | If false, the response body is not returned in the [`response` object](#response). Returns an error if false and `onData` is undefined                                                                                                                                                                                                              | True          |
+| returnResponseBody     | Parâmetros                                       | If false, the response body is not returned in the [`response` object](#response). Devolve um erro se falso e `onData` é indefinido                                                                                                                                                                                                                 | True          |
 | timeout                | Real                                             | Tempo de espera em segundos. Indefinido = sem timeout                                                                                                                                                                                                                                                                                               | Indefinido    |
 | validateTLSCertificate | Parâmetros                                       | Se false, 4D não valida o certificado TLS e não retorna um erro se ele for inválido (i.e. expirado, auto-assinado...). Importante: Na implementação actual, a Autoridade de Certificação em si não é verificada. | True          |
 
@@ -159,9 +159,9 @@ Aqui está a sequência de chamadas de retorno:
 
 2. `onData` is called zero or several times (not called if the request does not have a body)
 
-3. If no error occured, `onResponse` is always called once
+3. Se não ocorreu nenhum erro, `onResponse` é sempre chamado uma vez
 
-4. If an error occurs, `onError` is executed once (and terminates the request)
+4. Se ocorrer um erro, `onError` é executado uma vez (e encerra o pedido)
 
 5. `onTerminate` é sempre executado uma vez
 
@@ -177,7 +177,7 @@ An `event` object is returned when a [callback function](#callback-functions) is
 
 | Propriedade           | Tipo | Descrição                                                                                                                  |
 | --------------------- | ---- | -------------------------------------------------------------------------------------------------------------------------- |
-| .data | blob | Dados recebidos. It is always *undefined* except in the `onData` callback                                  |
+| .data | blob | Dados recebidos. É sempre *undefined* excepto no callback `onData`                                         |
 | .type | text | Tipo de evento. Possíveis valores: "resposta", "erro", "cabeçalhos", "dados", ou "terminar |
 
 #### authentication-object
@@ -208,10 +208,10 @@ An authentication object handles the `options.serverAuthentication` or `options.
 
 <!-- REF #HTTP Parse message.Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                                       |
-| ---------- | ---------- | :-: | --------------------------------------------------------------- |
-| data       | Text, Blob |  -> | Dados a serem analisados                                        |
-| Resultados | Object     |  <- | Objeto, cada propriedade é uma parte dos dados de várias partes |
+| Parâmetro  | Tipo       |                             | Descrição                                                       |
+| ---------- | ---------- | :-------------------------: | --------------------------------------------------------------- |
+| data       | Text, Blob |              ->             | Dados a serem analisados                                        |
+| Resultados | Object     | <- | Objeto, cada propriedade é uma parte dos dados de várias partes |
 
 <!-- END REF -->
 
@@ -462,10 +462,10 @@ The `.url` property contains <!-- REF #HTTPRequestClass.url.Summary -->the URL o
 
 <!-- REF #HTTPRequestClass.wait().Params -->
 
-| Parâmetro  | Tipo                           |     | Descrição                                           |
-| ---------- | ------------------------------ | :-: | --------------------------------------------------- |
-| time       | Real                           |  -> | Tempo máximo em segundos para esperar pela resposta |
-| Resultados | 4D.HTTPRequest |  <- | HTTPRequest object                                  |
+| Parâmetro  | Tipo                           |                             | Descrição                                           |
+| ---------- | ------------------------------ | :-------------------------: | --------------------------------------------------- |
+| time       | Real                           |              ->             | Tempo máximo em segundos para esperar pela resposta |
+| Resultados | 4D.HTTPRequest | <- | HTTPRequest object                                  |
 
 <!-- END REF -->
 

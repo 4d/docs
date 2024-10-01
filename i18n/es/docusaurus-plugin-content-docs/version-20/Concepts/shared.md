@@ -68,7 +68,6 @@ La asignación de objetos/colecciones compartidos a propiedades o elementos de o
 
 Consulte el ejemplo 2 para ver una ilustración de las reglas de los grupos compartidos.
 
-**Nota:** Los grupos compartidos se gestionan a través de una propiedad interna llamada *locking identifier*. Para obtener información detallada sobre este valor, consulte la Referencia del Lenguaje 4D.
 
 ### Lectura
 

@@ -49,14 +49,14 @@ End if
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 
-| Parámetros      | Tipo                      |     | Descripción                                                          |
-| --------------- | ------------------------- | :-: | -------------------------------------------------------------------- |
-| fileToZip       | 4D.File   |  -> | Objeto archivo o carpeta a comprimir                                 |
-| folderToZip     | 4D.Folder |  -> | Objeto archivo o carpeta a comprimir                                 |
-| zipStructure    | Object                    |  -> | Objeto archivo o carpeta a comprimir                                 |
-| destinationFile | 4D.File   |  -> | Archivo de destino del archivo                                       |
-| options         | Integer                   |  -> | Opción *folderToZip*: `ZIP Without enclosing folder` |
-| Result          | Object                    |  <- | Objeto estado                                                        |
+| Parámetros      | Tipo                      |                             | Descripción                                                          |
+| --------------- | ------------------------- | :-------------------------: | -------------------------------------------------------------------- |
+| fileToZip       | 4D.File   |              ->             | Objeto archivo o carpeta a comprimir                                 |
+| folderToZip     | 4D.Folder |              ->             | Objeto archivo o carpeta a comprimir                                 |
+| zipStructure    | Object                    |              ->             | Objeto archivo o carpeta a comprimir                                 |
+| destinationFile | 4D.File   |              ->             | Archivo de destino del archivo                                       |
+| options         | Integer                   |              ->             | Opción *folderToZip*: `ZIP Without enclosing folder` |
+| Result          | Object                    | <- | Objeto estado                                                        |
 
 <!-- END REF -->
 
@@ -83,7 +83,7 @@ Puede pasar un objeto 4D.File, 4D.Folder, o una estructura zip como primer pará
 
 En el parámetro *destinationFile*, pase un objeto `4D.File` que describa el archivo ZIP a crear (nombre, ubicación, etc.). Se aconseja utilizar la extensión ".zip" si quiere que el archivo ZIP sea procesado automáticamente por cualquier software.
 
-Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive) command to access it.
+Una vez creado un archivo, puede utilizar el comando [ZIP Read archive](#zip-read-archive) para acceder a él.
 
 **Status object**
 
@@ -140,7 +140,7 @@ Para comprimir una estructura de archivo ZIP con una contraseña y una barra de 
  $zip.password:="password"
  $zip.callback:=Formula(myFormulaCompressingMethod($1))
 
- progID:=Progress New //we use the 4D Progress component
+ progID:=Progress New //utilizamos el componente 4D Progress
 
  $status:=ZIP Create archive($zip;$destination)
 
@@ -203,11 +203,11 @@ $err:=ZIP Create archive($zip; $destination)
 
 <!-- REF #_command_.ZIP Read archive.Params -->
 
-| Parámetros | Tipo                          |     | Descripción                           |
-| ---------- | ----------------------------- | :-: | ------------------------------------- |
-| zIPFile    | 4D.File       |  -> | Archivos Zip                          |
-| contraseña | Text                          |  -> | Contraseña del archivo ZIP, si la hay |
-| Result     | 4D.ZipArchive |  <- | Objeto archivo                        |
+| Parámetros | Tipo                          |                             | Descripción                           |
+| ---------- | ----------------------------- | :-------------------------: | ------------------------------------- |
+| zIPFile    | 4D.File       |              ->             | Archivos Zip                          |
+| contraseña | Text                          |              ->             | Contraseña del archivo ZIP, si la hay |
+| Result     | 4D.ZipArchive | <- | Objeto archivo                        |
 
 <!-- END REF -->
 
@@ -258,10 +258,10 @@ Para leer el contenido de un archivo sin extraerlo de la carpeta root:
 Para extraer desde la carpeta root:
 
 ```4d
-  //extract a file
+  //extraer un archivo
  $folderResult:=$files[$i].copyTo(Folder(fk desktop folder).folder("MyDocs"))
 
-  //extract all files
+  //extraer todos los archivos
  $folderResult:=$archive.root.copyTo(Folder(fk desktop folder).folder("MyDocs"))
 ```
 

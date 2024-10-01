@@ -9,7 +9,7 @@ title: On Close Detail
 
 ## Descrição
 
-El evento `On Close Detail` puede utilizarse en los siguientes contextos:
+O evento `On Close Detail` pode ser usado nos seguintes contextos:
 
-- **Formularios de salida**: el formulario detallado se cierra y el usuario vuelve al formulario listado. Este evento no se puede seleccionar para los formularios proyecto, sólo está disponible con los **formularios tabla**.
-- List box of the [**selection type**](FormObjects/listbox_overview.md#selection-list-boxes): This event is generated when a record displayed in the [detail form](FormObjects/properties_ListBox.md#detail-form-name) associated with a selection type list box is about to be closed (regardless of whether or not the record was modified).
+- **Formulários de saída**: o formulário detalhado é fechado e o usuário retorna ao formulário lista. Este evento não pode ser selecionado para formulários projeto, está disponível apenas com **formulários tabela**.
+- List box do [**tipo seleção**](FormObjects/listbox_overview.md#list-box-selection): este evento é gerado quando um registro exibido no [formulario detalhado](FormObjects/properties_ListBox.md#detail-form-name) associado a um list box do tipo seleção está prestes a ser fechado (independentemente se o registro foi modificado ou não).

@@ -52,8 +52,8 @@ A continuación, se evalúan los valores introducidos:
 
 - Si la opción **Incluir contraseñas de 4D** está marcada, las credenciales de los usuarios se evaluarán primero contra la [tabla interna de usuarios 4D](Users/overview.md).
   - Si el nombre de usuario enviado por el navegador existe en la tabla de usuarios 4D y la contraseña es correcta, se acepta la conexión. Si la contraseña es incorrecta, se rechaza la conexión.
-  - If the user name does not exist in the table of 4D users, the [`On Web Authentication`](#on-web-authentication) database method is called. Si el método base `On Web Authentication` no existe, se rechazan las conexiones.
-- If the **Include 4D passwords** option is not checked, user credentials are sent to the [`On Web Authentication`](#on-web-authentication) database method along with the other connection parameters (IP address and port, URL...) para que pueda procesarlos. Si el método base `On Web Authentication` no existe, se rechazan las conexiones.
+  - Si el nombre de usuario no existe en la tabla de usuarios 4D, se llama al método base [`On Web Authentication`](#on-web-authentication). Si el método base `On Web Authentication` no existe, se rechazan las conexiones.
+- Si la opción **Incluir contraseñas 4D** no está marcada, las credenciales de usuario se envían al método base [`On Web Authentication`](#on-web-authentication) junto con el resto de parámetros de conexión (dirección IP y puerto, URL...) para que pueda procesarlos. Si el método base `On Web Authentication` no existe, se rechazan las conexiones.
 
 > Con el servidor Web del cliente 4D, tenga en cuenta que todos los sitios publicados por las máquinas 4D Client compartirán la misma tabla de usuarios. La validación de los usuarios/contraseñas la realiza la aplicación 4D Server.
 
@@ -83,21 +83,21 @@ Por tanto, se llama al método base `On Web Authentication`:
 Por tanto, NO se llama al método base `On Web Authentication`:
 
 - cuando el servidor web recibe una URL que solicita una página estática válida.
-- when the web server reveives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
+- cuando el servidor web recibe una URL que empieza por `rest/` y se lanza el servidor REST (en este caso, la autenticación se gestiona a través del método base [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) o los [parámetros de estructura](REST/configuration.md#using-the-structure-settings)).
 
 ### Sintaxis
 
 **On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ) -> $0 : Boolean
 
-| Parámetros | Tipo    |     | Descripción                                                                  |
-| ---------- | ------- | :-: | ---------------------------------------------------------------------------- |
-| $1         | Text    |  <- | URL                                                                          |
-| $2         | Text    |  <- | Encabezados HTTP + cuerpo HTTP (hasta un límite de 32 kb) |
-| $3         | Text    |  <- | Dirección IP del cliente web (navegador)                  |
-| $4         | Text    |  <- | Dirección IP del servidor                                                    |
-| $5         | Text    |  <- | Nombre de usuario                                                            |
-| $6         | Text    |  <- | Contraseña                                                                   |
-| $0         | Boolean |  -> | True = solicitud aceptada, False = solicitud rechazada                       |
+| Parámetros | Tipo    |                             | Descripción                                                                  |
+| ---------- | ------- | :-------------------------: | ---------------------------------------------------------------------------- |
+| $1         | Text    | <- | URL                                                                          |
+| $2         | Text    | <- | Encabezados HTTP + cuerpo HTTP (hasta un límite de 32 kb) |
+| $3         | Text    | <- | Dirección IP del cliente web (navegador)                  |
+| $4         | Text    | <- | Dirección IP del servidor                                                    |
+| $5         | Text    | <- | Nombre de usuario                                                            |
+| $6         | Text    | <- | Contraseña                                                                   |
+| $0         | Boolean |              ->             | True = solicitud aceptada, False = solicitud rechazada                       |
 
 Debe declarar estos parámetros de la siguiente manera:
 
@@ -180,7 +180,7 @@ El método base `On Web Connection` sólo se ejecuta si la conexión ha sido ace
 Ejemplo del método base `On Web Authentication` en [Modo DIGEST](#digest-protocol):
 
 ```4d
- // On Web Authentication Database Method
+ // Método base On Web Authentication
  #DECLARE ($url : Text; $header : Text; $ipB : Text; $ipS : Text; \
  	$user : Text; $pw : Text) -> $valid : Boolean
   
@@ -188,9 +188,9 @@ Ejemplo del método base `On Web Authentication` en [Modo DIGEST](#digest-protoc
  $valid:=False
 
  $found:=ds.WebUser.query("User === :1";$user)
- If($found.length=1) // User is found
+ If($found.length=1) // El usuario se encuentra
  	$valid:=WEB Validate digest($user;[WebUser]password)
  Else
-    $valid:=False // User does not exist
+    $valid:=False // El usuario no existe
  End if
 ```

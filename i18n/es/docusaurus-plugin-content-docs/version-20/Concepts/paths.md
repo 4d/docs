@@ -27,7 +27,7 @@ Se soportan los siguientes nombres de rutas de filesystem:
 | "/LOGS"      | Carpeta Logs                                           | "C:\\MyApps\\Students\\Data\\Logs\\"       |
 | "/PACKAGE"   | Carpeta raíz del proyecto (con o sin extensión 4dbase) | "C:\\MyApps\\Students\\"                       |
 | "/PROJECT"   | Carpeta Project                                        | "C:\\MyApps\\Students\\Project\\"            |
-| "/RESOURCES" | Carpeta de recursos actual del proyecto                | "C:\\MyApps\\Resources\\"                      |
+| "/RESOURCES" | Carpeta de recursos actual del proyecto                | "C:\\MyApps\\Students\\Resources\\"          |
 | "/SOURCES"   | Carpeta de fuentes del proyecto actual                 | "C:\\MyApps\\Students\\Project\\Sources\\" |
 
 ## Sintaxis POSIX
@@ -118,9 +118,9 @@ Las funciones de los objetos carpeta, tales como [`folder.file()`](../API/Folder
 var $userImages : 4D.Folder
 var $ok : Boolean
 
-  //to reference a "Picture" folder within the user documents folder
+  //para referenciar una carpeta "Picture" dentro de la carpeta de documentos del usuario
 $userImages:=Folder(fk documents folder).folder("Pictures")
-  //to create a folder on the desktop
+  //para crear una carpeta en el escritorio
 $ok:=Folder(fk desktop folder).folder("myFolder").create()
 ```
 

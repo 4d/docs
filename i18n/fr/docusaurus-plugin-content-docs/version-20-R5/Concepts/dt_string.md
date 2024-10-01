@@ -3,7 +3,7 @@ id: string
 title: Chaîne
 ---
 
-Chaîne est un terme générique utilisé pour :
+String ("Chaîne") est un terme générique utilisé pour :
 
 - Les variables ou champs de type Texte : un champ, une variable ou une expression de type Texte peut contenir de 0 à 2 Go de texte.
 - Les variables ou champs de type alphanumérique : un champ alphanumérique peut contenir de 0 à 255 caractères (la limite est fixée lors de la définition du champ).
@@ -36,24 +36,24 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 
 ## Opérateurs sur les chaînes
 
-| Opération           | Syntaxe          | Retourne | Expression              | Valeur   |
-| ------------------- | ---------------- | -------- | ----------------------- | -------- |
-| Concaténation       | Chaîne + Chaîne  | String   | "abc" + "def"           | "abcdef" |
-| Répétition          | Chaîne \* Nombre | String   | "ab" \* 3               | "ababab" |
-| Egalité             | Chaîne = Chaîne  | Boolean  | "abc" = "abc"           | True     |
-|                     |                  |          | "abc" = "abd"           | False    |
-| Inégalité           | Chaîne # Chaîne  | Boolean  | "abc" # "abd"           | True     |
-|                     |                  |          | "abc" # "abc"           | False    |
-| Supérieur à         | Chaîne > Chaîne  | Boolean  | "abd" > "abc"           | True     |
-|                     |                  |          | "abc" > "abc"           | False    |
-| Inférieur à         | Chaîne < Chaîne  | Boolean  | "abc" < "abd"           | True     |
-|                     |                  |          | "abc" < "abc"           | False    |
-| Supérieur ou égal à | Chaîne >= Chaîne | Boolean  | "abd" >= "abc"          | True     |
-|                     |                  |          | "abc" >= "abd"          | False    |
-| Inférieur ou égal à | Chaîne <= Chaîne | Boolean  | "abc" <= "abd"          | True     |
-|                     |                  |          | "abd" <= "abc"          | False    |
-| Contient mot-clé    | Chaîne % Chaîne  | Boolean  | "Alpha Bravo" % "Bravo" | True     |
-|                     |                  |          | "Alpha Bravo" % "ravo"  | False    |
+| Opération           | Syntaxe                                   | Retourne | Expression                              | Valeur   |
+| ------------------- | ----------------------------------------- | -------- | --------------------------------------- | -------- |
+| Concaténation       | Chaîne + Chaîne                           | String   | "abc" + "def"                           | "abcdef" |
+| Répétition          | Chaîne \* Nombre                          | String   | "ab" \* 3                               | "ababab" |
+| Egalité             | Chaîne = Chaîne                           | Boolean  | "abc" = "abc"                           | True     |
+|                     |                                           |          | "abc" = "abd"                           | False    |
+| Inégalité           | Chaîne # Chaîne                           | Boolean  | "abc" # "abd"                           | True     |
+|                     |                                           |          | "abc" # "abc"                           | False    |
+| Supérieur à         | Chaîne > Chaîne                           | Boolean  | "abd" > "abc"                           | True     |
+|                     |                                           |          | "abc" > "abc"                           | False    |
+| Inférieur à         | Chaîne < Chaîne  | Boolean  | "abc" < "abd"  | True     |
+|                     |                                           |          | "abc" < "abc"  | False    |
+| Supérieur ou égal à | Chaîne >= Chaîne                          | Boolean  | "abd" >= "abc"                          | True     |
+|                     |                                           |          | "abc" >= "abd"                          | False    |
+| Inférieur ou égal à | Chaîne <= Chaîne | Boolean  | "abc" <= "abd" | True     |
+|                     |                                           |          | "abd" <= "abc" | False    |
+| Contient mot-clé    | Chaîne % Chaîne                           | Boolean  | "Alpha Bravo" % "Bravo"                 | True     |
+|                     |                                           |          | "Alpha Bravo" % "ravo"                  | False    |
 
 ## Comparaisons de chaînes
 
@@ -64,7 +64,7 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 Character code("A")=Character code("a") // 65 n'est pas égal à 97
 ```
 
-- When strings are compared, diacritical characters are compared using the system character comparison table of your computer. Par exemple, les expressions suivantes renvoient `TRUE` :
+- Lorsque des chaînes de caractères sont comparées, les caractères diacritiques sont comparés en utilisant la table de comparaison des caractères système de votre ordinateur. Par exemple, les expressions suivantes renvoient `TRUE` :
 
 ```4d
      "n"="ñ"
@@ -140,7 +140,7 @@ A la différence des autres comparaisons de chaîne, les recherches par mots-cl�
 
 > **Notes :**
 >
-> - 4D utilise la librairie ICU pour la comparaison des chaînes (à l'aide des opérateurs `<>=#`) et la détection des mots-clés. Pour plus d'informations sur les règles mises en oeuvre, veuillez vous référer à l'adresse suivante : http://www.unicode.org/reports/tr29/#Word_Boundaries.
+> - 4D utilise la librairie ICU pour la comparaison des chaînes (à l'aide des opérateurs `<>=#`) et la détection des mots-clés. Pour plus d'informations sur les règles mises en oeuvre, veuillez vous référer à l'adresse suivante : <http://www.unicode.org/reports/tr29/#Word_Boundaries>.
 > - Dans la version japonaise, au lieu de ICU, 4D utilise Mecab par défaut pour la détection des mots-clés.
 
 ## Symboles d'indice de chaîne
@@ -160,14 +160,14 @@ End if
 Lorsque les symboles d'indice de chaîne apparaissent dans une expression, ils retournent le caractère auquel ils font référence sous la forme d'une chaîne d'un caractère. Par exemple :
 
 ```4d
-//The following example tests if the last character of vtText is an At sign "@"
+//L'exemple suivant teste si le dernier caractère de vtText est un signe "@"
  If(vtText#"")
     If(Character code(Substring(vtText;Length(vtText);1))=At sign)
   //...
     End if
  End if
 
-  //Using the character reference syntax, you would write in a simpler manner:
+  //En utilisant la syntaxe des symboles d'indice de chaîne, vous écririez d'une manière plus simple :
  If(vtText#"")
     If(Character code(vtText[[Length(vtText)]])=At sign)
   // ...

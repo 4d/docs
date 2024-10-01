@@ -36,11 +36,11 @@ Si ejecuta el siguiente código:
 
 ```4d
  var $e1; $e2 : cs.EmployeeEntity
- $e1:=ds.Employee.get(1) //access the employee with ID 1
+ $e1:=ds.Employee.get(1) //accede al empleado con ID 1
  $e2:=$e1
  $e1.name:="Hammer"
-  //both variables $e1 and $e2 share the reference to the same entity
-  //$e2.name contains "Hammer"
+  //ambas variables $e1 y $e2 comparten la referencia a la misma entidad
+  //$e2.name contiene "Hammer"
  If($e1=$e2) //True
 ```
 
@@ -55,9 +55,9 @@ Ahora, si se ejecuta:
  $e1:=ds.Employee.get(1)
  $e2:=ds.Employee.get(1)
  $e1.name:="Hammer"
-  //variable $e1 contains a reference to an entity
-  //variable $e2 contains another reference to another entity
-  //$e2.name contains "smith"
+  //variable $e1 contiene una referencia a una entidad
+  //variable $e2 contiene otra referencia a otra entidad
+  //$e2.name contiene "smith"
  If($e1=$e2) //False
 ```
 
@@ -254,7 +254,7 @@ Puede crear y utilizar simultáneamente tantas selecciones de entidades diferent
 
 :::note
 
-Cuando se eliminan entidades, sus referencias permanecen en la selección de entidades con un valor *undefined*. In this case, you can call the [`.clean()`](API/EntitySelectionClass.md#clean) function to get a new entity selection but without the deleted entity references.
+Cuando se eliminan entidades, sus referencias permanecen en la selección de entidades con un valor *undefined*. En este caso, puede llamar a la función [`.clean()`](API/EntitySelectionClass.md#clean) para obtener una nueva selección de entidades pero sin las referencias de entidades eliminadas.
 
 :::
 
@@ -267,7 +267,7 @@ Una entity selection puede ser **compartible** (legible por múltiples procesos,
 Una entity selection **compartible** tiene las siguientes características:
 
 - puede almacenarse en un objeto compartido o en una colección compartida, y puede pasarse como parámetro entre varios procesos o trabajadores;
-- puede almacenarse en varios objetos o colecciones compartidos, o en un objeto o colección compartido que ya pertenezca a un grupo (no tiene un \* identificador de bloqueo\*);
+- puede almacenarse en varios objetos o colecciones compartidos, o en un objeto o colección compartido que ya pertenezca a un grupo;
 - no permite la adición de nuevas entidades. Al intentar añadir una entidad a una entity selection compartibles se producirá un error (1637 - Esta entity selection no puede modificarse). Para añadir una entidad a unaentity selection compartible, primero debe transformarla en una entity selection no compartible utilizando la función [`.copy()`](API/EntitySelectionClass.md#copy), antes de llamar a [`.add()`](API/EntitySelectionClass.md#add).
 
 > La mayoría de las funciones entity selection (como [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) soportar selecciones de entidades compartibles ya que no es necesario modificar la selección de entidades original (devuelven una nueva).

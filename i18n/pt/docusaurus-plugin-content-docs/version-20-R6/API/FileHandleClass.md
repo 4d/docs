@@ -148,7 +148,7 @@ Essa propriedade é **somente leitura**.
 
 The `.charset` property returns <!-- REF #FileHandleClass.charset.Summary -->the charset used when reading from or writing to the file<!-- END REF -->.
 
-The charset can be defined at the handle creation with the [`file.open()`](FileClass#open) function. Por padrão é "UTF-8".
+O conjunto de caracteres pode ser definido na criação do identificador com a função [`file.open()`](FileClass#open). Por padrão é "UTF-8".
 
 Essa propriedade é **somente leitura**.
 
@@ -206,8 +206,8 @@ Essa propriedade é **somente leitura**.
 
 <!--REF #FileHandleClass.getSize().Params -->
 
-| Parâmetro  | Tipo |    | Descrição                     |
-| ---------- | ---- | -- | ----------------------------- |
+| Parâmetro  | Tipo |                             | Descrição                     |
+| ---------- | ---- | --------------------------- | ----------------------------- |
 | Resultados | Real | <- | Tamanho do documento em bytes |
 
 <!-- END REF -->
@@ -242,7 +242,7 @@ The `.getSize()` function <!-- REF #FileHandleClass.getSize().Summary -->returns
 
 The `.mode` property returns <!-- REF #FileHandleClass.mode.Summary -->the mode in which the file handle was created: "read", "write", or "append"<!-- END REF -->.
 
-The mode can be defined at the handle creation with the [`file.open()`](FileClass#open) function. O padrão é "read".
+O modo pode ser definido na criação do identificador com a função [`file.open()`](FileClass#open). O padrão é "read".
 
 Essa propriedade é **somente leitura**.
 
@@ -268,14 +268,14 @@ The `.offset` property returns <!-- REF #FileHandleClass.offset.Summary -->the c
 
 Setting the `.offset` will change its current value at the moment of the next read or write operation.
 
-- If the passed value is negative, the `.offset` is set to the start of the file (zero).
+- Se o valor passado for negativo, o `.offset` é definido para o início do arquivo (zero).
 - If the passed value is higher than the size of the file,  the `.offset` is set to the end of the file (size of file).
 
 Essa propriedade é **leitura/escrita**.
 
 :::caution
 
-When a file handle is created, the `.offset` value is a number of bytes. However, the unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. So, if you start reading with `readBlob()` and then call `readText()`, text reading will start at an inconsistent position. It is therefore essential to set the `.offset` property yourself if you switch from reading/writing blob to reading/writing text in the same filehandle. Por exemplo:
+Quando um identificador de arquivo é criado, o valor `.offset` é um número de bytes. However, the unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. So, if you start reading with `readBlob()` and then call `readText()`, text reading will start at an inconsistent position. It is therefore essential to set the `.offset` property yourself if you switch from reading/writing blob to reading/writing text in the same filehandle. Por exemplo:
 
 ```4d
   // Open a european text file using utf-16 encoding (two bytes per character)
@@ -310,9 +310,9 @@ $s:=$fh.readText()
 
 <!--REF #FileHandleClass.readBlob().Params -->
 
-| Parâmetro  | Tipo                                 |    | Descrição              |
-| ---------- | ------------------------------------ | -- | ---------------------- |
-| *bytes*    | Real                                 | -> | Número de bytes a ler  |
+| Parâmetro  | Tipo                                 |                             | Descrição              |
+| ---------- | ------------------------------------ | --------------------------- | ---------------------- |
+| *bytes*    | Real                                 | ->                          | Número de bytes a ler  |
 | Resultados | [4D.Blob](BlobClass) | <- | Bytes lidos do arquivo |
 
 <!-- END REF -->
@@ -345,8 +345,8 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 <!--REF #FileHandleClass.readLine().Params -->
 
-| Parâmetro  | Tipo |    | Descrição      |
-| ---------- | ---- | -- | -------------- |
+| Parâmetro  | Tipo |                             | Descrição      |
+| ---------- | ---- | --------------------------- | -------------- |
 | Resultados | Text | <- | Linha de texto |
 
 <!-- END REF -->
@@ -359,7 +359,7 @@ When this function is executed, the current position ([`.offset`](#offset)) is u
 
 :::caution Aviso
 
-This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. For more information, see the [.offset description](#offset).
+This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. Para obter mais informações, consulte [descrição de .offset](#offset).
 
 :::
 
@@ -387,9 +387,9 @@ This function assumes that the [`.offset`](#offset) property is a number of char
 
 <!--REF #FileHandleClass.readText().Params -->
 
-| Parâmetro  | Tipo |    | Descrição                        |
-| ---------- | ---- | -- | -------------------------------- |
-| *stopChar* | Text | -> | Caracter no qual parar a leitura |
+| Parâmetro  | Tipo |                             | Descrição                        |
+| ---------- | ---- | --------------------------- | -------------------------------- |
+| *stopChar* | Text | ->                          | Caracter no qual parar a leitura |
 | Resultados | Text | <- | Texto do arquivo                 |
 
 <!-- END REF -->
@@ -398,13 +398,13 @@ This function assumes that the [`.offset`](#offset) property is a number of char
 
 The `.readText()` function <!-- REF #FileHandleClass.readText().Summary -->returns text from the file, starting from the current position until the first *stopChar* string is encountered (if passed) or the end of file is reached<!-- END REF -->.
 
-The *stopChar* character string is not included in the returned text. If you omit the *stopChar* parameter, the whole document text is returned.
+A string de caracteres *stopChar* não está incluída no texto devolvido. Se omitir o parâmetro *stopChar*, todo o texto do documento é devolvido.
 
 When this function is executed, the ([.offset](#offset)) is placed just after the *stopChar* string.
 
 :::caution Aviso
 
-This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. For more information, see the [.offset description](#offset).
+This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. Para obter mais informações, consulte [descrição de .offset](#offset).
 
 :::
 

@@ -3,9 +3,9 @@ id: components
 title: Componentes
 ---
 
-Un componente 4D es un conjunto de código y/o de formularios 4D que representan una o varias funcionalidades que pueden añadirse y utilizarse en sus proyectos. For example, the [4D SVG](https://github.com/4d/4D-SVG) component adds advanced commands and an integrated rendering engine that can be used to display SVG files.
+Un componente 4D es un conjunto de código y/o de formularios 4D que representan una o varias funcionalidades que pueden añadirse y utilizarse en sus proyectos. Por ejemplo, el componente [4D SVG](https://github.com/4d/4D-SVG) añade comandos avanzados y un motor de renderizado integrado que puede utilizarse para visualizar archivos SVG.
 
-You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component\&type=Repositories).
+Puede [desarrollar](../Extensions/develop-components.md) y [crear](../Desktop/building.md) sus propios componentes 4D, o descargar componentes públicos compartidos por la comunidad 4D que [se pueden encontrar en GitHub](https://github.com/search?q=4d-component\&type=Repositories).
 
 ## Componentes interpretados y compilados
 
@@ -72,7 +72,7 @@ Ejemplos:
 }
 ```
 
-El archivo **environment4d.json** se puede almacenar en la carpeta del paquete de su proyecto o en una de sus carpetas padre, en cualquier nivel (hasta la raíz). The benefit of this architecture is that you can store this environment file in a parent folder of your projects and decide not to commit it, allowing you to have your local component organization.
+El archivo **environment4d.json** se puede almacenar en la carpeta del paquete de su proyecto o en una de sus carpetas padre, en cualquier nivel (hasta la raíz). El beneficio de esta arquitectura es que usted puede almacenar este archivo de entorno en una carpeta padre de sus proyectos y decidir no comprometerlo, permitiéndole tener su organización local de componentes.
 
 :::note
 

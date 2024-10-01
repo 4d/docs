@@ -87,11 +87,11 @@ Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 
 <!-- REF #4D.HTTPRequest.new().Params -->
 
-| Parámetros | Tipo                           |     | Descripción                                 |
-| ---------- | ------------------------------ | :-: | ------------------------------------------- |
-| url        | Text                           |  -> | URL a la que enviar la solicitud            |
-| options    | Object                         |  -> | Propiedades de configuración de la petición |
-| Result     | 4D.HTTPRequest |  <- | Nuevo objeto HTTPRequest                    |
+| Parámetros | Tipo                           |                             | Descripción                                 |
+| ---------- | ------------------------------ | :-------------------------: | ------------------------------------------- |
+| url        | Text                           |              ->             | URL a la que enviar la solicitud            |
+| options    | Object                         |              ->             | Propiedades de configuración de la petición |
+| Result     | 4D.HTTPRequest | <- | Nuevo objeto HTTPRequest                    |
 
 <!-- END REF -->
 
@@ -173,7 +173,7 @@ Esta es la secuencia de llamadas de retorno:
 
 :::info
 
-For the callback functions to be called when you do not use [`wait()`](#wait) (asynchronous call), the process must be a [worker](../Develop/processes.md#worker-processes) created with [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NOT [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
+Para que las funciones de retrollamada se llamen cuando no utilice [`wait()`](#wait) (llamada asíncrona), el proceso debe ser un [worker](../Develop/processes.md#worker-processes) creado con [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NO [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
 
 :::
 
@@ -214,10 +214,10 @@ Un objeto de autenticación maneja la propiedad `options.serverAuthentication` o
 
 <!-- REF #HTTP Parse message.Params -->
 
-| Parámetros | Tipo       |     | Descripción                                                   |
-| ---------- | ---------- | :-: | ------------------------------------------------------------- |
-| data       | Text, Blob |  -> | Datos a analizar                                              |
-| Result     | Object     |  <- | Objeto, cada propiedad es parte de los datos de varias partes |
+| Parámetros | Tipo       |                             | Descripción                                                   |
+| ---------- | ---------- | :-------------------------: | ------------------------------------------------------------- |
+| data       | Text, Blob |              ->             | Datos a analizar                                              |
+| Result     | Object     | <- | Objeto, cada propiedad es parte de los datos de varias partes |
 
 <!-- END REF -->
 
@@ -468,10 +468,10 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 
 <!-- REF #HTTPRequestClass.wait().Params -->
 
-| Parámetros | Tipo                           |     | Descripción                                         |
-| ---------- | ------------------------------ | :-: | --------------------------------------------------- |
-| time       | Real                           |  -> | Tiempo máximo en segundos para esperar la respuesta |
-| Result     | 4D.HTTPRequest |  <- | Objeto HTTPRequest                                  |
+| Parámetros | Tipo                           |                             | Descripción                                         |
+| ---------- | ------------------------------ | :-------------------------: | --------------------------------------------------- |
+| time       | Real                           |              ->             | Tiempo máximo en segundos para esperar la respuesta |
+| Result     | 4D.HTTPRequest | <- | Objeto HTTPRequest                                  |
 
 <!-- END REF -->
 

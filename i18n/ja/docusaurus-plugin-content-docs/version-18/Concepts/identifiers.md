@@ -385,7 +385,7 @@ $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 
 | 識別子              | 最大 長             | 例題                                 |
 | ---------------- | ---------------- | ---------------------------------- |
-| Table            | 31               | [Invoices]                         |
+| テーブル             | 31               | [Invoices]                         |
 | フィールド            | 31               | [Employees]Last Name               |
 | インタープロセス変数/配列    | `<>` + 31  | `<>vlNextProcessID`          |
 | プロセス変数/配列        | 31               | vsCurrentName                      |

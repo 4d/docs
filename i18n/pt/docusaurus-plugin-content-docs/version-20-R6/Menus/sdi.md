@@ -92,6 +92,6 @@ Embora seja tratado de forma transparente por 4D, o modo SDI introduz pequenas v
 
 :::info
 
-You can use the [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) command to know the current running mode on Windows.
+Você pode usar o comando [**Get application info**] (https://doc.4d.com/4dv19R/help/command/en/page1599.html) para saber o modo de execução atual no Windows.
 
 :::

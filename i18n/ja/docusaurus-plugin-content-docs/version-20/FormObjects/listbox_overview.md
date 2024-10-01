@@ -186,7 +186,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [スタイル式](properties_Text.md#スタイル式)                                   |           | ○             | ○                            |
 | [上](properties_CoordinatesAndSizing.md#上)                           | ○         | ○             | ○                            |
 | [透過](properties_BackgroundAndBorder.md#透過)                          | ○         | ○             | ○                            |
-| [タイプ](properties_Object.md#タイプ)                                     | ○         | ○             | ○                            |
+| [型](properties_Object.md#タイプ)                                       | ○         | ○             | ○                            |
 | [下線](properties_Text.md#下線)                                         | ○         | ○             | ○                            |
 | [変数あるいは式](properties_Object.md#変数あるいは式)                             | ○         | ○             |                              |
 | [縦揃え](properties_Text.md#縦揃え)                                       | ○         | ○             | ○                            |
@@ -244,7 +244,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 リストボックスやリストボックス列オブジェクトにて発生するフォームイベントは、次の追加プロパティを返すことがあります:
 
-| プロパティ            | タイプ     | 説明                                            |
+| プロパティ            | 型       | 説明                                            |
 | ---------------- | ------- | --------------------------------------------- |
 | area             | text    | リストボックスオブジェクトエリア ("header", "footer", "cell") |
 | areaName         | text    | エリアの名称                                        |
@@ -938,7 +938,7 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 |         |                                          | min>=0 の場合、"0-9" と "." |
 | integer | オブジェクト内で定義されているものと同じ                     | "0-9" と "-"            |
 |         |                                          | min>=0 の場合、"0-9" と "." |
-| Boolean | チェックボックス                                 | N/A                    |
+| boolean | チェックボックス                                 | N/A                    |
 | color   | N/A                                      | N/A                    |
 | event   | N/A                                      | N/A                    |
 

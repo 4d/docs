@@ -49,9 +49,9 @@ La disponibilidad de las propiedades y funciones del objeto `Session` depende de
 
 <!-- REF #_command_.Session.Params -->
 
-| Parámetros | Tipo                       |     | Descripción    |
-| ---------- | -------------------------- | :-: | -------------- |
-| Result     | 4D.Session |  <- | Objeto Session |
+| Parámetros | Tipo                       |                             | Descripción    |
+| ---------- | -------------------------- | :-------------------------: | -------------- |
+| Result     | 4D.Session | <- | Objeto Session |
 
 <!-- END REF -->
 
@@ -138,9 +138,9 @@ IP:port/4DACTION/action_Session
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
 
-| Parámetros | Tipo    |     | Descripción                                        |
-| ---------- | ------- | :-: | -------------------------------------------------- |
-| Result     | Boolean |  <- | True si la ejecución se ha realizado correctamente |
+| Parámetros | Tipo    |                             | Descripción                                        |
+| ---------- | ------- | :-------------------------: | -------------------------------------------------- |
+| Result     | Boolean | <- | True si la ejecución se ha realizado correctamente |
 
 <!-- END REF -->
 
@@ -218,10 +218,10 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
 
-| Parámetros | Tipo    |     | Descripción                                                  |
-| ---------- | ------- | :-: | ------------------------------------------------------------ |
-| privilege  | Text    |  <- | Nombre del privilegio a verificar                            |
-| Result     | Boolean |  <- | True si la sesión tiene *privilege*, False en caso contrario |
+| Parámetros | Tipo    |                             | Descripción                                                  |
+| ---------- | ------- | :-------------------------: | ------------------------------------------------------------ |
+| privilege  | Text    | <- | Nombre del privilegio a verificar                            |
+| Result     | Boolean | <- | True si la sesión tiene *privilege*, False en caso contrario |
 
 <!-- END REF -->
 
@@ -378,9 +378,9 @@ Dado que `.info` es una propiedad calculada, se recomienda llamarla una vez y lu
 
 <!-- REF #SessionClass.isGuest().Params -->
 
-| Parámetros | Tipo    |     | Descripción                                                    |
-| ---------- | ------- | :-: | -------------------------------------------------------------- |
-| Result     | Boolean |  <- | True si la sesión es una sesión Guest, False en caso contrario |
+| Parámetros | Tipo    |                             | Descripción                                                    |
+| ---------- | ------- | :-------------------------: | -------------------------------------------------------------- |
+| Result     | Boolean | <- | True si la sesión es una sesión Guest, False en caso contrario |
 
 <!-- END REF -->
 
@@ -423,12 +423,12 @@ End if
 
 <!-- REF #SessionClass.setPrivileges().Params -->
 
-| Parámetros | Tipo       |     | Descripción                                                                    |
-| ---------- | ---------- | :-: | ------------------------------------------------------------------------------ |
-| privilege  | Text       |  -> | Nombre del privilegio                                                          |
-| privileges | Collection |  -> | Colección de nombres de privilegios                                            |
-| settings   | Object     |  -> | Objeto con una propiedad "privilegios" (cadena o colección) |
-| Result     | Boolean    |  <- | True si la ejecución se ha realizado correctamente                             |
+| Parámetros | Tipo       |                             | Descripción                                                                    |
+| ---------- | ---------- | :-------------------------: | ------------------------------------------------------------------------------ |
+| privilege  | Text       |              ->             | Nombre del privilegio                                                          |
+| privileges | Collection |              ->             | Colección de nombres de privilegios                                            |
+| settings   | Object     |              ->             | Objeto con una propiedad "privilegios" (cadena o colección) |
+| Result     | Boolean    | <- | True si la ejecución se ha realizado correctamente                             |
 
 <!-- END REF -->
 

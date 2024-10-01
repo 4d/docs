@@ -9,7 +9,7 @@ O IDE 4D fornece vários recursos para criar, editar, exportar ou excluir seu c�
 
 ## Criação de métodos
 
-A method in 4D is stored in a **.4dm** file located in the appropriate folder of the [`/Project/Sources/`](../Project/architecture.md#sources) folder.
+Um método em 4D é armazenado em um arquivo **.4dm** localizado na pasta apropriada da pasta [`/Project/Sources/`](../Project/architecture.md#sources).
 
 Puede crear [varios tipos de métodos](../Concepts/methods.md):
 
@@ -20,7 +20,7 @@ Puede crear [varios tipos de métodos](../Concepts/methods.md):
 
 ## Criação de classes
 
-A user class in 4D is defined by a specific method file (**.4dm**), stored in the [`/Project/Sources/Classes/`](../Project/architecture.md#sources) folder. O nome do arquivo é o nome da classe.
+Uma classe usuário no 4D é definida por um arquivo de método específico (**.4dm**), armazenado na pasta [`/Project/Sources/Classes/`](../Project/architecture.md#sources). O nome do arquivo é o nome da classe.
 
 Puede crear un archivo de clase desde el menú **Archivo** o la barra de herramientas (**Nuevo/Clase...**) o en la página **Métodos** de la ventana **Explorador**.
 

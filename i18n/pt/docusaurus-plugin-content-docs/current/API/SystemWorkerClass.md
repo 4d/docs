@@ -61,11 +61,11 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 <!-- REF #4D.SystemWorker.new().Params -->
 
-| Parâmetro   | Tipo                            |     | Descrição                                                            |
-| ----------- | ------------------------------- | :-: | -------------------------------------------------------------------- |
-| commandLine | Text                            |  -> | Linha de comando a executar                                          |
-| options     | Object                          |  -> | Parâmetros worker                                                    |
-| result      | 4D.SystemWorker |  <- | Novo System worker assíncrono ou nulo se o processo não for iniciado |
+| Parâmetro   | Tipo                            |                             | Descrição                                                            |
+| ----------- | ------------------------------- | :-------------------------: | -------------------------------------------------------------------- |
+| commandLine | Text                            |              ->             | Linha de comando a executar                                          |
+| options     | Object                          |              ->             | Parâmetros worker                                                    |
+| resultado   | 4D.SystemWorker | <- | Novo System worker assíncrono ou nulo se o processo não for iniciado |
 
 <!-- END REF -->
 
@@ -109,9 +109,9 @@ Todas as funções de chamada de retorno recebem dois parâmetros de objectos. O
 
 Aqui está a sequência de chamadas de retorno:
 
-1. `onData` and `onDataError` are executed one or several times
-2. if called, `onError` is executed once (stops the system worker processing)
-3. if no error occured, `onResponse` is executed once
+1. `onData` e `onDataError` são executados uma ou várias vezes
+2. se chamado, `onError` é executado uma vez (pára o processamento do system worker)
+3. se não ocorreu nenhum erro, `onResponse` é executado uma vez
 4. `onTerminate` é sempre executado uma vez
 
 :::info
@@ -360,7 +360,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. This property is only available if the [`dataType`](#datatype) is "text".
+The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. Esta propriedade só está disponível se o [`dataType`](#datatype) for "text".
 
 Essa propriedade é **somente leitura**.
 
@@ -396,7 +396,7 @@ Se não ocorrer nenhum erro, `.errors` será undefined.
 
 #### Descrição
 
-The `.exitCode` property <!-- REF #SystemWorkerClass.exitCode.Summary -->contains the exit code returned by the external process<!-- END REF -->. If the process did not terminate normaly, `exitCode` is *undefined*.
+The `.exitCode` property <!-- REF #SystemWorkerClass.exitCode.Summary -->contains the exit code returned by the external process<!-- END REF -->. Se o processo não tiver terminado normalmente, `exitCode` é *undefined*.
 
 Essa propriedade é **somente leitura**.
 
@@ -513,7 +513,7 @@ Esta função envia a instrução para terminar e devolver o controlo ao guião 
 
 #### Descrição
 
-The `.terminated` property <!-- REF #SystemWorkerClass.terminated.Summary -->contains **true** if the external process is terminated<!-- END REF -->.
+A propriedade `.terminated` <!-- REF #SystemWorkerClass.terminated.Summary -->contém **true** se o processo externo for encerrado<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -550,10 +550,10 @@ Essa propriedade é **somente leitura**.
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 
-| Parâmetro  | Tipo                            |     | Descrição                                        |
-| ---------- | ------------------------------- | :-: | ------------------------------------------------ |
-| timeout    | Real                            |  -> | Tempo de espera (em segundos) |
-| Resultados | 4D.SystemWorker |  <- | Objecto SystemWorker                             |
+| Parâmetro  | Tipo                            |                             | Descrição                                        |
+| ---------- | ------------------------------- | :-------------------------: | ------------------------------------------------ |
+| timeout    | Real                            |              ->             | Tempo de espera (em segundos) |
+| Resultados | 4D.SystemWorker | <- | Objecto SystemWorker                             |
 
 <!-- END REF -->
 
@@ -563,7 +563,7 @@ The `.wait()` function <!-- REF #SystemWorkerClass.wait().Summary -->waits until
 
 Em *timeout*, passe um valor em segundos. The `SystemWorker` script will wait for the external process for the amount of time defined in the *timeout* parameter. If you omit the *timeout* parameter, the script execution will wait indefinitely.
 
-Actually, `.wait()` waits until the end of processing of the `onTerminate` formula, except if the *timeout* is reached. If *timeout* is reached, the `SystemWorker` is not killed.
+Actually, `.wait()` waits until the end of processing of the `onTerminate` formula, except if the *timeout* is reached. Se *timeout* for alcançado, o `SystemWorker` não é morto.
 
 During a `.wait()` execution, callback functions are executed, especially callbacks from other events or from other `SystemWorker` instances. You can exit from a `.wait()` by calling [`terminate()`](#terminate) from a callback.
 

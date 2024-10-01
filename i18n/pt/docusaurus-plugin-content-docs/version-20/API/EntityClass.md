@@ -645,7 +645,7 @@ As chaves primárias podem ser números (Inteiro) ou strings. Você pode "força
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
 | Parâmetro | Tipo |    | Descrição                                                                                      |
 | --------- | ---- | -- | ---------------------------------------------------------------------------------------------- |
-| result    | Text | <- | atributos de contexto linkados à entidade, separados por uma vírgula<!-- END REF -->
+| resultado | Text | <- | atributos de contexto linkados à entidade, separados por uma vírgula<!-- END REF -->
 
 |
 

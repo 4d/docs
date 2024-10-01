@@ -19,7 +19,7 @@ title: VP SET WORKBOOK OPTIONS
 `VP SET WORKBOOK OPTIONS` <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Summary -->
 sets the workbook options in *vpAreaName*<!-- END REF -->.
 
-In *vpAreaName*, pass the name of the 4D View Pro area.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 In *optionObj*, pass the workbook options to apply to *vpAreaName*.
 

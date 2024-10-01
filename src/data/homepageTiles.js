@@ -165,7 +165,7 @@ const Sections = [
        <Link to="https://github.com/4d/4D-Mobile-App-Server">
           <Translate>4D Mobile App Server</Translate>
         </Link>
-        <Link to="https://github.com/4d/4D-NetKit/tree/20R6">
+        <Link to="https://developer.4d.com/4D-NetKit/">
           <Translate>4D NetKit</Translate>
         </Link>
         <Link to={localizedLinks["homepage.sections.textensions.4D-Progress-url"]}>

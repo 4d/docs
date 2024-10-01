@@ -9,10 +9,10 @@ title: VP Get row count
 
 <!-- REF #_method_.VP Get row count.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                    |                  |
-| ---------- | ------- | -- | -------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nombre del área 4D View Pro en el formulario                   |                  |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |                  |
+| Parámetros | Tipo    |                             | Descripción                                                    |                  |
+| ---------- | ------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nombre del área 4D View Pro en el formulario                   |                  |
+| sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
 | Result     | Integer | <- | Número total de líneas                                         | <!-- END REF --> |
 
 #### Descripción

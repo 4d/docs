@@ -49,7 +49,7 @@ If you modify your project in interpreted mode, you must recompile it in order t
 
 ## Características da janela do compilador
 
-In addition to the [**Compile** button](#compile), the Compiler window provides additional features that are useful during the project development phase.
+Além do botão [**Compilar**](#compilar), a janela Compilador oferece recursos adicionais que são úteis durante a fase de desenvolvimento do projeto.
 
 ### Verificar sintaxe
 
@@ -165,8 +165,8 @@ Duas opções de alvo estão disponíveis. O resultado depende do processador da
 
 Use esta área para definir o tipo padrão para objetos de banco de dados ambíguos.
 
-- **Numérico**: se utiliza para forzar un tipo numérico de manera no ambigua, bien sea real o entero largo. This will not override the directives you may have set in your project. Você pode otimizar a execução do seu banco de dados escolhendo o tipo Longint.
-- **Botón**: se utiliza para forzar el tecleo de un botón de manera no ambigua, ya sea Real o Entero largo. This will not override the directives you may have set in your project. This type applies to buttons as well as check boxes, picture buttons, button grids, radio buttons, picture pop-up menus and drop-down lists.
+- **Numérico**: se utiliza para forzar un tipo numérico de manera no ambigua, bien sea real o entero largo. Isso não substituirá as diretivas que você possa ter definido em seu projeto. Você pode otimizar a execução do seu banco de dados escolhendo o tipo Longint.
+- **Botón**: se utiliza para forzar el tecleo de un botón de manera no ambigua, ya sea Real o Entero largo. Isso não substituirá as diretivas que você possa ter definido em seu projeto. This type applies to buttons as well as check boxes, picture buttons, button grids, radio buttons, picture pop-up menus and drop-down lists.
 
 ### Compiler Methods for
 

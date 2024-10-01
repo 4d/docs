@@ -9,16 +9,16 @@ title: VP Get sheet count
 
 <!-- REF #_method_.VP Get sheet count.Params -->
 
-| Paramètres | Type    |    | Description                             |                  |
-| ---------- | ------- | -- | --------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |                  |
+| Paramètres | Type    |                             | Description                             |                  |
+| ---------- | ------- | --------------------------- | --------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro |                  |
 | Résultat   | Integer | <- | Nombre de feuilles                      | <!-- END REF --> |
 
 #### Description
 
-The `VP Get sheet count` command <!-- REF #_method_.VP Get sheet count.Summary -->returns the number of sheets in the document loaded in *vpAreaName*.<!-- END REF -->
+La commande `VP Get sheet count` <!-- REF #_method_.VP Get sheet count.Summary -->retourne le nombre de feuilles dans le document chargé dans *vpAreaName*.<!-- END REF -->
 
-In *vpAreaName*, pass the name of the 4D View Pro area.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 #### Exemple
 
@@ -30,7 +30,7 @@ Pour obtenir le nombre de feuilles et définir la feuille courante comme étant 
 
 ```4d
  $count:=VP Get sheet count("ViewProArea")
-  //set the current sheet to the last sheet (indexing starts at 0)
+  //définir la feuille courante comme étant la dernière feuille (l'indexation commence à 0)
  VP SET CURRENT SHEET("ViewProArea";$count-1)
 ```
 

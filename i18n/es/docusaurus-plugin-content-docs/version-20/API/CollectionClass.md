@@ -210,8 +210,8 @@ Puede pasar cualquier número de valores de los siguientes tipos soportados:
 *   date
 *   time (almacenado como número de milisegundos - real)
 *   null
-*   shared object(*)
-*   shared collection(*) > Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.
+*   objeto compartido
+*   colección compartida
 
 :::note
 
@@ -219,7 +219,6 @@ Esta función modifica la colección original.
 
 :::
 
-(\*)Cuando un objeto o colección compartido se añade a una colección compartida, comparten el mismo *identificador de bloqueo*. Para más información sobre este punto, consulte [4D Doc Center](https://doc.4d.com).
 
 #### Ejemplo
 
@@ -927,7 +926,7 @@ Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluaci
 
 #### Descripción
 
-La función `.every()` <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *formula* object or *methodName* method<!-- END REF -->.
+La función `.every()` <!-- REF #collection.every().Summary -->devuelve **true** si todos los elementos de la colección han pasado con éxito una prueba implementada en el objeto *formula* o en el método *methodName*<!-- END REF -->.
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
@@ -2132,6 +2131,7 @@ La función `.max()` <!-- REF #collection.max().Summary -->devuelve el elemento 
 
 Si la colección contiene diferentes tipos de valores, la función `.max()` devolverá el valor máximo dentro del último tipo de elemento en el orden de la lista de tipos (ver la descripción de [`.sort()`](#sort)).
 
+
 Si la colección contiene objetos, pase el parámetro *propertyPath* para indicar la propiedad del objeto cuyo valor máximo desea obtener.
 
 Si la colección está vacía, `.max()` devuelve *Undefined*.
@@ -2896,11 +2896,11 @@ Con el siguiente método ***Flatten***:
 
 
 <!-- REF #collection.remove().Params -->
-| Parámetros | Tipo       |    | Descripción                                                            |
-| ---------- | ---------- |:--:| ---------------------------------------------------------------------- |
-| index      | Integer    | -> | Elemento en el que se inicia la eliminación                            |
-| howMany    | Integer    | -> | Número de elementos a eliminar, o 1 elemento si se omite               |
-| Result     | Collection | <- | Colección original sin elementos eliminados|<!-- END REF -->
+| Parámetros | Tipo       |    | Descripción                                                                  |
+| ---------- | ---------- |:--:| ---------------------------------------------------------------------------- |
+| index      | Integer    | -> | Elemento en el que se inicia la eliminación                                  |
+| howMany    | Integer    | -> | Número de elementos a eliminar, o 1 elemento si se omite                     |
+| Result     | Collection | <- | Colección modificada sin elemento(s) eliminado(s)|<!-- END REF -->
 
 
 |
