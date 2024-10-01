@@ -365,7 +365,7 @@ If no [**environment4d.json**](#environmen4djson) file is already defined for th
 
 :::
 
- The dependency is added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. It will be loaded once the application restarts. It will be loaded once the application restarts.
+The dependency is added to the [inactive dependency list](#dependency-status) with the **Available after restart** status. It will be loaded once the application restarts. 
 
 
 ### Adding a GitHub dependency
@@ -392,9 +392,9 @@ You can then define the [tag or version](#tags-and-versions) option for the depe
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
 - **Latest**: Selected by default and allows to download the release that is tagged as the latest (stable) version.
-- **Up to Next Major Version**: Define a semantic version range to restrict updates to the next major version.
+- **Up to Next Major Version**: Define a [semantic version range](#tags-and-versions) to restrict updates to the next major version.
 - **Up to Next Minor Version**: Similarly, restrict updates to the next minor version.
-- **Exact Version (Tag)**: Select or manually enter a specific tag from the available list.
+- **Exact Version (Tag)**: Select or manually enter a [specific tag](#tags-and-versions) from the available list.
 
 
 Click on the **Add** button to add the dependency to the project. 
@@ -415,6 +415,7 @@ You can then enter your personal access token:
 ![dependency-add-token-2](../assets/en/Project/dependency-add-token-2.png)
 
 You can only enter one personal access token. Once a token has been entered, you can edit it.  
+
 
 ### Removing a dependency
 
@@ -492,8 +493,8 @@ The following status labels are available:
 - **Not found**: The dependency is declared in the dependencies.json file but is not found.
 - **Inactive**: The dependency is not loaded because it is not compatible with the project (e.g. the component is not compiled for the current platform).
 - **Duplicated**: The dependency is not loaded because another dependency with the same name exists at the same location (and is loaded). 
-- **Available at restart**: The dependency reference has just been added [using the interface](#monitoring-project-dependencies), it will be loaded once the application restarts.  
-- **Unloaded at restart**: The dependency reference has just been removed [using the interface](#removing-a-dependency), it will be unloaded once the application restarts.   
+- **Available after restart**: The dependency reference has just been added [using the interface](#monitoring-project-dependencies), it will be loaded once the application restarts.  
+- **Unloaded after restart**: The dependency reference has just been removed [using the interface](#removing-a-dependency), it will be unloaded once the application restarts.   
 
 
 
