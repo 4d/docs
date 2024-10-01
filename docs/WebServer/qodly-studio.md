@@ -237,6 +237,13 @@ For example:
 https://www.myWebSite.com/$lib/renderer/?w=welcome
 ```
 
+#### Qodly Preview Site
+
+You can preview you Qodly pages at any moment from 4D by selecting the **Qodly Preview Site...** command from the **Design** menu. It launches the Qodly renderer on the local address in the default browser, i.e. `http://127.0.0.1/$lib/renderer`. 
+
+
+
+
 ### Using Qodly debugger on 4D Server
 
 When using Qodly pages in a deployed 4D Server application (interpreted mode), you might encounter some cases where you need to debug your pages on the server, for example when a specific user configuration is required. In this case, you can attach the [Qodly Studio debugger](https://developer.qodly.com/docs/studio/debugging) to the 4D Server and then, benefit from its features when executing your Qodly pages.
