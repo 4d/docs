@@ -11,7 +11,7 @@ Hay diferentes maneras de configurar los parámetros del servidor web 4D, en fun
 
 | Ubicación del parámetro                                                                    | Alcance                                                                     | Servidor web a utilizar                                               |
 | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| [webServer object](webServerObject.md)                                                     | Temporal (sesión actual)                                 | Todos los servidores web, incluidos los servidores web de componentes |
+| [objeto webServer](webServerObject.md)                                                     | Temporal (sesión actual)                                 | Todos los servidores web, incluidos los servidores web de componentes |
 | `WEB SET OPTION` o comando `WEB XXX`                                                       | Temporal (sesión actual)                                 | Servidor principal                                                    |
 | Caja de diálogo [**Propiedades**](../settings/web.md) (**Páginas web**) | Permanente (todas las sesiones, almacenadas en el disco) | Servidor principal                                                    |
 
