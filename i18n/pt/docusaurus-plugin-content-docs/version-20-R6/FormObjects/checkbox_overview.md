@@ -178,7 +178,7 @@ Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
 ### Bevel arredondado
 
-O estilo de caixa de seleção Bevel arredondado é quase idêntico ao estilo [Bevel](#bevel), exceto que, dependendo do sistema operativo, as esquinas do botão podem ser arredondadas. As with the Bevel button style, the Rounded Bevel button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
+O estilo de caixa de seleção Bevel arredondado é quase idêntico ao estilo [Bevel](#bevel), exceto que, dependendo do sistema operativo, as esquinas do botão podem ser arredondadas. Como no estilo do botão Bevel, o estilo do botão Arredondado Bevel combina a aparência do estilo do botão [Clássico](#regular) com o comportamento do estilo de botão [Barra de ferramentas](#toolbar-button).
 
 O estilo Bevel arredondado tem um fundo cinza claro com um título. Geralmente está associado a uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
 
@@ -186,7 +186,7 @@ Exemplo em macOS:
 
 ![](../assets/en/FormObjects/checkbox_roundedbevel_mac.png)
 
-> En Windows, el estilo de botón Bevel redondeado es idéntico al estilo de botón [Bevel](#bevel).
+> No Windows, o estilo de botão Rounded Bevel é idêntico ao estilo de botão [Bevel](#bevel).
 
 #### JSON Exemplo
 
@@ -206,13 +206,13 @@ Exemplo em macOS:
 
 ### OS X Gradient
 
-El estilo del botón casilla de selección OS X Gradient es casi idéntico al estilo del botón [Bevel](#bevel). Al igual que el estilo de botón Bevel, el estilo del botón OS X Gradient combina la apariencia del estilo del botón [Clásico](#regular) con el comportamiento del estilo del botón [Barra de herramientas](#toolbar-button).
+O estilo do botão da caixa de seleção OS X Gradient é quase idêntico ao estilo do botão [Bevel](#bevel). Assim como o estilo de botão Bevel, o estilo de botão OS X Gradient combina a aparência do estilo de botão [Clássico](#regular) com o comportamento do estilo de botão [Barra de ferramentas](#toolbar-button).
 
 O estilo Gradient OS X tem um fundo cinza claro com um título e se mostra como um botão de sistema de dois tons em macOS. Geralmente está associado a uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
 
 ![](../assets/en/FormObjects/checkbox_osxgradient_mac.png)
 
-> En Windows, este estilo de botón casilla de selección es idéntico al estilo de botón [Bevel](#bevel).
+> No Windows, esse estilo de botão de caixa de seleção é idêntico ao estilo de botão [Bevel](#bevel).
 
 #### JSON Exemplo
 
@@ -232,15 +232,15 @@ O estilo Gradient OS X tem um fundo cinza claro com um título e se mostra como 
 
 ### OS X Texturizado
 
-El estilo de botón OS X Textured es similar al estilo del botón [Bevel](#bevel) pero con un tamaño menor (el tamaño máximo es el de un botón de sistema estándar de macOS). Al igual que el estilo de botón Bevel, el estilo del botón OS X Textured combina la apariencia del estilo del botón [Clásico](#regular) con el comportamiento del estilo del botón [Barra de herramientas](#toolbar-button).
+O estilo de botão OS X Texturizado é semelhante ao estilo de botão [Bevel](#bevel), mas com um tamanho menor (o tamanho máximo é o tamanho de um botão padrão do sistema macOS). Assim como o estilo de botão Bevel, o estilo de botão OS X Texturizado combina a aparência do estilo de botão [Clássico](#regular) com o comportamento do estilo de botão [Barra de ferramentas](#toolbar-button).
 
 Como padrão, o estilo OS X Textured aparece como:
 
-- *Windows* - un botón sistema estándar con un fondo azul claro con un título en el centro.
+- *Windows* - um botão padrão com um fundo azul-claro com um título no centro.
 
 ![](../assets/en/FormObjects/checkbox_osxtextured.png)
 
-- *macOS* - un botón de sistema estándar. Sua altura está predefinida: não é possível ampliar ou reduzir.
+- *macOS* - um botão de sistema padrão. Sua altura está predefinida: não é possível ampliar ou reduzir.
 
 ![](../assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
@@ -260,7 +260,7 @@ Como padrão, o estilo OS X Textured aparece como:
 
 ### Office XP
 
-El estilo de botón Office XP combina la apariencia del estilo del botón [Clásico](#regular) con el comportamiento del estilo del [Botón barra de herramientas](#toolbar-button).
+O estilo do botão Office XP combina a aparência do estilo do botão [Clássico](#regular) com o comportamento du style do botão [Barra de ferramentas](#toolbar-button).
 
 As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas nos sistemas de cores. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
@@ -268,7 +268,7 @@ As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas 
 
 ![](../assets/en/FormObjects/checkbox_officexp.png)
 
-- *macOS* - su fondo se muestra siempre. Exemplos com estados desmarcado/ marcado:
+- *macOS* - its background is always displayed. Exemplos com estados desmarcado/ marcado:
 
 ![](../assets/en/FormObjects/checkbox_officexp_mac.png)
 
@@ -293,17 +293,17 @@ As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas 
 
 Este estilo de caixa de seleção pode ser usado para adicionar um ícone padrão de contrair/expandir. Estes ícones são utilizados nativamente em listas hierárquicas.
 
-- *Windows* - el icono se ve como un [+] o un [-]
+- *Windows* - o ícone se parece com um [+] ou um [-]
 
 ![](../assets/en/FormObjects/checkbox_collapse.png)
 
-- *macOS* - se ve como un triángulo que apunta hacia la derecha o hacia abajo.
+- *macOS* - parece um triângulo apontando para a direita ou para baixo.
 
 ![](../assets/en/FormObjects/checkbox_collapse_mac.png)
 
 :::info
 
-El estilo Contraer/Desplegar se denomina "disclosure" en la [gramática JSON del estilo de botón](properties_TextAndPicture.md#button-style).
+O estilo Recolher/Expandir é denominado "disclosure" na [gramática JSON de estilo de botão](properties_TextAndPicture.md#button-style).
 
 :::
 
@@ -335,7 +335,7 @@ Em macOS e Windows, uma caixa de seleção com o estilo de botão "Divulgação"
 
 :::info
 
-El estilo Disclosure se denomina "roundedDisclosure" en la [gramática JSON del estilo de botón](properties_TextAndPicture.md#button-style).
+O estilo Disclosure é denominado "roundedDisclosure" na [gramática JSON do estilo de botão](properties_TextAndPicture.md#button-style).
 
 :::
 
@@ -357,9 +357,9 @@ El estilo Disclosure se denomina "roundedDisclosure" en la [gramática JSON del 
 
 O estilo de botão Personalizado aceita uma imagem de fundo personalizada e permite gerir propriedades específicas:
 
-- [Background pathname](properties_TextAndPicture.md#backgroundPathname)
-- [Icon Offset](properties_TextAndPicture.md#icon-offset)
-- [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) and [Margen vertical](properties_TextAndPicture.md#verticalMargin)
+- [Nome do caminho do plano de fundo](properties_TextAndPicture.md#backgroundPathname)
+- [Deslocamento do ícone](properties_TextAndPicture.md#icon-offset)
+- [Margem horizontal](properties_TextAndPicture.md#horizontalMargin) e [Margem vertical](properties_TextAndPicture.md#verticalMargin)
 
 It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#backgroundPathname).
 
