@@ -431,9 +431,7 @@ A confirmation dialog box is displayed. If the dependency was declared in the **
 
 ![dependency-remove](../assets/en/Project/remove-comp.png)
 
-If you confirm the dialog box, the removed dependency [status](#dependency-status) is automatically flagged "Unload at restart". It will be unloaded once the application restarts.
-
-![status-unload](../assets/en/Project/status-unload.png)
+If you confirm the dialog box, the removed dependency [status](#dependency-status) is automatically flagged "Unload after restart". It will be unloaded once the application restarts.
 
 
 ### Dependency Origin
