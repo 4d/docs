@@ -3,40 +3,40 @@ id: checkboxOverview
 title: Caixa de selecção
 ---
 
-Uma caixa de seleção é um tipo de botão usado para introduzir ou exibir dados binários (verdadeiro-falso). Fundamentalmente, está marcado o desmarcado, pero se puede definir un [tercer estado](#three-states-check-box).
+Uma caixa de seleção é um tipo de botão usado para introduzir ou exibir dados binários (verdadeiro-falso). Basicamente, ela é marcada ou desmarcada, mas um [terceiro estado](#three-states-check-box) pode ser definido.
 
 ![](../assets/en/FormObjects/checkbox.png)
 
-Las casillas de selección se controlan por métodos o [acciones estándar](#using-a-standard-action). O método associado com ela é executado quando selecionar a caixa de seleção. Como todos os botões, uma variável da caixa de seleção é estabelecida em 0 quando o formulário é aberto pela primeira vez.
+As caixas de seleção são controladas por métodos ou [ações padrão](#using-a-standard-action). O método associado com ela é executado quando selecionar a caixa de seleção. Como todos os botões, uma variável da caixa de seleção é estabelecida em 0 quando o formulário é aberto pela primeira vez.
 
-Uma caixa de seleção mostra o teto do lado de um pequeno quadrado. Este texto se define en el área [Título](properties_Object.md#title) del tema "Objetos" de la Lista de propiedades. Para introducir en esta área un título en forma de referencia XLIFF (ver [Anexo B: arquitectura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
+Uma caixa de seleção mostra o teto do lado de um pequeno quadrado. Esse texto é definido na propriedade [Título](properties_Object.md#title) da caixa de seleção. Você pode inserir um título na forma de uma referência XLIFF nessa área (consulte [Apêndice B: Arquitetura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
 ## Utilizar caixas de seleção
 
-Una casilla de selección puede asociarse a una [variable o expresión](properties_Object.md#variable-or-expression) de tipo entero o booleano.
+Uma caixa de seleção pode ser associada a uma [variável ou expressão](properties_Object.md#variable-or-expression) do tipo inteiro ou booleano.
 
-- **entero:** si la casilla está marcada, la variable tiene el valor 1. Quando não for marcado, tem o valor 0. Se a caixa de seleção estiver no terceiro estado (ver abaixo), tem o valor 2.
-- **booleano:** si la casilla está marcada, la variable tiene el valor `True`. Cuando no se marca, toma el valor `False`.
+- **inteiro:** se a caixa for selecionada, a variável tem o valor 1. Quando não for marcado, tem o valor 0. Se a caixa de seleção estiver no terceiro estado (ver abaixo), tem o valor 2.
+- **booleano:** se a caixa for marcada, a variável tem o valor `True`. Quando não marcado, ele tem o valor `False`.
 
 Uma parte ou todas as caixas de seleção de um formulário podem estar marcadas ou desmarcadas. As caixas de seleção múltiplas permitem ao usuário selecionar várias opções.
 
 ### Caixas de seleção de três estados
 
-Los objetos casilla de selección con el [estilo de botón](checkbox_overview.md#regular) [Normal](checkbox_overview.md#flat) y [Plano](properties_TextAndPicture.md#button-style) aceptan un tercer estado. Este terceiro estado é um estado intermediário, que geralmente se usa para fins de visualização. Por exemplo, permite indicar que uma propriedade é presentada em uma seleção de objetos,
+Os objetos caixa de seleção com o [estilo de botão](checkbox_overview.md#regular) e [Normal](checkbox_overview.md#flat) e [Plano](properties_TextAndPicture.md#button-style) aceitam um terceiro estado. Este terceiro estado é um estado intermediário, que geralmente se usa para fins de visualização. Por exemplo, permite indicar que uma propriedade é presentada em uma seleção de objetos,
 
 ![](../assets/en/FormObjects/checkbox_3states.png)
 
-Para activar este tercer estado, debe seleccionar la propiedad [Tres estados](properties_Display.md#three-states).
+Para ativar esse terceiro estado, você deve selecionar a propriedade [Três estados](properties_Display.md#three-states).
 
-This property is only available for regular and flat check boxes associated with numeric [variables or expressions](properties_Object.md#variable-or-expression) — check boxes for Boolean expressions cannot use the [Three-States](properties_Display.md#three-states) property (a Boolean expression cannot be in an intermediary state).
+Essa propriedade só está disponível para caixas de seleção clássicas e planas associadas a [variáveis ou expressões](properties_Object.md#variable-or-expression) numéricas - caixas de seleção para expressões booleanas não podem usar a propriedade [Três estados](properties_Display.md#three-states) (uma expressão booleana não pode estar em um estado intermediário).
 
 A variável associada à caixa de seleção devolve o valor 2 quando a caixa estiver no terceiro estado.
 
-> In entry mode, the Three-States check boxes display each state sequentially, in the following order: unchecked / checked / intermediary / unchecked, etc. The intermediary state is generally not very useful in entry mode; in the code, simply force the value of the variable to 0 when it takes the value of 2 in order to pass directly from the checked state to the unchecked state. No modo de entrada, as caixas de seleção dos três estados mostram cada estado de forma sequencial na ordem abaixo: sem marcar/marcado/intermediário/sem marcar, etc. O estado intermediário não é geralmente muito útil no modo entrada; no código, simplesmente force o valor da variável para 0 quando tomar o valor de 2 para passar diretamente de um estado marcado para o estado desmarcado.
+> No modo de entrada, as caixas de seleção dos três Estados exibem cada estado sequencialmente, na seguinte ordem: desmarcado / verificado / intermediário / desmarcado, etc. O estado intermediário não é geralmente muito útil no modo entrada; no código, simplesmente force o valor da variável para 0 quando tomar o valor de 2 para passar diretamente de um estado marcado para o estado desmarcado.
 
 ## Usar uma ação padrão
 
-Puede asignar una [acción estándar](properties_Action.md#standard-action) a una casilla de selección para manejar los atributos de las áreas de texto. Por ejemplo, si asigna la acción estándar `fontBold`, en ejecución la casilla de selección gestionará el atributo "negrita" del texto seleccionado en el área actual.
+Você pode atribuir uma [ação padrão](properties_Action.md#standard-action) a uma caixa de seleção para manipular atributos de áreas de texto. Por exemplo, se atribuir a ação padrão `fontBold`, em execução a caixa de seleção gerenciará o atributo "negrito" do texto selecionado na área atual.
 
 Só as ações que podem representar um estado verdadeiro/falso (ações "marcáveis") são compatíveis com esse objeto:
 
@@ -71,23 +71,23 @@ Só as ações que podem representar um estado verdadeiro/falso (ações "marcá
 | visibleReferences                   |                                                 |
 | widowAndOrphanControlEnabled        | Apenas áreas 4D Write Pro                       |
 
-Para información detallada sobre estas acciones, consulte la sección [Acciones estándar](properties_Action.md#standard-action).
+Para obter informações detalhadas sobre essas ações, consulte a seção [Ações padrão](properties_Action.md#standard-action).
 
 ## Estilos de botão caixas de seleção
 
-Las casillas de selección utilizan [los estilos de botón](properties_TextAndPicture.md#button-style) para controlar la apariencia general de una casilla de selección, así como sus posibles propiedades. É possível aplicar diferentes estilos pré-definidos para caixas de seleção. Um grande número de variações podem ser obtidas combinando essas propriedades/comportamentos.
+As caixas de seleção usam [estilos de botão](properties_TextAndPicture.md#button-style) para controlar a aparência geral de uma caixa de seleção, bem como suas propriedades disponíveis. É possível aplicar diferentes estilos pré-definidos para caixas de seleção. Um grande número de variações podem ser obtidas combinando essas propriedades/comportamentos.
 
-Con la excepción de las [propiedades-disponibles](#supported-properties), muchos objetos casilla de selección son _estructuralmente_ idénticos. A diferença é no processamento das variáveis associadas.
+Com exceção das [propriedades disponíveis](#supported-properties), muitos objetos de caixa de seleção são _estruturalmente_ idênticos. A diferença é no processamento das variáveis associadas.
 
 4D oferece caixas de seleção nos estilos predefinidos abaixo:
 
 ### Clássico
 
-El estilo Clásico de botón casilla de selección corresponde a un sistema de casilla de selección estándar (\*es decir, \*, un rectángulo con un título descriptivo):
+O estilo Clássico de caixa de seleção corresponde a um sistema de caixa de seleção padrão (\*ou seja, \*, um retângulo com um título descritivo):
 
 ![](../assets/en/FormObjects/checkbox_regular.png)
 
-#### JSON Exemplo
+#### Exemplo JSON:
 
 ```
 	"myCheckBox": {
@@ -109,7 +109,7 @@ O estilo de caixa de seleção Plano tem uma aparência minimalista. A natureza 
 
 ![](../assets/en/FormObjects/checkbox_flat.png)
 
-#### JSON Exemplo
+#### Exemplo JSON:
 
 ```
 	"myCheckBox": {
@@ -128,13 +128,13 @@ O estilo de caixa de seleção Plano tem uma aparência minimalista. A natureza 
 
 O estilo de botão barra de ferramentas está pensado principalmente para sua integração em uma barra de ferramentas.
 
-O estilo Barra de ferramentas tem um fundo transparente com um título. Suele estar asociado a una [imagen de 4 estados](properties_TextAndPicture.md#number-of-states).
+O estilo Barra de ferramentas tem um fundo transparente com um título. Geralmente está associado a uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
 
 Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
 ![](../assets/en/FormObjects/checkbox_toolbar.png)
 
-#### JSON Exemplo
+#### Exemplo JSON:
 
 ```
 	"myCheckBox": {
@@ -152,15 +152,15 @@ Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
 ### Bevel
 
-El estilo del botón casilla de selección Bevel combina la apariencia del estilo de botón [Clásico ](#regular) (_es decir_, un rectángulo con un título descriptivo) con el comportamiento del estilo del botón [Barra de herramientas](#toolbar-button).
+O estilo de botão Bevel combina a aparência do estilo de botão [Clássico](#regular) (_ou seja,_ um retângulo com um título descritivo) com o comportamento do estilo de botão [Barra de ferramentas](#toolbar-button).
 
-O estilo Bevel tem um fundo cinza claro com um título. Suele estar asociado a una [imagen de 4 estados](properties_TextAndPicture.md#number-of-states).
+O estilo Bevel tem um fundo cinza claro com um título. Geralmente está associado a uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
 
 Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
 ![](../assets/en/FormObjects/checkbox_bevel.png)
 
-#### JSON Exemplo
+#### Exemplo JSON:
 
 ```
 	"myCheckBox": {
@@ -178,9 +178,9 @@ Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
 ### Bevel arredondado
 
-El estilo del botón de la casilla de selección Bevel redondeado es casi idéntico al estilo del botón [Bevel](#bevel), excepto que, dependiendo del sistema operativo, las esquinas del botón pueden ser redondeadas. Al igual que el estilo de botón Bevel, el estilo del botón Bevel redondeado combina la apariencia del estilo del botón [Clásico](#regular) con el comportamiento del estilo del botón [Barra de herramientas](#toolbar-button).
+O estilo de caixa de seleção Bevel arredondado é quase idêntico ao estilo [Bevel](#bevel), exceto que, dependendo do sistema operativo, as esquinas do botão podem ser arredondadas. As with the Bevel button style, the Rounded Bevel button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
 
-O estilo Bevel arredondado tem um fundo cinza claro com um título. Suele estar asociado a una [imagen de 4 estados](properties_TextAndPicture.md#number-of-states).
+O estilo Bevel arredondado tem um fundo cinza claro com um título. Geralmente está associado a uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
 
 Exemplo em macOS:
 
@@ -208,7 +208,7 @@ Exemplo em macOS:
 
 El estilo del botón casilla de selección OS X Gradient es casi idéntico al estilo del botón [Bevel](#bevel). Al igual que el estilo de botón Bevel, el estilo del botón OS X Gradient combina la apariencia del estilo del botón [Clásico](#regular) con el comportamiento del estilo del botón [Barra de herramientas](#toolbar-button).
 
-O estilo Gradient OS X tem um fundo cinza claro com um título e se mostra como um botão de sistema de dois tons em macOS. Suele estar asociado a una [imagen de 4 estados](properties_TextAndPicture.md#number-of-states).
+O estilo Gradient OS X tem um fundo cinza claro com um título e se mostra como um botão de sistema de dois tons em macOS. Geralmente está associado a uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
 
 ![](../assets/en/FormObjects/checkbox_osxgradient_mac.png)
 
@@ -264,7 +264,7 @@ El estilo de botón Office XP combina la apariencia del estilo del botón [Clás
 
 As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas nos sistemas de cores. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
-- _Windows_ - su fondo sólo aparece cuando el ratón pasa por encima. Exemplo com estados selecionado/ não selecionado/ ressaltado:
+- _Windows_ - seu fundo só aparece quando o mouse passa por cima. Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
 ![](../assets/en/FormObjects/checkbox_officexp.png)
 
@@ -392,7 +392,7 @@ Todas as caixas de seleção partilhar o mesmo conjunto de propriedades básicas
 > (1) Not supported by the [Regular](#regular) and [Flat](#flat) styles.<br/>
 > (2) Not supported by the [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) and [Collapse/Expand](#collapseexpand) styles.
 
-Existen propiedades específicas adicionales, dependiendo del [estilo-de-botón](#button-styles):
+Outras propriedades específicas estão disponíveis, dependendo do [estilo do botão](#estilos-de-botão):
 
-- Custom: [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin)
+- Personalizado: [Caminho segundo plano](properties_TextAndPicture.md#backgroundPathname) - [Margem horizontal](properties_TextAndPicture.md#horizontalMargin) - [Offset](properties_TextAndPicture.md#icon-offset) - [Margem Vertica](properties_TextAndPicture.md#verticalMargin)
 - Plana, Regular: [Tres Estados](properties_Display.md#three-states)
