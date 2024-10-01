@@ -158,6 +158,7 @@ When a class is [defined](#class-definition) in the project, it is loaded in the
 - [`new()`](API/ClassClass.md#new) function, allowing to instantiate class objects
 - [`isShared`](API/ClassClass.md#isshared) property, true if the class is [shared](#shared-classes)
 - [`isSingleton`](API/ClassClass.md#issingleton) property, true if the class defines a [singleton](#singleton-classes).
+- [`isSectionSingleton`](API/ClassClass.md#issectionsingleton) property, true if the class defines a [session singleton](#singleton-classes).
 - [`me`](API/ClassClass.md#me) property, allowing to instantiate and access [singletons](#singleton-classes).
 
 In addition, a class object can reference a [`constructor`](#class-constructor) object (optional).
@@ -614,6 +615,7 @@ Class constructor ($side : Integer)
 <!-- REF #_command_.Super.Params -->
 |Parameter|Type||Description|  
 
+
 |---|---|---|---|
 |param|any|->|Parameter(s) to pass to the parent constructor|
 |Result|Object|<-|Object's parent|
@@ -748,6 +750,7 @@ Class Constructor
 
  // Create properties on This as
  // desired by assigning to them
+
  This.a:=42
 ```
 
@@ -990,8 +993,9 @@ In an inventory application, you want to implement an item inventory using sessi
 ```4d
 //class ItemInventory
 
+property itemList : Collection:=[]
+
 session singleton Class constructor()
-    This.itemList:=New shared collection()
 
 shared function addItem($item:object)
     This.itemList.push($item)
@@ -1001,8 +1005,8 @@ By defining the ItemInventory class as a session singleton, you make sure that e
 
 ```4d
 //in a user session
-cs.ItemInventory.me
-//current user's shopping cart
+$myList := cs.ItemInventory.me.itemList
+//current user's item list
 
 ```
 
@@ -1010,4 +1014,4 @@ cs.ItemInventory.me
 
 #### See also
 
-[Singletons in 4D](https://blog.4d.com/singleton) (blog post) <br/> [Session Singletons](https://blog.4d.com/session-singletons) (blog post).
+[Singletons in 4D](https://blog.4d.com/singletons-in-4d) (blog post) <br/> [Session Singletons](https://blog.4d.com/introducing-session-singletons) (blog post).
