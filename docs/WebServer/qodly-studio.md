@@ -239,7 +239,7 @@ https://www.myWebSite.com/$lib/renderer/?w=welcome
 
 #### Qodly Preview Site
 
-You can preview you Qodly pages at any moment from 4D by selecting the **Qodly Preview Site...** command from the **Design** menu. It launches the Qodly renderer on the local address in the default browser, i.e. `http://127.0.0.1/$lib/renderer`. 
+You can preview your Qodly pages at any moment from 4D by selecting the **Qodly Preview Site...** command from the **Design** menu. It launches the Qodly renderer on the local address in your default browser. 
 
 
 
