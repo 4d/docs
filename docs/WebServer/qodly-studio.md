@@ -237,9 +237,11 @@ For example:
 https://www.myWebSite.com/$lib/renderer/?w=welcome
 ```
 
-#### Qodly Preview Site
+### Preview Qodly Application
 
-You can preview your Qodly pages at any moment from 4D by selecting the **Qodly Preview Site...** command from the **Design** menu. It launches the Qodly renderer on the local address in your default browser. 
+You can preview your Qodly application at any moment by selecting the **Preview Qodly Application...** command in the **Windows** menu (4D Server) or in the **Design** menu (4D single-user). 
+
+This command launches the Qodly renderer on a local address in your default browser and displays the **start page** [defined in the Application settings](https://developer.qodly.com/docs/studio/settings#start-page) of Qodly Studio.
 
 
 
@@ -401,11 +403,3 @@ To avoid using more licenses than necessary, we recommend doing one of the follo
 - Ensure the Qodly Studio and your database are reached on the same URL scheme.
 - Use the `Lax` value for the [session cookie](webServerConfig.md#session-cookie-samesite) of your project database's web server.
 
-
-
-
-## Hello, World
-
-This 5-minute video provides a "Hello World" example and covers how to enable access to the studio, create a basic interface, and configure an event that greets the user by their name:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GwIdic4OhPQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
