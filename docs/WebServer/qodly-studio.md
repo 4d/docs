@@ -94,7 +94,7 @@ In accordance with the management of 4D projects, only the following usages are 
 
 :::warning
 
-You can open Qodly Studio, [debug] and edit Qodly pages directly on a 4D Server machine when a project is running in interpreted mode. This feature is only provided for testing and debugging purposes, for example to evaluate the application flow with actual data or in multi-user environment. It must NOT be considered as a regular way to develop applications since it does not provide any access control over concurrent accesses.
+You can open Qodly Studio, [debug](#using-qodly-debugger-on-4d-server) and edit Qodly pages directly on a 4D Server machine when a project is running in interpreted mode. This feature is only provided for testing and debugging purposes, for example to evaluate the application flow with actual data, or in multi-user environment. It must NOT be considered as a regular way to develop applications since it does not provide any control over concurrent accesses.
 
 :::
 
@@ -124,7 +124,7 @@ If the WebAdmin web server is already running, depending on its configuration, y
 
 
 
-## Using Qodly Studio
+## Developing with Qodly Studio
 
 ### Documentation
 
