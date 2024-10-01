@@ -111,7 +111,7 @@ As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas 
 
 ![](../assets/en/FormObjects/radio_xp.png)
 
-- *macOS* - su fondo se muestra siempre.
+- *macOS* - its background is always displayed.
 
 ### Contrair/expandir
 
@@ -121,7 +121,7 @@ Este estilo de botão pode ser utilizado para adicionar um ícone padrão contra
 
 :::info
 
-El estilo Contraer/Desplegar se denomina "disclosure" en la [gramática JSON del estilo de botón](properties_TextAndPicture.md#button-style).
+O estilo Recolher/Expandir é denominado "disclosure" na [gramática JSON de estilo de botão](properties_TextAndPicture.md#button-style).
 
 :::
 
@@ -133,7 +133,7 @@ The disclosure radio button style displays the radio button as a standard disclo
 
 :::info
 
-El estilo Disclosure se denomina "roundedDisclosure" en la [gramática JSON del estilo de botón](properties_TextAndPicture.md#button-style).
+O estilo Disclosure é denominado "roundedDisclosure" na [gramática JSON do estilo de botão](properties_TextAndPicture.md#button-style).
 
 :::
 
