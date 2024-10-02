@@ -864,7 +864,7 @@ $id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method"
 
 ## onHttpGet keyword
 
-Use the `onHttpGet` keyword to declare functions that can be called through [custom HTTP requests]. The `onHttpGet` keyword is available with:
+Use the `onHttpGet` keyword to declare functions that can be called through custom HTTP requests using the `GET` method. The `onHttpGet` keyword is available with:
 
 - ORDA Data model class functions
 - [Singletons class functions](../Concepts/classes.md#singleton-classes)
