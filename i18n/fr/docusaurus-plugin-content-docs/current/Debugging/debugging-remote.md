@@ -19,6 +19,7 @@ Un seul débogueur peut déboguer une application 4D Server à un moment donné.
 
 - le débogueur local de 4D Server (par défaut) - si le serveur ne tourne pas en mode headless.
 - le débogueur d'un client 4D distant - si la session distante a accès au mode Développement.
+- the [Qodly debugger](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) on 4D Server - if the server allows access to Qodly Studio.
 
 Le débogueur associé est appelé chaque fois que 4D Server rencontre :
 
