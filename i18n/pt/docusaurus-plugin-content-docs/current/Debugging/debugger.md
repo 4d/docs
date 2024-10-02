@@ -33,7 +33,12 @@ A janela do depurador é normalmente apresentada na máquina onde o código é e
 - no 4D remoto para o código que está a ser executado localmente
 - no computador do servidor para o código em execução no servidor (por exemplo, um método com a opção **executar no servidor**).
 
-> Se o servidor estiver a funcionar sem interface, não pode ser apresentada qualquer janela do depurador no servidor, pelo ser necessário utilizar o depurador remoto. Ver [Depuración desde máquinas remotas](./debugging-remote.md).
+:::note Notas
+
+- Se o servidor estiver a funcionar sem interface, não pode ser apresentada qualquer janela do depurador no servidor, pelo ser necessário utilizar o depurador remoto. Ver [Depuración desde máquinas remotas](./debugging-remote.md).
+- You can also [attach the Qodly Studio debugger to a 4D Server application](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) if you need to debug Qodly pages in a deployed environment.
+
+:::
 
 ## Botões da barra de ferramentas
 
@@ -154,7 +159,7 @@ $c:=a+b
 
    O valor da variável `$a` é agora 1. A variável `$b` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
 
-3. Você clica no botão **Step Over** novamente. O contador do programa está agora definido na linha com $c:=a+b. the **Line Objects** theme displays:
+3. Você clica no botão **Step Over** novamente. O contador do programa está agora definido na linha com $c:=a+b. O tema **Objetos atuais** exibe:
 
    | $c | Indefinido |
    | -- | ---------- |

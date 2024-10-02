@@ -51,7 +51,7 @@ Para actualizar las otras máquinas clientes que no estén conectadas, basta con
 
 - **SQL Server**: 19812 por defecto (puede modificarse a través de la página "SQL/Configuración" de las Preferencias).
 - **Servidor de aplicaciones**: 19813 por defecto (puede modificarse a través de la página "Cliente-Servidor/Configuración" de las Preferencias, ver arriba).
-- **DB4D Server** (database server): 19814 by default. This port number cannot be modified directly but it always consists of the application server port number + 1.\
+- **DB4D Server** (servidor de banco de dados): 19814 por padrão. This port number cannot be modified directly but it always consists of the application server port number + 1.\
   When a 4D client connects to 4D Server, it uses the TCP port of the application server (19813 or the port indicated after the colon ':' in the IP address shown in the connection dialog box). Connection to other servers via their respective ports is then automatic; it is no longer necessary to specify them.\
   Note that in the case of access via a router or a firewall, the three TCP ports must be opened explicitly.
 - [**Depurador remoto**](../Debugging/debugging-remote.md): 19815 por padrão. This port number cannot be modified directly but it always consists of the application server port number + 2.
@@ -69,7 +69,7 @@ Quando o Single Sign On (SSO) estiver ativado (veja acima), você deverá preenc
 Esta caja desplegable contiene 3 opciones de capa de red a elegir entre: **legacy**, **ServerNet** y **QUIC** (sólo en modo proyecto), que se utilizan para manejar las comunicaciones entre 4D Server y las máquinas 4D remotas (clientes).
 
 - **Legal**: esta antigua capa de red "Legal" sigue siendo soportada para garantizar la compatibilidad de las bases de datos creadas antes de la v15. Esta capa de red también puede habilitarse por programación utilizando el comando [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html).
-- **ServerNet** (by default): Enables the ServerNet network layer on the server (available since 4D v15).
+- **ServerNet** (por padrão): ativa a camada de rede ServerNet no servidor (disponível desde 4D v15).
 - **QUIC** (disponible solo en modo proyecto): activa la capa de red QUIC en el servidor.
 
   **Notas**:

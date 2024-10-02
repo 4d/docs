@@ -5,8 +5,8 @@ title: Function
 
 A **`4D.Function`** object contains a piece of code that can be executed from an object, either using the `()` operator, or using the [`apply()`](#apply) and [`call()`](#call) functions. 4D propõe três tipos de objetos `Function`:
 
-- **native functions**, i.e. built-in functions from various 4D classes such as `collection.sort()` or `file.copyTo()`.
-- **user functions**, created in user [classes](Concepts/classes.md) using the [Function keyword](Concepts/classes.md#function).
+- **as funções nativas**, ou seja, funções incorporadas de várias classes 4D, como `collection.sort()` ou `file.copyTo()`.
+- **as funções usuário**, criadas nas [classes usuário] (Concepts/classes.md) usando a palavra-chave [Function](Concepts/classes.md#function).
 - **funções de fórmula**, ou seja, funções que podem executar qualquer fórmula 4D.
 
 ### Objetos de formulários
@@ -21,7 +21,7 @@ Objetos formulário podem ser encapsulados em propriedades objeto:
  $f.message:=Formula(ALERT("Hello world"))
 ```
 
-Essa propriedade é uma "função objeto" ou seja uma função que é restrita a seu objeto pai. To execute a function stored in an object property, use the **()** operator after the property name, such as:
+Essa propriedade é uma "função objeto" ou seja uma função que é restrita a seu objeto pai. Para executar uma função armazenada em uma propriedade objeto, use o operador **()** depois do nome propriedade, tal como:
 
 ```4d
  $f.message() //exibe "Hello world"

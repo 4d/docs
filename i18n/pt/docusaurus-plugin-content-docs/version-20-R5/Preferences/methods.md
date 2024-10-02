@@ -151,7 +151,7 @@ Define a sinalização gráfica das chaves correspondentes no código. Esta sina
 As opções abaixo estão disponíveis:
 
 - **Ninguno**: sin señales
-- **Rectangle** (default): Braces surrounded by a black line\
+- **Retângulo** (padrão): braces cercadas por uma linha preta\
   ![](../assets/en/Preferences/optionsRectangle.png)
 - **Color de fondo**: corchetes resaltados (el color se define en la página [Tema](#Teme-definition)).
 - **Negrita**: las llaves aparecen en negrita.

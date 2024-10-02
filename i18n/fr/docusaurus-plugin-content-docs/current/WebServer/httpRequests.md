@@ -94,7 +94,7 @@ Le paramètre `$4` reçoit l'adresse IP utilisée pour appeler le serveur web 4D
 
 ### $5 et $6 - Nom d'utilisateur et mot de passe
 
-Les paramètres $5 et $6 reçoivent le nom d'utilisateur et le mot de passe saisis par l'utilisateur dans la boîte de dialogue d'identification standard affichée par le navigateur, le cas échéant (voir la [page d'authentification](authentification.md)).
+Les paramètres $5 et $6 reçoivent le nom d'utilisateur et le mot de passe saisis par l'utilisateur dans la boîte de dialogue d'identification standard affichée par le navigateur, le cas échéant (voir la [page d'authentification](authentication.md)).
 
 > Si le nom d'utilisateur envoyé par le navigateur existe dans 4D, le paramètre $6 (le mot de passe de l'utilisateur) n'est pas renvoyé pour des raisons de sécurité.
 

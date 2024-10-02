@@ -45,7 +45,7 @@ The command returns an object describing the current attributes of the *column*:
 | footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                            |
 | filterButtonVisible | boolean | True se o botão de filtro da coluna da tabela for exibido, senão False                                                                  |
 
-If *tableName* is not found or if *column* index is higher than the number of columns, the command returns **null**.
+Se *tableName* não for encontrado ou se o índice *column* for maior que o número de colunas, o comando retorna **null**.
 
 #### Exemplo
 

@@ -3,12 +3,6 @@ id: qodly-studio
 title: Qodly Studio for 4D
 ---
 
-:::caution Prévia do desenvolvedor
-
-Qodly Studio for 4D está atualmente na fase **Developer Preview**. Não deve ser usado na produção.
-
-:::
-
 **Qodly Studio** é um construtor de interfaces para aplicações web. It provides developers with a graphical page editor to design applications running in web browsers or smartphones. Ele suporta nativamente os [objetos ORDA](../ORDA/overview.md).
 
 You can use Qodly Studio directly from your **4D environment** to build modern and sophisticated interfaces that you can easily integrate to your existing 4D projects and deploy **on premise**.
@@ -92,7 +86,7 @@ Authentication on the WebAdmin web server is granted using an access key. Para m
 In accordance with the management of 4D projects, only the following usages are supported:
 
 - o desenvolvimento com Qodly Studio deve ser feito usando **4D** (monousuário).
-- deployment of 4D applications powered with Qodly forms must be done using **4D Server**.
+- implantação de aplicações 4D com formulários Qodly deve ser feita usando **4D Server**.
 
 ## Abertura do Qodly Studio
 
@@ -100,7 +94,7 @@ The Qodly Studio page is available when the [WebAdmin web server is running](../
 
 Há duas maneiras de acessar Qodly Studio:
 
-- from your 4D single-user application, go to **Design** > **Qodly Studio...**.
+- de sua aplicação 4D usuário único, vá para **Desenho** > **Qodly Studio...**.
   If the WebAdmin web server is already running, depending on its configuration, your default browser opens at `IPaddress:HTTPPort/studio` or `IPaddress:HTTPSPort/studio`. Otherwise, you will be prompted if you want to start the WebAdmin web server first.
 
 - on a browser, with the WebAdmin web server running (launched from 4D or 4D Server), enter the following address:
@@ -185,7 +179,7 @@ See [this page](https://developer.qodly.com/docs/studio/rendering) for detailed 
 
 Para ativar a renderização das páginas Qodly, as seguintes opções devem ser definidas.
 
-- The 4D project's **Settings** > **Web** > **Web Features** > [**Expose as REST server**](../settings/web.md#exposed-as-rest-server) option must be activated.
+- A opção **Propriedades** > **Web** > **Funcionalidades Web** > [**Expor como servidor REST**](../settings/web.md#exposed-as-rest-server) deve ser ativada.
 - O [servidor Web 4D] (webServer.md) deve estar em execução.
 
 :::note
@@ -275,7 +269,7 @@ This call is accepted and as long as the authentication is not successful, `Sess
 
 When the ["force login" mode is enabled](#setting-the-force-login-mode), Qodly Studio for 4D allows you to implement a logout feature in your application.
 
-To logout the user, you just need to execute the **Logout** standard action from the Qodly page. In Qodly Studio, you can associate this standard action to a button for example:
+Para fazer o logout do usuário, basta executar a ação padrão **Logout** na página Qodly. In Qodly Studio, you can associate this standard action to a button for example:
 
 ![alt-text](../assets/en/WebServer/logout.png)
 
@@ -311,7 +305,7 @@ Using different schemes might also lead to [session](sessions.md) issues, such a
 
 ![alt-text](../assets/en/WebServer/schemes.png)
 
-3. No Qodly Studio, você clica no ícone **Preview**. You are warned that the two web servers are started on different schemes, but despite this you click on the **Confirm** button.
+3. No Qodly Studio, você clica no ícone **Preview**. Você está avisado que os dois servidores web estão iniciados em esquemas diferentes, mas apesar disso você clique no botão **Confirmar**.
 
 ![alt-text](../assets/en/WebServer/render-button.png)
 

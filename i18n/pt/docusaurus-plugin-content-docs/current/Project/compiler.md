@@ -49,7 +49,7 @@ If you modify your project in interpreted mode, you must recompile it in order t
 
 ## Características da janela do compilador
 
-In addition to the [**Compile** button](#compile), the Compiler window provides additional features that are useful during the project development phase.
+Além do botão [**Compilar**](#compilar), a janela Compilador oferece recursos adicionais que são úteis durante a fase de desenvolvimento do projeto.
 
 ### Verificar sintaxe
 
@@ -75,7 +75,7 @@ El botón **Borrar el código compilado** borra el código compilado del proyect
 
 ### Mostrar/ocultar avisos
 
-You can toggle the [warnings](#warnings) display in the Compiler window by clicking the **Show/Hide Warnings** button:
+Você pode alternar a exibição de [warnings](#warnings) na janela do Compilador clicando no botão **Mostrar/Esconder Warnings**:
 
 ![](../assets/en/Project/compilerWin4.png)
 
@@ -174,7 +174,7 @@ Depending on circumstances and the programming style used, warnings may be more 
 
 This tab allows you to define which warnings should be displayed globally. From the list of all possible warnings with their types, their code and their localized label, ordered by warning code.
 
-To reduce the list, you can search words by warning labels and codes using the **Search in codes and labels** textbox or the magnifying glass icon on the left.
+Para reduzir a lista, você pode pesquisar palavras por etiquetas e códigos de aviso usando a caixa de texto **Pesquisar em códigos e rótulos** ou o ícone da lupa à esquerda.
 
 By default, all warning types are checked and enabled.
 

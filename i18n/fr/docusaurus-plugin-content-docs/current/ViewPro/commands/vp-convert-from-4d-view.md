@@ -9,18 +9,18 @@ title: VP Convert from 4D View
 
 <!-- REF #_method_.VP Convert from 4D View.Params -->
 
-| Paramètres     | Type   |                             | Description                        |
-| -------------- | ------ | --------------------------- | ---------------------------------- |
-| 4DViewDocument | Blob   | ->                          | Document 4D View                   |
-| Résultat       | Object | <- | 4D View Pro object<!-- END REF --> |
+| Paramètres     | Type   |                             | Description                       |
+| -------------- | ------ | --------------------------- | --------------------------------- |
+| 4DViewDocument | Blob   | ->                          | Document 4D View                  |
+| Résultat       | Object | <- | Objet 4D View Pro<!-- END REF --> |
 
 #### Description
 
-The `VP Convert from 4D View` command <!-- REF #_method_.VP Convert from 4D View.Summary -->allows you to convert a legacy 4D View document into a 4D View Pro object<!-- END REF -->.
+La commande `VP Convert from 4D View` <!-- REF #_method_.VP Convert from 4D View.Summary -->vous permet de convertir un document 4D View legacy en un objet 4D View Pro<!-- END REF -->.
 
 > Cette commande ne nécessite pas l'installation du plug-in 4D View dans votre environnement.
 
-In the *4DViewDocument* parameter, pass a BLOB variable or field containing the 4D View document to convert. La commande retourne un objet 4D View Pro dans lequel toutes les informations stockées à l'origine dans le document 4D View sont converties en attributs 4D View Pro.
+Dans le paramètre *4DViewDocument*, passez une variable ou un champ BLOB contenant le document 4D View à convertir. La commande retourne un objet 4D View Pro dans lequel toutes les informations stockées à l'origine dans le document 4D View sont converties en attributs 4D View Pro.
 
 #### Exemple
 

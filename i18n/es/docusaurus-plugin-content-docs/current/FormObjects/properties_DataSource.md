@@ -230,7 +230,7 @@ Si se utiliza un campo, una variable o una expresión asignable (_por ejemplo Pe
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox_overview.md#list-box-columns)
 
 ---
 

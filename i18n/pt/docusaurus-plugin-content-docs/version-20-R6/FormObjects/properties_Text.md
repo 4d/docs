@@ -25,7 +25,7 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 Define o texto selecionado para aparecer mais escuro e mais pesado.
 
-You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
+Você pode definir essa propriedade usando o comando [**OBJECT SET FONT STYLE**] (https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
 
 > Este é um texto normal.<br/>
 > **Este é um texto em negrito.**
@@ -121,7 +121,7 @@ Existem dois tipos de nomes de famílias de letras:
 - *family-name:* El nombre de una familia de fuentes, como "times", "courier", "arial", etc.
 - *generic-family:* El nombre de una familia genérica, como "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
-You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.
+Você pode definir isso usando o comando [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html).
 
 #### Gramática JSON
 
@@ -165,7 +165,7 @@ A cor pode ser especificada por:
 - um valor HEX - como "#ff0000"
 - um valor RGB - como "rgb(255,0,0)"
 
-You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
+Você também pode definir essa propriedade usando o comando [**OBJECT SET RGB COLORS**] (https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html).
 
 #### Gramática JSON
 

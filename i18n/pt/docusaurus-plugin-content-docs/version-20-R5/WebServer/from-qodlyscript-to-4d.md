@@ -9,7 +9,7 @@ Code examples are provided in [QodlyScript](https://developer.qodly.com/docs/cat
 
 ## Nomes de variáveis
 
-QodlyScript only support local variables, so variables in QodlyScript examples are not prefixed with `$`. In the 4D code, make sure to **prefix variable names with `$`** so that they are identifed as local variables by 4D.
+QodlyScript only support local variables, so variables in QodlyScript examples are not prefixed with `$`. No código 4D, certifique-se de **prefixar os nomes das variáveis com `$`** para elas serem identificadas como variáveis locais pelo 4D.
 
 ## Símbolos e palavras-chave
 

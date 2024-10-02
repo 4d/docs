@@ -91,8 +91,8 @@ Essa fórmula se refere às células C6 e C7. Ou seja, 4D View Pro é instruído
 
 When you copy or move these formulas to new locations, each cell address in that formula will either change or stay the same, depending on how it is typed.
 
-- A reference that changes is called a **relative reference**, and refers to a cell by how far left/right and up/down it is from the cell with the formula.
-- A reference that always points to a particular cell is called an **absolute reference**.
+- Uma referência que muda é chamada uma **referência relativa** e se refere a uma célula conforme a distância à esquerda/direita e acima/abaixo da célula com a fórmula.
+- Uma referência que aponta sempre para uma célula específica é chamada de **referência absoluta**.
 - You can also create a mixed reference which always points to a fixed row or column.
 
 ### Notação de referências
@@ -119,11 +119,11 @@ Spreadsheet functions are preset formulas used to calculate cell values. When yo
 
 ![](../assets/en/ViewPro/vpFormula2.PNG)
 
-See [**SpreadJS's extented list of functions**](https://developer.mescius.com/spreadjs/docs/formulareference/FormulaFunctions) for details and examples.
+Veja [**A lista ampliada de funções de SpreadJS**](https://developer.mescius.com/spreadjs/docs/formulareference/FormulaFunctions) para detalhes e exemplos.
 
 ## Funções 4D
 
-4D View Pro allows you to define and call **4D custom functions**, which execute [4D formulas](API/FunctionClass.md). Using 4D custom functions extends the possibilities of your 4D View Pro documents and allows powerful interactions with the 4D database.
+O 4D View Pro permite que você defina e chame **funções personalizadas 4D**, que executam [fórmulas 4D](API/FunctionClass.md). Using 4D custom functions extends the possibilities of your 4D View Pro documents and allows powerful interactions with the 4D database.
 
 4D custom functions provide access, from within your 4D View Pro formulas, to:
 

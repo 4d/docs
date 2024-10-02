@@ -17,18 +17,18 @@ title: VP Convert to picture
 
 #### Description
 
-The `VP Convert to picture` command <!-- REF #_method_.VP Convert to picture.Summary -->converts the _vpObject_ 4D View Pro object (or the _rangeObj_ range within _vpObject_) to a SVG picture<!-- END REF -->.
+La commande `VP Convert to picture` <!-- REF #_method_.VP Convert to picture.Summary -->convertit l'objet 4D View Pro _vpObject_ (ou la plage _rangeObj_ dans _vpObject_) en une image SVG<!-- END REF -->.
 
 Cette commande est utile, par exemple :
 
 - pour intégrer un document 4D View Pro dans un autre document, tel qu'un document 4D Write Pro
 - pour imprimer un document 4D View Pro sans le charger dans une zone 4D View Pro.
 
-In _vpObject_, pass the 4D View Pro object that you want to convert. This object must have been previously parsed using [VP Export to object](vp-export-to-object.md) or saved using [VP EXPORT DOCUMENT](vp-export-document.md).
+Dans _vpObject_, passez l'objet 4D View Pro que vous souhaitez convertir. Cet objet doit avoir été préalablement analysé à l'aide de [VP Export to object](vp-export-to-object.md) ou enregistré avec [VP EXPORT DOCUMENT](vp-export-document.md).
 
-> SVG conversion process requires that expressions and formats (cf. [Cell Format](../configuring.md#cell-format)) included in the 4D View Pro area be evaluated at least once, so that they can be correctly exported. Si vous convertissez un document qui n'a pas été évalué au préalable, les expressions ou les formats peuvent être rendus de manière inattendue.
+> Le processus de conversion SVG exige que les expressions et les formats (cf. [Format des cellules](../configuring.md#cell-format)) inclus dans la zone 4D View Pro soient évalués au moins une fois, afin qu'ils puissent être correctement exportés. Si vous convertissez un document qui n'a pas été évalué au préalable, les expressions ou les formats peuvent être rendus de manière inattendue.
 
-In _rangeObj_, pass a range of cells to convert. Par défaut, si ce paramètre est omis, tout le contenu du document est converti.
+Dans _rangeObj_, passez une plage de cellules à convertir. Par défaut, si ce paramètre est omis, tout le contenu du document est converti.
 
 Les contenus de document sont convertis en tenant compte de leurs attributs d'affichage, y compris les formats (voir la note ci-dessus), la visibilité des en-têtes, des colonnes et des lignes. La conversion des éléments suivants est prise en charge :
 
@@ -41,7 +41,7 @@ Les contenus de document sont convertis en tenant compte de leurs attributs d'af
 - Largeur de colonnes
 - Visibilité : colonnes / lignes cachées.
 
-> Gridline visibility depends on document attribute defined with [VP SET PRINT INFO](vp-set-print-info.md).
+> La visibilité du quadrillage dépend de l'attribut du document défini avec [VP SET PRINT INFO](vp-set-print-info.md).
 
 #### Résultat
 

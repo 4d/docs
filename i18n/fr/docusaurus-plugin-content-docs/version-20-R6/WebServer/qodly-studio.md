@@ -3,12 +3,6 @@ id: qodly-studio
 title: Qodly Studio for 4D
 ---
 
-:::caution Developer Preview
-
-Qodly Studio pour 4D est actuellement en phase **Developer Preview**. Il ne doit pas être utilisé en production.
-
-:::
-
 **Qodly Studio** est un constructeur d'interface pour des applications web. It provides developers with a graphical page editor to design applications running in web browsers or smartphones. Il prend en charge nativement les [objets ORDA](../ORDA/overview.md).
 
 Vous pouvez utiliser Qodly Studio directement depuis votre environnement **4D** pour construire des interfaces modernes et sophistiquées que vous pouvez facilement intégrer à vos projets 4D existants et déployer **on premise** (sur site).

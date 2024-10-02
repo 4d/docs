@@ -15,7 +15,7 @@ Três tipos de sessões são suportados por essa classe:
 
 :::note
 
-The availability of properties and functions in the `Session` object depend on the session type.
+The availability of properties and functions in the `Session` object depends on the session type.
 
 :::
 
@@ -90,7 +90,7 @@ The `Session` object of remote client sessions is available from:
 - Triggers,
 - 'Conexão aberta com o servidor' e 'Conexão com o servidor' métodos de banco de dados.
 
-For more information on remote user sessions, please refer to the [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions) paragraph.
+Para mais informações em sessões usuários remotos, consulte o parágrafo [**Sessões usuário cliente remoto**](../Desktop/clientServer.md#remote-user-sessions).
 
 #### a sessão de procedimentos armazenados
 
@@ -495,7 +495,7 @@ Since `.info` is a computed property, it is recommended to call it once and then
 
 :::note
 
-This function always returns **False** with remote client and stored procedure sessions.
+Essa função sempre retorna **False** com sessões de procedimento armazenado e cliente remoto.
 
 :::
 
@@ -563,7 +563,7 @@ The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -
 
 :::note
 
-Privileges and roles are defined in [`roles.json`](../ORDA/privileges.md#rolesjson-file) file of the project. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) section.
+Privileges and roles are defined in [`roles.json`](../ORDA/privileges.md#rolesjson-file) file of the project. Para obter mais informações, consulte a seção [**Privilégios**](../ORDA/privileges.md).
 
 :::
 

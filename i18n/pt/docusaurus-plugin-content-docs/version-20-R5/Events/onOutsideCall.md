@@ -3,12 +3,12 @@ id: onOutsideCall
 title: On Outside Call
 ---
 
-| Code | Pode ser chamado por | Definição                                                 |
-| ---- | -------------------- | --------------------------------------------------------- |
-| 10   | Formulário           | El formulario ha recibido una llamada `POST OUTSIDE CALL` |
+| Code | Pode ser chamado por | Definição                                            |
+| ---- | -------------------- | ---------------------------------------------------- |
+| 10   | Formulário           | O formulário recebeu uma chamada `POST OUTSIDE CALL` |
 
 ## Descrição
 
-Este evento se llama cuando el formulario es llamado desde otro proceso a través del comando `POST OUTSIDE CALL`.
+Esse evento é chamado quando o formulário é chamado de outro processo por meio do comando `POST OUTSIDE CALL`.
 
-> El evento `On Outside Call` modifica el contexto de entrada del formulario. In particular, if a field was being edited, the [`On Data Change`](onDataChange.md) event is generated.
+> O evento `On Outside Call` modifica o contexto de entrada do formulário. Em particular, se um campo estiver sendo editado, o evento [`On Data Change`](onDataChange.md) será gerado.

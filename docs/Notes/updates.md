@@ -14,12 +14,12 @@ Read [**What’s new in 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 - New properties in [.getBoxInfo()](../API/IMAPTransporterClass.md#getboxinfo) and [.getBoxList()](../API/IMAPTransporterClass.md#getboxlist).
 - You can now [add and remove components using the Component manager interface](../Project/components.md#adding-and-removing-dependencies).
 - New [**direct typing mode**](../Project/compiler.md#enabling-direct-typing) in which you declare all variables and parameters in your code using `var` and `#DECLARE`/`Function` keywords (only mode supported in new projects). [Syntax checking feature](../Project/compiler.md#check-syntax) has been enhanced accordingly. 
-
+- Support of [Session singletons](../Concepts/classes.md#singleton-classes) and new [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) Class property. 
+- Qodly Studio: You can now [attach the Qodly debugger to 4D Server](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server).
 
 #### Behavior changes
 
 - Compiler directive commands (`C_XXX`) are now deprecated and have been renamed `_O_C_XXX` (for example, `C_TEXT` has been renamed `_O_C_TEXT`). 
-
 
 
 ## 4D 20 R6
@@ -472,9 +472,9 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 |Libuv |1.48|20 R6|Used for QUIC|
 |libZip|1.9.2|20|Used by zip class, 4D Write Pro, svg and serverNet components|
 |LZMA|5.4.1|20||
-|OpenSSL|3.2.0|20 R4|Default TLS/SSL security level has been upgraded. See [Behavior changes](#behavior-changes) for release 20 R4|
+|OpenSSL|3.3.2|**20 R7**|Default TLS/SSL security level has been upgraded. See [Behavior changes](#behavior-changes) for release 20 R4|
 |PDFWriter|4.3|20|FreeType dependency in 12.2.1|
 |PHP|8.2.4|20||
-|SpreadJS|16.2.6|20 R4|4D View Pro engine|
+|SpreadJS|17.1.0|**20 R7**|See [this blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) for an overview of the new features|
 |webKit|WKWebView|19||
 |Zlib|1.2.13|20||

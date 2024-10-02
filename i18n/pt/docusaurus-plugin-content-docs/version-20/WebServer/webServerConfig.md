@@ -635,7 +635,7 @@ Essa opção ativa o modo preemptivo para o código do servidor Web do seu aplic
 
 As configurações a seguir ainda são compatíveis, mas dependem de recursos ou tecnologias obsoletos. Em geral, é recomendável manter os valores padrão.
 
-#### Allow database Access through 4DSYNC URLs
+#### Allow database access through 4DSYNC URLs
 
 Essa opção controla o suporte de solicitações de sincronização HTTP que contêm URLs obsoletos */4DSYNC* .
 

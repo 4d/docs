@@ -92,7 +92,7 @@ Authentication on the WebAdmin web server is granted using an access key. Para m
 In accordance with the management of 4D projects, only the following usages are supported:
 
 - o desenvolvimento com Qodly Studio deve ser feito usando **4D** (monousuário).
-- deployment of 4D applications powered with Qodly forms must be done using **4D Server**.
+- implantação de aplicações 4D com formulários Qodly deve ser feita usando **4D Server**.
 
 ## Abertura do Qodly Studio
 
@@ -100,7 +100,7 @@ The Qodly Studio page is available when the [WebAdmin web server is running](../
 
 Há duas maneiras de acessar Qodly Studio:
 
-- from your 4D single-user application, go to **Design** > **Qodly Studio...**.
+- de sua aplicação 4D usuário único, vá para **Desenho** > **Qodly Studio...**.
   If the WebAdmin web server is already running, depending on its configuration, your default browser opens at `IPaddress:HTTPPort/studio` or `IPaddress:HTTPSPort/studio`. Otherwise, you will be prompted if you want to start the WebAdmin web server first.
 
 - on a browser, with the WebAdmin web server running (launched from 4D or 4D Server), enter the following address:
@@ -185,7 +185,7 @@ See [this page](https://developer.qodly.com/docs/studio/rendering) for detailed 
 
 Para ativar a renderização de formulários Qodly, as seguintes opções devem ser definidas.
 
-- The 4D project's **Settings** > **Web** > **Web Features** > [**Expose as REST server**](../settings/web.md#exposed-as-rest-server) option must be activated.
+- A opção **Propriedades** > **Web** > **Funcionalidades Web** > [**Expor como servidor REST**](../settings/web.md#exposed-as-rest-server) deve ser ativada.
 - O [servidor Web 4D] (webServer.md) deve estar em execução.
 
 :::note
@@ -236,7 +236,7 @@ You can also set this option directly in the [**roles.json** file](../ORDA/privi
 
 :::
 
-When the "force login" mode is **disabled** (default mode), any REST request, including the rendering of an authentication Qodly form, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. When the "force login" mode is **enabled**, a simple authentication Qodly form can be rendered without consuming any license. You just need to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly form. A licença é consumida somente quando o usuário está realmente conectado.
+When the "force login" mode is **disabled** (default mode), any REST request, including the rendering of an authentication Qodly form, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. Quando o modo "force login" está **ativado**, um formulário Qodly de autenticação simples pode ser renderizado sem consumir nenhuma licença. You just need to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly form. A licença é consumida somente quando o usuário está realmente conectado.
 
 :::info
 
@@ -315,7 +315,7 @@ Using different schemes might also lead to [session](sessions.md) issues, such a
 
 ![alt-text](../assets/en/WebServer/schemes.png)
 
-3. No Qodly Studio, você clica no ícone **Preview**. You are warned that the two web servers are started on different schemes, but despite this you click on the **Confirm** button.
+3. No Qodly Studio, você clica no ícone **Preview**. Você está avisado que os dois servidores web estão iniciados em esquemas diferentes, mas apesar disso você clique no botão **Confirmar**.
 
 ![alt-text](../assets/en/WebServer/render-button.png)
 

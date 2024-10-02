@@ -105,6 +105,7 @@ The remote user `session` object is available from:
 
 - Project methods that have the [Execute on Server](../Project/code-overview.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process),
 - Triggers,
+- ORDA [data model functions](../ORDA/ordaClasses.md) (except those declared with the [`local`](../ORDA/ordaClasses.md#local-functions) keyword, 
 - `On Server Open Connection` and `On Server Shutdown Connection` database methods.
 
 :::info

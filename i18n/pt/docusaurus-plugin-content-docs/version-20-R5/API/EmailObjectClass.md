@@ -185,7 +185,7 @@ For specific formatting requirements, please consult the [RFC#5322](https://tool
 
 The `.from` property contains the <!-- REF #EmailObjectClass.from.Summary -->Originating [address(es)](#email-addresses) of the email<!-- END REF -->.
 
-Each email you send out has both the [sender](#sender) and **from** addresses:
+Cada e-mail que você envia tem os endereços [sender](#sender) e **from**:
 
 - o domínio do remetente é o que o servidor de e-mail de recebimento recebe ao abrir a sessão,
 - o endereço a partir é o que o(s) destinatário(s) verá(s).

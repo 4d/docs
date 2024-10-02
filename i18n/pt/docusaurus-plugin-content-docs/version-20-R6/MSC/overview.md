@@ -27,7 +27,7 @@ In maintenance mode, only the MSC window is displayed (the project is not opened
 
 No modo standard, está aberto um projeto. Neste modo, algumas funções de manutenção não estão disponíveis. Existem várias possibilidades de acesso à janela do CSM:
 
-- Use the **Help/Maintenance Security Center** menu or the **MSC** button in the 4D toolbar:\
+- Use o menu \*\*Centro de segurança e manutenção \*\* ou o botão **MSC** na barra de ferramentas 4D:\
   ![](../assets/en/MSC/mscicon.png)
 - Use the “msc” standard action that it is possible to associate with a menu command or a form object.
 - Utilice el comando `OPEN SECURITY CENTER`.

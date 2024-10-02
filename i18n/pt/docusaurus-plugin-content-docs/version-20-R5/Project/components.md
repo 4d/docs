@@ -23,13 +23,13 @@ A 4D project running in interpreted mode can use either interpreted or compiled 
 To load a component in your 4D project, you can either:
 
 - reference the component in the **dependencies.json** file (and, optionnally, the **environment4d.json** file)
-- or, copy the component files in the [**Components** folder of your project](architecture.md#components).
+- ou, copie os arquivos de componentes na pasta [**Components** do seu projeto](architecture.md#components).
 
 If the same component is installed at different locations, a [priority order] is applied.
 
 ### dependencies.json
 
-1. Reference the component name in the **dependencies.json** file of your 4D project. This manifest file must be saved in the **Sources** folder of the 4D project folder, e.g.:
+1. Faça referência ao nome do componente no arquivo **dependencies.json** de seu projeto 4D. Esse arquivo de manifesto deve ser salvo na pasta **Sources** da pasta do projeto 4D, por exemplo:
    ```
    /MyProjectRoot/Project/Sources/dependencies.json
    ```
@@ -39,9 +39,9 @@ If the same component is installed at different locations, a [priority order] is
    /MyProjectComponentRoot/
    ```
 
-Thanks to this architecture, you can simply copy all your components at the same level as your projects and reference them in your **dependencies.json** files if necessary. Além disso, você pode personalizar o caminho de seus componentes, veja abaixo.
+Graças a essa arquitetura, você pode simplesmente copiar todos os seus componentes no mesmo nível dos seus projetos e fazer referência a eles nos arquivos **dependencies.json**, se necessário. Além disso, você pode personalizar o caminho de seus componentes, veja abaixo.
 
-The **/Sources/dependencies.json** file contents must have the following structure:
+O conteúdo do arquivo **/Sources/dependencies.json** deve ter a seguinte estrutura:
 
 ```json
 {
@@ -86,7 +86,7 @@ Since components can be installed in different ways, a priority order is applied
 
 **Prioridade mais alta**
 
-1. Components stored in the [**Components** folder of the project](architecture.md#components).
+1. Componentes armazenados na pasta [**Components** do projeto](architecture.md#components).
 2. Componentes declarados no arquivo **dependencies.json**.
 3. Internal User 4D components (e.g. 4D NetKit, 4D SVG...)
 
@@ -98,7 +98,7 @@ When a component cannot be loaded because of another instance of the same compon
 
 ## Monitoramento das dependências do projeto
 
-In an opened project, you can get information about dependencies and their current loading status in the **Dependencies** panel.
+Em um projeto aberto, você pode obter informações sobre dependências e seu estado de carregamento atual no painel **Dependências**.
 
 Para exibir o painel Dependências:
 
@@ -127,7 +127,7 @@ São suportadas as seguintes origens:
 | Environment           | Componente declarado no arquivo [`environnement4d.json`](#environment4djson) |
 | Componente do projeto | Componente localizado na pasta [`Components`](architecture.md#components)    |
 
-**Right-click** in a dependency line and select **Show on disk** to reveal the location of a dependency:
+**Clique com o botão direito do mouse** em uma linha de dependência e selecione **Mostrar no disco** para revelar o local de uma dependência:
 
 ![dependency-show](../assets/en/Project/dependency-show.png)
 
@@ -144,8 +144,8 @@ By default, all dependencies identified by the Dependency manager are listed, wh
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
 - **Ativo**: dependências carregadas e podem ser usadas no projeto. Isso inclui dependências _overloading_, que são de fato carregadas. _Overloaded_ dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
-- **Inactive**: Dependencies that are not loaded in the project and are not available. There are many possible reasons for this status: missing files, version incompatibility...
-- **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
+- **Inativo**: dependências que não estão carregadas no projeto e não estão disponíveis. There are many possible reasons for this status: missing files, version incompatibility...
+- **Conflito**: dependências carregadas, mas que sobrecarregam pelo menos outra dependência em um [nível de prioridade](#priority) inferior. Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
 
 ### Status de dependência
 
@@ -155,10 +155,10 @@ Dependencies requiring the developer's attention are indicated by a **status lab
 
 Estão disponíveis as seguintes etiquetas de status:
 
-- **Overloaded**: The dependency is not loaded because it is overloaded by another dependency with the same name at a higher [priority level](#priority).
-- **Overloading**: The dependency is loaded and is overloading one or more other dependencies with the same name at a lower [priority level](#priority).
-- **Not found**: The dependency is declared in the dependencies.json file but is not found.
-- **Inactive**: The dependency is not loaded because it is not compatible with the project (e.g. the component is not compiled for the current platform).
+- **Overloaded**: a dependência não é carregada porque está sobrecarregada por outra dependência com o mesmo nome em um [nível de prioridade] mais alto (#prioridade).
+- **Overloading**: a dependência está carregada e está sobrecarregando uma ou mais dependências com o mesmo nome em um [nível de prioridade] inferior (#prioridade).
+- **Not found**: a dependência está declarada no arquivo dependencies.json, mas não foi encontrada.
+- **Inactive**: a dependência não é carregada porque não é compatível com o projeto (por exemplo, o componente não é compilado para a plataforma atual).
 - **Duplicated**: The dependency is not loaded because another dependency with the same name exists at the same location (and is loaded).
 
 A tooltip is displayed when you hover over the dependency line, provding additional information about the status:

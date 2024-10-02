@@ -12,6 +12,8 @@ Lea [**Novedades en 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R7/),
 - Las columnas de los list box y de los encabezados de tipo hora ahora soportan la opción ["blankIfNull"](../FormObjects/properties_Display.md#time-format).
 - Nuevas propiedades en [.getBoxInfo()](../API/IMAPTransporterClass.md#getboxinfo) y [.getBoxList()](../API/IMAPTransporterClass.md#getboxlist).
 - Ahora puede [añadir y eliminar componentes utilizando la interfaz del gestor de componentes](../Project/components.md#adding-and-removing-dependencies).
+- Support of [Session singletons](../Concepts/classes.md#singleton-classes) and new [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) Class property.
+- Qodly Studio: You can now [attach the Qodly debugger to 4D Server](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server).
 
 ## 4D 20 R6
 
@@ -414,9 +416,9 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 19
 | Libuv     | 1.48                   | 20 R6             | Utilizado para QUIC                                                                                                                                            |
 | libZip    | 1.9.2  | 20                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                                         |
 | LZMA      | 5.4.1  | 20                |                                                                                                                                                                |
-| OpenSSL   | 3.2.0  | 20 R4             | Se ha actualizado el nivel de seguridad TLS/SSL por defecto. Ver [Cambios de comportamiento](#cambios-de-comportamiento) para la versión 20 R4 |
+| OpenSSL   | 3.3.2  | **20 R7**         | Se ha actualizado el nivel de seguridad TLS/SSL por defecto. Ver [Cambios de comportamiento](#cambios-de-comportamiento) para la versión 20 R4 |
 | PDFWriter | 4.3                    | 20                | Dependencia FreeType en 12.2.1                                                                                                 |
 | PHP       | 8.2.4  | 20                |                                                                                                                                                                |
-| SpreadJS  | 16.2.6 | 20 R4             | Motor 4D View Pro                                                                                                                                              |
+| SpreadJS  | 17.1.0 | **20 R7**         | See [this blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) for an overview of the new features                                               |
 | webKit    | WKWebView                              | 19                |                                                                                                                                                                |
 | Zlib      | 1.2.13 | 20                |                                                                                                                                                                |

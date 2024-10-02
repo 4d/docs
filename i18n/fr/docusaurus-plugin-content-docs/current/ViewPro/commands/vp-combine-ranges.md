@@ -17,13 +17,13 @@ title: VP Combine ranges
 
 #### Description
 
-The `VP Combine Ranges` command <!-- REF #_method_.VP Combine ranges.Summary -->returns a new range object that incorporates two or more existing range objects<!-- END REF -->. Toutes les plages doivent provenir de la même zone 4D View Pro.
+La commande `VP Combine Ranges` <!-- REF #_method_.VP Combine ranges.Summary -->retourne un nouvel objet de plage qui incorpore deux ou plusieurs objets de plage existants<!-- END REF -->. Toutes les plages doivent provenir de la même zone 4D View Pro.
 
-In *rangeObj*, pass the first range object.
+Dans *rangeObj*, passez le premier objet de plage.
 
-In *otherRangeObj*, pass another range object(s) to combine with *rangeObj*.
+Dans *otherRangeObj*, passez un ou plusieurs autres objets de plage à combiner avec *rangeObj*.
 
-> The command incorporates *rangeObj* and *otherRangeObj* objects by reference.
+> La commande incorpore les objets *rangeObj* et *otherRangeObj* par référence.
 
 #### Exemple
 
@@ -31,8 +31,8 @@ Vous souhaitez combiner des plages de type cellule, colonne et ligne dans une no
 
 ```4d
  $cell:=VP Cell("ViewProArea";2;4) // C5
- $column:=VP Column("ViewProArea";3) // column D
- $row:=VP Row("ViewProArea";9) // row 10
+ $column:=VP Column("ViewProArea";3) // colonne D
+ $row:=VP Row("ViewProArea";9) // ligne 10
  
  $combine:=VP Combine ranges($cell;$column;$row)
 ```

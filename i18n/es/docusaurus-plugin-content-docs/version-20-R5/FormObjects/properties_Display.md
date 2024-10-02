@@ -425,7 +425,7 @@ Las columnas booleanas también pueden mostrarse como menús emergentes. En este
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -494,7 +494,7 @@ En ese caso, el título de la casilla de verificación puede introducirse utiliz
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox_overview.md#list-box-columns)
 
 ---
 

@@ -16,7 +16,7 @@ Three types of sessions are supported by this class:
 
 :::note
 
-The availability of properties and functions in the `Session` object depend on the session type.
+The availability of properties and functions in the `Session` object depends on the session type.
 
 :::
 

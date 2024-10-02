@@ -27,31 +27,31 @@ A janela tem as seguintes características principais:
 - Pode filtrar o conteúdo da janela utilizando o menu **Categorias**: ![](../assets/en/FormEditor/library3.png)
 - Para utilizar um objeto da biblioteca no seu formulário, pode:
     - clicar com o botão direito do rato num objeto e selecionar **Copiar** no menu contextual
-    - or drag and drop the object from the library The object is then added to the form.
+    - ou arraste e solte o objeto da biblioteca. O objeto é então adicionado ao formulário.
 
-Esta biblioteca é só de leitura. If you want to edit default objects or create your own library of preconfigured objects or project forms, you need to create a custom object library (see below).
+Esta biblioteca é só de leitura. Se quiser editar objetos padrão ou criar sua própria biblioteca de objetos pré-configurados ou formulários projetos, você precisará criar uma biblioteca de objetos personalizada (veja abaixo).
 
 Todos os objetos propostos na biblioteca de objetos padrão estão descritos em [nesta seção em doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
 
 
 ## Utilização da biblioteca de objetos padrão
 
-Pode criar e usar bibliotecas de objetos personalizados em 4D. A custom object library is a 4D project where you can store your favorite objects (buttons, texts, pictures, etc.) Em seguida, você pode reutilizar esses objetos em diferentes formulários e projetos.
+Pode criar e usar bibliotecas de objetos personalizados em 4D. Uma biblioteca de objetos personalizados é um projeto 4D onde você pode armazenar seus objetos favoritos (botões, textos, imagens etc.) Em seguida, você pode reutilizar esses objetos em diferentes formulários e projetos.
 
-Os objetos são armazenados com todas as suas propriedades, incluindo seus métodos objeto. Libraries are put together and used by simple drag-and-drop or copy-paste operations.
+Os objetos são armazenados com todas as suas propriedades, incluindo seus métodos objeto. As bibliotecas são montadas e usadas por operações simples de arrastar e soltar ou copiar e colar.
 
-Using libraries, you can build form object backgrounds grouped by graphic families, by behavior, etc.
+Usando bibliotecas, você pode criar planos de fundo de objetos de formulários agrupados por famílias gráficas, por funcionalidades, etc.
 
 
 ### Criar uma biblioteca de objetos
 
-To create an object library, select **New>Object Library...** from the 4D **File** menu or tool bar. A standard save file dialog box appears, which allows you to choose the name and the location of the object library.
+To create an object library, select **New>Object Library...** from the 4D **File** menu or tool bar. É exibida uma caixa de diálogo padrão para salvar o arquivo, que permite escolher o nome e o local da biblioteca de objetos.
 
-Once you validate the dialog box, 4D creates a new object library on your disk and displays its window (empty by default).
+Após validar a caixa de diálogo, o 4D cria uma biblioteca de objetos em seu disco e exibe sua janela (vazia por padrão).
 
 ![](../assets/en/FormEditor/library4.png)
 
-É possível criar tantas bibliotecas quantas as desejadas por projeto. A library created and built under macOS can be used under Windows and vice-versa.
+É possível criar tantas bibliotecas quantas as desejadas por projeto. Uma biblioteca criada e construída no macOS pode ser usada no Windows e vice-versa.
 
 ### Abrir uma biblioteca de objetos
 
@@ -69,9 +69,9 @@ Na realidade, as bibliotecas de objectos personalizados são projectos 4D cláss
 
 ### Construir uma biblioteca de objectos
 
-Os objectos são colocados numa biblioteca de objectos usando o método de arrastar e largar ou uma operação de cortar-copiar-colar. They can come from either a form or another object library (including the [standard library](#using-the-standard-object-library)). No link is kept with the original object: if the original is modified, the copied object is not affected.
+Os objectos são colocados numa biblioteca de objectos usando o método de arrastar e largar ou uma operação de cortar-copiar-colar. Eles podem vir de um formulário ou de outra biblioteca de objetos (incluindo a [biblioteca padrão](#using-the-standard-object-library)). Nenhum vínculo é mantido com o objeto original: se o original for modificado, o objeto copiado não será afetado.
 
-> In order to be able to drag and drop objects from forms to object libraries, you must make sure the **Start drag and drop** option in the 4D Preferences is selected.
+> Para poder arrastar e soltar objetos de formulários para bibliotecas de objetos, você deve se certificar de que a opção **Iniciar arrastar e soltar** nas Preferências 4D esteja selecionada.
 
 As operações básicas estão disponíveis no menu de contexto ou no menu de opções da janela:
 

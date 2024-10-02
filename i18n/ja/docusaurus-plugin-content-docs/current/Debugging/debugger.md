@@ -33,7 +33,12 @@ title: デバッガー
 - ローカルで実行されているコードの場合には、リモート4D 上に表示されます。
 - サーバー上で実行されているコード (**サーバー上で実行** オプションがつけられたメソッド) の場合には、サーバーマシン上に表示されます。
 
-> ヘッドレスモードで実行中のサーバーでは、デバッガーウィンドウを表示することはできません。この場合はリモートデバッガーを使用する必要があります。 [リモートマシンからのデバッグ](./debugging-remote.md) 参照。
+:::note 注記
+
+- ヘッドレスモードで実行中のサーバーでは、デバッガーウィンドウを表示することはできません。この場合はリモートデバッガーを使用する必要があります。 [リモートマシンからのデバッグ](./debugging-remote.md) 参照。
+- You can also [attach the Qodly Studio debugger to a 4D Server application](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) if you need to debug Qodly pages in a deployed environment.
+
+:::
 
 ## ツールバーボタン
 

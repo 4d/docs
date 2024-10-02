@@ -56,25 +56,25 @@ O estilo de botão rádio está pensado principalmente para sua integração em 
 
 By default, the Toolbar style has a transparent background with a label in the center. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
-- *Windows* - el botón está resaltado.
+- *Windows* - o botão é destacado.
 
 ![](../assets/en/FormObjects/radio_toolbar.png)
 
-- *macOS* - el resalte del botón nunca aparece.
+- *macOS* - o destaque do botão nunca aparece.
 
 ### Bevel
 
 El estilo de botón radio Bevel es similar al comportamiento del estilo [Barra de herramientas](#toolbar), excepto que tiene un fondo gris claro y un contorno gris. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
-- *Windows* - el botón está resaltado.
+- *Windows* - o botão é destacado.
 
 ![](../assets/en/FormObjects/radio_bevel.png)
 
-- *macOS* - el resalte del botón nunca aparece.
+- *macOS* - o destaque do botão nunca aparece.
 
 ### Bevel arredondado
 
-El estilo de botón Bevel redondeado es casi idéntico al estilo [Bevel](#bevel), excepto que, dependiendo del sistema operativo, las esquinas del botón pueden ser redondeadas.
+O estilo de botão Bevel arredondado é quase idêntico ao estilo [Bevel](#bevel), exceto que dependendo do sistema operacional, as esquinas do botão podem ser arredondadas.
 
 - *Windows* - el botón es idéntico al estilo [Bevel](#bevel).
 
@@ -97,7 +97,7 @@ Como padrão, o estilo OS X Textured aparece como:
 
 - *Windows* -un botón en forma de barra de herramientas con una etiqueta en el centro y el fondo se muestra siempre.
 
-- *macOS* - - un botón sistema estándar que muestra un cambio de color de gris claro a gris oscuro. Sua altura está predefinida: não é possível ampliar ou reduzir.
+- *macOS* - um botão sistema padrão que mostra uma mudança de cor cinza-claro a cinza-escuro. Sua altura está predefinida: não é possível ampliar ou reduzir.
 
 ![](../assets/en/FormObjects/OSXTextured.png)
 
@@ -107,11 +107,11 @@ El estilo de botón Office XP combina la apariencia del estilo [Clásico](#regul
 
 As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas nos sistemas de cores. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
-- *Windows* - su fondo sólo aparece cuando el ratón pasa por encima.
+- *Windows* - seu fundo só aparece quando o mouse passa por cima.
 
 ![](../assets/en/FormObjects/radio_xp.png)
 
-- *macOS* - su fondo se muestra siempre.
+- *macOS* - its background is always displayed.
 
 ### Contrair/expandir
 
@@ -121,7 +121,7 @@ Este estilo de botão pode ser utilizado para adicionar um ícone padrão contra
 
 :::info
 
-El estilo Contraer/Desplegar se denomina "disclosure" en la [gramática JSON del estilo de botón](properties_TextAndPicture.md#button-style).
+O estilo Recolher/Expandir é denominado "disclosure" na [gramática JSON de estilo de botão](properties_TextAndPicture.md#button-style).
 
 :::
 
@@ -133,7 +133,7 @@ The disclosure radio button style displays the radio button as a standard disclo
 
 :::info
 
-El estilo Disclosure se denomina "roundedDisclosure" en la [gramática JSON del estilo de botón](properties_TextAndPicture.md#button-style).
+O estilo Disclosure é denominado "roundedDisclosure" na [gramática JSON do estilo de botão](properties_TextAndPicture.md#button-style).
 
 :::
 
@@ -147,9 +147,9 @@ Todos os botões rádio partilham o mesmo conjunto de propriedades básicas:
 
 [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment)(1) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Image hugs title](properties_TextAndPicture.md#image-hugs-title)(2) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Number of States](properties_TextAndPicture.md#number-of-states)(2) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Radio Group](properties_Object.md#radio-group) - [Picture pathname](properties_TextAndPicture.md#picture-pathname)(2) - [Right](properties_CoordinatesAndSizing.md#right) - [Save value](properties_Object.md#save-value) - [Shortcut](properties_Entry.md#shortcut) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)(2) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
-> (1) Not supported by the [Regular](#regular) and [Flat](#flat) styles.<br/>
-> (2) Not supported by the [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) and [Collapse/Expand](#collapseexpand) styles.
+> (1) Não compatível com os estilos [Regular](#regular) e [Flat](#flat).<br/>
+> (2) Não é compatível com os estilos [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) e [Collapse/Expand](#collapseexpand).
 
 Propiedades específicas adicionales están disponibles en función del [estilo de botón](#button-styles):
 
-- Custom: [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin)
+- Personalizado: [Caminho segundo plano](properties_TextAndPicture.md#backgroundPathname) - [Margem horizontal](properties_TextAndPicture.md#horizontalMargin) - [Offset](properties_TextAndPicture.md#icon-offset) - [Margem Vertica](properties_TextAndPicture.md#verticalMargin)

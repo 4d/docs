@@ -1485,7 +1485,7 @@ A text formula in *queryString* receives a parameter:
  $result:=(Position($exclude;This.lastname)=0)
 ```
 
-Using the same ***checkName*** method, a `Formula` object as placeholder receives a parameter:
+Usando o mesmo método ***checkName***, um objeto `Formula` como espaço reservado recebe um parâmetro:
 
 ```4d
  var $es : cs. StudentsSelection

@@ -22,7 +22,7 @@ Returns [shared singletons](#singletons) (if any) and a list of the dataclasses 
 
 Cuando se llama a `$catalog`, se devuelve una lista de las clases de datos junto con dos URI para cada clase de datos en el almacén de datos de su proyecto.
 
-Nesta lista apenas são mostrados os dataclasses expostos para a datastore do seu projecto. For more information, please refer to [**Exposing tables and fields**](configuration.md#exposing-tables-and-fields) section.
+Nesta lista apenas são mostrados os dataclasses expostos para a datastore do seu projecto. Para obter mais informações, consulte a seção [**Expondo tabelas e campos**](configuration.md#exposing-tables-and-fields).
 
 Aqui está uma descrição das propriedades devolvidas para cada dataclass na datastore do seu projecto:
 
@@ -315,7 +315,7 @@ Pode recuperar a informação relativa a uma classe de dados específica.
 
 ## singletons
 
-If you have defined [interprocess (shared) singletons](../Concepts/classes.md#singleton-classes) containing at least one [exposed function](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions), a `singletons` section is added to the returned json for both the `/$catalog` and `/$catalog/$all` syntaxes. It contains the collection of singleton classes as objects with their **name** and **methods** (i.e., exposed functions).
+If you have defined [interprocess (shared) singletons](../Concepts/classes.md#singleton-classes) containing at least one [exposed function](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions), a `singletons` section is added to the returned json for both the `/$catalog` and `/$catalog/$all` syntaxes. Ele contém a coleção de classes singleton como objetos com seu **nome** e **métodos** (ou seja, funções expostas).
 
 As funções singleton podem ser chamadas por solicitações REST usando o comando [`$singleton`]($singleton.md).
 

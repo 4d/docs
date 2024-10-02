@@ -249,7 +249,7 @@ Em Cliente/Servidor, cada máquina (máquinas Cliente e máquina Servidor) parti
 
 ## System Variables
 
-The 4D language manages several **system variables**, which allow you to control the execution of different operations. You can test their values and use them as any variable. Todas as variáveis do sistema são [variáveis processo](#process-variables).
+A linguagem 4D gerencia diversas **variáveis sistema**, que permitem controlar a execução de diferentes operações. You can test their values and use them as any variable. Todas as variáveis do sistema são [variáveis processo](#process-variables).
 
 System variables are used by [4D commands](commands.md). Refer to the "System variables and sets" paragraph in the description of a command to find out whether it affects a system variable.
 
