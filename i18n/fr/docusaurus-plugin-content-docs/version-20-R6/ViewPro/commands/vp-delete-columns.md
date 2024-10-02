@@ -15,9 +15,9 @@ title: VP DELETE COLUMNS
 
 #### Description
 
-The `VP DELETE COLUMNS` command <!-- REF #_method_.VP DELETE COLUMNS.Summary -->removes the columns in the *rangeObj*<!-- END REF -->.
+La commande `VP DELETE COLUMNS` <!-- REF #_method_.VP DELETE COLUMNS.Summary -->supprime les colonnes de *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass an object containing a range of columns to remove. Si la plage qui est passée contient :
+Dans *rangeObj*, passez un objet contenant une plage de colonnes à supprimer. Si la plage qui est passée contient :
 
 - des lignes et des colonnes, seules les colonnes sont supprimées.
 - uniquement des lignes, la commande ne fait rien.
