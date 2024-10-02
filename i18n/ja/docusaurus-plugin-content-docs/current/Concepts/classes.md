@@ -150,7 +150,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 - [`new()`](API/ClassClass.md#new) 関数 (Class オブジェクトをインスタンス化します)
 - [`isShared`](API/ClassClass.md#isshared) プロパティ (クラスが [共有](#共有クラス)されている場合に true)
 - [`isSingleton`](API/ClassClass.md#issingleton) プロパティ ([シングルトン](#シングルトンクラス)の場合に true)
-- [`isSectionSingleton`](API/ClassClass.md#issectionsingleton) property, true if the class defines a [session singleton](#singleton-classes).
+- [`isSessionSingleton`](API/ClassClass.md#issessionsingleton) プロパティ ([セッションシングルトン](#シングルトンクラス)の場合に true)
 - [`me`](API/ClassClass.md#me) プロパティ ([シングルトン](シングルトンクラス) をインスタンス化および取得します)
 
 また、Class オブジェクトは [`constructor`](#class-constructor) オブジェクトを参照することも可能です (任意)。
@@ -311,9 +311,9 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 #### シンタックス
 
 ```4d
-// Class: MyClass
+// クラス: MyClass
 {shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
-// code
+// コード
 ```
 
 クラスコンストラクター関数を使って、ユーザークラスのオブジェクトを生成・初期化することができます。 このコンストラクターは任意の [引数](#引数) を受け取ることができます。
@@ -326,7 +326,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 `shared` キーワードを使うと **共有クラス** が作成されます。共有クラスは、共有オブジェクトのインスタンス化にのみ使われます。 詳細については、後述の [共有クラス](#共有クラス) の項目を参照ください。
 
-Using the `singleton` keyword creates a **singleton**, used to create a single instance of the class. A `session singleton` creates a single instance per session. 詳細については、後述の [シングルトンクラス](#シングルトンクラス) の項目を参照ください。
+`singleton` キーワードを使うと **シングルトン** が作成されます。シングルトンクラスは、クラスインスタンスを一つに限定する場合に使われます。 `session singleton` キーワードを使うと、セッションごとに 1つのインスタンスを作成します。 詳細については、後述の [シングルトンクラス](#シングルトンクラス) の項目を参照ください。
 
 #### 例題
 
@@ -592,11 +592,11 @@ Class constructor ($side : Integer)
 
 <!-- REF #_command_.Super.Params -->
 
-|Parameter|Type||Description|
+|引数|タイプ||説明|
 
 \|---|---|---|---|
-|param|any|->|Parameter(s) to pass to the parent constructor|
-|Result|Object|<-|Object's parent|
+|param|any|->|親コンストラクターに渡すパラメーター|
+|戻り値|Object|<-|オブジェクトの親|
 
 <!-- END REF -->
 
@@ -724,12 +724,12 @@ $val:=$o.f() //42
 [クラスコンストラクター](#class-constructor) 関数が [`new()`](API/ClassClass.md#new) 関数により使用された場合、その内部の `This` はインスタンス化される新規オブジェクトを指します。
 
 ```4d
-//Class: ob
+// クラス: ob
 
 Class Constructor  
 
- // Create properties on This as
- // desired by assigning to them
+ // This のプロパティを
+ // 代入によって作成します
 
  This.a:=42
 ```
@@ -836,17 +836,17 @@ shared Function Bar($value : Integer)
 
 ## シングルトンクラス
 
-**シングルトンクラス** とは、インスタンスを一つのみ作成するユーザークラスです。 For more information on the concept of singletons, please see the [Wikipedia page about singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
+**シングルトンクラス** とは、インスタンスを一つのみ作成するユーザークラスです。 シングルトンのコンセプトに関する詳細については、[シングルトンに関する Wikipedia のページ](https://ja.wikipedia.org/wiki/Singleton_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3) を参照ください。
 
-### Singletons types
+### シングルトンの種類
 
-4D supports three types of singletons:
+4D は 3種類のシングルトンをサポートしています:
 
-- a **process singleton** has a unique instance for the process in which it is instantiated,
-- a **shared singleton** has a unique instance for all processes on the machine.
-- a **session singleton** is a shared singleton but with a unique instance for all processes in the [session](../API/SessionClass.md). Session singletons are shared within an entire session but vary between sessions. In the context of a client-server or a web application, session singletons make it possible to create and use a different instance for each session, and therefore for each user.
+- **プロセスシングルトン** は、自身がインスタンス化されたプロセス内において、インスタンスを一つのみ持つことができます。
+- **共有シングルトン** は、マシン上のすべてのプロセスにおいて、共通のインスタンスを一つのみ持つことができます。
+- **セッションシングルトン** も共有シングルトンですが、特定の [セッション](../API/SessionClass.md) 内のすべてのプロセスにおいて、共通のインスタンスを一つのみ持つことができます。 セッションシングルトンは、セッション内で全体的に共有されますが、セッションごとに異なります。 クライアントサーバーまたは Webアプリケーションのコンテキストで セッションシングルトンを使用すると、各セッションごと (つまり各ユーザーごと) に異なるインスタンスを作成して使用することができます。
 
-Singletons are useful to define values that need to be available from anywhere in an application, a session, or a process.
+アプリケーションやセッション、プロセス内のどこからでも利用可能な値を定義するのにシングルトンは便利です。
 
 :::info
 
