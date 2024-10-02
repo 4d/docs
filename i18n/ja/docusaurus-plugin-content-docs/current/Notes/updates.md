@@ -12,6 +12,8 @@ title: リリースノート
 - 時間型のリストボックスの列とヘッダーは、["blankIfNull" オプション](../FormObjects/properties_Display.md#時間フォーマット) をサポートするようになりました。
 - [.getBoxInfo()](../API/IMAPTransporterClass.md#getboxinfo) および [.getBoxList()](../API/IMAPTransporterClass.md#getboxlist) に新しいプロパティが追加されました。
 - [コンポーネントマネージャーのインターフェースを使用してコンポーネントを追加および削除](../Project/components.md#依存関係の追加と削除) できるようになりました。
+- Support of [Session singletons](../Concepts/classes.md#singleton-classes) and new [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) Class property.
+- Qodly Studio: You can now [attach the Qodly debugger to 4D Server](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server).
 
 ## 4D 20 R6
 
