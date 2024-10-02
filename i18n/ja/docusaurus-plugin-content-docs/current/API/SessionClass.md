@@ -15,7 +15,7 @@ Session オブジェクトは [`Session`](#session) コマンドによって返�
 
 :::note
 
-The availability of properties and functions in the `Session` object depends on the session type.
+`Session` オブジェクトにおいて利用可能なプロパティと関数は、セッションの種類に依存します。
 
 :::
 

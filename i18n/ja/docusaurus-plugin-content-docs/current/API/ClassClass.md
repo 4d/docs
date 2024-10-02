@@ -33,7 +33,7 @@ title: Class
 
 #### 説明
 
-The `.isSessionSingleton` property <!-- REF #ClassClass.isSessionSingleton.Summary -->returns `true` if the user class has been defined as a [session singleton class](../Concepts/classes.md#singleton-classes)<!-- END REF -->, and `false` otherwise.
+`.isSessionSingleton` プロパティは、<!-- REF #ClassClass.isSessionSingleton.Summary -->ユーザークラスが [セッションシングルトンクラス](../Concepts/classes.md#シングルトンクラス)として定義されている場合は `true` を返します<!-- END REF -->。それ以外の場合は `false` を返します。
 
 このプロパティは **読み取り専用** です。
 

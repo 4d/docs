@@ -34,7 +34,7 @@ title: コンポーネント
 4Dプロジェクトにコンポーネントを読み込むには、以下の方法があります:
 
 - [プロジェクトの **Components** フォルダー](architecture.md#components) にコンポーネントファイルをコピーします。
-- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-dependency).
+- または、プロジェクトの **dependencies.json** ファイルでコンポーネントを宣言します。これは、[**依存関係インターフェースを使用して依存関係を追加**](#依存関係の追加) するときに、ローカルファイルに対して自動的におこなわれます。
 
 **dependencies.json** ファイルで宣言されているコンポーネントは、異なる場所に保存できます:
 
@@ -109,7 +109,7 @@ flowchart TB
 
 ... 上記の "myComponent1" と "myComponent2" は読み込むコンポーネントの名前です。
 
-By default, if "myComponent1" and "myComponent2" are not declared in an [**environment4d.json**](#environment4djson) file, 4D will look for the component's package folder (_i.e._ the project root folder of the component) at the same level as your 4D project's package folder, e.g.:
+デフォルトの (つまり、"myComponent1" と "myComponent2" が [**environment4d.json**](#environment4djson) ファイルで宣言されていない) 場合、4D はコンポーネントのパッケージフォルダー (コンポーネントのプロジェクトルートフォルダーのこと) を 4Dプロジェクトのパッケージフォルダーと同じ階層に探します。例:
 
 ```
 	/MyProjectRoot/
@@ -120,7 +120,7 @@ By default, if "myComponent1" and "myComponent2" are not declared in an [**envir
 
 :::note
 
-If you do not want to use the **dependencies.json** architecture, you can install local components by copying their files in the [**Components** folder of your project](architecture.md#components).
+**dependencies.json** のアーキテクチャーを利用したくない場合は、[プロジェクトの **Components** フォルダー](architecture.md#components) にコンポーネントをコピーすることで、ローカルコンポーネントをインストールすることもできます。
 
 :::
 
@@ -310,15 +310,15 @@ GitHub ではリリースを作成するときに、**タグ** と **バージ�
 - 4D Server では、**ウインドウ/プロジェクト依存関係** メニューアイテムを選択します。<br/>
   ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
-The Dependencies panel is then displayed. 依存関係は ABC順にソートされます。
+依存関係パネルが表示されます。 依存関係は ABC順にソートされます。
 
 ![dependency](../assets/en/Project/dependency.png)
 
-依存関係インターフェースでは、依存関係を管理することができます (4Dシングルユーザーと4D Server)。 You can add or remove **local** and **GitHub** dependencies.
+依存関係インターフェースでは、依存関係を管理することができます (4Dシングルユーザーと4D Server)。 **ローカル** と **GitHub** の依存関係を追加または削除できます。
 
-### Adding a local dependency
+### ローカルな依存関係の追加
 
-To add a local dependency, click on the **+** button in the footer area of the panel. 次のようなダイアログボックスが表示されます:
+ローカルな依存関係を追加するには、パネルのフッターエリアにある **+** ボタンをクリックします。 次のようなダイアログボックスが表示されます:
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
