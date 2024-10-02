@@ -101,6 +101,7 @@ El objeto `session` del usuario remoto está disponible en:
 
 - Métodos proyecto que tienen el atributo [Ejecutar en el Servidor](../Project/code-overview.md#execute-on-server) (se ejecutan en el proceso "twinned" del proceso cliente),
 - Triggers,
+- ORDA [data model functions](../ORDA/ordaClasses.md) (except those declared with the [`local`](../ORDA/ordaClasses.md#local-functions) keyword,
 - Los métodos base `On Server Open Connection` y `On Server Shutdown Connection` de la base de datos.
 
 :::info
