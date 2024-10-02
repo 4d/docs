@@ -34,7 +34,7 @@ title: コンポーネント
 4Dプロジェクトにコンポーネントを読み込むには、以下の方法があります:
 
 - [プロジェクトの **Components** フォルダー](architecture.md#components) にコンポーネントファイルをコピーします。
-- または、プロジェクトの **dependencies.json** ファイルでコンポーネントを宣言します。これは、[**Component manager インターフェースを使用して依存関係を追加**](#依存関係の追加) するときに、ローカルファイルに対して自動的におこなわれます。
+- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-dependency).
 
 **dependencies.json** ファイルで宣言されているコンポーネントは、異なる場所に保存できます:
 
@@ -109,7 +109,7 @@ flowchart TB
 
 ... 上記の "myComponent1" と "myComponent2" は読み込むコンポーネントの名前です。
 
-デフォルトの (つまり、"myComponent1" と "myComponent2" が [environment4d.jsonファイル](#environment4djson) で宣言されていない) 場合、4D はコンポーネントのパッケージフォルダー (コンポーネントのプロジェクトルートフォルダーのこと) を 4Dプロジェクトのパッケージフォルダーと同じ階層に探します。例:
+By default, if "myComponent1" and "myComponent2" are not declared in an [**environment4d.json**](#environment4djson) file, 4D will look for the component's package folder (_i.e._ the project root folder of the component) at the same level as your 4D project's package folder, e.g.:
 
 ```
 	/MyProjectRoot/
@@ -120,7 +120,7 @@ flowchart TB
 
 :::note
 
-**dependencies.json** のアーキテクチャーを利用したくない場合は、[プロジェクトの **Components** フォルダー](architecture.md#components) にコンポーネントをコピーすることで、ローカルコンポーネントをインストールすることもできます。
+If you do not want to use the **dependencies.json** architecture, you can install local components by copying their files in the [**Components** folder of your project](architecture.md#components).
 
 :::
 
@@ -310,23 +310,30 @@ GitHub ではリリースを作成するときに、**タグ** と **バージ�
 - 4D Server では、**ウインドウ/プロジェクト依存関係** メニューアイテムを選択します。<br/>
   ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
-依存関係パネルが表示されます。 依存関係は ABC順にソートされます。
+The Dependencies panel is then displayed. 依存関係は ABC順にソートされます。
 
 ![dependency](../assets/en/Project/dependency.png)
 
-### 依存関係の追加と削除
+依存関係インターフェースでは、依存関係を管理することができます (4Dシングルユーザーと4D Server)。 You can add or remove **local** and **GitHub** dependencies.
 
-依存関係インターフェースでは、依存関係を管理することができます (4Dシングルユーザーと4D Server)。 次のことが可能です:
+### Adding a local dependency
 
-- ローカルな依存関係の追加 ([GitHub 上の依存関係](#github-に保存されたコンポーネント) は、インターフェースからは追加できません)
-- 依存関係の削除
+To add a local dependency, click on the **+** button in the footer area of the panel. 次のようなダイアログボックスが表示されます:
 
-#### 依存関係の追加
+![dependency-add](../assets/en/Project/dependency-add.png)
 
-依存関係パネルから依存関係を追加するには、パネルの **+** ボタンをクリックするか、 コンテキストメニューから **依存関係の追加...** を選択します。 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 **.4DBase** パッケージまたは [**.4DProject** ファイル](architecture.md#applicationname4dproject-ファイル) を選択できます。 選択された項目が有効でない場合は、エラーが表示されます。
+Make sure the **Local** tab is selected and click on the **...** button. 標準の "ファイルを開く" ダイアログボックスが表示され、追加するコンポーネントを選択できます。 You can select a [**.4DZ**](../Desktop/building.md#build-component) or a [**.4DProject**](architecture.md##applicationname4dproject-file) file.
 
-- プロジェクトパッケージフォルダーの隣 (デフォルトの場所) にあるコンポーネントを選択すると、[**dependencies.json**](#dependenciesjson)ファイル内で自動的に宣言されます。
-- プロジェクトのパッケージフォルダーの隣にないコンポーネントを選択した場合、そのコンポーネントは自動的に [**dependencies.json**](#dependenciesjson) ファイルで宣言され、そのパスも [**environment4d.json**](#environmen4djson) ファイルで宣言されます (注記参照)。 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。
+If the selected item is valid, its name and location are displayed in the dialog box.
+
+![dependency-selected](../assets/en/Project/local-selected.png)
+
+If the selected item is not valid, an error message is displayed.
+
+Click **Add** to add the dependency to the project.
+
+- If you select a component located next to the project package folder (default location), it is declared in the [**dependencies.json**](#dependenciesjson) file.
+- If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). 依存関係パネルでは、[相対パスまたは絶対パス](#相対パス-vs-絶対パス) のどちらを保存するか尋ねられます。
 
 :::note
 
@@ -334,11 +341,57 @@ GitHub ではリリースを作成するときに、**タグ** と **バージ�
 
 :::
 
-選択された依存関係は自動的に [非アクティブ依存関係リスト](#依存関係のステータス) に追加されます。 このコンポーネントはアプリケーションの再起動後にロードされます。
+The dependency is added to the [inactive dependency list](#dependency-status) with the **Available after restart** status. このコンポーネントはアプリケーションの再起動後にロードされます。
 
-#### 依存関係の削除
+### Adding a GitHub dependency
 
-依存関係パネルから依存関係を削除するには、対象の依存関係を選択し、パネルの **-** ボタンをクリックするか、コンテキストメニューから **依存関係の削除...** を選択します。 依存関係は複数選択することができ、その場合、操作は選択したすべての依存関係に適用されます。
+To add a [GitHub dependency](#components-stored-on-github), click on the **+** button in the footer area of the panel and select the **GitHub** tab.
+
+![dependency-add-git](../assets/en/Project/dependency-add-git.png)
+
+Enter the path of the GitHub repository of the dependency. It could be a **repository URL** or a **github-account/repository-name string**, for example:
+
+![dependency-add-git-2](../assets/en/Project/dependency-add-git-2.png)
+
+Once the connection is established, the GitHub icon ![dependency-gitlogo](../assets/en/Project/dependency-gitlogo.png) is displayed on the right side of the entry area. You can click on this icon to open the repository in your default browser.
+
+:::note
+
+If the component is stored on a [private GitHub repository](#private-repositories) and your personal token is missing, an error message is displayed and a  **Add a personal access token...** button is displayed (see [Providing your GitHub access token](#providing-your-github-access-token)).
+
+:::
+
+You can then define the [tag or version](#tags-and-versions) option for the dependency:
+
+![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
+
+- **Latest**: Selected by default and allows to download the release that is tagged as the latest (stable) version.
+- **Up to Next Major Version**: Define a [semantic version range](#tags-and-versions) to restrict updates to the next major version.
+- **Up to Next Minor Version**: Similarly, restrict updates to the next minor version.
+- **Exact Version (Tag)**: Select or manually enter a [specific tag](#tags-and-versions) from the available list.
+
+Click on the **Add** button to add the dependency to the project.
+
+The GitHub dependency declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. このコンポーネントはアプリケーションの再起動後にロードされます。
+
+#### Providing your GitHub access token
+
+If the component is stored on a [private GitHub repository](#private-repositories), you need to provide your personal access token to the Dependency manager. To do this, you can either:
+
+- click on **Add a personal access token...** button that is displayed in the "Add a dependency" dialog box after you entered a private GitHub repository path.
+- or, select **Add a GitHub personal access token...** in the Dependency manager menu at any moment.
+
+![dependency-add-token](../assets/en/Project/dependency-add-token.png)
+
+You can then enter your personal access token:
+
+![dependency-add-token-2](../assets/en/Project/dependency-add-token-2.png)
+
+You can only enter one personal access token. Once a token has been entered, you can edit it.
+
+### 依存関係の削除
+
+To remove a dependency from the Dependencies panel, select the dependency to remove and click on the **-** button of the panel or select **Remove the dependency...** from the contextual menu. 依存関係は複数選択することができ、その場合、操作は選択したすべての依存関係に適用されます。
 
 :::note
 
@@ -350,9 +403,7 @@ GitHub ではリリースを作成するときに、**タグ** と **バージ�
 
 ![dependency-remove](../assets/en/Project/remove-comp.png)
 
-ダイアログボックスを確定すると、削除された依存関係には "再起動時にアンロード" フラグが自動的に付きます。 このコンポーネントはアプリケーションの再起動時にアンロードされます。
-
-![status-unload](../assets/en/Project/status-unload.png)
+If you confirm the dialog box, the removed dependency [status](#dependency-status) is automatically flagged "Unload after restart". このコンポーネントはアプリケーションの再起動時にアンロードされます。
 
 ### 依存関係のオリジン
 
@@ -409,6 +460,8 @@ GitHub ではリリースを作成するときに、**タグ** と **バージ�
 - **Not found**: dependencies.jsonファイルで依存関係が宣言されていますが、見つかりません。
 - **Inactive**: プロジェクトと互換性がないため、依存関係は読み込まれていません (例: 現在のプラットフォーム用にコンポーネントがコンパイルされていない、など)。
 - **Duplicated**: 依存関係は読み込まれていません。同じ名前を持つ別の依存関係が同じ場所に存在し、すでに読み込まれています。
+- **Available after restart**: The dependency reference has just been added [using the interface](#monitoring-project-dependencies), it will be loaded once the application restarts.
+- **Unloaded after restart**: The dependency reference has just been removed [using the interface](#removing-a-dependency), it will be unloaded once the application restarts.
 
 依存関係の行にマウスオーバーするとツールチップが表示され、ステータスに関する追加の情報を提供します:
 

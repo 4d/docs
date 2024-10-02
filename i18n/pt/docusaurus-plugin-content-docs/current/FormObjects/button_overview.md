@@ -234,7 +234,7 @@ As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas 
 
 ![](../assets/en/FormObjects/button_officexp.png)
 
-- _macOS_ - su fondo se muestra siempre.
+- _macOS_ - its background is always displayed.
 
 #### JSON Exemplo
 

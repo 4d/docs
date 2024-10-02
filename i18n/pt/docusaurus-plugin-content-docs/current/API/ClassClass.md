@@ -7,14 +7,37 @@ Quando uma classe de usuário é [defined] (Concepts/classes.md#class-definition
 
 ### Resumo
 
-|                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #ClassClass.isShared.Syntax -->](#isshared)<br/><!-- INCLUDE #ClassClass.isShared.Summary -->          |
-| [<!-- INCLUDE #ClassClass.isSingleton.Syntax -->](#issingleton)<br/><!-- INCLUDE #ClassClass.isSingleton.Summary --> |
-| [<!-- INCLUDE #ClassClass.me.Syntax -->](#me)<br/><!-- INCLUDE #ClassClass.me.Summary -->                            |
-| [<!-- INCLUDE #ClassClass.name.Syntax -->](#name)<br/><!-- INCLUDE #ClassClass.name.Summary -->                      |
-| [<!-- INCLUDE #ClassClass.new().Syntax -->](#new)<br/><!-- INCLUDE #ClassClass.new().Summary -->                     |
-| [<!-- INCLUDE #ClassClass.superclass.Syntax -->](#superclass)<br/><!-- INCLUDE #ClassClass.superclass.Summary -->    |
+|                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #ClassClass.isSessionSingleton.Syntax -->](#issessionsingleton)<br/><!-- INCLUDE #ClassClass.isSessionSingleton.Summary --> |
+| [<!-- INCLUDE #ClassClass.isShared.Syntax -->](#isshared)<br/><!-- INCLUDE #ClassClass.isShared.Summary -->                               |
+| [<!-- INCLUDE #ClassClass.isSingleton.Syntax -->](#issingleton)<br/><!-- INCLUDE #ClassClass.isSingleton.Summary -->                      |
+| [<!-- INCLUDE #ClassClass.me.Syntax -->](#me)<br/><!-- INCLUDE #ClassClass.me.Summary -->                                                 |
+| [<!-- INCLUDE #ClassClass.name.Syntax -->](#name)<br/><!-- INCLUDE #ClassClass.name.Summary -->                                           |
+| [<!-- INCLUDE #ClassClass.new().Syntax -->](#new)<br/><!-- INCLUDE #ClassClass.new().Summary -->                                          |
+| [<!-- INCLUDE #ClassClass.superclass.Syntax -->](#superclass)<br/><!-- INCLUDE #ClassClass.superclass.Summary -->                         |
+
+<!-- REF ClassClass.isSessionSingleton.Desc -->
+
+## .isSessionSingleton
+
+<details><summary>História</summary>
+
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20 R7   | Adicionado |
+
+</details>
+
+<!-- REF #ClassClass.isSessionSingleton.Syntax -->**.isSessionSingleton** : Boolean<!-- END REF -->
+
+#### Descrição
+
+The `.isSessionSingleton` property <!-- REF #ClassClass.isSessionSingleton.Summary -->returns `true` if the user class has been defined as a [session singleton class](../Concepts/classes.md#singleton-classes)<!-- END REF -->, and `false` otherwise.
+
+Essa propriedade é **somente leitura**.
+
+<!-- END REF -->
 
 <!-- REF ClassClass.isShared.Desc -->
 

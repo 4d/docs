@@ -150,6 +150,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 - [`new()`](API/ClassClass.md#new) 関数 (Class オブジェクトをインスタンス化します)
 - [`isShared`](API/ClassClass.md#isshared) プロパティ (クラスが [共有](#共有クラス)されている場合に true)
 - [`isSingleton`](API/ClassClass.md#issingleton) プロパティ ([シングルトン](#シングルトンクラス)の場合に true)
+- [`isSectionSingleton`](API/ClassClass.md#issectionsingleton) property, true if the class defines a [session singleton](#singleton-classes).
 - [`me`](API/ClassClass.md#me) プロパティ ([シングルトン](シングルトンクラス) をインスタンス化および取得します)
 
 また、Class オブジェクトは [`constructor`](#class-constructor) オブジェクトを参照することも可能です (任意)。
@@ -195,7 +196,7 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 
 :::tip
 
-アンダースコア ("_") 文字で関数名を開始すると、その関数は 4Dコードエディターの自動補完機能から除外されます。 たとえば、`MyClass` に `Function _myPrivateFunction` を宣言した場合、コードエディターにおいて `"cs.MyClass "`.
+アンダースコア ("_") 文字で関数名を開始すると、その関数は 4Dコードエディターの自動補完機能から除外されます。 たとえば、`MyClass` に `Function _myPrivateFunction` を宣言した場合、コードエディターにおいて `"cs.MyClass."` とタイプしても、この関数は候補として提示されません 。
 
 :::
 
@@ -310,9 +311,9 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 #### シンタックス
 
 ```4d
-// クラス: MyClass
-{shared} {singleton} Class Constructor({$parameterName : type; ...})
-// コード
+// Class: MyClass
+{shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
+// code
 ```
 
 クラスコンストラクター関数を使って、ユーザークラスのオブジェクトを生成・初期化することができます。 このコンストラクターは任意の [引数](#引数) を受け取ることができます。
@@ -325,7 +326,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 `shared` キーワードを使うと **共有クラス** が作成されます。共有クラスは、共有オブジェクトのインスタンス化にのみ使われます。 詳細については、後述の [共有クラス](#共有クラス) の項目を参照ください。
 
-`singleton` キーワードを使うと **シングルトン** が作成されます。シングルトンクラスは、クラスインスタンスを一つに限定する場合に使われます。 詳細については、後述の [シングルトンクラス](#シングルトンクラス) の項目を参照ください。
+Using the `singleton` keyword creates a **singleton**, used to create a single instance of the class. A `session singleton` creates a single instance per session. 詳細については、後述の [シングルトンクラス](#シングルトンクラス) の項目を参照ください。
 
 #### 例題
 
@@ -591,10 +592,11 @@ Class constructor ($side : Integer)
 
 <!-- REF #_command_.Super.Params -->
 
-| 引数    | 型      |                             | 説明               |
-| ----- | ------ | --------------------------- | ---------------- |
-| param | any    | ->                          | 親コンストラクターに受け渡す引数 |
-| 戻り値   | オブジェクト | <- | 親オブジェクト          |
+|Parameter|Type||Description|
+
+\|---|---|---|---|
+|param|any|->|Parameter(s) to pass to the parent constructor|
+|Result|Object|<-|Object's parent|
 
 <!-- END REF -->
 
@@ -722,12 +724,13 @@ $val:=$o.f() //42
 [クラスコンストラクター](#class-constructor) 関数が [`new()`](API/ClassClass.md#new) 関数により使用された場合、その内部の `This` はインスタンス化される新規オブジェクトを指します。
 
 ```4d
-// クラス: ob
+//Class: ob
 
 Class Constructor  
 
- // This のプロパティを
- // 代入によって作成します
+ // Create properties on This as
+ // desired by assigning to them
+
  This.a:=42
 ```
 
@@ -833,25 +836,17 @@ shared Function Bar($value : Integer)
 
 ## シングルトンクラス
 
-**シングルトンクラス** とは、インスタンスを一つのみ作成するユーザークラスです。 シングルトンに関する詳細については、[シングルトンに関する Wikipedia のページ](https://ja.wikipedia.org/wiki/Singleton_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3) を参照ください。 シングルトンは、それがインスタンス化されたプロセスにおいて一意のインスタンスを持ち、_共有_ シングルトンは、そのマシン上のすべてのプロセスにおいて一意のインスタンスを持ちます。 アプリケーションやプロセス内のどこからでも利用可能な値を定義するのにシングルトンは便利です。
+**シングルトンクラス** とは、インスタンスを一つのみ作成するユーザークラスです。 For more information on the concept of singletons, please see the [Wikipedia page about singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
 
-クラスのシングルトンは、初回の [`cs.<class>.me`](../API/ClassClass.md#me) プロパティの呼び出し時にインスタンス化されます。 インスタンス化されたクラスのシングルトンはその後、[`me`](../API/ClassClass.md#me) プロパティの使用により常に返されます。
+### Singletons types
 
-シングルトンを引数付きでインスタンス化する必要がある場合には、[`new()`](../API/ClassClass.md#new) 関数を呼び出すこともできます。 この場合、アプリケーションの起動時に実行されるコードでシングルトンをインスタンス化することが推奨されます。
+4D supports three types of singletons:
 
-クラスがシングルトンクラスかどうかは、Classオブジェクトの .[`.isSingleton`](../API/ClassClass.md#issingleton)プロパティで確認できます。
+- a **process singleton** has a unique instance for the process in which it is instantiated,
+- a **shared singleton** has a unique instance for all processes on the machine.
+- a **session singleton** is a shared singleton but with a unique instance for all processes in the [session](../API/SessionClass.md). Session singletons are shared within an entire session but vary between sessions. In the context of a client-server or a web application, session singletons make it possible to create and use a different instance for each session, and therefore for each user.
 
-### スコープ
-
-シングルトンインスタンスのスコープは、それがインスタンス化されたプロセスで、_共有_ シングルトンの場合はそのマシン上のすべてのプロセスです。
-
-| シングルトンが作成された場所 | 共有されていない場合のスコープ                                                            | 共有されている場合のスコープ |
-| -------------- | -------------------------------------------------------------------------- | -------------- |
-| 4D シングルユーザー    | プロセス                                                                       | アプリケーション       |
-| 4D Server      | プロセス                                                                       | 4D Server のマシン |
-| 4Dリモートモード      | プロセス (_注意_: シングルトンは "双子" プロセス間で同期されません) | 4Dリモートのマシン     |
-
-インスタンス化されると、シングルトンクラス (およびそのシングルトン) は、マシン上で実行中のアプリケーション内に参照が存在する限り存在し続けます。
+Singletons are useful to define values that need to be available from anywhere in an application, a session, or a process.
 
 :::info
 
@@ -859,9 +854,41 @@ shared Function Bar($value : Integer)
 
 :::
 
-### シングルトンの作成
+The following table indicates the scope of a singleton instance depending on where it was created:
 
-シングルトンクラスを作成するには、[`Class Constructor`](#class-constructor) の前に `singleton` キーワードを追加します。 例:
+| シングルトンが作成された場所     | Scope of process singleton                                                 | Scope of shared singleton | Scope of session singleton                                            |
+| ------------------ | -------------------------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------- |
+| **4D single-user** | プロセス                                                                       | アプリケーション                  | Application or Web/REST session                                       |
+| **4D Server**      | プロセス                                                                       | 4D Server のマシン            | Client/server session or Web/REST session or Stored procedure session |
+| **4D remote mode** | プロセス (_注意_: シングルトンは "双子" プロセス間で同期されません) | 4Dリモートのマシン                | 4D remote machine or Web/REST session                                 |
+
+インスタンス化されると、シングルトンクラス (およびそのシングルトン) は、マシン上で実行中のアプリケーション内に参照が存在する限り存在し続けます。
+
+### Creating and using singletons
+
+You declare singleton classes by adding appropriate keyword(s) before the [`Class constructor`](#class-constructor):
+
+- To declare a (process) singleton class, write `singleton Class Constructor()`.
+- To declare a shared singleton class, write `shared singleton Class constructor()`.
+- To declare a session singleton class, write `session singleton Class constructor()`.
+
+:::note
+
+Session singletons are automatically shared singletons (there's no need to use the `shared` keyword in the class constructor).
+
+:::
+
+クラスのシングルトンは、初回の [`cs.<class>.me`](../API/ClassClass.md#me) プロパティの呼び出し時にインスタンス化されます。 インスタンス化されたクラスのシングルトンはその後、[`me`](../API/ClassClass.md#me) プロパティの使用により常に返されます。
+
+シングルトンを引数付きでインスタンス化する必要がある場合には、[`new()`](../API/ClassClass.md#new) 関数を呼び出すこともできます。 この場合、アプリケーションの起動時に実行されるコードでシングルトンをインスタンス化することが推奨されます。
+
+クラスがシングルトンクラスかどうかは、Classオブジェクトの .[`.isSingleton`](../API/ClassClass.md#issingleton)プロパティで確認できます。
+
+The [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) property of Class objects allows to know if the class is a session singleton.
+
+### 例題
+
+#### Process singleton
 
 ```4d
 // クラス: ProcessTag
@@ -890,9 +917,7 @@ var $myOtherSingleton := cs.ProcessTag.me
     // $myOtherSingleton.tag = 14856
 ```
 
-### 共有シングルトンの作成
-
-マシン上の全プロセスで共有されるシングルトンを作成するには、[Class Constructor](#class-constructor) の前に `shared singleton` キーワードを追加します。 例:
+#### Shared singleton
 
 ```4d
 // クラス: VehicleFactory
@@ -927,6 +952,30 @@ $vehicle:=cs.VehicleFactory.me.buildVehicle("トラック")
 
 _buildVehicle()_ 関数は (`This.vehicleBuilt` をインクリメントして) **cs.VehicleFactory** シングルトンを変更するので、`shared` キーワードを使う必要があります。
 
+#### Session singleton
+
+In an inventory application, you want to implement an item inventory using session singletons.
+
+```4d
+//class ItemInventory
+
+property itemList : Collection:=[]
+
+session singleton Class constructor()
+
+shared function addItem($item:object)
+    This.itemList.push($item)
+```
+
+By defining the ItemInventory class as a session singleton, you make sure that every session and therefore every user has their own inventory. Accessing the user's inventory is as simple as:
+
+```4d
+//in a user session
+$myList := cs.ItemInventory.me.itemList
+//current user's item list
+
+```
+
 #### 参照
 
-詳細に関しては、[このブログ記事](https://blog.4d.com/ja/singleton) を参照ください。
+[Singletons in 4D](https://blog.4d.com/singletons-in-4d) (blog post) <br/> [Session Singletons](https://blog.4d.com/introducing-session-singletons) (blog post).

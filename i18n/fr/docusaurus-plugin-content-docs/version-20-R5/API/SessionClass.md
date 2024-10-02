@@ -3,7 +3,7 @@ id: SessionClass
 title: Session
 ---
 
-Les objets de session sont retournés par la commande [`Session`](#session). Ces objets fournissent au développeur une interface permettant de gérer la session utilisateur courante et d'exécuter des actions telles que le stockage de données contextuelles, le partage d'informations entre les process de la session, le lancement de process préemptifs liés à la session ou (uniquement pour le web) la gestion des [privilèges](.../ORDA/privileges.md).
+Les objets de session sont retournés par la commande [`Session`](#session). Ces objets fournissent au développeur une interface permettant de gérer la session utilisateur courante et d'exécuter des actions telles que le stockage de données contextuelles, le partage d'informations entre les process de la session, le lancement de process préemptifs liés à la session ou (uniquement pour le web) la gestion des [privilèges](../ORDA/privileges.md).
 
 ### Types de sessions
 

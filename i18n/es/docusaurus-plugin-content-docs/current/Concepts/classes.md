@@ -150,6 +150,7 @@ Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el
 - función [`new()`](API/ClassClass.md#new), que permite instanciar objetos de clase
 - propiedad [`isShared`](API/ClassClass.md#isshared), true si la clase es [compartida](#clases-compartidas)
 - propiedad [`isSingleton`](API/ClassClass.md#issingleton), verdadero si la clase define una [clase singleton](#singleton-classes).
+- [`isSectionSingleton`](API/ClassClass.md#issectionsingleton) property, true if the class defines a [session singleton](#singleton-classes).
 - Propiedad [`me`](API/ClassClass.md#me), que permite instanciar y acceder a [singletons](#singleton-classes).
 
 Además, un objeto clase puede hacer referencia a un objeto [`constructor`](#class-constructor) (opcional).
@@ -311,7 +312,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 ```4d
 // Class: MyClass
-{shared} {singleton} Class Constructor({$parameterName : type; ...})
+{shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
 // code
 ```
 
@@ -325,7 +326,7 @@ Puede crear y escribir propiedades de instancia dentro del constructor (ver ejem
 
 Utilizando la palabra clave `shared` se crea una **clase compartida**, utilizada para instanciar únicamente objetos compartidos. Para obtener más información, consulte el párrafo [Clases compartidas](#shared-classes).
 
-Utilizando la palabra clave `singleton` se crea un **singleton**, utilizado para crear una única instancia. Para obtener más información, consulte el párrafo [Clases singleton](#singleton-classes).
+Using the `singleton` keyword creates a **singleton**, used to create a single instance of the class. A `session singleton` creates a single instance per session. Para obtener más información, consulte el párrafo [Clases singleton](#singleton-classes).
 
 #### Ejemplo
 
@@ -590,10 +591,11 @@ Llama al constructor de la clase padre con las longitudes
 
 <!-- REF #_command_.Super.Params -->
 
-| Parámetros | Tipo   |                             | Descripción                                                              |
-| ---------- | ------ | --------------------------- | ------------------------------------------------------------------------ |
-| param      | any    | ->                          | Parámetro(s) a pasar al constructor de la clase padre |
-| Result     | Object | <- | Padre del objeto                                                         |
+|Parameter|Type||Description|
+
+\|---|---|---|---|
+|param|any|->|Parameter(s) to pass to the parent constructor|
+|Result|Object|<-|Object's parent|
 
 <!-- END REF -->
 
@@ -725,9 +727,10 @@ Cuando se utiliza una [función constructora de clase](#class-constructor) (con 
 
 Class Constructor  
 
-    // Crear las propiedades en This 
-    // asignándolas
-    This.a:=42
+ // Create properties on This as
+ // desired by assigning to them
+
+ This.a:=42
 ```
 
 ```4d
@@ -832,25 +835,17 @@ Si se utiliza la palabra clave `shared` en una clase usuario no compartida, se i
 
 ## Clases Singleton
 
-Una **clase singleton** es una clase usuario que sólo produce una única instancia. Para más información sobre los singletons, por favor consulte la [página Wikipedia sobre los singletons](https://en.wikipedia.org/wiki/Singleton_pattern). Un singleton tiene una instancia única para el proceso en el que se instancia, mientras que un _singleton compartido_ tiene una instancia única para todos los procesos en la máquina. Los singletons son útiles para definir los valores que necesitan estar disponibles desde cualquier parte de una aplicación o proceso.
+Una **clase singleton** es una clase usuario que sólo produce una única instancia. For more information on the concept of singletons, please see the [Wikipedia page about singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
 
-La clase singleton está instanciada en la primera llamada de la propiedad [`cs.<class>.me`](../API/ClassClass.md#me). El singleton instanciado de la clase se devuelve siempre cuando se utiliza la propiedad [`me`](../API/ClassClass.md#me).
+### Singletons types
 
-Si necesita instanciar un singleton con parámetros, también puede llamar la función [`new()`](../API/ClassClass.md#new). En este caso, se recomienda instanciar el singleton en algún código ejecutado al inicio de la aplicación.
+4D supports three types of singletons:
 
-La propiedad [`isSingleton`](../API/ClassClass.md#issingleton) de los objetos Clase permite saber si la clase es un singleton.
+- a **process singleton** has a unique instance for the process in which it is instantiated,
+- a **shared singleton** has a unique instance for all processes on the machine.
+- a **session singleton** is a shared singleton but with a unique instance for all processes in the [session](../API/SessionClass.md). Session singletons are shared within an entire session but vary between sessions. In the context of a client-server or a web application, session singletons make it possible to create and use a different instance for each session, and therefore for each user.
 
-### Alcance
-
-El alcance de una instancia singleton puede ser el proceso donde se instancia o todos los procesos en la máquina, dependiendo de su propiedad _compartida_.
-
-| Singleton creado en | Alcance si no se comparte                                                                                       | Alcance si se comparte |
-| ------------------- | --------------------------------------------------------------------------------------------------------------- | ---------------------- |
-| 4D monopuesto       | Proceso                                                                                                         | Aplicación             |
-| 4D Server           | Proceso                                                                                                         | Máquina 4D Server      |
-| Modo remoto 4D      | Proceso (_nota_: los singletons no están sincronizados en el proceso gemelo) | Máquina remota 4D      |
-
-Una vez instanciado, existe una clase singleton (y su singleton) siempre que exista una referencia a ella en algún lugar de la aplicación que se ejecuta en la máquina.
+Singletons are useful to define values that need to be available from anywhere in an application, a session, or a process.
 
 :::info
 
@@ -858,9 +853,41 @@ Las clases Singleton no están soportadas por las [clases ORDA](../ORDA/ordaClas
 
 :::
 
-### Creación de un singleton
+The following table indicates the scope of a singleton instance depending on where it was created:
 
-Para crear una clase singleton, añada la palabra clave `singleton` antes del [`Class Constructor`](#class-constructor). Por ejemplo:
+| Singleton creado en | Scope of process singleton                                                                                      | Scope of shared singleton | Scope of session singleton                                            |
+| ------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------- |
+| **4D single-user**  | Proceso                                                                                                         | Aplicación                | Application or Web/REST session                                       |
+| **4D Server**       | Proceso                                                                                                         | Máquina 4D Server         | Client/server session or Web/REST session or Stored procedure session |
+| **4D remote mode**  | Proceso (_nota_: los singletons no están sincronizados en el proceso gemelo) | Máquina remota 4D         | 4D remote machine or Web/REST session                                 |
+
+Una vez instanciado, existe una clase singleton (y su singleton) siempre que exista una referencia a ella en algún lugar de la aplicación que se ejecuta en la máquina.
+
+### Creating and using singletons
+
+You declare singleton classes by adding appropriate keyword(s) before the [`Class constructor`](#class-constructor):
+
+- To declare a (process) singleton class, write `singleton Class Constructor()`.
+- To declare a shared singleton class, write `shared singleton Class constructor()`.
+- To declare a session singleton class, write `session singleton Class constructor()`.
+
+:::note
+
+Session singletons are automatically shared singletons (there's no need to use the `shared` keyword in the class constructor).
+
+:::
+
+La clase singleton está instanciada en la primera llamada de la propiedad [`cs.<class>.me`](../API/ClassClass.md#me). El singleton instanciado de la clase se devuelve siempre cuando se utiliza la propiedad [`me`](../API/ClassClass.md#me).
+
+Si necesita instanciar un singleton con parámetros, también puede llamar la función [`new()`](../API/ClassClass.md#new). En este caso, se recomienda instanciar el singleton en algún código ejecutado al inicio de la aplicación.
+
+La propiedad [`isSingleton`](../API/ClassClass.md#issingleton) de los objetos Clase permite saber si la clase es un singleton.
+
+The [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) property of Class objects allows to know if the class is a session singleton.
+
+### Ejemplos
+
+#### Process singleton
 
 ```4d
 	//class: ProcessTag
@@ -889,9 +916,7 @@ var $myOtherSingleton := cs.ProcessTag.me
 	//$myOtherSingleton.tag = 14856
 ```
 
-### Creación de un singleton compartido
-
-Para crear un singleton compartido por todos los procesos en la máquina, añada las palabras clave `shared singleton` antes del [Class Constructor](#class-constructor). Por ejemplo:
+#### Shared singleton
 
 ```4d
 //Class VehicleFactory
@@ -926,6 +951,30 @@ $vehicle:=cs.VehicleFactory.me.buildVehicle("truck")
 
 Dado que la función _buildVehicle()_ modifica el singleton **cs.VehicleFactory** (incrementando `This.vehicleBuilt`), debe agregar la palabra clave `shared`.
 
+#### Session singleton
+
+In an inventory application, you want to implement an item inventory using session singletons.
+
+```4d
+//class ItemInventory
+
+property itemList : Collection:=[]
+
+session singleton Class constructor()
+
+shared function addItem($item:object)
+    This.itemList.push($item)
+```
+
+By defining the ItemInventory class as a session singleton, you make sure that every session and therefore every user has their own inventory. Accessing the user's inventory is as simple as:
+
+```4d
+//in a user session
+$myList := cs.ItemInventory.me.itemList
+//current user's item list
+
+```
+
 #### Ver también
 
-Ver también [esta entrada de blog](https://blog.4d.com/singleton) para más detalles.
+[Singletons in 4D](https://blog.4d.com/singletons-in-4d) (blog post) <br/> [Session Singletons](https://blog.4d.com/introducing-session-singletons) (blog post).
