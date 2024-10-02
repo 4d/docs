@@ -15,8 +15,8 @@ The `On Drag Over` event is repeatedly sent to the destination object when the m
 - Get the data and signatures found in the pasteboard (via the `GET PASTEBOARD DATA` command).
 - Depending on the nature and type of data in the pasteboard, you **accept** or **reject** the drag and drop.
 
-To **accept** the drag, the destination object method must return 0 (zero), so you write `$result:=0` or just return a default integer value.
-To **reject** the drag, the object method must return -1 (minus one), so you write `$result:=-1` or `return -1`.
+To **accept** the drag, the destination object method must return 0 (zero).
+To **reject** the drag, the object method must return -1 (minus one).
 During an `On Drag Over` event, 4D treats the object method as a function. If no result is returned, 4D assumes that the drag is accepted.
 
 If you accept the drag, the destination object is highlighted. If you reject the drag, the destination is not highlighted. Accepting the drag does not mean that the dragged data is going to be inserted into the destination object. It only means that if the mouse button was released at this point, the destination object would accept the dragged data and the [`On Drop`](onDrop.md) event would be fired.
@@ -36,7 +36,7 @@ The code handling an `On Drag Over` event should be short and execute quickly, b
     //returns 0 by default
     ...
     If($DataType=Is picture)
-       Return -1
+       return -1
     End if
     ...
  End if

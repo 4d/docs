@@ -149,7 +149,7 @@ In converted projects, it is recommended to [enable the direct typing mode](#ena
 
 :::info
 
-Selecting the direct typing mode is only required (if desired) in converted projects. It is natively used in projects created with 4D 20 R7 and higher. 
+The direct typing mode is optional in converted projects only. It is natively used in projects created with 4D 20 R7 and higher. 
 
 :::
 
