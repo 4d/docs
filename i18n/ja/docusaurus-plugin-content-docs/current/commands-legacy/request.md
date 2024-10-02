@@ -62,7 +62,6 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict4225137.en.png)
 
-![](../assets/en/commands/pict25507.ja.png)
 
 #### 例題 3 
 
@@ -76,7 +75,6 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict4225146.en.png)
 
-![](../assets/en/commands/pict25508.ja.png)
 
 #### 参照 
 
