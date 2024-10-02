@@ -4,9 +4,9 @@ title: OutGoingMessage
 ---
 
 
-The `OutGoingMessageClass` class allows you to handle [messages returned by your application] in response to `HTTP GET` requests processed by your custom HTTP handler. Such requests are used, for example, to implement file downloading feature.
+The `OutGoingMessageClass` class allows you to handle [messages returned by your application] in response to `HTTP GET` requests processed by functions declared using the [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keyword. Such requests are used, for example, to implement file downloading feature.
 
-An instance of this class is built on 4D Server and sent to the browser by the [4D REST Server].
+An instance of this class is built on 4D Server and sent to the browser by the [4D REST Server](../REST/gettingStarted.md).
 
 If the response is of type OutgoingMessage, the REST server does not return an object but the object instance of the OutgoingMessage class
 
