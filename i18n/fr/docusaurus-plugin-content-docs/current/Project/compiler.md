@@ -59,15 +59,11 @@ Le contrôle syntaxique peut également être lancé directement à l'aide de la
 
 ### Générer le typage
 
-Le bouton **Générer le typage** crée ou met à jour les méthodes de typage du compilateur. Les méthodes de typage sont des méthodes projet qui regroupent toutes les déclarations de variables et de tableaux (process et interprocess), ainsi que les [paramètres de méthodes déclarés en dehors des prototypes](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). Ces méthodes, lorsqu'elles existent, sont utilisées directement par le compilateur lors de la compilation du code, ce qui permet d'accélérer les durées de compilation.
+:::info Compatibilité
 
-Le nom de ces méthodes doit commencer par `Compiler_`. Vous pouvez définir le nom par défaut de chacune des 5 méthodes du compilateur dans [la fenêtre des paramètres du compilateur](#compiler-methods-for). Les méthodes de compilation qui sont générées et gérées par 4D ont automatiquement l'attribut `Invisible` :
+This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. For information about this button, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#generate-typing).
 
-![](../assets/en/Project/compilerWin3.png)
-
-Seules les méthodes de compilation nécessaires (c'est-à-dire celles pour lesquelles des éléments existent déjà dans le projet) sont générées.
-
-La zone d'information indique toute erreur trouvée lors de la création ou de la mise à jour de la méthode. Un double-clic sur une ligne d'erreur entraîne l'affichage de la méthode et de la ligne concernées dans l'éditeur de code.
+:::
 
 ### Effacer le code compilé
 
@@ -103,20 +99,6 @@ Permet de générer le fichier de symboles (voir [fichier de symboles](#symbol-f
 
 Permet de générer le fichier d'erreurs (voir [fichier d'erreurs](#fichier-derreurs)) au moment du contrôle syntaxique. Le fichier d'erreur est créé dans le [dossier Logs](Project/architecture.md#logs) du projet et est nommé `ProjectName_errors.xml`.
 
-#### Chemin de compilation
-
-Permet de définir le nombre de passes (analyse du code) effectuées par le compilateur et donc la durée de la compilation.
-
-- **Effectuer les passes de typage** : Cochez cette option si vous voulez que le compilateur déduise le type des variables et des paramètres dans votre code. Cette option nécessite que le compilateur exécute toutes les étapes qui rendent possible la compilation, ce qui augmente la durée de la compilation.
-- **Les variables process et interprocess sont typées** : la passe de typage des variables process et interprocess ainsi que des paramètres des méthodes déclarés en dehors des prototypes n'est pas effectuée. Cette option peut être utilisée lorsque vous avez déjà effectué le typage de toutes vos variables process et interprocess soit vous-même, soit en utilisant la fonction de génération automatique des méthodes compilateur.
-- **Toutes les variables sont typées** : la passe de typage des variables locales, process et interprocess ainsi que des paramètres des méthodes déclarés en dehors des prototypes n'est pas effectuée. Utilisez cette option lorsque vous êtes certain que toutes les variables process, interprocess et locales ainsi que les paramètres des méthodes ont été typés sans ambiguïté.
-
-:::tip
-
-Vous pouvez utiliser le bouton [Générer typage](#generate-typing) puis compiler avec l'une des deux dernières options.
-
-:::
-
 #### Cible de compilation
 
 <details><summary>Historique</summary>
@@ -141,26 +123,32 @@ Deux options de cible sont proposées. Le résultat dépend du processeur de la 
 
 > La cible de compilation Apple Silicon nécessite que l'application **Clang** soit installée sur votre machine. Clang est fournie avec la dernière version de Xcode. Voir les [pré-requis du compilateur Silicon](#requirements) pour plus d'informations.
 
-### Typage par défaut
+### Additional options (Compatibility)
 
-Utilisez cette zone pour définir le type par défaut pour les objets de base de données ambigus.
+In projects converted from 4D versions prior to 20 R7, additional compilation options are available:
 
-- **Numérique** : Permet de forcer le typage numérique de manière non ambiguë, soit en Réel, soit en Entier long. Ceci ne remplacera pas les directives que vous avez pu définir dans votre projet. Vous pouvez optimiser le fonctionnement de votre base de données en choisissant le type Entier long.
-- **Bouton** : Utilisé pour forcer le typage d'un bouton de manière non ambiguë, soit en Réel, soit en Entier long. Ceci ne remplacera pas les directives que vous avez pu définir dans votre projet. Ce type s'applique aux boutons ainsi qu'aux cases à cocher, aux boutons image, aux grilles de boutons, aux pop-up menus image et aux listes déroulantes.
+- **Compilation Path**
+- **Default typing**
+- **Compiler Methods for...**
 
-### Méthodes Compilateur pour...
+These options are only maintained for compatibility with legacy code. For more information, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#compiler-settings).
 
-Cette zone vous permet de renommer les méthodes du compilateur qui sont générées automatiquement par le compilateur lorsque vous cliquez sur [Générer le typage](#générer-le-typage).
+In converted projects, it is recommended to [enable the direct typing mode](#enabling-direct-typing) and to write compliant declaration code, i.e.:
 
-Jusqu'à 5 méthodes de compilateur peuvent être générées ; une méthode de compilateur n'est générée que si le projet contient les éléments suivants :
+- declare explicitely all variables [using `var` keywords](../Concepts/variables.md#declaring-variables)
+- declare explicitely all parameters in function prototypes (i.e. using the `Function` or `Class Constructor` keywords) or with `#DECLARE` keywords in methods (see [Declaring parameters](../Concepts/parameters.md#declaring-parameters).
 
-- **Variables** : Regroupe les déclarations de variables process ;
-- **Variables interprocess** : Regroupe les déclarations de variables interprocess ;
-- **Tableaux** : Regroupe les déclarations de tableaux de process ;
-- **Tableaux interprocess** : Regroupe les déclarations de tableaux interprocess ;
-- **Méthodes** : Regroupe les déclarations de paramètres des méthodes (par exemple `C_LONGINT(mymethod;$1;$2)`) pour les [paramètres des méthodes déclarés hors prototypes](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). Pour plus d'informations, voir [Méthode `Compiler_Methods`](../Concepts/parameters.md#méthode-compiler_methods).
+#### Enabling direct typing
 
-Vous pouvez renommer chacune de ces méthodes dans les zones correspondantes, mais elles seront toujours précédées du libellé `Compiler_` (non modifiable). Le nom de chaque méthode (préfixe compris) ne doit pas comporter plus de 31 caractères. Il doit également être unique et respecter les [règles 4D de nommage des méthodes](Concepts/identifiers.md#méthodes-projet).
+:::info
+
+The direct typing mode is optional in converted projects only. It is natively used in projects created with 4D 20 R7 and higher.
+
+:::
+
+Select **All variables are typed (Direct typing)** option in the **Compilation Path** menu to enable the direct typing mode. When this option is selected, other compatibility options become useless and are no longer displayed.
+
+Using this option is recommended since it provides flexibility and efficiency. The direct typing concept assumes that all elements are directly declared where they are defined in your code. You just have to make sure that all your variables are declared using the regular [`var` syntax](../Concepts/variables.md#declaring-variables) and that your method and function parameters are declared [in their prototypes](../Concepts/parameters.md) (the [Check Syntax](#check-syntax) feature can help you detecting missing or invalid declarations).
 
 ## Warnings
 
