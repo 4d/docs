@@ -16,9 +16,9 @@ title: VP EXPORT TO BLOB
 
 #### Description
 
-The `VP EXPORT TO BLOB` command <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->exports the *vpAreaName* 4D View Pro document in a 4D.Blob according to the *paramObj* options.<!-- END REF --> The exported blob is available through the export callback. Exporting and importing 4D View Pro areas as blobs is fast and memory-efficient.
+La commande `VP EXPORT TO BLOB` <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->exporte le document 4D View Pro *vpAreaName* dans un 4D.Blob en fonction des options *paramObj*.<!-- END REF --> Le blob exporté est disponible par le callback export. Exporting and importing 4D View Pro areas as blobs is fast and memory-efficient.
 
-In *paramObj*, you can pass several properties:
+Dans *paramObj*, vous pouvez passer plusieurs propriétés :
 
 | Propriété               | Type                        | Description                                                                                                                                                                                                                                         |
 | ----------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -38,8 +38,8 @@ Les paramètres suivants peuvent être utilisés dans la méthode de rappel :
 | Paramètres |                               | Type                    | Description                                              |
 | :--------- | :---------------------------- | :---------------------- | :------------------------------------------------------- |
 | param1     |                               | text                    | Nom de l'objet 4D View Pro                               |
-| param2     |                               | 4D.blob | The exported blob                                        |
-| param3     |                               | object                  | A reference to the command's *paramObj* parameter        |
+| param2     |                               | 4D.blob | Le blob exporté                                          |
+| param3     |                               | object                  | Une référence au paramètre *paramObj* de la commande     |
 | param4     |                               | object                  | Objet retourné par la méthode avec un message de statut  |
 |            | .success      | boolean                 | Vrai si l'export est réussi, Faux sinon. |
 |            | .errorCode    | integer                 | Code d'erreur.                           |
@@ -47,20 +47,20 @@ Les paramètres suivants peuvent être utilisés dans la méthode de rappel :
 
 #### Exemple
 
-The command `VP EXPORT TO BLOB` is asynchronous. You must create a callback method (named *VPBlobCallback* in our example) to use the export results.
+La commande `VP EXPORT TO BLOB` est asynchrone. Vous devez créer une méthode de callback (nommée *VPBlobCallback* dans notre exemple) pour utiliser les résultats d'exportation.
 
 ```4d
-//Export the VP document
+//Exporter le document VP
 VP EXPORT TO BLOB("ViewProArea"; {formula: Formula(VPBlobCallback)})
 ```
 
 ```4d
-//VPBlobCallback method
+//Méthode VPBlobCallback
 #DECLARE($area : Text; $data : 4D.Blob; $parameters : Object; $status : Object)
 var $myEntity : cs.myTableEntity
 
 If ($status.success)
-   // Save the document in a table
+   // Enregistrer le document dans un tableau
    $myEntity:=ds.myTable.new()
    $myEntity.blob:=$data
    $myEntity.save()
