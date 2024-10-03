@@ -55,7 +55,7 @@ Assumamos que quer obter as coordenadas de um retângulo formado por todos os ob
 
 Para as necessidades de sua interface, você deseja rodear a área na que o usuário fez clique com um retângulo vermelho:
 
-![](../assets/en/commands/pict1740373.EN.png)
+![](../assets/en/commands/pict1740373.en.png)
 
 No método objeto do listbox, pode escrever:
 
@@ -76,7 +76,7 @@ No método objeto do listbox, pode escrever:
 
 O método devolve as coordenadas teóricas. Se o listbox é redimensionado, pode necessitar calcular o recorte para saber que parte é visível:
 
-![](../assets/en/commands/pict1740929.EN.png)
+![](../assets/en/commands/pict1740929.en.png)
 
 #### Ver também 
 

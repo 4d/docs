@@ -35,7 +35,7 @@ Si llama Drop position cuando procesa un evento que no es del tipo arrastrar y s
 
 En el siguiente ejemplo, una lista de sumas debe ser desglosada por mes y por persona. La operación se efectúa arrastrando y soltando entre dos list boxes:
 
-![](../assets/en/commands/pict4091260.EN.png)
+![](../assets/en/commands/pict4091260.en.png)
 
 El método de objeto list box de la derecha (origen) contiene el siguiente código:
 

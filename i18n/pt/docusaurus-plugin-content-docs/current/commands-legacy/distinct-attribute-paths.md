@@ -33,7 +33,7 @@ Depois da chamada, o tamanho de *arrayRota* é igual ao número de rotas distint
 
 Se seu banco de dados contiver um campo objeto \[Customer\]full\_Data (indexado) com 15 registros:
 
-![](../assets/en/commands/pict2897927.EN.png) ![](../assets/en/commands/pict2994114.en.png)
+![](../assets/en/commands/pict2897927.en.png) ![](../assets/en/commands/pict2994114.en.png)
 
 Este código será executado:
 

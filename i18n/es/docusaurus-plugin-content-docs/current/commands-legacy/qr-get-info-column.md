@@ -93,7 +93,7 @@ Si el parámetro *numColumna* es incorrecto se genera el error -9852.
 
 Usted ha diseñado el siguiente informe:
 
-![](../assets/en/commands/pict2569537.EN.png)
+![](../assets/en/commands/pict2569537.en.png)
 
 Puede escribir:
 

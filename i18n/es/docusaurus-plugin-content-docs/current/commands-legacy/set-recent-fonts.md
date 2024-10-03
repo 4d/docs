@@ -23,7 +23,7 @@ Este menú contiene los nombres de las últimas fuentes seleccionadas durante la
 
 Usted quiere añadir una fuetne al menú de fuentes recientes:
 
-![](../assets/en/commands/pict1202029.EN.png)
+![](../assets/en/commands/pict1202029.en.png)
 
 Ejecuta el siguiente código:
 
@@ -36,7 +36,7 @@ Ejecuta el siguiente código:
 
 Luego el menú contiene:
 
-![](../assets/en/commands/pict1202031.EN.png)
+![](../assets/en/commands/pict1202031.en.png)
 
 #### Ver también 
 

@@ -23,7 +23,7 @@ Se omite o parâmetro *tabela*, o comando se aplica a tabela por padrão. Se nã
   
 Se não especifica *criterioPesquisa* nem o parâmetro *\**, QUERY mostra a caixa de diálogo do editor de pesquisas para *tabela* (exceto quando for a última fila de una pesquisa múltipla, ver exemplo 2):  
   
-![](../assets/en/commands/pict1581957.EN.png)  
+![](../assets/en/commands/pict1581957.en.png)  
   
 Para maior informação sobre a utilização deste editor, consulte o Manual de Desenho.  
   

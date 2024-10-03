@@ -38,7 +38,7 @@ Este exemplo lhe permite aplicar uma cor alternativa em um formulário listado m
  End if
 ```
 
-![](../assets/en/commands/pict32598.EN.png)
+![](../assets/en/commands/pict32598.en.png)
 
 #### Ver também 
 

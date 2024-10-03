@@ -26,7 +26,7 @@ Contiene:
 * texto markdown en bases proyecto,
 * texto con estilo en bases binarias.
 
-![](../assets/en/commands/pict4968699.EN.png)
+![](../assets/en/commands/pict4968699.en.png)
 
 Esta documentación se puede generar para métodos de tipo triggers, métodos proyecto, métodos formulario, métodos base y clases.
 

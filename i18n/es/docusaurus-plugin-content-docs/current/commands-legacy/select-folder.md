@@ -28,10 +28,10 @@ El parámetro opcional *mensaje* le permite mostrar un mensaje en la caja de di�
 
 **Windows**
 
-![](../assets/en/commands/pict3881936.EN.png)
+![](../assets/en/commands/pict3881936.en.png)
 
 **macOS** 
-![](../assets/en/commands/pict3881985.EN.png)
+![](../assets/en/commands/pict3881985.en.png)
 
  Puede utilizar el parámetro *rutaDefecto* para ofrecer una ubicación de carpeta por defecto en la caja de diálogo de selección de carpeta. Puede pasar en este parámetro tres tipos de valores: 
 * Una ruta de acceso de una carpeta válida utilizando la sintaxis de la plataforma actual.

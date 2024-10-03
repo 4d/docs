@@ -62,7 +62,7 @@ Si *inicioSel* es mayor que *finSel*, el texto no se modifica y la variable OK t
 
 Dada la siguiente variable texto multiestilo:
 
-![](../assets/en/commands/pict572269.EN.png)
+![](../assets/en/commands/pict572269.en.png)
 
 Usted quiere insertar nombres de empresas guardadas en un campo texto. Estos nombres pueden contener, por ejemplo el carácter "&". En este caso, deberá utilizar el comando [ST SET PLAIN TEXT](st-set-plain-text.md):  
   
@@ -72,11 +72,11 @@ Usted quiere insertar nombres de empresas guardadas en un campo texto. Estos nom
 
 Este es el resultado:
 
-![](../assets/en/commands/pict572271.EN.png)
+![](../assets/en/commands/pict572271.en.png)
 
 Este es el texto sin formato contenido en la variable:
 
-![](../assets/en/commands/pict572279.EN.png)
+![](../assets/en/commands/pict572279.en.png)
 
 Puede constatar que el texto insertado se encapsuló dentro de un par de etiquetas de estilo adicionales. Estas etiquetas corresponden al estilo de los caracteres antes de la inserción. Este mecanismo permite garantizar una visualización correcta de los campos multiestilos en todos los casos. 
 

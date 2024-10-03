@@ -60,7 +60,7 @@ La línea:
 
 Mostrará la siguiente caja de diálogo (en Windows):
 
-![](../assets/en/commands/pict4225137.EN.png)
+![](../assets/en/commands/pict4225137.en.png)
 
 #### Ejemplo 3 
 
@@ -72,7 +72,7 @@ La línea:
 
 Mostrará la siguiente caja de diálogo (en Windows):
 
-![](../assets/en/commands/pict4225146.EN.png)
+![](../assets/en/commands/pict4225146.en.png)
 
 #### Ver también 
 

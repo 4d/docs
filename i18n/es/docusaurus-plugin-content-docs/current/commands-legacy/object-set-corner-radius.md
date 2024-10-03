@@ -36,7 +36,7 @@ También puede modificar este valor a nivel de formulario utilizando la *propied
 
 Usted tiene los siguientes rectángulos en su formulario, llamados respectivamente "Rect1" y "Rect2":
 
-![](../assets/en/commands/pict1629574.EN.png)
+![](../assets/en/commands/pict1629574.en.png)
 
 Puede ejecutar el siguiente código para cambiar su radio:
 
@@ -44,13 +44,13 @@ Puede ejecutar el siguiente código para cambiar su radio:
  OBJECT SET CORNER RADIUS(*;"Rect@";20)
 ```
 
-![](../assets/en/commands/pict1629576.EN.png)
+![](../assets/en/commands/pict1629576.en.png)
 
 #### Ejemplo 2 
 
 Tiene la siguiente área de texto en su formulario, llamada "required-label":
 
-![](../assets/en/commands/pict6074566.EN.png)
+![](../assets/en/commands/pict6074566.en.png)
 
 Si ejecuta el siguiente código:
 
@@ -58,7 +58,7 @@ Si ejecuta el siguiente código:
  OBJECT SET CORNER RADIUS(*;"required-label";10)
 ```
 
-![](../assets/en/commands/pict6074568.EN.png)
+![](../assets/en/commands/pict6074568.en.png)
 
 Tenga en cuenta que para las áreas de texto (así como las entradas), a diferencia de los rectángulos, la redondez de la esquina se dibuja fuera del área inicial del objeto.
 

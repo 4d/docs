@@ -30,7 +30,7 @@ O parâmetro opcional *mensagem* lhe permite mostrar uma mensagem na caixa de di
 ![](../assets/en/commands/pict3881936.en.png)
 
 **Mac OS** 
-**![](../assets/en/commands/pict3881985.EN.png)**
+**![](../assets/en/commands/pict3881985.en.png)**
 
 Pode utilizar o parâmetro *rotaPadrao* para oferecer uma localização de pasta por padrão na caixa de diálogo de seleção de pasta. Pode passar neste parâmetro três tipos de valores:  
 * Uma rota de acesso de uma pasta válida utilizando a sintaxe da plataforma atual.
@@ -58,7 +58,7 @@ O usuário seleciona uma pasta e logo faz clique no botão **Select Folder** (em
   
 **Nota**: em Mac OS, dependendo de se o nome da pasta for selecionado ou não na caixa de diálogo, a rota de acesso retornada poderia ser diferente.  
   
-![](../assets/en/commands/pict34878.EN.png)  
+![](../assets/en/commands/pict34878.en.png)  
   
 **4D Server**: esta função permite visualizar os volumes conectados às estações de trabalho dos clientes. Não é possível chamar esta função desde um procedimento armazenado.  
   

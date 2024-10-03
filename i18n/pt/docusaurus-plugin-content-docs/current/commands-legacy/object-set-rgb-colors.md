@@ -44,7 +44,7 @@ Os valores das cores RGB são indicados nos parâmetros *corPrimeirpoPlano*, *co
 
 Este formulário contém duas variáveis editáveis, *vsCorValor* e *vsCor* assim como três barras termômetros: *thVermelho*, *thVerde*, e *thAzul*.
 
-![](../assets/en/commands/pict4278097.EN.png)
+![](../assets/en/commands/pict4278097.en.png)
 
 Estes são os métodos destes objetos:
 
@@ -86,19 +86,19 @@ Note a utilização dos *Bitwise operators* para o cálculo dos valores das core
 
 Em execução, o formulário se vê assim:
 
-![](../assets/en/commands/pict4278099.EN.png)
+![](../assets/en/commands/pict4278099.en.png)
 
 #### Exemplo 2 
 
 Muda o fundo transparente com uma cor de fonte clara:
 
-![](../assets/en/commands/pict1210700.EN.png)
+![](../assets/en/commands/pict1210700.en.png)
 
 ```4d
  OBJECT SET RGB COLORS(*;"myVar";Light shadow color;Background color none)
 ```
 
-![](../assets/en/commands/pict1210702.EN.png)
+![](../assets/en/commands/pict1210702.en.png)
 
 #### Ver também 
 

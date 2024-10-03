@@ -64,7 +64,7 @@ Com este tipo de relatório, o comando QR GET INFO COLUMN permite recuperar glob
   
  Este é um atributo “visual”, portanto as colunas são numeradas de esquerda a direita, como se mostra na seguinte imagem:  
   
-![](../assets/en/commands/pict30562.EN.png)  
+![](../assets/en/commands/pict30562.en.png)  
   
  A seguinte instrução define o tamanho automático para todas as colunas em um relatório tabela cruzada e deixa os outros elemento intactos:  
 
@@ -80,7 +80,7 @@ Notará que como queira alterar unicamente o tamanho da coluna, tem que utilizar
 * Fonte de dados (objeto) e formato de saída
 Nesse caso, a numeração das colunas opera como se mostra a continuação:  
   
-![](../assets/en/commands/pict30563.EN.png)  
+![](../assets/en/commands/pict30563.en.png)  
 
 Se passa um número de *area* inválido, se gera o erro -9850.  
 Se o parâmetro *numCol* é incorreto se gera o erro -9852.
@@ -89,7 +89,7 @@ Se o parâmetro *numCol* é incorreto se gera o erro -9852.
 
 Após criar o relatório abaixo:
 
-![](../assets/en/commands/pict2569537.EN.png)
+![](../assets/en/commands/pict2569537.en.png)
 
 Pode escrever:
 

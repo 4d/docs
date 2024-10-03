@@ -34,7 +34,7 @@ Depois da chamada:
 
 Imagine que você tenha criado um banco de documentação e deseja exportar todos os registros criados no banco a um documento em disco. Como o banco é atualizado regularmente, você deseja escrever um algoritmo de exportação que cree ou recree cada documento no disco se o documento não existe ou se o registro correspondente ha sido modificado depois de que o documento fue grabado por última vez. Portanto, você deve comparar a data e a hora da modificação do documento (se houver) com seu registro correspondente. Para ilustrar este exemplo, utilizamos a seguinte tabela:
 
-![](../assets/en/commands/pict840812.EN.png)
+![](../assets/en/commands/pict840812.en.png)
 
 Ao invés de guardar uma data e uma hora em cada registro, pode guardar um “marcador” que expresse o número de segundos transcorridos entre uma data anterior arbitrária (neste exemplo utilizamos o 1 de janeiro de 1995 a 00:00:00) e a data e a hora na qual o registro foi guardado.  
 

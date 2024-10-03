@@ -112,7 +112,7 @@ Assim é como o objeto aparece no depurador:
  OB SET ARRAY([People]Children;"Girls";$arrGirls)
 ```
 
-![](../assets/en/commands/pict1899097.EN.png)
+![](../assets/en/commands/pict1899097.en.png)
 
 #### Exemplo 6 
 

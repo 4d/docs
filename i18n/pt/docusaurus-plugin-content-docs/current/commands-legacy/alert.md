@@ -60,7 +60,7 @@ A linha:
 
 Mostra a seguinte caixa de diálogo de alerta (em Windows):
 
-![](../assets/en/commands/pict4224968.EN.png)
+![](../assets/en/commands/pict4224968.en.png)
 
 #### Ver também 
 

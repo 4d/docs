@@ -62,11 +62,11 @@ Se quer substituir o texto com estilo selecionado pelo usuário com o conteúdo 
 
 Este é o texto selecionado:
 
-![](../assets/en/commands/pict579068.EN.png)
+![](../assets/en/commands/pict579068.en.png)
 
 O conteúdo armazenado no campo é o seguinte:
 
-![](../assets/en/commands/pict579073.EN.png)
+![](../assets/en/commands/pict579073.en.png)
 
 Depois da execução de este código:
 
@@ -78,7 +78,7 @@ Depois da execução de este código:
 
 O campo e seu conteúdo são os seguintes:
 
-![](../assets/en/commands/pict579075.EN.png) ![](../assets/en/commands/pict579077.EN.png)
+![](../assets/en/commands/pict579075.EN.png) ![](../assets/en/commands/pict579077.en.png)
 
 #### Exemplo 2 
 

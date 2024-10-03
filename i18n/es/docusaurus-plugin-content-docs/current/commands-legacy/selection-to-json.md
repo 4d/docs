@@ -39,7 +39,7 @@ Este comando soporta campos de tipo Objeto: los datos de estos campos se convier
 
 Quiere crear una cadena JSON que represente esta selección:
 
-![](../assets/en/commands/pict1205203.EN.png)
+![](../assets/en/commands/pict1205203.en.png)
 
 1) Desea incluir los valores de todos los campos de la tabla \[Members\]:   
 

@@ -24,7 +24,7 @@ Este tipo de mensaje generalmente es utilizado por el sistema o por las aplicaci
 * Bajo Windows, el mensaje aparece en el área de notificación de la barra de tareas:  
 ![](../assets/en/commands/pict1206085.es.png)
 * Bajo OS X (versión 10.8 mínimo), el mensaje aparece en una pequeña ventana que en la esquina superior derecha de la pantalla.  
-![](../assets/en/commands/pict1206031.EN.png)  
+![](../assets/en/commands/pict1206031.en.png)  
 Note que conforme a las especificaciones de Apple, la notificación sólo se muestra cuando la aplicación no está en el primer plano. Sin embargo, el mensaje aún aparece en la lista del "notification center".
 
 En *titulo* y *texto*, pase el título y el texto del mensaje a mostrar (en el ejemplo anterior, el título es “Exportación 4D”). Puede introducir hasta 255 caracteres. 

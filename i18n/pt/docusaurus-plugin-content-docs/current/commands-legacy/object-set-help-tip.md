@@ -39,7 +39,7 @@ Quando aparece uma mensagem de ajuda, chamando ao comando **OBJECT SET HELP TIP*
 
 Neste formulário, uma mensagem de ajuda se visualiza e muda dinamicamente quando o mouse passar sobre diferentes partes de um botão de imagem:
 
-![](../assets/en/commands/pict3351402.EN.png)
+![](../assets/en/commands/pict3351402.en.png)
 
 ```4d
   //Método objeto "myFlag"
@@ -123,7 +123,7 @@ Se tiver um list box, "Commands List", que contenha uma lista e quiser definir u
 
 O resultado é...
 
-![](../assets/en/commands/pict3529022.EN.png)
+![](../assets/en/commands/pict3529022.en.png)
 
 #### Ver também 
 

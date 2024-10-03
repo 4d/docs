@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 O gráfico representa uma operação de diferença entre dois conjuntos. O área sombreada é o conjunto resultante.  
   
-![](../assets/en/commands/pict32936.EN.png)  
+![](../assets/en/commands/pict32936.en.png)  
 O *conjuntoResultado* é criado por DIFFERENCE O *conjuntoResultado* substitui qualquer conjunto existente que tenha o mesmo nome, incluindo *conjunto1* e *conjunto2*. Os conjuntos *conjunto1* e *conjunto2* devem ser da mesma tabela. O conjunto resultado pertence a mesma tabela que *conjunto1* e *conjunto2*.  
   
 **4D Server**: em modo cliente/Servidor, conjuntos são "visíveis" dependendo do tipo (interprocesso, processo e local) e onde eles foram criados (servidor ou cliente). DIFFERENCE exige que todos os três conjuntos sejam visíveis na mesma máquina. Veja o parágrafo *4D Server, conjuntos e seleções temporais* no Manual de Referência 4D Server para mais informação.

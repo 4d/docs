@@ -60,7 +60,7 @@ Note que las variables de encabezado y de pie de página siempre se crean con un
 
 En un list box de tipo array, queremos duplicar la columna "Nombre", lista para la entrada:
 
-![](../assets/en/commands/pict1205357.EN.png)  
+![](../assets/en/commands/pict1205357.en.png)  
   
 Aquí está el código del botón:  
   
@@ -72,7 +72,7 @@ Aquí está el código del botón:
 ```
   
   
-Al hacer clic en el botón, aparece el list box así:![](../assets/en/commands/pict1205359.EN.png)
+Al hacer clic en el botón, aparece el list box así:![](../assets/en/commands/pict1205359.en.png)
 
 #### Ejemplo 2 
 

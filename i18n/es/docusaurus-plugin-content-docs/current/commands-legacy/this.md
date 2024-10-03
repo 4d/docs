@@ -57,11 +57,11 @@ En contextos soportados, puede acceder a todas las propiedades de los elementos 
 
 Usted quiere mostrar las siguientes estructuras en un list box:
 
-![](../assets/en/commands/pict3872836.EN.png)
+![](../assets/en/commands/pict3872836.en.png)
 
 Cree un list box de tipo "Colección o entity selection" con la siguiente definición:
 
-![](../assets/en/commands/pict3872844.EN.png)
+![](../assets/en/commands/pict3872844.en.png)
 
 Tenga en cuenta que:
 
@@ -77,7 +77,7 @@ Tenga en cuenta que:
 
 Una vez se ejecuta el formulario, el list box se llena automáticamente con la selección de entidades:
 
-![](../assets/en/commands/pict3872875.EN.png)
+![](../assets/en/commands/pict3872875.en.png)
 
 #### Ejemplo 3 
 

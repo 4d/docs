@@ -27,7 +27,7 @@ Tanto os parâmetros *numColuna* e *novaPosição* devem ser números válidos d
 
 Se tivesse criado o relatório abaixo:
 
-![](../assets/en/commands/pict2569470.EN.png)
+![](../assets/en/commands/pict2569470.en.png)
 
 Se executar:
 
@@ -37,4 +37,4 @@ Se executar:
 
 O resultado será:
 
-![](../assets/en/commands/pict2569472.EN.png)
+![](../assets/en/commands/pict2569472.en.png)

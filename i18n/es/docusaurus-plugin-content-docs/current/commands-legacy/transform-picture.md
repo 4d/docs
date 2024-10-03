@@ -59,7 +59,7 @@ Quiere definir las partes blancas de una imagen como transparentes. Para ello, p
 
 Obtiene el siguiente resultado:
 
-![](../assets/en/commands/pict1359750.EN.png)
+![](../assets/en/commands/pict1359750.en.png)
 
 #### Ejemplo 2 
 

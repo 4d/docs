@@ -182,7 +182,7 @@ Sintaxe utilizando *grafParams*: no seguinte exemplo, um gráfico de linha simpl
  GRAPH(vGraph;vSettings;X;A;B) //Draw graph
 ```
 
-![](../assets/en/commands/pict2603210.EN.png)
+![](../assets/en/commands/pict2603210.en.png)
 
 #### Exemplo 3 
 
@@ -223,7 +223,7 @@ Com os mesmos valores, pode agregar uma configuração personalizada para obter 
  GRAPH(vGraph;vSettings;X;A;B) //Desenha o gráfico
 ```
 
-![](../assets/en/commands/pict2603212.EN.png)
+![](../assets/en/commands/pict2603212.en.png)
 
 #### Exemplo 4 
 
@@ -272,7 +272,7 @@ Neste exemplo, personalizamos alguns parâmetros:
  GRAPH(vGraph;vSettings;X;A;B) //Desenhar o gráfico
 ```
 
-![](../assets/en/commands/pict2648517.EN.png)
+![](../assets/en/commands/pict2648517.en.png)
 
 #### Ver também 
 

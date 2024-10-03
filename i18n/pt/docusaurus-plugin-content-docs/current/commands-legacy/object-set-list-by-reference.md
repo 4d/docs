@@ -95,7 +95,7 @@ Você deseja eliminar as associações de listas:
 
 Este exemplo ilustra a diferença na forma em que funciona o comando quando se aplica a um menu pop-up associado a um array texto ou a uma variável texto. Há dois menus pop-up em um formulário:
 
-![](../assets/en/commands/pict1207955.EN.png)
+![](../assets/en/commands/pict1207955.en.png)
 
 O conteúdo destes menus emergentes se define utilizando a lista *<>vColor* (que contém os valores de cores). Se executa o seguinte código quando se carrega o formulário:
 
@@ -108,7 +108,7 @@ O conteúdo destes menus emergentes se define utilizando a lista *<>vColor* (que
 
 Durante a execução, ambos menus propõem os mesmos valores::
 
-![](../assets/en/commands/pict1207957.EN.png)  
+![](../assets/en/commands/pict1207957.en.png)  
 (*Montagem que mostra o conteúdo dos menus de forma simultânea*)
 
 Logo execute o seguinte código, por exemplo, por meio de um botão:
@@ -120,7 +120,7 @@ Logo execute o seguinte código, por exemplo, por meio de um botão:
 
 Só o menu associado ao campo texto se atualiza (por meio da referência dinâmica):  
   
-![](../assets/en/commands/pict1207959.EN.png)  
+![](../assets/en/commands/pict1207959.en.png)  
   
 Com o propósito de atualizar a lista associada ao pop-up gerenciado por array, é necessário chamar de novo ao comando **OBJECT SET LIST BY REFERENCE** para copiar o conteúdo da lista.
 

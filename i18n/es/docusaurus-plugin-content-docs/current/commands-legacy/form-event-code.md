@@ -315,7 +315,7 @@ Este evento se utiliza generalmente para mostrar menús desplegables en caso de 
 \- Si el menú desplegable es de tipo “separado,” el evento sólo se genera cuando un clic ocurre en la parte del botón con la flecha.  
 \- Si el menú desplegable es de tipo “enlazado,” el evento se genera cuando ocurre un clic en cualquier parte del botón. Por favor tenga en cuenta que el evento On Long Click no puede generarse con este tipo de botón.
 
-![](../assets/en/commands/pict2074286.EN.png)
+![](../assets/en/commands/pict2074286.en.png)
 
 Los estilos de botones 3D, botones de opción 3D y casillas de selección 3D que aceptan la propiedad “Con menú desplegable” son: Ninguno, Botón de barra de herramientas, Bevel, Bevel redondeado y Office XP.
 
@@ -827,7 +827,7 @@ Usted desea dibujar un rectángulo rojo alrededor de la celda seleccionada de un
 
 Como resultado, el rectángulo rojo sigue el desplazamiento del list box:
 
-![](../assets/en/commands/pict1900395.EN.png)
+![](../assets/en/commands/pict1900395.en.png)
 
 #### Ver también 
 

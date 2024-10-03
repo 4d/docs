@@ -66,7 +66,7 @@ Dadas duas colunas em una list box onde os nomes das variáveis são “Array1�
  EDIT ITEM(Array2;$vlRowNum)
 ```
 
-![](../assets/en/commands/pict21420.ES.png)
+![](../assets/en/commands/pict21420.es.png)
 
 #### Ver também 
 

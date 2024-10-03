@@ -36,7 +36,7 @@ Os parâmetros *tipoMime* e *nomArquivo* recebem o tipo Mime e o nome do arquivo
 
 Neste exemplo, um formulário web permite descarregar no servidor HTTP varias imagens desde um navegador e mostrar-las na página. Este é o formulário web:
 
-![](../assets/en/commands/pict864606.EN.png)
+![](../assets/en/commands/pict864606.en.png)
 
 Este é o código para a parte <body> da página:
 

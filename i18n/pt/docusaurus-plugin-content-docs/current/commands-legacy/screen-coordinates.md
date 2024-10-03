@@ -33,7 +33,7 @@ O parâmetro opcional *areaTela* lhe permite especificar se deseja as coordenada
 
 As imagens abaixo demostram as diferenças entre o tamanho da tela e a área de trabalho:
 
-![](../assets/en/commands/pict4800387.EN.png) 
+![](../assets/en/commands/pict4800387.en.png) 
 
 **Notas**:
 

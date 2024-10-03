@@ -159,7 +159,7 @@ O exemplo a seguir realiza uma ordenação indexada em dois níveis se um índic
 
 Em um formulário de saída mostrado em modo Aplicação, você lhe permite aos usuários ordenar uma coluna em ordem crescente simplesmente clicando no cabeçalho da coluna. Se o usuário mantém pressionada a tecla **Shift** enquanto clica em outros cabeçalhos de colunas, a ordenação é realizada em vários níveis:  
   
-![](../assets/en/commands/pict16003.ES.png)  
+![](../assets/en/commands/pict16003.es.png)  
   
 Cada cabeçalho de coluna contém um botão ressaltado associado com o seguinte método de objeto:
 

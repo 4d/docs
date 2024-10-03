@@ -128,7 +128,7 @@ El siguiente ejemplo usa la ruta a un formulario .json para mostrar los registro
 
 que devuelve:
 
-![](../assets/en/commands/pict3687439.EN.png)
+![](../assets/en/commands/pict3687439.en.png)
 
 #### Ver también 
 

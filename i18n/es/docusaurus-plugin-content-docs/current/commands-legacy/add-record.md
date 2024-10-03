@@ -26,11 +26,11 @@ El comando **ADD RECORD** permite al usuario añadir un nuevo registro en la tab
 
 La siguiente imagen presenta un formulario de entrada de datos típico. 
 
-![](../assets/en/commands/pict2804768.EN.png)
+![](../assets/en/commands/pict2804768.en.png)
 
 El formulario aparece en la ventana del primer plano del proceso. La ventana tiene barras de desplazamiento y una caja de control del tamaño. Si pasa el parámetro opcional *\** las barras de desplazamiento no aparecen y la ventana del formulario no puede reducirse.
 
-![](../assets/en/commands/pict2804770.EN.png)
+![](../assets/en/commands/pict2804770.en.png)
 
 **ADD RECORD** muestra el formulario hasta que el usuario acepta o cancela el registro. Si el usuario está añadiendo varios registros, el comando debe ejecutarse una vez para cada registro. 
 

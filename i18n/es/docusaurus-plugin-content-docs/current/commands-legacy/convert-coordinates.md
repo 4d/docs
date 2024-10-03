@@ -62,7 +62,7 @@ Usted quiere abrir un menú emergente situado en la esquina inferior izquierda d
  RELEASE MENU($menu)
 ```
 
-![](../assets/en/commands/pict2678144.EN.png)
+![](../assets/en/commands/pict2678144.en.png)
 
 #### Ejemplo 2 
 

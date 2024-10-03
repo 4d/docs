@@ -60,7 +60,7 @@ Dada uma lista hierárquica criada como é visto a continuação:
 
 Esta lista pode estar representada como:
 
-![](../assets/en/commands/pict1214045.EN.png)
+![](../assets/en/commands/pict1214045.en.png)
 
 Se executa a seguinte instrução:
 

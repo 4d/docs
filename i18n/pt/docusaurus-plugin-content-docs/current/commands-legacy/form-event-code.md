@@ -328,7 +328,7 @@ Este evento é utilizado geralmente para mostrar menus suspensos no caso de cliq
 
  \- Se o menu suspenso for do tipo “ligado,” o evento é gerado quando ocorre um clique em qualquer parte do botão. Por favor tenha em conta que o evento On Long Click não pode ser gerado com este tipo de botão.
 
-![](../assets/en/commands/pict2074286.EN.png)
+![](../assets/en/commands/pict2074286.en.png)
 
 Os estilos de botões 3D, botões de opção 3D e caixas de seleção 3D que aceitam a propriedade “Com menu suspenso” são: Nenhum, Botão de barra, Bevel, Bevel arredondado e Office XP.
 
@@ -838,7 +838,7 @@ End case
 
 Como resultado, o retângulo vermelho segue o deslocamento da list box:
 
-![](../assets/en/commands/pict1900395.EN.png)
+![](../assets/en/commands/pict1900395.en.png)
 
 #### Ver também 
 

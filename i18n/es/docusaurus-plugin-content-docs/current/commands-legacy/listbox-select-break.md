@@ -42,7 +42,7 @@ El parámetro *accion*, si se pasa, puede definir la acción de selección que d
 
 Dados los siguientes arrays representados en un list box:
 
-![](../assets/en/commands/pict185052.EN.png)
+![](../assets/en/commands/pict185052.en.png)
 
 Queremos seleccionar la línea de ruptura "Normandy" en la representación jerárquica de estos arrays:
 
@@ -55,7 +55,7 @@ Queremos seleccionar la línea de ruptura "Normandy" en la representación jerá
 
 Este es el resultado:
 
-![](../assets/en/commands/pict185059.EN.png)
+![](../assets/en/commands/pict185059.en.png)
 
 #### Ver también 
 

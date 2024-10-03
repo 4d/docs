@@ -39,17 +39,17 @@ O parâmetro opcional *modo* define o modo de criação da miniatura, ou seja a 
 Se não introduz nenhum parâmetro, o modo 6 “Scaled to fit prop centered” se aplica por padrão. A continuação se ilustram os diferentes modos:
 
 Imagem fonte   
-![](../assets/en/commands/pict27911.EN.png)
+![](../assets/en/commands/pict27911.en.png)
 
   
 Miniaturas resultantes (48x48)
 
 * Scaled to fit = 2  
-![](../assets/en/commands/pict27912.EN.png)
+![](../assets/en/commands/pict27912.en.png)
 * Scaled to fit proportional = 5  
-![](../assets/en/commands/pict27913.EN.png)
+![](../assets/en/commands/pict27913.en.png)
 * Scaled to fit prop centered = 6 (modo padrão)  
-![](../assets/en/commands/pict27914.EN.png)
+![](../assets/en/commands/pict27914.en.png)
 
 **Nota:** Com os modos “Scaled to fit proportional” e “Scaled to fit prop centered”, os espaços vazios aparecerão em branco. Quando estes modos são aplicados a campos ou imagens em formulários 4D, o espaço livre é transparente.
 

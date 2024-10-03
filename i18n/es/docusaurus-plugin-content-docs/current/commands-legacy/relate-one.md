@@ -30,7 +30,7 @@ Se podría encontrar más de un registro si *campoN* termina con el carácter ar
 
 En la pantalla abajo, se está introduciendo y se muestra una lista de selección en el primer plano. 
 
-![](../assets/en/commands/pict2287719.ES.png)
+![](../assets/en/commands/pict2287719.es.png)
 
 El siguiente comando se utiliza para que aparezca la lista de selección: 
 
@@ -48,11 +48,11 @@ Especificar un campo en *discriminante* es lo mismo que definir un campo discrim
 
 #### Ejemplo 
 
-En el siguiente ejemplo, la tabla *\[Facturas\]* está relacionada a la tabla *\[Clientes\]* por dos relaciones manuales. Una relación parte del campo *\[Facturas\]A nombre de* al campo *\[Clientes\]ID* y la otra relación va de *\[Facturas\]Enviar a* a *\[Clientes\]ID*.![](../assets/en/commands/pict2287721.ES.png)  
+En el siguiente ejemplo, la tabla *\[Facturas\]* está relacionada a la tabla *\[Clientes\]* por dos relaciones manuales. Una relación parte del campo *\[Facturas\]A nombre de* al campo *\[Clientes\]ID* y la otra relación va de *\[Facturas\]Enviar a* a *\[Clientes\]ID*.![](../assets/en/commands/pict2287721.es.png)  
   
 Esta es el formulario de la tabla \[Invoices\] que muestra la información "Facturar a" y "Enviar a":  
   
-![](../assets/en/commands/pict2287723.ES.png) 
+![](../assets/en/commands/pict2287723.es.png) 
 
 Como las dos relaciones apuntan a la misma tabla, *\[Clientes\]*, no es posible obtener la información de facturación y envío al mismo tiempo. Por lo tanto, la información debe ser mostrada utilizando variables y llama a **RELATE ONE**. Si los campos *\[Clientes\]* se mostraron en su lugar, sólo se mostrarán los datos de una de las relaciones.
 

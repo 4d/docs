@@ -108,10 +108,10 @@ Utilizando os comandos do tema área de transferências e dos BLOBs, pode constr
 
 Ao introduzir o registro a seguir: 
 
-![](../assets/en/commands/pict27501.EN.png)
+![](../assets/en/commands/pict27501.en.png)
 
 Se aplica o métodoENVIAR REGISTRO A área de transferência a tabela \[Empregados\], a área de transferência conterá o texto do registro e a imagem completa do registro.  
-![](../assets/en/commands/pict27502.EN.png)
+![](../assets/en/commands/pict27502.en.png)
 
 Pode colar esta imagem do registro em outro registro, utilizando o método GET RECORD FROM CLIPBOARD, como se mostra a continuação:
 

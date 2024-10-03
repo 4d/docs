@@ -58,7 +58,7 @@ SET PRINT MARKER pode ser utilizado em dois contextos:
   
  Quando o parâmetro \* se utiliza, é possível posicionar o marcador markNum alem da posição inicial dos marcadores que o seguem, estes últimos marcadores serão movidos simultaneamente.  
   
-![](../assets/en/commands/pict28724.EN.png)  
+![](../assets/en/commands/pict28724.en.png)  
   
 **Notas:**  
   
@@ -72,12 +72,12 @@ Este exemplo completo permite gerar a impressão de um relatório de três colun
   
 O formulário de saída utilizado para a impressão é o seguinte:  
   
-![](../assets/en/commands/pict28725.EN.png)  
+![](../assets/en/commands/pict28725.en.png)  
   
 O evento de formulário On Printing Detail foi selecionado para o formulário (recorde que sem importar em que área se imprima, o comando [Print form](print-form.md "Print form") só gera este tipo de evento de formulário).  
 Para cada registro, a altura da linha deve estar adaptada de acordo aos conteúdos da coluna "Atores" ou "Resumo" (coluna tem a maioria do conteúdo). Este é o resultado desejado:  
   
-![](../assets/en/commands/pict28726.EN.png)  
+![](../assets/en/commands/pict28726.en.png)  
   
 O método de projeto de impressão é o seguinte:  
 

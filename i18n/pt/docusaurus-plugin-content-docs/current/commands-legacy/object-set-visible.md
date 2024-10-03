@@ -27,7 +27,7 @@ Se passa *visível* igual a [TRUE](true.md "TRUE"), os objetos são mostrados. S
 
 Este é um formulário típico no ambiente Desenho:
 
-![](../assets/en/commands/pict27188.EN.png)
+![](../assets/en/commands/pict27188.en.png)
 
 Os objetos na área de grupo **Informação do empregador** cada um tem um nome de objeto que contêm a expressão “empregador” (incluindo a área de grupo). Quando a caixa de seleção **Empregado atualmente**  está selecionada, os objetos devem ser visíveis; quando a caixa não está selecionada, os objetos devem ser invisíveis.   
 Este é o método de objeto da caixa de seleção:
@@ -48,11 +48,11 @@ Este é o método de objeto da caixa de seleção:
 
 Portanto, em execução, o formulário se vê dessa maneira:
 
-![](../assets/en/commands/pict27189.EN.png)
+![](../assets/en/commands/pict27189.en.png)
 
 ou:
 
-![](../assets/en/commands/pict27190.EN.png)
+![](../assets/en/commands/pict27190.en.png)
 
 #### Ver também 
 

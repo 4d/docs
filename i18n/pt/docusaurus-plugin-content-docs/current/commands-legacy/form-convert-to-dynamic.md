@@ -40,7 +40,7 @@ Se quiser converter um formulário clássico, modificá-lo e mostrá-lo.
 
 O formulário original:
 
-![](../assets/en/commands/pict3977360.EN.png)  
+![](../assets/en/commands/pict3977360.en.png)  
 
 ```4d
  var $dynForm : Object
@@ -53,7 +53,7 @@ O formulário original:
   
 Se executar o código:
 
-![](../assets/en/commands/pict3977362.EN.png)
+![](../assets/en/commands/pict3977362.en.png)
 
 #### Ver também 
 

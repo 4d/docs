@@ -49,7 +49,7 @@ O nível de segurança da autenticação (ou seja, em quanto se pode confiar no 
 Em seu banco de dados 4D Server, se tiver designado um sistema de controle de acesso baseado na propriedade de 4D de usuários e grupos, pode configurar sua aplicação para que os usuários remotos 4D em Windows se conectem diretamente a 4D Server (não são mostradas nenhum quadro de diálogo de senha), estando conectado com seus direitos atuais: 
 
 1. Na página "Segurança" do quadro de diálogo Propriedades do banco de dados, designar a um usuário como o "usuário por padrão":  
-![](../assets/en/commands/pict2909681.EN.png)  
+![](../assets/en/commands/pict2909681.en.png)  
 Com esta configuração, não se mostra um diálogo de senha para um 4D remoto que se conecta ao servidor, todos os clientes se registran como "Bob".
 2. No método banco On Server Open Connection, agregue o seguinte código para comprovar a autenticação de usuário do diretório  Active:
 

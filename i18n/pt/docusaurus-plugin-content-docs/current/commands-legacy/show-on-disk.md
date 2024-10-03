@@ -30,19 +30,19 @@ Os exemplos abaixo ilustram o funcionamento do comando:
  SHOW ON DISK("c:\\MinhaPasta\\MeuArquivo.txt") // Mostra o arquivo designado
 ```
 
-![](../assets/en/commands/pict35007.EN.png)
+![](../assets/en/commands/pict35007.en.png)
 
 ```4d
  SHOW ON DISK("c:\\MinhaPasta\\Pasta2") // Mostra a pasta designada
 ```
 
-![](../assets/en/commands/pict35008.EN.png)
+![](../assets/en/commands/pict35008.en.png)
 
 ```4d
  SHOW ON DISK("c:\\MinhaPasta\\Pasta2";*) // Mostra os conteúdos da pasta designada
 ```
 
-![](../assets/en/commands/pict35009.EN.png)
+![](../assets/en/commands/pict35009.en.png)
 
 #### Variáveis e conjuntos do sistema 
 

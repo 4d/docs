@@ -35,7 +35,7 @@ No parâmetro *radio*, passe um novo valor do rádio em píxels a aplicar nas es
 
 Você têm os seguintes retângulos em seu formulário, chamados respectivamente "Rect1" e "Rect2":
 
-![](../assets/en/commands/pict1629574.EN.png)
+![](../assets/en/commands/pict1629574.en.png)
 
 Pode executar o seguinte código para mudar seu rádio:
 
@@ -43,7 +43,7 @@ Pode executar o seguinte código para mudar seu rádio:
  OBJECT SET CORNER RADIUS(*;"Rect@";20)
 ```
 
-![](../assets/en/commands/pict1629576.EN.png)
+![](../assets/en/commands/pict1629576.en.png)
 
 #### Exemplo 2 
 

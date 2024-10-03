@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 Este comando geralmente se chama junto com [Open form window](open-form-window.md) para mostrar formulários sofisticados, como é mostrado no exemplo abaixo:
 
-![](../assets/en/commands/pict3541609.EN.png)
+![](../assets/en/commands/pict3541609.en.png)
 
 Utilize DIALOG ao invés de [ALERT](alert.md), [CONFIRM](confirm.md) ou [Request](request.md) quando a informação que deve ser apresentada ou reunida é mais complexa do que esses comandos podem manejar. 
 
@@ -152,7 +152,7 @@ O exemplo abaixo utiliza um aquivo .json como um objeto e modifica algumas propr
 
 O formulário modificado é devolvido com o título, o logotipo e a borda modificados:
 
-![](../assets/en/commands/pict3688356.EN.png)
+![](../assets/en/commands/pict3688356.en.png)
 
 #### Variáveis e conjuntos do sistema 
 

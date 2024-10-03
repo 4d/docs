@@ -54,7 +54,7 @@ Desea manejar el evento On Clicked en un botón:
 
 Si establece el nombre del objeto columna con un nombre de atributo real de una clase de datos como esta:
 
-![](../assets/en/commands/pict4843820.EN.png)
+![](../assets/en/commands/pict4843820.en.png)
 
 Puede ordenar la columna utilizando el evento On Header Click:
 
@@ -72,7 +72,7 @@ Puede ordenar la columna utilizando el evento On Header Click:
 
 Desea manejar On Display Details en un objeto list box con un método definido en la propiedad *Meta info expression*:
 
-![](../assets/en/commands/pict4843812.EN.png)
+![](../assets/en/commands/pict4843812.en.png)
 
 El método *setColor*:
 
@@ -92,7 +92,7 @@ El método *setColor*:
 
 El list box resultante cuando se seleccionan las líneas:
 
-![](../assets/en/commands/pict4843808.EN.png)
+![](../assets/en/commands/pict4843808.en.png)
 
 #### Ver también 
 

@@ -30,7 +30,7 @@ Seria possível encontrar mais de um registro se *campoN* termina com o caracter
   
 Na tela abaixo, um registro é digitado e uma lista de seleção é exibida. 
 
-![](../assets/en/commands/pict2287719.PT.png)
+![](../assets/en/commands/pict2287719.pt.png)
 
 O comando abaixo é usado para fazer a lista seleção aparecer: 
 
@@ -50,11 +50,11 @@ Especificar *choiceField* é o mesmo que especificar uma escolha coringa quando 
 
 No exemplo a seguir, a tabela *\[Faturas\]* está relacionada a tabela *\[Clientes\]* por duas relações manuais. Uma relação parte do campo *\[Faturas\]Cobrar de* ao campo *\[Clientes\]ID*, e a outra relação vai de *\[Faturas\]Enviar* a \[*Clientes\]ID*. #note\] \\\\srv-ftp-private.private.4d.fr\\FTP-PRIVATE\\International\\Filiales\\For\_All\\4Dv15DatabasesForDoc\[#/note\]  
   
-![](../assets/en/commands/pict2287721.PT.png)  
+![](../assets/en/commands/pict2287721.pt.png)  
   
 Aqui é o formulário para a tabela \[Faturas\] exibindo a informação "Bill to" e "Send to" : 
 
-![](../assets/en/commands/pict2287723.PT.png)
+![](../assets/en/commands/pict2287723.pt.png)
 
  Como as duas relações apontam a mesma tabela, *\[Clientes\]*, não é possível obter a informação de faturação e envio ao mesmo tempo. Portanto, a informação deve ser mostrada utilizando variáveis e chamadas a **RELATE ONE**. Se o formulário contiver os campos *\[Clientes\]*, só se mostrarão os valores resultantes da segunda relação.  
   

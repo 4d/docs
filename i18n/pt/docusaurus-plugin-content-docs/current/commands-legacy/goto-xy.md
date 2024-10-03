@@ -53,7 +53,7 @@ O exemplo a seguir:
 
 Mostra a janela a seguir (em Macintosh) por 30 segundos:
 
-![](../assets/en/commands/pict25419.EN.png)
+![](../assets/en/commands/pict25419.en.png)
 
 #### Ver também 
 

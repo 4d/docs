@@ -28,7 +28,7 @@ Por favor note que este comportamento é diferente do comportamento do comando [
 
 Dada a janela abaixo (os campos e o marco tem a propriedade de dimensionamento horizontal “Aumentar”): 
 
-![](../assets/en/commands/pict39548.EN.png)
+![](../assets/en/commands/pict39548.en.png)
 
 Depois da execução desta linha:
 
@@ -38,7 +38,7 @@ Depois da execução desta linha:
 
 ... a janela aparece assim:
 
-![](../assets/en/commands/pict39549.EN.png)
+![](../assets/en/commands/pict39549.en.png)
 
 #### Ver também 
 

@@ -76,7 +76,7 @@ A janela é visualizada utilizando o seguinte código:
 
 A parte da direita da janela pode ser mostrada ou ocultada clicando na opção aumentar/reduzir:
 
-![](../assets/en/commands/pict21946.EN.png)
+![](../assets/en/commands/pict21946.en.png)
 
 O método de objeto associado com este botão é o seguinte:
 

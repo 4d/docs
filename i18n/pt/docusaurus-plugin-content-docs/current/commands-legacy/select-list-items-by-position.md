@@ -38,7 +38,7 @@ Quando passa este parâmetro, o elemento designado pelo parâmetro *posiçao* *E
 
 Dada a lista hierárquica chamada *hList,* mostrada no ambiente Aplicação:
 
-![](../assets/en/commands/pict22758.EN.png)
+![](../assets/en/commands/pict22758.en.png)
 
 Depois da execução deste código:
 
@@ -48,7 +48,7 @@ Depois da execução deste código:
 
 O último elemento visível da lista é selecionado:
 
-![](../assets/en/commands/pict22759.EN.png)
+![](../assets/en/commands/pict22759.en.png)
 
 Depois da execução das seguintes linhas de código:
 
@@ -65,7 +65,7 @@ Depois da execução das seguintes linhas de código:
 
 São selecionados os elementos segundo, terceiro e quinto da lista hierárquica
 
-![](../assets/en/commands/pict22760.EN.png)
+![](../assets/en/commands/pict22760.en.png)
 
 #### Ver também 
 

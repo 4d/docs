@@ -43,7 +43,7 @@ Se nenhum elemento corresponde ao *valor* buscado, a função retorna 0 e o arra
 
 Dada a seguinte lista hierárquica:
 
-![](../assets/en/commands/pict22420.EN.png)
+![](../assets/en/commands/pict22420.en.png)
 
 ```4d
  $vlItemPos:=Find in list(hList;"I@";1;$arrPos)

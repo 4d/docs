@@ -28,7 +28,7 @@ SORT LIST não muda o estado atual da lista e das eventuais sub-listas expandido
 
 Dada a lista chamada *hList,* mostrada aqui no ambiente Aplicação:
 
-![](../assets/en/commands/pict23037.EN.png)
+![](../assets/en/commands/pict23037.en.png)
 
  Depois da execução deste código:
 
@@ -39,7 +39,7 @@ Dada a lista chamada *hList,* mostrada aqui no ambiente Aplicação:
 
 A lista se verá assim:
 
-![](../assets/en/commands/pict23038.EN.png)
+![](../assets/en/commands/pict23038.en.png)
 
 Depois da execução deste código:
 
@@ -51,7 +51,7 @@ Depois da execução deste código:
 
 A lista se verá assim:
 
-![](../assets/en/commands/pict23039.EN.png)
+![](../assets/en/commands/pict23039.en.png)
 
 #### Ver também 
 

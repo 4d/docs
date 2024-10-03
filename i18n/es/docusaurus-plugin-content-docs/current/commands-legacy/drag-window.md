@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 El siguiente formulario, mostrado en el editor de formularios, contiene un fondo de color, sobre el cual hay cuatro botones invisibles para cada lado:
 
-![](../assets/en/commands/pict2762756.EN.png)
+![](../assets/en/commands/pict2762756.en.png)
 
 Cada botón está asociado al siguiente método:
 
@@ -38,7 +38,7 @@ Después de la ejecución del siguiente método proyecto:
 
 Obtiene una ventana similar a esta:
 
-![](../assets/en/commands/pict2762759.EN.png)
+![](../assets/en/commands/pict2762759.en.png)
 
 Luego puede arrastrar la ventana haciendo clic en cualquiera de los bordes.
 

@@ -49,7 +49,7 @@ O exemplo abaixo pode ser utilizado para mostrar “Hello World” em uma imagem
  DOM CLOSE XML($svg)
 ```
 
-![](../assets/en/commands/pict14520.EN.png)
+![](../assets/en/commands/pict14520.en.png)
 
 #### Ver também 
 

@@ -46,7 +46,7 @@ Usted quiere dibujar un rectángulo rojo alrededor de la celda seleccionada de u
  OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
 ```
 
-![](../assets/en/commands/pict1741070.EN.png)
+![](../assets/en/commands/pict1741070.en.png)
 
 #### Ver también 
 

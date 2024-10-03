@@ -71,7 +71,7 @@ Estes números de referencia não são utilizados diretamente como fontes de inf
 
 O seguinte exemplo mostra como manter um histórico das conexões a base de dados utilizando o On Server Open Connection database method e utilizando o [On Server Close Connection database method](on-server-close-connection-database-method.md). A tabela *\[Server Log\]* (mostrada a continuação) se utiliza para fazer seguimento aos processos de conexão: 
 
-![](../assets/en/commands/pict69173.EN.png)
+![](../assets/en/commands/pict69173.en.png)
 
 A informação armazenada nesta tabela é administrada pelo On Server Open Connection database method e o [On Server Close Connection database method](on-server-close-connection-database-method.md) listado a continuação:
 
@@ -110,7 +110,7 @@ A informação armazenada nesta tabela é administrada pelo On Server Open Conne
 
 Estas são algumas entradas em \[Server Log\] mostrando várias conexões remotas:
 
-![](../assets/en/commands/pict69174.EN.png)
+![](../assets/en/commands/pict69174.en.png)
 
 #### Exemplo 2 
 

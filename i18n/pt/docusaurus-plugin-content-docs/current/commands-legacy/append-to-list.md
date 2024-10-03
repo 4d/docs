@@ -38,13 +38,13 @@ A referência da lista que passa em *sublista* deve fazer referência a uma list
 
 Esta é uma vista parcial da estrutura de um banco:
 
-![](../assets/en/commands/pict334094.EN.png)
+![](../assets/en/commands/pict334094.en.png)
 
 As tabelas \[Departamentos\] e \[Empregados\] contém os registros a seguir:
 
-![](../assets/en/commands/pict334096.EN.png)
+![](../assets/en/commands/pict334096.en.png)
 
-![](../assets/en/commands/pict334098.EN.png)
+![](../assets/en/commands/pict334098.en.png)
 
 Você deseja mostrar uma lista hierárquica, chamada *hlList*, que mostre os departamentos e para cada departamento, uma lista fixa que mostre os empregados que trabalham nesse departamento. O método de objeto de *hlList* es:
 
@@ -143,7 +143,7 @@ Portanto, fizemos que os números de referência dos elementos sejam únicos, n�
 
 Quando o formulário é executado, a lista será vista desta forma:
 
-![](../assets/en/commands/pict334100.EN.png)
+![](../assets/en/commands/pict334100.en.png)
 
 **Nota:** este exemplo é útil para propósitos de interface de usuário se trabalhar com um número limitado de registros. Lembre que as listas são conservadas em memória, não construa interfaces de usuário com listas hierárquicas que contenham milhões de elementos. 
 

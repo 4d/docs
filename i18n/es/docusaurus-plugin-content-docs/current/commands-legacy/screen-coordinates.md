@@ -33,7 +33,7 @@ El parámetro opcional *areaPantalla* le permite especificar si desea las coorde
 
 Las siguientes imágenes demuestran las diferencias entre el tamaño de la pantalla y el área de trabajo:
 
-![](../assets/en/commands/pict4800387.EN.png) 
+![](../assets/en/commands/pict4800387.en.png) 
 
 **Notas**:
 

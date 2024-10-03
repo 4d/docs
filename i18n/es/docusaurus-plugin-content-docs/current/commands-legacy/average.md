@@ -64,7 +64,7 @@ Este ejemplo permite obtener la media de los 15 primeras notas de la selección:
 
 Su tabla \[Customer\] contiene un campo objeto "full\_Data" con los siguientes datos:
 
-![](../assets/en/commands/pict2898119.EN.png)
+![](../assets/en/commands/pict2898119.en.png)
 
 Puede hacer los siguientes cálculos:
 

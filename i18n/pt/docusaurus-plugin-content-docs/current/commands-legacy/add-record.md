@@ -26,7 +26,7 @@ ADD RECORD cria um novo registro, e faz com que o novo registro se transforme no
 
 A seguinte imagem representa um formulário de entrada de dados típico. 
 
-![](../assets/en/commands/pict2804768.EN.png)
+![](../assets/en/commands/pict2804768.en.png)
 
 O formulário aparece na janela do primeiro plano do processo. A janela tem barras de rolagem e uma caixa de controle do tamanho. Se passar o parâmetro opcional *\** a janela aparece sem as barras de rolagem e sem a caixa de controle de tamanho.
 

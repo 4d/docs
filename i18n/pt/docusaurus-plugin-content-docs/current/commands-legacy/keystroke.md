@@ -127,7 +127,7 @@ Uma vez este método de projeto é adicionada à sua aplicação, pode ser utili
 
 Examinemos por exemplo o seguinte formulário:
 
-![](../assets/en/commands/pict21523.ES.png)
+![](../assets/en/commands/pict21523.es.png)
 
 Esta composto dos seguintes objetos: uma área editável *vsProcura*, uma área não editável *vsMensaje*, e uma área de rolagem *asProcura*. Durante a entrada de caracteres em *vsProcura*, o método para esse objeto realiza uma pesquisa na tabela \[Códigos postais\], permitindo ao usuário encontrar cidades apenas pressionando os primeiros caracteres dos nomes da cidades. 
 
@@ -167,7 +167,7 @@ Este é o método de objeto *vsProcura*:
 
 Este é o formulário em execução:
 
-![](../assets/en/commands/pict21524.EN.png)
+![](../assets/en/commands/pict21524.en.png)
 
 Utilizando as habilidades da comunicação interprocesso de 4D, pode construir interfaces de usuário nas quais as características de pesquisa são oferecidas em janelas ventanas flutantes que se comuniquen com processos nas quais os registros são listados ou editados. 
 

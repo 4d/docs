@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 Os parâmetros *nomElemFilho e valorElemFilho*, se forem passados, recebem respectivamente o nome e o valor do elemento filho.
 
-![](../assets/en/commands/pict39972.EN.png)
+![](../assets/en/commands/pict39972.en.png)
 
 #### Exemplo 1 
 

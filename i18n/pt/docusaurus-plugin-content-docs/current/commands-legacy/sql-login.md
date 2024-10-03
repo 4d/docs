@@ -51,7 +51,7 @@ Neste caso, o parâmetro *entradaDados* contém o nome da fonte de dados da mane
 Sintaxe: *""*  
 Neste caso, o comando mostra a caixa de diálogo de conexão de maneira que a fonte de dados a conectar possa ser introduzida manualmente:  
     
-![](../assets/en/commands/pict33536.EN.png)  
+![](../assets/en/commands/pict33536.en.png)  
     
 Esta caixa de diálogo inclui varias páginas. A página TCP/IP inclui os seguintes elementos:  
    * Nome de objetivo: este menu é criado utilizando duas listas:  

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN ADMINISTRATION WINDOW.Summary-->O comando OPEN ADMINISTRATION WINDOW exibe a janela de administração do servidor no equipo que executa.<!-- END REF--> A janela de administração 4D Server pode ser usada para visualizar os parâmetros atuais e realizar diversas operações de manutenção (veja a Guia de Referência 4D Server). Começando com a versão 11 do 4D Server, essa janela pode ser exibida a partir de uma máquina cliente: 
 
-![](../assets/en/commands/pict12004.EN.png)
+![](../assets/en/commands/pict12004.en.png)
 
 Este comando deve ser chamado no contexto de uma aplicação 4D conectado ou de um 4D Server. Ele não faz nada se:
 

@@ -49,7 +49,7 @@ Se *rotaRelativa* não for encontrada em nenhuma destas localizações, o comand
 Para transformar um arquivo XML em HTML, queremos utilizar um arquivo de transformação "log.xsl". Este arquivo difere dependendo do idioma atual. Você deseja conhecer a rota do arquivo "log.xsl" a utilizar.  
 Estes são os conteúdos da pasta Resources:
 
-![](../assets/en/commands/pict162129.EN.png)
+![](../assets/en/commands/pict162129.en.png)
 
 Para utilizar um arquivo .xsl adaptado a linguagem atual, apenas deve passar:
 

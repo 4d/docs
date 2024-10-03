@@ -43,7 +43,7 @@ La línea:
 
 Mostrará la siguiente caja de diálogo de confirmación (en Windows):
 
-![](../assets/en/commands/pict4225029.EN.png)
+![](../assets/en/commands/pict4225029.en.png)
 
 #### Ejemplo 2 
 
@@ -55,7 +55,7 @@ La línea:
 
 Mostrará la siguiente caja de diálogo de confirmación (en Windows):
 
-![](../assets/en/commands/pict4225038.EN.png)
+![](../assets/en/commands/pict4225038.en.png)
 
 #### Ejemplo 3 
 
@@ -71,7 +71,7 @@ Usted está desarrollando una aplicación 4D para el mercado internacional. Escr
 
 Mostrará la siguiente caja de diálogo de confirmación:
 
-![](../assets/en/commands/pict4225048.EN.png)
+![](../assets/en/commands/pict4225048.en.png)
 
 **Nota:** Para más información sobre la localización de la base de datos xliff, consulte la sección *Apéndice B: Arquitectura XLIFF*. 
 
@@ -86,7 +86,7 @@ La línea:
 
 Mostrará la siguiente caja de diálogo de confirmación (en Windows):
 
-![](../assets/en/commands/pict4225058.EN.png)
+![](../assets/en/commands/pict4225058.en.png)
 
 #### Ver también 
 

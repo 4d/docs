@@ -73,7 +73,7 @@ It is now   Go to the 4D site or Open a window
 
 Este texto é mostrado:
 
-![](../assets/en/commands/pict1217332.EN.png)
+![](../assets/en/commands/pict1217332.en.png)
 
 É executado o seguinte código:
 

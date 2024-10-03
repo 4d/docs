@@ -51,7 +51,7 @@ Usted quiere configurar su aplicación para que los usuarios remotos 4D en Windo
 
 1. Habilitar el control de acceso de su base mediante la adición de una contraseña para el Diseñador.
 2. En la página "Seguridad" del cuadro de diálogo Propiedades de la base, designar a un usuario como el "usuario por defecto":  
-![](../assets/en/commands/pict2909681.EN.png)  
+![](../assets/en/commands/pict2909681.en.png)  
 Con esta configuración, no se muestra un diálogo de contraseña para un 4D remoto que se conecta al servidor, todos los clientes se registran como "Bob".
 3. En el método base On Server Open Connection, agregue el siguiente código para comprobar la autenticación de usuario del directorio  Active:
 

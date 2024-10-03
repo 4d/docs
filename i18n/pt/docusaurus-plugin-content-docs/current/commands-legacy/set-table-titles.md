@@ -52,7 +52,7 @@ Executar SET TABLE TITLES sem parâmetros vai resetar toda a estrutura virtual d
 Imagine que está desenvolvendo uma aplicação 4D que planeja vender internacionalmente. Portanto, você deve considerar as necessidades de tradução. Para os editores padrão de 4D que aparecem em modo Aplicação e seus formulários que utilizam nomes dinâmicos, pode utilizar uma tabela \[*Traduçoes*\] e alguns métodos de projeto para criar e utilizar as traduções para cada idioma.   
 Em seu banco, crie a próxima tabela:  
   
-![](../assets/en/commands/pict36594.EN.png)  
+![](../assets/en/commands/pict36594.en.png)  
   
 Depois, crie o método de projeto TRADUZIR\_TABELAS\_E\_CAMPOS. Este método analisa a estrutura de seu banco na tabela *\[Traduçoes\]* e cria os registros correspondentes ao idioma passado como parâmetro.  
   

@@ -91,13 +91,13 @@ En ejecución, el formulario se ve así:
 
 Cambia a fondo transparente con un color de fuente claro:
 
-![](../assets/en/commands/pict1210700.EN.png)
+![](../assets/en/commands/pict1210700.en.png)
 
 ```4d
  OBJECT SET RGB COLORS(*;"myVar";Light shadow color;Background color none)
 ```
 
-![](../assets/en/commands/pict1210702.EN.png)
+![](../assets/en/commands/pict1210702.en.png)
 
 #### Ver también 
 

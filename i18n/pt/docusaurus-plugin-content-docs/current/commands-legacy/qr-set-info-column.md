@@ -63,7 +63,7 @@ Além disso, os parâmetros *titulo, oculto*, e *valoresRepetidos* não se utili
   
 Este é um atributo “visual”, portanto as colunas são numeradas de esquerda a direita, como se mostra na seguinte imagem:  
   
-![](../assets/en/commands/pict31030.EN.png)  
+![](../assets/en/commands/pict31030.en.png)  
   
 O seguinte método define o tamanho automático para todas as colunas em relatório tabelas cruzadas e deixa os outros elementos intactos:  
 
@@ -80,7 +80,7 @@ Notará que como queira modificar unicamente o tamanho da coluna, deve utilizar 
  \* Fonte de dados (objeto) e formato de visualização  
   
 Neste caso a numeração das colunas é realizada da seguinte maneira:  
-![](../assets/en/commands/pict31031.EN.png) 
+![](../assets/en/commands/pict31031.en.png) 
 
 Notará que não é possível direcionar todas as células utilizando o comando QR SET INFO COLUMN, as células que não são numeradas acima são direcionadas utilizando [QR SET TOTALS DATA](qr-set-totals-data.md "QR SET TOTALS DATA").
 
@@ -98,7 +98,7 @@ O código a seguir atribui as fontes de dados às três células necessárias pa
   
 Se gera a seguinte área de relatório:  
   
-![](../assets/en/commands/pict31032.EN.png)  
+![](../assets/en/commands/pict31032.en.png)  
   
 Se passa um número de *area* inválido, se gera o erro -9850.  
 Se o parâmetro *numColuna* for incorreto, se gera o erro -9852.

@@ -141,7 +141,7 @@ Veja o exemplo do comando [SET PRINT MARKER](set-print-marker.md).
 
 Este formulário se utiliza como diálogo e depois se imprime com modificações:
 
-![](../assets/en/commands/pict6264975.EN.png)
+![](../assets/en/commands/pict6264975.en.png)
 
 O método formulario:
 

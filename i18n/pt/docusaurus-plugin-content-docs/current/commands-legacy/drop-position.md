@@ -35,7 +35,7 @@ Se chama Drop position quando processa um evento que não for do tipo arrastar e
 
 No exemplo abaixo, uma lista de somas deve ser organizada por mês e por pessoa. A operação é efetuada arrastando e soltando entre duas list boxes:
 
-![](../assets/en/commands/pict4091260.EN.png)
+![](../assets/en/commands/pict4091260.en.png)
 
 O método de objeto de list box da direita (origem) contém o código abaixo:
 

@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 O resultado de uma operação de união se mostra a continuação. A parte sombreada é o conjunto resultante.  
   
-![](../assets/en/commands/pict33125.EN.png)  
+![](../assets/en/commands/pict33125.en.png)  
   
 O *conjuntoResultado* se cria por UNION. O conjunto resultado substitui todo conjunto existente que tenha o mesmo nome, incluindo *conjunto1 e conjunto2*. Os conjuntos *conjunto1 e conjunto2* devem ser da mesma tabela. O conjunto resultado pertence à mesma tabela que *conjunto1 e conjunto2*. O registro atual de resultado é o registro atual de conjunto1.  
   

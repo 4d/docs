@@ -59,7 +59,7 @@ Se quiser definir as partes brancas de uma imagem como transparentes. Para isso,
 
 Obtém o seguinte resultado:
 
-![](../assets/en/commands/pict1359750.EN.png)
+![](../assets/en/commands/pict1359750.en.png)
 
 #### Exemplo 2 
 
@@ -69,7 +69,7 @@ Este é um exemplo de corte de uma imagem (a imagem se mostra no formulário com
  TRANSFORM PICTURE($vpEngrenagem;Crop;50;50;100;100)
 ```
 
-![](../assets/en/commands/pict28288.EN.png)
+![](../assets/en/commands/pict28288.en.png)
 
 #### Ver também 
 
