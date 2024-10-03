@@ -23,7 +23,7 @@ A janela sistema de seleção de cor é vista desta maneira:
 
 | **Windows**                                 | **Macintosh**                               |
 | ------------------------------------------- | ------------------------------------------- |
-| ![](../assets/en/commands/en.png) | ![](../assets/en/commands/pict43386.en.png) |
+| ![](../assets/en/commands/pict43385.en.png) | ![](../assets/en/commands/pict43386.en.png) |
 
 O parâmetro opcional *corDefeito* permite pré-selecionar uma cor na janela. Este parâmetro permite por exemplo restaurar por defeito a última cor definida pelo usuário. Passe neste parâmetro um valor de cor formato RGB (para maior informação, consulte a descrição do comando [OBJECT SET RGB COLORS](object-set-rgb-colors.md)). Pode utilizar uma das constantes do tema *DEFINIR CORES RVA*.
 
