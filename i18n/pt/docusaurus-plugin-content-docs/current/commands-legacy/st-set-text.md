@@ -78,7 +78,7 @@ Depois da execução de este código:
 
 O campo e seu conteúdo são os seguintes:
 
-![](../assets/en/commands/pict579075.EN.png) ![](../assets/en/commands/pict579077.en.png)
+![](../assets/en/commands/en.png) ![](../assets/en/commands/pict579077.en.png)
 
 #### Exemplo 2 
 
