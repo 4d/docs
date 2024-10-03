@@ -17,7 +17,7 @@ title: 変数
 
 ## 変数の宣言
 
-You create variables by declaring them using the `var` keyword.
+変数を作成するには、 `var` キーワードを使って変数を宣言します。
 
 変数は宣言されると、[**その型に対応するデフォルト値**](data-types.md#デフォルト値) に初期化されます。別の値が [代入](#変数への代入) されない限り、セッション中はこの値が保持されます。 あるいは、変数を宣言するときに、データ型と値を1行で [初期化](#宣言と同時に変数を初期化する) することもできます。
 
@@ -49,7 +49,7 @@ var $myVar // バリアント型変数
 ```
 
 `varName` に指定する変数名は 4Dの [識別子の命名規則](Concepts/identifiers.md) に従う必要があります。
-This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) (deprecated) and [arrays](Concepts/arrays.md).
+このシンタックスは [ローカル変数とプロセス変数](#ローカル変数とプロセス変数) の宣言のみサポートしています。[インタープロセス変数](#インタープロセス変数) (非推奨) および [配列](Concepts/arrays.md) には使用できません。
 
 `varType` には次が指定できます:
 
@@ -73,14 +73,14 @@ This syntax only supports [local and process variables](#local-process-and-inter
 | `Blob`                      | スカラーBLOB値                        |
 | `Collection`                | コレクション値                          |
 | `Variant`                   | バリアント値                           |
-| `Object`                    | Object with default class        |
+| `Object`                    | デフォルトクラスのオブジェクト                  |
 | `4D.<className>`            | 4Dクラス名のオブジェクト                    |
 | `cs.<className>`            | ユーザークラス名のオブジェクト                  |
 | `cs.<namespace><className>` | `<namespace>` コンポーネントクラス名のオブジェクト |
 
 :::note 互換性
 
-The legacy syntax using `C_XXX` commands is deprecated as of 4D 20 R7.
+`C_XXX` コマンドを使用する従来のシンタックスは、4D 20 R7 より非推奨となりました。
 
 :::
 
@@ -136,7 +136,7 @@ var $mycol:=[]  // コレクションと推論されます
 
 :::note
 
-値の評価があいまいである場合、推論される型は [インタープリターモードとコンパイル済みモード](interpreted.md) で異なる可能性があります。 この場合、コンパイラーによって警告が生成され、バリアント型が使用されます。 For example, in the following _$a_ type will be correctly inferred in interpreted mode (Text), but the syntax checking will generate a warning and _$a_ will be typed as a variant for the compiled mode.
+値の評価があいまいである場合、推論される型は [インタープリターモードとコンパイル済みモード](interpreted.md) で異なる可能性があります。 この場合、コンパイラーによって警告が生成され、バリアント型が使用されます。 たとえば、次の _$a_ の型はインタープリターモードでは正しくテキスト型と推論されますが、シンタックスチェックを実行すると警告が生成され、_$a_ はコンパイル済みモードでバリアントとして型付けされます。
 
 ```4d
 var $class:={test: "a"}
