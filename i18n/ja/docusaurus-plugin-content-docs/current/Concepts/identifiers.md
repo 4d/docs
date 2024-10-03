@@ -128,28 +128,28 @@ QUERY([Clients];[Clients]Name="Smith")
 
 変数名は、スコープ記号 (`$` および `<>`) を除いて最大31文字以内で指定することができます。
 
-- A variable name must begin with a letter, an underscore, or a dollar ("$") for [parameters](parameters.md) and [local variables](variables.md#local-variables), or `<>` for [interprocess variables](variables.md#interprocess-variables) (deprecated).
+- 変数名の 1文字目は、文字あるいはアンダースコア(_) でなければなりません。また、[引数](parameters.md) や [ローカル変数](variables.md#ローカル変数) の場合はドル記号 (`$`) 、[インタープロセス変数](variables.md#インタープロセス変数) (非推奨) の場合はインタープロセス記号 (`<>`) を 1文字目に使用します。
 - その後の文字には、文字・数字・アンダースコア(_) が使用できます。
-- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), system variable names (`OK`, `document`...), or constant names (`Euro`, `Black`, `Friday`, etc.).
+- 予約語を使用しないでください。予約語にはコマンド名 (`Date`, `Time` 等)、キーワード (`If`, `For` 等)、システム変数名 (`OK`, `document` 等)、そして定数 (`Euro`, `Black`, `Friday` 等) が含まれます。
 - 変数名においては、大文字・小文字は区別されません。
 
 例:
 
 ```4d
-For($vlRecord;1;100) //local variable
-$vsMyString:="Hello there" //local variable
-var $vName; $vJob : Text //local variales
-If(bValidate=1) //process variable
-<>vlProcessID:=Current process() //interprocess variable
+For($vlRecord;1;100) // ローカル変数
+$vsMyString:="Hello there" // ローカル変数
+var $vName; $vJob : Text // ローカル変数
+If(bValidate=1) // プロセス変数
+<>vlProcessID:=Current process() // インタープロセス変数
 ```
 
 ### 互換性
 
-Some naming practices were previously allowed but are no longer supported when the [direct typing mode is enabled](../Project/compiler.md#enabling-direct-typing) (introduced in 4D 20 R7). Enabling this mode will produce syntax errors if:
+以前は受け入れられていた変数名の中には、[直接型指定モードを有効にする](../Project/compiler.md#直接型指定の有効化) (4D 20 R7で導入) とサポートされなくなるものがあります。 このモードを有効にすると、以下の場合にシンタックスエラーが発生します:
 
-- a variable name has a digit as first character,
-- a variable name contains space characters,
-- you declared variables named $0, $1, etc.
+- 変数名の最初の文字に数字が使用されている
+- 変数名にスペース文字が含まれている
+- $0, $1 といった名称の変数を宣言している
 
 ## その他の識別子
 
