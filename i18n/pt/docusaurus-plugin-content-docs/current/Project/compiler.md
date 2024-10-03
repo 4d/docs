@@ -59,15 +59,11 @@ El control sintáctico también puede lanzarse directamente con el comando **Ver
 
 ### Gerar digitação
 
-El botón **Declarar Tipos** crea o actualiza los métodos del compilador. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters declared outside prototypes](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). These methods, when they exist, are used directly by the compiler during code compilation, resulting in faster compilation times.
+:::info Compatibidade
 
-El nombre de estos métodos debe comenzar por `Compiler_`. Puede definir el nombre por defecto de cada uno de los 5 métodos del compilador en [la ventana de los parámetros del compilador](#compiler-methods-for). Los métodos de compilación que son generados y mantenidos por 4D tienen automáticamente el atributo `Invisible`:
+This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. For information about this button, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#generate-typing).
 
-![](../assets/en/Project/compilerWin3.png)
-
-Only the necessary compiler methods (i.e., those for which items already exist in the project) are generated.
-
-The information area indicates any errors found during method creation or updating. Double-clicking on an error line causes the method and line concerned to be displayed in the Method editor.
+:::
 
 ### Limpar código compilado
 
@@ -103,20 +99,6 @@ Used to generate the error file (see [error file](#symbol-file)) at the time of 
 
 Se utiliza para generar el archivo de errores (ver [archivo de errores](#error-file)) en el momento del control sintáctico. El archivo de error se crea en la [carpeta Logs](Project/architecture.md#logs) del proyecto con el nombre `ProjectName_errors.xml`.
 
-#### Caminho de compilação
-
-Used to set the number of passes (code parsing) performed by the compiler and thus the duration of compilation.
-
-- **Declare las variables**: marque esta opción si quiere que el compilador infiera el tipo de variables y parámetros en su código. This option requires the compiler to perform all the stages that make compilation possible, which increases the duration of compilation.
-- **Las variables proceso e interproceso se declaran**: el paso para declarar variables proceso e interproceso así como parámetros de método declarados fuera de prototipos no se realiza. This option can be used when you have already carried out the typing of all your process and interprocess variables either yourself or using the function for automatic generation of compiler methods.
-- **Todas las variables están declaradas**: no se realiza el paso para declarar variables locales, proceso e interproceso, así como parámetros de método declarados fuera de prototipos. Use this option when you are certain that all the local, process, and interprocess variables as well as method parameters have been clearly typed.
-
-:::tip
-
-Puede utilizar el botón [Generar declaración](#generate-typing) y luego compilar con una de las dos últimas opciones.
-
-:::
-
 #### Objectivo de compilação
 
 <details><summary>História</summary>
@@ -141,26 +123,32 @@ Duas opções de alvo estão disponíveis. O resultado depende do processador da
 
 > El objetivo de compilación Apple Silicon requiere que la aplicación **Clang** esté instalada en su máquina. Clang vem com a versão mais recente do Xcode. Ver los [requisitos del compilador Silicon](#requirements) para más información.
 
-### Digitação por defeito
+### Additional options (Compatibility)
 
-Use esta área para definir o tipo padrão para objetos de banco de dados ambíguos.
+In projects converted from 4D versions prior to 20 R7, additional compilation options are available:
 
-- **Numérico**: se utiliza para forzar un tipo numérico de manera no ambigua, bien sea real o entero largo. Isso não substituirá as diretivas que você possa ter definido em seu projeto. Você pode otimizar a execução do seu banco de dados escolhendo o tipo Longint.
-- **Botón**: se utiliza para forzar el tecleo de un botón de manera no ambigua, ya sea Real o Entero largo. Isso não substituirá as diretivas que você possa ter definido em seu projeto. This type applies to buttons as well as check boxes, picture buttons, button grids, radio buttons, picture pop-up menus and drop-down lists.
+- **Compilation Path**
+- **Default typing**
+- **Compiler Methods for...**
 
-### Compiler Methods for
+These options are only maintained for compatibility with legacy code. For more information, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#compiler-settings).
 
-Esta área le permite renombrar los métodos del compilador que son generados automáticamente por el compilador cuando hace clic en [Declarar tipos](#generate-typing).
+In converted projects, it is recommended to [enable the direct typing mode](#enabling-direct-typing) and to write compliant declaration code, i.e.:
 
-Up to 5 compiler methods may be generated; a compiler method is only generated if the project contains the following items:
+- declare explicitely all variables [using `var` keywords](../Concepts/variables.md#declaring-variables)
+- declare explicitely all parameters in function prototypes (i.e. using the `Function` or `Class Constructor` keywords) or with `#DECLARE` keywords in methods (see [Declaring parameters](../Concepts/parameters.md#declaring-parameters).
 
-- **Variables**: agrupa las declaraciones de variables proceso;
-- **Variables interproceso**: agrupa las declaraciones de variables interproceso;
-- **Arrays**: agrupa las declaraciones de arrays de proceso;
-- **Arrays interproceso**: agrupa las declaraciones de arrays interproceso;
-- **Métodos**: agrupa las declaraciones de parámetros de métodos (por ejemplo `C_LONGINT(mymethod;$1;$2)`) para [parámetros de métodos declarados fuera de prototipos](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
+#### Enabling direct typing
 
-Puede renombrar cada uno de estos métodos en las áreas correspondientes, pero siempre irán precedidos de la etiqueta `Compilador_` (no modificable). The name of each method (prefix included) must be no longer than 31 characters. También debe ser único y cumplir con [las reglas de 4D para nombrar métodos](Concepts/identifiers.md#project-methods).
+:::info
+
+The direct typing mode is optional in converted projects only. It is natively used in projects created with 4D 20 R7 and higher.
+
+:::
+
+Select **All variables are typed (Direct typing)** option in the **Compilation Path** menu to enable the direct typing mode. When this option is selected, other compatibility options become useless and are no longer displayed.
+
+Using this option is recommended since it provides flexibility and efficiency. The direct typing concept assumes that all elements are directly declared where they are defined in your code. You just have to make sure that all your variables are declared using the regular [`var` syntax](../Concepts/variables.md#declaring-variables) and that your method and function parameters are declared [in their prototypes](../Concepts/parameters.md) (the [Check Syntax](#check-syntax) feature can help you detecting missing or invalid declarations).
 
 ## Avisos
 
