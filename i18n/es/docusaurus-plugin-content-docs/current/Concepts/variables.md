@@ -17,10 +17,7 @@ Las variables son objetos del lenguaje; puede crear y utilizar variables que nun
 
 ## Declaración de variables
 
-Generalmente se crean variables declarándolas. El lenguaje 4D ofrece dos formas de declarar las variables:
-
-- utilizando la palabra clave `var` (recomendada especialmente si su código utiliza objetos y clases, y esta sintaxis mejora las sugerencias del editor de código y las funciones de tecleo predictivo),
-- utilizando uno de los comandos del lenguaje 4D del tema "Compilador" o "Arrays" (sintaxis heredada).
+You create variables by declaring them using the `var` keyword.
 
 Cuando se declaran las variables, se inicializan con el [**valor por defecto correspondiente a su tipo**](data-types.md#default-values), que mantendrán durante la sesión mientras no hayan sido [asignadas](#assigning-data). Alternativamente, al declarar variables, puede [inicializar](#inicializar-variables-en-la-línea-de-declaración) su valor junto con su tipo de datos todo dentro de una línea.
 
@@ -52,7 +49,7 @@ var $myVar //una variable variant
 ```
 
 `varName` es el nombre de la variable, debe cumplir con las [reglas 4D](Concepts/identifiers.md) sobre identificadores.
-Esta sintaxis sólo soporta declaraciones de [variables locales y de proceso](#local-process-and-interprocess-variables), por lo que excluye [variables interproceso](#interprocess-variables) y [arrays](Concepts/arrays.md).
+This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) (deprecated) and [arrays](Concepts/arrays.md).
 
 `varType` puede ser:
 
@@ -63,23 +60,29 @@ Si se omite `varType`, se crea una variable de tipo **variant**.
 
 La siguiente tabla enumera todos los valores `varType` soportados:
 
-| varType                     | Contenido                                                                   |
-| --------------------------- | --------------------------------------------------------------------------- |
-| `Text`                      | Valor texto                                                                 |
-| `Date`                      | Valor fecha                                                                 |
-| `Time`                      | Valor Hora                                                                  |
-| `Boolean`                   | Valor booleano                                                              |
-| `Integer`                   | Valor entero largo                                                          |
-| `Real`                      | Valor real                                                                  |
-| `Pointer`                   | Valor puntero                                                               |
-| `Picture`                   | Valor imagen                                                                |
-| `Blob`                      | Valeor Blob escalar                                                         |
-| `Collection`                | Valor colección                                                             |
-| `Variant`                   | Valor variant                                                               |
-| `Object`                    | Objeto con clase por defecto (4D.object) |
-| `4D.<className>`            | Objeto del nombre de la clase 4D                                            |
-| `cs.<className>`            | Objeto del nombre de la clase usuario                                       |
-| `cs.<namespace><className>` | Objeto del componente `<namespace>` nombre de la clase                      |
+| varType                     | Contenido                                              |
+| --------------------------- | ------------------------------------------------------ |
+| `Text`                      | Valor texto                                            |
+| `Date`                      | Valor fecha                                            |
+| `Time`                      | Valor Hora                                             |
+| `Boolean`                   | Valor booleano                                         |
+| `Integer`                   | Valor entero largo                                     |
+| `Real`                      | Valor real                                             |
+| `Pointer`                   | Valor puntero                                          |
+| `Picture`                   | Valor imagen                                           |
+| `Blob`                      | Valeor Blob escalar                                    |
+| `Collection`                | Valor colección                                        |
+| `Variant`                   | Valor variant                                          |
+| `Object`                    | Object with default class                              |
+| `4D.<className>`            | Objeto del nombre de la clase 4D                       |
+| `cs.<className>`            | Objeto del nombre de la clase usuario                  |
+| `cs.<namespace><className>` | Objeto del componente `<namespace>` nombre de la clase |
+
+:::note Compatibilidad
+
+The legacy syntax using `C_XXX` commands is deprecated as of 4D 20 R7.
+
+:::
 
 ### Ejemplos
 
@@ -133,7 +136,7 @@ var $mycol:=[] // Inferido como Colección
 
 :::note
 
-El tipo inferido podría ser diferente entre [modo interpretado y compilado](interpreted.md) si la evaluación del valor es demasiado ambigua. En este caso, el compilador genera una advertencia y se utiliza un tipo variable. Por ejemplo, en el siguiente $a el tipo se inferirá correctamente en modo interpretado (Texto), pero la comprobación sintáctica generará una advertencia y $a se escribirá como una variable para el modo compilado.
+El tipo inferido podría ser diferente entre [modo interpretado y compilado](interpreted.md) si la evaluación del valor es demasiado ambigua. En este caso, el compilador genera una advertencia y se utiliza un tipo variable. For example, in the following _$a_ type will be correctly inferred in interpreted mode (Text), but the syntax checking will generate a warning and _$a_ will be typed as a variant for the compiled mode.
 
 ```4d
 var $class:={test: "a"}
@@ -179,12 +182,6 @@ Por supuesto, las variables no serían muy útiles si no se pudieran obtener val
 ```
 
 En este caso, _[Products]Size_ sería igual a 3. Este ejemplo es bastante sencillo, pero ilustra la forma fundamental en que se transfieren los datos de un lugar a otro utilizando el lenguaje.
-
-Los valores se asignan a los elementos del array utilizando llaves ({...}):
-
-```4d
-atNames{1}:="Richard"
-```
 
 ## Variables locales, proceso e interproceso
 

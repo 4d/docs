@@ -14,8 +14,8 @@ O evento `Ao Arrastar Para` é repetidamente enviado para o objeto de destino qu
 - Obtenha os dados e assinaturas encontrados no pasteboard (via o comando `GET PASTEBOARD DATA`).
 - Dependendo da natureza e do tipo de dados na área de transferência, você **aceita** ou **rejeita** o arrastar e soltar.
 
-Para **aceitar** o arrasto, o método do objeto de destino deve retornar 0 (zero), então você escreve `$0:=0`.
-Para **rejeitar** o arrasto, o método do objeto deve retornar -1 (menos um), então você escreve `$0:=-1`.
+To **accept** the drag, the destination object method must return 0 (zero).
+To **reject** the drag, the object method must return -1 (minus one).
 Durante um evento `Ao Arrastar Exterior`, o 4D trata o método do objeto como uma função. Se nenhum resultado for devolvido, 4D assume que o arrasto é aceite.
 
 Se aceitar o arrastamento, o objeto de destino é realçado. Se rejeitar o arrastamento, o destino não é realçado. Accepting the drag does not mean that the dragged data is going to be inserted into the destination object. Isso significa apenas que se o botão do mouse for solto neste ponto, o objeto de destino aceitaria os dados arrastados e o evento [`On Drop`](onDrop.md) seria disparado.
@@ -25,6 +25,21 @@ Se você não processar o evento `On Drag Over` para um objeto soltável, esse o
 O evento `On Drag Over` é a maneira pela qual você controla a primeira fase de uma operação de arrastar e soltar. Not only can you test whether the dragged data is of a type compatible with the destination object, and then accept or reject the drag; you can simultaneously notify the user of this fact, because 4D highlights (or not) the destination object, based on your decision.
 
 O código que manipula um evento 'On Drag Over' deve ser curto e executar rapidamente, porque esse evento é enviado repetidamente para o objeto de destino atual, devido aos movimentos do mouse.
+
+### Exemplo
+
+```4d
+//Destination object method
+ #DECLARE : Integer
+ If(Form event code=On Drag Over)
+    //returns 0 by default
+    ...
+    If($DataType=Is picture)
+       return -1
+    End if
+    ...
+ End if
+```
 
 #### Veja também
 

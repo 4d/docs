@@ -128,22 +128,28 @@ QUERY([Clients];[Clients]Name="Smith")
 
 Le nom d'une variable peut comporter jusqu'à 31 caractères, sans compter les symboles de portée (`$` ou `<>`).
 
-- Le nom d'une variable doit commencer par une lettre, un trait de soulignement ou un dollar ("$") pour les [paramètres](parameters.md) et [les variables locales](variables.md#local-variables), ou `<>` pour les [variables interprocess](variables.md#interpro
-- Un chiffre en tant que premier caractère est autorisé mais non recommandé, et n'est pas pris en charge par la syntaxe de la déclaration [`var`](variables.md#utilisation-du-mot-clé-var).
+- A variable name must begin with a letter, an underscore, or a dollar ("$") for [parameters](parameters.md) and [local variables](variables.md#local-variables), or `<>` for [interprocess variables](variables.md#interprocess-variables) (deprecated).
 - Ensuite, le nom peut inclure des lettres, chiffres, et traits de soulignement ("_").
-- Un espace en premier caractère est autorisé mais non recommandé, et n'est pas pris en charge par la syntaxe de déclaration [`var`](variables.md#utilisation-du-mot-clé-var).
-- N'utilisez pas de noms réservés, i.e. des noms de commandes 4D (`Date`, `Time`, etc), des mots-clés (`If`, `For`, etc.), des noms de constantes (`Euro`, `Black`, `Friday`), etc.
+- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), system variable names (`OK`, `document`...), or constant names (`Euro`, `Black`, `Friday`, etc.).
 - Les noms de variables ne sont PAS sensibles à la casse.
 
 Exemples :
 
 ```4d
-For($vlRecord;1;100) //variable locale
-$vsMyString:="Hello there" //variable locale
-var $vName; $vJob : Text //variables locales 
-If(bValidate=1) //variable process 
-<>vlProcessID:=Current process() //variable interprocess
+For($vlRecord;1;100) //local variable
+$vsMyString:="Hello there" //local variable
+var $vName; $vJob : Text //local variales
+If(bValidate=1) //process variable
+<>vlProcessID:=Current process() //interprocess variable
 ```
+
+### Compatibilité
+
+Some naming practices were previously allowed but are no longer supported when the [direct typing mode is enabled](../Project/compiler.md#enabling-direct-typing) (introduced in 4D 20 R7). Enabling this mode will produce syntax errors if:
+
+- a variable name has a digit as first character,
+- a variable name contains space characters,
+- you declared variables named $0, $1, etc.
 
 ## Autres noms
 

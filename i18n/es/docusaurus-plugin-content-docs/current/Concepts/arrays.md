@@ -5,7 +5,11 @@ title: Arrays
 
 Un **array** es una serie ordenada de **variables** del mismo tipo. Cada variable se llama un **elemento** del array. Un array recibe su tamaño cuando se crea; luego se puede redimensionar tantas veces como sea necesario añadiendo, insertando o eliminando elementos, o redimensionando el array utilizando el mismo comando utilizado para crearlo. Los elementos del array se numeran de 1 a N, siendo N el tamaño del array. Un array siempre tiene un [elemento cero](#using-the-element-zero-of-an-array) especial. Los arrays son variables 4D. Como toda variable, un array tiene un alcance y sigue las reglas del lenguaje 4D, aunque con algunas diferencias únicas.
 
-> En la mayoría de los casos, se recomienda utilizar **colecciones** en lugar de **arrays**. Las colecciones son más flexibles y ofrecen una amplia gama de métodos dedicados. Para más información, consulte la sección [Colección](Concepts/dt_collection.md).
+:::tip
+
+En la mayoría de los casos, se recomienda utilizar **colecciones** en lugar de **arrays**. Las colecciones son más flexibles y ofrecen una amplia gama de métodos dedicados. Para más información, consulte la sección [Colección](Concepts/dt_collection.md).
+
+:::
 
 ## Crear arrays
 

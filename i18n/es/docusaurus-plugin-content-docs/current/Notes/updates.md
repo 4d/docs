@@ -12,8 +12,13 @@ Lea [**Novedades en 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R7/),
 - Las columnas de los list box y de los encabezados de tipo hora ahora soportan la opción ["blankIfNull"](../FormObjects/properties_Display.md#time-format).
 - Nuevas propiedades en [.getBoxInfo()](../API/IMAPTransporterClass.md#getboxinfo) y [.getBoxList()](../API/IMAPTransporterClass.md#getboxlist).
 - Ahora puede [añadir y eliminar componentes utilizando la interfaz del gestor de componentes](../Project/components.md#adding-and-removing-dependencies).
+- New [**direct typing mode**](../Project/compiler.md#enabling-direct-typing) in which you declare all variables and parameters in your code using `var` and `#DECLARE`/`Function` keywords (only mode supported in new projects). [Syntax checking feature](../Project/compiler.md#check-syntax) has been enhanced accordingly.
 - Support of [Session singletons](../Concepts/classes.md#singleton-classes) and new [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) Class property.
 - Qodly Studio: You can now [attach the Qodly debugger to 4D Server](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server).
+
+#### Cambios de comportamiento
+
+- Compiler directive commands (`C_XXX`) are now deprecated and have been renamed `_O_C_XXX` (for example, `C_TEXT` has been renamed `_O_C_TEXT`).
 
 ## 4D 20 R6
 
