@@ -17,9 +17,9 @@ title: On Begin Drag Over
 
 - `APPEND DATA TO PASTEBOARD` コマンドを使って、ペーストボードにデータや署名を追加する。
 - `SET DRAG ICON` コマンドを使って、ドラッグアクション中にカスタムアイコンを表示する。
-- Accept or refuse dragging via the result of the method of the dragged object.
-  - To indicate that drag actions are accepted, the method of the source object must return 0 (zero).
-  - To indicate that drag actions are refused, the method of the source object must return -1 (minus one).
+- ドラッグされたオブジェクトのメソッドの戻り値を使用して、ドラッグを許可/拒否する。
+  - ドラッグアクションを受け入れるには、ソースオブジェクトのメソッドは 0 (ゼロ) を返さなければなりません。
+  - ドラッグアクションを拒否するには、ソースオブジェクトのメソッドは -1 (マイナス1) を返さなければなりません。
   - 結果が返されない場合は、ドラッグアクションが受け入れられたと 4D は判断します。
 
 4D のデータは、イベントが呼び出される前に、ペーストボードに置かれます。 たとえば、**自動ドラッグ** アクションなしでドラッグした場合、ドラッグされたテキストは、イベントが呼び出される時にはペーストボードにあります。
