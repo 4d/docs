@@ -14,8 +14,8 @@ title: On Drag Over
 - ペーストボード内にあるデータや署名を (`GET PASTEBOARD DATA` コマンドを使用して) 取得する。
 - ペーストボードのデータの状態や型に基づき、ドラッグ＆ドロップの **受け付け** または **拒否** をおこないます。
 
-To **accept** the drag, the destination object method must return 0 (zero).
-To **reject** the drag, the object method must return -1 (minus one).
+ドラッグを **受け付ける** には、ドロップ先のオブジェクトメソッドが 0 (ゼロ) を返さなければなりません。
+ドラッグを **拒否** するには、オブジェクトメソッドが -1 (マイナス1) を返さなければなりません。
 `On Drag Over` イベント中、4D はこのオブジェクトメソッドを関数として扱います。 結果が返されない場合には、4D はドラッグが受け付けられたものと認識します。
 
 ドラッグを受け入れると、ドロップ先オブジェクトがハイライトされます。 ドラッグを拒否した場合、ドロップ先オブジェクトはハイライトされません。 ドラッグを受け付けることは、ドラッグされたデータがドロップ先オブジェクトに挿入されるという意味ではありません。 これは、単にマウスボタンをこの場所で離したときに、ドラッグされたデータがドロップ先オブジェクトによって受け付けられ、[`On Drop`](onDrop.md) イベントが動くということを意味するだけです。
@@ -29,10 +29,10 @@ To **reject** the drag, the object method must return -1 (minus one).
 ### 例題
 
 ```4d
-//Destination object method
+// ドロップ先のオブジェクトメソッド
  #DECLARE : Integer
  If(Form event code=On Drag Over)
-    //returns 0 by default
+    // デフォルトで 0 を返します
     ...
     If($DataType=Is picture)
        return -1
