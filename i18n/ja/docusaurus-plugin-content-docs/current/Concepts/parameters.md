@@ -47,7 +47,7 @@ MyLength:=Length("How did I get here?")
 
 :::info 互換性
 
-The legacy declaration syntax, where parameters are automatically copied in sequentially numbered local variables $0, $1, etc. and declared using compiler directives such as `C_TEXT($1;$2)`, is **deprecated** as of 4D 20 R7.
+引数が連番のローカル変数 ($0、$1 など) に自動的にコピーされ、`C_TEXT($1;$2)` のようなコンパイラー指示子を使って宣言される従来のシンタックスは、4D 20 R7 より **非推奨** となりました。
 
 :::
 
@@ -55,7 +55,7 @@ The legacy declaration syntax, where parameters are automatically copied in sequ
 
 呼び出されたメソッドやクラス関数において、引数の値はローカル変数に代入されます。 通常、引数は **パラメーター名** とその **データ型** をコロン (:) で区切って宣言します。
 
-- For class functions, parameters are declared along with the function prototype, i.e. when using the `Function` or `Class Constructor` keywords.
+- クラス関数の場合、引数は関数のプロトタイプとともに宣言されます。つまり、`Function` または `Class Constructor` キーワードを使うときに宣言されます。
 - メソッドの場合 (プロジェクトメソッド、フォームオブジェクトメソッド、データベースメソッド、トリガー)、引数はメソッドコード先頭の `#DECLARE` キーワードを使って宣言されます。
 
 例:
@@ -124,9 +124,9 @@ Function add($x : Variant; $y : Integer): Integer
 戻り値を含む引数の宣言をおこなうのは、一度だけです。 特に、同じ型であっても、同じ引数を入力と出力の両方として宣言することはできません。 例:
 
 ```qs
-	//invalid declaration
+	// 無効な宣言
 Function myTransform ($x : Integer) -> $x : Integer
-	//error: $x is declared twice
+	// エラー: $x が2回宣言されています
 ```
 
 :::
@@ -170,7 +170,7 @@ Function square($x : Integer) -> $result : Integer
 
 :::note
 
-Internally, `return x` executes `myReturnValue:=x`, and returns to the caller. `return` が式なしで使われた場合、関数またはメソッドは宣言された戻り値の型 (あれば)の null値を返し、それ以外の場合には _undefined_ です。
+内部的に、`return x` は `myReturnValue:=x` を実行し、呼び出し元に戻ります。 `return` が式なしで使われた場合、関数またはメソッドは宣言された戻り値の型 (あれば)の null値を返し、それ以外の場合には _undefined_ です。
 
 :::
 
@@ -180,12 +180,12 @@ Internally, `return x` executes `myReturnValue:=x`, and returns to the caller. `
 Function getValue -> $v : Integer
 	$v:=10
 	return 20
-	// returns 20
+	// 20 が返されます
 
 Function getValue -> $v : Integer
 	return 10
-	$v:=20 // never executed
-	// returns 10
+	$v:=20 // 実行されません
+	// 10 が返されます
 ```
 
 ## 引数の間接参照 (${N})
@@ -217,7 +217,7 @@ Function getValue -> $v : Integer
 0、1、またはそれ以上のパラメーターを宣言してある場合でも、任意の数の引数を渡すことができます。 呼び出されたコード内では、`${N}` シンタックスを使って引数を利用でき、可変長引数の型はデフォルトで [バリアント](dt_variant.md) です ([可変長引数の記法](#可変長引数の宣言) を使ってこれらを宣言できます)。 [`Count parameters`](https://doc.4d.com/4dv20/help/command/ja/page259.html) コマンドを使用して、パラメーターが存在することをあらかじめ確認しておく必要があります。 例:
 
 ```4d
-//foo method
+// foo メソッド
 #DECLARE($p1: Text;$p2 : Text; $p3 : Date)
 For($i;1;Count parameters)
 	ALERT("param "+String($i)+" = "+String(${$i}))
@@ -283,19 +283,19 @@ return $total
 
 ```4d
 
-$total1:=SumNumbers // returns 0
-$total2:=SumNumbers(1; 2; 3; 4; 5) // returns 15
-$total3:=SumNumbers(1; 2; "hello"; 4; 5) // error
+$total1:=SumNumbers // 0 を返します
+$total2:=SumNumbers(1; 2; 3; 4; 5) // 15 を返します
+$total3:=SumNumbers(1; 2; "hello"; 4; 5) // エラー
 
 ```
 
 :::note 互換性
 
-The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is deprecated as of 4D 20 R7.
+可変長引数を宣言するための従来のシンタックス (`C_TEXT(${4})`) は 4D 20 R7 より非推奨となりました。
 
 :::
 
-## Triggers and On Drag Over
+## トリガーと On Drag Over
 
 コンテキストによっては、"Compiler_" メソッドでの宣言をサポートしていないため、別途処理されます:
 
@@ -320,7 +320,7 @@ method1(42) // 型間違い。期待されるのはテキスト
 - [コンパイル済みプロジェクト](interpreted.md) では、可能な限りコンパイル時にエラーが生成されます。 それ以外の場合は、メソッドの呼び出し時にエラーが生成されます。
 - インタープリタープロジェクトでは:
   - [名前付きシンタックス](#名前付き引数) (`#DECLARE` または `Function`) を使用して引数が宣言されている場合は、メソッドの呼び出し時にエラーが発生します。
-  - if the parameter was declared using a legacy (`_C_XXX`) syntax, no error is generated, the called method receives an empty value of the expected type.
+  - 旧式の (`C_XXX`) シンタックスを使用して宣言されている場合、エラーは発生せず、呼び出されたメソッドは期待される型の空の値を受け取ります。
 
 ## オブジェクトプロパティを名前付き引数として使用する
 
@@ -339,10 +339,10 @@ method1(42) // 型間違い。期待されるのはテキスト
 `ChangeAge` メソッドを次のように書けます:
 
 ```4d
-  //ChangeAge
+  // ChangeAge メソッド
  #DECLARE ($para : Object)
  $para.Age:=$para.Age+10
- ALERT($para.Name+" is "+String($para.Age)+" years old.")
+ ALERT($para.Name+" は "+String($para.Age)+" 歳です。")
 ```
 
 これは [任意パラメーター](#任意パラメーター) を指定するにあたって非常に便利な方法です (後述参照)。 この場合、引数の不足は次のように対処できます:
@@ -354,10 +354,10 @@ method1(42) // 型間違い。期待されるのはテキスト
 上述の `ChangeAge` メソッドの例では、Age およびName プロパティはどちらも必須であるため、引数オブジェクトに含まれていなければエラーが発生します。 これを避けるには、次のように記述することができます:
 
 ```4d
-  //ChangeAge
+  // ChangeAge メソッド
  #DECLARE ($para : Object)
  $para.Age:=Num($para.Age)+10
- ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
+ ALERT(String($para.Name)+" は "+String($para.Age)+" 歳です。")
 ```
 
 すると、引数が不足してもエラーは生成されず、両方が欠落した場合の結果は " は 10歳です" となってしまうにせよ、いずれの引数も任意となります。
@@ -368,13 +368,13 @@ method1(42) // 型間違い。期待されるのはテキスト
 $person:=New object("Name";"Smith";"Age";40;"toAdd";10)
 ChangeAge($person)
 
-//ChangeAge
+// ChangeAge メソッド
 #DECLARE ($para : Object)  
 If ($para.toAdd=Null)
 	$para.toAdd:=10
 End if
 $para.Age:=Num($para.Age)+$para.toAdd
-ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
+ALERT(String($para.Name)+" は "+String($para.Age)+" 歳です。")
 ```
 
 このように、既存のコードを変える必要はありません。 変更後のコードは変更前と同じように動作しますが、引数によって加算年数に数値を指定することもできるようになりました。
@@ -416,9 +416,9 @@ $result:=$param1+" "+$param2
 次の例はテキストメッセージを表示し、2つの引数が渡されていればディスク上のドキュメントに、3つ以上の場合は 4D Write Pro エリアにそのテキストを書き出します。
 
 ```4d
-// APPEND TEXT Project Method
+// APPEND TEXT プロジェクトメソッド
 // APPEND TEXT ( Text { ; Text { ; Object } } )
-// APPEND TEXT ( Message { ; Path { ; 4DWPArea } } )
+// APPEND TEXT ( メッセージ { ; パス { ; 4DWPエリア } } )
 
  #DECLARE ($message : Text; $path : Text; $wpArea : Object)
 
@@ -451,55 +451,55 @@ APPEND TEXT(vtSomeText;"";$wpArea) // メッセージを表示して、 $wpArea 
 引数を渡すとき、4D は呼び出し元メソッドのコンテキストにおいてその式を評価し、**結果の値** をクラス関数またはサブルーチンのローカル変数に格納します。 これらのローカル変数に格納されているのは、呼び出し元で使用されているフィールドや変数、式ではなく、渡された値のみです。 スコープがローカルに限られているため、クラス関数 / サブルーチン内でローカル変数の値を変えても、呼び出し元メソッドには影響ありません。 例:
 
 ```4d
-	//Here is some code from the method MY_METHOD
-DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
+	// MY_METHOD メソッド
+DO_SOMETHING([People]Name) // [People]Name の値が "williams" だとします
 ALERT([People]Name)
 
-	//Here is the code of the method DO_SOMETHING
+	// DO_SOMETHING メソッド
  #DECLARE($param : Text)
  $param:=Uppercase($param)
  ALERT($param)
 ```
 
-`DO_SOMETHING` メソッドによって表示されたアラートボックスでは "WILLIAMS" と表示され、`MY_METHOD` メソッドによって表示されるアラートボックスでは "williams" と表示されます。 The method locally changed the value of the parameter $param, but this does not affect the value of the field `[People]Name` passed as parameter by the method `MY_METHOD`.
+`DO_SOMETHING` メソッドによって表示されたアラートボックスでは "WILLIAMS" と表示され、`MY_METHOD` メソッドによって表示されるアラートボックスでは "williams" と表示されます。 `DO_SOMETHING` メソッドは $param の値をローカルな範囲で変更しましたが、これは `MY_METHOD` メソッドがサブルーチンに渡す引数として指定した [People]Last Name フィールドの値には影響しません。
 
 もし `DO_SOMETHING` メソッド内でフィールドの値を変更したいのであれば、2通りのやり方があります:
 
 1. サブルーチンに渡す式としてフィールドではなく、フィールドへのポインターを指定することができます。この場合、以下のようにコードを書きます:
 
 ```4d
-  //Here is some code from the method MY_METHOD
-DO_SOMETHING(->[People]Name) //Let's say [People]Name value is "williams"
+  // MY_METHOD メソッド
+DO_SOMETHING(->[People]Name) // [People]Name の値が "williams" だとします
 ALERT([People]Last Name)
 
-  //Here the code of the method DO_SOMETHING
+  // DO_SOMETHING メソッド
 #DECLARE($param : Text)
 $param->:=Uppercase($param->)
 ALERT($param->)
 ```
 
-この例では、引数として指定された式はフィールドではなく、フィールドへのポインターです。 Therefore, within the `DO SOMETHING` method, $param is no longer the value of the field but a pointer to the field. The object **referenced** by $param ($param-> in the code above) is the actual field. その結果、参照されている対象を変更すると、その影響はサブルーチンのスコープを超え、実際のフィールドも変更されます。 さきほどの例題においては、両方のアラートボックスに "WILLIAMS" と表示されます。
+この例では、引数として指定された式はフィールドではなく、フィールドへのポインターです。 そのため、`DO_SOMETHING` メソッド内において、$param はフィールドの値ではなく、フィールドへのポインターになっています。 $param 引数によって **参照** される対象 (上記コード内での $param->) はフィールドそのものです。 その結果、参照されている対象を変更すると、その影響はサブルーチンのスコープを超え、実際のフィールドも変更されます。 さきほどの例題においては、両方のアラートボックスに "WILLIAMS" と表示されます。
 
 2. `DO_SOMETHING` メソッドに "何かさせる" 代わりに、値を返すようにメソッドを書き直すこともできます。 たとえば、以下のようなコードです:
 
 ```4d
-	//Here is some code from the method MY METHOD
- [People]Name:=DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
+	// MY_METHOD メソッド
+ [People]Name:=DO_SOMETHING([People]Name) // [People]Name の値が "williams" だとします
  ALERT([People]Name)
 
-	//Here the code of the method DO SOMETHING
+	// DO_SOMETHING メソッド
  #DECLARE ($param : Text) -> ($result : Text)
  $result:=Uppercase($param)
  ALERT($result)
 ```
 
-This second technique of returning a value by a subroutine is called "using a function". 詳細については [戻り値](#戻り値) の章を参照ください。
+このようにサブルーチンの戻り値を使うことを "関数を使う" と言います。 詳細については [戻り値](#戻り値) の章を参照ください。
 
 ### 特殊ケース: オブジェクトやコレクションの場合
 
 オブジェクトやコレクションのデータタイプは参照 (つまり、内部的な _ポインター_) を介した形でのみ扱われることに注意が必要です。
 
-Consequently, when using such data types as parameters, `$param, $return...` do not contain _values_ but _references_. Modifying the value of the `$param, $return...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](dt_pointer.md#pointers-as-parameters-to-methods), except that `$param, $return...` parameters do not need to be dereferenced in the subroutine.
+したがって、`$param、$return...` には _値_ ではなく _参照_ が格納されます。 `$param、$return...` の値をサブルーチン内で変更した場合、その変更は元となるオブジェクトやコレクションが使用されているところへと伝播します。 これは [ポインター](dt_pointer.md#メソッドの引数としてのポインター) に対する原理と同じものですが、`$param、$return...` の使用にあたって参照を外す必要はありません。
 
 次の例では、`CreatePerson` メソッドはオブジェクトを作成したのち、それを引数として `ChangeAge` に渡します:
 
