@@ -4,15 +4,24 @@ title: Calling class functions
 ---
 
 
-You can call [data model class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
+You can call [data model class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model and [singleton class functions]($singleton.md) through REST requests, so that you can benefit from the exposed API of the targeted 4D application.
 
-:::note
 
-You can also call singleton functions, see [this page]($singleton.md) for more information.
+## POST vs GET
 
-:::
+Functions can be called in two ways:
 
-Functions are simply called in POST requests on the appropriate ORDA interface, without (). For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
+- using **POST requests**, with data parameters passed in the body of the request.
+- using **GET requests**, with parameters directly passed in the URL.
+
+ POST requests provide a better security level because they avoid running sensitive code through an action as simple as clicking on a link. However, GET requests can improve the user experience, allowing to call functions by entering an URL in a browser (note: the developer must ensure no sensitive action is done in such functions).
+
+
+
+
+By default for security reasons (see below), functions must be called in POST requests. 
+
+Functions are simply called on the appropriate ORDA interface or singleton class, without (). For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
 
 `/rest/City/getCity`
 
@@ -24,13 +33,16 @@ In 4D language, this call is equivalent to, :
 $city:=ds.City.getCity("Aguada")
 ```
 
-> Only functions with the `exposed` keyword can be directly called from REST requests. See [Exposed vs non-exposed functions](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
+> Only functions with the `exposed` keyword can be directly from REST requests. See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
 
 ## Function calls
 
-Functions must always be called using REST **POST** requests (a GET request will receive an error).
+Functions are simply called on the appropriate ORDA interface or singleton class, without (). For example, if you have defined a `helloWorld()` function in the Interface dataclass class, you could call it using the following request:
 
-Functions are called on the corresponding object on the server datastore.
+`/rest/Interface/helloWorld`
+
+Parameters are passed either in the body of the POST request (POST calls) or in the `params` collection in the URL (GET calls).
+
 
 |Class function|Syntax|
 |---|----|
@@ -54,6 +66,10 @@ The function is searched in the entity selection class first. If not found, it i
 
 ## Parameters
 
+
+### Parameters in POST calls
+
+### Parameters in GET calls
 
 
 You can send parameters to functions defined in ORDA user classes. On the server side, they will be received in the [declared parameters](../Concepts/parameters.md#declaring-parameters) of the class functions.

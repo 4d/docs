@@ -864,7 +864,9 @@ $id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method"
 
 ## onHttpGet keyword
 
-Use the `onHttpGet` keyword to declare functions that can be called through custom HTTP requests using the `GET` method. The `onHttpGet` keyword is available with:
+Use the `onHttpGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents using the [`4D.OutGoingMessage`](../API/OutGoingMessageClass.md) class. 
+
+The `onHttpGet` keyword is available with:
 
 - ORDA Data model class functions
 - [Singletons class functions](../Concepts/classes.md#singleton-classes)
@@ -885,30 +887,61 @@ The `exposed` keyword must also be added in this case, otherwise an error will b
 
 ### params
 
-The function can be called with parameters. Those values are received as parameters by the called function.
+The `onHttpGet` function can accept [parameters](../Concepts/parameters.md).
 
-The parameters must be passed as query params in the URL within simple quotes. Special characters (such as = or &) must be [encoded in JSON Unicode](https://www.mastertemplate.co.uk/jsonescapedcharacterentities.php).
+In the HTTP GET request, parameters must be passed directly in the URL and declared using the `$params` keyword (they must be enclosed in a collection). 
+
+```
+IP:port/rest/<dataclass>/functionName?$params='[<params>]'
+```
+
+See the [Parameters](../REST/classFunctions#parameters) section in the REST server documentation. 
+
+
 
 ### result
 
-The `onHttpGet` function should return an object of the [`4D.OutGoingMessage`](../API/OutGoingMessageClass.md) class.
+The `onHttpGet` function must return an object of the [`OutGoingMessage`](../API/OutGoingMessageClass.md) class. This class proposes properties and functions to set the header, the body, and the status of the answer. 
 
-When this keyword is applied, the function can be called through HTTP requests with the `GET` verb only. If it is called with a `POST` verb, an error is returned.
 
+
+:::info
+
+- An `onHttpGet` function can be called through HTTP requests with the `GET` verb only. If it is called with a `POST` verb, an error is returned. 
+- As this type of call is an easy offered action, the developer must ensure no sensitive action is done in such functions.
+
+:::
 
 
 ### Example
 
-You have defined the following function
+You have defined the following function:
 
 ```4d
-exposed onHttpGet Function generateThumbnail($width : Integer; $height : Integer) : 4D.OutGoingMessage
+Class extends DataClass
+
+
+exposed onHTTPGet Function getThumbnail($name : Text; $width : Integer; $height : Integer) : 4D.OutgoingMessage
+	
+	var $file : 4D.File
+	var $image; $thumbnail : Picture
+	var $blob : Blob
+	var $response : 4D.OutgoingMessage:=4D.OutgoingMessage.new()
+	
+	
+	$file:=File("/RESOURCES/Images/"+$name+".jpg")
+	READ PICTURE FILE($file.platformPath; $image)
+	CREATE THUMBNAIL($image; $thumbnail; $width; $height; Scaled to fit)
+	PICTURE TO BLOB($thumbnail; $blob; "image/jpeg")
+	$response.setBody($blob)	
+	$response.setHeader("Content-Type"; "image/jpeg")
+	return $response
 ```
 
-It can be called by the following custom HTTP request:
+It can be called by the following HTTP GET request:
 
 ```
-/myHandler/$catalog/sendThumbnail?$params='[80, 80]'
+IP:port/rest/Products/getThumbnail?$params='["Yellow Pack",200,200]'
 ```
 
 

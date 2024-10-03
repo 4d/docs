@@ -4,7 +4,7 @@ title: OutGoingMessage
 ---
 
 
-The `OutGoingMessageClass` class allows you to handle [messages returned by your application] in response to `HTTP GET` requests processed by functions declared using the [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keyword. Such requests are used, for example, to implement file downloading feature.
+The `4D.OutGoingMessage` class allows you to handle messages returned by your application in response to [`HTTP GET` requests] processed by functions declared using the [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keyword. Such requests are used, for example, to implement features such as download file, generate and download picture as well as receiving any content type via a browser.
 
 An instance of this class is built on 4D Server and sent to the browser by the [4D REST Server](../REST/gettingStarted.md).
 
@@ -21,10 +21,10 @@ If the response is of type OutgoingMessage, the REST server does not return an o
 </details>
 
 
-### OutGoingMessageClass Object
+### OutGoingMessage Object
 
 
-4D.OutGoingMessageClass objects provide the following properties and functions:
+4D.OutGoingMessage objects provide the following properties and functions:
 
 ||
 |---|
@@ -37,7 +37,7 @@ If the response is of type OutgoingMessage, the REST server does not return an o
 
 :::note
 
-A 4D.OutGoingMessageClass object is a [non-sharable] object.
+A 4D.OutGoingMessage object is a [non-sharable] object.
 
 :::
 
@@ -72,11 +72,11 @@ The `.bodyString` property contains <!-- REF #OutGoingMessageClass.bodyString.Su
 <!-- REF #OutGoingMessageClass.setBody().Desc -->
 ## .setBody()
 
-<!-- REF #OutGoingMessageClass.setBody().Syntax -->**.setBody**( *body* : Variant} )<!-- END REF -->
+<!-- REF #OutGoingMessageClass.setBody().Syntax -->**.setBody**( *body* : Text} )<br/>**.setBody**( *body* : Blob} )<!-- END REF -->
 
 
 <!-- REF #OutGoingMessageClass.setBody().Params -->
-|body|Variant|->|Body of the outgoing message|
+|body|Text &#124; Blob |->|Body of the outgoing message|
 <!-- END REF -->
 
 #### Description
