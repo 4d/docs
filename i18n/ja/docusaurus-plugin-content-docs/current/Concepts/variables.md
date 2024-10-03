@@ -17,10 +17,7 @@ title: 変数
 
 ## 変数の宣言
 
-変数の作成は通常、宣言によっておこないます。 4D ランゲージでは、変数の宣言方法は2つあります:
-
-- `var` キーワードを使った宣言 (推奨、とくにオブジェクトやクラスをコードで使用する場合、このシンタックスによりコードエディターの提案や自動補完機能が強化されます)
-- "コンパイラー" や "配列" テーマの 4D ランゲージコマンドを使った宣言 (旧シンタックス)。
+You create variables by declaring them using the `var` keyword.
 
 変数は宣言されると、[**その型に対応するデフォルト値**](data-types.md#デフォルト値) に初期化されます。別の値が [代入](#変数への代入) されない限り、セッション中はこの値が保持されます。 あるいは、変数を宣言するときに、データ型と値を1行で [初期化](#宣言と同時に変数を初期化する) することもできます。
 
@@ -52,7 +49,7 @@ var $myVar // バリアント型変数
 ```
 
 `varName` に指定する変数名は 4Dの [識別子の命名規則](Concepts/identifiers.md) に従う必要があります。
-このシンタックスは [ローカル変数とプロセス変数](#ローカル変数とプロセス変数) の宣言のみサポートしています。[インタープロセス変数](#インタープロセス変数) および [配列](Concepts/arrays.md) には使用できません。
+This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) (deprecated) and [arrays](Concepts/arrays.md).
 
 `varType` には次が指定できます:
 
@@ -63,23 +60,29 @@ var $myVar // バリアント型変数
 
 サポートされている `varType` 値の一覧です:
 
-| varType                     | 内容                                                              |
-| --------------------------- | --------------------------------------------------------------- |
-| `Text`                      | テキスト値                                                           |
-| `Date`                      | 日付値                                                             |
-| `Time`                      | 時間値                                                             |
-| `Boolean`                   | ブール値                                                            |
-| `Integer`                   | 倍長整数値                                                           |
-| `Real`                      | 実数値                                                             |
-| `Pointer`                   | ポインター値                                                          |
-| `Picture`                   | ピクチャー値                                                          |
-| `Blob`                      | スカラーBLOB値                                                       |
-| `Collection`                | コレクション値                                                         |
-| `Variant`                   | バリアント値                                                          |
-| `Object`                    | デフォルトクラス (4D.Object) のオブジェクト |
-| `4D.<className>`            | 4Dクラス名のオブジェクト                                                   |
-| `cs.<className>`            | ユーザークラス名のオブジェクト                                                 |
-| `cs.<namespace><className>` | `<namespace>` コンポーネントクラス名のオブジェクト                                |
+| varType                     | 内容                               |
+| --------------------------- | -------------------------------- |
+| `Text`                      | テキスト値                            |
+| `Date`                      | 日付値                              |
+| `Time`                      | 時間値                              |
+| `Boolean`                   | ブール値                             |
+| `Integer`                   | 倍長整数値                            |
+| `Real`                      | 実数値                              |
+| `Pointer`                   | ポインター値                           |
+| `Picture`                   | ピクチャー値                           |
+| `Blob`                      | スカラーBLOB値                        |
+| `Collection`                | コレクション値                          |
+| `Variant`                   | バリアント値                           |
+| `Object`                    | Object with default class        |
+| `4D.<className>`            | 4Dクラス名のオブジェクト                    |
+| `cs.<className>`            | ユーザークラス名のオブジェクト                  |
+| `cs.<namespace><className>` | `<namespace>` コンポーネントクラス名のオブジェクト |
+
+:::note 互換性
+
+The legacy syntax using `C_XXX` commands is deprecated as of 4D 20 R7.
+
+:::
 
 ### 例題
 
@@ -133,7 +136,7 @@ var $mycol:=[]  // コレクションと推論されます
 
 :::note
 
-値の評価があいまいである場合、推論される型は [インタープリターモードとコンパイル済みモード](interpreted.md) で異なる可能性があります。 この場合、コンパイラーによって警告が生成され、バリアント型が使用されます。 たとえば、次の $a の型はインタープリターモードでは正しくテキスト型と推論されますが、シンタックスチェックを実行すると警告が生成され、$a はコンパイル済みモードでバリアントとして型付けされます。
+値の評価があいまいである場合、推論される型は [インタープリターモードとコンパイル済みモード](interpreted.md) で異なる可能性があります。 この場合、コンパイラーによって警告が生成され、バリアント型が使用されます。 For example, in the following _$a_ type will be correctly inferred in interpreted mode (Text), but the syntax checking will generate a warning and _$a_ will be typed as a variant for the compiled mode.
 
 ```4d
 var $class:={test: "a"}
@@ -179,12 +182,6 @@ MyNumber:=3
 ```
 
 これで、_[Products]Size_ の値は 3 になります。 この例はとても単純ですが、ある場所から別の場所へランゲージによってデータを転送させる基本的な手順を表しています。
-
-配列要素にデータを代入するには中カッコ ({...}) を使用します:
-
-```4d
-atNames{1}:="Richard"
-```
 
 ## ローカル、プロセス、およびインタープロセス変数
 
@@ -257,7 +254,7 @@ atNames{1}:="Richard"
 | ------------------------------------------------------ | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `OK`                                                   | Longint       | 通常、コマンドがダイアログボックスを表示して、ユーザーが **OK** ボタンをクリックすると 1 に、**キャンセル** ボタンをクリックした場合は 0 に設定されます。 一部のコマンドは、処理が成功すると `OK` システム変数の値を変更します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `Document`                                             | Text          | [Open document](https://doc.4d.com/4dv20/help/command/ja/page264.html) や [SELECT LOG FILE](https://doc.4d.com/4dv20/help/command/ja/page345.html) などのコマンドを使用して最後に開いたファイルまたは作成したファイルのパス名 (フルパス + 名前) が含まれます。                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `FldDelimit`, `RecDelimit`                             | Text          | テキストを読み込んだり書き出したりする際に、フィールドの区切りとして (デフォルトは **タブ** (9))、あるいはレコードの区切り文字として (デフォルトは **キャリッジリターン** (13)) 使用する文字コードが格納されています。 区切り文字を変更する場合は、システム変数の値を変更します。                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `FldDelimit`, `RecDelimit`                             | テキスト          | テキストを読み込んだり書き出したりする際に、フィールドの区切りとして (デフォルトは **タブ** (9))、あるいはレコードの区切り文字として (デフォルトは **キャリッジリターン** (13)) 使用する文字コードが格納されています。 区切り文字を変更する場合は、システム変数の値を変更します。                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `Error`, `Error method`, `Error line`, `Error formula` | Text, Longint | [`ON ERR CALL`](https://doc.4d.com/4dv20/help/command/ja/page155.html) コマンドでインストールされたエラー処理メソッド内で使用されます。 [メソッド内でのエラー処理](../Concepts/error-handling.md#メソッド内でのエラー処理)参照。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | `MouseDown`                                            | Longint       | [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/ja/page190.html) コマンドでインストールされたメソッド内で使用されます。 マウスボタンが押されたときに 1 が、それ以外の場合は 0 に設定されます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `MouseX`, `MouseY`                                     | Longint       | [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/ja/page190.html) コマンドでインストールされたメソッド内で使用されます。 <li>`MouseDown=1` イベントの時、`MouseX` と `MouseY` にはクリックされた場所の水平 / 垂直座標がそれぞれ代入されます。 両方の値ともピクセル単位で表わされ、ウィンドウのローカルな座標システムを使用します。 </li><li>ピクチャーフィールドや変数の場合は、[`On Clicked`](../Events/onClicked.md) や [`On Double Clicked`](../Events/onDoubleClicked.md)、および [`On Mouse Up`](../Events/onMouseUp.md) フォームイベント内で、クリックのローカル座標が `MouseX` と `MouseY` に返されます。 また、[`On Mouse Enter`](../Events/onMouseEnter.md) および [`On Mouse Move`](../Events/onMouseMove.md) フォームイベントでもマウスカーソルのローカル座標が返されます。 詳細については、[ピクチャー上のマウス座標](../FormEditor/pictures.md#ピクチャー上のマウス座標) を参照ください。</li> |
