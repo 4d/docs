@@ -59,15 +59,11 @@ title: コンパイル
 
 ### 型宣言を生成する
 
-**型宣言を生成** ボタンは、型宣言をおこなう "コンパイラーメソッド" を作成 (または更新) します。 コンパイラーメソッドは、すべての変数・配列の型宣言 (プロセスおよびインタープロセス) と [プロトタイプ宣言されていないメソッド引数の定義](../Concepts/parameters.md#プロトタイプ宣言されていない引数) を集約したプロジェクトメソッドです。 これらのメソッドが存在する場合には、これらが直接コンパイラーによってコンパイル中に利用されるため、コンパイル速度が向上します。
+:::info 互換性
 
-これらのメソッドは、必ず `Compiler_` で始まります。 [コンパイラー設定](#コンパイラーメソッド) にて、5つのコンパイラーメソッドそれぞれに対してデフォルト名を設定することができます。 4D により生成、管理されるコンパイラーメソッドは自動的に "非表示" 属性が割り当てられます:
+This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. For information about this button, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#generate-typing).
 
-![](../assets/en/Project/compilerWin3.png)
-
-コンパイラーメソッドは、必要な (つまり、プロジェクト内に存在する項目の分) だけが作成されます。
-
-情報エリアには、メソッドの作成・更新時に検出されたエラーが示されます。 エラー行をダブルクリックすると、対応するメソッドと行がコードエディター上に表示されます。
+:::
 
 ### コンパイルコードを削除
 
@@ -103,20 +99,6 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 
 シンタックスチェック時にエラーファイルを生成するのに使用します ([エラーファイル](#エラーファイル) 参照)。 エラーファイルは、プロジェクトの [Logs フォルダー](Project/architecture.md#logs) 内に `ProjectName_error.xml` という名前で作成されます。
 
-#### コンパイルパス
-
-コンパイラーによって実施されるコード解析の実行周期数を設定するために使用します。これは、コンパイルの所要時間に影響します。
-
-- **すべて定義させる**: コード内の変数や引数の型をコンパイラーに推論させたい場合は、このオプションをチェックします。 このオプションは、コンパイルを可能にするために必要なすべてのステップをコンパイラーに実行させるため、コンパイルの時間が増加します。
-- **ローカル変数のみ自動定義させる**: プロセスおよびインタープロセス変数、そしてプロトタイプ宣言されていないメソッド引数の型を決定する処理はおこなわれません。 このオプションを選択する場合、すべてのプロセス変数とインタープロセス変数は開発者自身が宣言するか、コンパイラーメソッドを自動生成する機能を使用しなければなりません。
-- **自動変数定義は行わない**: ローカル、プロセス、インタープロセス変数および、プロトタイプ宣言されていないメソッド引数の型を決定する処理はおこなわれません。 このオプションを選択する場合、すべての変数およびメソッド引数が明示的に宣言されていなければなりません。
-
-:::tip
-
-あらかじめ [型宣言を生成する](#型宣言を生成する) ボタンを使用すると、"ローカル変数のみ自動定義させる" および "自動変数定義は行わない" のオプションを選択してコンパイルすることができます。
-
-:::
-
 #### コンパイル対象CPU
 
 <details><summary>履歴</summary>
@@ -141,26 +123,32 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 
 > Apple Silicon 用にコンパイルするには、マシンに **Clang** アプリケーションをインストールする必要があります。 Clang は最新バージョンの Xcode に含まれています。 詳細については [Apple Silicon用コンパイルの要件](#要件) を参照ください。
 
-### デフォルトの型指定
+### Additional options (Compatibility)
 
-このエリアでは、曖昧なデータベースオブジェクトのデフォルト型を設定します。
+In projects converted from 4D versions prior to 20 R7, additional compilation options are available:
 
-- **数値**: 実数または倍長整数に数値を型指定します。 プロジェクトにて型指定ディレクティブが書かれている場合、そちらが優先されます。 倍長整数を指定することでデータベースを最適化できます。
-- **ボタン**: 実数または倍長整数にボタンを型指定します。 プロジェクトにて型指定ディレクティブが書かれている場合、そちらが優先されます。 この型指定はボタンのほか、チェックボックス、ピクチャーボタン、ボタングリッド、ラジオボタン、ピクチャーポップアップメニューおよびドロップダウンリストが対象となります。
+- **Compilation Path**
+- **Default typing**
+- **Compiler Methods for...**
 
-### コンパイラーメソッド...
+These options are only maintained for compatibility with legacy code. For more information, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#compiler-settings).
 
-このエリアでは、[型宣言を生成](#型宣言を生成する) をクリックしたときにコンパイラーが自動生成するコンパイラーメソッドの名前を設定できます。
+In converted projects, it is recommended to [enable the direct typing mode](#enabling-direct-typing) and to write compliant declaration code, i.e.:
 
-最大 5つのコンパイラーメソッドが生成されます。プロジェクトに対応する要素が存在する場合のみ、コンパイラーメソッドは作成されます:
+- declare explicitely all variables [using `var` keywords](../Concepts/variables.md#declaring-variables)
+- declare explicitely all parameters in function prototypes (i.e. using the `Function` or `Class Constructor` keywords) or with `#DECLARE` keywords in methods (see [Declaring parameters](../Concepts/parameters.md#declaring-parameters).
 
-- **変数**: プロセス変数定義を集約します。
-- **インタープロセス変数**: インタープロセス変数定義を集約します。
-- **配列**: プロセス配列定義を集約します。
-- **インタープロセス配列**: インタープロセス配列定義を集約します。
-- **メソッド**: [プロトタイプ宣言されていないメソッド引数](../Concepts/parameters.md#プロトタイプ宣言されていない引数) を受け入れるローカル変数定義を集約します (例: `C_LONGINT(mymethod;$1)`)。 詳細については [`Compiler_Methods` メソッド](../Concepts/parameters.md#compiler_methods-メソッド) を参照ください。
+#### Enabling direct typing
 
-それぞれの対応するエリアで、作成されるメソッド名を編集できますが、これらには必ず `Compiler_` という接頭辞が付きます。これは変更できません。 各メソッド名は、接頭辞を含めて 31文字以下でなければなりません。 また、メソッド名はユニークでなければならず、[メソッドの命名規則](Concepts/identifiers.md#プロジェクトメソッド) に準じたものでなければなりません。
+:::info
+
+The direct typing mode is optional in converted projects only. It is natively used in projects created with 4D 20 R7 and higher.
+
+:::
+
+Select **All variables are typed (Direct typing)** option in the **Compilation Path** menu to enable the direct typing mode. When this option is selected, other compatibility options become useless and are no longer displayed.
+
+Using this option is recommended since it provides flexibility and efficiency. The direct typing concept assumes that all elements are directly declared where they are defined in your code. You just have to make sure that all your variables are declared using the regular [`var` syntax](../Concepts/variables.md#declaring-variables) and that your method and function parameters are declared [in their prototypes](../Concepts/parameters.md) (the [Check Syntax](#check-syntax) feature can help you detecting missing or invalid declarations).
 
 ## 警告
 
