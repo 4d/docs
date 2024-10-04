@@ -3,27 +3,27 @@ id: inputOverview
 title: Entrada
 ---
 
-Las entradas le permiten añadir expresiones editables o no editables como [campos](Concepts/identifiers.md#fields) y [variables](Concepts/variables.md) de base de datos a sus formularios. Inputs can handle character-based data (text, dates, numbers...) ou imagens:
+As entradas permitem que você adicione expressões digitáveis ou não digitáveis, como [campos](Concepts/identifiers.md#fields) e [variáveis](Concepts/variables.md) do banco de dados aos seus formulários. As entradas podem manipular dados baseados em caracteres (texto, datas, números...) ou imagens:
 
 ![](../assets/en/FormObjects/input.png)
 
-Las entradas pueden contener [expresiones asignables o no asignables](Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).
+As entradas podem conter [expressões atribuíveis ou não atribuíveis](Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).
 
-Además, las entradas pueden ser [editables o no editables](properties_Entry.md#enterable). Uma entrada digitável aceita dados. Pode definir controles de entrada de dados para o objecto. Uma entrada não centralizável só pode exibir valores mas não pode ser editada pelo utilizador.
+Além disso, as entradas podem ser [inserível ou não inserível](properties_Entry.md#enterable). Uma entrada digitável aceita dados. Pode definir controles de entrada de dados para o objecto. Uma entrada não centralizável só pode exibir valores mas não pode ser editada pelo utilizador.
 
-Puedes gestionar los datos con los [métodos](Concepts/methods.md) objeto o formulario.
+Você pode gerenciar os dados com os [métodos](Concepts/methods.md) objeto ou formulário.
 
 ### JSON Exemplo
 
 ```4d
 	"myText": {
-		"type": "input",	//define the type of object
-		"spellcheck": true,	//enable spelling verification
-		"left": 60,			//left position on the form  
-		"top": 160,			//top position on the form 
-		"width": 100,		//width of the object
-		"height": 20		//height of the object
-		}
+		"type": "input", //defina o tipo de objeto
+		"spellcheck": true, //ative a verificação ortográfica
+		"left": 60, //posição esquerda no formulário  
+		"top": 160, //posição superior no formulário 
+		"width": 100, //largura do objeto
+		"height": 20 //altura do objeto
+}
 ```
 
 ## Propriedades compatíveis
