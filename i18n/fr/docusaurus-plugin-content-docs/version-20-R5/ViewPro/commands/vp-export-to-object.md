@@ -17,18 +17,18 @@ title: VP Export to object
 
 #### Description
 
-The `VP Export to object` command <!-- REF #_method_.VP Export to object.Summary --> returns the 4D View Pro object attached to the 4D View Pro area _vpAreaName_<!-- END REF -->. Vous pouvez utiliser cette commande par exemple pour stocker la zone 4D View Pro dans un champ objet de la base de données 4D.
+La commande `VP Export to object` <!-- REF #_method_.VP Export vers un objet. ummary --> retourne l'objet 4D View Pro attaché à la zone 4D View Pro _vpAreaName_<!-- END REF -->. Vous pouvez utiliser cette commande par exemple pour stocker la zone 4D View Pro dans un champ objet de la base de données 4D.
 
 Dans _vpAreaName_, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-In the _options_ parameter, you can pass the following export options, if required:
+Dans le paramètre _options_, vous pouvez passer les options d'exportation suivantes, si nécessaire :
 
 | Propriété            | Type    | Description                                                                                                                                                                                                                                                                                                                                                 |
 | -------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | includeFormatInfo    | Boolean | True (défaut) pour inclure les informations de formatage, sinon False. Les informations de formatage sont utiles dans certains cas, par exemple pour un export en SVG. D'un autre côté, mettre cette propriété à <strong x-id="1">false</strong> permet de réduire la durée de l'export. |
 | includeBindingSource | Boolean | True (par défaut) pour exporter les valeurs du contexte de données courant en tant que valeurs de cellule dans l'objet exporté (les contextes de données eux-mêmes ne sont pas exportés). Sinon Faux. La liaison de cellule est toujours exportée.                    |
 
-For more information on 4D View Pro objects, please refer to the [4D View Pro object](../configuring.md#4d-view-pro-object) paragraph.
+Pour plus d'informations sur les objets 4D View Pro, veuillez vous référer au paragraphe [Objet 4D View Pro](../configuring.md#4d-view-pro-objet).
 
 #### Exemple 1
 
