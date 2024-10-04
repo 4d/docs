@@ -382,18 +382,6 @@ module.exports =
 					"type": "category",
 					"label": "Compiler",
 					"items": [
-						"commands-legacy/c-blob",
-						"commands-legacy/c-boolean",
-						"commands-legacy/c-collection",
-						"commands-legacy/c-date",
-						"commands-legacy/c-longint",
-						"commands-legacy/c-object",
-						"commands-legacy/c-picture",
-						"commands-legacy/c-pointer",
-						"commands-legacy/c-real",
-						"commands-legacy/c-text",
-						"commands-legacy/c-time",
-						"commands-legacy/c-variant",
 						"commands-legacy/compile-project",
 						"commands-legacy/idle"
 					]
