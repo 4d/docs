@@ -1,0 +1,30 @@
+---
+id: find-window
+title: Find window
+slug: /commands/find-window
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.Find window.Syntax-->**Find window** ( *esquerda* ; *superior* {; *parteJanela*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Find window.Params-->
+| Parâmetro | Tipo |  | Descrição |
+| --- | --- | --- | --- |
+| esquerda | Inteiro longo | &#x1F852; | Coordenada esquerda global |
+| superior | Inteiro longo | &#x1F852; | Coordenada superior global |
+| parteJanela | Inteiro longo | &#x1F858; | Número de parte ID da janela |
+| Resultado | refJan | &#x1F850; | Número de referência de janela |
+
+<!-- END REF-->
+
+#### Descrição 
+
+<!--REF #_command_.Find window.Summary-->O comando Find window devolve (se existe) o número de referência da primeira janela “tocada” pelo ponto cujas coordenadas se passam em *esquerda e superior*.<!-- END REF-->  
+
+As coordenadas devem ser expressas com relação a esquina superior esquerda da área de conteúdo da janela de aplicação (Windows) ou da tela principal (Macintosh).  
+  
+O parâmetro *parteJanela*, devolve 3 se toca a janela, caso contrário 0\. (**Nota de compatibilidade:** a partir de 4D v14, as constantes do tema *Buscar janela* são obsoletas).
+
+#### Ver também 
+
+[Frontmost window](frontmost-window.md)  
+[Next window](next-window.md)  

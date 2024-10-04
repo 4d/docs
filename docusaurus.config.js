@@ -69,6 +69,28 @@ module.exports = {
       },
     ],
   ],
+  webpack: {
+    jsLoader: (isServer) => ({
+      loader: require.resolve("swc-loader"),
+      options: {
+        jsc: {
+          parser: {
+            syntax: "typescript",
+            tsx: true,
+          },
+          target: "es2019",
+          transform: {
+            react: {
+              runtime: "automatic",
+            },
+          },
+        },
+        module: {
+          type: isServer ? "commonjs" : "es6",
+        },
+      },
+    }),
+  },
   i18n: {
     defaultLocale: "en",
     locales: ["en", "fr", "es", "ja", "pt"],
@@ -228,7 +250,7 @@ module.exports = {
     },
   },
   markdown: {
-    format: 'md',
+    format: 'detect',
     mermaid: true,
     mdx1Compat: {
       comments: true,

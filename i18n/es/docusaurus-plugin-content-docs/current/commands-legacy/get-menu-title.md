@@ -1,0 +1,28 @@
+---
+id: get-menu-title
+title: Get menu title
+slug: /commands/get-menu-title
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.Get menu title.Syntax-->**Get menu title** ( *menu* {; *proceso*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Get menu title.Params-->
+| Parámetro | Tipo |  | Descripción |
+| --- | --- | --- | --- |
+| menu | Entero largo, MenuRef | &#x1F852; | Número de menú o Referencia de menú |
+| proceso | Entero largo | &#x1F852; | Número de referencia del proceso |
+| Resultado | Cadena | &#x1F850; | Título del menú |
+
+<!-- END REF-->
+
+#### Descripción 
+
+<!--REF #_command_.Get menu title.Summary-->El comando Get menu title devuelve el título del menú cuyo número o referencia se pasa en *menu.<!-- END REF-->*  
+  
+Si omite el parámetro *proceso*, Get menu title se aplica a la barra de menús del proceso actual. De lo contrario, Get menu title se aplica a la barra de menú para el proceso cuyo número de referencia se pasa en *proceso*. 
+
+**Nota:** si pasa un [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") en *menu*, el parámetro *proceso* es inútil y será ignorado. 
+
+#### Ver también 
+
+[Count menus](count-menus.md)  
