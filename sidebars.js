@@ -715,11 +715,11 @@ module.exports =
 					"type": "category",
 					"label": "Language",
 					"items": [
-						"commands-legacy/4d",
+						"commands/4d",
 						"commands-legacy/command-name",
 						"commands-legacy/copy-parameters",
 						"commands-legacy/count-parameters",
-						"commands-legacy/cs",
+						"commands/cs",
 						"commands-legacy/current-method-name",
 						"commands-legacy/execute-method",
 						"commands-legacy/get-action-info",

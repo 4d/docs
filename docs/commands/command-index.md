@@ -8,7 +8,7 @@ title: Index
 
 <a id="4D"><b>4D</b></a>
 
-[`4D`](../commands-legacy/4d.md)<br/>
+[`4D`](../commands/4d.md)<br/>
 
 <a id="A"><b>A</b></a>
 
@@ -171,7 +171,7 @@ title: Index
 [`CREATE SET`](../commands-legacy/create-set.md)<br/>
 [`CREATE SET FROM ARRAY`](../commands-legacy/create-set-from-array.md)<br/>
 [`CREATE THUMBNAIL`](../commands-legacy/create-thumbnail.md)<br/>
-[`cs`](../commands-legacy/cs.md)<br/>
+[`cs`](../commands/cs.md)<br/>
 [`Current client authentication`](../commands-legacy/current-client-authentication.md)<br/>
 [`Current date`](../commands-legacy/current-date.md)<br/>
 [`Current default table`](../commands-legacy/current-default-table.md)<br/>
