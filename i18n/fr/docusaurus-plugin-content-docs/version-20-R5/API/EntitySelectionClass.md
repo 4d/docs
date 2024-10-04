@@ -697,7 +697,7 @@ Cette entity selection est ensuite mise à jour avec les produits et vous souhai
 
 La fonction `.distinct()` <!-- REF #EntitySelectionClass.distinct().Summary -->renvoie une collection contenant uniquement des valeurs distinctes (différentes) de *attributePath* dans l'entity selection<!-- END REF -->.
 
-La collection retournée est automatiquement triée. Les valeurs **Null** ne sont pas retournées.
+La collection retournée est automatiquement triée. Vous souhaitez créer une collection pré-remplie :
 
 Dans le paramètre *attributePath* passez l'attribut d'entité dont vous voulez obtenir les valeurs distinctes. Seules les valeurs scalaires (texte, nombre, booléen ou date) peuvent être gérées. Si *attributePath* mène à une propriété d'objet qui contient des valeurs de différents types, celles-ci sont d'abord regroupées par type et triées ensuite. Les types sont renvoyés dans l'ordre suivant :
 
@@ -708,7 +708,7 @@ Dans le paramètre *attributePath* passez l'attribut d'entité dont vous voulez 
 
 Vous pouvez utiliser la notation `[]` pour désigner une collection lorsque *attributePath* est un chemin dans un objet (cf. exemples).
 
-Dans le paramètre *options*, vous pouvez passer une ou une combinaison des constantes suivantes :
+Exemple 2
 
 | Constante         | Valeur | Commentaire                                                                                                                                                                                                                                         |
 | ----------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -923,7 +923,7 @@ Par défaut, les entités pour lesquelles *attributePath* est *null* ou indéfin
 
 **.extract ( attributePath ; targetPath { ; ...attributePathN ; ... targetPathN}) : Collection**
 
-Avec cette syntaxe, `.extract()` remplit la collection retournée avec les valeurs de *attributePath*. Chaque élément de la collection retournée est un objet avec les propriétés *targetPath* complétées par les propriétés *attributePath* correspondantes. Les valeurs null sont conservées (le paramètre *option* est ignoré avec cette syntaxe).
+Avec cette syntaxe, `.extract()` remplit la collection retournée avec les valeurs de *attributePath*. Chaque élément de la collection retournée est un objet avec les propriétés *targetPath* complétées par les propriétés *attributePath* correspondantes. Par exemple, vous pouvez organiser une recherche de la manière suivante :
 
 Si plusieurs *attributePath* sont renseignés, un *targetPath* doit être fourni pour chacun. Seules les paires \[*attributePath*, *targetPath*] valides sont extraites.
 
@@ -2043,10 +2043,10 @@ La fonction `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->retourn
 
 L'entity selection retournée contient les entités comprises entre l'entité désignée par *startFrom* et, sans la contenir, celle désignée par *end*. Si seul le paramètre *startFrom* est spécifié, la sélection d'entités renvoyée contient toutes les entités à partir de *startFrom* jusqu'à la dernière entité de la sélection d'entités originale.
 
-- Si *startFrom* < 0, il est recalculé comme *startFrom:=startFrom+length* (il est considéré comme partant de la fin de l'entity selection). Si la valeur calculée est négative, *startFrom* prend la valeur 0.
+- Si *startFrom* < 0, il est recalculé comme *startFrom:=startFrom+length* (il est considéré comme partant de la fin de l'entity selection). Pour plus d'informations sur les collections partagées, veuillez vous référer à la page [Objets et collections partagés](Concepts/shared.md).
 - Si *startFrom >= length*, la fonction retourne une entity selection vide.
 - Si *end* < 0, le paramètre est recalculé comme *end:=end+length*.
-- Si *end < startFrom* (valeurs passées ou recalculées), la fonction ne fait rien.
+- Cet exemple permet de réduire plusieurs éléments de collection à un seul :
 
 Si l'entity selection contient des entités qui ont été supprimées entre-temps, elles sont également retournées.
 
