@@ -13,17 +13,17 @@ Uma list box contém uma ou mais colunas cujo conteúdos são automaticamente si
 
 ### Funcionalidades de usuário básicas
 
-Durante a execução, list boxes permitem exibir e ingressar dados como listas. Para hacer que una celda sea editable ([si se permite la entrada para la columna](#managing-entry)), basta con pulsar dos veces sobre el valor que contiene:
+Durante a execução, list boxes permitem exibir e ingressar dados como listas. Para tornar uma célula editável ([se a entrada for permitida para a coluna](#managing-entry)), basta clicar duas vezes no valor que ela contém:
 
 ![](../assets/en/FormObjects/listbox_edit.png)
 
 Usuários podem ingressar e exibir o texto em várias linhas dentro de uma célula list box. Para adicionar uma quebra de linha pressione **Ctrl+Retorno de carro** em Windows ou **Opção+Retorno de Carro** em macOS.
 
-Booleanos e imagens podem ser exibidos em células, assim como datas, horas ou números. Es posible ordenar los valores de las columnas haciendo clic en un encabezado ([ordenación estándar](#managing-sorts)). Todas as colunas são sincronizadas automaticamente.
+Booleanos e imagens podem ser exibidos em células, assim como datas, horas ou números. É possível classificar os valores da coluna clicando em um cabeçalho ([classificação padrão](#managing-sorts)). Todas as colunas são sincronizadas automaticamente.
 
-It is also possible to resize each column, and the user can modify the order of [columns](properties_ListBox.md#locked-columns-and-static-columns) and [rows](properties_Action.md#movable-rows) by moving them using the mouse, if this action is authorized. Note that list boxes can be used in [hierarchical mode](#hierarchical-list-boxes).
+Também é possível redimensionar cada coluna, e o usuário pode modificar a ordem das [colunas](properties_ListBox.md#locked-columns-and-static-columns) e das [linhas](properties_Action.md#movable-rows) movendo-as com o mouse, se essa ação for autorizada. Observe que os list boxes podem ser usados no [modo hierárquico](#hierarchical-list-boxes).
 
-The user can select one or more rows using the standard shortcuts: **Shift+click** for an adjacent selection and **Ctrl+click** (Windows) or **Command+click** (macOS) for a non-adjacent selection.
+O usuário pode selecionar um ou mais linhas usando os atalhos padrão: **Shift+clique** para uma seleção adjacente **Ctrl+clique** (Windows) ou **Comando+clique** (macOS) para uma seleção não adjacente.
 
 ### Partes de list box
 
@@ -43,23 +43,23 @@ Cada parte tem seu próprio nome assim como propriedades específicas. Por exemp
 1. Método objeto de cada coluna
 2. Método objeto da list box
 
-El método objeto de columna obtiene los eventos que se producen en su [encabezado](#list-box-headers) y [pie](#list-box-footers).
+O método objeto de coluna obtém os eventos que ocorrem em seu [cabeçalho](#list-box-headers) e [rodapé](#list-box-footers).
 
 ### Tipos de List box
 
-Há vários tipos de list boxes com seus próprios comportamentos e propriedades específicos. El tipo de list box depende de su [propiedad Fuente de datos](properties_Object.md#data-source):
+Há vários tipos de list boxes com seus próprios comportamentos e propriedades específicos. O tipo de list box depende de sua propriedade [Data Source](properties_Object.md#data-source):
 
-- **Arrays**: cada columna está ligada a un array 4D. Los list boxes basados en arrays pueden mostrarse como [cajas de lista jerárquicas](listbox_overview.md#hierarchical-list-boxes).
-- **Selección** (**Selección actual** o **Selección con nombre**): cada columna está vinculada a una expresión (por ejemplo, un campo) que se evalúa para cada registro de la selección.
-- **Collection o Entity selection**: cada columna está ligada a una expresión que se evalúa para cada elemento de la colección o cada entidad de la selección de entidades.
+- **Arrays**: cada coluna é vinculada a um array 4D. Os list boxes baseados em arrays podem ser exibidas como [list boxes hierárquicos](listbox_overview.md#hierarchical-list-boxes).
+- **Seleção** (**Seleção atual** ou **Seleção temporária**): cada coluna é vinculada a uma expressão (por exemplo, um campo) avaliada para cada registro da seleção.
+- **Coleção ou seleção de entidade**: cada coluna é conectada a uma expressão avaliada para todo elemento da coleção ou toda entidade da seleção de entidade.
 
-> \> > It is not possible to combine different list box types in the same list box object. A fonte de dados é estabelecida quando a list box é criada. Não é mais possível modificar por programação.
+> It is not possible to combine different list box types in the same list box object. A fonte de dados é estabelecida quando a list box é criada. Não é mais possível modificar por programação.
 
 ### Gerenciando list boxes
 
 Pode configurar completamente um objeto list box através de suas propriedades e também pode gerenciar dinamicamente por programação.
 
-El lenguaje 4D incluye un tema "List Box" dedicado a los comandos de list box, pero los comandos de otros temas, tales como "Propiedades de los objetos" o los comandos `EDIT ITEM` y `Displayed line number` también pueden ser utilizados. Para mayor información consulte la página [List Box Commands Summary](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box-Commands-Summary.300-4311159.en.html) del manual *Lenguaje 4D*.
+A linguagem 4D inclui um tema "List Box" dedicado para comandos de list box, mas também podem ser usados comandos de vários outros temas, como comandos "Propriedades dos objetos" ou comandos `EDIT ITEM`, `Displayed line number`. Consulte a página [List Box Commands Summary] (https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box-Commands-Summary.300-4311159.en.html) da *Referência da linguagem 4D* para obter mais informações.
 
 ## Objetos tipo list box
 
@@ -67,12 +67,12 @@ El lenguaje 4D incluye un tema "List Box" dedicado a los comandos de list box, p
 
 Em um list box de tipo array, cada coluna deve estar associada a um array unidimensional 4D; podem ser utilizados todos os tipos de array, com exceção dos arrays de ponteiros. O número de linhas é baseado no número de elementos array.
 
-Como padrão, 4D atribui o nome "ColumnX" para cada coluna. Puede cambiarlo, así como las otras propiedades de la columna, en las [propiedades de las columnas](listbox_overview.md#column-specific-properties). El formato de visualización de cada columna también puede definirse mediante el comando `OBJECT SET FORMAT`.
+Como padrão, 4D atribui o nome "ColumnX" para cada coluna. Você pode alterá-lo, assim como outras propriedades de coluna, nas [propriedades das colunas](listbox_overview.md#column-specific-properties). O formato de exibição de cada coluna também pode ser definido com o comando `OBJECT SET FORMAT`.
 
-> Los list boxes de tipo array pueden mostrarse en [modo jerárquico](listbox_overview.md#hierarchical-list-boxes), con mecanismos específicos.
+> Os list boxes do tipo array podem ser exibidos em [modo hierárquico](listbox_overview.md#hierarchical-list-boxes), com mecanismos específicos.
 
-Com list box de tipo array, o valor ingressado ou exibido são gerenciados usando a linguagem 4D. También puede asociar una [lista de opciones](properties_DataSource.md#choice-list) con una columna para controlar la entrada de datos.
-Los valores de las columnas se gestionan mediante comandos de alto nivel del tema List box (como `LISTBOX INSERT ROWS` o `LISTBOX DELETE ROWS`), así como comandos de manipulación de arrays. Por exemplo, para iniciar os conteúdos da coluna, pode usar a instrução abaixo:
+Com list box de tipo array, o valor ingressado ou exibido são gerenciados usando a linguagem 4D. Você também pode associar uma [lista de opções](properties_DataSource.md#choice-list) a uma coluna para controlar a entrada de dados.
+Os valores das colunas são gerenciados através de comandos List box de alto nível (como `LISTBOX INSERT ROWS` ou `LISTBOX DELETE ROWS`), bem como por comandos de manipulação de arrays. Por exemplo, para iniciar os conteúdos da coluna, pode usar a instrução abaixo:
 
 ```4d
 ARRAY TEXT(varCol;size)
@@ -84,11 +84,11 @@ Também pode usar uma lista:
 LIST TO ARRAY("ListName";varCol)
 ```
 
-> **Atención**: cuando un objeto List box contiene varias columnas de diferentes tamaños, sólo se mostrará el número de elementos del array (columna) más pequeño. Tem que verificar que cada array tenha o mesmo número de elementos que os outros. Além disso, se uma coluna list box for vazia (isso ocorre quando o array associado não for corretamente declarado ou dimensionado usando a linguagem), a list box não exibe nada.
+> **Aviso**: quando uma list box conter vários tamanhos diferentes de coluna, só o número de itens do menor array (coluna) será exibido. Tem que verificar que cada array tenha o mesmo número de elementos que os outros. Além disso, se uma coluna list box for vazia (isso ocorre quando o array associado não for corretamente declarado ou dimensionado usando a linguagem), a list box não exibe nada.
 
 ### List box de tipo seleção
 
-En este tipo de list box, cada columna puede estar asociada a un campo (por ejemplo `[Employees]LastName)` o a una expresión. La expresión puede basarse en uno o más campos (por ejemplo, `[Employees]FirstName+" "[Employees]LastName`) o puede ser simplemente una fórmula (por ejemplo `String(Milliseconds)`). A expressão também pode ser um método de proejeto, uma variável ou um item array. Puede utilizar los comandos `LISTBOX SET COLUMN FORMULA` y `LISTBOX INSERT COLUMN FORMULA` para modificar las columnas por programación.
+Nesse tipo de list box, cada coluna pode ser associada com um campo (por exemplo, `[Employees]LastName)` ou uma expressão. A expressão pode ser baseada em um ou mais campos (por exemplo, `[Employees]FirstName+" "[Employees]LastName`) ou pode ser simplesmente uma fórmula (por exemplo, `String(Milliseconds)`). A expressão também pode ser um método de proejeto, uma variável ou um item array. Você pode usar os comandos `LISTBOX SET COLUMN FORMULA` e `LISTBOX INSERT COLUMN FORMULA` para modificar colunas programaticamente.
 
 A continuación, el contenido de cada línea se evalúa en función de una selección de registros: la **selección actual** de una tabla o una **selección temporal**.
 
@@ -98,7 +98,7 @@ No caso de uma list box baseada na seleção atual de uma tablea, qualquer modif
 
 Nesse tipo de list box, cada coluna deve ser associada a uma expressão. Os conteúdos de cada linha são então avaliados por elemento de coleção ou por entidade da seleção de entidade.
 
-Cada elemento de la colección o cada entidad está disponible como un objeto al que se puede acceder a través de la palabra clave [This](../Concepts/classes.md#this). Una expresión de columna puede ser una ruta de propiedad, un método de proyecto, una variable o cualquier fórmula, accediendo a cada entidad u objeto elemento de colección a través de `This`, por ejemplo `This.<propertyPath>` (o `This.value` en el caso de Puede utilizar los comandos `LISTBOX SET COLUMN FORMULA` y `LISTBOX INSERT COLUMN FORMULA` para modificar las columnas por programación.
+Cada elemento da coleção ou cada entidade está disponível como um objeto que pode ser acessado por meio da palavra-chave [This](../Concepts/classes.md#this). Uma expressão de coluna pode ser um caminho de propriedade, um método projeto, uma variável ou qualquer fórmula, acessando cada entidade ou objeto de elemento de coleção por `This`, por exemplo, `This.<propertyPath>` (ou `This.value` no caso de uma coleção de valores escalares). Você pode usar os comandos `LISTBOX SET COLUMN FORMULA` e `LISTBOX INSERT COLUMN FORMULA` para modificar colunas programaticamente.
 
 Quando a fonte de dados for uma seleção de entidades, qualquer modificação feita no lado da list box são salvas automaticamente na database. Do outro lado, modificações feitas na database são visíveis na list box depois que as entidades tocadas foram recarregadas.
 
@@ -108,7 +108,7 @@ When entities are deleted, their references remain in the entity selection with 
 
 :::
 
-Quando a fonte de dados for uma coleção, qualquer modificação feita nos valores da list box são refletidas na coleção. On the other hand, if modifications are done on the collection using for example the various functions of the [Collection class](../API/CollectionClass.md), you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. Por exemplo:
+Quando a fonte de dados for uma coleção, qualquer modificação feita nos valores da list box são refletidas na coleção. Por outro lado, se forem feitas modificações na coleção usando, por exemplo, as várias funções da [classe Collection] (.../API/CollectionClass.md), você precisará notificar explicitamente o 4D reatribuindo a variável da coleção a ela mesma, para que o conteúdo do list box seja atualizado. Por exemplo:
 
 ```4d
 myCol:=myCol.push("new value") //exibir novo valor na list box
@@ -120,9 +120,9 @@ Propriedades compatíveis dependem do tipo de list box.
 
 | Propriedade                                                                                  | List box array | List box seleção | List box coleção ou entity selection |
 | -------------------------------------------------------------------------------------------- | -------------- | ---------------- | ------------------------------------ |
-| [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color)   | X              | X                | X                                    |
+| [Cor de fundo alternativa](properties_BackgroundAndBorder.md#alternate-background-color)     | X              | X                | X                                    |
 | [Background Color](properties_BackgroundAndBorder.md#background-color--fill-color)           | X              | X                | X                                    |
-| [Bold](properties_Text.md#bold)                                                              | X              | X                | X                                    |
+| [Negrito](properties_Text.md#bold)                                                           | X              | X                | X                                    |
 | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) |                | X                | X                                    |
 | [Border Line Style](properties_BackgroundAndBorder.md#border-line-style)                     | X              | X                | X                                    |
 | [Bottom](properties_CoordinatesAndSizing.md#bottom)                                          | X              | X                | X                                    |
