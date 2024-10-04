@@ -9,10 +9,10 @@ title: Qodly Studio for 4D
 
 Qodly Studioは、Webビジネスアプリケーションの開発に特化した [**Qodly Cloud Platform**](https://qodly.com) でも使用できます。
 
-Qodly Studio proposes a full-featured web UI, allowing you to:
+Qodly Studio はフル機能の Web UI を提供し、以下のことを可能にします:
 
 - キャンバス上にコンポーネントを配置して Qodlyページを作成する
-- map components to Qodly Sources
+- コンポーネントを Qodly Sources にマッピングする
 - イベントを設定して 4Dコードをトリガーする
 - さらに沢山のことが可能です
 
@@ -52,7 +52,7 @@ Qodly Studioは、[WebAdmin Webサーバー](../Admin/webAdmin.md) によって�
 
 Qodly Studio へのアクセスを有効化するには、2つのレベルで明示的に許可する必要があります:
 
-- at 4D application level
+- 4Dアプリケーションレベルで
 - プロジェクトレベルで
 
 2つのレベルのいずれか (または両方) が有効でない場合、Qodly Studio　へのアクセスは拒否されます (403ページが返されます)。
@@ -81,12 +81,12 @@ Qodly Studio へのアクセスを有効化するには、2つのレベルで明
 
 WebAdmin Webサーバーでの認証には、アクセスキーを使用します。 詳しくは、[アクセスキー](../Admin/webAdmin.md#アクセスキー) を参照ください。
 
-### Development and deployment
+### 開発と運用
 
 4Dプロジェクトの管理上、以下の使用法のみがサポートされます:
 
 - Qodly Studio での開発は **4D** (シングルユーザー) でおこなう必要があります。
-- deployment of 4D applications powered with Qodly pages must be done using **4D Server**.
+- Qodlyページを利用した 4Dアプリケーションの運用は、**4D Server** でおこなう必要があります。
 
 :::warning
 
