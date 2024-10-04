@@ -3,7 +3,7 @@ id: comboBoxOverview
 title: Combo Box
 ---
 
-A combo box is similar to a [drop-down list](dropdownList_Overview.md#overview), except that it accepts text entered from the keyboard and has additional options.
+Uma caixa de combinação é semelhante a uma [lista suspensa] (dropdownList_Overview.md#overview), exceto pelo fato de que ela aceita texto digitado pelo teclado e tem opções adicionais.
 
 ![](../assets/en/FormObjects/combo_box.png)
 
@@ -11,51 +11,51 @@ Em outros aspectos, você deve tratar uma combo box como uma área editável que
 
 ## Gerenciamento dos combo boxes
 
-Use the [`On Data Change`](Events/onDataChange.md) event to manage entries into the enterable area, as you would for any input form object.
+Use o evento [`On Data Change`] (Events/onDataChange.md) para gerenciar as entradas na área de entrada, como faria com qualquer objeto de formulário de entrada.
 
-You initialize a combo box in exactly the same way as a [drop-down list](dropdownList_Overview.md#overview): using an object, an array, or a choice list.
+Você inicializa uma caixa de combinação exatamente da mesma forma que uma [lista suspensa] (dropdownList_Overview.md#overview): usando um objeto, uma matriz ou uma lista de opções.
 
-### Utilização de um objecto
+### Usando um objeto
 
 > Esta funcionalidade só está disponível em projectos 4D.
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](../Concepts/dt_collection.md) can be used as the data source of a combo box. O objeto deve conter as seguintes propriedades:
+Um [objeto](Concepts/dt_object.md) encapsulando uma [coleção](../Concepts/dt_collection.md) pode ser usado como a fonte de dados de uma caixa de combinação. O objeto deve conter as seguintes propriedades:
 
-| Propriedade    | Tipo             | Descrição                                                                                                                                                                                                                                                         |
-| -------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `valores`      | Collection       | Obrigatório - Coleção de valores escalares. Todos os valores devem ser do mesmo tipo. Supported types:<li>strings</li><li>numbers</li><li>dates</li><li>times</li>If empty or not defined, the combo box is empty |
-| `currentValue` | igual a Colecção | Texto introduzido pelo usuário                                                                                                                                                                                                                                    |
+| Propriedade    | Tipo             | Descrição                                                                                                                                                                                                                                                                |
+| -------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `valores`      | Collection       | Obrigatório - Coleção de valores escalares. Todos os valores devem ser do mesmo tipo. Tipos suportados<li>:</li><li>stringsnumbersdatestimesSe</li>estiver vazia ou não for definida, a caixa de combinação estará vazia |
+| `currentValue` | igual a Colecção | Texto introduzido pelo usuário                                                                                                                                                                                                                                           |
 
 Se o objeto contiver outras propriedades, estas são ignoradas.
 
-When the user enters text into the combo box, the `currentValue` property of the object gets the entered text.
+Quando o usuário insere um texto na caixa de combinação, a propriedade `currentValue` do objeto obtém o texto inserido.
 
 ### Usar um array
 
-Please refer to **Using an array** in the [drop-down list page](dropdownList_Overview.md#using-an-array) for information about how to initialize the array.
+Consulte **Usando uma matriz** na [página da lista suspensa] (dropdownList_Overview.md#using-an-array) para obter informações sobre como inicializar a matriz.
 
 Um combo box é iniciado em exatamente da mesma forma que uma lista drop down Se o usuário digitar texto em uma combo box, preenche o 0imo elemento do array.
 
 ### Utilizar uma lista de seleção
 
-If you want to use a combo box to manage the values of an input area (listed field or variable), 4D lets you reference the field or variable directly as the form object's data source. Isso facilita gerenciar variáveis/campos listados.
+Se quiser usar uma caixa de combinação para gerenciar os valores de uma área de entrada (campo listado ou variável), 4D permite referenciar o campo ou a variável diretamente como a fonte de dados do objeto de formulário. Isso facilita gerenciar variáveis/campos listados.
 
 > Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado.
 
-To associate a combo box with a field or variable, you can just enter the name of the field or variable directly in the [Variable or Expression](properties_Object.md#variable-or-expression) of the form object in the Property List.
+Para associar uma caixa de combinação a um campo ou variável, basta digitar o nome do campo ou da variável diretamente em [Variable or Expression] (properties_Object.md#variable-or-expression) do objeto do formulário na Lista de propriedades.
 
-When the form is executed, 4D automatically manages the combo box during input or display: when a user chooses a value, it is saved in the field; this field value is shown in the combo box when the form is displayed:
+Quando o formulário é executado, 4D gerencia automaticamente a caixa de combinação durante a entrada ou exibição: quando um usuário escolhe um valor, ele é salvo no campo; esse valor de campo é mostrado na caixa de combinação quando o formulário é exibido:
 
-Please refer to **Using a choice** in the [drop-down list page](dropdownList_Overview.md#using-a-choice-list) for more information.
+Consulte **Usando uma escolha** na página [lista suspensa] (dropdownList_Overview.md#using-a-choice-list) para obter mais informações.
 
 ## Opções
 
 Objetos do tipo combo box aceitam duas opções específicas referentes a listas de escolhas associadas com elas:
 
-- [Automatic insertion](properties_DataSource.md#automatic-insertion): enables automatically adding a value to the data source when a user enters a value that is not found in the list associated with the combo box.
-- [Excluded List](properties_RangeOfValues.md#excluded-list) (list of excluded values): allows setting a list whose values cannot be entered in the combo box. Se um valor excluído for digitado, não será aceito e uma mensagem de erro é exibido.
+- [Inserção automática](properties_DataSource.md#automatic-insertion): permite adicionar automaticamente um valor à fonte de dados quando um usuário insere um valor que não é encontrado na lista associada à caixa de combinação.
+- [Excluded List](properties_RangeOfValues.md#excluded-list) (lista de valores excluídos): permite definir uma lista cujos valores não podem ser inseridos na caixa de combinação. Se um valor excluído for digitado, não será aceito e uma mensagem de erro é exibido.
 
-> > Associating a [list of required values](properties_RangeOfValues.md#required-list) is not available for combo boxes. In an interface, if an object must propose a finite list of required values, then you must use a [drop-down list](dropdownList_Overview.md#overview) object.
+> A associação de uma [lista de valores obrigatórios] (properties_RangeOfValues.md#required-list) não está disponível para caixas de combinação. Em uma interface, se um objeto precisar propor uma lista finita de valores necessários, você deverá usar um objeto [drop-down list] (dropdownList_Overview.md#overview).
 
 ## Propriedades compatíveis
 
