@@ -61,7 +61,7 @@ title: コンパイル
 
 :::info 互換性
 
-This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. For information about this button, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#generate-typing).
+このボタンは、変換されたプロジェクトで、[コンパイルパスオプション](#直接型指定の有効化) に **自動変数定義は行わない (直接型指定)** が選択されていない場合にのみ表示されます。 このボタンに関する情報については、[以前の 4Dリリースのドキュメント](https://developer.4d.com/docs/20/Project/compiler#型宣言を生成する) を参照ください。
 
 :::
 
@@ -123,32 +123,32 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 
 > Apple Silicon 用にコンパイルするには、マシンに **Clang** アプリケーションをインストールする必要があります。 Clang は最新バージョンの Xcode に含まれています。 詳細については [Apple Silicon用コンパイルの要件](#要件) を参照ください。
 
-### Additional options (Compatibility)
+### 追加のオプション (互換性)
 
-In projects converted from 4D versions prior to 20 R7, additional compilation options are available:
+20 R7 より前の 4Dバージョンから変換されたプロジェクトでは、追加のコンパイルオプションを使用できます:
 
-- **Compilation Path**
-- **Default typing**
-- **Compiler Methods for...**
+- **コンパイルパス**
+- **デフォルトの型指定**
+- **コンパイラーメソッド...**
 
-These options are only maintained for compatibility with legacy code. For more information, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#compiler-settings).
+これらのオプションは、従来のコードとの互換性のためにのみ維持されています。 詳細については、[以前の 4Dリリースのドキュメント](https://developer.4d.com/docs/20/Project/compiler#コンパイラー設定) を参照ください。
 
-In converted projects, it is recommended to [enable the direct typing mode](#enabling-direct-typing) and to write compliant declaration code, i.e.:
+変換されたプロジェクトでは、[直接型指定を有効化](#直接型指定の有効化) し、それに準拠した宣言コードを書くことが推奨されます:
 
-- declare explicitely all variables [using `var` keywords](../Concepts/variables.md#declaring-variables)
-- declare explicitely all parameters in function prototypes (i.e. using the `Function` or `Class Constructor` keywords) or with `#DECLARE` keywords in methods (see [Declaring parameters](../Concepts/parameters.md#declaring-parameters).
+- [`var` キーワードを使って](../Concepts/variables.md#変数の宣言) すべての変数を明示的に宣言する。
+- 関数のプロトタイプで `Function` や `Class Constructor` キーワードを使って、またはメソッド内で `#DECLARE` キーワードを使って、すべてのパラメーターを明示的に宣言する ([パラメーターの宣言](../Concepts/parameters.md#パラメーターの宣言)を参照）。
 
 #### 直接型指定の有効化
 
 :::info
 
-The direct typing mode is optional in converted projects only. It is natively used in projects created with 4D 20 R7 and higher.
+直接型指定モードは、変換されたプロジェクトでのみ任意となります。 4D 20 R7 以降で作成されたプロジェクトではネイティブで使用されます。
 
 :::
 
-Select **All variables are typed (Direct typing)** option in the **Compilation Path** menu to enable the direct typing mode. When this option is selected, other compatibility options become useless and are no longer displayed.
+直接型指定モードを有効化するには、**コンパイルパス** メニューで **自動変数定義は行わない (直接型指定)** オプションを選択します。 このオプションが選択されると、他の互換性オプションは使用できなくなり、表示されなくなります。
 
-Using this option is recommended since it provides flexibility and efficiency. The direct typing concept assumes that all elements are directly declared where they are defined in your code. You just have to make sure that all your variables are declared using the regular [`var` syntax](../Concepts/variables.md#declaring-variables) and that your method and function parameters are declared [in their prototypes](../Concepts/parameters.md) (the [Check Syntax](#check-syntax) feature can help you detecting missing or invalid declarations).
+柔軟性と効率性を提供するため、このオプションを使用することが推奨されます。 直接型指定の概念は、すべての要素がコード内の定義されている場所で直接宣言されることを前提としています。 すべての変数が [`var` シンタックス](../Concepts/variables.md#変数の宣言) で宣言されていることと、メソッドや関数のパラメーターが [プロトタイプで](../Concepts/parameters.md) 宣言されていることを確認する必要があります (不足している、または無効な宣言を検出するのに [シンタックスチェック](#シンタックスチェック) 機能が役立ちます)。
 
 ## 警告
 
