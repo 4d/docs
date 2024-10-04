@@ -150,7 +150,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Relleno horizontal](properties_CoordinatesAndSizing.md#horizontal-padding)                       | X              | X                  | X                                     |
 | [Barra de desplazamiento horizontal](properties_Appearance.md#horizontal-scroll-bar)              | X              | X                  | X                                     |
 | [Tamaño horizontal](properties_ResizingOptions.md#horizontal-sizing)                              | X              | X                  | X                                     |
-| [Italic](properties_Text.md#italic)                                                               | X              | X                  | X                                     |
+| [Itálica](properties_Text.md#italic)                                                              | X              | X                  | X                                     |
 | [Izquierda](properties_CoordinatesAndSizing.md#izquierda)                                         | X              | X                  | X                                     |
 | [Tabla maestra](properties_DataSource.md#table)                                                   |                | X                  |                                       |
 | [Meta info expression](properties_Text.md#meta-info-expression)                                   |                |                    | X                                     |
