@@ -182,8 +182,8 @@ Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge 
 * date
 * heure (stockée en nombre de milliseconds - réel)
 * Null
-* objet partagé
-* collection partagée
+* Si vous souhaitez que l'évaluation soit sensible à la casse ou pour différencier des caractères accentués, passez la constante `ck diacritical` dans le paramètre option.
+* *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de la méthode.
 
 > Contrairement aux collections standard (non partagées), les collections partagées ne prennent pas en charge les images, les pointeurs et les objets ou collections non partagés.
 
@@ -715,7 +715,7 @@ La fonction `.equal()` <!-- REF #collection.equal().Summary -->compare la collec
 
 :::note Notes
 
-- La fonction `.equal()` ne vérifie l'égalité que pour les éléments de type chaîne, booléen, nombre et null dans les collections. Elle ne vérifie pas l'égalité pour les objets natifs.
+- La fonction `.equal()` ne vérifie l'égalité que pour les éléments de type chaîne, booléen, nombre et null dans les collections. La callback reçoit les paramètres suivants :
 - Les éléments avec des valeurs **null** ne sont pas égaux aux éléments Undefined.
 
 :::

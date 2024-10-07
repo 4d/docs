@@ -1,8 +1,7 @@
 ---
 id: command-index
-title: 4D Write Pro Commands
+title: 4D View Pro コマンド
 ---
-
 
 
 [`WP Add picture`](../commands-legacy/wp-add-picture.md)<br/>

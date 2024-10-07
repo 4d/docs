@@ -5,7 +5,6 @@ title: Index
 
 [4D](#4D) - [A](#A) - [B](#B) - [C](#C) - [D](#D) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
 
-
 <a id="4D"><b>4D</b></a>
 
 [`4D`](../commands-legacy/4d.md)<br/>
@@ -85,18 +84,6 @@ title: Index
 
 <a id="C"><b>C</b></a>
 
-[`C_BLOB`](../commands-legacy/c-blob.md)<br/>
-[`C_BOOLEAN`](../commands-legacy/c-boolean.md)<br/>
-[`C_COLLECTION`](../commands-legacy/c-collection.md)<br/>
-[`C_DATE`](../commands-legacy/c-date.md)<br/>
-[`C_LONGINT`](../commands-legacy/c-longint.md)<br/>
-[`C_OBJECT`](../commands-legacy/c-object.md)<br/>
-[`C_PICTURE`](../commands-legacy/c-picture.md)<br/>
-[`C_POINTER`](../commands-legacy/c-pointer.md)<br/>
-[`C_REAL`](../commands-legacy/c-real.md)<br/>
-[`C_TEXT`](../commands-legacy/c-text.md)<br/>
-[`C_TIME`](../commands-legacy/c-time.md)<br/>
-[`C_VARIANT`](../commands-legacy/c-variant.md)<br/>
 [`Cache info`](../commands-legacy/cache-info.md)<br/>
 [`CALL FORM`](../commands-legacy/call-form.md)<br/>
 [`CALL SUBFORM CONTAINER`](../commands-legacy/call-subform-container.md)<br/>
@@ -648,6 +635,7 @@ title: Index
 [`LONGINT ARRAY FROM SELECTION`](../commands-legacy/longint-array-from-selection.md)<br/>
 [`LONGINT TO BLOB`](../commands-legacy/longint-to-blob.md)<br/>
 [`Lowercase`](../commands-legacy/lowercase.md)<br/>
+
 
 <a id="M"><b>M</b></a>
 

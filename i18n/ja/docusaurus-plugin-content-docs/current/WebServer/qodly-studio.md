@@ -9,10 +9,10 @@ title: Qodly Studio for 4D
 
 Qodly Studioは、Webビジネスアプリケーションの開発に特化した [**Qodly Cloud Platform**](https://qodly.com) でも使用できます。
 
-Qodly Studio proposes a full-featured web UI, allowing you to:
+Qodly Studio はフル機能の Web UI を提供し、以下のことを可能にします:
 
 - キャンバス上にコンポーネントを配置して Qodlyページを作成する
-- map components to Qodly Sources
+- コンポーネントを Qodly Sources にマッピングする
 - イベントを設定して 4Dコードをトリガーする
 - さらに沢山のことが可能です
 
@@ -52,7 +52,7 @@ Qodly Studioは、[WebAdmin Webサーバー](../Admin/webAdmin.md) によって�
 
 Qodly Studio へのアクセスを有効化するには、2つのレベルで明示的に許可する必要があります:
 
-- at 4D application level
+- 4Dアプリケーションレベルで
 - プロジェクトレベルで
 
 2つのレベルのいずれか (または両方) が有効でない場合、Qodly Studio　へのアクセスは拒否されます (403ページが返されます)。
@@ -81,16 +81,16 @@ Qodly Studio へのアクセスを有効化するには、2つのレベルで明
 
 WebAdmin Webサーバーでの認証には、アクセスキーを使用します。 詳しくは、[アクセスキー](../Admin/webAdmin.md#アクセスキー) を参照ください。
 
-### Development and deployment
+### 開発と運用
 
 4Dプロジェクトの管理上、以下の使用法のみがサポートされます:
 
 - Qodly Studio での開発は **4D** (シングルユーザー) でおこなう必要があります。
-- deployment of 4D applications powered with Qodly pages must be done using **4D Server**.
+- Qodlyページを利用した 4Dアプリケーションの運用は、**4D Server** でおこなう必要があります。
 
 :::warning
 
-You can open Qodly Studio, [debug](#using-qodly-debugger-on-4d-server) and edit Qodly pages directly on a 4D Server machine when a project is running in interpreted mode. This feature is only provided for testing and debugging purposes, for example to evaluate the application flow with actual data, or in multi-user environment. It must NOT be considered as a regular way to develop applications since it does not provide any control over concurrent accesses.
+プロジェクトがインタープリターモードで実行されている場合、4D Serverマシン上で Qodly Studio を開いて、Qodlyページを [デバッグ](#4d-server-で-qodlyデバッガーを使用する) したり、直接編集したりすることができます。 この機能は、実際のデータやマルチユーザー環境でのアプリケーションのフローを評価するなど、テストとデバッグ目的でのみ提供されます。 この機能は同時アクセスを制御しないため、アプリケーション開発の通常の手段として使用するべきではありません。
 
 :::
 
@@ -100,10 +100,10 @@ Qodly Studio ページは、[WebAdmin Webサーバーが起動されており](.
 
 Qodly Studio にアクセスするには 2つの方法があります:
 
-- by selecting the **Qodly Studio...** menu command from the **Design** menu (4D single-user) or the **Window** menu (4D Server).
+- **デザイン** メニュー (4Dシングルユーザー) または **ウィンドウ** メニュー (4D Server) から **Qodly Studio...** メニューコマンドを選択します。
   WebAdmin Webサーバーがすでに起動されている場合は、その設定に応じて、デフォルトのブラウザーが `IPaddress:HTTPPort/studio` または `IPaddress:HTTPSPort/studio` を開きます。 それ以外の場合は、最初に WebAdmin Webサーバーを起動するかどうかを尋ねるメッセージが表示されます。
 
-- on a browser, with the WebAdmin web server running (launched from 4D or 4D Server), enter the following address:<br/>
+- 4D または 4D Server から WebAdmin Webサーバーが起動されている状態で、ブラウザーに次のアドレスを入力します:<br/>
   `IPaddress:HTTPPort/studio`
 
   または:
@@ -225,7 +225,7 @@ You can preview your Qodly application at any moment by selecting the **Preview 
 
 This command launches the Qodly renderer on a local address in your default browser and displays the **start page** [defined in the Application settings](https://developer.qodly.com/docs/studio/settings#start-page) of Qodly Studio.
 
-### Using Qodly debugger on 4D Server
+### 4D Server で Qodlyデバッガーを使用する
 
 When using Qodly pages in a deployed 4D Server application (interpreted mode), you might encounter some cases where you need to debug your pages on the server, for example when a specific user configuration is required. In this case, you can attach the [Qodly Studio debugger](https://developer.qodly.com/docs/studio/debugging) to the 4D Server and then, benefit from its features when executing your Qodly pages.
 

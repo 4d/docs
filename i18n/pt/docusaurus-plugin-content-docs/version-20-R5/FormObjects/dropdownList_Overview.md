@@ -28,21 +28,21 @@ Pode criar diferentes tipos de listas pendentes com diferentes funcionalidades. 
 
 > Esta funcionalidade só está disponível em projectos 4D.
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a drop-down list. O objeto deve conter as seguintes propriedades:
+Um [objeto](Concepts/dt_object.md) que encapsula uma [coleção](Concepts/dt_collection) pode ser usado como a fonte de dados de uma lista suspensa. O objeto deve conter as seguintes propriedades:
 
 | Propriedade    | Tipo             | Descrição                                                                                                                                                                                                                                                               |
 | -------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `valores`      | Collection       | Obrigatório - Coleção de valores escalares. Todos os valores devem ser do mesmo tipo. Tipos suportados:<li>cadeias</li><li>números</li><li>datas</li><li>horas</li>se estiver vazio ou não, a lista suspensa está vazia |
-| `index`        | number           | Índice del elemento seleccionado actualmente (valor comprendido entre 0 y `collection.length-1`). Si se establece -1, `currentValue` se muestra como una cadena de marcador de posición                                              |
+| `index`        | number           | Índice do item selecionado no momento (valor entre 0 e `collection.length-1`). Se você definir -1, `currentValue` será exibido como uma cadeia de caracteres de espaço reservado                                                     |
 | `currentValue` | igual a Colecção | Item atualmente selecionado (utilizado como valor de marcador de posição se definido por código)                                                                                                                                                     |
 
 Se o objeto contiver outras propriedades, estas são ignoradas.
 
 Objetos lista drop down são iniciados ao carregar uma lista de valores em um array. Pode fazer isso de várias maneiras:
 
-- Enter a list of default values in the object properties by selecting `\<Static List>` in the [Data Source](properties_DataSource.md) theme of the Property List. Os valores por defeito são carregados automaticamente para um objeto.
+- Insira uma lista de valores padrão nas propriedades do objeto selecionando `\<Static List>` no tema [Data Source] (properties_DataSource.md) da Property List. Os valores por defeito são carregados automaticamente para um objeto.
 
-- Executar código que cria o objeto e as suas propriedades. Por ejemplo, si "myList" es la variable  asociada a la lista desplegable, puede escribir en el evento de formulario [On Load](Events/onLoad.md):
+- Executar código que cria o objeto e as suas propriedades. Por exemplo, se "myList" for a [variable](properties_Object.md#variable-or-expression) associada à lista suspensa, você poderá escrever no evento de formulário [On Load](Events/onLoad.md):
 
 ```4d
 // Form.myDrop é a datasource do objeto formulário
@@ -68,11 +68,11 @@ Form.myDrop.currentValue //"oranges" Form.myDrop.index //3
 
 ### Usar um array
 
-An [array](Concepts/arrays.md) is a list of values in memory that is referenced by the name of the array. Uma lista drop down exibe um array como lista de valores quando clicar nela.
+Uma [matriz] (Concepts/arrays.md) é uma lista de valores na memória que é referenciada pelo nome da matriz. Uma lista drop down exibe um array como lista de valores quando clicar nela.
 
 Para inicializar o array associado à lista pendente, pode:
 
-- Enter a list of default values in the object properties by selecting `\<Static List>` in the [Data Source](properties_DataSource.md) theme of the Property List. Os valores padrão são carregados em um array automático. Pode fazer uma referência ao array usando o nome da variável associado com o objeto.
+- Insira uma lista de valores padrão nas propriedades do objeto selecionando `\<Static List>` no tema [Data Source] (properties_DataSource.md) da Property List. Os valores padrão são carregados em um array automático. Pode fazer uma referência ao array usando o nome da variável associado com o objeto.
 
 - Antes que o objeto seja exibido, execute um código que atribua valores aos elementos do array. Por exemplo:
 
@@ -86,7 +86,7 @@ Para inicializar o array associado à lista pendente, pode:
   $aCities{6}:="Green Bay" 
 ```
 
-En este caso, el nombre de la [variable](properties_Object.md#variable-or-expression) asociada al objeto en el formulario debe ser `aCities`. Este código podría colocarse en el método formulario y ejecutarse cuando se ejecute el evento formulario `On Load`.
+Nesse caso, o nome da [variável] (properties_Object.md#variable-or-expression) associada ao objeto no formulário deve ser `aCities`. Esse código pode ser colocado no método do formulário e ser executado quando o evento `On Load` do formulário for executado.
 
 - Antes de que se muestre el objeto, cargue los valores de una lista en el array utilizando el comando [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html). Por exemplo:
 
@@ -94,7 +94,7 @@ En este caso, el nombre de la [variable](properties_Object.md#variable-or-expres
    LIST TO ARRAY("Cities";$aCities)
 ```
 
-In this case also, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be `aCities`. Este código pode ser executado ao invés das sentenças de atribuição mostradas anteriormente.
+Nesse caso também, o nome da [variável](properties_Object.md#variable-or-expression) associada ao objeto no formulário deve ser `aCities`. Este código pode ser executado ao invés das sentenças de atribuição mostradas anteriormente.
 
 Se precisar salvar as escolhas do usuário em um campo, precisa usar uma declaração de atribuição que rode depois que o registro seja aceito. O código poderia ser assim:
 
@@ -120,13 +120,13 @@ Deve selecionar cada event que teste nas estruturas Case. Os arrays sempre cont�
 
 ### Utilizar uma lista de seleção
 
-Si desea utilizar una lista desplegable para gestionar los valores de un área de entrada (campo listado o variable), 4D le permite hacer referencia al campo o variable directamente como [fuente de datos](properties_Object.md#variable-or-expression) de la  Isso facilita gerenciar variáveis/campos listados.
+Se quiser usar uma lista suspensa para gerenciar os valores de uma área de entrada (campo ou variável listada), 4D permite que você faça referência ao campo ou à variável diretamente como [fonte de dados] da lista suspensa (properties_Object.md#variable-or-expression). Isso facilita gerenciar variáveis/campos listados.
 
 Por exemplo, no caso de um campo "Cor" que só possa conter os valores "White", "Blue", "Green" ou "Red", agora é possível criar uma lista que contenha esses valores e associe-os a um objeto emergente menu que faça referência ao campo "Color". 4D então se encarrega automaticamente de gerenciar o input e exibir os valores atuais no formulário.
 
-> Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado. If you use a hierarchical list, only the first level is displayed and can be selected.
+> Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado. Se quiser exibir conteúdos hierárquicos, você precisará usar uma [lista de opções hierárquicas] (#using-a-hierarchical-choice-list).
 
-To associate a drop-down list with a field or variable, enter the name of the field or variable directly as the [Variable or Expression](properties_Object.md#variable-or-expression) field of the drop-down list in the Property List.
+Para associar uma lista suspensa a um campo ou variável, digite o nome do campo ou da variável diretamente como o campo [Variable or Expression](properties_Object.md#variable-or-expression) da lista suspensa na Lista de propriedades.
 
 > Não é possível combinar esse princípio com o uso de um array para iniciar o objeto. Se digitar um nome de campo na área Nome da variável, deve usar uma lista de seleção.
 
@@ -136,30 +136,30 @@ Quando o formulário for executado, 4D automaticamente gerencia o menu pop up ou
 
 #### Valor do item selecionado ou Referência do item selecionado
 
-When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type) property to **Selected item value** or **Selected item reference**. Essa opção permite otimizar o tamanho dos dados salvos.
+Quando você tiver associado uma lista suspensa a uma lista de opções e a um campo ou variável, poderá definir a propriedade [**Data Type**] (properties_DataSource.md#data-type) como **Selected item value** ou **Selected item reference**. Essa opção permite otimizar o tamanho dos dados salvos.
 
 ### Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado.
 
-A hierarchical drop-down list has a sublist associated with each item in the list. Eis um exemplo de uma lista pendente hierárquica:
+Uma lista suspensa hierárquica tem uma sub-lista associada a cada item da lista. Eis um exemplo de uma lista pendente hierárquica:
 
 ![](../assets/en/FormObjects/popupDropdown_hierar.png)
 
 > Nos formulários, as listas pendentes hierárquicas estão limitadas a dois níveis.
 
-Puede asignar la lista de selección jerárquica al objeto de lista desplegable utilizando el campo [Lista de selección](properties_DataSource.md#choice-list) de la Lista de propiedades.
+Você pode atribuir a lista de opções hierárquicas ao objeto de lista suspensa usando o campo [Choice List](properties_DataSource.md#choice-list) da Lista de propriedades.
 
-You manage hierarchical drop-down lists using the **Hierarchical Lists** commands of the 4D Language. All commands that support the `(*; "name")` syntax can be used with hierarchical  drop-down lists, e.g. [`List item parent`](https://doc.4d.com/4dv19/help/command/en/page633.html).
+Pode gerenciar as listas suspensas hierárquicas usando os comandos **listas hierárquicas** do idioma 4D. Todos os comandos compatíveis com a sintaxe `(*; "name")` podem ser usados com listas suspensas hierárquicas, por exemplo, [`List item parent`](https://doc.4d.com/4dv19/help/command/en/page633.html).
 
 ### Usar uma ação padrão
 
-Puede crear automáticamente una lista desplegable utilizando una acción estándar . Esta funcionalidade é suportada nos seguintes contextos:
+Você pode criar automaticamente uma lista suspensa usando uma [ação padrão] (properties_Action.md#standard-action). Esta funcionalidade é compatível com os seguintes contextos:
 
-- Uso da ação padrão `gotoPage`. En este caso, 4D mostrará automáticamente la [página del formulario](FormEditor/forms.md#form-pages) que corresponda al número del elemento seleccionado. For example, if the user selects the 3rd item, 4D will display the third page of the current form (if it exists). At runtime, by default the drop-down list displays the page numbers (1, 2...).
+- Uso da ação padrão `gotoPage`. Nesse caso, o 4D exibirá automaticamente a [página do formulário] (FormEditor/forms.md#form-pages) que corresponde ao número do item selecionado. Por exemplo, se o usuário selecionar o terceiro item, 4D exibirá a terceira página do formulário atual (se existir). No tempo de execução, por padrão a lista suspensa exibe os números de página (1, 2...).
 
 - Uso de uma ação padrão que exibe uma sub-lista de itens, por exemplo, `backgroundColor`. Essa funcionalidade exige que:
-  - a styled text area ([4D Write Pro area](writeProArea_overview.md) or [input](input_overview.md) with [multistyle](properties_Text.md#multi-style) property) is present in the form as the standard action target.
-  - la propiedad [focusable](properties_Entry.md#focusable) no está definida en la lista desplegable.
-    At runtime the drop-down list will display an automatic list of values, e.g. background colors. Pode substituir esta lista automática atribuindo além disso uma lista de seleção na qual cada elemento tenha atribuída uma ação padrão personalizada.
+  - uma área de texto com estilo ([4D Write Pro area](writeProArea_overview.md) ou [input](input_overview.md) com a propriedade [multistyle](properties_Text.md#multi-style)) está presente no formulário como o alvo da ação padrão.
+  - A propriedade [focusable](properties_Entry.md#focusable) não esteja definida para a lista suspensa.
+    Em tempo de execução, a lista suspensa exibirá uma lista automática de valores, por exemplo, cores de fundo. Pode substituir esta lista automática atribuindo além disso uma lista de seleção na qual cada elemento tenha atribuída uma ação padrão personalizada.
 
 > Esta funcionalidade não pode ser utilizada com uma lista pendente hierárquica.
 

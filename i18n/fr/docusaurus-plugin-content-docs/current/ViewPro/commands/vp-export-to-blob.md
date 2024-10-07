@@ -30,8 +30,7 @@ Dans *paramObj*, vous pouvez passer plusieurs propriétés :
 | includeFormulas         | Boolean                     | Whether to include the formula when saving, default=true.                                                                                                                                                                           |
 | includeStyles           | Boolean                     | Whether to include the style when saving, default=true.                                                                                                                                                                             |
 | includeUnusedNames      | Boolean                     | Whether to include the unused custom name when saving, default=true.                                                                                                                                                                |
-
-|saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
+| saveAsView              | Boolean                     | Whether to apply the format string to exporting value when saving, default=false.                                                                                                                                                   |
 
 Les paramètres suivants peuvent être utilisés dans la méthode de rappel :
 

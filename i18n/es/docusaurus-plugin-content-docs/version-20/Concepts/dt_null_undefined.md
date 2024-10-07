@@ -136,7 +136,7 @@ Las comparaciones con los operadores Mayor que (`>`), Menor que (`<`), Mayor o i
 
 :::info
 
-Comparisons of Undefined values with Pointer, Picture, Boolean, Blob, Object, Collection, Undefined or Null values using Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported and return an error.
+Las comparaciones de valores Undefined con valores Pointer, Picture, Boolean, Blob, Object, Collection, Undefined o Null mediante los operadores Mayor que (`>`), Menor que (`<`), Mayor o igual que (`>=`) y Menor o igual que (`<=`) no son compatibles y devuelven un error.
 
 :::
 
