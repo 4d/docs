@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.IMPORT SYLK.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table dans laquelle effectuer l'import ou Table par défaut si ce paramètre est omis |
-| nomFichier | Text | &#x1F852; | Document SYLK à importer |
+| laTable | Table | &srarr; | Table dans laquelle effectuer l'import ou Table par défaut si ce paramètre est omis |
+| nomFichier | Text | &srarr; | Document SYLK à importer |
 
 <!-- END REF-->
 

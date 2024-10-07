@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.On Backup Startup database method.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Integer | &#x1F850; | 0 = backup can be launched; value other than 0 = backup not authorized |
+| Resultado | Integer | &larr; | 0 = backup can be launched; value other than 0 = backup not authorized |
 
 <!-- END REF-->
 

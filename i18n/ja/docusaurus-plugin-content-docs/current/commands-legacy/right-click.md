@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Right click.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Boolean | &#x1F850; | 右クリックを検知した場合True、そうでなければFalse |
+| 戻り値 | Boolean | &larr; | 右クリックを検知した場合True、そうでなければFalse |
 
 <!-- END REF-->
 

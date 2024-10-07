@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PASTEBOARD DATA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| dataType | Text | &#x1F852; | Type of data to be extracted from pasteboard |
-| data | Blob | &#x1F858; | Requested data extracted from the pasteboard |
+| dataType | Text | &srarr; | Type of data to be extracted from pasteboard |
+| data | Blob | &harr; | Requested data extracted from the pasteboard |
 
 <!-- END REF-->
 

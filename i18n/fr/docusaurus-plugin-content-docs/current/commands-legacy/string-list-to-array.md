@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.STRING LIST TO ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resNum | Integer | &#x1F852; | Numéro de ressource ou Attribut 'id' de l'élément 'group' (XLIFF) |
-| tabChaînes | Text array | &#x1F858; | Chaînes de la ressource STR# ou Chaînes de l'élément 'group' (XLIFF) |
-| resFichier | Time | &#x1F852; | Numéro de référence de fichier de ressources Si omis : tous les fichiers XLIFF ou les fichiers de ressources ouverts |
+| resNum | Integer | &srarr; | Numéro de ressource ou Attribut 'id' de l'élément 'group' (XLIFF) |
+| tabChaînes | Text array | &harr; | Chaînes de la ressource STR# ou Chaînes de l'élément 'group' (XLIFF) |
+| resFichier | Time | &srarr; | Numéro de référence de fichier de ressources Si omis : tous les fichiers XLIFF ou les fichiers de ressources ouverts |
 
 <!-- END REF-->
 

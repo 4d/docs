@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DRAG ICON.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| icon | Picture | &#x1F852; | Icon to use during drag |
-| horOffset | Integer | &#x1F852; | Horizontal offset from left edge of picture with respect to cursor position (>0 = to the left, <0 = to the right) |
-| vertOffset | Integer | &#x1F852; | Vertical offset from top edge of picture with respect to cursor position (>0 = upwards, <0 = downwards) |
+| icon | Picture | &srarr; | Icon to use during drag |
+| horOffset | Integer | &srarr; | Horizontal offset from left edge of picture with respect to cursor position (>0 = to the left, <0 = to the right) |
+| vertOffset | Integer | &srarr; | Vertical offset from top edge of picture with respect to cursor position (>0 = upwards, <0 = downwards) |
 
 <!-- END REF-->
 

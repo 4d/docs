@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.String.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| expression | Expression | &#x1F852; | Expression à convertir en chaîne (peut être de type Réel, Entier, Entier long, Date, Heure, Alpha, Texte, Booléen, Indéfini ou Null) |
-| format | Integer, Text | &#x1F852; | Format d'affichage |
-| heureComb | Time | &#x1F852; | Heure à combiner si expression est une date |
-| Résultat | Text | &#x1F850; | expression convertie en chaîne alphanumérique |
+| expression | Expression | &srarr; | Expression à convertir en chaîne (peut être de type Réel, Entier, Entier long, Date, Heure, Alpha, Texte, Booléen, Indéfini ou Null) |
+| format | Integer, Text | &srarr; | Format d'affichage |
+| heureComb | Time | &srarr; | Heure à combiner si expression est une date |
+| Résultat | Text | &larr; | expression convertie en chaîne alphanumérique |
 
 <!-- END REF-->
 

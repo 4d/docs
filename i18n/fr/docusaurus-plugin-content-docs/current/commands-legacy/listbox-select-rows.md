@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SELECT ROWS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, l'objet est un nom d'objet (chaîne). Si omis, l'objet est une variable. |
-| objet | any | &#x1F852; | Nom de l'objet (si * est spécifié) ou Variable (si * est spécifié) |
-| sélection | Object, Collection | &#x1F852; | Objet ou collection décrivant les lignes à sélectionner |
-| action | Integer | &#x1F852; | lk remplacer sélection (omis par défaut), lk ajouter à sélection, lk supprimer de sélection |
+| * | Opérateur | &srarr; | Si spécifié, l'objet est un nom d'objet (chaîne). Si omis, l'objet est une variable. |
+| objet | any | &srarr; | Nom de l'objet (si * est spécifié) ou Variable (si * est spécifié) |
+| sélection | Object, Collection | &srarr; | Objet ou collection décrivant les lignes à sélectionner |
+| action | Integer | &srarr; | lk remplacer sélection (omis par défaut), lk ajouter à sélection, lk supprimer de sélection |
 
 <!-- END REF-->
 

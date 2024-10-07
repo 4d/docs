@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET HIGHLIGHT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string) <br/>If omitted, object is a field or variable |
-| object | Field, Variable, any | &#x1F852; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
-| startSel | Integer | &#x1F858; | Current text selection starting position |
-| endSel | Integer | &#x1F858; | Current text selection ending position |
+| * | Operator | &srarr; | If specified, object is an object name (string) <br/>If omitted, object is a field or variable |
+| object | Field, Variable, any | &srarr; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| startSel | Integer | &harr; | Current text selection starting position |
+| endSel | Integer | &harr; | Current text selection ending position |
 
 <!-- END REF-->
 

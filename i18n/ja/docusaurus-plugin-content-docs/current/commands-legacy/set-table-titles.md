@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET TABLE TITLES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| tableTitles | Text array | &#x1F852; | ダイアログボックスに表示されるテーブル名 |
-| tableNumbers | Integer array | &#x1F852; | 実際のテーブル番号 |
-| * | 演算子 | &#x1F852; | フォーミュラエディタでカスタム名を使用 |
+| tableTitles | Text array | &srarr; | ダイアログボックスに表示されるテーブル名 |
+| tableNumbers | Integer array | &srarr; | 実際のテーブル番号 |
+| * | 演算子 | &srarr; | フォーミュラエディタでカスタム名を使用 |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| start | Integer | &#x1F852; | Selected record number where data retrieval starts |
-| end | Integer | &#x1F852; | Selected record number where data retrieval ends |
-| aField &#124; aTable | Field, Table | &#x1F852; | Field to use for retrieving data or Table to use for retrieving record numbers |
-| array | Array | &#x1F858; | Array to receive field data or record numbers |
+| start | Integer | &srarr; | Selected record number where data retrieval starts |
+| end | Integer | &srarr; | Selected record number where data retrieval ends |
+| aField &#124; aTable | Field, Table | &srarr; | Field to use for retrieving data or Table to use for retrieving record numbers |
+| array | Array | &harr; | Array to receive field data or record numbers |
 
 <!-- END REF-->
 

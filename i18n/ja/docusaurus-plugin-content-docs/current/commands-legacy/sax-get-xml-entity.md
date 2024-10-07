@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX GET XML ENTITY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Time | &#x1F852; | 開いたドキュメントの参照 |
-| name | Text | &#x1F858; | 実体名 |
-| value | Text | &#x1F858; | 実体値 |
+| document | Time | &srarr; | 開いたドキュメントの参照 |
+| name | Text | &harr; | 実体名 |
+| value | Text | &harr; | 実体値 |
 
 <!-- END REF-->
 

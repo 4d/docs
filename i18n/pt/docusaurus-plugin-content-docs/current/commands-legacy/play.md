@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PLAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeObjeto | Text | &#x1F852; | Nome d arquivo de som ou recurso de Mac OS "snd" ou string vazia de som de sistema para parar a ação assincrônica |
-| canal | Integer | &#x1F852; | Se especificado, canal de sintetizadr e execução assincrônica; se omitido, execução sincrônica |
+| nomeObjeto | Text | &srarr; | Nome d arquivo de som ou recurso de Mac OS "snd" ou string vazia de som de sistema para parar a ação assincrônica |
+| canal | Integer | &srarr; | Se especificado, canal de sintetizadr e execução assincrônica; se omitido, execução sincrônica |
 
 <!-- END REF-->
 

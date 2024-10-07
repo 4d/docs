@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET EVENTS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#x1F852; | Nom d'objet ou "" pour désigner le formulaire (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| tabEvénements | Integer array | &#x1F852; | Tableau d’événements à définir |
-| mode | Integer | &#x1F852; | Mode d’activation des événements définis dans tabEvénements |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &srarr; | Nom d'objet ou "" pour désigner le formulaire (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| tabEvénements | Integer array | &srarr; | Tableau d’événements à définir |
+| mode | Integer | &srarr; | Mode d’activation des événements définis dans tabEvénements |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.READ ONLY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| aTabela &#124; * | Tabela, Operador | &#x1F852; | Tabela para qual estabelecer o estado apenas leitura, ou * para todas as tabelas, ou tabela padrão, se for omitido |
+| aTabela &#124; * | Tabela, Operador | &srarr; | Tabela para qual estabelecer o estado apenas leitura, ou * para todas as tabelas, ou tabela padrão, se for omitido |
 
 <!-- END REF-->
 

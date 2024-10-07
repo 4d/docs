@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SEND TEXT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| texteHTML | Text | &#x1F852; | Champ ou variable texte au format HTML à envoyer au navigateur |
-| type | Text | &#x1F852; | Type MIME |
+| texteHTML | Text | &srarr; | Champ ou variable texte au format HTML à envoyer au navigateur |
+| type | Text | &srarr; | Type MIME |
 
 <!-- END REF-->
 

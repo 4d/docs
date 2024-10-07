@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MISSING TABLE NAMES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| missingTables | Text array | &#x1F858; | Names of missing tables in the database |
+| missingTables | Text array | &harr; | Names of missing tables in the database |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Null.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Null | &#x1F850; | Null value |
+| Resultado | Null | &larr; | Null value |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET ROWS HEIGHT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| altura | Integer | &#x1F852; | Altura de la fila (en píxeles) |
-| unidad | Integer | &#x1F852; | Unidad de valor de altura:0 o se omite = píxeles, 1 = líneas |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &srarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| altura | Integer | &srarr; | Altura de la fila (en píxeles) |
+| unidad | Integer | &srarr; | Unidad de valor de altura:0 o se omite = píxeles, 1 = líneas |
 
 <!-- END REF-->
 

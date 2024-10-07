@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.List item parent.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
-| liste | Integer, Text | &#x1F852; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| refElément &#124; * | Opérateur, Entier long | &#x1F852; | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l'élément courant de la liste |
-| Résultat | Integer | &#x1F850; | Numéro de référence de l'élément parent ou 0 s'il n'y en a pas |
+| * | Opérateur | &srarr; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &srarr; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| refElément &#124; * | Opérateur, Entier long | &srarr; | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l'élément courant de la liste |
+| Résultat | Integer | &larr; | Numéro de référence de l'élément parent ou 0 s'il n'y en a pas |
 
 <!-- END REF-->
 

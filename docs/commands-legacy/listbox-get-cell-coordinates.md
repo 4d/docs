@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified = object is the name of the object (string) If omitted = object is a variable |
-| object | any | &#x1F852; | Object name (if * is specified) or variable (if * is omitted) |
-| column | Integer | &#x1F852; | Column number |
-| row | Integer | &#x1F852; | Row number |
-| left | Integer | &#x1F858; | Left coordinate of the object |
-| top | Integer | &#x1F858; | Top coordinate of the object |
-| right | Integer | &#x1F858; | Right coordinate of the object |
-| bottom | Integer | &#x1F858; | Bottom coordinate of the object |
+| * | Operator | &srarr; | If specified = object is the name of the object (string) If omitted = object is a variable |
+| object | any | &srarr; | Object name (if * is specified) or variable (if * is omitted) |
+| column | Integer | &srarr; | Column number |
+| row | Integer | &srarr; | Row number |
+| left | Integer | &harr; | Left coordinate of the object |
+| top | Integer | &harr; | Top coordinate of the object |
+| right | Integer | &harr; | Right coordinate of the object |
+| bottom | Integer | &harr; | Bottom coordinate of the object |
 
 <!-- END REF-->
 

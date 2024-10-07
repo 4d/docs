@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PAUSE PROCESS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| processo | Integer | &#x1F852; | Número de processo |
+| processo | Integer | &srarr; | Número de processo |
 
 <!-- END REF-->
 

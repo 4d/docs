@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB to print settings.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| printSettings | Blob | &#x1F852; | BLOB containing print settings |
-| params | Integer | &#x1F852; | 0=Restore saved values for number of copies and page range, 1=Reset to default values |
-| Function result | Longint | &#x1F850; | Status code: 1=Operation successful, 0=No current printer, -1=Incorrect parameters, 2=Printer changed |
+| printSettings | Blob | &srarr; | BLOB containing print settings |
+| params | Integer | &srarr; | 0=Restore saved values for number of copies and page range, 1=Reset to default values |
+| Function result | Longint | &larr; | Status code: 1=Operation successful, 0=No current printer, -1=Incorrect parameters, 2=Printer changed |
 
 <!-- END REF-->
 

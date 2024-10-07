@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RELEASE MENU.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Text | &#x1F852; | Referencia de menú |
+| menu | Text | &srarr; | Referencia de menú |
 
 <!-- END REF-->
 

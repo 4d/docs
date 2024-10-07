@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get menu item parameter.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#x1F852; | メニュー参照またはメニュー番号 |
-| menuItem | Integer | &#x1F852; | メニュー項目番号 または -1: 最後に追加された項目 |
-| 戻り値 | Text | &#x1F850; | メニュー項目のカスタムパラメタ |
+| menu | Integer, Text | &srarr; | メニュー参照またはメニュー番号 |
+| menuItem | Integer | &srarr; | メニュー項目番号 または -1: 最後に追加された項目 |
+| 戻り値 | Text | &larr; | メニュー項目のカスタムパラメタ |
 
 <!-- END REF-->
 

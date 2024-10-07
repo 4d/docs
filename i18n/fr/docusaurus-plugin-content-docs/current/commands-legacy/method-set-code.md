@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD SET CODE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin | Text, Text array | &#x1F852; | Texte ou Tableau texte contenant un ou plusieurs chemin(s) de méthode(s) |
-| code | Text, Text array | &#x1F852; | Code de(s) méthode(s) désignée(s) |
-| * | Opérateur | &#x1F852; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| chemin | Text, Text array | &srarr; | Texte ou Tableau texte contenant un ou plusieurs chemin(s) de méthode(s) |
+| code | Text, Text array | &srarr; | Code de(s) méthode(s) désignée(s) |
+| * | Opérateur | &srarr; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | any | &#x1F852; | Nome de objeto (se* é especificado) ou Tabela ou Campo ou Variável (se * é omitido) |
-| posiçao | Integer | &#x1F852; | Número da fila a selecionar ou rolagem vertical em pixels (imagens) |
-| hPosicao | Integer | &#x1F852; | Número de coluna a exibir (list box) ou rolagem horizontal em pixels (imagens) |
-| * | Operador | &#x1F852; | Exibição da linha (e coluna se parâmetro hPosição é passada) na primeira posição após rolagem. |
+| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
+| objeto | any | &srarr; | Nome de objeto (se* é especificado) ou Tabela ou Campo ou Variável (se * é omitido) |
+| posiçao | Integer | &srarr; | Número da fila a selecionar ou rolagem vertical em pixels (imagens) |
+| hPosicao | Integer | &srarr; | Número de coluna a exibir (list box) ou rolagem horizontal em pixels (imagens) |
+| * | Operador | &srarr; | Exibição da linha (e coluna se parâmetro hPosição é passada) na primeira posição após rolagem. |
 
 <!-- END REF-->
 

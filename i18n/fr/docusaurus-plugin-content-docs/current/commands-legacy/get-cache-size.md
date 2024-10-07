@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get cache size.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Real | &#x1F850; | Taille, en octets, du cache de la base de données |
+| Résultat | Real | &larr; | Taille, en octets, du cache de la base de données |
 
 <!-- END REF-->
 

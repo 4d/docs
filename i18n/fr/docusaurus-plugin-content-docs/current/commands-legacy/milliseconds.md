@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Milliseconds.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Integer | &#x1F850; | Nombre de millisecondes (1000ème de seconde) écoulées depuis le démarrage de la machine |
+| Résultat | Integer | &larr; | Nombre de millisecondes (1000ème de seconde) écoulées depuis le démarrage de la machine |
 
 <!-- END REF-->
 

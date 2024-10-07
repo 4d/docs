@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL SET PARAMETER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object | &#x1F852; | 使用する4Dオブジェクト (変数、配列、フィールド) |
-| paramType | Integer | &#x1F852; | 引数タイプ |
+| object | Object | &srarr; | 使用する4Dオブジェクト (変数、配列、フィールド) |
+| paramType | Integer | &srarr; | 引数タイプ |
 
 <!-- END REF-->
 

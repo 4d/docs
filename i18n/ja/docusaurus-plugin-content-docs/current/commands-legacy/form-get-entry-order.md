@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET ENTRY ORDER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| objectNames | Text array | &#x1F858; | 入力順に並べられたオブジェクト名の配列 |
-| pageNumber &#124; * | 倍長整数, 演算子 | &#x1F852; | 定義された入力順を取得するページの番号 (省略時はカレントページ)、または * でカレントページの実際の入力順 |
+| objectNames | Text array | &harr; | 入力順に並べられたオブジェクト名の配列 |
+| pageNumber &#124; * | 倍長整数, 演算子 | &srarr; | 定義された入力順を取得するページの番号 (省略時はカレントページ)、または * でカレントページの実際の入力順 |
 
 <!-- END REF-->
 

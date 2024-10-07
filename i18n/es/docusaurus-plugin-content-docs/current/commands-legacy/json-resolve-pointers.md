@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Resolve pointers.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | Object | &#x1F852; | Objeto que contiene punteros JSON para resolver |
-| &#x1F858; | Objeto con punteros JSON resueltos (sólo si resultado es un objeto) |
-| opciones | Object | &#x1F852; | Opciones para la resolución de punteros |
-| Resultado | Object | &#x1F850; | Objeto que contiene el resultado del proceso |
+| objeto | Object | &srarr; | Objeto que contiene punteros JSON para resolver |
+| &harr; | Objeto con punteros JSON resueltos (sólo si resultado es un objeto) |
+| opciones | Object | &srarr; | Opciones para la resolución de punteros |
+| Resultado | Object | &larr; | Objeto que contiene el resultado del proceso |
 
 <!-- END REF-->
 

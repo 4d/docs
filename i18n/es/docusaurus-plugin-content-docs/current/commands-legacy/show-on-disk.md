@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SHOW ON DISK.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nombreRuta | Text | &#x1F852; | Ruta de acceso del elemento a mostrar |
-| * | Operador | &#x1F852; | Si el elemento es una carpeta, mostrar su contenido |
+| nombreRuta | Text | &srarr; | Ruta de acceso del elemento a mostrar |
+| * | Operador | &srarr; | Si el elemento es una carpeta, mostrar su contenido |
 
 <!-- END REF-->
 

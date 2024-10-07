@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DISTINCT VALUES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campo | Field | &#x1F852; | Campo ou subcampo indexável a utilizar para dados |
-| array | Array | &#x1F858; | Array a receber os dados do campo |
-| contArray | Integer array, Real array | &#x1F858; | Array a receber o contador de cada valor |
+| campo | Field | &srarr; | Campo ou subcampo indexável a utilizar para dados |
+| array | Array | &harr; | Array a receber os dados do campo |
+| contArray | Integer array, Real array | &harr; | Array a receber o contador de cada valor |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Count tasks.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Integer | &#x1F850; | Nombre total de process ouverts (y compris les process du moteur de 4D) |
+| Résultat | Integer | &larr; | Nombre total de process ouverts (y compris les process du moteur de 4D) |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Structure file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | Returns structure file of host database |
-| Function result | String | &#x1F850; | Long name of the database structure file |
+| * | Operator | &srarr; | Returns structure file of host database |
+| Function result | String | &larr; | Long name of the database structure file |
 
 <!-- END REF-->
 

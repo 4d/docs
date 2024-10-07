@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.QR REPORT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | レポートを作成するテーブル、省略時はデフォルトテーブル |
-| document | Text | &#x1F852; | ロードするクイックレポートドキュメント |
-| methodName | Text | &#x1F852; | 呼び出すメソッドの名前 |
-| * | 演算子 | &#x1F852; | プリントダイアログボックスを表示しない |
+| aTable | Table | &srarr; | レポートを作成するテーブル、省略時はデフォルトテーブル |
+| document | Text | &srarr; | ロードするクイックレポートドキュメント |
+| methodName | Text | &srarr; | 呼び出すメソッドの名前 |
+| * | 演算子 | &srarr; | プリントダイアログボックスを表示しない |
 
 <!-- END REF-->
 

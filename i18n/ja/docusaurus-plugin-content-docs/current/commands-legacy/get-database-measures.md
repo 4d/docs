@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get database measures.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| options | Object | &#x1F852; | 戻り値を指定するオプション |
-| 戻り値 | Object | &#x1F850; | データベースの計測値を含んだオブジェクト |
+| options | Object | &srarr; | 戻り値を指定するオプション |
+| 戻り値 | Object | &larr; | データベースの計測値を含んだオブジェクト |
 
 <!-- END REF-->
 

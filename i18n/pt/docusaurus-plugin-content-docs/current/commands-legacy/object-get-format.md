@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get format.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
-| objeto | any | &#x1F852; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
-| Resultado | Text | &#x1F850; | Exibir formato de objeto |
+| * | Operador | &srarr; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
+| objeto | any | &srarr; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
+| Resultado | Text | &larr; | Exibir formato de objeto |
 
 <!-- END REF-->
 

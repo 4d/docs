@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get menu bar reference.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &#x1F852; | Numéro de référence du process |
-| Résultat | Text | &#x1F850; | Identifiant de la barre de menus |
+| process | Integer | &srarr; | Numéro de référence du process |
+| Résultat | Text | &larr; | Identifiant de la barre de menus |
 
 <!-- END REF-->
 

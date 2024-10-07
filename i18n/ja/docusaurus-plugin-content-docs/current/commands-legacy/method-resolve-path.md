@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD RESOLVE PATH.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| path | Text | &#x1F852; | 解決するパス |
-| methodType | Integer | &#x1F858; | オブジェクトタイプセレクター |
-| ptrTable | Pointer | &#x1F858; | テーブル参照 |
-| objectName | Text | &#x1F858; | フォームまたはデータベースメソッド名 |
-| formObjectName | Text | &#x1F858; | フォームオブジェクト名 |
-| * | 演算子 | &#x1F852; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
+| path | Text | &srarr; | 解決するパス |
+| methodType | Integer | &harr; | オブジェクトタイプセレクター |
+| ptrTable | Pointer | &harr; | テーブル参照 |
+| objectName | Text | &harr; | フォームまたはデータベースメソッド名 |
+| formObjectName | Text | &harr; | フォームオブジェクト名 |
+| * | 演算子 | &srarr; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
 
 <!-- END REF-->
 

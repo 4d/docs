@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.HIGHLIGHT RECORDS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#x1F852; | Tabela cujos registros foram selecionados se omitidos, tabela do formulário atual |
-| nomConjunto | Text | &#x1F852; | Conjunto de registros a selecionar ou Userset se omitido |
-| * | Operador | &#x1F852; | Desativar a barra de rolagem automático da lista |
+| tabela | Table | &srarr; | Tabela cujos registros foram selecionados se omitidos, tabela do formulário atual |
+| nomConjunto | Text | &srarr; | Conjunto de registros a selecionar ou Userset se omitido |
+| * | Operador | &srarr; | Desativar a barra de rolagem automático da lista |
 
 <!-- END REF-->
 

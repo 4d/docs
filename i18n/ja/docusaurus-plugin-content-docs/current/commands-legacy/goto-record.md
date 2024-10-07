@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GOTO RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | レコードを移動するテーブル, または 省略時、デフォルトテーブル |
-| record | Integer | &#x1F852; | Record numberで返される番号 |
+| aTable | Table | &srarr; | レコードを移動するテーブル, または 省略時、デフォルトテーブル |
+| record | Integer | &srarr; | Record numberで返される番号 |
 
 <!-- END REF-->
 

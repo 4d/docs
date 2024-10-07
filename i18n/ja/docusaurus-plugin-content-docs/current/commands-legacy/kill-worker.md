@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.KILL WORKER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| process | Text, Integer | &#x1F852; | 終了させるプロセスの番号または名称 (省略の場合はカレントプロセス) |
+| process | Text, Integer | &srarr; | 終了させるプロセスの番号または名称 (省略の場合はカレントプロセス) |
 
 <!-- END REF-->
 

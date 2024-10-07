@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Select RGB Color.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| colorDefecto | Integer | &#x1F852; | Color RGB preseleccionado |
-| mensaje | Text | &#x1F852; | Título de la ventana de selección |
-| Resultado | Integer | &#x1F850; | Color RGB |
+| colorDefecto | Integer | &srarr; | Color RGB preseleccionado |
+| mensaje | Text | &srarr; | Título de la ventana de selección |
+| Resultado | Integer | &larr; | Color RGB |
 
 <!-- END REF-->
 

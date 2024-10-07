@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get action.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se for especificado, objeto è um nome de objeto (string). Se omitido, objeto é um campo ou variável |
-| objeto | any | &#x1F852; | Nome de Objeto (se * for especificado) ou Campo ou variável (se * for omitido) |
-| Resultado | Text | &#x1F850; | Nome da ação padrão associada e (se houver) parâmetro string |
+| * | Operador | &srarr; | Se for especificado, objeto è um nome de objeto (string). Se omitido, objeto é um campo ou variável |
+| objeto | any | &srarr; | Nome de Objeto (se * for especificado) ou Campo ou variável (se * for omitido) |
+| Resultado | Text | &larr; | Nome da ação padrão associada e (se houver) parâmetro string |
 
 <!-- END REF-->
 

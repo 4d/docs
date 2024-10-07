@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET INFO COLUMN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#x1F852; | Referência da área |
-| numColuna | Integer | &#x1F852; | Nº da coluna |
-| titulo | Text | &#x1F852; | Título da coluna |
-| objeto | Field, Variable | &#x1F852; | Objeto atribuido a coluna |
-| ocultar | Integer | &#x1F852; | 0=exibir, 1=ocultar |
-| tamanho | Integer | &#x1F852; | Tamanho da coluna |
-| valoresRepetidos | Integer | &#x1F852; | 0=não repetido, 1= repetido |
-| formato | Text | &#x1F852; | Formatação dos dados |
+| area | Integer | &srarr; | Referência da área |
+| numColuna | Integer | &srarr; | Nº da coluna |
+| titulo | Text | &srarr; | Título da coluna |
+| objeto | Field, Variable | &srarr; | Objeto atribuido a coluna |
+| ocultar | Integer | &srarr; | 0=exibir, 1=ocultar |
+| tamanho | Integer | &srarr; | Tamanho da coluna |
+| valoresRepetidos | Integer | &srarr; | 0=não repetido, 1= repetido |
+| formato | Text | &srarr; | Formatação dos dados |
 
 <!-- END REF-->
 

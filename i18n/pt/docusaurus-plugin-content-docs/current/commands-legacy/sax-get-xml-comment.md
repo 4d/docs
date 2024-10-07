@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX GET XML COMMENT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | Time | &#x1F852; | Referência do documento aberto |
-| comentario | Text | &#x1F858; | XML comment |
+| documento | Time | &srarr; | Referência do documento aberto |
+| comentario | Text | &harr; | XML comment |
 
 <!-- END REF-->
 

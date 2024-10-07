@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Print form.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | フォームが属するテーブル, または 省略した場合は、デフォルトテーブル |
-| form | Text, Object | &#x1F852; | (プロジェクトまたはテーブル)フォーム名(文字列)、あるいはフォームを定義した.jsonファイルへのPOSIXパス(文字列)、あるいは印刷するフォームを定義したオブジェクト |
-| formData | Object | &#x1F852; | フォームに割り当てるデータ |
-| area1 | Integer | &#x1F852; | 印刷マーカ、または開始エリア(area2が指定された場合) |
-| area2 | Integer | &#x1F852; | 終了エリア(area1が指定された場合) |
-| 戻り値 | Integer | &#x1F850; | 印刷されたエリアの高さ |
+| aTable | Table | &srarr; | フォームが属するテーブル, または 省略した場合は、デフォルトテーブル |
+| form | Text, Object | &srarr; | (プロジェクトまたはテーブル)フォーム名(文字列)、あるいはフォームを定義した.jsonファイルへのPOSIXパス(文字列)、あるいは印刷するフォームを定義したオブジェクト |
+| formData | Object | &srarr; | フォームに割り当てるデータ |
+| area1 | Integer | &srarr; | 印刷マーカ、または開始エリア(area2が指定された場合) |
+| area2 | Integer | &srarr; | 終了エリア(area1が指定された場合) |
+| 戻り値 | Integer | &larr; | 印刷されたエリアの高さ |
 
 <!-- END REF-->
 

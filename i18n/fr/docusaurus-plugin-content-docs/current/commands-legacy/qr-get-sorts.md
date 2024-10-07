@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET SORTS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#x1F852; | Référence de la zone |
-| tabColonnes | Real array | &#x1F858; | Colonnes triées |
-| tabTris | Real array | &#x1F858; | Ordres de tris |
+| zone | Integer | &srarr; | Référence de la zone |
+| tabColonnes | Real array | &harr; | Colonnes triées |
+| tabTris | Real array | &harr; | Ordres de tris |
 
 <!-- END REF-->
 

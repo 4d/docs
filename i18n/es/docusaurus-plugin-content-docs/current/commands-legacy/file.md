@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.File.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ruta &#124; archivo4D | Texto, Entero largo | &#x1F852; | Ruta de archivo o constante de archivo 4D |
-| tipoRuta &#124; * | Entero largo, Operador | &#x1F852; | Si se pasó ruta: fk ruta posix (predeterminada) o fk ruta plataforma<br/>Si se pasó archivo4D: * para devolver el archivo de la base local |
-| Resultado | Object | &#x1F850; | Nuevo objeto archivo |
+| ruta &#124; archivo4D | Texto, Entero largo | &srarr; | Ruta de archivo o constante de archivo 4D |
+| tipoRuta &#124; * | Entero largo, Operador | &srarr; | Si se pasó ruta: fk ruta posix (predeterminada) o fk ruta plataforma<br/>Si se pasó archivo4D: * para devolver el archivo de la base local |
+| Resultado | Object | &larr; | Nuevo objeto archivo |
 
 <!-- END REF-->
 

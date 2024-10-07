@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM SET XML DECLARATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#x1F852; | XML要素参照 |
-| encoding | Text | &#x1F852; | XMLドキュメント文字セット |
-| standalone | Boolean | &#x1F852; | True = ドキュメントはスタンドアロン False (デフォルト) = ドキュメントはスタンドアロンではない |
-| indentation | Boolean | &#x1F852; | ***廃止予定、使用しないでください*** |
+| elementRef | Text | &srarr; | XML要素参照 |
+| encoding | Text | &srarr; | XMLドキュメント文字セット |
+| standalone | Boolean | &srarr; | True = ドキュメントはスタンドアロン False (デフォルト) = ドキュメントはスタンドアロンではない |
+| indentation | Boolean | &srarr; | ***廃止予定、使用しないでください*** |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET TIMEOUT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| segundos | Integer | &#x1F852; | Número de segundos hasta el timeout |
+| segundos | Integer | &srarr; | Número de segundos hasta el timeout |
 
 <!-- END REF-->
 

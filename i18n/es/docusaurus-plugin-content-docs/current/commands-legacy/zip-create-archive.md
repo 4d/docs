@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ZIP Create archive.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| archivoOCarpeta | Object | &#x1F852; | Objeto archivo o carpeta a comprimir |
-| archivoDestino | Object | &#x1F852; | Archivo de destino del archivo |
-| options | Integer | &#x1F852; | Si se utiliza archivoOCarpeta: ZIP en carpeta padre |
-| Resultado | Object | &#x1F850; | Objeto status |
+| archivoOCarpeta | Object | &srarr; | Objeto archivo o carpeta a comprimir |
+| archivoDestino | Object | &srarr; | Archivo de destino del archivo |
+| options | Integer | &srarr; | Si se utiliza archivoOCarpeta: ZIP en carpeta padre |
+| Resultado | Object | &larr; | Objeto status |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Generate password hash.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| motDePasse | Text | &#x1F852; | Mot de passe utilisateur (seuls les 72 premiers caractères sont utilisés) |
-| options | Object | &#x1F852; | Objet contenant des options |
-| Résultat | Text | &#x1F850; | Hash du mot de passe |
+| motDePasse | Text | &srarr; | Mot de passe utilisateur (seuls les 72 premiers caractères sont utilisés) |
+| options | Object | &srarr; | Objet contenant des options |
+| Résultat | Text | &larr; | Hash du mot de passe |
 
 <!-- END REF-->
 

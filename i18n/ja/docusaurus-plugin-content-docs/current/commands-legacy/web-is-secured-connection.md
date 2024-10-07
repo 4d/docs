@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Is secured connection.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Boolean | &#x1F850; | True = Web接続が保護されている場合 False = Web接続が保護されていない場合 |
+| 戻り値 | Boolean | &larr; | True = Web接続が保護されている場合 False = Web接続が保護されていない場合 |
 
 <!-- END REF-->
 

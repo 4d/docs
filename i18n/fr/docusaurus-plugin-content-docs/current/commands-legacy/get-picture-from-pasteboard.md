@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| image | Picture | &#x1F858; | Image extraite du conteneur de données |
+| image | Picture | &harr; | Image extraite du conteneur de données |
 
 <!-- END REF-->
 

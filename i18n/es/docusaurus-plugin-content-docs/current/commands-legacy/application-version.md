@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Application version.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| buildNum | Integer | &#x1F858; | Número de build |
-| * | Operador | &#x1F852; | Si pasa número de versión largo, de lo contrario número de versión corto |
-| Resultado | Text | &#x1F850; | Número de versión en una cadena codificada |
+| buildNum | Integer | &harr; | Número de build |
+| * | Operador | &srarr; | Si pasa número de versión largo, de lo contrario número de versión corto |
+| Resultado | Text | &larr; | Número de versión en una cadena codificada |
 
 <!-- END REF-->
 

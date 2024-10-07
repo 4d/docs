@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Folder.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin &#124; dossier4D | Texte, Entier long | &#x1F852; | Chemin du dossier ou constante du dossier 4D |
-| typeChemin &#124; * | Entier long, Opérateur | &#x1F852; | Si chemin est passé : fk chemin posix (par défaut) ou fk chemin plateforme<br/>Si dossier4D est passé : * pour retourner le dossier de la base hôte |
-| Résultat | Object | &#x1F850; | Nouvel objet dossier |
+| chemin &#124; dossier4D | Texte, Entier long | &srarr; | Chemin du dossier ou constante du dossier 4D |
+| typeChemin &#124; * | Entier long, Opérateur | &srarr; | Si chemin est passé : fk chemin posix (par défaut) ou fk chemin plateforme<br/>Si dossier4D est passé : * pour retourner le dossier de la base hôte |
+| Résultat | Object | &larr; | Nouvel objet dossier |
 
 <!-- END REF-->
 

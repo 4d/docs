@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Find column.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#x1F852; | エリア参照 |
-| expression | Text, Pointer | &#x1F852; | カラムオブジェクト |
-| 戻り値 | Integer | &#x1F850; | カラム番号 |
+| area | Integer | &srarr; | エリア参照 |
+| expression | Text, Pointer | &srarr; | カラムオブジェクト |
+| 戻り値 | Integer | &larr; | カラム番号 |
 
 <!-- END REF-->
 

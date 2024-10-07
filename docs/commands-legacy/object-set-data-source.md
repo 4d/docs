@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET DATA SOURCE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &#x1F852; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
-| dataSource | Pointer | &#x1F852; | Pointer to new data source for object |
+| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | any | &srarr; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| dataSource | Pointer | &srarr; | Pointer to new data source for object |
 
 <!-- END REF-->
 

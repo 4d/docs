@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Criar selecao de entidade.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| dsTable | Table | &#x1F852; | Tabela no banco de dados 4D cuja seleção atual será usada para construir a entidade |
-| settings | Object | &#x1F852; | Opção de construção: contexto |
-| Resultado | EntitySelection | &#x1F850; | Seleção de entidade combinando a classe de dados relacionada a tabela dada |
+| dsTable | Table | &srarr; | Tabela no banco de dados 4D cuja seleção atual será usada para construir a entidade |
+| settings | Object | &srarr; | Opção de construção: contexto |
+| Resultado | EntitySelection | &larr; | Seleção de entidade combinando a classe de dados relacionada a tabela dada |
 
 <!-- END REF-->
 

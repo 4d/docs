@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET SUBFORM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &#x1F852; | Object Name (if * is specified) or Variable (if * is omitted) |
-| aTable | Table | &#x1F852; | Table of form (if table form) |
-| detailSubform | Text, Object | &#x1F852; | Name (text) of the detail form, or a POSIX path (text) to a .json file describing the detail form, or an object describing the detail form of the subform |
-| listSubform | Text, Object | &#x1F852; | Name (text) of the list form, ora POSIX path (text) to a .json file describing the list form, or an object describing the list form of the subform (table form) |
+| * | Operator | &srarr; | If specified, object is an object name (string)If omitted, object is a variable |
+| object | any | &srarr; | Object Name (if * is specified) or Variable (if * is omitted) |
+| aTable | Table | &srarr; | Table of form (if table form) |
+| detailSubform | Text, Object | &srarr; | Name (text) of the detail form, or a POSIX path (text) to a .json file describing the detail form, or an object describing the detail form of the subform |
+| listSubform | Text, Object | &srarr; | Name (text) of the list form, ora POSIX path (text) to a .json file describing the list form, or an object describing the list form of the subform (table form) |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ZIP Read archive.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| zipFile | Object | &#x1F852; | ZIPアーカイブファイル |
-| password | Text | &#x1F852; | ZIPアーカイブのパスワード(必要であれば) |
-| 戻り値 | Object | &#x1F850; | アーカイブオブジェクト |
+| zipFile | Object | &srarr; | ZIPアーカイブファイル |
+| password | Text | &srarr; | ZIPアーカイブのパスワード(必要であれば) |
+| 戻り値 | Object | &larr; | アーカイブオブジェクト |
 
 <!-- END REF-->
 

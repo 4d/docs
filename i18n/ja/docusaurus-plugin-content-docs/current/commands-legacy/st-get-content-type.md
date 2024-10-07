@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.ST Get content type.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時: object はオブジェクト名(文字列)、省略時: object は変数またはフィールド |
-| object | any | &#x1F852; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
-| startSel | Integer | &#x1F852; | 選択範囲の開始地点 |
-| endSel | Integer | &#x1F852; | 選択範囲の終了地点 |
-| startBlock | Integer | &#x1F858; | 選択範囲内の、同一のタイプの開始地点 |
-| endBlock | Integer | &#x1F858; | 選択範囲内の、同一のタイプの終了地点 |
-| 戻り値 | Integer | &#x1F850; | 内容のタイプ |
+| * | 演算子 | &srarr; | 指定時: object はオブジェクト名(文字列)、省略時: object は変数またはフィールド |
+| object | any | &srarr; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
+| startSel | Integer | &srarr; | 選択範囲の開始地点 |
+| endSel | Integer | &srarr; | 選択範囲の終了地点 |
+| startBlock | Integer | &harr; | 選択範囲内の、同一のタイプの開始地点 |
+| endBlock | Integer | &harr; | 選択範囲内の、同一のタイプの終了地点 |
+| 戻り値 | Integer | &larr; | 内容のタイプ |
 
 <!-- END REF-->
 

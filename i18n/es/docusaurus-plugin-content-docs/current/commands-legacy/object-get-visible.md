@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get visible.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
-| objeto | any | &#x1F852; | Nombre del objeto (si se especifica *) o Variable o campo (si se omite *) |
-| Resultado | Boolean | &#x1F850; | True = objeto(s) visible(s), de lo contrario False |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
+| objeto | any | &srarr; | Nombre del objeto (si se especifica *) o Variable o campo (si se omite *) |
+| Resultado | Boolean | &larr; | True = objeto(s) visible(s), de lo contrario False |
 
 <!-- END REF-->
 

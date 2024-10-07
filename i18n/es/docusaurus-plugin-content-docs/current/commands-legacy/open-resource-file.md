@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Open resource file.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| resNomArchivo | Text | &#x1F852; | Nombre o ruta de acceso completa del archivo de recursos o Cadena vacía para mostrar la caja de diálogo estándar de apertura de archivos |
-| tipo | Text | &#x1F852; | Tipo de archivo Mac OS (cadena de 4 caracteres) o extensión del archivo Windows (cadena de 1 a 3 caracteres) o archivo de recursos ("res " / .RES) si se omite |
-| Resultado | Time | &#x1F850; | Número de referencia del archivo de recursos |
+| resNomArchivo | Text | &srarr; | Nombre o ruta de acceso completa del archivo de recursos o Cadena vacía para mostrar la caja de diálogo estándar de apertura de archivos |
+| tipo | Text | &srarr; | Tipo de archivo Mac OS (cadena de 4 caracteres) o extensión del archivo Windows (cadena de 1 a 3 caracteres) o archivo de recursos ("res " / .RES) si se omite |
+| Resultado | Time | &larr; | Número de referencia del archivo de recursos |
 
 <!-- END REF-->
 

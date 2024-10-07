@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get report table.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#x1F852; | エリア参照 |
-| 戻り値 | Integer | &#x1F850; | テーブル番号 |
+| area | Integer | &srarr; | エリア参照 |
+| 戻り値 | Integer | &larr; | テーブル番号 |
 
 <!-- END REF-->
 

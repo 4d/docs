@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.GET USER PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| userID | Integer | &#x1F852; | ユニークなユーザーID番号 |
-| name | Text | &#x1F858; | ユーザー名 |
-| startup | Text | &#x1F858; | スタートアップメソッドの名前 |
-| password | Text | &#x1F858; | 常に空の文字列 |
-| nbLogin | Integer | &#x1F858; | データベースにログインした回数 (バイナリデータベースのみ) |
-| lastLogin | Date | &#x1F858; | データベースに最後にログインした日付 (バイナリデータベースのみ) |
-| memberships | Integer array | &#x1F858; | ユーザーが属するグループのID番号 |
-| groupOwner | Integer | &#x1F858; | ユーザーのグループオーナーのID番号 (バイナリデータベースのみ) |
+| userID | Integer | &srarr; | ユニークなユーザーID番号 |
+| name | Text | &harr; | ユーザー名 |
+| startup | Text | &harr; | スタートアップメソッドの名前 |
+| password | Text | &harr; | 常に空の文字列 |
+| nbLogin | Integer | &harr; | データベースにログインした回数 (バイナリデータベースのみ) |
+| lastLogin | Date | &harr; | データベースに最後にログインした日付 (バイナリデータベースのみ) |
+| memberships | Integer array | &harr; | ユーザーが属するグループのID番号 |
+| groupOwner | Integer | &harr; | ユーザーのグループオーナーのID番号 (バイナリデータベースのみ) |
 
 <!-- END REF-->
 

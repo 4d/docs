@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get border style.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| Résultat | Integer | &#x1F850; | Style de la ligne de bordure |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| Résultat | Integer | &larr; | Style de la ligne de bordure |
 
 <!-- END REF-->
 

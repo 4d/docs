@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SELECTION TO ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| umCampo &#124; umaTabela | Campo, Tabela | &#x1F852; | Campo usado para pedir dados ou Tabela usada para pedir números de registros |
-| array | Array | &#x1F858; | Array para receber dados do campo ou número de registros |
-| campo | Field | &#x1F852; | Campo a ser requisitado no array |
-| array | Array | &#x1F858; | Array a receber os dados do campo |
-| * | Operador | &#x1F852; | Aguarde execução |
+| umCampo &#124; umaTabela | Campo, Tabela | &srarr; | Campo usado para pedir dados ou Tabela usada para pedir números de registros |
+| array | Array | &harr; | Array para receber dados do campo ou número de registros |
+| campo | Field | &srarr; | Campo a ser requisitado no array |
+| array | Array | &harr; | Array a receber os dados do campo |
+| * | Operador | &srarr; | Aguarde execução |
 
 <!-- END REF-->
 

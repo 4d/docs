@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.On System Event database method.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| $1 | 倍長整数 | &#x1F858; | イベントコード |
+| $1 | 倍長整数 | &harr; | イベントコード |
 
 <!-- END REF-->
 

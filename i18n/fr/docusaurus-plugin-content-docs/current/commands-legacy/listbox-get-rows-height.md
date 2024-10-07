@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get rows height.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| unité | Integer | &#x1F852; | Unité de la valeur de hauteur : <br/>0 ou omis = pixels, 1 = lignes |
-| Résultat | Integer | &#x1F850; | Hauteur de ligne en pixels |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| unité | Integer | &srarr; | Unité de la valeur de hauteur : <br/>0 ou omis = pixels, 1 = lignes |
+| Résultat | Integer | &larr; | Hauteur de ligne en pixels |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| calculation | Integer | &#x1F852; | Calculation for footer area |
+| * | Operator | &srarr; | If specified, object is an object name (string)If omitted, object is a variable |
+| object | any | &srarr; | Object name (if * is specified) or Variable (if * is omitted) |
+| calculation | Integer | &srarr; | Calculation for footer area |
 
 <!-- END REF-->
 

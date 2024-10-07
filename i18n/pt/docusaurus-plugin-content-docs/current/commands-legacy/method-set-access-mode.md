@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD SET ACCESS MODE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| modo | Integer | &#x1F852; | Modo de acesso aos objetos bloqueados |
+| modo | Integer | &srarr; | Modo de acesso aos objetos bloqueados |
 
 <!-- END REF-->
 

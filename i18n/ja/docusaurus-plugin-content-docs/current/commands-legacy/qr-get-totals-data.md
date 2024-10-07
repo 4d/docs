@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET TOTALS DATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#x1F852; | エリア参照 |
-| colNum | Integer | &#x1F852; | カラム番号 |
-| breakNum | Integer | &#x1F852; | ブレーク番号 |
-| operator | Integer | &#x1F858; | セルの演算名 |
-| text | Text | &#x1F858; | セルの内容 |
+| area | Integer | &srarr; | エリア参照 |
+| colNum | Integer | &srarr; | カラム番号 |
+| breakNum | Integer | &srarr; | ブレーク番号 |
+| operator | Integer | &harr; | セルの演算名 |
+| text | Text | &harr; | セルの内容 |
 
 <!-- END REF-->
 

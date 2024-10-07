@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT TEXT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table from which to export data, or Default table, if omitted |
-| document | Text | &#x1F852; | Text document to receive the data |
+| aTable | Table | &srarr; | Table from which to export data, or Default table, if omitted |
+| document | Text | &srarr; | Text document to receive the data |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.UNION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ensemble1 | Text | &#x1F852; | Premier ensemble |
-| ensemble2 | Text | &#x1F852; | Second ensemble |
-| résultat | Text | &#x1F852; | Ensemble résultant |
+| ensemble1 | Text | &srarr; | Premier ensemble |
+| ensemble2 | Text | &srarr; | Second ensemble |
+| résultat | Text | &srarr; | Ensemble résultant |
 
 <!-- END REF-->
 

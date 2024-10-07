@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FONT LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| fuentes | Text array | &#x1F858; | Array de nombres de fuentes disponibles |
-| tipoLista | Integer, * | &#x1F852; | Tipo de lista de fuente a devolver o * para devolver los nombres de fuente en OS X |
+| fuentes | Text array | &harr; | Array de nombres de fuentes disponibles |
+| tipoLista | Integer, * | &srarr; | Tipo de lista de fuente a devolver o * para devolver los nombres de fuente en OS X |
 
 <!-- END REF-->
 

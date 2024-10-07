@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SET SIZE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | Text | &#x1F852; | Nombre del objeto que indica los límites del formulario |
-| horizontal | Integer | &#x1F852; | Si se pasa *: margen horizontal (píxeles) Si se omite *: ancho (píxeles) |
-| vertical | Integer | &#x1F852; | Si se pasa *: margen vertical (píxeles) Si se omite *: altura (píxeles) |
-| * | Operador | &#x1F852; | • Si se pasa: añadir las márgenes definidas por los parámetros horizontal y vertical (tamaño automático o basado en un objeto, si se pasa un objeto) • Si se omite: utilizar horizontal y vertical como ancho y altura del formulario |
+| objeto | Text | &srarr; | Nombre del objeto que indica los límites del formulario |
+| horizontal | Integer | &srarr; | Si se pasa *: margen horizontal (píxeles) Si se omite *: ancho (píxeles) |
+| vertical | Integer | &srarr; | Si se pasa *: margen vertical (píxeles) Si se omite *: altura (píxeles) |
+| * | Operador | &srarr; | • Si se pasa: añadir las márgenes definidas por los parámetros horizontal y vertical (tamaño automático o basado en un objeto, si se pasa un objeto) • Si se omite: utilizar horizontal y vertical como ancho y altura del formulario |
 
 <!-- END REF-->
 

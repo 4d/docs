@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get default user.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Integer | &#x1F850; | ユニークなユーザーID番号 |
+| 戻り値 | Integer | &larr; | ユニークなユーザーID番号 |
 
 <!-- END REF-->
 

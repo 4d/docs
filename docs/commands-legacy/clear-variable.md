@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR VARIABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| variable | Variable | &#x1F852; | Variable to clear |
+| variable | Variable | &srarr; | Variable to clear |
 
 <!-- END REF-->
 

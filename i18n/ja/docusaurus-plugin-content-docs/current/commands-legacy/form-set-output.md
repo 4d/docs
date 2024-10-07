@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SET OUTPUT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | 出力フォームを設定するテーブル, または 省略した場合、デフォルトテーブル |
-| form | Text, Object | &#x1F852; | (プロジェクトまたはテーブル)フォーム名(文字列)、<br/>あるいはフォームを定義した.jsonファイルへのPOSIXパス(文字列)、<br/>あるいは開くフォームを定義したオブジェクト |
-| userForm | Text | &#x1F852; | 使用するユーザフォーム名 |
+| aTable | Table | &srarr; | 出力フォームを設定するテーブル, または 省略した場合、デフォルトテーブル |
+| form | Text, Object | &srarr; | (プロジェクトまたはテーブル)フォーム名(文字列)、<br/>あるいはフォームを定義した.jsonファイルへのPOSIXパス(文字列)、<br/>あるいは開くフォームを定義したオブジェクト |
+| userForm | Text | &srarr; | 使用するユーザフォーム名 |
 
 <!-- END REF-->
 

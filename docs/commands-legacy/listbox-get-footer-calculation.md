@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get footer calculation.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &#x1F852; | Object Name (if * is specified) or Variable (if * is omitted) |
-| Function result | Longint | &#x1F850; | Type of calculation |
+| * | Operator | &srarr; | If specified, object is an object name (string)If omitted, object is a variable |
+| object | any | &srarr; | Object Name (if * is specified) or Variable (if * is omitted) |
+| Function result | Longint | &larr; | Type of calculation |
 
 <!-- END REF-->
 

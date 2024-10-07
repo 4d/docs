@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| status | Boolean | &#x1F852; | True=Enable internal query analysis, False=Disable internal query analysis |
+| status | Boolean | &srarr; | True=Enable internal query analysis, False=Disable internal query analysis |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Menu selected.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| subMenu | Text | &#x1F858; | Referência de menu contendo o item selecionado |
-| Resultado | Integer | &#x1F850; | Comando de menu selecionado "Palavra Superior": número de menu Palavra inferior: Número de comando de menu |
+| subMenu | Text | &harr; | Referência de menu contendo o item selecionado |
+| Resultado | Integer | &larr; | Comando de menu selecionado "Palavra Superior": número de menu Palavra inferior: Número de comando de menu |
 
 <!-- END REF-->
 

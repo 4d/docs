@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD TITLES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#x1F852; | Tabla de la cual quiere conocer los nombres de los campos |
-| titulosCampos | Text array | &#x1F858; | Nombres actuales de los campos |
-| numCampos | Integer array | &#x1F858; | Números de los campos |
+| tabla | Table | &srarr; | Tabla de la cual quiere conocer los nombres de los campos |
+| titulosCampos | Text array | &harr; | Nombres actuales de los campos |
+| numCampos | Integer array | &harr; | Números de los campos |
 
 <!-- END REF-->
 

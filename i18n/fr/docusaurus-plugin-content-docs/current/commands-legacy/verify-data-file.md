@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.VERIFY DATA FILE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminStructure | Text | &#x1F852; | Chemin d’accès du fichier de structure de la base à vérifier |
-| cheminDonnées | Text | &#x1F852; | Chemin d’accès du fichier de données de la base à vérifier |
-| objets | Integer | &#x1F852; | Objets à vérifier |
-| options | Integer | &#x1F852; | Options de vérification |
-| méthode | Text | &#x1F852; | Nom de la méthode 4D de rétroappel |
-| tabTables | Integer array | &#x1F852; | Numéros des tables à vérifier |
-| tabChamps | 2D Integer array, 2D Integer array, 2D Real array | &#x1F852; | Numéros des index à vérifier |
+| cheminStructure | Text | &srarr; | Chemin d’accès du fichier de structure de la base à vérifier |
+| cheminDonnées | Text | &srarr; | Chemin d’accès du fichier de données de la base à vérifier |
+| objets | Integer | &srarr; | Objets à vérifier |
+| options | Integer | &srarr; | Options de vérification |
+| méthode | Text | &srarr; | Nom de la méthode 4D de rétroappel |
+| tabTables | Integer array | &srarr; | Numéros des tables à vérifier |
+| tabChamps | 2D Integer array, 2D Integer array, 2D Real array | &srarr; | Numéros des index à vérifier |
 
 <!-- END REF-->
 

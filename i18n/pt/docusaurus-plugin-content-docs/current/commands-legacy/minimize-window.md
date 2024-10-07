@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.MINIMIZE WINDOW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janela | Integer | &#x1F852; | Número de referência de janela ou se for omitido, todos os processos atuais e janelas de primeiro plano (Windows) ou processo atual de primeiro plano (Mac OS) |
+| janela | Integer | &srarr; | Número de referência de janela ou se for omitido, todos os processos atuais e janelas de primeiro plano (Windows) ou processo atual de primeiro plano (Mac OS) |
 
 <!-- END REF-->
 

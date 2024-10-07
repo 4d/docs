@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PAGE BREAK.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| *&#124;> | &#x1F852; | * Cancela o trabalho de impressão iniciado com o Formulário de Impressão, ou > para forçar um trabalho de impressão. |
+| *&#124;> | &srarr; | * Cancela o trabalho de impressão iniciado com o Formulário de Impressão, ou > para forçar um trabalho de impressão. |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP Parse message.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| data | Text, Blob | &#x1F852; | パースするデータ |
-| 戻り値 | Object | &#x1F850; | 各プロパティがマルチパートデータの一部分を構成するオブジェクト |
+| data | Text, Blob | &srarr; | パースするデータ |
+| 戻り値 | Object | &larr; | 各プロパティがマルチパートデータの一部分を構成するオブジェクト |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Month of.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aDate | Date | &#x1F852; | Date for which to return the month |
-| Function result | Longint | &#x1F850; | Number indicating the month of date |
+| aDate | Date | &srarr; | Date for which to return the month |
+| Function result | Longint | &larr; | Number indicating the month of date |
 
 <!-- END REF-->
 

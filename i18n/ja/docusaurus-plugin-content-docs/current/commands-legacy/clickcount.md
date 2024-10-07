@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Clickcount.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Integer | &#x1F850; | 連続したクリックの回数 |
+| 戻り値 | Integer | &larr; | 連続したクリックの回数 |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL EXECUTE SCRIPT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| scriptPath | Text | &#x1F852; | Complete pathname of file containing SQL script to execute |
-| errorAction | Integer | &#x1F852; | Action to carry out in case of error during script execution |
-| attribName | Text | &#x1F852; | Name of attribute to use |
-| attribValue | Text | &#x1F852; | Value of attribute |
+| scriptPath | Text | &srarr; | Complete pathname of file containing SQL script to execute |
+| errorAction | Integer | &srarr; | Action to carry out in case of error during script execution |
+| attribName | Text | &srarr; | Name of attribute to use |
+| attribValue | Text | &srarr; | Value of attribute |
 
 <!-- END REF-->
 

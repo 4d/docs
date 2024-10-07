@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get pointer.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sélecteur | Integer | &#x1F852; | Catégorie d’objet |
-| nomObjet | Text | &#x1F852; | Nom d'objet |
-| nomSousFormulaire | Text | &#x1F852; | Nom d'objet sous-formulaire |
-| Résultat | Pointer | &#x1F850; | Pointeur sur la variable de l’objet |
+| sélecteur | Integer | &srarr; | Catégorie d’objet |
+| nomObjet | Text | &srarr; | Nom d'objet |
+| nomSousFormulaire | Text | &srarr; | Nom d'objet sous-formulaire |
+| Résultat | Pointer | &larr; | Pointeur sur la variable de l’objet |
 
 <!-- END REF-->
 

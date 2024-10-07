@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE SET.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#x1F852; | tabela para qual criar um conjunto a partir da seleção, ou tabela padrão se omitido |
-| conjunto | Text | &#x1F852; | Nome do novo conjunto |
+| tabela | Table | &srarr; | tabela para qual criar um conjunto a partir da seleção, ou tabela padrão se omitido |
+| conjunto | Text | &srarr; | Nome do novo conjunto |
 
 <!-- END REF-->
 

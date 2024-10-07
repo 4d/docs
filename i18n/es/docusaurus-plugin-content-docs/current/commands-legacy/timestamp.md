@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Timestamp.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Text | &#x1F850; | Hora actual devuelta utilizando el formato ISO con milisegundos |
+| Resultado | Text | &larr; | Hora actual devuelta utilizando el formato ISO con milisegundos |
 
 <!-- END REF-->
 

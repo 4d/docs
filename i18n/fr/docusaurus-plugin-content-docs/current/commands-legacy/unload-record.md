@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.UNLOAD RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table pour laquelle l'enregistrement est à libérer ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &srarr; | Table pour laquelle l'enregistrement est à libérer ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 

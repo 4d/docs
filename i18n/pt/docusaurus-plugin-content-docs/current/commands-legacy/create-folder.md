@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE FOLDER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaPasta | Text | &#x1F852; | Rota de acesso a nova pasta a criar |
-| * | Operador | &#x1F852; | Cria hierarquia de pastas |
+| rotaPasta | Text | &srarr; | Rota de acesso a nova pasta a criar |
+| * | Operador | &srarr; | Cria hierarquia de pastas |
 
 <!-- END REF-->
 

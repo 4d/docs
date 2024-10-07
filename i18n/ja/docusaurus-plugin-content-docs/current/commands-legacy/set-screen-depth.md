@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET SCREEN DEPTH.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| depth | Integer | &#x1F852; | 画面の深度 (カラーの数 = 2^深度) |
-| color | Integer | &#x1F852; | 1 = カラー画面、0 = グレイスケール |
-| screen | Integer | &#x1F852; | 画面番号、または省略した場合には主画面(メインスクリーン) |
+| depth | Integer | &srarr; | 画面の深度 (カラーの数 = 2^深度) |
+| color | Integer | &srarr; | 1 = カラー画面、0 = グレイスケール |
+| screen | Integer | &srarr; | 画面番号、または省略した場合には主画面(メインスクリーン) |
 
 <!-- END REF-->
 

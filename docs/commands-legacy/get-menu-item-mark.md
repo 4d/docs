@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Get menu item mark.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#x1F852; | Menu number or Menu reference |
-| menuItem | Integer | &#x1F852; | Menu item number or -1 for last item added |
-| process | Integer | &#x1F852; | Process reference number |
-| Function result | String | &#x1F850; | Current menu item mark |
+| menu | Integer, Text | &srarr; | Menu number or Menu reference |
+| menuItem | Integer | &srarr; | Menu item number or -1 for last item added |
+| process | Integer | &srarr; | Process reference number |
+| Function result | String | &larr; | Current menu item mark |
 
 <!-- END REF-->
 

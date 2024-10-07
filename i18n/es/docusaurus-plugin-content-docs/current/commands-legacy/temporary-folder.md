@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Temporary folder.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Text | &#x1F850; | Ruta de acceso a la carpeta temporal |
+| Resultado | Text | &larr; | Ruta de acceso a la carpeta temporal |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET CACHE SIZE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| taille | Real | &#x1F852; | Taille du cache du la base de données en octets |
-| libereMini | Real | &#x1F852; | Nombre minimum d'octets à libérer lorsque le cache est plein |
+| taille | Real | &srarr; | Taille du cache du la base de données en octets |
+| libereMini | Real | &srarr; | Nombre minimum d'octets à libérer lorsque le cache est plein |
 
 <!-- END REF-->
 

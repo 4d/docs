@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Log File.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Text | &#x1F850; | データベースログファイルのロング名 |
+| 戻り値 | Text | &larr; | データベースログファイルのロング名 |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET ATTRIBUTES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| caminho | Text, Text array | &#x1F852; | Caminho do método |
-| atributos | Object, Object array | &#x1F858; | Atributos para métodos selecionados |
-| * | Operador | &#x1F852; | se passado = comando aplica para banco de dados local quando executado a partir de um componente (parâmetro ignorado fora desse contexto) |
+| caminho | Text, Text array | &srarr; | Caminho do método |
+| atributos | Object, Object array | &harr; | Atributos para métodos selecionados |
+| * | Operador | &srarr; | se passado = comando aplica para banco de dados local quando executado a partir de um componente (parâmetro ignorado fora desse contexto) |
 
 <!-- END REF-->
 

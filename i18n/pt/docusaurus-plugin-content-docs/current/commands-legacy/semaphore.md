@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Semaphore.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| semaforo | Text | &#x1F852; | Semáforo a testar e estabelecer |
-| tickCount | Integer | &#x1F852; | Máximo tempo de espera |
-| Resultado | Boolean | &#x1F850; | O semáforo foi criado corretamente (FALSE) ou O semáforo já tinha sido criado (TRUE) |
+| semaforo | Text | &srarr; | Semáforo a testar e estabelecer |
+| tickCount | Integer | &srarr; | Máximo tempo de espera |
+| Resultado | Boolean | &larr; | O semáforo foi criado corretamente (FALSE) ou O semáforo já tinha sido criado (TRUE) |
 
 <!-- END REF-->
 

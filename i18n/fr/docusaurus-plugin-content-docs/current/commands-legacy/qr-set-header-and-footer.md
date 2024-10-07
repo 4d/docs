@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET HEADER AND FOOTER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#x1F852; | Référence de la zone |
-| sélecteur | Integer | &#x1F852; | 1 = En-tête, 2 = Pied de page |
-| titreGauche | Text | &#x1F852; | Texte affiché sur le côté gauche |
-| titreCentre | Text | &#x1F852; | Texte affiché au centre |
-| titreDroit | Text | &#x1F852; | Texte affiché sur le côté droit |
-| hauteur | Integer | &#x1F852; | Hauteur de l'en-tête ou du pied de page |
-| image | Picture | &#x1F852; | Image à afficher |
-| alignementImage | Integer | &#x1F852; | Alignement de l'image |
+| zone | Integer | &srarr; | Référence de la zone |
+| sélecteur | Integer | &srarr; | 1 = En-tête, 2 = Pied de page |
+| titreGauche | Text | &srarr; | Texte affiché sur le côté gauche |
+| titreCentre | Text | &srarr; | Texte affiché au centre |
+| titreDroit | Text | &srarr; | Texte affiché sur le côté droit |
+| hauteur | Integer | &srarr; | Hauteur de l'en-tête ou du pied de page |
+| image | Picture | &srarr; | Image à afficher |
+| alignementImage | Integer | &srarr; | Alignement de l'image |
 
 <!-- END REF-->
 

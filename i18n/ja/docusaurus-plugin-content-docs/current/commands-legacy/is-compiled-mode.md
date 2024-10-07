@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is compiled mode.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | ホストデータベースの情報を返す |
-| 戻り値 | Boolean | &#x1F850; | コンパイル済み (True), インタプリタ (False) |
+| * | 演算子 | &srarr; | ホストデータベースの情報を返す |
+| 戻り値 | Boolean | &larr; | コンパイル済み (True), インタプリタ (False) |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is data file locked.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Boolean | &#x1F850; | True=ファイル/セグメントがロックされている   False=ファイル/セグメントはロックされていない |
+| 戻り値 | Boolean | &larr; | True=ファイル/セグメントがロックされている   False=ファイル/セグメントはロックされていない |
 
 <!-- END REF-->
 

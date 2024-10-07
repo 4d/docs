@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.ERASE WINDOW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janela | Integer | &#x1F852; | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
+| janela | Integer | &srarr; | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
 
 <!-- END REF-->
 

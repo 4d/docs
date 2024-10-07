@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Method called on event.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Text | &#x1F850; | イベント発生時に呼び出されるメソッド名 |
+| 戻り値 | Text | &larr; | イベント発生時に呼び出されるメソッド名 |
 
 <!-- END REF-->
 

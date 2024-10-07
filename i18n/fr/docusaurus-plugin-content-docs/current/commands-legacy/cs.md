@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.cs.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Object | &#x1F850; | Class Store contenant toutes les classes de la base courante |
+| Résultat | Object | &larr; | Class Store contenant toutes les classes de la base courante |
 
 <!-- END REF-->
 

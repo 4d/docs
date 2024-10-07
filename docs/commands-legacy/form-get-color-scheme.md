@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM Get color scheme.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &#x1F850; | Color scheme of current form: "light" or "dark" |
+| Function result | Text | &larr; | Color scheme of current form: "light" or "dark" |
 
 <!-- END REF-->
 

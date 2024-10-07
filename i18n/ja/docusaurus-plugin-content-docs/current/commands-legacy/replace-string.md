@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Replace string.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| source | Text | &#x1F852; | 元の文字列 |
-| oldString | Text | &#x1F852; | 置き換対象の文字列 |
-| newString | Text | &#x1F852; | 置き換え後の文字列 (空文字の場合オカレンスは削除) |
-| howMany | Integer | &#x1F852; | 置き換え 省略時、すべてのオカレンスを置き換え |
-| * | 演算子 | &#x1F852; | 渡されると、文字コードに基づいて評価 |
-| 戻り値 | Text | &#x1F850; | 結果の文字列 |
+| source | Text | &srarr; | 元の文字列 |
+| oldString | Text | &srarr; | 置き換対象の文字列 |
+| newString | Text | &srarr; | 置き換え後の文字列 (空文字の場合オカレンスは削除) |
+| howMany | Integer | &srarr; | 置き換え 省略時、すべてのオカレンスを置き換え |
+| * | 演算子 | &srarr; | 渡されると、文字コードに基づいて評価 |
+| 戻り値 | Text | &larr; | 結果の文字列 |
 
 <!-- END REF-->
 

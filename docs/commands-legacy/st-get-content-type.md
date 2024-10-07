@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.ST Get content type.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &#x1F852; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
-| startSel | Integer | &#x1F852; | Start of selection |
-| endSel | Integer | &#x1F852; | End of selection |
-| startBlock | Integer | &#x1F858; | Start position of first type of selection |
-| endBlock | Integer | &#x1F858; | End position of first type of selection |
-| Function result | Longint | &#x1F850; | Type of content |
+| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | any | &srarr; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| startSel | Integer | &srarr; | Start of selection |
+| endSel | Integer | &srarr; | End of selection |
+| startBlock | Integer | &harr; | Start position of first type of selection |
+| endBlock | Integer | &harr; | End position of first type of selection |
+| Function result | Longint | &larr; | Type of content |
 
 <!-- END REF-->
 

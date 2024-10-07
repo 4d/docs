@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PAGE BREAK.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * &#124; > | &#x1F852; | *: Print formで開始されたプリントジョブをキャンセル, または >: 1つのプリントジョブを強制 |
+| * &#124; > | &srarr; | *: Print formで開始されたプリントジョブをキャンセル, または >: 1つのプリントジョブを強制 |
 
 <!-- END REF-->
 

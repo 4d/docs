@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Pasteboard data size.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tipoDatos | Text | &#x1F852; | Tipo de datos (4 caracteres) |
-| Resultado | Integer | &#x1F850; | Tamaño (en bytes) de datos almacenados en el portapapeles o código de error |
+| tipoDatos | Text | &srarr; | Tipo de datos (4 caracteres) |
+| Resultado | Integer | &larr; | Tamaño (en bytes) de datos almacenados en el portapapeles o código de error |
 
 <!-- END REF-->
 

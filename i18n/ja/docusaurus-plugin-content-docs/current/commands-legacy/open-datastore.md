@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Open datastore.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| connectionInfo | Object | &#x1F852; | リモートデータストアに接続するのに使用する接続プロパティ |
-| localID | Text | &#x1F852; | ローカルアプリケーション内で、開かれたデータストアに対して割り当てるID(必須) |
-| 戻り値 | Object | &#x1F850; | データストアオブジェクト |
+| connectionInfo | Object | &srarr; | リモートデータストアに接続するのに使用する接続プロパティ |
+| localID | Text | &srarr; | ローカルアプリケーション内で、開かれたデータストアに対して割り当てるID(必須) |
+| 戻り値 | Object | &larr; | データストアオブジェクト |
 
 <!-- END REF-->
 

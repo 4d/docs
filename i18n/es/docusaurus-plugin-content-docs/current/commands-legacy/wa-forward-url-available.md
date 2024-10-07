@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Forward URL available.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| Resultado | Boolean | &#x1F850; | True si existe un URL siguiente en la secuencia de URLs abiertos; de lo contrario, False |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &srarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| Resultado | Boolean | &larr; | True si existe un URL siguiente en la secuencia de URLs abiertos; de lo contrario, False |
 
 <!-- END REF-->
 

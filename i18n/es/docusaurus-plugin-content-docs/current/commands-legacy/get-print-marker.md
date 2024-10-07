@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get print marker.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| markNum | Integer | &#x1F852; | Número de marcador |
-| Resultado | Integer | &#x1F850; | Posición del marcador |
+| markNum | Integer | &srarr; | Número de marcador |
+| Resultado | Integer | &larr; | Posición del marcador |
 
 <!-- END REF-->
 

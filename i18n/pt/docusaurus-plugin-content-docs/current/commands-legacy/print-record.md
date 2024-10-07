@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PRINT RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#x1F852; | Tabela para a qual imprimir o registro, ou Tabela padrão, caso omitido |
-| * &#124; > | Operador | &#x1F852; | * to suppress the printing dialog box, or > to not reinitialize print settings |
+| tabela | Table | &srarr; | Tabela para a qual imprimir o registro, ou Tabela padrão, caso omitido |
+| * &#124; > | Operador | &srarr; | * to suppress the printing dialog box, or > to not reinitialize print settings |
 
 <!-- END REF-->
 

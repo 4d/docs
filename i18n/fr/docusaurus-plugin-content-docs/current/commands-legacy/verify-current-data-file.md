@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objets | Integer | &#x1F852; | Objets à vérifier |
-| options | Integer | &#x1F852; | Options de vérification |
-| méthode | Text | &#x1F852; | Nom de la méthode 4D de rétro-appel |
-| tabTables | Integer array | &#x1F852; | Numéros des tables à vérifier |
-| tabChamps | 2D Integer array, 2D Integer array, 2D Real array | &#x1F852; | Numéros des index à vérifier |
+| objets | Integer | &srarr; | Objets à vérifier |
+| options | Integer | &srarr; | Options de vérification |
+| méthode | Text | &srarr; | Nom de la méthode 4D de rétro-appel |
+| tabTables | Integer array | &srarr; | Numéros des tables à vérifier |
+| tabChamps | 2D Integer array, 2D Integer array, 2D Real array | &srarr; | Numéros des index à vérifier |
 
 <!-- END REF-->
 

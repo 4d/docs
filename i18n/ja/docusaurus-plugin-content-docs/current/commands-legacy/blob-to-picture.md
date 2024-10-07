@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB TO PICTURE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| pictureBlob | Blob | &#x1F852; | ピクチャを格納したBLOB |
-| picture | Picture | &#x1F858; | BLOBから取り出したピクチャ |
-| codec | Text | &#x1F852; | ピクチャcodec ID |
+| pictureBlob | Blob | &srarr; | ピクチャを格納したBLOB |
+| picture | Picture | &harr; | BLOBから取り出したピクチャ |
+| codec | Text | &srarr; | ピクチャcodec ID |
 
 <!-- END REF-->
 

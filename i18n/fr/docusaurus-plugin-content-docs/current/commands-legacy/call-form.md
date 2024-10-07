@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CALL FORM.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fenêtre | Integer | &#x1F852; | Numéro de référence de la fenêtre |
-| formule | Object, Text | &#x1F852; | Objet Formula ou Nom de la méthode projet |
-| param | Expression | &#x1F852; | Paramètre(s) passé(s) à la méthode |
+| fenêtre | Integer | &srarr; | Numéro de référence de la fenêtre |
+| formule | Object, Text | &srarr; | Objet Formula ou Nom de la méthode projet |
+| param | Expression | &srarr; | Paramètre(s) passé(s) à la méthode |
 
 <!-- END REF-->
 

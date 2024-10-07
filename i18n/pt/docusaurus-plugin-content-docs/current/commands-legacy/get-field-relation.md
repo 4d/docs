@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD RELATION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campoN | Field | &#x1F852; | Iniciar campo da relação |
-| um | Integer | &#x1F858; | Estado das relações Muitos a Um |
-| muitos | Integer | &#x1F858; | Estado da relação Um a Muitos |
-| * | Operador | &#x1F852; | Se passado: um e muitos retorna o estado atual da relação (valores 2 ou 3 apenas) * se omitido (padrão): um e muitos podem retornar o valor 1 se a relação não foi modificada através de programação |
+| campoN | Field | &srarr; | Iniciar campo da relação |
+| um | Integer | &harr; | Estado das relações Muitos a Um |
+| muitos | Integer | &harr; | Estado da relação Um a Muitos |
+| * | Operador | &srarr; | Se passado: um e muitos retorna o estado atual da relação (valores 2 ou 3 apenas) * se omitido (padrão): um e muitos podem retornar o valor 1 se a relação não foi modificada através de programação |
 
 <!-- END REF-->
 

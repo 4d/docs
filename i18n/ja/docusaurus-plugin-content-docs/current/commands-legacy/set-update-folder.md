@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET UPDATE FOLDER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| folderPath | Text | &#x1F852; | アップデートされたアプリケーションを内包するフォルダ(OS Xの場合はパッケージ)へのパス名 |
-| silentErrors | Boolean | &#x1F852; | False (デフォルト)=エラーを表示して報告 True=エラーを表示しない |
+| folderPath | Text | &srarr; | アップデートされたアプリケーションを内包するフォルダ(OS Xの場合はパッケージ)へのパス名 |
+| silentErrors | Boolean | &srarr; | False (デフォルト)=エラーを表示して報告 True=エラーを表示しない |
 
 <!-- END REF-->
 

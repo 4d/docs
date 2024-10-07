@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PICTURE TO LIBRARY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| imagen | Picture | &#x1F852; | Nueva imagen |
-| refImag | Integer | &#x1F852; | Número de referencia de la imagen en la librería de imágenes |
-| nomImag | Text | &#x1F852; | Nuevo nombre de la imagen |
+| imagen | Picture | &srarr; | Nueva imagen |
+| refImag | Integer | &srarr; | Número de referencia de la imagen en la librería de imágenes |
+| nomImag | Text | &srarr; | Nuevo nombre de la imagen |
 
 <!-- END REF-->
 

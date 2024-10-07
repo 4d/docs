@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.POST KEY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| code | Integer | &#x1F852; | Character code or function key code |
-| modifiers | Integer | &#x1F852; | State of modifier keys |
-| process | Integer | &#x1F852; | Destination process reference number, or Application event queue, if omitted, or 0 |
+| code | Integer | &srarr; | Character code or function key code |
+| modifiers | Integer | &srarr; | State of modifier keys |
+| process | Integer | &srarr; | Destination process reference number, or Application event queue, if omitted, or 0 |
 
 <!-- END REF-->
 

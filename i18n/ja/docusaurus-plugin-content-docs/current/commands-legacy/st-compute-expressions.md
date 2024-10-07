@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時: object はオブジェクト名(文字列) 省略時: object は変数またはフィールド |
-| object | any | &#x1F852; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
-| startSel | Integer | &#x1F852; | 選択範囲の開始地点 |
-| endSel | Integer | &#x1F852; | 選択範囲の終了地点 |
+| * | 演算子 | &srarr; | 指定時: object はオブジェクト名(文字列) 省略時: object は変数またはフィールド |
+| object | any | &srarr; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
+| startSel | Integer | &srarr; | 選択範囲の開始地点 |
+| endSel | Integer | &srarr; | 選択範囲の終了地点 |
 
 <!-- END REF-->
 

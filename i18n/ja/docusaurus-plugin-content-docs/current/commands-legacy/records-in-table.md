@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Records in table.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | レコード数を返すテーブル, または 省略時、デフォルトテーブル |
-| 戻り値 | Integer | &#x1F850; | テーブル中の総レコード数 |
+| aTable | Table | &srarr; | レコード数を返すテーブル, または 省略時、デフォルトテーブル |
+| 戻り値 | Integer | &larr; | テーブル中の総レコード数 |
 
 <!-- END REF-->
 

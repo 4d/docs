@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PLUGIN ACCESS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| plugIn | Integer | &#x1F852; | Número de plug-in |
-| grupo | Text | &#x1F852; | Nome do grupo associado ao plug-in |
+| plugIn | Integer | &srarr; | Número de plug-in |
+| grupo | Text | &srarr; | Nome do grupo associado ao plug-in |
 
 <!-- END REF-->
 

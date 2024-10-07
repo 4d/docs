@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.Set user properties.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refUsuario | Integer | &#x1F852; | Número de referencia único de cuenta de usuario, -1 para añadir un usuario |
-| &#x1F858; | Número de referencia único de la cuenta de usuario añadida(si la hay) |
-| nombre | Text | &#x1F852; | Nuevo nombre de usuario |
-| inicio | Text | &#x1F852; | Nombre del nuevo método de inicio |
-| contraseña | Text | &#x1F852; | Nueva contraseña (encriptada) o * para no modificar la contraseña |
-| nbLogin | Integer | &#x1F852; | Nuevo número de usos de la base |
-| ultimoLogin | Date | &#x1F852; | Nueva fecha de la última utilización de la base |
-| membrecias | Integer array | &#x1F852; | Números de referencia de los grupos a los que pertenece el usuario |
-| grupoPropietario | Integer | &#x1F852; | Número de referencia del grupo propietario del usuario |
-| Resultado | Integer | &#x1F850; | Número de referencia único del nuevo usuario |
+| refUsuario | Integer | &srarr; | Número de referencia único de cuenta de usuario, -1 para añadir un usuario |
+| &harr; | Número de referencia único de la cuenta de usuario añadida(si la hay) |
+| nombre | Text | &srarr; | Nuevo nombre de usuario |
+| inicio | Text | &srarr; | Nombre del nuevo método de inicio |
+| contraseña | Text | &srarr; | Nueva contraseña (encriptada) o * para no modificar la contraseña |
+| nbLogin | Integer | &srarr; | Nuevo número de usos de la base |
+| ultimoLogin | Date | &srarr; | Nueva fecha de la última utilización de la base |
+| membrecias | Integer array | &srarr; | Números de referencia de los grupos a los que pertenece el usuario |
+| grupoPropietario | Integer | &srarr; | Número de referencia del grupo propietario del usuario |
+| Resultado | Integer | &larr; | Número de referencia único del nuevo usuario |
 
 <!-- END REF-->
 

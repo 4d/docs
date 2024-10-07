@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get number of rows.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| Résultat | Integer | &#x1F850; | Nombre de lignes |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| Résultat | Integer | &larr; | Nombre de lignes |
 
 <!-- END REF-->
 

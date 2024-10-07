@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.On REST Authentication database method.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| $1 | テキスト | &#x1F858; | ユーザー名 |
-| $2 | テキスト | &#x1F858; | パスワード |
-| $3 | ブール | &#x1F858; | True = ダイジェストモード<br/>False = ベーシックモード |
-| $4 | テキスト | &#x1F858; | 呼び出し元のIPアドレス |
-| 戻り値 | Boolean | &#x1F850; | True = セッション開始を許可、False = セッション開始を拒否 |
+| $1 | テキスト | &harr; | ユーザー名 |
+| $2 | テキスト | &harr; | パスワード |
+| $3 | ブール | &harr; | True = ダイジェストモード<br/>False = ベーシックモード |
+| $4 | テキスト | &harr; | 呼び出し元のIPアドレス |
+| 戻り値 | Boolean | &larr; | True = セッション開始を許可、False = セッション開始を拒否 |
 
 <!-- END REF-->
 

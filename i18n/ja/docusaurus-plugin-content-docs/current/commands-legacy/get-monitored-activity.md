@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get Monitored Activity.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Collection | &#x1F850; | モニターしているアクティビティのコレクション |
+| 戻り値 | Collection | &larr; | モニターしているアクティビティのコレクション |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#x1F852; | Reference of open document |
-| statement | Text | &#x1F852; | Statement to insert in the document |
+| document | Time | &srarr; | Reference of open document |
+| statement | Text | &srarr; | Statement to insert in the document |
 
 <!-- END REF-->
 

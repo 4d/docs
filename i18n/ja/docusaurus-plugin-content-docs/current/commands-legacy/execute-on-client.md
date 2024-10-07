@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.EXECUTE ON CLIENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| clientName | Text | &#x1F852; | 4D Clientの登録名 |
-| methodName | Text | &#x1F852; | 実行するメソッドの名前 |
-| param | &#x1F852; | メソッドの引数 |
+| clientName | Text | &srarr; | 4D Clientの登録名 |
+| methodName | Text | &srarr; | 実行するメソッドの名前 |
+| param | &srarr; | メソッドの引数 |
 
 <!-- END REF-->
 

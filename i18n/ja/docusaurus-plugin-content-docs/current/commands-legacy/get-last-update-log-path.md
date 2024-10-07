@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get last update log path.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Text | &#x1F850; | 直近のアップデートログへのパス名 |
+| 戻り値 | Text | &larr; | 直近のアップデートログへのパス名 |
 
 <!-- END REF-->
 

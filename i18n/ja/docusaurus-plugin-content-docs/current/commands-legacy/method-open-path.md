@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD OPEN PATH.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| path | Text | &#x1F852; | 開くメソッドのパス |
-| line | Number | &#x1F852; | Line number |
-| * | 演算子 | &#x1F852; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
+| path | Text | &srarr; | 開くメソッドのパス |
+| line | Number | &srarr; | Line number |
+| * | 演算子 | &srarr; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
 
 <!-- END REF-->
 

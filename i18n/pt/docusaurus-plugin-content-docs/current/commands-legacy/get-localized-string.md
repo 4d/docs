@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get localized string.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| resNome | Text | &#x1F852; | Nome do atributo recurso |
-| Resultado | Text | &#x1F850; | Valor da string determinar por RecNome na linguagem atual |
+| resNome | Text | &srarr; | Nome do atributo recurso |
+| Resultado | Text | &larr; | Valor da string determinar por RecNome na linguagem atual |
 
 <!-- END REF-->
 

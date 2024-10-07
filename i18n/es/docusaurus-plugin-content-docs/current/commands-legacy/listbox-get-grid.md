@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET GRID.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
-| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| horizontal | Boolean | &#x1F858; | True = visible, False = oculto |
-| vertical | Boolean | &#x1F858; | True = visible, False = oculto |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
+| objeto | any | &srarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| horizontal | Boolean | &harr; | True = visible, False = oculto |
+| vertical | Boolean | &harr; | True = visible, False = oculto |
 
 <!-- END REF-->
 

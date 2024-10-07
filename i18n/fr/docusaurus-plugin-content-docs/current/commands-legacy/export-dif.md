@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT DIF.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table de laquelle effectuer l'export ou Table par défaut si ce paramètre est omis |
-| nomFichier | Text | &#x1F852; | Document DIF à exporter |
+| laTable | Table | &srarr; | Table de laquelle effectuer l'export ou Table par défaut si ce paramètre est omis |
+| nomFichier | Text | &srarr; | Document DIF à exporter |
 
 <!-- END REF-->
 

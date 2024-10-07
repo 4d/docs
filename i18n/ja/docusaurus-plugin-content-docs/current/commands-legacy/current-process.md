@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current process.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Integer | &#x1F850; | プロセス番号 |
+| 戻り値 | Integer | &larr; | プロセス番号 |
 
 <!-- END REF-->
 

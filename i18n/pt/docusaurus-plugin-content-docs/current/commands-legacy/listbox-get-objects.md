@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET OBJECTS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se for especificado, o objeto é um nome de objeto (cadeia)<br/>Se for omitido, o objeto é uma variável |
-| objeto | any | &#x1F852; | Nome do objeto (se * for especificado) ou Variável (se * for omitido) |
-| arrayNomObjeto | Text array | &#x1F858; | Nomes dos sub objetos do list box (cabeçalhos, colunas, pés) |
+| * | Operador | &srarr; | Se for especificado, o objeto é um nome de objeto (cadeia)<br/>Se for omitido, o objeto é uma variável |
+| objeto | any | &srarr; | Nome do objeto (se * for especificado) ou Variável (se * for omitido) |
+| arrayNomObjeto | Text array | &harr; | Nomes dos sub objetos do list box (cabeçalhos, colunas, pés) |
 
 <!-- END REF-->
 

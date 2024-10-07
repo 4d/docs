@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get list name.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
-| typeListe | Integer | &#x1F852; | Type de liste : Liste énumération, Liste obligations ou Liste exclusions |
-| Résultat | Text | &#x1F850; | Nom de l’énumération (définie en mode Développement) |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| typeListe | Integer | &srarr; | Type de liste : Liste énumération, Liste obligations ou Liste exclusions |
+| Résultat | Text | &larr; | Nom de l’énumération (définie en mode Développement) |
 
 <!-- END REF-->
 

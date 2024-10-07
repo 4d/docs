@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB REMOVE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Object, Object | &#x1F852; | Objet structuré |
-| propriété | Text | &#x1F852; | Nom de la propriété à supprimer |
+| objet | Object, Object | &srarr; | Objet structuré |
+| propriété | Text | &srarr; | Nom de la propriété à supprimer |
 
 <!-- END REF-->
 

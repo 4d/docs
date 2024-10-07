@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.SET WINDOW RECT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| izquierda | Integer | &#x1F852; | Coordenada global izquierda del interior de la ventana |
-| superior | Integer | &#x1F852; | Coordenada global superior del interior de la ventana |
-| derecha | Integer | &#x1F852; | Coordenada global derecha del interior de la ventana |
-| inferior | Integer | &#x1F852; | Coordenada global inferior del interior de la ventana |
-| ventana | Integer | &#x1F852; | Número de referencia de la ventana o ventana del primer plano del proceso si se omite este parámetro |
-| * | Operador | &#x1F852; | Si se omite (por defecto) = cambiar ventana al fondo<br/>Si se pasa = no cambiar el nivel de la ventana |
+| izquierda | Integer | &srarr; | Coordenada global izquierda del interior de la ventana |
+| superior | Integer | &srarr; | Coordenada global superior del interior de la ventana |
+| derecha | Integer | &srarr; | Coordenada global derecha del interior de la ventana |
+| inferior | Integer | &srarr; | Coordenada global inferior del interior de la ventana |
+| ventana | Integer | &srarr; | Número de referencia de la ventana o ventana del primer plano del proceso si se omite este parámetro |
+| * | Operador | &srarr; | Si se omite (por defecto) = cambiar ventana al fondo<br/>Si se pasa = no cambiar el nivel de la ventana |
 
 <!-- END REF-->
 

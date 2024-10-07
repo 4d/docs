@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text, Text array | &#x1F852; | Text or Text array containing one or more method path(s) |
-| modDate | Date, Date array | &#x1F858; | Method modification date(s) |
-| modTime | Time, Integer array | &#x1F858; | Method modification time(s) |
-| * | Operator | &#x1F852; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| path | Text, Text array | &srarr; | Text or Text array containing one or more method path(s) |
+| modDate | Date, Date array | &harr; | Method modification date(s) |
+| modTime | Time, Integer array | &harr; | Method modification time(s) |
+| * | Operator | &srarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->
 

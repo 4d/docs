@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get edited text.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Text | &#x1F850; | Text being entered |
+| Resultado | Text | &larr; | Text being entered |
 
 <!-- END REF-->
 

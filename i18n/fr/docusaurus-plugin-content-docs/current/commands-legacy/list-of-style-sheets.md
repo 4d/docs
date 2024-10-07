@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.LIST OF STYLE SHEETS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tabFeuillesStyle | Text array | &#x1F858; | Noms des feuilles de style définies dans l’application |
+| tabFeuillesStyle | Text array | &harr; | Noms des feuilles de style définies dans l’application |
 
 <!-- END REF-->
 

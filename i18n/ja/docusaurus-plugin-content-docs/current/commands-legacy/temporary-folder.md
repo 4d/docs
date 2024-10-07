@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Temporary folder.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Text | &#x1F850; | テンポラリフォルダへのパス名 |
+| 戻り値 | Text | &larr; | テンポラリフォルダへのパス名 |
 
 <!-- END REF-->
 

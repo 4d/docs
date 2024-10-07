@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PRINT OPTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| option | Integer | &#x1F852; | オプション番号 |
-| value1 | Integer, Text | &#x1F852; | オプションの値1 |
-| value2 | Integer, Text | &#x1F852; | オプションの値2 |
+| option | Integer | &srarr; | オプション番号 |
+| value1 | Integer, Text | &srarr; | オプションの値1 |
+| value2 | Integer, Text | &srarr; | オプションの値2 |
 
 <!-- END REF-->
 

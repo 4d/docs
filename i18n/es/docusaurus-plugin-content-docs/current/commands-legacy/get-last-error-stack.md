@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LAST ERROR STACK.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| arrayCodigos | Integer array | &#x1F858; | Números de errores |
-| arrayCompInternos | Text array | &#x1F858; | Códigos de componentes internos |
-| arrayTextos | Text array | &#x1F858; | Texto de errores |
+| arrayCodigos | Integer array | &harr; | Números de errores |
+| arrayCompInternos | Text array | &harr; | Códigos de componentes internos |
+| arrayTextos | Text array | &harr; | Texto de errores |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Version type.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Integer | &#x1F850; | バージョンのタイプに関する情報(ビットフィールド形式) |
+| 戻り値 | Integer | &larr; | バージョンのタイプに関する情報(ビットフィールド形式) |
 
 <!-- END REF-->
 

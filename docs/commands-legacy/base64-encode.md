@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.BASE64 ENCODE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| toEncode | Blob, Text | &#x1F852; | Value to encode |
-| &#x1F858; | Encoded value (if encoded parameter omitted) |
-| encoded | Blob, Text | &#x1F858; | Encoded value |
-| * | Operator | &#x1F852; | Encode in Base64URL format |
+| toEncode | Blob, Text | &srarr; | Value to encode |
+| &harr; | Encoded value (if encoded parameter omitted) |
+| encoded | Blob, Text | &harr; | Encoded value |
+| * | Operator | &srarr; | Encode in Base64URL format |
 
 <!-- END REF-->
 

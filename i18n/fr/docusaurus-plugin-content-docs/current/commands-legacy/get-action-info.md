@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get action info.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| action | Text | &#x1F852; | Nom de l'action standard ou syntaxe incluant un paramètre si celui-ci est requis |
-| cible | Integer | &#x1F852; | Définit la cible de l'action où lire les informations : formulaire principal ou formulaire courant |
-| Résultat | Object | &#x1F850; | Objet contenant le statut de l'action sous forme de booléens : isEnabled, isVisible, isChecked, isMixed, isUnknownState |
+| action | Text | &srarr; | Nom de l'action standard ou syntaxe incluant un paramètre si celui-ci est requis |
+| cible | Integer | &srarr; | Définit la cible de l'action où lire les informations : formulaire principal ou formulaire courant |
+| Résultat | Object | &larr; | Objet contenant le statut de l'action sous forme de booléens : isEnabled, isVisible, isChecked, isMixed, isUnknownState |
 
 <!-- END REF-->
 

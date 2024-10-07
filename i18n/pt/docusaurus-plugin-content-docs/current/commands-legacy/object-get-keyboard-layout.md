@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get keyboard layout.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável ou um campo |
-| objeto | any | &#x1F852; | Nome de objeto (se especificado *) ou Variável ou campo(se omitido *) |
-| Resultado | Text | &#x1F850; | Código da linguagem de configuração, "" = sem configuração |
+| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável ou um campo |
+| objeto | any | &srarr; | Nome de objeto (se especificado *) ou Variável ou campo(se omitido *) |
+| Resultado | Text | &larr; | Código da linguagem de configuração, "" = sem configuração |
 
 <!-- END REF-->
 

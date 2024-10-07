@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table du formulaire ou Table par défaut si ce paramètre est omis |
-| nomForm | Text | &#x1F852; | Nom du formulaire |
-| largeur | Integer | &#x1F858; | Largeur du formulaire (en pixels) |
-| hauteur | Integer | &#x1F858; | Hauteur du formulaire (en pixels) |
-| nbPages | Integer | &#x1F858; | Nombre de pages du formulaire |
-| largeurFixe | Boolean | &#x1F858; | Vrai = Largeur fixe, Faux = Largeur variable |
-| hauteurFixe | Boolean | &#x1F858; | Vrai = Hauteur fixe, Faux = Hauteur variable |
-| titre | Text | &#x1F858; | Nom de la fenêtre du formulaire |
+| laTable | Table | &srarr; | Table du formulaire ou Table par défaut si ce paramètre est omis |
+| nomForm | Text | &srarr; | Nom du formulaire |
+| largeur | Integer | &harr; | Largeur du formulaire (en pixels) |
+| hauteur | Integer | &harr; | Hauteur du formulaire (en pixels) |
+| nbPages | Integer | &harr; | Nombre de pages du formulaire |
+| largeurFixe | Boolean | &harr; | Vrai = Largeur fixe, Faux = Largeur variable |
+| hauteurFixe | Boolean | &harr; | Vrai = Hauteur fixe, Faux = Hauteur variable |
+| titre | Text | &harr; | Nom de la fenêtre du formulaire |
 
 <!-- END REF-->
 

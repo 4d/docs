@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR DELETE COLUMN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#x1F852; | Referência da área |
-| numColuna | Integer | &#x1F852; | Número de Coluna |
+| area | Integer | &srarr; | Referência da área |
+| numColuna | Integer | &srarr; | Número de Coluna |
 
 <!-- END REF-->
 

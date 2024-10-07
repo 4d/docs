@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG SHOW ELEMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時: pictureObjectはオブジェクト名 (文字) <br/>省略時: pictureObjectは変数 |
-| pictureObject | Picture | &#x1F852; | オブジェクト名 (* 指定時) または変数またはフィールド (* 省略時) |
-| id | Text | &#x1F852; | 表示する要素のID属性 |
-| margin | Integer | &#x1F852; | 表示のマージン (デフォルトでピクセル単位) |
+| * | 演算子 | &srarr; | 指定時: pictureObjectはオブジェクト名 (文字) <br/>省略時: pictureObjectは変数 |
+| pictureObject | Picture | &srarr; | オブジェクト名 (* 指定時) または変数またはフィールド (* 省略時) |
+| id | Text | &srarr; | 表示する要素のID属性 |
+| margin | Integer | &srarr; | 表示のマージン (デフォルトでピクセル単位) |
 
 <!-- END REF-->
 

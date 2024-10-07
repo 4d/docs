@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE FOLDER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| folder | Text | &#x1F852; | 削除されるフォルダーの名称またはフルパス |
-| deleteOption | Integer | &#x1F852; | フォルダー削除オプション |
+| folder | Text | &srarr; | 削除されるフォルダーの名称またはフルパス |
+| deleteOption | Integer | &srarr; | フォルダー削除オプション |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET TEXT KEYWORDS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| texto | Text | &#x1F852; | Texto original |
-| arrPalavrasChaves | Text array | &#x1F858; | Array que contém as palavras-chave |
-| * | Operador | &#x1F852; | Se passado = palavras únicas |
+| texto | Text | &srarr; | Texto original |
+| arrPalavrasChaves | Text array | &harr; | Array que contém as palavras-chave |
+| * | Operador | &srarr; | Se passado = palavras únicas |
 
 <!-- END REF-->
 

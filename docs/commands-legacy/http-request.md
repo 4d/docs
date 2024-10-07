@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP Request.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| httpMethod | Text | &#x1F852; | HTTP method for request |
-| url | Text | &#x1F852; | URL to which to send the request |
-| contents | Text, Blob, Picture, Object | &#x1F852; | Contents of request body |
-| response | Text, Blob, Picture, Object | &#x1F858; | Result of request |
-| headerNames | Text array | &#x1F852; | Header names of the request |
-| &#x1F858; | Returned header names |
-| headerValues | Text array | &#x1F852; | Header values of the request |
-| &#x1F858; | Returned header values |
-| * | Operator | &#x1F852; | If passed, connection is maintained (keep-alive)If omitted, connection is closed automatically |
-| Function result | Longint | &#x1F850; | HTTP status code |
+| httpMethod | Text | &srarr; | HTTP method for request |
+| url | Text | &srarr; | URL to which to send the request |
+| contents | Text, Blob, Picture, Object | &srarr; | Contents of request body |
+| response | Text, Blob, Picture, Object | &harr; | Result of request |
+| headerNames | Text array | &srarr; | Header names of the request |
+| &harr; | Returned header names |
+| headerValues | Text array | &srarr; | Header values of the request |
+| &harr; | Returned header values |
+| * | Operator | &srarr; | If passed, connection is maintained (keep-alive)If omitted, connection is closed automatically |
+| Function result | Longint | &larr; | HTTP status code |
 
 <!-- END REF-->
 

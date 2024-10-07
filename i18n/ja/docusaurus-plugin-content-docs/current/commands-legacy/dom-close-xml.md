@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM CLOSE XML.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#x1F852; | XMLルート要素参照 |
+| elementRef | Text | &srarr; | XMLルート要素参照 |
 
 <!-- END REF-->
 

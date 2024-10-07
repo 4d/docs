@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.BASE64 DECODE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| toDecode | Text, Blob | &#x1F852; | Encoded value to decode |
-| &#x1F858; | Decoded value (if decoded parameter omitted) |
-| decoded | Text, Blob | &#x1F858; | Decoded value |
-| * | Operator | &#x1F852; | Decode in Base64URL format |
+| toDecode | Text, Blob | &srarr; | Encoded value to decode |
+| &harr; | Decoded value (if decoded parameter omitted) |
+| decoded | Text, Blob | &harr; | Decoded value |
+| * | Operator | &srarr; | Decode in Base64URL format |
 
 <!-- END REF-->
 

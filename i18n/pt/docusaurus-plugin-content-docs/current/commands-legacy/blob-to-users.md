@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB TO USERS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| usuarios | Blob | &#x1F852; | BLOB (criptografado) contendo contas de usuários do banco de dados criadas e guardadas pelo administrador do banco |
+| usuarios | Blob | &srarr; | BLOB (criptografado) contendo contas de usuários do banco de dados criadas e guardadas pelo administrador do banco |
 
 <!-- END REF-->
 

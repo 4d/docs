@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ON EVENT CALL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| metodoEvento | Text | &#x1F852; | Método evento a ser invocado, ou cadeia vazia para parar eventos interceptados |
-| nomeProcesso | Text | &#x1F852; | Nome do processo |
+| metodoEvento | Text | &srarr; | Método evento a ser invocado, ou cadeia vazia para parar eventos interceptados |
+| nomeProcesso | Text | &srarr; | Nome do processo |
 
 <!-- END REF-->
 

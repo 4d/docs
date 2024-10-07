@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.LOAD RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table for which to load record, or Default table, if omitted |
+| aTable | Table | &srarr; | Table for which to load record, or Default table, if omitted |
 
 <!-- END REF-->
 

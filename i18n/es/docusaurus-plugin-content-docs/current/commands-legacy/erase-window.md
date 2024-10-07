@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.ERASE WINDOW.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | Integer | &#x1F852; | Número de referencia de ventana o Ventana del primer plano del proceso actual, si se omite |
+| ventana | Integer | &srarr; | Número de referencia de ventana o Ventana del primer plano del proceso actual, si se omite |
 
 <!-- END REF-->
 

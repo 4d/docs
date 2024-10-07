@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| booleanArr | Boolean array | &#x1F858; | レコードがセットに含まれているかいないかを示す配列 |
-| set | Text | &#x1F852; | セット名、または 引数が省略された場合UserSet |
+| booleanArr | Boolean array | &harr; | レコードがセットに含まれているかいないかを示す配列 |
+| set | Text | &srarr; | セット名、または 引数が省略された場合UserSet |
 
 <!-- END REF-->
 

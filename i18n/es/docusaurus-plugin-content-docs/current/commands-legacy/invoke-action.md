@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.INVOKE ACTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| accion | Text | &#x1F852; | Nombre o patrón de acción estándar incluyendo parámetro si es necesario |
-| objetivo | Integer | &#x1F852; | Define donde ejecutar la acción: formulario actual (por defecto) o formulario principal |
+| accion | Text | &srarr; | Nombre o patrón de acción estándar incluyendo parámetro si es necesario |
+| objetivo | Integer | &srarr; | Define donde ejecutar la acción: formulario actual (por defecto) o formulario principal |
 
 <!-- END REF-->
 

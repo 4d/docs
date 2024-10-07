@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Resolve pointers.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object | &#x1F852; | 解決するJSONポインターを含んだオブジェクト型 |
-| &#x1F858; | 解決したJSONポインターを含んだオブジェクト型(結果がオブジェクト型の場合のみ) |
-| options | Object | &#x1F852; | ポインター解決のオプション |
-| 戻り値 | Object | &#x1F850; | 処理の結果を含んだオブジェクト型 |
+| object | Object | &srarr; | 解決するJSONポインターを含んだオブジェクト型 |
+| &harr; | 解決したJSONポインターを含んだオブジェクト型(結果がオブジェクト型の場合のみ) |
+| options | Object | &srarr; | ポインター解決のオプション |
+| 戻り値 | Object | &larr; | 処理の結果を含んだオブジェクト型 |
 
 <!-- END REF-->
 

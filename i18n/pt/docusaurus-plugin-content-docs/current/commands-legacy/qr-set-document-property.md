@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#x1F852; | Referência da área |
-| propriedade | Integer | &#x1F852; | 1=Diálogo de impressão, 2=Unidade do documento |
-| valor | Integer | &#x1F852; | Valor da propriedade |
+| area | Integer | &srarr; | Referência da área |
+| propriedade | Integer | &srarr; | 1=Diálogo de impressão, 2=Unidade do documento |
+| valor | Integer | &srarr; | Valor da propriedade |
 
 <!-- END REF-->
 

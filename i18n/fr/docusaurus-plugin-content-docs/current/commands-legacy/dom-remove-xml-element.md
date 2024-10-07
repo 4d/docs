@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM REMOVE XML ELEMENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &#x1F852; | Référence d’élément XML |
+| refElément | Text | &srarr; | Référence d’élément XML |
 
 <!-- END REF-->
 

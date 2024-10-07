@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON TO SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Ponteiro a tabela 4D |
-| objetoJson | Text | &#x1F852; | Cadeia em JSON |
+| aTable | Table | &srarr; | Ponteiro a tabela 4D |
+| objetoJson | Text | &srarr; | Cadeia em JSON |
 
 <!-- END REF-->
 

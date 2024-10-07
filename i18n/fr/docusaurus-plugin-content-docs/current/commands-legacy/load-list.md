@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Load list.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomListe | Text | &#x1F852; | Nom de liste créée dans l'éditeur d'énumérations |
-| Résultat | Integer | &#x1F850; | Numéro de référence de la liste nouvellement créée |
+| nomListe | Text | &srarr; | Nom de liste créée dans l'éditeur d'énumérations |
+| Résultat | Integer | &larr; | Numéro de référence de la liste nouvellement créée |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SET ROOT FOLDER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| dossierRacine | Text | &#x1F852; | Chemin d'accès du dossier racine du serveur Web |
+| dossierRacine | Text | &srarr; | Chemin d'accès du dossier racine du serveur Web |
 
 <!-- END REF-->
 

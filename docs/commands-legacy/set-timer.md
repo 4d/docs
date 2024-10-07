@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET TIMER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tickCount | Integer | &#x1F852; | Tickcount or -1=Trigger as soon as possible |
+| tickCount | Integer | &srarr; | Tickcount or -1=Trigger as soon as possible |
 
 <!-- END REF-->
 

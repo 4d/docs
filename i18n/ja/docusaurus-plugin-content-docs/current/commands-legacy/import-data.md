@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.IMPORT DATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fileName | Text | &#x1F852; | インポートファイルのフルパス名 |
-| project | Text, Blob | &#x1F852; | インポートプロジェクト |
-| &#x1F858; | インポートプロジェクトの新しい内容 (*引数指定時) |
-| * | 演算子 | &#x1F852; | インポートダイアログを表示し プロジェクトの内容を更新 |
+| fileName | Text | &srarr; | インポートファイルのフルパス名 |
+| project | Text, Blob | &srarr; | インポートプロジェクト |
+| &harr; | インポートプロジェクトの新しい内容 (*引数指定時) |
+| * | 演算子 | &srarr; | インポートダイアログを表示し プロジェクトの内容を更新 |
 
 <!-- END REF-->
 

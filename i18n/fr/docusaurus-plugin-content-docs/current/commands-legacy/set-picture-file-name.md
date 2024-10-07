@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PICTURE FILE NAME.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| image | Picture, Picture | &#x1F852; | Image dont vous souhaitez fixer le nom par défaut |
-| nomFichier | Text | &#x1F852; | Nom par défaut de l’image |
+| image | Picture, Picture | &srarr; | Image dont vous souhaitez fixer le nom par défaut |
+| nomFichier | Text | &srarr; | Nom par défaut de l’image |
 
 <!-- END REF-->
 

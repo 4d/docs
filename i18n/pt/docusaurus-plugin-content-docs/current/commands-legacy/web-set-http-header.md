@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SET HTTP HEADER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| cabeçalho&#124;arrayCampo | Texto, Array texto | &#x1F852; | Campo ou variável contendo o cabeçalho HTTP requisitado ou campos cabeçalho HTTP |
-| valorArray | Text array | &#x1F852; | Conteúdo de campo de cabeçalho HTTP |
+| cabeçalho&#124;arrayCampo | Texto, Array texto | &srarr; | Campo ou variável contendo o cabeçalho HTTP requisitado ou campos cabeçalho HTTP |
+| valorArray | Text array | &srarr; | Conteúdo de campo de cabeçalho HTTP |
 
 <!-- END REF-->
 

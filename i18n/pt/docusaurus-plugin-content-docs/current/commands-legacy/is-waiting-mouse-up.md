@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is waiting mouse up.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Boolean | &#x1F850; | TRUE se o objeto estiver esperando por um evento mouse up. De outro modo, false. |
+| Resultado | Boolean | &larr; | TRUE se o objeto estiver esperando por um evento mouse up. De outro modo, false. |
 
 <!-- END REF-->
 

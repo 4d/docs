@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.Open window.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| izquierda | Integer | &#x1F852; | Coordenada global izquierda del interior de la ventana |
-| superior | Integer | &#x1F852; | Coordenada global superior del interior de la ventana |
-| derecha | Integer | &#x1F852; | Coordenada global derecha del interior de la ventana |
-| inferior | Integer | &#x1F852; | Coordenada global inferior del interior de la ventana |
-| tipo | Integer | &#x1F852; | Tipo de la ventana |
-| titulo | Text | &#x1F852; | Título de la ventana |
-| casillaCerrar | Text | &#x1F852; | Método a llamar en caso de doble clic del menú Control o de clic en la casilla Cerrar |
-| Resultado | Integer | &#x1F850; | Número de referencia de la ventana |
+| izquierda | Integer | &srarr; | Coordenada global izquierda del interior de la ventana |
+| superior | Integer | &srarr; | Coordenada global superior del interior de la ventana |
+| derecha | Integer | &srarr; | Coordenada global derecha del interior de la ventana |
+| inferior | Integer | &srarr; | Coordenada global inferior del interior de la ventana |
+| tipo | Integer | &srarr; | Tipo de la ventana |
+| titulo | Text | &srarr; | Título de la ventana |
+| casillaCerrar | Text | &srarr; | Método a llamar en caso de doble clic del menú Control o de clic en la casilla Cerrar |
+| Resultado | Integer | &larr; | Número de referencia de la ventana |
 
 <!-- END REF-->
 

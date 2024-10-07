@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.On Mobile App Action database method.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| mobileInfo | Object | &#x1F852; | モバイルアプリケーションから渡された情報 |
-| 戻り値 | Object | &#x1F850; | アクションステータス＆データ同期 |
+| mobileInfo | Object | &srarr; | モバイルアプリケーションから渡された情報 |
+| 戻り値 | Object | &larr; | アクションステータス＆データ同期 |
 
 <!-- END REF-->
 

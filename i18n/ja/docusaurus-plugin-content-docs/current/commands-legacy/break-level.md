@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.BREAK LEVEL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| level | Integer | &#x1F852; | ブレークレベルの数 |
-| pageBreak | Integer | &#x1F852; | 改ページを行うブレークレベル |
+| level | Integer | &srarr; | ブレークレベルの数 |
+| pageBreak | Integer | &srarr; | 改ページを行うブレークレベル |
 
 <!-- END REF-->
 

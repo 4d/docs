@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.On REST Authentication database method.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| $1 | Texte | &#x1F858; | Nom d’utilisateur |
-| $2 | Texte | &#x1F858; | Mot de passe |
-| $3 | Booléen | &#x1F858; | Vrai = mode Digest, Faux = mode Basic |
-| $4 | Texte | &#x1F858; | Ip address of the caller |
-| $0 | Booléen | &#x1F850; | Vrai = requête acceptée, Faux = requête rejetée |
+| $1 | Texte | &harr; | Nom d’utilisateur |
+| $2 | Texte | &harr; | Mot de passe |
+| $3 | Booléen | &harr; | Vrai = mode Digest, Faux = mode Basic |
+| $4 | Texte | &harr; | Ip address of the caller |
+| $0 | Booléen | &larr; | Vrai = requête acceptée, Faux = requête rejetée |
 
 <!-- END REF-->
 

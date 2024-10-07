@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY TO SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| array | Array | &#x1F852; | コピー元の配列 |
-| aField | Field | &#x1F858; | 配列データを受け取るフィールド |
-| * | 演算子 | &#x1F852; | 実行をスタックする |
+| array | Array | &srarr; | コピー元の配列 |
+| aField | Field | &harr; | 配列データを受け取るフィールド |
+| * | 演算子 | &srarr; | 実行をスタックする |
 
 <!-- END REF-->
 

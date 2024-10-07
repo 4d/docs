@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET TITLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| libellé | Text | &#x1F852; | Nouveau libellé de l'objet |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| libellé | Text | &srarr; | Nouveau libellé de l'objet |
 
 <!-- END REF-->
 

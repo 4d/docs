@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.ONE RECORD SELECT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table de laquelle réduire la sélection à un enregistrement |
+| laTable | Table | &srarr; | Table de laquelle réduire la sélection à un enregistrement |
 
 <!-- END REF-->
 

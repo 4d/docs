@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.ST SET TEXT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
-| object | any | &#x1F852; | オブジェクト名 (* 指定時) または <br/>フィールドまたは変数 (* 省略時) |
-| newText | Text | &#x1F852; | 挿入するテキスト |
-| startSel | Integer | &#x1F852; | テキスト選択開始位置 |
-| endSel | Integer | &#x1F852; | テキスト選択終了位置 |
+| * | 演算子 | &srarr; | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
+| object | any | &srarr; | オブジェクト名 (* 指定時) または <br/>フィールドまたは変数 (* 省略時) |
+| newText | Text | &srarr; | 挿入するテキスト |
+| startSel | Integer | &srarr; | テキスト選択開始位置 |
+| endSel | Integer | &srarr; | テキスト選択終了位置 |
 
 <!-- END REF-->
 

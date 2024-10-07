@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX DELETE COLUMN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &#x1F852; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| colPosition | Integer | &#x1F852; | 削除する列番号 |
-| number | Integer | &#x1F852; | 削除する列数 |
+| * | 演算子 | &srarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &srarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| colPosition | Integer | &srarr; | 削除する列番号 |
+| number | Integer | &srarr; | 削除する列数 |
 
 <!-- END REF-->
 

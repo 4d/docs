@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.GET WINDOW RECT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| left | Integer | &#x1F858; | ウィンドウの内容領域の左座標 |
-| top | Integer | &#x1F858; | ウィンドウの内容領域の上座標 |
-| right | Integer | &#x1F858; | ウィンドウの内容領域の右座標 |
-| bottom | Integer | &#x1F858; | ウィンドウの内容領域の下座標 |
-| window | Integer | &#x1F852; | ウィンドウ参照番号, または 省略時はカレントプロセスの最前面ウィンドウ, または -1のときはMDIウィンドウ (Windows) |
+| left | Integer | &harr; | ウィンドウの内容領域の左座標 |
+| top | Integer | &harr; | ウィンドウの内容領域の上座標 |
+| right | Integer | &harr; | ウィンドウの内容領域の右座標 |
+| bottom | Integer | &harr; | ウィンドウの内容領域の下座標 |
+| window | Integer | &srarr; | ウィンドウ参照番号, または 省略時はカレントプロセスの最前面ウィンドウ, または -1のときはMDIウィンドウ (Windows) |
 
 <!-- END REF-->
 

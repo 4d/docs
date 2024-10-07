@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &#x1F852; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| jsFunction | Text | &#x1F852; | 実行するJavaScript関数名 |
-| result&#124;* | 変数 | &#x1F852; | または関数が結果を返さない場合 * |
-| &#x1F858; | 関数結果 (返される場合) |
-| param | Text, Number, Date, Object, Collection | &#x1F852; | 関数に渡す引数 |
+| * | 演算子 | &srarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &srarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| jsFunction | Text | &srarr; | 実行するJavaScript関数名 |
+| result&#124;* | 変数 | &srarr; | または関数が結果を返さない場合 * |
+| &harr; | 関数結果 (返される場合) |
+| param | Text, Number, Date, Object, Collection | &srarr; | 関数に渡す引数 |
 
 <!-- END REF-->
 

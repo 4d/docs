@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get query limit.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Integer | &#x1F850; | Número límite de registros,0 = número ilimitado |
+| Resultado | Integer | &larr; | Número límite de registros,0 = número ilimitado |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | カレントセレクションを削除するテーブル, または 省略時、デフォルトテーブル |
+| aTable | Table | &srarr; | カレントセレクションを削除するテーブル, または 省略時、デフォルトテーブル |
 
 <!-- END REF-->
 

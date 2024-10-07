@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| numTable | Integer | &#x1F858; | Numéro de la table de la sélection |
-| nom | Text | &#x1F858; | Nom de la sélection temporaire ou "" pour la sélection courante |
-| nomSurlignage | Text | &#x1F858; | Nom de l’ensemble de surlignage |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| numTable | Integer | &harr; | Numéro de la table de la sélection |
+| nom | Text | &harr; | Nom de la sélection temporaire ou "" pour la sélection courante |
+| nomSurlignage | Text | &harr; | Nom de l’ensemble de surlignage |
 
 <!-- END REF-->
 

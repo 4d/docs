@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Asserted.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| boolExpression | Boolean | &#x1F852; | Boolean expression |
-| messageText | Text | &#x1F852; | Text of error message |
-| Function result | Boolean | &#x1F850; | Result of evaluation of boolExpression |
+| boolExpression | Boolean | &srarr; | Boolean expression |
+| messageText | Text | &srarr; | Text of error message |
+| Function result | Boolean | &larr; | Result of evaluation of boolExpression |
 
 <!-- END REF-->
 

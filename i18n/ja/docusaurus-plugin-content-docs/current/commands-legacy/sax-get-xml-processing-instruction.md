@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Time | &#x1F852; | 開いたドキュメントの参照 |
-| name | Text | &#x1F858; | 命令名 |
-| value | Text | &#x1F858; | 命令値 |
+| document | Time | &srarr; | 開いたドキュメントの参照 |
+| name | Text | &harr; | 命令名 |
+| value | Text | &harr; | 命令値 |
 
 <!-- END REF-->
 

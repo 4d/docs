@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DEFAULT TABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | デフォルトとして設定するテーブル |
+| aTable | Table | &srarr; | デフォルトとして設定するテーブル |
 
 <!-- END REF-->
 

@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT DUPLICATE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable o un campo |
-| objeto | any | &#x1F852; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
-| nuevoNom | Text | &#x1F852; | Nombre del nuevo objeto |
-| nuevaVAr | Pointer | &#x1F852; | Puntero a la variable del nuevo objeto |
-| relacionadoA | Text | &#x1F852; | Nombre del objeto editable (o del botón de radio) anterior |
-| movH | Integer | &#x1F852; | Desplazamiento horizontal del nuevo objeto (>0 = a la derecha, <0 =a la izquierda) |
-| moveV | Integer | &#x1F852; | Desplazamiento vertical del nuevo objeto (>0 = hacia abajo, <0= hacia arriba) |
-| redimH | Integer | &#x1F852; | Valor de redimensionamiento horizontal del nuevo objeto |
-| redimV | Integer | &#x1F852; | Valor de redimensionamiento vertical del nuevo objeto |
-| * | Operador | &#x1F852; | Si se especifica = coordenadas absolutas Si se omite = coordenadas relativas |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable o un campo |
+| objeto | any | &srarr; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
+| nuevoNom | Text | &srarr; | Nombre del nuevo objeto |
+| nuevaVAr | Pointer | &srarr; | Puntero a la variable del nuevo objeto |
+| relacionadoA | Text | &srarr; | Nombre del objeto editable (o del botón de radio) anterior |
+| movH | Integer | &srarr; | Desplazamiento horizontal del nuevo objeto (>0 = a la derecha, <0 =a la izquierda) |
+| moveV | Integer | &srarr; | Desplazamiento vertical del nuevo objeto (>0 = hacia abajo, <0= hacia arriba) |
+| redimH | Integer | &srarr; | Valor de redimensionamiento horizontal del nuevo objeto |
+| redimV | Integer | &srarr; | Valor de redimensionamiento vertical del nuevo objeto |
+| * | Operador | &srarr; | Si se especifica = coordenadas absolutas Si se omite = coordenadas relativas |
 
 <!-- END REF-->
 

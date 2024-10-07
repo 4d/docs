@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Day number.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| data | Date | &#x1F852; | Data para a qual devolver o número do dia |
-| Resultado | Integer | &#x1F850; | Número que representa o dia da semana que corresponde a data |
+| data | Date | &srarr; | Data para a qual devolver o número do dia |
+| Resultado | Integer | &larr; | Número que representa o dia da semana que corresponde a data |
 
 <!-- END REF-->
 

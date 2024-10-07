@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SERVICE Get info.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| typeInfo | Integer | &#x1F852; | Information à récupérer |
-| Résultat | Text | &#x1F850; | Information sur la dernière erreur SOAP |
+| typeInfo | Integer | &srarr; | Information à récupérer |
+| Résultat | Text | &larr; | Information sur la dernière erreur SOAP |
 
 <!-- END REF-->
 

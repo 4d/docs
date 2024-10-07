@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD Get attribute.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota | Text | &#x1F852; | Rota do método projeto |
-| tipoAtributo | Integer | &#x1F852; | Tipo de atributo a obter |
-| * | Operador | &#x1F852; | Se passado = o comando aplica ao banco de dados local quando é executado desde um componente (parâmetro ignorado fora deste contexto) |
-| Resultado | Boolean | &#x1F850; | True = Atributo selecionado, do contrário False |
+| rota | Text | &srarr; | Rota do método projeto |
+| tipoAtributo | Integer | &srarr; | Tipo de atributo a obter |
+| * | Operador | &srarr; | Se passado = o comando aplica ao banco de dados local quando é executado desde um componente (parâmetro ignorado fora deste contexto) |
+| Resultado | Boolean | &larr; | True = Atributo selecionado, do contrário False |
 
 <!-- END REF-->
 

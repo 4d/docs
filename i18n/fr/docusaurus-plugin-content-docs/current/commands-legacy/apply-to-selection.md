@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.APPLY TO SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table dans laquelle appliquer la formule |
-| formule | Expression | &#x1F852; | Ligne de code ou méthode |
+| laTable | Table | &srarr; | Table dans laquelle appliquer la formule |
+| formule | Expression | &srarr; | Ligne de code ou méthode |
 
 <!-- END REF-->
 

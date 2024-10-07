@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Storage.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Object | &#x1F850; | Catálogo de objetos compartidos e coleções compartidas registrados |
+| Resultado | Object | &larr; | Catálogo de objetos compartidos e coleções compartidas registrados |
 
 <!-- END REF-->
 

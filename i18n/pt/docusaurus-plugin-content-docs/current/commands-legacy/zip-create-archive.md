@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ZIP Create archive.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| arquivoOuPasta&#124;estruturaZip | Objeto | &#x1F852; | Objeto arquivo ou pasta a comprimir |
-| arquivoDestino | Object | &#x1F852; | Arquivo destino para o arquivo |
-| opções | Integer | &#x1F852; | Se arquivoOuPasta usado: ZIP sem anexar pasta |
-| Resultado | Object | &#x1F850; | estado objeto |
+| arquivoOuPasta&#124;estruturaZip | Objeto | &srarr; | Objeto arquivo ou pasta a comprimir |
+| arquivoDestino | Object | &srarr; | Arquivo destino para o arquivo |
+| opções | Integer | &srarr; | Se arquivoOuPasta usado: ZIP sem anexar pasta |
+| Resultado | Object | &larr; | estado objeto |
 
 <!-- END REF-->
 

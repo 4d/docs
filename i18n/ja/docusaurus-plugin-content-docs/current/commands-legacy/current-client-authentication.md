@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Current client authentication.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| domain | Text | &#x1F858; | ドメイン名 |
-| protocol | Text | &#x1F858; | "Kerberos"、"NTLM"、または空の文字列 |
-| 戻り値 | Text | &#x1F850; | Windows が返すセッションユーザーのログイン名 |
+| domain | Text | &harr; | ドメイン名 |
+| protocol | Text | &harr; | "Kerberos"、"NTLM"、または空の文字列 |
+| 戻り値 | Text | &larr; | Windows が返すセッションユーザーのログイン名 |
 
 <!-- END REF-->
 

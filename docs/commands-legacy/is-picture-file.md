@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Is picture file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| filePath | Text | &#x1F852; | File pathname |
-| * | Operator | &#x1F852; | Validate data |
-| Function result | Boolean | &#x1F850; | True = filePath designates a picture file; otherwise, False |
+| filePath | Text | &srarr; | File pathname |
+| * | Operator | &srarr; | Validate data |
+| Function result | Boolean | &larr; | True = filePath designates a picture file; otherwise, False |
 
 <!-- END REF-->
 

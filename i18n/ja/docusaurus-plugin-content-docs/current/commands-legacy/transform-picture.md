@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.TRANSFORM PICTURE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture | Picture | &#x1F852; | 変換するソースピクチャ |
-| &#x1F858; | 変換した結果のピクチャ |
-| operator | Integer | &#x1F852; | 行う変換のタイプ |
-| param1 | Real | &#x1F852; | 変換パラメタ |
-| param2 | Real | &#x1F852; | 変換パラメタ |
-| param3 | Real | &#x1F852; | 変換パラメタ |
-| param4 | Real | &#x1F852; | 変換パラメタ |
+| picture | Picture | &srarr; | 変換するソースピクチャ |
+| &harr; | 変換した結果のピクチャ |
+| operator | Integer | &srarr; | 行う変換のタイプ |
+| param1 | Real | &srarr; | 変換パラメタ |
+| param2 | Real | &srarr; | 変換パラメタ |
+| param3 | Real | &srarr; | 変換パラメタ |
+| param4 | Real | &srarr; | 変換パラメタ |
 
 <!-- END REF-->
 

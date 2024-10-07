@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PUSH RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | レコードをプッシュするテーブル, または 省略時、デフォルトテーブル |
+| aTable | Table | &srarr; | レコードをプッシュするテーブル, または 省略時、デフォルトテーブル |
 
 <!-- END REF-->
 

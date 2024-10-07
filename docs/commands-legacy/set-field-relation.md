@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET FIELD RELATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| manyTable &#124; Field | Table, Field | &#x1F852; | Starting table of relations or Starting field of a relation |
-| one | Integer | &#x1F852; | Status of the Many-to-One relation starting from the field or the Many-to-One relations of the table |
-| many | Integer | &#x1F852; | Status of the One-to-Many relation starting from the field or the One-to-Many relations of the table |
+| manyTable &#124; Field | Table, Field | &srarr; | Starting table of relations or Starting field of a relation |
+| one | Integer | &srarr; | Status of the Many-to-One relation starting from the field or the Many-to-One relations of the table |
+| many | Integer | &srarr; | Status of the One-to-Many relation starting from the field or the One-to-Many relations of the table |
 
 <!-- END REF-->
 

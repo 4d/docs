@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX GET XML DOCUMENT VALUES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#x1F852; | Reference of open document |
-| encoding | Text | &#x1F858; | XML document character set |
-| version | Text | &#x1F858; | XML version |
-| standalone | Boolean | &#x1F858; | True = document is standalone, otherwise False |
+| document | Time | &srarr; | Reference of open document |
+| encoding | Text | &harr; | XML document character set |
+| version | Text | &harr; | XML version |
+| standalone | Boolean | &harr; | True = document is standalone, otherwise False |
 
 <!-- END REF-->
 

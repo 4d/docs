@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY WITH ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetField | Field | &#x1F852; | 値との比較に使用するフィールド |
-| array | Array | &#x1F852; | 検索する値の配列 |
+| targetField | Field | &srarr; | 値との比較に使用するフィールド |
+| array | Array | &srarr; | 検索する値の配列 |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Before.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Boolean | &#x1F850; | Vrai si le cycle d'exécution est avant |
+| Résultat | Boolean | &larr; | Vrai si le cycle d'exécution est avant |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SORT ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableau | Array | &#x1F852; | Tableau(x) à trier |
-| > ou < | Opérateur | &#x1F852; | ">" pour effectuer un tri par ordre croissant ou "<" pour effectuer un tri par ordre décroissant (tri croissant si omis) |
+| tableau | Array | &srarr; | Tableau(x) à trier |
+| > ou < | Opérateur | &srarr; | ">" pour effectuer un tri par ordre croissant ou "<" pour effectuer un tri par ordre décroissant (tri croissant si omis) |
 
 <!-- END REF-->
 

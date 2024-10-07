@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE EMPTY SET.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#x1F852; | Tabla para la cual crear un conjunto vacío o Tabla por defecto si se omite |
-| conjunto | Text | &#x1F852; | Nombre del nuevo conjunto vacío |
+| tabla | Table | &srarr; | Tabla para la cual crear un conjunto vacío o Tabla por defecto si se omite |
+| conjunto | Text | &srarr; | Nombre del nuevo conjunto vacío |
 
 <!-- END REF-->
 

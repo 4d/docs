@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET STYLE SHEET INFO.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| styleSheetName | Text | &#x1F852; | Name of style sheet |
-| font | Text | &#x1F858; | Character font |
-| size | Integer | &#x1F858; | Font size |
-| styles | Integer | &#x1F858; | Style value |
+| styleSheetName | Text | &srarr; | Name of style sheet |
+| font | Text | &harr; | Character font |
+| size | Integer | &harr; | Font size |
+| styles | Integer | &harr; | Style value |
 
 <!-- END REF-->
 

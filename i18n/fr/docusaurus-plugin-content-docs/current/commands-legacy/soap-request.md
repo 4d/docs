@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SOAP Request.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Boolean | &#x1F850; | Vrai si la requête est SOAP, Faux sinon |
+| Résultat | Boolean | &larr; | Vrai si la requête est SOAP, Faux sinon |
 
 <!-- END REF-->
 

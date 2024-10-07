@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET COLUMN FORMULA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時objectはオブジェクト名 (文字列)、省略時objectは変数 |
-| object | any | &#x1F852; | オブジェクト名 (* 指定時) または変数 (* 省略時) |
-| formula | Text | &#x1F852; | 列に割り当てる4Dフォーミュラ |
-| dataType | Integer | &#x1F852; | フォーミュラの結果型 |
+| * | 演算子 | &srarr; | 指定時objectはオブジェクト名 (文字列)、省略時objectは変数 |
+| object | any | &srarr; | オブジェクト名 (* 指定時) または変数 (* 省略時) |
+| formula | Text | &srarr; | 列に割り当てる4Dフォーミュラ |
+| dataType | Integer | &srarr; | フォーミュラの結果型 |
 
 <!-- END REF-->
 

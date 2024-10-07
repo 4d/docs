@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET AUTO ROW HEIGHT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string). If omitted, object is a variable. |
-| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| selector | Integer | &#x1F852; | Height value to set: lk row min height or lk row max height |
-| value | Integer | &#x1F852; | Minimum or maximum row height value |
-| unit | Integer | &#x1F852; | Unit of height value: 0 = pixels, 1 = lines |
+| * | Operator | &srarr; | If specified, object is an object name (string). If omitted, object is a variable. |
+| object | any | &srarr; | Object name (if * is specified) or Variable (if * is omitted) |
+| selector | Integer | &srarr; | Height value to set: lk row min height or lk row max height |
+| value | Integer | &srarr; | Minimum or maximum row height value |
+| unit | Integer | &srarr; | Unit of height value: 0 = pixels, 1 = lines |
 
 <!-- END REF-->
 

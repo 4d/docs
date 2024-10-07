@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Get Current Session ID.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Text | &#x1F850; | UUID de la session |
+| Résultat | Text | &larr; | UUID de la session |
 
 <!-- END REF-->
 

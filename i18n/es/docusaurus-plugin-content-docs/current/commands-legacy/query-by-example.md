@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY BY EXAMPLE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#x1F852; | Tabla de la cual debe devolverse una selección de  registros , o Tabla por defecto, si se omite |
-| * | Operador | &#x1F852; | Si se pasa, no se muestra la barra de desplazamiento |
+| tabla | Table | &srarr; | Tabla de la cual debe devolverse una selección de  registros , o Tabla por defecto, si se omite |
+| * | Operador | &srarr; | Si se pasa, no se muestra la barra de desplazamiento |
 
 <!-- END REF-->
 

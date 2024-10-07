@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get report table.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#x1F852; | Referência da área |
-| Resultado | Integer | &#x1F850; | Nº de tabela |
+| area | Integer | &srarr; | Referência da área |
+| Resultado | Integer | &larr; | Nº de tabela |
 
 <!-- END REF-->
 

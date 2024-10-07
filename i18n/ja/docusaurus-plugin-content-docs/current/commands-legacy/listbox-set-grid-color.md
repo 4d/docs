@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET GRID COLOR.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &#x1F852; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| color | Text, Integer | &#x1F852; | RGBカラー値 |
-| horizontal | Boolean | &#x1F852; | 水平グリッドラインにカラーを適用 |
-| vertical | Boolean | &#x1F852; | 垂直グリッドラインにカラーを適用 |
+| * | 演算子 | &srarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &srarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| color | Text, Integer | &srarr; | RGBカラー値 |
+| horizontal | Boolean | &srarr; | 水平グリッドラインにカラーを適用 |
+| vertical | Boolean | &srarr; | 垂直グリッドラインにカラーを適用 |
 
 <!-- END REF-->
 

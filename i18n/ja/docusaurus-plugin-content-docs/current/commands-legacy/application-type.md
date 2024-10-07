@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Application type.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Integer | &#x1F850; | アプリケーションタイプを示す数値 |
+| 戻り値 | Integer | &larr; | アプリケーションタイプを示す数値 |
 
 <!-- END REF-->
 

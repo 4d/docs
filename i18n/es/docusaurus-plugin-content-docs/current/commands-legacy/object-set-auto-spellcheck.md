@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable o un campo |
-| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| correcionAuto | Boolean | &#x1F852; | True = corrección automática,False= no corrección automática |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable o un campo |
+| objeto | any | &srarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| correcionAuto | Boolean | &srarr; | True = corrección automática,False= no corrección automática |
 
 <!-- END REF-->
 

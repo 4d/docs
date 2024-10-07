@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Print form.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table à imprimer, ou Table par défaut si ce paramètre est omis |
-| formulaire | Text, Object | &#x1F852; | Nom (chaîne) du formulaire table ou projet à imprimer, ou<br/>Chemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ou<br/>Objet décrivant le formulaire |
-| formData | Object | &#x1F852; | Data to associate to the form |
-| zone1 | Integer | &#x1F852; | Marqueur d’impression, ou Zone de départ (si zone2 est spécifié) |
-| zone2 | Integer | &#x1F852; | Zone de fin (si zone1 est spécifié) |
-| Résultat | Integer | &#x1F850; | Hauteur de la section imprimée |
+| laTable | Table | &srarr; | Table à imprimer, ou Table par défaut si ce paramètre est omis |
+| formulaire | Text, Object | &srarr; | Nom (chaîne) du formulaire table ou projet à imprimer, ou<br/>Chemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ou<br/>Objet décrivant le formulaire |
+| formData | Object | &srarr; | Data to associate to the form |
+| zone1 | Integer | &srarr; | Marqueur d’impression, ou Zone de départ (si zone2 est spécifié) |
+| zone2 | Integer | &srarr; | Zone de fin (si zone1 est spécifié) |
+| Résultat | Integer | &larr; | Hauteur de la section imprimée |
 
 <!-- END REF-->
 

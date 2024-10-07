@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Get 4D folder.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| dossier | Integer | &#x1F852; | Type de dossier (si omis=dossier 4D actif) |
-| options | Object | &#x1F852; | Configuration du chemin du dossier base 4D Client |
-| * | Opérateur | &#x1F852; | Retourne le dossier de la base hôte |
-| Résultat | Text | &#x1F850; | Chemin d'accès du dossier désigné |
+| dossier | Integer | &srarr; | Type de dossier (si omis=dossier 4D actif) |
+| options | Object | &srarr; | Configuration du chemin du dossier base 4D Client |
+| * | Opérateur | &srarr; | Retourne le dossier de la base hôte |
+| Résultat | Text | &larr; | Chemin d'accès du dossier désigné |
 
 <!-- END REF-->
 

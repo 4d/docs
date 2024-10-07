@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Day of.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| data | Date | &#x1F852; | Data a qual para devolver o dia |
-| Resultado | Integer | &#x1F850; | Dia do mês da data |
+| data | Date | &srarr; | Data a qual para devolver o dia |
+| Resultado | Integer | &larr; | Dia do mês da data |
 
 <!-- END REF-->
 

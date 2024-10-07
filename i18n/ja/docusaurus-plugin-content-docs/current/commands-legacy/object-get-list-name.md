@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get list name.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
-| object | any | &#x1F852; | オブジェクト名 (* 指定時) または <br/>フィールドまたは変数 (* 省略時) |
-| listType | Integer | &#x1F852; | Type of list: Choice list, Required list or Excluded list |
-| 戻り値 | Text | &#x1F850; | (デザインモードで指定された) 選択リストの名前 |
+| * | 演算子 | &srarr; | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
+| object | any | &srarr; | オブジェクト名 (* 指定時) または <br/>フィールドまたは変数 (* 省略時) |
+| listType | Integer | &srarr; | Type of list: Choice list, Required list or Excluded list |
+| 戻り値 | Text | &larr; | (デザインモードで指定された) 選択リストの名前 |
 
 <!-- END REF-->
 

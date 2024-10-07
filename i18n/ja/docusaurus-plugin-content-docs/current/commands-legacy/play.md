@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PLAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| objectName | Text | &#x1F852; | サウンドファイル名、またはMac OSの"snd "リソース、またはシステムサウンド非同期再生を中断する場合、空の文字列 |
-| channel | Integer | &#x1F852; | 指定した場合、シンセサイザーチャネルと非同期実行、省略した場合同期実行 |
+| objectName | Text | &srarr; | サウンドファイル名、またはMac OSの"snd "リソース、またはシステムサウンド非同期再生を中断する場合、空の文字列 |
+| channel | Integer | &srarr; | 指定した場合、シンセサイザーチャネルと非同期実行、省略した場合同期実行 |
 
 <!-- END REF-->
 

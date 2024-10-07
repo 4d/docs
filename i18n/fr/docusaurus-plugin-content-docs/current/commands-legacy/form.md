@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Form.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Object | &#x1F850; | Données associées au formulaire courant |
+| Résultat | Object | &larr; | Données associées au formulaire courant |
 
 <!-- END REF-->
 

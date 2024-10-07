@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAVE VARIABLES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Text | &#x1F852; | 変数を保存するドキュメントファイル |
-| variable | Variable | &#x1F852; | 保存する変数 |
+| document | Text | &srarr; | 変数を保存するドキュメントファイル |
+| variable | Variable | &srarr; | 保存する変数 |
 
 <!-- END REF-->
 

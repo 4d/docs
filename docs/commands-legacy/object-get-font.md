@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get font.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
-| object | any | &#x1F852; | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Text | &#x1F850; | Name of font |
+| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
+| object | any | &srarr; | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
+| Function result | Text | &larr; | Name of font |
 
 <!-- END REF-->
 

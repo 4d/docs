@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Before selection.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table pour laquelle vous testez si le pointeur se trouve avant la sélection |
-| Résultat | Boolean | &#x1F850; | Avant sélection (Vrai) sinon (Faux) |
+| laTable | Table | &srarr; | Table pour laquelle vous testez si le pointeur se trouve avant la sélection |
+| Résultat | Boolean | &larr; | Avant sélection (Vrai) sinon (Faux) |
 
 <!-- END REF-->
 

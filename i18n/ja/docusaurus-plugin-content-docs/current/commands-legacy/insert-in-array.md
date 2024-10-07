@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.INSERT IN ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| array | Array | &#x1F852; | 配列名 |
-| where | Integer | &#x1F852; | 要素を挿入する位置 |
-| howMany | Integer | &#x1F852; | 挿入する要素数, または 省略時は1 |
+| array | Array | &srarr; | 配列名 |
+| where | Integer | &srarr; | 要素を挿入する位置 |
+| howMany | Integer | &srarr; | 挿入する要素数, または 省略時は1 |
 
 <!-- END REF-->
 

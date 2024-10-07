@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get text from pasteboard.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Text | &#x1F850; | ペーストボード中のテキスト (あれば) |
+| 戻り値 | Text | &larr; | ペーストボード中のテキスト (あれば) |
 
 <!-- END REF-->
 

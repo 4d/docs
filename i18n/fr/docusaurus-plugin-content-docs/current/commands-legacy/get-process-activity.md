@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get process activity.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| options | Integer | &#x1F852; | Options de retour |
-| Résultat | Object | &#x1F850; | Aperçu des process en cours d'exécution et/ou (4D Server uniquement) des sessions utilisateur |
+| options | Integer | &srarr; | Options de retour |
+| Résultat | Object | &larr; | Aperçu des process en cours d'exécution et/ou (4D Server uniquement) des sessions utilisateur |
 
 <!-- END REF-->
 

@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET COORDINATES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um  uma variável |
-| objeto | any | &#x1F852; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
-| esquerda | Integer | &#x1F858; | Coordenadas da esquerda do objeto |
-| superior | Integer | &#x1F858; | Coordenadas superiores do objeto |
-| direita | Integer | &#x1F858; | Coordenada direita do objeto |
-| inferior | Integer | &#x1F858; | Coordenadas inferiores do objeto |
+| * | Operador | &srarr; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um  uma variável |
+| objeto | any | &srarr; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
+| esquerda | Integer | &harr; | Coordenadas da esquerda do objeto |
+| superior | Integer | &harr; | Coordenadas superiores do objeto |
+| direita | Integer | &harr; | Coordenada direita do objeto |
+| inferior | Integer | &harr; | Coordenadas inferiores do objeto |
 
 <!-- END REF-->
 

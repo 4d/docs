@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.APPEND TO LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| list | Integer | &#x1F852; | List reference number |
-| itemText | Text | &#x1F852; | Text of the new list item |
-| itemRef | Integer | &#x1F852; | Unique reference number for the new list item |
-| sublist | Integer | &#x1F852; | Optional sublist to attach to the new list item |
-| expanded | Boolean | &#x1F852; | Indicates if the optional sublist will be expanded or collapsed |
+| list | Integer | &srarr; | List reference number |
+| itemText | Text | &srarr; | Text of the new list item |
+| itemRef | Integer | &srarr; | Unique reference number for the new list item |
+| sublist | Integer | &srarr; | Optional sublist to attach to the new list item |
+| expanded | Boolean | &srarr; | Indicates if the optional sublist will be expanded or collapsed |
 
 <!-- END REF-->
 

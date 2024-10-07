@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD Get attribute.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin | Text | &#x1F852; | Chemin de méthode projet |
-| typeAttribut | Integer | &#x1F852; | Type d’attribut à obtenir |
-| * | Opérateur | &#x1F852; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
-| Résultat | Boolean | &#x1F850; | Vrai = attribut sélectionné, sinon Faux |
+| chemin | Text | &srarr; | Chemin de méthode projet |
+| typeAttribut | Integer | &srarr; | Type d’attribut à obtenir |
+| * | Opérateur | &srarr; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| Résultat | Boolean | &larr; | Vrai = attribut sélectionné, sinon Faux |
 
 <!-- END REF-->
 

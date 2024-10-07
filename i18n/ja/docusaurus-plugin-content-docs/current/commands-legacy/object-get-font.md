@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get font.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時: objectはオブジェクト名 (文字)、省略時: objectは変数またはフィールド |
-| object | any | &#x1F852; | オブジェクト名 (* 指定時) または、フィールドまたは変数 (* 省略時) |
-| 戻り値 | Text | &#x1F850; | フォント名 |
+| * | 演算子 | &srarr; | 指定時: objectはオブジェクト名 (文字)、省略時: objectは変数またはフィールド |
+| object | any | &srarr; | オブジェクト名 (* 指定時) または、フィールドまたは変数 (* 省略時) |
+| 戻り値 | Text | &larr; | フォント名 |
 
 <!-- END REF-->
 

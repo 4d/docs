@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get indicator type.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| Function result | Longint | &#x1F850; | Indicator type |
+| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a variable |
+| object | any | &srarr; | Object name (if * is specified) or Variable (if * is omitted) |
+| Function result | Longint | &larr; | Indicator type |
 
 <!-- END REF-->
 

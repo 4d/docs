@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get drop column.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#x1F852; | Référence de la zone |
-| Résultat | Integer | &#x1F850; | Emplacement du "déposer" |
+| zone | Integer | &srarr; | Référence de la zone |
+| Résultat | Integer | &larr; | Emplacement du "déposer" |
 
 <!-- END REF-->
 

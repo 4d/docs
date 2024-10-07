@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GOTO OBJECT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica = objeto es un nombre de objeto (cadena) Si se omite = objeto es un campo o una variable |
-| objeto | Field, Variable | &#x1F852; | Nombre del objeto (si se especifica *) o Campo o Variable (si se omite *) a donde ir |
+| * | Operador | &srarr; | Si se especifica = objeto es un nombre de objeto (cadena) Si se omite = objeto es un campo o una variable |
+| objeto | Field, Variable | &srarr; | Nombre del objeto (si se especifica *) o Campo o Variable (si se omite *) a donde ir |
 
 <!-- END REF-->
 

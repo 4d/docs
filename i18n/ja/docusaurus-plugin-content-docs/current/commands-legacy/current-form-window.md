@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current form window.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Integer | &#x1F850; | カレントフォームウィンドウ参照番号 |
+| 戻り値 | Integer | &larr; | カレントフォームウィンドウ参照番号 |
 
 <!-- END REF-->
 

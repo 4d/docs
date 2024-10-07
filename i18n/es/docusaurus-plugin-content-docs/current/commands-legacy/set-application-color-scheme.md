@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| esquemaColor | Text | &#x1F852; | "claro", "oscuro" o "heredado" |
+| esquemaColor | Text | &srarr; | "claro", "oscuro" o "heredado" |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SELECT LOG FILE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| logFile &#124; * | 演算子, 文字 | &#x1F852; | ログファイルの名前、または * を指定するとカレントログを閉じる |
+| logFile &#124; * | 演算子, 文字 | &srarr; | ログファイルの名前、または * を指定するとカレントログを閉じる |
 
 <!-- END REF-->
 

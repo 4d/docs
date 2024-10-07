@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Folder.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| path &#124; 4Dfolder | Text, Longint | &#x1F852; | Folder path or 4D folder constant |
-| pathType &#124; * | Longint, Operator | &#x1F852; | If path passed: fk posix path (default) or fk platform path<br/>If 4Dfolder passed: * to return folder of host database |
-| Function result | Object | &#x1F850; | New folder object |
+| path &#124; 4Dfolder | Text, Longint | &srarr; | Folder path or 4D folder constant |
+| pathType &#124; * | Longint, Operator | &srarr; | If path passed: fk posix path (default) or fk platform path<br/>If 4Dfolder passed: * to return folder of host database |
+| Function result | Object | &larr; | New folder object |
 
 <!-- END REF-->
 

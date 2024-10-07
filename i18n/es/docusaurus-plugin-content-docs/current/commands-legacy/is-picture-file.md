@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Is picture file.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaArchivo | Text | &#x1F852; | Ruta de acceso del archivo |
-| * | Operador | &#x1F852; | Validar los datos |
-| Resultado | Boolean | &#x1F850; | True = rutaArchivo designa un archivo imagen, de lo contrario False |
+| rutaArchivo | Text | &srarr; | Ruta de acceso del archivo |
+| * | Operador | &srarr; | Validar los datos |
+| Resultado | Boolean | &larr; | True = rutaArchivo designa un archivo imagen, de lo contrario False |
 
 <!-- END REF-->
 

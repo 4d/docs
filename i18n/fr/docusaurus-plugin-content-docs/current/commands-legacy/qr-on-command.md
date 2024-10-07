@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR ON COMMAND.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#x1F852; | Référence de la zone |
-| nomMéthode | Text | &#x1F852; | Nom de la méthode à appeler |
+| zone | Integer | &srarr; | Référence de la zone |
+| nomMéthode | Text | &srarr; | Nom de la méthode à appeler |
 
 <!-- END REF-->
 

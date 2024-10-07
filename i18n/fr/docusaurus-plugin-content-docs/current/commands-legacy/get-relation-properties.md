@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET RELATION PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ptrChp &#124; numTable | Pointeur, Entier long | &#x1F852; | Pointeur de champ ou Numéro de table |
-| numChamp | Integer | &#x1F852; | Numéro de champ si un numéro de table est passé en premier paramètre |
-| tableDest | Integer | &#x1F858; | Numéro de la table cible ou 0 si aucun lien ne part du champ |
-| champDest | Integer | &#x1F858; | Numéro du champ cible ou 0 si aucun lien ne part du champ |
-| discriminant | Integer | &#x1F858; | Numéro du champ discriminant ou 0 si aucun champ discriminant |
-| allerAuto | Boolean | &#x1F858; | Vrai = Lien aller automatique, Faux = Lien aller manuel |
-| retourAuto | Boolean | &#x1F858; | Vrai = Lien retour automatique, Faux = Lien retour manuel |
+| ptrChp &#124; numTable | Pointeur, Entier long | &srarr; | Pointeur de champ ou Numéro de table |
+| numChamp | Integer | &srarr; | Numéro de champ si un numéro de table est passé en premier paramètre |
+| tableDest | Integer | &harr; | Numéro de la table cible ou 0 si aucun lien ne part du champ |
+| champDest | Integer | &harr; | Numéro du champ cible ou 0 si aucun lien ne part du champ |
+| discriminant | Integer | &harr; | Numéro du champ discriminant ou 0 si aucun champ discriminant |
+| allerAuto | Boolean | &harr; | Vrai = Lien aller automatique, Faux = Lien aller manuel |
+| retourAuto | Boolean | &harr; | Vrai = Lien retour automatique, Faux = Lien retour manuel |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Displayed line number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#x1F850; | Number of row being displayed |
+| Function result | Longint | &larr; | Number of row being displayed |
 
 <!-- END REF-->
 

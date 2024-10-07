@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE DOCUMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Text | &#x1F852; | ドキュメント名、または 完全なドキュメントのパス名 |
+| document | Text | &srarr; | ドキュメント名、または 完全なドキュメントのパス名 |
 
 <!-- END REF-->
 

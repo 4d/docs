@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Time.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| horaText | Text, Integer | &#x1F852; | Hora para a qual devolver o número de segundos |
-| Resultado | Time | &#x1F850; | Hora especificada por horaString |
+| horaText | Text, Integer | &srarr; | Hora para a qual devolver o número de segundos |
+| Resultado | Time | &larr; | Hora especificada por horaString |
 
 <!-- END REF-->
 

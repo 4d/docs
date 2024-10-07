@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD RELATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| champN | Field | &#x1F852; | Champ de départ du lien |
-| aller | Integer | &#x1F858; | Statut du lien aller |
-| retour | Integer | &#x1F858; | Statut du lien retour |
-| * | Opérateur | &#x1F852; | • Si passé : aller et retour retournent le statut courant effectif du lien (valeurs 2 ou 3 uniquement)• Si omis (défaut) : aller et retour peuvent retourner la valeur 1 si le lien n’a pas été modifié par programmation |
+| champN | Field | &srarr; | Champ de départ du lien |
+| aller | Integer | &harr; | Statut du lien aller |
+| retour | Integer | &harr; | Statut du lien retour |
+| * | Opérateur | &srarr; | • Si passé : aller et retour retournent le statut courant effectif du lien (valeurs 2 ou 3 uniquement)• Si omis (défaut) : aller et retour peuvent retourner la valeur 1 si le lien n’a pas été modifié par programmation |
 
 <!-- END REF-->
 

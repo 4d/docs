@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.GET USER PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refUsuario | Integer | &#x1F852; | Número de referencia único de usuario |
-| nombre | Text | &#x1F858; | Nombre del usuario |
-| inicio | Text | &#x1F858; | Nombre del método de inicio |
-| contraseña | Text | &#x1F858; | Cadena vacía |
-| nbLogin | Integer | &#x1F858; | Números de usos de la base |
-| ultimoLogin | Date | &#x1F858; | Fecha de la última utilización de la base |
-| membrecias | Integer array | &#x1F858; | Números de referencia de los grupos a los que el usuario pertenece |
-| grupoPropietario | Integer | &#x1F858; | Número de referencia del grupo prioritario del usuario |
+| refUsuario | Integer | &srarr; | Número de referencia único de usuario |
+| nombre | Text | &harr; | Nombre del usuario |
+| inicio | Text | &harr; | Nombre del método de inicio |
+| contraseña | Text | &harr; | Cadena vacía |
+| nbLogin | Integer | &harr; | Números de usos de la base |
+| ultimoLogin | Date | &harr; | Fecha de la última utilización de la base |
+| membrecias | Integer array | &harr; | Números de referencia de los grupos a los que el usuario pertenece |
+| grupoPropietario | Integer | &harr; | Número de referencia del grupo prioritario del usuario |
 
 <!-- END REF-->
 

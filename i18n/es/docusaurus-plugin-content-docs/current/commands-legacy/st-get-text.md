@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.ST Get text.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
-| objeto | any | &#x1F852; | Nombre del objeto (si se especifica *) o campo o variable texto (si se omite *) |
-| inicioSel | Integer | &#x1F852; | Inicio de la selección |
-| finSel | Integer | &#x1F852; | Fin de la selección |
-| Resultado | Text | &#x1F850; | Texto incluyendo las etiquetas de estilo |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
+| objeto | any | &srarr; | Nombre del objeto (si se especifica *) o campo o variable texto (si se omite *) |
+| inicioSel | Integer | &srarr; | Inicio de la selección |
+| finSel | Integer | &srarr; | Fin de la selección |
+| Resultado | Text | &larr; | Texto incluyendo las etiquetas de estilo |
 
 <!-- END REF-->
 

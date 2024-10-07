@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Decrypt data BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blobToDecrypt | Blob | &#x1F852; | BLOB to decrypt |
-| keyObject &#124; passPhrase | Object, Text | &#x1F852; | JSON object containing the encryption key or passphrase for direct encryption key generation (text) |
-| salt | Integer | &#x1F852; | Additional salt for algorithm |
-| decryptedBlob | Blob | &#x1F858; | decrypted BLOB |
-| Function result | Boolean | &#x1F850; | True if decryption has been correctly performed, False otherwise |
+| blobToDecrypt | Blob | &srarr; | BLOB to decrypt |
+| keyObject &#124; passPhrase | Object, Text | &srarr; | JSON object containing the encryption key or passphrase for direct encryption key generation (text) |
+| salt | Integer | &srarr; | Additional salt for algorithm |
+| decryptedBlob | Blob | &harr; | decrypted BLOB |
+| Function result | Boolean | &larr; | True if decryption has been correctly performed, False otherwise |
 
 <!-- END REF-->
 

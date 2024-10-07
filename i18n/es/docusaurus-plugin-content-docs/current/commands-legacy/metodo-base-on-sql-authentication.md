@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Metodo base On SQL Authentication.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| $1 | Texto | &#x1F858; | Nombre de usuario |
-| $2 | Texto | &#x1F858; | Contraseña |
-| $3 | Texto | &#x1F858; | (Opcional) Dirección IP del cliente al origen de la petición |
-| Resultado | Boolean | &#x1F850; | True = petición aceptada, False = petición rechazada |
+| $1 | Texto | &harr; | Nombre de usuario |
+| $2 | Texto | &harr; | Contraseña |
+| $3 | Texto | &harr; | (Opcional) Dirección IP del cliente al origen de la petición |
+| Resultado | Boolean | &larr; | True = petición aceptada, False = petición rechazada |
 
 <!-- END REF-->
 

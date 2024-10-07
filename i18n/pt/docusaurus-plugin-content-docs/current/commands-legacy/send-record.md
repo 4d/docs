@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SEND RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#x1F852; | Tabela da qual enviar o registro corrente, ou Tabela padrão, se omitido |
+| tabela | Table | &srarr; | Tabela da qual enviar o registro corrente, ou Tabela padrão, se omitido |
 
 <!-- END REF-->
 

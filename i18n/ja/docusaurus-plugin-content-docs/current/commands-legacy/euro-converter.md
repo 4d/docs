@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Euro converter.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| value | Real | &#x1F852; | 変換する値 |
-| fromCurrency | Text | &#x1F852; | valueの通貨コード |
-| toCurrency | Text | &#x1F852; | 変換先通貨コード |
-| 戻り値 | Real | &#x1F850; | 変換された値 |
+| value | Real | &srarr; | 変換する値 |
+| fromCurrency | Text | &srarr; | valueの通貨コード |
+| toCurrency | Text | &srarr; | 変換先通貨コード |
+| 戻り値 | Real | &larr; | 変換された値 |
 
 <!-- END REF-->
 

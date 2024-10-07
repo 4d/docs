@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX MOVED COLUMN NUMBER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| oldPosition | Integer | &#x1F858; | Previous position of the moved column |
-| newPosition | Integer | &#x1F858; | New position of the moved column |
+| * | Operator | &srarr; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &srarr; | Object name (if * is specified) or Variable (if * is omitted) |
+| oldPosition | Integer | &harr; | Previous position of the moved column |
+| newPosition | Integer | &harr; | New position of the moved column |
 
 <!-- END REF-->
 

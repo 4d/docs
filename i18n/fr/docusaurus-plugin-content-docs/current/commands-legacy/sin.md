@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Sin.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombre | Real | &#x1F852; | Nombre, exprimé en radians, dont vous voulez connaître le sinus |
-| Résultat | Real | &#x1F850; | Sinus de nombre |
+| nombre | Real | &srarr; | Nombre, exprimé en radians, dont vous voulez connaître le sinus |
+| Résultat | Real | &larr; | Sinus de nombre |
 
 <!-- END REF-->
 

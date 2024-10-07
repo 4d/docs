@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Sum squares.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| series | Field, Array | &#x1F852; | Data for which to return the sum of squares |
-| Function result | Real | &#x1F850; | Sum of squares of series |
+| series | Field, Array | &srarr; | Data for which to return the sum of squares |
+| Function result | Real | &larr; | Sum of squares of series |
 
 <!-- END REF-->
 

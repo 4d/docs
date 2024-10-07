@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get action info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| action | Text | &#x1F852; | 標準アクション名、あるいは(必要であれば)引数を含めたパターン |
-| target | Integer | &#x1F852; | アクションの情報を取得するターゲットを定義します。メインフォームあるいはカレントフォーム |
-| 戻り値 | Object | &#x1F850; | アクションのステータスを表したブール型のプロパティを格納するオブジェクト: isEnabled、isVisible、isChecked、isMixed、isUnknownState |
+| action | Text | &srarr; | 標準アクション名、あるいは(必要であれば)引数を含めたパターン |
+| target | Integer | &srarr; | アクションの情報を取得するターゲットを定義します。メインフォームあるいはカレントフォーム |
+| 戻り値 | Object | &larr; | アクションのステータスを表したブール型のプロパティを格納するオブジェクト: isEnabled、isVisible、isChecked、isMixed、isUnknownState |
 
 <!-- END REF-->
 

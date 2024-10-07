@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| statut | Boolean | &#x1F852; | Vrai=Enregistrer la description des requêtes, Faux=Stopper l'enregistrement |
+| statut | Boolean | &srarr; | Vrai=Enregistrer la description des requêtes, Faux=Stopper l'enregistrement |
 
 <!-- END REF-->
 

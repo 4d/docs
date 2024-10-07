@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Uppercase.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aString | Text | &#x1F852; | 英大文字にする文字列 |
-| * | 演算子 | &#x1F852; | 渡されると、アクセント符号を保持 |
-| 戻り値 | Text | &#x1F850; | 英大文字に変換した文字列 |
+| aString | Text | &srarr; | 英大文字にする文字列 |
+| * | 演算子 | &srarr; | 渡されると、アクセント符号を保持 |
+| 戻り値 | Text | &larr; | 英大文字に変換した文字列 |
 
 <!-- END REF-->
 

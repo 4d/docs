@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get property.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string). If omitted, object is a variable |
-| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| property | Integer | &#x1F852; | Property whose value you want to get |
-| Function result | Longint, String | &#x1F850; | Current value |
+| * | Operator | &srarr; | If specified, object is an object name (string). If omitted, object is a variable |
+| object | any | &srarr; | Object name (if * is specified) or Variable (if * is omitted) |
+| property | Integer | &srarr; | Property whose value you want to get |
+| Function result | Longint, String | &larr; | Current value |
 
 <!-- END REF-->
 

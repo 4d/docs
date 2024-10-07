@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Generate digest.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| param | Blob, Text | &#x1F852; | Blob or text for which to get digest key |
-| algorithm | Integer | &#x1F852; | Algorithm used to return key: 0 = MD5 Digest, 1 = SHA1 Digest, 2 = 4D digest, 3 = SHA-256 digest, 4 = SHA-512 digest |
-| * | Operator | &#x1F852; | Encode digest in Base64URL |
-| Function result | Text | &#x1F850; | Value of digest key |
+| param | Blob, Text | &srarr; | Blob or text for which to get digest key |
+| algorithm | Integer | &srarr; | Algorithm used to return key: 0 = MD5 Digest, 1 = SHA1 Digest, 2 = 4D digest, 3 = SHA-256 digest, 4 = SHA-512 digest |
+| * | Operator | &srarr; | Encode digest in Base64URL |
+| Function result | Text | &larr; | Value of digest key |
 
 <!-- END REF-->
 

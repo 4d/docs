@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REJECT NEW REMOTE CONNECTIONS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| rejectStatus | Boolean | &#x1F852; | True if new connections are rejected, else false |
+| rejectStatus | Boolean | &srarr; | True if new connections are rejected, else false |
 
 <!-- END REF-->
 

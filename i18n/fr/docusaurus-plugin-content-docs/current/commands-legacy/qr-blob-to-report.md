@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR BLOB TO REPORT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#x1F852; | Référence de la zone |
-| blob | Blob | &#x1F852; | BLOB contenant l'état |
+| zone | Integer | &srarr; | Référence de la zone |
+| blob | Blob | &srarr; | BLOB contenant l'état |
 
 <!-- END REF-->
 

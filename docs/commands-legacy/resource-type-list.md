@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESOURCE TYPE LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| resTypes | Text array | &#x1F858; | List of available resource types |
-| resFile | Time | &#x1F852; | Resource file reference number, or all open resource files, if omitted |
+| resTypes | Text array | &harr; | List of available resource types |
+| resFile | Time | &srarr; | Resource file reference number, or all open resource files, if omitted |
 
 <!-- END REF-->
 

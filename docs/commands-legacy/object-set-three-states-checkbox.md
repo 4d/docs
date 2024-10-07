@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &#x1F852; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
-| threeStates | Boolean | &#x1F852; | True = three-states checkbox, False = standard checkbox |
+| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | any | &srarr; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| threeStates | Boolean | &srarr; | True = three-states checkbox, False = standard checkbox |
 
 <!-- END REF-->
 

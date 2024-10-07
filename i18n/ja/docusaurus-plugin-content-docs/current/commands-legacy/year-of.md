@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Year of.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| date | Date | &#x1F852; | 年を取り出す日付 |
-| 戻り値 | Integer | &#x1F850; | 年を示す数値 |
+| date | Date | &srarr; | 年を取り出す日付 |
+| 戻り値 | Integer | &larr; | 年を示す数値 |
 
 <!-- END REF-->
 

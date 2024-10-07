@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY SELECTION WITH ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetField | Field | &#x1F852; | Field used to compare the values |
-| array | Array | &#x1F852; | Array of searched values |
+| targetField | Field | &srarr; | Field used to compare the values |
+| array | Array | &srarr; | Array of searched values |
 
 <!-- END REF-->
 

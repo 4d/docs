@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR SET.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| conjunto | Text | &#x1F852; | Nombre del conjunto a borrar de la memoria |
+| conjunto | Text | &srarr; | Nombre del conjunto a borrar de la memoria |
 
 <!-- END REF-->
 

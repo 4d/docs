@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is editing text.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#x1F850; | True if text is being entered, False otherwise |
+| Function result | Boolean | &larr; | True if text is being entered, False otherwise |
 
 <!-- END REF-->
 

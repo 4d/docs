@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Super.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| param | any | &#x1F852; | Parameter(s) to pass to the parent constructor |
-| Function result | Object | &#x1F850; | Object's parent |
+| param | any | &srarr; | Parameter(s) to pass to the parent constructor |
+| Function result | Object | &larr; | Object's parent |
 
 <!-- END REF-->
 

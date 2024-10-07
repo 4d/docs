@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get help tip.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
-| object | any | &#x1F852; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
-| 戻り値 | Text | &#x1F850; | オブジェクトのヘルプメッセージ |
+| * | 演算子 | &srarr; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
+| object | any | &srarr; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
+| 戻り値 | Text | &larr; | オブジェクトのヘルプメッセージ |
 
 <!-- END REF-->
 

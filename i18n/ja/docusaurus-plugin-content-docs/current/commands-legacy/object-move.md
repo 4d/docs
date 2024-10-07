@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT MOVE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | any | &#x1F852; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
-| moveH | Integer | &#x1F852; | オブジェクトの水平移動量 (>0 = 右方向, <0 =左方向) |
-| moveV | Integer | &#x1F852; | オブジェクトの垂直移動量 (>0 = 下方向, <0 = 上方向) |
-| resizeH | Integer | &#x1F852; | オブジェクトの水平方向へのサイズ変更値 |
-| resizeV | Integer | &#x1F852; | オブジェクトの垂直方向へのサイズ変更値 |
-| * | 演算子 | &#x1F852; | 指定時 = 絶対座標 省略時 = 相対座標 |
+| * | 演算子 | &srarr; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &srarr; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
+| moveH | Integer | &srarr; | オブジェクトの水平移動量 (>0 = 右方向, <0 =左方向) |
+| moveV | Integer | &srarr; | オブジェクトの垂直移動量 (>0 = 下方向, <0 = 上方向) |
+| resizeH | Integer | &srarr; | オブジェクトの水平方向へのサイズ変更値 |
+| resizeV | Integer | &srarr; | オブジェクトの垂直方向へのサイズ変更値 |
+| * | 演算子 | &srarr; | 指定時 = 絶対座標 省略時 = 相対座標 |
 
 <!-- END REF-->
 

@@ -11,12 +11,12 @@ displayed_sidebar: docs
 <!--REF #_command_.MULTI SORT ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| array | Array | &#x1F852; | ソートする配列 |
-| sort | * | &#x1F852; | ">" : 昇順ソート, または "<" : 降順ソート, または 省略した場合、ソートしない |
+| array | Array | &srarr; | ソートする配列 |
+| sort | * | &srarr; | ">" : 昇順ソート, または "<" : 降順ソート, または 省略した場合、ソートしない |
 | MULTI SORT ARRAY ( ptrArrayName ; sortArrayName ) |
 | 引数 | 型 | 説明 |
-| ptrArrayName | Pointer array | &#x1F852; | 配列ポインタの配列 |
-| sortArrayName | Integer array | &#x1F852; | ソート順配列 (1 = 昇順にソート、-1 = 降順にソート、0 = 前のソートに同期) |
+| ptrArrayName | Pointer array | &srarr; | 配列ポインタの配列 |
+| sortArrayName | Integer array | &srarr; | ソート順配列 (1 = 昇順にソート、-1 = 降順にソート、0 = 前のソートに同期) |
 
 <!-- END REF-->
 

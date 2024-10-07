@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Form event code.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Integer | &#x1F850; | Número do evento do formulário |
+| Resultado | Integer | &larr; | Número do evento do formulário |
 
 <!-- END REF-->
 

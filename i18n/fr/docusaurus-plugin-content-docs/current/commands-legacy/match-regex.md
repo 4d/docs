@@ -11,18 +11,18 @@ displayed_sidebar: docs
 <!--REF #_command_.Match regex.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| motif | Text | &#x1F852; | Expression régulière |
-| laChaîne | Text | &#x1F852; | Chaîne dans laquelle s’effectue la recherche |
-| début | Integer | &#x1F852; | Position dans laChaîne où doit débuter la recherche |
-| pos_trouvée | Integer array, Integer | &#x1F858; | Position de l’occurence |
-| long_trouvée | Integer array, Integer | &#x1F858; | Longueur de l’occurence |
-| * | Opérateur | &#x1F852; | Si passé : rechercher uniquement à la position indiquée |
-| Résultat | Boolean | &#x1F850; | Vrai = la recherche a trouvé une occurrence, Faux sinon |
+| motif | Text | &srarr; | Expression régulière |
+| laChaîne | Text | &srarr; | Chaîne dans laquelle s’effectue la recherche |
+| début | Integer | &srarr; | Position dans laChaîne où doit débuter la recherche |
+| pos_trouvée | Integer array, Integer | &harr; | Position de l’occurence |
+| long_trouvée | Integer array, Integer | &harr; | Longueur de l’occurence |
+| * | Opérateur | &srarr; | Si passé : rechercher uniquement à la position indiquée |
+| Résultat | Boolean | &larr; | Vrai = la recherche a trouvé une occurrence, Faux sinon |
 | Match regex ( motif ; laChaîne ) -> Résultat |
 | Paramètre | Type | Description |
-| motif | Text | &#x1F852; | Expression régulière (égalité complète) |
-| laChaîne | Text | &#x1F852; | Chaîne dans laquelle s'effectue la recherche |
-| Résultat | Boolean | &#x1F850; | Vrai = la recherche a trouvé une occurrence, Faux sinon |
+| motif | Text | &srarr; | Expression régulière (égalité complète) |
+| laChaîne | Text | &srarr; | Chaîne dans laquelle s'effectue la recherche |
+| Résultat | Boolean | &larr; | Vrai = la recherche a trouvé une occurrence, Faux sinon |
 
 <!-- END REF-->
 

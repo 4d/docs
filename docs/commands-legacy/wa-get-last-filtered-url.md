@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Get last filtered URL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| Function result | String | &#x1F850; | Last filtered URL |
+| * | Operator | &srarr; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &srarr; | Object name (if * is specified) or Variable (if * is omitted) |
+| Function result | String | &larr; | Last filtered URL |
 
 <!-- END REF-->
 

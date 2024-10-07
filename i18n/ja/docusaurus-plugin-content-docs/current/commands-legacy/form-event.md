@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM Event.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Object | &#x1F850; | イベントオブジェクト |
+| 戻り値 | Object | &larr; | イベントオブジェクト |
 
 <!-- END REF-->
 

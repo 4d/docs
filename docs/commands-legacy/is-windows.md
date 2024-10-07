@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is Windows.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#x1F850; | True if operating system = Windows, else False |
+| Function result | Boolean | &larr; | True if operating system = Windows, else False |
 
 <!-- END REF-->
 

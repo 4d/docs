@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Time.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| valHora | Text, Integer | &#x1F852; | Valor a devolver en forma de hora |
-| Resultado | Time | &#x1F850; | Hora especificada por horaCadena |
+| valHora | Text, Integer | &srarr; | Valor a devolver en forma de hora |
+| Resultado | Time | &larr; | Hora especificada por horaCadena |
 
 <!-- END REF-->
 

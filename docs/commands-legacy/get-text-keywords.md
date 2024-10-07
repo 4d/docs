@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET TEXT KEYWORDS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| text | Text | &#x1F852; | Original text |
-| arrKeywords | Text array | &#x1F858; | Array containing keywords |
-| * | Operator | &#x1F852; | If passed = unique words |
+| text | Text | &srarr; | Original text |
+| arrKeywords | Text array | &harr; | Array containing keywords |
+| * | Operator | &srarr; | If passed = unique words |
 
 <!-- END REF-->
 

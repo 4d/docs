@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current form table.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Pointer | &#x1F850; | Pointer to the table of the currently displayed form |
+| Function result | Pointer | &larr; | Pointer to the table of the currently displayed form |
 
 <!-- END REF-->
 

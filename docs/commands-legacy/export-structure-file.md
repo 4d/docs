@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Export structure file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| folderPath | Text | &#x1F852; | Path of the destination folder for project files |
-| options | Object | &#x1F852; | Export options |
-| Function result | Object | &#x1F850; | Validation status and messages (if any) |
+| folderPath | Text | &srarr; | Path of the destination folder for project files |
+| options | Object | &srarr; | Export options |
+| Function result | Object | &larr; | Validation status and messages (if any) |
 
 <!-- END REF-->
 

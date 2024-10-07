@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.File.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| path &#124; 4Dfile | Text, Longint | &#x1F852; | File path or 4D file constant |
-| pathType &#124; * | Longint, Operator | &#x1F852; | If path passed: fk posix path (default) or fk platform path<br/>If 4Dfile passed: * to return file of host database |
-| Function result | Object | &#x1F850; | New file object |
+| path &#124; 4Dfile | Text, Longint | &srarr; | File path or 4D file constant |
+| pathType &#124; * | Longint, Operator | &srarr; | If path passed: fk posix path (default) or fk platform path<br/>If 4Dfile passed: * to return file of host database |
+| Function result | Object | &larr; | New file object |
 
 <!-- END REF-->
 

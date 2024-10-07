@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.IMPORT STRUCTURE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| estructuraXML | Text | &#x1F852; | Definición XML de la estructura de la base 4D |
+| estructuraXML | Text | &srarr; | Definición XML de la estructura de la base 4D |
 
 <!-- END REF-->
 

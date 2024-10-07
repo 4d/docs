@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Trunc.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| number | Real | &#x1F852; | 切り捨てる数値 |
-| places | Integer | &#x1F852; | 切り捨てを行う位置 |
-| 戻り値 | Real | &#x1F850; | 切り捨てられた数値 |
+| number | Real | &srarr; | 切り捨てる数値 |
+| places | Integer | &srarr; | 切り捨てを行う位置 |
+| 戻り値 | Real | &larr; | 切り捨てられた数値 |
 
 <!-- END REF-->
 

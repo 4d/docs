@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT TEXT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | データを書き出すテーブル, または 省略した場合, デフォルトテーブル |
-| document | Text | &#x1F852; | データが書き出されるテキストドキュメント |
+| aTable | Table | &srarr; | データを書き出すテーブル, または 省略した場合, デフォルトテーブル |
+| document | Text | &srarr; | データが書き出されるテキストドキュメント |
 
 <!-- END REF-->
 

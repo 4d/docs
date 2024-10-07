@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Set group properties.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| réfGroupe | Integer | &#x1F852; | Numéro de référence unique du groupe activé ou -1 pour ajouter un groupe de Super_Utilisateur -2 pour ajouter un groupe d'Administrateur |
-| &#x1F858; | Unique ID number of added group (if any) |
-| nom | Text | &#x1F852; | Nouveau nom de groupe |
-| propriétaire | Integer | &#x1F852; | Numéro de référence unique de l'utilisateur ou le propriétaire du nouveau groupe |
-| membres | Integer array | &#x1F852; | Nouveaux membres du groupe |
-| Résultat | Integer | &#x1F850; | Numéro de référence unique du nouveau groupe |
+| réfGroupe | Integer | &srarr; | Numéro de référence unique du groupe activé ou -1 pour ajouter un groupe de Super_Utilisateur -2 pour ajouter un groupe d'Administrateur |
+| &harr; | Unique ID number of added group (if any) |
+| nom | Text | &srarr; | Nouveau nom de groupe |
+| propriétaire | Integer | &srarr; | Numéro de référence unique de l'utilisateur ou le propriétaire du nouveau groupe |
+| membres | Integer array | &srarr; | Nouveaux membres du groupe |
+| Résultat | Integer | &larr; | Numéro de référence unique du nouveau groupe |
 
 <!-- END REF-->
 

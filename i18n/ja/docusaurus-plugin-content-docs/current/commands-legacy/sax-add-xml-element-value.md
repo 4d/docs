@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX ADD XML ELEMENT VALUE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Time | &#x1F852; | 開いたドキュメントの参照 |
-| data | Text, Variable | &#x1F852; | ドキュメントに挿入するテキストまたは変数 |
-| * | 演算子 | &#x1F852; | 指定時: 特別文字をエンコード 省略時: エンコードしない |
+| document | Time | &srarr; | 開いたドキュメントの参照 |
+| data | Text, Variable | &srarr; | ドキュメントに挿入するテキストまたは変数 |
+| * | 演算子 | &srarr; | 指定時: 特別文字をエンコード 省略時: エンコードしない |
 
 <!-- END REF-->
 

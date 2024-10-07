@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Dynamic pop up menu.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Text | &#x1F852; | Referência de menu |
-| porpadrao | Text | &#x1F852; | Parâmetro de itens selecionado por padrão |
-| coordX | Integer | &#x1F852; | Coordenada X do canto esquerdo superior |
-| coordY | Integer | &#x1F852; | Coordenada Y do canto esquerdo superior |
-| Resultado | Text | &#x1F850; | Parâmetro do menu de item selecionado |
+| menu | Text | &srarr; | Referência de menu |
+| porpadrao | Text | &srarr; | Parâmetro de itens selecionado por padrão |
+| coordX | Integer | &srarr; | Coordenada X do canto esquerdo superior |
+| coordY | Integer | &srarr; | Coordenada Y do canto esquerdo superior |
+| Resultado | Text | &larr; | Parâmetro do menu de item selecionado |
 
 <!-- END REF-->
 

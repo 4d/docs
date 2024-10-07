@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET CURRENT PRINTER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| printerName | Text | &#x1F852; | Name of printer to be used |
+| printerName | Text | &srarr; | Name of printer to be used |
 
 <!-- END REF-->
 

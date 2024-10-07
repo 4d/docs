@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT DATA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fileName | Text | &#x1F852; | Full path name of the export file |
-| project | Text, Blob | &#x1F852; | Contents of the export project |
-| &#x1F858; | New contents of the export project (if the * parameter has been passed) |
-| * | Operator | &#x1F852; | Displays the export dialog box and updates the project |
+| fileName | Text | &srarr; | Full path name of the export file |
+| project | Text, Blob | &srarr; | Contents of the export project |
+| &harr; | New contents of the export project (if the * parameter has been passed) |
+| * | Operator | &srarr; | Displays the export dialog box and updates the project |
 
 <!-- END REF-->
 

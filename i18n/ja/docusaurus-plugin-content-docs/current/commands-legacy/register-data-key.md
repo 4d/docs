@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Register data key.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| curPassPhrase &#124; curDataKey | テキスト, オブジェクト | &#x1F852; | カレントのパスフレーズ(テキスト)またはカレントのデータ暗号化キー(オブジェクト) |
-| 戻り値 | Boolean | &#x1F850; | 暗号化キーが正常に4D キーチェーンに読み込まれた場合にはTrue、キーがすでに4D キーチェーンに入っていた場合にはFlaseを返す |
+| curPassPhrase &#124; curDataKey | テキスト, オブジェクト | &srarr; | カレントのパスフレーズ(テキスト)またはカレントのデータ暗号化キー(オブジェクト) |
+| 戻り値 | Boolean | &larr; | 暗号化キーが正常に4D キーチェーンに読み込まれた場合にはTrue、キーがすでに4D キーチェーンに入っていた場合にはFlaseを返す |
 
 <!-- END REF-->
 

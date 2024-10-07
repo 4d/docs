@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Field name.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campPtr &#124; tablaNum | Puntero, Entero largo | &#x1F852; | Puntero a un campo o número de tabla |
-| numCamp | Integer | &#x1F852; | Número de campo si se pasa un número de tabla como primer parámetro |
-| Resultado | Text | &#x1F850; | Nombre del campo |
+| campPtr &#124; tablaNum | Puntero, Entero largo | &srarr; | Puntero a un campo o número de tabla |
+| numCamp | Integer | &srarr; | Número de campo si se pasa un número de tabla como primer parámetro |
+| Resultado | Text | &larr; | Nombre del campo |
 
 <!-- END REF-->
 

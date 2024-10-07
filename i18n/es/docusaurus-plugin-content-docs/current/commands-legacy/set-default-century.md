@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DEFAULT CENTURY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| siglo | Integer | &#x1F852; | Siglo por defecto (menos uno) para la entrada de años con dos dígitos |
-| añoPivote | Integer | &#x1F852; | Año pivote para la entrada de años con dos dígitos |
+| siglo | Integer | &srarr; | Siglo por defecto (menos uno) para la entrada de años con dos dígitos |
+| añoPivote | Integer | &srarr; | Año pivote para la entrada de años con dos dígitos |
 
 <!-- END REF-->
 

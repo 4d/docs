@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SEND TEXT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| textoHTML | Text | &#x1F852; | Texto do campo HTML ou variável a ser enviado ao navegador Web |
-| semContexto | Text | &#x1F852; | True = Vai para o modo não contextual se False; se omitido = permanece no modo atual. |
+| textoHTML | Text | &srarr; | Texto do campo HTML ou variável a ser enviado ao navegador Web |
+| semContexto | Text | &srarr; | True = Vai para o modo não contextual se False; se omitido = permanece no modo atual. |
 
 <!-- END REF-->
 

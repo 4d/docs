@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.In header.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Boolean | &#x1F850; | Devuelve True si el ciclo de ejecución es in header |
+| Resultado | Boolean | &larr; | Devuelve True si el ciclo de ejecución es in header |
 
 <!-- END REF-->
 

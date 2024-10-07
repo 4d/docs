@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| sourceType | Integer | &#x1F852; | ソースタイプ: ユーザまたはシステム |
-| sourceNamesArr | Text array | &#x1F858; | データソース名の配列 |
-| driversArr | Text array | &#x1F858; | ソース用のドライバの配列 |
+| sourceType | Integer | &srarr; | ソースタイプ: ユーザまたはシステム |
+| sourceNamesArr | Text array | &harr; | データソース名の配列 |
+| driversArr | Text array | &harr; | ソース用のドライバの配列 |
 
 <!-- END REF-->
 

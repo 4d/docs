@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Process state.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| process | Integer | &#x1F852; | プロセス番号 |
-| 戻り値 | Integer | &#x1F850; | プロセスの状態 |
+| process | Integer | &srarr; | プロセス番号 |
+| 戻り値 | Integer | &larr; | プロセスの状態 |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET AUTO ROW HEIGHT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectは変数 |
-| object | any | &#x1F852; | オブジェクト名 (* 指定時), または 変数 (* 省略時) |
-| selector | Integer | &#x1F852; | 設定する高さの値:lk row min height あるいは lk row max height |
-| value | Integer | &#x1F852; | 行の高さの最小値、あるいは最大値 |
-| unit | Integer | &#x1F852; | 高さの値の単位: 0=ピクセル単位、1=行単位 |
+| * | 演算子 | &srarr; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectは変数 |
+| object | any | &srarr; | オブジェクト名 (* 指定時), または 変数 (* 省略時) |
+| selector | Integer | &srarr; | 設定する高さの値:lk row min height あるいは lk row max height |
+| value | Integer | &srarr; | 行の高さの最小値、あるいは最大値 |
+| unit | Integer | &srarr; | 高さの値の単位: 0=ピクセル単位、1=行単位 |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Mod.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numero 1 | Inteiro longo | &#x1F852; | Número a ser dividido (dividendo) |
-| numero 2 | Inteiro longo | &#x1F852; | Número pelo qual se divide (divisor) |
-| Resultado | Real | &#x1F850; | Devolve o resto da divisão |
+| numero 1 | Inteiro longo | &srarr; | Número a ser dividido (dividendo) |
+| numero 2 | Inteiro longo | &srarr; | Número pelo qual se divide (divisor) |
+| Resultado | Real | &larr; | Devolve o resto da divisão |
 
 <!-- END REF-->
 

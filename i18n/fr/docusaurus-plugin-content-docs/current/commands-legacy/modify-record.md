@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.MODIFY RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table dans laquelle modifier des données ou Table par défaut si ce paramètre est omis |
-| * | &#x1F852; | Cacher les barres de défilement |
+| laTable | Table | &srarr; | Table dans laquelle modifier des données ou Table par défaut si ce paramètre est omis |
+| * | &srarr; | Cacher les barres de défilement |
 
 <!-- END REF-->
 

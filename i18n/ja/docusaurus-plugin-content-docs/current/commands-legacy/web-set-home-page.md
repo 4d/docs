@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SET HOME PAGE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| homePage | Text | &#x1F852; | ページの名前またはページへのHTMLアクセスパス または、""でカスタムホームページを送らない |
+| homePage | Text | &srarr; | ページの名前またはページへのHTMLアクセスパス または、""でカスタムホームページを送らない |
 
 <!-- END REF-->
 

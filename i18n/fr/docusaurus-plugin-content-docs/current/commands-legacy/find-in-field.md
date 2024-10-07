@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Find in field.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| champCible | Field | &#x1F852; | Champ sur lequel effectuer la recherche |
-| valeur | Field, Variable | &#x1F852; | Valeur à rechercher |
-| &#x1F858; | Valeur trouvée |
-| Résultat | Integer | &#x1F850; | Numéro de l’enregistrement trouvé ou -1 si pas d’enregistrement trouvé |
+| champCible | Field | &srarr; | Champ sur lequel effectuer la recherche |
+| valeur | Field, Variable | &srarr; | Valeur à rechercher |
+| &harr; | Valeur trouvée |
+| Résultat | Integer | &larr; | Numéro de l’enregistrement trouvé ou -1 si pas d’enregistrement trouvé |
 
 <!-- END REF-->
 

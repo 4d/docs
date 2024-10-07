@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.New signal.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| description | Text | &#x1F852; | シグナルの詳細 |
-| 戻り値 | Object | &#x1F850; | シグナルを格納しているネイティブなオブジェクト |
+| description | Text | &srarr; | シグナルの詳細 |
+| 戻り値 | Object | &larr; | シグナルを格納しているネイティブなオブジェクト |
 
 <!-- END REF-->
 

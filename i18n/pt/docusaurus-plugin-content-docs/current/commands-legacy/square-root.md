@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Square root.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numero | Real | &#x1F852; | Número cuja raiz quadrada é calculada |
-| Resultado | Real | &#x1F850; | Raiz quadrada do número |
+| numero | Real | &srarr; | Número cuja raiz quadrada é calculada |
+| Resultado | Real | &larr; | Raiz quadrada do número |
 
 <!-- END REF-->
 

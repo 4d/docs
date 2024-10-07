@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET INFO COLUMN.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#x1F852; | Referencia del área |
-| numColumna | Integer | &#x1F852; | Número de columna |
-| titulo | Text | &#x1F858; | Título de la columna |
-| objeto | Text | &#x1F858; | Objeto asignado a la columna |
-| oculta | Integer | &#x1F858; | 0 = visible, 1 = oculto |
-| tamaño | Integer | &#x1F858; | Largo de la columna |
-| valoresRepetidos | Integer | &#x1F858; | 0 = no repetido, 1 = repetido |
-| formato | Text | &#x1F858; | Formato de visualización de los datos |
-| varResultado | Text | &#x1F858; | Nombre de la variable de fórmula |
+| area | Integer | &srarr; | Referencia del área |
+| numColumna | Integer | &srarr; | Número de columna |
+| titulo | Text | &harr; | Título de la columna |
+| objeto | Text | &harr; | Objeto asignado a la columna |
+| oculta | Integer | &harr; | 0 = visible, 1 = oculto |
+| tamaño | Integer | &harr; | Largo de la columna |
+| valoresRepetidos | Integer | &harr; | 0 = no repetido, 1 = repetido |
+| formato | Text | &harr; | Formato de visualización de los datos |
+| varResultado | Text | &harr; | Nombre de la variable de fórmula |
 
 <!-- END REF-->
 

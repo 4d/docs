@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Euro converter.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| value | Real | &#x1F852; | Value to convert |
-| fromCurrency | Text | &#x1F852; | Code of the currency in which the value is expressed |
-| toCurrency | Text | &#x1F852; | Code of the currency into which the value must be converted |
-| Function result | Real | &#x1F850; | Converted value |
+| value | Real | &srarr; | Value to convert |
+| fromCurrency | Text | &srarr; | Code of the currency in which the value is expressed |
+| toCurrency | Text | &srarr; | Code of the currency into which the value must be converted |
+| Function result | Real | &larr; | Converted value |
 
 <!-- END REF-->
 

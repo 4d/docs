@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Selected record number.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table de laquelle retourner le numéro de l'enregistrement courant dans la sélection |
-| Résultat | Integer | &#x1F850; | Numéro dans la sélection |
+| laTable | Table | &srarr; | Table de laquelle retourner le numéro de l'enregistrement courant dans la sélection |
+| Résultat | Integer | &larr; | Numéro dans la sélection |
 
 <!-- END REF-->
 

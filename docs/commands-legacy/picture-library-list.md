@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PICTURE LIBRARY LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picRefs | Integer array | &#x1F858; | Reference numbers of the Picture Library graphics |
-| picNames | Text array | &#x1F858; | Names of the Picture Library graphics |
+| picRefs | Integer array | &harr; | Reference numbers of the Picture Library graphics |
+| picNames | Text array | &harr; | Names of the Picture Library graphics |
 
 <!-- END REF-->
 

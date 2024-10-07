@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get subform container value.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Mixed | &#x1F850; | Current value of the subform container data source |
+| Function result | Mixed | &larr; | Current value of the subform container data source |
 
 <!-- END REF-->
 

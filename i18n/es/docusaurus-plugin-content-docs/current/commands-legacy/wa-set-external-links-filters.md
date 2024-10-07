@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| arrFiltros | Text array | &#x1F852; | Array de filtros |
-| arrAutorizRechazar | Boolean array | &#x1F852; | Array autorizar- rechazar |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &srarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| arrFiltros | Text array | &srarr; | Array de filtros |
+| arrAutorizRechazar | Boolean array | &srarr; | Array autorizar- rechazar |
 
 <!-- END REF-->
 

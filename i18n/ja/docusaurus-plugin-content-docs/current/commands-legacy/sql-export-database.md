@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL EXPORT DATABASE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| folderPath | Text | &#x1F852; | 書き出しフォルダーのパス名、または"" でフォルダー選択ダイアログボックスを表示 |
-| numFiles | Integer | &#x1F852; | フォルダーごとの最大ファイル数 |
-| fileLimitSize | Integer | &#x1F852; | 書き出しファイルのサイズ制限値 (KB) |
-| fieldLimitSize | Integer | &#x1F852; | この引数のサイズ以下のテキスト、Blob、ピクチャーフィールドの内容はメインのファイルに統合する (バイト単位) |
+| folderPath | Text | &srarr; | 書き出しフォルダーのパス名、または"" でフォルダー選択ダイアログボックスを表示 |
+| numFiles | Integer | &srarr; | フォルダーごとの最大ファイル数 |
+| fileLimitSize | Integer | &srarr; | 書き出しファイルのサイズ制限値 (KB) |
+| fieldLimitSize | Integer | &srarr; | この引数のサイズ以下のテキスト、Blob、ピクチャーフィールドの内容はメインのファイルに統合する (バイト単位) |
 
 <!-- END REF-->
 

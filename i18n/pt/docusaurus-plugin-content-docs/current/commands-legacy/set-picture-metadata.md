@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PICTURE METADATA.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| imagem | Picture | &#x1F852; | Imagem cujos metadados você deseja estabelecer |
-| nomeMeta | Text | &#x1F852; | Nome ou caminho do bloco a ser estabelecido |
-| conteudoMeta | Variable | &#x1F852; | Conteúdo do metadado |
+| imagem | Picture | &srarr; | Imagem cujos metadados você deseja estabelecer |
+| nomeMeta | Text | &srarr; | Nome ou caminho do bloco a ser estabelecido |
+| conteudoMeta | Variable | &srarr; | Conteúdo do metadado |
 
 <!-- END REF-->
 

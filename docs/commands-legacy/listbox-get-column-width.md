@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get column width.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| minWidth | Integer | &#x1F858; | Minimum column width (in pixels) |
-| maxWidth | Integer | &#x1F858; | Maximum column width (in pixels) |
-| Function result | Longint | &#x1F850; | Column width (in pixels) |
+| * | Operator | &srarr; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &srarr; | Object name (if * is specified) or Variable (if * is omitted) |
+| minWidth | Integer | &harr; | Minimum column width (in pixels) |
+| maxWidth | Integer | &harr; | Maximum column width (in pixels) |
+| Function result | Longint | &larr; | Column width (in pixels) |
 
 <!-- END REF-->
 

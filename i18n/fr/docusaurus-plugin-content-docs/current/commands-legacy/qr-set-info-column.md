@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET INFO COLUMN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#x1F852; | Référence de la zone |
-| numColonne | Integer | &#x1F852; | Numéro de colonne |
-| titre | Text | &#x1F852; | Titre de la colonne |
-| objet | Field, Variable | &#x1F852; | Objet affecté à la colonne |
-| cachée | Integer | &#x1F852; | 0 = visible, 1 = invisible |
-| taille | Integer | &#x1F852; | Largeur de la colonne |
-| valeursRépétées | Integer | &#x1F852; | 0 = Non répétées, 1 = Répétées |
-| formatAffich | Text | &#x1F852; | Format d'affichage |
+| zone | Integer | &srarr; | Référence de la zone |
+| numColonne | Integer | &srarr; | Numéro de colonne |
+| titre | Text | &srarr; | Titre de la colonne |
+| objet | Field, Variable | &srarr; | Objet affecté à la colonne |
+| cachée | Integer | &srarr; | 0 = visible, 1 = invisible |
+| taille | Integer | &srarr; | Largeur de la colonne |
+| valeursRépétées | Integer | &srarr; | 0 = Non répétées, 1 = Répétées |
+| formatAffich | Text | &srarr; | Format d'affichage |
 
 <!-- END REF-->
 

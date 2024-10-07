@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Dec.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Numero | Real | &#x1F852; | Número cuya parte decimal se devuelve |
-| Resultado | Real | &#x1F850; | Parte decimal de número |
+| Numero | Real | &srarr; | Número cuya parte decimal se devuelve |
+| Resultado | Real | &larr; | Parte decimal de número |
 
 <!-- END REF-->
 

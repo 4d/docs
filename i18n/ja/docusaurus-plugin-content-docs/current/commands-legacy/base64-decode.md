@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.BASE64 DECODE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| encodedText | Text, Blob | &#x1F852; | デコードする、エンコード済みの値 |
-| &#x1F858; | デコードされた値(decoded 引数省略時) |
-| decoded | Text, Blob | &#x1F858; | デコードされた値 |
-| * | 演算子 | &#x1F852; | デコードにBase64URL フォーマットを指定 |
+| encodedText | Text, Blob | &srarr; | デコードする、エンコード済みの値 |
+| &harr; | デコードされた値(decoded 引数省略時) |
+| decoded | Text, Blob | &harr; | デコードされた値 |
+| * | 演算子 | &srarr; | デコードにBase64URL フォーマットを指定 |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DATABASE PARAMETER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table for which to set the parameter or, Default table if this parameter is omitted |
-| selector | Integer | &#x1F852; | Code of the database parameter to modify |
-| value | Real, Text | &#x1F852; | Value of the parameter |
+| aTable | Table | &srarr; | Table for which to set the parameter or, Default table if this parameter is omitted |
+| selector | Integer | &srarr; | Code of the database parameter to modify |
+| value | Real, Text | &srarr; | Value of the parameter |
 
 <!-- END REF-->
 

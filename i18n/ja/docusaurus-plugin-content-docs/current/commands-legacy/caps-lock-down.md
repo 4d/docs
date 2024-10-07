@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Caps lock down.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Boolean | &#x1F850; | Caps Lockキーの状態 |
+| 戻り値 | Boolean | &larr; | Caps Lockキーの状態 |
 
 <!-- END REF-->
 

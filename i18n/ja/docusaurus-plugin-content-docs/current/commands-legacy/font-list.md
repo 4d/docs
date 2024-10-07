@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FONT LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fonts | Text array | &#x1F858; | フォント名の配列 |
-| listType &#124; * | 倍長整数, 演算子 | &#x1F852; | 取得したいフォント型のリスト、フォント名を取得するために*を指定(OS Xのみ) |
+| fonts | Text array | &harr; | フォント名の配列 |
+| listType &#124; * | 倍長整数, 演算子 | &srarr; | 取得したいフォント型のリスト、フォント名を取得するために*を指定(OS Xのみ) |
 
 <!-- END REF-->
 

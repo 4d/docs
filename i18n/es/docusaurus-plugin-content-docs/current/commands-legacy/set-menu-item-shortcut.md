@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#x1F852; | Referencia de menú o número de menú |
-| lineamenu | Integer | &#x1F852; | Número de línea de menú o -1 para la última línea añadida al menú |
-| tecla | Text, Integer | &#x1F852; | Código del carácter de atajo de teclado o letra del atajo de teclado |
-| modificadores | Integer | &#x1F852; | Modificador(es) a asociar al atajo (se ignora si se pasa el código de tecla) |
-| proceso | Integer | &#x1F852; | Número de referencia del proceso |
+| menu | Integer, Text | &srarr; | Referencia de menú o número de menú |
+| lineamenu | Integer | &srarr; | Número de línea de menú o -1 para la última línea añadida al menú |
+| tecla | Text, Integer | &srarr; | Código del carácter de atajo de teclado o letra del atajo de teclado |
+| modificadores | Integer | &srarr; | Modificador(es) a asociar al atajo (se ignora si se pasa el código de tecla) |
+| proceso | Integer | &srarr; | Número de referencia del proceso |
 
 <!-- END REF-->
 

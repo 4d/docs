@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Generate UUID.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Text | &#x1F850; | 新しい UUIDテキスト (非整形32 文字) |
+| 戻り値 | Text | &larr; | 新しい UUIDテキスト (非整形32 文字) |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Validate.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| vJson | Object | &#x1F852; | 評価するJSONオブジェクト |
-| vSchema | Object | &#x1F852; | JSONオブジェクトを評価するのに使用するJSONスキーマ |
-| 戻り値 | Object | &#x1F850; | 評価ステータスあるいはエラー(あれば) |
+| vJson | Object | &srarr; | 評価するJSONオブジェクト |
+| vSchema | Object | &srarr; | JSONオブジェクトを評価するのに使用するJSONスキーマ |
+| 戻り値 | Object | &larr; | 評価ステータスあるいはエラー(あれば) |
 
 <!-- END REF-->
 

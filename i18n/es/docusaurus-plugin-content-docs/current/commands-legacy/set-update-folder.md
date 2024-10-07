@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET UPDATE FOLDER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaCarpeta | Text | &#x1F852; | Ruta de acceso de la carpeta (paquete bajo OS X) que contiene la aplicación actualizada |
-| erroresDiscretos | Boolean | &#x1F852; | False (por defecto) = mostrar mensajes de error, <br/>True = no reportarlos |
+| rutaCarpeta | Text | &srarr; | Ruta de acceso de la carpeta (paquete bajo OS X) que contiene la aplicación actualizada |
+| erroresDiscretos | Boolean | &srarr; | False (por defecto) = mostrar mensajes de error, <br/>True = no reportarlos |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Export structure file.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaPasta | Text | &#x1F852; | Rota da pasta destino para arquivos projeto |
-| opções | Object | &#x1F852; | Opções de exportação |
-| Resultado | Object | &#x1F850; | Estado de validação e mensagens (se houver) |
+| rotaPasta | Text | &srarr; | Rota da pasta destino para arquivos projeto |
+| opções | Object | &srarr; | Opções de exportação |
+| Resultado | Object | &larr; | Estado de validação e mensagens (se houver) |
 
 <!-- END REF-->
 

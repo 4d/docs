@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| glissable | Boolean | &#x1F858; | Glissable = Vrai, sinon Faux |
-| glissableAuto | Boolean | &#x1F858; | Glisser automatique = Vrai, sinon Faux |
-| déposable | Boolean | &#x1F858; | Déposable = Vrai, sinon Faux |
-| déposableAuto | Boolean | &#x1F858; | Déposer automatique = Vrai, sinon Faux |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| glissable | Boolean | &harr; | Glissable = Vrai, sinon Faux |
+| glissableAuto | Boolean | &harr; | Glisser automatique = Vrai, sinon Faux |
+| déposable | Boolean | &harr; | Déposable = Vrai, sinon Faux |
+| déposableAuto | Boolean | &harr; | Déposer automatique = Vrai, sinon Faux |
 
 <!-- END REF-->
 

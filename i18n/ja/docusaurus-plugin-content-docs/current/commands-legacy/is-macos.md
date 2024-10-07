@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is macOS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Boolean | &#x1F850; | OS = macOS である場合にはTrue、そうでない場合にはFalse |
+| 戻り値 | Boolean | &larr; | OS = macOS である場合にはTrue、そうでない場合にはFalse |
 
 <!-- END REF-->
 

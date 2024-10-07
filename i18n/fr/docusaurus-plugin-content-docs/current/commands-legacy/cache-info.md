@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Cache info.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| dbFilter | Object | &#x1F852; | définit la liste des attributs à retourner (filtrés par DB) |
-| Résultat | Object | &#x1F850; | Informations à propos du cache |
+| dbFilter | Object | &srarr; | définit la liste des attributs à retourner (filtrés par DB) |
+| Résultat | Object | &larr; | Informations à propos du cache |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get last child XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#x1F852; | XML element reference |
-| childElemName | Text | &#x1F858; | Name of child element |
-| childElemValue | Text | &#x1F858; | Value of child element |
-| Function result | String | &#x1F850; | XML element reference |
+| elementRef | Text | &srarr; | XML element reference |
+| childElemName | Text | &harr; | Name of child element |
+| childElemValue | Text | &harr; | Value of child element |
+| Function result | String | &larr; | XML element reference |
 
 <!-- END REF-->
 

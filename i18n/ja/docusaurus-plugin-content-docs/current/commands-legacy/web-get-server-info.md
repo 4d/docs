@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Get server info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| withCache | Boolean | &#x1F852; | Webキャッシュ詳細を返すためにはTrue、それ以外の場合(デフォルト)ではキャッシュ詳細は返されない |
-| 戻り値 | Object | &#x1F850; | 実行中のWebサーバーとSOAPサーバーの情報 |
+| withCache | Boolean | &srarr; | Webキャッシュ詳細を返すためにはTrue、それ以外の場合(デフォルト)ではキャッシュ詳細は返されない |
+| 戻り値 | Object | &larr; | 実行中のWebサーバーとSOAPサーバーの情報 |
 
 <!-- END REF-->
 

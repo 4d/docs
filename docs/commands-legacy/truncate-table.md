@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.TRUNCATE TABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table where all records will be deleted or Default table if this parameter is omitted |
+| aTable | Table | &srarr; | Table where all records will be deleted or Default table if this parameter is omitted |
 
 <!-- END REF-->
 

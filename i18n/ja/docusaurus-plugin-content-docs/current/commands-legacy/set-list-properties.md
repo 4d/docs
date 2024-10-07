@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.SET LIST PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | Integer | &#x1F852; | リスト参照番号 |
-| appearance | Integer | &#x1F852; | *** 廃止予定、常に0を指定してください *** |
-| icon | Integer | &#x1F852; | *** 廃止予定、常に0を指定してください *** |
-| lineHeight | Integer | &#x1F852; | 最小行高さ (ピクセル単位) |
-| doubleClick | Integer | &#x1F852; | ダブルクリックでサブリストを展開/折り畳み 0 = Yes, 1= No |
-| multiSelections | Integer | &#x1F852; | 複数行選択: 0 = No (デフォルト), 1 = Yes |
-| editable | Integer | &#x1F852; | 0 = ユーザによるリスト編集不可, 1 = ユーザによるリスト編集可 (デフォルト) |
+| list | Integer | &srarr; | リスト参照番号 |
+| appearance | Integer | &srarr; | *** 廃止予定、常に0を指定してください *** |
+| icon | Integer | &srarr; | *** 廃止予定、常に0を指定してください *** |
+| lineHeight | Integer | &srarr; | 最小行高さ (ピクセル単位) |
+| doubleClick | Integer | &srarr; | ダブルクリックでサブリストを展開/折り畳み 0 = Yes, 1= No |
+| multiSelections | Integer | &srarr; | 複数行選択: 0 = No (デフォルト), 1 = Yes |
+| editable | Integer | &srarr; | 0 = ユーザによるリスト編集不可, 1 = ユーザによるリスト編集可 (デフォルト) |
 
 <!-- END REF-->
 

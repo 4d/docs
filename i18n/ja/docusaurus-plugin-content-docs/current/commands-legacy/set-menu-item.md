@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SET MENU ITEM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#x1F852; | メニュー番号またはメニュー参照 |
-| menuItem | Integer | &#x1F852; | メニュー項目番号 または -1: 最後に追加された項目 |
-| itemText | Text | &#x1F852; | メニュー項目の新しいテキスト |
-| process | Integer | &#x1F852; | プロセス参照番号 |
-| * | 演算子 | &#x1F852; | 指定時: メタ文字を標準文字として扱う |
+| menu | Integer, Text | &srarr; | メニュー番号またはメニュー参照 |
+| menuItem | Integer | &srarr; | メニュー項目番号 または -1: 最後に追加された項目 |
+| itemText | Text | &srarr; | メニュー項目の新しいテキスト |
+| process | Integer | &srarr; | プロセス参照番号 |
+| * | 演算子 | &srarr; | 指定時: メタ文字を標準文字として扱う |
 
 <!-- END REF-->
 

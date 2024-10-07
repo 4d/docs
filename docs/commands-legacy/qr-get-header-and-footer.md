@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET HEADER AND FOOTER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#x1F852; | Reference of the area |
-| selector | Integer | &#x1F852; | 1 = Header, 2 = Footer |
-| leftTitle | Text | &#x1F858; | Text displayed on the left side |
-| centerTitle | Text | &#x1F858; | Text displayed in the middle |
-| rightTitle | Text | &#x1F858; | Text displayed on the right side |
-| height | Integer | &#x1F858; | Header or footer height |
-| picture | Picture | &#x1F858; | Picture to display |
-| pictAlignment | Integer | &#x1F858; | Alignment attribute for the picture |
+| area | Integer | &srarr; | Reference of the area |
+| selector | Integer | &srarr; | 1 = Header, 2 = Footer |
+| leftTitle | Text | &harr; | Text displayed on the left side |
+| centerTitle | Text | &harr; | Text displayed in the middle |
+| rightTitle | Text | &harr; | Text displayed on the right side |
+| height | Integer | &harr; | Header or footer height |
+| picture | Picture | &harr; | Picture to display |
+| pictAlignment | Integer | &harr; | Alignment attribute for the picture |
 
 <!-- END REF-->
 

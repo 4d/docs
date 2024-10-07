@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PRINT RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table de laquelle imprimer l'enregistrement courant ou Table par défaut si ce paramètre est omis |
-| * &#124; > | Opérateur | &#x1F852; | * pour supprimer les boîtes de dialogue d'impression ou > pour ne pas réinitialiser les paramètres d'impression |
+| laTable | Table | &srarr; | Table de laquelle imprimer l'enregistrement courant ou Table par défaut si ce paramètre est omis |
+| * &#124; > | Opérateur | &srarr; | * pour supprimer les boîtes de dialogue d'impression ou > pour ne pas réinitialiser les paramètres d'impression |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET SERIAL PORT MAPPING.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numArray | Integer array | &#x1F858; | Array de número de portas |
-| arrayNome | Text array | &#x1F858; | Array de nomes de portas |
+| numArray | Integer array | &harr; | Array de número de portas |
+| arrayNome | Text array | &harr; | Array de nomes de portas |
 
 <!-- END REF-->
 

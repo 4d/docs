@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Focus object.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Pointer | &#x1F850; | フォーカスを持つオブジェクトへのポインタ |
+| 戻り値 | Pointer | &larr; | フォーカスを持つオブジェクトへのポインタ |
 
 <!-- END REF-->
 

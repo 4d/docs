@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ds.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| localID | Text | &#x1F852; | Local ID of the remote datastore to return |
-| Résultat | DataStore | &#x1F850; | Nouvelle référence de datastore |
+| localID | Text | &srarr; | Local ID of the remote datastore to return |
+| Résultat | DataStore | &larr; | Nouvelle référence de datastore |
 
 <!-- END REF-->
 

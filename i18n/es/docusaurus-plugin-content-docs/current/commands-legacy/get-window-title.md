@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get window title.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | Integer | &#x1F852; | Número de referencia de la ventana o Ventana del primer plano del proceso actual si se omite |
-| Resultado | Text | &#x1F850; | Título de la ventana |
+| ventana | Integer | &srarr; | Número de referencia de la ventana o Ventana del primer plano del proceso actual si se omite |
+| Resultado | Text | &larr; | Título de la ventana |
 
 <!-- END REF-->
 

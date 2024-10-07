@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get text from pasteboard.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Text | &#x1F850; | Retorna o texto (se houver) presente na área de transferência |
+| Resultado | Text | &larr; | Retorna o texto (se houver) presente na área de transferência |
 
 <!-- END REF-->
 

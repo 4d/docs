@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Create entity selection.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| dsTable | Table | &#x1F852; | エンティティセレクションの元となるカレントセレクションが属する4Dデータベースのテーブル |
-| settings | Object | &#x1F852; | ビルドオプション: context |
-| 戻り値 | EntitySelection | &#x1F850; | 指定したテーブルに対応するデータクラスのエンティティセレクション |
+| dsTable | Table | &srarr; | エンティティセレクションの元となるカレントセレクションが属する4Dデータベースのテーブル |
+| settings | Object | &srarr; | ビルドオプション: context |
+| 戻り値 | EntitySelection | &larr; | 指定したテーブルに対応するデータクラスのエンティティセレクション |
 
 <!-- END REF-->
 

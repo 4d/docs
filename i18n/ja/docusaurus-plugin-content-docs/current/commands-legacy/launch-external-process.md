@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LAUNCH EXTERNAL PROCESS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fileName | Text | &#x1F852; | ファイルパスと起動するファイルの引数 |
-| inputStream | Text, Blob | &#x1F852; | 入力ストリーム(stdin) |
-| outputStream | Text, Blob | &#x1F858; | 出力ストリーム(stdout) |
-| errorStream | Text, Blob | &#x1F858; | エラーストリーム(stderr) |
-| pid | Integer | &#x1F858; | 外部プロセスの固有識別子 |
+| fileName | Text | &srarr; | ファイルパスと起動するファイルの引数 |
+| inputStream | Text, Blob | &srarr; | 入力ストリーム(stdin) |
+| outputStream | Text, Blob | &harr; | 出力ストリーム(stdout) |
+| errorStream | Text, Blob | &harr; | エラーストリーム(stderr) |
+| pid | Integer | &harr; | 外部プロセスの固有識別子 |
 
 <!-- END REF-->
 

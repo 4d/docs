@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FONT LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| polices | Text array | &#x1F858; | Tableau des noms des polices vectorielles disponibles |
-| typeListe &#124; * | Entier long, Opérateur | &#x1F852; | Type de liste de police à retourner ou * pour retourner des noms de police sous OS X |
+| polices | Text array | &harr; | Tableau des noms des polices vectorielles disponibles |
+| typeListe &#124; * | Entier long, Opérateur | &srarr; | Type de liste de police à retourner ou * pour retourner des noms de police sous OS X |
 
 <!-- END REF-->
 

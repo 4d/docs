@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL EXECUTE SCRIPT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| scriptPath | Text | &#x1F852; | 実行するSQLスクリプトが書かれたファイルの完全パス名 |
-| errorAction | Integer | &#x1F852; | スクリプト実行中にエラーが発生した場合のアクション |
-| attribName | Text | &#x1F852; | 使用する属性の名前 |
-| attribValue | Text | &#x1F852; | 属性の値 |
+| scriptPath | Text | &srarr; | 実行するSQLスクリプトが書かれたファイルの完全パス名 |
+| errorAction | Integer | &srarr; | スクリプト実行中にエラーが発生した場合のアクション |
+| attribName | Text | &srarr; | 使用する属性の名前 |
+| attribValue | Text | &srarr; | 属性の値 |
 
 <!-- END REF-->
 

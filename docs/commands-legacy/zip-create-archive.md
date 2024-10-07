@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ZIP Create archive.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fileOrFolder &#124; zipStructure | Object | &#x1F852; | File or Folder object to compress |
-| destinationFile | Object | &#x1F852; | Destination file for the archive |
-| options | Integer | &#x1F852; | If fileOrFolder used: ZIP Without enclosing folder |
-| Function result | Object | &#x1F850; | Status object |
+| fileOrFolder &#124; zipStructure | Object | &srarr; | File or Folder object to compress |
+| destinationFile | Object | &srarr; | Destination file for the archive |
+| options | Integer | &srarr; | If fileOrFolder used: ZIP Without enclosing folder |
+| Function result | Object | &larr; | Status object |
 
 <!-- END REF-->
 

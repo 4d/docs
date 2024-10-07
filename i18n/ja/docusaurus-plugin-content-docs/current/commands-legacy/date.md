@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Date.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| expression | Text, Date | &#x1F852; | 日付を表す文字列か、日付型の式 |
-| 戻り値 | Date | &#x1F850; | 日付 |
+| expression | Text, Date | &srarr; | 日付を表す文字列か、日付型の式 |
+| 戻り値 | Date | &larr; | 日付 |
 
 <!-- END REF-->
 

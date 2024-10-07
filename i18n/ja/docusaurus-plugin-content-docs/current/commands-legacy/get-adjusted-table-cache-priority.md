@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get adjusted table cache priority.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | スカラー優先度値を取得するテーブル |
-| 戻り値 | Integer | &#x1F850; | スカラーフィールドのカレントの優先度値 |
+| aTable | Table | &srarr; | スカラー優先度値を取得するテーブル |
+| 戻り値 | Integer | &larr; | スカラーフィールドのカレントの優先度値 |
 
 <!-- END REF-->
 

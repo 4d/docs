@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Null.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Null | &#x1F850; | Null値 |
+| 戻り値 | Null | &larr; | Null値 |
 
 <!-- END REF-->
 

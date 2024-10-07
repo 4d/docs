@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Dec.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &#x1F852; | Number whose decimal portion is returned |
-| Function result | Real | &#x1F850; | Decimal part of number |
+| number | Real | &srarr; | Number whose decimal portion is returned |
+| Function result | Real | &larr; | Decimal part of number |
 
 <!-- END REF-->
 

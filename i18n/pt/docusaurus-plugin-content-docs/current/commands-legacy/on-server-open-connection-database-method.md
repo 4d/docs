@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.On Server Open Connection database method.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| $1 | Inteiro longo | &#x1F858; | Número de usuário utilizado internamente por 4D Server para identificar os usuários |
-| $2 | Inteiro longo | &#x1F858; | Número de conexão utilizado internamente por 4D Server para identificar uma conexão |
-| $3 | Inteiro longo | &#x1F858; | Obsoleto: devolve sempre 0 (mas deve ser declarado) |
-| $0 | Inteiro longo | &#x1F850; | 0 se omitido = conexão aceita; outro valor = conexão rejeitada |
+| $1 | Inteiro longo | &harr; | Número de usuário utilizado internamente por 4D Server para identificar os usuários |
+| $2 | Inteiro longo | &harr; | Número de conexão utilizado internamente por 4D Server para identificar uma conexão |
+| $3 | Inteiro longo | &harr; | Obsoleto: devolve sempre 0 (mas deve ser declarado) |
+| $0 | Inteiro longo | &larr; | 0 se omitido = conexão aceita; outro valor = conexão rejeitada |
 
 <!-- END REF-->
 

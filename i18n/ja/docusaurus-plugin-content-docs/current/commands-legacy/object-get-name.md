@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get name.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| selector | Integer | &#x1F852; | オブジェクトカテゴリ |
-| 戻り値 | Text | &#x1F850; | オブジェクトの名前 |
+| selector | Integer | &srarr; | オブジェクトカテゴリ |
+| 戻り値 | Text | &larr; | オブジェクトの名前 |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SEND PACKET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| docRef | Time | &#x1F852; | Référence de document ou canal courant (port série ou document) |
-| paquet | Text, Blob | &#x1F852; | Chaîne ou BLOB à envoyer |
+| docRef | Time | &srarr; | Référence de document ou canal courant (port série ou document) |
+| paquet | Text, Blob | &srarr; | Chaîne ou BLOB à envoyer |
 
 <!-- END REF-->
 

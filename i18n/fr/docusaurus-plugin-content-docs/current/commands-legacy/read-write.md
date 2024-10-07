@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.READ WRITE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable &#124; * | Table, Opérateur | &#x1F852; | Table à définir en mode lecture/écriture ou * pour toutes les tables ou Table par défaut si ce paramètre est omis |
+| laTable &#124; * | Table, Opérateur | &srarr; | Table à définir en mode lecture/écriture ou * pour toutes les tables ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 

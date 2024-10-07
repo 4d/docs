@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET COORDINATES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified = object is the name of the object (string) If omitted = object is a variable |
-| object | any | &#x1F852; | Object name (if * is specified) or Field or variable (if * is omitted) |
-| left | Integer | &#x1F858; | Left coordinate of the object |
-| top | Integer | &#x1F858; | Top coordinate of the object |
-| right | Integer | &#x1F858; | Right coordinate of the object |
-| bottom | Integer | &#x1F858; | Bottom coordinate of the object |
+| * | Operator | &srarr; | If specified = object is the name of the object (string) If omitted = object is a variable |
+| object | any | &srarr; | Object name (if * is specified) or Field or variable (if * is omitted) |
+| left | Integer | &harr; | Left coordinate of the object |
+| top | Integer | &harr; | Top coordinate of the object |
+| right | Integer | &harr; | Right coordinate of the object |
+| bottom | Integer | &harr; | Bottom coordinate of the object |
 
 <!-- END REF-->
 

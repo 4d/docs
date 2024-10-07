@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.MOVE DOCUMENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminSource | Text | &#x1F852; | Chemin d'accès complet au document existant |
-| cheminDest | Text | &#x1F852; | Chemin d'accès de destination |
+| cheminSource | Text | &srarr; | Chemin d'accès complet au document existant |
+| cheminDest | Text | &srarr; | Chemin d'accès de destination |
 
 <!-- END REF-->
 

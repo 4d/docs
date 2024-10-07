@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PLUGIN ACCESS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| plugIn | Integer | &#x1F852; | プラグイン番号 |
-| group | Text | &#x1F852; | プラグインに関連するグル―プの名前 |
+| plugIn | Integer | &srarr; | プラグイン番号 |
+| group | Text | &srarr; | プラグインに関連するグル―プの名前 |
 
 <!-- END REF-->
 

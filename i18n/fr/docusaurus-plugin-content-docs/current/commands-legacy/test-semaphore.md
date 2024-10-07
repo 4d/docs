@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Test semaphore.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sémaphore | Text | &#x1F852; | Nom du sémaphore à tester |
-| Résultat | Boolean | &#x1F850; | Vrai = le sémaphore existe, Faux = le sémaphore n’existe pas |
+| sémaphore | Text | &srarr; | Nom du sémaphore à tester |
+| Résultat | Boolean | &larr; | Vrai = le sémaphore existe, Faux = le sémaphore n’existe pas |
 
 <!-- END REF-->
 

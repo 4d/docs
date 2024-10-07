@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Macintosh command down.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Boolean | &#x1F850; | Etat de la touche Commande Macintosh ou Etat de la touche Ctrl Windows |
+| Résultat | Boolean | &larr; | Etat de la touche Commande Macintosh ou Etat de la touche Ctrl Windows |
 
 <!-- END REF-->
 

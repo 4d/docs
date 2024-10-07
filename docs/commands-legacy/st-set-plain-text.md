@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.ST SET PLAIN TEXT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
-| object | any | &#x1F852; | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| newText | Text | &#x1F852; | Text to insert |
-| startSel | Integer | &#x1F852; | Start of selection |
-| endSel | Integer | &#x1F852; | End of selection |
+| * | Operator | &srarr; | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
+| object | any | &srarr; | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
+| newText | Text | &srarr; | Text to insert |
+| startSel | Integer | &srarr; | Start of selection |
+| endSel | Integer | &srarr; | End of selection |
 
 <!-- END REF-->
 

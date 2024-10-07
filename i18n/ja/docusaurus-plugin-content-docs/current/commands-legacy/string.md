@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.String.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| expression | Expression | &#x1F852; | 文字列式を返したい式 (実数、整数、倍長整数、日付、時間、文字列、 テキスト、ブール、未定義を指定可能) |
-| format | Integer, Text | &#x1F852; | 表示フォーマット |
-| addTime | Time | &#x1F852; | expressionが日付の時、文字列に追加する時間 |
-| 戻り値 | Text | &#x1F850; | 式の文字列式 |
+| expression | Expression | &srarr; | 文字列式を返したい式 (実数、整数、倍長整数、日付、時間、文字列、 テキスト、ブール、未定義を指定可能) |
+| format | Integer, Text | &srarr; | 表示フォーマット |
+| addTime | Time | &srarr; | expressionが日付の時、文字列に追加する時間 |
+| 戻り値 | Text | &larr; | 式の文字列式 |
 
 <!-- END REF-->
 

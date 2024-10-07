@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REDRAW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | any | &#x1F852; | Table de laquelle redessiner le sous-formulaire ou Champ duquel redessiner la zone ou Variable de laquelle redessiner la zone ou List box à mettre à jour |
+| objet | any | &srarr; | Table de laquelle redessiner le sous-formulaire ou Champ duquel redessiner la zone ou Variable de laquelle redessiner la zone ou List box à mettre à jour |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refImage &#124; nomImage | Entier long, Chaîne | &#x1F852; | Numéro de référence ou Nom d'une image de la bibliothèque d’images |
-| image | Picture | &#x1F858; | Image de la bibliothèque d'images |
+| refImage &#124; nomImage | Entier long, Chaîne | &srarr; | Numéro de référence ou Nom d'une image de la bibliothèque d’images |
+| image | Picture | &harr; | Image de la bibliothèque d'images |
 
 <!-- END REF-->
 

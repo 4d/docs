@@ -11,12 +11,12 @@ displayed_sidebar: docs
 <!--REF #_command_.MULTI SORT ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &#x1F852; | Array(s) to be sorted |
-| sort | * | &#x1F852; | ">" to sort by increasing order or  "<" to sort by decreasing order If omitted  no sort |
+| array | Array | &srarr; | Array(s) to be sorted |
+| sort | * | &srarr; | ">" to sort by increasing order or  "<" to sort by decreasing order If omitted  no sort |
 | MULTI SORT ARRAY ( ptrArrayName ; sortArrayName ) |
 | Parameter | Type | Description |
-| ptrArrayName | Pointer array | &#x1F852; | Array of array pointers |
-| sortArrayName | Integer array | &#x1F852; | Sort order array (1 = sort by increasing order, -1 = sort by decreasing order, 0 = synchronization with previous sorts) |
+| ptrArrayName | Pointer array | &srarr; | Array of array pointers |
+| sortArrayName | Integer array | &srarr; | Sort order array (1 = sort by increasing order, -1 = sort by decreasing order, 0 = synchronization with previous sorts) |
 
 <!-- END REF-->
 

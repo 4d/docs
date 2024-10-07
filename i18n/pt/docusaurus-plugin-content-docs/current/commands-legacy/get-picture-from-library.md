@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refImag &#124; nomImag | Inteiro longo, String | &#x1F852; | Número de referência ou Nome da imagem da biblioteca de imagens |
-| imagem | Picture | &#x1F858; | Imagem da biblioteca de imagens |
+| refImag &#124; nomImag | Inteiro longo, String | &srarr; | Número de referência ou Nome da imagem da biblioteca de imagens |
+| imagem | Picture | &harr; | Imagem da biblioteca de imagens |
 
 <!-- END REF-->
 

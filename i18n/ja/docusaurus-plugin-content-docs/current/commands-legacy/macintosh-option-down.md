@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Macintosh option down.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Boolean | &#x1F850; | Macintosh Optionキーの状態 (Windows上ではAltキー) |
+| 戻り値 | Boolean | &larr; | Macintosh Optionキーの状態 (Windows上ではAltキー) |
 
 <!-- END REF-->
 

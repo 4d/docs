@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Caps lock down.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#x1F850; | State of the Caps Lock key |
+| Function result | Boolean | &larr; | State of the Caps Lock key |
 
 <!-- END REF-->
 

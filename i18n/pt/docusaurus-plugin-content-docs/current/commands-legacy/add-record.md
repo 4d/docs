@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ADD RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#x1F852; | Tabela a utilizar para entrada de dados ou Tabela por padrão, se omitida |
-| * | &#x1F852; | Ocultar barras de deslocamento |
+| tabela | Table | &srarr; | Tabela a utilizar para entrada de dados ou Tabela por padrão, se omitida |
+| * | &srarr; | Ocultar barras de deslocamento |
 
 <!-- END REF-->
 

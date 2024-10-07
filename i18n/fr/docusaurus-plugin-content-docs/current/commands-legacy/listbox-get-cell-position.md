@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET CELL POSITION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| x | Real | &#x1F852; | Coordonnée horizontale de la souris |
-| y | Real | &#x1F852; | Coordonnée verticale de la souris |
-| colonne | Integer | &#x1F858; | Numéro de colonne |
-| ligne | Integer | &#x1F858; | Numéro de ligne |
-| varCol | Pointer | &#x1F858; | Pointeur sur la variable de colonne |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| x | Real | &srarr; | Coordonnée horizontale de la souris |
+| y | Real | &srarr; | Coordonnée verticale de la souris |
+| colonne | Integer | &harr; | Numéro de colonne |
+| ligne | Integer | &harr; | Numéro de ligne |
+| varCol | Pointer | &harr; | Pointeur sur la variable de colonne |
 
 <!-- END REF-->
 

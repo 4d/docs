@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Count screens.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Integer | &#x1F850; | Número de monitores |
+| Resultado | Integer | &larr; | Número de monitores |
 
 <!-- END REF-->
 

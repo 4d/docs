@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.INSERT IN LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
-| lista | Integer, Text | &#x1F852; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
-| antesElem &#124; * | Entero largo, Operador | &#x1F852; | Número de referencia del elemento o 0 para el último elemento añadido a la lista o * para el elemento de la lista actualmente seleccionado |
-| textoElem | Text | &#x1F852; | Texto para el nuevo elemento (max. 255 caracteres) |
-| refElem | Integer | &#x1F852; | Número de referencia único del nuevo elemento |
-| sublista | Integer | &#x1F852; | Sublista opcional para asociar al nuevo elemento |
-| desplegada | Boolean | &#x1F852; | Indica si la sublista será desplegada o contraída |
+| * | Operador | &srarr; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
+| lista | Integer, Text | &srarr; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
+| antesElem &#124; * | Entero largo, Operador | &srarr; | Número de referencia del elemento o 0 para el último elemento añadido a la lista o * para el elemento de la lista actualmente seleccionado |
+| textoElem | Text | &srarr; | Texto para el nuevo elemento (max. 255 caracteres) |
+| refElem | Integer | &srarr; | Número de referencia único del nuevo elemento |
+| sublista | Integer | &srarr; | Sublista opcional para asociar al nuevo elemento |
+| desplegada | Boolean | &srarr; | Indica si la sublista será desplegada o contraída |
 
 <!-- END REF-->
 

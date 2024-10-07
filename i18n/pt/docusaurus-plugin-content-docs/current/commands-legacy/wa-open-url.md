@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WA OPEN URL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| url | Text | &#x1F852; | URL a carregar na área Web |
+| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &srarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| url | Text | &srarr; | URL a carregar na área Web |
 
 <!-- END REF-->
 

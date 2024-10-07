@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Window process.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janela | Integer | &#x1F852; | Número de referência da janela |
-| Resultado | Integer | &#x1F850; | Número de referência do processo |
+| janela | Integer | &srarr; | Número de referência da janela |
+| Resultado | Integer | &larr; | Número de referência do processo |
 
 <!-- END REF-->
 

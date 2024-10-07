@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET REAL COMPARISON LEVEL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| epsilon | Real | &#x1F852; | 実数の同等性を比較するためのイプシロン値 |
+| epsilon | Real | &srarr; | 実数の同等性を比較するためのイプシロン値 |
 
 <!-- END REF-->
 

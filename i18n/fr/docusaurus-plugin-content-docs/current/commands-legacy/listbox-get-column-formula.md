@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get column formula.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable |
-| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| Résultat | Text | &#x1F850; | Formule associée à la colonne |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| Résultat | Text | &larr; | Formule associée à la colonne |
 
 <!-- END REF-->
 

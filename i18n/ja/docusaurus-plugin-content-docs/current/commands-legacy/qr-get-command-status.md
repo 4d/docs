@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get command status.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#x1F852; | エリア参照 |
-| command | Integer | &#x1F852; | コマンド番号 |
-| value | Integer, Text | &#x1F858; | 選択されたサブアイテムの値 |
-| 戻り値 | Integer | &#x1F850; | コマンドの状態 |
+| area | Integer | &srarr; | エリア参照 |
+| command | Integer | &srarr; | コマンド番号 |
+| value | Integer, Text | &harr; | 選択されたサブアイテムの値 |
+| 戻り値 | Integer | &larr; | コマンドの状態 |
 
 <!-- END REF-->
 

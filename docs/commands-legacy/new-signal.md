@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.New signal.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| description | Text | &#x1F852; | Description for the signal |
-| Function result | Object | &#x1F850; | Native object encapsulating the signal |
+| description | Text | &srarr; | Description for the signal |
+| Function result | Object | &larr; | Native object encapsulating the signal |
 
 <!-- END REF-->
 

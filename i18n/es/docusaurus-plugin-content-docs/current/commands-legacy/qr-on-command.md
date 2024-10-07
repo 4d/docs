@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR ON COMMAND.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#x1F852; | Referencia del área |
-| nomMetodo | Text | &#x1F852; | Nombre del método a llamar |
+| area | Integer | &srarr; | Referencia del área |
+| nomMetodo | Text | &srarr; | Nombre del método a llamar |
 
 <!-- END REF-->
 

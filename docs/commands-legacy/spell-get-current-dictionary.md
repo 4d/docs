@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SPELL Get current dictionary.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#x1F850; | ID of dictionary used for spell check |
+| Function result | Longint | &larr; | ID of dictionary used for spell check |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Command name.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| command | Integer | &#x1F852; | コマンド番号 |
-| info | Integer | &#x1F858; | コマンドのスレッドセーフについてのプロパティ |
-| theme | Text | &#x1F858; | コマンドのランゲージのテーマ |
-| 戻り値 | Text | &#x1F850; | ローカライズされたコマンド名 |
+| command | Integer | &srarr; | コマンド番号 |
+| info | Integer | &harr; | コマンドのスレッドセーフについてのプロパティ |
+| theme | Text | &harr; | コマンドのランゲージのテーマ |
+| 戻り値 | Text | &larr; | ローカライズされたコマンド名 |
 
 <!-- END REF-->
 

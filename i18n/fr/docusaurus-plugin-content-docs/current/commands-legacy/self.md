@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Self.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Pointer | &#x1F850; | Pointeur vers l'objet du formulaire dont la méthode est en cours d'exécution (le cas échéant) Sinon Nil (->[]) si hors contexte |
+| Résultat | Pointer | &larr; | Pointeur vers l'objet du formulaire dont la méthode est en cours d'exécution (le cas échéant) Sinon Nil (->[]) si hors contexte |
 
 <!-- END REF-->
 

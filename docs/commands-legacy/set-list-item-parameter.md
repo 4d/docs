@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SET LIST ITEM PARAMETER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &#x1F852; | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef &#124; * | Operator, Longint | &#x1F852; | Item reference number or 0 for the last item appended to the list or * for the current list item |
-| selector | Text | &#x1F852; | Parameter constant |
-| value | Text, Boolean, Real | &#x1F852; | Value of the parameter |
+| * | Operator | &srarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
+| list | Integer, Text | &srarr; | List reference number (if * omitted) or Name of list type object (if * passed) |
+| itemRef &#124; * | Operator, Longint | &srarr; | Item reference number or 0 for the last item appended to the list or * for the current list item |
+| selector | Text | &srarr; | Parameter constant |
+| value | Text, Boolean, Real | &srarr; | Value of the parameter |
 
 <!-- END REF-->
 

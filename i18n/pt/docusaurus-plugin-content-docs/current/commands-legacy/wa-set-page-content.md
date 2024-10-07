@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WA SET PAGE CONTENT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| conteúdo | Text | &#x1F852; | código de fonte HTML |
-| bancoURL | Text | &#x1F852; | URL para referências relativas (Mac OS) |
+| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &srarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| conteúdo | Text | &srarr; | código de fonte HTML |
+| bancoURL | Text | &srarr; | URL para referências relativas (Mac OS) |
 
 <!-- END REF-->
 

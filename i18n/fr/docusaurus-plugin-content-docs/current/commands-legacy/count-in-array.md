@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Count in array.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableau | Array | &#x1F852; | Tableau dans lequel effectuer le comptage |
-| valeur | Expression | &#x1F852; | Valeur à compter |
-| Résultat | Integer | &#x1F850; | Nombre d’occurrences trouvées |
+| tableau | Array | &srarr; | Tableau dans lequel effectuer le comptage |
+| valeur | Expression | &srarr; | Valeur à compter |
+| Résultat | Integer | &larr; | Nombre d’occurrences trouvées |
 
 <!-- END REF-->
 

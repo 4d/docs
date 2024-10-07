@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Stringify array.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Text array, Real array, Boolean array, Pointer array, Object array | &#x1F852; | Array whose contents must be serialized |
-| * | Operator | &#x1F852; | Pretty formatting |
-| Function result | Text | &#x1F850; | String containing the serialized JSON array |
+| array | Text array, Real array, Boolean array, Pointer array, Object array | &srarr; | Array whose contents must be serialized |
+| * | Operator | &srarr; | Pretty formatting |
+| Function result | Text | &larr; | String containing the serialized JSON array |
 
 <!-- END REF-->
 

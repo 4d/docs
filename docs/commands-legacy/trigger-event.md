@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Trigger event.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#x1F850; | 0 Outside any trigger execution cycle 1 Saving a new record 2 Saving an existing record 3 Deleting a record |
+| Function result | Longint | &larr; | 0 Outside any trigger execution cycle 1 Saving a new record 2 Saving an existing record 3 Deleting a record |
 
 <!-- END REF-->
 

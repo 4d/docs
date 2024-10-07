@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PICTURE TO PASTEBOARD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| imagen | Picture | &#x1F852; | Imagen a copiar en el portapapeles |
+| imagen | Picture | &srarr; | Imagen a copiar en el portapapeles |
 
 <!-- END REF-->
 

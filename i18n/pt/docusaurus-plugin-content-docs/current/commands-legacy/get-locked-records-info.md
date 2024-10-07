@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get locked records info.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Tabela da qual obter os registros bloqueados |
-| Resultado | Object | &#x1F850; | Descrição dos registros bloqueados (se houver) |
+| aTable | Table | &srarr; | Tabela da qual obter os registros bloqueados |
+| Resultado | Object | &larr; | Descrição dos registros bloqueados (se houver) |
 
 <!-- END REF-->
 

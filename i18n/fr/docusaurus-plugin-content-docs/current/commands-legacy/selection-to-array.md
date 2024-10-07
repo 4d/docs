@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SELECTION TO ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leChamp &#124; laTable | Champ, Table | &#x1F852; | Champ à récupérer dans le tableau ou Table dont les numéros d'enregistrements sont à récupérer dans le tableau |
-| tableau | Array | &#x1F858; | Tableau recevant les valeurs des champs ou les numéros d'enregistrements |
-| leField | Field | &#x1F852; | Champ à récupérer dans le tableau |
-| tableau | Array | &#x1F858; | Tableau recevant les valeurs du champ |
-| * | Opérateur | &#x1F852; | Attente d’exécution |
+| leChamp &#124; laTable | Champ, Table | &srarr; | Champ à récupérer dans le tableau ou Table dont les numéros d'enregistrements sont à récupérer dans le tableau |
+| tableau | Array | &harr; | Tableau recevant les valeurs des champs ou les numéros d'enregistrements |
+| leField | Field | &srarr; | Champ à récupérer dans le tableau |
+| tableau | Array | &harr; | Tableau recevant les valeurs du champ |
+| * | Opérateur | &srarr; | Attente d’exécution |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時listはオブジェクト名 (文字列)省略時listはリスト参照番号 |
-| list | Integer, Text | &#x1F852; | リストタイプのオブジェクト名 (* 指定時)またはリスト参照番号 (* 省略時) |
-| itemRef &#124; * | 倍長整数, 演算子 | &#x1F852; | 項目参照番号、または0 = リストに最後に追加された項目、または* = カレントリスト項目 |
-| arrSelection | Text array | &#x1F858; | パラメーター名配列 |
-| arrValues | Text array | &#x1F858; | パラメーター値配列 |
+| * | 演算子 | &srarr; | 指定時listはオブジェクト名 (文字列)省略時listはリスト参照番号 |
+| list | Integer, Text | &srarr; | リストタイプのオブジェクト名 (* 指定時)またはリスト参照番号 (* 省略時) |
+| itemRef &#124; * | 倍長整数, 演算子 | &srarr; | 項目参照番号、または0 = リストに最後に追加された項目、または* = カレントリスト項目 |
+| arrSelection | Text array | &harr; | パラメーター名配列 |
+| arrValues | Text array | &harr; | パラメーター値配列 |
 
 <!-- END REF-->
 

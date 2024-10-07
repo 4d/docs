@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.INTEGER TO BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| entier | Integer | &#x1F852; | Integer value to write into the BLOB |
-| blob | Blob | &#x1F852; | BLOB to receive the Integer value |
-| ordreOctet | Integer | &#x1F852; | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
-| offset &#124; * | Variable, Operator | &#x1F852; | Offset expressed in bytes within the BLOB or * to append the value |
-| &#x1F858; | New offset after writing if not * |
+| entier | Integer | &srarr; | Integer value to write into the BLOB |
+| blob | Blob | &srarr; | BLOB to receive the Integer value |
+| ordreOctet | Integer | &srarr; | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
+| offset &#124; * | Variable, Operator | &srarr; | Offset expressed in bytes within the BLOB or * to append the value |
+| &harr; | New offset after writing if not * |
 
 <!-- END REF-->
 

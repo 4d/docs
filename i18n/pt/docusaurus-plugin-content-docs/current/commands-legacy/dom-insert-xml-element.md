@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Insert XML element.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tarfetElementRef | Text | &#x1F852; | Elemento de referência do pai XML |
-| sourceElementRef | Text | &#x1F852; | XML element reference to insert |
-| childIndex | Integer | &#x1F852; | Index of child of target element above which the new element must be inserted |
-| Resultado | Text | &#x1F850; | Reference of new XML element |
+| tarfetElementRef | Text | &srarr; | Elemento de referência do pai XML |
+| sourceElementRef | Text | &srarr; | XML element reference to insert |
+| childIndex | Integer | &srarr; | Index of child of target element above which the new element must be inserted |
+| Resultado | Text | &larr; | Reference of new XML element |
 
 <!-- END REF-->
 

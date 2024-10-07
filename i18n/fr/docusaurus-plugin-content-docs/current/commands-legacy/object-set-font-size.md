@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET FONT SIZE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié = objet est un nom d'objet (chaîne) Si omis = objet est un champ ou une variable |
-| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou Champ ou variable (si * est omis) |
-| taille | Integer | &#x1F852; | Taille de police en points |
+| * | Opérateur | &srarr; | Si spécifié = objet est un nom d'objet (chaîne) Si omis = objet est un champ ou une variable |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou Champ ou variable (si * est omis) |
+| taille | Integer | &srarr; | Taille de police en points |
 
 <!-- END REF-->
 

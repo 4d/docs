@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Tickcount.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Integer | &#x1F850; | Nombre de ticks (60ème de seconde) écoulés depuis le démarrage de la machine |
+| Résultat | Integer | &larr; | Nombre de ticks (60ème de seconde) écoulés depuis le démarrage de la machine |
 
 <!-- END REF-->
 

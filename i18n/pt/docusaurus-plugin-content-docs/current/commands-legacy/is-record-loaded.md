@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is record loaded.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#x1F852; | Tabela do registro é examinada ou tabela padrão se o parâmetro for omitido |
-| Resultado | Boolean | &#x1F850; | True se o registro é carregado, de outra maneira é False |
+| tabela | Table | &srarr; | Tabela do registro é examinada ou tabela padrão se o parâmetro for omitido |
+| Resultado | Boolean | &larr; | True se o registro é carregado, de outra maneira é False |
 
 <!-- END REF-->
 

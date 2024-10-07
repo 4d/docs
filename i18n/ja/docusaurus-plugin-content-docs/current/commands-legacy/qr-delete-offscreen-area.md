@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QR DELETE OFFSCREEN AREA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#x1F852; | 削除するエリアの参照 |
+| area | Integer | &srarr; | 削除するエリアの参照 |
 
 <!-- END REF-->
 

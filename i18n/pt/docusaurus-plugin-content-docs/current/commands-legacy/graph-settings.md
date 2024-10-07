@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.GRAPH SETTINGS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| graf | Picture | &#x1F852; | Área da gráfica ou da variável imagem |
-| xmin | Integer, Date, Time | &#x1F852; | Valor mínimo do eixo das x para gráfico proporcional (linhas ou pontos somente) |
-| xmax | Integer, Date, Time | &#x1F852; | Valor máximo do eixo das x para gráfico proporcional (linhas ou pontos somente) |
-| ymin | Integer | &#x1F852; | Valor mínimo do eixo y |
-| ymax | Integer | &#x1F852; | Valor máximo do eixo y |
-| xprop | Boolean | &#x1F852; | TRUE para eixo x proporcional; FALSE para eixo x normal (linhas ou pontos somente) |
-| xgrid | Boolean | &#x1F852; | TRUE para grade eixo x; FALSE para não grade no eixo x (somente se xprop é TRUE) |
-| ygrid | Boolean | &#x1F852; | TRUE para a grade do eixo y; FALSE para as grades que não forem do eixo y |
-| titulo | Text | &#x1F852; | Título para a legenda do gráfico |
+| graf | Picture | &srarr; | Área da gráfica ou da variável imagem |
+| xmin | Integer, Date, Time | &srarr; | Valor mínimo do eixo das x para gráfico proporcional (linhas ou pontos somente) |
+| xmax | Integer, Date, Time | &srarr; | Valor máximo do eixo das x para gráfico proporcional (linhas ou pontos somente) |
+| ymin | Integer | &srarr; | Valor mínimo do eixo y |
+| ymax | Integer | &srarr; | Valor máximo do eixo y |
+| xprop | Boolean | &srarr; | TRUE para eixo x proporcional; FALSE para eixo x normal (linhas ou pontos somente) |
+| xgrid | Boolean | &srarr; | TRUE para grade eixo x; FALSE para não grade no eixo x (somente se xprop é TRUE) |
+| ygrid | Boolean | &srarr; | TRUE para a grade do eixo y; FALSE para as grades que não forem do eixo y |
+| titulo | Text | &srarr; | Título para a legenda do gráfico |
 
 <!-- END REF-->
 

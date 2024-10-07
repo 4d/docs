@@ -11,20 +11,20 @@ displayed_sidebar: docs
 <!--REF #_command_.Position.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| find | Text | &#x1F852; | String to find |
-| aText | Text | &#x1F852; | String in which to search |
-| start | Integer | &#x1F852; | Position in string where search will start |
-| lengthFound | Integer | &#x1F858; | Length of string found |
-| * | Operator | &#x1F852; | If passed: evaluation based on character codes |
-| Function result | Longint | &#x1F850; | Position of first occurrence |
+| find | Text | &srarr; | String to find |
+| aText | Text | &srarr; | String in which to search |
+| start | Integer | &srarr; | Position in string where search will start |
+| lengthFound | Integer | &harr; | Length of string found |
+| * | Operator | &srarr; | If passed: evaluation based on character codes |
+| Function result | Longint | &larr; | Position of first occurrence |
 | Position ( find ; aString ; start ; lengthFound ; options ) -> Function result |
 | Parameter | Type | Description |
-| find | Text | &#x1F852; | String to find |
-| aText | Text | &#x1F852; | String in which to search |
-| start | Integer | &#x1F852; | Position in string where search will start |
-| lengthFound | Integer | &#x1F852; | Length of string found |
-| options | Integer | &#x1F852; | Search condition(s) |
-| Function result | Longint | &#x1F850; | Position of first occurrence |
+| find | Text | &srarr; | String to find |
+| aText | Text | &srarr; | String in which to search |
+| start | Integer | &srarr; | Position in string where search will start |
+| lengthFound | Integer | &srarr; | Length of string found |
+| options | Integer | &srarr; | Search condition(s) |
+| Function result | Longint | &larr; | Position of first occurrence |
 
 <!-- END REF-->
 

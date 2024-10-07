@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PHP GET OPTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| opção | Integer | &#x1F852; | Opção a conseguir |
-| valor | Boolean | &#x1F858; | Valor atual da opção |
+| opção | Integer | &srarr; | Opção a conseguir |
+| valor | Boolean | &harr; | Valor atual da opção |
 
 <!-- END REF-->
 

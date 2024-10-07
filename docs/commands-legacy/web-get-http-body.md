@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB GET HTTP BODY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| body | Blob, Text | &#x1F858; | Body of the HTTP request |
+| body | Blob, Text | &harr; | Body of the HTTP request |
 
 <!-- END REF-->
 

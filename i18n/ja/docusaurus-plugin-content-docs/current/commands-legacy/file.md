@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.File.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| path &#124; 4Dfile | テキスト, 倍長整数 | &#x1F852; | ファイルパスまたは4Dファイル定数 |
-| pathType &#124; * | 倍長整数, 演算子 | &#x1F852; | path 指定時: fk posix path (デフォルト) または fk platform path<br/>4Dfile 指定時: ホストデータベースのファイルを返すには* を渡す |
-| 戻り値 | Object | &#x1F850; | 新規ファイルオブジェクト |
+| path &#124; 4Dfile | テキスト, 倍長整数 | &srarr; | ファイルパスまたは4Dファイル定数 |
+| pathType &#124; * | 倍長整数, 演算子 | &srarr; | path 指定時: fk posix path (デフォルト) または fk platform path<br/>4Dfile 指定時: ホストデータベースのファイルを返すには* を渡す |
+| 戻り値 | Object | &larr; | 新規ファイルオブジェクト |
 
 <!-- END REF-->
 

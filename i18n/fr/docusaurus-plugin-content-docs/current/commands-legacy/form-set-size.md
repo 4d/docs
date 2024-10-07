@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SET SIZE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Text | &#x1F852; | Nom d’objet indiquant les limites du formulaire |
-| horizontal | Integer | &#x1F852; | Si * passé : marge horizontale (pixels)Si * omis : largeur (pixels) |
-| vertical | Integer | &#x1F852; | Si * passé : marge verticale (pixels)Si * omis : hauteur (pixels) |
-| * | Opérateur | &#x1F852; | • Si passé, utiliser horizontal et vertical comme marges du formulaire• Si omis, utiliser horizontal et vertical comme largeur et hauteur du formulaireCe paramètre ne peut pas être passé si objet est passé |
+| objet | Text | &srarr; | Nom d’objet indiquant les limites du formulaire |
+| horizontal | Integer | &srarr; | Si * passé : marge horizontale (pixels)Si * omis : largeur (pixels) |
+| vertical | Integer | &srarr; | Si * passé : marge verticale (pixels)Si * omis : hauteur (pixels) |
+| * | Opérateur | &srarr; | • Si passé, utiliser horizontal et vertical comme marges du formulaire• Si omis, utiliser horizontal et vertical comme largeur et hauteur du formulaireCe paramètre ne peut pas être passé si objet est passé |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET RESTORE INFORMATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| selector | Integer | &#x1F852; | 取得する情報のタイプ |
-| info1 | Integer, Date | &#x1F858; | セレクタの値1 |
-| info2 | Text, Time | &#x1F858; | セレクタの値2 |
+| selector | Integer | &srarr; | 取得する情報のタイプ |
+| info1 | Integer, Date | &harr; | セレクタの値1 |
+| info2 | Text, Time | &harr; | セレクタの値2 |
 
 <!-- END REF-->
 

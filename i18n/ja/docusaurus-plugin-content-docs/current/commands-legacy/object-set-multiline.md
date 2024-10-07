@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET MULTILINE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
-| object | any | &#x1F852; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
-| multiline | Integer | &#x1F852; | 複数行プロパティの状態 |
+| * | 演算子 | &srarr; | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
+| object | any | &srarr; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
+| multiline | Integer | &srarr; | 複数行プロパティの状態 |
 
 <!-- END REF-->
 

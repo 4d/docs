@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ALERT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| message | Text | &#x1F852; | アラートダイアログボックスに表示するメッセージ |
-| OK button title | 文字 | &#x1F852; | OKボタンのタイトル |
+| message | Text | &srarr; | アラートダイアログボックスに表示するメッセージ |
+| OK button title | 文字 | &srarr; | OKボタンのタイトル |
 
 <!-- END REF-->
 

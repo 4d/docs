@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET HIGHLIGHT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時: objectはオブジェクト名 (文字列)、省略時: objectはフィールドまたは変数 |
-| object | Field, Variable, any | &#x1F852; | オブジェクト名 (*指定時)、またはフィールドや変数 (*省略時) |
-| startSel | Integer | &#x1F858; | 反転表示された先頭位置 |
-| endSel | Integer | &#x1F858; | 反転表示された最終位置 |
+| * | 演算子 | &srarr; | 指定時: objectはオブジェクト名 (文字列)、省略時: objectはフィールドまたは変数 |
+| object | Field, Variable, any | &srarr; | オブジェクト名 (*指定時)、またはフィールドや変数 (*省略時) |
+| startSel | Integer | &harr; | 反転表示された先頭位置 |
+| endSel | Integer | &harr; | 反転表示された最終位置 |
 
 <!-- END REF-->
 

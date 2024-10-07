@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET NAMES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table reference |
-| arrNames | Text array | &#x1F858; | Array of form names |
-| filter | Text | &#x1F852; | Name filter |
-| marker | Real | &#x1F852; | Marker for minimum version to return |
-| &#x1F858; | New value |
-| * | Operator | &#x1F852; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| aTable | Table | &srarr; | Table reference |
+| arrNames | Text array | &harr; | Array of form names |
+| filter | Text | &srarr; | Name filter |
+| marker | Real | &srarr; | Marker for minimum version to return |
+| &harr; | New value |
+| * | Operator | &srarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->
 

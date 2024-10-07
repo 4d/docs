@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET BACKUP INFORMATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sélecteur | Integer | &#x1F852; | Type d’information à récupérer |
-| info1 | Integer, Date | &#x1F858; | Valeur 1 du sélecteur |
-| info2 | Time, Text | &#x1F858; | Valeur 2 du sélecteur |
+| sélecteur | Integer | &srarr; | Type d’information à récupérer |
+| info1 | Integer, Date | &harr; | Valeur 1 du sélecteur |
+| info2 | Time, Text | &harr; | Valeur 2 du sélecteur |
 
 <!-- END REF-->
 

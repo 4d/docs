@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.VARIABLE TO BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| variável | Variable | &#x1F852; | Variável a ser armazenada no BLOB |
-| Blob | Blob | &#x1F852; | BLOB a receber a variável |
-| offset &#124; * | Variável, Operador | &#x1F852; | Offset da variável(expressado em bytes) no BLOB ou * para adicionar o valor |
-| &#x1F858; | Novo offset depois de escrita se * for omitido |
+| variável | Variable | &srarr; | Variável a ser armazenada no BLOB |
+| Blob | Blob | &srarr; | BLOB a receber a variável |
+| offset &#124; * | Variável, Operador | &srarr; | Offset da variável(expressado em bytes) no BLOB ou * para adicionar o valor |
+| &harr; | Novo offset depois de escrita se * for omitido |
 
 <!-- END REF-->
 

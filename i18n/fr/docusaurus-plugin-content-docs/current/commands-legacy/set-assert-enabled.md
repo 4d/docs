@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET ASSERT ENABLED.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| asserts | Boolean | &#x1F852; | Vrai = activer les assertions, <br/>Faux = désactiver les assertions |
-| * | Opérateur | &#x1F852; | Si omis = la commande s’applique à l’ensemble des process, <br/>Si passé = la commande s’applique au process courant uniquement |
+| asserts | Boolean | &srarr; | Vrai = activer les assertions, <br/>Faux = désactiver les assertions |
+| * | Opérateur | &srarr; | Si omis = la commande s’applique à l’ensemble des process, <br/>Si passé = la commande s’applique au process courant uniquement |
 
 <!-- END REF-->
 

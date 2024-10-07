@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Displayed line number.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Integer | &#x1F850; | 表示中の行番号 |
+| 戻り値 | Integer | &larr; | 表示中の行番号 |
 
 <!-- END REF-->
 

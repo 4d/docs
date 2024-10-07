@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Run offscreen area.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| paramètres | Object | &#x1F852; | Objet contenant les attributs de la zone web |
-| Résultat | any | &#x1F850; | Valeur retournée par la méthode callback (ou méthode de rétro-appel) |
+| paramètres | Object | &srarr; | Objet contenant les attributs de la zone web |
+| Résultat | any | &larr; | Valeur retournée par la méthode callback (ou méthode de rétro-appel) |
 
 <!-- END REF-->
 

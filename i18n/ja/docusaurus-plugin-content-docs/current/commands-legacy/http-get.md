@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP Get.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| url | Text | &#x1F852; | リクエスト送信先URL |
-| response | Text, Blob, Picture, Object | &#x1F858; | リクエストの結果 |
-| headerNames | Text array | &#x1F852; | リクエストのヘッダー名 |
-| &#x1F858; | 返されたヘッダー名 |
-| headerValues | Text array | &#x1F852; | リクエストのヘッダー値 |
-| &#x1F858; | 返されたヘッダー値 |
-| * | 演算子 | &#x1F852; | 指定時: 接続を保持する (keep-alive)省略時: 自動で接続を閉じる |
-| 戻り値 | Integer | &#x1F850; | HTTPステータスコード |
+| url | Text | &srarr; | リクエスト送信先URL |
+| response | Text, Blob, Picture, Object | &harr; | リクエストの結果 |
+| headerNames | Text array | &srarr; | リクエストのヘッダー名 |
+| &harr; | 返されたヘッダー名 |
+| headerValues | Text array | &srarr; | リクエストのヘッダー値 |
+| &harr; | 返されたヘッダー値 |
+| * | 演算子 | &srarr; | 指定時: 接続を保持する (keep-alive)省略時: 自動で接続を閉じる |
+| 戻り値 | Integer | &larr; | HTTPステータスコード |
 
 <!-- END REF-->
 

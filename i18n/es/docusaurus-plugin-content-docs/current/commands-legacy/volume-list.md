@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.VOLUME LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| volumenes | Text array | &#x1F858; | Nombres de los volúmenes montados actualmente |
+| volumenes | Text array | &harr; | Nombres de los volúmenes montados actualmente |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GOTO OBJECT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificado = objeto é um nome de objeto (string). Se omitido = objeto é um campo ou uma variável |
-| objeto | Field, Variable | &#x1F852; | Nome de objeto (se * for especificado) ou Campo ou Variável (se * for omitido) ao que se vai |
+| * | Operador | &srarr; | Se especificado = objeto é um nome de objeto (string). Se omitido = objeto é um campo ou uma variável |
+| objeto | Field, Variable | &srarr; | Nome de objeto (se * for especificado) ou Campo ou Variável (se * for omitido) ao que se vai |
 
 <!-- END REF-->
 

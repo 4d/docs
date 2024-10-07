@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SET SIZE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Text | &#x1F852; | フォームの境界を指定するオブジェクト名 |
-| horizontal | Integer | &#x1F852; | * が渡されていれば: 水平マージン (ピクセル) * が省略されていれば: 幅 (ピクセル) |
-| vertical | Integer | &#x1F852; | * が渡されていれば: 垂直マージン (ピクセル) * が省略されていれば: 高さ (ピクセル) |
-| * | 演算子 | &#x1F852; | 渡されれば: horizontalとvertical引数で 指定されたマージンを加える  (自動サイズまたはobjectが指定されればそれを基ととしたサイズ) 省略すれば: horizontalとverticalをフォームの幅と高さにする |
+| object | Text | &srarr; | フォームの境界を指定するオブジェクト名 |
+| horizontal | Integer | &srarr; | * が渡されていれば: 水平マージン (ピクセル) * が省略されていれば: 幅 (ピクセル) |
+| vertical | Integer | &srarr; | * が渡されていれば: 垂直マージン (ピクセル) * が省略されていれば: 高さ (ピクセル) |
+| * | 演算子 | &srarr; | 渡されれば: horizontalとvertical引数で 指定されたマージンを加える  (自動サイズまたはobjectが指定されればそれを基ととしたサイズ) 省略すれば: horizontalとverticalをフォームの幅と高さにする |
 
 <!-- END REF-->
 

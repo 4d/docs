@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Resolve pointers.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object | &#x1F852; | Object containing JSON pointers to resolve |
-| &#x1F858; | Object with JSON pointers resolved (only if result is an object) |
-| options | Object | &#x1F852; | Options for pointer resolution |
-| Function result | Object | &#x1F850; | Object containing the result of the processing |
+| object | Object | &srarr; | Object containing JSON pointers to resolve |
+| &harr; | Object with JSON pointers resolved (only if result is an object) |
+| options | Object | &srarr; | Options for pointer resolution |
+| Function result | Object | &larr; | Object containing the result of the processing |
 
 <!-- END REF-->
 

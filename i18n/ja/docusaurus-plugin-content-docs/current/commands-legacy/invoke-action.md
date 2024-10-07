@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.INVOKE ACTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| action | Text | &#x1F852; | 標準アクション名、あるいは(必要であれば)引数を含めたパターン |
-| target | Integer | &#x1F852; | アクションを実行する場所を定義: カレントフォーム(デフォルト)あるいはメインフォーム |
+| action | Text | &srarr; | 標準アクション名、あるいは(必要であれば)引数を含めたパターン |
+| target | Integer | &srarr; | アクションを実行する場所を定義: カレントフォーム(デフォルト)あるいはメインフォーム |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | Time | &#x1F852; | Referência do documento aberto |
-| etiqueta | Text | &#x1F852; | Nome do elemento a abrir |
-| atribNomesArray | Text array | &#x1F852; | Array de nomes de atributo |
-| attribValuesArray | Text array, Integer array, Date array, Real array, Picture array, Boolean array | &#x1F852; | Array of attribute values |
+| documento | Time | &srarr; | Referência do documento aberto |
+| etiqueta | Text | &srarr; | Nome do elemento a abrir |
+| atribNomesArray | Text array | &srarr; | Array de nomes de atributo |
+| attribValuesArray | Text array, Integer array, Date array, Real array, Picture array, Boolean array | &srarr; | Array of attribute values |
 
 <!-- END REF-->
 

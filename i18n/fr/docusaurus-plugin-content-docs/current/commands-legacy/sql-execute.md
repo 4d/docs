@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL EXECUTE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| instructionSQL | Text | &#x1F852; | Commande SQL à exécuter |
-| objetLié | Variable, Field | &#x1F858; | Réception du résultat (si nécessaire) |
+| instructionSQL | Text | &srarr; | Commande SQL à exécuter |
+| objetLié | Variable, Field | &harr; | Réception du résultat (si nécessaire) |
 
 <!-- END REF-->
 

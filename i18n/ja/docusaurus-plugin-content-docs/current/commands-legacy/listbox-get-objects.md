@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET OBJECTS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時、 Object はオブジェクト名(文字列)<br/>省略時、 Object は変数 |
-| object | any | &#x1F852; | オブジェクト名(* 指定時)、<br/>または変数(* 省略時) |
-| arrObjectNames | Text array | &#x1F858; | リストボックスを構成するサブオブジェクト名(ヘッダー、列、フッター) |
+| * | 演算子 | &srarr; | 指定時、 Object はオブジェクト名(文字列)<br/>省略時、 Object は変数 |
+| object | any | &srarr; | オブジェクト名(* 指定時)、<br/>または変数(* 省略時) |
+| arrObjectNames | Text array | &harr; | リストボックスを構成するサブオブジェクト名(ヘッダー、列、フッター) |
 
 <!-- END REF-->
 

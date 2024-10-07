@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is a variable.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| pointeur | Pointer | &#x1F852; | Pointeur à tester |
-| Résultat | Boolean | &#x1F850; | VRAI = Pointeur pointe vers une variable FAUX = Pointeur ne pointe pas vers une variable |
+| pointeur | Pointer | &srarr; | Pointeur à tester |
+| Résultat | Boolean | &larr; | VRAI = Pointeur pointe vers une variable FAUX = Pointeur ne pointe pas vers une variable |
 
 <!-- END REF-->
 

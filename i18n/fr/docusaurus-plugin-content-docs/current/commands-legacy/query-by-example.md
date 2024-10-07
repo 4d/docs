@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY BY EXAMPLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table de laquelle une sélection d'enregistrements doit être retournée ou Table par défaut si ce paramètre est omis |
-| * | Opérateur | &#x1F852; | Masquer les barres de défilement |
+| laTable | Table | &srarr; | Table de laquelle une sélection d'enregistrements doit être retournée ou Table par défaut si ce paramètre est omis |
+| * | Opérateur | &srarr; | Masquer les barres de défilement |
 
 <!-- END REF-->
 

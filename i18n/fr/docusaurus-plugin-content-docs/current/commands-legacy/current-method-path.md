@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current method path.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Text | &#x1F850; | Chemin interne complet de la méthode en cours d’exécution |
+| Résultat | Text | &larr; | Chemin interne complet de la méthode en cours d’exécution |
 
 <!-- END REF-->
 

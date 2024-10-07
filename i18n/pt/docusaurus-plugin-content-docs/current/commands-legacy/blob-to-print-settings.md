@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB to print settings.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| confImpr | Blob | &#x1F852; | BLOB que contém as configurações de Impressão |
-| params | Integer | &#x1F852; | 0 = restaura valores salvos para número de cópias e faixa de páginas 1 = reseta para os valores padrão |
-| Resultado | Integer | &#x1F850; | código de estatus 1= operação bem sucedida, 0 = não há impressora atual, -1=parâmetros incorretos, 2=impressora mudada |
+| confImpr | Blob | &srarr; | BLOB que contém as configurações de Impressão |
+| params | Integer | &srarr; | 0 = restaura valores salvos para número de cópias e faixa de páginas 1 = reseta para os valores padrão |
+| Resultado | Integer | &larr; | código de estatus 1= operação bem sucedida, 0 = não há impressora atual, -1=parâmetros incorretos, 2=impressora mudada |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PAUSE INDEXES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | インデックスを停止するテーブル |
+| aTable | Table | &srarr; | インデックスを停止するテーブル |
 
 <!-- END REF-->
 

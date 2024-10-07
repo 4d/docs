@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is user deleted.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| userNumber | Integer | &#x1F852; | ユーザーID番号 |
-| 戻り値 | Boolean | &#x1F850; | TRUE = ユーザーアカウントが削除されている、または存在しない場合；FALSE = ユーザーアカウントがアクティブな場合 |
+| userNumber | Integer | &srarr; | ユーザーID番号 |
+| 戻り値 | Boolean | &larr; | TRUE = ユーザーアカウントが削除されている、または存在しない場合；FALSE = ユーザーアカウントがアクティブな場合 |
 
 <!-- END REF-->
 

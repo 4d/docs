@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Entries.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Object | &#x1F852; | Objet retournant le contenu |
-| Résultat | Collection | &#x1F850; | Collection d'objets avec les propriétés key/value |
+| objet | Object | &srarr; | Objet retournant le contenu |
+| Résultat | Collection | &larr; | Collection d'objets avec les propriétés key/value |
 
 <!-- END REF-->
 

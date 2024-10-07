@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY BY SQL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | レコードセレクションを返すテーブル、または 省略された場合デフォルトテーブル |
-| sqlFormula | Text | &#x1F852; | SELECTクエリのWHERE節を表す 有効なSQL検索フォーミュラ |
+| aTable | Table | &srarr; | レコードセレクションを返すテーブル、または 省略された場合デフォルトテーブル |
+| sqlFormula | Text | &srarr; | SELECTクエリのWHERE節を表す 有効なSQL検索フォーミュラ |
 
 <!-- END REF-->
 

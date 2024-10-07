@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB size.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Blob | Blob | &#x1F852; | Campo ou variável BLOB |
-| Resultado | Integer | &#x1F850; | Tamanho em bytes do BLOB |
+| Blob | Blob | &srarr; | Campo ou variável BLOB |
+| Resultado | Integer | &larr; | Tamanho em bytes do BLOB |
 
 <!-- END REF-->
 

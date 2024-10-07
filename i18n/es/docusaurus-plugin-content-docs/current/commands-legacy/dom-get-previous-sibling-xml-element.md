@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get previous sibling XML element.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Text | &#x1F852; | Referencia del elemento XML |
-| nomElemHermano | Text | &#x1F858; | Nombre del elemento XML hermano |
-| valorElemHermano | Text | &#x1F858; | Valor del elemento XML hermano |
-| Resultado | Text | &#x1F850; | Referencia del elemento XML hermano |
+| elementRef | Text | &srarr; | Referencia del elemento XML |
+| nomElemHermano | Text | &harr; | Nombre del elemento XML hermano |
+| valorElemHermano | Text | &harr; | Valor del elemento XML hermano |
+| Resultado | Text | &larr; | Referencia del elemento XML hermano |
 
 <!-- END REF-->
 

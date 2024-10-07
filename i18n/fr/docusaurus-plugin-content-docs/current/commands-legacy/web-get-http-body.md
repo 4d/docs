@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB GET HTTP BODY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| corps | Blob, Text | &#x1F858; | Champ corps (Body) de la requête HTTP |
+| corps | Blob, Text | &harr; | Champ corps (Body) de la requête HTTP |
 
 <!-- END REF-->
 

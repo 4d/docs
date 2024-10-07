@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET RESIZING OPTIONS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
-| object | any | &#x1F852; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
-| horizontal | Integer | &#x1F858; | 横リサイズオプション |
-| vertical | Integer | &#x1F858; | 縦リサイズオプション |
+| * | 演算子 | &srarr; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
+| object | any | &srarr; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
+| horizontal | Integer | &harr; | 横リサイズオプション |
+| vertical | Integer | &harr; | 縦リサイズオプション |
 
 <!-- END REF-->
 

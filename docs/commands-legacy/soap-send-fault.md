@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SOAP SEND FAULT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| faultType | Integer | &#x1F852; | 1 = Client fault, 2 = Server fault |
-| description | Text | &#x1F852; | Description of error to be sent to SOAP client |
+| faultType | Integer | &srarr; | 1 = Client fault, 2 = Server fault |
+| description | Text | &srarr; | Description of error to be sent to SOAP client |
 
 <!-- END REF-->
 

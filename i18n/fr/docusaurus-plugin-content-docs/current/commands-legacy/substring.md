@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Substring.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Text | &#x1F852; | Chaîne de laquelle extraire une sous-chaîne |
-| àPartirDe | Integer | &#x1F852; | Position du premier caractère |
-| nbCars | Integer | &#x1F852; | Nombre de caractères à extraire |
-| Résultat | Text | &#x1F850; | Sous-chaîne de source |
+| source | Text | &srarr; | Chaîne de laquelle extraire une sous-chaîne |
+| àPartirDe | Integer | &srarr; | Position du premier caractère |
+| nbCars | Integer | &srarr; | Nombre de caractères à extraire |
+| Résultat | Text | &larr; | Sous-chaîne de source |
 
 <!-- END REF-->
 

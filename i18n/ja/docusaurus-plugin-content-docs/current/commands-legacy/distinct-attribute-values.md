@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| objectField | Field | &#x1F852; | 重複しない属性値の一覧を取得したいオブジェクトフィールド |
-| path | Text | &#x1F852; | 重複しない値を取得したい属性へのパス |
-| valuesArray | Text array, Integer array, Boolean array, Date array, Time array | &#x1F858; | 属性パス内の重複しない値 |
+| objectField | Field | &srarr; | 重複しない属性値の一覧を取得したいオブジェクトフィールド |
+| path | Text | &srarr; | 重複しない値を取得したい属性へのパス |
+| valuesArray | Text array, Integer array, Boolean array, Date array, Time array | &harr; | 属性パス内の重複しない値 |
 
 <!-- END REF-->
 

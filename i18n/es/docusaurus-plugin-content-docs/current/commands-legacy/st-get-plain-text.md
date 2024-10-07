@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ST Get plain text.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo. |
-| objeto | any | &#x1F852; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
-| refMode | Integer | &#x1F852; | Modo para el manejo de las referencias presentes en el texto |
-| Resultado | Text | &#x1F850; | Texto sin etiquetas |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo. |
+| objeto | any | &srarr; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
+| refMode | Integer | &srarr; | Modo para el manejo de las referencias presentes en el texto |
+| Resultado | Text | &larr; | Texto sin etiquetas |
 
 <!-- END REF-->
 

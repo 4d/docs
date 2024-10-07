@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QR DELETE OFFSCREEN AREA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#x1F852; | Referencia del área a borrar |
+| area | Integer | &srarr; | Referencia del área a borrar |
 
 <!-- END REF-->
 

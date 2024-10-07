@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.ST GET URL.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &#x1F852; | Nombre del objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
-| textoURL | Text | &#x1F858; | Texto visible de la URL |
-| direccionURL | Text | &#x1F858; | Dirección de la URL |
-| inicioSel | Integer | &#x1F852; | Inicio de la selección |
-| finSel | Integer | &#x1F852; | Fin de la selección |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &srarr; | Nombre del objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
+| textoURL | Text | &harr; | Texto visible de la URL |
+| direccionURL | Text | &harr; | Dirección de la URL |
+| inicioSel | Integer | &srarr; | Inicio de la selección |
+| finSel | Integer | &srarr; | Fin de la selección |
 
 <!-- END REF-->
 

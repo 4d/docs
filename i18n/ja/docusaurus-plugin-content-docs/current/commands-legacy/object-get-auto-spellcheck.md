@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get auto spellcheck.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数またはフィールド |
-| object | any | &#x1F852; | オブジェクト名 (* 指定時)変数またはフィールド (* 省略時) |
-| 戻り値 | Boolean | &#x1F850; | True = 自動スペルチェックFalse = 自動スペルチェックなし |
+| * | 演算子 | &srarr; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数またはフィールド |
+| object | any | &srarr; | オブジェクト名 (* 指定時)変数またはフィールド (* 省略時) |
+| 戻り値 | Boolean | &larr; | True = 自動スペルチェックFalse = 自動スペルチェックなし |
 
 <!-- END REF-->
 

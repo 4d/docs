@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET RESTORE INFORMATION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| seletor | Integer | &#x1F852; | Tipo de informação a ser obtida |
-| info1 | Integer, Date | &#x1F858; | Valor 1 do seletor |
-| info2 | Text, Time | &#x1F858; | Valor 2 do seletor |
+| seletor | Integer | &srarr; | Tipo de informação a ser obtida |
+| info1 | Integer, Date | &harr; | Valor 1 do seletor |
+| info2 | Text, Time | &harr; | Valor 2 do seletor |
 
 <!-- END REF-->
 

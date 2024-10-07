@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.READ WRITE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla &#124; * | Tabla, Operador | &#x1F852; | Tabla a definir en modo lectura/escritura o * para todas las tablas o Tabla por defecto si se omite |
+| tabla &#124; * | Tabla, Operador | &srarr; | Tabla a definir en modo lectura/escritura o * para todas las tablas o Tabla por defecto si se omite |
 
 <!-- END REF-->
 

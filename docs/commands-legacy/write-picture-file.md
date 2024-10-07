@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WRITE PICTURE FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fileName | Text | &#x1F852; | Name or full pathname of the file to write, or empty string |
-| picture | Picture | &#x1F852; | Picture field or variable to write |
-| codec | Text | &#x1F852; | Picture Codec ID |
+| fileName | Text | &srarr; | Name or full pathname of the file to write, or empty string |
+| picture | Picture | &srarr; | Picture field or variable to write |
+| codec | Text | &srarr; | Picture Codec ID |
 
 <!-- END REF-->
 

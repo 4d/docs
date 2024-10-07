@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is window maximized.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| window | Integer | &#x1F852; | ウィンドウ参照番号 |
-| 戻り値 | Boolean | &#x1F850; | ウィンドウが最大化されていればTrue、それ以外の場合にはFalse |
+| window | Integer | &srarr; | ウィンドウ参照番号 |
+| 戻り値 | Boolean | &larr; | ウィンドウが最大化されていればTrue、それ以外の場合にはFalse |
 
 <!-- END REF-->
 

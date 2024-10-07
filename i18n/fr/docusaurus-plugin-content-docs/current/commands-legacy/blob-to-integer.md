@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB to integer.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#x1F852; | BLOB duquel obtenir la valeur entière |
-| ordreOctet | Integer | &#x1F852; | 0 Ordre d'octets mode natif 1 Ordre d'octets Macintosh 2 Ordre d'octets PC |
-| offset | Variable | &#x1F852; | Offset (en octets) dans le BLOB |
-| &#x1F858; | Nouvel offset après la lecture |
-| Résultat | Integer | &#x1F850; | Valeur entière (2 octets) |
+| blob | Blob | &srarr; | BLOB duquel obtenir la valeur entière |
+| ordreOctet | Integer | &srarr; | 0 Ordre d'octets mode natif 1 Ordre d'octets Macintosh 2 Ordre d'octets PC |
+| offset | Variable | &srarr; | Offset (en octets) dans le BLOB |
+| &harr; | Nouvel offset après la lecture |
+| Résultat | Integer | &larr; | Valeur entière (2 octets) |
 
 <!-- END REF-->
 

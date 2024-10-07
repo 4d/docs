@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.On Mobile App Authentication database method.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| mobileInfo | Object | &#x1F852; | Information passed by the mobile application |
-| status | Object | &#x1F850; | Authentication status |
+| mobileInfo | Object | &srarr; | Information passed by the mobile application |
+| status | Object | &larr; | Authentication status |
 
 <!-- END REF-->
 

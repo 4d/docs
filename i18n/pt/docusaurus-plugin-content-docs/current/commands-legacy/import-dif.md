@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.IMPORT DIF.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#x1F852; | Tabela para a qual se importarão os dados, ou a tabela Padrão, se omitido |
-| documento | Text | &#x1F852; | documento DIF a importar |
+| tabela | Table | &srarr; | Tabela para a qual se importarão os dados, ou a tabela Padrão, se omitido |
+| documento | Text | &srarr; | documento DIF a importar |
 
 <!-- END REF-->
 

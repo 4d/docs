@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get context menu.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &#x1F852; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
-| Function result | Boolean | &#x1F850; | True = context menu enabled, False = context menu disabled |
+| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | any | &srarr; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| Function result | Boolean | &larr; | True = context menu enabled, False = context menu disabled |
 
 <!-- END REF-->
 

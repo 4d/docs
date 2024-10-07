@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.GRAPH SETTINGS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| graph | Picture | &#x1F852; | グラフエリアまたはピクチャ変数 |
-| xmin | Integer, Date, Time | &#x1F852; | 比例グラフのｘ軸の最小値  (線または点グラフのプロットのみ) |
-| xmax | Integer, Date, Time | &#x1F852; | 比例グラフのｘ軸の最大値  (線または点グラフのプロットのみ) |
-| ymin | Integer | &#x1F852; | ｙ軸の最小値 |
-| ymax | Integer | &#x1F852; | ｙ軸の最大値 |
-| xprop | Boolean | &#x1F852; | TRUE: プロポーショナルX軸;  FALSE: 通常のX軸 (線または点グラフのプロットのみ) |
-| xgrid | Boolean | &#x1F852; | TRUE: X軸グリッド; FALSE: X軸グリッドなし (xprop=TRUEの場合のみ) |
-| ygrid | Boolean | &#x1F852; | TRUE: Y軸グリッド; FALSE:Y軸グリッドなし |
-| title | Text | &#x1F852; | 凡例 |
+| graph | Picture | &srarr; | グラフエリアまたはピクチャ変数 |
+| xmin | Integer, Date, Time | &srarr; | 比例グラフのｘ軸の最小値  (線または点グラフのプロットのみ) |
+| xmax | Integer, Date, Time | &srarr; | 比例グラフのｘ軸の最大値  (線または点グラフのプロットのみ) |
+| ymin | Integer | &srarr; | ｙ軸の最小値 |
+| ymax | Integer | &srarr; | ｙ軸の最大値 |
+| xprop | Boolean | &srarr; | TRUE: プロポーショナルX軸;  FALSE: 通常のX軸 (線または点グラフのプロットのみ) |
+| xgrid | Boolean | &srarr; | TRUE: X軸グリッド; FALSE: X軸グリッドなし (xprop=TRUEの場合のみ) |
+| ygrid | Boolean | &srarr; | TRUE: Y軸グリッド; FALSE:Y軸グリッドなし |
+| title | Text | &srarr; | 凡例 |
 
 <!-- END REF-->
 

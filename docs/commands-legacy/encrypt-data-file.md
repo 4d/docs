@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Encrypt data file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| structurePath | Text | &#x1F852; | Pathname of structure file |
-| dataPath | Text | &#x1F852; | Pathname of data file to encrypt |
-| newPassPhrase &#124; newDataKey | Text, Object | &#x1F852; | In case of replacement: new passPhrase (text) or new encryption key (object) |
-| archiveFolder | Text | &#x1F852; | Pathname of folder where original files will be stored |
-| curPassPhrase &#124; curDataKey | Text, Object | &#x1F852; | Current passPhrase (text) or current encryption key (object) |
-| methodName | Text | &#x1F852; | Name of 4D callback method |
-| Function result | Text | &#x1F850; | Full pathname of folder where original files have been stored |
+| structurePath | Text | &srarr; | Pathname of structure file |
+| dataPath | Text | &srarr; | Pathname of data file to encrypt |
+| newPassPhrase &#124; newDataKey | Text, Object | &srarr; | In case of replacement: new passPhrase (text) or new encryption key (object) |
+| archiveFolder | Text | &srarr; | Pathname of folder where original files will be stored |
+| curPassPhrase &#124; curDataKey | Text, Object | &srarr; | Current passPhrase (text) or current encryption key (object) |
+| methodName | Text | &srarr; | Name of 4D callback method |
+| Function result | Text | &larr; | Full pathname of folder where original files have been stored |
 
 <!-- END REF-->
 

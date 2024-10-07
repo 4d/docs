@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Undefined.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| variavel | Expression | &#x1F852; | Variável a testar |
-| Resultado | Boolean | &#x1F850; | TRUE=Variável é atualmente indefinida; FALSE= Variável é atualmente definida |
+| variavel | Expression | &srarr; | Variável a testar |
+| Resultado | Boolean | &larr; | TRUE=Variável é atualmente indefinida; FALSE= Variável é atualmente definida |
 
 <!-- END REF-->
 

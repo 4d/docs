@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.STRING LIST TO ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| resID | Integer | &#x1F852; | Resource ID number or 'id' attribute of the 'group' element (XLIFF) |
-| strings | Text array | &#x1F858; | Strings from the STR# resource or Strings from the 'group' element (XLIFF) |
-| resFile | Time | &#x1F852; | Resource file reference number If omitted: all the XLIFF files or open resources files |
+| resID | Integer | &srarr; | Resource ID number or 'id' attribute of the 'group' element (XLIFF) |
+| strings | Text array | &harr; | Strings from the STR# resource or Strings from the 'group' element (XLIFF) |
+| resFile | Time | &srarr; | Resource file reference number If omitted: all the XLIFF files or open resources files |
 
 <!-- END REF-->
 

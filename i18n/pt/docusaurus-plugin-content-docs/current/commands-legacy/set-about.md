@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET ABOUT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| textoElem | Text | &#x1F852; | Novo item do menu Sobre |
-| metodo | Text | &#x1F852; | Nome de método a executar quando o item de menu for escolhido |
+| textoElem | Text | &srarr; | Novo item do menu Sobre |
+| metodo | Text | &srarr; | Nome de método a executar quando o item de menu for escolhido |
 
 <!-- END REF-->
 

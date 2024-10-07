@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE MANY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| table1 &#124; champ1 | Table, Champ | &#x1F852; | Table pour laquelle établir tous les liens de 1 vers N ou champ 1 |
+| table1 &#124; champ1 | Table, Champ | &srarr; | Table pour laquelle établir tous les liens de 1 vers N ou champ 1 |
 
 <!-- END REF-->
 

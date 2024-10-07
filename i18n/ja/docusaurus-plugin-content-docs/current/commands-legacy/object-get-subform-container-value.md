@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get subform container value.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | any | &#x1F850; | サブフォームコンテナデータソースのカレントの値 |
+| 戻り値 | any | &larr; | サブフォームコンテナデータソースのカレントの値 |
 
 <!-- END REF-->
 

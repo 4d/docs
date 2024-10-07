@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET CACHE SIZE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| size | Real | &#x1F852; | Size of database cache in bytes |
-| minFreeSize | Real | &#x1F852; | Minimum number of bytes to release when cache is full |
+| size | Real | &srarr; | Size of database cache in bytes |
+| minFreeSize | Real | &srarr; | Minimum number of bytes to release when cache is full |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CONFIRM.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| mensaje | Text | &#x1F852; | Mensaje a mostrar en la caja de diálogo de confirmación |
-| titulobotonOK | Text | &#x1F852; | Título del botón Aceptar |
-| titulobotoncancel | Text | &#x1F852; | Título del botón Cancelar |
+| mensaje | Text | &srarr; | Mensaje a mostrar en la caja de diálogo de confirmación |
+| titulobotonOK | Text | &srarr; | Título del botón Aceptar |
+| titulobotoncancel | Text | &srarr; | Título del botón Cancelar |
 
 <!-- END REF-->
 

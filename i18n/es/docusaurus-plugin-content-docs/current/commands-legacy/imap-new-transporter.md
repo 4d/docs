@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.IMAP New transporter.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| servidor | Object | &#x1F852; | Información del servidor de correo |
-| Resultado | Object | &#x1F850; | Objeto transportador IMAP |
+| servidor | Object | &srarr; | Información del servidor de correo |
+| Resultado | Object | &larr; | Objeto transportador IMAP |
 
 <!-- END REF-->
 

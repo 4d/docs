@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RECEIVE RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#x1F852; | Tabela na qual receber o registro, ou tabela padrão, se omitido |
+| tabela | Table | &srarr; | Tabela na qual receber o registro, ou tabela padrão, se omitido |
 
 <!-- END REF-->
 

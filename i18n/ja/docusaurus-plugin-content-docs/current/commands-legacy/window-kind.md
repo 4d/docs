@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Window kind.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| window | Integer | &#x1F852; | ウィンドウ参照番号, または 省略時カレントプロセスの最前面ウィンドウ |
-| 戻り値 | Integer | &#x1F850; | ウィンドウのタイプ |
+| window | Integer | &srarr; | ウィンドウ参照番号, または 省略時カレントプロセスの最前面ウィンドウ |
+| 戻り値 | Integer | &larr; | ウィンドウのタイプ |
 
 <!-- END REF-->
 

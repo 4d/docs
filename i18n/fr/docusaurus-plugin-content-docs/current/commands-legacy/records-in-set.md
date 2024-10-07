@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Records in set.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ensemble | Text | &#x1F852; | Nom de l'ensemble à tester |
-| Résultat | Integer | &#x1F850; | Nombre d'enregistrements dans l'ensemble |
+| ensemble | Text | &srarr; | Nom de l'ensemble à tester |
+| Résultat | Integer | &larr; | Nombre d'enregistrements dans l'ensemble |
 
 <!-- END REF-->
 

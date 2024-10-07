@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Sequence number.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#x1F852; | Tabela para a qual devolver o número de sequência, ou tabela padrão, se omitido |
-| Resultado | Integer | &#x1F850; | Número de sequência |
+| tabela | Table | &srarr; | Tabela para a qual devolver o número de sequência, ou tabela padrão, se omitido |
+| Resultado | Integer | &larr; | Número de sequência |
 
 <!-- END REF-->
 

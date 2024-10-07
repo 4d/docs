@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table for which to create a set from the selection, or Default table, if omitted |
-| set | Text | &#x1F852; | Name of the new set |
+| aTable | Table | &srarr; | Table for which to create a set from the selection, or Default table, if omitted |
+| set | Text | &srarr; | Name of the new set |
 
 <!-- END REF-->
 

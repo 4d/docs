@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM LOAD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table form to load (if omitted, load a project form) |
-| form | Text, Object | &#x1F852; | Name (string) of form (project or table), ora POSIX path (string) to a .json file describing the form, or an object describing the form to open |
-| formData | Object | &#x1F852; | Data to associate to the form |
-| * | Operator | &#x1F852; | If passed = command applies to host database when it is executed from a component (parameter ignored outside of this context) |
+| aTable | Table | &srarr; | Table form to load (if omitted, load a project form) |
+| form | Text, Object | &srarr; | Name (string) of form (project or table), ora POSIX path (string) to a .json file describing the form, or an object describing the form to open |
+| formData | Object | &srarr; | Data to associate to the form |
+| * | Operator | &srarr; | If passed = command applies to host database when it is executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->
 

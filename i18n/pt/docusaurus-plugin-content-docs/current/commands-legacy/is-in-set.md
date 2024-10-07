@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is in set.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| conjunto | Text | &#x1F852; | Nome do conjunto a testar |
-| Resultado | Boolean | &#x1F850; | Registro atual está no conjunto (TRUE) ou Registro atual não está no conjunto (FALSE) |
+| conjunto | Text | &srarr; | Nome do conjunto a testar |
+| Resultado | Boolean | &larr; | Registro atual está no conjunto (TRUE) ou Registro atual não está no conjunto (FALSE) |
 
 <!-- END REF-->
 

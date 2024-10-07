@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MEMORY STATISTICS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| infoType | Integer | &#x1F852; | Type of requested info (always 1) |
-| arrNames | Text array | &#x1F858; | Information titles |
-| arrValues | Real array | &#x1F858; | Information values |
-| arrCount | Real array | &#x1F858; | Number of objects concerned (if available) |
+| infoType | Integer | &srarr; | Type of requested info (always 1) |
+| arrNames | Text array | &harr; | Information titles |
+| arrValues | Real array | &harr; | Information values |
+| arrCount | Real array | &harr; | Number of objects concerned (if available) |
 
 <!-- END REF-->
 

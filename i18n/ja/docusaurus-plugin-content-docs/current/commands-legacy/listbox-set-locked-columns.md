@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
-| object | any | &#x1F852; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
-| numColumns | Integer | &#x1F852; | 横スクロールしない列の数 |
+| * | 演算子 | &srarr; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
+| object | any | &srarr; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
+| numColumns | Integer | &srarr; | 横スクロールしない列の数 |
 
 <!-- END REF-->
 

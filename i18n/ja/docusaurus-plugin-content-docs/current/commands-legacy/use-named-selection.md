@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.USE NAMED SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| name | Text | &#x1F852; | 使用する命名セレクション名 |
+| name | Text | &srarr; | 使用する命名セレクション名 |
 
 <!-- END REF-->
 

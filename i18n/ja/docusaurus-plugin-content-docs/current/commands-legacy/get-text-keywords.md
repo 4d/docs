@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET TEXT KEYWORDS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| text | Text | &#x1F852; | 元のテキスト |
-| arrKeywords | Text array | &#x1F858; | キーワードを受け取る配列 |
-| * | 演算子 | &#x1F852; | 指定した場合、ユニークキーワード |
+| text | Text | &srarr; | 元のテキスト |
+| arrKeywords | Text array | &harr; | キーワードを受け取る配列 |
+| * | 演算子 | &srarr; | 指定した場合、ユニークキーワード |
 
 <!-- END REF-->
 

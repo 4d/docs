@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.USE ENTITY SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| entitySelection | EntitySelection | &#x1F852; | エンティティセレクション |
+| entitySelection | EntitySelection | &srarr; | エンティティセレクション |
 
 <!-- END REF-->
 

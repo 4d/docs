@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.COMPRESS BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#x1F852; | BLOB to compress |
-| compression | Integer | &#x1F852; | If not omitted: 1, compress as compact as possible 2, compress as fast as possible |
+| blob | Blob | &srarr; | BLOB to compress |
+| compression | Integer | &srarr; | If not omitted: 1, compress as compact as possible 2, compress as fast as possible |
 
 <!-- END REF-->
 

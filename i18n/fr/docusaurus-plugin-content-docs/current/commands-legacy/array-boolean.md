@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY BOOLEAN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomArray | Array | &#x1F852; | Nom du tableau |
-| taille | Integer | &#x1F852; | Nombre d'éléments du tableau ou Nombre de tableaux si taille2 est spécifié |
-| taille2 | Integer | &#x1F852; | Nombre d'éléments des tableaux à deux dimensions |
+| nomArray | Array | &srarr; | Nom du tableau |
+| taille | Integer | &srarr; | Nombre d'éléments du tableau ou Nombre de tableaux si taille2 est spécifié |
+| taille2 | Integer | &srarr; | Nombre d'éléments des tableaux à deux dimensions |
 
 <!-- END REF-->
 

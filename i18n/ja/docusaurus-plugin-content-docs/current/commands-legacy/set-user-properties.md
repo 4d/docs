@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.Set user properties.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| userID | Integer | &#x1F852; | ユーザーアカウントのユニークなID番号、<br/>または -1= デザイナーに関連した新規ユーザーの追加 -2= 管理者に関連した新規ユーザーの追加 |
-| &#x1F858; | 追加したユーザーアカウント (あれば) のユニークなID番号 |
-| name | Text | &#x1F852; | 新規ユーザーの名前 |
-| startup | Text | &#x1F852; | 新規ユーザースタートアップメソッドの名前 |
-| password | Text | &#x1F852; | 新しい (暗号化されていない) パスワード、または * を指定すると、パスワードは以前のまま |
-| nbLogin | Integer | &#x1F852; | データベースへログインした回数 (バイナリデータベースのみ) |
-| lastLogin | Date | &#x1F852; | データベースに最後にログインした日付 (バイナリデータベースのみ) |
-| memberships | Integer array | &#x1F852; | ユーザーが属するグループのID番号 |
-| groupOwner | Integer | &#x1F852; | ユーザーグループオーナーの参照番号 (バイナリデータベースのみ) |
-| 戻り値 | Integer | &#x1F850; | 新規ユーザーのユニークなID番号 |
+| userID | Integer | &srarr; | ユーザーアカウントのユニークなID番号、<br/>または -1= デザイナーに関連した新規ユーザーの追加 -2= 管理者に関連した新規ユーザーの追加 |
+| &harr; | 追加したユーザーアカウント (あれば) のユニークなID番号 |
+| name | Text | &srarr; | 新規ユーザーの名前 |
+| startup | Text | &srarr; | 新規ユーザースタートアップメソッドの名前 |
+| password | Text | &srarr; | 新しい (暗号化されていない) パスワード、または * を指定すると、パスワードは以前のまま |
+| nbLogin | Integer | &srarr; | データベースへログインした回数 (バイナリデータベースのみ) |
+| lastLogin | Date | &srarr; | データベースに最後にログインした日付 (バイナリデータベースのみ) |
+| memberships | Integer array | &srarr; | ユーザーが属するグループのID番号 |
+| groupOwner | Integer | &srarr; | ユーザーグループオーナーの参照番号 (バイナリデータベースのみ) |
+| 戻り値 | Integer | &larr; | 新規ユーザーのユニークなID番号 |
 
 <!-- END REF-->
 

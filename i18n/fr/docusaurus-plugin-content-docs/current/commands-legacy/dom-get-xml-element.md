@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get XML element.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &#x1F852; | Référence d’élément XML |
-| nomElément | Text | &#x1F852; | Nom de l’élément à lire |
-| indice | Integer | &#x1F852; | Numéro d’indice de l’élément à lire |
-| valeurElément | Variable | &#x1F858; | Valeur de l’élément |
-| Résultat | Text | &#x1F850; | Référence de l’élément XML (16 caractères) |
+| refElément | Text | &srarr; | Référence d’élément XML |
+| nomElément | Text | &srarr; | Nom de l’élément à lire |
+| indice | Integer | &srarr; | Numéro d’indice de l’élément à lire |
+| valeurElément | Variable | &harr; | Valeur de l’élément |
+| Résultat | Text | &larr; | Référence de l’élément XML (16 caractères) |
 
 <!-- END REF-->
 

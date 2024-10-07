@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET HEADER AND FOOTER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#x1F852; | Referencia del área |
-| selector | Integer | &#x1F852; | 1 = Encabezado, 2 = Pie de página |
-| tituloIzq | Text | &#x1F852; | Texto mostrado a la izquierda |
-| tituloCent | Text | &#x1F852; | Texto mostrado en el centro |
-| tituloDer | Text | &#x1F852; | Texto mostrado a la derecha |
-| altura | Integer | &#x1F852; | Altura del encabezado o pie de página |
-| imagen | Picture | &#x1F852; | Imagen a mostrar |
-| alinImag | Integer | &#x1F852; | Atributo de alineación de la imagen |
+| area | Integer | &srarr; | Referencia del área |
+| selector | Integer | &srarr; | 1 = Encabezado, 2 = Pie de página |
+| tituloIzq | Text | &srarr; | Texto mostrado a la izquierda |
+| tituloCent | Text | &srarr; | Texto mostrado en el centro |
+| tituloDer | Text | &srarr; | Texto mostrado a la derecha |
+| altura | Integer | &srarr; | Altura del encabezado o pie de página |
+| imagen | Picture | &srarr; | Imagen a mostrar |
+| alinImag | Integer | &srarr; | Atributo de alineación de la imagen |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX GET XML ELEMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Time | &#x1F852; | 開いたドキュメントの参照 |
-| name | Text | &#x1F858; | 要素名 |
-| prefix | Text | &#x1F858; | 名前空間 |
-| attrNames | Text array | &#x1F858; | 属性名 |
-| attrValues | Text array | &#x1F858; | 属性値 |
+| document | Time | &srarr; | 開いたドキュメントの参照 |
+| name | Text | &harr; | 要素名 |
+| prefix | Text | &harr; | 名前空間 |
+| attrNames | Text array | &harr; | 属性名 |
+| attrValues | Text array | &harr; | 属性値 |
 
 <!-- END REF-->
 

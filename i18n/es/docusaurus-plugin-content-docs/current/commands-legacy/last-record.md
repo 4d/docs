@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.LAST RECORD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#x1F852; | Tabla de la cual mover el último registro seleccionado o Tabla por defecto, si se omite |
+| tabla | Table | &srarr; | Tabla de la cual mover el último registro seleccionado o Tabla por defecto, si se omite |
 
 <!-- END REF-->
 

@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table dans laquelle la sélection est créée ou Table par défaut si ce paramètre est omis |
-| opConj | * | &#x1F852; | Opérateur à utiliser pour combiner plusieurs requêtes (le cas échéant) |
-| champObjet | Field | &#x1F852; | Champ objet dont les attributs sont à utiliser pour la recherche |
-| cheminAttribut | Text | &#x1F852; | Nom ou chemin d'attribut |
-| opRecherche | *, Text | &#x1F852; | Opérateur de recherche (comparateur) |
-| valeur | Text, Number, Date, Time | &#x1F852; | Valeur à comparer |
-| * | Opérateur | &#x1F852; | Attente d'exécution de la recherche |
+| laTable | Table | &srarr; | Table dans laquelle la sélection est créée ou Table par défaut si ce paramètre est omis |
+| opConj | * | &srarr; | Opérateur à utiliser pour combiner plusieurs requêtes (le cas échéant) |
+| champObjet | Field | &srarr; | Champ objet dont les attributs sont à utiliser pour la recherche |
+| cheminAttribut | Text | &srarr; | Nom ou chemin d'attribut |
+| opRecherche | *, Text | &srarr; | Opérateur de recherche (comparateur) |
+| valeur | Text, Number, Date, Time | &srarr; | Valeur à comparer |
+| * | Opérateur | &srarr; | Attente d'exécution de la recherche |
 
 <!-- END REF-->
 

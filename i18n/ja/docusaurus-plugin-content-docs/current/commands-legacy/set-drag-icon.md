@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DRAG ICON.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| icon | Picture | &#x1F852; | ドラッグ中に表示するアイコン |
-| horOffset | Integer | &#x1F852; | カーソルから見てアイコンの左端との水平方向の距離を指定(>0 は左方向に、<0 は右方向に移動) |
-| vertOffset | Integer | &#x1F852; | カーソルから見てアイコンの上端との垂直方向の距離を指定(>0 は上方向に、<0 は下方向に移動) |
+| icon | Picture | &srarr; | ドラッグ中に表示するアイコン |
+| horOffset | Integer | &srarr; | カーソルから見てアイコンの左端との水平方向の距離を指定(>0 は左方向に、<0 は右方向に移動) |
+| vertOffset | Integer | &srarr; | カーソルから見てアイコンの上端との垂直方向の距離を指定(>0 は上方向に、<0 は下方向に移動) |
 
 <!-- END REF-->
 

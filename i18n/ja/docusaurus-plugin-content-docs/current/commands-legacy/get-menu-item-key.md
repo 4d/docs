@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Get menu item key.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#x1F852; | メニュー参照またはメニュー番号 |
-| menuItem | Integer | &#x1F852; | メニュー項目番号 または -1: 最後に追加された項目 |
-| process | Integer | &#x1F852; | プロセス番号 |
-| 戻り値 | Integer | &#x1F850; | メニュー項目に関連付ける 標準ショートカットキーの文字コード |
+| menu | Integer, Text | &srarr; | メニュー参照またはメニュー番号 |
+| menuItem | Integer | &srarr; | メニュー項目番号 または -1: 最後に追加された項目 |
+| process | Integer | &srarr; | プロセス番号 |
+| 戻り値 | Integer | &larr; | メニュー項目に関連付ける 標準ショートカットキーの文字コード |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aller | Boolean | &#x1F858; | Statut de tous les liens de N vers 1 |
-| retour | Boolean | &#x1F858; | Statut de tous les liens de 1 vers N |
+| aller | Boolean | &harr; | Statut de tous les liens de N vers 1 |
+| retour | Boolean | &harr; | Statut de tous les liens de 1 vers N |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Count user processes.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Integer | &#x1F850; | 活動中のプロセス (内部プロセスを除く) |
+| 戻り値 | Integer | &larr; | 活動中のプロセス (内部プロセスを除く) |
 
 <!-- END REF-->
 

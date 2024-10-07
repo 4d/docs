@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| calcul | Integer | &#x1F852; | Calcul pour la zone de pied |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| calcul | Integer | &srarr; | Calcul pour la zone de pied |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DEFAULT CENTURY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| siècle | Integer | &#x1F852; | Siècle par défaut (moins un) lors de la saisie d'années sur 2 chiffres |
-| anPivot | Integer | &#x1F852; | Année pivot lors de la saisie d'années sur 2 chiffres |
+| siècle | Integer | &srarr; | Siècle par défaut (moins un) lors de la saisie d'années sur 2 chiffres |
+| anPivot | Integer | &srarr; | Année pivot lors de la saisie d'années sur 2 chiffres |
 
 <!-- END REF-->
 

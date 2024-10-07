@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAVE SET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| set | Text | &#x1F852; | 保存するセットの名前 |
-| document | Text | &#x1F852; | セットを保存するディスクファイルの名前 |
+| set | Text | &srarr; | 保存するセットの名前 |
+| document | Text | &srarr; | セットを保存するディスクファイルの名前 |
 
 <!-- END REF-->
 

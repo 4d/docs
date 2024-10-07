@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Count list items.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
-| liste | Integer, Text | &#x1F852; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| * | Opérateur | &#x1F852; | Si omis (défaut) : Retourner les éléments visibles (déployés) dans la ou les liste(s) Si spécifié : Retourner tous les éléments |
-| Résultat | Integer | &#x1F850; | Nombre d'éléments visibles (déployés) si 2e * omis ou Nombre total d’éléments si 2e * passé |
+| * | Opérateur | &srarr; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &srarr; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| * | Opérateur | &srarr; | Si omis (défaut) : Retourner les éléments visibles (déployés) dans la ou les liste(s) Si spécifié : Retourner tous les éléments |
+| Résultat | Integer | &larr; | Nombre d'éléments visibles (déployés) si 2e * omis ou Nombre total d’éléments si 2e * passé |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Count list items.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &#x1F852; | List reference number (if * omitted), or Name of list type object (if * passed) |
-| * | Operator | &#x1F852; | If omitted (default): Return visible list items (expanded) If specified: Return all list items |
-| Function result | Longint | &#x1F850; | Number of visible (expanded) list items (if 2nd * omitted) or Total number of list items (if 2nd * present) |
+| * | Operator | &srarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
+| list | Integer, Text | &srarr; | List reference number (if * omitted), or Name of list type object (if * passed) |
+| * | Operator | &srarr; | If omitted (default): Return visible list items (expanded) If specified: Return all list items |
+| Function result | Longint | &larr; | Number of visible (expanded) list items (if 2nd * omitted) or Total number of list items (if 2nd * present) |
 
 <!-- END REF-->
 

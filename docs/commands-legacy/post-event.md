@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.POST EVENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| what | Integer | &#x1F852; | Type of event |
-| message | Integer | &#x1F852; | Event message |
-| when | Integer | &#x1F852; | Event time expressed in ticks |
-| mouseX | Integer | &#x1F852; | Horizontal coordinate of mouse |
-| mouseY | Integer | &#x1F852; | Vertical coordinate of mouse |
-| modifiers | Integer | &#x1F852; | Modifier keys state |
-| process | Integer | &#x1F852; | Destination process reference number, or Application event queue, if omitted, or 0 |
+| what | Integer | &srarr; | Type of event |
+| message | Integer | &srarr; | Event message |
+| when | Integer | &srarr; | Event time expressed in ticks |
+| mouseX | Integer | &srarr; | Horizontal coordinate of mouse |
+| mouseY | Integer | &srarr; | Vertical coordinate of mouse |
+| modifiers | Integer | &srarr; | Modifier keys state |
+| process | Integer | &srarr; | Destination process reference number, or Application event queue, if omitted, or 0 |
 
 <!-- END REF-->
 

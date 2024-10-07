@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is nil pointer.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| puntero | Pointer | &#x1F852; | Puntero a probar |
-| Resultado | Boolean | &#x1F850; | TRUE = Puntero Nil (->[]) FALSE = Puntero válido hacia un objeto existente |
+| puntero | Pointer | &srarr; | Puntero a probar |
+| Resultado | Boolean | &larr; | TRUE = Puntero Nil (->[]) FALSE = Puntero válido hacia un objeto existente |
 
 <!-- END REF-->
 

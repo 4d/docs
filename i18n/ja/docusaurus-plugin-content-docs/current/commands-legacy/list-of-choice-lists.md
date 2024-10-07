@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.LIST OF CHOICE LISTS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| numsArray | Integer array | &#x1F858; | 選択リスト番号 |
-| namesArray | Text array | &#x1F858; | 選択リスト名 |
+| numsArray | Integer array | &harr; | 選択リスト番号 |
+| namesArray | Text array | &harr; | 選択リスト名 |
 
 <!-- END REF-->
 

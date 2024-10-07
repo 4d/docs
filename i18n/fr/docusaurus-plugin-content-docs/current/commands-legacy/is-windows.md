@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is Windows.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Boolean | &#x1F850; | Vrai si le système d'exploitation est Windows, Sinon Faux |
+| Résultat | Boolean | &larr; | Vrai si le système d'exploitation est Windows, Sinon Faux |
 
 <!-- END REF-->
 

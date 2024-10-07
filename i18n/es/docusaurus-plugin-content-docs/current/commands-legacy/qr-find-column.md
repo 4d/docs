@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Find column.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#x1F852; | Referencia del área |
-| expresion | Text, Pointer | &#x1F852; | Objeto de columna |
-| Resultado | Integer | &#x1F850; | Número de columna |
+| area | Integer | &srarr; | Referencia del área |
+| expresion | Text, Pointer | &srarr; | Objeto de columna |
+| Resultado | Integer | &larr; | Número de columna |
 
 <!-- END REF-->
 

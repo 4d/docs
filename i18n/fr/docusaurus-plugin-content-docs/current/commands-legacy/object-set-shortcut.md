@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET SHORTCUT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
-| touche | Text | &#x1F852; | Touche à associer à l’objet |
-| modifiers | Integer | &#x1F852; | Masque ou combinaison de masques de touche(s) de modification |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| touche | Text | &srarr; | Touche à associer à l’objet |
+| modifiers | Integer | &srarr; | Masque ou combinaison de masques de touche(s) de modification |
 
 <!-- END REF-->
 

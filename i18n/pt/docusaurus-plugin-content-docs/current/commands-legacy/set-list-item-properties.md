@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se for especificado, lista é um nome de objeto (string). Se omitido, lista é um número de referência de lista |
-| lista | Integer, Text | &#x1F852; | Número lista referência (se* for omitido) ou Nome do objeto tipo lista (se * for passado) |
-| refElem &#124; * | Operador, Inteiro longo | &#x1F852; | Número referência Item, ou 0 para o último item anexado a lista, ou * para o item de lista atual |
-| editavel | Boolean | &#x1F852; | True = editável, False = não editável |
-| estilos | Integer | &#x1F852; | Estilo de fonte para o item |
-| icone | Text, Integer | &#x1F852; | Nome da Imagem ou número ("" ou 0 se não houver ícone) |
-| cor | Integer | &#x1F852; | Valor de cor RGB ou -1 = volta para a cor original |
+| * | Operador | &srarr; | Se for especificado, lista é um nome de objeto (string). Se omitido, lista é um número de referência de lista |
+| lista | Integer, Text | &srarr; | Número lista referência (se* for omitido) ou Nome do objeto tipo lista (se * for passado) |
+| refElem &#124; * | Operador, Inteiro longo | &srarr; | Número referência Item, ou 0 para o último item anexado a lista, ou * para o item de lista atual |
+| editavel | Boolean | &srarr; | True = editável, False = não editável |
+| estilos | Integer | &srarr; | Estilo de fonte para o item |
+| icone | Text, Integer | &srarr; | Nome da Imagem ou número ("" ou 0 se não houver ícone) |
+| cor | Integer | &srarr; | Valor de cor RGB ou -1 = volta para a cor original |
 
 <!-- END REF-->
 

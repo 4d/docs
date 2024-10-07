@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET QUERY DESTINATION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tipoDestino | Integer | &#x1F852; | 0 - seleção atual 1 - conjunto 2 - seleção temporária 3 - variável |
-| objetoDestino | Text, Variable | &#x1F852; | Nome do conjunto, ou nome da seleção temporária, ou Variável |
-| destPointer | Pointer | &#x1F852; | Poneiro a variável local se destinação for Tipo=3 |
+| tipoDestino | Integer | &srarr; | 0 - seleção atual 1 - conjunto 2 - seleção temporária 3 - variável |
+| objetoDestino | Text, Variable | &srarr; | Nome do conjunto, ou nome da seleção temporária, ou Variável |
+| destPointer | Pointer | &srarr; | Poneiro a variável local se destinação for Tipo=3 |
 
 <!-- END REF-->
 

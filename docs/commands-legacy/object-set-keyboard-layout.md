@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)If omitted, object is a variable or field |
-| object | any | &#x1F852; | Object Name (if * is specified) or Variable or field (if * is omitted) |
-| languageCode | Text | &#x1F852; | RFC3066 ISO639 and ISO3166 language code,"" = no change |
+| * | Operator | &srarr; | If specified, object is an object name (string)If omitted, object is a variable or field |
+| object | any | &srarr; | Object Name (if * is specified) or Variable or field (if * is omitted) |
+| languageCode | Text | &srarr; | RFC3066 ISO639 and ISO3166 language code,"" = no change |
 
 <!-- END REF-->
 

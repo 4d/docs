@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET HEADERS HEIGHT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &#x1F852; | Object Name (if * is specified) or Variable (if * is omitted) |
-| height | Integer | &#x1F852; | Row height |
-| unit | Integer | &#x1F852; | Unit of height value: 0 or omitted = pixels, 1 = lines |
+| * | Operator | &srarr; | If specified, object is an object name (string)If omitted, object is a variable |
+| object | any | &srarr; | Object Name (if * is specified) or Variable (if * is omitted) |
+| height | Integer | &srarr; | Row height |
+| unit | Integer | &srarr; | Unit of height value: 0 or omitted = pixels, 1 = lines |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Export structure file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminDossier | Text | &#x1F852; | Chemin du dossier de destination pour les fichiers projets |
-| options | Object | &#x1F852; | Options d'export |
-| Résultat | Object | &#x1F850; | Statuts et messages de validation (le cas échéant) |
+| cheminDossier | Text | &srarr; | Chemin du dossier de destination pour les fichiers projets |
+| options | Object | &srarr; | Options d'export |
+| Résultat | Object | &larr; | Statuts et messages de validation (le cas échéant) |
 
 <!-- END REF-->
 

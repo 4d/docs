@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Create entity selection.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableds | Table | &#x1F852; | Table de la base 4D dont la sélection courante doit être utilisée pour construire la sélection d'entités |
-| paramètres | Object | &#x1F852; | Option de création : contexte |
-| Résultat | EntitySelection | &#x1F850; | Sélection d'entités liée à la dataclass de la table |
+| tableds | Table | &srarr; | Table de la base 4D dont la sélection courante doit être utilisée pour construire la sélection d'entités |
+| paramètres | Object | &srarr; | Option de création : contexte |
+| Résultat | EntitySelection | &larr; | Sélection d'entités liée à la dataclass de la table |
 
 <!-- END REF-->
 

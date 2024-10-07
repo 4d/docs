@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB to text.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#x1F852; | BLOB duquel extraire le texte |
-| formatTexte | Integer | &#x1F852; | Format et jeu de caractères du texte |
-| offset | Variable | &#x1F852; | Offset (en octets) dans le BLOB |
-| &#x1F858; | Nouvel offset après la lecture |
-| longueurTexte | Integer | &#x1F852; | Nombre de caractères à lire |
-| Résultat | Text | &#x1F850; | Texte extrait |
+| blob | Blob | &srarr; | BLOB duquel extraire le texte |
+| formatTexte | Integer | &srarr; | Format et jeu de caractères du texte |
+| offset | Variable | &srarr; | Offset (en octets) dans le BLOB |
+| &harr; | Nouvel offset après la lecture |
+| longueurTexte | Integer | &srarr; | Nombre de caractères à lire |
+| Résultat | Text | &larr; | Texte extrait |
 
 <!-- END REF-->
 

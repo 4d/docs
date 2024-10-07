@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Timestamp.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Text | &#x1F850; | ISOフォーマットを使用してミリ秒付きで返された現在時刻 |
+| 戻り値 | Text | &larr; | ISOフォーマットを使用してミリ秒付きで返された現在時刻 |
 
 <!-- END REF-->
 

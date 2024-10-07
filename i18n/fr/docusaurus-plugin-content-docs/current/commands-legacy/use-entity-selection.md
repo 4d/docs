@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.USE ENTITY SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| entitySelection | EntitySelection | &#x1F852; | Entity selection à utiliser |
+| entitySelection | EntitySelection | &srarr; | Entity selection à utiliser |
 
 <!-- END REF-->
 

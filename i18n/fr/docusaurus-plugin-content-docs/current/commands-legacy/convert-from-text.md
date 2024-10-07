@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CONVERT FROM TEXT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| texte4D | Text | &#x1F852; | Texte exprimé dans le jeu de caractères courant de 4D |
-| jeuCaractères | Text, Integer | &#x1F852; | Nom ou Numéro de jeu de caractères |
-| blobConverti | Blob | &#x1F858; | BLOB contenant le texte converti |
+| texte4D | Text | &srarr; | Texte exprimé dans le jeu de caractères courant de 4D |
+| jeuCaractères | Text, Integer | &srarr; | Nom ou Numéro de jeu de caractères |
+| blobConverti | Blob | &harr; | BLOB contenant le texte converti |
 
 <!-- END REF-->
 

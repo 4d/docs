@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY TIME.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| arrayName | Array | &#x1F852; | Name of array |
-| size | Integer | &#x1F852; | Number of array elements or Number of arrays if size2 is specified |
-| size2 | Integer | &#x1F852; | Number of 2D array elements |
+| arrayName | Array | &srarr; | Name of array |
+| size | Integer | &srarr; | Number of array elements or Number of arrays if size2 is specified |
+| size2 | Integer | &srarr; | Number of 2D array elements |
 
 <!-- END REF-->
 

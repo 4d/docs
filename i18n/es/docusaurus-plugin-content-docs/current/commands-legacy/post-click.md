@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.POST CLICK.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ratonX | Integer | &#x1F852; | Coordenada horizontal |
-| ratonY | Integer | &#x1F852; | Coordenada vertical |
-| proceso | Integer | &#x1F852; | Número de referencia del proceso de destino o fila de atención de eventos de la aplicación, si se omite o si se pasa 0 |
-| * | &#x1F852; | Si se especifica, utilizar el sistema de coordenadas globales Si se omite, utilizar el sistema de coordenadas locales |
+| ratonX | Integer | &srarr; | Coordenada horizontal |
+| ratonY | Integer | &srarr; | Coordenada vertical |
+| proceso | Integer | &srarr; | Número de referencia del proceso de destino o fila de atención de eventos de la aplicación, si se omite o si se pasa 0 |
+| * | &srarr; | Si se especifica, utilizar el sistema de coordenadas globales Si se omite, utilizar el sistema de coordenadas locales |
 
 <!-- END REF-->
 

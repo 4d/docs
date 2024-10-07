@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Instance of.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Object | &#x1F852; | Objet dont la classe doit être identifiée |
-| classe | Object | &#x1F852; | Classe dont l'appartenance est à identifier |
-| Résultat | Boolean | &#x1F850; | Vrai si l'objet appartient à la classe ou classe enfant indiquée, sinon faux |
+| objet | Object | &srarr; | Objet dont la classe doit être identifiée |
+| classe | Object | &srarr; | Classe dont l'appartenance est à identifier |
+| Résultat | Boolean | &larr; | Vrai si l'objet appartient à la classe ou classe enfant indiquée, sinon faux |
 
 <!-- END REF-->
 

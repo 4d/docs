@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get drop column.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#x1F852; | Referência da área |
-| Resultado | Integer | &#x1F850; | Espaço de soltar |
+| area | Integer | &srarr; | Referência da área |
+| Resultado | Integer | &larr; | Espaço de soltar |
 
 <!-- END REF-->
 

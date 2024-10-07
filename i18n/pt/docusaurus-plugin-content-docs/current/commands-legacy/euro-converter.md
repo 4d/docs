@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Euro converter.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| valor | Real | &#x1F852; | Valor a converter |
-| deMoeda | Text | &#x1F852; | Código da moeda na qual o valor é expresso |
-| paraMoeda | Text | &#x1F852; | Código da moeda para o qual o valor será convertido |
-| Resultado | Real | &#x1F850; | Valor convertido |
+| valor | Real | &srarr; | Valor a converter |
+| deMoeda | Text | &srarr; | Código da moeda na qual o valor é expresso |
+| paraMoeda | Text | &srarr; | Código da moeda para o qual o valor será convertido |
+| Resultado | Real | &larr; | Valor convertido |
 
 <!-- END REF-->
 

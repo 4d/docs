@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SAVE RELATED ONE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &#x1F852; | Champ N |
+| leField | Field | &srarr; | Champ N |
 
 <!-- END REF-->
 

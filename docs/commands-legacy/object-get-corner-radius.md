@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get corner radius.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
-| object | any | &#x1F852; | Object name (if * is specified) or Field or variable (if * is omitted) |
-| Function result | Longint | &#x1F850; | Radius of rounded corners (in pixels) |
+| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
+| object | any | &srarr; | Object name (if * is specified) or Field or variable (if * is omitted) |
+| Function result | Longint | &larr; | Radius of rounded corners (in pixels) |
 
 <!-- END REF-->
 

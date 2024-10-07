@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.ST SET ATTRIBUTES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
-| object | any | &#x1F852; | オブジェクト名 (* 指定時) または <br/>フィールドまたは変数 (* 省略時) |
-| startSel | Integer | &#x1F852; | 新しいテキスト選択の開始位置 |
-| endSel | Integer | &#x1F852; | 新しいテキスト選択の終了位置 |
-| attribName | Text | &#x1F852; | 設定する属性 |
-| attribValue | Text, Integer | &#x1F852; | 新しい属性値 |
+| * | 演算子 | &srarr; | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
+| object | any | &srarr; | オブジェクト名 (* 指定時) または <br/>フィールドまたは変数 (* 省略時) |
+| startSel | Integer | &srarr; | 新しいテキスト選択の開始位置 |
+| endSel | Integer | &srarr; | 新しいテキスト選択の終了位置 |
+| attribName | Text | &srarr; | 設定する属性 |
+| attribValue | Text, Integer | &srarr; | 新しい属性値 |
 
 <!-- END REF-->
 

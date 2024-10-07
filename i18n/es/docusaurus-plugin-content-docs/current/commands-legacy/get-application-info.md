@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get application info.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Object | &#x1F850; | Información sobre la actividad de la aplicación activa |
+| Resultado | Object | &larr; | Información sobre la actividad de la aplicación activa |
 
 <!-- END REF-->
 

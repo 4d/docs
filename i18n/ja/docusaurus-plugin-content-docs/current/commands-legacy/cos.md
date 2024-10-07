@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Cos.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| number | Real | &#x1F852; | コサインを求めるラジアン値 |
-| 戻り値 | Real | &#x1F850; | コサイン値 |
+| number | Real | &srarr; | コサインを求めるラジアン値 |
+| 戻り値 | Real | &larr; | コサイン値 |
 
 <!-- END REF-->
 

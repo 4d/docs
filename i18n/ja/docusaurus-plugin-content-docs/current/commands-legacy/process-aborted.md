@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Process aborted.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Boolean | &#x1F850; | True = プロセスは中止されようとしている, False = プロセス中止されようとしていない |
+| 戻り値 | Boolean | &larr; | True = プロセスは中止されようとしている, False = プロセス中止されようとしていない |
 
 <!-- END REF-->
 

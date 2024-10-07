@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Formula from string.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| stringFormula | Text | &#x1F852; | Fórmula de texto a ser retornado como objeto |
-| Resultado | Object | &#x1F850; | Um objeto nativo contendo a fórmula |
+| stringFormula | Text | &srarr; | Fórmula de texto a ser retornado como objeto |
+| Resultado | Object | &larr; | Um objeto nativo contendo a fórmula |
 
 <!-- END REF-->
 

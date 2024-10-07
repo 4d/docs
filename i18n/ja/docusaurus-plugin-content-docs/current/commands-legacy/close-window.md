@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLOSE WINDOW.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| window | Integer | &#x1F852; | ウィンドウ参照番号, または 省略した場合、カレントプロセスの最前面ウィンドウ |
+| window | Integer | &srarr; | ウィンドウ参照番号, または 省略した場合、カレントプロセスの最前面ウィンドウ |
 
 <!-- END REF-->
 

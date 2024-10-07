@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD SET COMMENTS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin | Text, Text array | &#x1F852; | Texte ou Tableau texte contenant un ou plusieurs chemin(s) de méthode(s) |
-| commentaires | Text, Text array | &#x1F852; | Documentation de(s) méthode(s) désignée(s) |
-| * | Opérateur | &#x1F852; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| chemin | Text, Text array | &srarr; | Texte ou Tableau texte contenant un ou plusieurs chemin(s) de méthode(s) |
+| commentaires | Text, Text array | &srarr; | Documentation de(s) méthode(s) désignée(s) |
+| * | Opérateur | &srarr; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
 

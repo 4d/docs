@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Size of array.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| array | Array | &#x1F852; | サイズを取得する配列 |
-| 戻り値 | Integer | &#x1F850; | 配列の要素数 |
+| array | Array | &srarr; | サイズを取得する配列 |
+| 戻り値 | Integer | &larr; | 配列の要素数 |
 
 <!-- END REF-->
 

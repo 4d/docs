@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESIZE FORM WINDOW.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| width | Integer | &#x1F852; | 現在のフォームウィンドウ幅に追加あるいは取り除く ピクセル数 |
-| height | Integer | &#x1F852; | 現在のフォームウィンドウ高に追加あるいは取り除く ピクセル数 |
+| width | Integer | &srarr; | 現在のフォームウィンドウ幅に追加あるいは取り除く ピクセル数 |
+| height | Integer | &srarr; | 現在のフォームウィンドウ高に追加あるいは取り除く ピクセル数 |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL GET LAST ERROR.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| errCode | Integer | &#x1F858; | Código del error |
-| errText | Text | &#x1F858; | Texto del error |
-| errODBC | Text | &#x1F858; | Código del error ODBC |
-| errSQLServer | Integer | &#x1F858; | Código del error nativo servidor SQL |
+| errCode | Integer | &harr; | Código del error |
+| errText | Text | &harr; | Texto del error |
+| errODBC | Text | &harr; | Código del error ODBC |
+| errSQLServer | Integer | &harr; | Código del error nativo servidor SQL |
 
 <!-- END REF-->
 

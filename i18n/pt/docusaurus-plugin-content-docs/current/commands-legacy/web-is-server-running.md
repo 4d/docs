@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Is server running.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Boolean | &#x1F850; | True se o servidor Web está sendo executado, caso contrário False |
+| Resultado | Boolean | &larr; | True se o servidor Web está sendo executado, caso contrário False |
 
 <!-- END REF-->
 

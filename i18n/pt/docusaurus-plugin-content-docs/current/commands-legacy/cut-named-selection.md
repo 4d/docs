@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CUT NAMED SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#x1F852; | Tabela da qual cortar seleção, ou Tabela por padrão, se omitida |
-| nome | Text | &#x1F852; | Nome da seleção temporal a criar |
+| tabela | Table | &srarr; | Tabela da qual cortar seleção, ou Tabela por padrão, se omitida |
+| nome | Text | &srarr; | Nome da seleção temporal a criar |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM Get color scheme.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Text | &#x1F850; | カレントフォームのカラースキーム: "light" または "dark" |
+| 戻り値 | Text | &larr; | カレントフォームのカラースキーム: "light" または "dark" |
 
 <!-- END REF-->
 

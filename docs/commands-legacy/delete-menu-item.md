@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE MENU ITEM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#x1F852; | Menu number or Menu reference |
-| menuItem | Integer | &#x1F852; | Menu item number or -1 for last item added |
-| process | Integer | &#x1F852; | Process reference number |
+| menu | Integer, Text | &srarr; | Menu number or Menu reference |
+| menuItem | Integer | &srarr; | Menu item number or -1 for last item added |
+| process | Integer | &srarr; | Process reference number |
 
 <!-- END REF-->
 

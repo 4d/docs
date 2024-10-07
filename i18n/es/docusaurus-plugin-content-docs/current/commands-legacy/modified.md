@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Modified.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campo | Field | &#x1F852; | Campo a probar |
-| Resultado | Boolean | &#x1F850; | Verdadero si se ha asignado un nuevo valor al campo, de lo contrario Falso |
+| campo | Field | &srarr; | Campo a probar |
+| Resultado | Boolean | &larr; | Verdadero si se ha asignado un nuevo valor al campo, de lo contrario Falso |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Request.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| message | Text | &#x1F852; | リクエストダイアログボックスに表示するメッセージ |
-| defaultResponse | Text | &#x1F852; | テキスト入力エリアにデフォルトで表示するデータ |
-| OKButtonTitle | Text | &#x1F852; | OKボタンのタイトル |
-| CancelButtonTitle | Text | &#x1F852; | キャンセルボタンのタイトル |
-| 戻り値 | Text | &#x1F850; | ユーザが入力した値 |
+| message | Text | &srarr; | リクエストダイアログボックスに表示するメッセージ |
+| defaultResponse | Text | &srarr; | テキスト入力エリアにデフォルトで表示するデータ |
+| OKButtonTitle | Text | &srarr; | OKボタンのタイトル |
+| CancelButtonTitle | Text | &srarr; | キャンセルボタンのタイトル |
+| 戻り値 | Text | &larr; | ユーザが入力した値 |
 
 <!-- END REF-->
 

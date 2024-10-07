@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Is styled text.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | any | &#x1F852; | Nome de objeto (se especificado *) ou<br/>Campo ou variável (se omitido *) |
-| Resultado | Boolean | &#x1F850; | True se o objeto é um texto multi estilo, False em caso contrário |
+| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
+| objeto | any | &srarr; | Nome de objeto (se especificado *) ou<br/>Campo ou variável (se omitido *) |
+| Resultado | Boolean | &larr; | True se o objeto é um texto multi estilo, False em caso contrário |
 
 <!-- END REF-->
 

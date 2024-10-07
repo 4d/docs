@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | カレントセレクションのテーブル |
-| recordArray | Integer array | &#x1F858; | レコード番号配列 |
-| selection | Text | &#x1F852; | 命名セレクション名、または 省略した場合カレントセレクション |
+| aTable | Table | &srarr; | カレントセレクションのテーブル |
+| recordArray | Integer array | &harr; | レコード番号配列 |
+| selection | Text | &srarr; | 命名セレクション名、または 省略した場合カレントセレクション |
 
 <!-- END REF-->
 

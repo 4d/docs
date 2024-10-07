@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SEND PACKET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Time | Time | &#x1F852; | ドキュメント参照番号, または カレントのチャンネル (シリアルポートまたはドキュメント) |
-| packet | Text, Blob | &#x1F852; | 送信する文字またはBLOB |
+| Time | Time | &srarr; | ドキュメント参照番号, または カレントのチャンネル (シリアルポートまたはドキュメント) |
+| packet | Text, Blob | &srarr; | 送信する文字またはBLOB |
 
 <!-- END REF-->
 

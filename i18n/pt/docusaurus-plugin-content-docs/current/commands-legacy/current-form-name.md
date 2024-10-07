@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current form name.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Text | &#x1F850; | Nome do projeto de formulário atual ou tabela formulário atual no processo |
+| Resultado | Text | &larr; | Nome do projeto de formulário atual ou tabela formulário atual no processo |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#x1F852; | Tabela para a qual vai ordenar registros selecionados, ou a tabela padrão, se omitido |
-| campoObjeto | Object | &#x1F852; | Campo Objeto contendo o atributo de ordenação |
-| rotaAtrib | Text | &#x1F852; | Nome ou rota do atributo para o qual vai estabelecer a ordem para cada nível |
-| > ou < | Operador | &#x1F852; | Direção de ordenação para cada nível: > para ordenar em ordem ascendente, ou < para ordenar em ordem descendente. |
-| * | Operador | &#x1F852; | Continuar a bandeira de ordem |
+| tabela | Table | &srarr; | Tabela para a qual vai ordenar registros selecionados, ou a tabela padrão, se omitido |
+| campoObjeto | Object | &srarr; | Campo Objeto contendo o atributo de ordenação |
+| rotaAtrib | Text | &srarr; | Nome ou rota do atributo para o qual vai estabelecer a ordem para cada nível |
+| > ou < | Operador | &srarr; | Direção de ordenação para cada nível: > para ordenar em ordem ascendente, ou < para ordenar em ordem descendente. |
+| * | Operador | &srarr; | Continuar a bandeira de ordem |
 
 <!-- END REF-->
 

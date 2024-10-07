@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Discover data key.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#x1F850; | True if a valid encryption key for the currently open data file has been found, else False |
+| Function result | Boolean | &larr; | True if a valid encryption key for the currently open data file has been found, else False |
 
 <!-- END REF-->
 

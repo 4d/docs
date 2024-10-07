@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MENU ITEM ICON.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#x1F852; | Referencia de menú o número de menú |
-| lineamenu | Integer | &#x1F852; | Número de línea de menú o -1 para el último elemento añadido al menú |
-| refIcono | Text, Integer | &#x1F858; | Nombre o número de imagen asociado con la línea de menú |
-| proceso | Integer | &#x1F852; | Número de proceso |
+| menu | Integer, Text | &srarr; | Referencia de menú o número de menú |
+| lineamenu | Integer | &srarr; | Número de línea de menú o -1 para el último elemento añadido al menú |
+| refIcono | Text, Integer | &harr; | Nombre o número de imagen asociado con la línea de menú |
+| proceso | Integer | &srarr; | Número de proceso |
 
 <!-- END REF-->
 

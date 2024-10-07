@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PICTURE TO PASTEBOARD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| imagem | Picture | &#x1F852; | Imagem a ser colocada na área de transferência |
+| imagem | Picture | &srarr; | Imagem a ser colocada na área de transferência |
 
 <!-- END REF-->
 

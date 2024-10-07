@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.Set user properties.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| userID | Integer | &#x1F852; | Unique ID number of user account, -1 for adding a user |
-| &#x1F858; | Unique ID number of added user account (if any) |
-| name | Text | &#x1F852; | New user name |
-| startup | Text | &#x1F852; | Name of new user startup method |
-| password | Text | &#x1F852; | New (unencrypted) password, or * to leave the password unchanged |
-| nbLogin | Integer | &#x1F852; | New number of logins to the database (Binary databases only) |
-| lastLogin | Date | &#x1F852; | New date of last login to the database (Binary databases only) |
-| memberships | Integer array | &#x1F852; | ID numbers of groups to which the user belongs |
-| groupOwner | Integer | &#x1F852; | Reference number of user group owner (Binary databases only) |
-| Function result | Longint | &#x1F850; | Unique ID number of new user |
+| userID | Integer | &srarr; | Unique ID number of user account, -1 for adding a user |
+| &harr; | Unique ID number of added user account (if any) |
+| name | Text | &srarr; | New user name |
+| startup | Text | &srarr; | Name of new user startup method |
+| password | Text | &srarr; | New (unencrypted) password, or * to leave the password unchanged |
+| nbLogin | Integer | &srarr; | New number of logins to the database (Binary databases only) |
+| lastLogin | Date | &srarr; | New date of last login to the database (Binary databases only) |
+| memberships | Integer array | &srarr; | ID numbers of groups to which the user belongs |
+| groupOwner | Integer | &srarr; | Reference number of user group owner (Binary databases only) |
+| Function result | Longint | &larr; | Unique ID number of new user |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Count columns.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#x1F852; | Referencia del área |
-| Resultado | Integer | &#x1F850; | Número de columnas en el área |
+| area | Integer | &srarr; | Referencia del área |
+| Resultado | Integer | &larr; | Número de columnas en el área |
 
 <!-- END REF-->
 

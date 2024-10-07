@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP Get certificates folder.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Text | &#x1F850; | Ruta completa de la carpeta de certificados activa |
+| Resultado | Text | &larr; | Ruta completa de la carpeta de certificados activa |
 
 <!-- END REF-->
 

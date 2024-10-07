@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT MOVE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified= object is an object name (string) If omitted = object is a variable |
-| object | any | &#x1F852; | Object name (if * is specified) or Field or variable (if * is omitted) |
-| moveH | Integer | &#x1F852; | Value of the horizontal move of the object (>0 = to the right, <0 = to the left) |
-| moveV | Integer | &#x1F852; | Value of the vertical move of the object (>0 = to the bottom, <0 = to the top) |
-| resizeH | Integer | &#x1F852; | Value of the horizontal resize of the object |
-| resizeV | Integer | &#x1F852; | Value of the vertical resize of the object |
-| * | Operator | &#x1F852; | If specified = absolute coordinates If omitted = relative coordinates |
+| * | Operator | &srarr; | If specified= object is an object name (string) If omitted = object is a variable |
+| object | any | &srarr; | Object name (if * is specified) or Field or variable (if * is omitted) |
+| moveH | Integer | &srarr; | Value of the horizontal move of the object (>0 = to the right, <0 = to the left) |
+| moveV | Integer | &srarr; | Value of the vertical move of the object (>0 = to the bottom, <0 = to the top) |
+| resizeH | Integer | &srarr; | Value of the horizontal resize of the object |
+| resizeV | Integer | &srarr; | Value of the vertical resize of the object |
+| * | Operator | &srarr; | If specified = absolute coordinates If omitted = relative coordinates |
 
 <!-- END REF-->
 

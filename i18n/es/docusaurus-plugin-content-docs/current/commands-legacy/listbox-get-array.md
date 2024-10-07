@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get array.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es una variable |
-| objeto | any | &#x1F852; | Nombre de objeto (si * se especifica) o<br/>Variable (si * se omite) |
-| tipoArray | Integer | &#x1F852; | Tipo de array |
-| Resultado | Pointer | &#x1F850; | Puntero al array asociado a la propiedad |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es una variable |
+| objeto | any | &srarr; | Nombre de objeto (si * se especifica) o<br/>Variable (si * se omite) |
+| tipoArray | Integer | &srarr; | Tipo de array |
+| Resultado | Pointer | &larr; | Puntero al array asociado a la propiedad |
 
 <!-- END REF-->
 

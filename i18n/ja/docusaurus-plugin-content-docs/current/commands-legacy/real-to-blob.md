@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.REAL TO BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| real | Real | &#x1F852; | BLOBに書き込む実数値 |
-| Blob | Blob | &#x1F852; | 実数値を受け取るBLOB |
-| realFormat | Integer | &#x1F852; | 0 Native real format 1 Extended real format 2  Macintosh Double real format 3  Windows Double real format |
-| offset &#124; * | 変数, 演算子 | &#x1F852; | BLOB内のオフセット (バイト単位) または値を追加する場合 * |
-| &#x1F858; | *でない場合、書き込み後の新しいオフセット |
+| real | Real | &srarr; | BLOBに書き込む実数値 |
+| Blob | Blob | &srarr; | 実数値を受け取るBLOB |
+| realFormat | Integer | &srarr; | 0 Native real format 1 Extended real format 2  Macintosh Double real format 3  Windows Double real format |
+| offset &#124; * | 変数, 演算子 | &srarr; | BLOB内のオフセット (バイト単位) または値を追加する場合 * |
+| &harr; | *でない場合、書き込み後の新しいオフセット |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Folder.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota &#124;4Dfolder | Texto, Inteiro longo | &#x1F852; | Rota pasta ou constante 4D folder |
-| tipoRota &#124; * | Inteiro longo, Operador | &#x1F852; | Se rota for passada: rota fk posix (padrão) ou rota fk plataforma  Se 4Dfolder for passada: * para retornar pasta ou host database |
-| Resultado | Object | &#x1F850; | Novo objeto pasta |
+| rota &#124;4Dfolder | Texto, Inteiro longo | &srarr; | Rota pasta ou constante 4D folder |
+| tipoRota &#124; * | Inteiro longo, Operador | &srarr; | Se rota for passada: rota fk posix (padrão) ou rota fk plataforma  Se 4Dfolder for passada: * para retornar pasta ou host database |
+| Resultado | Object | &larr; | Novo objeto pasta |
 
 <!-- END REF-->
 

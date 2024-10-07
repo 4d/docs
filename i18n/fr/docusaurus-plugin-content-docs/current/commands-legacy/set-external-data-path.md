@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET EXTERNAL DATA PATH.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leChamp | Text, Blob, Picture | &#x1F852; | Champ pour lequel définir le lieu de stockage |
-| chemin | Text, Integer | &#x1F852; | Chemin d’accès et nom du fichier de stockage externe ou<br/>0 = utiliser la définition en structure<br/>1 = utiliser le dossier par défaut |
+| leChamp | Text, Blob, Picture | &srarr; | Champ pour lequel définir le lieu de stockage |
+| chemin | Text, Integer | &srarr; | Chemin d’accès et nom du fichier de stockage externe ou<br/>0 = utiliser la définition en structure<br/>1 = utiliser le dossier par défaut |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.New shared collection.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| value | &#x1F852; | 共有コレクションの値 |
-| 戻り値 | Collection | &#x1F850; | 新規の共有コレクション |
+| value | &srarr; | 共有コレクションの値 |
+| 戻り値 | Collection | &larr; | 新規の共有コレクション |
 
 <!-- END REF-->
 

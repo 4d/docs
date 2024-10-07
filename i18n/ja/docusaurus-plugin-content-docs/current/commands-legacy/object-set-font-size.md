@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET FONT SIZE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | any | &#x1F852; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
-| size | Integer | &#x1F852; | フォントサイズ (ポイント) |
+| * | 演算子 | &srarr; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &srarr; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
+| size | Integer | &srarr; | フォントサイズ (ポイント) |
 
 <!-- END REF-->
 

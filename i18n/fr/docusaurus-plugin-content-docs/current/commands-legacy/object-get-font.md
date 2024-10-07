@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get font.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
-| Résultat | Text | &#x1F850; | Nom de la police |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| Résultat | Text | &larr; | Nom de la police |
 
 <!-- END REF-->
 

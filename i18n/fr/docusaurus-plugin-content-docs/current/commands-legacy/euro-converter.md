@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Euro converter.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| valeur | Real | &#x1F852; | Valeur à convertir |
-| deMonnaie | Text | &#x1F852; | Code ISO de la monnaie dans laquelle la valeur est exprimée |
-| versMonnaie | Text | &#x1F852; | Code ISO de la monnaie dans laquelle la valeur doit être convertie |
-| Résultat | Real | &#x1F850; | Valeur convertie |
+| valeur | Real | &srarr; | Valeur à convertir |
+| deMonnaie | Text | &srarr; | Code ISO de la monnaie dans laquelle la valeur est exprimée |
+| versMonnaie | Text | &srarr; | Code ISO de la monnaie dans laquelle la valeur doit être convertie |
+| Résultat | Real | &larr; | Valeur convertie |
 
 <!-- END REF-->
 

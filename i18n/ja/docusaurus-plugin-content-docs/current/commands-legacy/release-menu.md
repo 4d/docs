@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RELEASE MENU.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Text | &#x1F852; | メニュー参照 |
+| menu | Text | &srarr; | メニュー参照 |
 
 <!-- END REF-->
 

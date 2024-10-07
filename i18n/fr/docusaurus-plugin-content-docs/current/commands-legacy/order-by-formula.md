@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ORDER BY FORMULA.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table de laquelle trier la sélection d'enregistrements |
-| formule | Expression | &#x1F852; | Formule de tri des enregistrements (peut être de type Alphanumérique, Réel, Entier, Entier long, Date, Heure ou Booléen) |
-| > ou < | Opérateur | &#x1F852; | Ordre de tri pour chaque niveau : > ordre croissant ou < ordre décroissant |
+| laTable | Table | &srarr; | Table de laquelle trier la sélection d'enregistrements |
+| formule | Expression | &srarr; | Formule de tri des enregistrements (peut être de type Alphanumérique, Réel, Entier, Entier long, Date, Heure ou Booléen) |
+| > ou < | Opérateur | &srarr; | Ordre de tri pour chaque niveau : > ordre croissant ou < ordre décroissant |
 
 <!-- END REF-->
 

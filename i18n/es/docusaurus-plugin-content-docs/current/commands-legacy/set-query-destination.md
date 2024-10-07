@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET QUERY DESTINATION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| destinoTipo | Integer | &#x1F852; | 0 = selección actual, 1 = conjunto, 2 = selección temporal, 3 = variable |
-| destinoObjeto | Text, Variable | &#x1F852; | Nombre del conjunto o Nombre de la selección temporal o variable |
-| destPunt | Pointer | &#x1F852; | Puntero a la variable local si destinoTipo=3 |
+| destinoTipo | Integer | &srarr; | 0 = selección actual, 1 = conjunto, 2 = selección temporal, 3 = variable |
+| destinoObjeto | Text, Variable | &srarr; | Nombre del conjunto o Nombre de la selección temporal o variable |
+| destPunt | Pointer | &srarr; | Puntero a la variable local si destinoTipo=3 |
 
 <!-- END REF-->
 

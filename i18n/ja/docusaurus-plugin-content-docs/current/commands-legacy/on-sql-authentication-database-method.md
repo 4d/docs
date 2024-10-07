@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.On SQL Authentication database method.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| $1 | テキスト | &#x1F858; | ユーザー名 |
-| $2 | テキスト | &#x1F858; | パスワード |
-| $3 | テキスト | &#x1F858; | (オプション) リクエスト送信元クライアントのIPアドレス |
-| 戻り値 | Boolean | &#x1F850; | True = リクエストを受け入れる、False = リクエストを拒否する |
+| $1 | テキスト | &harr; | ユーザー名 |
+| $2 | テキスト | &harr; | パスワード |
+| $3 | テキスト | &harr; | (オプション) リクエスト送信元クライアントのIPアドレス |
+| 戻り値 | Boolean | &larr; | True = リクエストを受け入れる、False = リクエストを拒否する |
 
 <!-- END REF-->
 

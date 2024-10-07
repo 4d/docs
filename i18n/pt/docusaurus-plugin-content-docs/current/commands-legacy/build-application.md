@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.BUILD APPLICATION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| constrAppConfigurações | Text | &#x1F852; | Endereço de acesso completo do arquivo de configurações a ser usado |
+| constrAppConfigurações | Text | &srarr; | Endereço de acesso completo do arquivo de configurações a ser usado |
 
 <!-- END REF-->
 

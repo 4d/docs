@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Is defined.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | Object, Campo Object | &#x1F852; | Objeto estructurado |
-| propiedad | Text | &#x1F852; | Si se pasa = propiedad a verificar, si se omite = verificar el objeto |
-| Resultado | Boolean | &#x1F850; | Si propiedad se omite: True si objeto está definido, de lo contrario False.<br/>Si propiedad se pasa: True si propiedad está definida, de lo contrario False |
+| objeto | Object, Campo Object | &srarr; | Objeto estructurado |
+| propiedad | Text | &srarr; | Si se pasa = propiedad a verificar, si se omite = verificar el objeto |
+| Resultado | Boolean | &larr; | Si propiedad se omite: True si objeto está definido, de lo contrario False.<br/>Si propiedad se pasa: True si propiedad está definida, de lo contrario False |
 
 <!-- END REF-->
 

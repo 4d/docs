@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table for which to delete the current selection, or Default table, if omitted |
+| aTable | Table | &srarr; | Table for which to delete the current selection, or Default table, if omitted |
 
 <!-- END REF-->
 

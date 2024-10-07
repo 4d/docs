@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get action info.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| action | Text | &#x1F852; | Nombre o patrón de acción estándar incluyendo el parámetro si es necesario |
-| objetivo | Integer | &#x1F852; | Define el objetivo de la acción para obtener información: forma principal o forma actual |
-| Resultado | Object | &#x1F850; | Objeto que contiene el estado de la acción como propiedades booleanas: isEnabled, isVisible, isChecked, isMixed, isUnknownState |
+| action | Text | &srarr; | Nombre o patrón de acción estándar incluyendo el parámetro si es necesario |
+| objetivo | Integer | &srarr; | Define el objetivo de la acción para obtener información: forma principal o forma actual |
+| Resultado | Object | &larr; | Objeto que contiene el estado de la acción como propiedades booleanas: isEnabled, isVisible, isChecked, isMixed, isUnknownState |
 
 <!-- END REF-->
 

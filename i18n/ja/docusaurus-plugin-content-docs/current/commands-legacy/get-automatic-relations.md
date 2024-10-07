@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| one | Boolean | &#x1F858; | すべてのn対1リレートの状態 |
-| many | Boolean | &#x1F858; | すべての1対nリレートの状態 |
+| one | Boolean | &harr; | すべてのn対1リレートの状態 |
+| many | Boolean | &harr; | すべての1対nリレートの状態 |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GOTO SELECTED RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table in which to go to the selected record, or Default table, if omitted |
-| record | Integer | &#x1F852; | Position of record in the selection |
+| aTable | Table | &srarr; | Table in which to go to the selected record, or Default table, if omitted |
+| record | Integer | &srarr; | Position of record in the selection |
 
 <!-- END REF-->
 

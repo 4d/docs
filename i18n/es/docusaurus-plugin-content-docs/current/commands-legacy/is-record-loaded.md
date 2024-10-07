@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is record loaded.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#x1F852; | Tabla del registro a examinar o Tabla por defecto si se omite este parámetro |
-| Resultado | Boolean | &#x1F850; | True si se carga el registro Si no False |
+| tabla | Table | &srarr; | Tabla del registro a examinar o Tabla por defecto si se omite este parámetro |
+| Resultado | Boolean | &larr; | True si se carga el registro Si no False |
 
 <!-- END REF-->
 

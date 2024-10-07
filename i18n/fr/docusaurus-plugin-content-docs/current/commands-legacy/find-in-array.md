@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Find in array.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableau | Array | &#x1F852; | Tableau dans lequel effectuer la recherche |
-| valeur | Expression | &#x1F852; | Valeur de même type à rechercher dans le tableau |
-| départ | Integer | &#x1F852; | Elément à partir duquel commencer la recherche |
-| Résultat | Integer | &#x1F850; | Numéro du premier élément trouvé correspondant à valeur |
+| tableau | Array | &srarr; | Tableau dans lequel effectuer la recherche |
+| valeur | Expression | &srarr; | Valeur de même type à rechercher dans le tableau |
+| départ | Integer | &srarr; | Elément à partir duquel commencer la recherche |
+| Résultat | Integer | &larr; | Numéro du premier élément trouvé correspondant à valeur |
 
 <!-- END REF-->
 

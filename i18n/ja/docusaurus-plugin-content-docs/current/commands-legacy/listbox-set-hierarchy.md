@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET HIERARCHY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時、objectはオブジェクト名 (文字列)<br/>省略時、objectは変数 |
-| object | any | &#x1F852; | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
-| hierarchical | Boolean | &#x1F852; | True = 階層リストボックス<br/>False = 非階層リストボックス |
-| hierarchy | Pointer array | &#x1F852; | ポインタの配列 |
+| * | 演算子 | &srarr; | 指定時、objectはオブジェクト名 (文字列)<br/>省略時、objectは変数 |
+| object | any | &srarr; | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
+| hierarchical | Boolean | &srarr; | True = 階層リストボックス<br/>False = 非階層リストボックス |
+| hierarchy | Pointer array | &srarr; | ポインタの配列 |
 
 <!-- END REF-->
 

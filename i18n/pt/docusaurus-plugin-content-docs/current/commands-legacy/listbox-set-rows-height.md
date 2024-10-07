@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET ROWS HEIGHT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| altura | Integer | &#x1F852; | Altura da linha (em pixels) |
-| unidade da altura | Inteiro longo | &#x1F852; | 0 ou se omitido = pixels, 1=linhas |
+| * | Operador | &srarr; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &srarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| altura | Integer | &srarr; | Altura da linha (em pixels) |
+| unidade da altura | Inteiro longo | &srarr; | 0 ou se omitido = pixels, 1=linhas |
 
 <!-- END REF-->
 

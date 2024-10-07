@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Old.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &#x1F852; | Champ dont vous voulez obtenir l'ancienne valeur |
-| Résultat | Expression | &#x1F850; | Valeur originale de champ |
+| leField | Field | &srarr; | Champ dont vous voulez obtenir l'ancienne valeur |
+| Résultat | Expression | &larr; | Valeur originale de champ |
 
 <!-- END REF-->
 

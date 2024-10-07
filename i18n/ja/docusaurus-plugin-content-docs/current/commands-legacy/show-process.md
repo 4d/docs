@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SHOW PROCESS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| process | Integer | &#x1F852; | 表示させるプロセスのプロセス番号 |
+| process | Integer | &srarr; | 表示させるプロセスのプロセス番号 |
 
 <!-- END REF-->
 

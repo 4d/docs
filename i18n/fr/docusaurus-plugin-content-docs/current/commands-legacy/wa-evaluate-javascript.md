@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Evaluate JavaScript.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| codeJS | Text | &#x1F852; | Code JavaScript |
-| type | Integer | &#x1F852; | Type dans lequel convertir le résultat |
-| Résultat | Date, Time, Object, Pointer, Real, Text | &#x1F850; | Résultat de l’exécution |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| codeJS | Text | &srarr; | Code JavaScript |
+| type | Integer | &srarr; | Type dans lequel convertir le résultat |
+| Résultat | Date, Time, Object, Pointer, Real, Text | &larr; | Résultat de l’exécution |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.On Backup Startup database method.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| $0 | Entier long | &#x1F850; | 0 = sauvegarde autorisée, valeur autre que 0 = sauvegarde non autorisée |
+| $0 | Entier long | &larr; | 0 = sauvegarde autorisée, valeur autre que 0 = sauvegarde non autorisée |
 
 <!-- END REF-->
 

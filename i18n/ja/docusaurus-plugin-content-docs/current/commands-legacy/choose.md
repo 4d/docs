@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Choose.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| criterion | Boolean, Integer | &#x1F852; | テストする値 |
-| value | Expression | &#x1F852; | 可能な値 |
-| 戻り値 | Expression | &#x1F850; | 条件の値 |
+| criterion | Boolean, Integer | &srarr; | テストする値 |
+| value | Expression | &srarr; | 可能な値 |
+| 戻り値 | Expression | &larr; | 条件の値 |
 
 <!-- END REF-->
 

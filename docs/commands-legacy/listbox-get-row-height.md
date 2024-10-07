@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get row height.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| row | Integer | &#x1F852; | List box row whose height you want to get |
-| Function result | Integer | &#x1F850; | Row height |
+| * | Operator | &srarr; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &srarr; | Object name (if * is specified) or Variable (if * is omitted) |
+| row | Integer | &srarr; | List box row whose height you want to get |
+| Function result | Integer | &larr; | Row height |
 
 <!-- END REF-->
 

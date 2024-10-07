@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.ST GET ATTRIBUTES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
-| débutSél | Integer | &#x1F852; | Début de la sélection de texte |
-| finSél | Integer | &#x1F852; | Fin de la sélection de texte |
-| nomAttribut | Integer | &#x1F852; | Attribut à lire |
-| valeurAttribut | Variable | &#x1F858; | Valeur courante de l’attribut |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| débutSél | Integer | &srarr; | Début de la sélection de texte |
+| finSél | Integer | &srarr; | Fin de la sélection de texte |
+| nomAttribut | Integer | &srarr; | Attribut à lire |
+| valeurAttribut | Variable | &harr; | Valeur courante de l’attribut |
 
 <!-- END REF-->
 

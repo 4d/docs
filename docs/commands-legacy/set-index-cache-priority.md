@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET INDEX CACHE PRIORITY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &#x1F852; | Field whose index(es) priority value has to be set for the session |
-| priority | Integer | &#x1F852; | Cache priority value for the field index(es) |
+| aField | Field | &srarr; | Field whose index(es) priority value has to be set for the session |
+| priority | Integer | &srarr; | Cache priority value for the field index(es) |
 
 <!-- END REF-->
 

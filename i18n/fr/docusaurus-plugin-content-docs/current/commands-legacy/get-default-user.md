@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get default user.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Integer | &#x1F850; | Numéro de référence unique de l’utilisateur |
+| Résultat | Integer | &larr; | Numéro de référence unique de l’utilisateur |
 
 <!-- END REF-->
 

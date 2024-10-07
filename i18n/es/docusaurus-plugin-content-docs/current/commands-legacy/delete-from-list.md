@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE FROM LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
-| lista | Integer, Text | &#x1F852; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
-| refElem &#124; * | Entero largo, Operador | &#x1F852; | Número de referencia del elemento, o 0 para el último elemento añadido a la lista o * para el elemento de la lista actualmente seleccionada |
-| * | &#x1F852; | Si se especifica, borra las sublistas (si la hay) de la memoria Si se omite, las sublistas (si las hay) no son borradas |
+| * | Operador | &srarr; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
+| lista | Integer, Text | &srarr; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
+| refElem &#124; * | Entero largo, Operador | &srarr; | Número de referencia del elemento, o 0 para el último elemento añadido a la lista o * para el elemento de la lista actualmente seleccionada |
+| * | &srarr; | Si se especifica, borra las sublistas (si la hay) de la memoria Si se omite, las sublistas (si las hay) no son borradas |
 
 <!-- END REF-->
 

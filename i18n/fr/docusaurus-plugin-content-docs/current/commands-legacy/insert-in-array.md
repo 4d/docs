@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.INSERT IN ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableau | Array | &#x1F852; | Nom du tableau dans lequel insérer des éléments |
-| positionDépart | Integer | &#x1F852; | Position de départ du ou des élément(s) à insérer |
-| combien | Integer | &#x1F852; | Nombre d'éléments à insérer ou 1 élément si ce paramètre est omis |
+| tableau | Array | &srarr; | Nom du tableau dans lequel insérer des éléments |
+| positionDépart | Integer | &srarr; | Position de départ du ou des élément(s) à insérer |
+| combien | Integer | &srarr; | Nombre d'éléments à insérer ou 1 élément si ce paramètre est omis |
 
 <!-- END REF-->
 

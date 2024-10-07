@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Length.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chaîne | Text | &#x1F852; | Chaîne dont vous voulez connaître la longueur |
-| Résultat | Integer | &#x1F850; | Nombre de caractères de chaîne |
+| chaîne | Text | &srarr; | Chaîne dont vous voulez connaître la longueur |
+| Résultat | Integer | &larr; | Nombre de caractères de chaîne |
 
 <!-- END REF-->
 

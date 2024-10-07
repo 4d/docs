@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD RESOLVE PATH.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin | Text | &#x1F852; | Chemin à résoudre |
-| typeMéthode | Integer | &#x1F858; | Sélecteur de type d’objet |
-| ptrTable | Pointer | &#x1F858; | Référence de table |
-| nomObjet | Text | &#x1F858; | Nom de formulaire ou de méthode base |
-| nomObjetForm | Text | &#x1F858; | Nom d’objet du formulaire |
-| * | Opérateur | &#x1F852; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| chemin | Text | &srarr; | Chemin à résoudre |
+| typeMéthode | Integer | &harr; | Sélecteur de type d’objet |
+| ptrTable | Pointer | &harr; | Référence de table |
+| nomObjet | Text | &harr; | Nom de formulaire ou de méthode base |
+| nomObjetForm | Text | &harr; | Nom d’objet du formulaire |
+| * | Opérateur | &srarr; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
 

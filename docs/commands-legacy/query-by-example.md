@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY BY EXAMPLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table for which to return a selection of records, or Default table, if omitted |
-| * | Operator | &#x1F852; | If passed, the scrolling bar will not be displayed |
+| aTable | Table | &srarr; | Table for which to return a selection of records, or Default table, if omitted |
+| * | Operator | &srarr; | If passed, the scrolling bar will not be displayed |
 
 <!-- END REF-->
 

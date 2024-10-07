@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Contextual click.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Boolean | &#x1F850; | Verdadero si se detecta un clic contextual, de lo contrario Falso |
+| Resultado | Boolean | &larr; | Verdadero si se detecta un clic contextual, de lo contrario Falso |
 
 <!-- END REF-->
 

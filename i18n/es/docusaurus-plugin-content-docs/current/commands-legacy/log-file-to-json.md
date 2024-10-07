@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LOG FILE TO JSON.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaCarpetaDest | Text | &#x1F852; | Ruta de acceso de la carpeta de destino del archivo guardado |
-| tamMax | Integer | &#x1F852; | Tamaño máximo del archivo JSON a crear (bytes) |
-| rutaHist | Text | &#x1F852; | Ruta de acceso del archivo de historial a exportar; utilizar el historial actual si se omite |
-| atribCampo | Integer | &#x1F852; | Atributo de descripción del campo: 1 = utilizar número(por defecto), 2 = utilizar nombre |
+| rutaCarpetaDest | Text | &srarr; | Ruta de acceso de la carpeta de destino del archivo guardado |
+| tamMax | Integer | &srarr; | Tamaño máximo del archivo JSON a crear (bytes) |
+| rutaHist | Text | &srarr; | Ruta de acceso del archivo de historial a exportar; utilizar el historial actual si se omite |
+| atribCampo | Integer | &srarr; | Atributo de descripción del campo: 1 = utilizar número(por defecto), 2 = utilizar nombre |
 
 <!-- END REF-->
 

@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Open form window.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | フォームが属するテーブル、または省略時デフォルトテーブル |
-| formName | Text, Object | &#x1F852; | プロジェクトフォームまたはテーブルフォームのフォーム名(文字列)、<br/>あるいはフォームを定義した.jsonファイルへのPOSIXパス(文字列)、<br/>あるいは開くフォームを定義したオブジェクト |
-| type | Integer | &#x1F852; | ウィンドウタイプ |
-| hPos | Integer | &#x1F852; | ウィンドウの横位置 |
-| vPos | Integer | &#x1F852; | ウィンドウの縦位置 |
-| * | 演算子 | &#x1F852; | ウィンドウの現在の位置とサイズを保存 |
-| 戻り値 | Integer | &#x1F850; | ウィンドウ参照番号 |
+| aTable | Table | &srarr; | フォームが属するテーブル、または省略時デフォルトテーブル |
+| formName | Text, Object | &srarr; | プロジェクトフォームまたはテーブルフォームのフォーム名(文字列)、<br/>あるいはフォームを定義した.jsonファイルへのPOSIXパス(文字列)、<br/>あるいは開くフォームを定義したオブジェクト |
+| type | Integer | &srarr; | ウィンドウタイプ |
+| hPos | Integer | &srarr; | ウィンドウの横位置 |
+| vPos | Integer | &srarr; | ウィンドウの縦位置 |
+| * | 演算子 | &srarr; | ウィンドウの現在の位置とサイズを保存 |
+| 戻り値 | Integer | &larr; | ウィンドウ参照番号 |
 
 <!-- END REF-->
 

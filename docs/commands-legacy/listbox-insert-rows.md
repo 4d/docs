@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX INSERT ROWS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| rowPosition | Integer | &#x1F852; | Position of the row to insert |
-| numRows | Integer | &#x1F852; | Number of rows to insert |
+| * | Operator | &srarr; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &srarr; | Object name (if * is specified) or Variable (if * is omitted) |
+| rowPosition | Integer | &srarr; | Position of the row to insert |
+| numRows | Integer | &srarr; | Number of rows to insert |
 
 <!-- END REF-->
 

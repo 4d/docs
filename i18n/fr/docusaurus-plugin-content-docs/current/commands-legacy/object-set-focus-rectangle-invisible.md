@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET FOCUS RECTANGLE INVISIBLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| invisible | Boolean | &#x1F852; | Vrai = rectangle focus caché, Faux = rectangle focus visible |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| invisible | Boolean | &srarr; | Vrai = rectangle focus caché, Faux = rectangle focus visible |
 
 <!-- END REF-->
 

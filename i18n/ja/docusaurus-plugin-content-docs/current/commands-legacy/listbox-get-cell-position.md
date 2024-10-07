@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET CELL POSITION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &#x1F852; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| X | Real | &#x1F852; | マウスカーソルの X座標 |
-| Y | Real | &#x1F852; | マウスカーソルの Y座標 |
-| column | Integer | &#x1F858; | 列番号 |
-| row | Integer | &#x1F858; | 行番号 |
-| colVar | Pointer | &#x1F858; | 列変数へのポインタ |
+| * | 演算子 | &srarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &srarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| X | Real | &srarr; | マウスカーソルの X座標 |
+| Y | Real | &srarr; | マウスカーソルの Y座標 |
+| column | Integer | &harr; | 列番号 |
+| row | Integer | &harr; | 行番号 |
+| colVar | Pointer | &harr; | 列変数へのポインタ |
 
 <!-- END REF-->
 

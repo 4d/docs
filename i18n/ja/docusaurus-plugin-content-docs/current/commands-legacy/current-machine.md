@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current machine.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Text | &#x1F850; | マシンのネットワークの名前 |
+| 戻り値 | Text | &larr; | マシンのネットワークの名前 |
 
 <!-- END REF-->
 

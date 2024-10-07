@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.HIGHLIGHT TEXT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é um campo ou variável. |
-| area | Field, Variable, any | &#x1F852; | Nome de objeto (se * for especificado), ou campo editável ou variável (se * for omitido) |
-| inicioSel | Integer | &#x1F852; | Posição inicial da seleção de texto |
-| fimSel | Integer | &#x1F852; | Posição final da seleção de texto |
+| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é um campo ou variável. |
+| area | Field, Variable, any | &srarr; | Nome de objeto (se * for especificado), ou campo editável ou variável (se * for omitido) |
+| inicioSel | Integer | &srarr; | Posição inicial da seleção de texto |
+| fimSel | Integer | &srarr; | Posição final da seleção de texto |
 
 <!-- END REF-->
 

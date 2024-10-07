@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Open form window.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table du formulaire ou Table par défaut si ce paramètre est omis |
-| nomForm | Text, Object | &#x1F852; | Nom du formulaire table ou projet (chaîne), ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
-| type | Integer | &#x1F852; | Type de la fenêtre |
-| posH | Integer | &#x1F852; | Position horizontale de la fenêtre |
-| posV | Integer | &#x1F852; | Position verticale de la fenêtre |
-| * | Opérateur | &#x1F852; | Conserver la position et la taille précédentes de la fenêtre |
-| Résultat | Integer | &#x1F850; | Numéro de référence de la fenêtre |
+| laTable | Table | &srarr; | Table du formulaire ou Table par défaut si ce paramètre est omis |
+| nomForm | Text, Object | &srarr; | Nom du formulaire table ou projet (chaîne), ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
+| type | Integer | &srarr; | Type de la fenêtre |
+| posH | Integer | &srarr; | Position horizontale de la fenêtre |
+| posV | Integer | &srarr; | Position verticale de la fenêtre |
+| * | Opérateur | &srarr; | Conserver la position et la taille précédentes de la fenêtre |
+| Résultat | Integer | &larr; | Numéro de référence de la fenêtre |
 
 <!-- END REF-->
 

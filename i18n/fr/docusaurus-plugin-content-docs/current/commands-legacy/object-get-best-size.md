@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET BEST SIZE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié = objet est un nom d'objet (chaîne) Si omis = objet est une variable |
-| objet | any | &#x1F852; | Nom d’objet (si * est spécifié) ou Champ ou variable (si * est omis |
-| largeurOpti | Integer | &#x1F858; | Largeur optimale de l’objet |
-| hauteurOpti | Integer | &#x1F858; | Hauteur optimale de l’objet |
-| largeurMaxi | Integer | &#x1F852; | Largeur maximum de l’objet |
+| * | Opérateur | &srarr; | Si spécifié = objet est un nom d'objet (chaîne) Si omis = objet est une variable |
+| objet | any | &srarr; | Nom d’objet (si * est spécifié) ou Champ ou variable (si * est omis |
+| largeurOpti | Integer | &harr; | Largeur optimale de l’objet |
+| hauteurOpti | Integer | &harr; | Hauteur optimale de l’objet |
+| largeurMaxi | Integer | &srarr; | Largeur maximum de l’objet |
 
 <!-- END REF-->
 

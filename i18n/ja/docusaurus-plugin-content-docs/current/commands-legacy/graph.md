@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GRAPH.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| graphArea | Picture | &#x1F852; | ピクチャー変数 |
-| graphNumber | Integer, Object | &#x1F852; | 倍長整数:グラフタイプ番号 オブジェクト(64-bit版のみ):グラフ設定 |
-| xLabels | Array | &#x1F852; | X軸ラベル |
-| yElements | Array | &#x1F852; | グラフにするデータ (最大8個) |
+| graphArea | Picture | &srarr; | ピクチャー変数 |
+| graphNumber | Integer, Object | &srarr; | 倍長整数:グラフタイプ番号 オブジェクト(64-bit版のみ):グラフ設定 |
+| xLabels | Array | &srarr; | X軸ラベル |
+| yElements | Array | &srarr; | グラフにするデータ (最大8個) |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| dictionary | Integer, Text | &#x1F852; | スペルチェック用に使用する辞書のID、名前または言語コード省略した場合デフォルトの辞書を使用 |
+| dictionary | Integer, Text | &srarr; | スペルチェック用に使用する辞書のID、名前または言語コード省略した場合デフォルトの辞書を使用 |
 
 <!-- END REF-->
 

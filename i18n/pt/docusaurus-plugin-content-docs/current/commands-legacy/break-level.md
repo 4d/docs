@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.BREAK LEVEL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nivel | Integer | &#x1F852; | Número de níveis de quebra |
-| saltoPagina | Integer | &#x1F852; | Nível de quebra para o qual fazer um salto de página. |
+| nivel | Integer | &srarr; | Número de níveis de quebra |
+| saltoPagina | Integer | &srarr; | Nível de quebra para o qual fazer um salto de página. |
 
 <!-- END REF-->
 

@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE THUMBNAIL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Picture | &#x1F852; | 4D picture field or variable to convert as a thumbnail |
-| dest | Picture | &#x1F858; | Resulting thumbnail |
-| width | Integer | &#x1F852; | Thumbnail width in pixels, Default value = 48 |
-| height | Integer | &#x1F852; | Thumbnail height in pixels, Default value = 48 |
-| mode | Integer | &#x1F852; | Thumbnail creation mode Default value = Scaled to fit prop centered (6) |
-| depth | Integer | &#x1F852; | Obsolete, do not use |
+| source | Picture | &srarr; | 4D picture field or variable to convert as a thumbnail |
+| dest | Picture | &harr; | Resulting thumbnail |
+| width | Integer | &srarr; | Thumbnail width in pixels, Default value = 48 |
+| height | Integer | &srarr; | Thumbnail height in pixels, Default value = 48 |
+| mode | Integer | &srarr; | Thumbnail creation mode Default value = Scaled to fit prop centered (6) |
+| depth | Integer | &srarr; | Obsolete, do not use |
 
 <!-- END REF-->
 

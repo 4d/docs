@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR ON COMMAND.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#x1F852; | エリア参照 |
-| methodName | Text | &#x1F852; | 置き換えメソッド名 |
+| area | Integer | &srarr; | エリア参照 |
+| methodName | Text | &srarr; | 置き換えメソッド名 |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Refresh license.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Object | &#x1F850; | ステータスオブジェクト |
+| 戻り値 | Object | &larr; | ステータスオブジェクト |
 
 <!-- END REF-->
 

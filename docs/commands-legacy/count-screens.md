@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Count screens.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#x1F850; | Number of monitors |
+| Function result | Longint | &larr; | Number of monitors |
 
 <!-- END REF-->
 

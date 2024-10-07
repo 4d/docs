@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Folder.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ruta&#124; carpeta4D | Texto, Entero largo | &#x1F852; | Ruta de la carpeta o de la constante de la carpeta 4D |
-| tipoRuta &#124; * | Entero largo, Operador | &#x1F852; | Si se pasa ruta: fk ruta posix (predeterminada) o fk ruta plataforma<br/>Si se pasó carpeta4D: * para devolver la carpeta de la base local |
-| Resultado | Object | &#x1F850; | Nuevo objeto carpeta |
+| ruta&#124; carpeta4D | Texto, Entero largo | &srarr; | Ruta de la carpeta o de la constante de la carpeta 4D |
+| tipoRuta &#124; * | Entero largo, Operador | &srarr; | Si se pasa ruta: fk ruta posix (predeterminada) o fk ruta plataforma<br/>Si se pasó carpeta4D: * para devolver la carpeta de la base local |
+| Resultado | Object | &larr; | Nuevo objeto carpeta |
 
 <!-- END REF-->
 

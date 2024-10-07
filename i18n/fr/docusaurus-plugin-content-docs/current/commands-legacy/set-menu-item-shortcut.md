@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#x1F852; | Numéro du menu ou Référence de menu |
-| ligneMenu | Integer | &#x1F852; | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
-| touche | Text, Integer | &#x1F852; | Lettre du raccourci clavier ou code de caractère du raccourci clavier (ancienne syntaxe) |
-| modificateurs | Integer | &#x1F852; | Modificateur(s) à associer au raccourci (ignoré si un code de touche est passé) |
-| process | Integer | &#x1F852; | Numéro de référence du process |
+| menu | Integer, Text | &srarr; | Numéro du menu ou Référence de menu |
+| ligneMenu | Integer | &srarr; | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
+| touche | Text, Integer | &srarr; | Lettre du raccourci clavier ou code de caractère du raccourci clavier (ancienne syntaxe) |
+| modificateurs | Integer | &srarr; | Modificateur(s) à associer au raccourci (ignoré si un code de touche est passé) |
+| process | Integer | &srarr; | Numéro de référence du process |
 
 <!-- END REF-->
 

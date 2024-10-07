@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET QUERY AND LOCK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| lock | Boolean | &#x1F852; | True = Lock the records found by queries False = Do not lock records |
+| lock | Boolean | &srarr; | True = Lock the records found by queries False = Do not lock records |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.LIST OF CHOICE LISTS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| arrayNums | Integer array | &#x1F858; | Número das listas |
-| arrayNoms | Text array | &#x1F858; | Nomes das listas |
+| arrayNums | Integer array | &harr; | Número das listas |
+| arrayNoms | Text array | &harr; | Nomes das listas |
 
 <!-- END REF-->
 

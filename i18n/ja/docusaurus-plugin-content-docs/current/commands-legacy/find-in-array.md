@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Find in array.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| array | Array | &#x1F852; | 検索を行う配列 |
-| value | Expression | &#x1F852; | 配列タイプと同じタイプの検索値 |
-| start | Integer | &#x1F852; | 検索を開始する配列要素番号 |
-| 戻り値 | Integer | &#x1F850; | 検索値が見つかった最初の要素番号 |
+| array | Array | &srarr; | 検索を行う配列 |
+| value | Expression | &srarr; | 配列タイプと同じタイプの検索値 |
+| start | Integer | &srarr; | 検索を開始する配列要素番号 |
+| 戻り値 | Integer | &larr; | 検索値が見つかった最初の要素番号 |
 
 <!-- END REF-->
 

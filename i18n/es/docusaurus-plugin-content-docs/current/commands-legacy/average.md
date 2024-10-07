@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Average.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| series | Field, Array | &#x1F852; | Datos para los cuales se devuelve el promedio |
-| rutaAtributo | Text | &#x1F852; | Ruta del atributo del cual calcular el promedio |
-| Resultado | Real | &#x1F850; | Media aritmética (promedio) de series |
+| series | Field, Array | &srarr; | Datos para los cuales se devuelve el promedio |
+| rutaAtributo | Text | &srarr; | Ruta del atributo del cual calcular el promedio |
+| Resultado | Real | &larr; | Media aritmética (promedio) de series |
 
 <!-- END REF-->
 

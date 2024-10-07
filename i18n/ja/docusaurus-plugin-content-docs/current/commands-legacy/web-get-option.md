@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB GET OPTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| selector | Integer | &#x1F852; | 取得するオプションのコード |
-| value | Integer, Text, Collection | &#x1F858; | オプションの値 |
+| selector | Integer | &srarr; | 取得するオプションのコード |
+| value | Integer, Text, Collection | &harr; | オプションの値 |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Trunc.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombre | Real | &#x1F852; | Nombre à tronquer |
-| nbDécimales | Integer | &#x1F852; | Nombre de décimales à conserver |
-| Résultat | Real | &#x1F850; | nombre tronqué à partir du nombre de décimales indiqué par nbDécimales |
+| nombre | Real | &srarr; | Nombre à tronquer |
+| nbDécimales | Integer | &srarr; | Nombre de décimales à conserver |
+| Résultat | Real | &larr; | nombre tronqué à partir du nombre de décimales indiqué par nbDécimales |
 
 <!-- END REF-->
 

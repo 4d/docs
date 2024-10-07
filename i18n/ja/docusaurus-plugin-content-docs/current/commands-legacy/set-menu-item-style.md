@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SET MENU ITEM STYLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#x1F852; | メニュー番号またはメニュー参照 |
-| menuItem | Integer | &#x1F852; | メニュー項目番号 または -1: 最後に追加された項目 |
-| itemStyle | Integer | &#x1F852; | 新しいメニュー項目スタイル |
-| process | Integer | &#x1F852; | プロセス参照番号 |
+| menu | Integer, Text | &srarr; | メニュー番号またはメニュー参照 |
+| menuItem | Integer | &srarr; | メニュー項目番号 または -1: 最後に追加された項目 |
+| itemStyle | Integer | &srarr; | 新しいメニュー項目スタイル |
+| process | Integer | &srarr; | プロセス参照番号 |
 
 <!-- END REF-->
 

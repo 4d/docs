@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REDRAW.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | any | &#x1F852; | Tabla para la cual rediseñar el subformulario o Campo para el cual rediseñar el área o Variable para la cual rediseñar el área o Tabla del formulario a rediseñar en un navegador Web |
+| objeto | any | &srarr; | Tabla para la cual rediseñar el subformulario o Campo para el cual rediseñar el área o Variable para la cual rediseñar el área o Tabla del formulario a rediseñar en un navegador Web |
 
 <!-- END REF-->
 

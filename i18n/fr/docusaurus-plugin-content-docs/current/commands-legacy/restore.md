@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESTORE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminArchive | Text | &#x1F852; | Chemin d’accès de l’archive à restituer |
-| cheminDossierDest | Text | &#x1F852; | Chemin d’accès du dossier de destination |
+| cheminArchive | Text | &srarr; | Chemin d’accès de l’archive à restituer |
+| cheminDossierDest | Text | &srarr; | Chemin d’accès du dossier de destination |
 
 <!-- END REF-->
 

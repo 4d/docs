@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es el nombre de un objeto (cadena). Si se omite es un campo o una variable. |
-| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
-| inicioSel | Integer | &#x1F852; | Inicio de la selección |
-| finSel | Integer | &#x1F852; | Fin de la selección |
+| * | Operador | &srarr; | Si se especifica, objeto es el nombre de un objeto (cadena). Si se omite es un campo o una variable. |
+| objeto | any | &srarr; | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
+| inicioSel | Integer | &srarr; | Inicio de la selección |
+| finSel | Integer | &srarr; | Fin de la selección |
 
 <!-- END REF-->
 

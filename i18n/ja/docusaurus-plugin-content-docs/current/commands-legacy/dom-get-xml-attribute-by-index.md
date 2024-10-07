@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM GET XML ATTRIBUTE BY INDEX.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#x1F852; | XML要素参照 |
-| attribIndex | Integer | &#x1F852; | 属性のインデックス番号 |
-| attribName | Variable | &#x1F858; | 属性名 |
-| attribValue | Variable | &#x1F858; | 属性値 |
+| elementRef | Text | &srarr; | XML要素参照 |
+| attribIndex | Integer | &srarr; | 属性のインデックス番号 |
+| attribName | Variable | &harr; | 属性名 |
+| attribValue | Variable | &harr; | 属性値 |
 
 <!-- END REF-->
 

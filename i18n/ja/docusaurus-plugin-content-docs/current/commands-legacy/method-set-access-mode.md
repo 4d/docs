@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD SET ACCESS MODE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| mode | Integer | &#x1F852; | ロックされたオブジェクトのアクセスモード |
+| mode | Integer | &srarr; | ロックされたオブジェクトのアクセスモード |
 
 <!-- END REF-->
 

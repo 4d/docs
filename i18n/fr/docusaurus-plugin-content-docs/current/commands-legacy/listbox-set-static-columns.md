@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET STATIC COLUMNS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| nbColonnes | Integer | &#x1F852; | Nombre de colonnes à rendre statiques |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| nbColonnes | Integer | &srarr; | Nombre de colonnes à rendre statiques |
 
 <!-- END REF-->
 

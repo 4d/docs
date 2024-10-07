@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Path to object.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Ruta | Text | &#x1F852; | Nombre de la ruta |
-| tipoRuta | Integer | &#x1F852; | Tipo de sintaxis de ruta: Sistema (por defecto) o Posix |
-| Resultado | Object | &#x1F850; | Objeto que describe los contenidos de la ruta |
+| Ruta | Text | &srarr; | Nombre de la ruta |
+| tipoRuta | Integer | &srarr; | Tipo de sintaxis de ruta: Sistema (por defecto) o Posix |
+| Resultado | Object | &larr; | Objeto que describe los contenidos de la ruta |
 
 <!-- END REF-->
 

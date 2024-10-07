@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Substring.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| fuente | Text | &#x1F852; | Cadena de la cual obtener una subcadena |
-| aPartirDe | Integer | &#x1F852; | Posición del primer carácter |
-| numCaracteres | Integer | &#x1F852; | Número de caracteres a obtener |
-| Resultado | Text | &#x1F850; | Subcadena de fuente |
+| fuente | Text | &srarr; | Cadena de la cual obtener una subcadena |
+| aPartirDe | Integer | &srarr; | Posición del primer carácter |
+| numCaracteres | Integer | &srarr; | Número de caracteres a obtener |
+| Resultado | Text | &larr; | Subcadena de fuente |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DISPLAY NOTIFICATION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| titulo | Text | &#x1F852; | Título de la notificación |
-| texto | Text | &#x1F852; | Texto de la notificación |
-| duracion | Integer | &#x1F852; | Duración de la visualización en segundos |
+| titulo | Text | &srarr; | Título de la notificación |
+| texto | Text | &srarr; | Texto de la notificación |
+| duracion | Integer | &srarr; | Duración de la visualización en segundos |
 
 <!-- END REF-->
 

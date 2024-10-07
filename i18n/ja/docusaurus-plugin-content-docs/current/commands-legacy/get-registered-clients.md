@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET REGISTERED CLIENTS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| clientList | Text array | &#x1F858; | 登録されている4D Clientのリスト |
-| methods | Integer array | &#x1F858; | 実行するメソッドのリスト |
+| clientList | Text array | &harr; | 登録されている4D Clientのリスト |
+| methods | Integer array | &harr; | 実行するメソッドのリスト |
 
 <!-- END REF-->
 

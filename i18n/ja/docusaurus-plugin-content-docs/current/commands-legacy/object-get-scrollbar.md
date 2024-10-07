@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET SCROLLBAR.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時: objectはオブジェクト名 (文字)、省略時: objectは変数またはフィールド |
-| object | any | &#x1F852; | オブジェクト名 (* 指定時) または、フィールドまたは変数 (* 省略時) |
-| horizontal | Boolean, Integer | &#x1F858; | True=表示, False=非表示 |
-| vertical | Boolean, Integer | &#x1F858; | True=表示, False=非表示 |
+| * | 演算子 | &srarr; | 指定時: objectはオブジェクト名 (文字)、省略時: objectは変数またはフィールド |
+| object | any | &srarr; | オブジェクト名 (* 指定時) または、フィールドまたは変数 (* 省略時) |
+| horizontal | Boolean, Integer | &harr; | True=表示, False=非表示 |
+| vertical | Boolean, Integer | &harr; | True=表示, False=非表示 |
 
 <!-- END REF-->
 

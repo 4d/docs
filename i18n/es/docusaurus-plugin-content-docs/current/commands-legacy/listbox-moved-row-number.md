@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX MOVED ROW NUMBER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| antPosicion | Integer | &#x1F858; | Posición anterior de la fila movida |
-| nuevPosicion | Integer | &#x1F858; | Nueva posición de la fila movida |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &srarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| antPosicion | Integer | &harr; | Posición anterior de la fila movida |
+| nuevPosicion | Integer | &harr; | Nueva posición de la fila movida |
 
 <!-- END REF-->
 

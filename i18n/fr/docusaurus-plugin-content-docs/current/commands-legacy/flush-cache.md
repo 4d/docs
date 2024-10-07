@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FLUSH CACHE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| taille &#124; * | Réel, Opérateur | &#x1F852; | * pour vider le cache, ou nombre d'octets minimum de libération du cache |
+| taille &#124; * | Réel, Opérateur | &srarr; | * pour vider le cache, ou nombre d'octets minimum de libération du cache |
 
 <!-- END REF-->
 

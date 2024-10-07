@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Trigger event.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Integer | &#x1F850; | 0 = Fuera de todo evento de trigger 1 = Al guardar un nuevo registro 2 = Al guardar un registro existente 3 = Al borrar un registro |
+| Resultado | Integer | &larr; | 0 = Fuera de todo evento de trigger 1 = Al guardar un nuevo registro 2 = Al guardar un registro existente 3 = Al borrar un registro |
 
 <!-- END REF-->
 

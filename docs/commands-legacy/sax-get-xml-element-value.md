@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX GET XML ELEMENT VALUE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#x1F852; | Reference of open document |
-| value | Text, Blob | &#x1F858; | Element value |
+| document | Time | &srarr; | Reference of open document |
+| value | Text, Blob | &harr; | Element value |
 
 <!-- END REF-->
 

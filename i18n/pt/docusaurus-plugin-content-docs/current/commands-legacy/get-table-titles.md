@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET TABLE TITLES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tituloTabelas | Text array | &#x1F858; | Nomes atuais das tabelas |
-| numTabelas | Integer array | &#x1F858; | Números das tabelas |
+| tituloTabelas | Text array | &harr; | Nomes atuais das tabelas |
+| numTabelas | Integer array | &harr; | Números das tabelas |
 
 <!-- END REF-->
 

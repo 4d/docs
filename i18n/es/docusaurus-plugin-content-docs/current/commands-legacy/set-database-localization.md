@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DATABASE LOCALIZATION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| codigoLeng | Text | &#x1F852; | Selector del lenguaje |
-| * | Operador | &#x1F852; | Alcance del comando |
+| codigoLeng | Text | &srarr; | Selector del lenguaje |
+| * | Operador | &srarr; | Alcance del comando |
 
 <!-- END REF-->
 

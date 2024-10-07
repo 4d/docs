@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET STYLE SHEET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| nomFeuilleStyle | Text | &#x1F852; | Nom de la feuille de style |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| nomFeuilleStyle | Text | &srarr; | Nom de la feuille de style |
 
 <!-- END REF-->
 

@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &#x1F852; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| column | Integer | &#x1F852; | カラム番号 |
-| row | Integer | &#x1F852; | 行番号 |
-| left | Integer | &#x1F858; | オブジェクトの左座標 |
-| top | Integer | &#x1F858; | オブジェクトの上の座標 |
-| right | Integer | &#x1F858; | オブジェクトの右座標 |
-| bottom | Integer | &#x1F858; | オブジェクトの左座標 |
+| * | 演算子 | &srarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &srarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| column | Integer | &srarr; | カラム番号 |
+| row | Integer | &srarr; | 行番号 |
+| left | Integer | &harr; | オブジェクトの左座標 |
+| top | Integer | &harr; | オブジェクトの上の座標 |
+| right | Integer | &harr; | オブジェクトの右座標 |
+| bottom | Integer | &harr; | オブジェクトの左座標 |
 
 <!-- END REF-->
 

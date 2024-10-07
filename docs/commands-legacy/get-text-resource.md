@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get text resource.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| resID | Integer | &#x1F852; | Resource ID number |
-| resFile | Time | &#x1F852; | Resource file reference number, or all open resource files, if omitted |
-| Function result | Text | &#x1F850; | Contents of the TEXT resource |
+| resID | Integer | &srarr; | Resource ID number |
+| resFile | Time | &srarr; | Resource file reference number, or all open resource files, if omitted |
+| Function result | Text | &larr; | Contents of the TEXT resource |
 
 <!-- END REF-->
 

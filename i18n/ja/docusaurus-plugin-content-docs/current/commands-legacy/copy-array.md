@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.COPY ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| source | Array | &#x1F852; | コピー元の配列 |
-| destination | Array | &#x1F858; | コピー先の配列 |
+| source | Array | &srarr; | コピー元の配列 |
+| destination | Array | &harr; | コピー先の配列 |
 
 <!-- END REF-->
 

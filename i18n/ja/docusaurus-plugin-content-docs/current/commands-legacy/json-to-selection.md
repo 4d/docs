@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON TO SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | 要素の複製先の4Dテーブル |
-| jsonArray | Text | &#x1F852; | JSON形式の文字列 |
+| aTable | Table | &srarr; | 要素の複製先の4Dテーブル |
+| jsonArray | Text | &srarr; | JSON形式の文字列 |
 
 <!-- END REF-->
 

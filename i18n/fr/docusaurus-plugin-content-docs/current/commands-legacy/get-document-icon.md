@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET DOCUMENT ICON.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminDoc | Text | &#x1F852; | Nom ou chemin d’accès du fichier duquel obtenir l’icône ou chaîne vide pour afficher la boîte de dialogue d’ouverture de fichiers |
-| icône | Picture, Picture | &#x1F858; | Icône du document |
-| taille | Integer | &#x1F852; | Taille de l’icône (en pixels) |
+| cheminDoc | Text | &srarr; | Nom ou chemin d’accès du fichier duquel obtenir l’icône ou chaîne vide pour afficher la boîte de dialogue d’ouverture de fichiers |
+| icône | Picture, Picture | &harr; | Icône du document |
+| taille | Integer | &srarr; | Taille de l’icône (en pixels) |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET USER LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| userNames | Text array | &#x1F858; | パスワードエディターに表示されるユーザー名 |
-| userNumbers | Integer array | &#x1F858; | 対応するユニークなユーザーID番号 |
+| userNames | Text array | &harr; | パスワードエディターに表示されるユーザー名 |
+| userNumbers | Integer array | &harr; | 対応するユニークなユーザーID番号 |
 
 <!-- END REF-->
 

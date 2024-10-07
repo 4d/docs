@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD RESOLVE PATH.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ruta | Text | &#x1F852; | Ruta a resolver |
-| tipoMetodo | Integer | &#x1F858; | Selector de tipo de objeto |
-| prtTabla | Pointer | &#x1F858; | Referencia de tabla |
-| nomObjeto | Text | &#x1F858; | Nombre de formulario o de método base |
-| nomObjForm | Text | &#x1F858; | Nombre de objeto del formulario |
-| * | Operador | &#x1F852; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| ruta | Text | &srarr; | Ruta a resolver |
+| tipoMetodo | Integer | &harr; | Selector de tipo de objeto |
+| prtTabla | Pointer | &harr; | Referencia de tabla |
+| nomObjeto | Text | &harr; | Nombre de formulario o de método base |
+| nomObjForm | Text | &harr; | Nombre de objeto del formulario |
+| * | Operador | &srarr; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->
 

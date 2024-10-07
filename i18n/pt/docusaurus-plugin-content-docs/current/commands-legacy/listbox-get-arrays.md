@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET ARRAYS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | any | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * for omitido) |
-| arrNomsCols | Text array | &#x1F858; | Nomes de objetos de colunas |
-| arrNomsTitulos | Text array | &#x1F858; | Nomes dos objetos títulos cabeçalhos |
-| arrVarCols | Pointer array | &#x1F858; | Ponteiros para variáveis de colunas ou Ponteiros para campos coluna ou Nil |
-| arrVarTitulos | Pointer array | &#x1F858; | Ponteiros para variáveis de título |
-| arrColsVisiveis | Boolean array | &#x1F858; | Visibilidade de cada coluna |
-| arrEstilos | Pointer array | &#x1F858; | Ponteiros para arrays ou estilos, cores e variáveis de visibilidade ou Nil |
-| arrFooterNames | Text array | &#x1F858; | Nomes de objetos do rodapé da coluna |
-| arrFootersVars | Pointer array | &#x1F858; | Ponteiros para variáveis de rodapé de coluna |
+| * | Operador | &srarr; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
+| objeto | any | &srarr; | Nome objeto (se * for especificado) ou Variável (se * for omitido) |
+| arrNomsCols | Text array | &harr; | Nomes de objetos de colunas |
+| arrNomsTitulos | Text array | &harr; | Nomes dos objetos títulos cabeçalhos |
+| arrVarCols | Pointer array | &harr; | Ponteiros para variáveis de colunas ou Ponteiros para campos coluna ou Nil |
+| arrVarTitulos | Pointer array | &harr; | Ponteiros para variáveis de título |
+| arrColsVisiveis | Boolean array | &harr; | Visibilidade de cada coluna |
+| arrEstilos | Pointer array | &harr; | Ponteiros para arrays ou estilos, cores e variáveis de visibilidade ou Nil |
+| arrFooterNames | Text array | &harr; | Nomes de objetos do rodapé da coluna |
+| arrFootersVars | Pointer array | &harr; | Ponteiros para variáveis de rodapé de coluna |
 
 <!-- END REF-->
 

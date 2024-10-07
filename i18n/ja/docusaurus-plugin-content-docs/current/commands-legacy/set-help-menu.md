@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET HELP MENU.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menuCol | Collection | &#x1F852; | メニュー項目のコレクション |
+| menuCol | Collection | &srarr; | メニュー項目のコレクション |
 
 <!-- END REF-->
 

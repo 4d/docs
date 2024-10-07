@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Get body part count.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Integer | &#x1F850; | ボディ中のパート数 |
+| 戻り値 | Integer | &larr; | ボディ中のパート数 |
 
 <!-- END REF-->
 

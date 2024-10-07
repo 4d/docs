@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get current printer.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Text | &#x1F850; | Nome da impressora atual |
+| Resultado | Text | &larr; | Nome da impressora atual |
 
 <!-- END REF-->
 

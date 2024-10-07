@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current process.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Integer | &#x1F850; | Número de processo |
+| Resultado | Integer | &larr; | Número de processo |
 
 <!-- END REF-->
 

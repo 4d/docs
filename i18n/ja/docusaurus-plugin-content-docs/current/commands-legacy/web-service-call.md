@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SERVICE CALL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| accessURL | Text | &#x1F852; | WebサービスへのアクセスURL |
-| soapAction | Text | &#x1F852; | SOAPActionフィールドの内容 |
-| methodName | Text | &#x1F852; | メソッドの名前 |
-| nameSpace | Text | &#x1F852; | 名前空間 |
-| complexType | Integer | &#x1F852; | 複合タイプの設定 (省略された場合、シンプルタイプ) |
-| * | 演算子 | &#x1F852; | 接続を終了しない |
+| accessURL | Text | &srarr; | WebサービスへのアクセスURL |
+| soapAction | Text | &srarr; | SOAPActionフィールドの内容 |
+| methodName | Text | &srarr; | メソッドの名前 |
+| nameSpace | Text | &srarr; | 名前空間 |
+| complexType | Integer | &srarr; | 複合タイプの設定 (省略された場合、シンプルタイプ) |
+| * | 演算子 | &srarr; | 接続を終了しない |
 
 <!-- END REF-->
 

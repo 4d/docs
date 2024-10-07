@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET ATTRIBUTES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin | Text, Text array | &#x1F852; | Chemin(s) de méthode(s) |
-| attributs | Object, Object array | &#x1F858; | Attribut(s) de méthode(s) |
-| * | Opérateur | &#x1F852; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| chemin | Text, Text array | &srarr; | Chemin(s) de méthode(s) |
+| attributs | Object, Object array | &harr; | Attribut(s) de méthode(s) |
+| * | Opérateur | &srarr; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
 

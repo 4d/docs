@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.BASE64 ENCODE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| aCodificar | Blob, Text | &#x1F852; | Valor a codificar |
-| &#x1F858; | Valor codificado (si el parámetro codificado se omite) |
-| codificado | Blob, Text | &#x1F858; | Varlor codificado |
-| * | Operador | &#x1F852; | Codificado en formato Base64URL |
+| aCodificar | Blob, Text | &srarr; | Valor a codificar |
+| &harr; | Valor codificado (si el parámetro codificado se omite) |
+| codificado | Blob, Text | &harr; | Varlor codificado |
+| * | Operador | &srarr; | Codificado en formato Base64URL |
 
 <!-- END REF-->
 

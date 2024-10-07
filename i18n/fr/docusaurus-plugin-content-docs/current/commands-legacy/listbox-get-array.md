@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get array.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| typeTab | Integer | &#x1F852; | Type de tableau |
-| Résultat | Pointer | &#x1F850; | Pointeur vers le tableau associé à la propriété |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| typeTab | Integer | &srarr; | Type de tableau |
+| Résultat | Pointer | &larr; | Pointeur vers le tableau associé à la propriété |
 
 <!-- END REF-->
 

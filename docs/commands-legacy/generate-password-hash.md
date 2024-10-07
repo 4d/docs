@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Generate password hash.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| password | Text | &#x1F852; | The user's password. Only the first 72 characters are used. |
-| options | Object | &#x1F852; | An object containing options. |
-| Function result | String | &#x1F850; | Returns the hashed password. |
+| password | Text | &srarr; | The user's password. Only the first 72 characters are used. |
+| options | Object | &srarr; | An object containing options. |
+| Function result | String | &larr; | Returns the hashed password. |
 
 <!-- END REF-->
 

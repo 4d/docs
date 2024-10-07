@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PICTURE FILE NAME.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture | Picture, Picture | &#x1F852; | デフォルト名を設定するピクチャー |
-| fileName | Text | &#x1F852; | デフォルトピクチャー名 |
+| picture | Picture, Picture | &srarr; | デフォルト名を設定するピクチャー |
+| fileName | Text | &srarr; | デフォルトピクチャー名 |
 
 <!-- END REF-->
 
