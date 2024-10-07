@@ -3,12 +3,12 @@ id: pictureButtonOverview
 title: Botão imagem
 ---
 
-Un botón imagen es similar a un [botón estándar](button_overview.md). However unlike a standard button (which accepts three states: enabled, disabled and clicked), a picture button has a different image to represent each state.
+Um botão de imagem é semelhante a um [botão padrão](button_overview.md). Entretanto, diferentemente de um botão padrão (que aceita três estados: ativado, desativado e clicado), um botão imagem tem uma imagem diferente para representar cada estado.
 
 Os botões imagem podem ser utilizados de duas formas:
 
-- Como botões de comando num formulário. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over.\
-  For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states.
+- Como botões de comando num formulário. Nesse caso, o botão imagem geralmente inclui quatro estados diferentes: ativado, desativado, clicado e rolado.\
+  Por exemplo, uma tabela de miniaturas que tem uma linha de quatro colunas, cada miniatura corresponde aos estados Padrão, Clicado, Rolar e Desativado.
 
   | Propriedade                | Nome JSON              | Valor |
   | -------------------------- | ---------------------- | ----- |
