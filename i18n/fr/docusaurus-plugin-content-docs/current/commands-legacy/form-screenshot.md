@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table du formulaire |
-| nomFormulaire | Texte | &#x1F852; | Nom du formulaire |
-| imageForm | Image | &#x1F858; | Image du formulaire en exécution si premier(s) paramètre(s) omis, ou <br/>Image du formulaire dans l'éditeur de formulaires si un nom de formulaire est passé |
-| pageNum | Entier long | &#x1F852; | Numéro de page du formulaire |
+| nomFormulaire | Text | &#x1F852; | Nom du formulaire |
+| imageForm | Picture | &#x1F858; | Image du formulaire en exécution si premier(s) paramètre(s) omis, ou <br/>Image du formulaire dans l'éditeur de formulaires si un nom de formulaire est passé |
+| pageNum | Integer | &#x1F852; | Numéro de page du formulaire |
 
 <!-- END REF-->
 

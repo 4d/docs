@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.System folder.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| type | Entier long | &#x1F852; | Type de dossier système |
-| Résultat | Chaîne | &#x1F850; | Chemin d’accès d’un dossier du système actif |
+| type | Integer | &#x1F852; | Type de dossier système |
+| Résultat | Text | &#x1F850; | Chemin d’accès d’un dossier du système actif |
 
 <!-- END REF-->
 

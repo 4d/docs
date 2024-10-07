@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | elementRef | Text | &#x1F852; | XML element reference |
-| childType | Longint | &#x1F852; | Type of child to append |
-| childValue | Text, BLOB | &#x1F852; | Text or variable (Text or BLOB) whose value must be inserted as child node |
+| childType | Integer | &#x1F852; | Type of child to append |
+| childValue | Text, Blob | &#x1F852; | Text or variable (Text or BLOB) whose value must be inserted as child node |
 | Function result | Text | &#x1F850; | Reference of child XML element |
 
 <!-- END REF-->

@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#x1F852; | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時) または <br/>フィールドまたは変数 (* 省略時) |
-| foregroundColor | テキスト, 倍長整数 | &#x1F858; | 描画色のRGBカラー値 |
-| backgroundColor | テキスト, 倍長整数 | &#x1F858; | 背景色のRGBカラー値 |
-| altBackgrndColor | テキスト, 倍長整数 | &#x1F858; | 奇数行の色のRGBカラー値 |
+| object | any | &#x1F852; | オブジェクト名 (* 指定時) または <br/>フィールドまたは変数 (* 省略時) |
+| foregroundColor | Text, Integer | &#x1F858; | 描画色のRGBカラー値 |
+| backgroundColor | Text, Integer | &#x1F858; | 背景色のRGBカラー値 |
+| altBackgrndColor | Text, Integer | &#x1F858; | 奇数行の色のRGBカラー値 |
 
 <!-- END REF-->
 

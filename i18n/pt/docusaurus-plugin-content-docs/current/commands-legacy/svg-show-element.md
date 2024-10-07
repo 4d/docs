@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objetoImagem é um nome de objeto (string). Se omitido, objetoImagem é uma variável |
-| objetoImagem | Imagem | &#x1F852; | Nome de objeto (se * for especificado) ou variável ou campo (se * for otimido) |
-| id | Texto | &#x1F852; | Atributo ID do elemento a exibir |
-| margem | Inteiro longo | &#x1F852; | Margem de visbilidade (em pixels por padrão) |
+| objetoPicture | Picture | &#x1F852; | Nome de objeto (se * for especificado) ou variável ou campo (se * for otimido) |
+| id | Text | &#x1F852; | Atributo ID do elemento a exibir |
+| margem | Integer | &#x1F852; | Margem de visbilidade (em pixels por padrão) |
 
 <!-- END REF-->
 

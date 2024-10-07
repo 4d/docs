@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Document to text.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeArquivo | String | &#x1F852; | Nome do documento ou caminho ao documento |
-| conjCaracteres | Texto, Inteiro longo | &#x1F852; | Nome ou número do conjunto de caracteres |
-| modoRetorno | Inteiro longo | &#x1F852; | Modo de processamento para as linhas de ruptura |
-| Resultado | Texto | &#x1F850; | Texto do documento |
+| nomeArquivo | Text | &#x1F852; | Nome do documento ou caminho ao documento |
+| conjCaracteres | Text, Integer | &#x1F852; | Nome ou número do conjunto de caracteres |
+| modoRetorno | Integer | &#x1F852; | Modo de processamento para as linhas de ruptura |
+| Resultado | Text | &#x1F850; | Texto do documento |
 
 <!-- END REF-->
 

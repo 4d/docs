@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | fontFamily | Text | &#x1F852; | Name of font family |
-| fontStyle | Longint | &#x1F852; | Font style: 0=normal (default), 1=bold, 2=italic |
+| fontStyle | Integer | &#x1F852; | Font style: 0=normal (default), 1=bold, 2=italic |
 | Function result | Null, Object | &#x1F850; | Font file object |
 
 <!-- END REF-->

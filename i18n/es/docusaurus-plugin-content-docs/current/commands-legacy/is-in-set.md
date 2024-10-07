@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is in set.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| conjunto | Cadena | &#x1F852; | Nombre del conjunto a borrar |
-| Resultado | Booleano | &#x1F850; | El registro actual está en el conjunto (True) o El registro actual no está en el conjunto (False) |
+| conjunto | Text | &#x1F852; | Nombre del conjunto a borrar |
+| Resultado | Boolean | &#x1F850; | El registro actual está en el conjunto (True) o El registro actual no está en el conjunto (False) |
 
 <!-- END REF-->
 

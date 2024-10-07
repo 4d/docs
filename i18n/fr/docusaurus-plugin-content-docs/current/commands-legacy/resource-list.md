@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.RESOURCE LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resType | Chaîne | &#x1F852; | Type de ressource (4 caractères) |
-| resNums | Tableau entier long | &#x1F858; | Numéros des ressources de ce type |
-| resNoms | Tableau chaîne | &#x1F858; | Noms des ressources de ce type |
-| resFichier | RefDoc | &#x1F852; | Numéro de référence de fichier de ressources ou tous les fichiers de ressources ouverts si ce paramètre est omis |
+| resType | Text | &#x1F852; | Type de ressource (4 caractères) |
+| resNums | Integer array | &#x1F858; | Numéros des ressources de ce type |
+| resNoms | Text array | &#x1F858; | Noms des ressources de ce type |
+| resFichier | Time | &#x1F852; | Numéro de référence de fichier de ressources ou tous les fichiers de ressources ouverts si ce paramètre est omis |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DATABASE LOCALIZATION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| codigoIdioma | Texto | &#x1F852; | Seletor de idioma |
+| codigoIdioma | Text | &#x1F852; | Seletor de idioma |
 | * | Operador | &#x1F852; | Escopo do comando |
 
 <!-- END REF-->

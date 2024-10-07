@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | aTable | Table | &#x1F852; | Table reference |
 | arrNames | Text array | &#x1F858; | Array of form names |
 | filter | Text | &#x1F852; | Name filter |
-| marker | Real variable | &#x1F852; | Marker for minimum version to return |
+| marker | Real | &#x1F852; | Marker for minimum version to return |
 | &#x1F858; | New value |
 | * | Operator | &#x1F852; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 

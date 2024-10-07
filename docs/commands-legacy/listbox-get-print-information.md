@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Variable (if * is omitted) |
-| selector | Longint | &#x1F852; | Information to get |
-| info | Longint | &#x1F858; | Current value |
+| object | any | &#x1F852; | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| selector | Integer | &#x1F852; | Information to get |
+| info | Integer | &#x1F858; | Current value |
 
 <!-- END REF-->
 

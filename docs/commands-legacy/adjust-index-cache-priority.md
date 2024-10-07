@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aField | Field | &#x1F852; | Field whose index(es) priority value has to be adjusted |
-| priority | Longint | &#x1F852; | Cache priority value for the field index(es) |
+| priority | Integer | &#x1F852; | Cache priority value for the field index(es) |
 
 <!-- END REF-->
 

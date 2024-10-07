@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Log.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| number | 実数 | &#x1F852; | 自然対数を求める数値 |
-| 戻り値 | 実数 | &#x1F850; | 自然対数値 |
+| number | Real | &#x1F852; | 自然対数を求める数値 |
+| 戻り値 | Real | &#x1F850; | 自然対数値 |
 
 <!-- END REF-->
 

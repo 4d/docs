@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| arrFiltro | Array string | &#x1F852; | Array filtros |
-| permitirArrRecusar | Array booleano | &#x1F852; | Array autorizar- recusar |
+| objeto | any | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| arrFiltro | Text array | &#x1F852; | Array filtros |
+| permitirArrRecusar | Boolean array | &#x1F852; | Array autorizar- recusar |
 
 <!-- END REF-->
 

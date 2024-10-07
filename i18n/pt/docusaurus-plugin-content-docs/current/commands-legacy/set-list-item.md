@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
-| lista | ListRef, String | &#x1F852; | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
+| lista | Integer, Text | &#x1F852; | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
 | refElem &#124; * | Operador, Inteiro longo | &#x1F852; | Número de referencia do elemento, ou 0 para o último elemento adicionado à lista ou * para o elemento da lista atualmente selecionada |
-| novoText | String | &#x1F852; | Novo texto do elemento |
-| novoNum | Inteiro longo | &#x1F852; | Novo número de referência do elemento |
-| sublista | ListRef | &#x1F852; | Nova sub-lista associada ao elemento, ou 0 = nenhuma sub-lista (separar atual, se existe), ou -1 = nenhuma muda |
-| expandida | Booleano | &#x1F852; | Indica se a sub-lista deve ser expandida ou contraída |
+| novoText | Text | &#x1F852; | Novo texto do elemento |
+| novoNum | Integer | &#x1F852; | Novo número de referência do elemento |
+| sublista | Integer | &#x1F852; | Nova sub-lista associada ao elemento, ou 0 = nenhuma sub-lista (separar atual, se existe), ou -1 = nenhuma muda |
+| expandida | Boolean | &#x1F852; | Indica se a sub-lista deve ser expandida ou contraída |
 
 <!-- END REF-->
 

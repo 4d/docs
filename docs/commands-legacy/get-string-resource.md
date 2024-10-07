@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get string resource.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| resID | Longint | &#x1F852; | Resource ID number |
-| resFile | DocRef | &#x1F852; | Resource file reference number, or all open resource files, if omitted |
+| resID | Integer | &#x1F852; | Resource ID number |
+| resFile | Time | &#x1F852; | Resource file reference number, or all open resource files, if omitted |
 | Function result | String | &#x1F850; | Contents of the STR  resource |
 
 <!-- END REF-->

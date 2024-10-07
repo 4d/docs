@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.New process.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| method | String | &#x1F852; | Method to be executed within the process |
-| stack | Longint | &#x1F852; | Stack size in bytes |
-| name | String | &#x1F852; | Name of the process created |
+| method | Text | &#x1F852; | Method to be executed within the process |
+| stack | Integer | &#x1F852; | Stack size in bytes |
+| name | Text | &#x1F852; | Name of the process created |
 | param | Expression | &#x1F852; | Parameter(s) to the method |
 | * | Operator | &#x1F852; | Unique process |
 | Function result | Longint | &#x1F850; | Process number for newly created process or already executing process |

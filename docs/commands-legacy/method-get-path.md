@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD Get path.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| methodType | Longint | &#x1F852; | Design object type selector |
+| methodType | Integer | &#x1F852; | Design object type selector |
 | aTable | Table | &#x1F852; | Table reference |
 | objectName | Text | &#x1F852; | Name of form or method |
 | formObjectName | Text | &#x1F858; | Name of form object |

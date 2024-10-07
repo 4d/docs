@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable o un campo |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| correcionAuto | Booleano | &#x1F852; | True = corrección automática,False= no corrección automática |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| correcionAuto | Boolean | &#x1F852; | True = corrección automática,False= no corrección automática |
 
 <!-- END REF-->
 

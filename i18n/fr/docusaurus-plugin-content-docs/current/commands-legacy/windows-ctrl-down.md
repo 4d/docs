@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Windows Ctrl down.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Booléen | &#x1F850; | Etat de la touche Ctrl Windows ou Etat de la touche Commande Macintosh |
+| Résultat | Boolean | &#x1F850; | Etat de la touche Ctrl Windows ou Etat de la touche Commande Macintosh |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table whose scalar data priority value has to be adjusted |
-| priority | Longint | &#x1F852; | Cache priority value for the table |
+| priority | Integer | &#x1F852; | Cache priority value for the table |
 
 <!-- END REF-->
 

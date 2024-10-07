@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | duração | Real | &#x1F852; | Duração de tempo (em segundos) antes do inicio do logging |
-| fonte | Inteiro longo | &#x1F852; | Origem da operação |
+| fonte | Integer | &#x1F852; | Origem da operação |
 
 <!-- END REF-->
 

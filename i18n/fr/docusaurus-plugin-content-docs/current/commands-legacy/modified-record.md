@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table de laquelle tester si l'enregistrement courant a été modifié ou Table par défaut si paramètre omis |
-| Résultat | Booléen | &#x1F850; | L'enregistrement a été modifié (Vrai) ou L'enregistrement n'a pas été modifié (Faux) |
+| Résultat | Boolean | &#x1F850; | L'enregistrement a été modifié (Vrai) ou L'enregistrement n'a pas été modifié (Faux) |
 
 <!-- END REF-->
 

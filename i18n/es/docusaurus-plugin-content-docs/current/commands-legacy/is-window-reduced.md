@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is window reduced.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | WinRef | &#x1F852; | Número de referencia de la ventana |
-| Resultado | Booleano | &#x1F850; | True si la ventana se reduce en la barra de tareas o en el dock, False en caso contrario |
+| ventana | Integer | &#x1F852; | Número de referencia de la ventana |
+| Resultado | Boolean | &#x1F850; | True si la ventana se reduce en la barra de tareas o en el dock, False en caso contrario |
 
 <!-- END REF-->
 

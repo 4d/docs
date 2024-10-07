@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es un campo o una variable |
-| objeto | Campo, Variable, Objeto de formulario | &#x1F852; | Nombre del objeto (si se especifica *) o Campo o variable (si se omite *) |
-| inicioSel | Entero largo | &#x1F852; | Nueva posición de inicio de selección de texto |
-| finSel | Entero largo | &#x1F852; | Nueva posición de fin de selección de texto |
+| objeto | Field, Variable, any | &#x1F852; | Nombre del objeto (si se especifica *) o Campo o variable (si se omite *) |
+| inicioSel | Integer | &#x1F852; | Nueva posición de inicio de selección de texto |
+| finSel | Integer | &#x1F852; | Nueva posición de fin de selección de texto |
 
 <!-- END REF-->
 

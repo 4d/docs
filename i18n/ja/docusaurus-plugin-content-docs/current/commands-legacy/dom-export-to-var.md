@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM EXPORT TO VAR.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | 文字 | &#x1F852; | ルートXML要素参照 |
-| vXmlVar | テキスト, BLOB | &#x1F858; | XMLツリーを受け取る変数 |
+| elementRef | Text | &#x1F852; | ルートXML要素参照 |
+| vXmlVar | Text, Blob | &#x1F858; | XMLツリーを受け取る変数 |
 
 <!-- END REF-->
 

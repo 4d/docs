@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Array | &#x1F852; | Name of the array |
-| where | Longint | &#x1F852; | Where to insert the elements |
-| howMany | Longint | &#x1F852; | Number of elements to be inserted, or 1 element if omitted |
+| where | Integer | &#x1F852; | Where to insert the elements |
+| howMany | Integer | &#x1F852; | Number of elements to be inserted, or 1 element if omitted |
 
 <!-- END REF-->
 

@@ -11,20 +11,20 @@ displayed_sidebar: docs
 <!--REF #_command_.Position.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| àChercher | Chaîne | &#x1F852; | Chaîne à rechercher |
-| laChaîne | Chaîne | &#x1F852; | Chaîne dans laquelle effectuer la recherche |
-| début | Entier long | &#x1F852; | Position dans laChaîne où débuter la recherche |
-| longTrouvée | Entier long | &#x1F858; | Longueur de la chaîne trouvée |
+| àChercher | Text | &#x1F852; | Chaîne à rechercher |
+| laText | Text | &#x1F852; | Chaîne dans laquelle effectuer la recherche |
+| début | Integer | &#x1F852; | Position dans laChaîne où débuter la recherche |
+| longTrouvée | Integer | &#x1F858; | Longueur de la chaîne trouvée |
 | * | Opérateur | &#x1F852; | Si passé : évaluation basée sur les codes de caractères |
-| Résultat | Entier long | &#x1F850; | Position de la première occurrence de àChercher |
+| Résultat | Integer | &#x1F850; | Position de la première occurrence de àChercher |
 | Position ( àChercher ; laChaîne ; début ; longTrouvée ; options ) -> Résultat |
 | Paramètre | Type | Description |
-| àChercher | Chaîne | &#x1F852; | Chaîne à rechercher |
-| laChaîne | Chaîne | &#x1F852; | Chaîne dans laquelle effectuer la recherche |
-| début | Entier long | &#x1F852; | Position dans laChaîne où débuter la recherche |
-| longTrouvée | Entier long | &#x1F852; | Longueur de la chaîne trouvée |
-| options | Entier long | &#x1F852; | Critère(s) de recherche |
-| Résultat | Entier long | &#x1F850; | Position de la première occurrence de àChercher |
+| àChercher | Text | &#x1F852; | Chaîne à rechercher |
+| laText | Text | &#x1F852; | Chaîne dans laquelle effectuer la recherche |
+| début | Integer | &#x1F852; | Position dans laChaîne où débuter la recherche |
+| longTrouvée | Integer | &#x1F852; | Longueur de la chaîne trouvée |
+| options | Integer | &#x1F852; | Critère(s) de recherche |
+| Résultat | Integer | &#x1F850; | Position de la première occurrence de àChercher |
 
 <!-- END REF-->
 

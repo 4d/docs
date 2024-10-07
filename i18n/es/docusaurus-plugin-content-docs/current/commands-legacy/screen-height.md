@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Windows: altura de la ventana de la aplicación o altura de la pantalla si se especifica * Macintosh: altura de la pantalla principal |
-| Resultado | Entero largo | &#x1F850; | Altura expresada en píxeles |
+| Resultado | Integer | &#x1F850; | Altura expresada en píxeles |
 
 <!-- END REF-->
 

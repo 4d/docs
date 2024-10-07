@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PRINT LABEL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela a imprimir, ou tabela padrão, se omitido |
-| documento | String | &#x1F852; | Nome do documento de etiquetas do disco |
+| tabela | Table | &#x1F852; | Tabela a imprimir, ou tabela padrão, se omitido |
+| documento | Text | &#x1F852; | Nome do documento de etiquetas do disco |
 | *&#124;> | &#x1F852; | * para apagar as caixas de diálogo de impressão, ou > para não reiniciar os parâmetros de impressão |
 
 <!-- END REF-->

@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objImagem é um nome objeto (string). Se omitido, objImagem é uma variável |
-| objetoImagem | Imagem | &#x1F852; | Nome de objeto (se * for especificado) ou variável ou campo (se * for otimido) |
-| id_Elemento | Texto | &#x1F852; | ID do elemento onde um ou mais atributos são estabelecidos |
-| nomeAtrib | String | &#x1F852; | Atributo a estabelecer |
-| valorAtributo | String, Inteiro longo | &#x1F852; | Novo valor do atributo |
+| objetoPicture | Picture | &#x1F852; | Nome de objeto (se * for especificado) ou variável ou campo (se * for otimido) |
+| id_Elemento | Text | &#x1F852; | ID do elemento onde um ou mais atributos são estabelecidos |
+| nomeAtrib | Text | &#x1F852; | Atributo a estabelecer |
+| valorAtributo | Text, Integer | &#x1F852; | Novo valor do atributo |
 | * | Operador | &#x1F852; | Se passado = modifica a própria imagem SVG |
 
 <!-- END REF-->

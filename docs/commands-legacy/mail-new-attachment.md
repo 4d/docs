@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.MAIL New attachment.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| value | Text, BLOB, Object | &#x1F852; | Object (4D.File, 4D.ZipFile, 4D.Blob), orPath of the attachment file (text), orBlob containing the attachment (BLOB) |
+| value | Text, Blob, Object | &#x1F852; | Object (4D.File, 4D.ZipFile, 4D.Blob), orPath of the attachment file (text), orBlob containing the attachment (BLOB) |
 | name | Text | &#x1F852; | Name + extension used by the mail client to designate the attachment |
 | cid | Text | &#x1F852; | ID of attachment (HTML messages only), or " " if no cid is required |
 | type | Text | &#x1F852; | Value of the content-type header |

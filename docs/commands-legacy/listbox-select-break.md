@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Variable (if * is omitted) |
-| row | Longint | &#x1F852; | Number of break row |
-| column | Longint | &#x1F852; | Number of break column |
-| action | Longint | &#x1F852; | Selection action |
+| object | any | &#x1F852; | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| row | Integer | &#x1F852; | Number of break row |
+| column | Integer | &#x1F852; | Number of break column |
+| action | Integer | &#x1F852; | Selection action |
 
 <!-- END REF-->
 

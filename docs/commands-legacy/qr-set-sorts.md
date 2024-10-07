@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET SORTS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Longint | &#x1F852; | Reference of the area |
+| area | Integer | &#x1F852; | Reference of the area |
 | aColumns | Real array | &#x1F852; | Columns |
 | aOrders | Real array | &#x1F852; | Sort orders |
 

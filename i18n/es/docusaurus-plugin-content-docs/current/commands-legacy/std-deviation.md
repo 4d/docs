@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Std deviation.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| series | Campo, Array | &#x1F852; | Datos para los cuales se devuelve la desviación estándar |
+| series | Field, Array | &#x1F852; | Datos para los cuales se devuelve la desviación estándar |
 | Resultado | Real | &#x1F850; | Desviación estándar de series |
 
 <!-- END REF-->

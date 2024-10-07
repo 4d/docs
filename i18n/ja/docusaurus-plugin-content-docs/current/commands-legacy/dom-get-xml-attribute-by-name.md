@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | 文字 | &#x1F852; | XML要素参照 |
-| attribName | 文字 | &#x1F852; | 属性名 |
-| attribValue | 変数 | &#x1F858; | 属性値 |
+| elementRef | Text | &#x1F852; | XML要素参照 |
+| attribName | Text | &#x1F852; | 属性名 |
+| attribValue | Variable | &#x1F858; | 属性値 |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table de l'enregistrement de destination ou Table par défaut si ce paramètre est omis |
-| enregistrement | Entier long | &#x1F852; | Numéro renvoyé par Numero enregistrement |
+| enregistrement | Integer | &#x1F852; | Numéro renvoyé par Numero enregistrement |
 
 <!-- END REF-->
 

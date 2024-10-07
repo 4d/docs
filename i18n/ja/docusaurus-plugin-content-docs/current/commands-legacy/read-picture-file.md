@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.READ PICTURE FILE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fileName | 文字 | &#x1F852; | 読み込むファイルのフルパス名, または空の文字列 |
-| picture | ピクチャー | &#x1F858; | ピクチャを受け取るフィールドまたは変数 |
+| fileName | Text | &#x1F852; | 読み込むファイルのフルパス名, または空の文字列 |
+| picture | Picture | &#x1F858; | ピクチャを受け取るフィールドまたは変数 |
 | * | 演算子 | &#x1F852; | 指定時 = すべてのファイルタイプを受け入れる |
 
 <!-- END REF-->

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GOTO PAGE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numéroPage | Entier long | &#x1F852; | Numéro de la page à afficher |
+| numéroPage | Integer | &#x1F852; | Numéro de la page à afficher |
 | * | Opérateur | &#x1F852; | Changer la page du sous-formulaire courant |
 
 <!-- END REF-->

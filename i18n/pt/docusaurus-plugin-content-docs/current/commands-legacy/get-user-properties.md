@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.GET USER PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refUsuario | Inteiro longo | &#x1F852; | Nº de referência de usuário |
-| nome | String | &#x1F858; | Nome de usuário |
-| inicio | String | &#x1F858; | Nome de método de início |
-| senha | String | &#x1F858; | Sempre é uma cadeia vazia |
-| numLogin | Inteiro longo | &#x1F858; | Número de logins para o banco de dados |
-| ultLogin | Data | &#x1F858; | Data do último login ao banco de dados |
-| adesao | Array inteiro longo | &#x1F858; | Número de ID dos grupos ao qual o usuário pertence |
-| propGrupo | Inteiro longo | &#x1F858; | Número de ID do proprietário do grupo |
+| refUsuario | Integer | &#x1F852; | Nº de referência de usuário |
+| nome | Text | &#x1F858; | Nome de usuário |
+| inicio | Text | &#x1F858; | Nome de método de início |
+| senha | Text | &#x1F858; | Sempre é uma cadeia vazia |
+| numLogin | Integer | &#x1F858; | Número de logins para o banco de dados |
+| ultLogin | Date | &#x1F858; | Data do último login ao banco de dados |
+| adesao | Integer array | &#x1F858; | Número de ID dos grupos ao qual o usuário pertence |
+| propGrupo | Integer | &#x1F858; | Número de ID do proprietário do grupo |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT STRUCTURE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| exportedStructure | テキスト変数 | &#x1F858; | 4D データベースストラクチャーを書き出したXML定義ファイル |
-| format | 文字 | &#x1F852; | Export format: xml format (default) or html format |
+| exportedStructure | Text | &#x1F858; | 4D データベースストラクチャーを書き出したXML定義ファイル |
+| format | Text | &#x1F852; | Export format: xml format (default) or html format |
 
 <!-- END REF-->
 

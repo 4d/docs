@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Records in set.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| set | String | &#x1F852; | Name of the set to test |
+| set | Text | &#x1F852; | Name of the set to test |
 | Function result | Longint | &#x1F850; | Number of records in set |
 
 <!-- END REF-->

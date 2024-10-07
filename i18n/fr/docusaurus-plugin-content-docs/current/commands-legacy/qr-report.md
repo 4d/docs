@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table à utiliser ou Table par défaut si ce paramètre est omis |
-| nomFichier | Chaîne | &#x1F852; | Document d'état rapide à charger |
-| nomMéthode | Chaîne | &#x1F852; | Nom de la méthode à appeler |
+| nomFichier | Text | &#x1F852; | Document d'état rapide à charger |
+| nomMéthode | Text | &#x1F852; | Nom de la méthode à appeler |
 | * | Opérateur | &#x1F852; | Suppression des boîtes de dialogue d'impression |
 
 <!-- END REF-->

@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si passé, objet est un nom d'objet (chaîne). Si omis, objet est une variable. |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * spécifié) ou Variable (si * est omis) |
-| propriété | Entier long | &#x1F852; | Propriété de list box ou de colonne de list box |
-| valeur | Entier long, Chaîne | &#x1F852; | Valeur de la propriété |
+| objet | any | &#x1F852; | Nom d'objet (si * spécifié) ou Variable (si * est omis) |
+| propriété | Integer | &#x1F852; | Propriété de list box ou de colonne de list box |
+| valeur | Integer, Text | &#x1F852; | Valeur de la propriété |
 
 <!-- END REF-->
 

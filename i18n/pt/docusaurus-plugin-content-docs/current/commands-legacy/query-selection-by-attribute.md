@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| umaTabela | Tabela | &#x1F852; | Tabela para a quel vai retornar uma seleção de registros, ou tabela Padrão se omitido |
-| operadorConj | Operador | &#x1F852; | Operador Conjunção para usar para unir múltiplas pesquisas (se alguma) |
-| campoObj | Campo | &#x1F852; | Campo objeto para atributos de pesquisa |
-| rotaAtributo | String | &#x1F852; | Nome ou rota do atributo |
-| operadorPesq | Operador, String | &#x1F852; | Operador Pesquisa (comparador) |
-| valor | Texto, Número, Data, Hora | &#x1F852; | Valor a comparar |
+| umaTable | Table | &#x1F852; | Tabela para a quel vai retornar uma seleção de registros, ou tabela Padrão se omitido |
+| operadorConj | * | &#x1F852; | Operador Conjunção para usar para unir múltiplas pesquisas (se alguma) |
+| campoObj | Field | &#x1F852; | Campo objeto para atributos de pesquisa |
+| rotaAtributo | Text | &#x1F852; | Nome ou rota do atributo |
+| operadorPesq | *, Text | &#x1F852; | Operador Pesquisa (comparador) |
+| valor | Text, Number, Date, Time | &#x1F852; | Valor a comparar |
 | * | Operador | &#x1F852; | Continua flag de pesquisa |
 
 <!-- END REF-->

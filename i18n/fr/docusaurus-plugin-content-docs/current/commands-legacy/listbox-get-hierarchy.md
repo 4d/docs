@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| hiérarchique | Booléen | &#x1F858; | Vrai = list box hiérarchique, Faux = list box non hiérarchique |
-| hiérarchie | Tableau pointeur | &#x1F858; | Tableau de pointeurs |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| hiérarchique | Boolean | &#x1F858; | Vrai = list box hiérarchique, Faux = list box non hiérarchique |
+| hiérarchie | Pointer array | &#x1F858; | Tableau de pointeurs |
 
 <!-- END REF-->
 

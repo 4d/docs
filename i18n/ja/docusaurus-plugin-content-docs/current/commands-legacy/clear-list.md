@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | ListRef | &#x1F852; | リスト参照番号 |
+| list | Integer | &#x1F852; | リスト参照番号 |
 | * | &#x1F852; | 指定した場合, サブリストがあればそれもメモリからクリア 省略した場合, サブリストがあってもそれをクリアしない |
 
 <!-- END REF-->

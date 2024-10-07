@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Clickcount.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Entier long | &#x1F850; | Nombre de clics consécutifs |
+| Résultat | Integer | &#x1F850; | Nombre de clics consécutifs |
 
 <!-- END REF-->
 

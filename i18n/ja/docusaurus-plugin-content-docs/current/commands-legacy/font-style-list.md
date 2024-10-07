@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.FONT STYLE LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fontFamily | テキスト | &#x1F852; | フォントファミリー名 |
-| fontStyleList | テキスト配列 | &#x1F858; | フォントファミリーによってサポートされるフォントスタイルの一覧 |
-| fontNameList | テキスト配列 | &#x1F858; | フォントファミリーによってサポートされるフォント名の完全な一覧 |
+| fontFamily | Text | &#x1F852; | フォントファミリー名 |
+| fontStyleList | Text array | &#x1F858; | フォントファミリーによってサポートされるフォントスタイルの一覧 |
+| fontNameList | Text array | &#x1F858; | フォントファミリーによってサポートされるフォント名の完全な一覧 |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DATABASE PARAMETER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla para la cual definir el parámetro o Tabla por defecto si se omite este parámetro |
-| selector | Entero largo | &#x1F852; | Código del parámetro de la base a modificar |
-| valor | Real, Cadena | &#x1F852; | Valor del parámetro |
+| tabla | Table | &#x1F852; | Tabla para la cual definir el parámetro o Tabla por defecto si se omite este parámetro |
+| selector | Integer | &#x1F852; | Código del parámetro de la base a modificar |
+| valor | Real, Text | &#x1F852; | Valor del parámetro |
 
 <!-- END REF-->
 

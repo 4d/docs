@@ -11,13 +11,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Field.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numTable | Entier long | &#x1F852; | Numéro de table |
-| numChamp | Entier long | &#x1F852; | Numéro de champ |
-| ptrChamp | Pointeur | &#x1F850; | Pointeur de champ |
+| numTable | Integer | &#x1F852; | Numéro de table |
+| numChamp | Integer | &#x1F852; | Numéro de champ |
+| ptrChamp | Pointer | &#x1F850; | Pointeur de champ |
 | Field ( ptrChamp ) -> numChamp |
 | Paramètre | Type | Description |
-| ptrChamp | Pointeur | &#x1F852; | Pointeur de champ |
-| numChamp | Entier long | &#x1F850; | Numéro de champ |
+| ptrChamp | Pointer | &#x1F852; | Pointeur de champ |
+| numChamp | Integer | &#x1F850; | Numéro de champ |
 
 <!-- END REF-->
 

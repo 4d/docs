@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| object | any | &#x1F852; | Object name (if * is specified) or <br/>Variable (if * is omitted) |
 | recursive | Boolean | &#x1F852; | True = collapse sublevels<br/>False = do not collapse sublevels |
-| selector | Longint | &#x1F852; | Part of list box to collapse |
-| line | Longint | &#x1F852; | Number of break row to collapse or <br/>Number of list box level to collapse |
-| column | Longint | &#x1F852; | Number of break column to collapse |
+| selector | Integer | &#x1F852; | Part of list box to collapse |
+| line | Integer | &#x1F852; | Number of break row to collapse or <br/>Number of list box level to collapse |
+| column | Integer | &#x1F852; | Number of break column to collapse |
 
 <!-- END REF-->
 

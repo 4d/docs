@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | path | Text, Text array | &#x1F852; | Text or Text array containing one or more method path(s) |
 | code | Text, Text array | &#x1F858; | Code of designated method(s) |
-| option | Longint | &#x1F852; | 0 or omitted = simple export (without tokens), 1 = export with tokens |
+| option | Integer | &#x1F852; | 0 or omitted = simple export (without tokens), 1 = export with tokens |
 | * | Operator | &#x1F852; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->

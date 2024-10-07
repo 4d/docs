@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Test path name.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| pathname | String | &#x1F852; | Pathname to directory, folder or document |
+| pathname | Text | &#x1F852; | Pathname to directory, folder or document |
 | Function result | Longint | &#x1F850; | 1, pathname refers to an existing document 0, pathname refers to an existing directory or folder <0, invalid pathname, OS file manager error code |
 
 <!-- END REF-->

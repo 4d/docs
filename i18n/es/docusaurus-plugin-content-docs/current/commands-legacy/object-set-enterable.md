@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *), o Tabla o campo o variable (si se omite *) |
-| editable | Booleano, Entero largo | &#x1F852; | True para editable; False para no editable |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *), o Tabla o campo o variable (si se omite *) |
+| editable | Boolean, Integer | &#x1F852; | True para editable; False para no editable |
 
 <!-- END REF-->
 

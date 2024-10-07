@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX OPEN XML ELEMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | DocRef | &#x1F852; | 開いたドキュメントの参照 |
-| tag | 文字 | &#x1F852; | 開く要素の名前 |
-| attribName | 文字 | &#x1F852; | 属性名 |
-| attribValue | 文字 | &#x1F852; | 属性値 |
+| document | Time | &#x1F852; | 開いたドキュメントの参照 |
+| tag | Text | &#x1F852; | 開く要素の名前 |
+| attribName | Text | &#x1F852; | 属性名 |
+| attribValue | Text | &#x1F852; | 属性値 |
 
 <!-- END REF-->
 

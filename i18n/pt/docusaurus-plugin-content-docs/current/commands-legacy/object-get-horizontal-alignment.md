@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
-| Resultado | Inteiro longo | &#x1F850; | Código de alinhamento |
+| objeto | any | &#x1F852; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
+| Resultado | Integer | &#x1F850; | Código de alinhamento |
 
 <!-- END REF-->
 

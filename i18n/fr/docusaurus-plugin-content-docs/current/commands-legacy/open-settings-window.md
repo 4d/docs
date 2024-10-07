@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN SETTINGS WINDOW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sélecteur | Chaîne | &#x1F852; | Clé désignant un thème ou une page de la boîte de dialogue des Préférences ou des Propriétés de la base |
-| accès | Booléen | &#x1F852; | Vrai=Verrouiller les autres pages de la boîte de dialogue, Faux ou omis=Laisser actives les autres pages de la boîte de dialogue |
-| typePropriétés | Entier long | &#x1F852; | 0 ou omis = Propriétés structure (mode standard), 1 = Propriétés utilisateur, 2 = Propriétés utilisateur pour données |
+| sélecteur | Text | &#x1F852; | Clé désignant un thème ou une page de la boîte de dialogue des Préférences ou des Propriétés de la base |
+| accès | Boolean | &#x1F852; | Vrai=Verrouiller les autres pages de la boîte de dialogue, Faux ou omis=Laisser actives les autres pages de la boîte de dialogue |
+| typePropriétés | Integer | &#x1F852; | 0 ou omis = Propriétés structure (mode standard), 1 = Propriétés utilisateur, 2 = Propriétés utilisateur pour données |
 
 <!-- END REF-->
 

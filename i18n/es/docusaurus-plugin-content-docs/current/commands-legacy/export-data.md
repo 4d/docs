@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT DATA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomArchivo | Cadena | &#x1F852; | Ruta de acceso y nombre del archivo a exportar |
-| proyecto | Variable texto, BLOB variable | &#x1F852; | Contenido del proyecto de exportación |
+| nomArchivo | Text | &#x1F852; | Ruta de acceso y nombre del archivo a exportar |
+| proyecto | Text, Blob | &#x1F852; | Contenido del proyecto de exportación |
 | &#x1F858; | Nuevo contenido del proyecto de exportación (si se  pasa el parámetro *) |
 | * | Operador | &#x1F852; | Visualización de la caja de diálogo de exportación y actualización del proyecto |
 

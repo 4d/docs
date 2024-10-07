@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | leChamp &#124; laTable | Champ, Table | &#x1F852; | Champ à récupérer dans le tableau ou Table dont les numéros d'enregistrements sont à récupérer dans le tableau |
-| tableau | Tableau | &#x1F858; | Tableau recevant les valeurs des champs ou les numéros d'enregistrements |
-| leChamp | Champ | &#x1F852; | Champ à récupérer dans le tableau |
-| tableau | Tableau | &#x1F858; | Tableau recevant les valeurs du champ |
+| tableau | Array | &#x1F858; | Tableau recevant les valeurs des champs ou les numéros d'enregistrements |
+| leField | Field | &#x1F852; | Champ à récupérer dans le tableau |
+| tableau | Array | &#x1F858; | Tableau recevant les valeurs du champ |
 | * | Opérateur | &#x1F852; | Attente d’exécution |
 
 <!-- END REF-->

@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Set group properties.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refGrupo | Entero largo | &#x1F852; | Número de referencia único del grupo activo o -1 para añadir un grupo de Diseñador o -2 para añadir un grupo de Administrador |
+| refGrupo | Integer | &#x1F852; | Número de referencia único del grupo activo o -1 para añadir un grupo de Diseñador o -2 para añadir un grupo de Administrador |
 | &#x1F858; | Número de identificación único del grupo agregado (si lo hay) |
-| nombre | Cadena | &#x1F852; | Nuevo nombre de grupo |
-| propietario | Entero largo | &#x1F852; | Número de referencia único del usuario o del propietario del nuevo grupo |
-| miembros | Array entero largo | &#x1F852; | Nuevos miembros del grupo |
-| Resultado | Entero largo | &#x1F850; | Número de referencia único del nuevo grupo |
+| nombre | Text | &#x1F852; | Nuevo nombre de grupo |
+| propietario | Integer | &#x1F852; | Número de referencia único del usuario o del propietario del nuevo grupo |
+| miembros | Integer array | &#x1F852; | Nuevos miembros del grupo |
+| Resultado | Integer | &#x1F850; | Número de referencia único del nuevo grupo |
 
 <!-- END REF-->
 

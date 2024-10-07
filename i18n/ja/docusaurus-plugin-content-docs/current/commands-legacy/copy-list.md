@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Copy list.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | ListRef | &#x1F852; | コピーするリストの参照 |
-| 戻り値 | ListRef | &#x1F850; | 複製されたリストのリスト参照番号 |
+| list | Integer | &#x1F852; | コピーするリストの参照 |
+| 戻り値 | Integer | &#x1F850; | 複製されたリストのリスト参照番号 |
 
 <!-- END REF-->
 

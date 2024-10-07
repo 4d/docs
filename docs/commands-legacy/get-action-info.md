@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get action info.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| action | String | &#x1F852; | Standard action name or pattern including parameter if required |
-| target | Longint | &#x1F852; | Defines the target of the action to get information: main form or current form |
+| action | Text | &#x1F852; | Standard action name or pattern including parameter if required |
+| target | Integer | &#x1F852; | Defines the target of the action to get information: main form or current form |
 | Function result | Object | &#x1F850; | Object containing action status as boolean properties: isEnabled, isVisible, isChecked, isMixed, isUnknownState |
 
 <!-- END REF-->

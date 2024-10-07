@@ -10,14 +10,14 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se * é especificado) ou Variável ou Campo (se * for omitido) |
-| novoNome | Texto | &#x1F852; | Nome do novo objeto |
-| novaVar | Ponteiro | &#x1F852; | Ponteiro para a variável do novo objeto |
-| relacionadoA | Texto | &#x1F852; | Nome do objeto editável anterior (ou do botão de opção) |
-| moverH | Inteiro longo | &#x1F852; | Deslocamento horizontal do novo objeto (>0 = a direita, <0 para a esquerda) |
-| moverV | Inteiro longo | &#x1F852; | Deslocamento vertical do novo objeto (>0 = para baixo, <0 = para cima) |
-| redimH | Inteiro longo | &#x1F852; | Valor do redimensionamento horizontal do objeto |
-| redimV | Inteiro longo | &#x1F852; | Valor do redimensionamento vrtical do objeto |
+| objeto | any | &#x1F852; | Nome de objeto (se * é especificado) ou Variável ou Campo (se * for omitido) |
+| novoNome | Text | &#x1F852; | Nome do novo objeto |
+| novaVar | Pointer | &#x1F852; | Ponteiro para a variável do novo objeto |
+| relacionadoA | Text | &#x1F852; | Nome do objeto editável anterior (ou do botão de opção) |
+| moverH | Integer | &#x1F852; | Deslocamento horizontal do novo objeto (>0 = a direita, <0 para a esquerda) |
+| moverV | Integer | &#x1F852; | Deslocamento vertical do novo objeto (>0 = para baixo, <0 = para cima) |
+| redimH | Integer | &#x1F852; | Valor do redimensionamento horizontal do objeto |
+| redimV | Integer | &#x1F852; | Valor do redimensionamento vrtical do objeto |
 | * | Operador | &#x1F852; | se especificado = coordenadas absolutadas, se omitida = coordenadas relativas |
 
 <!-- END REF-->

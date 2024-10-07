@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | targetElementRef | Text | &#x1F852; | Parent XML element reference |
 | sourceElementRef | Text | &#x1F852; | XML element reference to insert |
-| childIndex | Longint | &#x1F852; | Index of child of target element above which the new element must be inserted |
+| childIndex | Integer | &#x1F852; | Index of child of target element above which the new element must be inserted |
 | Function result | Text | &#x1F850; | Reference of new XML element |
 
 <!-- END REF-->

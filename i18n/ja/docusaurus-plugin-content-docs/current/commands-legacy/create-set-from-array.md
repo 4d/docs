@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE SET FROM ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | セットのテーブル |
-| recordsArray | 倍長整数, ブール配列 | &#x1F852; | レコード番号配列、または ブール配列 (True = レコードはセットに含まれる, False = レコードはセットに含まれない) |
-| setName | 文字 | &#x1F852; | 作成するセットの名前, または 省略時、UserSetに適用する |
+| aTable | Table | &#x1F852; | セットのテーブル |
+| recordsArray | Integer, Boolean array | &#x1F852; | レコード番号配列、または ブール配列 (True = レコードはセットに含まれる, False = レコードはセットに含まれない) |
+| setName | Text | &#x1F852; | 作成するセットの名前, または 省略時、UserSetに適用する |
 
 <!-- END REF-->
 

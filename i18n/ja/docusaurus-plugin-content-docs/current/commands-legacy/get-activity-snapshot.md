@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | arrActivities &#124; arrUUID | Object array, テキスト配列 | &#x1F858; | オペレーションの詳細な情報(オブジェクト配列)<br/>またはオペレーションの UUID(テキスト配列) |
-| arrStart | テキスト配列 | &#x1F858; | オペレーションの開始時刻 |
-| arrDuration | 倍長整数配列 | &#x1F858; | オペレーションの所要時間(ミリ秒単位) |
-| arrInfo | テキスト配列 | &#x1F858; | オペレーションを説明するラベル |
+| arrStart | Text array | &#x1F858; | オペレーションの開始時刻 |
+| arrDuration | Integer array | &#x1F858; | オペレーションの所要時間(ミリ秒単位) |
+| arrInfo | Text array | &#x1F858; | オペレーションを説明するラベル |
 | arrDetails | Object array | &#x1F858; | コンテキストと、(あれば)サブオペレーションの詳細 |
 | * | 演算子 | &#x1F852; | 渡した場合、サーバーの状態を取得 |
 

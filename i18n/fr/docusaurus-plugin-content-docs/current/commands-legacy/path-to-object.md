@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Path to object.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin | Texte | &#x1F852; | Chemin |
-| typeChemin | Entier long | &#x1F852; | Type de syntaxe du chemin : Système (par défaut) ou  Posix |
-| Résultat | Objet | &#x1F850; | Objet décrivant le contenu du chemin |
+| chemin | Text | &#x1F852; | Chemin |
+| typeChemin | Integer | &#x1F852; | Type de syntaxe du chemin : Système (par défaut) ou  Posix |
+| Résultat | Object | &#x1F850; | Objet décrivant le contenu du chemin |
 
 <!-- END REF-->
 

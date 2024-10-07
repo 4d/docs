@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SELECT LOG FILE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| historial | Operador, Cadena | &#x1F852; | Nombre del archivo historial o * para cerrar el historial actual |
+| historial | *, Text | &#x1F852; | Nombre del archivo historial o * para cerrar el historial actual |
 
 <!-- END REF-->
 

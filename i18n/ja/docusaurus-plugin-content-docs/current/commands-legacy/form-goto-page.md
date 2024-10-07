@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GOTO PAGE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| pageNumber | 倍長整数 | &#x1F852; | 表示するフォームページ |
+| pageNumber | Integer | &#x1F852; | 表示するフォームページ |
 | * | 演算子 | &#x1F852; | カレントサブフォームのページを変更 |
 
 <!-- END REF-->

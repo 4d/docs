@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.POST KEY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| code | Entier long | &#x1F852; | Code d'un caractère ou code de touche de fonction |
-| modifiers | Entier long | &#x1F852; | Etat des touches Modifier |
-| process | Entier long | &#x1F852; | Numéro de référence du process de destination ou File d'attente des événements de l'application si paramètre omis ou égal à 0 |
+| code | Integer | &#x1F852; | Code d'un caractère ou code de touche de fonction |
+| modifiers | Integer | &#x1F852; | Etat des touches Modifier |
+| process | Integer | &#x1F852; | Numéro de référence du process de destination ou File d'attente des événements de l'application si paramètre omis ou égal à 0 |
 
 <!-- END REF-->
 

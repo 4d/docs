@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESTART 4D.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| délai | Entier long | &#x1F852; | Délai (secondes) avant que 4D ne redémarre |
-| message | Chaîne | &#x1F852; | Texte à afficher sur les postes clients |
+| délai | Integer | &#x1F852; | Délai (secondes) avant que 4D ne redémarre |
+| message | Text | &#x1F852; | Texte à afficher sur les postes clients |
 
 <!-- END REF-->
 

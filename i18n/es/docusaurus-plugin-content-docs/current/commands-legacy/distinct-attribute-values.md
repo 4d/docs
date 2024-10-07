@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campoObjeto | Campo | &#x1F852; | Campo de objeto del que desea obtener la lista de valores de atributos distintos |
-| ruta | Texto | &#x1F852; | Ruta de acceso del atributo cuyos valores distintos desea obtener |
-| arrayValores | Array texto, Array entero largo, Array booleano, Array fecha, Time array | &#x1F858; | Valores distintos en la ruta de atributos |
+| campoObjeto | Field | &#x1F852; | Campo de objeto del que desea obtener la lista de valores de atributos distintos |
+| ruta | Text | &#x1F852; | Ruta de acceso del atributo cuyos valores distintos desea obtener |
+| arrayValores | Text array, Integer array, Boolean array, Date array, Time array | &#x1F858; | Valores distintos en la ruta de atributos |
 
 <!-- END REF-->
 

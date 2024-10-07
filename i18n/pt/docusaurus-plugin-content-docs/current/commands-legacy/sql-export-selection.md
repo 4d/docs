@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL EXPORT SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela para a qual vai exportar a seleção |
-| rotaPasta | Texto | &#x1F852; | Nome da rota da pasta de exportação ou "" para exibir caixa de diálogo de seleção de pasta |
-| numArquivos | Inteiro longo | &#x1F852; | Máximo número de arquivos por pasta |
-| tamMaxArquivos | Inteiro longo | &#x1F852; | Tamanho máximo de arquivo Export.sql (em Kb) |
-| tamLimCampos | Inteiro longo | &#x1F852; | Tamanho limite (em bytes) abaixo do qual os conteúdos dos campos Texto, BLOB ou Imagem são incluídos no arquivo principal |
+| tabela | Table | &#x1F852; | Tabela para a qual vai exportar a seleção |
+| rotaPasta | Text | &#x1F852; | Nome da rota da pasta de exportação ou "" para exibir caixa de diálogo de seleção de pasta |
+| numArquivos | Integer | &#x1F852; | Máximo número de arquivos por pasta |
+| tamMaxArquivos | Integer | &#x1F852; | Tamanho máximo de arquivo Export.sql (em Kb) |
+| tamLimCampos | Integer | &#x1F852; | Tamanho limite (em bytes) abaixo do qual os conteúdos dos campos Texto, BLOB ou Imagem são incluídos no arquivo principal |
 
 <!-- END REF-->
 

@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#x1F852; | 指定時:objectはオブジェクト名(文字列)省略時:objectは変数 |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名(*指定時)、または変数(*省略時) |
-| row | 倍長整数 | &#x1F852; | 列番号 |
-| colorType | 倍長整数 | &#x1F852; | Listbox font color (デフォルト値) または Listbox background color |
-| 戻り値 | 倍長整数 | &#x1F850; | カラーの値 |
+| object | any | &#x1F852; | オブジェクト名(*指定時)、または変数(*省略時) |
+| row | Integer | &#x1F852; | 列番号 |
+| colorType | Integer | &#x1F852; | Listbox font color (デフォルト値) または Listbox background color |
+| 戻り値 | Integer | &#x1F850; | カラーの値 |
 
 <!-- END REF-->
 

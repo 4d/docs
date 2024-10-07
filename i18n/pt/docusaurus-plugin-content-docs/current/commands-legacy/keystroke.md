@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Keystroke.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | String | &#x1F850; | Caracter introduzido pelo usuário |
+| Resultado | Text | &#x1F850; | Caracter introduzido pelo usuário |
 
 <!-- END REF-->
 

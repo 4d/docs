@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | fichierOuDossier &#124; structureZip | Objet | &#x1F852; | Objet fichier ou dossier à compresser |
-| fichierDestination | Objet | &#x1F852; | Fichier de destination de l'archive |
-| options | Entier long | &#x1F852; | Si fichierOuDossier est utilisé : ZIP sans dossier parent |
-| Résultat | Objet | &#x1F850; | Objet statut |
+| fichierDestination | Object | &#x1F852; | Fichier de destination de l'archive |
+| options | Integer | &#x1F852; | Si fichierOuDossier est utilisé : ZIP sans dossier parent |
+| Résultat | Object | &#x1F850; | Objet statut |
 
 <!-- END REF-->
 

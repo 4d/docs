@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable. |
-| objeto | Objeto de formulario | &#x1F852; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
-| propiedad | Entero largo | &#x1F852; | Propiedad de list box o de columna |
-| valor | Entero largo, Cadena | &#x1F852; | Valor de la propiedad |
+| objeto | any | &#x1F852; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
+| propiedad | Integer | &#x1F852; | Propiedad de list box o de columna |
+| valor | Integer, Text | &#x1F852; | Valor de la propiedad |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota | Texto, Array texto | &#x1F852; | Texto ou array que contém uma ou mais rotas de acesso |
-| dataMod | Data, Array data | &#x1F858; | Data(s) de modificação do método |
-| horaMod | Hora, Array inteiro longo | &#x1F858; | Hora(s) de modificação do método |
+| rota | Text, Text array | &#x1F852; | Texto ou array que contém uma ou mais rotas de acesso |
+| dataMod | Date, Date array | &#x1F858; | Data(s) de modificação do método |
+| horaMod | Time, Integer array | &#x1F858; | Hora(s) de modificação do método |
 | * | Operador | &#x1F852; | Se passar = o comando é aplicado ao banco local quando é executado apartir de um componente (parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->

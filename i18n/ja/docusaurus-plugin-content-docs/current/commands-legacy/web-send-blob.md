@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SEND BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| BLOB | BLOB | &#x1F852; | ブラウザへ送るBLOB |
-| type | 文字 | &#x1F852; | BLOBのデータタイプ |
+| Blob | Blob | &#x1F852; | ブラウザへ送るBLOB |
+| type | Text | &#x1F852; | BLOBのデータタイプ |
 
 <!-- END REF-->
 

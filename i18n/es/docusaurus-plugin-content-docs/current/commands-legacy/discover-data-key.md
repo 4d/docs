@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Discover data key.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Booleano | &#x1F850; | True si se ha encontrado una llave de cifrado válida para el archivo de datos abierto actualmente, de lo contrario False |
+| Resultado | Boolean | &#x1F850; | True si se ha encontrado una llave de cifrado válida para el archivo de datos abierto actualmente, de lo contrario False |
 
 <!-- END REF-->
 

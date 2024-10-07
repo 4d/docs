@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Encrypt data file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| structurePath | テキスト | &#x1F852; | ストラクチャーファイルのパス名 |
-| dataPath | テキスト | &#x1F852; | 暗号化するデータファイルへのパス名 |
+| structurePath | Text | &#x1F852; | ストラクチャーファイルのパス名 |
+| dataPath | Text | &#x1F852; | 暗号化するデータファイルへのパス名 |
 | newPassPhrase &#124; newDataKey | テキスト, オブジェクト | &#x1F852; | 更新したい場合: 新しいパスフレーズ (テキスト)または新しい暗号化キー(オブジェクト) |
-| archiveFolder | テキスト | &#x1F852; | 元のファイルを保存しておくフォルダのパス名 |
+| archiveFolder | Text | &#x1F852; | 元のファイルを保存しておくフォルダのパス名 |
 | curPassPhrase &#124; curDataKey | テキスト, オブジェクト | &#x1F852; | カレントのパスフレーズ(テキスト)またはカレントの暗号化キー(オブジェクト) |
-| methodName | テキスト | &#x1F852; | 4Dコールバックメソッド名 |
-| 戻り値 | テキスト | &#x1F850; | 元のファイルが保存されたフォルダの完全なパス名 |
+| methodName | Text | &#x1F852; | 4Dコールバックメソッド名 |
+| 戻り値 | Text | &#x1F850; | 元のファイルが保存されたフォルダの完全なパス名 |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL End selection.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Booléen | &#x1F850; | Limites de l’ensemble de recherche atteintes |
+| Résultat | Boolean | &#x1F850; | Limites de l’ensemble de recherche atteintes |
 
 <!-- END REF-->
 

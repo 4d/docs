@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | numTabla &#124; unPtr | Entero largo, Puntero | &#x1F852; | Número de tabla o Puntero de tabla, o Puntero de campo |
-| Resultado | Entero largo, Puntero | &#x1F850; | Puntero de tabla, si se pasa un número de tabla Número de tabla, si se pasa un puntero de tabla Número de tabla, si se pasa un puntero de campo |
+| Resultado | Integer, Pointer | &#x1F850; | Puntero de tabla, si se pasa un número de tabla Número de tabla, si se pasa un puntero de tabla Número de tabla, si se pasa un puntero de campo |
 
 <!-- END REF-->
 

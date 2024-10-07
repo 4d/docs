@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resize | Boolean | &#x1F852; | True: The form can be resized verticallyFalse: The form cannot be resized vertically |
-| minHeight | Longint | &#x1F852; | Smallest form height allowed (pixels) |
-| maxHeight | Longint | &#x1F852; | Largest form height allowed (pixels) |
+| minHeight | Integer | &#x1F852; | Smallest form height allowed (pixels) |
+| maxHeight | Integer | &#x1F852; | Largest form height allowed (pixels) |
 
 <!-- END REF-->
 

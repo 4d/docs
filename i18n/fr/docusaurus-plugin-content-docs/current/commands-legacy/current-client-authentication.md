@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Current client authentication.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| domaine | Texte | &#x1F858; | Nom du domaine |
-| protocole | Texte | &#x1F858; | "Kerberos", "NTLM" ou chaîne vide |
-| Résultat | Texte | &#x1F850; | Nom d'utilisateur de session retourné par Windows |
+| domaine | Text | &#x1F858; | Nom du domaine |
+| protocole | Text | &#x1F858; | "Kerberos", "NTLM" ou chaîne vide |
+| Résultat | Text | &#x1F850; | Nom d'utilisateur de session retourné par Windows |
 
 <!-- END REF-->
 

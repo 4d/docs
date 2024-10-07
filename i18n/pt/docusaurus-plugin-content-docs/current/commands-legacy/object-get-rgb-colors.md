@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificar, objeto é um nome de objeto (string) se omitido, objeto é uma variável ou campo. |
-| objeto | Objeto de formulário | &#x1F852; | Nome do objeto (se * é especificado) ou Variável ou Campo (se * é omitido) |
-| corPrimeiroPlano | Texto, Inteiro longo | &#x1F858; | Valor da cor RGB do primeiro plano |
-| corFundo | Texto, Inteiro longo | &#x1F858; | Valor da cor do RGB para segundo plano (fundo) |
-| corFundoAlternativo | Texto, Inteiro longo | &#x1F858; | Valor da cor RGB do fundo alternativo |
+| objeto | any | &#x1F852; | Nome do objeto (se * é especificado) ou Variável ou Campo (se * é omitido) |
+| corPrimeiroPlano | Text, Integer | &#x1F858; | Valor da cor RGB do primeiro plano |
+| corFundo | Text, Integer | &#x1F858; | Valor da cor do RGB para segundo plano (fundo) |
+| corFundoAlternativo | Text, Integer | &#x1F858; | Valor da cor RGB do fundo alternativo |
 
 <!-- END REF-->
 

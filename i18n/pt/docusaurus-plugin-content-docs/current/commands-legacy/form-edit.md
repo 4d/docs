@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM EDIT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Tabela | Tabela | &#x1F852; | TAbela que possui o formulário ou Se omitido: tabela padrão ou uso do formulário projeto |
-| formulario | String | &#x1F852; | Nome formulário |
+| Table | Table | &#x1F852; | TAbela que possui o formulário ou Se omitido: tabela padrão ou uso do formulário projeto |
+| formulario | Text | &#x1F852; | Nome formulário |
 
 <!-- END REF-->
 

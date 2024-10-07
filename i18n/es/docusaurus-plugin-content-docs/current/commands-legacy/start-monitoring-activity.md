@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | duracion | Real | &#x1F852; | Período de tiempo (en segundos) antes de que comience el registro |
-| fuente | Entero largo | &#x1F852; | Origen de una operación |
+| fuente | Integer | &#x1F852; | Origen de una operación |
 
 <!-- END REF-->
 

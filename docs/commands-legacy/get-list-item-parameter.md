@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | ListRef, String | &#x1F852; | List reference number (if * omitted) or Name of list type object (if * passed) |
+| list | Integer, Text | &#x1F852; | List reference number (if * omitted) or Name of list type object (if * passed) |
 | itemRef &#124; * | Longint, Operator | &#x1F852; | Item reference number or 0 for the last item appended to the list or * for the current list item |
-| selector | String | &#x1F852; | Parameter constant |
-| value | String, Boolean, Real | &#x1F858; | Current value of parameter |
+| selector | Text | &#x1F852; | Parameter constant |
+| value | Text, Boolean, Real | &#x1F858; | Current value of parameter |
 
 <!-- END REF-->
 

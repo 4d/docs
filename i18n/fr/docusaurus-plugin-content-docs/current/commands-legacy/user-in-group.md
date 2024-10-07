@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.User in group.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomUtilisateur | Chaîne | &#x1F852; | Nom de l'utilisateur (compte) |
-| groupe | Chaîne | &#x1F852; | Nom du groupe |
-| Résultat | Booléen | &#x1F850; | Vrai = utilisateur est dans groupe Faux = utilisateur n'est pas dans groupe |
+| nomUtilisateur | Text | &#x1F852; | Nom de l'utilisateur (compte) |
+| groupe | Text | &#x1F852; | Nom du groupe |
+| Résultat | Boolean | &#x1F850; | Vrai = utilisateur est dans groupe Faux = utilisateur n'est pas dans groupe |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET FOLDERS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| arrNoms | Array texto | &#x1F858; | Array de nombres de carpetas de la página de inicio |
-| filtro | Texto | &#x1F852; | Filtro de nombres |
+| arrNoms | Text array | &#x1F858; | Array de nombres de carpetas de la página de inicio |
+| filtro | Text | &#x1F852; | Filtro de nombres |
 | * | Operador | &#x1F852; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->

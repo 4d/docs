@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get database localization.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| languageType | 倍長整数 | &#x1F852; | ランゲージの種類 |
+| languageType | Integer | &#x1F852; | ランゲージの種類 |
 | * | 演算子 | &#x1F852; | ホストデータベースについての情報を返す |
-| 戻り値 | 文字 | &#x1F850; | データベースのカレントランゲージ |
+| 戻り値 | Text | &#x1F850; | データベースのカレントランゲージ |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Instance of.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objeto | Objeto | &#x1F852; | Objeto cuja classe vai ser testada |
-| classe | Objeto | &#x1F852; | Classe a qual vai testar a pertenência |
-| Resultado | Booleano | &#x1F850; | True se o objeto pertencer à classe especifica ou à uma classe child, senão false |
+| objeto | Object | &#x1F852; | Objeto cuja classe vai ser testada |
+| classe | Object | &#x1F852; | Classe a qual vai testar a pertenência |
+| Resultado | Boolean | &#x1F850; | True se o objeto pertencer à classe especifica ou à uma classe child, senão false |
 
 <!-- END REF-->
 

@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | elemRef&#124;documento | Texto | &#x1F852; | Elemento de referencia raiz XML ou Referência de documento aberto |
-| seletor | Inteiro longo | &#x1F852; | Opção a estabelecer |
-| valor | Inteiro longo | &#x1F852; | Valor da opção |
+| seletor | Integer | &#x1F852; | Opção a estabelecer |
+| valor | Integer | &#x1F852; | Valor da opção |
 
 <!-- END REF-->
 

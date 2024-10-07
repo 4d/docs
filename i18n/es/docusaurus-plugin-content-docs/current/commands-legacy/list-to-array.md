@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.LIST TO ARRAY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| lista | Cadena, ListRef | &#x1F852; | Lista de la cual copiar los elementos de primer nivel |
+| lista | Text, Integer | &#x1F852; | Lista de la cual copiar los elementos de primer nivel |
 | array | Array | &#x1F858; | Array al cual copiar los elementos de la lista |
 | refElementos | Array | &#x1F858; | Números de referencia de los elementos de la lista |
 

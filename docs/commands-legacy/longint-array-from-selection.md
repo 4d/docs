@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table of the current selection |
-| recordArray | Longint array | &#x1F858; | Array of record numbers |
-| selection | String | &#x1F852; | Name of the named selection or the current selection if this parameter is omitted |
+| recordArray | Integer array | &#x1F858; | Array of record numbers |
+| selection | Text | &#x1F852; | Name of the named selection or the current selection if this parameter is omitted |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Dec.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| number | 実数 | &#x1F852; | 小数部を求める数値 |
-| 戻り値 | 実数 | &#x1F850; | 小数部の数値 |
+| number | Real | &#x1F852; | 小数部を求める数値 |
+| 戻り値 | Real | &#x1F850; | 小数部の数値 |
 
 <!-- END REF-->
 

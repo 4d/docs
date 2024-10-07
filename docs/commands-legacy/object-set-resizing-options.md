@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object Name (if * is specified) or Variable (if * is omitted) |
-| horizontal | Longint | &#x1F852; | Horizontal resizing option |
-| vertical | Longint | &#x1F852; | Vertical resizing option |
+| object | any | &#x1F852; | Object Name (if * is specified) or Variable (if * is omitted) |
+| horizontal | Integer | &#x1F852; | Horizontal resizing option |
+| vertical | Integer | &#x1F852; | Vertical resizing option |
 
 <!-- END REF-->
 

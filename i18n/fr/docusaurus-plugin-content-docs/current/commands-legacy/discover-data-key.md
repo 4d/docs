@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Discover data key.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Booléen | &#x1F850; | Vrai si une clé de chiffrement valide a été trouvée pour le fichier de données courant, sinon Faux |
+| Résultat | Boolean | &#x1F850; | Vrai si une clé de chiffrement valide a été trouvée pour le fichier de données courant, sinon Faux |
 
 <!-- END REF-->
 

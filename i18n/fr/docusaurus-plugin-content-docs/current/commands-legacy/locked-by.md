@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table de l'enregistrement verrouillé ou Table par défaut si ce paramètre est omis |
-| process | Entier long | &#x1F858; | Numéro du process |
-| utilisateur4D | Chaîne | &#x1F858; | Nom de l'utilisateur 4D |
-| utilisateurSession | Chaîne | &#x1F858; | Nom de l'utilisateur ayant ouvert la session de travail |
-| nomProcess | Chaîne | &#x1F858; | Nom du process |
+| process | Integer | &#x1F858; | Numéro du process |
+| utilisateur4D | Text | &#x1F858; | Nom de l'utilisateur 4D |
+| utilisateurSession | Text | &#x1F858; | Nom de l'utilisateur ayant ouvert la session de travail |
+| nomProcess | Text | &#x1F858; | Nom du process |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get system info.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Objeto | &#x1F850; | Informação do sistema |
+| Resultado | Object | &#x1F850; | Informação do sistema |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Windows : hauteur de la fenêtre de l'application ou hauteur de l'écran si * est spécifiéMacintosh : hauteur de l'écran principal |
-| Résultat | Entier long | &#x1F850; | Hauteur exprimée en pixels |
+| Résultat | Integer | &#x1F850; | Hauteur exprimée en pixels |
 
 <!-- END REF-->
 

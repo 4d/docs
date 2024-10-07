@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LONGINT TO BLOB.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| enteroLargo | Entero largo | &#x1F852; | Valor de tipo Entero largo a escribir en el BLOB |
-| BLOB | BLOB | &#x1F852; | BLOB a recibir el valor Entero largo |
-| byteOrden | Entero largo | &#x1F852; | 0 Orden de bytes nativo 1 Orden de bytes Macintosh 2 Orden de bytes PC |
+| enteroLargo | Integer | &#x1F852; | Valor de tipo Entero largo a escribir en el BLOB |
+| Blob | Blob | &#x1F852; | BLOB a recibir el valor Entero largo |
+| byteOrden | Integer | &#x1F852; | 0 Orden de bytes nativo 1 Orden de bytes Macintosh 2 Orden de bytes PC |
 | offset &#124; * | Variable, Operador | &#x1F852; | Offset en el BLOB (expresado en bytes) o * para añadir el valor |
 | &#x1F858; | Nuevo offset después de la escritura si se omite * |
 

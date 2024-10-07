@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | entête &#124; tabChamps | Texte, Tableau texte | &#x1F852; | Champ ou variable contenant l'en-tête HTTP de la requête ou Tableau des champs de l'en-tête HTTP |
-| tabValeurs | Tableau texte | &#x1F852; | Contenu des champs de l’en-tête HTTP |
+| tabValeurs | Text array | &#x1F852; | Contenu des champs de l’en-tête HTTP |
 
 <!-- END REF-->
 

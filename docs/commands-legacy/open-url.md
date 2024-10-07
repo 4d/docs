@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN URL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| path | String | &#x1F852; | Path of document or URL to open |
-| appName | String | &#x1F852; | Name of application to use |
+| path | Text | &#x1F852; | Path of document or URL to open |
+| appName | Text | &#x1F852; | Name of application to use |
 | * | Operator | &#x1F852; | If specified = URL is not translated, If omitted = URL is translated |
 
 <!-- END REF-->

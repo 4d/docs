@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX GET XML DOCUMENT VALUES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | refDoc | &#x1F852; | Referência do documento aberto |
-| codificaçao | String | &#x1F858; | conjunto de caracteres do documento XML |
-| versao | String | &#x1F858; | Versão XML |
-| autonomo | Booleano | &#x1F858; | True = documento é autônomo; senão False |
+| documento | Time | &#x1F852; | Referência do documento aberto |
+| codificaçao | Text | &#x1F858; | conjunto de caracteres do documento XML |
+| versao | Text | &#x1F858; | Versão XML |
+| autonomo | Boolean | &#x1F858; | True = documento é autônomo; senão False |
 
 <!-- END REF-->
 

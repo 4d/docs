@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| colNum | Longint | &#x1F852; | Column number(s) to sort |
-| order | Operator | &#x1F852; | ">" to sort in ascending order or "<" to sort in descending order |
+| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| colNum | Integer | &#x1F852; | Column number(s) to sort |
+| order | * | &#x1F852; | ">" to sort in ascending order or "<" to sort in descending order |
 
 <!-- END REF-->
 

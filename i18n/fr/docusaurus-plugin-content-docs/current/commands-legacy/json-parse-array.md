@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON PARSE ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chaîneJSON | Chaîne | &#x1F852; | Chaîne en JSON à analyser |
-| tab | Tableau | &#x1F858; | Tableau contenant le résultat de l’analyse de la chaîne JSON |
+| chaîneJSON | Text | &#x1F852; | Chaîne en JSON à analyser |
+| tab | Array | &#x1F858; | Tableau contenant le résultat de l’analyse de la chaîne JSON |
 
 <!-- END REF-->
 

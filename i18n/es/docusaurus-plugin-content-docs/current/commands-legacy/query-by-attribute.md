@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY BY ATTRIBUTE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla para la cual devolver una selección de registros o Tabla por defecto si se omite |
-| opConj | Operador | &#x1F852; | Operador de conjunción ausar para combinar varias búsquedas (si las hay) |
-| campoObjeto | Campo | &#x1F852; | Campo objeto cuyos atributos utilizar para la búsqueda |
-| rutaAtributo | Cadena | &#x1F852; | Nombre o ruta de atributo |
-| opBusq | Cadena, Operador | &#x1F852; | Operador de búsqueda (comparador) |
-| valor | Texto, Número, Fecha, Hora | &#x1F852; | Valor a comparar |
+| tabla | Table | &#x1F852; | Tabla para la cual devolver una selección de registros o Tabla por defecto si se omite |
+| opConj | * | &#x1F852; | Operador de conjunción ausar para combinar varias búsquedas (si las hay) |
+| campoObjeto | Field | &#x1F852; | Campo objeto cuyos atributos utilizar para la búsqueda |
+| rutaAtributo | Text | &#x1F852; | Nombre o ruta de atributo |
+| opBusq | Text, * | &#x1F852; | Operador de búsqueda (comparador) |
+| valor | Text, Number, Date, Time | &#x1F852; | Valor a comparar |
 | * | Operador | &#x1F852; | Espera de ejecución de la búsqueda |
 
 <!-- END REF-->

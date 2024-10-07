@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Find XML element by ID.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | String | &#x1F852; | XML element reference |
-| id | String | &#x1F852; | Value of ID attribute of element to look for |
+| elementRef | Text | &#x1F852; | XML element reference |
+| id | Text | &#x1F852; | Value of ID attribute of element to look for |
 | Function result | String | &#x1F850; | Reference of the element found (if applicable) |
 
 <!-- END REF-->

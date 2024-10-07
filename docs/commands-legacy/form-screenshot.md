@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | aTable | Table | &#x1F852; | Form table |
 | formName | Text | &#x1F852; | Name of form |
 | formPict | Picture | &#x1F858; | Picture of form being executed if first parameter(s) omitted, or <br/>Picture of form in Form editor if a form name is passed |
-| pageNum | Longint | &#x1F852; | Form page number |
+| pageNum | Integer | &#x1F852; | Form page number |
 
 <!-- END REF-->
 

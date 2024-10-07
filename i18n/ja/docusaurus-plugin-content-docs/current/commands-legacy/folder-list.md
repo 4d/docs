@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FOLDER LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| pathname | 文字 | &#x1F852; | ボリュームのパス名、ディレクトリ、またはフォルダ |
-| directories | 文字配列 | &#x1F858; | ロケーションにあるディレクトリの名前 |
+| pathname | Text | &#x1F852; | ボリュームのパス名、ディレクトリ、またはフォルダ |
+| directories | Text array | &#x1F858; | ロケーションにあるディレクトリの名前 |
 
 <!-- END REF-->
 

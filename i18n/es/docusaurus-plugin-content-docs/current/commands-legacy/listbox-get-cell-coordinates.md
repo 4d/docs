@@ -10,13 +10,13 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica = objeto es un nombre de objeto (cadena) Si se omite = objeto es una variable |
-| object | Objeto de formulario | &#x1F852; | Nombre de objeto (si * se especifica) o variable (si * se omite) |
-| column | Entero largo | &#x1F852; | Número de columna |
-| linea | Entero largo | &#x1F852; | Número de línea |
-| izquierda | Entero largo | &#x1F858; | Coordenada izquierda del objeto |
-| arriba | Entero largo | &#x1F858; | Coordenada superior del objeto |
-| der | Entero largo | &#x1F858; | Coordenada derecha del objeto |
-| abajo | Entero largo | &#x1F858; | Coordenada inferior del objeto |
+| object | any | &#x1F852; | Nombre de objeto (si * se especifica) o variable (si * se omite) |
+| column | Integer | &#x1F852; | Número de columna |
+| linea | Integer | &#x1F852; | Número de línea |
+| izquierda | Integer | &#x1F858; | Coordenada izquierda del objeto |
+| arriba | Integer | &#x1F858; | Coordenada superior del objeto |
+| der | Integer | &#x1F858; | Coordenada derecha del objeto |
+| abajo | Integer | &#x1F858; | Coordenada inferior del objeto |
 
 <!-- END REF-->
 

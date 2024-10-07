@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current form table.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | ポインター | &#x1F850; | 現在表示されているフォームが属すテーブルへのポインタ |
+| 戻り値 | Pointer | &#x1F850; | 現在表示されているフォームが属すテーブルへのポインタ |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Retourne l'heure courante sur le poste serveur |
-| Résultat | Heure | &#x1F850; | Heure courante |
+| Résultat | Time | &#x1F850; | Heure courante |
 
 <!-- END REF-->
 

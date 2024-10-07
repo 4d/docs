@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET ABOUT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| libelléElément | Chaîne | &#x1F852; | Nouvelle ligne de menu A propos... |
-| méthode | Chaîne | &#x1F852; | Nom de la méthode à exécuter lorsque la ligne est choisie |
+| libelléElément | Text | &#x1F852; | Nouvelle ligne de menu A propos... |
+| méthode | Text | &#x1F852; | Nom de la méthode à exécuter lorsque la ligne est choisie |
 
 <!-- END REF-->
 

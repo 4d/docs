@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Value type.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| expression | 式 | &#x1F852; | テストしたい結果を返す式 |
-| 戻り値 | 倍長整数 | &#x1F850; | データ型の数字 |
+| expression | Expression | &#x1F852; | テストしたい結果を返す式 |
+| 戻り値 | Integer | &#x1F850; | データ型の数字 |
 
 <!-- END REF-->
 

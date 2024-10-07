@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | ratonX | Real | &#x1F858; | Coordenada horizontal del ratón |
 | ratonY | Real | &#x1F858; | Coordenada vertical del ratón |
-| botonRaton | Entero largo | &#x1F858; | Estado del botón del ratón: 0 = Botón arriba 1 = Botón presionado 2 = Botón derecho presionado 3 = Los dos botones presionados |
+| botonRaton | Integer | &#x1F858; | Estado del botón del ratón: 0 = Botón arriba 1 = Botón presionado 2 = Botón derecho presionado 3 = Los dos botones presionados |
 | * | Operador | &#x1F852; | Si se especifica, utlizar el sistema de coordenadas globales Si se omite, utilizar el sistema de coordenadas locales |
 
 <!-- END REF-->

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.BUILD APPLICATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| projectName | 文字 | &#x1F852; | 使用する設定ファイルのフルアクセスパス |
+| projectName | Text | &#x1F852; | 使用する設定ファイルのフルアクセスパス |
 
 <!-- END REF-->
 

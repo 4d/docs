@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Application version.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| buildNum | Longint | &#x1F858; | Build number |
+| buildNum | Integer | &#x1F858; | Build number |
 | * | Operator | &#x1F852; | Long version number if passed, otherwise Short version number |
 | Function result | String | &#x1F850; | Version number encoded string |
 

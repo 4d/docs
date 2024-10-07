@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.COPY SET.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| srcCon | Cadena | &#x1F852; | Nombre del conjunto fuente |
-| dstCon | Cadena | &#x1F852; | Nombre del conjunto de destino |
+| srcCon | Text | &#x1F852; | Nombre del conjunto fuente |
+| dstCon | Text | &#x1F852; | Nombre del conjunto de destino |
 
 <!-- END REF-->
 

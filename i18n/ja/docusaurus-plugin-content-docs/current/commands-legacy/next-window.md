@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Next window.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| window | WinRef | &#x1F852; | ウィンドウ参照番号 |
-| 戻り値 | WinRef | &#x1F850; | ウィンドウ参照番号 |
+| window | Integer | &#x1F852; | ウィンドウ参照番号 |
+| 戻り値 | Integer | &#x1F850; | ウィンドウ参照番号 |
 
 <!-- END REF-->
 

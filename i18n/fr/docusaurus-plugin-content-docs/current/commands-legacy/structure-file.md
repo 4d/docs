@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Retourner le fichier de structure de la base hôte |
-| Résultat | Chaîne | &#x1F850; | Nom long du fichier de structure de la base |
+| Résultat | Text | &#x1F850; | Nom long du fichier de structure de la base |
 
 <!-- END REF-->
 

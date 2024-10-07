@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.MODIFY SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela a exibir e modificar, ou tabela padrão, se omitido |
-| modoSelecao | Inteiro longo | &#x1F852; | Modo seleção |
-| entraLista | Booleano | &#x1F852; | Permite Enter na lista opção |
+| tabela | Table | &#x1F852; | Tabela a exibir e modificar, ou tabela padrão, se omitido |
+| modoSelecao | Integer | &#x1F852; | Modo seleção |
+| entraLista | Boolean | &#x1F852; | Permite Enter na lista opção |
 | * | &#x1F852; | Use formulário de saída para uma seleção de registros e esconder as barras de rolagem no formulário de entrada |
 | * | &#x1F852; | Mostrar barras de rolagem no formulário de entrada (desativa segunda opção ou o primeiro * opcional) |
 

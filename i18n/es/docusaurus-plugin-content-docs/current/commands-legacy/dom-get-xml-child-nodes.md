@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM GET XML CHILD NODES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refElement | Texto | &#x1F852; | Referencia del elemento XML |
-| ArrTiposHijos | Array entero largo | &#x1F858; | Tipos de nodos hijos |
-| arrRefsNodos | Array texto | &#x1F858; | Referencias o Valores de los nodos hijos |
+| refElement | Text | &#x1F852; | Referencia del elemento XML |
+| ArrTiposHijos | Integer array | &#x1F858; | Tipos de nodos hijos |
+| arrRefsNodos | Text array | &#x1F858; | Referencias o Valores de los nodos hijos |
 
 <!-- END REF-->
 

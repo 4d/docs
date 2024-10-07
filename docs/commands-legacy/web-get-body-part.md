@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB GET BODY PART.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| part | Longint | &#x1F852; | Part number |
-| contents | BLOB, Text | &#x1F858; | Contents of part |
+| part | Integer | &#x1F852; | Part number |
+| contents | Blob, Text | &#x1F858; | Contents of part |
 | name | Text | &#x1F858; | Name of "input" variable |
 | mimeType | Text | &#x1F858; | Mime type of submitted file |
 | fileName | Text | &#x1F858; | Name of submitted file |

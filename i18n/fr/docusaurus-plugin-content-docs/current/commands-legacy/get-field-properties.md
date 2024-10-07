@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | ptrChp &#124; numTable | Pointeur, Entier long | &#x1F852; | Pointeur de champ ou Numéro de table |
-| numChamp | Entier long | &#x1F852; | Numéro de champ si un numéro de table est passé en premier paramètre |
-| champType | Entier long | &#x1F858; | Type de champ |
-| champLong | Entier long | &#x1F858; | Longueur du champ (si alphanumérique) |
-| indexé | Booléen | &#x1F858; | Vrai = Indexé, Faux = Non indexé |
-| unique | Booléen | &#x1F858; | Vrai = Unique, Faux = Non unique |
-| invisible | Booléen | &#x1F858; | Vrai = Invisible, Faux = Visible |
+| numChamp | Integer | &#x1F852; | Numéro de champ si un numéro de table est passé en premier paramètre |
+| champType | Integer | &#x1F858; | Type de champ |
+| champLong | Integer | &#x1F858; | Longueur du champ (si alphanumérique) |
+| indexé | Boolean | &#x1F858; | Vrai = Indexé, Faux = Non indexé |
+| unique | Boolean | &#x1F858; | Vrai = Unique, Faux = Non unique |
+| invisible | Boolean | &#x1F858; | Vrai = Invisible, Faux = Visible |
 
 <!-- END REF-->
 

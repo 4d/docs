@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Parse XML variable.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| variable | BLOB, Text | &#x1F852; | Name of the variable |
+| variable | Blob, Text | &#x1F852; | Name of the variable |
 | validation | Boolean | &#x1F852; | True = Validation by the DTD, False = No validation |
 | dtd &#124; schema | String | &#x1F852; | Location of the DTD or XML schema |
 | Function result | String | &#x1F850; | Reference of XML element |

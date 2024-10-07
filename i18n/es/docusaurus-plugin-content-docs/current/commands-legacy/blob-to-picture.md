@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB TO PICTURE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| blobImag | BLOB | &#x1F852; | BLOB contiene una imagen |
-| imagen | Imagen | &#x1F858; | Campo o variable imagen 4D |
-| codec | Cadena | &#x1F852; | Identificador de codec de imagen |
+| blobImag | Blob | &#x1F852; | BLOB contiene una imagen |
+| imagen | Picture | &#x1F858; | Campo o variable imagen 4D |
+| codec | Text | &#x1F852; | Identificador de codec de imagen |
 
 <!-- END REF-->
 

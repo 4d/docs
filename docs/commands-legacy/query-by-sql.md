@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table in which to return a selection of records or Default table if this parameter is omitted |
-| sqlFormula | String | &#x1F852; | Valid SQL search formula representing the WHERE clause of the SELECT query |
+| sqlFormula | Text | &#x1F852; | Valid SQL search formula representing the WHERE clause of the SELECT query |
 
 <!-- END REF-->
 

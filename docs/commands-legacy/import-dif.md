@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table into which to import data, or Default table, if omitted |
-| document | String | &#x1F852; | DIF document from which to import data |
+| document | Text | &#x1F852; | DIF document from which to import data |
 
 <!-- END REF-->
 

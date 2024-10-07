@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable ou un champ |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
-| positionLigne | Entier long | &#x1F858; | Numéro de la première ligne affichée ou Défilement vertical en pixels (images) |
-| positionH | Entier long | &#x1F858; | Numéro de la première colonne affichée (list box) ou<br/>Défilement horizontal en pixels (images) |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| positionLigne | Integer | &#x1F858; | Numéro de la première ligne affichée ou Défilement vertical en pixels (images) |
+| positionH | Integer | &#x1F858; | Numéro de la première colonne affichée (list box) ou<br/>Défilement horizontal en pixels (images) |
 
 <!-- END REF-->
 

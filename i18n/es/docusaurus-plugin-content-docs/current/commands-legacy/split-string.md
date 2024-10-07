@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Split string.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| cadenaASeparar | Texto | &#x1F852; | Valor de la cadena |
-| separador | Texto | &#x1F852; | Cadena en la que cadenaASeparar se divide. Si cadena vacía (""), cada carácter de cadenaASeparar es una subcadena |
-| opciones | Entero largo | &#x1F852; | Opciones relativas a las cadenas vacías y espacios |
+| cadenaASeparar | Text | &#x1F852; | Valor de la cadena |
+| separador | Text | &#x1F852; | Cadena en la que cadenaASeparar se divide. Si cadena vacía (""), cada carácter de cadenaASeparar es una subcadena |
+| opciones | Integer | &#x1F852; | Opciones relativas a las cadenas vacías y espacios |
 | Resultado | Collection | &#x1F850; | Colección de subcadenas |
 
 <!-- END REF-->

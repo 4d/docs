@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table from which to cut selection, or Default table, if omitted |
-| name | String | &#x1F852; | Name of the named selection to create |
+| name | Text | &#x1F852; | Name of the named selection to create |
 
 <!-- END REF-->
 

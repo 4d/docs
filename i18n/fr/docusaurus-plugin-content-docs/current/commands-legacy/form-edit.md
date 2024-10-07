@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | uneTable | Table | &#x1F852; | Table appartenant au formulaire ou, si omise : table par défaut ou formulaire projet |
-| formulaire | Chaîne | &#x1F852; | Nom du formulaire |
+| formulaire | Text | &#x1F852; | Nom du formulaire |
 
 <!-- END REF-->
 

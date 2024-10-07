@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD Get path.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| methodType | 倍長整数 | &#x1F852; | オブジェクトタイプセレクターを指定 |
-| aTable | テーブル | &#x1F852; | テーブル参照 |
-| objectName | テキスト | &#x1F852; | フォームまたはメソッド名 |
-| formObjectName | テキスト | &#x1F858; | フォームオブジェクト名 |
+| methodType | Integer | &#x1F852; | オブジェクトタイプセレクターを指定 |
+| aTable | Table | &#x1F852; | テーブル参照 |
+| objectName | Text | &#x1F852; | フォームまたはメソッド名 |
+| formObjectName | Text | &#x1F858; | フォームオブジェクト名 |
 | * | 演算子 | &#x1F852; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
-| 戻り値 | テキスト | &#x1F850; | オブジェクトのフルパス |
+| 戻り値 | Text | &#x1F850; | オブジェクトのフルパス |
 
 <!-- END REF-->
 

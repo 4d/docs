@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN DATABASE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminFichier | Chaîne | &#x1F852; | Nom ou chemin d'accès complet du fichier de base de données à ouvrir (.4db, .4dc, .4dbase ou .4dlink) |
+| cheminFichier | Text | &#x1F852; | Nom ou chemin d'accès complet du fichier de base de données à ouvrir (.4db, .4dc, .4dbase ou .4dlink) |
 
 <!-- END REF-->
 

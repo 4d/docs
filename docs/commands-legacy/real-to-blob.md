@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | real | Real | &#x1F852; | Real value to write into the BLOB |
-| blob | BLOB | &#x1F852; | BLOB to receive the Real value |
-| realFormat | Longint | &#x1F852; | 0 Native real format 1 Extended real format 2  Macintosh Double real format 3  Windows Double real format |
+| blob | Blob | &#x1F852; | BLOB to receive the Real value |
+| realFormat | Integer | &#x1F852; | 0 Native real format 1 Extended real format 2  Macintosh Double real format 3  Windows Double real format |
 | offset &#124; * | Variable, Operator | &#x1F852; | Offset within the BLOB (expressed in bytes) or * to append the value |
 | &#x1F858; | New offset after writing if not * |
 

@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | pontCampo&#124;numTabela | Ponteiro, Inteiro longo | &#x1F852; | Número de tabela ou ponteiro do campo |
-| numCampo | Inteiro longo | &#x1F852; | Número do campo se número de tabela for passado |
-| tipoCampo | Inteiro longo | &#x1F858; | Tipo de Campo |
-| tamanhoCampo | Inteiro longo | &#x1F858; | Comprimento do campo, se alfanumérico |
-| indexado | Booleano | &#x1F858; | True = indexado, False = não indexado |
-| unico | Booleano | &#x1F858; | True = único, False = não único |
-| invisivel | Booleano | &#x1F858; | True = invisível, False = visível |
+| numCampo | Integer | &#x1F852; | Número do campo se número de tabela for passado |
+| tipoCampo | Integer | &#x1F858; | Tipo de Campo |
+| tamanhoCampo | Integer | &#x1F858; | Comprimento do campo, se alfanumérico |
+| indexado | Boolean | &#x1F858; | True = indexado, False = não indexado |
+| unico | Boolean | &#x1F858; | True = único, False = não único |
+| invisivel | Boolean | &#x1F858; | True = invisível, False = visível |
 
 <!-- END REF-->
 

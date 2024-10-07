@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | array | Array | &#x1F852; | Nombre del array |
-| posicion | Entero largo | &#x1F852; | Donde insertar los elementos |
-| reemplazos | Entero largo | &#x1F852; | Número de elementos a insertar, o 1 elemento si se omite |
+| posicion | Integer | &#x1F852; | Donde insertar los elementos |
+| reemplazos | Integer | &#x1F852; | Número de elementos a insertar, o 1 elemento si se omite |
 
 <!-- END REF-->
 

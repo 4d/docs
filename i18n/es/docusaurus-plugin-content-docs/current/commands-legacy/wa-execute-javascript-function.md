@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| funcionjs | Cadena | &#x1F852; | Nombre de la función JavaScript a ejecutar |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| funcionjs | Text | &#x1F852; | Nombre de la función JavaScript a ejecutar |
 | resultado&#124;* | Variable | &#x1F852; | * para una función sin resultado o |
 | &#x1F858; | Resultado de la función (si se espera) |
-| param | Cadena, Número, Fecha, Objeto, Collection | &#x1F852; | Parámetro(s) a pasar a la función |
+| param | Text, Number, Date, Object, Collection | &#x1F852; | Parámetro(s) a pasar a la función |
 
 <!-- END REF-->
 

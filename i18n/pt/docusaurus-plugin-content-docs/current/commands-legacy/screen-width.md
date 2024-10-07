@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Windows: largo da janela da aplicação ou altura da tela se especificada * Macintosh: largo da tela principal |
-| Resultado | Inteiro longo | &#x1F850; | Largo expressado em pixeles |
+| Resultado | Integer | &#x1F850; | Largo expressado em pixeles |
 
 <!-- END REF-->
 

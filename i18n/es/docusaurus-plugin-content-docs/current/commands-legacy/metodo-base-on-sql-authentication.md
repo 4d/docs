@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | $1 | Texto | &#x1F858; | Nombre de usuario |
 | $2 | Texto | &#x1F858; | Contraseña |
 | $3 | Texto | &#x1F858; | (Opcional) Dirección IP del cliente al origen de la petición |
-| Resultado | Booleano | &#x1F850; | True = petición aceptada, False = petición rechazada |
+| Resultado | Boolean | &#x1F850; | True = petición aceptada, False = petición rechazada |
 
 <!-- END REF-->
 

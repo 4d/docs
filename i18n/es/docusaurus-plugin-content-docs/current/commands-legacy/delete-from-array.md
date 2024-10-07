@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | array | Array | &#x1F852; | Array del cual borrar elementos |
-| posicion | Entero largo | &#x1F852; | Elemento donde comienza la supresión |
-| reemplazos | Entero largo | &#x1F852; | Número de elementos a borrar, o 1 elemento si se omite |
+| posicion | Integer | &#x1F852; | Elemento donde comienza la supresión |
+| reemplazos | Integer | &#x1F852; | Número de elementos a borrar, o 1 elemento si se omite |
 
 <!-- END REF-->
 

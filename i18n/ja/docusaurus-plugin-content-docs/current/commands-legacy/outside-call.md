@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Outside call.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | ブール | &#x1F850; | True if the execution cycle is an outside call |
+| 戻り値 | Boolean | &#x1F850; | True if the execution cycle is an outside call |
 
 <!-- END REF-->
 

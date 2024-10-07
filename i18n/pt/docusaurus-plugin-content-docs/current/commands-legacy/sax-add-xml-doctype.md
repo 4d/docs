@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX ADD XML DOCTYPE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | refDoc | &#x1F852; | Referência do documento aberto |
-| docType | String | &#x1F852; | DOCTYPE a ser adicionado |
+| documento | Time | &#x1F852; | Referência do documento aberto |
+| docType | Text | &#x1F852; | DOCTYPE a ser adicionado |
 
 <!-- END REF-->
 

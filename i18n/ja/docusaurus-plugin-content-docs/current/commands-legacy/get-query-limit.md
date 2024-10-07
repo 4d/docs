@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get query limit.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | 倍長整数 | &#x1F850; | クエリ結果の制限数値0 = 制限なし |
+| 戻り値 | Integer | &#x1F850; | クエリ結果の制限数値0 = 制限なし |
 
 <!-- END REF-->
 

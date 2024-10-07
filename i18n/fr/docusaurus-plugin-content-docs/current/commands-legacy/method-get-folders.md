@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET FOLDERS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tabNoms | Tableau texte | &#x1F858; | Tableau des noms de dossiers de la page Démarrage |
-| filtre | Texte | &#x1F852; | Filtrage des noms |
+| tabNoms | Text array | &#x1F858; | Tableau des noms de dossiers de la page Démarrage |
+| filtre | Text | &#x1F852; | Filtrage des noms |
 | * | Opérateur | &#x1F852; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->

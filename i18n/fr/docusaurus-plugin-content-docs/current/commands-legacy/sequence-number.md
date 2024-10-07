@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table à numéroter automatiquement ou Table par défaut si ce paramètre est omis |
-| Résultat | Entier long | &#x1F850; | Numéro automatique |
+| Résultat | Integer | &#x1F850; | Numéro automatique |
 
 <!-- END REF-->
 

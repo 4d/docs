@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | picture | Picture | &#x1F852; | Source picture to be transformed |
 | &#x1F858; | Resulting picture after transformation |
-| operator | Longint | &#x1F852; | Type of transformation to be done |
+| operator | Integer | &#x1F852; | Type of transformation to be done |
 | param1 | Real | &#x1F852; | Transformation parameter |
 | param2 | Real | &#x1F852; | Transformation parameter |
 | param3 | Real | &#x1F852; | Transformation parameter |

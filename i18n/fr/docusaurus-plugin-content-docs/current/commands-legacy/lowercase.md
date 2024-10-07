@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Lowercase.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laChaîne | Chaîne | &#x1F852; | Chaîne à convertir en minuscules |
+| laText | Text | &#x1F852; | Chaîne à convertir en minuscules |
 | * | Opérateur | &#x1F852; | Si passé : conserver les accents Si omis : supprimer les accents |
-| Résultat | Chaîne | &#x1F850; | chaîne en minuscules |
+| Résultat | Text | &#x1F850; | chaîne en minuscules |
 
 <!-- END REF-->
 

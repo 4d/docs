@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | array | Array | &#x1F852; | Array donde efectuar el conteo |
-| valor | Expresión | &#x1F852; | Valor a contar |
-| Resultado | Entero largo | &#x1F850; | Número de ocurrencias encontradas |
+| valor | Expression | &#x1F852; | Valor a contar |
+| Resultado | Integer | &#x1F850; | Número de ocurrencias encontradas |
 
 <!-- END REF-->
 

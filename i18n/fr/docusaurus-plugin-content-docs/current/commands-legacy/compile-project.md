@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | projectFile | 4D.File | &#x1F852; | Fichier .4DProject à compiler |
-| options | Objet | &#x1F852; | Objet indiquant les options de compilation |
-| Résultat | Objet | &#x1F850; | Objet contenant des informations sur le statut de la compilation |
+| options | Object | &#x1F852; | Objet indiquant les options de compilation |
+| Résultat | Object | &#x1F850; | Objet contenant des informations sur le statut de la compilation |
 
 <!-- END REF-->
 

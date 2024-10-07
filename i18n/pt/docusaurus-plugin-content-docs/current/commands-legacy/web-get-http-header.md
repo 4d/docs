@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | cabeçalho&#124;arrayCampo | Texto, Array texto | &#x1F858; | Petição HTTP cabeçalho ou campos HTTP cabeçalho |
-| valorArray | Array texto | &#x1F858; | Conteúdo dos campos cabeçalho HTTP |
+| valorArray | Text array | &#x1F858; | Conteúdo dos campos cabeçalho HTTP |
 
 <!-- END REF-->
 

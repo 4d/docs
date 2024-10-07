@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.SET LIST PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| list | ListRef | &#x1F852; | List reference number |
-| appearance | Longint | &#x1F852; | *** Deprecated, must always be 0 *** |
-| icon | Longint | &#x1F852; | *** Deprecated, must always be 0 *** |
-| lineHeight | Longint | &#x1F852; | Minimal line height expressed in pixels |
-| doubleClick | Longint | &#x1F852; | Expand/Collapse sublist on double-click 0 = Yes, 1= No |
-| multiSelections | Longint | &#x1F852; | Multiple selections: 0 = No (default), 1 = Yes |
-| editable | Longint | &#x1F852; | 0 = List is not editable by user, 1 = List is editable by user (default) |
+| list | Integer | &#x1F852; | List reference number |
+| appearance | Integer | &#x1F852; | *** Deprecated, must always be 0 *** |
+| icon | Integer | &#x1F852; | *** Deprecated, must always be 0 *** |
+| lineHeight | Integer | &#x1F852; | Minimal line height expressed in pixels |
+| doubleClick | Integer | &#x1F852; | Expand/Collapse sublist on double-click 0 = Yes, 1= No |
+| multiSelections | Integer | &#x1F852; | Multiple selections: 0 = No (default), 1 = Yes |
+| editable | Integer | &#x1F852; | 0 = List is not editable by user, 1 = List is editable by user (default) |
 
 <!-- END REF-->
 

@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | rota&#124;4Dfile | Texto, Inteiro longo | &#x1F852; | Rota arquivo ou constante 4D file |
 | tipoRotah &#124; * | Inteiro longo, Operador | &#x1F852; | Se passar rota: rota fk posix (padrão) ou rota fk platform  Se passar 4Dfile: *para retornar arquivo ou database host |
-| Resultado | Objeto | &#x1F850; | novo objeto arquivo |
+| Resultado | Object | &#x1F850; | novo objeto arquivo |
 
 <!-- END REF-->
 

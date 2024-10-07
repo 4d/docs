@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get XML information.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | 文字 | &#x1F852; | XMLルート要素参照 |
-| xmlInfo | 倍長整数 | &#x1F852; | 取得する情報のタイプ |
-| 戻り値 | 文字 | &#x1F850; | XML情報の値 |
+| elementRef | Text | &#x1F852; | XMLルート要素参照 |
+| xmlInfo | Integer | &#x1F852; | 取得する情報のタイプ |
+| 戻り値 | Text | &#x1F850; | XML情報の値 |
 
 <!-- END REF-->
 

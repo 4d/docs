@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Lowercase.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| laCadena | Cadena | &#x1F852; | Cadena a pasar a minúsculas |
+| laText | Text | &#x1F852; | Cadena a pasar a minúsculas |
 | * | Operador | &#x1F852; | Si se pasa: conservar los acentos |
-| Resultado | Cadena | &#x1F850; | Cadena en minúsculas |
+| Resultado | Text | &#x1F850; | Cadena en minúsculas |
 
 <!-- END REF-->
 

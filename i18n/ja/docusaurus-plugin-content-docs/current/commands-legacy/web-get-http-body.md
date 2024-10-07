@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB GET HTTP BODY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| body | BLOB, テキスト | &#x1F858; | HTTPリクエストのボディ |
+| body | Blob, Text | &#x1F858; | HTTPリクエストのボディ |
 
 <!-- END REF-->
 

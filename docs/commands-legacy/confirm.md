@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CONFIRM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| message | String | &#x1F852; | Message to display in the confirmation dialog box |
-| okButtonTitle | String | &#x1F852; | OK button title |
-| cancelButtonTitle | String | &#x1F852; | Cancel button title |
+| message | Text | &#x1F852; | Message to display in the confirmation dialog box |
+| okButtonTitle | Text | &#x1F852; | OK button title |
+| cancelButtonTitle | Text | &#x1F852; | Cancel button title |
 
 <!-- END REF-->
 

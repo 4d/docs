@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.BASE64 DECODE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| textoCodificado | Texto, BLOB | &#x1F852; | Texto que contém o BLOB codificado no formato Base64 |
+| textoCodificado | Text, Blob | &#x1F852; | Texto que contém o BLOB codificado no formato Base64 |
 | &#x1F858; | Valor decodificado (se parâmetro decodificado for omitido) |
-| BLOB | Texto, BLOB | &#x1F858; | BLOB decodificado |
+| Blob | Text, Blob | &#x1F858; | BLOB decodificado |
 | * | Operador | &#x1F852; | Decodificado em formato Base64URL |
 
 <!-- END REF-->

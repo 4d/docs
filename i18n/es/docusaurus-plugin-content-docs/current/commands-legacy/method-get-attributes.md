@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET ATTRIBUTES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ruta | Texto, Array texto | &#x1F852; | Rutas de métodos |
-| atributos | Objeto, Array objeto | &#x1F858; | Atributos para los métodos seleccionados |
+| ruta | Text, Text array | &#x1F852; | Rutas de métodos |
+| atributos | Object, Object array | &#x1F858; | Atributos para los métodos seleccionados |
 | * | Operador | &#x1F852; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->

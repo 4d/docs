@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
-| listType | Entero largo | &#x1F852; | Tipo de lista: Lista de selección, Lista obligatoria o Lista de excluidos |
-| lista | Cadena | &#x1F852; | Nombre de la lista a utilizar (definida en el entorno Diseño) |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
+| listType | Integer | &#x1F852; | Tipo de lista: Lista de selección, Lista obligatoria o Lista de excluidos |
+| lista | Text | &#x1F852; | Nombre de la lista a utilizar (definida en el entorno Diseño) |
 
 <!-- END REF-->
 

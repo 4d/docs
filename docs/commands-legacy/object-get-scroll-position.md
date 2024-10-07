@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
-| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Variable or field or table (if * is omitted) |
-| vPosition | Longint | &#x1F858; | Number of first line displayed or Vertical scrolling in pixels (pictures) |
-| hPosition | Longint | &#x1F858; | Number of first column displayed or<br/>Horizonal scrolling in pixels (pictures) |
+| object | any | &#x1F852; | Object name (if * is specified) or <br/>Variable or field or table (if * is omitted) |
+| vPosition | Integer | &#x1F858; | Number of first line displayed or Vertical scrolling in pixels (pictures) |
+| hPosition | Integer | &#x1F858; | Number of first column displayed or<br/>Horizonal scrolling in pixels (pictures) |
 
 <!-- END REF-->
 

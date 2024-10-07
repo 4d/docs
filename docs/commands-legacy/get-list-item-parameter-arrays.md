@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, list is an object name (string)If omitted, list is a list reference number |
-| list | ListRef, String | &#x1F852; | List reference number (if * omitted) orName of list type object (if * passed) |
+| list | Integer, Text | &#x1F852; | List reference number (if * omitted) orName of list type object (if * passed) |
 | itemRef &#124; * | Longint, Operator | &#x1F852; | Item reference number or 0 for the last item appended to the list or * for the current list item |
 | arrSelection | Text array | &#x1F858; | Array of parameter names |
 | arrValues | Text array | &#x1F858; | Array of parameter values |

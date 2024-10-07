@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre del objeto (si se especifica *) o variables (si * se omite) |
-| jerarquico | Booleano | &#x1F858; | True = list box jerárquico, False = list box no jerárquico |
-| jerarquia | Array puntero | &#x1F858; | Array de punteros |
+| objeto | any | &#x1F852; | Nombre del objeto (si se especifica *) o variables (si * se omite) |
+| jerarquico | Boolean | &#x1F858; | True = list box jerárquico, False = list box no jerárquico |
+| jerarquia | Pointer array | &#x1F858; | Array de punteros |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.HIDE PROCESS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| processo | Inteiro longo | &#x1F852; | Número de processo ou processo a ocultar |
+| processo | Integer | &#x1F852; | Número de processo ou processo a ocultar |
 
 <!-- END REF-->
 

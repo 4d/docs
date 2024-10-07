@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Data file encryption status.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaEstruct | Texto | &#x1F852; | Nombre de ruta del archivo de estructura 4D a verificar |
-| rutaDatos | Texto | &#x1F852; | Nombre de ruta del archivo de datos 4D a verificar |
-| Resultado | Objeto | &#x1F850; | Información sobre el cifrado del archivo de datos y de cada tabla |
+| rutaEstruct | Text | &#x1F852; | Nombre de ruta del archivo de estructura 4D a verificar |
+| rutaDatos | Text | &#x1F852; | Nombre de ruta del archivo de datos 4D a verificar |
+| Resultado | Object | &#x1F850; | Información sobre el cifrado del archivo de datos y de cada tabla |
 
 <!-- END REF-->
 

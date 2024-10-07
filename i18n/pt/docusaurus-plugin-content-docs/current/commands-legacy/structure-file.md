@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Retorna o arquivo de estrutura do banco de dados local |
-| Resultado | String | &#x1F850; | Nome longo do arquivo de estrutura do banco de dados |
+| Resultado | Text | &#x1F850; | Nome longo do arquivo de estrutura do banco de dados |
 
 <!-- END REF-->
 

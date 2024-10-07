@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| antPosiçao | Inteiro longo | &#x1F858; | Posição prévia da fila movimentada |
-| novaPosiçao | Inteiro longo | &#x1F858; | Nova posição da fila movimentada |
+| objeto | any | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| antPosiçao | Integer | &#x1F858; | Posição prévia da fila movimentada |
+| novaPosiçao | Integer | &#x1F858; | Nova posição da fila movimentada |
 
 <!-- END REF-->
 

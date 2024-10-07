@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| horizontal | Entier long | &#x1F858; | Option de redimensionnement horizontal |
-| vertical | Entier long | &#x1F858; | Option de redimensionnement vertical |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| horizontal | Integer | &#x1F858; | Option de redimensionnement horizontal |
+| vertical | Integer | &#x1F858; | Option de redimensionnement vertical |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PHP GET OPTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| option | Entier long | &#x1F852; | Option à lire |
-| valeur | Booléen | &#x1F858; | Valeur courante de l’option |
+| option | Integer | &#x1F852; | Option à lire |
+| valeur | Boolean | &#x1F858; | Valeur courante de l’option |
 
 <!-- END REF-->
 

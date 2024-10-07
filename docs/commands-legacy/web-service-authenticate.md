@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SERVICE AUTHENTICATE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| name | String | &#x1F852; | User name |
-| password | String | &#x1F852; | User password |
-| authMethod | Longint | &#x1F852; | Authentication method 0 or omitted = not specified, 1 = BASIC, 2 = DIGEST |
+| name | Text | &#x1F852; | User name |
+| password | Text | &#x1F852; | User password |
+| authMethod | Integer | &#x1F852; | Authentication method 0 or omitted = not specified, 1 = BASIC, 2 = DIGEST |
 | * | Operator | &#x1F852; | If passed: authentication by proxy |
 
 <!-- END REF-->

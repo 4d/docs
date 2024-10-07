@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Count in array.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| array | 配列 | &#x1F852; | カウントを行う配列 |
-| value | 式 | &#x1F852; | カウントする値 |
-| 戻り値 | 倍長整数 | &#x1F850; | 見つかったインスタンスの数 |
+| array | Array | &#x1F852; | カウントを行う配列 |
+| value | Expression | &#x1F852; | カウントする値 |
+| 戻り値 | Integer | &#x1F850; | 見つかったインスタンスの数 |
 
 <!-- END REF-->
 

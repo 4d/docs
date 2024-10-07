@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | ListRef, String | &#x1F852; | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemsArray | Longint array | &#x1F858; | If 2nd * omitted: Array contains the positions of selected items in the list(s) If 2nd * passed: Array contains the selected item references |
+| list | Integer, Text | &#x1F852; | List reference number (if * omitted), or Name of list type object (if * passed) |
+| itemsArray | Integer array | &#x1F858; | If 2nd * omitted: Array contains the positions of selected items in the list(s) If 2nd * passed: Array contains the selected item references |
 | * | Operator | &#x1F852; | If omitted: Item position(s) If passed: Item reference(s) |
 | Function result | Longint | &#x1F850; | If 2nd * omitted: Position of current selected list item in expanded/collapsed list(s) If 2nd * passed: Reference of the selected item |
 

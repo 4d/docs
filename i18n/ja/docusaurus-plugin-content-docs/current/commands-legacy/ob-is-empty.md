@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Is empty.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | オブジェクト, Object Field | &#x1F852; | 構造化されたオブジェクト |
-| 戻り値 | ブール | &#x1F850; | object が空か未定義のときには True 、それ以外のときには False |
+| object | Object, Object | &#x1F852; | 構造化されたオブジェクト |
+| 戻り値 | Boolean | &#x1F850; | object が空か未定義のときには True 、それ以外のときには False |
 
 <!-- END REF-->
 

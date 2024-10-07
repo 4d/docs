@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | arquivoOuPasta&#124;estruturaZip | Objeto | &#x1F852; | Objeto arquivo ou pasta a comprimir |
-| arquivoDestino | Objeto | &#x1F852; | Arquivo destino para o arquivo |
-| opções | Inteiro longo | &#x1F852; | Se arquivoOuPasta usado: ZIP sem anexar pasta |
-| Resultado | Objeto | &#x1F850; | estado objeto |
+| arquivoDestino | Object | &#x1F852; | Arquivo destino para o arquivo |
+| opções | Integer | &#x1F852; | Se arquivoOuPasta usado: ZIP sem anexar pasta |
+| Resultado | Object | &#x1F850; | estado objeto |
 
 <!-- END REF-->
 

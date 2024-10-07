@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CALL SUBFORM CONTAINER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| evento | Entero largo | &#x1F852; | Evento a enviar |
+| evento | Integer | &#x1F852; | Evento a enviar |
 
 <!-- END REF-->
 

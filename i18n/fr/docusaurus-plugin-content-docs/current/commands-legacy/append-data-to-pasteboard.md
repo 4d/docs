@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| typeDonnées | Chaîne | &#x1F852; | Type des données à ajouter |
-| données | BLOB | &#x1F852; | Données à ajouter au conteneur |
+| typeDonnées | Text | &#x1F852; | Type des données à ajouter |
+| données | Blob | &#x1F852; | Données à ajouter au conteneur |
 
 <!-- END REF-->
 

@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.PROCESS PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Longint | &#x1F852; | Process number |
-| procName | String | &#x1F858; | Process name |
-| procState | Longint | &#x1F858; | Process state |
-| procTime | Longint | &#x1F858; | Cumulative time taken by process in ticks |
-| procMode | Boolean, Longint | &#x1F858; | If Boolean: Visible (True) or Hidden (False)<br/>If Longint (bit field): bit 0 = Visibility, bit 1 = Preemptive execution |
-| uniqueID | Longint | &#x1F858; | Unique process ID |
-| origin | Longint | &#x1F858; | Origin of the process |
+| process | Integer | &#x1F852; | Process number |
+| procName | Text | &#x1F858; | Process name |
+| procState | Integer | &#x1F858; | Process state |
+| procTime | Integer | &#x1F858; | Cumulative time taken by process in ticks |
+| procMode | Boolean, Integer | &#x1F858; | If Boolean: Visible (True) or Hidden (False)<br/>If Longint (bit field): bit 0 = Visibility, bit 1 = Preemptive execution |
+| uniqueID | Integer | &#x1F858; | Unique process ID |
+| origin | Integer | &#x1F858; | Origin of the process |
 
 <!-- END REF-->
 

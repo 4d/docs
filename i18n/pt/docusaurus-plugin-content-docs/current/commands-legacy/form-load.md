@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM LOAD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Tabela | Tabela | &#x1F852; | Formulário de tabela para carregar (se omitido, carrega um formulário do projeto) |
-| formulario | String, Objeto | &#x1F852; | Nome do formulário de projeto a abrir para impressão ou string Vazia para fechar o formulário de projeto atual |
-| formData | Objeto | &#x1F852; | Dados a associar ao formulário |
+| Table | Table | &#x1F852; | Formulário de tabela para carregar (se omitido, carrega um formulário do projeto) |
+| formulario | Text, Object | &#x1F852; | Nome do formulário de projeto a abrir para impressão ou string Vazia para fechar o formulário de projeto atual |
+| formData | Object | &#x1F852; | Dados a associar ao formulário |
 | * | Operador | &#x1F852; | Se passar = o comando se aplica a base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->

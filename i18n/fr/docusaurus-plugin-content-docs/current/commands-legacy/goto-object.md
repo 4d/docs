@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié = objet est un nom d’objet (chaîne) Si omis = objet est un champ ou une variable |
-| objet | Champ, Variable | &#x1F852; | Nom d’objet (si * spécifié) sinon Variable ou champ saisissable à sélectionner |
+| objet | Field, Variable | &#x1F852; | Nom d’objet (si * spécifié) sinon Variable ou champ saisissable à sélectionner |
 
 <!-- END REF-->
 

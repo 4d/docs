@@ -12,11 +12,11 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | array | Array | &#x1F852; | Array(s) a ordenar |
-| orden | Operador | &#x1F852; | ">" efectuar una ordenación creciente o "<" efectuar una ordenación decreciente Si se omite "aa" no ordenación |
+| orden | * | &#x1F852; | ">" efectuar una ordenación creciente o "<" efectuar una ordenación decreciente Si se omite "aa" no ordenación |
 | MULTI SORT ARRAY ( ptrArrayNombre ; ordenArrayNombre ) |
 | Parámetro | Tipo | Descripción |
-| ptrArrayNombre | Array puntero | &#x1F852; | Array de punteros de arrays |
-| ordenArrayNombre | Array entero largo | &#x1F852; | Array de criterio de ordenación (1= ordenar por orden creciente, -1= ordenar por orden decreciente), 0= sincronización con ordenaciones anteriores |
+| ptrArrayNombre | Pointer array | &#x1F852; | Array de punteros de arrays |
+| ordenArrayNombre | Integer array | &#x1F852; | Array de criterio de ordenación (1= ordenar por orden creciente, -1= ordenar por orden decreciente), 0= sincronización con ordenaciones anteriores |
 
 <!-- END REF-->
 

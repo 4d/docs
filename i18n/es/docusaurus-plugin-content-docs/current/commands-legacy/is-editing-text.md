@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is editing text.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Booleano | &#x1F850; | True si texto está siendo introducido, de lo contrario False |
+| Resultado | Boolean | &#x1F850; | True si texto está siendo introducido, de lo contrario False |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAVE SET.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| conjunto | Cadena | &#x1F852; | Nombre del conjunto a guardar |
-| doc | Cadena | &#x1F852; | Nombre del archivo en el cual guardar el conjunto |
+| conjunto | Text | &#x1F852; | Nombre del conjunto a guardar |
+| doc | Text | &#x1F852; | Nombre del archivo en el cual guardar el conjunto |
 
 <!-- END REF-->
 

@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#x1F852; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
-| draggable | ブール | &#x1F852; | ドラッグ可能ならTrue、そうでなければFalse |
-| automaticDrag | ブール | &#x1F852; | 自動ドラッグならTrue、そうでなければFalse |
-| droppable | ブール | &#x1F852; | ドロップ可能ならTrue、そうでなければFalse |
-| automaticDrop | ブール | &#x1F852; | 自動ドロップ可能ならTrue、そうでなければFalse |
+| object | any | &#x1F852; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
+| draggable | Boolean | &#x1F852; | ドラッグ可能ならTrue、そうでなければFalse |
+| automaticDrag | Boolean | &#x1F852; | 自動ドラッグならTrue、そうでなければFalse |
+| droppable | Boolean | &#x1F852; | ドロップ可能ならTrue、そうでなければFalse |
+| automaticDrop | Boolean | &#x1F852; | 自動ドロップ可能ならTrue、そうでなければFalse |
 
 <!-- END REF-->
 

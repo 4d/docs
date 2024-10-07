@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD SET ATTRIBUTE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| path | テキスト | &#x1F852; | プロジェクトメソッドのパス |
-| attribType | 倍長整数 | &#x1F852; | 属性タイプ |
-| attribValue | ブール, テキスト | &#x1F852; | True: 属性を選択False: 属性の選択解除 |
+| path | Text | &#x1F852; | プロジェクトメソッドのパス |
+| attribType | Integer | &#x1F852; | 属性タイプ |
+| attribValue | Boolean, Text | &#x1F852; | True: 属性を選択False: 属性の選択解除 |
 | * | 演算子 | &#x1F852; | 指定時 = コンポーネントで実行されたとき、コマンドをホストデータベースに適用する (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
 
 <!-- END REF-->

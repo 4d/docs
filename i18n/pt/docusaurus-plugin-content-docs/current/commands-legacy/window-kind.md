@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Window kind.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janela | refJan | &#x1F852; | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
-| Resultado | Inteiro longo | &#x1F850; | Tipo de janela |
+| janela | Integer | &#x1F852; | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
+| Resultado | Integer | &#x1F850; | Tipo de janela |
 
 <!-- END REF-->
 

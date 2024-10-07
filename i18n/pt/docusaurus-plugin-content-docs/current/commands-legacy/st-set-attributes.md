@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo. |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se * for especificado) ou campo ou variável texto (se * for omitido) |
-| inicioSel | Inteiro longo | &#x1F852; | Início da nova seleção de texto |
-| fimSel | Inteiro longo | &#x1F852; | Fim da nova seleção de texto |
-| nomeAtrib | String | &#x1F852; | Atributo a definir |
-| valorAtributo | String, Inteiro longo | &#x1F852; | Novo valor do atributo |
+| objeto | any | &#x1F852; | Nome de objeto (se * for especificado) ou campo ou variável texto (se * for omitido) |
+| inicioSel | Integer | &#x1F852; | Início da nova seleção de texto |
+| fimSel | Integer | &#x1F852; | Fim da nova seleção de texto |
+| nomeAtrib | Text | &#x1F852; | Atributo a definir |
+| valorAtributo | Text, Integer | &#x1F852; | Novo valor do atributo |
 
 <!-- END REF-->
 

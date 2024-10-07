@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ Texte (si * est omis) |
-| débutSél | Entier long | &#x1F852; | Début de la nouvelle sélection de texte |
-| finSél | Entier long | &#x1F852; | Fin de la nouvelle sélection de texte |
-| nomAttribut | Chaîne | &#x1F852; | Attribut à définir |
-| valeurAttribut | Chaîne, Entier long | &#x1F852; | Nouvelle valeur d’attribut |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ Texte (si * est omis) |
+| débutSél | Integer | &#x1F852; | Début de la nouvelle sélection de texte |
+| finSél | Integer | &#x1F852; | Fin de la nouvelle sélection de texte |
+| nomAttribut | Text | &#x1F852; | Attribut à définir |
+| valeurAttribut | Text, Integer | &#x1F852; | Nouvelle valeur d’attribut |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Shift down.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | ブール | &#x1F850; | Shift キーのステータス |
+| 戻り値 | Boolean | &#x1F850; | Shift キーのステータス |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table pour laquelle vous testez si le pointeur se trouve avant la sélection |
-| Résultat | Booléen | &#x1F850; | Avant sélection (Vrai) sinon (Faux) |
+| Résultat | Boolean | &#x1F850; | Avant sélection (Vrai) sinon (Faux) |
 
 <!-- END REF-->
 

@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| content | String | &#x1F852; | HTML source code |
-| baseURL | String | &#x1F852; | URL for relative references (Mac OS) |
+| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| content | Text | &#x1F852; | HTML source code |
+| baseURL | Text | &#x1F852; | URL for relative references (Mac OS) |
 
 <!-- END REF-->
 

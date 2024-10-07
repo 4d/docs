@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
 | X | Real | &#x1F852; | Horizontal coordinate of mouse |
 | Y | Real | &#x1F852; | Vertical coordinate of mouse |
-| column | Longint | &#x1F858; | Column number |
-| row | Longint | &#x1F858; | Row number |
+| column | Integer | &#x1F858; | Column number |
+| row | Integer | &#x1F858; | Row number |
 | colVar | Pointer | &#x1F858; | Pointer to column variable |
 
 <!-- END REF-->

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | numero | Real | &#x1F852; | Número a ser truncado |
-| decimais | Inteiro longo | &#x1F852; | Número de decimais usadas para truncar |
+| decimais | Integer | &#x1F852; | Número de decimais usadas para truncar |
 | Resultado | Real | &#x1F850; | Número com a parte decimal truncada ao número de casas decimais especificada por Decimais |
 
 <!-- END REF-->

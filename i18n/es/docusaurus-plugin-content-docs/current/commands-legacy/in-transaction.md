@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.In transaction.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Booleano | &#x1F850; | Devuelve TRUE si el proceso actual está en transacción |
+| Resultado | Boolean | &#x1F850; | Devuelve TRUE si el proceso actual está en transacción |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table depuis laquelle effectuer l'export ou Table par défaut si ce paramètre est omis |
-| nomFichier | Chaîne | &#x1F852; | Document texte à exporter |
+| nomFichier | Text | &#x1F852; | Document texte à exporter |
 
 <!-- END REF-->
 

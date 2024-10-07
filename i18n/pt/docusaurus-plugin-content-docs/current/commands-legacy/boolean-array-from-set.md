@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| booleanArr | Array booleano | &#x1F858; | Array para indicar se um registro está no conjunto ou não |
-| conjunto | String | &#x1F852; | Nome do conjunto ou UserSet se o parâmetro for omitido |
+| booleanArr | Boolean array | &#x1F858; | Array para indicar se um registro está no conjunto ou não |
+| conjunto | Text | &#x1F852; | Nome do conjunto ou UserSet se o parâmetro for omitido |
 
 <!-- END REF-->
 

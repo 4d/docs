@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Displayed line number.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Inteiro longo | &#x1F850; | Nº da linha sendo exibida |
+| Resultado | Integer | &#x1F850; | Nº da linha sendo exibida |
 
 <!-- END REF-->
 

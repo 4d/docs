@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Devuelve la información de la base local |
-| Resultado | Booleano | &#x1F850; | Compilado (True), Interpretado (False) |
+| Resultado | Boolean | &#x1F850; | Compilado (True), Interpretado (False) |
 
 <!-- END REF-->
 

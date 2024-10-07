@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.GRAPH SETTINGS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| graphImage | Variable image | &#x1F852; | Variable image |
-| xmin | Entier long, Date, Heure | &#x1F852; | Valeur minimale de l'échelle des X pour graphe proportionnel (lignes ou points) |
-| xmax | Entier long, Date, Heure | &#x1F852; | Valeur maximale de l'échelle des X pour graphe proportionnel (lignes ou points) |
-| ymin | Entier long | &#x1F852; | Valeur minimale de l'échelle des Y |
-| ymax | Entier long | &#x1F852; | Valeur maximale de l'échelle des Y |
-| xprop | Booléen | &#x1F852; | VRAI pour l'échelle des X proportionnelle ; FAUX pour l'échelle des X normale (lignes ou points) |
-| grilleX | Booléen | &#x1F852; | VRAI pour la grille sur l'axe des X ; FAUX pour pas de grille sur l'axe des X (seulement si xprop est VRAI) |
-| grilleY | Booléen | &#x1F852; | VRAI pour la grille sur l'axe des Y; FAUX pour pas de grille sur l'axe des Y |
-| titre | Chaîne | &#x1F852; | Titre(s) pour les titre(s) des série(s) |
+| graphImage | Picture | &#x1F852; | Variable image |
+| xmin | Integer, Date, Time | &#x1F852; | Valeur minimale de l'échelle des X pour graphe proportionnel (lignes ou points) |
+| xmax | Integer, Date, Time | &#x1F852; | Valeur maximale de l'échelle des X pour graphe proportionnel (lignes ou points) |
+| ymin | Integer | &#x1F852; | Valeur minimale de l'échelle des Y |
+| ymax | Integer | &#x1F852; | Valeur maximale de l'échelle des Y |
+| xprop | Boolean | &#x1F852; | VRAI pour l'échelle des X proportionnelle ; FAUX pour l'échelle des X normale (lignes ou points) |
+| grilleX | Boolean | &#x1F852; | VRAI pour la grille sur l'axe des X ; FAUX pour pas de grille sur l'axe des X (seulement si xprop est VRAI) |
+| grilleY | Boolean | &#x1F852; | VRAI pour la grille sur l'axe des Y; FAUX pour pas de grille sur l'axe des Y |
+| titre | Text | &#x1F852; | Titre(s) pour les titre(s) des série(s) |
 
 <!-- END REF-->
 

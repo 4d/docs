@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Windows : largeur de la fenêtre de l'application ou largeur de l'écran si * est spécifiéMacintosh : largeur de l'écran principal |
-| Résultat | Entier long | &#x1F850; | Largeur exprimée en pixels |
+| Résultat | Integer | &#x1F850; | Largeur exprimée en pixels |
 
 <!-- END REF-->
 

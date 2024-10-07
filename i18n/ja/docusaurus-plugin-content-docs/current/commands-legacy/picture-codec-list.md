@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PICTURE CODEC LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| codecArray | 文字配列 | &#x1F858; | 利用可能なピクチャCodecのID |
-| namesArray | 文字配列 | &#x1F858; | ピクチャCodecの名前 |
+| codecArray | Text array | &#x1F858; | 利用可能なピクチャCodecのID |
+| namesArray | Text array | &#x1F858; | ピクチャCodecの名前 |
 | * | 演算子 | &#x1F852; | 読み込み (デコード) CODECのリストを返す |
 
 <!-- END REF-->

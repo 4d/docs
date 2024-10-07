@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PICTURE LIBRARY LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refsImag | Array entero largo | &#x1F858; | Números de referencia de las imágenes de la librería de imágenes |
-| nomsImag | Array cadena | &#x1F858; | Nombres de las imágenes de la librería de imágenes |
+| refsImag | Integer array | &#x1F858; | Números de referencia de las imágenes de la librería de imágenes |
+| nomsImag | Text array | &#x1F858; | Nombres de las imágenes de la librería de imágenes |
 
 <!-- END REF-->
 

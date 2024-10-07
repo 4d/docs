@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB SET NULL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | オブジェクト, Object Field | &#x1F852; | 構造化されたオブジェクト |
-| property | テキスト | &#x1F852; | null 値を適用したいプロパティ名 |
+| object | Object, Object | &#x1F852; | 構造化されたオブジェクト |
+| property | Text | &#x1F852; | null 値を適用したいプロパティ名 |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SEND RAW DATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| data | BLOB | &#x1F852; | 送るHTTPデータ |
+| data | Blob | &#x1F852; | 送るHTTPデータ |
 | * | 演算子 | &#x1F852; | チャンクして送る |
 
 <!-- END REF-->

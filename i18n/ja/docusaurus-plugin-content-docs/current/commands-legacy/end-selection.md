@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.End selection.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | レコードポインタがセレクションの最後のレコードよりも 後ろにあるかテストするテーブル、または 省略時、デフォルトテーブル |
-| 戻り値 | ブール | &#x1F850; | Yes (TRUE) or No (FALSE) |
+| aTable | Table | &#x1F852; | レコードポインタがセレクションの最後のレコードよりも 後ろにあるかテストするテーブル、または 省略時、デフォルトテーブル |
+| 戻り値 | Boolean | &#x1F850; | Yes (TRUE) or No (FALSE) |
 
 <!-- END REF-->
 

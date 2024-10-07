@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string)If omitted, object is a variable or field |
-| object | Form object | &#x1F852; | Object Name (if * is specified) or Variable or field (if * is omitted) |
-| languageCode | String | &#x1F852; | RFC3066 ISO639 and ISO3166 language code,"" = no change |
+| object | any | &#x1F852; | Object Name (if * is specified) or Variable or field (if * is omitted) |
+| languageCode | Text | &#x1F852; | RFC3066 ISO639 and ISO3166 language code,"" = no change |
 
 <!-- END REF-->
 

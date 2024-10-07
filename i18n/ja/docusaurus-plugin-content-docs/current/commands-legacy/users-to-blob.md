@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.USERS TO BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| users | BLOB | &#x1F852; | ユーザーが格納されたBLOB |
+| users | Blob | &#x1F852; | ユーザーが格納されたBLOB |
 | &#x1F858; | 暗号化されたユーザーアカウント |
 
 <!-- END REF-->

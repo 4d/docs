@@ -11,19 +11,19 @@ displayed_sidebar: docs
 <!--REF #_command_.Position.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| find | String | &#x1F852; | String to find |
-| aString | String | &#x1F852; | String in which to search |
-| start | Longint | &#x1F852; | Position in string where search will start |
-| lengthFound | Longint | &#x1F858; | Length of string found |
+| find | Text | &#x1F852; | String to find |
+| aText | Text | &#x1F852; | String in which to search |
+| start | Integer | &#x1F852; | Position in string where search will start |
+| lengthFound | Integer | &#x1F858; | Length of string found |
 | * | Operator | &#x1F852; | If passed: evaluation based on character codes |
 | Function result | Longint | &#x1F850; | Position of first occurrence |
 | Position ( find ; aString ; start ; lengthFound ; options ) -> Function result |
 | Parameter | Type | Description |
-| find | String | &#x1F852; | String to find |
-| aString | String | &#x1F852; | String in which to search |
-| start | Longint | &#x1F852; | Position in string where search will start |
-| lengthFound | Longint | &#x1F852; | Length of string found |
-| options | Longint | &#x1F852; | Search condition(s) |
+| find | Text | &#x1F852; | String to find |
+| aText | Text | &#x1F852; | String in which to search |
+| start | Integer | &#x1F852; | Position in string where search will start |
+| lengthFound | Integer | &#x1F852; | Length of string found |
+| options | Integer | &#x1F852; | Search condition(s) |
 | Function result | Longint | &#x1F850; | Position of first occurrence |
 
 <!-- END REF-->

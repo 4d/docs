@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Create XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | String | &#x1F852; | Root XML element reference |
+| elementRef | Text | &#x1F852; | Root XML element reference |
 | xPath | Text | &#x1F852; | XPath path of the XML element to create |
-| attribName | String | &#x1F852; | Attribute to set |
-| attrValue | String, Boolean, Longint, Real, Time, Date | &#x1F852; | New attribute value |
+| attribName | Text | &#x1F852; | Attribute to set |
+| attrValue | Text, Boolean, Integer, Real, Time, Date | &#x1F852; | New attribute value |
 | Function result | String | &#x1F850; | Reference of the created XML element |
 
 <!-- END REF-->

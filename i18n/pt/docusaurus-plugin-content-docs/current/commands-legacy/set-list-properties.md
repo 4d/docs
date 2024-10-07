@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.SET LIST PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| lista | ListRef | &#x1F852; | Número de referência da lista |
-| aparencia | Inteiro longo | &#x1F852; | Estilo gráfico da lista 1 = Lista hierárquica à Macintosh 2 = Lista hierárquica à Windows 0 = Aparição auto dependendo da plataforma |
-| icone | Inteiro longo | &#x1F852; | ID de recurso Mac OS ‘cicn’ ou 0 = ícone por padrão da plataforma |
-| alturaLinha | Inteiro longo | &#x1F852; | Altura mínima da linha expressada em pixels |
-| duploClique | Inteiro longo | &#x1F852; | Expandir/Contrair sub-lista com duplo-clique 0 = Sim, 1= Não |
-| multiSeleçao | Inteiro longo | &#x1F852; | Seleções múltiplas: 0 = Não (por padrão), 1 = Sim |
-| editavel | Inteiro longo | &#x1F852; | 0=Lista não é editável pelo usuário, 1=Lista não é editável pelo usuário (padrão) |
+| lista | Integer | &#x1F852; | Número de referência da lista |
+| aparencia | Integer | &#x1F852; | Estilo gráfico da lista 1 = Lista hierárquica à Macintosh 2 = Lista hierárquica à Windows 0 = Aparição auto dependendo da plataforma |
+| icone | Integer | &#x1F852; | ID de recurso Mac OS ‘cicn’ ou 0 = ícone por padrão da plataforma |
+| alturaLinha | Integer | &#x1F852; | Altura mínima da linha expressada em pixels |
+| duploClique | Integer | &#x1F852; | Expandir/Contrair sub-lista com duplo-clique 0 = Sim, 1= Não |
+| multiSeleçao | Integer | &#x1F852; | Seleções múltiplas: 0 = Não (por padrão), 1 = Sim |
+| editavel | Integer | &#x1F852; | 0=Lista não é editável pelo usuário, 1=Lista não é editável pelo usuário (padrão) |
 
 <!-- END REF-->
 

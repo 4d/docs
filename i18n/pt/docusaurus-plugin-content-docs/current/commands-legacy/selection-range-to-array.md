@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| inicio | Inteiro longo | &#x1F852; | Número do registro selecionado onde a recuperação de dados começa |
-| fim | Inteiro longo | &#x1F852; | Número de registro selecionado onde termina a recuperação de dados |
+| inicio | Integer | &#x1F852; | Número do registro selecionado onde a recuperação de dados começa |
+| fim | Integer | &#x1F852; | Número de registro selecionado onde termina a recuperação de dados |
 | umCampo &#124; umaTabela | Campo, Tabela | &#x1F852; | Campo usado para pedir dados ou Tabela usada para pedir números de registros |
 | array | Array | &#x1F858; | Array para receber dados do campo ou número de registros |
 

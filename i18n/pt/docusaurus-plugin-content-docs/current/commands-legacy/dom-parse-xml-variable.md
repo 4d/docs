@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Parse XML variable.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| variável | BLOB, Texto | &#x1F852; | Nome da variavel |
-| validaçao | Booleano | &#x1F852; | True = validação do DTD; False = sem validação |
+| variável | Blob, Text | &#x1F852; | Nome da variavel |
+| validaçao | Boolean | &#x1F852; | True = validação do DTD; False = sem validação |
 | dtd&#124;schema | String | &#x1F852; | Localização do DTD ou do schema XML |
-| Resultado | String | &#x1F850; | Referência do elemento XML |
+| Resultado | Text | &#x1F850; | Referência do elemento XML |
 
 <!-- END REF-->
 

@@ -10,14 +10,14 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| posicionCol | Entero largo | &#x1F852; | Ubicación de la columna a insertar |
-| nomCol | Cadena | &#x1F852; | Nombre del objeto de la columna |
-| variableCol | Array, Campo, Variable, Puntero nulo | &#x1F852; | Nombre de la variable de la columna |
-| nomEncabezado | Cadena | &#x1F852; | Nombre del objeto del título de la columna |
-| varTitulo | Variable entera, Puntero nulo | &#x1F852; | Variable de título de la columna |
-| nomPie | Cadena | &#x1F852; | Nombre del objeto de pie de la columna |
-| nomVar | Variable, Puntero nulo | &#x1F852; | Variable de pie de la columna |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| posicionCol | Integer | &#x1F852; | Ubicación de la columna a insertar |
+| nomCol | Text | &#x1F852; | Nombre del objeto de la columna |
+| variableCol | Array, Field, Variable, Pointer | &#x1F852; | Nombre de la variable de la columna |
+| nomEncabezado | Text | &#x1F852; | Nombre del objeto del título de la columna |
+| varTitulo | Integer, Pointer | &#x1F852; | Variable de título de la columna |
+| nomPie | Text | &#x1F852; | Nombre del objeto de pie de la columna |
+| nomVar | Variable, Pointer | &#x1F852; | Variable de pie de la columna |
 
 <!-- END REF-->
 

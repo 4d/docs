@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
-| liste | RefListe, Chaîne | &#x1F852; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| réfElément | Entier long | &#x1F852; | Numéro de référence d'élément |
-| Résultat | Entier long | &#x1F850; | Position de l'élément parmi la ou les liste(s) déployée(s)/contractée(s) |
+| liste | Integer, Text | &#x1F852; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| réfElément | Integer | &#x1F852; | Numéro de référence d'élément |
+| Résultat | Integer | &#x1F850; | Position de l'élément parmi la ou les liste(s) déployée(s)/contractée(s) |
 
 <!-- END REF-->
 

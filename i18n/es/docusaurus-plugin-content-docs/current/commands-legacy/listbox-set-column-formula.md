@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| formula | Cadena | &#x1F852; | Fórmula 4D asociada a la columna |
-| tipoDato | Entero largo | &#x1F852; | Tipo de resultado de la fórmula |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| formula | Text | &#x1F852; | Fórmula 4D asociada a la columna |
+| tipoDato | Integer | &#x1F852; | Tipo de resultado de la fórmula |
 
 <!-- END REF-->
 

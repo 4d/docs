@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.UNION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| set1 | 文字 | &#x1F852; | 最初のセット |
-| set2 | 文字 | &#x1F852; | 2番目のセット |
-| resultSet | 文字 | &#x1F852; | 結果のセット<br/>Resulting set |
+| set1 | Text | &#x1F852; | 最初のセット |
+| set2 | Text | &#x1F852; | 2番目のセット |
+| resultSet | Text | &#x1F852; | 結果のセット<br/>Resulting set |
 
 <!-- END REF-->
 

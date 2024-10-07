@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | expFormule | Expression | &#x1F852; | Formule à retourner en objet |
-| Résultat | Objet | &#x1F850; | Objet natif encapsulant la formule |
+| Résultat | Object | &#x1F850; | Objet natif encapsulant la formule |
 
 <!-- END REF-->
 

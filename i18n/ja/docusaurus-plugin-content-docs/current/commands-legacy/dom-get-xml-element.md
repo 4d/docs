@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get XML element.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | 文字 | &#x1F852; | XML要素参照 |
-| elementName | 文字 | &#x1F852; | 取得する要素の名前 |
-| index | 倍長整数 | &#x1F852; | 取得する要素のインデックス番号 |
-| elementValue | 変数 | &#x1F858; | 要素値 |
-| 戻り値 | 文字 | &#x1F850; | XML参照 (16 文字) |
+| elementRef | Text | &#x1F852; | XML要素参照 |
+| elementName | Text | &#x1F852; | 取得する要素の名前 |
+| index | Integer | &#x1F852; | 取得する要素のインデックス番号 |
+| elementValue | Variable | &#x1F858; | 要素値 |
+| 戻り値 | Text | &#x1F850; | XML参照 (16 文字) |
 
 <!-- END REF-->
 

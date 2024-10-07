@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | picture | Picture | &#x1F852; | Picture field or variable |
-| pictureBlob | BLOB | &#x1F858; | BLOB to receive the converted picture |
-| codec | String | &#x1F852; | Picture Codec ID |
+| pictureBlob | Blob | &#x1F858; | BLOB to receive the converted picture |
+| codec | Text | &#x1F852; | Picture Codec ID |
 
 <!-- END REF-->
 

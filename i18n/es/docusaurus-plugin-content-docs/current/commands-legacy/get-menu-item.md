@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Get menu item.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Entero largo, MenuRef | &#x1F852; | Número de menú o Referencia de menú |
-| lineamenu | Entero largo | &#x1F852; | Número de línea de menú o -1 por el último elemento añadido |
-| proceso | Entero largo | &#x1F852; | Número de referencia del proceso |
-| Resultado | Cadena | &#x1F850; | Texto del elemento de menú |
+| menu | Integer, Text | &#x1F852; | Número de menú o Referencia de menú |
+| lineamenu | Integer | &#x1F852; | Número de línea de menú o -1 por el último elemento añadido |
+| proceso | Integer | &#x1F852; | Número de referencia del proceso |
+| Resultado | Text | &#x1F850; | Texto del elemento de menú |
 
 <!-- END REF-->
 

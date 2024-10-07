@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE DOCUMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| document | String | &#x1F852; | Document name or Full document pathname |
+| document | Text | &#x1F852; | Document name or Full document pathname |
 
 <!-- END REF-->
 

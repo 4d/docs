@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DISPLAY NOTIFICATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| title | 文字 | &#x1F852; | 通知タイトル |
-| text | 文字 | &#x1F852; | 通知テキスト |
-| duration | 倍長整数 | &#x1F852; | 表示時間 (秒) |
+| title | Text | &#x1F852; | 通知タイトル |
+| text | Text | &#x1F852; | 通知テキスト |
+| duration | Integer | &#x1F852; | 表示時間 (秒) |
 
 <!-- END REF-->
 

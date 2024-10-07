@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Devuelve la fecha actual del servidor |
-| Resultado | Fecha | &#x1F850; | Fecha actual |
+| Resultado | Date | &#x1F850; | Fecha actual |
 
 <!-- END REF-->
 

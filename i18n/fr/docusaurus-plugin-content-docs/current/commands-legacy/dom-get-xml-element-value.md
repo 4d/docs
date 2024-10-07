@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM GET XML ELEMENT VALUE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Chaîne | &#x1F852; | Référence d’élément XML |
+| refElément | Text | &#x1F852; | Référence d’élément XML |
 | valeurElément | Variable | &#x1F858; | Valeur de l’élément |
 | cDATA | Variable | &#x1F858; | Contenu de la section CDATA |
 

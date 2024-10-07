@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE RESOURCE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resID | 倍長整数 | &#x1F852; | リソースID番号 |
-| resData | フィールド, 変数 | &#x1F852; | ピクチャを受け取る、ピクチャフィールドまたは変数 |
+| resID | Integer | &#x1F852; | リソースID番号 |
+| resData | Field, Variable | &#x1F852; | ピクチャを受け取る、ピクチャフィールドまたは変数 |
 | &#x1F858; | PICTリソースの内容 |
-| resFile | DocRef | &#x1F852; | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
+| resFile | Time | &#x1F852; | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
 
 <!-- END REF-->
 

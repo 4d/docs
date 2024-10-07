@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | ListRef, String | &#x1F852; | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemPos | Longint | &#x1F852; | Position of item in expanded/collapsed list(s) |
-| positionsArray | Longint array | &#x1F852; | Array of the positions in the expanded/collapsed list(s) |
+| list | Integer, Text | &#x1F852; | List reference number (if * omitted), or Name of list type object (if * passed) |
+| itemPos | Integer | &#x1F852; | Position of item in expanded/collapsed list(s) |
+| positionsArray | Integer array | &#x1F852; | Array of the positions in the expanded/collapsed list(s) |
 
 <!-- END REF-->
 

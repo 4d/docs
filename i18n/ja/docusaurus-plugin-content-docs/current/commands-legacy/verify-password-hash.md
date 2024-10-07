@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Verify password hash.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| password | 文字 | &#x1F852; | ユーザーのパスワード。最初の72文字のみ使用。 |
-| hash | 文字 | &#x1F852; | パスワードのハッシュ |
-| 戻り値 | ブール | &#x1F850; | パスワードとハッシュが合致する場合にはTRUE、それ以外の場合にはFALSE。 |
+| password | Text | &#x1F852; | ユーザーのパスワード。最初の72文字のみ使用。 |
+| hash | Text | &#x1F852; | パスワードのハッシュ |
+| 戻り値 | Boolean | &#x1F850; | パスワードとハッシュが合致する場合にはTRUE、それ以外の場合にはFALSE。 |
 
 <!-- END REF-->
 

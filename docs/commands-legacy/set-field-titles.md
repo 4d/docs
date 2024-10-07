@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table for which to set the field titles |
-| fieldTitles | String array | &#x1F852; | Field names as they must appear in dialog boxes |
-| fieldNumbers | Longint array | &#x1F852; | Actual field numbers |
+| fieldTitles | Text array | &#x1F852; | Field names as they must appear in dialog boxes |
+| fieldNumbers | Integer array | &#x1F852; | Actual field numbers |
 | * | &#x1F852; | Use the custom names in the formula editor |
 
 <!-- END REF-->

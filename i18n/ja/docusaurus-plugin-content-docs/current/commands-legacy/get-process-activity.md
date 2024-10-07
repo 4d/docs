@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get process activity.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| options | 倍長整数 | &#x1F852; | 返されるオプション |
-| 戻り値 | オブジェクト | &#x1F850; | 実行中のプロセスまたはユーザーセッション(4D Serverのみ)のスナップショット |
+| options | Integer | &#x1F852; | 返されるオプション |
+| 戻り値 | Object | &#x1F850; | 実行中のプロセスまたはユーザーセッション(4D Serverのみ)のスナップショット |
 
 <!-- END REF-->
 

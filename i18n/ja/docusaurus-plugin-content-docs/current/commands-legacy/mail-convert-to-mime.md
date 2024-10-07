@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.MAIL Convert to MIME.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| mail | オブジェクト | &#x1F852; | Email object |
-| options | オブジェクト | &#x1F852; | Charset and encoding mail options |
-| 戻り値 | テキスト | &#x1F850; | Email object converted to MIME |
+| mail | Object | &#x1F852; | Email object |
+| options | Object | &#x1F852; | Charset and encoding mail options |
+| 戻り値 | Text | &#x1F850; | Email object converted to MIME |
 
 <!-- END REF-->
 

@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table for which to set the parameter or, Default table if this parameter is omitted |
-| selector | Longint | &#x1F852; | Code of the database parameter to modify |
-| value | Real, String | &#x1F852; | Value of the parameter |
+| selector | Integer | &#x1F852; | Code of the database parameter to modify |
+| value | Real, Text | &#x1F852; | Value of the parameter |
 
 <!-- END REF-->
 

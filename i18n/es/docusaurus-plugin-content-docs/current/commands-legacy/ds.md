@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.ds.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| localID | Texto | &#x1F852; | Local ID del almacén de datos remoto a devolver |
+| localID | Text | &#x1F852; | Local ID del almacén de datos remoto a devolver |
 | Resultado | DataStore | &#x1F850; | Nueva referencia del almacén de datos |
 
 <!-- END REF-->

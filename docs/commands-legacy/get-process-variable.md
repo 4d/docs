@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PROCESS VARIABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Longint | &#x1F852; | Source process number |
+| process | Integer | &#x1F852; | Source process number |
 | srcVar | Variable | &#x1F852; | Source variable |
 | dstVar | Variable | &#x1F858; | Destination variable |
 

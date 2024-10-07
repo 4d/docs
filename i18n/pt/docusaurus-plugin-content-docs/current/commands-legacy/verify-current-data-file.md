@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objetos | Inteiro longo | &#x1F852; | Objeto a ser verificado |
-| opções | Inteiro longo | &#x1F852; | Opções de verificação |
-| metodo | Texto | &#x1F852; | Nome do método 4D de retrochamada |
-| arrayTabelas | Array inteiro longo | &#x1F852; | Números de tabelas a serem verificadas |
-| arrayCampos | Array inteiro 2D, Array inteiro longo 2D, Array real 2D | &#x1F852; | Número de índices a serem verificados |
+| objetos | Integer | &#x1F852; | Objeto a ser verificado |
+| opções | Integer | &#x1F852; | Opções de verificação |
+| metodo | Text | &#x1F852; | Nome do método 4D de retrochamada |
+| arrayTabelas | Integer array | &#x1F852; | Números de tabelas a serem verificadas |
+| arrayCampos | 2D Integer array, 2D Integer array, 2D Real array | &#x1F852; | Número de índices a serem verificados |
 
 <!-- END REF-->
 

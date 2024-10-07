@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current method name.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | String | &#x1F850; | Chamada nome do método |
+| Resultado | Text | &#x1F850; | Chamada nome do método |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Longint | &#x1F852; | Reference of the area |
-| left | Longint | &#x1F852; | Left boundary |
-| top | Longint | &#x1F852; | Top boundary |
-| right | Longint | &#x1F852; | Right boundary |
-| bottom | Longint | &#x1F852; | Bottom boundary |
+| area | Integer | &#x1F852; | Reference of the area |
+| left | Integer | &#x1F852; | Left boundary |
+| top | Integer | &#x1F852; | Top boundary |
+| right | Integer | &#x1F852; | Right boundary |
+| bottom | Integer | &#x1F852; | Bottom boundary |
 
 <!-- END REF-->
 

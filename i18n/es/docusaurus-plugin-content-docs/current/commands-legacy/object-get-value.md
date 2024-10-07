@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get value.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomObjeto | Texto | &#x1F852; | Nombre del objeto |
-| Resultado | Mixed | &#x1F850; | Valor actual de la fuente de datos del objeto de formulario |
+| nomObjeto | Text | &#x1F852; | Nombre del objeto |
+| Resultado | any | &#x1F850; | Valor actual de la fuente de datos del objeto de formulario |
 
 <!-- END REF-->
 

@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especifica, objeto é um nome de objeto (cadeia) Se omite, objeto é um campo ou uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se for especificado *) ou<br/>Campo ou variável (se for omitido *) |
-| Resultado | Inteiro longo | &#x1F850; | Estilo de linha de borde |
+| objeto | any | &#x1F852; | Nome de objeto (se for especificado *) ou<br/>Campo ou variável (se for omitido *) |
+| Resultado | Integer | &#x1F850; | Estilo de linha de borde |
 
 <!-- END REF-->
 

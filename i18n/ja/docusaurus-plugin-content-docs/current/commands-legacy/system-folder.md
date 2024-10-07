@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.System folder.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| type | 倍長整数 | &#x1F852; | システムフォルダのタイプ |
-| 戻り値 | 文字 | &#x1F850; | システムフォルダへのパス名 |
+| type | Integer | &#x1F852; | システムフォルダのタイプ |
+| 戻り値 | Text | &#x1F850; | システムフォルダへのパス名 |
 
 <!-- END REF-->
 

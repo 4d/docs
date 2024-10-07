@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
-| liste | RefListe, Chaîne | &#x1F852; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| liste | Integer, Text | &#x1F852; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
 | refElément &#124; * | Opérateur, Entier long | &#x1F852; | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
-| libelléElément | Chaîne | &#x1F852; | Nouveau libellé d'élément |
-| nouvelRéf | Entier long | &#x1F852; | Nouveau numéro de référence d'élément |
-| sous_Liste | RefListe | &#x1F852; | Nouvelle sous-liste rattachée à l'élément ou 0 = pas de sous-liste (détacher sous-liste courante) ou -1 = pas de changement |
-| déployée | Booléen | &#x1F852; | Indique si la sous-liste doit être déployée/contractée |
+| libelléElément | Text | &#x1F852; | Nouveau libellé d'élément |
+| nouvelRéf | Integer | &#x1F852; | Nouveau numéro de référence d'élément |
+| sous_Liste | Integer | &#x1F852; | Nouvelle sous-liste rattachée à l'élément ou 0 = pas de sous-liste (détacher sous-liste courante) ou -1 = pas de changement |
+| déployée | Boolean | &#x1F852; | Indique si la sous-liste doit être déployée/contractée |
 
 <!-- END REF-->
 

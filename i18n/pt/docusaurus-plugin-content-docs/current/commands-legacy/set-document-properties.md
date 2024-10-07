@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DOCUMENT PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | String | &#x1F852; | Nome do documento ou rota de acesso completa |
-| bloqueado | Booleano | &#x1F852; | Bloqueado (True) ou Desbloqueado (False) |
-| invisivel | Booleano | &#x1F852; | Invisível (True) ou Visível (False) |
-| criadoEm | Data | &#x1F852; | Data de criação |
-| criadoAs | Hora | &#x1F852; | HOra de criação |
-| modificadoEm | Data | &#x1F852; | última modificação de data |
-| modificadoAs | Hora | &#x1F852; | última hora modificada |
+| documento | Text | &#x1F852; | Nome do documento ou rota de acesso completa |
+| bloqueado | Boolean | &#x1F852; | Bloqueado (True) ou Desbloqueado (False) |
+| invisivel | Boolean | &#x1F852; | Invisível (True) ou Visível (False) |
+| criadoEm | Date | &#x1F852; | Data de criação |
+| criadoAs | Time | &#x1F852; | HOra de criação |
+| modificadoEm | Date | &#x1F852; | última modificação de data |
+| modificadoAs | Time | &#x1F852; | última hora modificada |
 
 <!-- END REF-->
 

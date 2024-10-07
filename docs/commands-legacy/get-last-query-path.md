@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get last query path.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| descFormat | Longint | &#x1F852; | Description format (Text or XML) |
+| descFormat | Integer | &#x1F852; | Description format (Text or XML) |
 | Function result | String | &#x1F850; | Description of last executed query path |
 
 <!-- END REF-->

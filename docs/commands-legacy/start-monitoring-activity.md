@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | duration | Real | &#x1F852; | Length of time (in seconds) before logging begins |
-| source | Longint | &#x1F852; | Origin of an operation |
+| source | Integer | &#x1F852; | Origin of an operation |
 
 <!-- END REF-->
 

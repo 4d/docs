@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE SET.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla para la cual crear un conjunto a partir de la selección actual o Tabla por defecto si se omite |
-| conjunto | Cadena | &#x1F852; | Nombre del nuevo conjunto |
+| tabla | Table | &#x1F852; | Tabla para la cual crear un conjunto a partir de la selección actual o Tabla por defecto si se omite |
+| conjunto | Text | &#x1F852; | Nombre del nuevo conjunto |
 
 <!-- END REF-->
 

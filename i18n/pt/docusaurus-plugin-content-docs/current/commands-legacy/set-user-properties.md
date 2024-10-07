@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.Set user properties.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refUsuario | Inteiro longo | &#x1F852; | Número de ID de conta de usuário; -1 para adicionar um usuário |
+| refUsuario | Integer | &#x1F852; | Número de ID de conta de usuário; -1 para adicionar um usuário |
 | &#x1F858; | Número de ID de conta de usuário adicionado (se houver) |
-| nome | String | &#x1F852; | Novo nome de usuário |
-| inicio | String | &#x1F852; | Novo método de início |
-| senha | String | &#x1F852; | Nova senha (não criptografada); ou * para deixar a senha intocada |
-| numLogin | Inteiro longo | &#x1F852; | Novo número de logins do banco de dados |
-| ultLogin | Data | &#x1F852; | Nova data do último login ao banco de dados |
-| adesao | Array inteiro longo | &#x1F852; | Números de IDs dos grupos aos quais pertence o usuário |
-| propGrupo | Inteiro longo | &#x1F852; | Número de referência de usuário do proprietário do grupo |
-| Resultado | Inteiro longo | &#x1F850; | Número de ID de referência do novo usuário |
+| nome | Text | &#x1F852; | Novo nome de usuário |
+| inicio | Text | &#x1F852; | Novo método de início |
+| senha | Text | &#x1F852; | Nova senha (não criptografada); ou * para deixar a senha intocada |
+| numLogin | Integer | &#x1F852; | Novo número de logins do banco de dados |
+| ultLogin | Date | &#x1F852; | Nova data do último login ao banco de dados |
+| adesao | Integer array | &#x1F852; | Números de IDs dos grupos aos quais pertence o usuário |
+| propGrupo | Integer | &#x1F852; | Número de referência de usuário do proprietário do grupo |
+| Resultado | Integer | &#x1F850; | Número de ID de referência do novo usuário |
 
 <!-- END REF-->
 

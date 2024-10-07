@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET ALLOWED METHODS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tabMéthodes | Tableau texte | &#x1F852; | Tableau de noms de méthodes |
+| tabMéthodes | Text array | &#x1F852; | Tableau de noms de méthodes |
 
 <!-- END REF-->
 

@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| horizontal | Booleano, Inteiro longo | &#x1F852; | True = exibir, False = esconder |
-| vertical | Booleano, Inteiro longo | &#x1F852; | True = exibir, False = esconder |
+| objeto | any | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| horizontal | Boolean, Integer | &#x1F852; | True = exibir, False = esconder |
+| vertical | Boolean, Integer | &#x1F852; | True = exibir, False = esconder |
 
 <!-- END REF-->
 

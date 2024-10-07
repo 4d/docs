@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SEND FILE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fichierWeb | Chaîne | &#x1F852; | Chemin d'accès au fichier Web à envoyer |
+| fichierWeb | Text | &#x1F852; | Chemin d'accès au fichier Web à envoyer |
 
 <!-- END REF-->
 

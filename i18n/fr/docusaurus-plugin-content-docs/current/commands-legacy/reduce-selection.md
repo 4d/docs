@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table de laquelle réduire la sélection ou Table par défaut si ce paramètre est omis |
-| nombre | Entier long | &#x1F852; | Nombre d'enregistrements à conserver |
+| nombre | Integer | &#x1F852; | Nombre d'enregistrements à conserver |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | String | &#x1F852; | XML element reference |
+| elementRef | Text | &#x1F852; | XML element reference |
 | xPath | Text | &#x1F852; | XPath path of the XML element |
-| elementValue | String, Variable | &#x1F852; | New value of element |
+| elementValue | Text, Variable | &#x1F852; | New value of element |
 | * | Operator | &#x1F852; | If passed: set the value in CDATA |
 
 <!-- END REF-->

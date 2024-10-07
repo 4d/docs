@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| calculation | Longint | &#x1F852; | Calculation for footer area |
+| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| calculation | Integer | &#x1F852; | Calculation for footer area |
 
 <!-- END REF-->
 

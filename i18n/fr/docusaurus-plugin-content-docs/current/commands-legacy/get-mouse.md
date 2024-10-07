@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MOUSE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sourisX | Réel | &#x1F858; | Coordonnée horizontale de la souris |
-| sourisY | Réel | &#x1F858; | Coordonnée verticale de la souris |
-| boutonSouris | Entier long | &#x1F858; | Etat du bouton de la souris : 0 = Bouton relâché 1 = Bouton enfoncé 2 = Bouton droit enfoncé 3 = Les deux boutons enfoncés |
+| sourisX | Real | &#x1F858; | Coordonnée horizontale de la souris |
+| sourisY | Real | &#x1F858; | Coordonnée verticale de la souris |
+| boutonSouris | Integer | &#x1F858; | Etat du bouton de la souris : 0 = Bouton relâché 1 = Bouton enfoncé 2 = Bouton droit enfoncé 3 = Les deux boutons enfoncés |
 | * | Opérateur | &#x1F852; | Si spécifié, utiliser le système de coordonnées globales Si omis, utiliser le système de coordonnées locales |
 
 <!-- END REF-->

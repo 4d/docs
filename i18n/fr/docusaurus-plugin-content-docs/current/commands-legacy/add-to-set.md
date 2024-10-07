@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table de l'enregistrement courant ou Table par défaut si ce paramètre est omis |
-| ensemble | Chaîne | &#x1F852; | Nom de l'ensemble auquel ajouter l'enregistrement courant |
+| ensemble | Text | &#x1F852; | Nom de l'ensemble auquel ajouter l'enregistrement courant |
 
 <!-- END REF-->
 

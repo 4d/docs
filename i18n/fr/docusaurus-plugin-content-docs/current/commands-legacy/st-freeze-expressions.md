@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| débutSél | Entier long | &#x1F852; | Début de la sélection |
-| finSél | Entier long | &#x1F852; | Fin de la sélection |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| débutSél | Integer | &#x1F852; | Début de la sélection |
+| finSél | Integer | &#x1F852; | Fin de la sélection |
 | * | Opérateur | &#x1F852; | Si passé = mettre à jour les expressions avant de les figer |
 
 <!-- END REF-->

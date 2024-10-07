@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get last table number.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Entier long | &#x1F850; | Numéro de table le plus élevé dans la base |
+| Résultat | Integer | &#x1F850; | Numéro de table le plus élevé dans la base |
 
 <!-- END REF-->
 

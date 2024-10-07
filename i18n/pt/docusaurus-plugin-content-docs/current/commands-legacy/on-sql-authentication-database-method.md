@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | $1 | Texto | &#x1F858; | Nome de usuário |
 | $2 | Texto | &#x1F858; | Senha |
 | $3 | Texto | &#x1F858; | (Opcional) endereço IP de cliente na origem do pedido |
-| Resultado | Booleano | &#x1F850; | Verdadeiro = pedido aceito, Falso = pedido recusado |
+| Resultado | Boolean | &#x1F850; | Verdadeiro = pedido aceito, Falso = pedido recusado |
 
 <!-- END REF-->
 

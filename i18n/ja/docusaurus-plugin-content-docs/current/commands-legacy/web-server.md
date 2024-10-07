@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Server.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| option | 倍長整数 | &#x1F852; | 状態を取得したいWebサーバー(省略時のデフォルト = データベースWebサーバー) |
-| 戻り値 | オブジェクト | &#x1F850; | Web serverオブジェクト |
+| option | Integer | &#x1F852; | 状態を取得したいWebサーバー(省略時のデフォルト = データベースWebサーバー) |
+| 戻り値 | Object | &#x1F850; | Web serverオブジェクト |
 
 <!-- END REF-->
 

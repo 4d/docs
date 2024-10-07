@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table dans laquelle la sélection est triée ou Table par défaut si ce paramètre est omis |
-| champObjet | Champ objet | &#x1F852; | Champ objet dont les attributs sont à utiliser pour le tri |
-| cheminAttribut | Chaîne | &#x1F852; | Nom ou chemin d'attribut pour chaque niveau que l'on veut trier |
+| champObjet | Object | &#x1F852; | Champ objet dont les attributs sont à utiliser pour le tri |
+| cheminAttribut | Text | &#x1F852; | Nom ou chemin d'attribut pour chaque niveau que l'on veut trier |
 | > ou < | Opérateur | &#x1F852; | Sens de tri pour chaque niveau : > pour trier par ordre ascendant, ou < pour trier par ordre descendant. |
 | * | Opérateur | &#x1F852; | Attente d'exécution du tri |
 

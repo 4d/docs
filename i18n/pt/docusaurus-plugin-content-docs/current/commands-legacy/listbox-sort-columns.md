@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| numColuna | Inteiro longo | &#x1F852; | Número da coluna a ordenar |
-| ordenar | Operador | &#x1F852; | ">" para ordernar em ordem ascendente ou "<" para ordenar em ordem descendente |
+| objeto | any | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| numColuna | Integer | &#x1F852; | Número da coluna a ordenar |
+| ordenar | * | &#x1F852; | ">" para ordernar em ordem ascendente ou "<" para ordenar em ordem descendente |
 
 <!-- END REF-->
 

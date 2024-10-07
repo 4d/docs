@@ -10,14 +10,14 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is set) or Variable (if * is omitted) |
-| colPosition | Longint | &#x1F852; | Location of column to insert |
-| colName | String | &#x1F852; | Name of the column object |
-| colVariable | Array, Field, Variable, Nil pointer | &#x1F852; | Column array name or field or variable |
-| headerName | String | &#x1F852; | Name of the column header object |
-| headerVar | Integer variable, Nil pointer | &#x1F852; | Column header variable |
-| footerName | String | &#x1F852; | Column footer object name |
-| footerVar | Variable, Nil pointer | &#x1F852; | Column footer variable |
+| object | any | &#x1F852; | Object name (if * is set) or Variable (if * is omitted) |
+| colPosition | Integer | &#x1F852; | Location of column to insert |
+| colName | Text | &#x1F852; | Name of the column object |
+| colVariable | Array, Field, Variable, Pointer | &#x1F852; | Column array name or field or variable |
+| headerName | Text | &#x1F852; | Name of the column header object |
+| headerVar | Integer, Pointer | &#x1F852; | Column header variable |
+| footerName | Text | &#x1F852; | Column footer object name |
+| footerVar | Variable, Pointer | &#x1F852; | Column footer variable |
 
 <!-- END REF-->
 

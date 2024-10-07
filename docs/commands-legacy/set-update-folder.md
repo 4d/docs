@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET UPDATE FOLDER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| folderPath | String | &#x1F852; | Pathname of folder (package under OS X) containing updated application |
+| folderPath | Text | &#x1F852; | Pathname of folder (package under OS X) containing updated application |
 | silentErrors | Boolean | &#x1F852; | False (default) = report errors visibly, <br/>True = do not report them |
 
 <!-- END REF-->

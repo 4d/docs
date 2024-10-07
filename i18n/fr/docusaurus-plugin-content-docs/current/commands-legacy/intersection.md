@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.INTERSECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ensemble1 | Chaîne | &#x1F852; | Premier ensemble |
-| ensemble2 | Chaîne | &#x1F852; | Second ensemble |
-| résultat | Chaîne | &#x1F852; | Ensemble résultant |
+| ensemble1 | Text | &#x1F852; | Premier ensemble |
+| ensemble2 | Text | &#x1F852; | Second ensemble |
+| résultat | Text | &#x1F852; | Ensemble résultant |
 
 <!-- END REF-->
 

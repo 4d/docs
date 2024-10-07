@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SERVICE Get info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| infoType | 倍長整数 | &#x1F852; | 取得する情報 |
-| 戻り値 | 文字 | &#x1F850; | 最新のSOAPエラーに関する情報 |
+| infoType | Integer | &#x1F852; | 取得する情報 |
+| 戻り値 | Text | &#x1F850; | 最新のSOAPエラーに関する情報 |
 
 <!-- END REF-->
 

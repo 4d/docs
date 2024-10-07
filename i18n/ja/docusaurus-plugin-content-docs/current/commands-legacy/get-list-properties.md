@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | ListRef | &#x1F852; | リスト参照番号 |
-| appearance | 倍長整数 | &#x1F858; | リストの描画スタイル 1 = Macスタイル 2 = Windowsスタイル |
-| icon | 倍長整数 | &#x1F858; | *** 廃止予定、常に0を返します *** |
-| lineHeight | 倍長整数 | &#x1F858; | 行の最小高さ (ピクセル単位) |
-| doubleClick | 倍長整数 | &#x1F858; | ダブルクリックでサブリストを展開/折り畳み 0 = Yes, 1= No |
-| multiSelections | 倍長整数 | &#x1F858; | 複数行選択: 0 = No, 1 = Yes |
-| editable | 倍長整数 | &#x1F858; | ユーザによる更新可: 0 = No, 1 = Yes |
+| list | Integer | &#x1F852; | リスト参照番号 |
+| appearance | Integer | &#x1F858; | リストの描画スタイル 1 = Macスタイル 2 = Windowsスタイル |
+| icon | Integer | &#x1F858; | *** 廃止予定、常に0を返します *** |
+| lineHeight | Integer | &#x1F858; | 行の最小高さ (ピクセル単位) |
+| doubleClick | Integer | &#x1F858; | ダブルクリックでサブリストを展開/折り畳み 0 = Yes, 1= No |
+| multiSelections | Integer | &#x1F858; | 複数行選択: 0 = No, 1 = Yes |
+| editable | Integer | &#x1F858; | ユーザによる更新可: 0 = No, 1 = Yes |
 
 <!-- END REF-->
 

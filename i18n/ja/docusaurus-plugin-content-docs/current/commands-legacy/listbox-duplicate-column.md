@@ -10,14 +10,14 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#x1F852; | 指定時、 Object はオブジェクト名 (文字列) 省略時、 Object は変数 |
-| object | フォームオブジェクト | &#x1F852; | 複製したい列のオブジェクト名( * 指定時)、 または変数 ( * 省略時) |
-| colPosition | 倍長整数 | &#x1F852; | 新しく複製した列の位置 |
-| colName | 文字 | &#x1F852; | 新しい列の名前 |
-| colVariable | 配列, フィールド, 変数, Nil pointer | &#x1F852; | 列の配列変数またはフィールド、変数 |
-| headerName | 文字 | &#x1F852; | 列のヘッダーのオブジェクト名 |
-| headerVar | 整数変数, Nil pointer | &#x1F852; | 列のヘッダーの変数 |
-| footerName | 文字 | &#x1F852; | 列のフッターのオブジェクト名 |
-| footerVar | 変数, Nil pointer | &#x1F852; | 列のフッターの変数 |
+| object | any | &#x1F852; | 複製したい列のオブジェクト名( * 指定時)、 または変数 ( * 省略時) |
+| colPosition | Integer | &#x1F852; | 新しく複製した列の位置 |
+| colName | Text | &#x1F852; | 新しい列の名前 |
+| colVariable | Array, Field, Variable, Pointer | &#x1F852; | 列の配列変数またはフィールド、変数 |
+| headerName | Text | &#x1F852; | 列のヘッダーのオブジェクト名 |
+| headerVar | Integer, Pointer | &#x1F852; | 列のヘッダーの変数 |
+| footerName | Text | &#x1F852; | 列のフッターのオブジェクト名 |
+| footerVar | Variable, Pointer | &#x1F852; | 列のフッターの変数 |
 
 <!-- END REF-->
 

@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| option | Entier long | &#x1F852; | Option à lire |
-| valeur | Entier long | &#x1F858; | Valeur courante de l’option |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| option | Integer | &#x1F852; | Option à lire |
+| valeur | Integer | &#x1F858; | Valeur courante de l’option |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.GET WINDOW RECT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| esquerda | Inteiro longo | &#x1F858; | Coordenada esquerda da área de conteúdo da janela |
-| superior | Inteiro longo | &#x1F858; | Coordenada superior da área de conteúdo da janela |
-| direita | Inteiro longo | &#x1F858; | Coordenada direita da área de conteúdo da janela |
-| inferior | Inteiro longo | &#x1F858; | Coordenada inferior da área de conteúdo da janela |
-| janela | refJan | &#x1F852; | Número de referência de janela; ou janela do primeiro plano do processo atual, se omitido; ou janela MDI se for -1 (Windows) |
+| esquerda | Integer | &#x1F858; | Coordenada esquerda da área de conteúdo da janela |
+| superior | Integer | &#x1F858; | Coordenada superior da área de conteúdo da janela |
+| direita | Integer | &#x1F858; | Coordenada direita da área de conteúdo da janela |
+| inferior | Integer | &#x1F858; | Coordenada inferior da área de conteúdo da janela |
+| janela | Integer | &#x1F852; | Número de referência de janela; ou janela do primeiro plano do processo atual, se omitido; ou janela MDI se for -1 (Windows) |
 
 <!-- END REF-->
 

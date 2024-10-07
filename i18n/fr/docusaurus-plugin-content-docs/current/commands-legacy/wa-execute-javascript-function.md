@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| fonctionJS | Chaîne | &#x1F852; | Nom de la fonction JavaScript à exécuter |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| fonctionJS | Text | &#x1F852; | Nom de la fonction JavaScript à exécuter |
 | résultat &#124; * | Variable | &#x1F852; | * pour une fonction sans résultat ou |
 | &#x1F858; | Résultat de la fonction (si attendu) |
-| param | Chaîne, Numérique, Date, Objet, Collection | &#x1F852; | Paramètre(s) à passer à la fonction |
+| param | Text, Number, Date, Object, Collection | &#x1F852; | Paramètre(s) à passer à la fonction |
 
 <!-- END REF-->
 

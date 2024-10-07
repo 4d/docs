@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica objetoImagen es un nombre de objeto (cadena). Si se omite, objetoImagen es una variable |
-| objetoImagen | Imagen | &#x1F852; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
-| id | Texto | &#x1F852; | Atributo id del elemento a visualizar |
-| margen | Entero largo | &#x1F852; | Margen de visibilidad (en píxeles por defecto) |
+| objetoPicture | Picture | &#x1F852; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
+| id | Text | &#x1F852; | Atributo id del elemento a visualizar |
+| margen | Integer | &#x1F852; | Margen de visibilidad (en píxeles por defecto) |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Parse XML variable.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| variable | BLOB, テキスト | &#x1F852; | 変数名 |
-| validation | ブール | &#x1F852; | True = DTDによる検証を行う False = 検証なし |
+| variable | Blob, Text | &#x1F852; | 変数名 |
+| validation | Boolean | &#x1F852; | True = DTDによる検証を行う False = 検証なし |
 | dtd &#124; schema | 文字 | &#x1F852; | DTDまたはXMLスキーマの場所 |
-| 戻り値 | 文字 | &#x1F850; | XML要素参照 |
+| 戻り値 | Text | &#x1F850; | XML要素参照 |
 
 <!-- END REF-->
 

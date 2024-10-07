@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | variable | Variable | &#x1F852; | Variable à stocker dans le BLOB |
-| blob | BLOB | &#x1F852; | BLOB devant recevoir la variable |
+| blob | Blob | &#x1F852; | BLOB devant recevoir la variable |
 | offset &#124; * | Variable, Opérateur | &#x1F852; | Offset de la variable (en octets) dans BLOB ou * pour ajouter la variable à la fin du BLOB |
 | &#x1F858; | Nouvel offset après écriture si * omis |
 

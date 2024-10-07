@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RECEIVE PACKET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| docRef | RefDoc | &#x1F852; | Numéro de référence de document ou canal courant (port série ou document) |
-| réceptVar | Variable texte, Variable BLOB | &#x1F858; | Variable devant recevoir les données |
+| docRef | Time | &#x1F852; | Numéro de référence de document ou canal courant (port série ou document) |
+| réceptVar | Text, Blob | &#x1F858; | Variable devant recevoir les données |
 | stopCar &#124; nbOctets | Chaîne, Entier long | &#x1F852; | Caractère(s) au(x)quel(s) stopper la réception des données ou Nombre d'octets à recevoir |
 
 <!-- END REF-->

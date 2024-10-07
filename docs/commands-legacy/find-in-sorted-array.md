@@ -12,8 +12,8 @@ displayed_sidebar: docs
 | array | Array | &#x1F852; | Array to search |
 | value | Expression | &#x1F852; | Value (same type as array) to search for in the array |
 | > or < | Operator | &#x1F852; | > if array is sorted in ascending order, < if it is sorted in descending order |
-| posFirst | Longint | &#x1F858; | Position of its first occurrence if the value is found; otherwise position where the value should be inserted |
-| posLast | Longint | &#x1F858; | Position of its last occurrence if the value is found; otherwise same as posFirst |
+| posFirst | Integer | &#x1F858; | Position of its first occurrence if the value is found; otherwise position where the value should be inserted |
+| posLast | Integer | &#x1F858; | Position of its last occurrence if the value is found; otherwise same as posFirst |
 | Function result | Boolean | &#x1F850; | True if at least one element in array matches the value, False otherwise |
 
 <!-- END REF-->

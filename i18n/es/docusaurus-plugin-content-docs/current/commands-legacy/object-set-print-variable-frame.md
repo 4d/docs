@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
-| marcoVariable | Booleano | &#x1F852; | True = Impresión de marco variable, False = Impresión de marco fijo |
-| subformFijo | Entero largo | &#x1F852; | Opciones de impresión de subformularios en tamaño fijo |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
+| marcoVariable | Boolean | &#x1F852; | True = Impresión de marco variable, False = Impresión de marco fijo |
+| subformFijo | Integer | &#x1F852; | Opciones de impresión de subformularios en tamaño fijo |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | Numero | Real | &#x1F852; | Número a truncar |
-| decimales | Entero largo | &#x1F852; | Número de lugares decimales a conservar |
+| decimales | Integer | &#x1F852; | Número de lugares decimales a conservar |
 | Resultado | Real | &#x1F850; | Número truncado a partir del número decimales especificado por decimales |
 
 <!-- END REF-->

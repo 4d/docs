@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Array | &#x1F852; | Array from which to delete elements |
-| where | Longint | &#x1F852; | Element at which to begin deletion |
-| howMany | Longint | &#x1F852; | Number of elements to delete, or 1 element if omitted |
+| where | Integer | &#x1F852; | Element at which to begin deletion |
+| howMany | Integer | &#x1F852; | Number of elements to delete, or 1 element if omitted |
 
 <!-- END REF-->
 

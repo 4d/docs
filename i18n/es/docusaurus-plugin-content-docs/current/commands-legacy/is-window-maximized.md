@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is window maximized.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | WinRef | &#x1F852; | Número de referencia de la ventana |
-| Resultado | Booleano | &#x1F850; | True si la ventana está maximizada, False en caso contrario |
+| ventana | Integer | &#x1F852; | Número de referencia de la ventana |
+| Resultado | Boolean | &#x1F850; | True si la ventana está maximizada, False en caso contrario |
 
 <!-- END REF-->
 

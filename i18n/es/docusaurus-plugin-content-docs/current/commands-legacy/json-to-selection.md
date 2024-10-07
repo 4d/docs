@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON TO SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| laTabla | Tabla | &#x1F852; | Puntero a la tabla 4D |
-| objetoJson | Texto | &#x1F852; | Cadena en JSON |
+| laTable | Table | &#x1F852; | Puntero a la tabla 4D |
+| objetoJson | Text | &#x1F852; | Cadena en JSON |
 
 <!-- END REF-->
 

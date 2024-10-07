@@ -11,10 +11,10 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | varText | Text | &#x1F852; | Original text to be divided |
 | arrText | Text array | &#x1F858; | Array containing the text divided into words or lines |
-| width | Longint | &#x1F852; | Maximum width of string (in pixels) |
+| width | Integer | &#x1F852; | Maximum width of string (in pixels) |
 | fontName | Text | &#x1F852; | Name of font |
-| fontSize | Longint | &#x1F852; | Size of font |
-| fontStyle | Longint | &#x1F852; | Style of font |
+| fontSize | Integer | &#x1F852; | Size of font |
+| fontStyle | Integer | &#x1F852; | Style of font |
 | * | Operator | &#x1F852; | If passed = interpret text as multistyle |
 
 <!-- END REF-->

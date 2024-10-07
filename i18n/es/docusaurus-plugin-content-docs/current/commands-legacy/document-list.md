@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOCUMENT LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nombreRuta | Cadena | &#x1F852; | Ruta de acceso al volumen o a la carpeta |
-| documentos | Array texto | &#x1F858; | Nombres de los documentos presentes en esta ubicación |
-| opciones | Entero largo | &#x1F852; | Opciones para crear la lista |
+| nombreRuta | Text | &#x1F852; | Ruta de acceso al volumen o a la carpeta |
+| documentos | Text array | &#x1F858; | Nombres de los documentos presentes en esta ubicación |
+| opciones | Integer | &#x1F852; | Opciones para crear la lista |
 
 <!-- END REF-->
 

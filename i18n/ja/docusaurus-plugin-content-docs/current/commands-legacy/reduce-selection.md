@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.REDUCE SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | セレクションの数を減らすテーブル, または 省略時デフォルトテーブル |
-| number | 倍長整数 | &#x1F852; | 選択するレコード数 |
+| aTable | Table | &#x1F852; | セレクションの数を減らすテーブル, または 省略時デフォルトテーブル |
+| number | Integer | &#x1F852; | 選択するレコード数 |
 
 <!-- END REF-->
 

@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | icon | Picture | &#x1F852; | Icon to use during drag |
-| horOffset | Longint | &#x1F852; | Horizontal offset from left edge of picture with respect to cursor position (>0 = to the left, <0 = to the right) |
-| vertOffset | Longint | &#x1F852; | Vertical offset from top edge of picture with respect to cursor position (>0 = upwards, <0 = downwards) |
+| horOffset | Integer | &#x1F852; | Horizontal offset from left edge of picture with respect to cursor position (>0 = to the left, <0 = to the right) |
+| vertOffset | Integer | &#x1F852; | Vertical offset from top edge of picture with respect to cursor position (>0 = upwards, <0 = downwards) |
 
 <!-- END REF-->
 

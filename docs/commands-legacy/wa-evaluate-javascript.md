@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| jsCode | String | &#x1F852; | JavaScript code |
-| type | Longint | &#x1F852; | Type into which to convert result |
+| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| jsCode | Text | &#x1F852; | JavaScript code |
+| type | Integer | &#x1F852; | Type into which to convert result |
 | Function result | Date, Object, Pointer, Real, Text, Time | &#x1F850; | Result of evaluation |
 
 <!-- END REF-->

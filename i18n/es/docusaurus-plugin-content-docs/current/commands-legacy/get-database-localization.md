@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get database localization.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tipoLeng | Entero largo | &#x1F852; | Tipo de lenguaje |
+| tipoLeng | Integer | &#x1F852; | Tipo de lenguaje |
 | * | Operador | &#x1F852; | Devuelve información sobre la base local |
-| Resultado | Cadena | &#x1F850; | Lenguaje actual de la base |
+| Resultado | Text | &#x1F850; | Lenguaje actual de la base |
 
 <!-- END REF-->
 

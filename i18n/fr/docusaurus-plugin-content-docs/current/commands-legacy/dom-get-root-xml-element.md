@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get Root XML element.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Chaîne | &#x1F852; | Référence d’élément XML |
-| Résultat | Chaîne | &#x1F850; | Référence de l’élément racine ou "" en cas d’erreur |
+| refElément | Text | &#x1F852; | Référence d’élément XML |
+| Résultat | Text | &#x1F850; | Référence de l’élément racine ou "" en cas d’erreur |
 
 <!-- END REF-->
 

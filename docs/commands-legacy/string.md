@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | expression | Expression | &#x1F852; | Expression for which to return the string form (can be Real, Integer, Long Integer, Date, Time, String, Text, Boolean, Undefined, or Null) |
-| format | Longint, String | &#x1F852; | Display format |
+| format | Integer, Text | &#x1F852; | Display format |
 | addTime | Time | &#x1F852; | Time to add on if expression is a date |
 | Function result | String | &#x1F850; | String form of the expression |
 

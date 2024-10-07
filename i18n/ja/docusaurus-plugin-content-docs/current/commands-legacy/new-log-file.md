@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.New log file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | テキスト | &#x1F850; | 閉じられたログファイルのフルパス名 |
+| 戻り値 | Text | &#x1F850; | 閉じられたログファイルのフルパス名 |
 
 <!-- END REF-->
 

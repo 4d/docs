@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FILTER KEYSTROKE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| carFiltro | Cadena | &#x1F852; | Carácter de filtrado de tecleo o Cadena vacía para cancelar el filtrado |
+| carFiltro | Text | &#x1F852; | Carácter de filtrado de tecleo o Cadena vacía para cancelar el filtrado |
 
 <!-- END REF-->
 

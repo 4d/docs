@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PHP SET OPTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| opçao | Inteiro longo | &#x1F852; | Opção a ser estabelecida |
-| valor | Booleano | &#x1F852; | Novo valor da opção |
+| opçao | Integer | &#x1F852; | Opção a ser estabelecida |
+| valor | Boolean | &#x1F852; | Novo valor da opção |
 | * | Operador | &#x1F852; | Se passado: modificação apenas se aplica à próxima chamada |
 
 <!-- END REF-->

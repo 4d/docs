@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REJECT NEW REMOTE CONNECTIONS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| rejectStatus | ブール | &#x1F852; | 接続を拒否したい場合にはTrue、そうでない場合にはFalse |
+| rejectStatus | Boolean | &#x1F852; | 接続を拒否したい場合にはTrue、そうでない場合にはFalse |
 
 <!-- END REF-->
 

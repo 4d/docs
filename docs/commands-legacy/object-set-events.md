@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | Form object | &#x1F852; | Object name or "" to designate the form (if * is specified) or<br/>Field or variable (if * is omitted) |
-| arrEvents | Longint array | &#x1F852; | Array of events to set |
-| mode | Longint | &#x1F852; | Activation mode for events defined in arrEvents |
+| object | any | &#x1F852; | Object name or "" to designate the form (if * is specified) or<br/>Field or variable (if * is omitted) |
+| arrEvents | Integer array | &#x1F852; | Array of events to set |
+| mode | Integer | &#x1F852; | Activation mode for events defined in arrEvents |
 
 <!-- END REF-->
 

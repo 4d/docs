@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | subformObject | Text | &#x1F852; | Name of subform object |
 | formula | Object, Text | &#x1F852; | Formula object or Name of project method |
-| return | Operator, Variable | &#x1F852; | * if formula does not return a value |
+| return | *, Variable | &#x1F852; | * if formula does not return a value |
 | &#x1F858; | Value returned by formula |
 | param | Expression | &#x1F852; | Parameter(s) passed to formula |
 

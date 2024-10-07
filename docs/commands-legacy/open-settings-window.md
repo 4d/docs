@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN SETTINGS WINDOW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| selector | String | &#x1F852; | Key designating a theme or a page or a group of parameters in the Preferences or Settings dialog box |
+| selector | Text | &#x1F852; | Key designating a theme or a page or a group of parameters in the Preferences or Settings dialog box |
 | access | Boolean | &#x1F852; | True=Lock the other pages of the dialog box<br/>False or omitted=Leave the other pages of the dialog box active |
-| settingsType | Longint | &#x1F852; | 0 or omitted = Structure settings, 1 = User settings, 2 = User settings for data |
+| settingsType | Integer | &#x1F852; | 0 or omitted = Structure settings, 1 = User settings, 2 = User settings for data |
 
 <!-- END REF-->
 

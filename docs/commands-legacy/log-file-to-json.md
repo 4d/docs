@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | destFolderPath | Text | &#x1F852; | Path of the saved file destination folder |
-| maxSize | Longint | &#x1F852; | Maximum size of JSON file to create (bytes) |
+| maxSize | Integer | &#x1F852; | Maximum size of JSON file to create (bytes) |
 | logPath | Text | &#x1F852; | Pathname of log file to export; use current log file if omitted |
-| fieldAtt | Longint | &#x1F852; | Field description attribute: 1 = use number (default), 2 = use name |
+| fieldAtt | Integer | &#x1F852; | Field description attribute: 1 = use number (default), 2 = use name |
 
 <!-- END REF-->
 

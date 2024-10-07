@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | valor | Real | &#x1F852; | Valor a converter |
-| deMoeda | String | &#x1F852; | Código da moeda na qual o valor é expresso |
-| paraMoeda | String | &#x1F852; | Código da moeda para o qual o valor será convertido |
+| deMoeda | Text | &#x1F852; | Código da moeda na qual o valor é expresso |
+| paraMoeda | Text | &#x1F852; | Código da moeda para o qual o valor será convertido |
 | Resultado | Real | &#x1F850; | Valor convertido |
 
 <!-- END REF-->

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Retourner l'information de la base hôte |
-| Résultat | Booléen | &#x1F850; | Mode compilé (Vrai), mode interprété (Faux) |
+| Résultat | Boolean | &#x1F850; | Mode compilé (Vrai), mode interprété (Faux) |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Parse formula.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| formula | テキスト | &#x1F852; | 標準テキストのフォーミュラ |
-| options | 倍長整数 | &#x1F852; | 入力/出力の形式の指示 |
-| errorMessage | テキスト | &#x1F858; | エラーメッセージ(エラーなしの場合には空の文字列) |
-| 戻り値 | テキスト | &#x1F850; | 変換されたフォーミュラ(標準テキスト) |
+| formula | Text | &#x1F852; | 標準テキストのフォーミュラ |
+| options | Integer | &#x1F852; | 入力/出力の形式の指示 |
+| errorMessage | Text | &#x1F858; | エラーメッセージ(エラーなしの場合には空の文字列) |
+| 戻り値 | Text | &#x1F850; | 変換されたフォーミュラ(標準テキスト) |
 
 <!-- END REF-->
 

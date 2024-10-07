@@ -10,14 +10,14 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| posiçaoCol | Inteiro longo | &#x1F852; | Localização da coluna a inserir |
-| nomeColuna | String | &#x1F852; | Nome do objeto coluna |
-| variavelCol | Array, Campo, Variável, Ponteiro nil | &#x1F852; | Nome de coluna do array ou campo ou variável |
-| nomeCabe | String | &#x1F852; | Nome do objeto título da coluna |
-| varTitulo | Variável inteira, Ponteiro nil | &#x1F852; | Variável título da coluna |
-| nomRodapé | String | &#x1F852; | Nome do rodapé da coluna |
-| nomeVar | Variável, Ponteiro nil | &#x1F852; | Variável do rodapé da coluna |
+| objeto | any | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| posiçaoCol | Integer | &#x1F852; | Localização da coluna a inserir |
+| nomeColuna | Text | &#x1F852; | Nome do objeto coluna |
+| variavelCol | Array, Field, Variable, Pointer | &#x1F852; | Nome de coluna do array ou campo ou variável |
+| nomeCabe | Text | &#x1F852; | Nome do objeto título da coluna |
+| varTitulo | Integer, Pointer | &#x1F852; | Variável título da coluna |
+| nomRodapé | Text | &#x1F852; | Nome do rodapé da coluna |
+| nomeVar | Variable, Pointer | &#x1F852; | Variável do rodapé da coluna |
 
 <!-- END REF-->
 

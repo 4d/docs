@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SCAN INDEX.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| unCampo | Campo | &#x1F852; | Campo indexado con el cual escanear los registros |
-| Numero | Entero largo | &#x1F852; | Número de registros a devolver |
+| unField | Field | &#x1F852; | Campo indexado con el cual escanear los registros |
+| Numero | Integer | &#x1F852; | Número de registros a devolver |
 | > o < | Operador | &#x1F852; | > a partir del inicio del índice < a partir del final del índice |
 
 <!-- END REF-->

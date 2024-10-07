@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Open resource file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| resFilename | String | &#x1F852; | Short or long name of resource file, or Empty string for standard Open File dialog box |
-| fileType | String | &#x1F852; | Mac OS file type (4-character string), or Windows file extension (1- to 3-character string), or All files, if omitted |
+| resFilename | Text | &#x1F852; | Short or long name of resource file, or Empty string for standard Open File dialog box |
+| fileType | Text | &#x1F852; | Mac OS file type (4-character string), or Windows file extension (1- to 3-character string), or All files, if omitted |
 | Function result | DocRef | &#x1F850; | Resource file reference number |
 
 <!-- END REF-->

@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre del objeto(si se especifica *) o<br/>Variable (si se omite *) |
-| linea | Entero largo | &#x1F852; | Número de línea |
-| Resultado | Entero largo | &#x1F850; | Valor de estilo |
+| objeto | any | &#x1F852; | Nombre del objeto(si se especifica *) o<br/>Variable (si se omite *) |
+| linea | Integer | &#x1F852; | Número de línea |
+| Resultado | Integer | &#x1F850; | Valor de estilo |
 
 <!-- END REF-->
 

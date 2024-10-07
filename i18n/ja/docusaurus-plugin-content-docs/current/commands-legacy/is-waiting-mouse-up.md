@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is waiting mouse up.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | ブール | &#x1F850; | オブジェクトがmouse upイベントを待っている場合にはTrue、それ以外ならFalse |
+| 戻り値 | Boolean | &#x1F850; | オブジェクトがmouse upイベントを待っている場合にはTrue、それ以外ならFalse |
 
 <!-- END REF-->
 

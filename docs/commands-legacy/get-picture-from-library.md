@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | picRef &#124; picName | Longint, String | &#x1F852; | Reference number of Picture Library graphic or Name of Picture Library graphic |
-| picture | Picture variable | &#x1F858; | Picture from the Picture Library |
+| picture | Picture | &#x1F858; | Picture from the Picture Library |
 
 <!-- END REF-->
 

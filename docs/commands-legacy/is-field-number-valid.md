@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | tableNum &#124; tablePtr | Longint, Pointer | &#x1F852; | Table number or Pointer to table |
-| fieldNum | Longint | &#x1F852; | Field number |
+| fieldNum | Integer | &#x1F852; | Field number |
 | Function result | Boolean | &#x1F850; | True = field exists in the table False = field does not exist in the table |
 
 <!-- END REF-->

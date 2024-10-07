@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| horizontal | Booléen | &#x1F852; | Vrai=montrer, Faux=cacher |
-| vertical | Booléen | &#x1F852; | Vrai=montrer, Faux=cacher |
+| objet | any | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| horizontal | Boolean | &#x1F852; | Vrai=montrer, Faux=cacher |
+| vertical | Boolean | &#x1F852; | Vrai=montrer, Faux=cacher |
 
 <!-- END REF-->
 

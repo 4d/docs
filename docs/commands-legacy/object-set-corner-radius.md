@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Field or variable (if * is omitted) |
-| radius | Longint | &#x1F852; | New radius of rounded corners (in pixels) |
+| object | any | &#x1F852; | Object name (if * is specified) or Field or variable (if * is omitted) |
+| radius | Integer | &#x1F852; | New radius of rounded corners (in pixels) |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | numTable &#124; unPtr | Entier long, Pointeur | &#x1F852; | Numéro de table ou Pointeur de table ou Pointeur de champ |
-| Résultat | Entier long, Pointeur | &#x1F850; | Pointeur de table si un Numéro de table est passé, Numéro de table si un Pointeur de table est passé, Numéro de table si un Pointeur de champ est passé |
+| Résultat | Integer, Pointer | &#x1F850; | Pointeur de table si un Numéro de table est passé, Numéro de table si un Pointeur de table est passé, Numéro de table si un Pointeur de champ est passé |
 
 <!-- END REF-->
 

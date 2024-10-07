@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | campPtr &#124; tablaNum | Puntero, Entero largo | &#x1F852; | Puntero a un campo o número de tabla |
-| numCamp | Entero largo | &#x1F852; | Número de campo si se pasa un número de tabla como primer parámetro |
-| Resultado | Cadena | &#x1F850; | Nombre del campo |
+| numCamp | Integer | &#x1F852; | Número de campo si se pasa un número de tabla como primer parámetro |
+| Resultado | Text | &#x1F850; | Nombre del campo |
 
 <!-- END REF-->
 

@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| sélecteur | Entier long | &#x1F852; | Préférence à lire |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| sélecteur | Integer | &#x1F852; | Préférence à lire |
 | valeur | Variable | &#x1F858; | Valeur courante de la préférence |
 
 <!-- END REF-->

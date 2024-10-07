@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Get indexed string.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resID | 倍長整数 | &#x1F852; | リソースID番号、または 'group'要素の'id'属性 (XLIFF) |
-| strID | 倍長整数 | &#x1F852; | ストリング番号、または 'trans-unit'要素の'id'属性 (XLIFF) |
-| resFile | DocRef | &#x1F852; | リソースファイル参照番号、または 省略時: すべてのXLIFFファイル、または 開かれているリソースファイル |
-| 戻り値 | 文字 | &#x1F850; | インデックス付きストリングの値 |
+| resID | Integer | &#x1F852; | リソースID番号、または 'group'要素の'id'属性 (XLIFF) |
+| strID | Integer | &#x1F852; | ストリング番号、または 'trans-unit'要素の'id'属性 (XLIFF) |
+| resFile | Time | &#x1F852; | リソースファイル参照番号、または 省略時: すべてのXLIFFファイル、または 開かれているリソースファイル |
+| 戻り値 | Text | &#x1F850; | インデックス付きストリングの値 |
 
 <!-- END REF-->
 

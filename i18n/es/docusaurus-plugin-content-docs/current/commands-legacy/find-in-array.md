@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | array | Array | &#x1F852; | Array a buscar |
-| valor | Expresión | &#x1F852; | Valor del mismo tipo a buscar en el array |
-| inicio | Entero largo | &#x1F852; | Elemento a partir del cual comenzar la búsqueda |
-| Resultado | Entero largo | &#x1F850; | Número del primer elemento en el array que corresponde al valor |
+| valor | Expression | &#x1F852; | Valor del mismo tipo a buscar en el array |
+| inicio | Integer | &#x1F852; | Elemento a partir del cual comenzar la búsqueda |
+| Resultado | Integer | &#x1F850; | Número del primer elemento en el array que corresponde al valor |
 
 <!-- END REF-->
 

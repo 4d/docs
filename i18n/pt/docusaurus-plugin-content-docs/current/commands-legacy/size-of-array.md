@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | array | Array | &#x1F852; | Array cujo tamanho é retornado |
-| Resultado | Inteiro longo | &#x1F850; | Retorna o número de elementos no array |
+| Resultado | Integer | &#x1F850; | Retorna o número de elementos no array |
 
 <!-- END REF-->
 

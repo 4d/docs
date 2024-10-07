@@ -10,15 +10,15 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| arrNomsCols | Array texto | &#x1F858; | Nombres de objeto de las columnas |
-| arrNomsEncabezados | Array texto | &#x1F858; | Nombres de objeto de los títulos |
-| arrVarCols | Array puntero | &#x1F858; | Punteros hacia las variables de las columnas |
-| arrVarEncabezados | Array puntero | &#x1F858; | Punteros hacia campos o Nil |
-| arrColsVisibles | Array booleano | &#x1F858; | Visibilidad de cada columna |
-| arrEstilos | Array puntero | &#x1F858; | Punteros a los arrays o a las variables de estilos de colores y de visibilidad o Nil |
-| arrNomsPies | Array texto | &#x1F858; | Nombres de los objetos de pies de columna |
-| arrVarsPies | Array puntero | &#x1F858; | Punteros a las variables de pies de columna |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| arrNomsCols | Text array | &#x1F858; | Nombres de objeto de las columnas |
+| arrNomsEncabezados | Text array | &#x1F858; | Nombres de objeto de los títulos |
+| arrVarCols | Pointer array | &#x1F858; | Punteros hacia las variables de las columnas |
+| arrVarEncabezados | Pointer array | &#x1F858; | Punteros hacia campos o Nil |
+| arrColsVisibles | Boolean array | &#x1F858; | Visibilidad de cada columna |
+| arrEstilos | Pointer array | &#x1F858; | Punteros a los arrays o a las variables de estilos de colores y de visibilidad o Nil |
+| arrNomsPies | Text array | &#x1F858; | Nombres de los objetos de pies de columna |
+| arrVarsPies | Pointer array | &#x1F858; | Punteros a las variables de pies de columna |
 
 <!-- END REF-->
 

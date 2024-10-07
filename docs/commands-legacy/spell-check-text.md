@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | text | Text | &#x1F852; | Text to check |
-| errPos | Longint | &#x1F858; | Position of first character of unknown word |
-| errLength | Longint | &#x1F858; | Length of unknown word |
-| checkPos | Longint | &#x1F852; | Start position for check |
+| errPos | Integer | &#x1F858; | Position of first character of unknown word |
+| errLength | Integer | &#x1F858; | Length of unknown word |
+| checkPos | Integer | &#x1F852; | Start position for check |
 | arrSuggest | Text array | &#x1F858; | List of suggestions |
 
 <!-- END REF-->

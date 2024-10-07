@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.KILL WORKER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| processo | Texto, Inteiro longo | &#x1F852; | Número ou nome de processo a terminar (terminar processo atual se omitido) |
+| processo | Text, Integer | &#x1F852; | Número ou nome de processo a terminar (terminar processo atual se omitido) |
 
 <!-- END REF-->
 

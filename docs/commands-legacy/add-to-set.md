@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Current record's table, or Default table, if omitted |
-| set | String | &#x1F852; | Name of the set to which to add the current record |
+| set | Text | &#x1F852; | Name of the set to which to add the current record |
 
 <!-- END REF-->
 

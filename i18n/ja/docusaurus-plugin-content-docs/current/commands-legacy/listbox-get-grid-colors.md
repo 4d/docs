@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#x1F852; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
-| hColor | テキスト, 倍長整数 | &#x1F858; | 横グリッドのRGBカラー値 |
-| vColor | テキスト, 倍長整数 | &#x1F858; | 縦グリッドのRGBカラー値 |
+| object | any | &#x1F852; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
+| hColor | Text, Integer | &#x1F858; | 横グリッドのRGBカラー値 |
+| vColor | Text, Integer | &#x1F858; | 縦グリッドのRGBカラー値 |
 
 <!-- END REF-->
 

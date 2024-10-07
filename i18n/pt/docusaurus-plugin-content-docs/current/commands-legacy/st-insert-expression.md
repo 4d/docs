@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | Objeto | &#x1F852; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
-| expressao | Texto | &#x1F852; | Expressão e (opcional) formato a inserir |
-| inicioSel | Inteiro longo | &#x1F852; | Início da seleção |
-| fimSel | Inteiro longo | &#x1F852; | Fim da seleção |
+| objeto | Object | &#x1F852; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| expressao | Text | &#x1F852; | Expressão e (opcional) formato a inserir |
+| inicioSel | Integer | &#x1F852; | Início da seleção |
+| fimSel | Integer | &#x1F852; | Fim da seleção |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SET MENU ITEM METHOD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Longint, MenuRef | &#x1F852; | Menu reference or Menu number |
-| menuItem | Longint | &#x1F852; | Number of menu item or -1 for the last item added to the menu |
-| methodName | String | &#x1F852; | Method name |
-| process | Longint | &#x1F852; | Process number |
+| menu | Integer, Text | &#x1F852; | Menu reference or Menu number |
+| menuItem | Integer | &#x1F852; | Number of menu item or -1 for the last item added to the menu |
+| methodName | Text | &#x1F852; | Method name |
+| process | Integer | &#x1F852; | Process number |
 
 <!-- END REF-->
 

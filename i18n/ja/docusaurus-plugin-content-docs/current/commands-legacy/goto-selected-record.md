@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GOTO SELECTED RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | 指定したレコードをカレントレコードとするテーブル, または 省略時、デフォルトテーブル |
-| record | 倍長整数 | &#x1F852; | セレクション中のレコード位置番号 |
+| aTable | Table | &#x1F852; | 指定したレコードをカレントレコードとするテーブル, または 省略時、デフォルトテーブル |
+| record | Integer | &#x1F852; | セレクション中のレコード位置番号 |
 
 <!-- END REF-->
 

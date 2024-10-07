@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objetoImagem é um nome de objeto (string). Se omitido, objetoImagem é uma variável |
-| objetoImagem | Imagem | &#x1F852; | Nome de objeto (se * for especificado) ou variável ou campo (se * for omitido) |
-| id_Elemento | Texto | &#x1F852; | ID do elemento cujo valor de atributo você deseja conseguir |
-| nomeAtrib | String | &#x1F852; | Atributo cujo valor você deseja obter |
-| valorAtributo | String, Inteiro longo | &#x1F858; | Valor atual do atributo |
+| objetoPicture | Picture | &#x1F852; | Nome de objeto (se * for especificado) ou variável ou campo (se * for omitido) |
+| id_Elemento | Text | &#x1F852; | ID do elemento cujo valor de atributo você deseja conseguir |
+| nomeAtrib | Text | &#x1F852; | Atributo cujo valor você deseja obter |
+| valorAtributo | Text, Integer | &#x1F858; | Valor atual do atributo |
 
 <!-- END REF-->
 

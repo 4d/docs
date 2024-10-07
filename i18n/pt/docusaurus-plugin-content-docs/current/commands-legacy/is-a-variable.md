@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is a variable.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| umPonteiro | Ponteiro | &#x1F852; | Ponteiro a ser testado |
-| Resultado | Booleano | &#x1F850; | TRUE= Ponteiro aponta a variável FALSE = Ponteiro não aponta a variável |
+| umPointer | Pointer | &#x1F852; | Ponteiro a ser testado |
+| Resultado | Boolean | &#x1F850; | TRUE= Ponteiro aponta a variável FALSE = Ponteiro não aponta a variável |
 
 <!-- END REF-->
 

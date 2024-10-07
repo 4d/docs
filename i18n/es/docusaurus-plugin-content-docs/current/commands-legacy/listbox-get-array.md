@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si * se especifica) o<br/>Variable (si * se omite) |
-| tipoArray | Entero largo | &#x1F852; | Tipo de array |
-| Resultado | Puntero | &#x1F850; | Puntero al array asociado a la propiedad |
+| objeto | any | &#x1F852; | Nombre de objeto (si * se especifica) o<br/>Variable (si * se omite) |
+| tipoArray | Integer | &#x1F852; | Tipo de array |
+| Resultado | Pointer | &#x1F850; | Puntero al array asociado a la propiedad |
 
 <!-- END REF-->
 

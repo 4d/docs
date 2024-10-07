@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.COMPONENT LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| arrayComponentes | Array texto | &#x1F858; | Nombres de los componentes |
+| arrayComponentes | Text array | &#x1F858; | Nombres de los componentes |
 
 <!-- END REF-->
 

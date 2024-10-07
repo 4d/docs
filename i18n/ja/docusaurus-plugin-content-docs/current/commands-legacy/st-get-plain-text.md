@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#x1F852; | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時) または <br/>テキストフィールドまたは変数 (* 省略時) |
-| refMode | 倍長整数 | &#x1F852; | Mode for handling references found in the text |
-| 戻り値 | テキスト | &#x1F850; | タグなしのテキスト |
+| object | any | &#x1F852; | オブジェクト名 (* 指定時) または <br/>テキストフィールドまたは変数 (* 省略時) |
+| refMode | Integer | &#x1F852; | Mode for handling references found in the text |
+| 戻り値 | Text | &#x1F850; | タグなしのテキスト |
 
 <!-- END REF-->
 

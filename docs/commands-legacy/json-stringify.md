@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Stringify.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| value | Object, Mixed | &#x1F852; | Data to convert into JSON string |
+| value | Object, any | &#x1F852; | Data to convert into JSON string |
 | * | Operator | &#x1F852; | Pretty printing |
 | Function result | Text | &#x1F850; | String containing serialized JSON text |
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM CLOSE XML.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | String | &#x1F852; | XML root element reference |
+| elementRef | Text | &#x1F852; | XML root element reference |
 
 <!-- END REF-->
 

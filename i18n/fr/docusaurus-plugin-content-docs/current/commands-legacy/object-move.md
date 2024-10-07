@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié = objet est un nom d’objet (chaîne) Si omis = objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d’objet (si * est spécifié) ou Champ ou variable (si * est omis) |
-| dépH | Entier long | &#x1F852; | Valeur de déplacement horizontal de l’objet (>0 = vers la droite, <0 = vers la gauche) |
-| dépV | Entier long | &#x1F852; | Valeur de déplacement vertical de l’objet (>0 = vers le bas, <0 = vers le haut) |
-| redimH | Entier long | &#x1F852; | Valeur de redimensionnement horizontal de l’objet |
-| redimV | Entier long | &#x1F852; | Valeur de redimensionnement vertical de l’objet |
+| objet | any | &#x1F852; | Nom d’objet (si * est spécifié) ou Champ ou variable (si * est omis) |
+| dépH | Integer | &#x1F852; | Valeur de déplacement horizontal de l’objet (>0 = vers la droite, <0 = vers la gauche) |
+| dépV | Integer | &#x1F852; | Valeur de déplacement vertical de l’objet (>0 = vers le bas, <0 = vers le haut) |
+| redimH | Integer | &#x1F852; | Valeur de redimensionnement horizontal de l’objet |
+| redimV | Integer | &#x1F852; | Valeur de redimensionnement vertical de l’objet |
 | * | Opérateur | &#x1F852; | Si spécifié = coordonnées absolues Si omis = coordonnées relatives |
 
 <!-- END REF-->

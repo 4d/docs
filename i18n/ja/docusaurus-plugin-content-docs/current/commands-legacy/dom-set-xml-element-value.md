@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | 文字 | &#x1F852; | XML要素参照 |
-| xPath | テキスト | &#x1F852; | XML要素のXPathパス |
-| elementValue | 文字, 変数 | &#x1F852; | 要素の新しい値 |
+| elementRef | Text | &#x1F852; | XML要素参照 |
+| xPath | Text | &#x1F852; | XML要素のXPathパス |
+| elementValue | Text, Variable | &#x1F852; | 要素の新しい値 |
 | * | 演算子 | &#x1F852; | 指定時: 値をCDATAに設定 |
 
 <!-- END REF-->

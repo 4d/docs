@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Is shared.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| toCheck | オブジェクト, コレクション | &#x1F852; | チェックするオブジェクトまたはコレクション |
-| 戻り値 | ブール | &#x1F850; | オブジェクトまたはコレクションが共有可能であればTrue、編集可能であればFalse |
+| toCheck | Object, Collection | &#x1F852; | チェックするオブジェクトまたはコレクション |
+| 戻り値 | Boolean | &#x1F850; | オブジェクトまたはコレクションが共有可能であればTrue、編集可能であればFalse |
 
 <!-- END REF-->
 

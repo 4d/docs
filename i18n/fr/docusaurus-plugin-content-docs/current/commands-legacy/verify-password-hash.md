@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Verify password hash.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| motDePasse | Chaîne | &#x1F852; | Mot de passe utilisateur (seuls les 72 premiers caractères sont utilisés) |
-| hash | Chaîne | &#x1F852; | Hash du mot de passe |
-| Résultat | Booléen | &#x1F850; | Vrai si motDePasse et hash correspondent, Faux sinon |
+| motDePasse | Text | &#x1F852; | Mot de passe utilisateur (seuls les 72 premiers caractères sont utilisés) |
+| hash | Text | &#x1F852; | Hash du mot de passe |
+| Résultat | Boolean | &#x1F850; | Vrai si motDePasse et hash correspondent, Faux sinon |
 
 <!-- END REF-->
 

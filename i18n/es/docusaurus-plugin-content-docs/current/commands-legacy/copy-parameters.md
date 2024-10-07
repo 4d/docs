@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Copy parameters.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| inicioDesde | Entero largo | &#x1F852; | Índice de inicio(incluido) |
+| inicioDesde | Integer | &#x1F852; | Índice de inicio(incluido) |
 | Resultado | Collection | &#x1F850; | Nueva colección que contiene los parámetros pasados realmente |
 
 <!-- END REF-->

@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre del objeto (si se especifica *) o Campo o variable (si se omite *) |
-| moveH | Entero largo | &#x1F852; | Valor del movimiento horizontal del objeto (>0 = a la derecha, <0 = a la izquierda) |
-| moveV | Entero largo | &#x1F852; | Valor del movimiento vertical del objeto (>0 = hacia abajo, <0 = hacia arriba) |
-| redimH | Entero largo | &#x1F852; | Valor del redimensionamiento horizontal del objeto |
-| redimV | Entero largo | &#x1F852; | Valor del redimensionamiento vertical del objeto |
+| objeto | any | &#x1F852; | Nombre del objeto (si se especifica *) o Campo o variable (si se omite *) |
+| moveH | Integer | &#x1F852; | Valor del movimiento horizontal del objeto (>0 = a la derecha, <0 = a la izquierda) |
+| moveV | Integer | &#x1F852; | Valor del movimiento vertical del objeto (>0 = hacia abajo, <0 = hacia arriba) |
+| redimH | Integer | &#x1F852; | Valor del redimensionamiento horizontal del objeto |
+| redimV | Integer | &#x1F852; | Valor del redimensionamiento vertical del objeto |
 | * | Operador | &#x1F852; | Si se especifica = coordenadas absolutas Si se omite = coordenadas relativas |
 
 <!-- END REF-->

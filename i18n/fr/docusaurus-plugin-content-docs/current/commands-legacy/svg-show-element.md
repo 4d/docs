@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est une variable ou un champ |
-| objetImage | Image | &#x1F852; | Nom d’objet (si * spécifié) ou Variable ou champ (si * omis) |
-| id | Texte | &#x1F852; | Attribut id de l’élément à visualiser |
-| marge | Entier long | &#x1F852; | Marge de visibilité (en pixels par défaut) |
+| objetPicture | Picture | &#x1F852; | Nom d’objet (si * spécifié) ou Variable ou champ (si * omis) |
+| id | Text | &#x1F852; | Attribut id de l’élément à visualiser |
+| marge | Integer | &#x1F852; | Marge de visibilité (en pixels par défaut) |
 
 <!-- END REF-->
 

@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | elementRef &#124; document | Text | &#x1F852; | XML root element reference or<br/>Reference of open document |
-| selector | Longint | &#x1F852; | Option to get |
-| value | Longint | &#x1F858; | Current value of option |
+| selector | Integer | &#x1F852; | Option to get |
+| value | Integer | &#x1F858; | Current value of option |
 
 <!-- END REF-->
 

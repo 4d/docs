@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Window kind.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| window | WinRef | &#x1F852; | Window reference number, or Frontmost window of current process, if omitted |
+| window | Integer | &#x1F852; | Window reference number, or Frontmost window of current process, if omitted |
 | Function result | Longint | &#x1F850; | Type of window |
 
 <!-- END REF-->

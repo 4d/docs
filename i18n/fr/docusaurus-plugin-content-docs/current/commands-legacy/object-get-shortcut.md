@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d’objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| touche | Chaîne | &#x1F858; | Touche associée à l’objet |
-| modifiers | Entier long | &#x1F858; | Masque ou combinaison de masques de touche(s) de modification |
+| objet | any | &#x1F852; | Nom d’objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| touche | Text | &#x1F858; | Touche associée à l’objet |
+| modifiers | Integer | &#x1F858; | Masque ou combinaison de masques de touche(s) de modification |
 
 <!-- END REF-->
 

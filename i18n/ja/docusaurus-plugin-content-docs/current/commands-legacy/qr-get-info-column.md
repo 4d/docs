@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET INFO COLUMN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | 倍長整数 | &#x1F852; | エリア参照 |
-| colNum | 倍長整数 | &#x1F852; | カラム番号 |
-| title | テキスト | &#x1F858; | カラムタイトル |
-| object | テキスト | &#x1F858; | カラムに割り当てられたオブジェクト |
-| hide | 倍長整数 | &#x1F858; | 0 = 表示, 1 = 非表示 |
-| size | 倍長整数 | &#x1F858; | カラムサイズ |
-| repeatedValue | 倍長整数 | &#x1F858; | 0 = 繰り返ししない, 1 = 繰り返す |
-| displayFormat | テキスト | &#x1F858; | データの表示フォーマット |
-| resultVar | テキスト | &#x1F858; | フォーミュラ変数名 |
+| area | Integer | &#x1F852; | エリア参照 |
+| colNum | Integer | &#x1F852; | カラム番号 |
+| title | Text | &#x1F858; | カラムタイトル |
+| object | Text | &#x1F858; | カラムに割り当てられたオブジェクト |
+| hide | Integer | &#x1F858; | 0 = 表示, 1 = 非表示 |
+| size | Integer | &#x1F858; | カラムサイズ |
+| repeatedValue | Integer | &#x1F858; | 0 = 繰り返ししない, 1 = 繰り返す |
+| displayFormat | Text | &#x1F858; | データの表示フォーマット |
+| resultVar | Text | &#x1F858; | フォーミュラ変数名 |
 
 <!-- END REF-->
 

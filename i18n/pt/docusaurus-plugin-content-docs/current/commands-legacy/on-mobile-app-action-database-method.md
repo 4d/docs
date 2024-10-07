@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | $1 | Objeto | &#x1F852; | Informação passada pela aplicação móvel |
-| Resultado | Objeto | &#x1F850; | Estado da ação e sincronização de dados |
+| Resultado | Object | &#x1F850; | Estado da ação e sincronização de dados |
 
 <!-- END REF-->
 

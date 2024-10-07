@@ -15,7 +15,7 @@ displayed_sidebar: docs
 | $4 | Texto | &#x1F858; | Dirección IP del servidor |
 | $5 | Texto | &#x1F858; | Nombre de usuario |
 | $6 | Texto | &#x1F858; | Contraseña |
-| Resultado | Booleano | &#x1F850; | True = petición aceptada, False = petición rechazada |
+| Resultado | Boolean | &#x1F850; | True = petición aceptada, False = petición rechazada |
 
 <!-- END REF-->
 

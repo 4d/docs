@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SORT LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | ListRef | &#x1F852; | リスト参照番号 |
+| list | Integer | &#x1F852; | リスト参照番号 |
 | > または < | 演算子 | &#x1F852; | 並び順: > 昇順, または < 降順 |
 
 <!-- END REF-->

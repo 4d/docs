@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Change string.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| source | 文字 | &#x1F852; | 元の文字列 |
-| newChars | 文字 | &#x1F852; | 新しい文字 |
-| where | 倍長整数 | &#x1F852; | 入れ替え開始位置 |
-| 戻り値 | 文字 | &#x1F850; | 結果の文字列 |
+| source | Text | &#x1F852; | 元の文字列 |
+| newChars | Text | &#x1F852; | 新しい文字 |
+| where | Integer | &#x1F852; | 入れ替え開始位置 |
+| 戻り値 | Text | &#x1F850; | 結果の文字列 |
 
 <!-- END REF-->
 

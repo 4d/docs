@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table where the highlighted records will be read If omitted, table of the current form |
-| setName | String | &#x1F852; | Set where the highlighted records will be stored |
+| setName | Text | &#x1F852; | Set where the highlighted records will be stored |
 
 <!-- END REF-->
 

@@ -10,15 +10,15 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#x1F852; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| arrColNames | テキスト配列 | &#x1F858; | 列オブジェクト名 |
-| arrHeaderNames | テキスト配列 | &#x1F858; | ヘッダーオブジェクト名 |
-| arrColVars | ポインター配列 | &#x1F858; | 列変数へのポインターまたは列フィールドへのポインターまたはNil |
-| arrHeaderVars | ポインター配列 | &#x1F858; | ヘッダー変数へのポインター |
-| arrColsVisible | ブール配列 | &#x1F858; | 列毎の表示状態 |
-| arrStyles | ポインター配列 | &#x1F858; | 配列へのポインターまたは スタイル、カラー、および行管理変数またはNil |
-| arrFooterNames | テキスト配列 | &#x1F858; | 列フッターオブジェクト名 |
-| arrFooterVars | ポインター配列 | &#x1F858; | 列フッター変数へのポインター |
+| object | any | &#x1F852; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| arrColNames | Text array | &#x1F858; | 列オブジェクト名 |
+| arrHeaderNames | Text array | &#x1F858; | ヘッダーオブジェクト名 |
+| arrColVars | Pointer array | &#x1F858; | 列変数へのポインターまたは列フィールドへのポインターまたはNil |
+| arrHeaderVars | Pointer array | &#x1F858; | ヘッダー変数へのポインター |
+| arrColsVisible | Boolean array | &#x1F858; | 列毎の表示状態 |
+| arrStyles | Pointer array | &#x1F858; | 配列へのポインターまたは スタイル、カラー、および行管理変数またはNil |
+| arrFooterNames | Text array | &#x1F858; | 列フッターオブジェクト名 |
+| arrFooterVars | Pointer array | &#x1F858; | 列フッター変数へのポインター |
 
 <!-- END REF-->
 

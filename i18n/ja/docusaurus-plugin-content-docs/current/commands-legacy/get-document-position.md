@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get document position.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| DocRef | DocRef | &#x1F852; | ドキュメント参照番号 |
-| 戻り値 | 実数 | &#x1F850; | ドキュメント開始位置からの ファイル位置(バイト単位) |
+| Time | Time | &#x1F852; | ドキュメント参照番号 |
+| 戻り値 | Real | &#x1F850; | ドキュメント開始位置からの ファイル位置(バイト単位) |
 
 <!-- END REF-->
 

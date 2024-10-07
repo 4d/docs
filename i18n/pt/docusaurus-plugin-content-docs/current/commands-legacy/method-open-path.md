@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD OPEN PATH.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota | Texto | &#x1F852; | Rota do método à abrir |
-| line | Número | &#x1F852; | Line number |
+| rota | Text | &#x1F852; | Rota do método à abrir |
+| line | Number | &#x1F852; | Line number |
 | * | Operador | &#x1F852; | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->

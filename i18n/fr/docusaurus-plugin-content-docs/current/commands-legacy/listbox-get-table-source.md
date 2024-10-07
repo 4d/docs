@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| numTable | Entier long | &#x1F858; | Numéro de la table de la sélection |
-| nom | Chaîne | &#x1F858; | Nom de la sélection temporaire ou "" pour la sélection courante |
-| nomSurlignage | Chaîne | &#x1F858; | Nom de l’ensemble de surlignage |
+| objet | any | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| numTable | Integer | &#x1F858; | Numéro de la table de la sélection |
+| nom | Text | &#x1F858; | Nom de la sélection temporaire ou "" pour la sélection courante |
+| nomSurlignage | Text | &#x1F858; | Nom de l’ensemble de surlignage |
 
 <!-- END REF-->
 

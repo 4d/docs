@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | valor | Real | &#x1F852; | Valor a convertir |
-| deMoneda | Cadena | &#x1F852; | Código de la moneda en que está expresado el valor |
-| aMoneda | Cadena | &#x1F852; | Código de la moneda a la que debe convertirse el valor |
+| deMoneda | Text | &#x1F852; | Código de la moneda en que está expresado el valor |
+| aMoneda | Text | &#x1F852; | Código de la moneda a la que debe convertirse el valor |
 | Resultado | Real | &#x1F850; | Valor convertido |
 
 <!-- END REF-->

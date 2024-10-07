@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get print marker.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| markNum | Longint | &#x1F852; | Marker number |
+| markNum | Integer | &#x1F852; | Marker number |
 | Function result | Longint | &#x1F850; | Position of the marker |
 
 <!-- END REF-->

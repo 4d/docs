@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table for which to apply statement |
-| statement | Statement | &#x1F852; | One line of code or a method |
+| statement | Expression | &#x1F852; | One line of code or a method |
 
 <!-- END REF-->
 

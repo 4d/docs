@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.TEXT TO BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| text | String | &#x1F852; | Text to write into the BLOB |
-| blob | BLOB | &#x1F852; | BLOB to receive the text |
-| textFormat | Longint | &#x1F852; | Format and character set of text |
+| text | Text | &#x1F852; | Text to write into the BLOB |
+| blob | Blob | &#x1F852; | BLOB to receive the text |
+| textFormat | Integer | &#x1F852; | Format and character set of text |
 | offset &#124; * | Variable, Operator | &#x1F852; | Offset within the BLOB (expressed in bytes) or * to append the value |
 | &#x1F858; | New offset after writing if not * |
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table whose "blobs" data priority value has to be set for the session |
-| priority | Longint | &#x1F852; | Cache priority value for BLOBs in the table |
+| priority | Integer | &#x1F852; | Cache priority value for BLOBs in the table |
 
 <!-- END REF-->
 

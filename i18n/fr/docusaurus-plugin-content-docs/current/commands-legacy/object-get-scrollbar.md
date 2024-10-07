@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * spécifié) ou Variable ou champ (si * omis) |
-| horizontale | Booléen, Entier long | &#x1F858; | Visibilité de la barre horizontale |
-| verticale | Booléen, Entier long | &#x1F858; | Visibilité de la barre verticale |
+| objet | any | &#x1F852; | Nom d'objet (si * spécifié) ou Variable ou champ (si * omis) |
+| horizontale | Boolean, Integer | &#x1F858; | Visibilité de la barre horizontale |
+| verticale | Boolean, Integer | &#x1F858; | Visibilité de la barre verticale |
 
 <!-- END REF-->
 

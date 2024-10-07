@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current machine.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | String | &#x1F850; | Nome do equipo na rede |
+| Resultado | Text | &#x1F850; | Nome do equipo na rede |
 
 <!-- END REF-->
 

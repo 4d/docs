@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR EXECUTE COMMAND.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | 倍長整数 | &#x1F852; | エリア参照 |
-| command | 倍長整数 | &#x1F852; | 実行するメニューコマンド |
+| area | Integer | &#x1F852; | エリア参照 |
+| command | Integer | &#x1F852; | 実行するメニューコマンド |
 
 <!-- END REF-->
 

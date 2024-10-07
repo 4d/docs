@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto "" para designar el formulario (si se especifica *) o  Campo o variable (si se omite *) |
-| arrEvents | Array entero largo | &#x1F858; | Array de eventos desactivados |
+| objeto | any | &#x1F852; | Nombre de objeto "" para designar el formulario (si se especifica *) o  Campo o variable (si se omite *) |
+| arrEvents | Integer array | &#x1F858; | Array de eventos desactivados |
 
 <!-- END REF-->
 

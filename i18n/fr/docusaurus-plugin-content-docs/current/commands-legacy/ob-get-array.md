@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OB GET ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Objet, Champ objet | &#x1F852; | Objet structuré |
-| propriété | Texte | &#x1F852; | Nom de la propriété à lire |
-| tableau | Tableau texte, Tableau réel, Tableau booléen, Tableau objet, Tableau pointeur, Tableau entier long | &#x1F858; | Tableau valeur de la propriété |
+| objet | Object, Object | &#x1F852; | Objet structuré |
+| propriété | Text | &#x1F852; | Nom de la propriété à lire |
+| tableau | Text array, Real array, Boolean array, Object array, Pointer array, Integer array | &#x1F858; | Tableau valeur de la propriété |
 
 <!-- END REF-->
 

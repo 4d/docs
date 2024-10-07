@@ -11,13 +11,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Field.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numTabela | Inteiro longo | &#x1F852; | Número da tabela |
-| numCampo | Inteiro longo | &#x1F852; | Nº do campo |
-| pontCampo | Ponteiro | &#x1F850; | Ponteiro do campo |
+| numTabela | Integer | &#x1F852; | Número da tabela |
+| numCampo | Integer | &#x1F852; | Nº do campo |
+| pontCampo | Pointer | &#x1F850; | Ponteiro do campo |
 | Field ( pontCampo ) -> Resultado |
 | Parâmetro | Tipo | Descrição |
-| pontCampo | Ponteiro | &#x1F852; | Ponteiro do campo |
-| Resultado | Inteiro longo | &#x1F850; | Número do campo |
+| pontCampo | Pointer | &#x1F852; | Ponteiro do campo |
+| Resultado | Integer | &#x1F850; | Número do campo |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | numTabla &#124; ptrTabla | Entero largo, Puntero | &#x1F852; | Número de tabla o puntero a una tabla |
-| Resultado | Entero largo | &#x1F850; | Número de campo más alto en la tabla |
+| Resultado | Integer | &#x1F850; | Número de campo más alto en la tabla |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.STRING LIST TO ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resID | 倍長整数 | &#x1F852; | リソースID番号、または 'group'要素の'id'属性 (XLIFF) |
-| strings | 文字配列 | &#x1F858; | STR#リソースから取り出した文字列、または 'group'要素から取り出した文字列 (XLIFF) |
-| resFile | DocRef | &#x1F852; | リソースファイル参照番号、または 省略時、開かれているすべてのXLIFFファイル リソースファイル |
+| resID | Integer | &#x1F852; | リソースID番号、または 'group'要素の'id'属性 (XLIFF) |
+| strings | Text array | &#x1F858; | STR#リソースから取り出した文字列、または 'group'要素から取り出した文字列 (XLIFF) |
+| resFile | Time | &#x1F852; | リソースファイル参照番号、または 省略時、開かれているすべてのXLIFFファイル リソースファイル |
 
 <!-- END REF-->
 

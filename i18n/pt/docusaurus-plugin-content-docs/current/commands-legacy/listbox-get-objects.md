@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se for especificado, o objeto é um nome de objeto (cadeia)<br/>Se for omitido, o objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome do objeto (se * for especificado) ou Variável (se * for omitido) |
-| arrayNomObjeto | Array texto | &#x1F858; | Nomes dos sub objetos do list box (cabeçalhos, colunas, pés) |
+| objeto | any | &#x1F852; | Nome do objeto (se * for especificado) ou Variável (se * for omitido) |
+| arrayNomObjeto | Text array | &#x1F858; | Nomes dos sub objetos do list box (cabeçalhos, colunas, pés) |
 
 <!-- END REF-->
 

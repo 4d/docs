@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
-| opcao | Inteiro longo | &#x1F852; | Opção a ler |
-| valor | Inteiro longo | &#x1F858; | Valor atual da opção |
+| objeto | any | &#x1F852; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| opcao | Integer | &#x1F852; | Opção a ler |
+| valor | Integer | &#x1F858; | Valor atual da opção |
 
 <!-- END REF-->
 

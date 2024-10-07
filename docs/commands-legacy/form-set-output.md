@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table for which to set the output form, or Default table, if omitted |
-| form | String, Object | &#x1F852; | Name (string) of table form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
-| userForm | String | &#x1F852; | Name of user form to use |
+| form | Text, Object | &#x1F852; | Name (string) of table form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
+| userForm | Text | &#x1F852; | Name of user form to use |
 
 <!-- END REF-->
 

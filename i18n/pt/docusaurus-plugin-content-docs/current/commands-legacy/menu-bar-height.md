@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Menu bar height.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Inteiro longo | &#x1F850; | Altura (expressada em pixeles) da barra de menus (devolve zero se a barra de menus está oculta) |
+| Resultado | Integer | &#x1F850; | Altura (expressada em pixeles) da barra de menus (devolve zero se a barra de menus está oculta) |
 
 <!-- END REF-->
 

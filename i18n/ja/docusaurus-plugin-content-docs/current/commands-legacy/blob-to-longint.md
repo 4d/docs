@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB to longint.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| BLOB | BLOB | &#x1F852; | 倍長整数値を取り出すBLOB |
-| byteOrder | 倍長整数 | &#x1F852; | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
-| offset | 変数 | &#x1F852; | BLOB中のオフセット (バイト単位) |
+| Blob | Blob | &#x1F852; | 倍長整数値を取り出すBLOB |
+| byteOrder | Integer | &#x1F852; | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
+| offset | Variable | &#x1F852; | BLOB中のオフセット (バイト単位) |
 | &#x1F858; | 読み込み後、新しいオフセット |
-| 戻り値 | 倍長整数 | &#x1F850; | 4バイト整数値 |
+| 戻り値 | Integer | &#x1F850; | 4バイト整数値 |
 
 <!-- END REF-->
 

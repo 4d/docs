@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | fieldPtr &#124; tableNum | Pointer, Longint | &#x1F852; | Field pointer or Table number |
-| fieldNum | Longint | &#x1F852; | Field number if a table number is passed as first parameter |
+| fieldNum | Integer | &#x1F852; | Field number if a table number is passed as first parameter |
 | Function result | String | &#x1F850; | Name of the field |
 
 <!-- END REF-->

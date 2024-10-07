@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | expression | Expression | &#x1F852; | Expression à retourner sous forme de booléen |
-| Résultat | Booléen | &#x1F850; | Expression sous forme booléenne |
+| Résultat | Boolean | &#x1F850; | Expression sous forme booléenne |
 
 <!-- END REF-->
 

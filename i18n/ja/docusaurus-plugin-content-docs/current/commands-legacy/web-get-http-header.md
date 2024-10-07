@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | header&#124;fieldArray | テキスト, テキスト配列 | &#x1F858; | リクエストHTTPヘッダまたはHTTPヘッダフィールド |
-| valueArray | テキスト配列 | &#x1F858; | HTTPヘッダフィールドの内容 |
+| valueArray | Text array | &#x1F858; | HTTPヘッダフィールドの内容 |
 
 <!-- END REF-->
 

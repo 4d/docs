@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Sum.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| series | Campo, Array | &#x1F852; | Dados para os quais se retorna a Soma |
-| atributoRota | Texto | &#x1F852; | Rota do atributo para o qual vai retornar a soma |
+| series | Field, Array | &#x1F852; | Dados para os quais se retorna a Soma |
+| atributoRota | Text | &#x1F852; | Rota do atributo para o qual vai retornar a soma |
 | Resultado | Real | &#x1F850; | Soma para a série |
 
 <!-- END REF-->

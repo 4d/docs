@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE MANY SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campo | Campo | &#x1F852; | Campo da tabela Muitos (onde a relação começa) |
+| campo | Field | &#x1F852; | Campo da tabela Muitos (onde a relação começa) |
 
 <!-- END REF-->
 

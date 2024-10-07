@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tabBooléen | Tableau booléen | &#x1F858; | Tableau d'appartenance des enregistrements à l’ensemble |
-| ensemble | Chaîne | &#x1F852; | Nom de l’ensemble ou Ensemble UserSet si ce paramètre est omis |
+| tabBooléen | Boolean array | &#x1F858; | Tableau d'appartenance des enregistrements à l’ensemble |
+| ensemble | Text | &#x1F852; | Nom de l’ensemble ou Ensemble UserSet si ce paramètre est omis |
 
 <!-- END REF-->
 

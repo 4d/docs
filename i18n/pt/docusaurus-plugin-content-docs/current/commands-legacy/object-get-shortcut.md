@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
-| tecla | String | &#x1F858; | Tecla associada ao objeto |
-| modificadores | Inteiro longo | &#x1F858; | Máscara ou combinação de máscaras de teclas de modificação |
+| objeto | any | &#x1F852; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| tecla | Text | &#x1F858; | Tecla associada ao objeto |
+| modificadores | Integer | &#x1F858; | Máscara ou combinação de máscaras de teclas de modificação |
 
 <!-- END REF-->
 

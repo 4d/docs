@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| url | Cadena | &#x1F858; | URL al origen del error |
-| descripcion | Cadena | &#x1F858; | Descripción del error (Mac OS) |
-| codigoError | Entero largo | &#x1F858; | Código de error |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| url | Text | &#x1F858; | URL al origen del error |
+| descripcion | Text | &#x1F858; | Descripción del error (Mac OS) |
+| codigoError | Integer | &#x1F858; | Código de error |
 
 <!-- END REF-->
 

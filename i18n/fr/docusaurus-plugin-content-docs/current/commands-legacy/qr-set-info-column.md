@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET INFO COLUMN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Entier long | &#x1F852; | Référence de la zone |
-| numColonne | Entier long | &#x1F852; | Numéro de colonne |
-| titre | Chaîne | &#x1F852; | Titre de la colonne |
-| objet | Champ, Variable | &#x1F852; | Objet affecté à la colonne |
-| cachée | Entier long | &#x1F852; | 0 = visible, 1 = invisible |
-| taille | Entier long | &#x1F852; | Largeur de la colonne |
-| valeursRépétées | Entier long | &#x1F852; | 0 = Non répétées, 1 = Répétées |
-| formatAffich | Chaîne | &#x1F852; | Format d'affichage |
+| zone | Integer | &#x1F852; | Référence de la zone |
+| numColonne | Integer | &#x1F852; | Numéro de colonne |
+| titre | Text | &#x1F852; | Titre de la colonne |
+| objet | Field, Variable | &#x1F852; | Objet affecté à la colonne |
+| cachée | Integer | &#x1F852; | 0 = visible, 1 = invisible |
+| taille | Integer | &#x1F852; | Largeur de la colonne |
+| valeursRépétées | Integer | &#x1F852; | 0 = Non répétées, 1 = Répétées |
+| formatAffich | Text | &#x1F852; | Format d'affichage |
 
 <!-- END REF-->
 

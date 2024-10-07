@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table à paramétrer ou Table par défaut si ce paramètre est omis |
-| sélecteur | Entier long | &#x1F852; | Code du paramètre de la base à modifier |
-| valeur | Réel, Chaîne | &#x1F852; | Valeur du paramètre |
+| sélecteur | Integer | &#x1F852; | Code du paramètre de la base à modifier |
+| valeur | Real, Text | &#x1F852; | Valeur du paramètre |
 
 <!-- END REF-->
 

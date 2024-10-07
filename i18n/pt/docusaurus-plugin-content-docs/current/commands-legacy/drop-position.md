@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | colNum&#124;posYimagem | Inteiro longo | &#x1F858; | Número de coluna de list box (-1 se soltar antes da última coluna) ou  posição da coordenada Y da imagem |
-| Resultado | Inteiro longo | &#x1F850; | • Número (array/list box) ou • Posição (lista hierárquica) ou • Posição em string (texto/combo box) de item destino ou • -1 se soltar antes do último elemento do array ou item da lista • Posição da coordenada X da imagem |
+| Resultado | Integer | &#x1F850; | • Número (array/list box) ou • Posição (lista hierárquica) ou • Posição em string (texto/combo box) de item destino ou • -1 se soltar antes do último elemento do array ou item da lista • Posição da coordenada X da imagem |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Create XML Ref.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| root | 文字 | &#x1F852; | ルート要素名 |
-| nameSpace | 文字 | &#x1F852; | 名前空間の値 |
-| nameSpaceName | 文字 | &#x1F852; | 名前空間名 |
-| nameSpaceValue | 文字 | &#x1F852; | 名前空間値 |
-| 戻り値 | 文字 | &#x1F850; | ルートXML要素参照 |
+| root | Text | &#x1F852; | ルート要素名 |
+| nameSpace | Text | &#x1F852; | 名前空間の値 |
+| nameSpaceName | Text | &#x1F852; | 名前空間名 |
+| nameSpaceValue | Text | &#x1F852; | 名前空間値 |
+| 戻り値 | Text | &#x1F850; | ルートXML要素参照 |
 
 <!-- END REF-->
 

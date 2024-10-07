@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RELOAD EXTERNAL DATA.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leChamp | Texte, BLOB, Image, Objet | &#x1F852; | Champ pour lequel recharger les données |
+| leChamp | Text, Blob, Picture, Object | &#x1F852; | Champ pour lequel recharger les données |
 
 <!-- END REF-->
 

@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| jsFunction | String | &#x1F852; | Name of JavaScript function to execute |
+| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| jsFunction | Text | &#x1F852; | Name of JavaScript function to execute |
 | result&#124;* | Variable | &#x1F852; | * for a function with no result or |
 | &#x1F858; | Function result (if expected) |
-| param | String, Number, Date, Object, Collection | &#x1F852; | Parameter(s) to pass to function |
+| param | Text, Number, Date, Object, Collection | &#x1F852; | Parameter(s) to pass to function |
 
 <!-- END REF-->
 

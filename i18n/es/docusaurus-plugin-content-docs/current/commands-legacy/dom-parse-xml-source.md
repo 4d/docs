@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Parse XML source.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| doc | Cadena | &#x1F852; | Ruta de acceso del documento |
-| validacion | Booleano | &#x1F852; | True = Validación False = No validación |
+| doc | Text | &#x1F852; | Ruta de acceso del documento |
+| validacion | Boolean | &#x1F852; | True = Validación False = No validación |
 | dtd &#124; esquema | Cadena | &#x1F852; | Ubicación de la DTD o del esquema XML |
-| Resultado | Cadena | &#x1F850; | Referencia del elemento XML |
+| Resultado | Text | &#x1F850; | Referencia del elemento XML |
 
 <!-- END REF-->
 

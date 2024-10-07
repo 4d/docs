@@ -10,14 +10,14 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| positionCol | Entier long | &#x1F852; | Emplacement de la colonne à insérer |
-| nomCol | Chaîne | &#x1F852; | Nom d’objet de la colonne |
-| variableCol | Tableau, Champ, Variable, Pointeur nil | &#x1F852; | Nom de la variable tableau de la colonne ou champ ou variable |
-| nomEnTête | Chaîne | &#x1F852; | Nom d’objet de l’en-tête de la colonne |
-| variableEntête | Variable entier, Pointeur nil | &#x1F852; | Variable d’en-tête de la colonne |
-| nomPied | Chaîne | &#x1F852; | Nom d’objet du pied de la colonne |
-| variablePied | Variable, Pointeur nil | &#x1F852; | Variable du pied de la colonne |
+| objet | any | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| positionCol | Integer | &#x1F852; | Emplacement de la colonne à insérer |
+| nomCol | Text | &#x1F852; | Nom d’objet de la colonne |
+| variableCol | Array, Field, Variable, Pointer | &#x1F852; | Nom de la variable tableau de la colonne ou champ ou variable |
+| nomEnTête | Text | &#x1F852; | Nom d’objet de l’en-tête de la colonne |
+| variableEntête | Integer, Pointer | &#x1F852; | Variable d’en-tête de la colonne |
+| nomPied | Text | &#x1F852; | Nom d’objet du pied de la colonne |
+| variablePied | Variable, Pointer | &#x1F852; | Variable du pied de la colonne |
 
 <!-- END REF-->
 

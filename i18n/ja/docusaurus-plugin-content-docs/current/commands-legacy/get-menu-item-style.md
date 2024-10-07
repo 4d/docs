@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Get menu item style.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | 倍長整数, MenuRef | &#x1F852; | メニュー番号またはメニュー参照 |
-| menuItem | 倍長整数 | &#x1F852; | メニュー項目番号 または -1: 最後に追加された項目 |
-| process | 倍長整数 | &#x1F852; | プロセス参照番号 |
-| 戻り値 | 倍長整数 | &#x1F850; | 現在のメニュー項目スタイル |
+| menu | Integer, Text | &#x1F852; | メニュー番号またはメニュー参照 |
+| menuItem | Integer | &#x1F852; | メニュー項目番号 または -1: 最後に追加された項目 |
+| process | Integer | &#x1F852; | プロセス参照番号 |
+| 戻り値 | Integer | &#x1F850; | 現在のメニュー項目スタイル |
 
 <!-- END REF-->
 

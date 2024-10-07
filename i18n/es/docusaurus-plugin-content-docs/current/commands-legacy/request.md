@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Request.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| mensaje | Cadena | &#x1F852; | Mensaje a mostrar en la caja de diálogo |
-| respuestaDefecto | Cadena | &#x1F852; | Valor por defecto en el área de entrada de texto |
-| titulobotonOK | Cadena | &#x1F852; | Título del botón Aceptar |
-| titulobotoncancel | Cadena | &#x1F852; | Título del botón Cancelar |
-| Resultado | Cadena | &#x1F850; | Valor introducido por el usuario |
+| mensaje | Text | &#x1F852; | Mensaje a mostrar en la caja de diálogo |
+| respuestaDefecto | Text | &#x1F852; | Valor por defecto en el área de entrada de texto |
+| titulobotonOK | Text | &#x1F852; | Título del botón Aceptar |
+| titulobotoncancel | Text | &#x1F852; | Título del botón Cancelar |
+| Resultado | Text | &#x1F850; | Valor introducido por el usuario |
 
 <!-- END REF-->
 

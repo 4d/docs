@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| typeTab | Entier long | &#x1F852; | Type de tableau |
-| Résultat | Pointeur | &#x1F850; | Pointeur vers le tableau associé à la propriété |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| typeTab | Integer | &#x1F852; | Type de tableau |
+| Résultat | Pointer | &#x1F850; | Pointeur vers le tableau associé à la propriété |
 
 <!-- END REF-->
 

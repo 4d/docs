@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PICTURE CODEC LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tabCodecs | Tableau chaîne | &#x1F858; | Identifiants des codecs d’images disponibles |
-| tabNoms | Tableau chaîne | &#x1F858; | Noms des codecs d’images |
+| tabCodecs | Text array | &#x1F858; | Identifiants des codecs d’images disponibles |
+| tabNoms | Text array | &#x1F858; | Noms des codecs d’images |
 | * | Opérateur | &#x1F852; | Retourner la liste des codecs de lecture |
 
 <!-- END REF-->

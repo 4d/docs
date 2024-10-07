@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | umCampo &#124; umaTabela | Campo, Tabela | &#x1F852; | Campo usado para pedir dados ou Tabela usada para pedir números de registros |
 | array | Array | &#x1F858; | Array para receber dados do campo ou número de registros |
-| campo | Campo | &#x1F852; | Campo a ser requisitado no array |
+| campo | Field | &#x1F852; | Campo a ser requisitado no array |
 | array | Array | &#x1F858; | Array a receber os dados do campo |
 | * | Operador | &#x1F852; | Aguarde execução |
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get drop column.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | 倍長整数 | &#x1F852; | エリア参照 |
-| 戻り値 | 倍長整数 | &#x1F850; | ドロップされた値 |
+| area | Integer | &#x1F852; | エリア参照 |
+| 戻り値 | Integer | &#x1F850; | ドロップされた値 |
 
 <!-- END REF-->
 

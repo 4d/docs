@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | numTabela&#124;pontTabela | Inteiro longo, Ponteiro | &#x1F852; | Número da tabela ou ponteiro a tabela |
-| numCampo | Inteiro longo | &#x1F852; | Número do campo |
-| Resultado | Booleano | &#x1F850; | True = Campo exista na tabela; False = campo não existe na tabela |
+| numCampo | Integer | &#x1F852; | Número do campo |
+| Resultado | Boolean | &#x1F850; | True = Campo exista na tabela; False = campo não existe na tabela |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESTORE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaArchivo | Texto | &#x1F852; | Ruta de acceso del archivo a restituir |
-| rutaCarpetaDest | Texto | &#x1F852; | Ruta de acceso de la carpeta de destino |
+| rutaArchivo | Text | &#x1F852; | Ruta de acceso del archivo a restituir |
+| rutaCarpetaDest | Text | &#x1F852; | Ruta de acceso de la carpeta de destino |
 
 <!-- END REF-->
 

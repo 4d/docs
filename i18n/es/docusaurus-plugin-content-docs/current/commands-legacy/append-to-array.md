@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | array | Array | &#x1F852; | Array al cual añadir un elemento |
-| valor | Expresión | &#x1F852; | Valor a añadir |
+| valor | Expression | &#x1F852; | Valor a añadir |
 
 <!-- END REF-->
 

@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
 | laTable | Table | &#x1F852; | Table du formulaire (si formulaire table) |
-| sousFormDetail | Texte, Objet | &#x1F852; | Nom (chaîne) du formulaire détail du sous-formulaire, ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire détail, ouObjet décrivant le formulaire détail |
-| sousFormListe | Texte, Objet | &#x1F852; | Nom (chaîne) du formulaire liste du sous-formulaire, ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire liste, ouObjet décrivant le formulaire liste (formulaire table) |
+| sousFormDetail | Text, Object | &#x1F852; | Nom (chaîne) du formulaire détail du sous-formulaire, ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire détail, ouObjet décrivant le formulaire détail |
+| sousFormListe | Text, Object | &#x1F852; | Nom (chaîne) du formulaire liste du sous-formulaire, ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire liste, ouObjet décrivant le formulaire liste (formulaire table) |
 
 <!-- END REF-->
 

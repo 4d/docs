@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Choose.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| criterio | Booleano, Inteiro | &#x1F852; | Valor a testar |
+| criterio | Boolean, Integer | &#x1F852; | Valor a testar |
 | valor | Expression | &#x1F852; | Valores possíveis |
 | Resultado | Expression | &#x1F850; | Valor do critério |
 

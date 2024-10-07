@@ -11,7 +11,7 @@ displayed_sidebar: docs
 <!--REF #_command_.throw.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| errorCode | Longint | &#x1F852; | A long integer representing the error code. |
+| errorCode | Integer | &#x1F852; | A long integer representing the error code. |
 | description | Text | &#x1F852; | A text providing a description of the error. |
 | throw {( errorObj )} |
 | Parameter | Type | Description |

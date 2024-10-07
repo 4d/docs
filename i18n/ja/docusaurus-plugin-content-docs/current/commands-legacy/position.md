@@ -11,20 +11,20 @@ displayed_sidebar: docs
 <!--REF #_command_.Position.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| find | 文字 | &#x1F852; | 見つける文字列 |
-| aString | 文字 | &#x1F852; | 調べる文字列 |
-| start | 倍長整数 | &#x1F852; | aString引数内で検索を開始する位置 |
-| lengthFound | 倍長整数 | &#x1F858; | 見つかった文字列の長さ |
+| find | Text | &#x1F852; | 見つける文字列 |
+| aString | Text | &#x1F852; | 調べる文字列 |
+| start | Integer | &#x1F852; | aString引数内で検索を開始する位置 |
+| lengthFound | Integer | &#x1F858; | 見つかった文字列の長さ |
 | * | 演算子 | &#x1F852; | 渡されると、文字コードに基づいて評価 |
-| 戻り値 | 倍長整数 | &#x1F850; | 最初に見つかった位置 |
+| 戻り値 | Integer | &#x1F850; | 最初に見つかった位置 |
 | Position ( find ; aString ; start ; lengthFound ; options ) -> 戻り値 |
 | 引数 | 型 | 説明 |
-| find | 文字 | &#x1F852; | 見つける文字列 |
-| aString | 文字 | &#x1F852; | 調べる文字列 |
-| start | 倍長整数 | &#x1F852; | aString引数内で検索を開始する位置 |
-| lengthFound | 倍長整数 | &#x1F852; | 見つかった文字列の長さ |
-| options | 倍長整数 | &#x1F852; | 検索条件 |
-| 戻り値 | 倍長整数 | &#x1F850; | 最初に見つかった位置 |
+| find | Text | &#x1F852; | 見つける文字列 |
+| aString | Text | &#x1F852; | 調べる文字列 |
+| start | Integer | &#x1F852; | aString引数内で検索を開始する位置 |
+| lengthFound | Integer | &#x1F852; | 見つかった文字列の長さ |
+| options | Integer | &#x1F852; | 検索条件 |
+| 戻り値 | Integer | &#x1F850; | 最初に見つかった位置 |
 
 <!-- END REF-->
 

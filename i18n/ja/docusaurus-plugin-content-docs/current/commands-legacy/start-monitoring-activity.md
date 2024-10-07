@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.START MONITORING ACTIVITY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| duration | 実数 | &#x1F852; | ログが開始される時間の長さ(秒単位) |
-| source | 倍長整数 | &#x1F852; | オペレーションのソース |
+| duration | Real | &#x1F852; | ログが開始される時間の長さ(秒単位) |
+| source | Integer | &#x1F852; | オペレーションのソース |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB LEGACY CLOSE SESSION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| sessionID | テキスト | &#x1F852; | セッションUUID |
+| sessionID | Text | &#x1F852; | セッションUUID |
 
 <!-- END REF-->
 

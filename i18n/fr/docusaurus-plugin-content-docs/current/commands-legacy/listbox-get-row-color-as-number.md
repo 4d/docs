@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| ligne | Entier long | &#x1F852; | Numéro de ligne |
-| typeCouleur | Entier long | &#x1F852; | lk couleur de police (défaut) ou lk couleur de fond |
-| Résultat | Entier long | &#x1F850; | Valeur de couleur |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| ligne | Integer | &#x1F852; | Numéro de ligne |
+| typeCouleur | Integer | &#x1F852; | lk couleur de police (défaut) ou lk couleur de fond |
+| Résultat | Integer | &#x1F850; | Valeur de couleur |
 
 <!-- END REF-->
 

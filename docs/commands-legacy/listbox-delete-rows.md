@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| rowPosition | Longint | &#x1F852; | Position of the row to delete |
-| numRows | Longint | &#x1F852; | Number of rows to delete |
+| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| rowPosition | Integer | &#x1F852; | Position of the row to delete |
+| numRows | Integer | &#x1F852; | Number of rows to delete |
 
 <!-- END REF-->
 

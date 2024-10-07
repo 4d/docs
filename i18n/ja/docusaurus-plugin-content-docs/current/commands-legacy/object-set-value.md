@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET VALUE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| objectName | テキスト | &#x1F852; | オブジェクト名 |
-| value | Mixed | &#x1F852; | フォームオブジェクトのデータソースの新しい値 |
+| objectName | Text | &#x1F852; | オブジェクト名 |
+| value | any | &#x1F852; | フォームオブジェクトのデータソースの新しい値 |
 
 <!-- END REF-->
 

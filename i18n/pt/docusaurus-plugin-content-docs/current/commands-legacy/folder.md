@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | rota &#124;4Dfolder | Texto, Inteiro longo | &#x1F852; | Rota pasta ou constante 4D folder |
 | tipoRota &#124; * | Inteiro longo, Operador | &#x1F852; | Se rota for passada: rota fk posix (padrão) ou rota fk plataforma  Se 4Dfolder for passada: * para retornar pasta ou host database |
-| Resultado | Objeto | &#x1F850; | Novo objeto pasta |
+| Resultado | Object | &#x1F850; | Novo objeto pasta |
 
 <!-- END REF-->
 

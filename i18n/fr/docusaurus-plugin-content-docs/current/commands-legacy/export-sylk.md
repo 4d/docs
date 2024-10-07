@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table de laquelle effectuer l'export ou Table par défaut si ce paramètres est omis |
-| nomFichier | Chaîne | &#x1F852; | Document SYLK à exporter |
+| nomFichier | Text | &#x1F852; | Document SYLK à exporter |
 
 <!-- END REF-->
 

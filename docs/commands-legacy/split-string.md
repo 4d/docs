@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | stringToSplit | Text | &#x1F852; | String value |
 | separator | Text | &#x1F852; | String at which stringToSplit splits. If empty string (""), each character of stringToSplit is a substring |
-| options | Longint | &#x1F852; | Option(s) regarding empty strings and spaces |
+| options | Integer | &#x1F852; | Option(s) regarding empty strings and spaces |
 | Function result | Collection | &#x1F850; | Collection of substrings |
 
 <!-- END REF-->

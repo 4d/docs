@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table dont vous souhaitez ajuster la priorité des données scalaires |
-| priority | Entier long | &#x1F852; | Priorité des données scalaires de la table dans le cache |
+| priority | Integer | &#x1F852; | Priorité des données scalaires de la table dans le cache |
 
 <!-- END REF-->
 

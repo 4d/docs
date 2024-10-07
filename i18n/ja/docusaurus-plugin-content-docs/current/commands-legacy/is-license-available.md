@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is license available.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| license | 倍長整数 | &#x1F852; | ライセンスの有効性テストを行うプラグイン |
-| 戻り値 | ブール | &#x1F850; | プラグインが利用可能な場合はTrue、その他の場合はFalse |
+| license | Integer | &#x1F852; | ライセンスの有効性テストを行うプラグイン |
+| 戻り値 | Boolean | &#x1F850; | プラグインが利用可能な場合はTrue、その他の場合はFalse |
 
 <!-- END REF-->
 

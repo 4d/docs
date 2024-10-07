@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leChamp | Champ | &#x1F852; | Champ dont vous voulez ajuster la priorité du ou des index dans le cache |
-| priorité | Entier long | &#x1F852; | Priorité du ou des index du champ dans le cache |
+| leField | Field | &#x1F852; | Champ dont vous voulez ajuster la priorité du ou des index dans le cache |
+| priorité | Integer | &#x1F852; | Priorité du ou des index du champ dans le cache |
 
 <!-- END REF-->
 

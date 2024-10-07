@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
-| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Text field or variable (if * is omitted) |
+| object | any | &#x1F852; | Object name (if * is specified) or <br/>Text field or variable (if * is omitted) |
 | newText | Text | &#x1F852; | Text to insert |
-| startSel | Longint | &#x1F852; | Start of selection |
-| endSel | Longint | &#x1F852; | End of selection |
+| startSel | Integer | &#x1F852; | Start of selection |
+| endSel | Integer | &#x1F852; | End of selection |
 
 <!-- END REF-->
 

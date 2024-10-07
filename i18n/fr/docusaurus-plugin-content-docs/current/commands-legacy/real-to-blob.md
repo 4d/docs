@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.REAL TO BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| réel | Réel | &#x1F852; | Valeur de type Réel à écrire dans le BLOB |
-| blob | BLOB | &#x1F852; | BLOB devant recevoir la valeur Réel |
-| formatRéel | Entier long | &#x1F852; | 0=Format réel natif, 1=Format réel étendu, 2=Format réel double Macintosh, 3=Format réel double Windows |
+| réel | Real | &#x1F852; | Valeur de type Réel à écrire dans le BLOB |
+| blob | Blob | &#x1F852; | BLOB devant recevoir la valeur Réel |
+| formatRéel | Integer | &#x1F852; | 0=Format réel natif, 1=Format réel étendu, 2=Format réel double Macintosh, 3=Format réel double Windows |
 | offset &#124; * | Variable, Opérateur | &#x1F852; | Offset (en octets) dans le BLOB ou  * pour ajouter la valeur à la fin du BLOB |
 | &#x1F858; | Nouvel offset après l'écriture si * omis |
 

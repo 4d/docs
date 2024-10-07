@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | expressao | Expression | &#x1F852; | Expressão para qual vai retornar o formato string (pode ser um Real, Inteiro, Inteiro longo, Data, string hora, texto ou booleano) |
-| formato | Inteiro longo, String | &#x1F852; | Formato exibiçao |
-| horaComb | Hora | &#x1F852; | Hora a combinar se a expressão for uma data |
-| Resultado | String | &#x1F850; | Formato string da expressão |
+| formato | Integer, Text | &#x1F852; | Formato exibiçao |
+| horaComb | Time | &#x1F852; | Hora a combinar se a expressão for uma data |
+| Resultado | Text | &#x1F850; | Formato string da expressão |
 
 <!-- END REF-->
 

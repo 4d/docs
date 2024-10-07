@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.MAXIMIZE WINDOW.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | WinRef | &#x1F852; | Número de referencia de la ventana Si se omite = todas las ventanas (Windows) o Ventana del primer plano del proceso actual (Mac OS) |
+| ventana | Integer | &#x1F852; | Número de referencia de la ventana Si se omite = todas las ventanas (Windows) o Ventana del primer plano del proceso actual (Mac OS) |
 
 <!-- END REF-->
 

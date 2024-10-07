@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#x1F852; | 指定時、 Object はオブジェクト名(文字列) 省略時、 Object は変数 |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名(* 指定時)、 または変数(* 省略時) |
-| selection | オブジェクト, コレクション | &#x1F852; | 選択する行を指定するオブジェクトまたはコレクション |
-| action | 倍長整数 | &#x1F852; | lk replace selection (省略時のデフォルト)、lk add to selection、lk remove from selection |
+| object | any | &#x1F852; | オブジェクト名(* 指定時)、 または変数(* 省略時) |
+| selection | Object, Collection | &#x1F852; | 選択する行を指定するオブジェクトまたはコレクション |
+| action | Integer | &#x1F852; | lk replace selection (省略時のデフォルト)、lk add to selection、lk remove from selection |
 
 <!-- END REF-->
 

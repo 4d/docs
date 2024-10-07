@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié = objet est un nom d'objet (chaîne) Si omis = objet est un champ ou une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * spécifié) ou Champ ou Variable (si * omis) |
-| filtreSaisie | Chaîne | &#x1F852; | Nouveau filtre de saisie pour la zone saisissable |
+| objet | any | &#x1F852; | Nom d'objet (si * spécifié) ou Champ ou Variable (si * omis) |
+| filtreSaisie | Text | &#x1F852; | Nouveau filtre de saisie pour la zone saisissable |
 
 <!-- END REF-->
 

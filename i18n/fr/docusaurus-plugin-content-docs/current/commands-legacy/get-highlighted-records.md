@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table de laquelle lire les enregistrements marqués Si omis, table du formulaire courant |
-| nomEnsemble | Chaîne | &#x1F852; | Ensemble dans lequel stocker les enregistrements marqués |
+| nomEnsemble | Text | &#x1F852; | Ensemble dans lequel stocker les enregistrements marqués |
 
 <!-- END REF-->
 

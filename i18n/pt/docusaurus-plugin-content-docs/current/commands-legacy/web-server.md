@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Server.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| opção | Inteiro longo | &#x1F852; | Web server a ser obtido (padrão se omitido = servidor web do banco de dados) |
-| Resultado | Objeto | &#x1F850; | Objeto web server |
+| opção | Integer | &#x1F852; | Web server a ser obtido (padrão se omitido = servidor web do banco de dados) |
+| Resultado | Object | &#x1F850; | Objeto web server |
 
 <!-- END REF-->
 

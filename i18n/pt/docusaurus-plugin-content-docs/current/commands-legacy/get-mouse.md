@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | mouseX | Real | &#x1F858; | Coordenadas horizontais do mouse |
 | mouseY | Real | &#x1F858; | Coordenadas verticais do mouse |
-| botaoMouse | Inteiro longo | &#x1F858; | Estado do botão do mouse: 0=botão sem pressionar; 1=botão pressionado; 2= botão direito pressionado; 3=dois botões pressionados |
+| botaoMouse | Integer | &#x1F858; | Estado do botão do mouse: 0=botão sem pressionar; 1=botão pressionado; 2= botão direito pressionado; 3=dois botões pressionados |
 | * | Operador | &#x1F852; | Se especificado, sistema global de coordenadas é usado, se omitido, sistema de coordenadas locais é usado |
 
 <!-- END REF-->

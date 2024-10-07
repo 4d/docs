@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.RESOLVE POINTER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| pointer | ポインター | &#x1F852; | 参照オブジェクトを取得するポインタ |
-| varName | 文字 | &#x1F858; | 参照された変数の名前または空の文字列 |
-| tableNum | 倍長整数 | &#x1F858; | 参照されたテーブルまたは配列要素の番号 または 0 あるいは -1 |
-| fieldNum | 倍長整数 | &#x1F858; | 参照されたフィールドの番号 または 0 あるいは -1 |
+| pointer | Pointer | &#x1F852; | 参照オブジェクトを取得するポインタ |
+| varName | Text | &#x1F858; | 参照された変数の名前または空の文字列 |
+| tableNum | Integer | &#x1F858; | 参照されたテーブルまたは配列要素の番号 または 0 あるいは -1 |
+| fieldNum | Integer | &#x1F858; | 参照されたフィールドの番号 または 0 あるいは -1 |
 
 <!-- END REF-->
 

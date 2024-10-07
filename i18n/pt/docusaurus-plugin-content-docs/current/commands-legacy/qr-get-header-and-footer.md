@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET HEADER AND FOOTER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Inteiro longo | &#x1F852; | Referência da área |
-| seletor | Inteiro longo | &#x1F852; | 1= Cabeçalho, 2 = Rodapé |
-| tituloEsq | String | &#x1F858; | Título mostrado à esquerda |
-| tituloCentro | String | &#x1F858; | Texto mostrado ao centro |
-| tituloDir | String | &#x1F858; | Texto exibido à direita |
-| alto | Inteiro longo | &#x1F858; | Altura do cabeçalho ou rodapé |
-| imagem | Imagem | &#x1F858; | Imagem a exibir |
-| alinImag | Inteiro longo | &#x1F858; | Alinhamento atribuído para a Imagem |
+| area | Integer | &#x1F852; | Referência da área |
+| seletor | Integer | &#x1F852; | 1= Cabeçalho, 2 = Rodapé |
+| tituloEsq | Text | &#x1F858; | Título mostrado à esquerda |
+| tituloCentro | Text | &#x1F858; | Texto mostrado ao centro |
+| tituloDir | Text | &#x1F858; | Texto exibido à direita |
+| alto | Integer | &#x1F858; | Altura do cabeçalho ou rodapé |
+| imagem | Picture | &#x1F858; | Imagem a exibir |
+| alinImag | Integer | &#x1F858; | Alinhamento atribuído para a Imagem |
 
 <!-- END REF-->
 

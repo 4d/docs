@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Num.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| expression | String, Boolean, Longint | &#x1F852; | String for which to return the numeric form, or Boolean to return 0 or 1, or Numeric expression |
-| separator | String | &#x1F852; | Decimal separator |
+| expression | Text, Boolean, Integer | &#x1F852; | String for which to return the numeric form, or Boolean to return 0 or 1, or Numeric expression |
+| separator | Text | &#x1F852; | Decimal separator |
 | Function result | Real | &#x1F850; | Numeric form of the expression parameter |
 
 <!-- END REF-->

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Before selection.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla para la cual probar si el puntero se encuentra antes del primer registro seleccionado o Tabla por defecto, si se omite |
-| Resultado | Booleano | &#x1F850; | Sí (TRUE) o No (FALSE) |
+| tabla | Table | &#x1F852; | Tabla para la cual probar si el puntero se encuentra antes del primer registro seleccionado o Tabla por defecto, si se omite |
+| Resultado | Boolean | &#x1F850; | Sí (TRUE) o No (FALSE) |
 
 <!-- END REF-->
 

@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| tableNum | Longint | &#x1F858; | Table number of selection |
-| name | String | &#x1F858; | Name of named selection or "" for the current selection |
-| highlightName | String | &#x1F858; | Name of highlight set |
+| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| tableNum | Integer | &#x1F858; | Table number of selection |
+| name | Text | &#x1F858; | Name of named selection or "" for the current selection |
+| highlightName | Text | &#x1F858; | Name of highlight set |
 
 <!-- END REF-->
 

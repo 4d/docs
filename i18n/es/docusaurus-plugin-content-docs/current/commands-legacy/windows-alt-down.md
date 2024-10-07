@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Windows Alt down.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Booleano | &#x1F850; | Estado de la tecla Windows Alt Estado de la tecla Macintosh Opción |
+| Resultado | Boolean | &#x1F850; | Estado de la tecla Windows Alt Estado de la tecla Macintosh Opción |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ORDER BY FORMULA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla para la cual ordenar la selección de registros |
-| formula | Expresión | &#x1F852; | Fórmula de ordenación de los registros (puede ser de tipo Alfanumérico, Real, Entero,  Entero largo, Fecha, Hora o Booleano) |
+| tabla | Table | &#x1F852; | Tabla para la cual ordenar la selección de registros |
+| formula | Expression | &#x1F852; | Fórmula de ordenación de los registros (puede ser de tipo Alfanumérico, Real, Entero,  Entero largo, Fecha, Hora o Booleano) |
 | > o < | Operador | &#x1F852; | Sentido de la ordenación para cada nivel: > orden cresciente, u < orden decreciente |
 
 <!-- END REF-->

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Select RGB Color.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| defaultColor | Longint | &#x1F852; | Preselected RGB color |
-| message | Alpha | &#x1F852; | Title of selection window |
+| defaultColor | Integer | &#x1F852; | Preselected RGB color |
+| message | Text | &#x1F852; | Title of selection window |
 | Function result | Longint | &#x1F850; | RGB color |
 
 <!-- END REF-->

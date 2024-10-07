@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET GROUP LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| groupNames | String array | &#x1F858; | Names of the groups as they appear in the Password editor window |
-| groupNumbers | Longint array | &#x1F858; | Corresponding unique group ID numbers |
+| groupNames | Text array | &#x1F858; | Names of the groups as they appear in the Password editor window |
+| groupNumbers | Integer array | &#x1F858; | Corresponding unique group ID numbers |
 
 <!-- END REF-->
 

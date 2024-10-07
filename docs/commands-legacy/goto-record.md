@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table in which to go to the record, or Default table, if omitted |
-| record | Longint | &#x1F852; | Number returned by Record number |
+| record | Integer | &#x1F852; | Number returned by Record number |
 
 <!-- END REF-->
 

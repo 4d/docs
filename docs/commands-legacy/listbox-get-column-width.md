@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| minWidth | Longint | &#x1F858; | Minimum column width (in pixels) |
-| maxWidth | Longint | &#x1F858; | Maximum column width (in pixels) |
+| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| minWidth | Integer | &#x1F858; | Minimum column width (in pixels) |
+| maxWidth | Integer | &#x1F858; | Maximum column width (in pixels) |
 | Function result | Longint | &#x1F850; | Column width (in pixels) |
 
 <!-- END REF-->

@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| glissable | Booléen | &#x1F858; | Glissable = Vrai, sinon Faux |
-| glissableAuto | Booléen | &#x1F858; | Glisser automatique = Vrai, sinon Faux |
-| déposable | Booléen | &#x1F858; | Déposable = Vrai, sinon Faux |
-| déposableAuto | Booléen | &#x1F858; | Déposer automatique = Vrai, sinon Faux |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| glissable | Boolean | &#x1F858; | Glissable = Vrai, sinon Faux |
+| glissableAuto | Boolean | &#x1F858; | Glisser automatique = Vrai, sinon Faux |
+| déposable | Boolean | &#x1F858; | Déposable = Vrai, sinon Faux |
+| déposableAuto | Boolean | &#x1F858; | Déposer automatique = Vrai, sinon Faux |
 
 <!-- END REF-->
 

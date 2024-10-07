@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table pour laquelle tester si le pointeur d'enregistrement courant est au-delà du dernier enregistrement de la sélection courante ou Table par défaut si ce paramètre est omis |
-| Résultat | Booléen | &#x1F850; | Oui (Vrai), Non (Faux) |
+| Résultat | Boolean | &#x1F850; | Oui (Vrai), Non (Faux) |
 
 <!-- END REF-->
 

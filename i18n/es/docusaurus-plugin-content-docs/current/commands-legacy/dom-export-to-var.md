@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM EXPORT TO VAR.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Cadena | &#x1F852; | Referencia del elemento XML raíz |
-| vXmlVar | Texto, BLOB | &#x1F858; | Variable a recibir el árbol XML |
+| elementRef | Text | &#x1F852; | Referencia del elemento XML raíz |
+| vXmlVar | Text, Blob | &#x1F858; | Variable a recibir el árbol XML |
 
 <!-- END REF-->
 

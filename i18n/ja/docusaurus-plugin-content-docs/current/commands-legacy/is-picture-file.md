@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Is picture file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| filePath | テキスト | &#x1F852; | ファイルパス名 |
+| filePath | Text | &#x1F852; | ファイルパス名 |
 | * | 演算子 | &#x1F852; | データの検証 |
-| 戻り値 | ブール | &#x1F850; | True = filePathはピクチャファイルである、そうでなければFalse |
+| 戻り値 | Boolean | &#x1F850; | True = filePathはピクチャファイルである、そうでなければFalse |
 
 <!-- END REF-->
 

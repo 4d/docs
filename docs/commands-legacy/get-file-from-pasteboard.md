@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get file from pasteboard.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| xIndex | Longint | &#x1F852; | Xth file included in drag action |
+| xIndex | Integer | &#x1F852; | Xth file included in drag action |
 | Function result | String | &#x1F850; | Pathname of file extracted from pasteboard |
 
 <!-- END REF-->

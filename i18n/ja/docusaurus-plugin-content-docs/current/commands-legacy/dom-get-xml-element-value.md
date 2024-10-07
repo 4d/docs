@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM GET XML ELEMENT VALUE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | 文字 | &#x1F852; | XML要素参照 |
-| elementValue | 変数 | &#x1F858; | 要素値 |
-| cDATA | 変数 | &#x1F858; | CDATAセクションの内容 |
+| elementRef | Text | &#x1F852; | XML要素参照 |
+| elementValue | Variable | &#x1F858; | 要素値 |
+| cDATA | Variable | &#x1F858; | CDATAセクションの内容 |
 
 <!-- END REF-->
 

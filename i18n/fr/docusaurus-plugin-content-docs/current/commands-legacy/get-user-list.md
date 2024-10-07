@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET USER LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomsUtil | Tableau chaîne | &#x1F858; | Noms des utilisateurs tels qu'ils apparaissent dans l'éditeur de Mots de passe |
-| réfUtil | Tableau entier long | &#x1F858; | Numéros de référence uniques pour chaque utilisateur |
+| nomsUtil | Text array | &#x1F858; | Noms des utilisateurs tels qu'ils apparaissent dans l'éditeur de Mots de passe |
+| réfUtil | Integer array | &#x1F858; | Numéros de référence uniques pour chaque utilisateur |
 
 <!-- END REF-->
 

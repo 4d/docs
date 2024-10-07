@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Sum squares.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| series | フィールド, 配列 | &#x1F852; | 平方和を求めるデータ |
-| 戻り値 | 実数 | &#x1F850; | seriesの平方和 |
+| series | Field, Array | &#x1F852; | 平方和を求めるデータ |
+| 戻り値 | Real | &#x1F850; | seriesの平方和 |
 
 <!-- END REF-->
 

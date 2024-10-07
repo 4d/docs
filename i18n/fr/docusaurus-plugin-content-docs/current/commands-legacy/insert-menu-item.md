@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.INSERT MENU ITEM.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Entier long | &#x1F852; | Numéro de menu ou Référence de menu |
-| aprèsLigne | Entier long | &#x1F852; | Numéro de commande de menu |
-| libelléElément | Chaîne | &#x1F852; | Libellé de la ligne de menu à insérer |
-| sousMenu | RefMenu | &#x1F852; | Référence du sous-menu associé à la ligne |
-| process | Entier long | &#x1F852; | Numéro de référence de process |
+| menu | Integer | &#x1F852; | Numéro de menu ou Référence de menu |
+| aprèsLigne | Integer | &#x1F852; | Numéro de commande de menu |
+| libelléElément | Text | &#x1F852; | Libellé de la ligne de menu à insérer |
+| sousMenu | Text | &#x1F852; | Référence du sous-menu associé à la ligne |
+| process | Integer | &#x1F852; | Numéro de référence de process |
 | * | Opérateur | &#x1F852; | Si passé : considérer les métacaractères comme des caractères standard |
 
 <!-- END REF-->

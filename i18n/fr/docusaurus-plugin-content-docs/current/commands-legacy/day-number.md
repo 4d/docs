@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laDate | Date | &#x1F852; | Date dont vous souhaitez connaître le numéro du jour |
-| Résultat | Entier long | &#x1F850; | Numéro représentant le jour de la semaine auquel date correspond |
+| Résultat | Integer | &#x1F850; | Numéro représentant le jour de la semaine auquel date correspond |
 
 <!-- END REF-->
 

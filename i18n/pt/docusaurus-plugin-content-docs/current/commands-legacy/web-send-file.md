@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SEND FILE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| htmlArquivo | String | &#x1F852; | Rota do arquivo HTML ou string vazia para terminar SEND HTML FILE |
+| htmlArquivo | Text | &#x1F852; | Rota do arquivo HTML ou string vazia para terminar SEND HTML FILE |
 
 <!-- END REF-->
 

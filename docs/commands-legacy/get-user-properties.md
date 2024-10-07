@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.GET USER PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| userID | Longint | &#x1F852; | Unique user ID number |
-| name | String | &#x1F858; | Name of the user |
-| startup | String | &#x1F858; | Startup method name |
-| password | String | &#x1F858; | Always an empty string |
-| nbLogin | Longint | &#x1F858; | Number of logins to the database (Binary databases only) |
+| userID | Integer | &#x1F852; | Unique user ID number |
+| name | Text | &#x1F858; | Name of the user |
+| startup | Text | &#x1F858; | Startup method name |
+| password | Text | &#x1F858; | Always an empty string |
+| nbLogin | Integer | &#x1F858; | Number of logins to the database (Binary databases only) |
 | lastLogin | Date | &#x1F858; | Date of last login to the database (Binary databases only) |
-| memberships | Longint array | &#x1F858; | ID numbers of groups to which the user belongs |
-| groupOwner | Longint | &#x1F858; | ID number of user group owner (Binary databases only) |
+| memberships | Integer array | &#x1F858; | ID numbers of groups to which the user belongs |
+| groupOwner | Integer | &#x1F858; | ID number of user group owner (Binary databases only) |
 
 <!-- END REF-->
 

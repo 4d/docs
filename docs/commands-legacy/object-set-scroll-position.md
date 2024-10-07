@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a table, a field or a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Table or field or variable (if * is omitted) |
-| vPosition | Longint | &#x1F852; | Line number to display or Vertical scrolling in pixels (pictures) |
-| hPosition | Longint | &#x1F852; | Column number to display (list box) or<br/>Horizontal scrolling in pixels (pictures) |
+| object | any | &#x1F852; | Object name (if * is specified) or Table or field or variable (if * is omitted) |
+| vPosition | Integer | &#x1F852; | Line number to display or Vertical scrolling in pixels (pictures) |
+| hPosition | Integer | &#x1F852; | Column number to display (list box) or<br/>Horizontal scrolling in pixels (pictures) |
 | * | Operator | &#x1F852; | Display of line (and column if the hPosition parameter is passed) in first position after scroll |
 
 <!-- END REF-->

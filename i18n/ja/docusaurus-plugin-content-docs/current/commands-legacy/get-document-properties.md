@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | 文字 | &#x1F852; | ドキュメントの名前 |
-| locked | ブール | &#x1F858; | Trueの場合はロック、またはFalseの場合はアンロック |
-| invisible | ブール | &#x1F858; | Trueの場合は非表示、またはFalseは表示 |
+| document | Text | &#x1F852; | ドキュメントの名前 |
+| locked | Boolean | &#x1F858; | Trueの場合はロック、またはFalseの場合はアンロック |
+| invisible | Boolean | &#x1F858; | Trueの場合は非表示、またはFalseは表示 |
 | created on | 日付 | &#x1F858; | 作成日 |
 | created at | 時間 | &#x1F858; | 作成時間 |
 | modified on | 日付 | &#x1F858; | 更新日 |

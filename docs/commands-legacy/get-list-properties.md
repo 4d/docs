@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| list | ListRef | &#x1F852; | List reference number |
-| appearance | Longint | &#x1F858; | Graphical style of the list 1 = Hierarchical list a la Macintosh 2 = Hierarchical list a la Windows |
-| icon | Longint | &#x1F858; | *** Deprecated, always 0 *** |
-| lineHeight | Longint | &#x1F858; | Minimal line height expressed in pixels |
-| doubleClick | Longint | &#x1F858; | Expand/Collapse sublist on double-click? 0 = Yes, 1= No |
-| multiSelections | Longint | &#x1F858; | Multiple selections: 0 = No, 1 = Yes |
-| editable | Longint | &#x1F858; | List editable by user: 0 = No, 1 = Yes |
+| list | Integer | &#x1F852; | List reference number |
+| appearance | Integer | &#x1F858; | Graphical style of the list 1 = Hierarchical list a la Macintosh 2 = Hierarchical list a la Windows |
+| icon | Integer | &#x1F858; | *** Deprecated, always 0 *** |
+| lineHeight | Integer | &#x1F858; | Minimal line height expressed in pixels |
+| doubleClick | Integer | &#x1F858; | Expand/Collapse sublist on double-click? 0 = Yes, 1= No |
+| multiSelections | Integer | &#x1F858; | Multiple selections: 0 = No, 1 = Yes |
+| editable | Integer | &#x1F858; | List editable by user: 0 = No, 1 = Yes |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Selection to JSON.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| aTabela | Tabela | &#x1F852; | Tabela a serializar |
-| oCampo | Campo | &#x1F852; | Campo(s) cujo(s) conteúdos devem ser serializados |
-| modelo | Objeto | &#x1F852; | Objeto para a seleção de etiquetas e de campos |
-| Resultado | Texto | &#x1F850; | Cadeia que contém o array JSON serializado |
+| aTable | Table | &#x1F852; | Tabela a serializar |
+| oField | Field | &#x1F852; | Campo(s) cujo(s) conteúdos devem ser serializados |
+| modelo | Object | &#x1F852; | Objeto para a seleção de etiquetas e de campos |
+| Resultado | Text | &#x1F850; | Cadeia que contém o array JSON serializado |
 
 <!-- END REF-->
 

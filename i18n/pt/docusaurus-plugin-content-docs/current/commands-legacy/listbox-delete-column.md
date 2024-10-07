@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é a variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se* é especificado) ou Variável (se * é omitido) |
-| posiçaoCol | Inteiro longo | &#x1F852; | Número de coluna a remover |
-| numero | Inteiro longo | &#x1F852; | Número de colunas a remover |
+| objeto | any | &#x1F852; | Nome de objeto (se* é especificado) ou Variável (se * é omitido) |
+| posiçaoCol | Integer | &#x1F852; | Número de coluna a remover |
+| numero | Integer | &#x1F852; | Número de colunas a remover |
 
 <!-- END REF-->
 

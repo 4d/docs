@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table du formulaire à charger (si omis, charger un formulaire projet) |
-| formulaire | Chaîne, Objet | &#x1F852; | Nom du formulaire table ou projet à utiliser, ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
-| formData | Objet | &#x1F852; | Data to associate to the form |
+| formulaire | Text, Object | &#x1F852; | Nom du formulaire table ou projet à utiliser, ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
+| formData | Object | &#x1F852; | Data to associate to the form |
 | * | Opérateur | &#x1F852; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SERVICE CALL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| urlAcesso | String | &#x1F852; | Acesso URL ao Webservice |
-| soapAction | String | &#x1F852; | Conteúdos do campo SOAPAction |
-| nomeMetodo | String | &#x1F852; | Nome do método |
-| nomeEspaço | String | &#x1F852; | nomeespaço XML |
-| tipoComplexo | Inteiro longo | &#x1F852; | Configuração de tipos complexos (tipos simples se omitido) |
+| urlAcesso | Text | &#x1F852; | Acesso URL ao Webservice |
+| soapAction | Text | &#x1F852; | Conteúdos do campo SOAPAction |
+| nomeMetodo | Text | &#x1F852; | Nome do método |
+| nomeEspaço | Text | &#x1F852; | nomeespaço XML |
+| tipoComplexo | Integer | &#x1F852; | Configuração de tipos complexos (tipos simples se omitido) |
 | * | Operador | &#x1F852; | Não fechar a conexão |
 
 <!-- END REF-->

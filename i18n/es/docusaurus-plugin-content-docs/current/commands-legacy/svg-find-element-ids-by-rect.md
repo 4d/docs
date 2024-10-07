@@ -10,13 +10,13 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objetoImagen es un nombre de objeto (cadena). Si se omite, objetoImagen es un campo o una variable. |
-| objetoImagen | Imagen | &#x1F852; | Nombre del objeto (si se especifica *) o Campo o Variable (si se omite *) |
-| x | Entero largo | &#x1F852; | Coordenada horizontal de la esquina superior izquierda del rectángulo de selección. |
-| y | Entero largo | &#x1F852; | Coordinada vertical de la esquina superior izquierda del rectángulo de selección |
-| ancho | Entero largo | &#x1F852; | Ancho del rectángulo de selección |
-| alto | Entero largo | &#x1F852; | Altura del rectángulo de selección |
-| arrIDs | Array texto | &#x1F858; | IDs de los elementos cuyo rectángulo circundante está en intersección con el rectángulo de selección |
-| Resultado | Booleano | &#x1F850; | True = se encontró al menos un elemento |
+| objetoPicture | Picture | &#x1F852; | Nombre del objeto (si se especifica *) o Campo o Variable (si se omite *) |
+| x | Integer | &#x1F852; | Coordenada horizontal de la esquina superior izquierda del rectángulo de selección. |
+| y | Integer | &#x1F852; | Coordinada vertical de la esquina superior izquierda del rectángulo de selección |
+| ancho | Integer | &#x1F852; | Ancho del rectángulo de selección |
+| alto | Integer | &#x1F852; | Altura del rectángulo de selección |
+| arrIDs | Text array | &#x1F858; | IDs de los elementos cuyo rectángulo circundante está en intersección con el rectángulo de selección |
+| Resultado | Boolean | &#x1F850; | True = se encontró al menos un elemento |
 
 <!-- END REF-->
 

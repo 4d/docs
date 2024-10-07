@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get printed height.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | 倍長整数 | &#x1F850; | マーカーの位置 |
+| 戻り値 | Integer | &#x1F850; | マーカーの位置 |
 
 <!-- END REF-->
 

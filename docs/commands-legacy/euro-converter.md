@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | value | Real | &#x1F852; | Value to convert |
-| fromCurrency | String | &#x1F852; | Code of the currency in which the value is expressed |
-| toCurrency | String | &#x1F852; | Code of the currency into which the value must be converted |
+| fromCurrency | Text | &#x1F852; | Code of the currency in which the value is expressed |
+| toCurrency | Text | &#x1F852; | Code of the currency into which the value must be converted |
 | Function result | Real | &#x1F850; | Converted value |
 
 <!-- END REF-->

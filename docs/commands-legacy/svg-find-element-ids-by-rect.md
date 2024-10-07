@@ -11,10 +11,10 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
 | pictureObject | Picture | &#x1F852; | Object name (if * specified) or <br/>Field or variable (if * omitted) |
-| x | Longint | &#x1F852; | Horizontal coordinate of top left corner of selection rectangle |
-| y | Longint | &#x1F852; | Vertical coordinate of top left corner of selection rectangle |
-| width | Longint | &#x1F852; | Width of selection rectangle |
-| height | Longint | &#x1F852; | Height of selection rectangle |
+| x | Integer | &#x1F852; | Horizontal coordinate of top left corner of selection rectangle |
+| y | Integer | &#x1F852; | Vertical coordinate of top left corner of selection rectangle |
+| width | Integer | &#x1F852; | Width of selection rectangle |
+| height | Integer | &#x1F852; | Height of selection rectangle |
 | arrIDs | Text array | &#x1F858; | IDs of elements whose bounding rectangle intersects with the selection rectangle |
 | Function result | Boolean | &#x1F850; | True = at least one element is found |
 

@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | date | Date | &#x1F852; | Date to which to add days, months, and years |
-| years | Longint | &#x1F852; | Number of years to add to the date |
-| months | Longint | &#x1F852; | Number of months to add to the date |
-| days | Longint | &#x1F852; | Number of days to add to the date |
+| years | Integer | &#x1F852; | Number of years to add to the date |
+| months | Integer | &#x1F852; | Number of months to add to the date |
+| days | Integer | &#x1F852; | Number of days to add to the date |
 | Function result | Date | &#x1F850; | Resulting date |
 
 <!-- END REF-->

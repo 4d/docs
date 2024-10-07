@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla de la selección actual |
-| arrReg | Array entero largo | &#x1F858; | Array de números de registros |
-| seleccion | Cadena | &#x1F852; | Nombre de la selección temporal o de la selección actual si este parámetro es omitido |
+| tabla | Table | &#x1F852; | Tabla de la selección actual |
+| arrReg | Integer array | &#x1F858; | Array de números de registros |
+| seleccion | Text | &#x1F852; | Nombre de la selección temporal o de la selección actual si este parámetro es omitido |
 
 <!-- END REF-->
 

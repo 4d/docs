@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SPELL CHECK TEXT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| text | テキスト | &#x1F852; | チェックするテキスト |
-| errPos | 倍長整数 | &#x1F858; | 未知の単語の最初の文字位置 |
-| errLength | 倍長整数 | &#x1F858; | 未知の単語の長さ |
-| checkPos | 倍長整数 | &#x1F852; | チェックを開始する位置 |
-| arrSuggest | テキスト配列 | &#x1F858; | 推奨候補リスト |
+| text | Text | &#x1F852; | チェックするテキスト |
+| errPos | Integer | &#x1F858; | 未知の単語の最初の文字位置 |
+| errLength | Integer | &#x1F858; | 未知の単語の長さ |
+| checkPos | Integer | &#x1F852; | チェックを開始する位置 |
+| arrSuggest | Text array | &#x1F858; | 推奨候補リスト |
 
 <!-- END REF-->
 

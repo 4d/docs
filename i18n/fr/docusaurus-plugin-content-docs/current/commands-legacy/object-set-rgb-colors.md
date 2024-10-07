@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou Champ ou Variable (si * est omis) |
-| couleurAvantPlan | Texte, Entier long | &#x1F852; | Valeur de la couleur RVB d'avant-plan |
-| couleurArrièrePlan | Texte, Entier long | &#x1F852; | Valeur de la couleur RVB d'arrière-plan |
-| couleurArrièrePlanAlt | Texte, Entier long | &#x1F852; | Valeur de la couleur RVB d'arrière-plan alternée |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou Champ ou Variable (si * est omis) |
+| couleurAvantPlan | Text, Integer | &#x1F852; | Valeur de la couleur RVB d'avant-plan |
+| couleurArrièrePlan | Text, Integer | &#x1F852; | Valeur de la couleur RVB d'arrière-plan |
+| couleurArrièrePlanAlt | Text, Integer | &#x1F852; | Valeur de la couleur RVB d'arrière-plan alternée |
 
 <!-- END REF-->
 

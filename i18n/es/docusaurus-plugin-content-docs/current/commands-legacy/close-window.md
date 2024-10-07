@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLOSE WINDOW.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | WinRef | &#x1F852; | Número de referencia, o Ventana del primer plano del proceso, si este parámetro se omite |
+| ventana | Integer | &#x1F852; | Número de referencia, o Ventana del primer plano del proceso, si este parámetro se omite |
 
 <!-- END REF-->
 

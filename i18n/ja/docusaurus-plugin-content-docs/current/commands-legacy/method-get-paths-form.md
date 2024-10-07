@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET PATHS FORM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | テーブル参照 |
-| arrPaths | テキスト配列 | &#x1F858; | メソッドパスと名前の配列 |
-| filter | テキスト | &#x1F852; | 名前フィルター |
-| stamp | Real variable | &#x1F852; | スタンプの最小値 |
+| aTable | Table | &#x1F852; | テーブル参照 |
+| arrPaths | Text array | &#x1F858; | メソッドパスと名前の配列 |
+| filter | Text | &#x1F852; | 名前フィルター |
+| stamp | Real | &#x1F852; | スタンプの最小値 |
 | &#x1F858; | 新しい現在値 |
 | * | 演算子 | &#x1F852; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
 

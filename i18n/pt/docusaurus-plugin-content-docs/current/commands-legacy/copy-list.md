@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Copy list.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| lista | ListRef | &#x1F852; | Número de referência da lista a copiar |
-| Resultado | ListRef | &#x1F850; | Número de referência da nova lista |
+| lista | Integer | &#x1F852; | Número de referência da lista a copiar |
+| Resultado | Integer | &#x1F850; | Número de referência da nova lista |
 
 <!-- END REF-->
 

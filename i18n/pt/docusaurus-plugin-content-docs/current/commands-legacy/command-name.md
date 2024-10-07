@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Command name.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| comando | Inteiro longo | &#x1F852; | Número de comando |
-| info | Inteiro longo | &#x1F858; | Propriedade thread seguro do comando |
-| tema | Texto | &#x1F858; | Tema da linguagem do comando |
-| Resultado | String | &#x1F850; | Nome do comando localizado |
+| comando | Integer | &#x1F852; | Número de comando |
+| info | Integer | &#x1F858; | Propriedade thread seguro do comando |
+| tema | Text | &#x1F858; | Tema da linguagem do comando |
+| Resultado | Text | &#x1F850; | Nome do comando localizado |
 
 <!-- END REF-->
 

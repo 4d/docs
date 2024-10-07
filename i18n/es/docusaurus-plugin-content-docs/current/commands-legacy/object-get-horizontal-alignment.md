@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre del objeto (cadena) Si se omite, objeto es un campo o una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
-| Resultado | Entero largo | &#x1F850; | Código de alineación |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
+| Resultado | Integer | &#x1F850; | Código de alineación |
 
 <!-- END REF-->
 

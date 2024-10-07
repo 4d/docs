@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Printing page.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Inteiro longo | &#x1F850; | Número de página da página atualmente sendo impressa |
+| Resultado | Integer | &#x1F850; | Número de página da página atualmente sendo impressa |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | booleanArr | Boolean array | &#x1F858; | Array to indicate if a record is in the set or not |
-| set | String | &#x1F852; | Name of the set or UserSet if this parameter is omitted |
+| set | Text | &#x1F852; | Name of the set or UserSet if this parameter is omitted |
 
 <!-- END REF-->
 

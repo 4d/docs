@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.APPLY TO SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | ステートメントを適用するテーブル |
-| statement | 命令文 | &#x1F852; | 1行のコードで記述されたメソッド |
+| aTable | Table | &#x1F852; | ステートメントを適用するテーブル |
+| statement | Expression | &#x1F852; | 1行のコードで記述されたメソッド |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get menu item key.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Longint, MenuRef | &#x1F852; | Menu number or Menu reference |
-| menuItem | Longint | &#x1F852; | Menu item number or -1 for the last item added |
-| process | Longint | &#x1F852; | Process reference number |
+| menu | Integer, Text | &#x1F852; | Menu number or Menu reference |
+| menuItem | Integer | &#x1F852; | Menu item number or -1 for the last item added |
+| process | Integer | &#x1F852; | Process reference number |
 | Function result | Longint | &#x1F850; | Character code of standard shortcut key associated with the menu item |
 
 <!-- END REF-->

@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | ListRef, String | &#x1F852; | List reference number (if * omitted) or Name of list type object (if * passed) |
+| list | Integer, Text | &#x1F852; | List reference number (if * omitted) or Name of list type object (if * passed) |
 | itemRef &#124; * | Operator, Longint | &#x1F852; | Item reference number or 0 for the last item added to the list or * for the current item of the list |
-| icon | Picture variable | &#x1F858; | Icon associated with item |
+| icon | Picture | &#x1F858; | Icon associated with item |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.TRANSFORM PICTURE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| imagem | Imagem | &#x1F852; | Fonte da imagem a ser transformada |
+| imagem | Picture | &#x1F852; | Fonte da imagem a ser transformada |
 | &#x1F858; | Imagem resultante depois da transformação |
-| operador | Inteiro longo | &#x1F852; | Tipo de transformação a ser feita |
+| operador | Integer | &#x1F852; | Tipo de transformação a ser feita |
 | param1 | Real | &#x1F852; | Parâmetro de transformação |
 | param2 | Real | &#x1F852; | Parâmetro de transformação |
 | param3 | Real | &#x1F852; | Parâmetro de transformação |

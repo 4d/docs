@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table owning the form, or Default table, if omitted |
-| form | String, Object | &#x1F852; | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
+| form | Text, Object | &#x1F852; | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
 | formData | Object | &#x1F852; | Data to associate to the form |
-| areaStart | Longint | &#x1F852; | Print marker, or Beginning area (if areaEnd is specified) |
-| areaEnd | Longint | &#x1F852; | Ending area (if areaStart specified) |
+| areaStart | Integer | &#x1F852; | Print marker, or Beginning area (if areaEnd is specified) |
+| areaEnd | Integer | &#x1F852; | Ending area (if areaStart specified) |
 | Function result | Longint | &#x1F850; | Height of printed section |
 
 <!-- END REF-->

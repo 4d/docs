@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.APPEND TO LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | ListRef | &#x1F852; | リスト参照番号 |
-| itemText | 文字 | &#x1F852; | 新規リスト項目のテキスト |
-| itemRef | 倍長整数 | &#x1F852; | 新規リスト項目の参照番号 |
-| sublist | ListRef | &#x1F852; | 新規リスト項目に付属するオプションのサブリスト |
-| expanded | ブール | &#x1F852; | オプションのサブリストの展開/折りたたみ |
+| list | Integer | &#x1F852; | リスト参照番号 |
+| itemText | Text | &#x1F852; | 新規リスト項目のテキスト |
+| itemRef | Integer | &#x1F852; | 新規リスト項目の参照番号 |
+| sublist | Integer | &#x1F852; | 新規リスト項目に付属するオプションのサブリスト |
+| expanded | Boolean | &#x1F852; | オプションのサブリストの展開/折りたたみ |
 
 <!-- END REF-->
 

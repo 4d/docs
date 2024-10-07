@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QR NEW AREA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ptr | Puntero | &#x1F852; | Puntero a una variable |
+| ptr | Pointer | &#x1F852; | Puntero a una variable |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Compile project.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| projectFile | ファイルオブジェクト | &#x1F852; | コンパイルするプロジェクトの.4DProject ファイル |
-| options | オブジェクト | &#x1F852; | コンパイルオプションを指定するオブジェクト |
-| 戻り値 | オブジェクト | &#x1F850; | コンパイルのステータスの情報を格納したオブジェクト |
+| projectFile | 4D.File | &#x1F852; | コンパイルするプロジェクトの.4DProject ファイル |
+| options | Object | &#x1F852; | コンパイルオプションを指定するオブジェクト |
+| 戻り値 | Object | &#x1F850; | コンパイルのステータスの情報を格納したオブジェクト |
 
 <!-- END REF-->
 

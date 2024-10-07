@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| object | any | &#x1F852; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
 | urlText | Text | &#x1F858; | Visible text of URL |
 | urlAddress | Text | &#x1F858; | URL address |
-| startSel | Longint | &#x1F852; | Start of selection |
-| endSel | Longint | &#x1F852; | End of selection |
+| startSel | Integer | &#x1F852; | Start of selection |
+| endSel | Integer | &#x1F852; | End of selection |
 
 <!-- END REF-->
 

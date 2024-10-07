@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get command status.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Entier long | &#x1F852; | Référence de la zone |
-| numCommande | Entier long | &#x1F852; | Numéro de commande |
-| valeur | Entier long, Texte | &#x1F858; | Valeur du sous-élément sélectionné |
-| Résultat | Entier long | &#x1F850; | Statut de la commande |
+| zone | Integer | &#x1F852; | Référence de la zone |
+| numCommande | Integer | &#x1F852; | Numéro de commande |
+| valeur | Integer, Text | &#x1F858; | Valeur du sous-élément sélectionné |
+| Résultat | Integer | &#x1F850; | Statut de la commande |
 
 <!-- END REF-->
 

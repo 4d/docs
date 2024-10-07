@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| objeto | any | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
 | X | Real | &#x1F852; | Horizontal coordinate of mouse |
 | Y | Real | &#x1F852; | Vertical coordinate of mouse |
-| coluna | Inteiro longo | &#x1F858; | Número de coluna |
-| linha | Inteiro longo | &#x1F858; | Número da fila |
-| varCol | Ponteiro | &#x1F858; | Ponteiro para a variável coluna |
+| coluna | Integer | &#x1F858; | Número de coluna |
+| linha | Integer | &#x1F858; | Número da fila |
+| varCol | Pointer | &#x1F858; | Ponteiro para a variável coluna |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Retourner le numéro de la page du sous-formulaire courant |
-| Résultat | Entier long | &#x1F850; | Numéro de la page courante du formulaire courant |
+| Résultat | Integer | &#x1F850; | Numéro de la page courante du formulaire courant |
 
 <!-- END REF-->
 

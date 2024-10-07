@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | array | Array | &#x1F852; | Array a copiar en la selección |
-| campo | Campo | &#x1F858; | Campo a recibir los valores del array |
+| campo | Field | &#x1F858; | Campo a recibir los valores del array |
 | * | Operador | &#x1F852; | Esperar ejecución |
 
 <!-- END REF-->

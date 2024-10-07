@@ -13,9 +13,9 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | pattern | Text | &#x1F852; | Regular expression |
 | aString | Text | &#x1F852; | String in which search will be done |
-| start | Longint | &#x1F852; | Position in aString where search will start |
-| pos_found | Longint array, Longint variable | &#x1F858; | Position of occurrence |
-| length_found | Longint array, Longint variable | &#x1F858; | Length of occurrence |
+| start | Integer | &#x1F852; | Position in aString where search will start |
+| pos_found | Integer array, Integer | &#x1F858; | Position of occurrence |
+| length_found | Integer array, Integer | &#x1F858; | Length of occurrence |
 | * | Operator | &#x1F852; | If passed: only searches at position indicated |
 | Function result | Boolean | &#x1F850; | True = search has found an occurrence; Otherwise, False. |
 | Match regex ( pattern ; aString ) -> Function result |

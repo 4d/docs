@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ZIP Read archive.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| zipFile | Objeto | &#x1F852; | ZIP archive file |
-| password | Texto | &#x1F852; | ZIP archive password if any |
-| Resultado | Objeto | &#x1F850; | Archive object |
+| zipFile | Object | &#x1F852; | ZIP archive file |
+| password | Text | &#x1F852; | ZIP archive password if any |
+| Resultado | Object | &#x1F850; | Archive object |
 
 <!-- END REF-->
 

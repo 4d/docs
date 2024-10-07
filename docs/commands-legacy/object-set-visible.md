@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, Object is an Object Name (String) If omitted, Object parameter is a Field or a Variable |
-| object | Form object | &#x1F852; | Object Name (if * is specified), or Field or Variable (if * is omitted) |
+| object | any | &#x1F852; | Object Name (if * is specified), or Field or Variable (if * is omitted) |
 | visible | Boolean | &#x1F852; | True for visible, False for invisible |
 
 <!-- END REF-->

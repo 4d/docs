@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Entero largo | &#x1F852; | Referencia del área |
-| izquierda | Entero largo | &#x1F852; | Límite izquierdo |
-| superior | Entero largo | &#x1F852; | Límite superior |
-| derecha | Entero largo | &#x1F852; | Límite derecho |
-| inferior | Entero largo | &#x1F852; | Límite inferior |
+| area | Integer | &#x1F852; | Referencia del área |
+| izquierda | Integer | &#x1F852; | Límite izquierdo |
+| superior | Integer | &#x1F852; | Límite superior |
+| derecha | Integer | &#x1F852; | Límite derecho |
+| inferior | Integer | &#x1F852; | Límite inferior |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | tableTitles | Text array | &#x1F858; | Current table names |
-| tableNums | Longint array | &#x1F858; | Table numbers |
+| tableNums | Integer array | &#x1F858; | Table numbers |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.COPY NAMED SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | セレクションをコピーするテーブル, または 省略した場合デフォルトテーブル |
-| name | 文字 | &#x1F852; | 作成する命名セレクションの名前 |
+| aTable | Table | &#x1F852; | セレクションをコピーするテーブル, または 省略した場合デフォルトテーブル |
+| name | Text | &#x1F852; | 作成する命名セレクションの名前 |
 
 <!-- END REF-->
 

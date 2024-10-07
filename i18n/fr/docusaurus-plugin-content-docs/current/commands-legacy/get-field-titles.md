@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table dont vous souhaitez connaître les noms des champs |
-| titresChamps | Tableau texte | &#x1F858; | Noms courants des champs |
-| numChamps | Tableau entier long | &#x1F858; | Numéros des champs |
+| titresChamps | Text array | &#x1F858; | Noms courants des champs |
+| numChamps | Integer array | &#x1F858; | Numéros des champs |
 
 <!-- END REF-->
 

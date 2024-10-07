@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.PICTURE TO BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| image | Image | &#x1F852; | Champ ou variable image |
-| blobImage | BLOB | &#x1F858; | BLOB devant contenir l’image convertie |
-| codec | Chaîne | &#x1F852; | Identifiant de codec d'image |
+| image | Picture | &#x1F852; | Champ ou variable image |
+| blobImage | Blob | &#x1F858; | BLOB devant contenir l’image convertie |
+| codec | Text | &#x1F852; | Identifiant de codec d'image |
 
 <!-- END REF-->
 

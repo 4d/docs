@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objetoImagem é um nome de objeto (string), se omitido, objetoImagem é um campo ou variável |
-| objetoImagem | Imagem | &#x1F852; | Nome de objeto (Se * for especificado) ou Campo ou Variável (se * for omitido) |
-| X | Inteiro longo | &#x1F852; | Coordenadas X em píxels |
-| Y | Inteiro longo | &#x1F852; | Coordenadas Y em píxels |
-| Resultado | String | &#x1F850; | ID do elemento encontrado na localização X, Y |
+| objetoPicture | Picture | &#x1F852; | Nome de objeto (Se * for especificado) ou Campo ou Variável (se * for omitido) |
+| X | Integer | &#x1F852; | Coordenadas X em píxels |
+| Y | Integer | &#x1F852; | Coordenadas Y em píxels |
+| Resultado | Text | &#x1F850; | ID do elemento encontrado na localização X, Y |
 
 <!-- END REF-->
 

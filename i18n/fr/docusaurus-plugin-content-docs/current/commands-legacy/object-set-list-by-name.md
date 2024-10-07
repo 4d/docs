@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * spécifié) ou Champ ou Variable (si * omis) |
-| typeListe | Entier long | &#x1F852; | Type de liste : Liste énumération, Liste obligations ou Liste exclusions |
-| énumération | Chaîne | &#x1F852; | Nom de l'énumération (définie en mode Développement) ou "" pour dissocier l’énumération |
+| objet | any | &#x1F852; | Nom d'objet (si * spécifié) ou Champ ou Variable (si * omis) |
+| typeListe | Integer | &#x1F852; | Type de liste : Liste énumération, Liste obligations ou Liste exclusions |
+| énumération | Text | &#x1F852; | Nom de l'énumération (définie en mode Développement) ou "" pour dissocier l’énumération |
 
 <!-- END REF-->
 

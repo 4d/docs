@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OB SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object Field, Object | &#x1F852; | Structured object |
+| object | Object, Object | &#x1F852; | Structured object |
 | property | Text | &#x1F852; | Name of property to set |
 | value | Expression | &#x1F852; | New value of property |
 

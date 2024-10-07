@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (string) Se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se * for omitido) ou variável (se * omitido) |
-| linha | Inteiro longo | &#x1F852; | Linha list box cuja altura você quer estabelecer |
-| altura | Inteiro longo | &#x1F852; | Altura da linha de list box |
+| objeto | any | &#x1F852; | Nome de objeto (se * for omitido) ou variável (se * omitido) |
+| linha | Integer | &#x1F852; | Linha list box cuja altura você quer estabelecer |
+| altura | Integer | &#x1F852; | Altura da linha de list box |
 
 <!-- END REF-->
 

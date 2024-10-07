@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Run offscreen area.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| parameters | オブジェクト | &#x1F852; | Web エリアの属性を格納したオブジェクト |
-| 戻り値 | Mixed | &#x1F850; | コールバックメソッドによって返された値 |
+| parameters | Object | &#x1F852; | Web エリアの属性を格納したオブジェクト |
+| 戻り値 | any | &#x1F850; | コールバックメソッドによって返された値 |
 
 <!-- END REF-->
 

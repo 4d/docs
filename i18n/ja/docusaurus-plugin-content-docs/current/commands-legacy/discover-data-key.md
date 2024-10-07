@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Discover data key.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | ブール | &#x1F850; | 現在開かれているデータファイルに対する有効な暗号化キーが見つかった場合にはTrue、そうでない場合にはFalse |
+| 戻り値 | Boolean | &#x1F850; | 現在開かれているデータファイルに対する有効な暗号化キーが見つかった場合にはTrue、そうでない場合にはFalse |
 
 <!-- END REF-->
 

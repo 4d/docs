@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se for especificada, a lista é um nome de objeto (cadeia)<br/>Se for omitida, a lista é um número de referencia de lista |
-| list | ListRef, String | &#x1F852; | Número de referencia de lista ou<br/>Nome de objeto de tipo lista (se passado *) |
-| refElemento | Inteiro longo, Operador | &#x1F852; | Número de referencia do elemento ou<br/>0 para o último elemento agregado à lista ou<br/>* para o elemento atual da lista |
-| arrSeletores | Array texto | &#x1F858; | Array dos nomes dos parâmetros |
-| arrValores | Array texto | &#x1F858; | Array dos valores dos parâmetros |
+| list | Integer, Text | &#x1F852; | Número de referencia de lista ou<br/>Nome de objeto de tipo lista (se passado *) |
+| refElemento | Integer, * | &#x1F852; | Número de referencia do elemento ou<br/>0 para o último elemento agregado à lista ou<br/>* para o elemento atual da lista |
+| arrSeletores | Text array | &#x1F858; | Array dos nomes dos parâmetros |
+| arrValores | Text array | &#x1F858; | Array dos valores dos parâmetros |
 
 <!-- END REF-->
 

@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| posicionL | Entero largo | &#x1F852; | Posición de la fila a insertar |
-| numLineas | Entero largo | &#x1F852; | Número de líneas a insertar |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| posicionL | Integer | &#x1F852; | Posición de la fila a insertar |
+| numLineas | Integer | &#x1F852; | Número de líneas a insertar |
 
 <!-- END REF-->
 

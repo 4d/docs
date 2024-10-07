@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB size.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| BLOB | BLOB | &#x1F852; | BLOBフィールドまたは変数 |
-| 戻り値 | 倍長整数 | &#x1F850; | バイト単位のBLOBサイズ |
+| Blob | Blob | &#x1F852; | BLOBフィールドまたは変数 |
+| 戻り値 | Integer | &#x1F850; | バイト単位のBLOBサイズ |
 
 <!-- END REF-->
 

@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
-| tipoLista | Inteiro longo | &#x1F852; | Tipo de lista: lista de seleção, lista de obrigatórios ou lista de excluídos |
-| lista | String | &#x1F852; | Nome da lista a ser usada como Lista de Escolha (definida no ambiente Desenho) |
+| objeto | any | &#x1F852; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
+| tipoLista | Integer | &#x1F852; | Tipo de lista: lista de seleção, lista de obrigatórios ou lista de excluídos |
+| lista | Text | &#x1F852; | Nome da lista a ser usada como Lista de Escolha (definida no ambiente Desenho) |
 
 <!-- END REF-->
 

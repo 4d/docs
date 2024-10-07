@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | picture | Picture | &#x1F852; | Picture to be converted |
 | &#x1F858; | Converted picture |
-| codec | String | &#x1F852; | Picture Codec ID |
+| codec | Text | &#x1F852; | Picture Codec ID |
 | compression | Real | &#x1F852; | Quality of compression |
 
 <!-- END REF-->

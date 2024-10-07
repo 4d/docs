@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.EDIT FORMULA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla a mostrar por defecto en el editor de fórmulas |
-| formula | Texto | &#x1F852; | Variable que contiene la fórmula a mostrar en el editor de fórmulas o "" para mostrar sólo el editor |
+| tabla | Table | &#x1F852; | Tabla a mostrar por defecto en el editor de fórmulas |
+| formula | Text | &#x1F852; | Variable que contiene la fórmula a mostrar en el editor de fórmulas o "" para mostrar sólo el editor |
 | &#x1F858; | Fórmula validada por el usuario |
 
 <!-- END REF-->

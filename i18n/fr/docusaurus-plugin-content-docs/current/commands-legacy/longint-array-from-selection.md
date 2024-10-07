@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table de la sélection courante |
-| tabEnrg | Tableau entier long | &#x1F858; | Tableau de numéros d’enregistrements |
-| tempo | Chaîne | &#x1F852; | Nom de la sélection temporaire ou Sélection courante si ce paramètre est omis |
+| tabEnrg | Integer array | &#x1F858; | Tableau de numéros d’enregistrements |
+| tempo | Text | &#x1F852; | Nom de la sélection temporaire ou Sélection courante si ce paramètre est omis |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET CODE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin | Texte, Tableau texte | &#x1F852; | Texte ou Tableau texte contenant un ou plusieurs chemin(s) de méthode(s) |
-| code | Texte, Tableau texte | &#x1F858; | Code de(s) méthode(s) désignée(s) |
-| option | Entier long | &#x1F852; | 0 ou omis = export simple (sans tokens), 1 = export avec tokens |
+| chemin | Text, Text array | &#x1F852; | Texte ou Tableau texte contenant un ou plusieurs chemin(s) de méthode(s) |
+| code | Text, Text array | &#x1F858; | Code de(s) méthode(s) désignée(s) |
+| option | Integer | &#x1F852; | 0 ou omis = export simple (sans tokens), 1 = export avec tokens |
 | * | Opérateur | &#x1F852; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->

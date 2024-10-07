@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d’objet (chaîne) <br/>Si omis, objet est un champ ou une variable |
-| objet | Champ, Variable, Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou Champ ou variable saisissable (si * est omis) |
-| débutSél | Entier long | &#x1F852; | Nouvelle position de début de sélection de texte |
-| finSél | Entier long | &#x1F852; | Nouvelle position de fin de sélection de texte |
+| objet | Field, Variable, any | &#x1F852; | Nom d'objet (si * est spécifié) ou Champ ou variable saisissable (si * est omis) |
+| débutSél | Integer | &#x1F852; | Nouvelle position de début de sélection de texte |
+| finSél | Integer | &#x1F852; | Nouvelle position de fin de sélection de texte |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| carpetaCertificados | Texto | &#x1F852; | Ruta y nombre de la carpeta de certificados del cliente |
+| carpetaCertificados | Text | &#x1F852; | Ruta y nombre de la carpeta de certificados del cliente |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Tickcount.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Inteiro longo | &#x1F850; | Número de tics (60avo de um segundo) passados desde que se inicio o equipo |
+| Resultado | Integer | &#x1F850; | Número de tics (60avo de um segundo) passados desde que se inicio o equipo |
 
 <!-- END REF-->
 

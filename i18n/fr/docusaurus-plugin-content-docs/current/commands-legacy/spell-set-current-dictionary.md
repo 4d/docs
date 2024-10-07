@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| dictionnaire | Entier long, Texte | &#x1F852; | ID, Nom ou Code de langue du dictionnaire à utiliser pour la correction orthographique |
+| dictionnaire | Integer, Text | &#x1F852; | ID, Nom ou Code de langue du dictionnaire à utiliser pour la correction orthographique |
 
 <!-- END REF-->
 

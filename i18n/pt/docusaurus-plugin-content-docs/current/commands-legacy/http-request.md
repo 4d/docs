@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP Request.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| metodoHTTP | Texto | &#x1F852; | Método HTTP para a solicitação |
-| url | Texto | &#x1F852; | URL à qual enviar a solicitação |
-| conteúdo | Texto, BLOB, Imagem, Objeto | &#x1F852; | Conteúdo do corpo(body)da solicitação |
-| resultado | Texto, BLOB, Imagem, Objeto | &#x1F858; | Resultado da solicitação |
-| nomCab | Array texto | &#x1F852; | Nomes dos cabeçalhos da solicitação |
+| metodoHTTP | Text | &#x1F852; | Método HTTP para a solicitação |
+| url | Text | &#x1F852; | URL à qual enviar a solicitação |
+| conteúdo | Text, Blob, Picture, Object | &#x1F852; | Conteúdo do corpo(body)da solicitação |
+| resultado | Text, Blob, Picture, Object | &#x1F858; | Resultado da solicitação |
+| nomCab | Text array | &#x1F852; | Nomes dos cabeçalhos da solicitação |
 | &#x1F858; | Nomes dos cabeçalhos devolvidos |
-| valCab | Array texto | &#x1F852; | Valores dos cabeçalhos da solicitação |
+| valCab | Text array | &#x1F852; | Valores dos cabeçalhos da solicitação |
 | &#x1F858; | Valores dos cabeçalhos devolvidos |
 | * | Operador | &#x1F852; | Se passada, a conexão se mantém (keep-alive)Se omitida, a conexão é fechada automaticamente. |
-| Resultado | Inteiro longo | &#x1F850; | Código de estado HTTP |
+| Resultado | Integer | &#x1F850; | Código de estado HTTP |
 
 <!-- END REF-->
 

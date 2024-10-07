@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| tailleVariable | Booléen | &#x1F858; | Vrai = Impression taille variable, Faux = Impression taille fixe |
-| fixeSousForm | Entier long | &#x1F858; | Option d’impression en taille fixe des sous-formulaires |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| tailleVariable | Boolean | &#x1F858; | Vrai = Impression taille variable, Faux = Impression taille fixe |
+| fixeSousForm | Integer | &#x1F858; | Option d’impression en taille fixe des sous-formulaires |
 
 <!-- END REF-->
 

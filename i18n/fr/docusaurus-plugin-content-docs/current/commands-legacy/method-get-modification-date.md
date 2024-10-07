@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin | Texte, Tableau texte | &#x1F852; | Texte ou Tableau texte contenant un ou plusieurs chemin(s) de méthode(s) |
-| dateMod | Date, Tableau date | &#x1F858; | Date(s) de modification de méthode(s) |
-| heureMod | Heure, Tableau entier long | &#x1F858; | Heure(s) de modification de méthode(s) |
+| chemin | Text, Text array | &#x1F852; | Texte ou Tableau texte contenant un ou plusieurs chemin(s) de méthode(s) |
+| dateMod | Date, Date array | &#x1F858; | Date(s) de modification de méthode(s) |
+| heureMod | Time, Integer array | &#x1F858; | Heure(s) de modification de méthode(s) |
 | * | Opérateur | &#x1F852; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->

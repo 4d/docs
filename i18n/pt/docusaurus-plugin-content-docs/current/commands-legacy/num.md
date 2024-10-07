@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Num.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| expressao | String, Booleano, Inteiro longo | &#x1F852; | Cadeia para a qual retornar a forma numérica, ou Booleano para devolver 0 ou 1, ou expressão numérica |
-| separador | String | &#x1F852; | Separador decimal |
+| expressao | Text, Boolean, Integer | &#x1F852; | Cadeia para a qual retornar a forma numérica, ou Booleano para devolver 0 ou 1, ou expressão numérica |
+| separador | Text | &#x1F852; | Separador decimal |
 | Resultado | Real | &#x1F850; | Formato numérico do parâmetro da expressão |
 
 <!-- END REF-->

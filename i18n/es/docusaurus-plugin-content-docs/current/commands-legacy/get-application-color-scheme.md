@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Devuelve el esquema de color de la base local |
-| Resultado | Texto | &#x1F850; | Esquema de color de la aplicación actual |
+| Resultado | Text | &#x1F850; | Esquema de color de la aplicación actual |
 
 <!-- END REF-->
 

@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table to which the set belongs, or Default table, if omitted |
-| set | String | &#x1F852; | Name of the set to be created in memory |
-| document | String | &#x1F852; | Document holding the set |
+| set | Text | &#x1F852; | Name of the set to be created in memory |
+| document | Text | &#x1F852; | Document holding the set |
 
 <!-- END REF-->
 

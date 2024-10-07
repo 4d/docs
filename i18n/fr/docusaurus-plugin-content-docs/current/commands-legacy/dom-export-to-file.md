@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM EXPORT TO FILE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Chaîne | &#x1F852; | Référence d’élément XML racine |
-| cheminFichier | Texte | &#x1F852; | Chemin d’accès complet du fichier |
+| refElément | Text | &#x1F852; | Référence d’élément XML racine |
+| cheminFichier | Text | &#x1F852; | Chemin d’accès complet du fichier |
 
 <!-- END REF-->
 

@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | ptrTable &#124; numTable | Pointeur, Entier long | &#x1F852; | Pointeur de table ou Numéro de table |
-| invisible | Booléen | &#x1F858; | Vrai = Invisible, Faux = Visible |
-| trigSvgdeNouv | Booléen | &#x1F858; | Vrai = Trigger “Sur sauvegarde nouvel enreg” activé, sinon Faux |
-| trigSvgdeEnr | Booléen | &#x1F858; | Vrai = Trigger “Sur sauvegarde enregistrement” activé, sinon Faux |
-| trigSupprEnr | Booléen | &#x1F858; | Vrai = Trigger “Sur suppression enreg” activé, sinon Faux |
-| trigChargEnr | Booléen | &#x1F858; | *** Ne pas utiliser (obsolète) *** |
+| invisible | Boolean | &#x1F858; | Vrai = Invisible, Faux = Visible |
+| trigSvgdeNouv | Boolean | &#x1F858; | Vrai = Trigger “Sur sauvegarde nouvel enreg” activé, sinon Faux |
+| trigSvgdeEnr | Boolean | &#x1F858; | Vrai = Trigger “Sur sauvegarde enregistrement” activé, sinon Faux |
+| trigSupprEnr | Boolean | &#x1F858; | Vrai = Trigger “Sur suppression enreg” activé, sinon Faux |
+| trigChargEnr | Boolean | &#x1F858; | *** Ne pas utiliser (obsolète) *** |
 
 <!-- END REF-->
 

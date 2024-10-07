@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| certificatesFolder | テキスト | &#x1F852; | クライアント証明書フォルダのパス名と名前 |
+| certificatesFolder | Text | &#x1F852; | クライアント証明書フォルダのパス名と名前 |
 
 <!-- END REF-->
 

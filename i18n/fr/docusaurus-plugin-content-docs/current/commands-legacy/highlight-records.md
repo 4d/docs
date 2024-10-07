@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table de laquelle marquer les enregistrements Si omis, table du formulaire courant |
-| nomEnsemble | Chaîne | &#x1F852; | Ensemble d’enregistrements à marquer ou Ensemble Userset si ce paramètre est omis |
+| nomEnsemble | Text | &#x1F852; | Ensemble d’enregistrements à marquer ou Ensemble Userset si ce paramètre est omis |
 | * | Opérateur | &#x1F852; | Inactiver le défilement automatique de la liste |
 
 <!-- END REF-->

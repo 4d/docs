@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.cs.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Objeto | &#x1F850; | Tienda de clases que contiene todas las clases de la base actual |
+| Resultado | Object | &#x1F850; | Tienda de clases que contiene todas las clases de la base actual |
 
 <!-- END REF-->
 

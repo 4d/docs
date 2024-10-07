@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| posicionCol | Entero largo | &#x1F852; | Número de la columna a eliminar |
-| numero | Entero largo | &#x1F852; | Número de columnas a eliminar |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| posicionCol | Integer | &#x1F852; | Número de la columna a eliminar |
+| numero | Integer | &#x1F852; | Número de columnas a eliminar |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is field value Null.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | フィールド | &#x1F852; | 評価するフィールド |
-| 戻り値 | ブール | &#x1F850; | True = フィールドはNULL, False = フィールドはNULLでない |
+| aField | Field | &#x1F852; | 評価するフィールド |
+| 戻り値 | Boolean | &#x1F850; | True = フィールドはNULL, False = フィールドはNULLでない |
 
 <!-- END REF-->
 

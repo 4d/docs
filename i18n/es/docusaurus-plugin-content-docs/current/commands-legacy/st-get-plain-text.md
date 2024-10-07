@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo. |
-| objeto | Objeto de formulario | &#x1F852; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
-| refMode | Entero largo | &#x1F852; | Modo para el manejo de las referencias presentes en el texto |
-| Resultado | Texto | &#x1F850; | Texto sin etiquetas |
+| objeto | any | &#x1F852; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
+| refMode | Integer | &#x1F852; | Modo para el manejo de las referencias presentes en el texto |
+| Resultado | Text | &#x1F850; | Texto sin etiquetas |
 
 <!-- END REF-->
 

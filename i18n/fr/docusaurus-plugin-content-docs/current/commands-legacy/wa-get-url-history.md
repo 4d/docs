@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| tabsUrls | Tableau chaîne | &#x1F858; | Tableau des URLs visités |
-| sens | Entier long | &#x1F852; | 0 ou omis=Liste des URLs précédents, 1=Liste des URLs suivants |
-| tabTitres | Tableau chaîne | &#x1F858; | Tableau des titres de fenêtres |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| tabsUrls | Text array | &#x1F858; | Tableau des URLs visités |
+| sens | Integer | &#x1F852; | 0 ou omis=Liste des URLs précédents, 1=Liste des URLs suivants |
+| tabTitres | Text array | &#x1F858; | Tableau des titres de fenêtres |
 
 <!-- END REF-->
 

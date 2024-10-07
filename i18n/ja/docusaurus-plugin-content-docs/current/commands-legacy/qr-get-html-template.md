@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get HTML template.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | 倍長整数 | &#x1F852; | エリア参照 |
-| 戻り値 | テキスト | &#x1F850; | テンプレートとして使用されるHTMLコード |
+| area | Integer | &#x1F852; | エリア参照 |
+| 戻り値 | Text | &#x1F850; | テンプレートとして使用されるHTMLコード |
 
 <!-- END REF-->
 

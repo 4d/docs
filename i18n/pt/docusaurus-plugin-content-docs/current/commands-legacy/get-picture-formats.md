@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE FORMATS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| imagem | Imagem | &#x1F852; | Imagem a analisar |
-| codecID | Array texto | &#x1F858; | ID de codec de imagem |
+| imagem | Picture | &#x1F852; | Imagem a analisar |
+| codecID | Text array | &#x1F858; | ID de codec de imagem |
 
 <!-- END REF-->
 

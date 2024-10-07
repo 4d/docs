@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table owning the form or If omitted: default table or use of project form |
-| form | String | &#x1F852; | Form name |
+| form | Text | &#x1F852; | Form name |
 
 <!-- END REF-->
 

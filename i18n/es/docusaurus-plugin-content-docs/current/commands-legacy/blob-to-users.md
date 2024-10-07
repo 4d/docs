@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB TO USERS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| usuarios | BLOB | &#x1F852; | BLOB (encriptado) contiene las cuentas de usuarios creadas y guardadas por el Administrador |
+| usuarios | Blob | &#x1F852; | BLOB (encriptado) contiene las cuentas de usuarios creadas y guardadas por el Administrador |
 
 <!-- END REF-->
 

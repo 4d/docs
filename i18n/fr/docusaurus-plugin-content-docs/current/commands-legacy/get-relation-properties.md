@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | ptrChp &#124; numTable | Pointeur, Entier long | &#x1F852; | Pointeur de champ ou Numéro de table |
-| numChamp | Entier long | &#x1F852; | Numéro de champ si un numéro de table est passé en premier paramètre |
-| tableDest | Entier long | &#x1F858; | Numéro de la table cible ou 0 si aucun lien ne part du champ |
-| champDest | Entier long | &#x1F858; | Numéro du champ cible ou 0 si aucun lien ne part du champ |
-| discriminant | Entier long | &#x1F858; | Numéro du champ discriminant ou 0 si aucun champ discriminant |
-| allerAuto | Booléen | &#x1F858; | Vrai = Lien aller automatique, Faux = Lien aller manuel |
-| retourAuto | Booléen | &#x1F858; | Vrai = Lien retour automatique, Faux = Lien retour manuel |
+| numChamp | Integer | &#x1F852; | Numéro de champ si un numéro de table est passé en premier paramètre |
+| tableDest | Integer | &#x1F858; | Numéro de la table cible ou 0 si aucun lien ne part du champ |
+| champDest | Integer | &#x1F858; | Numéro du champ cible ou 0 si aucun lien ne part du champ |
+| discriminant | Integer | &#x1F858; | Numéro du champ discriminant ou 0 si aucun champ discriminant |
+| allerAuto | Boolean | &#x1F858; | Vrai = Lien aller automatique, Faux = Lien aller manuel |
+| retourAuto | Boolean | &#x1F858; | Vrai = Lien retour automatique, Faux = Lien retour manuel |
 
 <!-- END REF-->
 

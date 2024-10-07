@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Bool.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| expression | 式 | &#x1F852; | ブール形式で返したい式 |
-| 戻り値 | ブール | &#x1F850; | 式のブール型 |
+| expression | Expression | &#x1F852; | ブール形式で返したい式 |
+| 戻り値 | Boolean | &#x1F850; | 式のブール型 |
 
 <!-- END REF-->
 

@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| direction | Entier long | &#x1F852; | 0 ou omis=Liste des URLs précédents, 1=Liste des URLs suivants |
-| Résultat | RefMenu | &#x1F850; | Référence du menu |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| direction | Integer | &#x1F852; | 0 ou omis=Liste des URLs précédents, 1=Liste des URLs suivants |
+| Résultat | Text | &#x1F850; | Référence du menu |
 
 <!-- END REF-->
 

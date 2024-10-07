@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Semaphore.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| semaphore | String | &#x1F852; | Semaphore to test and set |
-| tickCount | Longint | &#x1F852; | Maximum waiting time |
+| semaphore | Text | &#x1F852; | Semaphore to test and set |
+| tickCount | Integer | &#x1F852; | Maximum waiting time |
 | Function result | Boolean | &#x1F850; | Semaphore has been successfully set (FALSE) or Semaphore was already set (TRUE) |
 
 <!-- END REF-->

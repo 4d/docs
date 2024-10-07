@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
-| lista | ListRef, Cadena | &#x1F852; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
+| lista | Integer, Text | &#x1F852; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
 | * | Operador | &#x1F852; | Si se omite (por defecto): Devuelve los elementos visibles (desplegados) de la lista Si se especifica: Devuelve todos los elementos de la lista |
-| Resultado | Entero largo | &#x1F850; | Número de elementos visibles de la lista (desplegados) (si se omite el segundo *) o número total de elementos de la lista (si se presenta el segundo *) |
+| Resultado | Integer | &#x1F850; | Número de elementos visibles de la lista (desplegados) (si se omite el segundo *) o número total de elementos de la lista (si se presenta el segundo *) |
 
 <!-- END REF-->
 

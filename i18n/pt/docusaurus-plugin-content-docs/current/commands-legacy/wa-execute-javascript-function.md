@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| funcaoJS | String | &#x1F852; | Nome da função JavaScript a executar |
+| objeto | any | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| funcaoJS | Text | &#x1F852; | Nome da função JavaScript a executar |
 | resultado&#124;* | Variável | &#x1F852; | * para a função sem resultado ou |
 | &#x1F858; | Resultado da função (se esperado) |
-| param | String, Número, Data, Objeto, Collection | &#x1F852; | Parâmetros a passar a função |
+| param | Text, Number, Date, Object, Collection | &#x1F852; | Parâmetros a passar a função |
 
 <!-- END REF-->
 

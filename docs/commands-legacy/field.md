@@ -11,13 +11,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Field.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tableNum | Longint | &#x1F852; | Table number |
-| fieldNum | Longint | &#x1F852; | Field number |
+| tableNum | Integer | &#x1F852; | Table number |
+| fieldNum | Integer | &#x1F852; | Field number |
 | fieldPtr | Pointer | &#x1F850; | Field pointer |
 | Field ( fieldPtr ) -> fieldNum |
 | Parameter | Type | Description |
 | fieldPtr | Pointer | &#x1F852; | Field pointer |
-| fieldNum | Longint | &#x1F850; | Field number |
+| fieldNum | Integer | &#x1F850; | Field number |
 
 <!-- END REF-->
 

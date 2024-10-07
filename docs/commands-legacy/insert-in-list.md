@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | ListRef, String | &#x1F852; | List reference number (if * omitted), or Name of list type object (if * passed) |
+| list | Integer, Text | &#x1F852; | List reference number (if * omitted), or Name of list type object (if * passed) |
 | beforeItemRef &#124; * | Longint, Operator | &#x1F852; | Item reference number or 0 for the last item added to the list or * for the currently selected list item |
-| itemText | String | &#x1F852; | Text for the new list item |
-| itemRef | Longint | &#x1F852; | Unique reference number for the new list item |
-| sublist | ListRef | &#x1F852; | Optional sublist to attach to the new list item |
+| itemText | Text | &#x1F852; | Text for the new list item |
+| itemRef | Integer | &#x1F852; | Unique reference number for the new list item |
+| sublist | Integer | &#x1F852; | Optional sublist to attach to the new list item |
 | expanded | Boolean | &#x1F852; | Indicates if the sublist will be expanded or collapsed |
 
 <!-- END REF-->

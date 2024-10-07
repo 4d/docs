@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es una referencia de lista |
-| lista | ListRef, Cadena | &#x1F852; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
+| lista | Integer, Text | &#x1F852; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
 | refElem &#124; * | Operador, Entero largo | &#x1F852; | Número de referencia del elemento, o 0 para el último elemento añadido a la lista, o * para el elemento actual de la lista |
-| editable | Booleano | &#x1F858; | TRUE = Editable, FALSE = No editable |
-| estilos | Entero largo | &#x1F858; | Estilo de fuente del elemento |
-| icono | Texto, Entero largo | &#x1F858; | Número de recurso Mac OS ‘cicn’, o 65536 + número de recurso Mac OS ‘PICT’, o 131072 + número de referencia de imagen |
-| color | Entero largo | &#x1F858; | Valor de color RGB |
+| editable | Boolean | &#x1F858; | TRUE = Editable, FALSE = No editable |
+| estilos | Integer | &#x1F858; | Estilo de fuente del elemento |
+| icono | Text, Integer | &#x1F858; | Número de recurso Mac OS ‘cicn’, o 65536 + número de recurso Mac OS ‘PICT’, o 131072 + número de referencia de imagen |
+| color | Integer | &#x1F858; | Valor de color RGB |
 
 <!-- END REF-->
 

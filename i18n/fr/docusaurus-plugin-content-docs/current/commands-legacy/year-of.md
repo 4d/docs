@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | date | Date | &#x1F852; | Date dont vous voulez extraire l'année |
-| Résultat | Entier long | &#x1F850; | Nombre indiquant l'année de date |
+| Résultat | Integer | &#x1F850; | Nombre indiquant l'année de date |
 
 <!-- END REF-->
 

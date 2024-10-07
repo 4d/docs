@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
-| Resultado | Booleano | &#x1F850; | True = caixa de seleção de três estados, False = caixa de seleção padrão |
+| objeto | any | &#x1F852; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
+| Resultado | Boolean | &#x1F850; | True = caixa de seleção de três estados, False = caixa de seleção padrão |
 
 <!-- END REF-->
 

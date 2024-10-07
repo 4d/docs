@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | path | Text | &#x1F852; | Pathname |
-| pathType | Longint | &#x1F852; | Type of path syntax: System (default) or Posix |
+| pathType | Integer | &#x1F852; | Type of path syntax: System (default) or Posix |
 | Function result | Object | &#x1F850; | Object describing the path contents |
 
 <!-- END REF-->

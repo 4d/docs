@@ -12,8 +12,8 @@ displayed_sidebar: docs
 | * | Operator | &#x1F852; | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
 | pictureObject | Picture | &#x1F852; | Object name (if * specified) or <br/>Variable or field (if * omitted) |
 | element_ID | Text | &#x1F852; | ID of element whose attribute value you want to get |
-| attribName | String | &#x1F852; | Attribute whose value you want to get |
-| attribValue | String, Longint | &#x1F858; | Current value of attribute |
+| attribName | Text | &#x1F852; | Attribute whose value you want to get |
+| attribValue | Text, Integer | &#x1F858; | Current value of attribute |
 
 <!-- END REF-->
 

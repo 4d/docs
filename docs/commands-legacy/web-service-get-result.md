@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | returnValue | Variable | &#x1F858; | Value returned by the Web Service |
-| returnName | String | &#x1F852; | Name of the parameter to be retrieved |
+| returnName | Text | &#x1F852; | Name of the parameter to be retrieved |
 | * | &#x1F852; | Free up memory |
 
 <!-- END REF-->

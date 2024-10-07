@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Process aborted.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Booleano | &#x1F850; | True = el proceso va a abortarse, False = el proceso no va a ser abortado |
+| Resultado | Boolean | &#x1F850; | True = el proceso va a abortarse, False = el proceso no va a ser abortado |
 
 <!-- END REF-->
 

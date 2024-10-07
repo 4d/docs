@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objetImage est un nom d’objet (chaîne) Si omis, objetImage est un champ ou une variable |
-| objetImage | Image | &#x1F852; | Nom d’objet (si * spécifié) ou Champ ou Variable (si * omis) |
-| x | Entier long | &#x1F852; | Coordonnée X en pixels |
-| y | Entier long | &#x1F852; | Coordonnée Y en pixels |
-| Résultat | Chaîne | &#x1F850; | ID de l’élément se trouvant à l’emplacement x,y |
+| objetPicture | Picture | &#x1F852; | Nom d’objet (si * spécifié) ou Champ ou Variable (si * omis) |
+| x | Integer | &#x1F852; | Coordonnée X en pixels |
+| y | Integer | &#x1F852; | Coordonnée Y en pixels |
+| Résultat | Text | &#x1F850; | ID de l’élément se trouvant à l’emplacement x,y |
 
 <!-- END REF-->
 

@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| couleurH | Texte, Entier long | &#x1F858; | Valeur de couleur RVB pour les traits horizontaux |
-| couleurV | Texte, Entier long | &#x1F858; | Valeur de couleur RVB pour les traits verticaux |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| couleurH | Text, Integer | &#x1F858; | Valeur de couleur RVB pour les traits horizontaux |
+| couleurV | Text, Integer | &#x1F858; | Valeur de couleur RVB pour les traits verticaux |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.String.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| expresion | Expresión | &#x1F852; | Expresión a convertir en cadena (puede ser de tipo Real, Entero, Entero largo, Fecha, Hora, String, Texto, Booleana, Indefinido o Null) |
-| formato | Entero largo, Cadena | &#x1F852; | Formato de visualización |
-| agregarHora | Hora | &#x1F852; | Hora a añadir si expresión es una fecha |
-| Resultado | Cadena | &#x1F850; | Expresión convertida en cadena alfanumérica |
+| expresion | Expression | &#x1F852; | Expresión a convertir en cadena (puede ser de tipo Real, Entero, Entero largo, Fecha, Hora, String, Texto, Booleana, Indefinido o Null) |
+| formato | Integer, Text | &#x1F852; | Formato de visualización |
+| agregarTime | Time | &#x1F852; | Hora a añadir si expresión es una fecha |
+| Resultado | Text | &#x1F850; | Expresión convertida en cadena alfanumérica |
 
 <!-- END REF-->
 

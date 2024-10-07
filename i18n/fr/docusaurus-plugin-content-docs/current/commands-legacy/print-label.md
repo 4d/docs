@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table à imprimer ou Table par défaut si ce paramètre est omis |
-| nomFichier | Chaîne | &#x1F852; | Nom de fichier d'étiquettes sur disque |
+| nomFichier | Text | &#x1F852; | Nom de fichier d'étiquettes sur disque |
 | * &#124; > | &#x1F852; | * pour supprimer les boîtes de dialogue d'impression ou > pour ne pas réinitialiser les paramètres d'impression |
 
 <!-- END REF-->

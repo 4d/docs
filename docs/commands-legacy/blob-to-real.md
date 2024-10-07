@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB to real.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | BLOB | &#x1F852; | BLOB from which to get the Real value |
-| realFormat | Longint | &#x1F852; | 0=Native real format, 1=Extended real format, 2=Macintosh Double real format, 3=Windows Double real format |
+| blob | Blob | &#x1F852; | BLOB from which to get the Real value |
+| realFormat | Integer | &#x1F852; | 0=Native real format, 1=Extended real format, 2=Macintosh Double real format, 3=Windows Double real format |
 | offset | Variable | &#x1F852; | Offset within the BLOB (expressed in bytes) |
 | &#x1F858; | New offset after reading |
 | Function result | Real | &#x1F850; | Real value |

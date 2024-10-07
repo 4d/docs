@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DELAY PROCESS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| processo | Inteiro longo | &#x1F852; | Número de processo |
+| processo | Integer | &#x1F852; | Número de processo |
 | duraçao | Real | &#x1F852; | Duração expressada em ticks |
 
 <!-- END REF-->

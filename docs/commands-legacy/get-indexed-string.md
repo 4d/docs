@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get indexed string.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| resID | Longint | &#x1F852; | Resource ID number or 'id' attribute of the 'group' element (XLIFF) |
-| strID | Longint | &#x1F852; | String number or 'id' attribute of the 'trans-unit' element (XLIFF) |
-| resFile | DocRef | &#x1F852; | Resource file reference number If omitted: all the XLIFF files or open resource files |
+| resID | Integer | &#x1F852; | Resource ID number or 'id' attribute of the 'group' element (XLIFF) |
+| strID | Integer | &#x1F852; | String number or 'id' attribute of the 'trans-unit' element (XLIFF) |
+| resFile | Time | &#x1F852; | Resource file reference number If omitted: all the XLIFF files or open resource files |
 | Function result | String | &#x1F850; | Value of the indexed string |
 
 <!-- END REF-->

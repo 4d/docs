@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE ONE SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| manyTable | テーブル | &#x1F852; | nテーブル (リレーションの開始元) |
-| oneTable | テーブル | &#x1F852; | 1テーブル (リレーションの参照先) |
+| manyTable | Table | &#x1F852; | nテーブル (リレーションの開始元) |
+| oneTable | Table | &#x1F852; | 1テーブル (リレーションの参照先) |
 
 <!-- END REF-->
 

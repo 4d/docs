@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REDRAW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objeto | Objeto de formulário | &#x1F852; | Tabela para a qual vai redesenhar o sub-formulário; ou Campo para o qual redesenhar a área; ou Variável para a qual redesenhar a área; ou List Box a ser atualizada; ou Formulário de tabela a redesenhar ou um navegador Web. |
+| objeto | any | &#x1F852; | Tabela para a qual vai redesenhar o sub-formulário; ou Campo para o qual redesenhar a área; ou Variável para a qual redesenhar a área; ou List Box a ser atualizada; ou Formulário de tabela a redesenhar ou um navegador Web. |
 
 <!-- END REF-->
 

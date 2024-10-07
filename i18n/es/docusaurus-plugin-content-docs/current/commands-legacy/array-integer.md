@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nombreArray | Array | &#x1F852; | Nombre del array |
-| tamaño | Entero largo | &#x1F852; | Nombre de los elementos en el array o Número de filas si se especifica el tamaño 2 |
-| tamaño2 | Entero largo | &#x1F852; | Número de columnas en un array de dos dimensiones |
+| tamaño | Integer | &#x1F852; | Nombre de los elementos en el array o Número de filas si se especifica el tamaño 2 |
+| tamaño2 | Integer | &#x1F852; | Número de columnas en un array de dos dimensiones |
 
 <!-- END REF-->
 

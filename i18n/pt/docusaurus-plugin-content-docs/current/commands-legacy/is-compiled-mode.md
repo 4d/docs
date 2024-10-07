@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Retorna a informação do banco local |
-| Resultado | Booleano | &#x1F850; | Compilado (True), Interpretado (False) |
+| Resultado | Boolean | &#x1F850; | Compilado (True), Interpretado (False) |
 
 <!-- END REF-->
 

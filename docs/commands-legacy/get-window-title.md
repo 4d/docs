@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get window title.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| window | WinRef | &#x1F852; | Window reference number, or Frontmost window of current process, if omitted |
+| window | Integer | &#x1F852; | Window reference number, or Frontmost window of current process, if omitted |
 | Function result | String | &#x1F850; | Window title |
 
 <!-- END REF-->

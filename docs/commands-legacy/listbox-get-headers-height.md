@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object Name (if * is specified) or Variable (if * is omitted) |
-| unit | Longint | &#x1F852; | Unit of height value: 0 or omitted = pixels, 1 = lines |
+| object | any | &#x1F852; | Object Name (if * is specified) or Variable (if * is omitted) |
+| unit | Integer | &#x1F852; | Unit of height value: 0 or omitted = pixels, 1 = lines |
 | Function result | Longint | &#x1F850; | Row height |
 
 <!-- END REF-->

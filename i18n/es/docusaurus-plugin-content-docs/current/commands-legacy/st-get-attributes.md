@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
-| objeto | Objeto de formulario | &#x1F852; | Nombre del objeto (se se especifica *) o Variable o campo (si se omite *) |
-| inicioSel | Entero largo | &#x1F852; | Inicio de la selección de texto |
-| finSel | Entero largo | &#x1F852; | Fin de la selección de texto |
-| nomAtrib | Entero largo | &#x1F852; | Atributo a leer |
+| objeto | any | &#x1F852; | Nombre del objeto (se se especifica *) o Variable o campo (si se omite *) |
+| inicioSel | Integer | &#x1F852; | Inicio de la selección de texto |
+| finSel | Integer | &#x1F852; | Fin de la selección de texto |
+| nomAtrib | Integer | &#x1F852; | Atributo a leer |
 | valorAtrib | Variable | &#x1F858; | Valor actual del atributo |
 
 <!-- END REF-->

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PROCESS VARIABLE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| proceso | Entero largo | &#x1F852; | Número de proceso de destino |
+| proceso | Integer | &#x1F852; | Número de proceso de destino |
 | dstVar | Variable | &#x1F852; | Variable de destino |
 | expr | Variable | &#x1F852; | Expresión fuente (o variable fuente) |
 

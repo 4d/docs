@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get parent XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | String | &#x1F852; | XML element reference |
-| parentElemName | String | &#x1F858; | Name of parent XML element |
-| parentElemValue | String | &#x1F858; | Value of parent XML element |
+| elementRef | Text | &#x1F852; | XML element reference |
+| parentElemName | Text | &#x1F858; | Name of parent XML element |
+| parentElemValue | Text | &#x1F858; | Value of parent XML element |
 | Function result | String | &#x1F850; | Parent XML element reference |
 
 <!-- END REF-->

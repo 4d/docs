@@ -10,15 +10,15 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| tabNomsCols | Tableau texte | &#x1F858; | Noms d’objet des colonnes |
-| tabNomsEntêtes | Tableau texte | &#x1F858; | Noms d’objet des en-têtes |
-| tabVarCols | Tableau pointeur | &#x1F858; | Pointeurs vers les variables des colonnes ou Pointeurs vers les champs des colonnes ou Nil |
-| tabVarEntêtes | Tableau pointeur | &#x1F858; | Pointeurs vers les variables des en-têtes |
-| tabColsVisibles | Tableau booléen | &#x1F858; | Visibilité de chaque colonne |
-| tabStyles | Tableau pointeur | &#x1F858; | Pointeurs vers les tableaux ou les variables de styles de couleurs et de contrôle des lignes ou Nil |
-| tabNomsPieds | Tableau texte | &#x1F858; | Noms d’objet des pieds de colonnes |
-| tabVarPieds | Tableau pointeur | &#x1F858; | Pointeurs vers les variables des pieds de colonnes |
+| objet | any | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| tabNomsCols | Text array | &#x1F858; | Noms d’objet des colonnes |
+| tabNomsEntêtes | Text array | &#x1F858; | Noms d’objet des en-têtes |
+| tabVarCols | Pointer array | &#x1F858; | Pointeurs vers les variables des colonnes ou Pointeurs vers les champs des colonnes ou Nil |
+| tabVarEntêtes | Pointer array | &#x1F858; | Pointeurs vers les variables des en-têtes |
+| tabColsVisibles | Boolean array | &#x1F858; | Visibilité de chaque colonne |
+| tabStyles | Pointer array | &#x1F858; | Pointeurs vers les tableaux ou les variables de styles de couleurs et de contrôle des lignes ou Nil |
+| tabNomsPieds | Text array | &#x1F858; | Noms d’objet des pieds de colonnes |
+| tabVarPieds | Pointer array | &#x1F858; | Pointeurs vers les variables des pieds de colonnes |
 
 <!-- END REF-->
 

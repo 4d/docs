@@ -11,8 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | httpMethod | Text | &#x1F852; | HTTP method for request |
 | url | Text | &#x1F852; | URL to which to send the request |
-| contents | Text, BLOB, Picture, Object | &#x1F852; | Contents of request body |
-| response | Text, BLOB, Picture, Object | &#x1F858; | Result of request |
+| contents | Text, Blob, Picture, Object | &#x1F852; | Contents of request body |
+| response | Text, Blob, Picture, Object | &#x1F858; | Result of request |
 | headerNames | Text array | &#x1F852; | Header names of the request |
 | &#x1F858; | Returned header names |
 | headerValues | Text array | &#x1F852; | Header values of the request |

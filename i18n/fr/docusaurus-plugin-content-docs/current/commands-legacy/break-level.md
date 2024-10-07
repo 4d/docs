@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.BREAK LEVEL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| niveau | Entier long | &#x1F852; | Nombre de niveaux de rupture |
-| sautPage | Entier long | &#x1F852; | Niveau de saut de page |
+| niveau | Integer | &#x1F852; | Nombre de niveaux de rupture |
+| sautPage | Integer | &#x1F852; | Niveau de saut de page |
 
 <!-- END REF-->
 

@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica: lista es un nombre de objeto (cadena) Si se omite, lista es una referencia de lista |
-| lista | ListRef, Cadena | &#x1F852; | Número de referencia de lista (si se omite *) o Nombre del objeto tipo lista (si se pasa *) |
-| arrayElem | Array entero largo | &#x1F858; | Si  se omite el segundo *: Array contiene las posiciones de los elementos seleccionados en la(s) lista(s) Si se pasa el segundo *: Array contiene las referencias de los elementos seleccionados |
+| lista | Integer, Text | &#x1F852; | Número de referencia de lista (si se omite *) o Nombre del objeto tipo lista (si se pasa *) |
+| arrayElem | Integer array | &#x1F858; | Si  se omite el segundo *: Array contiene las posiciones de los elementos seleccionados en la(s) lista(s) Si se pasa el segundo *: Array contiene las referencias de los elementos seleccionados |
 | * | Operador | &#x1F852; | Si se omite: posición(es) de(l) (los) elemento(s) Si se pasa: referencia(s) de(l) (los) elemento(s) |
-| Resultado | Entero largo | &#x1F850; | Si se omite segundo *: posición del elemento seleccionado en la(s) lista(s) desplegada(s) Si se pasa el segundo *: Referencia del elemento seleccionado |
+| Resultado | Integer | &#x1F850; | Si se omite segundo *: posición del elemento seleccionado en la(s) lista(s) desplegada(s) Si se pasa el segundo *: Referencia del elemento seleccionado |
 
 <!-- END REF-->
 

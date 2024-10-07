@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD RESOLVE PATH.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota | Texto | &#x1F852; | Rota a resolver |
-| tipoMetodo | Inteiro longo | &#x1F858; | Seletor tipo de objeto |
-| prtTabela | Ponteiro | &#x1F858; | Referência de tabela |
-| nomObjeto | Texto | &#x1F858; | Nome de formulário ou método de base |
-| nomObjetoForm | Texto | &#x1F858; | Nome de objeto de formulário |
+| rota | Text | &#x1F852; | Rota a resolver |
+| tipoMetodo | Integer | &#x1F858; | Seletor tipo de objeto |
+| prtTabela | Pointer | &#x1F858; | Referência de tabela |
+| nomObjeto | Text | &#x1F858; | Nome de formulário ou método de base |
+| nomObjetoForm | Text | &#x1F858; | Nome de objeto de formulário |
 | * | Operador | &#x1F852; | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->

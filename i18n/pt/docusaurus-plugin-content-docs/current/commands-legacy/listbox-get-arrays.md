@@ -10,15 +10,15 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * for omitido) |
-| arrNomsCols | Array texto | &#x1F858; | Nomes de objetos de colunas |
-| arrNomsTitulos | Array texto | &#x1F858; | Nomes dos objetos títulos cabeçalhos |
-| arrVarCols | Array ponteiro | &#x1F858; | Ponteiros para variáveis de colunas ou Ponteiros para campos coluna ou Nil |
-| arrVarTitulos | Array ponteiro | &#x1F858; | Ponteiros para variáveis de título |
-| arrColsVisiveis | Array booleano | &#x1F858; | Visibilidade de cada coluna |
-| arrEstilos | Array ponteiro | &#x1F858; | Ponteiros para arrays ou estilos, cores e variáveis de visibilidade ou Nil |
-| arrFooterNames | Array texto | &#x1F858; | Nomes de objetos do rodapé da coluna |
-| arrFootersVars | Array ponteiro | &#x1F858; | Ponteiros para variáveis de rodapé de coluna |
+| objeto | any | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * for omitido) |
+| arrNomsCols | Text array | &#x1F858; | Nomes de objetos de colunas |
+| arrNomsTitulos | Text array | &#x1F858; | Nomes dos objetos títulos cabeçalhos |
+| arrVarCols | Pointer array | &#x1F858; | Ponteiros para variáveis de colunas ou Ponteiros para campos coluna ou Nil |
+| arrVarTitulos | Pointer array | &#x1F858; | Ponteiros para variáveis de título |
+| arrColsVisiveis | Boolean array | &#x1F858; | Visibilidade de cada coluna |
+| arrEstilos | Pointer array | &#x1F858; | Ponteiros para arrays ou estilos, cores e variáveis de visibilidade ou Nil |
+| arrFooterNames | Text array | &#x1F858; | Nomes de objetos do rodapé da coluna |
+| arrFootersVars | Pointer array | &#x1F858; | Ponteiros para variáveis de rodapé de coluna |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | elementRef | Text | &#x1F852; | XML element reference |
-| childTypesArr | Longint array | &#x1F858; | Types of child nodes |
+| childTypesArr | Integer array | &#x1F858; | Types of child nodes |
 | nodeRefsArr | Text array | &#x1F858; | References or Values of child nodes |
 
 <!-- END REF-->

@@ -10,13 +10,13 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| colonne | Entier long | &#x1F852; | Numéro de colonne |
-| ligne | Entier long | &#x1F852; | Numéro de ligne |
-| gauche | Entier long | &#x1F858; | Coordonnée gauche de l'objet |
-| haut | Entier long | &#x1F858; | Coordonnée supérieure de l’objet |
-| droite | Entier long | &#x1F858; | Coordonnée droite de l’objet |
-| bas | Entier long | &#x1F858; | Coordonnée inférieure de l’objet |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| colonne | Integer | &#x1F852; | Numéro de colonne |
+| ligne | Integer | &#x1F852; | Numéro de ligne |
+| gauche | Integer | &#x1F858; | Coordonnée gauche de l'objet |
+| haut | Integer | &#x1F858; | Coordonnée supérieure de l’objet |
+| droite | Integer | &#x1F858; | Coordonnée droite de l’objet |
+| bas | Integer | &#x1F858; | Coordonnée inférieure de l’objet |
 
 <!-- END REF-->
 

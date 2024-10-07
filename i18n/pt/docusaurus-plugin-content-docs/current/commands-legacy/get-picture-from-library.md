@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | refImag &#124; nomImag | Inteiro longo, String | &#x1F852; | Número de referência ou Nome da imagem da biblioteca de imagens |
-| imagem | Variável Imagem | &#x1F858; | Imagem da biblioteca de imagens |
+| imagem | Picture | &#x1F858; | Imagem da biblioteca de imagens |
 
 <!-- END REF-->
 

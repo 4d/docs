@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | numTabela&#124;Ponteiro | Inteiro longo, Ponteiro | &#x1F852; | Número de tabela, ou ponteiro de Tabela, ou ponteiro de Campo |
-| Resultado | Inteiro longo, Ponteiro | &#x1F850; | Ponteiro tabela, se um número de tabela for passado.<br/>Número de tabela, se um ponteiro de tabela for passado.<br/>Número de tabela, se um ponteiro de Campo for passado. |
+| Resultado | Integer, Pointer | &#x1F850; | Ponteiro tabela, se um número de tabela for passado.<br/>Número de tabela, se um ponteiro de tabela for passado.<br/>Número de tabela, se um ponteiro de Campo for passado. |
 
 <!-- END REF-->
 

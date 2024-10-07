@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get info row.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Longint | &#x1F852; | Reference of the area created |
-| row | Longint | &#x1F852; | Row designator |
+| area | Integer | &#x1F852; | Reference of the area created |
+| row | Integer | &#x1F852; | Row designator |
 | Function result | Longint | &#x1F850; | 0 = displayed, 1 = hidden |
 
 <!-- END REF-->

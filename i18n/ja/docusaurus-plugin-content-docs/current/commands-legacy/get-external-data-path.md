@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get external data path.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | テキスト, BLOB, ピクチャー | &#x1F852; | 外部ストレージの場所を取得するフィールド |
-| 戻り値 | テキスト | &#x1F850; | 外部ストレージファイルのフルパス名 |
+| aField | Text, Blob, Picture | &#x1F852; | 外部ストレージの場所を取得するフィールド |
+| 戻り値 | Text | &#x1F850; | 外部ストレージファイルのフルパス名 |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| sessionID | テキスト | &#x1F852; | セッションUUID |
-| expDate | 日付 | &#x1F858; | cookie有効期限日 |
-| expTime | 時間 | &#x1F858; | cookie有効期限時刻 |
+| sessionID | Text | &#x1F852; | セッションUUID |
+| expDate | Date | &#x1F858; | cookie有効期限日 |
+| expTime | Time | &#x1F858; | cookie有効期限時刻 |
 
 <!-- END REF-->
 

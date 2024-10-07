@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table pour laquelle il faut tester l'état ou Table par défaut si ce paramètre est omis |
-| Résultat | Booléen | &#x1F850; | Accès à la table est lecture seulement (Vrai) ou Accès à la table est lecture-écriture (Faux) |
+| Résultat | Boolean | &#x1F850; | Accès à la table est lecture seulement (Vrai) ou Accès à la table est lecture-écriture (Faux) |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Milliseconds.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | 倍長整数 | &#x1F850; | マシンが起動されてからの 経過ミリ秒数 |
+| 戻り値 | Integer | &#x1F850; | マシンが起動されてからの 経過ミリ秒数 |
 
 <!-- END REF-->
 

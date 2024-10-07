@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | uneTable | Table | &#x1F852; | Table du formulaire |
-| nomFormulaire | Texte | &#x1F852; | Nom d'un formulaire projet ou d'un formulaire table "classique" |
-| Résultat | Objet | &#x1F850; | formName converti en formulaire dynamique |
+| nomFormulaire | Text | &#x1F852; | Nom d'un formulaire projet ou d'un formulaire table "classique" |
+| Résultat | Object | &#x1F850; | formName converti en formulaire dynamique |
 
 <!-- END REF-->
 

@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
-| correctionAuto | Booléen | &#x1F852; | Vrai = correction automatique, Faux = pas de correction automatique |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| correctionAuto | Boolean | &#x1F852; | Vrai = correction automatique, Faux = pas de correction automatique |
 
 <!-- END REF-->
 

@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.Set user properties.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| userID | Longint | &#x1F852; | Unique ID number of user account, -1 for adding a user |
+| userID | Integer | &#x1F852; | Unique ID number of user account, -1 for adding a user |
 | &#x1F858; | Unique ID number of added user account (if any) |
-| name | String | &#x1F852; | New user name |
-| startup | String | &#x1F852; | Name of new user startup method |
-| password | String | &#x1F852; | New (unencrypted) password, or * to leave the password unchanged |
-| nbLogin | Longint | &#x1F852; | New number of logins to the database (Binary databases only) |
+| name | Text | &#x1F852; | New user name |
+| startup | Text | &#x1F852; | Name of new user startup method |
+| password | Text | &#x1F852; | New (unencrypted) password, or * to leave the password unchanged |
+| nbLogin | Integer | &#x1F852; | New number of logins to the database (Binary databases only) |
 | lastLogin | Date | &#x1F852; | New date of last login to the database (Binary databases only) |
-| memberships | Longint array | &#x1F852; | ID numbers of groups to which the user belongs |
-| groupOwner | Longint | &#x1F852; | Reference number of user group owner (Binary databases only) |
+| memberships | Integer array | &#x1F852; | ID numbers of groups to which the user belongs |
+| groupOwner | Integer | &#x1F852; | Reference number of user group owner (Binary databases only) |
 | Function result | Longint | &#x1F850; | Unique ID number of new user |
 
 <!-- END REF-->

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Copy.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | Objeto, Campo Objeto | &#x1F852; | Objeto estructurado |
-| resuelvePunt | Booleano | &#x1F852; | True = resuelve los puntero, False o se omite = no resuelve punteros |
-| option | Entero largo | &#x1F852; | ck shared: devuelve un objeto compartido,ck resolve pointers: resuelve punteros antes de copiar |
-| agruparCon | Collection, Objeto | &#x1F852; | Colección u objeto compartido a agrupar con el objeto resultante |
-| Resultado | Objeto | &#x1F850; | Copia de objeto |
+| objeto | Object, Campo Object | &#x1F852; | Objeto estructurado |
+| resuelvePunt | Boolean | &#x1F852; | True = resuelve los puntero, False o se omite = no resuelve punteros |
+| option | Integer | &#x1F852; | ck shared: devuelve un objeto compartido,ck resolve pointers: resuelve punteros antes de copiar |
+| agruparCon | Collection, Object | &#x1F852; | Colección u objeto compartido a agrupar con el objeto resultante |
+| Resultado | Object | &#x1F850; | Copia de objeto |
 
 <!-- END REF-->
 

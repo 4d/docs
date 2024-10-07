@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (string) se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Object name (if * is specified) or <br/>Variable (if * is omitted) |
-| Resultado | Booleano | &#x1F850; | True = objeto ativado: ou então é falso |
+| objeto | any | &#x1F852; | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| Resultado | Boolean | &#x1F850; | True = objeto ativado: ou então é falso |
 
 <!-- END REF-->
 

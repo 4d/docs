@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si omis = ignorer les fenêtres flottantes, Si spécifié = prendre en compte les fenêtres flottantes |
-| Résultat | RefFen | &#x1F850; | Numéro de référence de fenêtre |
+| Résultat | Integer | &#x1F850; | Numéro de référence de fenêtre |
 
 <!-- END REF-->
 

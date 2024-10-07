@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string). If omitted, object is a variable. |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| property | Longint | &#x1F852; | List box or column property |
-| value | Longint, String | &#x1F852; | Value of property |
+| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| property | Integer | &#x1F852; | List box or column property |
+| value | Integer, Text | &#x1F852; | Value of property |
 
 <!-- END REF-->
 

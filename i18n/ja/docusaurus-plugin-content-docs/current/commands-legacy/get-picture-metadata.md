@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE METADATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture | ピクチャー | &#x1F852; | メタデータを読むピクチャ |
-| metaName | テキスト | &#x1F852; | 取得するブロックの名前またはパス |
-| metaContents | 変数 | &#x1F858; | メタデータの内容 |
+| picture | Picture | &#x1F852; | メタデータを読むピクチャ |
+| metaName | Text | &#x1F852; | 取得するブロックの名前またはパス |
+| metaContents | Variable | &#x1F858; | メタデータの内容 |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Parse formula.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| formule | Texte | &#x1F852; | Texte brut de la formule |
-| options | Entier long | &#x1F852; | Instructions d'entrée / sortie |
-| messageErr | Texte | &#x1F858; | Message d'erreur (chaîne vide si pas d'erreur) |
-| Résultat | Texte | &#x1F850; | Formule avec transformation (texte brut) |
+| formule | Text | &#x1F852; | Texte brut de la formule |
+| options | Integer | &#x1F852; | Instructions d'entrée / sortie |
+| messageErr | Text | &#x1F858; | Message d'erreur (chaîne vide si pas d'erreur) |
+| Résultat | Text | &#x1F850; | Formule avec transformation (texte brut) |
 
 <!-- END REF-->
 

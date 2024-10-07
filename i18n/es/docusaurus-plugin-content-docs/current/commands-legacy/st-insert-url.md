@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
-| textoURL | Texto | &#x1F852; | Texto visible del URL |
-| direccionURL | Texto | &#x1F852; | Dirección de la URL |
-| inicioSel | Entero largo | &#x1F852; | Inicio de la selección |
-| finSel | Entero largo | &#x1F852; | Fin de la selección |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
+| textoURL | Text | &#x1F852; | Texto visible del URL |
+| direccionURL | Text | &#x1F852; | Dirección de la URL |
+| inicioSel | Integer | &#x1F852; | Inicio de la selección |
+| finSel | Integer | &#x1F852; | Fin de la selección |
 
 <!-- END REF-->
 

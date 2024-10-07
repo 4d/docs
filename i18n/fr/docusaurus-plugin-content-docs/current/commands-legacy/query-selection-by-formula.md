@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table dans laquelle effectuer la recherche parmi la sélection courante |
-| formule | Booléen | &#x1F852; | Formule de recherche |
+| formule | Boolean | &#x1F852; | Formule de recherche |
 
 <!-- END REF-->
 

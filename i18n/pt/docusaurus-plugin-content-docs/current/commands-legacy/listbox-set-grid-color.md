@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| cor | Texto, Inteiro longo | &#x1F852; | Valor RGB da cor |
-| horizontal | Booleano | &#x1F852; | Use a cor para linhas de grade horizontais |
-| vertical | Booleano | &#x1F852; | Use a cor para linhas de grade vertical |
+| objeto | any | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| cor | Text, Integer | &#x1F852; | Valor RGB da cor |
+| horizontal | Boolean | &#x1F852; | Use a cor para linhas de grade horizontais |
+| vertical | Boolean | &#x1F852; | Use a cor para linhas de grade vertical |
 
 <!-- END REF-->
 

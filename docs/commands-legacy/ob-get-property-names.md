@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | object | Object | &#x1F852; | Structured object |
 | arrProperties | Text array | &#x1F858; | Property names |
-| arrTypes | Longint array | &#x1F858; | Property types |
+| arrTypes | Integer array | &#x1F858; | Property types |
 
 <!-- END REF-->
 

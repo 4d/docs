@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET BLOB SIZE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | BLOB | &#x1F852; | BLOB field or variable |
-| size | Longint | &#x1F852; | New size of the BLOB |
-| filler | Longint | &#x1F852; | ASCII code of filler character |
+| blob | Blob | &#x1F852; | BLOB field or variable |
+| size | Integer | &#x1F852; | New size of the BLOB |
+| filler | Integer | &#x1F852; | ASCII code of filler character |
 
 <!-- END REF-->
 

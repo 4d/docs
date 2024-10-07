@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is record loaded.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | レコードを検査するテーブル または 省略時、デフォルトテーブル |
-| 戻り値 | ブール | &#x1F850; | True: レコードはロードされている そうでなければFalse |
+| aTable | Table | &#x1F852; | レコードを検査するテーブル または 省略時、デフォルトテーブル |
+| 戻り値 | Boolean | &#x1F850; | True: レコードはロードされている そうでなければFalse |
 
 <!-- END REF-->
 

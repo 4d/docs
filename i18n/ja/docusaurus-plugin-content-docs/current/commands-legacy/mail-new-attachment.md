@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.MAIL New attachment.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| value | テキスト, BLOB, オブジェクト | &#x1F852; | オブジェクト(4D.File、4D.ZipFile、4D.Blob)、または添付ファイルのパス(テキスト)、または添付ファイルを格納しているBlob(BLOB) |
-| name | テキスト | &#x1F852; | 添付ファイルを指定するのにメールクライアントが使用する名前+拡張子 |
-| cid | テキスト | &#x1F852; | 添付ファイルのID(HTMLメッセージのみ)、またはcidが必要でない場合には" " |
-| type | テキスト | &#x1F852; | content-type ヘッダーの値 |
-| disposition | テキスト | &#x1F852; | content-disposition ヘッダーの値: "inline" または "attachment". |
-| 戻り値 | オブジェクト | &#x1F850; | 添付オブジェクト |
+| value | Text, Blob, Object | &#x1F852; | オブジェクト(4D.File、4D.ZipFile、4D.Blob)、または添付ファイルのパス(テキスト)、または添付ファイルを格納しているBlob(BLOB) |
+| name | Text | &#x1F852; | 添付ファイルを指定するのにメールクライアントが使用する名前+拡張子 |
+| cid | Text | &#x1F852; | 添付ファイルのID(HTMLメッセージのみ)、またはcidが必要でない場合には" " |
+| type | Text | &#x1F852; | content-type ヘッダーの値 |
+| disposition | Text | &#x1F852; | content-disposition ヘッダーの値: "inline" または "attachment". |
+| 戻り値 | Object | &#x1F850; | 添付オブジェクト |
 
 <!-- END REF-->
 

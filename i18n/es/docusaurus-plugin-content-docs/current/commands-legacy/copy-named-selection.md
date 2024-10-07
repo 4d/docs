@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.COPY NAMED SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla de la cual copiar selección, o Tabla por defecto, si se omite |
-| nombre | Cadena | &#x1F852; | Nombre de la selección temporal a crear |
+| tabla | Table | &#x1F852; | Tabla de la cual copiar selección, o Tabla por defecto, si se omite |
+| nombre | Text | &#x1F852; | Nombre de la selección temporal a crear |
 
 <!-- END REF-->
 

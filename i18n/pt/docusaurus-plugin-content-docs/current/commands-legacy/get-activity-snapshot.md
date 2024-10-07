@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | arrActivities &#124; arrUUID | Array objeto, Array texto | &#x1F858; | Descrição completa de operações (object array) ou<br/>UUIDs das operações (text array) |
-| arrInicio | Array texto | &#x1F858; | Horas de início das operações |
-| arrDuracao | Array inteiro longo | &#x1F858; | Duração das operações em milisegundos |
-| arrInfo | Array texto | &#x1F858; | Descrição |
-| arrDetails | Array objeto | &#x1F858; | Details of context and sub-operations (if any) |
+| arrInicio | Text array | &#x1F858; | Horas de início das operações |
+| arrDuracao | Integer array | &#x1F858; | Duração das operações em milisegundos |
+| arrInfo | Text array | &#x1F858; | Descrição |
+| arrDetails | Object array | &#x1F858; | Details of context and sub-operations (if any) |
 | * | Operador | &#x1F852; | Se passar = Trazer atividade do servidor |
 
 <!-- END REF-->

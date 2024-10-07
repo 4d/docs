@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE DATA FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| accessPath | String | &#x1F852; | Name or complete access path of the data file to create |
+| accessPath | Text | &#x1F852; | Name or complete access path of the data file to create |
 
 <!-- END REF-->
 

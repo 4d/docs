@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Random.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | 倍長整数 | &#x1F850; | 乱数値 |
+| 戻り値 | Integer | &#x1F850; | 乱数値 |
 
 <!-- END REF-->
 

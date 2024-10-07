@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ENCRYPT BLOB.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| aCifrar | BLOB | &#x1F852; | Datos a cifrar |
+| aCifrar | Blob | &#x1F852; | Datos a cifrar |
 | &#x1F858; | Datos cifrados |
-| enviarLlavePriv | BLOB | &#x1F852; | Llave privada del emisor |
-| recepLlavePub | BLOB | &#x1F852; | Llave pública del receptor |
+| enviarLlavePriv | Blob | &#x1F852; | Llave privada del emisor |
+| recepLlavePub | Blob | &#x1F852; | Llave pública del receptor |
 
 <!-- END REF-->
 

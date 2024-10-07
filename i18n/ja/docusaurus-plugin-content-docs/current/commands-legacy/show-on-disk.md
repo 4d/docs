@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SHOW ON DISK.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| pathname | 文字 | &#x1F852; | 表示するアイテムのパス名 |
+| pathname | Text | &#x1F852; | 表示するアイテムのパス名 |
 | * | 演算子 | &#x1F852; | アイテムがフォルダの場合、その内容を表示 |
 
 <!-- END REF-->

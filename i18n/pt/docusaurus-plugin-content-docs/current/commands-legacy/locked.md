@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Locked.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela a marcar para registros atuais bloqueados, ou tabela padrão, se omitido |
-| Resultado | Booleano | &#x1F850; | Registro está bloqueado (TRUE), ou Registros está desbloqueado (FALSE) |
+| tabela | Table | &#x1F852; | Tabela a marcar para registros atuais bloqueados, ou tabela padrão, se omitido |
+| Resultado | Boolean | &#x1F850; | Registro está bloqueado (TRUE), ou Registros está desbloqueado (FALSE) |
 
 <!-- END REF-->
 

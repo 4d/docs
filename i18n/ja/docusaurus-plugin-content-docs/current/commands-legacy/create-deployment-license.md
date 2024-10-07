@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | mergedApp | 4D.Folder | &#x1F852; | 組み込みアプリケーションを格納したフォルダ |
-| buildLicense | ファイルオブジェクト | &#x1F852; | 埋め込みライセンスを生成するのに必要なライセンス |
-| oemLicense | ファイルオブジェクト | &#x1F852; | サーバーライセンスの場合には4D OEM XML Key ライセンス |
-| 戻り値 | オブジェクト | &#x1F850; | ステータス |
+| buildLicense | 4D.File | &#x1F852; | 埋め込みライセンスを生成するのに必要なライセンス |
+| oemLicense | 4D.File | &#x1F852; | サーバーライセンスの場合には4D OEM XML Key ライセンス |
+| 戻り値 | Object | &#x1F850; | ステータス |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.MODIFY SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla a mostrar y modificar o Tabla por defecto, si se omite |
-| modoSelección | Entero largo | &#x1F852; | Modo de selección |
-| entradaList | Booleano | &#x1F852; | Autorizar entrada en lista |
+| tabla | Table | &#x1F852; | Tabla a mostrar y modificar o Tabla por defecto, si se omite |
+| modoSelección | Integer | &#x1F852; | Modo de selección |
+| entradaList | Boolean | &#x1F852; | Autorizar entrada en lista |
 | * | &#x1F852; | Utilizar formulario de salida para un sólo registro y ocultar las barras de desplazamiento en el formulario de     entrada |
 | * | &#x1F852; | Mostrar las barras de desplazamiento en el formulario de entrada (anula la segunda opción del primer parámetro *) |
 

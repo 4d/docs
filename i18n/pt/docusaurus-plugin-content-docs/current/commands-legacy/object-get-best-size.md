@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
-| largIdeal | Inteiro longo | &#x1F858; | Largura ideal do objeto |
-| alturaIdeal | Inteiro longo | &#x1F858; | Altura ideal do objeto |
-| larguraMax | Inteiro longo | &#x1F852; | Altura máxima do objeto |
+| objeto | any | &#x1F852; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
+| largIdeal | Integer | &#x1F858; | Largura ideal do objeto |
+| alturaIdeal | Integer | &#x1F858; | Altura ideal do objeto |
+| larguraMax | Integer | &#x1F852; | Altura máxima do objeto |
 
 <!-- END REF-->
 

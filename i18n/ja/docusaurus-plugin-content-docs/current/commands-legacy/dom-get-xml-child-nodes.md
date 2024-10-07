@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM GET XML CHILD NODES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | テキスト | &#x1F852; | XML要素参照 |
-| childTypesArr | 倍長整数配列 | &#x1F858; | 子ノードのタイプ |
-| nodeRefsArr | テキスト配列 | &#x1F858; | 子ノードの参照または値 |
+| elementRef | Text | &#x1F852; | XML要素参照 |
+| childTypesArr | Integer array | &#x1F858; | 子ノードのタイプ |
+| nodeRefsArr | Text array | &#x1F858; | 子ノードの参照または値 |
 
 <!-- END REF-->
 

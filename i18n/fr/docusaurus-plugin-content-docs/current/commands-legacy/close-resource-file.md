@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLOSE RESOURCE FILE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resFichier | RefDoc | &#x1F852; | Numéro de référence de fichier de ressources |
+| resFichier | Time | &#x1F852; | Numéro de référence de fichier de ressources |
 
 <!-- END REF-->
 

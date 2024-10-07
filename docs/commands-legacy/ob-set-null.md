@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OB SET NULL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object, Object Field | &#x1F852; | Structured object |
+| object | Object, Object | &#x1F852; | Structured object |
 | property | Text | &#x1F852; | Name of property where null value is to be applied |
 
 <!-- END REF-->

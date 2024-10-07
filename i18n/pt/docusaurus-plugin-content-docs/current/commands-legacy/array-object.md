@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | nomArray | Array | &#x1F852; | Nome do array |
-| tam | Inteiro longo | &#x1F852; | Número de elementos do array ou número de arrays se especificado tam2 |
-| tam2 | Inteiro longo | &#x1F852; | Número de elementos do array 2D |
+| tam | Integer | &#x1F852; | Número de elementos do array ou número de arrays se especificado tam2 |
+| tam2 | Integer | &#x1F852; | Número de elementos do array 2D |
 
 <!-- END REF-->
 

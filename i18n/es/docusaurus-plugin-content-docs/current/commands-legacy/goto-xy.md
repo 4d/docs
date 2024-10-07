@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GOTO XY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| x | Entero largo | &#x1F852; | Posición x (horizontal) del cursor |
-| y | Entero largo | &#x1F852; | Posición y (vertical) del cursor |
+| x | Integer | &#x1F852; | Posición x (horizontal) del cursor |
+| y | Integer | &#x1F852; | Posición y (vertical) del cursor |
 
 <!-- END REF-->
 

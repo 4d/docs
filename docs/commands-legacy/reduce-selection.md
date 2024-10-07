@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table for which to reduce the selection, or Default table, if omitted |
-| number | Longint | &#x1F852; | Number of records to keep selected |
+| number | Integer | &#x1F852; | Number of records to keep selected |
 
 <!-- END REF-->
 

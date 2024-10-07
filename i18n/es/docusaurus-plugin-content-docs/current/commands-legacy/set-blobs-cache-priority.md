@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET BLOBS CACHE PRIORITY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla cuyo valor de prioridad de datos "blobs" tiene que definirse para la sesión |
-| prioridad | Entero largo | &#x1F852; | Valor de prioridad de la caché para BLOBs en la tabla |
+| tabla | Table | &#x1F852; | Tabla cuyo valor de prioridad de datos "blobs" tiene que definirse para la sesión |
+| prioridad | Integer | &#x1F852; | Valor de prioridad de la caché para BLOBs en la tabla |
 
 <!-- END REF-->
 

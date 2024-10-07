@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LONGINT TO BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| longint | 倍長整数 | &#x1F852; | BLOBに書き込む倍長整数値 |
-| BLOB | BLOB | &#x1F852; | 倍長整数値を受け取るBLOB |
-| byteOrder | 倍長整数 | &#x1F852; | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
+| longint | Integer | &#x1F852; | BLOBに書き込む倍長整数値 |
+| Blob | Blob | &#x1F852; | 倍長整数値を受け取るBLOB |
+| byteOrder | Integer | &#x1F852; | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
 | offset &#124; * | 変数, 演算子 | &#x1F852; | BLOB内のオフセット (バイト単位) または値を追加する場合 * |
 | &#x1F858; | *でない場合、書き込み後の新しいオフセット |
 

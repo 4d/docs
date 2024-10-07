@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get 4D folder.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| folder | Longint | &#x1F852; | Folder type (if omitted = active 4D folder) |
+| folder | Integer | &#x1F852; | Folder type (if omitted = active 4D folder) |
 | options | Object | &#x1F852; | 4D Client database folder path configuration |
 | * | Operator | &#x1F852; | Return folder of host database |
 | Function result | String | &#x1F850; | Pathname to 4D Folder |

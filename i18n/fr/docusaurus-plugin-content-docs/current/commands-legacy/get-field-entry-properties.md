@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | ptrChp &#124; numTable | Pointeur, Entier long | &#x1F852; | Pointeur de champ ou Numéro de table |
-| numChamp | Entier long | &#x1F852; | Numéro de champ si un numéro de table est passé en premier paramètre |
-| énumération | Chaîne | &#x1F858; | Nom de l’énumération associée ou Chaîne vide |
-| obligatoire | Booléen | &#x1F858; | Vrai = Obligatoire, Faux = Facultatif |
-| nonSaisissable | Booléen | &#x1F858; | Vrai = Non saisissable, Faux = Saisissable |
-| nonModifiable | Booléen | &#x1F858; | Vrai = Non modifiable, Faux = Modifiable |
+| numChamp | Integer | &#x1F852; | Numéro de champ si un numéro de table est passé en premier paramètre |
+| énumération | Text | &#x1F858; | Nom de l’énumération associée ou Chaîne vide |
+| obligatoire | Boolean | &#x1F858; | Vrai = Obligatoire, Faux = Facultatif |
+| nonSaisissable | Boolean | &#x1F858; | Vrai = Non saisissable, Faux = Saisissable |
+| nonModifiable | Boolean | &#x1F858; | Vrai = Non modifiable, Faux = Modifiable |
 
 <!-- END REF-->
 

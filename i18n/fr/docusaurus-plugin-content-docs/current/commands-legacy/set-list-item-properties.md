@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
-| liste | RefListe, Chaîne | &#x1F852; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| liste | Integer, Text | &#x1F852; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
 | refElément &#124; * | Opérateur, Entier long | &#x1F852; | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
-| saisissable | Booléen | &#x1F852; | Vrai = Saisissable, Faux = Non-saisissable |
-| style | Entier long | &#x1F852; | Style de police pour l'élément |
-| icône | Texte, Entier long | &#x1F852; | Nom ou numéro d'image ("" ou 0 pour ne pas associer d'icône) |
-| couleur | Entier long | &#x1F852; | Valeur de couleur RVB ou -1 = rétablir couleur originale |
+| saisissable | Boolean | &#x1F852; | Vrai = Saisissable, Faux = Non-saisissable |
+| style | Integer | &#x1F852; | Style de police pour l'élément |
+| icône | Text, Integer | &#x1F852; | Nom ou numéro d'image ("" ou 0 pour ne pas associer d'icône) |
+| couleur | Integer | &#x1F852; | Valeur de couleur RVB ou -1 = rétablir couleur originale |
 
 <!-- END REF-->
 

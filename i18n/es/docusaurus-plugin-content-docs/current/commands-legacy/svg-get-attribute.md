@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objetoImagen es un nombre de objeto (cadena). Si se omite, objetoImagen es una variable o un campo |
-| objetoImagen | Imagen | &#x1F852; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
-| id_Element | Texto | &#x1F852; | ID del elemento donde uno o más atributos se definen |
-| nomAtrib | Cadena | &#x1F852; | Atributo cuyo valor quiere obtener |
-| valorAtrib | Cadena, Entero largo | &#x1F858; | Valor actual del atributo |
+| objetoPicture | Picture | &#x1F852; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
+| id_Element | Text | &#x1F852; | ID del elemento donde uno o más atributos se definen |
+| nomAtrib | Text | &#x1F852; | Atributo cuyo valor quiere obtener |
+| valorAtrib | Text, Integer | &#x1F858; | Valor actual del atributo |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.PRINTERS LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tabNoms | Tableau texte | &#x1F858; | Noms des imprimantes |
-| tabNomsAlt | Tableau texte | &#x1F858; | Windows : Emplacements des imprimantes, macOS : Noms personnalisés des imprimantes |
-| tabModèles | Tableau texte | &#x1F858; | Modèles des imprimantes |
+| tabNoms | Text array | &#x1F858; | Noms des imprimantes |
+| tabNomsAlt | Text array | &#x1F858; | Windows : Emplacements des imprimantes, macOS : Noms personnalisés des imprimantes |
+| tabModèles | Text array | &#x1F858; | Modèles des imprimantes |
 
 <!-- END REF-->
 

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | $2 | Texto | &#x1F858; | Senha |
 | $3 | Booleano | &#x1F858; | True = modo Digest, False = modo Basic |
 | $4 | Texto | &#x1F858; | Endereço IP do caller |
-| Resultado | Booleano | &#x1F850; | True = pedido aceito, False = pedido rejeitado |
+| Resultado | Boolean | &#x1F850; | True = pedido aceito, False = pedido rejeitado |
 
 <!-- END REF-->
 

@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET HEADER AND FOOTER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Entero largo | &#x1F852; | Referencia del área |
-| selector | Entero largo | &#x1F852; | 1 = Encabezado, 2 = Pie de página |
-| tituloIzq | Cadena | &#x1F858; | Texto mostrado a la izquierda |
-| tituloCent | Cadena | &#x1F858; | Texto mostrado en el centro |
-| tituloDer | Cadena | &#x1F858; | Texto mostrado a la derecha |
-| alto | Entero largo | &#x1F858; | Altura del encabezado o pie de página |
-| imagen | Imagen | &#x1F858; | Imagen a mostrar |
-| alinImag | Entero largo | &#x1F858; | Atributo de alineación para la imagen |
+| area | Integer | &#x1F852; | Referencia del área |
+| selector | Integer | &#x1F852; | 1 = Encabezado, 2 = Pie de página |
+| tituloIzq | Text | &#x1F858; | Texto mostrado a la izquierda |
+| tituloCent | Text | &#x1F858; | Texto mostrado en el centro |
+| tituloDer | Text | &#x1F858; | Texto mostrado a la derecha |
+| alto | Integer | &#x1F858; | Altura del encabezado o pie de página |
+| imagen | Picture | &#x1F858; | Imagen a mostrar |
+| alinImag | Integer | &#x1F858; | Atributo de alineación para la imagen |
 
 <!-- END REF-->
 

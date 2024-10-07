@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET QUERY AND LOCK.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| bloq | Booleano | &#x1F852; | True = bloquear los registros encontrados por las búsquedas False = No bloquear registros |
+| bloq | Boolean | &#x1F852; | True = bloquear los registros encontrados por las búsquedas False = No bloquear registros |
 
 <!-- END REF-->
 

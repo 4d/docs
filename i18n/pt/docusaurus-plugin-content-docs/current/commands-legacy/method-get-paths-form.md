@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET PATHS FORM.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| aTabela | Tabela | &#x1F852; | Referência de tabela |
-| arrRotas | Array texto | &#x1F858; | Arrays de rotas e nomes dos métodos |
-| filtro | Texto | &#x1F852; | Filtros de nomes |
-| marcador | Variável Real | &#x1F852; | Valor mínimo de marcador |
+| aTable | Table | &#x1F852; | Referência de tabela |
+| arrRotas | Text array | &#x1F858; | Arrays de rotas e nomes dos métodos |
+| filtro | Text | &#x1F852; | Filtros de nomes |
+| marcador | Real | &#x1F852; | Valor mínimo de marcador |
 | &#x1F858; | Novo valor atual |
 | * | Operador | &#x1F852; | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM SET XML ELEMENT NAME.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | String | &#x1F852; | XML element reference |
-| elementName | String | &#x1F852; | New name of element |
+| elementRef | Text | &#x1F852; | XML element reference |
+| elementName | Text | &#x1F852; | New name of element |
 
 <!-- END REF-->
 

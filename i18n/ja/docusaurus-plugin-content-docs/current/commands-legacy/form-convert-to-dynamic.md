@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM Convert to dynamic.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | フォームテーブル |
-| formName | テキスト | &#x1F852; | "クラシック"プロジェクトフォーム名またはテーブルフォーム名 |
-| 戻り値 | オブジェクト | &#x1F850; | formNameのフォームをダイナミックフォームに変換したもの |
+| aTable | Table | &#x1F852; | フォームテーブル |
+| formName | Text | &#x1F852; | "クラシック"プロジェクトフォーム名またはテーブルフォーム名 |
+| 戻り値 | Object | &#x1F850; | formNameのフォームをダイナミックフォームに変換したもの |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Min.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| series | フィールド, 配列 | &#x1F852; | 最小値を求めるデータ |
-| attributePath | テキスト | &#x1F852; | 最小値を取得したい属性のパス |
-| 戻り値 | 数値, 日付 | &#x1F850; | series中の最小値 |
+| series | Field, Array | &#x1F852; | 最小値を求めるデータ |
+| attributePath | Text | &#x1F852; | 最小値を取得したい属性のパス |
+| 戻り値 | Number, Date | &#x1F850; | series中の最小値 |
 
 <!-- END REF-->
 

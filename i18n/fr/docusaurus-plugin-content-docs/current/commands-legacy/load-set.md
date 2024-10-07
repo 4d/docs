@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table à laquelle appartient l'ensemble ou Table par défaut si ce paramètre est omis |
-| ensemble | Chaîne | &#x1F852; | Nom de l'ensemble à créer en mémoire |
-| nomFichier | Chaîne | &#x1F852; | Document disque contenant l'ensemble |
+| ensemble | Text | &#x1F852; | Nom de l'ensemble à créer en mémoire |
+| nomFichier | Text | &#x1F852; | Document disque contenant l'ensemble |
 
 <!-- END REF-->
 

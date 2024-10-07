@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
-| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| foregroundColor | Text, Longint | &#x1F858; | RGB color value for foreground |
-| backgroundColor | Text, Longint | &#x1F858; | RGB color value for background |
-| altBackgrndColor | Text, Longint | &#x1F858; | RGB color value for alternating background |
+| object | any | &#x1F852; | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
+| foregroundColor | Text, Integer | &#x1F858; | RGB color value for foreground |
+| backgroundColor | Text, Integer | &#x1F858; | RGB color value for background |
+| altBackgrndColor | Text, Integer | &#x1F858; | RGB color value for alternating background |
 
 <!-- END REF-->
 

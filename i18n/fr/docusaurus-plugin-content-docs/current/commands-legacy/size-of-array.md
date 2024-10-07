@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Size of array.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableau | Tableau | &#x1F852; | Tableau dont vous désirez connaître la taille |
-| Résultat | Entier long | &#x1F850; | Nombre d'éléments dans le tableau |
+| tableau | Array | &#x1F852; | Tableau dont vous désirez connaître la taille |
+| Résultat | Integer | &#x1F850; | Nombre d'éléments dans le tableau |
 
 <!-- END REF-->
 

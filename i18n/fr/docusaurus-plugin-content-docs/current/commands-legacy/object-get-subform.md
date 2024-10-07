@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
 | ptrTable | Table | &#x1F858; | Pointeur vers la table du formulaire |
-| sousFormDetail | Texte | &#x1F858; | Nom du formulaire détail du sous-formulaire |
-| sousFormListe | Texte | &#x1F858; | Nom du formulaire liste du sous-formulaire (formulaire table) |
+| sousFormDetail | Text | &#x1F858; | Nom du formulaire détail du sous-formulaire |
+| sousFormListe | Text | &#x1F858; | Nom du formulaire liste du sous-formulaire (formulaire table) |
 
 <!-- END REF-->
 

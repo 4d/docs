@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SMTP New transporter.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| server | Objeto | &#x1F852; | Mail server information |
-| Resultado | Objeto | &#x1F850; | SMTP transporter object |
+| server | Object | &#x1F852; | Mail server information |
+| Resultado | Object | &#x1F850; | SMTP transporter object |
 
 <!-- END REF-->
 

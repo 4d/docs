@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laDate | Date | &#x1F852; | Date dont vous voulez extraire le mois |
-| Résultat | Entier long | &#x1F850; | Nombre indiquant le mois de date |
+| Résultat | Integer | &#x1F850; | Nombre indiquant le mois de date |
 
 <!-- END REF-->
 

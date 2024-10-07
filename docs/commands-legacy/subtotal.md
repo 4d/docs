@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | data | Field | &#x1F852; | Numeric field or variable to return subtotal |
-| pageBreak | Longint | &#x1F852; | Break level for which to cause a page break |
+| pageBreak | Integer | &#x1F852; | Break level for which to cause a page break |
 | Function result | Real | &#x1F850; | Subtotal of data |
 
 <!-- END REF-->

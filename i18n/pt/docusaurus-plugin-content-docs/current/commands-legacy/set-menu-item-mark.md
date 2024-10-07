@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SET MENU ITEM MARK.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Inteiro longo, MenuRef | &#x1F852; | Número de menu ou menu de referência |
-| menuItem | Inteiro longo | &#x1F852; | Número de Item ou -1 para o último item adicionado |
-| marcar | String | &#x1F852; | Marcar item Novo menu |
-| processo | Inteiro longo | &#x1F852; | Número de referência de processo |
+| menu | Integer, Text | &#x1F852; | Número de menu ou menu de referência |
+| menuItem | Integer | &#x1F852; | Número de Item ou -1 para o último item adicionado |
+| marcar | Text | &#x1F852; | Marcar item Novo menu |
+| processo | Integer | &#x1F852; | Número de referência de processo |
 
 <!-- END REF-->
 

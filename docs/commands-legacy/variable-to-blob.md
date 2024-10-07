@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | variable | Variable | &#x1F852; | Variable to store in the BLOB |
-| blob | BLOB | &#x1F852; | BLOB to receive the variable |
+| blob | Blob | &#x1F852; | BLOB to receive the variable |
 | offset &#124; * | Variable, Operator | &#x1F852; | Offset within the BLOB (expressed in bytes) or * to append the value |
 | &#x1F858; | New offset after writing if not * |
 

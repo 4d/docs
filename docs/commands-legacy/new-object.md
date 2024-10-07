@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | property | Text | &#x1F852; | Name of property to create |
-| value | Mixed | &#x1F852; | Value of property |
+| value | any | &#x1F852; | Value of property |
 | Function result | Object | &#x1F850; | New language object |
 
 <!-- END REF-->

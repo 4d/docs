@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | objectNames | Text array | &#x1F852; | Array of object names in their expected entry order |
-| pageNumber | Longint | &#x1F852; | Number of the page to set the entry order (current page if omitted) |
+| pageNumber | Integer | &#x1F852; | Number of the page to set the entry order (current page if omitted) |
 
 <!-- END REF-->
 

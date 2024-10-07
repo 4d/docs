@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | array | Array | &#x1F852; | Array to search |
 | value | Expression | &#x1F852; | Value of same type to search in the array |
-| start | Longint | &#x1F852; | Element at which to start searching |
+| start | Integer | &#x1F852; | Element at which to start searching |
 | Function result | Longint | &#x1F850; | Number of the first element in array that matches value |
 
 <!-- END REF-->

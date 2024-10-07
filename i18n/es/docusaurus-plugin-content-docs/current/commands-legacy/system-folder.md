@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.System folder.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tipo | Entero largo | &#x1F852; | Tipo de carpeta sistema |
-| Resultado | Cadena | &#x1F850; | Ruta de acceso de una carpeta del sistema activo |
+| tipo | Integer | &#x1F852; | Tipo de carpeta sistema |
+| Resultado | Text | &#x1F850; | Ruta de acceso de una carpeta del sistema activo |
 
 <!-- END REF-->
 

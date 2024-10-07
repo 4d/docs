@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
-| startSel | Longint | &#x1F852; | Start of selection |
-| endSel | Longint | &#x1F852; | End of selection |
-| startBlock | Longint | &#x1F858; | Start position of first type of selection |
-| endBlock | Longint | &#x1F858; | End position of first type of selection |
+| object | any | &#x1F852; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| startSel | Integer | &#x1F852; | Start of selection |
+| endSel | Integer | &#x1F852; | End of selection |
+| startBlock | Integer | &#x1F858; | Start position of first type of selection |
+| endBlock | Integer | &#x1F858; | End position of first type of selection |
 | Function result | Longint | &#x1F850; | Type of content |
 
 <!-- END REF-->

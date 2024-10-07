@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Devuelve el número de página de subformulario actual |
-| Resultado | Entero largo | &#x1F850; | Número de la página del formulario mostrada actualmente |
+| Resultado | Integer | &#x1F850; | Número de la página del formulario mostrada actualmente |
 
 <!-- END REF-->
 

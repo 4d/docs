@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | elementRef &#124; document | テキスト | &#x1F852; | XMLルート要素参照、または開かれたドキュメント参照 |
-| selector | 倍長整数 | &#x1F852; | 設定するオプション |
-| value | 倍長整数 | &#x1F852; | オプションの値 |
+| selector | Integer | &#x1F852; | 設定するオプション |
+| value | Integer | &#x1F852; | オプションの値 |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Metodo base On Backup Startup.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Entero largo | &#x1F850; | 0 = backup autorizado; valor diferente de 0 = backup no autorizado |
+| Resultado | Integer | &#x1F850; | 0 = backup autorizado; valor diferente de 0 = backup no autorizado |
 
 <!-- END REF-->
 

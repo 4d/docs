@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Active transaction.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | ブール | &#x1F850; | トランザクションが停止中の場合、FALSE を返します。 |
+| 戻り値 | Boolean | &#x1F850; | トランザクションが停止中の場合、FALSE を返します。 |
 
 <!-- END REF-->
 

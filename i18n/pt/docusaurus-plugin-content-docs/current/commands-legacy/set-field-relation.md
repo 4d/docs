@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | tabelaN &#124; campoN | Tabela, Campo | &#x1F852; | Tabela de início das relações ou Campo de início da relação |
-| um | Inteiro longo | &#x1F852; | Estado da relação Muitos a Um a partir do campo ou das relações Muitos a Um da tabela |
-| muitos | Inteiro longo | &#x1F852; | Estado da relação Um a Muitos a partir do campo ou das relações Um a Muitos da tabela |
+| um | Integer | &#x1F852; | Estado da relação Muitos a Um a partir do campo ou das relações Muitos a Um da tabela |
+| muitos | Integer | &#x1F852; | Estado da relação Um a Muitos a partir do campo ou das relações Um a Muitos da tabela |
 
 <!-- END REF-->
 

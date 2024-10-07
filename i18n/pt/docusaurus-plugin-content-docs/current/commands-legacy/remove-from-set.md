@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.REMOVE FROM SET.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Registro atual da tabela, ou tabela padrão, se omitido |
-| conjunto | String | &#x1F852; | Nome do conjunto ao qual para remover o registro atual |
+| tabela | Table | &#x1F852; | Registro atual da tabela, ou tabela padrão, se omitido |
+| conjunto | Text | &#x1F852; | Nome do conjunto ao qual para remover o registro atual |
 
 <!-- END REF-->
 

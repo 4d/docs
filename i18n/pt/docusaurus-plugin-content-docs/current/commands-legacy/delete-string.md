@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Delete string.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| fonte | String | &#x1F852; | Cadeia da qual vai apagar caracteres |
-| posiçao | Inteiro longo | &#x1F852; | Primeiro caractere a apagar |
-| numCaracteres | Inteiro longo | &#x1F852; | Número de caracteres a apagar |
-| Resultado | String | &#x1F850; | Cadeia resultante |
+| fonte | Text | &#x1F852; | Cadeia da qual vai apagar caracteres |
+| posiçao | Integer | &#x1F852; | Primeiro caractere a apagar |
+| numCaracteres | Integer | &#x1F852; | Número de caracteres a apagar |
+| Resultado | Text | &#x1F850; | Cadeia resultante |
 
 <!-- END REF-->
 

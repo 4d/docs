@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.BRING TO FRONT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| proceso | Entero largo | &#x1F852; | Número del proceso a pasar al primer plano |
+| proceso | Integer | &#x1F852; | Número del proceso a pasar al primer plano |
 
 <!-- END REF-->
 

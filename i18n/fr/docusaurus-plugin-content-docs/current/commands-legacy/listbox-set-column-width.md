@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| largeur | Entier long | &#x1F852; | Largeur de colonne (en pixels) |
-| largeurMini | Entier long | &#x1F852; | Largeur minimale de colonne (en pixels) |
-| largeurMaxi | Entier long | &#x1F852; | Largeur maximale de colonne (en pixels) |
+| objet | any | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| largeur | Integer | &#x1F852; | Largeur de colonne (en pixels) |
+| largeurMini | Integer | &#x1F852; | Largeur minimale de colonne (en pixels) |
+| largeurMaxi | Integer | &#x1F852; | Largeur maximale de colonne (en pixels) |
 
 <!-- END REF-->
 

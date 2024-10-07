@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, pictureObject es un nombre de objeto (cadena) Si se omite, pictureObject es un campo o variable |
-| objetoImagen | Imagen | &#x1F852; | Nombre de objeto (si se especifica *) o Campo o variable (si se omite *) |
-| x | Entero largo | &#x1F852; | X coordenada en píxeles |
-| y | Entero largo | &#x1F852; | Y coordenada en píxeles |
-| Resultado | Cadena | &#x1F850; | ID del elemento encontrado en la ubicación X,Y |
+| objetoPicture | Picture | &#x1F852; | Nombre de objeto (si se especifica *) o Campo o variable (si se omite *) |
+| x | Integer | &#x1F852; | X coordenada en píxeles |
+| y | Integer | &#x1F852; | Y coordenada en píxeles |
+| Resultado | Text | &#x1F850; | ID del elemento encontrado en la ubicación X,Y |
 
 <!-- END REF-->
 

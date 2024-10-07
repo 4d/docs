@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.ON ERR CALL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| errorMethod | String | &#x1F852; | Error method to be invoked, or Empty string to stop trapping errors |
+| errorMethod | Text | &#x1F852; | Error method to be invoked, or Empty string to stop trapping errors |
 | scope | Integer | &#x1F852; | Scope for the error method |
 
 <!-- END REF-->

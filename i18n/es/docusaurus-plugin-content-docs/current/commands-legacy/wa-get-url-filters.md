@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| arrFiltros | Array cadena | &#x1F858; | Array filtros |
-| arrAutorizRechazar | Array booleano | &#x1F858; | Array Autorizar-rechazar |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| arrFiltros | Text array | &#x1F858; | Array filtros |
+| arrAutorizRechazar | Boolean array | &#x1F858; | Array Autorizar-rechazar |
 
 <!-- END REF-->
 

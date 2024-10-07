@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table de laquelle connaître le taux de fragmentation |
-| Résultat | Réel | &#x1F850; | Pourcentage de fragmentation |
+| Résultat | Real | &#x1F850; | Pourcentage de fragmentation |
 
 <!-- END REF-->
 

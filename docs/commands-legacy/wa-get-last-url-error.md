@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| url | String | &#x1F858; | URL at origin of error |
-| description | String | &#x1F858; | Description of error (Mac OS) |
-| errorCode | Longint | &#x1F858; | Error code |
+| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| url | Text | &#x1F858; | URL at origin of error |
+| description | Text | &#x1F858; | Description of error (Mac OS) |
+| errorCode | Integer | &#x1F858; | Error code |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | numTabela&#124;pontTabela | Inteiro longo, Ponteiro | &#x1F852; | Número da tabela ou ponteiro a tabela |
-| Resultado | String | &#x1F850; | Nome da tabela |
+| Resultado | Text | &#x1F850; | Nome da tabela |
 
 <!-- END REF-->
 

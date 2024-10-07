@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Devuelve la hora actual del servidor |
-| Resultado | Hora | &#x1F850; | Hora actual |
+| Resultado | Time | &#x1F850; | Hora actual |
 
 <!-- END REF-->
 

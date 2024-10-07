@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#x1F852; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| urlsArr | 文字配列 | &#x1F858; | 訪問したURLの配列 |
-| direction | 倍長整数 | &#x1F852; | 0または省略=前のURL配列, 1=次のURL配列 |
-| titlesArr | 文字配列 | &#x1F858; | ウィンドウタイトルの配列 |
+| object | any | &#x1F852; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| urlsArr | Text array | &#x1F858; | 訪問したURLの配列 |
+| direction | Integer | &#x1F852; | 0または省略=前のURL配列, 1=次のURL配列 |
+| titlesArr | Text array | &#x1F858; | ウィンドウタイトルの配列 |
 
 <!-- END REF-->
 

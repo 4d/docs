@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | ptrCamp&#124;numTabla | Puntero, Entero largo | &#x1F852; | Puntero del campo o número de tabla |
-| numCamp | Entero largo | &#x1F852; | Número de campo si el número de tabla se pasa como primer parámetro |
-| lista | Cadena | &#x1F858; | Nombre de la lista asociada o cadena vacía |
-| obligatorio | Booleano | &#x1F858; | True = Obligatorio, False = Opcional |
-| noEditable | Booleano | &#x1F858; | True = No editable, False = Editable |
-| noModificable | Booleano | &#x1F858; | True = No modificable, False = Modificable |
+| numCamp | Integer | &#x1F852; | Número de campo si el número de tabla se pasa como primer parámetro |
+| lista | Text | &#x1F858; | Nombre de la lista asociada o cadena vacía |
+| obligatorio | Boolean | &#x1F858; | True = Obligatorio, False = Opcional |
+| noEditable | Boolean | &#x1F858; | True = No editable, False = Editable |
+| noModificable | Boolean | &#x1F858; | True = No modificable, False = Modificable |
 
 <!-- END REF-->
 

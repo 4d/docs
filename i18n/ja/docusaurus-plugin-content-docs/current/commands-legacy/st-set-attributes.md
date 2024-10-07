@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#x1F852; | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時) または <br/>フィールドまたは変数 (* 省略時) |
-| startSel | 倍長整数 | &#x1F852; | 新しいテキスト選択の開始位置 |
-| endSel | 倍長整数 | &#x1F852; | 新しいテキスト選択の終了位置 |
-| attribName | 文字 | &#x1F852; | 設定する属性 |
-| attribValue | 文字, 倍長整数 | &#x1F852; | 新しい属性値 |
+| object | any | &#x1F852; | オブジェクト名 (* 指定時) または <br/>フィールドまたは変数 (* 省略時) |
+| startSel | Integer | &#x1F852; | 新しいテキスト選択の開始位置 |
+| endSel | Integer | &#x1F852; | 新しいテキスト選択の終了位置 |
+| attribName | Text | &#x1F852; | 設定する属性 |
+| attribValue | Text, Integer | &#x1F852; | 新しい属性値 |
 
 <!-- END REF-->
 

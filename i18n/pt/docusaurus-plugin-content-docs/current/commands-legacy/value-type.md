@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | expressão | Expression | &#x1F852; | Expressão cujo valor resultante será testado |
-| Resultado | Inteiro longo | &#x1F850; | Número do tipo de dado |
+| Resultado | Integer | &#x1F850; | Número do tipo de dado |
 
 <!-- END REF-->
 

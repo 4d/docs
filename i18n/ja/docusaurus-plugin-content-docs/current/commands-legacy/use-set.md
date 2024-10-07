@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.USE SET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| set | 文字 | &#x1F852; | 使用するセットの名前 |
+| set | Text | &#x1F852; | 使用するセットの名前 |
 
 <!-- END REF-->
 

@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | array | Array | &#x1F852; | Array do qual apagar os elementos |
-| posição | Inteiro longo | &#x1F852; | Elemento onde se inicia o processo |
-| quantos | Inteiro longo | &#x1F852; | Número de elementos a apagar |
+| posição | Integer | &#x1F852; | Elemento onde se inicia o processo |
+| quantos | Integer | &#x1F852; | Número de elementos a apagar |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | date | Date | &#x1F852; | Date dont vous voulez extraire le jour |
-| Résultat | Entier long | &#x1F850; | Jour du mois de date |
+| Résultat | Integer | &#x1F850; | Jour du mois de date |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Encrypt data BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blobToEncrypt | BLOB | &#x1F852; | BLOB à encrypter |
+| blobToEncrypt | Blob | &#x1F852; | BLOB à encrypter |
 | keyObject &#124; passPhrase | Objet, Texte | &#x1F852; | Objet JSON contenant la clé de chiffrement ou le mot de passe pour une génération directe de clé de chiffrement (texte) |
-| salt | Entier long | &#x1F852; | Additional salt for algorithm |
-| encryptedBLOB | BLOB | &#x1F858; | BLOB encrypté |
-| Résultat | Booléen | &#x1F850; | True si le chiffrement a été effectué correctement. Sinon False |
+| salt | Integer | &#x1F852; | Additional salt for algorithm |
+| encryptedBlob | Blob | &#x1F858; | BLOB encrypté |
+| Résultat | Boolean | &#x1F850; | True si le chiffrement a été effectué correctement. Sinon False |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SERVICE SET PARAMETER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| name | 文字 | &#x1F852; | SOAPリクエストに含める引数の名前 |
-| value | 変数 | &#x1F852; | 引数の値を格納する4D変数 |
-| soapType | 文字 | &#x1F852; | 引数のSOAPタイプ |
+| name | Text | &#x1F852; | SOAPリクエストに含める引数の名前 |
+| value | Variable | &#x1F852; | 引数の値を格納する4D変数 |
+| soapType | Text | &#x1F852; | 引数のSOAPタイプ |
 
 <!-- END REF-->
 

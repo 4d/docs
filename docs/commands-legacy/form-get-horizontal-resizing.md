@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resize | Boolean | &#x1F858; | True: Form can be resized horizontally<br/>False: Form cannot be resized horizontally |
-| minWidth | Longint | &#x1F858; | Smallest form width allowed (pixels) |
-| maxWidth | Longint | &#x1F858; | Largest form width allowed (pixels) |
+| minWidth | Integer | &#x1F858; | Smallest form width allowed (pixels) |
+| maxWidth | Integer | &#x1F858; | Largest form width allowed (pixels) |
 
 <!-- END REF-->
 

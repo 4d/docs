@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Uppercase.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aString | String | &#x1F852; | String to convert to uppercase |
+| aText | Text | &#x1F852; | String to convert to uppercase |
 | * | Operator | &#x1F852; | If passed: keep accents |
 | Function result | String | &#x1F850; | String in uppercase |
 

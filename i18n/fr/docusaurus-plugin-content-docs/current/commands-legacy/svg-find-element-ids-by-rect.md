@@ -10,13 +10,13 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est un champ ou une variable |
-| objetImage | Image | &#x1F852; | Nom d’objet (si * spécifié) ou Champ ou Variable (si * omis) |
-| x | Entier long | &#x1F852; | Coordonnée horizontale du coin haut gauche du rectangle de sélection |
-| y | Entier long | &#x1F852; | Coordonnée verticale du coin haut gauche du rectangle de sélection |
-| largeur | Entier long | &#x1F852; | Largeur du rectangle de sélection |
-| hauteur | Entier long | &#x1F852; | Hauteur du rectangle de sélection |
-| tabIds | Tableau texte | &#x1F858; | IDs des éléments dont le rectangle englobant est en intersection avec le rectangle de sélection |
-| Résultat | Booléen | &#x1F850; | Vrai = au moins un élément est trouvé, Faux sinon |
+| objetPicture | Picture | &#x1F852; | Nom d’objet (si * spécifié) ou Champ ou Variable (si * omis) |
+| x | Integer | &#x1F852; | Coordonnée horizontale du coin haut gauche du rectangle de sélection |
+| y | Integer | &#x1F852; | Coordonnée verticale du coin haut gauche du rectangle de sélection |
+| largeur | Integer | &#x1F852; | Largeur du rectangle de sélection |
+| hauteur | Integer | &#x1F852; | Hauteur du rectangle de sélection |
+| tabIds | Text array | &#x1F858; | IDs des éléments dont le rectangle englobant est en intersection avec le rectangle de sélection |
+| Résultat | Boolean | &#x1F850; | Vrai = au moins un élément est trouvé, Faux sinon |
 
 <!-- END REF-->
 

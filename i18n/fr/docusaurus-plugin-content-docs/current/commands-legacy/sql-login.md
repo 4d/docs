@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL LOGIN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Chaîne | &#x1F852; | Nom de publication de base 4D ouAdresse IP de base distante ouNom de source de données dans le gestionnaire ODBC ou"" pour afficher le dialogue de sélection |
-| nomUtilisateur | Chaîne | &#x1F852; | Nom d’utilisateur enregistré dans la source de données |
-| motDePasse | Chaîne | &#x1F852; | Mot de passe de l’utilisateur |
+| source | Text | &#x1F852; | Nom de publication de base 4D ouAdresse IP de base distante ouNom de source de données dans le gestionnaire ODBC ou"" pour afficher le dialogue de sélection |
+| nomUtilisateur | Text | &#x1F852; | Nom d’utilisateur enregistré dans la source de données |
+| motDePasse | Text | &#x1F852; | Mot de passe de l’utilisateur |
 | * | Opérateur | &#x1F852; | Appliquer à Debut SQL/Fin SQL Si omis : ne pas appliquer (base locale), si passé : appliquer |
 
 <!-- END REF-->

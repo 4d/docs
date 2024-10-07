@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| urlsArr | String array | &#x1F858; | Array of URLs visited |
-| direction | Longint | &#x1F852; | 0 or omitted=List of previous URLs, 1=List of next URLs |
-| titlesArr | String array | &#x1F858; | Array of window titles |
+| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| urlsArr | Text array | &#x1F858; | Array of URLs visited |
+| direction | Integer | &#x1F852; | 0 or omitted=List of previous URLs, 1=List of next URLs |
+| titlesArr | Text array | &#x1F858; | Array of window titles |
 
 <!-- END REF-->
 

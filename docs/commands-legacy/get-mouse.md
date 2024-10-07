@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | mouseX | Real | &#x1F858; | Horizontal coordinate of mouse |
 | mouseY | Real | &#x1F858; | Vertical coordinate of mouse |
-| mouseButton | Longint | &#x1F858; | Mouse button state: 0 = Button up 1 = Button down 2 = Right button down 3 = Both buttons down |
+| mouseButton | Integer | &#x1F858; | Mouse button state: 0 = Button up 1 = Button down 2 = Right button down 3 = Both buttons down |
 | * | Operator | &#x1F852; | If specified, global coordinate system is usedIf omitted, local coordinate system is used |
 
 <!-- END REF-->

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Before.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Booleano | &#x1F850; | Devolve True se o ciclo de execução é um Before |
+| Resultado | Boolean | &#x1F850; | Devolve True se o ciclo de execução é um Before |
 
 <!-- END REF-->
 

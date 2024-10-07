@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
-| listType | Longint | &#x1F852; | Type of list: Choice list, Required list or Excluded list |
-| list | ListRef | &#x1F852; | List reference number |
+| object | any | &#x1F852; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| listType | Integer | &#x1F852; | Type of list: Choice list, Required list or Excluded list |
+| list | Integer | &#x1F852; | List reference number |
 
 <!-- END REF-->
 

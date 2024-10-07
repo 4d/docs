@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE SET FROM ARRAY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla del conjunto |
-| arrayReg | Entero largo, Array booleano | &#x1F852; | Array de número de registros o Array de booleanos (True = el registro está en el conjunto, False = el registro no está en el conjunto) |
-| nomConjunto | Cadena | &#x1F852; | Nombre del conjunto a crear o Aplicar el comando a Userset si se omite |
+| tabla | Table | &#x1F852; | Tabla del conjunto |
+| arrayReg | Integer, Boolean array | &#x1F852; | Array de número de registros o Array de booleanos (True = el registro está en el conjunto, False = el registro no está en el conjunto) |
+| nomConjunto | Text | &#x1F852; | Nombre del conjunto a crear o Aplicar el comando a Userset si se omite |
 
 <!-- END REF-->
 

@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| positionLigne | Entier long | &#x1F852; | Numéro de la première ligne à supprimer |
-| nbLignes | Entier long | &#x1F852; | Nombre de lignes à supprimer |
+| objet | any | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| positionLigne | Integer | &#x1F852; | Numéro de la première ligne à supprimer |
+| nbLignes | Integer | &#x1F852; | Nombre de lignes à supprimer |
 
 <!-- END REF-->
 

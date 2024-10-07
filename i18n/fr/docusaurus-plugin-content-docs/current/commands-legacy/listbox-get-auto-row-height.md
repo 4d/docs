@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (une chaîne). Si omis, objet est une variable. |
-| objet | Objet de formulaire | &#x1F852; | Nom de l'objet (si * est spécifié) ou variable (si * est omis) |
-| sélecteur | Entier long | &#x1F852; | Valeur de hauteur à lire : lk hauteur ligne min ou lk hauteur ligne max |
-| unité | Entier long | &#x1F852; | Valeur d'unité de hauteur : 0 = pixels, 1 = lignes |
-| Résultat | Entier long | &#x1F850; | Valeur de la limite de hauteur de ligne sélectionnée |
+| objet | any | &#x1F852; | Nom de l'objet (si * est spécifié) ou variable (si * est omis) |
+| sélecteur | Integer | &#x1F852; | Valeur de hauteur à lire : lk hauteur ligne min ou lk hauteur ligne max |
+| unité | Integer | &#x1F852; | Valeur d'unité de hauteur : 0 = pixels, 1 = lignes |
+| Résultat | Integer | &#x1F850; | Valeur de la limite de hauteur de ligne sélectionnée |
 
 <!-- END REF-->
 

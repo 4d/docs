@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If set, object is an object name (string) If omitted, object is a table or variable |
-| object | Form object | &#x1F852; | Object name (if * set) or Table or variable (if * omitted) |
-| item | Longint | &#x1F852; | Item number |
+| object | any | &#x1F852; | Object name (if * set) or Table or variable (if * omitted) |
+| item | Integer | &#x1F852; | Item number |
 
 <!-- END REF-->
 

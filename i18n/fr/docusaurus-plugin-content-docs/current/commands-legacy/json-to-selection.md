@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table 4D dans laquelle copier les éléments |
-| jsonTab | Texte | &#x1F852; | Tableau d'objets en JSON |
+| jsonTab | Text | &#x1F852; | Tableau d'objets en JSON |
 
 <!-- END REF-->
 

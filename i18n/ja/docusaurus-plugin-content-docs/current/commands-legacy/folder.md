@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | path &#124; 4Dfolder | テキスト, 倍長整数 | &#x1F852; | フォルダパスまたは4Dフォルダ定数 |
 | pathType &#124; * | 倍長整数, 演算子 | &#x1F852; | path 指定時: fk posix path (デフォルト) または fk platform path<br/>4Dfolder 指定時: ホストデータベースのファイルを返すには* を渡す |
-| 戻り値 | オブジェクト | &#x1F850; | 新規フォルダオブジェクト |
+| 戻り値 | Object | &#x1F850; | 新規フォルダオブジェクト |
 
 <!-- END REF-->
 

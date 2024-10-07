@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table for which to create an empty set, or Default table, if omitted |
-| set | String | &#x1F852; | Name of the new empty set |
+| set | Text | &#x1F852; | Name of the new empty set |
 
 <!-- END REF-->
 

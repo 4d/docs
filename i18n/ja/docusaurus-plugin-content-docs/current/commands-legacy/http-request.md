@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP Request.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| httpMethod | テキスト | &#x1F852; | リクエストで使用するHTTPメソッド |
-| url | テキスト | &#x1F852; | リクエストの送信先URL |
-| contents | テキスト, BLOB, ピクチャー, オブジェクト | &#x1F852; | リクエストボディの内容 |
-| response | テキスト, BLOB, ピクチャー, オブジェクト | &#x1F858; | レスポンスの内容 |
-| headerNames | テキスト配列 | &#x1F852; | リクエストのヘッダー名 |
+| httpMethod | Text | &#x1F852; | リクエストで使用するHTTPメソッド |
+| url | Text | &#x1F852; | リクエストの送信先URL |
+| contents | Text, Blob, Picture, Object | &#x1F852; | リクエストボディの内容 |
+| response | Text, Blob, Picture, Object | &#x1F858; | レスポンスの内容 |
+| headerNames | Text array | &#x1F852; | リクエストのヘッダー名 |
 | &#x1F858; | 返されたヘッダー名 |
-| headerValues | テキスト配列 | &#x1F852; | リクエストのヘッダー値 |
+| headerValues | Text array | &#x1F852; | リクエストのヘッダー値 |
 | &#x1F858; | 返されたヘッダー値 |
 | * | 演算子 | &#x1F852; | 指定時: 接続を保持する (keep-alive)省略時: 自動で接続を閉じる |
-| 戻り値 | 倍長整数 | &#x1F850; | HTTPステータスコード |
+| 戻り値 | Integer | &#x1F850; | HTTPステータスコード |
 
 <!-- END REF-->
 

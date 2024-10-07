@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | numTabla &#124; ptrTabla | Entero largo, Puntero | &#x1F852; | Número de tabla o Puntero a una tabla |
-| numCamp | Entero largo | &#x1F852; | Número de campo |
-| Resultado | Booleano | &#x1F850; | True = el campo existe en la tabla False = el campo no existe en la tabla |
+| numCamp | Integer | &#x1F852; | Número de campo |
+| Resultado | Boolean | &#x1F850; | True = el campo existe en la tabla False = el campo no existe en la tabla |
 
 <!-- END REF-->
 

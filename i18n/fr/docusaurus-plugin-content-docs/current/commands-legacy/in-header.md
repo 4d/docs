@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.In header.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Booléen | &#x1F850; | Vrai si le cycle d'exécution est en entête |
+| Résultat | Boolean | &#x1F850; | Vrai si le cycle d'exécution est en entête |
 
 <!-- END REF-->
 

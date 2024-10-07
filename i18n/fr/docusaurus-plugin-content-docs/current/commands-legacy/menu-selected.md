@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Menu selected.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sousMenu | RefMenu | &#x1F858; | Référence du menu contenant la ligne sélectionnée |
-| Résultat | Entier long | &#x1F850; | Commande de menu sélectionnée : Mot machine haut = n° de menu, Mot machine bas = n° de commande de menu |
+| sousMenu | Text | &#x1F858; | Référence du menu contenant la ligne sélectionnée |
+| Résultat | Integer | &#x1F850; | Commande de menu sélectionnée : Mot machine haut = n° de menu, Mot machine bas = n° de commande de menu |
 
 <!-- END REF-->
 

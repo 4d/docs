@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL LOGIN.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| entradaDatos | Cadena | &#x1F852; | Nombre de publicación de base 4D o <br/>Dirección IP de la base remota o <br/>Nombre de la fuente de datos en el administrador ODBC o<br/>"" para mostrar el diálogo de selección |
-| nomUsuario | Cadena | &#x1F852; | Nombre del usuario registrado en la fuente de datos |
-| contraseña | Cadena | &#x1F852; | Contraseña del usuario registrado en la fuente de datos |
+| entradaDatos | Text | &#x1F852; | Nombre de publicación de base 4D o <br/>Dirección IP de la base remota o <br/>Nombre de la fuente de datos en el administrador ODBC o<br/>"" para mostrar el diálogo de selección |
+| nomUsuario | Text | &#x1F852; | Nombre del usuario registrado en la fuente de datos |
+| contraseña | Text | &#x1F852; | Contraseña del usuario registrado en la fuente de datos |
 | * | Operador | &#x1F852; | Aplicado a Begin SQL/End SQL Si se omite: no aplicar (base de datos local); si se pasa: aplicar |
 
 <!-- END REF-->

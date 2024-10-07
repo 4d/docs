@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.System folder.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tipo | Inteiro longo | &#x1F852; | Tipo de pasta sistema |
-| Resultado | String | &#x1F850; | Rota de acesso de uma pasta do sistema ativo |
+| tipo | Integer | &#x1F852; | Tipo de pasta sistema |
+| Resultado | Text | &#x1F850; | Rota de acesso de uma pasta do sistema ativo |
 
 <!-- END REF-->
 

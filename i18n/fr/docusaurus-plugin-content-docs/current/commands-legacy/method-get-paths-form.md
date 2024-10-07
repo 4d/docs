@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Référence de table |
-| tabChemins | Tableau texte | &#x1F858; | Tableau des chemins et noms des méthodes |
-| filtre | Texte | &#x1F852; | Filtrage des noms |
-| marqueur | Variable réel | &#x1F852; | Valeur minimum de marqueur |
+| tabChemins | Text array | &#x1F858; | Tableau des chemins et noms des méthodes |
+| filtre | Text | &#x1F852; | Filtrage des noms |
+| marqueur | Real | &#x1F852; | Valeur minimum de marqueur |
 | &#x1F858; | Nouvelle valeur courante |
 | * | Opérateur | &#x1F852; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 

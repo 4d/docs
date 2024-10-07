@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | pathName | Text | &#x1F852; | Name or pathname of the log file to be integrated |
-| operationNum | Real variable | &#x1F852; | Number of last operation integrated or -2 to integrate the whole file |
+| operationNum | Real | &#x1F852; | Number of last operation integrated or -2 to integrate the whole file |
 | &#x1F858; | New number of last operation integrated |
-| mode | Longint | &#x1F852; | 0=strict mode (default mode), 1=auto repair mode |
-| errObject | Object variable | &#x1F858; | Missed operation(s) |
+| mode | Integer | &#x1F852; | 0=strict mode (default mode), 1=auto repair mode |
+| errObject | Object | &#x1F858; | Missed operation(s) |
 
 <!-- END REF-->
 

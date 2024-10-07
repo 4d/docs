@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FIRST RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | セレクションの先頭をカレントレコードにするテーブル または省略時デフォルトテーブル |
+| aTable | Table | &#x1F852; | セレクションの先頭をカレントレコードにするテーブル または省略時デフォルトテーブル |
 
 <!-- END REF-->
 

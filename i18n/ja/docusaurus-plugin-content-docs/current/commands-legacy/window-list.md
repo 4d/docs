@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WINDOW LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| windows | 配列 | &#x1F858; | ウィンドウ参照番号の配列 |
+| windows | Array | &#x1F858; | ウィンドウ参照番号の配列 |
 | * | 演算子 | &#x1F852; | 指定時, フローティングウィンドウも含める 省略時, フローティングウィンドウを含めない |
 
 <!-- END REF-->

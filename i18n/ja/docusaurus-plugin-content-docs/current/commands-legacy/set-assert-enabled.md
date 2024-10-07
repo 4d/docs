@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET ASSERT ENABLED.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| assertions | ブール | &#x1F852; | True = アサーションを有効にする<br/>False = アサーションを無効にする |
+| assertions | Boolean | &#x1F852; | True = アサーションを有効にする<br/>False = アサーションを無効にする |
 | * | 演算子 | &#x1F852; | 省略時 = すべてのプロセスにコマンドを適用 (既存および後で作成されるものを含む)<br/>指定時= カレントプロセスのみにコマンドを適用 |
 
 <!-- END REF-->

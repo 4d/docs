@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB LEGACY CLOSE SESSION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| idSesion | Texto | &#x1F852; | UUID de sesión |
+| idSesion | Text | &#x1F852; | UUID de sesión |
 
 <!-- END REF-->
 

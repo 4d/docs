@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | variable | Variable | &#x1F852; | Variable que referencia un argumento SOAP entrante o saliente |
-| tipo | Entero largo | &#x1F852; | Tipo 4D al cual apunta el argumento |
-| entrada_salida | Entero largo | &#x1F852; | 1 = Entrada SOAP, 2 = Salida SOAP |
-| alias | Cadena | &#x1F852; | Nombre publicado para este argumento durante los intercambios SOAP |
+| tipo | Integer | &#x1F852; | Tipo 4D al cual apunta el argumento |
+| entrada_salida | Integer | &#x1F852; | 1 = Entrada SOAP, 2 = Salida SOAP |
+| alias | Text | &#x1F852; | Nombre publicado para este argumento durante los intercambios SOAP |
 
 <!-- END REF-->
 

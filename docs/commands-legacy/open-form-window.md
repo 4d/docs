@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table of the form or Default table, if omitted |
-| formName | String, Object | &#x1F852; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
-| type | Longint | &#x1F852; | Window type |
-| hPos | Longint | &#x1F852; | Horizontal position of the window |
-| vPos | Longint | &#x1F852; | Vertical position of the window |
+| formName | Text, Object | &#x1F852; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
+| type | Integer | &#x1F852; | Window type |
+| hPos | Integer | &#x1F852; | Horizontal position of the window |
+| vPos | Integer | &#x1F852; | Vertical position of the window |
 | * | Operator | &#x1F852; | Save current position and size of the window |
 | Function result | WinRef | &#x1F850; | Window reference number |
 

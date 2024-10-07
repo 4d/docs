@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET ENVIRONMENT VARIABLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeVar | String | &#x1F852; | nome da variável a estabelecer. |
-| valorVar | String | &#x1F852; | Valor da variável ou "" para resetar para o valor padrão |
+| nomeVar | Text | &#x1F852; | nome da variável a estabelecer. |
+| valorVar | Text | &#x1F852; | Valor da variável ou "" para resetar para o valor padrão |
 
 <!-- END REF-->
 

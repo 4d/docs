@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Compare strings.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| string | String | &#x1F852; | String a comparar |
-| stringB | String | &#x1F852; | String a ser comparada |
-| opções | Inteiro longo | &#x1F852; | Regras de comparação |
-| Resultado | Inteiro longo | &#x1F850; | Resultado da comparação de strings |
+| string | Text | &#x1F852; | String a comparar |
+| stringB | Text | &#x1F852; | String a ser comparada |
+| opções | Integer | &#x1F852; | Regras de comparação |
+| Resultado | Integer | &#x1F850; | Resultado da comparação de strings |
 
 <!-- END REF-->
 

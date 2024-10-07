@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PHP GET OPTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| option | Longint | &#x1F852; | Option to get |
+| option | Integer | &#x1F852; | Option to get |
 | value | Boolean | &#x1F858; | Current value of option |
 
 <!-- END REF-->

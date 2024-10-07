@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.New collection.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| valor | Número, Texto, Fecha, Objeto, Collection, Puntero | &#x1F852; | Valor de la colección |
+| valor | Number, Text, Date, Object, Collection, Pointer | &#x1F852; | Valor de la colección |
 | Resultado | Collection | &#x1F850; | Nueva colección |
 
 <!-- END REF-->

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB to longint.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| BLOB | BLOB | &#x1F852; | BLOB do qual obter o valor inteiro longo |
-| byteOrdem | Inteiro longo | &#x1F852; | 0 Ordem de bytes nativo 1 Ordem de bytes Macintosh 2 Ordem de bytes PC |
-| offset | Variável | &#x1F852; | Offset no BLOB (expressado em bytes) |
+| Blob | Blob | &#x1F852; | BLOB do qual obter o valor inteiro longo |
+| byteOrdem | Integer | &#x1F852; | 0 Ordem de bytes nativo 1 Ordem de bytes Macintosh 2 Ordem de bytes PC |
+| offset | Variable | &#x1F852; | Offset no BLOB (expressado em bytes) |
 | &#x1F858; | Novo offset depois da leitura |
 | Resultado da função | Inteiro longo | &#x1F850; | Valor inteiro longo (4 bytes) |
 

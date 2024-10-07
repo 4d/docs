@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG EXPORT TO PICTURE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Cadena | &#x1F852; | Referencia del elemento XML raíz |
-| varImag | Imagen | &#x1F852; | Variable imagen a recibir del árbol XML (imagen SVG) |
-| tipoExport | Entero largo | &#x1F852; | 0 = No guardar la fuente de datos, 1 = Copiar la fuente de datos, 2 (por defecto) = Fuente de datos propia |
+| elementRef | Text | &#x1F852; | Referencia del elemento XML raíz |
+| varImag | Picture | &#x1F852; | Variable imagen a recibir del árbol XML (imagen SVG) |
+| tipoExport | Integer | &#x1F852; | 0 = No guardar la fuente de datos, 1 = Copiar la fuente de datos, 2 (por defecto) = Fuente de datos propia |
 
 <!-- END REF-->
 

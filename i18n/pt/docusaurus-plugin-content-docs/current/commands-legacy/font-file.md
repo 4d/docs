@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Font file.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| fontFamily | Texto | &#x1F852; | Name of font family |
-| fontStyle | Inteiro longo | &#x1F852; | Font style: 0=normal (default), 1=bold, 2=italic |
-| Resultado | Null, Objeto | &#x1F850; | Font file object |
+| fontFamily | Text | &#x1F852; | Name of font family |
+| fontStyle | Integer | &#x1F852; | Font style: 0=normal (default), 1=bold, 2=italic |
+| Resultado | Null, Object | &#x1F850; | Font file object |
 
 <!-- END REF-->
 

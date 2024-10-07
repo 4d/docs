@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| object | Objeto de formulario | &#x1F852; | Nombre del objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
-| inicioSel | Entero largo | &#x1F852; | Inicio de la selección |
-| finSel | Entero largo | &#x1F852; | Fin de la selección |
-| inicioBloq | Entero largo | &#x1F858; | Inicio de posición del primer tipo de la selección |
-| finBloq | Entero largo | &#x1F858; | Fin de posición del primer tipo de la selección |
-| Resultado | Entero largo | &#x1F850; | Tipo de contenido |
+| object | any | &#x1F852; | Nombre del objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
+| inicioSel | Integer | &#x1F852; | Inicio de la selección |
+| finSel | Integer | &#x1F852; | Fin de la selección |
+| inicioBloq | Integer | &#x1F858; | Inicio de posición del primer tipo de la selección |
+| finBloq | Integer | &#x1F858; | Fin de posición del primer tipo de la selección |
+| Resultado | Integer | &#x1F850; | Tipo de contenido |
 
 <!-- END REF-->
 

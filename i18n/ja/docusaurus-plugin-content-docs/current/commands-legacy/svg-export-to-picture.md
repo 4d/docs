@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG EXPORT TO PICTURE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | 文字 | &#x1F852; | ルートXML要素参照 |
-| pictVar | ピクチャー | &#x1F852; | XMLツリーを受け取るピクチャ変 (SVG ピクチャ) |
-| exportType | 倍長整数 | &#x1F852; | 0 = データソースを保持しない、1 = データソースをコピー(デフォルト)、2 = データソースを移動 |
+| elementRef | Text | &#x1F852; | ルートXML要素参照 |
+| pictVar | Picture | &#x1F852; | XMLツリーを受け取るピクチャ変 (SVG ピクチャ) |
+| exportType | Integer | &#x1F852; | 0 = データソースを保持しない、1 = データソースをコピー(デフォルト)、2 = データソースを移動 |
 
 <!-- END REF-->
 

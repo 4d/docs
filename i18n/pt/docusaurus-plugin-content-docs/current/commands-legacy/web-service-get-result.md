@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SERVICE GET RESULT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| valorRetornado | Variável | &#x1F858; | Valor retornado pelo Web Service |
-| nomeRetornado | String | &#x1F852; | Nome do parâmetro a ser retornado |
+| valorRetornado | Variable | &#x1F858; | Valor retornado pelo Web Service |
+| nomeRetornado | Text | &#x1F852; | Nome do parâmetro a ser retornado |
 | * | &#x1F852; | Liberar memória |
 
 <!-- END REF-->

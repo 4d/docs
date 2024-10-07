@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified = object is an object name (String) If omitted = object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Field or variable (if * is omitted) |
-| bestWidth | Longint | &#x1F858; | Optimum object width |
-| bestHeight | Longint | &#x1F858; | Optimum object height |
-| maxWidth | Longint | &#x1F852; | Maximum object width |
+| object | any | &#x1F852; | Object name (if * is specified) or Field or variable (if * is omitted) |
+| bestWidth | Integer | &#x1F858; | Optimum object width |
+| bestHeight | Integer | &#x1F858; | Optimum object height |
+| maxWidth | Integer | &#x1F852; | Maximum object width |
 
 <!-- END REF-->
 

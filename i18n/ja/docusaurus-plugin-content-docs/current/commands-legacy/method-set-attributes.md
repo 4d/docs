@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD SET ATTRIBUTES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| path | テキスト, テキスト配列 | &#x1F852; | メソッドのパス |
-| attributes | オブジェクト, Object array | &#x1F852; | メソッドに対して設定する属性 |
+| path | Text, Text配列 | &#x1F852; | メソッドのパス |
+| attributes | Object, Object array | &#x1F852; | メソッドに対して設定する属性 |
 | * | 演算子 | &#x1F852; | 指定時 = コンポーネントから実行された場合、コマンドをホストデータベースに適用する<br/>(このコンテキスト外ではこの引数は無視されます) |
 
 <!-- END REF-->

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESTORE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| endArquivo | Texto | &#x1F852; | Endereço de acesso do arquivo a ser restituído |
-| endPastaDestino | Texto | &#x1F852; | Endereço de acesso da pasta de destino |
+| endArquivo | Text | &#x1F852; | Endereço de acesso do arquivo a ser restituído |
+| endPastaDestino | Text | &#x1F852; | Endereço de acesso da pasta de destino |
 
 <!-- END REF-->
 

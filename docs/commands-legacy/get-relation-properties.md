@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | fieldPtr&#124;tableNum | Pointer, Longint | &#x1F852; | Field pointer or table number |
-| fieldNum | Longint | &#x1F852; | Field number if the table number is passed as first parameter |
-| oneTable | Longint | &#x1F858; | One table number or 0 if no relation is defined from the field |
-| oneField | Longint | &#x1F858; | One field number or 0 if no relation is defined from the field |
-| choiceField | Longint | &#x1F858; | Choice field number or 0 if no choice field |
+| fieldNum | Integer | &#x1F852; | Field number if the table number is passed as first parameter |
+| oneTable | Integer | &#x1F858; | One table number or 0 if no relation is defined from the field |
+| oneField | Integer | &#x1F858; | One field number or 0 if no relation is defined from the field |
+| choiceField | Integer | &#x1F858; | Choice field number or 0 if no choice field |
 | autoOne | Boolean | &#x1F858; | True = Auto relate one, False = Manual relate one |
 | autoMany | Boolean | &#x1F858; | True = Auto one to many, False = Manual one to many |
 

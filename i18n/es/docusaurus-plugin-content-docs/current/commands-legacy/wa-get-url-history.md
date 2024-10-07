@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| arrUrls | Array cadena | &#x1F858; | Array de los URLs visitados |
-| direccion | Entero largo | &#x1F852; | 0 ó si se omite=Lista de los URLs anteriores, 1=Lista de los URLs siguientes |
-| arrTitulos | Array cadena | &#x1F858; | Array de títulos de ventanas |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| arrUrls | Text array | &#x1F858; | Array de los URLs visitados |
+| direccion | Integer | &#x1F852; | 0 ó si se omite=Lista de los URLs anteriores, 1=Lista de los URLs siguientes |
+| arrTitulos | Text array | &#x1F858; | Array de títulos de ventanas |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | encab&#124;arrayCamp | Texto, Array texto | &#x1F858; | Encabezado HTTP de la petición o Campos del encabezado HTTP |
-| arrayValores | Array texto | &#x1F858; | Contenido de los campos del encabezado HTTP |
+| arrayValores | Text array | &#x1F858; | Contenido de los campos del encabezado HTTP |
 
 <!-- END REF-->
 

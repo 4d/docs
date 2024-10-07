@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
-| modeRéf | Entier long | &#x1F852; | Mode de prise en charge des références présentes dans le texte |
-| Résultat | Texte | &#x1F850; | Texte sans balises |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| modeRéf | Integer | &#x1F852; | Mode de prise en charge des références présentes dans le texte |
+| Résultat | Text | &#x1F850; | Texte sans balises |
 
 <!-- END REF-->
 

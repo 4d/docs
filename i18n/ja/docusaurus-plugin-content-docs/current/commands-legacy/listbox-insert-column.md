@@ -10,14 +10,14 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#x1F852; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| colPosition | 倍長整数 | &#x1F852; | 列の挿入場所 |
-| colName | 文字 | &#x1F852; | 列オブジェクト名 |
-| colVariable | 配列, フィールド, 変数, Nil pointer | &#x1F852; | 列配列名 または フィールド または 変数 |
-| headerName | 文字 | &#x1F852; | 列ヘッダオブジェクト名 |
-| headerVar | 整数変数, Nil pointer | &#x1F852; | 列ヘッダ変数 |
-| footerName | 文字 | &#x1F852; | 列フッターオブジェクト名 |
-| footerVar | 変数, Nil pointer | &#x1F852; | 列フッター変数 |
+| object | any | &#x1F852; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| colPosition | Integer | &#x1F852; | 列の挿入場所 |
+| colName | Text | &#x1F852; | 列オブジェクト名 |
+| colVariable | Array, Field, Variable, Pointer | &#x1F852; | 列配列名 または フィールド または 変数 |
+| headerName | Text | &#x1F852; | 列ヘッダオブジェクト名 |
+| headerVar | Integer, Pointer | &#x1F852; | 列ヘッダ変数 |
+| footerName | Text | &#x1F852; | 列フッターオブジェクト名 |
+| footerVar | Variable, Pointer | &#x1F852; | 列フッター変数 |
 
 <!-- END REF-->
 

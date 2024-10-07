@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Set group properties.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| groupID | Longint | &#x1F852; | Unique ID number of group, -1 for adding a group |
+| groupID | Integer | &#x1F852; | Unique ID number of group, -1 for adding a group |
 | &#x1F858; | Unique ID number of added group (if any) |
-| name | String | &#x1F852; | New group name |
-| owner | Longint | &#x1F852; | User ID number of new group owner (Binary databases only) |
-| members | Longint array | &#x1F852; | New group members |
+| name | Text | &#x1F852; | New group name |
+| owner | Integer | &#x1F852; | User ID number of new group owner (Binary databases only) |
+| members | Integer array | &#x1F852; | New group members |
 | Function result | Longint | &#x1F850; | Unique ID number of new group |
 
 <!-- END REF-->

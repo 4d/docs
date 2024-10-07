@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificar, objeto é um nome de objeto (cadeia) Se omite, objeto é um campo ou uma variável |
-| object | Inteiro longo | &#x1F852; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
-| esquerda | Inteiro longo | &#x1F852; | Coordenada esquerda do objeto em pixels |
-| superior | Inteiro longo | &#x1F852; | Coordenada superior do objeto em pixels |
-| direita | Inteiro longo | &#x1F852; | Coordenada direita do objeto em pixels |
-| bottom | Inteiro longo | &#x1F852; | Coordenada inferior do objeto em pixels |
+| object | Integer | &#x1F852; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| esquerda | Integer | &#x1F852; | Coordenada esquerda do objeto em pixels |
+| superior | Integer | &#x1F852; | Coordenada superior do objeto em pixels |
+| direita | Integer | &#x1F852; | Coordenada direita do objeto em pixels |
+| bottom | Integer | &#x1F852; | Coordenada inferior do objeto em pixels |
 
 <!-- END REF-->
 

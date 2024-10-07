@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, o objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se * for especificado) ou variável (se * for omitido) |
-| seletor | Inteiro longo | &#x1F852; | Valor de altura a estabelecer: lk row min heigh ou lk row max heigh |
-| valor | Inteiro longo | &#x1F852; | Valor máximo ou mínimo de altura de linha |
-| unidade | Inteiro longo | &#x1F852; | Unidade de valor da altura: 0=pixels, 1=linhas |
+| objeto | any | &#x1F852; | Nome de objeto (se * for especificado) ou variável (se * for omitido) |
+| seletor | Integer | &#x1F852; | Valor de altura a estabelecer: lk row min heigh ou lk row max heigh |
+| valor | Integer | &#x1F852; | Valor máximo ou mínimo de altura de linha |
+| unidade | Integer | &#x1F852; | Unidade de valor da altura: 0=pixels, 1=linhas |
 
 <!-- END REF-->
 

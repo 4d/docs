@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.INTEGER TO BLOB.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| entero | Entero largo | &#x1F852; | Valor entero a escribir en el BLOB |
-| BLOB | BLOB | &#x1F852; | BLOB a recibir el valor entero |
-| byteOrden | Entero largo | &#x1F852; | 0 Orden de bytes en modo nativo 1 Orden de los bytes Macintosh 2 Orden de los bytes PC |
+| entero | Integer | &#x1F852; | Valor entero a escribir en el BLOB |
+| Blob | Blob | &#x1F852; | BLOB a recibir el valor entero |
+| byteOrden | Integer | &#x1F852; | 0 Orden de bytes en modo nativo 1 Orden de los bytes Macintosh 2 Orden de los bytes PC |
 | offset &#124; * | Variable, Operador | &#x1F852; | Offset expresado en bytes en el BLOB o * para añadir el valor |
 | &#x1F858; | Nuevo offset después de la escritura si se omite * |
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MACRO PARAMETER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| selector | Longint | &#x1F852; | Selection to use |
+| selector | Integer | &#x1F852; | Selection to use |
 | textParam | Text | &#x1F858; | Returned text |
 
 <!-- END REF-->

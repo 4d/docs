@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Convert to text.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | BLOB | &#x1F852; | BLOB containing text expressed in a specific character set |
-| charSet | String, Longint | &#x1F852; | Name or Number of BLOB character set |
+| blob | Blob | &#x1F852; | BLOB containing text expressed in a specific character set |
+| charSet | Text, Integer | &#x1F852; | Name or Number of BLOB character set |
 | Function result | Text | &#x1F850; | Contents of BLOB expressed in 4D character set |
 
 <!-- END REF-->

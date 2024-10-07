@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tabActivités &#124; tabUUID | Tableau objet, Tableau texte | &#x1F858; | Description complète des opérations (tableau objet) ouUUIDs des opérations (tableau texte) |
-| tabDébut | Tableau texte | &#x1F858; | Heures de démarrage des opérations |
-| tabDurée | Tableau entier long | &#x1F858; | Durées des opérations en millisecondes |
-| tabInfo | Tableau texte | &#x1F858; | Description |
-| tabDétails | Tableau objet | &#x1F858; | Détails du contexte et Sous-opérations (le cas échéant) |
+| tabDébut | Text array | &#x1F858; | Heures de démarrage des opérations |
+| tabDurée | Integer array | &#x1F858; | Durées des opérations en millisecondes |
+| tabInfo | Text array | &#x1F858; | Description |
+| tabDétails | Object array | &#x1F858; | Détails du contexte et Sous-opérations (le cas échéant) |
 | * | Opérateur | &#x1F852; | Si passé = Lire activité serveur |
 
 <!-- END REF-->

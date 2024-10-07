@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table à afficher par défaut dans l’éditeur de formules |
-| formule | Texte | &#x1F852; | Variable contenant la formule à afficher dans l’éditeur de formules ou "" pour uniquement afficher l’éditeur |
+| formule | Text | &#x1F852; | Variable contenant la formule à afficher dans l’éditeur de formules ou "" pour uniquement afficher l’éditeur |
 | &#x1F858; | Formule validée par l’utilisateur |
 
 <!-- END REF-->

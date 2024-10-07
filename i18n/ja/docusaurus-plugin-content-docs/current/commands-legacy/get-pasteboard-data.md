@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PASTEBOARD DATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| dataType | 文字 | &#x1F852; | ペーストボードから取り出すデータのタイプ |
-| data | BLOB | &#x1F858; | ペーストボードから取り出されたデータ |
+| dataType | Text | &#x1F852; | ペーストボードから取り出すデータのタイプ |
+| data | Blob | &#x1F858; | ペーストボードから取り出されたデータ |
 
 <!-- END REF-->
 

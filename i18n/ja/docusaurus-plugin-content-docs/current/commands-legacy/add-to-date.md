@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Add to date.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| date | 日付 | &#x1F852; | 年月日を加算する日付 |
-| years | 倍長整数 | &#x1F852; | 日付に加算する年 |
-| months | 倍長整数 | &#x1F852; | 日付に加算する月 |
-| days | 倍長整数 | &#x1F852; | 日付に加算する日 |
-| 戻り値 | 日付 | &#x1F850; | 結果の日付 |
+| date | Date | &#x1F852; | 年月日を加算する日付 |
+| years | Integer | &#x1F852; | 日付に加算する年 |
+| months | Integer | &#x1F852; | 日付に加算する月 |
+| days | Integer | &#x1F852; | 日付に加算する日 |
+| 戻り値 | Date | &#x1F850; | 結果の日付 |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get last query path.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| descFormat | 倍長整数 | &#x1F852; | 説明フォーマット (テキストまたはXML) |
-| 戻り値 | 文字 | &#x1F850; | 最後に実行されたクエリパスの説明 |
+| descFormat | Integer | &#x1F852; | 説明フォーマット (テキストまたはXML) |
+| 戻り値 | Text | &#x1F850; | 最後に実行されたクエリパスの説明 |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Lowercase.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| cadeia | String | &#x1F852; | Cadeia que vai passar para minúsculas |
+| cadeia | Text | &#x1F852; | Cadeia que vai passar para minúsculas |
 | * | Operador | &#x1F852; | Se passado: manter os acentos |
-| Resultado | String | &#x1F850; | Cadeia em letras minúsculas |
+| Resultado | Text | &#x1F850; | Cadeia em letras minúsculas |
 
 <!-- END REF-->
 

@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#x1F852; | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名( * 指定時)、<br/>または変数やフィールド( * 省略時) |
-| variableFrame | ブール | &#x1F852; | True = 可変長フレーム印刷、 False = 固定長フレーム印刷 |
-| fixedSubform | 倍長整数 | &#x1F852; | サブフォームを固定サイズで印刷する際のオプション |
+| object | any | &#x1F852; | オブジェクト名( * 指定時)、<br/>または変数やフィールド( * 省略時) |
+| variableFrame | Boolean | &#x1F852; | True = 可変長フレーム印刷、 False = 固定長フレーム印刷 |
+| fixedSubform | Integer | &#x1F852; | サブフォームを固定サイズで印刷する際のオプション |
 
 <!-- END REF-->
 

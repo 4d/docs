@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla para la cual ordenar los registros seleccionados, o tabla por defecto, si se omite |
-| campoObjeto | Campo Objeto | &#x1F852; | Campo objeto que contiene el atributo de ordenación |
-| rutaAtrib | Cadena | &#x1F852; | Nombre o ruta del atributo en el que se define el orden para cada nivel |
+| tabla | Table | &#x1F852; | Tabla para la cual ordenar los registros seleccionados, o tabla por defecto, si se omite |
+| campoObjeto | Object | &#x1F852; | Campo objeto que contiene el atributo de ordenación |
+| rutaAtrib | Text | &#x1F852; | Nombre o ruta del atributo en el que se define el orden para cada nivel |
 | > o < | Operador | &#x1F852; | Dirección de ordenación para cada nivel: > para ordenar en orden ascendente o < para ordenar en orden descendente |
 | * | Operador | &#x1F852; | Continuar bandera de orden |
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB TO USERS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| utilisateurs | BLOB | &#x1F852; | BLOB (crypté) contenant des comptes utilisateurs créés et sauvegardés par l'Administrateur |
+| utilisateurs | Blob | &#x1F852; | BLOB (crypté) contenant des comptes utilisateurs créés et sauvegardés par l'Administrateur |
 
 <!-- END REF-->
 

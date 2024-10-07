@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET CODE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota | Texto, Array texto | &#x1F852; | Texto ou array de texto que contém uma ou vários caminhos de acesso |
-| codigo | Texto, Array texto | &#x1F858; | Código dos métodos designados |
-| option | Inteiro longo | &#x1F852; | 0 ou omis = exportar simples (sem token), 1 = exportar com tokens |
+| rota | Text, Text array | &#x1F852; | Texto ou array de texto que contém uma ou vários caminhos de acesso |
+| codigo | Text, Text array | &#x1F858; | Código dos métodos designados |
+| option | Integer | &#x1F852; | 0 ou omis = exportar simples (sem token), 1 = exportar com tokens |
 | * | Operador | &#x1F852; | Se passado = o comando é aplicado à base de dados de host quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->

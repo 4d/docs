@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| codeJS | Chaîne | &#x1F852; | Code JavaScript |
-| type | Entier long | &#x1F852; | Type dans lequel convertir le résultat |
-| Résultat | Date, Heure, Objet, Pointeur, Réel, Texte | &#x1F850; | Résultat de l’exécution |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| codeJS | Text | &#x1F852; | Code JavaScript |
+| type | Integer | &#x1F852; | Type dans lequel convertir le résultat |
+| Résultat | Date, Time, Object, Pointer, Real, Text | &#x1F850; | Résultat de l’exécution |
 
 <!-- END REF-->
 

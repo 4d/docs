@@ -11,11 +11,11 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | structurePath | Text | &#x1F852; | Pathname of 4D structure file to be checked |
 | dataPath | Text | &#x1F852; | Pathname of 4D data file to be checked |
-| objects | Longint | &#x1F852; | Objects to be checked |
-| options | Longint | &#x1F852; | Checking options |
+| objects | Integer | &#x1F852; | Objects to be checked |
+| options | Integer | &#x1F852; | Checking options |
 | method | Text | &#x1F852; | Name of 4D callback method |
-| tablesArray | Longint array | &#x1F852; | Numbers of tables to be checked |
-| fieldsArray | 2D Integer array, 2D Longint array, 2D Real array | &#x1F852; | Numbers of indexes to be checked |
+| tablesArray | Integer array | &#x1F852; | Numbers of tables to be checked |
+| fieldsArray | 2D Integer array, 2D Integer array, 2D Real array | &#x1F852; | Numbers of indexes to be checked |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET REPORT TABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | 倍長整数 | &#x1F852; | エリア参照 |
-| aTable | 倍長整数 | &#x1F852; | テーブル番号 |
+| area | Integer | &#x1F852; | エリア参照 |
+| aTable | Integer | &#x1F852; | テーブル番号 |
 
 <!-- END REF-->
 

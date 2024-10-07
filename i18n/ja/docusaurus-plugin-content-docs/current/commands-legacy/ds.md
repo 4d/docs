@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.ds.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| localID | テキスト | &#x1F852; | 参照を取得したいリモートデータストアのローカルID |
+| localID | Text | &#x1F852; | 参照を取得したいリモートデータストアのローカルID |
 | 戻り値 | DataStore | &#x1F850; | 新しいデータストア参照 |
 
 <!-- END REF-->

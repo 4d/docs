@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Insert string.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| fuente | Cadena | &#x1F852; | Cadena en la cual insertar otra cadena |
-| ainsertar | Cadena | &#x1F852; | Cadena a insertar |
-| posicion | Entero largo | &#x1F852; | Posición de la inserción |
-| Resultado | Cadena | &#x1F850; | Cadena resultante |
+| fuente | Text | &#x1F852; | Cadena en la cual insertar otra cadena |
+| ainsertar | Text | &#x1F852; | Cadena a insertar |
+| posicion | Integer | &#x1F852; | Posición de la inserción |
+| Resultado | Text | &#x1F850; | Cadena resultante |
 
 <!-- END REF-->
 

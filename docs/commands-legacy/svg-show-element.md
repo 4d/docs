@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | * | Operator | &#x1F852; | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
 | pictureObject | Picture | &#x1F852; | Object name (if * specified) or <br/>Variable or field (if * omitted) |
 | id | Text | &#x1F852; | ID attribute of element to display |
-| margin | Longint | &#x1F852; | Margin of visibility (in pixels by default) |
+| margin | Integer | &#x1F852; | Margin of visibility (in pixels by default) |
 
 <!-- END REF-->
 

@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
-| liste | RefListe, Chaîne | &#x1F852; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| liste | Integer, Text | &#x1F852; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
 | avantElément &#124; * | Entier long, Opérateur | &#x1F852; | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l'élément de la liste actuellement sélectionné |
-| libelléElément | Chaîne | &#x1F852; | Libellé du nouvel élément |
-| réfElément | Entier long | &#x1F852; | Numéro de référence unique du nouvel élément |
-| sous_Liste | RefListe | &#x1F852; | Sous-liste optionnelle rattachée au nouvel élément |
-| déployée | Booléen | &#x1F852; | Indique si la sous-liste doit être déployée ou non |
+| libelléElément | Text | &#x1F852; | Libellé du nouvel élément |
+| réfElément | Integer | &#x1F852; | Numéro de référence unique du nouvel élément |
+| sous_Liste | Integer | &#x1F852; | Sous-liste optionnelle rattachée au nouvel élément |
+| déployée | Boolean | &#x1F852; | Indique si la sous-liste doit être déployée ou non |
 
 <!-- END REF-->
 

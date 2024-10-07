@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SET HOME PAGE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| pagInicio | String | &#x1F852; | Nome da página ou rota de acesso HTML a página ou "" para não enviar a home page personalizada |
+| pagInicio | Text | &#x1F852; | Nome da página ou rota de acesso HTML a página ou "" para não enviar a home page personalizada |
 
 <!-- END REF-->
 

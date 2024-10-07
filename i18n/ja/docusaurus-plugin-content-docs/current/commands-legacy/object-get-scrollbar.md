@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#x1F852; | 指定時: objectはオブジェクト名 (文字)、省略時: objectは変数またはフィールド |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時) または、フィールドまたは変数 (* 省略時) |
-| horizontal | ブール, 倍長整数 | &#x1F858; | True=表示, False=非表示 |
-| vertical | ブール, 倍長整数 | &#x1F858; | True=表示, False=非表示 |
+| object | any | &#x1F852; | オブジェクト名 (* 指定時) または、フィールドまたは変数 (* 省略時) |
+| horizontal | Boolean, Integer | &#x1F858; | True=表示, False=非表示 |
+| vertical | Boolean, Integer | &#x1F858; | True=表示, False=非表示 |
 
 <!-- END REF-->
 

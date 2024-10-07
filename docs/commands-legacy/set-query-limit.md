@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET QUERY LIMIT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| limit | Longint | &#x1F852; | Number of records, or 0 for no limit |
+| limit | Integer | &#x1F852; | Number of records, or 0 for no limit |
 
 <!-- END REF-->
 

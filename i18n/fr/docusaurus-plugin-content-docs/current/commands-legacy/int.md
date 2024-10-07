@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Int.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombre | Réel | &#x1F852; | Valeur dont vous voulez obtenir la partie entière |
-| Résultat | Réel | &#x1F850; | Partie entière de nombre |
+| nombre | Real | &#x1F852; | Valeur dont vous voulez obtenir la partie entière |
+| Résultat | Real | &#x1F850; | Partie entière de nombre |
 
 <!-- END REF-->
 

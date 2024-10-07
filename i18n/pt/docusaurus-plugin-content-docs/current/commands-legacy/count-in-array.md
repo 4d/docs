@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | array | Array | &#x1F852; | Array no qual a contagem deve ocorrer |
 | valor | Expression | &#x1F852; | Valor a contar |
-| Resultado | Inteiro longo | &#x1F850; | Número de ocorrências encontradas |
+| Resultado | Integer | &#x1F850; | Número de ocorrências encontradas |
 
 <!-- END REF-->
 

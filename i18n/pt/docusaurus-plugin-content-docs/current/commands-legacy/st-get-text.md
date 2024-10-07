@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string), se nao, objeto é uma variável ou campo. |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se * for especificada) ou campo texto ou variável (se * for omitida) |
-| inicioSel | Inteiro longo | &#x1F852; | Inicio da seleção |
-| fimSel | Inteiro longo | &#x1F852; | final da seleção |
-| Resultado | Texto | &#x1F850; | Texto incluindo etiquetas de estilo |
+| objeto | any | &#x1F852; | Nome de objeto (se * for especificada) ou campo texto ou variável (se * for omitida) |
+| inicioSel | Integer | &#x1F852; | Inicio da seleção |
+| fimSel | Integer | &#x1F852; | final da seleção |
+| Resultado | Text | &#x1F850; | Texto incluindo etiquetas de estilo |
 
 <!-- END REF-->
 

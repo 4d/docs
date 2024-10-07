@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | array | Array | &#x1F852; | Array del cual copiar los elementos del array |
-| lista | Cadena, ListRef | &#x1F852; | Lista en la cual copiar los elementos del array |
+| lista | Text, Integer | &#x1F852; | Lista en la cual copiar los elementos del array |
 | refElementos | Array | &#x1F852; | Array numérico de números de referencia de los elementos |
 
 <!-- END REF-->

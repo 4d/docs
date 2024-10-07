@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tableds | Table | &#x1F852; | Table de la base 4D dont la sélection courante doit être utilisée pour construire la sélection d'entités |
-| paramètres | Objet | &#x1F852; | Option de création : contexte |
+| paramètres | Object | &#x1F852; | Option de création : contexte |
 | Résultat | EntitySelection | &#x1F850; | Sélection d'entités liée à la dataclass de la table |
 
 <!-- END REF-->

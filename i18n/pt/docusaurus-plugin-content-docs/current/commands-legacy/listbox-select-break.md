@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
-| fila | Inteiro longo | &#x1F852; | Número de quebra de fila |
-| coluna | Inteiro longo | &#x1F852; | Número de quebra de coluna |
-| açao | Inteiro longo | &#x1F852; | Ação de seleção |
+| objeto | any | &#x1F852; | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
+| fila | Integer | &#x1F852; | Número de quebra de fila |
+| coluna | Integer | &#x1F852; | Número de quebra de coluna |
+| açao | Integer | &#x1F852; | Ação de seleção |
 
 <!-- END REF-->
 

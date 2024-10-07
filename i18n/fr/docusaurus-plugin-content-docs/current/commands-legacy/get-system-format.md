@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET SYSTEM FORMAT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| format | Entier long | &#x1F852; | Formatage système à lire |
-| valeur | Chaîne | &#x1F858; | Valeur de formatage définie dans le système |
+| format | Integer | &#x1F852; | Formatage système à lire |
+| valeur | Text | &#x1F858; | Valeur de formatage définie dans le système |
 
 <!-- END REF-->
 

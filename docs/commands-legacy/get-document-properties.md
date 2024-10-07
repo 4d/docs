@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| document | String | &#x1F852; | Document name |
+| document | Text | &#x1F852; | Document name |
 | locked | Boolean | &#x1F858; | Locked (True) or unlocked (False) |
 | invisible | Boolean | &#x1F858; | Invisible (True) or visible (False) |
 | created on | Date | &#x1F858; | Creation date |

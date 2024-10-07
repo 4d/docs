@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table for which to order selected records, or Default table, if omitted |
-| objectField | Object Field | &#x1F852; | Object field containing the sorting attribute |
-| attributePath | String | &#x1F852; | Name or path of attribute on which to set the order for each level |
+| objectField | Object | &#x1F852; | Object field containing the sorting attribute |
+| attributePath | Text | &#x1F852; | Name or path of attribute on which to set the order for each level |
 | > or < | Operator | &#x1F852; | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
 | * | Operator | &#x1F852; | Continue order flag |
 

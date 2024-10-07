@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | contents | Text | &#x1F852; | Menu text definition |
-| default | Longint | &#x1F852; | Number of menu item selected by default |
-| xCoord | Longint | &#x1F852; | X coordinate of upper left corner |
-| yCoord | Longint | &#x1F852; | Y coordinate of upper left corner |
+| default | Integer | &#x1F852; | Number of menu item selected by default |
+| xCoord | Integer | &#x1F852; | X coordinate of upper left corner |
+| yCoord | Integer | &#x1F852; | Y coordinate of upper left corner |
 | Function result | Longint | &#x1F850; | Selected menu item number |
 
 <!-- END REF-->

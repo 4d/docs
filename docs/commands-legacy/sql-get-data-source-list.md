@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| sourceType | Longint | &#x1F852; | Source type: user or system |
+| sourceType | Integer | &#x1F852; | Source type: user or system |
 | sourceNamesArr | Text array | &#x1F858; | Array of data source names |
 | driversArr | Text array | &#x1F858; | Array of drivers for sources |
 

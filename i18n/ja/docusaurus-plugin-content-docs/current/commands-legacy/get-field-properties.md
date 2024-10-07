@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | fieldPtr &#124; tableNum | ポインター, 倍長整数 | &#x1F852; | テーブル番号、またはフィールドポインタ |
-| fieldNum | 倍長整数 | &#x1F852; | テーブル番号を渡した場合は、フィールド番号 |
-| fieldType | 倍長整数 | &#x1F858; | フィールドのタイプ |
-| fieldLength | 倍長整数 | &#x1F858; | 文字フィールドの場合、長さ |
-| indexed | ブール | &#x1F858; | True = インデックス付き、False = インデックスなし |
-| unique | ブール | &#x1F858; | True = 重複不可、 False = 重複あり |
-| invisible | ブール | &#x1F858; | True = 非表示、 False = 表示 |
+| fieldNum | Integer | &#x1F852; | テーブル番号を渡した場合は、フィールド番号 |
+| fieldType | Integer | &#x1F858; | フィールドのタイプ |
+| fieldLength | Integer | &#x1F858; | 文字フィールドの場合、長さ |
+| indexed | Boolean | &#x1F858; | True = インデックス付き、False = インデックスなし |
+| unique | Boolean | &#x1F858; | True = 重複不可、 False = 重複あり |
+| invisible | Boolean | &#x1F858; | True = 非表示、 False = 表示 |
 
 <!-- END REF-->
 

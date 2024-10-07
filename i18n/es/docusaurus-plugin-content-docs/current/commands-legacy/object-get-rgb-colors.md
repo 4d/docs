@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre (cadena). Si se omite, objeto es una variable o un campo |
-| objeto | Objeto de formulario | &#x1F852; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
-| colorPrimerPlano | Texto, Entero largo | &#x1F858; | Valor del color RGB del primer plano |
-| colorFondo | Texto, Entero largo | &#x1F858; | Valor del color RGB del fondo |
-| colorFondoAlt | Texto, Entero largo | &#x1F858; | Valor del color RGB del fondo alterno |
+| objeto | any | &#x1F852; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
+| colorPrimerPlano | Text, Integer | &#x1F858; | Valor del color RGB del primer plano |
+| colorFondo | Text, Integer | &#x1F858; | Valor del color RGB del fondo |
+| colorFondoAlt | Text, Integer | &#x1F858; | Valor del color RGB del fondo alterno |
 
 <!-- END REF-->
 

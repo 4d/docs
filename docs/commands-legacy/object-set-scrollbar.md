@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| horizontal | Boolean, Longint | &#x1F852; | Visibility of horizontal scrollbar |
-| vertical | Boolean, Longint | &#x1F852; | Visibility of vertical scrollbar |
+| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| horizontal | Boolean, Integer | &#x1F852; | Visibility of horizontal scrollbar |
+| vertical | Boolean, Integer | &#x1F852; | Visibility of vertical scrollbar |
 
 <!-- END REF-->
 

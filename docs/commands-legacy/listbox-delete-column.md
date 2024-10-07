@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| colPosition | Longint | &#x1F852; | Column number to remove |
-| number | Longint | &#x1F852; | Number of columns to be removed |
+| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| colPosition | Integer | &#x1F852; | Column number to remove |
+| number | Integer | &#x1F852; | Number of columns to be removed |
 
 <!-- END REF-->
 

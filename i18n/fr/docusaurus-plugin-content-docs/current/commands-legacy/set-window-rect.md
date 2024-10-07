@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SET WINDOW RECT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| gauche | Entier long | &#x1F852; | Coordonnée gauche de l'intérieur de la fenêtre |
-| haut | Entier long | &#x1F852; | Coordonnée supérieure de l'intérieur de la fenêtre |
-| droite | Entier long | &#x1F852; | Coordonnée droite de l'intérieur de la fenêtre |
-| bas | Entier long | &#x1F852; | Coordonnée inférieure de l'intérieur de la fenêtre |
-| fenêtre | RefFen | &#x1F852; | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process si ce paramètre est omis |
+| gauche | Integer | &#x1F852; | Coordonnée gauche de l'intérieur de la fenêtre |
+| haut | Integer | &#x1F852; | Coordonnée supérieure de l'intérieur de la fenêtre |
+| droite | Integer | &#x1F852; | Coordonnée droite de l'intérieur de la fenêtre |
+| bas | Integer | &#x1F852; | Coordonnée inférieure de l'intérieur de la fenêtre |
+| fenêtre | Integer | &#x1F852; | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process si ce paramètre est omis |
 | * | Opérateur | &#x1F852; | Si omis (défaut) = passer la fenêtre au premier plan<br/>Si passé = ne pas changer le plan de la fenêtre |
 
 <!-- END REF-->

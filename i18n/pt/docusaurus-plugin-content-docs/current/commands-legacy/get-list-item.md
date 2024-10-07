@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
-| lista | ListRef, String | &#x1F852; | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
+| lista | Integer, Text | &#x1F852; | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
 | posiçaoElem &#124; * | Operador, Inteiro longo | &#x1F852; | Posição do elemento em lista(s) expandida(s) ou contraída(s) * para o elemento atual da lista. |
-| refElem | Inteiro longo | &#x1F858; | Número de referência do elemento |
-| textoElem | String | &#x1F858; | Texto do elemento da lista |
-| sublista | ListRef | &#x1F858; | Número de referência da sub-lista (se existe) |
-| expandida | Booleano | &#x1F858; | Se uma sub-lista está associada: TRUE = a sub-lista está expandida FALSE = a sub-lista está contraída |
+| refElem | Integer | &#x1F858; | Número de referência do elemento |
+| textoElem | Text | &#x1F858; | Texto do elemento da lista |
+| sublista | Integer | &#x1F858; | Número de referência da sub-lista (se existe) |
+| expandida | Boolean | &#x1F858; | Se uma sub-lista está associada: TRUE = a sub-lista está expandida FALSE = a sub-lista está contraída |
 
 <!-- END REF-->
 

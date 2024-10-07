@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP SET OPTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| option | 倍長整数 | &#x1F852; | 設定するオプションのコード |
-| value | 倍長整数 | &#x1F852; | オプションの値 |
+| option | Integer | &#x1F852; | 設定するオプションのコード |
+| value | Integer | &#x1F852; | オプションの値 |
 
 <!-- END REF-->
 

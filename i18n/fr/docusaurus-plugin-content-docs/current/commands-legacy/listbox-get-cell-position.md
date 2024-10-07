@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| x | Réel | &#x1F852; | Coordonnée horizontale de la souris |
-| y | Réel | &#x1F852; | Coordonnée verticale de la souris |
-| colonne | Entier long | &#x1F858; | Numéro de colonne |
-| ligne | Entier long | &#x1F858; | Numéro de ligne |
-| varCol | Pointeur | &#x1F858; | Pointeur sur la variable de colonne |
+| objet | any | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| x | Real | &#x1F852; | Coordonnée horizontale de la souris |
+| y | Real | &#x1F852; | Coordonnée verticale de la souris |
+| colonne | Integer | &#x1F858; | Numéro de colonne |
+| ligne | Integer | &#x1F858; | Numéro de ligne |
+| varCol | Pointer | &#x1F858; | Pointeur sur la variable de colonne |
 
 <!-- END REF-->
 

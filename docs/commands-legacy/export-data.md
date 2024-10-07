@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT DATA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fileName | String | &#x1F852; | Full path name of the export file |
-| project | Text variable, BLOB variable | &#x1F852; | Contents of the export project |
+| fileName | Text | &#x1F852; | Full path name of the export file |
+| project | Text, Blob | &#x1F852; | Contents of the export project |
 | &#x1F858; | New contents of the export project (if the * parameter has been passed) |
 | * | Operator | &#x1F852; | Displays the export dialog box and updates the project |
 

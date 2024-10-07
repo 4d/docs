@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SHOW ON DISK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| pathname | String | &#x1F852; | Pathname of item to show |
+| pathname | Text | &#x1F852; | Pathname of item to show |
 | * | Operator | &#x1F852; | If the item is a folder, show its contents |
 
 <!-- END REF-->

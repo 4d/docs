@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Parse.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| jsonString | 文字 | &#x1F852; | 解析したいJSON文字列 |
-| type | 倍長整数 | &#x1F852; | 値を変換したい型 |
+| jsonString | Text | &#x1F852; | 解析したいJSON文字列 |
+| type | Integer | &#x1F852; | 値を変換したい型 |
 | * | 演算子 | &#x1F852; | 返された値がオブジェクトの場合、各プロパティの行の位置とオフセットを追加 |
-| 戻り値 | Mixed, オブジェクト | &#x1F850; | JSON文字列から取り出した値 |
+| 戻り値 | any, Object | &#x1F850; | JSON文字列から取り出した値 |
 
 <!-- END REF-->
 

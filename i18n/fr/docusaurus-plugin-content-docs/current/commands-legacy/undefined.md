@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | expression | Expression | &#x1F852; | Expression à tester |
-| Résultat | Booléen | &#x1F850; | Vrai = Variable actuellement indéfinie Faux = Variable actuellement définie |
+| Résultat | Boolean | &#x1F850; | Vrai = Variable actuellement indéfinie Faux = Variable actuellement définie |
 
 <!-- END REF-->
 

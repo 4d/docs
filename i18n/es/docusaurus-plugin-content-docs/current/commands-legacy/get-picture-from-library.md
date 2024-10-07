@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | refImag &#124; nomImag | Entero largo, Cadena | &#x1F852; | Número de referencia o nombre de una imagen de la librería de imágenes |
-| imagen | Variable imagen | &#x1F858; | Imagen de la librería de imágenes |
+| imagen | Picture | &#x1F858; | Imagen de la librería de imágenes |
 
 <!-- END REF-->
 

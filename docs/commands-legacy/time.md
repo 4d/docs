@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Time.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| timeValue | String, Longint | &#x1F852; | Value to return as a time |
+| timeValue | Text, Integer | &#x1F852; | Value to return as a time |
 | Function result | Time | &#x1F850; | Time specified by timeValue |
 
 <!-- END REF-->

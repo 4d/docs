@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Menu bar screen.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | 倍長整数 | &#x1F850; | メニューバーが表示されている画面の番号 |
+| 戻り値 | Integer | &#x1F850; | メニューバーが表示されている画面の番号 |
 
 <!-- END REF-->
 

@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY BY ATTRIBUTE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| umaTabela | Tabela | &#x1F852; | Tabela para a qual retornar uma seleção de registros, ou tabela padrão se for omitido |
-| opConj | Operador | &#x1F852; | Operador de Conjunção para juntar múltiplas pesquisas |
-| campoObjeto | Campo | &#x1F852; | Campo Objeto para atributos de pesquisa |
-| caminhoAtributo | String | &#x1F852; | Nome ou caminho do atributo |
-| opPesq | String, Operador | &#x1F852; | Operador pesquisa (comparador) |
-| valor | Texto, Número, Data, Hora | &#x1F852; | Valor a comparar |
+| umaTable | Table | &#x1F852; | Tabela para a qual retornar uma seleção de registros, ou tabela padrão se for omitido |
+| opConj | * | &#x1F852; | Operador de Conjunção para juntar múltiplas pesquisas |
+| campoObjeto | Field | &#x1F852; | Campo Objeto para atributos de pesquisa |
+| caminhoAtributo | Text | &#x1F852; | Nome ou caminho do atributo |
+| opPesq | Text, * | &#x1F852; | Operador pesquisa (comparador) |
+| valor | Text, Number, Date, Time | &#x1F852; | Valor a comparar |
 | * | Operador | &#x1F852; | Continua a flag de pesquisa |
 
 <!-- END REF-->

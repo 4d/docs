@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM SET XML ELEMENT NAME.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Cadena | &#x1F852; | Referencia del elemento XML |
-| nomElement | Cadena | &#x1F852; | Nuevo nombre del elemento |
+| elementRef | Text | &#x1F852; | Referencia del elemento XML |
+| nomElement | Text | &#x1F852; | Nuevo nombre del elemento |
 
 <!-- END REF-->
 

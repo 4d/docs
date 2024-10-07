@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET TIMER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tickCount | Entier long | &#x1F852; | Nombre de ticks ou -1 = Déclenchement dès que possible |
+| tickCount | Integer | &#x1F852; | Nombre de ticks ou -1 = Déclenchement dès que possible |
 
 <!-- END REF-->
 

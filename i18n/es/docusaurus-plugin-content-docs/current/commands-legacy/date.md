@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Date.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| expresion | Cadena, Fecha | &#x1F852; | Cadena que contiene la fecha a devolver |
-| Resultado | Fecha | &#x1F850; | Fecha |
+| expresion | Text, Date | &#x1F852; | Cadena que contiene la fecha a devolver |
+| Resultado | Date | &#x1F850; | Fecha |
 
 <!-- END REF-->
 

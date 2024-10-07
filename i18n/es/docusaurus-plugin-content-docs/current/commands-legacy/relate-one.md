@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tablasN &#124; CampoN | Tabla, Campo | &#x1F852; | Tabla para la cual definir todas las relaciones automáticas o Campo con la relación manual con la tabla Uno |
-| discriminante | Campo | &#x1F852; | Campo discriminante de la tabla 1 |
+| discriminante | Field | &#x1F852; | Campo discriminante de la tabla 1 |
 
 <!-- END REF-->
 

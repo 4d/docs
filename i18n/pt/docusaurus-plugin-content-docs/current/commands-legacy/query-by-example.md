@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY BY EXAMPLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela para a qual vai retornar a seleção de registros, ou a tabela Padrão, se omitido |
+| tabela | Table | &#x1F852; | Tabela para a qual vai retornar a seleção de registros, ou a tabela Padrão, se omitido |
 | * | Operador | &#x1F852; | Se passado, a barra de rolagem não será exibida |
 
 <!-- END REF-->

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CHANGE CURRENT USER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| user | 文字, 倍長整数 | &#x1F852; | 名前またはユニークなユーザーID |
-| password | 文字 | &#x1F852; | (暗号化されていない)パスワード |
+| user | Text, Integer | &#x1F852; | 名前またはユニークなユーザーID |
+| password | Text | &#x1F852; | (暗号化されていない)パスワード |
 
 <!-- END REF-->
 

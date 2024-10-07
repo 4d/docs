@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | objectField | Field | &#x1F852; | Object field from which to get the list of distinct attribute values |
 | path | Text | &#x1F852; | Path of attribute whose distinct values you want to get |
-| valuesArray | Text array, Longint array, Boolean array, Date array, Time array | &#x1F858; | Distinct values in attribute path |
+| valuesArray | Text array, Integer array, Boolean array, Date array, Time array | &#x1F858; | Distinct values in attribute path |
 
 <!-- END REF-->
 

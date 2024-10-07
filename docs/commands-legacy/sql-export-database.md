@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | folderPath | Text | &#x1F852; | Pathname of export folder or "" to display folder selection dialog box |
-| numFiles | Longint | &#x1F852; | Maximum number of files per folder |
-| fileLimitSize | Longint | &#x1F852; | Size limit value of export files (in KB) |
-| fieldLimitSize | Longint | &#x1F852; | Size limit (in bytes) below which the contents of a Text, BLOB or Picture field is embedded into the main file |
+| numFiles | Integer | &#x1F852; | Maximum number of files per folder |
+| fileLimitSize | Integer | &#x1F852; | Size limit value of export files (in KB) |
+| fieldLimitSize | Integer | &#x1F852; | Size limit (in bytes) below which the contents of a Text, BLOB or Picture field is embedded into the main file |
 
 <!-- END REF-->
 

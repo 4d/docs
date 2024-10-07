@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | ponTabela&#124;NumTabela | Ponteiro, Inteiro longo | &#x1F852; | Ponteiro de tabela ou número de tabela |
-| invisivel | Booleano | &#x1F858; | True = invisível, False = visível |
-| trigSalvarNovo | Booleano | &#x1F858; | True = Trigger "On saving new record" ativado; senão, False |
-| trigSalvarRegistro | Booleano | &#x1F858; | True = Trigger "On saving an existing record" ativado; senão, False |
-| trigApagarRegistro | Booleano | &#x1F858; | True = Trigger "On deleting a record" ativado; senão, False |
-| trigCarregarRegistro | Booleano | &#x1F858; | *** Não usar (obsoleto) *** |
+| invisivel | Boolean | &#x1F858; | True = invisível, False = visível |
+| trigSalvarNovo | Boolean | &#x1F858; | True = Trigger "On saving new record" ativado; senão, False |
+| trigSalvarRegistro | Boolean | &#x1F858; | True = Trigger "On saving an existing record" ativado; senão, False |
+| trigApagarRegistro | Boolean | &#x1F858; | True = Trigger "On deleting a record" ativado; senão, False |
+| trigCarregarRegistro | Boolean | &#x1F858; | *** Não usar (obsoleto) *** |
 
 <!-- END REF-->
 

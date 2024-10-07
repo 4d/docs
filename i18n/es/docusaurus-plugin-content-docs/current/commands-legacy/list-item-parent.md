@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
-| lista | ListRef, Cadena | &#x1F852; | Número de referencia de la lista (si se omite *), o Nombre de objeto de tipo lista (si se pasa*) |
+| lista | Integer, Text | &#x1F852; | Número de referencia de la lista (si se omite *), o Nombre de objeto de tipo lista (si se pasa*) |
 | refElem &#124; * | Operador, Entero largo | &#x1F852; | Número de referencia del elemento o 0 para el último elemento añadido a la lista o * para el elemento actual de la lista |
-| Resultado | Entero largo | &#x1F850; | Número de referencia del elemento padre o 0 si no hay |
+| Resultado | Integer | &#x1F850; | Número de referencia del elemento padre o 0 si no hay |
 
 <!-- END REF-->
 

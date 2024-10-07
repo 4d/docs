@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | mergedApp | 4D.Folder | &#x1F852; | Folder containing the merged application |
-| buildLicense | Objeto arquivo | &#x1F852; | License required to generate the embedded license |
-| oemLicense | Objeto arquivo | &#x1F852; | 4D OEM XML Key license if server license |
-| Resultado | Objeto | &#x1F850; | Status |
+| buildLicense | 4D.File | &#x1F852; | License required to generate the embedded license |
+| oemLicense | 4D.File | &#x1F852; | 4D OEM XML Key license if server license |
+| Resultado | Object | &#x1F850; | Status |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR MOVE COLUMN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | 倍長整数 | &#x1F852; | Reference of the area |
-| column | 倍長整数 | &#x1F852; | Column number |
-| newPos | 倍長整数 | &#x1F852; | New position for column |
+| area | Integer | &#x1F852; | Reference of the area |
+| column | Integer | &#x1F852; | Column number |
+| newPos | Integer | &#x1F852; | New position for column |
 
 <!-- END REF-->
 

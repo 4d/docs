@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Object to path.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objetChemin | Objet | &#x1F852; | Objet décrivant un contenu de chemin |
-| Résultat | Texte | &#x1F850; | Chemin de fichier ou de dossier |
+| objetChemin | Object | &#x1F852; | Objet décrivant un contenu de chemin |
+| Résultat | Text | &#x1F850; | Chemin de fichier ou de dossier |
 
 <!-- END REF-->
 

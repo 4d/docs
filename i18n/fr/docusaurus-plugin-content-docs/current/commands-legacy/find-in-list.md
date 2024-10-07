@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, liste est un nom d’objet (chaîne) Si omis, liste est un numéro de référence de liste |
-| liste | RefListe, Chaîne | &#x1F852; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| valeur | Chaîne | &#x1F852; | Valeur à rechercher |
-| portée | Entier | &#x1F852; | 0=Liste principale, 1=Sous-listes |
-| tabEléments | Tableau entier long | &#x1F858; | - Si 2e * omis : tableau des positions des éléments trouvés - Si 2e * passé : tableau des numéros de référence des éléments trouvés |
+| liste | Integer, Text | &#x1F852; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| valeur | Text | &#x1F852; | Valeur à rechercher |
+| portée | Integer | &#x1F852; | 0=Liste principale, 1=Sous-listes |
+| tabEléments | Integer array | &#x1F858; | - Si 2e * omis : tableau des positions des éléments trouvés - Si 2e * passé : tableau des numéros de référence des éléments trouvés |
 | * | Opérateur | &#x1F852; | - Si omis : utiliser la position des éléments - Si passé : utiliser le numéro de référence des éléments |
-| Résultat | Entier long | &#x1F850; | - Si 2e * omis : position de l’élément trouvé - Si 2e * passé : numéro de référence de l’élément trouvé |
+| Résultat | Integer | &#x1F850; | - Si 2e * omis : position de l’élément trouvé - Si 2e * passé : numéro de référence de l’élément trouvé |
 
 <!-- END REF-->
 

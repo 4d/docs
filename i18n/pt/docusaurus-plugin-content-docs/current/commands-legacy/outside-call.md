@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Outside call.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Booleano | &#x1F850; | Devolve True se o ciclo de execução é Outside call |
+| Resultado | Boolean | &#x1F850; | Devolve True se o ciclo de execução é Outside call |
 
 <!-- END REF-->
 

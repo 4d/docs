@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR BLOB TO REPORT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | 倍長整数 | &#x1F852; | エリア参照 |
-| BLOB | BLOB | &#x1F852; | レポートを納めたBLOB |
+| area | Integer | &#x1F852; | エリア参照 |
+| Blob | Blob | &#x1F852; | レポートを納めたBLOB |
 
 <!-- END REF-->
 

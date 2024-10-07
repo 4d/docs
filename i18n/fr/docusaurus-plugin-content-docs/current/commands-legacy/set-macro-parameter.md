@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET MACRO PARAMETER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sélecteur | Entier long | &#x1F852; | Sélection à utiliser |
-| paramTexte | Texte | &#x1F852; | Texte envoyé |
+| sélecteur | Integer | &#x1F852; | Sélection à utiliser |
+| paramText | Text | &#x1F852; | Texte envoyé |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, considere janela flutuante, se omitido, ignore janela flutuante |
-| Resultado | refJan | &#x1F850; | Número de referência de janela |
+| Resultado | Integer | &#x1F850; | Número de referência de janela |
 
 <!-- END REF-->
 

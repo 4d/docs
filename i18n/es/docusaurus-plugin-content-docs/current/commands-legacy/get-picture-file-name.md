@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get picture file name.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| imagen | Campo imagen, Variable imagen | &#x1F852; | Imagen para la cual obtener el nombre por defecto |
-| Resultado | Texto | &#x1F850; | Nombre por defecto del archivo imagen |
+| imagen | Picture, Picture | &#x1F852; | Imagen para la cual obtener el nombre por defecto |
+| Resultado | Text | &#x1F850; | Nombre por defecto del archivo imagen |
 
 <!-- END REF-->
 

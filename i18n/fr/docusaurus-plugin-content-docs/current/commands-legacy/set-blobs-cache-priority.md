@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table dont vous souhaitez modifier la priorité des données "blobs" pour toute la session |
-| priorité | Entier long | &#x1F852; | Priorité des données "blobs" de la table dans le cache |
+| priorité | Integer | &#x1F852; | Priorité des données "blobs" de la table dans le cache |
 
 <!-- END REF-->
 

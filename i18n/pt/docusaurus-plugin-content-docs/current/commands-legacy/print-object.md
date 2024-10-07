@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
-| posX | Inteiro longo | &#x1F852; | Localização horizontal do objeto |
-| posY | Inteiro longo | &#x1F852; | Localização Vertical do objeto |
-| largura | Inteiro longo | &#x1F852; | Largura do objeto (pixels) |
-| alto | Inteiro longo | &#x1F852; | Altura do objeto (pixels) |
-| Resultado | Booleano | &#x1F850; | Verdade = objeto impresso completamente; de outro modo False |
+| objeto | any | &#x1F852; | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
+| posX | Integer | &#x1F852; | Localização horizontal do objeto |
+| posY | Integer | &#x1F852; | Localização Vertical do objeto |
+| largura | Integer | &#x1F852; | Largura do objeto (pixels) |
+| alto | Integer | &#x1F852; | Altura do objeto (pixels) |
+| Resultado | Boolean | &#x1F850; | Verdade = objeto impresso completamente; de outro modo False |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| objectField | フィールド | &#x1F852; | インデックスされたオブジェクトフィールド |
-| pathArray | テキスト配列 | &#x1F858; | 重複しないパスのリストを取得させる配列 |
+| objectField | Field | &#x1F852; | インデックスされたオブジェクトフィールド |
+| pathArray | Text array | &#x1F858; | 重複しないパスのリストを取得させる配列 |
 
 <!-- END REF-->
 

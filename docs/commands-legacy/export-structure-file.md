@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Export structure file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| folderPath | String | &#x1F852; | Path of the destination folder for project files |
+| folderPath | Text | &#x1F852; | Path of the destination folder for project files |
 | options | Object | &#x1F852; | Export options |
 | Function result | Object | &#x1F850; | Validation status and messages (if any) |
 

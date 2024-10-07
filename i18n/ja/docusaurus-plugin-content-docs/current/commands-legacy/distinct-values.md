@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DISTINCT VALUES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | フィールド | &#x1F852; | データとして使用する、インデックス可能なフィールド |
-| array | 配列 | &#x1F858; | フィールドデータを受け取る配列 |
-| countArray | 倍長整数配列, 実数配列 | &#x1F858; | それぞれの値の数を受け取る配列 |
+| aField | Field | &#x1F852; | データとして使用する、インデックス可能なフィールド |
+| array | Array | &#x1F858; | フィールドデータを受け取る配列 |
+| countArray | Integer array, Real array | &#x1F858; | それぞれの値の数を受け取る配列 |
 
 <!-- END REF-->
 

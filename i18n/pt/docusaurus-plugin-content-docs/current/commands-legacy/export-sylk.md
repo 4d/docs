@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT SYLK.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela da qual exportar dados, ou tabela padrão, se omitida |
-| documento | String | &#x1F852; | documento SYLK a receber os dados |
+| tabela | Table | &#x1F852; | Tabela da qual exportar dados, ou tabela padrão, se omitida |
+| documento | Text | &#x1F852; | documento SYLK a receber os dados |
 
 <!-- END REF-->
 

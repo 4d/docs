@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Tool bar height.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Entier long | &#x1F850; | Hauteur (exprimée en pixels) de la barre d’outils ou 0 si la barre d’outils n’est pas affichée |
+| Résultat | Integer | &#x1F850; | Hauteur (exprimée en pixels) de la barre d’outils ou 0 si la barre d’outils n’est pas affichée |
 
 <!-- END REF-->
 

@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table of the set |
-| recordsArray | Longint, Boolean array | &#x1F852; | Array of record numbers, or Array of booleans (True = the record is in the set, False = the record is not in the set) |
-| setName | String | &#x1F852; | Name of the set to create, or Apply the command to the Userset if omitted |
+| recordsArray | Integer, Boolean array | &#x1F852; | Array of record numbers, or Array of booleans (True = the record is in the set, False = the record is not in the set) |
+| setName | Text | &#x1F852; | Name of the set to create, or Apply the command to the Userset if omitted |
 
 <!-- END REF-->
 

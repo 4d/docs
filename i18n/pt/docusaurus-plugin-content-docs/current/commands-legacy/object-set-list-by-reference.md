@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
-| tipoLista | Inteiro longo | &#x1F852; | Tipo de lista: Lista de valores, Lista de obrigatórios ou Lista de excluídos |
-| lista | ListRef | &#x1F852; | Número de referência de lista |
+| objeto | any | &#x1F852; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| tipoLista | Integer | &#x1F852; | Tipo de lista: Lista de valores, Lista de obrigatórios ou Lista de excluídos |
+| lista | Integer | &#x1F852; | Número de referência de lista |
 
 <!-- END REF-->
 

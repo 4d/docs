@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Windows Ctrl down.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | ブール | &#x1F850; | WindowsのCtrlキーのステータス ( Macintoshの場合は、commandキー) |
+| 戻り値 | Boolean | &#x1F850; | WindowsのCtrlキーのステータス ( Macintoshの場合は、commandキー) |
 
 <!-- END REF-->
 

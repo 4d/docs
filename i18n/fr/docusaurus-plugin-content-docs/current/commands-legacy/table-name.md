@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | numTable &#124; ptrTable | Entier long, Pointeur | &#x1F852; | Numéro de table ou pointeur de table |
-| Résultat | Chaîne | &#x1F850; | Nom de la table |
+| Résultat | Text | &#x1F850; | Nom de la table |
 
 <!-- END REF-->
 

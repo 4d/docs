@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table to display and modify, or Default table, if omitted |
-| selectMode | Longint | &#x1F852; | Selection mode |
+| selectMode | Integer | &#x1F852; | Selection mode |
 | enterList | Boolean | &#x1F852; | Authorize Enter in list option |
 | * | &#x1F852; | Use output form for one record selection and hide scroll bars in the input form |
 | * | &#x1F852; | Show scroll bars in the input form (overrides second option of first optional *) |

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table from which to export data,or Default table, if omitted |
-| document | String | &#x1F852; | DIF document to receive the data |
+| document | Text | &#x1F852; | DIF document to receive the data |
 
 <!-- END REF-->
 

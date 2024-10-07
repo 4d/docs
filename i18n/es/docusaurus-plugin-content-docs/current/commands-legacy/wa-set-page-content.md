@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| contenido | Cadena | &#x1F852; | Código HTML fuente |
-| baseURL | Cadena | &#x1F852; | URL para las referencias relativas (Mac OS) |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| contenido | Text | &#x1F852; | Código HTML fuente |
+| baseURL | Text | &#x1F852; | URL para las referencias relativas (Mac OS) |
 
 <!-- END REF-->
 

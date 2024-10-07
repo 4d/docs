@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is a list.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| list | ListRef | &#x1F852; | ListRef value to be tested |
+| list | Integer | &#x1F852; | ListRef value to be tested |
 | Function result | Boolean | &#x1F850; | TRUE if list is a hierarchical list FALSE if list is not a hierarchical list |
 
 <!-- END REF-->

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Substring.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| fonte | String | &#x1F852; | Cadeia da qual se tira a substring |
-| aPartirDe | Inteiro longo | &#x1F852; | Posição do primeiro caractere |
-| numCars | Inteiro longo | &#x1F852; | Número de caracteres a pegar |
-| Resultado | String | &#x1F850; | Substring de fonte |
+| fonte | Text | &#x1F852; | Cadeia da qual se tira a substring |
+| aPartirDe | Integer | &#x1F852; | Posição do primeiro caractere |
+| numCars | Integer | &#x1F852; | Número de caracteres a pegar |
+| Resultado | Text | &#x1F850; | Substring de fonte |
 
 <!-- END REF-->
 

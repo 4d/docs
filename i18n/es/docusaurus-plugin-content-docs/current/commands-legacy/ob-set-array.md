@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB SET ARRAY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | Campo Objeto, Objeto | &#x1F852; | Objeto estructurado |
-| propiedad | Texto | &#x1F852; | Nombre de la propiedad a definir |
+| objeto | Object, Object | &#x1F852; | Objeto estructurado |
+| propiedad | Text | &#x1F852; | Nombre de la propiedad a definir |
 | array | Array, Variable | &#x1F852; | Array a almacenar en propiedad |
 
 <!-- END REF-->

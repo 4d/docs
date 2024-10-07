@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Char.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| charCode | Longint | &#x1F852; | Character code |
+| charCode | Integer | &#x1F852; | Character code |
 | Function result | String | &#x1F850; | Character represented by the charCode |
 
 <!-- END REF-->

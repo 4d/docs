@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Numéro du process de la première fenêtre non-flottante |
-| Résultat | Entier | &#x1F850; | Numéro du process dont la ou les fenêtre(s) est (sont) au premier plan |
+| Résultat | Integer | &#x1F850; | Numéro du process dont la ou les fenêtre(s) est (sont) au premier plan |
 
 <!-- END REF-->
 

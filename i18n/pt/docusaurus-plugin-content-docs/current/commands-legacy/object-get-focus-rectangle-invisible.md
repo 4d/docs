@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável ou um campo |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se especificado *) ou Variável ou campo (se omitido *) |
-| Resultado | Booleano | &#x1F850; | True = retângulo de foco oculto, False = retângulo de foco visível |
+| objeto | any | &#x1F852; | Nome de objeto (se especificado *) ou Variável ou campo (se omitido *) |
+| Resultado | Boolean | &#x1F850; | True = retângulo de foco oculto, False = retângulo de foco visível |
 
 <!-- END REF-->
 

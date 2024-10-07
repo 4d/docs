@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| posiçao | Inteiro longo | &#x1F852; | Posição da fila a apagar |
-| numFilas | Inteiro longo | &#x1F852; | Número de filas a inserir |
+| objeto | any | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| posiçao | Integer | &#x1F852; | Posição da fila a apagar |
+| numFilas | Integer | &#x1F852; | Número de filas a inserir |
 
 <!-- END REF-->
 

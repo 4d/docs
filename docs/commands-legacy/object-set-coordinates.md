@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | Longint | &#x1F852; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
-| left | Longint | &#x1F852; | Left coordinate of object in pixels |
-| top | Longint | &#x1F852; | Top coordinate of object in pixels |
-| right | Longint | &#x1F852; | Right coordinate of object in pixels |
-| bottom | Longint | &#x1F852; | Bottom coordinate of object in pixels |
+| object | Integer | &#x1F852; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| left | Integer | &#x1F852; | Left coordinate of object in pixels |
+| top | Integer | &#x1F852; | Top coordinate of object in pixels |
+| right | Integer | &#x1F852; | Right coordinate of object in pixels |
+| bottom | Integer | &#x1F852; | Bottom coordinate of object in pixels |
 
 <!-- END REF-->
 

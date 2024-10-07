@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | ListRef, String | &#x1F852; | List reference number (if * omitted), or Name of list type object (if * passed) |
+| list | Integer, Text | &#x1F852; | List reference number (if * omitted), or Name of list type object (if * passed) |
 | itemPos &#124; * | Operator, Longint | &#x1F852; | Position of item in expanded/collapsed list(s) or * for the current item in the list |
-| itemRef | Longint | &#x1F858; | Item reference number |
-| itemText | String | &#x1F858; | Text of the list item |
-| sublist | ListRef | &#x1F858; | Sublist list reference number (if any) |
+| itemRef | Integer | &#x1F858; | Item reference number |
+| itemText | Text | &#x1F858; | Text of the list item |
+| sublist | Integer | &#x1F858; | Sublist list reference number (if any) |
 | expanded | Boolean | &#x1F858; | If a sublist is attached: TRUE = sublist is currently expanded FALSE = sublist is currently collapsed |
 
 <!-- END REF-->

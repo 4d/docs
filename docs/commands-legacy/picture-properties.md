@@ -12,9 +12,9 @@ displayed_sidebar: docs
 | picture | Picture | &#x1F852; | Picture for which to get information |
 | width | Real | &#x1F858; | Width of the picture expressed in pixels |
 | height | Real | &#x1F858; | Height of the picture expressed in pixels |
-| hOffset | Longint | &#x1F858; | Horizontal offset when displayed on background |
-| vOffset | Longint | &#x1F858; | Vertical offset when displayed on background |
-| mode | Longint | &#x1F858; | Transfer mode when displayed on background |
+| hOffset | Integer | &#x1F858; | Horizontal offset when displayed on background |
+| vOffset | Integer | &#x1F858; | Vertical offset when displayed on background |
+| mode | Integer | &#x1F858; | Transfer mode when displayed on background |
 
 <!-- END REF-->
 

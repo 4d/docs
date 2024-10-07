@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| conteúdo | String | &#x1F852; | código de fonte HTML |
-| bancoURL | String | &#x1F852; | URL para referências relativas (Mac OS) |
+| objeto | any | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| conteúdo | Text | &#x1F852; | código de fonte HTML |
+| bancoURL | Text | &#x1F852; | URL para referências relativas (Mac OS) |
 
 <!-- END REF-->
 

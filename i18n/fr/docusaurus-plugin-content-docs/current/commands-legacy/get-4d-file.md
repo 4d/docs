@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get 4D file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fichier | Entier long | &#x1F852; | Type de fichier |
+| fichier | Integer | &#x1F852; | Type de fichier |
 | * | Opérateur | &#x1F852; | Retourne le chemin d'accès du fichier de la base hôte |
-| Résultat | Chaîne | &#x1F850; | Chemin d'accès du fichier 4D désigné |
+| Résultat | Text | &#x1F850; | Chemin d'accès du fichier 4D désigné |
 
 <!-- END REF-->
 

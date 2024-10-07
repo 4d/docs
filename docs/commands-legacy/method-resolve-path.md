@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | path | Text | &#x1F852; | Path to resolve |
-| methodType | Longint | &#x1F858; | Object type selector |
+| methodType | Integer | &#x1F858; | Object type selector |
 | ptrTable | Pointer | &#x1F858; | Table reference |
 | objectName | Text | &#x1F858; | Name of form or database method |
 | formObjectName | Text | &#x1F858; | Name of form object |

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table de l’enregistrement à examiner ou Table par défaut si ce paramètre est omis |
-| Résultat | Booléen | &#x1F850; | Vrai si l’enregistrement est en cours de création, Faux sinon |
+| Résultat | Boolean | &#x1F850; | Vrai si l’enregistrement est en cours de création, Faux sinon |
 
 <!-- END REF-->
 

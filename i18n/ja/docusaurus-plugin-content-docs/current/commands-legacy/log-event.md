@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LOG EVENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| outputType | 倍長整数 | &#x1F852; | メッセージの出力タイプ |
-| message | 文字 | &#x1F852; | メッセージの内容 |
-| importance | 倍長整数 | &#x1F852; | メッセージの重要度レベル |
+| outputType | Integer | &#x1F852; | メッセージの出力タイプ |
+| message | Text | &#x1F852; | メッセージの内容 |
+| importance | Integer | &#x1F852; | メッセージの重要度レベル |
 
 <!-- END REF-->
 

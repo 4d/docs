@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.COPY DOCUMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| sourceName | String | &#x1F852; | Pathname of file or folder to be copied |
-| destinationName | String | &#x1F852; | Name or pathname of copied file or folder |
-| newName | String | &#x1F852; | New name of copied file or folder |
+| sourceName | Text | &#x1F852; | Pathname of file or folder to be copied |
+| destinationName | Text | &#x1F852; | Name or pathname of copied file or folder |
+| newName | Text | &#x1F852; | New name of copied file or folder |
 | * | Operator | &#x1F852; | Override existing document if any |
 
 <!-- END REF-->

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table de laquelle réordonner la sélection courante ou Table par défaut si ce paramètre est omis |
-| leChamp | Champ | &#x1F852; | Champ sur lequel effectuer le tri pour chaque niveau |
+| leField | Field | &#x1F852; | Champ sur lequel effectuer le tri pour chaque niveau |
 | > ou < | Opérateur | &#x1F852; | Sens du tri pour chaque niveau : > demander un tri croissant ou < demander un tri décroissant |
 | * | Opérateur | &#x1F852; | Attente d'exécution du tri |
 

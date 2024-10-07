@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#x1F852; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectは変数 |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時), または 変数 (* 省略時) |
-| selector | 倍長整数 | &#x1F852; | 取得する高さの値:lk row min height あるいは lk row max height |
-| unit | 倍長整数 | &#x1F852; | 行の高さの最小値、あるいは最大値 |
-| 戻り値 | 倍長整数 | &#x1F850; | 選択された行の高さの値 |
+| object | any | &#x1F852; | オブジェクト名 (* 指定時), または 変数 (* 省略時) |
+| selector | Integer | &#x1F852; | 取得する高さの値:lk row min height あるいは lk row max height |
+| unit | Integer | &#x1F852; | 行の高さの最小値、あるいは最大値 |
+| 戻り値 | Integer | &#x1F850; | 選択された行の高さの値 |
 
 <!-- END REF-->
 

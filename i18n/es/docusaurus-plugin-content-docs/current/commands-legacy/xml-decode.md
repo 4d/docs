@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | valor XML | Texto | &#x1F852; | Valor de tipo texto proveniente de una estructura XML |
-| objeto4D | Campo, Variable | &#x1F858; | Variable o campo 4D que recibe el valor XML convertido |
+| objeto4D | Field, Variable | &#x1F858; | Variable o campo 4D que recibe el valor XML convertido |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Not.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| boolean | ブール | &#x1F852; | 否定を求めるブール値 |
-| 戻り値 | ブール | &#x1F850; | 反対のブール値 |
+| boolean | Boolean | &#x1F852; | 否定を求めるブール値 |
+| 戻り値 | Boolean | &#x1F850; | 反対のブール値 |
 
 <!-- END REF-->
 

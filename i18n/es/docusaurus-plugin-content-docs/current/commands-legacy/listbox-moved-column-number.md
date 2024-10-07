@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| antPosicion | Entero largo | &#x1F858; | Posición anterior de la columna movida |
-| nuevPosicion | Entero largo | &#x1F858; | Nueva posición de la columna movida |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| antPosicion | Integer | &#x1F858; | Posición anterior de la columna movida |
+| nuevPosicion | Integer | &#x1F858; | Nueva posición de la columna movida |
 
 <!-- END REF-->
 

@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié = objet est un nom d'objet (chaîne) Si omis = objet est un champ ou une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou Champ ou variable (si * est omis) |
-| style | Entier long | &#x1F852; | Style de police |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou Champ ou variable (si * est omis) |
+| style | Integer | &#x1F852; | Style de police |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Decrypt data BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| blobToDecrypt | BLOB | &#x1F852; | 復号化したいBLOB |
+| blobToDecrypt | Blob | &#x1F852; | 復号化したいBLOB |
 | keyObject &#124; passPhrase | オブジェクト, テキスト | &#x1F852; | 暗号化鍵を格納したJSON オブジェクト、または直接暗号化鍵を生成するためのパスフレーズ(テキスト) |
-| salt | 倍長整数 | &#x1F852; | アルゴリズムのための追加のsalt |
-| decryptedBLOB | BLOB | &#x1F858; | 復号化されたBLOB |
-| 戻り値 | ブール | &#x1F850; | 復号化が正常に実行された場合にはTrue、それ以外の場合にはFalse |
+| salt | Integer | &#x1F852; | アルゴリズムのための追加のsalt |
+| decryptedBlob | Blob | &#x1F858; | 復号化されたBLOB |
+| 戻り値 | Boolean | &#x1F850; | 復号化が正常に実行された場合にはTrue、それ以外の場合にはFalse |
 
 <!-- END REF-->
 

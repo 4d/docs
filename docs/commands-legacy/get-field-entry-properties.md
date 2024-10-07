@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | fieldPtr&#124;tableNum | Pointer, Longint | &#x1F852; | Field pointer or table number |
-| fieldNum | Longint | &#x1F852; | Field number if the table number is passed as first parameter |
-| list | String | &#x1F858; | Associated choice list name or empty string |
+| fieldNum | Integer | &#x1F852; | Field number if the table number is passed as first parameter |
+| list | Text | &#x1F858; | Associated choice list name or empty string |
 | mandatory | Boolean | &#x1F858; | True = Mandatory, False = Optional |
 | nonEnterable | Boolean | &#x1F858; | True = Non-enterable, False = Enterable |
 | nonModifiable | Boolean | &#x1F858; | True = Non-modifiable, False = Modifiable |

@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table de l’ensemble |
-| tabEnrg | Entier long, Tableau booléen | &#x1F852; | Tableau de n° d’enregistrements, ou Tableau de booléens (Vrai = l’enregistrement est dans l’ensemble, Faux = il n’est pas dans l’ensemble) |
-| nomEnsemble | Chaîne | &#x1F852; | Nom de l’ensemble à créer, ou Appliquer la commande à l’ensemble Userset si ce paramètre est omis ou vide |
+| tabEnrg | Integer, Boolean array | &#x1F852; | Tableau de n° d’enregistrements, ou Tableau de booléens (Vrai = l’enregistrement est dans l’ensemble, Faux = il n’est pas dans l’ensemble) |
+| nomEnsemble | Text | &#x1F852; | Nom de l’ensemble à créer, ou Appliquer la commande à l’ensemble Userset si ce paramètre est omis ou vide |
 
 <!-- END REF-->
 

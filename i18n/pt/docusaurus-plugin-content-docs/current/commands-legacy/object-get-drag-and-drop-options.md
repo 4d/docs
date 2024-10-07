@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
-| arrastavel | Booleano | &#x1F858; | 0 = False, 1 = True |
-| arrastavelAuto | Booleano | &#x1F858; | 0 = False, 1 = True |
-| soltavel | Booleano | &#x1F858; | 0 = False, 1 = True |
-| soltavelAuto | Booleano | &#x1F858; | 0 = False, 1 = True |
+| objeto | any | &#x1F852; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| arrastavel | Boolean | &#x1F858; | 0 = False, 1 = True |
+| arrastavelAuto | Boolean | &#x1F858; | 0 = False, 1 = True |
+| soltavel | Boolean | &#x1F858; | 0 = False, 1 = True |
+| soltavelAuto | Boolean | &#x1F858; | 0 = False, 1 = True |
 
 <!-- END REF-->
 

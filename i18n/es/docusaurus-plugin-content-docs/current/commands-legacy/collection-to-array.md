@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | coleccion | Collection | &#x1F852; | Colección a copiar en array(s) |
 | array | Array | &#x1F858; | Array para recibir los elementos de la colección; si se pasó nombreProp, array para recibir los valores de nombreProp en la colección |
-| nombreProp | Texto | &#x1F852; | Nombre de la propiedad del objeto cuyos valores copiar en array ("" para todos los elementos) |
+| nombreProp | Text | &#x1F852; | Nombre de la propiedad del objeto cuyos valores copiar en array ("" para todos los elementos) |
 
 <!-- END REF-->
 

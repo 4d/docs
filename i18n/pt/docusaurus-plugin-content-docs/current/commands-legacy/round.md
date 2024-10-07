@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | round | Real | &#x1F852; | Número a ser arredondado |
-| decimais | Inteiro longo | &#x1F852; | Número de casas decimais a arredondar |
+| decimais | Integer | &#x1F852; | Número de casas decimais a arredondar |
 | Resultado | Real | &#x1F850; | Valor arredondado ao número de casas decimais especificada por decimais |
 
 <!-- END REF-->

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP SET OPTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| option | Entier long | &#x1F852; | Code de l’option à fixer |
-| valeur | Entier long | &#x1F852; | Valeur de l’option |
+| option | Integer | &#x1F852; | Code de l’option à fixer |
+| valeur | Integer | &#x1F852; | Valeur de l’option |
 
 <!-- END REF-->
 

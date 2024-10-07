@@ -10,14 +10,14 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
-| posCol | Inteiro longo | &#x1F852; | Localização da nova coluna duplicada |
-| nomCol | String | &#x1F852; | Nome da nova coluna |
-| varCol | Array, Campo, Variável, Ponteiro nil | &#x1F852; | Nome da variável array da coluna ou campo ou variável |
-| nomCabe | String | &#x1F852; | Nome do objeto do cabeçalho da coluna |
-| varCabe | Variável inteira, Ponteiro nil | &#x1F852; | Variável do cabeçalho da coluna |
-| nomRodape | String | &#x1F852; | Nome do objeto do rodapé da coluna |
-| varRodape | Variável, Ponteiro nil | &#x1F852; | Variável do rodapé da coluna |
+| objeto | any | &#x1F852; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| posCol | Integer | &#x1F852; | Localização da nova coluna duplicada |
+| nomCol | Text | &#x1F852; | Nome da nova coluna |
+| varCol | Array, Field, Variable, Pointer | &#x1F852; | Nome da variável array da coluna ou campo ou variável |
+| nomCabe | Text | &#x1F852; | Nome do objeto do cabeçalho da coluna |
+| varCabe | Integer, Pointer | &#x1F852; | Variável do cabeçalho da coluna |
+| nomRodape | Text | &#x1F852; | Nome do objeto do rodapé da coluna |
+| varRodape | Variable, Pointer | &#x1F852; | Variável do rodapé da coluna |
 
 <!-- END REF-->
 

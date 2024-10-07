@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY PICTURE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| arrayName | 配列 | &#x1F852; | 配列名 |
-| size | 倍長整数 | &#x1F852; | 配列の要素数、またはsize2を指定した場合は配列の行数 |
-| size2 | 倍長整数 | &#x1F852; | 2次元配列の列数 |
+| arrayName | Array | &#x1F852; | 配列名 |
+| size | Integer | &#x1F852; | 配列の要素数、またはsize2を指定した場合は配列の行数 |
+| size2 | Integer | &#x1F852; | 2次元配列の列数 |
 
 <!-- END REF-->
 

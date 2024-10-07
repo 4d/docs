@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Date.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| expression | String, Date | &#x1F852; | String representing the date to be returned or Date expression |
+| expression | Text, Date | &#x1F852; | String representing the date to be returned or Date expression |
 | Function result | Date | &#x1F850; | Date expression |
 
 <!-- END REF-->

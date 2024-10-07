@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.COMBINE PICTURES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resultingPict | ピクチャー | &#x1F858; | 重ね合わせた結果のピクチャ |
-| pict1 | ピクチャー | &#x1F852; | 重ね合わせる1つ目のピクチャ |
-| operator | 倍長整数 | &#x1F852; | 重ね合わせのタイプ |
-| pict2 | ピクチャー | &#x1F852; | 重ね合わせる2つ目のピクチャ |
-| horOffset | 倍長整数 | &#x1F852; | 重ね合わせの横オフセット |
-| vertOffset | 倍長整数 | &#x1F852; | 重ね合わせの縦オフセット |
+| resultingPict | Picture | &#x1F858; | 重ね合わせた結果のピクチャ |
+| pict1 | Picture | &#x1F852; | 重ね合わせる1つ目のピクチャ |
+| operator | Integer | &#x1F852; | 重ね合わせのタイプ |
+| pict2 | Picture | &#x1F852; | 重ね合わせる2つ目のピクチャ |
+| horOffset | Integer | &#x1F852; | 重ね合わせの横オフセット |
+| vertOffset | Integer | &#x1F852; | 重ね合わせの縦オフセット |
 
 <!-- END REF-->
 

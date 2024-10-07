@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified = object is the name of the object (string) If omitted = object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Field or variable (if * is omitted) |
-| left | Longint | &#x1F858; | Left coordinate of the object |
-| top | Longint | &#x1F858; | Top coordinate of the object |
-| right | Longint | &#x1F858; | Right coordinate of the object |
-| bottom | Longint | &#x1F858; | Bottom coordinate of the object |
+| object | any | &#x1F852; | Object name (if * is specified) or Field or variable (if * is omitted) |
+| left | Integer | &#x1F858; | Left coordinate of the object |
+| top | Integer | &#x1F858; | Top coordinate of the object |
+| right | Integer | &#x1F858; | Right coordinate of the object |
+| bottom | Integer | &#x1F858; | Bottom coordinate of the object |
 
 <!-- END REF-->
 

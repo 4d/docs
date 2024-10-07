@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD OPEN PATH.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin | Texte | &#x1F852; | Chemin de la méthode à ouvrir |
-| line | Numérique | &#x1F852; | Line number |
+| chemin | Text | &#x1F852; | Chemin de la méthode à ouvrir |
+| line | Number | &#x1F852; | Line number |
 | * | Opérateur | &#x1F852; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->

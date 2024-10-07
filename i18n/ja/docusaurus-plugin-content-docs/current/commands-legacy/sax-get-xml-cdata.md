@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX GET XML CDATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | DocRef | &#x1F852; | 開いたドキュメントの参照 |
-| value | テキスト, BLOB | &#x1F858; | 要素値 |
+| document | Time | &#x1F852; | 開いたドキュメントの参照 |
+| value | Text, Blob | &#x1F858; | 要素値 |
 
 <!-- END REF-->
 

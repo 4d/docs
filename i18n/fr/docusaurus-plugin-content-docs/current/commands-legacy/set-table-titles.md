@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET TABLE TITLES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| titresTables | Tableau chaîne | &#x1F852; | Noms des tables tels qu'ils doivent apparaître |
-| numTables | Tableau entier long | &#x1F852; | Numéros des tables |
+| titresTables | Text array | &#x1F852; | Noms des tables tels qu'ils doivent apparaître |
+| numTables | Integer array | &#x1F852; | Numéros des tables |
 | * | Opérateur | &#x1F852; | Utiliser les noms personnalisés dans l’éditeur de formules |
 
 <!-- END REF-->

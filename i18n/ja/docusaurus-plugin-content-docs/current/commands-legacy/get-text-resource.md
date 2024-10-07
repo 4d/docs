@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get text resource.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resID | 倍長整数 | &#x1F852; | リソースID番号 |
-| resFile | DocRef | &#x1F852; | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
-| 戻り値 | テキスト | &#x1F850; | TEXTリソースの内容 |
+| resID | Integer | &#x1F852; | リソースID番号 |
+| resFile | Time | &#x1F852; | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
+| 戻り値 | Text | &#x1F850; | TEXTリソースの内容 |
 
 <!-- END REF-->
 

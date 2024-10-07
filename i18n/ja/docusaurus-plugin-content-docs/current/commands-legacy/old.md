@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Old.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | フィールド | &#x1F852; | 元の値を取得するフィールド |
-| 戻り値 | 式 | &#x1F850; | 元のフィールド値 |
+| aField | Field | &#x1F852; | 元の値を取得するフィールド |
+| 戻り値 | Expression | &#x1F850; | 元のフィールド値 |
 
 <!-- END REF-->
 

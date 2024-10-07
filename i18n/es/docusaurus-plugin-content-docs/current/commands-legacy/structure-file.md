@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Devuelve el archivo de estructura de la base local |
-| Resultado | Cadena | &#x1F850; | Nombre largo del archivo de estructura de la base |
+| Resultado | Text | &#x1F850; | Nombre largo del archivo de estructura de la base |
 
 <!-- END REF-->
 

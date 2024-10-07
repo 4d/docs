@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX ADD XML DOCTYPE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | DocRef | &#x1F852; | 開いたドキュメントの参照 |
-| docType | 文字 | &#x1F852; | 追加するDocType |
+| document | Time | &#x1F852; | 開いたドキュメントの参照 |
+| docType | Text | &#x1F852; | 追加するDocType |
 
 <!-- END REF-->
 

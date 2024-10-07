@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Tool bar height.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Entero largo | &#x1F850; | Altura (expresada en píxeles) de la barra de herramientas o 0 si la barra está oculta |
+| Resultado | Integer | &#x1F850; | Altura (expresada en píxeles) de la barra de herramientas o 0 si la barra está oculta |
 
 <!-- END REF-->
 

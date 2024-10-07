@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table in which to go to the selected record, or Default table, if omitted |
-| record | Longint | &#x1F852; | Position of record in the selection |
+| record | Integer | &#x1F852; | Position of record in the selection |
 
 <!-- END REF-->
 

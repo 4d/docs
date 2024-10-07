@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Create XML Ref.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| raiz | Cadena | &#x1F852; | Nombre del elemento raíz |
-| nomEspacio | Cadena | &#x1F852; | Valor del espacio de nombre (namespace) |
-| nSNom | Cadena | &#x1F852; | Nombre del espacio de nombre |
-| nSValor | Cadena | &#x1F852; | Valor de espacio de nombre |
-| Resultado | Cadena | &#x1F850; | Referencia del elemento XML raíz |
+| raiz | Text | &#x1F852; | Nombre del elemento raíz |
+| nomEspacio | Text | &#x1F852; | Valor del espacio de nombre (namespace) |
+| nSNom | Text | &#x1F852; | Nombre del espacio de nombre |
+| nSValor | Text | &#x1F852; | Valor de espacio de nombre |
+| Resultado | Text | &#x1F850; | Referencia del elemento XML raíz |
 
 <!-- END REF-->
 

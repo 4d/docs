@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Mod.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| number1 | 倍長整数 | &#x1F852; | 除算される数値 |
-| number2 | 倍長整数 | &#x1F852; | 除算する数値 |
-| 戻り値 | 実数 | &#x1F850; | 余り |
+| number1 | Integer | &#x1F852; | 除算される数値 |
+| number2 | Integer | &#x1F852; | 除算する数値 |
+| 戻り値 | Real | &#x1F850; | 余り |
 
 <!-- END REF-->
 

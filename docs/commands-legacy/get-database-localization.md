@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get database localization.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| languageType | Longint | &#x1F852; | Type of language |
+| languageType | Integer | &#x1F852; | Type of language |
 | * | Operator | &#x1F852; | Return information about host database |
 | Function result | String | &#x1F850; | Current language of the database |
 

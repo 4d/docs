@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | folderName | Text | &#x1F852; | Name of Home page folder |
-| methodType | Longint | &#x1F852; | Selector of method type to get |
+| methodType | Integer | &#x1F852; | Selector of method type to get |
 | arrPaths | Text array | &#x1F858; | Array of method paths and names |
-| stamp | Real variable | &#x1F852; | Minimum value of stamp |
+| stamp | Real | &#x1F852; | Minimum value of stamp |
 | &#x1F858; | New current value |
 | * | Operator | &#x1F852; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 

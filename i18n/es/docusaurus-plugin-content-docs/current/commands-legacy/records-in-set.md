@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Records in set.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| conjunto | Cadena | &#x1F852; | Nombre del conjunto a probar |
-| Resultado | Entero largo | &#x1F850; | Número de registros en prueba |
+| conjunto | Text | &#x1F852; | Nombre del conjunto a probar |
+| Resultado | Integer | &#x1F850; | Número de registros en prueba |
 
 <!-- END REF-->
 

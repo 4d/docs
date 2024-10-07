@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Open datastore.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| infoConnexion | Objet | &#x1F852; | Propriétés de connexion utilisées pour atteindre le datastore distant |
-| localID | Texte | &#x1F852; | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
-| Résultat | Objet | &#x1F850; | Objet datastore |
+| infoConnexion | Object | &#x1F852; | Propriétés de connexion utilisées pour atteindre le datastore distant |
+| localID | Text | &#x1F852; | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
+| Résultat | Object | &#x1F850; | Objet datastore |
 
 <!-- END REF-->
 

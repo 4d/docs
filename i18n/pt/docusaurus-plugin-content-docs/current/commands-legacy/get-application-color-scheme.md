@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Retorna o esquema de cores do banco de dados host/anfitrião |
-| Resultado | Texto | &#x1F850; | Esquema de cores da aplicação atual |
+| Resultado | Text | &#x1F850; | Esquema de cores da aplicação atual |
 
 <!-- END REF-->
 

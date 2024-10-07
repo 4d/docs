@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| ancho | Entero largo | &#x1F852; | Ancho de la columna (en píxeles) |
-| anchoMin | Entero largo | &#x1F852; | Ancho mínimo de columna (en píxeles) |
-| anchoMax | Entero largo | &#x1F852; | Ancho máximo de columna (en píxeles) |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| ancho | Integer | &#x1F852; | Ancho de la columna (en píxeles) |
+| anchoMin | Integer | &#x1F852; | Ancho mínimo de columna (en píxeles) |
+| anchoMax | Integer | &#x1F852; | Ancho máximo de columna (en píxeles) |
 
 <!-- END REF-->
 

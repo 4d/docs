@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SCAN INDEX.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leChamp | Champ | &#x1F852; | Champ indexé avec lequel "scanner" les enregistrements |
-| nombre | Entier long | &#x1F852; | Nombre d'enregistrements à retourner |
+| leField | Field | &#x1F852; | Champ indexé avec lequel "scanner" les enregistrements |
+| nombre | Integer | &#x1F852; | Nombre d'enregistrements à retourner |
 | > ou < | Opérateur | &#x1F852; | > à partir du début de l'index < à partir de la fin de l'index |
 
 <!-- END REF-->

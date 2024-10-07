@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.cs.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Objeto | &#x1F850; | Class Store que contém todas as classes do banco de dados atual. |
+| Resultado | Object | &#x1F850; | Class Store que contém todas as classes do banco de dados atual. |
 
 <!-- END REF-->
 

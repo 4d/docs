@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM EDIT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla dueña del formulario o Si se omite: tabla predeterminada o uso del formulario proyecto |
-| form | Cadena | &#x1F852; | Nombre del formulario |
+| tabla | Table | &#x1F852; | Tabla dueña del formulario o Si se omite: tabla predeterminada o uso del formulario proyecto |
+| form | Text | &#x1F852; | Nombre del formulario |
 
 <!-- END REF-->
 

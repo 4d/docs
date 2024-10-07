@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD SET ACCESS MODE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| mode | Longint | &#x1F852; | Access mode for locked objects |
+| mode | Integer | &#x1F852; | Access mode for locked objects |
 
 <!-- END REF-->
 

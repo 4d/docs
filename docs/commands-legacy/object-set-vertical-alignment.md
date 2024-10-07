@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object Name (if * is specified) or Variable (if * is omitted) |
-| alignment | Longint | &#x1F852; | Alignment code |
+| object | any | &#x1F852; | Object Name (if * is specified) or Variable (if * is omitted) |
+| alignment | Integer | &#x1F852; | Alignment code |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Object to path.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objRuta | Objeto | &#x1F852; | Objeto que describe los contenidos de una ruta |
-| Resultado | Texto | &#x1F850; | Nombre de ruta |
+| objRuta | Object | &#x1F852; | Objeto que describe los contenidos de una ruta |
+| Resultado | Text | &#x1F850; | Nombre de ruta |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get pointer.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| varName | String | &#x1F852; | Name of a process or interprocess variable |
+| varName | Text | &#x1F852; | Name of a process or interprocess variable |
 | Function result | Pointer | &#x1F850; | Pointer to process or interprocess variable |
 
 <!-- END REF-->

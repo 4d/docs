@@ -10,13 +10,13 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table du formulaire ou Table par défaut si ce paramètre est omis |
-| nomForm | Chaîne | &#x1F852; | Nom du formulaire |
-| largeur | Entier long | &#x1F858; | Largeur du formulaire (en pixels) |
-| hauteur | Entier long | &#x1F858; | Hauteur du formulaire (en pixels) |
-| nbPages | Entier long | &#x1F858; | Nombre de pages du formulaire |
-| largeurFixe | Booléen | &#x1F858; | Vrai = Largeur fixe, Faux = Largeur variable |
-| hauteurFixe | Booléen | &#x1F858; | Vrai = Hauteur fixe, Faux = Hauteur variable |
-| titre | Texte | &#x1F858; | Nom de la fenêtre du formulaire |
+| nomForm | Text | &#x1F852; | Nom du formulaire |
+| largeur | Integer | &#x1F858; | Largeur du formulaire (en pixels) |
+| hauteur | Integer | &#x1F858; | Hauteur du formulaire (en pixels) |
+| nbPages | Integer | &#x1F858; | Nombre de pages du formulaire |
+| largeurFixe | Boolean | &#x1F858; | Vrai = Largeur fixe, Faux = Largeur variable |
+| hauteurFixe | Boolean | &#x1F858; | Vrai = Hauteur fixe, Faux = Hauteur variable |
+| titre | Text | &#x1F858; | Nom de la fenêtre du formulaire |
 
 <!-- END REF-->
 

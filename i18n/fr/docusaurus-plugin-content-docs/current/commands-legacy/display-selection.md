@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table à laquelle appartient la sélection ou Table par défaut si ce paramètre est omis |
-| modeSélection | Entier long | &#x1F852; | Mode de sélection |
-| saisieListe | Booléen | &#x1F852; | Autoriser saisie en liste |
+| modeSélection | Integer | &#x1F852; | Mode de sélection |
+| saisieListe | Boolean | &#x1F852; | Autoriser saisie en liste |
 | * | &#x1F852; | Utiliser le formulaire sortie en cas de sélection d'un seul enregistrement et masquer les barres de défilement dans le formulaire entrée |
 | * | &#x1F852; | Afficher les barres de défilement dans le formulaire entrée (= annuler le second effet du premier paramètre *) |
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table de laquelle vous souhaitez obtenir le numéro de l'enregistrement courant ou Table par défaut si ce paramètre est omis |
-| Résultat | Entier long | &#x1F850; | Numéro d'enregistrement courant |
+| Résultat | Integer | &#x1F850; | Numéro d'enregistrement courant |
 
 <!-- END REF-->
 

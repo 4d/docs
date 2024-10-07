@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis |
-| hauteur | Entier long | &#x1F852; | Hauteur de la ligne |
-| unité | Entier long | &#x1F852; | Unité de la valeur de hauteur : <br/>0 ou omis = pixels, 1 = lignes |
+| objet | any | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis |
+| hauteur | Integer | &#x1F852; | Hauteur de la ligne |
+| unité | Integer | &#x1F852; | Unité de la valeur de hauteur : <br/>0 ou omis = pixels, 1 = lignes |
 
 <!-- END REF-->
 

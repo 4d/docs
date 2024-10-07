@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Round.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| arrondi | Réel | &#x1F852; | Nombre à arrondir |
-| nbDécimales | Entier long | &#x1F852; | Nombre de décimales de l'arrondi |
-| Résultat | Réel | &#x1F850; | Valeur de nombre arrondie avec une précision égale à nbDécimales |
+| arrondi | Real | &#x1F852; | Nombre à arrondir |
+| nbDécimales | Integer | &#x1F852; | Nombre de décimales de l'arrondi |
+| Résultat | Real | &#x1F850; | Valeur de nombre arrondie avec une précision égale à nbDécimales |
 
 <!-- END REF-->
 

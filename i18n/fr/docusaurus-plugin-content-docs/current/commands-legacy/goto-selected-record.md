@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table dans laquelle aller à l'enregistrement spécifié ou Table par défaut si ce paramètre est omis |
-| enregistrement | Entier long | &#x1F852; | Position de l'enregistrement dans la sélection |
+| enregistrement | Integer | &#x1F852; | Position de l'enregistrement dans la sélection |
 
 <!-- END REF-->
 

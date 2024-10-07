@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MEMORY STATISTICS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tipoInfo | Entero largo | &#x1F852; | Selector de información a obtener |
-| arrayNombres | Array texto | &#x1F858; | Títulos de la información |
-| arrayValores | Array real | &#x1F858; | Valores de la información |
-| ArrayContador | Array real | &#x1F858; | Número de objetos respectivos (si disponible) |
+| tipoInfo | Integer | &#x1F852; | Selector de información a obtener |
+| arrayNombres | Text array | &#x1F858; | Títulos de la información |
+| arrayValores | Real array | &#x1F858; | Valores de la información |
+| ArrayContador | Real array | &#x1F858; | Número de objetos respectivos (si disponible) |
 
 <!-- END REF-->
 

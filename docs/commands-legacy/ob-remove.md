@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OB REMOVE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object, Object Field | &#x1F852; | Structured object |
+| object | Object, Object | &#x1F852; | Structured object |
 | property | Text | &#x1F852; | Name of property to remove |
 
 <!-- END REF-->

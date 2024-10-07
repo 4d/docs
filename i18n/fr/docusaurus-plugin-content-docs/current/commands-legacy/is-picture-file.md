@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Is picture file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminFichier | Texte | &#x1F852; | Chemin d’accès de fichier |
+| cheminFichier | Text | &#x1F852; | Chemin d’accès de fichier |
 | * | Opérateur | &#x1F852; | Valider les données |
-| Résultat | Booléen | &#x1F850; | Vrai = cheminFichier désigne un fichier image, sinon Faux |
+| Résultat | Boolean | &#x1F850; | Vrai = cheminFichier désigne un fichier image, sinon Faux |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Sin.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| number | 実数 | &#x1F852; | 正弦を求めるラジアン値 |
-| 戻り値 | 実数 | &#x1F850; | 正弦値 |
+| number | Real | &#x1F852; | 正弦を求めるラジアン値 |
+| 戻り値 | Real | &#x1F850; | 正弦値 |
 
 <!-- END REF-->
 

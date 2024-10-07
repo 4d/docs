@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR SET.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| conjunto | String | &#x1F852; | Nome do conjunto a limpar da memória |
+| conjunto | Text | &#x1F852; | Nome do conjunto a limpar da memória |
 
 <!-- END REF-->
 

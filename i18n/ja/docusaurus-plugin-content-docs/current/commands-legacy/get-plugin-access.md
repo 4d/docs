@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get plugin access.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| plugIn | 倍長整数 | &#x1F852; | プラグイン番号 |
-| 戻り値 | 文字 | &#x1F850; | プラグインに割り当てられたグループ名 |
+| plugIn | Integer | &#x1F852; | プラグイン番号 |
+| 戻り値 | Text | &#x1F850; | プラグインに割り当てられたグループ名 |
 
 <!-- END REF-->
 

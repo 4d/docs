@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table pour laquelle vous voulez créer un ensemble à partir de la sélection courante ou Table par défaut si ce paramètre est omis |
-| ensemble | Chaîne | &#x1F852; | Nom du nouvel ensemble |
+| ensemble | Text | &#x1F852; | Nom du nouvel ensemble |
 
 <!-- END REF-->
 

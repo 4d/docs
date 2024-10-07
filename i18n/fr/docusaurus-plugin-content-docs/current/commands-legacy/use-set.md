@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.USE SET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ensemble | Chaîne | &#x1F852; | Nom de l'ensemble à utiliser |
+| ensemble | Text | &#x1F852; | Nom de l'ensemble à utiliser |
 
 <!-- END REF-->
 

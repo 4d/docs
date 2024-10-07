@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, tiene en cuenta las ventanas flotantes Si se omite, ignora las ventanas flotantes |
-| Resultado | WinRef | &#x1F850; | Número de referencia de ventana |
+| Resultado | Integer | &#x1F850; | Número de referencia de ventana |
 
 <!-- END REF-->
 

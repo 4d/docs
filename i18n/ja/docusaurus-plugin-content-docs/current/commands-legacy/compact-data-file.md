@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Compact data file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| structurePath | テキスト | &#x1F852; | ストラクチャーファイルのパス名 |
-| dataPath | テキスト | &#x1F852; | 圧縮するデータファイルのパス名 |
-| archiveFolder | テキスト | &#x1F852; | 元のデータファイルを置く、フォルダーのパス名 |
-| option | 倍長整数 | &#x1F852; | 圧縮オプション |
-| method | テキスト | &#x1F852; | 4Dコールバックメソッド名 |
-| 戻り値 | テキスト | &#x1F850; | 元のデータファイルが置かれたフォルダーの完全パス名 |
+| structurePath | Text | &#x1F852; | ストラクチャーファイルのパス名 |
+| dataPath | Text | &#x1F852; | 圧縮するデータファイルのパス名 |
+| archiveFolder | Text | &#x1F852; | 元のデータファイルを置く、フォルダーのパス名 |
+| option | Integer | &#x1F852; | 圧縮オプション |
+| method | Text | &#x1F852; | 4Dコールバックメソッド名 |
+| 戻り値 | Text | &#x1F850; | 元のデータファイルが置かれたフォルダーの完全パス名 |
 
 <!-- END REF-->
 

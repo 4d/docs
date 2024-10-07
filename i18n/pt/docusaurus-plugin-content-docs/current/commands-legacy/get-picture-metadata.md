@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE METADATA.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| imagem | Imagem | &#x1F852; | Imagem cujos metadados você deseja conseguir |
-| nomeMeta | Texto | &#x1F852; | Nome ou caminho do bloco a ser lido |
-| conteudoMeta | Variável | &#x1F858; | Conteúdo do Metadado |
+| imagem | Picture | &#x1F852; | Imagem cujos metadados você deseja conseguir |
+| nomeMeta | Text | &#x1F852; | Nome ou caminho do bloco a ser lido |
+| conteudoMeta | Variable | &#x1F858; | Conteúdo do Metadado |
 
 <!-- END REF-->
 

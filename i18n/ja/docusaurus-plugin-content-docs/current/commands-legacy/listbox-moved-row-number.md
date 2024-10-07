@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#x1F852; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| oldPosition | 倍長整数 | &#x1F858; | 移動された行の以前の位置 |
-| newPosition | 倍長整数 | &#x1F858; | 移動された行の新しい位置 |
+| object | any | &#x1F852; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| oldPosition | Integer | &#x1F858; | 移動された行の以前の位置 |
+| newPosition | Integer | &#x1F858; | 移動された行の新しい位置 |
 
 <!-- END REF-->
 

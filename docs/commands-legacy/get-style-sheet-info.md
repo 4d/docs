@@ -11,8 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | styleSheetName | Text | &#x1F852; | Name of style sheet |
 | font | Text | &#x1F858; | Character font |
-| size | Longint | &#x1F858; | Font size |
-| styles | Longint | &#x1F858; | Style value |
+| size | Integer | &#x1F858; | Font size |
+| styles | Integer | &#x1F858; | Style value |
 
 <!-- END REF-->
 

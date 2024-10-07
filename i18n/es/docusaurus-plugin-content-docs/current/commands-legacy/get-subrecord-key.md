@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get subrecord key.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campoID | Campo | &#x1F852; | Campo de tipo "Relación subtabla" o "Entero largo" de una relación subtabla anterior |
-| Resultado | Entero largo | &#x1F850; | Llave interna de la relación |
+| campoID | Field | &#x1F852; | Campo de tipo "Relación subtabla" o "Entero largo" de una relación subtabla anterior |
+| Resultado | Integer | &#x1F850; | Llave interna de la relación |
 
 <!-- END REF-->
 

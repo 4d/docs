@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY TEXT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomTableau | Tableau | &#x1F852; | Nom du tableau |
-| taille | Entier long | &#x1F852; | Nombre d'éléments du tableau ou Nombre de tableaux si taille2 est spécifié |
-| taille2 | Entier long | &#x1F852; | Nombre d'éléments des tableaux à deux dimensions |
+| nomArray | Array | &#x1F852; | Nom du tableau |
+| taille | Integer | &#x1F852; | Nombre d'éléments du tableau ou Nombre de tableaux si taille2 est spécifié |
+| taille2 | Integer | &#x1F852; | Nombre d'éléments des tableaux à deux dimensions |
 
 <!-- END REF-->
 

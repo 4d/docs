@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
 | arrColNames | Text array | &#x1F858; | Column object names |
 | arrHeaderNames | Text array | &#x1F858; | Header object names |
 | arrColVars | Pointer array | &#x1F858; | Pointers to column variables or Pointers to column fields or Nil |

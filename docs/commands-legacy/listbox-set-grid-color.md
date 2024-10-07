@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| color | Text, Longint | &#x1F852; | RGB color value |
+| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| color | Text, Integer | &#x1F852; | RGB color value |
 | horizontal | Boolean | &#x1F852; | Use color for horizontal grid lines |
 | vertical | Boolean | &#x1F852; | Use color for vertical grid lines |
 

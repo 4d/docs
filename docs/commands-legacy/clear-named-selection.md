@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR NAMED SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| name | String | &#x1F852; | Name of named selection to be cleared |
+| name | Text | &#x1F852; | Name of named selection to be cleared |
 
 <!-- END REF-->
 

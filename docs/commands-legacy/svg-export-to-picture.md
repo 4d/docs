@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG EXPORT TO PICTURE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | String | &#x1F852; | Root XML element reference |
+| elementRef | Text | &#x1F852; | Root XML element reference |
 | pictVar | Picture | &#x1F852; | Picture variable to receive XML tree (SVG picture) |
-| exportType | Longint | &#x1F852; | 0 = Do not store data source, 1 = Copy data source (default), 2 = Own data source |
+| exportType | Integer | &#x1F852; | 0 = Do not store data source, 1 = Copy data source (default), 2 = Own data source |
 
 <!-- END REF-->
 

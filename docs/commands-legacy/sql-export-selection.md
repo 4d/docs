@@ -11,9 +11,9 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table from which to export selection |
 | folderPath | Text | &#x1F852; | Pathname of export folder or "" to display folder selection dialog box |
-| numFiles | Longint | &#x1F852; | Maximum number of files per folder |
-| fileLimitSize | Longint | &#x1F852; | Maximum size of Export.sql file (in KB) |
-| fieldLimitSize | Longint | &#x1F852; | Size limit (in bytes) below which the contents of a Text, BLOB or Picture field are embedded into the main file |
+| numFiles | Integer | &#x1F852; | Maximum number of files per folder |
+| fileLimitSize | Integer | &#x1F852; | Maximum size of Export.sql file (in KB) |
+| fieldLimitSize | Integer | &#x1F852; | Size limit (in bytes) below which the contents of a Text, BLOB or Picture field are embedded into the main file |
 
 <!-- END REF-->
 

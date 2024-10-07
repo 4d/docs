@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | expressao | Expression | &#x1F852; | Expressão para a qual vai retornar a forma booleana |
-| Resultado | Booleano | &#x1F850; | Forma booleana da expressão |
+| Resultado | Boolean | &#x1F850; | Forma booleana da expressão |
 
 <!-- END REF-->
 

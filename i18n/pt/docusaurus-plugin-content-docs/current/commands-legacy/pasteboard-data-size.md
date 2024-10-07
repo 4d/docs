@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Pasteboard data size.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tipoDados | String | &#x1F852; | Tipo de dados a adicionar |
-| Resultado | Inteiro longo | &#x1F850; | Tamanho (em bytes) dos dados armazenados na área de transferência ou então código do erro |
+| tipoDados | Text | &#x1F852; | Tipo de dados a adicionar |
+| Resultado | Integer | &#x1F850; | Tamanho (em bytes) dos dados armazenados na área de transferência ou então código do erro |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET TOTALS SPACING.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Inteiro longo | &#x1F852; | Referência da área |
-| subtotal | Inteiro longo | &#x1F852; | Nº de subtotal |
-| valor | Inteiro longo | &#x1F858; | 0= sem espaço, 32000=insere um salto de página, >0=espaço adicionado no topo do nível de quebra, <0=incremento proporcional |
+| area | Integer | &#x1F852; | Referência da área |
+| subtotal | Integer | &#x1F852; | Nº de subtotal |
+| valor | Integer | &#x1F858; | 0= sem espaço, 32000=insere um salto de página, >0=espaço adicionado no topo do nível de quebra, <0=incremento proporcional |
 
 <!-- END REF-->
 

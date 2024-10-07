@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPAND BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| BLOB | BLOB | &#x1F852; | 展開するBLOB |
+| Blob | Blob | &#x1F852; | 展開するBLOB |
 
 <!-- END REF-->
 

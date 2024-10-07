@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Load 4D View document.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 4DViewDocument | BLOB | &#x1F852; | 4D View ドキュメント |
-| 戻り値 | オブジェクト | &#x1F850; | 4D View ドキュメントの情報を格納したオブジェクト |
+| 4DViewDocument | Blob | &#x1F852; | 4D View ドキュメント |
+| 戻り値 | Object | &#x1F850; | 4D View ドキュメントの情報を格納したオブジェクト |
 
 <!-- END REF-->
 

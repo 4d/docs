@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
-| lista | ListRef, Cadena | &#x1F852; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
-| posicionElem | Entero largo | &#x1F852; | Posición del elemento en la(s) lista(s) desplegada(s) /contraída(s) |
-| posicionArray | Array entero largo | &#x1F852; | Array de posiciones en la(s) lista(s) desplegada(s) /contraída(s) |
+| lista | Integer, Text | &#x1F852; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
+| posicionElem | Integer | &#x1F852; | Posición del elemento en la(s) lista(s) desplegada(s) /contraída(s) |
+| posicionArray | Integer array | &#x1F852; | Array de posiciones en la(s) lista(s) desplegada(s) /contraída(s) |
 
 <!-- END REF-->
 

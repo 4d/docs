@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET SERIAL PORT MAPPING.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| numArray | 倍長整数配列 | &#x1F858; | ポート番号の配列 |
-| nameArray | 文字配列 | &#x1F858; | ポート名の配列 |
+| numArray | Integer array | &#x1F858; | ポート番号の配列 |
+| nameArray | Text array | &#x1F858; | ポート名の配列 |
 
 <!-- END REF-->
 

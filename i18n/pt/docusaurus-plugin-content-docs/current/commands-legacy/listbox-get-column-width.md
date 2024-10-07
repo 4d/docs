@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| larguraMin | Inteiro longo | &#x1F858; | Largura mínima da coluna (em pixels) |
-| larguraMax | Inteiro longo | &#x1F858; | Largura máxima da coluna (em píxels) |
+| objeto | any | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| larguraMin | Integer | &#x1F858; | Largura mínima da coluna (em pixels) |
+| larguraMax | Integer | &#x1F858; | Largura máxima da coluna (em píxels) |
 | Resultado da função | Inteiro longo | &#x1F850; | Largura da coluna (em pixels) |
 
 <!-- END REF-->

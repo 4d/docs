@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Deactivated.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Booleano | &#x1F850; | Devuelve TRUE si el ciclo de ejecución está en desactivación |
+| Resultado | Boolean | &#x1F850; | Devuelve TRUE si el ciclo de ejecución está en desactivación |
 
 <!-- END REF-->
 

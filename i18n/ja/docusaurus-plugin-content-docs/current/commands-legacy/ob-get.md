@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Get.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | オブジェクト, Object Field | &#x1F852; | 構造化されたオブジェクト |
-| property | テキスト | &#x1F852; | 情報を取得したいプロパティ名 |
-| type | 倍長整数 | &#x1F852; | 値を変換したい型 |
-| 戻り値 | 式 | &#x1F850; | プロパティのカレントの値 |
+| object | Object, Object | &#x1F852; | 構造化されたオブジェクト |
+| property | Text | &#x1F852; | 情報を取得したいプロパティ名 |
+| type | Integer | &#x1F852; | 値を変換したい型 |
+| 戻り値 | Expression | &#x1F850; | プロパティのカレントの値 |
 
 <!-- END REF-->
 

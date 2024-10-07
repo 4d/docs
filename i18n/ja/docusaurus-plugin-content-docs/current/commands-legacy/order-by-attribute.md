@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | セレクションをソートするテーブル (省略時はデフォルトテーブル) |
-| objectField | Object Field | &#x1F852; | ソートの基準とする属性を含むオブジェクトフィールド |
-| attributePath | 文字 | &#x1F852; | ソートの基準とする属性の名前またはパス |
+| aTable | Table | &#x1F852; | セレクションをソートするテーブル (省略時はデフォルトテーブル) |
+| objectField | Object | &#x1F852; | ソートの基準とする属性を含むオブジェクトフィールド |
+| attributePath | Text | &#x1F852; | ソートの基準とする属性の名前またはパス |
 | > or < | 演算子 | &#x1F852; | ソート方向: >: 昇順, または <: 降順 |
 | * | 演算子 | &#x1F852; | ソート継続フラグ |
 

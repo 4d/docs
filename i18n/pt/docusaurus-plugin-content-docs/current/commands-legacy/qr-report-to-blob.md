@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR REPORT TO BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Inteiro longo | &#x1F852; | Referência da área |
-| BLOB | BLOB | &#x1F858; | BLOB a hospedar o Relatório Rápido |
+| area | Integer | &#x1F852; | Referência da área |
+| Blob | Blob | &#x1F858; | BLOB a hospedar o Relatório Rápido |
 
 <!-- END REF-->
 

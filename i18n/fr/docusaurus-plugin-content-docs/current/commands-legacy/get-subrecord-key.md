@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get subrecord key.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| champID | Champ | &#x1F852; | Champ de type "Lien sous-table" ou de type "Entier long" d’une ancienne relation sous-table |
+| champID | Field | &#x1F852; | Champ de type "Lien sous-table" ou de type "Entier long" d’une ancienne relation sous-table |
 | Entier long | Entier long | &#x1F850; | Clé interne du lien |
 
 <!-- END REF-->

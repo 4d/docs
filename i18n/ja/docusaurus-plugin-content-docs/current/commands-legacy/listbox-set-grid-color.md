@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#x1F852; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| color | テキスト, 倍長整数 | &#x1F852; | RGBカラー値 |
-| horizontal | ブール | &#x1F852; | 水平グリッドラインにカラーを適用 |
-| vertical | ブール | &#x1F852; | 垂直グリッドラインにカラーを適用 |
+| object | any | &#x1F852; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| color | Text, Integer | &#x1F852; | RGBカラー値 |
+| horizontal | Boolean | &#x1F852; | 水平グリッドラインにカラーを適用 |
+| vertical | Boolean | &#x1F852; | 垂直グリッドラインにカラーを適用 |
 
 <!-- END REF-->
 

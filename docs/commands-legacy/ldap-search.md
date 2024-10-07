@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LDAP Search.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| dnRootEntry | String | &#x1F852; | Distinguished Name of root entry where search is to start |
-| filter | String | &#x1F852; | LDAP search filter |
-| scope | String | &#x1F852; | Scope of search: "base" (default), "one", or "sub" |
+| dnRootEntry | Text | &#x1F852; | Distinguished Name of root entry where search is to start |
+| filter | Text | &#x1F852; | LDAP search filter |
+| scope | Text | &#x1F852; | Scope of search: "base" (default), "one", or "sub" |
 | attributes | Text array | &#x1F852; | Attribute(s) to fetch |
 | attributesAsArray | Boolean array | &#x1F852; | True = force attributes to be returned as array; False = force attributes to be returned as a simple variable |
 | Function result | Object | &#x1F850; | Key/value attributes |

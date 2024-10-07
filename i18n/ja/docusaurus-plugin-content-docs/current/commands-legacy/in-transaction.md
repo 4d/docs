@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.In transaction.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | ブール | &#x1F850; | カレントプロセスがトランザクション内にある場合、TRUEを返します。 |
+| 戻り値 | Boolean | &#x1F850; | カレントプロセスがトランザクション内にある場合、TRUEを返します。 |
 
 <!-- END REF-->
 

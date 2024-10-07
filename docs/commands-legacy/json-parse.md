@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Parse.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| jsonString | String | &#x1F852; | JSON string to parse |
-| type | Longint | &#x1F852; | Type in which to convert the values |
+| jsonText | Text | &#x1F852; | JSON string to parse |
+| type | Integer | &#x1F852; | Type in which to convert the values |
 | * | Operator | &#x1F852; | Adds line position and offset of each property if returned value is an object |
 | Function result | Mixed, Object | &#x1F850; | Values extracted from JSON string |
 

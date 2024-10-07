@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE FROM ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableau | Tableau | &#x1F852; | Tableau dans lequel supprimer des lignes |
-| positionDépart | Entier long | &#x1F852; | Elément de départ de la suppression |
-| combien | Entier long | &#x1F852; | Nombre d'éléments à supprimer ou 1 élément si ce paramètre est omis |
+| tableau | Array | &#x1F852; | Tableau dans lequel supprimer des lignes |
+| positionDépart | Integer | &#x1F852; | Elément de départ de la suppression |
+| combien | Integer | &#x1F852; | Nombre d'éléments à supprimer ou 1 élément si ce paramètre est omis |
 
 <!-- END REF-->
 

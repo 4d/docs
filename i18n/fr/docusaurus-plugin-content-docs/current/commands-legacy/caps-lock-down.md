@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Caps lock down.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Booléen | &#x1F850; | Etat de la touche Verrouillage Majuscule |
+| Résultat | Boolean | &#x1F850; | Etat de la touche Verrouillage Majuscule |
 
 <!-- END REF-->
 

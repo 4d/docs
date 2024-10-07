@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | pontCampo&#124;numTabela | Ponteiro, Inteiro longo | &#x1F852; | Ponteiro de campo ou número da tabela |
-| numCampo | Inteiro longo | &#x1F852; | Número de campo se o número da tabela for passado como primeiro parâmetro |
-| Tabela | Inteiro longo | &#x1F858; | Nº de tabela ou 0 se nenhuma relação tiver sido definido para o campo |
-| Campo | Inteiro longo | &#x1F858; | Número de campo ou 0 se nenhuma relação for definida para o campo. |
-| discriminante | Inteiro longo | &#x1F858; | Número de campo discriminante ou 0 se nenhum campo |
-| autoUm | Booleano | &#x1F858; | True = relação Um automática, False = Relação Um manual |
-| autoMuitos | Booleano | &#x1F858; | True = relação Um para Muitos automática, False = Relação Um para Muitos manual |
+| numCampo | Integer | &#x1F852; | Número de campo se o número da tabela for passado como primeiro parâmetro |
+| Tabela | Integer | &#x1F858; | Nº de tabela ou 0 se nenhuma relação tiver sido definido para o campo |
+| Campo | Integer | &#x1F858; | Número de campo ou 0 se nenhuma relação for definida para o campo. |
+| discriminante | Integer | &#x1F858; | Número de campo discriminante ou 0 se nenhum campo |
+| autoUm | Boolean | &#x1F858; | True = relação Um automática, False = Relação Um manual |
+| autoMuitos | Boolean | &#x1F858; | True = relação Um para Muitos automática, False = Relação Um para Muitos manual |
 
 <!-- END REF-->
 

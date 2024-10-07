@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
-| numColunas | Inteiro longo | &#x1F852; | Número de colunas à converter estáticas |
+| objeto | any | &#x1F852; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| numColunas | Integer | &#x1F852; | Número de colunas à converter estáticas |
 
 <!-- END REF-->
 

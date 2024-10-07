@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objetos es un nombre de objeto (cadena). Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
-| recursivo | Booleano | &#x1F852; | Verdadero = desplegar los subniveles, Falso = no desplegar los subniveles |
-| selector | Entero largo | &#x1F852; | Parte del list box a desplegar |
-| grueso | Entero largo | &#x1F852; | Número de línea de la ruptura a desplegar o Número de nivel del listbox a desplegar |
-| columna | Entero largo | &#x1F852; | Número de columna de la ruptura a desplegar |
+| objeto | any | &#x1F852; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
+| recursivo | Boolean | &#x1F852; | Verdadero = desplegar los subniveles, Falso = no desplegar los subniveles |
+| selector | Integer | &#x1F852; | Parte del list box a desplegar |
+| grueso | Integer | &#x1F852; | Número de línea de la ruptura a desplegar o Número de nivel del listbox a desplegar |
+| columna | Integer | &#x1F852; | Número de columna de la ruptura a desplegar |
 
 <!-- END REF-->
 

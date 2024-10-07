@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table pour laquelle définir le formulaire sortie ou Table par défaut si ce paramètre est omis |
-| formulaire | Chaîne, Objet | &#x1F852; | Nom du formulaire table (chaîne), ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
-| formUtilisateur | Chaîne | &#x1F852; | Nom du formulaire utilisateur à utiliser |
+| formulaire | Text, Object | &#x1F852; | Nom du formulaire table (chaîne), ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
+| formUtilisateur | Text | &#x1F852; | Nom du formulaire utilisateur à utiliser |
 
 <!-- END REF-->
 

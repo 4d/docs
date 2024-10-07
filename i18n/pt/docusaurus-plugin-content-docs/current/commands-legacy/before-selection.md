@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Before selection.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela na qual vai testar se o registro do ponteiro está antes do primeiro registro selecionado, ou tabela padrão, se omitido |
-| Resultado | Booleano | &#x1F850; | Sim (TRUE) ou Não (FALSE) |
+| tabela | Table | &#x1F852; | Tabela na qual vai testar se o registro do ponteiro está antes do primeiro registro selecionado, ou tabela padrão, se omitido |
+| Resultado | Boolean | &#x1F850; | Sim (TRUE) ou Não (FALSE) |
 
 <!-- END REF-->
 

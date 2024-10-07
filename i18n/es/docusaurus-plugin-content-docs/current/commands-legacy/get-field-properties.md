@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | campPtr &#124; tablaNum | Puntero, Entero largo | &#x1F852; | Puntero de campo o Número de tabla |
-| numCamp | Entero largo | &#x1F852; | Número de campo si se pasa un número de tabla |
-| campTipo | Entero largo | &#x1F858; | Tipo de campo |
-| campLong | Entero largo | &#x1F858; | Longitud del campo, si es alfanumérico |
-| indexado | Booleano | &#x1F858; | True = Indexado, False = No indexado |
-| unico | Booleano | &#x1F858; | True = único, False = No único |
-| invisible | Booleano | &#x1F858; | True = Invisible, False = Visible |
+| numCamp | Integer | &#x1F852; | Número de campo si se pasa un número de tabla |
+| campTipo | Integer | &#x1F858; | Tipo de campo |
+| campLong | Integer | &#x1F858; | Longitud del campo, si es alfanumérico |
+| indexado | Boolean | &#x1F858; | True = Indexado, False = No indexado |
+| unico | Boolean | &#x1F858; | True = único, False = No único |
+| invisible | Boolean | &#x1F858; | True = Invisible, False = Visible |
 
 <!-- END REF-->
 

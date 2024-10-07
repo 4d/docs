@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | variable | Variable | &#x1F852; | Variable referring to an incoming or outgoing SOAP argument |
-| type | Longint | &#x1F852; | 4D type to which the argument points |
-| input_output | Longint | &#x1F852; | 1 = SOAP Input, 2 = SOAP Output |
-| alias | String | &#x1F852; | Name published for this argument during SOAP exchanges |
+| type | Integer | &#x1F852; | 4D type to which the argument points |
+| input_output | Integer | &#x1F852; | 1 = SOAP Input, 2 = SOAP Output |
+| alias | Text | &#x1F852; | Name published for this argument during SOAP exchanges |
 
 <!-- END REF-->
 

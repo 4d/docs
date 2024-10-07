@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.COPY ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Tableau | &#x1F852; | Tableau à recopier |
-| destination | Tableau | &#x1F858; | Tableau de destination |
+| source | Array | &#x1F852; | Tableau à recopier |
+| destination | Array | &#x1F858; | Tableau de destination |
 
 <!-- END REF-->
 

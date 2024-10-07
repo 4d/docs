@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | objectName | Text | &#x1F852; | Object name |
-| value | Mixed | &#x1F852; | New value for the form object's data source |
+| value | any | &#x1F852; | New value for the form object's data source |
 
 <!-- END REF-->
 

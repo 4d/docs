@@ -11,18 +11,18 @@ displayed_sidebar: docs
 <!--REF #_command_.Match regex.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| pattern | テキスト | &#x1F852; | 通常の式 |
-| aString | テキスト | &#x1F852; | 検索が実行される文字列 |
-| start | 倍長整数 | &#x1F852; | aStringで検索が開始する位置 |
-| pos_found | 倍長整数配列, 倍長整数変数 | &#x1F858; | オカレンスの位置 |
-| length_found | 倍長整数配列, 倍長整数変数 | &#x1F858; | オカレンスの長さ |
+| pattern | Text | &#x1F852; | 通常の式 |
+| aString | Text | &#x1F852; | 検索が実行される文字列 |
+| start | Integer | &#x1F852; | aStringで検索が開始する位置 |
+| pos_found | Integer array, Integer | &#x1F858; | オカレンスの位置 |
+| length_found | Integer array, Integer | &#x1F858; | オカレンスの長さ |
 | * | 演算子 | &#x1F852; | 渡された場合、示された位置で検索するのみ |
-| 戻り値 | ブール | &#x1F850; | True = 検索がオカレンスを発見した場合 その他の場合はFalse |
+| 戻り値 | Boolean | &#x1F850; | True = 検索がオカレンスを発見した場合 その他の場合はFalse |
 | Match regex ( pattern ; aString ) -> 戻り値 |
 | 引数 | 型 | 説明 |
-| pattern | テキスト | &#x1F852; | 通常の式(完全に一致) |
-| aString | テキスト | &#x1F852; | 検索が行われる文字列 |
-| 戻り値 | ブール | &#x1F850; | True = 検索でオカレンスが見つかった; それ以外の場合にはFalse |
+| pattern | Text | &#x1F852; | 通常の式(完全に一致) |
+| aString | Text | &#x1F852; | 検索が行われる文字列 |
+| 戻り値 | Boolean | &#x1F850; | True = 検索でオカレンスが見つかった; それ以外の場合にはFalse |
 
 <!-- END REF-->
 

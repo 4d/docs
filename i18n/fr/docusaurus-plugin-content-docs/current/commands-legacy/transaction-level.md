@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Transaction level.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Entier long | &#x1F850; | Niveau de transaction courant (0 si aucune transaction n’a été démarrée) |
+| Résultat | Integer | &#x1F850; | Niveau de transaction courant (0 si aucune transaction n’a été démarrée) |
 
 <!-- END REF-->
 

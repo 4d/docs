@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Tabela | Tabela | &#x1F852; | Tabela cujo valor de prioridade de dados escalares vai ser ajustada |
-| prioridade | Inteiro longo | &#x1F852; | Valor de prioridade de cache para a tabela |
+| Table | Table | &#x1F852; | Tabela cujo valor de prioridade de dados escalares vai ser ajustada |
+| prioridade | Integer | &#x1F852; | Valor de prioridade de cache para a tabela |
 
 <!-- END REF-->
 

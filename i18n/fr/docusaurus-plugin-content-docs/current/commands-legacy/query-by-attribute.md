@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table dans laquelle la sélection est créée ou Table par défaut si ce paramètre est omis |
-| opConj | Opérateur | &#x1F852; | Opérateur à utiliser pour combiner plusieurs requêtes (le cas échéant) |
-| champObjet | Champ | &#x1F852; | Champ objet dont les attributs sont à utiliser pour la recherche |
-| cheminAttribut | Chaîne | &#x1F852; | Nom ou chemin d'attribut |
-| opRech | Chaîne, Opérateur | &#x1F852; | Opérateur de recherche (comparateur) |
-| valeur | Texte, Numérique, Date, Heure | &#x1F852; | Valeur à comparer |
+| opConj | * | &#x1F852; | Opérateur à utiliser pour combiner plusieurs requêtes (le cas échéant) |
+| champObjet | Field | &#x1F852; | Champ objet dont les attributs sont à utiliser pour la recherche |
+| cheminAttribut | Text | &#x1F852; | Nom ou chemin d'attribut |
+| opRech | Text, * | &#x1F852; | Opérateur de recherche (comparateur) |
+| valeur | Text, Number, Date, Time | &#x1F852; | Valeur à comparer |
 | * | Opérateur | &#x1F852; | Attente d'exécution de la recherche |
 
 <!-- END REF-->

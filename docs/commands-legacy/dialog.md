@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table owning the form or If omitted: default table or use of project form |
-| form | String, Object | &#x1F852; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
+| form | Text, Object | &#x1F852; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
 | formData | Object | &#x1F852; | Data to associate to the form |
 | * | Operator | &#x1F852; | Use the same process |
 

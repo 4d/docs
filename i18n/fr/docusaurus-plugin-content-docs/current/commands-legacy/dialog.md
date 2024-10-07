@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table à laquelle appartient le formulaire Si omis : Table par défaut ou utilisation d'un formulaire projet |
-| formulaire | Chaîne, Objet | &#x1F852; | Nom du formulaire table ou projet à afficher, ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
-| formData | Objet | &#x1F852; | Données à associer au formulaire |
+| formulaire | Text, Object | &#x1F852; | Nom du formulaire table ou projet à afficher, ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
+| formData | Object | &#x1F852; | Données à associer au formulaire |
 | * | Opérateur | &#x1F852; | Utiliser le même process |
 
 <!-- END REF-->

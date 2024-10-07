@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | aTable | Table | &#x1F852; | Table reference |
 | arrPaths | Text array | &#x1F858; | Array of method paths and names |
 | filter | Text | &#x1F852; | Name filter |
-| stamp | Real variable | &#x1F852; | Minimum value of stamp |
+| stamp | Real | &#x1F852; | Minimum value of stamp |
 | &#x1F858; | New current value |
 | * | Operator | &#x1F852; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Array | &#x1F852; | Array from which to copy array elements |
-| list | String, ListRef | &#x1F852; | Name or reference of list into which to copy array elements |
+| list | Text, Integer | &#x1F852; | Name or reference of list into which to copy array elements |
 | itemRefs | Array | &#x1F852; | Numeric array of item reference numbers |
 
 <!-- END REF-->

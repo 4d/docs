@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT STRUCTURE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| structureXML | Variable texte | &#x1F858; | Export de la définition XML de la structure de la base 4D |
-| format | Chaîne | &#x1F852; | Export format: xml format (default) or html format |
+| structureXML | Text | &#x1F858; | Export de la définition XML de la structure de la base 4D |
+| format | Text | &#x1F852; | Export format: xml format (default) or html format |
 
 <!-- END REF-->
 

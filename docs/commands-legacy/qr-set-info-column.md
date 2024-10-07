@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET INFO COLUMN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Longint | &#x1F852; | Reference of the area |
-| colNum | Longint | &#x1F852; | Column number |
-| title | String | &#x1F852; | Title of the column |
+| area | Integer | &#x1F852; | Reference of the area |
+| colNum | Integer | &#x1F852; | Column number |
+| title | Text | &#x1F852; | Title of the column |
 | object | Field, Variable | &#x1F852; | Object assigned for that column |
-| hide | Longint | &#x1F852; | 0 = displayed, 1 = hidden |
-| size | Longint | &#x1F852; | Column size |
-| repeatedValue | Longint | &#x1F852; | 0 = not repeated, 1 = repeated |
-| displayFormat | String | &#x1F852; | Format for the data |
+| hide | Integer | &#x1F852; | 0 = displayed, 1 = hidden |
+| size | Integer | &#x1F852; | Column size |
+| repeatedValue | Integer | &#x1F852; | 0 = not repeated, 1 = repeated |
+| displayFormat | Text | &#x1F852; | Format for the data |
 
 <!-- END REF-->
 

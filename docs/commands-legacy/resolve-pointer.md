@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aPointer | Pointer | &#x1F852; | Pointer for which to retrieve the referenced object |
-| varName | String | &#x1F858; | Name of referenced variable or empty string |
-| tableNum | Longint | &#x1F858; | Number of referenced table or array element or 0 or -1 |
-| fieldNum | Longint | &#x1F858; | Number of referenced field or 0 |
+| varName | Text | &#x1F858; | Name of referenced variable or empty string |
+| tableNum | Integer | &#x1F858; | Number of referenced table or array element or 0 or -1 |
+| fieldNum | Integer | &#x1F858; | Number of referenced field or 0 |
 
 <!-- END REF-->
 

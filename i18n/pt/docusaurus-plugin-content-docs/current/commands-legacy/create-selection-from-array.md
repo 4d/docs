@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela da qual criar a seleção |
-| regArray | Inteiro longo, Array booleano | &#x1F852; | Array de números de registros, ou Array de booleanos (True = o registro está na seleção, False = o registro não está na seleção) |
-| temp | String | &#x1F852; | Nome da seleção temporal a criar, ou Aplicar o comando a seleção atual se o parâmetro se omite |
+| tabela | Table | &#x1F852; | Tabela da qual criar a seleção |
+| regArray | Integer, Boolean array | &#x1F852; | Array de números de registros, ou Array de booleanos (True = o registro está na seleção, False = o registro não está na seleção) |
+| temp | Text | &#x1F852; | Nome da seleção temporal a criar, ou Aplicar o comando a seleção atual se o parâmetro se omite |
 
 <!-- END REF-->
 

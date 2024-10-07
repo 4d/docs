@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DIALOG.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla a la cual pertenece el formulario o Si se omite: tabla por defecto o uso del formulario de proyecto |
-| form | Cadena, Objeto | &#x1F852; | Nombre de tabla o formulario de proyecto a mostrar como diálogo |
-| formData | Objeto | &#x1F852; | Datos para asociar al formulario |
+| tabla | Table | &#x1F852; | Tabla a la cual pertenece el formulario o Si se omite: tabla por defecto o uso del formulario de proyecto |
+| form | Text, Object | &#x1F852; | Nombre de tabla o formulario de proyecto a mostrar como diálogo |
+| formData | Object | &#x1F852; | Datos para asociar al formulario |
 | * | Operador | &#x1F852; | Utilizar el mismo proceso |
 
 <!-- END REF-->

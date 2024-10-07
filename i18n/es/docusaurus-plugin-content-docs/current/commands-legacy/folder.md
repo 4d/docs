@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | ruta&#124; carpeta4D | Texto, Entero largo | &#x1F852; | Ruta de la carpeta o de la constante de la carpeta 4D |
 | tipoRuta &#124; * | Entero largo, Operador | &#x1F852; | Si se pasa ruta: fk ruta posix (predeterminada) o fk ruta plataforma<br/>Si se pasó carpeta4D: * para devolver la carpeta de la base local |
-| Resultado | Objeto | &#x1F850; | Nuevo objeto carpeta |
+| Resultado | Object | &#x1F850; | Nuevo objeto carpeta |
 
 <!-- END REF-->
 

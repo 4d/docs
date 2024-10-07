@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Get 4D folder.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| pasta | Inteiro longo | &#x1F852; | Tipo de pasta (se omitido = pasta 4D ativa) |
-| options | Objeto | &#x1F852; | 4D Client database folder path configuration |
+| pasta | Integer | &#x1F852; | Tipo de pasta (se omitido = pasta 4D ativa) |
+| options | Object | &#x1F852; | 4D Client database folder path configuration |
 | * | Operador | &#x1F852; | Retorna a pasta do banco local |
-| Resultado | String | &#x1F850; | Endereço para a pasta 4D |
+| Resultado | Text | &#x1F850; | Endereço para a pasta 4D |
 
 <!-- END REF-->
 

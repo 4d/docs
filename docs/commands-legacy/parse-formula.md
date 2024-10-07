@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | formula | Text | &#x1F852; | Plain text formula |
-| options | Longint | &#x1F852; | Instructions for input / output |
+| options | Integer | &#x1F852; | Instructions for input / output |
 | errorMessage | Text | &#x1F858; | Error message (empty string if no error) |
 | Function result | Text | &#x1F850; | Transformed formula (plain text) |
 

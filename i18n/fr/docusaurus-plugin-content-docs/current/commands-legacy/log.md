@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Log.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombre | Réel | &#x1F852; | Nombre dont vous voulez obtenir le logarithme népérien |
-| Résultat | Réel | &#x1F850; | Logarithme népérien de nombre |
+| nombre | Real | &#x1F852; | Nombre dont vous voulez obtenir le logarithme népérien |
+| Résultat | Real | &#x1F850; | Logarithme népérien de nombre |
 
 <!-- END REF-->
 

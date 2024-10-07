@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
-| recursivo | Booleano | &#x1F852; | True = contrai os subníveis False = não contrai os subníveis |
-| seletor | Inteiro longo | &#x1F852; | Parte do list box a contrair |
+| objeto | any | &#x1F852; | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
+| recursivo | Boolean | &#x1F852; | True = contrai os subníveis False = não contrai os subníveis |
+| seletor | Integer | &#x1F852; | Parte do list box a contrair |
 | linha &#124; nivel | Inteiro longo | &#x1F852; | Número de quebra de fila a colapsar ou <br/>Número de nível de list box a contrair |
-| coluna | Inteiro longo | &#x1F852; | Número de quebra de coluna a contrair |
+| coluna | Integer | &#x1F852; | Número de quebra de coluna a contrair |
 
 <!-- END REF-->
 

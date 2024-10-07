@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | phraseSecrèteCour &#124; cléDonnéesCour | Texte, Objet | &#x1F852; | Phrase secrète courante (texte) ou clé de chiffrement des données courante (objet) |
-| Résultat | Booléen | &#x1F850; | Vrai si la clé de chiffrement des données a été ajoutée avec succès au trousseau 4D. Faux si elle était déjà dans le trousseau 4D. |
+| Résultat | Boolean | &#x1F850; | Vrai si la clé de chiffrement des données a été ajoutée avec succès au trousseau 4D. Faux si elle était déjà dans le trousseau 4D. |
 
 <!-- END REF-->
 

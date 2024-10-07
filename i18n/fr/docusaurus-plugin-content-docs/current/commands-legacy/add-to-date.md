@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | date | Date | &#x1F852; | Date à laquelle ajouter jours, mois et années |
-| années | Entier long | &#x1F852; | Nombre d'années à ajouter à la date |
-| mois | Entier long | &#x1F852; | Nombre de mois à ajouter à la date |
-| jours | Entier long | &#x1F852; | Nombre de jours à ajouter à la date |
+| années | Integer | &#x1F852; | Nombre d'années à ajouter à la date |
+| mois | Integer | &#x1F852; | Nombre de mois à ajouter à la date |
+| jours | Integer | &#x1F852; | Nombre de jours à ajouter à la date |
 | Résultat | Date | &#x1F850; | Date résultante |
 
 <!-- END REF-->

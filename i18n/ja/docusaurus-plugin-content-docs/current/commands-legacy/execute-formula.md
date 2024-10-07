@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.EXECUTE FORMULA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| statement | 文字 | &#x1F852; | 実行するコード |
+| statement | Text | &#x1F852; | 実行するコード |
 
 <!-- END REF-->
 

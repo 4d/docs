@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DEFAULT TABLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela a ser definida como padrão |
+| tabela | Table | &#x1F852; | Tabela a ser definida como padrão |
 
 <!-- END REF-->
 

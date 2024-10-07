@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#x1F852; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数またはフィールド |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時)変数またはフィールド (* 省略時) |
-| autoSpellcheck | ブール | &#x1F852; | True = 自動スペルチェックFalse = 自動スペルチェックなし |
+| object | any | &#x1F852; | オブジェクト名 (* 指定時)変数またはフィールド (* 省略時) |
+| autoSpellcheck | Boolean | &#x1F852; | True = 自動スペルチェックFalse = 自動スペルチェックなし |
 
 <!-- END REF-->
 

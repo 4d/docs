@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX ADD XML COMMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | DocRef | &#x1F852; | 開かれたドキュメントの参照 |
-| comment | 文字 | &#x1F852; | 追加するコメント |
+| document | Time | &#x1F852; | 開かれたドキュメントの参照 |
+| comment | Text | &#x1F852; | 追加するコメント |
 
 <!-- END REF-->
 

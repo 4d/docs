@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | numTable &#124; ptrTable | Entier long, Pointeur | &#x1F852; | Numéro de table ou Pointeur vers une table |
-| numChamp | Entier long | &#x1F852; | Numéro de champ |
-| Résultat | Booléen | &#x1F850; | Vrai = le champ existe dans la table, Faux = le champ n’existe pas dans la table |
+| numChamp | Integer | &#x1F852; | Numéro de champ |
+| Résultat | Boolean | &#x1F850; | Vrai = le champ existe dans la table, Faux = le champ n’existe pas dans la table |
 
 <!-- END REF-->
 

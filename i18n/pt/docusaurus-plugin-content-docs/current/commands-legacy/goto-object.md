@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Se especificado = objeto é um nome de objeto (string). Se omitido = objeto é um campo ou uma variável |
-| objeto | Campo, Variável | &#x1F852; | Nome de objeto (se * for especificado) ou Campo ou Variável (se * for omitido) ao que se vai |
+| objeto | Field, Variable | &#x1F852; | Nome de objeto (se * for especificado) ou Campo ou Variável (se * for omitido) ao que se vai |
 
 <!-- END REF-->
 

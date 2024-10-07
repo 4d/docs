@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD SET ATTRIBUTES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin | Texte, Tableau texte | &#x1F852; | Chemin(s) de méthode(s) |
-| attributs | Objet, Tableau objet | &#x1F852; | Attribut(s) de méthode(s) à définir |
+| chemin | Text, Text array | &#x1F852; | Chemin(s) de méthode(s) |
+| attributs | Object, Object array | &#x1F852; | Attribut(s) de méthode(s) à définir |
 | * | Opérateur | &#x1F852; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->

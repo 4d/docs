@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB SET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Champ objet, Objet | &#x1F852; | Objet structuré |
-| propriété | Texte | &#x1F852; | Nom de la propriété à définir |
+| objet | Object, Object | &#x1F852; | Objet structuré |
+| propriété | Text | &#x1F852; | Nom de la propriété à définir |
 | valeur | Expression | &#x1F852; | Nouvelle valeur de la propriété |
 
 <!-- END REF-->

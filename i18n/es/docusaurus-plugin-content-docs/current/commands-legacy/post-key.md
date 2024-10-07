@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.POST KEY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| codigo | Entero largo | &#x1F852; | Código de un caracter o código de tecla de función |
-| modificadores | Entero largo | &#x1F852; | Estado de teclas Modificador |
-| proceso | Entero largo | &#x1F852; | Número de referencia del proceso de destino o Fila de atención de eventos de la aplicación, si se omite o si es igual a 0 |
+| codigo | Integer | &#x1F852; | Código de un caracter o código de tecla de función |
+| modificadores | Integer | &#x1F852; | Estado de teclas Modificador |
+| proceso | Integer | &#x1F852; | Número de referencia del proceso de destino o Fila de atención de eventos de la aplicación, si se omite o si es igual a 0 |
 
 <!-- END REF-->
 

@@ -10,11 +10,11 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | fieldPtr&#124;tableNum | ポインター, 倍長整数 | &#x1F852; | フィールドポインタ、またはテーブル番号 |
-| fieldNum | 倍長整数 | &#x1F852; | 第1引数がテーブル番号の場合、 フィールド番号 |
-| list | 文字 | &#x1F858; | 関連づけられた選択リストの名前、または空の文字列 |
-| mandatory | ブール | &#x1F858; | True = 必須入力、 False = 任意 |
-| nonEnterable | ブール | &#x1F858; | True = 表示のみ、 False = 入力可 |
-| nonModifiable | ブール | &#x1F858; | True = 修正不可、False = 修正可 |
+| fieldNum | Integer | &#x1F852; | 第1引数がテーブル番号の場合、 フィールド番号 |
+| list | Text | &#x1F858; | 関連づけられた選択リストの名前、または空の文字列 |
+| mandatory | Boolean | &#x1F858; | True = 必須入力、 False = 任意 |
+| nonEnterable | Boolean | &#x1F858; | True = 表示のみ、 False = 入力可 |
+| nonModifiable | Boolean | &#x1F858; | True = 修正不可、False = 修正可 |
 
 <!-- END REF-->
 

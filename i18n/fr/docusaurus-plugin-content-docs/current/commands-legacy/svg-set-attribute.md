@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#x1F852; | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est une variable ou un champ |
-| objetImage | Image | &#x1F852; | Nom d’objet (si * spécifié) ou Variable ou champ (si * omis) |
-| id_Element | Texte | &#x1F852; | ID de l'élément dont un ou plusieurs attribut(s) sont à définir |
-| nomAttribut | Chaîne | &#x1F852; | Attribut à définir |
-| valeurAttribut | Chaîne, Entier long | &#x1F852; | Nouvelle valeur d’attribut |
+| objetPicture | Picture | &#x1F852; | Nom d’objet (si * spécifié) ou Variable ou champ (si * omis) |
+| id_Element | Text | &#x1F852; | ID de l'élément dont un ou plusieurs attribut(s) sont à définir |
+| nomAttribut | Text | &#x1F852; | Attribut à définir |
+| valeurAttribut | Text, Integer | &#x1F852; | Nouvelle valeur d’attribut |
 | * | Opérateur | &#x1F852; | Si passé = modifier l'arbre DOM interne de l'image SVG (variable uniquement) |
 
 <!-- END REF-->

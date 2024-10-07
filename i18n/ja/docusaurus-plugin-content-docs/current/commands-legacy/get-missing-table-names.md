@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MISSING TABLE NAMES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| missingTables | テキスト配列 | &#x1F858; | データベース中で失われたテーブルの名前 |
+| missingTables | Text array | &#x1F858; | データベース中で失われたテーブルの名前 |
 
 <!-- END REF-->
 

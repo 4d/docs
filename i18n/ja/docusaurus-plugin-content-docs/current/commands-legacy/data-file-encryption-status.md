@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Data file encryption status.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| structurePath | テキスト | &#x1F852; | チェックする4Dストラクチャーファイルへのパス名 |
-| dataPath | テキスト | &#x1F852; | チェックするデータファイルへのパス名 |
-| 戻り値 | オブジェクト | &#x1F850; | データファイルとそれぞれのテーブルの暗号化についての情報 |
+| structurePath | Text | &#x1F852; | チェックする4Dストラクチャーファイルへのパス名 |
+| dataPath | Text | &#x1F852; | チェックするデータファイルへのパス名 |
+| 戻り値 | Object | &#x1F850; | データファイルとそれぞれのテーブルの暗号化についての情報 |
 
 <!-- END REF-->
 

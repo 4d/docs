@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CONVERT FROM TEXT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 4Dtext | 文字 | &#x1F852; | 現在の4Dの文字セットで記述されているテキスト |
-| charSet | 文字, 倍長整数 | &#x1F852; | 文字セットの番号または名前 |
-| convertedBLOB | BLOB | &#x1F858; | 変換されたテキストを含むBLOB |
+| 4Dtext | Text | &#x1F852; | 現在の4Dの文字セットで記述されているテキスト |
+| charSet | Text, Integer | &#x1F852; | 文字セットの番号または名前 |
+| convertedBlob | Blob | &#x1F858; | 変換されたテキストを含むBLOB |
 
 <!-- END REF-->
 

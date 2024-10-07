@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | round | Real | &#x1F852; | Number to be rounded |
-| places | Longint | &#x1F852; | Number of decimal places used for rounding |
+| places | Integer | &#x1F852; | Number of decimal places used for rounding |
 | Function result | Real | &#x1F850; | Number rounded to the number of decimal places specified by Places |
 
 <!-- END REF-->

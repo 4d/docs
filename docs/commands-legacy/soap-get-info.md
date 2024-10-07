@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SOAP Get info.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| infoNum | Longint | &#x1F852; | Number of type of SOAP info to get |
+| infoNum | Integer | &#x1F852; | Number of type of SOAP info to get |
 | Function result | String | &#x1F850; | SOAP Information |
 
 <!-- END REF-->

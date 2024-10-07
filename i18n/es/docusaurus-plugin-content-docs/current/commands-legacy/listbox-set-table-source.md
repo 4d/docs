@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite*) |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite*) |
 | numTabla &#124; tempo | Entero largo, Cadena | &#x1F852; | Número de la tabla de la cual utilizarla selección actual o nombre de la selección temporal a utilizar |
-| nomSel | Cadena | &#x1F852; | Nombre del conjunto seleccionado |
+| nomSel | Text | &#x1F852; | Nombre del conjunto seleccionado |
 
 <!-- END REF-->
 

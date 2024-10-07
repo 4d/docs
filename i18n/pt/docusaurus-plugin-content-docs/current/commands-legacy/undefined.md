@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | variavel | Expression | &#x1F852; | Variável a testar |
-| Resultado | Booleano | &#x1F850; | TRUE=Variável é atualmente indefinida; FALSE= Variável é atualmente definida |
+| Resultado | Boolean | &#x1F850; | TRUE=Variável é atualmente indefinida; FALSE= Variável é atualmente definida |
 
 <!-- END REF-->
 

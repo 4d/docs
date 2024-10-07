@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SHOW PROCESS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Longint | &#x1F852; | Process number of process to be shown |
+| process | Integer | &#x1F852; | Process number of process to be shown |
 
 <!-- END REF-->
 

@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, el objeto es un nombre de objeto (cadena) Si se omite, el objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
-| seleccion | Objeto, Collection | &#x1F852; | Objeto o colección que describe las líneas a seleccionar |
-| accion | Entero largo | &#x1F852; | lk replace selection (por defecto si se omite), lk add to selection, lk remove from selection |
+| objeto | any | &#x1F852; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
+| seleccion | Object, Collection | &#x1F852; | Objeto o colección que describe las líneas a seleccionar |
+| accion | Integer | &#x1F852; | lk replace selection (por defecto si se omite), lk add to selection, lk remove from selection |
 
 <!-- END REF-->
 

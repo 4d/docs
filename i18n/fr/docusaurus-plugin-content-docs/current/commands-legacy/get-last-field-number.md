@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | numTable &#124; ptrTable | Entier long, Pointeur | &#x1F852; | Numéro de table ou Pointeur vers une table |
-| Résultat | Entier long | &#x1F850; | Numéro de champ le plus élevé dans la table |
+| Résultat | Integer | &#x1F850; | Numéro de champ le plus élevé dans la table |
 
 <!-- END REF-->
 

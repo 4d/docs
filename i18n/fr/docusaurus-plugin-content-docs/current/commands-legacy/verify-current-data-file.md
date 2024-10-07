@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objets | Entier long | &#x1F852; | Objets à vérifier |
-| options | Entier long | &#x1F852; | Options de vérification |
-| méthode | Texte | &#x1F852; | Nom de la méthode 4D de rétro-appel |
-| tabTables | Tableau entier long | &#x1F852; | Numéros des tables à vérifier |
-| tabChamps | Tableau entier 2D, Tableau entier long 2D, Tableau réel 2D | &#x1F852; | Numéros des index à vérifier |
+| objets | Integer | &#x1F852; | Objets à vérifier |
+| options | Integer | &#x1F852; | Options de vérification |
+| méthode | Text | &#x1F852; | Nom de la méthode 4D de rétro-appel |
+| tabTables | Integer array | &#x1F852; | Numéros des tables à vérifier |
+| tabChamps | 2D Integer array, 2D Integer array, 2D Real array | &#x1F852; | Numéros des index à vérifier |
 
 <!-- END REF-->
 

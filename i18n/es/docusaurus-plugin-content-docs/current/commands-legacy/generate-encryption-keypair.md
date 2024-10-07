@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| llavePriv | BLOB | &#x1F858; | BLOB que contiene la llave privada |
-| llavepublica | BLOB | &#x1F858; | BLOB que contiene la llave pública |
-| longitud | Entero largo | &#x1F852; | Longitud de la llave (bits) [512...2048] Valor por defecto = 512 |
+| llavePriv | Blob | &#x1F858; | BLOB que contiene la llave privada |
+| llavepublica | Blob | &#x1F858; | BLOB que contiene la llave pública |
+| longitud | Integer | &#x1F852; | Longitud de la llave (bits) [512...2048] Valor por defecto = 512 |
 
 <!-- END REF-->
 

@@ -12,8 +12,8 @@ displayed_sidebar: docs
 | * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
 | object | Object | &#x1F852; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
 | expression | Text | &#x1F852; | Expression and (optional) format to insert |
-| startSel | Longint | &#x1F852; | Start of selection |
-| endSel | Longint | &#x1F852; | End of selection |
+| startSel | Integer | &#x1F852; | Start of selection |
+| endSel | Integer | &#x1F852; | End of selection |
 
 <!-- END REF-->
 

@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table du paramètre ou Table par défaut si ce paramètre est omis |
-| sélecteur | Entier long | &#x1F852; | Code du paramètre de la base |
-| valeurAlpha | Chaîne | &#x1F858; | Valeur alpha du paramètre |
-| Résultat | Réel | &#x1F850; | Valeur du paramètre |
+| sélecteur | Integer | &#x1F852; | Code du paramètre de la base |
+| valeurAlpha | Text | &#x1F858; | Valeur alpha du paramètre |
+| Résultat | Real | &#x1F850; | Valeur du paramètre |
 
 <!-- END REF-->
 

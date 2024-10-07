@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.ACCUMULATE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | Campo, Variable | &#x1F852; | Campo o variable de tipo numérico a acumular |
+| objeto | Field, Variable | &#x1F852; | Campo o variable de tipo numérico a acumular |
 
 <!-- END REF-->
 

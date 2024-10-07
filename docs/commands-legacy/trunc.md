@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | number | Real | &#x1F852; | Number to be truncated |
-| places | Longint | &#x1F852; | Number of decimal places used for truncating |
+| places | Integer | &#x1F852; | Number of decimal places used for truncating |
 | Function result | Real | &#x1F850; | Number with its decimal part truncated to the number of decimal places specified by Places |
 
 <!-- END REF-->

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ruta | Texto, Array texto | &#x1F852; | Texto o array texto que contiene una o más rutas de acceso |
-| fechaMod | Fecha, Array fecha | &#x1F858; | Fecha(s) de modificación de métodos(s) |
-| horaMod | Hora, Array entero largo | &#x1F858; | Hora(s) de modificación de métodos(s) |
-| operador | Operador | &#x1F852; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| ruta | Text, Text array | &#x1F852; | Texto o array texto que contiene una o más rutas de acceso |
+| fechaMod | Date, Date array | &#x1F858; | Fecha(s) de modificación de métodos(s) |
+| horaMod | Time, Integer array | &#x1F858; | Hora(s) de modificación de métodos(s) |
+| operador | * | &#x1F852; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->
 

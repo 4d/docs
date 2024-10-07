@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, el objeto es un nombre de objeto (cadena) Si se omite, el objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre del objeto (si se especifica *) o<br/>Variable (si se omite *) |
-| fila | Entero largo | &#x1F852; | Numero de fila |
-| tipoColor | Entero largo | &#x1F852; | Color de fuente del list box (predeterminado) o color de fondo del list box |
-| Resultado | Texto | &#x1F850; | Valor del color |
+| objeto | any | &#x1F852; | Nombre del objeto (si se especifica *) o<br/>Variable (si se omite *) |
+| fila | Integer | &#x1F852; | Numero de fila |
+| tipoColor | Integer | &#x1F852; | Color de fuente del list box (predeterminado) o color de fondo del list box |
+| Resultado | Text | &#x1F850; | Valor del color |
 
 <!-- END REF-->
 

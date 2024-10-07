@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| horizontal | Booleano | &#x1F858; | True = visible, False = oculto |
-| vertical | Booleano | &#x1F858; | True = visible, False = oculto |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| horizontal | Boolean | &#x1F858; | True = visible, False = oculto |
+| vertical | Boolean | &#x1F858; | True = visible, False = oculto |
 
 <!-- END REF-->
 

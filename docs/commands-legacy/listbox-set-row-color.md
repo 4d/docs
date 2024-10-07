@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or<br/>Variable (if * is omitted) |
-| row | Longint | &#x1F852; | Row number |
-| color | Text, Longint | &#x1F852; | RGB color value |
-| colorType | Longint | &#x1F852; | Listbox font color (default) or listbox background color |
+| object | any | &#x1F852; | Object name (if * is specified) or<br/>Variable (if * is omitted) |
+| row | Integer | &#x1F852; | Row number |
+| color | Text, Integer | &#x1F852; | RGB color value |
+| colorType | Integer | &#x1F852; | Listbox font color (default) or listbox background color |
 
 <!-- END REF-->
 

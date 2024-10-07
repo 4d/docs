@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | fileOrFolder &#124; zipStructure | Object | &#x1F852; | File or Folder object to compress |
 | destinationFile | Object | &#x1F852; | Destination file for the archive |
-| options | Longint | &#x1F852; | If fileOrFolder used: ZIP Without enclosing folder |
+| options | Integer | &#x1F852; | If fileOrFolder used: ZIP Without enclosing folder |
 | Function result | Object | &#x1F850; | Status object |
 
 <!-- END REF-->

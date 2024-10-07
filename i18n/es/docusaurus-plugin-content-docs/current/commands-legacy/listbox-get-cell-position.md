@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | X | Real | &#x1F852; | Coordenada horizontal del ratón |
 | Y | Real | &#x1F852; | Coordenada vertical del ratón |
-| columna | Entero largo | &#x1F858; | Número de columna |
-| linea | Entero largo | &#x1F858; | Número de fila |
-| varCol | Puntero | &#x1F858; | Puntero a la variable de la columna |
+| columna | Integer | &#x1F858; | Número de columna |
+| linea | Integer | &#x1F858; | Número de fila |
+| varCol | Pointer | &#x1F858; | Puntero a la variable de la columna |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Get resource name.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| resTipo | Cadena | &#x1F852; | Tipo de recurso (4 caracteres) |
-| resNum | Entero largo | &#x1F852; | Número de referencia del recurso |
-| resArchivo | DocRef | &#x1F852; | Número de referencia del archivo de recursos o Todos los archivos de recursos abiertos, si se omite |
-| Resultado | Cadena | &#x1F850; | Nombre del recurso |
+| resTipo | Text | &#x1F852; | Tipo de recurso (4 caracteres) |
+| resNum | Integer | &#x1F852; | Número de referencia del recurso |
+| resArchivo | Time | &#x1F852; | Número de referencia del archivo de recursos o Todos los archivos de recursos abiertos, si se omite |
+| Resultado | Text | &#x1F850; | Nombre del recurso |
 
 <!-- END REF-->
 

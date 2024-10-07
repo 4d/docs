@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| unidade | Inteiro longo | &#x1F852; | Unidade do valor da altura: 0 ou omitido = pixels, 1 = linhas |
-| Resultado | Inteiro | &#x1F850; | altura da fila (em pixels) |
+| objeto | any | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| unidade | Integer | &#x1F852; | Unidade do valor da altura: 0 ou omitido = pixels, 1 = linhas |
+| Resultado | Integer | &#x1F850; | altura da fila (em pixels) |
 
 <!-- END REF-->
 

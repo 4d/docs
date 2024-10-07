@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | arrayName | Array | &#x1F852; | Name of array |
-| size | Longint | &#x1F852; | Number of array elements or Number of arrays if size2 is specified |
-| size2 | Longint | &#x1F852; | Number of 2D array elements |
+| size | Integer | &#x1F852; | Number of array elements or Number of arrays if size2 is specified |
+| size2 | Integer | &#x1F852; | Number of 2D array elements |
 
 <!-- END REF-->
 

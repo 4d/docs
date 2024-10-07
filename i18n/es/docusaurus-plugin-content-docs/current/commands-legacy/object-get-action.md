@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre del objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
-| Resultado | Texto | &#x1F850; | Nombre de la acción estándar asociada y (si la hay) cadena de parámetros |
+| objeto | any | &#x1F852; | Nombre del objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
+| Resultado | Text | &#x1F850; | Nombre de la acción estándar asociada y (si la hay) cadena de parámetros |
 
 <!-- END REF-->
 

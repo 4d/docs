@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Find column.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Entier long | &#x1F852; | Référence de la zone |
-| expression | Chaîne, Pointeur | &#x1F852; | Objet de colonne |
-| Résultat | Entier long | &#x1F850; | Numéro de colonne |
+| zone | Integer | &#x1F852; | Référence de la zone |
+| expression | Text, Pointer | &#x1F852; | Objet de colonne |
+| Résultat | Integer | &#x1F850; | Numéro de colonne |
 
 <!-- END REF-->
 

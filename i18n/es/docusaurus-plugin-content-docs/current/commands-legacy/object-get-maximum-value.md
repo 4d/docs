@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o  Campo o variable (si se omite *) |
-| valorMax | Fecha, Hora, Número | &#x1F858; | Valor máximo actual para objeto |
+| objeto | any | &#x1F852; | Nombre de objeto (si se especifica *) o  Campo o variable (si se omite *) |
+| valorMax | Date, Time, Number | &#x1F858; | Valor máximo actual para objeto |
 
 <!-- END REF-->
 

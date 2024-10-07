@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SHOW ON DISK.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminAccès | Chaîne | &#x1F852; | Chemin d’accès de l’élément à montrer |
+| cheminAccès | Text | &#x1F852; | Chemin d’accès de l’élément à montrer |
 | * | Opérateur | &#x1F852; | Si l’élément est un dossier, montrer son contenu |
 
 <!-- END REF-->

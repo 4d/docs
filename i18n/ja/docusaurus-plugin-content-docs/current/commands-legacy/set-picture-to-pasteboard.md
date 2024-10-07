@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PICTURE TO PASTEBOARD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture | ピクチャー | &#x1F852; | ペーストボードに置くピクチャ |
+| picture | Picture | &#x1F852; | ペーストボードに置くピクチャ |
 
 <!-- END REF-->
 

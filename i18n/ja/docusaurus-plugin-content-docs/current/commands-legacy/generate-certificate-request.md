@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| privKey | BLOB | &#x1F852; | 秘密鍵BLOB |
-| certifRequest | BLOB | &#x1F858; | CSRを受け取るBLOB |
-| codeArray | 倍長整数配列 | &#x1F852; | 情報コードリスト |
-| nameArray | 文字配列 | &#x1F852; | 名前リスト |
+| privKey | Blob | &#x1F852; | 秘密鍵BLOB |
+| certifRequest | Blob | &#x1F858; | CSRを受け取るBLOB |
+| codeArray | Integer array | &#x1F852; | 情報コードリスト |
+| nameArray | Text array | &#x1F852; | 名前リスト |
 
 <!-- END REF-->
 

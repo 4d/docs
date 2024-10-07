@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.TRUNCATE TABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | すべてのレコードが削除されるテーブル 省略時はデフォルトテーブル |
+| aTable | Table | &#x1F852; | すべてのレコードが削除されるテーブル 省略時はデフォルトテーブル |
 
 <!-- END REF-->
 

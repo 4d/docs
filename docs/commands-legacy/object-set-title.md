@@ -10,8 +10,8 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an Object Name (String) If omitted, object is a Variable |
-| object | Form object | &#x1F852; | Object Name (if * is specified), or Variable (if * is omitted) |
-| title | String | &#x1F852; | New title for the object |
+| object | any | &#x1F852; | Object Name (if * is specified), or Variable (if * is omitted) |
+| title | Text | &#x1F852; | New title for the object |
 
 <!-- END REF-->
 

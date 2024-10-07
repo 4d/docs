@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MISSING TABLE NAMES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabelasNaoEncontradas | Array texto | &#x1F858; | Nomes de tabelas não encontradas no banco de dados |
+| tabelasNaoEncontradas | Text array | &#x1F858; | Nomes de tabelas não encontradas no banco de dados |
 
 <!-- END REF-->
 

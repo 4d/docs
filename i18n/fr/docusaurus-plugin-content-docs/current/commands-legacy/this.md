@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.This.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Objet | &#x1F850; | Elément ou objet courant |
+| Résultat | Object | &#x1F850; | Elément ou objet courant |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Asserted.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| boolExpression | ブール | &#x1F852; | ブール式 |
-| messageText | テキスト | &#x1F852; | エラーメッセージテキスト |
-| 戻り値 | ブール | &#x1F850; | boolExpressionの評価結果 |
+| boolExpression | Boolean | &#x1F852; | ブール式 |
+| messageText | Text | &#x1F852; | エラーメッセージテキスト |
+| 戻り値 | Boolean | &#x1F850; | boolExpressionの評価結果 |
 
 <!-- END REF-->
 

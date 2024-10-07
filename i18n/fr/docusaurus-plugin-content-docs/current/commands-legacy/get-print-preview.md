@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get print preview.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Booléen | &#x1F850; | Vrai = Impression à l’écran, Faux = Pas d’impression écran |
+| Résultat | Boolean | &#x1F850; | Vrai = Impression à l’écran, Faux = Pas d’impression écran |
 
 <!-- END REF-->
 

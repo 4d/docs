@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#x1F852; | Table pour laquelle connaître la valeur de priorité des données scalaires |
-| Résultat | Entier long | &#x1F850; | Valeur de priorité courante pour les champs scalaires |
+| Résultat | Integer | &#x1F850; | Valeur de priorité courante pour les champs scalaires |
 
 <!-- END REF-->
 

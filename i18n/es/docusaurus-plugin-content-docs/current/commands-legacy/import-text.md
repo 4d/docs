@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.IMPORT TEXT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla en la cual importar datos, o Tabla por defecto, si se omite |
-| doc | Cadena | &#x1F852; | Documento texto a importar datos |
+| tabla | Table | &#x1F852; | Tabla en la cual importar datos, o Tabla por defecto, si se omite |
+| doc | Text | &#x1F852; | Documento texto a importar datos |
 
 <!-- END REF-->
 

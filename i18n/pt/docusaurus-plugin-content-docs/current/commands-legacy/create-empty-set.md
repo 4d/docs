@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE EMPTY SET.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela na qual vai criar um conjunto vazio, ou tabela padrão, se omitido |
-| conjunto | String | &#x1F852; | Nome do conjunto vazio |
+| tabela | Table | &#x1F852; | Tabela na qual vai criar um conjunto vazio, ou tabela padrão, se omitido |
+| conjunto | Text | &#x1F852; | Nome do conjunto vazio |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#x1F852; | Table where records will be highlighted If omitted, table of current form |
-| setName | String | &#x1F852; | Set of records to highlight or Userset if omitted |
+| setName | Text | &#x1F852; | Set of records to highlight or Userset if omitted |
 | * | Operator | &#x1F852; | Disable the automatic scroll of the list |
 
 <!-- END REF-->

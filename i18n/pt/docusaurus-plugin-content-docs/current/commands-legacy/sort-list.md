@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SORT LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| lista | ListRef | &#x1F852; | Número de referência da lista |
+| lista | Integer | &#x1F852; | Número de referência da lista |
 | > ou < | Operador | &#x1F852; | Critério de ordenação: > ordenar em ordem ascendente, ou < ordenar em ordem descendente |
 
 <!-- END REF-->

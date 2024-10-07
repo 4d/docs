@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | ptrCamp&#124;numTabla | Puntero, Entero largo | &#x1F852; | Puntero de campo o número de tabla |
-| numCamp | Entero largo | &#x1F852; | Número de campo si se pasa un número de tabla  como primer parámetro |
-| tablaUno | Entero largo | &#x1F858; | Número de la tabla Uno ó 0 si no se define  ninguna relación desde el campo |
-| campUno | Entero largo | &#x1F858; | Número de campo Uno ó 0 si no se define  ninguna relación desde el campo |
-| discriminante | Entero largo | &#x1F858; | Número de campo discriminante o 0 si ningún campo discriminante |
-| autoUno | Booleano | &#x1F858; | True = Relación uno automática,  False = Relación uno manual |
-| autoMuchos | Booleano | &#x1F858; | True = Relación unos a muchos automática,  False = Relación unos a muchos manual |
+| numCamp | Integer | &#x1F852; | Número de campo si se pasa un número de tabla  como primer parámetro |
+| tablaUno | Integer | &#x1F858; | Número de la tabla Uno ó 0 si no se define  ninguna relación desde el campo |
+| campUno | Integer | &#x1F858; | Número de campo Uno ó 0 si no se define  ninguna relación desde el campo |
+| discriminante | Integer | &#x1F858; | Número de campo discriminante o 0 si ningún campo discriminante |
+| autoUno | Boolean | &#x1F858; | True = Relación uno automática,  False = Relación uno manual |
+| autoMuchos | Boolean | &#x1F858; | True = Relación unos a muchos automática,  False = Relación unos a muchos manual |
 
 <!-- END REF-->
 

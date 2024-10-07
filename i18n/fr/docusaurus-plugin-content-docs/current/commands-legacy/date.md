@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Date.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| expression | Chaîne, Date | &#x1F852; | Chaîne contenant la date à retourner ou expression de type Date |
+| expression | Text, Date | &#x1F852; | Chaîne contenant la date à retourner ou expression de type Date |
 | Résultat | Date | &#x1F850; | Expression de type Date |
 
 <!-- END REF-->

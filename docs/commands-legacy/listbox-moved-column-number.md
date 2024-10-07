@@ -10,9 +10,9 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| oldPosition | Longint | &#x1F858; | Previous position of the moved column |
-| newPosition | Longint | &#x1F858; | New position of the moved column |
+| object | any | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
+| oldPosition | Integer | &#x1F858; | Previous position of the moved column |
+| newPosition | Integer | &#x1F858; | New position of the moved column |
 
 <!-- END REF-->
 

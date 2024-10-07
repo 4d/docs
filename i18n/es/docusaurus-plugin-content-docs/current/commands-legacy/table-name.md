@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | numTabla &#124; ptrTabla | Entero largo, Puntero | &#x1F852; | Número de tabla o puntero de tabla |
-| Resultado | Cadena | &#x1F850; | Nombre de la tabla |
+| Resultado | Text | &#x1F850; | Nombre de la tabla |
 
 <!-- END REF-->
 

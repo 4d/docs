@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Formula.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| formulaExp | 式 | &#x1F852; | オブジェクトとして返されるフォーミュラ |
-| 戻り値 | オブジェクト | &#x1F850; | フォーミュラを格納しているネイティブなオブジェクト |
+| formulaExp | Expression | &#x1F852; | オブジェクトとして返されるフォーミュラ |
+| 戻り値 | Object | &#x1F850; | フォーミュラを格納しているネイティブなオブジェクト |
 
 <!-- END REF-->
 
