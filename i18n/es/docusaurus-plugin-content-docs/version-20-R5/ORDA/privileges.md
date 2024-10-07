@@ -153,7 +153,7 @@ Se recomienda comprobar al inicio si existe un archivo `Roles_Errors.json` en la
 ```4d title="/Sources/DatabaseMethods/onStartup.4dm"
 If (Not(File("/LOGS/"+"Roles_Errors.json").exists))
 …
-Else // you can prevent the project to open
+Else // puede evitar que el proyecto abra
  ALERT("The roles.json file is malformed or contains inconsistencies, the application will quit.")
  QUIT 4D
 End if
