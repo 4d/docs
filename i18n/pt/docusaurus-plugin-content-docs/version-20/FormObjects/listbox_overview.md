@@ -732,7 +732,7 @@ Exemplo: dado uma list box cujas primeiras colunas contém País, região, cidad
 
 ![](../assets/en/FormObjects/listbox_hierarchy2.png)
 
-##### Cancelar hierarquia
+##### Cancel hierarchy
 Quando a primeira coluna for selecionada e especificada como hierárquica pode usar o comando **Cancel hierarchy**. Quando selecionar este comando, as ações abaixo serão realizadas:
 
 *   A opção **Hierarchical list box** é desmarcada para o objeto,
