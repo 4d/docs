@@ -7,12 +7,12 @@
     "prebuild": "node prebuild.js",
     "prestart": "node prebuild.js",
     "prestart_watch": "node prebuild.js",
-    "start": "docusaurus start",
+    "start": "cross-env NODE_OPTIONS='--max-old-space-size=300000' docusaurus start",
     "doc_preprocess": "doc_preprocess",
     "start_watch": "doc_preprocess --settings_type='start_watch'",
     "syntaxViewPro": "doc_preprocess --settings_type='build_syntax_viewPro' && doc_preprocess --settings_type='build_syntax_viewPro_translated'",
     "syntax": "doc_preprocess --settings_type='build_syntax' && doc_preprocess --settings_type='build_syntax_translated'",
-    "build": "doc_preprocess && doc_preprocess --settings_type='build_versioned_docs' && doc_preprocess --settings_type='build_translate' && docusaurus build",
+    "build": "cross-env NODE_OPTIONS='--max-old-space-size=30000' doc_preprocess && doc_preprocess --settings_type='build_versioned_docs' && doc_preprocess --settings_type='build_translate' && docusaurus build",
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus write-translations",
     "version": "docusaurus-version",
@@ -22,10 +22,11 @@
     "docusaurus": "docusaurus"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "highlightjs-4d": "^1.0.6"
   },
   "dependencies": {
-    "@4dsas/doc_preprocessing": "1.1.2",
+    "@4dsas/doc_preprocessing": "1.1.3",
     "@docusaurus/core": "3.4.0",
     "@docusaurus/plugin-client-redirects": "3.4.0",
     "@docusaurus/preset-classic": "3.4.0",

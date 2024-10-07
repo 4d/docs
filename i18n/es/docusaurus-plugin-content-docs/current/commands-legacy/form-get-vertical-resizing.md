@@ -1,0 +1,24 @@
+---
+id: form-get-vertical-resizing
+title: FORM GET VERTICAL RESIZING
+slug: /commands/form-get-vertical-resizing
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.FORM GET VERTICAL RESIZING.Syntax-->**FORM GET VERTICAL RESIZING** ( *redimension* {; *alturaMin* {; *alturaMax*}} )<!-- END REF-->
+<!--REF #_command_.FORM GET VERTICAL RESIZING.Params-->
+| Parámetro | Tipo |  | Descripción |
+| --- | --- | --- | --- |
+| redimension | Booleano | &#x1F858; | True: el formulario es redimensionable verticalmente<br/>False: el formulario no es redimensionable verticalmente |
+| alturaMin | Entero largo | &#x1F858; | Altura mínima del formulario (píxeles) |
+| alturaMax | Entero largo | &#x1F858; | Altura máxima del formulario (píxeles) |
+
+<!-- END REF-->
+
+#### Descripción 
+
+<!--REF #_command_.FORM GET VERTICAL RESIZING.Summary-->El comando FORM GET VERTICAL RESIZING devuelve las propiedades de redimensionamiento vertical del formulario actual en las variables *redimension*, *alturaMin* y *alturaMax*.<!-- END REF--> Estas propiedades pueden haberse definido para el formulario en el editor de formularios en modo Diseño o para el proceso actual vía el comando [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md "FORM SET VERTICAL RESIZING").
+
+#### Ver también 
+
+[FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  

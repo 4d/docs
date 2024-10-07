@@ -1,0 +1,26 @@
+---
+id: get-menu-item-parameter
+title: Get menu item parameter
+slug: /commands/get-menu-item-parameter
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.Get menu item parameter.Syntax-->**Get menu item parameter** ( *menu* ; *lineaMenu* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Get menu item parameter.Params-->
+| Parámetro | Tipo |  | Descripción |
+| --- | --- | --- | --- |
+| menu | Entero largo, MenuRef | &#x1F852; | Referencia de menú o número de menú |
+| lineaMenu | Entero largo | &#x1F852; | Número de línea de menú o -1 para la última línea añadida al menú |
+| Resultado | Cadena | &#x1F850; | Parámetro personalizado de la línea de menú |
+
+<!-- END REF-->
+
+#### Descripción 
+
+<!--REF #_command_.Get menu item parameter.Summary-->El comando Get menu item parameter devuelve la cadena de caracteres personalizada asociada a la línea de menú designada por los parámetros *menu* y *lineaMenu*.<!-- END REF--> Esta cadena debe haber sido definida previamente utilizando el comando [SET MENU ITEM PARAMETER](set-menu-item-parameter.md "SET MENU ITEM PARAMETER").
+
+#### Ver también 
+
+[Dynamic pop up menu](dynamic-pop-up-menu.md)  
+[Get selected menu item parameter](get-selected-menu-item-parameter.md)  
+[SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  

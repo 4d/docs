@@ -636,7 +636,8 @@ title: Index
 [`LONGINT TO BLOB`](../commands-legacy/longint-to-blob.md)<br/>
 [`Lowercase`](../commands-legacy/lowercase.md)<br/>
 
-<a id="M"><b>L</b></a>
+
+<a id="M"><b>M</b></a>
 
 [`Macintosh command down`](../commands-legacy/macintosh-command-down.md)<br/>
 [`Macintosh control down`](../commands-legacy/macintosh-control-down.md)<br/>

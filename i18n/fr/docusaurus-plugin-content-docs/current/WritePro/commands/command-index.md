@@ -80,3 +80,4 @@ title: 4D Write Pro Commands
 [`WP TABLE SPLIT CELLS`](../commands-legacy/wp-table-split-cells.md)<br/>
 [`WP Text range`](../commands-legacy/wp-text-range.md)<br/>
 [`WP USE PAGE SETUP`](../commands-legacy/wp-use-page-setup.md)<br/>
+

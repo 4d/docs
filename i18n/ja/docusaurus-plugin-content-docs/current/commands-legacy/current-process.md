@@ -1,0 +1,28 @@
+---
+id: current-process
+title: Current process
+slug: /commands/current-process
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.Current process.Syntax-->**Current process**  -> 戻り値<!-- END REF-->
+<!--REF #_command_.Current process.Params-->
+| 引数 | 型 |  | 説明 |
+| --- | --- | --- | --- |
+| 戻り値 | 倍長整数 | &#x1F850; | プロセス番号 |
+
+<!-- END REF-->
+
+#### 説明 
+
+<!--REF #_command_.Current process.Summary-->Current processは、このコマンドを呼び出したプロセスのプロセス番号を返します。<!-- END REF-->
+
+#### 例題 
+
+[DELAY PROCESS](delay-process.md "DELAY PROCESS")と[PROCESS PROPERTIES](process-properties.md "PROCESS PROPERTIES")の例題参照
+
+#### 参照 
+
+[Process number](process-number.md)  
+[PROCESS PROPERTIES](process-properties.md)  
+[Process state](process-state.md)  
