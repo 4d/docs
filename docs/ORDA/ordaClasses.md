@@ -905,10 +905,9 @@ The `onHttpGet` function must return an object of the [`OutGoingMessage`](../API
 
 
 
-:::info
+:::caution
 
-- An `onHttpGet` function can be called through HTTP requests with the `GET` verb only. If it is called with a `POST` verb, an error is returned. 
-- As this type of call is an easy offered action, the developer must ensure no sensitive action is done in such functions.
+As this type of call is an easy offered action, the developer must ensure no sensitive action is done in such functions.
 
 :::
 

@@ -69,33 +69,25 @@ $city:=ds.City.getCity("Aguada")
 
 ## Function configuration
 
-### `exposed` for all functions
+### `exposed`
 
-Only functions with the `exposed` keyword can be directly from REST requests. See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
-
-### `onHttpGet` for GET functions
-
-Depending on the verb used to call the function, the `onHttpGet` keyword must or must not be used:
-
-- Functions to be called through POST requests must be declared without the `onHttpGet` keyword. For example:
+All functions allowed to be called directly from HTTP REST requests (`POST` or `GET`) must be declared with the `exposed` keyword. For example:
 
 ```4d
-//configuration for POST requests
 exposed Function getSomeInfo() : 4D.OutgoingMessage
 ```
 
-- Functions to be called through GET requests must be declared with the `onHttpGet` keyword. For example:
+See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
+
+
+### `onHttpGet`
+
+Functions allowed to be called from HTTP `GET` requests must also be specically declared with the `onHttpGet` keyword. For example:
 
 ```4d
-//configuration for GET requests
+//allowed for GET requests
 exposed onHTTPGet Function getSomeInfo() : 4D.OutgoingMessage
 ```
-
-:::note
-
-Errors are generated if you call a function using a HTTP verb that does not fit the function configuration. 
-
-:::
 
 
 ### Thread-safe
@@ -375,6 +367,7 @@ You can then run this request:
 ```
 
 
+
 ### Using an entity to be created on the server
 
 
@@ -569,6 +562,7 @@ In the `Students` Dataclass class, the `setFinalExam()` function updates a recei
 Class extends DataClass
 
 exposed Function setFinalExam()
+
 
     var $1, $es, $student, $status : Object
     var $2, $examResult : Text

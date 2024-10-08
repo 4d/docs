@@ -6,7 +6,7 @@ title: OutGoingMessage
 
 The `4D.OutGoingMessage` class allows you to build messages to be returned by your application functions in response to [REST requests](../REST/REST_requests.md). If the response is of type `4D.OutGoingMessage`, the REST server does not return an object but the object instance of the OutgoingMessage class.
 
-Typically, this class can be used in shared functions declared with the keyword [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) and designed to handle HTTP GET requests. Such requests are used, for example, to implement features such as download file, generate and download picture as well as receiving any content-type via a browser. 
+Typically, this class can be used in functions declared with the [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keyword and designed to handle HTTP GET requests. Such requests are used, for example, to implement features such as download file, generate and download picture as well as receiving any content-type via a browser. 
 
 An instance of this class is built on 4D Server and sent to the browser by the [4D REST Server](../REST/gettingStarted.md). 
 
