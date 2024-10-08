@@ -86,7 +86,7 @@ Functions allowed to be called from HTTP `GET` requests must also be specically 
 
 ```4d
 //allowed for GET requests
-exposed onHTTPGet Function getSomeInfo() : 4D.OutgoingMessage
+exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
 ```
 
 
