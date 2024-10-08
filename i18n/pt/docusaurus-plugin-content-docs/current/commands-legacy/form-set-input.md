@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | tabela | Table | &srarr; | Tabela para a qual vai estabecer o formulário input, ou tabela Padrão, se omitido |
 | formulario | Text, Object | &srarr; | Nome do formulário para estabelecer um formulário input |
 | formUsuario | Text | &srarr; | Nome do formulário usuário para utilizar |
-| * | &srarr; | Tamanho da janela automático |
+| * |  | &srarr; | Tamanho da janela automático |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | lista | Integer | &srarr; | Número de referência da lista |
-| * | &srarr; | Se especificada, se há sub-listas se deve apagar da memória, Se omitida, as sub-listas não são apagadas |
+| * |  | &srarr; | Se especificada, se há sub-listas se deve apagar da memória, Se omitida, as sub-listas não são apagadas |
 
 <!-- END REF-->
 

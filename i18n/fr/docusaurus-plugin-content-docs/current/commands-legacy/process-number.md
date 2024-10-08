@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nom | Text | &srarr; | Nom du process duquel récupérer le numéro |
-| * | &srarr; | Retourner le numéro du process serveur |
+| * |  | &srarr; | Retourner le numéro du process serveur |
 | Résultat | Integer | &larr; | Numéro du process |
 
 <!-- END REF-->

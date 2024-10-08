@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tableau | Array | &srarr; | Tableau(x) à trier |
-| sensDuTri | * | &srarr; | ">" pour effectuer un tri croissant ou "<" pour effectuer un tri décroissant Si omis  = pas de tri |
+| sensDuTri | * |  | &srarr; | ">" pour effectuer un tri croissant ou "<" pour effectuer un tri décroissant Si omis  = pas de tri |
 | MULTI SORT ARRAY ( tabPointeurs ; tabTris ) |
 | Paramètre | Type | Description |
 | tabPointeurs | Pointer array | &srarr; | Tableau de pointeurs de tableaux |

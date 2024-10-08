@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET HIGHLIGHT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Objeto | * | &srarr; | Se especificado, objeto é um nome de objeto (string=. Se omitido, objeto é um campo ou variável |
+| Objeto | * |  | &srarr; | Se especificado, objeto é um nome de objeto (string=. Se omitido, objeto é um campo ou variável |
 | area | Field, Variable, any | &srarr; | Nome de objeto (se * for especificado) ou Campo ou variável (se * for omitido) |
 | inicioSel | Integer | &harr; | Posição inicial da seleção atual de texto |
 | fimSel | Integer | &harr; | Posição final da seleção atual de texto |

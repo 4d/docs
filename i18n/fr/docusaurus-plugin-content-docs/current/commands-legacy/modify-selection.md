@@ -12,8 +12,8 @@ displayed_sidebar: docs
 | laTable | Table | &srarr; | Table à afficher et modifier ou Table par défaut si ce paramètre est omis |
 | modeSélection | Integer | &srarr; | Mode de sélection |
 | saisieListe | Boolean | &srarr; | Autoriser saisie en liste |
-| * | &srarr; | Utiliser formulaire sortie pour un seul enregistrement et cacher les barres de défilement dans le formulaire entrée |
-| * | &srarr; | Afficher les barres de défilement dans le formulaire entrée (= annuler le second effet du premier paramètre *) |
+| * |  | &srarr; | Utiliser formulaire sortie pour un seul enregistrement et cacher les barres de défilement dans le formulaire entrée |
+| * |  | &srarr; | Afficher les barres de défilement dans le formulaire entrée (= annuler le second effet du premier paramètre *) |
 
 <!-- END REF-->
 

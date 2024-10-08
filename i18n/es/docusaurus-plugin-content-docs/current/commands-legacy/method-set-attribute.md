@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | ruta | Text | &srarr; | Ruta del método proyecto |
 | tipoAtrib | Integer | &srarr; | Tipo de atributo |
 | valorAtrib | Boolean, Text | &srarr; | True = seleccionar el atributo  False = deseleccionar el atributo |
-| operador | * | &srarr; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un  componente (parámetro ignorado fuera de este contexto) |
+| operador | * |  | &srarr; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un  componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->
 

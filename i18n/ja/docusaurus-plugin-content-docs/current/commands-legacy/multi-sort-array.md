@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | array | Array | &srarr; | ソートする配列 |
-| sort | * | &srarr; | ">" : 昇順ソート, または "<" : 降順ソート, または 省略した場合、ソートしない |
+| sort | * |  | &srarr; | ">" : 昇順ソート, または "<" : 降順ソート, または 省略した場合、ソートしない |
 | MULTI SORT ARRAY ( ptrArrayName ; sortArrayName ) |
 | 引数 | 型 | 説明 |
 | ptrArrayName | Pointer array | &srarr; | 配列ポインタの配列 |

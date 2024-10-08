@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | unField | Field | &srarr; | Campo del cual crear o borrar el índice |
 | index | Boolean, Integer | &srarr; | • True=Crear el índice, False=Borrar el índice, o • Crear un índice de tipo: -1=palabras claves, 0=por defecto, 1=B-Tree estándar, 3=B-Tree cluster |
-| * | &srarr; | Si se pasa * indexación asincrónica |
+| * |  | &srarr; | Si se pasa * indexación asincrónica |
 
 <!-- END REF-->
 

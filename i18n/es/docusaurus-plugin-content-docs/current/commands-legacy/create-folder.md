@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | rutaCarpeta | Text | &srarr; | Ruta de acceso a la nueva carpeta a crear |
-| * | * | &srarr; | Crear carpeta jerárquica |
+| * | * |  | &srarr; | Crear carpeta jerárquica |
 
 <!-- END REF-->
 

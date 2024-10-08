@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | ratonX | Integer | &srarr; | Coordenada horizontal |
 | ratonY | Integer | &srarr; | Coordenada vertical |
 | proceso | Integer | &srarr; | Número de referencia del proceso de destino o fila de atención de eventos de la aplicación, si se omite o si se pasa 0 |
-| * | &srarr; | Si se especifica, utilizar el sistema de coordenadas globales Si se omite, utilizar el sistema de coordenadas locales |
+| * |  | &srarr; | Si se especifica, utilizar el sistema de coordenadas globales Si se omite, utilizar el sistema de coordenadas locales |
 
 <!-- END REF-->
 

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
 | objet | any | &srarr; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
 | numColonne | Integer | &srarr; | Numéro(s) de colonne(s) à trier |
-| sensDuTri | * | &srarr; | ">"pour effectuer un tri croissant ou "<" pour effectuer un tri décroissant |
+| sensDuTri | * |  | &srarr; | ">"pour effectuer un tri croissant ou "<" pour effectuer un tri décroissant |
 
 <!-- END REF-->
 

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | * | Operador | &srarr; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
 | objeto | any | &srarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
 | numColuna | Integer | &srarr; | Número da coluna a ordenar |
-| ordenar | * | &srarr; | ">" para ordernar em ordem ascendente ou "<" para ordenar em ordem descendente |
+| ordenar | * |  | &srarr; | ">" para ordernar em ordem ascendente ou "<" para ordenar em ordem descendente |
 
 <!-- END REF-->
 

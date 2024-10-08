@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | ruta | Text, Text array | &srarr; | Texto o array texto que contiene una o varias rutas de métodos |
 | codigo | Text, Text array | &srarr; | Código de los métodos designados |
-| operador | * | &srarr; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| operador | * |  | &srarr; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->
 

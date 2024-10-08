@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | name | Text | &srarr; | Name of process for which to retrieve the process number |
-| * | &srarr; | Return the process number from the server |
+| * |  | &srarr; | Return the process number from the server |
 | Function result | Longint | &larr; | Process number |
 
 <!-- END REF-->

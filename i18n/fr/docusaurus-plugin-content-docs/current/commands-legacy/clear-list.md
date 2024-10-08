@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | liste | Integer | &srarr; | Numéro de référence de liste |
-| * | &srarr; | Si spécifié, effacer les sous-listes de la mémoire (s'il existe des sous-listes) Si omis, ne pas effacer les sous-listes |
+| * |  | &srarr; | Si spécifié, effacer les sous-listes de la mémoire (s'il existe des sous-listes) Si omis, ne pas effacer les sous-listes |
 
 <!-- END REF-->
 

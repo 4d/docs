@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | * | Opérateur | &srarr; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
 | liste | Integer, Text | &srarr; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
 | réfElément &#124; * | Entier long, Opérateur | &srarr; | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l'élément de la liste actuellement sélectionné |
-| * | &srarr; | Si spécifié, effacer les sous-listes de la mémoire (le cas échéant) Si omis, ne pas effacer les sous-listes |
+| * |  | &srarr; | Si spécifié, effacer les sous-listes de la mémoire (le cas échéant) Si omis, ne pas effacer les sous-listes |
 
 <!-- END REF-->
 

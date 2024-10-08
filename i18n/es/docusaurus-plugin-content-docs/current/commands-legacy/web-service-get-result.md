@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | valorDevuelto | Variable | &harr; | Valor devuelto por el servicio web |
 | nombreDevuelto | Text | &srarr; | Nombre del parámetro a recuperar |
-| * | &srarr; | Liberar memoria |
+| * |  | &srarr; | Liberar memoria |
 
 <!-- END REF-->
 

@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | leField | Field | &srarr; | Champ duquel créer ou supprimer l’index |
 | index | Boolean, Integer | &srarr; | • Vrai=Créer l’index, Faux=Supprimer l’index, ou• Créer un index de type : -1=mots-clés, 0=par défaut, 1=B-Tree standard, 3=B-Tree cluster |
-| * | &srarr; | Indexation asynchrone si * est passé |
+| * |  | &srarr; | Indexation asynchrone si * est passé |
 
 <!-- END REF-->
 

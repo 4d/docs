@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | tabela | Table | &srarr; | Tabela para a qual vai estabelecer os títulos dos campos |
 | titulosCampos | Text array | &srarr; | Nomes dos campos do jeito que eles vão aparecer nas caixas de diálogo |
 | numCampos | Integer array | &srarr; | Números de campos atuais |
-| * | &srarr; | Use os nomes personalizados no editor de fórmulas |
+| * |  | &srarr; | Use os nomes personalizados no editor de fórmulas |
 
 <!-- END REF-->
 

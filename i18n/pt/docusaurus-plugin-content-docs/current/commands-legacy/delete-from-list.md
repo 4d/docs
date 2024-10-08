@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | * | Operador | &srarr; | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
 | lista | Integer, Text | &srarr; | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
 | refElem &#124; * | Inteiro longo, Operador | &srarr; | Número de referencia do elemento, ou 0 para o último elemento adicionado à lista ou * para o elemento da lista atualmente selecionada |
-| * | &srarr; | Se especificada, apaga as sub-listas (se existem) da memória Se omitida, as sub-listas (se existem) não são apagadas |
+| * |  | &srarr; | Se especificada, apaga as sub-listas (se existem) da memória Se omitida, as sub-listas (se existem) não são apagadas |
 
 <!-- END REF-->
 

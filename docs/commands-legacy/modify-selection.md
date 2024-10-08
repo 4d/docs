@@ -12,8 +12,8 @@ displayed_sidebar: docs
 | aTable | Table | &srarr; | Table to display and modify, or Default table, if omitted |
 | selectMode | Integer | &srarr; | Selection mode |
 | enterList | Boolean | &srarr; | Authorize Enter in list option |
-| * | &srarr; | Use output form for one record selection and hide scroll bars in the input form |
-| * | &srarr; | Show scroll bars in the input form (overrides second option of first optional *) |
+| * |  | &srarr; | Use output form for one record selection and hide scroll bars in the input form |
+| * |  | &srarr; | Show scroll bars in the input form (overrides second option of first optional *) |
 
 <!-- END REF-->
 

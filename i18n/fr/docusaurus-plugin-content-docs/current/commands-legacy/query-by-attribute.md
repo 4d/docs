@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &srarr; | Table dans laquelle la sélection est créée ou Table par défaut si ce paramètre est omis |
-| opConj | * | &srarr; | Opérateur à utiliser pour combiner plusieurs requêtes (le cas échéant) |
+| opConj | * |  | &srarr; | Opérateur à utiliser pour combiner plusieurs requêtes (le cas échéant) |
 | champObjet | Field | &srarr; | Champ objet dont les attributs sont à utiliser pour la recherche |
 | cheminAttribut | Text | &srarr; | Nom ou chemin d'attribut |
 | opRech | Text, * | &srarr; | Opérateur de recherche (comparateur) |

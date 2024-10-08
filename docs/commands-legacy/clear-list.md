@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | list | Integer | &srarr; | List reference number |
-| * | &srarr; | If specified, clear sublists from memory, if any. If omitted, sublists (if any) are not cleared. |
+| * |  | &srarr; | If specified, clear sublists from memory, if any. If omitted, sublists (if any) are not cleared. |
 
 <!-- END REF-->
 

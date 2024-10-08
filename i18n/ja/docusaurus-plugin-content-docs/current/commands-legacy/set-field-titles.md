@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | aTable | Table | &srarr; | フィールドタイトルを設定するテーブル |
 | fieldTitles | Text array | &srarr; | ダイアログボックスに表示するフィールドの名前 |
 | fieldNumbers | Integer array | &srarr; | 実際のフィールド番号 |
-| * | &srarr; | カスタマイズした名前をフォーミュラエディタで使用する |
+| * |  | &srarr; | カスタマイズした名前をフォーミュラエディタで使用する |
 
 <!-- END REF-->
 

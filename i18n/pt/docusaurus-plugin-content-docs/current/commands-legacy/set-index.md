@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | campo | Field | &srarr; | campo para o qual criar ou apagar o índice |
 | indice | Boolean, Integer | &srarr; | True = criar índice, False = apagar índice, ou Criar um índice do tipo: -1=palavras chaves, 0= por padrão, 1=B-Tree padrão, 3=B-Tree cluster |
-| * | &srarr; | Índice assincrônico se * for passado |
+| * |  | &srarr; | Índice assincrônico se * for passado |
 
 <!-- END REF-->
 

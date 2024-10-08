@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | * | 演算子 | &srarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
 | object | any | &srarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
 | colNum | Integer | &srarr; | 並び替える列番号 |
-| order | * | &srarr; | ">": 昇順ソート または "<": 降順ソート |
+| order | * |  | &srarr; | ">": 昇順ソート または "<": 降順ソート |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &srarr; | Table to use for data entry, or Default table, if omitted |
-| * | &srarr; | Hide scroll bars |
+| * |  | &srarr; | Hide scroll bars |
 
 <!-- END REF-->
 

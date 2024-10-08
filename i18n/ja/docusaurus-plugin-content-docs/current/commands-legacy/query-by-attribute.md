@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | aTable | Table | &srarr; | セレクションまたはレコードを返すテーブル 省略時:デフォルトテーブル |
-| conjOp | * | &srarr; | 複数のクエリ(あれば)を連結する際に使用する結合演算子 |
+| conjOp | * |  | &srarr; | 複数のクエリ(あれば)を連結する際に使用する結合演算子 |
 | objectField | Field | &srarr; | 属性をクエリするオブジェクトフィールド |
 | attributePath | Text | &srarr; | 属性の名前またはパス |
 | queryOp | Text, * | &srarr; | クエリ演算子(比較演算子) |

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | mouseX | Integer | &srarr; | 水平座標 |
 | mouseY | Integer | &srarr; | 垂直座標 |
 | process | Integer | &srarr; | 送信先のプロセス参照番号、 省略または0の場合、アプリケーションイベントキュー |
-| * | &srarr; | 指定された場合はグローバルな座標システムが使用される 省略された場合はローカルな座標システムが使用される |
+| * |  | &srarr; | 指定された場合はグローバルな座標システムが使用される 省略された場合はローカルな座標システムが使用される |
 
 <!-- END REF-->
 
