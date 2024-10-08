@@ -589,8 +589,6 @@ Class constructor ($side : Integer)
 
 <!-- REF #_command_.Super.Params -->
 |Parameter|Type||Description|  
-
-
 |---|---|---|---|
 |param|any|->|Parameter(s) to pass to the parent constructor|
 |Result|Object|<-|Object's parent|
@@ -762,6 +760,7 @@ In this example, the object assigned to the variable $o doesn't have its own *f*
 
 ## Class commands
 
+
 Several commands of the 4D language allows you to handle class features.
 
 ### `OB Class`
@@ -926,6 +925,7 @@ var $myOtherSingleton := cs.ProcessTag.me
 
 
 #### Shared singleton
+
 
 ```4d
 //Class VehicleFactory

@@ -12,4 +12,4 @@ displayed_sidebar: docs
 |Result|Object|<-|Object's parent|
 
 
-The **Super** keyword is described in the [**Classes page**](../Concepts/classes.md#super). 
+The **Super** keyword is described in the [**Concept page for Classes**](../Concepts/classes.md#super). 
