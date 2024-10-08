@@ -55,7 +55,7 @@ with data in the body of the POST request: `["Aguada"]`
 
 :::note
 
-The `getCity()` function must have been declared with or without the `onHttpGet` keyword depending on how you want to call is (see [Function configuration](#function-configuration) below). 
+The `getCity()` function must have been declared with the `onHttpGet` keyword (see [Function configuration](#function-configuration) below). 
 
 :::
 
@@ -82,10 +82,10 @@ See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exp
 
 ### `onHttpGet`
 
-Functions allowed to be called from HTTP `GET` requests must also be specically declared with the `onHttpGet` keyword. For example:
+Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the `onHttpGet` keyword. For example:
 
 ```4d
-//allowed for GET requests
+//allowing GET requests
 exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
 ```
 
@@ -96,6 +96,12 @@ All 4D code called from REST requests **must be thread-safe** if the project run
 
 :::
 
+
+:::info
+
+You can restrict calls to specific ORDA functions by configuring appropriate privileges in the [**roles.json**](../ORDA/privileges.md#rolesjson-file) file.
+
+:::
 
 ## Parameters
 

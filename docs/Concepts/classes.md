@@ -883,7 +883,7 @@ Once instantiated, a singleton class (and its singleton) exists as long as a ref
 :::info
 
 - Singleton classes are not supported by [ORDA-based classes](../ORDA/ordaClasses.md).
-- Singleton functions support [`onHttpGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword).
+- Singleton shared functions support [`onHttpGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword).
 
 :::
 

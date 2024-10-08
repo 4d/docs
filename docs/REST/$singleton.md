@@ -5,7 +5,7 @@ title: $singleton
 
 You can directly call exposed [functions of your shared singletons](../Concepts/classes.md#singleton-classes) through REST.
 
-Singleton functions are called in POST requests with the `$singleton` command and without `()`. For example, if you have defined a `buildVehicle()` function in the `VehicleFactory` shared singleton class, you could call it using the following request:
+Singleton functions are called in POST or REST requests with the `$singleton` command and without `()`. For example, if you have defined a `buildVehicle()` function in the `VehicleFactory` shared singleton class, you could call it using the following request:
 
 ```json
 /rest/$singleton/VehicleFactory/buildVehicle
@@ -30,9 +30,28 @@ Keep in mind that only functions with the [`exposed` keyword](../ORDA/ordaClasse
 
 ## Function calls
 
-Singleton functions must always be called using REST **POST** requests (a GET request will receive an error). The formal syntax is:
+Singleton functions can be called using REST **POST** or **GET** requests.
+
+The formal syntax is:
+
+#### POST request
 
 `/rest/$singleton/SingletonClass/SingletonClassFunction`
+
+with data in the body of the POST request: `["myparam"]`
+
+
+#### GET request
+
+`/rest/$singleton/SingletonClass/SingletonClassFunction?$params='["myparam"]'`
+
+:::note
+
+The `SingletonClassFunction()` function must have been declared with the `onHttpGet` keyword to be callable with `GET` (see [Function configuration](ClassFunctions#function-configuration)). 
+
+:::
+
+
 
 > All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
 

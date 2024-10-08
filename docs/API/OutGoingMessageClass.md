@@ -29,7 +29,7 @@ An instance of this class is built on 4D Server and sent to the browser by the [
 ||
 |---|
 |[<!-- INCLUDE #OutGoingMessageClass.body.Syntax -->](#body)<br/><!-- INCLUDE #OutGoingMessageClass.body.Summary -->|
-|[<!-- INCLUDE #OutGoingMessageClass.bodyString.Syntax -->](#bodyString)<br/><!-- INCLUDE #OutGoingMessageClass.bodyString.Summary -->|
+|[<!-- INCLUDE #OutGoingMessageClass.headers.Syntax -->](#headers)<br/><!-- INCLUDE #OutGoingMessageClass.headers.Summary -->|
 |[<!-- INCLUDE #OutGoingMessageClass.setBody.Syntax -->](#setbody)<br/><!-- INCLUDE #OutGoingMessageClass.setBody.Summary -->|
 |[<!-- INCLUDE #OutGoingMessageClass.setHeader.Syntax -->](#setheader)<br/><!-- INCLUDE #OutGoingMessageClass.setHeader.Summary -->|
 |[<!-- INCLUDE #OutGoingMessageClass.setStatus.Syntax -->](#setstatus)<br/><!-- INCLUDE #OutGoingMessageClass.setStatus.Summary -->|
@@ -37,7 +37,7 @@ An instance of this class is built on 4D Server and sent to the browser by the [
 
 :::note
 
-A 4D.OutGoingMessage object is a [non-sharable] object.
+A 4D.OutGoingMessage object is a [non-sharable](../Concepts/shared.md) object.
 
 :::
 
@@ -48,23 +48,35 @@ A 4D.OutGoingMessage object is a [non-sharable] object.
 <!-- REF #OutGoingMessageClass.body.Desc -->
 ## .body
 
-<!-- REF #OutGoingMessageClass.body.Syntax -->**body** : Blob<!-- END REF -->
+<!-- REF #OutGoingMessageClass.body.Syntax -->**body** : any<!-- END REF -->
 
 #### Description
 
-The `.body` property contains <!-- REF #OutGoingMessageClass.body.Summary -->the outgoing message body blob<!-- END REF -->. This property is not available if the message body is a string, in which case the `.bodyString` property is available.
+The `.body` property contains <!-- REF #OutGoingMessageClass.body.Summary -->the outgoing message body<!-- END REF -->. The following data types are supported in the `.body`:
+
+- text
+- image
+- blob
+- object
+
+The `.body` property is read-write.
+
+You can also set the `.body` property using the [`setBody()`](#setbody) function, in which case the `content-type` header is automatically set. 
 
 <!-- END REF -->
 
 
-<!-- REF #OutGoingMessageClass.bodyString.Desc -->
-## .bodyString
+<!-- REF #OutGoingMessageClass.headers.Desc -->
+## .headers
 
-<!-- REF #OutGoingMessageClass.bodyString.Syntax -->**bodyString** : Text<!-- END REF -->
+<!-- REF #OutGoingMessageClass.headers.Syntax -->**headers** : Object<!-- END REF -->
 
 #### Description
 
-The `.bodyString` property contains <!-- REF #OutGoingMessageClass.bodyString.Summary -->the outgoing message body string<!-- END REF -->. This property is not available if the message body is a blob, in which case the `.body` property is available.
+The `.headers` property contains <!-- REF #OutGoingMessageClass.headers.Summary -->the current headers of the outgoing message as key/value pairs<!-- END REF -->. 
+
+This property is read-only. To set a header, use the [`setHeader()`](#setheader) function. 
+
 
 <!-- END REF -->
 
@@ -72,24 +84,27 @@ The `.bodyString` property contains <!-- REF #OutGoingMessageClass.bodyString.Su
 <!-- REF #OutGoingMessageClass.setBody().Desc -->
 ## .setBody()
 
-<!-- REF #OutGoingMessageClass.setBody().Syntax -->**.setBody**( *body* : Text} )<br/>**.setBody**( *body* : Blob} )<!-- END REF -->
+<!-- REF #OutGoingMessageClass.setBody().Syntax -->**.setBody**( *body* : any )<!-- END REF -->
 
 
 <!-- REF #OutGoingMessageClass.setBody().Params -->
-|body|Text &#124; Blob |->|Body of the outgoing message|
+|body|any |->|Body of the outgoing message|
 <!-- END REF -->
 
 #### Description
 
-> This function is thread-safe.
-
 The `.setBody()` function <!-- REF #OutGoingMessageClass.setBody().Summary -->sets the outgoing message *body*<!-- END REF -->.
 
-- If *body* is a Text value, the response object contains the [`bodyString`](#bodystring) property filled with the given body.
-- If *body* is a Blob, the response object contains the [`body`](#body) property filled with the given body.
+ The following data types are supported in the *body*:
 
-If *body* is not a Text or Blob value, an error is returned.
+- text
+- image
+- blob
+- object
 
+When this function is used, the content-type header is automatically set depending on the *body* type. 
+
+If *body* is not of a supported value type, an error is returned.
 
 <!-- END REF -->
 
@@ -109,12 +124,15 @@ If *body* is not a Text or Blob value, an error is returned.
 
 The `.setHeader()` function <!-- REF #OutGoingMessageClass.setHeader().Summary -->sets the outgoing message header *key* with the provided *value*<!-- END REF -->. If both parameters are not Text values, an error is raised.
 
-:::info
+When returning a 4D.OutGoingMessage object instance, 4D automatically sets some headers (e.g. `Set-Cookie` with `WASID4D=...` and `4DSID__ProjectName_=....`). 
 
-- When returning a 4D.OutGoingMessage object instance, 4D automatically sets some headers (e.g. `Set-Cookie` with `WASID4D=...` and `4DSID__ProjectName_=....`)
-- For a list of "Content-Type" header values, please refer to the [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md) documentation. 
+:::note
+
+If you set a *value* for the "Content-Type" header *key*, make sure you call this function after the call to [`setBody()`](#setbody), because `setBody()` automatically fills this header. 
+For a list of "Content-Type" header values, please refer to the [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md) documentation. 
 
 :::
+
 
 <!-- END REF -->
 

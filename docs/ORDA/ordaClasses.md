@@ -864,7 +864,7 @@ $id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method"
 
 ## onHttpGet keyword
 
-Use the `onHttpGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents using the [`4D.OutGoingMessage`](../API/OutGoingMessageClass.md) class. 
+Use the `onHttpGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutGoingMessage`](../API/OutGoingMessageClass.md) class. 
 
 The `onHttpGet` keyword is available with:
 
@@ -875,7 +875,7 @@ The formal syntax is:
 
 ```4d  
 // declare an onHttpGet function
-exposed onHttpGet Function <functionName>(params) : [4D.OutGoingMessage](../API/OutGoingMessageClass.md)
+exposed onHttpGet Function <functionName>(params) : result
 ```
 
 :::info
@@ -884,10 +884,15 @@ The `exposed` keyword must also be added in this case, otherwise an error will b
 
 :::
 
+:::caution
+
+As this type of call is an easy offered action, the developer must ensure no sensitive action is done in such functions.
+
+:::
 
 ### params
 
-The `onHttpGet` function can accept [parameters](../Concepts/parameters.md).
+A function with `onHttpGet` accepts [parameters](../Concepts/parameters.md).
 
 In the HTTP GET request, parameters must be passed directly in the URL and declared using the `$params` keyword (they must be enclosed in a collection). 
 
@@ -901,15 +906,14 @@ See the [Parameters](../REST/classFunctions#parameters) section in the REST serv
 
 ### result
 
-The `onHttpGet` function must return an object of the [`OutGoingMessage`](../API/OutGoingMessageClass.md) class. This class proposes properties and functions to set the header, the body, and the status of the answer. 
+A function with `onHttpGet` can return any value of a supported type (same as for REST [parameters](../REST/classFunctions#parameters)).
 
+:::info
 
-
-:::caution
-
-As this type of call is an easy offered action, the developer must ensure no sensitive action is done in such functions.
+You can return a value of the [`4D.OutGoingMessage`](../API/OutGoingMessageClass.md) class type to benefit from properties and functions to set the header, the body, and the status of the answer. 
 
 :::
+
 
 
 ### Example
@@ -922,13 +926,11 @@ Class extends DataClass
 
 exposed onHTTPGet Function getThumbnail($name : Text; $width : Integer; $height : Integer) : 4D.OutgoingMessage
 	
-	var $file : 4D.File
 	var $image; $thumbnail : Picture
 	var $blob : Blob
-	var $response : 4D.OutgoingMessage:=4D.OutgoingMessage.new()
+	var $response := 4D.OutgoingMessage.new()
 	
-	
-	$file:=File("/RESOURCES/Images/"+$name+".jpg")
+	var $file := File("/RESOURCES/Images/"+$name+".jpg")
 	READ PICTURE FILE($file.platformPath; $image)
 	CREATE THUMBNAIL($image; $thumbnail; $width; $height; Scaled to fit)
 	PICTURE TO BLOB($thumbnail; $blob; "image/jpeg")
