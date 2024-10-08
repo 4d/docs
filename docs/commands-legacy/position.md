@@ -5,9 +5,8 @@ slug: /commands/position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Position.Syntax-->**Position** ( *find* ; *aString* {; *start* {; *lengthFound*}}{; *} ) -> Function result 
-        
-            Position ( *find* ; *aString* ; *start* ; *lengthFound* ; *options* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Position.Syntax-->**Position** ( *find* ; *aString* {; *start* {; *lengthFound*}}{; *} ) -> Function result <br/>
+**Position** ( *find* ; *aString* ; *start* ; *lengthFound* ; *options* ) -> Function result<!-- END REF-->
 <!--REF #_command_.Position.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,9 +5,8 @@ slug: /commands/set-channel
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET CHANNEL.Syntax-->**SET CHANNEL** ( *puerto* ; *param* ) 
-        
-            SET CHANNEL ( *operacion* ; *doc* )<!-- END REF-->
+<!--REF #_command_.SET CHANNEL.Syntax-->**SET CHANNEL** ( *puerto* ; *param* ) <br/>
+**SET CHANNEL** ( *operacion* ; *doc* )<!-- END REF-->
 <!--REF #_command_.SET CHANNEL.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

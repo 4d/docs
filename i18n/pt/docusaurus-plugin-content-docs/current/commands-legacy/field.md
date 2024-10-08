@@ -5,9 +5,8 @@ slug: /commands/field
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Field.Syntax-->**Field** ( *numTabela* ; *numCampo* ) -> pontCampo 
-        
-            Field ( *pontCampo* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Field.Syntax-->**Field** ( *numTabela* ; *numCampo* ) -> pontCampo <br/>
+**Field** ( *pontCampo* ) -> Resultado<!-- END REF-->
 <!--REF #_command_.Field.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

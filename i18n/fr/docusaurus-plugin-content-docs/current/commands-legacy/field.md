@@ -5,9 +5,8 @@ slug: /commands/field
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Field.Syntax-->**Field** ( *numTable* ; *numChamp* ) -> ptrChamp 
-        
-            Field ( *ptrChamp* ) -> numChamp<!-- END REF-->
+<!--REF #_command_.Field.Syntax-->**Field** ( *numTable* ; *numChamp* ) -> ptrChamp <br/>
+**Field** ( *ptrChamp* ) -> numChamp<!-- END REF-->
 <!--REF #_command_.Field.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

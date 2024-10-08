@@ -5,9 +5,8 @@ slug: /commands/match-regex
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Match regex.Syntax-->**Match regex** ( *motif* ; *laChaîne* ; *début* {; pos_trouvée ; long_trouvée}{; *} ) -> Résultat 
-        
-            Match regex ( *motif* ; *laChaîne* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Match regex.Syntax-->**Match regex** ( *motif* ; *laChaîne* ; *début* {; pos_trouvée ; long_trouvée}{; *} ) -> Résultat <br/>
+**Match regex** ( *motif* ; *laChaîne* ) -> Résultat<!-- END REF-->
 <!--REF #_command_.Match regex.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
