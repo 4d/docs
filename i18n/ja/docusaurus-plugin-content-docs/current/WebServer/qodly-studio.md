@@ -219,40 +219,40 @@ _IP:port_ は Webサーバーのアドレスを表し、_QodlyPageName_ は Qodl
 https://www.myWebSite.com/$lib/renderer/?w=welcome
 ```
 
-### Preview Qodly Application
+### Qodlyアプリケーションのプレビュー
 
-You can preview your Qodly application at any moment by selecting the **Preview Qodly Application...** command in the **Windows** menu (4D Server) or in the **Design** menu (4D single-user).
+Qodly アプリケーションをプレビューするには、**ウィンドウ** メニュー (4D Server) または **デザイン** メニュー (4D シングルユーザー) から **Qodly アプリケーションをプレビュー...** を選択することで、いつでもおこなうことができます。
 
-This command launches the Qodly renderer on a local address in your default browser and displays the **start page** [defined in the Application settings](https://developer.qodly.com/docs/studio/settings#start-page) of Qodly Studio.
+このコマンドは、デフォルトブラウザーのローカルアドレスで Qodlyレンダラーを起動し、Qodly Studio の [アプリケーション設定で定義されている](https://developer.qodly.com/docs/studio/settings#start-page) **スタートページ** を表示します。
 
 ### 4D Server で Qodlyデバッガーを使用する
 
-When using Qodly pages in a deployed 4D Server application (interpreted mode), you might encounter some cases where you need to debug your pages on the server, for example when a specific user configuration is required. In this case, you can attach the [Qodly Studio debugger](https://developer.qodly.com/docs/studio/debugging) to the 4D Server and then, benefit from its features when executing your Qodly pages.
+運用中の 4D Server アプリケーション (インタープリターモード) で Qodlyページを使用する場合、特定のユーザー設定が必要な場合など、サーバー上でページのデバッグが必要なケースに遭遇することがあります。 この場合、[Qodly Studio デバッガー](https://developer.qodly.com/docs/studio/debugging) を 4D Server 上で有効化することで、Qodlyページの実行時にその機能を利用することができます。
 
-Note that in this case, the Qodly Studio debugger will display all the code executed on the server, in accordance with the [attached debugger rule on 4D Server](../Debugging/debugging-remote.md#attached-debugger).
+この場合、Qodly Studio デバッガーは、[4D Server の有効化済デバッガーのルール](../Debugging/debugging-remote.md#有効化済デバッガー) に従って、サーバー上で実行されたすべてのコードを表示することに注意してください。
 
-To attach the Qodly Studio debugger to your running 4D Server application:
+Qodly Studio デバッガーを実行中の 4D Server アプリケーションで有効化するには:
 
-1. [Open Qodly Studio](#opening-qodly-studio) from 4D Server.
+1. 4Dサーバーから [Qodly Studio](#qodly-studio-を開く) を起動します。
 
 :::note
 
-The project must be running in interpreted mode so that **Qodly Studio** menu item is available.
+**Qodly Studio** メニューが利用できるよう、プロジェクトはインタープリターモードで実行する必要があります。
 
 :::
 
-2. In the Qodly Studio toolbar, click on the **Debug** button.<br/>
-   ![qodly-debug](../assets/en/WebServer/qodly-debug.png)
+2. Qodly Studio のツールバーで、**Debug** ボタンをクリックします。<br/>
+   ![qodly-debug](../assets/ja/WebServer/qodly-debug.png)
 
-If the debug session starts successfully, a green bullet appears on the button label ![qodly-debug](../assets/en/WebServer/debug2.png) and you can use the Qodly Studio debugger.
+デバッグセッションが正常に開始されると、ボタンラベルに緑色の丸が表示され [qodly-debug](../assets/ja/WebServer/debug2.png)、Qodly Studio デバッガーを使用できるようになります。
 
-If the debugger is already attached to a another machine or another Qodly Studio page, an error is displayed. You have to detach it beforehand from the other location.
+デバッガーがすでに別のマシンまたは別の Qodly Studio ページで有効化されている場合は、エラーが表示されます。 事前に、別の場所で有効化済みのデバッガーを無効化する必要があります。
 
-To detach the Qodly Studio debugger from your running 4D Server application:
+実行中の 4D Server アプリケーションで Qodly Studio デバッガーを無効化するには:
 
-1. Click the **Debug** button in the Qodly Studio toolbar while a debug session is active.
-   A warning dialog box will prompt you to confirm whether you want to detach the debugger.
-2. Select **Keep in progress** to continue evaluating the code until the end of the current method or function before detaching the debugger, or **Stop** to detach the debugger immediately.
+1. デバッグセッションがアクティブな状態で Qodly Studio ツールバーの **Debug** ボタンをクリックします。
+   警告ダイアログボックスが表示され、デバッガーを無効化するどうかを確認します。
+2. デバッガーを無効化する前に現在のメソッドまたは関数の終わりまでコードの評価を続けるには **Keep in progress** を選択します。デバッガーをすぐに無効化するには **Stop** を選択します。
 
 ## 強制ログイン
 
