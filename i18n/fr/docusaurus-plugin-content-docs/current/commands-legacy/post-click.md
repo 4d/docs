@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | sourisX | Integer | &srarr; | Coordonnée horizontale |
 | sourisY | Integer | &srarr; | Coordonnée verticale |
 | process | Integer | &srarr; | Numéro de référence du process de destination ou File d'attente des événements de l'application si ce paramètre est omis ou si vous passez 0 |
-| * |  | &srarr; | Si spécifié, utiliser le système de coordonnées globales Si omis, utiliser le système de coordonnées locales |
+| * | &srarr; | Si spécifié, utiliser le système de coordonnées globales Si omis, utiliser le système de coordonnées locales |
 
 <!-- END REF-->
 

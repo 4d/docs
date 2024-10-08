@@ -12,8 +12,8 @@ displayed_sidebar: docs
 | tabla | Table | &srarr; | Tabla a mostrar y modificar o Tabla por defecto, si se omite |
 | modoSelección | Integer | &srarr; | Modo de selección |
 | entradaList | Boolean | &srarr; | Autorizar entrada en lista |
-| * |  | &srarr; | Utilizar formulario de salida para un sólo registro y ocultar las barras de desplazamiento en el formulario de     entrada |
-| * |  | &srarr; | Mostrar las barras de desplazamiento en el formulario de entrada (anula la segunda opción del primer parámetro *) |
+| * | &srarr; | Utilizar formulario de salida para un sólo registro y ocultar las barras de desplazamiento en el formulario de     entrada |
+| * | &srarr; | Mostrar las barras de desplazamiento en el formulario de entrada (anula la segunda opción del primer parámetro *) |
 
 <!-- END REF-->
 

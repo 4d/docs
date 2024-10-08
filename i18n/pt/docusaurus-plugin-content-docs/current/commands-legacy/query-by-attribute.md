@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | umaTable | Table | &srarr; | Tabela para a qual retornar uma seleção de registros, ou tabela padrão se for omitido |
-| opConj | * |  | &srarr; | Operador de Conjunção para juntar múltiplas pesquisas |
+| opConj | * | &srarr; | Operador de Conjunção para juntar múltiplas pesquisas |
 | campoObjeto | Field | &srarr; | Campo Objeto para atributos de pesquisa |
 | caminhoAtributo | Text | &srarr; | Nome ou caminho do atributo |
 | opPesq | Text, * | &srarr; | Operador pesquisa (comparador) |

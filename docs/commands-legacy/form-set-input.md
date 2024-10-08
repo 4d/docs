@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | aTable | Table | &srarr; | Table for which to set the input form, or Default table, if omitted |
 | form | Text, Object | &srarr; | Name (string) of table form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
 | userForm | Text | &srarr; | Name of user form to use |
-| * |  | &srarr; | Automatic window size |
+| * | &srarr; | Automatic window size |
 
 <!-- END REF-->
 

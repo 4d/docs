@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Array | &srarr; | Array(s) to be sorted |
-| sort | * |  | &srarr; | ">" to sort by increasing order or  "<" to sort by decreasing order If omitted  no sort |
+| sort | * | &srarr; | ">" to sort by increasing order or  "<" to sort by decreasing order If omitted  no sort |
 | MULTI SORT ARRAY ( ptrArrayName ; sortArrayName ) |
 | Parameter | Type | Description |
 | ptrArrayName | Pointer array | &srarr; | Array of array pointers |

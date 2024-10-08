@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | laTable | Table | &srarr; | Table dont vous voulez redéfinir les titres des champs |
 | titresChamps | Text array | &srarr; | Nouveaux titres des champs |
 | numChamps | Integer array | &srarr; | Numéros des champs |
-| * |  | &srarr; | Utiliser les noms personnalisés dans l’éditeur de formules |
+| * | &srarr; | Utiliser les noms personnalisés dans l’éditeur de formules |
 
 <!-- END REF-->
 

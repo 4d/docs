@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | name | Text | &srarr; | プロセス番号を取り出すプロセス名 |
-| * |  | &srarr; | 4D Serverのプロセス番号を返す |
+| * | &srarr; | 4D Serverのプロセス番号を返す |
 | 戻り値 | Integer | &larr; | プロセス番号 |
 
 <!-- END REF-->

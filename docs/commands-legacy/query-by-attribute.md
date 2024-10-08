@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &srarr; | Table for which to return a selection of records, or Default table if omitted |
-| conjOp | * |  | &srarr; | Conjunction operator to use to join multiple queries (if any) |
+| conjOp | * | &srarr; | Conjunction operator to use to join multiple queries (if any) |
 | objectField | Field | &srarr; | Object field to query attributes |
 | attributePath | Text | &srarr; | Name or path of attribute |
 | queryOp | Text, * | &srarr; | Query operator (comparator) |

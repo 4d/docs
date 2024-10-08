@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | ruta | Text, Text array | &srarr; | Texto o array texto que contiene una o más rutas de acceso |
 | fechaMod | Date, Date array | &harr; | Fecha(s) de modificación de métodos(s) |
 | horaMod | Time, Integer array | &harr; | Hora(s) de modificación de métodos(s) |
-| operador | * |  | &srarr; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| operador | * | &srarr; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->
 

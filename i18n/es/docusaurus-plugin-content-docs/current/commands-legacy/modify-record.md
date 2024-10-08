@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &srarr; | Tabla a utilizar para entrada de datos o Tabla por defecto, si se omite |
-| * |  | &srarr; | Ocultar barras de desplazamiento |
+| * | &srarr; | Ocultar barras de desplazamiento |
 
 <!-- END REF-->
 

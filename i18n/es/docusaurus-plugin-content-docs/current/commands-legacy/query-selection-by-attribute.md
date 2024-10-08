@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &srarr; | Tabla para la cual devolver una selección de registros o tabla por defecto si se omite |
-| conjOp | * |  | &srarr; | Operador de conjunción a utilizar ara unir múltiples búsquedas (si las hay) |
+| conjOp | * | &srarr; | Operador de conjunción a utilizar ara unir múltiples búsquedas (si las hay) |
 | campoObjeto | Field | &srarr; | Campo objeto para buscar atributos |
 | rutaAtributo | Text | &srarr; | Nombre o ruta de atributo |
 | opBusq | *, Text | &srarr; | Operador de búsqueda (comparador) |

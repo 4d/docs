@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | returnValue | Variable | &harr; | Value returned by the Web Service |
 | returnName | Text | &srarr; | Name of the parameter to be retrieved |
-| * |  | &srarr; | Free up memory |
+| * | &srarr; | Free up memory |
 
 <!-- END REF-->
 

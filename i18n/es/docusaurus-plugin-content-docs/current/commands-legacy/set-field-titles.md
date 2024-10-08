@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | tabla | Table | &srarr; | Tabla para la cual definir los títulos de los campos |
 | titulosCampos | Text array | &srarr; | Nuevos títulos de los campos |
 | numCampos | Integer array | &srarr; | Números de los campos |
-| * |  | &srarr; | Utilizar los nombres personalizados en el editor de fórmulas |
+| * | &srarr; | Utilizar los nombres personalizados en el editor de fórmulas |
 
 <!-- END REF-->
 

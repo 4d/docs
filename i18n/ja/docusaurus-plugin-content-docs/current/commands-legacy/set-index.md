@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aField | Field | &srarr; | インデックスを作成または削除するフィールド |
 | index | Boolean, Integer | &srarr; | True=作成、False=削除、または インデックスを作成: -1=キーワード、 0=デフォルト、1=標準B-Tree、3=クラスタB-Tree |
-| * |  | &srarr; | *を渡すと非同期にインデックスを作成 |
+| * | &srarr; | *を渡すと非同期にインデックスを作成 |
 
 <!-- END REF-->
 
