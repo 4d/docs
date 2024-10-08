@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | mouseX | Integer | &srarr; | Coordenada Horizontal |
 | mouseY | Integer | &srarr; | Coordenada Vertical |
 | processo | Integer | &srarr; | Número de referência do processo destino; ou, omitido, fila de evento de Aplicação, ou 0 |
-| * | &srarr; | Se especificado sistema de coordenadas global é usado; se omitido, sistema de coordenadas locais é usado |
+| * | Operator |  &srarr; | Se especificado sistema de coordenadas global é usado; se omitido, sistema de coordenadas locais é usado |
 
 <!-- END REF-->
 

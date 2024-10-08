@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | returnValue | Variable | &harr; | Webサービスから返された値 |
 | returnName | Text | &srarr; | 取得する引数の名前 |
-| * | &srarr; | メモリを解放 |
+| * | Operator |  &srarr; | メモリを解放 |
 
 <!-- END REF-->
 

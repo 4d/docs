@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | aTable | Table | &srarr; | Table for which to set the field titles |
 | fieldTitles | Text array | &srarr; | Field names as they must appear in dialog boxes |
 | fieldNumbers | Integer array | &srarr; | Actual field numbers |
-| * | &srarr; | Use the custom names in the formula editor |
+| * | Operator |  &srarr; | Use the custom names in the formula editor |
 
 <!-- END REF-->
 

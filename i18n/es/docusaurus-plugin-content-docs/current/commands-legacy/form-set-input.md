@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | tabla | Table | &srarr; | Tabla para la cual definir el formulario de entrada o Tabla por defecto, si se omite |
 | form | Text, Object | &srarr; | Nombre del formulario a definir como formulario de entrada |
 | formUsuario | Text | &srarr; | Nombre del formulario usuario a utilizar |
-| * | &srarr; | Tamaño de ventana automático |
+| * | Operator |  &srarr; | Tamaño de ventana automático |
 
 <!-- END REF-->
 

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | mouseX | Integer | &srarr; | Horizontal coordinate |
 | mouseY | Integer | &srarr; | Vertical coordinate |
 | process | Integer | &srarr; | Destination process reference number, or Application event queue, if omitted, or 0 |
-| * | &srarr; | If specified, global coordinate system is used If omitted, local coordinate system is used |
+| * | Operator |  &srarr; | If specified, global coordinate system is used If omitted, local coordinate system is used |
 
 <!-- END REF-->
 

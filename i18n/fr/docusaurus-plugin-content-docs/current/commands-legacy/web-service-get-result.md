@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | valeurRetour | Variable | &harr; | Valeur retournée par le Web Service |
 | nomRetour | Text | &srarr; | Nom du paramètre à récupérer |
-| * | &srarr; | Libérer la mémoire |
+| * | Operator |  &srarr; | Libérer la mémoire |
 
 <!-- END REF-->
 

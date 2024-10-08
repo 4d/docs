@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &srarr; | Table dans laquelle ajouter des données ou Table par défaut si ce paramètre est omis |
-| * | &srarr; | Cacher les barres de défilement |
+| * | Operator |  &srarr; | Cacher les barres de défilement |
 
 <!-- END REF-->
 

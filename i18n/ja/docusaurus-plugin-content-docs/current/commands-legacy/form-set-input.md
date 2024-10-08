@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | aTable | Table | &srarr; | 入力フォームを設定するテーブル, または 省略した場合、デフォルトテーブル |
 | form | Text, Object | &srarr; | (プロジェクトまたはテーブル)フォーム名(文字列)、<br/>あるいはフォームを定義した.jsonファイルへのPOSIXパス(文字列)、<br/>あるいは開くフォームを定義したオブジェクト |
 | userForm | Text | &srarr; | 使用するユーザフォーム名 |
-| * | &srarr; | 自動ウィンドウサイズ |
+| * | Operator |  &srarr; | 自動ウィンドウサイズ |
 
 <!-- END REF-->
 

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | laTable | Table | &srarr; | Table pour laquelle définir le formulaire entrée ou Table par défaut si ce paramètre est omis |
 | formulaire | Text, Object | &srarr; | Nom du formulaire table (chaîne), ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
 | formUtilisateur | Text | &srarr; | Nom du formulaire utilisateur à utiliser |
-| * | &srarr; | Taille de fenêtre automatique |
+| * | Operator |  &srarr; | Taille de fenêtre automatique |
 
 <!-- END REF-->
 
