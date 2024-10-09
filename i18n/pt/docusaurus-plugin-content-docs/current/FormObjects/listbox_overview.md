@@ -610,12 +610,12 @@ Para cada atributo (estilo, color y color de fondo), se implementa una **herenci
 - para atributos linhas: valores de atributos de colunas
 - para atributos coluna: valores atributos no list box
 
-De esta forma, si desea que un objeto herede el valor de atributo de un nivel superior, puede utilizar pasar la constante `lk inherited` (valor por defecto) al comando de definición o directamente en el elemento del array de estilo/color correspondiente. For example, given an array list box containing a standard font style with alternating colors:
+Dessa maneira se quiser que um objeto herde o valor de atributo de um nível superior, pode usar a constante `lk inherited` (valor padrão) à definição de comando ou diretamente no elemento do array correspondente de estilo/cor. For example, given an array list box containing a standard font style with alternating colors:
 ![](../assets/en/FormObjects/listbox_styles3.png)
 
 Pode realizar as modificações abaixo:
 
-- cambiar el fondo de la línea 2 a rojo utilizando la propiedad [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) del objeto list box,
+- change the background of row 2 to red using the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) property of the list box object,
 - cambia el estilo de la línea 4 a cursiva utilizando la propiedad [Row Style Array](properties_Text.md#row-style-array) del objeto list box,
 - dos elementos de la columna 5 se cambian a negrita utilizando la propiedad [Row Style Array](properties_Text.md#row-style-array) del objeto columna 5,
 - los 2 elementos de la columna 1 y 2 se cambian a azul oscuro utilizando la propiedad [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) para los objetos de la columna 1 y 2:
@@ -638,7 +638,7 @@ Dependendo do tipo de list box, pode usar diferentes propriedades para personali
 | Cor de fundo    | [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) | [Expresión color de fondo](properties_BackgroundAndBorder.md#background-color-expression) o [Meta info expresión](properties_Text.md#meta-info-expression) |
 | Cor de fundo    | [Row Font Color Array](properties_Text.md#row-font-color-array)                            | [Font Color Expression](properties_Text.md#font-color-expression)                            | [Expresión color de fuente](properties_Text.md#font-color-expression) o [Meta info expression](properties_Text.md#meta-info-expression)                    |
 | Estilo de letra | [Row Style Array](properties_Text.md#row-style-array)                                      | [Style Expression](properties_Text.md#style-expression)                                      | [Expresión de estilo](properties_Text.md#style-expression) o [Expresión meta info](properties_Text.md#meta-info-expression)                                |
-| Visualização    | [Row Control Array](properties_ListBox.md#row-control-array)                               | -                                                                                            | *                                                                                                                                                          |
+| Visualização    | [Row Control Array](properties_ListBox.md#row-control-array)                               | -                                                                                            | -                                                                                                                                                          |
 
 ## Imprimir list boxes
 
@@ -673,13 +673,13 @@ Para definir uma list box hierárquica há várias possibilidades:
 
 - Configurar manualmente os elementos hierárquicos usando a lista Propriedade no editor de formulário (ou editar o formulário JSON).
 - Gerar visualmente a hierarquia usando o menu emergente de gestão de list box no editor de formulários.
-- Use the [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) and [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html) commands, described in the _4D Language Reference_ manual.
+- Use os comandos [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) e [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html), descritos no manual _Linguagem 4D_.
 
 #### Propriedades de List Box hierárquico
 
-Essa propriedade especifica que o list box deve ser exibido em forma hierárquica. In the JSON form, this feature is triggered [when the column _dataSource_ property value is an array](properties_Object.md#array-list-box), i.e. a collection.
+Essa propriedade especifica que o list box deve ser exibido em forma hierárquica. No formulário JSON, esse recurso é acionado [quando o valor da propriedade _dataSource_ da coluna é um array](properties_Object.md#array-list-box), ou seja, uma coleção.
 
-Las opciones adicionales (**Variable 1...10**) están disponibles cuando se selecciona la opción _List box jerárquico_, correspondiente a cada elemento del array _dataSource_ a utilizar como columna de ruptura. A cada vez que um valor é digitado em um campo, uma nova linha é adicionada. Podem ser especificadas até 10 variáveis. Essas variáveis estabelecem os níveis hierárquicos a serem exibidos na primeira coluna.
+Opções adicionais (**Variável 1...10**) estão disponíveis quando a opção _List Box hierárquico_ é selecionada, correspondendo a cada elemento da array _dataSource_ a ser usada como coluna de quebra. A cada vez que um valor é digitado em um campo, uma nova linha é adicionada. Podem ser especificadas até 10 variáveis. Essas variáveis estabelecem os níveis hierárquicos a serem exibidos na primeira coluna.
 
 A primeira variável sempre corresponde ao nome da variável para a primeira coluna da list box (os dois valores são automaticamente conectados) Essa primeira variável é sempre visível e editável. Essa primeira variável é sempre visível e editável. Por exemplo: country.
 A segunda variável é sempre visível e editável: especifica o segundo nível hierárquico. Por exemplo: regions.
@@ -695,25 +695,25 @@ Esse princípio não é aplicado quando apenas uma variável for especificada na
 
 #### Crie hierarquias usando o menu contextual
 
-Cuando selecciona al menos una columna además de la primera en un objeto list box (de tipo array) en el editor de formularios, el comando **Crear jerarquía** está disponible en el menú contextual:
+Quando se seleciona pelo menos uma coluna para além da primeira num objeto list box (do tipo array) no editor de formulários, o comando **Criar hierarquia** está disponível no menu de contexto:
 
 ![](../assets/en/FormObjects/listbox_hierarchy1.png)
 
 Este comando é um atalho para definir a hierarquia. Quando for selecionado, as ações a seguir são realizadas:
 
-- La opción **List box jerárquico** está marcada para el objeto en la Lista de propiedades.
+- A opção **List box hierárquico** é marcada para o objeto na Lista de propriedades.
 - As variváveis das colunas são usadas para especificar a hierarquia. Elas substituem qualquer variável já especificada.
 - As colunas selecionadas não aparecem mais na list box (exceto para o título da primeira).
 
-Exemplo: dado uma list box cujas primeiras colunas contém País, região, cidade e população. Cuando se seleccionan País, Región y Ciudad, si se elige **Crear jerarquía** en el menú contextual, se crea una jerarquía de tres niveles en la primera columna, se eliminan las columnas 2 y 3 y la columna Población pasa a ser la segunda:
+Exemplo: dado uma list box cujas primeiras colunas contém País, região, cidade e população. Quando País, região e cidade forem selecionadas, se escolher **Criar hierarquia** no menu contextual, uma hierarquia de três níveis é criada na primeira coluna, colunas número 2 e 3 são removidas e a coluna População vira a segunda:
 
 ![](../assets/en/FormObjects/listbox_hierarchy2.png)
 
-##### Cancelar hierarquia
+##### Cancel hierarchy
 
-Cuando la primera columna está seleccionada y ya se ha definido como jerárquica, puede utilizar el comando **Cancelar jerarquía**. Quando selecionar este comando, as ações abaixo serão realizadas:
+Quando a primeira coluna for selecionada e especificada como hierárquica pode usar o comando **Cancelar hierarquia**. Quando selecionar este comando, as ações abaixo serão realizadas:
 
-- La opción **List box jerárquico** está deseleccionada para el objeto,
+- A opção **Hierarchical list box** é desmarcada para o objeto,
 - Os níveis hierárquicos 2 a X são removidos e transformados em colunas adicionadas à list box.
 
 ### Como funciona
@@ -755,7 +755,7 @@ Se clicar no cabeçalho "População" para ordenar as populações por ordem asc
 
 ![](../assets/en/FormObjects/hierarch4.png)
 
-Como para todos los list box, puede [desactivar el mecanismo de ordenación estándar](properties_Action.md#sortable) y gestionar las ordenaciones por programación.
+Quanto a todas os list boxes, você pode [desativar o mecanismo de classificação padrão](properties_Action.md#sortable) e gerenciar as classificações usando programação.
 
 #### Seleções e posições em caixas de listagem hierárquica
 
@@ -789,16 +789,16 @@ Por exemplo, se quiser seleccionar a fila que contém Rennes, deve passar:
  ->MyListbox{3}:=True
 ```
 
-Non-hierarchical representation:
+Representação não hierárquica:
 ![](../assets/en/FormObjects/hierarch7.png)
-Hierarchical representation:
+Representação hierárquica:
 ![](../assets/en/FormObjects/hierarch8.png)
 
 > Se uma ou mais filas estiverem escondidas porque os seus pais estão desmoronados, já não são seleccionados. Apenas as linhas visíveis (directamente ou por rolagem) podem ser seleccionadas. Por outras palavras, as filas não podem ser tanto escondidas como seleccionadas.
 
-Al igual que con las selecciones, el comando `LISTBOX GET CELL POSITION` devolverá los mismos valores para un list box jerárquico y un list box no jerárquico. Esto significa que en los dos ejemplos siguientes, `LISTBOX GET CELL POSITION` devolverá la misma posición: (3;2).
+Tal como com as selecções, o comando `LISTBOX GET CELL POSITION` devolverá os mesmos valores para uma caixa de listagem hierárquica e um list box não hierárquico. Esto significa que en los dos ejemplos siguientes, `LISTBOX GET CELL POSITION` devolverá la misma posición: (3;2).
 
-_Non-hierarchical representation:_
+_Representação não hierárquica:_
 ![](../assets/en/FormObjects/hierarch9.png)
 
 _Representação hierárquica:_
@@ -818,7 +818,7 @@ As linhas de quebra não são tidas em conta nos arrays internos utilizados para
 
 Dada, por exemplo, a seguinte caixa de listagem (os nomes dos arrays associados são especificados entre parênteses):
 
-_Non-hierarchical representation:_
+_Representação não hierárquica:_
 ![](../assets/en/FormObjects/hierarch12.png)
 
 _Representação hierárquica:_
@@ -839,21 +839,21 @@ Resultados:
 
 #### Gestão otimizada da expansão/colapso
 
-Puede optimizar la visualización y gestión de los list box jerárquicos utilizando los eventos formulario `On Expand` y `On Collapse`.
+Pode optimizar a exibição e gerenciamento de caixas de listagem hierárquica usando os eventos de formulário `On Expand` e `On Collapse`.
 
 Uma caixa de listagem hierárquica é construída a partir do conteúdo de seus arrays de modo a só poder ser exibida quando todas estas matrizes são carregadas na memória. Esto dificulta la generación de list box jerárquicos de gran tamaño basados en arrays generados a partir de datos (a través del comando `SELECTION TO ARRAY`), no sólo por la velocidad de visualización sino también por la memoria utilizada.
 
-El uso de los eventos de formulario `On Expand` y `On Collapse` puede superar estas limitaciones: por ejemplo, puede mostrar sólo una parte de la jerarquía y cargar/descargar los arrays sobre la marcha, basándose en las acciones del usuario. En el contexto de estos eventos, el comando `LISTBOX GET CELL POSITION` devuelve la celda en la que el usuario hizo clic para desplegar o contraer una línea.
+Usando os formulários `On Expand` e `On Collapse`, os eventos podem ultrapassar estas restrições: por exemplo, é possível exibir apenas parte da hierarquia e carregar/descarregar as arrays a qualquer momento, com base nas ações dos usuários. No contexto destes eventos, o comando `LISTBOX GET CELL POSITION` devolve a célula onde o usuário clicou para expandir ou colapsar uma fila.
 
 Neste caso, é necessário preencher e esvaziar os arrays através do código. Os princípios a serem implementados são os seguintes:
 
-- Quando a list box é exibido, somente o primeiro array deve ser preenchido. However, you must create a second array with empty values so that the list box displays the expand/collapse buttons:
+- Quando a list box é exibido, somente o primeiro array deve ser preenchido. No entanto, você deve criar um segundo array com valores vazios para que o list box exiba os botões expandir/colapsar:
   ![](../assets/en/FormObjects/hierarch15.png)
 
-- Cuando un usuario hace clic en un botón de expandir, puede procesar el evento `On Expand`. The `LISTBOX GET CELL POSITION` command returns the cell concerned and lets you build the appropriate hierarchy: you fill the first array with the repeated values and the second with the values sent from the `SELECTION TO ARRAY` command and you insert as many rows as needed in the list box using the `LISTBOX INSERT ROWS` command.
+- Quando um usuário clicar num botão de expansão, pode processar o evento `On Expand`. O comando `LISTBOX GET CELL POSITION` devolve a célula em questão e permite-lhe construir a hierarquia apropriada: preenche o primeiro array com os valores repetidos e a segunda com os valores enviados do comando `SELECTION TO ARRAY` e insere tantas linhas quantas forem necessárias na caixa de listagem usando o comando `LISTBOX INSERT ROWS`.
   ![](../assets/en/FormObjects/hierarch16.png)
 
-- Cuando un usuario hace clic en un botón de contracción, puede procesar el evento `On Collapse`. El comando `LISTBOX GET CELL POSITION` devuelve la celda en cuestión: con el comando `LISTBOX DELETE ROWS` se eliminan tantas líneas como sean necesarias del list box.
+- Quando um usuário clicar num botão de colapso, pode processar o evento `On Collapse`. O comando `LISTBOX GET CELL POSITION` devolve a célula em questão: retira-se tantas filas quantas forem necessárias da caixa de listagem usando o comando `LISTBOX DELETE ROWS`.
 
 ## Arrays objetos nas colunas (4D View Pro)
 
@@ -865,7 +865,7 @@ A seguinte caixa de listagem foi concebida utilizando uma matriz de objectos:
 
 ### Configuração de uma coluna de matriz de objectos
 
-To assign an object array to a list box column, you just need to set the object array name in either the Property list ("Variable Name" field), or using the [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-INSERT-COLUMN.301-4311153.en.html) command, like with any array-based column. Na lista de propriedades, pode agora selecionar Objecto como "Tipo de Expressão" para a coluna:
+Para atribuir um arrayz de objetos a uma coluna list box, basta definir o nome do array de objetos na lista de propriedades (campo "Variable Name") ou usar o comando [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-INSERT-COLUMN.301-4311153.en.html), como em qualquer coluna baseada em arrays. Na lista de propriedades, pode agora selecionar Objecto como "Tipo de Expressão" para a coluna:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 
@@ -877,10 +877,10 @@ the value type (mandatory): text, color, event, etc. the value itself (optional)
 the cell content display (optional): button, list, etc. additional settings (optional): depend on the value type To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). Por exemplo, pode escrever "Olá Mundo!" numa coluna de objectos usando este código simples:
 
 ```4d
-ARRAY OBJECT(obColumn;0) //column array
- C_OBJECT($ob) //first element
- OB SET($ob;"valueType";"text") //defines the value type (mandatory)
- OB SET($ob;"value";"Hello World!") //defines the value
+ARRAY OBJECT(obColumn;0) //array de colunas
+ C_OBJECT($ob) //primeiro elemento
+ OB SET($ob; "valueType"; "text") //define o tipo de valor (obrigatório)
+ OB SET($ob; "value"; "Hello World!") //define o valor
  APPEND TO ARRAY(obColumn;$ob)  
 ```
 
@@ -893,13 +893,13 @@ ARRAY OBJECT(obColumn;0) //column array
 Quando uma coluna de caixa de listagem é associada a uma array de objectos, a forma como uma célula é exibida, introduzida, ou editada, é baseada no atributo valueType do elemento da array. Os valores suportados são os tipos de valores:
 
 - "texto": para um valor de texto
-- "real": para un valor numérico que puede incluir separadores como un `\<espacio>`, `<.>`, o `<,>`
+- "real": para um valor numérico que pode incluir separadores como `\<space>`, `<.>` ou `<,>`
 - "integer": para um valor inteiro
 - "booleano": para um valor Verdadeiro/Falso
 - "cor": para definir uma cor de fundo
 - "evento": para exibir um botão com um rótulo.
 
-4D uses default widgets with regards to the "valueType" value (i.e., a "text" is displayed as a text input widget, a "boolean" as a check box), but alternate displays are also available through options (_e.g._, a real can also be represented as a drop-down menu). A tabela seguinte mostra a visualização por defeito, bem como as alternativas para cada tipo de valor:
+4D utiliza widgets padrão no que respeita ao valor "valueType" (ou seja, um "texto" é exibido como um widget de entrada de texto, um "booleano" como uma caixa de verificação), mas também estão disponíveis exibições alternativas através de opções (_por exemplo_, um real também pode ser representado como um menu drop-down). A tabela seguinte mostra a visualização por defeito, bem como as alternativas para cada tipo de valor:
 
 | valueType | Widget padrão                                                          | Widgets alternativos                                                                                                                                  |
 | --------- | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1135,7 +1135,7 @@ You want to display a combo box based on a "colors" list defined in the Tool box
 
 #### unitsList, unitsListName, unitsListReference e unitReference
 
-Puede utilizar atributos específicos para añadir unidades asociadas a los valores de las celdas (\*por ejemplo, \*: "10 cm", "20 píxeles", etc.). Para definir a lista de unidades, pode utilizar um dos seguintes atributos:
+Você pode usar atributos específicos para adicionar unidades associadas aos valores das células (por exemplo: "10 cm", "20 pixels" etc.). Para definir a lista de unidades, pode utilizar um dos seguintes atributos:
 
 - "unitsList": an array containing the x elements used to define the available units (e.g.: "cm", "inches", "km", "miles", etc.). Utilize este atributo para definir unidades no interior do objeto.
 - "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. Utilice este atributo para definir unidades con una lista 4D creada con el comando [New list](https://doc.4d.com/4Dv15/4D/15.6/New-list.301-3818474.en.html).
@@ -1216,11 +1216,11 @@ OB SET($ob;"label";"Edit...")
 
 Vários eventos podem ser tratados durante o uso de um list box array de objetos:
 
-- **On Data Change**: un evento `On Data Change` se dispara cuando se ha modificado algún valor:
+- **On Data Change**: um evento `On Data Change` é acionado quando qualquer valor é modificado:
   - numa zona de introdução de texto
   - numa lista pendente
   - numa área combo box
   - num botão de unidade (mudar do valor x para o valor x+1)
   - numa caixa de verificação (alternar entre verificado/não verificado)
-- **On Clicked**: cuando el usuario haga clic en un botón instalado con el "event" atributo _valueType_, se generará un evento `On Clicked`. Este evento é gerido pelo programador.
-- **On Alternative Click**: cuando el usuario haga clic en un botón de elipsis (atributo "alternateButton"), se generará un evento `On Alternative Click`. Este evento é gerido pelo programador.
+- **On Clicked**: quando o usuário clicar em um botão instalado usando o atributo "event" _valueType_, será gerado um evento `On Clicked`. Este evento é gerido pelo programador.
+- **On Alternative Click**: quando o usuário clicar em um botão de reticências (atributo "alternateButton"), será gerado um evento `On Alternative Click`. Este evento é gerido pelo programador.

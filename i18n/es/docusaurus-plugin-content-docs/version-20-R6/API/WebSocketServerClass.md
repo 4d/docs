@@ -61,21 +61,21 @@ CALL WORKER("WebSocketServer"; Formula(wss:=4D.WebSocketServer.new($handler)))
 2. Defina la clase usuario `myServerHandler` que contiene las funciones de retrollamada utilizadas para manejar las conexiones al servidor:
 
 ```4d
-//myServerHandler class
+//clase myServerHandler
 
 Function onConnection($wss : Object; $event : Object) : Object
-	//returns an instance of the user class
-	//that will handle the messages
+	//devuelve una instancia de la clase de usuario
+	//que gestionará los mensajes
 	return cs.myConnectionHandler.new()
 ```
 
 3. Define la clase usuario `myConnectionHandler` que contiene las funciones de retrollamada utilizadas para manejar los mensajes:
 
 ```4d
-// myConnectionHandler class
+// Clase myConnectionHandler
 
 Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
-	//resends the message in uppercase
+	// reenvía el mensaje en mayúsculas
 	$ws.send(Uppercase($message.data))
 
 ```
@@ -373,9 +373,9 @@ Esta propiedad es de sólo lectura.
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
 
-| Parámetros | Tipo    |     | Descripción                                                     |
-| ---------- | ------- | :-: | --------------------------------------------------------------- |
-| timeout    | Integer |  -> | Waiting time in seconds before terminating the WebSocket server |
+| Parámetros | Tipo    |     | Descripción                                                           |
+| ---------- | ------- | :-: | --------------------------------------------------------------------- |
+| timeout    | Integer |  -> | Tiempo de espera en segundos antes de finalizar el servidor WebSocket |
 
 <!-- END REF -->
 
@@ -387,7 +387,7 @@ De forma predeterminada, si no se establece un valor *timeout*, la función inic
 
 Si se establece un valor de *timeout*:
 
-- when the waiting time is reached, forcibly destroys the socket.
+- cuando se alcanza el tiempo de espera, destruye forzosamente el socket.
 - si *timeout* = 0, destruye el socket de forma forzada sin cerrar los frames ni intercambiar paquetes fin, y lo hace al instante sin esperar.
 
 <!-- END REF -->

@@ -265,7 +265,7 @@ Una vez que haya creado un conjunto de entidades, puede ejecutar esta petición:
 La clase `StudentsSelection` tiene una función `getLastSummary`:
 
 ```
-// StudentsSelection Class
+// Clase StudentsSelection
 
 
 Class extends EntitySelection
@@ -274,7 +274,7 @@ exposed Function getLastSummary : Text
 	var $last : Object
 
 	$last:=This.last()
-	return =$last.firstname+" - "+$last.lastname+" is ... "+String($last.age())
+	return =$last.firstname+" - "+$last.lastname+" is ... " +String($last.age())
 ```
 
 A continuación, puede ejecutar esta petición:

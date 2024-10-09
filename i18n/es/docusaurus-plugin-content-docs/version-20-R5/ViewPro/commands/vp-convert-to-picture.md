@@ -26,7 +26,7 @@ Este comando es útil, por ejemplo:
 
 En _vpObject_, pase el objeto 4D View Pro a convertir. Este objeto debe haber sido analizado previamente utilizando [VP Export to object](vp-export-to-object.md) o guardado utilizando [VP EXPORT DOCUMENT](vp-export-document.md).
 
-> SVG conversion process requires that expressions and formats (cf. [Cell Format](../configuring.md#cell-format)) included in the 4D View Pro area be evaluated at least once, so that they can be correctly exported. Si convierte un documento que no ha sido evaluado previamente, las expresiones o los formatos pueden aparecer de forma inesperada.
+> El proceso de conversión a SVG requiere que las expresiones y formatos (ver [Formato de celdas](../configuring.md#cell-format)) incluidos en el área 4D View Pro se evalúen al menos una vez, para que puedan exportarse correctamente. Si convierte un documento que no ha sido evaluado previamente, las expresiones o los formatos pueden aparecer de forma inesperada.
 
 En _rangeObj_, pase un rango de celdas a convertir. Por defecto, si se omite este parámetro, se convierte todo el contenido del documento.
 
