@@ -63,7 +63,7 @@ Lista de valores estáticos a utilizar como etiquetas para el objeto de control 
 
 #### Objetos soportados
 
-[Tab Control](tabControl.md)
+[Control de pestañas](tabControl.md)
 
 ---
 
