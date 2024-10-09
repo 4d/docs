@@ -202,6 +202,7 @@ module.exports =
 						"commands-legacy/compact-data-file",
 						"commands-legacy/component-list",
 						"commands-legacy/create-data-file",
+						"commands/create-entity-selection",
 						"commands-legacy/data-file",
 						"commands-legacy/drop-remote-user",
 						"commands/ds",
@@ -234,6 +235,7 @@ module.exports =
 						"commands-legacy/set-database-parameter",
 						"commands-legacy/set-update-folder",
 						"commands-legacy/structure-file",
+						"commands/use-entity-selection",
 						"commands-legacy/verify-current-data-file",
 						"commands-legacy/verify-data-file",
 						"commands-legacy/version-type"
@@ -511,8 +513,8 @@ module.exports =
 					"type": "category",
 					"label": "File and Folder",
 					"items": [
-						"commands-legacy/file",
-						"commands-legacy/folder",
+						"commands/file",
+						"commands/folder",
 						"commands-legacy/zip-create-archive",
 						"commands-legacy/zip-read-archive"
 					]
@@ -903,14 +905,6 @@ module.exports =
 						"commands-legacy/copy-named-selection",
 						"commands-legacy/cut-named-selection",
 						"commands-legacy/use-named-selection"
-					]
-					},
-					{
-					"type": "category",
-					"label": "ORDA - EntitySelection",
-					"items": [
-						"commands-legacy/create-entity-selection",
-						"commands-legacy/use-entity-selection"
 					]
 					},
 					{

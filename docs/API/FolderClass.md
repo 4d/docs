@@ -5,7 +5,7 @@ title: Folder
 
 
 
-`Folder` objects are created with the [`Folder`](#folder) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create()`](#create) function.
+`Folder` objects are created with the [`Folder`](../commands/folder.md) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create()`](#create) function.
 
 ### Example
 
@@ -56,7 +56,6 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 |[<!-- INCLUDE #FolderClass.rename().Syntax -->](#rename)<br/><!-- INCLUDE #FolderClass.rename().Summary -->|
 
 
-
 ## 4D.Folder.new()
 
 <details><summary>History</summary>
@@ -72,9 +71,9 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 #### Description
 
-The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. It is identical to the [`Folder`](#folder) command (shortcut).
+The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. It is identical to the [`Folder`](../commands/folder.md) command (shortcut).
 
-> It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D.Folder.new()`.
+> It is recommended to use the [`Folder`](../commands/folder.md) shortcut command instead of `4D.Folder.new()`.
 
 <!-- INCLUDE directory.copyTo().Desc -->
 

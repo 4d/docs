@@ -6,7 +6,7 @@ title: EntitySelection
 
 An entity selection is an object containing one or more reference(s) to [entities](ORDA/dsMapping.md#entity) belonging to the same [Dataclass](ORDA/dsMapping.md#dataclass). An entity selection can contain 0, 1 or X entities from the dataclass -- where X can represent the total number of entities contained in the dataclass.
 
-Entity selections can be created from existing selections using various functions of the [`DataClass` class](DataClassClass.md) such as [`.all()`](DataClassClass.md#all) or [`.query()`](DataClassClass.md#query), or functions of the `EntityClass` class itself, such as [`.and()`](#and) or [`orderBy()`](#orderby). You can also create blank entity selections using the [`dataClass.newSelection()`](DataClassClass.md#newselection) function or the [`Create new selection`](#create-new-selection) command.
+Entity selections can be created from existing selections using various functions of the [`DataClass` class](DataClassClass.md) such as [`.all()`](DataClassClass.md#all) or [`.query()`](DataClassClass.md#query), or functions of the `EntityClass` class itself, such as [`.and()`](#and) or [`orderBy()`](#orderby). You can also create blank entity selections using the [`dataClass.newSelection()`](DataClassClass.md#newselection) function or the [`Create new selection`](../commands/create-entity-selection.md) command.
 
 ### Summary
 
@@ -49,90 +49,6 @@ Entity selections can be created from existing selections using various function
 |[<!-- INCLUDE #EntitySelectionClass.toCollection().Syntax -->](#tocollection)<br/><!-- INCLUDE #EntitySelectionClass.toCollection().Summary -->|
 
 
-
-## Create entity selection
-
-<!-- REF #_command_.Create entity selection.Syntax -->**Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
-
-
-<!-- REF #_command_.Create entity selection.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|dsTable|Table|->|Table in the 4D database whose current selection will be used to build the entity selection|
-|settings|Object|->|Build option: context	|
-|Result|4D.EntitySelection|<-|Entity selection matching the dataclass related to the given table|
-<!-- END REF -->
-
-
-#### Description
-
-The `Create entity selection` command builds and returns a new, [alterable](ORDA/entities.md#shareable-or-alterable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table.
-
-If the current selection is sorted, an [ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) entity selection is created (the order of the current selection is kept). If the current selection is unsorted, an unordered entity selection is created.
-
-If the *dsTable* is not exposed in [`ds`](../commands/ds.md), an error is returned. This command cannot be used with a Remote datastore.
-
-In the optional *settings* parameter, you can pass an object containing the following property:
-
-|Property|Type|Description|
-|---|---|---|
-|context|Text|Label for the [optimization context](../ORDA/client-server-optimization.md) applied to the entity selection.|
-
-
-#### Example
-
-```4d
-var $employees : cs.EmployeeSelection
-ALL RECORDS([Employee])
-$employees:=Create entity selection([Employee])
-// The $employees entity selection now contains a set of reference
-// on all entities related to the Employee dataclass
-```
-
-#### See also
-
-[`dataClass.newSelection()`](DataClassClass.md#newselection)
-
-
-## USE ENTITY SELECTION
-
-<!-- REF #_command_.USE ENTITY SELECTION.Syntax -->**USE ENTITY SELECTION** (*entitySelection*)<!-- END REF -->
-
-
-<!-- REF #_command_.USE ENTITY SELECTION.Params -->
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|entitySelection|EntitySelection|->|An entity selection|
-<!-- END REF -->
-
-#### Description
-
-The `USE ENTITY SELECTION` command updates the current selection of the table matching the dataclass of the *entitySelection* parameter, according to the content of the entity selection.
-
-This command cannot be used with a [Remote datastore](../ORDA/remoteDatastores.md).
-
-
-:::info
-
-This command is designed to make 4D current selections benefit from the power of ORDA queries. For performance reasons, in 4D single-user and 4D Server, the command directly connects *entitySelection* to the current selection. Therefore, once *entitySelection* has been used, it must not be reused or altered afterwards.
-
-:::
-
-:::note
-
-After a call to `USE ENTITY SELECTION`, the first record of the updated current selection (if not empty) becomes the current record, but it is not loaded in memory. If you need to use the values of the fields in the current record, use the `LOAD RECORD` command after the `USE ENTITY SELECTION` command.
-
-:::
-
-#### Example
-
-```4d
-var $entitySel : cs.EmployeeSelection
-
-$entitySel:=ds.Employee.query("lastName = :1";"M@") //$entitySel is related to the Employee dataclass
-REDUCE SELECTION([Employee];0)
-USE ENTITY SELECTION($entitySel) //The current selection of the Employee table is updated
-```
 
 
 <!-- REF EntitySelectionClass.index.Desc -->

@@ -23,7 +23,7 @@ ORDA client/server architectures that support the optimization are:
 The optimization context is based upon the following implementations:
 
 * When a client requests an entity selection from the server, 4D automatically "learns" which attributes of the entity selection are actually used on the client side during the code execution, and builds a corresponding "optimization context". This context is attached to the entity selection and stores the used attributes. It will be dynamically updated if other attributes are used afterwards. The following methods and functions trigger the learning phase:
-  * [`Create entity selection`](../API/EntitySelectionClass.md#create-entity-selection)
+  * [`Create entity selection`](../commands/create-entity-selection.md)
   * [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
   * [`dataClass.all()`](../API/DataClassClass.md#all)
   * [`dataClass.get()`](../API/DataClassClass.md#get)

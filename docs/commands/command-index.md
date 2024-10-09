@@ -8,7 +8,7 @@ title: Index
 
 <a id="4D"><b>4D</b></a>
 
-[`4D`](../commands/4d.md)<br/>
+[`4D`](4d.md)<br/>
 
 <a id="A"><b>A</b></a>
 
@@ -149,7 +149,7 @@ title: Index
 [`Create deployment license`](../commands-legacy/create-deployment-license.md)<br/>
 [`Create document`](../commands-legacy/create-document.md)<br/>
 [`CREATE EMPTY SET`](../commands-legacy/create-empty-set.md)<br/>
-[`Create entity selection`](../commands-legacy/create-entity-selection.md)<br/>
+[`Create entity selection`](create-entity-selection.md)<br/>
 [`CREATE FOLDER`](../commands-legacy/create-folder.md)<br/>
 [`CREATE INDEX`](../commands-legacy/create-index.md)<br/>
 [`Create menu`](../commands-legacy/create-menu.md)<br/>
@@ -159,7 +159,7 @@ title: Index
 [`CREATE SET`](../commands-legacy/create-set.md)<br/>
 [`CREATE SET FROM ARRAY`](../commands-legacy/create-set-from-array.md)<br/>
 [`CREATE THUMBNAIL`](../commands-legacy/create-thumbnail.md)<br/>
-[`cs`](../commands/cs.md)<br/>
+[`cs`](cs.md)<br/>
 [`Current client authentication`](../commands-legacy/current-client-authentication.md)<br/>
 [`Current date`](../commands-legacy/current-date.md)<br/>
 [`Current default table`](../commands-legacy/current-default-table.md)<br/>
@@ -290,7 +290,7 @@ title: Index
 [`False`](../commands-legacy/false.md)<br/>
 [`Field`](../commands-legacy/field.md)<br/>
 [`Field name`](../commands-legacy/field-name.md)<br/>
-[`File`](../commands-legacy/file.md)<br/>
+[`File`](file.md)<br/>
 [`FILTER EVENT`](../commands-legacy/filter-event.md)<br/>
 [`FILTER KEYSTROKE`](../commands-legacy/filter-keystroke.md)<br/>
 [`Find in array`](../commands-legacy/find-in-array.md)<br/>
@@ -301,7 +301,7 @@ title: Index
 [`FIRST RECORD`](../commands-legacy/first-record.md)<br/>
 [`FLUSH CACHE`](../commands-legacy/flush-cache.md)<br/>
 [`Focus object`](../commands-legacy/focus-object.md)<br/>
-[`Folder`](../commands-legacy/folder.md)<br/>
+[`Folder`](folder.md)<br/>
 [`FOLDER LIST`](../commands-legacy/folder-list.md)<br/>
 [`Font file`](../commands-legacy/font-file.md)<br/>
 [`FONT LIST`](../commands-legacy/font-list.md)<br/>
@@ -845,7 +845,7 @@ title: Index
 [`OPEN COLOR PICKER`](../commands-legacy/open-color-picker.md)<br/>
 [`OPEN DATA FILE`](../commands-legacy/open-data-file.md)<br/>
 [`OPEN DATABASE`](../commands-legacy/open-database.md)<br/>
-[`Open datastore`](../commands/open-datastore.md)<br/>
+[`Open datastore`](open-datastore.md)<br/>
 [`Open document`](../commands-legacy/open-document.md)<br/>
 [`OPEN FONT PICKER`](../commands-legacy/open-font-picker.md)<br/>
 [`Open form window`](../commands-legacy/open-form-window.md)<br/>
@@ -1225,7 +1225,7 @@ title: Index
 [`TEXT TO ARRAY`](../commands-legacy/text-to-array.md)<br/>
 [`TEXT TO BLOB`](../commands-legacy/text-to-blob.md)<br/>
 [`TEXT TO DOCUMENT`](../commands-legacy/text-to-document.md)<br/>
-[`This`](../commands/this.md)<br/>
+[`This`](this.md)<br/>
 [`throw`](../commands-legacy/throw.md)<br/>
 [`Tickcount`](../commands-legacy/tickcount.md)<br/>
 [`Time`](../commands-legacy/time.md)<br/>
@@ -1251,7 +1251,7 @@ title: Index
 [`UNREGISTER CLIENT`](../commands-legacy/unregister-client.md)<br/>
 [`Uppercase`](../commands-legacy/uppercase.md)<br/>
 [`USE CHARACTER SET`](../commands-legacy/use-character-set.md)<br/>
-[`USE ENTITY SELECTION`](../commands-legacy/use-entity-selection.md)<br/>
+[`USE ENTITY SELECTION`](use-entity-selection.md)<br/>
 [`USE NAMED SELECTION`](../commands-legacy/use-named-selection.md)<br/>
 [`USE SET`](../commands-legacy/use-set.md)<br/>
 [`User in group`](../commands-legacy/user-in-group.md)<br/>
