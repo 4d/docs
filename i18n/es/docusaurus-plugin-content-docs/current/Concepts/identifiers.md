@@ -128,28 +128,28 @@ QUERY([Clients];[Clients]Name="Smith")
 
 El nombre de una variable puede tener hasta 31 caracteres, sin incluir los símbolos de alcance (`$` or `<>`).
 
-- A variable name must begin with a letter, an underscore, or a dollar ("$") for [parameters](parameters.md) and [local variables](variables.md#local-variables), or `<>` for [interprocess variables](variables.md#interprocess-variables) (deprecated).
+- Un nombre de variable debe comenzar con una letra, un guión bajo o un dólar ("$") para [parámetros](parameters.md) y [variables locales](variables.md#local-variables), o `<>` para [variables interproceso](variables.md#interprocess-variables) (obsoleto).
 - A partir de ahí, el nombre puede incluir cualquier letra o dígito, y el caracter de subrayado ("_").
-- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), system variable names (`OK`, `document`...), or constant names (`Euro`, `Black`, `Friday`, etc.).
+- No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc), palabras clave (`If`, `For`, etc.), nombres de variables de sistema (`OK`, `document`...), o nombres constantes (`Euro`, `Black`, `Friday`, etc.).
 - Los nombres de las variables son sensibles a las mayúsculas y minúsculas.
 
 Ejemplos:
 
 ```4d
-For($vlRecord;1;100) //local variable
-$vsMyString:="Hello there" //local variable
-var $vName; $vJob : Text //local variales
-If(bValidate=1) //process variable
-<>vlProcessID:=Current process() //interprocess variable
+For($vlRecord;1;100) //variable local
+$vsMyString:="Hello there" //variable local
+var $vName; $vJob : Text //variables locales 
+If(bValidate=1) //variable proceso 
+<>vlProcessID:=Current process() //variable interproceso
 ```
 
 ### Compatibilidad
 
-Some naming practices were previously allowed but are no longer supported when the [direct typing mode is enabled](../Project/compiler.md#enabling-direct-typing) (introduced in 4D 20 R7). Enabling this mode will produce syntax errors if:
+Algunas prácticas de nombramiento estaban permitidas anteriormente, pero ya no están soportadas cuando [el modo de escritura directa está habilitado](../Project/compiler.md#enabling-direct-typing) (introducido en 4D 20 R7). Habilitar este modo producirá errores de sintaxis si:
 
-- a variable name has a digit as first character,
-- a variable name contains space characters,
-- you declared variables named $0, $1, etc.
+- un nombre de variable tiene un dígito como primer caracter,
+- un nombre de variable contiene caracteres de espacio,
+- ha declarado variables llamadas $0, $1, etc.
 
 ## Otros nombres
 
