@@ -178,7 +178,7 @@ To be able to directly reference and use a 4D component stored on GitHub, you ne
 
 These steps can easily be automated, with 4D code or using GitHub Actions, for example.
 
-#### Declaring paths
+#### Declarando caminhos
 
 Você declara um componente armazenado no GitHub no arquivo [**dependencies.json**](#dependencyjson) da seguinte maneira:
 
@@ -376,7 +376,7 @@ The GitHub dependency declared in the [**dependencies.json**](#dependenciesjson)
 
 #### Providing your GitHub access token
 
-If the component is stored on a [private GitHub repository](#private-repositories), you need to provide your personal access token to the Dependency manager. To do this, you can either:
+If the component is stored on a [private GitHub repository](#private-repositories), you need to provide your personal access token to the Dependency manager. Para fazer isso, você pode:
 
 - click on **Add a personal access token...** button that is displayed in the "Add a dependency" dialog box after you entered a private GitHub repository path.
 - or, select **Add a GitHub personal access token...** in the Dependency manager menu at any moment.
