@@ -68,7 +68,7 @@ O array history não contém valores sequenciais (-1650, -1651, -1652, etc.) O v
 **Nota:** Por padrão, o array conterá somente informação útil.  
 Dado que o tamanho máximo do array é 200, se a base de dados se utiliza intensivamente (algo é lido a cada segundo no disco), a longitude máxima da história será de 200 segundos. Por outro lado, se quase não passa nada, exceto, por exemplo, uma vez cada 3 minutos, o tamanho da história será de 600 minutos (3\*200).   
 Este exemplo pode ser representado no seguinte diagrama:  
-![](../assets/en/commands/pict1510781.EN.png) 
+![](../assets/en/commands/pict1510781.en.png) 
 
 ##### dataSegment1 e indexSegment 
 

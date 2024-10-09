@@ -68,7 +68,7 @@ El array history no contiene valores secuenciales (-1650, -1651, -1652, etc.) El
 **Nota:** Por defecto, el array contendrá solamente información útil.  
 Dado que el tamaño máximo del array es 200, si la base de datos se utiliza intensivamente (algo se lee cada segundo en el disco), la longitud máxima de la h6istoria será de 200 segundos. Por otro lado, si casi no pasa nada, excepto, por ejemplo, una vez cada 3 minutos, la longitud de la historia será de 600 minutos (3\*200).   
 Este ejemplo puede ser representado en el siguiente diagrama:  
-![](../assets/en/commands/pict1510781.EN.png) 
+![](../assets/en/commands/pict1510781.en.png) 
 
 ##### dataSegment1 y indexSegment 
 
