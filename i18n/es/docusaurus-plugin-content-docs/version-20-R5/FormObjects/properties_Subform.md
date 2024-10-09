@@ -93,7 +93,7 @@ Para las dos últimas acciones, también se genera el evento de formulario `On O
 
 #### Ver también
 
-[Double click on empty row](#double-click-on-empty-row)
+[Doble clic en la fila vacía](#double-click-on-empty-row)
 
 ---
 
