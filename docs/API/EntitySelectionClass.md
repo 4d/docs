@@ -70,7 +70,7 @@ The `Create entity selection` command builds and returns a new, [alterable](ORDA
 
 If the current selection is sorted, an [ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) entity selection is created (the order of the current selection is kept). If the current selection is unsorted, an unordered entity selection is created.
 
-If the *dsTable* is not exposed in [`ds`](API/DataStoreClass.md#ds), an error is returned. This command cannot be used with a Remote datastore.
+If the *dsTable* is not exposed in [`ds`](../commands/ds.md), an error is returned. This command cannot be used with a Remote datastore.
 
 In the optional *settings* parameter, you can pass an object containing the following property:
 

@@ -1,7 +1,6 @@
 ---
 id: this
 title: This
-slug: /commands/this
 displayed_sidebar: docs
 ---
 
