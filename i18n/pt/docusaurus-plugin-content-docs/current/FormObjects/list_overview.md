@@ -44,7 +44,7 @@ Consequentemente, quando você usa comandos com base na configuração expandida
 Você deve usar o ID `ListRef` com comandos de linguagem quando quiser especificar a lista hierárquica encontrada na memória. On the other hand, if you want to specify the representation of a hierarchical list object at the form level, you must use the object name (string type) in the command, via the standard syntax (\*;"ListName", etc.).
 
 > In the case of commands that set properties, the syntax based on the object name does not mean that only the form object specified will be modified by the command, but rather that the action of the command will be based on the state of this object. The common characteristics of hierarchical lists are always modified in all of their representations.
-> For example, if you execute:
+> Por exemplo, se executa:
 
 ```4d
 SET LIST ITEM FONT(*;"mylist1";*;thefont)
