@@ -301,7 +301,7 @@ Cuando los controles de pestañas con una dirección personalizada se muestran e
 
 #### Objetos soportados
 
-[Tab Control](tabControl.md)
+[Control de pestañas](tabControl.md)
 
 ---
 
