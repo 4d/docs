@@ -120,7 +120,7 @@ Read [**What’s new in 4D 20 R3**](https://blog.4d.com/en-whats-new-in-4d-20-vR
 #### Highlights
 
 - New [`collection.multiSort`](../API/CollectionClass.md#multisort) function.
-- Support of *context* parameter in [`Formula from string`](../API/FunctionClass.md#formula-from-string).
+- Support of *context* parameter in [`Formula from string`](../commands/formula-from-string.md).
 - Support of `headers` property in *connectionHandler* parameter of [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
 - [Global modification stamp](../ORDA/global-stamp.md) to help implementing data synchronization modules. New functions: [`ds.getGlobalStamp`](../API/DataStoreClass.md#getglobalstamp) and [`ds.setGlobalStamp`](../API/DataStoreClass.md#setglobalstamp).
 - Assigning file references to picture/blob attributes is [supported in ORDA](../ORDA/entities.md#d#assigning-files-to-picture-or-blob-attributes).

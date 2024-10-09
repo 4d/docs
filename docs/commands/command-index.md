@@ -333,8 +333,8 @@ title: Index
 [`FORM SET SIZE`](../commands-legacy/form-set-size.md)<br/>
 [`FORM SET VERTICAL RESIZING`](../commands-legacy/form-set-vertical-resizing.md)<br/>
 [`FORM UNLOAD`](../commands-legacy/form-unload.md)<br/>
-[`Formula`](../commands-legacy/formula.md)<br/>
-[`Formula from string`](../commands-legacy/formula-from-string.md)<br/>
+[`Formula`](formula.md)<br/>
+[`Formula from string`](formula-from-string.md)<br/>
 [`Frontmost process`](../commands-legacy/frontmost-process.md)<br/>
 [`Frontmost window`](../commands-legacy/frontmost-window.md)<br/>
 

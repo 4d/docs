@@ -580,8 +580,8 @@ module.exports =
 					"items": [
 						"commands-legacy/edit-formula",
 						"commands-legacy/execute-formula",
-						"commands-legacy/formula",
-						"commands-legacy/formula-from-string",
+						"commands/formula",
+						"commands/formula-from-string",
 						"commands-legacy/get-allowed-methods",
 						"commands-legacy/parse-formula",
 						"commands-legacy/set-allowed-methods"
