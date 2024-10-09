@@ -4,7 +4,7 @@ title: This
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.This.Syntax-->**This** -> Function result<!-- END REF-->
+<!--REF #_command_.This.Syntax-->**This** -> Object<!-- END REF-->
 <!--REF #_command_.This.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -14,7 +14,9 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.This.Summary-->The **This** command returns a reference to the currently processed object.<!-- END REF-->
+The `This` command <!--REF #_command_.This.Summary-->returns a reference to the currently processed object.<!-- END REF-->
+
+In most cases, the value of `This` is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called.
 
 The command is designed to be used in the following contexts:
 

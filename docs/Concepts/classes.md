@@ -188,6 +188,7 @@ Specific 4D keywords can be used in class definitions:
 - `property` to define static properties of the objects with a type.
 - `Function get <Name>` and `Function set <Name>` to define computed properties of the objects.
 - `Class extends <ClassName>` to define inheritance.
+- `This` and `Super` are commands that have special 
 
 ### `Function`
 
@@ -615,115 +616,40 @@ Class constructor ($side : Integer)
 ```
 
 
+## Class function commands
+
+The following commands have specific features when they are used within class functions: 
 
 ### `Super`
 
-<!-- REF #_command_.Super.Syntax -->**Super**( ...param : any )<br/>**Super** : Object<!-- END REF -->
+The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. It can be called in the [class constructor](#class-constructor) or in a class function code. 
 
-<!-- REF #_command_.Super.Params -->
-|Parameter|Type||Description|  
-|---|---|---|---|
-|param|any|->|Parameter(s) to pass to the parent constructor|
-|Result|Object|<-|Object's parent|
-<!-- END REF -->
+For more details, see the [`Super`](../commands/super.md) command description. 
 
-The `Super` keyword <!-- REF #_command_.Super.Summary -->allows calls to the `superclass`, i.e. the parent class<!-- END REF -->.
+### `This`
 
-`Super` serves two different purposes:
+The [`This`](../commands/this.md) command returns a reference to the currently processed object. In most cases, the value of `This` is determined by how a class function is called. Usually, `This` refers to the object the function was called on, as if the function were on the object.
 
-1. Inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the `This` keyword is used.
-
-- If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid.
-- If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated.
-- If `Super` is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.
+Example:
 
 ```4d
-// inside myClass constructor
-var $text1; $text2 : Text
-Super($text1) //calls superclass constructor with a text param
-This.param:=$text2 // use second param
+//Class: ob
+
+Function f() : Integer
+ return This.a+This.b
 ```
 
-2. Inside a [class member function](#class-function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
+Then you can write in a method:
 
 ```4d
-Super.doSomething(42) //calls "doSomething" function  
-//declared in superclasses
+$o:=cs.ob.new()
+$o.a:=5
+$o.b:=3
+$val:=$o.f() //8
 ```
 
-#### Example 1
+For more details, see the [`This`](../commands/this.md) command description. 
 
-This example illustrates the use of `Super` in a class constructor. The command is called to avoid duplicating the constructor parts that are common between `Rectangle` and `Square` classes.
-
-```4d
-// Class: Rectangle
-Class constructor($width : Integer; $height : Integer)
- This.name:="Rectangle"
- This.height:=$height
- This.width:=$width
-
-
-Function sayName()
- ALERT("Hi, I am a "+This.name+".")
-
-// Function definition
-Function getArea()
- var $0 : Integer
-
- $0:=(This.height)*(This.width)
-```
-
-```4d
-//Class: Square
-
-Class extends Rectangle
-
-Class constructor ($side : Integer)
-
- // It calls the parent class's constructor with lengths
- // provided for the Rectangle's width and height
- Super($side;$side)
- // In derived classes, Super must be called before you
- // can use 'This'
- This.name:="Square"
-
-Function getArea()
- C_LONGINT($0)
- $0:=This.height*This.width
-```
-
-#### Example 2
-
-This example illustrates the use of `Super` in a class member method. You created the `Rectangle` class with a function:
-
-```4d
-//Class: Rectangle
-
-Function nbSides()
- var $0 : Text
- $0:="I have 4 sides"
-```
-
-You also created the `Square` class with a function calling the superclass function:
-
-```4d
-//Class: Square
-
-Class extends Rectangle
-
-Function description()
- var $0 : Text
- $0:=Super.nbSides()+" which are all equal"
-```
-
-Then you can write in a project method:
-
-```4d
-var $square : Object
-var $message : Text
-$square:=cs.Square.new()
-$message:=$square.description() //I have 4 sides which are all equal
-```
 
 ### `This`
 
