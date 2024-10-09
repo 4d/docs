@@ -45,7 +45,7 @@ Estão disponíveis várias opções gráficas: valores mínimos/máximos, gradu
 
 ![](../assets/en/FormObjects/indicator.gif)
 
-**Barber shop** es una variante del termómetro por defecto. Para activar esta variante, es necesario definir la propiedad [Barber shop](properties_Scale.md#barber-shop).
+**Barber shop** é uma variante do termômetro predefinido. Para activar esta variante, es necesario definir la propiedad [Barber shop](properties_Scale.md#barber-shop).
 
 > In JSON code, just remove "max" property from a default thermometer object to enable the Barber shop variant.
 
