@@ -13,8 +13,8 @@ displayed_sidebar: docs
 | conjOp | * | &srarr; | 複数のクエリ(あれば)を連結する際に使用する結合演算子 |
 | objectField | Field | &srarr; | 属性をクエリするオブジェクトフィールド |
 | attributePath | Text | &srarr; | 属性の名前またはパス |
-| queryOp | Text, * | &srarr; | クエリ演算子(比較演算子) |
-| value | Text, Number, Date, Time | &srarr; | 比較する値 |
+| queryOp | 文字, 演算子 | &srarr; | クエリ演算子(比較演算子) |
+| value | テキスト, 数値, 日付, 時間 | &srarr; | 比較する値 |
 | * | 演算子 | &srarr; | クエリ継続フラグ |
 
 <!-- END REF-->
@@ -122,8 +122,29 @@ displayed_sidebar: docs
 
 ##### オブジェクト内の日付の値 
 
+日付はオブジェクト内において、データベース設定に沿った形で保存されています。デフォルトでは、タイムゾーンは考慮されます([SET DATABASE PARAMETER](set-database-parameter.md) コマンドのJSON use local time を参照して下さい)。
+
 ```undefined
 !1973-05-22! -> "1973-05-21T23:00:00.000Z"
+```
+
+この設定はクエリにおいても影響するので、データベースを常に毎回同じ場所で使用し、データにアクセスる全てのマシンの設定が同じであれば何も心配する必要がありません。この場合、以下のクエリは、Birthday属性が!1973-05-22!("1973-05-21T23:00:00.00Z"として保存されている)に一致するレコードを正確に返します:
+
+```4d
+ QUERY BY ATTRIBUTE([Persons];[Persons]OB_Info;"Birthday";=;!1973-05-22!)
+```
+
+GMT設定を使用したくない場合、これらの設定を以下の様にして変更する事ができます:
+
+```4d
+ SET DATABASE PARAMETER(JSON use local time;0)
+```
+
+ただし、この設定のスコープはプロセスのみであるという点に注意して下さい。設定をこのように変更した場合、1965年10月1日は"1965-10-01T00:00:00.000Z"として保存されますが、クエリを実行する前に同じ引数を設定する必要が出てきます:
+
+```4d
+ SET DATABASE PARAMETER(JSON use local time;0)
+ QUERY BY ATTRIBUTE([Persons];[Persons]OB_Info;"Birthday";=;!1976-11-27!)
 ```
 
 ##### 仮想的長さプロパティの使用 

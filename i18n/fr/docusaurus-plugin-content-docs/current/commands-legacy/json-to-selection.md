@@ -16,9 +16,21 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.JSON TO SELECTION.Summary-->La commande **JSON TO SELECTION** copie le contenu du tableau d'objets JSON *jsonTab* vers la sélection d’enregistrements de *laTable*.<!-- END REF--> 
+
+Le paramètre *jsonTab* est un [texte](# "Une chaine de caractères jusqu'à 2 Go") représentant un tableau d'objets JSON contenant un ou plusieurs élément(s). Le format attendu est du type :
+
 ```undefined
 "[{"attribut1":"valeur1","attribut2":"valeur2",...},...,{"attribut1":"valeurN","attribut2":"valeurN",...}]"
 ```
+
+Si une sélection existe pour *laTable* au moment de l’appel, les éléments du tableau JSON sont copiés dans les enregistrements en fonction de l’ordre du tableau et de l’ordre des enregistrements. Si le nombre d’éléments définis dans le tableau JSON est supérieur au nombre d’enregistrements de la sélection courante, de nouveaux enregistrements sont créés. Les enregistrements, qu’ils soient nouveaux ou existants, sont automatiquement sauvegardés.
+
+**Note :** Cette commande prend en charge les champs de type objet : les données JSON sont automatiquement converties. 
+
+**Attention :** Comme **JSON TO SELECTION** remplace les informations éventuellement présentes dans les enregistrements existants, cette commande doit être utilisée avec prudence. 
+
+Si un enregistrement est verrouillé par un autre process pendant l’exécution de la commande, il n’est pas modifié. Tous les enregistrements verrouillés sont placés dans l’*Ensemble système LockedSet*. Après l'exécution de **JSON TO SELECTION**, vous pouvez tester si l’ensemble *LockedSet* contient des enregistrements qui étaient verrouillés.
 
 #### Exemple 
 

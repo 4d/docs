@@ -48,6 +48,15 @@ L'objet retourné contient les propriétés suivantes :
 
 #### Exemple 
 
+Vous souhaitez obtenir des informations sur la licence de votre 4D Server courant : 
+
+```4d
+ var $obj : Object
+ $obj:=Get license info
+```
+
+*$obj* peut contenir, par exemple :
+
 ```undefined
 {
     "name": "4D Server v16 R3",

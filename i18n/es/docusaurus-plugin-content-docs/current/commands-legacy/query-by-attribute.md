@@ -13,8 +13,8 @@ displayed_sidebar: docs
 | opConj | * | &srarr; | Operador de conjunción ausar para combinar varias búsquedas (si las hay) |
 | campoObjeto | Field | &srarr; | Campo objeto cuyos atributos utilizar para la búsqueda |
 | rutaAtributo | Text | &srarr; | Nombre o ruta de atributo |
-| opBusq | Text, * | &srarr; | Operador de búsqueda (comparador) |
-| valor | Text, Number, Date, Time | &srarr; | Valor a comparar |
+| opBusq | Cadena, Operador | &srarr; | Operador de búsqueda (comparador) |
+| valor | Texto, Número, Fecha, Hora | &srarr; | Valor a comparar |
 | * | Operador | &srarr; | Espera de ejecución de la búsqueda |
 
 <!-- END REF-->
@@ -121,8 +121,29 @@ No importa la forma en que una búsqueda se haya definido:
 
 ##### Valores fecha en el objeto 
 
+Las fechas se almacenan en los objetos en función de los parámetros de la base; por defecto, se tiene en cuenta la zona horaria (ver el selector JSON use local time en el comando [SET DATABASE PARAMETER](set-database-parameter.md)). 
+
 ```undefined
 !1973-05-22! -> "1973-05-21T23:00:00.000Z"
+```
+
+Este ajuste también se tiene en cuenta durante las búsquedas, por lo que no tiene que preocuparse por ello si siempre utiliza su base en el mismo lugar y si los parámetros son los mismos en todos los equipos que acceden a los datos. En este caso, la siguiente búsqueda devolverá correctamente los registros cuyo atributo Birthday sea igual a !1973-05-22! (guardada como "1973-05-21T23:00:00.00Z"):
+
+```4d
+ QUERY BY ATTRIBUTE([Persons];[Persons]OB_Info;"Birthday";=;!1973-05-22!)
+```
+
+Si no desea utilizar el parámetro GMT, puede modificar estos parámetros utilizando la siguiente instrucción:
+
+```4d
+ SET DATABASE PARAMETER(JSON use local time;0)
+```
+
+Tenga en cuenta que el alcance de este parámetro está limitado al process. Si ejecuta esta instrucción, el 1 de octubre de 1965 se almacenará "1965-10-01T00: 00: 00.000Z" pero usted deberá ajustar el mismo parámetro antes de lanzar sus búsquedas:
+
+```4d
+ SET DATABASE PARAMETER(JSON use local time;0)
+ QUERY BY ATTRIBUTE([Persons];[Persons]OB_Info;"Birthday";=;!1976-11-27!)
 ```
 
 ##### Utilización de la propiedad virtual longitud 
@@ -130,6 +151,10 @@ No importa la forma en que una búsqueda se haya definido:
 Puede utilizar la propiedad virtual "longitud" con este comando. Esta propiedad está disponible automáticamente para todos los atributos de tipo array y devuelve el tamaño del array, es decir, el número de elementos que contiene. Se puede utilizar en el contexto de la ejecución del comando **QUERY BY ATTRIBUTE** (ver ejemplo 4).
 
 ##### Asociar los criterios para las búsquedas en los elementos de array 
+
+(Nuevo en 4D v16 R2) Al buscar en atributos array con varios argumentos de búsqueda unidos por el operador AND, puede que quiera asegurarse de que sólo se devuelvan los registros que contengan elementos que coincidan con todos los argumentos y no los registros donde se pueden encontrar argumentos en diferentes elementos. Para ello, debe vincular los argumentos de búsqueda a elementos del array, de modo que solo se encuentren elementos únicos que contengan argumentos vinculados.  
+
+Por ejemplo, con los dos registros siguientes:
 
 ```undefined
 {
@@ -149,6 +174,31 @@ Puede utilizar la propiedad virtual "longitud" con este comando. Esta propiedad 
             } ]
 }
 ```
+
+Usted quiere encontrar la gente con un tipo de ubicación "home" en la ciudad "Paris". Si escribe:
+
+```4d
+ QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[].city";=;"paris";*)
+ QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[].kind";=;"home")
+```
+
+... la búsqueda devolverá "martin" y "smith" porque "smith" tiene un elemento "locations" cuyo "kind" es "home" y un elemento "locations" cuya "city" es "paris", aunque son elementos diferentes.  
+
+Si sólo desea obtener los registros donde los argumentos coincidentes estén en el mismo elemento, debe **asociar los criterios**. Para vincular criterios de búsqueda: 
+
+* Agregue una letra entre el \[\] de la primera ruta a asociar y repita la misma letra en todos los argumentos vinculados. Por ejemplo: **locations\[a\].city** y **locations\[a\].kind**. Puede utilizar cualquier letra del alfabeto latino (no sensible a mayúsculas y minúsculas).
+* Para agregar diferentes criterios vinculados en la misma búsqueda, utilice otra letra (vea los ejemplos a continuación). Puede crear hasta 26 combinaciones de criterios en una sola búsqueda.
+
+Con los registros anteriores, si escribe:
+
+```4d
+ QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[a].city";=;"paris";*)
+ QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[a].kind";=;"home")
+```
+
+... la búsqueda sólo devolverá "martin" porque tiene un elemento "locations" cuyo "kind" es "home" y cuya "city" es "paris". La consulta no devolverá "smith" porque los valores "home" y "paris" no están en el mismo elemento de array. Vea los ejemplos a continuación para ver más ejemplos de esta funcionalidad.
+
+**Nota:** utilizar la sintaxis relacionada en una sola línea de búsqueda dará los mismos resultados que una búsqueda estándar, excepto cuando se utiliza el operador "#": en este caso, se pueden devolver resultados no válidos. Por lo tanto, esta sintaxis específica no es soportada.
 
 #### Ejemplo 1 
 
@@ -179,6 +229,8 @@ El comando **QUERY BY ATTRIBUTE** se puede utilizar para encontrar registros en 
 
 #### Ejemplo 3 
 
+Usted quiere buscar un campo que contiene los atributos array. Con los dos registros siguientes:
+
 ```undefined
 {
     "name":"martin",
@@ -198,11 +250,27 @@ El comando **QUERY BY ATTRIBUTE** se puede utilizar para encontrar registros en 
 }
 ```
 
+ ... **QUERY BY ATTRIBUTE** encontrará personas con una ubicación en "paris" utilizando esta instrucción:
+
+```4d
+  //indica el atributo array con la sintaxis "[]"
+ QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[].city";=;"paris")
+  //Selecciona "martin" y "smith"
+```
+
+**Nota:** si ha definido varios criterios en el mismo atributo array, los criterios coincidentes no se aplicarán necesariamente al mismo elemento de array. En el siguiente ejemplo, la búsqueda devolverá "smith" porque tiene un elemento "locations" cuyo "kind" es "home" y un elemento "locations" cuya "city" es "paris", Incluso si no es el mismo elemento:
+
+```4d
+ QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[].kind";=;"home";*)
+ QUERY BY ATTRIBUTE([People];&;[People]OB_Field;"locations[].city";=;"paris")
+  //Selecciona "smith"
+```
+
 #### Ejemplo 4 
 
 Este ejemplo ilustra el uso de la propiedad "longitud" virtual. Su base tiene un campo objeto \[Customer\]full\_Data con los siguientes datos:
 
-![](../assets/en/commands/pict2994114.en.png)
+![](../assets/en/commands/pict2994114.EN.png)
 
 Usted quiere obtener los registros de los clientes que tienen dos o más hijos. Para ello, se puede escribir:
 

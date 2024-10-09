@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &srarr; | Tabla para la cual ordenar los registros seleccionados, o tabla por defecto, si se omite |
-| campoObjeto | Object | &srarr; | Campo objeto que contiene el atributo de ordenación |
+| campoObjeto | Campo Objeto | &srarr; | Campo objeto que contiene el atributo de ordenación |
 | rutaAtrib | Text | &srarr; | Nombre o ruta del atributo en el que se define el orden para cada nivel |
 | > o < | Operador | &srarr; | Dirección de ordenación para cada nivel: > para ordenar en orden ascendente o < para ordenar en orden descendente |
 | * | Operador | &srarr; | Continuar bandera de orden |
@@ -52,6 +52,8 @@ No importa qué forma de ordenación se haya definido, si la operación de orden
 
 #### Ejemplo 
 
+Usted desea ordenar la selección actual por edad (descendente) y luego por su nombre (ascendente). El orden por defecto es:
+
 ```undefined
 // [Customer]OB_Info contents partial export
 {"LastName":"Giorgio","age":33,"client":true},
@@ -74,6 +76,37 @@ No importa qué forma de ordenación se haya definido, si la operación de orden
 {"LastName":"Belami","age":"Forty-six","client":true},
 {"LastName":"Smeldorf","age":22,"client":true},
 {"LastName":"Smeldorf","age":70,"client":true}
+```
+
+Si ejecuta:
+
+```4d
+ ORDER BY ATTRIBUTE([Customer];[Customer]OB_Info;"age";<;[Customer]OB_Info;"LastName";>)
+```
+
+Los registros están en el siguiente orden:
+
+```undefined
+{"LastName":"Gordini","client":true}, //al inicio porque
+{"LastName":"Martin","client":true}, //age is null (missing)
+{"LastName":"Smeldorf","age":70,"client":true}
+{"LastName":"Garbando","age":60,"client":false,"Sex":"male"},
+{"LastName":"Delaferme","age":54,"client":true}, 
+{"LastName":"Smeldorf","age":54,"client":true},
+{"LastName":"Jones","age":52,"client":true},
+{"LastName":"Johnson","age":44,"client":false},
+{"LastName":"Kerrey","age":44,"client":true},
+{"LastName":"Wesson","age":44,"client":true},
+{"LastName":"Sarah","age":42,"client":true},
+{"LastName":"Smith","age":42,"client":true},
+{"LastName":"Evan","age":36,"client":true},
+{"LastName":"Collins","age":33,"client":true,"Sex":"female"},
+{"LastName":"Giorgio","age":33,"client":true},
+{"LastName":"Smeldorf","age":33,"client":true},
+{"LastName":"Smeldorf","age":22,"client":true},
+{"LastName":"Hamp","age":"Sixty","client":true}, //string values in age
+{"LastName":"Belami","age":"Forty-six","client":true}, //are handled separately
+{"LastName":"Mikken","age":"Forty-six","client":true}
 ```
 
 #### Ver también 
