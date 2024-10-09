@@ -15,7 +15,7 @@ Esta clase admite tres tipos de sesiones:
 
 :::note
 
-The availability of properties and functions in the `Session` object depends on the session type.
+La disponibilidad de las propiedades y funciones del objeto `Session` depende del tipo de sesión.
 
 :::
 
