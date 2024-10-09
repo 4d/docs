@@ -34,21 +34,6 @@ Este objeto está composto de oito propriedades que contém as medidas básicas 
 
 ##### Propriedades elementares 
 
-As propriedades elementares podem ser encontradas nos diferentes níveis do objeto DB. As propriedades elementares devolvem a mesma informação mas com alcances diferentes. Esta é uma descrição das propriedades elementares:   
-  
-| **Nome**       | **Informação devolvida**            |
-| -------------- | ----------------------------------- |
-| diskReadBytes  | Bytes lidos desde o disco           |
-| cacheReadBytes | Bytes lidos desde o cachê           |
-| cacheMissBytes | Bytes faltantes do cachê            |
-| diskWriteBytes | Bytes escritos no disco             |
-| diskReadCount  | Acesso em leitura desde o disco     |
-| cacheReadCount | Acesso em leitura desde o cachê     |
-| cacheMissCount | Acesso de leitura faltante no cachê |
-| diskWriteCount | Acesso em escritura no disco        |
-
-As oito propriedades elementares têm a mesma estrutura do objeto, por exemplo:
-
 ```undefined
 "diskReadBytes": {
     "value": 33486473620,
@@ -60,31 +45,7 @@ As oito propriedades elementares têm a mesma estrutura do objeto, por exemplo:
 }
 ```
 
-* "**value**" (número): a propriedade "value" contém um número que representa ou uma quantidade de bytes ou uma contagem de acessos. Basicamente, este valor é a soma dos valores do objeto "history" (ainda que o objeto "history" não esteja presente).
-"**history**" (array de objetos): o array de objetos "history" é uma compilação de valores de eventos agrupados por segundo. A propriedade "history" só está presente se solicitar através do parâmetro *opcoes* (ver a continuação). O array history terá um máximo de 200 elementos. Cada elemento do array é em si mesmo um objeto que contém duas propriedades: "value" e "time".  
-* "value" (número): quantidade de bytes ou acessos manipulados durante o período de tempo designado na propriedade "time" associada.
-"time" (número): número de segundos passados desde que foi chamada a função. No exemplo anterior ("time": -1649) significa 1649 segundos atrás (ou mais precisamente entre 1649 e 1650 segundos). Durante este período de um segundo, 54,202 bytes foram lidos no disco.   
-O array history não contém valores sequenciais (-1650, -1651, -1652, etc.) O valor anterior é -1665, o que significa que nada foi lido no disco no período de 15 segundos entre 1650 e 1665\.   
-**Nota:** Por padrão, o array conterá somente informação útil.  
-Dado que o tamanho máximo do array é 200, se a base de dados se utiliza intensivamente (algo é lido a cada segundo no disco), a longitude máxima da história será de 200 segundos. Por outro lado, se quase não passa nada, exceto, por exemplo, uma vez cada 3 minutos, o tamanho da história será de 600 minutos (3\*200).   
-Este exemplo pode ser representado no seguinte diagrama:  
-![](../assets/en/commands/pict1510781.EN.png) 
-
 ##### dataSegment1 e indexSegment 
-
-As propriedades "dataSegment1" e "indexSegment" podem conter até quatro propriedades elementares (quando estão disponíveis): 
-
-```RAW
-"dataSegment1": {    "diskReadBytes": {…},    "diskWriteBytes": {…},    "diskReadCount": {…},    "diskWriteCount": {…}    },"indexSegment": {    "diskReadBytes": {…},    "diskWriteBytes": {…},    "diskReadCount": {…},    "diskWriteCount": {…}    }
-```
-
-Estas propriedades devolvem a mesma informação que as propriedades elementares, mas detalhada para cada arquivo da base: 
-
-* "dataSegment1" representa o arquivo de dados .4dd no disco
-* "indexSegment" representa o arquivo de índice .4dx no disco
-
-  
-Por exemplo, pode ser obtido o seguinte objeto:
 
 ```undefined
 {
@@ -114,111 +75,16 @@ Por exemplo, pode ser obtido o seguinte objeto:
 }
 ```
 
-Os valores devolvidos correspondem as fórmulas seguintes:
-
-*diskReadBytes.value = dataSegment1.diskReadBytes.value + indexSegment.diskReadBytes.value* 
-*diskWriteBytes.value = dataSegment1.diskWriteBytes.value + indexSegment.diskWriteBytes.value* 
-*diskReadCount.value = dataSegment1.diskReadCount.value + indexSegment.diskReadCount.value* 
-*diskWriteCount.value = dataSegment1.diskWriteCount.value + indexSegment.diskWriteCount.value* 
-
 ##### tables 
 
-A propriedade "tables" contém tantas propriedades como tabelas que tenham sido acessadas, seja em modo de leitura ou escritura desde a abertura da base. O nome de cada propriedade é o nome da tabela em questão. Por exemplo:  
-  
 ```undefined
 "tables": {
     "Employees": {…)
     "Companies": {…)
     }
 ```
-  
-  
-Cada objeto "table" contém 12 propriedades:
-* As primeiras oito propriedades são as *propriedades elementares* (ver mais acima) com os valores relacionados a tabela implicada.
-* As outras duas propriedades, "records" e "blobs", também tem as mesmas oito propriedades elementares, mas limitadas a certos tipos de campos:
-* * A propriedade "records" se refere A todos os campos da tabela (cadeias, datas, números, etc.) a exceção de texto, imagens e BLOBs.  
-   * A propriedade "blobs" se refere aos campos de tipo texto, imagem e BLOB da tabela.  
-   * Uma ou duas propriedades adicionais, "fields" e "queries", também poden estar presentes em função das pesquisas e as ordenações realizadas na tabela concernente:  
-   * * A propriedade "fields" contém o maior número de atributos "nome de campo" (que também são sub-objetos) como o número de campos que se utilizam para as pesquisas ou ordenações.  
-         Cada objeto nome de campo contém:  
-                  * um objeto "queryCount" (com ou sem história, dependendo do parâmetro *opcoes*) se uma pesquisa foi realizada utilizando este campo  
-                  * e/ou um objeto "sortCount" (com o sem história, dependendo do parâmetro *opcoes*) se uma ordenação foi realizada utilizando este campo.  
-         Este atributo não se baseia no uso de índices; Todos os tipos de pequisas e de ordenações são levadas em conta.  
-         Exemplo: desde o lançamento da base, várias pesquisas e ordenações foram levadas a cabo utilizando os campos *CompID*, *Name* *e FirstName*. TEl objeto devolvido contém o seguinte sub-objeto "fields" (*opcoes* com rota e sem histórico):  
-                 
-         ```undefined  
-         {  
-             "DB": {  
-                 "tables": {  
-                     "Employees": {  
-                         "fields": {  
-                             "CompID": {  
-                                 "queryCount": {  
-                                     "value": 3  
-                                 }  
-                             },  
-                             "Name": {  
-                                 "queryCount": {  
-                                     "value": 1  
-                                 },  
-                                 "sortCount": {  
-                                     "value": 3  
-                                 }  
-                             },  
-                             "FirstName": {  
-                                 "sortCount": {  
-                                     "value": 2  
-                                 }  
-                             }  
-         (...)  
-         ```  
-                 
-         **Nota**: o atributo "fields" é criado unicamente se uma pesquisa ou uma ordenação foi realizada na tabela; caso contrário este atributo não estará presente.  
-   * "queries" é um array de objetos que oferece uma descrição de cada pesquisa realizada na tabela. Cada elemento do array conterá três atributos:  
-         * "queryStatement" (cadeia): cadeia de pesquisa (que contém os nomes dos campos, mas não os valores procurados). Por exemplo: "(Companies.PK\_ID != ?)"  
-         * "queryCount" (objeto):  
-                  * "value" (número): número de vezes que a cadeia de pesquisa foi executado, sem importar os valores procurados.  
-                  * "history" (array de objetos) (se solicitar em *opcoes*): propriedades do histórico estandarte "value" e "time"  
-         * "duration" (objeto) (se "value" é >0)  
-                  * "value" (número): número de milissegundos  
-                  * "history" (array de objetos) (se solicitar em *opcoes*): propriedades do histórico estandarte "value" e "time"  
-Exemplo: desde o momento em que se lança a base, uma só pesquisa foi realizada na tabela Employees (*opcoes* são com rota e com histórico):  
-```undefined  
-{  
-            "DB": {  
-              "tables": {  
-                "Employees": {  
-                    "queries": [  
-                    {  
-                        "queryStatement": "(Employees.Name == ?)",  
-                        "queryCount": {<p>                            "value": 1,  
-                            "history": [  
-                                {  
-                                    "value": 1,  
-                                    "time": -2022  
-                                }  
-                            ]  
-                        },  
-                        "duration": {  
-                            "value": 2,  
-                            "history": [  
-                                {  
-                                    "value": 2,  
-                                    "time": -2022  
-                                }  
-                            ]  
-                        }  
-                    },  
-(...)  
-```  
-    
-**Nota:** o atributo "queries" é criado quando pelo menos uma pesquisa foi realizada na tabela.
 
 ##### indexes 
-
-Este é o objeto mais complexo. Todas as tabelas as quais tiveram acesso utilizando um ou vários de seus índices se armazenam como propriedades e no interior das propriedades, também se incluem os nomes dos índices utilizados como propriedades. Os índices de palavras chaves aparecem por separado e seus nomes estão seguidos por "*(Keyword)*". Por último, cada objeto nome de índice contém as oito propriedades elementares relacionadas com este índice assim como um máximo de quatro sub-objetos em função do uso do índice da base desde seu lançamento (cada sub-objeto só existe se pelo menos uma operação correspondente foi realizado em algum momento desde o lançamento de base).
-
-Exemplo: desde o lançamento da base, vários índices do campo \[Employees\] EmpLastName foram solicitados. Além disso, 2 registros foram criados e 16 se suprimiram na tabela \[Companies\]. Esta tabela tem um campo "name" que está indexado. A tabela também consultou e ordenou utilizando este campo. O objeto resultante conterá:
 
 ```undefined
 "indexes": {
@@ -294,17 +160,6 @@ Você deseja obter o objeto "history" no objeto devolvido:
 ```
 
 #### Exemplo 2 
-
-Só queremos saber o número total de bytes lidos na memória cachê ("cacheReadBytes"):   
-  
-```4d
- var $oStats : Object
- var $oParams : Object
- OB SET($oParams;"path";"DB.cacheReadBytes")
- $oStats:=Get database measures($oParams)
-```
-
-O objeto devolvido contém, por exemplo:
 
 ```undefined
 {

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET ATTRIBUTES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| caminho | Texto, Array texto | &srarr; | Caminho do método |
-| atributos | Objeto, Array objeto | &#x2194; | Atributos para métodos selecionados |
+| caminho | Text, Text array | &srarr; | Caminho do método |
+| atributos | Object, Object array | &harr; | Atributos para métodos selecionados |
 | * | Operador | &srarr; | se passado = comando aplica para banco de dados local quando executado a partir de um componente (parâmetro ignorado fora desse contexto) |
 
 <!-- END REF-->
@@ -30,15 +30,6 @@ Se o comando for executado a partir de um componente, aplica-se por padrão para
 **Nota**: a propriedade *published4DMobile* é obsoleta a partir de 4D v18.
 
 #### Exemplo 
-
-Se você quiser obter os atributos do método de projeto *sendMail*, pode escrever:
-
-```4d
- var $att : Object
- METHOD GET ATTRIBUTES("sendMail";$att)
-```
-
-Depois da execução, $att contém, por exemplo:
 
 ```undefined
 {

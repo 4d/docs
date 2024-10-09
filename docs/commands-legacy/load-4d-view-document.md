@@ -34,22 +34,6 @@ Using this command, you can recover any data stored in your 4D View documents an
 
 #### Example 
 
-You want to load and convert a 4D View document stored on disk:
-
-```4d
- var $blob : Blob
- var $object : Object
- DOCUMENT TO BLOB("document.4PV";$blob)
- $object:=Load 4D View document($blob)
- ALERT("Document title is "+$object.title)
-```
-
-For example, if you convert the following document: 
-
-![](../assets/en/commands/pict3631552.en.png)
-
-You will get the following result (stringified object):
-
 ```undefined
 {
     "version": 9,
@@ -192,5 +176,3 @@ You will get the following result (stringified object):
     ]
 }
 ```
-
-**Note:** For more information about the format of the returned [object](# "Data structured as a native 4D object"), please contact the 4D technical services. 

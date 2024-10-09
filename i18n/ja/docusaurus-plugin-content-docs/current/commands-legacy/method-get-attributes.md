@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET ATTRIBUTES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| path | テキスト, テキスト配列 | &srarr; | メソッドのパス |
-| attributes | オブジェクト, Object array | &#x2194; | 選択したメソッドの属性 |
+| path | Text, Text配列 | &srarr; | メソッドのパス |
+| attributes | Object, Object array | &harr; | 選択したメソッドの属性 |
 | * | 演算子 | &srarr; | 指定すると、コマンドはコンポーネントから実行されたときにホストデータベースへと適用されます<br/>(このコンテキスト外ではこの引数は無視されます) |
 
 <!-- END REF-->
@@ -32,15 +32,6 @@ displayed_sidebar: docs
 **互換性に関する注記:** 4D v18 以降、*published4DMobile* プロパティは廃止予定です。
 
 #### 例題 
-
-*sendMail* プロジェクトメソッドの属性を取得したい場合を考えます。以下の用にコードを書くことができます:
-
-```4d
- var $att : Object
- METHOD GET ATTRIBUTES("sendMail";$att)
-```
-
-実行後、$att には例えば以下のような値が含まれます:
 
 ```undefined
 {

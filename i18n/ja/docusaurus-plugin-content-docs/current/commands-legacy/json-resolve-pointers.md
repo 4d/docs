@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | object | Object | &srarr; | 解決するJSONポインターを含んだオブジェクト型 |
-| &#x2194; | 解決したJSONポインターを含んだオブジェクト型(結果がオブジェクト型の場合のみ) |
+| &harr; | 解決したJSONポインターを含んだオブジェクト型(結果がオブジェクト型の場合のみ) |
 | options | Object | &srarr; | ポインター解決のオプション |
 | 戻り値 | Object | &larr; | 処理の結果を含んだオブジェクト型 |
 
@@ -56,17 +56,11 @@ JSON ポインターは、以下のような場合に特に有用です:
 
 #### JSON ポインターを定義する 
 
-JSON ポインターとは、JSON ドキュメント全体の中にある特定のフィールドあるいはキー値へとアクセスするのに使用することができる文字列シンタックスを定義する規格です。この規格は[RFC 6901](https://tools.ietf.org/html/rfc6901) において説明されています。
-
-JSON ポインターは、厳密な話をすると、'/'によって分割される部分から構成される文字列です。JSON ポインターは通常、ポインターが解決されるドキュメントを指定するURI内で見つけることができます。URI内でフラグメント文字"#"を使用することでJSON ポインターを指定しています。習慣に則り、JSON ポインターを格納しているURIは、"$ref"と名付けられたJSON オブジェクトプロパティ内にあります。
-
 ```undefined
 {
    "$ref":<path>#<json_pointer>
 }
 ```
-
-**注:** 4D は存在しない配列要素への参照としての"-" 文字はサポートしていません。
 
 ##### 再帰性とパスの解決 
 
@@ -110,8 +104,6 @@ JSON ポインターは再帰的に解決されます。これはつまりポイ
 
 #### 例題 2 
 
-以下の($oMyConfig という名前の)JSON オブジェクト内において、請求先住所("billingAddress")を送付先住所("shippingAddress")として再使用したい場合を考えます:
-
 ```undefined
 {
     "lastname": "Doe",
@@ -125,37 +117,7 @@ JSON ポインターは再帰的に解決されます。これはつまりポイ
 }
 ```
 
-以下のコードを実行すると:
-
-```4d
- $oResult:=JSON Resolve pointers($oMyConfig)
-```
-
-... 以下のオブジェクトが返されます:
-
-```undefined
-{
-    "success": true,
-    "value": {
-        "lastname": "Doe",
-        "firstname": "John",
-        "billingAddress": {
-            "street": "95 S. Market Street",
-            "city": "San Jose",
-            "state": "California" 
-        },
-        "shippingAddress": {
-            "street": "95 S. Market Street",
-            "city": "San Jose",
-            "state": "California" 
-        }
-    }
-}
-```
-
 #### 例題 3 
-
-この例題では、"merge" オプションの効果を紹介しています。デフォルトのファイルに基づいてユーザーの権限を編集したい場合を考えます。
 
 ```undefined
 {
@@ -163,66 +125,6 @@ JSON ポインターは再帰的に解決されます。これはつまりポイ
         "$ref": "defaultSettings.json#/defaultRights",
         "delete": true,
         "id": 456
-    }
-}
-```
-
-*defaultSettings.json* ファイルの中身は以下のようになっています:
-
-```undefined
-{
-    "defaultRights":
-    {
-        "edit": true,
-        "add": false,
-        "delete": false
-    }
-}
-```
-
-以下のコードを実行すると:
-
-```4d
- var $options : Object
- $options:=New object("merge";False) //中身を完全に置き換える
- $oResult:=JSON Resolve pointers($oMyConfig;$options)
-```
-
-... 結果の値は*defaultSettings.json* ファイルの中身そのものと完全に同じです:
-
-```undefined
-{
-    "success": true,
-    "value": {
-        "rights": {
-            "edit": true,
-            "add": false,
-            "delete": false
-        }
-    }
-}
-```
-
-一方、以下のコードを実行すると:
-
-```4d
- var $options : Object
- $options:=New object("merge";True) //中身を一部併合する
- $oResult:=JSON Resolve pointers($oMyConfig;$options)
-```
-
-... 結果の値は、元のオブジェクトを一部変更した値になります:
-
-```undefined
-{
-    "success": true,
-    "value": {
-        "rights": {
-            "edit": true,
-            "add": false,
-            "delete": true,
-            "id": 456
-        }
     }
 }
 ```

@@ -31,8 +31,6 @@ Dentro de contextos compatíveis, deve acessar propriedades de elementos de obje
 
 #### Exemplo 1 
 
-Uma coleção de objetos, cada um com esta estrutura:
-
 ```undefined
 {  
 <p>"ID": 1234
@@ -55,26 +53,6 @@ Uma coleção de objetos, cada um com esta estrutura:
 },...
  
 ```
-
-Nesse list box, cada coluna refere a uma das propriedades do objeto, seja diretamente (This.nome), indiretamente (This.employees.length), ou através de uma expressão (*getPicture*) na qual pode ser usada diretamente. A list box parece com isto:
-
-![](../assets/en/commands/pict3776706.en.png)
-
-O método de projeto *GetPicture* é executado automaticamente durante o evento **On display detail**:
-
-```4d
-  //Método GetPicture
- var $0 : Picture
- If(This.isFemale)
-    $0:=Form.genericFemaleImage
- Else
-    $0:=Form.genericMaleImage
- End if
-```
-
-Assim que o formulário é executado, você pode ver o resultado:
-
-![](../assets/en/commands/pict3783169.en.png)
 
 #### Exemplo 2 
 

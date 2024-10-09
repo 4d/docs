@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET ATTRIBUTES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin | Texte, Tableau texte | &srarr; | Chemin(s) de méthode(s) |
-| attributs | Objet, Tableau objet | &#x2194; | Attribut(s) de méthode(s) |
+| chemin | Text, Text array | &srarr; | Chemin(s) de méthode(s) |
+| attributs | Object, Object array | &harr; | Attribut(s) de méthode(s) |
 | * | Opérateur | &srarr; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
@@ -30,15 +30,6 @@ Si la commande est exécutée depuis un composant, elle s’applique par défaut
 **Note de compatibilité :** La propriété *published4DMobile* est obsolète à partir de 4D v18.
 
 #### Exemple 
-
-Vous souhaitez connaître les attributs de la méthode projet *sendMail*. Vous pouvez écrire :
-
-```4d
- var $att : Object
- METHOD GET ATTRIBUTES("sendMail";$att)
-```
-
-A l'issue de l'exécution, $att contient, par exemple :
 
 ```undefined
 {

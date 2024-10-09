@@ -34,22 +34,6 @@ displayed_sidebar: docs
 
 #### 例題 
 
-ディスク上に保存された4D View ドキュメントを読み込んで変換したい場合を考えます:
-
-```4d
- var $blob : Blob
- var $object : Object
- DOCUMENT TO BLOB("document.4PV";$blob)
- $object:=Load 4D View document($blob)
- ALERT("Document title is "+$object.title)
-```
-
-例えば、以下のドキュメントを変換した場合:
-
-![](../assets/en/commands/pict3631552.en.png)
-
-以下の結果を取得します(文字列化されたオブジェクト):
-
 ```undefined
 {
     "version": 9,
@@ -192,5 +176,3 @@ displayed_sidebar: docs
     ]
 }
 ```
-
-**注:** 返されるobject についてのフォーマットについてのより詳細な情報については、4D テクニカルサービスにお問い合わせください。

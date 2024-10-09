@@ -10,42 +10,13 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | chaîneJSON | Text | &srarr; | Chaîne en JSON à analyser |
-| type | Entier long | &srarr; | Type dans lequel convertir les valeurs |
+| type | Integer | &srarr; | Type dans lequel convertir les valeurs |
 | * | Opérateur | &srarr; | Ajouter la ligne et la position de chaque propriété si la valeur retournée est un objet |
-| Résultat | Objet, Varié | &larr; | Valeurs extraites de la chaîne JSON |
+| Résultat | Object, any | &larr; | Valeurs extraites de la chaîne JSON |
 
 <!-- END REF-->
 
 #### Description 
-
-<!--REF #_command_.JSON Parse.Summary-->La commande **JSON Parse** analyse (parse) le contenu d’une chaîne formatée en JSON et en extrait des valeurs que vous pouvez stocker dans un champ ou une variable 4D.<!-- END REF--> Cette commande désérialise des données JSON ; elle effectue l’action inverse de la commande [JSON Stringify](json-stringify.md).
-
-Passez dans *chaîneJSON* la chaîne au format JSON dont vous souhaitez analyser le contenu. Cette chaîne doit être correctement formatée, sinon une erreur de parsing est générée. **JSON Parse** peut donc être utilisée pour valider du JSON. 
-
-**Note :** Si vous utilisez des pointeurs, vous devez appeler la commande [JSON Stringify](json-stringify.md) avant **JSON Parse**. 
-
-Par défaut, si vous omettez le paramètre *type*, 4D tentera de convertir la valeur obtenue dans le type de la variable ou du champ utilisé pour stocker le résultat (s’il est défini). Sinon, 4D tentera de déduire le type. Vous pouvez également forcer l’interprétation du type en passant le paramètre *type* : passez une des constantes suivantes du thème *Types champs et variables* :
-
-| Constante     | Type        | Valeur |
-| ------------- | ----------- | ------ |
-| Is Boolean    | Entier long | 6      |
-| Is collection | Entier long | 42     |
-| Is date       | Entier long | 4      |
-| Is longint    | Entier long | 9      |
-| Is object     | Entier long | 38     |
-| Is real       | Entier long | 1      |
-| Is text       | Entier long | 2      |
-| Is time       | Entier long | 11     |
-
-**Notes :** 
-
-* Les valeurs de type numérique doivent être incluses dans l'intervalle ±10.421e±10
-* Dans les valeurs de type texte, tous les caractères spéciaux doivent être échappés, y compris les guillemets (cf. exemples)
-* Par défaut lorsque vous utilisez la constante Is date, la commande considère que la chaîne date contient une heure locale et non GMT. Vous pouvez modifier ce fonctionnement à l'aide du sélecteur Dates inside objects de la commande \[#cmd id="642"/\].
-* A compter de 4D v16 R6, si le paramétrage courant de stockage des dates "type date", les chaînes date JSON au format "YYYY-MM-DD" sont automatiquement retournées sous forme de valeurs de type date par la commande **JSON Parse**. Pour plus d'informations sur ce paramétrage, veuillez vous reporter à l'option "Utiliser le type date au lieu du format date ISO dans les objets" dans la *Page Compatibilité*.
-* Une valeur de type heure peut être retournée à partir d'un nombre dans une chaîne. Par défaut, 4D considère que la valeur est un nombre de secondes.
-
-Si vous passez le paramètre optionnel *\** et si le paramètre *chaîneJSON* représente un objet, l'objet retourné contiend une propriété supplémentaire nommée *\_\_symbols* qui fournit le chemin, l'emplacement de la ligne et la position dans la ligne de chaque propriété et sous-propriété de l'objet. Cette information est utile pour le débogage. La structure de la propriété *\_\_symbols* est la suivante :
 
 ```undefined
 __symbols:{//description de l'objet
@@ -55,8 +26,6 @@ __symbols:{//description de l'objet
       }
    }
 ```
-
-**Note :** Le paramètre *\** est ignoré si la valeur retournée n'est pas de type objet.
 
 #### Exemple 1 
 
@@ -144,8 +113,6 @@ Vous souhaitez créer une collection 4D à partir d'un tableau JSON :
 
 #### Exemple 6 
 
-Vous souhaitez analyser la chaîne suivante et obtenir le chemin et la position de chaque propriété :
-
 ```undefined
 {
     "alpha": 4552,
@@ -160,27 +127,6 @@ Vous souhaitez analyser la chaîne suivante et obtenir le chemin et la position 
         }
     ]
 }
-```
-
-Vous pouvez écrire :
-
-```4d
- var $obInfo : Object
- $obInfo=JSON Parse("json_string";Is object;*) //* pour ajouter la propriété __symbols
-  //dans l'objet $obInfo retourné
-```
-
-L'objet *$obInfo* contient :
-
-```undefined
-{alpha:4552,
-beta:[{echo:45,delta:text1},{echo:52,golf:text2}],
-__symbols:{alpha:{line:2,offset:4},
-beta:{line:3,offset:4},
-beta[0].echo:{line:5,offset:12},
-beta[0].delta:{line:6,offset:12},
-beta[1].echo:{line:9,offset:12},
-beta[1].golf:{line:10,offset:12}}}
 ```
 
 #### Voir aussi 
