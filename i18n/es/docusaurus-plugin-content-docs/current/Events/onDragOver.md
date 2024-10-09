@@ -15,7 +15,7 @@ El evento `On Drag Over` se envía repetidamente al objeto de destino cuando el 
 - Según la naturaleza y el tipo de datos en el portapapeles, se **acepta** o **rechaza** el arrastrar y soltar.
 
 To **accept** the drag, the destination object method must return 0 (zero).
-To **reject** the drag, the object method must return -1 (minus one).
+Para **rechazar** el arrastrar, el método de objeto debe retornar -1 (menos uno).
 Durante un evento `On Drag Over`, 4D trata el método objeto como una función. Si no se devuelve ningún resultado, 4D asume que el arrastre es aceptado.
 
 Si acepta el arrastre, el objeto de destino se resalta. Si rechaza el arrastre, el destino no se resalta. Aceptar el arrastre no significa que los datos arrastrados vayan a ser insertados en el objeto de destino. Esto solo significa que si se soltara el botón del ratón en este punto, el objeto de destino aceptaría los datos arrastrados y se dispararía el evento [`On Drop`](onDrop.md).
