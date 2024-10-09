@@ -813,10 +813,10 @@ module.exports =
 					"type": "category",
 					"label": "Mail",
 					"items": [
-						"commands-legacy/imap-new-transporter",
-						"commands-legacy/mail-convert-from-mime",
-						"commands-legacy/mail-convert-to-mime",
-						"commands-legacy/mail-new-attachment",
+						"commands/imap-new-transporter",
+						"commands/mail-convert-from-mime",
+						"commands/mail-convert-to-mime",
+						"commands/mail-new-attachment",
 						"commands-legacy/pop3-new-transporter",
 						"commands-legacy/smtp-new-transporter"
 					]

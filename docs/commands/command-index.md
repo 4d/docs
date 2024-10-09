@@ -489,7 +489,7 @@ title: Index
 <a id="I"><b>I</b></a>
 
 [`IDLE`](../commands-legacy/idle.md)<br/>
-[`IMAP New transporter`](../commands-legacy/imap-new-transporter.md)<br/>
+[`IMAP New transporter`](imap-new-transporter.md)<br/>
 [`IMPORT DATA`](../commands-legacy/import-data.md)<br/>
 [`IMPORT DIF`](../commands-legacy/import-dif.md)<br/>
 [`IMPORT STRUCTURE`](../commands-legacy/import-structure.md)<br/>
@@ -642,9 +642,9 @@ title: Index
 [`Macintosh command down`](../commands-legacy/macintosh-command-down.md)<br/>
 [`Macintosh control down`](../commands-legacy/macintosh-control-down.md)<br/>
 [`Macintosh option down`](../commands-legacy/macintosh-option-down.md)<br/>
-[`MAIL Convert from MIME`](../commands-legacy/mail-convert-from-mime.md)<br/>
-[`MAIL Convert to MIME`](../commands-legacy/mail-convert-to-mime.md)<br/>
-[`MAIL New attachment`](../commands-legacy/mail-new-attachment.md)<br/>
+[`MAIL Convert from MIME`](mail-convert-from-mime.md)<br/>
+[`MAIL Convert to MIME`](mail-convert-to-mime.md)<br/>
+[`MAIL New attachment`](mail-new-attachment.md)<br/>
 [`Match regex`](../commands-legacy/match-regex.md)<br/>
 [`Max`](../commands-legacy/max.md)<br/>
 [`MAXIMIZE WINDOW`](../commands-legacy/maximize-window.md)<br/>
