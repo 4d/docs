@@ -153,6 +153,10 @@ Pode usar a propriedade virtual "comprimento" com este comando. Esta propriedade
 
 ##### Atributo Linking array com múltiplos argumentos pesquisa 
 
+(Novo em 4D v16 R2) Quando procurar um atributo de array com múltiplos argumentos de pesquisa unidos pelo operador AND, pode querer ter certeza que apenas registros contendo elementos que correspondam a todos os argumentos sejam retornados, e não registros onde argumentos podem ser encontrados em diferentes elementos. Para fazer isso, precisa linkar argumentos de pesquisa a elementos array, de maneira que apenas elementos únicos contendo argumentos linkados são encontrados. 
+
+Por exemplo, com os dois registros abaixo:
+
 ```undefined
 {
     "name":"martin",
@@ -171,6 +175,31 @@ Pode usar a propriedade virtual "comprimento" com este comando. Esta propriedade
             } ]
 }
 ```
+
+Se quiser encontrar pessoas com um local "home" na cidade "paris". Se escrever: 
+
+```4d
+ QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[].city";=;"paris";*)
+ QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[].kind";=;"home")
+```
+
+... a pesquisa retorna "martin" e "smith" porque "smith" tem um elemento "local" cujo "tipo" é "home" e um elemento "local" cuja "cidade" é "paris", mesmo sendo elementos diferentes.
+
+Se quiser obter registros onde argumentos correspondentes estão no mesmo elemento, é necessário **argumentos linkados**. Para linkar argumentos de pesquisa
+
+* Adicionar uma letra entre \[\] no primeiro caminho para linkar e repetir a mesma letra em todos os argumentos linkados. Por exemplo: **locations\[a\].city** e **locations\[a\].kind**. Pode usar qualquer letra no aflabeto latino (não diferencia maiúsculas e minúsculas).
+* Para adicionar diferentes critérios linkados, use outra letra (ver exemplo abaixo). Pode criar até 26 combinações de critérios em uma única pesquisa.
+
+Com os registros acima, se escrever:
+
+```4d
+ QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[a].city";=;"paris";*)
+ QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[a].kind";=;"home")
+```
+
+... a pesquisa vai retornar apenas "martin" porque tem um elemento "location" cujo "kind" é "home" e cuja "city" é "paris". A pesquisa não vai retornar "smith" porque os valores "home" e "paris" não estão no mesmo elemento array. Ver os exemplos abaixo para mais exemplos dessa propriedade. 
+
+**Nota:** Usar uma sintaxe linkada em uma única linha de pesquisa dá os mesmos resultados como uma pesquisa padrão, exceto quando usando o operador "#" : neste caso, resultados inválidos podem ser retornados. Esta sintaxe inválida portanto não é compatível. 
 
 #### Exemplo 1 
 
@@ -203,6 +232,8 @@ O comando **QUERY BY ATTRIBUTE** pode ser usado para encontrar registros nos qua
 
 #### Exemplo 3 
 
+Você quer encontrar um campo que contém os atributos do array. Com os dois registros a seguir:
+
 ```undefined
 {
     "name":"martin",
@@ -222,6 +253,22 @@ O comando **QUERY BY ATTRIBUTE** pode ser usado para encontrar registros nos qua
 }
 ```
 
+ ... **QUERY BY ATTRIBUTE** encontra pessoas com uma localização "paris" usando este comando:
+
+```4d
+  //indica o atributo array com a sintaxe ".[]"
+ QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations.[].city";=;"paris")
+  //Seleciona "martin"e  "smith"
+```
+
+**Nota**: Se você tiver definido diversos critérios no mesmo atributo array, os critérios coincidentes não se aplicam necessariamente ao mesmo elemento do array. No exemplo a seguir, a pesquisa retornará "smith", porque tem um elemento "locations" cujo "kind" (tipo) é "home" e um elemento "locations", cujas "city" é "paris" Mesmo se esse não for o mesmo elemento:
+
+```4d
+ QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations.[].kind";=;"home";*)
+ QUERY BY ATTRIBUTE([People];&;[People]OB_Field;"locations.[].city";=;"paris")
+  //Selecciona "smith"
+```
+
 #### Exemplo 4 
 
  Este exemplo ilustra o uso da propriedade virtual "comprimento". Seu banco de dados tem um campo de objeto \[Customer\]full\_Data com os dados abaixo:
@@ -235,6 +282,8 @@ Se quiser obter os registros para qualquer cliente que tenha duas ou mais crian�
 ```
 
 #### Exemplo 5 
+
+Estes exemplos ilustram as várias combinações disponíveis de argumentos de pesquisa linkados em arrays. Assuma que você tem os registros abaixo:
 
 ```undefined
 [ {
@@ -301,6 +350,50 @@ Se quiser obter os registros para qualquer cliente que tenha duas ou mais crian�
         } ]
       } ]
  } ]
+```
+
+Para encontrar pessoas que tenham uma criança chamada "Betty" com 15 anos:
+
+```4d
+ QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[a].Name";=;"Betty";*)
+ QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[a].Age";=;"15")
+  //retorna "Victor"
+ 
+ QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[].Name";=;"Betty";*)
+ QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[].Age";=;"15")
+  //retorna "Sam", "Louis" e "Victor"
+```
+
+Para encontrar pessoas que tenham uma filha chamada "Betty", de 15 anos, e um filho chamado "Harry" de 9 anos:
+
+```4d
+ QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[a].Name";=;"Betty";*)
+ QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[a].Age";=;"15";*)
+ QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[b].Name";=;"Harry";*)
+ QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[b].Age";=;"9")
+  //retorna "Victor"
+ 
+ QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[].Name";=;"Betty";*)
+ QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[].Age";=;"15";*)
+ QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[].Name";=;"Harry";*)
+ QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[].Age";=;"9")
+  //retorna "Sam" e "Victor"
+```
+
+Para achar pessoas que tenham um filho de 15 anos chamado "Harry" que tenha um brinquedo "blue car" (pesquisar em um array de arrays):
+
+```4d
+ QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[a].Name";=;"Harry";*)
+ QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[a].Age";=;"15";*)
+ QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[a].Toy[b].Name";=;"Car";*)
+ QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[a].Toy[b].Color";=;"Blue")
+  //retorna "Sam"
+ 
+ QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[].Name";=;"Harry";*)
+ QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[].Age";=;"15";*)
+ QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[].Toy[].Name";=;"Car";*)
+ QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[].Toy[].Color";=;"Blue")
+  //retorna "Sam" e "Louis"
 ```
 
 #### Variáveis e conjuntos do sistema 

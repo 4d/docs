@@ -56,11 +56,17 @@ En todos los casos, el comando devuelve un objeto que contiene las siguientes pr
 
 #### Definir punteros JSON 
 
+JSON Pointer es un estándar que define una sintaxis de cadena que se puede utilizar para acceder a un campo o a un valor clave particular en todo el documento JSON. El estándar se ha descrito en [RFC 6901](https://tools.ietf.org/html/rfc6901). 
+
+Un puntero JSON es, estrictamente hablando, una cadena compuesta de partes separadas por '/'. Un puntero JSON normalmente se encuentra en un URI que especifica el documento en el que se resolverá el puntero. El carácter de fragmento "#" se utiliza en la URI para especificar el puntero JSON Por convención, se puede encontrar un URI que contenga un puntero JSON en una propiedad de objeto JSON que debe llamarse "$ ref".
+
 ```undefined
 {
    "$ref":<path>#<json_pointer>
 }
 ```
+
+**Nota**: 4D no soporta el carácter "-" como referencia a elementos de array inexistentes.
 
 ##### Recursividad y resolución de ruta 
 
@@ -104,6 +110,8 @@ Este ejemplo básico ilustra cómo un puntero JSON se puede definir y reemplazar
 
 #### Ejemplo 2 
 
+Usted quiere reutilizar "billingAddress" como "shippingAddress" en el siguiente objeto JSON (llamado $oMyConfig):
+
 ```undefined
 {
     "lastname": "Doe",
@@ -117,7 +125,37 @@ Este ejemplo básico ilustra cómo un puntero JSON se puede definir y reemplazar
 }
 ```
 
+Después de ejecutar este código:
+
+```4d
+ $oResult:=JSON Resolve pointers($oMyConfig)
+```
+
+... se devuelve el siguiente objeto:
+
+```undefined
+{
+    "success": true,
+    "value": {
+        "lastname": "Doe",
+        "firstname": "John",
+        "billingAddress": {
+            "street": "95 S. Market Street",
+            "city": "San Jose",
+            "state": "California" 
+        },
+        "shippingAddress": {
+            "street": "95 S. Market Street",
+            "city": "San Jose",
+            "state": "California" 
+        }
+    }
+}
+```
+
 #### Ejemplo 3 
+
+Este ejemplo ilustra el efecto de la opción "fusionar". Usted desea editar los derechos de un usuario basándose en un archivo predeterminado.
 
 ```undefined
 {
@@ -125,6 +163,66 @@ Este ejemplo básico ilustra cómo un puntero JSON se puede definir y reemplazar
         "$ref": "defaultSettings.json#/defaultRights",
         "delete": true,
         "id": 456
+    }
+}
+```
+
+El archivo *defaultSettings.json* contiene:
+
+```undefined
+{
+    "defaultRights":
+    {
+        "edit": true,
+        "add": false,
+        "delete": false
+    }
+}
+```
+
+Si ejecuta:
+
+```4d
+ var $options : Object
+ $options:=New object("merge";False) //reemplazar contenidos
+ $oResult:=JSON Resolve pointers($oMyConfig;$options)
+```
+
+el valor resultante es exactamente el contenido del archivo *defaultSettings.json*:
+
+```undefined
+{
+    "success": true,
+    "value": {
+        "rights": {
+            "edit": true,
+            "add": false,
+            "delete": false
+        }
+    }
+}
+```
+
+Si ejecuta:
+
+```4d
+ var $options : Object
+ $options:=New object("merge";True) //fusionar ambos contenidos
+ $oResult:=JSON Resolve pointers($oMyConfig;$options)
+```
+
+...el valor resultante es una versión modificada del objeto original:
+
+```undefined
+{
+    "success": true,
+    "value": {
+        "rights": {
+            "edit": true,
+            "add": false,
+            "delete": true,
+            "id": 456
+        }
     }
 }
 ```

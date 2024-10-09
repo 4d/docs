@@ -34,6 +34,22 @@ Utilizando este comando, puede recuperar toda información almacenada en sus doc
 
 #### Ejemplo 
 
+Desea cargar y convertir un documento 4D View almacenado en el disco:
+
+```4d
+ var $blob : Blob
+ var $object : Object
+ DOCUMENT TO BLOB("document.4PV";$blob)
+ $object:=Load 4D View document($blob)
+ ALERT("Document title is "+$object.title)
+```
+
+Por ejemplo, si convierte el siguiente documento:
+
+![](../assets/en/commands/pict3631552.en.png)
+
+Obtendrá el siguiente resultado (objeto stringified):
+
 ```undefined
 {
     "version": 9,
@@ -176,3 +192,5 @@ Utilizando este comando, puede recuperar toda información almacenada en sus doc
     ]
 }
 ```
+
+**Nota:** para más información sobre el formato del [objeto](# "Datos estructurados como forma de objeto nativo 4D"), devuelto, contacte los servicios técnicos de 4D.

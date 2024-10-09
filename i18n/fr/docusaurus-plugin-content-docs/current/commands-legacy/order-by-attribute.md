@@ -52,6 +52,8 @@ Quelle que soit la façon dont le tri a été défini, si l'opération de tri do
 
 #### Exemple 
 
+Vous souhaitez trier la sélection courante par âge (descendant) puis par nom (ascendant). L'ordre par défaut est :
+
 ```undefined
 // [Customer]OB_Info contient un export partiel
 {"LastName":"Giorgio","age":33,"client":true},
@@ -74,6 +76,37 @@ Quelle que soit la façon dont le tri a été défini, si l'opération de tri do
 {"LastName":"Belami","age":"Forty-six","client":true},
 {"LastName":"Smeldorf","age":22,"client":true},
 {"LastName":"Smeldorf","age":70,"client":true}
+```
+
+Après exécution du tri :
+
+```4d
+ ORDER BY ATTRIBUTE([Customer];[Customer]OB_Info;"age";<;[Customer]OB_Info;"LastName";>)
+```
+
+Les enregistrements sont dans l'ordre suivant : 
+
+```undefined
+{"LastName":"Smeldorf","age":70,"client":true}
+{"LastName":"Garbando","age":60,"client":false,"Sex":"male"},
+{"LastName":"Delaferme","age":54,"client":true}, 
+{"LastName":"Smeldorf","age":54,"client":true},
+{"LastName":"Jones","age":52,"client":true},
+{"LastName":"Johnson","age":44,"client":false},
+{"LastName":"Kerrey","age":44,"client":true},
+{"LastName":"Wesson","age":44,"client":true},
+{"LastName":"Sarah","age":42,"client":true},
+{"LastName":"Smith","age":42,"client":true},
+{"LastName":"Evan","age":36,"client":true},
+{"LastName":"Collins","age":33,"client":true,"Sex":"female"},
+{"LastName":"Giorgio","age":33,"client":true},
+{"LastName":"Smeldorf","age":33,"client":true},
+{"LastName":"Smeldorf","age":22,"client":true},
+{"LastName":"Hamp","age":"Sixty","client":true}, //les valeurs de type chaîne dans age
+{"LastName":"Belami","age":"Forty-six","client":true}, //sont gérés séparément
+{"LastName":"Mikken","age":"Forty-six","client":true}
+{"LastName":"Gordini","client":true}, //en fin car
+{"LastName":"Martin","client":true} //age est null (manquant)
 ```
 
 #### Voir aussi 

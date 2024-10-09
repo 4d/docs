@@ -30,6 +30,8 @@ En contextos soportados, puede acceder a todas las propiedades de los elementos 
 
 #### Ejemplo 1 
 
+Una colección de objetos, cada uno con esta estructura:
+
 ```undefined
 {  
 "ID": 1234
@@ -52,6 +54,26 @@ En contextos soportados, puede acceder a todas las propiedades de los elementos 
 },...
  
 ```
+
+En el list box, cada columna se refiere a una de las propiedades del objeto, ya sea directamente (This.name), indirectamente (This.employees.length), o mediante una expresión (*getPicture*) en la que se puede usar directamente. El list box se ve así:
+
+![](../assets/en/commands/pict3776706.en.png)
+
+El método proyecto *GetPicture* se ejecuta automáticamente durante el evento **On display detail**:
+
+```4d
+  //Método GetPicture
+ var $0 : Picture
+ If(This.isFemale)
+    $0:=Form.genericFemaleImage
+ Else
+    $0:=Form.genericMaleImage
+ End if
+```
+
+Una vez el formulario se ejecuta, puede ver el resultado:
+
+![](../assets/en/commands/pict3783169.en.png)
 
 #### Ejemplo 2 
 

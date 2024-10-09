@@ -33,6 +33,15 @@ displayed_sidebar: docs
 
 #### 例題 
 
+*sendMail* プロジェクトメソッドの属性を取得したい場合を考えます。以下の用にコードを書くことができます:
+
+```4d
+ var $att : Object
+ METHOD GET ATTRIBUTES("sendMail";$att)
+```
+
+実行後、$att には例えば以下のような値が含まれます:
+
 ```undefined
 {
     "invisible":false,

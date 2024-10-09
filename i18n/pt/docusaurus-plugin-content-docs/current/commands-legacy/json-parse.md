@@ -18,6 +18,36 @@ displayed_sidebar: docs
 
 #### Descrição 
 
+<!--REF #_command_.JSON Parse.Summary-->O comando **JSON Parse** analisa o conteúdo de uma cadeia com formato JSON e extraem os valores que podem armazenar em um campo ou variável 4D.<!-- END REF--> Este comando não realiza os dados JSON, realiza a ação inversa do comando [JSON Stringify](json-stringify.md).  
+  
+Em *cadeiaJSON*, passe a cadeia com formato JSON cujo conteúdo deseja analisar. Esta cadeia deve ter o formato correto, caso contrário é gerado um erro de análise.  
+  
+**Nota**: Se utilizar ponteiros, deve chamar ao comando [JSON Stringify](json-stringify.md) antes de chamar a **JSON Parse**.  
+  
+Por padrão, se omitir o parâmetro *tipo*, 4D tentará converter o valor obtido no tipo da variável ou do campo que se utiliza para armazenar os resultados (se foi definido). Caso contrário, 4D tenta deduzir seu tipo. Também pode forçar a interpretação do tipo passando o parâmetro *tipo*: passe uma das seguintes constantes, disponíveis no tema *Tipos de campos e variáveis*:
+
+| Constante     | Tipo          | Valor |
+| ------------- | ------------- | ----- |
+| Is Boolean    | Inteiro longo | 6     |
+| Is collection | Inteiro longo | 42    |
+| Is date       | Inteiro longo | 4     |
+| Is longint    | Inteiro longo | 9     |
+| Is object     | Inteiro longo | 38    |
+| Is real       | Inteiro longo | 1     |
+| Is text       | Inteiro longo | 2     |
+| Is time       | Inteiro longo | 11    |
+  
+  
+**Notas**:
+
+* Os valores de tipo Real devem ser incluídos na classificação ± 10.421e±10
+* Nos valores de tipo de texto, todos os caracteres especiais devem ser evadidos, incluindo as aspas (ver exemplos)
+* Como padrão quando usa a constante Is date, o comando considera que uma string de dados contém uma hora local e não GMT. Pode moficar essa configuração usando o seletor Dates inside objects ou o comando \[#cmd id="642"/\].
+* A partir de 4D v16 R6, se a configuração de armazenamento de dados atual for "date type", strings de data JSOn em formato "AAAA-MM-DD" são retornadas automaticamente como valores de data pelo comando **JSON Parse**. Para saber mais sobre essa configuração, vjea a opção "Use date type instead of ISO date format in objects" em *Página Compatibilidade*..
+* Valores tipo hora podem ser retornados de números em strings. Como padrão 4D considera o o valor como número de segundos.
+
+Se passar o parâmetro opcional \* e se o parâmetro jsonString representar um objeto, o objeto retornado contém uma propriedade adicional chamada \_\_symbols que oferece rota, posição de linha e o deslocamento de linha de cada propriedade e sub-propriedade do objeto. Essa informação pode ser útil para debugar. A estrtura das propriedades \_\_symbols é:  
+  
 ```undefined
 __symbols:{//descrição objeto
    myAtt.mySubAtt...:{ //propriedade rota
@@ -26,6 +56,9 @@ __symbols:{//descrição objeto
       }
    }
 ```
+  
+  
+Nota: O parâmetro \* é ignorado se o valor retornado não for do tipo objeto.
 
 #### Exemplo 1 
 
@@ -111,6 +144,8 @@ Se quiser criar uma coleção 4D de um array JSON:
 
 #### Exemplo 6 
 
+Se quiser analisar a string abaixo e obter a posição de linha e deslocamento de linha de cada propriedade:
+
 ```undefined
 {
     "alpha": 4552,
@@ -125,6 +160,27 @@ Se quiser criar uma coleção 4D de um array JSON:
         }
     ]
 }
+```
+
+Pode escrever:
+
+```4d
+ var $obInfo : Object
+ $obInfo=JSON Parse("json_string";Is object;*) //* para obter a propriedade  __symbols
+  //no objeto  $obInfo retornado
+```
+
+O objeto *$obInfo* contém:
+
+```undefined
+{alpha:4552,
+beta:[{echo:45,delta:text1},{echo:52,golf:text2}],
+__symbols:{alpha:{line:2,offset:4},
+beta:{line:3,offset:4},
+beta[0].echo:{line:5,offset:12},
+beta[0].delta:{line:6,offset:12},
+beta[1].echo:{line:9,offset:12},
+beta[1].golf:{line:10,offset:12}}}
 ```
 
 #### Ver também 

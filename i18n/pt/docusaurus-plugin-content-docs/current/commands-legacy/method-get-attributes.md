@@ -31,6 +31,15 @@ Se o comando for executado a partir de um componente, aplica-se por padrão para
 
 #### Exemplo 
 
+Se você quiser obter os atributos do método de projeto *sendMail*, pode escrever:
+
+```4d
+ var $att : Object
+ METHOD GET ATTRIBUTES("sendMail";$att)
+```
+
+Depois da execução, $att contém, por exemplo:
+
 ```undefined
 {
     "invisible":false,

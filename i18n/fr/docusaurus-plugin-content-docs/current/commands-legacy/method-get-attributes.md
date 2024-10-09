@@ -31,6 +31,15 @@ Si la commande est exécutée depuis un composant, elle s’applique par défaut
 
 #### Exemple 
 
+Vous souhaitez connaître les attributs de la méthode projet *sendMail*. Vous pouvez écrire :
+
+```4d
+ var $att : Object
+ METHOD GET ATTRIBUTES("sendMail";$att)
+```
+
+A l'issue de l'exécution, $att contient, par exemple :
+
 ```undefined
 {
     "invisible":false,
