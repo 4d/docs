@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GOTO RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table de l'enregistrement de destination ou Table par défaut si ce paramètre est omis |
-| enregistrement | Entier long | &#x1F852; | Numéro renvoyé par Numero enregistrement |
+| laTable | Table | &srarr; | Table de l'enregistrement de destination ou Table par défaut si ce paramètre est omis |
+| enregistrement | Integer | &srarr; | Numéro renvoyé par Numero enregistrement |
 
 <!-- END REF-->
 

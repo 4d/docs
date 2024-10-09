@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Tan.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| number | 実数 | &#x1F852; | タンジェントを求めるラジアン値 |
-| 戻り値 | 実数 | &#x1F850; | タンジェント値 |
+| number | Real | &srarr; | タンジェントを求めるラジアン値 |
+| 戻り値 | Real | &larr; | タンジェント値 |
 
 <!-- END REF-->
 

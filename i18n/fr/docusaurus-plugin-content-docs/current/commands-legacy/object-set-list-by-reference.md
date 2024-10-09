@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET LIST BY REFERENCE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| typeListe | Entier long | &#x1F852; | Type de liste : Liste énumération, Liste obligations ou Liste exclusions |
-| liste | RefListe | &#x1F852; | Numéro de référence de liste |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| typeListe | Integer | &srarr; | Type de liste : Liste énumération, Liste obligations ou Liste exclusions |
+| liste | Integer | &srarr; | Numéro de référence de liste |
 
 <!-- END REF-->
 

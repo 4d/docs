@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get text from pasteboard.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | String | &#x1F850; | Returns the text (if any) present in the pasteboard |
+| Function result | String | &larr; | Returns the text (if any) present in the pasteboard |
 
 <!-- END REF-->
 

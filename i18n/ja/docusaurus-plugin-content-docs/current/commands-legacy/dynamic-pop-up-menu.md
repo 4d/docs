@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Dynamic pop up menu.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | MenuRef | &#x1F852; | メニュー参照 |
-| default | 文字 | &#x1F852; | デフォルトで選択される項目のパラメーター |
-| xCoord | 倍長整数 | &#x1F852; | 左上隅のx座標 |
-| yCoord | 倍長整数 | &#x1F852; | 左上隅のy座標 |
-| 戻り値 | 文字 | &#x1F850; | 選択されたメニュー項目のパラメーター |
+| menu | Text | &srarr; | メニュー参照 |
+| default | Text | &srarr; | デフォルトで選択される項目のパラメーター |
+| xCoord | Integer | &srarr; | 左上隅のx座標 |
+| yCoord | Integer | &srarr; | 左上隅のy座標 |
+| 戻り値 | Text | &larr; | 選択されたメニュー項目のパラメーター |
 
 <!-- END REF-->
 

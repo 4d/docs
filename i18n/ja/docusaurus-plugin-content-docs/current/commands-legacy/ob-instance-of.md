@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Instance of.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | オブジェクト | &#x1F852; | クラスをテストするオブジェクト |
-| class | オブジェクト | &#x1F852; | 属しているかをテストするクラス |
-| 戻り値 | ブール | &#x1F850; | オブジェクトが指定されたクラスまたはその子クラスに属する場合にはTrue、それ以外の場合にはfalse |
+| object | Object | &srarr; | クラスをテストするオブジェクト |
+| class | Object | &srarr; | 属しているかをテストするクラス |
+| 戻り値 | Boolean | &larr; | オブジェクトが指定されたクラスまたはその子クラスに属する場合にはTrue、それ以外の場合にはfalse |
 
 <!-- END REF-->
 

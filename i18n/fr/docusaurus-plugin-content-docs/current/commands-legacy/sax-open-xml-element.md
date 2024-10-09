@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX OPEN XML ELEMENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | RefDoc | &#x1F852; | Référence du document ouvert |
-| balise | Chaîne | &#x1F852; | Nom de l’élément à ouvrir |
-| nomAttribut | Chaîne | &#x1F852; | Nom d’attribut |
-| valeurAttribut | Chaîne | &#x1F852; | Valeur d’attribut |
+| document | Time | &srarr; | Référence du document ouvert |
+| balise | Text | &srarr; | Nom de l’élément à ouvrir |
+| nomAttribut | Text | &srarr; | Nom d’attribut |
+| valeurAttribut | Text | &srarr; | Valeur d’attribut |
 
 <!-- END REF-->
 

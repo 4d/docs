@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.POP3 New transporter.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| server | Objeto | &#x1F852; | Mail server information |
-| Resultado | Objeto | &#x1F850; | POP3 transporter object |
+| server | Object | &srarr; | Mail server information |
+| Resultado | Object | &larr; | POP3 transporter object |
 
 <!-- END REF-->
 

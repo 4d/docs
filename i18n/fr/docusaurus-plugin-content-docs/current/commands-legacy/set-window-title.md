@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET WINDOW TITLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| titre | Chaîne | &#x1F852; | Titre de la fenêtre |
-| fenêtre | RefFen | &#x1F852; | Numéro de référence de fenêtre ou Fenêtre au premier plan du process courant si ce paramètre est omis |
+| titre | Text | &srarr; | Titre de la fenêtre |
+| fenêtre | Integer | &srarr; | Numéro de référence de fenêtre ou Fenêtre au premier plan du process courant si ce paramètre est omis |
 
 <!-- END REF-->
 

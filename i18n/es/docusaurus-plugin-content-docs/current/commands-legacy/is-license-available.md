@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is license available.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| licencia | Entero largo | &#x1F852; | Plug-in al cual realizar una prueba de validez de la licencia |
-| Resultado | Booleano | &#x1F850; | True si el plug-in está disponible,  sino False |
+| licencia | Integer | &srarr; | Plug-in al cual realizar una prueba de validez de la licencia |
+| Resultado | Boolean | &larr; | True si el plug-in está disponible,  sino False |
 
 <!-- END REF-->
 

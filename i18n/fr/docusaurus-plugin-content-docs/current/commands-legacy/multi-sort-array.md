@@ -5,18 +5,17 @@ slug: /commands/multi-sort-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MULTI SORT ARRAY.Syntax-->**MULTI SORT ARRAY** ( *tableau* {; *sensDuTri*}{; *tableau2* ; *sensDuTri2* ; ... ; *tableauN* ; *sensDuTriN*} ) 
-        
-            MULTI SORT ARRAY ( *tabPointeurs* ; *tabTris* )<!-- END REF-->
+<!--REF #_command_.MULTI SORT ARRAY.Syntax-->**MULTI SORT ARRAY** ( *tableau* {; *sensDuTri*}{; *tableau2* ; *sensDuTri2* ; ... ; *tableauN* ; *sensDuTriN*} ) <br/>
+**MULTI SORT ARRAY** ( *tabPointeurs* ; *tabTris* )<!-- END REF-->
 <!--REF #_command_.MULTI SORT ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableau | Tableau | &#x1F852; | Tableau(x) à trier |
-| sensDuTri | Opérateur | &#x1F852; | ">" pour effectuer un tri croissant ou "<" pour effectuer un tri décroissant Si omis  = pas de tri |
+| tableau | Array | &srarr; | Tableau(x) à trier |
+| sensDuTri | * | &srarr; | ">" pour effectuer un tri croissant ou "<" pour effectuer un tri décroissant Si omis  = pas de tri |
 | MULTI SORT ARRAY ( tabPointeurs ; tabTris ) |
 | Paramètre | Type | Description |
-| tabPointeurs | Tableau pointeur | &#x1F852; | Tableau de pointeurs de tableaux |
-| tabTris | Tableau entier long | &#x1F852; | Tableau d’ordres de tri (1 = tri par ordre croissant, -1 = tri par ordre décroissant, 0 = synchronisation avec des tris précédents) |
+| tabPointeurs | Pointer array | &srarr; | Tableau de pointeurs de tableaux |
+| tabTris | Integer array | &srarr; | Tableau d’ordres de tri (1 = tri par ordre croissant, -1 = tri par ordre décroissant, 0 = synchronisation avec des tris précédents) |
 
 <!-- END REF-->
 

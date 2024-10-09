@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PLAY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomObjeto | Cadena | &#x1F852; | Nombre de archivo de sonido o sonido sistemaCadena vacía para detener un sonido asincrónico |
-| canal | Entero largo | &#x1F852; | Si se pasa, canal de salida y ejecución asincrónico Si se omite, ejecución sincrónica |
+| nomObjeto | Text | &srarr; | Nombre de archivo de sonido o sonido sistemaCadena vacía para detener un sonido asincrónico |
+| canal | Integer | &srarr; | Si se pasa, canal de salida y ejecución asincrónico Si se omite, ejecución sincrónica |
 
 <!-- END REF-->
 

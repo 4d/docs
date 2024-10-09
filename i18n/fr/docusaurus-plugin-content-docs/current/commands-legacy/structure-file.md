@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Structure file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Retourner le fichier de structure de la base hôte |
-| Résultat | Chaîne | &#x1F850; | Nom long du fichier de structure de la base |
+| * | Opérateur | &srarr; | Retourner le fichier de structure de la base hôte |
+| Résultat | Text | &larr; | Nom long du fichier de structure de la base |
 
 <!-- END REF-->
 

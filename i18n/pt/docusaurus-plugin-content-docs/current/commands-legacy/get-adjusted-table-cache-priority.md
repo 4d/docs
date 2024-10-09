@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get adjusted table cache priority.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Tabela | Tabela | &#x1F852; | Tabela para a qual os valores de prioridade escalares serão recuperados |
-| Resultado | Inteiro longo | &#x1F850; | Valor atual de prioridades para campos escalares |
+| Table | Table | &srarr; | Tabela para a qual os valores de prioridade escalares serão recuperados |
+| Resultado | Integer | &larr; | Valor atual de prioridades para campos escalares |
 
 <!-- END REF-->
 

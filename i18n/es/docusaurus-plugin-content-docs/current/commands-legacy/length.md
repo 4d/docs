@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Length.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| cadena | Cadena | &#x1F852; | Cadena de  la cual devolver la longitud |
-| Resultado | Entero largo | &#x1F850; | Longitud de la cadena |
+| cadena | Text | &srarr; | Cadena de  la cual devolver la longitud |
+| Resultado | Integer | &larr; | Longitud de la cadena |
 
 <!-- END REF-->
 

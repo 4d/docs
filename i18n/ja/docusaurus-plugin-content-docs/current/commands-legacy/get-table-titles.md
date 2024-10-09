@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET TABLE TITLES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| tableTitles | テキスト配列 | &#x1F858; | カレントテーブルの名前 |
-| tableNums | 倍長整数配列 | &#x1F858; | テーブル番号 |
+| tableTitles | Text array | &harr; | カレントテーブルの名前 |
+| tableNums | Integer array | &harr; | テーブル番号 |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Trigger level.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Entier long | &#x1F850; | Niveau d'exécution du trigger (0 si hors du cycle d'exécution du trigger) |
+| Résultat | Integer | &larr; | Niveau d'exécution du trigger (0 si hors du cycle d'exécution du trigger) |
 
 <!-- END REF-->
 

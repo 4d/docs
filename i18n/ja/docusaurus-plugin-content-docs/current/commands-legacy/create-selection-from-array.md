@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | セレクションを作成するテーブル |
-| recordArray | 倍長整数, ブール配列 | &#x1F852; | レコード番号の配列, または ブール配列 (True = レコードをセレクションに含める False = レコードをセレクションに含めない) |
-| selectionName | 文字 | &#x1F852; | 作成する命名セレクションの名前, または 引数を省略した場合、コマンドをカレント セレクションに適用する |
+| aTable | Table | &srarr; | セレクションを作成するテーブル |
+| recordArray | Integer, Boolean array | &srarr; | レコード番号の配列, または ブール配列 (True = レコードをセレクションに含める False = レコードをセレクションに含めない) |
+| selectionName | Text | &srarr; | 作成する命名セレクションの名前, または 引数を省略した場合、コマンドをカレント セレクションに適用する |
 
 <!-- END REF-->
 

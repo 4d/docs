@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD TITLES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table for which you want to find out the field names |
-| fieldTitles | Text array | &#x1F858; | Current field names |
-| fieldNums | Longint array | &#x1F858; | Field numbers |
+| aTable | Table | &srarr; | Table for which you want to find out the field names |
+| fieldTitles | Text array | &harr; | Current field names |
+| fieldNums | Integer array | &harr; | Field numbers |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Count parameters.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Inteiro longo | &#x1F850; | Número de parâmetros realmente passado |
+| Resultado | Integer | &larr; | Número de parâmetros realmente passado |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時:objectはオブジェクト名(文字列)省略時:objectは変数 |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名(* 指定時)、または変数(* 省略時) |
-| arrType | 倍長整数 | &#x1F852; | 配列のタイプ |
-| arrPtr | ポインター | &#x1F852; | プロパティに関連付ける配列を指定 |
+| * | 演算子 | &srarr; | 指定時:objectはオブジェクト名(文字列)省略時:objectは変数 |
+| object | any | &srarr; | オブジェクト名(* 指定時)、または変数(* 省略時) |
+| arrType | Integer | &srarr; | 配列のタイプ |
+| arrPtr | Pointer | &srarr; | プロパティに関連付ける配列を指定 |
 
 <!-- END REF-->
 

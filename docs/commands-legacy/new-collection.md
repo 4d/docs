@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.New collection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| value | Number, Text, Date, Object, Collection, Pointer | &#x1F852; | Collection's value(s) |
-| Function result | Collection | &#x1F850; | New collection |
+| value | Number, Text, Date, Object, Collection, Pointer | &srarr; | Collection's value(s) |
+| Function result | Collection | &larr; | New collection |
 
 <!-- END REF-->
 

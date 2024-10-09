@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Month of.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aDate | 日付 | &#x1F852; | 月を取り出す日付 |
-| 戻り値 | 倍長整数 | &#x1F850; | 日付の月を示す数値 |
+| aDate | Date | &srarr; | 月を取り出す日付 |
+| 戻り値 | Integer | &larr; | 日付の月を示す数値 |
 
 <!-- END REF-->
 

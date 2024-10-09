@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Count user processes.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#x1F850; | Number of live processes (excluding internal processes) |
+| Function result | Longint | &larr; | Number of live processes (excluding internal processes) |
 
 <!-- END REF-->
 

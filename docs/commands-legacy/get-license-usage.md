@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get license usage.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Collection | &#x1F850; | A collection of objects with information on the retained licenses. |
+| Function result | Collection | &larr; | A collection of objects with information on the retained licenses. |
 
 <!-- END REF-->
 

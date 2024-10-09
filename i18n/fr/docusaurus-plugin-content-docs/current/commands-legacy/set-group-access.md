@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET GROUP ACCESS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| groupes | Collection | &#x1F852; | Nom(s) de groupe(s) au(x)quel(s) le compte utilisateur doit appartenir durant la session |
+| groupes | Collection | &srarr; | Nom(s) de groupe(s) au(x)quel(s) le compte utilisateur doit appartenir durant la session |
 
 <!-- END REF-->
 

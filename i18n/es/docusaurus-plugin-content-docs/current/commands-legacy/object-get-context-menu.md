@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get context menu.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si * se especifica) o <br/>Campo o variable (si * se omite) |
-| Resultado | Booleano | &#x1F850; | True = menu contextual activo, False = menu contextual inactivo |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &srarr; | Nombre de objeto (si * se especifica) o <br/>Campo o variable (si * se omite) |
+| Resultado | Boolean | &larr; | True = menu contextual activo, False = menu contextual inactivo |
 
 <!-- END REF-->
 

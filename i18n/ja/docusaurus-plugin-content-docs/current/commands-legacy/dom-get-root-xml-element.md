@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get Root XML element.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | 文字 | &#x1F852; | XML要素参照 |
-| 戻り値 | 文字 | &#x1F850; | ルート要素参照 またはエラーの場合 "" |
+| elementRef | Text | &srarr; | XML要素参照 |
+| 戻り値 | Text | &larr; | ルート要素参照 またはエラーの場合 "" |
 
 <!-- END REF-->
 

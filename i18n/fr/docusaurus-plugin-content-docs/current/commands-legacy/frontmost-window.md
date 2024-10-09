@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Frontmost window.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si omis = ignorer les fenêtres flottantes, Si spécifié = prendre en compte les fenêtres flottantes |
-| Résultat | RefFen | &#x1F850; | Numéro de référence de fenêtre |
+| * | Opérateur | &srarr; | Si omis = ignorer les fenêtres flottantes, Si spécifié = prendre en compte les fenêtres flottantes |
+| Résultat | Integer | &larr; | Numéro de référence de fenêtre |
 
 <!-- END REF-->
 

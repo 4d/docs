@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Count screens.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | 倍長整数 | &#x1F850; | モニターの数 |
+| 戻り値 | Integer | &larr; | モニターの数 |
 
 <!-- END REF-->
 

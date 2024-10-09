@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP Parse message.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| data | Text, BLOB | &#x1F852; | Data to be parsed |
-| Function result | Object | &#x1F850; | Object, each property is a part of the multipart data |
+| data | Text, Blob | &srarr; | Data to be parsed |
+| Function result | Object | &larr; | Object, each property is a part of the multipart data |
 
 <!-- END REF-->
 

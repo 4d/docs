@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.On Web Authentication database method.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| $1 | Text | &#x1F858; | URL |
-| $2 | Text | &#x1F858; | HTTP header + HTTP body |
-| $3 | Text | &#x1F858; | IP address of browser |
-| $4 | Text | &#x1F858; | IP address of the server |
-| $5 | Text | &#x1F858; | User name |
-| $6 | Text | &#x1F858; | Password |
-| $0 | Boolean | &#x1F850; | True = request accepted, False = request refused |
+| $1 | Text | &harr; | URL |
+| $2 | Text | &harr; | HTTP header + HTTP body |
+| $3 | Text | &harr; | IP address of browser |
+| $4 | Text | &harr; | IP address of the server |
+| $5 | Text | &harr; | User name |
+| $6 | Text | &harr; | Password |
+| $0 | Boolean | &larr; | True = request accepted, False = request refused |
 
 <!-- END REF-->
 

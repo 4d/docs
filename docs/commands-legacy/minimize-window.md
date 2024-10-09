@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.MINIMIZE WINDOW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| window | WinRef | &#x1F852; | Window reference number or if omitted, all the current process frontmost windows (Windows) or current process frontmost window (Mac OS) |
+| window | Integer | &srarr; | Window reference number or if omitted, all the current process frontmost windows (Windows) or current process frontmost window (Mac OS) |
 
 <!-- END REF-->
 

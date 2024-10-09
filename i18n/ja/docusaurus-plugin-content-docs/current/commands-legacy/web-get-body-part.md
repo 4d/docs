@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB GET BODY PART.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| part | 倍長整数 | &#x1F852; | パート番号 |
-| contents | BLOB, テキスト | &#x1F858; | パートを受け取る変数 |
-| name | テキスト | &#x1F858; | input要素のname属性値 |
-| mimeType | テキスト | &#x1F858; | ファイルのMIMEタイプ |
-| fileName | テキスト | &#x1F858; | 送信されたファイルの名前 |
+| part | Integer | &srarr; | パート番号 |
+| contents | Blob, Text | &harr; | パートを受け取る変数 |
+| name | Text | &harr; | input要素のname属性値 |
+| mimeType | Text | &harr; | ファイルのMIMEタイプ |
+| fileName | Text | &harr; | 送信されたファイルの名前 |
 
 <!-- END REF-->
 

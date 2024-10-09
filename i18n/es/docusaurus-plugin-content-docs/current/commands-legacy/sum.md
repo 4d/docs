@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Sum.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| series | Campo, Array | &#x1F852; | Datos para los cuales se devuelve la suma |
-| rutaAtributo | Texto | &#x1F852; | Ruta de atributo para el cual calcular la suma |
-| Resultado | Real | &#x1F850; | Suma de series |
+| series | Field, Array | &srarr; | Datos para los cuales se devuelve la suma |
+| rutaAtributo | Text | &srarr; | Ruta de atributo para el cual calcular la suma |
+| Resultado | Real | &larr; | Suma de series |
 
 <!-- END REF-->
 

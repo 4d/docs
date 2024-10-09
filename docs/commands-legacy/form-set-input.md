@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SET INPUT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table for which to set the input form, or Default table, if omitted |
-| form | String, Object | &#x1F852; | Name (string) of table form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
-| userForm | String | &#x1F852; | Name of user form to use |
-| * | &#x1F852; | Automatic window size |
+| aTable | Table | &srarr; | Table for which to set the input form, or Default table, if omitted |
+| form | Text, Object | &srarr; | Name (string) of table form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
+| userForm | Text | &srarr; | Name of user form to use |
+| * | Operator |  &srarr; | Automatic window size |
 
 <!-- END REF-->
 

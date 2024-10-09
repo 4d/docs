@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.ONE RECORD SELECT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table in which to reduce the selection to the current record, or Default table, if omitted |
+| aTable | Table | &srarr; | Table in which to reduce the selection to the current record, or Default table, if omitted |
 
 <!-- END REF-->
 

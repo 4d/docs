@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.New shared object.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| property | テキスト | &#x1F852; | 作成するプロパティ名 |
-| value | テキスト, 日付, ブール, ポインター, 数値, オブジェクト | &#x1F852; | プロパティの値 |
-| 戻り値 | オブジェクト | &#x1F850; | 新しい共有オブジェクト |
+| property | Text | &srarr; | 作成するプロパティ名 |
+| value | Text, Date, Boolean, Pointer, Number, Object | &srarr; | プロパティの値 |
+| 戻り値 | Object | &larr; | 新しい共有オブジェクト |
 
 <!-- END REF-->
 

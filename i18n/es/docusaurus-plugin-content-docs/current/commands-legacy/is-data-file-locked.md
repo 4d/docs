@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is data file locked.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Booleano | &#x1F850; | True = archivo/segmento bloqueado False = archivo/segmento no bloqueado |
+| Resultado | Boolean | &larr; | True = archivo/segmento bloqueado False = archivo/segmento no bloqueado |
 
 <!-- END REF-->
 

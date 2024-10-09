@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Printing page.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#x1F850; | Page number of page currently being printed |
+| Function result | Longint | &larr; | Page number of page currently being printed |
 
 <!-- END REF-->
 

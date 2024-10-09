@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.LOAD RECORD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla de la cual cargar el registro actual o Tabla por defecto si se omite |
+| tabla | Table | &srarr; | Tabla de la cual cargar el registro actual o Tabla por defecto si se omite |
 
 <!-- END REF-->
 

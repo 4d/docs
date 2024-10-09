@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get license info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | オブジェクト | &#x1F850; | アクティブなライセンスについての情報 |
+| 戻り値 | Object | &larr; | アクティブなライセンスについての情報 |
 
 <!-- END REF-->
 
@@ -47,6 +47,15 @@ displayed_sidebar: docs
 | \[ \].expirationDate | オブジェクト        | 失効日(任意、上記と同じフォーマット)                       | {"day":1, "month":11, "year":2017}                                         |
 
 #### 例題 
+
+カレントの4D Serverライセンスについての情報を取得したい場合を考えます:
+
+```4d
+ var $obj : Object
+ $obj:=Get license info
+```
+
+*$obj* には例えば、以下のような情報が返されます:
 
 ```undefined
 {

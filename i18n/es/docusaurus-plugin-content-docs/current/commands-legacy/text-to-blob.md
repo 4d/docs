@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.TEXT TO BLOB.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| texto | Cadena | &#x1F852; | Texto a escribir en el BLOB |
-| BLOB | BLOB | &#x1F852; | BLOB a recibir el texto |
-| formatoTexto | Entero largo | &#x1F852; | Formato y conjunto de caracteres de texto |
-| offset &#124; * | Variable, Operador | &#x1F852; | Offset en el BLOB (expresado en bytes) o * para añadir el valor |
-| &#x1F858; | Nuevo offset después de la escritura si se omite * |
+| texto | Text | &srarr; | Texto a escribir en el BLOB |
+| Blob | Blob | &srarr; | BLOB a recibir el texto |
+| formatoTexto | Integer | &srarr; | Formato y conjunto de caracteres de texto |
+| offset &#124; * | Variable, Operador | &srarr; | Offset en el BLOB (expresado en bytes) o * para añadir el valor |
+| &harr; | Nuevo offset después de la escritura si se omite * |
 
 <!-- END REF-->
 

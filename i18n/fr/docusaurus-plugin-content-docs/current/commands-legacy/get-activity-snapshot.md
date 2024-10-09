@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.GET ACTIVITY SNAPSHOT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tabActivités &#124; tabUUID | Tableau objet, Tableau texte | &#x1F858; | Description complète des opérations (tableau objet) ouUUIDs des opérations (tableau texte) |
-| tabDébut | Tableau texte | &#x1F858; | Heures de démarrage des opérations |
-| tabDurée | Tableau entier long | &#x1F858; | Durées des opérations en millisecondes |
-| tabInfo | Tableau texte | &#x1F858; | Description |
-| tabDétails | Tableau objet | &#x1F858; | Détails du contexte et Sous-opérations (le cas échéant) |
-| * | Opérateur | &#x1F852; | Si passé = Lire activité serveur |
+| tabActivités &#124; tabUUID | Tableau objet, Tableau texte | &harr; | Description complète des opérations (tableau objet) ouUUIDs des opérations (tableau texte) |
+| tabDébut | Text array | &harr; | Heures de démarrage des opérations |
+| tabDurée | Integer array | &harr; | Durées des opérations en millisecondes |
+| tabInfo | Text array | &harr; | Description |
+| tabDétails | Object array | &harr; | Détails du contexte et Sous-opérations (le cas échéant) |
+| * | Opérateur | &srarr; | Si passé = Lire activité serveur |
 
 <!-- END REF-->
 

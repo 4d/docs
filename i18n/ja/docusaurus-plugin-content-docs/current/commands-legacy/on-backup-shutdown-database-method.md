@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.On Backup Shutdown database method.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| $1 | 倍長整数 | &#x1F858; | 0 = バックアップは正しく実行された; 0以外の値 = エラー、ユーザーにより中断された、またはOn Backup Startupから返されたコード |
+| $1 | 倍長整数 | &harr; | 0 = バックアップは正しく実行された; 0以外の値 = エラー、ユーザーにより中断された、またはOn Backup Startupから返されたコード |
 
 <!-- END REF-->
 

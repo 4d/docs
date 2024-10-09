@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET BORDER STYLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
-| borderStyle | Longint | &#x1F852; | Border line style |
+| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | any | &srarr; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| borderStyle | Integer | &srarr; | Border line style |
 
 <!-- END REF-->
 

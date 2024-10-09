@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET ENTERABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
-| object | Form object | &#x1F852; | Object Name (if * is specified), or Table or Field or Variable (if * is omitted) |
-| enterable | Boolean, Longint | &#x1F852; | Boolean: True=enterable, False=non-enterableLongint: 0=not enterable, 1=enterable, 2=not enterable not focusable |
+| * | Operator | &srarr; | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
+| object | any | &srarr; | Object Name (if * is specified), or Table or Field or Variable (if * is omitted) |
+| enterable | Boolean, Integer | &srarr; | Boolean: True=enterable, False=non-enterableLongint: 0=not enterable, 1=enterable, 2=not enterable not focusable |
 
 <!-- END REF-->
 

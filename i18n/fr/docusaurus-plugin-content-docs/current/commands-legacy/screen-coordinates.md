@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.SCREEN COORDINATES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| gauche | Entier long | &#x1F858; | Coordonnée gauche de la zone de l'écran |
-| haut | Entier long | &#x1F858; | Coordonnée supérieure de la zone de l'écran |
-| droite | Entier long | &#x1F858; | Coordonnée droite de la zone de l'écran |
-| bas | Entier long | &#x1F858; | Coordonnée inférieure de la zone de l'écran |
-| idEcran | Entier long | &#x1F852; | Numéro de l'écran ou écran principal si omis |
-| zoneEcran | Entier long | &#x1F852; | Ecran entier (par défaut) ou zone de travail |
+| gauche | Integer | &harr; | Coordonnée gauche de la zone de l'écran |
+| haut | Integer | &harr; | Coordonnée supérieure de la zone de l'écran |
+| droite | Integer | &harr; | Coordonnée droite de la zone de l'écran |
+| bas | Integer | &harr; | Coordonnée inférieure de la zone de l'écran |
+| idEcran | Integer | &srarr; | Numéro de l'écran ou écran principal si omis |
+| zoneEcran | Integer | &srarr; | Ecran entier (par défaut) ou zone de travail |
 
 <!-- END REF-->
 

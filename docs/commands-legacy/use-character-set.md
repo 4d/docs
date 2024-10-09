@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.USE CHARACTER SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| map | String, Operator | &#x1F852; | Name of character set  to use, or * to reset to default character set |
-| mapInOut | Longint | &#x1F852; | 0 = Output map 1 = Input map, If omitted, output map |
+| map | Text, * | &srarr; | Name of character set  to use, or * to reset to default character set |
+| mapInOut | Integer | &srarr; | 0 = Output map 1 = Input map, If omitted, output map |
 
 <!-- END REF-->
 

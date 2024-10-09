@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Subtotal.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| data | Field | &#x1F852; | Numeric field or variable to return subtotal |
-| pageBreak | Longint | &#x1F852; | Break level for which to cause a page break |
-| Function result | Real | &#x1F850; | Subtotal of data |
+| data | Field | &srarr; | Numeric field or variable to return subtotal |
+| pageBreak | Integer | &srarr; | Break level for which to cause a page break |
+| Function result | Real | &larr; | Subtotal of data |
 
 <!-- END REF-->
 

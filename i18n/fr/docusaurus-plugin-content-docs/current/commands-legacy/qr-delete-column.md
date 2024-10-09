@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QR DELETE COLUMN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Entier long | &#x1F852; | Référence de la zone |
-| numColonne | Entier long | &#x1F852; | Numéro de colonne |
+| zone | Integer | &srarr; | Référence de la zone |
+| numColonne | Integer | &srarr; | Numéro de colonne |
 
 <!-- END REF-->
 

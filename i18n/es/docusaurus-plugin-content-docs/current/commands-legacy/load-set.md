@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LOAD SET.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla a la cual pertenece el conjunto o Tabla por defecto si se omite |
-| conjunto | Cadena | &#x1F852; | Nombre del conjunto a crear en memoria |
-| doc | Cadena | &#x1F852; | Documento que contiene el conjunto |
+| tabla | Table | &srarr; | Tabla a la cual pertenece el conjunto o Tabla por defecto si se omite |
+| conjunto | Text | &srarr; | Nombre del conjunto a crear en memoria |
+| doc | Text | &srarr; | Documento que contiene el conjunto |
 
 <!-- END REF-->
 

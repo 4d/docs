@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.In footer.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#x1F850; | Returns True if the execution cycle is in footer |
+| Function result | Boolean | &larr; | Returns True if the execution cycle is in footer |
 
 <!-- END REF-->
 

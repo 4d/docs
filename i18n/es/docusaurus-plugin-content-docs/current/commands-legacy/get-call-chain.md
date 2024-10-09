@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get call chain.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Collection | &#x1F850; | Colección de objetos que describen la cadena de llamadas a métodos dentro de un proceso |
+| Resultado | Collection | &larr; | Colección de objetos que describen la cadena de llamadas a métodos dentro de un proceso |
 
 <!-- END REF-->
 

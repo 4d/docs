@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Milliseconds.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Entero largo | &#x1F850; | Número de milisegundos transcurridos desde que se inició el equipo |
+| Resultado | Integer | &larr; | Número de milisegundos transcurridos desde que se inició el equipo |
 
 <!-- END REF-->
 

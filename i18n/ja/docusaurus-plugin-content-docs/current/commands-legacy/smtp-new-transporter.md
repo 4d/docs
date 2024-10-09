@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SMTP New transporter.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| server | オブジェクト | &#x1F852; | Mail server information |
-| 戻り値 | オブジェクト | &#x1F850; | SMTP transporter object |
+| server | Object | &srarr; | Mail server information |
+| 戻り値 | Object | &larr; | SMTP transporter object |
 
 <!-- END REF-->
 

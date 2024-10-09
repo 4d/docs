@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT MOVE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre del objeto (si se especifica *) o Campo o variable (si se omite *) |
-| moveH | Entero largo | &#x1F852; | Valor del movimiento horizontal del objeto (>0 = a la derecha, <0 = a la izquierda) |
-| moveV | Entero largo | &#x1F852; | Valor del movimiento vertical del objeto (>0 = hacia abajo, <0 = hacia arriba) |
-| redimH | Entero largo | &#x1F852; | Valor del redimensionamiento horizontal del objeto |
-| redimV | Entero largo | &#x1F852; | Valor del redimensionamiento vertical del objeto |
-| * | Operador | &#x1F852; | Si se especifica = coordenadas absolutas Si se omite = coordenadas relativas |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &srarr; | Nombre del objeto (si se especifica *) o Campo o variable (si se omite *) |
+| moveH | Integer | &srarr; | Valor del movimiento horizontal del objeto (>0 = a la derecha, <0 = a la izquierda) |
+| moveV | Integer | &srarr; | Valor del movimiento vertical del objeto (>0 = hacia abajo, <0 = hacia arriba) |
+| redimH | Integer | &srarr; | Valor del redimensionamiento horizontal del objeto |
+| redimV | Integer | &srarr; | Valor del redimensionamiento vertical del objeto |
+| * | Operador | &srarr; | Si se especifica = coordenadas absolutas Si se omite = coordenadas relativas |
 
 <!-- END REF-->
 

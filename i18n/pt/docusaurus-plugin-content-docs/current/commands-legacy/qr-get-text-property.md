@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get text property.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Inteiro longo | &#x1F852; | Referência da área |
-| numColuna | Inteiro longo | &#x1F852; | Nº da coluna |
-| numLinha | Inteiro longo | &#x1F852; | N° da linha |
-| propriedade | Inteiro longo | &#x1F852; | Número da propriedade |
-| Function result | Inteiro longo, String | &#x1F850; | Valor da propriedade selecionada |
+| area | Integer | &srarr; | Referência da área |
+| numColuna | Integer | &srarr; | Nº da coluna |
+| numLinha | Integer | &srarr; | N° da linha |
+| propriedade | Integer | &srarr; | Número da propriedade |
+| Function result | Inteiro longo, String | &larr; | Valor da propriedade selecionada |
 
 <!-- END REF-->
 

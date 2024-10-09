@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SAVE RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | カレントレコードを保存するテーブル, または 省略時、デフォルトテーブル |
+| aTable | Table | &srarr; | カレントレコードを保存するテーブル, または 省略時、デフォルトテーブル |
 
 <!-- END REF-->
 

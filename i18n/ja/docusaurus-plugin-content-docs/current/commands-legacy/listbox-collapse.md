@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX COLLAPSE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時、objectはオブジェクト名 (文字列)<br/>省略時、objectは変数 |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
-| recursive | ブール | &#x1F852; | True = サブレベルを折りたたむ<br/>False = サブレベルを折りたたまない |
-| selector | 倍長整数 | &#x1F852; | 折りたたむリストボックスのパーツ |
-| line | 倍長整数 | &#x1F852; | 折り畳むブレーク行の番号、または折り畳むリストボックスレベルの番号 |
-| column | 倍長整数 | &#x1F852; | 折り畳むブレーク列の番号 |
+| * | 演算子 | &srarr; | 指定時、objectはオブジェクト名 (文字列)<br/>省略時、objectは変数 |
+| object | any | &srarr; | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
+| recursive | Boolean | &srarr; | True = サブレベルを折りたたむ<br/>False = サブレベルを折りたたまない |
+| selector | Integer | &srarr; | 折りたたむリストボックスのパーツ |
+| line | Integer | &srarr; | 折り畳むブレーク行の番号、または折り畳むリストボックスレベルの番号 |
+| column | Integer | &srarr; | 折り畳むブレーク列の番号 |
 
 <!-- END REF-->
 

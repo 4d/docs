@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.ABORT PROCESS BY ID.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| uniqueID | 倍長整数 | &#x1F852; | 固有のプロセスID |
+| uniqueID | Integer | &srarr; | 固有のプロセスID |
 
 <!-- END REF-->
 

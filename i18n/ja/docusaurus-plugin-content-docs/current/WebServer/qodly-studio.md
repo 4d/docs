@@ -9,10 +9,10 @@ title: Qodly Studio for 4D
 
 Qodly Studioは、Webビジネスアプリケーションの開発に特化した [**Qodly Cloud Platform**](https://qodly.com) でも使用できます。
 
-Qodly Studio proposes a full-featured web UI, allowing you to:
+Qodly Studio はフル機能の Web UI を提供し、以下のことを可能にします:
 
 - キャンバス上にコンポーネントを配置して Qodlyページを作成する
-- map components to Qodly Sources
+- コンポーネントを Qodly Sources にマッピングする
 - イベントを設定して 4Dコードをトリガーする
 - さらに沢山のことが可能です
 
@@ -52,7 +52,7 @@ Qodly Studioは、[WebAdmin Webサーバー](../Admin/webAdmin.md) によって�
 
 Qodly Studio へのアクセスを有効化するには、2つのレベルで明示的に許可する必要があります:
 
-- at 4D application level
+- 4Dアプリケーションレベルで
 - プロジェクトレベルで
 
 2つのレベルのいずれか (または両方) が有効でない場合、Qodly Studio　へのアクセスは拒否されます (403ページが返されます)。
@@ -81,16 +81,16 @@ Qodly Studio へのアクセスを有効化するには、2つのレベルで明
 
 WebAdmin Webサーバーでの認証には、アクセスキーを使用します。 詳しくは、[アクセスキー](../Admin/webAdmin.md#アクセスキー) を参照ください。
 
-### Development and deployment
+### 開発と運用
 
 4Dプロジェクトの管理上、以下の使用法のみがサポートされます:
 
 - Qodly Studio での開発は **4D** (シングルユーザー) でおこなう必要があります。
-- deployment of 4D applications powered with Qodly pages must be done using **4D Server**.
+- Qodlyページを利用した 4Dアプリケーションの運用は、**4D Server** でおこなう必要があります。
 
 :::warning
 
-You can open Qodly Studio, [debug](#using-qodly-debugger-on-4d-server) and edit Qodly pages directly on a 4D Server machine when a project is running in interpreted mode. This feature is only provided for testing and debugging purposes, for example to evaluate the application flow with actual data, or in multi-user environment. It must NOT be considered as a regular way to develop applications since it does not provide any control over concurrent accesses.
+プロジェクトがインタープリターモードで実行されている場合、4D Serverマシン上で Qodly Studio を開いて、Qodlyページを [デバッグ](#4d-server-で-qodlyデバッガーを使用する) したり、直接編集したりすることができます。 この機能は、実際のデータやマルチユーザー環境でのアプリケーションのフローを評価するなど、テストとデバッグ目的でのみ提供されます。 この機能は同時アクセスを制御しないため、アプリケーション開発の通常の手段として使用するべきではありません。
 
 :::
 
@@ -100,10 +100,10 @@ Qodly Studio ページは、[WebAdmin Webサーバーが起動されており](.
 
 Qodly Studio にアクセスするには 2つの方法があります:
 
-- by selecting the **Qodly Studio...** menu command from the **Design** menu (4D single-user) or the **Window** menu (4D Server).
+- **デザイン** メニュー (4Dシングルユーザー) または **ウィンドウ** メニュー (4D Server) から **Qodly Studio...** メニューコマンドを選択します。
   WebAdmin Webサーバーがすでに起動されている場合は、その設定に応じて、デフォルトのブラウザーが `IPaddress:HTTPPort/studio` または `IPaddress:HTTPSPort/studio` を開きます。 それ以外の場合は、最初に WebAdmin Webサーバーを起動するかどうかを尋ねるメッセージが表示されます。
 
-- on a browser, with the WebAdmin web server running (launched from 4D or 4D Server), enter the following address:<br/>
+- 4D または 4D Server から WebAdmin Webサーバーが起動されている状態で、ブラウザーに次のアドレスを入力します:<br/>
   `IPaddress:HTTPPort/studio`
 
   または:
@@ -116,13 +116,13 @@ Qodly Studio にアクセスするには 2つの方法があります:
 
   すると、Qodly Studio にアクセスするための [アクセスキー](../Admin/webAdmin.md#アクセスキー) の入力を求められます。
 
-## Developing with Qodly Studio
+## Qodly Studio を開発する
 
 ### ドキュメント
 
-The Qodly Studio documentation is available on the [Qodly documentation website](https://developer.qodly.com/docs/studio/overview).
+Qodly Studio ドキュメントは、[Qodly ドキュメント Webサイト](https://developer.qodly.com/docs/studio/overview) から入手できます。
 
-You can rely on this documentation and its associated resources for developing web applications powered by Qodly pages. ただし、実装の段階に応じて、4Dデベロッパーは Qodly Studio または 4D IDE を使用します ([機能の比較](#機能の比較) 参照)。
+Qodlyページを利用した Webアプリケーションを開発するには、このドキュメントとその関連リソースを参照ください。 ただし、実装の段階に応じて、4Dデベロッパーは Qodly Studio または 4D IDE を使用します ([機能の比較](#機能の比較) 参照)。
 
 コードの例は [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) で提供されていますが、QodlyScript は 4Dランゲージから継承しているため、困ることはありません。 詳細については、[QodlyScript から 4Dランゲージへ](#qodlyscript-から-4dランゲージへ) を参照ください。
 
@@ -134,18 +134,18 @@ You can rely on this documentation and its associated resources for developing w
 
 ### 機能の比較
 
-|                                                                               | Qodly Studio in 4D                                                                                                                                                                                           | Qodly Studio in Qodly Cloud platform                                                            |
-| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
-| テーブル (データクラス)、フィールド (属性)、リレーションの表示および編集 | 4Dストラクチャーエディター(1)                                                                                                                                                                         | Qodly Studio Model Editor                                                                       |
-| Qodlyページ                                                                      | Qodly Studio ページエディター                                                                                                                                                                                        | Qodly Studio ページエディター                                                                           |
-| デスクトップフォーム                                                                    | 4D IDE                                                                                                                                                                                                       | _サポートされていません_                                                                                   |
-| プログラミング言語                                                                     | 4Dランゲージ (ORDA を使用)                                                                                                                                                                        | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) (ORDA含) |
-| コーディング IDE                                                                    | 4D IDE code editor _or_ VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)<br/>_4D Server only_: Qodly Studio code editor (see (2)) | Qodly Studio コードエディター                                                                           |
-| デバッガー                                                                         | 4D IDE debugger<br/>_4D Server only_: Qodly Studio debugger (see [this paragraph](#using-qodly-debugger-on-4d-server))                                                    | Qodly Studio デバッガー                                                                              |
-| REST/Web ロールとアクセス権                                                            | roles.json の直接編集 / Qodly Studio ロールとアクセス権エディター                                                                                                                                               | Qodly Studio ロールとアクセス権エディター                                                                     |
+|                                                                               | 4D の Qodly Studio                                                                                                                                                                           | Qodly Cloud プラットフォームの Qodly Studio                                                              |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| テーブル (データクラス)、フィールド (属性)、リレーションの表示および編集 | 4Dストラクチャーエディター(1)                                                                                                                                                        | Qodly Studio Model Editor                                                                       |
+| Qodlyページ                                                                      | Qodly Studio ページエディター                                                                                                                                                                       | Qodly Studio ページエディター                                                                           |
+| デスクトップフォーム                                                                    | 4D IDE                                                                                                                                                                                      | _サポートされていません_                                                                                   |
+| プログラミング言語                                                                     | 4Dランゲージ (ORDA を使用)                                                                                                                                                       | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) (ORDA含) |
+| コーディング IDE                                                                    | 4D IDE コードエディター _または_ VS Code と [4D拡張機能](https://github.com/4d/4D-Analyzer-VSCode)<br/>_4D Server のみ_: Qodly Studio コードエディター ((2) 参照) | Qodly Studio コードエディター                                                                           |
+| デバッガー                                                                         | 4D IDE デバッガー<br/>_4D Serverのみ_: Qodly Studio デバッガー ([この段落](#4d-server-で-qodlyデバッガーを使用する) を参照ください)                                                        | Qodly Studio デバッガー                                                                              |
+| REST/Web ロールとアクセス権                                                            | roles.json の直接編集 / Qodly Studio ロールとアクセス権エディター                                                                                                                              | Qodly Studio ロールとアクセス権エディター                                                                     |
 
-(1) If you click on the **Model** button in Qodly Studio, nothing happens.<br/>
-(2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)). Note that in 4D single-user, if you open some 4D code with the Qodly Studio code editor, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
+(1) Qodly Studioで **Model** ボタンをクリックしても何も起こりません。<br/>
+(2) 4D Serverでは、Qodly Studio のコードエディターで 4Dコードを開くことができます (**テストおよびデバッグ目的のみ**。[この段落](#開発と運用) を参照ください) 4Dシングルユーザーの場合、Qodly Studio で 4Dコードを開くと、シンタックスの配色がサポートされておらず、"Lsp not loaded" という警告が表示されます。
 
 ### ランゲージ
 
@@ -219,40 +219,40 @@ _IP:port_ は Webサーバーのアドレスを表し、_QodlyPageName_ は Qodl
 https://www.myWebSite.com/$lib/renderer/?w=welcome
 ```
 
-### Preview Qodly Application
+### Qodlyアプリケーションのプレビュー
 
-You can preview your Qodly application at any moment by selecting the **Preview Qodly Application...** command in the **Windows** menu (4D Server) or in the **Design** menu (4D single-user).
+Qodly アプリケーションをプレビューするには、**ウィンドウ** メニュー (4D Server) または **デザイン** メニュー (4D シングルユーザー) から **Qodly アプリケーションをプレビュー...** を選択することで、いつでもおこなうことができます。
 
-This command launches the Qodly renderer on a local address in your default browser and displays the **start page** [defined in the Application settings](https://developer.qodly.com/docs/studio/settings#start-page) of Qodly Studio.
+このコマンドは、デフォルトブラウザーのローカルアドレスで Qodlyレンダラーを起動し、Qodly Studio の [アプリケーション設定で定義されている](https://developer.qodly.com/docs/studio/settings#start-page) **スタートページ** を表示します。
 
-### Using Qodly debugger on 4D Server
+### 4D Server で Qodlyデバッガーを使用する
 
-When using Qodly pages in a deployed 4D Server application (interpreted mode), you might encounter some cases where you need to debug your pages on the server, for example when a specific user configuration is required. In this case, you can attach the [Qodly Studio debugger](https://developer.qodly.com/docs/studio/debugging) to the 4D Server and then, benefit from its features when executing your Qodly pages.
+運用中の 4D Server アプリケーション (インタープリターモード) で Qodlyページを使用する場合、特定のユーザー設定が必要な場合など、サーバー上でページのデバッグが必要なケースに遭遇することがあります。 この場合、[Qodly Studio デバッガー](https://developer.qodly.com/docs/studio/debugging) を 4D Server 上で有効化することで、Qodlyページの実行時にその機能を利用することができます。
 
-Note that in this case, the Qodly Studio debugger will display all the code executed on the server, in accordance with the [attached debugger rule on 4D Server](../Debugging/debugging-remote.md#attached-debugger).
+この場合、Qodly Studio デバッガーは、[4D Server の有効化済デバッガーのルール](../Debugging/debugging-remote.md#有効化済デバッガー) に従って、サーバー上で実行されたすべてのコードを表示することに注意してください。
 
-To attach the Qodly Studio debugger to your running 4D Server application:
+Qodly Studio デバッガーを実行中の 4D Server アプリケーションで有効化するには:
 
-1. [Open Qodly Studio](#opening-qodly-studio) from 4D Server.
+1. 4Dサーバーから [Qodly Studio](#qodly-studio-を開く) を起動します。
 
 :::note
 
-The project must be running in interpreted mode so that **Qodly Studio** menu item is available.
+**Qodly Studio** メニューが利用できるよう、プロジェクトはインタープリターモードで実行する必要があります。
 
 :::
 
-2. In the Qodly Studio toolbar, click on the **Debug** button.<br/>
+2. Qodly Studio のツールバーで、**Debug** ボタンをクリックします。<br/>
    ![qodly-debug](../assets/en/WebServer/qodly-debug.png)
 
-If the debug session starts successfully, a green bullet appears on the button label ![qodly-debug](../assets/en/WebServer/debug2.png) and you can use the Qodly Studio debugger.
+デバッグセッションが正常に開始されると、ボタンラベルに緑色の丸が表示され [qodly-debug](../assets/en/WebServer/debug2.png)、Qodly Studio デバッガーを使用できるようになります。
 
-If the debugger is already attached to a another machine or another Qodly Studio page, an error is displayed. You have to detach it beforehand from the other location.
+デバッガーがすでに別のマシンまたは別の Qodly Studio ページで有効化されている場合は、エラーが表示されます。 事前に、別の場所で有効化済みのデバッガーを無効化する必要があります。
 
-To detach the Qodly Studio debugger from your running 4D Server application:
+実行中の 4D Server アプリケーションで Qodly Studio デバッガーを無効化するには:
 
-1. Click the **Debug** button in the Qodly Studio toolbar while a debug session is active.
-   A warning dialog box will prompt you to confirm whether you want to detach the debugger.
-2. Select **Keep in progress** to continue evaluating the code until the end of the current method or function before detaching the debugger, or **Stop** to detach the debugger immediately.
+1. デバッグセッションがアクティブな状態で Qodly Studio ツールバーの **Debug** ボタンをクリックします。
+   警告ダイアログボックスが表示され、デバッガーを無効化するどうかを確認します。
+2. デバッガーを無効化する前に現在のメソッドまたは関数の終わりまでコードの評価を続けるには **Keep in progress** を選択します。デバッガーをすぐに無効化するには **Stop** を選択します。
 
 ## 強制ログイン
 

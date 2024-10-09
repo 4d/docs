@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.Open window.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| esquerda | Inteiro longo | &#x1F852; | Coordenada global da área de conteúdo da janela |
-| superior | Inteiro longo | &#x1F852; | Coordenada superior da área de conteúdos da janela |
-| direita | Inteiro longo | &#x1F852; | Coordenada direita da área de conteúdos da janela, ou -1 para usar tamanho padrão do formulário |
-| inferior | Inteiro longo | &#x1F852; | Coordenada inferior da área de conteúdos da janela, ou -1 para usar tamanho padrão do formulário |
-| tipo | Inteiro longo | &#x1F852; | tipo da janela |
-| titulo | String | &#x1F852; | Título da janela ou "" para usar título do formulário padrão |
-| caixaFechar | String | &#x1F852; | Método a chamar quando a caixa control-menu recebe um clique duplo, ou quanod a caixa Fechar é clicada |
-| Resultado | refJan | &#x1F850; | Número de referência de janela |
+| esquerda | Integer | &srarr; | Coordenada global da área de conteúdo da janela |
+| superior | Integer | &srarr; | Coordenada superior da área de conteúdos da janela |
+| direita | Integer | &srarr; | Coordenada direita da área de conteúdos da janela, ou -1 para usar tamanho padrão do formulário |
+| inferior | Integer | &srarr; | Coordenada inferior da área de conteúdos da janela, ou -1 para usar tamanho padrão do formulário |
+| tipo | Integer | &srarr; | tipo da janela |
+| titulo | Text | &srarr; | Título da janela ou "" para usar título do formulário padrão |
+| caixaFechar | Text | &srarr; | Método a chamar quando a caixa control-menu recebe um clique duplo, ou quanod a caixa Fechar é clicada |
+| Resultado | Integer | &larr; | Número de referência de janela |
 
 <!-- END REF-->
 

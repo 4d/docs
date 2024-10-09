@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Average.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| series | Campo, Array | &#x1F852; | Dados para os quais se retorna a média |
-| atributoRota | Texto | &#x1F852; | Rota do atributo para o qual vai retornar a média |
-| Resultado | Real | &#x1F850; | Média aritmética da série |
+| series | Field, Array | &srarr; | Dados para os quais se retorna a média |
+| atributoRota | Text | &srarr; | Rota do atributo para o qual vai retornar a média |
+| Resultado | Real | &larr; | Média aritmética da série |
 
 <!-- END REF-->
 

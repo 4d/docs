@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get license usage.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Collection | &#x1F850; | Una colección de objetos con información sobre las licencias retenidas. |
+| Resultado | Collection | &larr; | Una colección de objetos con información sobre las licencias retenidas. |
 
 <!-- END REF-->
 

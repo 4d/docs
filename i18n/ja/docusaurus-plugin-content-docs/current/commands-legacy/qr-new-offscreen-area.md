@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QR New offscreen area.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | 倍長整数 | &#x1F850; | 作られたエリアの参照 |
+| 戻り値 | Integer | &larr; | 作られたエリアの参照 |
 
 <!-- END REF-->
 

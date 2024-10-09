@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get assert enabled.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | ブール | &#x1F850; | True = アサーションは有効<br/>False = アサーションは無効 |
+| 戻り値 | Boolean | &larr; | True = アサーションは有効<br/>False = アサーションは無効 |
 
 <!-- END REF-->
 

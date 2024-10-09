@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.DISPLAY SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table to display, or Default table, if omitted |
-| selectMode | Longint | &#x1F852; | Selection mode |
-| enterList | Boolean | &#x1F852; | Authorize Enter in list option |
-| * | &#x1F852; | Use output form for one record selection and hide scroll bars in the input form |
-| * | &#x1F852; | Show scroll bars in the input form (overrides second option of first optional *) |
+| aTable | Table | &srarr; | Table to display, or Default table, if omitted |
+| selectMode | Integer | &srarr; | Selection mode |
+| enterList | Boolean | &srarr; | Authorize Enter in list option |
+| * | Operator |  &srarr; | Use output form for one record selection and hide scroll bars in the input form |
+| * | Operator |  &srarr; | Show scroll bars in the input form (overrides second option of first optional *) |
 
 <!-- END REF-->
 

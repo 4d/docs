@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Get menu item key.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Inteiro longo, MenuRef | &#x1F852; | Número de menu ou menu de referência |
-| menuItem | Inteiro longo | &#x1F852; | Número de item de Menu item ou -1 para o último item adicionado |
-| processo | Inteiro longo | &#x1F852; | Número de referência de processo |
-| Resultado | Inteiro longo | &#x1F850; | Código de caractere da tecla de atalho padrão associada com o item de menu |
+| menu | Integer, Text | &srarr; | Número de menu ou menu de referência |
+| menuItem | Integer | &srarr; | Número de item de Menu item ou -1 para o último item adicionado |
+| processo | Integer | &srarr; | Número de referência de processo |
+| Resultado | Integer | &larr; | Código de caractere da tecla de atalho padrão associada com o item de menu |
 
 <!-- END REF-->
 

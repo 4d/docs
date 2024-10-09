@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB TO VARIABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| BLOB | BLOB | &#x1F852; | 4D変数を格納したBLOB |
-| variable | 変数 | &#x1F858; | BLOBの内容を書き込む変数 |
-| offset | 倍長整数 | &#x1F852; | BLOB内の変数の位置 |
-| &#x1F858; | BLOB内の次の変数の位置 |
+| Blob | Blob | &srarr; | 4D変数を格納したBLOB |
+| variable | Variable | &harr; | BLOBの内容を書き込む変数 |
+| offset | Integer | &srarr; | BLOB内の変数の位置 |
+| &harr; | BLOB内の次の変数の位置 |
 
 <!-- END REF-->
 

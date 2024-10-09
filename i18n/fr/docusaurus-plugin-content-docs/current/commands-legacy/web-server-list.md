@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Server list.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Collection | &#x1F850; | Collection de tous les objets Serveur Web disponibles |
+| Résultat | Collection | &larr; | Collection de tous les objets Serveur Web disponibles |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Screen height.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | Windows: アプリケーションウィンドウの高さ または*が指定されている場合、画面の高さ Macintosh: メイン画面の高さ |
-| 戻り値 | 倍長整数 | &#x1F850; | ピクセル数で表される高さ |
+| * | 演算子 | &srarr; | Windows: アプリケーションウィンドウの高さ または*が指定されている場合、画面の高さ Macintosh: メイン画面の高さ |
+| 戻り値 | Integer | &larr; | ピクセル数で表される高さ |
 
 <!-- END REF-->
 

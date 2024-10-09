@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DATABASE PARAMETER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | パラメータをセットするテーブル、または 省略時、デフォルトテーブル |
-| selector | 倍長整数 | &#x1F852; | 変更を行うデータベースパラメタのコード |
-| value | 実数, 文字 | &#x1F852; | パラメタの値 |
+| aTable | Table | &srarr; | パラメータをセットするテーブル、または 省略時、デフォルトテーブル |
+| selector | Integer | &srarr; | 変更を行うデータベースパラメタのコード |
+| value | Real, Text | &srarr; | パラメタの値 |
 
 <!-- END REF-->
 

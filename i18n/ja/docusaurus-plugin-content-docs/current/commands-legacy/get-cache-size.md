@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get cache size.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | 実数 | &#x1F850; | データベースキャッシュ(バイト単位) |
+| 戻り値 | Real | &larr; | データベースキャッシュ(バイト単位) |
 
 <!-- END REF-->
 

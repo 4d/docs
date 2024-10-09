@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Encrypt data file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminStructure | Texte | &#x1F852; | Chemin d'accès du fichier de structure |
-| cheminDonnées | Texte | &#x1F852; | Chemin d'accès du fichier de données |
-| nouvellePhraseSecrète &#124; nouvelleCléDonnées | Texte, Objet | &#x1F852; | En cas de remplacement : nouvelle phrase secrète (texte) ou nouvelle clé de chiffrement (objet) |
-| dossierArchive | Texte | &#x1F852; | Chemin d'accès du dossier dans lequel placer le fichier de données original |
-| phraseSecrèteCour &#124; cléDonnéesCour | Texte, Objet | &#x1F852; | Phrase secrète courante (texte) ou clé de chiffrement courante (objet) |
-| nomMéthode | Texte | &#x1F852; | Nom de la méthode 4D de rétro-appel |
-| Résultat | Texte | &#x1F850; | Nom de chemin d'accès complet au dossier dans lequel les fichiers originaux ont été stockés |
+| cheminStructure | Text | &srarr; | Chemin d'accès du fichier de structure |
+| cheminDonnées | Text | &srarr; | Chemin d'accès du fichier de données |
+| nouvellePhraseSecrète &#124; nouvelleCléDonnées | Texte, Objet | &srarr; | En cas de remplacement : nouvelle phrase secrète (texte) ou nouvelle clé de chiffrement (objet) |
+| dossierArchive | Text | &srarr; | Chemin d'accès du dossier dans lequel placer le fichier de données original |
+| phraseSecrèteCour &#124; cléDonnéesCour | Texte, Objet | &srarr; | Phrase secrète courante (texte) ou clé de chiffrement courante (objet) |
+| nomMéthode | Text | &srarr; | Nom de la méthode 4D de rétro-appel |
+| Résultat | Text | &larr; | Nom de chemin d'accès complet au dossier dans lequel les fichiers originaux ont été stockés |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get row font style.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre del objeto(si se especifica *) o<br/>Variable (si se omite *) |
-| linea | Entero largo | &#x1F852; | Número de línea |
-| Resultado | Entero largo | &#x1F850; | Valor de estilo |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es una variable |
+| objeto | any | &srarr; | Nombre del objeto(si se especifica *) o<br/>Variable (si se omite *) |
+| linea | Integer | &srarr; | Número de línea |
+| Resultado | Integer | &larr; | Valor de estilo |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is record loaded.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table of the record to examine or Default table if this parameter is omitted |
-| Function result | Boolean | &#x1F850; | True if the record is loaded Otherwise False |
+| aTable | Table | &srarr; | Table of the record to examine or Default table if this parameter is omitted |
+| Function result | Boolean | &larr; | True if the record is loaded Otherwise False |
 
 <!-- END REF-->
 

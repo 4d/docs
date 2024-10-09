@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get last child XML element.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | 文字 | &#x1F852; | XML要素参照 |
-| childElemName | 文字 | &#x1F858; | 子要素名 |
-| childElemValue | 文字 | &#x1F858; | 子要素値 |
-| 戻り値 | 文字 | &#x1F850; | XML要素参照 |
+| elementRef | Text | &srarr; | XML要素参照 |
+| childElemName | Text | &harr; | 子要素名 |
+| childElemValue | Text | &harr; | 子要素値 |
+| 戻り値 | Text | &larr; | XML要素参照 |
 
 <!-- END REF-->
 

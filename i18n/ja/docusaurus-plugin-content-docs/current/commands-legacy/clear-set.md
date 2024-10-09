@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR SET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| set | 文字 | &#x1F852; | メモリからクリアするセットの名前 |
+| set | Text | &srarr; | メモリからクリアするセットの名前 |
 
 <!-- END REF-->
 

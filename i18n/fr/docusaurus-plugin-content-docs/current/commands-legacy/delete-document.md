@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE DOCUMENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomFichier | Chaîne | &#x1F852; | Nom de document ou Chemin d'accès complet au document |
+| nomFichier | Text | &srarr; | Nom de document ou Chemin d'accès complet au document |
 
 <!-- END REF-->
 

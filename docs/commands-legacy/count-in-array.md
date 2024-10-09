@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Count in array.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &#x1F852; | Array where count should occur |
-| value | Expression | &#x1F852; | Value to count |
-| Function result | Longint | &#x1F850; | Number of instances found |
+| array | Array | &srarr; | Array where count should occur |
+| value | Expression | &srarr; | Value to count |
+| Function result | Longint | &larr; | Number of instances found |
 
 <!-- END REF-->
 

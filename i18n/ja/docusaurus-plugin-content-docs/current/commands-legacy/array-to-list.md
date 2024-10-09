@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY TO LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| array | 配列 | &#x1F852; | 配列要素のコピー元配列 |
-| list | 文字, ListRef | &#x1F852; | 配列要素のコピー先リスト |
-| itemRefs | 配列 | &#x1F852; | 項目参照番号の数値配列 |
+| array | Array | &srarr; | 配列要素のコピー元配列 |
+| list | Text, Integer | &srarr; | 配列要素のコピー先リスト |
+| itemRefs | Array | &srarr; | 項目参照番号の数値配列 |
 
 <!-- END REF-->
 

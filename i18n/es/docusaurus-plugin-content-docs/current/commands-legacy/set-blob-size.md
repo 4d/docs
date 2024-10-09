@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET BLOB SIZE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| BLOB | BLOB | &#x1F852; | Campo o variable de tipo BLOB |
-| tamaño | Entero largo | &#x1F852; | Nuevo tamaño del BLOB |
-| relleno | Entero largo | &#x1F852; | Código ASCII del caracter de relleno |
+| Blob | Blob | &srarr; | Campo o variable de tipo BLOB |
+| tamaño | Integer | &srarr; | Nuevo tamaño del BLOB |
+| relleno | Integer | &srarr; | Código ASCII del caracter de relleno |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get license usage.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | コレクション | &#x1F850; | 使用中のライセンスについての情報を格納したオブジェクトのコレクション |
+| 戻り値 | Collection | &larr; | 使用中のライセンスについての情報を格納したオブジェクトのコレクション |
 
 <!-- END REF-->
 

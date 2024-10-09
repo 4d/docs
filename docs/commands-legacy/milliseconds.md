@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Milliseconds.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#x1F850; | Number of milliseconds elasped since the machine was started |
+| Function result | Longint | &larr; | Number of milliseconds elasped since the machine was started |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| filtersArr | String array | &#x1F858; | Filters array |
-| allowDenyArr | Boolean array | &#x1F858; | Allow-deny array |
+| * | Operator | &srarr; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &srarr; | Object name (if * is specified) or Variable (if * is omitted) |
+| filtersArr | Text array | &harr; | Filters array |
+| allowDenyArr | Boolean array | &harr; | Allow-deny array |
 
 <!-- END REF-->
 

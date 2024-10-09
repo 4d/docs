@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | ハイライトされたレコードを読みだすテーブル 省略した場合、カレントフォームのテーブル |
-| setName | 文字 | &#x1F852; | ハイライトしたレコードを格納するセット |
+| aTable | Table | &srarr; | ハイライトされたレコードを読みだすテーブル 省略した場合、カレントフォームのテーブル |
+| setName | Text | &srarr; | ハイライトしたレコードを格納するセット |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.DISPLAY SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla a mostrar, o Tabla por defecto, si se omite |
-| modoSelección | Entero largo | &#x1F852; | Modo de selección |
-| entradaList | Booleano | &#x1F852; | Autorizar entrada en lista |
-| * | &#x1F852; | Utilizar el formulario de salida en caso de selección de un solo registro y ocultar las barras de desplazamiento en el formulario de entrada |
-| * | &#x1F852; | Mostrar las barras de desplazamiento en el formulario de entrada (anular el segundo efecto del primer parámetro *) |
+| tabla | Table | &srarr; | Tabla a mostrar, o Tabla por defecto, si se omite |
+| modoSelección | Integer | &srarr; | Modo de selección |
+| entradaList | Boolean | &srarr; | Autorizar entrada en lista |
+| * | Operator |  &srarr; | Utilizar el formulario de salida en caso de selección de un solo registro y ocultar las barras de desplazamiento en el formulario de entrada |
+| * | Operator |  &srarr; | Mostrar las barras de desplazamiento en el formulario de entrada (anular el segundo efecto del primer parámetro *) |
 
 <!-- END REF-->
 

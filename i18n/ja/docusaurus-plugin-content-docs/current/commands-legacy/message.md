@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.MESSAGE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| message | 文字 | &#x1F852; | 表示するメッセージ |
+| message | Text | &srarr; | 表示するメッセージ |
 
 <!-- END REF-->
 

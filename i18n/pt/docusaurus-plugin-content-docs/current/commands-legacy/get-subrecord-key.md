@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get subrecord key.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| idField | Campo | &#x1F852; | "Subtable Relation" or "Longint" type field of a former subtable relation |
-| Resultado | Inteiro longo | &#x1F850; | Internal key of relation |
+| idField | Field | &srarr; | "Subtable Relation" or "Longint" type field of a former subtable relation |
+| Resultado | Integer | &larr; | Internal key of relation |
 
 <!-- END REF-->
 

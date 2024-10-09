@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.ACCUMULATE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| data | フィールド, 変数 | &#x1F852; | 累計する数値型のフィールドまたは変数 |
+| data | Field, Variable | &srarr; | 累計する数値型のフィールドまたは変数 |
 
 <!-- END REF-->
 

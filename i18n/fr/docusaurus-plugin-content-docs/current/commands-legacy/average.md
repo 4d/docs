@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Average.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| séries | Champ, Tableau | &#x1F852; | Valeurs dont vous voulez calculer la moyenne |
-| cheminAttribut | Texte | &#x1F852; | Chemin d'attribut duquel calculer la moyenne |
-| Résultat | Réel | &#x1F850; | Moyenne arithmétique de séries |
+| séries | Field, Array | &srarr; | Valeurs dont vous voulez calculer la moyenne |
+| cheminAttribut | Text | &srarr; | Chemin d'attribut duquel calculer la moyenne |
+| Résultat | Real | &larr; | Moyenne arithmétique de séries |
 
 <!-- END REF-->
 

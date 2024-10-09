@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SERVICE AUTHENTICATE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nombre | Cadena | &#x1F852; | Nombre del usuario |
-| contraseña | Cadena | &#x1F852; | Contraseña del usuario |
-| metAutenticacion | Entero largo | &#x1F852; | Método de Autenticación 0 u omitido = no especificado, 1 = BASIC, 2 = DIGEST |
-| * | Operador | &#x1F852; | Si se pasa: autenticación por proxy |
+| nombre | Text | &srarr; | Nombre del usuario |
+| contraseña | Text | &srarr; | Contraseña del usuario |
+| metAutenticacion | Integer | &srarr; | Método de Autenticación 0 u omitido = no especificado, 1 = BASIC, 2 = DIGEST |
+| * | Operador | &srarr; | Si se pasa: autenticación por proxy |
 
 <!-- END REF-->
 

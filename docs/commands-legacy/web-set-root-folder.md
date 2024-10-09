@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SET ROOT FOLDER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| rootFolder | String | &#x1F852; | Pathname of Web server root folder |
+| rootFolder | Text | &srarr; | Pathname of Web server root folder |
 
 <!-- END REF-->
 

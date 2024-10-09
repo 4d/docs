@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Validate.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| vJson | Object | &#x1F852; | JSON object to validate |
-| vSchema | Object | &#x1F852; | JSON schema used to validate JSON objects |
-| Function result | Object | &#x1F850; | Validation status and errors (if any) |
+| vJson | Object | &srarr; | JSON object to validate |
+| vSchema | Object | &srarr; | JSON schema used to validate JSON objects |
+| Function result | Object | &larr; | Validation status and errors (if any) |
 
 <!-- END REF-->
 

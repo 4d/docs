@@ -5,19 +5,18 @@ slug: /commands/field
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Field.Syntax-->**Field** ( *numTable* ; *numChamp* ) -> ptrChamp 
-        
-            Field ( *ptrChamp* ) -> numChamp<!-- END REF-->
+<!--REF #_command_.Field.Syntax-->**Field** ( *numTable* ; *numChamp* ) -> ptrChamp <br/>
+**Field** ( *ptrChamp* ) -> numChamp<!-- END REF-->
 <!--REF #_command_.Field.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numTable | Entier long | &#x1F852; | Numéro de table |
-| numChamp | Entier long | &#x1F852; | Numéro de champ |
-| ptrChamp | Pointeur | &#x1F850; | Pointeur de champ |
+| numTable | Integer | &srarr; | Numéro de table |
+| numChamp | Integer | &srarr; | Numéro de champ |
+| ptrChamp | Pointer | &larr; | Pointeur de champ |
 | Field ( ptrChamp ) -> numChamp |
 | Paramètre | Type | Description |
-| ptrChamp | Pointeur | &#x1F852; | Pointeur de champ |
-| numChamp | Entier long | &#x1F850; | Numéro de champ |
+| ptrChamp | Pointer | &srarr; | Pointeur de champ |
+| numChamp | Integer | &larr; | Numéro de champ |
 
 <!-- END REF-->
 

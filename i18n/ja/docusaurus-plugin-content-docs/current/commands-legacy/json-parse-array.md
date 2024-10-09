@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON PARSE ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| jsonString | 文字 | &#x1F852; | 解析したいJSON文字列 |
-| array | 配列 | &#x1F858; | JSON文字列を解析した結果を含む配列 |
+| jsonString | Text | &srarr; | 解析したいJSON文字列 |
+| array | Array | &harr; | JSON文字列を解析した結果を含む配列 |
 
 <!-- END REF-->
 

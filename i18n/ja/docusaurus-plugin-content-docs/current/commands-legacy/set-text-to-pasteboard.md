@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| text | 文字 | &#x1F852; | ペーストボードに置くテキスト |
+| text | Text | &srarr; | ペーストボードに置くテキスト |
 
 <!-- END REF-->
 

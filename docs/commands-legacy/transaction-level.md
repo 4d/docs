@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Transaction level.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#x1F850; | Current transaction level (0 if no transaction has been started) |
+| Function result | Longint | &larr; | Current transaction level (0 if no transaction has been started) |
 
 <!-- END REF-->
 

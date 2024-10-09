@@ -5,17 +5,16 @@ slug: /commands/throw
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.throw.Syntax-->**throw** ( *errorCode* {; *description*} ) 
-        
-            *throw* {( *errorObj* )}<!-- END REF-->
+<!--REF #_command_.throw.Syntax-->**throw** ( *errorCode* {; *description*} ) <br/>
+*throw* {( *errorObj* )}<!-- END REF-->
 <!--REF #_command_.throw.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| errorCode | Longint | &#x1F852; | A long integer representing the error code. |
-| description | Text | &#x1F852; | A text providing a description of the error. |
+| errorCode | Integer | &srarr; | A long integer representing the error code. |
+| description | Text | &srarr; | A text providing a description of the error. |
 | throw {( errorObj )} |
 | Parameter | Type | Description |
-| errorObj | Object | &#x1F852; | An object containing properties to build the error |
+| errorObj | Object | &srarr; | An object containing properties to build the error |
 
 <!-- END REF-->
 

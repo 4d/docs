@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT DUPLICATE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
-| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| newName | Text | &#x1F852; | Name of new object |
-| newVar | Pointer | &#x1F852; | Pointer to variable of new object |
-| boundTo | Text | &#x1F852; | Name of previous enterable object (or radio button) |
-| moveH | Longint | &#x1F852; | Horizontal shift of new object (>0 = to the right, <0 = to the left) |
-| moveV | Longint | &#x1F852; | Vertical shift of new object (>0 = downwards, <0 = upwards) |
-| resizeH | Longint | &#x1F852; | Value of the horizontal resize of the object |
-| resizeV | Longint | &#x1F852; | Value of the vertical resize of the object |
-| * | Operator | &#x1F852; | If specified= absolute coordinates<br/>If omitted= relative coordinates |
+| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
+| object | any | &srarr; | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
+| newName | Text | &srarr; | Name of new object |
+| newVar | Pointer | &srarr; | Pointer to variable of new object |
+| boundTo | Text | &srarr; | Name of previous enterable object (or radio button) |
+| moveH | Integer | &srarr; | Horizontal shift of new object (>0 = to the right, <0 = to the left) |
+| moveV | Integer | &srarr; | Vertical shift of new object (>0 = downwards, <0 = upwards) |
+| resizeH | Integer | &srarr; | Value of the horizontal resize of the object |
+| resizeV | Integer | &srarr; | Value of the vertical resize of the object |
+| * | Operator | &srarr; | If specified= absolute coordinates<br/>If omitted= relative coordinates |
 
 <!-- END REF-->
 

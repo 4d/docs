@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB GET VARIABLES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| nameArray | Text array | &#x1F858; | Web form variable names |
-| valueArray | Text array | &#x1F858; | Web form variable values |
+| nameArray | Text array | &harr; | Web form variable names |
+| valueArray | Text array | &harr; | Web form variable values |
 
 <!-- END REF-->
 

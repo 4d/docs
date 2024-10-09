@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SET INPUT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela para a qual vai estabecer o formulário input, ou tabela Padrão, se omitido |
-| formulario | String, Objeto | &#x1F852; | Nome do formulário para estabelecer um formulário input |
-| formUsuario | String | &#x1F852; | Nome do formulário usuário para utilizar |
-| * | &#x1F852; | Tamanho da janela automático |
+| tabela | Table | &srarr; | Tabela para a qual vai estabecer o formulário input, ou tabela Padrão, se omitido |
+| formulario | Text, Object | &srarr; | Nome do formulário para estabelecer um formulário input |
+| formUsuario | Text | &srarr; | Nome do formulário usuário para utilizar |
+| * | Operator |  &srarr; | Tamanho da janela automático |
 
 <!-- END REF-->
 

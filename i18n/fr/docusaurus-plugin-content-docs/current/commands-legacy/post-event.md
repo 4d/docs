@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.POST EVENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| quoi | Entier long | &#x1F852; | Type d'événement |
-| message | Entier long | &#x1F852; | Message de l'événement |
-| quand | Entier long | &#x1F852; | Moment de l'événement exprimé en ticks |
-| sourisX | Entier long | &#x1F852; | Coordonnée horizontale de la souris |
-| sourisY | Entier long | &#x1F852; | Coordonnée verticale de la souris |
-| modifiers | Entier long | &#x1F852; | Etat des touches Modifier |
-| process | Entier long | &#x1F852; | Numéro de référence du process de destination ou File d'attente des événements de l'application si ce paramètre est omis ou si vous passez 0 |
+| quoi | Integer | &srarr; | Type d'événement |
+| message | Integer | &srarr; | Message de l'événement |
+| quand | Integer | &srarr; | Moment de l'événement exprimé en ticks |
+| sourisX | Integer | &srarr; | Coordonnée horizontale de la souris |
+| sourisY | Integer | &srarr; | Coordonnée verticale de la souris |
+| modifiers | Integer | &srarr; | Etat des touches Modifier |
+| process | Integer | &srarr; | Numéro de référence du process de destination ou File d'attente des événements de l'application si ce paramètre est omis ou si vous passez 0 |
 
 <!-- END REF-->
 

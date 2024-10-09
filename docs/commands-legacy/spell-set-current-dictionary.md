@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| dictionary | Longint, Text | &#x1F852; | ID, Name, or Language code of dictionary to use for spell-check |
+| dictionary | Integer, Text | &srarr; | ID, Name, or Language code of dictionary to use for spell-check |
 
 <!-- END REF-->
 

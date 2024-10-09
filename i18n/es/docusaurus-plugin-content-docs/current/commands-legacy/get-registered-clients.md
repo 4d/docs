@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET REGISTERED CLIENTS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| listaClientes | Array texto | &#x1F858; | Lista de 4D Clients registrados |
-| metodos | Array entero largo | &#x1F858; | Lista de los métodos a ejecutar |
+| listaClientes | Text array | &harr; | Lista de 4D Clients registrados |
+| metodos | Integer array | &harr; | Lista de los métodos a ejecutar |
 
 <!-- END REF-->
 

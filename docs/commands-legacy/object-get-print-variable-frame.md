@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
-| variableFrame | Boolean | &#x1F858; | True = Variable frame printing, False = Fixed frame printing |
-| fixedSubform | Longint | &#x1F858; | Option for printing subforms in fixed size |
+| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | any | &srarr; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| variableFrame | Boolean | &harr; | True = Variable frame printing, False = Fixed frame printing |
+| fixedSubform | Integer | &harr; | Option for printing subforms in fixed size |
 
 <!-- END REF-->
 

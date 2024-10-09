@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.User in group.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| usuario | String | &#x1F852; | Nome de usuário |
-| grupo | String | &#x1F852; | Nome do grupo |
-| Resultado | Booleano | &#x1F850; | TRUE = usuário no grupo; FALSE = usuário não está no grupo |
+| usuario | Text | &srarr; | Nome de usuário |
+| grupo | Text | &srarr; | Nome do grupo |
+| Resultado | Boolean | &larr; | TRUE = usuário no grupo; FALSE = usuário não está no grupo |
 
 <!-- END REF-->
 

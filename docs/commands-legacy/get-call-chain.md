@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get call chain.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Collection | &#x1F850; | Collection of objects describing the call chain within a process |
+| Function result | Collection | &larr; | Collection of objects describing the call chain within a process |
 
 <!-- END REF-->
 

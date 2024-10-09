@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.APPEND TO LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| lista | ListRef | &#x1F852; | Número de referencia de lista |
-| textoElem | Cadena | &#x1F852; | Texto del nuevo elemento de lista (max. 255 caracteres) |
-| refElem | Entero largo | &#x1F852; | Número de referencia único del nuevo elemento |
-| sublista | ListRef | &#x1F852; | Sublista opcional para añadir al nuevo elemento |
-| desplegada | Booleano | &#x1F852; | Indica si las sublistas opcionales serán desplegadas o contraídas |
+| lista | Integer | &srarr; | Número de referencia de lista |
+| textoElem | Text | &srarr; | Texto del nuevo elemento de lista (max. 255 caracteres) |
+| refElem | Integer | &srarr; | Número de referencia único del nuevo elemento |
+| sublista | Integer | &srarr; | Sublista opcional para añadir al nuevo elemento |
+| desplegada | Boolean | &srarr; | Indica si las sublistas opcionales serán desplegadas o contraídas |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.New log file.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Texto | &#x1F850; | Endereço de acesso completo do arquivo de histórico fechado |
+| Resultado | Text | &larr; | Endereço de acesso completo do arquivo de histórico fechado |
 
 <!-- END REF-->
 

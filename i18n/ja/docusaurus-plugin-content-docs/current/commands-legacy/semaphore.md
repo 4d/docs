@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Semaphore.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| semaphore | 文字 | &#x1F852; | テストと設定を行うセマフォ |
-| tickCount | 倍長整数 | &#x1F852; | 最大待ち時間 |
-| 戻り値 | ブール | &#x1F850; | FALSE: セマフォの設定に成功した TRUE: 既にセマフォが存在する |
+| semaphore | Text | &srarr; | テストと設定を行うセマフォ |
+| tickCount | Integer | &srarr; | 最大待ち時間 |
+| 戻り値 | Boolean | &larr; | FALSE: セマフォの設定に成功した TRUE: 既にセマフォが存在する |
 
 <!-- END REF-->
 

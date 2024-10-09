@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get footer calculation.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
-| resultado | Inteiro longo | &#x1F850; | Tipo de cálculo |
+| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
+| objeto | any | &srarr; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| resultado | Integer | &larr; | Tipo de cálculo |
 
 <!-- END REF-->
 

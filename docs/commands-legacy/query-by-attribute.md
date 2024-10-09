@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY BY ATTRIBUTE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table for which to return a selection of records, or Default table if omitted |
-| conjOp | Operator | &#x1F852; | Conjunction operator to use to join multiple queries (if any) |
-| objectField | Field | &#x1F852; | Object field to query attributes |
-| attributePath | String | &#x1F852; | Name or path of attribute |
-| queryOp | String, Operator | &#x1F852; | Query operator (comparator) |
-| value | Text, Number, Date, Time | &#x1F852; | Value to compare |
-| * | Operator | &#x1F852; | Continue query flag |
+| aTable | Table | &srarr; | Table for which to return a selection of records, or Default table if omitted |
+| conjOp | * | &srarr; | Conjunction operator to use to join multiple queries (if any) |
+| objectField | Field | &srarr; | Object field to query attributes |
+| attributePath | Text | &srarr; | Name or path of attribute |
+| queryOp | Text, * | &srarr; | Query operator (comparator) |
+| value | Text, Number, Date, Time | &srarr; | Value to compare |
+| * | Operator | &srarr; | Continue query flag |
 
 <!-- END REF-->
 
@@ -119,8 +119,29 @@ No matter which way a query has been defined:
 
 ##### Date values in the object 
 
+Dates are stored in objects according to database settings; by default, the time zone is taken into account (see the JSON use local time selector in the [SET DATABASE PARAMETER](set-database-parameter.md) command). 
+
 ```undefined
 !1973-05-22! -> "1973-05-21T23:00:00.000Z"
+```
+
+This setting is also taken into account during queries, so you do not have to worry about it if you always use your database at the same place and if settings are the same on all machines that access the data. In this case, the following query will correctly return records whose Birthday attribute equals !1973-05-22! (saved as "1973-05-21T23:00:00.00Z"):
+
+```4d
+ QUERY BY ATTRIBUTE([Persons];[Persons]OB_Info;"Birthday";=;!1973-05-22!)
+```
+
+If you do not want to use the GMT settings, you can modify these settings using the following instruction:
+
+```4d
+ SET DATABASE PARAMETER(JSON use local time;0)
+```
+
+Keep in mind that the scope of this setting is the process only. If you execute this instruction, then October 1st, 1965 will be stored "1965-10-01T00:00:00.000Z" but you will need to set the same parameter before launching your queries:
+
+```4d
+ SET DATABASE PARAMETER(JSON use local time;0)
+ QUERY BY ATTRIBUTE([Persons];[Persons]OB_Info;"Birthday";=;!1976-11-27!)
 ```
 
 ##### Using the virtual length property 

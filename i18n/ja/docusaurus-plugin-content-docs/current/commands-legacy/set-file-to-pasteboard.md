@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET FILE TO PASTEBOARD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| filePath | 文字 | &#x1F852; | ファイルの完全パス名 |
-| * | 演算子 | &#x1F852; | 指定時: 追加、省略時: 置換 |
+| filePath | Text | &srarr; | ファイルの完全パス名 |
+| * | 演算子 | &srarr; | 指定時: 追加、省略時: 置換 |
 
 <!-- END REF-->
 

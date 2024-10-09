@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get area property.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Entier long | &#x1F852; | Référence de la zone |
-| propriété | Entier long | &#x1F852; | Elément d'interface |
-| Résultat | Entier long | &#x1F850; | 1 = affiché, 0 = caché |
+| zone | Integer | &srarr; | Référence de la zone |
+| propriété | Integer | &srarr; | Elément d'interface |
+| Résultat | Integer | &larr; | 1 = affiché, 0 = caché |
 
 <!-- END REF-->
 

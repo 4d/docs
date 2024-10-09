@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current form window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | WinRef | &#x1F850; | Current form window reference number |
+| Function result | WinRef | &larr; | Current form window reference number |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WA SET PREFERENCE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| seletor | Inteiro longo | &#x1F852; | Preferência a ser modificada |
-| valor | Booleano | &#x1F852; | Valor de preferência (True=permitido; False = não permitido) |
+| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &srarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| seletor | Integer | &srarr; | Preferência a ser modificada |
+| valor | Boolean | &srarr; | Valor de preferência (True=permitido; False = não permitido) |
 
 <!-- END REF-->
 

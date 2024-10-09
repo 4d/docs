@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PREVIOUS RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table dans laquelle se placer sur l'enregistrement précédent de la sélection courante ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &srarr; | Table dans laquelle se placer sur l'enregistrement précédent de la sélection courante ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 

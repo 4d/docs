@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | "blob"データの優先度値を調節するテーブル |
-| priority | 倍長整数 | &#x1F852; | テーブル内のBLOBのキャッシュ優先度値 |
+| aTable | Table | &srarr; | "blob"データの優先度値を調節するテーブル |
+| priority | Integer | &srarr; | テーブル内のBLOBのキャッシュ優先度値 |
 
 <!-- END REF-->
 

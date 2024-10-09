@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.TRUNCATE TABLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table de laquelle vous voulez supprimer tous les enregistrements ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &srarr; | Table de laquelle vous voulez supprimer tous les enregistrements ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 

@@ -5,18 +5,17 @@ slug: /commands/set-channel
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET CHANNEL.Syntax-->**SET CHANNEL** ( *port* ; *param* ) 
-        
-            SET CHANNEL ( *opération* ; *nomFichier* )<!-- END REF-->
+<!--REF #_command_.SET CHANNEL.Syntax-->**SET CHANNEL** ( *port* ; *param* ) <br/>
+**SET CHANNEL** ( *opération* ; *nomFichier* )<!-- END REF-->
 <!--REF #_command_.SET CHANNEL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| port | Entier long | &#x1F852; | Numéro de port série |
-| param | Entier long | &#x1F852; | Paramètres de communication |
+| port | Integer | &srarr; | Numéro de port série |
+| param | Integer | &srarr; | Paramètres de communication |
 | SET CHANNEL ( opération ; nomFichier ) |
 | Paramètre | Type | Description |
-| opération | Entier long | &#x1F852; | Opération à effectuer sur document |
-| nomFichier | Chaîne | &#x1F852; | Nom du document |
+| opération | Integer | &srarr; | Opération à effectuer sur document |
+| nomFichier | Text | &srarr; | Nom du document |
 
 <!-- END REF-->
 

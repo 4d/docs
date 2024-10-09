@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get text from pasteboard.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Cadena | &#x1F850; | Devuelve el texto (si lo hay) en el Portapapeles |
+| Resultado | Text | &larr; | Devuelve el texto (si lo hay) en el Portapapeles |
 
 <!-- END REF-->
 

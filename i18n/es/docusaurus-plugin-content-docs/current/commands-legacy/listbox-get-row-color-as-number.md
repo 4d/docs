@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get row color as number.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si * se especifica) o <br/>Variable (si * se omite) |
-| fila | Entero largo | &#x1F852; | Número de fila |
-| tipoColor | Entero largo | &#x1F852; | Listbox color de fuente (por defecto) o Listbox color de fondo |
-| Resultado | Entero largo | &#x1F850; | Valor de color |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es una variable |
+| objeto | any | &srarr; | Nombre de objeto (si * se especifica) o <br/>Variable (si * se omite) |
+| fila | Integer | &srarr; | Número de fila |
+| tipoColor | Integer | &srarr; | Listbox color de fuente (por defecto) o Listbox color de fondo |
+| Resultado | Integer | &larr; | Valor de color |
 
 <!-- END REF-->
 

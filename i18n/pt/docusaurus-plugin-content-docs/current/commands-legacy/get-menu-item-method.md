@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Get menu item method.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Inteiro longo, MenuRef | &#x1F852; | Número de referência ou Número de Menu |
-| menuItem | Inteiro longo | &#x1F852; | Número de item de menu ou -1 para o último item adicionado ao menu |
-| processo | Inteiro longo | &#x1F852; | Número de processo |
-| Resultado | String | &#x1F850; | Nome do método |
+| menu | Integer, Text | &srarr; | Número de referência ou Número de Menu |
+| menuItem | Integer | &srarr; | Número de item de menu ou -1 para o último item adicionado ao menu |
+| processo | Integer | &srarr; | Número de processo |
+| Resultado | Text | &larr; | Nome do método |
 
 <!-- END REF-->
 

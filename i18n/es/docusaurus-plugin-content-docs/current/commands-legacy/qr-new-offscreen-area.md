@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QR New offscreen area.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Entero largo | &#x1F850; | Referencia del área creada |
+| Resultado | Integer | &larr; | Referencia del área creada |
 
 <!-- END REF-->
 

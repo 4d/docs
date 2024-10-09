@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SET INPUT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla para la cual definir el formulario de entrada o Tabla por defecto, si se omite |
-| form | Cadena, Objeto | &#x1F852; | Nombre del formulario a definir como formulario de entrada |
-| formUsuario | Cadena | &#x1F852; | Nombre del formulario usuario a utilizar |
-| * | &#x1F852; | Tamaño de ventana automático |
+| tabla | Table | &srarr; | Tabla para la cual definir el formulario de entrada o Tabla por defecto, si se omite |
+| form | Text, Object | &srarr; | Nombre del formulario a definir como formulario de entrada |
+| formUsuario | Text | &srarr; | Nombre del formulario usuario a utilizar |
+| * | Operator |  &srarr; | Tamaño de ventana automático |
 
 <!-- END REF-->
 

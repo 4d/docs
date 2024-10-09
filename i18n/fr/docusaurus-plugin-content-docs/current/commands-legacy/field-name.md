@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Field name.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ptrChamp &#124; numTable | Pointeur, Entier long | &#x1F852; | Pointeur vers un champ ou Numéro de table |
-| numChamp | Entier long | &#x1F852; | Numéro de champ si un numéro de table est passé en premier paramètre |
-| Résultat | Chaîne | &#x1F850; | Nom du champ |
+| ptrChamp &#124; numTable | Pointeur, Entier long | &srarr; | Pointeur vers un champ ou Numéro de table |
+| numChamp | Integer | &srarr; | Numéro de champ si un numéro de table est passé en premier paramètre |
+| Résultat | Text | &larr; | Nom du champ |
 
 <!-- END REF-->
 

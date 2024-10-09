@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Create entity selection.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| dsTable | Tabla | &#x1F852; | Tabla en la base 4D cuya selección actual se usará para crear la selección de entidad |
-| parametros | Objeto | &#x1F852; | Opción de creación: contexto |
-| Resultado | EntitySelection | &#x1F850; | Selección de entidad que coincide con la clase de datos relacionada con la tabla dada |
+| dsTable | Table | &srarr; | Tabla en la base 4D cuya selección actual se usará para crear la selección de entidad |
+| parametros | Object | &srarr; | Opción de creación: contexto |
+| Resultado | EntitySelection | &larr; | Selección de entidad que coincide con la clase de datos relacionada con la tabla dada |
 
 <!-- END REF-->
 

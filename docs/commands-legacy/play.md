@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PLAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| objectName | String | &#x1F852; | Name or path of sound file or system soundEmpty string for stopping asynchronous play |
-| async | Longint | &#x1F852; | (Windows) If specified, asynchronous execution; If omitted, synchronous execution |
+| objectName | Text | &srarr; | Name or path of sound file or system soundEmpty string for stopping asynchronous play |
+| async | Integer | &srarr; | (Windows) If specified, asynchronous execution; If omitted, synchronous execution |
 
 <!-- END REF-->
 

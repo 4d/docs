@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is editing text.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Booléen | &#x1F850; | Vrai si le texte est en cours de saisie, sinon faux |
+| Résultat | Boolean | &larr; | Vrai si le texte est en cours de saisie, sinon faux |
 
 <!-- END REF-->
 

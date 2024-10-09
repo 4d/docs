@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OB SET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object Field, オブジェクト | &#x1F852; | 構造化されたオブジェクト |
-| property | テキスト | &#x1F852; | 設定したいプロパティの名前 |
-| value | 式 | &#x1F852; | プロパティの新しい値 |
+| object | Object, Object | &srarr; | 構造化されたオブジェクト |
+| property | Text | &srarr; | 設定したいプロパティの名前 |
+| value | Expression | &srarr; | プロパティの新しい値 |
 
 <!-- END REF-->
 

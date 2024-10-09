@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ST SET OPTIONS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome do objeto (se * for especificado) ou Campo ou variável (se * for omitido) |
-| opcao | Inteiro longo | &#x1F852; | Opção a definir |
-| valor | Inteiro longo | &#x1F852; | Novo valor da opção |
+| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
+| objeto | any | &srarr; | Nome do objeto (se * for especificado) ou Campo ou variável (se * for omitido) |
+| opcao | Integer | &srarr; | Opção a definir |
+| valor | Integer | &srarr; | Novo valor da opção |
 
 <!-- END REF-->
 

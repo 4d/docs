@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET NAMES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Referencia de tabela |
-| arrayNome | Array texto | &#x1F858; | Arrays de nomes de formulário |
-| filtro | Texto | &#x1F852; | Filtro de nomes |
-| marcador | Variável Real | &#x1F852; | Marcador para versão mínima a devolver |
-| &#x1F858; | Novo valor |
-| * | Operador | &#x1F852; | Se passa = o comando é aplicado a base local quando é executado desde um componente(parâmetro ignorado fora deste contexto) |
+| tabela | Table | &srarr; | Referencia de tabela |
+| arrayNome | Text array | &harr; | Arrays de nomes de formulário |
+| filtro | Text | &srarr; | Filtro de nomes |
+| marcador | Real | &srarr; | Marcador para versão mínima a devolver |
+| &harr; | Novo valor |
+| * | Operador | &srarr; | Se passa = o comando é aplicado a base local quando é executado desde um componente(parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->
 

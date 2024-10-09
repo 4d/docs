@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get assert enabled.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Booleano | &#x1F850; | True = las aserciones están activas, False = las aserciones están inactivas |
+| Resultado | Boolean | &larr; | True = las aserciones están activas, False = las aserciones están inactivas |
 
 <!-- END REF-->
 

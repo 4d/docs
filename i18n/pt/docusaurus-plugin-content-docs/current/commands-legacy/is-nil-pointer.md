@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is nil pointer.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| umPonteiro | Ponteiro | &#x1F852; | Ponteiros a ser testado |
-| Resultado | Booleano | &#x1F850; | TRUE = ponteiro nulo (->[])FALSE = ponteiro válido a um objeto existente |
+| umPointer | Pointer | &srarr; | Ponteiros a ser testado |
+| Resultado | Boolean | &larr; | TRUE = ponteiro nulo (->[])FALSE = ponteiro válido a um objeto existente |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Current user.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| utilisateur | Entier long | &#x1F852; | Alias utilisateur ou compte utilisateur 4D |
-| Résultat | Chaîne | &#x1F850; | Nom de l'utilisateur courant |
+| utilisateur | Integer | &srarr; | Alias utilisateur ou compte utilisateur 4D |
+| Résultat | Text | &larr; | Nom de l'utilisateur courant |
 
 <!-- END REF-->
 

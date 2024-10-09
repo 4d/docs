@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET FILTER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
-| filtroEntrada | String | &#x1F852; | Novo filtro de entrada de dados para a área editável |
+| * | Operador | &srarr; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
+| objeto | any | &srarr; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
+| filtroEntrada | Text | &srarr; | Novo filtro de entrada de dados para a área editável |
 
 <!-- END REF-->
 

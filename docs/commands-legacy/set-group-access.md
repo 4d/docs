@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET GROUP ACCESS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| groups | Collection | &#x1F852; | Name of group(s) to which the 4D user account must belong during the session |
+| groups | Collection | &srarr; | Name of group(s) to which the 4D user account must belong during the session |
 
 <!-- END REF-->
 

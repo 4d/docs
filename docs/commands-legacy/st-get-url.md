@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.ST GET URL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
-| urlText | Text | &#x1F858; | Visible text of URL |
-| urlAddress | Text | &#x1F858; | URL address |
-| startSel | Longint | &#x1F852; | Start of selection |
-| endSel | Longint | &#x1F852; | End of selection |
+| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | any | &srarr; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| urlText | Text | &harr; | Visible text of URL |
+| urlAddress | Text | &harr; | URL address |
+| startSel | Integer | &srarr; | Start of selection |
+| endSel | Integer | &srarr; | End of selection |
 
 <!-- END REF-->
 

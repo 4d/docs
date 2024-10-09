@@ -9,16 +9,28 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON TO SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | 4D table into which elements are copied |
-| jsonArray | Text | &#x1F852; | Array of objects in JSON |
+| aTable | Table | &srarr; | 4D table into which elements are copied |
+| jsonArray | Text | &srarr; | Array of objects in JSON |
 
 <!-- END REF-->
 
 #### Description 
 
+<!--REF #_command_.JSON TO SELECTION.Summary-->The **JSON TO SELECTION** command copies the contents of an array of JSON objects *jsonArray* to the selection of records of *aTable*.<!-- END REF--> 
+
+The *jsonArray* parameter is a [text](# "A character string that may contain from 0 to 2 GB of text") representing an array of objects formatted in JSON and containing one or more elements. The expected syntax is of the type:
+
 ```undefined
 "[{"attribute1":"value1","attribute2":"value2",...},...,{"attribute1":"valueN","attribute2":"valueN",...}]"
 ```
+
+If a selection exists for *aTable* at the time of the call, the elements of the JSON array are copied into the records based on the order of the array and the order of the records. If the number of elements defined in the JSON array is greater than the number of records in the current selection, new records are created. The records, whether they are new or existing, are automatically saved.
+
+**Note:** This command supports Object type fields: JSON data is converted automatically. 
+
+**Warning:** Since **JSON TO SELECTION** replaces any information found in the existing records, this command must be used with caution. 
+
+If a record is locked by another process during the execution of the command, it is not modified. All the locked records are placed in the *The LockedSet System Set*. After the execution of **JSON TO SELECTION**, you can test whether the *LockedSet* set contains any records that were locked.
 
 #### Example 
 

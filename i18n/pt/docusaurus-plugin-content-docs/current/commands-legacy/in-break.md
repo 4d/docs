@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.In break.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Booleano | &#x1F850; | Devolve True se o ciclo de execução é In break |
+| Resultado | Boolean | &larr; | Devolve True se o ciclo de execução é In break |
 
 <!-- END REF-->
 

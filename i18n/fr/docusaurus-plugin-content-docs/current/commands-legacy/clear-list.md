@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| liste | RefListe | &#x1F852; | Numéro de référence de liste |
-| * | &#x1F852; | Si spécifié, effacer les sous-listes de la mémoire (s'il existe des sous-listes) Si omis, ne pas effacer les sous-listes |
+| liste | Integer | &srarr; | Numéro de référence de liste |
+| * | Operator |  &srarr; | Si spécifié, effacer les sous-listes de la mémoire (s'il existe des sous-listes) Si omis, ne pas effacer les sous-listes |
 
 <!-- END REF-->
 

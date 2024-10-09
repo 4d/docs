@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SEND HTTP REDIRECT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| url | Cadena | &#x1F852; | Nuevo URL |
-| * | Operador | &#x1F852; | Si se especifica = el URL no está traducido, Si se omite = el URL está traducido |
+| url | Text | &srarr; | Nuevo URL |
+| * | Operador | &srarr; | Si se especifica = el URL no está traducido, Si se omite = el URL está traducido |
 
 <!-- END REF-->
 

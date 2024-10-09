@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Get page title.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
-| Resultado | Cadena | &#x1F850; | Título de la página actual |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &srarr; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
+| Resultado | Text | &larr; | Título de la página actual |
 
 <!-- END REF-->
 

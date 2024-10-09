@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela para a qual os registros selecionados serão lidos. Se omitido, a tabela do formulário atual |
-| nomConjunto | String | &#x1F852; | Conjunto onde os nomes selecionados serão armazenados |
+| tabela | Table | &srarr; | Tabela para a qual os registros selecionados serão lidos. Se omitido, a tabela do formulário atual |
+| nomConjunto | Text | &srarr; | Conjunto onde os nomes selecionados serão armazenados |
 
 <!-- END REF-->
 

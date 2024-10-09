@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ADD TO SET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | カレントレコードのテーブル, または 省略時デフォルトテーブル |
-| set | 文字 | &#x1F852; | カレントレコードを追加するセットの名前 |
+| aTable | Table | &srarr; | カレントレコードのテーブル, または 省略時デフォルトテーブル |
+| set | Text | &srarr; | カレントレコードを追加するセットの名前 |
 
 <!-- END REF-->
 

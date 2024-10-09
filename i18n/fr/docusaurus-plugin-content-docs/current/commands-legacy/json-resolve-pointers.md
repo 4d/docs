@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Resolve pointers.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Objet | &#x1F852; | Objet contenant des pointeurs JSON à résoudre |
-| &#x1F858; | Objet avec pointeurs JSON résolus (uniquement si Résultat est un objet) |
-| options | Objet | &#x1F852; | Options pour la résolution des pointeurs |
-| Résultat | Objet | &#x1F850; | Objet contenant le résultat du traitement |
+| objet | Object | &srarr; | Objet contenant des pointeurs JSON à résoudre |
+| &harr; | Objet avec pointeurs JSON résolus (uniquement si Résultat est un objet) |
+| options | Object | &srarr; | Options pour la résolution des pointeurs |
+| Résultat | Object | &larr; | Objet contenant le résultat du traitement |
 
 <!-- END REF-->
 
@@ -57,11 +57,17 @@ Dans tous les cas, la commande retourne un objet contenant les propriétés suiv
   
 #### Définition des pointeurs JSON 
 
+*JSON Pointer* est un standard qui définit une syntaxe de chaîne qui peut être utilisée pour accéder à un champ ou une valeur de clé particulière dans la totalité du document JSON. Ce standard a été décrit dans la [RFC 6901](https://tools.ietf.org/html/rfc6901). 
+
+Un pointeur JSON est, à proprement parler, une chaîne composée de parties séparées par des '/'. Un pointeur JSON est généralement placé dans un URI qui spécifie le document dans lequel le pointeur sera résolu. Le caractère "#' est utilisé dans l'URI pour désigner le fragment contenant le pointeur JSON. Par convention, un URI contenant un pointeur JSON doit être placé dans une propriété d'objet JSON nommée "$ref".
+
 ```undefined
 {
    "$ref":<chemin>#<pointeur_json>
 }
 ```
+
+**Note :** 4D ne prend pas en charge le caractère "-" en tant que référence d'éléments de tableau non existants. 
 
 ##### Récursivité et résolution des chemins 
 
@@ -105,6 +111,8 @@ Cet exemple basique illustre comment un pointeur JSON peut être défini et remp
 
 #### Exemple 2 
 
+Vous voulez réutiliser l'adresse "billingAddress" comme adresse "shippingAddress" dans l'objet JSON suivant (nommé $oMyConfig):
+
 ```undefined
 {
     "lastname": "Doe",
@@ -118,7 +126,37 @@ Cet exemple basique illustre comment un pointeur JSON peut être défini et remp
 }
 ```
 
+Après l'exécution de ce code :
+
+```4d
+ $oResult:=JSON Resolve pointers($oMyConfig)
+```
+
+... l'objet suivant est retourné :
+
+```undefined
+{
+    "success": true,
+    "value": {
+        "lastname": "Doe",
+        "firstname": "John",
+        "billingAddress": {
+            "street": "95 S. Market Street",
+            "city": "San Jose",
+            "state": "California" 
+        },
+        "shippingAddress": {
+            "street": "95 S. Market Street",
+            "city": "San Jose",
+            "state": "California" 
+        }
+    }
+}
+```
+
 #### Exemple 3 
+
+Cet exemple illustre l'effet de l'option "merge". Vous souhaitez modifier les droits d'un utilisateur, basés sur un fichier par défaut.
 
 ```undefined
 {
@@ -126,6 +164,66 @@ Cet exemple basique illustre comment un pointeur JSON peut être défini et remp
         "$ref": "defaultSettings.json#/defaultRights",
         "delete": true,
         "id": 456
+    }
+}
+```
+
+Le fichier *defaultSettings.json* contient :
+
+```undefined
+{
+    "defaultRights":
+    {
+        "edit": true,
+        "add": false,
+        "delete": false
+    }
+}
+```
+
+Si vous exécutez :
+
+```4d
+ var $options : Object
+ $options:=New object("merge";False) //remplacer le contenu
+ $oResult:=JSON Resolve pointers($oMyConfig;$options)
+```
+
+... la valeur résultante est exactement le contenu du fichier *defaultSettings.json* :
+
+```undefined
+{
+    "success": true,
+    "value": {
+        "rights": {
+            "edit": true,
+            "add": false,
+            "delete": false
+        }
+    }
+}
+```
+
+Si vous exécutez :
+
+```4d
+ var $options : Object
+ $options:=New object("merge";True) //fusionner les contenus
+ $oResult:=JSON Resolve pointers($oMyConfig;$options)
+```
+
+... la valeur résultante est une version modifiée de l'objet original :
+
+```undefined
+{
+    "success": true,
+    "value": {
+        "rights": {
+            "edit": true,
+            "add": false,
+            "delete": true,
+            "id": 456
+        }
     }
 }
 ```

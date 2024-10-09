@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL EXECUTE SCRIPT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminScript | Texte | &#x1F852; | Chemin d'accès complet du fichier contenant le script SQL à exécuter |
-| actionErreur | Entier long | &#x1F852; | Action à effectuer en cas d’erreur durant l’exécution du script |
-| nomAttribut | Texte | &#x1F852; | Nom d’attribut à utiliser |
-| valAttribut | Texte | &#x1F852; | Valeur de l’attribut |
+| cheminScript | Text | &srarr; | Chemin d'accès complet du fichier contenant le script SQL à exécuter |
+| actionErreur | Integer | &srarr; | Action à effectuer en cas d’erreur durant l’exécution du script |
+| nomAttribut | Text | &srarr; | Nom d’attribut à utiliser |
+| valAttribut | Text | &srarr; | Valeur de l’attribut |
 
 <!-- END REF-->
 

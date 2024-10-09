@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.GET RESOURCE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| resTipo | String | &#x1F852; | tipo de resource de 4 caracteres |
-| resNum | Inteiro longo | &#x1F852; | Número do recurso |
-| resDados | BLOB | &#x1F852; | Campo BLOB ou variável para receber os dados |
-| &#x1F858; | Conteúdos do resource |
-| resArquivo | refDoc | &#x1F852; | Número de referência do arquivo Resource, ou todos os arquivos de referência abertos, se omitido |
+| resTipo | Text | &srarr; | tipo de resource de 4 caracteres |
+| resNum | Integer | &srarr; | Número do recurso |
+| resDados | Blob | &srarr; | Campo BLOB ou variável para receber os dados |
+| &harr; | Conteúdos do resource |
+| resArquivo | Time | &srarr; | Número de referência do arquivo Resource, ou todos os arquivos de referência abertos, se omitido |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.IMPORT STRUCTURE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| xmlStructure | テキスト | &#x1F852; | 4D データベースストラクチャーのXML定義ファイル |
+| xmlStructure | Text | &srarr; | 4D データベースストラクチャーのXML定義ファイル |
 
 <!-- END REF-->
 

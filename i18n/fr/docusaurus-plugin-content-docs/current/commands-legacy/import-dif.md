@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.IMPORT DIF.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table dans laquelle effectuer l'import ou Table par défaut si ce paramètre est omis |
-| nomFichier | Chaîne | &#x1F852; | Document DIF à importer |
+| laTable | Table | &srarr; | Table dans laquelle effectuer l'import ou Table par défaut si ce paramètre est omis |
+| nomFichier | Text | &srarr; | Document DIF à importer |
 
 <!-- END REF-->
 

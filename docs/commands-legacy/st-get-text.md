@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.ST Get text.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
-| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Text field or variable (if * is omitted) |
-| startSel | Longint | &#x1F852; | Start of selection |
-| endSel | Longint | &#x1F852; | End of selection |
-| Function result | Text | &#x1F850; | Text including style tags |
+| * | Operator | &srarr; | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
+| object | any | &srarr; | Object name (if * is specified) or <br/>Text field or variable (if * is omitted) |
+| startSel | Integer | &srarr; | Start of selection |
+| endSel | Integer | &srarr; | End of selection |
+| Function result | Text | &larr; | Text including style tags |
 
 <!-- END REF-->
 

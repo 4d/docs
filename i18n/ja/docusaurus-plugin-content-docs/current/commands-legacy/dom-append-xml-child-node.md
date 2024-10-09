@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Append XML child node.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | テキスト | &#x1F852; | XML要素参照 |
-| childType | 倍長整数 | &#x1F852; | 追加する子のタイプ |
-| childValue | テキスト, BLOB | &#x1F852; | 子ノードとして挿入するテキストまたは (テキストあるいはBlob) 変数 |
-| 戻り値 | テキスト | &#x1F850; | 子XML要素参照 |
+| elementRef | Text | &srarr; | XML要素参照 |
+| childType | Integer | &srarr; | 追加する子のタイプ |
+| childValue | Text, Blob | &srarr; | 子ノードとして挿入するテキストまたは (テキストあるいはBlob) 変数 |
+| 戻り値 | Text | &larr; | 子XML要素参照 |
 
 <!-- END REF-->
 

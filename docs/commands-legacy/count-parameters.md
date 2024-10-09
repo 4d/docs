@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Count parameters.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#x1F850; | Number of parameters actually passed |
+| Function result | Longint | &larr; | Number of parameters actually passed |
 
 <!-- END REF-->
 

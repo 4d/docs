@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SET MENU ITEM ICON.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Entier long, RefMenu | &#x1F852; | Référence de menu ou Numéro de menu |
-| ligneMenu | Entier long | &#x1F852; | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée au menu |
-| refIcône | Texte, Entier long | &#x1F852; | Nom ou numéro de l’image à associer à la ligne de menu |
-| process | Entier long | &#x1F852; | Numéro de process |
+| menu | Integer, Text | &srarr; | Référence de menu ou Numéro de menu |
+| ligneMenu | Integer | &srarr; | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée au menu |
+| refIcône | Text, Integer | &srarr; | Nom ou numéro de l’image à associer à la ligne de menu |
+| process | Integer | &srarr; | Numéro de process |
 
 <!-- END REF-->
 

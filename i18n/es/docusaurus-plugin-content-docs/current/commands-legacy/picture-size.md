@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Picture size.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| imagen | Imagen | &#x1F852; | Imagen para la cual devolver el tamaño en bytes |
-| Resultado | Entero largo | &#x1F850; | Tamaño en bytes de la imagen |
+| imagen | Picture | &srarr; | Imagen para la cual devolver el tamaño en bytes |
+| Resultado | Integer | &larr; | Tamaño en bytes de la imagen |
 
 <!-- END REF-->
 

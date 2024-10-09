@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Temporary folder.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Chaîne | &#x1F850; | Chemin d'accès au dossier temporaire |
+| Résultat | Text | &larr; | Chemin d'accès au dossier temporaire |
 
 <!-- END REF-->
 

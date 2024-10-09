@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SOAP DECLARATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| variable | 変数 | &#x1F852; | 入出力SOAP引数を参照する変数 |
-| type | 倍長整数 | &#x1F852; | 引数が指す4Dの型 |
-| input_output | 倍長整数 | &#x1F852; | 1 = SOAP入力, 2 = SOAP出力 |
-| alias | 文字 | &#x1F852; | SOAP交換の間 この引数用に公開される名前 |
+| variable | Variable | &srarr; | 入出力SOAP引数を参照する変数 |
+| type | Integer | &srarr; | 引数が指す4Dの型 |
+| input_output | Integer | &srarr; | 1 = SOAP入力, 2 = SOAP出力 |
+| alias | Text | &srarr; | SOAP交換の間 この引数用に公開される名前 |
 
 <!-- END REF-->
 

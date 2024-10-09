@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Read only state.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table pour laquelle il faut tester l'état ou Table par défaut si ce paramètre est omis |
-| Résultat | Booléen | &#x1F850; | Accès à la table est lecture seulement (Vrai) ou Accès à la table est lecture-écriture (Faux) |
+| laTable | Table | &srarr; | Table pour laquelle il faut tester l'état ou Table par défaut si ce paramètre est omis |
+| Résultat | Boolean | &larr; | Accès à la table est lecture seulement (Vrai) ou Accès à la table est lecture-écriture (Faux) |
 
 <!-- END REF-->
 

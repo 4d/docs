@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Super.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| param | Mixed | &#x1F852; | 親コンストラクターに渡す引数 |
-| 戻り値 | オブジェクト | &#x1F850; | オブジェクトの親 |
+| param | any | &srarr; | 親コンストラクターに渡す引数 |
+| 戻り値 | Object | &larr; | オブジェクトの親 |
 
 <!-- END REF-->
 

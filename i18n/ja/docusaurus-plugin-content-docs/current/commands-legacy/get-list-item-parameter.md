@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST ITEM PARAMETER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
-| list | ListRef, 文字 | &#x1F852; | リスト参照番号 (* 省略時) または リストオブジェクト名 (* 指定時) |
-| itemRef &#124; * | 倍長整数, 演算子 | &#x1F852; | 項目参照番号 または 0: リストに最後に追加された項目 または *: カレントのリスト項目 |
-| selector | 文字 | &#x1F852; | パラメタ定数 |
-| value | 文字, ブール, 実数 | &#x1F858; | パラメタの現在値 |
+| * | 演算子 | &srarr; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
+| list | Integer, Text | &srarr; | リスト参照番号 (* 省略時) または リストオブジェクト名 (* 指定時) |
+| itemRef &#124; * | 倍長整数, 演算子 | &srarr; | 項目参照番号 または 0: リストに最後に追加された項目 または *: カレントのリスト項目 |
+| selector | Text | &srarr; | パラメタ定数 |
+| value | Text, Boolean, Real | &harr; | パラメタの現在値 |
 
 <!-- END REF-->
 

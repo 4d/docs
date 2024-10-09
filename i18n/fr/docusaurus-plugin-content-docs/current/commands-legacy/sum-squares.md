@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Sum squares.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| séries | Champ, Tableau | &#x1F852; | Valeurs dont vous voulez obtenir la somme des carrés |
-| Résultat | Réel | &#x1F850; | Somme des carrés de séries |
+| séries | Field, Array | &srarr; | Valeurs dont vous voulez obtenir la somme des carrés |
+| Résultat | Real | &larr; | Somme des carrés de séries |
 
 <!-- END REF-->
 

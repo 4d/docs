@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get database localization.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tipoIdioma | Inteiro longo | &#x1F852; | Tipo de idioma |
-| * | Operador | &#x1F852; | Retorna informação sobre banco de dados host |
-| Resultado | String | &#x1F850; | Idioma atual do banco |
+| tipoIdioma | Integer | &srarr; | Tipo de idioma |
+| * | Operador | &srarr; | Retorna informação sobre banco de dados host |
+| Resultado | Text | &larr; | Idioma atual do banco |
 
 <!-- END REF-->
 

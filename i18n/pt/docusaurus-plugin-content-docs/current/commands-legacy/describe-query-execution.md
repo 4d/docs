@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| estado | Booleano | &#x1F852; | True=Ativar análises de pesquisas internas, False=Desativar o análises de pesquisas internas |
+| estado | Boolean | &srarr; | True=Ativar análises de pesquisas internas, False=Desativar o análises de pesquisas internas |
 
 <!-- END REF-->
 

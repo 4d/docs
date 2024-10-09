@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ON EVENT CALL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| méthodeEvén | Chaîne | &#x1F852; | Méthode d'événement à appeler ou Chaîne vide pour arrêter l'interception des événements |
-| nomProcess | Chaîne | &#x1F852; | Nom de process |
+| méthodeEvén | Text | &srarr; | Méthode d'événement à appeler ou Chaîne vide pour arrêter l'interception des événements |
+| nomProcess | Text | &srarr; | Nom de process |
 
 <!-- END REF-->
 

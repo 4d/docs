@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE EMPTY SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table for which to create an empty set, or Default table, if omitted |
-| set | String | &#x1F852; | Name of the new empty set |
+| aTable | Table | &srarr; | Table for which to create an empty set, or Default table, if omitted |
+| set | Text | &srarr; | Name of the new empty set |
 
 <!-- END REF-->
 

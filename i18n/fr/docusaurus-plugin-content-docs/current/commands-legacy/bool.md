@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Bool.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| expression | Expression | &#x1F852; | Expression à retourner sous forme de booléen |
-| Résultat | Booléen | &#x1F850; | Expression sous forme booléenne |
+| expression | Expression | &srarr; | Expression à retourner sous forme de booléen |
+| Résultat | Boolean | &larr; | Expression sous forme booléenne |
 
 <!-- END REF-->
 

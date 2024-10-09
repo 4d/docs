@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ON ERR CALL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| méthodErreur | Chaîne | &#x1F852; | Méthode de gestion d'erreur à appeler ou Chaîne vide pour désinstaller la méthode |
-| portée | Entier | &#x1F852; | Portée de la méthode de gestion d'erreur |
+| méthodErreur | Text | &srarr; | Méthode de gestion d'erreur à appeler ou Chaîne vide pour désinstaller la méthode |
+| portée | Integer | &srarr; | Portée de la méthode de gestion d'erreur |
 
 <!-- END REF-->
 

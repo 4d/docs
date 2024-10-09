@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get data source.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
-| Resultado | Ponteiro | &#x1F850; | Ponteiro a fonte de dados atual do objeto |
+| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
+| objeto | any | &srarr; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| Resultado | Pointer | &larr; | Ponteiro a fonte de dados atual do objeto |
 
 <!-- END REF-->
 

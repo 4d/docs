@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Windows Alt down.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | ブール | &#x1F850; | WindowsのAltキーのステータス ( Macintoshの場合は、optionキー) |
+| 戻り値 | Boolean | &larr; | WindowsのAltキーのステータス ( Macintoshの場合は、optionキー) |
 
 <!-- END REF-->
 

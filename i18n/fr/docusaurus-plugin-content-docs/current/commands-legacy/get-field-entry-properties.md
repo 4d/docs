@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ptrChp &#124; numTable | Pointeur, Entier long | &#x1F852; | Pointeur de champ ou Numéro de table |
-| numChamp | Entier long | &#x1F852; | Numéro de champ si un numéro de table est passé en premier paramètre |
-| énumération | Chaîne | &#x1F858; | Nom de l’énumération associée ou Chaîne vide |
-| obligatoire | Booléen | &#x1F858; | Vrai = Obligatoire, Faux = Facultatif |
-| nonSaisissable | Booléen | &#x1F858; | Vrai = Non saisissable, Faux = Saisissable |
-| nonModifiable | Booléen | &#x1F858; | Vrai = Non modifiable, Faux = Modifiable |
+| ptrChp &#124; numTable | Pointeur, Entier long | &srarr; | Pointeur de champ ou Numéro de table |
+| numChamp | Integer | &srarr; | Numéro de champ si un numéro de table est passé en premier paramètre |
+| énumération | Text | &harr; | Nom de l’énumération associée ou Chaîne vide |
+| obligatoire | Boolean | &harr; | Vrai = Obligatoire, Faux = Facultatif |
+| nonSaisissable | Boolean | &harr; | Vrai = Non saisissable, Faux = Saisissable |
+| nonModifiable | Boolean | &harr; | Vrai = Non modifiable, Faux = Modifiable |
 
 <!-- END REF-->
 

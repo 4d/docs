@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Log File.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Cadena | &#x1F850; | Nombre completo del archivo historial de la base |
+| Resultado | Text | &larr; | Nombre completo del archivo historial de la base |
 
 <!-- END REF-->
 

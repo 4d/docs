@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Macintosh command down.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#x1F850; | State of the Macintosh Command key (Ctrl key on Windows) |
+| Function result | Boolean | &larr; | State of the Macintosh Command key (Ctrl key on Windows) |
 
 <!-- END REF-->
 

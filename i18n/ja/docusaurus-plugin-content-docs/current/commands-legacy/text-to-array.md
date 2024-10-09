@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.TEXT TO ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| varText | テキスト | &#x1F852; | 分割する元のテキスト |
-| arrText | テキスト配列 | &#x1F858; | 単語または行に分割されたテキストを受け取る配列 |
-| width | 倍長整数 | &#x1F852; | 文字列の最大幅 (ピクセル) |
-| fontName | テキスト | &#x1F852; | フォント名 |
-| fontSize | 倍長整数 | &#x1F852; | フォントサイズ |
-| fontStyle | 倍長整数 | &#x1F852; | フォントスタイル |
-| * | 演算子 | &#x1F852; | 指定時、テキストをマルチスタイルとして解釈する |
+| varText | Text | &srarr; | 分割する元のテキスト |
+| arrText | Text array | &harr; | 単語または行に分割されたテキストを受け取る配列 |
+| width | Integer | &srarr; | 文字列の最大幅 (ピクセル) |
+| fontName | Text | &srarr; | フォント名 |
+| fontSize | Integer | &srarr; | フォントサイズ |
+| fontStyle | Integer | &srarr; | フォントスタイル |
+| * | 演算子 | &srarr; | 指定時、テキストをマルチスタイルとして解釈する |
 
 <!-- END REF-->
 

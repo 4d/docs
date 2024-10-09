@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PICTURE METADATA.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| image | Image | &#x1F852; | Image dont vous souhaitez écrire les métadonnées |
-| nomMeta | Texte | &#x1F852; | Nom ou chemin du bloc à écrire |
-| contenuMeta | Variable | &#x1F852; | Contenu de la métadonnée |
+| image | Picture | &srarr; | Image dont vous souhaitez écrire les métadonnées |
+| nomMeta | Text | &srarr; | Nom ou chemin du bloc à écrire |
+| contenuMeta | Variable | &srarr; | Contenu de la métadonnée |
 
 <!-- END REF-->
 

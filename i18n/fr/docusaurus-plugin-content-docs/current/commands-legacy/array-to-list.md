@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY TO LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableau | Tableau | &#x1F852; | Tableau duquel copier les éléments |
-| liste | Chaîne, RefListe | &#x1F852; | Nom ou référence de la liste dans laquelle copier les éléments du tableau |
-| réfEléments | Tableau | &#x1F852; | Tableau numérique des numéros de référence des éléments |
+| tableau | Array | &srarr; | Tableau duquel copier les éléments |
+| liste | Text, Integer | &srarr; | Nom ou référence de la liste dans laquelle copier les éléments du tableau |
+| réfEléments | Array | &srarr; | Tableau numérique des numéros de référence des éléments |
 
 <!-- END REF-->
 

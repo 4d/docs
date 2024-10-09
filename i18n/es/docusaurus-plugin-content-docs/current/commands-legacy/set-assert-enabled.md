@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET ASSERT ENABLED.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| aser | Booleano | &#x1F852; | True = activar las aserciones, False = desactivar las aserciones |
-| * | Operador | &#x1F852; | Si se omite = el comando se aplica al conjunto de los procesos, Si se pasa = el comando se aplica al proceso actual únicamente |
+| aser | Boolean | &srarr; | True = activar las aserciones, False = desactivar las aserciones |
+| * | Operador | &srarr; | Si se omite = el comando se aplica al conjunto de los procesos, Si se pasa = el comando se aplica al proceso actual únicamente |
 
 <!-- END REF-->
 

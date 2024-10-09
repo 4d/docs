@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE MANY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela1 &#124; campo1 | Tabela, Campo | &#x1F852; | Tabela para estabelecer todas as relações Um a Muitos, ou campo UM |
+| tabela1 &#124; campo1 | Tabela, Campo | &srarr; | Tabela para estabelecer todas as relações Um a Muitos, ou campo UM |
 
 <!-- END REF-->
 

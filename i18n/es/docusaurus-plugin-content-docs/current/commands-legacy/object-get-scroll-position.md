@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es una variable o un campo |
-| objeto | Objeto de formulario | &#x1F852; | Nombre del objeto (si se especifica *) o Variable o campo (si se omite *) |
-| posicionLinea | Entero largo | &#x1F858; | Número de la primera línea mostrada o desplazamiento vertical en píxeles (imágenes) |
-| posicionH | Entero largo | &#x1F858; | Número de la primera columna mostrada (list box) o desplazamiento horizontal en píxeles (imágenes) |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es una variable o un campo |
+| objeto | any | &srarr; | Nombre del objeto (si se especifica *) o Variable o campo (si se omite *) |
+| posicionLinea | Integer | &harr; | Número de la primera línea mostrada o desplazamiento vertical en píxeles (imágenes) |
+| posicionH | Integer | &harr; | Número de la primera columna mostrada (list box) o desplazamiento horizontal en píxeles (imágenes) |
 
 <!-- END REF-->
 

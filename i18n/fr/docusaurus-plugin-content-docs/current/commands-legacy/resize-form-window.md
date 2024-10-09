@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESIZE FORM WINDOW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| largeur | Entier long | &#x1F852; | Pixels à ajouter ou soustraire à la largeur courante de la fenêtre formulaire |
-| hauteur | Entier long | &#x1F852; | Pixels à ajouter ou soustraire à la hauteur courante de la fenêtre formulaire |
+| largeur | Integer | &srarr; | Pixels à ajouter ou soustraire à la largeur courante de la fenêtre formulaire |
+| hauteur | Integer | &srarr; | Pixels à ajouter ou soustraire à la hauteur courante de la fenêtre formulaire |
 
 <!-- END REF-->
 

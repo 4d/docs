@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET COORDINATES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | Entier long | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| gauche | Entier long | &#x1F852; | Coordonnée gauche de l’objet en pixels |
-| haut | Entier long | &#x1F852; | Coordonnée supérieure de l’objet en pixels |
-| droite | Entier long | &#x1F852; | Coordonnée droite de l’objet en pixels |
-| bas | Entier long | &#x1F852; | Coordonnée inférieure de l’objet en pixels |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | Integer | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| gauche | Integer | &srarr; | Coordonnée gauche de l’objet en pixels |
+| haut | Integer | &srarr; | Coordonnée supérieure de l’objet en pixels |
+| droite | Integer | &srarr; | Coordonnée droite de l’objet en pixels |
+| bas | Integer | &srarr; | Coordonnée inférieure de l’objet en pixels |
 
 <!-- END REF-->
 

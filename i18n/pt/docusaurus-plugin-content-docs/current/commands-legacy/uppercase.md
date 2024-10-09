@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Uppercase.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| cadeia | String | &#x1F852; | Cadeia a converter para maiúsculas |
-| * | Operador | &#x1F852; | Se passado: manter os acentos |
-| Resultado | String | &#x1F850; | Cadeia em letras maiúsculas |
+| cadeia | Text | &srarr; | Cadeia a converter para maiúsculas |
+| * | Operador | &srarr; | Se passado: manter os acentos |
+| Resultado | Text | &larr; | Cadeia em letras maiúsculas |
 
 <!-- END REF-->
 

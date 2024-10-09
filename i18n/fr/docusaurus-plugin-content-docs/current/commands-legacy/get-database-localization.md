@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get database localization.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| typeLangue | Entier long | &#x1F852; | Type de langue |
-| * | Opérateur | &#x1F852; | Return information about host database |
-| Résultat | Chaîne | &#x1F850; | Code de la langue utilisée |
+| typeLangue | Integer | &srarr; | Type de langue |
+| * | Opérateur | &srarr; | Return information about host database |
+| Résultat | Text | &larr; | Code de la langue utilisée |
 
 <!-- END REF-->
 

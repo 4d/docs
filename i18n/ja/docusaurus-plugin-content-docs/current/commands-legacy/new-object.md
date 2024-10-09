@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.New object.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| property | テキスト | &#x1F852; | 作成するプロパティ名 |
-| value | Mixed | &#x1F852; | プロパティの値 |
-| 戻り値 | オブジェクト | &#x1F850; | 新しいランゲージオブジェクト |
+| property | Text | &srarr; | 作成するプロパティ名 |
+| value | any | &srarr; | プロパティの値 |
+| 戻り値 | Object | &larr; | 新しいランゲージオブジェクト |
 
 <!-- END REF-->
 

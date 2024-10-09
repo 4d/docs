@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET MENU ITEM PARAMETER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Entero largo, MenuRef | &#x1F852; | Referencia de menú o número de menú |
-| lineaMenu | Entero largo | &#x1F852; | Número de línea de menú o -1 para la última línea añadida al menú |
-| param | Cadena | &#x1F852; | Cadena a asociar como parámetro |
+| menu | Integer, Text | &srarr; | Referencia de menú o número de menú |
+| lineaMenu | Integer | &srarr; | Número de línea de menú o -1 para la última línea añadida al menú |
+| param | Text | &srarr; | Cadena a asociar como parámetro |
 
 <!-- END REF-->
 

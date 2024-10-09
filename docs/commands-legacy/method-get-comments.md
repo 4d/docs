@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET COMMENTS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text, Text array | &#x1F852; | Text or Text array containing one or more method path(s) |
-| comments | Text, Text array | &#x1F858; | Documentation of designated method(s) |
-| * | Operator | &#x1F852; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| path | Text, Text array | &srarr; | Text or Text array containing one or more method path(s) |
+| comments | Text, Text array | &harr; | Documentation of designated method(s) |
+| * | Operator | &srarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->
 

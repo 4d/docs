@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET ALLOWED METHODS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| arrMetodos | Array cadena | &#x1F858; | Array de nombres de métodos |
+| arrMetodos | Text array | &harr; | Array de nombres de métodos |
 
 <!-- END REF-->
 

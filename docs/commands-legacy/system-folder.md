@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.System folder.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| type | Longint | &#x1F852; | Type of system folder |
-| Function result | String | &#x1F850; | Pathname to a system folder |
+| type | Integer | &srarr; | Type of system folder |
+| Function result | String | &larr; | Pathname to a system folder |
 
 <!-- END REF-->
 

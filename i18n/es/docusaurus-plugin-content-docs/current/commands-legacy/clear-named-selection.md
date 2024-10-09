@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR NAMED SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nombre | Cadena | &#x1F852; | Nombre de la selección temporal a borrar |
+| nombre | Text | &srarr; | Nombre de la selección temporal a borrar |
 
 <!-- END REF-->
 

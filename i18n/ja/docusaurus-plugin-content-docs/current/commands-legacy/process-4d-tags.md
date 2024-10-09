@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.PROCESS 4D TAGS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| inputData | テキスト | &#x1F852; | 処理する4Dタグを格納しているデータ |
-| outputData | テキスト | &#x1F858; | 処理されたデータ |
-| param | 式 | &#x1F852; | 実行されるテンプレートへと渡される引数 |
+| inputData | Text | &srarr; | 処理する4Dタグを格納しているデータ |
+| outputData | Text | &harr; | 処理されたデータ |
+| param | Expression | &srarr; | 実行されるテンプレートへと渡される引数 |
 
 <!-- END REF-->
 

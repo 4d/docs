@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ADD TO SET.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela do registro atual, ou tabela padrão, se omitido |
-| conjunto | String | &#x1F852; | Nome do conjunto ao qual adicionar os registros atuais |
+| tabela | Table | &srarr; | Tabela do registro atual, ou tabela padrão, se omitido |
+| conjunto | Text | &srarr; | Nome do conjunto ao qual adicionar os registros atuais |
 
 <!-- END REF-->
 

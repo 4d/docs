@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela para a qual vai ordenar registros selecionados, ou a tabela padrão, se omitido |
-| campoObjeto | Campo Objeto | &#x1F852; | Campo Objeto contendo o atributo de ordenação |
-| rotaAtrib | String | &#x1F852; | Nome ou rota do atributo para o qual vai estabelecer a ordem para cada nível |
-| > ou < | Operador | &#x1F852; | Direção de ordenação para cada nível: > para ordenar em ordem ascendente, ou < para ordenar em ordem descendente. |
-| * | Operador | &#x1F852; | Continuar a bandeira de ordem |
+| tabela | Table | &srarr; | Tabela para a qual vai ordenar registros selecionados, ou a tabela padrão, se omitido |
+| campoObjeto | Object | &srarr; | Campo Objeto contendo o atributo de ordenação |
+| rotaAtrib | Text | &srarr; | Nome ou rota do atributo para o qual vai estabelecer a ordem para cada nível |
+| > ou < | Operador | &srarr; | Direção de ordenação para cada nível: > para ordenar em ordem ascendente, ou < para ordenar em ordem descendente. |
+| * | Operador | &srarr; | Continuar a bandeira de ordem |
 
 <!-- END REF-->
 
@@ -52,6 +52,8 @@ Não importa que forma de ordenação tenha sido definido, se a operação de or
 
 #### Exemplo 
 
+Se desejar ordenar a seleção atual por idade (descendente) e depois por nome (ascendente), a ordem por padrão é:
+
 ```undefined
 // [Customer]OB_Info contents partial export
 {"LastName":"Giorgio","age":33,"client":true},
@@ -74,6 +76,37 @@ Não importa que forma de ordenação tenha sido definido, se a operação de or
 {"LastName":"Belami","age":"Forty-six","client":true},
 {"LastName":"Smeldorf","age":22,"client":true},
 {"LastName":"Smeldorf","age":70,"client":true}
+```
+
+Se executar:
+
+```4d
+ ORDER BY ATTRIBUTE([Customer];[Customer]OB_Info;"age";<;[Customer]OB_Info;"LastName";>)
+```
+
+Os registros estão na seguinte ordem:
+
+```undefined
+{"LastName":"Smeldorf","age":70,"client":true}
+{"LastName":"Garbando","age":60,"client":false,"Sex":"male"},
+{"LastName":"Delaferme","age":54,"client":true},
+{"LastName":"Smeldorf","age":54,"client":true},
+{"LastName":"Jones","age":52,"client":true},
+{"LastName":"Johnson","age":44,"client":false},
+{"LastName":"Kerrey","age":44,"client":true},
+{"LastName":"Wesson","age":44,"client":true},
+{"LastName":"Sarah","age":42,"client":true},
+{"LastName":"Smith","age":42,"client":true},
+{"LastName":"Evan","age":36,"client":true},
+{"LastName":"Collins","age":33,"client":true,"Sex":"female"},
+{"LastName":"Giorgio","age":33,"client":true},
+{"LastName":"Smeldorf","age":33,"client":true},
+{"LastName":"Smeldorf","age":22,"client":true},
+{"LastName":"Hamp","age":"Sixty","client":true}, //valores string na idade
+{"LastName":"Belami","age":"Forty-six","client":true}, //são lidados separadamente
+ {"LastName":"Mikken","age":"Forty-six","client":true}
+{"LastName":"Gordini","client":true}, //ao final porque
+{"LastName":"Martin","client":true} //age (idade) é null (falta)
 ```
 
 #### Ver também 

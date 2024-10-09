@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.MINIMIZE WINDOW.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| window | WinRef | &#x1F852; | ウィンドウ参照番号、または省略時は すべてのカレントプロセス最前面ウィンドウ (Windows) またはカレントプロセスの最前面ウィンドウ (Mac OS) |
+| window | Integer | &srarr; | ウィンドウ参照番号、または省略時は すべてのカレントプロセス最前面ウィンドウ (Windows) またはカレントプロセスの最前面ウィンドウ (Mac OS) |
 
 <!-- END REF-->
 

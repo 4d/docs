@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.New data key.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| phraseSecrète | Texte | &#x1F852; | Phrase secrète à utiliser pour générer la clé de chiffrement des données AES |
-| Résultat | Objet | &#x1F850; | Objet contenant la clé (propriété encodedKey) |
+| phraseSecrète | Text | &srarr; | Phrase secrète à utiliser pour générer la clé de chiffrement des données AES |
+| Résultat | Object | &larr; | Objet contenant la clé (propriété encodedKey) |
 
 <!-- END REF-->
 

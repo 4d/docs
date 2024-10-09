@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DECRYPT BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| aDecifrar | BLOB | &#x1F852; | Dados a decifrar |
-| &#x1F858; | Dados decifrados |
-| enviarChavePub | BLOB | &#x1F852; | Chave pública do emissor |
-| recepChavePriv | BLOB | &#x1F852; | Chave privada do receptor |
+| aDecifrar | Blob | &srarr; | Dados a decifrar |
+| &harr; | Dados decifrados |
+| enviarChavePub | Blob | &srarr; | Chave pública do emissor |
+| recepChavePriv | Blob | &srarr; | Chave privada do receptor |
 
 <!-- END REF-->
 

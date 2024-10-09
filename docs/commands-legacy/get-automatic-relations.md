@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| one | Boolean | &#x1F858; | Status of all Many-to-One relations |
-| many | Boolean | &#x1F858; | Status of all One-to-Many relations |
+| one | Boolean | &harr; | Status of all Many-to-One relations |
+| many | Boolean | &harr; | Status of all One-to-Many relations |
 
 <!-- END REF-->
 

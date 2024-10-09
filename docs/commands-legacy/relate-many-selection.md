@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE MANY SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &#x1F852; | Many table field (from which the relation starts) |
+| aField | Field | &srarr; | Many table field (from which the relation starts) |
 
 <!-- END REF-->
 

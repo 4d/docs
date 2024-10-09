@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Drop position.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numColonne &#124; posYImage | Entier long | &#x1F858; | Numéro de colonne de list box (-1 si le déposer a lieu après la dernière colonne) ouPosition coordonnée Y dans l'image |
-| Résultat | Entier long | &#x1F850; | • Numéro (tableau/list box) ou• Position (liste hiérarchique) ou• Position dans la chaîne (texte/combo box) de l'élément de destination ou• -1 si le déposer a lieu après le dernier élément de tableau ou de liste ou• Position coordonnée X dans l’image |
+| numColonne &#124; posYImage | Entier long | &harr; | Numéro de colonne de list box (-1 si le déposer a lieu après la dernière colonne) ouPosition coordonnée Y dans l'image |
+| Résultat | Integer | &larr; | • Numéro (tableau/list box) ou• Position (liste hiérarchique) ou• Position dans la chaîne (texte/combo box) de l'élément de destination ou• -1 si le déposer a lieu après le dernier élément de tableau ou de liste ou• Position coordonnée X dans l’image |
 
 <!-- END REF-->
 

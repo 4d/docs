@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Request.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| message | Chaîne | &#x1F852; | Message à afficher dans la boîte de dialogue |
-| réponseDéfaut | Chaîne | &#x1F852; | Valeur par défaut dans la zone de saisie de texte |
-| titreBoutonOK | Chaîne | &#x1F852; | Libellé du bouton OK |
-| titreBoutonAnn | Chaîne | &#x1F852; | Libellé du bouton Annuler |
-| Résultat | Chaîne | &#x1F850; | Valeur saisie par l'utilisateur |
+| message | Text | &srarr; | Message à afficher dans la boîte de dialogue |
+| réponseDéfaut | Text | &srarr; | Valeur par défaut dans la zone de saisie de texte |
+| titreBoutonOK | Text | &srarr; | Libellé du bouton OK |
+| titreBoutonAnn | Text | &srarr; | Libellé du bouton Annuler |
+| Résultat | Text | &larr; | Valeur saisie par l'utilisateur |
 
 <!-- END REF-->
 

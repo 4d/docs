@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table for which to order selected records, or Default table, if omitted |
-| objectField | Object Field | &#x1F852; | Object field containing the sorting attribute |
-| attributePath | String | &#x1F852; | Name or path of attribute on which to set the order for each level |
-| > or < | Operator | &#x1F852; | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
-| * | Operator | &#x1F852; | Continue order flag |
+| aTable | Table | &srarr; | Table for which to order selected records, or Default table, if omitted |
+| objectField | Object | &srarr; | Object field containing the sorting attribute |
+| attributePath | Text | &srarr; | Name or path of attribute on which to set the order for each level |
+| > or < | Operator | &srarr; | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
+| * | Operator | &srarr; | Continue order flag |
 
 <!-- END REF-->
 
@@ -52,6 +52,8 @@ No matter what way a sort has been defined, if the actual sort operation is goin
 
 #### Example 
 
+You want to sort the current selection by age (descending) and then by name (ascending). Default order is:
+
 ```undefined
 // [Customer]OB_Info contents partial export
 {"LastName":"Giorgio","age":33,"client":true},
@@ -74,6 +76,37 @@ No matter what way a sort has been defined, if the actual sort operation is goin
 {"LastName":"Belami","age":"Forty-six","client":true},
 {"LastName":"Smeldorf","age":22,"client":true},
 {"LastName":"Smeldorf","age":70,"client":true}
+```
+
+If you execute:
+
+```4d
+ ORDER BY ATTRIBUTE([Customer];[Customer]OB_Info;"age";<;[Customer]OB_Info;"LastName";>)
+```
+
+Records are in the following order:
+
+```undefined
+{"LastName":"Smeldorf","age":70,"client":true}
+{"LastName":"Garbando","age":60,"client":false,"Sex":"male"},
+{"LastName":"Delaferme","age":54,"client":true}, 
+{"LastName":"Smeldorf","age":54,"client":true},
+{"LastName":"Jones","age":52,"client":true},
+{"LastName":"Johnson","age":44,"client":false},
+{"LastName":"Kerrey","age":44,"client":true},
+{"LastName":"Wesson","age":44,"client":true},
+{"LastName":"Sarah","age":42,"client":true},
+{"LastName":"Smith","age":42,"client":true},
+{"LastName":"Evan","age":36,"client":true},
+{"LastName":"Collins","age":33,"client":true,"Sex":"female"},
+{"LastName":"Giorgio","age":33,"client":true},
+{"LastName":"Smeldorf","age":33,"client":true},
+{"LastName":"Smeldorf","age":22,"client":true},
+{"LastName":"Hamp","age":"Sixty","client":true}, //string values in age
+{"LastName":"Belami","age":"Forty-six","client":true}, //are handled separately
+{"LastName":"Mikken","age":"Forty-six","client":true}
+{"LastName":"Gordini","client":true}, //at the end because
+{"LastName":"Martin","client":true} //age is null (missing)
 ```
 
 #### See also 

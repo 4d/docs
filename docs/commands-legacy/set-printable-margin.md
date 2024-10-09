@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PRINTABLE MARGIN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| left | Longint | &#x1F852; | Left margin |
-| top | Longint | &#x1F852; | Top margin |
-| right | Longint | &#x1F852; | Right margin |
-| bottom | Longint | &#x1F852; | Bottom margin |
+| left | Integer | &srarr; | Left margin |
+| top | Integer | &srarr; | Top margin |
+| right | Integer | &srarr; | Right margin |
+| bottom | Integer | &srarr; | Bottom margin |
 
 <!-- END REF-->
 

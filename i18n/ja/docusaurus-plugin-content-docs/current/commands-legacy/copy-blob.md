@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.COPY BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| srcBLOB | BLOB | &#x1F852; | コピー元BLOB |
-| dstBLOB | BLOB | &#x1F852; | コピー先BLOB |
-| srcOffset | 倍長整数 | &#x1F852; | コピー元のコピー開始位置 |
-| dstOffset | 倍長整数 | &#x1F852; | コピー先のコピー開始位置 |
-| len | 倍長整数 | &#x1F852; | コピーするバイト数 |
+| srcBlob | Blob | &srarr; | コピー元BLOB |
+| dstBlob | Blob | &srarr; | コピー先BLOB |
+| srcOffset | Integer | &srarr; | コピー元のコピー開始位置 |
+| dstOffset | Integer | &srarr; | コピー先のコピー開始位置 |
+| len | Integer | &srarr; | コピーするバイト数 |
 
 <!-- END REF-->
 

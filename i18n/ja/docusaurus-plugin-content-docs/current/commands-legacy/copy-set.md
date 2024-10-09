@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.COPY SET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| srcSet | 文字 | &#x1F852; | コピー元のセット名 |
-| dstSet | 文字 | &#x1F852; | コピー先セット名 |
+| srcSet | Text | &srarr; | コピー元のセット名 |
+| dstSet | Text | &srarr; | コピー先セット名 |
 
 <!-- END REF-->
 

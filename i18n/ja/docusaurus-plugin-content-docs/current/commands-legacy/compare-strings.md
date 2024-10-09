@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Compare strings.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aString | 文字 | &#x1F852; | 比較する文字列 |
-| bString | 文字 | &#x1F852; | 比較する文字列 |
-| options | 倍長整数 | &#x1F852; | 比較ルール |
-| 戻り値 | 倍長整数 | &#x1F850; | 文字列比較の結果 |
+| aString | Text | &srarr; | 比較する文字列 |
+| bString | Text | &srarr; | 比較する文字列 |
+| options | Integer | &srarr; | 比較ルール |
+| 戻り値 | Integer | &larr; | 文字列比較の結果 |
 
 <!-- END REF-->
 

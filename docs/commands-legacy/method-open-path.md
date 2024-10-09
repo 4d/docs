@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD OPEN PATH.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text | &#x1F852; | Path of method to open |
-| line | Number | &#x1F852; | Line number |
-| * | Operator | &#x1F852; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| path | Text | &srarr; | Path of method to open |
+| line | Number | &srarr; | Line number |
+| * | Operator | &srarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->
 

@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.ST Get content type.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
-| inicioSel | Inteiro longo | &#x1F852; | Inicio da seleção |
-| fimSel | Inteiro longo | &#x1F852; | Fim da seleção |
-| inicioBloq | Inteiro longo | &#x1F858; | Inicio de posição do primeiro tipo da seleção |
-| fimBloq | Inteiro longo | &#x1F858; | Fim de posição do primeiro tipo da seleção |
-| Resultado | Inteiro longo | &#x1F850; | Tipo de conteúdo |
+| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
+| objeto | any | &srarr; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| inicioSel | Integer | &srarr; | Inicio da seleção |
+| fimSel | Integer | &srarr; | Fim da seleção |
+| inicioBloq | Integer | &harr; | Inicio de posição do primeiro tipo da seleção |
+| fimBloq | Integer | &harr; | Fim de posição do primeiro tipo da seleção |
+| Resultado | Integer | &larr; | Tipo de conteúdo |
 
 <!-- END REF-->
 

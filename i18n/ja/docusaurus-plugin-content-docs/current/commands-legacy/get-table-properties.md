@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.GET TABLE PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| tablePtr&#124; tableNum | ポインター, 倍長整数 | &#x1F852; | テーブルポインタ、またはテーブル番号 |
-| invisible | ブール | &#x1F858; | True = 非表示、False = 表示 |
-| trigSaveNew | ブール | &#x1F858; | True = トリガ“新規レコード保存時”が有効、 False = それ以外 |
-| trigSaveRec | ブール | &#x1F858; | True = トリガ“既存レコード保存時”が有効、 False = それ以外 |
-| trigDelRec | ブール | &#x1F858; | True = トリガ“レコード削除時”が有効、 False = それ以外 |
-| trigLoadRec | ブール | &#x1F858; | ***使用しない (廃止) *** |
+| tablePtr&#124; tableNum | ポインター, 倍長整数 | &srarr; | テーブルポインタ、またはテーブル番号 |
+| invisible | Boolean | &harr; | True = 非表示、False = 表示 |
+| trigSaveNew | Boolean | &harr; | True = トリガ“新規レコード保存時”が有効、 False = それ以外 |
+| trigSaveRec | Boolean | &harr; | True = トリガ“既存レコード保存時”が有効、 False = それ以外 |
+| trigDelRec | Boolean | &harr; | True = トリガ“レコード削除時”が有効、 False = それ以外 |
+| trigLoadRec | Boolean | &harr; | ***使用しない (廃止) *** |
 
 <!-- END REF-->
 

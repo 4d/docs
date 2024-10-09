@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET SYSTEM FORMAT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| format | Longint | &#x1F852; | System format to be retrieved |
-| value | String | &#x1F858; | Value of format defined in the system |
+| format | Integer | &srarr; | System format to be retrieved |
+| value | Text | &harr; | Value of format defined in the system |
 
 <!-- END REF-->
 

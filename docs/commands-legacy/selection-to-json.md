@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Selection to JSON.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table to serialize |
-| aField | Field | &#x1F852; | Field(s) whose contents must be serialized |
-| template | Object | &#x1F852; | Object for selection of labels and fields |
-| Function result | Text | &#x1F850; | String containing serialized JSON array |
+| aTable | Table | &srarr; | Table to serialize |
+| aField | Field | &srarr; | Field(s) whose contents must be serialized |
+| template | Object | &srarr; | Object for selection of labels and fields |
+| Function result | Text | &larr; | String containing serialized JSON array |
 
 <!-- END REF-->
 

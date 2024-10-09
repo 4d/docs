@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET COORDINATES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | Entero largo | &#x1F852; | Nombre de objeto (si * se especifica) o <br/>Campo o variable (si * se omite) |
-| izquierda | Entero largo | &#x1F852; | Coordenada izquierda del objeto en píxeles |
-| sup | Entero largo | &#x1F852; | Coordenada superior del objeto en píxeles |
-| derecha | Entero largo | &#x1F852; | Coordenada derecha del objeto en píxeles |
-| inf | Entero largo | &#x1F852; | Coordenada iinferior del objeto en píxeles |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | Integer | &srarr; | Nombre de objeto (si * se especifica) o <br/>Campo o variable (si * se omite) |
+| izquierda | Integer | &srarr; | Coordenada izquierda del objeto en píxeles |
+| sup | Integer | &srarr; | Coordenada superior del objeto en píxeles |
+| derecha | Integer | &srarr; | Coordenada derecha del objeto en píxeles |
+| inf | Integer | &srarr; | Coordenada iinferior del objeto en píxeles |
 
 <!-- END REF-->
 

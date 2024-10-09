@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get last query plan.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| formatDesc | Entier long | &#x1F852; | Format de description (Texte ou XML) |
-| Résultat | Chaîne | &#x1F850; | Description du plan de la dernière recherche exécutée |
+| formatDesc | Integer | &srarr; | Format de description (Texte ou XML) |
+| Résultat | Text | &larr; | Description du plan de la dernière recherche exécutée |
 
 <!-- END REF-->
 

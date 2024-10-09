@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fieldPtr &#124; tableNum | ポインター, 倍長整数 | &#x1F852; | テーブル番号、またはフィールドポインタ |
-| fieldNum | 倍長整数 | &#x1F852; | テーブル番号を渡した場合は、フィールド番号 |
-| fieldType | 倍長整数 | &#x1F858; | フィールドのタイプ |
-| fieldLength | 倍長整数 | &#x1F858; | 文字フィールドの場合、長さ |
-| indexed | ブール | &#x1F858; | True = インデックス付き、False = インデックスなし |
-| unique | ブール | &#x1F858; | True = 重複不可、 False = 重複あり |
-| invisible | ブール | &#x1F858; | True = 非表示、 False = 表示 |
+| fieldPtr &#124; tableNum | ポインター, 倍長整数 | &srarr; | テーブル番号、またはフィールドポインタ |
+| fieldNum | Integer | &srarr; | テーブル番号を渡した場合は、フィールド番号 |
+| fieldType | Integer | &harr; | フィールドのタイプ |
+| fieldLength | Integer | &harr; | 文字フィールドの場合、長さ |
+| indexed | Boolean | &harr; | True = インデックス付き、False = インデックスなし |
+| unique | Boolean | &harr; | True = 重複不可、 False = 重複あり |
+| invisible | Boolean | &harr; | True = 非表示、 False = 表示 |
 
 <!-- END REF-->
 

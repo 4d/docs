@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE MANY SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leChamp | Champ | &#x1F852; | Champ de la table N (d'où part le lien) |
+| leField | Field | &srarr; | Champ de la table N (d'où part le lien) |
 
 <!-- END REF-->
 

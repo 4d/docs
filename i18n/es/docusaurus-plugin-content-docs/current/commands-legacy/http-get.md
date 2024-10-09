@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP Get.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| url | Texto | &#x1F852; | URL al cual enviar la petición |
-| respuesta | Texto, BLOB, Imagen, Objeto | &#x1F858; | Resultado de la petición |
-| nomEncab | Array texto | &#x1F852; | Nombres de los encabezados de la petición |
-| &#x1F858; | Nombres de encabezados devueltos |
-| valoresEncab | Array texto | &#x1F852; | Valores de los encabezados de la petición |
-| &#x1F858; | Valores de los encabezados devueltos |
-| * | Operador | &#x1F852; | Si se pasa, la conexión se mantiene(keep-alive)Si se omite, la conexión se cierra automáticamente |
-| Resultado | Entero largo | &#x1F850; | Código de estado HTTP |
+| url | Text | &srarr; | URL al cual enviar la petición |
+| respuesta | Text, Blob, Picture, Object | &harr; | Resultado de la petición |
+| nomEncab | Text array | &srarr; | Nombres de los encabezados de la petición |
+| &harr; | Nombres de encabezados devueltos |
+| valoresEncab | Text array | &srarr; | Valores de los encabezados de la petición |
+| &harr; | Valores de los encabezados devueltos |
+| * | Operador | &srarr; | Si se pasa, la conexión se mantiene(keep-alive)Si se omite, la conexión se cierra automáticamente |
+| Resultado | Integer | &larr; | Código de estado HTTP |
 
 <!-- END REF-->
 

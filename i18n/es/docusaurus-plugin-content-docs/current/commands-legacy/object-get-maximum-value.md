@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET MAXIMUM VALUE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o  Campo o variable (si se omite *) |
-| valorMax | Fecha, Hora, Número | &#x1F858; | Valor máximo actual para objeto |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
+| objeto | any | &srarr; | Nombre de objeto (si se especifica *) o  Campo o variable (si se omite *) |
+| valorMax | Date, Time, Number | &harr; | Valor máximo actual para objeto |
 
 <!-- END REF-->
 

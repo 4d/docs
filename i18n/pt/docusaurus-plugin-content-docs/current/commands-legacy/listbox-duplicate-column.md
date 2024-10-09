@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
-| posCol | Inteiro longo | &#x1F852; | Localização da nova coluna duplicada |
-| nomCol | String | &#x1F852; | Nome da nova coluna |
-| varCol | Array, Campo, Variável, Ponteiro nil | &#x1F852; | Nome da variável array da coluna ou campo ou variável |
-| nomCabe | String | &#x1F852; | Nome do objeto do cabeçalho da coluna |
-| varCabe | Variável inteira, Ponteiro nil | &#x1F852; | Variável do cabeçalho da coluna |
-| nomRodape | String | &#x1F852; | Nome do objeto do rodapé da coluna |
-| varRodape | Variável, Ponteiro nil | &#x1F852; | Variável do rodapé da coluna |
+| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
+| objeto | any | &srarr; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| posCol | Integer | &srarr; | Localização da nova coluna duplicada |
+| nomCol | Text | &srarr; | Nome da nova coluna |
+| varCol | Array, Field, Variable, Pointer | &srarr; | Nome da variável array da coluna ou campo ou variável |
+| nomCabe | Text | &srarr; | Nome do objeto do cabeçalho da coluna |
+| varCabe | Integer, Pointer | &srarr; | Variável do cabeçalho da coluna |
+| nomRodape | Text | &srarr; | Nome do objeto do rodapé da coluna |
+| varRodape | Variable, Pointer | &srarr; | Variável do rodapé da coluna |
 
 <!-- END REF-->
 

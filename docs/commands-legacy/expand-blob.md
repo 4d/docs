@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPAND BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | BLOB | &#x1F852; | BLOB to expand |
+| blob | Blob | &srarr; | BLOB to expand |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Load 4D View document.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 4DViewDocument | BLOB | &#x1F852; | 4D View ドキュメント |
-| 戻り値 | オブジェクト | &#x1F850; | 4D View ドキュメントの情報を格納したオブジェクト |
+| 4DViewDocument | Blob | &srarr; | 4D View ドキュメント |
+| 戻り値 | Object | &larr; | 4D View ドキュメントの情報を格納したオブジェクト |
 
 <!-- END REF-->
 
@@ -33,6 +33,22 @@ displayed_sidebar: docs
 **注**: 4D View から4D View Pro へとドキュメントを変換したい場合、専用の コマンドの使用が推奨されます。こちらの方が直接的かつ透過な変換を行えます。
 
 #### 例題 
+
+ディスク上に保存された4D View ドキュメントを読み込んで変換したい場合を考えます:
+
+```4d
+ var $blob : Blob
+ var $object : Object
+ DOCUMENT TO BLOB("document.4PV";$blob)
+ $object:=Load 4D View document($blob)
+ ALERT("Document title is "+$object.title)
+```
+
+例えば、以下のドキュメントを変換した場合:
+
+![](../assets/en/commands/pict3631552.en.png)
+
+以下の結果を取得します(文字列化されたオブジェクト):
 
 ```undefined
 {
@@ -176,3 +192,5 @@ displayed_sidebar: docs
     ]
 }
 ```
+
+**注:** 返されるobject についてのフォーマットについてのより詳細な情報については、4D テクニカルサービスにお問い合わせください。

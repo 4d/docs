@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Character code.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| character | String | &#x1F852; | Character for which you want to get the code |
-| Function result | Longint | &#x1F850; | Character code |
+| character | Text | &srarr; | Character for which you want to get the code |
+| Function result | Longint | &larr; | Character code |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Append document.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomFichier | Chaîne | &#x1F852; | Nom du document ou Chemin d'accès complet au document ou Chaîne vide pour afficher la boîte de dialogue standard d'ouverture de fichiers |
-| typeFichier | Chaîne | &#x1F852; | Liste des types de documents à filtrer, ou "*" pour ne pas filtrer les documents |
-| Résultat | RefDoc | &#x1F850; | Numéro de référence du document |
+| nomFichier | Text | &srarr; | Nom du document ou Chemin d'accès complet au document ou Chaîne vide pour afficher la boîte de dialogue standard d'ouverture de fichiers |
+| typeFichier | Text | &srarr; | Liste des types de documents à filtrer, ou "*" pour ne pas filtrer les documents |
+| Résultat | Time | &larr; | Numéro de référence du document |
 
 <!-- END REF-->
 

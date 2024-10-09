@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Append XML child node.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | Texto | &#x1F852; | elemento de referência XML |
-| tipoFilho | Inteiro longo | &#x1F852; | Tipo de filho a anexar |
-| valorFilho | Texto, BLOB | &#x1F852; | Texto ou variável (texto ou BLOB) cujo valor deve ser inserido como um nodo filho |
-| Resultado | Texto | &#x1F850; | Refência do elemento filho XML |
+| refElemento | Text | &srarr; | elemento de referência XML |
+| tipoFilho | Integer | &srarr; | Tipo de filho a anexar |
+| valorFilho | Text, Blob | &srarr; | Texto ou variável (texto ou BLOB) cujo valor deve ser inserido como um nodo filho |
+| Resultado | Text | &larr; | Refência do elemento filho XML |
 
 <!-- END REF-->
 

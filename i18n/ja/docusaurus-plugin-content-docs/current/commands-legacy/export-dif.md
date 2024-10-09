@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT DIF.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | データを書き出すテーブル, または 省略した場合, デフォルトテーブル |
-| document | 文字 | &#x1F852; | データが書き出されるDIFドキュメント |
+| aTable | Table | &srarr; | データを書き出すテーブル, または 省略した場合, デフォルトテーブル |
+| document | Text | &srarr; | データが書き出されるDIFドキュメント |
 
 <!-- END REF-->
 

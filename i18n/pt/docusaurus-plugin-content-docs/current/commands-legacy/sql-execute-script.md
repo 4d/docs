@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL EXECUTE SCRIPT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaScript | Texto | &#x1F852; | Nome completo da rota do arquivo que contém o script SQL a ser executado |
-| açãoErro | Inteiro longo | &#x1F852; | Ação a executar em caso de erro durante a execução do script |
-| nomeAtrib | Texto | &#x1F852; | Nome do atributo a usar |
-| valorAtrib | Texto | &#x1F852; | Valor do atributo |
+| rotaScript | Text | &srarr; | Nome completo da rota do arquivo que contém o script SQL a ser executado |
+| açãoErro | Integer | &srarr; | Ação a executar em caso de erro durante a execução do script |
+| nomeAtrib | Text | &srarr; | Nome do atributo a usar |
+| valorAtrib | Text | &srarr; | Valor do atributo |
 
 <!-- END REF-->
 

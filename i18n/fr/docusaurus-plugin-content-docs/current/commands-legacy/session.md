@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Session.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Objet | &#x1F850; | Objet session |
+| Résultat | Object | &larr; | Objet session |
 
 <!-- END REF-->
 

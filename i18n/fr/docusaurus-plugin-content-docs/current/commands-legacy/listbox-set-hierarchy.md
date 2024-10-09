@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET HIERARCHY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| hiérarchique | Booléen | &#x1F852; | Vrai = list box hiérarchique, Faux = list box non hiérarchique |
-| hiérarchie | Tableau pointeur | &#x1F852; | Tableau de pointeurs |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| hiérarchique | Boolean | &srarr; | Vrai = list box hiérarchique, Faux = list box non hiérarchique |
+| hiérarchie | Pointer array | &srarr; | Tableau de pointeurs |
 
 <!-- END REF-->
 

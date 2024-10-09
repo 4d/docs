@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE DATA FILE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaAcceso | Cadena | &#x1F852; | Nombre o ruta de acceso completa del archivo de datos a abrir |
+| rutaAcceso | Text | &srarr; | Nombre o ruta de acceso completa del archivo de datos a abrir |
 
 <!-- END REF-->
 

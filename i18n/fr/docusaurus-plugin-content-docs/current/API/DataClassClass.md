@@ -894,7 +894,7 @@ Si aucune entité correspondante n'est trouvée, une `EntitySelection` vide est 
 
 #### paramètre queryString
 
-Le paramètre *queryString* doit respecter la syntaxe suivante :
+Exemple 2
 
 ```4d
 attributePath|formula comparator value   

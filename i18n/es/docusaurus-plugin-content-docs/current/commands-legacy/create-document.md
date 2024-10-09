@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Create document.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| doc | Cadena | &#x1F852; | Nombre del documento o Ruta de acceso completa del documento o Cadena vacía para mostrar caja de diálogo estándar de guardar archivos |
-| tipo | Cadena | &#x1F852; | Lista de los tipos de documentos a filtrar o "*" para no filtrar los documentos |
-| Resultado | DocRef | &#x1F850; | Número de referencia del documento |
+| doc | Text | &srarr; | Nombre del documento o Ruta de acceso completa del documento o Cadena vacía para mostrar caja de diálogo estándar de guardar archivos |
+| tipo | Text | &srarr; | Lista de los tipos de documentos a filtrar o "*" para no filtrar los documentos |
+| Resultado | Time | &larr; | Número de referencia del documento |
 
 <!-- END REF-->
 

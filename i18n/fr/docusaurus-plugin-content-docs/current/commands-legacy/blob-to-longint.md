@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB to longint.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | BLOB | &#x1F852; | BLOB duquel extraire la valeur de type Entier long |
-| ordreOctet | Entier long | &#x1F852; | 0 = Ordre d'octets natif 1 = Ordre d'octets Macintosh 2 = Ordre d'octets PC |
-| offset | Variable | &#x1F852; | Offset (en octets) dans le BLOB |
-| &#x1F858; | Nouvel offset après lecture |
-| Résultat | Entier long | &#x1F850; | Valeur de type Entier long (4 octets) |
+| blob | Blob | &srarr; | BLOB duquel extraire la valeur de type Entier long |
+| ordreOctet | Integer | &srarr; | 0 = Ordre d'octets natif 1 = Ordre d'octets Macintosh 2 = Ordre d'octets PC |
+| offset | Variable | &srarr; | Offset (en octets) dans le BLOB |
+| &harr; | Nouvel offset après lecture |
+| Résultat | Integer | &larr; | Valeur de type Entier long (4 octets) |
 
 <!-- END REF-->
 

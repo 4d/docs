@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD TITLES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | フィールド名を取得したいテーブル |
-| fieldTitles | テキスト配列 | &#x1F858; | カレントフィールドの名前 |
-| fieldNums | 倍長整数配列 | &#x1F858; | フィールド番号 |
+| aTable | Table | &srarr; | フィールド名を取得したいテーブル |
+| fieldTitles | Text array | &harr; | カレントフィールドの名前 |
+| fieldNums | Integer array | &harr; | フィールド番号 |
 
 <!-- END REF-->
 

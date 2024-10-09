@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET FIELD VALUE NULL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | フィールド | &#x1F852; | NULL値を割り当てるフィールド |
+| aField | Field | &srarr; | NULL値を割り当てるフィールド |
 
 <!-- END REF-->
 

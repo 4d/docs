@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET GRID COLORS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| couleurH | Texte, Entier long | &#x1F858; | Valeur de couleur RVB pour les traits horizontaux |
-| couleurV | Texte, Entier long | &#x1F858; | Valeur de couleur RVB pour les traits verticaux |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| couleurH | Text, Integer | &harr; | Valeur de couleur RVB pour les traits horizontaux |
+| couleurV | Text, Integer | &harr; | Valeur de couleur RVB pour les traits verticaux |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET TABLE CACHE PRIORITY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table whose scalar data priority value has to be set for the session |
-| priority | Longint | &#x1F852; | Cache priority value for scalar values in the table |
+| aTable | Table | &srarr; | Table whose scalar data priority value has to be set for the session |
+| priority | Integer | &srarr; | Cache priority value for scalar values in the table |
 
 <!-- END REF-->
 

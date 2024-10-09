@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | セレクションをソートするテーブル (省略時はデフォルトテーブル) |
-| objectField | Object Field | &#x1F852; | ソートの基準とする属性を含むオブジェクトフィールド |
-| attributePath | 文字 | &#x1F852; | ソートの基準とする属性の名前またはパス |
-| > or < | 演算子 | &#x1F852; | ソート方向: >: 昇順, または <: 降順 |
-| * | 演算子 | &#x1F852; | ソート継続フラグ |
+| aTable | Table | &srarr; | セレクションをソートするテーブル (省略時はデフォルトテーブル) |
+| objectField | Object | &srarr; | ソートの基準とする属性を含むオブジェクトフィールド |
+| attributePath | Text | &srarr; | ソートの基準とする属性の名前またはパス |
+| > or < | 演算子 | &srarr; | ソート方向: >: 昇順, または <: 降順 |
+| * | 演算子 | &srarr; | ソート継続フラグ |
 
 <!-- END REF-->
 
@@ -54,6 +54,8 @@ displayed_sidebar: docs
 
 #### 例題 
 
+カレントセレクションを年齢 (age; 降順 )、次に名前 (name; 昇順) でソートします。元の順番は次の通りです:
+
 ```undefined
 // [Customer]OB_Info の中身を部分的に出力
 {"LastName":"Giorgio","age":33,"client":true},
@@ -76,6 +78,37 @@ displayed_sidebar: docs
 {"LastName":"Belami","age":"Forty-six","client":true},
 {"LastName":"Smeldorf","age":22,"client":true},
 {"LastName":"Smeldorf","age":70,"client":true}
+```
+
+次のコードを実行すると:
+
+```4d
+ ORDER BY ATTRIBUTE([Customer];[Customer]OB_Info;"age";<;[Customer]OB_Info;"LastName";>)
+```
+
+レコードは次の順番にソートされます:
+
+```undefined
+{"LastName":"Smeldorf","age":70,"client":true}
+{"LastName":"Garbando","age":60,"client":false,"Sex":"male"},
+{"LastName":"Delaferme","age":54,"client":true}, 
+{"LastName":"Smeldorf","age":54,"client":true},
+{"LastName":"Jones","age":52,"client":true},
+{"LastName":"Johnson","age":44,"client":false},
+{"LastName":"Kerrey","age":44,"client":true},
+{"LastName":"Wesson","age":44,"client":true},
+{"LastName":"Sarah","age":42,"client":true},
+{"LastName":"Smith","age":42,"client":true},
+{"LastName":"Evan","age":36,"client":true},
+{"LastName":"Collins","age":33,"client":true,"Sex":"female"},
+{"LastName":"Giorgio","age":33,"client":true},
+{"LastName":"Smeldorf","age":33,"client":true},
+{"LastName":"Smeldorf","age":22,"client":true},
+{"LastName":"Hamp","age":"Sixty","client":true}, // age に文字列が使用されているため
+{"LastName":"Belami","age":"Forty-six","client":true}, // 異なる括りでソートされます
+{"LastName":"Mikken","age":"Forty-six","client":true}
+{"LastName":"Gordini","client":true}, // age が null値 (存在しない) のため
+{"LastName":"Martin","client":true} // 終わりにソートされます
 ```
 
 #### 参照 

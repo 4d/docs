@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.VOLUME ATTRIBUTES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| volume | String | &#x1F852; | Nome volume |
-| tamanho | Real | &#x1F858; | Tamanho do volume expresso em bytes |
-| usado | Real | &#x1F858; | Espaço usado expresso em bytes |
-| livre | Real | &#x1F858; | Espaço livre expresso em bytes |
+| volume | Text | &srarr; | Nome volume |
+| tamanho | Real | &harr; | Tamanho do volume expresso em bytes |
+| usado | Real | &harr; | Espaço usado expresso em bytes |
+| livre | Real | &harr; | Espaço livre expresso em bytes |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| langID | 倍長整数配列 | &#x1F858; | 言語のユニークID |
-| langFiles | テキスト配列 | &#x1F858; | インストールされた言語ファイルの名前 |
-| langNames | テキスト配列 | &#x1F858; | 言語のローカル名 |
+| langID | Integer array | &harr; | 言語のユニークID |
+| langFiles | Text array | &harr; | インストールされた言語ファイルの名前 |
+| langNames | Text array | &harr; | 言語のローカル名 |
 
 <!-- END REF-->
 

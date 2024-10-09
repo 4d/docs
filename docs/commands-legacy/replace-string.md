@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Replace string.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| source | String | &#x1F852; | Original string |
-| oldString | String | &#x1F852; | Characters to replace |
-| newString | String | &#x1F852; | Replacement string (if empty string, occurrences are deleted) |
-| howMany | Longint | &#x1F852; | How many times to replace If omitted, all occurrences are replaced |
-| * | Operator | &#x1F852; | If passed: evaluation based on character codes |
-| Function result | String | &#x1F850; | Resulting string |
+| source | Text | &srarr; | Original string |
+| oldText | Text | &srarr; | Characters to replace |
+| newText | Text | &srarr; | Replacement string (if empty string, occurrences are deleted) |
+| howMany | Integer | &srarr; | How many times to replace If omitted, all occurrences are replaced |
+| * | Operator | &srarr; | If passed: evaluation based on character codes |
+| Function result | String | &larr; | Resulting string |
 
 <!-- END REF-->
 

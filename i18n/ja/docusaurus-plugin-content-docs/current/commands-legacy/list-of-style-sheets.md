@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.LIST OF STYLE SHEETS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| arrStyleSheets | テキスト配列 | &#x1F858; | アプリケーション内の定義済みスタイルシート名一覧 |
+| arrStyleSheets | Text array | &harr; | アプリケーション内の定義済みスタイルシート名一覧 |
 
 <!-- END REF-->
 

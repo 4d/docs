@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current system user.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Chaîne | &#x1F850; | Nom de l'utilisateur de la machine sur le réseau |
+| Résultat | Text | &larr; | Nom de l'utilisateur de la machine sur le réseau |
 
 <!-- END REF-->
 

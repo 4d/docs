@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FOLDER LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeRota | String | &#x1F852; | Rota de acesso ao volume, diretório ou pasta |
-| diretorios | Array string | &#x1F858; | Nomes dos diretórios presentes nessa localização |
+| nomeRota | Text | &srarr; | Rota de acesso ao volume, diretório ou pasta |
+| diretorios | Text array | &harr; | Nomes dos diretórios presentes nessa localização |
 
 <!-- END REF-->
 

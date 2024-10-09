@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Modified record.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table to test if current record has been modified, or Default table, if omitted |
-| Function result | Boolean | &#x1F850; | Record has been modified (True), or Record has not been modified (False) |
+| aTable | Table | &srarr; | Table to test if current record has been modified, or Default table, if omitted |
+| Function result | Boolean | &larr; | Record has been modified (True), or Record has not been modified (False) |
 
 <!-- END REF-->
 

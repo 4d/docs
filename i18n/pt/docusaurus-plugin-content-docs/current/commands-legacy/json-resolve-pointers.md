@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Resolve pointers.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objeto | Objeto | &#x1F852; | Objeto que contém os ponteiros JSON a resolver |
-| &#x1F858; | Objeto com os ponteiros JSON resolvidos (apenas se o resultado for um objeto) |
-| opções | Objeto | &#x1F852; | Opções para resolução de ponteiro |
-| Resultado | Objeto | &#x1F850; | Objeto contendo o resultado do processamento |
+| objeto | Object | &srarr; | Objeto que contém os ponteiros JSON a resolver |
+| &harr; | Objeto com os ponteiros JSON resolvidos (apenas se o resultado for um objeto) |
+| opções | Object | &srarr; | Opções para resolução de ponteiro |
+| Resultado | Object | &larr; | Objeto contendo o resultado do processamento |
 
 <!-- END REF-->
 
@@ -56,11 +56,17 @@ Em todos os casos, o comando devolve um objeto que contém as seguintes propried
 
 #### Definir Ponteiros JSON 
 
+JSON Pointer é um padrão que define uma sintaxe de string que pode ser utilizada para acessar a um campo ou a um valor chave particular no documento JSON todo. O padrão foi descrito em [RFC 6901](https://tools.ietf.org/html/rfc6901). 
+
+Um ponteiro JSON é, estritamente falando, uma string composta de partes separadas por '/'. Um ponteiro JSON normalmente é encontrado em uma URL que especifica o documento no qual se resolverá o ponteiro. O caractere de fragmento "#" é utilizado na URI para especificar o ponteiro JSON Por convenção, pode encontrar uma URI que contenha um ponteiro JSON em uma propriedade de objeto JSON que deve ser chamada de "$ ref".
+
 ```undefined
 {
    "$ref":<path>#<json_pointer>
 }
 ```
+
+**Nota**: 4D não é compatível com o caractere "-" como referência a elementos de array inexistentes.
 
 ##### Recursividade e resolução de rota 
 
@@ -104,6 +110,8 @@ Este exemplo básico ilustra como um ponteiro JSON pode ser definido e substitu�
 
 #### Exemplo 2 
 
+Se quiser reutilizar "billingAddress" como "shippingAddress" no objeto JSON abaixo (chamado $oMyConfig):
+
 ```undefined
 {
     "lastname": "Doe",
@@ -117,7 +125,37 @@ Este exemplo básico ilustra como um ponteiro JSON pode ser definido e substitu�
 }
 ```
 
+Depois de executar este código:
+
+```4d
+ $oResult:=JSON Resolve pointers($oMyConfig)
+```
+
+... o objeto abaixo é devolvido:
+
+```undefined
+{
+    "success": true,
+    "value": {
+        "lastname": "Doe",
+        "firstname": "John",
+        "billingAddress": {
+            "street": "95 S. Market Street",
+            "city": "San Jose",
+            "state": "California" 
+        },
+        "shippingAddress": {
+            "street": "95 S. Market Street",
+            "city": "San Jose",
+            "state": "California" 
+        }
+    }
+}
+```
+
 #### Exemplo 3 
+
+Este exemplo ilustra o efeito da opção "fusionar". Se quiser editar os direitos de um usuário baseando-se em um arquivo pré-determinado.
 
 ```undefined
 {
@@ -125,6 +163,66 @@ Este exemplo básico ilustra como um ponteiro JSON pode ser definido e substitu�
         "$ref": "defaultSettings.json#/defaultRights",
         "delete": true,
         "id": 456
+    }
+}
+```
+
+O arquivo *defaultSettings.json* contém:
+
+```undefined
+{
+    "defaultRights":
+    {
+        "edit": true,
+        "add": false,
+        "delete": false
+    }
+}
+```
+
+Se executar:
+
+```4d
+ var $options : Object
+ $options:=New object("merge";False) //substituir conteúdos
+ $oResult:=JSON Resolve pointers($oMyConfig;$options)
+```
+
+o valor resultante é exatamente o conteúdo do arquivo *defaultSettings.json*:
+
+```undefined
+{
+    "success": true,
+    "value": {
+        "rights": {
+            "edit": true,
+            "add": false,
+            "delete": false
+        }
+    }
+}
+```
+
+Se executar:
+
+```4d
+ var $options : Object
+ $options:=New object("merge";True) //fusionar ambos os conteúdos
+ $oResult:=JSON Resolve pointers($oMyConfig;$options)
+```
+
+...o valor resultante é uma versão modificada do objeto original:
+
+```undefined
+{
+    "success": true,
+    "value": {
+        "rights": {
+            "edit": true,
+            "add": false,
+            "delete": true,
+            "id": 456
+        }
     }
 }
 ```

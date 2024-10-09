@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Record number.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela para qual devolver o número do registro atual, ou tabela padrão, se omitido |
-| Resultado de função | Inteiro longo | &#x1F850; | Nº de registro atual |
+| tabela | Table | &srarr; | Tabela para qual devolver o número do registro atual, ou tabela padrão, se omitido |
+| Resultado de função | Inteiro longo | &larr; | Nº de registro atual |
 
 <!-- END REF-->
 

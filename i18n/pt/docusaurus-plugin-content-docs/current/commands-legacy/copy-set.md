@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.COPY SET.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| comOrigem | String | &#x1F852; | Nome do conjunto de origem |
-| comDestino | String | &#x1F852; | Nome do Conjunto de Destino |
+| comOrigem | Text | &srarr; | Nome do conjunto de origem |
+| comDestino | Text | &srarr; | Nome do Conjunto de Destino |
 
 <!-- END REF-->
 

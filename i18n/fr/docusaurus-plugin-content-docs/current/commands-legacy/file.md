@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.File.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin &#124; fichier4D | Texte, Entier long | &#x1F852; | Chemin du fichier ou constante du fichier 4D |
-| typeChemin &#124; * | Entier long, Opérateur | &#x1F852; | Si chemin est passé : fk chemin posix (par défaut) ou fk chemin plateforme<br/><br/>Si fichier4D est passé : * pour retourner le fichier de la base hôte |
-| Résultat | Objet | &#x1F850; | Nouvel objet fichier |
+| chemin &#124; fichier4D | Texte, Entier long | &srarr; | Chemin du fichier ou constante du fichier 4D |
+| typeChemin &#124; * | Entier long, Opérateur | &srarr; | Si chemin est passé : fk chemin posix (par défaut) ou fk chemin plateforme<br/><br/>Si fichier4D est passé : * pour retourner le fichier de la base hôte |
+| Résultat | Object | &larr; | Nouvel objet fichier |
 
 <!-- END REF-->
 

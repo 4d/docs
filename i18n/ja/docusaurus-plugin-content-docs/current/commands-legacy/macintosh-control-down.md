@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Macintosh control down.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | ブール | &#x1F850; | MacintoshのControlキーのステータス |
+| 戻り値 | Boolean | &larr; | MacintoshのControlキーのステータス |
 
 <!-- END REF-->
 

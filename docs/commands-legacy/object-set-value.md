@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET VALUE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| objectName | Text | &#x1F852; | Object name |
-| value | Mixed | &#x1F852; | New value for the form object's data source |
+| objectName | Text | &srarr; | Object name |
+| value | any | &srarr; | New value for the form object's data source |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ADD RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table dans laquelle ajouter des données ou Table par défaut si ce paramètre est omis |
-| * | &#x1F852; | Cacher les barres de défilement |
+| laTable | Table | &srarr; | Table dans laquelle ajouter des données ou Table par défaut si ce paramètre est omis |
+| * | Operator |  &srarr; | Cacher les barres de défilement |
 
 <!-- END REF-->
 

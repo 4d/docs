@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CUT NAMED SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | セレクションをカットするテーブル, または 省略した場合デフォルトテーブル |
-| name | 文字 | &#x1F852; | 作成する命名セレクションの名前 |
+| aTable | Table | &srarr; | セレクションをカットするテーブル, または 省略した場合デフォルトテーブル |
+| name | Text | &srarr; | 作成する命名セレクションの名前 |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数またはフィールド |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時)変数またはフィールド (* 省略時) |
-| languageCode | 文字 | &#x1F852; | RFC3066 ISO639 そして ISO3166 言語コード<br/>"" = 変更しない |
+| * | 演算子 | &srarr; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数またはフィールド |
+| object | any | &srarr; | オブジェクト名 (* 指定時)変数またはフィールド (* 省略時) |
+| languageCode | Text | &srarr; | RFC3066 ISO639 そして ISO3166 言語コード<br/>"" = 変更しない |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Delete string.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| source | 文字 | &#x1F852; | 文字を削除する文字列 |
-| where | 倍長整数 | &#x1F852; | 削除開始位置 |
-| numChars | 倍長整数 | &#x1F852; | 削除する文字数 |
-| 戻り値 | 文字 | &#x1F850; | 結果の文字列 |
+| source | Text | &srarr; | 文字を削除する文字列 |
+| where | Integer | &srarr; | 削除開始位置 |
+| numChars | Integer | &srarr; | 削除する文字数 |
+| 戻り値 | Text | &larr; | 結果の文字列 |
 
 <!-- END REF-->
 

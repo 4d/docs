@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SOAP DECLARATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| variable | Variable | &#x1F852; | Variable referring to an incoming or outgoing SOAP argument |
-| type | Longint | &#x1F852; | 4D type to which the argument points |
-| input_output | Longint | &#x1F852; | 1 = SOAP Input, 2 = SOAP Output |
-| alias | String | &#x1F852; | Name published for this argument during SOAP exchanges |
+| variable | Variable | &srarr; | Variable referring to an incoming or outgoing SOAP argument |
+| type | Integer | &srarr; | 4D type to which the argument points |
+| input_output | Integer | &srarr; | 1 = SOAP Input, 2 = SOAP Output |
+| alias | Text | &srarr; | Name published for this argument during SOAP exchanges |
 
 <!-- END REF-->
 

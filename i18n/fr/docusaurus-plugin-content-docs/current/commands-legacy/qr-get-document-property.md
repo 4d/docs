@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get document property.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Entier long | &#x1F852; | Référence de la zone |
-| propriété | Entier long | &#x1F852; | 1=Dialogue d'impression, 2=Unité du document |
-| Résultat | Entier long | &#x1F850; | Valeur de la propriété |
+| zone | Integer | &srarr; | Référence de la zone |
+| propriété | Integer | &srarr; | 1=Dialogue d'impression, 2=Unité du document |
+| Résultat | Integer | &larr; | Valeur de la propriété |
 
 <!-- END REF-->
 

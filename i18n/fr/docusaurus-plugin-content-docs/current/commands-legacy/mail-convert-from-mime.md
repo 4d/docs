@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.MAIL Convert from MIME.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| mime | BLOB, Texte | &#x1F852; | Email en MIME |
-| Résultat | Objet | &#x1F850; | Objet Email |
+| mime | Blob, Text | &srarr; | Email en MIME |
+| Résultat | Object | &larr; | Objet Email |
 
 <!-- END REF-->
 

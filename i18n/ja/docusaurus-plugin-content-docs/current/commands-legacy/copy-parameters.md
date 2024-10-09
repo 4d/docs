@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Copy parameters.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| startFrom | 倍長整数 | &#x1F852; | 開始インデックス(指定した引数含む) |
-| 戻り値 | コレクション | &#x1F850; | 実際に渡された引数を格納した新しいコレクション |
+| startFrom | Integer | &srarr; | 開始インデックス(指定した引数含む) |
+| 戻り値 | Collection | &larr; | 実際に渡された引数を格納した新しいコレクション |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OB GET ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | オブジェクト, Object Field | &#x1F852; | 構造化されたオブジェクト |
-| property | テキスト | &#x1F852; | 情報を取得したいプロパティ名 |
-| array | テキスト配列, 実数配列, ブール配列, Object array, ポインター配列, 倍長整数配列 | &#x1F858; | プロパティの値の配列 |
+| object | Object, Object | &srarr; | 構造化されたオブジェクト |
+| property | Text | &srarr; | 情報を取得したいプロパティ名 |
+| array | Text array, Real array, Boolean array, Object array, Pointer array, Integer array | &harr; | プロパティの値の配列 |
 
 <!-- END REF-->
 

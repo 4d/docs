@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SET MENU ITEM METHOD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | 倍長整数, MenuRef | &#x1F852; | メニュー参照またはメニュー番号 |
-| menuItem | 倍長整数 | &#x1F852; | メニュー項目番号 または -1: 最後に追加された項目 |
-| methodName | 文字 | &#x1F852; | メソッド名 |
-| process | 倍長整数 | &#x1F852; | プロセス番号 |
+| menu | Integer, Text | &srarr; | メニュー参照またはメニュー番号 |
+| menuItem | Integer | &srarr; | メニュー項目番号 または -1: 最後に追加された項目 |
+| methodName | Text | &srarr; | メソッド名 |
+| process | Integer | &srarr; | プロセス番号 |
 
 <!-- END REF-->
 

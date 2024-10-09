@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN DATA FILE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| accessPath | 文字 | &#x1F852; | 開くデータファイルの名前または完全アクセスパス |
+| accessPath | Text | &srarr; | 開くデータファイルの名前または完全アクセスパス |
 
 <!-- END REF-->
 

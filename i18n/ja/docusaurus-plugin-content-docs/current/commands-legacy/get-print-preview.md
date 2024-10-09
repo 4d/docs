@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get print preview.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | ブール | &#x1F850; | True: 印刷プレビューを行うFalse: 印刷プレビューを行わない |
+| 戻り値 | Boolean | &larr; | True: 印刷プレビューを行うFalse: 印刷プレビューを行わない |
 
 <!-- END REF-->
 

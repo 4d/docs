@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Modified.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leChamp | Champ | &#x1F852; | Champ dont vous voulez tester la modification |
-| Résultat | Booléen | &#x1F850; | Vrai si une nouvelle valeur a été assignée au champ, sinon Faux |
+| leField | Field | &srarr; | Champ dont vous voulez tester la modification |
+| Résultat | Boolean | &larr; | Vrai si une nouvelle valeur a été assignée au champ, sinon Faux |
 
 <!-- END REF-->
 

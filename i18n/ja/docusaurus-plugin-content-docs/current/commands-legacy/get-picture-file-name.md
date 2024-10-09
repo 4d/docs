@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get picture file name.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture | ピクチャーフィールド, ピクチャー変数 | &#x1F852; | デフォルト名を取得するピクチャー |
-| 戻り値 | テキスト | &#x1F850; | ピクチャーファイルのデフォルト名 |
+| picture | Picture, Picture | &srarr; | デフォルト名を取得するピクチャー |
+| 戻り値 | Text | &larr; | ピクチャーファイルのデフォルト名 |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get Monitored Activity.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Collection | &#x1F850; | Colección de actividades monitoreadas |
+| Resultado | Collection | &larr; | Colección de actividades monitoreadas |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| idSessao | Texto | &#x1F852; | UUID de sessão |
-| dataVenc | Data | &#x1F858; | Data de vencimento da cookie |
-| horaVenc | Hora | &#x1F858; | Hora de vencimento da cookie |
+| idSessao | Text | &srarr; | UUID de sessão |
+| dataVenc | Date | &harr; | Data de vencimento da cookie |
+| horaVenc | Time | &harr; | Hora de vencimento da cookie |
 
 <!-- END REF-->
 

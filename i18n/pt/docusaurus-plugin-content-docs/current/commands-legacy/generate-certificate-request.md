@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| chavPriv | BLOB | &#x1F852; | BLOB que contém a chave privada |
-| peticaoCertificado | BLOB | &#x1F858; | BLOB que recebe o pedido de certificação |
-| codigoArray | Array inteiro longo | &#x1F852; | informação da lista de código |
-| arrayNome | Array string | &#x1F852; | Lista de nomes |
+| chavPriv | Blob | &srarr; | BLOB que contém a chave privada |
+| peticaoCertificado | Blob | &harr; | BLOB que recebe o pedido de certificação |
+| codigoArray | Integer array | &srarr; | informação da lista de código |
+| arrayNome | Text array | &srarr; | Lista de nomes |
 
 <!-- END REF-->
 

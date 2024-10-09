@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Current time.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Retourne l'heure courante sur le poste serveur |
-| Résultat | Heure | &#x1F850; | Heure courante |
+| * | Opérateur | &srarr; | Retourne l'heure courante sur le poste serveur |
+| Résultat | Time | &larr; | Heure courante |
 
 <!-- END REF-->
 

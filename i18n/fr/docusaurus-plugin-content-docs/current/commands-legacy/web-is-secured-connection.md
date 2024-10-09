@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Is secured connection.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Booléen | &#x1F850; | Vrai = la connexion Web est sécurisée, Faux = la connexion Web n’est pas sécurisée |
+| Résultat | Boolean | &larr; | Vrai = la connexion Web est sécurisée, Faux = la connexion Web n’est pas sécurisée |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Field name.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| pontCampo&#124;numTabela | Ponteiro, Inteiro longo | &#x1F852; | Ponteiro Campo ou número da tabela |
-| numCampo | Inteiro longo | &#x1F852; | Número do campo se a o número da tabela foi passado no primeiro parâmetro |
-| Resultado | String | &#x1F850; | Nome do campo |
+| pontCampo&#124;numTabela | Ponteiro, Inteiro longo | &srarr; | Ponteiro Campo ou número da tabela |
+| numCampo | Integer | &srarr; | Número do campo se a o número da tabela foi passado no primeiro parâmetro |
+| Resultado | Text | &larr; | Nome do campo |
 
 <!-- END REF-->
 

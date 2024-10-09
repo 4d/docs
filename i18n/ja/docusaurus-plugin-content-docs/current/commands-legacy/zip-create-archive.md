@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ZIP Create archive.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fileOrFolder &#124; zipStructure | オブジェクト | &#x1F852; | 圧縮するファイル/フォルダーオブジェクト |
-| destinationFile | オブジェクト | &#x1F852; | アーカイブの保存先ファイル |
-| options | 倍長整数 | &#x1F852; | fileOrFolder 引数が使用された場合のみ: 外側のフォルダーを除外してZIP圧縮を行う |
-| 戻り値 | オブジェクト | &#x1F850; | ステータスオブジェクト |
+| fileOrFolder &#124; zipStructure | オブジェクト | &srarr; | 圧縮するファイル/フォルダーオブジェクト |
+| destinationFile | Object | &srarr; | アーカイブの保存先ファイル |
+| options | Integer | &srarr; | fileOrFolder 引数が使用された場合のみ: 外側のフォルダーを除外してZIP圧縮を行う |
+| 戻り値 | Object | &larr; | ステータスオブジェクト |
 
 <!-- END REF-->
 

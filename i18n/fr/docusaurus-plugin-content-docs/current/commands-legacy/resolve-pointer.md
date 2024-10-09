@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.RESOLVE POINTER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| pointeur | Pointeur | &#x1F852; | Pointeur duquel récupérer l'objet référencé |
-| nomVar | Chaîne | &#x1F858; | Nom de la variable référencée ou chaîne vide |
-| numTable | Entier long | &#x1F858; | Numéro de la table ou de l'élément de tableau référencé(e) ou 0 ou -1 |
-| numChamp | Entier long | &#x1F858; | Numéro du champ ou de l'élément de tableau 2D référencé ou 0 ou -1 |
+| pointeur | Pointer | &srarr; | Pointeur duquel récupérer l'objet référencé |
+| nomVar | Text | &harr; | Nom de la variable référencée ou chaîne vide |
+| numTable | Integer | &harr; | Numéro de la table ou de l'élément de tableau référencé(e) ou 0 ou -1 |
+| numChamp | Integer | &harr; | Numéro du champ ou de l'élément de tableau 2D référencé ou 0 ou -1 |
 
 <!-- END REF-->
 

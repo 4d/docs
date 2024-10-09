@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WINDOW LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fenêtres | Tableau | &#x1F858; | Tableau des numéros de référence des fenêtres |
-| * | Opérateur | &#x1F852; | Si omis, ignorer fenêtres flottantes Si spécifié, tenir compte des fenêtres flottantes |
+| fenêtres | Array | &harr; | Tableau des numéros de référence des fenêtres |
+| * | Opérateur | &srarr; | Si omis, ignorer fenêtres flottantes Si spécifié, tenir compte des fenêtres flottantes |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LIST TO ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | 文字, ListRef | &#x1F852; | 一番目の項目をコピーするコピー元のリスト |
-| array | 配列 | &#x1F858; | コピー先の配列 |
-| itemRefs | 配列 | &#x1F858; | リスト項目の参照番号 |
+| list | Text, Integer | &srarr; | 一番目の項目をコピーするコピー元のリスト |
+| array | Array | &harr; | コピー先の配列 |
+| itemRefs | Array | &harr; | リスト項目の参照番号 |
 
 <!-- END REF-->
 

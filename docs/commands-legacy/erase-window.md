@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.ERASE WINDOW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| window | WinRef | &#x1F852; | Window reference number, or Frontmost window of current process, if omitted |
+| window | Integer | &srarr; | Window reference number, or Frontmost window of current process, if omitted |
 
 <!-- END REF-->
 

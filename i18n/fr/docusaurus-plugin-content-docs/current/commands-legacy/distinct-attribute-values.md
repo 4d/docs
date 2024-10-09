@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| champObjet | Champ | &#x1F852; | Champ objet à utiliser |
-| cheminAttribut | Texte | &#x1F852; | Nom ou chemin de l'attribut dont vous voulez obtenir les valeurs distinctes |
-| tabValeurs | Tableau texte, Tableau entier long, Tableau booléen, Tableau date, Tableau heure | &#x1F858; | Tableau des valeurs distinctes dans l'attribut |
+| champObjet | Field | &srarr; | Champ objet à utiliser |
+| cheminAttribut | Text | &srarr; | Nom ou chemin de l'attribut dont vous voulez obtenir les valeurs distinctes |
+| tabValeurs | Text array, Integer array, Boolean array, Date array, Time array | &harr; | Tableau des valeurs distinctes dans l'attribut |
 
 <!-- END REF-->
 

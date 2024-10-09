@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RELOAD EXTERNAL DATA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elCampo | Texto, BLOB, Imagen, Objeto | &#x1F852; | Campo para el cual recargar los datos |
+| elCampo | Text, Blob, Picture, Object | &srarr; | Campo para el cual recargar los datos |
 
 <!-- END REF-->
 

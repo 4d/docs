@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SELECT ROWS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時、 Object はオブジェクト名(文字列) 省略時、 Object は変数 |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名(* 指定時)、 または変数(* 省略時) |
-| selection | オブジェクト, コレクション | &#x1F852; | 選択する行を指定するオブジェクトまたはコレクション |
-| action | 倍長整数 | &#x1F852; | lk replace selection (省略時のデフォルト)、lk add to selection、lk remove from selection |
+| * | 演算子 | &srarr; | 指定時、 Object はオブジェクト名(文字列) 省略時、 Object は変数 |
+| object | any | &srarr; | オブジェクト名(* 指定時)、 または変数(* 省略時) |
+| selection | Object, Collection | &srarr; | 選択する行を指定するオブジェクトまたはコレクション |
+| action | Integer | &srarr; | lk replace selection (省略時のデフォルト)、lk add to selection、lk remove from selection |
 
 <!-- END REF-->
 

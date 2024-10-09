@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es una referencia de lista |
-| lista | ListRef, Cadena | &#x1F852; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
-| refElem &#124; * | Operador, Entero largo | &#x1F852; | Número de referencia del elemento, o 0 para el último elemento añadido a la lista, o * para el elemento actual de la lista |
-| editable | Booleano | &#x1F852; | TRUE = Editable, FALSE = No-editable |
-| estilos | Entero largo | &#x1F852; | Estilo de fuente para el elemento |
-| icono | Texto, Entero largo | &#x1F852; | Nombre o número de la imagen ("" o 0 para ningún icono) |
-| color | Entero largo | &#x1F852; | Valor de color RGB o -1 = restablecer color original |
+| * | Operador | &srarr; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es una referencia de lista |
+| lista | Integer, Text | &srarr; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
+| refElem &#124; * | Operador, Entero largo | &srarr; | Número de referencia del elemento, o 0 para el último elemento añadido a la lista, o * para el elemento actual de la lista |
+| editable | Boolean | &srarr; | TRUE = Editable, FALSE = No-editable |
+| estilos | Integer | &srarr; | Estilo de fuente para el elemento |
+| icono | Text, Integer | &srarr; | Nombre o número de la imagen ("" o 0 para ningún icono) |
+| color | Integer | &srarr; | Valor de color RGB o -1 = restablecer color original |
 
 <!-- END REF-->
 

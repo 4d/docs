@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY TO SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableau | Tableau | &#x1F852; | Tableau à copier dans la sélection |
-| leChamp | Champ | &#x1F858; | Champ recevant les valeurs du tableau |
-| * | Opérateur | &#x1F852; | Attente d’exécution |
+| tableau | Array | &srarr; | Tableau à copier dans la sélection |
+| leField | Field | &harr; | Champ recevant les valeurs du tableau |
+| * | Opérateur | &srarr; | Attente d’exécution |
 
 <!-- END REF-->
 

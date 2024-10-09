@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Verify password hash.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| password | String | &#x1F852; | The user's password.  Only the first 72 characters are used. |
-| hash | String | &#x1F852; | A password hash. |
-| Function result | Boolean | &#x1F850; | Returns TRUE if the password and hash match, otherwise returns FALSE. |
+| password | Text | &srarr; | The user's password.  Only the first 72 characters are used. |
+| hash | Text | &srarr; | A password hash. |
+| Function result | Boolean | &larr; | Returns TRUE if the password and hash match, otherwise returns FALSE. |
 
 <!-- END REF-->
 

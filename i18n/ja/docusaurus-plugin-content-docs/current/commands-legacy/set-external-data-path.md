@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET EXTERNAL DATA PATH.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | テキスト, BLOB, ピクチャー | &#x1F852; | ストレージの場所を設定するフィールド |
-| path | テキスト, 倍長整数 | &#x1F852; | 外部ストレージのパス名およびファイル名、または0 = ストラクチャー定義を使用する1 = デフォルトフォルダーを使用する |
+| aField | Text, Blob, Picture | &srarr; | ストレージの場所を設定するフィールド |
+| path | Text, Integer | &srarr; | 外部ストレージのパス名およびファイル名、または0 = ストラクチャー定義を使用する1 = デフォルトフォルダーを使用する |
 
 <!-- END REF-->
 

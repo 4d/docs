@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Create menu.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | RefMenu, Entier long, Chaîne | &#x1F852; | Référence de menu ou Numéro ou Nom de barre de menus |
-| Résultat | RefMenu | &#x1F850; | Référence du menu |
+| menu | Text, Integer, Text | &srarr; | Référence de menu ou Numéro ou Nom de barre de menus |
+| Résultat | Text | &larr; | Référence du menu |
 
 <!-- END REF-->
 

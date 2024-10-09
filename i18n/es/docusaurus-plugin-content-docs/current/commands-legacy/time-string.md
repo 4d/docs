@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Time string.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| segundos | Entero largo, Hora | &#x1F852; | Segundos desde la media noche |
-| Resultado | Cadena | &#x1F850; | Hora como una cadena en formato 24 horas |
+| segundos | Integer, Time | &srarr; | Segundos desde la media noche |
+| Resultado | Text | &larr; | Hora como una cadena en formato 24 horas |
 
 <!-- END REF-->
 

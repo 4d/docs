@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Session.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | オブジェクト | &#x1F850; | Session オブジェクト |
+| 戻り値 | Object | &larr; | Session オブジェクト |
 
 <!-- END REF-->
 

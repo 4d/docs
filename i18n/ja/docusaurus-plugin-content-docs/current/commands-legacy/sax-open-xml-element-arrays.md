@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | DocRef | &#x1F852; | 開いたドキュメントの参照 |
-| tag | 文字 | &#x1F852; | 開く要素の名前 |
-| attribNamesArray | 文字配列 | &#x1F852; | 属性名配列 |
-| attribValuesArray | 文字配列, 倍長整数配列, 日付配列, 実数配列, ピクチャー配列, ブール配列 | &#x1F852; | 属性値配列 |
+| document | Time | &srarr; | 開いたドキュメントの参照 |
+| tag | Text | &srarr; | 開く要素の名前 |
+| attribNamesArray | Text array | &srarr; | 属性名配列 |
+| attribValuesArray | Text array, Integer array, Date array, Real array, Picture array, Boolean array | &srarr; | 属性値配列 |
 
 <!-- END REF-->
 

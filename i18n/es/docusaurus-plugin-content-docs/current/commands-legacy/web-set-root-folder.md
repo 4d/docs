@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SET ROOT FOLDER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| carpetaRaiz | Cadena | &#x1F852; | Ruta de acceso de la carpeta raíz del servidor Web |
+| carpetaRaiz | Text | &srarr; | Ruta de acceso de la carpeta raíz del servidor Web |
 
 <!-- END REF-->
 

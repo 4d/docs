@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG GET ATTRIBUTE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est une variable ou un champ |
-| objetImage | Image | &#x1F852; | Nom d’objet (si * spécifié) ou Variable ou champ (si * omis) |
-| id_Element | Texte | &#x1F852; | ID de l'élément dont vous souhaitez connaître une valeur d'attribut |
-| nomAttribut | Chaîne | &#x1F852; | Nom d’attribut |
-| valeurAttribut | Chaîne, Entier long | &#x1F858; | Valeur courante de l'attribut |
+| * | Opérateur | &srarr; | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est une variable ou un champ |
+| objetPicture | Picture | &srarr; | Nom d’objet (si * spécifié) ou Variable ou champ (si * omis) |
+| id_Element | Text | &srarr; | ID de l'élément dont vous souhaitez connaître une valeur d'attribut |
+| nomAttribut | Text | &srarr; | Nom d’attribut |
+| valeurAttribut | Text, Integer | &harr; | Valeur courante de l'attribut |
 
 <!-- END REF-->
 

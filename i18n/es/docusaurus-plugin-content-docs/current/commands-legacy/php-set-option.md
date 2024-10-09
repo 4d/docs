@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.PHP SET OPTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| opción | Entero largo | &#x1F852; | Número de opción a definir |
-| valor | Booleano | &#x1F852; | Nuevo valor de la opción |
-| * | Operador | &#x1F852; | Si se pasa: la modificación no se aplica a la siguiente llamada |
+| opción | Integer | &srarr; | Número de opción a definir |
+| valor | Boolean | &srarr; | Nuevo valor de la opción |
+| * | Operador | &srarr; | Si se pasa: la modificación no se aplica a la siguiente llamada |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Version type.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#x1F850; | Information about the version type (bitfield) |
+| Function result | Longint | &larr; | Information about the version type (bitfield) |
 
 <!-- END REF-->
 

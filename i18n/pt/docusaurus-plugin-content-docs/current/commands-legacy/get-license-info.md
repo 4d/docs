@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get license info.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Objeto | &#x1F850; | Informação sobre a licença ativa |
+| Resultado | Object | &larr; | Informação sobre a licença ativa |
 
 <!-- END REF-->
 
@@ -47,6 +47,15 @@ O objeto devolvido contém as seguintes propriedades:
 | \[ \].expirationDate | Data de vencimento (o mesmo formato que o anterior)                                                      | {"dia":1, "mês":11, "ano":2017}                                                                          |
 
 #### Exemplo 
+
+Se quiser obter informação sobre sua licença 4D Server atual:
+
+```4d
+ var $obj : Object
+ $obj:=Get license info
+```
+
+*$obj* pode conter, por exemplo:
 
 ```undefined
 {

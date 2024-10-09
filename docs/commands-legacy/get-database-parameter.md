@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Get database parameter.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table from which to get the parameter, or Default table if this parameter is omitted |
-| selector | Longint | &#x1F852; | Code of the database’s parameter |
-| stringValue | String | &#x1F858; | String value of the parameter |
-| Function result | Real | &#x1F850; | Current value of the parameter |
+| aTable | Table | &srarr; | Table from which to get the parameter, or Default table if this parameter is omitted |
+| selector | Integer | &srarr; | Code of the database’s parameter |
+| stringValue | Text | &harr; | String value of the parameter |
+| Function result | Real | &larr; | Current value of the parameter |
 
 <!-- END REF-->
 

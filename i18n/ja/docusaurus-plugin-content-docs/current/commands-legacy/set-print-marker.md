@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PRINT MARKER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| markNum | 倍長整数 | &#x1F852; | マーカ番号 |
-| position | 倍長整数 | &#x1F852; | マーカの新しい位置 |
-| * | 演算子 | &#x1F852; | 指定時 = 後続のマーカを移動する 省略時 = 後続のマーカを移動しない |
+| markNum | Integer | &srarr; | マーカ番号 |
+| position | Integer | &srarr; | マーカの新しい位置 |
+| * | 演算子 | &srarr; | 指定時 = 後続のマーカを移動する 省略時 = 後続のマーカを移動しない |
 
 <!-- END REF-->
 

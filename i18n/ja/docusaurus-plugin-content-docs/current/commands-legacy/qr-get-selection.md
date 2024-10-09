@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | 倍長整数 | &#x1F852; | エリア参照 |
-| left | 倍長整数 | &#x1F858; | 左境界 |
-| top | 倍長整数 | &#x1F858; | 上境界 |
-| right | 倍長整数 | &#x1F858; | 右境界 |
-| bottom | 倍長整数 | &#x1F858; | 下境界 |
+| area | Integer | &srarr; | エリア参照 |
+| left | Integer | &harr; | 左境界 |
+| top | Integer | &harr; | 上境界 |
+| right | Integer | &harr; | 右境界 |
+| bottom | Integer | &harr; | 下境界 |
 
 <!-- END REF-->
 

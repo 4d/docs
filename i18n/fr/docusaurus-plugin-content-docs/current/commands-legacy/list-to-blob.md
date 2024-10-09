@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LIST TO BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| liste | RefListe | &#x1F852; | Liste hiérarchique à stocker dans le BLOB |
-| blob | BLOB | &#x1F852; | BLOB devant recevoir la liste hiérarchique |
-| blob | Opérateur | &#x1F852; | Ajouter la liste à la fin du BLOB |
+| liste | Integer | &srarr; | Liste hiérarchique à stocker dans le BLOB |
+| blob | Blob | &srarr; | BLOB devant recevoir la liste hiérarchique |
+| blob | * | &srarr; | Ajouter la liste à la fin du BLOB |
 
 <!-- END REF-->
 

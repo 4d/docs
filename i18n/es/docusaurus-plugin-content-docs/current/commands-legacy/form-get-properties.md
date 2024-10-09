@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla del formulario o tabla por defecto, si se omite |
-| nomForm | Cadena | &#x1F852; | Nombre del formulario |
-| ancho | Entero largo | &#x1F858; | Ancho del formulario (en píxeles) |
-| alto | Entero largo | &#x1F858; | Altura del formulario (en píxeles) |
-| numPags | Entero largo | &#x1F858; | Número de páginas en el formulario |
-| largoFijo | Booleano | &#x1F858; | Verdadero = Ancho fijo, Falso = Ancho variable |
-| altFijo | Booleano | &#x1F858; | Verdadero = Altura fija, Falso = Altura variable |
-| titulo | Texto | &#x1F858; | Título de la ventana del formulario |
+| tabla | Table | &srarr; | Tabla del formulario o tabla por defecto, si se omite |
+| nomForm | Text | &srarr; | Nombre del formulario |
+| ancho | Integer | &harr; | Ancho del formulario (en píxeles) |
+| alto | Integer | &harr; | Altura del formulario (en píxeles) |
+| numPags | Integer | &harr; | Número de páginas en el formulario |
+| largoFijo | Boolean | &harr; | Verdadero = Ancho fijo, Falso = Ancho variable |
+| altFijo | Boolean | &harr; | Verdadero = Altura fija, Falso = Altura variable |
+| titulo | Text | &harr; | Título de la ventana del formulario |
 
 <!-- END REF-->
 

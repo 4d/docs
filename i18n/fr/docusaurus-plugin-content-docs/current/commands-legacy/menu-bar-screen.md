@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Menu bar screen.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Entier long | &#x1F850; | Numéro de l'écran contenant la barre de menus |
+| Résultat | Integer | &larr; | Numéro de l'écran contenant la barre de menus |
 
 <!-- END REF-->
 

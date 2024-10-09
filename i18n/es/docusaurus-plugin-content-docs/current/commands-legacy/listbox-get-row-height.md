@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get row height.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
-| linea | Entero largo | &#x1F852; | Línea de list box, cuya altura desea obtener |
-| Resultado | Entero | &#x1F850; | Altura de la fila |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &srarr; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
+| linea | Integer | &srarr; | Línea de list box, cuya altura desea obtener |
+| Resultado | Integer | &larr; | Altura de la fila |
 
 <!-- END REF-->
 

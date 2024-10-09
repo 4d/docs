@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.New collection.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| value | 数値, テキスト, 日付, オブジェクト, コレクション, ポインター | &#x1F852; | コレクションの値 |
-| 戻り値 | コレクション | &#x1F850; | 新しいコレクション |
+| value | Number, Text, Date, Object, Collection, Pointer | &srarr; | コレクションの値 |
+| 戻り値 | Collection | &larr; | 新しいコレクション |
 
 <!-- END REF-->
 

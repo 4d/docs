@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLOSE RESOURCE FILE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resFile | DocRef | &#x1F852; | リソースファイル参照番号 |
+| resFile | Time | &srarr; | リソースファイル参照番号 |
 
 <!-- END REF-->
 

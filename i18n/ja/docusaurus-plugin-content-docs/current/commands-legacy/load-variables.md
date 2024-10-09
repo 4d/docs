@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.LOAD VARIABLES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | 文字 | &#x1F852; | 4D変数を保存したドキュメント |
-| variable | 変数 | &#x1F858; | 値を受け取る変数 |
+| document | Text | &srarr; | 4D変数を保存したドキュメント |
+| variable | Variable | &harr; | 値を受け取る変数 |
 
 <!-- END REF-->
 

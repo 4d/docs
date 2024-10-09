@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET CACHE SIZE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| size | 実数 | &#x1F852; | データベースキャッシュのサイズ(バイト単位) |
-| minFreeSize | 実数 | &#x1F852; | キャッシュが一杯になった際に解放する最小バイト数 |
+| size | Real | &srarr; | データベースキャッシュのサイズ(バイト単位) |
+| minFreeSize | Real | &srarr; | キャッシュが一杯になった際に解放する最小バイト数 |
 
 <!-- END REF-->
 

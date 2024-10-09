@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SOAP Get info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| infoNum | 倍長整数 | &#x1F852; | 取得するSOAP情報のタイプ番号 |
-| 戻り値 | 文字 | &#x1F850; | SOAP情報 |
+| infoNum | Integer | &srarr; | 取得するSOAP情報のタイプ番号 |
+| 戻り値 | Text | &larr; | SOAP情報 |
 
 <!-- END REF-->
 

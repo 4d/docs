@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CUT NAMED SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table de la sélection ou Table par défaut si ce paramètre est omis |
-| nom | Chaîne | &#x1F852; | Nom de la sélection temporaire à créer |
+| laTable | Table | &srarr; | Table de la sélection ou Table par défaut si ce paramètre est omis |
+| nom | Text | &srarr; | Nom de la sélection temporaire à créer |
 
 <!-- END REF-->
 

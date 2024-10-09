@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get selected menu item parameter.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | 文字 | &#x1F850; | メニュー項目のカスタムパラメタ |
+| 戻り値 | Text | &larr; | メニュー項目のカスタムパラメタ |
 
 <!-- END REF-->
 

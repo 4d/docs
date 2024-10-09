@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN COLOR PICKER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| texteOuFond | Entier long | &#x1F852; | 0 ou omis = couleur du texte, 1 = couleur du fond du texte |
+| texteOuFond | Integer | &srarr; | 0 ou omis = couleur du texte, 1 = couleur du fond du texte |
 
 <!-- END REF-->
 

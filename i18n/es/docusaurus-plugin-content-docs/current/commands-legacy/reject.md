@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REJECT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| unCampo | Campo | &#x1F852; | Campo a rechazar |
+| unField | Field | &srarr; | Campo a rechazar |
 
 <!-- END REF-->
 

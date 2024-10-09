@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Is secured connection.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Booleano | &#x1F850; | True = se a conexão web for segura, False = se a conexão web não for segura |
+| Resultado | Boolean | &larr; | True = se a conexão web for segura, False = se a conexão web não for segura |
 
 <!-- END REF-->
 

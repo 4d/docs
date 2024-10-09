@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.MODIFY SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table à afficher et modifier ou Table par défaut si ce paramètre est omis |
-| modeSélection | Entier long | &#x1F852; | Mode de sélection |
-| saisieListe | Booléen | &#x1F852; | Autoriser saisie en liste |
-| * | &#x1F852; | Utiliser formulaire sortie pour un seul enregistrement et cacher les barres de défilement dans le formulaire entrée |
-| * | &#x1F852; | Afficher les barres de défilement dans le formulaire entrée (= annuler le second effet du premier paramètre *) |
+| laTable | Table | &srarr; | Table à afficher et modifier ou Table par défaut si ce paramètre est omis |
+| modeSélection | Integer | &srarr; | Mode de sélection |
+| saisieListe | Boolean | &srarr; | Autoriser saisie en liste |
+| * | Operator |  &srarr; | Utiliser formulaire sortie pour un seul enregistrement et cacher les barres de défilement dans le formulaire entrée |
+| * | Operator |  &srarr; | Afficher les barres de défilement dans le formulaire entrée (= annuler le second effet du premier paramètre *) |
 
 <!-- END REF-->
 

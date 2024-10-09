@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get vertical alignment.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
-| 戻り値 | 倍長整数 | &#x1F850; | 行揃えのタイプ |
+| * | 演算子 | &srarr; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
+| object | any | &srarr; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
+| 戻り値 | Integer | &larr; | 行揃えのタイプ |
 
 <!-- END REF-->
 

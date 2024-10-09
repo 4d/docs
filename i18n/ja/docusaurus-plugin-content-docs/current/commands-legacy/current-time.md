@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Current time.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | サーバの時刻を返す |
-| 戻り値 | 時間 | &#x1F850; | 現在の時刻 |
+| * | 演算子 | &srarr; | サーバの時刻を返す |
+| 戻り値 | Time | &larr; | 現在の時刻 |
 
 <!-- END REF-->
 

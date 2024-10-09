@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET COORDINATES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié = objet est un nom d’objet (chaîne) Si omis = objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d’objet (si * est spécifié) ou Champ ou variable (si * est omis) |
-| gauche | Entier long | &#x1F858; | Coordonnée gauche de l’objet |
-| haut | Entier long | &#x1F858; | Coordonnée supérieure de l’objet |
-| droite | Entier long | &#x1F858; | Coordonnée droite de l’objet |
-| bas | Entier long | &#x1F858; | Coordonnée inférieure de l’objet |
+| * | Opérateur | &srarr; | Si spécifié = objet est un nom d’objet (chaîne) Si omis = objet est une variable |
+| objet | any | &srarr; | Nom d’objet (si * est spécifié) ou Champ ou variable (si * est omis) |
+| gauche | Integer | &harr; | Coordonnée gauche de l’objet |
+| haut | Integer | &harr; | Coordonnée supérieure de l’objet |
+| droite | Integer | &harr; | Coordonnée droite de l’objet |
+| bas | Integer | &harr; | Coordonnée inférieure de l’objet |
 
 <!-- END REF-->
 

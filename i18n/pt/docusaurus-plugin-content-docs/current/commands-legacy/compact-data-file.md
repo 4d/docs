@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Compact data file.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| endEstrutura | Texto | &#x1F852; | Endereço de acesso ao arquivo de estrutura |
-| endDados | Texto | &#x1F852; | Endereço de acesso ao arquivo de dados |
-| pastaArquivo | Texto | &#x1F852; | Endereço de acesso a pasta onde será colocado o arquivo de dados original |
-| opçao | Inteiro longo | &#x1F852; | Opções de compactação |
-| metodo | Texto | &#x1F852; | Nome do método 4D de retrochamada |
-| Resultado | Texto | &#x1F850; | Endereço de acesso completo à pasta que contém o arquivo de dados original |
+| endEstrutura | Text | &srarr; | Endereço de acesso ao arquivo de estrutura |
+| endDados | Text | &srarr; | Endereço de acesso ao arquivo de dados |
+| pastaArquivo | Text | &srarr; | Endereço de acesso a pasta onde será colocado o arquivo de dados original |
+| opçao | Integer | &srarr; | Opções de compactação |
+| metodo | Text | &srarr; | Nome do método 4D de retrochamada |
+| Resultado | Text | &larr; | Endereço de acesso completo à pasta que contém o arquivo de dados original |
 
 <!-- END REF-->
 

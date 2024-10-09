@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Find in field.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetField | Field | &#x1F852; | Field on which to execute the search |
-| value | Field, Variable | &#x1F852; | Value to search |
-| &#x1F858; | Value found |
-| Function result | Longint | &#x1F850; | Number of the record found or -1 if no record was found |
+| targetField | Field | &srarr; | Field on which to execute the search |
+| value | Field, Variable | &srarr; | Value to search |
+| &harr; | Value found |
+| Function result | Longint | &larr; | Number of the record found or -1 if no record was found |
 
 <!-- END REF-->
 

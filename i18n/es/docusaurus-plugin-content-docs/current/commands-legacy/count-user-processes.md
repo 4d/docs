@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Count user processes.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Entero largo | &#x1F850; | Número de procesos abiertos (a excepción de los procesos kernel) |
+| Resultado | Integer | &larr; | Número de procesos abiertos (a excepción de los procesos kernel) |
 
 <!-- END REF-->
 

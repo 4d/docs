@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.SET LIST ITEM.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es una referencia de lista |
-| lista | ListRef, Cadena | &#x1F852; | Número de referencia de lista (si se omite *) o Nombre de objeto de tipo lista (si se pasa*) |
-| refElem &#124; * | Operador, Entero largo | &#x1F852; | Número de referencia de elemento, o 0 para el último elemento añadido a la lista, o * para el elemento actual de la lista |
-| textElem | Cadena | &#x1F852; | Nuevo texto del elemento |
-| nuevaRef | Entero largo | &#x1F852; | Nuevo número de referencia del elemento |
-| sublista | ListRef | &#x1F852; | Nueva sublista asociada al elemento, o 0 = ninguna sublista (separar actual, si la hay), o -1 = ningún cambio |
-| desplegada | Booleano | &#x1F852; | Indica si la sublista debe ser desplegada o contraída |
+| * | Operador | &srarr; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es una referencia de lista |
+| lista | Integer, Text | &srarr; | Número de referencia de lista (si se omite *) o Nombre de objeto de tipo lista (si se pasa*) |
+| refElem &#124; * | Operador, Entero largo | &srarr; | Número de referencia de elemento, o 0 para el último elemento añadido a la lista, o * para el elemento actual de la lista |
+| textElem | Text | &srarr; | Nuevo texto del elemento |
+| nuevaRef | Integer | &srarr; | Nuevo número de referencia del elemento |
+| sublista | Integer | &srarr; | Nueva sublista asociada al elemento, o 0 = ninguna sublista (separar actual, si la hay), o -1 = ningún cambio |
+| desplegada | Boolean | &srarr; | Indica si la sublista debe ser desplegada o contraída |
 
 <!-- END REF-->
 

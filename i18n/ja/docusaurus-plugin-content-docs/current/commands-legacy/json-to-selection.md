@@ -9,16 +9,28 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON TO SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | 要素の複製先の4Dテーブル |
-| jsonArray | テキスト | &#x1F852; | JSON形式の文字列 |
+| aTable | Table | &srarr; | 要素の複製先の4Dテーブル |
+| jsonArray | Text | &srarr; | JSON形式の文字列 |
 
 <!-- END REF-->
 
 #### 説明 
 
+<!--REF #_command_.JSON TO SELECTION.Summary-->**JSON TO SELECTION**コマンドは、JSONオブジェクト配列 *jsonArray* の中身を、 *aTable* のレコードのセレクションへとコピーします。<!-- END REF-->. 
+
+*jsonArray* 引数はJSON形式にフォーマットされた配列を表すtextで、一つ以上の要素を含んでいます。シンタックスは以下のような形になっています:
+
 ```undefined
 "[{"attribute1":"value1","attribute2":"value2",...},...,{"attribute1":"valueN","attribute2":"valueN",...}]"
 ```
+
+*aTable* を呼び出したときに指定したセレクションが存在していた場合、 JSON 配列の要素は配列の順番とレコードの順番に応じてコピーされます。JSON 配列によって定義された要素の数がカレントセレクション内に存在するレコードより多い場合、新たにレコードが追加されます。レコードは、存在していた場合 でも新規に追加した場合でも、自動的に保存されます。
+
+**注:** このコマンドはオブジェクト型のフィールドをサポートします: JSONデータは自動的に変換されます。
+
+****警告:** **JSON TO SELECTION** コマンドは既存のレコード内の情報を上書きしてしまうため、使用の際には注意が必要です。  
+
+コマンド実行中、保存先のレコードが他の処理などでロックされていた場合、その中身は変更されません。ロックされたレコードは、 *LockedSet システムセット*内に保存されています。 **JSON TO SELECTION**コマンドを実行し終えたあと、 *LockedSet* 内にロックされたレコードが保存されているかどうか検証することが出来ます。
 
 #### 例題 
 

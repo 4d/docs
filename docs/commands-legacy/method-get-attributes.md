@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET ATTRIBUTES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text, Text array | &#x1F852; | Method path(s) |
-| attributes | Object, Object array | &#x1F858; | Attribute(s) for selected method(s) |
-| * | Operator | &#x1F852; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| path | Text, Text array | &srarr; | Method path(s) |
+| attributes | Object, Object array | &harr; | Attribute(s) for selected method(s) |
+| * | Operator | &srarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->
 
@@ -30,6 +30,15 @@ If the command is executed from a component, by default it applies to the compon
 **Compatibility note:** The *published4DMobile* property is deprecated as for 4D v18.
 
 #### Example 
+
+You want to get the attributes of the *sendMail* project method. You can write:
+
+```4d
+ var $att : Object
+ METHOD GET ATTRIBUTES("sendMail";$att)
+```
+
+After execution, $att contains, for example:
 
 ```undefined
 {

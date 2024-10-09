@@ -5,19 +5,18 @@ slug: /commands/field
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Field.Syntax-->**Field** ( *numTabla* ; *numCamp* ) -> Resultado 
-        
-            Field ( *ptrCamp* ) -> numCampo<!-- END REF-->
+<!--REF #_command_.Field.Syntax-->**Field** ( *numTabla* ; *numCamp* ) -> Resultado <br/>
+**Field** ( *ptrCamp* ) -> numCampo<!-- END REF-->
 <!--REF #_command_.Field.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| numTabla | Entero largo | &#x1F852; | Número de tabla |
-| numCamp | Entero largo | &#x1F852; | Número de campo |
-| Resultado | Puntero | &#x1F850; | Puntero de campo |
+| numTabla | Integer | &srarr; | Número de tabla |
+| numCamp | Integer | &srarr; | Número de campo |
+| Resultado | Pointer | &larr; | Puntero de campo |
 | Field ( ptrCamp ) -> numCampo |
 | Parámetro | Tipo | Descripción |
-| ptrCamp | Puntero | &#x1F852; | Puntero del campo |
-| numCampo | Entero largo | &#x1F850; | Número de campo |
+| ptrCamp | Pointer | &srarr; | Puntero del campo |
+| numCampo | Integer | &larr; | Número de campo |
 
 <!-- END REF-->
 

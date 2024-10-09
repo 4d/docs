@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get default user.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Inteiro longo | &#x1F850; | Número de ID de usuário |
+| Resultado | Integer | &larr; | Número de ID de usuário |
 
 <!-- END REF-->
 

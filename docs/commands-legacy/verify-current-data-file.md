@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| objects | Longint | &#x1F852; | Objects to check |
-| options | Longint | &#x1F852; | Checking options |
-| method | Text | &#x1F852; | Name of 4D callback method |
-| tablesArray | Longint array | &#x1F852; | Numbers of tables to be checked |
-| fieldsArray | 2D Integer array, 2D Longint array, 2D Real array | &#x1F852; | Numbers of indexes to be checked |
+| objects | Integer | &srarr; | Objects to check |
+| options | Integer | &srarr; | Checking options |
+| method | Text | &srarr; | Name of 4D callback method |
+| tablesArray | Integer array | &srarr; | Numbers of tables to be checked |
+| fieldsArray | 2D Integer array, 2D Integer array, 2D Real array | &srarr; | Numbers of indexes to be checked |
 
 <!-- END REF-->
 

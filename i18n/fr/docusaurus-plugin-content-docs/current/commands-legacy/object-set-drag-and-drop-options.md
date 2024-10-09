@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| glissable | Booléen | &#x1F852; | Glissable = Vrai, sinon Faux |
-| glissableAuto | Booléen | &#x1F852; | Glisser automatique = Vrai, sinon Faux |
-| déposable | Booléen | &#x1F852; | Déposable = Vrai, sinon Faux |
-| déposableAuto | Booléen | &#x1F852; | Déposer automatique = Vrai, sinon Faux |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| glissable | Boolean | &srarr; | Glissable = Vrai, sinon Faux |
+| glissableAuto | Boolean | &srarr; | Glisser automatique = Vrai, sinon Faux |
+| déposable | Boolean | &srarr; | Déposable = Vrai, sinon Faux |
+| déposableAuto | Boolean | &srarr; | Déposer automatique = Vrai, sinon Faux |
 
 <!-- END REF-->
 

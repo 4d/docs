@@ -11,13 +11,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Field.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| tableNum | 倍長整数 | &#x1F852; | テーブル番号 |
-| fieldNum | 倍長整数 | &#x1F852; | フィールド番号 |
-| 戻り値 | ポインター | &#x1F850; | フィールドポインタ |
+| tableNum | Integer | &srarr; | テーブル番号 |
+| fieldNum | Integer | &srarr; | フィールド番号 |
+| 戻り値 | Pointer | &larr; | フィールドポインタ |
 | Field ( fieldPtr ) -> 戻り値 |
 | 引数 | 型 | 説明 |
-| fieldPtr | ポインター | &#x1F852; | フィールドポインタ |
-| 戻り値 | 倍長整数 | &#x1F850; | フィールド番号 |
+| fieldPtr | Pointer | &srarr; | フィールドポインタ |
+| 戻り値 | Integer | &larr; | フィールド番号 |
 
 <!-- END REF-->
 

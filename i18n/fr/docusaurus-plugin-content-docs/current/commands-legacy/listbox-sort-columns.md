@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SORT COLUMNS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| numColonne | Entier long | &#x1F852; | Numéro(s) de colonne(s) à trier |
-| sensDuTri | Opérateur | &#x1F852; | ">"pour effectuer un tri croissant ou "<" pour effectuer un tri décroissant |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| numColonne | Integer | &srarr; | Numéro(s) de colonne(s) à trier |
+| sensDuTri | * | &srarr; | ">"pour effectuer un tri croissant ou "<" pour effectuer un tri décroissant |
 
 <!-- END REF-->
 

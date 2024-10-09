@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
-| list | ListRef, 文字 | &#x1F852; | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
-| itemRef &#124; * | 演算子, 倍長整数 | &#x1F852; | 項目参照番号, または 0: リストに最後に追加された項目, または *: カレントのリスト項目 |
-| enterable | ブール | &#x1F858; | TRUE = 入力可, FALSE = 入力不可 |
-| styles | 倍長整数 | &#x1F858; | 項目のフォントスタイル |
-| icon | テキスト, 倍長整数 | &#x1F858; | ピクチャー名または番号 |
-| color | 倍長整数 | &#x1F858; | RGBカラー値 |
+| * | 演算子 | &srarr; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
+| list | Integer, Text | &srarr; | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
+| itemRef &#124; * | 演算子, 倍長整数 | &srarr; | 項目参照番号, または 0: リストに最後に追加された項目, または *: カレントのリスト項目 |
+| enterable | Boolean | &harr; | TRUE = 入力可, FALSE = 入力不可 |
+| styles | Integer | &harr; | 項目のフォントスタイル |
+| icon | Text, Integer | &harr; | ピクチャー名または番号 |
+| color | Integer | &harr; | RGBカラー値 |
 
 <!-- END REF-->
 

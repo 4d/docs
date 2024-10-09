@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.ALL RECORDS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela para a qual vai selecionar todos os registros, ou tabela padrão, se omitido |
+| tabela | Table | &srarr; | Tabela para a qual vai selecionar todos os registros, ou tabela padrão, se omitido |
 
 <!-- END REF-->
 

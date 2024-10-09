@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Max.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| séries | Campo, Array | &#x1F852; | Dados para os quais se retorna o valor máximo |
-| atributoRota | Texto | &#x1F852; | Rota do atributo para o qual retornar o valor máximo |
-| Resultado | Data, Número | &#x1F850; | Valor máximo na série |
+| séries | Field, Array | &srarr; | Dados para os quais se retorna o valor máximo |
+| atributoRota | Text | &srarr; | Rota do atributo para o qual retornar o valor máximo |
+| Resultado | Date, Number | &larr; | Valor máximo na série |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| value | Varié | &#x1F852; | New value for the data source |
+| value | any | &srarr; | New value for the data source |
 
 <!-- END REF-->
 

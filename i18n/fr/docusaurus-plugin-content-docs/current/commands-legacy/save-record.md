@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SAVE RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table de l'enregistrement à stocker ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &srarr; | Table de l'enregistrement à stocker ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 

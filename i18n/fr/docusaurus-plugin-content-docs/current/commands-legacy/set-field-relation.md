@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET FIELD RELATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableN &#124; champN | Table, Champ | &#x1F852; | Table de départ des liens ou Champ de départ du lien |
-| aller | Entier long | &#x1F852; | Statut du lien aller partant du champ ou des liens aller partant de la table |
-| retour | Entier long | &#x1F852; | Statut du lien retour partant du champ ou des liens retour partant de la table |
+| tableN &#124; champN | Table, Champ | &srarr; | Table de départ des liens ou Champ de départ du lien |
+| aller | Integer | &srarr; | Statut du lien aller partant du champ ou des liens aller partant de la table |
+| retour | Integer | &srarr; | Statut du lien retour partant du champ ou des liens retour partant de la table |
 
 <!-- END REF-->
 

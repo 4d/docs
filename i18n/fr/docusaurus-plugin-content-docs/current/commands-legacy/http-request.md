@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP Request.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| méthodeHTTP | Texte | &#x1F852; | Méthode HTTP pour la requête |
-| url | Texte | &#x1F852; | URL auquel envoyer la requête |
-| contenu | Texte, BLOB, Image, Objet | &#x1F852; | Contenu du corps (body) de la requête |
-| réponse | Texte, BLOB, Image, Objet | &#x1F858; | Résultat de la requête |
-| nomsEnTêtes | Tableau texte | &#x1F852; | Noms des en-têtes de la requête |
-| &#x1F858; | Noms d’en-têtes retournés |
-| valeursEnTêtes | Tableau texte | &#x1F852; | Valeurs d’en-têtes de la requête |
-| &#x1F858; | Valeurs d’en-têtes retournées |
-| * | Opérateur | &#x1F852; | Si passé, la connexion est maintenue (keep-alive)<br/>Si omis, la connexion est automatiquement refermée |
-| Résultat | Entier long | &#x1F850; | Code de statut HTTP |
+| méthodeHTTP | Text | &srarr; | Méthode HTTP pour la requête |
+| url | Text | &srarr; | URL auquel envoyer la requête |
+| contenu | Text, Blob, Picture, Object | &srarr; | Contenu du corps (body) de la requête |
+| réponse | Text, Blob, Picture, Object | &harr; | Résultat de la requête |
+| nomsEnTêtes | Text array | &srarr; | Noms des en-têtes de la requête |
+| &harr; | Noms d’en-têtes retournés |
+| valeursEnTêtes | Text array | &srarr; | Valeurs d’en-têtes de la requête |
+| &harr; | Valeurs d’en-têtes retournées |
+| * | Opérateur | &srarr; | Si passé, la connexion est maintenue (keep-alive)<br/>Si omis, la connexion est automatiquement refermée |
+| Résultat | Integer | &larr; | Code de statut HTTP |
 
 <!-- END REF-->
 

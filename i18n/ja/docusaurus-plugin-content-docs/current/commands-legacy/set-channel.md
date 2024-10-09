@@ -5,18 +5,17 @@ slug: /commands/set-channel
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET CHANNEL.Syntax-->**SET CHANNEL** ( *port* ; *settings* ) 
-        
-            SET CHANNEL ( *operation* ; *document* )<!-- END REF-->
+<!--REF #_command_.SET CHANNEL.Syntax-->**SET CHANNEL** ( *port* ; *settings* ) <br/>
+**SET CHANNEL** ( *operation* ; *document* )<!-- END REF-->
 <!--REF #_command_.SET CHANNEL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| port | 倍長整数 | &#x1F852; | シリアルポート番号 |
-| settings | 倍長整数 | &#x1F852; | シリアルポート設定 |
+| port | Integer | &srarr; | シリアルポート番号 |
+| settings | Integer | &srarr; | シリアルポート設定 |
 | SET CHANNEL ( operation ; document ) |
 | 引数 | 型 | 説明 |
-| operation | 倍長整数 | &#x1F852; | 行うドキュメント処理 |
-| document | 文字 | &#x1F852; | ドキュメント名 |
+| operation | Integer | &srarr; | 行うドキュメント処理 |
+| document | Text | &srarr; | ドキュメント名 |
 
 <!-- END REF-->
 

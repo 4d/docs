@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Stringify.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| valor | Objeto, Mixed | &#x1F852; | Dados a converter em cadeia JSON |
-| * | Operador | &#x1F852; | Melhorar o formato |
-| Resultado | Texto | &#x1F850; | Cadeia que contém o texto JSON serializado |
+| valor | Object, any | &srarr; | Dados a converter em cadeia JSON |
+| * | Operador | &srarr; | Melhorar o formato |
+| Resultado | Text | &larr; | Cadeia que contém o texto JSON serializado |
 
 <!-- END REF-->
 

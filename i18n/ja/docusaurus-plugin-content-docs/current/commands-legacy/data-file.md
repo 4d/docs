@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Data file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| segment | 倍長整数 | &#x1F852; | 廃止、使用されません |
-| 戻り値 | 文字 | &#x1F850; | データベースのデータファイルのロング名 |
+| segment | Integer | &srarr; | 廃止、使用されません |
+| 戻り値 | Text | &larr; | データベースのデータファイルのロング名 |
 
 <!-- END REF-->
 

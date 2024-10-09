@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET ENABLED.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
-| objeto | Objeto de formulario | &#x1F852; | Nombre del objeto (si se especifica *) o Variable (se se omite *) |
-| activo | Booleano | &#x1F852; | True = objeto(s) activo(s), de lo contrario False |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
+| objeto | any | &srarr; | Nombre del objeto (si se especifica *) o Variable (se se omite *) |
+| activo | Boolean | &srarr; | True = objeto(s) activo(s), de lo contrario False |
 
 <!-- END REF-->
 

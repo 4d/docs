@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Get.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object, Object Field | &#x1F852; | Structured object |
-| property | Text | &#x1F852; | Name of property to read |
-| type | Longint | &#x1F852; | Type to which to convert the value |
-| Function result | Expression | &#x1F850; | Current value of property |
+| object | Object, Object | &srarr; | Structured object |
+| property | Text | &srarr; | Name of property to read |
+| type | Integer | &srarr; | Type to which to convert the value |
+| Function result | Expression | &larr; | Current value of property |
 
 <!-- END REF-->
 

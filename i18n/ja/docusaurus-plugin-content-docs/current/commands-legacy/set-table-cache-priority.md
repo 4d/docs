@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET TABLE CACHE PRIORITY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | セッション中の優先度を設定するスカラーデータのテーブル |
-| priority | 倍長整数 | &#x1F852; | テーブル内のスカラー値に対するキャッシュ優先度値 |
+| aTable | Table | &srarr; | セッション中の優先度を設定するスカラーデータのテーブル |
+| priority | Integer | &srarr; | テーブル内のスカラー値に対するキャッシュ優先度値 |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET ENTRY ORDER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomsObjets | Tableau texte | &#x1F858; | Noms des objets triés par ordre de saisie |
-| numPage &#124; * | Entier long, Opérateur | &#x1F852; | Numéro de la page dont vous voulez lire l'ordre de saisie défini (page courante si omis), ou * pour obtenir l'ordre de saisie actuel de la page courante |
+| nomsObjets | Text array | &harr; | Noms des objets triés par ordre de saisie |
+| numPage &#124; * | Entier long, Opérateur | &srarr; | Numéro de la page dont vous voulez lire l'ordre de saisie défini (page courante si omis), ou * pour obtenir l'ordre de saisie actuel de la page courante |
 
 <!-- END REF-->
 

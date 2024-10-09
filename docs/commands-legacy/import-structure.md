@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.IMPORT STRUCTURE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| xmlStructure | Text | &#x1F852; | XML definition of 4D database structure |
+| xmlStructure | Text | &srarr; | XML definition of 4D database structure |
 
 <!-- END REF-->
 

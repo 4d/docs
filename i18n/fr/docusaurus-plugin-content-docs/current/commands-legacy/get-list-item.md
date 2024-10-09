@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST ITEM.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
-| liste | RefListe, Chaîne | &#x1F852; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| positionElém &#124; * | Opérateur, Entier long | &#x1F852; | Position de l'élément dans la ou les liste(s) déployée(s)/contractée(s) ou * pour l‘élément courant de la liste |
-| réfElément | Entier long | &#x1F858; | Numéro de référence de l'élément |
-| libelléElément | Chaîne | &#x1F858; | Libellé de l'élément |
-| sous_Liste | RefListe | &#x1F858; | Numéro de référence de sous-liste (s'il y en a) |
-| déployée | Booléen | &#x1F858; | Si une sous-liste est rattachée à l'élément : Vrai = la sous-liste est déployée Faux = la sous-liste est contractée |
+| * | Opérateur | &srarr; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &srarr; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| positionElém &#124; * | Opérateur, Entier long | &srarr; | Position de l'élément dans la ou les liste(s) déployée(s)/contractée(s) ou * pour l‘élément courant de la liste |
+| réfElément | Integer | &harr; | Numéro de référence de l'élément |
+| libelléElément | Text | &harr; | Libellé de l'élément |
+| sous_Liste | Integer | &harr; | Numéro de référence de sous-liste (s'il y en a) |
+| déployée | Boolean | &harr; | Si une sous-liste est rattachée à l'élément : Vrai = la sous-liste est déployée Faux = la sous-liste est contractée |
 
 <!-- END REF-->
 

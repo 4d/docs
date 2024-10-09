@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current machine.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | String | &#x1F850; | Network name of the machine |
+| Function result | String | &larr; | Network name of the machine |
 
 <!-- END REF-->
 

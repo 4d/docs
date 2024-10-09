@@ -11,11 +11,11 @@ displayed_sidebar: docs
 <!--REF #_command_.throw.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| errorCode | 倍長整数 | &#x1F852; | エラーコードを表す倍調整数 |
-| description | テキスト | &#x1F852; | エラーの説明 (テキスト) |
+| errorCode | Integer | &srarr; | エラーコードを表す倍調整数 |
+| description | Text | &srarr; | エラーの説明 (テキスト) |
 | throw {( errorObj )} |
 | 引数 | 型 | 説明 |
-| errorObj | オブジェクト | &#x1F852; | エラー構築用のプロパティを格納するオブジェクト |
+| errorObj | Object | &srarr; | エラー構築用のプロパティを格納するオブジェクト |
 
 <!-- END REF-->
 

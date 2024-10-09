@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Is styled text.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
-| Function result | Boolean | &#x1F850; | True if object is a multi-style text, False otherwise |
+| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | any | &srarr; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| Function result | Boolean | &larr; | True if object is a multi-style text, False otherwise |
 
 <!-- END REF-->
 

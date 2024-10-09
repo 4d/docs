@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.New shared object.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| property | Text | &#x1F852; | Name of property to create |
-| value | Text, Date, Boolean, Pointer, Number, Object | &#x1F852; | Value of property |
-| Function result | Object | &#x1F850; | New shared object |
+| property | Text | &srarr; | Name of property to create |
+| value | Text, Date, Boolean, Pointer, Number, Object | &srarr; | Value of property |
+| Function result | Object | &larr; | New shared object |
 
 <!-- END REF-->
 

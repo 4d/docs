@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Compare strings.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aString | String | &#x1F852; | String to compare |
-| bString | String | &#x1F852; | String to compare |
-| options | Longint | &#x1F852; | Comparison rule(s) |
-| Function result | Longint | &#x1F850; | Result of string comparison |
+| aText | Text | &srarr; | String to compare |
+| bText | Text | &srarr; | String to compare |
+| options | Integer | &srarr; | Comparison rule(s) |
+| Function result | Longint | &larr; | Result of string comparison |
 
 <!-- END REF-->
 

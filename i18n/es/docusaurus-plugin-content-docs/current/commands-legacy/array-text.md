@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY TEXT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nombreArray | Array | &#x1F852; | Nombre del array |
-| tamaño | Entero largo | &#x1F852; | Número de elementos en el array o Número de filas si se especifica tamaño2 |
-| tamaño2 | Entero largo | &#x1F852; | Número de columnas en un array bidimensional |
+| nombreArray | Array | &srarr; | Nombre del array |
+| tamaño | Integer | &srarr; | Número de elementos en el array o Número de filas si se especifica tamaño2 |
+| tamaño2 | Integer | &srarr; | Número de columnas en un array bidimensional |
 
 <!-- END REF-->
 

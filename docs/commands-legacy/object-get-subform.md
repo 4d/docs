@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET SUBFORM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object Name (if * is specified) or Variable (if * is omitted) |
-| tablePtr | Table | &#x1F858; | Pointer to table of form |
-| detailSubform | Text | &#x1F858; | Name of detail form of subform |
-| listSubform | Text | &#x1F858; | Name of list form of subform (table form) |
+| * | Operator | &srarr; | If specified, object is an object name (string)If omitted, object is a variable |
+| object | any | &srarr; | Object Name (if * is specified) or Variable (if * is omitted) |
+| tablePtr | Table | &harr; | Pointer to table of form |
+| detailSubform | Text | &harr; | Name of detail form of subform |
+| listSubform | Text | &harr; | Name of list form of subform (table form) |
 
 <!-- END REF-->
 

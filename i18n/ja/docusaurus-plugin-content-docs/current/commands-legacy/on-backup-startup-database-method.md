@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.On Backup Startup database method.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | 倍長整数 | &#x1F850; | 0 = バックアップの開始を許可する; 0以外の値 = バックアップの開始を許可しない |
+| 戻り値 | Integer | &larr; | 0 = バックアップの開始を許可する; 0以外の値 = バックアップの開始を許可しない |
 
 <!-- END REF-->
 

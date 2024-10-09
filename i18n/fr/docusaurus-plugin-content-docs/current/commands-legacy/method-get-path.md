@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD Get path.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| typeMéthode | Entier long | &#x1F852; | Sélecteur de type d’objet du développement |
-| laTable | Table | &#x1F852; | Référence de table |
-| nomObjet | Texte | &#x1F852; | Nom de formulaire ou de méthode |
-| nomObjetForm | Texte | &#x1F858; | Nom d’objet du formulaire |
-| * | Opérateur | &#x1F852; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
-| Résultat | Texte | &#x1F850; | Chemin complet de l’objet |
+| typeMéthode | Integer | &srarr; | Sélecteur de type d’objet du développement |
+| laTable | Table | &srarr; | Référence de table |
+| nomObjet | Text | &srarr; | Nom de formulaire ou de méthode |
+| nomObjetForm | Text | &harr; | Nom d’objet du formulaire |
+| * | Opérateur | &srarr; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| Résultat | Text | &larr; | Chemin complet de l’objet |
 
 <!-- END REF-->
 

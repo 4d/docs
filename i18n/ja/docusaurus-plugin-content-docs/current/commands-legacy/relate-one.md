@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE ONE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| manyTable &#124; Field | テーブル, フィールド | &#x1F852; | すべての自動リレーションを実行するテーブル, または1テーブルへのマニュアルリレーションが引かれたフィールド |
-| choiceField | フィールド | &#x1F852; | 1テーブルの選択フィールド |
+| manyTable &#124; Field | テーブル, フィールド | &srarr; | すべての自動リレーションを実行するテーブル, または1テーブルへのマニュアルリレーションが引かれたフィールド |
+| choiceField | Field | &srarr; | 1テーブルの選択フィールド |
 
 <!-- END REF-->
 

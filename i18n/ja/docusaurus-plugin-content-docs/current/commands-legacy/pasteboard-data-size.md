@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Pasteboard data size.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| dataType | 文字 | &#x1F852; | データタイプ |
-| 戻り値 | 倍長整数 | &#x1F850; | ペーストボード中のデータサイズ (バイト) またはエラーコード |
+| dataType | Text | &srarr; | データタイプ |
+| 戻り値 | Integer | &larr; | ペーストボード中のデータサイズ (バイト) またはエラーコード |
 
 <!-- END REF-->
 

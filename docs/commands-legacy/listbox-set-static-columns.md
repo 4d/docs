@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET STATIC COLUMNS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object Name (if * is specified) or Variable (if * is omitted) |
-| numColumn | Longint | &#x1F852; | Number of columns to make static |
+| * | Operator | &srarr; | If specified, object is an object name (string)If omitted, object is a variable |
+| object | any | &srarr; | Object Name (if * is specified) or Variable (if * is omitted) |
+| numColumn | Integer | &srarr; | Number of columns to make static |
 
 <!-- END REF-->
 

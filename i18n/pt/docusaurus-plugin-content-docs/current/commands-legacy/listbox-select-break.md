@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SELECT BREAK.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
-| fila | Inteiro longo | &#x1F852; | Número de quebra de fila |
-| coluna | Inteiro longo | &#x1F852; | Número de quebra de coluna |
-| açao | Inteiro longo | &#x1F852; | Ação de seleção |
+| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
+| objeto | any | &srarr; | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
+| fila | Integer | &srarr; | Número de quebra de fila |
+| coluna | Integer | &srarr; | Número de quebra de coluna |
+| açao | Integer | &srarr; | Ação de seleção |
 
 <!-- END REF-->
 

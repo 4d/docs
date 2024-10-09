@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Select folder.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| mensagem | String | &#x1F852; | Título da janela |
-| rotaPadrao | String, Inteiro longo | &#x1F852; | • Rota padrão ou • String vazia para mostrar a pasta de usuário padrão (“Meus documentos” em Windows, “Documentos” em Mac OS), ou • Número de rota memorizada |
-| opções | Inteiro longo | &#x1F852; | Opções de seleção em Mac OS |
-| Resultado | String | &#x1F850; | Rota de acesso à pasta selecionada |
+| mensagem | Text | &srarr; | Título da janela |
+| rotaPadrao | Text, Integer | &srarr; | • Rota padrão ou • String vazia para mostrar a pasta de usuário padrão (“Meus documentos” em Windows, “Documentos” em Mac OS), ou • Número de rota memorizada |
+| opções | Integer | &srarr; | Opções de seleção em Mac OS |
+| Resultado | Text | &larr; | Rota de acesso à pasta selecionada |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST ITEM ICON.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
-| lista | ListRef, Cadena | &#x1F852; | Número de referencia de lista (si se omite *) o Nombre de objeto de tipo de lista (si pasa *) |
-| refElem &#124; * | Operador, Entero largo | &#x1F852; | Número de referencia del elemento o 0 para el último elemento añadido a la lista o * para el elemento actual de la lista |
-| icono | Variable imagen | &#x1F858; | Icono asociado al elemento |
+| * | Operador | &srarr; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
+| lista | Integer, Text | &srarr; | Número de referencia de lista (si se omite *) o Nombre de objeto de tipo de lista (si pasa *) |
+| refElem &#124; * | Operador, Entero largo | &srarr; | Número de referencia del elemento o 0 para el último elemento añadido a la lista o * para el elemento actual de la lista |
+| icono | Picture | &harr; | Icono asociado al elemento |
 
 <!-- END REF-->
 

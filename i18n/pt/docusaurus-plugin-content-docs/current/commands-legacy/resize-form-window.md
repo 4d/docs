@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESIZE FORM WINDOW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| largura | Inteiro longo | &#x1F852; | Pixels a adicionar ou remover da largura da janela do formulário atual |
-| altura | Inteiro longo | &#x1F852; | Pixels a adicionar ou remover da altura da janela do formulário atual |
+| largura | Integer | &srarr; | Pixels a adicionar ou remover da largura da janela do formulário atual |
+| altura | Integer | &srarr; | Pixels a adicionar ou remover da altura da janela do formulário atual |
 
 <!-- END REF-->
 

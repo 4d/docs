@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.SCREEN COORDINATES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| left | 倍長整数 | &#x1F858; | 画面エリアの左端のグローバル座標 |
-| top | 倍長整数 | &#x1F858; | 画面エリアの上端のグローバル座標 |
-| right | 倍長整数 | &#x1F858; | 画面エリアの右端のグローバル座標 |
-| bottom | 倍長整数 | &#x1F858; | 画面エリアの下端のグローバル座標 |
-| screen | 倍長整数 | &#x1F852; | 画面番号、または省略した場合には主画面(メインスクリーン) |
-| screenArea | 倍長整数 | &#x1F852; | 画面全体(デフォルト)または利用可能エリア |
+| left | Integer | &harr; | 画面エリアの左端のグローバル座標 |
+| top | Integer | &harr; | 画面エリアの上端のグローバル座標 |
+| right | Integer | &harr; | 画面エリアの右端のグローバル座標 |
+| bottom | Integer | &harr; | 画面エリアの下端のグローバル座標 |
+| screen | Integer | &srarr; | 画面番号、または省略した場合には主画面(メインスクリーン) |
+| screenArea | Integer | &srarr; | 画面全体(デフォルト)または利用可能エリア |
 
 <!-- END REF-->
 

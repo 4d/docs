@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.False.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Booleano | &#x1F850; | False |
+| Resultado | Boolean | &larr; | False |
 
 <!-- END REF-->
 

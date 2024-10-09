@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Application file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | String | &#x1F850; | Long name of the 4D executable file or application |
+| Function result | String | &larr; | Long name of the 4D executable file or application |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Asserted.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| expressaoBool | Booleano | &#x1F852; | Expressão Booleana |
-| mensagemTexto | Texto | &#x1F852; | texto da mensagem de erro |
-| Resultado | Booleano | &#x1F850; | Resultado da avaliação de expressaoBool |
+| expressaoBool | Boolean | &srarr; | Expressão Booleana |
+| mensagemText | Text | &srarr; | texto da mensagem de erro |
+| Resultado | Boolean | &larr; | Resultado da avaliação de expressaoBool |
 
 <!-- END REF-->
 

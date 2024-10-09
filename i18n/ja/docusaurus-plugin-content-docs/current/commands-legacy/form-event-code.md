@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Form event code.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | 倍長整数 | &#x1F850; | フォームイベント番号 |
+| 戻り値 | Integer | &larr; | フォームイベント番号 |
 
 <!-- END REF-->
 

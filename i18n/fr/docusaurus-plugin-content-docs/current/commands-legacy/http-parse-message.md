@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP Parse message.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| data | Texte, BLOB | &#x1F852; | Données à parser |
-| Résultat | Objet | &#x1F850; | Objet, chaque propriété est une partie des données multipartites |
+| data | Text, Blob | &srarr; | Données à parser |
+| Résultat | Object | &larr; | Objet, chaque propriété est une partie des données multipartites |
 
 <!-- END REF-->
 

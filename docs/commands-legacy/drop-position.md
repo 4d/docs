@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Drop position.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| columnNumber &#124; pictPosY | Longint | &#x1F858; | List box column number (-1 if the drop occurs beyond the last column) or Position of Y coordinate in picture |
-| Function result | Longint | &#x1F850; | • Number (list box) or • Position (hierarchical list) or • Position in string (text/combo box/4D Write Pro area) of destination item or • -1 if drop occurred beyond the last list item • Position of X coordinate in picture |
+| columnNumber &#124; pictPosY | Longint | &harr; | List box column number (-1 if the drop occurs beyond the last column) or Position of Y coordinate in picture |
+| Function result | Longint | &larr; | • Number (list box) or • Position (hierarchical list) or • Position in string (text/combo box/4D Write Pro area) of destination item or • -1 if drop occurred beyond the last list item • Position of X coordinate in picture |
 
 <!-- END REF-->
 

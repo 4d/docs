@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Form.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Objeto | &#x1F850; | Formulário de dados associado ao formulário atual |
+| Resultado | Object | &larr; | Formulário de dados associado ao formulário atual |
 
 <!-- END REF-->
 

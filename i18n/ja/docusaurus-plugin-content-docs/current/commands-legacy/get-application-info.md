@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get application info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | オブジェクト | &#x1F850; | アクティブなアプリケーションのアクティビティについての情報 |
+| 戻り値 | Object | &larr; | アクティブなアプリケーションのアクティビティについての情報 |
 
 <!-- END REF-->
 

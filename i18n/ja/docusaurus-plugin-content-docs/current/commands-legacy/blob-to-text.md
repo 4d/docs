@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB to text.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| BLOB | BLOB | &#x1F852; | テキストを取り出すBLOB |
-| textFormat | 倍長整数 | &#x1F852; | テキストのフォーマットと文字セット |
-| offset | 変数 | &#x1F852; | BLOB内のオフセット (バイト単位) |
-| &#x1F858; | 読み込み後の新しいオフセット |
-| textLength | 倍長整数 | &#x1F852; | 読み込む文字数 |
-| 戻り値 | テキスト | &#x1F850; | 取り出したテキスト |
+| Blob | Blob | &srarr; | テキストを取り出すBLOB |
+| textFormat | Integer | &srarr; | テキストのフォーマットと文字セット |
+| offset | Variable | &srarr; | BLOB内のオフセット (バイト単位) |
+| &harr; | 読み込み後の新しいオフセット |
+| textLength | Integer | &srarr; | 読み込む文字数 |
+| 戻り値 | Text | &larr; | 取り出したテキスト |
 
 <!-- END REF-->
 

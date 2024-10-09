@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Focus object.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Ponteiro | &#x1F850; | Ponteiro ao objeto que tem o foco |
+| Resultado | Pointer | &larr; | Ponteiro ao objeto que tem o foco |
 
 <!-- END REF-->
 

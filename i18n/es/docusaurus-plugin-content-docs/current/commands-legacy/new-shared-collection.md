@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.New shared collection.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| valor | &#x1F852; | Valor(es) de la colección compartida |
-| Resultado | Collection | &#x1F850; | Nueva colección compartida |
+| valor | &srarr; | Valor(es) de la colección compartida |
+| Resultado | Collection | &larr; | Nueva colección compartida |
 
 <!-- END REF-->
 

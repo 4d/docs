@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.MAIL New attachment.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| valor | Texto, BLOB, Objeto | &#x1F852; | Objeto (arquivo 4D, arquivo 4Dzip, blob 4D) ou rota do arquivo anexado (texto) ou blob contendo o anexo (BLOB) |
-| nome | Texto | &#x1F852; | Nome + extensão usada pelo cliente email para designar o anexo |
-| cid | Texto | &#x1F852; | ID do anexo (apenas mensagens HTML) ou "" se nenhum cid for exigido |
-| tipo | Texto | &#x1F852; | Valor de cabeçalho tipo conteúdo |
-| disposição | Texto | &#x1F852; | Valor do cabeçalho disposição conteúdo "inline" ou "anexo" |
-| Resultado | Objeto | &#x1F850; | Objeto anexo |
+| valor | Text, Blob, Object | &srarr; | Objeto (arquivo 4D, arquivo 4Dzip, blob 4D) ou rota do arquivo anexado (texto) ou blob contendo o anexo (BLOB) |
+| nome | Text | &srarr; | Nome + extensão usada pelo cliente email para designar o anexo |
+| cid | Text | &srarr; | ID do anexo (apenas mensagens HTML) ou "" se nenhum cid for exigido |
+| tipo | Text | &srarr; | Valor de cabeçalho tipo conteúdo |
+| disposição | Text | &srarr; | Valor do cabeçalho disposição conteúdo "inline" ou "anexo" |
+| Resultado | Object | &larr; | Objeto anexo |
 
 <!-- END REF-->
 

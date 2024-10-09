@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Pop up menu.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| contents | テキスト | &#x1F852; | 定義された項目テキスト |
-| default | 倍長整数 | &#x1F852; | デフォルトで選択された項目番号 |
-| xCoord | 倍長整数 | &#x1F852; | 左上角のX座標 |
-| yCoord | 倍長整数 | &#x1F852; | 左上角のY座標 |
-| 戻り値 | 倍長整数 | &#x1F850; | 選択された項目番号 |
+| contents | Text | &srarr; | 定義された項目テキスト |
+| default | Integer | &srarr; | デフォルトで選択された項目番号 |
+| xCoord | Integer | &srarr; | 左上角のX座標 |
+| yCoord | Integer | &srarr; | 左上角のY座標 |
+| 戻り値 | Integer | &larr; | 選択された項目番号 |
 
 <!-- END REF-->
 

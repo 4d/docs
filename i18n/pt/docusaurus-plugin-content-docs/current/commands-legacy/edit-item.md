@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.EDIT ITEM.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se * é especificado) ou Tabela ou Variável (se * é omitido) |
-| item | Inteiro longo | &#x1F852; | Número do item |
+| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
+| objeto | any | &srarr; | Nome de objeto (se * é especificado) ou Tabela ou Variável (se * é omitido) |
+| item | Integer | &srarr; | Número do item |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET ALLOWED METHODS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| methodsArray | 文字配列 | &#x1F858; | メソッド名配列 |
+| methodsArray | Text array | &harr; | メソッド名配列 |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.FONT STYLE LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| famillePolice | Texte | &#x1F852; | Nom de la famille de police |
-| listeStylesPolice | Tableau texte | &#x1F858; | Liste des styles pris en charge par la famille de police |
-| listeNomsPolice | Tableau texte | &#x1F858; | Liste des noms complets pris en charge par la famille de police |
+| famillePolice | Text | &srarr; | Nom de la famille de police |
+| listeStylesPolice | Text array | &harr; | Liste des styles pris en charge par la famille de police |
+| listeNomsPolice | Text array | &harr; | Liste des noms complets pris en charge par la famille de police |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET COLUMN WIDTH.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| largeur | Entier long | &#x1F852; | Largeur de colonne (en pixels) |
-| largeurMini | Entier long | &#x1F852; | Largeur minimale de colonne (en pixels) |
-| largeurMaxi | Entier long | &#x1F852; | Largeur maximale de colonne (en pixels) |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| largeur | Integer | &srarr; | Largeur de colonne (en pixels) |
+| largeurMini | Integer | &srarr; | Largeur minimale de colonne (en pixels) |
+| largeurMaxi | Integer | &srarr; | Largeur maximale de colonne (en pixels) |
 
 <!-- END REF-->
 

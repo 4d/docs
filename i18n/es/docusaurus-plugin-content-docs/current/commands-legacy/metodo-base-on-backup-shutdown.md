@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Metodo base On Backup Shutdown.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| $1 | Entero largo | &#x1F858; | 0 = backup ejecutado correctamente; otro valor = error, interrumpido por el usuario o código devuelto por On Backup Startup |
+| $1 | Entero largo | &harr; | 0 = backup ejecutado correctamente; otro valor = error, interrumpido por el usuario o código devuelto por On Backup Startup |
 
 <!-- END REF-->
 

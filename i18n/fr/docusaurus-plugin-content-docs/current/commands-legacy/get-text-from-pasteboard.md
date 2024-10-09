@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get text from pasteboard.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Chaîne | &#x1F850; | Texte présent dans le conteneur de données |
+| Résultat | Text | &larr; | Texte présent dans le conteneur de données |
 
 <!-- END REF-->
 

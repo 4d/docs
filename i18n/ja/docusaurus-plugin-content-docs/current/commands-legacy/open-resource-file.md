@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Open resource file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resFilename | 文字 | &#x1F852; | リソースファイルのファイル名またはフルパス名, または 空の文字列を指定するとファイルを開くダイアログボックスを表示 |
-| fileType | 文字 | &#x1F852; | Mac OSファイルタイプ (4文字)、または Windowsファイル拡張子(1から3文字)、または 省略時、すべてのファイル |
-| 戻り値 | DocRef | &#x1F850; | リソースファイル参照番号 |
+| resFilename | Text | &srarr; | リソースファイルのファイル名またはフルパス名, または 空の文字列を指定するとファイルを開くダイアログボックスを表示 |
+| fileType | Text | &srarr; | Mac OSファイルタイプ (4文字)、または Windowsファイル拡張子(1から3文字)、または 省略時、すべてのファイル |
+| 戻り値 | Time | &larr; | リソースファイル参照番号 |
 
 <!-- END REF-->
 

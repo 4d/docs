@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE KEYWORDS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture field, Picture variable | &#x1F852; | Picture for which to get associated keywords |
-| arrKeywords | Text array | &#x1F858; | Array containing extracted keywords |
-| * | Operator | &#x1F852; | If passed = use distinct values |
+| picture | Picture, Picture | &srarr; | Picture for which to get associated keywords |
+| arrKeywords | Text array | &harr; | Array containing extracted keywords |
+| * | Operator | &srarr; | If passed = use distinct values |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PROCESS VARIABLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| processo | Inteiro longo | &#x1F852; | Número de processo da fonte |
-| srcVar | Variável | &#x1F852; | Variável fonte |
-| dstVar | Variável | &#x1F858; | Variável destino |
+| processo | Integer | &srarr; | Número de processo da fonte |
+| srcVar | Variable | &srarr; | Variável fonte |
+| dstVar | Variable | &harr; | Variável destino |
 
 <!-- END REF-->
 

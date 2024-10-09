@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.HIDE PROCESS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| process | 倍長整数 | &#x1F852; | 隠すプロセスのプロセス番号 |
+| process | Integer | &srarr; | 隠すプロセスのプロセス番号 |
 
 <!-- END REF-->
 

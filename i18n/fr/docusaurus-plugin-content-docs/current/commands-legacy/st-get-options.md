@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ST GET OPTIONS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| option | Entier long | &#x1F852; | Option à lire |
-| valeur | Entier long | &#x1F858; | Valeur courante de l’option |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| option | Integer | &srarr; | Option à lire |
+| valeur | Integer | &harr; | Valeur courante de l’option |
 
 <!-- END REF-->
 

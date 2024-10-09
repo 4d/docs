@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.COPY DOCUMENT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomFuente | Cadena | &#x1F852; | Nombre del documento a copiar |
-| nomDest | Cadena | &#x1F852; | Nombre del documento copiado |
-| nuevNombre | Cadena | &#x1F852; | Nuevo nombre del archivo o carpeta copiado |
-| * | Operador | &#x1F852; | Reemplazar documento existente si lo hay |
+| nomFuente | Text | &srarr; | Nombre del documento a copiar |
+| nomDest | Text | &srarr; | Nombre del documento copiado |
+| nuevNombre | Text | &srarr; | Nuevo nombre del archivo o carpeta copiado |
+| * | Operador | &srarr; | Reemplazar documento existente si lo hay |
 
 <!-- END REF-->
 

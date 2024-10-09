@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ORDER BY FORMULA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table for which to order selected records |
-| formula | Expression | &#x1F852; | Expression on which to set the order for each level (can be of type Alphanumeric, Real, Integer, Long Integer, Date, Time or Boolean) |
-| > or < | Operator | &#x1F852; | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
+| aTable | Table | &srarr; | Table for which to order selected records |
+| formula | Expression | &srarr; | Expression on which to set the order for each level (can be of type Alphanumeric, Real, Integer, Long Integer, Date, Time or Boolean) |
+| > or < | Operator | &srarr; | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
 
 <!-- END REF-->
 

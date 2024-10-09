@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | DocRef | &#x1F852; | 開かれたドキュメントの参照 |
-| statement | テキスト | &#x1F852; | ドキュメントに挿入するステートメント |
+| document | Time | &srarr; | 開かれたドキュメントの参照 |
+| statement | Text | &srarr; | ドキュメントに挿入するステートメント |
 
 <!-- END REF-->
 

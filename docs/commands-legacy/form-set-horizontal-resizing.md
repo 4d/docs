@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SET HORIZONTAL RESIZING.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| resize | Boolean | &#x1F852; | True: The form can be resized horizontally False: The form cannot be resized horizontally |
-| minWidth | Longint | &#x1F852; | Smallest form width allowed (pixels) |
-| maxWidth | Longint | &#x1F852; | Largest form width allowed (pixels) |
+| resize | Boolean | &srarr; | True: The form can be resized horizontally False: The form cannot be resized horizontally |
+| minWidth | Integer | &srarr; | Smallest form width allowed (pixels) |
+| maxWidth | Integer | &srarr; | Largest form width allowed (pixels) |
 
 <!-- END REF-->
 

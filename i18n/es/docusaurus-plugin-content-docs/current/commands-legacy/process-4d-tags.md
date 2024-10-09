@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.PROCESS 4D TAGS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| plantillaEntrada | Texto | &#x1F852; | Datos que contiene las etiquetas a tratar |
-| datosSalida | Texto | &#x1F858; | Datos procesados |
-| param | Expresión | &#x1F852; | Parámetros pasados a la plantilla en ejecución |
+| plantillaEntrada | Text | &srarr; | Datos que contiene las etiquetas a tratar |
+| datosSalida | Text | &harr; | Datos procesados |
+| param | Expression | &srarr; | Parámetros pasados a la plantilla en ejecución |
 
 <!-- END REF-->
 

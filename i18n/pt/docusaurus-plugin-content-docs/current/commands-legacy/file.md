@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.File.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota&#124;4Dfile | Texto, Inteiro longo | &#x1F852; | Rota arquivo ou constante 4D file |
-| tipoRotah &#124; * | Inteiro longo, Operador | &#x1F852; | Se passar rota: rota fk posix (padrão) ou rota fk platform  Se passar 4Dfile: *para retornar arquivo ou database host |
-| Resultado | Objeto | &#x1F850; | novo objeto arquivo |
+| rota&#124;4Dfile | Texto, Inteiro longo | &srarr; | Rota arquivo ou constante 4D file |
+| tipoRotah &#124; * | Inteiro longo, Operador | &srarr; | Se passar rota: rota fk posix (padrão) ou rota fk platform  Se passar 4Dfile: *para retornar arquivo ou database host |
+| Resultado | Object | &larr; | novo objeto arquivo |
 
 <!-- END REF-->
 

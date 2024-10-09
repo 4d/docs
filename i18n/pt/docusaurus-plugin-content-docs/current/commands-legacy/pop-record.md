@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.POP RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela da qual desempilhar o registro, a tabela padrão, se omitido |
+| tabela | Table | &srarr; | Tabela da qual desempilhar o registro, a tabela padrão, se omitido |
 
 <!-- END REF-->
 

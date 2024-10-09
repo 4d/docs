@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT DUPLICATE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
-| nouvNom | Texte | &#x1F852; | Nom du nouvel objet |
-| nouvVar | Pointeur | &#x1F852; | Pointeur vers la variable du nouvel objet |
-| reliéA | Texte | &#x1F852; | Nom de l’objet saisissable (ou du bouton radio) précédent |
-| dépH | Entier long | &#x1F852; | Décalage horizontal du nouvel objet<br/>(>0 = vers la droite, <0 = vers la gauche) |
-| dépV | Entier long | &#x1F852; | Décalage vertical du nouvel objet<br/>(>0 = vers le bas, <0 = vers le haut) |
-| redimH | Entier long | &#x1F852; | Valeur de redimensionnement horizontal du nouvel objet |
-| redimV | Entier long | &#x1F852; | Valeur de redimensionnement vertical du nouvel objet |
-| * | Opérateur | &#x1F852; | Si spécifié = coordonnées absolues<br/>Si omis = coordonnées relatives |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| nouvNom | Text | &srarr; | Nom du nouvel objet |
+| nouvVar | Pointer | &srarr; | Pointeur vers la variable du nouvel objet |
+| reliéA | Text | &srarr; | Nom de l’objet saisissable (ou du bouton radio) précédent |
+| dépH | Integer | &srarr; | Décalage horizontal du nouvel objet<br/>(>0 = vers la droite, <0 = vers la gauche) |
+| dépV | Integer | &srarr; | Décalage vertical du nouvel objet<br/>(>0 = vers le bas, <0 = vers le haut) |
+| redimH | Integer | &srarr; | Valeur de redimensionnement horizontal du nouvel objet |
+| redimV | Integer | &srarr; | Valeur de redimensionnement vertical du nouvel objet |
+| * | Opérateur | &srarr; | Si spécifié = coordonnées absolues<br/>Si omis = coordonnées relatives |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.User in group.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| user | 文字 | &#x1F852; | ユーザ名 |
-| group | 文字 | &#x1F852; | グループ名 |
-| 戻り値 | ブール | &#x1F850; | TRUE = ユーザがグループに存在する場合 FALSE = ユーザがグループに存在しない場合 |
+| user | Text | &srarr; | ユーザ名 |
+| group | Text | &srarr; | グループ名 |
+| 戻り値 | Boolean | &larr; | TRUE = ユーザがグループに存在する場合 FALSE = ユーザがグループに存在しない場合 |
 
 <!-- END REF-->
 

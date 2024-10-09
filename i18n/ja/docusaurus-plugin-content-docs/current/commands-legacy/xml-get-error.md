@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.XML GET ERROR.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | 文字 | &#x1F852; | XML要素参照 |
-| errorText | 変数 | &#x1F858; | エラーテキスト |
-| row | 変数 | &#x1F858; | 行番号 |
-| column | 変数 | &#x1F858; | 列番号 |
+| elementRef | Text | &srarr; | XML要素参照 |
+| errorText | Variable | &harr; | エラーテキスト |
+| row | Variable | &harr; | 行番号 |
+| column | Variable | &harr; | 列番号 |
 
 <!-- END REF-->
 

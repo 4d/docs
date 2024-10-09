@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX SET XML DECLARATION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | refDoc | &#x1F852; | Referência do documento aberto |
-| codificaçao | String | &#x1F852; | Conjunto de caracteres usado no documento XML |
-| autonomo | Booleano | &#x1F852; | True= o documento é autônomo (standalone); False (padrão) = documento não é standalone |
+| documento | Time | &srarr; | Referência do documento aberto |
+| codificaçao | Text | &srarr; | Conjunto de caracteres usado no documento XML |
+| autonomo | Boolean | &srarr; | True= o documento é autônomo (standalone); False (padrão) = documento não é standalone |
 
 <!-- END REF-->
 

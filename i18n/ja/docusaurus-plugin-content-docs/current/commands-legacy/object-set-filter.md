@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET FILTER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
-| entryFilter | 文字 | &#x1F852; | 入力可エリアの新しい入力フィルタ |
+| * | 演算子 | &srarr; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &srarr; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
+| entryFilter | Text | &srarr; | 入力可エリアの新しい入力フィルタ |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET BEST SIZE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified = object is an object name (String) If omitted = object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Field or variable (if * is omitted) |
-| bestWidth | Longint | &#x1F858; | Optimum object width |
-| bestHeight | Longint | &#x1F858; | Optimum object height |
-| maxWidth | Longint | &#x1F852; | Maximum object width |
+| * | Operator | &srarr; | If specified = object is an object name (String) If omitted = object is a variable |
+| object | any | &srarr; | Object name (if * is specified) or Field or variable (if * is omitted) |
+| bestWidth | Integer | &harr; | Optimum object width |
+| bestHeight | Integer | &harr; | Optimum object height |
+| maxWidth | Integer | &srarr; | Maximum object width |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.ACCUMULATE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| data | Field, Variable | &#x1F852; | Numeric field or variable on which to accumulate |
+| data | Field, Variable | &srarr; | Numeric field or variable on which to accumulate |
 
 <!-- END REF-->
 

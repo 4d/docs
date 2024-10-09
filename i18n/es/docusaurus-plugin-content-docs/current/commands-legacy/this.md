@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.This.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Resultado | Objeto | &#x1F850; | El elemento actual |
+| Resultado | Object | &larr; | El elemento actual |
 
 <!-- END REF-->
 
@@ -29,6 +29,8 @@ En cualquier otro contexto, el comando devuelve **Null**.
 En contextos soportados, puede acceder a todas las propiedades de los elementos o todos los atributos de entidades vía **This.<*propertyPath*\>**. Por ejemplo, **This.name o This.employer.lastName* son rutas de propiedades de elementos o de entidades (atributos) validos.
 
 #### Ejemplo 1 
+
+Una colección de objetos, cada uno con esta estructura:
 
 ```undefined
 {  
@@ -52,6 +54,26 @@ En contextos soportados, puede acceder a todas las propiedades de los elementos 
 },...
  
 ```
+
+En el list box, cada columna se refiere a una de las propiedades del objeto, ya sea directamente (This.name), indirectamente (This.employees.length), o mediante una expresión (*getPicture*) en la que se puede usar directamente. El list box se ve así:
+
+![](../assets/en/commands/pict3776706.en.png)
+
+El método proyecto *GetPicture* se ejecuta automáticamente durante el evento **On display detail**:
+
+```4d
+  //Método GetPicture
+ var $0 : Picture
+ If(This.isFemale)
+    $0:=Form.genericFemaleImage
+ Else
+    $0:=Form.genericMaleImage
+ End if
+```
+
+Una vez el formulario se ejecuta, puede ver el resultado:
+
+![](../assets/en/commands/pict3783169.en.png)
 
 #### Ejemplo 2 
 

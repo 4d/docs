@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET INFO ROW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Entier long | &#x1F852; | Référence de la zone |
-| ligne | Entier long | &#x1F852; | Ligne |
-| cachée | Entier long | &#x1F852; | 0 = Visible, 1 = Cachée |
+| zone | Integer | &srarr; | Référence de la zone |
+| ligne | Integer | &srarr; | Ligne |
+| cachée | Integer | &srarr; | 0 = Visible, 1 = Cachée |
 
 <!-- END REF-->
 

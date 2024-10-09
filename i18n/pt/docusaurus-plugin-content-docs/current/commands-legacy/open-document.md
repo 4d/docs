@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Open document.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | String | &#x1F852; | Nome de documento ou rota de acesso completa ou string vazia para caixa de diálogo de arquivo |
-| tipoArquivo | String | &#x1F852; | Lista de tipos de documentos a serem pesquisados, ou "*" para não pesquisar os documentos |
-| modo | Inteiro longo | &#x1F852; | Modo de abertura do documento |
-| Resultado | refDoc | &#x1F850; | Número de referência de documento |
+| documento | Text | &srarr; | Nome de documento ou rota de acesso completa ou string vazia para caixa de diálogo de arquivo |
+| tipoArquivo | Text | &srarr; | Lista de tipos de documentos a serem pesquisados, ou "*" para não pesquisar os documentos |
+| modo | Integer | &srarr; | Modo de abertura do documento |
+| Resultado | Time | &larr; | Número de referência de documento |
 
 <!-- END REF-->
 

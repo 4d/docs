@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.POST CLICK.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| mouseX | Inteiro longo | &#x1F852; | Coordenada Horizontal |
-| mouseY | Inteiro longo | &#x1F852; | Coordenada Vertical |
-| processo | Inteiro longo | &#x1F852; | Número de referência do processo destino; ou, omitido, fila de evento de Aplicação, ou 0 |
-| * | &#x1F852; | Se especificado sistema de coordenadas global é usado; se omitido, sistema de coordenadas locais é usado |
+| mouseX | Integer | &srarr; | Coordenada Horizontal |
+| mouseY | Integer | &srarr; | Coordenada Vertical |
+| processo | Integer | &srarr; | Número de referência do processo destino; ou, omitido, fila de evento de Aplicação, ou 0 |
+| * | Operator |  &srarr; | Se especificado sistema de coordenadas global é usado; se omitido, sistema de coordenadas locais é usado |
 
 <!-- END REF-->
 

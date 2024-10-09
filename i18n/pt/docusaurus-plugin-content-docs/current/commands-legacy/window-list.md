@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WINDOW LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janelas | Array | &#x1F858; | Array de números de referência de janelas |
-| * | Operador | &#x1F852; | Se especificado, considere janela flutuante, se omitido, ignore janela flutuante |
+| janelas | Array | &harr; | Array de números de referência de janelas |
+| * | Operador | &srarr; | Se especificado, considere janela flutuante, se omitido, ignore janela flutuante |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DATABASE PARAMETER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela a qual atribuir o parâmetro ou, Tabela padrão se o parâmetro for omitido. |
-| seletor | Inteiro longo | &#x1F852; | Código do banco de dados a ser modificado |
-| value | Real, String | &#x1F852; | Valor do parâmetro |
+| tabela | Table | &srarr; | Tabela a qual atribuir o parâmetro ou, Tabela padrão se o parâmetro for omitido. |
+| seletor | Integer | &srarr; | Código do banco de dados a ser modificado |
+| value | Real, Text | &srarr; | Valor do parâmetro |
 
 <!-- END REF-->
 

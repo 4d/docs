@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Arctan.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| número | Real | &#x1F852; | Tangente para a qual deseja calcular o ângulo |
-| Resultado da função | Real | &#x1F850; | Ângulo em radianos |
+| número | Real | &srarr; | Tangente para a qual deseja calcular o ângulo |
+| Resultado da função | Real | &larr; | Ângulo em radianos |
 
 <!-- END REF-->
 

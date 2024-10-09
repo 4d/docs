@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Equal pictures.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture1 | ピクチャーフィールド, ピクチャー変数 | &#x1F852; | 元のソースピクチャー |
-| picture2 | ピクチャーフィールド, ピクチャー変数 | &#x1F852; | 比較するピクチャー |
-| mask | ピクチャーフィールド, ピクチャー変数 | &#x1F858; | 結果のマスク |
-| 戻り値 | ブール | &#x1F850; | 2つのピクチャーが同じ場合True、そうでなければFalse |
+| picture1 | Picture, Picture | &srarr; | 元のソースピクチャー |
+| picture2 | Picture, Picture | &srarr; | 比較するピクチャー |
+| mask | Picture, Picture | &harr; | 結果のマスク |
+| 戻り値 | Boolean | &larr; | 2つのピクチャーが同じ場合True、そうでなければFalse |
 
 <!-- END REF-->
 

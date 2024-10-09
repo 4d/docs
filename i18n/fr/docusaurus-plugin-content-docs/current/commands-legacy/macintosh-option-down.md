@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Macintosh option down.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Booléen | &#x1F850; | Etat de la touche Option Macintosh ou Etat de la touche Alt Windows |
+| Résultat | Boolean | &larr; | Etat de la touche Option Macintosh ou Etat de la touche Alt Windows |
 
 <!-- END REF-->
 

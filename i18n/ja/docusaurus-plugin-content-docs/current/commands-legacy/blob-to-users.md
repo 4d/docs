@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB TO USERS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| users | BLOB | &#x1F852; | データベース管理者によって作成・保存されたデータベースユーザーアカウントを格納している、暗号化された BLOB |
+| users | Blob | &srarr; | データベース管理者によって作成・保存されたデータベースユーザーアカウントを格納している、暗号化された BLOB |
 
 <!-- END REF-->
 

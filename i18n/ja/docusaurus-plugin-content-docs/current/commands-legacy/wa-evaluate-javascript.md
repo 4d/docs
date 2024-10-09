@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Evaluate JavaScript.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| jsCode | 文字 | &#x1F852; | JavaScriptコード |
-| type | 倍長整数 | &#x1F852; | 戻り値に指定する型 |
-| 戻り値 | オブジェクト, テキスト, ポインター, 実数, 日付, 時間 | &#x1F850; | 実行結果 |
+| * | 演算子 | &srarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &srarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| jsCode | Text | &srarr; | JavaScriptコード |
+| type | Integer | &srarr; | 戻り値に指定する型 |
+| 戻り値 | Object, Text, Pointer, Real, Date, Time | &larr; | 実行結果 |
 
 <!-- END REF-->
 

@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | フォームが属するテーブル、省略時はデフォルトテーブル |
-| formName | 文字 | &#x1F852; | フォーム名 |
-| width | 倍長整数 | &#x1F858; | フォームの幅 (ピクセル) |
-| height | 倍長整数 | &#x1F858; | フォームの高さ (ピクセル) |
-| numPages | 倍長整数 | &#x1F858; | フォームのページ数 |
-| fixedWidth | ブール | &#x1F858; | True = 幅固定, False = 幅可変 |
-| fixedHeight | ブール | &#x1F858; | True = 高さ固定, False = 高さ可変 |
-| title | テキスト | &#x1F858; | フォームのウィンドウタイトル |
+| aTable | Table | &srarr; | フォームが属するテーブル、省略時はデフォルトテーブル |
+| formName | Text | &srarr; | フォーム名 |
+| width | Integer | &harr; | フォームの幅 (ピクセル) |
+| height | Integer | &harr; | フォームの高さ (ピクセル) |
+| numPages | Integer | &harr; | フォームのページ数 |
+| fixedWidth | Boolean | &harr; | True = 幅固定, False = 幅可変 |
+| fixedHeight | Boolean | &harr; | True = 高さ固定, False = 高さ可変 |
+| title | Text | &harr; | フォームのウィンドウタイトル |
 
 <!-- END REF-->
 

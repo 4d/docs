@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.New list.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | ListRef | &#x1F850; | リスト参照番号 |
+| 戻り値 | Integer | &larr; | リスト参照番号 |
 
 <!-- END REF-->
 

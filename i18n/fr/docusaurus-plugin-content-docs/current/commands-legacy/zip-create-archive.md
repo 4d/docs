@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ZIP Create archive.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fichierOuDossier &#124; structureZip | Objet | &#x1F852; | Objet fichier ou dossier à compresser |
-| fichierDestination | Objet | &#x1F852; | Fichier de destination de l'archive |
-| options | Entier long | &#x1F852; | Si fichierOuDossier est utilisé : ZIP sans dossier parent |
-| Résultat | Objet | &#x1F850; | Objet statut |
+| fichierOuDossier &#124; structureZip | Objet | &srarr; | Objet fichier ou dossier à compresser |
+| fichierDestination | Object | &srarr; | Fichier de destination de l'archive |
+| options | Integer | &srarr; | Si fichierOuDossier est utilisé : ZIP sans dossier parent |
+| Résultat | Object | &larr; | Objet statut |
 
 <!-- END REF-->
 

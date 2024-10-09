@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.HIGHLIGHT RECORDS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla de la cual seleccionar los registros Si se omite, tabla del formulario actual |
-| nomConjunto | Cadena | &#x1F852; | Conjunto de registros a seleccionar o Userset si se omite |
-| * | Operador | &#x1F852; | Desactivar el desplazamiento automático de la lista |
+| tabla | Table | &srarr; | Tabla de la cual seleccionar los registros Si se omite, tabla del formulario actual |
+| nomConjunto | Text | &srarr; | Conjunto de registros a seleccionar o Userset si se omite |
+| * | Operador | &srarr; | Desactivar el desplazamiento automático de la lista |
 
 <!-- END REF-->
 

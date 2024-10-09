@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picRef &#124; picName | 倍長整数, 文字 | &#x1F852; | ピクチャライブラリ画像の参照番号 または ピクチャライブラリ画像の名前 |
-| picture | ピクチャー変数 | &#x1F858; | ピクチャライブラリのピクチャ |
+| picRef &#124; picName | 倍長整数, 文字 | &srarr; | ピクチャライブラリ画像の参照番号 または ピクチャライブラリ画像の名前 |
+| picture | Picture | &harr; | ピクチャライブラリのピクチャ |
 
 <!-- END REF-->
 

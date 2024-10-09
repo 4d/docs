@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE ALIAS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaObjetivo | Cadena | &#x1F852; | Nombre o ruta de acceso al objetivo del alias/atajo |
-| rutaAlias | Cadena | &#x1F852; | Nombre o ruta de acceso completa del alias/del atajo a crear |
+| rutaObjetivo | Text | &srarr; | Nombre o ruta de acceso al objetivo del alias/atajo |
+| rutaAlias | Text | &srarr; | Nombre o ruta de acceso completa del alias/del atajo a crear |
 
 <!-- END REF-->
 

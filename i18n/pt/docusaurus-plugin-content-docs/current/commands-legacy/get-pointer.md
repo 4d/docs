@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get pointer.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeVar | String | &#x1F852; | Nome da variável processo ou interprocesso |
-| Resultado | Ponteiro | &#x1F850; | Ponteiro a variável processo ou interprocesso |
+| nomeVar | Text | &srarr; | Nome da variável processo ou interprocesso |
+| Resultado | Pointer | &larr; | Ponteiro a variável processo ou interprocesso |
 
 <!-- END REF-->
 

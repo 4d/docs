@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG Find element IDs by rect.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificado, objetoImagem é um nome de objeto (string). Se omitido, objetoImagem é uma variável |
-| objetoImagem | Imagem | &#x1F852; | Nome do objeto (se * for especificado) ou Campo ou variável (se * for omitido) |
-| x | Inteiro longo | &#x1F852; | Coordenada horizontal da esquina esquerda superior do retângulo de seleção |
-| y | Inteiro longo | &#x1F852; | Coordenada vertical da esquina superior esquerda do retângulo de seleção |
-| largura | Inteiro longo | &#x1F852; | Largura da seleção retangular |
-| alto | Inteiro longo | &#x1F852; | Altura da seleção retangular |
-| arrIDs | Array texto | &#x1F858; | IDs dos elementos cujas molduras do retângulo intersecciona com o retângulo de seleção |
-| Resultado | Booleano | &#x1F850; | True = ao menos um elemento é encontrado |
+| * | Operador | &srarr; | Se especificado, objetoImagem é um nome de objeto (string). Se omitido, objetoImagem é uma variável |
+| objetoPicture | Picture | &srarr; | Nome do objeto (se * for especificado) ou Campo ou variável (se * for omitido) |
+| x | Integer | &srarr; | Coordenada horizontal da esquina esquerda superior do retângulo de seleção |
+| y | Integer | &srarr; | Coordenada vertical da esquina superior esquerda do retângulo de seleção |
+| largura | Integer | &srarr; | Largura da seleção retangular |
+| alto | Integer | &srarr; | Altura da seleção retangular |
+| arrIDs | Text array | &harr; | IDs dos elementos cujas molduras do retângulo intersecciona com o retângulo de seleção |
+| Resultado | Boolean | &larr; | True = ao menos um elemento é encontrado |
 
 <!-- END REF-->
 

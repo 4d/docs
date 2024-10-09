@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| lista | ListRef | &#x1F852; | Número de referência da lista |
-| aparencia | Inteiro longo | &#x1F858; | Estilo gráfico da lista 1 = Lista hierárquica à Macintosh 2 = Lista hierárquica à Windows |
-| icone | Inteiro longo | &#x1F858; | Referência de recurso Mac OS ‘cicn’ |
-| alturaLinha | Inteiro longo | &#x1F858; | Altura mínima de la linha expressada em pixels |
-| duploClique | Inteiro longo | &#x1F858; | Expandir/Contrair sub-lista com duplo-clique? 0 = Sim, 1= Não |
-| multiSeleçao | Inteiro longo | &#x1F858; | Seleções múltiplas: 0 = Não, 1 = Sim |
-| editavel | Inteiro longo | &#x1F858; | Lista editável pelo usuário: 0 = Não, 1 = Sim |
+| lista | Integer | &srarr; | Número de referência da lista |
+| aparencia | Integer | &harr; | Estilo gráfico da lista 1 = Lista hierárquica à Macintosh 2 = Lista hierárquica à Windows |
+| icone | Integer | &harr; | Referência de recurso Mac OS ‘cicn’ |
+| alturaLinha | Integer | &harr; | Altura mínima de la linha expressada em pixels |
+| duploClique | Integer | &harr; | Expandir/Contrair sub-lista com duplo-clique? 0 = Sim, 1= Não |
+| multiSeleçao | Integer | &harr; | Seleções múltiplas: 0 = Não, 1 = Sim |
+| editavel | Integer | &harr; | Lista editável pelo usuário: 0 = Não, 1 = Sim |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.VOLUME LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| volumes | 文字配列 | &#x1F858; | 現在マウントされているボリュームの名前 |
+| volumes | Text array | &harr; | 現在マウントされているボリュームの名前 |
 
 <!-- END REF-->
 

@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.SET WINDOW RECT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| left | Longint | &#x1F852; | Global left coordinate of window's contents area |
-| top | Longint | &#x1F852; | Global top coordinate of window's contents area |
-| right | Longint | &#x1F852; | Global right coordinate of window's contents area |
-| bottom | Longint | &#x1F852; | Global bottom coordinate of window's contents area |
-| window | WinRef | &#x1F852; | Window reference number, or Frontmost window of current process, if omitted |
-| * | Operator | &#x1F852; | If omitted (default) = change window to foreground<br/>If passed = do not change the level of the window |
+| left | Integer | &srarr; | Global left coordinate of window's contents area |
+| top | Integer | &srarr; | Global top coordinate of window's contents area |
+| right | Integer | &srarr; | Global right coordinate of window's contents area |
+| bottom | Integer | &srarr; | Global bottom coordinate of window's contents area |
+| window | Integer | &srarr; | Window reference number, or Frontmost window of current process, if omitted |
+| * | Operator | &srarr; | If omitted (default) = change window to foreground<br/>If passed = do not change the level of the window |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PUSH RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table de laquelle empiler l'enregistrement courant ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &srarr; | Table de laquelle empiler l'enregistrement courant ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 

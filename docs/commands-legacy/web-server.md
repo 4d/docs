@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Server.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| option | Longint | &#x1F852; | Web server to get (default if omitted = database Web server) |
-| Function result | Object | &#x1F850; | Web server object |
+| option | Integer | &srarr; | Web server to get (default if omitted = database Web server) |
+| Function result | Object | &larr; | Web server object |
 
 <!-- END REF-->
 

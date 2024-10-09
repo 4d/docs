@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX ADD XML ELEMENT VALUE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | refDoc | &#x1F852; | Referência do documento aberto |
-| dados | Texto, Variável | &#x1F852; | Texto ou variáveis a inserir no documento |
-| * | Operador | &#x1F852; | Se passado: criptografa os caracteres especiais; se omitido: não codifica. |
+| documento | Time | &srarr; | Referência do documento aberto |
+| dados | Text, Variable | &srarr; | Texto ou variáveis a inserir no documento |
+| * | Operador | &srarr; | Se passado: criptografa os caracteres especiais; se omitido: não codifica. |
 
 <!-- END REF-->
 

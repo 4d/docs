@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.New log file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Texte | &#x1F850; | Chemin d’accès complet du fichier d’historique refermé |
+| Résultat | Text | &larr; | Chemin d’accès complet du fichier d’historique refermé |
 
 <!-- END REF-->
 

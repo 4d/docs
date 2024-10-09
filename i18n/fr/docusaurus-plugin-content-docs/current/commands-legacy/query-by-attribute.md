@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY BY ATTRIBUTE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table dans laquelle la sélection est créée ou Table par défaut si ce paramètre est omis |
-| opConj | Opérateur | &#x1F852; | Opérateur à utiliser pour combiner plusieurs requêtes (le cas échéant) |
-| champObjet | Champ | &#x1F852; | Champ objet dont les attributs sont à utiliser pour la recherche |
-| cheminAttribut | Chaîne | &#x1F852; | Nom ou chemin d'attribut |
-| opRech | Chaîne, Opérateur | &#x1F852; | Opérateur de recherche (comparateur) |
-| valeur | Texte, Numérique, Date, Heure | &#x1F852; | Valeur à comparer |
-| * | Opérateur | &#x1F852; | Attente d'exécution de la recherche |
+| laTable | Table | &srarr; | Table dans laquelle la sélection est créée ou Table par défaut si ce paramètre est omis |
+| opConj | * | &srarr; | Opérateur à utiliser pour combiner plusieurs requêtes (le cas échéant) |
+| champObjet | Field | &srarr; | Champ objet dont les attributs sont à utiliser pour la recherche |
+| cheminAttribut | Text | &srarr; | Nom ou chemin d'attribut |
+| opRech | Text, * | &srarr; | Opérateur de recherche (comparateur) |
+| valeur | Text, Number, Date, Time | &srarr; | Valeur à comparer |
+| * | Opérateur | &srarr; | Attente d'exécution de la recherche |
 
 <!-- END REF-->
 
@@ -122,8 +122,29 @@ Quelle que soit la manière dont la recherche a été définie :
 
 ##### Valeurs date dans l'objet 
 
+Les dates sont stockées dans les objets en fonction des paramètres de la base ; par défaut, la *timezone* est prise en compte (voir le sélecteur JSON use local time dans la commande [SET DATABASE PARAMETER](set-database-parameter.md)). 
+
 ```undefined
 !1973-05-22! -> "1973-05-21T23:00:00.000Z"
+```
+
+Ce paramétrage est également respecté durant les recherches, donc vous n'avez pas à vous en préoccuper si vous utilisez toujours votre base dans la même zone et si les paramètres sont identiques sur chaque machine qui accède aux données. Dans ce contexte, la recherche suivante retournera bien les enregistrements dont l'attribut Anniversaire est égal à !1973-05-22! (stocké "1973-05-21T23:00:00.00Z") :
+
+```4d
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Info;"Anniversaire";=;!1973-05-22!)
+```
+
+Si vous ne souhaitez pas utiliser le paramétrage GMT, vous pouvez exécuter l'instruction suivante :
+
+```4d
+ SET DATABASE PARAMETER(JSON use local time;0)
+```
+
+Attention, la portée de ce paramètre est limitée au process. Si vous exécutez cette instruction, le 1er Octobre 1965 sera stocké "1965-10-01T00:00:00.000Z" mais vous devrez fixer le même paramètre avant de lancer vos recherches :
+
+```4d
+ SET DATABASE PARAMETER(JSON use local time;0)
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Info;"Anniversaire";=;1976-11-27!)
 ```
 
 ##### Utilisation de la propriété virtuelle length 

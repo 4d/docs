@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Replace string.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| fonte | String | &#x1F852; | Cadeia original |
-| obsoleto | String | &#x1F852; | Caracteres a substituir |
-| novo | String | &#x1F852; | Cadeia que vai substituir a velha (se estiver vazia, as ocorrências são apagadas) |
-| quantasVezes | Inteiro longo | &#x1F852; | Quantas vezes substituir; se omitido, todas as ocorrências serão substituídas |
-| * | Operador | &#x1F852; | Se passado: avaliação baseada em códigos de caracteres |
-| Resultado | String | &#x1F850; | Cadeia resultante |
+| fonte | Text | &srarr; | Cadeia original |
+| obsoleto | Text | &srarr; | Caracteres a substituir |
+| novo | Text | &srarr; | Cadeia que vai substituir a velha (se estiver vazia, as ocorrências são apagadas) |
+| quantasVezes | Integer | &srarr; | Quantas vezes substituir; se omitido, todas as ocorrências serão substituídas |
+| * | Operador | &srarr; | Se passado: avaliação baseada em códigos de caracteres |
+| Resultado | Text | &larr; | Cadeia resultante |
 
 <!-- END REF-->
 

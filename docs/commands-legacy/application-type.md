@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Application type.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#x1F850; | Numeric value denoting the type of the application |
+| Function result | Longint | &larr; | Numeric value denoting the type of the application |
 
 <!-- END REF-->
 

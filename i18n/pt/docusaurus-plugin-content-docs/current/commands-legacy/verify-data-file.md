@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.VERIFY DATA FILE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| endEstrutura | Texto | &#x1F852; | Endereço do arquivo de estrutura a ser verificado |
-| endDados | Texto | &#x1F852; | Endereço do arquivo de dados a ser verificado |
-| objetos | Inteiro longo | &#x1F852; | Objetos a serem verificados |
-| opçoes | Inteiro longo | &#x1F852; | Opções de verificação |
-| metodo | Texto | &#x1F852; | Nome do método 4D de retrochamada |
-| arrayTabelas | Array inteiro longo | &#x1F852; | Números de tabelas a serem verificadas |
-| arrayCampos | Array inteiro 2D, Array inteiro longo 2D, Array real 2D | &#x1F852; | Número de índices a serem verificados |
+| endEstrutura | Text | &srarr; | Endereço do arquivo de estrutura a ser verificado |
+| endDados | Text | &srarr; | Endereço do arquivo de dados a ser verificado |
+| objetos | Integer | &srarr; | Objetos a serem verificados |
+| opçoes | Integer | &srarr; | Opções de verificação |
+| metodo | Text | &srarr; | Nome do método 4D de retrochamada |
+| arrayTabelas | Integer array | &srarr; | Números de tabelas a serem verificadas |
+| arrayCampos | 2D Integer array, 2D Integer array, 2D Real array | &srarr; | Número de índices a serem verificados |
 
 <!-- END REF-->
 

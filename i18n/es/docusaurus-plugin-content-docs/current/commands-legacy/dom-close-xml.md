@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM CLOSE XML.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Cadena | &#x1F852; | Referencia del elemento XML raíz |
+| elementRef | Text | &srarr; | Referencia del elemento XML raíz |
 
 <!-- END REF-->
 

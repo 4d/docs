@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get locked records info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | ロックされたレコードの情報を取得したいテーブル |
-| 戻り値 | オブジェクト | &#x1F850; | ロックされたレコードの詳細(あれば) |
+| aTable | Table | &srarr; | ロックされたレコードの情報を取得したいテーブル |
+| 戻り値 | Object | &larr; | ロックされたレコードの詳細(あれば) |
 
 <!-- END REF-->
 

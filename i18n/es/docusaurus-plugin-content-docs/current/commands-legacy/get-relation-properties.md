@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET RELATION PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ptrCamp&#124;numTabla | Puntero, Entero largo | &#x1F852; | Puntero de campo o número de tabla |
-| numCamp | Entero largo | &#x1F852; | Número de campo si se pasa un número de tabla  como primer parámetro |
-| tablaUno | Entero largo | &#x1F858; | Número de la tabla Uno ó 0 si no se define  ninguna relación desde el campo |
-| campUno | Entero largo | &#x1F858; | Número de campo Uno ó 0 si no se define  ninguna relación desde el campo |
-| discriminante | Entero largo | &#x1F858; | Número de campo discriminante o 0 si ningún campo discriminante |
-| autoUno | Booleano | &#x1F858; | True = Relación uno automática,  False = Relación uno manual |
-| autoMuchos | Booleano | &#x1F858; | True = Relación unos a muchos automática,  False = Relación unos a muchos manual |
+| ptrCamp&#124;numTabla | Puntero, Entero largo | &srarr; | Puntero de campo o número de tabla |
+| numCamp | Integer | &srarr; | Número de campo si se pasa un número de tabla  como primer parámetro |
+| tablaUno | Integer | &harr; | Número de la tabla Uno ó 0 si no se define  ninguna relación desde el campo |
+| campUno | Integer | &harr; | Número de campo Uno ó 0 si no se define  ninguna relación desde el campo |
+| discriminante | Integer | &harr; | Número de campo discriminante o 0 si ningún campo discriminante |
+| autoUno | Boolean | &harr; | True = Relación uno automática,  False = Relación uno manual |
+| autoMuchos | Boolean | &harr; | True = Relación unos a muchos automática,  False = Relación unos a muchos manual |
 
 <!-- END REF-->
 

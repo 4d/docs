@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LOG EVENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| outputType | Longint | &#x1F852; | Message output type |
-| message | String | &#x1F852; | Contents of the message |
-| importance | Longint | &#x1F852; | Message’s importance level |
+| outputType | Integer | &srarr; | Message output type |
+| message | Text | &srarr; | Contents of the message |
+| importance | Integer | &srarr; | Message’s importance level |
 
 <!-- END REF-->
 

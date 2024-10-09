@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PLUGIN LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tabNuméros | Tableau entier long | &#x1F858; | Numéros des plug-ins |
-| tabNoms | Tableau chaîne | &#x1F858; | Noms des plug-ins |
+| tabNuméros | Integer array | &harr; | Numéros des plug-ins |
+| tabNoms | Text array | &harr; | Noms des plug-ins |
 
 <!-- END REF-->
 

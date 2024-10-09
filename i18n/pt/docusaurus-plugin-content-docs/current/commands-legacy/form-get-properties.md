@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela do formulário ou tabela por padrão, se for omitido |
-| nomeForm | String | &#x1F852; | Nome do formulário |
-| largura | Inteiro longo | &#x1F858; | Largura do formulário (em pixels) |
-| altura | Inteiro longo | &#x1F858; | Altura do formulário (em pixels) |
-| numPags | Inteiro longo | &#x1F858; | Número de páginas no formulário |
-| larguraFixa | Booleano | &#x1F858; | Verdadeiro = Largura fixo, Falso = Largura variável |
-| alturaFixa | Booleano | &#x1F858; | Verdadeiro = Altura fixa, Falso = Altura variável |
-| titulo | Texto | &#x1F858; | Título da janela do formulário |
+| tabela | Table | &srarr; | Tabela do formulário ou tabela por padrão, se for omitido |
+| nomeForm | Text | &srarr; | Nome do formulário |
+| largura | Integer | &harr; | Largura do formulário (em pixels) |
+| altura | Integer | &harr; | Altura do formulário (em pixels) |
+| numPags | Integer | &harr; | Número de páginas no formulário |
+| larguraFixa | Boolean | &harr; | Verdadeiro = Largura fixo, Falso = Largura variável |
+| alturaFixa | Boolean | &harr; | Verdadeiro = Altura fixa, Falso = Altura variável |
+| titulo | Text | &harr; | Título da janela do formulário |
 
 <!-- END REF-->
 

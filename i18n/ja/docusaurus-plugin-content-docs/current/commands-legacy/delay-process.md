@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DELAY PROCESS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| process | 倍長整数 | &#x1F852; | プロセス番号 |
-| duration | 実数 | &#x1F852; | 遅延時間 (tick) |
+| process | Integer | &srarr; | プロセス番号 |
+| duration | Real | &srarr; | 遅延時間 (tick) |
 
 <!-- END REF-->
 

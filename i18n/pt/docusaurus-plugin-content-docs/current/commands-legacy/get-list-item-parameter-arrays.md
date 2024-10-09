@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se for especificada, a lista é um nome de objeto (cadeia)<br/>Se for omitida, a lista é um número de referencia de lista |
-| list | ListRef, String | &#x1F852; | Número de referencia de lista ou<br/>Nome de objeto de tipo lista (se passado *) |
-| refElemento | Inteiro longo, Operador | &#x1F852; | Número de referencia do elemento ou<br/>0 para o último elemento agregado à lista ou<br/>* para o elemento atual da lista |
-| arrSeletores | Array texto | &#x1F858; | Array dos nomes dos parâmetros |
-| arrValores | Array texto | &#x1F858; | Array dos valores dos parâmetros |
+| * | Operador | &srarr; | Se for especificada, a lista é um nome de objeto (cadeia)<br/>Se for omitida, a lista é um número de referencia de lista |
+| list | Integer, Text | &srarr; | Número de referencia de lista ou<br/>Nome de objeto de tipo lista (se passado *) |
+| refElemento | Integer, * | &srarr; | Número de referencia do elemento ou<br/>0 para o último elemento agregado à lista ou<br/>* para o elemento atual da lista |
+| arrSeletores | Text array | &harr; | Array dos nomes dos parâmetros |
+| arrValores | Text array | &harr; | Array dos valores dos parâmetros |
 
 <!-- END REF-->
 

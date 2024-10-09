@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB GET VARIABLES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| nameArray | テキスト配列 | &#x1F858; | Webフォームの変数の名前 |
-| valueArray | テキスト配列 | &#x1F858; | Webフォームの変数の値 |
+| nameArray | Text array | &harr; | Webフォームの変数の名前 |
+| valueArray | Text array | &harr; | Webフォームの変数の値 |
 
 <!-- END REF-->
 

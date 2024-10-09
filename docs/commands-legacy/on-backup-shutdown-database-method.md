@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.On Backup Shutdown database method.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| $1 | Longint | &#x1F858; | 0 = backup executed correctly; other value = error, interrupted by user or code returned by On Backup Startup |
+| $1 | Longint | &harr; | 0 = backup executed correctly; other value = error, interrupted by user or code returned by On Backup Startup |
 
 <!-- END REF-->
 

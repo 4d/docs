@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CONVERT FROM TEXT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| 4Dtext | String | &#x1F852; | Text expressed in current character set of 4D |
-| charSet | String, Longint | &#x1F852; | Name or Number of character set |
-| convertedBLOB | BLOB | &#x1F858; | BLOB containing converted text |
+| 4Dtext | Text | &srarr; | Text expressed in current character set of 4D |
+| charSet | Text, Integer | &srarr; | Name or Number of character set |
+| convertedBlob | Blob | &harr; | BLOB containing converted text |
 
 <!-- END REF-->
 

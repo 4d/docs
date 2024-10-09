@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get localized document path.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminRelatif | Texte | &#x1F852; | Chemin d’accès relatif du document dont on veut obtenir la version localisée |
-| Résultat | Texte | &#x1F850; | Chemin d’accès absolu du document localisé |
+| cheminRelatif | Text | &srarr; | Chemin d’accès relatif du document dont on veut obtenir la version localisée |
+| Résultat | Text | &larr; | Chemin d’accès absolu du document localisé |
 
 <!-- END REF-->
 

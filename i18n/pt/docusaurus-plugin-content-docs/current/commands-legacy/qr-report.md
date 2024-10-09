@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.QR REPORT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela a utilizar para o relatório ou tabela por padrão se for omitido |
-| documento | String | &#x1F852; | Documento de Relatório Rápido a carregar |
-| nomeMetodo | String | &#x1F852; | Nome do mètodo a chamar |
-| * | Operador | &#x1F852; | Eliminação das caixas de diálogo de impressão |
+| tabela | Table | &srarr; | Tabela a utilizar para o relatório ou tabela por padrão se for omitido |
+| documento | Text | &srarr; | Documento de Relatório Rápido a carregar |
+| nomeMetodo | Text | &srarr; | Nome do mètodo a chamar |
+| * | Operador | &srarr; | Eliminação das caixas de diálogo de impressão |
 
 <!-- END REF-->
 

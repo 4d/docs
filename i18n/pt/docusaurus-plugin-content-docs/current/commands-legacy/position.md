@@ -5,26 +5,25 @@ slug: /commands/position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Position.Syntax-->**Position** ( *pesquisar* ; *cadeia* {; *inicio* {; *comprEncont*}}{; *} ) -> Resultado  
-        
-            Position ( *pesquisar* ; *string* ; *inicio* ; *comprimentoEncontrado* ; *opções* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Position.Syntax-->**Position** ( *pesquisar* ; *cadeia* {; *inicio* {; *comprEncont*}}{; *} ) -> Resultado  <br/>
+**Position** ( *pesquisar* ; *string* ; *inicio* ; *comprimentoEncontrado* ; *opções* ) -> Resultado<!-- END REF-->
 <!--REF #_command_.Position.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| pesquisar | String | &#x1F852; | Cadeia a procurar |
-| cadeia | String | &#x1F852; | Cadeia na qual procurar |
-| inicio | Inteiro longo | &#x1F852; | Posição na cadeia onde iniciar a pesquisa |
-| comprEncont | Inteiro longo | &#x1F858; | Comprimento da cadeia encontrada |
-| * | Operador | &#x1F852; | Se passado: avaliação baseada em códigos de caracteres |
-| Resultado | Inteiro longo | &#x1F850; | Posição da primeira ocorrência |
+| pesquisar | Text | &srarr; | Cadeia a procurar |
+| cadeia | Text | &srarr; | Cadeia na qual procurar |
+| inicio | Integer | &srarr; | Posição na cadeia onde iniciar a pesquisa |
+| comprEncont | Integer | &harr; | Comprimento da cadeia encontrada |
+| * | Operador | &srarr; | Se passado: avaliação baseada em códigos de caracteres |
+| Resultado | Integer | &larr; | Posição da primeira ocorrência |
 | Position ( pesquisar ; string ; inicio ; comprimentoEncontrado ; opções ) -> Resultado |
 | Parâmetro | Tipo | Descrição |
-| pesquisar | String | &#x1F852; | String a pesquisar |
-| string | String | &#x1F852; | texto no qual procurar |
-| inicio | Inteiro longo | &#x1F852; | Posição no texto onde a pesquisa começa |
-| comprimentoEncontrado | Inteiro longo | &#x1F852; | Comprimento do texto encontrado |
-| opções | Inteiro longo | &#x1F852; | Condições de pesquisa |
-| Resultado | Inteiro longo | &#x1F850; | Posição da primeira ocorrência |
+| pesquisar | Text | &srarr; | String a pesquisar |
+| string | Text | &srarr; | texto no qual procurar |
+| inicio | Integer | &srarr; | Posição no texto onde a pesquisa começa |
+| comprimentoEncontrado | Integer | &srarr; | Comprimento do texto encontrado |
+| opções | Integer | &srarr; | Condições de pesquisa |
+| Resultado | Integer | &larr; | Posição da primeira ocorrência |
 
 <!-- END REF-->
 

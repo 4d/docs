@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET INDEX.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &#x1F852; | Field for which to create or delete the index |
-| index | Boolean, Integer | &#x1F852; | True=Create index, False=Delete index, orCreate an index of the type: -1=Keywords, 0=by default, 1=B-Tree standard, 3=B-Tree cluster |
-| * | &#x1F852; | Asynchronous indexing if * is passed |
+| aField | Field | &srarr; | Field for which to create or delete the index |
+| index | Boolean, Integer | &srarr; | True=Create index, False=Delete index, orCreate an index of the type: -1=Keywords, 0=by default, 1=B-Tree standard, 3=B-Tree cluster |
+| * | Operator |  &srarr; | Asynchronous indexing if * is passed |
 
 <!-- END REF-->
 

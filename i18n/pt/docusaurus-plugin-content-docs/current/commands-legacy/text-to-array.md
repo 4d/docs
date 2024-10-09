@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.TEXT TO ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| varText | Texto | &#x1F852; | Texto original a dividir |
-| arrText | Array texto | &#x1F858; | Array que contém o texto dividido em palavras ou linhas |
-| largo | Inteiro longo | &#x1F852; | Largo máximo da cadeia(em pixeles) |
-| nomFonte | Texto | &#x1F852; | Nome da fonte |
-| tamFonte | Inteiro longo | &#x1F852; | Tamanho da fonte |
-| estiloFonte | Inteiro longo | &#x1F852; | Estilo da fonte |
-| * | Operador | &#x1F852; | Se passado = interpretar o texto como multistyle |
+| varText | Text | &srarr; | Texto original a dividir |
+| arrText | Text array | &harr; | Array que contém o texto dividido em palavras ou linhas |
+| largo | Integer | &srarr; | Largo máximo da cadeia(em pixeles) |
+| nomFonte | Text | &srarr; | Nome da fonte |
+| tamFonte | Integer | &srarr; | Tamanho da fonte |
+| estiloFonte | Integer | &srarr; | Estilo da fonte |
+| * | Operador | &srarr; | Se passado = interpretar o texto como multistyle |
 
 <!-- END REF-->
 

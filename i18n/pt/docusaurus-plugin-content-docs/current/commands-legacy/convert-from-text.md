@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CONVERT FROM TEXT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| texto4D | String | &#x1F852; | Texto expresso no conjunto de caracteres atual de 4D |
-| conjuntoCaracteres | String, Inteiro longo | &#x1F852; | Nome ou número do conjunto de caracteres |
-| blobConvertido | BLOB | &#x1F858; | BLOB contendo o texto convertido |
+| texto4D | Text | &srarr; | Texto expresso no conjunto de caracteres atual de 4D |
+| conjuntoCaracteres | Text, Integer | &srarr; | Nome ou número do conjunto de caracteres |
+| blobConvertido | Blob | &harr; | BLOB contendo o texto convertido |
 
 <!-- END REF-->
 

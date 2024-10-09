@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE INDEX.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table pour laquelle créer un index |
-| tabChamps | Tableau pointeur | &#x1F852; | Pointeur(s) vers le(s) champ(s) à indexer |
-| typeIndex | Entier long | &#x1F852; | Type d’index à créer : -1 = Mots-clés, 0 = par défaut, 1 = B-Tree standard, 3 = BTree cluster |
-| nomIndex | Texte | &#x1F852; | Nom de l'index à créer |
-| * | Opérateur | &#x1F852; | Si passé = indexation asynchrone |
+| laTable | Table | &srarr; | Table pour laquelle créer un index |
+| tabChamps | Pointer array | &srarr; | Pointeur(s) vers le(s) champ(s) à indexer |
+| typeIndex | Integer | &srarr; | Type d’index à créer : -1 = Mots-clés, 0 = par défaut, 1 = B-Tree standard, 3 = BTree cluster |
+| nomIndex | Text | &srarr; | Nom de l'index à créer |
+| * | Opérateur | &srarr; | Si passé = indexation asynchrone |
 
 <!-- END REF-->
 

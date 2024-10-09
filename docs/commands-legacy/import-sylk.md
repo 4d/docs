@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.IMPORT SYLK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table into which to import data, or Default table, if omitted |
-| document | String | &#x1F852; | SYLK document from which to import data |
+| aTable | Table | &srarr; | Table into which to import data, or Default table, if omitted |
+| document | Text | &srarr; | SYLK document from which to import data |
 
 <!-- END REF-->
 

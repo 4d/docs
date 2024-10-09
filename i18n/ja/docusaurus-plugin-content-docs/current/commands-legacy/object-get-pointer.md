@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get pointer.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| selector | 倍長整数 | &#x1F852; | オブジェクトカテゴリ |
-| objectName | テキスト | &#x1F852; | オブジェクト名 |
-| subformName | テキスト | &#x1F852; | サブフォームオブジェクト名 |
-| 戻り値 | ポインター | &#x1F850; | オブジェクト変数へのポインタ |
+| selector | Integer | &srarr; | オブジェクトカテゴリ |
+| objectName | Text | &srarr; | オブジェクト名 |
+| subformName | Text | &srarr; | サブフォームオブジェクト名 |
+| 戻り値 | Pointer | &larr; | オブジェクト変数へのポインタ |
 
 <!-- END REF-->
 

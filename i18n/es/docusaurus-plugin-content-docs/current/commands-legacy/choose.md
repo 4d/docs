@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Choose.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| criterio | Booleano, Entero | &#x1F852; | Valor a probar |
-| valor | Expresión | &#x1F852; | Valores posibles |
-| Resultado | Expresión | &#x1F850; | Valor de criterio |
+| criterio | Boolean, Integer | &srarr; | Valor a probar |
+| valor | Expression | &srarr; | Valores posibles |
+| Resultado | Expression | &larr; | Valor de criterio |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | フィールド | &#x1F852; | 優先度値を調整したいインデックスのフィールド |
-| priority | 倍長整数 | &#x1F852; | フィールドインデックスのキャッシュ優先度値 |
+| aField | Field | &srarr; | 優先度値を調整したいインデックスのフィールド |
+| priority | Integer | &srarr; | フィールドインデックスのキャッシュ優先度値 |
 
 <!-- END REF-->
 

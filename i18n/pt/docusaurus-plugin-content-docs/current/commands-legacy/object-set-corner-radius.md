@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificar, objeto é um nome de objeto (cadeia) Se omitir, objeto é uma variável ou um campo |
-| objeto | Objeto de formulário | &#x1F852; | Nome de objeto (se especificar *) ou Campo ou variável (se omitir *) |
-| radio | Inteiro longo | &#x1F852; | Novo rádio de esquinas arredondadas (em píxels) |
+| * | Operador | &srarr; | Se especificar, objeto é um nome de objeto (cadeia) Se omitir, objeto é uma variável ou um campo |
+| objeto | any | &srarr; | Nome de objeto (se especificar *) ou Campo ou variável (se omitir *) |
+| radio | Integer | &srarr; | Novo rádio de esquinas arredondadas (em píxels) |
 
 <!-- END REF-->
 

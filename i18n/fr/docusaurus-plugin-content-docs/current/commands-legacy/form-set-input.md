@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SET INPUT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table pour laquelle définir le formulaire entrée ou Table par défaut si ce paramètre est omis |
-| formulaire | Chaîne, Objet | &#x1F852; | Nom du formulaire table (chaîne), ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
-| formUtilisateur | Chaîne | &#x1F852; | Nom du formulaire utilisateur à utiliser |
-| * | &#x1F852; | Taille de fenêtre automatique |
+| laTable | Table | &srarr; | Table pour laquelle définir le formulaire entrée ou Table par défaut si ce paramètre est omis |
+| formulaire | Text, Object | &srarr; | Nom du formulaire table (chaîne), ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
+| formUtilisateur | Text | &srarr; | Nom du formulaire utilisateur à utiliser |
+| * | Operator |  &srarr; | Taille de fenêtre automatique |
 
 <!-- END REF-->
 

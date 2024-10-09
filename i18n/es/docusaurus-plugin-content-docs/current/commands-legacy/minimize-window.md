@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.MINIMIZE WINDOW.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | WinRef | &#x1F852; | Número de referencia de la ventana o si se omite todas las ventanas del primer plano del proceso actual (Windows) o ventana del primer plano del proceso actual (Mac OS) |
+| ventana | Integer | &srarr; | Número de referencia de la ventana o si se omite todas las ventanas del primer plano del proceso actual (Windows) o ventana del primer plano del proceso actual (Mac OS) |
 
 <!-- END REF-->
 

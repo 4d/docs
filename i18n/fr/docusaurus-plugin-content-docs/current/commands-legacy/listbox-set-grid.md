@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET GRID.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| horizontal | Booléen | &#x1F852; | Vrai=montrer, Faux=cacher |
-| vertical | Booléen | &#x1F852; | Vrai=montrer, Faux=cacher |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| horizontal | Boolean | &srarr; | Vrai=montrer, Faux=cacher |
+| vertical | Boolean | &srarr; | Vrai=montrer, Faux=cacher |
 
 <!-- END REF-->
 

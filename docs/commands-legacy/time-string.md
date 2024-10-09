@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Time string.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| seconds | Longint, Time | &#x1F852; | Seconds from midnight |
-| Function result | String | &#x1F850; | Time as a string in 24-hour format |
+| seconds | Integer, Time | &srarr; | Seconds from midnight |
+| Function result | String | &larr; | Time as a string in 24-hour format |
 
 <!-- END REF-->
 

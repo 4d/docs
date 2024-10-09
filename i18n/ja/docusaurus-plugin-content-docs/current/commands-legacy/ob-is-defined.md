@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Is defined.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | オブジェクト, Object Field | &#x1F852; | 構造化されたオブジェクト |
-| property | テキスト | &#x1F852; | 指定時にはプロパティをチェック、省略時にはオブジェクトをチェック |
-| 戻り値 | ブール | &#x1F850; | property 省略時:object が定義済みの場合はTrue を、それ以外は False を返す<br/>property 指定時:property が定義済みの場合はTrue を、それ以外は False を返す |
+| object | Object, Object | &srarr; | 構造化されたオブジェクト |
+| property | Text | &srarr; | 指定時にはプロパティをチェック、省略時にはオブジェクトをチェック |
+| 戻り値 | Boolean | &larr; | property 省略時:object が定義済みの場合はTrue を、それ以外は False を返す<br/>property 指定時:property が定義済みの場合はTrue を、それ以外は False を返す |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SPELL CHECK TEXT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| texto | Texto | &#x1F852; | Texto a verificar |
-| posErr | Entero largo | &#x1F858; | Posición del primer carácter de la palabra desconocida |
-| longErr | Entero largo | &#x1F858; | Longitud de la palabra desconocida |
-| posVerif | Entero largo | &#x1F852; | Posición de inicio de la verificación |
-| arrSug | Array texto | &#x1F858; | Lista de sugerencias |
+| texto | Text | &srarr; | Texto a verificar |
+| posErr | Integer | &harr; | Posición del primer carácter de la palabra desconocida |
+| longErr | Integer | &harr; | Longitud de la palabra desconocida |
+| posVerif | Integer | &srarr; | Posición de inicio de la verificación |
+| arrSug | Text array | &harr; | Lista de sugerencias |
 
 <!-- END REF-->
 

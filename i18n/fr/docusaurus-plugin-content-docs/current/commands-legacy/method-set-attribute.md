@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD SET ATTRIBUTE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin | Texte | &#x1F852; | Chemin de méthode projet |
-| typeAttribut | Entier long | &#x1F852; | Type d’attribut |
-| valeurAttribut | Booléen, Texte | &#x1F852; | Vrai = sélectionner l’attribut, Faux = désélectionner l’attribut ou Nom du dossier |
-| * | Opérateur | &#x1F852; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| chemin | Text | &srarr; | Chemin de méthode projet |
+| typeAttribut | Integer | &srarr; | Type d’attribut |
+| valeurAttribut | Boolean, Text | &srarr; | Vrai = sélectionner l’attribut, Faux = désélectionner l’attribut ou Nom du dossier |
+| * | Opérateur | &srarr; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
 

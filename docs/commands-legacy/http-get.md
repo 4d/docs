@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP Get.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| url | Text | &#x1F852; | URL to which to send the request |
-| response | Text, BLOB, Picture, Object | &#x1F858; | Result of request |
-| headerNames | Text array | &#x1F852; | Header names of the request |
-| &#x1F858; | Returned header names |
-| headerValues | Text array | &#x1F852; | Header values of the request |
-| &#x1F858; | Returned header values |
-| * | Operator | &#x1F852; | If passed, connection is maintained (keep-alive)If omitted, connection is closed automatically |
-| Function result | Longint | &#x1F850; | HTTP status code |
+| url | Text | &srarr; | URL to which to send the request |
+| response | Text, Blob, Picture, Object | &harr; | Result of request |
+| headerNames | Text array | &srarr; | Header names of the request |
+| &harr; | Returned header names |
+| headerValues | Text array | &srarr; | Header values of the request |
+| &harr; | Returned header values |
+| * | Operator | &srarr; | If passed, connection is maintained (keep-alive)If omitted, connection is closed automatically |
+| Function result | Longint | &larr; | HTTP status code |
 
 <!-- END REF-->
 

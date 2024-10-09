@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.ST INSERT EXPRESSION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | Objet | &#x1F852; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| expression | Texte | &#x1F852; | Expression et (optionnel) format à insérer |
-| débutSél | Entier long | &#x1F852; | Début de la sélection |
-| finSél | Entier long | &#x1F852; | Fin de la sélection |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | Object | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| expression | Text | &srarr; | Expression et (optionnel) format à insérer |
+| débutSél | Integer | &srarr; | Début de la sélection |
+| finSél | Integer | &srarr; | Fin de la sélection |
 
 <!-- END REF-->
 

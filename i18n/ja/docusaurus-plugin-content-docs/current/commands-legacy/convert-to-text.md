@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Convert to text.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| BLOB | BLOB | &#x1F852; | 特定の文字セットで記述されている テキストを含むBLOB |
-| charSet | 文字, 倍長整数 | &#x1F852; | BLOB文字セットの番号または名前 |
-| 戻り値 | テキスト | &#x1F850; | 4Dの文字セットで表現されたBLOBの内容 |
+| Blob | Blob | &srarr; | 特定の文字セットで記述されている テキストを含むBLOB |
+| charSet | Text, Integer | &srarr; | BLOB文字セットの番号または名前 |
+| 戻り値 | Text | &larr; | 4Dの文字セットで表現されたBLOBの内容 |
 
 <!-- END REF-->
 

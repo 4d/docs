@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WA GET LAST URL ERROR.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| url | Chaîne | &#x1F858; | URL à l’origine de l’erreur |
-| description | Chaîne | &#x1F858; | Description de l’erreur (Mac OS) |
-| codeErreur | Entier long | &#x1F858; | Code d'erreur |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| url | Text | &harr; | URL à l’origine de l’erreur |
+| description | Text | &harr; | Description de l’erreur (Mac OS) |
+| codeErreur | Integer | &harr; | Code d'erreur |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR SEMAPHORE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| semaphore | 文字 | &#x1F852; | クリアするセマフォ |
+| semaphore | Text | &srarr; | クリアするセマフォ |
 
 <!-- END REF-->
 

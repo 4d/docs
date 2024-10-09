@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DIFFERENCE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| conjunto1 | String | &#x1F852; | Conjunto |
-| conjunto2 | String | &#x1F852; | Conjunto que será subtraído |
-| conjuntoResultado | String | &#x1F852; | Conjunto Resultado |
+| conjunto1 | Text | &srarr; | Conjunto |
+| conjunto2 | Text | &srarr; | Conjunto que será subtraído |
+| conjuntoResultado | Text | &srarr; | Conjunto Resultado |
 
 <!-- END REF-->
 

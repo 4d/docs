@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GOTO OBJECT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified = object is an object name (string) If omitted = object is a field or a variable |
-| object | Field, Variable | &#x1F852; | Object name (if * specified) or Field or Variable (if * omitted) to go to |
+| * | Operator | &srarr; | If specified = object is an object name (string) If omitted = object is a field or a variable |
+| object | Field, Variable | &srarr; | Object name (if * specified) or Field or Variable (if * omitted) to go to |
 
 <!-- END REF-->
 

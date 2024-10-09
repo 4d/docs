@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT TEXT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela da qual vai exportar dados, ou tabela Padrão, se omitida |
-| documento | String | &#x1F852; | Documento texto que recebe os dados |
+| tabela | Table | &srarr; | Tabela da qual vai exportar dados, ou tabela Padrão, se omitida |
+| documento | Text | &srarr; | Documento texto que recebe os dados |
 
 <!-- END REF-->
 

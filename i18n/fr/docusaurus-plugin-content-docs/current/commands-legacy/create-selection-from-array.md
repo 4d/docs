@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table de la sélection |
-| tabEnrg | Entier long, Tableau booléen | &#x1F852; | Tableau de n° d’enregistrements, ou Tableau de booléens (Vrai = l’enregistrement est dans la sélection, Faux = il n’est pas dans la sélection) |
-| nom | Chaîne | &#x1F852; | Nom de la sélection temporaire à créer, ou Appliquer la commande à la sélection courante si ce paramètre est omis ou vide |
+| laTable | Table | &srarr; | Table de la sélection |
+| tabEnrg | Integer, Boolean array | &srarr; | Tableau de n° d’enregistrements, ou Tableau de booléens (Vrai = l’enregistrement est dans la sélection, Faux = il n’est pas dans la sélection) |
+| nom | Text | &srarr; | Nom de la sélection temporaire à créer, ou Appliquer la commande à la sélection courante si ce paramètre est omis ou vide |
 
 <!-- END REF-->
 

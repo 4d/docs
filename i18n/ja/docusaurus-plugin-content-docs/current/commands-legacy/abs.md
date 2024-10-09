@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Abs.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| number | 実数 | &#x1F852; | 絶対値を求める数値 |
-| 戻り値 | 実数 | &#x1F850; | 絶対値 |
+| number | Real | &srarr; | 絶対値を求める数値 |
+| 戻り値 | Real | &larr; | 絶対値 |
 
 <!-- END REF-->
 

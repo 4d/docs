@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.RESOURCE LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resType | 文字 | &#x1F852; | 4文字のリソースタイプ |
-| resIDs | 倍長整数配列 | &#x1F858; | リソースID番号 |
-| resNames | 文字配列 | &#x1F858; | リソース名 |
-| resFile | DocRef | &#x1F852; | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
+| resType | Text | &srarr; | 4文字のリソースタイプ |
+| resIDs | Integer array | &harr; | リソースID番号 |
+| resNames | Text array | &harr; | リソース名 |
+| resFile | Time | &srarr; | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
 
 <!-- END REF-->
 

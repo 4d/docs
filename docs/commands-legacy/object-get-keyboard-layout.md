@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get keyboard layout.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)If omitted, object is a variable or field |
-| object | Form object | &#x1F852; | Object Name (if * is specified) or Variable or field (if * is omitted) |
-| Function result | String | &#x1F850; | Language code of layout, "" = no layout |
+| * | Operator | &srarr; | If specified, object is an object name (string)If omitted, object is a variable or field |
+| object | any | &srarr; | Object Name (if * is specified) or Variable or field (if * is omitted) |
+| Function result | String | &larr; | Language code of layout, "" = no layout |
 
 <!-- END REF-->
 

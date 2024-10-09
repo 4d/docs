@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.TRIGGER PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| triggerLevel | Longint | &#x1F852; | Trigger execution cycle level |
-| dbEvent | Longint | &#x1F858; | Database event |
-| tableNum | Longint | &#x1F858; | Involved table number |
-| recordNum | Longint | &#x1F858; | Involved record number |
+| triggerLevel | Integer | &srarr; | Trigger execution cycle level |
+| dbEvent | Integer | &harr; | Database event |
+| tableNum | Integer | &harr; | Involved table number |
+| recordNum | Integer | &harr; | Involved record number |
 
 <!-- END REF-->
 

@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET INFO COLUMN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Entier long | &#x1F852; | Référence de la zone |
-| numColonne | Entier long | &#x1F852; | Numéro de colonne |
-| titre | Texte | &#x1F858; | Titre de la colonne |
-| objet | Texte | &#x1F858; | Nom du champ ou contenu de la formule affecté(e) à la colonne |
-| cachée | Entier long | &#x1F858; | 0 = visible, 1 = invisible |
-| taille | Entier long | &#x1F858; | Largeur de la colonne |
-| valeursRépétées | Entier long | &#x1F858; | 0 = non répétées, 1 = répétées |
-| format | Texte | &#x1F858; | Format d'affichage des données |
-| varRésultat | Texte | &#x1F858; | Nom de la variable de formule |
+| zone | Integer | &srarr; | Référence de la zone |
+| numColonne | Integer | &srarr; | Numéro de colonne |
+| titre | Text | &harr; | Titre de la colonne |
+| objet | Text | &harr; | Nom du champ ou contenu de la formule affecté(e) à la colonne |
+| cachée | Integer | &harr; | 0 = visible, 1 = invisible |
+| taille | Integer | &harr; | Largeur de la colonne |
+| valeursRépétées | Integer | &harr; | 0 = non répétées, 1 = répétées |
+| format | Text | &harr; | Format d'affichage des données |
+| varRésultat | Text | &harr; | Nom de la variable de formule |
 
 <!-- END REF-->
 

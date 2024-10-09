@@ -9,16 +9,28 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON TO SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| aTabela | Tabela | &#x1F852; | Ponteiro a tabela 4D |
-| objetoJson | Texto | &#x1F852; | Cadeia em JSON |
+| aTable | Table | &srarr; | Ponteiro a tabela 4D |
+| objetoJson | Text | &srarr; | Cadeia em JSON |
 
 <!-- END REF-->
 
 #### Descrição 
 
+<!--REF #_command_.JSON TO SELECTION.Summary-->O comando **JSON TO SELECTION** copia o conteúdo de um objeto JSON na seleção de registros de *aTabela* .<!-- END REF-->  
+  
+O parâmetro jsonArray é um texto representando um array de objetos formatado em JSON e contendo um ou mais elementos. A sintaxe esperada é do tipo:
+
 ```undefined
 "[{"attribute1":"value1","attribute2":"value2",...},...,{"attribute1":"valueN","attribute2":"valueN",...}]"
 ```
+
+Se existir uma seleção para *aTabela* no momento da chamada, os elementos do objeto JSON se copiam nos registros em função da ordem do objeto e da ordem dos registros. Se o número de elementos definidos no objeto JSON é maior que o número de registros da seleção atual, são criados novos registros. Os registros, sejam novos ou existentes, são salvos automaticamente.
+
+**Nota:** Este comando suporta campos tipo Object: dados JSON são convertidos automaticamente.  
+  
+**Advertência**: Como **JSON TO SELECTION** substitui a informação presente nos registros existentes, este comando se deve utilizar com prudência.  
+  
+Se um registro está bloqueado por outro proceso durante a execução do comando, não se modifica. Todos os registros bloqueados se localizam no *Conjunto de Sistema LockedSet*. Depois da execução de **JSON TO SELECTION**, pode comprovar se o conjunto *LockedSet* contém os registros que estavam bloqueados.
 
 #### Exemplo 
 

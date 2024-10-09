@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET TEXT PROPERTY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | 倍長整数 | &#x1F852; | エリア参照 |
-| colNum | 倍長整数 | &#x1F852; | カラム番号 |
-| rowNum | 倍長整数 | &#x1F852; | 行番号 |
-| property | 倍長整数 | &#x1F852; | プロパティ番号 |
-| value | 倍長整数, 文字 | &#x1F852; | 選択したプロパティの値 |
+| area | Integer | &srarr; | エリア参照 |
+| colNum | Integer | &srarr; | カラム番号 |
+| rowNum | Integer | &srarr; | 行番号 |
+| property | Integer | &srarr; | プロパティ番号 |
+| value | Integer, Text | &srarr; | 選択したプロパティの値 |
 
 <!-- END REF-->
 

@@ -854,27 +854,27 @@ shared Function Bar($value : Integer)
 
 :::
 
-The following table indicates the scope of a singleton instance depending on where it was created:
+次の表は、作成された場所に応じたシングルトンインスタンスのスコープを示しています:
 
-| シングルトンが作成された場所     | Scope of process singleton                                                 | Scope of shared singleton | Scope of session singleton                                            |
-| ------------------ | -------------------------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------- |
-| **4D single-user** | プロセス                                                                       | アプリケーション                  | Application or Web/REST session                                       |
-| **4D Server**      | プロセス                                                                       | 4D Server のマシン            | Client/server session or Web/REST session or Stored procedure session |
-| **4D remote mode** | プロセス (_注意_: シングルトンは "双子" プロセス間で同期されません) | 4Dリモートのマシン                | 4D remote machine or Web/REST session                                 |
+| シングルトンが作成された場所 | プロセスシングルトンのスコープ                                                            | 共有シングルトンのスコープ  | セッションシングルトンのスコープ                                   |
+| -------------- | -------------------------------------------------------------------------- | -------------- | -------------------------------------------------- |
+| **4Dシングルユーザー** | プロセス                                                                       | アプリケーション       | アプリケーションまたは Web/RESTセッション                          |
+| **4D Server**  | プロセス                                                                       | 4D Server のマシン | クライアント/サーバーセッション、Web/RESTセッション、またはストアドプロシージャーセッション |
+| **4Dリモートモード**  | プロセス (_注意_: シングルトンは "双子" プロセス間で同期されません) | 4Dリモートのマシン     | 4Dリモートマシンまたは Web/RESTセッション                         |
 
 インスタンス化されると、シングルトンクラス (およびそのシングルトン) は、マシン上で実行中のアプリケーション内に参照が存在する限り存在し続けます。
 
-### Creating and using singletons
+### シングルトンの作成と利用
 
-You declare singleton classes by adding appropriate keyword(s) before the [`Class constructor`](#class-constructor):
+シングルトンクラスを宣言するには、[`Class constructor`](#class-constructor) の前に適切なキーワードを追加します:
 
-- To declare a (process) singleton class, write `singleton Class Constructor()`.
-- To declare a shared singleton class, write `shared singleton Class constructor()`.
-- To declare a session singleton class, write `session singleton Class constructor()`.
+- (プロセス) シングルトンクラスを宣言するには、`singleton Class constructor()` と書きます。
+- 共有シングルトンクラスを宣言するには、`shared singleton Class constructor()` と書きます。
+- セッションシングルトンクラスを宣言するには、`session singleton Class constructor()` と書きます。
 
 :::note
 
-Session singletons are automatically shared singletons (there's no need to use the `shared` keyword in the class constructor).
+セッションシングルトンは自動的に共有されます (クラスのコンストラクターで `shared` キーワードを使う必要はありません)。
 
 :::
 
@@ -884,11 +884,11 @@ Session singletons are automatically shared singletons (there's no need to use t
 
 クラスがシングルトンクラスかどうかは、Classオブジェクトの .[`.isSingleton`](../API/ClassClass.md#issingleton)プロパティで確認できます。
 
-The [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) property of Class objects allows to know if the class is a session singleton.
+クラスがセッションシングルトンかどうかは、Classオブジェクトの .[`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) プロパティで確認できます。
 
 ### 例題
 
-#### Process singleton
+#### プロセスシングルトン
 
 ```4d
 // クラス: ProcessTag
@@ -917,7 +917,7 @@ var $myOtherSingleton := cs.ProcessTag.me
     // $myOtherSingleton.tag = 14856
 ```
 
-#### Shared singleton
+#### 共有シングルトン
 
 ```4d
 // クラス: VehicleFactory
@@ -952,12 +952,12 @@ $vehicle:=cs.VehicleFactory.me.buildVehicle("トラック")
 
 _buildVehicle()_ 関数は (`This.vehicleBuilt` をインクリメントして) **cs.VehicleFactory** シングルトンを変更するので、`shared` キーワードを使う必要があります。
 
-#### Session singleton
+#### セッションシングルトン
 
-In an inventory application, you want to implement an item inventory using session singletons.
+在庫管理アプリケーションで、セッションシングルトンを使った在庫管理機能を実装します。
 
 ```4d
-//class ItemInventory
+// クラス: ItemInventory
 
 property itemList : Collection:=[]
 
@@ -967,15 +967,15 @@ shared function addItem($item:object)
     This.itemList.push($item)
 ```
 
-By defining the ItemInventory class as a session singleton, you make sure that every session and therefore every user has their own inventory. Accessing the user's inventory is as simple as:
+ItemInventorクラスをセッションシングルトンとして定義することで、各セッションと各ユーザーが独自の在庫を持つことができます。 ユーザー在庫へのアクセスは以下のように簡単です:
 
 ```4d
-//in a user session
+// ユーザーセッションにおいて
 $myList := cs.ItemInventory.me.itemList
-//current user's item list
+// カレントユーザーの在庫リスト
 
 ```
 
 #### 参照
 
-[Singletons in 4D](https://blog.4d.com/singletons-in-4d) (blog post) <br/> [Session Singletons](https://blog.4d.com/introducing-session-singletons) (blog post).
+[4D のシングルトン](https://blog.4d.com/ja/singletons-in-4d/) (ブログ記事) <br/> [セッションシングルトン](https://blog.4d.com/ja/introducing-session-singletons) (ブログ記事)

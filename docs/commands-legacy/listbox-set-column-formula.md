@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET COLUMN FORMULA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object Name (if * is specified) or  Variable (if * is omitted) |
-| formula | String | &#x1F852; | 4D formula associated with column |
-| dataType | Longint | &#x1F852; | Type of formula result |
+| * | Operator | &srarr; | If specified, object is an object name (string)If omitted, object is a variable |
+| object | any | &srarr; | Object Name (if * is specified) or  Variable (if * is omitted) |
+| formula | Text | &srarr; | 4D formula associated with column |
+| dataType | Integer | &srarr; | Type of formula result |
 
 <!-- END REF-->
 

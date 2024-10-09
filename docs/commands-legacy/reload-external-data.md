@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RELOAD EXTERNAL DATA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Text, BLOB, Picture, Object | &#x1F852; | Field for which to set the storage location |
+| aField | Text, Blob, Picture, Object | &srarr; | Field for which to set the storage location |
 
 <!-- END REF-->
 

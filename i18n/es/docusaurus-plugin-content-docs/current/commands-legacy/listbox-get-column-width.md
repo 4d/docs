@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get column width.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| anchoMin | Entero largo | &#x1F858; | Ancho mínimo de la columna (en píxeles) |
-| anchoMax | Entero largo | &#x1F858; | Ancho máximo de la columna (en píxeles) |
-| Resultado | Entero largo | &#x1F850; | Ancho de la columna (en píxeles) |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &srarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| anchoMin | Integer | &harr; | Ancho mínimo de la columna (en píxeles) |
+| anchoMax | Integer | &harr; | Ancho máximo de la columna (en píxeles) |
+| Resultado | Integer | &larr; | Ancho de la columna (en píxeles) |
 
 <!-- END REF-->
 

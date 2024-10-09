@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.COMPRESS BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| BLOB | BLOB | &#x1F852; | 圧縮するBLOB |
-| compression | 倍長整数 | &#x1F852; | 省略されない場合: 1, 圧縮率優先で圧縮 2, 速度優先で圧縮 |
+| Blob | Blob | &srarr; | 圧縮するBLOB |
+| compression | Integer | &srarr; | 省略されない場合: 1, 圧縮率優先で圧縮 2, 速度優先で圧縮 |
 
 <!-- END REF-->
 

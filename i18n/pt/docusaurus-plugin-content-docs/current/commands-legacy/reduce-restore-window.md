@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REDUCE RESTORE WINDOW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janela | refJan | &#x1F852; | Número de referência de janela |
+| janela | Integer | &srarr; | Número de referência de janela |
 
 <!-- END REF-->
 

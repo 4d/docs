@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| numTabela | Inteiro longo | &#x1F858; | número da tabela selecionada |
-| nome | String | &#x1F858; | Nome da seleção ou ** para seleção atual |
-| highlightName | String | &#x1F858; | Nome do set destacado. |
+| * | Operador | &srarr; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
+| objeto | any | &srarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| numTabela | Integer | &harr; | número da tabela selecionada |
+| nome | Text | &harr; | Nome da seleção ou ** para seleção atual |
+| highlightName | Text | &harr; | Nome do set destacado. |
 
 <!-- END REF-->
 

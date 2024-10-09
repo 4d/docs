@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SEND FILE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| htmlFile | 文字 | &#x1F852; | HTMLファイルへのHTMLパス名 または、WEB SEND FILEを終了させる場合空の文字列 |
+| htmlFile | Text | &srarr; | HTMLファイルへのHTMLパス名 または、WEB SEND FILEを終了させる場合空の文字列 |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * spécifié) ou Variable (si * omis) |
-| sélecteur | Entier long | &#x1F852; | Information à obtenir |
-| info | Entier long | &#x1F858; | Valeur courante |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d'objet (si * spécifié) ou Variable (si * omis) |
+| sélecteur | Integer | &srarr; | Information à obtenir |
+| info | Integer | &harr; | Valeur courante |
 
 <!-- END REF-->
 

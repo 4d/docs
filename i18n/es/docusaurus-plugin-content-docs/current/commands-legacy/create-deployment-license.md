@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Create deployment license.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| mergedApp | 4D.Folder | &#x1F852; | Carpeta que contiene la aplicación fusionada |
-| buildLicense | Objeto archivo | &#x1F852; | Licencia necesaria para generar la licencia anidada |
-| oemLicense | Objeto archivo | &#x1F852; | Licencia 4D OEM XML Key si se trata de una licencia servidor |
-| Resultado | Objeto | &#x1F850; | Estado |
+| mergedApp | 4D.Folder | &srarr; | Carpeta que contiene la aplicación fusionada |
+| buildLicense | 4D.File | &srarr; | Licencia necesaria para generar la licencia anidada |
+| oemLicense | 4D.File | &srarr; | Licencia 4D OEM XML Key si se trata de una licencia servidor |
+| Resultado | Object | &larr; | Estado |
 
 <!-- END REF-->
 

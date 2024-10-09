@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Get current URL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| Résultat | Chaîne | &#x1F850; | URL actuellement chargé dans la zone Web |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| Résultat | Text | &larr; | URL actuellement chargé dans la zone Web |
 
 <!-- END REF-->
 

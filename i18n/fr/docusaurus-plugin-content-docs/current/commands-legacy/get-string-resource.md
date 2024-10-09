@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get string resource.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resNum | Entier long | &#x1F852; | Numéro de ressource |
-| resFichier | RefDoc | &#x1F852; | Numéro de référence de fichier de ressources ou tous les fichiers de ressources ouverts si ce paramètre est omis |
-| Résultat | Chaîne | &#x1F850; | Contenu de la ressource STR |
+| resNum | Integer | &srarr; | Numéro de ressource |
+| resFichier | Time | &srarr; | Numéro de référence de fichier de ressources ou tous les fichiers de ressources ouverts si ce paramètre est omis |
+| Résultat | Text | &larr; | Contenu de la ressource STR |
 
 <!-- END REF-->
 

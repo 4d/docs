@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG GET ATTRIBUTE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificado, objetoImagem é um nome de objeto (string). Se omitido, objetoImagem é uma variável |
-| objetoImagem | Imagem | &#x1F852; | Nome de objeto (se * for especificado) ou variável ou campo (se * for omitido) |
-| id_Elemento | Texto | &#x1F852; | ID do elemento cujo valor de atributo você deseja conseguir |
-| nomeAtrib | String | &#x1F852; | Atributo cujo valor você deseja obter |
-| valorAtributo | String, Inteiro longo | &#x1F858; | Valor atual do atributo |
+| * | Operador | &srarr; | Se especificado, objetoImagem é um nome de objeto (string). Se omitido, objetoImagem é uma variável |
+| objetoPicture | Picture | &srarr; | Nome de objeto (se * for especificado) ou variável ou campo (se * for omitido) |
+| id_Elemento | Text | &srarr; | ID do elemento cujo valor de atributo você deseja conseguir |
+| nomeAtrib | Text | &srarr; | Atributo cujo valor você deseja obter |
+| valorAtributo | Text, Integer | &harr; | Valor atual do atributo |
 
 <!-- END REF-->
 

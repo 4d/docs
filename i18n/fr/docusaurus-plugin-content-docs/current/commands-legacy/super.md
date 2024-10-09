@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Super.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| param | Varié | &#x1F852; | Paramètre(s) à passer au constructeur parent |
-| Résultat | Objet | &#x1F850; | Parent de l'objet |
+| param | any | &srarr; | Paramètre(s) à passer au constructeur parent |
+| Résultat | Object | &larr; | Parent de l'objet |
 
 <!-- END REF-->
 

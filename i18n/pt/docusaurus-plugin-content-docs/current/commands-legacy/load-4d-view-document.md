@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Load 4D View document.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| 4DViewDocumento | BLOB | &#x1F852; | Documento 4D View |
-| Resultado | Objeto | &#x1F850; | Representação de objeto no documento 4D View |
+| 4DViewDocumento | Blob | &srarr; | Documento 4D View |
+| Resultado | Object | &larr; | Representação de objeto no documento 4D View |
 
 <!-- END REF-->
 
@@ -33,6 +33,22 @@ Utilizando este comando, pode recuperar toda informação armazenada em seus doc
 **Nota**: se necessitar converter documentos de 4D View a 4D View Pro, se recomenda utilizar o comando dedicado  que realiza uma conversão direta e transparente.
 
 #### Exemplo 
+
+Se quiser carregar e converter um documento 4D View armazenado no disco:
+
+```4d
+ var $blob : Blob
+ var $object : Object
+ DOCUMENT TO BLOB("document.4PV";$blob)
+ $object:=Load 4D View document($blob)
+ ALERT("Document title is "+$object.title)
+```
+
+Por exemplo, se converter o documento abaixo:
+
+![](../assets/en/commands/pict3631552.en.png)
+
+Obterá o resultado abaixo (objeto stringified):
 
 ```undefined
 {
@@ -176,3 +192,5 @@ Utilizando este comando, pode recuperar toda informação armazenada em seus doc
     ]
 }
 ```
+
+**Nota:** para mais informação sobre o formato do [objeto](# "Estruturas de dados como objetos 4D nativos"), devolvido, contacte os serviços técnicos de 4D.

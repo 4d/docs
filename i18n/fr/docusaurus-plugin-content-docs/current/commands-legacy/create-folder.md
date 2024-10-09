@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE FOLDER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminAccès | Chaîne | &#x1F852; | Chemin d'accès au nouveau dossier à créer |
-| * | Opérateur | &#x1F852; | Créer la hiérarchie du dossier |
+| cheminAccès | Text | &srarr; | Chemin d'accès au nouveau dossier à créer |
+| * | Opérateur | &srarr; | Créer la hiérarchie du dossier |
 
 <!-- END REF-->
 

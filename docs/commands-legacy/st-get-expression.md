@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.ST Get expression.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
-| startSel | Longint | &#x1F852; | Start of selection |
-| endSel | Longint | &#x1F852; | End of selection |
-| Function result | Text | &#x1F850; | Expression label |
+| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | any | &srarr; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| startSel | Integer | &srarr; | Start of selection |
+| endSel | Integer | &srarr; | End of selection |
+| Function result | Text | &larr; | Expression label |
 
 <!-- END REF-->
 

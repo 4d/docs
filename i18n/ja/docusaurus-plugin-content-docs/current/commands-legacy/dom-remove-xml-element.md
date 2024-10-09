@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM REMOVE XML ELEMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | 文字 | &#x1F852; | XML要素参照 |
+| elementRef | Text | &srarr; | XML要素参照 |
 
 <!-- END REF-->
 

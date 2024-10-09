@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| privKey | BLOB | &#x1F858; | 秘密鍵を受け取るBLOB |
-| pubKey | BLOB | &#x1F858; | 公開鍵を受け取るBLOB |
-| length | 倍長整数 | &#x1F852; | キー長 (ビット) [512...2048] デフォルト値 = 512 |
+| privKey | Blob | &harr; | 秘密鍵を受け取るBLOB |
+| pubKey | Blob | &harr; | 公開鍵を受け取るBLOB |
+| length | Integer | &srarr; | キー長 (ビット) [512...2048] デフォルト値 = 512 |
 
 <!-- END REF-->
 

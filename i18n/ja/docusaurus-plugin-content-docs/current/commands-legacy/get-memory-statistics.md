@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MEMORY STATISTICS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| infoType | 倍長整数 | &#x1F852; | 取得する情報のセレクター |
-| arrNames | テキスト配列 | &#x1F858; | 情報のタイトル |
-| arrValues | 実数配列 | &#x1F858; | 情報の値 |
-| arrCount | 実数配列 | &#x1F858; | 関連するオブジェクトの数 (利用可能な場合) |
+| infoType | Integer | &srarr; | 取得する情報のセレクター |
+| arrNames | Text array | &harr; | 情報のタイトル |
+| arrValues | Real array | &harr; | 情報の値 |
+| arrCount | Real array | &harr; | 関連するオブジェクトの数 (利用可能な場合) |
 
 <!-- END REF-->
 

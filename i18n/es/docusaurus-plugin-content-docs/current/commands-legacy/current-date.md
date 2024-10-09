@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Current date.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Devuelve la fecha actual del servidor |
-| Resultado | Fecha | &#x1F850; | Fecha actual |
+| * | Operador | &srarr; | Devuelve la fecha actual del servidor |
+| Resultado | Date | &larr; | Fecha actual |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Trigger event.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Entier long | &#x1F850; | 0=Hors de tout événement de trigger, 1=Sauvegarde d'un nouvel enregistrement, 2=Sauvegarde d'un enregistrement existant, 3=Suppression d'un enregistrement |
+| Résultat | Integer | &larr; | 0=Hors de tout événement de trigger, 1=Sauvegarde d'un nouvel enregistrement, 2=Sauvegarde d'un enregistrement existant, 3=Suppression d'un enregistrement |
 
 <!-- END REF-->
 

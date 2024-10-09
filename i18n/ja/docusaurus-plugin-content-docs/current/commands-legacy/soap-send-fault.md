@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SOAP SEND FAULT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| faultType | 倍長整数 | &#x1F852; | 1 = クライアント側のエラー, 2 = サーバー側のエラー |
-| description | 文字 | &#x1F852; | SOAPクライアントに送信する、エラーの説明 |
+| faultType | Integer | &srarr; | 1 = クライアント側のエラー, 2 = サーバー側のエラー |
+| description | Text | &srarr; | SOAPクライアントに送信する、エラーの説明 |
 
 <!-- END REF-->
 

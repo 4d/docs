@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET INDEX.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| unCampo | Campo | &#x1F852; | Campo del cual crear o borrar el índice |
-| index | Booleano, Entero | &#x1F852; | • True=Crear el índice, False=Borrar el índice, o • Crear un índice de tipo: -1=palabras claves, 0=por defecto, 1=B-Tree estándar, 3=B-Tree cluster |
-| * | &#x1F852; | Si se pasa * indexación asincrónica |
+| unField | Field | &srarr; | Campo del cual crear o borrar el índice |
+| index | Boolean, Integer | &srarr; | • True=Crear el índice, False=Borrar el índice, o • Crear un índice de tipo: -1=palabras claves, 0=por defecto, 1=B-Tree estándar, 3=B-Tree cluster |
+| * | Operator |  &srarr; | Si se pasa * indexación asincrónica |
 
 <!-- END REF-->
 

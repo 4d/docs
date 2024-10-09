@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.In header.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | ブール | &#x1F850; | 実行サイクルがヘッダー内にある場合にはTrueを返す |
+| 戻り値 | Boolean | &larr; | 実行サイクルがヘッダー内にある場合にはTrueを返す |
 
 <!-- END REF-->
 

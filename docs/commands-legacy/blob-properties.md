@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | BLOB | &#x1F852; | BLOB for which to get information |
-| compressed | Longint | &#x1F858; | 0 = BLOB is not compressed, 1 = Compact compression, 2 = Fast compression, -1 = GZIP Best compression, -2 = GZIP Fast compression |
-| expandedSize | Longint | &#x1F858; | Size of BLOB (in bytes) when not compressed |
-| currentSize | Longint | &#x1F858; | Current size of BLOB (in bytes) |
+| blob | Blob | &srarr; | BLOB for which to get information |
+| compressed | Integer | &harr; | 0 = BLOB is not compressed, 1 = Compact compression, 2 = Fast compression, -1 = GZIP Best compression, -2 = GZIP Fast compression |
+| expandedSize | Integer | &harr; | Size of BLOB (in bytes) when not compressed |
+| currentSize | Integer | &harr; | Current size of BLOB (in bytes) |
 
 <!-- END REF-->
 

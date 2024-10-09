@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Select RGB Color.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| defaultColor | 倍長整数 | &#x1F852; | 事前に選択されたRGBカラー |
-| message | 文字 | &#x1F852; | 選択ウィンドウのタイトル |
-| 戻り値 | 倍長整数 | &#x1F850; | RGBカラー |
+| defaultColor | Integer | &srarr; | 事前に選択されたRGBカラー |
+| message | Text | &srarr; | 選択ウィンドウのタイトル |
+| 戻り値 | Integer | &larr; | RGBカラー |
 
 <!-- END REF-->
 

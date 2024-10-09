@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.VOLUME LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| volumes | String array | &#x1F858; | Names of the volumes currently mounted |
+| volumes | Text array | &harr; | Names of the volumes currently mounted |
 
 <!-- END REF-->
 

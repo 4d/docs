@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.POST EVENT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| que | Inteiro longo | &#x1F852; | Tipo de evento |
-| mensagem | Inteiro longo | &#x1F852; | Mensagem de evento |
-| quando | Inteiro longo | &#x1F852; | Tempo de evento expresso em ticks |
-| mouseX | Inteiro longo | &#x1F852; | Coordenadas horizontais do mouse |
-| mouseY | Inteiro longo | &#x1F852; | Coordenadas verticais do mouse |
-| modificadores | Inteiro longo | &#x1F852; | Estado de teclas modificadoras |
-| processo | Inteiro longo | &#x1F852; | Número de referência do processo de destino; ou fila de evento de aplicação, se omitido, ou 0. |
+| que | Integer | &srarr; | Tipo de evento |
+| mensagem | Integer | &srarr; | Mensagem de evento |
+| quando | Integer | &srarr; | Tempo de evento expresso em ticks |
+| mouseX | Integer | &srarr; | Coordenadas horizontais do mouse |
+| mouseY | Integer | &srarr; | Coordenadas verticais do mouse |
+| modificadores | Integer | &srarr; | Estado de teclas modificadoras |
+| processo | Integer | &srarr; | Número de referência do processo de destino; ou fila de evento de aplicação, se omitido, ou 0. |
 
 <!-- END REF-->
 

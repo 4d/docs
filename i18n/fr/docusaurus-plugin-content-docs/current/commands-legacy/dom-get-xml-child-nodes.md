@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM GET XML CHILD NODES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Texte | &#x1F852; | Référence d’élément XML |
-| tabTypesEnfants | Tableau entier long | &#x1F858; | Types des noeuds enfants |
-| tabRefsNoeuds | Tableau texte | &#x1F858; | Références ou Valeurs des noeuds enfants |
+| refElément | Text | &srarr; | Référence d’élément XML |
+| tabTypesEnfants | Integer array | &harr; | Types des noeuds enfants |
+| tabRefsNoeuds | Text array | &harr; | Références ou Valeurs des noeuds enfants |
 
 <!-- END REF-->
 

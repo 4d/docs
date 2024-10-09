@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET GRID COLORS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| colorH | Texto, Entero largo | &#x1F858; | Valor de color RGB para las líneas horizontales |
-| colorV | Texto, Entero largo | &#x1F858; | Valor de color RGB para las líneas verticales |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
+| objeto | any | &srarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| colorH | Text, Integer | &harr; | Valor de color RGB para las líneas horizontales |
+| colorV | Text, Integer | &harr; | Valor de color RGB para las líneas verticales |
 
 <!-- END REF-->
 

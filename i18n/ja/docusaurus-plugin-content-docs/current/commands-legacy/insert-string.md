@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Insert string.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| source | 文字 | &#x1F852; | 文字列を挿入する文字列 |
-| what | 文字 | &#x1F852; | 挿入する文字列 |
-| where | 倍長整数 | &#x1F852; | 挿入する位置 |
-| 戻り値 | 文字 | &#x1F850; | 結果の文字列 |
+| source | Text | &srarr; | 文字列を挿入する文字列 |
+| what | Text | &srarr; | 挿入する文字列 |
+| where | Integer | &srarr; | 挿入する位置 |
+| 戻り値 | Text | &larr; | 結果の文字列 |
 
 <!-- END REF-->
 

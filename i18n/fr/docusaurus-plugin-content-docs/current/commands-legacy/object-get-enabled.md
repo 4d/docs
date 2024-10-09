@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get enabled.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * spécifié) ou Variable (si * omis) |
-| Résultat | Booléen | &#x1F850; | Vrai = objet(s) activé(s), Faux sinon |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &srarr; | Nom d'objet (si * spécifié) ou Variable (si * omis) |
+| Résultat | Boolean | &larr; | Vrai = objet(s) activé(s), Faux sinon |
 
 <!-- END REF-->
 

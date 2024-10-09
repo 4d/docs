@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is waiting mouse up.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Booléen | &#x1F850; | Vrai si l'objet est en attente d'un relâchement souris, Faux sinon |
+| Résultat | Boolean | &larr; | Vrai si l'objet est en attente d'un relâchement souris, Faux sinon |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE ONE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableN &#124; champN | Table, Champ | &#x1F852; | Table pour laquelle définir tous les liens automatiques ou Champ avec lien manuel partant vers la table 1 |
-| discriminant | Champ | &#x1F852; | Champ discriminant de la table 1 |
+| tableN &#124; champN | Table, Champ | &srarr; | Table pour laquelle définir tous les liens automatiques ou Champ avec lien manuel partant vers la table 1 |
+| discriminant | Field | &srarr; | Champ discriminant de la table 1 |
 
 <!-- END REF-->
 

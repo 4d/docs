@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.STRING LIST TO ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| resNum | Inteiro longo | &#x1F852; | Nº do recurso ou atributo "id" do elemento "group" (XLIFF) |
-| cadeias | Array string | &#x1F858; | Strings do recurso STR# ou strings do elemento "group"(XLIFF) |
-| resArquivo | refDoc | &#x1F852; | Arquivo de número de referencia de Resource se omitido: todos os arquivos XLIFF ou arquivos de resources abertos |
+| resNum | Integer | &srarr; | Nº do recurso ou atributo "id" do elemento "group" (XLIFF) |
+| cadeias | Text array | &harr; | Strings do recurso STR# ou strings do elemento "group"(XLIFF) |
+| resArquivo | Time | &srarr; | Arquivo de número de referencia de Resource se omitido: todos os arquivos XLIFF ou arquivos de resources abertos |
 
 <!-- END REF-->
 

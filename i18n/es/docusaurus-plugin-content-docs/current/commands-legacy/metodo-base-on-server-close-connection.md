@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Metodo base On Server Close Connection.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| $1 | Entero largo | &#x1F858; | Número de usuario utilizado internamente por 4D Server para identificar los usuarios |
-| $2 | Entero largo | &#x1F858; | Número de conexión utilizada internamente por 4D Server para identificar una conexión |
-| $3 | Entero largo | &#x1F858; | Obsoleto: devuelve siempre 0 pero debe declararse |
+| $1 | Entero largo | &harr; | Número de usuario utilizado internamente por 4D Server para identificar los usuarios |
+| $2 | Entero largo | &harr; | Número de conexión utilizada internamente por 4D Server para identificar una conexión |
+| $3 | Entero largo | &harr; | Obsoleto: devuelve siempre 0 pero debe declararse |
 
 <!-- END REF-->
 

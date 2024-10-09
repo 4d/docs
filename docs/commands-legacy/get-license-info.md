@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get license info.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Object | &#x1F850; | Information about the active licence |
+| Function result | Object | &larr; | Information about the active licence |
 
 <!-- END REF-->
 
@@ -47,6 +47,15 @@ The returned object contains the following properties:
 | \[ \].expirationDate | object                | Date of expiration (optional, same format as above)                                                   | {"day":1, "month":11, "year":2017}                                                    |
 
 #### Example 
+
+You want to get information on your current 4D Server license:
+
+```4d
+ var $obj : Object
+ $obj:=Get license info
+```
+
+*$obj* can contain, for example:
 
 ```undefined
 {

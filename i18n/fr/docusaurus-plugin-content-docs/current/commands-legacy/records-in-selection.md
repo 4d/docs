@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Records in selection.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table dont vous souhaitez connaître le nombre d'enregistrements de la sélection courante ou Table par défaut si ce paramètre est omis |
-| Résultat | Entier long | &#x1F850; | Nombre d'enregistrements dans la sélection courante de table |
+| laTable | Table | &srarr; | Table dont vous souhaitez connaître le nombre d'enregistrements de la sélection courante ou Table par défaut si ce paramètre est omis |
+| Résultat | Integer | &larr; | Nombre d'enregistrements dans la sélection courante de table |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is Windows.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | ブール | &#x1F850; | OS = Windows ならTrue、そうでなければFalse |
+| 戻り値 | Boolean | &larr; | OS = Windows ならTrue、そうでなければFalse |
 
 <!-- END REF-->
 

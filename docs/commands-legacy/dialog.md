@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DIALOG.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table owning the form or If omitted: default table or use of project form |
-| form | String, Object | &#x1F852; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
-| formData | Object | &#x1F852; | Data to associate to the form |
-| * | Operator | &#x1F852; | Use the same process |
+| aTable | Table | &srarr; | Table owning the form or If omitted: default table or use of project form |
+| form | Text, Object | &srarr; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
+| formData | Object | &srarr; | Data to associate to the form |
+| * | Operator | &srarr; | Use the same process |
 
 <!-- END REF-->
 

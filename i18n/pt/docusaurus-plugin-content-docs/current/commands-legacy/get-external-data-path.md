@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get external data path.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| ocampo | Texto, BLOB, Imagem | &#x1F852; | Campo do qual obter o lugar de armazenamento |
-| Resultado | Texto | &#x1F850; | Via de acesso completa do arquivo de armazenamento externo |
+| ocampo | Text, Blob, Picture | &srarr; | Campo do qual obter o lugar de armazenamento |
+| Resultado | Text | &larr; | Via de acesso completa do arquivo de armazenamento externo |
 
 <!-- END REF-->
 

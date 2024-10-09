@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX Get XML node.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | RefDoc | &#x1F852; | Référence du document ouvert |
-| Résultat | Entier long | &#x1F850; | Evénement retourné par la fonction |
+| document | Time | &srarr; | Référence du document ouvert |
+| Résultat | Integer | &larr; | Evénement retourné par la fonction |
 
 <!-- END REF-->
 

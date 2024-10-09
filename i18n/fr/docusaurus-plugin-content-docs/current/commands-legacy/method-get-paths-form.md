@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET PATHS FORM.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Référence de table |
-| tabChemins | Tableau texte | &#x1F858; | Tableau des chemins et noms des méthodes |
-| filtre | Texte | &#x1F852; | Filtrage des noms |
-| marqueur | Variable réel | &#x1F852; | Valeur minimum de marqueur |
-| &#x1F858; | Nouvelle valeur courante |
-| * | Opérateur | &#x1F852; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| laTable | Table | &srarr; | Référence de table |
+| tabChemins | Text array | &harr; | Tableau des chemins et noms des méthodes |
+| filtre | Text | &srarr; | Filtrage des noms |
+| marqueur | Real | &srarr; | Valeur minimum de marqueur |
+| &harr; | Nouvelle valeur courante |
+| * | Opérateur | &srarr; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
 

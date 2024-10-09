@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR VARIABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| variable | 変数 | &#x1F852; | クリアする変数 |
+| variable | Variable | &srarr; | クリアする変数 |
 
 <!-- END REF-->
 

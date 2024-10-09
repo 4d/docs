@@ -85,18 +85,6 @@ title: Index
 
 <a id="C"><b>C</b></a>
 
-[`C_BLOB`](../commands-legacy/c-blob.md)<br/>
-[`C_BOOLEAN`](../commands-legacy/c-boolean.md)<br/>
-[`C_COLLECTION`](../commands-legacy/c-collection.md)<br/>
-[`C_DATE`](../commands-legacy/c-date.md)<br/>
-[`C_LONGINT`](../commands-legacy/c-longint.md)<br/>
-[`C_OBJECT`](../commands-legacy/c-object.md)<br/>
-[`C_PICTURE`](../commands-legacy/c-picture.md)<br/>
-[`C_POINTER`](../commands-legacy/c-pointer.md)<br/>
-[`C_REAL`](../commands-legacy/c-real.md)<br/>
-[`C_TEXT`](../commands-legacy/c-text.md)<br/>
-[`C_TIME`](../commands-legacy/c-time.md)<br/>
-[`C_VARIANT`](../commands-legacy/c-variant.md)<br/>
 [`Cache info`](../commands-legacy/cache-info.md)<br/>
 [`CALL FORM`](../commands-legacy/call-form.md)<br/>
 [`CALL SUBFORM CONTAINER`](../commands-legacy/call-subform-container.md)<br/>

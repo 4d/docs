@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.NEXT RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | カレントレコードをセレクションの次のレコードに 移動するテーブル、省略時はデフォルトテーブル |
+| aTable | Table | &srarr; | カレントレコードをセレクションの次のレコードに 移動するテーブル、省略時はデフォルトテーブル |
 
 <!-- END REF-->
 

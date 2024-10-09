@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE SET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table pour laquelle vous voulez créer un ensemble à partir de la sélection courante ou Table par défaut si ce paramètre est omis |
-| ensemble | Chaîne | &#x1F852; | Nom du nouvel ensemble |
+| laTable | Table | &srarr; | Table pour laquelle vous voulez créer un ensemble à partir de la sélection courante ou Table par défaut si ce paramètre est omis |
+| ensemble | Text | &srarr; | Nom du nouvel ensemble |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DATABASE LOCALIZATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| languageCode | テキスト | &#x1F852; | 言語セレクタ |
-| * | 演算子 | &#x1F852; | コマンドのスコープ |
+| languageCode | Text | &srarr; | 言語セレクタ |
+| * | 演算子 | &srarr; | コマンドのスコープ |
 
 <!-- END REF-->
 

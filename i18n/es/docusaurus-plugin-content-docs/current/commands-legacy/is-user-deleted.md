@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is user deleted.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refUsuario | Entero largo | &#x1F852; | Número de identificación del usuario |
-| Resultado | Booleano | &#x1F850; | TRUE = La cuenta del usuario ha sido borrada o no existe FALSE = La cuenta del usuario está activa |
+| refUsuario | Integer | &srarr; | Número de identificación del usuario |
+| Resultado | Boolean | &larr; | TRUE = La cuenta del usuario ha sido borrada o no existe FALSE = La cuenta del usuario está activa |
 
 <!-- END REF-->
 

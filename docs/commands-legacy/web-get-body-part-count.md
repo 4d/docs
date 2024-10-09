@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Get body part count.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Longint | &#x1F850; | Number of parts in the body |
+| Function result | Longint | &larr; | Number of parts in the body |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LOCKED BY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table to check for record locked, or Default table, if omitted |
-| process | Longint | &#x1F858; | Process reference number |
-| 4Duser | String | &#x1F858; | 4D user name |
-| sessionUser | String | &#x1F858; | Name of user that opened work-session |
-| processName | String | &#x1F858; | Process name |
+| aTable | Table | &srarr; | Table to check for record locked, or Default table, if omitted |
+| process | Integer | &harr; | Process reference number |
+| 4Duser | Text | &harr; | 4D user name |
+| sessionUser | Text | &harr; | Name of user that opened work-session |
+| processName | Text | &harr; | Process name |
 
 <!-- END REF-->
 

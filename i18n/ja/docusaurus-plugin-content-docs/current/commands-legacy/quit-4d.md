@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QUIT 4D.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| time | 倍長整数 | &#x1F852; | サーバ終了までの時間 (秒) |
+| time | Integer | &srarr; | サーバ終了までの時間 (秒) |
 
 <!-- END REF-->
 

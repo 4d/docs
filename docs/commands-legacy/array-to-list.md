@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY TO LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &#x1F852; | Array from which to copy array elements |
-| list | String, ListRef | &#x1F852; | Name or reference of list into which to copy array elements |
-| itemRefs | Array | &#x1F852; | Numeric array of item reference numbers |
+| array | Array | &srarr; | Array from which to copy array elements |
+| list | Text, Integer | &srarr; | Name or reference of list into which to copy array elements |
+| itemRefs | Array | &srarr; | Numeric array of item reference numbers |
 
 <!-- END REF-->
 

@@ -5,18 +5,17 @@ slug: /commands/multi-sort-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MULTI SORT ARRAY.Syntax-->**MULTI SORT ARRAY** ( *array* {; *ordem*}{; *array2* ; *ordem2* ; ... ; *arrayN* ; *ordemN*} ) 
-        
-            MULTI SORT ARRAY ( *ptrArrayNome*  ; *sortArrayNome*  )<!-- END REF-->
+<!--REF #_command_.MULTI SORT ARRAY.Syntax-->**MULTI SORT ARRAY** ( *array* {; *ordem*}{; *array2* ; *ordem2* ; ... ; *arrayN* ; *ordemN*} ) <br/>
+**MULTI SORT ARRAY** ( *ptrArrayNome*  ; *sortArrayNome*  )<!-- END REF-->
 <!--REF #_command_.MULTI SORT ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| array | Array | &#x1F852; | Array a ser ordenado |
-| ordem | Operador | &#x1F852; | ">" para ordernar em ordem crescente ou "<" para ordenar em ordem decrescente, se omitido "aa" sem ordem |
+| array | Array | &srarr; | Array a ser ordenado |
+| ordem | * | &srarr; | ">" para ordernar em ordem crescente ou "<" para ordenar em ordem decrescente, se omitido "aa" sem ordem |
 | MULTI SORT ARRAY ( ptrArrayNome  ; sortArrayNome  ) |
 | Parâmetro | Tipo | Descrição |
-| ptrArrayNome | Array ponteiro | &#x1F852; | Array de um array de ponteiros |
-| sortArrayNome | Array inteiro longo | &#x1F852; | Ordenação do array (1 = ordenar em ordem crescente, -1 = ordenar em ordem descrescente, 0 = sincronização com a ordenação anterior) |
+| ptrArrayNome | Pointer array | &srarr; | Array de um array de ponteiros |
+| sortArrayNome | Integer array | &srarr; | Ordenação do array (1 = ordenar em ordem crescente, -1 = ordenar em ordem descrescente, 0 = sincronização com a ordenação anterior) |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL LOGIN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| dataEntry | String | &#x1F852; | Publication name of 4D database or IP address of remote database or Name of the data source entry in the ODBC Manager or "" to display the selection dialog box |
-| userName | String | &#x1F852; | Name of the user registered in the data source |
-| password | String | &#x1F852; | Password of the user registered in the data source |
-| * | Operator | &#x1F852; | Applied to Begin SQL/End SQL If omitted: do not apply (local database); if passed: apply |
+| dataEntry | Text | &srarr; | Publication name of 4D database or IP address of remote database or Name of the data source entry in the ODBC Manager or "" to display the selection dialog box |
+| userName | Text | &srarr; | Name of the user registered in the data source |
+| password | Text | &srarr; | Password of the user registered in the data source |
+| * | Operator | &srarr; | Applied to Begin SQL/End SQL If omitted: do not apply (local database); if passed: apply |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET CURRENT PRINTER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| printerName | 文字 | &#x1F852; | 使用されるプリンター名 |
+| printerName | Text | &srarr; | 使用されるプリンター名 |
 
 <!-- END REF-->
 

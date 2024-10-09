@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get adjusted blobs cache priority.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Tabela | Tabela | &#x1F852; | Tabela para a qual o valor de prioridade dos "blobs" vai ser recuperada |
-| Resultado | Inteiro longo | &#x1F850; | Valor de prioridade atual para campos "blobs" |
+| Table | Table | &srarr; | Tabela para a qual o valor de prioridade dos "blobs" vai ser recuperada |
+| Resultado | Integer | &larr; | Valor de prioridade atual para campos "blobs" |
 
 <!-- END REF-->
 

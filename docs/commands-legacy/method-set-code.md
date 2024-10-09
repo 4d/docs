@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD SET CODE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text, Text array | &#x1F852; | Text or Text array containing one or more method path(s) |
-| code | Text, Text array | &#x1F852; | Code of designated method(s) |
-| * | Operator | &#x1F852; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| path | Text, Text array | &srarr; | Text or Text array containing one or more method path(s) |
+| code | Text, Text array | &srarr; | Code of designated method(s) |
+| * | Operator | &srarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->
 

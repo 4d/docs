@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Test semaphore.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| semaphore | 文字 | &#x1F852; | テストするセマフォ |
-| 戻り値 | ブール | &#x1F850; | True: セマフォが存在する, False: セマフォは存在しない |
+| semaphore | Text | &srarr; | テストするセマフォ |
+| 戻り値 | Boolean | &larr; | True: セマフォが存在する, False: セマフォは存在しない |
 
 <!-- END REF-->
 

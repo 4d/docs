@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Keystroke.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | 文字 | &#x1F850; | ユーザが入力した文字 |
+| 戻り値 | Text | &larr; | ユーザが入力した文字 |
 
 <!-- END REF-->
 

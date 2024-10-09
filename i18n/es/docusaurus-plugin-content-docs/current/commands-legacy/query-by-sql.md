@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY BY SQL.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Tabla | &#x1F852; | Tabla en la cual devolver una selección de registros o Tabla por defecto si este parámetro se omite |
-| formulaSQL | Cadena | &#x1F852; | Fórmula de búsqueda SQL válida representando la cláusula WHERE de la búsqueda SELECT |
+| tabla | Table | &srarr; | Tabla en la cual devolver una selección de registros o Tabla por defecto si este parámetro se omite |
+| formulaSQL | Text | &srarr; | Fórmula de búsqueda SQL válida representando la cláusula WHERE de la búsqueda SELECT |
 
 <!-- END REF-->
 

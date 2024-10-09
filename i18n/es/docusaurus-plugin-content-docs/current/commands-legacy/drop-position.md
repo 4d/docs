@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Drop position.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| colNum &#124; posXImagen | Entero largo | &#x1F858; | Número de columna del list box (-1 si el soltar ocurre más allá de la última columna)o <br/>Posición coordenada X en la imagen |
-| Resultado | Entero largo | &#x1F850; | Número (array/ list box) o posición (lista jerárquica) o Posición en cadena (texto/combo box) o elemento de destino o -1 si soltar ocurrió más allá del último elemento del array o de la lista |
+| colNum &#124; posXImagen | Entero largo | &harr; | Número de columna del list box (-1 si el soltar ocurre más allá de la última columna)o <br/>Posición coordenada X en la imagen |
+| Resultado | Integer | &larr; | Número (array/ list box) o posición (lista jerárquica) o Posición en cadena (texto/combo box) o elemento de destino o -1 si soltar ocurrió más allá del último elemento del array o de la lista |
 
 <!-- END REF-->
 

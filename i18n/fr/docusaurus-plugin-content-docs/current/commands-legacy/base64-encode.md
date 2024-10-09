@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.BASE64 ENCODE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| àEncoder | BLOB, Texte | &#x1F852; | Valeur à encoder |
-| &#x1F858; | Valeur encodée (si le paramètre encodé est omis) |
-| encodé | BLOB, Texte | &#x1F858; | Valeur encodée |
-| * | Opérateur | &#x1F852; | Encoder au format Base64URL |
+| àEncoder | Blob, Text | &srarr; | Valeur à encoder |
+| &harr; | Valeur encodée (si le paramètre encodé est omis) |
+| encodé | Blob, Text | &harr; | Valeur encodée |
+| * | Opérateur | &srarr; | Encoder au format Base64URL |
 
 <!-- END REF-->
 

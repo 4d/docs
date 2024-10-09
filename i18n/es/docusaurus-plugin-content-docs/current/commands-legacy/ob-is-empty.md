@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Is empty.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | Objeto, Campo Objeto | &#x1F852; | Objeto estructurado |
-| Resultado | Booleano | &#x1F850; | True si objeto está vacío o indefinido, de lo contrario False |
+| objeto | Object, Campo Object | &srarr; | Objeto estructurado |
+| Resultado | Boolean | &larr; | True si objeto está vacío o indefinido, de lo contrario False |
 
 <!-- END REF-->
 

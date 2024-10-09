@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica = objeto es un nombre de objeto (cadena) Si se omite = objeto es una variable |
-| object | Objeto de formulario | &#x1F852; | Nombre de objeto (si * se especifica) o variable (si * se omite) |
-| column | Entero largo | &#x1F852; | Número de columna |
-| linea | Entero largo | &#x1F852; | Número de línea |
-| izquierda | Entero largo | &#x1F858; | Coordenada izquierda del objeto |
-| arriba | Entero largo | &#x1F858; | Coordenada superior del objeto |
-| der | Entero largo | &#x1F858; | Coordenada derecha del objeto |
-| abajo | Entero largo | &#x1F858; | Coordenada inferior del objeto |
+| * | Operador | &srarr; | Si se especifica = objeto es un nombre de objeto (cadena) Si se omite = objeto es una variable |
+| object | any | &srarr; | Nombre de objeto (si * se especifica) o variable (si * se omite) |
+| column | Integer | &srarr; | Número de columna |
+| linea | Integer | &srarr; | Número de línea |
+| izquierda | Integer | &harr; | Coordenada izquierda del objeto |
+| arriba | Integer | &harr; | Coordenada superior del objeto |
+| der | Integer | &harr; | Coordenada derecha del objeto |
+| abajo | Integer | &harr; | Coordenada inferior del objeto |
 
 <!-- END REF-->
 

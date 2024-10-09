@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Current time.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Devuelve la hora actual del servidor |
-| Resultado | Hora | &#x1F850; | Hora actual |
+| * | Operador | &srarr; | Devuelve la hora actual del servidor |
+| Resultado | Time | &larr; | Hora actual |
 
 <!-- END REF-->
 

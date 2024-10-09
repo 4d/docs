@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Count XML elements.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | String | &#x1F852; | XML element reference |
-| elementName | String | &#x1F852; | Name of XML elements to count |
-| Function result | Longint | &#x1F850; | Number of elements |
+| elementRef | Text | &srarr; | XML element reference |
+| elementName | Text | &srarr; | Name of XML elements to count |
+| Function result | Longint | &larr; | Number of elements |
 
 <!-- END REF-->
 

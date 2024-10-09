@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.New list.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | RefListe | &#x1F850; | Numéro de référence de liste |
+| Résultat | Integer | &larr; | Numéro de référence de liste |
 
 <!-- END REF-->
 

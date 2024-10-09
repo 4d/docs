@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get menu bar reference.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| process | 倍長整数 | &#x1F852; | プロセス参照番号 |
-| 戻り値 | MenuRef | &#x1F850; | メニューバーID |
+| process | Integer | &srarr; | プロセス参照番号 |
+| 戻り値 | Text | &larr; | メニューバーID |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD SET COMMENTS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota | Texto, Array texto | &#x1F852; | Texto ou array texto contendo uma ou mais rotas de método |
-| Comentarios | Texto, Array texto | &#x1F852; | Comentários dos métodos designados |
-| * | Operador | &#x1F852; | Se passado = o comando aplica ao banco de dados local quando é executado de um componente (parâmetro ignorado fora deste contexto) |
+| rota | Text, Text array | &srarr; | Texto ou array texto contendo uma ou mais rotas de método |
+| Comentarios | Text, Text array | &srarr; | Comentários dos métodos designados |
+| * | Operador | &srarr; | Se passado = o comando aplica ao banco de dados local quando é executado de um componente (parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->
 

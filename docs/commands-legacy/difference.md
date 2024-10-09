@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DIFFERENCE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| set1 | String | &#x1F852; | Set |
-| set2 | String | &#x1F852; | Set to subtract |
-| resultSet | String | &#x1F852; | Resulting set |
+| set1 | Text | &srarr; | Set |
+| set2 | Text | &srarr; | Set to subtract |
+| resultSet | Text | &srarr; | Resulting set |
 
 <!-- END REF-->
 

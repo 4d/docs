@@ -3,8 +3,6 @@ id: command-index
 title: 4D Write Pro Commands
 ---
 
-
-
 [`WP Add picture`](../commands-legacy/wp-add-picture.md)<br/>
 [`WP Bookmark range`](../commands-legacy/wp-bookmark-range.md)<br/>
 [`WP COMPUTE FORMULAS`](../commands-legacy/wp-compute-formulas.md)<br/>
@@ -82,3 +80,4 @@ title: 4D Write Pro Commands
 [`WP TABLE SPLIT CELLS`](../commands-legacy/wp-table-split-cells.md)<br/>
 [`WP Text range`](../commands-legacy/wp-text-range.md)<br/>
 [`WP USE PAGE SETUP`](../commands-legacy/wp-use-page-setup.md)<br/>
+

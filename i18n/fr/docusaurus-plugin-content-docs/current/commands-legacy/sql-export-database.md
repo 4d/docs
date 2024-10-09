@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL EXPORT DATABASE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminDossier | Texte | &#x1F852; | Chemin d'accès du dossier d'export ou "" pour afficher une boîte de dialogue de sélection de dossier |
-| nbFichiers | Entier long | &#x1F852; | Nombre maximum de fichiers par dossier |
-| tailleLimiteFichiers | Entier long | &#x1F852; | Valeur de limite de taille des fichiers d'exportation (en Ko) |
-| tailleLimiteChamps | Entier long | &#x1F852; | Limite de taille au-dessous de laquelle le contenu d'un champ Texte, BLOB ou Image sera intégré au fichier principal (en octets) |
+| cheminDossier | Text | &srarr; | Chemin d'accès du dossier d'export ou "" pour afficher une boîte de dialogue de sélection de dossier |
+| nbFichiers | Integer | &srarr; | Nombre maximum de fichiers par dossier |
+| tailleLimiteFichiers | Integer | &srarr; | Valeur de limite de taille des fichiers d'exportation (en Ko) |
+| tailleLimiteChamps | Integer | &srarr; | Limite de taille au-dessous de laquelle le contenu d'un champ Texte, BLOB ou Image sera intégré au fichier principal (en octets) |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.COPY SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| srcSet | String | &#x1F852; | Source set name |
-| dstSet | String | &#x1F852; | Destination set name |
+| srcSet | Text | &srarr; | Source set name |
+| dstSet | Text | &srarr; | Destination set name |
 
 <!-- END REF-->
 

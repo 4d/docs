@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP AUTHENTICATE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| name | テキスト | &#x1F852; | ユーザー名 |
-| password | テキスト | &#x1F852; | ユーザーパスワード |
-| authMethod | 倍長整数 | &#x1F852; | 認証方式: 0または省略時=指定しない、1=BASIC、2=DIGEST |
-| * | 演算子 | &#x1F852; | 指定時: プロクシ認証 |
+| name | Text | &srarr; | ユーザー名 |
+| password | Text | &srarr; | ユーザーパスワード |
+| authMethod | Integer | &srarr; | 認証方式: 0または省略時=指定しない、1=BASIC、2=DIGEST |
+| * | 演算子 | &srarr; | 指定時: プロクシ認証 |
 
 <!-- END REF-->
 

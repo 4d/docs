@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET RESIZING OPTIONS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object Name (if * is specified) or Variable (if * is omitted) |
-| horizontal | Longint | &#x1F858; | Horizontal resizing option |
-| vertical | Longint | &#x1F858; | Vertical resizing option |
+| * | Operator | &srarr; | If specified, object is an object name (string)If omitted, object is a variable |
+| object | any | &srarr; | Object Name (if * is specified) or Variable (if * is omitted) |
+| horizontal | Integer | &harr; | Horizontal resizing option |
+| vertical | Integer | &harr; | Vertical resizing option |
 
 <!-- END REF-->
 

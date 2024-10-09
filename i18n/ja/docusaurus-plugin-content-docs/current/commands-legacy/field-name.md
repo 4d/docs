@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Field name.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fieldPtr &#124; tableNum | ポインター, 倍長整数 | &#x1F852; | フィールドポインタ、またはテーブル番号 |
-| fieldNum | 倍長整数 | &#x1F852; | 最初の引数にテーブル番号を渡した場合は、 フィールド番号 |
-| 戻り値 | 文字 | &#x1F850; | フィールド名 |
+| fieldPtr &#124; tableNum | ポインター, 倍長整数 | &srarr; | フィールドポインタ、またはテーブル番号 |
+| fieldNum | Integer | &srarr; | 最初の引数にテーブル番号を渡した場合は、 フィールド番号 |
+| 戻り値 | Text | &larr; | フィールド名 |
 
 <!-- END REF-->
 

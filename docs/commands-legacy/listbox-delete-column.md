@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX DELETE COLUMN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Form object | &#x1F852; | Object name (if * is specified) or Variable (if * is omitted) |
-| colPosition | Longint | &#x1F852; | Column number to remove |
-| number | Longint | &#x1F852; | Number of columns to be removed |
+| * | Operator | &srarr; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &srarr; | Object name (if * is specified) or Variable (if * is omitted) |
+| colPosition | Integer | &srarr; | Column number to remove |
+| number | Integer | &srarr; | Number of columns to be removed |
 
 <!-- END REF-->
 

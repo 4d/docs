@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET STYLE SHEET INFO.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| styleSheetName | テキスト | &#x1F852; | スタイルシート名 |
-| font | テキスト | &#x1F858; | フォント名 |
-| size | 倍長整数 | &#x1F858; | フォントサイズ |
-| styles | 倍長整数 | &#x1F858; | 書体 |
+| styleSheetName | Text | &srarr; | スタイルシート名 |
+| font | Text | &harr; | フォント名 |
+| size | Integer | &harr; | フォントサイズ |
+| styles | Integer | &harr; | 書体 |
 
 <!-- END REF-->
 

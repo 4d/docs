@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Create menu.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | MenuRef, Inteiro longo, String | &#x1F852; | Referência de menu ou Número ou Nome da barra de menu |
-| Resultado | MenuRef | &#x1F850; | Referência de menu |
+| menu | Text, Integer, Text | &srarr; | Referência de menu ou Número ou Nome da barra de menu |
+| Resultado | Text | &larr; | Referência de menu |
 
 <!-- END REF-->
 

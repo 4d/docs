@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE EMPTY SET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | 空のセットを作成するテーブル, または 省略時、デフォルトテーブル |
-| set | 文字 | &#x1F852; | 新しい空のセットの名前 |
+| aTable | Table | &srarr; | 空のセットを作成するテーブル, または 省略時、デフォルトテーブル |
+| set | Text | &srarr; | 新しい空のセットの名前 |
 
 <!-- END REF-->
 

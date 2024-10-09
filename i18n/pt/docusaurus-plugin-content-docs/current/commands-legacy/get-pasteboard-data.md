@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PASTEBOARD DATA.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tipoDados | String | &#x1F852; | Tipo de dados a adicionar |
-| dados | BLOB | &#x1F858; | Dados extraídos da área de transferência |
+| tipoDados | Text | &srarr; | Tipo de dados a adicionar |
+| dados | Blob | &harr; | Dados extraídos da área de transferência |
 
 <!-- END REF-->
 

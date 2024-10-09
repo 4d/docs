@@ -5,18 +5,17 @@ slug: /commands/set-channel
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET CHANNEL.Syntax-->**SET CHANNEL** ( *port* ; *settings* ) 
-        
-            SET CHANNEL ( *operation* ; *document* )<!-- END REF-->
+<!--REF #_command_.SET CHANNEL.Syntax-->**SET CHANNEL** ( *port* ; *settings* ) <br/>
+**SET CHANNEL** ( *operation* ; *document* )<!-- END REF-->
 <!--REF #_command_.SET CHANNEL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| port | Longint | &#x1F852; | Serial port number |
-| settings | Longint | &#x1F852; | Serial port settings |
+| port | Integer | &srarr; | Serial port number |
+| settings | Integer | &srarr; | Serial port settings |
 | SET CHANNEL ( operation ; document ) |
 | Parameter | Type | Description |
-| operation | Longint | &#x1F852; | Document operation to perform |
-| document | String | &#x1F852; | Document name |
+| operation | Integer | &srarr; | Document operation to perform |
+| document | Text | &srarr; | Document name |
 
 <!-- END REF-->
 

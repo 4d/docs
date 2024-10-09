@@ -75,10 +75,10 @@ Function onConnection($wss : Object; $event : Object) : Object
 3. Defina la clase usuario `myConnectionHandler` que contiene la(s) función(es) de retrollamada utilizada(s) para manejar los mensajes:
 
 ```4d
-// myConnectionHandler class
+//clase myConnectionHandler
 
 Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
-    //resends the message in uppercase
+    //envía el mensaje en mayúsculas
     $ws.send(Uppercase($message.data))
 
 ```
@@ -391,9 +391,9 @@ Esta propiedad es de sólo lectura.
 
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
-| Parámetros | Tipo    |    | Descripción                                                     |
-| ---------- | ------- |:--:| --------------------------------------------------------------- |
-| timeout    | Integer | -> | Waiting time in seconds before terminating the WebSocket server |
+| Parámetros | Tipo    |    | Descripción                                                           |
+| ---------- | ------- |:--:| --------------------------------------------------------------------- |
+| timeout    | Integer | -> | Tiempo de espera en segundos antes de finalizar el servidor WebSocket |
 <!-- END REF -->
 
 
@@ -401,11 +401,11 @@ Esta propiedad es de sólo lectura.
 
 La función `.terminate()` <!-- REF #WebSocketServerClass.terminate().Summary -->cierra el servidor WebSocket<!-- END REF -->.
 
-By default, if no *timeout* value is set, the function initializes close handshake and waits to receive close frame from the peer, after that sending FIN packet in attempt to perform a clean socket close. Cuando se recibe la respuesta, se destruye el socket.
+De forma predeterminada, si no se establece un valor *timeout*, la función inicializa el cierre de conexión y espera recibir un frame de cierre del otro extremo, luego envía un paquete FIN en un intento de realizar un cierre limpio del socket. Cuando se recibe la respuesta, se destruye el socket.
 
 Si se establece un valor de *timeout*:
-- when the waiting time is reached, forcibly destroys the socket.
-- if *timeout* = 0, forcibly destroys the socket without closing frames or fin packets exchange, and does it instantly without waiting time.
+- cuando se alcanza el tiempo de espera, destruye forzosamente el socket.
+- si *timeout* = 0, destruye el socket de forma forzada sin cerrar los frames ni intercambiar paquetes fin, y lo hace al instante sin esperar.
 
 
 

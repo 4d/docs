@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Get menu item key.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Entier long, RefMenu | &#x1F852; | Numéro de menu ou Référence de menu |
-| ligneMenu | Entier long | &#x1F852; | Numéro de la ligne de menu ou -1 pour la dernière ligne ajoutée |
-| process | Entier long | &#x1F852; | Numéro de référence de process |
-| Résultat | Entier long | &#x1F850; | Code de caractère de de la touche de raccourci standard associée à la ligne de menu |
+| menu | Integer, Text | &srarr; | Numéro de menu ou Référence de menu |
+| ligneMenu | Integer | &srarr; | Numéro de la ligne de menu ou -1 pour la dernière ligne ajoutée |
+| process | Integer | &srarr; | Numéro de référence de process |
+| Résultat | Integer | &larr; | Code de caractère de de la touche de raccourci standard associée à la ligne de menu |
 
 <!-- END REF-->
 

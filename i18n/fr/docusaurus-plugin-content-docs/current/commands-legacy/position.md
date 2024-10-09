@@ -5,26 +5,25 @@ slug: /commands/position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Position.Syntax-->**Position** ( àChercher ; *laChaîne* {; *début* {; *longTrouvée*}}{; *} ) -> Résultat 
-        
-            Position ( àChercher ; *laChaîne* ; *début* ; *longTrouvée* ; *options* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Position.Syntax-->**Position** ( àChercher ; *laChaîne* {; *début* {; *longTrouvée*}}{; *} ) -> Résultat <br/>
+**Position** ( àChercher ; *laChaîne* ; *début* ; *longTrouvée* ; *options* ) -> Résultat<!-- END REF-->
 <!--REF #_command_.Position.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| àChercher | Chaîne | &#x1F852; | Chaîne à rechercher |
-| laChaîne | Chaîne | &#x1F852; | Chaîne dans laquelle effectuer la recherche |
-| début | Entier long | &#x1F852; | Position dans laChaîne où débuter la recherche |
-| longTrouvée | Entier long | &#x1F858; | Longueur de la chaîne trouvée |
-| * | Opérateur | &#x1F852; | Si passé : évaluation basée sur les codes de caractères |
-| Résultat | Entier long | &#x1F850; | Position de la première occurrence de àChercher |
+| àChercher | Text | &srarr; | Chaîne à rechercher |
+| laText | Text | &srarr; | Chaîne dans laquelle effectuer la recherche |
+| début | Integer | &srarr; | Position dans laChaîne où débuter la recherche |
+| longTrouvée | Integer | &harr; | Longueur de la chaîne trouvée |
+| * | Opérateur | &srarr; | Si passé : évaluation basée sur les codes de caractères |
+| Résultat | Integer | &larr; | Position de la première occurrence de àChercher |
 | Position ( àChercher ; laChaîne ; début ; longTrouvée ; options ) -> Résultat |
 | Paramètre | Type | Description |
-| àChercher | Chaîne | &#x1F852; | Chaîne à rechercher |
-| laChaîne | Chaîne | &#x1F852; | Chaîne dans laquelle effectuer la recherche |
-| début | Entier long | &#x1F852; | Position dans laChaîne où débuter la recherche |
-| longTrouvée | Entier long | &#x1F852; | Longueur de la chaîne trouvée |
-| options | Entier long | &#x1F852; | Critère(s) de recherche |
-| Résultat | Entier long | &#x1F850; | Position de la première occurrence de àChercher |
+| àChercher | Text | &srarr; | Chaîne à rechercher |
+| laText | Text | &srarr; | Chaîne dans laquelle effectuer la recherche |
+| début | Integer | &srarr; | Position dans laChaîne où débuter la recherche |
+| longTrouvée | Integer | &srarr; | Longueur de la chaîne trouvée |
+| options | Integer | &srarr; | Critère(s) de recherche |
+| Résultat | Integer | &larr; | Position de la première occurrence de àChercher |
 
 <!-- END REF-->
 

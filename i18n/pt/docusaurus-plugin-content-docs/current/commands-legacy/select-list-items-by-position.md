@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SELECT LIST ITEMS BY POSITION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
-| lista | ListRef, String | &#x1F852; | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
-| posiçaoElem | Inteiro longo | &#x1F852; | Posição do elemento na(s) lista(s) expandida(s) /contraída(s) |
-| posiçaoArray | Array inteiro longo | &#x1F852; | Array de posições na(s) lista(s) expandida(s) /contraída(s) |
+| * | Operador | &srarr; | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
+| lista | Integer, Text | &srarr; | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
+| posiçaoElem | Integer | &srarr; | Posição do elemento na(s) lista(s) expandida(s) /contraída(s) |
+| posiçaoArray | Integer array | &srarr; | Array de posições na(s) lista(s) expandida(s) /contraída(s) |
 
 <!-- END REF-->
 

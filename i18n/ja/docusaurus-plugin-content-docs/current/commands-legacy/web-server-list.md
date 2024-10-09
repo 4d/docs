@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Server list.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | コレクション | &#x1F850; | 利用可能なWebサーバーオブジェクトのコレクション |
+| 戻り値 | Collection | &larr; | 利用可能なWebサーバーオブジェクトのコレクション |
 
 <!-- END REF-->
 

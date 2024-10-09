@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM EDIT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| uneTable | Table | &#x1F852; | Table appartenant au formulaire ou, si omise : table par défaut ou formulaire projet |
-| formulaire | Chaîne | &#x1F852; | Nom du formulaire |
+| uneTable | Table | &srarr; | Table appartenant au formulaire ou, si omise : table par défaut ou formulaire projet |
+| formulaire | Text | &srarr; | Nom du formulaire |
 
 <!-- END REF-->
 

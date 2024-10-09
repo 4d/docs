@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET ENTRY ORDER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| objectNames | Text array | &#x1F858; | Object names sorted by entry order |
-| pageNumber &#124; * | Longint, Operator | &#x1F852; | Number of the page for which to get the defined entry order (current page if omitted), or* to get the actual entry order of the current page |
+| objectNames | Text array | &harr; | Object names sorted by entry order |
+| pageNumber &#124; * | Longint, Operator | &srarr; | Number of the page for which to get the defined entry order (current page if omitted), or* to get the actual entry order of the current page |
 
 <!-- END REF-->
 

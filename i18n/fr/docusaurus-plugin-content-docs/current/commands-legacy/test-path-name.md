@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Test path name.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminAccès | Chaîne | &#x1F852; | Chemin d'accès à un dossier ou un document |
-| Résultat | Entier long | &#x1F850; | 1= cheminAccès est un document existant 0 = cheminAccès est un dossier existant <0 = chemin d'accès invalide, code d'erreur du gestionnaire de fichiers du système |
+| cheminAccès | Text | &srarr; | Chemin d'accès à un dossier ou un document |
+| Résultat | Integer | &larr; | 1= cheminAccès est un document existant 0 = cheminAccès est un dossier existant <0 = chemin d'accès invalide, code d'erreur du gestionnaire de fichiers du système |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM Get current page.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | カレントサブフォームページ番号を返す |
-| 戻り値 | 倍長整数 | &#x1F850; | 現在表示されているページ番号 |
+| * | 演算子 | &srarr; | カレントサブフォームページ番号を返す |
+| 戻り値 | Integer | &larr; | 現在表示されているページ番号 |
 
 <!-- END REF-->
 

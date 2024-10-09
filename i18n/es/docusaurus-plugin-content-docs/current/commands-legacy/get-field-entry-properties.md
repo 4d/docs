@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ptrCamp&#124;numTabla | Puntero, Entero largo | &#x1F852; | Puntero del campo o número de tabla |
-| numCamp | Entero largo | &#x1F852; | Número de campo si el número de tabla se pasa como primer parámetro |
-| lista | Cadena | &#x1F858; | Nombre de la lista asociada o cadena vacía |
-| obligatorio | Booleano | &#x1F858; | True = Obligatorio, False = Opcional |
-| noEditable | Booleano | &#x1F858; | True = No editable, False = Editable |
-| noModificable | Booleano | &#x1F858; | True = No modificable, False = Modificable |
+| ptrCamp&#124;numTabla | Puntero, Entero largo | &srarr; | Puntero del campo o número de tabla |
+| numCamp | Integer | &srarr; | Número de campo si el número de tabla se pasa como primer parámetro |
+| lista | Text | &harr; | Nombre de la lista asociada o cadena vacía |
+| obligatorio | Boolean | &harr; | True = Obligatorio, False = Opcional |
+| noEditable | Boolean | &harr; | True = No editable, False = Editable |
+| noModificable | Boolean | &harr; | True = No modificable, False = Modificable |
 
 <!-- END REF-->
 

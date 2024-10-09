@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 4Dsignatures | テキスト配列 | &#x1F858; | データタイプの4D シグネチャ |
-| nativeTypes | テキスト配列 | &#x1F858; | ネイティブデータタイプ |
-| formatNames | テキスト配列 | &#x1F858; | フォーマット名 (Windowsのみ), Mac OSでは空の文字列 |
+| 4Dsignatures | Text array | &harr; | データタイプの4D シグネチャ |
+| nativeTypes | Text array | &harr; | ネイティブデータタイプ |
+| formatNames | Text array | &harr; | フォーマット名 (Windowsのみ), Mac OSでは空の文字列 |
 
 <!-- END REF-->
 

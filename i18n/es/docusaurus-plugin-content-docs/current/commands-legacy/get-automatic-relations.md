@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| uno | Booleano | &#x1F858; | Estado de todas las relaciones de Muchos a Uno |
-| muchos | Booleano | &#x1F858; | Estado de todas las relaciones de Uno a Muchos |
+| uno | Boolean | &harr; | Estado de todas las relaciones de Muchos a Uno |
+| muchos | Boolean | &harr; | Estado de todas las relaciones de Uno a Muchos |
 
 <!-- END REF-->
 

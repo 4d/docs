@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET DOCUMENT ICON.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaDoc | Cadena | &#x1F852; | Nombre o ruta de acceso del archivo del cual obtener el icono o cadena vacía para mostrar la caja de diálogo de apertura de archivos |
-| icono | Campo imagen, Variable imagen | &#x1F858; | Icono de documentación |
-| tamaño | Entero largo | &#x1F852; | Tamaño del icono (en píxeles) |
+| rutaDoc | Text | &srarr; | Nombre o ruta de acceso del archivo del cual obtener el icono o cadena vacía para mostrar la caja de diálogo de apertura de archivos |
+| icono | Picture, Picture | &harr; | Icono de documentación |
+| tamaño | Integer | &srarr; | Tamaño del icono (en píxeles) |
 
 <!-- END REF-->
 

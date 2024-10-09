@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.On Backup Shutdown database method.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| $1 | Entier long | &#x1F858; | 0 = sauvegarde terminée normalement, autre valeur = erreur, interruption utilisateur ou code retourné par Sur démarrage sauvegarde |
+| $1 | Entier long | &harr; | 0 = sauvegarde terminée normalement, autre valeur = erreur, interruption utilisateur ou code retourné par Sur démarrage sauvegarde |
 
 <!-- END REF-->
 

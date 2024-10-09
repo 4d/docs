@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX CLOSE XML ELEMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | DocRef | &#x1F852; | 開かれたドキュメントの参照 |
+| document | Time | &srarr; | 開かれたドキュメントの参照 |
 
 <!-- END REF-->
 

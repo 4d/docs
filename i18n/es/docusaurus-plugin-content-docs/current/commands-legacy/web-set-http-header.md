@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SET HTTP HEADER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| encab&#124;arrayCamp | Texto, Array texto | &#x1F852; | Campo o variable que contiene el encabezado HTTP de la petición o Array de campos del encabezado HTTP |
-| arrayValores | Array texto | &#x1F852; | Contenido de los campos del encabezado HTTP |
+| encab&#124;arrayCamp | Texto, Array texto | &srarr; | Campo o variable que contiene el encabezado HTTP de la petición o Array de campos del encabezado HTTP |
+| arrayValores | Text array | &srarr; | Contenido de los campos del encabezado HTTP |
 
 <!-- END REF-->
 

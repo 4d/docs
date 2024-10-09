@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.IMPORT DATA.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeArquivo | String | &#x1F852; | Rota de acesso do arquivo importado |
-| projeto | Variável texto, BLOB variável | &#x1F852; | Conteúdo do projeto importado |
-| &#x1F858; | Novos conteúdos do projeto importado (se o parâmetro * foi passado) |
-| * | Operador | &#x1F852; | Exibir a caixa de diálogo importada e atualiza o projeto |
+| nomeArquivo | Text | &srarr; | Rota de acesso do arquivo importado |
+| projeto | Text, Blob | &srarr; | Conteúdo do projeto importado |
+| &harr; | Novos conteúdos do projeto importado (se o parâmetro * foi passado) |
+| * | Operador | &srarr; | Exibir a caixa de diálogo importada e atualiza o projeto |
 
 <!-- END REF-->
 

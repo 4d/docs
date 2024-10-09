@@ -5,26 +5,25 @@ slug: /commands/position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Position.Syntax-->**Position** ( *buscar* ; *laCadena* {; *inicio* {; *longEncont*}}{; *} ) -> Resultado 
-        
-            Position ( *buscar* ; *laCadena* ; *inicio* ; *longEncont* ; *opciones* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Position.Syntax-->**Position** ( *buscar* ; *laCadena* {; *inicio* {; *longEncont*}}{; *} ) -> Resultado <br/>
+**Position** ( *buscar* ; *laCadena* ; *inicio* ; *longEncont* ; *opciones* ) -> Resultado<!-- END REF-->
 <!--REF #_command_.Position.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| buscar | Cadena | &#x1F852; | Cadena a buscar |
-| laCadena | Cadena | &#x1F852; | Cadena en la cual buscar |
-| inicio | Entero largo | &#x1F852; | Posición en la cadena donde comenzar la búsqueda |
-| longEncont | Entero largo | &#x1F858; | Longitud de la cadena encontrada |
-| * | Operador | &#x1F852; | Si se pasa: búsqueda diacrítica |
-| Resultado | Entero largo | &#x1F850; | Posición de la primera ocurrencia |
+| buscar | Text | &srarr; | Cadena a buscar |
+| laText | Text | &srarr; | Cadena en la cual buscar |
+| inicio | Integer | &srarr; | Posición en la cadena donde comenzar la búsqueda |
+| longEncont | Integer | &harr; | Longitud de la cadena encontrada |
+| * | Operador | &srarr; | Si se pasa: búsqueda diacrítica |
+| Resultado | Integer | &larr; | Posición de la primera ocurrencia |
 | Position ( buscar ; laCadena ; inicio ; longEncont ; opciones ) -> Resultado |
 | Parámetro | Tipo | Descripción |
-| buscar | Cadena | &#x1F852; | Cadena a buscar |
-| laCadena | Cadena | &#x1F852; | Cadena en la cual buscar |
-| inicio | Entero largo | &#x1F852; | Posición en la cadena donde comenzar la búsqueda |
-| longEncont | Entero largo | &#x1F852; | Longitud de la cadena encontrada |
-| opciones | Entero largo | &#x1F852; | Condición(es) de búsqueda |
-| Resultado | Entero largo | &#x1F850; | Posición de la primera ocurrencia |
+| buscar | Text | &srarr; | Cadena a buscar |
+| laText | Text | &srarr; | Cadena en la cual buscar |
+| inicio | Integer | &srarr; | Posición en la cadena donde comenzar la búsqueda |
+| longEncont | Integer | &srarr; | Longitud de la cadena encontrada |
+| opciones | Integer | &srarr; | Condición(es) de búsqueda |
+| Resultado | Integer | &larr; | Posición de la primera ocurrencia |
 
 <!-- END REF-->
 

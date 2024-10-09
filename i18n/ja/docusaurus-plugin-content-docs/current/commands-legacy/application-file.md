@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Application file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | 文字 | &#x1F850; | 4D実行形式のファイルまたはアプリケーションのパス名 |
+| 戻り値 | Text | &larr; | 4D実行形式のファイルまたはアプリケーションのパス名 |
 
 <!-- END REF-->
 

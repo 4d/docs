@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB GET BODY PART.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| part | Longint | &#x1F852; | Part number |
-| contents | BLOB, Text | &#x1F858; | Contents of part |
-| name | Text | &#x1F858; | Name of "input" variable |
-| mimeType | Text | &#x1F858; | Mime type of submitted file |
-| fileName | Text | &#x1F858; | Name of submitted file |
+| part | Integer | &srarr; | Part number |
+| contents | Blob, Text | &harr; | Contents of part |
+| name | Text | &harr; | Name of "input" variable |
+| mimeType | Text | &harr; | Mime type of submitted file |
+| fileName | Text | &harr; | Name of submitted file |
 
 <!-- END REF-->
 

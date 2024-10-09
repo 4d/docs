@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Get type.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object | &#x1F852; | Structured object |
-| property | Text | &#x1F852; | Property name |
-| Function result | Longint | &#x1F850; | Property value type |
+| object | Object | &srarr; | Structured object |
+| property | Text | &srarr; | Property name |
+| Function result | Longint | &larr; | Property value type |
 
 <!-- END REF-->
 

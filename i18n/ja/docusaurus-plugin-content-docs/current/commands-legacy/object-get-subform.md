@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET SUBFORM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
-| tablePtr | テーブル | &#x1F858; | フォームが属するテーブルへのポインター |
-| detailSubform | テキスト | &#x1F858; | サブフォームの詳細フォーム名 |
-| listSubform | テキスト | &#x1F858; | サブフォームのリストフォーム名 (テーブルフォーム) |
+| * | 演算子 | &srarr; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
+| object | any | &srarr; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
+| tablePtr | Table | &harr; | フォームが属するテーブルへのポインター |
+| detailSubform | Text | &harr; | サブフォームの詳細フォーム名 |
+| listSubform | Text | &harr; | サブフォームのリストフォーム名 (テーブルフォーム) |
 
 <!-- END REF-->
 

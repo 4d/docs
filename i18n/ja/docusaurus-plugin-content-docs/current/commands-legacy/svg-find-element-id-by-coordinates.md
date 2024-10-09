@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG Find element ID by coordinates.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時、pictureObjectはオブジェクト名 (文字列) 省略時、pictureObjectはフィールドまたは変数 |
-| pictureObject | ピクチャー | &#x1F852; | オブジェクト名 (* 指定時) または フィーウドまたは変数 (* 省略時) |
-| x | 倍長整数 | &#x1F852; | X座標 (ピクセル) |
-| y | 倍長整数 | &#x1F852; | Y座標 (ピクセル) |
-| 戻り値 | 文字 | &#x1F850; | X, Yの位置に見つかった要素のID |
+| * | 演算子 | &srarr; | 指定時、pictureObjectはオブジェクト名 (文字列) 省略時、pictureObjectはフィールドまたは変数 |
+| pictureObject | Picture | &srarr; | オブジェクト名 (* 指定時) または フィーウドまたは変数 (* 省略時) |
+| x | Integer | &srarr; | X座標 (ピクセル) |
+| y | Integer | &srarr; | Y座標 (ピクセル) |
+| 戻り値 | Text | &larr; | X, Yの位置に見つかった要素のID |
 
 <!-- END REF-->
 

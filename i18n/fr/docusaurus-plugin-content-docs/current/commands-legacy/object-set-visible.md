@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET VISIBLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est passé) ou Champ ou Variable (si * est omis) |
-| visible | Booléen | &#x1F852; | Vrai = visible, Faux = invisible |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
+| objet | any | &srarr; | Nom d'objet (si * est passé) ou Champ ou Variable (si * est omis) |
+| visible | Boolean | &srarr; | Vrai = visible, Faux = invisible |
 
 <!-- END REF-->
 

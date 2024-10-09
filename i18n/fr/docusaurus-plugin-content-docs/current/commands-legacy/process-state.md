@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Process state.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Entier long | &#x1F852; | Numéro du process |
-| Résultat | Entier long | &#x1F850; | Statut du process |
+| process | Integer | &srarr; | Numéro du process |
+| Résultat | Integer | &larr; | Statut du process |
 
 <!-- END REF-->
 

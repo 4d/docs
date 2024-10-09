@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.New data key.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| passPhrase | Text | &#x1F852; | Passphrase to use to generate the AES data encryption key |
-| Function result | Object | &#x1F850; | Object containing the key (encodedKey property) |
+| passPhrase | Text | &srarr; | Passphrase to use to generate the AES data encryption key |
+| Function result | Object | &larr; | Object containing the key (encodedKey property) |
 
 <!-- END REF-->
 

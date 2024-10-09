@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Modified record.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | カレントレコードが修正されているかテストするテーブル, または 省略時、デフォルトテーブル |
-| 戻り値 | ブール | &#x1F850; | True: レコードは修正されている False: レコードは修正されていない |
+| aTable | Table | &srarr; | カレントレコードが修正されているかテストするテーブル, または 省略時、デフォルトテーブル |
+| 戻り値 | Boolean | &larr; | True: レコードは修正されている False: レコードは修正されていない |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Selected list items.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
-| lista | ListRef, String | &#x1F852; | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
-| arrayElem | Array inteiro longo | &#x1F858; | Se omitido o segundo *: Array contém as posições dos elementos selecionados na(s) lista(s) Se passado o segundo *: Array contém as referências dos elementos selecionados |
-| * | Operador | &#x1F852; | Se omitido: posição(es) do(s) elemento(s) Se passado: referencia(s) do(s) elemento(s) |
-| Resultado | Inteiro longo | &#x1F850; | Se omitido o segundo *: posição do elemento selecionado na(s) lista(s) expandida(s) Se passado o segundo *: Referência do elemento selecionado |
+| * | Operador | &srarr; | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
+| lista | Integer, Text | &srarr; | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
+| arrayElem | Integer array | &harr; | Se omitido o segundo *: Array contém as posições dos elementos selecionados na(s) lista(s) Se passado o segundo *: Array contém as referências dos elementos selecionados |
+| * | Operador | &srarr; | Se omitido: posição(es) do(s) elemento(s) Se passado: referencia(s) do(s) elemento(s) |
+| Resultado | Integer | &larr; | Se omitido o segundo *: posição do elemento selecionado na(s) lista(s) expandida(s) Se passado o segundo *: Referência do elemento selecionado |
 
 <!-- END REF-->
 

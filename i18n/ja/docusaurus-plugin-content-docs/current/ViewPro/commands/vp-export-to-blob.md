@@ -30,8 +30,7 @@ title: VP EXPORT TO BLOB
 | includeFormulas         | Boolean                     | フォーミュラを含めるかどうか。デフォルトは true。                                                                                                                                |
 | includeStyles           | Boolean                     | スタイルを含めるかどうか。デフォルトは true。                                                                                                                                  |
 | includeUnusedNames      | Boolean                     | 使用されていないカスタム名を含めるかどうか。デフォルトは true。                                                                                                                         |
-
-|saveAsView|Boolean|書き出される値にフォーマット文字列を適用するかどうか。デフォルトは false。|
+| saveAsView              | Boolean                     | 書き出される値にフォーマット文字列を適用するかどうか。デフォルトは false。                                                                                                                   |
 
 コールバックメソッドでは、以下のパラメーターを使用することができます:
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RECEIVE RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table dans laquelle recevoir l'enregistrement, ou Table par défaut si omis |
+| laTable | Table | &srarr; | Table dans laquelle recevoir l'enregistrement, ou Table par défaut si omis |
 
 <!-- END REF-->
 

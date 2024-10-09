@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REJECT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &#x1F852; | Field to reject |
+| aField | Field | &srarr; | Field to reject |
 
 <!-- END REF-->
 

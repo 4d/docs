@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get window title.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| window | WinRef | &#x1F852; | ウィンドウ参照番号, または 省略時はカレントプロセスの最前面ウィンドウ |
-| 戻り値 | 文字 | &#x1F850; | ウィンドウタイトル |
+| window | Integer | &srarr; | ウィンドウ参照番号, または 省略時はカレントプロセスの最前面ウィンドウ |
+| 戻り値 | Text | &larr; | ウィンドウタイトル |
 
 <!-- END REF-->
 

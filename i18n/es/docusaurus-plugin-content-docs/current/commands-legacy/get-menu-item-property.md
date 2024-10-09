@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MENU ITEM PROPERTY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Entero largo | &#x1F852; | Referencia de menú o número de menú |
-| lineaMenu | Entero largo | &#x1F852; | Número de línea de menú o -1 para el último elemento añadido al menú |
-| propiedad | Cadena | &#x1F852; | Tipo de propiedad |
-| valor | Expresión | &#x1F858; | Valor de la propiedad |
-| proceso | Entero largo | &#x1F852; | Número del proceso |
+| menu | Integer | &srarr; | Referencia de menú o número de menú |
+| lineaMenu | Integer | &srarr; | Número de línea de menú o -1 para el último elemento añadido al menú |
+| propiedad | Text | &srarr; | Tipo de propiedad |
+| valor | Expression | &harr; | Valor de la propiedad |
+| proceso | Integer | &srarr; | Número del proceso |
 
 <!-- END REF-->
 

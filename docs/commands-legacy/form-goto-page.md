@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GOTO PAGE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| pageNumber | Longint | &#x1F852; | Form page to display |
-| * | Operator | &#x1F852; | Change page of current subform |
+| pageNumber | Integer | &srarr; | Form page to display |
+| * | Operator | &srarr; | Change page of current subform |
 
 <!-- END REF-->
 

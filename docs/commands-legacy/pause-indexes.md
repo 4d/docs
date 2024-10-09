@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PAUSE INDEXES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#x1F852; | Table for which to pause indexes |
+| aTable | Table | &srarr; | Table for which to pause indexes |
 
 <!-- END REF-->
 

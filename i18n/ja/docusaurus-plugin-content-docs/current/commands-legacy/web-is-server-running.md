@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Is server running.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | ブール | &#x1F850; | Webサーバーが動作中であればTrue、それ以外の場合にはFalse |
+| 戻り値 | Boolean | &larr; | Webサーバーが動作中であればTrue、それ以外の場合にはFalse |
 
 <!-- END REF-->
 

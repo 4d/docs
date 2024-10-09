@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET GROUP LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomsGroupes | Tableau chaîne | &#x1F858; | Noms des groupes tels qu'ils apparaissent dans l'éditeur de Mots de passe |
-| numérosGroupes | Tableau entier long | &#x1F858; | Numéros de référence uniques pour chaque groupe |
+| nomsGroupes | Text array | &harr; | Noms des groupes tels qu'ils apparaissent dans l'éditeur de Mots de passe |
+| numérosGroupes | Integer array | &harr; | Numéros de référence uniques pour chaque groupe |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SEND VARIABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| variable | 変数 | &#x1F852; | 送信する変数 |
+| variable | Variable | &srarr; | 送信する変数 |
 
 <!-- END REF-->
 

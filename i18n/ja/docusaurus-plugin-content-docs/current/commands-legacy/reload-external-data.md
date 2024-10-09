@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RELOAD EXTERNAL DATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | テキスト, BLOB, ピクチャー, オブジェクト | &#x1F852; | 外部ストレージからリロードを行うフィールド |
+| aField | Text, Blob, Picture, Object | &srarr; | 外部ストレージからリロードを行うフィールド |
 
 <!-- END REF-->
 

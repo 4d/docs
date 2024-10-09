@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OB SET ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object Field, オブジェクト | &#x1F852; | 構造化されたオブジェクト |
-| property | テキスト | &#x1F852; | 設定したいプロパティ名 |
-| array | 配列, 変数 | &#x1F852; | プロパティに保存したい配列 |
+| object | Object, Object | &srarr; | 構造化されたオブジェクト |
+| property | Text | &srarr; | 設定したいプロパティ名 |
+| array | Array, Variable | &srarr; | プロパティに保存したい配列 |
 
 <!-- END REF-->
 

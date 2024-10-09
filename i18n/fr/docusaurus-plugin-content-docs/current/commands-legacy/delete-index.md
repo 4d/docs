@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE INDEX.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ptrChp &#124; nomIndex | Pointeur, Chaîne | &#x1F852; | Pointeur vers le champ duquel supprimer les index ou Nom de l’index à supprimer |
-| * | Opérateur | &#x1F852; | Si passé = opération asynchrone |
+| ptrChp &#124; nomIndex | Pointeur, Chaîne | &srarr; | Pointeur vers le champ duquel supprimer les index ou Nom de l’index à supprimer |
+| * | Opérateur | &srarr; | Si passé = opération asynchrone |
 
 <!-- END REF-->
 

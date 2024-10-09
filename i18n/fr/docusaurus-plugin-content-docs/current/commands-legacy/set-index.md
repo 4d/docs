@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET INDEX.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leChamp | Champ | &#x1F852; | Champ duquel créer ou supprimer l’index |
-| index | Booléen, Entier | &#x1F852; | • Vrai=Créer l’index, Faux=Supprimer l’index, ou• Créer un index de type : -1=mots-clés, 0=par défaut, 1=B-Tree standard, 3=B-Tree cluster |
-| * | &#x1F852; | Indexation asynchrone si * est passé |
+| leField | Field | &srarr; | Champ duquel créer ou supprimer l’index |
+| index | Boolean, Integer | &srarr; | • Vrai=Créer l’index, Faux=Supprimer l’index, ou• Créer un index de type : -1=mots-clés, 0=par défaut, 1=B-Tree standard, 3=B-Tree cluster |
+| * | Operator |  &srarr; | Indexation asynchrone si * est passé |
 
 <!-- END REF-->
 

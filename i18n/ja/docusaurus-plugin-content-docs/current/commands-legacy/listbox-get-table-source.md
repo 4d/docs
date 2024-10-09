@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | フォームオブジェクト | &#x1F852; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| tableNum | 倍長整数 | &#x1F858; | セレクションのテーブル番号 |
-| name | 文字 | &#x1F858; | 命名セレクション名 またはカレントセレクションの場合"" |
-| highlightName | 文字 | &#x1F858; | ハイライトセット名 |
+| * | 演算子 | &srarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &srarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| tableNum | Integer | &harr; | セレクションのテーブル番号 |
+| name | Text | &harr; | 命名セレクション名 またはカレントセレクションの場合"" |
+| highlightName | Text | &harr; | ハイライトセット名 |
 
 <!-- END REF-->
 

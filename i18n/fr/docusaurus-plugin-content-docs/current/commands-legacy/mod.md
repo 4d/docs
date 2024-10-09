@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Mod.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombre1 | Entier long | &#x1F852; | Nombre à diviser (numérateur) |
-| nombre2 | Entier long | &#x1F852; | Nombre diviseur (dénominateur) |
-| Résultat | Réel | &#x1F850; | Reste de la division entière de nombre1 par nombre2 |
+| nombre1 | Integer | &srarr; | Nombre à diviser (numérateur) |
+| nombre2 | Integer | &srarr; | Nombre diviseur (dénominateur) |
+| Résultat | Real | &larr; | Reste de la division entière de nombre1 par nombre2 |
 
 <!-- END REF-->
 

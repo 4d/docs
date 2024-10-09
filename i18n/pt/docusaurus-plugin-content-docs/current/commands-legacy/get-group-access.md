@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get group access.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Resultado | Collection | &#x1F850; | Coleção de nomes de grupos ao qual o usuário pertence |
+| Resultado | Collection | &larr; | Coleção de nomes de grupos ao qual o usuário pertence |
 
 <!-- END REF-->
 

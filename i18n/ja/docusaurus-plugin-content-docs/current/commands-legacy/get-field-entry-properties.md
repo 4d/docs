@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fieldPtr&#124;tableNum | ポインター, 倍長整数 | &#x1F852; | フィールドポインタ、またはテーブル番号 |
-| fieldNum | 倍長整数 | &#x1F852; | 第1引数がテーブル番号の場合、 フィールド番号 |
-| list | 文字 | &#x1F858; | 関連づけられた選択リストの名前、または空の文字列 |
-| mandatory | ブール | &#x1F858; | True = 必須入力、 False = 任意 |
-| nonEnterable | ブール | &#x1F858; | True = 表示のみ、 False = 入力可 |
-| nonModifiable | ブール | &#x1F858; | True = 修正不可、False = 修正可 |
+| fieldPtr&#124;tableNum | ポインター, 倍長整数 | &srarr; | フィールドポインタ、またはテーブル番号 |
+| fieldNum | Integer | &srarr; | 第1引数がテーブル番号の場合、 フィールド番号 |
+| list | Text | &harr; | 関連づけられた選択リストの名前、または空の文字列 |
+| mandatory | Boolean | &harr; | True = 必須入力、 False = 任意 |
+| nonEnterable | Boolean | &harr; | True = 表示のみ、 False = 入力可 |
+| nonModifiable | Boolean | &harr; | True = 修正不可、False = 修正可 |
 
 <!-- END REF-->
 

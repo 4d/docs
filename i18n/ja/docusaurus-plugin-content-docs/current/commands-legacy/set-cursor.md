@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET CURSOR.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| cursor | 倍長整数 | &#x1F852; | Mac OS ベースのカーソルリソース番号 |
+| cursor | Integer | &srarr; | Mac OS ベースのカーソルリソース番号 |
 
 <!-- END REF-->
 

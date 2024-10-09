@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PRINT SETTINGS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| typeDial | Entier long | &#x1F852; | Boîte(s) de dialogue à afficher |
+| typeDial | Integer | &srarr; | Boîte(s) de dialogue à afficher |
 
 <!-- END REF-->
 

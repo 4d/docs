@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refImag &#124; nomImag | Inteiro longo, String | &#x1F852; | Número de referência ou nome da imagem da biblioteca de imagens |
+| refImag &#124; nomImag | Inteiro longo, String | &srarr; | Número de referência ou nome da imagem da biblioteca de imagens |
 
 <!-- END REF-->
 

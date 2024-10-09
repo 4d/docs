@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.This.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | オブジェクト | &#x1F850; | カレントの要素 |
+| 戻り値 | Object | &larr; | カレントの要素 |
 
 <!-- END REF-->
 
@@ -30,6 +30,8 @@ displayed_sidebar: docs
 サポートされているコンテキスト下であれば、**This.<*propertyPath*\>** を使用することで、オブジェクト/コレクション要素プロパティあるいはエンティティ属性にアクセスすることができます。例えば、*This.name* あるいは *This.employer.lastName* などは要素あるいはオブジェクト、要素、あるいはエンティティプロパティなどへの有効なパスです。
 
 #### 例題 1 
+
+以下のようなストラクチャーを持つオブジェクトのコレクションについて考えます:
 
 ```undefined
 {  
@@ -53,6 +55,26 @@ displayed_sidebar: docs
 },...
  
 ```
+
+リストボックス内では、各カラムがオブジェクトのどれか一つのプロパティを参照します。参照は直接的に(This.name)、あるいは間接的に(This.employees.length)、あるいは式を通して(*getPicture*)行います。なお式での参照は直接参照することも可能です。リストボックスは以下のようになります:
+
+![](../assets/en/commands/pict3776706.en.png)
+
+*GetPicture* プロジェクトメソッドは**On display detail** イベント中に自動的に実行されます:
+
+```4d
+  //GetPicture メソッド
+ var $0 : Picture
+ If(This.isFemale)
+    $0:=Form.genericFemaleImage
+ Else
+    $0:=Form.genericMaleImage
+ End if
+```
+
+フォームが実行されると、以下のように結果を見ることができます:
+
+![](../assets/en/commands/pict3783169.en.png)
 
 #### 例題 2 
 

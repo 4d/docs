@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.COMPONENT LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| componentsArray | テキスト配列 | &#x1F858; | コンポーネント名 |
+| componentsArray | Text array | &harr; | コンポーネント名 |
 
 <!-- END REF-->
 

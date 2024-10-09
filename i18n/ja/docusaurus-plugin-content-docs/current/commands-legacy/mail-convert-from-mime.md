@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.MAIL Convert from MIME.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| mime | BLOB, テキスト | &#x1F852; | Email in MIME |
-| 戻り値 | オブジェクト | &#x1F850; | Email object |
+| mime | Blob, Text | &srarr; | Email in MIME |
+| 戻り値 | Object | &larr; | Email object |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Select RGB Color.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| corDefeito | Inteiro longo | &#x1F852; | Cor RGB pré-selecionada |
-| mensagem | Alpha | &#x1F852; | Título da janela de seleção |
-| Resultado | Inteiro longo | &#x1F850; | Cor RGB |
+| corDefeito | Integer | &srarr; | Cor RGB pré-selecionada |
+| mensagem | Text | &srarr; | Título da janela de seleção |
+| Resultado | Integer | &larr; | Cor RGB |
 
 <!-- END REF-->
 

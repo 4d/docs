@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.New log file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &#x1F850; | Full pathname of closed log file |
+| Function result | Text | &larr; | Full pathname of closed log file |
 
 <!-- END REF-->
 

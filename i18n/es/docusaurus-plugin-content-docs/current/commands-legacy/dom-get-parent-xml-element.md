@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get parent XML element.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Cadena | &#x1F852; | Referencia del elemento XML |
-| nomElemPadre | Cadena | &#x1F858; | Nombre del elemento XML padre |
-| valorElemPadre | Cadena | &#x1F858; | Valor del elemento XML padre |
-| Resultado | Cadena | &#x1F850; | Referencia del elemento XML padre |
+| elementRef | Text | &srarr; | Referencia del elemento XML |
+| nomElemPadre | Text | &harr; | Nombre del elemento XML padre |
+| valorElemPadre | Text | &harr; | Valor del elemento XML padre |
+| Resultado | Text | &larr; | Referencia del elemento XML padre |
 
 <!-- END REF-->
 

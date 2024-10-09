@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX INSERT COLUMN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | Objeto de formulário | &#x1F852; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| posiçaoCol | Inteiro longo | &#x1F852; | Localização da coluna a inserir |
-| nomeColuna | String | &#x1F852; | Nome do objeto coluna |
-| variavelCol | Array, Campo, Variável, Ponteiro nil | &#x1F852; | Nome de coluna do array ou campo ou variável |
-| nomeCabe | String | &#x1F852; | Nome do objeto título da coluna |
-| varTitulo | Variável inteira, Ponteiro nil | &#x1F852; | Variável título da coluna |
-| nomRodapé | String | &#x1F852; | Nome do rodapé da coluna |
-| nomeVar | Variável, Ponteiro nil | &#x1F852; | Variável do rodapé da coluna |
+| * | Operador | &srarr; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &srarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| posiçaoCol | Integer | &srarr; | Localização da coluna a inserir |
+| nomeColuna | Text | &srarr; | Nome do objeto coluna |
+| variavelCol | Array, Field, Variable, Pointer | &srarr; | Nome de coluna do array ou campo ou variável |
+| nomeCabe | Text | &srarr; | Nome do objeto título da coluna |
+| varTitulo | Integer, Pointer | &srarr; | Variável título da coluna |
+| nomRodapé | Text | &srarr; | Nome do rodapé da coluna |
+| nomeVar | Variable, Pointer | &srarr; | Variável do rodapé da coluna |
 
 <!-- END REF-->
 

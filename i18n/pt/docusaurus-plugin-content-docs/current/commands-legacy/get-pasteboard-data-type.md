@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| assinaturas4D | Array texto | &#x1F858; | Assinaturas 4D de tipos de dados |
-| tiposNativos | Array texto | &#x1F858; | Tipos de dados nativos |
-| nomesFormatos | Array texto | &#x1F858; | Nomes de formato (apenas Windows), strings vazias em MacOS |
+| assinaturas4D | Text array | &harr; | Assinaturas 4D de tipos de dados |
+| tiposNativos | Text array | &harr; | Tipos de dados nativos |
+| nomesFormatos | Text array | &harr; | Nomes de formato (apenas Windows), strings vazias em MacOS |
 
 <!-- END REF-->
 

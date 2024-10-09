@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Process aborted.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Booléen | &#x1F850; | Vrai = le process est sur le point d’être interrompu, Faux = le process n’est pas sur le point d’être interrompu |
+| Résultat | Boolean | &larr; | Vrai = le process est sur le point d’être interrompu, Faux = le process n’est pas sur le point d’être interrompu |
 
 <!-- END REF-->
 

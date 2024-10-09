@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Metodo base de dados On System Event.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| $1 | Inteiro longo | &#x1F858; | Código do evento |
+| $1 | Inteiro longo | &harr; | Código do evento |
 
 <!-- END REF-->
 

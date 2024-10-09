@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.USE CHARACTER SET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| map &#124; * | 文字, 演算子 | &#x1F852; | 使用する文字セット名 (Unicodeモード), または 使用するASCIIマップドキュメント名 (ASCIIモード), または * の場合、デフォルトの文字セット/ASCIIマップにリセット |
-| mapInOut | 倍長整数 | &#x1F852; | 0 = 出力マップ 1 = 入力マップ 省略した場合、出力マップ |
+| map &#124; * | 文字, 演算子 | &srarr; | 使用する文字セット名 (Unicodeモード), または 使用するASCIIマップドキュメント名 (ASCIIモード), または * の場合、デフォルトの文字セット/ASCIIマップにリセット |
+| mapInOut | Integer | &srarr; | 0 = 出力マップ 1 = 入力マップ 省略した場合、出力マップ |
 
 <!-- END REF-->
 

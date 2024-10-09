@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Stringify array.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tab | Tableau texte, Tableau réel, Tableau booléen, Tableau pointeur, Tableau objet | &#x1F852; | Tableau dont le contenu doit être sérialisé |
-| * | Opérateur | &#x1F852; | Améliorer le formatage |
-| Résultat | Texte | &#x1F850; | Chaîne contenant le tableau JSON sérialisé |
+| tab | Text array, Real array, Boolean array, Pointer array, Object array | &srarr; | Tableau dont le contenu doit être sérialisé |
+| * | Opérateur | &srarr; | Améliorer le formatage |
+| Résultat | Text | &larr; | Chaîne contenant le tableau JSON sérialisé |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Abs.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &#x1F852; | Number for which to return the absolute value |
-| Function result | Real | &#x1F850; | Absolute value of number |
+| number | Real | &srarr; | Number for which to return the absolute value |
+| Function result | Real | &larr; | Absolute value of number |
 
 <!-- END REF-->
 

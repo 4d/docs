@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Process aborted.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#x1F850; | True = the process is about to be aborted, False = the process is not about to be aborted |
+| Function result | Boolean | &larr; | True = the process is about to be aborted, False = the process is not about to be aborted |
 
 <!-- END REF-->
 

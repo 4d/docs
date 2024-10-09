@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX MOVED ROW NUMBER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| ancPosition | Entier long | &#x1F858; | Précédente position de la ligne déplacée |
-| nouvPosition | Entier long | &#x1F858; | Nouvelle position de la ligne déplacée |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| ancPosition | Integer | &harr; | Précédente position de la ligne déplacée |
+| nouvPosition | Integer | &harr; | Nouvelle position de la ligne déplacée |
 
 <!-- END REF-->
 

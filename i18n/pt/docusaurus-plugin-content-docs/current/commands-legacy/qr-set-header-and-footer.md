@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET HEADER AND FOOTER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Inteiro longo | &#x1F852; | Referência da área |
-| seletor | Inteiro longo | &#x1F852; | 1= Cabeçalho, 2 = Rodapé |
-| tituloEsq | String | &#x1F852; | Texto a esquerda |
-| tituloCentro | String | &#x1F852; | Texto centralizado |
-| tituloDir | String | &#x1F852; | Texto a direita |
-| altura | Inteiro longo | &#x1F852; | Altura do cabeçalho ou rodap~e |
-| imagem | Imagem | &#x1F852; | Imagem a exibir |
-| alinImag | Inteiro longo | &#x1F852; | Atributo de alinhamento da imagem |
+| area | Integer | &srarr; | Referência da área |
+| seletor | Integer | &srarr; | 1= Cabeçalho, 2 = Rodapé |
+| tituloEsq | Text | &srarr; | Texto a esquerda |
+| tituloCentro | Text | &srarr; | Texto centralizado |
+| tituloDir | Text | &srarr; | Texto a direita |
+| altura | Integer | &srarr; | Altura do cabeçalho ou rodap~e |
+| imagem | Picture | &srarr; | Imagem a exibir |
+| alinImag | Integer | &srarr; | Atributo de alinhamento da imagem |
 
 <!-- END REF-->
 

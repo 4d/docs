@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Frontmost process.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Número do processo para a primeira janela não flutuante |
-| Resultado | Inteiro | &#x1F850; | Número do processo cujas janelas estão em primeiro plano |
+| * | Operador | &srarr; | Número do processo para a primeira janela não flutuante |
+| Resultado | Integer | &larr; | Número do processo cujas janelas estão em primeiro plano |
 
 <!-- END REF-->
 

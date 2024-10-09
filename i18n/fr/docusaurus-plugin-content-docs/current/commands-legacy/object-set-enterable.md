@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET ENTERABLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une table, un champ ou une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * spécifié) ou Table ou Champ ou Variable (si * omis) |
-| saisissable | Booléen, Entier long | &#x1F852; | Booléen : Vrai=saisissable, Faux=non saisissable<br/>Entier long : 0=non saisissable, 1=saisissable, 2=non saisissable non focusable |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une table, un champ ou une variable |
+| objet | any | &srarr; | Nom d'objet (si * spécifié) ou Table ou Champ ou Variable (si * omis) |
+| saisissable | Boolean, Integer | &srarr; | Booléen : Vrai=saisissable, Faux=non saisissable<br/>Entier long : 0=non saisissable, 1=saisissable, 2=non saisissable non focusable |
 
 <!-- END REF-->
 

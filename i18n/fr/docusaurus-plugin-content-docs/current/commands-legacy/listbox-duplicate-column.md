@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) de la colonne à dupliquer |
-| positionCol | Entier long | &#x1F852; | Emplacement de la nouvelle colonne dupliquée |
-| nomCol | Chaîne | &#x1F852; | Nom de la nouvelle colonne |
-| variableCol | Tableau, Champ, Variable, Pointeur nil | &#x1F852; | Nom de la variable tableau de la colonne ou champ ou variable |
-| nomEntête | Chaîne | &#x1F852; | Nom d’objet de l’en-tête de la colonne |
-| varEntête | Variable entier, Pointeur nil | &#x1F852; | Variable d’en-tête de la colonne |
-| nomPied | Chaîne | &#x1F852; | Nom d’objet du pied de la colonne |
-| variablePied | Variable, Pointeur nil | &#x1F852; | Variable du pied de la colonne |
+| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) de la colonne à dupliquer |
+| positionCol | Integer | &srarr; | Emplacement de la nouvelle colonne dupliquée |
+| nomCol | Text | &srarr; | Nom de la nouvelle colonne |
+| variableCol | Array, Field, Variable, Pointer | &srarr; | Nom de la variable tableau de la colonne ou champ ou variable |
+| nomEntête | Text | &srarr; | Nom d’objet de l’en-tête de la colonne |
+| varEntête | Integer, Pointer | &srarr; | Variable d’en-tête de la colonne |
+| nomPied | Text | &srarr; | Nom d’objet du pied de la colonne |
+| variablePied | Variable, Pointer | &srarr; | Variable du pied de la colonne |
 
 <!-- END REF-->
 

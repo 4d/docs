@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Get database parameter.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | テーブル | &#x1F852; | パラメタを取得するテーブル、または 引数が省略された場合デフォルトテーブル |
-| selector | 倍長整数 | &#x1F852; | データベースパラメタコード |
-| stringValue | 文字 | &#x1F858; | パラメタの文字列値 |
-| 戻り値 | 実数 | &#x1F850; | パラメタの現在の値 |
+| aTable | Table | &srarr; | パラメタを取得するテーブル、または 引数が省略された場合デフォルトテーブル |
+| selector | Integer | &srarr; | データベースパラメタコード |
+| stringValue | Text | &harr; | パラメタの文字列値 |
+| 戻り値 | Real | &larr; | パラメタの現在の値 |
 
 <!-- END REF-->
 

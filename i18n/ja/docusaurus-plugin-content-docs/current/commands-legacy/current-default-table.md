@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current default table.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | ポインター | &#x1F850; | デフォルトテーブルへのポインタ |
+| 戻り値 | Pointer | &larr; | デフォルトテーブルへのポインタ |
 
 <!-- END REF-->
 

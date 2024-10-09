@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DOCUMENT PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | 文字 | &#x1F852; | ドキュメント名 またはドキュメントの完全なパス名 |
-| locked | ブール | &#x1F852; | ロックの場合はTrue、アンロックの場合はFalse |
-| invisible | ブール | &#x1F852; | 非表示の場合はTrue、表示の場合はFalse |
-| created on | 日付 | &#x1F852; | 作成日 |
-| created at | 時間 | &#x1F852; | 作成時間 |
-| modified on | 日付 | &#x1F852; | 更新日 |
-| modified at | 時間 | &#x1F852; | 更新時間 |
+| document | Text | &srarr; | ドキュメント名 またはドキュメントの完全なパス名 |
+| locked | Boolean | &srarr; | ロックの場合はTrue、アンロックの場合はFalse |
+| invisible | Boolean | &srarr; | 非表示の場合はTrue、表示の場合はFalse |
+| created on | 日付 | &srarr; | 作成日 |
+| created at | 時間 | &srarr; | 作成時間 |
+| modified on | 日付 | &srarr; | 更新日 |
+| modified at | 時間 | &srarr; | 更新時間 |
 
 <!-- END REF-->
 

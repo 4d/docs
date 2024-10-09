@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Encrypt data file.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaEstrutura | Texto | &#x1F852; | Rota para o arquivo estrutura |
-| rotaDados | Texto | &#x1F852; | Rota de arquivo de dados a criptografar |
-| novaFrasePasse/novaChave | Texto, Objeto | &#x1F852; | Em caso de mudança: novaFrasePasse (texto) ou nova chave de Criptografia (objeto) |
-| arqPasta | Texto | &#x1F852; | Rota da pasta onde os arquivos originais estão armazenados |
-| atualFrasePasse/atualChave | Texto, Objeto | &#x1F852; | frase Passe atual (texto) ou chave de criptografia atual (objeto) |
-| nomeMetodo | Texto | &#x1F852; | Nome de método de chamada 4D |
-| Resultado | Texto | &#x1F850; | Rota completa de pasta onde os arquivos originais estão armazenados |
+| rotaEstrutura | Text | &srarr; | Rota para o arquivo estrutura |
+| rotaDados | Text | &srarr; | Rota de arquivo de dados a criptografar |
+| novaFrasePasse/novaChave | Texto, Objeto | &srarr; | Em caso de mudança: novaFrasePasse (texto) ou nova chave de Criptografia (objeto) |
+| arqPasta | Text | &srarr; | Rota da pasta onde os arquivos originais estão armazenados |
+| atualFrasePasse/atualChave | Texto, Objeto | &srarr; | frase Passe atual (texto) ou chave de criptografia atual (objeto) |
+| nomeMetodo | Text | &srarr; | Nome de método de chamada 4D |
+| Resultado | Text | &larr; | Rota completa de pasta onde os arquivos originais estão armazenados |
 
 <!-- END REF-->
 

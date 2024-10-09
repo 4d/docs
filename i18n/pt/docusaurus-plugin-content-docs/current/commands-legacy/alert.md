@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ALERT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| mensagem | String | &#x1F852; | Mensagem a exibir na caixa de diálogo de alerta |
-| okBotaoTitulo | String | &#x1F852; | Título do botão OK |
+| mensagem | Text | &srarr; | Mensagem a exibir na caixa de diálogo de alerta |
+| okBotaoTitulo | Text | &srarr; | Título do botão OK |
 
 <!-- END REF-->
 

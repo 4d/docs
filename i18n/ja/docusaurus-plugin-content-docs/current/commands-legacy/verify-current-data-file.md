@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| objects | 倍長整数 | &#x1F852; | 検証するオブジェクト |
-| options | 倍長整数 | &#x1F852; | 検証オプション |
-| method | テキスト | &#x1F852; | 4Dコールバックメソッド名 |
-| tablesArray | 倍長整数配列 | &#x1F852; | 検証するテーブル番号 |
-| fieldsArray | 2D整数配列, 2D倍長整数配列, 2D実数配列 | &#x1F852; | 検証するインデックス番号 |
+| objects | Integer | &srarr; | 検証するオブジェクト |
+| options | Integer | &srarr; | 検証オプション |
+| method | Text | &srarr; | 4Dコールバックメソッド名 |
+| tablesArray | Integer array | &srarr; | 検証するテーブル番号 |
+| fieldsArray | 2D Integer array, 2D Integer array, 2D Real array | &srarr; | 検証するインデックス番号 |
 
 <!-- END REF-->
 

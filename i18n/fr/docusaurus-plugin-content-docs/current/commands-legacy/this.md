@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.This.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Résultat | Objet | &#x1F850; | Elément ou objet courant |
+| Résultat | Object | &larr; | Elément ou objet courant |
 
 <!-- END REF-->
 
@@ -28,6 +28,8 @@ Dans tout autre contexte, la commande retourne **Null**.
 Dans les deux contextes où la commande est utilisée, vous accéderez à toutes les propriétés des éléments objet/collection ou tous les attributs d'entités via **This.*<cheminPropriété>***. Par exemple, *This.prénom* ou *This.employeur.nom* sont des chemins de propriétés d'objets, d'éléments ou d'entités (attributs) valides.
 
 #### Exemple 1 
+
+Vous disposez d'une collection d'objets, chacun ayant la structure suivante :
 
 ```undefined
 {  
@@ -51,6 +53,28 @@ Dans les deux contextes où la commande est utilisée, vous accéderez à toutes
 },...
  
 ```
+
+Dans la list box, chaque colonne référence une des propriétés des objets, soit directement (This.name), soit indirectement (This.employees.length), ou encore via une expression (*getPicture*) qui peut être appelée directement. 
+
+La list box est configurée de la manière suivante :
+
+![](../assets/en/commands/pict3776706.en.png)
+
+La méthode projet GetPicture est appelée automatiquement dans l'événement formulaire On Display Detail:
+
+```4d
+  //Méthode GetPicture
+ var $0 : Picture
+ If(This.isFemale)
+    $0:=Form.genericFemaleImage
+ Else
+    $0:=Form.genericMaleImage
+ End if
+```
+
+Lorsque le formulaire est exécuté, vous pouvez visualiser le résultat :
+
+![](../assets/en/commands/pict3783169.en.png)
 
 #### Exemple 2 
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| BLOB | BLOB | &#x1F852; | BLOB del cual obtener información |
-| comprimido | Entero largo | &#x1F858; | 0 = BLOB no está comprimido 1 = BLOB comprimido modo compacto 2 = BLOB comprimido modo rápido |
-| descompTam | Entero largo | &#x1F858; | Tamaño del BLOB (en bytes) cuando no está comprimido |
-| tamañoActual | Entero largo | &#x1F858; | Tamaño actual del BLOB (en bytes) |
+| Blob | Blob | &srarr; | BLOB del cual obtener información |
+| comprimido | Integer | &harr; | 0 = BLOB no está comprimido 1 = BLOB comprimido modo compacto 2 = BLOB comprimido modo rápido |
+| descompTam | Integer | &harr; | Tamaño del BLOB (en bytes) cuando no está comprimido |
+| tamañoActual | Integer | &harr; | Tamaño actual del BLOB (en bytes) |
 
 <!-- END REF-->
 

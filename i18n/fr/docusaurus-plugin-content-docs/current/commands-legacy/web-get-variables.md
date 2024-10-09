@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB GET VARIABLES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tabNoms | Tableau texte | &#x1F858; | Noms des variables du formulaire Web |
-| tabValeurs | Tableau texte | &#x1F858; | Valeurs des variables du formulaire Web |
+| tabNoms | Text array | &harr; | Noms des variables du formulaire Web |
+| tabValeurs | Text array | &harr; | Valeurs des variables du formulaire Web |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WINDOW LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventanas | Array | &#x1F858; | Array de los números de referencia de las ventanas |
-| * | Operador | &#x1F852; | Si se especifica, tiene en cuenta las ventanas flotantes Si se omite, ignora las ventanas flotantes |
+| ventanas | Array | &harr; | Array de los números de referencia de las ventanas |
+| * | Operador | &srarr; | Si se especifica, tiene en cuenta las ventanas flotantes Si se omite, ignora las ventanas flotantes |
 
 <!-- END REF-->
 

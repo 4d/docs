@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Records in table.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#x1F852; | Table de laquelle retourner le nombre total d'enregistrements ou Table par défaut si ce paramètre est omis |
-| Résultat | Entier long | &#x1F850; | Nombre total d'enregistrements dans table |
+| laTable | Table | &srarr; | Table de laquelle retourner le nombre total d'enregistrements ou Table par défaut si ce paramètre est omis |
+| Résultat | Integer | &larr; | Nombre total d'enregistrements dans table |
 
 <!-- END REF-->
 

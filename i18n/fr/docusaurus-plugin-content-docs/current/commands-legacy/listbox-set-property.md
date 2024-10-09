@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET PROPERTY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si passé, objet est un nom d'objet (chaîne). Si omis, objet est une variable. |
-| objet | Objet de formulaire | &#x1F852; | Nom d'objet (si * spécifié) ou Variable (si * est omis) |
-| propriété | Entier long | &#x1F852; | Propriété de list box ou de colonne de list box |
-| valeur | Entier long, Chaîne | &#x1F852; | Valeur de la propriété |
+| * | Opérateur | &srarr; | Si passé, objet est un nom d'objet (chaîne). Si omis, objet est une variable. |
+| objet | any | &srarr; | Nom d'objet (si * spécifié) ou Variable (si * est omis) |
+| propriété | Integer | &srarr; | Propriété de list box ou de colonne de list box |
+| valeur | Integer, Text | &srarr; | Valeur de la propriété |
 
 <!-- END REF-->
 

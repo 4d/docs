@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.UNLOAD RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Tabela | &#x1F852; | Tabela na qual vai descarregar o registro, ou tabela padrão, se omitido |
+| tabela | Table | &srarr; | Tabela na qual vai descarregar o registro, ou tabela padrão, se omitido |
 
 <!-- END REF-->
 

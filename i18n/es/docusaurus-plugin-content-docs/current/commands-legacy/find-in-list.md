@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Find in list.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
-| lista | ListRef, Cadena | &#x1F852; | Número de referencia de la lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
-| valor | Cadena | &#x1F852; | Valor a buscar |
-| alcance | Entero | &#x1F852; | 0=Lista principal, 1=Sublista |
-| arrayElem | Array entero largo | &#x1F858; | - Si se omite el 2do *: array de posiciones de los elementos encontrados - Si se pasa el segundo *: array de números de referencia de  los elementos encontrados |
-| * | Operador | &#x1F852; | - Si se omite: utiliza la posición de los elementos - Si se pasa: utiliza el número de referencia de los elementos |
-| Resultado | Entero largo | &#x1F850; | - Si se omite el 2do *: posición del elemento encontrado - Si se pasa 2do *: número de referencia del elemento encontrado |
+| * | Operador | &srarr; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
+| lista | Integer, Text | &srarr; | Número de referencia de la lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
+| valor | Text | &srarr; | Valor a buscar |
+| alcance | Integer | &srarr; | 0=Lista principal, 1=Sublista |
+| arrayElem | Integer array | &harr; | - Si se omite el 2do *: array de posiciones de los elementos encontrados - Si se pasa el segundo *: array de números de referencia de  los elementos encontrados |
+| * | Operador | &srarr; | - Si se omite: utiliza la posición de los elementos - Si se pasa: utiliza el número de referencia de los elementos |
+| Resultado | Integer | &larr; | - Si se omite el 2do *: posición del elemento encontrado - Si se pasa 2do *: número de referencia del elemento encontrado |
 
 <!-- END REF-->
 

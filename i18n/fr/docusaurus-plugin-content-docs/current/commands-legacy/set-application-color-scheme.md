@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| schemaCouleur | Texte | &#x1F852; | "light", "dark", ou "inherited" |
+| schemaCouleur | Text | &srarr; | "light", "dark", ou "inherited" |
 
 <!-- END REF-->
 

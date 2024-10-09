@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | Objeto de formulario | &#x1F852; | Nombre del objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
-| posCol | Entero largo | &#x1F852; | Ubicación de la nueva columna duplicada |
-| nomCol | Cadena | &#x1F852; | Nombre de la nueva columna |
-| varCol | Array, Campo, Variable, Puntero nulo | &#x1F852; | Nombre de la variable array de la columna o campo o variable |
-| nomEncab | Cadena | &#x1F852; | Nombre del objeto del encabezado de la columna |
-| varEncab | Variable entera, Puntero nulo | &#x1F852; | Variable del encabezado de la columna |
-| nomPie | Cadena | &#x1F852; | Nombre del objeto del pie de la columna |
-| varPie | Variable, Puntero nulo | &#x1F852; | Variable del pie de la columna |
+| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &srarr; | Nombre del objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
+| posCol | Integer | &srarr; | Ubicación de la nueva columna duplicada |
+| nomCol | Text | &srarr; | Nombre de la nueva columna |
+| varCol | Array, Field, Variable, Pointer | &srarr; | Nombre de la variable array de la columna o campo o variable |
+| nomEncab | Text | &srarr; | Nombre del objeto del encabezado de la columna |
+| varEncab | Integer, Pointer | &srarr; | Variable del encabezado de la columna |
+| nomPie | Text | &srarr; | Nombre del objeto del pie de la columna |
+| varPie | Variable, Pointer | &srarr; | Variable del pie de la columna |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current system user.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | String | &#x1F850; | Network name of the system user |
+| Function result | String | &larr; | Network name of the system user |
 
 <!-- END REF-->
 

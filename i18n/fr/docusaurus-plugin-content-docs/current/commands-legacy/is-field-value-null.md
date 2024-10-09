@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is field value Null.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leChamp | Champ | &#x1F852; | Champ à évaluer |
-| Résultat | Booléen | &#x1F850; | Vrai = le champ est NULL, Faux = le champ n'est pas NULL |
+| leField | Field | &srarr; | Champ à évaluer |
+| Résultat | Boolean | &larr; | Vrai = le champ est NULL, Faux = le champ n'est pas NULL |
 
 <!-- END REF-->
 

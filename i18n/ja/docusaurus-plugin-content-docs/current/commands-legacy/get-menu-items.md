@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MENU ITEMS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | 倍長整数, MenuRef | &#x1F852; | メニュー参照またはメニュー番号 |
-| menuTitlesArray | 文字配列 | &#x1F858; | メニュータイトル配列 |
-| menuRefsArray | 文字配列 | &#x1F858; | メニュー参照配列 |
+| menu | Integer, Text | &srarr; | メニュー参照またはメニュー番号 |
+| menuTitlesArray | Text array | &harr; | メニュータイトル配列 |
+| menuRefsArray | Text array | &harr; | メニュー参照配列 |
 
 <!-- END REF-->
 

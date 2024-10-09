@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get XML information.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | String | &#x1F852; | Elemento de referência raiz XML |
-| xmlInfo | Inteiro longo | &#x1F852; | Tipo de informação a conseguir |
-| Resultado | String | &#x1F850; | Valor da informação XML |
+| refElemento | Text | &srarr; | Elemento de referência raiz XML |
+| xmlInfo | Integer | &srarr; | Tipo de informação a conseguir |
+| Resultado | Text | &larr; | Valor da informação XML |
 
 <!-- END REF-->
 

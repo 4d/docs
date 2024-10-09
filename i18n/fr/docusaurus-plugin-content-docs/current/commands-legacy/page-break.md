@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PAGE BREAK.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * &#124; > | &#x1F852; | * Annule l'impression lancée par Imprimer ligne ou > Rend l'impression prioritaire |
+| * &#124; > | &srarr; | * Annule l'impression lancée par Imprimer ligne ou > Rend l'impression prioritaire |
 
 <!-- END REF-->
 

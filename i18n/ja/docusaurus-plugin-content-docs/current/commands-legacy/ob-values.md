@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Values.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | オブジェクト | &#x1F852; | プロパティ値を取得したいオブジェクト |
-| 戻り値 | コレクション | &#x1F850; | プロパティ値の(バリアント型の)コレクション |
+| object | Object | &srarr; | プロパティ値を取得したいオブジェクト |
+| 戻り値 | Collection | &larr; | プロパティ値の(バリアント型の)コレクション |
 
 <!-- END REF-->
 

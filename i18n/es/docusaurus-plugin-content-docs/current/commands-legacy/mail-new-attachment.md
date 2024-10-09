@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.MAIL New attachment.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| valor | Texto, BLOB, Objeto | &#x1F852; | Objeto (4D.File, 4D.ZipFile, 4D.Blob), oRuta del archivo adjunto (texto), oBlob que contiene el archivo adjunto (BLOB) |
-| nombre | Texto | &#x1F852; | Nombre + extensión utilizados por el cliente de correo para designar el archivo adjunto |
-| cid | Texto | &#x1F852; | ID del archivo adjunto (sólo en mensajes HTML), o " " si no se requiere cid |
-| tipo | Texto | &#x1F852; | Valor de del encabezado content-type |
-| disposición | Texto | &#x1F852; | Valor del encabezado content-disposition: "inline" o "attachment". |
-| Resultado | Objeto | &#x1F850; | Objeto adjunto |
+| valor | Text, Blob, Object | &srarr; | Objeto (4D.File, 4D.ZipFile, 4D.Blob), oRuta del archivo adjunto (texto), oBlob que contiene el archivo adjunto (BLOB) |
+| nombre | Text | &srarr; | Nombre + extensión utilizados por el cliente de correo para designar el archivo adjunto |
+| cid | Text | &srarr; | ID del archivo adjunto (sólo en mensajes HTML), o " " si no se requiere cid |
+| tipo | Text | &srarr; | Valor de del encabezado content-type |
+| disposición | Text | &srarr; | Valor del encabezado content-disposition: "inline" o "attachment". |
+| Resultado | Object | &larr; | Objeto adjunto |
 
 <!-- END REF-->
 
