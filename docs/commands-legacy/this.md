@@ -31,6 +31,8 @@ Within supported contexts, you will access object/collection element properties 
 
 #### Example 1 
 
+A collection of objects, each with this structure:
+
 ```undefined
 {  
 "ID": 1234
@@ -53,6 +55,26 @@ Within supported contexts, you will access object/collection element properties 
 },...
  
 ```
+
+In the list box, each column refers to one of the properties of the object, either directly (This.name), indirectly (This.employees.length), or through an expression (*getPicture*) in which can be used directly. The list box looks like:
+
+![](../assets/en/commands/pict3776706.en.png)
+
+The *GetPicture* project method is automatically executed during the **On display detail** event:
+
+```4d
+  //GetPicture Method
+ var $0 : Picture
+ If(This.isFemale)
+    $0:=Form.genericFemaleImage
+ Else
+    $0:=Form.genericMaleImage
+ End if
+```
+
+Once the form is executed, you can see the result:
+
+![](../assets/en/commands/pict3783169.en.png)
 
 #### Example 2 
 

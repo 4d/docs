@@ -48,6 +48,15 @@ displayed_sidebar: docs
 
 #### 例題 
 
+カレントの4D Serverライセンスについての情報を取得したい場合を考えます:
+
+```4d
+ var $obj : Object
+ $obj:=Get license info
+```
+
+*$obj* には例えば、以下のような情報が返されます:
+
 ```undefined
 {
     "name": "4D Server v16 R3",

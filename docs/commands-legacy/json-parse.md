@@ -18,6 +18,35 @@ displayed_sidebar: docs
 
 #### Description 
 
+<!--REF #_command_.JSON Parse.Summary-->The **JSON Parse** command parses the contents of a JSON-formatted string and extracts values that you can store in a 4D field or variable.<!-- END REF--> This command deserializes JSON data; it performs the opposite action of the [JSON Stringify](json-stringify.md) command.
+
+In *jsonString*, pass the JSON-formatted string whose contents you want to parse. This string must be formatted correctly, otherwise a parsing error is generated. **JSON Parse** can therefore be used to validate JSON strings. 
+
+**Note:** If you use pointers, you must call the [JSON Stringify](json-stringify.md) command before calling **JSON Parse**. 
+
+By default, if you omit the *type* parameter, 4D attempts to convert the value obtained into the type of the variable or field used to store the results (if one is defined). Otherwise, 4D attempts to infer its type. You can also force the type interpretation by passing the *type* parameter: pass one of the following constants, available in the *Field and Variable Types* theme:
+
+| Constant      | Type    | Value |
+| ------------- | ------- | ----- |
+| Is Boolean    | Longint | 6     |
+| Is collection | Longint | 42    |
+| Is date       | Longint | 4     |
+| Is longint    | Longint | 9     |
+| Is object     | Longint | 38    |
+| Is real       | Longint | 1     |
+| Is text       | Longint | 2     |
+| Is time       | Longint | 11    |
+
+**Notes:** 
+
+* Real type values must be included in the range ±10.421e±10
+* In text type values, all special characters must be escaped, including quotes (see examples)
+* By default when you use the Is date constant, the command considers that a date string contains a local time and not GMT. You can modify this setting using the Dates inside objects selector of the [SET DATABASE PARAMETER](set-database-parameter.md) command.
+* Starting with 4D v16 R6, if the current date storage setting is "date type", JSON date strings in "YYYY-MM-DD" format are automatically returned as date values by the **JSON Parse** command. For more information on this setting, please refer to the "Use date type instead of ISO date format in objects" option in the *Compatibility page*.
+* Time type values can be returned from numbers in strings. By default, the parsed value is considered a number of seconds.
+
+If you pass the *\** optional parameter and if the *jsonString* parameter represents an object, the returned object contains an additional property named *\_\_symbols* that provides path, line position, and line offset of each property and sub-property of the object. This information can be useful for debugging purposes. The structure of the *\_\_symbols* property is: 
+
 ```undefined
 __symbols:{//object description
    myAtt.mySubAtt...:{ //property path
@@ -26,6 +55,8 @@ __symbols:{//object description
       }
    }
 ```
+
+**Note:** The *\** parameter is ignored if the returned value is not of the object *type*.
 
 #### Example 1 
 
@@ -113,6 +144,8 @@ You want to create a 4D collection from a JSON array:
 
 #### Example 6 
 
+You want to parse the following string and get line position and offset of each property:
+
 ```undefined
 {
     "alpha": 4552,
@@ -127,6 +160,27 @@ You want to create a 4D collection from a JSON array:
         }
     ]
 }
+```
+
+You can write:
+
+```4d
+ var $obInfo : Object
+ $obInfo=JSON Parse("json_string";Is object;*) //* to get the __symbols property
+  //in the returned $obInfo object
+```
+
+The *$obInfo* object contains:
+
+```undefined
+{alpha:4552,
+beta:[{echo:45,delta:text1},{echo:52,golf:text2}],
+__symbols:{alpha:{line:2,offset:4},
+beta:{line:3,offset:4},
+beta[0].echo:{line:5,offset:12},
+beta[0].delta:{line:6,offset:12},
+beta[1].echo:{line:9,offset:12},
+beta[1].golf:{line:10,offset:12}}}
 ```
 
 #### See also 
