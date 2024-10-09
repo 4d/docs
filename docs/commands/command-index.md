@@ -845,7 +845,7 @@ title: Index
 [`OPEN COLOR PICKER`](../commands-legacy/open-color-picker.md)<br/>
 [`OPEN DATA FILE`](../commands-legacy/open-data-file.md)<br/>
 [`OPEN DATABASE`](../commands-legacy/open-database.md)<br/>
-[`Open datastore`](../commands-legacy/open-datastore.md)<br/>
+[`Open datastore`](../commands/open-datastore.md)<br/>
 [`Open document`](../commands-legacy/open-document.md)<br/>
 [`OPEN FONT PICKER`](../commands-legacy/open-font-picker.md)<br/>
 [`Open form window`](../commands-legacy/open-form-window.md)<br/>
@@ -1225,7 +1225,7 @@ title: Index
 [`TEXT TO ARRAY`](../commands-legacy/text-to-array.md)<br/>
 [`TEXT TO BLOB`](../commands-legacy/text-to-blob.md)<br/>
 [`TEXT TO DOCUMENT`](../commands-legacy/text-to-document.md)<br/>
-[`This`](../commands-legacy/this.md)<br/>
+[`This`](../commands/this.md)<br/>
 [`throw`](../commands-legacy/throw.md)<br/>
 [`Tickcount`](../commands-legacy/tickcount.md)<br/>
 [`Time`](../commands-legacy/time.md)<br/>

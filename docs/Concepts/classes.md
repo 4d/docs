@@ -104,20 +104,53 @@ In the various 4D windows (code editor, compiler, debugger, runtime explorer), c
 
 Available classes are accessible from their class stores. Two class stores are available:
 
-
 - [`cs`](../commands/cs.md) for user class store
 - [`4D`](../commands/4d.md) for built-in class store
 
 
-### Examples
+### `cs`
+
+
+<!-- REF #_command_.cs.Syntax -->**cs** : Object<!-- END REF -->
+
+
+<!-- REF #_command_.cs.Params -->
+|Parameter|Type||Description|
+|---|---|---|---|
+|classStore|Object|<-|User class store for the project or component|<!-- END REF -->
+
+The `cs` command <!-- REF #_command_.cs.Summary -->returns the user class store for the current project or component<!-- END REF -->. It returns all user classes [defined](#class-definition) in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
+
+#### Example
+
+You want to create a new instance of an object of `myClass`:
 
 ```4d
-	//to instantiate a user class named myClass
 $instance:=cs.myClass.new()
 ```
 
+### `4D`
+
+<!-- REF #_command_.4D.Syntax -->**4D** : Object <!-- END REF -->
+
+<!-- REF #_command_.4D.Params -->
+|Parameter|Type||Description|
+|---|---|---|---|
+|classStore|Object|<-|4D class store|<!-- END REF -->
+
+The `4D` command <!-- REF #_command_.4D.Summary -->returns the class store for available built-in 4D classes<!-- END REF -->. It provides access to specific APIs such as [CryptoKey](API/CryptoKeyClass.md).
+
+#### Examples
+
+You want to create a new key in the `CryptoKey` class:
+
 ```4d
-	//to list 4D built-in classes
+$key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
+```
+
+You want to list 4D built-in classes:
+
+```4d
  var $keys : collection
  $keys:=OB Keys(4D)
  ALERT("There are "+String($keys.length)+" built-in classes.")

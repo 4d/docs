@@ -204,6 +204,7 @@ module.exports =
 						"commands-legacy/create-data-file",
 						"commands-legacy/data-file",
 						"commands-legacy/drop-remote-user",
+						"commands/ds",
 						"commands-legacy/export-structure-file",
 						"commands-legacy/get-4d-file",
 						"commands-legacy/get-4d-folder",
@@ -219,6 +220,7 @@ module.exports =
 						"commands-legacy/open-administration-window",
 						"commands-legacy/open-data-file",
 						"commands-legacy/open-database",
+						"commands/open-datastore",
 						"commands-legacy/open-runtime-explorer",
 						"commands-legacy/open-security-center",
 						"commands-legacy/open-settings-window",
@@ -901,14 +903,6 @@ module.exports =
 						"commands-legacy/copy-named-selection",
 						"commands-legacy/cut-named-selection",
 						"commands-legacy/use-named-selection"
-					]
-					},
-					{
-					"type": "category",
-					"label": "ORDA - DataStore",
-					"items": [
-						"commands-legacy/ds",
-						"commands-legacy/open-datastore"
 					]
 					},
 					{
