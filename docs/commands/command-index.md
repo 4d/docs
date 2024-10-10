@@ -1206,7 +1206,7 @@ title: Index
 [`Subtotal`](../commands-legacy/subtotal.md)<br/>
 [`Sum`](../commands-legacy/sum.md)<br/>
 [`Sum squares`](../commands-legacy/sum-squares.md)<br/>
-[`Super`](../commands-legacy/super.md)<br/>
+[`Super`](super.md)<br/>
 [`SUSPEND TRANSACTION`](../commands-legacy/suspend-transaction.md)<br/>
 [`SVG EXPORT TO PICTURE`](../commands-legacy/svg-export-to-picture.md)<br/>
 [`SVG Find element ID by coordinates`](../commands-legacy/svg-find-element-id-by-coordinates.md)<br/>
