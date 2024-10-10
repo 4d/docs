@@ -1321,8 +1321,8 @@ title: Index
 [`WEB SEND HTTP REDIRECT`](../commands-legacy/web-send-http-redirect.md)<br/>
 [`WEB SEND RAW DATA`](../commands-legacy/web-send-raw-data.md)<br/>
 [`WEB SEND TEXT`](../commands-legacy/web-send-text.md)<br/>
-[`WEB Server`](../commands-legacy/web-server.md)<br/>
-[`WEB Server list`](../commands-legacy/web-server-list.md)<br/>
+[`WEB Server`](web-server.md)<br/>
+[`WEB Server list`](web-server-list.md)<br/>
 [`WEB SERVICE AUTHENTICATE`](../commands-legacy/web-service-authenticate.md)<br/>
 [`WEB SERVICE CALL`](../commands-legacy/web-service-call.md)<br/>
 [`WEB SERVICE Get info`](../commands-legacy/web-service-get-info.md)<br/>
