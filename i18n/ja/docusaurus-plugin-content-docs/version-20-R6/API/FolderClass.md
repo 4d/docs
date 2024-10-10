@@ -71,7 +71,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 | path           | Text                      |              ->             | フォルダーパス                                                           |
 | folderConstant | Integer                   |              ->             | 4Dフォルダー定数                                                         |
 | pathType       | Integer                   |              ->             | `fk posix path` (デフォルト) または `fk platform path` |
-| -              |                           |              ->             | ホストデータベースのフォルダーを返すには \* を渡します                                     |
+| \*             |                           |              ->             | ホストデータベースのフォルダーを返すには \* を渡します                                     |
 | 戻り値            | 4D.Folder | <- | 新規フォルダーオブジェクト                                                     |
 
 <!-- END REF -->
