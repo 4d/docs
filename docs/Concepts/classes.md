@@ -651,28 +651,6 @@ $val:=$o.f() //8
 For more details, see the [`This`](../commands/this.md) command description. 
 
 
-### `This`
-
-
-<!-- REF #_command_.This.Syntax -->**This** : Object<!-- END REF -->
-
-<!-- REF #_command_.This.Params -->
-|Parameter|Type||Description|  
-|---|---|---|---|
-|Result|Object|<-|Current object|
-<!-- END REF -->
-
-The `This` keyword <!-- REF #_command_.This.Summary -->returns a reference to the currently processed object<!-- END REF -->.
-
-In most cases, the value of `This` is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called.
-
-When a [formula](../API/FunctionClass.md) is called as a member method of an object, its `This` is set to the object the method is called on. For example:
-
-```4d
-$o:=New object("prop";42;"f";Formula(This.prop))
-$val:=$o.f() //42
-```
-
 
 ## Class commands
 

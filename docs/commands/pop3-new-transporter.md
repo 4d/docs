@@ -65,5 +65,3 @@ The function returns a [**POP3 transporter object**](../API/POP3TransporterClass
     ALERT("An error occurred receiving the mail: "+$status.statusText)
  End if
 ```
-
-<!-- END REF -->
