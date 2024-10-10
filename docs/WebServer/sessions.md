@@ -63,7 +63,7 @@ Creating a web session for a REST request may require that a licence is availabl
 
 :::
 
-The `Session` object of the current session can then be accessed through the [`Session`](API/SessionClass.md#session) command in the code of any web processes.
+The `Session` object of the current session can then be accessed through the [`Session`](command/session.md) command in the code of any web processes.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
@@ -88,7 +88,7 @@ The lifespan of an inactive cookie is 60 minutes by default, which means that th
 
 This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../commands/open-datastore.md) command. 
 
-When a web session is closed, if the [`Session`](API/SessionClass.md#session) command is called afterwards:
+When a web session is closed, if the [`Session`](command/session.md) command is called afterwards:
 
 - the `Session` object does not contain privileges (it is a Guest session)
 - the [`.storage`](API/SessionClass.md#storage) property is empty

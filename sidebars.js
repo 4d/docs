@@ -1188,7 +1188,7 @@ module.exports =
 						"commands-legacy/process-state",
 						"commands-legacy/register-client",
 						"commands-legacy/resume-process",
-						"commands-legacy/session",
+						"commands/session",
 						"commands-legacy/session-storage-by-id",
 						"commands-legacy/unregister-client"
 					]

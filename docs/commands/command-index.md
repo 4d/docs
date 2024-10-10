@@ -1065,7 +1065,7 @@ title: Index
 [`SEND RECORD`](../commands-legacy/send-record.md)<br/>
 [`SEND VARIABLE`](../commands-legacy/send-variable.md)<br/>
 [`Sequence number`](../commands-legacy/sequence-number.md)<br/>
-[`Session`](../commands-legacy/session.md)<br/>
+[`Session`](session.md)<br/>
 [`Session storage by ID`](../commands-legacy/session-storage-by-id.md)<br/>
 [`SET ABOUT`](../commands-legacy/set-about.md)<br/>
 [`SET ALLOWED METHODS`](../commands-legacy/set-allowed-methods.md)<br/>

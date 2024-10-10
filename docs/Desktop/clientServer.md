@@ -89,7 +89,7 @@ However, you need to pay attention to the following behavior differences compare
 
 ## Remote user sessions
 
-On the server, the [`Session`](../API/SessionClass.md#session) command returns a `session` object describing the current user session. This object is handled through the functions and properties of the [`Session` class](../API/SessionClass.md).
+On the server, the [`Session`](../command/session.md) command returns a `session` object describing the current user session. This object is handled through the functions and properties of the [`Session` class](../API/SessionClass.md).
 
 
 ### Usage
