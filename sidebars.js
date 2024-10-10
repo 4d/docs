@@ -515,8 +515,8 @@ module.exports =
 					"items": [
 						"commands/file",
 						"commands/folder",
-						"commands-legacy/zip-create-archive",
-						"commands-legacy/zip-read-archive"
+						"commands/zip-create-archive",
+						"commands/zip-read-archive"
 					]
 					},
 					{
@@ -1787,8 +1787,8 @@ module.exports =
 						"commands-legacy/web-send-http-redirect",
 						"commands-legacy/web-send-raw-data",
 						"commands-legacy/web-send-text",
-						"commands-legacy/web-server",
-						"commands-legacy/web-server-list",
+						"commands/web-server",
+						"commands/web-server-list",
 						"commands-legacy/web-set-home-page",
 						"commands-legacy/web-set-http-header",
 						"commands-legacy/web-set-option",

@@ -1433,5 +1433,5 @@ title: Index
 
 <a id="Z"><b>Z</b></a>
 
-[`ZIP Create archive`](../commands-legacy/zip-create-archive.md)<br/>
-[`ZIP Read archive`](../commands-legacy/zip-read-archive.md)<br/>
+[`ZIP Create archive`](zip-create-archive.md)<br/>
+[`ZIP Read archive`](zip-read-archive.md)<br/>
