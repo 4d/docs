@@ -155,11 +155,11 @@ Si no se especifica ninguna página de inicio por defecto, se llama al método b
 
 ## Activar CORS
 
-| Puede ajustarse con           | Nombre                                                                             | Comentarios                                                                       |
-| ----------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| objeto webServer              | [`CORSEnabled`](API/WebServerClass.md#corsenabled)                                 | Booleano, true para activar CORS (False por defecto)           |
-| `WEB SET OPTION`              | `Web CORS enabled`                                                                 | 0 (desactivado, por defecto) o 1 (activado) |
-| Caja de diálogo de parámetros | [Options (II) page/Enable CORS](../settings/web.md#enable-cors) | Sin marcar por defecto                                                            |
+| Puede ajustarse con           | Nombre                                                                                  | Comentarios                                                                       |
+| ----------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| objeto webServer              | [`CORSEnabled`](API/WebServerClass.md#corsenabled)                                      | Booleano, true para activar CORS (False por defecto)           |
+| `WEB SET OPTION`              | `Web CORS enabled`                                                                      | 0 (desactivado, por defecto) o 1 (activado) |
+| Caja de diálogo de parámetros | [Página Opciones (II) /Activar CORS](../settings/web.md#enable-cors) | Sin marcar por defecto                                                            |
 
 El servidor web 4D implementa el cross-origin resource sharing (CORS) para permitir que páginas web específicas servidas desde otro dominio accedan a los recursos de la aplicación web actual a través de llamadas XHR, por ejemplo, utilizando REST. Por razones de seguridad, las peticiones "cross-domain" están prohibidas por defecto a nivel del navegador. Cuando está habilitado, las llamadas XHR (por ejemplo, peticiones REST) de páginas web fuera del dominio pueden ser permitidas en su aplicación (necesita definir la lista de direcciones permitidas en la lista de dominios CORS, ver Parámetros CORS más adelante). En este caso, si un dominio o un método no autorizado envía una petición cross-site, se rechaza con una respuesta de error "403 - prohibido".
 
@@ -244,11 +244,11 @@ Pasa el tamaño expresado en bytes como valor. Por defecto, el umbral de compres
 
 ## Puerto HTTP
 
-| Puede ajustarse con           | Nombre                                                       | Comentarios |
-| ----------------------------- | ------------------------------------------------------------ | ----------- |
-| objeto webServer              | [`HTTPPort`](API/WebServerClass.md#httpport)                 | number      |
-| `WEB SET OPTION`              | `Web port ID`                                                |             |
-| Caja de diálogo de parámetros | [Configuration page/HTTP Port](../settings/web.md#http-port) |             |
+| Puede ajustarse con           | Nombre                                                           | Comentarios |
+| ----------------------------- | ---------------------------------------------------------------- | ----------- |
+| objeto webServer              | [`HTTPPort`](API/WebServerClass.md#httpport)                     | number      |
+| `WEB SET OPTION`              | `Web port ID`                                                    |             |
+| Caja de diálogo de parámetros | [Página Configuración/Puerto HTTP](../settings/web.md#http-port) |             |
 
 Número de puerto IP (TCP) de escucha para HTTP. Por defecto, 4D publica una aplicación web en el puerto web HTTP normal (puerto TCP), que es el puerto 80. Si ese puerto ya es utilizado por otro servicio web, debe cambiar el puerto HTTP utilizado por 4D para esta base de datos.
 
@@ -271,11 +271,11 @@ Activación del método HTTP TRACE en el servidor web 4D. Por razones de segurid
 
 ## Puerto HTTPS
 
-| Puede ajustarse con           | Nombre                                                         | Comentarios |
-| ----------------------------- | -------------------------------------------------------------- | ----------- |
-| objeto webServer              | [`HTTPSPort`](API/WebServerClass.md#httpsport)                 | number      |
-| `WEB SET OPTION`              | `Web HTTPS port ID`                                            |             |
-| Caja de diálogo de parámetros | [Configuration page/HTTPS Port](../settings/web.md#https-port) |             |
+| Puede ajustarse con           | Nombre                                                            | Comentarios |
+| ----------------------------- | ----------------------------------------------------------------- | ----------- |
+| objeto webServer              | [`HTTPSPort`](API/WebServerClass.md#httpsport)                    | number      |
+| `WEB SET OPTION`              | `Web HTTPS port ID`                                               |             |
+| Caja de diálogo de parámetros | [Página Configuración/Puerto HTTP](../settings/web.md#https-port) |             |
 
 Número de puerto IP de escucha para las conexiones HTTPS vía TLS. Por defecto, el valor es 443 (valor estándar). Ver también [HTTP Port](#http-port) para obtener información sobre los números de puerto.
 
@@ -304,11 +304,11 @@ Por defecto: 480 minutos (pase 0 para restaurar el valor por defecto)
 
 ## Dirección IP de escucha
 
-| Puede ajustarse con           | Nombre                                                         | Comentarios |
-| ----------------------------- | -------------------------------------------------------------- | ----------- |
-| objeto webServer              | [`IPAddressToListen`](API/WebServerClass.md#ipaddresstolisten) |             |
-| `WEB SET OPTION`              | `Web IP address to listen`                                     |             |
-| Caja de diálogo de parámetros | [Configuration page/IP Address](../settings/web.md#ip-address) | Menú popup  |
+| Puede ajustarse con           | Nombre                                                             | Comentarios |
+| ----------------------------- | ------------------------------------------------------------------ | ----------- |
+| objeto webServer              | [`IPAddressToListen`](API/WebServerClass.md#ipaddresstolisten)     |             |
+| `WEB SET OPTION`              | `Web IP address to listen`                                         |             |
+| Caja de diálogo de parámetros | [Página Configuración/Dirección IP](../settings/web.md#ip-address) | Menú popup  |
 
 Dirección IP (cadenas) en la que el servidor web 4D recibirá las peticiones HTTP (4D local y 4D Server).
 
@@ -452,9 +452,9 @@ Verdadero si PFS está disponible en el servidor web (ver la sección [TLS](Admi
 
 ## Reutilizar los contextos temporales (en modo remoto)
 
-| Puede ajustarse con           | Nombre                                                                                                      | Comentarios |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------- |
-| Caja de diálogo de parámetros | [Options (I) page/Reuse Temporary Contexts](../settings/web.md#reuse-temporary-contexts) |             |
+| Puede ajustarse con           | Nombre                                                                                                                | Comentarios |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------- |
+| Caja de diálogo de parámetros | [Página Opciones (I)/Reutilizar contextos temporales](../settings/web.md#reuse-temporary-contexts) |             |
 
 > Esta opción sólo está disponible cuando la opción **Sin sesiones** está marcada.
 
@@ -588,9 +588,9 @@ El valor del atributo `Secure` de la cookie de sesión se define automáticament
 
 ## Utilizar procesos apropiativos
 
-| Puede ajustarse con           | Nombre                                                                                                      | Comentarios |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------- |
-| Caja de diálogo de parámetros | [Options (I) page/Use Preemptive Processes](../settings/web.md#use-preemptive-processes) |             |
+| Puede ajustarse con           | Nombre                                                                                                           | Comentarios |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------- |
+| Caja de diálogo de parámetros | [Página Opciones (I)/Usar procesos apropiativos](../settings/web.md#use-preemptive-processes) |             |
 
 Esta opción activa el modo apropiativo para el código del servidor web de su aplicación cuando se selecciona la opción **Sin sesiones** (el modo apropiativo siempre está activado con **sesiones escalables**). Cuando esta opción está marcada en este contexto, el compilador 4D evaluará automáticamente la propiedad hilo seguro de cada pieza de [código relacionado con la web](preemptiveWeb.md#thread-safety-of-4d-web-code) y devolverá errores en caso de incompatibi
 

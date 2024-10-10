@@ -127,9 +127,9 @@ Se proponen dos opciones de objetivo. El resultado depende del procesador de la 
 
 In projects converted from 4D versions prior to 20 R7, additional compilation options are available:
 
-- **Compilation Path**
+- **Ruta de compilación**
 - **Default typing**
-- **Compiler Methods for...**
+- **Métodos Compilador para...**
 
 These options are only maintained for compatibility with legacy code. For more information, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#compiler-settings).
 
@@ -142,7 +142,7 @@ In converted projects, it is recommended to [enable the direct typing mode](#ena
 
 :::info
 
-The direct typing mode is optional in converted projects only. It is natively used in projects created with 4D 20 R7 and higher.
+El modo de escritura directa es opcional sólo en proyectos convertidos. Se utiliza nativamente en proyectos creados con 4D 20 R7 y superiores.
 
 :::
 

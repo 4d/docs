@@ -118,80 +118,80 @@ myCol:=myCol.push("new value") //exibir novo valor na list box
 
 Propriedades compatíveis dependem do tipo de list box.
 
-| Propriedade                                                                                  | List box array | List box seleção | List box coleção ou entity selection |
-| -------------------------------------------------------------------------------------------- | -------------- | ---------------- | ------------------------------------ |
-| [Cor de fundo alternativa](properties_BackgroundAndBorder.md#alternate-background-color)     | X              | X                | X                                    |
-| [Background Color](properties_BackgroundAndBorder.md#background-color--fill-color)           | X              | X                | X                                    |
-| [Negrito](properties_Text.md#bold)                                                           | X              | X                | X                                    |
-| [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) |                | X                | X                                    |
-| [Border Line Style](properties_BackgroundAndBorder.md#border-line-style)                     | X              | X                | X                                    |
-| [Bottom](properties_CoordinatesAndSizing.md#bottom)                                          | X              | X                | X                                    |
-| [Class](properties_Object.md#css-class)                                                      | X              | X                | X                                    |
-| [Collection or entity selection](properties_Object.md#collection-or-entity-selection)        |                | X                | X                                    |
-| [Column Auto-Resizing](properties_ResizingOptions.md#column-auto-resizing)                   | X              | X                | X                                    |
-| [Current item](properties_DataSource.md#current-item)                                        |                |                  | X                                    |
-| [Current item position](properties_DataSource.md#current-item-position)                      |                |                  | X                                    |
-| [Data Source](properties_Object.md#data-source)                                              | X              | X                | X                                    |
-| [Detail Form Name](properties_ListBox.md#detail-form-name)                                   |                | X                |                                      |
-| [Display Headers](properties_Headers.md#display-headers)                                     | X              | X                | X                                    |
-| [Display Footers](properties_Footers.md#display-footers)                                     | X              | X                | X                                    |
-| [Double-click on row](properties_ListBox.md#double-click-on-row)                             |                | X                |                                      |
-| [Draggable](properties_Action.md#droppable)                                                  | X              | X                | X                                    |
-| [Droppable](properties_Action.md#droppable)                                                  | X              | X                | X                                    |
-| [Focusable](properties_Entry.md#focusable)                                                   | X              | X                | X                                    |
-| [Font](properties_Text.md#font)                                                              | X              | X                | X                                    |
-| [Font Color](properties_Text.md#font_color)                                                  | X              | X                | X                                    |
-| [Font Color Expression](properties_Text.md#font-color-expression)                            |                | X                | X                                    |
-| [Font Size](properties_Text.md#font-size)                                                    | X              | X                | X                                    |
-| [Height (list box)](properties_CoordinatesAndSizing.md#height)            | X              | X                | X                                    |
-| [Height (headers)](properties_Headers.md#height)                          | X              | X                | X                                    |
-| [Height (footers)](properties_Footers.md#height)                          | X              | X                | X                                    |
-| [Hide extra blank rows](properties_BackgroundAndBorder.md#hide-extra-blank-rows)             | X              | X                | X                                    |
-| [Ocultar retângulo de foco](properties_Appearance.md#hide-focus-rectangle)                   | X              | X                | X                                    |
-| [Hide selection highlight](properties_Appearance.md#hide-selection-highlight)                | X              | X                | X                                    |
-| [Hierarchical List Box](properties_Object.md#hierarchical-list-box)                          | X              |                  |                                      |
-| [Highlight Set](properties_ListBox.md#highlight-set)                                         |                | X                |                                      |
-| [Horizontal Alignment](properties_Text.md#horizontal-alignment)                              | X              | X                | X                                    |
-| [Horizontal Line Color](properties_Gridlines.md#horizontal-line-color)                       | X              | X                | X                                    |
-| [Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding)                  | X              | X                | X                                    |
-| [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar)                      | X              | X                | X                                    |
-| [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing)                         | X              | X                | X                                    |
-| [Italic](properties_Text.md#italic)                                                          | X              | X                | X                                    |
-| [Left](properties_CoordinatesAndSizing.md#left)                                              | X              | X                | X                                    |
-| [Master Table](properties_DataSource.md#table)                                               |                | X                |                                      |
-| [Meta info expression](properties_Text.md#meta-info-expression)                              |                |                  | X                                    |
-| [Method](properties_Action.md#method)                                                        | X              | X                | X                                    |
-| [Movable Rows](properties_Action.md#movable-rows)                                            | X              |                  |                                      |
-| [Named Selection](properties_DataSource.md#selectionName)                                    |                | X                |                                      |
-| [Number of Columns](properties_ListBox.md#number-of-columns)                                 | X              | X                | X                                    |
-| [Number of Locked Columns](properties_ListBox.md#number-of-locked-columns)                   | X              | X                | X                                    |
-| [Number of Static Columns](properties_ListBox.md#number-of-static-columns)                   | X              | X                | X                                    |
-| [Object Name](properties_Object.md#object-name)                                              | X              | X                | X                                    |
-| [Right](properties_CoordinatesAndSizing.md#right)                                            | X              | X                | X                                    |
-| [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array)   | X              |                  |                                      |
-| [Row Control Array](properties_ListBox.md#row-control-array)                                 | X              |                  |                                      |
-| [Row Font Color Array](properties_Text.md#row-font-color-array)                              | X              |                  |                                      |
-| [Row Height](properties_CoordinatesAndSizing.md#row-height)                                  | X              |                  |                                      |
-| [Row Height Array](properties_CoordinatesAndSizing.md#row-height-array)                      | X              |                  |                                      |
-| [Row Style Array](properties_Text.md#row-style-array)                                        | X              |                  |                                      |
-| [Selected Items](properties_DataSource.md#selected-items)                                    |                |                  | X                                    |
-| [Selection Mode](properties_ListBox.md#selection-mode)                                       | X              | X                | X                                    |
-| [Single-Click Edit](properties_Entry.md#single-click-edit)                                   | X              | X                | X                                    |
-| [Sortable](properties_Action.md#sortable)                                                    | X              | X                | X                                    |
-| [Standard action](properties_Action.md#standard-action)                                      | X              |                  |                                      |
-| [Style Expression](properties_Text.md#style-expression)                                      |                | X                | X                                    |
-| [Top](properties_CoordinatesAndSizing.md#top)                                                | X              | X                | X                                    |
-| [Transparent](properties_BackgroundAndBorder.md#transparent)                                 | X              | X                | X                                    |
-| [Type](properties_Object.md#type)                                                            | X              | X                | X                                    |
-| [Underline](properties_Text.md#underline)                                                    | X              | X                | X                                    |
-| [Variable or Expression](properties_Object.md#variable-or-expression)                        | X              | X                |                                      |
-| [Vertical Alignment](properties_Text.md#vertical-alignment)                                  | X              | X                | X                                    |
-| [Vertical Line Color](properties_Gridlines.md#vertical-line-color)                           | X              | X                | X                                    |
-| [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding)                      | X              | X                | X                                    |
-| [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar)                          | X              | X                | X                                    |
-| [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing)                             | X              | X                | X                                    |
-| [Visibility](properties_Display.md#visibility)                                               | X              | X                | X                                    |
-| [Width](properties_CoordinatesAndSizing.md#width)                                            | X              | X                | X                                    |
+| Propriedade                                                                                | List box array | List box seleção | List box coleção ou entity selection |
+| ------------------------------------------------------------------------------------------ | -------------- | ---------------- | ------------------------------------ |
+| [Cor de fundo alternativa](properties_BackgroundAndBorder.md#alternate-background-color)   | X              | X                | X                                    |
+| [Background Color](properties_BackgroundAndBorder.md#background-color--fill-color)         | X              | X                | X                                    |
+| [Negrito](properties_Text.md#bold)                                                         | X              | X                | X                                    |
+| [Expressão de cor de fundo](properties_BackgroundAndBorder.md#background-color-expression) |                | X                | X                                    |
+| [Estilo da linha de borda](properties_BackgroundAndBorder.md#border-line-style)            | X              | X                | X                                    |
+| [Inferior](properties_CoordinatesAndSizing.md#bottom)                                      | X              | X                | X                                    |
+| [Classe](properties_Object.md#css-class)                                                   | X              | X                | X                                    |
+| [Collection or entity selection](properties_Object.md#collection-or-entity-selection)      |                | X                | X                                    |
+| [Column Auto-Resizing](properties_ResizingOptions.md#column-auto-resizing)                 | X              | X                | X                                    |
+| [Current item](properties_DataSource.md#current-item)                                      |                |                  | X                                    |
+| [Current item position](properties_DataSource.md#current-item-position)                    |                |                  | X                                    |
+| [Data Source](properties_Object.md#data-source)                                            | X              | X                | X                                    |
+| [Detail Form Name](properties_ListBox.md#detail-form-name)                                 |                | X                |                                      |
+| [Display Headers](properties_Headers.md#display-headers)                                   | X              | X                | X                                    |
+| [Display Footers](properties_Footers.md#display-footers)                                   | X              | X                | X                                    |
+| [Clique duas vezes na linha](properties_ListBox.md#double-click-on-row)                    |                | X                |                                      |
+| [Draggable](properties_Action.md#droppable)                                                | X              | X                | X                                    |
+| [Droppable](properties_Action.md#droppable)                                                | X              | X                | X                                    |
+| [Focusable](properties_Entry.md#focusable)                                                 | X              | X                | X                                    |
+| [Font](properties_Text.md#font)                                                            | X              | X                | X                                    |
+| [Font Color](properties_Text.md#font_color)                                                | X              | X                | X                                    |
+| [Font Color Expression](properties_Text.md#font-color-expression)                          |                | X                | X                                    |
+| [Font Size](properties_Text.md#font-size)                                                  | X              | X                | X                                    |
+| [Height (list box)](properties_CoordinatesAndSizing.md#height)          | X              | X                | X                                    |
+| [Height (headers)](properties_Headers.md#height)                        | X              | X                | X                                    |
+| [Height (footers)](properties_Footers.md#height)                        | X              | X                | X                                    |
+| [Hide extra blank rows](properties_BackgroundAndBorder.md#hide-extra-blank-rows)           | X              | X                | X                                    |
+| [Ocultar retângulo de foco](properties_Appearance.md#hide-focus-rectangle)                 | X              | X                | X                                    |
+| [Hide selection highlight](properties_Appearance.md#hide-selection-highlight)              | X              | X                | X                                    |
+| [Hierarchical List Box](properties_Object.md#hierarchical-list-box)                        | X              |                  |                                      |
+| [Highlight Set](properties_ListBox.md#highlight-set)                                       |                | X                |                                      |
+| [Horizontal Alignment](properties_Text.md#horizontal-alignment)                            | X              | X                | X                                    |
+| [Horizontal Line Color](properties_Gridlines.md#horizontal-line-color)                     | X              | X                | X                                    |
+| [Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding)                | X              | X                | X                                    |
+| [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar)                    | X              | X                | X                                    |
+| [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing)                       | X              | X                | X                                    |
+| [Italic](properties_Text.md#italic)                                                        | X              | X                | X                                    |
+| [Left](properties_CoordinatesAndSizing.md#left)                                            | X              | X                | X                                    |
+| [Master Table](properties_DataSource.md#table)                                             |                | X                |                                      |
+| [Meta info expression](properties_Text.md#meta-info-expression)                            |                |                  | X                                    |
+| [Method](properties_Action.md#method)                                                      | X              | X                | X                                    |
+| [Movable Rows](properties_Action.md#movable-rows)                                          | X              |                  |                                      |
+| [Named Selection](properties_DataSource.md#selectionName)                                  |                | X                |                                      |
+| [Number of Columns](properties_ListBox.md#number-of-columns)                               | X              | X                | X                                    |
+| [Number of Locked Columns](properties_ListBox.md#number-of-locked-columns)                 | X              | X                | X                                    |
+| [Number of Static Columns](properties_ListBox.md#number-of-static-columns)                 | X              | X                | X                                    |
+| [Object Name](properties_Object.md#object-name)                                            | X              | X                | X                                    |
+| [Right](properties_CoordinatesAndSizing.md#right)                                          | X              | X                | X                                    |
+| [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) | X              |                  |                                      |
+| [Row Control Array](properties_ListBox.md#row-control-array)                               | X              |                  |                                      |
+| [Row Font Color Array](properties_Text.md#row-font-color-array)                            | X              |                  |                                      |
+| [Row Height](properties_CoordinatesAndSizing.md#row-height)                                | X              |                  |                                      |
+| [Row Height Array](properties_CoordinatesAndSizing.md#row-height-array)                    | X              |                  |                                      |
+| [Row Style Array](properties_Text.md#row-style-array)                                      | X              |                  |                                      |
+| [Selected Items](properties_DataSource.md#selected-items)                                  |                |                  | X                                    |
+| [Selection Mode](properties_ListBox.md#selection-mode)                                     | X              | X                | X                                    |
+| [Single-Click Edit](properties_Entry.md#single-click-edit)                                 | X              | X                | X                                    |
+| [Sortable](properties_Action.md#sortable)                                                  | X              | X                | X                                    |
+| [Standard action](properties_Action.md#standard-action)                                    | X              |                  |                                      |
+| [Style Expression](properties_Text.md#style-expression)                                    |                | X                | X                                    |
+| [Top](properties_CoordinatesAndSizing.md#top)                                              | X              | X                | X                                    |
+| [Transparent](properties_BackgroundAndBorder.md#transparent)                               | X              | X                | X                                    |
+| [Type](properties_Object.md#type)                                                          | X              | X                | X                                    |
+| [Underline](properties_Text.md#underline)                                                  | X              | X                | X                                    |
+| [Variable or Expression](properties_Object.md#variable-or-expression)                      | X              | X                |                                      |
+| [Vertical Alignment](properties_Text.md#vertical-alignment)                                | X              | X                | X                                    |
+| [Vertical Line Color](properties_Gridlines.md#vertical-line-color)                         | X              | X                | X                                    |
+| [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding)                    | X              | X                | X                                    |
+| [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar)                        | X              | X                | X                                    |
+| [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing)                           | X              | X                | X                                    |
+| [Visibility](properties_Display.md#visibility)                                             | X              | X                | X                                    |
+| [Width](properties_CoordinatesAndSizing.md#width)                                          | X              | X                | X                                    |
 
 > Colunas list box, cabeçalhos e rodapés suportam propriedades específicas.
 
@@ -633,12 +633,12 @@ Para restaurar a aparência original da list box, é possível:
 
 Dependendo do tipo de list box, pode usar diferentes propriedades para personalizar cores de linha, estilos e exibição:
 
-| Propriedade     | List box array                                                                             | List box seleção                                                                             | List box coleção ou entity selection                                                                                                                       |
-| --------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Cor de fundo    | [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) | [Expresión color de fondo](properties_BackgroundAndBorder.md#background-color-expression) o [Meta info expresión](properties_Text.md#meta-info-expression) |
-| Cor de fundo    | [Row Font Color Array](properties_Text.md#row-font-color-array)                            | [Font Color Expression](properties_Text.md#font-color-expression)                            | [Expresión color de fuente](properties_Text.md#font-color-expression) o [Meta info expression](properties_Text.md#meta-info-expression)                    |
-| Estilo de letra | [Row Style Array](properties_Text.md#row-style-array)                                      | [Style Expression](properties_Text.md#style-expression)                                      | [Expresión de estilo](properties_Text.md#style-expression) o [Expresión meta info](properties_Text.md#meta-info-expression)                                |
-| Visualização    | [Row Control Array](properties_ListBox.md#row-control-array)                               | -                                                                                            | -                                                                                                                                                          |
+| Propriedade     | List box array                                                                             | List box seleção                                                                           | List box coleção ou entity selection                                                                                                                       |
+| --------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cor de fundo    | [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) | [Expressão de cor de fundo](properties_BackgroundAndBorder.md#background-color-expression) | [Expresión color de fondo](properties_BackgroundAndBorder.md#background-color-expression) o [Meta info expresión](properties_Text.md#meta-info-expression) |
+| Cor de fundo    | [Row Font Color Array](properties_Text.md#row-font-color-array)                            | [Font Color Expression](properties_Text.md#font-color-expression)                          | [Expresión color de fuente](properties_Text.md#font-color-expression) o [Meta info expression](properties_Text.md#meta-info-expression)                    |
+| Estilo de letra | [Row Style Array](properties_Text.md#row-style-array)                                      | [Style Expression](properties_Text.md#style-expression)                                    | [Expresión de estilo](properties_Text.md#style-expression) o [Expresión meta info](properties_Text.md#meta-info-expression)                                |
+| Visualização    | [Row Control Array](properties_ListBox.md#row-control-array)                               | -                                                                                          | -                                                                                                                                                          |
 
 ## Imprimir list boxes
 
@@ -709,7 +709,7 @@ Exemplo: dado uma list box cujas primeiras colunas contém País, região, cidad
 
 ![](../assets/en/FormObjects/listbox_hierarchy2.png)
 
-##### Cancel hierarchy
+##### Cancelar hierarquia
 
 Quando a primeira coluna for selecionada e especificada como hierárquica pode usar o comando **Cancelar hierarquia**. Quando selecionar este comando, as ações abaixo serão realizadas:
 

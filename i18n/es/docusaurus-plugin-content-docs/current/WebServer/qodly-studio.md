@@ -9,7 +9,7 @@ Puede utilizar Qodly Studio directamente desde su **entorno 4D** para crear inte
 
 Qodly Studio también puede utilizarse en la [**plataforma Qodly Cloud**](https://qodly.com), dedicada al desarrollo de aplicaciones profesionales web.
 
-Qodly Studio proposes a full-featured web UI, allowing you to:
+Qodly Studio propone una interfaz web completa, que le permite:
 
 - create Qodly pages by placing components on a canvas
 - map components to Qodly Sources
@@ -52,7 +52,7 @@ Qodly Studio es servido por el [servidor web WebAdmin](../Admin/webAdmin.md) y m
 
 Para permitir el acceso a Qodly Studio, debe permitirlo explícitamente en dos niveles:
 
-- at 4D application level
+- a nivel de la aplicación 4D
 - a nivel del proyecto
 
 Si uno de los dos niveles (o ambos) no están habilitados, se niega el acceso a Qodly Studio (se devuelve una página 403).
@@ -81,7 +81,7 @@ Tenga en cuenta que los [parámetros usuario](../settings/overview.md) pueden de
 
 La autenticación en el servidor web WebAdmin se realiza utilizando una llave de acceso. Para más información, consulte [Llave de acceso](../Admin/webAdmin.md#access-key).
 
-### Development and deployment
+### Desarrollo y despliegue
 
 De acuerdo con la gestión de proyectos 4D, sólo se admiten los siguientes usos:
 
@@ -134,7 +134,7 @@ No existe compatibilidad directa entre las aplicaciones implementadas con 4D y l
 
 ### Comparación de funcionalidades
 
-|                                                                                  | Qodly Studio in 4D                                                                                                                                                                                           | Qodly Studio in Qodly Cloud platform                                          |
+|                                                                                  | Qodly Studio en 4D                                                                                                                                                                                           | Qodly Studio in Qodly Cloud platform                                          |
 | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
 | Ver y editar tablas (clases de datos), atributos y relaciones | Editor de estructura 4D(1)                                                                                                                                                                | Qodly Studio Model Editor                                                     |
 | Páginas Qodly                                                                    | Editor de páginas Qodly Studio                                                                                                                                                                               | Editor de páginas Qodly Studio                                                |
@@ -219,7 +219,7 @@ Por ejemplo:
 https://www.myWebSite.com/$lib/renderer/?w=welcome
 ```
 
-### Preview Qodly Application
+### Vista previa de la aplicación Qodly
 
 You can preview your Qodly application at any moment by selecting the **Preview Qodly Application...** command in the **Windows** menu (4D Server) or in the **Design** menu (4D single-user).
 
@@ -237,7 +237,7 @@ To attach the Qodly Studio debugger to your running 4D Server application:
 
 :::note
 
-The project must be running in interpreted mode so that **Qodly Studio** menu item is available.
+El proyecto debe ejecutarse en modo interpretado para que el elemento de menú **Qodly Studio** esté disponible.
 
 :::
 
@@ -246,12 +246,12 @@ The project must be running in interpreted mode so that **Qodly Studio** menu it
 
 If the debug session starts successfully, a green bullet appears on the button label ![qodly-debug](../assets/en/WebServer/debug2.png) and you can use the Qodly Studio debugger.
 
-If the debugger is already attached to a another machine or another Qodly Studio page, an error is displayed. You have to detach it beforehand from the other location.
+If the debugger is already attached to a another machine or another Qodly Studio page, an error is displayed. Hay que separarlo de antemano de la otra ubicación.
 
 To detach the Qodly Studio debugger from your running 4D Server application:
 
 1. Click the **Debug** button in the Qodly Studio toolbar while a debug session is active.
-   A warning dialog box will prompt you to confirm whether you want to detach the debugger.
+   Una caja de diálogo de advertencia le pedirá que confirme si desea desconectar el depurador.
 2. Select **Keep in progress** to continue evaluating the code until the end of the current method or function before detaching the debugger, or **Stop** to detach the debugger immediately.
 
 ## Forzar inicio de sesión

@@ -129,7 +129,7 @@ In projects converted from 4D versions prior to 20 R7, additional compilation op
 
 - **Compilation Path**
 - **Default typing**
-- **Compiler Methods for...**
+- **Métodos Compilador para...**
 
 These options are only maintained for compatibility with legacy code. For more information, please refer to the [documentation of previous 4D releases](https://developer.4d.com/docs/20/Project/compiler#compiler-settings).
 

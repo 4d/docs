@@ -52,7 +52,7 @@ Qodly Studio is served by the [WebAdmin web server](../Admin/webAdmin.md) and di
 
 Para permitir o acesso ao Qodly Studio, você deve permiti-lo explicitamente em dois níveis:
 
-- at 4D application level
+- ao nível da aplicação 4D
 - a nível do projeto
 
 If one of the two levels (or both) are not enabled, access to Qodly Studio is denied (a 403 page is returned).

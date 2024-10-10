@@ -160,7 +160,7 @@ To be able to directly reference and use a 4D component stored on GitHub, you ne
 
 These steps can easily be automated, with 4D code or using GitHub Actions, for example.
 
-#### Declaring paths
+#### Declarando caminhos
 
 Você declara um componente armazenado no GitHub no arquivo [**dependencies.json**](#dependencyjson) da seguinte maneira:
 

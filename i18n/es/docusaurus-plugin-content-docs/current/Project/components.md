@@ -310,13 +310,13 @@ Para mostrar el panel Dependencias:
 - con 4D Server, seleccione el ítem de menú **Ventana/Dependencias del Proyecto**.<br/>
   ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
-The Dependencies panel is then displayed. Las dependencias se ordenan por nombre en orden alfabético:
+A continuación, se muestra el panel Dependencias. Las dependencias se ordenan por nombre en orden alfabético:
 
 ![dependency](../assets/en/Project/dependency.png)
 
-La interfaz del panel Dependencias le permite gestionar las dependencias (en 4D monousuario y 4D Server). You can add or remove **local** and **GitHub** dependencies.
+La interfaz del panel Dependencias le permite gestionar las dependencias (en 4D monousuario y 4D Server). Puede añadir o eliminar las dependencias **local** y **GitHub**.
 
-### Adding a local dependency
+### Añadir una dependencia local
 
 To add a local dependency, click on the **+** button in the footer area of the panel. Se muestra la siguiente caja de diálogo:
 
@@ -328,9 +328,9 @@ If the selected item is valid, its name and location are displayed in the dialog
 
 ![dependency-selected](../assets/en/Project/local-selected.png)
 
-If the selected item is not valid, an error message is displayed.
+Si el elemento seleccionado no es válido, se mostrará un mensaje de error.
 
-Click **Add** to add the dependency to the project.
+Haga clic en **Añadir** para añadir la dependencia al proyecto.
 
 - If you select a component located next to the project package folder (default location), it is declared in the [**dependencies.json**](#dependenciesjson) file.
 - If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environmen4djson) file (see note). El panel Dependencias le pregunta si desea guardar una [ruta relativa o absoluta](#relative-paths-vs-absolute-paths).
@@ -343,13 +343,13 @@ Si en este paso no se ha definido aún ningún archivo [**environment4d.json**](
 
 The dependency is added to the [inactive dependency list](#dependency-status) with the **Available after restart** status. Se cargará cuando se reinicie la aplicación.
 
-### Adding a GitHub dependency
+### Añadir una dependencia GitHub
 
 To add a [GitHub dependency](#components-stored-on-github), click on the **+** button in the footer area of the panel and select the **GitHub** tab.
 
 ![dependency-add-git](../assets/en/Project/dependency-add-git.png)
 
-Enter the path of the GitHub repository of the dependency. It could be a **repository URL** or a **github-account/repository-name string**, for example:
+Introduzca la ruta del repositorio GitHub de la dependencia. It could be a **repository URL** or a **github-account/repository-name string**, for example:
 
 ![dependency-add-git-2](../assets/en/Project/dependency-add-git-2.png)
 
@@ -370,24 +370,24 @@ You can then define the [tag or version](#tags-and-versions) option for the depe
 - **Up to Next Minor Version**: Similarly, restrict updates to the next minor version.
 - **Exact Version (Tag)**: Select or manually enter a [specific tag](#tags-and-versions) from the available list.
 
-Click on the **Add** button to add the dependency to the project.
+Haga clic en el botón **Añadir** para añadir la dependencia al proyecto.
 
 The GitHub dependency declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. Se cargará cuando se reinicie la aplicación.
 
 #### Providing your GitHub access token
 
-If the component is stored on a [private GitHub repository](#private-repositories), you need to provide your personal access token to the Dependency manager. To do this, you can either:
+If the component is stored on a [private GitHub repository](#private-repositories), you need to provide your personal access token to the Dependency manager. Para hacer esto, puede:
 
 - click on **Add a personal access token...** button that is displayed in the "Add a dependency" dialog box after you entered a private GitHub repository path.
 - or, select **Add a GitHub personal access token...** in the Dependency manager menu at any moment.
 
 ![dependency-add-token](../assets/en/Project/dependency-add-token.png)
 
-You can then enter your personal access token:
+Luego puede introducir su token de acceso personal:
 
 ![dependency-add-token-2](../assets/en/Project/dependency-add-token-2.png)
 
-You can only enter one personal access token. Once a token has been entered, you can edit it.
+Solo puede introducir un token de acceso personal. Una vez se ha sido introducido un token, puede editarlo.
 
 ### Eliminando una dependencia
 

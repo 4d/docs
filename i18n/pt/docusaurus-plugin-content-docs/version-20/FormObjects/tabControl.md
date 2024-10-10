@@ -43,7 +43,7 @@ Under macOS, in addition to the standard position (top), the tab controls can al
 
 ## Adicionando etiquetas a um controle de tabulação
 
-There are several ways to supply the labels for a tab control:
+To supply the labels for a tab control, you can use:
 
 - um objeto
 - uma lista de escolha

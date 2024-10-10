@@ -326,7 +326,7 @@ Puede crear y escribir propiedades de instancia dentro del constructor (ver ejem
 
 Utilizando la palabra clave `shared` se crea una **clase compartida**, utilizada para instanciar únicamente objetos compartidos. Para obtener más información, consulte el párrafo [Clases compartidas](#shared-classes).
 
-Using the `singleton` keyword creates a **singleton**, used to create a single instance of the class. A `session singleton` creates a single instance per session. Para obtener más información, consulte el párrafo [Clases singleton](#singleton-classes).
+Using the `singleton` keyword creates a **singleton**, used to create a single instance of the class. Un `session singleton` crea una sola instancia por sesión. Para obtener más información, consulte el párrafo [Clases singleton](#singleton-classes).
 
 #### Ejemplo
 
@@ -855,11 +855,11 @@ Las clases Singleton no están soportadas por las [clases ORDA](../ORDA/ordaClas
 
 The following table indicates the scope of a singleton instance depending on where it was created:
 
-| Singleton creado en | Scope of process singleton                                                                                      | Scope of shared singleton | Scope of session singleton                                            |
-| ------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------- |
-| **4D single-user**  | Proceso                                                                                                         | Aplicación                | Application or Web/REST session                                       |
-| **4D Server**       | Proceso                                                                                                         | Máquina 4D Server         | Client/server session or Web/REST session or Stored procedure session |
-| **4D remote mode**  | Proceso (_nota_: los singletons no están sincronizados en el proceso gemelo) | Máquina remota 4D         | 4D remote machine or Web/REST session                                 |
+| Singleton creado en | Alcance del proceso singleton                                                                                   | Alcance del singleton compartido | Alcance del singleton de sesión                                                |
+| ------------------- | --------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------ |
+| **4D monopuesto**   | Proceso                                                                                                         | Aplicación                       | Application or Web/REST session                                                |
+| **4D Server**       | Proceso                                                                                                         | Máquina 4D Server                | Sesión cliente/servidor o sesión Web/REST o sesión de procedimiento almacenado |
+| **Modo remoto 4D**  | Proceso (_nota_: los singletons no están sincronizados en el proceso gemelo) | Máquina remota 4D                | 4D remote machine or Web/REST session                                          |
 
 Una vez instanciado, existe una clase singleton (y su singleton) siempre que exista una referencia a ella en algún lugar de la aplicación que se ejecuta en la máquina.
 
@@ -966,7 +966,7 @@ shared function addItem($item:object)
     This.itemList.push($item)
 ```
 
-By defining the ItemInventory class as a session singleton, you make sure that every session and therefore every user has their own inventory. Accessing the user's inventory is as simple as:
+By defining the ItemInventory class as a session singleton, you make sure that every session and therefore every user has their own inventory. Acceder al inventario del usuario es tan simple como:
 
 ```4d
 //in a user session
