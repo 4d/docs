@@ -75,7 +75,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | path         | Text                    |              ->             | ファイルパス                                                            |
 | fileConstant | Integer                 |              ->             | 4Dファイル定数                                                          |
 | pathType     | Integer                 |              ->             | `fk posix path` (デフォルト) または `fk platform path` |
-| -            |                         |              ->             | ホストデータベースのファイルを返すには \* を渡します                                      |
+| \*           |                         |              ->             | ホストデータベースのファイルを返すには \* を渡します                                      |
 | 戻り値          | 4D.File | <- | 新規ファイルオブジェクト                                                      |
 
 <!-- END REF -->
