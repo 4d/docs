@@ -44,8 +44,8 @@ Todas las fórmulas tienen operandos y operadores:
 
 | Tipos de datos                    | Valores                                                                                             | Operadores                                                                                                                                                                                                                                                                                                                                 |
 | --------------------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | - (suma)<br/>- (resta)<br/>\* (multiplicación)<br/>/ (división)<br/>^ (exponente, el número de veces que hay que multiplicar un número por sí mismo)<br/>% (porcentaje -- dividir el número antes del operador por cien) |
-| [Fecha](Concepts/dt_date.md)      | 10/24/2017                                                                                          | * (fecha + número de días -> fecha)<br/>+ (fecha + hora -> fecha + hora del día)<br/>- (fecha - número de días -> fecha)<br/>- (fecha - fecha -> número de días entre ambas)                                                                                   |
+| [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (suma)<br/>- (resta)<br/>\* (multiplicación)<br/>/ (división)<br/>^ (exponente, el número de veces que hay que multiplicar un número por sí mismo)<br/>% (porcentaje -- dividir el número antes del operador por cien) |
+| [Fecha](Concepts/dt_date.md)      | 10/24/2017                                                                                          | + (fecha + número de días -> fecha)<br/>+ (fecha + hora -> fecha + hora del día)<br/>- (fecha - número de días -> fecha)<br/>- (fecha - fecha -> número de días entre ambas)                                                                                   |
 | [Hora](Concepts/dt_time.md)       | 10:12:10                                                            | Operadores de duración:<br/>+ (suma)<br/>- (resta)<br/>\* (duración \* número -> duración)<br/>/ (duración / número -> duración)                                                                                                               |
 | [String](Concepts/dt_string.md)   | 'Sophie' o "Sophie"                                                                                 | & (concatenación)                                                                                                                                                                                                                                                                                   |
 | [Boolean](Concepts/dt_boolean.md) | TRUE o FALSE                                                                                        | -                                                                                                                                                                                                                                                                                                                                          |
@@ -71,11 +71,11 @@ Lista de los operadores de la mas a menos importante:
 | --------------------------- | -------------------------------------------- |
 | ()       | Paréntesis (para agrupar) |
 | -                           | Negativo                                     |
-| *                           | Más                                          |
+| +                           | Más                                          |
 | %                           | Porcentaje                                   |
 | ^                           | Exponente                                    |
-| - y /                       | Multiplicar y dividar                        |
-| * y -                       | Añadir y restar                              |
+| \* y /                      | Multiplicar y dividar                        |
+| + y -                       | Añadir y restar                              |
 | &       | Concatenar                                   |
 | `=`  `>` `<` `>=` `<=` `<>` | Comparar                                     |
 
