@@ -127,7 +127,7 @@ En cada uno de los formatos de visualización de números, el signo número (#),
 | #        | No muestra nada                           |
 | 0        | Muestra 0                                 |
 | ^        | Muestra un espacio (1) |
-| -        | Muestra un asterisco                      |
+| \*       | Muestra un asterisco                      |
 
 (1) El signo de intercalación (^) genera un caracter de espacio que ocupa el mismo ancho que un dígito en la mayoría de los tipos de fuente.
 
