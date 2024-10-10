@@ -252,9 +252,9 @@ Lorsque vous programmez avec 4D, il est rare que vous ayez simplement besoin de 
 
 | Opérateur | Opération      | Exemple    |
 | --------- | -------------- | ---------- |
-| -         | Addition       | 1 +2 = 3   |
+| +         | Addition       | 1 +2 = 3   |
 | –         | Soustraction   | 3 - 2 = 1  |
-| *         | Multiplication | 2 \* 3 = 6 |
+| \*        | Multiplication | 2 \* 3 = 6 |
 | /         | Division       | 6 / 2 = 3  |
 
 Les opérateurs numériques ne représentent qu’un seul des différents types d’opérateurs disponibles. Comme 4D traite de multiples types de données, tels que des nombres, des dates ou des images, vous disposez d’opérateurs particuliers effectuant des opérations sur ces données.
