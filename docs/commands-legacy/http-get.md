@@ -45,11 +45,11 @@ You can pass different types of variables in *response*:
 * Text: When the result is expected to be text (see note below).
 * BLOB: When the result is expected to be in binary form.
 * Picture: When the result is expected to be a picture.
-* Object: When the result is expected to be a [C\_OBJECT](c-object.md) object.
+* Object: When the result is expected to be an object.
 
 **Note:** When a text variable is passed in *response*, 4D will try to decode the data returned from the server. 4D first tries to retrieve the charset from the *content-type* header, then from the content using a BOM, and finally looks for any *http-equiv charset* (in html content) or *encoding* (for xml) attribute. If no charset can be detected, 4D will attempt to decode the response in ANSI. If the conversion fails, the resulting text will be empty. If you are unsure whether the server returns a charset information or a BOM, but you know the encoding, it is more accurate to pass *response* in BLOB and call [Convert to text](convert-to-text.md).
 
-If you pass a BLOB, it contains the text, picture or any type of contents (.wav, .zip, etc.) returned by the server. You must then manage the recovery of these contents (headers are not included in the BLOB). When you pass a [C\_OBJECT](c-object.md) type object, if the request returns a result with a text content-type, 4D attempts to parse the content as JSON and returns the parsed result as an object, otherwise a *4D.Blob* object is returned.
+If you pass a BLOB, it contains the text, picture or any type of contents (.wav, .zip, etc.) returned by the server. You must then manage the recovery of these contents (headers are not included in the BLOB). When you pass an object, if the request returns a result with a text content-type, 4D attempts to parse the content as JSON and returns the parsed result as an object, otherwise a *4D.Blob* object is returned.
 
 In *headerNames* and *headerValues*, you pass arrays containing the names and values of the request headers.   
 After this method is executed, these arrays contain the names and values of headers returned by the HTTP server. More specifically, this lets you manage cookies. 

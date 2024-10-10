@@ -181,5 +181,5 @@ Once the form is executed, the list box is automatically filled with the entity 
 
 #### See also 
 
-[Self](self.md)  
+[Self](../commands-legacy/self.md)  
 [Super](super.md)  

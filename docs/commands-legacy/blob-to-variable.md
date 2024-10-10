@@ -24,7 +24,7 @@ The BLOB data must be consistent with the destination variable. Typically, you w
 
 If you do not specify the optional *offset* parameter, the variable data is read starting from the beginning of the BLOB. If you deal with a BLOB in which several variables have been stored, you must pass the *offset* parameter and, in addition, you must pass a numeric variable. Before the call, set this numeric variable to the appropriate offset. After the call, that same numeric variable returns the offset of the next variable stored within the BLOB.
 
-**Note:** **BLOB TO VARIABLE** supports object and collection variables of the [C\_OBJECT](c-object.md) and [C\_COLLECTION](c-collection.md) types. For more information, refer to the [VARIABLE TO BLOB](variable-to-blob.md) command.
+**Note:** **BLOB TO VARIABLE** supports object and collection variables. For more information, refer to the [VARIABLE TO BLOB](variable-to-blob.md) command.
 
 After the call, if the variable has been successfully rewritten, the OK variable is set to 1\. If the operation could not be performed, the OK variable is set to 0; for example, if there was not enough memory.
 

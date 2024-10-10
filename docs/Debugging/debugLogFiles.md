@@ -288,9 +288,9 @@ SET DATABASE PARAMETER (Diagnostic log level; Log trace)
 
 These log files record each exchange between the 4D application and the mail server (SMTP, POP3, IMAP) that has been initiated by the following commands:
 
-* SMTP - [SMTP New transporter](command/smtp-new-transporter.md)
-* POP3 - [POP3 New transporter](command/pop3-new-transporter.md)
-* IMAP  - [IMAP New transporter](commands/imap-new-transporter.mdnsporter)
+* SMTP - [SMTP New transporter](../commands/smtp-new-transporter.md)
+* POP3 - [POP3 New transporter](../commands/pop3-new-transporter.md)
+* IMAP  - [IMAP New transporter](../commands/imap-new-transporter.mdnsporter)
 
 The log files can be produced in two versions:
 

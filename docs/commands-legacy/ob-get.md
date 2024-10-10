@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Get.Summary-->The **OB Get** command returns the current value of the *property* of the *object*, optionally converted into the *type* specified.<!-- END REF-->
 
-*object* must have been defined using the [C\_OBJECT](c-object.md) command or designate a 4D object field.
+*object* can be an object varialble or a 4D object field.
 
 **Note:** This command supports attribute definitions in 4D Write Pro *objects*, like the *WP GET ATTRIBUTES* command (see example 9). 
 

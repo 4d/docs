@@ -30,7 +30,7 @@ The *statement* can include the following elements:
 **Notes:** 
 
 * If *statement* is a project method, it is recommended to use the [EXECUTE METHOD](execute-method.md) that allows you to pass parameters.
-* It is not recommend to call any variable declaration commands such as [C\_DATE](c-date.md) in *statement* since it can generate conflicts in the code.
+* It is not recommend to call any variable declaration in *statement* since it can generate conflicts in the code.
 
 The formula can include process variables and interprocess variables. However, the statement cannot contain control of flow statements (If, While, etc.), because it must be in one line of code.
 

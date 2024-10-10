@@ -80,4 +80,4 @@ You create a new collection and then add a new element:
 #### See also 
 
 [New shared collection](new-shared-collection.md)  
-[Type](type.md)  
+[Type](../commands-legacy/type.md)  

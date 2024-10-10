@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Is empty.Summary-->The **OB Is empty** command returns True if *object* is undefined or empty, and False if *object* is defined (initialized) and contains at least one property.<!-- END REF-->
 
-*object* must have been created using the [C\_OBJECT](c-object.md) command or designate a 4D object field.
+*object* can be an object varialble or a 4D object field.
 
 #### Example 
 

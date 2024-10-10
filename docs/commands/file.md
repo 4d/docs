@@ -80,7 +80,7 @@ If the command is called from a component, pass the optional `*` parameter to ge
 #### See also 
 
 [Folder](folder.md)  
-[Get 4D file](get-4d-file.md)  
-[Object to path](object-to-path.md)  
-[Path to object](path-to-object.md)  
+[Get 4D file](../commands-legacy/get-4d-file.md)  
+[Object to path](../commands-legacy/object-to-path.md)  
+[Path to object](../commands-legacy/path-to-object.md)  
 

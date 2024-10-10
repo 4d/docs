@@ -68,4 +68,4 @@ You want to get the path of the last backup file:
 
 #### See also 
 
-[File](file.md)  
+[File](../commands/file.md)  

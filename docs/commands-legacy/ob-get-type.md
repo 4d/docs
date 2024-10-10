@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Get type.Summary-->The **OB Get type** command returns the type of value associated with the *property* of the language *object*.<!-- END REF-->
 
-*object* must have been defined using the [C\_OBJECT](c-object.md) command or designate a 4D object field. 
+*object* can be an object varialble or a 4D object field.. 
 
 In the *property* parameter, pass the label of the property whose type you want to find out.   
 Note that the *property* parameter is case sensitive. 

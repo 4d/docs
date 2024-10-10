@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB SET NULL.Summary-->The **OB SET NULL** command stores the **null** value in the language object designated by the *object* parameter.<!-- END REF-->
 
-*object* must have been defined using the [C\_OBJECT](c-object.md) command or designate a 4D object field.
+*object* can be an object varialble or a 4D object field.
 
 In the *property* parameter, pass the label of the property where you want to store the **null** value. If the property already exists in *object*, its value is updated. If it does not exist, it is created.   
 Note that the *property* parameter is case sensitive.

@@ -72,5 +72,5 @@ If the command is called from a component, pass the optional `*` parameter to ge
 #### See also 
 
 [File](file.md)  
-[Object to path](object-to-path.md)  
-[Path to object](path-to-object.md)  
+[Object to path](../commands-legacy/object-to-path.md)  
+[Path to object](../commands-legacy/path-to-object.md)  

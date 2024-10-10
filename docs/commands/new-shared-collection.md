@@ -68,5 +68,5 @@ Unlike standard (not shared) collections, shared collections do not support pict
 #### See also 
 
 [New collection](new-collection.md)  
-[New shared object](new-shared-object.md)  
+[New shared object](../commands-legacy/new-shared-object.md)  
 *Shared objects and shared collections*  

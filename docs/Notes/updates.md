@@ -66,7 +66,7 @@ Read [**What’s new in 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5
 - Support for [initializing a class property in its declaration line](../Concepts/classes.md/#initializing-the-property-in-the-declaration-line).
 - New [force login mode for REST requests](../REST/authUsers.md#force-login-mode) with a [specific support in Qodly Studio for 4D](../WebServer/qodly-studio.md#force-login).
 - New [$format](../REST/$format.md) REST parameter.
-- [`Session`](../command/session.md) object is now available in remote user sessions and stored procedures session.
+- [`Session`](../commands/session.md) object is now available in remote user sessions and stored procedures session.
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6817247.en.html) on doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6851780.en.html) on doc.4d.com.
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R5): list of all bugs that have been fixed in 4D 20 R5.
@@ -376,7 +376,7 @@ $value:=($size>1000)? a:b // Here 'a:b' is viewed as a ternary operator.
 - [ZIP archives](../API/ZipArchiveClass.md#zip-create-archive) now supports *LZMA* and *xz* compression algorithms.
 - A [new build option](../Desktop/building.md#allow-connection-of-silicon-mac-clients) makes it easier to include Silicon Mac clients in Server applications on Windows.
 - Extended [support of dark mode](../Preferences/general.md#appearance-macos-only) on macOS.
-- Support of **OAuth2 token object** in [`IMAP New transporter`](../commands/imap-new-transporter.mdnsporter), [`POP3 New transporter`](../command/pop3-new-transporter.md), and [`SMTP New transporter`](../command/smtp-new-transporter.md).
+- Support of **OAuth2 token object** in [`IMAP New transporter`](../commands/imap-new-transporter.mdnsporter), [`POP3 New transporter`](../commands/pop3-new-transporter.md), and [`SMTP New transporter`](../commands/smtp-new-transporter.md).
 - Users can now load a [log configuration file](../Debugging/debugLogFiles.md#using-a-log-configuration-file) using a button in the [server administration window](../ServerWindow/maintenance.md#load-logs-configuration-file).
 - Handling [optional parameters](../Concepts/parameters.md#optional-parameters) is more flexible in the 4D language when accessing parameters declared but not passed. For example, the following code no longer provokes an error:
 

@@ -21,9 +21,9 @@ displayed_sidebar: docs
 
 **Note:** For more information on *shared objects*, please refer to the *Shared objects and shared collections* page.
 
-If you do not pass any parameters, **New shared object** creates an empty object and returns its reference. You must assign this reference to a 4D variable declared with the [C\_OBJECT](c-object.md) command.
+If you do not pass any parameters, **New shared object** creates an empty object and returns its reference. You must assign this reference to a 4D object variable.
 
-**Note:** [C\_OBJECT](c-object.md) declares a variable of the [Object](# "Data structured as a native 4D object") type but does not create an object. 
+**Note:** `var : Object` declares a variable of the [Object] type but does not create an object. 
 
 Optionally, you can prefill the new object by passing one or several *property*/*value* pairs as parameters:
 
@@ -65,5 +65,5 @@ You want to create and modify a shared object. The structure must be called for 
 #### See also 
 
 [New object](new-object.md)  
-[New shared collection](new-shared-collection.md)  
+[New shared collection](../commands/new-shared-collection.md)  
 *Shared objects and shared collections*  
