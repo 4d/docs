@@ -71,7 +71,7 @@ Les objets `Folder` prennent en charge plusieurs formes de chemin d'accès, y co
 | path           | Text                      |              ->             | Chemin du dossier                                                     |
 | folderConstant | Integer                   |              ->             | Constante de dossier 4D                                               |
 | pathType       | Integer                   |              ->             | `fk posix path` (par défaut) ou `fk platform path` |
-| -              |                           |              ->             | * pour retourner le dossier de la base hôte                           |
+| \*             |                           |              ->             | \* pour retourner le dossier de la base hôte                          |
 | Résultat       | 4D.Folder | <- | Nouvel objet dossier                                                  |
 
 <!-- END REF -->
