@@ -15,10 +15,14 @@ title: リリースノート
 - コンパイラー設定の新しい [**直接型指定モード**](../Project/compiler.md#直接型指定の有効化): コード内のすべての変数および引数を `var` と `#DECLARE`/`Function` キーワードで宣言します (新規プロジェクトではこのモードのみサポートされます)。 これに伴い、[シンタックスチェック機能](../Project/compiler.md#シンタックスチェック) が強化されました。
 - [セッションシングルトン](../Concepts/classes.md#シングルトンクラス) と、新しい [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) クラスプロパティをサポート。
 - Qodly Studio: [Qodly Studio デバッガーを 4D Server で有効化](../WebServer/qodly-studio.md#4d-server-で-qodlyデバッガーを使用する) できるようになりました。
+- New Build Application keys for remote 4D applications to validate the server certificate authority [signatures](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateAuthoritiesCertificates.300-7425900.en.html) and/or [domain](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateDomainName.300-7425906.en.html).
+- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R7/4D/20-R7/What-s-new.901-7239607.en.html) on doc.4d.com.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R7): list of all bugs that have been fixed in 4D 20 R7.
 
 #### 動作の変更
 
 - コンパイラー指示コマンド (`C_XXX`) は非推奨となり、`_O_C_XXX` という名前に変更されました (たとえば、`C_TEXT` は `_O_C_TEXT` という名前に変更されました)。
+- Documentations for [4D Language](../commands/command-index.md) and [4D Write Pro Language](../WritePro/commands/command-index.md) are now fully available on developer.4d.com. Find out about all the new features and changes concerning these documentations in this release note.
 
 ## 4D 20 R6
 
@@ -41,7 +45,7 @@ title: リリースノート
 - PDF/A3 ドキュメントから添付ファイルを抽出する `PDF Get attachments` コマンドを提供する新しい [4D-QPDF コンポーネント](https://github.com/4d/4D-QPDF)。
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20R6/4D/20-R6/What-s-new.901-6957482.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20R6/4D/20-R6/What-s-new.901-6993921.ja.html) ページ。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R6): 4D 20 R6 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/178/release-note-version-20r6/))。
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R6): list of all bugs that have been fixed in 4D 20 R6.
 
 #### 動作の変更
 
