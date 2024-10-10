@@ -1148,7 +1148,7 @@ module.exports =
 						"commands-legacy/clear-semaphore",
 						"commands-legacy/get-process-variable",
 						"commands-legacy/kill-worker",
-						"commands-legacy/new-signal",
+						"commands/new-signal",
 						"commands-legacy/semaphore",
 						"commands-legacy/set-process-variable",
 						"commands-legacy/test-semaphore",

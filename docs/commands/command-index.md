@@ -697,7 +697,7 @@ title: Index
 [`New process`](../commands-legacy/new-process.md)<br/>
 [`New shared collection`](new-shared-collection.md)<br/>
 [`New shared object`](../commands-legacy/new-shared-object.md)<br/>
-[`New signal`](../commands-legacy/new-signal.md)<br/>
+[`New signal`](new-signal.md)<br/>
 [`NEXT RECORD`](../commands-legacy/next-record.md)<br/>
 [`Next window`](../commands-legacy/next-window.md)<br/>
 [`NO DEFAULT TABLE`](../commands-legacy/no-default-table.md)<br/>
