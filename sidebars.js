@@ -818,7 +818,7 @@ module.exports =
 						"commands/mail-convert-to-mime",
 						"commands/mail-new-attachment",
 						"commands/pop3-new-transporter",
-						"commands-legacy/smtp-new-transporter"
+						"commands/smtp-new-transporter"
 					]
 					},
 					{

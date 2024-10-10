@@ -1146,7 +1146,7 @@ title: Index
 [`SHOW WINDOW`](../commands-legacy/show-window.md)<br/>
 [`Sin`](../commands-legacy/sin.md)<br/>
 [`Size of array`](../commands-legacy/size-of-array.md)<br/>
-[`SMTP New transporter`](../commands-legacy/smtp-new-transporter.md)<br/>
+[`SMTP New transporter`](/smtp-new-transporter.md)<br/>
 [`SOAP DECLARATION`](../commands-legacy/soap-declaration.md)<br/>
 [`SOAP Get info`](../commands-legacy/soap-get-info.md)<br/>
 [`SOAP REJECT NEW REQUESTS`](../commands-legacy/soap-reject-new-requests.md)<br/>
