@@ -673,49 +673,6 @@ $o:=New object("prop";42;"f";Formula(This.prop))
 $val:=$o.f() //42
 ```
 
-When a [class constructor](#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
-
-```4d
-//Class: ob
-
-Class Constructor  
-
- // Create properties on This as
- // desired by assigning to them
-
- This.a:=42
-```
-
-```4d
-// in a 4D method  
-$o:=cs.ob.new()
-$val:=$o.a //42
-```
-
-
-> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. See [this example](#example-1).
-
-In any cases, `This` refers to the object the method was called on, as if the method were on the object.
-
-```4d
-//Class: ob
-
-Function f()
- $0:=This.a+This.b
-```
-
-Then you can write in a project method:
-
-```4d
-$o:=cs.ob.new()
-$o.a:=5
-$o.b:=3
-$val:=$o.f() //8
-
-```
-
-In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Since *f* is called as a method of $o, its `This` refers to $o.
-
 
 ## Class commands
 

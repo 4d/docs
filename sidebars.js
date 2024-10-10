@@ -361,8 +361,8 @@ module.exports =
 					"items": [
 						"commands-legacy/array-to-collection",
 						"commands-legacy/collection-to-array",
-						"commands-legacy/new-collection",
-						"commands-legacy/new-shared-collection"
+						"commands/new-collection",
+						"commands/new-shared-collection"
 					]
 					},
 					{

@@ -265,6 +265,7 @@ title: Index
 [`ENABLE MENU ITEM`](../commands-legacy/enable-menu-item.md)<br/>
 [`ENCRYPT BLOB`](../commands-legacy/encrypt-blob.md)<br/>
 [`Encrypt data BLOB`](../commands-legacy/encrypt-data-blob.md)<br/>
+
 [`Encrypt data file`](../commands-legacy/encrypt-data-file.md)<br/>
 [`End selection`](../commands-legacy/end-selection.md)<br/>
 [`End SQL`](../commands-legacy/end-sql.md)<br/>
@@ -688,13 +689,13 @@ title: Index
 
 <a id="N"><b>N</b></a>
 
-[`New collection`](../commands-legacy/new-collection.md)<br/>
+[`New collection`](new-collection.md)<br/>
 [`New data key`](../commands-legacy/new-data-key.md)<br/>
 [`New list`](../commands-legacy/new-list.md)<br/>
 [`New log file`](../commands-legacy/new-log-file.md)<br/>
 [`New object`](../commands-legacy/new-object.md)<br/>
 [`New process`](../commands-legacy/new-process.md)<br/>
-[`New shared collection`](../commands-legacy/new-shared-collection.md)<br/>
+[`New shared collection`](new-shared-collection.md)<br/>
 [`New shared object`](../commands-legacy/new-shared-object.md)<br/>
 [`New signal`](../commands-legacy/new-signal.md)<br/>
 [`NEXT RECORD`](../commands-legacy/next-record.md)<br/>
@@ -706,6 +707,7 @@ title: Index
 [`Num`](../commands-legacy/num.md)<br/>
 
 <a id="O"><b>O</b></a>
+
 
 [`OB Class`](../commands-legacy/ob-class.md)<br/>
 [`OB Copy`](../commands-legacy/ob-copy.md)<br/>
