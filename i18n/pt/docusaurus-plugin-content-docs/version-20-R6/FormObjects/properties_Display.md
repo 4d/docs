@@ -127,7 +127,7 @@ Em cada um dos formatos de exibição de números, o sinal de número (#), o zer
 | #                                                    | Não apresenta nada                         |
 | 0                                                    | Mostra 0                                   |
 | ^                                                    | Apresenta um espaço (1) |
-| -                                                    | Apresenta um asterisco                     |
+| \*                                                   | Apresenta um asterisco                     |
 
 (1) O acento circunflexo (^) gera um caractere de espaço que ocupa a mesma largura de um dígito na maioria das fontes.
 
