@@ -884,7 +884,7 @@ title: Index
 [`PLUGIN LIST`](../commands-legacy/plugin-list.md)<br/>
 [`POP RECORD`](../commands-legacy/pop-record.md)<br/>
 [`Pop up menu`](../commands-legacy/pop-up-menu.md)<br/>
-[`POP3 New transporter`](../commands-legacy/pop3-new-transporter.md)<br/>
+[`POP3 New transporter`](pop3-new-transporter.md)<br/>
 [`Position`](../commands-legacy/position.md)<br/>
 [`POST CLICK`](../commands-legacy/post-click.md)<br/>
 [`POST EVENT`](../commands-legacy/post-event.md)<br/>
