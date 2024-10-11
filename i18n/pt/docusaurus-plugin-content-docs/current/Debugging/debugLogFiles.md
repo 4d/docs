@@ -279,9 +279,9 @@ SET DATABASE PARAMETER (Diagnostic log level; Log trace)
 
 Esses históricos registram cada troca entre a aplicação 4D e o servidor de mail (SMTP, POP3, IMAP) que foram iniciados pelos comandos abaixo:
 
-- SMTP - [SMTP New transporter](API/SMTPTransporterClass.md#smtp-new-transporter)
-- POP3 - [POP3 New transporter](API/POP3TransporterClass.md#pop3-new-transporter)
-- IMAP  - [IMAP New transporter](API/IMAPTransporterClass.md#imap-new-transporter)
+- SMTP - [SMTP New transporter](../commands/smtp-new-transporter.md)
+- POP3 - [POP3 New transporter](../commands/pop3-new-transporter.md)
+- IMAP  - [IMAP New transporter](../commands/imap-new-transporter.mdnsporter)
 
 Os arquivos de histórico podem ser produzidos em duas versões:
 
