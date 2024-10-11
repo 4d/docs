@@ -12,15 +12,15 @@ title: クライアント/サーバーの最適化
 
 最適化をサポートしている ORDAクライアント/サーバーアーキテクチャーは次のとおりです:
 
-- 4Dリモートデスクトップアプリケーションによって [**`ds`**](../API/DataStoreClass.md#ds) を介してアクセスされるサーバーデータストア
-- [**`Open datastore`**](../API/DataStoreClass.md#open-datastore) を介してアクセスされる [リモートデータストア](remoteDatastores.md) (クライアントRESTリクエスト)
+- Server datastores accessed by 4D remote desktop applications through [**`ds`**](../commands/ds.md),
+- [Remote datastores](remoteDatastores.md), accessed via [**`Open datastore`**](../commands/open-datastore.md) (client REST requests).
 
 ## 最適化コンテキスト
 
 最適化コンテキストは、以下の実装に基づいています:
 
 - クライアントがサーバーに対してエンティティセレクションのリクエストを送ると、4D はコード実行の途中で、エンティティセレクションのどの属性がクライアント側で実際に使用されているかを自動的に "学習" し、それに対応した "最適化コンテキスト" をビルドします。 このコンテキストはエンティティセレクションに付随し、使用された属性を保存していきます。 他の属性があとで使用された場合には自動的に情報を更新していきます。 以下のメソッドや関数が学習のトリガーとなります:
-  - [`Create entity selection`](../API/EntitySelectionClass.md#create-entity-selection)
+  - [`Create entity selection`](../commands/create-entity-selection.md)
   - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
   - [`dataClass.all()`](../API/DataClassClass.md#all)
   - [`dataClass.get()`](../API/DataClassClass.md#get)
@@ -43,7 +43,7 @@ title: クライアント/サーバーの最適化
 
 :::note 互換性に関する注意
 
-[`Open datastore`](../API/DataStoreClass.md#open-datastore) で確立された接続で扱われるコンテキストは、メジャーバージョンが共通する 4D でのみ使用できます。 たとえば、4D 20.x リモートアプリケーションは、4D Server 20.x のデータストアのコンテキストのみを使用できます。
+Contexts handled in connections established through [`Open datastore`](../commands/open-datastore.md) can only be used between similar main versions of 4D. たとえば、4D 20.x リモートアプリケーションは、4D Server 20.x のデータストアのコンテキストのみを使用できます。
 
 :::
 
