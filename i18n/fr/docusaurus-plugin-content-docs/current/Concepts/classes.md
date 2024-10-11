@@ -98,8 +98,8 @@ Dans les différentes fenêtres 4D (éditeur de code, compilateur, débogueur, e
 
 Les classes disponibles sont accessibles depuis leurs class stores. Il existe deux class stores dans 4D :
 
-- `cs` pour le class store utilisateur
-- `4D` pour le class store intégré
+- [`cs`](../commands/cs.md) for user class store
+- [`4D`](../commands/4d.md) for built-in class store
 
 ### `cs`
 
@@ -133,12 +133,20 @@ $instance:=cs.myClass.new()
 
 La commande `4D` <!-- REF #_command_.4D.Summary -->retourne le class store des classes 4D intégrées disponibles<!-- END REF -->. Elle donne accès à des API spécifiques telles que [CryptoKey](API/CryptoKeyClass.md).
 
-#### Exemple
+#### Exemples
 
 Vous souhaitez créer une nouvelle clé dans la classe `CryptoKey` :
 
 ```4d
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
+```
+
+You want to list 4D built-in classes:
+
+```4d
+ var $keys : collection
+ $keys:=OB Keys(4D)
+ ALERT("There are "+String($keys.length)+" built-in classes.")
 ```
 
 ## L'objet classe
@@ -172,6 +180,7 @@ Des mots-clés 4D spécifiques peuvent être utilisés dans les définitions de 
 - `property` pour définir les propriétés statiques des objets d'un type donné.
 - `Function get <Name>` et `Function set <Name>` pour définir les propriétés calculées des objets.
 - `Class extends <ClassName>` pour définir l'héritage.
+- `This` and `Super` are commands that have special
 
 ### `Function`
 
@@ -585,182 +594,39 @@ Class constructor ($side : Integer)
  $area:=This.height*This.width
 ```
 
+## Class function commands
+
+The following commands have specific features when they are used within class functions:
+
 ### `Super`
 
-<!-- REF #_command_.Super.Syntax -->**Super**( ...param : any )<br/>**Super** : Object<!-- END REF -->
+The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. It can be called in the [class constructor](#class-constructor) or in a class function code.
 
-<!-- REF #_command_.Super.Params -->
-
-|Parameter|Type||Description|
-
-\|---|---|---|---|
-|param|any|->|Parameter(s) to pass to the parent constructor|
-|Result|Object|<-|Object's parent|
-
-<!-- END REF -->
-
-Le mot-clé `Super` <!-- REF #_command_.Super.Summary -->permet les appels à la `superclass`, c'est-à-dire à la classe parente<!-- END REF -->.
-
-`Super` peut être utilisé de deux différentes manières :
-
-1. A l'intérieur du code de la fonction [constructeur](#class-constructor), `Super` est une commande qui permet d'appeler le constructeur de la superclass. Lorsqu'elle est utilisée dans une fonction constructeur, la commande `Super` est seule et doit être appelée avant que le mot-clé `This` soit utilisé.
-
-- Si tous les class constructors dans l'arbre des héritages ne sont pas appelés correctement, l'erreur -10748 et générée. Il est de la responsabilité du développeur 4D de s'assurer que tous les appels sont valides.
-- Si la commande `This` est appelée sur un objet dont les superclasses n'ont pas été construites, l'erreur -10743 est générée.
-- Si `Super` est appelée en dehors d'un contexte d'objet, ou sur un objet dont le constructeur de la superclasse a déjà été appelé, l'erreur -10746 est générée.
-
-```4d
-// dans la fonction constructor de myClass
-var $text1; $text2 : Text
-Super($text1) //appel du constructeur de la superclasse avec un paramètre text
-This.param:=$text2 // utilisation d'un second param
-```
-
-2. A l'intérieur d'une [fonction de classe](#class-function), `Super` désigne le prototype de la superclasse et permet d'appeler une fonction de la hiérarchie de superclasses.
-
-```4d
-Super.doSomething(42) //appelle la fonction "doSomething"   
-//déclarée parmi les superclasses
-```
-
-#### Exemple 1
-
-Cet exemple illustre l'utilisation de `Super` dans un class constructor. La commande est appelée pour éviter de dupliquer les parties du constructeur qui sont communes aux classes `Rectangle` et `Square`.
-
-```4d
-// Class: Rectangle
-Class constructor($width : Integer; $height : Integer)
- This.name:="Rectangle"
- This.height:=$height
- This.width:=$width
-
-
-Function sayName()
- ALERT("Hi, I am a "+This.name+".")
-
-// Function definition
-Function getArea()
- var $0 : Integer
-
- $0:=(This.height)*(This.width)
-```
-
-```4d
-//Class: Square
-
-Class extends Rectangle
-
-Class constructor ($side : Integer)
-
- // Appelle le constructeur de la classe parente avec les côtés
- // fournies pour la largeur et la hauteur du Rectangle
- Super($side;$side)
- // Dans les classes dérivées, Super doit être appelé
- // avant que vous puissiez utiliser 'This'
- This.name:="Square"
-
-Function getArea()
- C_LONGINT($0)
- $0:=This.height*This.width
-```
-
-#### Exemple 2
-
-Cet exemple illustre l'utilisation de `Super` dans une fonction de classe. Vous avez créé la classe `Rectangle` contenant une fonction :
-
-```4d
-//Class: Rectangle
-
-Function nbSides()
- var $0 : Text
- $0:="I have 4 sides"
-```
-
-Vous avez également créé la classe `Square` contenant une fonction qui appelle la fonction superclass :
-
-```4d
-//Class: Square
-
-Class extends Rectangle
-
-Function description()
- var $0 : Text
- $0:=Super.nbSides()+" which are all equal"
-```
-
-Vous pouvez donc écrire dans une méthode projet :
-
-```4d
-var $square : Object
-var $message : Text
-$square:=cs.Square.new()
-$message:=$square.description() //I have 4 sides which are all equal
-```
+For more details, see the [`Super`](../commands/super.md) command description.
 
 ### `This`
 
-<!-- REF #_command_.This.Syntax -->**This** : Object<!-- END REF -->
+The [`This`](../commands/this.md) command returns a reference to the currently processed object. In most cases, the value of `This` is determined by how a class function is called. Usually, `This` refers to the object the function was called on, as if the function were on the object.
 
-<!-- REF #_command_.This.Params -->
-
-| Paramètres | Type   |                             | Description   |
-| ---------- | ------ | --------------------------- | ------------- |
-| Résultat   | Object | <- | Objet courant |
-
-<!-- END REF -->
-
-Le mot-clé `This` <!-- REF #_command_.This.Summary -->retourne une référence à l'objet en cours de traitement<!-- END REF -->.
-
-Dans la plupart des cas, la valeur de `This` est déterminée par la manière dont une fonction est appelée. Il ne peut pas être défini par affectation lors de l'exécution, et il peut être différent à chaque fois que la fonction est appelée.
-
-Lorsqu'une [formula](../API/FunctionClass.md) est appelée en tant que méthode membre d'un objet, son `This` désigne l'objet sur lequel la méthode est appelée. Par exemple :
-
-```4d
-$o:=New object("prop";42;"f";Formula(This.prop))
-$val:=$o.f() //42
-```
-
-Quand un [constructeur de classe](#class-constructor) est utilisé (avec la fonction [`new()`](API/ClassClass.md#new)), son `This` est lié au nouvel objet en cours de construction.
+Voici un exemple :
 
 ```4d
 //Class: ob
 
-Class Constructor  
-
- // Create properties on This as
- // desired by assigning to them
-
- This.a:=42
+Function f() : Integer
+ return This.a+This.b
 ```
 
-```4d
-// dans une méthode 4D  
-$o:=cs.ob.new()
-$val:=$o.a //42
-```
-
-> En cas d'appel de la superclasse du constructeur depuis le constructeur en utilisant le mot-clé [Super](#super), n'oubliez pas que `This` ne doit pas être appelé avant le constructeur de la superclasse, sinon une erreur est générée. Voir [cet exemple](#example-1).
-
-Dans tous les cas, `This` se réfère à l'objet sur lequel la fonction a été appelée, comme s'il s'agissait d'une fonction de l'objet.
-
-```4d
-//Class: ob
-
-Function f()
- $0:=This.a+This.b
-```
-
-Vous pouvez donc écrire dans une méthode projet :
+Then you can write in a method:
 
 ```4d
 $o:=cs.ob.new()
 $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
-
 ```
 
-Dans cet exemple, l'objet affecté à la variable $o n'a pas de propriété _f_, il hérite de celle de sa classe. Comme _f_ est appelée comme une méthode de $o, son `This` se réfère à $o.
+For more details, see the [`This`](../commands/this.md) command description.
 
 ## Commandes de classes
 
