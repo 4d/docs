@@ -231,7 +231,7 @@ When using Qodly pages in a deployed 4D Server application (interpreted mode), y
 
 Note that in this case, the Qodly Studio debugger will display all the code executed on the server, in accordance with the [attached debugger rule on 4D Server](../Debugging/debugging-remote.md#attached-debugger).
 
-To attach the Qodly Studio debugger to your running 4D Server application:
+Para adjuntar el depurador Qodly Studio a su aplicación 4D Server en ejecución:
 
 1. [Open Qodly Studio](#opening-qodly-studio) from 4D Server.
 
