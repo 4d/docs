@@ -5,17 +5,17 @@ title: Aparência
 
 ## Botão predefinido
 
-La propiedad del botón por defecto designa el botón que obtiene el foco inicial en ejecución cuando ningún botón del formulario tiene la propiedad [Focusable](properties_Entry.md#focusable).
+A propriedade do botão padrão designa o botão que fica o foco inicial em tempo de execução quando nenhum botão do formulário tem a propriedade [Focusable](propriedades_Entry.md#focusable).
 
 Só pode haver um botão predefinido por página de formulário.
 
-Además, en macOS, la propiedad del botón por defecto modifica la apariencia del botón para indicar una "opción recomendada" al usuario y se vincula automáticamente a la tecla **Intro**, aunque no tenga el foco. O botão padrão pode diferir do botão selecionado. Os botões predefinidos têm um aspeto azul específico no macOS:
+Além disso, no macOS, a propriedade do botão padrão modifica a aparência do botão para indicar uma "escolha recomendada" ao usuário e é automaticamente vinculada à tecla **Enter**, mesmo que não tenha o foco. O botão padrão pode diferir do botão selecionado. Os botões predefinidos têm um aspeto azul específico no macOS:
 
 ![](../assets/en/FormObjects/property_defaultButtonmacOS.en.png)
 
 > O botão tem de ter uma altura padrão para obter o aspeto de botão predefinido.
 
-En Windows, el concepto de "opción recomendada" no está soportado: sólo el botón enfocado tiene una apariencia diferente en tiempo de ejecución y la tecla **Intro** está vinculada al botón enfocado. No entanto, no editor de formulários 4D, o botão padrão é representado por um contorno azul:
+No Windows, o conceito de "escolha recomendada" não é compatível: somente o botão focalizado tem uma aparência diferente em tempo de execução e a tecla **Enter** está vinculada ao botão focalizado. No entanto, no editor de formulários 4D, o botão padrão é representado por um contorno azul:
 
 ![](../assets/en/FormObjects/property_defaultButtonWindows.en.png)
 
@@ -27,7 +27,7 @@ En Windows, el concepto de "opción recomendada" no está soportado: sólo el bo
 
 #### Objectos suportados
 
-[Botón regular ](button_overview.md#regular) - [Botón plano](button_overview.md#regular)
+[Botão regular](button_overview.md#regular) - [Botão plano](button_overview.md#regular)
 
 ---
 
@@ -53,7 +53,7 @@ Durante a execução, um campo ou qualquer área introduzível é delineado por 
 
 Esta propriedade é utilizada para desativar o realce de seleção nos list boxes.
 
-Quando esta opção estiver habilitada, o destaque de seleção não fica mais visível para as seleções feitas nas caixas de lista. Selections themselves are still valid and work in exactly the same way as previously; however, they are no longer represented graphically onscreen, and you will need to [define their appearance programmatically](listbox_overview.md#customizing-appearance-of-selected-rows).
+Quando esta opção estiver habilitada, o destaque de seleção não fica mais visível para as seleções feitas nas caixas de lista. As próprias selecções ainda são válidas e funcionam exatamente da mesma forma que as anteriormente; no entanto, eles não estão mais representados na tela gráfica, e você precisará [definir sua aparência programaticamente](listbox_overview.md#customizing-appearance-of-selected-rows).
 
 Por defeito, esta opção não está activada.
 
@@ -95,7 +95,7 @@ Valores disponíveis:
 
 #### Veja também
 
-[Vertical scroll bar](#vertical-scroll-bar)
+[Barra de rolagem vertical](#vertical-scroll-bar)
 
 ---
 
@@ -111,7 +111,7 @@ Define a resolução do ecrã para o conteúdo da área 4D Write Pro. Por padrã
 
 #### Objectos suportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -127,13 +127,13 @@ Apresenta/oculta as imagens de fundo e a cor de fundo.
 
 #### Objectos suportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
 ## Mostrar rodapés
 
-Muestra/oculta los pies de página cuando el [modo visualización de la página ](#view-mode) está definido como "Página".
+Exibe / oculta os rodapés quando [modo de exibição de página](#view-mode) está definido como "Página".
 
 #### Gramática JSON
 
@@ -143,7 +143,7 @@ Muestra/oculta los pies de página cuando el [modo visualización de la página 
 
 #### Objectos suportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -151,7 +151,7 @@ Muestra/oculta los pies de página cuando el [modo visualización de la página 
 
 Quando activada, a barra de fórmulas é visível por baixo da interface da barra de ferramentas na área 4D View Pro. Se não estiver selecionada, a barra de fórmulas fica oculta.
 
-> Esta propiedad sólo está disponible para la interfaz de la [Barra de herramientas](#user-interface).
+> Esta propriedade está disponível apenas para a interface da [barra de ferramentas](#user-interface).
 
 #### Gramática JSON
 
@@ -161,13 +161,13 @@ Quando activada, a barra de fórmulas é visível por baixo da interface da barr
 
 #### Objectos suportados
 
-[4D View Pro area](viewProArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md)
 
 ---
 
 ## Mostrar cabeçalhos
 
-Muestra/oculta los encabezados cuando el [modo visualización de la página ](#view-mode) está definido como "Página".
+Exibe / oculta os cabeçalhos quando [modo de exibição da página](#view-mode) estiver definido como "Página".
 
 #### Gramática JSON
 
@@ -177,7 +177,7 @@ Muestra/oculta los encabezados cuando el [modo visualización de la página ](#v
 
 #### Objectos suportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -193,13 +193,13 @@ Apresenta/oculta caracteres invisíveis
 
 #### Objectos suportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
 ## Mostrar régua horizontal
 
-Muestra/oculta la regla horizontal cuando la vista del documento está en modo [Página](#modo-de-vista).
+Exibe/oculta a régua horizontal quando a visualização do documento estiver no [modo Página](#view-mode).
 
 #### Gramática JSON
 
@@ -209,7 +209,7 @@ Muestra/oculta la regla horizontal cuando la vista del documento está en modo [
 
 #### Objectos suportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -225,13 +225,13 @@ Ativa/desativa a visualização HTML WYSIWYG, na qual todos os atributos avança
 
 #### Objectos suportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
 ## Mostrar moldura da página
 
-Muestra/oculta el marco de la página cuando [modo visualización de página ](#view-mode) está definido como "Página".
+Exibe/oculta o quadro da página quando o [modo de exibição da página](#view-mode) estiver definido como "Página".
 
 #### Gramática JSON
 
@@ -241,13 +241,13 @@ Muestra/oculta el marco de la página cuando [modo visualización de página ](#
 
 #### Objectos suportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
 ## Mostrar referências
 
-Muestra todas las expresiones 4D insertadas en el documento de 4D Write Pro como _referencias_. Cuando esta opción está desactivada, las expresiones 4D se muestran como _valores_. Por padrão, quando você insere um campo ou expressão 4D, o 4D Write Pro calcula e exibe seu valor atual. Selecione essa propriedade se quiser saber qual campo ou expressão é exibido. O campo ou as referências de expressão em seguida, aparecem em seu documento, com um fundo cinza.
+Apresenta todas as expressões 4D inseridas no documento 4D Write Pro como _referências_. Quando esta opção for desativada, expressões 4D são exibidas como _valores_. Por padrão, quando você insere um campo ou expressão 4D, o 4D Write Pro calcula e exibe seu valor atual. Selecione essa propriedade se quiser saber qual campo ou expressão é exibido. O campo ou as referências de expressão em seguida, aparecem em seu documento, com um fundo cinza.
 
 Por exemplo, se você tiver inserido a data atual junto com um formato, a data será exibida:
 
@@ -257,7 +257,7 @@ Com a propriedade Mostrar as referências ativada, a referência é apresentada:
 
 ![](../assets/en/FormObjects/writeProExpr.png)
 
-> Las expresiones 4D se pueden insertar con el comando `ST INSERT EXPRESSION`.
+> As expressões 4D podem ser inseridas usando o comando `ST INSERT EXPRESSION`.
 
 #### Gramática JSON
 
@@ -267,7 +267,7 @@ Com a propriedade Mostrar as referências ativada, a referência é apresentada:
 
 #### Objectos suportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -283,7 +283,7 @@ Muestra/oculta la regla vertical cuando la vista del documento está en modo [P�
 
 #### Objectos suportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -317,7 +317,7 @@ Quando os controles de aba com uma direção personalizada são exibidos no Wind
 
 #### Objectos suportados
 
-[4D View Pro area](viewProArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md)
 
 #### Veja também
 
@@ -353,7 +353,7 @@ Valores disponíveis:
 
 #### Veja também
 
-[Horizontal scroll bar](#horizontal-scroll-bar)
+[Barra de rolagem horizontal](#horizontal-scroll-bar)
 
 ---
 
@@ -361,9 +361,9 @@ Valores disponíveis:
 
 Define o modo de exibição do documento 4D Write Pro na área do formulário. Há três valores disponíveis:
 
-- **Página**: el modo de vista más completo, que incluye contornos de página, orientación, márgenes, saltos de página, encabezados y pies de página, etc.
-- **Borrador**: modo borrador con propiedades básicas del documento
-- **Embedded**: modo de vista adecuado para zonas integradas; no muestra márgenes, pies de página, encabezados, marcos de página, etc. Este modo también se puede utilizar para producir una salida de vista similar a la de la web (si también selecciona la [resolución de 96 dpi ](#resolution) y las propiedades [Mostrar HTML WYSIWYG](#show-html-wysiwyg)).
+- **Página**: o modo de visualização mais completo, que inclui contornos de página, orientação, margens, quebras de página, cabeçalhos e rodapés, etc.
+- **Rascunho**: modo rascunho com propriedades básicas do documento
+- **Embutido**: modo de exibição adequado para áreas incorporadas; não exibe margins, rodapés, cabeçalhos, quadros da página, etc. Esse modo também pode ser usado para produzir uma saída de visualização semelhante à da Web (se você também selecionar a opção [resolução de 96 dpi](#resolution) e as propriedades [Mostrar HTML WYSIWYG](#show-html-wysiwyg)).
 
 > A propriedade Mode vista só é utilizada para a renderização no ecrã. Para os parâmetros de impressão, são usadas automaticamente regras de renderização específicas.
 
@@ -375,7 +375,7 @@ Define o modo de exibição do documento 4D Write Pro na área do formulário. H
 
 #### Objectos suportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -391,4 +391,4 @@ Define a porcentagem de zoom para a exibição do conteúdo da área do 4D Write
 
 #### Objectos suportados
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
