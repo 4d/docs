@@ -15,14 +15,15 @@ title: リリースノート
 - コンパイラー設定の新しい [**直接型指定モード**](../Project/compiler.md#直接型指定の有効化): コード内のすべての変数および引数を `var` と `#DECLARE`/`Function` キーワードで宣言します (新規プロジェクトではこのモードのみサポートされます)。 これに伴い、[シンタックスチェック機能](../Project/compiler.md#シンタックスチェック) が強化されました。
 - [セッションシングルトン](../Concepts/classes.md#シングルトンクラス) と、新しい [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) クラスプロパティをサポート。
 - Qodly Studio: [Qodly Studio デバッガーを 4D Server で有効化](../WebServer/qodly-studio.md#4d-server-で-qodlyデバッガーを使用する) できるようになりました。
-- New Build Application keys for remote 4D applications to validate the server certificate authority [signatures](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateAuthoritiesCertificates.300-7425900.en.html) and/or [domain](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateDomainName.300-7425906.en.html).
-- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R7/4D/20-R7/What-s-new.901-7239607.en.html) on doc.4d.com.
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R7): list of all bugs that have been fixed in 4D 20 R7.
+- 4Dクライアントアプリケーション用の新しいアプリケーションビルド XMLキー: 接続時にサーバーから送信される証明書について、認証局の&#x20;
+  署名 や [ドメイン](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateDomainName.300-7425906.ja.html) を検証するためのキーが追加されました。
+- 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20R7/4D/20-R7/What-s-new.901-7239607.ja.html) ページ。
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R7): 4D 20 R7 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/274/release-note-version-20r7/))。
 
 #### 動作の変更
 
 - コンパイラー指示コマンド (`C_XXX`) は非推奨となり、`_O_C_XXX` という名前に変更されました (たとえば、`C_TEXT` は `_O_C_TEXT` という名前に変更されました)。
-- Documentations for [4D Language](../commands/command-index.md) and [4D Write Pro Language](../WritePro/commands/command-index.md) are now fully available on developer.4d.com. Find out about all the new features and changes concerning these documentations in this release note.
+- [4Dランゲージ](../commands/command-index.md) よび [4D Write Pro ランゲージ](../WritePro/commands/command-index.md) のドキュメントが、developer.4d.com で利用できるようになりました。 これらのドキュメントに関する新機能と変更点については、このリリースノートを参照ください。
 
 ## 4D 20 R6
 
@@ -45,7 +46,7 @@ title: リリースノート
 - PDF/A3 ドキュメントから添付ファイルを抽出する `PDF Get attachments` コマンドを提供する新しい [4D-QPDF コンポーネント](https://github.com/4d/4D-QPDF)。
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20R6/4D/20-R6/What-s-new.901-6957482.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20R6/4D/20-R6/What-s-new.901-6993921.ja.html) ページ。
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R6): list of all bugs that have been fixed in 4D 20 R6.
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R6): 4D 20 R6 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/178/release-note-version-20r6/))。
 
 #### 動作の変更
 
@@ -66,7 +67,7 @@ title: リリースノート
 - [宣言と同時にクラスプロパティを初期化](../Concepts/classes.md/#宣言と同時にプロパティを初期化する) できるようになりました。
 - RESTリクエスト用の新しい [強制ログインモード](../REST/authUsers.md#強制ログインモード) と、[Qodly Studio for 4D での専用サポート](../WebServer/qodly-studio.md#強制ログイン)。
 - 新しい [$format](../REST/$format.md) RESTパラメーター。
-- リモートユーザーセッションとストアドプロシージャーセッションで [`Session`](../API/SessionClass.md#session) オブジェクトが利用できるようになりました。
+- [`Session`](../commands/session.md) object is now available in remote user sessions and stored procedures session.
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6817247.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6851780.ja.html) ページ。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R5): 4D 20 R5 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/122/release-note-version-20r5/))。
@@ -101,7 +102,7 @@ title: リリースノート
 - 引数を宣言するための従来のシンタックス (例: `C_TEXT($1)` や `var $1 : Text`) は非推奨となり、コードの入力時、シンタックスチェック、コンパイル時に警告が生成されます。
 - セレクション内レコードの削除後に、別レコードが新規作成された場合でも、セレクションの一貫性が保持されるようになりました ([このブログ記事](https://blog.4d.com/ja/4d-keeps-your-selections-of-records-consistent-regarding-deletion-of-records/) を参照ください)。
 - 更新された [OpenSSL ライブラリ](#ライブラリの一覧) では、デフォルトの SSL/TLS セキュリティレベルが 1 から 2 に変更されました。 1024ビット以上2048ビット未満のRSA、DSA、DH鍵、および 160ビット以上224ビット未満の ECC鍵は使用できなくなりました。 デフォルトでは、以前の OpenSSLバージョンですでに TLS圧縮が無効にされていました。 セキュリティレベル2では、これを有効化できません。
-- [4Dユーザーディレクトリが bcryptアルゴリズムを使用している](https://blog.4d.com/ja/bcrypt-support-for-passwords/) 場合にパスワード認証を可能にするため、[`Open datastore`](../API/DataStoreClass.md#open-datastore) コマンドの _connectionInfo_ パラメーターに設定する "password" 値は、デフォルトでクリアテキストで送信されるようになりました。 "On REST authentication" データベースメソッドが、パスワードを平文の状態で扱えるようにし (3番目のパラメーターは **False**)、`Open datastore` に渡す _connectionInfo_ で "tls" オプションを **True** にすることで、接続が暗号化されるようにする必要があります。 特定の場合には、新しい "passwordAlgorithm" オプションも互換性のために使用できます ([`Open datastore`](../API/DataStoreClass.md#open-datastore) コマンド参照)。
+- In order to allow password verification when the [4D user directory uses the bcrypt algorithm](https://blog.4d.com/bcrypt-support-for-passwords/), the "password" value in the _connectionInfo_ parameter of the [`Open datastore`](../commands/open-datastore.md) command is now sent in clear form by default. "On REST authentication" データベースメソッドが、パスワードを平文の状態で扱えるようにし (3番目のパラメーターは **False**)、`Open datastore` に渡す _connectionInfo_ で "tls" オプションを **True** にすることで、接続が暗号化されるようにする必要があります。 In specific cases, a new "passwordAlgorithm" option can also be used for compatibility (see [`Open datastore`](../commands/open-datastore.md) command).
 
 ## 4D 20 R3
 
@@ -110,7 +111,7 @@ title: リリースノート
 #### ハイライト
 
 - 新しい [`collection.multiSort()`](../API/CollectionClass.md#multisort) 関数を追加しました。
-- [`Formula from string`](../API/FunctionClass.md#formula-from-string) で _context_ パラメーターをサポート。
+- Support of _context_ parameter in [`Formula from string`](../commands/formula-from-string.md).
 - [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew) の _connectionHandler_ パラメーターで `headers` プロパティをサポート。
 - データ同期モジュールの実装に役立つ [グローバル変更スタンプ](../ORDA/global-stamp.md)。 新しい [`ds.getGlobalStamp`](../API/DataStoreClass.md#getglobalstamp) と [`ds.setGlobalStamp`](../API/DataStoreClass.md#setglobalstamp) 関数が追加されました。
 - ピクチャー/Blob属性へのファイル参照の代入は、[ORDAでサポートされています](../ORDA/entities.md#d#ピクチャーまたは-blob属性にファイルを代入する)。
@@ -182,7 +183,7 @@ title: リリースノート
 
 #### ハイライト
 
-- 4D 20.3 では、[4Dユーザーディレクトリが bcryptアルゴリズムを使用している](https://blog.4d.com/ja/bcrypt-support-for-passwords/) 場合にパスワード認証を可能にするため、[`Open datastore`](../API/DataStoreClass.md#open-datastore) コマンドの _connectionInfo_ パラメーターに設定する "password" 値は、デフォルトでクリアテキストで送信されるようになりました。 "On REST authentication" データベースメソッドが、パスワードを平文の状態で扱えるようにし (3番目のパラメーターは **False**)、`Open datastore` に渡す _connectionInfo_ で "tls" オプションを **True** にすることで、接続が暗号化されるようにする必要があります。 特定の場合には、新しい "passwordAlgorithm" オプションも互換性のために使用できます ([`Open datastore`](../API/DataStoreClass.md#open-datastore) コマンド参照)。
+- As of 20.3, in order to allow password verification when the [4D user directory uses the bcrypt algorithm](https://blog.4d.com/bcrypt-support-for-passwords/), the "password" value in the _connectionInfo_ parameter of the [`Open datastore`](../commands/open-datastore.md) command is now sent in clear form by default. "On REST authentication" データベースメソッドが、パスワードを平文の状態で扱えるようにし (3番目のパラメーターは **False**)、`Open datastore` に渡す _connectionInfo_ で "tls" オプションを **True** にすることで、接続が暗号化されるようにする必要があります。 In specific cases, a new "passwordAlgorithm" option can also be used for compatibility (see [`Open datastore`](../commands/open-datastore.md) command).
 - 4D 20.2 は macOS Sonoma (macOS 14) 対応です。
 - (4D 20.1) [`Compile project`](https://doc.4d.com/4dv20/help/command/ja/page1760.html) コマンドの _options_ パラメーターに `plugins` プロパティが新しく追加されました。
 - 4D Server は、複数のジャーナルを自動的に統合します: [自動復元](../Backup/settings.md#自動復元)。
@@ -338,7 +339,7 @@ $value:=($size>1000)? a:b // この場合 'a:b' は三項演算子として解�
 - [ZIPアーカイブ](../API/ZipArchiveClass.md#zip-create-archive): _LZMA_ および _xz_ 圧縮アルゴリズムをサポート。
 - [新しいビルドオプション](../Desktop/building.md#silicon-macos-クライアントからの接続を許可) により、Windows上で Serverアプリケーションに Silicon Macクライアントを組み込むのが簡単になりました。
 - macOS で [ダークモードをサポート](../Preferences/general.md#アピアランス-macosのみ)。
-- [`IMAP New transporter`](../API/IMAPTransporterClass.md#imap-new-transporter), [`POP3 New transporter`](../API/POP3TransporterClass.md#pop3-new-transporter), および [`SMTP New transporter`](../API/SMTPTransporterClass.md#smtp-new-transporter) で **OAuth2 トークンオブジェクト** をサポート。
+- Support of **OAuth2 token object** in [`IMAP New transporter`](../commands/imap-new-transporter.mdnsporter), [`POP3 New transporter`](../commands/pop3-new-transporter.md), and [`SMTP New transporter`](../commands/smtp-new-transporter.md).
 - [サーバー管理ウィンドウ](../ServerWindow/maintenance.md#ログ設定ファイルを読み込む) のボタンを使って、[ログ設定ファイル](../Debugging/debugLogFiles.md#ログ設定ファイルを使用する) を読み込めるようになりました。
 - 宣言されたが渡されなかった引数にアクセスする場合の、4Dランゲージの [任意パラメーター](../Concepts/parameters.md#任意パラメーター) の扱いがより柔軟になりました。 たとえば、以下のコードは今後、エラーを生成しません:
 
