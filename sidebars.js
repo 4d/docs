@@ -202,8 +202,10 @@ module.exports =
 						"commands-legacy/compact-data-file",
 						"commands-legacy/component-list",
 						"commands-legacy/create-data-file",
+						"commands/create-entity-selection",
 						"commands-legacy/data-file",
 						"commands-legacy/drop-remote-user",
+						"commands/ds",
 						"commands-legacy/export-structure-file",
 						"commands-legacy/get-4d-file",
 						"commands-legacy/get-4d-folder",
@@ -219,6 +221,7 @@ module.exports =
 						"commands-legacy/open-administration-window",
 						"commands-legacy/open-data-file",
 						"commands-legacy/open-database",
+						"commands/open-datastore",
 						"commands-legacy/open-runtime-explorer",
 						"commands-legacy/open-security-center",
 						"commands-legacy/open-settings-window",
@@ -232,6 +235,7 @@ module.exports =
 						"commands-legacy/set-database-parameter",
 						"commands-legacy/set-update-folder",
 						"commands-legacy/structure-file",
+						"commands/use-entity-selection",
 						"commands-legacy/verify-current-data-file",
 						"commands-legacy/verify-data-file",
 						"commands-legacy/version-type"
@@ -357,8 +361,8 @@ module.exports =
 					"items": [
 						"commands-legacy/array-to-collection",
 						"commands-legacy/collection-to-array",
-						"commands-legacy/new-collection",
-						"commands-legacy/new-shared-collection"
+						"commands/new-collection",
+						"commands/new-shared-collection"
 					]
 					},
 					{
@@ -509,10 +513,10 @@ module.exports =
 					"type": "category",
 					"label": "File and Folder",
 					"items": [
-						"commands-legacy/file",
-						"commands-legacy/folder",
-						"commands-legacy/zip-create-archive",
-						"commands-legacy/zip-read-archive"
+						"commands/file",
+						"commands/folder",
+						"commands/zip-create-archive",
+						"commands/zip-read-archive"
 					]
 					},
 					{
@@ -576,8 +580,8 @@ module.exports =
 					"items": [
 						"commands-legacy/edit-formula",
 						"commands-legacy/execute-formula",
-						"commands-legacy/formula",
-						"commands-legacy/formula-from-string",
+						"commands/formula",
+						"commands/formula-from-string",
 						"commands-legacy/get-allowed-methods",
 						"commands-legacy/parse-formula",
 						"commands-legacy/set-allowed-methods"
@@ -703,11 +707,11 @@ module.exports =
 					"type": "category",
 					"label": "Language",
 					"items": [
-						"commands-legacy/4d",
+						"commands/4d",
 						"commands-legacy/command-name",
 						"commands-legacy/copy-parameters",
 						"commands-legacy/count-parameters",
-						"commands-legacy/cs",
+						"commands/cs",
 						"commands-legacy/current-method-name",
 						"commands-legacy/execute-method",
 						"commands-legacy/get-action-info",
@@ -719,8 +723,8 @@ module.exports =
 						"commands-legacy/null",
 						"commands-legacy/resolve-pointer",
 						"commands-legacy/self",
-						"commands-legacy/super",
-						"commands-legacy/this",
+						"commands/super",
+						"commands/this",
 						"commands-legacy/trace",
 						"commands-legacy/type",
 						"commands-legacy/undefined",
@@ -809,12 +813,12 @@ module.exports =
 					"type": "category",
 					"label": "Mail",
 					"items": [
-						"commands-legacy/imap-new-transporter",
-						"commands-legacy/mail-convert-from-mime",
-						"commands-legacy/mail-convert-to-mime",
-						"commands-legacy/mail-new-attachment",
-						"commands-legacy/pop3-new-transporter",
-						"commands-legacy/smtp-new-transporter"
+						"commands/imap-new-transporter",
+						"commands/mail-convert-from-mime",
+						"commands/mail-convert-to-mime",
+						"commands/mail-new-attachment",
+						"commands/pop3-new-transporter",
+						"commands/smtp-new-transporter"
 					]
 					},
 					{
@@ -901,22 +905,6 @@ module.exports =
 						"commands-legacy/copy-named-selection",
 						"commands-legacy/cut-named-selection",
 						"commands-legacy/use-named-selection"
-					]
-					},
-					{
-					"type": "category",
-					"label": "ORDA - DataStore",
-					"items": [
-						"commands-legacy/ds",
-						"commands-legacy/open-datastore"
-					]
-					},
-					{
-					"type": "category",
-					"label": "ORDA - EntitySelection",
-					"items": [
-						"commands-legacy/create-entity-selection",
-						"commands-legacy/use-entity-selection"
 					]
 					},
 					{
@@ -1160,7 +1148,7 @@ module.exports =
 						"commands-legacy/clear-semaphore",
 						"commands-legacy/get-process-variable",
 						"commands-legacy/kill-worker",
-						"commands-legacy/new-signal",
+						"commands/new-signal",
 						"commands-legacy/semaphore",
 						"commands-legacy/set-process-variable",
 						"commands-legacy/test-semaphore",
@@ -1200,7 +1188,7 @@ module.exports =
 						"commands-legacy/process-state",
 						"commands-legacy/register-client",
 						"commands-legacy/resume-process",
-						"commands-legacy/session",
+						"commands/session",
 						"commands-legacy/session-storage-by-id",
 						"commands-legacy/unregister-client"
 					]
@@ -1799,8 +1787,8 @@ module.exports =
 						"commands-legacy/web-send-http-redirect",
 						"commands-legacy/web-send-raw-data",
 						"commands-legacy/web-send-text",
-						"commands-legacy/web-server",
-						"commands-legacy/web-server-list",
+						"commands/web-server",
+						"commands/web-server-list",
 						"commands-legacy/web-set-home-page",
 						"commands-legacy/web-set-http-header",
 						"commands-legacy/web-set-option",

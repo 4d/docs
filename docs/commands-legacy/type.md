@@ -60,7 +60,7 @@ You can apply the Type function to fields, interprocess variables, process varia
 **Notes:** 
 
 * You can not apply the **Type** function to scalar expressions such as object properties (*emp.name*) or collection elements (*myColl\[5\]*). To do this, you must use the [Value type](value-type.md) command.
-* In compiled mode, calling **Type** on a method parameter ($0, $1...) declared as [C\_VARIANT](c-variant.md) does not return Is variant but the actual data type (same as calling [Value type](value-type.md)).
+* In compiled mode, calling **Type** on a method parameter declared as variant does not return Is variant but the actual data type (same as calling [Value type](value-type.md)).
 
 #### Example 1 
 

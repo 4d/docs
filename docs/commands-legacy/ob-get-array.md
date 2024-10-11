@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB GET ARRAY.Summary-->The **OB GET ARRAY** command retrieves, in *array*, the array of values stored in the *property* of the language object designated by the *object* parameter.<!-- END REF--> 
 
-*object* must have been defined using the [C\_OBJECT](c-object.md) command or designate a 4D object field.
+*object* can be an object variable or a 4D object field.
 
 In the *property* parameter, pass the label of the property to be read. Note that the *property* parameter is case sensitive.
 

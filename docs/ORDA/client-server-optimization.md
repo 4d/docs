@@ -13,8 +13,8 @@ title: Client/Server Optimization
 
 ORDA client/server architectures that support the optimization are:
 
-- Server datastores accessed by 4D remote desktop applications through [**`ds`**](../API/DataStoreClass.md#ds),
-- [Remote datastores](remoteDatastores.md), accessed via [**`Open datastore`**](../API/DataStoreClass.md#open-datastore) (client REST requests).
+- Server datastores accessed by 4D remote desktop applications through [**`ds`**](../commands/ds.md),
+- [Remote datastores](remoteDatastores.md), accessed via [**`Open datastore`**](../commands/open-datastore.md) (client REST requests).
 
 
 
@@ -23,7 +23,7 @@ ORDA client/server architectures that support the optimization are:
 The optimization context is based upon the following implementations:
 
 * When a client requests an entity selection from the server, 4D automatically "learns" which attributes of the entity selection are actually used on the client side during the code execution, and builds a corresponding "optimization context". This context is attached to the entity selection and stores the used attributes. It will be dynamically updated if other attributes are used afterwards. The following methods and functions trigger the learning phase:
-  * [`Create entity selection`](../API/EntitySelectionClass.md#create-entity-selection)
+  * [`Create entity selection`](../commands/create-entity-selection.md)
   * [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
   * [`dataClass.all()`](../API/DataClassClass.md#all)
   * [`dataClass.get()`](../API/DataClassClass.md#get)
@@ -47,7 +47,7 @@ The optimization context is based upon the following implementations:
 
 :::note Compatibility Note
 
-Contexts handled in connections established through [`Open datastore`](../API/DataStoreClass.md#open-datastore) can only be used between similar main versions of 4D. For example, a 4D 20.x remote application can only use contexts of a 4D Server 20.x datastore.
+Contexts handled in connections established through [`Open datastore`](../commands/open-datastore.md) can only be used between similar main versions of 4D. For example, a 4D 20.x remote application can only use contexts of a 4D Server 20.x datastore.
 
 :::
 

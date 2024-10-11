@@ -55,7 +55,7 @@ You can omit this parameter; if you do so, the name of the process will be the e
 
 **Note:** If you pass parameters to the process method, you must pass the *name* parameter; it cannot be omitted in this case.
 
-If you pass an object ([C\_OBJECT](c-object.md)) or a collection ([C\_COLLECTION](c-collection.md)) as *param*, a copy is sent (and not a reference) and the JSON form is used in UTF-8 for the server. If the object or collection contains pointers, their dereferenced values are sent, and not the pointers themselves.
+If you pass an object or a collection as *param*, a copy is sent (and not a reference) and the JSON form is used in UTF-8 for the server. If the object or collection contains pointers, their dereferenced values are sent, and not the pointers themselves.
 
 ##### Optional \* Parameter 
 

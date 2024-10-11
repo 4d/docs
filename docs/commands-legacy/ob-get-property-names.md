@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB GET PROPERTY NAMES.Summary-->The **OB GET PROPERTY NAMES** command returns, in *arrProperties*, the names of the properties contained in the language object designated by the *object* parameter.<!-- END REF-->
 
-*object* must have been defined using the [C\_OBJECT](c-object.md) command or designate a 4D object field.
+*object* can be an object varialble or a 4D object field.
 
 Pass a text array in the *arrProperties* parameter. If the array does not exist, the command creates and sizes it automatically. 
 

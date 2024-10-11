@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Is defined.Summary-->The **OB Is defined** command returns True if *object* or *property* is defined, and False otherwise.<!-- END REF--> 
 
-*object* must have been created using the [C\_OBJECT](c-object.md) command or designate a 4D object field.
+*object* can be an object varialble or a 4D object field.
 
 By default, if you omit the *property* parameter, the command checks whether the *object* is defined. An object is defined if its contents has been initialized. 
 

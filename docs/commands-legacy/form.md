@@ -29,7 +29,7 @@ If the current form is being displayed by a call to the [DIALOG](dialog.md) comm
 
 If the current form is a subform, the returned object depends on the parent container variable:
 
-* If the variable associated to the parent container has been typed as an object ([C\_OBJECT](c-object.md)), **Form** returns the value of this variable.  
+* If the variable associated to the parent container has been typed as an object, **Form** returns the value of this variable.  
 In this case, the object returned by **Form** is the same as the one returned by the following expression:  
 ```4d  
  (OBJECT Get pointer(Object subform container))->  

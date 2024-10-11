@@ -19,9 +19,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New object.Summary-->The **New object** command creates a new empty or prefilled object and returns its reference.<!-- END REF-->
 
-If you do not pass any parameters, **New object** creates an empty object and returns its reference. You must assign this reference to a 4D variable declared with [C\_OBJECT](c-object.md) or a 4D object field.
+If you do not pass any parameters, **New object** creates an empty object and returns its reference. You must assign this reference to a 4D oject variable or a 4D object field.
 
-**Note:** [C\_OBJECT](c-object.md) declares a variable of the [Object](# "Data structured as a native 4D object") type but does not create any object.
+**Note:** `var : Object` declares a variable of the [Object](# "Data structured as a native 4D object") type but does not create any object.
 
 Optionnally, you can prefill the new object by passing one or several *property*/*value* pairs as parameters:
 
