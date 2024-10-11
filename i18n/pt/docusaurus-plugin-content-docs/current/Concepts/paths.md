@@ -41,7 +41,7 @@ Com esta sintaxe:
 - os nomes de caminho absolutos começam com um "/"
 - para subir uma pasta num caminho relativo, utilize "../" à frente do nome do caminho (por segurança, não pode subir no sistema de arquivos).
 
-Na sintaxe POSIX, você geralmente usará nomes de caminho `filesystem` com os comandos [`File`](../API/FileClass.md#file) e [`Folder`](../API/FolderClass.md#folder), por exemplo:
+In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../commands/file.md) and [`Folder`](../commands/folder.md) commands, for example:
 
 ```4d
 var $pathFile : 4D.File
@@ -62,7 +62,7 @@ São suportados os seguintes padrões:
 - the text contains ':' and '\' as the second and third character,
 - o texto começa por "\\".
 
-Exemplos com [`Folder`](../API/FolderClass.md#folder):
+Examples with [`Folder`](../commands/folder.md):
 
 ```4d
 $ok:=Folder("C:\\Monday";fk platform path).create()
@@ -82,7 +82,7 @@ São suportados os seguintes padrões (sintaxe HFS+):
 - os separadores de pasta são ":"
 - o caminho não deve começar com um ":"
 
-Exemplos com [`Folder`](../API/FolderClass.md#folder):
+Examples with [`Folder`](../commands/folder.md):
 
 ```4d
 $ok:=Folder("macintosh hd:";fk platform path).create()
@@ -93,7 +93,7 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //a volume deve ser cham
 
 ### Constructores `File` y `Folder`
 
-Os comandos [`File`](../API/FileClass.md#file) e [`Folder`](../API/FolderClass.md#folder) aceitam apenas **nomes de caminho absolutos**. Os nomes de caminho relativos não são suportados e devolverão erros. Por exemplo, o seguinte código não é permitido:
+[`File`](../commands/file.md) and [`Folder`](../commands/folder.md) commands only accept **absolute pathnames**. Os nomes de caminho relativos não são suportados e devolverão erros. Por exemplo, o seguinte código não é permitido:
 
 ```4d
 	//ERROR
