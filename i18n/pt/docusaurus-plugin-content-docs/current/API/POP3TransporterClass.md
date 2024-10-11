@@ -7,7 +7,7 @@ The `POP3Transporter` class allows you to retrieve messages from a POP3 email se
 
 ### Objeto POP3 transporter
 
-POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-new-transporter) command. Eles oferecem as propriedades abaixo e funções:
+POP3 Transporter objects are instantiated with the [`POP3 New transporter`](../commands/pop3-new-transporter.md) command. Eles oferecem as propriedades abaixo e funções:
 
 |                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -27,75 +27,6 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 | [<!-- INCLUDE #POP3TransporterClass.undeleteAll().Syntax -->](#undeleteall)<br/><!-- INCLUDE #POP3TransporterClass.undeleteAll().Summary -->                  |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                             |
 
-<!-- REF POP3TransporterClass.POP3 New transporter.Desc -->
-
-## POP3 New transporter
-
-<details><summary>História</summary>
-
-| Release | Mudanças   |
-| ------- | ---------- |
-| 18 R2   | Adicionado |
-
-</details>
-
-<!-- REF #_command_.POP3 New transporter.Syntax -->**POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
-
-<!-- REF #_command_.POP3 New transporter.Params -->
-
-| Parâmetro  | Tipo                               |                             | Descrição                                           |
-| ---------- | ---------------------------------- | :-------------------------: | --------------------------------------------------- |
-| server     | object                             |              ->             | Informação de servidor de correio                   |
-| Resultados | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object) |
-
-<!-- END REF -->
-
-#### Descrição
-
-The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the *server* parameter and returns a new *[POP3 transporter](#pop3-transporter-object)* object. O objeto transporter retornado vai geralmente ser usado para receber emails.
-
-No parâmetro *server*, passe um objeto contendo as propriedades abaixo:
-
-| *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Valor padrão (se omitido)                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------- |
-| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                | False                                                             |
-| .**accessTokenOAuth2**: Texto<br/>.**accessTokenOAuth2**: Objeto<br/>Cadeia ou objeto token que representa as credenciais de autorização OAuth2. Usado somente com OAUTH2 `authenticationMode`. Se `accessTokenOAuth2` for usado, mas `authenticationMode` for omisso, o protocolo OAuth 2 será usado (se permitido pelo servidor). Não retornado no objeto *[SMTP transporter](#smtptransporterobject)*. | nenhum                                                            |
-| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                  | o modo de autenticação mais seguro disponível no servidor é usado |
-| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                     | 30                                                                |
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                            | *mandatory*                                                       |
-| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                   | nenhum                                                            |
-| **.password** : Text<br/>Senha do usuário para autenticação no servidor. Não retornado no objeto *[SMTP transporter](#smtptransporterobject)*.                                                                                                                                                                                                                                                                                                                                               | nenhum                                                            |
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                            | 995                                                               |
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                            | nenhum                                                            |
-
-#### Resultados
-
-A função retorna um [**objeto POP3 transporter**](#pop3-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
-
-> A conexão POP3 é fechada automaticamente quando o objeto transportador for destruído.
-
-#### Exemplo
-
-```4d
- var $server : Object
- $server:=New object
- $server.host:="pop.gmail.com" //Obrigatório
- $server.port:=995
- $server.user:="4d@gmail.com"
- $server.password:="XXXXXXXX"
- $server.logFile:="LogTest.txt" //histórico para salvar na pasta Logs
-
- var $transporter : 4D.POP3Transporter
- $transporter:=POP3 New transporter($server)
-
- $status:=$transporter.checkConnection()
- If(Not($status.success))
-    ALERT("An error occurred receiving the mail: "+$status.statusText)
- End if
-```
-
-<!-- END REF -->
-
 ## 4D.POP3Transporter.new()
 
 <!-- REF #4D.POP3Transporter.new().Syntax -->**4D.POP3Transporter.new**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
@@ -111,7 +42,7 @@ A função retorna um [**objeto POP3 transporter**](#pop3-transporter-object). T
 
 #### Descrição
 
-The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summary -->creates and returns a new object of the `4D.POP3Transporter` type<!-- END REF -->. It is identical to the [`POP3 New transporter`](#pop3-new-transporter) command (shortcut).
+The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summary -->creates and returns a new object of the `4D.POP3Transporter` type<!-- END REF -->. It is identical to the [`POP3 New transporter`](../commands/pop3-new-transporter.md) command (shortcut).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
