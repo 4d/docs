@@ -24,7 +24,7 @@ title: リリースノート
 - PDF/A3 ドキュメントから添付ファイルを抽出する `PDF Get attachments` コマンドを提供する新しい [4D-QPDF コンポーネント](https://github.com/4d/4D-QPDF)。
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20R6/4D/20-R6/What-s-new.901-6957482.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20R6/4D/20-R6/What-s-new.901-6993921.ja.html) ページ。
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R6): list of all bugs that have been fixed in 4D 20 R6.
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R6): 4D 20 R6 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/178/release-note-version-20r6/))。
 
 #### 動作の変更
 
