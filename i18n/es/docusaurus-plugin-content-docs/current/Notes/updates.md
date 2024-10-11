@@ -66,7 +66,7 @@ Lea [**Novedades en 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-20-R5/), 
 - Soporte para [inicializar una propiedad de clase en su línea de declaración](../Concepts/classes.md/#initializing-the-property-in-the-declaration-line).
 - Nuevo modo [forzar login para peticiones REST](../REST/authUsers.md#force-login-mode) con un [soporte específico en Qodly Studio para 4D](../WebServer/qodly-studio.md#force-login).
 - Nuevo parámetro REST [$format](../REST/$format.md).
-- El objeto [`Session`](../API/SessionClass.md#session) está ahora disponible en sesiones de usuario remotas y en sesiones de procedimientos almacenados.
+- [`Session`](../commands/session.md) object is now available in remote user sessions and stored procedures session.
 - Comandos del lenguaje 4D: [página Novedades](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6817247.en.html) en doc.4d.com.
 - 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6851780.en.html) en doc.4d.com.
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=20_R5): lista de todos los bugs que se han corregido en 4D 20 R5.
@@ -101,7 +101,7 @@ Lea [**Novedades en 4D 20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R4/),
 - El uso de una sintaxis heredada para declarar parámetros (por ejemplo, `C_TEXT($1)` o `var $1 : Text`) es obsoleto y genera advertencias en los pasos de escritura de código, verificación de sintaxis y compilación.
 - La coherencia de las selecciones ahora se mantiene después de que se hayan eliminado algunos registros y se hayan creado otros (ver [esta entrada de blog](https://blog.4d.com/4d-keeps-your-selections-of-records-consistent-regarding-deletion-of-records/)).
 - En la actualización de [la librería OpenSSL](#library-table), el nivel de seguridad SSL/TLS por defecto se ha cambiado de 1 a 2. Las llaves RSA, DSA y DH de 1024 bits o más y menos de 2048 bits, así como las llaves ECC de 160 bits o más y menos de 224 bits, ya no están permitidas. Por defecto, la compresión TLS ya estaba desactivada en versiones anteriores de OpenSSL. En el nivel de seguridad 2 no se puede activar.
-- Con el fin de permitir la verificación de la contraseña cuando el [directorio de usuarios 4D utiliza el algoritmo bcrypt](https://blog.4d.com/bcrypt-support-for-passwords/), el valor "password" en el parámetro _connectionInfo_ del comando [`Open datastore`](../API/DataStoreClass.md#open-datastore) se envía ahora en claro por defecto. Asegúrese de que su método base "On REST authentication" puede manejar contraseñas en claro (el tercer parámetro es entonces **False**) y que `Open datastore` encripta su conexión pasando la opción "tls" a **True** en _connectionInfo_. En casos específicos, también se puede utilizar una nueva opción "passwordAlgorithm" para la compatibilidad (ver [`Open datastore`](../API/DataStoreClass.md#open-datastore).
+- In order to allow password verification when the [4D user directory uses the bcrypt algorithm](https://blog.4d.com/bcrypt-support-for-passwords/), the "password" value in the _connectionInfo_ parameter of the [`Open datastore`](../commands/open-datastore.md) command is now sent in clear form by default. Asegúrese de que su método base "On REST authentication" puede manejar contraseñas en claro (el tercer parámetro es entonces **False**) y que `Open datastore` encripta su conexión pasando la opción "tls" a **True** en _connectionInfo_. In specific cases, a new "passwordAlgorithm" option can also be used for compatibility (see [`Open datastore`](../commands/open-datastore.md) command).
 
 ## 4D 20 R3
 
@@ -110,7 +110,7 @@ Lea [**Novedades en 4D 20 R3**](https://blog.4d.com/en-whats-new-in-4d-20-vR3/),
 #### Lo más destacado
 
 - Nueva función [`collection.multiSort`](../API/CollectionClass.md#multisort).
-- Soporte del parámetro _context_ en [`Formula from string`](../API/FunctionClass.md#formula-from-string).
+- Support of _context_ parameter in [`Formula from string`](../commands/formula-from-string.md).
 - Soporte de la propiedad `headers` en el parámetro _connectionHandler_ de [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
 - [Sello de modificación global](../ORDA/global-stamp.md) para ayudar a implementar módulos de sincronización de datos. Nuevas funciones: [`ds.getGlobalStamp`](../API/DataStoreClass.md#getglobalstamp) y [`ds.setGlobalStamp`](../API/DataStoreClass.md#setglobalstamp).
 - La asignación de referencias de archivo a atributos imagen/blob está [soportada en ORDA](../ORDA/entities.md#d#assigning-files-to-picture-or-blob-attributes).
@@ -182,7 +182,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 #### Lo más destacado
 
-- A partir de 20.3, para permitir la verificación de la contraseña cuando el [directorio de usuarios 4D utiliza el algoritmo bcrypt](https://blog.4d.com/bcrypt-support-for-passwords/), el valor "password" en el parámetro _connectionInfo_ del comando [`Open datastore`](../API/DataStoreClass.md#open-datastore) se envía ahora en claro por defecto. Asegúrese de que su método base "On REST authentication" puede manejar contraseñas en claro (el tercer parámetro es entonces **False**) y que `Open datastore` encripta su conexión pasando la opción "tls" a **True** en _connectionInfo_. En casos específicos, también se puede utilizar una nueva opción "passwordAlgorithm" para la compatibilidad (ver [`Open datastore`](../API/DataStoreClass.md#open-datastore).
+- As of 20.3, in order to allow password verification when the [4D user directory uses the bcrypt algorithm](https://blog.4d.com/bcrypt-support-for-passwords/), the "password" value in the _connectionInfo_ parameter of the [`Open datastore`](../commands/open-datastore.md) command is now sent in clear form by default. Asegúrese de que su método base "On REST authentication" puede manejar contraseñas en claro (el tercer parámetro es entonces **False**) y que `Open datastore` encripta su conexión pasando la opción "tls" a **True** en _connectionInfo_. In specific cases, a new "passwordAlgorithm" option can also be used for compatibility (see [`Open datastore`](../commands/open-datastore.md) command).
 - 4D 20.2 está certificado en macOS Sonoma (macOS 14).
 - (4D 20.1) Nueva propiedad `plugins` en el parámetro _options_ del comando [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html).
 - 4D Server integra automáticamente varios diarios: [Restauración automática](../Backup/settings.md#automatic-restore).
@@ -337,7 +337,7 @@ $value:=($size>1000)? a:b // Aquí 'a:b' se ve como un operador ternario.
 - [Archivos ZIP](../API/ZipArchiveClass.md#zip-create-archive) ahora soporta algoritmos de compresión _LZMA_ y _xz_.
 - Una [nueva opción de compilación](../Desktop/building.md#allow-connection-of-silicon-mac-clients) facilita la inclusión de clientes Silicon Mac en aplicaciones Server en Windows.
 - Extendido [soporte del modo oscuro](../Preferences/general.md#appearance-macos-only) en macOS.
-- Soporte del **objeto token OAuth2** en [`IMAP New transporter`](../API/IMAPTransporterClass.md#imap-new-transporter), [`POP3 New transporter`](../API/POP3TransporterClass.md#pop3-new-transporter) y [`SMTP New transporter`](../API/SMTPTransporterClass.md#smtp-new-transporter).
+- Support of **OAuth2 token object** in [`IMAP New transporter`](../commands/imap-new-transporter.mdnsporter), [`POP3 New transporter`](../commands/pop3-new-transporter.md), and [`SMTP New transporter`](../commands/smtp-new-transporter.md).
 - Ahora los usuarios pueden cargar un [archivo de configuración de registros](../Debugging/debugLogFiles.md#using-a-log-configuration-file) mediante un botón de la [ventana de administración del servidor](../ServerWindow/maintenance.md#load-logs-configuration-file).
 - La gestión de los [parámetros opcionales](../Concepts/parameters.md#optional-parameters) es más flexible en el lenguaje 4D cuando se accede a parámetros declarados pero no pasados. Por ejemplo, el siguiente código ya no provoca un error:
 
