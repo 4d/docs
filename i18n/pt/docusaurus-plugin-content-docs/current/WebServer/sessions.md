@@ -61,7 +61,7 @@ La creación de una sesión web para una petición REST puede requerir que una l
 
 :::
 
-The `Session` object of the current session can then be accessed through the [`Session`](API/SessionClass.md#session) command in the code of any web processes.
+The `Session` object of the current session can then be accessed through the [`Session`](commands/session.md) command in the code of any web processes.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
@@ -84,9 +84,9 @@ Uma sessão Web escalável é encerrada quando:
 
 The lifespan of an inactive cookie is 60 minutes by default, which means that the web server will automatically close inactive sessions after 60 minutes.
 
-This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the _connectionInfo_ parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command.
+This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the _connectionInfo_ parameter of the [`Open datastore`](../commands/open-datastore.md) command.
 
-When a web session is closed, if the [`Session`](API/SessionClass.md#session) command is called afterwards:
+When a web session is closed, if the [`Session`](commands/session.md) command is called afterwards:
 
 - el objeto `Session` no contiene privilegios (es una sesión de invitado)
 - a propriedade [`storage`](API/SessionClass.md#storage) está vazia
