@@ -123,7 +123,7 @@ Propriedades compatíveis dependem do tipo de list box.
 | [Classe](properties_Object.md#css-class)                                                   | X              | X                | X                                    |
 | [Collection or entity selection](properties_Object.md#collection-or-entity-selection)      |                | X                | X                                    |
 | [Column Auto-Resizing](properties_ResizingOptions.md#column-auto-resizing)                 | X              | X                | X                                    |
-| [Current item](properties_DataSource.md#current-item)                                      |                |                  | X                                    |
+| [Item atual](properties_DataSource.md#current-item)                                        |                |                  | X                                    |
 | [Current item position](properties_DataSource.md#current-item-position)                    |                |                  | X                                    |
 | [Data Source](properties_Object.md#data-source)                                            | X              | X                | X                                    |
 | [Detail Form Name](properties_ListBox.md#detail-form-name)                                 |                | X                |                                      |
@@ -133,8 +133,8 @@ Propriedades compatíveis dependem do tipo de list box.
 | [Draggable](properties_Action.md#droppable)                                                | X              | X                | X                                    |
 | [Droppable](properties_Action.md#droppable)                                                | X              | X                | X                                    |
 | [Focusable](properties_Entry.md#focusable)                                                 | X              | X                | X                                    |
-| [Font](properties_Text.md#font)                                                            | X              | X                | X                                    |
-| [Font Color](properties_Text.md#font_color)                                                | X              | X                | X                                    |
+| [Fonte](properties_Text.md#font)                                                           | X              | X                | X                                    |
+| [Cor da fonte](properties_Text.md#font_color)                                              | X              | X                | X                                    |
 | [Font Color Expression](properties_Text.md#font-color-expression)                          |                | X                | X                                    |
 | [Font Size](properties_Text.md#font-size)                                                  | X              | X                | X                                    |
 | [Height (list box)](properties_CoordinatesAndSizing.md#height)          | X              | X                | X                                    |
