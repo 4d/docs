@@ -7,7 +7,7 @@ ORDA は、下地であるデータベースストラクチャーへの自動マ
 
 ## ストラクチャーマッピング
 
-[`ds`](API/DataStoreClass.md#ds) および [`Open datastore`](API/DataStoreClass.md#open-datastore) コマンドを使ってデータストアを呼び出すと、戻り値の [データストア](#データストア) オブジェクトには、対応する 4D ストラクチャーのテーブルとフィールドへの参照が属性として格納されています:
+When you call a datastore using the [`ds`](commands/ds.md) or the [`Open datastore`](commands/open-datastore.md) command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
 
 - テーブルはデータクラスへとマップされます。
 - フィールドはストレージ属性へとマップされます。
