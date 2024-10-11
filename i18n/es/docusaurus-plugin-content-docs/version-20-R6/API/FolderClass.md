@@ -71,7 +71,7 @@ Los objetos `Folder` admiten varios nombres de ruta, incluida la sintaxis `files
 | path           | Text                      |              ->             | Ruta de la carpeta                                                    |
 | folderConstant | Integer                   |              ->             | Constante de la carpeta 4D                                            |
 | pathType       | Integer                   |              ->             | `fk posix path` (por defecto) o `fk platform path` |
-| -              |                           |              ->             | * para devolver la carpeta de la base local                           |
+| \*             |                           |              ->             | \* para devolver la carpeta de la base local                          |
 | Result         | 4D.Folder | <- | Nuevo objeto de carpeta                                               |
 
 <!-- END REF -->

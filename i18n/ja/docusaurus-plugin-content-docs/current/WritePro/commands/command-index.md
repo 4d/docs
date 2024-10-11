@@ -3,7 +3,6 @@ id: command-index
 title: 4D View Pro コマンド
 ---
 
-
 [`WP Add picture`](../commands-legacy/wp-add-picture.md)<br/>
 [`WP Bookmark range`](../commands-legacy/wp-bookmark-range.md)<br/>
 [`WP COMPUTE FORMULAS`](../commands-legacy/wp-compute-formulas.md)<br/>

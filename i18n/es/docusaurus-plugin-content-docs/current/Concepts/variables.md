@@ -80,7 +80,7 @@ La siguiente tabla enumera todos los valores `varType` soportados:
 
 :::note Compatibilidad
 
-The legacy syntax using `C_XXX` commands is deprecated as of 4D 20 R7.
+La sintaxis heredada utilizando los comandos `C_XX` es obsoleta a partir de 4D 20 R7.
 
 :::
 

@@ -75,7 +75,7 @@ Los objetos `File` soportan varios nombres de ruta, incluyendo la sintaxis `file
 | path         | Text                    |              ->             | Ruta del archivo                                                      |
 | fileConstant | Integer                 |              ->             | Constante del archivo 4D                                              |
 | pathType     | Integer                 |              ->             | `fk posix path` (por defecto) o `fk platform path` |
-| -            |                         |              ->             | * para devolver el archivo de la base local                           |
+| \*           |                         |              ->             | \* para devolver el archivo de la base local                          |
 | Result       | 4D.File | <- | Nuevo objeto de archivo                                               |
 
 <!-- END REF -->

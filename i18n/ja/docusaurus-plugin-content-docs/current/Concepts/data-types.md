@@ -9,22 +9,22 @@ title: データタイプの概要
 
 | データタイプ                                                | データベース                     | ランゲージ   | [`var` 宣言](variables.md#var-キーワードによる宣言) | [`ARRAY` 宣言](arrays.md) |
 | ----------------------------------------------------- | -------------------------- | ------- | --------------------------------------- | ----------------------- |
-| [文字列](dt_string.md)                                   | ◯                          | テキストに変換 | -                                       | *                       |
+| [文字列](dt_string.md)                                   | ◯                          | テキストに変換 | -                                       | -                       |
 | [テキスト](Concepts/dt_string.md)                         | ◯                          | ◯       | `Text`                                  | `ARRAY TEXT`            |
 | [日付](Concepts/dt_date.md)                             | ◯                          | ◯       | `Date`                                  | `ARRAY DATE`            |
 | [時間](Concepts/dt_time.md)                             | ◯                          | ◯       | `Time`                                  | `ARRAY TIME`            |
 | [ブール](Concepts/dt_boolean.md)                         | ◯                          | ◯       | `Boolean`                               | `ARRAY BOOLEAN`         |
 | [整数](Concepts/dt_number.md)                           | ◯                          | 倍長整数に変換 | `Integer`                               | `ARRAY INTEGER`         |
 | [倍長整数](Concepts/dt_number.md)                         | ◯                          | ◯       | `Integer`                               | `ARRAY LONGINT`         |
-| [64ビット整数](Concepts/dt_number.md)                      | ◯ (SQL) | 実数に変換   | -                                       | *                       |
+| [64ビット整数](Concepts/dt_number.md)                      | ◯ (SQL) | 実数に変換   | -                                       | -                       |
 | [実数](Concepts/dt_number.md)                           | ◯                          | ◯       | `Real`                                  | `ARRAY REAL`            |
-| [未定義](Concepts/dt_null_undefined.md)                  | -                          | ◯       | *                                       | -                       |
-| [Null](Concepts/dt_null_undefined.md)                 | *                          | ◯       | -                                       | *                       |
+| [未定義](Concepts/dt_null_undefined.md)                  | -                          | ◯       | -                                       | -                       |
+| [Null](Concepts/dt_null_undefined.md)                 | -                          | ◯       | -                                       | -                       |
 | [ポインター](Concepts/dt_pointer.md)                       | -                          | ◯       | `Pointer`                               | `ARRAY POINTER`         |
 | [ピクチャー](Concepts/dt_picture.md)                       | ◯                          | ◯       | `Picture`                               | `ARRAY PICTURE`         |
 | [BLOB](Concepts/dt_blob.md)                           | ◯                          | ◯       | `Blob`, `4D.Blob`                       | `ARRAY BLOB`            |
 | [オブジェクト](Concepts/dt_object.md)                       | ◯                          | ◯       | `Object`                                | `ARRAY OBJECT`          |
-| [コレクション](Concepts/dt_collection.md)                   | *                          | ◯       | `Collection`                            |                         |
+| [コレクション](Concepts/dt_collection.md)                   | -                          | ◯       | `Collection`                            |                         |
 | [バリアント](Concepts/dt_variant.md)(2) | -                          | ◯       | `Variant`                               |                         |
 
 (1) ORDA では、オブジェクト (エンティティ) を介してデータベースフィールドを扱うため、オブジェクトにおいて利用可能なデータタイプのみがサポートされます。 詳細については [オブジェクト](Concepts/dt_object.md) のデータタイプの説明を参照ください。

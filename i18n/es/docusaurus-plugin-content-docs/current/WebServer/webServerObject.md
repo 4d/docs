@@ -68,7 +68,7 @@ Un [objeto de clase Web srver](API/WebServerClass.md#web-server-object) contiene
 | Funciones                                | Parámetros                          | Valor devuelto                     | Descripción             |
 | ---------------------------------------- | ----------------------------------- | ---------------------------------- | ----------------------- |
 | [`start()`](API/WebServerClass.md#start) | settings (objet) | status (objeto) | Iniciar el servidor web |
-| [`stop()`](API/WebServerClass.md#start)  | -                                   | *                                  | Detener el servidor Web |
+| [`stop()`](API/WebServerClass.md#start)  | -                                   | -                                  | Detener el servidor Web |
 
 Para iniciar y detener un servidor web, basta con llamar a las funciones [`start()`](API/WebServerClass.md#start) y [`stop()`](API/WebServerClass.md#stop) del objeto servidor web:
 

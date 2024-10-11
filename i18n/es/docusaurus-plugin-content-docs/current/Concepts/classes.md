@@ -839,7 +839,7 @@ Una **clase singleton** es una clase usuario que sólo produce una única instan
 
 ### Singletons types
 
-4D supports three types of singletons:
+4D soporta tres tipos de singletons:
 
 - a **process singleton** has a unique instance for the process in which it is instantiated,
 - a **shared singleton** has a unique instance for all processes on the machine.

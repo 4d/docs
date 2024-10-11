@@ -23,7 +23,7 @@ Cada tipo de blob tiene sus ventajas. Utilice la siguiente tabla para determinar
 | Alterable                            |  Sí  |            No           |
 | Compartible en objetos y colecciones |  No  |            Sí           |
 | Pasado por referencia\*              |  No  |            Sí           |
-| Rendimiento al acceder a los bytes   |   -  |            *            |
+| Rendimiento al acceder a los bytes   |   +  |            -            |
 | Tamaño máximo                        |  2GB |         Memoria         |
 
 Tenga en cuenta que a diferencia de los objetos blob, que son pasados por referencia, los blobs escalares se duplican en la memoria cuando se pasan a los métodos. Puede pasar blobs y objetos blob (`4D.Blob`) a los métodos.

@@ -127,7 +127,7 @@ Dans chacun des formats d'affichage numériques, le signe dièse (#), zéro (0),
 | #           | N'affiche rien                           |
 | 0           | Affiche 0                                |
 | ^           | Affiche un espace (1) |
-| -           | Affiche un astérisque                    |
+| \*          | Affiche un astérisque                    |
 
 (1) Le caractère caret (^) génère un espace qui occupe la même largeur qu'un chiffre dans la plupart des polices de caractères.
 

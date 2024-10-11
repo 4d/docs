@@ -253,9 +253,9 @@ Quando se utiliza a linguagem, é raro que se pretenda apenas um dado. É mais p
 
 | Operador | Operação      | Exemplo    |
 | -------- | ------------- | ---------- |
-| -        | Adição        | 1 +2 = 3   |
+| +        | Adição        | 1 +2 = 3   |
 | –        | Subtração     | 3 - 2 = 1  |
-| *        | Multiplicação | 2 \* 3 = 6 |
+| \*       | Multiplicação | 2 \* 3 = 6 |
 | /        | Divisão       | 6 / 2 = 3  |
 
 Os operadores numéricos são apenas um dos tipos de operadores disponíveis. 4D suporta muitos tipos de dados, tais como números, texto, datas e imagens, por isso há operadores que realizam operações nestes diferentes tipos de dados.

@@ -70,7 +70,7 @@ webServer:=WEB Server(Web server receiving request)
 | 関数                                       | 引数                                   | 戻り値                                | 説明            |
 | ---------------------------------------- | ------------------------------------ | ---------------------------------- | ------------- |
 | [`start()`](API/WebServerClass.md#start) | settings (オブジェクト) | status (オブジェクト) | Webサーバーを開始します |
-| [`stop()`](API/WebServerClass.md#start)  | -                                    | *                                  | Webサーバーを停止します |
+| [`stop()`](API/WebServerClass.md#start)  | -                                    | -                                  | Webサーバーを停止します |
 
 Webサーバーを起動・停止するには、Webサーバーオブジェクトの [`start()`](API/WebServerClass.md#start) および [`stop()`](API/WebServerClass.md#stop) 関数を呼び出すだけです。
 

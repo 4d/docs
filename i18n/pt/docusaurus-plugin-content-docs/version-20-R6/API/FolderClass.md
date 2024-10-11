@@ -71,7 +71,7 @@ Os objetos `Folder` suportam vários pathnames, incluindo a sintaxe `filesystems
 | path           | Text                       |              ->             | Folder path                                                       |
 | folderConstant | Integer                    |              ->             | Constante Pasta 4D                                                |
 | pathType       | Integer                    |              ->             | `fk posix path` (padrão) ou `fk platform path` |
-| -              |                            |              ->             | * para devolver a pasta da base de dados do anfitrião             |
+| \*             |                            |              ->             | \* para devolver a pasta da base de dados do anfitrião            |
 | Resultados     | 4D. Folder | <- | Novo Objeto Folder                                                |
 
 <!-- END REF -->
