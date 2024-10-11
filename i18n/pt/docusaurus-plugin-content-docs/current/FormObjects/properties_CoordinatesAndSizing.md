@@ -1,16 +1,16 @@
 ---
 id: propertiesCoordinatesAndSizing
-title: Coordenadas y dimensiones
+title: Coordenadas e dimensões
 ---
 
 ## Altura automática da linha
 
-Esta propiedad sólo está disponible para los list boxes con las siguientes [fuentes de datos](properties_Object.md#data-source):
+Esta propriedade só está disponível para os list box com as seguintes [fontes de dados](properties_Object.md#data-source):
 
 - collection ou entity selection,
 - array (não hierárquico).
 
-A propriedade não está selecionada por padrão. When used, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account.
+A propriedade não está selecionada por padrão. Note that only columns with the option selected will be taken into account to calculate the row height. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account.
 
 :::note
 
