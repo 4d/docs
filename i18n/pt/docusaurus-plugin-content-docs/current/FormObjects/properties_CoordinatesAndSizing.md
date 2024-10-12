@@ -10,11 +10,11 @@ Esta propriedade só está disponível para os list box com as seguintes [fontes
 - collection ou entity selection,
 - array (não hierárquico).
 
-A propriedade não está selecionada por padrão. Note that only columns with the option selected will be taken into account to calculate the row height. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account.
+A propriedade não está selecionada por padrão. Note that only columns with the option selected will be taken into account to calculate the row height. Note that only columns with the option selected will be taken into account to calculate the row height.
 
 :::note
 
-Al redimensionar el formulario, si la propiedad de [dimensionamiento horizontal](properties_ResizingOptions.md#horizontal-sizing) "Agrandar" fue asignada al list box, la columna más a la derecha se agrandará más allá de su ancho máximo, si es necesario.
+When resizing the form, if the "Grow" [horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
 :::
 
@@ -44,7 +44,7 @@ Cuando esta propiedad está activada, la altura de cada línea se calcula autom�
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Coluna de list box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -122,7 +122,7 @@ Coordenada superior do objecto no formulário.
 
 </details>
 
-Defines the corner roundness (in pixels) of objects of the <a href="shapes_overview.md#rectangle">rectangle</a> type. By default, the radius value for rectangles is 0 pixels. You can change this property to draw rounded rectangles with custom shapes:
+Defines the corner roundness (in pixels) of the object. By default, the radius value for rectangles is 0 pixels. You can change this property to draw rounded rectangles with custom shapes:
 
 ![](../assets/en/FormObjects/shape_rectangle.png)
 
@@ -140,7 +140,7 @@ Con [áreas de texto](text.md) y [entradas](input_overview.md):
 
 :::
 
-También se puede definir esta propiedad utilizando los comandos [OBJECT Get corner radius](https://doc.4d.com/4dv19/help/command/en/page1323.html) y [OBJECT SET CORNER RADIUS](https://doc.4d.com/4dv19/help/command/en/page1324.html).
+You can also set this property using the [OBJECT Get corner radius](https://doc.4d.com/4dv19/help/command/en/page1323.html) and [OBJECT SET CORNER RADIUS](https://doc.4d.com/4dv19/help/command/en/page1324.html) commands.
 
 #### Gramática JSON
 
@@ -206,7 +206,7 @@ A largura máxima da coluna (em píxeis). The width of the column cannot be incr
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Coluna de list box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -224,7 +224,7 @@ A largura mínima da coluna (em píxeis). A largura da coluna não pode ser redu
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Coluna de list box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -244,7 +244,7 @@ Define a altura das linhas do list box (excluindo cabeçalhos e rodapés). By de
 
 #### Veja também
 
-[Row Height Array](#row-height-array)
+[Array de altura da linha](#row-height-array)
 
 ---
 
@@ -278,7 +278,7 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 #### Veja também
 
-[Row Height](#row-height)
+[Altura da linha](#row-height)
 
 ---
 
