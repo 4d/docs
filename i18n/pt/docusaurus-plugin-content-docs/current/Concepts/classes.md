@@ -613,7 +613,7 @@ Function f() : Integer
  return This.a+This.b
 ```
 
-Then you can write in a method:
+Então você pode escrever em um método:
 
 ```4d
 $o:=cs.ob.new()
@@ -717,11 +717,11 @@ As classes Singleton não são suportadas por [classes baseadas em ORDA](../ORDA
 
 The following table indicates the scope of a singleton instance depending on where it was created:
 
-| Singleton criado em | Scope of process singleton                                                                                 | Scope of shared singleton | Scope of session singleton                                            |
-| ------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------- |
-| **4D single-user**  | Processo                                                                                                   | Aplicação                 | Application or Web/REST session                                       |
-| **4D Server**       | Processo                                                                                                   | Máquina 4D Server         | Client/server session or Web/REST session or Stored procedure session |
-| **4D remote mode**  | Process (_nota_: os singletons não são sincronizados no processo gêmeo) | Máquina remota 4D         | 4D remote machine or Web/REST session                                 |
+| Singleton criado em  | Scope of process singleton                                                                                 | Scope of shared singleton | Scope of session singleton                                            |
+| -------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------- |
+| **4D usuário único** | Processo                                                                                                   | Aplicação                 | Application or Web/REST session                                       |
+| **4D Server**        | Processo                                                                                                   | Máquina 4D Server         | Client/server session or Web/REST session or Stored procedure session |
+| **Modo remoto 4D**   | Process (_nota_: os singletons não são sincronizados no processo gêmeo) | Máquina remota 4D         | 4D remote machine or Web/REST session                                 |
 
 Once instantiated, a singleton class (and its singleton) exists as long as a reference to it exists somewhere in the application running on the machine.
 
@@ -778,7 +778,7 @@ var $myOtherSingleton := cs.ProcessTag.me
 	//$myOtherSingleton.tag = 14856
 ```
 
-#### Shared singleton
+#### Singleton compartilhado
 
 ```4d
 //Class VehicleFactory
