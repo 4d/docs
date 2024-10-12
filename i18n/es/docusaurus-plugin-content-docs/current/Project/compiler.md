@@ -123,7 +123,7 @@ Se proponen dos opciones de objetivo. El resultado depende del procesador de la 
 
 > El objetivo de compilación Apple Silicon requiere que la aplicación **Clang** esté instalada en su máquina. Clang viene con la última versión de Xcode. Ver los [requisitos del compilador Silicon](#requirements) para más información.
 
-### Additional options (Compatibility)
+### Opciones adicionales (Compatibilidad)
 
 In projects converted from 4D versions prior to 20 R7, additional compilation options are available:
 
