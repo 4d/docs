@@ -127,7 +127,7 @@ Duas opções de alvo estão disponíveis. O resultado depende do processador da
 
 In projects converted from 4D versions prior to 20 R7, additional compilation options are available:
 
-- **Compilation Path**
+- **Caminho de compilação**
 - **Default typing**
 - **Métodos Compilador para...**
 
