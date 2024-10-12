@@ -22,7 +22,7 @@ Na maioria dos casos, o valor de `Isso` é determinado pela forma como uma funç
 
 This command can be used in different contexts, described below. Within these contexts, you will access object/collection element properties or entity attributes through **This.<*propertyPath*\>**. For example, *This.name* or *This.employer.lastName* are valid pathes to object, element or entity properties.
 
-In any other context, the command returns **Null**.
+Em qualquer outro contexto, o comando retorna **Null**.
 
 #### Função de classe
 
