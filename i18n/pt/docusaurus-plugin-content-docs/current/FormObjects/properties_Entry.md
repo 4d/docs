@@ -257,7 +257,7 @@ This property keeps the selection visible within the object after it has lost th
 
 ## Atalho
 
-Esta propiedad permite definir teclas de significado especial (atajos de teclado) para los [botones](button_overview.md), los [botones radio](radio_overview.md) y las [casillas de selección](checkbox_overview.md). They allow the user to use the control using the keyboard instead of having to use the mouse.
+Esta propriedade permite a configuração de chaves especiais (atalhos de teclado) para [botões](button_overview.md), [botões rádio](radio_overview.md), e [caixas de seleção](checkbox_overview.md). They allow the user to use the control using the keyboard instead of having to use the mouse.
 
 You can configure this option by clicking the [...] button in the Shortcuts property in the Property List.
 
