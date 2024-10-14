@@ -13,7 +13,7 @@ As regras seguintes aplicam-se a todas as estruturas 4D.
 - Depois disso, o nome pode incluir caracteres alfabéticos, numéricos, o caractere espaço e o caractere de sublinhado/traço baixo ("_") .
 - Pontos (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
 - Não são permitidas vírgulas, barras, aspas e dois pontos.
-- Characters reserved for use as operators, such as * and +, are not allowed.
+- Os caracteres reservados para uso como operadores, como * e +, não são permitidos.
 - Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (If, For, etc.), and constants.
 - Os espaços finais são ignorados.
 
@@ -196,7 +196,7 @@ $value:=$clientObj.data.address.city
 
 ## Formulários
 
-You designate a form by using a string expression that represents its name. O nome de um formulário pode conter até 31 caracteres.
+Você designa um formulário usando uma expressão de cadeia de caracteres que representa seu nome. O nome de um formulário pode conter até 31 caracteres.
 
 Exemplos:
 

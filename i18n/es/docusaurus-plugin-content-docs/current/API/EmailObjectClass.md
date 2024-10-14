@@ -54,8 +54,8 @@ Todas las propiedades que contienen direcciones de correo electrónico ([`from`]
 #### Text
 
 - correo electrónico único: "somebody@domain.com"
-- un solo nombre de visualización+correo electrónico: "Somebody somebody@domain.com"
-- varios correos electrónicos: "Somebody somebody@domain.com,me@home.org"
+- un solo nombre de visualización+correo electrónico: "Somebody <somebody@domain.com>"
+- varios correos electrónicos: "Somebody <somebody@domain.com>,me@home.org"
 
 #### Object
 
@@ -148,7 +148,7 @@ El objeto `.bodyStructure` contiene las siguientes propiedades:
 
 #### Descripción
 
-La propiedad `.bodyValues` contiene el <!-- REF #EmailObjectClass.bodyValues.Summary -->objeto *EmailBodyValue*, que contiene un objeto por cada \\<partID\> de `bodyStructure` (opcional)<!-- END REF -->. Ver la sección [Gestión del cuerpo](#gestión-del-cuerpo).
+La propiedad `.bodyValues` contiene el <!-- REF #EmailObjectClass.bodyValues.Summary -->objeto *EmailBodyValue*, que contiene un objeto por cada \<partID\> de `bodyStructure` (opcional)<!-- END REF -->. Ver la sección [Gestión del cuerpo](#gestión-del-cuerpo).
 
 El objeto `.bodyValues` contiene las siguientes propiedades:
 
@@ -247,9 +247,9 @@ La propiedad `.keywords` contiene un <!-- REF #EmailObjectClass.keywords.Summary
 
 Esta propiedad es el encabezado "keywords" (ver [RFC#4021](https://tools.ietf.org/html/rfc4021)).
 
-| Propiedad                       | Tipo    | Valor                                                               |
-| ------------------------------- | ------- | ------------------------------------------------------------------- |
-| .\\<keyword\> | boolean | Palabra clave a definir (el valor debe ser true) |
+| Propiedad                                               | Tipo    | Valor                                                               |
+| ------------------------------------------------------- | ------- | ------------------------------------------------------------------- |
+| .\<keyword\> | boolean | Palabra clave a definir (el valor debe ser true) |
 
 Palabras clave reservadas:
 
@@ -375,10 +375,10 @@ La propiedad `.to` contiene <!-- REF #EmailObjectClass.to.Summary -->las [direcc
 
 <!-- REF #_command_.MAIL Convert from MIME.Params -->
 
-| Parámetros | Tipo       |     | Descripción   |
-| ---------- | ---------- | :-: | ------------- |
-| mime       | Blob, Text |  -> | Email en MIME |
-| Result     | Object     |  <- | Objeto Email  |
+| Parámetros | Tipo       |                             | Descripción   |
+| ---------- | ---------- | :-------------------------: | ------------- |
+| mime       | Blob, Text |              ->             | Email en MIME |
+| Result     | Object     | <- | Objeto Email  |
 
 <!-- END REF -->
 
@@ -462,11 +462,11 @@ $status:=$transporter.send($email)
 
 <!-- REF #_command_.MAIL Convert to MIME.Params -->
 
-| Parámetros | Tipo   |     | Descripción                                    |
-| ---------- | ------ | :-: | ---------------------------------------------- |
-| mail       | Object |  -> | Objeto Email                                   |
-| options    | Object |  -> | Opciones de codificación y de charset del mail |
-| Result     | Text   |  <- | Objeto email convertido en MIME                |
+| Parámetros | Tipo   |                             | Descripción                                    |
+| ---------- | ------ | :-------------------------: | ---------------------------------------------- |
+| mail       | Object |              ->             | Objeto Email                                   |
+| options    | Object |              ->             | Opciones de codificación y de charset del mail |
+| Result     | Text   | <- | Objeto email convertido en MIME                |
 
 <!-- END REF -->
 

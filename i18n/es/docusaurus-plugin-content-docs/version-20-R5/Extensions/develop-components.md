@@ -104,7 +104,7 @@ Para permitir que las clases y funciones de su componente se expongan en los pro
 
 > Un _namespace_ garantiza que no surja ningún conflicto cuando un proyecto local utilice diferentes componentes que tienen clases o funciones con nombres idénticos. Un namespace del componente debe ser compatible con [reglas de denominación de las propiedades](../Concepts/identifiers.md#object-properties).
 
-When you enter a value, you declare that component classes and functions will be available in the [user class store (**cs**)](../Concepts/classes.md#cs) of the host project's code, through the `cs.<value>` namespace. Por ejemplo, si introduce "eGeometry" como namespace del componente, asumiendo que ha creado una clase `Rectangle` que contiene una función `getArea()`, una vez que su proyecto se instala como componente, el desarrollador del proyecto local puede escribir
+Al introducir un valor, se declara que las clases y funciones del componente estarán disponibles en el [class store usuario (**cs**)](../Concepts/classes.md#cs) del código del proyecto local, a través del espacio de nombres `cs.<value>`. Por ejemplo, si introduce "eGeometry" como namespace del componente, asumiendo que ha creado una clase `Rectangle` que contiene una función `getArea()`, una vez que su proyecto se instala como componente, el desarrollador del proyecto local puede escribir
 
 ```4d
 //en el proyecto local
@@ -255,10 +255,10 @@ El siguiente código se incluye en un componente y realiza tres acciones básica
 Creación de la base de datos externa:
 
 ```4d
-<>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) stores the data in an authorized directory
+<>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) almacena los datos en un directorio autorizado
  Begin SQL
-        CREATE DATABASE IF NOT EXISTS DATAFILE :[<>MyDatabase];
-        USE DATABASE DATAFILE :[<>MyDatabase];
+        CREATE DATABASE IF NOT EXISTS DATAFILE :[MyDatabase];
+        USE DATABASE DATAFILE :[MyDatabase];
         CREATE TABLE IF NOT EXISTS KEEPIT
         (
         ID INT32 PRIMARY KEY,
@@ -301,7 +301,7 @@ Escritura en la base de datos externa:
 Lectura en una base de datos externa:
 
 ```4d
- $Ptr_1:=$2 // accesses data of the host project through pointers
+ $Ptr_1:=$2 // accede a los datos del proyecto local a través de punteros
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5

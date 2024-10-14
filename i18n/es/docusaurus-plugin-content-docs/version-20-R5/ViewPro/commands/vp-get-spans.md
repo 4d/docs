@@ -9,9 +9,9 @@ title: VP Get spans
 
 <!-- REF #_method_.VP Get spans.Params -->
 
-| Parámetros | Tipo   |    | Descripción                                      |                  |
-| ---------- | ------ | -- | ------------------------------------------------ | ---------------- |
-| rangeObj   | Object | -> | Objeto rango                                     |                  |
+| Parámetros | Tipo   |                             | Descripción                                      |                  |
+| ---------- | ------ | --------------------------- | ------------------------------------------------ | ---------------- |
+| rangeObj   | Object | ->                          | Objeto rango                                     |                  |
 | Result     | Object | <- | Objeto de celdas fusionadas en el rango definido | <!-- END REF --> |
 
 #### Descripción
@@ -27,10 +27,10 @@ Para centrar el texto de las celdas fusionadas en este documento:
 ![](../../assets/en/ViewPro/cmd_vpGetSpans.PNG)
 
 ```4d
-// Search for all cell spans 
+// Buscar todas las celdas fusionadas 
 $range:=VP Get spans(VP All("ViewProArea"))
- 
-//center text
+
+//centrar el texto
 $style:=New object("vAlign";vk vertical align center;"hAlign";vk horizontal align center)
 VP SET CELL STYLE($range;$style)
 ```

@@ -26,7 +26,7 @@ Dans _vpAreaName_, passez le nom de la zone 4D View Pro. Si vous passez un nom i
 
 The _row_ parameter defines the first row of the row range. Passez l'indice de la ligne (la numérotation commence à zéro) dans ce paramètre. If the range contains multiple rows, you should also use the optional _rowCount_ parameter.
 
-The optional _rowCount_ parameter allows you to define the total number of rows of the range. _rowCount_ must be greater than 0. Passez l'indice de la ligne (la numérotation commence à zéro) dans ce paramètre.
+The optional _rowCount_ parameter allows you to define the total number of rows of the range. _rowCount_ doit être supérieur à 0. Passez l'indice de la ligne (la numérotation commence à zéro) dans ce paramètre.
 
 Dans le paramètre optionnel _sheet_, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante à l'aide de la constante suivante :
 

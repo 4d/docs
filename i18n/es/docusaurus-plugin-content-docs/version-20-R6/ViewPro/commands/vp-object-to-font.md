@@ -9,9 +9,9 @@ title: VP Object to font
 
 <!-- REF #_method_.VP Object to font.Params -->
 
-| Parámetros  | Tipo   |    | Descripción      |                  |
-| ----------- | ------ | -- | ---------------- | ---------------- |
-| font object | Object | -> | Objeto fuente    |                  |
+| Parámetros  | Tipo   |                             | Descripción      |                  |
+| ----------- | ------ | --------------------------- | ---------------- | ---------------- |
+| font object | Object | ->                          | Objeto fuente    |                  |
 | Result      | Text   | <- | Fuente abreviada | <!-- END REF --> |
 
 #### Descripción

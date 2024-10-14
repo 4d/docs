@@ -70,9 +70,9 @@ Webサーバーオブジェクトは [`WEB Server`](#web-server) コマンドに
 
 <!-- REF #_command_.WEB Server.Params -->
 
-| 引数     | 型                            |    | 説明                                                                  |
-| ------ | ---------------------------- | -- | ------------------------------------------------------------------- |
-| option | Integer                      | -> | 取得する Webサーバー (省略時のデフォルト = `Web server database`) |
+| 引数     | 型                            |                             | 説明                                                                  |
+| ------ | ---------------------------- | --------------------------- | ------------------------------------------------------------------- |
+| option | Integer                      | ->                          | 取得する Webサーバー (省略時のデフォルト = `Web server database`) |
 | 戻り値    | 4D.WebServer | <- | WebServer オブジェクト                                                    |
 
 <!-- END REF -->
@@ -116,8 +116,8 @@ Webサーバーオブジェクトは [`WEB Server`](#web-server) コマンドに
 
 <!-- REF #_command_.WEB Server list.Params -->
 
-| 引数  | 型          |    | 説明                         |
-| --- | ---------- | -- | -------------------------- |
+| 引数  | 型          |                             | 説明                         |
+| --- | ---------- | --------------------------- | -------------------------- |
 | 戻り値 | Collection | <- | 利用可能な Webサーバーオブジェクトのコレクション |
 
 <!-- END REF -->
@@ -226,9 +226,9 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
   - 192.168.5.17
   - 192.168.\*
   - 192.168.\*:8081
-  - http://192.168.5.17:8081
-  - http://\*.myDomain.com
-  - http://myProject.myDomain.com
+  - <http://192.168.5.17:8081>
+  - <http://\*.myDomain.com>
+  - <http://myProject.myDomain.com>
   - \*.myDomain.com
   - myProject.myDomain.com
   - \*
@@ -651,9 +651,9 @@ HTTPプロトコルの状態<!-- END REF -->。
 
 <!-- REF #WebServerClass.start().Params -->
 
-| 引数       | 型      |    | 説明              |
-| -------- | ------ | -- | --------------- |
-| settings | Object | -> | 開始時の Webサーバー設定  |
+| 引数       | 型      |                             | 説明              |
+| -------- | ------ | --------------------------- | --------------- |
+| settings | Object | ->                          | 開始時の Webサーバー設定  |
 | 戻り値      | Object | <- | Webサーバー開始のステータス |
 
 <!-- END REF -->

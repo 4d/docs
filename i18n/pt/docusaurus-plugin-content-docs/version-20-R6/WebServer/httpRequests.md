@@ -27,14 +27,14 @@ Por ejemplo, la URL "*a/b/c*" llamará al método base, pero "*a/b/c.html*" no l
 
 **On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
 
-| Parâmetros | Tipo |     | Descrição                                                                |
-| ---------- | ---- | :-: | ------------------------------------------------------------------------ |
-| $1         | Text |  <- | URL                                                                      |
-| $2         | Text |  <- | Cabeçalhos HTTP + corpo HTTP (até um limite de 32 kb) |
-| $3         | Text |  <- | Endereço IP do cliente Web (browser)                  |
-| $4         | Text |  <- | Endereço IP do servidor                                                  |
-| $5         | Text |  <- | Nome de usuario                                                          |
-| $6         | Text |  <- | Senha                                                                    |
+| Parâmetros | Tipo |                             | Descrição                                                                |
+| ---------- | ---- | :-------------------------: | ------------------------------------------------------------------------ |
+| $1         | Text | <- | URL                                                                      |
+| $2         | Text | <- | Cabeçalhos HTTP + corpo HTTP (até um limite de 32 kb) |
+| $3         | Text | <- | Endereço IP do cliente Web (browser)                  |
+| $4         | Text | <- | Endereço IP do servidor                                                  |
+| $5         | Text | <- | Nome de usuario                                                          |
+| $6         | Text | <- | Senha                                                                    |
 
 Estes parâmetros devem ser declarados como se indica a seguir:
 

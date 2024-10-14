@@ -17,9 +17,9 @@ title: VP Get binding path
 
 <!-- REF #_method_.VP Get binding path.Params -->
 
-| Paramètres | Type   |    | Description                             |                  |
-| ---------- | ------ | -- | --------------------------------------- | ---------------- |
-| rangeObj   | Object | -> | Objet plage                             |                  |
+| Paramètres | Type   |                             | Description                             |                  |
+| ---------- | ------ | --------------------------- | --------------------------------------- | ---------------- |
+| rangeObj   | Object | ->                          | Objet plage                             |                  |
 | Résultat   | Text   | <- | Name of the attribute bound to the cell | <!-- END REF --> |
 
 #### Description

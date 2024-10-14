@@ -17,9 +17,9 @@ O evento `On Begin Drag Over` é útil para preparar a ação de arrastar. Pode 
 
 - Adicione dados e assinaturas ao pasteboard (via o comando `APPEND DATA TO PASTEBOARD`).
 - Use um ícone personalizado durante a ação de arrastar (via o comando `SET DRAG ICON`).
-- Aceitar ou recusar o arrastamento através de $0 no método do objeto arrastado.
-  - Para indicar que as ações de arrastar são aceitas, o método do objeto de origem deve retornar 0 (zero); portanto, você deve executar `$0:=0`.
-  - Para indicar que as ações de arrastar são recusadas, o método do objeto de origem deve retornar -1 (menos um); portanto, você deve executar `$0:=-1`.
+- Accept or refuse dragging via the result of the method of the dragged object.
+  - To indicate that drag actions are accepted, the method of the source object must return 0 (zero).
+  - To indicate that drag actions are refused, the method of the source object must return -1 (minus one).
   - Se nenhum resultado for retornado, 4D considera que as ações de arrastar são aceitas.
 
 Os dados 4D são colocados na prancheta antes de chamar o evento. Por exemplo, no caso de arrastar sem a ação **Arrastar Automático**, o texto arrastado já está no quadro quando o evento é chamado.

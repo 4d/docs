@@ -27,14 +27,14 @@ Par exemple, l'URL "*a/b/c*" appellera la méthode base, mais "*a/b/c.html*" n'a
 
 **On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
 
-| Paramètres | Type |     | Description                                                                 |
-| ---------- | ---- | :-: | --------------------------------------------------------------------------- |
-| $1         | Text |  <- | Variable URL                                                                |
-| $2         | Text |  <- | En-têtes HTTP + Corps HTTP (jusqu'à une limite de 32 ko) |
-| $3         | Text |  <- | Adresse IP du client web (navigateur)                    |
-| $4         | Text |  <- | Adresse IP du serveur                                                       |
-| $5         | Text |  <- | Nom d'utilisateur                                                           |
-| $6         | Text |  <- | Mot de passe                                                                |
+| Paramètres | Type |                             | Description                                                                 |
+| ---------- | ---- | :-------------------------: | --------------------------------------------------------------------------- |
+| $1         | Text | <- | Variable URL                                                                |
+| $2         | Text | <- | En-têtes HTTP + Corps HTTP (jusqu'à une limite de 32 ko) |
+| $3         | Text | <- | Adresse IP du client web (navigateur)                    |
+| $4         | Text | <- | Adresse IP du serveur                                                       |
+| $5         | Text | <- | Nom d'utilisateur                                                           |
+| $6         | Text | <- | Mot de passe                                                                |
 
 Vous devez déclarer ces paramètres de la manière suivante :
 
@@ -94,7 +94,7 @@ Le paramètre `$4` reçoit l'adresse IP utilisée pour appeler le serveur web 4D
 
 ### $5 et $6 - Nom d'utilisateur et mot de passe
 
-Les paramètres $5 et $6 reçoivent le nom d'utilisateur et le mot de passe saisis par l'utilisateur dans la boîte de dialogue d'identification standard affichée par le navigateur, le cas échéant (voir la [page d'authentification](authentification.md)).
+Les paramètres $5 et $6 reçoivent le nom d'utilisateur et le mot de passe saisis par l'utilisateur dans la boîte de dialogue d'identification standard affichée par le navigateur, le cas échéant (voir la [page d'authentification](authentication.md)).
 
 > Si le nom d'utilisateur envoyé par le navigateur existe dans 4D, le paramètre $6 (le mot de passe de l'utilisateur) n'est pas renvoyé pour des raisons de sécurité.
 

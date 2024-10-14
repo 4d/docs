@@ -115,24 +115,24 @@ Les comparaisons avec les opérateurs Supérieur à (`>`), Inférieur à (`<`), 
 
 ## Opérateurs sur les Undefined
 
-| Opération           | Syntaxe                                            | Retourne | Expression                                                          | Valeur |
-| ------------------- | -------------------------------------------------- | -------- | ------------------------------------------------------------------- | ------ |
-| Egalité             | Undefined `=` Undefined                            | Boolean  | a.undefinedProp `=` b.undefinedProp | True   |
-|                     | Undefined `=` Null                                 | Boolean  | a.undefinedProp `=` c.nullProp      | True   |
-|                     | Undefined `=` _autres valeurs_                     | Boolean  | a.undefinedProp `=` 42                              | False  |
-| Inégalité           | Undefined `#` Undefined                            | Boolean  | a.undefinedProp `#` b.undefinedProp | False  |
-|                     | Undefined `#` Null                                 | Boolean  | a.undefinedProp `#` b.nullProp      | False  |
-|                     | Undefined `#` _autres valeurs_                     | Boolean  | a.undefinedProp `#` 42                              | True   |
-| Supérieur à         | Undefined `>` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `>` "abc"                           | False  |
-| Inférieur à         | Undefined `<` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `<` "abc"                           | False  |
-| Supérieur ou égal à | Undefined `>=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `>=` "abc"                          | False  |
-| Inférieur ou égal à | Undefined `<=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `<=` "abc"                          | False  |
+| Opération           | Syntaxe                                   | Retourne | Expression                                                          | Valeur |
+| ------------------- | ----------------------------------------- | -------- | ------------------------------------------------------------------- | ------ |
+| Egalité             | Undefined `=` Undefined                   | Boolean  | a.undefinedProp `=` b.undefinedProp | True   |
+|                     | Undefined `=` Null                        | Boolean  | a.undefinedProp `=` c.nullProp      | True   |
+|                     | Undefined `=` _autres valeurs_            | Boolean  | a.undefinedProp `=` 42                              | False  |
+| Inégalité           | Undefined `#` Undefined                   | Boolean  | a.undefinedProp `#` b.undefinedProp | False  |
+|                     | Undefined `#` Null                        | Boolean  | a.undefinedProp `#` b.nullProp      | False  |
+|                     | Undefined `#` _autres valeurs_            | Boolean  | a.undefinedProp `#` 42                              | True   |
+| Supérieur à         | Undefined `>` string, Date, Time, number  | Boolean  | a.undefinedProp `>` "abc"                           | False  |
+| Inférieur à         | Undefined `<` string, Date, Time, number  | Boolean  | a.undefinedProp `<` "abc"                           | False  |
+| Supérieur ou égal à | Undefined `>=` string, Date, Time, number | Boolean  | a.undefinedProp `>=` "abc"                          | False  |
+| Inférieur ou égal à | Undefined `<=` string, Date, Time, number | Boolean  | a.undefinedProp `<=` "abc"                          | False  |
 
 _autres valeurs_ sont des expressions de tout type dont la valeur n'est ni Undefined ni Null.
 
 :::info
 
-Les comparaisons des valeurs Undefined avec des valeurs Pointer, Picture, Blob, Object, Collection, Undefined ou Null en utilisant les opérateurs Supérieur à (`>`), Inférieur à (`<`), Supérieur ou égal à (`>=`), et Inférieur ou égal à (`<=`) ne sont pas prises en charge et renvoient une erreur.
+Comparisons of Undefined values with Pointer, Picture, Boolean, Blob, Object, Collection, Undefined or Null values using Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported and return an error.
 
 :::
 

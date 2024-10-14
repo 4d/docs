@@ -55,8 +55,8 @@ Email オブジェクトは次のプロパティを提供します:
 #### テキスト
 
 - 単一のメールアドレス: "somebody@domain.com"
-- 単一の表示名+メールアドレス: "Somebody somebody@domain.com"
-- 複数のメールアドレス: "Somebody somebody@domain.com,me@home.org"
+- 単一の表示名+メールアドレス: "Somebody <somebody@domain.com>"
+- 複数のメールアドレス: "Somebody <somebody@domain.com>,me@home.org"
 
 #### オブジェクト
 
@@ -150,7 +150,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 #### 説明
 
 `.bodyValues` プロパティは、<!-- REF #EmailObjectClass.bodyValues.Summary -->
-`bodyStructure` の \<partID\> 毎にオブジェクトを格納している *EmailBodyValue* オブジェクト<!-- END REF -->を格納します (任意)。 [メール本文の扱い](#メール本文の扱い) を参照ください。
+`bodyStructure` の <partID\> 毎にオブジェクトを格納している *EmailBodyValue* オブジェクト<!-- END REF -->を格納します (任意)。 [メール本文の扱い](#メール本文の扱い) を参照ください。
 
 `.bodyValues` オブジェクトには、次のプロパティが格納されています:
 
@@ -249,9 +249,9 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 このプロパティは "keywords" ヘッダーです ([RFC#4021](https://tools.ietf.org/html/rfc4021) 参照)。
 
-| プロパティ                           | 型       | 値                                                  |
-| ------------------------------- | ------- | -------------------------------------------------- |
-| .\\<keyword\> | boolean | 設定するキーワード (値は true でなければなりません)。 |
+| プロパティ                                                   | 型       | 値                                                  |
+| ------------------------------------------------------- | ------- | -------------------------------------------------- |
+| .\<keyword\> | boolean | 設定するキーワード (値は true でなければなりません)。 |
 
 予約されたキーワード:
 
@@ -377,10 +377,10 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 <!-- REF #_command_.MAIL Convert from MIME.Params -->
 
-| 引数   | 型          |     | 説明           |
-| ---- | ---------- | :-: | ------------ |
-| mime | Blob, Text |  -> | MIME形式のメール   |
-| 戻り値  | Object     |  <- | Email オブジェクト |
+| 引数   | 型          |                             | 説明           |
+| ---- | ---------- | :-------------------------: | ------------ |
+| mime | Blob, Text |              ->             | MIME形式のメール   |
+| 戻り値  | Object     | <- | Email オブジェクト |
 
 <!-- END REF -->
 
@@ -464,11 +464,11 @@ $status:=$transporter.send($email)
 
 <!-- REF #_command_.MAIL Convert to MIME.Params -->
 
-| 引数      | 型      |     | 説明                      |
-| ------- | ------ | :-: | ----------------------- |
-| mail    | Object |  -> | Email オブジェクト            |
-| options | Object |  -> | 文字セットとエンコーディングのメールオプション |
-| 戻り値     | Text   |  <- | MIME に変換された Emailオブジェクト |
+| 引数      | 型      |                             | 説明                      |
+| ------- | ------ | :-------------------------: | ----------------------- |
+| mail    | Object |              ->             | Email オブジェクト            |
+| options | Object |              ->             | 文字セットとエンコーディングのメールオプション |
+| 戻り値     | Text   | <- | MIME に変換された Emailオブジェクト |
 
 <!-- END REF -->
 

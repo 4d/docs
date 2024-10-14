@@ -128,11 +128,9 @@ QUERY([Clients];[Clients]Name="Smith")
 
 El nombre de una variable puede tener hasta 31 caracteres, sin incluir los símbolos de alcance (`$` or `<>`).
 
-- Un nombre de variable debe comenzar con una letra, un guión bajo o un dólar ("$") para [parámetros](parameters.md) y [variables locales](variables.md#local-variables), o `<>` para [variables de interproceso](variables.md#interprocess-variables).
-- Se permite un dígito como primer caracter pero no se recomienda, y no es compatible con la [sintaxis de declaración `var`](variables.md#usando-la-palabra-clave-var).
+- Un nombre de variable debe comenzar con una letra, un guión bajo o un dólar ("$") para [parámetros](parameters.md) y [variables locales](variables.md#local-variables), o `<>` para [variables interproceso](variables.md#interprocess-variables) (obsoleto).
 - A partir de ahí, el nombre puede incluir cualquier letra o dígito, y el caracter de subrayado ("_").
-- Se permite el carácter de espacio pero no se recomienda, y no es compatible con la [`sintaxis de declaración var`](variables.md#usando-la-palabra-clave-var).
-- No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), o nombres de constantes (`Euro`, `Black`, `Friday`, etc.).
+- No utilice nombres reservados, es decir, nombres de comandos 4D (`Date`, `Time`, etc), palabras clave (`If`, `For`, etc.), nombres de variables de sistema (`OK`, `document`...), o nombres constantes (`Euro`, `Black`, `Friday`, etc.).
 - Los nombres de las variables son sensibles a las mayúsculas y minúsculas.
 
 Ejemplos:
@@ -144,6 +142,14 @@ var $vName; $vJob : Text //variables locales
 If(bValidate=1) //variable proceso 
 <>vlProcessID:=Current process() //variable interproceso
 ```
+
+### Compatibilidad
+
+Algunas prácticas de nombramiento estaban permitidas anteriormente, pero ya no están soportadas cuando [el modo de escritura directa está habilitado](../Project/compiler.md#enabling-direct-typing) (introducido en 4D 20 R7). Habilitar este modo producirá errores de sintaxis si:
+
+- un nombre de variable tiene un dígito como primer caracter,
+- un nombre de variable contiene caracteres de espacio,
+- ha declarado variables llamadas $0, $1, etc.
 
 ## Otros nombres
 

@@ -9,12 +9,12 @@ title: VP Find
 
 <!-- REF #_method_.VP Find.Params -->
 
-| Parâmetro       | Tipo   |    | Descrição                                                      |                  |
-| --------------- | ------ | -- | -------------------------------------------------------------- | ---------------- |
-| rangeObj        | Object | -> | Objeto intervalo                                               |                  |
-| searchValue     | Text   | -> | Valor da pesquisa                                              |                  |
-| searchCondition | Object | -> | Objeto que contém condição(ões) de pesquisa |                  |
-| replaceValue    | Text   | -> | Valor de substituição                                          |                  |
+| Parâmetro       | Tipo   |                             | Descrição                                                      |                  |
+| --------------- | ------ | --------------------------- | -------------------------------------------------------------- | ---------------- |
+| rangeObj        | Object | ->                          | Objeto intervalo                                               |                  |
+| searchValue     | Text   | ->                          | Valor da pesquisa                                              |                  |
+| searchCondition | Object | ->                          | Objeto que contém condição(ões) de pesquisa |                  |
+| replaceValue    | Text   | ->                          | Valor de substituição                                          |                  |
 | Resultados      | Object | <- | Objeto intervalo                                               | <!-- END REF --> |
 
 #### Descrição

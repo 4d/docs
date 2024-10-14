@@ -139,7 +139,7 @@ Consulte los[ temas nativos de SpreadJS](https://developer.mescius.com/spreadjs/
 
 **.useFooterDropDownList** : Boolean<!-- END REF -->
 
-The `.useFooterDropDownList` property <!-- REF #TableOptions.useFooterDropDownList.Summary -->indicates whether to use a dropdown list in footer cells that calculate the total value of a column<!-- END REF -->. Por defecto = False
+La propiedad `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDownList.Summary -->indica si se debe utilizar una lista desplegable en las celdas de pie de página que calculan el valor total de una columna<!-- END REF -->. Por defecto = False
 
 ## TableStyle
 
@@ -362,7 +362,7 @@ La propiedad `.lastHeaderCellStyle` es el estilo <!-- REF #TableThemeOptions.las
 
 **.name** : Text<!-- END REF -->
 
-The `.name` property is the <!-- REF #TableThemeOptions.name.Summary -->name of a [native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes)<!-- END REF -->.
+La propiedad `.name` es el <!-- REF #TableThemeOptions.name.Summary -->nombre de un [tema nativo SpreadJS](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes)<!-- END REF -->.
 
 ### .secondColumnStripSize
 

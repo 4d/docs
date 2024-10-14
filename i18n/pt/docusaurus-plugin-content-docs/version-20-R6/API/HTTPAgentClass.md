@@ -43,10 +43,10 @@ Como o HTTPAgent é um objeto compartilhável, você pode adicioná-lo a uma cla
 
 <!-- REF #4D.HTTPAgent.new().Params -->
 
-| Parâmetro  | Tipo                                              |     | Descrição                      |
-| ---------- | ------------------------------------------------- | :-: | ------------------------------ |
-| options    | Object                                            |  -> | opções padrão para o HTTPAgent |
-| Resultados | [4D.HTTPAgent](#httpagent-object) |  <- | Novo objeto HTTPAgent          |
+| Parâmetro  | Tipo                                              |                             | Descrição                      |
+| ---------- | ------------------------------------------------- | :-------------------------: | ------------------------------ |
+| options    | Object                                            |              ->             | opções padrão para o HTTPAgent |
+| Resultados | [4D.HTTPAgent](#httpagent-object) | <- | Novo objeto HTTPAgent          |
 
 <!-- END REF -->
 

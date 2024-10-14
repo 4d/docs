@@ -9,10 +9,10 @@ title: VP Get frozen panes
 
 <!-- REF #_method_.VP Get frozen panes.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                             |                  |
-| ---------- | ------- | -- | --------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                            |                  |
-| sheet      | Integer | -> | Índice da folha (folha atual se omitida)           |                  |
+| Parâmetro  | Tipo    |                             | Descrição                                                             |                  |
+| ---------- | ------- | --------------------------- | --------------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | Nome de objeto formulário área 4D View Pro                            |                  |
+| sheet      | Integer | ->                          | Índice da folha (folha atual se omitida)           |                  |
 | Resultados | Object  | <- | Objeto que contém as informações sobre as colunas e linhas congeladas | <!-- END REF --> |
 
 #### Descrição

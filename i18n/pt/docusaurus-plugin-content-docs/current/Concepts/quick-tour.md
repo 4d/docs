@@ -181,7 +181,7 @@ $vAge:=employee.children[2].age
 
 Note-se que se o valor da propriedade do objeto for um objeto que encapsula um método (uma fórmula), é necessário adicionar parênteses () ao nome da propriedade para executar o método:
 
-```
+```4d
 $f:=New object
 $f.message:=Formula(ALERT("Hello world!"))
 $f.message() //exibe "Hello world!"
@@ -248,9 +248,9 @@ Quando se utiliza a linguagem, é raro que se pretenda apenas um dado. É mais p
 
 | Operador | Operação      | Exemplo    |
 | -------- | ------------- | ---------- |
-| -        | Adição        | 1 +2 = 3   |
+| +        | Adição        | 1 +2 = 3   |
 | –        | Subtração     | 3 - 2 = 1  |
-| *        | Multiplicação | 2 \* 3 = 6 |
+| \*       | Multiplicação | 2 \* 3 = 6 |
 | /        | Divisão       | 6 / 2 = 3  |
 
 Os operadores numéricos são apenas um dos tipos de operadores disponíveis. 4D suporta muitos tipos de dados, tais como números, texto, datas e imagens, por isso há operadores que realizam operações nestes diferentes tipos de dados.

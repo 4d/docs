@@ -17,14 +17,14 @@ title: VP Cells
 
 <!-- REF #_method_.VP Cells.Params -->
 
-| 引数          | 型       |    | 説明                                             |                  |
-| ----------- | ------- | -- | ---------------------------------------------- | ---------------- |
-| vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名                        |                  |
-| column      | Integer | -> | カラムのインデックス                                     |                  |
-| row         | Integer | -> | 行のインデックス                                       |                  |
-| columnCount | Integer | -> | カラム数                                           |                  |
-| rowCount    | Integer | -> | 行数                                             |                  |
-| sheet       | Integer | -> | シートのインデックス (省略した場合はカレントシート) |                  |
+| 引数          | 型       |                             | 説明                                             |                  |
+| ----------- | ------- | --------------------------- | ---------------------------------------------- | ---------------- |
+| vpAreaName  | Text    | ->                          | 4D View Pro フォームオブジェクト名                        |                  |
+| column      | Integer | ->                          | カラムのインデックス                                     |                  |
+| row         | Integer | ->                          | 行のインデックス                                       |                  |
+| columnCount | Integer | ->                          | カラム数                                           |                  |
+| rowCount    | Integer | ->                          | 行数                                             |                  |
+| sheet       | Integer | ->                          | シートのインデックス (省略した場合はカレントシート) |                  |
 | 戻り値         | Object  | <- | 複数セルのレンジオブジェクト                                 | <!-- END REF --> |
 
 #### 説明

@@ -18,7 +18,7 @@ title: VP SET CELL STYLE
 
 The `VP SET CELL STYLE` command <!-- REF #_method_.VP SET CELL STYLE.Summary -->applies the style(s) defined in the _styleObj_ to the cells defined in the _rangeObj_<!-- END REF -->.
 
-In _rangeObj_, pass a range of cells where the style will be applied. If the _rangeObj_ contains multiple cells, the style is applied to each cell.
+Em _rangeObj_, passe um intervalo de células em que o estilo será aplicado. If the _rangeObj_ contains multiple cells, the style is applied to each cell.
 
 > Borders applied with `VP SET CELL STYLE` will be applied to each cell of the _rangeObj_, as opposed to the [VP SET BORDER](vp-set-border.md) command which applies borders to the _rangeObj_ as a whole.
 

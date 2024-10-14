@@ -49,7 +49,7 @@ Además de los parámetros de posicionamiento y de apariencia estándar, puede d
 
 Hay otros modos disponibles:
 
-- [Loop back to first frame](properties_Animation.md#loopBackToFirstFrame)
+- [Retroceder al primer cuadro](properties_Animation.md#loopBackToFirstFrame)
 - [Switch back when Released](properties_Animation.md#switch-back-when-released)
 - [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)
 - [Switch continuously on clicks](properties_Animation.md#switch-continuously-on-clicks)

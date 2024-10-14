@@ -44,8 +44,8 @@ Todas las fórmulas tienen operandos y operadores:
 
 | Tipos de datos                    | Valores                                                                                             | Operadores                                                                                                                                                                                                                                                                                                                                 |
 | --------------------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | - (suma)<br/>- (resta)<br/>\* (multiplicación)<br/>/ (división)<br/>^ (exponente, el número de veces que hay que multiplicar un número por sí mismo)<br/>% (porcentaje -- dividir el número antes del operador por cien) |
-| [Fecha](Concepts/dt_date.md)      | 10/24/2017                                                                                          | * (fecha + número de días -> fecha)<br/>+ (fecha + hora -> fecha + hora del día)<br/>- (fecha - número de días -> fecha)<br/>- (fecha - fecha -> número de días entre ambas)                                                                                   |
+| [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (suma)<br/>- (resta)<br/>\* (multiplicación)<br/>/ (división)<br/>^ (exponente, el número de veces que hay que multiplicar un número por sí mismo)<br/>% (porcentaje -- dividir el número antes del operador por cien) |
+| [Fecha](Concepts/dt_date.md)      | 10/24/2017                                                                                          | + (fecha + número de días -> fecha)<br/>+ (fecha + hora -> fecha + hora del día)<br/>- (fecha - número de días -> fecha)<br/>- (fecha - fecha -> número de días entre ambas)                                                                                   |
 | [Hora](Concepts/dt_time.md)       | 10:12:10                                                            | Operadores de duración:<br/>+ (suma)<br/>- (resta)<br/>\* (duración \* número -> duración)<br/>/ (duración / número -> duración)                                                                                                               |
 | [String](Concepts/dt_string.md)   | 'Sophie' o "Sophie"                                                                                 | & (concatenación)                                                                                                                                                                                                                                                                                   |
 | [Boolean](Concepts/dt_boolean.md) | TRUE o FALSE                                                                                        | -                                                                                                                                                                                                                                                                                                                                          |
@@ -54,14 +54,14 @@ Todas las fórmulas tienen operandos y operadores:
 
 Los siguientes operadores pueden utilizarse con dos operandos del mismo tipo:
 
-| Operador | Comparación       |
-| -------- | ----------------- |
-| =        | igual a           |
-| `<>`     | es diferente de   |
-| >        | mayor que         |
-| <        | menor que         |
-| > =      | mayor o igual que |
-| <=       | menor o igual que |
+| Operador                    | Comparación       |
+| --------------------------- | ----------------- |
+| =                           | igual a           |
+| `<>`                        | es diferente de   |
+| >                           | mayor que         |
+| <  | menor que         |
+| > =                         | mayor o igual que |
+| <= | menor o igual que |
 
 ### Presedencia de los operadores
 
@@ -71,11 +71,11 @@ Lista de los operadores de la mas a menos importante:
 | --------------------------- | -------------------------------------------- |
 | ()       | Paréntesis (para agrupar) |
 | -                           | Negativo                                     |
-| *                           | Más                                          |
+| +                           | Más                                          |
 | %                           | Porcentaje                                   |
 | ^                           | Exponente                                    |
-| - y /                       | Multiplicar y dividar                        |
-| * y -                       | Añadir y restar                              |
+| \* y /                      | Multiplicar y dividar                        |
+| + y -                       | Añadir y restar                              |
 | &       | Concatenar                                   |
 | `=`  `>` `<` `>=` `<=` `<>` | Comparar                                     |
 
@@ -140,22 +140,22 @@ Todas las funciones se declaran con el comando [`VP SET CUSTOM FUNCTIONS`](comma
 ```4d
 $o:=New object
 
-//Name of the function in 4D View Pro: "DRIVERS_LICENCE"
+//Nombre de la fonción en 4D View Pro: "DRIVERS_LICENCE"
 $o.DRIVERS_LICENCE:=New object
 
-//process variable
+/variable process
 $o.DRIVERS_LICENCE.formula:=Formula(DriverLicence)
 
-//table field
+//campo table
 $o.DRIVERS_LICENCE.formula:=Formula([Users]DriverLicence)
 
-//project method
+//método proyecto
 $o.DRIVERS_LICENCE.formula:=Formula(DriverLicenceState)
 
-//4D command
+//Comando 4D
 $o.DRIVERS_LICENCE:=Formula(Choose(DriverLicence; "Obtained"; "Failed"))
 
-//4D expression and parameter
+//expresión y parámetro 4D 
 $o.DRIVERS_LICENCE.formula:=Formula(ds.Users.get($1).DriverLicence)
 $o.DRIVERS_LICENCE.parameters:=New collection
 $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))

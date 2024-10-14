@@ -4,7 +4,7 @@ title: Página Métodos
 ---
 
 
-A method is basically a piece of code that executes one or several actions. Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. Uma linha de instrução realiza uma ação e pode ser simples ou complexa. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks).
+Um método é basicamente um pedaço de código que executa uma ou várias ações. Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. Uma linha de instrução realiza uma ação e pode ser simples ou complexa. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks).
 
 O tamanho máximo de um método de projecto é limitado a 2 GB de texto ou 32.000 linhas de comando.
 

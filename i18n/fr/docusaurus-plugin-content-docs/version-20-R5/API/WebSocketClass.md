@@ -74,11 +74,11 @@ Les objets WebSocket exposent les propriétés et fonctions suivantes :
 
 <!-- REF #4D.WebSocket.new().Params -->
 
-| Paramètres                                        | Type                         |     | Description                                 |
-| ------------------------------------------------- | ---------------------------- | :-: | ------------------------------------------- |
-| url                                               | Text                         |  -> | URL à laquelle se connecter                 |
-| [connectionHandler](#connectionHandler-parameter) | Object                       |  -> | Objet déclarant les callbacks WebSocket     |
-| Résultat                                          | 4D.WebSocket |  <- | Nouvel [objet WebSocket](#websocket-object) |
+| Paramètres                                        | Type                         |                             | Description                                 |
+| ------------------------------------------------- | ---------------------------- | :-------------------------: | ------------------------------------------- |
+| url                                               | Text                         |              ->             | URL à laquelle se connecter                 |
+| [connectionHandler](#connectionHandler-parameter) | Object                       |              ->             | Objet déclarant les callbacks WebSocket     |
+| Résultat                                          | 4D.WebSocket | <- | Nouvel [objet WebSocket](#websocket-object) |
 
 <!-- END REF -->
 

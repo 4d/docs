@@ -50,13 +50,13 @@ var myPerson : cs.Person
 ```
 
 
-Even if it is usually not recommended, you can declare variables simply by using them; you do not necessarily need to formally define them. For example, if you want a variable that will hold the current date plus 30 days, you can write:
+Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them. For example, if you want a variable that will hold the current date plus 30 days, you can write:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-The line of code reads “MyOtherDate gets the current date plus 30 days.” This line declares the variable, assigns it with both the (temporary) date type and a content. A variable declared by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `var` cannot change the type. In [compiled mode](interpreted.md) however, the type can never be changed, regardless of how the variable was declared.
+The line of code reads “MyOtherDate gets the current date plus 30 days.” This line creates the variable, assigns it with both the (temporary) date type and a content. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and change of type dynamically. This flexibility does not apply to variables declared with the `var` keyword (their type cannot change) and in [compiled mode](interpreted.md) where the type can never be changed, regardless of how the variable was created.
 
 ## Commands
 
@@ -101,6 +101,8 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
 ```
 
 > Predefined constants appear <u>underlined</u> by default in the 4D Code Editor.
+
+
 
 ## Methods
 
@@ -183,7 +185,7 @@ $vAge:=employee.children[2].age
 
 Note that if the object property value is an object that encapsulates a method (a formula), you need to add parenthesis () to the property name to execute the method:
 
-```
+```4d
 $f:=New object
 $f.message:=Formula(ALERT("Hello world!"))
 $f.message() //displays "Hello world!"
@@ -211,6 +213,7 @@ $o:=cs.myClass.new()
 In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance.
 
 ```4d  
+
 //in the myClass.4dm file
 Function hello -> $welcome : Text
   $welcome:="Hello "+This.who

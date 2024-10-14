@@ -46,7 +46,7 @@ El estado de la última copia de seguridad (correcta o fallida) se almacena en e
 
 ### Acceso a la aplicación durante la copia de seguridad
 
-4D bloquea los procesos relacionados con los tipos de archivos incluidos en la copia de seguridad: si sólo se hace una copia de seguridad de los archivos del proyecto, no se podrá acceder a la estructura pero sí a los datos. Durante una copia de seguridad, el acceso a la aplicación está restringido por 4D en función del contexto.
+4D bloquea los procesos relacionados con los tipos de archivos incluidos en la copia de seguridad: si sólo se hace una copia de seguridad de los archivos del proyecto, no se podrá acceder a la estructura pero sí a los datos. 4D bloquea todos los procesos relacionados con los tipos de archivos incluidos en la copia de seguridad: si sólo se están copiando los archivos del proyecto, no se podrá acceder a la estructura pero sí a los datos.
 
 Por el contrario, si sólo se hace una copia de seguridad del archivo de datos, se sigue permitiendo el acceso a la estructura. En este caso, las posibilidades de acceso a la aplicación son las siguientes:
 

@@ -29,7 +29,7 @@ title: リモートデータストア
 
 データストアアクセスを管理しているセッションは 4D Server の管理ウィンドウに表示されます:
 
-- プロセス名: "REST Handler: \\<process name\>"
+- プロセス名: "REST Handler: \<process name\>"
 - タイプ: HTTP Server Worker
 - セッション: `Open datastore` コマンドに渡されたユーザー名
 

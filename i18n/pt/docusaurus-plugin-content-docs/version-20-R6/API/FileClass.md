@@ -16,7 +16,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 ### Pathnames
 
-`File` objects support several pathnames, including `filesystems` or `posix` syntax. Supported pathnames are detailed in the [**Pathnames**](../Concepts/paths.md) page.
+`File` objects support several pathnames, including `filesystems` or `posix` syntax. Os nomes de caminho compatíveis são detalhados na página [**Rotas de acesso**](../Concepts/paths.md).
 
 ### Objeto File
 
@@ -70,13 +70,13 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <!-- REF #_command_.File.Params -->
 
-| Parâmetro    | Tipo                     |     | Descrição                                                         |
-| ------------ | ------------------------ | :-: | ----------------------------------------------------------------- |
-| path         | Text                     |  -> | Rota do arquivo                                                   |
-| fileConstant | Integer                  |  -> | Constante de arquivo 4D                                           |
-| pathType     | Integer                  |  -> | `fk posix path` (padrão) ou `fk platform path` |
-| -            |                          |  -> | * para devolver o arquivo da base de dados anfitriã               |
-| Resultados   | 4D. File |  <- | Novo objeto arquivo                                               |
+| Parâmetro    | Tipo                     |                             | Descrição                                                         |
+| ------------ | ------------------------ | :-------------------------: | ----------------------------------------------------------------- |
+| path         | Text                     |              ->             | Rota do arquivo                                                   |
+| fileConstant | Integer                  |              ->             | Constante de arquivo 4D                                           |
+| pathType     | Integer                  |              ->             | `fk posix path` (padrão) ou `fk platform path` |
+| \*           |                          |              ->             | \* para devolver o arquivo da base de dados anfitriã              |
+| Resultados   | 4D. File | <- | Novo objeto arquivo                                               |
 
 <!-- END REF -->
 
@@ -173,8 +173,8 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 
 <!--REF #FileClass.create().Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                                                      |
-| ---------- | ---------- | -- | -------------------------------------------------------------- |
+| Parâmetro  | Tipo       |                             | Descrição                                                      |
+| ---------- | ---------- | --------------------------- | -------------------------------------------------------------- |
 | Resultados | Parâmetros | <- | True se o arquivo foi criado com sucesso, false caso contrário |
 
 <!-- END REF -->
@@ -188,7 +188,7 @@ If necessary, the function creates the folder hierachy as described in the [plat
 **Valor retornado**
 
 - **True** se o arquivo for criado com sucesso;
-- **False** if a file with the same name already exists or if an error occured.
+- **False** se já existir um arquivo com o mesmo nome ou se tiver ocorrido um erro.
 
 #### Exemplo
 
@@ -217,11 +217,11 @@ Criação de um arquivo de preferências na pasta da base de dados:
 
 <!--REF #FileClass.createAlias().Params -->
 
-| Parâmetro         | Tipo                       |    | Descrição                                     |
-| ----------------- | -------------------------- | -- | --------------------------------------------- |
-| destinationFolder | 4D. Folder | -> | Pasta de destino para o pseudónimo ou atalho  |
-| aliasName         | Text                       | -> | Nome do pseudónimo ou atalho                  |
-| aliasType         | Integer                    | -> | Tipo de ligação do pseudónimo                 |
+| Parâmetro         | Tipo                       |                             | Descrição                                     |
+| ----------------- | -------------------------- | --------------------------- | --------------------------------------------- |
+| destinationFolder | 4D. Folder | ->                          | Pasta de destino para o pseudónimo ou atalho  |
+| aliasName         | Text                       | ->                          | Nome do pseudónimo ou atalho                  |
+| aliasType         | Integer                    | ->                          | Tipo de ligação do pseudónimo                 |
 | Resultados        | 4D. File   | <- | Referência a pseudónimo ou ficheiro de atalho |
 
 <!-- END REF -->
@@ -335,8 +335,8 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 <!--REF #FileClass.getAppInfo().Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                                                                                 |
-| ---------- | ------ | -- | --------------------------------------------------------------------------------------------------------- |
+| Parâmetro  | Tipo   |                             | Descrição                                                                                                 |
+| ---------- | ------ | --------------------------- | --------------------------------------------------------------------------------------------------------- |
 | Resultados | Object | <- | Conteúdo do arquivo de versão recurso .exe/.dll ou .plist |
 
 <!-- END REF -->
@@ -430,10 +430,10 @@ ALERT($info.Copyright)
 
 <!--REF #FileClass.moveTo().Params -->
 
-| Parâmetro         | Tipo                       |    | Descrição                        |
-| ----------------- | -------------------------- | -- | -------------------------------- |
-| destinationFolder | 4D. Folder | -> | Pasta de destino                 |
-| newName           | Text                       | -> | Nome completo do ficheiro movido |
+| Parâmetro         | Tipo                       |                             | Descrição                        |
+| ----------------- | -------------------------- | --------------------------- | -------------------------------- |
+| destinationFolder | 4D. Folder | ->                          | Pasta de destino                 |
+| newName           | Text                       | ->                          | Nome completo do ficheiro movido |
 | Resultados        | 4D. File   | <- | Arquivo movido                   |
 
 <!-- END REF -->
@@ -478,10 +478,10 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <!--REF #FileClass.open().Params -->
 
-| Parâmetro  | Tipo                                             |    | Descrição                                                   |
-| ---------- | ------------------------------------------------ | -- | ----------------------------------------------------------- |
-| mode       | Text                                             | -> | Modo de abertura: "read", "write", "append" |
-| options    | Object                                           | -> | Opções de abertura                                          |
+| Parâmetro  | Tipo                                             |                             | Descrição                                                   |
+| ---------- | ------------------------------------------------ | --------------------------- | ----------------------------------------------------------- |
+| mode       | Text                                             | ->                          | Modo de abertura: "read", "write", "append" |
+| options    | Object                                           | ->                          | Opções de abertura                                          |
 | Resultados | [4D.FileHandle](FileHandleClass) | <- | Novo objeto File handle                                     |
 
 <!-- END REF -->
@@ -559,9 +559,9 @@ $fhandle:=$f.open("read")
 
 <!--REF #FileClass.rename().Params -->
 
-| Parâmetro  | Tipo                     |    | Descrição                          |
-| ---------- | ------------------------ | -- | ---------------------------------- |
-| newName    | Text                     | -> | Novo nome completo para o ficheiro |
+| Parâmetro  | Tipo                     |                             | Descrição                          |
+| ---------- | ------------------------ | --------------------------- | ---------------------------------- |
+| newName    | Text                     | ->                          | Novo nome completo para o ficheiro |
 | Resultados | 4D. File | <- | Ficheiro renomeado                 |
 
 <!-- END REF -->
@@ -751,7 +751,7 @@ Em *text,* passe o texto a escrever no arquivo. Pode ser um texto literal ("my t
 Opcionalmente, pode designar o conjunto de caracteres a utilizar para escrever o conteúdo. Você pode passar também:
 
 - in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or "UTF-8"),
-- or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
+- ou em *charSetNum*, o MIBEnum ID (número) do nome de configuração padrão.
 
 > For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
 
@@ -769,7 +769,7 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
-> **Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
+> **Nota de compatibilidade**: as opções de compatibilidade estão disponíveis para a gerenciamento da EOL e da BOM. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
 
 #### Exemplo
 

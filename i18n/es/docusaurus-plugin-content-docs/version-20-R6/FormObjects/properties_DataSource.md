@@ -63,7 +63,7 @@ Lista de valores estáticos a utilizar como etiquetas para el objeto de control 
 
 #### Objetos soportados
 
-[Tab Control](tabControl.md)
+[Control de pestañas](tabControl.md)
 
 ---
 
@@ -230,7 +230,7 @@ Si se utiliza un campo, una variable o una expresión asignable (*por ejemplo Pe
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox_overview.md#list-box-columns)
 
 ---
 

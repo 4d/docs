@@ -11,6 +11,18 @@ Lea [**Novedades en 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R7/),
 
 - Las columnas de los list box y de los encabezados de tipo hora ahora soportan la opción ["blankIfNull"](../FormObjects/properties_Display.md#time-format).
 - Nuevas propiedades en [.getBoxInfo()](../API/IMAPTransporterClass.md#getboxinfo) y [.getBoxList()](../API/IMAPTransporterClass.md#getboxlist).
+- Ahora puede [añadir y eliminar componentes utilizando la interfaz del gestor de componentes](../Project/components.md#adding-and-removing-dependencies).
+- New [**direct typing mode**](../Project/compiler.md#enabling-direct-typing) in which you declare all variables and parameters in your code using `var` and `#DECLARE`/`Function` keywords (only mode supported in new projects). [Syntax checking feature](../Project/compiler.md#check-syntax) has been enhanced accordingly.
+- Support of [Session singletons](../Concepts/classes.md#singleton-classes) and new [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) Class property.
+- Qodly Studio: You can now [attach the Qodly debugger to 4D Server](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server).
+- New Build Application keys for remote 4D applications to validate the server certificate authority [signatures](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateAuthoritiesCertificates.300-7425900.en.html) and/or [domain](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateDomainName.300-7425906.en.html).
+- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R7/4D/20-R7/What-s-new.901-7239607.en.html) on doc.4d.com.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R7): list of all bugs that have been fixed in 4D 20 R7.
+
+#### Cambios de comportamiento
+
+- Compiler directive commands (`C_XXX`) are now deprecated and have been renamed `_O_C_XXX` (for example, `C_TEXT` has been renamed `_O_C_TEXT`).
+- Documentations for [4D Language](../commands/command-index.md) and [4D Write Pro Language](../WritePro/commands/command-index.md) are now fully available on developer.4d.com. Find out about all the new features and changes concerning these documentations in this release note.
 
 ## 4D 20 R6
 
@@ -33,7 +45,7 @@ Lea [**Novedades en 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-20-R6/), 
 - Nuevo [componente 4D-QPDF](https://github.com/4d/4D-QPDF) que ofrece el comando `PDF Get attachments` para extraer los archivos adjuntos de un documento PDF/A3.
 - Comandos del lenguaje 4D: [página Novedades](https://doc.4d.com/4Dv20R6/4D/20-R6/What-s-new.901-6957482.en.html) en doc.4d.com.
 - 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv20R6/4D/20-R6/What-s-new.901-6993921.en.html) en doc.4d.com.
-- [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=20_R6): lista de todos los bugs que se han corregido en 4D 20 R5.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R6): list of all bugs that have been fixed in 4D 20 R6.
 
 #### Cambios de comportamiento
 
@@ -402,20 +414,20 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 19
 
 ## Tabla de la librería
 
-| Librería  | Versión actual                            | Actualizado en 4D | Comentario                                                                                                                                                     |
-| --------- | ----------------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BoringSSL | 0aa300b                                   | **20 R6**         | Utilizado para QUIC                                                                                                                                            |
-| CEF       | 121                                       | 20 R5             | Chromium 6167                                                                                                                                                  |
-| Hunspell  | 1.7.2     | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                                      |
-| ICU       | 73.2                      | 20                | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto.                                  |
-| libldap   | **2.6.7** | **20 R6**         |                                                                                                                                                                |
-| libsasl   | 2.1.28    | 20                |                                                                                                                                                                |
-| Libuv     | 1.48                      | **20 R6**         | Utilizado para QUIC                                                                                                                                            |
-| libZip    | 1.9.2     | 20                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                                         |
-| LZMA      | 5.4.1     | 20                |                                                                                                                                                                |
-| OpenSSL   | 3.2.0     | 20 R4             | Se ha actualizado el nivel de seguridad TLS/SSL por defecto. Ver [Cambios de comportamiento](#cambios-de-comportamiento) para la versión 20 R4 |
-| PDFWriter | 4.3                       | 20                | Dependencia FreeType en 12.2.1                                                                                                 |
-| PHP       | 8.2.4     | 20                |                                                                                                                                                                |
-| SpreadJS  | 16.2.6    | 20 R4             | Motor 4D View Pro                                                                                                                                              |
-| webKit    | WKWebView                                 | 19                |                                                                                                                                                                |
-| Zlib      | 1.2.13    | 20                |                                                                                                                                                                |
+| Librería  | Versión actual                         | Actualizado en 4D | Comentario                                                                                                                                                     |
+| --------- | -------------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BoringSSL | 0aa300b                                | 20 R6             | Utilizado para QUIC                                                                                                                                            |
+| CEF       | 128                                    | **20 R7**         | Chromium 6613                                                                                                                                                  |
+| Hunspell  | 1.7.2  | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                                      |
+| ICU       | 73.2                   | 20                | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto.                                  |
+| libldap   | 2.6.7  | 20 R6             |                                                                                                                                                                |
+| libsasl   | 2.1.28 | 20                |                                                                                                                                                                |
+| Libuv     | 1.48                   | 20 R6             | Utilizado para QUIC                                                                                                                                            |
+| libZip    | 1.9.2  | 20                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                                         |
+| LZMA      | 5.4.1  | 20                |                                                                                                                                                                |
+| OpenSSL   | 3.3.2  | **20 R7**         | Se ha actualizado el nivel de seguridad TLS/SSL por defecto. Ver [Cambios de comportamiento](#cambios-de-comportamiento) para la versión 20 R4 |
+| PDFWriter | 4.3                    | 20                | Dependencia FreeType en 12.2.1                                                                                                 |
+| PHP       | 8.2.4  | 20                |                                                                                                                                                                |
+| SpreadJS  | 17.1.0 | **20 R7**         | See [this blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) for an overview of the new features                                               |
+| webKit    | WKWebView                              | 19                |                                                                                                                                                                |
+| Zlib      | 1.2.13 | 20                |                                                                                                                                                                |

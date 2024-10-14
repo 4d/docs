@@ -29,7 +29,7 @@ The `VP IMPORT DOCUMENT` command <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-In *filePath*, pass the path and name of the document to be imported. São suportados os seguintes formatos:
+Em *filePath*, passe o caminho de destino e o nome do documento a ser importado. São suportados os seguintes formatos:
 
 - Os documentos 4D View Pro (extensão ".4vp")
 - Microsoft Excel (extensão ".xlsx")
@@ -44,7 +44,7 @@ The optional *paramObj* parameter allows you to define properties for the import
 
 | Parâmetro  |                     | Tipo                         | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ---------- | ------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| formula    |                     | 4D. Function | Um método de retorno de chamada a ser iniciado quando a importação for concluída. You must use a formula returned by the [`Formula`](../../API/FunctionClass.md#formula) command. Veja [Passando um método de callback (fórmula)](vp-export-document.md#passing-a-callback-method-formula).                                                                                                     |
+| formula    |                     | 4D. Function | Um método de retorno de chamada a ser iniciado quando a importação for concluída. Você deve usar uma fórmula retornada pelo comando [`Formula`](../../API/FunctionClass.md#formula). Veja [Passando um método de callback (fórmula)](vp-export-document.md#passing-a-callback-method-formula).                                                                                                  |
 | senha      |                     | text                         | Somente Microsoft Excel (opcional) - Senha usada para proteger o documento do MS Excel.                                                                                                                                                                                                                                                                                                                                         |
 | csvOptions |                     | object                       | opções para importação csv                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |            | range               | object                       | O intervalo  de células que contém a primeira célula onde os dados serão escritos. Se o intervalo especificado não é um intervalo de células, só a primeira célula do intervalo é usada.                                                                                                                                                                                                                                           |
@@ -61,7 +61,7 @@ The optional *paramObj* parameter allows you to define properties for the import
 
 :::note Notas
 
-- Importing files in .xslx, .csv, and .sjs formats is **asynchronous**. With these formats, you must use the `formula` attribute if you want to start an action at the end of the document processing.
+- Importar arquivos em formatos .xslx, .csv, e .sjs é **assíncrona**. With these formats, you must use the `formula` attribute if you want to start an action at the end of the document processing.
 - Quando importar um arquivo formatado em Excel em um documento 4D View Pro, algumas configurações podem ser perdidas. You can verify your settings with [this list from SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
 - For more information on the CSV format and delimiter-separated values in general, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
 
@@ -84,7 +84,7 @@ End if
 Você deseja importar um documento do Microsoft Excel protegido por senha para uma área do 4D View Pro:
 
 ```4d
-	//Import code
+	//Código de importação
 var $o : Object
 $o:=New object
 $o.password:="excel123"

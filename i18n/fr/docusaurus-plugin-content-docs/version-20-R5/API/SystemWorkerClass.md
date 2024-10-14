@@ -61,11 +61,11 @@ $myMacWorker:= 4D.SystemWorker.new("chmod x /folder/myfile.sh")
 
 <!-- REF #4D.SystemWorker.new().Params -->
 
-| Paramètres  | Type                            |     | Description                                                            |
-| ----------- | ------------------------------- | :-: | ---------------------------------------------------------------------- |
-| commandLine | Text                            |  -> | Ligne de commande à exécuter                                           |
-| options     | Object                          |  -> | Paramètres du worker                                                   |
-| result      | 4D.SystemWorker |  <- | Nouveau System worker asynchrone ou null si le process n'a pas démarré |
+| Paramètres  | Type                            |                             | Description                                                            |
+| ----------- | ------------------------------- | :-------------------------: | ---------------------------------------------------------------------- |
+| commandLine | Text                            |              ->             | Ligne de commande à exécuter                                           |
+| options     | Object                          |              ->             | Paramètres du worker                                                   |
+| result      | 4D.SystemWorker | <- | Nouveau System worker asynchrone ou null si le process n'a pas démarré |
 
 <!-- END REF -->
 
@@ -97,7 +97,7 @@ Dans le paramètre *options*, passez un objet qui peut contenir les propriétés
 | encoding         | Text    | "UTF-8"    | Seulement si `dataType="text"`. Encodage du contenu du corps de la réponse. Pour la liste des valeurs disponibles, consultez la description de la commande [`CONVERT FROM TEXT`](https://doc.4d.com/4dv20/help/command/en/page1011.html)                                                                                                                                                                                           |
 | variables        | Object  |            | Définit des variables d'environnement personnalisées pour le system worker. Syntaxe : `variables.key=value`, où `key` est le nom de la variable et `value` sa valeur. Les valeurs sont converties en chaînes de caractères lorsque cela est possible. La valeur ne peut pas contenir un '='. S'il n'est pas défini, le system worker hérite de l'environnement 4D. |
 | currentDirectory | Folder  |            | Répertoire de travail dans lequel le process est exécuté                                                                                                                                                                                                                                                                                                                                                                                                           |
-| hideWindow       | Boolean | vrai       | (Windows) Masquer la fenêtre de l'application (si possible) ou la console Windows                                                                                                                                                                                                                                                                                                                                            |
+| hideWindow       | Boolean | true       | (Windows) Masquer la fenêtre de l'application (si possible) ou la console Windows                                                                                                                                                                                                                                                                                                                                            |
 
 Toutes les fonctions de callback reçoivent deux paramètres objet. Leur contenu dépend du callback :
 
@@ -550,10 +550,10 @@ Cette propriété est en **lecture seule**.
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 
-| Paramètres | Type                            |     | Description                                      |
-| ---------- | ------------------------------- | :-: | ------------------------------------------------ |
-| timeout    | Real                            |  -> | Temps d'attente (en secondes) |
-| Résultat   | 4D.SystemWorker |  <- | Objet SystemWorker                               |
+| Paramètres | Type                            |                             | Description                                      |
+| ---------- | ------------------------------- | :-------------------------: | ------------------------------------------------ |
+| timeout    | Real                            |              ->             | Temps d'attente (en secondes) |
+| Résultat   | 4D.SystemWorker | <- | Objet SystemWorker                               |
 
 <!-- END REF -->
 

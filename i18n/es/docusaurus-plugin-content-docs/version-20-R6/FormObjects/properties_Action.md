@@ -140,7 +140,7 @@ Permite la selección de múltiples registros/opciones en una [lista jerárquica
 
 #### Objetos soportados
 
-[Hierarchical List](list_overview.md)
+[Lista jerárquica](list_overview.md)
 
 ---
 

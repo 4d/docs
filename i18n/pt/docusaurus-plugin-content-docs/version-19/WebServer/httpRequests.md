@@ -120,7 +120,7 @@ This URL allows you to call the *MethodName* 4D project method with an optional 
 - The 4D project method must have been [allowed for web requests](allowProject.md): the “Available through 4D tags and URLs (4DACTION...)” attribute value must have been checked in the properties of the method. Se o atributo não for verificado, o pedido Web é rejeitado.
 - When 4D receives a `/4DACTION/MethodName/Param` request, the `On Web Authentication` database method (if it exists) is called.
 
-`4DACTION/` can be associated with a URL in a static Web page:
+`4DACTION/` pode ser associado a um URL em uma página Web estática:
 
 ```html
 <A HREF="/4DACTION/MyMethod/hello">Do Something</A>

@@ -27,14 +27,14 @@ Por ejemplo, la URL "*a/b/c*" llamará al método base, pero "*a/b/c.html*" no l
 
 **On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
 
-| Parámetros | Tipo |     | Descripción                                                                  |
-| ---------- | ---- | :-: | ---------------------------------------------------------------------------- |
-| $1         | Text |  <- | URL                                                                          |
-| $2         | Text |  <- | Encabezados HTTP + cuerpo HTTP (hasta un límite de 32 kb) |
-| $3         | Text |  <- | Dirección IP del cliente web (navegador)                  |
-| $4         | Text |  <- | Dirección IP del servidor                                                    |
-| $5         | Text |  <- | Nombre de usuario                                                            |
-| $6         | Text |  <- | Contraseña                                                                   |
+| Parámetros | Tipo |                             | Descripción                                                                  |
+| ---------- | ---- | :-------------------------: | ---------------------------------------------------------------------------- |
+| $1         | Text | <- | URL                                                                          |
+| $2         | Text | <- | Encabezados HTTP + cuerpo HTTP (hasta un límite de 32 kb) |
+| $3         | Text | <- | Dirección IP del cliente web (navegador)                  |
+| $4         | Text | <- | Dirección IP del servidor                                                    |
+| $5         | Text | <- | Nombre de usuario                                                            |
+| $6         | Text | <- | Contraseña                                                                   |
 
 Debe declarar estos parámetros de la siguiente manera:
 
@@ -136,17 +136,16 @@ Este ejemplo describe la asociación de la URL `/4DACTION` con un objeto imagen 
 El método `getPhoto` es el siguiente:
 
 ```4d
-C_TEXT($1) // This parameter must always be declared
+C_TEXT($1) // Este parámetro debe declararse siempre
 var $path : Text
 var $PictVar : Picture
 var $BlobVar : Blob
 
- //find the picture in the Images folder within the Resources folder
+ //busca la imagen en la carpeta Imágenes dentro de la carpeta Resources
 $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd"
 
-READ PICTURE FILE($path;$PictVar) //put the picture in the picture variable
-PICTURE TO BLOB($PictVar;$BLOB;".png") //convert the picture to ".png" format
-WEB SEND BLOB($BLOB;"image/png")
+READ PICTURE FILE($path;$PictVar) //pone la imagen en la variable imagen
+PICTURE TO BLOB($PictVar;$BLOB;".png") //convierte la imagen en formato ".png". WEB SEND BLOB($BLOB;"image/png")
 ```
 
 ### 4DACCIÓN para publicar formularios

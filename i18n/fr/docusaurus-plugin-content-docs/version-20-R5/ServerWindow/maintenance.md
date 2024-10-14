@@ -49,7 +49,7 @@ Cette zone indique la date et l’heure de la [dernière sauvegarde](MSC/backup.
 
 - **Dernière sauvegarde** : date et heure de la dernière sauvegarde automatique.
 - **Prochaine sauvegarde** : date et heure de la prochaine sauvegarde.
-- **Place nécessaire estimée** : estimation de la taille nécessaire pour la sauvegarde. The actual size of the backup file may vary according to the settings (compression, etc.) and according to variations of the data file.
+- **Place nécessaire estimée** : estimation de la taille nécessaire pour la sauvegarde. La taille réelle du fichier de sauvegarde peut varier selon les paramètres (compression, etc.) et selon les variations du fichier de données.
 - **Place disponible** : place disponible sur le volume de sauvegarde.
 
 Le bouton **Sauvegarder la base** permet de démarrer une sauvegarde immédiate de la base en utilisant les paramètres de sauvegarde courants (fichiers sauvegardés, emplacement des archives, options, etc.). Vous pouvez visualiser ces paramètres en cliquant sur le bouton **Propriétés...**. Pendant une sauvegarde sur le serveur, les postes clients sont "bloqués" (mais pas déconnectés) et il n’est pas possible à de nouveaux clients de se connecter.
@@ -78,7 +78,7 @@ Ce bouton vous permet de charger un [fichier de configuration de log](Debugging/
 
 ### Pause logging
 
-This button suspends all currently logging operations started on the server. This feature can be useful to temporarily lighten the server tasks.
+This button suspends all currently logging operations started on the server. Cette fonctionnalité peut être utile pour alléger temporairement les tâches du serveur.
 
 When the logs have been paused, the button title changes to **Resume logging**, so that you can resume the logging operations.
 

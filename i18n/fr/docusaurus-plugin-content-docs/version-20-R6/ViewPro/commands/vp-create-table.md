@@ -28,31 +28,31 @@ title: VP CREATE TABLE
 
 #### Description
 
-The `VP CREATE TABLE` command <!-- REF #_method_.VP CREATE TABLE.Summary -->creates a table in the specified range<!-- END REF -->. Vous pouvez créer une table dans une plage de cellules pour faciliter la gestion et l'analyse d'un groupe de données connexes. A table typically contains related data in rows and columns, and takes advantage of a [data context](vp-set-data-context).
+La commande `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->crée une table dans la plage spécifiée<!-- END REF -->. Vous pouvez créer une table dans une plage de cellules pour faciliter la gestion et l'analyse d'un groupe de données connexes. Une table contient généralement des données connexes en lignes et en colonnes, et tire parti d'un [contexte de données](vp-set-data-context).
 
 ![](../../assets/en/ViewPro/vp-create-table.png)
 
-In *rangeObj*, pass the cell range where the table will be created.
+Dans *rangeObj*, passez la plage de cellules où la table sera créée.
 
-In *tableName*, pass a name for the table. Le nom doit :
+Dans *tableName*, passez un nom pour la table. Le nom doit :
 
 - être unique dans la feuille
 - inclure au moins 5 caractères
 - ne pas inclure d'espaces ou commencer par un nombre
 
-In *source*, you can pass a property name of a [data context](vp-set-data-context.md) to display its data in the table. This binds the table to the data context. When the data context is updated, the data displayed in the table is updated accordingly. The *source* property must contain a collection of objects and each element represents a row.
+Dans *source*, vous pouvez passer un nom de propriété d'un [data context] (vp-set-data-context.md) pour afficher ses données dans le tableau. This binds the table to the data context. When the data context is updated, the data displayed in the table is updated accordingly. La propriété *source* doit contenir une collection d'objets et chaque élément représente une ligne.
 
-- If you don't specify a *source*, the command creates an empty table with the size defined in *rangeObj*.
-- If the specified *source* cannot be fully displayed in the document, no table is created.
+- Si vous ne spécifiez pas de *source*, la commande crée une table vide avec la taille définie dans *rangeObj*.
+- Si la *source* spécifiée ne peut pas être entièrement affichée dans le document, aucune table n'est créée.
 
-In the *options* parameter, pass an object of the [`cs.ViewPro.TableOptions` class](../classes.md#tableoptions) that contains the table properties to set.
+Dans le paramètre *options*, passez un objet de la [classe`cs.ViewPro.TableOptions`](../classes.md#tableoptions) qui contient les propriétés de la table à définir.
 
-Within the *options* object, the *tableColumns* collection determines the structure of the table's columns. The length of the *tableColumns* collection must be equal to the range column count:
+Dans l'objet *options*, la collection *tableColumns* détermine la structure des colonnes de la table. La longueur de la collection *tableColumns* doit être égale au nombre de colonnes de la plage :
 
-- When the column count in *rangeObj* exceeds the number of columns in *tableColumns*, the table is filled with additional empty columns.
-- When the column count in *rangeObj* is inferior to the number of *tableColumns*, the table displays a number of columns that match the range's column count.
+- Lorsque le nombre de colonnes dans *rangeObj* dépasse le nombre de colonnes dans *tableColumns*, la table est remplie avec des colonnes vides supplémentaires.
+- Lorsque le nombre de colonnes dans *rangeObj* est inférieur au nombre de *tableColumns*, le tableau affiche un nombre de colonnes correspondant au nombre de colonnes de la plage.
 
-If you pass a *source* but no *tableColumn* option, the command generates columns automatically. In this case, *rangeObj* must be a cell range. Otherwise, the first cell of the range is used. When generating columns automatically, the following rules apply:
+Si vous passez une option *source* mais pas une option *tableColumn*, la commande génère automatiquement des colonnes. Dans ce cas, *rangeObj* doit être une plage de cellules. Otherwise, the first cell of the range is used. When generating columns automatically, the following rules apply:
 
 - If the data passed to the command is a collection of objects, the property names are used as column titles. Par exemple :
 
@@ -60,15 +60,15 @@ If you pass a *source* but no *tableColumn* option, the command generates column
 ([{ LastName: \"Freehafer\", FirstName: \"Nancy\"},{ LastName: \"John\", FirstName: \"Doe\"})
 ```
 
-Here the titles of the columns would be `LastName` and `FirstName`.
+Ici, les titres des colonnes seraient `LastName` et `FirstName`.
 
 - If the data passed to the command is a collection of scalar values, it must contain a collection of subcollections:
 
   - La collection de premier niveau contient des sous-collections de valeurs. Chaque sous-collection définit une ligne. Passez une collection vide pour sauter une ligne. The number of values in the first subcollection determines how many columns are created.
   - The subcollections' indices are used as column titles.
-  - Chaque sous-collection définit les valeurs des cellules de la ligne. Values can be `Integer`, `Real`, `Boolean`, `Text`, `Date`, `Null`, `Time` or `Picture`. A `Time` value must be an a object containing a time attribute, as described in [VP SET VALUE](vp-set-value.md).
+  - Chaque sous-collection définit les valeurs des cellules de la ligne. Les valeurs peuvent être `Integer`, `Real`, `Boolean`, `Text`, `Date`, `Null`, `Time` ou `Picture`. Une valeur `Time` doit être un objet contenant un attribut time, comme décrit dans [VP SET VALUE](vp-set-value.md).
 
-> This only works when generating columns automatically. You cannot use a collection of scalar data with the *tableColumns* option.
+> This only works when generating columns automatically. Vous ne pouvez pas utiliser une collection de données scalaires avec l'option *tableColumns*.
 
 #### Exemple
 

@@ -11,7 +11,7 @@ Las entradas pueden contener [expresiones asignables o no asignables](Concepts/q
 
 Además, las entradas pueden ser [editables o no editables](properties_Entry.md#enterable). Una entrada introducible acepta los datos. Puede definir los controles de entrada de datos para el objeto. Una entrada no editable sólo puede mostrar valores, pero no puede ser editada por el usuario.
 
-Puedes gestionar los datos con los [métodos](Concepts/methods.md) objeto o formulario.
+Puede gestionar los datos con los [métodos](Concepts/methods.md) objeto o formulario.
 
 ### Ejemplo JSON:
 

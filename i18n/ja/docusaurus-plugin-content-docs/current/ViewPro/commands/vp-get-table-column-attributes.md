@@ -17,12 +17,12 @@ title: VP Get column attributes
 
 <!-- REF #_method_.VP Get table column attributes.Params -->
 
-| 引数         | 型       |    | 説明                                             |                  |
-| ---------- | ------- | -- | ---------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                        |                  |
-| tableName  | Text    | -> | Table name                                     |                  |
-| column     | Integer | -> | 表の列のインデックス                                     |                  |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |                  |
+| 引数         | 型       |                             | 説明                                             |                  |
+| ---------- | ------- | --------------------------- | ---------------------------------------------- | ---------------- |
+| vpAreaName | Text    | ->                          | 4D View Pro フォームオブジェクト名                        |                  |
+| tableName  | Text    | ->                          | Table name                                     |                  |
+| column     | Integer | ->                          | 表の列のインデックス                                     |                  |
+| sheet      | Integer | ->                          | シートのインデックス (省略した場合はカレントシート) |                  |
 | 戻り値        | Object  | <- | *column* の属性                                   | <!-- END REF --> |
 
 #### 説明

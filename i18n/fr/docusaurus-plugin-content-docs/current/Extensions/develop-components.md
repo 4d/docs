@@ -17,7 +17,7 @@ Vous pouvez développer des composants 4D pour vos propres besoins et les garder
 
 La création et l’installation des composants 4D s’effectuent directement depuis 4D :
 
-- Pour utiliser un composant, il suffit de [l'installer dans votre application](../Projet/composants.md#basics).
+- Pour utiliser un composant, il suffit de [l'installer dans votre application](../Project/components.md#basics).
 - Un projet peut être à la fois "matrice" et "hôte", c'est-à-dire qu'un projet utilisé comme matrice peut lui-même utiliser un ou plusieurs composants. En revanche, un composant ne peut pas lui-même utiliser de "sous-composants".
 - Un composant peut appeler la plupart des éléments 4D : des classes, des fonctions, des méthodes projet, des formulaires projet, des barres de menus, des listes à choix multiples, etc. Il ne peut pas appeler des méthodes base et des triggers.
 - Il n’est pas possible d’exploiter le datastore, des tables standard ou des fichiers de données dans les composants 4D. En revanche, un composant peut créer et/ou utiliser des tables, des champs et des fichiers de données via les mécanismes des bases externes. Les bases externes sont des bases 4D indépendantes manipulées via les commandes SQL.
@@ -119,7 +119,7 @@ $area:=$rect.getArea()
 
 :::info
 
-Le namespace d'un composant [compilé](#protection-of-components-compilation) est ajouté entre parenthèses après le nom du composant dans la [page Méthodes composant](../Concepts/composants.md#utiliserlescomposants) des projets hôtes :
+Le namespace d'un composant [compilé](#protection-of-components-compilation) est ajouté entre parenthèses après le nom du composant dans la [page Méthodes composant](../Concepts/components.md#utiliserlescomposants) des projets hôtes :
 
 ![](../assets/en/settings/namesapece-explorer.png)
 

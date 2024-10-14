@@ -88,14 +88,14 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
     Session.clearPrivileges()
 
-    $result:="Your are authenticated as Guest"
+    $result:="Está autentificado como Invitado"
 
     $user:=ds.Users.query("identifier = :1"; $identifier).first()
 
     If ($user#Null)
         If (Verify password hash($password; $user.password))
             Session.setPrivileges(New object("roles"; $user.role))
-            $result:="Your are authenticated as "+$user.role
+            $result:="Está autentificado como "+$user.role
         End if
     End if
 
@@ -153,7 +153,7 @@ Se recomienda comprobar al inicio si existe un archivo `Roles_Errors.json` en la
 ```4d title="/Sources/DatabaseMethods/onStartup.4dm"
 If (Not(File("/LOGS/"+"Roles_Errors.json").exists))
 …
-Else // you can prevent the project to open
+Else // puede evitar que el proyecto abra
  ALERT("The roles.json file is malformed or contains inconsistencies, the application will quit.")
  QUIT 4D
 End if

@@ -339,4 +339,4 @@ Durante a execução, 4D prioriza automaticamente as folhas de estilo na seguint
 
 ## Veja também
 
-See the [**CSS for 4D Forms**](https://www.youtube.com/watch?v=3Hk4FUQENyQ) video presentation.
+Veja a apresentação em vídeo [**CSS para Formulários 4D**](https://www.youtube.com/watch?v=3Hk4FUQENyQ).

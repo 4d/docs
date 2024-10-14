@@ -15,7 +15,7 @@ Três tipos de sessões são suportados por essa classe:
 
 :::note
 
-The availability of properties and functions in the `Session` object depend on the session type.
+The availability of properties and functions in the `Session` object depends on the session type.
 
 :::
 
@@ -50,9 +50,9 @@ The availability of properties and functions in the `Session` object depend on t
 
 <!-- REF #_command_.Session.Params -->
 
-| Parâmetro  | Tipo                        |     | Descrição       |
-| ---------- | --------------------------- | :-: | --------------- |
-| Resultados | 4D. Session |  <- | Objecto Session |
+| Parâmetro  | Tipo                        |                             | Descrição       |
+| ---------- | --------------------------- | :-------------------------: | --------------- |
+| Resultados | 4D. Session | <- | Objecto Session |
 
 <!-- END REF -->
 
@@ -90,7 +90,7 @@ The `Session` object of remote client sessions is available from:
 - Triggers,
 - 'Conexão aberta com o servidor' e 'Conexão com o servidor' métodos de banco de dados.
 
-For more information on remote user sessions, please refer to the [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions) paragraph.
+Para mais informações em sessões usuários remotos, consulte o parágrafo [**Sessões usuário cliente remoto**](../Desktop/clientServer.md#remote-user-sessions).
 
 #### a sessão de procedimentos armazenados
 
@@ -143,9 +143,9 @@ IP:port/4DACTION/action_Session
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                           |
-| ---------- | ---------- | :-: | ----------------------------------- |
-| Resultados | Parâmetros |  <- | True se a execução for bem-sucedida |
+| Parâmetro  | Tipo       |                             | Descrição                           |
+| ---------- | ---------- | :-------------------------: | ----------------------------------- |
+| Resultados | Parâmetros | <- | True se a execução for bem-sucedida |
 
 <!-- END REF -->
 
@@ -196,7 +196,7 @@ Essa propriedade só está disponível com sessões de usuário da Web.
 
 The `.expirationDate` property contains <!-- REF #SessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. The value is expressed as text in the ISO 8601 format: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
-Essa propriedade é **somente leitura**. It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified.
+Essa propriedade é **somente leitura**. Ele será automaticamente recalculado se o valor da propriedade [`.idleTimeout`](#idletimeout) for modificado.
 
 #### Exemplo
 
@@ -223,9 +223,9 @@ $expiration:=Session.expirationDate //por exemplo "2021-11-05T17:10:42Z"
 
 <!-- REF #SessionClass.getPrivileges().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                                    |
-| ---------- | ---------- | :-: | ------------------------------------------------------------ |
-| Resultados | Collection |  <- | Coleção de nomes de privilégios (strings) |
+| Parâmetro  | Tipo       |                             | Descrição                                                    |
+| ---------- | ---------- | :-------------------------: | ------------------------------------------------------------ |
+| Resultados | Collection | <- | Coleção de nomes de privilégios (strings) |
 
 <!-- END REF -->
 
@@ -318,10 +318,10 @@ $privileges := Session.getPrivileges()
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                                |
-| ---------- | ---------- | :-: | -------------------------------------------------------- |
-| privilege  | Text       |  -> | Nome do privilegio a verificar                           |
-| Resultados | Parâmetros |  <- | True se a sessão tiver *privilege*, False caso contrário |
+| Parâmetro  | Tipo       |                             | Descrição                                                |
+| ---------- | ---------- | :-------------------------: | -------------------------------------------------------- |
+| privilege  | Text       |              ->             | Nome do privilegio a verificar                           |
+| Resultados | Parâmetros | <- | True se a sessão tiver *privilege*, False caso contrário |
 
 <!-- END REF -->
 
@@ -399,7 +399,7 @@ The `.idleTimeout` property contains <!-- REF #SessionClass.idleTimeout.Summary 
 
 Se não se definir esta propriedade, o valor padrão é 60 (1h).
 
-When this property is set, the [`.expirationDate`](#expirationdate) property is updated accordingly.
+Quando essa propriedade é definida, a propriedade [`.expirationDate`](#expirationdate) é atualizada de acordo.
 
 > O valor não pode ser inferior a 60: se definir um valor inferior, o tempo de espera se eleva até 60.
 
@@ -485,9 +485,9 @@ Since `.info` is a computed property, it is recommended to call it once and then
 
 <!-- REF #SessionClass.isGuest().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                                   |
-| ---------- | ---------- | :-: | ----------------------------------------------------------- |
-| Resultados | Parâmetros |  <- | True se a sessão for uma sessão Guest, False caso contrário |
+| Parâmetro  | Tipo       |                             | Descrição                                                   |
+| ---------- | ---------- | :-------------------------: | ----------------------------------------------------------- |
+| Resultados | Parâmetros | <- | True se a sessão for uma sessão Guest, False caso contrário |
 
 <!-- END REF -->
 
@@ -495,7 +495,7 @@ Since `.info` is a computed property, it is recommended to call it once and then
 
 :::note
 
-This function always returns **False** with remote client and stored procedure sessions.
+Essa função sempre retorna **False** com sessões de procedimento armazenado e cliente remoto.
 
 :::
 
@@ -530,12 +530,12 @@ End if
 
 <!-- REF #SessionClass.setPrivileges().Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                                                           |
-| ---------- | ---------- | :-: | ----------------------------------------------------------------------------------- |
-| privilege  | Text       |  -> | Nome do privilégio                                                                  |
-| privileges | Collection |  -> | Collection de nomes de privilégios                                                  |
-| settings   | Object     |  -> | Objetos com as propriedades "privilégios" (string ou collection) |
-| Resultados | Parâmetros |  <- | True se a execução for bem-sucedida                                                 |
+| Parâmetro  | Tipo       |                             | Descrição                                                                           |
+| ---------- | ---------- | :-------------------------: | ----------------------------------------------------------------------------------- |
+| privilege  | Text       |              ->             | Nome do privilégio                                                                  |
+| privileges | Collection |              ->             | Collection de nomes de privilégios                                                  |
+| settings   | Object     |              ->             | Objetos com as propriedades "privilégios" (string ou collection) |
+| Resultados | Parâmetros | <- | True se a execução for bem-sucedida                                                 |
 
 <!-- END REF -->
 
@@ -563,7 +563,7 @@ The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -
 
 :::note
 
-Privileges and roles are defined in [`roles.json`](../ORDA/privileges.md#rolesjson-file) file of the project. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) section.
+Privileges and roles are defined in [`roles.json`](../ORDA/privileges.md#rolesjson-file) file of the project. Para obter mais informações, consulte a seção [**Privilégios**](../ORDA/privileges.md).
 
 :::
 
@@ -620,7 +620,7 @@ Quando um objeto `Session` é criado, a propriedade `.storage` está vazia. Sinc
 
 > Like the `Storage` object of the server, the `.storage` property is always "single": adding a shared object or a shared collection to `.storage` does not create a shared group.
 
-This property is **read only** itself but it returns a read-write object.
+Essa propriedade é **apenas de leitura**, mas retorna um objeto de leitura e gravação.
 
 :::tip
 
@@ -641,7 +641,7 @@ If (Session.storage.clientIP=Null) //first access
 
 #### Exemplo de sessão remota
 
-You want to share data between processes in the same session:
+Você deseja compartilhar dados entre processos na mesma sessão:
 
 ```4d
 Use (Session.storage)
@@ -670,7 +670,7 @@ End use
 
 The `.userName` property contains <!-- REF #SessionClass.userName.Summary -->the user name associated to the session<!-- END REF -->. Pode usá-la para identificar o usuário dentro de seu código.
 
-- Com sessões da Web, essa propriedade é uma cadeia de caracteres vazia por padrão. It can be set using the `privileges` property of the [`setPrivileges()`](#setprivileges) function.
+- Com sessões da Web, essa propriedade é uma cadeia de caracteres vazia por padrão. Ele pode ser definido usando a propriedade `privileges` da função [`setPrivileges()`](#setprivileges).
 - With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](https://doc.4d.com/4dv20/help/command/en/page182.html) command.
 
 Essa propriedade é **somente leitura**.

@@ -206,8 +206,8 @@ Cette propriété est en **lecture seule**.
 
 <!--REF #FileHandleClass.getSize().Params -->
 
-| Paramètres | Type |    | Description                  |
-| ---------- | ---- | -- | ---------------------------- |
+| Paramètres | Type |                             | Description                  |
+| ---------- | ---- | --------------------------- | ---------------------------- |
 | Résultat   | Real | <- | Taille du document en octets |
 
 <!-- END REF -->
@@ -310,9 +310,9 @@ $s:=$fh.readText()
 
 <!--REF #FileHandleClass.readBlob().Params -->
 
-| Paramètres | Type                                 |    | Description                  |
-| ---------- | ------------------------------------ | -- | ---------------------------- |
-| *bytes*    | Real                                 | -> | Nombre d'octets à lire       |
+| Paramètres | Type                                 |                             | Description                  |
+| ---------- | ------------------------------------ | --------------------------- | ---------------------------- |
+| *bytes*    | Real                                 | ->                          | Nombre d'octets à lire       |
 | Résultat   | [4D.Blob](BlobClass) | <- | Octets lus depuis le fichier |
 
 <!-- END REF -->
@@ -345,8 +345,8 @@ Lorsque cette fonction est exécutée, la position courante ([.offset](#offset))
 
 <!--REF #FileHandleClass.readLine().Params -->
 
-| Paramètres | Type |    | Description    |
-| ---------- | ---- | -- | -------------- |
+| Paramètres | Type |                             | Description    |
+| ---------- | ---- | --------------------------- | -------------- |
 | Résultat   | Text | <- | Ligne de texte |
 
 <!-- END REF -->
@@ -387,9 +387,9 @@ Cette fonction suppose que la propriété [`.offset`](#offset) est un nombre de 
 
 <!--REF #FileHandleClass.readText().Params -->
 
-| Paramètres | Type |    | Description                                                                                           |
-| ---------- | ---- | -- | ----------------------------------------------------------------------------------------------------- |
-| *stopChar* | Text | -> | Caractère(s) au(x)quel(s) arrêter la lecture |
+| Paramètres | Type |                             | Description                                                                                           |
+| ---------- | ---- | --------------------------- | ----------------------------------------------------------------------------------------------------- |
+| *stopChar* | Text | ->                          | Caractère(s) au(x)quel(s) arrêter la lecture |
 | Résultat   | Text | <- | Texte du fichier                                                                                      |
 
 <!-- END REF -->

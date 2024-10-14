@@ -19,10 +19,10 @@ Vous pouvez configurer les paramètres du serveur web 4D, en fonction de la port
 
 ## Cache
 
-| Peut être configuré via          | Nom                                                                                                 | Commentaires |
-| -------------------------------- | --------------------------------------------------------------------------------------------------- | ------------ |
-| Boîte de dialogue des Propriétés | [Options (I) page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache) |              |
-| Boîte de dialogue des Propriétés | [Options (I) page/Page Cache Size](../settings/web.md#page-cache-size)           |              |
+| Peut être configuré via          | Nom                                                                                                     | Commentaires |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------ |
+| Boîte de dialogue des Propriétés | [Page Options (I)/Utiliser le cache 4D Web](../settings/web.md#use-the-4d-web-cache) |              |
+| Boîte de dialogue des Propriétés | [Page Options (I)/Taille du cache des pages](../settings/web.md#page-cache-size)     |              |
 
 Active et configure le cache des pages web.
 
@@ -287,7 +287,7 @@ Numéro de port IP d'écoute pour les connections HTTP via TLS. La valeur par d�
 | `WEB SET OPTION`                 | `Web inactive process timeout`                                                                                       |              |
 | Boîte de dialogue des Propriétés | [Page Options (I)/Conservation des process inactifs](../settings/web.md#inactive-process-timeout) | Curseur      |
 
-Life duration (in minutes) of inactive processes associated with legacy sessions. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the session context is destroyed.
+Durée de vie (en minutes) des process inactifs associés aux anciennes sessions. À la fin du délai, le process est tué sur le serveur, la méthode base `On Web Legacy Close Session` est appelée, puis le contexte de la session est détruit.
 
 Valeur par défaut : 480 minutes (passez 0 pour restaurer la valeur par défaut)
 
@@ -406,7 +406,7 @@ Valeurs possibles: 500 000 - 2147483648.
 | objet webServer         | [`maxSessions`](API/WebServerClass.md#maxsessions) |              |
 | `WEB SET OPTION`        | `Web max sessions`                                 |              |
 
-Maximum number of simultaneous legacy sessions. When you reach the limit set, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the Web server needs to create a new one. The number of simultaneous legacy sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default).
+Nombre maximal d'anciennes sessions simultanées. Lorsque vous atteignez la limite définie, la session la plus ancienne est fermée (et la méthode base `On Web Legacy Close Session` est appelée) si le serveur Web doit en créer une nouvelle. Le nombre d'anciennes sessions simultanées ne peut pas dépasser le [nombre maximal de process Web](#maximum-concurrent-web-processes) (100 par défaut).
 
 Valeur par défaut : 100 (passez 0 pour restaurer la valeur par défaut).
 
@@ -455,9 +455,9 @@ True si le PFS est disponible sur le serveur web (voir la section [TLS](Admin/tl
 
 ## Réutilisation des contextes temporaires (en mode distant)
 
-| Peut être configuré via          | Nom                                                                                                         | Commentaires |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------ |
-| Boîte de dialogue des Propriétés | [Options (I) page/Reuse Temporary Contexts](../settings/web.md#reuse-temporary-contexts) |              |
+| Peut être configuré via          | Nom                                                                                                                        | Commentaires |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| Boîte de dialogue des Propriétés | Page [Options (I)/Réutilisation des contextes temporaires](../settings/web.md#reuse-temporary-contexts) |              |
 
 > Cette option n'est disponible que lorsque l'option **Pas de sessions** est cochée.
 
@@ -539,7 +539,7 @@ Par exemple, si vous voulez que le dossier racine HTML soit le sous-dossier "Web
 | `WEB SET OPTION`                 | `Web scalable session`                                                                                                                                              |              |
 | Boîte de dialogue des Propriétés | [Page Options (I)/Sessions extensibles (sessions multi-process)](../settings/web.md#scalable-sessions-multi-process-sessions) |              |
 
-Activation des sessions extensibles le serveur web 4D. Web server sessions are detailed in the [Web sessions](sessions.md) page.
+Activation des sessions extensibles le serveur web 4D. Les sessions du serveur web sont détaillées dans la page [Sessions web](sessions.md).
 
 ## Domaine du cookie de session
 
@@ -590,9 +590,9 @@ La valeur de l'attribut `Secure` du cookie de session est automatiquement défin
 
 ## Utiliser des process préemptifs
 
-| Peut être configuré via          | Nom                                                                                                         | Commentaires |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------ |
-| Boîte de dialogue des Propriétés | [Options (I) page/Use Preemptive Processes](../settings/web.md#use-preemptive-processes) |              |
+| Peut être configuré via          | Nom                                                                                                                | Commentaires |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------ |
+| Boîte de dialogue des Propriétés | Page [Options (I)/Utiliser des process préemptifs](../settings/web.md#use-preemptive-processes) |              |
 
 Cette option active le mode préemptif pour le code du serveur web de votre application lorsque l'option **Pas de sessions** est sélectionnée (le mode préemptif est toujours activé avec les **sessions extensibles**). Lorsque cette option est cochée dans ce contexte, le compilateur 4D évalue automatiquement la propriété thread-safety de chaque élément du code [lié au web](preemptiveWeb.md#thread-safety-of-4d-web-code) et renvoie des erreurs en cas d'incompatibilité.
 

@@ -43,10 +43,10 @@ Les objets Transporter POP3 sont instanciés avec la commande [POP3 New transpor
 
 <!-- REF #_command_.POP3 New transporter.Params -->
 
-| Paramètres | Type                               |     | Description                                       |
-| ---------- | ---------------------------------- | :-: | ------------------------------------------------- |
-| server     | object                             |  -> | Informations sur le serveur IMAP                  |
-| Résultat   | 4D.POP3Transporter |  <- | [Objet POP3 Transporter](#objet-pop3-transporter) |
+| Paramètres | Type                               |                             | Description                                       |
+| ---------- | ---------------------------------- | :-------------------------: | ------------------------------------------------- |
+| server     | object                             |              ->             | Informations sur le serveur IMAP                  |
+| Résultat   | 4D.POP3Transporter | <- | [Objet POP3 Transporter](#objet-pop3-transporter) |
 
 <!-- END REF -->
 
@@ -102,10 +102,10 @@ La fonction renvoie un [**objet POP3 Transporter**](#objet-pop3-transporter). To
 
 <!-- REF #4D.POP3Transporter.new().Params -->
 
-| Paramètres | Type                               |     | Description                                       |
-| ---------- | ---------------------------------- | :-: | ------------------------------------------------- |
-| server     | Object                             |  -> | Informations sur le serveur IMAP                  |
-| Résultat   | 4D.POP3Transporter |  <- | [Objet POP3 Transporter](#objet-pop3-transporter) |
+| Paramètres | Type                               |                             | Description                                       |
+| ---------- | ---------------------------------- | :-------------------------: | ------------------------------------------------- |
+| server     | Object                             |              ->             | Informations sur le serveur IMAP                  |
+| Résultat   | 4D.POP3Transporter | <- | [Objet POP3 Transporter](#objet-pop3-transporter) |
 
 <!-- END REF -->
 
@@ -207,9 +207,9 @@ L'exécution de cette méthode ne supprime pas réellement l'email. L'email marq
 
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
 
-| Paramètres | Type   |     | Description   |
-| ---------- | ------ | :-: | ------------- |
-| Résultat   | Object |  <- | Objet boxInfo |
+| Paramètres | Type   |                             | Description   |
+| ---------- | ------ | :-------------------------: | ------------- |
+| Résultat   | Object | <- | Objet boxInfo |
 
 <!-- END REF -->
 
@@ -257,11 +257,11 @@ L'objet `boxInfo` contient les propriété suivantes :
 
 <!-- REF #POP3TransporterClass.getMail().Params -->
 
-| Paramètres | Type    |     | Description                                                                                     |
-| ---------- | ------- | :-: | ----------------------------------------------------------------------------------------------- |
-| msgNumber  | Integer |  -> | Numéro du message dans la liste                                                                 |
-| headerOnly | Boolean |  -> | True pour télécharger uniquement les en-têtes de l'email (par défaut, False) |
-| Résultat   | Object  |  <- | [Objet Email](EmailObjectClass.md#objet-email)                                                  |
+| Paramètres | Type    |                             | Description                                                                                     |
+| ---------- | ------- | :-------------------------: | ----------------------------------------------------------------------------------------------- |
+| msgNumber  | Integer |              ->             | Numéro du message dans la liste                                                                 |
+| headerOnly | Boolean |              ->             | True pour télécharger uniquement les en-têtes de l'email (par défaut, False) |
+| Résultat   | Object  | <- | [Objet Email](EmailObjectClass.md#objet-email)                                                  |
 
 <!-- END REF -->
 
@@ -324,10 +324,10 @@ Vous souhaitez connaitre l'expéditeur du premier mail de la boite de réception
 
 <!-- REF #POP3TransporterClass.getMailInfo().Params -->
 
-| Paramètres | Type    |     | Description                     |
-| ---------- | ------- | :-: | ------------------------------- |
-| msgNumber  | Integer |  -> | Numéro du message dans la liste |
-| Résultat   | Object  |  <- | Objet MailInfo                  |
+| Paramètres | Type    |                             | Description                     |
+| ---------- | ------- | :-------------------------: | ------------------------------- |
+| msgNumber  | Integer |              ->             | Numéro du message dans la liste |
+| Résultat   | Object  | <- | Objet MailInfo                  |
 
 <!-- END REF -->
 
@@ -384,9 +384,9 @@ La fonction retourne **Null** si :
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
 
-| Paramètres | Type       |     | Description                    |
-| ---------- | ---------- | :-: | ------------------------------ |
-| Résultat   | Collection |  <- | Collection d'objets `mailInfo` |
+| Paramètres | Type       |                             | Description                    |
+| ---------- | ---------- | :-------------------------: | ------------------------------ |
+| Résultat   | Collection | <- | Collection d'objets `mailInfo` |
 
 <!-- END REF -->
 
@@ -449,10 +449,10 @@ Vous souhaitez connaitre le nombre total d'emails de la boîte de réception ain
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
 
-| Paramètres | Type    |     | Description                                          |
-| ---------- | ------- | :-: | ---------------------------------------------------- |
-| msgNumber  | Integer |  -> | Numéro du message dans la liste                      |
-| Résultat   | Blob    |  <- | Blob de la chaine MIME retournée par le serveur mail |
+| Paramètres | Type    |                             | Description                                          |
+| ---------- | ------- | :-------------------------: | ---------------------------------------------------- |
+| msgNumber  | Integer |              ->             | Numéro du message dans la liste                      |
+| Résultat   | Blob    | <- | Blob de la chaine MIME retournée par le serveur mail |
 
 <!-- END REF -->
 

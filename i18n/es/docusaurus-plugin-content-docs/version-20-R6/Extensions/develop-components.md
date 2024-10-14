@@ -259,10 +259,10 @@ El siguiente código se incluye en un componente y realiza tres acciones básica
 Creación de la base de datos externa:
 
 ```4d
-<>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) stores the data in an authorized directory
+<>MyDatabase:=Get 4D folder+"\MyDB" // (Windows) almacena los datos en un directorio autorizado
  Begin SQL
-        CREATE DATABASE IF NOT EXISTS DATAFILE :[<>MyDatabase];
-        USE DATABASE DATAFILE :[<>MyDatabase];
+        CREATE DATABASE IF NOT EXISTS DATAFILE :[MyDatabase];
+        USE DATABASE DATAFILE :[MyDatabase];
         CREATE TABLE IF NOT EXISTS KEEPIT
         (
         ID INT32 PRIMARY KEY,
@@ -305,7 +305,7 @@ Escritura en la base de datos externa:
 Lectura en una base de datos externa:
 
 ```4d
- $Ptr_1:=$2 // accesses data of the host project through pointers
+ $Ptr_1:=$2 // accede a los datos del proyecto local a través de punteros
  $Ptr_2:=$3
  $Ptr_3:=$4
  $Ptr_4:=$5

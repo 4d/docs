@@ -82,11 +82,11 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
 <!-- REF #4D.HTTPRequest.new().Params -->
 
-| Parâmetro  | Tipo                           |     | Descrição                          |
-| ---------- | ------------------------------ | :-: | ---------------------------------- |
-| url        | Text                           |  -> | URL para onde enviar o pedido      |
-| options    | Object                         |  -> | Pedir propriedades de configuração |
-| Resultados | 4D.HTTPRequest |  <- | Novo objecto HTTPRequest           |
+| Parâmetro  | Tipo                           |                             | Descrição                          |
+| ---------- | ------------------------------ | :-------------------------: | ---------------------------------- |
+| url        | Text                           |              ->             | URL para onde enviar o pedido      |
+| options    | Object                         |              ->             | Pedir propriedades de configuração |
+| Resultados | 4D.HTTPRequest | <- | Novo objecto HTTPRequest           |
 
 <!-- END REF -->
 
@@ -210,10 +210,10 @@ An authentication object handles the `options.serverAuthentication` or `options.
 
 <!-- REF #HTTP Parse message.Params -->
 
-| Parâmetro  | Tipo       |     | Descrição                                                       |
-| ---------- | ---------- | :-: | --------------------------------------------------------------- |
-| data       | Text, Blob |  -> | Dados a serem analisados                                        |
-| Resultados | Object     |  <- | Objeto, cada propriedade é uma parte dos dados de várias partes |
+| Parâmetro  | Tipo       |                             | Descrição                                                       |
+| ---------- | ---------- | :-------------------------: | --------------------------------------------------------------- |
+| data       | Text, Blob |              ->             | Dados a serem analisados                                        |
+| Resultados | Object     | <- | Objeto, cada propriedade é uma parte dos dados de várias partes |
 
 <!-- END REF -->
 
@@ -476,10 +476,10 @@ The `.url` property contains <!-- REF #HTTPRequestClass.url.Summary -->the URL o
 
 <!-- REF #HTTPRequestClass.wait().Params -->
 
-| Parâmetro  | Tipo                           |     | Descrição                                           |
-| ---------- | ------------------------------ | :-: | --------------------------------------------------- |
-| time       | Real                           |  -> | Tempo máximo em segundos para esperar pela resposta |
-| Resultados | 4D.HTTPRequest |  <- | HTTPRequest object                                  |
+| Parâmetro  | Tipo                           |                             | Descrição                                           |
+| ---------- | ------------------------------ | :-------------------------: | --------------------------------------------------- |
+| time       | Real                           |              ->             | Tempo máximo em segundos para esperar pela resposta |
+| Resultados | 4D.HTTPRequest | <- | HTTPRequest object                                  |
 
 <!-- END REF -->
 

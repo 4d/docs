@@ -480,31 +480,31 @@
     "description": "The generated-index page title for category Qodly Studio in sidebar docs"
   },
   "sidebar.docs.category.Qodly Studio.link.generated-index.description": {
-    "message": "Using Qodly Studio to build powerful web interfaces.",
+    "message": "Utiliser Qodly Studio pour créer des interfaces web puissantes.",
     "description": "The generated-index page description for category Qodly Studio in sidebar docs"
   },
   "sidebar.docs.category.REST API": {
-    "message": "REST API",
+    "message": "API REST",
     "description": "The label for category REST API in sidebar docs"
   },
   "sidebar.docs.category.REST API.link.generated-index.title": {
-    "message": "REST API",
+    "message": "API REST",
     "description": "The generated-index page title for category REST API in sidebar docs"
   },
   "sidebar.docs.category.REST API.link.generated-index.description": {
-    "message": "Exposing your datastore to REST and using the REST API.",
+    "message": "Exposer votre datastore en REST et utiliser l'API REST.",
     "description": "The generated-index page description for category REST API in sidebar docs"
   },
   "sidebar.docs.category.Exposing your datastore in REST": {
-    "message": "Exposing your datastore in REST",
+    "message": "Exposer votre datastore en REST",
     "description": "The label for category Exposing your datastore in REST in sidebar docs"
   },
   "sidebar.docs.category.Exposing your datastore in REST.link.generated-index.title": {
-    "message": "Exposing your datastore in REST",
+    "message": "Exposer votre datastore en REST",
     "description": "The generated-index page title for category Exposing your datastore in REST in sidebar docs"
   },
   "sidebar.docs.category.Exposing your datastore in REST.link.generated-index.description": {
-    "message": "Configure your datastore for REST access",
+    "message": "Configurez votre datastore pour l'accès REST",
     "description": "The generated-index page description for category Exposing your datastore in REST in sidebar docs"
   }
 }

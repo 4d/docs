@@ -271,11 +271,11 @@ Ativação do método HTTP TRACE no servidor web 4D. Por motivos de segurança, 
 
 ## Porta HTTPS
 
-| Pode ser definido com              | Nome                                                           | Comentários |
-| ---------------------------------- | -------------------------------------------------------------- | ----------- |
-| objeto webServer                   | [`HTTPSPort`](API/WebServerClass.md#httpsport)                 | number      |
-| `WEB SET OPTION`                   | `Web HTTPS port ID`                                            |             |
-| Caixa de diálogos de configurações | [Configuration page/HTTPS Port](../settings/web.md#https-port) |             |
+| Pode ser definido com              | Nome                                                                | Comentários |
+| ---------------------------------- | ------------------------------------------------------------------- | ----------- |
+| objeto webServer                   | [`HTTPSPort`](API/WebServerClass.md#httpsport)                      | number      |
+| `WEB SET OPTION`                   | `Web HTTPS port ID`                                                 |             |
+| Caixa de diálogos de configurações | [Página de Configuração/Porta HTTPS](../settings/web.md#https-port) |             |
 
 Número da porta IP de escuta para conexões HTTPS via TLS. Por padrão, o valor é 443 (valor padrão). Ver también [HTTP Port](#http-port) para obtener información sobre los números de puerto.
 
@@ -304,11 +304,11 @@ Padrão: 480 minutos (passe 0 para repor o valor predefinido)
 
 ## Endereço IP de escuta
 
-| Pode ser definido com              | Nome                                                           | Comentários |
-| ---------------------------------- | -------------------------------------------------------------- | ----------- |
-| objeto webServer                   | [`IPAddressToListen`](API/WebServerClass.md#ipaddresstolisten) |             |
-| `WEB SET OPTION`                   | `Web IP address to listen`                                     |             |
-| Caixa de diálogos de configurações | [Configuration page/IP Address](../settings/web.md#ip-address) | Menu pop-up |
+| Pode ser definido com              | Nome                                                             | Comentários |
+| ---------------------------------- | ---------------------------------------------------------------- | ----------- |
+| objeto webServer                   | [`IPAddressToListen`](API/WebServerClass.md#ipaddresstolisten)   |             |
+| `WEB SET OPTION`                   | `Web IP address to listen`                                       |             |
+| Caixa de diálogos de configurações | [Página Configuração/Endereço IP](../settings/web.md#ip-address) | Menu pop-up |
 
 Sequências de endereços IP nas quais o servidor web 4D receberá solicitações HTTP (4D local e servidor 4D).
 
@@ -474,7 +474,7 @@ Para isso, coloque o arquivo ROBOTS.TXT na raiz do servidor. Este ficheiro deve 
 
 ```4d
    User-Agent: <name>
-   Disallow: <URL> or <beginning of the URL>
+   Disallow: <URL> ou <beginning of the URL>
 ```
 
 Por exemplo:
@@ -536,7 +536,7 @@ Por exemplo, se você quiser que a pasta raiz HTML seja a subpasta "Web" na past
 | `WEB SET OPTION`                   | `Sessão escalável Web`                                                                                                                                           |             |
 | Caixa de diálogos de configurações | [Options (I) page/Scalable sessions (multi-process sessions)](../settings/web.md#scalable-sessions-multi-process-sessions) |             |
 
-Session management enabling status for the 4D web server. Web server sessions are detailed in the [Web sessions](sessions.md) page.
+Session management enabling status for the 4D web server. As sessões do servidor da Web são detalhadas na página [Sessões Web](sessions.md).
 
 ## Domínio do cookie de sessão
 
@@ -597,7 +597,7 @@ Esta opción activa el modo apropiativo para el código del servidor web de su a
 
 As configurações a seguir ainda são compatíveis, mas dependem de recursos ou tecnologias obsoletos. Em geral, é recomendável manter os valores padrão.
 
-#### Allow database Access through 4DSYNC URLs
+#### Allow database access through 4DSYNC URLs
 
 Esta opción controla el soporte de las peticiones de sincronización HTTP que contienen las URLs obsoletas */4DSYNC*.
 

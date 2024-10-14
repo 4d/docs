@@ -10,7 +10,7 @@ title: On Unload
 
 ## Descrição
 
-Este evento é acionado quando o formulário é libertado.
+This event is triggered when the form is being exited released.
 
 All the objects of the form (from any page) whose `On Unload` object event property is selected will have their object method called. Then, if the `On Unload` form event property is selected, the form will have its form method called.
 

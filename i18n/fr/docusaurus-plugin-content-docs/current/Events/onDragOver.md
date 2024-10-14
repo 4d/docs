@@ -14,8 +14,8 @@ L'événement `On Drag Over` est envoyé à plusieurs reprises à l'objet de des
 - Vous récupérez les données et les signatures présentes dans le conteneur (via la commande `GET PASTEBOARD DATA`).
 - En fonction de la nature et du type de données dans le conteneur, vous acceptez ou refusez le glisser-déposer.
 
-Pour **accepter** le glissement, la méthode de l'objet de destination doit retourner 0 (zéro), vous devez donc écrire `$0:=0`.
-Pour **rejeter** le glissement, la méthode de l'objet de destination doit retourner -1 (moins un), vous devez donc écrire `$0:=-1`.
+To **accept** the drag, the destination object method must return 0 (zero).
+To **reject** the drag, the object method must return -1 (minus one).
 Lors d'un événement `On Drag Over`, 4D traite la méthode objet comme une fonction. Si aucun résultat n'est retourné, 4D suppose que le glissement est accepté.
 
 Si vous acceptez le glissement, l'objet de destination est mis en surbrillance. Si vous refusez le glissement, la destination n'est pas mise en surbrillance. Accepter le glissement ne signifie pas que les données déplacées vont être insérées dans l'objet de destination. Cela signifie seulement que si le bouton de la souris était relâché à ce stade, l'objet de destination accepterait les données glissées et l'événement [`On Drop`](onDrop.md)\` serait déclenché.
@@ -25,6 +25,21 @@ Si vous ne traitez pas l'événement `On Drag Over` pour un objet déposable, ce
 L'événement `On Drag Over` est le moyen par lequel vous contrôlez la première phase d'une opération de glisser-déposer. Vous pouvez non seulement tester si les données déplacées sont d'un type compatible avec l'objet de destination, puis accepter ou rejeter le glissement; vous pouvez simultanément avertir l'utilisateur de ce fait, car 4D met en évidence (ou non) l'objet de destination, en fonction de votre décision.
 
 Le code gérant un événement `On Drag Over` doit être court et s'exécuter rapidement, car cet événement est envoyé à plusieurs reprises à l'objet de destination courant, en raison des mouvements de la souris.
+
+### Exemple
+
+```4d
+//Destination object method
+ #DECLARE : Integer
+ If(Form event code=On Drag Over)
+    //returns 0 by default
+    ...
+    If($DataType=Is picture)
+       return -1
+    End if
+    ...
+ End if
+```
 
 #### Voir également
 

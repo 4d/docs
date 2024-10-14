@@ -22,7 +22,7 @@ Devolve uma lista dos dados do seu projecto juntamente com dois URIs: um para ac
 
 Cuando se llama a `$catalog`, se devuelve una lista de las clases de datos junto con dos URI para cada clase de datos en el almacén de datos de su proyecto.
 
-Nesta lista apenas são mostrados os dataclasses expostos para a datastore do seu projecto. For more information, please refer to [**Exposing tables and fields**](configuration.md#exposing-tables-and-fields) section.
+Nesta lista apenas são mostrados os dataclasses expostos para a datastore do seu projecto. Para obter mais informações, consulte a seção [**Expondo tabelas e campos**](configuration.md#exposing-tables-and-fields).
 
 Aqui está uma descrição das propriedades devolvidas para cada dataclass na datastore do seu projecto:
 

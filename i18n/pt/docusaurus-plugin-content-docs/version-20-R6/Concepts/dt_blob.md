@@ -23,7 +23,7 @@ Cada tipo de blob tem as suas vantagens. Utilize a tabela seguinte para determin
 | Editável                            |  Sim |            Não           |
 | Partilhável em objectos e colecções |  Não |            Sim           |
 | Passado por referência\*            |  Não |            Sim           |
-| Desempenho ao acessar aos bytes     |   -  |             *            |
+| Desempenho ao acessar aos bytes     |   +  |             -            |
 | Tamanho máximo                      |  2GB |          Memória         |
 
 \*Diferente dos comandos 4D concebidos para tomar uma bolha escalar como parâmetro, passar um blob escalar para um método duplica-o na memória. Puede pasar blobs y objetos blob (`4D.Blob`) a los métodos.

@@ -1,20 +1,43 @@
 ---
 id: ClassClass
-title: クラス
+title: Class
 ---
 
 プロジェクトにおいてユーザークラスが [定義](Concepts/classes.md#クラス定義) されていれば、それは 4Dランゲージ環境に読み込まれます。 クラスとは、それ自身が "Class" クラスのオブジェクトであり、プロパティと関数を持ちます。
 
 ### 概要
 
-|                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #ClassClass.isShared.Syntax -->](#isshared)<br/><!-- INCLUDE #ClassClass.isShared.Summary -->          |
-| [<!-- INCLUDE #ClassClass.isSingleton.Syntax -->](#issingleton)<br/><!-- INCLUDE #ClassClass.isSingleton.Summary --> |
-| [<!-- INCLUDE #ClassClass.me.Syntax -->](#me)<br/><!-- INCLUDE #ClassClass.me.Summary -->                            |
-| [<!-- INCLUDE #ClassClass.name.Syntax -->](#name)<br/><!-- INCLUDE #ClassClass.name.Summary -->                      |
-| [<!-- INCLUDE #ClassClass.new().Syntax -->](#new)<br/><!-- INCLUDE #ClassClass.new().Summary -->                     |
-| [<!-- INCLUDE #ClassClass.superclass.Syntax -->](#superclass)<br/><!-- INCLUDE #ClassClass.superclass.Summary -->    |
+|                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #ClassClass.isSessionSingleton.Syntax -->](#issessionsingleton)<br/><!-- INCLUDE #ClassClass.isSessionSingleton.Summary --> |
+| [<!-- INCLUDE #ClassClass.isShared.Syntax -->](#isshared)<br/><!-- INCLUDE #ClassClass.isShared.Summary -->                               |
+| [<!-- INCLUDE #ClassClass.isSingleton.Syntax -->](#issingleton)<br/><!-- INCLUDE #ClassClass.isSingleton.Summary -->                      |
+| [<!-- INCLUDE #ClassClass.me.Syntax -->](#me)<br/><!-- INCLUDE #ClassClass.me.Summary -->                                                 |
+| [<!-- INCLUDE #ClassClass.name.Syntax -->](#name)<br/><!-- INCLUDE #ClassClass.name.Summary -->                                           |
+| [<!-- INCLUDE #ClassClass.new().Syntax -->](#new)<br/><!-- INCLUDE #ClassClass.new().Summary -->                                          |
+| [<!-- INCLUDE #ClassClass.superclass.Syntax -->](#superclass)<br/><!-- INCLUDE #ClassClass.superclass.Summary -->                         |
+
+<!-- REF ClassClass.isSessionSingleton.Desc -->
+
+## .isSessionSingleton
+
+<details><summary>履歴</summary>
+
+| リリース  | 内容 |
+| ----- | -- |
+| 20 R7 | 追加 |
+
+</details>
+
+<!-- REF #ClassClass.isSessionSingleton.Syntax -->**.isSessionSingleton** : Boolean<!-- END REF -->
+
+#### 説明
+
+`.isSessionSingleton` プロパティは、<!-- REF #ClassClass.isSessionSingleton.Summary -->ユーザークラスが [セッションシングルトンクラス](../Concepts/classes.md#シングルトンクラス)として定義されている場合は `true` を返します<!-- END REF -->。それ以外の場合は `false` を返します。
+
+このプロパティは **読み取り専用** です。
+
+<!-- END REF -->
 
 <!-- REF ClassClass.isShared.Desc -->
 
@@ -122,10 +145,10 @@ title: クラス
 
 <!-- REF #ClassClass.new().Params -->
 
-| 引数    | 型                        |     | 説明              |
-| ----- | ------------------------ | :-: | --------------- |
-| param | any                      |  -> | コンストラクター関数に渡す引数 |
-| 戻り値   | 4D.Class |  <- | クラスの新規オブジェクト    |
+| 引数    | 型                        |                             | 説明              |
+| ----- | ------------------------ | :-------------------------: | --------------- |
+| param | any                      |              ->             | コンストラクター関数に渡す引数 |
+| 戻り値   | 4D.Class | <- | クラスの新規オブジェクト    |
 
 <!-- END REF -->
 

@@ -80,7 +80,7 @@ A privilege or a role can be associated to several "action + resource" combinati
 
 - Usted **crea** privilegios y/o roles en el archivo `roles.json` (ver abajo). **Configura** su alcance asignándolos a acción(es) de permiso aplicadas a recurso(s).
 
-- You **allow** privileges and/or roles to every user session using the [`.setPrivileges()`](../API/SessionClass.md#setprivileges) function of the `Session` class.
+- Você **permite** privilégios e/ou funções para cada sessão usuário usando a função [`.setPrivileges()`](../API/SessionClass.md#setprivileges) da classe `Session`.
 
 ### Exemplo
 
@@ -196,7 +196,7 @@ La sintaxis del archivo `roles.json` es la siguiente:
 |                     |                                                                                     | \[].promote  | Coleção de strings                |             | Lista de privilégios                                                                                                         |
 | forceLogin          |                                                                                     |                                                                                   | Parâmetros                        |             | True para habilitar el [modo "forceLogin"](../REST/authUsers.md#force-login-mode)                                            |
 
-:::caution Reminder
+:::caution Lembrete
 
 - O nome do privilégio "WebAdmin" está reservado à aplicação. Não se recomenda a utilização deste nome para privilégios personalizados.
 - los nombres de `privileges` y `roles` son insensibles a mayúsculas y minúsculas.

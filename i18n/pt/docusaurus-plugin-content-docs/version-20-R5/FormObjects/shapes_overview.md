@@ -3,7 +3,7 @@ id: shapesOverview
 title: Formas
 ---
 
-Las formas son [objetos estáticos](formObjects_overview.md#active-and-static-objects) que pueden añadirse a los formularios 4D.
+As formas são [objetos estáticos](formObjects_overview.md#active-and-static-objects) que podem ser adicionadas a formulários 4D.
 
 As formas 4D suportam as seguintes formas básicas:
 
@@ -15,20 +15,20 @@ As formas 4D suportam as seguintes formas básicas:
 
 Um retângulo estático é um objeto decorativo para os formulários. Os rectângulos são limitados a formas quadradas.
 
-O desenho dos retângulos é controlado através de muitas propriedades (cor, espessura da linha, padrão, etc.). En concreto, se puede definir la [redondez](properties_CoordinatesAndSizing.md#corner-radius) de sus esquinas.
+O desenho dos retângulos é controlado através de muitas propriedades (cor, espessura da linha, padrão, etc.). Especificamente, o [roundness](propriedades_CoordinatesAndSizing.md#corner-radius) dos seus cantos pode ser definido.
 
 ![](../assets/en/FormObjects/shapes_rectangle2.png)
 
-#### JSON Exemplo
+#### Exemplo JSON:
 
 ```4d
 	"myRectangle": {
-		"type": "rectangle",	//define the type of object
-		"left": 60,				//left position on the form  
-		"top": 160,				//top position on the form 
-		"width": 100,			//width of the object
-		"height": 20,			//height of the object
-		"borderRadius": 20		//define the roundness of the corners
+		"type": "rectangle",	//define o tipo de objeto
+		"left": 60,				//posicao esquerda no formulário
+		"top": 160,				//posicao superior no formulário
+		"width": 100,			//largura do objeto
+		"height": 20,			//altura do objeto
+		"borderRadius": 20		//define a rodada dos cantos
                 }
 ```
 
@@ -57,8 +57,8 @@ La propiedad JSON `startPoint` define a partir de qué coordenada dibujar la lí
 		"top": 40,
 		"width": 100,
 		"height": 80,
-		"startPoint": "topLeft", //first direction
-		"strokeDashArray": "6 2" //dashed
+		"startPoint": "topLeft", //primeira direção
+		"strokeDashArray": "6 2" //tracejado
 		}
 ```
 

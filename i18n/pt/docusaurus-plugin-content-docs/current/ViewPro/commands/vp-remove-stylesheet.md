@@ -21,7 +21,7 @@ The `VP REMOVE STYLESHEET` command <!-- REF #_method_.VP REMOVE STYLESHEET.Summa
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-Pass the style sheet to remove in the *styleName* parameter.
+Passe a folha de estilo para remover no parâmetro *styleName*.
 
 You can define where to remove the style in the optional *sheet* parameter using the sheet index (counting begins at 0) or with the following constants:
 

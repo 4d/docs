@@ -61,11 +61,11 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 <!-- REF #4D.SystemWorker.new().Params -->
 
-| Parâmetro   | Tipo                            |     | Descrição                                                            |
-| ----------- | ------------------------------- | :-: | -------------------------------------------------------------------- |
-| commandLine | Text                            |  -> | Linha de comando a executar                                          |
-| options     | Object                          |  -> | Parâmetros worker                                                    |
-| result      | 4D.SystemWorker |  <- | Novo System worker assíncrono ou nulo se o processo não for iniciado |
+| Parâmetro   | Tipo                            |                             | Descrição                                                            |
+| ----------- | ------------------------------- | :-------------------------: | -------------------------------------------------------------------- |
+| commandLine | Text                            |              ->             | Linha de comando a executar                                          |
+| options     | Object                          |              ->             | Parâmetros worker                                                    |
+| resultado   | 4D.SystemWorker | <- | Novo System worker assíncrono ou nulo se o processo não for iniciado |
 
 <!-- END REF -->
 
@@ -513,7 +513,7 @@ Esta função envia a instrução para terminar e devolver o controlo ao guião 
 
 #### Descrição
 
-The `.terminated` property <!-- REF #SystemWorkerClass.terminated.Summary -->contains **true** if the external process is terminated<!-- END REF -->.
+A propriedade `.terminated` <!-- REF #SystemWorkerClass.terminated.Summary -->contém **true** se o processo externo for encerrado<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -550,10 +550,10 @@ Essa propriedade é **somente leitura**.
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 
-| Parâmetro  | Tipo                            |     | Descrição                                        |
-| ---------- | ------------------------------- | :-: | ------------------------------------------------ |
-| timeout    | Real                            |  -> | Tempo de espera (em segundos) |
-| Resultados | 4D.SystemWorker |  <- | Objecto SystemWorker                             |
+| Parâmetro  | Tipo                            |                             | Descrição                                        |
+| ---------- | ------------------------------- | :-------------------------: | ------------------------------------------------ |
+| timeout    | Real                            |              ->             | Tempo de espera (em segundos) |
+| Resultados | 4D.SystemWorker | <- | Objecto SystemWorker                             |
 
 <!-- END REF -->
 

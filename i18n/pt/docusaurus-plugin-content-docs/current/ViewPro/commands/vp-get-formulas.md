@@ -9,9 +9,9 @@ title: VP Get formulas
 
 <!-- REF #_method_.VP Get formulas.Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                         |                  |
-| ---------- | ---------- | -- | --------------------------------- | ---------------- |
-| rangeObj   | Object     | -> | Objeto intervalo                  |                  |
+| Parâmetro  | Tipo       |                             | Descrição                         |                  |
+| ---------- | ---------- | --------------------------- | --------------------------------- | ---------------- |
+| rangeObj   | Object     | ->                          | Objeto intervalo                  |                  |
 | Resultados | Collection | <- | Coleção de valores de uma fórmula | <!-- END REF --> |
 
 #### Descrição

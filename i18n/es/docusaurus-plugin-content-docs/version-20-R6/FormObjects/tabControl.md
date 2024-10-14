@@ -11,7 +11,7 @@ El siguiente formulario multipágina utiliza un objeto de control de pestañas:
 
 Para navegar de una pantalla a otra, el usuario sólo tiene que hacer clic en la pestaña deseada.
 
-Las pantallas pueden representar páginas en un formulario de varias páginas o un objeto que cambia cuando el usuario hace clic en una pestaña. Si el control de pestañas se utiliza como una herramienta de navegación de la página, entonces se utilizaría el comando [`FORM GOTO` PAGE](https://doc.4d.com/4dv19/help/command/en/page247.html) o la acción estándar `gotoPage` cuando un usuario hace clic en una pestaña.
+Las pantallas pueden representar páginas en un formulario de varias páginas o un objeto que cambia cuando el usuario hace clic en una pestaña. Si el control de pestañas se utiliza como una herramienta de navegación de la página, entonces se utilizaría el comando [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/en/page247.html) o la acción estándar `gotoPage` cuando un usuario hace clic en una pestaña.
 
 Otro uso del control de pestañas es para controlar los datos que se muestran en un subformulario. Por ejemplo, se podría implementar un Rolodex utilizando un control de pestañas. Las pestañas mostrarían las letras del alfabeto y la acción del control de pestañas sería cargar los datos correspondientes a la letra que el usuario pulsara.
 
@@ -72,7 +72,7 @@ Puede asignar una [lista de opciones](properties_DataSource.md#choice-list-stati
 
 ### Utilizar un array Text
 
-Puede crear un array Texto que contenga los nombres de cada página del formulario. Este código debe ejecutarse antes de que el formulario se presente al usuario. Por ejemplo, podrías colocar el código en el método del objeto del control de la pestaña y ejecutarlo cuando se produzca el evento `On Load`.
+Puede crear un array Texto que contenga los nombres de cada página del formulario. Este código debe ejecutarse antes de que el formulario se presente al usuario. Por ejemplo, podría colocar el código en el método del objeto del control de la pestaña y ejecutarlo cuando se produzca el evento `On Load`.
 
 ```4d
  ARRAY TEXT(arrPages;3)

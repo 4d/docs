@@ -235,7 +235,7 @@ Sólo se pasa la referencia en el campo "Marcador de posición"; no es posible c
 
 #### Ver también
 
-[Help tip](properties_Help.md)
+[Mensaje de ayuda](properties_Help.md)
 
 ---
 

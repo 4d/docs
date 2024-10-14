@@ -89,7 +89,7 @@ However, you need to pay attention to the following behavior differences compare
 
 ## Remote user sessions
 
-On the server, the [`Session`](../API/SessionClass.md#session) command returns a `session` object describing the current user session. This object is handled through the functions and properties of the [`Session` class](../API/SessionClass.md).
+On the server, the [`Session`](../commands/session.md) command returns a `session` object describing the current user session. This object is handled through the functions and properties of the [`Session` class](../API/SessionClass.md).
 
 
 ### Usage
@@ -105,6 +105,7 @@ The remote user `session` object is available from:
 
 - Project methods that have the [Execute on Server](../Project/code-overview.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process),
 - Triggers,
+- ORDA [data model functions](../ORDA/ordaClasses.md) (except those declared with the [`local`](../ORDA/ordaClasses.md#local-functions) keyword, 
 - `On Server Open Connection` and `On Server Shutdown Connection` database methods.
 
 :::info

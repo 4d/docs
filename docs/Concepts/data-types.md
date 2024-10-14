@@ -7,25 +7,25 @@ In 4D, data are handled according to their type in two places: database fields a
 
 Although they are usually equivalent, some data types available at the database level are not directly available in the language and are automatically converted. Conversely, some data types can only be handled through the language. The following table lists all available data types and how they are supported/declared:
 
-|Data Types	|Database support(1)	|Language support|[`var` declaration](variables.md#using-the-var-keyword) |[`C_` or `ARRAY` declaration](variables.md#using-a-c_-directive)|
+|Data Types	|Database support(1)	|Language support|[`var` declaration](variables.md#using-the-var-keyword) |[`ARRAY` declaration](arrays.md)|
 |---|----|---|---|---|
 |[Alphanumeric](dt_string.md)	|Yes	|Converted to text|-|-
-|[Text](Concepts/dt_string.md)	|Yes	|Yes|`Text`|`C_TEXT`, `ARRAY TEXT`
-|[Date](Concepts/dt_date.md)	|Yes	|Yes|`Date`|`C_DATE`, `ARRAY DATE`
-|[Time](Concepts/dt_time.md)	|Yes	|Yes|`Time`|`C_TIME`, `ARRAY TIME`
-|[Boolean](Concepts/dt_boolean.md)	|Yes	|Yes|`Boolean`|`C_BOOLEAN`, `ARRAY BOOLEAN`
+|[Text](Concepts/dt_string.md)	|Yes	|Yes|`Text`|`ARRAY TEXT`
+|[Date](Concepts/dt_date.md)	|Yes	|Yes|`Date`|`ARRAY DATE`
+|[Time](Concepts/dt_time.md)	|Yes	|Yes|`Time`|`ARRAY TIME`
+|[Boolean](Concepts/dt_boolean.md)	|Yes	|Yes|`Boolean`|`ARRAY BOOLEAN`
 |[Integer](Concepts/dt_number.md)	|Yes	|Converted to longint|`Integer`|`ARRAY INTEGER`
-|[Longint](Concepts/dt_number.md)	|Yes	|Yes|`Integer`|`C_LONGINT`, `ARRAY LONGINT`
+|[Longint](Concepts/dt_number.md)	|Yes	|Yes|`Integer`|`ARRAY LONGINT`
 |[Longint 64 bits](Concepts/dt_number.md)	|Yes (SQL)	|Converted to real|-|-
-|[Real](Concepts/dt_number.md)	|Yes	|Yes|`Real`|`C_REAL`, `ARRAY REAL`
+|[Real](Concepts/dt_number.md)	|Yes	|Yes|`Real`|`ARRAY REAL`
 |[Undefined](Concepts/dt_null_undefined.md)	|-	|Yes|-|-
 |[Null](Concepts/dt_null_undefined.md)	|-	|Yes|-|-
-|[Pointer](Concepts/dt_pointer.md)	|-	|Yes|`Pointer`|`C_POINTER`, `ARRAY POINTER`
-|[Picture](Concepts/dt_picture.md)	|Yes	|Yes|`Picture`|`C_PICTURE`, `ARRAY PICTURE`
-|[BLOB](Concepts/dt_blob.md)	|Yes	|Yes|`Blob`, `4D.Blob`|`C_BLOB`, `ARRAY BLOB`
-|[Object](Concepts/dt_object.md)	|Yes	|Yes|`Object`|`C_OBJECT`, `ARRAY OBJECT`
-|[Collection](Concepts/dt_collection.md)	|-	|Yes|`Collection`|`C_COLLECTION`  
-|[Variant](Concepts/dt_variant.md)(2)	|-	|Yes|`Variant`|`C_VARIANT`|
+|[Pointer](Concepts/dt_pointer.md)	|-	|Yes|`Pointer`|`ARRAY POINTER`
+|[Picture](Concepts/dt_picture.md)	|Yes	|Yes|`Picture`|`ARRAY PICTURE`
+|[BLOB](Concepts/dt_blob.md)	|Yes	|Yes|`Blob`, `4D.Blob`|`ARRAY BLOB`
+|[Object](Concepts/dt_object.md)	|Yes	|Yes|`Object`|`ARRAY OBJECT`
+|[Collection](Concepts/dt_collection.md)	|-	|Yes|`Collection`|  
+|[Variant](Concepts/dt_variant.md)(2)	|-	|Yes|`Variant`||
 
 (1) Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the [Object](Concepts/dt_object.md) data type description. 
 

@@ -1,6 +1,6 @@
 ---
 id: DataClassClass
-title: データクラス
+title: DataClass
 ---
 
 

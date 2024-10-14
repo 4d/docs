@@ -49,14 +49,14 @@ End if
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 
-| Paramètres      | Type                      |     | Description                                                               |
-| --------------- | ------------------------- | :-: | ------------------------------------------------------------------------- |
-| fileToZip       | 4D.File   |  -> | Objet fichier ou dossier à compresser                                     |
-| folderToZip     | 4D.Folder |  -> | Objet fichier ou dossier à compresser                                     |
-| zipStructure    | Object                    |  -> | Objet fichier ou dossier à compresser                                     |
-| destinationFile | 4D.File   |  -> | Fichier de destination de l'archive                                       |
-| options         | Integer                   |  -> | Si *folderToZip* utilisé : `ZIP Without enclosing folder` |
-| Résultat        | Object                    |  <- | Objet statut                                                              |
+| Paramètres      | Type                      |                             | Description                                                               |
+| --------------- | ------------------------- | :-------------------------: | ------------------------------------------------------------------------- |
+| fileToZip       | 4D.File   |              ->             | Objet fichier ou dossier à compresser                                     |
+| folderToZip     | 4D.Folder |              ->             | Objet fichier ou dossier à compresser                                     |
+| zipStructure    | Object                    |              ->             | Objet fichier ou dossier à compresser                                     |
+| destinationFile | 4D.File   |              ->             | Fichier de destination de l'archive                                       |
+| options         | Integer                   |              ->             | Si *folderToZip* utilisé : `ZIP Without enclosing folder` |
+| Résultat        | Object                    | <- | Objet statut                                                              |
 
 <!-- END REF -->
 
@@ -203,11 +203,11 @@ $err:=ZIP Create archive($zip; $destination)
 
 <!-- REF #_command_.ZIP Read archive.Params -->
 
-| Paramètres | Type                          |     | Description                                   |
-| ---------- | ----------------------------- | :-: | --------------------------------------------- |
-| zipFile    | 4D.File       |  -> | Fichier archive ZIP                           |
-| password   | Text                          |  -> | Mot de passe de l'archive ZIP, le cas échéant |
-| Résultat   | 4D.ZipArchive |  <- | Objet archive                                 |
+| Paramètres | Type                          |                             | Description                                   |
+| ---------- | ----------------------------- | :-------------------------: | --------------------------------------------- |
+| zipFile    | 4D.File       |              ->             | Fichier archive ZIP                           |
+| password   | Text                          |              ->             | Mot de passe de l'archive ZIP, le cas échéant |
+| Résultat   | 4D.ZipArchive | <- | Objet archive                                 |
 
 <!-- END REF -->
 

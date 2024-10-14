@@ -74,7 +74,7 @@ exposed Function authentify({params : type}) {-> result : type}
 
 La función `authentify()` debe estar implementada en la [clase DataStore](../ORDA/ordaClasses.md#datastore-class) del proyecto y debe ser llamada a través de una petición REST.
 
-This function is the only available entry point from REST guest sessions when the "force login" mode is enabled: any other function call or data access is rejected until the session acquires appropriate privileges.
+Esta función es el único punto de entrada disponible desde las sesiones guest REST cuando el modo "force login" está activado: cualquier otra llamada de función o de acceso a datos es rechazada hasta que la sesión adquiera los privilegios adecuados.
 
 :::note
 
@@ -187,14 +187,14 @@ sendData({userId:document.forms['myForm'].elements['userId'].value , password:do
 Cuando la página de inicio de sesión se envía al servidor, se llama al método base `On REST Authentication`:
 
 ```4d
-	//On REST Authentication
+//On REST Authentication
 
 #DECLARE($userId : Text; $password : Text) -> $Accepted : Boolean
 var $sales : cs.SalesPersonsEntity
 
 $Accepted:=False
 
-	//A '/rest' URL has been called with headers username-4D and password-4D
+	//Una URL '/rest' ha sido llamada con los encabezados username-4D y password-4D
 If ($userId#"")
     $sales:=ds.SalesPersons.query("email = :1"; $userId).first()
     If ($sales#Null)

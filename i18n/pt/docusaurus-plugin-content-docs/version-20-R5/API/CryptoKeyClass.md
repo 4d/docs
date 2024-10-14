@@ -42,10 +42,10 @@ For a comprehensive overview of this class, please refer to the [**CryptoKey: en
 
 <!-- REF #4D.CryptoKey.new().Params -->
 
-| Parâmetro | Tipo                         |    | Descrição                                         |
-| --------- | ---------------------------- | -- | ------------------------------------------------- |
-| settings  | Object                       | -> | Settings to generate or load a key pair           |
-| result    | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação |
+| Parâmetro | Tipo                         |                             | Descrição                                         |
+| --------- | ---------------------------- | --------------------------- | ------------------------------------------------- |
+| settings  | Object                       | ->                          | Settings to generate or load a key pair           |
+| resultado | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação |
 
 <!-- END REF -->
 
@@ -68,7 +68,7 @@ O objeto `CryptoKey` devolvido encapsula um par de chaves de cifrado. It is a sh
 
 A message is signed by a private key and the signature is verified by the corresponding public key. The following code signs and verifies a simple message signature.
 
-- Bob's side:
+- Lado bob:
 
 ```4d
 // Create the message
@@ -88,7 +88,7 @@ Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
 /*Bob sends the message, the public key and the signature to Alice*/
 ```
 
-- Alice's side:
+- O lado Alice:
 
 ```4d
 // Get message, public key & signature
@@ -158,10 +158,10 @@ Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised
 
 <!-- REF #CryptoKey.decrypt().Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                                                                                     |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------------- |
-| message    | Text   | -> | String de mensagens a ser decodificada usando `options.encodingEncrypted` e descriptografada. |
-| options    | Object | -> | Opções de codificação                                                                                         |
+| Parâmetro  | Tipo   |                             | Descrição                                                                                                     |
+| ---------- | ------ | --------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| message    | Text   | ->                          | String de mensagens a ser decodificada usando `options.encodingEncrypted` e descriptografada. |
+| options    | Object | ->                          | Opções de codificação                                                                                         |
 | Resultados | Object | <- | Estado                                                                                                        |
 
 <!-- END REF -->
@@ -185,7 +185,7 @@ The function returns a status object with `success` property set to `true` if th
 | Propriedade | Tipo       | Descrição                                                                |
 | ----------- | ---------- | ------------------------------------------------------------------------ |
 | success     | boolean    | True se a mensagem tiver sido decifrada com êxito                        |
-| result      | text       | Mensagem decifrado e decodificado utilizando `options.encodingDecrypted` |
+| resultado   | text       | Mensagem decifrado e decodificado utilizando `options.encodingDecrypted` |
 | errors      | collection | Se `success` for `false`, pode conter uma coleção de erros               |
 
 In case the *message* couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
@@ -208,10 +208,10 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 
 <!-- REF #CryptoKey.encrypt().Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                                                                                    |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------------ |
-| message    | Text   | -> | String de mensagens a ser codificada utilizando `options.encodingDecrypted` e criptografada. |
-| options    | Object | -> | Opções de decodificação                                                                                      |
+| Parâmetro  | Tipo   |                             | Descrição                                                                                                    |
+| ---------- | ------ | --------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| message    | Text   | ->                          | String de mensagens a ser codificada utilizando `options.encodingDecrypted` e criptografada. |
+| options    | Object | ->                          | Opções de decodificação                                                                                      |
 | Resultados | Text   | <- | Mensagem criptografada e codificada utilizando `options.encodingEncrypted`                                   |
 
 <!-- END REF -->
@@ -250,8 +250,8 @@ O valor devolvido é uma mensagem encriptada.
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
 
-| Parâmetro  | Tipo |    | Descrição                    |
-| ---------- | ---- | -- | ---------------------------- |
+| Parâmetro  | Tipo |                             | Descrição                    |
+| ---------- | ---- | --------------------------- | ---------------------------- |
 | Resultados | Text | <- | Chave privada em formato PEM |
 
 <!-- END REF -->
@@ -280,8 +280,8 @@ O valor devolvido é a chave privada.
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
 
-| Parâmetro  | Tipo |    | Descrição                    |
-| ---------- | ---- | -- | ---------------------------- |
+| Parâmetro  | Tipo |                             | Descrição                    |
+| ---------- | ---- | --------------------------- | ---------------------------- |
 | Resultados | Text | <- | Chave pública em formato PEM |
 
 <!-- END REF -->
@@ -330,10 +330,10 @@ Definição PEM de uma chave de cifrado a carregar. Se a chave for uma chave pri
 
 <!-- REF #CryptoKey.sign().Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                                                       |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------- |
-| message    | Text   | -> | String mensagem a assinar                                                       |
-| options    | Object | -> | Opções de assinatura                                                            |
+| Parâmetro  | Tipo   |                             | Descrição                                                                       |
+| ---------- | ------ | --------------------------- | ------------------------------------------------------------------------------- |
+| message    | Text   | ->                          | String mensagem a assinar                                                       |
+| options    | Object | ->                          | Opções de assinatura                                                            |
 | Resultados | Text   | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option |
 
 <!-- END REF -->
@@ -413,11 +413,11 @@ Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "
 
 <!-- REF #CryptoKey.verify().Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                                                                         |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------- |
-| message    | Text   | -> | String de mensagem utilizada para gerar a assinatura                                              |
-| signature  | Text   | -> | Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value |
-| options    | Object | -> | Opções de assinatura                                                                              |
+| Parâmetro  | Tipo   |                             | Descrição                                                                                         |
+| ---------- | ------ | --------------------------- | ------------------------------------------------------------------------------------------------- |
+| message    | Text   | ->                          | String de mensagem utilizada para gerar a assinatura                                              |
+| signature  | Text   | ->                          | Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value |
+| options    | Object | ->                          | Opções de assinatura                                                                              |
 | Resultados | Object | <- | Estado da verificação                                                                             |
 
 <!-- END REF -->

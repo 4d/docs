@@ -68,15 +68,15 @@ Vous pouvez rechercher dans l'objet en écrivant ce qui suit :
 
 Le comparateur doit être l'une des valeurs suivantes :
 
-| Comparateur | Description         |
-| ----------- | ------------------- |
-| =           | est égal à          |
-| !=          | différent de        |
-| >           | supérieur à         |
-| > =         | supérieur ou égal à |
-| <           | inférieur à         |
-| <=          | inférieur ou égal à |
-| begin       | commence avec       |
+| Comparateur                 | Description         |
+| --------------------------- | ------------------- |
+| =                           | est égal à          |
+| !=                          | différent de        |
+| >                           | supérieur à         |
+| > =                         | supérieur ou égal à |
+| <  | inférieur à         |
+| <= | inférieur ou égal à |
+| begin                       | commence avec       |
 
 ## Exemples
 

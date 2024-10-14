@@ -3,22 +3,16 @@ id: qodly-studio
 title: Qodly Studio for 4D
 ---
 
-:::caution Developer Preview
-
-Qodly Studio pour 4D est actuellement en phase **Developer Preview**. Il ne doit pas être utilisé en production.
-
-:::
-
 **Qodly Studio** est un constructeur d'interface pour des applications web. It provides developers with a graphical page editor to design applications running in web browsers or smartphones. Il prend en charge nativement les [objets ORDA](../ORDA/overview.md).
 
 Vous pouvez utiliser Qodly Studio directement depuis votre environnement **4D** pour construire des interfaces modernes et sophistiquées que vous pouvez facilement intégrer à vos projets 4D existants et déployer **on premise** (sur site).
 
 Qodly Studio peut également être utilisé sur la [**plateforme Qodly Cloud**](https://qodly.com), dédiée au développement d'applications web métier.
 
-With Qodly Studio, you will discover a totally new web UI, get familiar with the concept of Qodly Sources, and learn how to:
+Qodly Studio proposes a full-featured web UI, allowing you to:
 
 - create Qodly pages by placing components on a canvas
-- associer les composants à des données
+- map components to Qodly Sources
 - déclencher du code 4D en configurant des événements
 - et bien plus encore !
 
@@ -58,7 +52,7 @@ Qodly Studio est alimenté par le [serveur WebAdmin](../Admin/webAdmin.md) et af
 
 Pour permettre l'accès à Qodly Studio, vous devez explicitement autoriser deux niveaux :
 
-- niveau 4D (4D ou 4D Server)
+- at 4D application level
 - niveau projet
 
 Si l'un des deux niveaux (ou les deux) n'est pas activé, l'accès à Qodly Studio est refusé (une page 403 est renvoyée).
@@ -87,12 +81,18 @@ N'oubliez pas que les [propriétés utilisateurs](../settings/overview.md) peuve
 
 L'authentification sur le serveur WebAdmin utilise une access key (clé d'accès). Pour plus de détails, voir [Access key](../Admin/webAdmin.md#access-key).
 
-### Gestion du projet
+### Development and deployment
 
 Conformément à la gestion des projets 4D, seules les utilisations suivantes sont prises en charge :
 
 - le développement avec Qodly Studio s'effectue avec **4D** (monoposte).
-- le déploiement d'applications 4D alimentées par les pages Qodly s'effectue avec **4D Server**.
+- deployment of 4D applications powered with Qodly pages must be done using **4D Server**.
+
+:::warning
+
+You can open Qodly Studio, [debug](#using-qodly-debugger-on-4d-server) and edit Qodly pages directly on a 4D Server machine when a project is running in interpreted mode. This feature is only provided for testing and debugging purposes, for example to evaluate the application flow with actual data, or in multi-user environment. It must NOT be considered as a regular way to develop applications since it does not provide any control over concurrent accesses.
+
+:::
 
 ## Ouverture de Qodly Studio
 
@@ -100,30 +100,29 @@ La page Qodly Studio est disponible lorsque le [serveur WebAdmin est lancé](../
 
 Il y a deux façons d'accéder à Qodly Studio :
 
-- à partir de votre application 4D mono-utilisateur, allez dans **Développement** > **Qodly Studio...**.
+- by selecting the **Qodly Studio...** menu command from the **Design** menu (4D single-user) or the **Window** menu (4D Server).
   Si le serveur WebAdmin est déjà en cours d'exécution, selon sa configuration, votre navigateur par défaut s'ouvre à l'adresse `IPaddress:HTTPPort/studio` ou `IPaddress:HTTPSPort/studio`. Sinon, vous serez invité à démarrer d'abord le serveur web WebAdmin.
 
-- sur un navigateur, avec le serveur WebAdmin en cours d'exécution (lancé à partir de 4D ou 4D Server), entrez l'adresse suivante :
+- on a browser, with the WebAdmin web server running (launched from 4D or 4D Server), enter the following address:<br/>
+  `IPaddress:HTTPPort/studio`
 
-`IPaddress:HTTPPort/studio`
+  ou :
 
-ou :
+  `IPaddress:HTTPSPort/studio`
 
-`IPaddress:HTTPSPort/studio`
+  Par exemple, après avoir lancé un serveur web local sur le port 7080, saisissez cette adresse dans votre navigateur :
 
-Par exemple, après avoir lancé un serveur web local sur le port 7080, saisissez cette adresse dans votre navigateur :
+  `localhost:7080/studio`
 
-`localhost:7080/studio`
+  Vous serez ensuite invité à saisir l'[access key](../Admin/webAdmin.md#access-key) pour accéder à Qodly Studio.
 
-Vous serez ensuite invité à saisir l'[access key](../Admin/webAdmin.md#access-key) pour accéder à Qodly Studio.
-
-## Utilisation de Qodly Studio
+## Developing with Qodly Studio
 
 ### Documentation
 
-La documentation officielle de Qodly Studio est disponible sur le [site web de documentation de Qodly](https://developer.qodly.com/docs/studio/overview).
+The Qodly Studio documentation is available on the [Qodly documentation website](https://developer.qodly.com/docs/studio/overview).
 
-Vous pouvez vous appuyer sur cette documentation et ses ressources associées pour développer des applications web alimentées par les pages Qodly. Cependant, en fonction de la phase de mise en œuvre, les développeurs 4D utiliseront soit Qodly Studio, soit 4D IDE (voir [Comparaison des fonctionnalités](#feature-comparison)).
+You can rely on this documentation and its associated resources for developing web applications powered by Qodly pages. Cependant, en fonction de la phase de mise en œuvre, les développeurs 4D utiliseront soit Qodly Studio, soit 4D IDE (voir [Comparaison des fonctionnalités](#feature-comparison)).
 
 Les exemples de code sont fournis en [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript), mais étant donné que QodlyScript hérite du langage 4D, vous ne serez pas perdu. Pour plus d'informations, consultez la page [De QodlyScript au langage 4D](from-qodlyscript-to-4d.md).
 
@@ -135,18 +134,18 @@ Il n'y a pas de compatibilité directe entre les applications implémentées ave
 
 ### Comparatif des fonctionnalités
 
-|                                                                                                    | Qodly Studio pour les développeurs 4D utilisant l'IDE 4D                                                           | Qodly Studio pour les développeurs Qodly                                       |
-| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| Afficher et modifier les tableaux (dataclasses), les attributs et les relations | Éditeur de structure 4D(1)                                                                      | Éditeur de modèles de Qodly Studio                                             |
-| Qodly pages                                                                                        | Qodly Studio Page Editor                                                                                           | Qodly Studio Page Editor                                                       |
-| Formulaires Desktop                                                                                | 4D IDE                                                                                                             | _non supporté_                                                                 |
-| Langage de programmation                                                                           | Langage 4D avec ORDA                                                                                               | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) avec ORDA |
-| IDE code                                                                                           | Éditeur de code 4D IDE/VS Code avec [extension 4D](https://github.com/4d/4D-Analyzer-VSCode)(2) | Éditeur de code Qodly Studio                                                   |
-| Débogueur                                                                                          | 4D IDE debugger                                                                                                    | Débogueur Qodly Studio                                                         |
-| Rôles et privilèges REST/Web                                                                       | Edition directe roles.json / Éditeur de rôles et privilèges de Qodly Studio                        | Éditeur de rôles et privilèges de Qodly Studio                                 |
+|                                                                                                    | Qodly Studio in 4D                                                                                                                                                                                           | Qodly Studio in Qodly Cloud platform                                           |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| Afficher et modifier les tableaux (dataclasses), les attributs et les relations | Éditeur de structure 4D(1)                                                                                                                                                                | Éditeur de modèles de Qodly Studio                                             |
+| Qodly pages                                                                                        | Qodly Studio Page Editor                                                                                                                                                                                     | Qodly Studio Page Editor                                                       |
+| Formulaires Desktop                                                                                | 4D IDE                                                                                                                                                                                                       | _non supporté_                                                                 |
+| Langage de programmation                                                                           | Langage 4D avec ORDA                                                                                                                                                                                         | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) avec ORDA |
+| IDE code                                                                                           | 4D IDE code editor _or_ VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)<br/>_4D Server only_: Qodly Studio code editor (see (2)) | Éditeur de code Qodly Studio                                                   |
+| Débogueur                                                                                          | 4D IDE debugger<br/>_4D Server only_: Qodly Studio debugger (see [this paragraph](#using-qodly-debugger-on-4d-server))                                                    | Débogueur Qodly Studio                                                         |
+| Rôles et privilèges REST/Web                                                                       | Edition directe roles.json / Éditeur de rôles et privilèges de Qodly Studio                                                                                                                  | Éditeur de rôles et privilèges de Qodly Studio                                 |
 
-(1) Si vous cliquez sur le bouton **Model** dans Qodly Studio, rien ne se passe.
-(2) Lorsque vous ouvrez du code 4D dans Qodly Studio, la coloration syntaxique n'est pas disponible et un avertissement "Lsp not loaded" est affiché.
+(1) If you click on the **Model** button in Qodly Studio, nothing happens.<br/>
+(2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)). Note that in 4D single-user, if you open some 4D code with the Qodly Studio code editor, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
 
 ### Langage
 
@@ -219,6 +218,41 @@ Par exemple :
 ```
 https://www.myWebSite.com/$lib/renderer/?w=welcome
 ```
+
+### Preview Qodly Application
+
+You can preview your Qodly application at any moment by selecting the **Preview Qodly Application...** command in the **Windows** menu (4D Server) or in the **Design** menu (4D single-user).
+
+This command launches the Qodly renderer on a local address in your default browser and displays the **start page** [defined in the Application settings](https://developer.qodly.com/docs/studio/settings#start-page) of Qodly Studio.
+
+### Using Qodly debugger on 4D Server
+
+When using Qodly pages in a deployed 4D Server application (interpreted mode), you might encounter some cases where you need to debug your pages on the server, for example when a specific user configuration is required. In this case, you can attach the [Qodly Studio debugger](https://developer.qodly.com/docs/studio/debugging) to the 4D Server and then, benefit from its features when executing your Qodly pages.
+
+Note that in this case, the Qodly Studio debugger will display all the code executed on the server, in accordance with the [attached debugger rule on 4D Server](../Debugging/debugging-remote.md#attached-debugger).
+
+To attach the Qodly Studio debugger to your running 4D Server application:
+
+1. [Open Qodly Studio](#opening-qodly-studio) from 4D Server.
+
+:::note
+
+The project must be running in interpreted mode so that **Qodly Studio** menu item is available.
+
+:::
+
+2. In the Qodly Studio toolbar, click on the **Debug** button.<br/>
+   ![qodly-debug](../assets/en/WebServer/qodly-debug.png)
+
+If the debug session starts successfully, a green bullet appears on the button label ![qodly-debug](../assets/en/WebServer/debug2.png) and you can use the Qodly Studio debugger.
+
+If the debugger is already attached to a another machine or another Qodly Studio page, an error is displayed. You have to detach it beforehand from the other location.
+
+To detach the Qodly Studio debugger from your running 4D Server application:
+
+1. Click the **Debug** button in the Qodly Studio toolbar while a debug session is active.
+   A warning dialog box will prompt you to confirm whether you want to detach the debugger.
+2. Select **Keep in progress** to continue evaluating the code until the end of the current method or function before detaching the debugger, or **Stop** to detach the debugger immediately.
 
 ## Force login
 
@@ -338,9 +372,3 @@ Pour éviter d'utiliser plus de licences que nécessaire, nous vous recommandons
 - Run the renderer on another browser tab (by entering the rendered URL of your Qodly page: `IP:port/$lib/renderer/?w=QodlyPageName`).
 - Assurez-vous que Qodly Studio et votre base de données sont accessibles sur le même schéma d'URL.
 - Utilisez la valeur `Lax` pour le [cookie de session](webServerConfig.md#session-cookie-samesite) du serveur web de la base de données de votre projet.
-
-## Hello, World
-
-Cette vidéo de 5 minutes fournit un exemple de "Hello World" et explique comment autoriser l'accès au studio, créer une interface de base, et configurer un événement qui accueille l'utilisateur par son nom :
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GwIdic4OhPQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>

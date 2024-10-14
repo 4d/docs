@@ -29,7 +29,7 @@ Ces principes sont illustrés dans les graphiques suivants :
 
 Les process qui gèrent les sessions d'accès aux datastore apparaissent dans la fenêtre d'administration de 4D Server :
 
-- nom : "REST Handler : \\<nom du process\>"
+- nom : "REST Handler : \<nom du process\>"
 - type : type Worker Server HTTP
 - session : le nom de session est le nom d'utilisateur passé à la commande `Open datastore`.
 

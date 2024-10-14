@@ -44,8 +44,8 @@ Toutes les formules ont des opérandes et des opérateurs :
 
 | Types de données                  | Valeurs                                                                                             | Opérateurs                                                                                                                                                                                                                                                                                                                                            |
 | --------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | - (addition)<br/>- (soustraction)<br/>\* (multiplication)<br/>/ (division)<br/>^ (exposant, le nombre de fois qu'il faut multiplier un nombre par lui-même)<br/>% (pourcentage -- diviser par cent le nombre précédant l'opérateur) |
-| [Date](Concepts/dt_date.md)       | 10/24/2017                                                                                          | * (date + nombre de jours -> date)<br/>+ (date + heure -> date + heure de la journée)<br/>- (date - nombre de jours -> date)<br/>- (date - date -> nombre de jours entre les deux)                                                                                        |
+| [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (addition)<br/>- (soustraction)<br/>\* (multiplication)<br/>/ (division)<br/>^ (exposant, le nombre de fois qu'il faut multiplier un nombre par lui-même)<br/>% (pourcentage -- diviser par cent le nombre précédant l'opérateur) |
+| [Date](Concepts/dt_date.md)       | 10/24/2017                                                                                          | + (date + nombre de jours -> date)<br/>+ (date + heure -> date + heure de la journée)<br/>- (date - nombre de jours -> date)<br/>- (date - date -> nombre de jours entre les deux)                                                                                        |
 | [Time](Concepts/dt_time.md)       | 10:12:10                                                            | Opérateurs de durée :<br/>+ (addition)<br/>- (soustraction)<br/>\* (durée \* nombre -> durée)<br/>/ (durée / nombre -> durée)                                                                                                                             |
 | [String](Concepts/dt_string.md)   | 'Sophie' ou "Sophie"                                                                                | & (concaténation)                                                                                                                                                                                                                                                                                              |
 | [Boolean](Concepts/dt_boolean.md) | TRUE ou FALSE                                                                                       | -                                                                                                                                                                                                                                                                                                                                                     |
@@ -54,14 +54,14 @@ Toutes les formules ont des opérandes et des opérateurs :
 
 Les opérateurs suivants peuvent être utilisés avec deux opérandes de même type :
 
-| Opérateur | Comparaison         |
-| --------- | ------------------- |
-| =         | est égal à          |
-| `<>`      | est différent de    |
-| >         | supérieur à         |
-| <         | inférieur à         |
-| > =       | supérieur ou égal à |
-| <=        | inférieur ou égal à |
+| Opérateur                   | Comparaison         |
+| --------------------------- | ------------------- |
+| =                           | est égal à          |
+| `<>`                        | est différent de    |
+| >                           | supérieur à         |
+| <  | inférieur à         |
+| > =                         | supérieur ou égal à |
+| <= | inférieur ou égal à |
 
 ### Préséance des opérateurs
 
@@ -71,11 +71,11 @@ Liste des opérateurs, du plus important au moins important :
 | --------------------------- | ---------------------------------------------- |
 | ()       | Parenthèse (pour regrouper) |
 | -                           | Négatif                                        |
-| *                           | Plus                                           |
+| +                           | Plus                                           |
 | %                           | Pourcentage                                    |
 | ^                           | Exposant                                       |
-| - et /                      | Multiplier et diviser                          |
-| * et -                      | Ajouter et soustraire                          |
+| \* et /                     | Multiplier et diviser                          |
+| + et -                      | Ajouter et soustraire                          |
 | &       | Concaténer                                     |
 | `=`  `>` `<` `>=` `<=` `<>` | Comparer                                       |
 

@@ -85,7 +85,7 @@ La page comporte cinq boutons de commande permettant d’agir sur le ou les proc
 
 - **Tuer process** : permet de tuer le ou les process sélectionné(s). Lorsque vous cliquez sur ce bouton, une boîte de dialogue d’alerte apparaît, vous permettant de confirmer ou d’annuler l’opération.
 
-> You can also abort the selected process(es) directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button, or by using the [`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/en/page1634.html) command.
+> Vous pouvez également interrompre le(s) processus sélectionné(s) directement sans afficher la boîte de dialogue de confirmation en maintenant la touche **Alt** enfoncée tout en cliquant sur ce bouton, ou en utilisant la commande [`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/fr/page6315.html).
 
 - **Endormir process** : permet d’endormir le ou les process sélectionné(s).
 - **Réactiver process** : permet de réactiver le ou les process sélectionné(s). Les process doivent avoir été auparavant endormis (via le bouton précédent ou par programmation) sinon le bouton est sans effet.

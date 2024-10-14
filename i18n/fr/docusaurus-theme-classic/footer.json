@@ -40,7 +40,7 @@
     "description": "The label of footer link with label=Github linking to https://github.com/4D"
   },
   "link.item.label.4D Doc Center (Where It All Began)": {
-    "message": "4D Doc Center (Where It All Began)",
+    "message": "4D Doc Center (Où tout a commencé)",
     "description": "The label of footer link with label=4D Doc Center (Where It All Began) linking to https://doc.4d.com"
   },
   "link.item.label.Knowledgebase": {
@@ -76,7 +76,7 @@
     "description": "The label of footer link with label=Careers linking to https://us.4d.com/Careers"
   },
   "copyright": {
-    "message": "© 2024 4D SAS - All rights reserved",
+    "message": "Copyright © 2024 4D SAS - Tous droits réservés",
     "description": "The footer copyright"
   }
 }

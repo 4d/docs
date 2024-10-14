@@ -30,8 +30,7 @@ En *paramObj*, puede pasar varias propiedades:
 | includeFormulas         | Boolean                     | Si se incluye la fórmula al guardar, por defecto=true.                                                                                                                                                                                                     |
 | includeStyles           | Boolean                     | Si se incluye el estilo al guardar, por defecto=true.                                                                                                                                                                                                      |
 | includeUnusedNames      | Boolean                     | Si se incluye el nombre personalizado no utilizado al guardar, por defecto=true.                                                                                                                                                                           |
-
-|saveAsView|Boolean|Si aplicar la cadena de formato al valor exportado al guardar, por defecto=false.|
+| saveAsView              | Boolean                     | Whether to apply the format string to exporting value when saving, default=false.                                                                                                                                                                          |
 
 Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 

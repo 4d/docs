@@ -22,7 +22,7 @@ Any worker/process calling the `.wait()` method will suspend its execution until
 
 Note that to avoid blocking situations, the `.wait()` can also return after a defined timeout has been reached.
 
-Signal objects are created with the [New signal](#new-signal) command.
+Os objetos de sinal são criados com o comando [New signal](#new-signal).
 
 ### Trabalhar com sinais
 
@@ -42,17 +42,17 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 ```4d
  var $signal : 4D.Signal
 
-  // Creation of a signal
+// Criação de um sinal
  $signal:=New signal
 
-  // call main process and execute OpenForm method
+// chamar o processo principal e executar o método OpenForm
  CALL WORKER(1;"OpenForm";$signal)
-  // do another calculation
- ...
-  // Waiting for the end of the process
+// fazer outro cálculo
+...
+// Esperando pelo fim do processo
  $signaled:=$signal.wait()
 
-  // Processing of the results
+// Processamento dos resultados
  $calc:=$signal.result+...
 ```
 
@@ -102,10 +102,10 @@ Método ***OpenForm*** :
 
 <!-- REF #_command_.New signal.Params -->
 
-| Parâmetro   | Tipo                       |     | Descrição                          |
-| ----------- | -------------------------- | :-: | ---------------------------------- |
-| description | Text                       |  -> | Descrição para o sinal             |
-| Resultados  | 4D. Signal |  <- | Objeto nativo encapsulando o sinal |
+| Parâmetro   | Tipo                       |                             | Descrição                          |
+| ----------- | -------------------------- | :-------------------------: | ---------------------------------- |
+| description | Text                       |              ->             | Descrição para o sinal             |
+| Resultados  | 4D. Signal | <- | Objeto nativo encapsulando o sinal |
 
 <!-- END REF -->
 
@@ -230,7 +230,7 @@ Essa propriedade é **somente leitura**.
 
 The `.trigger( )` function <!-- REF #SignalClass.trigger().Summary -->sets the `signaled` property of the signal object to **true**<!-- END REF --> and awakens all workers or processes waiting for this signal.
 
-If the signal is already in the signaled state (i.e., the `signaled` property is already **true**), the function does nothing.
+Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `signaled` já for **true**), a função não faz nada.
 
 <!-- END REF -->
 
@@ -250,9 +250,9 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 
 <!-- REF #SignalClass.wait().Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                                   |
-| ---------- | ---------- | -- | ------------------------------------------- |
-| timeout    | Real       | -> | Tempo máximo de espera do sinal em segundos |
+| Parâmetro  | Tipo       |                             | Descrição                                   |
+| ---------- | ---------- | --------------------------- | ------------------------------------------- |
+| timeout    | Real       | ->                          | Tempo máximo de espera do sinal em segundos |
 | Resultados | Parâmetros | <- | Estado da propriedade `.signaled`           |
 
 <!-- END REF -->
@@ -263,9 +263,9 @@ The `.wait( )` function <!-- REF #SignalClass.wait().Summary -->makes the curren
 
 To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter (decimals are accepted).
 
-> **Warning**: Calling `.wait( )` without a *timeout* in the 4D main process is not recommended because it could freeze the whole 4D application.
+> **Aviso**: a chamada a `.wait( )` sem um *timeout* no processo principal de 4D não é recomendável porque poderia congelar toda a aplicação 4D.
 
-If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
+Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `.signaled` já é **true**), a função devolve imediatamente, sem esperar.
 
 A função retorna o valor da propriedade `.signaled`. Evaluating this value allows knowing if the function returned because the `.trigger( )` has been called (`.signaled` is **true**) or if the *timeout* expired (`.signaled` is **false**).
 

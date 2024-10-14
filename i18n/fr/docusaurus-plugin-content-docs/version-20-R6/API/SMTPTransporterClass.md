@@ -43,10 +43,10 @@ Les objets SMTP Transporter sont instanciés avec la commande [SMTP New transpor
 
 <!-- REF #_command_.SMTP New transporter.Params -->
 
-| Paramètres | Type                               |     | Description                                       |
-| ---------- | ---------------------------------- | :-: | ------------------------------------------------- |
-| server     | Object                             |  -> | Informations sur le serveur IMAP                  |
-| Résultat   | 4D.SMTPTransporter |  <- | [Objet SMTP Transporter](#objet-smtp-transporter) |
+| Paramètres | Type                               |                             | Description                                       |
+| ---------- | ---------------------------------- | :-------------------------: | ------------------------------------------------- |
+| server     | Object                             |              ->             | Informations sur le serveur IMAP                  |
+| Résultat   | 4D.SMTPTransporter | <- | [Objet SMTP Transporter](#objet-smtp-transporter) |
 
 <!-- END REF -->
 
@@ -119,10 +119,10 @@ La fonction renvoie un [**objet SMTP Transporter**](#objet-smtp-transporter). To
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
 
-| Paramètres | Type                               |     | Description                                       |
-| ---------- | ---------------------------------- | :-: | ------------------------------------------------- |
-| server     | Object                             |  -> | Informations sur le serveur IMAP                  |
-| Résultat   | 4D.SMTPTransporter |  <- | [Objet SMTP Transporter](#objet-smtp-transporter) |
+| Paramètres | Type                               |                             | Description                                       |
+| ---------- | ---------------------------------- | :-------------------------: | ------------------------------------------------- |
+| server     | Object                             |              ->             | Informations sur le serveur IMAP                  |
+| Résultat   | 4D.SMTPTransporter | <- | [Objet SMTP Transporter](#objet-smtp-transporter) |
 
 <!-- END REF -->
 
@@ -210,10 +210,10 @@ La connexion SMTP est automatiquement fermée :
 
 <!-- REF #SMTPTransporterClass.send().Params -->
 
-| Paramètres | Type   |     | Description                                         |
-| ---------- | ------ | :-: | --------------------------------------------------- |
-| mail       | Object |  -> | [Email](EmailObjectClass.md#email-object) à envoyer |
-| Résultat   | Object |  <- | Statut SMTP                                         |
+| Paramètres | Type   |                             | Description                                         |
+| ---------- | ------ | :-------------------------: | --------------------------------------------------- |
+| mail       | Object |              ->             | [Email](EmailObjectClass.md#email-object) à envoyer |
+| Résultat   | Object | <- | Statut SMTP                                         |
 
 <!-- END REF -->
 

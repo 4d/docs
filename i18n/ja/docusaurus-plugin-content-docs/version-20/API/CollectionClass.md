@@ -907,13 +907,16 @@ End use
 
 
 <!-- REF #collection.every().Params -->
-| 引数         | 型           |    | 説明             |
-| ---------- | ----------- |:--:| -------------- |
-| startFrom  | Integer     | -> | テストを開始するインデックス |
-| formula    | 4D.Function | -> | フォーミュラオブジェクト   |
-| methodName | Text        | -> | メソッド名          |
+| 引数         | 型           |    | 説明                                               |
+| ---------- | ----------- |:--:| ------------------------------------------------ |
+| startFrom  | Integer     | -> | テストを開始するインデックス                                   |
+| formula    | 4D.Function | -> | フォーミュラオブジェクト                                     |
+| methodName | Text        | -> | メソッド名                                            |
+| param      | 複合          | -> | *formula* または *methodName* に渡す引数                 |
+| 戻り値        | Boolean     | <- | すべての要素がテストをパスすれば true|<!-- END REF -->
 
-|param|Mixed|->|*formula* または *methodName* に渡す引数| |戻り値|Boolean|<-|True if all elements successfully passed the test|<!-- END REF -->
+
+|
 
 
 #### 説明
@@ -3165,7 +3168,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 | formula    | 4D.Function | -> | フォーミュラオブジェクト                                         |
 | methodName | Text        | -> | メソッド名                                                |
 | param      | 複合          | -> | 渡す引数                                                 |
-| 戻り値        | Boolean     | <- | 少なくとも一つの要素がテストをパスすれば true|<!-- END REF -->
+| 戻り値        | ブール         | <- | 少なくとも一つの要素がテストをパスすれば true|<!-- END REF -->
 
 
 |

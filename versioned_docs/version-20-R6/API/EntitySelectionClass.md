@@ -301,7 +301,8 @@ The resulting object is an entity selection of Employee with duplications remove
 |---------|--- |:---:|------|
 |entity|4D.Entity|->|Entity to be added to the entity selection|
 |entitySelection|4D.EntitySelection|->|Entity selection to be added to the original entity selection|
-|Result|4D.EntitySelection|->|Entity selection including the added *entity* or *entitySelection*|
+|Result|4D.EntitySelection|<-|Entity selection including the added *entity* or *entitySelection*|
+
 
 
 <!-- END REF -->

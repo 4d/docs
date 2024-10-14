@@ -41,7 +41,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 #### Veja também
 
-[Transparent](#transparent)
+[Transparente](#transparente)
 
 ---
 
@@ -152,8 +152,8 @@ Designa a espessura de uma linha.
 
 #### Gramática JSON
 
-| Nome        | Tipo de dados | Valores possíveis                                                                      |
-| ----------- | ------------- | -------------------------------------------------------------------------------------- |
+| Nome        | Tipo de dados | Valores possíveis                                                                                               |
+| ----------- | ------------- | --------------------------------------------------------------------------------------------------------------- |
 | strokeWidth | number        | 0 para el ancho más pequeño en un formulario impreso, o cualquier valor de entero < 20 |
 
 #### Objectos suportados

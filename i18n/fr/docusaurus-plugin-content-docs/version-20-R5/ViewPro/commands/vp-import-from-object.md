@@ -20,7 +20,7 @@ La commande `VP IMPORT FROM OBJECT` <!-- REF #_method_.VP IMPORT FROM OBJECT. um
 
 Dans _vpAreaName_, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-Dans _viewPro_, passez un objet 4D View Pro valide. Cet objet peut avoir été créé en utilisant [VP Export to object](vp-export-to-object.md) ou manuellement. Pour plus d'informations sur les objets 4D View Pro, veuillez consulter la section [Objet 4D View Pro](../configuration.md#4d-view-pro-objet).
+Dans _viewPro_, passez un objet 4D View Pro valide. Cet objet peut avoir été créé en utilisant [VP Export to object](vp-export-to-object.md) ou manuellement. Pour plus d'informations sur les objets 4D View Pro, veuillez consulter la section [Objet 4D View Pro](../configuring.md#4d-view-pro-objet).
 
 Une erreur est retournée si l'objet _viewPro_ est invalide.
 

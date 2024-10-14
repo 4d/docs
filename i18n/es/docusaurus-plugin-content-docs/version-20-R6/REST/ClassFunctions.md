@@ -272,7 +272,7 @@ Una vez que haya creado un conjunto de entidades, puede ejecutar esta petición:
 La clase `StudentsSelection` tiene una función `getLastSummary`:
 
 ```
-// StudentsSelection Class
+// Clase StudentsSelection
 
 
 Class extends EntitySelection
@@ -281,7 +281,7 @@ exposed Function getLastSummary : Text
 	var $last : Object
 
 	$last:=This.last()
-	return =$last.firstname+" - "+$last.lastname+" is ... "+String($last.age())
+	return =$last.firstname+" - "+$last.lastname+" is ... " +String($last.age())
 ```
 
 A continuación, puede ejecutar esta petición:
@@ -500,14 +500,14 @@ exposed Function setFinalExam()
 
     $keys:=New collection()
 
-      //Loop on the entity selection
+      //Bucle en la selección de entidades
     For each ($student;$es)
         $student.finalExam:=$examResult
         $status:=$student.save()
         If ($status.success)
             $keys.push($student.ID)
-        End if
-    End for each
+        End if 
+    End for each 
 
     $0:=$keys
 ```
@@ -556,13 +556,14 @@ var $ageAverage : Integer
 
 $remoteDS:=Open datastore(New object("hostname";"127.0.0.1:8044");"students")
 
-// $newStudent is a student entity to procees
+// $newStudent es una entidad estudiantil para proceder
 $newStudent:=...
 $students:=$remoteDS.Students.query("school.name = :1";"Math school")
-// We add an entity to the $students entity selection on the client
+// Agregamos una entidad a la selección de entidad $students en el cliente
 $students.add($newStudent)
 
-// We call a function on the StudentsSelection class returning the age average of the students in the entity selection
-// The function is executed on the server on the updated $students entity selection which included the student added from the client
+// Llamamos a una función de la clase StudentsSelection devolviendo el promedio de edad de los estudiantes de la entity selection
+// La función se ejecuta en el servidor en la selección actualizada de entidad
+$students que incluía al estudiante añadido por el cliente
 $ageAverage:=$students.getAgeAverage()
 ```

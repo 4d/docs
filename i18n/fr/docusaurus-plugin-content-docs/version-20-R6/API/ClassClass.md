@@ -122,10 +122,10 @@ Cette propriété est en **lecture seule**.
 
 <!-- REF #ClassClass.new().Params -->
 
-| Paramètres | Type                     |     | Description                                                         |
-| ---------- | ------------------------ | :-: | ------------------------------------------------------------------- |
-| param      | any                      |  -> | Paramètre(s) à passer à la fonction constructeur |
-| Résultat   | 4D.Class |  <- | Nouvel objet de la classe                                           |
+| Paramètres | Type                     |                             | Description                                                         |
+| ---------- | ------------------------ | :-------------------------: | ------------------------------------------------------------------- |
+| param      | any                      |              ->             | Paramètre(s) à passer à la fonction constructeur |
+| Résultat   | 4D.Class | <- | Nouvel objet de la classe                                           |
 
 <!-- END REF -->
 

@@ -183,7 +183,7 @@ $vAge:=employee.children[2].age
 
 Note that if the object property value is an object that encapsulates a method (a formula), you need to add parenthesis () to the property name to execute the method:
 
-```
+```4d
 $f:=New object
 $f.message:=Formula(ALERT("Hello world!"))
 $f.message() //displays "Hello world!"

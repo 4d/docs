@@ -180,7 +180,7 @@ $vAge:=employee.children[2].age
 
 Note-se que se o valor da propriedade do objeto for um objeto que encapsula um método (uma fórmula), é necessário adicionar parênteses () ao nome da propriedade para executar o método:
 
-```
+```4d
 ALERT($myText) //"HELLO"
 
   //Here the code of the method Do_Something  

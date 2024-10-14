@@ -9,9 +9,9 @@ title: VP Run offscreen area
 
 <!-- REF #_method_.VP Run offscreen area.Params -->
 
-| Paramètres | Type   |    | Description                                                                     |                  |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------- | ---------------- |
-| parameters | Object | -> | Objet contenant les attributs de la zone hors écran                             |                  |
+| Paramètres | Type   |                             | Description                                                                     |                  |
+| ---------- | ------ | --------------------------- | ------------------------------------------------------------------------------- | ---------------- |
+| parameters | Object | ->                          | Objet contenant les attributs de la zone hors écran                             |                  |
 | Résultat   | Mixed  | <- | `.result` property of the `.onEvent` object, or Null if does not return a value | <!-- END REF --> |
 
 #### Description

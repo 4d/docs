@@ -82,7 +82,7 @@ Se o método também tem a propriedade [**Compartilhada por componentes e banco 
 
 ## Quando um processo é iniciado de forma preemptiva?
 
-:::info Reminder
+:::info Lembrete
 
 A execução apropriativa só está disponível em modo compilado.
 

@@ -43,10 +43,10 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 
 <!-- REF #_command_.SMTP New transporter.Params -->
 
-| 引数     | 型                                  |     | 説明                                                  |
-| ------ | ---------------------------------- | :-: | --------------------------------------------------- |
-| server | Object                             |  -> | メールサーバー情報                                           |
-| 戻り値    | 4D.SMTPTransporter |  <- | [SMTP transporter object](#smtp-transporter-オブジェクト) |
+| 引数     | 型                                  |                             | 説明                                                  |
+| ------ | ---------------------------------- | :-------------------------: | --------------------------------------------------- |
+| server | Object                             |              ->             | メールサーバー情報                                           |
+| 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-オブジェクト) |
 
 <!-- END REF -->
 
@@ -119,10 +119,10 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
 
-| 引数     | 型                                  |     | 説明                                                  |
-| ------ | ---------------------------------- | :-: | --------------------------------------------------- |
-| server | Object                             |  -> | メールサーバー情報                                           |
-| 戻り値    | 4D.SMTPTransporter |  <- | [SMTP transporter object](#smtp-transporter-オブジェクト) |
+| 引数     | 型                                  |                             | 説明                                                  |
+| ------ | ---------------------------------- | :-------------------------: | --------------------------------------------------- |
+| server | Object                             |              ->             | メールサーバー情報                                           |
+| 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-オブジェクト) |
 
 <!-- END REF -->
 
@@ -210,10 +210,10 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 
 <!-- REF #SMTPTransporterClass.send().Params -->
 
-| 引数   | 型      |     | 説明                                           |
-| ---- | ------ | :-: | -------------------------------------------- |
-| mail | Object |  -> | 送信する [メール](EmailObjectClass.md#email-オブジェクト) |
-| 戻り値  | Object |  <- | SMTP ステータス                                   |
+| 引数   | 型      |                             | 説明                                           |
+| ---- | ------ | :-------------------------: | -------------------------------------------- |
+| mail | Object |              ->             | 送信する [メール](EmailObjectClass.md#email-オブジェクト) |
+| 戻り値  | Object | <- | SMTP ステータス                                   |
 
 <!-- END REF -->
 

@@ -58,7 +58,7 @@ Recupera la información sobre los conjuntos de entidades almacenados actualment
 
 **Resultado**:
 
-```
+```json
 {
 cacheSize: 209715200,
 usedCache: 3136000,

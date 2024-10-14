@@ -154,7 +154,7 @@ Especifica a tabela a que pertence o subformulário Lista (se existir).
 Designa a opção que permite aos utilizadores selecionar linhas:
 
 - **Ninguna**: las líneas no se pueden seleccionar si se elige este modo. Hacer clic en la lista no tendrá ningún efecto a menos que la opción [Editable en lista](subform_overview.md#enterable-in-list) esté activada. Las teclas de navegación sólo hacen que la lista se desplace; no se genera el evento de formulario `On Selection Change`.
-- **Simple**: en este modo se puede seleccionar una línea a la vez. Ao clicar em uma linha, ela será selecionada. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
+- **Simple**: en este modo se puede seleccionar una línea a la vez. Ao clicar em uma linha, ela será selecionada. Um **Ctrl+clique** (Windows) ou **Command+clique** (macOS) em uma linha alterna seu estado (entre selecionado ou não).\
   The Up and Down arrow keys select the previous/next row in the list. As outras teclas de navegação percorrem a lista. El evento de formulario `On Selection Change` se genera cada vez que se cambia la línea actual.
 - **Múltiple**: en este modo se pueden seleccionar varias líneas simultáneamente.
   - Los subregistros seleccionados son devueltos por el comando `GET HIGHLIGHTED RECORDS`.

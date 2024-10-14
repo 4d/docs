@@ -5,7 +5,11 @@ title: Tableaux
 
 Un **tableau** est une série ordonnée de **variables** de même type. Chaque variable est appelée un **élément** du tableau. La taille du tableau doit être définie au moment de sa création ; vous pouvez ensuite la modifier aussi souvent que nécessaire en ajoutant, insérant, ou supprimant des éléments, ou en appelant de nouveau la commande que vous avez utilisée pour créer le tableau. Les éléments sont numérotés de 1 à N, où N est la taille du tableau. Un tableau a toujours un [élément zéro](#using-the-element-zero-of-an-array). Les tableaux sont des variables 4D. Comme toute variable, un tableau a une portée et suit les règles du langage 4D, bien qu'il existe quelques différences spécifiques.
 
-> Généralement, il est recommandé d'utiliser des **collections** plutôt que des **tableaux**. Les collections sont plus souples et fournissent un large éventail de méthodes spécifiques. Pour plus d'informations, veuillez consutler la section [Collection](Concepts/dt_collection.md).
+:::tip
+
+Généralement, il est recommandé d'utiliser des **collections** plutôt que des **tableaux**. Les collections sont plus souples et fournissent un large éventail de méthodes spécifiques. Pour plus d'informations, veuillez consutler la section [Collection](Concepts/dt_collection.md).
+
+:::
 
 ## Créer des tableaux
 

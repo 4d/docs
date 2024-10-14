@@ -23,14 +23,14 @@ Pode definir algumas propriedades dos comandos do menu utilizando caracteres de 
 
 Os caracteres de controle não aparecem nas etiquetas de comando do menu. Deve-se, portanto, evitar a sua utilização para não ter efeitos indesejáveis. Os caracteres de controle são os seguintes:
 
-| Caracteres           | Descrição                    | Utilização                                                                                                                          |
-| -------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| ( | abre parênteses              | Desactivar item                                                                                                                     |
-| \<B                  | menor que B                  | fonte itálica                                                                                                                       |
-| \<I                  | maior que I                  | Itálico                                                                                                                             |
-| \<U                  | menor que U                  | fonte sublinhada                                                                                                                    |
-| !+caracter           | ponto de exclamação+caratere | Adiciona caractere como marca de verificação (macOS); adiciona marca de verificação (Windows) |
-| /+caracter           | barra+caractere              | Adicionar caractere como atalho                                                                                                     |
+| Caracteres                  | Descrição                    | Utilização                                                                                                                          |
+| --------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| (        | abre parênteses              | Desactivar item                                                                                                                     |
+| <B | menor que B                  | fonte itálica                                                                                                                       |
+| <I | maior que I                  | Itálico                                                                                                                             |
+| <U | menor que U                  | fonte sublinhada                                                                                                                    |
+| !+caracter                  | ponto de exclamação+caratere | Adiciona caractere como marca de verificação (macOS); adiciona marca de verificação (Windows) |
+| /+caracter                  | barra+caractere              | Adicionar caractere como atalho                                                                                                     |
 
 ## Parâmetro
 

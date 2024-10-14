@@ -433,12 +433,12 @@ Esta propiedad es de **solo lectura**.
 
 <!-- REF #document.copyTo().Params -->
 
-| Parámetros        | Tipo                      |     | Descripción                                            |
-| ----------------- | ------------------------- | :-: | ------------------------------------------------------ |
-| destinationFolder | 4D.Folder |  -> | Carpeta de destino                                     |
-| newName           | Text                      |  -> | Nombre para la copia                                   |
-| overwrite         | Integer                   |  -> | `fk overwrite` para sustituir los elementos existentes |
-| Result            | 4D.File   |  <- | Archivo copiado                                        |
+| Parámetros        | Tipo                      |                             | Descripción                                            |
+| ----------------- | ------------------------- | :-------------------------: | ------------------------------------------------------ |
+| destinationFolder | 4D.Folder |              ->             | Carpeta de destino                                     |
+| newName           | Text                      |              ->             | Nombre para la copia                                   |
+| overwrite         | Integer                   |              ->             | `fk overwrite` para sustituir los elementos existentes |
+| Result            | 4D.File   | <- | Archivo copiado                                        |
 
 <!-- END REF -->
 
@@ -489,8 +489,8 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 <!-- REF #document.getContent().Params -->
 
-| Parámetros | Tipo                    |    | Descripción           |
-| ---------- | ----------------------- | -- | --------------------- |
+| Parámetros | Tipo                    |                             | Descripción           |
+| ---------- | ----------------------- | --------------------------- | --------------------- |
 | Result     | 4D.Blob | <- | Contenido del archivo |
 
 <!-- END REF -->
@@ -533,9 +533,9 @@ Para guardar el contenido de un documento en un campo `BLOB`:
 
 <!-- REF #document.getIcon().Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                          |
-| ---------- | ------- | -- | -------------------------------------------------------------------- |
-| size       | Integer | -> | Longitud del lado de la imagen devuelta (píxeles) |
+| Parámetros | Tipo    |                             | Descripción                                                          |
+| ---------- | ------- | --------------------------- | -------------------------------------------------------------------- |
+| size       | Integer | ->                          | Longitud del lado de la imagen devuelta (píxeles) |
 | Result     | Picture | <- | Icono                                                                |
 
 <!-- END REF -->
@@ -570,11 +570,11 @@ Si el archivo no existe en el disco, se devuelve un icono vacío por defecto.
 
 <!-- REF #document.getText().Params -->
 
-| Parámetros  | Tipo    |    | Descripción                                |
-| ----------- | ------- | -- | ------------------------------------------ |
-| charSetName | Text    | -> | Nombre del juego de caracteres             |
-| charSetNum  | Integer | -> | Número del conjunto de caracteres          |
-| breakMode   | Integer | -> | Modo de tratamiento de los saltos de línea |
+| Parámetros  | Tipo    |                             | Descripción                                |
+| ----------- | ------- | --------------------------- | ------------------------------------------ |
+| charSetName | Text    | ->                          | Nombre del juego de caracteres             |
+| charSetNum  | Integer | ->                          | Número del conjunto de caracteres          |
+| breakMode   | Integer | ->                          | Modo de tratamiento de los saltos de línea |
 | Result      | Text    | <- | Texto del documento                        |
 
 <!-- END REF -->

@@ -6,12 +6,12 @@ title: Página de compatibilidade
 The Compatibility page groups together parameters related to maintaining compatibility with previous versions of 4D.
 
 > The number of options displayed depends on the version of 4D with which the original database/project was created, as well as the settings modified in this database/project.\
-> This page lists the compatibility options available for database/projects converted from 4D v18 onwards. For older compatibility options, refer to the [Compatibility page](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) on **doc.4d.com**.
+> This page lists the compatibility options available for database/projects converted from 4D v18 onwards. Para opções de compatibilidade mais antigas, consulte a [Página de compatibilidade] (https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) em **doc.4d.com**.
 
 - **Use legacy network layer**: Starting with 4D v15, 4D applications propose a new network layer, named *ServerNet*, to handle communications between 4D Server and remote 4D machines (clients). The former network layer has become obsolete, but it is kept to ensure compatibility with existing databases. Using this option, you can enable the former network layer at any time in your 4D Server applications depending on your needs. *ServerNet* is used automatically for new databases and databases converted from a v15 release or later. Note that in case of a modification, you need to restart the application for the change to be taken into account. Todos os aplicativos clientes que foram conectados também devem ser reiniciados para poderem se conectar à nova camada de rede.
-  **Note:** This option can also be managed by programming using the `SET DATABASE PARAMETER` command.
+  **Nota:** esta opção também pode ser gerenciada programando usando o comando `SET DATABASE PARAMETER`.
 
-- **Use standard XPath:** By default this option is unchecked for databases converted from a 4D version prior to v18 R3, and checked for databases created with 4D v18 R3 and higher. Starting with v18 R3, the XPath implementation in 4D has been modified to be more compliant and to support more predicates. As a consequence, non-standard features of the previous implementation no longer work. Estes incluem:
+- **Usar XPath padrão:** oor padrão, essa opção está desmarcada para bancos de dados convertidos de uma versão 4D anterior à v18 R3 e marcada para bancos de dados criados com 4D v18 R3 e superior. Starting with v18 R3, the XPath implementation in 4D has been modified to be more compliant and to support more predicates. As a consequence, non-standard features of the previous implementation no longer work. Estes incluem:
 
   - initial "/" is not the root node only - using a / as first character in a XPath expression does not declare an absolute path from the root node
   - no implicit current node - the current node has to be included in the XPath expression

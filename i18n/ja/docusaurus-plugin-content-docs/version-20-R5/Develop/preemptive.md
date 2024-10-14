@@ -216,7 +216,7 @@ _コオペラティブ_ モードで実行された場合には、たとえマ�
 
 :::note
 
-In [client/server applications](../Desktop/clientServer.md), triggers may be executed in cooperative mode, even if their code is thread-safe. This happens when a trigger is activated from a remote process: in this case, the trigger is executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Server-and-the-4D-Language.300-7182872.en.html#68966) on the server machine. Since this process is used for all calls from the client, it is always executed in cooperative mode.
+[クライアント/サーバーアプリケーション](../Desktop/clientServer.md)では、トリガーのコードがスレッドセーフである場合でも、実行はコオペラティブモードでおこなわれることがあります。 これは、リモートプロセスからトリガーが呼び出された場合に発生します: この場合、トリガーはサーバーマシン上の [クライアントプロセスの "双子" プロセス](https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Server-and-the-4D-Language.300-7182872.ja.html#68966) で実行されます。 このプロセスは、クライアントからのすべての呼び出しに使用されるため、常にコオペラティブモードで実行されます。
 
 :::
 
