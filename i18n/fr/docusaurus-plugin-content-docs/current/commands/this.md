@@ -8,21 +8,21 @@ displayed_sidebar: docs
 
 <!--REF #_command_.This.Params-->
 
-| Paramètres | Type   |                                | Description               |
-| ---------- | ------ | ------------------------------ | ------------------------- |
-| Résultat   | Object | &amp;larr; | Current element or object |
+| Paramètres | Type   |                                | Description              |
+| ---------- | ------ | ------------------------------ | ------------------------ |
+| Résultat   | Object | &amp;larr; | Élément ou objet courant |
 
 <!-- END REF-->
 
 #### Description
 
-The `This` command <!--REF #_command_.This.Summary-->returns a reference to the currently processed object.<!-- END REF-->
+La commande `This` <!--REF #_command_.This.Summary-->renvoie une référence à l'objet en cours de traitement.<!-- END REF-->
 
-Dans la plupart des cas, la valeur de `This` est déterminée par la manière dont une fonction est appelée. Il ne peut pas être défini par affectation lors de l'exécution, et il peut être différent à chaque fois que la fonction est appelée.
+Dans la plupart des cas, la valeur de `This` est déterminée par la manière dont une fonction est appelée. Elle ne peut pas être définie par affectation lors de l'exécution, et elle peut être différente à chaque fois que la fonction est appelée.
 
-This command can be used in different contexts, described below. Within these contexts, you will access object/collection element properties or entity attributes through **This.<*propertyPath*\>**. For example, *This.name* or *This.employer.lastName* are valid pathes to object, element or entity properties.
+Cette commande peut être utilisée dans différents contextes, décrits ci-dessous. Dans ces contextes, vous accéderez aux propriétés des objets/éléments de collections ou aux attributs des entités par l'intermédiaire de **This.<*propertyPath*\>**. Par exemple, *This.name* ou *This.employer.lastName* sont des chemins d'accès valides vers des propriétés d'objets, d'éléments ou d'entités.
 
-In any other context, the command returns **Null**.
+Dans tout autre contexte, la commande renvoie **Null**.
 
 #### Fonction de classe
 
@@ -33,9 +33,8 @@ Quand un [constructeur de classe](#class-constructor) est utilisé (avec la fonc
 
 Class Constructor  
 
- // Create properties on This as
- // desired by assigning to them
-
+ // Créer des propriétés en
+ // les assignant au This
  This.a:=42
 ```
 
@@ -45,12 +44,12 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> En cas d'appel de la superclasse du constructeur depuis le constructeur en utilisant le mot-clé [Super](#super), n'oubliez pas que `This` ne doit pas être appelé avant le constructeur de la superclasse, sinon une erreur est générée. See [this example](super.md#example-1).
+> En cas d'appel de la superclasse du constructeur depuis le constructeur en utilisant le mot-clé [Super](#super), n'oubliez pas que `This` ne doit pas être appelé avant le constructeur de la superclasse, sinon une erreur est générée. Voir [cet exemple](super.md#example-1).
 
 Dans tous les cas, `This` se réfère à l'objet sur lequel la fonction a été appelée, comme s'il s'agissait d'une fonction de l'objet.
 
 ```4d
-//Class: ob
+//Classe : ob
 
 Function f() : Integer
  return This.a+This.b
@@ -70,20 +69,20 @@ Dans cet exemple, l'objet affecté à la variable $o n'a pas de propriété *f*,
 
 #### Objet formule
 
-In the context of the execution of a formula object created by the [Formula](formula.md) or [Formula from string](formula-from-string.md) commands, `This` returns a reference to the object currently processed by the formula.
+Dans le contexte de l'exécution d'un objet formule créé par les commandes [Formula](formula.md) ou [Formula from string](formula-from-string.md), `This` renvoie une référence à l'objet en cours de traitement par la formule.
 
-For example, tou want to use a project method as a formula encapsulated in an object:
+Par exemple, vous souhaitez utiliser une méthode projet en tant que formule encapsulée dans un objet :
 
 ```4d
- var $person : Object := New object
+ var $person : Objet := New object
  $person.firstName:="John"
  $person.lastName:="Smith"
  $person.greeting:=Formula(Greeting)
- $g:=$person.greeting("hello") // returns "hello John Smith"
- $g:=$person.greeting("hi") // returns "hi John Smith"
+ $g:=$person.greeting("hello") // retourne "hello John Smith"
+ $g:=$person.greeting("hi") // retourne "hi John Smith"
 ```
 
-With the *Greeting* project method:
+Avec la méthode projet *Greeting* :
 
 ```4d
  #DECLARE($greeting : Text) : Text
@@ -92,17 +91,17 @@ With the *Greeting* project method:
 
 #### List box
 
-In the context of a list box associated to a collection or an entity selection, during the [`On Display Detail`](../Events/onDisplayDetail.md) or the [`On Data Change`](../Events/onDataChange.md) events, `This` returns a reference to the collection element or entity accessed by the list box to display the current row.
+Dans le contexte d'une list box associée à une collection ou à une entity selection, pendant les événements [`On Display Detail`](../Events/onDisplayDetail.md) ou [`On Data Change`](../Events/onDataChange.md), `This` retourne une référence à l'élément de collection ou à l'entité auquel accède la list box pour afficher la ligne courante.
 
 :::note
 
-If you use a collection of scalar values in a list box, 4D creates an object for each element with a single **value** property. Thus, the element value is returned by the **This.value** non-assignable expression.
+Si vous utilisez une collection de valeurs scalaires dans une list box, 4D crée un objet pour chaque élément avec une propriété **value** unique. Ainsi, la valeur de l'élément est retournée par l'expression non assignable **This.value**.
 
 :::
 
 #### Exemple 1
 
-A collection of objects, each with this structure:
+Une collection d'objets, chacun avec cette structure :
 
 ```undefined
 {  
@@ -127,11 +126,11 @@ A collection of objects, each with this structure:
  
 ```
 
-In the list box, each column refers to one of the properties of the object, either directly (This.name), indirectly (This.employees.length), or through an expression (*getPicture*) in which can be used directly. The list box looks like:
+Dans la list box, chaque colonne fait référence à l'une des propriétés de l'objet, soit directement (This.name), soit indirectement (This.employees.length), soit par le biais d'une expression (*getPicture*) qui peut être utilisée directement. La list box se présente ainsi :
 
 ![](../assets/en/commands/pict3776706.en.png)
 
-The *GetPicture* project method is automatically executed during the **On display detail** event:
+La méthode projet *GetPicture* est automatiquement exécutée lors de l'événement **On display detail** :
 
 ```4d
   //GetPicture Method
@@ -143,34 +142,34 @@ The *GetPicture* project method is automatically executed during the **On displa
  End if
 ```
 
-Once the form is executed, you can see the result:
+Une fois le formulaire exécuté, vous pouvez voir le résultat :
 
 ![](../assets/en/commands/pict3783169.en.png)
 
 #### Exemple 2
 
-You want to display entities from the following structure in a list box:
+Vous voulez afficher les entités de la structure suivante dans une list box :
 
-![](../assets/en/commands/pict3872836.en.png)
+![](../assets/en/commands/pict3872836.fr.png)
 
-You build a list box of the "Collection or entity selection" type with the following definition:
+Vous construisez une list box de type "Collection ou entity selection" avec la définition suivante :
 
 ![](../assets/en/commands/pict3872844.en.png)
 
 A noter que :
 
-- *This.ID*, *This.Title* and *This.Date* directly refers to the corresponding attributes in the ds.Event dataclass.
-- *This.meetings* is a related attribute (based upon the One To Many relation name) that returns an entity selection of the ds.Meeting dataclass.
-- **Form.eventList** is the entity selection that is attached to the list box. The initialization code can be put in the on load form event:
+- *This.ID*, *This.Title* et *This.Date* référencent directement les attributs correspondants de la dataclass ds.Event.
+- *This.meetings* est un attribut relatif (basé sur le nom de relation 1 vers N) qui renvoie une entity selection de la dataclass ds.Meeting .
+- **Form.eventList** est l'entity selection attachée à la list box. Le code d'initialisation peut être placé dans l'événement formulaire on load :
 
 ```4d
  Case of  
     :(Form event code=On Load)  
-       Form.eventList:=ds.Event.all() //returns an entity selection with all entities  
+       Form.eventList:=ds.Event.all() //retourne une entity selection avec toutes les entités  
  End case  
 ```
 
-Once the form is executed, the list box is automatically filled with the entity selection:
+Une fois le formulaire exécuté, la list box est automatiquement remplie avec l'entity selection :
 
 ![](../assets/en/commands/pict3872875.en.png)
 
