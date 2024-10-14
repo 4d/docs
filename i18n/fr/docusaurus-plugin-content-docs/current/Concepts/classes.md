@@ -611,7 +611,7 @@ The [`This`](../commands/this.md) command returns a reference to the currently p
 Voici un exemple :
 
 ```4d
-//Class: ob
+//Classe : ob
 
 Function f() : Integer
  return This.a+This.b
