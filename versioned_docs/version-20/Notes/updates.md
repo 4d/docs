@@ -8,9 +8,9 @@ title: Release Notes
 Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), the blog post that lists all new features and enhancements in 4D 20.
 
 
-:::caution Minimal client version for 4D Server v20.2 and later
+:::warning Known issue on Windows 11 24H2
 
-For internal reasons, the version of remote clients connecting to 4D Server v20.2 and later must be at least 4D 20.2.
+On Windows 11 24H2, **printing PDFs** may produce unexpected results due to a problem identified by Microsoft. If you frequently print PDFs with your 4D application, we recommend that you do not upgrade to Windows 11 24H2.
 
 :::
 
@@ -19,6 +19,14 @@ For internal reasons, the version of remote clients connecting to 4D Server v20.
 If your 4D applications use TLS connections, it is recommended that you upgrade to 4D 20.2 LTS build 100956 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
 :::
+
+
+:::caution Minimal client version for 4D Server v20.2 and later
+
+For internal reasons, the version of remote clients connecting to 4D Server v20.2 and later must be at least 4D 20.2.
+
+:::
+
 
 #### Index rebuild warning
 
@@ -36,9 +44,11 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 #### Highlights
 
+- 4D 20.5 is certified on Windows 11 24H2 (see also known issue above).
+- 4D 20.5 is certified on macOS Sequoïa (macOS 15).
 - *SpreadJS* updated to version 16.2.6 in 4D 20.2 HF1.
 - 4D 20.2 is certified on macOS Sonoma (macOS 14).
-- (4D 20.1) New `plugins` property in the *options* parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command.
+- New `plugins` property in the *options* parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command.
 - 4D Server automatically integrates multiple journals: [Automatic restore](../Backup/settings.md#automatic-restore).
 - [IMAP Transporter Class](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) returns *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) returns *id*, *flags* and *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) and [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) support custom keywords.
 - New [WebSocketServer](../API/WebSocketServerClass.md) and [WebSocketConnection](../API/WebSocketConnectionClass.md) classes to create and manage WebSocket connections from 4D.

@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COMBINE PICTURES.Summary-->The **COMBINE PICTURES** command combines the *pict1* and *pict2* pictures in *operator* mode in order to produce a third, *resultingPict*.<!-- END REF--> The resulting picture is of the compound type and keeps all the characteristics of the source pictures.
 
-**Note:** This command extends the functionalities offered by the conventional picture combination operators (+/, etc., see the [C\_BOOLEAN](c-boolean.md) section). These operators remain entirely usable in 4D v11.
+**Note:** This command extends the functionalities offered by the conventional [picture combination operators](../Concepts/dt_picture.md#picture-operators). 
 
 In *operator*, pass the type of combination to be applied. Three types of combinations, which can be accessed via the constants of the “*Picture Transformation*” theme, are proposed:
 

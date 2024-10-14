@@ -70,6 +70,6 @@ The following code will create a dialog accepting a formula in text format:
 #### See also 
 
 [Formula](formula.md)  
-[Parse formula](parse-formula.md)  
+[Parse formula](../commands-legacy/parse-formula.md)  
 
 

@@ -66,6 +66,5 @@ Creation and filling of a local object array:
 
 #### See also 
 
-[C\_OBJECT](c-object.md)  
 *Creating Arrays*  
 *Objects (Language)*  

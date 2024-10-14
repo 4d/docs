@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB SET.Summary-->The **OB SET** command creates or modifies one or more *property*/*value* pairs in the language object designated by the *object* parameter.<!-- END REF--> 
 
-*object* must have been defined using the [C\_OBJECT](c-object.md) command or designate a 4D object field.
+*object* must be an object variable or designate a 4D object field.
 
 In the *property* parameter, pass the label of the property to be created or modified. If the property already exists in *object*, its value is updated. If it does not exist, it is created.   
 

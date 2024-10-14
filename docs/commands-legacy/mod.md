@@ -24,7 +24,7 @@ displayed_sidebar: docs
 * **Mod** accepts Integer, Long Integer, and Real expressions. However, if *number1* or *number2* are real numbers, the numbers are first rounded and then **Mod** is calculated.
 * Be careful when using **Mod** with real numbers of a large size (above 2^31) since, in this case, its operation may reach the limits of the calculation capacities of standard processors.
 
-You can also use the *%* operator to calculate the remainder (see [C\_TIME](c-time.md)).
+You can also use the *%* operator to calculate the remainder.
 
 **WARNING:** The *%* operator returns valid results with Integer and Long Integer expressions. To calculate the modulo of real values, you must use the **Mod** command.
 
