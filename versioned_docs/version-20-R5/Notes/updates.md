@@ -124,7 +124,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 ## 4D 20.x LTS
 
 
-See [**Release Notes for 4D 20.x LTS**](../versioned_docs/version-20/Notes/updates.md). 
+See [**Release Notes for 4D 20.x LTS**](../../version-20/Notes/updates.md). 
 
 
 ## Library table
