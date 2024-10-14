@@ -88,4 +88,4 @@ WP DELETE SECTION($section)
 #### See also 
 
 [WP Get section](../commands-legacy/wp-get-section.md)  
-[WP RESET ATTRIBUTES](../commands-legacy/wp-reset-attributes.md)  
+[WP RESET ATTRIBUTES](wp-reset-attributes.md)  
