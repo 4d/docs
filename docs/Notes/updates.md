@@ -176,7 +176,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 - **Warning**: The starting [`offset`](../API/FileHandleClass.md#offset) value of [4D.FileHandle](../API/FileHandleClass.md) objects was incorrectly set to 1 instead of 0. A fix has been made in 4D as of versions **20.1 HF1** and **20 R2** and the value is now 0.
 
 
-## 4D 20.x
+## 4D 20.x LTS
 
 
 See [**Release Notes for 4D 20.x LTS**](../../versioned_docs/version-20/Notes/updates.md). 
