@@ -41,22 +41,22 @@ If no *subSectionType* subsection is defined for the specified *wpSection*, the 
 You want to apply a blue background on left pages:
 
 ```4d
- var $section;$subsection : Object
-  //Retrieve the reference on the first section
- $section:=WP Get section(wpDoc;1)
-  //Retrieve the reference on the left subsection of the first section
- $subsection:=WP Get subsection($section;wk left page)
- 
-  //If the subsection exists, set the background to blue
- If($subsection#Null)
-    WP SET ATTRIBUTES($subsection;wk background color;"#87CEEB")
- Else
-    ALERT("Please, create left and right subsections.")
- End if
+ var $section;$subsection : Object
+  //Retrieve the reference on the first section
+ $section:=WP Get section(wpDoc;1)
+  //Retrieve the reference on the left subsection of the first section
+ $subsection:=WP Get subsection($section;wk left page)
+ 
+  //If the subsection exists, set the background to blue
+ If($subsection#Null)
+    WP SET ATTRIBUTES($subsection;wk background color;"#87CEEB")
+ Else
+    ALERT("Please, create left and right subsections.")
+ End if
 ```
 
 #### See also 
 
-[WP DELETE SUBSECTION](wp-delete-subsection.md)  
+[WP DELETE SUBSECTION](../commands/wp-delete-subsection.md)  
 [WP Get section](wp-get-section.md)  
 [WP New subsection](wp-new-subsection.md)  

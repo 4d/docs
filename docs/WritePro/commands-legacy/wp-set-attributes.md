@@ -40,16 +40,16 @@ In this 4D Write Pro area, you selected a word:
 If you execute the following code:  
 
 ```4d
- $range:=WP Get selection(*;"WParea") //get the selected range
- 
-  // set the shadow offset in pt for the selected text
- WP SET ATTRIBUTES($range;wk text shadow offset;1)
-  //set the paragraph padding
- WP SET ATTRIBUTES($range;wk padding;1)
-  //define a border of 10 pt
- WP SET ATTRIBUTES($range;wk border style;wk solid;wk border width;10)
-  //set the border colors
- WP SET ATTRIBUTES($range;wk border color;"blue";wk border color bottom;"#00FA9A";wk border color right;"#00FA9A")
+ $range:=WP Get selection(*;"WParea") //get the selected range
+ 
+  // set the shadow offset in pt for the selected text
+ WP SET ATTRIBUTES($range;wk text shadow offset;1)
+  //set the paragraph padding
+ WP SET ATTRIBUTES($range;wk padding;1)
+  //define a border of 10 pt
+ WP SET ATTRIBUTES($range;wk border style;wk solid;wk border width;10)
+  //set the border colors
+ WP SET ATTRIBUTES($range;wk border color;"blue";wk border color bottom;"#00FA9A";wk border color right;"#00FA9A")
 ```
 
   
@@ -62,10 +62,10 @@ You get the following result:
 This example illustrates the use of wk inside and wk outside constants:  
 
 ```4d
- $wpRange:=WP Get selection(writeProdoc)
- WP SET ATTRIBUTES($wpRange;wk border style+wk inside;wk dotted)
- WP SET ATTRIBUTES($wpRange;wk border style+wk outside;wk solid)
- WP SET ATTRIBUTES($wpRange;wk border color+wk outside;"#00FA9A")
+ $wpRange:=WP Get selection(writeProdoc)
+ WP SET ATTRIBUTES($wpRange;wk border style+wk inside;wk dotted)
+ WP SET ATTRIBUTES($wpRange;wk border style+wk outside;wk solid)
+ WP SET ATTRIBUTES($wpRange;wk border color+wk outside;"#00FA9A")
 ```
 
   
@@ -78,12 +78,12 @@ Assuming all of the contents were selected, the result is:
 You want to set a background image for the document:
 
 ```4d
- var WParea : Object
- WParea:=WP New
- 
- READ PICTURE FILE("C:\\Pictures\\boats.jpg";$picture)
- 
- WP SET ATTRIBUTES(WParea;wk background image;$picture)
+ var WParea : Object
+ WParea:=WP New
+ 
+ READ PICTURE FILE("C:\\Pictures\\boats.jpg";$picture)
+ 
+ WP SET ATTRIBUTES(WParea;wk background image;$picture)
 ```
 
 The result is:
@@ -93,14 +93,14 @@ The result is:
 You want to set a background image that covers the whole printable area:
 
 ```4d
- var WParea : Object
- WParea:=WP New
- 
- READ PICTURE FILE("C:\\Pictures\\boats.jpg";$picture)
- 
- WP SET ATTRIBUTES(WParea;wk background image;$picture)
- WP SET ATTRIBUTES(WParea;wk background clip;wk paper box)
- WP SET ATTRIBUTES(WParea;wk background origin;wk paper box)
+ var WParea : Object
+ WParea:=WP New
+ 
+ READ PICTURE FILE("C:\\Pictures\\boats.jpg";$picture)
+ 
+ WP SET ATTRIBUTES(WParea;wk background image;$picture)
+ WP SET ATTRIBUTES(WParea;wk background clip;wk paper box)
+ WP SET ATTRIBUTES(WParea;wk background origin;wk paper box)
 ```
 
 The result is:
@@ -114,23 +114,23 @@ The result is:
 You want to set tabs at varying intervals and designate a character as the leading character for the last tab:
 
 ```4d
- $tab1:=New object()
- $tab1[wk type]:=wk left
- $tab1[wk offset]:="3cm"
- $tab1[wk leading]:=""
- 
- $tab2:=New object()
- $tab2[wk type]:=wk center
- $tab2[wk offset]:="8cm"
- $tab2[wk leading]:=""
- 
- $tab3:=New object()
- $tab3[wk type]:=wk right
- $tab3[wk offset]:="12cm"
- $tab3[wk leading]:="."
- 
- $_tabs:=New collection($tab1;$tab2;$tab3)
- WP SET ATTRIBUTES(wpArea;wk tabs;$_tabs)
+ $tab1:=New object()
+ $tab1[wk type]:=wk left
+ $tab1[wk offset]:="3cm"
+ $tab1[wk leading]:=""
+ 
+ $tab2:=New object()
+ $tab2[wk type]:=wk center
+ $tab2[wk offset]:="8cm"
+ $tab2[wk leading]:=""
+ 
+ $tab3:=New object()
+ $tab3[wk type]:=wk right
+ $tab3[wk offset]:="12cm"
+ $tab3[wk leading]:="."
+ 
+ $_tabs:=New collection($tab1;$tab2;$tab3)
+ WP SET ATTRIBUTES(wpArea;wk tabs;$_tabs)
 ```
 
 The result is:
@@ -141,4 +141,4 @@ The result is:
 
 *4D Write Pro Attributes*  
 [WP GET ATTRIBUTES](wp-get-attributes.md)  
-[WP RESET ATTRIBUTES](wp-reset-attributes.md)  
+[WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)  

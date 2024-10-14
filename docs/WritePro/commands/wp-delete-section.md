@@ -84,3 +84,8 @@ $section:=WP Get section(wpDoc, 5)
 WP DELETE SECTION($section)
 
 ```
+
+#### See also 
+
+[WP Get section](../commands-legacy/wp-get-section.md)  
+[WP RESET ATTRIBUTES](../commands-legacy/wp-reset-attributes.md)  

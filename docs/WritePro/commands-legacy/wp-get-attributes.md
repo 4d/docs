@@ -41,13 +41,13 @@ If there are different values for the same attribute in the element passed as a 
 You want to get the background color of the selected area:  
 
 ```4d
- $range:=WP Selection range(*;"WParea")
- WP GET ATTRIBUTES($range;wk background color;$bcol)
+ $range:=WP Selection range(*;"WParea")
+ WP GET ATTRIBUTES($range;wk background color;$bcol)
 ```
 
 #### See also 
 
 *4D Write Pro Attributes*  
 *4D Write Pro Constants*  
-[WP RESET ATTRIBUTES](wp-reset-attributes.md)  
+[WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)  
 [WP SET ATTRIBUTES](wp-set-attributes.md)  
