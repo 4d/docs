@@ -12,8 +12,9 @@ title: 4D Write Pro Commands
 [`WP DELETE FOOTER`](../commands-legacy/wp-delete-footer.md)<br/>
 [`WP DELETE HEADER`](../commands-legacy/wp-delete-header.md)<br/>
 [`WP DELETE PICTURE`](../commands-legacy/wp-delete-picture.md)<br/>
+[`WP DELETE SECTION`](wp-delete-section.md)<br/>
 [`WP DELETE STYLE SHEET`](../commands-legacy/wp-delete-style-sheet.md)<br/>
-[`WP DELETE SUBSECTION`](../commands-legacy/wp-delete-subsection.md)<br/>
+[`WP DELETE SUBSECTION`](wp-delete-subsection.md)<br/>
 [`WP DELETE TEXT BOX`](../commands-legacy/wp-delete-text-box.md)<br/>
 [`WP EXPORT DOCUMENT`](../commands-legacy/wp-export-document.md)<br/>
 [`WP EXPORT VARIABLE`](../commands-legacy/wp-export-variable.md)<br/>
@@ -60,7 +61,7 @@ title: 4D Write Pro Commands
 [`WP Paragraph range`](../commands-legacy/wp-paragraph-range.md)<br/>
 [`WP Picture range`](../commands-legacy/wp-picture-range.md)<br/>
 [`WP PRINT`](../commands-legacy/wp-print.md)<br/>
-[`WP RESET ATTRIBUTES`](../commands-legacy/wp-reset-attributes.md)<br/>
+[`WP RESET ATTRIBUTES`](wp-reset-attributes.md)<br/>
 [`WP SELECT`](../commands-legacy/wp-select.md)<br/>
 [`WP Selection range`](../commands-legacy/wp-selection-range.md)<br/>
 [`WP SET ATTRIBUTES`](../commands-legacy/wp-set-attributes.md)<br/>

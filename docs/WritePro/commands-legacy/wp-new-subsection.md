@@ -38,14 +38,14 @@ If the *subSectionType* already exists, an error is returned.
 You want to create left and right subsections:
 
 ```4d
- var $section;$subsection : Object
-  // get first section
- $section:=WP Get section(wpDoc;1)
-  // Create the left section - the right section is created automatically
- $subsection:=WP New subsection($section;wk left page)
+ var $section;$subsection : Object
+  // get first section
+ $section:=WP Get section(wpDoc;1)
+  // Create the left section - the right section is created automatically
+ $subsection:=WP New subsection($section;wk left page)
 ```
 
 #### See also 
 
-[WP DELETE SUBSECTION](wp-delete-subsection.md)  
+[WP DELETE SUBSECTION](../commands/wp-delete-subsection.md)  
 [WP Get subsection](wp-get-subsection.md)  
