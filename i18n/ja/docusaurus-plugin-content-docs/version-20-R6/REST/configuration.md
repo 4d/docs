@@ -23,31 +23,13 @@ REST機能を使い始めるまえに、まずは 4D REST サーバーの設定�
 
 デフォルトでは、REST接続はすべてのユーザーに対してオープンですが、この状態はライセンス管理上もセキュリティ上も推奨されません。
 
-REST接続は次の方法で制限することができます:
+As of 4D 20 R6, you configure REST accesses by enabling the [**force login** mode](authUsers.md#force-login-mode) and create an [`authentify()`](authUsers.md#authentify) datastore class function to authenticate users and assign privileges to their web session.
 
-- (推奨) **強制ログイン** モードを有効にし、[`authentify()`](authUsers.md#authentify) データストアクラス関数を作成して、ユーザーを認証し、Webセッションに権限を割り当てます ([ユーザーログインモード](authUsers.md#ユーザーログインモード) を参照ください)。
-- ストラクチャー設定の "**Web** ＞ **Web機能**" ページにて、RESTサービスに割り当てる **読み込み/書き出し** ユーザーグループを設定します。
-- `On REST Authentication` データベースメソッドに、RESTの初期リクエストを処理するコードを書きます。
+:::note 互換性
 
-:::info 重要
-
-- 競合を避けるため、異なる RESTアクセス制御機能を同時に有効にしないことをお勧めします。
-- `On REST Authentication` データベースメソッドを定義した場合、ストラクチャー設定の "**Web** ＞ **Web機能**" ページにて指定した "読み込み/書き出し" の設定は無視されます。
+The **Access** area in the Settings dialog box is only available in converted projects for compatibility. See [Access](../settings/web.md#access) for more information.
 
 :::
-
-### ストラクチャー設定を使用する
-
-ストラクチャー設定の "**Web** ＞ **Web機能**" ページにある **読み込み/書き出し** 設定は、RESTクエリを使って 4Dアプリケーションへのリンクを設立することのできる 4Dユーザーのグループを指定します。
-
-デフォルトでは、メニューには `<Anyone>` が選択されています。 これは、REST接続はすべてのユーザーに対してオープンであるという状態を示しています。 グループを指定すると、そのグループに所属する 4Dユーザーアカウントのみが [RESTリクエストを通して 4D にアクセス](authUsers.md) できるようになります。 このグループに所属していないアカウントの場合、4D はリクエストの送信者に対して認証エラーを返します。
-
-> この設定を使用するには、`On REST Authentication` データベースメソッドを定義してはいけません。 これが定義されている場合は、ストラクチャー設定にて指定したアクセス設定は無視されます。
-
-### On REST Authentication データベースメソッドを使用する
-
-`On REST Authentication` データベースメソッド は 4D 上で RESTセッションの開始を管理するための方法を提供します。 RESTリクエストによって新規セッションが開始される際、このデータベースメソッドは自動的に呼び出されます。 [RESTセッション開始のリクエスト](authUsers.md) を受信すると、そのリクエストヘッダーには接続の識別子が含まれています。 これらの識別子を評価するために `On REST Authentication` データベースメソッドは呼び出されます。 評価にあたっては、4Dアプリケーションのユーザーリストを使用することもできますし、独自の識別子のテーブルを使用することもできます。
-詳細については `On REST Authentication` データベースメソッドの [ドキュメンテーション](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.ja.html) を参照ください。
 
 ## テーブルやフィールドの公開
 
