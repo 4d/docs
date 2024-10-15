@@ -23,31 +23,13 @@ A mensagem de aviso "Atenção, verifique os privilégios de acesso" é exibida 
 
 Como padrão, acessos REST são abertos a todos os usuários que são obviamente não configurados para razões de segurança e também para controlar uso de licenças de cliente.
 
-You can configure REST accesses with one of the following means:
+As of 4D 20 R6, you configure REST accesses by enabling the [**force login** mode](authUsers.md#force-login-mode) and create an [`authentify()`](authUsers.md#authentify) datastore class function to authenticate users and assign privileges to their web session.
 
-- (recommended) enable the **force login** mode and create an [`authentify()`](authUsers.md#authentify) datastore class function to authenticate users and assign privileges to their web session (see [User login modes](authUsers.md#user-login-modes)).
-- atribua um grupo de usuário **Leitura/Escrita** aos serviços REST na página "**Web** > **Funcionalidades Web**" das Configurações da Estrutura;
-- write an `On REST Authentication` database method to intercept and handle every initial REST request.
+:::note Compatibidade
 
-:::info Importante
-
-- It is recommended not to enable different REST access control features simultaneously to avoid conflicts.
-- If an `On REST Authentication` database method has been defined, any setting made using the "Read/Write" menu on the **Web** > **Web Features** page of the Structure Settings is ignored.
+The **Access** area in the Settings dialog box is only available in converted projects for compatibility. See [Access](../settings/web.md#access) for more information.
 
 :::
-
-### Utilização dos parâmetros da estrutura
-
-The **Read/Write** menu in the "**Web** > **Web Features**" page of the structure settings specifies a group of 4D users that is authorized to establish the link to the 4D application using REST queries.
-
-Por defecto, el menú muestra `\<Anyone>`, lo que significa que los accesos REST están abiertos a todos los usuarios. Una vez que haya especificado un grupo, sólo una cuenta de usuario de 4D que pertenezca a este grupo podrá ser utilizada para [acceder a 4D mediante una petición REST](authUsers.md). Se uma conta for usada que não pertença a esse grupo, 4D retorna um erro de autenticação para o emissor da petição.
-
-> Para que esta configuración tenga efecto, el método base`On REST Authentication` no debe estar definido. Se existir, 4D ignora os parâmetros de aceso definidos nas propriedades do banco de dados.
-
-### Método base On REST Authentication
-
-El método base `On REST Authentication` le ofrece una forma personalizada de controlar la apertura de sesiones REST en 4D. Esse método de banco de dados é chamado automaticamente quando uma nova sessão for aberta através da petição REST. Cuando se recibe una [solicitud para abrir una sesión REST](authUsers.md), los identificadores de conexión se ofrecen en el encabezado de la solicitud. Se llama al método base `On REST Authentication` para poder evaluar estos identificadores. Pode utilizar a lista de usuários do banco 4D ou pode utilizar sua própria tabela de identificadores.
-For more information, refer to the `On REST Authentication` database method [documentation](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html).
 
 ## Expor tabelas e campos
 
