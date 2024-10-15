@@ -15,7 +15,7 @@ Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), t
 #### Points forts
 
 - 4D 20.5 LTS is certified on Windows 11 24H2.
-- 4D 20.5 LTS is certified on macOS Sequoïa (macOS 15).
+- 4D 20.5 LTS is certified on macOS Sequoia (macOS 15).
 
 :::warning Known issue on Windows 11 24H2
 
