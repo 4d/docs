@@ -17,6 +17,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info Compatibility
+
+**PHP is deprecated in 4D**. It is now recommended to use the [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
+
+:::
+
 #### Description 
 
 <!--REF #_command_.PHP Execute.Summary-->The **PHP Execute** command can be used to execute a PHP script or function.<!-- END REF-->

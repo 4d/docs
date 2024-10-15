@@ -14,6 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info Compatibility
+
+**PHP is deprecated in 4D**. It is now recommended to use the [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
+
+:::
+
+
 #### Description 
 
 <!--REF #_command_.PHP GET OPTION.Summary-->The PHP GET OPTION command can be used to find out the current value of an option relating to the execution of PHP scripts.<!-- END REF--> 

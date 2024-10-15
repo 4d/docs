@@ -17,6 +17,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info Compatibility
+
+**PHP is deprecated in 4D**. It is now recommended to use the [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
+
+:::
+
+
 #### Description 
 
 <!--REF #_command_.PHP GET FULL RESPONSE.Summary-->The PHP GET FULL RESPONSE command lets you obtain additional information about the response returned by the PHP interpreter.<!-- END REF--> This command is particularly useful in the case of an error occurring during execution of the script. 

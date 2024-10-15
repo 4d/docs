@@ -15,6 +15,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info Compatibility
+
+**PHP is deprecated in 4D**. It is now recommended to use the [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
+
+:::
+
 #### Description 
 
 <!--REF #_command_.PHP SET OPTION.Summary-->The **PHP SET OPTION** command is used to set specific options before calling the [PHP Execute](php-execute.md) command.<!-- END REF--> The scope of this command is the current process. 
