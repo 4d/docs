@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP New subsection.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| wpSeção | Objeto | &#x1F852; | seção 4D Write Pro |
-| subSeçãoTipo | Inteiro longo | &#x1F852; | Tipo de subseção (wk first page, wk left page ou wk right page) |
-| Resultado | Objeto | &#x1F850; | Nova subseção |
+| wpSeção | Object | &rarr; | seção 4D Write Pro |
+| subSeçãoTipo | Integer | &rarr; | Tipo de subseção (wk first page, wk left page ou wk right page) |
+| Resultado | Object | &larr; | Nova subseção |
 
 <!-- END REF-->
 

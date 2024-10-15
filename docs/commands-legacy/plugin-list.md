@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PLUGIN LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| numbersArray | Integer array | &larr; | Numbers of plug-ins |
+| numbersArray | Array integer | &larr; | Numbers of plug-ins |
 | namesArray | Text array | &larr; | Names of plug-ins |
 
 <!-- END REF-->

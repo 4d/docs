@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Picture range.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rangoObj | Objeto | &#x1F852; | Rango de objetos del cual obtener imágenes |
-| Resultado | Objeto | &#x1F850; | Rango de objetos que contiene imágenes únicamente |
+| rangoObj | Object | &rarr; | Rango de objetos del cual obtener imágenes |
+| Resultado | Object | &larr; | Rango de objetos que contiene imágenes únicamente |
 
 <!-- END REF-->
 

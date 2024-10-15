@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get breaks.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objRango | Objeto | &#x1F852; | Rango o elemento o documento 4D Write Pro |
-| tipoRuptura | Entero largo | &#x1F852; | Tipo de rupturas a devolver |
-| Resultado | Collection | &#x1F850; | Colección de rangos |
+| objRango | Object | &rarr; | Rango o elemento o documento 4D Write Pro |
+| tipoRuptura | Integer | &rarr; | Tipo de rupturas a devolver |
+| Resultado | Collection | &larr; | Colección de rangos |
 
 <!-- END REF-->
 

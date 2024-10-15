@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | * | Operator | &rarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &rarr; | List reference number (if * omitted), or Name of list type object (if * passed) |
 | itemPos | Integer | &rarr; | Position of item in expanded/collapsed list(s) |
-| positionsArray | Integer array | &rarr; | Array of the positions in the expanded/collapsed list(s) |
+| positionsArray | Array integer | &rarr; | Array of the positions in the expanded/collapsed list(s) |
 
 <!-- END REF-->
 

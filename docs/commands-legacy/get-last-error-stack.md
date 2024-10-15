@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LAST ERROR STACK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| codesArray | Integer array | &larr; | Error numbers |
+| codesArray | Array integer | &larr; | Error numbers |
 | intCompArray | Text array | &larr; | Internal component codes |
 | textArray | Text array | &larr; | Text of errors |
 

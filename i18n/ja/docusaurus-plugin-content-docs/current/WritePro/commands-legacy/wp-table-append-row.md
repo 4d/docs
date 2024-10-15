@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table append row.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| tableRef | オブジェクト | &#x1F852; | テーブル参照オブジェクト |
-| value | テキスト, 数値, 時間, 日付, ピクチャー | &#x1F852; | 追加行の各セルに設定する値 |
-| 戻り値 | オブジェクト | &#x1F850; | 行レンジオブジェクト |
+| tableRef | Object | &rarr; | テーブル参照オブジェクト |
+| value | Text, Number, Time, Date, Picture | &rarr; | 追加行の各セルに設定する値 |
+| 戻り値 | Object | &larr; | 行レンジオブジェクト |
 
 <!-- END REF-->
 

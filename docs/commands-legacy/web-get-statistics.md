@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | pages | Text array | &larr; | Names of the most consulted pages |
-| hits | Integer array | &larr; | Number of hits for each page |
+| hits | Array integer | &larr; | Number of hits for each page |
 | usage | Integer | &larr; | Percentage of the cache used |
 
 <!-- END REF-->

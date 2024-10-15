@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Paragraph range.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| faixaObj | Objeto | &#x1F852; | Range or element |
-| Resultado | Objeto | &#x1F850; | Faixa de objeto direcionando apenas parágrafos |
+| faixaObj | Object | &rarr; | Range or element |
+| Resultado | Object | &larr; | Faixa de objeto direcionando apenas parágrafos |
 
 <!-- END REF-->
 

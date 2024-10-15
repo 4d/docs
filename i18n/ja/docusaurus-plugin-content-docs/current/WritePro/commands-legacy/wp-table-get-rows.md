@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table get rows.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | レンジまたは要素または4D Write Pro ドキュメント |
-| tableRef | オブジェクト | &#x1F852; | テーブル参照オブジェクト |
-| startRow &#124; wk header rows | 倍長整数, 文字 | &#x1F852; | 最初の行の位置 |
-| numRows | 倍長整数 | &#x1F852; | 取得したい行数 |
-| 戻り値 | オブジェクト | &#x1F850; | 選択された行を含む新しいテーブルレンジ |
+| targetObj | Object | &rarr; | レンジまたは要素または4D Write Pro ドキュメント |
+| tableRef | Object | &rarr; | テーブル参照オブジェクト |
+| startRow &#124; wk header rows | 倍長整数, 文字 | &rarr; | 最初の行の位置 |
+| numRows | Integer | &rarr; | 取得したい行数 |
+| 戻り値 | Object | &larr; | 選択された行を含む新しいテーブルレンジ |
 
 <!-- END REF-->
 

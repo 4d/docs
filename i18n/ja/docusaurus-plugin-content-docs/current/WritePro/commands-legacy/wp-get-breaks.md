@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get breaks.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | レンジまたは要素または4D Write Pro ドキュメント |
-| breakType | 倍長整数 | &#x1F852; | 返すブレークのタイプ |
-| 戻り値 | コレクション | &#x1F850; | レンジのコレクション |
+| targetObj | Object | &rarr; | レンジまたは要素または4D Write Pro ドキュメント |
+| breakType | Integer | &rarr; | 返すブレークのタイプ |
+| 戻り値 | Collection | &larr; | レンジのコレクション |
 
 <!-- END REF-->
 

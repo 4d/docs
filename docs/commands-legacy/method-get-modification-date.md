@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | path | Text, Text array | &rarr; | Text or Text array containing one or more method path(s) |
 | modDate | Date, Date array | &larr; | Method modification date(s) |
-| modTime | Time, Integer array | &larr; | Method modification time(s) |
+| modTime | Time, Array integer | &larr; | Method modification time(s) |
 | * | Operator | &rarr; | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->

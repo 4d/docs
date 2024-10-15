@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SET VIEW PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#x1F852; | 指定時: wpAreaはフォームオブジェクト名(文字列) 省略時: wpAreaはオブジェクトフィールドまたは変数(ドキュメント) |
-| wpArea | 文字, オブジェクト | &#x1F852; | フォームオブジェクト名(* 指定時)または4D Write Pro オブジェクト変数またはフィールド(* 省略時) |
-| wpViewProps | オブジェクト | &#x1F852; | 編集するビュープロパティ |
+| * | 演算子 | &rarr; | 指定時: wpAreaはフォームオブジェクト名(文字列) 省略時: wpAreaはオブジェクトフィールドまたは変数(ドキュメント) |
+| wpArea | Text, Object | &rarr; | フォームオブジェクト名(* 指定時)または4D Write Pro オブジェクト変数またはフィールド(* 省略時) |
+| wpViewProps | Object | &rarr; | 編集するビュープロパティ |
 
 <!-- END REF-->
 

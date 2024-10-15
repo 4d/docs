@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | arrActivities &#124; arrUUID | Object array, Text array | &larr; | Complete description of operations (object array) or<br/>Operation UUIDs (text array) |
 | arrStart | Text array | &larr; | Operation start times |
-| arrDuration | Integer array | &larr; | Operation durations in milliseconds |
+| arrDuration | Array integer | &larr; | Operation durations in milliseconds |
 | arrInfo | Text array | &larr; | Description |
 | arrDetails | Object array | &larr; | Details of context and sub-operations (if any) |
 | * | Operator | &rarr; | If passed = Get server activity |

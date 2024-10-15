@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Find next.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Objet | &#x1F852; | Plage ou élément ou document 4D Write Pro |
-| rechercherAprès | Objet | &#x1F852; | Plage après laquelle la recherche va démarrer |
-| rechercherValeur | Chaîne | &#x1F852; | Rechercher une valeur |
-| conditionRecherche | Entier long | &#x1F852; | Règle(s) de recherche |
-| remplacerValeur | Chaîne | &#x1F852; | Chaîne de remplacement |
-| Résultat | Objet | &#x1F850; | Plage de la valeur trouvée/remplacée |
+| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
+| rechercherAprès | Object | &rarr; | Plage après laquelle la recherche va démarrer |
+| rechercherValeur | Text | &rarr; | Rechercher une valeur |
+| conditionRecherche | Integer | &rarr; | Règle(s) de recherche |
+| remplacerValeur | Text | &rarr; | Chaîne de remplacement |
+| Résultat | Object | &larr; | Plage de la valeur trouvée/remplacée |
 
 <!-- END REF-->
 

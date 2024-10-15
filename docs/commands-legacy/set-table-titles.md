@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | tableTitles | Text array | &rarr; | Table names as they must appear in dialog boxes |
-| tableNumbers | Integer array | &rarr; | Actual table numbers |
+| tableNumbers | Array integer | &rarr; | Actual table numbers |
 | * | Operator | &rarr; | Use the custom names in the formula editor |
 
 <!-- END REF-->

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Import document.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| filePath | 文字 | &#x1F852; | 4D Write ドキュメント(.4w7または.4wt)へのパス、または<br/>4D Write Pro ドキュメント(.4wp)へのパス、または<br/>.docx ドキュメント(.docx)へのパス |
-| option | 倍長整数, オブジェクト | &#x1F852; | (倍長整数) HTML 式の読み込みオプション(オブジェクト型) .docx ドキュメント用の読み込みオプション |
-| 戻り値 | オブジェクト | &#x1F850; | 4D Write Proオブジェクト |
+| filePath | Text | &rarr; | 4D Write ドキュメント(.4w7または.4wt)へのパス、または<br/>4D Write Pro ドキュメント(.4wp)へのパス、または<br/>.docx ドキュメント(.docx)へのパス |
+| option | Integer, Object | &rarr; | (倍長整数) HTML 式の読み込みオプション(オブジェクト型) .docx ドキュメント用の読み込みオプション |
+| 戻り値 | Object | &larr; | 4D Write Proオブジェクト |
 
 <!-- END REF-->
 

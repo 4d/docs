@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP TABLE DELETE ROWS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objTarget | Objeto | &#x1F852; | Range ou elemento ou documento 4D Write Pro |
-| refTabela | Objeto | &#x1F852; | Referência de Tabela |
-| numLinha | Inteiro longo | &#x1F852; | número índice Linhas |
-| nbLinhas | Inteiro longo | &#x1F852; | Número linhas a apagar |
+| objTarget | Object | &rarr; | Range ou elemento ou documento 4D Write Pro |
+| refTabela | Object | &rarr; | Referência de Tabela |
+| numLinha | Integer | &rarr; | número índice Linhas |
+| nbLinhas | Integer | &rarr; | Número linhas a apagar |
 
 <!-- END REF-->
 

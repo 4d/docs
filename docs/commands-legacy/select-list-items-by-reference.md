@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | list | Integer | &rarr; | List reference number |
 | itemRef | Integer | &rarr; | Item reference number or 0 for the last item added to the list |
-| refArray | Integer array | &rarr; | Array of item reference numbers |
+| refArray | Array integer | &rarr; | Array of item reference numbers |
 
 <!-- END REF-->
 

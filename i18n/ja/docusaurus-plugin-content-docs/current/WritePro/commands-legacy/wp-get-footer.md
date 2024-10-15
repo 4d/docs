@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get footer.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | 4D Write Pro レンジ |
-| wpDoc | オブジェクト | &#x1F852; | 4D Write Pro ドキュメント |
-| sectionIndex | 倍長整数 | &#x1F852; | セクションインデックス |
-| sectionSubType | 倍長整数 | &#x1F852; | サブセクションのタイプ(wk first page、wk left page、あるいは wk right page) |
-| 戻り値 | オブジェクト | &#x1F850; | 4D Write Pro フッター |
+| targetObj | Object | &rarr; | 4D Write Pro レンジ |
+| wpDoc | Object | &rarr; | 4D Write Pro ドキュメント |
+| sectionIndex | Integer | &rarr; | セクションインデックス |
+| sectionSubType | Integer | &rarr; | サブセクションのタイプ(wk first page、wk left page、あるいは wk right page) |
+| 戻り値 | Object | &larr; | 4D Write Pro フッター |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP DELETE BOOKMARK.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| docWP | Objet | &#x1F852; | Document 4D Write Pro |
-| nomSignet | Chaîne | &#x1F852; | Nom du signet à supprimer |
+| docWP | Object | &rarr; | Document 4D Write Pro |
+| nomSignet | Text | &rarr; | Nom du signet à supprimer |
 
 <!-- END REF-->
 

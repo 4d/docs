@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SELECT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, areaWP es un nombre de objeto de formulario (cadena). Si se omite, areaWP es un campo o una variable objeto (documento). |
-| areaWP | Cadena, Objeto | &#x1F852; | Nombre del objeto de formulario (si se especifica *) o campo o variable objeto 4D Write Pro (si se omite *) |
-| targetObj | Objeto | &#x1F852; | Nombre del objeto formulario (si * se especifica) o variable objeto 4D Write Pro o campo (si * se omite) |
-| rangoInicio | Entero largo | &#x1F852; | Posición inicial del rango texto |
-| rangoFinal | Entero largo | &#x1F852; | Posición final del rango texto |
+| * | Operador | &rarr; | Si se especifica, areaWP es un nombre de objeto de formulario (cadena). Si se omite, areaWP es un campo o una variable objeto (documento). |
+| areaWP | Text, Object | &rarr; | Nombre del objeto de formulario (si se especifica *) o campo o variable objeto 4D Write Pro (si se omite *) |
+| targetObj | Object | &rarr; | Nombre del objeto formulario (si * se especifica) o variable objeto 4D Write Pro o campo (si * se omite) |
+| rangoInicio | Integer | &rarr; | Posición inicial del rango texto |
+| rangoFinal | Integer | &rarr; | Posición final del rango texto |
 
 <!-- END REF-->
 

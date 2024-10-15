@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get elements.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objAlvo | Objeto | &#x1F852; | Intervalo ou referência de elemento ou documento 4D Write Pro |
-| tipoElemento | Inteiro longo | &#x1F852; | Tipo desejado de elemento a recuperar |
-| Resultado | Collection | &#x1F850; | Coleção que contém os elementos de referência |
+| objAlvo | Object | &rarr; | Intervalo ou referência de elemento ou documento 4D Write Pro |
+| tipoElemento | Integer | &rarr; | Tipo desejado de elemento a recuperar |
+| Resultado | Collection | &larr; | Coleção que contém os elementos de referência |
 
 <!-- END REF-->
 

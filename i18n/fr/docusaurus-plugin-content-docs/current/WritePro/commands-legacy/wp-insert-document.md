@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP INSERT DOCUMENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Objet | &#x1F852; | Plage ou élément ou document 4D Write Pro |
-| docWP | Objet | &#x1F852; | Document 4D Write Pro à insérer |
-| mode | Entier long | &#x1F852; | Mode d'insertion |
-| miseAJourPlage | Entier long | &#x1F852; | Mode de mise à jour de la plage de sélection |
+| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
+| docWP | Object | &rarr; | Document 4D Write Pro à insérer |
+| mode | Integer | &rarr; | Mode d'insertion |
+| miseAJourPlage | Integer | &rarr; | Mode de mise à jour de la plage de sélection |
 
 <!-- END REF-->
 

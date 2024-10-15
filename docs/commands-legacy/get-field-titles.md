@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aTable | Table | &rarr; | Table for which you want to find out the field names |
 | fieldTitles | Text array | &larr; | Current field names |
-| fieldNums | Integer array | &larr; | Field numbers |
+| fieldNums | Array integer | &larr; | Field numbers |
 
 <!-- END REF-->
 

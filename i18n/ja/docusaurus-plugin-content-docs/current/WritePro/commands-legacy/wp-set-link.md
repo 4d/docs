@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SET LINK.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | レンジまたは要素または4D Write Pro ドキュメント |
-| linkObj | オブジェクト | &#x1F852; | ハイパーリンクの値 |
+| targetObj | Object | &rarr; | レンジまたは要素または4D Write Pro ドキュメント |
+| linkObj | Object | &rarr; | ハイパーリンクの値 |
 
 <!-- END REF-->
 

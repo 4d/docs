@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | list | Integer, Text | &rarr; | List reference number (if * omitted) Name of list type object (if * passed) |
 | value | Text | &rarr; | Value to be searched for |
 | scope | Integer | &rarr; | 0=Main list, 1=Sublist |
-| itemsArray | Integer array | &larr; | - If 2nd * omitted: array of positions of items found - If 2nd * passed: array of reference numbers of items found |
+| itemsArray | Array integer | &larr; | - If 2nd * omitted: array of positions of items found - If 2nd * passed: array of reference numbers of items found |
 | * | Operator | &rarr; | - If omitted: use position of items - If passed: use reference number of items |
 | Function result | Longint | &larr; | - If 2nd * omitted: position of item found - If 2nd * passed: reference number of item found |
 

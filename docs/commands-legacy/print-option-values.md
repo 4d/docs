@@ -11,8 +11,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | option | Integer | &rarr; | Option number |
 | namesArray | Text array | &larr; | Names of values |
-| info1Array | Integer array | &larr; | Values (1) of the option |
-| info2Array | Integer array | &larr; | Values (2) of the option |
+| info1Array | Array integer | &larr; | Values (1) of the option |
+| info2Array | Array integer | &larr; | Values (2) of the option |
 
 <!-- END REF-->
 

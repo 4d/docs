@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SET VIEW PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, wpArea es un nombre de objeto de formulario (cadena). Si se omite, wpArea es un campo de objeto o variable (documento) |
-| wpArea | Cadena, Objeto | &#x1F852; | Nombre del objeto del formulario (si se especifica *) o variable o campo del objeto 4D Write Pro (si se omite *) |
-| wpViewProps | Objeto | &#x1F852; | Propiedades vista a modificar |
+| * | Operador | &rarr; | Si se especifica, wpArea es un nombre de objeto de formulario (cadena). Si se omite, wpArea es un campo de objeto o variable (documento) |
+| wpArea | Text, Object | &rarr; | Nombre del objeto del formulario (si se especifica *) o variable o campo del objeto 4D Write Pro (si se omite *) |
+| wpViewProps | Object | &rarr; | Propiedades vista a modificar |
 
 <!-- END REF-->
 

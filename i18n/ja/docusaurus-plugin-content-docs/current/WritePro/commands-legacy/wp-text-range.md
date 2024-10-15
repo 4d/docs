@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Text range.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | 4D Write Pro ドキュメント、レンジ または 要素 |
-| startRange | 倍長整数 | &#x1F852; | エリア内でのレンジの開始のオフセット |
-| endRange | 倍長整数 | &#x1F852; | エリア内でのレンジの終わりのオフセット |
-| 戻り値 | オブジェクト | &#x1F850; | レンジオブジェクト |
+| targetObj | Object | &rarr; | 4D Write Pro ドキュメント、レンジ または 要素 |
+| startRange | Integer | &rarr; | エリア内でのレンジの開始のオフセット |
+| endRange | Integer | &rarr; | エリア内でのレンジの終わりのオフセット |
+| 戻り値 | Object | &larr; | レンジオブジェクト |
 
 <!-- END REF-->
 

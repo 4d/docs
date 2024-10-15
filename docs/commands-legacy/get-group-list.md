@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | groupNames | Text array | &larr; | Names of the groups as they appear in the Password editor window |
-| groupNumbers | Integer array | &larr; | Corresponding unique group ID numbers |
+| groupNumbers | Array integer | &larr; | Corresponding unique group ID numbers |
 
 <!-- END REF-->
 

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 | MULTI SORT ARRAY ( ptrArrayName ; sortArrayName ) |
 | Parameter | Type | Description |
 | ptrArrayName | Pointer array | &rarr; | Array of array pointers |
-| sortArrayName | Integer array | &rarr; | Sort order array (1 = sort by increasing order, -1 = sort by decreasing order, 0 = synchronization with previous sorts) |
+| sortArrayName | Array integer | &rarr; | Sort order array (1 = sort by increasing order, -1 = sort by decreasing order, 0 = synchronization with previous sorts) |
 
 <!-- END REF-->
 

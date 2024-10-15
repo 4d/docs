@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP NEW BOOKMARK.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objFaixa | Objeto | &#x1F852; | faixa 4D Write Pro |
-| nomeBookm | String | &#x1F852; | Nome da Bookmark a criar |
+| objFaixa | Object | &rarr; | faixa 4D Write Pro |
+| nomeBookm | Text | &rarr; | Nome da Bookmark a criar |
 
 <!-- END REF-->
 

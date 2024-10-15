@@ -13,8 +13,8 @@ displayed_sidebar: docs
 | pattern | Text | &rarr; | Regular expression |
 | aString | Text | &rarr; | String in which search will be done |
 | start | Integer | &rarr; | Position in aString where search will start |
-| pos_found | Integer array, Integer | &larr; | Position of occurrence |
-| length_found | Integer array, Integer | &larr; | Length of occurrence |
+| pos_found | Array integer, Integer | &larr; | Position of occurrence |
+| length_found | Array integer, Integer | &larr; | Length of occurrence |
 | * | Operator | &rarr; | If passed: only searches at position indicated |
 | Function result | Boolean | &larr; | True = search has found an occurrence; Otherwise, False. |
 | Match regex ( pattern ; aString ) -> Function result |

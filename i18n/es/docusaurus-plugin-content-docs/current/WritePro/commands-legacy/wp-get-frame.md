@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get frame.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Si se especifica, wpArea es un nombre de objeto de formulario (cadena). Si se omite, wpArea es un campo o variable objeto. |
-| wpArea | Cadena | &#x1F852; | Nombre de objeto de formulario (si se especifica *) o Variable o campo objeto 4D Write Pro (si se omite *) |
+| * | Operador | &rarr; | Si se especifica, wpArea es un nombre de objeto de formulario (cadena). Si se omite, wpArea es un campo o variable objeto. |
+| wpArea | Text | &rarr; | Nombre de objeto de formulario (si se especifica *) o Variable o campo objeto 4D Write Pro (si se omite *) |
 | textBoxID | Cadena | &#x1F858; | ID de la caja de texto (sólo se llena si una caja de texto tiene el foco) |
-| Resultado | Entero largo | &#x1F850; | Marco en el que se encuentra el cursor |
+| Resultado | Integer | &larr; | Marco en el que se encuentra el cursor |
 
 <!-- END REF-->
 

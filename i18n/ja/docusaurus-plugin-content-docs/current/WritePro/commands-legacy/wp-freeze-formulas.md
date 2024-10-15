@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP FREEZE FORMULAS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | レンジまたは要素または4D Write Pro ドキュメント |
-| recompute | 倍長整数 | &#x1F852; | Option to control recomputing |
+| targetObj | Object | &rarr; | レンジまたは要素または4D Write Pro ドキュメント |
+| recompute | Integer | &rarr; | Option to control recomputing |
 
 <!-- END REF-->
 

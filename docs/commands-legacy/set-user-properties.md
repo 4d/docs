@@ -16,7 +16,7 @@ displayed_sidebar: docs
 | password | Text | &rarr; | New (unencrypted) password, or * to leave the password unchanged |
 | nbLogin | Integer | &rarr; | New number of logins to the database (Binary databases only) |
 | lastLogin | Date | &rarr; | New date of last login to the database (Binary databases only) |
-| memberships | Integer array | &rarr; | ID numbers of groups to which the user belongs |
+| memberships | Array integer | &rarr; | ID numbers of groups to which the user belongs |
 | groupOwner | Integer | &rarr; | Reference number of user group owner (Binary databases only) |
 | Function result | Longint | &larr; | Unique ID number of new user |
 

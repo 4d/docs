@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aField | Field | &rarr; | Indexable field to use for data |
 | array | Array | &larr; | Array to receive field data |
-| countArray | Integer array, Real array | &larr; | Array to receive count of each value |
+| countArray | Array integer, Real array | &larr; | Array to receive count of each value |
 
 <!-- END REF-->
 

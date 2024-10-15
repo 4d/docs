@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP INSERT DOCUMENT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objRango | Objeto | &#x1F852; | Rango |
-| docWP | Objeto | &#x1F852; | Documento 4D Write Pro |
-| modo | Entero largo | &#x1F852; | Modo de inserción |
-| actRango | Entero largo | &#x1F852; | Modo de actualización del rango |
+| objRango | Object | &rarr; | Rango |
+| docWP | Object | &rarr; | Documento 4D Write Pro |
+| modo | Integer | &rarr; | Modo de inserción |
+| actRango | Integer | &rarr; | Modo de actualización del rango |
 
 <!-- END REF-->
 

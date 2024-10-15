@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP EXPORT DOCUMENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| docWP | Objet | &#x1F852; | Variable 4D Write Pro |
-| cheminFichier | Chaîne | &#x1F852; | Chemin du fichier d'export |
-| format | Entier long | &#x1F852; | Format de sortie du document |
-| options | Objet, Entier long | &#x1F852; | Options d'export |
+| docWP | Object | &rarr; | Variable 4D Write Pro |
+| cheminFichier | Text | &rarr; | Chemin du fichier d'export |
+| format | Integer | &rarr; | Format de sortie du document |
+| options | Object, Integer | &rarr; | Options d'export |
 
 <!-- END REF-->
 

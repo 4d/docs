@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP New footer.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| wpSection | Objeto | &#x1F852; | Sección o subsección 4D Write Pro |
-| Resultado | Objeto | &#x1F850; | Pie 4D Write Pro |
+| wpSection | Object | &rarr; | Sección o subsección 4D Write Pro |
+| Resultado | Object | &larr; | Pie 4D Write Pro |
 
 <!-- END REF-->
 

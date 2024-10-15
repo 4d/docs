@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get breaks.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objAlvo | Objeto | &#x1F852; | Range/faixa de seleção ou elemento ou documento 4D write Pro |
-| tipoQuebra | Inteiro longo | &#x1F852; | Tipo de quebra a retornar |
-| Resultado | Collection | &#x1F850; | Coleção de ranges/faixas de seleção |
+| objAlvo | Object | &rarr; | Range/faixa de seleção ou elemento ou documento 4D write Pro |
+| tipoQuebra | Integer | &rarr; | Tipo de quebra a retornar |
+| Resultado | Collection | &larr; | Coleção de ranges/faixas de seleção |
 
 <!-- END REF-->
 

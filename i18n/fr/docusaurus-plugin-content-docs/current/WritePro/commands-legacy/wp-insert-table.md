@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Insert table.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Objet | &#x1F852; | Plage ou élément ou document 4D Write Pro |
-| mode | Entier long | &#x1F852; | Mode d'insertion |
-| miseAJourPlage | Entier long | &#x1F852; | Mode de mise à jour de la plage de sélection |
-| nbCols | Entier long | &#x1F852; | Nombre de colonnes à créer dans le tableau |
-| nbLignes | Entier long | &#x1F852; | Nombre de lignes à créer dans le tableau |
-| Résultat | Objet | &#x1F850; | Objet listant les propriétés du tableau |
+| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
+| mode | Integer | &rarr; | Mode d'insertion |
+| miseAJourPlage | Integer | &rarr; | Mode de mise à jour de la plage de sélection |
+| nbCols | Integer | &rarr; | Nombre de colonnes à créer dans le tableau |
+| nbLignes | Integer | &rarr; | Nombre de lignes à créer dans le tableau |
+| Résultat | Object | &larr; | Objet listant les propriétés du tableau |
 
 <!-- END REF-->
 

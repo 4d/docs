@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resType | Text | &rarr; | 4-character resource type |
-| resIDs | Integer array | &larr; | Resource ID numbers for resources of this type |
+| resIDs | Array integer | &larr; | Resource ID numbers for resources of this type |
 | resNames | Text array | &larr; | Resource names for resources of this type |
 | resFile | Time | &rarr; | Resource file reference number, or all open resource files, if omitted |
 

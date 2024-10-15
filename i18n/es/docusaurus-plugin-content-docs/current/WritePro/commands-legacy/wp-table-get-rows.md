@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table get rows.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objTarget | Objeto | &#x1F852; | Rango o elemento o documento 4D Write Pro |
-| refTabla | Objeto | &#x1F852; | Referencia de tabla |
-| lineaIni | Entero largo, Cadena | &#x1F852; | Posición de la primera línea |
-| numLíneas | Entero largo | &#x1F852; | Número de líneas a obtener |
-| Resultado | Objeto | &#x1F850; | Nuevo rango de tablas que contiene las filas seleccionadas |
+| objTarget | Object | &rarr; | Rango o elemento o documento 4D Write Pro |
+| refTabla | Object | &rarr; | Referencia de tabla |
+| lineaIni | Integer, Text | &rarr; | Posición de la primera línea |
+| numLíneas | Integer | &rarr; | Número de líneas a obtener |
+| Resultado | Object | &larr; | Nuevo rango de tablas que contiene las filas seleccionadas |
 
 <!-- END REF-->
 

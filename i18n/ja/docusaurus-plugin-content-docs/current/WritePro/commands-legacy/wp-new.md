@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP New.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| source | 文字, BLOB, オブジェクト | &#x1F852; | 文字列: HTML ソース<br/>BLOB: 4D Write Pro ドキュメント(.4wp)あるいは4D Write Blob ドキュメント(.4w7/.4wt)<br/>Object: レンジあるいは要素または4D Write Pro ドキュメント |
-| option | 倍長整数 | &#x1F852; | HTML 式の読み込みオプション |
-| 戻り値 | オブジェクト | &#x1F850; | 4D Write Pro オブジェクト |
+| source | Text, Blob, Object | &rarr; | 文字列: HTML ソース<br/>BLOB: 4D Write Pro ドキュメント(.4wp)あるいは4D Write Blob ドキュメント(.4w7/.4wt)<br/>Object: レンジあるいは要素または4D Write Pro ドキュメント |
+| option | Integer | &rarr; | HTML 式の読み込みオプション |
+| 戻り値 | Object | &larr; | 4D Write Pro オブジェクト |
 
 <!-- END REF-->
 

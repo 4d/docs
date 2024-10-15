@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Picture range.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Objet | &#x1F852; | Plage ou élément |
-| Résultat | Objet | &#x1F850; | Plage contenant uniquement les images |
+| objCible | Object | &rarr; | Plage ou élément |
+| Résultat | Object | &larr; | Plage contenant uniquement les images |
 
 <!-- END REF-->
 

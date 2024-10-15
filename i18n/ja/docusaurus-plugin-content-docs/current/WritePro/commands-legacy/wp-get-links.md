@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get links.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetObj | オブジェクト | &#x1F852; | レンジまたは要素または4D Write Proドキュメント |
-| 戻り値 | コレクション | &#x1F850; | リンクのコレクション |
+| targetObj | Object | &rarr; | レンジまたは要素または4D Write Proドキュメント |
+| 戻り値 | Collection | &larr; | リンクのコレクション |
 
 <!-- END REF-->
 

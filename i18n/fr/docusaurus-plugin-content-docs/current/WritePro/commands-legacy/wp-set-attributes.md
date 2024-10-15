@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SET ATTRIBUTES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Objet | &#x1F852; | Plage ou élément ou document 4D Write Pro |
-| nomAttribut | Texte | &#x1F852; | Nom d'attribut dont vous souhaitez fixer la valeur |
-| valeurAttribut | Texte, Numérique, Objet, Collection, Image, Date | &#x1F852; | Nouvelle valeur de l'attribut |
+| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
+| nomAttribut | Text | &rarr; | Nom d'attribut dont vous souhaitez fixer la valeur |
+| valeurAttribut | Text, Number, Object, Collection, Picture, Date | &rarr; | Nouvelle valeur de l'attribut |
 
 <!-- END REF-->
 

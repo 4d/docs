@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Text range.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| wpArea | Objeto | &#x1F852; | Objeto variável ou campo 4D Write Pro |
-| inicioFaixa | Inteiro longo | &#x1F852; | Início offset da faixa de texto |
-| fimFaixa | Inteiro longo | &#x1F852; | Final offset da faixa texto |
-| Resultado | Objeto | &#x1F850; | Faixa de objeto |
+| wpArea | Object | &rarr; | Objeto variável ou campo 4D Write Pro |
+| inicioFaixa | Integer | &rarr; | Início offset da faixa de texto |
+| fimFaixa | Integer | &rarr; | Final offset da faixa texto |
+| Resultado | Object | &larr; | Faixa de objeto |
 
 <!-- END REF-->
 

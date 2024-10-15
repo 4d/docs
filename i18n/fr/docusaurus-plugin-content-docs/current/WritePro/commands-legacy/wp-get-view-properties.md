@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get view properties.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#x1F852; | Si spécifié, zoneWP est un nom d'objet de formulaire (chaîne). Si omis, zoneWP est un champ ou une variable objet |
-| zoneWP | Chaîne, Objet | &#x1F852; | Nom d'objet de formulaire (si * spécifié) ou champ ou variable objet 4D Write Pro (si * omis) |
-| Résultat | Objet | &#x1F850; | Attributs vue courants |
+| * | Opérateur | &rarr; | Si spécifié, zoneWP est un nom d'objet de formulaire (chaîne). Si omis, zoneWP est un champ ou une variable objet |
+| zoneWP | Text, Object | &rarr; | Nom d'objet de formulaire (si * spécifié) ou champ ou variable objet 4D Write Pro (si * omis) |
+| Résultat | Object | &larr; | Attributs vue courants |
 
 <!-- END REF-->
 

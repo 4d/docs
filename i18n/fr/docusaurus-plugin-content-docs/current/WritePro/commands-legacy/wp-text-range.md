@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Text range.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Objet | &#x1F852; | Plage ou élément ou document 4D Write Pro |
-| débutPlage | Entier long | &#x1F852; | Position du début de la plage dans la zone |
-| finPlage | Entier long | &#x1F852; | Position de la fin de la plage dans la zone |
-| Résultat | Objet | &#x1F850; | Nouvel objet plage |
+| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
+| débutPlage | Integer | &rarr; | Position du début de la plage dans la zone |
+| finPlage | Integer | &rarr; | Position de la fin de la plage dans la zone |
+| Résultat | Object | &larr; | Nouvel objet plage |
 
 <!-- END REF-->
 

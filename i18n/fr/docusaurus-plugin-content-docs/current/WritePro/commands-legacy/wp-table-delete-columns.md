@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP TABLE DELETE COLUMNS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Objet | &#x1F852; | Plage ou élément ou document 4D View Pro |
-| refTableau | Objet | &#x1F852; | Référence de tableau |
-| numCol | Entier long | &#x1F852; | Numéro de colonne |
-| nbCols | Entier long | &#x1F852; | Nombre de colonnes à supprimer (valeur par défaut=1) |
+| objCible | Object | &rarr; | Plage ou élément ou document 4D View Pro |
+| refTableau | Object | &rarr; | Référence de tableau |
+| numCol | Integer | &rarr; | Numéro de colonne |
+| nbCols | Integer | &rarr; | Nombre de colonnes à supprimer (valeur par défaut=1) |
 
 <!-- END REF-->
 

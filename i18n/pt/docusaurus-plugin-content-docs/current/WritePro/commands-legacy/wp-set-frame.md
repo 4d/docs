@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP SET FRAME.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#x1F852; | Se especificado, wpArea é um nome de objeto de formulário (string). Se omitido, wpArea e um campo ou variável objeto |
-| wpArea | String | &#x1F852; | nome objeto Form (se * especificado) ou variável objeto 4D Write Pro ou campo (se * for omitido) |
-| frameSelector | Inteiro longo | &#x1F852; | Frame/quadro onde o cursor é estabelecido |
-| idTextBox | String | &#x1F852; | id da caixa de texto onde o cursor deve ser estabelecido |
+| * | Operador | &rarr; | Se especificado, wpArea é um nome de objeto de formulário (string). Se omitido, wpArea e um campo ou variável objeto |
+| wpArea | Text | &rarr; | nome objeto Form (se * especificado) ou variável objeto 4D Write Pro ou campo (se * for omitido) |
+| frameSelector | Integer | &rarr; | Frame/quadro onde o cursor é estabelecido |
+| idTextBox | Text | &rarr; | id da caixa de texto onde o cursor deve ser estabelecido |
 
 <!-- END REF-->
 

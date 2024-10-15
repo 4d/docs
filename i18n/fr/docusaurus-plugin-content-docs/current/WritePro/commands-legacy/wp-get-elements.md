@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get elements.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objCible | Objet | &#x1F852; | Plage ou élément ou document 4D Write Pro |
-| typeElement | Entier long | &#x1F852; | Choix du type d'éléments à retrouver |
-| Résultat | Collection | &#x1F850; | Collection contenant des références d'éléments |
+| objCible | Object | &rarr; | Plage ou élément ou document 4D Write Pro |
+| typeElement | Integer | &rarr; | Choix du type d'éléments à retrouver |
+| Résultat | Collection | &larr; | Collection contenant des références d'éléments |
 
 <!-- END REF-->
 

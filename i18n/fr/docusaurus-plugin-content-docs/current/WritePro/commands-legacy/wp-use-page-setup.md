@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WP USE PAGE SETUP.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| docWP | Objet | &#x1F852; | Document 4D Write Pro |
+| docWP | Object | &rarr; | Document 4D Write Pro |
 
 <!-- END REF-->
 

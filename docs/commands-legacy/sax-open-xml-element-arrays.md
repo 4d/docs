@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | document | Time | &rarr; | Reference of open document |
 | tag | Text | &rarr; | Name of element to open |
 | attribNamesArray | Text array | &rarr; | Array of attribute names |
-| attribValuesArray | Text array, Integer array, Date array, Real array, Picture array, Boolean array | &rarr; | Array of attribute values |
+| attribValuesArray | Text array, Array integer, Date array, Real array, Picture array, Boolean array | &rarr; | Array of attribute values |
 
 <!-- END REF-->
 

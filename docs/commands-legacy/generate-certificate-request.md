@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | privKey | Blob | &rarr; | BLOB containing the private key |
 | certifRequest | Blob | &larr; | BLOB receiving the certificate request |
-| codeArray | Integer array | &rarr; | Information code list |
+| codeArray | Array integer | &rarr; | Information code list |
 | nameArray | Text array | &rarr; | Name list |
 
 <!-- END REF-->

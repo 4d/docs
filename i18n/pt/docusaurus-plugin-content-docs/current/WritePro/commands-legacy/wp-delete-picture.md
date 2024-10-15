@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WP DELETE PICTURE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| imgObj | Objeto | &#x1F852; | Objeto imagem (tipo inline ou ancorada) |
+| imgObj | Object | &rarr; | Objeto imagem (tipo inline ou ancorada) |
 
 <!-- END REF-->
 

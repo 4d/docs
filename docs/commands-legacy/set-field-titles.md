@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aTable | Table | &rarr; | Table for which to set the field titles |
 | fieldTitles | Text array | &rarr; | Field names as they must appear in dialog boxes |
-| fieldNumbers | Integer array | &rarr; | Actual field numbers |
+| fieldNumbers | Array integer | &rarr; | Actual field numbers |
 | * | Operator |  &rarr; | Use the custom names in the formula editor |
 
 <!-- END REF-->

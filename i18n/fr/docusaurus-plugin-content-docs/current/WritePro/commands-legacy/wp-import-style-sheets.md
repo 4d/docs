@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP IMPORT STYLE SHEETS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| docCible | Objet | &#x1F852; | Document 4D Write Pro qui reçoit les feuilles de style |
-| docSource | Objet | &#x1F852; | Document 4D Write Pro contenant les feuilles de style à lire |
+| docCible | Object | &rarr; | Document 4D Write Pro qui reçoit les feuilles de style |
+| docSource | Object | &rarr; | Document 4D Write Pro contenant les feuilles de style à lire |
 
 <!-- END REF-->
 

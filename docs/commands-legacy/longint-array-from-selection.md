@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &rarr; | Table of the current selection |
-| recordArray | Integer array | &larr; | Array of record numbers |
+| recordArray | Array integer | &larr; | Array of record numbers |
 | selection | Text | &rarr; | Name of the named selection or the current selection if this parameter is omitted |
 
 <!-- END REF-->

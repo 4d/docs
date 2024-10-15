@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WP DELETE TEXT BOX.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| textBox | Objeto | &#x1F852; | Caja de texto |
+| textBox | Object | &rarr; | Caja de texto |
 
 <!-- END REF-->
 
