@@ -280,11 +280,11 @@ RESTサーバーを開始/停止します。 [RESTサーバー設定](../REST/co
 
 :::info 非推奨
 
-4D 20 R6 以降、**このセクションは非推奨** となっています。 現在のプロジェクト設定が古く、アップグレードが必要な場合は、このセクションに **ds.authentify() 関数を通しての REST認証を有効化** ボタン (後述参照) が表示されます。 プロジェクトがすでに [強制ログイン](../REST/configuration.md#restアクセスの制御) モードに対応している場合にはこのセクションは存在しないため、この段落は無視してください。
+4D 20 R6 以降、**このセクションは非推奨** となっています。 現在のプロジェクト設定が古く、アップグレードが必要な場合は、このセクションに **ds.authentify() 関数を通しての REST認証を有効化** ボタン (後述参照) が表示されます。 If your project is already compatible with the [Force login](../REST/authUsers.md#force-login-mode) mode, the section is missing and you can ignore this paragraph.
 
 :::
 
-4Dプロジェクトで RESTアクセスを制御および管理する推奨方法については、[RESTアクセスの制御](../REST/configuration.md#restアクセスの制御) を参照ください。
+See [Users and sessions](../REST/authUsers.md) to know the recommended way to control and manage REST access in your 4D projects.
 
 #### ds.authentify() 関数を通しての REST認証を有効化
 
