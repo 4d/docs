@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.MOVE DOCUMENT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaFonte | Text | &srarr; | Nome da rota completa do documento existente |
-| rotaDestino | Text | &srarr; | Rota de acesso destino |
+| rotaFonte | Text | &rarr; | Nome da rota completa do documento existente |
+| rotaDestino | Text | &rarr; | Rota de acesso destino |
 
 <!-- END REF-->
 

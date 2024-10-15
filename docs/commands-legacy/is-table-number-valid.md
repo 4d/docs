@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is table number valid.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tableNum | Integer | &srarr; | Table number |
+| tableNum | Integer | &rarr; | Table number |
 | Function result | Boolean | &larr; | True = table exists in database, False = table does not exist in database |
 
 <!-- END REF-->

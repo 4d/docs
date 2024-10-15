@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Find window.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| esquerda | Integer | &srarr; | Coordenada esquerda global |
-| superior | Integer | &srarr; | Coordenada superior global |
-| parteJanela | Integer | &harr; | Número de parte ID da janela |
+| esquerda | Integer | &rarr; | Coordenada esquerda global |
+| superior | Integer | &rarr; | Coordenada superior global |
+| parteJanela | Integer | &larr; | Número de parte ID da janela |
 | Resultado | Integer | &larr; | Número de referência de janela |
 
 <!-- END REF-->

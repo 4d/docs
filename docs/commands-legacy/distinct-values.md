@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DISTINCT VALUES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &srarr; | Indexable field to use for data |
-| array | Array | &harr; | Array to receive field data |
-| countArray | Integer array, Real array | &harr; | Array to receive count of each value |
+| aField | Field | &rarr; | Indexable field to use for data |
+| array | Array | &larr; | Array to receive field data |
+| countArray | Integer array, Real array | &larr; | Array to receive count of each value |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DIFFERENCE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| conjunto1 | Text | &srarr; | Conjunto inicial |
-| conjunto2 | Text | &srarr; | Conjunto a restar |
-| resultado | Text | &srarr; | Conjunto resultante |
+| conjunto1 | Text | &rarr; | Conjunto inicial |
+| conjunto2 | Text | &rarr; | Conjunto a restar |
+| resultado | Text | &rarr; | Conjunto resultante |
 
 <!-- END REF-->
 

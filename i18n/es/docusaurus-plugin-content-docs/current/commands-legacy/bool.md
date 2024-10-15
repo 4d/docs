@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Bool.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| expresion | Expression | &srarr; | Expresión para la cual devolver la forma booleana |
+| expresion | Expression | &rarr; | Expresión para la cual devolver la forma booleana |
 | Resultado | Boolean | &larr; | Forma booleana de la expresión |
 
 <!-- END REF-->

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.REMOVE FROM SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Current record's table, or Default table, if omitted |
-| set | Text | &srarr; | Name of the set from which to remove the current record |
+| aTable | Table | &rarr; | Current record's table, or Default table, if omitted |
+| set | Text | &rarr; | Name of the set from which to remove the current record |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM REMOVE XML ATTRIBUTE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| elementoRef | Text | &srarr; | Elemento de referência XML |
-| nomeAtrib | Text | &srarr; | Atributo a ser removido |
+| elementoRef | Text | &rarr; | Elemento de referência XML |
+| nomeAtrib | Text | &rarr; | Atributo a ser removido |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM SET XML DECLARATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &srarr; | XML element reference |
-| encoding | Text | &srarr; | XML document character set |
-| standalone | Boolean | &srarr; | True = document is standalone False (default) = document is not standalone |
-| indentation | Boolean | &srarr; | *** Obsolete, do not use *** |
+| elementRef | Text | &rarr; | XML element reference |
+| encoding | Text | &rarr; | XML document character set |
+| standalone | Boolean | &rarr; | True = document is standalone False (default) = document is not standalone |
+| indentation | Boolean | &rarr; | *** Obsolete, do not use *** |
 
 <!-- END REF-->
 

@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.SET LIST PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| liste | Integer | &srarr; | Numéro de référence de la liste |
-| apparence | Integer | &srarr; | *** paramètre obsolète, toujours passer 0 *** |
-| icône | Integer | &srarr; | *** Paramètre obsolète, toujours passer 0 *** |
-| hauteurLigne | Integer | &srarr; | Hauteur minimale de la ligne (pixels) |
-| doubleClic | Integer | &srarr; | Déploiement/contraction sur double-clic 0 = autoriser, 1= empêcher |
-| multiSélection | Integer | &srarr; | Sélections multiples 0 = interdire (défaut), 1 = autoriser |
-| modifiable | Integer | &srarr; | Enumération modifiable 0 = non, 1 = oui (défaut) |
+| liste | Integer | &rarr; | Numéro de référence de la liste |
+| apparence | Integer | &rarr; | *** paramètre obsolète, toujours passer 0 *** |
+| icône | Integer | &rarr; | *** Paramètre obsolète, toujours passer 0 *** |
+| hauteurLigne | Integer | &rarr; | Hauteur minimale de la ligne (pixels) |
+| doubleClic | Integer | &rarr; | Déploiement/contraction sur double-clic 0 = autoriser, 1= empêcher |
+| multiSélection | Integer | &rarr; | Sélections multiples 0 = interdire (défaut), 1 = autoriser |
+| modifiable | Integer | &rarr; | Enumération modifiable 0 = non, 1 = oui (défaut) |
 
 <!-- END REF-->
 

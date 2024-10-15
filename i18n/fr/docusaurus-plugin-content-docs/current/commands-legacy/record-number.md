@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Record number.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table de laquelle vous souhaitez obtenir le numéro de l'enregistrement courant ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &rarr; | Table de laquelle vous souhaitez obtenir le numéro de l'enregistrement courant ou Table par défaut si ce paramètre est omis |
 | Résultat | Integer | &larr; | Numéro d'enregistrement courant |
 
 <!-- END REF-->

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Modified.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | Field | &srarr; | テストするフィールド |
+| aField | Field | &rarr; | テストするフィールド |
 | 戻り値 | Boolean | &larr; | フィールドに新しい値が代入されていればTrue, そうでなければFalse |
 
 <!-- END REF-->

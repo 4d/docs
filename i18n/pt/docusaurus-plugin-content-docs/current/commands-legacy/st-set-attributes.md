@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.ST SET ATTRIBUTES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo. |
-| objeto | any | &srarr; | Nome de objeto (se * for especificado) ou campo ou variável texto (se * for omitido) |
-| inicioSel | Integer | &srarr; | Início da nova seleção de texto |
-| fimSel | Integer | &srarr; | Fim da nova seleção de texto |
-| nomeAtrib | Text | &srarr; | Atributo a definir |
-| valorAtributo | Text, Integer | &srarr; | Novo valor do atributo |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo. |
+| objeto | any | &rarr; | Nome de objeto (se * for especificado) ou campo ou variável texto (se * for omitido) |
+| inicioSel | Integer | &rarr; | Início da nova seleção de texto |
+| fimSel | Integer | &rarr; | Fim da nova seleção de texto |
+| nomeAtrib | Text | &rarr; | Atributo a definir |
+| valorAtributo | Text, Integer | &rarr; | Novo valor do atributo |
 
 <!-- END REF-->
 

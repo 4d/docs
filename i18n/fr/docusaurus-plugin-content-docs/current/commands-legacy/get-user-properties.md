@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.GET USER PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| réfUtilisateur | Integer | &srarr; | Numéro de référence unique de l'utilisateur |
-| nom | Text | &harr; | Nom de l'utilisateur |
-| démarrage | Text | &harr; | Nom de la méthode de démarrage |
-| motDePasse | Text | &harr; | *** obsolète (chaîne vide)  *** |
-| nbUtilisations | Integer | &harr; | Nombre d'utilisations de la base |
-| dernièreUtilisation | Date | &harr; | Date de la dernière utilisation de la base |
-| adhésions | Integer array | &harr; | Numéros de référence des groupes auxquels l'utilisateur appartient |
-| groupePropriétaire | Integer | &harr; | Numéro de référence du groupe propriétaire de l’utilisateur |
+| réfUtilisateur | Integer | &rarr; | Numéro de référence unique de l'utilisateur |
+| nom | Text | &larr; | Nom de l'utilisateur |
+| démarrage | Text | &larr; | Nom de la méthode de démarrage |
+| motDePasse | Text | &larr; | *** obsolète (chaîne vide)  *** |
+| nbUtilisations | Integer | &larr; | Nombre d'utilisations de la base |
+| dernièreUtilisation | Date | &larr; | Date de la dernière utilisation de la base |
+| adhésions | Integer array | &larr; | Numéros de référence des groupes auxquels l'utilisateur appartient |
+| groupePropriétaire | Integer | &larr; | Numéro de référence du groupe propriétaire de l’utilisateur |
 
 <!-- END REF-->
 

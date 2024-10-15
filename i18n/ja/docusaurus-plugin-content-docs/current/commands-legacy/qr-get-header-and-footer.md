@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET HEADER AND FOOTER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | エリア参照 |
-| selector | Integer | &srarr; | 1 = ヘッダ, 2 = フッタ |
-| leftTitle | Text | &harr; | 左側に表示されるテキスト |
-| centerTitle | Text | &harr; | 中央に表示されるテキスト |
-| rightTitle | Text | &harr; | 右側に表示されるテキスト |
-| height | Integer | &harr; | ヘッダまたはフッタの高さ |
-| picture | Picture | &harr; | 表示するピクチャ |
-| pictAlignment | Integer | &harr; | ピクチャの整列属性 |
+| area | Integer | &rarr; | エリア参照 |
+| selector | Integer | &rarr; | 1 = ヘッダ, 2 = フッタ |
+| leftTitle | Text | &larr; | 左側に表示されるテキスト |
+| centerTitle | Text | &larr; | 中央に表示されるテキスト |
+| rightTitle | Text | &larr; | 右側に表示されるテキスト |
+| height | Integer | &larr; | ヘッダまたはフッタの高さ |
+| picture | Picture | &larr; | 表示するピクチャ |
+| pictAlignment | Integer | &larr; | ピクチャの整列属性 |
 
 <!-- END REF-->
 

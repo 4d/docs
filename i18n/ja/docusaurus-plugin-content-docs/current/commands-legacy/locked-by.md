@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LOCKED BY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | レコードロックをテストするテーブル, または 省略時、デフォルトテーブル |
-| process | Integer | &harr; | プロセス参照番号 |
-| 4Duser | Text | &harr; | 4Dユーザ名 |
-| sessionUser | Text | &harr; | ワークセッションを開いているユーザ |
-| processName | Text | &harr; | プロセス名 |
+| aTable | Table | &rarr; | レコードロックをテストするテーブル, または 省略時、デフォルトテーブル |
+| process | Integer | &larr; | プロセス参照番号 |
+| 4Duser | Text | &larr; | 4Dユーザ名 |
+| sessionUser | Text | &larr; | ワークセッションを開いているユーザ |
+| processName | Text | &larr; | プロセス名 |
 
 <!-- END REF-->
 

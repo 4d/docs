@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Cache info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| dbFilter | Object | &srarr; | 返す属性の一覧を定義(データベースごとにフィルター) |
+| dbFilter | Object | &rarr; | 返す属性の一覧を定義(データベースごとにフィルター) |
 | 戻り値 | Object | &larr; | キャッシュについての情報 |
 
 <!-- END REF-->

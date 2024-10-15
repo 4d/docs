@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP INSERT PICTURE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | Range or element or 4D Write Pro document |
-| picture | Picture | &#x1F852; | Picture field or variable, or path to picture file on disk |
-| mode | Longint | &#x1F852; | Insertion mode |
-| rangeUpdate | Longint | &#x1F852; | Range update mode |
+| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
+| picture | Picture | &rarr; | Picture field or variable, or path to picture file on disk |
+| mode | Longint | &rarr; | Insertion mode |
+| rangeUpdate | Longint | &rarr; | Range update mode |
 
 <!-- END REF-->
 

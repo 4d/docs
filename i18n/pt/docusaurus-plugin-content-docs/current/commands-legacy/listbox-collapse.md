@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX COLLAPSE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | any | &srarr; | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
-| recursivo | Boolean | &srarr; | True = contrai os subníveis False = não contrai os subníveis |
-| seletor | Integer | &srarr; | Parte do list box a contrair |
-| linha &#124; nivel | Inteiro longo | &srarr; | Número de quebra de fila a colapsar ou <br/>Número de nível de list box a contrair |
-| coluna | Integer | &srarr; | Número de quebra de coluna a contrair |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
+| objeto | any | &rarr; | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
+| recursivo | Boolean | &rarr; | True = contrai os subníveis False = não contrai os subníveis |
+| seletor | Integer | &rarr; | Parte do list box a contrair |
+| linha &#124; nivel | Inteiro longo | &rarr; | Número de quebra de fila a colapsar ou <br/>Número de nível de list box a contrair |
+| coluna | Integer | &rarr; | Número de quebra de coluna a contrair |
 
 <!-- END REF-->
 

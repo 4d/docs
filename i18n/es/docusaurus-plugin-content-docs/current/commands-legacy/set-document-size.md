@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DOCUMENT SIZE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| docRef | Time | &srarr; | Número de referencia del documento |
-| tamaño | Real | &srarr; | Nuevo tamaño expresado en bytes |
+| docRef | Time | &rarr; | Número de referencia del documento |
+| tamaño | Real | &rarr; | Nuevo tamaño expresado en bytes |
 
 <!-- END REF-->
 

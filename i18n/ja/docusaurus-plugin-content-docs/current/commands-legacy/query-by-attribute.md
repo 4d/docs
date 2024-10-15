@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY BY ATTRIBUTE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | セレクションまたはレコードを返すテーブル 省略時:デフォルトテーブル |
-| conjOp | * | &srarr; | 複数のクエリ(あれば)を連結する際に使用する結合演算子 |
-| objectField | Field | &srarr; | 属性をクエリするオブジェクトフィールド |
-| attributePath | Text | &srarr; | 属性の名前またはパス |
-| queryOp | Text, * | &srarr; | クエリ演算子(比較演算子) |
-| value | Text, Number, Date, Time | &srarr; | 比較する値 |
-| * | 演算子 | &srarr; | クエリ継続フラグ |
+| aTable | Table | &rarr; | セレクションまたはレコードを返すテーブル 省略時:デフォルトテーブル |
+| conjOp | * | &rarr; | 複数のクエリ(あれば)を連結する際に使用する結合演算子 |
+| objectField | Field | &rarr; | 属性をクエリするオブジェクトフィールド |
+| attributePath | Text | &rarr; | 属性の名前またはパス |
+| queryOp | Text, * | &rarr; | クエリ演算子(比較演算子) |
+| value | Text, Number, Date, Time | &rarr; | 比較する値 |
+| * | 演算子 | &rarr; | クエリ継続フラグ |
 
 <!-- END REF-->
 

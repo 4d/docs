@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Path to object.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text | &srarr; | Pathname |
-| pathType | Integer | &srarr; | Type of path syntax: System (default) or Posix |
+| path | Text | &rarr; | Pathname |
+| pathType | Integer | &rarr; | Type of path syntax: System (default) or Posix |
 | Function result | Object | &larr; | Object describing the path contents |
 
 <!-- END REF-->

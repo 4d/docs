@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SET ROOT FOLDER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| pastaRaiz | Text | &srarr; | Rota de acesso da pasta raiz do webserver |
+| pastaRaiz | Text | &rarr; | Rota de acesso da pasta raiz do webserver |
 
 <!-- END REF-->
 

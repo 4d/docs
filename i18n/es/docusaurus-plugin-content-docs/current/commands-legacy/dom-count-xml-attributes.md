@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Count XML attributes.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Text | &srarr; | Referencia del elemento XML |
+| elementRef | Text | &rarr; | Referencia del elemento XML |
 | Resultado | Integer | &larr; | Número de atributos |
 
 <!-- END REF-->

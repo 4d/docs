@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Dec.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombre | Real | &srarr; | Valeur dont voulez obtenir la partie décimale |
+| nombre | Real | &rarr; | Valeur dont voulez obtenir la partie décimale |
 | Résultat | Real | &larr; | Partie décimale de nombre |
 
 <!-- END REF-->

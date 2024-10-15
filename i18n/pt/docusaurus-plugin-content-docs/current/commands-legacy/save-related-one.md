@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SAVE RELATED ONE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campo | Field | &srarr; | Campo Muitos |
+| campo | Field | &rarr; | Campo Muitos |
 
 <!-- END REF-->
 

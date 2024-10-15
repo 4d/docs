@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Old.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &srarr; | Field for which to return old value |
+| aField | Field | &rarr; | Field for which to return old value |
 | Function result | Expression | &larr; | Original field value |
 
 <!-- END REF-->

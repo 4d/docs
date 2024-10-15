@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.MODIFY RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | データ入力に使用するテーブル, または 省略した場合デフォルトテーブル |
-| * | Operator |  &srarr; | スクロールバーを隠す |
+| aTable | Table | &rarr; | データ入力に使用するテーブル, または 省略した場合デフォルトテーブル |
+| * | Operator |  &rarr; | スクロールバーを隠す |
 
 <!-- END REF-->
 

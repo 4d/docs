@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Type.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldVar | Field, Variable | &srarr; | field or variable to be tested |
+| fieldVar | Field, Variable | &rarr; | field or variable to be tested |
 | Function result | Longint | &larr; | Data type number |
 
 <!-- END REF-->

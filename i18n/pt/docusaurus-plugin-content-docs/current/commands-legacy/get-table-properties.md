@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.GET TABLE PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| ponTabela&#124;NumTabela | Ponteiro, Inteiro longo | &srarr; | Ponteiro de tabela ou número de tabela |
-| invisivel | Boolean | &harr; | True = invisível, False = visível |
-| trigSalvarNovo | Boolean | &harr; | True = Trigger "On saving new record" ativado; senão, False |
-| trigSalvarRegistro | Boolean | &harr; | True = Trigger "On saving an existing record" ativado; senão, False |
-| trigApagarRegistro | Boolean | &harr; | True = Trigger "On deleting a record" ativado; senão, False |
-| trigCarregarRegistro | Boolean | &harr; | *** Não usar (obsoleto) *** |
+| ponTabela&#124;NumTabela | Ponteiro, Inteiro longo | &rarr; | Ponteiro de tabela ou número de tabela |
+| invisivel | Boolean | &larr; | True = invisível, False = visível |
+| trigSalvarNovo | Boolean | &larr; | True = Trigger "On saving new record" ativado; senão, False |
+| trigSalvarRegistro | Boolean | &larr; | True = Trigger "On saving an existing record" ativado; senão, False |
+| trigApagarRegistro | Boolean | &larr; | True = Trigger "On deleting a record" ativado; senão, False |
+| trigCarregarRegistro | Boolean | &larr; | *** Não usar (obsoleto) *** |
 
 <!-- END REF-->
 

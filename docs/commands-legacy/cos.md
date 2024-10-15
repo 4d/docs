@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Cos.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &srarr; | Number, in radians, whose cosine is returned |
+| number | Real | &rarr; | Number, in radians, whose cosine is returned |
 | Function result | Real | &larr; | Cosine of number |
 
 <!-- END REF-->

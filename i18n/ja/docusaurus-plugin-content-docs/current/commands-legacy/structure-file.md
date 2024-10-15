@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Structure file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | ホストデータベースのストラクチャファイルを返す |
+| * | 演算子 | &rarr; | ホストデータベースのストラクチャファイルを返す |
 | 戻り値 | Text | &larr; | データベースストラクチャファイルのパス名 |
 
 <!-- END REF-->

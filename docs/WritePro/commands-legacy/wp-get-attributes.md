@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP GET ATTRIBUTES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | Range or element or 4D Write Pro document |
-| attribName | Text | &#x1F852; | Name of attribute to get |
+| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
+| attribName | Text | &rarr; | Name of attribute to get |
 | attribValue | Text, Number, Array, Collection, Picture, Date | &#x1F858; | Current value of attribute for the target |
 
 <!-- END REF-->

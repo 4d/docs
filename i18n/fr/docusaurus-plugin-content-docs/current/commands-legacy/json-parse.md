@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Parse.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chaîneJSON | Text | &srarr; | Chaîne en JSON à analyser |
-| type | Integer | &srarr; | Type dans lequel convertir les valeurs |
-| * | Opérateur | &srarr; | Ajouter la ligne et la position de chaque propriété si la valeur retournée est un objet |
+| chaîneJSON | Text | &rarr; | Chaîne en JSON à analyser |
+| type | Integer | &rarr; | Type dans lequel convertir les valeurs |
+| * | Opérateur | &rarr; | Ajouter la ligne et la position de chaque propriété si la valeur retournée est un objet |
 | Résultat | Object, any | &larr; | Valeurs extraites de la chaîne JSON |
 
 <!-- END REF-->

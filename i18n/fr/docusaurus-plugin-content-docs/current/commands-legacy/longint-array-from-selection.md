@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table de la sélection courante |
-| tabEnrg | Integer array | &harr; | Tableau de numéros d’enregistrements |
-| tempo | Text | &srarr; | Nom de la sélection temporaire ou Sélection courante si ce paramètre est omis |
+| laTable | Table | &rarr; | Table de la sélection courante |
+| tabEnrg | Integer array | &larr; | Tableau de numéros d’enregistrements |
+| tempo | Text | &rarr; | Nom de la sélection temporaire ou Sélection courante si ce paramètre est omis |
 
 <!-- END REF-->
 

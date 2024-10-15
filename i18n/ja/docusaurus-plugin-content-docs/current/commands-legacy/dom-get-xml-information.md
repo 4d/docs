@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get XML information.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &srarr; | XMLルート要素参照 |
-| xmlInfo | Integer | &srarr; | 取得する情報のタイプ |
+| elementRef | Text | &rarr; | XMLルート要素参照 |
+| xmlInfo | Integer | &rarr; | 取得する情報のタイプ |
 | 戻り値 | Text | &larr; | XML情報の値 |
 
 <!-- END REF-->

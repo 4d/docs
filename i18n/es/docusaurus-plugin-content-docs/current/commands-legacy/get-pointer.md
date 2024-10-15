@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get pointer.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomVar | Text | &srarr; | Nombre de una variable proceso o interproceso |
+| nomVar | Text | &rarr; | Nombre de una variable proceso o interproceso |
 | Resultado | Pointer | &larr; | Puntero hacia una variable proceso o interproceso |
 
 <!-- END REF-->

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM Convert to dynamic.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Form table |
-| formName | Text | &srarr; | Name of a "classic" project or table form |
+| aTable | Table | &rarr; | Form table |
+| formName | Text | &rarr; | Name of a "classic" project or table form |
 | Function result | Object | &larr; | formName converted to dynamic form |
 
 <!-- END REF-->

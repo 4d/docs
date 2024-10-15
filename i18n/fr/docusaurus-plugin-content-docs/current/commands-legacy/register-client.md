@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.REGISTER CLIENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomClient | Text | &srarr; | Nom de la session cliente 4D |
-| période | Integer | &srarr; | *** Ignoré depuis la version 11.3 *** |
-| * | Opérateur | &srarr; | Process local |
+| nomClient | Text | &rarr; | Nom de la session cliente 4D |
+| période | Integer | &rarr; | *** Ignoré depuis la version 11.3 *** |
+| * | Opérateur | &rarr; | Process local |
 
 <!-- END REF-->
 

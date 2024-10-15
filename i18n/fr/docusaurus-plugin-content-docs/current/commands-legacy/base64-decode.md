@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.BASE64 DECODE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| àDécoder | Text, Blob | &srarr; | Valeur encodée à décoder |
-| &harr; | Valeur décodée (si le paramètre décodé est omis) |
-| décodé | Text, Blob | &harr; | Valeur décodée |
-| * | Opérateur | &srarr; | Décoder au format Base64URL |
+| àDécoder | Text, Blob | &rarr; | Valeur encodée à décoder |
+| &larr; | Valeur décodée (si le paramètre décodé est omis) |
+| décodé | Text, Blob | &larr; | Valeur décodée |
+| * | Opérateur | &rarr; | Décoder au format Base64URL |
 
 <!-- END REF-->
 

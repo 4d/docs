@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PRINTABLE MARGIN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| left | Integer | &srarr; | 左マージン |
-| top | Integer | &srarr; | 上マージン |
-| right | Integer | &srarr; | 右マージン |
-| bottom | Integer | &srarr; | 下マージン |
+| left | Integer | &rarr; | 左マージン |
+| top | Integer | &rarr; | 上マージン |
+| right | Integer | &rarr; | 右マージン |
+| bottom | Integer | &rarr; | 下マージン |
 
 <!-- END REF-->
 

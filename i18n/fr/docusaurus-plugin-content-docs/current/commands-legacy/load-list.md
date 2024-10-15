@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Load list.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomListe | Text | &srarr; | Nom de liste créée dans l'éditeur d'énumérations |
+| nomListe | Text | &rarr; | Nom de liste créée dans l'éditeur d'énumérations |
 | Résultat | Integer | &larr; | Numéro de référence de la liste nouvellement créée |
 
 <!-- END REF-->

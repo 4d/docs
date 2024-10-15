@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is new record.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &srarr; | Tabla del registro a examinar o Tabla por defecto si se omite este parámetro |
+| tabla | Table | &rarr; | Tabla del registro a examinar o Tabla por defecto si se omite este parámetro |
 | Resultado | Boolean | &larr; | True si el registro está siendo creado, False si no |
 
 <!-- END REF-->

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ENCRYPT BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| toEncrypt | Blob | &srarr; | 暗号化するデータ |
-| &harr; | 暗号化されたデータ |
-| sendPrivKey | Blob | &srarr; | 送信者の秘密鍵 |
-| recipPubKey | Blob | &srarr; | 受信者の公開鍵 |
+| toEncrypt | Blob | &rarr; | 暗号化するデータ |
+| &larr; | 暗号化されたデータ |
+| sendPrivKey | Blob | &rarr; | 送信者の秘密鍵 |
+| recipPubKey | Blob | &rarr; | 受信者の公開鍵 |
 
 <!-- END REF-->
 

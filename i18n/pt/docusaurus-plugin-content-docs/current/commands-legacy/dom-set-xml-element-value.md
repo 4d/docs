@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | Text | &srarr; | Referência de elemento XML |
-| xRota | Text | &srarr; | Rota do xRota do elemento XML |
-| valorElemento | Text, Variable | &srarr; | Novo valor do elemento |
-| * | Operador | &srarr; | Se passado: estabelece o valor em CDATA |
+| refElemento | Text | &rarr; | Referência de elemento XML |
+| xRota | Text | &rarr; | Rota do xRota do elemento XML |
+| valorElemento | Text, Variable | &rarr; | Novo valor do elemento |
+| * | Operador | &rarr; | Se passado: estabelece o valor em CDATA |
 
 <!-- END REF-->
 

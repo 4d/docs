@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET SORTS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | Referência da área |
-| aColunas | Real array | &harr; | Colunas que estão ordenadas |
-| aOrdem | Real array | &harr; | Sentido da ordenação |
+| area | Integer | &rarr; | Referência da área |
+| aColunas | Real array | &larr; | Colunas que estão ordenadas |
+| aOrdem | Real array | &larr; | Sentido da ordenação |
 
 <!-- END REF-->
 

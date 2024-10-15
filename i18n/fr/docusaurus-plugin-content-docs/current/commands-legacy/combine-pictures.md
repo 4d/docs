@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.COMBINE PICTURES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| imageRésultat | Picture | &harr; | Image résultant de la combinaison |
-| image1 | Picture | &srarr; | Première image à combiner |
-| opérateur | Integer | &srarr; | Type de combinaison à effectuer |
-| image2 | Picture | &srarr; | Seconde image à combiner |
-| décalHoriz | Integer | &srarr; | Décalage horizontal pour la superposition |
-| décalVert | Integer | &srarr; | Décalage vertical pour la superposition |
+| imageRésultat | Picture | &larr; | Image résultant de la combinaison |
+| image1 | Picture | &rarr; | Première image à combiner |
+| opérateur | Integer | &rarr; | Type de combinaison à effectuer |
+| image2 | Picture | &rarr; | Seconde image à combiner |
+| décalHoriz | Integer | &rarr; | Décalage horizontal pour la superposition |
+| décalVert | Integer | &rarr; | Décalage vertical pour la superposition |
 
 <!-- END REF-->
 

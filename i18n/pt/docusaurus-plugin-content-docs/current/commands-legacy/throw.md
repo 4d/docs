@@ -10,11 +10,11 @@ displayed_sidebar: docs
 <!--REF #_command_.throw.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| errorCode | Integer | &srarr; | Um inteiro longo representando o código de erro |
-| descrição | Text | &srarr; | Um texto fornecendo uma descrição do erro |
+| errorCode | Integer | &rarr; | Um inteiro longo representando o código de erro |
+| descrição | Text | &rarr; | Um texto fornecendo uma descrição do erro |
 | throw {( erroObj )} |
 | Parâmetro | Tipo | Descrição |
-| erroObj | Object | &srarr; | Um objeto contendo propriedades para construir o erro |
+| erroObj | Object | &rarr; | Um objeto contendo propriedades para construir o erro |
 
 <!-- END REF-->
 

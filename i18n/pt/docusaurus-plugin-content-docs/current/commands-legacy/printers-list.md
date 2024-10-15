@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.PRINTERS LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| arrayNoms | Text array | &harr; | Nomes das impressoras |
-| altNomesArray | Text array | &harr; | Windows: localização das impressoras; macOS: Nomes personalizados das impressoras |
-| modelosArray | Text array | &harr; | Modelos de impressoras |
+| arrayNoms | Text array | &larr; | Nomes das impressoras |
+| altNomesArray | Text array | &larr; | Windows: localização das impressoras; macOS: Nomes personalizados das impressoras |
+| modelosArray | Text array | &larr; | Modelos de impressoras |
 
 <!-- END REF-->
 

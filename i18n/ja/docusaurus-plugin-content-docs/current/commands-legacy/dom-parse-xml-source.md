@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Parse XML source.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Text | &srarr; | ドキュメントのパス名 |
-| validation | Boolean | &srarr; | True = 検証を行う False = 検証を行わない |
-| dtd &#124; schema | 文字 | &srarr; | DTDまたはXMLスキーマの場所 |
+| document | Text | &rarr; | ドキュメントのパス名 |
+| validation | Boolean | &rarr; | True = 検証を行う False = 検証を行わない |
+| dtd &#124; schema | 文字 | &rarr; | DTDまたはXMLスキーマの場所 |
 | 戻り値 | Text | &larr; | XML要素参照 |
 
 <!-- END REF-->

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Min.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| séries | Field, Array | &srarr; | Valeurs desquelles vous voulez obtenir la plus basse |
-| cheminAttribut | Text | &srarr; | Chemin d'attribut duquel calculer la valeur minimale |
+| séries | Field, Array | &rarr; | Valeurs desquelles vous voulez obtenir la plus basse |
+| cheminAttribut | Text | &rarr; | Chemin d'attribut duquel calculer la valeur minimale |
 | Résultat | Date, Number | &larr; | Valeur la plus basse de séries |
 
 <!-- END REF-->

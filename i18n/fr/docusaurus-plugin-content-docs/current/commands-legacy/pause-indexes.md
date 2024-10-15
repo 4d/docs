@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PAUSE INDEXES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table pour laquelle suspendre les index |
+| laTable | Table | &rarr; | Table pour laquelle suspendre les index |
 
 <!-- END REF-->
 

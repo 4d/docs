@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Is font style supported.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | Range or element |
-| wpFontStyle | Longint | &#x1F852; | Font style constant |
-| Function result | Boolean | &#x1F850; | True if any part of targetObj supports wpFontStyle; False otherwise |
+| targetObj | Object | &rarr; | Range or element |
+| wpFontStyle | Longint | &rarr; | Font style constant |
+| Function result | Boolean | &larr; | True if any part of targetObj supports wpFontStyle; False otherwise |
 
 <!-- END REF-->
 

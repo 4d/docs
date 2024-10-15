@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Copy parameters.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| startFrom | Integer | &srarr; | Starting index (included) |
+| startFrom | Integer | &rarr; | Starting index (included) |
 | Résultat | Collection | &larr; | New collection containing parameters actually passed |
 
 <!-- END REF-->

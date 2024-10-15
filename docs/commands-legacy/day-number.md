@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Day number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aDate | Date | &srarr; | Date for which to return the number |
+| aDate | Date | &rarr; | Date for which to return the number |
 | Function result | Longint | &larr; | Number representing the weekday on which date falls |
 
 <!-- END REF-->

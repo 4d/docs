@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET SHORTCUT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string)If omitted, object is a variable or field |
-| object | any | &srarr; | Object Name (if * is specified) or Variable or field (if * is omitted) |
-| key | Text | &srarr; | Key to associate with object |
-| modifiers | Integer | &srarr; | Modifier key mask or combination of masks |
+| * | Operator | &rarr; | If specified, object is an object name (string)If omitted, object is a variable or field |
+| object | any | &rarr; | Object Name (if * is specified) or Variable or field (if * is omitted) |
+| key | Text | &rarr; | Key to associate with object |
+| modifiers | Integer | &rarr; | Modifier key mask or combination of masks |
 
 <!-- END REF-->
 

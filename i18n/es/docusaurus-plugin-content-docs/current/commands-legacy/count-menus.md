@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Count menus.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| proceso | Integer | &srarr; | Número de referencia de proceso |
+| proceso | Integer | &rarr; | Número de referencia de proceso |
 | Resultado | Integer | &larr; | Número de menús de la barra de menús actual |
 
 <!-- END REF-->

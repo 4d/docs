@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SELECT BREAK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | any | &srarr; | Object name (if * is specified) or <br/>Variable (if * is omitted) |
-| row | Integer | &srarr; | Number of break row |
-| column | Integer | &srarr; | Number of break column |
-| action | Integer | &srarr; | Selection action |
+| * | Operator | &rarr; | If specified, object is an object name (string)<br/>If omitted, object is a variable |
+| object | any | &rarr; | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| row | Integer | &rarr; | Number of break row |
+| column | Integer | &rarr; | Number of break column |
+| action | Integer | &rarr; | Selection action |
 
 <!-- END REF-->
 

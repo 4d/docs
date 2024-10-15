@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get adjusted index cache priority.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campo | Field | &srarr; | Campo para el cual se debe recuperar la prioridad del índice |
+| campo | Field | &rarr; | Campo para el cual se debe recuperar la prioridad del índice |
 | Resultado | Integer | &larr; | Valor de la prioridad actual para los índices |
 
 <!-- END REF-->

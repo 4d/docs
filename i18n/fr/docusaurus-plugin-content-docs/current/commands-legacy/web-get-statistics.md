@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB GET STATISTICS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| pages | Text array | &harr; | Noms des pages les plus consultées |
-| hits | Integer array | &harr; | Nombre de hits pour chaque page |
-| usage | Integer | &harr; | Pourcentages du cache utilisé |
+| pages | Text array | &larr; | Noms des pages les plus consultées |
+| hits | Integer array | &larr; | Nombre de hits pour chaque page |
+| usage | Integer | &larr; | Pourcentages du cache utilisé |
 
 <!-- END REF-->
 

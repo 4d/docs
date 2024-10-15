@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE RESOURCE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| resNum | Integer | &srarr; | Número de Resource |
-| resDados | Field, Variable | &srarr; | Campo imagem ou variável a receber a imagem |
-| &harr; | Conteúdos do recurso PICT |
-| resArquivo | Time | &srarr; | Número de referência do arquivo de Resource ou arquivo de resource atual se omitido |
+| resNum | Integer | &rarr; | Número de Resource |
+| resDados | Field, Variable | &rarr; | Campo imagem ou variável a receber a imagem |
+| &larr; | Conteúdos do recurso PICT |
+| resArquivo | Time | &rarr; | Número de referência do arquivo de Resource ou arquivo de resource atual se omitido |
 
 <!-- END REF-->
 

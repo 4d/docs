@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MENU ITEM PROPERTY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Integer | &srarr; | メニュー参照またはメニュー番号 |
-| menuItem | Integer | &srarr; | メニュー項目番号 または -1: 最後に追加された項目 |
-| property | Text | &srarr; | プロパティタイプ |
-| value | Expression | &harr; | プロパティ値 |
-| process | Integer | &srarr; | プロセス番号 |
+| menu | Integer | &rarr; | メニュー参照またはメニュー番号 |
+| menuItem | Integer | &rarr; | メニュー項目番号 または -1: 最後に追加された項目 |
+| property | Text | &rarr; | プロパティタイプ |
+| value | Expression | &larr; | プロパティ値 |
+| process | Integer | &rarr; | プロセス番号 |
 
 <!-- END REF-->
 

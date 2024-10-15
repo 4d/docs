@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Create URL history menu.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &srarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| direction | Integer | &srarr; | 0 または省略=戻るURLのリスト, 1=進むURLリスト |
+| * | 演算子 | &rarr; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &rarr; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| direction | Integer | &rarr; | 0 または省略=戻るURLのリスト, 1=進むURLリスト |
 | 戻り値 | Text | &larr; | メニュー参照 |
 
 <!-- END REF-->

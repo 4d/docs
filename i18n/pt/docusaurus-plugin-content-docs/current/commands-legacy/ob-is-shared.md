@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Is shared.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| aVerificar | Object, Collection | &srarr; | Objeto ou coleção a verificar |
+| aVerificar | Object, Collection | &rarr; | Objeto ou coleção a verificar |
 | Resultado | Boolean | &larr; | True se o objeto ou coleção for compartilhável, False se for alterável |
 
 <!-- END REF-->

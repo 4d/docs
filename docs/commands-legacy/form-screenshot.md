@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SCREENSHOT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Form table |
-| formName | Text | &srarr; | Name of form |
-| formPict | Picture | &harr; | Picture of form being executed if first parameter(s) omitted, or <br/>Picture of form in Form editor if a form name is passed |
-| pageNum | Integer | &srarr; | Form page number |
+| aTable | Table | &rarr; | Form table |
+| formName | Text | &rarr; | Name of form |
+| formPict | Picture | &larr; | Picture of form being executed if first parameter(s) omitted, or <br/>Picture of form in Form editor if a form name is passed |
+| pageNum | Integer | &rarr; | Form page number |
 
 <!-- END REF-->
 

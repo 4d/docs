@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SERVICE GET RESULT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| returnValue | Variable | &harr; | Webサービスから返された値 |
-| returnName | Text | &srarr; | 取得する引数の名前 |
-| * | Operator |  &srarr; | メモリを解放 |
+| returnValue | Variable | &larr; | Webサービスから返された値 |
+| returnName | Text | &rarr; | 取得する引数の名前 |
+| * | Operator |  &rarr; | メモリを解放 |
 
 <!-- END REF-->
 

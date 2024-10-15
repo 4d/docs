@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET ABOUT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| textoElem | Text | &srarr; | Nueva línea de menú Acerca de |
-| metodo | Text | &srarr; | Nombre del método a ejecutar cuando se elije la línea |
+| textoElem | Text | &rarr; | Nueva línea de menú Acerca de |
+| metodo | Text | &rarr; | Nombre del método a ejecutar cuando se elije la línea |
 
 <!-- END REF-->
 

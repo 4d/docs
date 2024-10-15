@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG GET ATTRIBUTE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, objetoImagen es un nombre de objeto (cadena). Si se omite, objetoImagen es una variable o un campo |
-| objetoPicture | Picture | &srarr; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
-| id_Element | Text | &srarr; | ID del elemento donde uno o más atributos se definen |
-| nomAtrib | Text | &srarr; | Atributo cuyo valor quiere obtener |
-| valorAtrib | Text, Integer | &harr; | Valor actual del atributo |
+| * | Operador | &rarr; | Si se especifica, objetoImagen es un nombre de objeto (cadena). Si se omite, objetoImagen es una variable o un campo |
+| objetoPicture | Picture | &rarr; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
+| id_Element | Text | &rarr; | ID del elemento donde uno o más atributos se definen |
+| nomAtrib | Text | &rarr; | Atributo cuyo valor quiere obtener |
+| valorAtrib | Text, Integer | &larr; | Valor actual del atributo |
 
 <!-- END REF-->
 

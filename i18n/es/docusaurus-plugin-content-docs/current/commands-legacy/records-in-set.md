@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Records in set.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| conjunto | Text | &srarr; | Nombre del conjunto a probar |
+| conjunto | Text | &rarr; | Nombre del conjunto a probar |
 | Resultado | Integer | &larr; | Número de registros en prueba |
 
 <!-- END REF-->

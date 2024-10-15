@@ -8,7 +8,7 @@ displayed_sidebar: docs
 <!--REF #_command_.USE ENTITY SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| entitySelection | 4D.EntitySelection | &#x1F852; | An entity selection |
+| entitySelection | 4D.EntitySelection | &rarr; | An entity selection |
 
 <!-- END REF-->
 

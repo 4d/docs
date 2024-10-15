@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SELECT BREAK.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時、objectはオブジェクト名 (文字列)<br/>省略時、objectは変数 |
-| object | any | &srarr; | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
-| row | Integer | &srarr; | ブレーク行の番号 |
-| column | Integer | &srarr; | ブレーク列の番号 |
-| action | Integer | &srarr; | 選択アクション |
+| * | 演算子 | &rarr; | 指定時、objectはオブジェクト名 (文字列)<br/>省略時、objectは変数 |
+| object | any | &rarr; | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
+| row | Integer | &rarr; | ブレーク行の番号 |
+| column | Integer | &rarr; | ブレーク列の番号 |
+| action | Integer | &rarr; | 選択アクション |
 
 <!-- END REF-->
 

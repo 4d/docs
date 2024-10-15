@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLOSE RESOURCE FILE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| resArquivo | Time | &srarr; | Número de referencia de arquivo recurso |
+| resArquivo | Time | &rarr; | Número de referencia de arquivo recurso |
 
 <!-- END REF-->
 

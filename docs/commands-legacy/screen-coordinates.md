@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.SCREEN COORDINATES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| left | Integer | &harr; | Global left coordinate of screen area |
-| top | Integer | &harr; | Global top coordinate of screen area |
-| right | Integer | &harr; | Global right coordinate of screen area |
-| bottom | Integer | &harr; | Global bottom coordinate of screen area |
-| screenID | Integer | &srarr; | Screen number, or main screen if omitted |
-| screenArea | Integer | &srarr; | Entire screen (default) or working area |
+| left | Integer | &larr; | Global left coordinate of screen area |
+| top | Integer | &larr; | Global top coordinate of screen area |
+| right | Integer | &larr; | Global right coordinate of screen area |
+| bottom | Integer | &larr; | Global bottom coordinate of screen area |
+| screenID | Integer | &rarr; | Screen number, or main screen if omitted |
+| screenArea | Integer | &rarr; | Entire screen (default) or working area |
 
 <!-- END REF-->
 

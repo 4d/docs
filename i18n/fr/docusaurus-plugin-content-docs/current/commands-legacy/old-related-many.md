@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OLD RELATED MANY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &srarr; | Champ recevant un lien |
+| leField | Field | &rarr; | Champ recevant un lien |
 
 <!-- END REF-->
 

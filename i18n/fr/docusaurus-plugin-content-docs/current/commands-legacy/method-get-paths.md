@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET PATHS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomDossier | Text | &srarr; | Nom de dossier de la page Démarrage |
-| typeMéthode | Integer | &srarr; | Sélecteur de type de méthode à récupérer |
-| tabChemins | Text array | &harr; | Tableau des chemins et noms des méthodes |
-| marqueur | Real | &srarr; | Valeur minimum de marqueur |
-| &harr; | Nouvelle valeur courante |
-| * | Opérateur | &srarr; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| nomDossier | Text | &rarr; | Nom de dossier de la page Démarrage |
+| typeMéthode | Integer | &rarr; | Sélecteur de type de méthode à récupérer |
+| tabChemins | Text array | &larr; | Tableau des chemins et noms des méthodes |
+| marqueur | Real | &rarr; | Valeur minimum de marqueur |
+| &larr; | Nouvelle valeur courante |
+| * | Opérateur | &rarr; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
 

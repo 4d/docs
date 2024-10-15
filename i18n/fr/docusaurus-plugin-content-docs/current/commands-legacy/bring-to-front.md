@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.BRING TO FRONT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &srarr; | Numéro du process à passer au premier plan |
+| process | Integer | &rarr; | Numéro du process à passer au premier plan |
 
 <!-- END REF-->
 

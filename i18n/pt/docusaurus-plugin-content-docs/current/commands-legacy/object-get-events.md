@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET EVENTS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | any | &srarr; | Nome de objeto "" para designar o formulário (se for especificado *) ou<br/>Campo ou variável (se for omitido *) |
-| arrEvents | Integer array | &harr; | Array de eventos desativados |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
+| objeto | any | &rarr; | Nome de objeto "" para designar o formulário (se for especificado *) ou<br/>Campo ou variável (se for omitido *) |
+| arrEvents | Integer array | &larr; | Array de eventos desativados |
 
 <!-- END REF-->
 

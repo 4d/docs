@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG SET ATTRIBUTE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時: pictureObjectはオブジェクト名 (文字) <br/>省略時: pictureObjectは変数 |
-| pictureObject | Picture | &srarr; | オブジェクト名 (* 指定時) または <br/>変数 またはフィールド(* 省略時) |
-| element_ID | Text | &srarr; | 1つ以上の属性を設定する要素のID |
-| attrName | Text | &srarr; | 指定する属性 |
-| attribValue | Text, Integer | &srarr; | 属性の新しい値 |
-| * | 演算子 | &srarr; | 指定時 = SVG画像の内部DOMツリーを更新 (変数のみ) |
+| * | 演算子 | &rarr; | 指定時: pictureObjectはオブジェクト名 (文字) <br/>省略時: pictureObjectは変数 |
+| pictureObject | Picture | &rarr; | オブジェクト名 (* 指定時) または <br/>変数 またはフィールド(* 省略時) |
+| element_ID | Text | &rarr; | 1つ以上の属性を設定する要素のID |
+| attrName | Text | &rarr; | 指定する属性 |
+| attribValue | Text, Integer | &rarr; | 属性の新しい値 |
+| * | 演算子 | &rarr; | 指定時 = SVG画像の内部DOMツリーを更新 (変数のみ) |
 
 <!-- END REF-->
 

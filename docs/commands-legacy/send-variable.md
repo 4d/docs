@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SEND VARIABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| variable | Variable | &srarr; | Variable to send |
+| variable | Variable | &rarr; | Variable to send |
 
 <!-- END REF-->
 

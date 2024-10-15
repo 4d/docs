@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON PARSE ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| cadeiaJSON | Text | &srarr; | Cadeia JSON a analisar |
-| arrayObjeto | Array | &harr; | Array que contém o resultado da análise da cadeia JSON |
+| cadeiaJSON | Text | &rarr; | Cadeia JSON a analisar |
+| arrayObjeto | Array | &larr; | Array que contém o resultado da análise da cadeia JSON |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL LOAD RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| numRecords | Integer | &srarr; | Number of records to load |
+| numRecords | Integer | &rarr; | Number of records to load |
 
 <!-- END REF-->
 

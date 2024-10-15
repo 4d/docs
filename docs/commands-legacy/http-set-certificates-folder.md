@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| certificatesFolder | Text | &srarr; | Pathname and name of client certificates folder |
+| certificatesFolder | Text | &rarr; | Pathname and name of client certificates folder |
 
 <!-- END REF-->
 

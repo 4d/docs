@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE FROM BLOB.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Blob | Blob | &srarr; | BLOB del cual borrar los bytes |
-| offset | Integer | &srarr; | Offset a partir del cual borrar los bytes |
-| numero | Integer | &srarr; | Número de bytes a borrar |
+| Blob | Blob | &rarr; | BLOB del cual borrar los bytes |
+| offset | Integer | &rarr; | Offset a partir del cual borrar los bytes |
+| numero | Integer | &rarr; | Número de bytes a borrar |
 
 <!-- END REF-->
 

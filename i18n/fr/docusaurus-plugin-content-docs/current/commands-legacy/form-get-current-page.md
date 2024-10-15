@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM Get current page.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Retourner le numéro de la page du sous-formulaire courant |
+| * | Opérateur | &rarr; | Retourner le numéro de la page du sous-formulaire courant |
 | Résultat | Integer | &larr; | Numéro de la page courante du formulaire courant |
 
 <!-- END REF-->

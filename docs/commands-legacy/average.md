@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Average.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| series | Field, Array | &srarr; | Data for which to return the average |
-| attributePath | Text | &srarr; | Path of attribute for which to return the average |
+| series | Field, Array | &rarr; | Data for which to return the average |
+| attributePath | Text | &rarr; | Path of attribute for which to return the average |
 | Function result | Real | &larr; | Arithmetic mean (average) of series |
 
 <!-- END REF-->

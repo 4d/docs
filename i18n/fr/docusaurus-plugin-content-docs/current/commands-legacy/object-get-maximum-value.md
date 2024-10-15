@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET MAXIMUM VALUE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| valeurMaxi | Date, Time, Number | &harr; | Valeur maximale actuelle de l’objet |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &rarr; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| valeurMaxi | Date, Time, Number | &larr; | Valeur maximale actuelle de l’objet |
 
 <!-- END REF-->
 

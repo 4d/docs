@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Split string.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| stringToSplit | Text | &srarr; | 文字列の値 |
-| separator | Text | &srarr; | stringToSplitを分割する文字列。空の文字列("")の場合には、stringToSplitを1文字ずつに分割します |
-| options | Integer | &srarr; | 空の文字列と空白に関するオプション |
+| stringToSplit | Text | &rarr; | 文字列の値 |
+| separator | Text | &rarr; | stringToSplitを分割する文字列。空の文字列("")の場合には、stringToSplitを1文字ずつに分割します |
+| options | Integer | &rarr; | 空の文字列と空白に関するオプション |
 | 戻り値 | Collection | &larr; | 分割した文字列のコレクション |
 
 <!-- END REF-->

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Validate.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| vJson | Object | &srarr; | Objeto JSON a validar |
-| vSchema | Object | &srarr; | Esquema JSON utilizado para validar objetos JSON |
+| vJson | Object | &rarr; | Objeto JSON a validar |
+| vSchema | Object | &rarr; | Esquema JSON utilizado para validar objetos JSON |
 | Resultado | Object | &larr; | Estado de validación y errores (si los hay) |
 
 <!-- END REF-->

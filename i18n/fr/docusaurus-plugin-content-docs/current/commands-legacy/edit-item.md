@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.EDIT ITEM.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est un table ou une variable |
-| objet | any | &srarr; | Nom d’objet (si * spécifié) ou Table ou variable (si * omis) |
-| élément | Integer | &srarr; | Numéro d’élément |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est un table ou une variable |
+| objet | any | &rarr; | Nom d’objet (si * spécifié) ou Table ou variable (si * omis) |
+| élément | Integer | &rarr; | Numéro d’élément |
 
 <!-- END REF-->
 

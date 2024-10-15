@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Insert table.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | Range or element or 4D Write Pro document |
-| mode | Longint | &#x1F852; | Insertion mode |
-| rangeUpdate | Longint | &#x1F852; | Range update mode |
-| nbCols | Longint | &#x1F852; | Number of columns to set in the table |
-| nbRows | Longint | &#x1F852; | Number of rows to set in the table |
-| Function result | Object | &#x1F850; | Table object |
+| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
+| mode | Longint | &rarr; | Insertion mode |
+| rangeUpdate | Longint | &rarr; | Range update mode |
+| nbCols | Longint | &rarr; | Number of columns to set in the table |
+| nbRows | Longint | &rarr; | Number of rows to set in the table |
+| Function result | Object | &larr; | Table object |
 
 <!-- END REF-->
 

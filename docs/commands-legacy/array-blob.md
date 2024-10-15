@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| arrayName | Array | &srarr; | Name of array |
-| size | Integer | &srarr; | Number of array elements or Number of arrays if size2 is specified |
-| size2 | Integer | &srarr; | Number of 2D array elements |
+| arrayName | Array | &rarr; | Name of array |
+| size | Integer | &rarr; | Number of array elements or Number of arrays if size2 is specified |
+| size2 | Integer | &rarr; | Number of 2D array elements |
 
 <!-- END REF-->
 

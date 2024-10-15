@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.POST OUTSIDE CALL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| processo | Integer | &srarr; | número de processo |
+| processo | Integer | &rarr; | número de processo |
 
 <!-- END REF-->
 

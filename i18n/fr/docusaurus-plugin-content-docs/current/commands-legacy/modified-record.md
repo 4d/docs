@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Modified record.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table de laquelle tester si l'enregistrement courant a été modifié ou Table par défaut si paramètre omis |
+| laTable | Table | &rarr; | Table de laquelle tester si l'enregistrement courant a été modifié ou Table par défaut si paramètre omis |
 | Résultat | Boolean | &larr; | L'enregistrement a été modifié (Vrai) ou L'enregistrement n'a pas été modifié (Faux) |
 
 <!-- END REF-->

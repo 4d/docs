@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET QUERY LIMIT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| limite | Integer | &srarr; | Número de registros, ou 0 se não houver limite |
+| limite | Integer | &rarr; | Número de registros, ou 0 se não houver limite |
 
 <!-- END REF-->
 

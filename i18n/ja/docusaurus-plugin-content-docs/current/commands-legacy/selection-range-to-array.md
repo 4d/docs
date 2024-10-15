@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| start | Integer | &srarr; | データ取得を開始するレコード位置番号 |
-| end | Integer | &srarr; | データ取得を終了するレコード位置番号 |
-| field &#124; table | フィールド, テーブル | &srarr; | データを取得するフィールドまたは レコード番号を取得するテーブル |
-| array | Array | &harr; | フィールド値またはレコード番号を受け取る配列 |
+| start | Integer | &rarr; | データ取得を開始するレコード位置番号 |
+| end | Integer | &rarr; | データ取得を終了するレコード位置番号 |
+| field &#124; table | フィールド, テーブル | &rarr; | データを取得するフィールドまたは レコード番号を取得するテーブル |
+| array | Array | &larr; | フィールド値またはレコード番号を受け取る配列 |
 
 <!-- END REF-->
 

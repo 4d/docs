@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get format.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string) If omitted, object is a field or a variable |
-| object | any | &srarr; | Object name (if * is specified) or Field or variable (if * is omitted) |
+| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a field or a variable |
+| object | any | &rarr; | Object name (if * is specified) or Field or variable (if * is omitted) |
 | Function result | String | &larr; | Object display format |
 
 <!-- END REF-->

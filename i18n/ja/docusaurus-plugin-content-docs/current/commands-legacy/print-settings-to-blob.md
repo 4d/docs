@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Print settings to BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| printSettings | Blob | &harr; | 現在のプリント設定 |
+| printSettings | Blob | &larr; | 現在のプリント設定 |
 | 戻り値 | Integer | &larr; | 1 = 処理に成功, 0 = カレントのプリンターがない |
 
 <!-- END REF-->

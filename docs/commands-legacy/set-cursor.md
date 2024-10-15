@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET CURSOR.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| cursor | Integer | &srarr; | Cursor resource number |
+| cursor | Integer | &rarr; | Cursor resource number |
 
 <!-- END REF-->
 

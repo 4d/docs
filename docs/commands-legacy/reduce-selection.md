@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.REDUCE SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table for which to reduce the selection, or Default table, if omitted |
-| number | Integer | &srarr; | Number of records to keep selected |
+| aTable | Table | &rarr; | Table for which to reduce the selection, or Default table, if omitted |
+| number | Integer | &rarr; | Number of records to keep selected |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QR RUN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | Referência da área a executar |
+| area | Integer | &rarr; | Referência da área a executar |
 
 <!-- END REF-->
 

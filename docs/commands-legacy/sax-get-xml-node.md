@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX Get XML node.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &srarr; | Reference of open document |
+| document | Time | &rarr; | Reference of open document |
 | Function result | Longint | &larr; | Event returned by function |
 
 <!-- END REF-->

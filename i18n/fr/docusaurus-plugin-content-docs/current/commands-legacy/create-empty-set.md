@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE EMPTY SET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table pour laquelle créer un ensemble vide ou Table par défaut si ce paramètre est omis |
-| ensemble | Text | &srarr; | Nom du nouvel ensemble vide |
+| laTable | Table | &rarr; | Table pour laquelle créer un ensemble vide ou Table par défaut si ce paramètre est omis |
+| ensemble | Text | &rarr; | Nom du nouvel ensemble vide |
 
 <!-- END REF-->
 

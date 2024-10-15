@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.LDAP SEARCH ALL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| dnRootEntry | Text | &srarr; | o Distinguished Name do diretório raiz onde a pesquisa começará |
-| arrResultado | Object array | &harr; | Resultado da pesquisa |
-| filtro | Text | &srarr; | filtro de pesquisa LDAP |
-| escopo | Text | &srarr; | Escopo da pesquisa "base" (padrão), "one", ou "sub" |
-| atributos | Text array | &srarr; | Atributos da pesquisa |
-| atributosComoArray | Boolean array | &srarr; | True = força os atributos a serem retornados como um array, false = força os atributos a serem retornados como uma variável simples |
+| dnRootEntry | Text | &rarr; | o Distinguished Name do diretório raiz onde a pesquisa começará |
+| arrResultado | Object array | &larr; | Resultado da pesquisa |
+| filtro | Text | &rarr; | filtro de pesquisa LDAP |
+| escopo | Text | &rarr; | Escopo da pesquisa "base" (padrão), "one", ou "sub" |
+| atributos | Text array | &rarr; | Atributos da pesquisa |
+| atributosComoArray | Boolean array | &rarr; | True = força os atributos a serem retornados como um array, false = força os atributos a serem retornados como uma variável simples |
 
 <!-- END REF-->
 

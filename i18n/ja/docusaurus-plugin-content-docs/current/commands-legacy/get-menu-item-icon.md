@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET MENU ITEM ICON.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &srarr; | メニュー参照またはメニュー番号 |
-| menuItem | Integer | &srarr; | メニュー項目番号 または -1: 最後に追加された項目 |
-| iconRef | Text, Integer | &harr; | メニュー項目に関連付けられたアイコンの ピクチャー名または番号 |
-| process | Integer | &srarr; | プロセス番号 |
+| menu | Integer, Text | &rarr; | メニュー参照またはメニュー番号 |
+| menuItem | Integer | &rarr; | メニュー項目番号 または -1: 最後に追加された項目 |
+| iconRef | Text, Integer | &larr; | メニュー項目に関連付けられたアイコンの ピクチャー名または番号 |
+| process | Integer | &rarr; | プロセス番号 |
 
 <!-- END REF-->
 

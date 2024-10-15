@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON PARSE ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| jsonText | Text | &srarr; | JSON string to parse |
-| array | Array | &harr; | Array containing result from parsing of JSON string |
+| jsonText | Text | &rarr; | JSON string to parse |
+| array | Array | &larr; | Array containing result from parsing of JSON string |
 
 <!-- END REF-->
 

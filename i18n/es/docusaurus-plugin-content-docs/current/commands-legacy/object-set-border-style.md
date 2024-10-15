@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET BORDER STYLE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &srarr; | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
-| estiloBorde | Integer | &srarr; | Estilo de línea de borde |
+| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &rarr; | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
+| estiloBorde | Integer | &rarr; | Estilo de línea de borde |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Find window.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| left | Integer | &srarr; | グローバル左座標 |
-| top | Integer | &srarr; | グローバル上座標 |
-| windowPart | Integer | &harr; | ウィンドウパーツID番号 |
+| left | Integer | &rarr; | グローバル左座標 |
+| top | Integer | &rarr; | グローバル上座標 |
+| windowPart | Integer | &larr; | ウィンドウパーツID番号 |
 | 戻り値 | Integer | &larr; | ウィンドウ参照番号 |
 
 <!-- END REF-->

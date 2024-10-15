@@ -19,11 +19,11 @@ displayed_sidebar: docs
 <!-- REF #_command_.File.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|path|Text|&#x1F852;|File path|
-|fileConstant|&#x1F852;|->|4D file constant|
-|pathType|Integer|&#x1F852;|`fk posix path` (default) or `fk platform path`|
-|*|operator|&#x1F852;|* to return file of host database|
-|Result|4D.File|&#x1F850;|New file object|
+|path|Text|&rarr;|File path|
+|fileConstant|&rarr;|->|4D file constant|
+|pathType|Integer|&rarr;|`fk posix path` (default) or `fk platform path`|
+|*|operator|&rarr;|* to return file of host database|
+|Result|4D.File|&larr;|New file object|
 <!-- END REF -->
 
 #### Description

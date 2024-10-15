@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get external data path.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Text, Blob, Picture | &srarr; | Field whose storage location you want to get |
+| aField | Text, Blob, Picture | &rarr; | Field whose storage location you want to get |
 | Function result | Text | &larr; | Full pathname of external storage file |
 
 <!-- END REF-->

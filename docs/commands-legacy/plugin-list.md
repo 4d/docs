@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PLUGIN LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| numbersArray | Integer array | &harr; | Numbers of plug-ins |
-| namesArray | Text array | &harr; | Names of plug-ins |
+| numbersArray | Integer array | &larr; | Numbers of plug-ins |
+| namesArray | Text array | &larr; | Names of plug-ins |
 
 <!-- END REF-->
 

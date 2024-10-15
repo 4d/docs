@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD GET PATHS FORM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | テーブル参照 |
-| arrPaths | Text array | &harr; | メソッドパスと名前の配列 |
-| filter | Text | &srarr; | 名前フィルター |
-| stamp | Real | &srarr; | スタンプの最小値 |
-| &harr; | 新しい現在値 |
-| * | 演算子 | &srarr; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
+| aTable | Table | &rarr; | テーブル参照 |
+| arrPaths | Text array | &larr; | メソッドパスと名前の配列 |
+| filter | Text | &rarr; | 名前フィルター |
+| stamp | Real | &rarr; | スタンプの最小値 |
+| &larr; | 新しい現在値 |
+| * | 演算子 | &rarr; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
 
 <!-- END REF-->
 

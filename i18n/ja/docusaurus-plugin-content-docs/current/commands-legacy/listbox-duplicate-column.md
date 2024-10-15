@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時、 Object はオブジェクト名 (文字列) 省略時、 Object は変数 |
-| object | any | &srarr; | 複製したい列のオブジェクト名( * 指定時)、 または変数 ( * 省略時) |
-| colPosition | Integer | &srarr; | 新しく複製した列の位置 |
-| colName | Text | &srarr; | 新しい列の名前 |
-| colVariable | Array, Field, Variable, Pointer | &srarr; | 列の配列変数またはフィールド、変数 |
-| headerName | Text | &srarr; | 列のヘッダーのオブジェクト名 |
-| headerVar | Integer, Pointer | &srarr; | 列のヘッダーの変数 |
-| footerName | Text | &srarr; | 列のフッターのオブジェクト名 |
-| footerVar | Variable, Pointer | &srarr; | 列のフッターの変数 |
+| * | 演算子 | &rarr; | 指定時、 Object はオブジェクト名 (文字列) 省略時、 Object は変数 |
+| object | any | &rarr; | 複製したい列のオブジェクト名( * 指定時)、 または変数 ( * 省略時) |
+| colPosition | Integer | &rarr; | 新しく複製した列の位置 |
+| colName | Text | &rarr; | 新しい列の名前 |
+| colVariable | Array, Field, Variable, Pointer | &rarr; | 列の配列変数またはフィールド、変数 |
+| headerName | Text | &rarr; | 列のヘッダーのオブジェクト名 |
+| headerVar | Integer, Pointer | &rarr; | 列のヘッダーの変数 |
+| footerName | Text | &rarr; | 列のフッターのオブジェクト名 |
+| footerVar | Variable, Pointer | &rarr; | 列のフッターの変数 |
 
 <!-- END REF-->
 

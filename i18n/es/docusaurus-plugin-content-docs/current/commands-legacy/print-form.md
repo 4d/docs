@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Print form.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &srarr; | Tabla a imprimir, o Tabla por defecto, si se omite |
-| formulario | Text, Object | &srarr; | Formulario a imprimir |
-| dataForm | Object | &srarr; | Datos a asociar al formulario |
-| area1 | Integer | &srarr; | Marcador de impresión, o Área de inicio (si area2 se especifica) |
-| area2 | Integer | &srarr; | Área de fin (si área1 se especifica) |
+| tabla | Table | &rarr; | Tabla a imprimir, o Tabla por defecto, si se omite |
+| formulario | Text, Object | &rarr; | Formulario a imprimir |
+| dataForm | Object | &rarr; | Datos a asociar al formulario |
+| area1 | Integer | &rarr; | Marcador de impresión, o Área de inicio (si area2 se especifica) |
+| area2 | Integer | &rarr; | Área de fin (si área1 se especifica) |
 | Resultado | Integer | &larr; | Altura de la sección impresa |
 
 <!-- END REF-->

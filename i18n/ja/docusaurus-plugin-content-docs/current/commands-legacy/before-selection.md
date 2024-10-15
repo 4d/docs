@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Before selection.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | レコードポインタがセレクションの先頭より前に あるかをテストするテーブル, または 省略時、デフォルトテーブル |
+| aTable | Table | &rarr; | レコードポインタがセレクションの先頭より前に あるかをテストするテーブル, または 省略時、デフォルトテーブル |
 | 戻り値 | Boolean | &larr; | Yes (TRUE) または No (FALSE) |
 
 <!-- END REF-->

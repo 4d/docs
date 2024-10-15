@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get property.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &srarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| propriedade | Integer | &srarr; | Informação a obter |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &rarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| propriedade | Integer | &rarr; | Informação a obter |
 | Resultado | Integer, Text | &larr; | Valor atual |
 
 <!-- END REF-->

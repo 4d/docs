@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Document to text.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fileName | Text | &srarr; | Document name or Pathname to document |
-| charSet | Text, Integer | &srarr; | Name or Number of character set |
-| breakMode | Integer | &srarr; | Processing mode for line breaks |
+| fileName | Text | &rarr; | Document name or Pathname to document |
+| charSet | Text, Integer | &rarr; | Name or Number of character set |
+| breakMode | Integer | &rarr; | Processing mode for line breaks |
 | Function result | Text | &larr; | Text from the document |
 
 <!-- END REF-->

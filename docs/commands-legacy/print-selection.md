@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PRINT SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table for which to print the selection, or Default table, if omitted |
-| * &#124; > | Operator | &srarr; | * to suppress the printing dialog box, or > to not reinitialize print settings |
+| aTable | Table | &rarr; | Table for which to print the selection, or Default table, if omitted |
+| * &#124; > | Operator | &rarr; | * to suppress the printing dialog box, or > to not reinitialize print settings |
 
 <!-- END REF-->
 

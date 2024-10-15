@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET HELP MENU.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menuCol | Collection | &srarr; | Colección de objetos de menú |
+| menuCol | Collection | &rarr; | Colección de objetos de menú |
 
 <!-- END REF-->
 

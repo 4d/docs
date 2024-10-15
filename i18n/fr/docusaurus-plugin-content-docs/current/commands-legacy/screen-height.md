@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Screen height.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Windows : hauteur de la fenêtre de l'application ou hauteur de l'écran si * est spécifiéMacintosh : hauteur de l'écran principal |
+| * | Opérateur | &rarr; | Windows : hauteur de la fenêtre de l'application ou hauteur de l'écran si * est spécifiéMacintosh : hauteur de l'écran principal |
 | Résultat | Integer | &larr; | Hauteur exprimée en pixels |
 
 <!-- END REF-->

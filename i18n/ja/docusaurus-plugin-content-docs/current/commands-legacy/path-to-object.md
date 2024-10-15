@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Path to object.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| path | Text | &srarr; | パス名 |
-| pathType | Integer | &srarr; | パスシンタックスのタイプ:システム(デフォルト)あるいはPosix |
+| path | Text | &rarr; | パス名 |
+| pathType | Integer | &rarr; | パスシンタックスのタイプ:システム(デフォルト)あるいはPosix |
 | 戻り値 | Object | &larr; | パスの中身を説明したオブジェクト |
 
 <!-- END REF-->

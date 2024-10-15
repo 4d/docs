@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Count columns.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &srarr; | Référence de la zone |
+| zone | Integer | &rarr; | Référence de la zone |
 | Résultat | Integer | &larr; | Nombre de colonnes dans la zone |
 
 <!-- END REF-->

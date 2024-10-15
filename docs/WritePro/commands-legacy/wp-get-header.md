@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get header.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | 4D Write Pro range or section/sub-section element |
-| wpDoc | Object | &#x1F852; | 4D Write Pro document |
-| sectionIndex | Longint | &#x1F852; | Section index |
-| subSectionType | Longint | &#x1F852; | Sub-section type (wk first page, wk left page, or wk right page) |
-| Function result | Object | &#x1F850; | 4D Write Pro header |
+| targetObj | Object | &rarr; | 4D Write Pro range or section/sub-section element |
+| wpDoc | Object | &rarr; | 4D Write Pro document |
+| sectionIndex | Longint | &rarr; | Section index |
+| subSectionType | Longint | &rarr; | Sub-section type (wk first page, wk left page, or wk right page) |
+| Function result | Object | &larr; | 4D Write Pro header |
 
 <!-- END REF-->
 

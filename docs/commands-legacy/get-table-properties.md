@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.GET TABLE PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tablePtr&#124;tableNum | Pointer, Longint | &srarr; | Table pointer or Table number |
-| invisible | Boolean | &harr; | True = Invisible, False = Visible |
-| trigSaveNew | Boolean | &harr; | True = Trigger “On saving new record” activated; otherwise, False |
-| trigSaveRec | Boolean | &harr; | True = Trigger “On saving an existing record” activated; otherwise, False |
-| trigDelRec | Boolean | &harr; | True = Trigger “On deleting a record” activated; otherwise, False |
-| trigLoadRec | Boolean | &harr; | *** Do not use (obsolete) *** |
+| tablePtr&#124;tableNum | Pointer, Longint | &rarr; | Table pointer or Table number |
+| invisible | Boolean | &larr; | True = Invisible, False = Visible |
+| trigSaveNew | Boolean | &larr; | True = Trigger “On saving new record” activated; otherwise, False |
+| trigSaveRec | Boolean | &larr; | True = Trigger “On saving an existing record” activated; otherwise, False |
+| trigDelRec | Boolean | &larr; | True = Trigger “On deleting a record” activated; otherwise, False |
+| trigLoadRec | Boolean | &larr; | *** Do not use (obsolete) *** |
 
 <!-- END REF-->
 

@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST ITEM.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
-| lista | Integer, Text | &srarr; | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
-| posiçaoElem &#124; * | Operador, Inteiro longo | &srarr; | Posição do elemento em lista(s) expandida(s) ou contraída(s) * para o elemento atual da lista. |
-| refElem | Integer | &harr; | Número de referência do elemento |
-| textoElem | Text | &harr; | Texto do elemento da lista |
-| sublista | Integer | &harr; | Número de referência da sub-lista (se existe) |
-| expandida | Boolean | &harr; | Se uma sub-lista está associada: TRUE = a sub-lista está expandida FALSE = a sub-lista está contraída |
+| * | Operador | &rarr; | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
+| lista | Integer, Text | &rarr; | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
+| posiçaoElem &#124; * | Operador, Inteiro longo | &rarr; | Posição do elemento em lista(s) expandida(s) ou contraída(s) * para o elemento atual da lista. |
+| refElem | Integer | &larr; | Número de referência do elemento |
+| textoElem | Text | &larr; | Texto do elemento da lista |
+| sublista | Integer | &larr; | Número de referência da sub-lista (se existe) |
+| expandida | Boolean | &larr; | Se uma sub-lista está associada: TRUE = a sub-lista está expandida FALSE = a sub-lista está contraída |
 
 <!-- END REF-->
 

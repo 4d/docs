@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET BLOB SIZE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Blob | Blob | &srarr; | BLOBフィールドまたは変数 |
-| size | Integer | &srarr; | BLOBの新しいサイズ |
-| filler | Integer | &srarr; | 埋め込み文字のASCIIコード |
+| Blob | Blob | &rarr; | BLOBフィールドまたは変数 |
+| size | Integer | &rarr; | BLOBの新しいサイズ |
+| filler | Integer | &rarr; | 埋め込み文字のASCIIコード |
 
 <!-- END REF-->
 

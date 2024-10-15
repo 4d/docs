@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM GET OBJECTS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| objectsArray | Text array | &harr; | フォームオブジェクト名 |
-| variablesArray | Pointer array | &harr; | オブジェクトに関連付けられた 変数やフィールドへのポインタ |
-| pagesArray | Array integer | &harr; | オブジェクトごとのページ番号 |
-| formPageOption &#124; * | 倍長整数, 演算子 | &srarr; | 1=Form current page, 2=Form all pages, 4=Form inherited<br/>* 指定時(廃止予定) = Form current pageとForm inherited |
+| objectsArray | Text array | &larr; | フォームオブジェクト名 |
+| variablesArray | Pointer array | &larr; | オブジェクトに関連付けられた 変数やフィールドへのポインタ |
+| pagesArray | Array integer | &larr; | オブジェクトごとのページ番号 |
+| formPageOption &#124; * | 倍長整数, 演算子 | &rarr; | 1=Form current page, 2=Form all pages, 4=Form inherited<br/>* 指定時(廃止予定) = Form current pageとForm inherited |
 
 <!-- END REF-->
 

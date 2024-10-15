@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DISTINCT VALUES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &srarr; | Champ à utiliser |
-| tableau | Array | &harr; | Tableau devant recevoir les données du champ indexable |
-| tabNbVal | Integer array, Real array | &harr; | Tableau devant recevoir le nombre d'occurrences de chaque valeur |
+| leField | Field | &rarr; | Champ à utiliser |
+| tableau | Array | &larr; | Tableau devant recevoir les données du champ indexable |
+| tabNbVal | Integer array, Real array | &larr; | Tableau devant recevoir le nombre d'occurrences de chaque valeur |
 
 <!-- END REF-->
 

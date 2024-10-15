@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Bool.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| expression | Expression | &srarr; | ブール形式で返したい式 |
+| expression | Expression | &rarr; | ブール形式で返したい式 |
 | 戻り値 | Boolean | &larr; | 式のブール型 |
 
 <!-- END REF-->

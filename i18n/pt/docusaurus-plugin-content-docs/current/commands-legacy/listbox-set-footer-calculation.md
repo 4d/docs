@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
-| objeto | any | &srarr; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
-| calculo | Integer | &srarr; | Calculo para à área de rodapé |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
+| objeto | any | &rarr; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| calculo | Integer | &rarr; | Calculo para à área de rodapé |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET GRID COLOR.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &srarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| color | Text, Integer | &srarr; | Valor de color RGB |
-| horizontal | Boolean | &srarr; | Utilice el color para las líneas horizontales |
-| vertical | Boolean | &srarr; | Utilice el color para las líneas verticales |
+| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &rarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| color | Text, Integer | &rarr; | Valor de color RGB |
+| horizontal | Boolean | &rarr; | Utilice el color para las líneas horizontales |
+| vertical | Boolean | &rarr; | Utilice el color para las líneas verticales |
 
 <!-- END REF-->
 

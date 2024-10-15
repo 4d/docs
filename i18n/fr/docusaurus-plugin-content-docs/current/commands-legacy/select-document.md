@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Select document.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| répertoire | Text, Integer | &srarr; | • Chemin d’accès du répertoire à afficher par défaut dans la boîte de dialogue de sélection, ou• Chaîne vide pour afficher le dossier d’utilisateur par défaut (“Mes documents” sous Windows, “Documents” sous Mac OS), ou• Numéro de chemin d’accès mémorisé |
-| typesFichiers | Text | &srarr; | Liste des types de documents à filtrer, ou "*" pour ne pas filtrer les documents |
-| titre | Text | &srarr; | Titre de la boîte de dialogue de sélection |
-| options | Integer | &srarr; | Option(s) de sélection |
-| sélectionnés | Text array | &harr; | Tableau contenant la liste des chemins d’accès + les noms des fichiers sélectionnés |
+| répertoire | Text, Integer | &rarr; | • Chemin d’accès du répertoire à afficher par défaut dans la boîte de dialogue de sélection, ou• Chaîne vide pour afficher le dossier d’utilisateur par défaut (“Mes documents” sous Windows, “Documents” sous Mac OS), ou• Numéro de chemin d’accès mémorisé |
+| typesFichiers | Text | &rarr; | Liste des types de documents à filtrer, ou "*" pour ne pas filtrer les documents |
+| titre | Text | &rarr; | Titre de la boîte de dialogue de sélection |
+| options | Integer | &rarr; | Option(s) de sélection |
+| sélectionnés | Text array | &larr; | Tableau contenant la liste des chemins d’accès + les noms des fichiers sélectionnés |
 | Résultat | Text | &larr; | Nom du fichier sélectionné (premier fichier de la liste en cas de sélection multiple) |
 
 <!-- END REF-->

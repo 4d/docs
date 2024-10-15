@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Replace string.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Text | &srarr; | Original string |
-| oldText | Text | &srarr; | Characters to replace |
-| newText | Text | &srarr; | Replacement string (if empty string, occurrences are deleted) |
-| howMany | Integer | &srarr; | How many times to replace If omitted, all occurrences are replaced |
-| * | Operator | &srarr; | If passed: evaluation based on character codes |
+| source | Text | &rarr; | Original string |
+| oldText | Text | &rarr; | Characters to replace |
+| newText | Text | &rarr; | Replacement string (if empty string, occurrences are deleted) |
+| howMany | Integer | &rarr; | How many times to replace If omitted, all occurrences are replaced |
+| * | Operator | &rarr; | If passed: evaluation based on character codes |
 | Function result | String | &larr; | Resulting string |
 
 <!-- END REF-->

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET FORMAT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
-| objet | any | &srarr; | Nom d'objet (si * spécifié) ou Champ ou Variable (si * omis) |
-| formatAffich | Text | &srarr; | Nouveau format d'affichage de l'objet |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
+| objet | any | &rarr; | Nom d'objet (si * spécifié) ou Champ ou Variable (si * omis) |
+| formatAffich | Text | &rarr; | Nouveau format d'affichage de l'objet |
 
 <!-- END REF-->
 

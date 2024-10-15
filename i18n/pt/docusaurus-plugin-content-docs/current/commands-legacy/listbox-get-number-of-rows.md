@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get number of rows.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &srarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| * | Operador | &rarr; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &rarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
 | Resultado | Integer | &larr; | Número de filas |
 
 <!-- END REF-->

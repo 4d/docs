@@ -8,7 +8,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Server.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| option | Integer | &srarr; | Web server to get (default if omitted = `Web server database`) |
+| option | Integer | &rarr; | Web server to get (default if omitted = `Web server database`) |
 | Function result | 4D.WebServer | &larr; | Web server object |
 
 <!-- END REF-->

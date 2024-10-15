@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Validate password.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| userID | Integer, Text | &srarr; | Unique user ID or User name |
-| password | Text | &srarr; | Unencrypted password |
-| digest | Boolean | &srarr; | Digest password = True, <br/>Plain-text password (default) = False |
+| userID | Integer, Text | &rarr; | Unique user ID or User name |
+| password | Text | &rarr; | Unencrypted password |
+| digest | Boolean | &rarr; | Digest password = True, <br/>Plain-text password (default) = False |
 | Function result | Boolean | &larr; | True = valid password False = invalid password |
 
 <!-- END REF-->

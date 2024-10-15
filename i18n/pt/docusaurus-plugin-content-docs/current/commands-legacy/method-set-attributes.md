@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.METHOD SET ATTRIBUTES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| caminho | Text, Text array | &srarr; | Caminho dos métodos |
-| atributos | Object, Object array | &srarr; | Atributos a estabelecer para os métodos selecionados |
-| * | Operador | &srarr; | Se passado = comando aplica ao banco de dados host quando executado a partir de um componente (parâmetro ignorado fora desse contexto) |
+| caminho | Text, Text array | &rarr; | Caminho dos métodos |
+| atributos | Object, Object array | &rarr; | Atributos a estabelecer para os métodos selecionados |
+| * | Operador | &rarr; | Se passado = comando aplica ao banco de dados host quando executado a partir de um componente (parâmetro ignorado fora desse contexto) |
 
 <!-- END REF-->
 

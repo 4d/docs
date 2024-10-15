@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Lowercase.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aString | Text | &srarr; | 英小文字に変換する文字列 |
-| * | 演算子 | &srarr; | 渡した場合アクセントを保持 |
+| aString | Text | &rarr; | 英小文字に変換する文字列 |
+| * | 演算子 | &rarr; | 渡した場合アクセントを保持 |
 | 戻り値 | Text | &larr; | 英小文字の文字列 |
 
 <!-- END REF-->

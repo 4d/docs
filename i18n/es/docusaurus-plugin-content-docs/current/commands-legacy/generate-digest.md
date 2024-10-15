@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Generate digest.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| param | Blob, Text | &srarr; | Blob o texto para el cual obtener un extracto |
-| algoritmo | Integer | &srarr; | Algoritmo utilizado para devolver la llave: 0 = Digest MD5, 1 = Digest SHA1 |
-| * | Operador | &srarr; | Codificar digest en Base64URL |
+| param | Blob, Text | &rarr; | Blob o texto para el cual obtener un extracto |
+| algoritmo | Integer | &rarr; | Algoritmo utilizado para devolver la llave: 0 = Digest MD5, 1 = Digest SHA1 |
+| * | Operador | &rarr; | Codificar digest en Base64URL |
 | Resultado | Text | &larr; | Valor de la llave digest |
 
 <!-- END REF-->

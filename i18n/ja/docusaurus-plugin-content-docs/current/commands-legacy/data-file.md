@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Data file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| segment | Integer | &srarr; | 廃止、使用されません |
+| segment | Integer | &rarr; | 廃止、使用されません |
 | 戻り値 | Text | &larr; | データベースのデータファイルのロング名 |
 
 <!-- END REF-->

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE FROM BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Blob | Blob | &srarr; | バイト列を削除するBLOB |
-| offset | Integer | &srarr; | バイト削除開始位置 |
-| len | Integer | &srarr; | 削除するバイト数 |
+| Blob | Blob | &rarr; | バイト列を削除するBLOB |
+| offset | Integer | &rarr; | バイト削除開始位置 |
+| len | Integer | &rarr; | 削除するバイト数 |
 
 <!-- END REF-->
 

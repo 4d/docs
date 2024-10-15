@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET FONT SIZE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
-| object | any | &srarr; | Object Name (if * is specified), or Field or Variable (if * is omitted) |
-| size | Integer | &srarr; | Font size in points |
+| * | Operator | &rarr; | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
+| object | any | &rarr; | Object Name (if * is specified), or Field or Variable (if * is omitted) |
+| size | Integer | &rarr; | Font size in points |
 
 <!-- END REF-->
 

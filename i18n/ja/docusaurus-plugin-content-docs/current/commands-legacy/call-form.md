@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CALL FORM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| window | Integer | &srarr; | ウィンドウ参照番号 |
-| formula | Object, Text | &srarr; | 実行するプロジェクトメソッドの名前、または Formulaオブジェクト |
-| param | Expression | &srarr; | メソッドに渡す引数 |
+| window | Integer | &rarr; | ウィンドウ参照番号 |
+| formula | Object, Text | &rarr; | 実行するプロジェクトメソッドの名前、または Formulaオブジェクト |
+| param | Expression | &rarr; | メソッドに渡す引数 |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL GET LAST ERROR.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| errCode | Integer | &harr; | エラーコード |
-| errText | Text | &harr; | エラーテキスト |
-| errODBC | Text | &harr; | ODBCエラーコード |
-| errSQLServer | Integer | &harr; | SQLサーバネイティブエラーコード |
+| errCode | Integer | &larr; | エラーコード |
+| errText | Text | &larr; | エラーテキスト |
+| errODBC | Text | &larr; | ODBCエラーコード |
+| errSQLServer | Integer | &larr; | SQLサーバネイティブエラーコード |
 
 <!-- END REF-->
 

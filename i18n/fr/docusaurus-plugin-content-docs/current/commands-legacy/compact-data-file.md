@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Compact data file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminStructure | Text | &srarr; | Chemin d’accès du fichier de structure |
-| cheminDonnées | Text | &srarr; | Chemin d’accès du fichier de données |
-| dossierArchive | Text | &srarr; | Chemin d’accès du dossier dans lequel placer le fichier de données original |
-| options | Integer | &srarr; | Options de compactage |
-| méthode | Text | &srarr; | Nom de la méthode 4D de rétro-appel |
+| cheminStructure | Text | &rarr; | Chemin d’accès du fichier de structure |
+| cheminDonnées | Text | &rarr; | Chemin d’accès du fichier de données |
+| dossierArchive | Text | &rarr; | Chemin d’accès du dossier dans lequel placer le fichier de données original |
+| options | Integer | &rarr; | Options de compactage |
+| méthode | Text | &rarr; | Nom de la méthode 4D de rétro-appel |
 | Résultat | Text | &larr; | Chemin d’accès complet du dossier contenant le fichier de données original |
 
 <!-- END REF-->

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Round.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| round | Real | &srarr; | Number to be rounded |
-| places | Integer | &srarr; | Number of decimal places used for rounding |
+| round | Real | &rarr; | Number to be rounded |
+| places | Integer | &rarr; | Number of decimal places used for rounding |
 | Function result | Real | &larr; | Number rounded to the number of decimal places specified by Places |
 
 <!-- END REF-->

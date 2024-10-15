@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ADD TO SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Current record's table, or Default table, if omitted |
-| set | Text | &srarr; | Name of the set to which to add the current record |
+| aTable | Table | &rarr; | Current record's table, or Default table, if omitted |
+| set | Text | &rarr; | Name of the set to which to add the current record |
 
 <!-- END REF-->
 

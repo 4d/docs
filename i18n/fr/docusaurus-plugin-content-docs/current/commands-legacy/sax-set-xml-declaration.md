@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX SET XML DECLARATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &srarr; | Référence du document ouvert |
-| encodage | Text | &srarr; | Jeu de caractères du document XML |
-| autonome | Boolean | &srarr; | Vrai=le document est autonome, Faux (défaut)=le document n’est pas autonome |
+| document | Time | &rarr; | Référence du document ouvert |
+| encodage | Text | &rarr; | Jeu de caractères du document XML |
+| autonome | Boolean | &rarr; | Vrai=le document est autonome, Faux (défaut)=le document n’est pas autonome |
 
 <!-- END REF-->
 

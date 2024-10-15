@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Current date.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Devolve a data atual do servidor |
+| * | Operador | &rarr; | Devolve a data atual do servidor |
 | Resultado | Date | &larr; | Data atual |
 
 <!-- END REF-->

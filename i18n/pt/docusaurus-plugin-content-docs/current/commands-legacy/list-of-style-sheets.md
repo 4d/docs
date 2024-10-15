@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.LIST OF STYLE SHEETS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| arrFolhasEstilo | Text array | &harr; | Nomes das folhas de estilo definidas na aplicação |
+| arrFolhasEstilo | Text array | &larr; | Nomes das folhas de estilo definidas na aplicação |
 
 <!-- END REF-->
 

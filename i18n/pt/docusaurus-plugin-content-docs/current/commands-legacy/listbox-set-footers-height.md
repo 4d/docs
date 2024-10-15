@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET FOOTERS HEIGHT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
-| objeto | any | &srarr; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
-| altura | Integer | &srarr; | Alto de linha |
-| unidade | Integer | &srarr; | Unidade de valor de altura:0 ou se omitida = pixeles, 1 = linhas |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
+| objeto | any | &rarr; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| altura | Integer | &rarr; | Alto de linha |
+| unidade | Integer | &rarr; | Unidade de valor de altura:0 ou se omitida = pixeles, 1 = linhas |
 
 <!-- END REF-->
 

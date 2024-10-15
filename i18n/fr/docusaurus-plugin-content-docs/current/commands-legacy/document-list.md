@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOCUMENT LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminAccès | Text | &srarr; | Chemin d'accès de volume ou de dossier |
-| documents | Text array | &harr; | Nom des documents situés à cet endroit |
-| options | Integer | &srarr; | Options de construction de la liste |
+| cheminAccès | Text | &rarr; | Chemin d'accès de volume ou de dossier |
+| documents | Text array | &larr; | Nom des documents situés à cet endroit |
+| options | Integer | &rarr; | Options de construction de la liste |
 
 <!-- END REF-->
 

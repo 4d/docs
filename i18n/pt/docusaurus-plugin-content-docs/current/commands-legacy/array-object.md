@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY OBJECT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomArray | Array | &srarr; | Nome do array |
-| tam | Integer | &srarr; | Número de elementos do array ou número de arrays se especificado tam2 |
-| tam2 | Integer | &srarr; | Número de elementos do array 2D |
+| nomArray | Array | &rarr; | Nome do array |
+| tam | Integer | &rarr; | Número de elementos do array ou número de arrays se especificado tam2 |
+| tam2 | Integer | &rarr; | Número de elementos do array 2D |
 
 <!-- END REF-->
 

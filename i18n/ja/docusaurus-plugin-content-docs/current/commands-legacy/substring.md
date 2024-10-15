@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Substring.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| source | Text | &srarr; | 一部を取り出す文字列 |
-| firstChar | Integer | &srarr; | 最初の文字位置 |
-| numChars | Integer | &srarr; | 取り出す文字列の長さ |
+| source | Text | &rarr; | 一部を取り出す文字列 |
+| firstChar | Integer | &rarr; | 最初の文字位置 |
+| numChars | Integer | &rarr; | 取り出す文字列の長さ |
 | 戻り値 | Text | &larr; | 文字列の一部 |
 
 <!-- END REF-->

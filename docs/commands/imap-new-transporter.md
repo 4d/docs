@@ -18,8 +18,8 @@ displayed_sidebar: docs
 <!-- REF #_command_.IMAP New transporter.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|server|Object|&#x1F852;|Mail server information|
-|Result|4D.IMAPTransporter|&#x1F850;|[IMAP transporter object](../API/IMAPTransporterClass.md#imap-transporter-object)|
+|server|Object|&rarr;|Mail server information|
+|Result|4D.IMAPTransporter|&larr;|[IMAP transporter object](../API/IMAPTransporterClass.md#imap-transporter-object)|
 <!-- END REF -->
 
 

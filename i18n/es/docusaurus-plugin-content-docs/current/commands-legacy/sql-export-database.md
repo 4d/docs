@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL EXPORT DATABASE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaCarpeta | Text | &srarr; | Ruta de acceso de la carpeta de exportación o "" para mostrar una caja de diálogo de selección de carpeta |
-| numArchivos | Integer | &srarr; | Número máximo de archivos por carpeta |
-| tamLimiteArchivos | Integer | &srarr; | Valor límite de tamaño de los archivos de exportación (en KB) |
-| tamLimiteCampos | Integer | &srarr; | Limite de tamaño (en bytes) debajo del cual el contenido de un campo Texto, BLOB o Imagen se integrará al archivo principal |
+| rutaCarpeta | Text | &rarr; | Ruta de acceso de la carpeta de exportación o "" para mostrar una caja de diálogo de selección de carpeta |
+| numArchivos | Integer | &rarr; | Número máximo de archivos por carpeta |
+| tamLimiteArchivos | Integer | &rarr; | Valor límite de tamaño de los archivos de exportación (en KB) |
+| tamLimiteCampos | Integer | &rarr; | Limite de tamaño (en bytes) debajo del cual el contenido de un campo Texto, BLOB o Imagen se integrará al archivo principal |
 
 <!-- END REF-->
 

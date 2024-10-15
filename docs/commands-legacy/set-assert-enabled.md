@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.SET ASSERT ENABLED.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| assertions | Boolean | &srarr; | True = enable assertions<br/>False = disable assertions |
-| * | Operator | &srarr; | If omitted = command applies to all the processes (existing or created subsequently)<br/>If passed= command applies to current process only |
+| assertions | Boolean | &rarr; | True = enable assertions<br/>False = disable assertions |
+| * | Operator | &rarr; | If omitted = command applies to all the processes (existing or created subsequently)<br/>If passed= command applies to current process only |
 
 <!-- END REF-->
 

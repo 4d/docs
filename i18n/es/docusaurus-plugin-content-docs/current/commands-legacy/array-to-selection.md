@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY TO SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| array | Array | &srarr; | Array a copiar en la selección |
-| campo | Field | &harr; | Campo a recibir los valores del array |
-| * | Operador | &srarr; | Esperar ejecución |
+| array | Array | &rarr; | Array a copiar en la selección |
+| campo | Field | &larr; | Campo a recibir los valores del array |
+| * | Operador | &rarr; | Esperar ejecución |
 
 <!-- END REF-->
 

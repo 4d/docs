@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get font size.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável ou campo. |
-| objeto | any | &srarr; | Nome de objeto (se * é especificado) ou Variável ou Campo (se * é omitido). |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável ou campo. |
+| objeto | any | &rarr; | Nome de objeto (se * é especificado) ou Variável ou Campo (se * é omitido). |
 | Resultado | Integer | &larr; | Tamanho de fonte em pontos |
 
 <!-- END REF-->

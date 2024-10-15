@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.GET WINDOW RECT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| left | Integer | &harr; | Left coordinate of window's contents area |
-| top | Integer | &harr; | Top coordinate of window's contents area |
-| right | Integer | &harr; | Right coordinate of window's contents area |
-| bottom | Integer | &harr; | Bottom coordinate of window's contents area |
-| window | Integer | &srarr; | Window reference number, or Frontmost window of current process, if omitted or MDI window if -1 (Windows) |
+| left | Integer | &larr; | Left coordinate of window's contents area |
+| top | Integer | &larr; | Top coordinate of window's contents area |
+| right | Integer | &larr; | Right coordinate of window's contents area |
+| bottom | Integer | &larr; | Bottom coordinate of window's contents area |
+| window | Integer | &rarr; | Window reference number, or Frontmost window of current process, if omitted or MDI window if -1 (Windows) |
 
 <!-- END REF-->
 

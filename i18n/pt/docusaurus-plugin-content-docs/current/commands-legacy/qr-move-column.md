@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR MOVE COLUMN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | Referência da área |
-| numColuna | Integer | &srarr; | Número de coluna |
-| novaPosição | Integer | &srarr; | Nova posição para a coluna |
+| area | Integer | &rarr; | Referência da área |
+| numColuna | Integer | &rarr; | Número de coluna |
+| novaPosição | Integer | &rarr; | Nova posição para a coluna |
 
 <!-- END REF-->
 

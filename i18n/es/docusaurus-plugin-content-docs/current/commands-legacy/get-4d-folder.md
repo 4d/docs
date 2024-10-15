@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get 4D folder.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| carpeta | Integer | &srarr; | Tipo de carpeta (si se omite = carpeta activa 4D) |
-| opciones | Object | &srarr; | Configuración de la ruta de la carpeta de la base 4D Client |
-| * | Operador | &srarr; | Devuelve la carpeta de la base local |
+| carpeta | Integer | &rarr; | Tipo de carpeta (si se omite = carpeta activa 4D) |
+| opciones | Object | &rarr; | Configuración de la ruta de la carpeta de la base 4D Client |
+| * | Operador | &rarr; | Devuelve la carpeta de la base local |
 | Resultado | Text | &larr; | Ruta de acceso a la carpeta designada |
 
 <!-- END REF-->

@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.ST Get content type.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| débutSél | Integer | &srarr; | Début de la sélection |
-| finSél | Integer | &srarr; | Fin de la sélection |
-| débutBloc | Integer | &harr; | Début de position du premier type de la sélection |
-| finBloc | Integer | &harr; | Fin de position du premier type de la sélection |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &rarr; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| débutSél | Integer | &rarr; | Début de la sélection |
+| finSél | Integer | &rarr; | Fin de la sélection |
+| débutBloc | Integer | &larr; | Début de position du premier type de la sélection |
+| finBloc | Integer | &larr; | Fin de position du premier type de la sélection |
 | Résultat | Integer | &larr; | Type de contenu |
 
 <!-- END REF-->

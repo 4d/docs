@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Get server info.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| comCache | Boolean | &srarr; | True para retornar a descrição web cache. Senão (pré-determinado) a descrição da cache não é retornada |
+| comCache | Boolean | &rarr; | True para retornar a descrição web cache. Senão (pré-determinado) a descrição da cache não é retornada |
 | Resultado | Object | &larr; | Informação no servidor Web executando e servidor SOAP |
 
 <!-- END REF-->

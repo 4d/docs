@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET OBJECTS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &srarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| arrObjectNames | Text array | &harr; | Names of sub-objects comprising list box (headers, columns, footers) |
+| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
+| arrObjectNames | Text array | &larr; | Names of sub-objects comprising list box (headers, columns, footers) |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Validate password.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| utilisateur | Integer, Text | &srarr; | N° de référence unique ou Nom de l’utilisateur |
-| motDePasse | Text | &srarr; | Mot de passe non crypté |
-| digest | Boolean | &srarr; | Mot de passe digest = Vrai, <br/>Mot de passe en clair (défaut)= Faux |
+| utilisateur | Integer, Text | &rarr; | N° de référence unique ou Nom de l’utilisateur |
+| motDePasse | Text | &rarr; | Mot de passe non crypté |
+| digest | Boolean | &rarr; | Mot de passe digest = Vrai, <br/>Mot de passe en clair (défaut)= Faux |
 | Résultat | Boolean | &larr; | Vrai = mot de passe correct, Faux = mot de passe incorrect |
 
 <!-- END REF-->

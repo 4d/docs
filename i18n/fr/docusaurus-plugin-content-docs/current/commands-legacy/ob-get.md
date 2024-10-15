@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Get.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Object, Object | &srarr; | Objet structuré |
-| propriété | Text | &srarr; | Nom de la propriété à lire |
-| type | Integer | &srarr; | Type dans lequel convertir la valeur |
+| objet | Object, Object | &rarr; | Objet structuré |
+| propriété | Text | &rarr; | Nom de la propriété à lire |
+| type | Integer | &rarr; | Type dans lequel convertir la valeur |
 | Résultat | Expression | &larr; | Valeur courante de la propriété |
 
 <!-- END REF-->

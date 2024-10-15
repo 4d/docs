@@ -19,11 +19,11 @@ displayed_sidebar: docs
 <!-- REF #_command_.Folder.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|path|Text|&#x1F852;|Folder path|
-|folderConstant|Integer|&#x1F852;|4D folder constant|
-|pathType|Integer|&#x1F852;|`fk posix path` (default) or `fk platform path`|
-|*|operator|&#x1F852;|* to return folder of host database|
-|Result|4D.Folder|&#x1F850;|New folder object|
+|path|Text|&rarr;|Folder path|
+|folderConstant|Integer|&rarr;|4D folder constant|
+|pathType|Integer|&rarr;|`fk posix path` (default) or `fk platform path`|
+|*|operator|&rarr;|* to return folder of host database|
+|Result|4D.Folder|&larr;|New folder object|
 <!-- END REF -->
 
 #### Description

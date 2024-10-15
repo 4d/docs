@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.VERIFY DATA FILE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaEstructura | Text | &srarr; | Ruta de acceso al archivo de estructura de la base a verificar |
-| rutaDatos | Text | &srarr; | Ruta de acceso del archivo de datos de la base a verificar |
-| objetos | Integer | &srarr; | Objetos a verificar |
-| opciones | Integer | &srarr; | Opciones de verificación |
-| metodo | Text | &srarr; | Nombre del método 4D de retrollamada |
-| arrayTablas | Integer array | &srarr; | Números de las tablas a verificar |
-| arrayCampos | 2D Integer array, 2D Integer array, 2D Real array | &srarr; | Números de los índices a verificar |
+| rutaEstructura | Text | &rarr; | Ruta de acceso al archivo de estructura de la base a verificar |
+| rutaDatos | Text | &rarr; | Ruta de acceso del archivo de datos de la base a verificar |
+| objetos | Integer | &rarr; | Objetos a verificar |
+| opciones | Integer | &rarr; | Opciones de verificación |
+| metodo | Text | &rarr; | Nombre del método 4D de retrollamada |
+| arrayTablas | Integer array | &rarr; | Números de las tablas a verificar |
+| arrayCampos | 2D Integer array, 2D Integer array, 2D Real array | &rarr; | Números de los índices a verificar |
 
 <!-- END REF-->
 

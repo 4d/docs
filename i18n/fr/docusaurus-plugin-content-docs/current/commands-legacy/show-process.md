@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SHOW PROCESS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &srarr; | Numéro du process dont les fenêtres doivent être affichées |
+| process | Integer | &rarr; | Numéro du process dont les fenêtres doivent être affichées |
 
 <!-- END REF-->
 

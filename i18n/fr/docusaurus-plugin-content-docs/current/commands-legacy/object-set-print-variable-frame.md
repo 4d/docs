@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| tailleVariable | Boolean | &srarr; | Vrai = Impression taille variable, Faux = Impression taille fixe |
-| fixeSousForm | Integer | &srarr; | Options d’impression en taille fixe des sous-formulaires |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &rarr; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| tailleVariable | Boolean | &rarr; | Vrai = Impression taille variable, Faux = Impression taille fixe |
+| fixeSousForm | Integer | &rarr; | Options d’impression en taille fixe des sous-formulaires |
 
 <!-- END REF-->
 

@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Open form window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table of the form or Default table, if omitted |
-| formName | Text, Object | &srarr; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
-| type | Integer | &srarr; | Window type |
-| hPos | Integer | &srarr; | Horizontal position of the window |
-| vPos | Integer | &srarr; | Vertical position of the window |
-| * | Operator | &srarr; | Save current position and size of the window |
+| aTable | Table | &rarr; | Table of the form or Default table, if omitted |
+| formName | Text, Object | &rarr; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
+| type | Integer | &rarr; | Window type |
+| hPos | Integer | &rarr; | Horizontal position of the window |
+| vPos | Integer | &rarr; | Vertical position of the window |
+| * | Operator | &rarr; | Save current position and size of the window |
 | Function result | WinRef | &larr; | Window reference number |
 
 <!-- END REF-->

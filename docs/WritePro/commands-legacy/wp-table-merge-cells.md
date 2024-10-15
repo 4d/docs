@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WP TABLE MERGE CELLS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | Range or element or 4D Write Pro document |
-| tableRef | Object | &#x1F852; | Table reference |
-| startColumn | Longint | &#x1F852; | Position of first cell column |
-| startRow | Longint | &#x1F852; | Position of first column row |
-| columnCount | Longint | &#x1F852; | Number of columns to merge |
-| rowCount | Longint | &#x1F852; | Number of rows to merge |
+| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
+| tableRef | Object | &rarr; | Table reference |
+| startColumn | Longint | &rarr; | Position of first cell column |
+| startRow | Longint | &rarr; | Position of first column row |
+| columnCount | Longint | &rarr; | Number of columns to merge |
+| rowCount | Longint | &rarr; | Number of rows to merge |
 
 <!-- END REF-->
 

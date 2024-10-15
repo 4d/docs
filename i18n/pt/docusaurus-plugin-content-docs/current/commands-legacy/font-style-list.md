@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.FONT STYLE LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| familiaFonte | Text | &srarr; | Nome da família da fonte |
-| listaEstilosFonte | Text array | &harr; | Lista de estilos de fonte suportados pela família da fonte |
-| listaNomesFonte | Text array | &harr; | Lista de nomes completos de fontes suportadas pela família de fonte |
+| familiaFonte | Text | &rarr; | Nome da família da fonte |
+| listaEstilosFonte | Text array | &larr; | Lista de estilos de fonte suportados pela família da fonte |
+| listaNomesFonte | Text array | &larr; | Lista de nomes completos de fontes suportadas pela família de fonte |
 
 <!-- END REF-->
 

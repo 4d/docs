@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is a variable.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| pointeur | Pointer | &srarr; | Pointeur à tester |
+| pointeur | Pointer | &rarr; | Pointeur à tester |
 | Résultat | Boolean | &larr; | VRAI = Pointeur pointe vers une variable FAUX = Pointeur ne pointe pas vers une variable |
 
 <!-- END REF-->

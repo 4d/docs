@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR SEMAPHORE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| semaforo | Text | &srarr; | Semáforo para limpar |
+| semaforo | Text | &rarr; | Semáforo para limpar |
 
 <!-- END REF-->
 

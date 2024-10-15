@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.LIST OF CHOICE LISTS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tabNums | Integer array | &harr; | Numéros des énumérations |
-| tabNoms | Text array | &harr; | Noms des énumérations |
+| tabNums | Integer array | &larr; | Numéros des énumérations |
+| tabNoms | Text array | &larr; | Noms des énumérations |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESUME INDEXES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | インデックスを再開するテーブル |
-| * | 演算子 | &srarr; | 指定時 = 非同期インデックス |
+| aTable | Table | &rarr; | インデックスを再開するテーブル |
+| * | 演算子 | &rarr; | 指定時 = 非同期インデックス |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Old.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | Field | &srarr; | 元の値を取得するフィールド |
+| aField | Field | &rarr; | 元の値を取得するフィールド |
 | 戻り値 | Expression | &larr; | 元のフィールド値 |
 
 <!-- END REF-->

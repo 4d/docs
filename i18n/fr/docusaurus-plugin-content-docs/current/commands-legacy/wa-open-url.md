@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WA OPEN URL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| url | Text | &srarr; | URL à charger dans la zone Web |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &rarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| url | Text | &rarr; | URL à charger dans la zone Web |
 
 <!-- END REF-->
 

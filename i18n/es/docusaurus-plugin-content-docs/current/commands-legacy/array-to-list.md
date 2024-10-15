@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY TO LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| array | Array | &srarr; | Array del cual copiar los elementos del array |
-| lista | Text, Integer | &srarr; | Lista en la cual copiar los elementos del array |
-| refElementos | Array | &srarr; | Array numérico de números de referencia de los elementos |
+| array | Array | &rarr; | Array del cual copiar los elementos del array |
+| lista | Text, Integer | &rarr; | Lista en la cual copiar los elementos del array |
+| refElementos | Array | &rarr; | Array numérico de números de referencia de los elementos |
 
 <!-- END REF-->
 

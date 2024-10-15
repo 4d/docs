@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.LONGINT TO BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| longInt | Integer | &srarr; | Long Integer value to write into the BLOB |
-| blob | Blob | &srarr; | BLOB to receive the Long Integer value |
-| byteOrder | Integer | &srarr; | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
-| offset &#124; * | Variable, Operator | &srarr; | Offset within the BLOB (expressed in bytes) or * to append the value |
-| &harr; | New offset after writing if not * |
+| longInt | Integer | &rarr; | Long Integer value to write into the BLOB |
+| blob | Blob | &rarr; | BLOB to receive the Long Integer value |
+| byteOrder | Integer | &rarr; | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
+| offset &#124; * | Variable, Operator | &rarr; | Offset within the BLOB (expressed in bytes) or * to append the value |
+| &larr; | New offset after writing if not * |
 
 <!-- END REF-->
 

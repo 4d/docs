@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.RESOURCE TYPE LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resTypes | Text array | &harr; | 利用可能なリストタイプのリスト |
-| resFile | Time | &srarr; | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
+| resTypes | Text array | &larr; | 利用可能なリストタイプのリスト |
+| resFile | Time | &rarr; | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
 
 <!-- END REF-->
 

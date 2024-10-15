@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Split string.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| stringToSplit | Text | &srarr; | String value |
-| separator | Text | &srarr; | String at which stringToSplit splits. If empty string (""), each character of stringToSplit is a substring |
-| options | Integer | &srarr; | Option(s) regarding empty strings and spaces |
+| stringToSplit | Text | &rarr; | String value |
+| separator | Text | &rarr; | String at which stringToSplit splits. If empty string (""), each character of stringToSplit is a substring |
+| options | Integer | &rarr; | Option(s) regarding empty strings and spaces |
 | Function result | Collection | &larr; | Collection of substrings |
 
 <!-- END REF-->

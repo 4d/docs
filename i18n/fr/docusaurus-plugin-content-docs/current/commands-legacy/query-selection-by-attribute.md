@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table dans laquelle la sélection est créée ou Table par défaut si ce paramètre est omis |
-| opConj | * | &srarr; | Opérateur à utiliser pour combiner plusieurs requêtes (le cas échéant) |
-| champObjet | Field | &srarr; | Champ objet dont les attributs sont à utiliser pour la recherche |
-| cheminAttribut | Text | &srarr; | Nom ou chemin d'attribut |
-| opRecherche | *, Text | &srarr; | Opérateur de recherche (comparateur) |
-| valeur | Text, Number, Date, Time | &srarr; | Valeur à comparer |
-| * | Opérateur | &srarr; | Attente d'exécution de la recherche |
+| laTable | Table | &rarr; | Table dans laquelle la sélection est créée ou Table par défaut si ce paramètre est omis |
+| opConj | * | &rarr; | Opérateur à utiliser pour combiner plusieurs requêtes (le cas échéant) |
+| champObjet | Field | &rarr; | Champ objet dont les attributs sont à utiliser pour la recherche |
+| cheminAttribut | Text | &rarr; | Nom ou chemin d'attribut |
+| opRecherche | *, Text | &rarr; | Opérateur de recherche (comparateur) |
+| valeur | Text, Number, Date, Time | &rarr; | Valeur à comparer |
+| * | Opérateur | &rarr; | Attente d'exécution de la recherche |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET QUERY AND LOCK.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| lock | Boolean | &srarr; | True = クエリで見つけたレコードをロック False = レコードをロックしない |
+| lock | Boolean | &rarr; | True = クエリで見つけたレコードをロック False = レコードをロックしない |
 
 <!-- END REF-->
 

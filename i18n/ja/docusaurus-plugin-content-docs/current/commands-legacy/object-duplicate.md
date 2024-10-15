@@ -9,16 +9,16 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT DUPLICATE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時: objectはオブジェクト名 (文字列)、省略時: objectは変数またはフィールド |
-| object | any | &srarr; | オブジェクト名 (*指定時)、または変数やフィールド (*省略時) |
-| newName | Text | &srarr; | 新しいオブジェクトの名前 |
-| newVar | Pointer | &srarr; | 新しいオブジェクトの変数へのポインター |
-| boundTo | Text | &srarr; | 直前の入力順の入力可能オブジェクトまたはラジオボタングループ |
-| moveH | Integer | &srarr; | 新しいオブジェクトの横シフト (>0 = 右方向, <0 = 左方向) |
-| moveV | Integer | &srarr; | 新しいオブジェクトの縦シフト (>0 = 下方向, <0 = 上方向) |
-| resizeH | Integer | &srarr; | オブジェクトの横リサイズ |
-| resizeV | Integer | &srarr; | 新しいオブジェクトの縦リサイズ |
-| * | 演算子 | &srarr; | 指定時= 絶対座標, 省略時= 相対座標 |
+| * | 演算子 | &rarr; | 指定時: objectはオブジェクト名 (文字列)、省略時: objectは変数またはフィールド |
+| object | any | &rarr; | オブジェクト名 (*指定時)、または変数やフィールド (*省略時) |
+| newName | Text | &rarr; | 新しいオブジェクトの名前 |
+| newVar | Pointer | &rarr; | 新しいオブジェクトの変数へのポインター |
+| boundTo | Text | &rarr; | 直前の入力順の入力可能オブジェクトまたはラジオボタングループ |
+| moveH | Integer | &rarr; | 新しいオブジェクトの横シフト (>0 = 右方向, <0 = 左方向) |
+| moveV | Integer | &rarr; | 新しいオブジェクトの縦シフト (>0 = 下方向, <0 = 上方向) |
+| resizeH | Integer | &rarr; | オブジェクトの横リサイズ |
+| resizeV | Integer | &rarr; | 新しいオブジェクトの縦リサイズ |
+| * | 演算子 | &rarr; | 指定時= 絶対座標, 省略時= 相対座標 |
 
 <!-- END REF-->
 

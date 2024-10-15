@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get rows height.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &srarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| unit | Integer | &srarr; | Unit of height value: 0 or omitted = pixels, 1 = lines |
+| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
+| unit | Integer | &rarr; | Unit of height value: 0 or omitted = pixels, 1 = lines |
 | Function result | Integer | &larr; | Row height |
 
 <!-- END REF-->

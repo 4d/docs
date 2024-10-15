@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN URL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota | Text | &srarr; | Path of document or URL to open |
-| appName | Text | &srarr; | Name of application to use |
-| * | Operador | &srarr; | Se especificado = URL não é traduzido, se omitido = URL é traduzido |
+| rota | Text | &rarr; | Path of document or URL to open |
+| appName | Text | &rarr; | Name of application to use |
+| * | Operador | &rarr; | Se especificado = URL não é traduzido, se omitido = URL é traduzido |
 
 <!-- END REF-->
 

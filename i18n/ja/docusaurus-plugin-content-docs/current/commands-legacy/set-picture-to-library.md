@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PICTURE TO LIBRARY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture | Picture | &srarr; | 新しいピクチャ |
-| picRef | Integer | &srarr; | ピクチャライブラリ画像の参照番号 |
-| picName | Text | &srarr; | ピクチャの新しい名前 |
+| picture | Picture | &rarr; | 新しいピクチャ |
+| picRef | Integer | &rarr; | ピクチャライブラリ画像の参照番号 |
+| picName | Text | &rarr; | ピクチャの新しい名前 |
 
 <!-- END REF-->
 

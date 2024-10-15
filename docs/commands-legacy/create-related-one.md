@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE RELATED ONE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &srarr; | Many field |
+| aField | Field | &rarr; | Many field |
 
 <!-- END REF-->
 

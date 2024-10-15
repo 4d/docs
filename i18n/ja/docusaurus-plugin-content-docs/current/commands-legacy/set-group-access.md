@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET GROUP ACCESS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| groups | Collection | &srarr; | セッションの間4D ユーザーアカウントを所属させたいグループの名前 |
+| groups | Collection | &rarr; | セッションの間4D ユーザーアカウントを所属させたいグループの名前 |
 
 <!-- END REF-->
 

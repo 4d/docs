@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DISPLAY RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &srarr; | Tabela para qual exibir o registro atual, ou tabela Padrão, se omitido |
+| tabela | Table | &rarr; | Tabela para qual exibir o registro atual, ou tabela Padrão, se omitido |
 
 <!-- END REF-->
 

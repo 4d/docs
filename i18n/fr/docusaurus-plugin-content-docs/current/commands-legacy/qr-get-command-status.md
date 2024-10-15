@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get command status.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &srarr; | Référence de la zone |
-| numCommande | Integer | &srarr; | Numéro de commande |
-| valeur | Integer, Text | &harr; | Valeur du sous-élément sélectionné |
+| zone | Integer | &rarr; | Référence de la zone |
+| numCommande | Integer | &rarr; | Numéro de commande |
+| valeur | Integer, Text | &larr; | Valeur du sous-élément sélectionné |
 | Résultat | Integer | &larr; | Statut de la commande |
 
 <!-- END REF-->

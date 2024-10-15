@@ -9,15 +9,15 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX INSERT COLUMN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &srarr; | Object name (if * is set) or Variable (if * is omitted) |
-| colPosition | Integer | &srarr; | Location of column to insert |
-| colName | Text | &srarr; | Name of the column object |
-| colVariable | Array, Field, Variable, Pointer | &srarr; | Column array name or field or variable |
-| headerName | Text | &srarr; | Name of the column header object |
-| headerVar | Integer, Pointer | &srarr; | Column header variable |
-| footerName | Text | &srarr; | Column footer object name |
-| footerVar | Variable, Pointer | &srarr; | Column footer variable |
+| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &rarr; | Object name (if * is set) or Variable (if * is omitted) |
+| colPosition | Integer | &rarr; | Location of column to insert |
+| colName | Text | &rarr; | Name of the column object |
+| colVariable | Array, Field, Variable, Pointer | &rarr; | Column array name or field or variable |
+| headerName | Text | &rarr; | Name of the column header object |
+| headerVar | Integer, Pointer | &rarr; | Column header variable |
+| footerName | Text | &rarr; | Column footer object name |
+| footerVar | Variable, Pointer | &rarr; | Column footer variable |
 
 <!-- END REF-->
 

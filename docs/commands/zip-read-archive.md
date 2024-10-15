@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!-- REF #_command_.ZIP Read archive.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|zipFile|4D.File|&srarr;|Zip archive file|
-|password|Text|&srarr;|ZIP archive password if any|
+|zipFile|4D.File|&rarr;|Zip archive file|
+|password|Text|&rarr;|ZIP archive password if any|
 |Result|4D.ZipArchive|&larr;|Archive object|
 <!-- END REF -->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.New data key.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| passPhrase | Text | &srarr; | AESデータ暗号化キーを生成するために使用するパスフレーズ |
+| passPhrase | Text | &rarr; | AESデータ暗号化キーを生成するために使用するパスフレーズ |
 | 戻り値 | Object | &larr; | キーを格納しているオブジェクト(encodedKeyプロパティに格納) |
 
 <!-- END REF-->

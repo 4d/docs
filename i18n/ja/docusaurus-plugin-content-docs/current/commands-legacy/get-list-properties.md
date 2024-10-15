@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | Integer | &srarr; | リスト参照番号 |
-| appearance | Integer | &harr; | リストの描画スタイル 1 = Macスタイル 2 = Windowsスタイル |
-| icon | Integer | &harr; | *** 廃止予定、常に0を返します *** |
-| lineHeight | Integer | &harr; | 行の最小高さ (ピクセル単位) |
-| doubleClick | Integer | &harr; | ダブルクリックでサブリストを展開/折り畳み 0 = Yes, 1= No |
-| multiSelections | Integer | &harr; | 複数行選択: 0 = No, 1 = Yes |
-| editable | Integer | &harr; | ユーザによる更新可: 0 = No, 1 = Yes |
+| list | Integer | &rarr; | リスト参照番号 |
+| appearance | Integer | &larr; | リストの描画スタイル 1 = Macスタイル 2 = Windowsスタイル |
+| icon | Integer | &larr; | *** 廃止予定、常に0を返します *** |
+| lineHeight | Integer | &larr; | 行の最小高さ (ピクセル単位) |
+| doubleClick | Integer | &larr; | ダブルクリックでサブリストを展開/折り畳み 0 = Yes, 1= No |
+| multiSelections | Integer | &larr; | 複数行選択: 0 = No, 1 = Yes |
+| editable | Integer | &larr; | ユーザによる更新可: 0 = No, 1 = Yes |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET USER LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomsUsuario | Text array | &harr; | Nombres de los usuarios tal como aparecen en el editor de contraseñas |
-| refUsuario | Integer array | &harr; | Números de referencia únicos para cada usuario |
+| nomsUsuario | Text array | &larr; | Nombres de los usuarios tal como aparecen en el editor de contraseñas |
+| refUsuario | Integer array | &larr; | Números de referencia únicos para cada usuario |
 
 <!-- END REF-->
 

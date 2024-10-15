@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.On SQL Authentication database method.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| $1 | Texto | &harr; | Nome de usuário |
-| $2 | Texto | &harr; | Senha |
-| $3 | Texto | &harr; | (Opcional) endereço IP de cliente na origem do pedido |
+| $1 | Texto | &larr; | Nome de usuário |
+| $2 | Texto | &larr; | Senha |
+| $3 | Texto | &larr; | (Opcional) endereço IP de cliente na origem do pedido |
 | Resultado | Boolean | &larr; | Verdadeiro = pedido aceito, Falso = pedido recusado |
 
 <!-- END REF-->

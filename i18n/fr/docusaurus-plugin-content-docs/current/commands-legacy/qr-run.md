@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QR RUN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &srarr; | Référence de la zone à exécuter |
+| zone | Integer | &rarr; | Référence de la zone à exécuter |
 
 <!-- END REF-->
 

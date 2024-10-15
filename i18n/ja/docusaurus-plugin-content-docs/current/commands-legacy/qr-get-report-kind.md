@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get report kind.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | エリア参照 |
+| area | Integer | &rarr; | エリア参照 |
 | 戻り値 | Integer | &larr; | レポートタイプ |
 
 <!-- END REF-->

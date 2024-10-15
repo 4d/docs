@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Dec.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numero | Real | &srarr; | Número cuja parte decimal é retornada |
+| numero | Real | &rarr; | Número cuja parte decimal é retornada |
 | Resultado | Real | &larr; | Parte decimal do número |
 
 <!-- END REF-->

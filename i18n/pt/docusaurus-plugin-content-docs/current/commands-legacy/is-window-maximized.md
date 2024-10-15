@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is window maximized.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janela | Integer | &srarr; | número de referência da janela |
+| janela | Integer | &rarr; | número de referência da janela |
 | Resultado | Boolean | &larr; | True se a janela estiver maximizada. Se não, False |
 
 <!-- END REF-->

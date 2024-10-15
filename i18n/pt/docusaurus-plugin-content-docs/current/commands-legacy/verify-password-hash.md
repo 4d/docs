@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Verify password hash.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| senha | Text | &srarr; | A senha do usuário. Só os primeiros 72 caracteres são usados |
-| hash | Text | &srarr; | O hash da senha |
+| senha | Text | &rarr; | A senha do usuário. Só os primeiros 72 caracteres são usados |
+| hash | Text | &rarr; | O hash da senha |
 | Resultado | Boolean | &larr; | Retorna TRUE se a senha e o hash coincidirem, ou então retorna FALSE |
 
 <!-- END REF-->

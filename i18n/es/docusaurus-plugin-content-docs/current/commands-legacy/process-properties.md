@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.PROCESS PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| proceso | Integer | &srarr; | Número del proceso |
-| procNom | Text | &harr; | Nombre del proceso |
-| procEstado | Integer | &harr; | Estado del proceso |
-| procTiempo | Integer | &harr; | Tiempo acumulado de ejecución del proceso en tics |
-| procVisible | Boolean, Integer | &harr; | Visible (TRUE) u Oculto (FALSE) |
-| unicoID | Integer | &harr; | Número único del proceso |
-| origen | Integer | &harr; | Origen del proceso |
+| proceso | Integer | &rarr; | Número del proceso |
+| procNom | Text | &larr; | Nombre del proceso |
+| procEstado | Integer | &larr; | Estado del proceso |
+| procTiempo | Integer | &larr; | Tiempo acumulado de ejecución del proceso en tics |
+| procVisible | Boolean, Integer | &larr; | Visible (TRUE) u Oculto (FALSE) |
+| unicoID | Integer | &larr; | Número único del proceso |
+| origen | Integer | &larr; | Origen del proceso |
 
 <!-- END REF-->
 

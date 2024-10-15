@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.New object.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| propiedad | Text | &srarr; | Nombre de la propiedad a crear |
-| valor | any | &srarr; | Valor de la propiedad |
+| propiedad | Text | &rarr; | Nombre de la propiedad a crear |
+| valor | any | &rarr; | Valor de la propiedad |
 | Resultado | Object | &larr; | Nuevo objeto del lenguaje |
 
 <!-- END REF-->

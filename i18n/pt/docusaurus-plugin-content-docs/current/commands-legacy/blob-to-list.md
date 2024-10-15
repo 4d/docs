@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB to list.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Blob | Blob | &srarr; | BLOB que contém uma lista hierárquica |
-| offset | Integer | &srarr; | Offset no BLOB (expressado em bytes) |
-| &harr; | Novo offset depois da leitura |
+| Blob | Blob | &rarr; | BLOB que contém uma lista hierárquica |
+| offset | Integer | &rarr; | Offset no BLOB (expressado em bytes) |
+| &larr; | Novo offset depois da leitura |
 | Resultado | Integer | &larr; | Referência da lista criada recentemente |
 
 <!-- END REF-->

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET DRAG ICON.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| icône | Picture | &srarr; | Icône à utiliser lors du glisser |
-| décalageH | Integer | &srarr; | Décalage horizontal du bord gauche de l’image par rapport à la position du curseur (>0 = vers la gauche, <0 = vers la droite) |
-| décalageV | Integer | &srarr; | Décalage vertical du bord supérieur de l’image par rapport à la position du curseur (>0 = vers le haut, <0 = vers le bas) |
+| icône | Picture | &rarr; | Icône à utiliser lors du glisser |
+| décalageH | Integer | &rarr; | Décalage horizontal du bord gauche de l’image par rapport à la position du curseur (>0 = vers la gauche, <0 = vers la droite) |
+| décalageV | Integer | &rarr; | Décalage vertical du bord supérieur de l’image par rapport à la position du curseur (>0 = vers le haut, <0 = vers le bas) |
 
 <!-- END REF-->
 

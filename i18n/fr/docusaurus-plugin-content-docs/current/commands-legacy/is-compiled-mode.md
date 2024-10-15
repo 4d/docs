@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is compiled mode.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Retourner l'information de la base hôte |
+| * | Opérateur | &rarr; | Retourner l'information de la base hôte |
 | Résultat | Boolean | &larr; | Mode compilé (Vrai), mode interprété (Faux) |
 
 <!-- END REF-->

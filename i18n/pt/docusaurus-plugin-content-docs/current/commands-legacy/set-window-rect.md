@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.SET WINDOW RECT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| esquerda | Integer | &srarr; | Coordenada global esquerda da área de conteúdo da janela |
-| superior | Integer | &srarr; | Coordenada global superior da área de conteúdo da janela |
-| direita | Integer | &srarr; | Coordenada global direita da área de conteúdo da janela |
-| inferior | Integer | &srarr; | Coordenada global inferior da área de conteúdo da janela |
-| janela | Integer | &srarr; | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
-| * | Operador | &srarr; | Se omitido (padrão) = muda janela para o fundo<br/>Se passado = não muda o nível da janela |
+| esquerda | Integer | &rarr; | Coordenada global esquerda da área de conteúdo da janela |
+| superior | Integer | &rarr; | Coordenada global superior da área de conteúdo da janela |
+| direita | Integer | &rarr; | Coordenada global direita da área de conteúdo da janela |
+| inferior | Integer | &rarr; | Coordenada global inferior da área de conteúdo da janela |
+| janela | Integer | &rarr; | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
+| * | Operador | &rarr; | Se omitido (padrão) = muda janela para o fundo<br/>Se passado = não muda o nível da janela |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GOTO OBJECT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié = objet est un nom d’objet (chaîne) Si omis = objet est un champ ou une variable |
-| objet | Field, Variable | &srarr; | Nom d’objet (si * spécifié) sinon Variable ou champ saisissable à sélectionner |
+| * | Opérateur | &rarr; | Si spécifié = objet est un nom d’objet (chaîne) Si omis = objet est un champ ou une variable |
+| objet | Field, Variable | &rarr; | Nom d’objet (si * spécifié) sinon Variable ou champ saisissable à sélectionner |
 
 <!-- END REF-->
 

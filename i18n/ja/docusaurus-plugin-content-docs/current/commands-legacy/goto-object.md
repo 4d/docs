@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GOTO OBJECT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定した場合 = objectはオブジェクト名 (文字列) 省略した場合 = object はフィールドまたは変数参照 |
-| object | Field, Variable | &srarr; | オブジェクト名 (* を指定した場合) または フィールドまたは変数 (* を省略した場合) |
+| * | 演算子 | &rarr; | 指定した場合 = objectはオブジェクト名 (文字列) 省略した場合 = object はフィールドまたは変数参照 |
+| object | Field, Variable | &rarr; | オブジェクト名 (* を指定した場合) または フィールドまたは変数 (* を省略した場合) |
 
 <!-- END REF-->
 

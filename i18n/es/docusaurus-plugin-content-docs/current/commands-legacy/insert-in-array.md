@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.INSERT IN ARRAY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| array | Array | &srarr; | Nombre del array |
-| posicion | Integer | &srarr; | Donde insertar los elementos |
-| reemplazos | Integer | &srarr; | Número de elementos a insertar, o 1 elemento si se omite |
+| array | Array | &rarr; | Nombre del array |
+| posicion | Integer | &rarr; | Donde insertar los elementos |
+| reemplazos | Integer | &rarr; | Número de elementos a insertar, o 1 elemento si se omite |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get command status.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | Reference of the area |
-| command | Integer | &srarr; | Command number |
-| value | Integer, Text | &harr; | Value for the selected sub-item |
+| area | Integer | &rarr; | Reference of the area |
+| command | Integer | &rarr; | Command number |
+| value | Integer, Text | &larr; | Value for the selected sub-item |
 | Function result | Longint | &larr; | Command status |
 
 <!-- END REF-->

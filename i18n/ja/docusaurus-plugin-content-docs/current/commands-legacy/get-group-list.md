@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET GROUP LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| groupNames | Text array | &harr; | パスワードエディター表示されるグループ名 |
-| groupNumbers | Integer array | &harr; | 対応するユニークなグループID番号 |
+| groupNames | Text array | &larr; | パスワードエディター表示されるグループ名 |
+| groupNumbers | Integer array | &larr; | 対応するユニークなグループID番号 |
 
 <!-- END REF-->
 

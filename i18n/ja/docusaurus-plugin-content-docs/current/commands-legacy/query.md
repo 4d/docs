@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | レコードのセレクションを求めるテーブル, または 省略した場合、デフォルトテーブル |
-| queryArgument | Expression | &srarr; | 検索条件 |
-| * | 演算子 | &srarr; | 検索継続フラグ |
+| aTable | Table | &rarr; | レコードのセレクションを求めるテーブル, または 省略した場合、デフォルトテーブル |
+| queryArgument | Expression | &rarr; | 検索条件 |
+| * | 演算子 | &rarr; | 検索継続フラグ |
 
 <!-- END REF-->
 

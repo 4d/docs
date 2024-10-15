@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GET REGISTERED CLIENTS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| clientList | Text array | &harr; | List of the saved 4D Clients |
-| methods | Integer array | &harr; | List of the methods to be executed |
+| clientList | Text array | &larr; | List of the saved 4D Clients |
+| methods | Integer array | &larr; | List of the methods to be executed |
 
 <!-- END REF-->
 

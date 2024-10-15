@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Load list.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| listName | Text | &srarr; | Name of a list created in the Design environment List Editor |
+| listName | Text | &rarr; | Name of a list created in the Design environment List Editor |
 | Function result | ListRef | &larr; | List reference number of newly created list |
 
 <!-- END REF-->

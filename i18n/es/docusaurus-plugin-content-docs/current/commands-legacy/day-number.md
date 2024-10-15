@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Day number.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| fecha | Date | &srarr; | Fecha para la cual devolver el número del día |
+| fecha | Date | &rarr; | Fecha para la cual devolver el número del día |
 | Resultado | Integer | &larr; | Número que representa el día de la semana que corresponde a la fecha |
 
 <!-- END REF-->

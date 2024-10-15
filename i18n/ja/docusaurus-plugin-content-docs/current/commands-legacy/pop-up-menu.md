@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Pop up menu.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| contents | Text | &srarr; | 定義された項目テキスト |
-| default | Integer | &srarr; | デフォルトで選択された項目番号 |
-| xCoord | Integer | &srarr; | 左上角のX座標 |
-| yCoord | Integer | &srarr; | 左上角のY座標 |
+| contents | Text | &rarr; | 定義された項目テキスト |
+| default | Integer | &rarr; | デフォルトで選択された項目番号 |
+| xCoord | Integer | &rarr; | 左上角のX座標 |
+| yCoord | Integer | &rarr; | 左上角のY座標 |
 | 戻り値 | Integer | &larr; | 選択された項目番号 |
 
 <!-- END REF-->

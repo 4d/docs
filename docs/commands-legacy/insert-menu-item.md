@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.INSERT MENU ITEM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer | &srarr; | Menu number or Menu reference |
-| afterItem | Integer | &srarr; | Menu item number |
-| itemText | Text | &srarr; | Text for the menu item to be inserted |
-| subMenu | Text | &srarr; | Reference of submenu associated with item |
-| process | Integer | &srarr; | Process reference number |
-| * | Operator | &srarr; | If passed: consider metacharacters as standard characters |
+| menu | Integer | &rarr; | Menu number or Menu reference |
+| afterItem | Integer | &rarr; | Menu item number |
+| itemText | Text | &rarr; | Text for the menu item to be inserted |
+| subMenu | Text | &rarr; | Reference of submenu associated with item |
+| process | Integer | &rarr; | Process reference number |
+| * | Operator | &rarr; | If passed: consider metacharacters as standard characters |
 
 <!-- END REF-->
 

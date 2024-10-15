@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Value type.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| expresion | Expression | &srarr; | Expresión cuyo valor resultante debe ser probado |
+| expresion | Expression | &rarr; | Expresión cuyo valor resultante debe ser probado |
 | Resultado | Integer | &larr; | Número de tipo de dato |
 
 <!-- END REF-->

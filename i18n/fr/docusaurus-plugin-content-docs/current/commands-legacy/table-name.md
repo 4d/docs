@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Table name.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numTable &#124; ptrTable | Entier long, Pointeur | &srarr; | Numéro de table ou pointeur de table |
+| numTable &#124; ptrTable | Entier long, Pointeur | &rarr; | Numéro de table ou pointeur de table |
 | Résultat | Text | &larr; | Nom de la table |
 
 <!-- END REF-->

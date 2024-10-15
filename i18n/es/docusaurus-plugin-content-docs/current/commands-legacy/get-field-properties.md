@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campPtr &#124; tablaNum | Puntero, Entero largo | &srarr; | Puntero de campo o Número de tabla |
-| numCamp | Integer | &srarr; | Número de campo si se pasa un número de tabla |
-| campTipo | Integer | &harr; | Tipo de campo |
-| campLong | Integer | &harr; | Longitud del campo, si es alfanumérico |
-| indexado | Boolean | &harr; | True = Indexado, False = No indexado |
-| unico | Boolean | &harr; | True = único, False = No único |
-| invisible | Boolean | &harr; | True = Invisible, False = Visible |
+| campPtr &#124; tablaNum | Puntero, Entero largo | &rarr; | Puntero de campo o Número de tabla |
+| numCamp | Integer | &rarr; | Número de campo si se pasa un número de tabla |
+| campTipo | Integer | &larr; | Tipo de campo |
+| campLong | Integer | &larr; | Longitud del campo, si es alfanumérico |
+| indexado | Boolean | &larr; | True = Indexado, False = No indexado |
+| unico | Boolean | &larr; | True = único, False = No único |
+| invisible | Boolean | &larr; | True = Invisible, False = Visible |
 
 <!-- END REF-->
 

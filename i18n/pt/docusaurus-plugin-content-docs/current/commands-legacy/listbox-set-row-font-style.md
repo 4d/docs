@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET ROW FONT STYLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é uma variável |
-| objeto | any | &srarr; | Nome de objeto (se * for especificado) ou<br/>Variável (se * for omitido) |
-| fila | Integer | &srarr; | Número de fila |
-| estilo | Integer | &srarr; | Estilo de fonte |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é uma variável |
+| objeto | any | &rarr; | Nome de objeto (se * for especificado) ou<br/>Variável (se * for omitido) |
+| fila | Integer | &rarr; | Número de fila |
+| estilo | Integer | &rarr; | Estilo de fonte |
 
 <!-- END REF-->
 

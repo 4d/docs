@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Evaluate JavaScript.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string) If omitted, object is a variable |
-| object | any | &srarr; | Object name (if * is specified) or Variable (if * is omitted) |
-| jsCode | Text | &srarr; | JavaScript code |
-| type | Integer | &srarr; | Type into which to convert result |
+| * | Operator | &rarr; | If specified, object is an object name (string) If omitted, object is a variable |
+| object | any | &rarr; | Object name (if * is specified) or Variable (if * is omitted) |
+| jsCode | Text | &rarr; | JavaScript code |
+| type | Integer | &rarr; | Type into which to convert result |
 | Function result | Date, Object, Pointer, Real, Text, Time | &larr; | Result of evaluation |
 
 <!-- END REF-->

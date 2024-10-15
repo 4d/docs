@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET DOCUMENT ICON.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaDoc | Text | &srarr; | Nome ou rota de acesso do documento para recuperar ícone, ou string vazia para caixa de diálogo Abrir Arquivo |
-| icone | Picture, Picture | &harr; | Variavel imagem ou campo |
-| tamanho | Integer | &srarr; | Tamanho da imagem retornada (em pixels) |
+| rotaDoc | Text | &rarr; | Nome ou rota de acesso do documento para recuperar ícone, ou string vazia para caixa de diálogo Abrir Arquivo |
+| icone | Picture, Picture | &larr; | Variavel imagem ou campo |
+| tamanho | Integer | &rarr; | Tamanho da imagem retornada (em pixels) |
 
 <!-- END REF-->
 

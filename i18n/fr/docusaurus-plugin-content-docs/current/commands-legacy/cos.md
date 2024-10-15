@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Cos.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombre | Real | &srarr; | Nombre, exprimé en radians, dont vous voulez connaître le cosinus |
+| nombre | Real | &rarr; | Nombre, exprimé en radians, dont vous voulez connaître le cosinus |
 | Résultat | Real | &larr; | Cosinus de nombre |
 
 <!-- END REF-->

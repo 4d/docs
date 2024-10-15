@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Uppercase.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| laText | Text | &srarr; | Cadena a convertir en mayúsculas |
-| * | Operador | &srarr; | Si se pasa: conservar los acentos |
+| laText | Text | &rarr; | Cadena a convertir en mayúsculas |
+| * | Operador | &rarr; | Si se pasa: conservar los acentos |
 | Resultado | Text | &larr; | Cadena en mayúsculas |
 
 <!-- END REF-->

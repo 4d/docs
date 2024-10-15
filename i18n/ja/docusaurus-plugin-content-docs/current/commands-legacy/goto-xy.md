@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.GOTO XY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| x | Integer | &srarr; | x カーソルの水平位置 |
-| y | Integer | &srarr; | y カーソルの垂直位置 |
+| x | Integer | &rarr; | x カーソルの水平位置 |
+| y | Integer | &rarr; | y カーソルの垂直位置 |
 
 <!-- END REF-->
 

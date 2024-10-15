@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get last child XML element.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | Text | &srarr; | Referência de elemento XML |
-| nomElemFilho | Text | &harr; | Nome do elemento filho |
-| valorElemFilho | Text | &harr; | Valor do elemento filho |
+| refElemento | Text | &rarr; | Referência de elemento XML |
+| nomElemFilho | Text | &larr; | Nome do elemento filho |
+| valorElemFilho | Text | &larr; | Valor do elemento filho |
 | Resultado | Text | &larr; | Referência do elemento XML |
 
 <!-- END REF-->

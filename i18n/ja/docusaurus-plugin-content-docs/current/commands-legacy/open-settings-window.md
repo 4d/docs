@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN SETTINGS WINDOW.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| selector | Text | &srarr; | 環境設定やデータベース設定ダイアログボックス中のテーマやページ、またはパラメーターグループを指定するキー |
-| access | Boolean | &srarr; | True=ダイアログボックスの他のページをロックする<br/>Falseまたは省略=ダイアログの他のページもアクティブにする |
-| settingsType | Integer | &srarr; | 0または省略時 = ストラクチャー設定、1 = ユーザー設定 |
+| selector | Text | &rarr; | 環境設定やデータベース設定ダイアログボックス中のテーマやページ、またはパラメーターグループを指定するキー |
+| access | Boolean | &rarr; | True=ダイアログボックスの他のページをロックする<br/>Falseまたは省略=ダイアログの他のページもアクティブにする |
+| settingsType | Integer | &rarr; | 0または省略時 = ストラクチャー設定、1 = ユーザー設定 |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Value type.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| expression | Expression | &srarr; | テストしたい結果を返す式 |
+| expression | Expression | &rarr; | テストしたい結果を返す式 |
 | 戻り値 | Integer | &larr; | データ型の数字 |
 
 <!-- END REF-->

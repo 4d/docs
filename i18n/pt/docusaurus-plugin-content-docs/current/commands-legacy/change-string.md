@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Change string.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| fonte | Text | &srarr; | Cadeia original |
-| novo | Text | &srarr; | Novos caracteres |
-| posiçao | Integer | &srarr; | Onde começar as mudanças |
+| fonte | Text | &rarr; | Cadeia original |
+| novo | Text | &rarr; | Novos caracteres |
+| posiçao | Integer | &rarr; | Onde começar as mudanças |
 | Resultado | Text | &larr; | Cadeia resultado |
 
 <!-- END REF-->

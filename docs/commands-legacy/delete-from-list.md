@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE FROM LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &srarr; | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemRef &#124; * | Longint, Operator | &srarr; | Item reference number, or 0 for the last item added to the list or * for the currently selected list item |
-| * | Operator |  &srarr; | If specified, erases sublists (if any) from memory If omitted, sublists (if any) are not erased |
+| * | Operator | &rarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
+| list | Integer, Text | &rarr; | List reference number (if * omitted), or Name of list type object (if * passed) |
+| itemRef &#124; * | Longint, Operator | &rarr; | Item reference number, or 0 for the last item added to the list or * for the currently selected list item |
+| * | Operator |  &rarr; | If specified, erases sublists (if any) from memory If omitted, sublists (if any) are not erased |
 
 <!-- END REF-->
 

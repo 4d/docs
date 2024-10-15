@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM SET VERTICAL RESIZING.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| resize | Boolean | &srarr; | True: The form can be resized verticallyFalse: The form cannot be resized vertically |
-| minHeight | Integer | &srarr; | Smallest form height allowed (pixels) |
-| maxHeight | Integer | &srarr; | Largest form height allowed (pixels) |
+| resize | Boolean | &rarr; | True: The form can be resized verticallyFalse: The form cannot be resized vertically |
+| minHeight | Integer | &rarr; | Smallest form height allowed (pixels) |
+| maxHeight | Integer | &rarr; | Largest form height allowed (pixels) |
 
 <!-- END REF-->
 

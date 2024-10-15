@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP New.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| source | String, BLOB, Object | &#x1F852; | String: HTML source,<br/>BLOB: 4D Write Pro document (.4wp) or legacy 4D Write Blob document (.4w7/.4wt)<br/>Object: range or element or 4D Write Pro document |
-| option | Longint | &#x1F852; | Import option for HTML expressions |
-| Function result | Object | &#x1F850; | 4D Write Pro object |
+| source | String, BLOB, Object | &rarr; | String: HTML source,<br/>BLOB: 4D Write Pro document (.4wp) or legacy 4D Write Blob document (.4w7/.4wt)<br/>Object: range or element or 4D Write Pro document |
+| option | Longint | &rarr; | Import option for HTML expressions |
+| Function result | Object | &larr; | 4D Write Pro object |
 
 <!-- END REF-->
 

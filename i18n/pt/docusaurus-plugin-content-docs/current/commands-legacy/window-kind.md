@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Window kind.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janela | Integer | &srarr; | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
+| janela | Integer | &rarr; | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
 | Resultado | Integer | &larr; | Tipo de janela |
 
 <!-- END REF-->

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Get page content.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &rarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
 | Résultat | Text | &larr; | Code HTML source |
 
 <!-- END REF-->

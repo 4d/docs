@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Test semaphore.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| semaphore | Text | &srarr; | テストするセマフォ |
+| semaphore | Text | &rarr; | テストするセマフォ |
 | 戻り値 | Boolean | &larr; | True: セマフォが存在する, False: セマフォは存在しない |
 
 <!-- END REF-->

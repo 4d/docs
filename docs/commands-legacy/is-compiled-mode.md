@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is compiled mode.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | Returns information about host database |
+| * | Operator | &rarr; | Returns information about host database |
 | Function result | Boolean | &larr; | Compiled (True), Interpreted (False) |
 
 <!-- END REF-->

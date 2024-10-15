@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get indexed string.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| resNum | Integer | &srarr; | Número de recurso o Atributo "id" del elemento "grupo" (XLIFF) |
-| strNum | Integer | &srarr; | Número de cadena o Atributo "id" del elemento "trans-unit" (XLIFF) |
-| resArchivo | Time | &srarr; | Número de referencia del archivo de recursos Si se omite: todos los archivos XLIFF o los archivos de recursos abiertos |
+| resNum | Integer | &rarr; | Número de recurso o Atributo "id" del elemento "grupo" (XLIFF) |
+| strNum | Integer | &rarr; | Número de cadena o Atributo "id" del elemento "trans-unit" (XLIFF) |
+| resArchivo | Time | &rarr; | Número de referencia del archivo de recursos Si se omite: todos los archivos XLIFF o los archivos de recursos abiertos |
 | Resultado | Text | &larr; | Valor de la cadena indexada |
 
 <!-- END REF-->

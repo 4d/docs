@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.SET LIST ITEM.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
-| liste | Integer, Text | &srarr; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| refElément &#124; * | Opérateur, Entier long | &srarr; | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
-| libelléElément | Text | &srarr; | Nouveau libellé d'élément |
-| nouvelRéf | Integer | &srarr; | Nouveau numéro de référence d'élément |
-| sous_Liste | Integer | &srarr; | Nouvelle sous-liste rattachée à l'élément ou 0 = pas de sous-liste (détacher sous-liste courante) ou -1 = pas de changement |
-| déployée | Boolean | &srarr; | Indique si la sous-liste doit être déployée/contractée |
+| * | Opérateur | &rarr; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &rarr; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| refElément &#124; * | Opérateur, Entier long | &rarr; | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
+| libelléElément | Text | &rarr; | Nouveau libellé d'élément |
+| nouvelRéf | Integer | &rarr; | Nouveau numéro de référence d'élément |
+| sous_Liste | Integer | &rarr; | Nouvelle sous-liste rattachée à l'élément ou 0 = pas de sous-liste (détacher sous-liste courante) ou -1 = pas de changement |
+| déployée | Boolean | &rarr; | Indique si la sous-liste doit être déployée/contractée |
 
 <!-- END REF-->
 

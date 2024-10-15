@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get focus rectangle invisible.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数またはフィールド |
-| object | any | &srarr; | オブジェクト名 (* 指定時)変数またはフィールド (* 省略時) |
+| * | 演算子 | &rarr; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数またはフィールド |
+| object | any | &rarr; | オブジェクト名 (* 指定時)変数またはフィールド (* 省略時) |
 | 戻り値 | Boolean | &larr; | True = フォーカスの四角を隠すFalse = フォーカスの四角を表示する |
 
 <!-- END REF-->

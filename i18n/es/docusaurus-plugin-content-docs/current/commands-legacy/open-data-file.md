@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN DATA FILE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaAcceso | Text | &srarr; | Nombre o ruta de acceso completa del archivo de datos a abrir |
+| rutaAcceso | Text | &rarr; | Nombre o ruta de acceso completa del archivo de datos a abrir |
 
 <!-- END REF-->
 

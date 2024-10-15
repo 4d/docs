@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP DELETE STYLE SHEET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| styleSheetObj | Object | &#x1F852; | Style sheet object |
-| wpDoc | Object | &#x1F852; | 4D Write Pro document |
-| styleSheetName | String | &#x1F852; | Name of style sheet |
+| styleSheetObj | Object | &rarr; | Style sheet object |
+| wpDoc | Object | &rarr; | 4D Write Pro document |
+| styleSheetName | String | &rarr; | Name of style sheet |
 
 <!-- END REF-->
 

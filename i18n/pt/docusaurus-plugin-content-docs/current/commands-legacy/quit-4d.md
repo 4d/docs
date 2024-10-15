@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QUIT 4D.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tempo | Integer | &srarr; | Tempo (em seg) antes de sair do servidor |
+| tempo | Integer | &rarr; | Tempo (em seg) antes de sair do servidor |
 
 <!-- END REF-->
 

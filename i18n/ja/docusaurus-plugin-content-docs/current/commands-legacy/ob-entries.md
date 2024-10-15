@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Entries.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object | &srarr; | コンテンツを返すオブジェクト |
+| object | Object | &rarr; | コンテンツを返すオブジェクト |
 | 戻り値 | Collection | &larr; | キー/値プロパティを格納したオブジェクトのコレクション |
 
 <!-- END REF-->

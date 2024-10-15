@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| doc | Text | &srarr; | Nombre del documento |
-| bloqueado | Boolean | &harr; | Bloqueado (True) o no bloqueado (False) |
-| invisible | Boolean | &harr; | Invisible (True) o visible (False) |
-| creado el | Fecha | &harr; | Fecha de creación |
-| creado a las | Hora | &harr; | Hora de creación |
-| modificado el | Fecha | &harr; | Fecha de la última modificación |
-| modificado a las | Hora | &harr; | Hora de la última modificación |
+| doc | Text | &rarr; | Nombre del documento |
+| bloqueado | Boolean | &larr; | Bloqueado (True) o no bloqueado (False) |
+| invisible | Boolean | &larr; | Invisible (True) o visible (False) |
+| creado el | Fecha | &larr; | Fecha de creación |
+| creado a las | Hora | &larr; | Hora de creación |
+| modificado el | Fecha | &larr; | Fecha de la última modificación |
+| modificado a las | Hora | &larr; | Hora de la última modificación |
 
 <!-- END REF-->
 

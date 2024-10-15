@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SERVICE AUTHENTICATE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| name | Text | &srarr; | ユーザの名前 |
-| password | Text | &srarr; | ユーザのパスワード |
-| authMethod | Integer | &srarr; | 認証メソッド 0または省略された場合 = 指定されない、1 = BASIC、2 = DIGEST |
-| * | 演算子 | &srarr; | 渡された場合、プロキシによる認証 |
+| name | Text | &rarr; | ユーザの名前 |
+| password | Text | &rarr; | ユーザのパスワード |
+| authMethod | Integer | &rarr; | 認証メソッド 0または省略された場合 = 指定されない、1 = BASIC、2 = DIGEST |
+| * | 演算子 | &rarr; | 渡された場合、プロキシによる認証 |
 
 <!-- END REF-->
 

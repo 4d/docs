@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET RESIZING OPTIONS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
-| objeto | any | &srarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| horizontal | Integer | &harr; | Opción de redimensionamiento horizontal |
-| vertical | Integer | &harr; | Opción de redimensionamiento vertical |
+| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
+| objeto | any | &rarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| horizontal | Integer | &larr; | Opción de redimensionamiento horizontal |
+| vertical | Integer | &larr; | Opción de redimensionamiento vertical |
 
 <!-- END REF-->
 

@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.VERIFY DATA FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| structurePath | Text | &srarr; | Pathname of 4D structure file to be checked |
-| dataPath | Text | &srarr; | Pathname of 4D data file to be checked |
-| objects | Integer | &srarr; | Objects to be checked |
-| options | Integer | &srarr; | Checking options |
-| method | Text | &srarr; | Name of 4D callback method |
-| tablesArray | Integer array | &srarr; | Numbers of tables to be checked |
-| fieldsArray | 2D Integer array, 2D Integer array, 2D Real array | &srarr; | Numbers of indexes to be checked |
+| structurePath | Text | &rarr; | Pathname of 4D structure file to be checked |
+| dataPath | Text | &rarr; | Pathname of 4D data file to be checked |
+| objects | Integer | &rarr; | Objects to be checked |
+| options | Integer | &rarr; | Checking options |
+| method | Text | &rarr; | Name of 4D callback method |
+| tablesArray | Integer array | &rarr; | Numbers of tables to be checked |
+| fieldsArray | 2D Integer array, 2D Integer array, 2D Real array | &rarr; | Numbers of indexes to be checked |
 
 <!-- END REF-->
 

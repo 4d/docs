@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objetoSubForm | Text | &srarr; | Nome de objeto subformulário |
-| nomeMetodo | Object, Text | &srarr; | Nome do projeto de método a ser executado |
-| retorno | *, Variable | &srarr; | * Se método não retornar um valor |
-| &harr; | Valor retornado pelo método |
-| param | Expression | &srarr; | Parâmetros a passar ao método |
+| objetoSubForm | Text | &rarr; | Nome de objeto subformulário |
+| nomeMetodo | Object, Text | &rarr; | Nome do projeto de método a ser executado |
+| retorno | *, Variable | &rarr; | * Se método não retornar um valor |
+| &larr; | Valor retornado pelo método |
+| param | Expression | &rarr; | Parâmetros a passar ao método |
 
 <!-- END REF-->
 

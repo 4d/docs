@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Application version.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| buildNum | Integer | &harr; | ビルド番号 |
-| * | 演算子 | &srarr; | 指定した場合、ロングバージョン番号 指定しなかった場合、ショートバージョン番号 |
+| buildNum | Integer | &larr; | ビルド番号 |
+| * | 演算子 | &rarr; | 指定した場合、ロングバージョン番号 指定しなかった場合、ショートバージョン番号 |
 | 戻り値 | Text | &larr; | バージョン番号のエンコードされた文字列 |
 
 <!-- END REF-->

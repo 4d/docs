@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR SET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ensemble | Text | &srarr; | Nom de l'ensemble à effacer de la mémoire |
+| ensemble | Text | &rarr; | Nom de l'ensemble à effacer de la mémoire |
 
 <!-- END REF-->
 

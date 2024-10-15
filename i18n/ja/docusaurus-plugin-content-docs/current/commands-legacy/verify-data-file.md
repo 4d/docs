@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.VERIFY DATA FILE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| structurePath | Text | &srarr; | 検証する4Dストラクチャファイルのパス名 |
-| dataPath | Text | &srarr; | 検証する4Dデータファイルのパス名 |
-| objects | Integer | &srarr; | 検証するオブジェクト |
-| options | Integer | &srarr; | 検証オプション |
-| method | Text | &srarr; | 4Dコールバックメソッド名 |
-| tablesArray | Integer array | &srarr; | 検証するテーブル番号 |
-| fieldsArray | 2D Integer array, 2D Integer array, 2D Real array | &srarr; | 検証するインデックス番号 |
+| structurePath | Text | &rarr; | 検証する4Dストラクチャファイルのパス名 |
+| dataPath | Text | &rarr; | 検証する4Dデータファイルのパス名 |
+| objects | Integer | &rarr; | 検証するオブジェクト |
+| options | Integer | &rarr; | 検証オプション |
+| method | Text | &rarr; | 4Dコールバックメソッド名 |
+| tablesArray | Integer array | &rarr; | 検証するテーブル番号 |
+| fieldsArray | 2D Integer array, 2D Integer array, 2D Real array | &rarr; | 検証するインデックス番号 |
 
 <!-- END REF-->
 

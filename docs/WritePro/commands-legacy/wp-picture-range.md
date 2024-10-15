@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Picture range.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | Range or element |
-| Function result | Object | &#x1F850; | Range object containing pictures only |
+| targetObj | Object | &rarr; | Range or element |
+| Function result | Object | &larr; | Range object containing pictures only |
 
 <!-- END REF-->
 

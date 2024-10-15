@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tipoDados | Text | &srarr; | Tipo de dados a adiconar |
-| dados | Blob | &srarr; | Dados a anexar na área de transferência |
+| tipoDados | Text | &rarr; | Tipo de dados a adiconar |
+| dados | Blob | &rarr; | Dados a anexar na área de transferência |
 
 <!-- END REF-->
 

@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SERVICE CALL.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| urlAcceso | Text | &srarr; | URL de acceso al servicio Web |
-| soapAccion | Text | &srarr; | Contenido del campo SOAPAction |
-| nomMetodo | Text | &srarr; | Nombre del método |
-| nomEspacio | Text | &srarr; | Espacio del nombre (Namespace) |
-| tipoCompuesto | Integer | &srarr; | Configuración de tipos compuestos (tipos simples si se omite) |
-| * | Operador | &srarr; | No cerrar la conexión |
+| urlAcceso | Text | &rarr; | URL de acceso al servicio Web |
+| soapAccion | Text | &rarr; | Contenido del campo SOAPAction |
+| nomMetodo | Text | &rarr; | Nombre del método |
+| nomEspacio | Text | &rarr; | Espacio del nombre (Namespace) |
+| tipoCompuesto | Integer | &rarr; | Configuración de tipos compuestos (tipos simples si se omite) |
+| * | Operador | &rarr; | No cerrar la conexión |
 
 <!-- END REF-->
 

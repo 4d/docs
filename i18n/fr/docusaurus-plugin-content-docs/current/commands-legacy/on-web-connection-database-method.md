@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.On Web Connection database method.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| $1 | Texte | &harr; | URL |
-| $2 | Texte | &harr; | En-tête + corps HTTP |
-| $3 | Texte | &harr; | Adresse IP du navigateur |
-| $4 | Texte | &harr; | Adresse IP appelée du serveur |
-| $5 | Texte | &harr; | Nom d’utilisateur |
-| $6 | Texte | &harr; | Mot de passe |
+| $1 | Texte | &larr; | URL |
+| $2 | Texte | &larr; | En-tête + corps HTTP |
+| $3 | Texte | &larr; | Adresse IP du navigateur |
+| $4 | Texte | &larr; | Adresse IP appelée du serveur |
+| $5 | Texte | &larr; | Nom d’utilisateur |
+| $6 | Texte | &larr; | Mot de passe |
 
 <!-- END REF-->
 

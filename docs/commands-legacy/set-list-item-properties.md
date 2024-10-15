@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &srarr; | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef &#124; * | Operator, Longint | &srarr; | Item reference number, or 0 for last item appended to the list, or * for the current list item |
-| enterable | Boolean | &srarr; | TRUE = Enterable, FALSE = Non-enterable |
-| styles | Integer | &srarr; | Font style for the item |
-| icon | Text, Integer | &srarr; | Picture name or number ("" or 0 for no icon) |
-| color | Integer | &srarr; | RGB color value or -1 = reset to original color |
+| * | Operator | &rarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
+| list | Integer, Text | &rarr; | List reference number (if * omitted) or Name of list type object (if * passed) |
+| itemRef &#124; * | Operator, Longint | &rarr; | Item reference number, or 0 for last item appended to the list, or * for the current list item |
+| enterable | Boolean | &rarr; | TRUE = Enterable, FALSE = Non-enterable |
+| styles | Integer | &rarr; | Font style for the item |
+| icon | Text, Integer | &rarr; | Picture name or number ("" or 0 for no icon) |
+| color | Integer | &rarr; | RGB color value or -1 = reset to original color |
 
 <!-- END REF-->
 

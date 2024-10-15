@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.QR SET INFO COLUMN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | エリア参照 |
-| colNum | Integer | &srarr; | カラム番号 |
-| title | Text | &srarr; | カラムタイトル |
-| object | Field, Variable | &srarr; | カラムに割り当てられたオブジェクト |
-| hide | Integer | &srarr; | 0 = 表示, 1 = 非表示 |
-| size | Integer | &srarr; | カラムサイズ |
-| repeatedValue | Integer | &srarr; | 0 = 繰り返ししない, 1 = 繰り返す |
-| displayFormat | Text | &srarr; | データの表示フォーマット |
+| area | Integer | &rarr; | エリア参照 |
+| colNum | Integer | &rarr; | カラム番号 |
+| title | Text | &rarr; | カラムタイトル |
+| object | Field, Variable | &rarr; | カラムに割り当てられたオブジェクト |
+| hide | Integer | &rarr; | 0 = 表示, 1 = 非表示 |
+| size | Integer | &rarr; | カラムサイズ |
+| repeatedValue | Integer | &rarr; | 0 = 繰り返ししない, 1 = 繰り返す |
+| displayFormat | Text | &rarr; | データの表示フォーマット |
 
 <!-- END REF-->
 

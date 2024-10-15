@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.ARRAY TO COLLECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| collection | Collection | &harr; | 配列のデータを受け取るコレクション |
-| array | Array | &srarr; | コレクションにコピーする配列。propertyName引数指定時はコレクションのpropertyNameの値にコピーする配列。 |
-| propertyName | Text | &srarr; | 配列の要素を値として格納するオブジェクトのプロパティ名 |
+| collection | Collection | &larr; | 配列のデータを受け取るコレクション |
+| array | Array | &rarr; | コレクションにコピーする配列。propertyName引数指定時はコレクションのpropertyNameの値にコピーする配列。 |
+| propertyName | Text | &rarr; | 配列の要素を値として格納するオブジェクトのプロパティ名 |
 
 <!-- END REF-->
 

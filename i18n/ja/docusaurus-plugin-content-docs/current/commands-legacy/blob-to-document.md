@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB TO DOCUMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Text | &srarr; | ドキュメント名 |
-| Blob | Blob | &srarr; | ドキュメントの新しいコンテンツ |
+| document | Text | &rarr; | ドキュメント名 |
+| Blob | Blob | &rarr; | ドキュメントの新しいコンテンツ |
 
 <!-- END REF-->
 

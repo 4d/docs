@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Square root.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombre | Real | &srarr; | Nombre duquel calculer la racine carrée |
+| nombre | Real | &rarr; | Nombre duquel calculer la racine carrée |
 | Résultat | Real | &larr; | Racine carrée de nombre |
 
 <!-- END REF-->

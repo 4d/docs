@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.LOAD RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &srarr; | Tabela para aqual carregar registros, ou tabela Padrão, se omitido |
+| tabela | Table | &rarr; | Tabela para aqual carregar registros, ou tabela Padrão, se omitido |
 
 <!-- END REF-->
 

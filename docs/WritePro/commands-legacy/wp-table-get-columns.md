@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table get columns.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | Range or element or 4D Write Pro document |
-| tableRef | Object | &#x1F852; | Table reference |
-| startCol | Longint | &#x1F852; | Position of first column |
-| numCols | Longint | &#x1F852; | Number of columns to get |
-| Function result | Object | &#x1F850; | New table range containing selected columns |
+| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
+| tableRef | Object | &rarr; | Table reference |
+| startCol | Longint | &rarr; | Position of first column |
+| numCols | Longint | &rarr; | Number of columns to get |
+| Function result | Object | &larr; | New table range containing selected columns |
 
 <!-- END REF-->
 

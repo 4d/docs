@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is table number valid.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numTabela | Integer | &srarr; | Número de tabela |
+| numTabela | Integer | &rarr; | Número de tabela |
 | Resultado | Boolean | &larr; | True = tabela existe no banco de dados; False = tabela não existe no banco de dados |
 
 <!-- END REF-->

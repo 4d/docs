@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE MANY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| oneTable &#124; Field | テーブル, フィールド | &srarr; | すべての1対nリレーションを実行するテーブル または1フィールド |
+| oneTable &#124; Field | テーブル, フィールド | &rarr; | すべての1対nリレーションを実行するテーブル または1フィールド |
 
 <!-- END REF-->
 

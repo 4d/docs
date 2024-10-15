@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get HTML template.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | エリア参照 |
+| area | Integer | &rarr; | エリア参照 |
 | 戻り値 | Text | &larr; | テンプレートとして使用されるHTMLコード |
 
 <!-- END REF-->

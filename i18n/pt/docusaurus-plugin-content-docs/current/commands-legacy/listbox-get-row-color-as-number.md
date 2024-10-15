@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get row color as number.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &srarr; | Nome de objeto (se * for especificado) ou variável (se * for omitido) |
-| fila | Integer | &srarr; | Número da linha |
-| tipoCor | Integer | &srarr; | cor de fonte listbox (normal) ou cor de fundo de list box |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &rarr; | Nome de objeto (se * for especificado) ou variável (se * for omitido) |
+| fila | Integer | &rarr; | Número da linha |
+| tipoCor | Integer | &rarr; | cor de fonte listbox (normal) ou cor de fundo de list box |
 | Resultado | Integer | &larr; | Valor da cor |
 
 <!-- END REF-->

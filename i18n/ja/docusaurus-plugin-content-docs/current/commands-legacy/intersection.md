@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.INTERSECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| set1 | Text | &srarr; | 最初のセット |
-| set2 | Text | &srarr; | 2番目のセット |
-| resultSet | Text | &srarr; | 結果のセット |
+| set1 | Text | &rarr; | 最初のセット |
+| set2 | Text | &rarr; | 2番目のセット |
+| resultSet | Text | &rarr; | 結果のセット |
 
 <!-- END REF-->
 

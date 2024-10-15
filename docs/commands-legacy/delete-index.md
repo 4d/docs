@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE INDEX.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldPtr &#124; indexName | Pointer, String | &srarr; | Pointer to field whose indexes are to be deleted or Name of index to be deleted |
-| * | Operator | &srarr; | If passed = asynchronous operation |
+| fieldPtr &#124; indexName | Pointer, String | &rarr; | Pointer to field whose indexes are to be deleted or Name of index to be deleted |
+| * | Operator | &rarr; | If passed = asynchronous operation |
 
 <!-- END REF-->
 

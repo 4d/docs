@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &srarr; | Reference of open document |
-| name | Text | &harr; | Instruction name |
-| value | Text | &harr; | Instruction value |
+| document | Time | &rarr; | Reference of open document |
+| name | Text | &larr; | Instruction name |
+| value | Text | &larr; | Instruction value |
 
 <!-- END REF-->
 

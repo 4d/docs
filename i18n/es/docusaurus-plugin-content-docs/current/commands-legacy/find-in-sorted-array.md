@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.Find in sorted array.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| array | Array | &srarr; | Array a buscar |
-| valor | Expression | &srarr; | Valor del mismo tipo a buscar en el array |
-| > or < | Operador | &srarr; | > si el array está en orden ascendente, < si el está en orden descendente |
-| posPrim | Integer | &harr; | Posición de su primera aparición si se encuentra el valor; de lo contrario la posición donde debe insertarse el valor |
-| posUlt | Integer | &harr; | Posición de su última ocurrencia si se encuentra el valor; de lo contrario lo mismo que posPrim |
+| array | Array | &rarr; | Array a buscar |
+| valor | Expression | &rarr; | Valor del mismo tipo a buscar en el array |
+| > or < | Operador | &rarr; | > si el array está en orden ascendente, < si el está en orden descendente |
+| posPrim | Integer | &larr; | Posición de su primera aparición si se encuentra el valor; de lo contrario la posición donde debe insertarse el valor |
+| posUlt | Integer | &larr; | Posición de su última ocurrencia si se encuentra el valor; de lo contrario lo mismo que posPrim |
 | Resultado | Boolean | &larr; | True si al menos un elemento en el array corresponde al valor, de lo contrario False |
 
 <!-- END REF-->

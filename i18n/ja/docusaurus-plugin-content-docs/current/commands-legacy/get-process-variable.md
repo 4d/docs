@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PROCESS VARIABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| process | Integer | &srarr; | ソースプロセス番号 |
-| srcVar | Variable | &srarr; | ソース変数 |
-| dstVar | Variable | &harr; | 受け取る変数 |
+| process | Integer | &rarr; | ソースプロセス番号 |
+| srcVar | Variable | &rarr; | ソース変数 |
+| dstVar | Variable | &larr; | 受け取る変数 |
 
 <!-- END REF-->
 

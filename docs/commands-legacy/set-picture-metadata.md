@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PICTURE METADATA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture | &srarr; | Picture whose metadata you want to set |
-| metaName | Text | &srarr; | Name or path of block to set |
-| metaContents | Variable | &srarr; | Metadata contents |
+| picture | Picture | &rarr; | Picture whose metadata you want to set |
+| metaName | Text | &rarr; | Name or path of block to set |
+| metaContents | Variable | &rarr; | Metadata contents |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Count columns.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | エリア参照 |
+| area | Integer | &rarr; | エリア参照 |
 | 戻り値 | Integer | &larr; | エリア中のカラム数 |
 
 <!-- END REF-->

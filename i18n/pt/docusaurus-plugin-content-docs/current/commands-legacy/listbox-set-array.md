@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &srarr; | Nome de objeto (se * for especificado) ou variável (se * for omitido) |
-| tipoArray | Integer | &srarr; | Tipo de Array |
-| proArray | Pointer | &srarr; | Array a associar com propriedade |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &rarr; | Nome de objeto (se * for especificado) ou variável (se * for omitido) |
+| tipoArray | Integer | &rarr; | Tipo de Array |
+| proArray | Pointer | &rarr; | Array a associar com propriedade |
 
 <!-- END REF-->
 

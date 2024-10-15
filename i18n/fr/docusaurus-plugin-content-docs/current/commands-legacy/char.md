@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Char.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| codeCaractère | Integer | &srarr; | Code de caractère |
+| codeCaractère | Integer | &rarr; | Code de caractère |
 | Résultat | Text | &larr; | Caractère représenté par codeCaractère |
 
 <!-- END REF-->

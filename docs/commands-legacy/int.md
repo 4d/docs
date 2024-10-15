@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Int.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &srarr; | Number whose integer portion is returned |
+| number | Real | &rarr; | Number whose integer portion is returned |
 | Function result | Real | &larr; | Integer portion of number |
 
 <!-- END REF-->

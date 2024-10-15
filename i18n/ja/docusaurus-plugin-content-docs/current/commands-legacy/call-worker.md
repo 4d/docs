@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CALL WORKER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| process | Text, Integer | &srarr; | プロセス番号、またはプロセス名 |
-| formula | Object, Text | &srarr; | 実行するプロジェクトメソッドの名前、または Formulaオブジェクト |
-| param | Expression | &srarr; | メソッドに渡す引数 |
+| process | Text, Integer | &rarr; | プロセス番号、またはプロセス名 |
+| formula | Object, Text | &rarr; | 実行するプロジェクトメソッドの名前、または Formulaオブジェクト |
+| param | Expression | &rarr; | メソッドに渡す引数 |
 
 <!-- END REF-->
 

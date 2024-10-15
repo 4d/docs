@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPORT DATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fileName | Text | &srarr; | エクスポートファイルのフルパス名 |
-| project | Text, Blob | &srarr; | エクスポートプロジェクト |
-| &harr; | エクスポートプロジェクトの新しい内容 (*引数指定時) |
-| * | 演算子 | &srarr; | エクスポートダイアログを表示し プロジェクトの内容を更新 |
+| fileName | Text | &rarr; | エクスポートファイルのフルパス名 |
+| project | Text, Blob | &rarr; | エクスポートプロジェクト |
+| &larr; | エクスポートプロジェクトの新しい内容 (*引数指定時) |
+| * | 演算子 | &rarr; | エクスポートダイアログを表示し プロジェクトの内容を更新 |
 
 <!-- END REF-->
 

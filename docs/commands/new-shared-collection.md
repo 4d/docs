@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.New shared collection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| value |Number, Text, Date, Time, Boolean, Shared object, Shared collection| &srarr; | Shared collection's value(s) |
+| value |Number, Text, Date, Time, Boolean, Shared object, Shared collection| &rarr; | Shared collection's value(s) |
 | Function result | Collection | &larr; | New shared collection |
 
 <!-- END REF-->

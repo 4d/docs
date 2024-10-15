@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Exp.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| number | Real | &srarr; | 評価する数値 |
+| number | Real | &rarr; | 評価する数値 |
 | 戻り値 | Real | &larr; | 指数関数値 |
 
 <!-- END REF-->

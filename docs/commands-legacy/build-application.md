@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.BUILD APPLICATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| buildAppSettings | Text | &srarr; | Full access path of the settings file to use |
+| buildAppSettings | Text | &rarr; | Full access path of the settings file to use |
 
 <!-- END REF-->
 

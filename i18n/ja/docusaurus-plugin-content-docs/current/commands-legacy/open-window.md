@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Open window.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| left | Integer | &srarr; | ウィンドウ内容領域のグローバル左座標 |
-| top | Integer | &srarr; | ウィンドウ内容領域のグローバル上座標 |
-| right | Integer | &srarr; | ウィンドウ内容領域のグローバル右座標, または-1でフォームのデフォルトサイズを使用 |
-| bottom | Integer | &srarr; | ウィンドウ内容領域のグローバル下座標, または-1でフォームのデフォルトサイズを使用 |
-| type | Integer | &srarr; | ウィンドウタイプ |
-| title | Text | &srarr; | ウィンドウのタイトル または "" でデフォルトのフォームタイトルを使用 |
-| controlMenuBox | Text | &srarr; | コントロールメニューボックスがダブルクリック またはクローズボックスがクリックされたときに 呼び出すメソッド |
+| left | Integer | &rarr; | ウィンドウ内容領域のグローバル左座標 |
+| top | Integer | &rarr; | ウィンドウ内容領域のグローバル上座標 |
+| right | Integer | &rarr; | ウィンドウ内容領域のグローバル右座標, または-1でフォームのデフォルトサイズを使用 |
+| bottom | Integer | &rarr; | ウィンドウ内容領域のグローバル下座標, または-1でフォームのデフォルトサイズを使用 |
+| type | Integer | &rarr; | ウィンドウタイプ |
+| title | Text | &rarr; | ウィンドウのタイトル または "" でデフォルトのフォームタイトルを使用 |
+| controlMenuBox | Text | &rarr; | コントロールメニューボックスがダブルクリック またはクローズボックスがクリックされたときに 呼び出すメソッド |
 | 戻り値 | Integer | &larr; | ウィンドウ参照番号 |
 
 <!-- END REF-->

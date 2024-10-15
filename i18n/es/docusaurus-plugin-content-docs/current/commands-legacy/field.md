@@ -10,12 +10,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Field.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| numTabla | Integer | &srarr; | Número de tabla |
-| numCamp | Integer | &srarr; | Número de campo |
+| numTabla | Integer | &rarr; | Número de tabla |
+| numCamp | Integer | &rarr; | Número de campo |
 | Resultado | Pointer | &larr; | Puntero de campo |
 | Field ( ptrCamp ) -> numCampo |
 | Parámetro | Tipo | Descripción |
-| ptrCamp | Pointer | &srarr; | Puntero del campo |
+| ptrCamp | Pointer | &rarr; | Puntero del campo |
 | numCampo | Integer | &larr; | Número de campo |
 
 <!-- END REF-->

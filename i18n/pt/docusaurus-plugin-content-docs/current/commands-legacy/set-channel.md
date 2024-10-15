@@ -10,12 +10,12 @@ displayed_sidebar: docs
 <!--REF #_command_.SET CHANNEL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| porta | Integer | &srarr; | Número da porta serial |
-| configuraçao | Integer | &srarr; | Configuração da porta serial |
+| porta | Integer | &rarr; | Número da porta serial |
+| configuraçao | Integer | &rarr; | Configuração da porta serial |
 | SET CHANNEL ( operaçao ; documento ) |
 | Parâmetro | Tipo | Descrição |
-| operaçao | Integer | &srarr; | Operação de documento a ser realizada |
-| documento | Text | &srarr; | Nome do documento |
+| operaçao | Integer | &rarr; | Operação de documento a ser realizada |
+| documento | Text | &rarr; | Nome do documento |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PREVIOUS RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | セレクションの前レコードをカレントレコードにする テーブル、省略時はデフォルトテーブル |
+| aTable | Table | &rarr; | セレクションの前レコードをカレントレコードにする テーブル、省略時はデフォルトテーブル |
 
 <!-- END REF-->
 

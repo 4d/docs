@@ -10,17 +10,17 @@ displayed_sidebar: docs
 <!--REF #_command_.Match regex.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| pattern | Text | &srarr; | Regular expression |
-| aString | Text | &srarr; | String in which search will be done |
-| start | Integer | &srarr; | Position in aString where search will start |
-| pos_found | Integer array, Integer | &harr; | Position of occurrence |
-| length_found | Integer array, Integer | &harr; | Length of occurrence |
-| * | Operator | &srarr; | If passed: only searches at position indicated |
+| pattern | Text | &rarr; | Regular expression |
+| aString | Text | &rarr; | String in which search will be done |
+| start | Integer | &rarr; | Position in aString where search will start |
+| pos_found | Integer array, Integer | &larr; | Position of occurrence |
+| length_found | Integer array, Integer | &larr; | Length of occurrence |
+| * | Operator | &rarr; | If passed: only searches at position indicated |
 | Function result | Boolean | &larr; | True = search has found an occurrence; Otherwise, False. |
 | Match regex ( pattern ; aString ) -> Function result |
 | Parameter | Type | Description |
-| pattern | Text | &srarr; | Regular expression (complete equality) |
-| aString | Text | &srarr; | String in which search will be done |
+| pattern | Text | &rarr; | Regular expression (complete equality) |
+| aString | Text | &rarr; | String in which search will be done |
 | Function result | Boolean | &larr; | True = search has found an occurrence; Otherwise, False. |
 
 <!-- END REF-->

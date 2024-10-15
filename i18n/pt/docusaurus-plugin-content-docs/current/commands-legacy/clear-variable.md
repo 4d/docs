@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR VARIABLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| variavel | Variable | &srarr; | Variável a apagar |
+| variavel | Variable | &rarr; | Variável a apagar |
 
 <!-- END REF-->
 

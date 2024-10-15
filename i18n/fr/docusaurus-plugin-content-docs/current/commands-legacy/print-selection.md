@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PRINT SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table à laquelle appartient la sélection à imprimer ou Table par défaut si ce paramètre est omis |
-| * &#124; > | Opérateur | &srarr; | * pour supprimer les boîtes de dialogue d'impression ou > pour ne pas réinitialiser les paramètres d'impression |
+| laTable | Table | &rarr; | Table à laquelle appartient la sélection à imprimer ou Table par défaut si ce paramètre est omis |
+| * &#124; > | Opérateur | &rarr; | * pour supprimer les boîtes de dialogue d'impression ou > pour ne pas réinitialiser les paramètres d'impression |
 
 <!-- END REF-->
 

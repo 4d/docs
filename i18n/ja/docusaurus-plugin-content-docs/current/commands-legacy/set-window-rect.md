@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.SET WINDOW RECT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| left | Integer | &srarr; | ウィンドウ内容領域のグローバル左座標 |
-| top | Integer | &srarr; | ウィンドウ内容領域のグローバル上座標 |
-| right | Integer | &srarr; | ウィンドウ内容領域のグローバル右座標 |
-| bottom | Integer | &srarr; | ウィンドウ内容領域のグローバル下座標 |
-| window | Integer | &srarr; | ウィンドウ参照番号, または省略時カレントプロセスの最前面ウィンドウ |
-| * | 演算子 | &srarr; | 省略時 (デフォルト) = ウィンドウを最前面にする指定時 = ウィンドウの並びレベルを変更しない |
+| left | Integer | &rarr; | ウィンドウ内容領域のグローバル左座標 |
+| top | Integer | &rarr; | ウィンドウ内容領域のグローバル上座標 |
+| right | Integer | &rarr; | ウィンドウ内容領域のグローバル右座標 |
+| bottom | Integer | &rarr; | ウィンドウ内容領域のグローバル下座標 |
+| window | Integer | &rarr; | ウィンドウ参照番号, または省略時カレントプロセスの最前面ウィンドウ |
+| * | 演算子 | &rarr; | 省略時 (デフォルト) = ウィンドウを最前面にする指定時 = ウィンドウの並びレベルを変更しない |
 
 <!-- END REF-->
 

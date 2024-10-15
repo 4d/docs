@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get previous sibling XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &srarr; | XML element reference |
-| siblingElemName | Text | &harr; | Name of sibling XML element |
-| siblingElemValue | Text | &harr; | Value of sibling XML element |
+| elementRef | Text | &rarr; | XML element reference |
+| siblingElemName | Text | &larr; | Name of sibling XML element |
+| siblingElemValue | Text | &larr; | Value of sibling XML element |
 | Function result | String | &larr; | Sibling XML element reference |
 
 <!-- END REF-->

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX DELETE COLUMN.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &srarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| posicionCol | Integer | &srarr; | Número de la columna a eliminar |
-| numero | Integer | &srarr; | Número de columnas a eliminar |
+| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &rarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| posicionCol | Integer | &rarr; | Número de la columna a eliminar |
+| numero | Integer | &rarr; | Número de columnas a eliminar |
 
 <!-- END REF-->
 

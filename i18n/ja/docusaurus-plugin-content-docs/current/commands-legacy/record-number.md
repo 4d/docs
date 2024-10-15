@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Record number.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | カレントレコードの番号を返すテーブル 省略時、デフォルトテーブル |
+| aTable | Table | &rarr; | カレントレコードの番号を返すテーブル 省略時、デフォルトテーブル |
 | 戻り値 | Integer | &larr; | カレントレコード番号 |
 
 <!-- END REF-->

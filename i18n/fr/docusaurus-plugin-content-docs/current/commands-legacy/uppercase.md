@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Uppercase.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laText | Text | &srarr; | Chaîne à convertir en majuscules |
-| * | Opérateur | &srarr; | Si passé : conserver les accents Si omis : supprimer les accents |
+| laText | Text | &rarr; | Chaîne à convertir en majuscules |
+| * | Opérateur | &rarr; | Si passé : conserver les accents Si omis : supprimer les accents |
 | Résultat | Text | &larr; | chaîne en majuscules |
 
 <!-- END REF-->

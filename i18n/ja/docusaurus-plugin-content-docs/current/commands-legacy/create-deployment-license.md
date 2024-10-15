@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Create deployment license.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| mergedApp | 4D.Folder | &srarr; | 組み込みアプリケーションを格納したフォルダ |
-| buildLicense | 4D.File | &srarr; | 埋め込みライセンスを生成するのに必要なライセンス |
-| oemLicense | 4D.File | &srarr; | サーバーライセンスの場合には4D OEM XML Key ライセンス |
+| mergedApp | 4D.Folder | &rarr; | 組み込みアプリケーションを格納したフォルダ |
+| buildLicense | 4D.File | &rarr; | 埋め込みライセンスを生成するのに必要なライセンス |
+| oemLicense | 4D.File | &rarr; | サーバーライセンスの場合には4D OEM XML Key ライセンス |
 | 戻り値 | Object | &larr; | ステータス |
 
 <!-- END REF-->

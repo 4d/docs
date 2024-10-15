@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get last query path.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| formatDesc | Integer | &srarr; | Formato de descripción (Texto o XML) |
+| formatDesc | Integer | &rarr; | Formato de descripción (Texto o XML) |
 | Resultado | Text | &larr; | Descripción de la ruta de la última búsqueda ejecutada |
 
 <!-- END REF-->

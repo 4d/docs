@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| lista | Integer | &srarr; | Número de referencia de lista |
-| refElem | Integer | &srarr; | Número de referencia del elemento o 0 para el último elemento  añadido a la lista |
-| refArray | Integer array | &srarr; | Array de números de referencia de elementos |
+| lista | Integer | &rarr; | Número de referencia de lista |
+| refElem | Integer | &rarr; | Número de referencia del elemento o 0 para el último elemento  añadido a la lista |
+| refArray | Integer array | &rarr; | Array de números de referencia de elementos |
 
 <!-- END REF-->
 

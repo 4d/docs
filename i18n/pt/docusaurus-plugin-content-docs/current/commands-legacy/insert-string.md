@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Insert string.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| fonte | Text | &srarr; | Cadeia na qual vai inserir uma segunda cadeia |
-| inserir | Text | &srarr; | Cadeia que será inserida na primeira cadeia |
-| posiçao | Integer | &srarr; | Onde vai inserir |
+| fonte | Text | &rarr; | Cadeia na qual vai inserir uma segunda cadeia |
+| inserir | Text | &rarr; | Cadeia que será inserida na primeira cadeia |
+| posiçao | Integer | &rarr; | Onde vai inserir |
 | Resultado | Text | &larr; | Cadeia resultante |
 
 <!-- END REF-->

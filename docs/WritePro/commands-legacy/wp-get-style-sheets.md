@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get style sheets.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| wpDoc | Object | &#x1F852; | 4D Write Pro document |
-| type | Longint | &#x1F852; | Type of style sheet |
-| Function result | Collection | &#x1F850; | Collection of style sheet objects |
+| wpDoc | Object | &rarr; | 4D Write Pro document |
+| type | Longint | &rarr; | Type of style sheet |
+| Function result | Collection | &larr; | Collection of style sheet objects |
 
 <!-- END REF-->
 

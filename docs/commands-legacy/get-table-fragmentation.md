@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get table fragmentation.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table for which to get the fragmentation rate |
+| aTable | Table | &rarr; | Table for which to get the fragmentation rate |
 | Function result | Real | &larr; | Percentage of fragmentation |
 
 <!-- END REF-->

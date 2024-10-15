@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &srarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| funcaoJS | Text | &srarr; | Nome da função JavaScript a executar |
-| resultado&#124;* | Variável | &srarr; | * para a função sem resultado ou |
-| &harr; | Resultado da função (se esperado) |
-| param | Text, Number, Date, Object, Collection | &srarr; | Parâmetros a passar a função |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &rarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| funcaoJS | Text | &rarr; | Nome da função JavaScript a executar |
+| resultado&#124;* | Variável | &rarr; | * para a função sem resultado ou |
+| &larr; | Resultado da função (se esperado) |
+| param | Text, Number, Date, Object, Collection | &rarr; | Parâmetros a passar a função |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.GET QUERY DESTINATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| destinationType | Integer | &harr; | 0 = カレントセレクション、1 = セット、2 = 命名セレクション、3 = 変数 |
-| destinationObject | Text | &harr; | セット名、命名セレクション名、または空の文字列 |
-| destinationPtr | Pointer | &harr; | destinationType=3のとき、ローカル変数へのポインター |
+| destinationType | Integer | &larr; | 0 = カレントセレクション、1 = セット、2 = 命名セレクション、3 = 変数 |
+| destinationObject | Text | &larr; | セット名、命名セレクション名、または空の文字列 |
+| destinationPtr | Pointer | &larr; | destinationType=3のとき、ローカル変数へのポインター |
 
 <!-- END REF-->
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.New data key.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| passPhrase | Text | &srarr; | Frase contraseña a utilizar para generar la llave de cifrado de datos AES |
+| passPhrase | Text | &rarr; | Frase contraseña a utilizar para generar la llave de cifrado de datos AES |
 | Resultado | Object | &larr; | Objeto que contiene la llave (propiedad encodedKey) |
 
 <!-- END REF-->

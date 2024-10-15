@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.FOLDER LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| pathname | Text | &srarr; | Pathname to volume, directory or folder |
-| directories | Text array | &harr; | Names of the directories present at this location |
+| pathname | Text | &rarr; | Pathname to volume, directory or folder |
+| directories | Text array | &larr; | Names of the directories present at this location |
 
 <!-- END REF-->
 

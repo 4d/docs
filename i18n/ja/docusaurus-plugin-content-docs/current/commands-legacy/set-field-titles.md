@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SET FIELD TITLES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | フィールドタイトルを設定するテーブル |
-| fieldTitles | Text array | &srarr; | ダイアログボックスに表示するフィールドの名前 |
-| fieldNumbers | Integer array | &srarr; | 実際のフィールド番号 |
-| * | Operator |  &srarr; | カスタマイズした名前をフォーミュラエディタで使用する |
+| aTable | Table | &rarr; | フィールドタイトルを設定するテーブル |
+| fieldTitles | Text array | &rarr; | ダイアログボックスに表示するフィールドの名前 |
+| fieldNumbers | Integer array | &rarr; | 実際のフィールド番号 |
+| * | Operator |  &rarr; | カスタマイズした名前をフォーミュラエディタで使用する |
 
 <!-- END REF-->
 

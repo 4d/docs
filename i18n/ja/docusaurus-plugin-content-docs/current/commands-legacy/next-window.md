@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Next window.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| window | Integer | &srarr; | ウィンドウ参照番号 |
+| window | Integer | &rarr; | ウィンドウ参照番号 |
 | 戻り値 | Integer | &larr; | ウィンドウ参照番号 |
 
 <!-- END REF-->

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.TRIGGER PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nivelTrigger | Integer | &srarr; | Nivel de ejecución del trigger |
-| eventoBase | Integer | &harr; | Evento de base de datos |
-| numTabla | Integer | &harr; | Número de la tabla |
-| regNum | Integer | &harr; | Número del registro |
+| nivelTrigger | Integer | &rarr; | Nivel de ejecución del trigger |
+| eventoBase | Integer | &larr; | Evento de base de datos |
+| numTabla | Integer | &larr; | Número de la tabla |
+| regNum | Integer | &larr; | Número del registro |
 
 <!-- END REF-->
 

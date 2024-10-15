@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE FOLDER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| pasta | Text | &srarr; | Nome da pasta, ou rota de acesso completa da pasta a apagar |
-| delete Opcao | Inteiro longo | &srarr; | Opção de apagar a pasta |
+| pasta | Text | &rarr; | Nome da pasta, ou rota de acesso completa da pasta a apagar |
+| delete Opcao | Inteiro longo | &rarr; | Opção de apagar a pasta |
 
 <!-- END REF-->
 

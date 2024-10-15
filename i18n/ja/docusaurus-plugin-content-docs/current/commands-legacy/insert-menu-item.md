@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.INSERT MENU ITEM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Integer | &srarr; | メニュー番号またはメニュー参照 |
-| afterItem | Integer | &srarr; | メニュー項目番号 |
-| itemText | Text | &srarr; | 挿入するメニュー項目のテキスト |
-| subMenu | Text | &srarr; | 項目に割り当てるサブメニュの参照 |
-| process | Integer | &srarr; | プロセス参照番号 |
-| * | 演算子 | &srarr; | 指定時: メタ文字を標準文字として扱う |
+| menu | Integer | &rarr; | メニュー番号またはメニュー参照 |
+| afterItem | Integer | &rarr; | メニュー項目番号 |
+| itemText | Text | &rarr; | 挿入するメニュー項目のテキスト |
+| subMenu | Text | &rarr; | 項目に割り当てるサブメニュの参照 |
+| process | Integer | &rarr; | プロセス参照番号 |
+| * | 演算子 | &rarr; | 指定時: メタ文字を標準文字として扱う |
 
 <!-- END REF-->
 

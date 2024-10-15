@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is a variable.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| umPointer | Pointer | &srarr; | Ponteiro a ser testado |
+| umPointer | Pointer | &rarr; | Ponteiro a ser testado |
 | Resultado | Boolean | &larr; | TRUE= Ponteiro aponta a variável FALSE = Ponteiro não aponta a variável |
 
 <!-- END REF-->

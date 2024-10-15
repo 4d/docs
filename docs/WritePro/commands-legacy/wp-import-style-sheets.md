@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WP IMPORT STYLE SHEETS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetDoc | Object | &#x1F852; | 4D Write Pro document to receive style sheets |
-| sourceDoc | Object | &#x1F852; | 4D Write Pro document to get style sheets from |
+| targetDoc | Object | &rarr; | 4D Write Pro document to receive style sheets |
+| sourceDoc | Object | &rarr; | 4D Write Pro document to get style sheets from |
 
 <!-- END REF-->
 

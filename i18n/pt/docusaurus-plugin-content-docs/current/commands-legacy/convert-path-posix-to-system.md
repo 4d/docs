@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Convert path POSIX to system.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaPosix | Text | &srarr; | Nome de rota POSIX |
-| * | Operador | &srarr; | Opção de codificação |
+| rotaPosix | Text | &rarr; | Nome de rota POSIX |
+| * | Operador | &rarr; | Opção de codificação |
 | Resultado | Text | &larr; | Rota de acesso expressa em sintaxe de sistema |
 
 <!-- END REF-->

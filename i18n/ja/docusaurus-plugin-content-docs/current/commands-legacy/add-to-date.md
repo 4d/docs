@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Add to date.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| date | Date | &srarr; | 年月日を加算する日付 |
-| years | Integer | &srarr; | 日付に加算する年 |
-| months | Integer | &srarr; | 日付に加算する月 |
-| days | Integer | &srarr; | 日付に加算する日 |
+| date | Date | &rarr; | 年月日を加算する日付 |
+| years | Integer | &rarr; | 日付に加算する年 |
+| months | Integer | &rarr; | 日付に加算する月 |
+| days | Integer | &rarr; | 日付に加算する日 |
 | 戻り値 | Date | &larr; | 結果の日付 |
 
 <!-- END REF-->

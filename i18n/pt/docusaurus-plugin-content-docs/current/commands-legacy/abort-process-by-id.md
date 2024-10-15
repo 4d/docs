@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.ABORT PROCESS BY ID.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| IDunico | Integer | &srarr; | ID de processo única |
+| IDunico | Integer | &rarr; | ID de processo única |
 
 <!-- END REF-->
 

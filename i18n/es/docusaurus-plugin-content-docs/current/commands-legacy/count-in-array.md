@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Count in array.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| array | Array | &srarr; | Array donde efectuar el conteo |
-| valor | Expression | &srarr; | Valor a contar |
+| array | Array | &rarr; | Array donde efectuar el conteo |
+| valor | Expression | &rarr; | Valor a contar |
 | Resultado | Integer | &larr; | Número de ocurrencias encontradas |
 
 <!-- END REF-->

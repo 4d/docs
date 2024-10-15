@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Length.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| cadeia | Text | &srarr; | Cadeia para a qual vai retornar o comprimento |
+| cadeia | Text | &rarr; | Cadeia para a qual vai retornar o comprimento |
 | Resultado | Integer | &larr; | Comprimento da função |
 
 <!-- END REF-->

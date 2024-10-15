@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Modified.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campo | Field | &srarr; | Campo a provar |
+| campo | Field | &rarr; | Campo a provar |
 | Resultado | Boolean | &larr; | Verdadeiro se foi assinalado um novo valor ao campo, caso contrario Falso |
 
 <!-- END REF-->

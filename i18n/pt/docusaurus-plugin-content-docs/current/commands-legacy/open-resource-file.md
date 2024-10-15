@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Open resource file.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| resNomArq | Text | &srarr; | Nome curto ou longo ou arquivo de resource ou string Vazia para caixa de diálogo Abrir Arquivo |
-| tipoArquivo | Text | &srarr; | Tipo de arquivo Mac OS (string de 4-caracteres), ou arquivo de extensao Windows  (string 1- a 3-caracteres), ou Todos arquivos, se omitido. |
+| resNomArq | Text | &rarr; | Nome curto ou longo ou arquivo de resource ou string Vazia para caixa de diálogo Abrir Arquivo |
+| tipoArquivo | Text | &rarr; | Tipo de arquivo Mac OS (string de 4-caracteres), ou arquivo de extensao Windows  (string 1- a 3-caracteres), ou Todos arquivos, se omitido. |
 | Resultado | Time | &larr; | Número de referência do arquivo de Resouce |
 
 <!-- END REF-->

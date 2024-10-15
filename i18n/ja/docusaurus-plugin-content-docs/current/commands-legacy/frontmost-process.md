@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Frontmost process.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &srarr; | フローティングウインドウ以外の最前面のプロセス番号 |
+| * | 演算子 | &rarr; | フローティングウインドウ以外の最前面のプロセス番号 |
 | 戻り値 | Integer | &larr; | 最前面にあるウィンドウのプロセス番号 |
 
 <!-- END REF-->

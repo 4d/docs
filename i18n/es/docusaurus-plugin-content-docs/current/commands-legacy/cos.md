@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Cos.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Numero | Real | &srarr; | Número, en radianes, cuyo coseno se devuelve |
+| Numero | Real | &rarr; | Número, en radianes, cuyo coseno se devuelve |
 | Resultado | Real | &larr; | Coseno del número |
 
 <!-- END REF-->

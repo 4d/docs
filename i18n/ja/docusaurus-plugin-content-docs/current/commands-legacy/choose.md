@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Choose.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| criterion | Boolean, Integer | &srarr; | テストする値 |
-| value | Expression | &srarr; | 可能な値 |
+| criterion | Boolean, Integer | &rarr; | テストする値 |
+| value | Expression | &rarr; | 可能な値 |
 | 戻り値 | Expression | &larr; | 条件の値 |
 
 <!-- END REF-->

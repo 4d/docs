@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Get 4D file.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| archivo | Integer | &srarr; | Tipo de archivo |
-| * | Operador | &srarr; | Archivo devuelto de la base local |
+| archivo | Integer | &rarr; | Tipo de archivo |
+| * | Operador | &rarr; | Archivo devuelto de la base local |
 | Resultado | Text | &larr; | Ruta al archivo 4D |
 
 <!-- END REF-->

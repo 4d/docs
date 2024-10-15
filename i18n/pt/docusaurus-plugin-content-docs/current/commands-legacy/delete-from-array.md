@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE FROM ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| array | Array | &srarr; | Array do qual apagar os elementos |
-| posição | Integer | &srarr; | Elemento onde se inicia o processo |
-| quantos | Integer | &srarr; | Número de elementos a apagar |
+| array | Array | &rarr; | Array do qual apagar os elementos |
+| posição | Integer | &rarr; | Elemento onde se inicia o processo |
+| quantos | Integer | &rarr; | Número de elementos a apagar |
 
 <!-- END REF-->
 

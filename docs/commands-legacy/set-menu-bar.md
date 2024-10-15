@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET MENU BAR.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| menuBar | Integer, Text, Text | &srarr; | Number or name of the menu bar or Menu reference |
-| process | Integer | &srarr; | Process reference number |
-| * | Operator | &srarr; | Save menu bar state |
+| menuBar | Integer, Text, Text | &rarr; | Number or name of the menu bar or Menu reference |
+| process | Integer | &rarr; | Process reference number |
+| * | Operator | &rarr; | Save menu bar state |
 
 <!-- END REF-->
 

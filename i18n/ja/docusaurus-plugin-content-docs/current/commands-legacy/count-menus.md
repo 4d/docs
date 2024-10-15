@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Count menus.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| process | Integer | &srarr; | プロセス参照番号 |
+| process | Integer | &rarr; | プロセス参照番号 |
 | 戻り値 | Integer | &larr; | カレントメニューバー中のメニュー数 |
 
 <!-- END REF-->

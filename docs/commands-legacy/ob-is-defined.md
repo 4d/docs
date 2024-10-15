@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OB Is defined.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object, Object | &srarr; | Structured object |
-| property | Text | &srarr; | If passed = property to check, if omitted = check object |
+| object | Object, Object | &rarr; | Structured object |
+| property | Text | &rarr; | If passed = property to check, if omitted = check object |
 | Function result | Boolean | &larr; | If property omitted: True if object is defined, otherwise False.<br/>If property passed: True if property is defined, otherwise False |
 
 <!-- END REF-->

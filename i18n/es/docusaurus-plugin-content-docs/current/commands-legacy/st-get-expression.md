@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.ST Get expression.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &srarr; | Nombre del objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
-| inicioSel | Integer | &srarr; | Inicio de la selección |
-| finSel | Integer | &srarr; | Fin de la selección |
+| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &rarr; | Nombre del objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
+| inicioSel | Integer | &rarr; | Inicio de la selección |
+| finSel | Integer | &rarr; | Fin de la selección |
 | Resultado | Text | &larr; | Etiqueta de la expresión |
 
 <!-- END REF-->

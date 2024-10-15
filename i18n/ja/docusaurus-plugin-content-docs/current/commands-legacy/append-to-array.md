@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.APPEND TO ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| array | Array | &srarr; | 要素を追加する配列 |
-| value | Expression | &srarr; | 追加する値 |
+| array | Array | &rarr; | 要素を追加する配列 |
+| value | Expression | &rarr; | 追加する値 |
 
 <!-- END REF-->
 

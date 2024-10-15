@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Metodo base On Web Authentication.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| $1 | Texto | &harr; | URL |
-| $2 | Texto | &harr; | Encabezado HTTP + Cuerpo HTTP |
-| $3 | Texto | &harr; | Dirección IP del navegador |
-| $4 | Texto | &harr; | Dirección IP del servidor |
-| $5 | Texto | &harr; | Nombre de usuario |
-| $6 | Texto | &harr; | Contraseña |
+| $1 | Texto | &larr; | URL |
+| $2 | Texto | &larr; | Encabezado HTTP + Cuerpo HTTP |
+| $3 | Texto | &larr; | Dirección IP del navegador |
+| $4 | Texto | &larr; | Dirección IP del servidor |
+| $5 | Texto | &larr; | Nombre de usuario |
+| $6 | Texto | &larr; | Contraseña |
 | Resultado | Boolean | &larr; | True = petición aceptada, False = petición rechazada |
 
 <!-- END REF-->

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.End selection.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &srarr; | Tabla en la cual probar si el puntero del registro está más allá del último registro seleccionado, o Tabla por defecto, si se omite |
+| tabla | Table | &rarr; | Tabla en la cual probar si el puntero del registro está más allá del último registro seleccionado, o Tabla por defecto, si se omite |
 | Resultado | Boolean | &larr; | Si (TRUE) o No (FALSE) |
 
 <!-- END REF-->

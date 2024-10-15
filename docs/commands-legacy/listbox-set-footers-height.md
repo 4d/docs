@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SET FOOTERS HEIGHT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string)If omitted, object is a variable |
-| object | any | &srarr; | Object Name (if * is specified) or Variable (if * is omitted) |
-| height | Integer | &srarr; | Row height |
-| unit | Integer | &srarr; | Unit of height value: 0 or omitted = pixels, 1 = lines |
+| * | Operator | &rarr; | If specified, object is an object name (string)If omitted, object is a variable |
+| object | any | &rarr; | Object Name (if * is specified) or Variable (if * is omitted) |
+| height | Integer | &rarr; | Row height |
+| unit | Integer | &rarr; | Unit of height value: 0 or omitted = pixels, 1 = lines |
 
 <!-- END REF-->
 

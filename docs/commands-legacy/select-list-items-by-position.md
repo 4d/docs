@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SELECT LIST ITEMS BY POSITION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &srarr; | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemPos | Integer | &srarr; | Position of item in expanded/collapsed list(s) |
-| positionsArray | Integer array | &srarr; | Array of the positions in the expanded/collapsed list(s) |
+| * | Operator | &rarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
+| list | Integer, Text | &rarr; | List reference number (if * omitted), or Name of list type object (if * passed) |
+| itemPos | Integer | &rarr; | Position of item in expanded/collapsed list(s) |
+| positionsArray | Integer array | &rarr; | Array of the positions in the expanded/collapsed list(s) |
 
 <!-- END REF-->
 

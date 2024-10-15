@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Day of.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| date | Date | &srarr; | Date dont vous voulez extraire le jour |
+| date | Date | &rarr; | Date dont vous voulez extraire le jour |
 | Résultat | Integer | &larr; | Jour du mois de date |
 
 <!-- END REF-->

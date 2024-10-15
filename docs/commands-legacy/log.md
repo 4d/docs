@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Log.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &srarr; | Number for which to return the log |
+| number | Real | &rarr; | Number for which to return the log |
 | Function result | Real | &larr; | Log of number |
 
 <!-- END REF-->

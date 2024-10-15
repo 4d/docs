@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| alignement | Integer | &srarr; | Code d’alignement |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &rarr; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| alignement | Integer | &rarr; | Code d’alignement |
 
 <!-- END REF-->
 

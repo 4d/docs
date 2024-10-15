@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PRINT PREVIEW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aperçu | Boolean | &srarr; | Impression à l'écran (Vrai) ou non (Faux) |
+| aperçu | Boolean | &rarr; | Impression à l'écran (Vrai) ou non (Faux) |
 
 <!-- END REF-->
 

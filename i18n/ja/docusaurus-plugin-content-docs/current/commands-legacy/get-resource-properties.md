@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Get resource properties.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resType | Text | &srarr; | 4文字のリソースタイプ |
-| resID | Integer | &srarr; | リソースID番号 |
-| resFile | Time | &srarr; | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
+| resType | Text | &rarr; | 4文字のリソースタイプ |
+| resID | Integer | &rarr; | リソースID番号 |
+| resFile | Time | &rarr; | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
 | 戻り値 | Integer | &larr; | リソースの属性 |
 
 <!-- END REF-->

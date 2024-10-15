@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get three states checkbox.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
-| objeto | any | &srarr; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
+| objeto | any | &rarr; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
 | Resultado | Boolean | &larr; | True = caixa de seleção de três estados, False = caixa de seleção padrão |
 
 <!-- END REF-->

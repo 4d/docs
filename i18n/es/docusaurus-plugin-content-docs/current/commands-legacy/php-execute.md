@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.PHP Execute.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaScript | Text | &srarr; | Ruta de acceso al script PHP o "" para ejecutar una función PHP |
-| nomFuncion | Text | &srarr; | Función PHP a ejecutar |
-| resultPHP | *, Variable, Field | &harr; | Resultado de ejecución de la función PHP o * para no recibir el resultado |
-| param | Text, Boolean, Real, Integer, Date, Time | &srarr; | Parámetros de la función PHP |
+| rutaScript | Text | &rarr; | Ruta de acceso al script PHP o "" para ejecutar una función PHP |
+| nomFuncion | Text | &rarr; | Función PHP a ejecutar |
+| resultPHP | *, Variable, Field | &larr; | Resultado de ejecución de la función PHP o * para no recibir el resultado |
+| param | Text, Boolean, Real, Integer, Date, Time | &rarr; | Parámetros de la función PHP |
 | Resultado | Boolean | &larr; | True = ejecución correcta, False = error de ejecución |
 
 <!-- END REF-->

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DOM Get XML document ref.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &srarr; | Reference of existing element in DOM tree |
+| elementRef | Text | &rarr; | Reference of existing element in DOM tree |
 | Function result | Text | &larr; | Reference of first element of a DOM tree (document node) |
 
 <!-- END REF-->

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.New signal.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| description | Text | &srarr; | Description for the signal |
+| description | Text | &rarr; | Description for the signal |
 | Function result | 4D.Signal | &larr; | Native object encapsulating the signal |
 
 <!-- END REF-->

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.POST CLICK.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sourisX | Integer | &srarr; | Coordonnée horizontale |
-| sourisY | Integer | &srarr; | Coordonnée verticale |
-| process | Integer | &srarr; | Numéro de référence du process de destination ou File d'attente des événements de l'application si ce paramètre est omis ou si vous passez 0 |
-| * | Operator |  &srarr; | Si spécifié, utiliser le système de coordonnées globales Si omis, utiliser le système de coordonnées locales |
+| sourisX | Integer | &rarr; | Coordonnée horizontale |
+| sourisY | Integer | &rarr; | Coordonnée verticale |
+| process | Integer | &rarr; | Numéro de référence du process de destination ou File d'attente des événements de l'application si ce paramètre est omis ou si vous passez 0 |
+| * | Operator |  &rarr; | Si spécifié, utiliser le système de coordonnées globales Si omis, utiliser le système de coordonnées locales |
 
 <!-- END REF-->
 

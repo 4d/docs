@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get enterable.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome objeto (string). Se omitido, objeto é uma variável ou um campo. |
-| objeto | any | &srarr; | Nome de objeto (se * for especificado) ou Variável ou campo (se * é omitido) |
+| * | Operador | &rarr; | Se especificado, objeto é um nome objeto (string). Se omitido, objeto é uma variável ou um campo. |
+| objeto | any | &rarr; | Nome de objeto (se * for especificado) ou Variável ou campo (se * é omitido) |
 | Resultado | Boolean | &larr; | True = objeto editável, ou então, falso |
 
 <!-- END REF-->

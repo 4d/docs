@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PICTURE TO PASTEBOARD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| image | Picture | &srarr; | Image à placer dans le conteneur de données |
+| image | Picture | &rarr; | Image à placer dans le conteneur de données |
 
 <!-- END REF-->
 

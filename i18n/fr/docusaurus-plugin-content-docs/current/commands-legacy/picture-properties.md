@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.PICTURE PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| image | Picture | &srarr; | Image sur laquelle obtenir les informations |
-| largeur | Real | &harr; | Largeur de l'image exprimée en pixels |
-| hauteur | Real | &harr; | Hauteur de l'image exprimée en pixels |
-| hOffset | Integer | &harr; | Offset horizontal lorsque l'image est affichée en arrière-plan |
-| vOffset | Integer | &harr; | Offset vertical lorsque l'image est affichée en arrière-plan |
-| mode | Integer | &harr; | Mode de transfert lorsque l'image est affichée en arrière-plan |
+| image | Picture | &rarr; | Image sur laquelle obtenir les informations |
+| largeur | Real | &larr; | Largeur de l'image exprimée en pixels |
+| hauteur | Real | &larr; | Hauteur de l'image exprimée en pixels |
+| hOffset | Integer | &larr; | Offset horizontal lorsque l'image est affichée en arrière-plan |
+| vOffset | Integer | &larr; | Offset vertical lorsque l'image est affichée en arrière-plan |
+| mode | Integer | &larr; | Mode de transfert lorsque l'image est affichée en arrière-plan |
 
 <!-- END REF-->
 

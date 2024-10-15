@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.CHANGE CURRENT USER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| utilisateur | Text, Integer | &srarr; | Nom ou Numéro de référence unique de l’utilisateur |
-| motDePasse | Text | &srarr; | Mot de passe (non crypté) |
+| utilisateur | Text, Integer | &rarr; | Nom ou Numéro de référence unique de l’utilisateur |
+| motDePasse | Text | &rarr; | Mot de passe (non crypté) |
 
 <!-- END REF-->
 

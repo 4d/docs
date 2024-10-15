@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP INSERT FORMULA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | Range or element or 4D Write Pro document |
-| formula | Object | &#x1F852; | Formula object OR Object with formula and name properties |
-| mode | Number | &#x1F852; | Insertion mode |
-| rangeUpdate | Number | &#x1F852; | Includes or excludes the inserted content within the range |
+| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
+| formula | Object | &rarr; | Formula object OR Object with formula and name properties |
+| mode | Number | &rarr; | Insertion mode |
+| rangeUpdate | Number | &rarr; | Includes or excludes the inserted content within the range |
 
 <!-- END REF-->
 

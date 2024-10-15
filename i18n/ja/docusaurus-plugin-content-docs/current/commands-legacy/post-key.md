@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.POST KEY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| code | Integer | &srarr; | 文字コードまたはファンクションキーコード |
-| modifiers | Integer | &srarr; | モディファイアキーのステータス |
-| process | Integer | &srarr; | 送信先のプロセス参照番号、 省略または0の場合、アプリケーションイベントキュー |
+| code | Integer | &rarr; | 文字コードまたはファンクションキーコード |
+| modifiers | Integer | &rarr; | モディファイアキーのステータス |
+| process | Integer | &rarr; | 送信先のプロセス参照番号、 省略または0の場合、アプリケーションイベントキュー |
 
 <!-- END REF-->
 

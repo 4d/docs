@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Variance.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| series | Field, Array | &srarr; | 分散を求めるデータ |
+| series | Field, Array | &rarr; | 分散を求めるデータ |
 | 戻り値 | Real | &larr; | seriesの分散 |
 
 <!-- END REF-->

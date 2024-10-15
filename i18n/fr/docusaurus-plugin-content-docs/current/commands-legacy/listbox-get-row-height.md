@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX Get row height.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &srarr; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| ligne | Integer | &srarr; | Ligne de la List box dont on veut récupérer la hauteur |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &rarr; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| ligne | Integer | &rarr; | Ligne de la List box dont on veut récupérer la hauteur |
 | Résultat | Integer | &larr; | Hauteur de la ligne |
 
 <!-- END REF-->

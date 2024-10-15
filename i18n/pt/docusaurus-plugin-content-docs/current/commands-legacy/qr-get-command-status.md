@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get command status.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &srarr; | Referência da área |
-| comando | Integer | &srarr; | Número de comando |
-| valor | Integer, Text | &harr; | Valor do subelemento selecionado |
+| area | Integer | &rarr; | Referência da área |
+| comando | Integer | &rarr; | Número de comando |
+| valor | Integer, Text | &larr; | Valor do subelemento selecionado |
 | Resultado | Integer | &larr; | Estado do comando |
 
 <!-- END REF-->

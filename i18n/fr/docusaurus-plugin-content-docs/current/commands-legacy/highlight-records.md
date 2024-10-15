@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.HIGHLIGHT RECORDS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table de laquelle marquer les enregistrements Si omis, table du formulaire courant |
-| nomEnsemble | Text | &srarr; | Ensemble d’enregistrements à marquer ou Ensemble Userset si ce paramètre est omis |
-| * | Opérateur | &srarr; | Inactiver le défilement automatique de la liste |
+| laTable | Table | &rarr; | Table de laquelle marquer les enregistrements Si omis, table du formulaire courant |
+| nomEnsemble | Text | &rarr; | Ensemble d’enregistrements à marquer ou Ensemble Userset si ce paramètre est omis |
+| * | Opérateur | &rarr; | Inactiver le défilement automatique de la liste |
 
 <!-- END REF-->
 

@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET SHORTCUT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable o un campo |
-| objeto | any | &srarr; | Nombre de objeto (si se especifica *) o Variable o campo(si se omite *) |
-| tecla | Text | &srarr; | Tecla a asociar al objeto |
-| modificadores | Integer | &srarr; | Máscara o combinación de máscaras de teclas de modificación |
+| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable o un campo |
+| objeto | any | &rarr; | Nombre de objeto (si se especifica *) o Variable o campo(si se omite *) |
+| tecla | Text | &rarr; | Tecla a asociar al objeto |
+| modificadores | Integer | &rarr; | Máscara o combinación de máscaras de teclas de modificación |
 
 <!-- END REF-->
 

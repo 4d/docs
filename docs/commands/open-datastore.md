@@ -20,9 +20,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Open datastore.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| connectionInfo | Object | &#x1F852; | Connection properties used to reach the remote datastore |
-| localID | Text | &#x1F852; | Id to assign to the opened datastore on the local application (mandatory) |
-| Function result | cs.DataStore | &#x1F850; | Datastore object |
+| connectionInfo | Object | &rarr; | Connection properties used to reach the remote datastore |
+| localID | Text | &rarr; | Id to assign to the opened datastore on the local application (mandatory) |
+| Function result | cs.DataStore | &larr; | Datastore object |
 
 <!-- END REF-->
 

@@ -9,14 +9,14 @@ displayed_sidebar: docs
 <!--REF #_command_.QR GET HEADER AND FOOTER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &srarr; | Référence de la zone |
-| sélecteur | Integer | &srarr; | 1 = En-tête, 2 = Pied de page |
-| titreGauche | Text | &harr; | Texte affiché sur le côté gauche |
-| titreCentre | Text | &harr; | Texte affiché au centre |
-| titreDroit | Text | &harr; | Texte affiché sur le côté droit |
-| hauteur | Integer | &harr; | Hauteur de l'en-tête ou du pied de page |
-| image | Picture | &harr; | Image à afficher |
-| alignementImage | Integer | &harr; | Alignement de l'image |
+| zone | Integer | &rarr; | Référence de la zone |
+| sélecteur | Integer | &rarr; | 1 = En-tête, 2 = Pied de page |
+| titreGauche | Text | &larr; | Texte affiché sur le côté gauche |
+| titreCentre | Text | &larr; | Texte affiché au centre |
+| titreDroit | Text | &larr; | Texte affiché sur le côté droit |
+| hauteur | Integer | &larr; | Hauteur de l'en-tête ou du pied de page |
+| image | Picture | &larr; | Image à afficher |
+| alignementImage | Integer | &larr; | Alignement de l'image |
 
 <!-- END REF-->
 

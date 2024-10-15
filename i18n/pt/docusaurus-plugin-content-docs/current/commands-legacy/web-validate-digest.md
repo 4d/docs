@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Validate digest.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeUsuario | Text | &srarr; | Nome do usuário |
-| senha | Text | &srarr; | Senha de usuário |
+| nomeUsuario | Text | &rarr; | Nome do usuário |
+| senha | Text | &rarr; | Senha de usuário |
 | Resultado | Boolean | &larr; | True = Autenticação OK; False = autenticação falha |
 
 <!-- END REF-->

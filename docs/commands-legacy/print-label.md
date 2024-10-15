@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.PRINT LABEL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table to print, or Default table, if omitted |
-| document | Text | &srarr; | Name of disk label document |
-| * &#124; > | &srarr; | * to suppress the printing dialog box, or > to not reinitialize print settings |
+| aTable | Table | &rarr; | Table to print, or Default table, if omitted |
+| document | Text | &rarr; | Name of disk label document |
+| * &#124; > | &rarr; | * to suppress the printing dialog box, or > to not reinitialize print settings |
 
 <!-- END REF-->
 

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WA Create URL history menu.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &srarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| endereço | Integer | &srarr; | 0 ou omitido = Lista de URLs anteriores; 1 = Lista de próximas URLs |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &rarr; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| endereço | Integer | &rarr; | 0 ou omitido = Lista de URLs anteriores; 1 = Lista de próximas URLs |
 | Resultado | Text | &larr; | Menu reference |
 
 <!-- END REF-->

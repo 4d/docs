@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL LOAD RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| numRecords | Integer | &srarr; | ロードするレコード数 |
+| numRecords | Integer | &rarr; | ロードするレコード数 |
 
 <!-- END REF-->
 

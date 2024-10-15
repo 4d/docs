@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.GET GROUP PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| groupID | Integer | &srarr; | ユニークなグループID番号 |
-| name | Text | &harr; | グループの名前 |
-| owner | Integer | &harr; | グループオーナーのユーザーID番号 (バイナリデータベースのみ) |
-| members | Integer array | &harr; | グループメンバー |
+| groupID | Integer | &rarr; | ユニークなグループID番号 |
+| name | Text | &larr; | グループの名前 |
+| owner | Integer | &larr; | グループオーナーのユーザーID番号 (バイナリデータベースのみ) |
+| members | Integer array | &larr; | グループメンバー |
 
 <!-- END REF-->
 

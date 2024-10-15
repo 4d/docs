@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.JSON Stringify.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| value | Object, any | &srarr; | JSON文字列に変換したいデータ |
-| * | 演算子 | &srarr; | 整形フォーマット |
+| value | Object, any | &rarr; | JSON文字列に変換したいデータ |
+| * | 演算子 | &rarr; | 整形フォーマット |
 | 戻り値 | Text | &larr; | シリアライズされたJSONテキストを含む文字列 |
 
 <!-- END REF-->

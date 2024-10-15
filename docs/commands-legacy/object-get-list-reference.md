@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get list reference.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | any | &srarr; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
-| listType | Integer | &srarr; | Type of list: Choice list, Required list or Excluded list |
+| * | Operator | &rarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | any | &rarr; | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
+| listType | Integer | &rarr; | Type of list: Choice list, Required list or Excluded list |
 | Function result | ListRef | &larr; | List reference number |
 
 <!-- END REF-->

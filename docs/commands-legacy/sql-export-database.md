@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL EXPORT DATABASE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| folderPath | Text | &srarr; | Pathname of export folder or "" to display folder selection dialog box |
-| numFiles | Integer | &srarr; | Maximum number of files per folder |
-| fileLimitSize | Integer | &srarr; | Size limit value of export files (in KB) |
-| fieldLimitSize | Integer | &srarr; | Size limit (in bytes) below which the contents of a Text, BLOB or Picture field is embedded into the main file |
+| folderPath | Text | &rarr; | Pathname of export folder or "" to display folder selection dialog box |
+| numFiles | Integer | &rarr; | Maximum number of files per folder |
+| fileLimitSize | Integer | &rarr; | Size limit value of export files (in KB) |
+| fieldLimitSize | Integer | &rarr; | Size limit (in bytes) below which the contents of a Text, BLOB or Picture field is embedded into the main file |
 
 <!-- END REF-->
 

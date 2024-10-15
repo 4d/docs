@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &srarr; | Table dans laquelle la sélection est créée ou Table par défaut si ce paramètre est omis |
-| critère | Expression | &srarr; | Critère de recherche |
-| * | Opérateur | &srarr; | Attente d'exécution de la recherche |
+| laTable | Table | &rarr; | Table dans laquelle la sélection est créée ou Table par défaut si ce paramètre est omis |
+| critère | Expression | &rarr; | Critère de recherche |
+| * | Opérateur | &rarr; | Attente d'exécution de la recherche |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT SET VALUE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomObjeto | Text | &srarr; | Nombre de objeto |
-| valor | any | &srarr; | Nuevo valor para la fuente de datos del objeto de formulario |
+| nomObjeto | Text | &rarr; | Nombre de objeto |
+| valor | any | &rarr; | Nuevo valor para la fuente de datos del objeto de formulario |
 
 <!-- END REF-->
 

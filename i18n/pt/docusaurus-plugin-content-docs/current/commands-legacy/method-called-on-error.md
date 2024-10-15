@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Method called on error.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| scope | Integer | &srarr; | Escopo/alcance do método de erro |
+| scope | Integer | &rarr; | Escopo/alcance do método de erro |
 | Resultado | Text | &larr; | Nome do método de chamada por erro |
 
 <!-- END REF-->

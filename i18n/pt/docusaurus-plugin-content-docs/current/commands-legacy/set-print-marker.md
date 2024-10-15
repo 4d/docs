@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PRINT MARKER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| markNum | Integer | &srarr; | Número do marcador |
-| posiçao | Integer | &srarr; | Nova posição do marcador |
-| * | Operador | &srarr; | Se passado = mover marcadores seguintes; se omitido = não move os marcadores seguintes |
+| markNum | Integer | &rarr; | Número do marcador |
+| posiçao | Integer | &rarr; | Nova posição do marcador |
+| * | Operador | &rarr; | Se passado = mover marcadores seguintes; se omitido = não move os marcadores seguintes |
 
 <!-- END REF-->
 

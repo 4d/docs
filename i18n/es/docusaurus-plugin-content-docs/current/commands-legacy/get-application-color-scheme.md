@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get application color scheme.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Devuelve el esquema de color de la base local |
+| * | Operador | &rarr; | Devuelve el esquema de color de la base local |
 | Resultado | Text | &larr; | Esquema de color de la aplicación actual |
 
 <!-- END REF-->

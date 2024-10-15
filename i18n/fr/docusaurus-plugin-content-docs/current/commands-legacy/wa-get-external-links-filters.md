@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &srarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| tabFiltres | Text array | &harr; | Tableau de filtres |
-| tabAutorisRefus | Boolean array | &harr; | Tableau autoriser-refuser |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &rarr; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| tabFiltres | Text array | &larr; | Tableau de filtres |
+| tabAutorisRefus | Boolean array | &larr; | Tableau autoriser-refuser |
 
 <!-- END REF-->
 

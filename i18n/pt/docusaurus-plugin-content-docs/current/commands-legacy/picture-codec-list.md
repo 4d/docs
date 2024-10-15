@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.PICTURE CODEC LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| arrayCodec | Text array | &harr; | Identificadores de codecs de imagens disponíveis |
-| arrayNomes | Text array | &harr; | Nomes dos Codecs de imagens |
-| * | Operador | &srarr; | Retorna a lista de Codecs de leitura |
+| arrayCodec | Text array | &larr; | Identificadores de codecs de imagens disponíveis |
+| arrayNomes | Text array | &larr; | Nomes dos Codecs de imagens |
+| * | Operador | &rarr; | Retorna a lista de Codecs de leitura |
 
 <!-- END REF-->
 

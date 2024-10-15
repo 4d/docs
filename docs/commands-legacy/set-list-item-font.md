@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.SET LIST ITEM FONT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &srarr; | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef &#124; * | Longint, Operator | &srarr; | Item reference number or 0 for the last item added to the list or * for the current item of the list |
-| font | Text, Integer | &srarr; | Font name or number |
+| * | Operator | &rarr; | If specified, list is an object name (string) If omitted, list is a list reference number |
+| list | Integer, Text | &rarr; | List reference number (if * omitted) or Name of list type object (if * passed) |
+| itemRef &#124; * | Longint, Operator | &rarr; | Item reference number or 0 for the last item added to the list or * for the current item of the list |
+| font | Text, Integer | &rarr; | Font name or number |
 
 <!-- END REF-->
 

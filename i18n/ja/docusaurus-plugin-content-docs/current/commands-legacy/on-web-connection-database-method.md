@@ -9,12 +9,12 @@ displayed_sidebar: docs
 <!--REF #_command_.On Web Connection database method.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| $1 | テキスト | &harr; | URL |
-| $2 | テキスト | &harr; | HTTPヘッダー + HTTPボディ (32 KBまで) |
-| $3 | テキスト | &harr; | Webクライアント (ブラウザー) のIPアドレス |
-| $4 | テキスト | &harr; | サーバーのIPアドレス |
-| $5 | テキスト | &harr; | ユーザー名 |
-| $6 | テキスト | &harr; | パスワード |
+| $1 | テキスト | &larr; | URL |
+| $2 | テキスト | &larr; | HTTPヘッダー + HTTPボディ (32 KBまで) |
+| $3 | テキスト | &larr; | Webクライアント (ブラウザー) のIPアドレス |
+| $4 | テキスト | &larr; | サーバーのIPアドレス |
+| $5 | テキスト | &larr; | ユーザー名 |
+| $6 | テキスト | &larr; | パスワード |
 
 <!-- END REF-->
 

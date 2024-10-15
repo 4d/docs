@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is a variable.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aPointer | Pointer | &srarr; | Pointer to be tested |
+| aPointer | Pointer | &rarr; | Pointer to be tested |
 | Function result | Boolean | &larr; | TRUE = Pointer points to a variable FALSE = Pointer does not point to a variable |
 
 <!-- END REF-->

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is window reduced.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| window | Integer | &srarr; | ウィンドウ参照番号 |
+| window | Integer | &rarr; | ウィンドウ参照番号 |
 | 戻り値 | Boolean | &larr; | ウィンドウがタスクバーかDockに収納されていればTrue、それ以外の場合にはFalse |
 
 <!-- END REF-->

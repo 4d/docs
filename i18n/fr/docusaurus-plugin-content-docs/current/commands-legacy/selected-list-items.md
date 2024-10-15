@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.Selected list items.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
-| liste | Integer, Text | &srarr; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| tabEléments | Integer array | &harr; | Si 2e * omis : Tableau des positions des éléments sélectionnés dans la ou les liste(s) Si 2e * passé : Tableau des références des éléments sélectionnés dans la ou les liste(s) |
-| * | Opérateur | &srarr; | Si omis : Position(s) d’élément(s) Si passé : Référence(s) d’élément(s) |
+| * | Opérateur | &rarr; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &rarr; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| tabEléments | Integer array | &larr; | Si 2e * omis : Tableau des positions des éléments sélectionnés dans la ou les liste(s) Si 2e * passé : Tableau des références des éléments sélectionnés dans la ou les liste(s) |
+| * | Opérateur | &rarr; | Si omis : Position(s) d’élément(s) Si passé : Référence(s) d’élément(s) |
 | Résultat | Integer | &larr; | Si 2e * omis : Position de l'élément sélectionné parmi la ou les liste(s) déployée(s)/contractée(s) Si 2e * passé : Référence de l'élément sélectionné |
 
 <!-- END REF-->

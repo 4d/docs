@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get locked records info.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table where you want to get locked records |
+| aTable | Table | &rarr; | Table where you want to get locked records |
 | Function result | Object | &larr; | Description of locked records (if any) |
 
 <!-- END REF-->

@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Open window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| left | Integer | &srarr; | Global left coordinate of window contents area |
-| top | Integer | &srarr; | Global top coordinate of window contents area |
-| right | Integer | &srarr; | Global right coordinate of window contents area, or -1 for using form default size |
-| bottom | Integer | &srarr; | Global bottom coordinate of window contents area, or -1 for using form default size |
-| type | Integer | &srarr; | Window type |
-| title | Text | &srarr; | Title of window or "" for using default form title |
-| controlMenuBox | Text | &srarr; | Method to call when the Control-menu box is double-clicked or the Close box is clicked |
+| left | Integer | &rarr; | Global left coordinate of window contents area |
+| top | Integer | &rarr; | Global top coordinate of window contents area |
+| right | Integer | &rarr; | Global right coordinate of window contents area, or -1 for using form default size |
+| bottom | Integer | &rarr; | Global bottom coordinate of window contents area, or -1 for using form default size |
+| type | Integer | &rarr; | Window type |
+| title | Text | &rarr; | Title of window or "" for using default form title |
+| controlMenuBox | Text | &rarr; | Method to call when the Control-menu box is double-clicked or the Close box is clicked |
 | Function result | WinRef | &larr; | Window reference number |
 
 <!-- END REF-->

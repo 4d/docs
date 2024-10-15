@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.REDUCE SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &srarr; | Tabela para a qual vai reduzir a seleção, ou tabela padrão, se omitido |
-| numero | Integer | &srarr; | Número de registros para manter selecionados |
+| tabela | Table | &rarr; | Tabela para a qual vai reduzir a seleção, ou tabela padrão, se omitido |
+| numero | Integer | &rarr; | Número de registros para manter selecionados |
 
 <!-- END REF-->
 

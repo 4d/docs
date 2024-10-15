@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Square root.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &srarr; | Number whose square root is calculated |
+| number | Real | &rarr; | Number whose square root is calculated |
 | Function result | Real | &larr; | Square root of the number |
 
 <!-- END REF-->

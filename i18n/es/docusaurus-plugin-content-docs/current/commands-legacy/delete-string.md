@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.Delete string.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| fuente | Text | &srarr; | Cadena de la cual borrar caracteres |
-| posicion | Integer | &srarr; | Primer caracter a borrar |
-| numCaracteres | Integer | &srarr; | Número de caracteres a borrar |
+| fuente | Text | &rarr; | Cadena de la cual borrar caracteres |
+| posicion | Integer | &rarr; | Primer caracter a borrar |
+| numCaracteres | Integer | &rarr; | Número de caracteres a borrar |
 | Resultado | Text | &larr; | Cadena resultante |
 
 <!-- END REF-->

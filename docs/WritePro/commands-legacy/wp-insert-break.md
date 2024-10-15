@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.WP INSERT BREAK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | Range or element or 4D Write Pro document |
-| breakType | Longint | &#x1F852; | Type of break to insert |
-| mode | Longint | &#x1F852; | Insertion mode |
-| rangeUpdate | Longint | &#x1F852; | Range update mode |
+| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
+| breakType | Longint | &rarr; | Type of break to insert |
+| mode | Longint | &rarr; | Insertion mode |
+| rangeUpdate | Longint | &rarr; | Range update mode |
 
 <!-- END REF-->
 

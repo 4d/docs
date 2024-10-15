@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.ST INSERT EXPRESSION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
-| object | Object | &srarr; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
-| expression | Text | &srarr; | Expression and (optional) format to insert |
-| startSel | Integer | &srarr; | Start of selection |
-| endSel | Integer | &srarr; | End of selection |
+| * | Operator | &rarr; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
+| object | Object | &rarr; | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
+| expression | Text | &rarr; | Expression and (optional) format to insert |
+| startSel | Integer | &rarr; | Start of selection |
+| endSel | Integer | &rarr; | End of selection |
 
 <!-- END REF-->
 

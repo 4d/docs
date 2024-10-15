@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
-| liste | Integer, Text | &srarr; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| refElément &#124; * | Opérateur, Entier long | &srarr; | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
-| saisissable | Boolean | &harr; | Vrai = Saisissable, Faux = Non-saisissable |
-| style | Integer | &harr; | Style de police de l'élément |
-| icône | Text, Integer | &harr; | 131072 + numéro de référence d'image |
-| couleur | Integer | &harr; | Valeur de couleur RVB |
+| * | Opérateur | &rarr; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &rarr; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| refElément &#124; * | Opérateur, Entier long | &rarr; | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
+| saisissable | Boolean | &larr; | Vrai = Saisissable, Faux = Non-saisissable |
+| style | Integer | &larr; | Style de police de l'élément |
+| icône | Text, Integer | &larr; | 131072 + numéro de référence d'image |
+| couleur | Integer | &larr; | Valeur de couleur RVB |
 
 <!-- END REF-->
 

@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Table insert rows.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#x1F852; | Range or element or 4D Write Pro document |
-| tableRef | Object | &#x1F852; | Table reference |
-| rowNumber | Longint | &#x1F852; | Row index number |
-| numRows | Longint | &#x1F852; | Number of rows to insert (default value = 1) |
-| Function result | Object | &#x1F850; | Range of table rows |
+| targetObj | Object | &rarr; | Range or element or 4D Write Pro document |
+| tableRef | Object | &rarr; | Table reference |
+| rowNumber | Longint | &rarr; | Row index number |
+| numRows | Longint | &rarr; | Number of rows to insert (default value = 1) |
+| Function result | Object | &larr; | Range of table rows |
 
 <!-- END REF-->
 

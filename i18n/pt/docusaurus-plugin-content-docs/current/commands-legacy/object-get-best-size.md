@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT GET BEST SIZE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &srarr; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
-| largIdeal | Integer | &harr; | Largura ideal do objeto |
-| alturaIdeal | Integer | &harr; | Altura ideal do objeto |
-| larguraMax | Integer | &srarr; | Altura máxima do objeto |
+| * | Operador | &rarr; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &rarr; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
+| largIdeal | Integer | &larr; | Largura ideal do objeto |
+| alturaIdeal | Integer | &larr; | Altura ideal do objeto |
+| larguraMax | Integer | &rarr; | Altura máxima do objeto |
 
 <!-- END REF-->
 

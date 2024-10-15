@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.SVG GET ATTRIBUTE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &srarr; | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
-| pictureObject | Picture | &srarr; | Object name (if * specified) or <br/>Variable or field (if * omitted) |
-| element_ID | Text | &srarr; | ID of element whose attribute value you want to get |
-| attribName | Text | &srarr; | Attribute whose value you want to get |
-| attribValue | Text, Integer | &harr; | Current value of attribute |
+| * | Operator | &rarr; | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
+| pictureObject | Picture | &rarr; | Object name (if * specified) or <br/>Variable or field (if * omitted) |
+| element_ID | Text | &rarr; | ID of element whose attribute value you want to get |
+| attribName | Text | &rarr; | Attribute whose value you want to get |
+| attribValue | Text, Integer | &larr; | Current value of attribute |
 
 <!-- END REF-->
 

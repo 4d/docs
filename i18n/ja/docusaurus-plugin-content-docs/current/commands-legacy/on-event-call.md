@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ON EVENT CALL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| eventMethod | Text | &srarr; | 発動されるイベントメソッド, または 空の文字の場合イベントの遮断を停止 |
-| processName | Text | &srarr; | プロセス名 |
+| eventMethod | Text | &rarr; | 発動されるイベントメソッド, または 空の文字の場合イベントの遮断を停止 |
+| processName | Text | &rarr; | プロセス名 |
 
 <!-- END REF-->
 

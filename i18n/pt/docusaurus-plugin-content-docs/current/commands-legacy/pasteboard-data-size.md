@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Pasteboard data size.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tipoDados | Text | &srarr; | Tipo de dados a adicionar |
+| tipoDados | Text | &rarr; | Tipo de dados a adicionar |
 | Resultado | Integer | &larr; | Tamanho (em bytes) dos dados armazenados na área de transferência ou então código do erro |
 
 <!-- END REF-->

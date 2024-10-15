@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Variance.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| series | Field, Array | &srarr; | Data for which to return the variance |
+| series | Field, Array | &rarr; | Data for which to return the variance |
 | Function result | Real | &larr; | Variance of series |
 
 <!-- END REF-->

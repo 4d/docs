@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.BASE64 ENCODE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Blob | Blob, Text | &srarr; | BLOB a codificar em formato Base64 |
-| &harr; | BLOB  codificado em formato Base64 |
-| textoCodificado | Blob, Text | &harr; | Resultado do BLOB codificado em formato Base64 |
-| * | Operador | &srarr; | Codificar no formato em Base64URL |
+| Blob | Blob, Text | &rarr; | BLOB a codificar em formato Base64 |
+| &larr; | BLOB  codificado em formato Base64 |
+| textoCodificado | Blob, Text | &larr; | Resultado do BLOB codificado em formato Base64 |
+| * | Operador | &rarr; | Codificar no formato em Base64URL |
 
 <!-- END REF-->
 

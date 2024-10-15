@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.WP Get view properties.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#x1F852; | If specified, wpArea is a form object name (string). If omitted, wpArea is an object field or variable (document) |
-| wpArea | String, Object | &#x1F852; | Form object name (if * is specified) or 4D Write Pro object variable or field (if * is omitted) |
-| Function result | Object | &#x1F850; | Current view properties |
+| * | Operator | &rarr; | If specified, wpArea is a form object name (string). If omitted, wpArea is an object field or variable (document) |
+| wpArea | String, Object | &rarr; | Form object name (if * is specified) or 4D Write Pro object variable or field (if * is omitted) |
+| Function result | Object | &larr; | Current view properties |
 
 <!-- END REF-->
 

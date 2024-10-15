@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get print marker.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numeroMarc | Integer | &srarr; | Número de marcador |
+| numeroMarc | Integer | &rarr; | Número de marcador |
 | Resultado | Integer | &larr; | Posição do marcador |
 
 <!-- END REF-->

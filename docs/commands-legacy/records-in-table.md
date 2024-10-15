@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Records in table.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table for which to return the number of records, or Default table, if omitted |
+| aTable | Table | &rarr; | Table for which to return the number of records, or Default table, if omitted |
 | Function result | Longint | &larr; | Total number of records in the table |
 
 <!-- END REF-->

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture | &harr; | Picture extracted from pasteboard |
+| picture | Picture | &larr; | Picture extracted from pasteboard |
 
 <!-- END REF-->
 

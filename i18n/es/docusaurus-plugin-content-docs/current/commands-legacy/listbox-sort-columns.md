@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX SORT COLUMNS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &srarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| numColumna | Integer | &srarr; | Número(s) de columna(s) a ordenar |
-| orden | * | &srarr; | ">" para una ordenación ascendente o "<" para una ordenación descendente |
+| * | Operador | &rarr; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &rarr; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| numColumna | Integer | &rarr; | Número(s) de columna(s) a ordenar |
+| orden | * | &rarr; | ">" para una ordenación ascendente o "<" para una ordenación descendente |
 
 <!-- END REF-->
 

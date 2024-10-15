@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Month of.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laDate | Date | &srarr; | Date dont vous voulez extraire le mois |
+| laDate | Date | &rarr; | Date dont vous voulez extraire le mois |
 | Résultat | Integer | &larr; | Nombre indiquant le mois de date |
 
 <!-- END REF-->

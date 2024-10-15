@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX MOVED COLUMN NUMBER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &srarr; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &srarr; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| ancPosition | Integer | &harr; | Ancienne position de la colonne déplacée |
-| nouvPosition | Integer | &harr; | Nouvelle position de la colonne déplacée |
+| * | Opérateur | &rarr; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &rarr; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| ancPosition | Integer | &larr; | Ancienne position de la colonne déplacée |
+| nouvPosition | Integer | &larr; | Nouvelle position de la colonne déplacée |
 
 <!-- END REF-->
 

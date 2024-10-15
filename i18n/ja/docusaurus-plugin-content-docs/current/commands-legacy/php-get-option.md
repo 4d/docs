@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.PHP GET OPTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| option | Integer | &srarr; | 取得するオプション |
-| value | Boolean | &harr; | オプションの現在値 |
+| option | Integer | &rarr; | 取得するオプション |
+| value | Boolean | &larr; | オプションの現在値 |
 
 <!-- END REF-->
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.QUERY WITH ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campoAlvo | Field | &srarr; | Campo usado para comparar os valores |
-| array | Array | &srarr; | Array de valores pesquisados |
+| campoAlvo | Field | &rarr; | Campo usado para comparar os valores |
+| array | Array | &rarr; | Array de valores pesquisados |
 
 <!-- END REF-->
 

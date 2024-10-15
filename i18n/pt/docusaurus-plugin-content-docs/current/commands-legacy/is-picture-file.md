@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Is picture file.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| viaArquivo | Text | &srarr; | Rota do arquivo |
-| * | Operador | &srarr; | Validar os dados |
+| viaArquivo | Text | &rarr; | Rota do arquivo |
+| * | Operador | &rarr; | Validar os dados |
 | Resultado | Boolean | &larr; | True = rotaArquivo indica um arquivo de imagem; de outro modo, False |
 
 <!-- END REF-->

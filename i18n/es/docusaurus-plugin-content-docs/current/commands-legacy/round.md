@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Round.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| redond | Real | &srarr; | Número a redondear |
-| decimales | Integer | &srarr; | Número de lugares decimales a redondear |
+| redond | Real | &rarr; | Número a redondear |
+| decimales | Integer | &rarr; | Número de lugares decimales a redondear |
 | Resultado | Real | &larr; | Número redondeado para el número de lugares decimales especificado por decimales |
 
 <!-- END REF-->

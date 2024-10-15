@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DUPLICATE RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &srarr; | Table for which to duplicate the current record, or Default table, if omitted |
+| aTable | Table | &rarr; | Table for which to duplicate the current record, or Default table, if omitted |
 
 <!-- END REF-->
 

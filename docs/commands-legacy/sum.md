@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Sum.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| series | Field, Array | &srarr; | Data for which to return the sum |
-| attributePath | Text | &srarr; | Path of attribute for which to return the sum |
+| series | Field, Array | &rarr; | Data for which to return the sum |
+| attributePath | Text | &rarr; | Path of attribute for which to return the sum |
 | Function result | Real | &larr; | Sum for series |
 
 <!-- END REF-->

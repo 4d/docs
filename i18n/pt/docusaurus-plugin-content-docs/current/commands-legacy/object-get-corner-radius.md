@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get corner radius.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é uma variável ou um campo |
-| objeto | any | &srarr; | Nome de objeto (se especificado *) ou Campo ou variável (se omitido *) |
+| * | Operador | &rarr; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é uma variável ou um campo |
+| objeto | any | &rarr; | Nome de objeto (se especificado *) ou Campo ou variável (se omitido *) |
 | Resultado | Integer | &larr; | Rádio de esquinas arredondadas (em píxels) |
 
 <!-- END REF-->

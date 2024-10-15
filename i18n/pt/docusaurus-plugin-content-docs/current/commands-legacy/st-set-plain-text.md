@@ -9,11 +9,11 @@ displayed_sidebar: docs
 <!--REF #_command_.ST SET PLAIN TEXT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &srarr; | se especificado, objeto é um nome de objeto (string), se não, objeto é uma variável ou campo |
-| objeto | any | &srarr; | Nome de objeto (se * for especificado) ou Variável ou campo (se * for omitido) |
-| novoText | Text | &srarr; | Texto a inserir |
-| inicioSel | Integer | &srarr; | Inicio da seleção |
-| fimSel | Integer | &srarr; | final da seleção |
+| * | Operador | &rarr; | se especificado, objeto é um nome de objeto (string), se não, objeto é uma variável ou campo |
+| objeto | any | &rarr; | Nome de objeto (se * for especificado) ou Variável ou campo (se * for omitido) |
+| novoText | Text | &rarr; | Texto a inserir |
+| inicioSel | Integer | &rarr; | Inicio da seleção |
+| fimSel | Integer | &rarr; | final da seleção |
 
 <!-- END REF-->
 

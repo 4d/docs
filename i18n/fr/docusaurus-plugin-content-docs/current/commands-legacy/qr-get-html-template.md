@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.QR Get HTML template.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &srarr; | Référence de la zone |
+| zone | Integer | &rarr; | Référence de la zone |
 | Résultat | Text | &larr; | Code HTML utilisé comme modèle |
 
 <!-- END REF-->

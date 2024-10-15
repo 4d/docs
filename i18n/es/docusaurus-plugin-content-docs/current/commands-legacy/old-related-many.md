@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OLD RELATED MANY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campo | Field | &srarr; | Campo Uno |
+| campo | Field | &rarr; | Campo Uno |
 
 <!-- END REF-->
 

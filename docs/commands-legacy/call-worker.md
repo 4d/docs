@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.CALL WORKER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Text, Integer | &srarr; | Name or number of worker process |
-| formula | Object, Text | &srarr; | Formula object or Name of project method |
-| param | Expression | &srarr; | Parameter(s) passed to formula |
+| process | Text, Integer | &rarr; | Name or number of worker process |
+| formula | Object, Text | &rarr; | Formula object or Name of project method |
+| param | Expression | &rarr; | Parameter(s) passed to formula |
 
 <!-- END REF-->
 

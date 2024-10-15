@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Lowercase.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| laText | Text | &srarr; | Cadena a pasar a minúsculas |
-| * | Operador | &srarr; | Si se pasa: conservar los acentos |
+| laText | Text | &rarr; | Cadena a pasar a minúsculas |
+| * | Operador | &rarr; | Si se pasa: conservar los acentos |
 | Resultado | Text | &larr; | Cadena en minúsculas |
 
 <!-- END REF-->

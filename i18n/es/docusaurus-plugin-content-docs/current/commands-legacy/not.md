@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Not.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| booleano | Boolean | &srarr; | Valor booleano a negar |
+| booleano | Boolean | &rarr; | Valor booleano a negar |
 | Resultado | Boolean | &larr; | Opuesto del booleano |
 
 <!-- END REF-->

@@ -9,9 +9,9 @@ displayed_sidebar: docs
 <!--REF #_command_.EXECUTE METHOD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| methodName | Text | &srarr; | 実行するプロジェクトメソッド名 |
-| result &#124; * | 変数, 演算子 | &harr; | メソッドの結果を受け取る変数 または *: メソッドが結果を返さない場合 |
-| param | Expression | &srarr; | メソッドの引数 |
+| methodName | Text | &rarr; | 実行するプロジェクトメソッド名 |
+| result &#124; * | 変数, 演算子 | &larr; | メソッドの結果を受け取る変数 または *: メソッドが結果を返さない場合 |
+| param | Expression | &rarr; | メソッドの引数 |
 
 <!-- END REF-->
 

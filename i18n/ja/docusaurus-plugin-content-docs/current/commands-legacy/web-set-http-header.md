@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SET HTTP HEADER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| header&#124;fieldArray | テキスト, テキスト配列 | &srarr; | リクエストHTTPヘッダーを格納したフィールドまたは変数、またはHTTPヘッダーフィールド |
-| valueArray | Text array | &srarr; | HTTPヘッダーフィールドコンテンツ |
+| header&#124;fieldArray | テキスト, テキスト配列 | &rarr; | リクエストHTTPヘッダーを格納したフィールドまたは変数、またはHTTPヘッダーフィールド |
+| valueArray | Text array | &rarr; | HTTPヘッダーフィールドコンテンツ |
 
 <!-- END REF-->
 

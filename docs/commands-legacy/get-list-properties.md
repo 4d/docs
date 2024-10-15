@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.GET LIST PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| list | Integer | &srarr; | List reference number |
-| appearance | Integer | &harr; | Graphical style of the list 1 = Hierarchical list a la Macintosh 2 = Hierarchical list a la Windows |
-| icon | Integer | &harr; | *** Deprecated, always 0 *** |
-| lineHeight | Integer | &harr; | Minimal line height expressed in pixels |
-| doubleClick | Integer | &harr; | Expand/Collapse sublist on double-click? 0 = Yes, 1= No |
-| multiSelections | Integer | &harr; | Multiple selections: 0 = No, 1 = Yes |
-| editable | Integer | &harr; | List editable by user: 0 = No, 1 = Yes |
+| list | Integer | &rarr; | List reference number |
+| appearance | Integer | &larr; | Graphical style of the list 1 = Hierarchical list a la Macintosh 2 = Hierarchical list a la Windows |
+| icon | Integer | &larr; | *** Deprecated, always 0 *** |
+| lineHeight | Integer | &larr; | Minimal line height expressed in pixels |
+| doubleClick | Integer | &larr; | Expand/Collapse sublist on double-click? 0 = Yes, 1= No |
+| multiSelections | Integer | &larr; | Multiple selections: 0 = No, 1 = Yes |
+| editable | Integer | &larr; | List editable by user: 0 = No, 1 = Yes |
 
 <!-- END REF-->
 
