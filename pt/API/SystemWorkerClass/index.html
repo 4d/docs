@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.4.0">
 <title data-rh="true">SystemWorker | 4D Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://developer.4d.com/docs/pt/API/SystemWorkerClass"><meta data-rh="true" property="og:locale" content="pt"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" property="og:locale:alternate" content="fr"><meta data-rh="true" property="og:locale:alternate" content="es"><meta data-rh="true" property="og:locale:alternate" content="ja"><meta data-rh="true" name="docusaurus_locale" content="pt"><meta data-rh="true" name="docsearch:language" content="pt"><meta data-rh="true" name="docusaurus_version" content="20-R6"><meta data-rh="true" name="docusaurus_tag" content="docs-default-20-R6"><meta data-rh="true" name="docsearch:version" content="20-R6"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-20-R6"><meta data-rh="true" property="og:title" content="SystemWorker | 4D Docs"><meta data-rh="true" name="description" content="System workers allow the 4D code to call any external process (a shell command, PHP, etc.) na mesma máquina. Os trabalhadores do sistema são chamados assíncronos. Ao utilizar os callbacks, 4D torna possível a comunicação de ambas as maneiras."><meta data-rh="true" property="og:description" content="System workers allow the 4D code to call any external process (a shell command, PHP, etc.) na mesma máquina. Os trabalhadores do sistema são chamados assíncronos. Ao utilizar os callbacks, 4D torna possível a comunicação de ambas as maneiras."><link data-rh="true" rel="icon" href="/docs/pt/img/favicon/4d.gif"><link data-rh="true" rel="canonical" href="https://developer.4d.com/docs/pt/API/SystemWorkerClass"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/API/SystemWorkerClass" hreflang="en"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/fr/API/SystemWorkerClass" hreflang="fr"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/es/API/SystemWorkerClass" hreflang="es"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/ja/API/SystemWorkerClass" hreflang="ja"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/pt/API/SystemWorkerClass" hreflang="pt"><link data-rh="true" rel="alternate" href="https://developer.4d.com/docs/API/SystemWorkerClass" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://OJ04C0M3CU-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="4D Docs" href="/docs/pt/opensearch.xml"><link rel="stylesheet" href="/docs/pt/assets/css/styles.9d2cac31.css">
-<script src="/docs/pt/assets/js/runtime~main.c7b47a20.js" defer="defer"></script>
+<script src="/docs/pt/assets/js/runtime~main.34c69608.js" defer="defer"></script>
 <script src="/docs/pt/assets/js/main.d42f3688.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -129,7 +129,7 @@
 <p>O objecto worker do sistema devolvido pode ser utilizado para postar mensagens ao worker e obter a saída do worker.</p>
 <p>If an error occurs during the creation of the proxy object, the function returns a <code>null</code> object and an error is thrown.</p>
 <p>In the <em>commandLine</em> parameter, pass the full path of the application&#x27;s file to be executed (posix syntax), as well as any required arguments, if necessary. If you pass only the application name, 4D will use the <code>PATH</code> environment variable to locate the executable.</p>
-<p><strong>Warning:</strong> This function can only launch executable applications; it cannot execute instructions that are part of the shell (command interpreter). For example, under Windows it is not possible to use this command to execute the <code>dir</code> instruction.</p>
+<p><strong>Advertência</strong>: esta função só pode lançar aplicações executáveis; não pode executar instruções que fazem parte da shell (intérprete de comandos). For example, under Windows it is not possible to use this command to execute the <code>dir</code> instruction.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="objeto-options">Objeto <em>options</em><a class="hash-link" aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" href="/docs/pt/API/SystemWorkerClass#objeto-options">​</a></h4>
 <p>In the <em>options</em> parameter, pass an object that can contain the following properties:</p>
 
@@ -337,7 +337,7 @@
 
 
 <table><thead><tr><th>Parâmetro</th><th>Tipo</th><th style="text-align:center"></th><th>Descrição</th></tr></thead><tbody><tr><td></td><td></td><td style="text-align:center"></td><td>Não exige nenhum parâmetro</td></tr></tbody></table>
-<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="descrição-1">Descrição<a class="hash-link" aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" href="/docs/pt/API/SystemWorkerClass#descri ção-1">​</a></h4>
+<h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="descrição-1">Descrição<a class="hash-link" aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" href="/docs/pt/API/SystemWorkerClass#descrição-1">​</a></h4>
 <p>The <code>.closeInput()</code> function closes the input stream (<em>stdin</em>) of the external process.</p>
 <p>When the executable waits for all data to be received through <code>postMessage()</code>, <code>.closeInput()</code> is useful to indicate to the executable that data sending is finished and that it can proceed.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="exemplo-1">Exemplo<a class="hash-link" aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" href="/docs/pt/API/SystemWorkerClass#exemplo-1">​</a></h4>
@@ -481,7 +481,7 @@
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="descrição-15">Descrição<a class="hash-link" aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" href="/docs/pt/API/SystemWorkerClass#descrição-15">​</a></h4>
 <p>The <code>.timeout</code> property contains the duration in seconds before the external process will be killed if it is still alive.</p>
 <p>Essa propriedade é <strong>somente leitura</strong>.</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="wait">.wait()<a class="hash-link" aria-label="Link direto para o cabe çalho" title="Link direto para o cabeçalho" href="/docs/pt/API/SystemWorkerClass#wait">​</a></h2>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="wait">.wait()<a class="hash-link" aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" href="/docs/pt/API/SystemWorkerClass#wait">​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>História</summary><div><div class="collapsibleContent_i85q">
 
 
